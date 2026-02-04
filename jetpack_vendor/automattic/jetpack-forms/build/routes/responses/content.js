@@ -6961,14 +6961,6 @@ var MODIFIER_CLASSNAMES = {
   preview_end: styles_module_default["calendar__day--preview-end"]
 };
 
-// ../../../node_modules/.pnpm/@automattic+ui@1.0.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@automattic/ui/dist/index.css
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='3fdbee9c4d']")) {
-  const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "3fdbee9c4d");
-  style.appendChild(document.createTextNode('.a8cui-DPKqWs{align-items:center;background-color:color-mix(in srgb,#fff 90%,var(--base-color));border-radius:2px;box-sizing:border-box;color:color-mix(in srgb,#000 50%,var(--base-color));display:inline-flex;font-size:12px;font-weight:400;gap:2px;line-height:20px;max-width:100%;min-height:24px;padding:0 8px}.a8cui-DPKqWs *,.a8cui-DPKqWs :after,.a8cui-DPKqWs :before{box-sizing:inherit}.a8cui-DPKqWs:where(.a8cui-3Ut0Se){background-color:var(--wp-components-color-gray-100,#f0f0f0);color:var(--wp-components-color-gray-800,#2f2f2f)}.a8cui-DPKqWs.a8cui-JRVFdH{padding-inline-start:4px}.a8cui-DPKqWs.a8cui-1y4b5l{--base-color:var(--wp-components-color-accent,var(--wp-admin-theme-color,#3858e9))}.a8cui-DPKqWs.a8cui-PT-ZdX{--base-color:#f0b849}.a8cui-DPKqWs.a8cui-eTS5AQ{--base-color:#cc1818}.a8cui-DPKqWs.a8cui-A8MMKo{--base-color:#4ab866}.a8cui-fZ9W2S{flex-shrink:0}.a8cui-phpszl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.a8cui-gPJt-U{--a8c-calendar-outline-focus:1.5px solid var(--wp-components-color-accent,var(--wp-admin-theme-color,#3858e9));--a8c-calendar-button-height:2rem;--a8c-calendar-button-width:2rem;--a8c-calendar-nav-height:2rem;--a8c-calendar-range-middle-background-color:color-mix(in srgb,var(--wp-components-color-accent,var(--wp-admin-theme-color,#3858e9)) 4%,transparent);--a8c-calendar-preview-border-color:color-mix(in srgb,var(--wp-components-color-accent,var(--wp-admin-theme-color,#3858e9)) 16%,transparent);background-color:#fff;color:#1e1e1e;display:inline-block;font-size:13px;font-weight:400;position:relative;z-index:0}.a8cui-gPJt-U,.a8cui-gPJt-U *,.a8cui-gPJt-U :after,.a8cui-gPJt-U :before{box-sizing:border-box}.a8cui-QCGEeM{padding:0;position:relative}.a8cui-QCGEeM:has(.a8cui-HDc6At:disabled){color:#949494}.a8cui-QCGEeM:has(.a8cui-HDc6At:focus-visible),.a8cui-QCGEeM:has(.a8cui-HDc6At:hover:not(:disabled)){color:var(--wp-components-color-accent,var(--wp-admin-theme-color,#3858e9))}.a8cui-HDc6At{align-items:center;background:none;border:none;border-radius:2px;color:inherit;cursor:pointer;display:flex;font:inherit;font-variant-numeric:tabular-nums;height:var(--a8c-calendar-button-height);justify-content:center;margin:0;padding:0;position:relative;width:var(--a8c-calendar-button-width)}.a8cui-HDc6At:before{border:none;border-radius:2px;content:"";inset:0;position:absolute;z-index:-1}.a8cui-HDc6At:after{content:"";inset:0;pointer-events:none;position:absolute;z-index:1}.a8cui-HDc6At:disabled{cursor:revert}@media (forced-colors:active){.a8cui-HDc6At:disabled{text-decoration:line-through}}.a8cui-HDc6At:focus-visible{outline:var(--a8c-calendar-outline-focus);outline-offset:1px}.a8cui--tMqc-{border:0;text-transform:capitalize;white-space:nowrap;z-index:1}.a8cui--tMqc-,.a8cui-K6-emE,.a8cui-jkKgJ8{align-items:center;display:inline-flex;position:relative}.a8cui-K6-emE,.a8cui-jkKgJ8{-moz-appearance:none;-webkit-appearance:none;appearance:none;background:none;border:none;border-radius:2px;color:inherit;cursor:pointer;height:var(--a8c-calendar-button-height);justify-content:center;margin:0;padding:0;width:var(--a8c-calendar-button-width)}.a8cui-K6-emE:disabled,.a8cui-K6-emE[aria-disabled=true],.a8cui-jkKgJ8:disabled,.a8cui-jkKgJ8[aria-disabled=true]{color:#949494;cursor:revert}.a8cui-K6-emE:focus-visible,.a8cui-jkKgJ8:focus-visible{outline:var(--a8c-calendar-outline-focus)}.a8cui-i7sHUR{display:inline-block;fill:currentColor;height:16px;width:16px}.a8cui-gPJt-U[dir=rtl] .a8cui-ErX9-L .a8cui-i7sHUR{transform:rotate(180deg);transform-origin:50%}.a8cui-zh2-ml{align-content:center;height:var(--a8c-calendar-nav-height);margin-bottom:12px}.a8cui-uwIn95,.a8cui-zh2-ml{display:flex;justify-content:center}.a8cui-uwIn95{flex-wrap:wrap;gap:1rem;max-width:fit-content;position:relative}.a8cui-qCUnTq{border-collapse:separate;border-spacing:0 4px}.a8cui-ErX9-L{align-items:center;display:flex;height:var(--a8c-calendar-nav-height);inset-block-start:0;inset-inline-end:0;inset-inline-start:0;justify-content:space-between;position:absolute}.a8cui-4dwCgM{color:#757575;height:var(--a8c-calendar-button-height);padding:0;text-align:center;text-transform:uppercase;width:var(--a8c-calendar-button-width)}.a8cui-OIctzz:after{border:2px solid;border-radius:50%;content:"";height:0;inset-block-start:2px;inset-inline-end:2px;position:absolute;width:0;z-index:1}.a8cui-Fmweu0:not(.a8cui-xxeRL-):has(.a8cui-HDc6At,.a8cui-HDc6At:hover:not(:disabled)){color:#fff}.a8cui-Fmweu0:not(.a8cui-xxeRL-) .a8cui-HDc6At:before{background-color:#1e1e1e;border:1px solid transparent}.a8cui-Fmweu0:not(.a8cui-xxeRL-) .a8cui-HDc6At:disabled:before{background-color:#949494}.a8cui-Fmweu0:not(.a8cui-xxeRL-) .a8cui-HDc6At:hover:not(:disabled):before{background-color:#2f2f2f}.a8cui-hYbR6o{visibility:hidden}.a8cui-QLGSvK:not(.a8cui-yvkr8w) .a8cui-HDc6At,.a8cui-QLGSvK:not(.a8cui-yvkr8w) .a8cui-HDc6At:before{border-end-end-radius:0;border-start-end-radius:0}.a8cui-xxeRL- .a8cui-HDc6At:before{background-color:var(--a8c-calendar-range-middle-background-color);border-color:transparent;border-radius:0;border-style:solid;border-width:1px 0}.a8cui-yvkr8w:not(.a8cui-QLGSvK) .a8cui-HDc6At,.a8cui-yvkr8w:not(.a8cui-QLGSvK) .a8cui-HDc6At:before{border-end-start-radius:0;border-start-start-radius:0}.a8cui-S2KIWp svg{color:var(--a8c-calendar-preview-border-color);inset:0;pointer-events:none;position:absolute}@media (forced-colors:active){.a8cui-S2KIWp svg{color:inherit}}.a8cui-gPJt-U[dir=rtl] .a8cui-S2KIWp svg{transform:scaleX(-1)}.a8cui-S2KIWp.a8cui-xxeRL- .a8cui-HDc6At:before{border:none}@keyframes a8cui-tirChk{0%{transform:translateX(-100%)}to{transform:translateX(0)}}@keyframes a8cui-xlTpyU{0%{transform:translateX(100%)}to{transform:translateX(0)}}@keyframes a8cui-C-6W5i{0%{transform:translateX(0)}to{transform:translateX(-100%)}}@keyframes a8cui-X-0QGP{0%{transform:translateX(0)}to{transform:translateX(100%)}}@keyframes a8cui-Dcdew-{0%{opacity:0}to{opacity:1}}@keyframes a8cui-TmFIT6{0%{opacity:1}to{opacity:0}}.a8cui--SotkH,.a8cui-ADWpzy,.a8cui-EeHaIG,.a8cui-EmUC2R,.a8cui-IIuJ-M,.a8cui-KQdZhf,.a8cui-m-aGE6,.a8cui-q2hElq{animation-duration:0s;animation-fill-mode:forwards;animation-timing-function:cubic-bezier(.4,0,.2,1)}@media not (prefers-reduced-motion){.a8cui--SotkH,.a8cui-ADWpzy,.a8cui-EeHaIG,.a8cui-EmUC2R,.a8cui-IIuJ-M,.a8cui-KQdZhf,.a8cui-m-aGE6,.a8cui-q2hElq{animation-duration:.3s}}.a8cui-EmUC2R,.a8cui-gPJt-U[dir=rtl] .a8cui-EeHaIG{animation-name:a8cui-tirChk}.a8cui-gPJt-U[dir=rtl] .a8cui-m-aGE6,.a8cui-q2hElq{animation-name:a8cui-C-6W5i}.a8cui-EeHaIG,.a8cui-gPJt-U[dir=rtl] .a8cui-EmUC2R{animation-name:a8cui-xlTpyU}.a8cui-gPJt-U[dir=rtl] .a8cui-q2hElq,.a8cui-m-aGE6{animation-name:a8cui-X-0QGP}.a8cui-IIuJ-M{animation-name:a8cui-Dcdew-}.a8cui-ADWpzy{animation-name:a8cui-TmFIT6}.a8cui-KQdZhf{animation-name:a8cui-Dcdew-}.a8cui--SotkH{animation-name:a8cui-TmFIT6}'));
-  document.head.appendChild(style);
-}
-
 // ../../../node_modules/.pnpm/@wordpress+admin-ui@1.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/breadcrumbs/index.mjs
 var import_i18n2 = __toESM(require_i18n(), 1);
 var import_components = __toESM(require_components(), 1);
@@ -7101,7 +7093,7 @@ var page_default = Page;
 
 // routes/responses/stage.tsx
 var import_components73 = __toESM(require_components());
-var import_data17 = __toESM(require_data());
+var import_data18 = __toESM(require_data());
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
 var import_element56 = __toESM(require_element(), 1);
@@ -20871,8 +20863,8 @@ var dataviews_default = DataViewsSubComponents;
 
 // routes/responses/stage.tsx
 var import_date10 = __toESM(require_date());
-var import_element81 = __toESM(require_element());
-var import_html_entities4 = __toESM(require_html_entities());
+var import_element82 = __toESM(require_element());
+var import_html_entities5 = __toESM(require_html_entities());
 var import_i18n76 = __toESM(require_i18n());
 import { useParams, useSearch as useSearch2, useNavigate as useNavigate4 } from "@wordpress/route";
 var React36 = __toESM(require_react());
@@ -22090,6 +22082,14 @@ function buildMailPoetCard({
     ] })
   };
   return base;
+}
+
+// ../../../node_modules/.pnpm/@automattic+ui@1.0.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@automattic/ui/dist/index.css
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='3fdbee9c4d']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "3fdbee9c4d");
+  style.appendChild(document.createTextNode('.a8cui-DPKqWs{align-items:center;background-color:color-mix(in srgb,#fff 90%,var(--base-color));border-radius:2px;box-sizing:border-box;color:color-mix(in srgb,#000 50%,var(--base-color));display:inline-flex;font-size:12px;font-weight:400;gap:2px;line-height:20px;max-width:100%;min-height:24px;padding:0 8px}.a8cui-DPKqWs *,.a8cui-DPKqWs :after,.a8cui-DPKqWs :before{box-sizing:inherit}.a8cui-DPKqWs:where(.a8cui-3Ut0Se){background-color:var(--wp-components-color-gray-100,#f0f0f0);color:var(--wp-components-color-gray-800,#2f2f2f)}.a8cui-DPKqWs.a8cui-JRVFdH{padding-inline-start:4px}.a8cui-DPKqWs.a8cui-1y4b5l{--base-color:var(--wp-components-color-accent,var(--wp-admin-theme-color,#3858e9))}.a8cui-DPKqWs.a8cui-PT-ZdX{--base-color:#f0b849}.a8cui-DPKqWs.a8cui-eTS5AQ{--base-color:#cc1818}.a8cui-DPKqWs.a8cui-A8MMKo{--base-color:#4ab866}.a8cui-fZ9W2S{flex-shrink:0}.a8cui-phpszl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.a8cui-gPJt-U{--a8c-calendar-outline-focus:1.5px solid var(--wp-components-color-accent,var(--wp-admin-theme-color,#3858e9));--a8c-calendar-button-height:2rem;--a8c-calendar-button-width:2rem;--a8c-calendar-nav-height:2rem;--a8c-calendar-range-middle-background-color:color-mix(in srgb,var(--wp-components-color-accent,var(--wp-admin-theme-color,#3858e9)) 4%,transparent);--a8c-calendar-preview-border-color:color-mix(in srgb,var(--wp-components-color-accent,var(--wp-admin-theme-color,#3858e9)) 16%,transparent);background-color:#fff;color:#1e1e1e;display:inline-block;font-size:13px;font-weight:400;position:relative;z-index:0}.a8cui-gPJt-U,.a8cui-gPJt-U *,.a8cui-gPJt-U :after,.a8cui-gPJt-U :before{box-sizing:border-box}.a8cui-QCGEeM{padding:0;position:relative}.a8cui-QCGEeM:has(.a8cui-HDc6At:disabled){color:#949494}.a8cui-QCGEeM:has(.a8cui-HDc6At:focus-visible),.a8cui-QCGEeM:has(.a8cui-HDc6At:hover:not(:disabled)){color:var(--wp-components-color-accent,var(--wp-admin-theme-color,#3858e9))}.a8cui-HDc6At{align-items:center;background:none;border:none;border-radius:2px;color:inherit;cursor:pointer;display:flex;font:inherit;font-variant-numeric:tabular-nums;height:var(--a8c-calendar-button-height);justify-content:center;margin:0;padding:0;position:relative;width:var(--a8c-calendar-button-width)}.a8cui-HDc6At:before{border:none;border-radius:2px;content:"";inset:0;position:absolute;z-index:-1}.a8cui-HDc6At:after{content:"";inset:0;pointer-events:none;position:absolute;z-index:1}.a8cui-HDc6At:disabled{cursor:revert}@media (forced-colors:active){.a8cui-HDc6At:disabled{text-decoration:line-through}}.a8cui-HDc6At:focus-visible{outline:var(--a8c-calendar-outline-focus);outline-offset:1px}.a8cui--tMqc-{border:0;text-transform:capitalize;white-space:nowrap;z-index:1}.a8cui--tMqc-,.a8cui-K6-emE,.a8cui-jkKgJ8{align-items:center;display:inline-flex;position:relative}.a8cui-K6-emE,.a8cui-jkKgJ8{-moz-appearance:none;-webkit-appearance:none;appearance:none;background:none;border:none;border-radius:2px;color:inherit;cursor:pointer;height:var(--a8c-calendar-button-height);justify-content:center;margin:0;padding:0;width:var(--a8c-calendar-button-width)}.a8cui-K6-emE:disabled,.a8cui-K6-emE[aria-disabled=true],.a8cui-jkKgJ8:disabled,.a8cui-jkKgJ8[aria-disabled=true]{color:#949494;cursor:revert}.a8cui-K6-emE:focus-visible,.a8cui-jkKgJ8:focus-visible{outline:var(--a8c-calendar-outline-focus)}.a8cui-i7sHUR{display:inline-block;fill:currentColor;height:16px;width:16px}.a8cui-gPJt-U[dir=rtl] .a8cui-ErX9-L .a8cui-i7sHUR{transform:rotate(180deg);transform-origin:50%}.a8cui-zh2-ml{align-content:center;height:var(--a8c-calendar-nav-height);margin-bottom:12px}.a8cui-uwIn95,.a8cui-zh2-ml{display:flex;justify-content:center}.a8cui-uwIn95{flex-wrap:wrap;gap:1rem;max-width:fit-content;position:relative}.a8cui-qCUnTq{border-collapse:separate;border-spacing:0 4px}.a8cui-ErX9-L{align-items:center;display:flex;height:var(--a8c-calendar-nav-height);inset-block-start:0;inset-inline-end:0;inset-inline-start:0;justify-content:space-between;position:absolute}.a8cui-4dwCgM{color:#757575;height:var(--a8c-calendar-button-height);padding:0;text-align:center;text-transform:uppercase;width:var(--a8c-calendar-button-width)}.a8cui-OIctzz:after{border:2px solid;border-radius:50%;content:"";height:0;inset-block-start:2px;inset-inline-end:2px;position:absolute;width:0;z-index:1}.a8cui-Fmweu0:not(.a8cui-xxeRL-):has(.a8cui-HDc6At,.a8cui-HDc6At:hover:not(:disabled)){color:#fff}.a8cui-Fmweu0:not(.a8cui-xxeRL-) .a8cui-HDc6At:before{background-color:#1e1e1e;border:1px solid transparent}.a8cui-Fmweu0:not(.a8cui-xxeRL-) .a8cui-HDc6At:disabled:before{background-color:#949494}.a8cui-Fmweu0:not(.a8cui-xxeRL-) .a8cui-HDc6At:hover:not(:disabled):before{background-color:#2f2f2f}.a8cui-hYbR6o{visibility:hidden}.a8cui-QLGSvK:not(.a8cui-yvkr8w) .a8cui-HDc6At,.a8cui-QLGSvK:not(.a8cui-yvkr8w) .a8cui-HDc6At:before{border-end-end-radius:0;border-start-end-radius:0}.a8cui-xxeRL- .a8cui-HDc6At:before{background-color:var(--a8c-calendar-range-middle-background-color);border-color:transparent;border-radius:0;border-style:solid;border-width:1px 0}.a8cui-yvkr8w:not(.a8cui-QLGSvK) .a8cui-HDc6At,.a8cui-yvkr8w:not(.a8cui-QLGSvK) .a8cui-HDc6At:before{border-end-start-radius:0;border-start-start-radius:0}.a8cui-S2KIWp svg{color:var(--a8c-calendar-preview-border-color);inset:0;pointer-events:none;position:absolute}@media (forced-colors:active){.a8cui-S2KIWp svg{color:inherit}}.a8cui-gPJt-U[dir=rtl] .a8cui-S2KIWp svg{transform:scaleX(-1)}.a8cui-S2KIWp.a8cui-xxeRL- .a8cui-HDc6At:before{border:none}@keyframes a8cui-tirChk{0%{transform:translateX(-100%)}to{transform:translateX(0)}}@keyframes a8cui-xlTpyU{0%{transform:translateX(100%)}to{transform:translateX(0)}}@keyframes a8cui-C-6W5i{0%{transform:translateX(0)}to{transform:translateX(-100%)}}@keyframes a8cui-X-0QGP{0%{transform:translateX(0)}to{transform:translateX(100%)}}@keyframes a8cui-Dcdew-{0%{opacity:0}to{opacity:1}}@keyframes a8cui-TmFIT6{0%{opacity:1}to{opacity:0}}.a8cui--SotkH,.a8cui-ADWpzy,.a8cui-EeHaIG,.a8cui-EmUC2R,.a8cui-IIuJ-M,.a8cui-KQdZhf,.a8cui-m-aGE6,.a8cui-q2hElq{animation-duration:0s;animation-fill-mode:forwards;animation-timing-function:cubic-bezier(.4,0,.2,1)}@media not (prefers-reduced-motion){.a8cui--SotkH,.a8cui-ADWpzy,.a8cui-EeHaIG,.a8cui-EmUC2R,.a8cui-IIuJ-M,.a8cui-KQdZhf,.a8cui-m-aGE6,.a8cui-q2hElq{animation-duration:.3s}}.a8cui-EmUC2R,.a8cui-gPJt-U[dir=rtl] .a8cui-EeHaIG{animation-name:a8cui-tirChk}.a8cui-gPJt-U[dir=rtl] .a8cui-m-aGE6,.a8cui-q2hElq{animation-name:a8cui-C-6W5i}.a8cui-EeHaIG,.a8cui-gPJt-U[dir=rtl] .a8cui-EmUC2R{animation-name:a8cui-xlTpyU}.a8cui-gPJt-U[dir=rtl] .a8cui-q2hElq,.a8cui-m-aGE6{animation-name:a8cui-X-0QGP}.a8cui-IIuJ-M{animation-name:a8cui-Dcdew-}.a8cui-ADWpzy{animation-name:a8cui-TmFIT6}.a8cui-KQdZhf{animation-name:a8cui-Dcdew-}.a8cui--SotkH{animation-name:a8cui-TmFIT6}'));
+  document.head.appendChild(style);
 }
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/salesforce.tsx
@@ -25149,7 +25149,8 @@ function WpRouteDashboardSearchParamsProvider({
 }
 
 // src/dashboard/wp-build/components/dataviews-header-row/index.tsx
-var import_element74 = __toESM(require_element(), 1);
+var import_data14 = __toESM(require_data(), 1);
+var import_element75 = __toESM(require_element(), 1);
 var import_i18n67 = __toESM(require_i18n(), 1);
 import { useNavigate as useNavigate2 } from "@wordpress/route";
 
@@ -27797,38 +27798,85 @@ var Tab = (0, import_react29.forwardRef)(function Tab2({ className, children, ..
   );
 });
 
-// src/dashboard/wp-build/components/inbox-status-toggle/index.tsx
+// src/dashboard/constants.ts
+var NON_TRASH_FORM_STATUSES = "publish,draft,pending,future,private";
+
+// src/dashboard/hooks/use-forms-data.ts
+var import_core_data2 = __toESM(require_core_data(), 1);
 var import_element73 = __toESM(require_element(), 1);
+var import_html_entities3 = __toESM(require_html_entities(), 1);
+function getFormsListQuery(page, perPage, search, status) {
+  const queryParams = {
+    context: "edit",
+    jetpack_forms_context: "dashboard",
+    order: "desc",
+    orderby: "modified",
+    page,
+    per_page: perPage,
+    status
+  };
+  if (search) {
+    queryParams.search = search;
+  }
+  return queryParams;
+}
+function useFormsData(page, perPage, search, status) {
+  const query = (0, import_element73.useMemo)(() => {
+    return getFormsListQuery(page, perPage, search, status);
+  }, [page, perPage, search, status]);
+  const {
+    records: rawRecords,
+    hasResolved,
+    totalItems,
+    totalPages
+  } = (0, import_core_data2.useEntityRecords)("postType", "jetpack_form", query);
+  const records = (rawRecords || []).map((item) => {
+    const typedItem = item;
+    return {
+      id: typedItem.id,
+      title: (0, import_html_entities3.decodeEntities)(typedItem.title?.rendered || ""),
+      status: typedItem.status,
+      modified: typedItem.modified,
+      entriesCount: typedItem.entries_count ?? 0,
+      editUrl: typedItem.edit_url
+    };
+  });
+  return {
+    records,
+    isLoading: !hasResolved,
+    totalItems: totalItems ?? 0,
+    totalPages: totalPages ?? 0
+  };
+}
+
+// src/dashboard/wp-build/components/inbox-status-toggle/index.tsx
+var import_element74 = __toESM(require_element(), 1);
 var import_i18n66 = __toESM(require_i18n(), 1);
 var import_jsx_runtime154 = __toESM(require_jsx_runtime(), 1);
 var getLabel = (status, count) => {
+  let label;
   switch (status) {
     case "inbox":
-      return (0, import_i18n66.sprintf)(
-        /* translators: %d is the number of inbox responses. */
-        (0, import_i18n66.__)("Inbox (%d)", "jetpack-forms"),
-        count
-      );
+      label = (0, import_i18n66.__)("Inbox", "jetpack-forms");
+      break;
     case "spam":
-      return (0, import_i18n66.sprintf)(
-        /* translators: %d is the number of spam responses. */
-        (0, import_i18n66.__)("Spam (%d)", "jetpack-forms"),
-        count
-      );
+      label = (0, import_i18n66.__)("Spam", "jetpack-forms");
+      break;
     case "trash":
-      return (0, import_i18n66.sprintf)(
-        /* translators: %d is the number of trash responses. */
-        (0, import_i18n66.__)("Trash (%d)", "jetpack-forms"),
-        count
-      );
+      label = (0, import_i18n66._x)("Trash", "noun", "jetpack-forms");
+      break;
   }
+  return /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)("span", { children: [
+    label,
+    /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(count || 0) })
+  ] });
 };
 function InboxStatusToggle({
   activeStatus,
   counts: counts2,
   onChange
 }) {
-  const handleChange = (0, import_element73.useCallback)(
+  const handleChange = (0, import_element74.useCallback)(
     (nextStatus) => {
       if (nextStatus === activeStatus) {
         return;
@@ -27837,7 +27885,7 @@ function InboxStatusToggle({
     },
     [activeStatus, onChange]
   );
-  const statusTabs = (0, import_element73.useMemo)(
+  const statusTabs = (0, import_element74.useMemo)(
     () => [
       { value: "inbox", label: getLabel("inbox", counts2.inbox) },
       { value: "spam", label: getLabel("spam", counts2.spam) },
@@ -27849,10 +27897,10 @@ function InboxStatusToggle({
 }
 
 // src/dashboard/wp-build/components/dataviews-header-row/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='4e7133a61d']")) {
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='08f8b50a11']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "4e7133a61d");
-  style.appendChild(document.createTextNode(".jp-forms-dataviews__view-actions{border-bottom:1px solid var(--wpds-color-stroke-surface-neutral,#e0e0e0);box-sizing:border-box;container-type:inline-size;flex-shrink:0;overflow-x:auto;padding-inline:20px;width:100%}@container (width < 500px){.jp-forms-dataviews__view-actions{--wp-ui-stack-justify:flex-start;align-items:flex-start;flex-direction:column}}.jp-forms-dataviews__view-actions>div:not(:empty){min-height:48px}.jp-forms-dataviews-filters__container,.jp-forms-dataviews-filters__container:not(:empty){padding:0}.jp-forms-dataviews-filters__container:not(:empty){padding-block:12px;padding-inline:20px}"));
+  style.setAttribute("data-wp-hash", "08f8b50a11");
+  style.appendChild(document.createTextNode(".jp-forms-dataviews__view-actions{border-bottom:1px solid var(--wpds-color-stroke-surface-neutral,#e0e0e0);box-sizing:border-box;container-type:inline-size;flex-shrink:0;overflow-x:auto;padding-inline:20px;width:100%}@container (width < 500px){.jp-forms-dataviews__view-actions{--wp-ui-stack-justify:flex-start;align-items:flex-start;flex-direction:column}}.jp-forms-dataviews__view-actions>div:not(:empty){min-height:48px}.jp-forms-dataviews-filters__container,.jp-forms-dataviews-filters__container:not(:empty){padding:0}.jp-forms-dataviews-filters__container:not(:empty){padding-block:12px;padding-inline:20px}.jp-forms-count-badge{background-color:#f0f0f0;color:#2f2f2f;margin-inline-start:4px;vertical-align:middle}"));
   document.head.appendChild(style);
 }
 
@@ -27866,7 +27914,12 @@ function DataViewsHeaderRow({
   onStatusChange
 }) {
   const navigate = useNavigate2();
-  const onTabChange = (0, import_element74.useCallback)(
+  const { totalItems: formsCount = 0 } = useFormsData(1, 1, "", NON_TRASH_FORM_STATUSES);
+  const responsesInboxCount = (0, import_data14.useSelect)((select) => {
+    select(store3).getCounts();
+    return select(store3).getInboxCount() ?? 0;
+  }, []);
+  const onTabChange = (0, import_element75.useCallback)(
     (nextValue) => {
       if (nextValue === "forms") {
         navigate({ href: "/forms" });
@@ -27894,8 +27947,14 @@ function DataViewsHeaderRow({
               })
             }
           ) : /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(List, { density: "compact", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Tab, { value: "responses", children: (0, import_i18n67.__)("Responses", "jetpack-forms") }),
-            /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Tab, { value: "forms", children: (0, import_i18n67.__)("Forms", "jetpack-forms") })
+            /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Tab, { value: "responses", children: /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)("span", { children: [
+              (0, import_i18n67.__)("Responses", "jetpack-forms"),
+              /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(responsesInboxCount || 0) })
+            ] }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Tab, { value: "forms", children: /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)("span", { children: [
+              (0, import_i18n67.__)("Forms", "jetpack-forms"),
+              /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(formsCount || 0) })
+            ] }) })
           ] }) }) }),
           /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(Stack, { align: "center", gap: "sm", children: [
             /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(dataviews_default.Search, {}),
@@ -27910,20 +27969,20 @@ function DataViewsHeaderRow({
 }
 
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
-var import_core_data4 = __toESM(require_core_data(), 1);
-var import_data16 = __toESM(require_data(), 1);
-var import_element79 = __toESM(require_element(), 1);
-var import_html_entities3 = __toESM(require_html_entities(), 1);
+var import_core_data5 = __toESM(require_core_data(), 1);
+var import_data17 = __toESM(require_data(), 1);
+var import_element80 = __toESM(require_element(), 1);
+var import_html_entities4 = __toESM(require_html_entities(), 1);
 var import_i18n74 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/edit-form-button/index.tsx
 var import_components66 = __toESM(require_components(), 1);
-var import_element75 = __toESM(require_element(), 1);
+var import_element76 = __toESM(require_element(), 1);
 var import_i18n68 = __toESM(require_i18n(), 1);
 var import_jsx_runtime156 = __toESM(require_jsx_runtime(), 1);
 function EditFormButton({ formId }) {
   const adminUrl = useConfigValue("adminUrl") || "";
-  const onClick = (0, import_element75.useCallback)(() => {
+  const onClick = (0, import_element76.useCallback)(() => {
     const editPath = `post.php?post=${formId}&action=edit`;
     window.location.href = adminUrl ? `${adminUrl}${editPath}` : editPath;
   }, [adminUrl, formId]);
@@ -27933,9 +27992,9 @@ function EditFormButton({ formId }) {
 // src/dashboard/components/empty-spam-button/index.tsx
 var import_api_fetch7 = __toESM(require_api_fetch(), 1);
 var import_components67 = __toESM(require_components(), 1);
-var import_core_data2 = __toESM(require_core_data(), 1);
-var import_data14 = __toESM(require_data(), 1);
-var import_element76 = __toESM(require_element(), 1);
+var import_core_data3 = __toESM(require_core_data(), 1);
+var import_data15 = __toESM(require_data(), 1);
+var import_element77 = __toESM(require_element(), 1);
 var import_i18n69 = __toESM(require_i18n(), 1);
 var import_notices2 = __toESM(require_notices(), 1);
 var import_jsx_runtime157 = __toESM(require_jsx_runtime(), 1);
@@ -27943,22 +28002,22 @@ var EmptySpamButton = ({
   totalItemsSpam: totalItemsSpamProp,
   isLoadingCounts: isLoadingCountsProp
 } = {}) => {
-  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element76.useState)(false);
-  const [isEmptying, setIsEmptying] = (0, import_element76.useState)(false);
-  const [isEmpty4, setIsEmpty] = (0, import_element76.useState)(true);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data14.useDispatch)(import_notices2.store);
-  const { invalidateResolution } = (0, import_data14.useDispatch)(import_core_data2.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data14.useDispatch)(store3);
+  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element77.useState)(false);
+  const [isEmptying, setIsEmptying] = (0, import_element77.useState)(false);
+  const [isEmpty4, setIsEmpty] = (0, import_element77.useState)(true);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data15.useDispatch)(import_notices2.store);
+  const { invalidateResolution } = (0, import_data15.useDispatch)(import_core_data3.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data15.useDispatch)(store3);
   const hookData = useInboxData();
   const totalItemsSpam = totalItemsSpamProp ?? hookData.totalItemsSpam;
   const isLoadingCounts = isLoadingCountsProp ?? false;
   const { selectedResponsesCount, currentQuery: currentQuery2 } = hookData;
-  (0, import_element76.useEffect)(() => {
+  (0, import_element77.useEffect)(() => {
     setIsEmpty(isLoadingCounts || !totalItemsSpam);
   }, [totalItemsSpam, isLoadingCounts]);
-  const openConfirmDialog = (0, import_element76.useCallback)(() => setConfirmDialogOpen(true), []);
-  const closeConfirmDialog = (0, import_element76.useCallback)(() => setConfirmDialogOpen(false), []);
-  const onConfirmEmptying = (0, import_element76.useCallback)(async () => {
+  const openConfirmDialog = (0, import_element77.useCallback)(() => setConfirmDialogOpen(true), []);
+  const closeConfirmDialog = (0, import_element77.useCallback)(() => setConfirmDialogOpen(false), []);
+  const onConfirmEmptying = (0, import_element77.useCallback)(async () => {
     if (isEmptying || isEmpty4) {
       return;
     }
@@ -28054,9 +28113,9 @@ var empty_spam_button_default = EmptySpamButton;
 // src/dashboard/components/empty-trash-button/index.tsx
 var import_api_fetch8 = __toESM(require_api_fetch(), 1);
 var import_components68 = __toESM(require_components(), 1);
-var import_core_data3 = __toESM(require_core_data(), 1);
-var import_data15 = __toESM(require_data(), 1);
-var import_element77 = __toESM(require_element(), 1);
+var import_core_data4 = __toESM(require_core_data(), 1);
+var import_data16 = __toESM(require_data(), 1);
+var import_element78 = __toESM(require_element(), 1);
 var import_i18n70 = __toESM(require_i18n(), 1);
 var import_notices3 = __toESM(require_notices(), 1);
 var import_jsx_runtime158 = __toESM(require_jsx_runtime(), 1);
@@ -28064,22 +28123,22 @@ var EmptyTrashButton = ({
   totalItemsTrash: totalItemsTrashProp,
   isLoadingCounts: isLoadingCountsProp
 } = {}) => {
-  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element77.useState)(false);
-  const [isEmptying, setIsEmptying] = (0, import_element77.useState)(false);
-  const [isEmpty4, setIsEmpty] = (0, import_element77.useState)(true);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data15.useDispatch)(import_notices3.store);
-  const { invalidateResolution } = (0, import_data15.useDispatch)(import_core_data3.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data15.useDispatch)(store3);
+  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element78.useState)(false);
+  const [isEmptying, setIsEmptying] = (0, import_element78.useState)(false);
+  const [isEmpty4, setIsEmpty] = (0, import_element78.useState)(true);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data16.useDispatch)(import_notices3.store);
+  const { invalidateResolution } = (0, import_data16.useDispatch)(import_core_data4.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data16.useDispatch)(store3);
   const hookData = useInboxData();
   const totalItemsTrash = totalItemsTrashProp ?? hookData.totalItemsTrash;
   const isLoadingCounts = isLoadingCountsProp ?? false;
   const { selectedResponsesCount, currentQuery: currentQuery2 } = hookData;
-  (0, import_element77.useEffect)(() => {
+  (0, import_element78.useEffect)(() => {
     setIsEmpty(isLoadingCounts || !totalItemsTrash);
   }, [totalItemsTrash, isLoadingCounts]);
-  const openConfirmDialog = (0, import_element77.useCallback)(() => setConfirmDialogOpen(true), []);
-  const closeConfirmDialog = (0, import_element77.useCallback)(() => setConfirmDialogOpen(false), []);
-  const onConfirmEmptying = (0, import_element77.useCallback)(async () => {
+  const openConfirmDialog = (0, import_element78.useCallback)(() => setConfirmDialogOpen(true), []);
+  const closeConfirmDialog = (0, import_element78.useCallback)(() => setConfirmDialogOpen(false), []);
+  const onConfirmEmptying = (0, import_element78.useCallback)(async () => {
     if (isEmptying || isEmpty4) {
       return;
     }
@@ -28174,13 +28233,13 @@ var empty_trash_button_default = EmptyTrashButton;
 
 // src/dashboard/wp-build/components/back-to-forms-button/index.tsx
 var import_components69 = __toESM(require_components(), 1);
-var import_element78 = __toESM(require_element(), 1);
+var import_element79 = __toESM(require_element(), 1);
 var import_i18n71 = __toESM(require_i18n(), 1);
 var import_jsx_runtime159 = __toESM(require_jsx_runtime(), 1);
 import { useNavigate as useNavigate3 } from "@wordpress/route";
 function BackToFormsButton() {
   const navigate = useNavigate3();
-  const onClick = (0, import_element78.useCallback)(() => navigate({ href: "/forms" }), [navigate]);
+  const onClick = (0, import_element79.useCallback)(() => navigate({ href: "/forms" }), [navigate]);
   return /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components69.Button, { size: "compact", variant: "primary", onClick, children: (0, import_i18n71.__)("Back to forms", "jetpack-forms") });
 }
 
@@ -28217,26 +28276,26 @@ var import_jsx_runtime162 = __toESM(require_jsx_runtime(), 1);
 function usePageHeaderDetails(props) {
   const { screen, sourceId, isIntegrationsEnabled, showDashboardIntegrations, onOpenIntegrations } = props;
   const statusView = props.statusView ?? "inbox";
-  const sourceIdNumber = (0, import_element79.useMemo)(() => {
+  const sourceIdNumber = (0, import_element80.useMemo)(() => {
     const value = sourceId;
     const numberValue = typeof value === "number" ? value : Number(value);
     return Number.isFinite(numberValue) && numberValue > 0 ? numberValue : null;
   }, [sourceId]);
   const isFormsScreen = screen === "forms";
   const isSingleFormScreen = screen === "responses" && sourceIdNumber !== null;
-  const formRecord = (0, import_data16.useSelect)(
-    (select) => sourceIdNumber ? select(import_core_data4.store).getEntityRecord(
+  const formRecord = (0, import_data17.useSelect)(
+    (select) => sourceIdNumber ? select(import_core_data5.store).getEntityRecord(
       "postType",
       "jetpack_form",
       sourceIdNumber
     ) : void 0,
     [sourceIdNumber]
   );
-  const formTitle = (0, import_element79.useMemo)(() => {
+  const formTitle = (0, import_element80.useMemo)(() => {
     const rendered = formRecord?.title?.rendered || "";
-    return (0, import_html_entities3.decodeEntities)(rendered);
+    return (0, import_html_entities4.decodeEntities)(rendered);
   }, [formRecord?.title?.rendered]);
-  const breadcrumbsItems = (0, import_element79.useMemo)(() => {
+  const breadcrumbsItems = (0, import_element80.useMemo)(() => {
     if (isFormsScreen) {
       return [{ label: (0, import_i18n74.__)("Forms", "jetpack-forms") }];
     }
@@ -28248,13 +28307,13 @@ function usePageHeaderDetails(props) {
     }
     return [{ label: (0, import_i18n74.__)("Form Responses", "jetpack-forms") }];
   }, [formTitle, isFormsScreen, isSingleFormScreen]);
-  const breadcrumbs = (0, import_element79.useMemo)(() => {
+  const breadcrumbs = (0, import_element80.useMemo)(() => {
     return /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)(Stack, { align: "center", gap: "xs", children: [
       /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
       /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(breadcrumbs_default, { items: breadcrumbsItems })
     ] });
   }, [breadcrumbsItems]);
-  const subtitle = (0, import_element79.useMemo)(() => {
+  const subtitle = (0, import_element80.useMemo)(() => {
     if (isFormsScreen) {
       return (0, import_i18n74.__)("View and manage all your forms in one place.", "jetpack-forms");
     }
@@ -28270,7 +28329,7 @@ function usePageHeaderDetails(props) {
     }
     return (0, import_i18n74.__)("View and manage all your form submissions in one place.", "jetpack-forms");
   }, [formTitle, isFormsScreen, isSingleFormScreen]);
-  const actions = (0, import_element79.useMemo)(() => {
+  const actions = (0, import_element80.useMemo)(() => {
     if (isFormsScreen) {
       return [
         ...isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime162.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
@@ -28308,7 +28367,7 @@ function usePageHeaderDetails(props) {
 // routes/responses/actions.tsx
 var import_api_fetch9 = __toESM(require_api_fetch());
 var import_components72 = __toESM(require_components());
-var import_core_data5 = __toESM(require_core_data());
+var import_core_data6 = __toESM(require_core_data());
 var import_i18n75 = __toESM(require_i18n());
 var import_notices4 = __toESM(require_notices());
 
@@ -28326,7 +28385,7 @@ var spam_default = spam;
 
 // src/dashboard/inbox/stage/views.js
 var import_compose14 = __toESM(require_compose(), 1);
-var import_element80 = __toESM(require_element(), 1);
+var import_element81 = __toESM(require_element(), 1);
 var LAYOUT_TABLE2 = "table";
 var defaultView = {
   type: LAYOUT_TABLE2,
@@ -28419,7 +28478,7 @@ var waitForEntityRecordsResolution = async (registry, currentQuery2) => {
   const querySnapshot = { ...currentQuery2 };
   try {
     await withTimeout(
-      registry.resolveSelect(import_core_data5.store).getEntityRecords("postType", "feedback", querySnapshot),
+      registry.resolveSelect(import_core_data6.store).getEntityRecords("postType", "feedback", querySnapshot),
       1e4
     );
   } catch {
@@ -28526,7 +28585,7 @@ function getActions({
         multiple: items.length > 1
       });
       const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices4.store);
-      const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data5.store);
+      const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data6.store);
       const { updateCountsOptimistically: updateCountsOptimistically2, addPendingAction: addPendingAction2, removePendingAction: removePendingAction2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const queryParams = getCountQueryParams(getCurrentQuery2());
@@ -28632,7 +28691,7 @@ function getActions({
         multiple: items.length > 1
       });
       const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices4.store);
-      const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data5.store);
+      const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data6.store);
       const { updateCountsOptimistically: updateCountsOptimistically2, addPendingAction: addPendingAction2, removePendingAction: removePendingAction2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const queryParams = getCountQueryParams(getCurrentQuery2());
@@ -28733,7 +28792,7 @@ function getActions({
         action: "restore",
         multiple: items.length > 1
       });
-      const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data5.store);
+      const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data6.store);
       const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices4.store);
       const { updateCountsOptimistically: updateCountsOptimistically2, addPendingAction: addPendingAction2, removePendingAction: removePendingAction2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
@@ -28830,7 +28889,7 @@ function getActions({
         action: "move-to-trash",
         multiple: items.length > 1
       });
-      const { deleteEntityRecord, editEntityRecord, receiveEntityRecords } = registry.dispatch(import_core_data5.store);
+      const { deleteEntityRecord, editEntityRecord, receiveEntityRecords } = registry.dispatch(import_core_data6.store);
       const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices4.store);
       const { updateCountsOptimistically: updateCountsOptimistically2, addPendingAction: addPendingAction2, removePendingAction: removePendingAction2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
@@ -28938,7 +28997,7 @@ function getActions({
         action: "delete",
         multiple: items.length > 1
       });
-      const { deleteEntityRecord } = registry.dispatch(import_core_data5.store);
+      const { deleteEntityRecord } = registry.dispatch(import_core_data6.store);
       const { invalidateFilters: invalidateFilters2, updateCountsOptimistically: updateCountsOptimistically2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const { createSuccessNotice, createErrorNotice } = registry.dispatch(import_notices4.store);
@@ -29002,8 +29061,8 @@ function getActions({
         action: "mark-as-read",
         multiple: items.length > 1
       });
-      const { editEntityRecord } = registry.dispatch(import_core_data5.store);
-      const { getEntityRecord } = registry.select(import_core_data5.store);
+      const { editEntityRecord } = registry.dispatch(import_core_data6.store);
+      const { getEntityRecord } = registry.select(import_core_data6.store);
       const { createSuccessNotice, createErrorNotice } = registry.dispatch(import_notices4.store);
       const { invalidateCounts: invalidateCounts2, markRecordsAsInvalid: markRecordsAsInvalid2 } = registry.dispatch(store3);
       const promises = await Promise.allSettled(
@@ -29084,8 +29143,8 @@ function getActions({
         action: "mark-as-unread",
         multiple: items.length > 1
       });
-      const { editEntityRecord } = registry.dispatch(import_core_data5.store);
-      const { getEntityRecord } = registry.select(import_core_data5.store);
+      const { editEntityRecord } = registry.dispatch(import_core_data6.store);
+      const { getEntityRecord } = registry.select(import_core_data6.store);
       const { createSuccessNotice, createErrorNotice } = registry.dispatch(import_notices4.store);
       const { invalidateCounts: invalidateCounts2, markRecordsAsInvalid: markRecordsAsInvalid2 } = registry.dispatch(store3);
       const promises = await Promise.allSettled(
@@ -29227,19 +29286,19 @@ function StageInner() {
   const sourceIdValue = searchParams?.sourceId;
   const sourceIdNumber = typeof sourceIdValue === "number" ? sourceIdValue : Number(sourceIdValue);
   const isSingleFormView = Number.isFinite(sourceIdNumber) && sourceIdNumber > 0;
-  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element81.useState)(false);
-  const integrations = (0, import_data17.useSelect)(
+  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element82.useState)(false);
+  const integrations = (0, import_data18.useSelect)(
     (select) => select(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
   );
-  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data17.useDispatch)(INTEGRATIONS_STORE);
+  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data18.useDispatch)(INTEGRATIONS_STORE);
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
-  const [view, setView] = (0, import_element81.useState)(() => ({
+  const [view, setView] = (0, import_element82.useState)(() => ({
     ...DEFAULT_VIEW,
     search: searchParams?.search || ""
   }));
-  const selection = (0, import_element81.useMemo)(() => searchParams?.responseIds ?? [], [searchParams?.responseIds]);
+  const selection = (0, import_element82.useMemo)(() => searchParams?.responseIds ?? [], [searchParams?.responseIds]);
   const {
     setCurrentQuery: setCurrentQuery2,
     setSelectedResponses: setSelectedResponses2,
@@ -29252,13 +29311,13 @@ function StageInner() {
     totalItemsSpam,
     totalItemsTrash
   } = useInboxData({ status: statusView });
-  (0, import_element81.useEffect)(() => {
+  (0, import_element82.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
     if (urlSearch !== view.search) {
       setView((prev) => ({ ...prev, search: urlSearch }));
     }
   }, [searchParams?.search]);
-  const onChangeView = (0, import_element81.useCallback)(
+  const onChangeView = (0, import_element82.useCallback)(
     (newView) => {
       if (!isSingleFormView) {
         const folderValue = newView.filters?.find((filter) => filter.field === "folder")?.value || "inbox";
@@ -29287,7 +29346,7 @@ function StageInner() {
     },
     [isSingleFormView, navigate, searchParams, statusView, view.search]
   );
-  const onChangeSelection = (0, import_element81.useCallback)(
+  const onChangeSelection = (0, import_element82.useCallback)(
     (items) => {
       navigate({
         search: {
@@ -29298,7 +29357,7 @@ function StageInner() {
     },
     [searchParams, navigate]
   );
-  const onStatusChange = (0, import_element81.useCallback)(
+  const onStatusChange = (0, import_element82.useCallback)(
     (nextStatus) => {
       navigate({
         to: "/responses/$view",
@@ -29312,7 +29371,7 @@ function StageInner() {
     },
     [isSingleFormView, navigate, searchParams, sourceIdNumber]
   );
-  (0, import_element81.useEffect)(() => {
+  (0, import_element82.useEffect)(() => {
     if (isSingleFormView) {
       return;
     }
@@ -29331,7 +29390,7 @@ function StageInner() {
       };
     });
   }, [isSingleFormView, setView, statusView]);
-  const queryParams = (0, import_element81.useMemo)(() => {
+  const queryParams = (0, import_element82.useMemo)(() => {
     const queryArgs = {
       status: statusFilter,
       per_page: view.perPage,
@@ -29363,16 +29422,16 @@ function StageInner() {
     });
     return queryArgs;
   }, [isSingleFormView, sourceIdNumber, statusFilter, view]);
-  (0, import_element81.useEffect)(() => {
+  (0, import_element82.useEffect)(() => {
     setCurrentQuery2(queryParams);
   }, [queryParams, setCurrentQuery2]);
-  (0, import_element81.useEffect)(() => {
+  (0, import_element82.useEffect)(() => {
     const validSelectedIds = (selection || []).filter((id) => {
       return records?.some((record) => getItemId(record) === id);
     });
     setSelectedResponses2(validSelectedIds);
   }, [records, selection, setSelectedResponses2]);
-  const fields = (0, import_element81.useMemo)(
+  const fields = (0, import_element82.useMemo)(
     () => [
       ...isSingleFormView ? [] : [
         {
@@ -29417,10 +29476,10 @@ function StageInner() {
         id: "from",
         label: (0, import_i18n76.__)("From", "jetpack-forms"),
         render: ({ item }) => {
-          const displayName = (0, import_html_entities4.decodeEntities)(
+          const displayName = (0, import_html_entities5.decodeEntities)(
             item.author_name || item.author_email || item.author_url || item.ip || "Anonymous"
           );
-          const showEmail = item.author_email && displayName !== (0, import_html_entities4.decodeEntities)(item.author_email);
+          const showEmail = item.author_email && displayName !== (0, import_html_entities5.decodeEntities)(item.author_email);
           const defaultImage = item.author_name || item.author_email ? "initials" : "mp";
           return /* @__PURE__ */ (0, import_jsx_runtime166.jsxs)(Stack, { align: "center", gap: "sm", children: [
             item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(
@@ -29500,7 +29559,7 @@ function StageInner() {
           elements: (filterOptions?.source || []).map(
             (source) => ({
               value: source.id.toString(),
-              label: (0, import_html_entities4.decodeEntities)(source.title) || source.url
+              label: (0, import_html_entities5.decodeEntities)(source.title) || source.url
             })
           ),
           filterBy: { operators: ["is"] },
@@ -29534,7 +29593,7 @@ function StageInner() {
     ],
     [filterOptions, isSingleFormView, totalItemsInbox, totalItemsSpam, totalItemsTrash]
   );
-  const actions = (0, import_element81.useMemo)(
+  const actions = (0, import_element82.useMemo)(
     () => getActions({
       navigate,
       searchParams,
@@ -29542,17 +29601,17 @@ function StageInner() {
     }),
     [navigate, searchParams, statusView]
   );
-  const paginationInfo = (0, import_element81.useMemo)(
+  const paginationInfo = (0, import_element82.useMemo)(
     () => ({
       totalItems: totalItems || 0,
       totalPages: totalPages || 1
     }),
     [totalItems, totalPages]
   );
-  const handleIntegrations = (0, import_element81.useCallback)(() => {
+  const handleIntegrations = (0, import_element82.useCallback)(() => {
     setIsIntegrationsModalOpen(true);
   }, []);
-  const closeIntegrationsModal = (0, import_element81.useCallback)(() => {
+  const closeIntegrationsModal = (0, import_element82.useCallback)(() => {
     setIsIntegrationsModalOpen(false);
   }, []);
   const {
@@ -29568,7 +29627,7 @@ function StageInner() {
     onOpenIntegrations: handleIntegrations
   });
   const readStatusFilter = view.filters?.find((filter) => filter.field === "read_status")?.value;
-  const onClickItem = (0, import_element81.useCallback)(
+  const onClickItem = (0, import_element82.useCallback)(
     (item) => {
       onChangeSelection([String(item.id)]);
     },
@@ -29649,22 +29708,22 @@ var Stage = () => {
 // routes/responses/response/index.tsx
 var import_api_fetch11 = __toESM(require_api_fetch());
 var import_components79 = __toESM(require_components());
-var import_core_data7 = __toESM(require_core_data());
-var import_data19 = __toESM(require_data());
-var import_element84 = __toESM(require_element());
-var import_html_entities7 = __toESM(require_html_entities());
+var import_core_data8 = __toESM(require_core_data());
+var import_data20 = __toESM(require_data());
+var import_element85 = __toESM(require_element());
+var import_html_entities8 = __toESM(require_html_entities());
 var import_i18n82 = __toESM(require_i18n());
 import { useParams as useParams2, useSearch as useSearch3, useNavigate as useNavigate5 } from "@wordpress/route";
 
 // src/dashboard/components/copy-clipboard-button/index.tsx
 var import_components74 = __toESM(require_components(), 1);
 var import_compose15 = __toESM(require_compose(), 1);
-var import_element82 = __toESM(require_element(), 1);
+var import_element83 = __toESM(require_element(), 1);
 var import_i18n77 = __toESM(require_i18n(), 1);
 var import_jsx_runtime167 = __toESM(require_jsx_runtime(), 1);
 function CopyClipboardButton({ text }) {
-  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element82.useState)(false);
-  const timeoutIdRef = (0, import_element82.useRef)(null);
+  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element83.useState)(false);
+  const timeoutIdRef = (0, import_element83.useRef)(null);
   const ref = (0, import_compose15.useCopyToClipboard)(text, () => {
     setShowCopyConfirmation(true);
     if (timeoutIdRef.current) {
@@ -29674,7 +29733,7 @@ function CopyClipboardButton({ text }) {
       setShowCopyConfirmation(false);
     }, 4e3);
   });
-  (0, import_element82.useEffect)(() => {
+  (0, import_element83.useEffect)(() => {
     return () => {
       if (timeoutIdRef.current) {
         clearTimeout(timeoutIdRef.current);
@@ -29698,7 +29757,7 @@ function CopyClipboardButton({ text }) {
 
 // src/dashboard/components/inspector/preview-file/index.tsx
 var import_components75 = __toESM(require_components(), 1);
-var import_html_entities5 = __toESM(require_html_entities(), 1);
+var import_html_entities6 = __toESM(require_html_entities(), 1);
 var import_i18n78 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/inspector/preview-file/style.scss
@@ -29724,7 +29783,7 @@ var PreviewFile = ({ file, isLoading, onImageLoaded }) => {
       "img",
       {
         src: file.url,
-        alt: (0, import_html_entities5.decodeEntities)(file.name),
+        alt: (0, import_html_entities6.decodeEntities)(file.name),
         onLoad: onImageLoaded,
         className: "jp-forms__inbox-file-preview-image"
       }
@@ -29736,7 +29795,7 @@ var preview_file_default = PreviewFile;
 // src/dashboard/components/inspector/response-meta/index.tsx
 var import_components76 = __toESM(require_components(), 1);
 var import_date11 = __toESM(require_date(), 1);
-var import_html_entities6 = __toESM(require_html_entities(), 1);
+var import_html_entities7 = __toESM(require_html_entities(), 1);
 var import_i18n79 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/inspector/response-meta/style.scss
@@ -29751,7 +29810,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 var import_jsx_runtime169 = __toESM(require_jsx_runtime(), 1);
 var getDisplayName = (response) => {
   const { author_name, author_email, author_url, ip } = response;
-  return (0, import_html_entities6.decodeEntities)(author_name || author_email || author_url || ip);
+  return (0, import_html_entities7.decodeEntities)(author_name || author_email || author_url || ip);
 };
 var ResponseMeta = ({ response }) => {
   const displayName = getDisplayName(response);
@@ -29795,8 +29854,8 @@ var ResponseMeta = ({ response }) => {
       /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("tr", { children: [
         /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("th", { children: (0, import_i18n79.__)("Source:", "jetpack-forms") }),
         /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("td", { children: [
-          response.entry_permalink && /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_components76.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities6.decodeEntities)(response.entry_title) || getPath(response) }),
-          !response.entry_permalink && (0, import_html_entities6.decodeEntities)(response.entry_title)
+          response.entry_permalink && /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_components76.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities7.decodeEntities)(response.entry_title) || getPath(response) }),
+          !response.entry_permalink && (0, import_html_entities7.decodeEntities)(response.entry_title)
         ] })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("tr", { children: [
@@ -29827,23 +29886,23 @@ var response_meta_default = ResponseMeta;
 // routes/responses/response/actions.tsx
 var import_api_fetch10 = __toESM(require_api_fetch());
 var import_components77 = __toESM(require_components());
-var import_core_data6 = __toESM(require_core_data());
-var import_data18 = __toESM(require_data());
-var import_element83 = __toESM(require_element());
+var import_core_data7 = __toESM(require_core_data());
+var import_data19 = __toESM(require_data());
+var import_element84 = __toESM(require_element());
 var import_i18n80 = __toESM(require_i18n());
 var import_jsx_runtime170 = __toESM(require_jsx_runtime());
 function ResponseActions({
   response,
   onActionComplete
 }) {
-  const { saveEntityRecord, deleteEntityRecord, editEntityRecord } = (0, import_data18.useDispatch)(
-    import_core_data6.store
+  const { saveEntityRecord, deleteEntityRecord, editEntityRecord } = (0, import_data19.useDispatch)(
+    import_core_data7.store
   );
-  const { updateCountsOptimistically: updateCountsOptimistically2, invalidateCounts: invalidateCounts2 } = (0, import_data18.useDispatch)(
+  const { updateCountsOptimistically: updateCountsOptimistically2, invalidateCounts: invalidateCounts2 } = (0, import_data19.useDispatch)(
     store3
   );
-  const [isLoading] = (0, import_element83.useState)(false);
-  const handleMarkAsSpam = (0, import_element83.useCallback)(async () => {
+  const [isLoading] = (0, import_element84.useState)(false);
+  const handleMarkAsSpam = (0, import_element84.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "spam" });
     updateCountsOptimistically2(originalStatus, "spam", 1);
@@ -29866,7 +29925,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleMarkAsNotSpam = (0, import_element83.useCallback)(async () => {
+  const handleMarkAsNotSpam = (0, import_element84.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "publish" });
     updateCountsOptimistically2(originalStatus, "publish", 1);
@@ -29889,7 +29948,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleMoveToTrash = (0, import_element83.useCallback)(async () => {
+  const handleMoveToTrash = (0, import_element84.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "trash" });
     updateCountsOptimistically2(originalStatus, "trash", 1);
@@ -29909,7 +29968,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleRestore = (0, import_element83.useCallback)(async () => {
+  const handleRestore = (0, import_element84.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "publish" });
     updateCountsOptimistically2(originalStatus, "publish", 1);
@@ -29932,7 +29991,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleDelete = (0, import_element83.useCallback)(async () => {
+  const handleDelete = (0, import_element84.useCallback)(async () => {
     const originalStatus = response.status;
     updateCountsOptimistically2(originalStatus, "", 1);
     onActionComplete(response);
@@ -29949,7 +30008,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleToggleRead = (0, import_element83.useCallback)(async () => {
+  const handleToggleRead = (0, import_element84.useCallback)(async () => {
     const newIsUnread = !response.is_unread;
     editEntityRecord("postType", "feedback", response.id, { is_unread: newIsUnread });
     onActionComplete({ ...response, is_unread: newIsUnread });
@@ -30088,7 +30147,7 @@ function FieldFile({
   files,
   handleFilePreview
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("ul", { style: { margin: 0, paddingLeft: "20px" }, children: files.map((file, index) => /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("li", { children: file.is_image ? /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components79.Button, { variant: "link", onClick: handleFilePreview(file), children: (0, import_html_entities7.decodeEntities)(file.name) }) : /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components79.ExternalLink, { href: file.url, children: (0, import_html_entities7.decodeEntities)(file.name) }) }, index)) });
+  return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("ul", { style: { margin: 0, paddingLeft: "20px" }, children: files.map((file, index) => /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("li", { children: file.is_image ? /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components79.Button, { variant: "link", onClick: handleFilePreview(file), children: (0, import_html_entities8.decodeEntities)(file.name) }) : /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components79.ExternalLink, { href: file.url, children: (0, import_html_entities8.decodeEntities)(file.name) }) }, index)) });
 }
 function FieldEmail({ email }) {
   return /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: "4px" }, children: [
@@ -30142,23 +30201,23 @@ function SingleResponseView({
   onNavigate,
   onClose
 }) {
-  const [previewFile, setPreviewFile] = (0, import_element84.useState)(null);
-  const [isImageLoading, setIsImageLoading] = (0, import_element84.useState)(true);
-  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element84.useState)(null);
+  const [previewFile, setPreviewFile] = (0, import_element85.useState)(null);
+  const [isImageLoading, setIsImageLoading] = (0, import_element85.useState)(true);
+  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element85.useState)(null);
   const emptyTrashDays = useConfigValue("emptyTrashDays") ?? 0;
-  const { editEntityRecord } = (0, import_data19.useDispatch)(import_core_data7.store);
-  const { response, isLoading } = (0, import_data19.useSelect)(
+  const { editEntityRecord } = (0, import_data20.useDispatch)(import_core_data8.store);
+  const { response, isLoading } = (0, import_data20.useSelect)(
     (select) => {
       if (!responseId) {
         return { response: null, isLoading: false };
       }
       return {
-        response: select(import_core_data7.store).getEntityRecord(
+        response: select(import_core_data8.store).getEntityRecord(
           "postType",
           "feedback",
           responseId
         ),
-        isLoading: select(import_core_data7.store).isResolving(
+        isLoading: select(import_core_data8.store).isResolving(
           "getEntityRecord",
           ["postType", "feedback", responseId]
         )
@@ -30169,17 +30228,17 @@ function SingleResponseView({
   const currentIndex = allResponseIds.indexOf(responseId);
   const hasNext = currentIndex < allResponseIds.length - 1;
   const hasPrevious = currentIndex > 0;
-  const handleNext = (0, import_element84.useCallback)(() => {
+  const handleNext = (0, import_element85.useCallback)(() => {
     if (hasNext) {
       onNavigate(allResponseIds[currentIndex + 1]);
     }
   }, [hasNext, allResponseIds, currentIndex, onNavigate]);
-  const handlePrevious = (0, import_element84.useCallback)(() => {
+  const handlePrevious = (0, import_element85.useCallback)(() => {
     if (hasPrevious) {
       onNavigate(allResponseIds[currentIndex - 1]);
     }
   }, [hasPrevious, allResponseIds, currentIndex, onNavigate]);
-  (0, import_element84.useEffect)(() => {
+  (0, import_element85.useEffect)(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowUp" && hasPrevious) {
         event.preventDefault();
@@ -30194,7 +30253,7 @@ function SingleResponseView({
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [hasNext, hasPrevious, handleNext, handlePrevious, onClose]);
-  (0, import_element84.useEffect)(() => {
+  (0, import_element85.useEffect)(() => {
     if (!response || !response.id || !response.is_unread) {
       return;
     }
@@ -30215,21 +30274,21 @@ function SingleResponseView({
       });
     });
   }, [response, editEntityRecord, hasMarkedAsRead]);
-  const handleFilePreview = (0, import_element84.useCallback)(
+  const handleFilePreview = (0, import_element85.useCallback)(
     (file) => () => {
       setIsImageLoading(true);
       setPreviewFile(file);
     },
     []
   );
-  const closePreviewModal = (0, import_element84.useCallback)(() => {
+  const closePreviewModal = (0, import_element85.useCallback)(() => {
     setPreviewFile(null);
     setIsImageLoading(true);
   }, []);
-  const handleImageLoaded = (0, import_element84.useCallback)(() => {
+  const handleImageLoaded = (0, import_element85.useCallback)(() => {
     setIsImageLoading(false);
   }, []);
-  const handleActionComplete = (0, import_element84.useCallback)(
+  const handleActionComplete = (0, import_element85.useCallback)(
     (updatedItem) => {
       if (!updatedItem) {
         if (hasNext) {
@@ -30280,7 +30339,7 @@ function SingleResponseView({
     }
     return String(value);
   };
-  const displayFields = (0, import_element84.useMemo)(() => getDisplayFields(response?.fields), [response?.fields]);
+  const displayFields = (0, import_element85.useMemo)(() => getDisplayFields(response?.fields), [response?.fields]);
   if (isLoading) {
     return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("div", { style: { display: "flex", justifyContent: "center", padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components79.Spinner, {}) });
   }
@@ -30365,7 +30424,7 @@ function SingleResponseView({
         emptyTrashDays
       ) }) })
     ] }),
-    previewFile && /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components79.Modal, { title: (0, import_html_entities7.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
+    previewFile && /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components79.Modal, { title: (0, import_html_entities8.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
       preview_file_default,
       {
         file: previewFile,
@@ -30383,7 +30442,7 @@ function Response() {
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const { records } = useInboxData({ status: statusView });
   const allRecordIds = records?.map((record) => record.id) ?? [];
-  const handleClose = (0, import_element84.useCallback)(() => {
+  const handleClose = (0, import_element85.useCallback)(() => {
     navigate({
       search: {
         ...searchParams,
@@ -30391,7 +30450,7 @@ function Response() {
       }
     });
   }, [navigate, searchParams]);
-  const handleNavigate = (0, import_element84.useCallback)(
+  const handleNavigate = (0, import_element85.useCallback)(
     (id) => {
       navigate({
         search: {

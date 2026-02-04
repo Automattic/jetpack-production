@@ -3718,7 +3718,7 @@ var page_default = Page;
 
 // routes/forms/stage.tsx
 var import_components71 = __toESM(require_components());
-var import_data18 = __toESM(require_data());
+var import_data19 = __toESM(require_data());
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
 var import_element54 = __toESM(require_element(), 1);
@@ -21959,6 +21959,9 @@ var EmptyWrapper = ({ heading = "", body = "", actions = null }) => /* @__PURE__
   actions && /* @__PURE__ */ (0, import_jsx_runtime135.jsx)("span", { style: { marginBlockStart: "16px" }, children: actions })
 ] });
 
+// src/dashboard/constants.ts
+var NON_TRASH_FORM_STATUSES = "publish,draft,pending,future,private";
+
 // src/dashboard/hooks/use-delete-form.ts
 var import_data11 = __toESM(require_data(), 1);
 var import_element69 = __toESM(require_element(), 1);
@@ -22352,7 +22355,777 @@ function useDeleteForm({
   };
 }
 
+// ../../js-packages/number-formatters/dist/esm/create-number-formatters.js
+var import_date9 = __toESM(require_date(), 1);
+
+// ../../js-packages/number-formatters/dist/esm/constants.js
+var FALLBACK_LOCALE = "en";
+var FALLBACK_CURRENCY = "USD";
+
+// ../../js-packages/number-formatters/dist/esm/number-format-currency/index.js
+var import_debug3 = __toESM(require_browser(), 1);
+
+// ../../js-packages/number-formatters/dist/esm/get-cached-formatter.js
+var import_debug2 = __toESM(require_browser(), 1);
+var debug2 = (0, import_debug2.default)("number-formatters:get-cached-formatter");
+var formatterCache = /* @__PURE__ */ new Map();
+function getCachedFormatter({ locale, fallbackLocale = FALLBACK_LOCALE, options, retries = 1 }) {
+  const cacheKey = JSON.stringify([locale, options]);
+  try {
+    return formatterCache.get(cacheKey) ?? formatterCache.set(cacheKey, new Intl.NumberFormat(locale, options)).get(cacheKey);
+  } catch (error2) {
+    debug2(`Intl.NumberFormat was called with a non-existent locale "${locale}"; falling back to ${fallbackLocale}`);
+    if (retries) {
+      return getCachedFormatter({
+        locale: fallbackLocale,
+        options,
+        retries: retries - 1
+      });
+    }
+    throw error2;
+  }
+}
+
+// ../../js-packages/number-formatters/dist/esm/number-format-currency/currencies.js
+var defaultCurrencyOverrides = {
+  AED: {
+    symbol: "\u062F.\u0625.\u200F"
+  },
+  AFN: {
+    symbol: "\u060B"
+  },
+  ALL: {
+    symbol: "Lek"
+  },
+  AMD: {
+    symbol: "\u058F"
+  },
+  ANG: {
+    symbol: "\u0192"
+  },
+  AOA: {
+    symbol: "Kz"
+  },
+  ARS: {
+    symbol: "$"
+  },
+  AUD: {
+    symbol: "A$"
+  },
+  AWG: {
+    symbol: "\u0192"
+  },
+  AZN: {
+    symbol: "\u20BC"
+  },
+  BAM: {
+    symbol: "\u041A\u041C"
+  },
+  BBD: {
+    symbol: "Bds$"
+  },
+  BDT: {
+    symbol: "\u09F3"
+  },
+  BGN: {
+    symbol: "\u043B\u0432."
+  },
+  BHD: {
+    symbol: "\u062F.\u0628.\u200F"
+  },
+  BIF: {
+    symbol: "FBu"
+  },
+  BMD: {
+    symbol: "$"
+  },
+  BND: {
+    symbol: "$"
+  },
+  BOB: {
+    symbol: "Bs"
+  },
+  BRL: {
+    symbol: "R$"
+  },
+  BSD: {
+    symbol: "$"
+  },
+  BTC: {
+    symbol: "\u0243"
+  },
+  BTN: {
+    symbol: "Nu."
+  },
+  BWP: {
+    symbol: "P"
+  },
+  BYR: {
+    symbol: "\u0440."
+  },
+  BZD: {
+    symbol: "BZ$"
+  },
+  CAD: {
+    symbol: "C$"
+  },
+  CDF: {
+    symbol: "FC"
+  },
+  CHF: {
+    symbol: "CHF"
+  },
+  CLP: {
+    symbol: "$"
+  },
+  CNY: {
+    symbol: "\xA5"
+  },
+  COP: {
+    symbol: "$"
+  },
+  CRC: {
+    symbol: "\u20A1"
+  },
+  CUC: {
+    symbol: "CUC"
+  },
+  CUP: {
+    symbol: "$MN"
+  },
+  CVE: {
+    symbol: "$"
+  },
+  CZK: {
+    symbol: "K\u010D"
+  },
+  DJF: {
+    symbol: "Fdj"
+  },
+  DKK: {
+    symbol: "kr."
+  },
+  DOP: {
+    symbol: "RD$"
+  },
+  DZD: {
+    symbol: "\u062F.\u062C.\u200F"
+  },
+  EGP: {
+    symbol: "\u062C.\u0645.\u200F"
+  },
+  ERN: {
+    symbol: "Nfk"
+  },
+  ETB: {
+    symbol: "ETB"
+  },
+  EUR: {
+    symbol: "\u20AC"
+  },
+  FJD: {
+    symbol: "FJ$"
+  },
+  FKP: {
+    symbol: "\xA3"
+  },
+  GBP: {
+    symbol: "\xA3"
+  },
+  GEL: {
+    symbol: "Lari"
+  },
+  GHS: {
+    symbol: "\u20B5"
+  },
+  GIP: {
+    symbol: "\xA3"
+  },
+  GMD: {
+    symbol: "D"
+  },
+  GNF: {
+    symbol: "FG"
+  },
+  GTQ: {
+    symbol: "Q"
+  },
+  GYD: {
+    symbol: "G$"
+  },
+  HKD: {
+    symbol: "HK$"
+  },
+  HNL: {
+    symbol: "L."
+  },
+  HRK: {
+    symbol: "kn"
+  },
+  HTG: {
+    symbol: "G"
+  },
+  HUF: {
+    symbol: "Ft"
+  },
+  IDR: {
+    symbol: "Rp"
+  },
+  ILS: {
+    symbol: "\u20AA"
+  },
+  INR: {
+    symbol: "\u20B9"
+  },
+  IQD: {
+    symbol: "\u062F.\u0639.\u200F"
+  },
+  IRR: {
+    symbol: "\uFDFC"
+  },
+  ISK: {
+    symbol: "kr."
+  },
+  JMD: {
+    symbol: "J$"
+  },
+  JOD: {
+    symbol: "\u062F.\u0627.\u200F"
+  },
+  JPY: {
+    symbol: "\xA5"
+  },
+  KES: {
+    symbol: "S"
+  },
+  KGS: {
+    symbol: "\u0441\u043E\u043C"
+  },
+  KHR: {
+    symbol: "\u17DB"
+  },
+  KMF: {
+    symbol: "CF"
+  },
+  KPW: {
+    symbol: "\u20A9"
+  },
+  KRW: {
+    symbol: "\u20A9"
+  },
+  KWD: {
+    symbol: "\u062F.\u0643.\u200F"
+  },
+  KYD: {
+    symbol: "$"
+  },
+  KZT: {
+    symbol: "\u20B8"
+  },
+  LAK: {
+    symbol: "\u20AD"
+  },
+  LBP: {
+    symbol: "\u0644.\u0644.\u200F"
+  },
+  LKR: {
+    symbol: "\u20A8"
+  },
+  LRD: {
+    symbol: "L$"
+  },
+  LSL: {
+    symbol: "M"
+  },
+  LYD: {
+    symbol: "\u062F.\u0644.\u200F"
+  },
+  MAD: {
+    symbol: "\u062F.\u0645.\u200F"
+  },
+  MDL: {
+    symbol: "lei"
+  },
+  MGA: {
+    symbol: "Ar"
+  },
+  MKD: {
+    symbol: "\u0434\u0435\u043D."
+  },
+  MMK: {
+    symbol: "K"
+  },
+  MNT: {
+    symbol: "\u20AE"
+  },
+  MOP: {
+    symbol: "MOP$"
+  },
+  MRO: {
+    symbol: "UM"
+  },
+  MTL: {
+    symbol: "\u20A4"
+  },
+  MUR: {
+    symbol: "\u20A8"
+  },
+  MVR: {
+    symbol: "MVR"
+  },
+  MWK: {
+    symbol: "MK"
+  },
+  MXN: {
+    symbol: "MX$"
+  },
+  MYR: {
+    symbol: "RM"
+  },
+  MZN: {
+    symbol: "MT"
+  },
+  NAD: {
+    symbol: "N$"
+  },
+  NGN: {
+    symbol: "\u20A6"
+  },
+  NIO: {
+    symbol: "C$"
+  },
+  NOK: {
+    symbol: "kr"
+  },
+  NPR: {
+    symbol: "\u20A8"
+  },
+  NZD: {
+    symbol: "NZ$"
+  },
+  OMR: {
+    symbol: "\uFDFC"
+  },
+  PAB: {
+    symbol: "B/."
+  },
+  PEN: {
+    symbol: "S/."
+  },
+  PGK: {
+    symbol: "K"
+  },
+  PHP: {
+    symbol: "\u20B1"
+  },
+  PKR: {
+    symbol: "\u20A8"
+  },
+  PLN: {
+    symbol: "z\u0142"
+  },
+  PYG: {
+    symbol: "\u20B2"
+  },
+  QAR: {
+    symbol: "\uFDFC"
+  },
+  RON: {
+    symbol: "lei"
+  },
+  RSD: {
+    symbol: "\u0414\u0438\u043D."
+  },
+  RUB: {
+    symbol: "\u20BD"
+  },
+  RWF: {
+    symbol: "RWF"
+  },
+  SAR: {
+    symbol: "\uFDFC"
+  },
+  SBD: {
+    symbol: "S$"
+  },
+  SCR: {
+    symbol: "\u20A8"
+  },
+  SDD: {
+    symbol: "LSd"
+  },
+  SDG: {
+    symbol: "\xA3\u200F"
+  },
+  SEK: {
+    symbol: "kr"
+  },
+  SGD: {
+    symbol: "S$"
+  },
+  SHP: {
+    symbol: "\xA3"
+  },
+  SLL: {
+    symbol: "Le"
+  },
+  SOS: {
+    symbol: "S"
+  },
+  SRD: {
+    symbol: "$"
+  },
+  STD: {
+    symbol: "Db"
+  },
+  SVC: {
+    symbol: "\u20A1"
+  },
+  SYP: {
+    symbol: "\xA3"
+  },
+  SZL: {
+    symbol: "E"
+  },
+  THB: {
+    symbol: "\u0E3F"
+  },
+  TJS: {
+    symbol: "TJS"
+  },
+  TMT: {
+    symbol: "m"
+  },
+  TND: {
+    symbol: "\u062F.\u062A.\u200F"
+  },
+  TOP: {
+    symbol: "T$"
+  },
+  TRY: {
+    symbol: "TL"
+  },
+  TTD: {
+    symbol: "TT$"
+  },
+  TVD: {
+    symbol: "$T"
+  },
+  TWD: {
+    symbol: "NT$"
+  },
+  TZS: {
+    symbol: "TSh"
+  },
+  UAH: {
+    symbol: "\u20B4"
+  },
+  UGX: {
+    symbol: "USh"
+  },
+  USD: {
+    // No override. Do what the locale thinks is best.
+  },
+  UYU: {
+    symbol: "$U"
+  },
+  UZS: {
+    symbol: "\u0441\u045E\u043C"
+  },
+  VEB: {
+    symbol: "Bs."
+  },
+  VEF: {
+    symbol: "Bs. F."
+  },
+  VND: {
+    symbol: "\u20AB"
+  },
+  VUV: {
+    symbol: "VT"
+  },
+  WST: {
+    symbol: "WS$"
+  },
+  XAF: {
+    symbol: "F"
+  },
+  XCD: {
+    symbol: "$"
+  },
+  XOF: {
+    symbol: "F"
+  },
+  XPF: {
+    symbol: "F"
+  },
+  YER: {
+    symbol: "\uFDFC"
+  },
+  ZAR: {
+    symbol: "R"
+  },
+  ZMW: {
+    symbol: "ZK"
+  },
+  WON: {
+    symbol: "\u20A9"
+  }
+};
+
+// ../../js-packages/number-formatters/dist/esm/number-format-currency/index.js
+var debug3 = (0, import_debug3.default)("number-formatters:number-format-currency");
+function getCurrencyOverride(currency, geoLocation) {
+  if (currency === "USD" && geoLocation && geoLocation !== "" && geoLocation !== "US") {
+    return { symbol: "US$" };
+  }
+  return defaultCurrencyOverrides[currency];
+}
+function getValidCurrency(currency, geoLocation) {
+  if (!getCurrencyOverride(currency, geoLocation)) {
+    debug3(`getValidCurrency was called with a non-existent currency "${currency}"; falling back to ${FALLBACK_CURRENCY}`);
+    return FALLBACK_CURRENCY;
+  }
+  return currency;
+}
+function getCurrencyFormatter({ number, currency, browserSafeLocale, forceLatin = true, stripZeros, signForPositive }) {
+  const locale = `${browserSafeLocale}${forceLatin ? "-u-nu-latn" : ""}`;
+  const numberFormatOptions = {
+    style: "currency",
+    currency,
+    ...stripZeros && Number.isInteger(number) && {
+      /**
+       * There's an option called `trailingZeroDisplay` but it does not yet work
+       * in FF so we have to strip zeros manually.
+       */
+      maximumFractionDigits: 0,
+      minimumFractionDigits: 0
+    },
+    ...signForPositive && { signDisplay: "exceptZero" }
+  };
+  return getCachedFormatter({
+    locale,
+    options: numberFormatOptions
+  });
+}
+function getPrecisionForLocaleAndCurrency(browserSafeLocale, currency, forceLatin) {
+  const formatter = getCurrencyFormatter({ number: 0, currency, browserSafeLocale, forceLatin });
+  return formatter.resolvedOptions().maximumFractionDigits;
+}
+function scaleNumberForPrecision(number, currencyPrecision) {
+  const scale = Math.pow(10, currencyPrecision);
+  return Math.round(number * scale) / scale;
+}
+function prepareNumberForFormatting(number, currencyPrecision, isSmallestUnit) {
+  if (isNaN(number)) {
+    debug3("formatCurrency was called with NaN");
+    return 0;
+  }
+  if (isSmallestUnit) {
+    if (!Number.isInteger(number)) {
+      debug3("formatCurrency was called with isSmallestUnit and a float which will be rounded", number);
+    }
+    const smallestUnitDivisor = 10 ** currencyPrecision;
+    return scaleNumberForPrecision(Math.round(number) / smallestUnitDivisor, currencyPrecision);
+  }
+  return scaleNumberForPrecision(number, currencyPrecision);
+}
+var numberFormatCurrency = ({ number, browserSafeLocale, currency, stripZeros, isSmallestUnit, signForPositive, geoLocation, forceLatin }) => {
+  const validCurrency = getValidCurrency(currency, geoLocation);
+  const currencyOverride = getCurrencyOverride(validCurrency, geoLocation);
+  const currencyPrecision = getPrecisionForLocaleAndCurrency(browserSafeLocale, validCurrency, forceLatin);
+  if (isSmallestUnit && typeof currencyPrecision === "undefined") {
+    throw new Error(`Could not determine currency precision for ${validCurrency} in ${browserSafeLocale}`);
+  }
+  const numberAsFloat = prepareNumberForFormatting(number, currencyPrecision ?? 0, isSmallestUnit);
+  const formatter = getCurrencyFormatter({
+    number: numberAsFloat,
+    currency: validCurrency,
+    browserSafeLocale,
+    forceLatin,
+    stripZeros,
+    signForPositive
+  });
+  const parts = formatter.formatToParts(numberAsFloat);
+  return parts.reduce((formatted, part) => {
+    switch (part.type) {
+      case "currency":
+        if (currencyOverride?.symbol) {
+          return formatted + currencyOverride.symbol;
+        }
+        return formatted + part.value;
+      default:
+        return formatted + part.value;
+    }
+  }, "");
+};
+var getCurrencyObject = ({ number, browserSafeLocale, currency, stripZeros, isSmallestUnit, signForPositive, geoLocation, forceLatin }) => {
+  const validCurrency = getValidCurrency(currency, geoLocation);
+  const currencyOverride = getCurrencyOverride(validCurrency, geoLocation);
+  const currencyPrecision = getPrecisionForLocaleAndCurrency(browserSafeLocale, validCurrency, forceLatin);
+  const numberAsFloat = prepareNumberForFormatting(number, currencyPrecision ?? 0, isSmallestUnit);
+  const formatter = getCurrencyFormatter({
+    number: numberAsFloat,
+    currency: validCurrency,
+    browserSafeLocale,
+    forceLatin,
+    stripZeros,
+    signForPositive
+  });
+  const parts = formatter.formatToParts(numberAsFloat);
+  let sign = "";
+  let symbol3 = "$";
+  let symbolPosition = "before";
+  let hasAmountBeenSet = false;
+  let hasDecimalBeenSet = false;
+  let integer = "";
+  let fraction = "";
+  parts.forEach((part) => {
+    switch (part.type) {
+      case "currency":
+        symbol3 = currencyOverride?.symbol ?? part.value;
+        if (hasAmountBeenSet) {
+          symbolPosition = "after";
+        }
+        return;
+      case "group":
+        integer += part.value;
+        hasAmountBeenSet = true;
+        return;
+      case "decimal":
+        fraction += part.value;
+        hasAmountBeenSet = true;
+        hasDecimalBeenSet = true;
+        return;
+      case "integer":
+        integer += part.value;
+        hasAmountBeenSet = true;
+        return;
+      case "fraction":
+        fraction += part.value;
+        hasAmountBeenSet = true;
+        hasDecimalBeenSet = true;
+        return;
+      case "minusSign":
+        sign = "-";
+        return;
+      case "plusSign":
+        sign = "+";
+    }
+  });
+  const hasNonZeroFraction = !Number.isInteger(numberAsFloat) && hasDecimalBeenSet;
+  return {
+    sign,
+    symbol: symbol3,
+    symbolPosition,
+    integer,
+    fraction,
+    hasNonZeroFraction
+  };
+};
+
+// ../../js-packages/number-formatters/dist/esm/number-format.js
+var numberFormat = ({ browserSafeLocale, decimals = 0, forceLatin = true, numberFormatOptions = {} }) => {
+  const locale = `${browserSafeLocale}${forceLatin ? "-u-nu-latn" : ""}`;
+  const options = {
+    minimumFractionDigits: decimals,
+    // minimumFractionDigits default is 0
+    maximumFractionDigits: decimals,
+    // maximumFractionDigits default is the greater between minimumFractionDigits and 3
+    ...numberFormatOptions
+  };
+  return getCachedFormatter({ locale, options });
+};
+var numberFormatCompact = ({ numberFormatOptions = {}, ...params }) => numberFormat({
+  ...params,
+  numberFormatOptions: {
+    notation: "compact",
+    maximumFractionDigits: 1,
+    ...numberFormatOptions
+  }
+});
+
+// ../../js-packages/number-formatters/dist/esm/create-number-formatters.js
+function createNumberFormatters() {
+  let localeState;
+  let geoLocationState;
+  const setLocale2 = (locale) => {
+    localeState = locale;
+  };
+  const getBrowserSafeLocale = () => {
+    const { l10n: { locale: localeFromUserSettings } } = (0, import_date9.getSettings)();
+    return (localeState ?? (localeFromUserSettings || global?.window?.navigator?.language) ?? FALLBACK_LOCALE).split("_")[0];
+  };
+  const setGeoLocation2 = (geoLocation) => {
+    geoLocationState = geoLocation;
+  };
+  const formatNumber2 = (number, { decimals = 0, forceLatin = true, numberFormatOptions = {} } = {}) => {
+    try {
+      const formatter = numberFormat({
+        browserSafeLocale: getBrowserSafeLocale(),
+        decimals,
+        forceLatin,
+        numberFormatOptions
+      });
+      return formatter.format(number);
+    } catch {
+      return String(number);
+    }
+  };
+  const formatNumberCompact2 = (number, { decimals = 0, forceLatin = true, numberFormatOptions = {} } = {}) => {
+    try {
+      const formatter = numberFormatCompact({
+        browserSafeLocale: getBrowserSafeLocale(),
+        decimals,
+        forceLatin,
+        numberFormatOptions
+      });
+      return formatter.format(number);
+    } catch {
+      return String(number);
+    }
+  };
+  const formatCurrency2 = (number, currency, { stripZeros = false, isSmallestUnit = false, signForPositive = false, forceLatin = true } = {}) => {
+    return numberFormatCurrency({
+      number,
+      currency,
+      browserSafeLocale: getBrowserSafeLocale(),
+      stripZeros,
+      isSmallestUnit,
+      signForPositive,
+      geoLocation: geoLocationState,
+      forceLatin
+    });
+  };
+  const getCurrencyObject3 = (number, currency, { stripZeros = false, isSmallestUnit = false, signForPositive = false, forceLatin = true } = {}) => {
+    return getCurrencyObject({
+      number,
+      currency,
+      browserSafeLocale: getBrowserSafeLocale(),
+      stripZeros,
+      isSmallestUnit,
+      signForPositive,
+      geoLocation: geoLocationState,
+      forceLatin
+    });
+  };
+  return {
+    setLocale: setLocale2,
+    setGeoLocation: setGeoLocation2,
+    formatNumber: formatNumber2,
+    formatNumberCompact: formatNumberCompact2,
+    formatCurrency: formatCurrency2,
+    getCurrencyObject: getCurrencyObject3
+  };
+}
+var create_number_formatters_default = createNumberFormatters;
+
+// ../../js-packages/number-formatters/dist/esm/index.js
+var defaultFormatter = create_number_formatters_default();
+var { setLocale, setGeoLocation, formatNumber, formatNumberCompact, formatCurrency, getCurrencyObject: getCurrencyObject2 } = defaultFormatter;
+
 // src/dashboard/wp-build/components/dataviews-header-row/index.tsx
+var import_data14 = __toESM(require_data(), 1);
 var import_element71 = __toESM(require_element(), 1);
 var import_i18n66 = __toESM(require_i18n(), 1);
 import { useNavigate } from "@wordpress/route";
@@ -25001,943 +25774,6 @@ var Tab = (0, import_react29.forwardRef)(function Tab2({ className, children, ..
   );
 });
 
-// src/dashboard/wp-build/components/inbox-status-toggle/index.tsx
-var import_element70 = __toESM(require_element(), 1);
-var import_i18n65 = __toESM(require_i18n(), 1);
-var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
-var getLabel = (status, count) => {
-  switch (status) {
-    case "inbox":
-      return (0, import_i18n65.sprintf)(
-        /* translators: %d is the number of inbox responses. */
-        (0, import_i18n65.__)("Inbox (%d)", "jetpack-forms"),
-        count
-      );
-    case "spam":
-      return (0, import_i18n65.sprintf)(
-        /* translators: %d is the number of spam responses. */
-        (0, import_i18n65.__)("Spam (%d)", "jetpack-forms"),
-        count
-      );
-    case "trash":
-      return (0, import_i18n65.sprintf)(
-        /* translators: %d is the number of trash responses. */
-        (0, import_i18n65.__)("Trash (%d)", "jetpack-forms"),
-        count
-      );
-  }
-};
-function InboxStatusToggle({
-  activeStatus,
-  counts: counts2,
-  onChange
-}) {
-  const handleChange = (0, import_element70.useCallback)(
-    (nextStatus) => {
-      if (nextStatus === activeStatus) {
-        return;
-      }
-      onChange(nextStatus);
-    },
-    [activeStatus, onChange]
-  );
-  const statusTabs = (0, import_element70.useMemo)(
-    () => [
-      { value: "inbox", label: getLabel("inbox", counts2.inbox) },
-      { value: "spam", label: getLabel("spam", counts2.spam) },
-      { value: "trash", label: getLabel("trash", counts2.trash) }
-    ],
-    [counts2.inbox, counts2.spam, counts2.trash]
-  );
-  return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(Root, { value: activeStatus, onValueChange: handleChange, children: /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(List, { density: "compact", children: statusTabs.map((option) => /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(Tab, { value: option.value, children: option.label }, option.value)) }) });
-}
-
-// src/dashboard/wp-build/components/dataviews-header-row/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='4e7133a61d']")) {
-  const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "4e7133a61d");
-  style.appendChild(document.createTextNode(".jp-forms-dataviews__view-actions{border-bottom:1px solid var(--wpds-color-stroke-surface-neutral,#e0e0e0);box-sizing:border-box;container-type:inline-size;flex-shrink:0;overflow-x:auto;padding-inline:20px;width:100%}@container (width < 500px){.jp-forms-dataviews__view-actions{--wp-ui-stack-justify:flex-start;align-items:flex-start;flex-direction:column}}.jp-forms-dataviews__view-actions>div:not(:empty){min-height:48px}.jp-forms-dataviews-filters__container,.jp-forms-dataviews-filters__container:not(:empty){padding:0}.jp-forms-dataviews-filters__container:not(:empty){padding-block:12px;padding-inline:20px}"));
-  document.head.appendChild(style);
-}
-
-// src/dashboard/wp-build/components/dataviews-header-row/index.tsx
-var import_jsx_runtime146 = __toESM(require_jsx_runtime(), 1);
-function DataViewsHeaderRow({
-  activeTab,
-  isSingleFormView = false,
-  activeStatus,
-  statusCounts,
-  onStatusChange
-}) {
-  const navigate = useNavigate();
-  const onTabChange = (0, import_element71.useCallback)(
-    (nextValue) => {
-      if (nextValue === "forms") {
-        navigate({ href: "/forms" });
-        return;
-      }
-      navigate({ href: "/responses/inbox" });
-    },
-    [navigate]
-  );
-  return /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(import_jsx_runtime146.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(
-      Stack,
-      {
-        align: "center",
-        className: "jp-forms-dataviews__view-actions",
-        gap: "sm",
-        justify: "space-between",
-        children: [
-          /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Stack, { align: "center", gap: "sm", children: isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(
-            InboxStatusToggle,
-            {
-              activeStatus: activeStatus ?? "inbox",
-              counts: statusCounts ?? { inbox: 0, spam: 0, trash: 0 },
-              onChange: onStatusChange ?? (() => {
-              })
-            }
-          ) : /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(List, { density: "compact", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Tab, { value: "responses", children: (0, import_i18n66.__)("Responses", "jetpack-forms") }),
-            /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Tab, { value: "forms", children: (0, import_i18n66.__)("Forms", "jetpack-forms") })
-          ] }) }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(Stack, { align: "center", gap: "sm", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(dataviews_default.Search, {}),
-            isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(dataviews_default.FiltersToggle, {}) : null,
-            /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(dataviews_default.ViewConfig, {})
-          ] })
-        ]
-      }
-    ),
-    /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(dataviews_default.FiltersToggled, { className: "jp-forms-dataviews-filters__container" })
-  ] });
-}
-
-// src/dashboard/wp-build/hooks/use-page-header-details.tsx
-var import_core_data5 = __toESM(require_core_data(), 1);
-var import_data17 = __toESM(require_data(), 1);
-var import_element78 = __toESM(require_element(), 1);
-var import_html_entities4 = __toESM(require_html_entities(), 1);
-var import_i18n73 = __toESM(require_i18n(), 1);
-
-// src/dashboard/components/edit-form-button/index.tsx
-var import_components65 = __toESM(require_components(), 1);
-var import_element72 = __toESM(require_element(), 1);
-var import_i18n67 = __toESM(require_i18n(), 1);
-var import_jsx_runtime147 = __toESM(require_jsx_runtime(), 1);
-function EditFormButton({ formId }) {
-  const adminUrl = useConfigValue("adminUrl") || "";
-  const onClick = (0, import_element72.useCallback)(() => {
-    const editPath = `post.php?post=${formId}&action=edit`;
-    window.location.href = adminUrl ? `${adminUrl}${editPath}` : editPath;
-  }, [adminUrl, formId]);
-  return /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(import_components65.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n67.__)("Edit form", "jetpack-forms") });
-}
-
-// ../../js-packages/number-formatters/dist/esm/create-number-formatters.js
-var import_date9 = __toESM(require_date(), 1);
-
-// ../../js-packages/number-formatters/dist/esm/constants.js
-var FALLBACK_LOCALE = "en";
-var FALLBACK_CURRENCY = "USD";
-
-// ../../js-packages/number-formatters/dist/esm/number-format-currency/index.js
-var import_debug3 = __toESM(require_browser(), 1);
-
-// ../../js-packages/number-formatters/dist/esm/get-cached-formatter.js
-var import_debug2 = __toESM(require_browser(), 1);
-var debug2 = (0, import_debug2.default)("number-formatters:get-cached-formatter");
-var formatterCache = /* @__PURE__ */ new Map();
-function getCachedFormatter({ locale, fallbackLocale = FALLBACK_LOCALE, options, retries = 1 }) {
-  const cacheKey = JSON.stringify([locale, options]);
-  try {
-    return formatterCache.get(cacheKey) ?? formatterCache.set(cacheKey, new Intl.NumberFormat(locale, options)).get(cacheKey);
-  } catch (error2) {
-    debug2(`Intl.NumberFormat was called with a non-existent locale "${locale}"; falling back to ${fallbackLocale}`);
-    if (retries) {
-      return getCachedFormatter({
-        locale: fallbackLocale,
-        options,
-        retries: retries - 1
-      });
-    }
-    throw error2;
-  }
-}
-
-// ../../js-packages/number-formatters/dist/esm/number-format-currency/currencies.js
-var defaultCurrencyOverrides = {
-  AED: {
-    symbol: "\u062F.\u0625.\u200F"
-  },
-  AFN: {
-    symbol: "\u060B"
-  },
-  ALL: {
-    symbol: "Lek"
-  },
-  AMD: {
-    symbol: "\u058F"
-  },
-  ANG: {
-    symbol: "\u0192"
-  },
-  AOA: {
-    symbol: "Kz"
-  },
-  ARS: {
-    symbol: "$"
-  },
-  AUD: {
-    symbol: "A$"
-  },
-  AWG: {
-    symbol: "\u0192"
-  },
-  AZN: {
-    symbol: "\u20BC"
-  },
-  BAM: {
-    symbol: "\u041A\u041C"
-  },
-  BBD: {
-    symbol: "Bds$"
-  },
-  BDT: {
-    symbol: "\u09F3"
-  },
-  BGN: {
-    symbol: "\u043B\u0432."
-  },
-  BHD: {
-    symbol: "\u062F.\u0628.\u200F"
-  },
-  BIF: {
-    symbol: "FBu"
-  },
-  BMD: {
-    symbol: "$"
-  },
-  BND: {
-    symbol: "$"
-  },
-  BOB: {
-    symbol: "Bs"
-  },
-  BRL: {
-    symbol: "R$"
-  },
-  BSD: {
-    symbol: "$"
-  },
-  BTC: {
-    symbol: "\u0243"
-  },
-  BTN: {
-    symbol: "Nu."
-  },
-  BWP: {
-    symbol: "P"
-  },
-  BYR: {
-    symbol: "\u0440."
-  },
-  BZD: {
-    symbol: "BZ$"
-  },
-  CAD: {
-    symbol: "C$"
-  },
-  CDF: {
-    symbol: "FC"
-  },
-  CHF: {
-    symbol: "CHF"
-  },
-  CLP: {
-    symbol: "$"
-  },
-  CNY: {
-    symbol: "\xA5"
-  },
-  COP: {
-    symbol: "$"
-  },
-  CRC: {
-    symbol: "\u20A1"
-  },
-  CUC: {
-    symbol: "CUC"
-  },
-  CUP: {
-    symbol: "$MN"
-  },
-  CVE: {
-    symbol: "$"
-  },
-  CZK: {
-    symbol: "K\u010D"
-  },
-  DJF: {
-    symbol: "Fdj"
-  },
-  DKK: {
-    symbol: "kr."
-  },
-  DOP: {
-    symbol: "RD$"
-  },
-  DZD: {
-    symbol: "\u062F.\u062C.\u200F"
-  },
-  EGP: {
-    symbol: "\u062C.\u0645.\u200F"
-  },
-  ERN: {
-    symbol: "Nfk"
-  },
-  ETB: {
-    symbol: "ETB"
-  },
-  EUR: {
-    symbol: "\u20AC"
-  },
-  FJD: {
-    symbol: "FJ$"
-  },
-  FKP: {
-    symbol: "\xA3"
-  },
-  GBP: {
-    symbol: "\xA3"
-  },
-  GEL: {
-    symbol: "Lari"
-  },
-  GHS: {
-    symbol: "\u20B5"
-  },
-  GIP: {
-    symbol: "\xA3"
-  },
-  GMD: {
-    symbol: "D"
-  },
-  GNF: {
-    symbol: "FG"
-  },
-  GTQ: {
-    symbol: "Q"
-  },
-  GYD: {
-    symbol: "G$"
-  },
-  HKD: {
-    symbol: "HK$"
-  },
-  HNL: {
-    symbol: "L."
-  },
-  HRK: {
-    symbol: "kn"
-  },
-  HTG: {
-    symbol: "G"
-  },
-  HUF: {
-    symbol: "Ft"
-  },
-  IDR: {
-    symbol: "Rp"
-  },
-  ILS: {
-    symbol: "\u20AA"
-  },
-  INR: {
-    symbol: "\u20B9"
-  },
-  IQD: {
-    symbol: "\u062F.\u0639.\u200F"
-  },
-  IRR: {
-    symbol: "\uFDFC"
-  },
-  ISK: {
-    symbol: "kr."
-  },
-  JMD: {
-    symbol: "J$"
-  },
-  JOD: {
-    symbol: "\u062F.\u0627.\u200F"
-  },
-  JPY: {
-    symbol: "\xA5"
-  },
-  KES: {
-    symbol: "S"
-  },
-  KGS: {
-    symbol: "\u0441\u043E\u043C"
-  },
-  KHR: {
-    symbol: "\u17DB"
-  },
-  KMF: {
-    symbol: "CF"
-  },
-  KPW: {
-    symbol: "\u20A9"
-  },
-  KRW: {
-    symbol: "\u20A9"
-  },
-  KWD: {
-    symbol: "\u062F.\u0643.\u200F"
-  },
-  KYD: {
-    symbol: "$"
-  },
-  KZT: {
-    symbol: "\u20B8"
-  },
-  LAK: {
-    symbol: "\u20AD"
-  },
-  LBP: {
-    symbol: "\u0644.\u0644.\u200F"
-  },
-  LKR: {
-    symbol: "\u20A8"
-  },
-  LRD: {
-    symbol: "L$"
-  },
-  LSL: {
-    symbol: "M"
-  },
-  LYD: {
-    symbol: "\u062F.\u0644.\u200F"
-  },
-  MAD: {
-    symbol: "\u062F.\u0645.\u200F"
-  },
-  MDL: {
-    symbol: "lei"
-  },
-  MGA: {
-    symbol: "Ar"
-  },
-  MKD: {
-    symbol: "\u0434\u0435\u043D."
-  },
-  MMK: {
-    symbol: "K"
-  },
-  MNT: {
-    symbol: "\u20AE"
-  },
-  MOP: {
-    symbol: "MOP$"
-  },
-  MRO: {
-    symbol: "UM"
-  },
-  MTL: {
-    symbol: "\u20A4"
-  },
-  MUR: {
-    symbol: "\u20A8"
-  },
-  MVR: {
-    symbol: "MVR"
-  },
-  MWK: {
-    symbol: "MK"
-  },
-  MXN: {
-    symbol: "MX$"
-  },
-  MYR: {
-    symbol: "RM"
-  },
-  MZN: {
-    symbol: "MT"
-  },
-  NAD: {
-    symbol: "N$"
-  },
-  NGN: {
-    symbol: "\u20A6"
-  },
-  NIO: {
-    symbol: "C$"
-  },
-  NOK: {
-    symbol: "kr"
-  },
-  NPR: {
-    symbol: "\u20A8"
-  },
-  NZD: {
-    symbol: "NZ$"
-  },
-  OMR: {
-    symbol: "\uFDFC"
-  },
-  PAB: {
-    symbol: "B/."
-  },
-  PEN: {
-    symbol: "S/."
-  },
-  PGK: {
-    symbol: "K"
-  },
-  PHP: {
-    symbol: "\u20B1"
-  },
-  PKR: {
-    symbol: "\u20A8"
-  },
-  PLN: {
-    symbol: "z\u0142"
-  },
-  PYG: {
-    symbol: "\u20B2"
-  },
-  QAR: {
-    symbol: "\uFDFC"
-  },
-  RON: {
-    symbol: "lei"
-  },
-  RSD: {
-    symbol: "\u0414\u0438\u043D."
-  },
-  RUB: {
-    symbol: "\u20BD"
-  },
-  RWF: {
-    symbol: "RWF"
-  },
-  SAR: {
-    symbol: "\uFDFC"
-  },
-  SBD: {
-    symbol: "S$"
-  },
-  SCR: {
-    symbol: "\u20A8"
-  },
-  SDD: {
-    symbol: "LSd"
-  },
-  SDG: {
-    symbol: "\xA3\u200F"
-  },
-  SEK: {
-    symbol: "kr"
-  },
-  SGD: {
-    symbol: "S$"
-  },
-  SHP: {
-    symbol: "\xA3"
-  },
-  SLL: {
-    symbol: "Le"
-  },
-  SOS: {
-    symbol: "S"
-  },
-  SRD: {
-    symbol: "$"
-  },
-  STD: {
-    symbol: "Db"
-  },
-  SVC: {
-    symbol: "\u20A1"
-  },
-  SYP: {
-    symbol: "\xA3"
-  },
-  SZL: {
-    symbol: "E"
-  },
-  THB: {
-    symbol: "\u0E3F"
-  },
-  TJS: {
-    symbol: "TJS"
-  },
-  TMT: {
-    symbol: "m"
-  },
-  TND: {
-    symbol: "\u062F.\u062A.\u200F"
-  },
-  TOP: {
-    symbol: "T$"
-  },
-  TRY: {
-    symbol: "TL"
-  },
-  TTD: {
-    symbol: "TT$"
-  },
-  TVD: {
-    symbol: "$T"
-  },
-  TWD: {
-    symbol: "NT$"
-  },
-  TZS: {
-    symbol: "TSh"
-  },
-  UAH: {
-    symbol: "\u20B4"
-  },
-  UGX: {
-    symbol: "USh"
-  },
-  USD: {
-    // No override. Do what the locale thinks is best.
-  },
-  UYU: {
-    symbol: "$U"
-  },
-  UZS: {
-    symbol: "\u0441\u045E\u043C"
-  },
-  VEB: {
-    symbol: "Bs."
-  },
-  VEF: {
-    symbol: "Bs. F."
-  },
-  VND: {
-    symbol: "\u20AB"
-  },
-  VUV: {
-    symbol: "VT"
-  },
-  WST: {
-    symbol: "WS$"
-  },
-  XAF: {
-    symbol: "F"
-  },
-  XCD: {
-    symbol: "$"
-  },
-  XOF: {
-    symbol: "F"
-  },
-  XPF: {
-    symbol: "F"
-  },
-  YER: {
-    symbol: "\uFDFC"
-  },
-  ZAR: {
-    symbol: "R"
-  },
-  ZMW: {
-    symbol: "ZK"
-  },
-  WON: {
-    symbol: "\u20A9"
-  }
-};
-
-// ../../js-packages/number-formatters/dist/esm/number-format-currency/index.js
-var debug3 = (0, import_debug3.default)("number-formatters:number-format-currency");
-function getCurrencyOverride(currency, geoLocation) {
-  if (currency === "USD" && geoLocation && geoLocation !== "" && geoLocation !== "US") {
-    return { symbol: "US$" };
-  }
-  return defaultCurrencyOverrides[currency];
-}
-function getValidCurrency(currency, geoLocation) {
-  if (!getCurrencyOverride(currency, geoLocation)) {
-    debug3(`getValidCurrency was called with a non-existent currency "${currency}"; falling back to ${FALLBACK_CURRENCY}`);
-    return FALLBACK_CURRENCY;
-  }
-  return currency;
-}
-function getCurrencyFormatter({ number, currency, browserSafeLocale, forceLatin = true, stripZeros, signForPositive }) {
-  const locale = `${browserSafeLocale}${forceLatin ? "-u-nu-latn" : ""}`;
-  const numberFormatOptions = {
-    style: "currency",
-    currency,
-    ...stripZeros && Number.isInteger(number) && {
-      /**
-       * There's an option called `trailingZeroDisplay` but it does not yet work
-       * in FF so we have to strip zeros manually.
-       */
-      maximumFractionDigits: 0,
-      minimumFractionDigits: 0
-    },
-    ...signForPositive && { signDisplay: "exceptZero" }
-  };
-  return getCachedFormatter({
-    locale,
-    options: numberFormatOptions
-  });
-}
-function getPrecisionForLocaleAndCurrency(browserSafeLocale, currency, forceLatin) {
-  const formatter = getCurrencyFormatter({ number: 0, currency, browserSafeLocale, forceLatin });
-  return formatter.resolvedOptions().maximumFractionDigits;
-}
-function scaleNumberForPrecision(number, currencyPrecision) {
-  const scale = Math.pow(10, currencyPrecision);
-  return Math.round(number * scale) / scale;
-}
-function prepareNumberForFormatting(number, currencyPrecision, isSmallestUnit) {
-  if (isNaN(number)) {
-    debug3("formatCurrency was called with NaN");
-    return 0;
-  }
-  if (isSmallestUnit) {
-    if (!Number.isInteger(number)) {
-      debug3("formatCurrency was called with isSmallestUnit and a float which will be rounded", number);
-    }
-    const smallestUnitDivisor = 10 ** currencyPrecision;
-    return scaleNumberForPrecision(Math.round(number) / smallestUnitDivisor, currencyPrecision);
-  }
-  return scaleNumberForPrecision(number, currencyPrecision);
-}
-var numberFormatCurrency = ({ number, browserSafeLocale, currency, stripZeros, isSmallestUnit, signForPositive, geoLocation, forceLatin }) => {
-  const validCurrency = getValidCurrency(currency, geoLocation);
-  const currencyOverride = getCurrencyOverride(validCurrency, geoLocation);
-  const currencyPrecision = getPrecisionForLocaleAndCurrency(browserSafeLocale, validCurrency, forceLatin);
-  if (isSmallestUnit && typeof currencyPrecision === "undefined") {
-    throw new Error(`Could not determine currency precision for ${validCurrency} in ${browserSafeLocale}`);
-  }
-  const numberAsFloat = prepareNumberForFormatting(number, currencyPrecision ?? 0, isSmallestUnit);
-  const formatter = getCurrencyFormatter({
-    number: numberAsFloat,
-    currency: validCurrency,
-    browserSafeLocale,
-    forceLatin,
-    stripZeros,
-    signForPositive
-  });
-  const parts = formatter.formatToParts(numberAsFloat);
-  return parts.reduce((formatted, part) => {
-    switch (part.type) {
-      case "currency":
-        if (currencyOverride?.symbol) {
-          return formatted + currencyOverride.symbol;
-        }
-        return formatted + part.value;
-      default:
-        return formatted + part.value;
-    }
-  }, "");
-};
-var getCurrencyObject = ({ number, browserSafeLocale, currency, stripZeros, isSmallestUnit, signForPositive, geoLocation, forceLatin }) => {
-  const validCurrency = getValidCurrency(currency, geoLocation);
-  const currencyOverride = getCurrencyOverride(validCurrency, geoLocation);
-  const currencyPrecision = getPrecisionForLocaleAndCurrency(browserSafeLocale, validCurrency, forceLatin);
-  const numberAsFloat = prepareNumberForFormatting(number, currencyPrecision ?? 0, isSmallestUnit);
-  const formatter = getCurrencyFormatter({
-    number: numberAsFloat,
-    currency: validCurrency,
-    browserSafeLocale,
-    forceLatin,
-    stripZeros,
-    signForPositive
-  });
-  const parts = formatter.formatToParts(numberAsFloat);
-  let sign = "";
-  let symbol3 = "$";
-  let symbolPosition = "before";
-  let hasAmountBeenSet = false;
-  let hasDecimalBeenSet = false;
-  let integer = "";
-  let fraction = "";
-  parts.forEach((part) => {
-    switch (part.type) {
-      case "currency":
-        symbol3 = currencyOverride?.symbol ?? part.value;
-        if (hasAmountBeenSet) {
-          symbolPosition = "after";
-        }
-        return;
-      case "group":
-        integer += part.value;
-        hasAmountBeenSet = true;
-        return;
-      case "decimal":
-        fraction += part.value;
-        hasAmountBeenSet = true;
-        hasDecimalBeenSet = true;
-        return;
-      case "integer":
-        integer += part.value;
-        hasAmountBeenSet = true;
-        return;
-      case "fraction":
-        fraction += part.value;
-        hasAmountBeenSet = true;
-        hasDecimalBeenSet = true;
-        return;
-      case "minusSign":
-        sign = "-";
-        return;
-      case "plusSign":
-        sign = "+";
-    }
-  });
-  const hasNonZeroFraction = !Number.isInteger(numberAsFloat) && hasDecimalBeenSet;
-  return {
-    sign,
-    symbol: symbol3,
-    symbolPosition,
-    integer,
-    fraction,
-    hasNonZeroFraction
-  };
-};
-
-// ../../js-packages/number-formatters/dist/esm/number-format.js
-var numberFormat = ({ browserSafeLocale, decimals = 0, forceLatin = true, numberFormatOptions = {} }) => {
-  const locale = `${browserSafeLocale}${forceLatin ? "-u-nu-latn" : ""}`;
-  const options = {
-    minimumFractionDigits: decimals,
-    // minimumFractionDigits default is 0
-    maximumFractionDigits: decimals,
-    // maximumFractionDigits default is the greater between minimumFractionDigits and 3
-    ...numberFormatOptions
-  };
-  return getCachedFormatter({ locale, options });
-};
-var numberFormatCompact = ({ numberFormatOptions = {}, ...params }) => numberFormat({
-  ...params,
-  numberFormatOptions: {
-    notation: "compact",
-    maximumFractionDigits: 1,
-    ...numberFormatOptions
-  }
-});
-
-// ../../js-packages/number-formatters/dist/esm/create-number-formatters.js
-function createNumberFormatters() {
-  let localeState;
-  let geoLocationState;
-  const setLocale2 = (locale) => {
-    localeState = locale;
-  };
-  const getBrowserSafeLocale = () => {
-    const { l10n: { locale: localeFromUserSettings } } = (0, import_date9.getSettings)();
-    return (localeState ?? (localeFromUserSettings || global?.window?.navigator?.language) ?? FALLBACK_LOCALE).split("_")[0];
-  };
-  const setGeoLocation2 = (geoLocation) => {
-    geoLocationState = geoLocation;
-  };
-  const formatNumber2 = (number, { decimals = 0, forceLatin = true, numberFormatOptions = {} } = {}) => {
-    try {
-      const formatter = numberFormat({
-        browserSafeLocale: getBrowserSafeLocale(),
-        decimals,
-        forceLatin,
-        numberFormatOptions
-      });
-      return formatter.format(number);
-    } catch {
-      return String(number);
-    }
-  };
-  const formatNumberCompact2 = (number, { decimals = 0, forceLatin = true, numberFormatOptions = {} } = {}) => {
-    try {
-      const formatter = numberFormatCompact({
-        browserSafeLocale: getBrowserSafeLocale(),
-        decimals,
-        forceLatin,
-        numberFormatOptions
-      });
-      return formatter.format(number);
-    } catch {
-      return String(number);
-    }
-  };
-  const formatCurrency2 = (number, currency, { stripZeros = false, isSmallestUnit = false, signForPositive = false, forceLatin = true } = {}) => {
-    return numberFormatCurrency({
-      number,
-      currency,
-      browserSafeLocale: getBrowserSafeLocale(),
-      stripZeros,
-      isSmallestUnit,
-      signForPositive,
-      geoLocation: geoLocationState,
-      forceLatin
-    });
-  };
-  const getCurrencyObject3 = (number, currency, { stripZeros = false, isSmallestUnit = false, signForPositive = false, forceLatin = true } = {}) => {
-    return getCurrencyObject({
-      number,
-      currency,
-      browserSafeLocale: getBrowserSafeLocale(),
-      stripZeros,
-      isSmallestUnit,
-      signForPositive,
-      geoLocation: geoLocationState,
-      forceLatin
-    });
-  };
-  return {
-    setLocale: setLocale2,
-    setGeoLocation: setGeoLocation2,
-    formatNumber: formatNumber2,
-    formatNumberCompact: formatNumberCompact2,
-    formatCurrency: formatCurrency2,
-    getCurrencyObject: getCurrencyObject3
-  };
-}
-var create_number_formatters_default = createNumberFormatters;
-
-// ../../js-packages/number-formatters/dist/esm/index.js
-var defaultFormatter = create_number_formatters_default();
-var { setLocale, setGeoLocation, formatNumber, formatNumberCompact, formatCurrency, getCurrencyObject: getCurrencyObject2 } = defaultFormatter;
-
-// src/dashboard/components/empty-spam-button/index.tsx
-var import_api_fetch7 = __toESM(require_api_fetch(), 1);
-var import_components66 = __toESM(require_components(), 1);
-var import_core_data3 = __toESM(require_core_data(), 1);
-var import_data15 = __toESM(require_data(), 1);
-var import_element75 = __toESM(require_element(), 1);
-var import_i18n68 = __toESM(require_i18n(), 1);
-var import_notices3 = __toESM(require_notices(), 1);
-
-// src/dashboard/hooks/use-inbox-data.ts
-var import_core_data2 = __toESM(require_core_data(), 1);
-var import_data14 = __toESM(require_data(), 1);
-var import_element74 = __toESM(require_element(), 1);
-var import_html_entities3 = __toESM(require_html_entities(), 1);
-
-// src/dashboard/components/inspector/utils.ts
-var import_html_entities2 = __toESM(require_html_entities(), 1);
-var isCollectionFormatField = (item) => {
-  return item !== null && typeof item === "object" && "label" in item && "value" in item && "key" in item;
-};
-
-// src/dashboard/router/dashboard-search-params-context.tsx
-var import_element73 = __toESM(require_element(), 1);
-var import_jsx_runtime148 = __toESM(require_jsx_runtime(), 1);
-var DashboardSearchParamsContext = (0, import_element73.createContext)(null);
-function useDashboardSearchParams() {
-  const ctx8 = (0, import_element73.useContext)(DashboardSearchParamsContext);
-  if (!ctx8) {
-    throw new Error(
-      "useDashboardSearchParams must be used within a DashboardSearchParamsProvider."
-    );
-  }
-  return ctx8;
-}
-
 // src/dashboard/store/index.js
 var import_data13 = __toESM(require_data(), 1);
 
@@ -26265,6 +26101,181 @@ var store3 = (0, import_data13.createReduxStore)(STORE_NAME, {
 });
 (0, import_data13.register)(store3);
 
+// src/dashboard/wp-build/components/inbox-status-toggle/index.tsx
+var import_element70 = __toESM(require_element(), 1);
+var import_i18n65 = __toESM(require_i18n(), 1);
+var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
+var getLabel = (status, count) => {
+  let label;
+  switch (status) {
+    case "inbox":
+      label = (0, import_i18n65.__)("Inbox", "jetpack-forms");
+      break;
+    case "spam":
+      label = (0, import_i18n65.__)("Spam", "jetpack-forms");
+      break;
+    case "trash":
+      label = (0, import_i18n65._x)("Trash", "noun", "jetpack-forms");
+      break;
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)("span", { children: [
+    label,
+    /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(Badge3, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(count || 0) })
+  ] });
+};
+function InboxStatusToggle({
+  activeStatus,
+  counts: counts2,
+  onChange
+}) {
+  const handleChange = (0, import_element70.useCallback)(
+    (nextStatus) => {
+      if (nextStatus === activeStatus) {
+        return;
+      }
+      onChange(nextStatus);
+    },
+    [activeStatus, onChange]
+  );
+  const statusTabs = (0, import_element70.useMemo)(
+    () => [
+      { value: "inbox", label: getLabel("inbox", counts2.inbox) },
+      { value: "spam", label: getLabel("spam", counts2.spam) },
+      { value: "trash", label: getLabel("trash", counts2.trash) }
+    ],
+    [counts2.inbox, counts2.spam, counts2.trash]
+  );
+  return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(Root, { value: activeStatus, onValueChange: handleChange, children: /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(List, { density: "compact", children: statusTabs.map((option) => /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(Tab, { value: option.value, children: option.label }, option.value)) }) });
+}
+
+// src/dashboard/wp-build/components/dataviews-header-row/style.scss
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='08f8b50a11']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "08f8b50a11");
+  style.appendChild(document.createTextNode(".jp-forms-dataviews__view-actions{border-bottom:1px solid var(--wpds-color-stroke-surface-neutral,#e0e0e0);box-sizing:border-box;container-type:inline-size;flex-shrink:0;overflow-x:auto;padding-inline:20px;width:100%}@container (width < 500px){.jp-forms-dataviews__view-actions{--wp-ui-stack-justify:flex-start;align-items:flex-start;flex-direction:column}}.jp-forms-dataviews__view-actions>div:not(:empty){min-height:48px}.jp-forms-dataviews-filters__container,.jp-forms-dataviews-filters__container:not(:empty){padding:0}.jp-forms-dataviews-filters__container:not(:empty){padding-block:12px;padding-inline:20px}.jp-forms-count-badge{background-color:#f0f0f0;color:#2f2f2f;margin-inline-start:4px;vertical-align:middle}"));
+  document.head.appendChild(style);
+}
+
+// src/dashboard/wp-build/components/dataviews-header-row/index.tsx
+var import_jsx_runtime146 = __toESM(require_jsx_runtime(), 1);
+function DataViewsHeaderRow({
+  activeTab,
+  isSingleFormView = false,
+  activeStatus,
+  statusCounts,
+  onStatusChange
+}) {
+  const navigate = useNavigate();
+  const { totalItems: formsCount = 0 } = useFormsData(1, 1, "", NON_TRASH_FORM_STATUSES);
+  const responsesInboxCount = (0, import_data14.useSelect)((select) => {
+    select(store3).getCounts();
+    return select(store3).getInboxCount() ?? 0;
+  }, []);
+  const onTabChange = (0, import_element71.useCallback)(
+    (nextValue) => {
+      if (nextValue === "forms") {
+        navigate({ href: "/forms" });
+        return;
+      }
+      navigate({ href: "/responses/inbox" });
+    },
+    [navigate]
+  );
+  return /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(import_jsx_runtime146.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(
+      Stack,
+      {
+        align: "center",
+        className: "jp-forms-dataviews__view-actions",
+        gap: "sm",
+        justify: "space-between",
+        children: [
+          /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Stack, { align: "center", gap: "sm", children: isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(
+            InboxStatusToggle,
+            {
+              activeStatus: activeStatus ?? "inbox",
+              counts: statusCounts ?? { inbox: 0, spam: 0, trash: 0 },
+              onChange: onStatusChange ?? (() => {
+              })
+            }
+          ) : /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(List, { density: "compact", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Tab, { value: "responses", children: /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)("span", { children: [
+              (0, import_i18n66.__)("Responses", "jetpack-forms"),
+              /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Badge3, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(responsesInboxCount || 0) })
+            ] }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Tab, { value: "forms", children: /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)("span", { children: [
+              (0, import_i18n66.__)("Forms", "jetpack-forms"),
+              /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Badge3, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(formsCount || 0) })
+            ] }) })
+          ] }) }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(Stack, { align: "center", gap: "sm", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(dataviews_default.Search, {}),
+            isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(dataviews_default.FiltersToggle, {}) : null,
+            /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(dataviews_default.ViewConfig, {})
+          ] })
+        ]
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(dataviews_default.FiltersToggled, { className: "jp-forms-dataviews-filters__container" })
+  ] });
+}
+
+// src/dashboard/wp-build/hooks/use-page-header-details.tsx
+var import_core_data5 = __toESM(require_core_data(), 1);
+var import_data18 = __toESM(require_data(), 1);
+var import_element78 = __toESM(require_element(), 1);
+var import_html_entities4 = __toESM(require_html_entities(), 1);
+var import_i18n73 = __toESM(require_i18n(), 1);
+
+// src/dashboard/components/edit-form-button/index.tsx
+var import_components65 = __toESM(require_components(), 1);
+var import_element72 = __toESM(require_element(), 1);
+var import_i18n67 = __toESM(require_i18n(), 1);
+var import_jsx_runtime147 = __toESM(require_jsx_runtime(), 1);
+function EditFormButton({ formId }) {
+  const adminUrl = useConfigValue("adminUrl") || "";
+  const onClick = (0, import_element72.useCallback)(() => {
+    const editPath = `post.php?post=${formId}&action=edit`;
+    window.location.href = adminUrl ? `${adminUrl}${editPath}` : editPath;
+  }, [adminUrl, formId]);
+  return /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(import_components65.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n67.__)("Edit form", "jetpack-forms") });
+}
+
+// src/dashboard/components/empty-spam-button/index.tsx
+var import_api_fetch7 = __toESM(require_api_fetch(), 1);
+var import_components66 = __toESM(require_components(), 1);
+var import_core_data3 = __toESM(require_core_data(), 1);
+var import_data16 = __toESM(require_data(), 1);
+var import_element75 = __toESM(require_element(), 1);
+var import_i18n68 = __toESM(require_i18n(), 1);
+var import_notices3 = __toESM(require_notices(), 1);
+
+// src/dashboard/hooks/use-inbox-data.ts
+var import_core_data2 = __toESM(require_core_data(), 1);
+var import_data15 = __toESM(require_data(), 1);
+var import_element74 = __toESM(require_element(), 1);
+var import_html_entities3 = __toESM(require_html_entities(), 1);
+
+// src/dashboard/components/inspector/utils.ts
+var import_html_entities2 = __toESM(require_html_entities(), 1);
+var isCollectionFormatField = (item) => {
+  return item !== null && typeof item === "object" && "label" in item && "value" in item && "key" in item;
+};
+
+// src/dashboard/router/dashboard-search-params-context.tsx
+var import_element73 = __toESM(require_element(), 1);
+var import_jsx_runtime148 = __toESM(require_jsx_runtime(), 1);
+var DashboardSearchParamsContext = (0, import_element73.createContext)(null);
+function useDashboardSearchParams() {
+  const ctx8 = (0, import_element73.useContext)(DashboardSearchParamsContext);
+  if (!ctx8) {
+    throw new Error(
+      "useDashboardSearchParams must be used within a DashboardSearchParamsProvider."
+    );
+  }
+  return ctx8;
+}
+
 // src/dashboard/hooks/use-inbox-data.ts
 function getStatusFilter(urlStatus) {
   const statusFilter = ["inbox", "spam", "trash"].includes(urlStatus) ? urlStatus : "inbox";
@@ -26320,7 +26331,7 @@ var normalizeFieldsForDisplay = (fields) => {
 };
 function useInboxData(options = {}) {
   const [searchParams] = useDashboardSearchParams();
-  const { setCurrentQuery: setCurrentQuery2, setSelectedResponses: setSelectedResponses2 } = (0, import_data14.useDispatch)(store3);
+  const { setCurrentQuery: setCurrentQuery2, setSelectedResponses: setSelectedResponses2 } = (0, import_data15.useDispatch)(store3);
   const urlStatus = options.status ?? searchParams.get("status");
   const statusFilter = getStatusFilter(urlStatus);
   const {
@@ -26330,7 +26341,7 @@ function useInboxData(options = {}) {
     filterOptions,
     invalidRecords: invalidRecords2,
     hasPendingActions: hasPendingActions2
-  } = (0, import_data14.useSelect)(
+  } = (0, import_data15.useSelect)(
     (select) => ({
       selectedResponsesCount: select(store3).getSelectedResponsesCount(),
       currentStatus: select(store3).getCurrentStatus(),
@@ -26370,7 +26381,7 @@ function useInboxData(options = {}) {
     totalItems,
     totalPages
   } = (0, import_core_data2.useEntityRecords)("postType", "feedback", queryWithInvalidIds);
-  const editedRecords = (0, import_data14.useSelect)(
+  const editedRecords = (0, import_data15.useSelect)(
     (select) => {
       return (rawRecords || []).map((record) => {
         const editedRecord = select(import_core_data2.store).getEditedEntityRecord(
@@ -26420,7 +26431,7 @@ function useInboxData(options = {}) {
     }
     return params;
   }, [currentQuery2]);
-  const { totalItemsInbox, totalItemsSpam, totalItemsTrash } = (0, import_data14.useSelect)(
+  const { totalItemsInbox, totalItemsSpam, totalItemsTrash } = (0, import_data15.useSelect)(
     (select) => {
       select(store3).getCounts(countsQueryParams);
       return {
@@ -26459,9 +26470,9 @@ var EmptySpamButton = ({
   const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element75.useState)(false);
   const [isEmptying, setIsEmptying] = (0, import_element75.useState)(false);
   const [isEmpty4, setIsEmpty] = (0, import_element75.useState)(true);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data15.useDispatch)(import_notices3.store);
-  const { invalidateResolution } = (0, import_data15.useDispatch)(import_core_data3.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data15.useDispatch)(store3);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data16.useDispatch)(import_notices3.store);
+  const { invalidateResolution } = (0, import_data16.useDispatch)(import_core_data3.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data16.useDispatch)(store3);
   const hookData = useInboxData();
   const totalItemsSpam = totalItemsSpamProp ?? hookData.totalItemsSpam;
   const isLoadingCounts = isLoadingCountsProp ?? false;
@@ -26568,7 +26579,7 @@ var empty_spam_button_default = EmptySpamButton;
 var import_api_fetch8 = __toESM(require_api_fetch(), 1);
 var import_components67 = __toESM(require_components(), 1);
 var import_core_data4 = __toESM(require_core_data(), 1);
-var import_data16 = __toESM(require_data(), 1);
+var import_data17 = __toESM(require_data(), 1);
 var import_element76 = __toESM(require_element(), 1);
 var import_i18n69 = __toESM(require_i18n(), 1);
 var import_notices4 = __toESM(require_notices(), 1);
@@ -26580,9 +26591,9 @@ var EmptyTrashButton = ({
   const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element76.useState)(false);
   const [isEmptying, setIsEmptying] = (0, import_element76.useState)(false);
   const [isEmpty4, setIsEmpty] = (0, import_element76.useState)(true);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data16.useDispatch)(import_notices4.store);
-  const { invalidateResolution } = (0, import_data16.useDispatch)(import_core_data4.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data16.useDispatch)(store3);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data17.useDispatch)(import_notices4.store);
+  const { invalidateResolution } = (0, import_data17.useDispatch)(import_core_data4.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data17.useDispatch)(store3);
   const hookData = useInboxData();
   const totalItemsTrash = totalItemsTrashProp ?? hookData.totalItemsTrash;
   const isLoadingCounts = isLoadingCountsProp ?? false;
@@ -26737,7 +26748,7 @@ function usePageHeaderDetails(props) {
   }, [sourceId]);
   const isFormsScreen = screen === "forms";
   const isSingleFormScreen = screen === "responses" && sourceIdNumber !== null;
-  const formRecord = (0, import_data17.useSelect)(
+  const formRecord = (0, import_data18.useSelect)(
     (select) => sourceIdNumber ? select(import_core_data5.store).getEntityRecord(
       "postType",
       "jetpack_form",
@@ -26838,11 +26849,11 @@ function StageInner() {
   const searchParams = useSearch({ from: "/forms" });
   const dateSettings = (0, import_date10.getSettings)();
   const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element79.useState)(false);
-  const integrations = (0, import_data18.useSelect)(
+  const integrations = (0, import_data19.useSelect)(
     (select) => select(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
   );
-  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data18.useDispatch)(INTEGRATIONS_STORE);
+  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data19.useDispatch)(INTEGRATIONS_STORE);
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
   const [view, setView] = (0, import_element79.useState)(() => ({
@@ -26857,9 +26868,8 @@ function StageInner() {
   }, [searchParams?.search]);
   const statusQuery = (0, import_element79.useMemo)(() => {
     const statusFilterValue = view.filters?.find((filter) => filter.field === "status")?.value;
-    const nonTrashStatuses = "publish,draft,pending,future,private";
     if (!statusFilterValue || statusFilterValue === "all") {
-      return nonTrashStatuses;
+      return NON_TRASH_FORM_STATUSES;
     }
     return statusFilterValue;
   }, [view.filters]);

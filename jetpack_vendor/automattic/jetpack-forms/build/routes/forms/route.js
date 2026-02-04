@@ -49,9 +49,6 @@ var require_url = __commonJS({
   }
 });
 
-// routes/responses/route.tsx
-var import_data4 = __toESM(require_data());
-
 // src/dashboard/wp-build/utils/preload.ts
 var import_data3 = __toESM(require_data(), 1);
 
@@ -404,56 +401,13 @@ async function preloadGlobalTabCounts() {
   await Promise.all([preloadGlobalInboxCounts(), preloadGlobalNonTrashFormsCount()]);
 }
 
-// routes/responses/route.tsx
+// routes/forms/route.tsx
 var route = {
   /**
-   * Determines when to show the inspector panel.
-   * Only show when a single response is selected.
-   * @param props                    - Props used while determining when to show the inspector panel.
-   * @param props.search             - The search parameters.
-   * @param props.search.responseIds - The IDs of the responses to show in the inspector panel.
-   *
-   * @return                         - Whether to show the inspector panel.
+   * Preload data before the route renders.
    */
-  inspector: async ({ search }) => {
-    return !!(search?.responseIds && search.responseIds.length === 1);
-  },
-  /**
-   * Preloads data before the route renders.
-   * @param props             - Props used while preloading data before the route renders.
-   * @param props.params      - The parameters.
-   * @param props.params.view - The view.
-   * @param props.search      - The search parameters.
-   * @param props.search.page - The page number.
-   */
-  loader: async ({
-    params,
-    search
-  }) => {
-    let status = "publish";
-    if (params.view === "spam") {
-      status = "spam";
-    } else if (params.view === "trash") {
-      status = "trash";
-    }
-    await (0, import_data4.resolveSelect)("core").getEntityRecords("postType", "feedback", {
-      per_page: 20,
-      page: search.page || 1,
-      status,
-      orderby: "date",
-      order: "desc"
-    });
+  loader: async () => {
     await preloadGlobalTabCounts();
-  },
-  /**
-   * Validates that the route can be accessed.
-   * Checks if the feedback post type exists.
-   */
-  beforeLoad: async () => {
-    try {
-      await (0, import_data4.resolveSelect)("core").getPostType("feedback");
-    } catch {
-    }
   }
 };
 export {
