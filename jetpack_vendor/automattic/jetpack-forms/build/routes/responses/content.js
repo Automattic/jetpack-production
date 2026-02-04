@@ -36763,6 +36763,16 @@ var import_components75 = __toESM(require_components(), 1);
 var import_compose15 = __toESM(require_compose(), 1);
 var import_element83 = __toESM(require_element(), 1);
 var import_i18n78 = __toESM(require_i18n(), 1);
+
+// src/dashboard/components/copy-clipboard-button/style.scss
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='f2ba3be839']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "f2ba3be839");
+  style.appendChild(document.createTextNode(".jp-forms__copy-clipboard-button svg{height:20px;width:20px}"));
+  document.head.appendChild(style);
+}
+
+// src/dashboard/components/copy-clipboard-button/index.tsx
 var import_jsx_runtime170 = __toESM(require_jsx_runtime(), 1);
 function CopyClipboardButton({ text }) {
   const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element83.useState)(false);
@@ -36789,6 +36799,7 @@ function CopyClipboardButton({ text }) {
   return /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components75.Tooltip, { delay: 0, hideOnClick: false, text: emailCopyLabel, children: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(
     import_components75.Button,
     {
+      className: "jp-forms__copy-clipboard-button",
       size: "small",
       "aria-label": emailCopyLabel,
       ref,
@@ -37423,10 +37434,10 @@ var inferFieldTypeFromLabel = (label) => {
 };
 
 // src/dashboard/components/inspector/response-fields/field-preview/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='4d8409450e']")) {
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='e9d0341bc9']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "4d8409450e");
-  style.appendChild(document.createTextNode(".jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview{border-bottom:1px solid var(--jp-forms-border-color);padding-bottom:24px;padding-top:24px}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-icon{flex-shrink:0}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-content{min-width:0}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-label{color:var(--jp-gray-40,#757575);font-weight:300;line-height:24px}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-value{white-space:pre-wrap}"));
+  style.setAttribute("data-wp-hash", "e9d0341bc9");
+  style.appendChild(document.createTextNode(".jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview{border-bottom:1px solid var(--jp-forms-border-color);padding-bottom:24px;padding-top:24px}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-icon{flex-shrink:0}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-content{min-width:0;word-break:break-word}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-label{color:var(--jp-gray-40,#757575);font-weight:300;line-height:24px}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-value{white-space:pre-wrap}"));
   document.head.appendChild(style);
 }
 
@@ -37557,10 +37568,10 @@ var import_html_entities8 = __toESM(require_html_entities(), 1);
 var import_i18n81 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/inspector/response-meta/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='b5da50fde1']")) {
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='67b6bdb86c']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "b5da50fde1");
-  style.appendChild(document.createTextNode(".jp-forms__inbox-response-header-title{min-height:48px}.jp-forms__inbox-response-email,.jp-forms__inbox-response-name{margin:0;padding:0}.jp-forms__inbox-response-name{font-size:24px;font-weight:700;line-height:24px}.jp-forms__inbox-response-email{align-items:center;display:flex;flex-shrink:0;font-size:14px;font-weight:500;gap:4px;line-height:24px;max-width:100%;min-height:24px;word-break:break-word}.jp-forms__inbox-response-meta{color:var(--jp-gray-80);font-size:12px;padding-bottom:24px;padding-top:12px}.jp-forms__inbox-response-meta table{text-align:left;width:fit-content}.jp-forms__inbox-response-meta table td,.jp-forms__inbox-response-meta table th{padding:0}.jp-forms__inbox-response-meta table th{font-weight:400;padding-right:8px;vertical-align:top;white-space:nowrap}"));
+  style.setAttribute("data-wp-hash", "67b6bdb86c");
+  style.appendChild(document.createTextNode(".jp-forms__inbox-response-meta{background-color:#fcfcfc;border-bottom:1px solid var(--wpds-color-stroke-surface-neutral,var(--jp-forms-border-color,#e0e0e0));padding:24px 16px}.jp-forms__inbox-response-meta-from{min-height:48px;word-break:break-word}.jp-forms__inbox-response-meta-from-email,.jp-forms__inbox-response-meta-from-name{margin:0;padding:0}.jp-forms__inbox-response-meta-table{color:var(--jp-gray-80,#2c3338);font-size:13px;padding-top:16px;text-align:left;width:fit-content}.jp-forms__inbox-response-meta-table td,.jp-forms__inbox-response-meta-table th{margin:0;padding:0 0 6px;word-break:break-word}.jp-forms__inbox-response-meta-table th{color:var(--jp-gray-50,#646970);font-weight:400;padding-right:16px;vertical-align:top;white-space:nowrap}"));
   document.head.appendChild(style);
 }
 
@@ -37575,8 +37586,9 @@ var ResponseMeta = ({ response }) => {
   const gravatarEmail = response.author_email || response.ip;
   const defaultImage = response.author_name || response.author_email ? "initials" : "mp";
   const responseAuthorEmailParts = response.author_email?.split("@") ?? [];
-  return /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(import_jsx_runtime194.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("div", { className: "jp-forms__inbox-response-header", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(import_components82.__experimentalHStack, { alignment: "topLeft", spacing: "3", children: [
+  const dateSettings = (0, import_date11.getSettings)();
+  return /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("div", { className: "jp-forms__inbox-response-meta", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(import_components82.__experimentalHStack, { alignment: "topLeft", spacing: "3", wrap: false, children: [
       /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
         Gravatar,
         {
@@ -37586,28 +37598,51 @@ var ResponseMeta = ({ response }) => {
         },
         gravatarEmail
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(import_components82.__experimentalVStack, { spacing: "0", className: "jp-forms__inbox-response-header-title", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("h3", { className: "jp-forms__inbox-response-name", children: displayName }),
-        response.author_email && displayName !== response.author_email && /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("p", { className: "jp-forms__inbox-response-email", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("a", { href: `mailto:${response.author_email}`, children: [
-            responseAuthorEmailParts[0],
-            /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("wbr", {}),
-            "@",
-            responseAuthorEmailParts[1]
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(CopyClipboardButton, { text: response.author_email })
-        ] })
+      /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(import_components82.__experimentalVStack, { spacing: "0", className: "jp-forms__inbox-response-meta-from", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
+          import_components82.__experimentalText,
+          {
+            className: "jp-forms__inbox-response-meta-from-name",
+            lineHeight: "20px",
+            size: "15px",
+            weight: "600",
+            children: displayName
+          }
+        ),
+        response.author_email && displayName !== response.author_email && /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(
+          import_components82.__experimentalHStack,
+          {
+            alignment: "center",
+            className: "jp-forms__inbox-response-meta-from-email",
+            justify: "start",
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(
+                import_components82.__experimentalText,
+                {
+                  as: "a",
+                  href: `mailto:${response.author_email}`,
+                  lineHeight: "20px",
+                  size: "13px",
+                  variant: "muted",
+                  weight: "400",
+                  children: [
+                    responseAuthorEmailParts[0],
+                    /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("wbr", {}),
+                    "@",
+                    responseAuthorEmailParts[1]
+                  ]
+                }
+              ),
+              /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(CopyClipboardButton, { text: response.author_email })
+            ]
+          }
+        )
       ] })
-    ] }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("div", { className: "jp-forms__inbox-response-meta", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("table", { children: /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("tbody", { children: [
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("table", { className: "jp-forms__inbox-response-meta-table", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("tbody", { children: [
       /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("tr", { children: [
         /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("th", { children: (0, import_i18n81.__)("Date:", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("td", { children: (0, import_i18n81.sprintf)(
-          /* Translators: %1$s is the date, %2$s is the time. */
-          (0, import_i18n81.__)("%1$s at %2$s", "jetpack-forms"),
-          (0, import_date11.dateI18n)((0, import_date11.getSettings)().formats.date, response.date),
-          (0, import_date11.dateI18n)((0, import_date11.getSettings)().formats.time, response.date)
-        ) })
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("td", { children: (0, import_date11.dateI18n)(dateSettings.formats.datetime, response.date) })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("tr", { children: [
         /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("th", { children: (0, import_i18n81.__)("Source:", "jetpack-forms") }),
@@ -37636,7 +37671,7 @@ var ResponseMeta = ({ response }) => {
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("td", { children: response.browser })
       ] })
-    ] }) }) })
+    ] }) })
   ] });
 };
 var response_meta_default = ResponseMeta;
@@ -37780,32 +37815,43 @@ function ResponseActions({
       editEntityRecord("postType", "feedback", response.id, { is_unread: !newIsUnread });
     }
   }, [response, editEntityRecord, onActionComplete]);
-  const containerStyle = {
-    display: "flex",
-    gap: "4px",
-    alignItems: "center",
-    marginLeft: "-12px"
-    // Compensate for button internal padding
+  const sharedProps = {
+    isBusy: isLoading,
+    size: "compact"
   };
-  if (response.status === "trash") {
-    return /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)("div", { style: containerStyle, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n82.__)("Mark as read", "jetpack-forms") : (0, import_i18n82.__)("Mark as unread", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleRestore, isBusy: isLoading, size: "compact", children: (0, import_i18n82.__)("Restore", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleDelete, isBusy: isLoading, size: "compact", children: (0, import_i18n82.__)("Delete", "jetpack-forms") })
-    ] });
-  }
-  if (response.status === "spam") {
-    return /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)("div", { style: containerStyle, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n82.__)("Mark as read", "jetpack-forms") : (0, import_i18n82.__)("Mark as unread", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleMarkAsNotSpam, isBusy: isLoading, size: "compact", children: (0, import_i18n82.__)("Not spam", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleMoveToTrash, isBusy: isLoading, size: "compact", children: (0, import_i18n82.__)("Trash", "jetpack-forms") })
-    ] });
-  }
-  return /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)("div", { style: containerStyle, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n82.__)("Mark as read", "jetpack-forms") : (0, import_i18n82.__)("Mark as unread", "jetpack-forms") }),
-    /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleMarkAsSpam, isBusy: isLoading, size: "compact", children: (0, import_i18n82.__)("Spam", "jetpack-forms") }),
-    /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleMoveToTrash, isBusy: isLoading, size: "compact", children: (0, import_i18n82.__)("Trash", "jetpack-forms") })
-  ] });
+  const readUnreadButtons = /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleToggleRead, ...sharedProps, children: response.is_unread ? (0, import_i18n82.__)("Mark as read", "jetpack-forms") : (0, import_i18n82.__)("Mark as unread", "jetpack-forms") });
+  const trashButton = /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleMoveToTrash, ...sharedProps, children: (0, import_i18n82.__)("Trash", "jetpack-forms") });
+  const spamButton = /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleMarkAsSpam, ...sharedProps, children: (0, import_i18n82.__)("Spam", "jetpack-forms") });
+  const notSpamButton = /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleMarkAsNotSpam, ...sharedProps, children: (0, import_i18n82.__)("Not spam", "jetpack-forms") });
+  const deleteButton = /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleDelete, ...sharedProps, children: (0, import_i18n82.__)("Delete", "jetpack-forms") });
+  const restoreButton = /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleRestore, ...sharedProps, children: (0, import_i18n82.__)("Restore", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(
+    Stack,
+    {
+      direction: "row",
+      gap: "xs",
+      justify: "start",
+      wrap: "wrap",
+      className: "jp-forms-response-header-actions",
+      children: [
+        response.status === "publish" && /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(import_jsx_runtime195.Fragment, { children: [
+          readUnreadButtons,
+          spamButton,
+          trashButton
+        ] }),
+        response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(import_jsx_runtime195.Fragment, { children: [
+          readUnreadButtons,
+          restoreButton,
+          deleteButton
+        ] }),
+        response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(import_jsx_runtime195.Fragment, { children: [
+          readUnreadButtons,
+          notSpamButton,
+          trashButton
+        ] })
+      ]
+    }
+  );
 }
 
 // routes/responses/response/navigation.tsx
@@ -37825,42 +37871,40 @@ function ResponseNavigation({
     showTooltip: true,
     size: "compact"
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: "8px", flexShrink: 0 }, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)("div", { style: { display: "flex", alignItems: "center" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
-        import_components84.Button,
-        {
-          ...sharedProps,
-          disabled: !hasPrevious,
-          icon: chevron_up_default,
-          label: (0, import_i18n83.__)("Previous", "jetpack-forms"),
-          onClick: onPrevious
+  return /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)(Stack, { direction: "row", gap: "xs", justify: "end", style: { flexShrink: 0 }, wrap: "wrap", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
+      import_components84.Button,
+      {
+        ...sharedProps,
+        disabled: !hasPrevious,
+        icon: chevron_up_default,
+        label: (0, import_i18n83.__)("Previous", "jetpack-forms"),
+        onClick: onPrevious
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
+      import_components84.Button,
+      {
+        ...sharedProps,
+        disabled: !hasNext,
+        icon: chevron_down_default,
+        label: (0, import_i18n83.__)("Next", "jetpack-forms"),
+        onClick: onNext
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
+      "span",
+      {
+        style: {
+          backgroundColor: "var(--wp-admin-theme-color-darker-10, #135e96)",
+          display: "inline-block",
+          height: "20px",
+          margin: "6px 4px 6px 0",
+          opacity: 0.2,
+          width: "1px"
         }
-      ),
-      /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
-        import_components84.Button,
-        {
-          ...sharedProps,
-          disabled: !hasNext,
-          icon: chevron_down_default,
-          label: (0, import_i18n83.__)("Next", "jetpack-forms"),
-          onClick: onNext
-        }
-      ),
-      /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
-        "span",
-        {
-          style: {
-            display: "inline-block",
-            width: "1px",
-            height: "20px",
-            backgroundColor: "var(--wp-admin-theme-color-darker-10, #135e96)",
-            opacity: 0.2,
-            marginLeft: "4px"
-          }
-        }
-      )
-    ] }),
+      }
+    ),
     /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
       import_components84.Button,
       {
@@ -37874,11 +37918,11 @@ function ResponseNavigation({
   ] });
 }
 
-// src/dashboard/components/inspector/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='c0412ba3d6']")) {
+// routes/responses/response/style.scss
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='76187199ce']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "c0412ba3d6");
-  style.appendChild(document.createTextNode('.jp-forms__inbox-response{background-color:#fff;display:flex;flex-direction:column;flex-grow:2;min-height:50vh;overflow:auto;position:relative}.jp-forms__inbox-response .jp-forms__inbox-response-header{margin:24px 0 0;padding:0 16px 0 0}@media (min-width:783px){.jp-forms__inbox-response .jp-forms__inbox-response-header{padding:0 16px}}.jp-forms__inbox-response .jp-forms__inbox-response-meta{padding-left:16px;padding-right:16px}.jp-forms-response-actions{border-bottom:1px solid var(--jp-forms-border-color);padding:8px 16px}.jp-forms-response-navigation{gap:8px}.jp-forms-response-navigation,.jp-forms-response-navigation .jp-forms-response-navigation__arrows{align-items:center;display:flex}.jp-forms-response-navigation .jp-forms-response-navigation__arrows:after{background-color:var(--wp-admin-theme-color-darker-10,#135e96);content:"";display:inline-block;height:20px;margin-left:4px;opacity:.2;width:1px}.jp-forms__inbox-response-data{border-top:1px solid var(--jp-forms-border-color);font-size:var(--jp-forms-font-size-regular);line-height:24px;padding:0 16px}.jp-forms__inbox-response-data:not(.is-collection-format){display:flex;flex-direction:column;padding-bottom:24px;padding-top:24px;row-gap:24px}.jp-forms__inbox-response-data:not(.is-collection-format) .jp-forms__inbox-response-data-label{font-weight:600}.jp-forms__inbox-response-data:not(.is-collection-format) .jp-forms__inbox-response-data-value{white-space:pre-wrap}.jp-forms-response-content{display:flex;flex-direction:column;height:100%}.jp-forms__inbox__tip-container{border-top:1px solid var(--jp-forms-border-color);margin:8px 0 0;padding:16px 0;text-wrap:balance}.jp-forms__inbox__tip-container .components-tip{align-items:anchor-center}@media (min-width:783px){.jp-forms__inbox__tip-container{margin-bottom:57px;padding:16px}}.jp-forms__inbox__response-mobile .jp-forms__inbox__response-mobile__header-heading{font-size:1.2rem;font-weight:600}.jp-forms__inbox__response-mobile .jp-forms__inbox__response-mobile__header-actions{width:auto}.components-modal__content .jp-forms__inbox-response-data,.components-modal__content .jp-forms__inbox-response-meta,.components-modal__content .jp-forms__inbox-response-subtitle,.components-modal__content .jp-forms__inbox-response-title{padding-left:0;padding-right:0}.components-modal__content .jp-forms__inbox-file-preview-modal{max-width:90vw;width:auto;z-index:var(--jp-forms-z-modal)}'));
+  style.setAttribute("data-wp-hash", "76187199ce");
+  style.appendChild(document.createTextNode(".jp-forms-response-header{border-bottom:1px solid var(--wpds-color-stroke-surface-neutral,#e0e0e0);padding:8px}.jp-forms-response-header-actions{gap:0!important}.jp-forms__inbox-response-data{font-size:var(--jp-forms-font-size-regular);line-height:24px;padding:0 16px}.jp-forms__inbox-response-data:not(.is-collection-format){display:flex;flex-direction:column;padding-bottom:24px;padding-top:24px;row-gap:24px}.jp-forms__inbox-response-data:not(.is-collection-format) .jp-forms__inbox-response-data-label{font-weight:600}.jp-forms__inbox-response-data:not(.is-collection-format) .jp-forms__inbox-response-data-value{white-space:pre-wrap}.jp-forms__inbox__tip-container{border-top:1px solid var(--wpds-color-stroke-surface-neutral,#e0e0e0);margin:auto 0 0;padding:16px;text-wrap:pretty}.jp-forms__inbox__tip-container .components-tip{align-items:anchor-center}"));
   document.head.appendChild(style);
 }
 
@@ -37992,71 +38036,55 @@ function SingleResponseView({
     [hasNext, hasPrevious, handleNext, handlePrevious, onClose]
   );
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { style: { display: "flex", justifyContent: "center", padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Spinner, {}) });
+    return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Spinner, {}) });
   }
   if (!response) {
-    return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { style: { padding: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("p", { children: (0, import_i18n84.__)("Response not found.", "jetpack-forms") }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("p", { children: (0, import_i18n84.__)("Response not found.", "jetpack-forms") }) });
   }
   return /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)(import_jsx_runtime197.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)(
-      "div",
-      {
-        style: {
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "8px 16px",
-          borderBottom: "1px solid #e0e0e0",
-          gap: "8px",
-          flexWrap: "wrap"
-        },
-        children: [
-          /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(ResponseActions, { response, onActionComplete: handleActionComplete }),
-          /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
-            ResponseNavigation,
-            {
-              hasNext,
-              hasPrevious,
-              onNext: handleNext,
-              onPrevious: handlePrevious,
-              onClose
-            }
-          )
-        ]
-      }
-    ),
-    /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)("div", { style: { padding: "20px", overflowY: "auto" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(response_meta_default, { response }),
+    /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)(Stack, { className: "jp-forms-response-header", direction: "row", gap: "xs", justify: "space-between", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(ResponseActions, { response, onActionComplete: handleActionComplete }),
       /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
-        response_fields_default,
+        ResponseNavigation,
         {
-          fields: response.fields,
-          onFilePreview: handleFilePreview,
-          className: "jp-forms__inbox-response-data"
+          hasNext,
+          hasPrevious,
+          onNext: handleNext,
+          onPrevious: handlePrevious,
+          onClose
         }
-      ),
-      response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Tip, { children: (0, import_i18n84.sprintf)(
-        /* translators: %d number of days. */
-        (0, import_i18n84._n)(
-          "Spam responses are permanently deleted after %d day.",
-          "Spam responses are permanently deleted after %d days.",
-          15,
-          "jetpack-forms"
-        ),
-        // Number from https://github.com/Automattic/jetpack/blob/bde3cf9a89ce0d02e50469df173a6253383bd276/projects/packages/forms/src/contact-form/class-contact-form-plugin.php#L132
-        15
-      ) }) }),
-      response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Tip, { children: (0, import_i18n84.sprintf)(
-        /* translators: %d number of days. */
-        (0, import_i18n84._n)(
-          "Items in trash are permanently deleted after %d day.",
-          "Items in trash are permanently deleted after %d days.",
-          emptyTrashDays,
-          "jetpack-forms"
-        ),
-        emptyTrashDays
-      ) }) })
+      )
     ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(response_meta_default, { response }),
+    /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__inbox-response-data", children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
+      response_fields_default,
+      {
+        fields: response.fields,
+        onFilePreview: handleFilePreview,
+        className: "jp-forms__inbox-response-data"
+      }
+    ) }),
+    response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Tip, { children: (0, import_i18n84.sprintf)(
+      /* translators: %d number of days. */
+      (0, import_i18n84._n)(
+        "Spam responses are permanently deleted after %d day.",
+        "Spam responses are permanently deleted after %d days.",
+        15,
+        "jetpack-forms"
+      ),
+      // Number from https://github.com/Automattic/jetpack/blob/bde3cf9a89ce0d02e50469df173a6253383bd276/projects/packages/forms/src/contact-form/class-contact-form-plugin.php#L132
+      15
+    ) }) }),
+    response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Tip, { children: (0, import_i18n84.sprintf)(
+      /* translators: %d number of days. */
+      (0, import_i18n84._n)(
+        "Items in trash are permanently deleted after %d day.",
+        "Items in trash are permanently deleted after %d days.",
+        emptyTrashDays,
+        "jetpack-forms"
+      ),
+      emptyTrashDays
+    ) }) }),
     previewFile && /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Modal, { title: (0, import_html_entities9.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
       preview_file_default,
       {

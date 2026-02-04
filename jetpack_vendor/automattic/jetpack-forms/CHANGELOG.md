@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add hook for shared wp-build dashboard heaader details.
 - Forms: add inline field icons module for wp-build compatibility.
 - Forms: add SVG icon files for all form field blocks and configure webpack for SVG component and raw imports.
+- Forms: update response sidebar meta section visually and refactor styles.
 - Forms: Update sidebar information on wp-build dashboard.
 - Image select field: improve preview styling in response inspector.
 - Update package dependencies.

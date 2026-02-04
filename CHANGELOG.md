@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: update response sidebar styles.
 - WordPress.com Reader: add new option to show a link to the WordPress.com Reader in the admin bar.
 
 ### Bug fixes
