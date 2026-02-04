@@ -5,21 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.34.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.34.0] - 2026-02-04
 ### Added
-- Add email rendering support for the videopress/video block.
+- Add email rendering support for the videopress/video block. [#46798]
 
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#46905]
 
 ### Fixed
-- Clarify error messages when video uploads fail due to plan limitations.
-- Fix compatibility with Gutenberg 22.4 by removing invalid null timezone argument from dateI18n calls.
-- Fix upgrade notice incorrectly showing for A4A (Automattic for Agencies) VideoPress customers by using dynamic features API instead of hardcoded plan slugs.
-- Video Library: fix video query to only return VideoPress videos instead of all video types.
+- Clarify error messages when video uploads fail due to plan limitations. [#46668]
+- Fix compatibility with Gutenberg 22.4 by removing invalid null timezone argument from dateI18n calls. [#46928]
+- Fix upgrade notice incorrectly showing for A4A (Automattic for Agencies) VideoPress customers by using dynamic features API instead of hardcoded plan slugs. [#46835]
+- Fix video query to only return VideoPress videos instead of all video types. [#46689]
 
 ## [0.33.4] - 2026-02-02
 ### Changed
@@ -1838,7 +1835,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.34.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.33.4...v0.34.0-alpha
+[0.34.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.33.4...v0.34.0
 [0.33.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.33.3...v0.33.4
 [0.33.3]: https://github.com/Automattic/jetpack-videopress/compare/v0.33.2...v0.33.3
 [0.33.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.33.1...v0.33.2
