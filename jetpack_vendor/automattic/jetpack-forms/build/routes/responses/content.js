@@ -4,6 +4,9 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __esm = (fn, res) => function __init() {
+  return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
+};
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
@@ -48,7 +51,7 @@ var require_ms = __commonJS({
       options = options || {};
       var type = typeof val;
       if (type === "string" && val.length > 0) {
-        return parse(val);
+        return parse3(val);
       } else if (type === "number" && isFinite(val)) {
         return options.long ? fmtLong(val) : fmtShort(val);
       }
@@ -56,7 +59,7 @@ var require_ms = __commonJS({
         "val is not a non-empty string or a valid number. val=" + JSON.stringify(val)
       );
     };
-    function parse(str) {
+    function parse3(str) {
       str = String(str);
       if (str.length > 100) {
         return;
@@ -183,11 +186,11 @@ var require_common = __commonJS({
         let enableOverride = null;
         let namespacesCache;
         let enabledCache;
-        function debug4(...args) {
-          if (!debug4.enabled) {
+        function debug5(...args) {
+          if (!debug5.enabled) {
             return;
           }
-          const self2 = debug4;
+          const self2 = debug5;
           const curr = Number(/* @__PURE__ */ new Date());
           const ms = curr - (prevTime || curr);
           self2.diff = ms;
@@ -199,12 +202,12 @@ var require_common = __commonJS({
             args.unshift("%O");
           }
           let index = 0;
-          args[0] = args[0].replace(/%([a-zA-Z%])/g, (match2, format6) => {
+          args[0] = args[0].replace(/%([a-zA-Z%])/g, (match2, format7) => {
             if (match2 === "%%") {
               return "%";
             }
             index++;
-            const formatter = createDebug.formatters[format6];
+            const formatter = createDebug.formatters[format7];
             if (typeof formatter === "function") {
               const val = args[index];
               match2 = formatter.call(self2, val);
@@ -217,12 +220,12 @@ var require_common = __commonJS({
           const logFn = self2.log || createDebug.log;
           logFn.apply(self2, args);
         }
-        debug4.namespace = namespace;
-        debug4.useColors = createDebug.useColors();
-        debug4.color = createDebug.selectColor(namespace);
-        debug4.extend = extend;
-        debug4.destroy = createDebug.destroy;
-        Object.defineProperty(debug4, "enabled", {
+        debug5.namespace = namespace;
+        debug5.useColors = createDebug.useColors();
+        debug5.color = createDebug.selectColor(namespace);
+        debug5.extend = extend;
+        debug5.destroy = createDebug.destroy;
+        Object.defineProperty(debug5, "enabled", {
           enumerable: true,
           configurable: false,
           get: () => {
@@ -240,9 +243,9 @@ var require_common = __commonJS({
           }
         });
         if (typeof createDebug.init === "function") {
-          createDebug.init(debug4);
+          createDebug.init(debug5);
         }
-        return debug4;
+        return debug5;
       }
       function extend(namespace, delimiter) {
         const newDebug = createDebug(this.namespace + (typeof delimiter === "undefined" ? ":" : delimiter) + namespace);
@@ -580,7 +583,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
             "The result of getSnapshot should be cached to avoid an infinite loop"
           ), didWarnUncachedGetSnapshot = true);
         }
-        cachedValue = useState47({
+        cachedValue = useState48({
           inst: { value, getSnapshot }
         });
         var inst = cachedValue[0].inst, forceUpdate = cachedValue[1];
@@ -592,7 +595,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
           },
           [subscribe2, value, getSnapshot]
         );
-        useEffect34(
+        useEffect35(
           function() {
             checkIfSnapshotChanged(inst) && forceUpdate({ inst });
             return subscribe2(function() {
@@ -618,7 +621,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return getSnapshot();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React37 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState47 = React37.useState, useEffect34 = React37.useEffect, useLayoutEffect4 = React37.useLayoutEffect, useDebugValue = React37.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      var React37 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState48 = React37.useState, useEffect35 = React37.useEffect, useLayoutEffect4 = React37.useLayoutEffect, useDebugValue = React37.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
       exports.useSyncExternalStore = void 0 !== React37.useSyncExternalStore ? React37.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
@@ -1585,7 +1588,7 @@ var require_constants = __commonJS({
     "use strict";
     var SEMVER_SPEC_VERSION = "2.0.0";
     var MAX_LENGTH = 256;
-    var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || /* istanbul ignore next */
+    var MAX_SAFE_INTEGER2 = Number.MAX_SAFE_INTEGER || /* istanbul ignore next */
     9007199254740991;
     var MAX_SAFE_COMPONENT_LENGTH = 16;
     var MAX_SAFE_BUILD_LENGTH = MAX_LENGTH - 6;
@@ -1602,7 +1605,7 @@ var require_constants = __commonJS({
       MAX_LENGTH,
       MAX_SAFE_COMPONENT_LENGTH,
       MAX_SAFE_BUILD_LENGTH,
-      MAX_SAFE_INTEGER,
+      MAX_SAFE_INTEGER: MAX_SAFE_INTEGER2,
       RELEASE_TYPES,
       SEMVER_SPEC_VERSION,
       FLAG_INCLUDE_PRERELEASE: 1,
@@ -1615,9 +1618,9 @@ var require_constants = __commonJS({
 var require_debug = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/internal/debug.js"(exports, module) {
     "use strict";
-    var debug4 = typeof process === "object" && process.env && process.env.NODE_DEBUG && /\bsemver\b/i.test(process.env.NODE_DEBUG) ? (...args) => console.error("SEMVER", ...args) : () => {
+    var debug5 = typeof process === "object" && process.env && process.env.NODE_DEBUG && /\bsemver\b/i.test(process.env.NODE_DEBUG) ? (...args) => console.error("SEMVER", ...args) : () => {
     };
-    module.exports = debug4;
+    module.exports = debug5;
   }
 });
 
@@ -1630,7 +1633,7 @@ var require_re = __commonJS({
       MAX_SAFE_BUILD_LENGTH,
       MAX_LENGTH
     } = require_constants();
-    var debug4 = require_debug();
+    var debug5 = require_debug();
     exports = module.exports = {};
     var re = exports.re = [];
     var safeRe = exports.safeRe = [];
@@ -1653,7 +1656,7 @@ var require_re = __commonJS({
     var createToken = (name, value, isGlobal) => {
       const safe = makeSafeRegex(value);
       const index = R++;
-      debug4(name, index, value);
+      debug5(name, index, value);
       t2[name] = index;
       src[index] = value;
       safeSrc[index] = safe;
@@ -1757,8 +1760,8 @@ var require_identifiers = __commonJS({
 var require_semver = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/classes/semver.js"(exports, module) {
     "use strict";
-    var debug4 = require_debug();
-    var { MAX_LENGTH, MAX_SAFE_INTEGER } = require_constants();
+    var debug5 = require_debug();
+    var { MAX_LENGTH, MAX_SAFE_INTEGER: MAX_SAFE_INTEGER2 } = require_constants();
     var { safeRe: re, t: t2 } = require_re();
     var parseOptions = require_parse_options();
     var { compareIdentifiers } = require_identifiers();
@@ -1779,7 +1782,7 @@ var require_semver = __commonJS({
             `version is longer than ${MAX_LENGTH} characters`
           );
         }
-        debug4("SemVer", version3, options);
+        debug5("SemVer", version3, options);
         this.options = options;
         this.loose = !!options.loose;
         this.includePrerelease = !!options.includePrerelease;
@@ -1791,13 +1794,13 @@ var require_semver = __commonJS({
         this.major = +m2[1];
         this.minor = +m2[2];
         this.patch = +m2[3];
-        if (this.major > MAX_SAFE_INTEGER || this.major < 0) {
+        if (this.major > MAX_SAFE_INTEGER2 || this.major < 0) {
           throw new TypeError("Invalid major version");
         }
-        if (this.minor > MAX_SAFE_INTEGER || this.minor < 0) {
+        if (this.minor > MAX_SAFE_INTEGER2 || this.minor < 0) {
           throw new TypeError("Invalid minor version");
         }
-        if (this.patch > MAX_SAFE_INTEGER || this.patch < 0) {
+        if (this.patch > MAX_SAFE_INTEGER2 || this.patch < 0) {
           throw new TypeError("Invalid patch version");
         }
         if (!m2[4]) {
@@ -1806,7 +1809,7 @@ var require_semver = __commonJS({
           this.prerelease = m2[4].split(".").map((id) => {
             if (/^[0-9]+$/.test(id)) {
               const num = +id;
-              if (num >= 0 && num < MAX_SAFE_INTEGER) {
+              if (num >= 0 && num < MAX_SAFE_INTEGER2) {
                 return num;
               }
             }
@@ -1827,7 +1830,7 @@ var require_semver = __commonJS({
         return this.version;
       }
       compare(other) {
-        debug4("SemVer.compare", this.version, this.options, other);
+        debug5("SemVer.compare", this.version, this.options, other);
         if (!(other instanceof _SemVer)) {
           if (typeof other === "string" && other === this.version) {
             return 0;
@@ -1878,7 +1881,7 @@ var require_semver = __commonJS({
         do {
           const a2 = this.prerelease[i2];
           const b2 = other.prerelease[i2];
-          debug4("prerelease compare", i2, a2, b2);
+          debug5("prerelease compare", i2, a2, b2);
           if (a2 === void 0 && b2 === void 0) {
             return 0;
           } else if (b2 === void 0) {
@@ -1900,7 +1903,7 @@ var require_semver = __commonJS({
         do {
           const a2 = this.build[i2];
           const b2 = other.build[i2];
-          debug4("build compare", i2, a2, b2);
+          debug5("build compare", i2, a2, b2);
           if (a2 === void 0 && b2 === void 0) {
             return 0;
           } else if (b2 === void 0) {
@@ -2037,7 +2040,7 @@ var require_parse = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/functions/parse.js"(exports, module) {
     "use strict";
     var SemVer = require_semver();
-    var parse = (version3, options, throwErrors = false) => {
+    var parse3 = (version3, options, throwErrors = false) => {
       if (version3 instanceof SemVer) {
         return version3;
       }
@@ -2050,7 +2053,7 @@ var require_parse = __commonJS({
         throw er;
       }
     };
-    module.exports = parse;
+    module.exports = parse3;
   }
 });
 
@@ -2058,9 +2061,9 @@ var require_parse = __commonJS({
 var require_valid = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/functions/valid.js"(exports, module) {
     "use strict";
-    var parse = require_parse();
+    var parse3 = require_parse();
     var valid = (version3, options) => {
-      const v2 = parse(version3, options);
+      const v2 = parse3(version3, options);
       return v2 ? v2.version : null;
     };
     module.exports = valid;
@@ -2071,9 +2074,9 @@ var require_valid = __commonJS({
 var require_clean = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/functions/clean.js"(exports, module) {
     "use strict";
-    var parse = require_parse();
+    var parse3 = require_parse();
     var clean = (version3, options) => {
-      const s2 = parse(version3.trim().replace(/^[=v]+/, ""), options);
+      const s2 = parse3(version3.trim().replace(/^[=v]+/, ""), options);
       return s2 ? s2.version : null;
     };
     module.exports = clean;
@@ -2108,10 +2111,10 @@ var require_inc = __commonJS({
 var require_diff = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/functions/diff.js"(exports, module) {
     "use strict";
-    var parse = require_parse();
+    var parse3 = require_parse();
     var diff = (version1, version22) => {
-      const v1 = parse(version1, null, true);
-      const v2 = parse(version22, null, true);
+      const v1 = parse3(version1, null, true);
+      const v2 = parse3(version22, null, true);
       const comparison = v1.compare(v2);
       if (comparison === 0) {
         return null;
@@ -2182,9 +2185,9 @@ var require_patch = __commonJS({
 var require_prerelease = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/functions/prerelease.js"(exports, module) {
     "use strict";
-    var parse = require_parse();
+    var parse3 = require_parse();
     var prerelease = (version3, options) => {
-      const parsed = parse(version3, options);
+      const parsed = parse3(version3, options);
       return parsed && parsed.prerelease.length ? parsed.prerelease : null;
     };
     module.exports = prerelease;
@@ -2370,7 +2373,7 @@ var require_coerce = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/functions/coerce.js"(exports, module) {
     "use strict";
     var SemVer = require_semver();
-    var parse = require_parse();
+    var parse3 = require_parse();
     var { safeRe: re, t: t2 } = require_re();
     var coerce = (version3, options) => {
       if (version3 instanceof SemVer) {
@@ -2405,7 +2408,7 @@ var require_coerce = __commonJS({
       const patch = match2[4] || "0";
       const prerelease = options.includePrerelease && match2[5] ? `-${match2[5]}` : "";
       const build = options.includePrerelease && match2[6] ? `+${match2[6]}` : "";
-      return parse(`${major}.${minor}.${patch}${prerelease}${build}`, options);
+      return parse3(`${major}.${minor}.${patch}${prerelease}${build}`, options);
     };
     module.exports = coerce;
   }
@@ -2415,7 +2418,7 @@ var require_coerce = __commonJS({
 var require_lrucache = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/internal/lrucache.js"(exports, module) {
     "use strict";
-    var LRUCache = class {
+    var LRUCache2 = class {
       constructor() {
         this.max = 1e3;
         this.map = /* @__PURE__ */ new Map();
@@ -2445,7 +2448,7 @@ var require_lrucache = __commonJS({
         return this;
       }
     };
-    module.exports = LRUCache;
+    module.exports = LRUCache2;
   }
 });
 
@@ -2528,21 +2531,21 @@ var require_range = __commonJS({
         const loose = this.options.loose;
         const hr = loose ? re[t2.HYPHENRANGELOOSE] : re[t2.HYPHENRANGE];
         range = range.replace(hr, hyphenReplace(this.options.includePrerelease));
-        debug4("hyphen replace", range);
+        debug5("hyphen replace", range);
         range = range.replace(re[t2.COMPARATORTRIM], comparatorTrimReplace);
-        debug4("comparator trim", range);
+        debug5("comparator trim", range);
         range = range.replace(re[t2.TILDETRIM], tildeTrimReplace);
-        debug4("tilde trim", range);
+        debug5("tilde trim", range);
         range = range.replace(re[t2.CARETTRIM], caretTrimReplace);
-        debug4("caret trim", range);
+        debug5("caret trim", range);
         let rangeList = range.split(" ").map((comp) => parseComparator(comp, this.options)).join(" ").split(/\s+/).map((comp) => replaceGTE0(comp, this.options));
         if (loose) {
           rangeList = rangeList.filter((comp) => {
-            debug4("loose invalid filter", comp, this.options);
+            debug5("loose invalid filter", comp, this.options);
             return !!comp.match(re[t2.COMPARATORLOOSE]);
           });
         }
-        debug4("range list", rangeList);
+        debug5("range list", rangeList);
         const rangeMap = /* @__PURE__ */ new Map();
         const comparators = rangeList.map((comp) => new Comparator(comp, this.options));
         for (const comp of comparators) {
@@ -2554,9 +2557,9 @@ var require_range = __commonJS({
         if (rangeMap.size > 1 && rangeMap.has("")) {
           rangeMap.delete("");
         }
-        const result = [...rangeMap.values()];
-        cache.set(memoKey, result);
-        return result;
+        const result2 = [...rangeMap.values()];
+        cache.set(memoKey, result2);
+        return result2;
       }
       intersects(range, options) {
         if (!(range instanceof _Range)) {
@@ -2597,7 +2600,7 @@ var require_range = __commonJS({
     var cache = new LRU();
     var parseOptions = require_parse_options();
     var Comparator = require_comparator();
-    var debug4 = require_debug();
+    var debug5 = require_debug();
     var SemVer = require_semver();
     var {
       safeRe: re,
@@ -2610,28 +2613,28 @@ var require_range = __commonJS({
     var isNullSet = (c2) => c2.value === "<0.0.0-0";
     var isAny = (c2) => c2.value === "";
     var isSatisfiable = (comparators, options) => {
-      let result = true;
+      let result2 = true;
       const remainingComparators = comparators.slice();
       let testComparator = remainingComparators.pop();
-      while (result && remainingComparators.length) {
-        result = remainingComparators.every((otherComparator) => {
+      while (result2 && remainingComparators.length) {
+        result2 = remainingComparators.every((otherComparator) => {
           return testComparator.intersects(otherComparator, options);
         });
         testComparator = remainingComparators.pop();
       }
-      return result;
+      return result2;
     };
     var parseComparator = (comp, options) => {
       comp = comp.replace(re[t2.BUILD], "");
-      debug4("comp", comp, options);
+      debug5("comp", comp, options);
       comp = replaceCarets(comp, options);
-      debug4("caret", comp);
+      debug5("caret", comp);
       comp = replaceTildes(comp, options);
-      debug4("tildes", comp);
+      debug5("tildes", comp);
       comp = replaceXRanges(comp, options);
-      debug4("xrange", comp);
+      debug5("xrange", comp);
       comp = replaceStars(comp, options);
-      debug4("stars", comp);
+      debug5("stars", comp);
       return comp;
     };
     var isX = (id) => !id || id.toLowerCase() === "x" || id === "*";
@@ -2641,7 +2644,7 @@ var require_range = __commonJS({
     var replaceTilde = (comp, options) => {
       const r3 = options.loose ? re[t2.TILDELOOSE] : re[t2.TILDE];
       return comp.replace(r3, (_, M2, m2, p2, pr) => {
-        debug4("tilde", comp, _, M2, m2, p2, pr);
+        debug5("tilde", comp, _, M2, m2, p2, pr);
         let ret;
         if (isX(M2)) {
           ret = "";
@@ -2650,12 +2653,12 @@ var require_range = __commonJS({
         } else if (isX(p2)) {
           ret = `>=${M2}.${m2}.0 <${M2}.${+m2 + 1}.0-0`;
         } else if (pr) {
-          debug4("replaceTilde pr", pr);
+          debug5("replaceTilde pr", pr);
           ret = `>=${M2}.${m2}.${p2}-${pr} <${M2}.${+m2 + 1}.0-0`;
         } else {
           ret = `>=${M2}.${m2}.${p2} <${M2}.${+m2 + 1}.0-0`;
         }
-        debug4("tilde return", ret);
+        debug5("tilde return", ret);
         return ret;
       });
     };
@@ -2663,11 +2666,11 @@ var require_range = __commonJS({
       return comp.trim().split(/\s+/).map((c2) => replaceCaret(c2, options)).join(" ");
     };
     var replaceCaret = (comp, options) => {
-      debug4("caret", comp, options);
+      debug5("caret", comp, options);
       const r3 = options.loose ? re[t2.CARETLOOSE] : re[t2.CARET];
       const z = options.includePrerelease ? "-0" : "";
       return comp.replace(r3, (_, M2, m2, p2, pr) => {
-        debug4("caret", comp, _, M2, m2, p2, pr);
+        debug5("caret", comp, _, M2, m2, p2, pr);
         let ret;
         if (isX(M2)) {
           ret = "";
@@ -2680,7 +2683,7 @@ var require_range = __commonJS({
             ret = `>=${M2}.${m2}.0${z} <${+M2 + 1}.0.0-0`;
           }
         } else if (pr) {
-          debug4("replaceCaret pr", pr);
+          debug5("replaceCaret pr", pr);
           if (M2 === "0") {
             if (m2 === "0") {
               ret = `>=${M2}.${m2}.${p2}-${pr} <${M2}.${m2}.${+p2 + 1}-0`;
@@ -2691,7 +2694,7 @@ var require_range = __commonJS({
             ret = `>=${M2}.${m2}.${p2}-${pr} <${+M2 + 1}.0.0-0`;
           }
         } else {
-          debug4("no pr");
+          debug5("no pr");
           if (M2 === "0") {
             if (m2 === "0") {
               ret = `>=${M2}.${m2}.${p2}${z} <${M2}.${m2}.${+p2 + 1}-0`;
@@ -2702,19 +2705,19 @@ var require_range = __commonJS({
             ret = `>=${M2}.${m2}.${p2} <${+M2 + 1}.0.0-0`;
           }
         }
-        debug4("caret return", ret);
+        debug5("caret return", ret);
         return ret;
       });
     };
     var replaceXRanges = (comp, options) => {
-      debug4("replaceXRanges", comp, options);
+      debug5("replaceXRanges", comp, options);
       return comp.split(/\s+/).map((c2) => replaceXRange(c2, options)).join(" ");
     };
     var replaceXRange = (comp, options) => {
       comp = comp.trim();
       const r3 = options.loose ? re[t2.XRANGELOOSE] : re[t2.XRANGE];
       return comp.replace(r3, (ret, gtlt, M2, m2, p2, pr) => {
-        debug4("xRange", comp, ret, gtlt, M2, m2, p2, pr);
+        debug5("xRange", comp, ret, gtlt, M2, m2, p2, pr);
         const xM = isX(M2);
         const xm = xM || isX(m2);
         const xp = xm || isX(p2);
@@ -2761,16 +2764,16 @@ var require_range = __commonJS({
         } else if (xp) {
           ret = `>=${M2}.${m2}.0${pr} <${M2}.${+m2 + 1}.0-0`;
         }
-        debug4("xRange return", ret);
+        debug5("xRange return", ret);
         return ret;
       });
     };
     var replaceStars = (comp, options) => {
-      debug4("replaceStars", comp, options);
+      debug5("replaceStars", comp, options);
       return comp.trim().replace(re[t2.STAR], "");
     };
     var replaceGTE0 = (comp, options) => {
-      debug4("replaceGTE0", comp, options);
+      debug5("replaceGTE0", comp, options);
       return comp.trim().replace(re[options.includePrerelease ? t2.GTE0PRE : t2.GTE0], "");
     };
     var hyphenReplace = (incPr) => ($0, from, fM, fm, fp, fpr, fb, to, tM, tm, tp, tpr) => {
@@ -2808,7 +2811,7 @@ var require_range = __commonJS({
       }
       if (version3.prerelease.length && !options.includePrerelease) {
         for (let i2 = 0; i2 < set2.length; i2++) {
-          debug4(set2[i2].semver);
+          debug5(set2[i2].semver);
           if (set2[i2].semver === Comparator.ANY) {
             continue;
           }
@@ -2845,7 +2848,7 @@ var require_comparator = __commonJS({
           }
         }
         comp = comp.trim().split(/\s+/).join(" ");
-        debug4("comparator", comp, options);
+        debug5("comparator", comp, options);
         this.options = options;
         this.loose = !!options.loose;
         this.parse(comp);
@@ -2854,7 +2857,7 @@ var require_comparator = __commonJS({
         } else {
           this.value = this.operator + this.semver.version;
         }
-        debug4("comp", this);
+        debug5("comp", this);
       }
       parse(comp) {
         const r3 = this.options.loose ? re[t2.COMPARATORLOOSE] : re[t2.COMPARATOR];
@@ -2876,7 +2879,7 @@ var require_comparator = __commonJS({
         return this.value;
       }
       test(version3) {
-        debug4("Comparator.test", version3, this.options.loose);
+        debug5("Comparator.test", version3, this.options.loose);
         if (this.semver === ANY || version3 === ANY) {
           return true;
         }
@@ -2933,7 +2936,7 @@ var require_comparator = __commonJS({
     var parseOptions = require_parse_options();
     var { safeRe: re, t: t2 } = require_re();
     var cmp = require_cmp();
-    var debug4 = require_debug();
+    var debug5 = require_debug();
     var SemVer = require_semver();
     var Range = require_range();
   }
@@ -3422,7 +3425,7 @@ var require_semver2 = __commonJS({
     var constants = require_constants();
     var SemVer = require_semver();
     var identifiers = require_identifiers();
-    var parse = require_parse();
+    var parse3 = require_parse();
     var valid = require_valid();
     var clean = require_clean();
     var inc = require_inc();
@@ -3460,7 +3463,7 @@ var require_semver2 = __commonJS({
     var simplifyRange = require_simplify();
     var subset = require_subset();
     module.exports = {
-      parse,
+      parse: parse3,
       valid,
       clean,
       inc,
@@ -4097,6 +4100,6980 @@ var require_sha256 = __commonJS({
 var require_core_data = __commonJS({
   "package-external:@wordpress/core-data"(exports, module) {
     module.exports = window.wp.coreData;
+  }
+});
+
+// ../../../node_modules/.pnpm/crc32@0.2.2/node_modules/crc32/lib/crc32.js
+var require_crc32 = __commonJS({
+  "../../../node_modules/.pnpm/crc32@0.2.2/node_modules/crc32/lib/crc32.js"(exports, module) {
+    (function() {
+      "use strict";
+      var table = [], poly = 3988292384;
+      function makeTable() {
+        var c2, n2, k;
+        for (n2 = 0; n2 < 256; n2 += 1) {
+          c2 = n2;
+          for (k = 0; k < 8; k += 1) {
+            if (c2 & 1) {
+              c2 = poly ^ c2 >>> 1;
+            } else {
+              c2 = c2 >>> 1;
+            }
+          }
+          table[n2] = c2 >>> 0;
+        }
+      }
+      function strToArr(str) {
+        return Array.prototype.map.call(str, function(c2) {
+          return c2.charCodeAt(0);
+        });
+      }
+      function crcDirect(arr) {
+        var crc = -1, i2, j2, l2, temp;
+        for (i2 = 0, l2 = arr.length; i2 < l2; i2 += 1) {
+          temp = (crc ^ arr[i2]) & 255;
+          for (j2 = 0; j2 < 8; j2 += 1) {
+            if ((temp & 1) === 1) {
+              temp = temp >>> 1 ^ poly;
+            } else {
+              temp = temp >>> 1;
+            }
+          }
+          crc = crc >>> 8 ^ temp;
+        }
+        return crc ^ -1;
+      }
+      function crcTable(arr, append) {
+        var crc, i2, l2;
+        if (typeof crcTable.crc === "undefined" || !append || !arr) {
+          crcTable.crc = 0 ^ -1;
+          if (!arr) {
+            return;
+          }
+        }
+        crc = crcTable.crc;
+        for (i2 = 0, l2 = arr.length; i2 < l2; i2 += 1) {
+          crc = crc >>> 8 ^ table[(crc ^ arr[i2]) & 255];
+        }
+        crcTable.crc = crc;
+        return crc ^ -1;
+      }
+      makeTable();
+      module.exports = function(val, direct) {
+        var val = typeof val === "string" ? strToArr(val) : val, ret = direct ? crcDirect(val) : crcTable(val);
+        return (ret >>> 0).toString(16);
+      };
+      module.exports.direct = crcDirect;
+      module.exports.table = crcTable;
+    })();
+  }
+});
+
+// ../../../node_modules/.pnpm/seed-random@2.2.0/node_modules/seed-random/index.js
+var require_seed_random = __commonJS({
+  "../../../node_modules/.pnpm/seed-random@2.2.0/node_modules/seed-random/index.js"(exports, module) {
+    "use strict";
+    var width = 256;
+    var chunks = 6;
+    var digits = 52;
+    var pool = [];
+    var GLOBAL = typeof global === "undefined" ? window : global;
+    var startdenom = Math.pow(width, chunks);
+    var significance = Math.pow(2, digits);
+    var overflow = significance * 2;
+    var mask = width - 1;
+    var oldRandom = Math.random;
+    module.exports = function(seed2, options) {
+      if (options && options.global === true) {
+        options.global = false;
+        Math.random = module.exports(seed2, options);
+        options.global = true;
+        return Math.random;
+      }
+      var use_entropy = options && options.entropy || false;
+      var key = [];
+      var shortseed = mixkey(flatten(
+        use_entropy ? [seed2, tostring(pool)] : 0 in arguments ? seed2 : autoseed(),
+        3
+      ), key);
+      var arc4 = new ARC4(key);
+      mixkey(tostring(arc4.S), pool);
+      return function() {
+        var n2 = arc4.g(chunks), d2 = startdenom, x2 = 0;
+        while (n2 < significance) {
+          n2 = (n2 + x2) * width;
+          d2 *= width;
+          x2 = arc4.g(1);
+        }
+        while (n2 >= overflow) {
+          n2 /= 2;
+          d2 /= 2;
+          x2 >>>= 1;
+        }
+        return (n2 + x2) / d2;
+      };
+    };
+    module.exports.resetGlobal = function() {
+      Math.random = oldRandom;
+    };
+    function ARC4(key) {
+      var t2, keylen = key.length, me = this, i2 = 0, j2 = me.i = me.j = 0, s2 = me.S = [];
+      if (!keylen) {
+        key = [keylen++];
+      }
+      while (i2 < width) {
+        s2[i2] = i2++;
+      }
+      for (i2 = 0; i2 < width; i2++) {
+        s2[i2] = s2[j2 = mask & j2 + key[i2 % keylen] + (t2 = s2[i2])];
+        s2[j2] = t2;
+      }
+      (me.g = function(count) {
+        var t3, r3 = 0, i3 = me.i, j3 = me.j, s3 = me.S;
+        while (count--) {
+          t3 = s3[i3 = mask & i3 + 1];
+          r3 = r3 * width + s3[mask & (s3[i3] = s3[j3 = mask & j3 + t3]) + (s3[j3] = t3)];
+        }
+        me.i = i3;
+        me.j = j3;
+        return r3;
+      })(width);
+    }
+    function flatten(obj, depth) {
+      var result2 = [], typ = (typeof obj)[0], prop;
+      if (depth && typ == "o") {
+        for (prop in obj) {
+          try {
+            result2.push(flatten(obj[prop], depth - 1));
+          } catch (e2) {
+          }
+        }
+      }
+      return result2.length ? result2 : typ == "s" ? obj : obj + "\0";
+    }
+    function mixkey(seed2, key) {
+      var stringseed = seed2 + "", smear, j2 = 0;
+      while (j2 < stringseed.length) {
+        key[mask & j2] = mask & (smear ^= key[mask & j2] * 19) + stringseed.charCodeAt(j2++);
+      }
+      return tostring(key);
+    }
+    function autoseed(seed2) {
+      try {
+        GLOBAL.crypto.getRandomValues(seed2 = new Uint8Array(width));
+        return tostring(seed2);
+      } catch (e2) {
+        return [
+          +/* @__PURE__ */ new Date(),
+          GLOBAL,
+          GLOBAL.navigator && GLOBAL.navigator.plugins,
+          GLOBAL.screen,
+          tostring(pool)
+        ];
+      }
+    }
+    function tostring(a2) {
+      return String.fromCharCode.apply(0, a2);
+    }
+    mixkey(Math.random(), pool);
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/metadata.min.json.js
+var metadata_min_json_default;
+var init_metadata_min_json = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/metadata.min.json.js"() {
+    metadata_min_json_default = { "version": 4, "country_calling_codes": { "1": ["US", "AG", "AI", "AS", "BB", "BM", "BS", "CA", "DM", "DO", "GD", "GU", "JM", "KN", "KY", "LC", "MP", "MS", "PR", "SX", "TC", "TT", "VC", "VG", "VI"], "7": ["RU", "KZ"], "20": ["EG"], "27": ["ZA"], "30": ["GR"], "31": ["NL"], "32": ["BE"], "33": ["FR"], "34": ["ES"], "36": ["HU"], "39": ["IT", "VA"], "40": ["RO"], "41": ["CH"], "43": ["AT"], "44": ["GB", "GG", "IM", "JE"], "45": ["DK"], "46": ["SE"], "47": ["NO", "SJ"], "48": ["PL"], "49": ["DE"], "51": ["PE"], "52": ["MX"], "53": ["CU"], "54": ["AR"], "55": ["BR"], "56": ["CL"], "57": ["CO"], "58": ["VE"], "60": ["MY"], "61": ["AU", "CC", "CX"], "62": ["ID"], "63": ["PH"], "64": ["NZ"], "65": ["SG"], "66": ["TH"], "81": ["JP"], "82": ["KR"], "84": ["VN"], "86": ["CN"], "90": ["TR"], "91": ["IN"], "92": ["PK"], "93": ["AF"], "94": ["LK"], "95": ["MM"], "98": ["IR"], "211": ["SS"], "212": ["MA", "EH"], "213": ["DZ"], "216": ["TN"], "218": ["LY"], "220": ["GM"], "221": ["SN"], "222": ["MR"], "223": ["ML"], "224": ["GN"], "225": ["CI"], "226": ["BF"], "227": ["NE"], "228": ["TG"], "229": ["BJ"], "230": ["MU"], "231": ["LR"], "232": ["SL"], "233": ["GH"], "234": ["NG"], "235": ["TD"], "236": ["CF"], "237": ["CM"], "238": ["CV"], "239": ["ST"], "240": ["GQ"], "241": ["GA"], "242": ["CG"], "243": ["CD"], "244": ["AO"], "245": ["GW"], "246": ["IO"], "247": ["AC"], "248": ["SC"], "249": ["SD"], "250": ["RW"], "251": ["ET"], "252": ["SO"], "253": ["DJ"], "254": ["KE"], "255": ["TZ"], "256": ["UG"], "257": ["BI"], "258": ["MZ"], "260": ["ZM"], "261": ["MG"], "262": ["RE", "YT"], "263": ["ZW"], "264": ["NA"], "265": ["MW"], "266": ["LS"], "267": ["BW"], "268": ["SZ"], "269": ["KM"], "290": ["SH", "TA"], "291": ["ER"], "297": ["AW"], "298": ["FO"], "299": ["GL"], "350": ["GI"], "351": ["PT"], "352": ["LU"], "353": ["IE"], "354": ["IS"], "355": ["AL"], "356": ["MT"], "357": ["CY"], "358": ["FI", "AX"], "359": ["BG"], "370": ["LT"], "371": ["LV"], "372": ["EE"], "373": ["MD"], "374": ["AM"], "375": ["BY"], "376": ["AD"], "377": ["MC"], "378": ["SM"], "380": ["UA"], "381": ["RS"], "382": ["ME"], "383": ["XK"], "385": ["HR"], "386": ["SI"], "387": ["BA"], "389": ["MK"], "420": ["CZ"], "421": ["SK"], "423": ["LI"], "500": ["FK"], "501": ["BZ"], "502": ["GT"], "503": ["SV"], "504": ["HN"], "505": ["NI"], "506": ["CR"], "507": ["PA"], "508": ["PM"], "509": ["HT"], "590": ["GP", "BL", "MF"], "591": ["BO"], "592": ["GY"], "593": ["EC"], "594": ["GF"], "595": ["PY"], "596": ["MQ"], "597": ["SR"], "598": ["UY"], "599": ["CW", "BQ"], "670": ["TL"], "672": ["NF"], "673": ["BN"], "674": ["NR"], "675": ["PG"], "676": ["TO"], "677": ["SB"], "678": ["VU"], "679": ["FJ"], "680": ["PW"], "681": ["WF"], "682": ["CK"], "683": ["NU"], "685": ["WS"], "686": ["KI"], "687": ["NC"], "688": ["TV"], "689": ["PF"], "690": ["TK"], "691": ["FM"], "692": ["MH"], "850": ["KP"], "852": ["HK"], "853": ["MO"], "855": ["KH"], "856": ["LA"], "880": ["BD"], "886": ["TW"], "960": ["MV"], "961": ["LB"], "962": ["JO"], "963": ["SY"], "964": ["IQ"], "965": ["KW"], "966": ["SA"], "967": ["YE"], "968": ["OM"], "970": ["PS"], "971": ["AE"], "972": ["IL"], "973": ["BH"], "974": ["QA"], "975": ["BT"], "976": ["MN"], "977": ["NP"], "992": ["TJ"], "993": ["TM"], "994": ["AZ"], "995": ["GE"], "996": ["KG"], "998": ["UZ"] }, "countries": { "AC": ["247", "00", "(?:[01589]\\d|[46])\\d{4}", [5, 6]], "AD": ["376", "00", "(?:1|6\\d)\\d{7}|[135-9]\\d{5}", [6, 8, 9], [["(\\d{3})(\\d{3})", "$1 $2", ["[135-9]"]], ["(\\d{4})(\\d{4})", "$1 $2", ["1"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["6"]]]], "AE": ["971", "00", "(?:[4-7]\\d|9[0-689])\\d{7}|800\\d{2,9}|[2-4679]\\d{7}", [5, 6, 7, 8, 9, 10, 11, 12], [["(\\d{3})(\\d{2,9})", "$1 $2", ["60|8"]], ["(\\d)(\\d{3})(\\d{4})", "$1 $2 $3", ["[236]|[479][2-8]"], "0$1"], ["(\\d{3})(\\d)(\\d{5})", "$1 $2 $3", ["[479]"]], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["5"], "0$1"]], "0"], "AF": ["93", "00", "[2-7]\\d{8}", [9], [["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["[2-7]"], "0$1"]], "0"], "AG": ["1", "011", "(?:268|[58]\\d\\d|900)\\d{7}", [10], 0, "1", 0, "([457]\\d{6})$|1", "268$1", 0, "268"], "AI": ["1", "011", "(?:264|[58]\\d\\d|900)\\d{7}", [10], 0, "1", 0, "([2457]\\d{6})$|1", "264$1", 0, "264"], "AL": ["355", "00", "(?:700\\d\\d|900)\\d{3}|8\\d{5,7}|(?:[2-5]|6\\d)\\d{7}", [6, 7, 8, 9], [["(\\d{3})(\\d{3,4})", "$1 $2", ["80|9"], "0$1"], ["(\\d)(\\d{3})(\\d{4})", "$1 $2 $3", ["4[2-6]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["[2358][2-5]|4"], "0$1"], ["(\\d{3})(\\d{5})", "$1 $2", ["[23578]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["6"], "0$1"]], "0"], "AM": ["374", "00", "(?:[1-489]\\d|55|60|77)\\d{6}", [8], [["(\\d{3})(\\d{2})(\\d{3})", "$1 $2 $3", ["[89]0"], "0 $1"], ["(\\d{3})(\\d{5})", "$1 $2", ["2|3[12]"], "(0$1)"], ["(\\d{2})(\\d{6})", "$1 $2", ["1|47"], "(0$1)"], ["(\\d{2})(\\d{6})", "$1 $2", ["[3-9]"], "0$1"]], "0"], "AO": ["244", "00", "[29]\\d{8}", [9], [["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[29]"]]]], "AR": ["54", "00", "(?:11|[89]\\d\\d)\\d{8}|[2368]\\d{9}", [10, 11], [["(\\d{4})(\\d{2})(\\d{4})", "$1 $2-$3", ["2(?:2[024-9]|3[0-59]|47|6[245]|9[02-8])|3(?:3[28]|4[03-9]|5[2-46-8]|7[1-578]|8[2-9])", "2(?:[23]02|6(?:[25]|4[6-8])|9(?:[02356]|4[02568]|72|8[23]))|3(?:3[28]|4(?:[04679]|3[5-8]|5[4-68]|8[2379])|5(?:[2467]|3[237]|8[2-5])|7[1-578]|8(?:[2469]|3[2578]|5[4-8]|7[36-8]|8[5-8]))|2(?:2[24-9]|3[1-59]|47)", "2(?:[23]02|6(?:[25]|4(?:64|[78]))|9(?:[02356]|4(?:[0268]|5[2-6])|72|8[23]))|3(?:3[28]|4(?:[04679]|3[78]|5(?:4[46]|8)|8[2379])|5(?:[2467]|3[237]|8[23])|7[1-578]|8(?:[2469]|3[278]|5[56][46]|86[3-6]))|2(?:2[24-9]|3[1-59]|47)|38(?:[58][78]|7[378])|3(?:4[35][56]|58[45]|8(?:[38]5|54|76))[4-6]", "2(?:[23]02|6(?:[25]|4(?:64|[78]))|9(?:[02356]|4(?:[0268]|5[2-6])|72|8[23]))|3(?:3[28]|4(?:[04679]|3(?:5(?:4[0-25689]|[56])|[78])|58|8[2379])|5(?:[2467]|3[237]|8(?:[23]|4(?:[45]|60)|5(?:4[0-39]|5|64)))|7[1-578]|8(?:[2469]|3[278]|54(?:4|5[13-7]|6[89])|86[3-6]))|2(?:2[24-9]|3[1-59]|47)|38(?:[58][78]|7[378])|3(?:454|85[56])[46]|3(?:4(?:36|5[56])|8(?:[38]5|76))[4-6]"], "0$1", 1], ["(\\d{2})(\\d{4})(\\d{4})", "$1 $2-$3", ["1"], "0$1", 1], ["(\\d{3})(\\d{3})(\\d{4})", "$1-$2-$3", ["[68]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2-$3", ["[23]"], "0$1", 1], ["(\\d)(\\d{4})(\\d{2})(\\d{4})", "$2 15-$3-$4", ["9(?:2[2-469]|3[3-578])", "9(?:2(?:2[024-9]|3[0-59]|47|6[245]|9[02-8])|3(?:3[28]|4[03-9]|5[2-46-8]|7[1-578]|8[2-9]))", "9(?:2(?:[23]02|6(?:[25]|4[6-8])|9(?:[02356]|4[02568]|72|8[23]))|3(?:3[28]|4(?:[04679]|3[5-8]|5[4-68]|8[2379])|5(?:[2467]|3[237]|8[2-5])|7[1-578]|8(?:[2469]|3[2578]|5[4-8]|7[36-8]|8[5-8])))|92(?:2[24-9]|3[1-59]|47)", "9(?:2(?:[23]02|6(?:[25]|4(?:64|[78]))|9(?:[02356]|4(?:[0268]|5[2-6])|72|8[23]))|3(?:3[28]|4(?:[04679]|3[78]|5(?:4[46]|8)|8[2379])|5(?:[2467]|3[237]|8[23])|7[1-578]|8(?:[2469]|3[278]|5(?:[56][46]|[78])|7[378]|8(?:6[3-6]|[78]))))|92(?:2[24-9]|3[1-59]|47)|93(?:4[35][56]|58[45]|8(?:[38]5|54|76))[4-6]", "9(?:2(?:[23]02|6(?:[25]|4(?:64|[78]))|9(?:[02356]|4(?:[0268]|5[2-6])|72|8[23]))|3(?:3[28]|4(?:[04679]|3(?:5(?:4[0-25689]|[56])|[78])|5(?:4[46]|8)|8[2379])|5(?:[2467]|3[237]|8(?:[23]|4(?:[45]|60)|5(?:4[0-39]|5|64)))|7[1-578]|8(?:[2469]|3[278]|5(?:4(?:4|5[13-7]|6[89])|[56][46]|[78])|7[378]|8(?:6[3-6]|[78]))))|92(?:2[24-9]|3[1-59]|47)|93(?:4(?:36|5[56])|8(?:[38]5|76))[4-6]"], "0$1", 0, "$1 $2 $3-$4"], ["(\\d)(\\d{2})(\\d{4})(\\d{4})", "$2 15-$3-$4", ["91"], "0$1", 0, "$1 $2 $3-$4"], ["(\\d{3})(\\d{3})(\\d{5})", "$1-$2-$3", ["8"], "0$1"], ["(\\d)(\\d{3})(\\d{3})(\\d{4})", "$2 15-$3-$4", ["9"], "0$1", 0, "$1 $2 $3-$4"]], "0", 0, "0?(?:(11|2(?:2(?:02?|[13]|2[13-79]|4[1-6]|5[2457]|6[124-8]|7[1-4]|8[13-6]|9[1267])|3(?:02?|1[467]|2[03-6]|3[13-8]|[49][2-6]|5[2-8]|[67])|4(?:7[3-578]|9)|6(?:[0136]|2[24-6]|4[6-8]?|5[15-8])|80|9(?:0[1-3]|[19]|2\\d|3[1-6]|4[02568]?|5[2-4]|6[2-46]|72?|8[23]?))|3(?:3(?:2[79]|6|8[2578])|4(?:0[0-24-9]|[12]|3[5-8]?|4[24-7]|5[4-68]?|6[02-9]|7[126]|8[2379]?|9[1-36-8])|5(?:1|2[1245]|3[237]?|4[1-46-9]|6[2-4]|7[1-6]|8[2-5]?)|6[24]|7(?:[069]|1[1568]|2[15]|3[145]|4[13]|5[14-8]|7[2-57]|8[126])|8(?:[01]|2[15-7]|3[2578]?|4[13-6]|5[4-8]?|6[1-357-9]|7[36-8]?|8[5-8]?|9[124])))15)?", "9$1"], "AS": ["1", "011", "(?:[58]\\d\\d|684|900)\\d{7}", [10], 0, "1", 0, "([267]\\d{6})$|1", "684$1", 0, "684"], "AT": ["43", "00", "1\\d{3,12}|2\\d{6,12}|43(?:(?:0\\d|5[02-9])\\d{3,9}|2\\d{4,5}|[3467]\\d{4}|8\\d{4,6}|9\\d{4,7})|5\\d{4,12}|8\\d{7,12}|9\\d{8,12}|(?:[367]\\d|4[0-24-9])\\d{4,11}", [4, 5, 6, 7, 8, 9, 10, 11, 12, 13], [["(\\d)(\\d{3,12})", "$1 $2", ["1(?:11|[2-9])"], "0$1"], ["(\\d{3})(\\d{2})", "$1 $2", ["517"], "0$1"], ["(\\d{2})(\\d{3,5})", "$1 $2", ["5[079]"], "0$1"], ["(\\d{3})(\\d{3,10})", "$1 $2", ["(?:31|4)6|51|6(?:48|5[0-3579]|[6-9])|7(?:20|32|8)|[89]", "(?:31|4)6|51|6(?:485|5[0-3579]|[6-9])|7(?:20|32|8)|[89]"], "0$1"], ["(\\d{4})(\\d{3,9})", "$1 $2", ["[2-467]|5[2-6]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["5"], "0$1"], ["(\\d{2})(\\d{4})(\\d{4,7})", "$1 $2 $3", ["5"], "0$1"]], "0"], "AU": ["61", "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011", "1(?:[0-79]\\d{7}(?:\\d(?:\\d{2})?)?|8[0-24-9]\\d{7})|[2-478]\\d{8}|1\\d{4,7}", [5, 6, 7, 8, 9, 10, 12], [["(\\d{2})(\\d{3,4})", "$1 $2", ["16"], "0$1"], ["(\\d{2})(\\d{3})(\\d{2,4})", "$1 $2 $3", ["16"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["14|4"], "0$1"], ["(\\d)(\\d{4})(\\d{4})", "$1 $2 $3", ["[2378]"], "(0$1)"], ["(\\d{4})(\\d{3})(\\d{3})", "$1 $2 $3", ["1(?:30|[89])"]]], "0", 0, "(183[12])|0", 0, 0, 0, [["(?:(?:241|349)0\\d\\d|8(?:51(?:0(?:0[03-9]|[12479]\\d|3[2-9]|5[0-8]|6[1-9]|8[0-7])|1(?:[0235689]\\d|1[0-69]|4[0-589]|7[0-47-9])|2(?:0[0-79]|[18][13579]|2[14-9]|3[0-46-9]|[4-6]\\d|7[89]|9[0-4])|[34]\\d\\d)|91(?:(?:[0-58]\\d|6[0135-9])\\d|7(?:0[0-24-9]|[1-9]\\d)|9(?:[0-46-9]\\d|5[0-79]))))\\d{3}|(?:2(?:[0-26-9]\\d|3[0-8]|4[02-9]|5[0135-9])|3(?:[0-3589]\\d|4[0-578]|6[1-9]|7[0-35-9])|7(?:[013-57-9]\\d|2[0-8])|8(?:55|6[0-8]|[78]\\d|9[02-9]))\\d{6}", [9]], ["4(?:79[01]|83[0-36-9]|95[0-3])\\d{5}|4(?:[0-36]\\d|4[047-9]|[58][0-24-9]|7[02-8]|9[0-47-9])\\d{6}", [9]], ["180(?:0\\d{3}|2)\\d{3}", [7, 10]], ["190[0-26]\\d{6}", [10]], 0, 0, 0, ["163\\d{2,6}", [5, 6, 7, 8, 9]], ["14(?:5(?:1[0458]|[23][458])|71\\d)\\d{4}", [9]], ["13(?:00\\d{6}(?:\\d{2})?|45[0-4]\\d{3})|13\\d{4}", [6, 8, 10, 12]]], "0011"], "AW": ["297", "00", "(?:[25-79]\\d\\d|800)\\d{4}", [7], [["(\\d{3})(\\d{4})", "$1 $2", ["[25-9]"]]]], "AX": ["358", "00|99(?:[01469]|5(?:[14]1|3[23]|5[59]|77|88|9[09]))", "2\\d{4,9}|35\\d{4,5}|(?:60\\d\\d|800)\\d{4,6}|7\\d{5,11}|(?:[14]\\d|3[0-46-9]|50)\\d{4,8}", [5, 6, 7, 8, 9, 10, 11, 12], 0, "0", 0, 0, 0, 0, "18", 0, "00"], "AZ": ["994", "00", "365\\d{6}|(?:[124579]\\d|60|88)\\d{7}", [9], [["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["90"], "0$1"], ["(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["1[28]|2|365|46", "1[28]|2|365[45]|46", "1[28]|2|365(?:4|5[02])|46"], "(0$1)"], ["(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[13-9]"], "0$1"]], "0"], "BA": ["387", "00", "6\\d{8}|(?:[35689]\\d|49|70)\\d{6}", [8, 9], [["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["6[1-3]|[7-9]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3})", "$1 $2-$3", ["[3-5]|6[56]"], "0$1"], ["(\\d{2})(\\d{2})(\\d{2})(\\d{3})", "$1 $2 $3 $4", ["6"], "0$1"]], "0"], "BB": ["1", "011", "(?:246|[58]\\d\\d|900)\\d{7}", [10], 0, "1", 0, "([2-9]\\d{6})$|1", "246$1", 0, "246"], "BD": ["880", "00", "[1-469]\\d{9}|8[0-79]\\d{7,8}|[2-79]\\d{8}|[2-9]\\d{7}|[3-9]\\d{6}|[57-9]\\d{5}", [6, 7, 8, 9, 10], [["(\\d{2})(\\d{4,6})", "$1-$2", ["31[5-8]|[459]1"], "0$1"], ["(\\d{3})(\\d{3,7})", "$1-$2", ["3(?:[67]|8[013-9])|4(?:6[168]|7|[89][18])|5(?:6[128]|9)|6(?:[15]|28|4[14])|7[2-589]|8(?:0[014-9]|[12])|9[358]|(?:3[2-5]|4[235]|5[2-578]|6[0389]|76|8[3-7]|9[24])1|(?:44|66)[01346-9]"], "0$1"], ["(\\d{4})(\\d{3,6})", "$1-$2", ["[13-9]|2[23]"], "0$1"], ["(\\d)(\\d{7,8})", "$1-$2", ["2"], "0$1"]], "0"], "BE": ["32", "00", "4\\d{8}|[1-9]\\d{7}", [8, 9], [["(\\d{3})(\\d{2})(\\d{3})", "$1 $2 $3", ["(?:80|9)0"], "0$1"], ["(\\d)(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[239]|4[23]"], "0$1"], ["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[15-8]"], "0$1"], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["4"], "0$1"]], "0"], "BF": ["226", "00", "(?:[025-7]\\d|44)\\d{6}", [8], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[024-7]"]]]], "BG": ["359", "00", "00800\\d{7}|[2-7]\\d{6,7}|[89]\\d{6,8}|2\\d{5}", [6, 7, 8, 9, 12], [["(\\d)(\\d)(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["2"], "0$1"], ["(\\d{3})(\\d{4})", "$1 $2", ["43[1-6]|70[1-9]"], "0$1"], ["(\\d)(\\d{3})(\\d{3,4})", "$1 $2 $3", ["2"], "0$1"], ["(\\d{2})(\\d{3})(\\d{2,3})", "$1 $2 $3", ["[356]|4[124-7]|7[1-9]|8[1-6]|9[1-7]"], "0$1"], ["(\\d{3})(\\d{2})(\\d{3})", "$1 $2 $3", ["(?:70|8)0"], "0$1"], ["(\\d{3})(\\d{3})(\\d{2})", "$1 $2 $3", ["43[1-7]|7"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[48]|9[08]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["9"], "0$1"]], "0"], "BH": ["973", "00", "[136-9]\\d{7}", [8], [["(\\d{4})(\\d{4})", "$1 $2", ["[13679]|8[02-4679]"]]]], "BI": ["257", "00", "(?:[267]\\d|31)\\d{6}", [8], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[2367]"]]]], "BJ": ["229", "00", "(?:01\\d|8)\\d{7}", [8, 10], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["8"]], ["(\\d{2})(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4 $5", ["0"]]]], "BL": ["590", "00", "(?:590\\d|7090)\\d{5}|(?:69|80|9\\d)\\d{7}", [9], 0, "0", 0, 0, 0, 0, 0, [["590(?:2[7-9]|3[3-7]|5[12]|87)\\d{4}"], ["(?:69(?:0\\d\\d|1(?:2[2-9]|3[0-5])|4(?:0[89]|1[2-6]|9\\d)|6(?:1[016-9]|5[0-4]|[67]\\d))|7090[0-4])\\d{4}"], ["80[0-5]\\d{6}"], 0, 0, 0, 0, 0, ["9(?:(?:39[5-7]|76[018])\\d|475[0-6])\\d{4}"]]], "BM": ["1", "011", "(?:441|[58]\\d\\d|900)\\d{7}", [10], 0, "1", 0, "([2-9]\\d{6})$|1", "441$1", 0, "441"], "BN": ["673", "00", "[2-578]\\d{6}", [7], [["(\\d{3})(\\d{4})", "$1 $2", ["[2-578]"]]]], "BO": ["591", "00(?:1\\d)?", "8001\\d{5}|(?:[2-467]\\d|50)\\d{6}", [8, 9], [["(\\d)(\\d{7})", "$1 $2", ["[235]|4[46]"]], ["(\\d{8})", "$1", ["[67]"]], ["(\\d{3})(\\d{2})(\\d{4})", "$1 $2 $3", ["8"]]], "0", 0, "0(1\\d)?"], "BQ": ["599", "00", "(?:[34]1|7\\d)\\d{5}", [7], 0, 0, 0, 0, 0, 0, "[347]"], "BR": ["55", "00(?:1[245]|2[1-35]|31|4[13]|[56]5|99)", "[1-467]\\d{9,10}|55[0-46-9]\\d{8}|[34]\\d{7}|55\\d{7,8}|(?:5[0-46-9]|[89]\\d)\\d{7,9}", [8, 9, 10, 11], [["(\\d{4})(\\d{4})", "$1-$2", ["300|4(?:0[02]|37|86)", "300|4(?:0(?:0|20)|370|864)"]], ["(\\d{3})(\\d{2,3})(\\d{4})", "$1 $2 $3", ["(?:[358]|90)0"], "0$1"], ["(\\d{2})(\\d{4})(\\d{4})", "$1 $2-$3", ["(?:[14689][1-9]|2[12478]|3[1-578]|5[13-5]|7[13-579])[2-57]"], "($1)"], ["(\\d{2})(\\d{5})(\\d{4})", "$1 $2-$3", ["[16][1-9]|[2-57-9]"], "($1)"]], "0", 0, "(?:0|90)(?:(1[245]|2[1-35]|31|4[13]|[56]5|99)(\\d{10,11}))?", "$2"], "BS": ["1", "011", "(?:242|[58]\\d\\d|900)\\d{7}", [10], 0, "1", 0, "([3-8]\\d{6})$|1", "242$1", 0, "242"], "BT": ["975", "00", "[178]\\d{7}|[2-8]\\d{6}", [7, 8], [["(\\d)(\\d{3})(\\d{3})", "$1 $2 $3", ["[2-6]|7[246]|8[2-4]"]], ["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["1[67]|[78]"]]]], "BW": ["267", "00", "(?:0800|(?:[37]|800)\\d)\\d{6}|(?:[2-6]\\d|90)\\d{5}", [7, 8, 10], [["(\\d{2})(\\d{5})", "$1 $2", ["90"]], ["(\\d{3})(\\d{4})", "$1 $2", ["[24-6]|3[15-9]"]], ["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["[37]"]], ["(\\d{4})(\\d{3})(\\d{3})", "$1 $2 $3", ["0"]], ["(\\d{3})(\\d{4})(\\d{3})", "$1 $2 $3", ["8"]]]], "BY": ["375", "810", "(?:[12]\\d|33|44|902)\\d{7}|8(?:0[0-79]\\d{5,7}|[1-7]\\d{9})|8(?:1[0-489]|[5-79]\\d)\\d{7}|8[1-79]\\d{6,7}|8[0-79]\\d{5}|8\\d{5}", [6, 7, 8, 9, 10, 11], [["(\\d{3})(\\d{3})", "$1 $2", ["800"], "8 $1"], ["(\\d{3})(\\d{2})(\\d{2,4})", "$1 $2 $3", ["800"], "8 $1"], ["(\\d{4})(\\d{2})(\\d{3})", "$1 $2-$3", ["1(?:5[169]|6[3-5]|7[179])|2(?:1[35]|2[34]|3[3-5])", "1(?:5[169]|6(?:3[1-3]|4|5[125])|7(?:1[3-9]|7[0-24-6]|9[2-7]))|2(?:1[35]|2[34]|3[3-5])"], "8 0$1"], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2-$3-$4", ["1(?:[56]|7[467])|2[1-3]"], "8 0$1"], ["(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1 $2-$3-$4", ["[1-4]"], "8 0$1"], ["(\\d{3})(\\d{3,4})(\\d{4})", "$1 $2 $3", ["[89]"], "8 $1"]], "8", 0, "0|80?", 0, 0, 0, 0, "8~10"], "BZ": ["501", "00", "(?:0800\\d|[2-8])\\d{6}", [7, 11], [["(\\d{3})(\\d{4})", "$1-$2", ["[2-8]"]], ["(\\d)(\\d{3})(\\d{4})(\\d{3})", "$1-$2-$3-$4", ["0"]]]], "CA": ["1", "011", "[2-9]\\d{9}|3\\d{6}", [7, 10], 0, "1", 0, 0, 0, 0, 0, [["(?:2(?:04|[23]6|[48]9|5[07]|63)|3(?:06|43|54|6[578]|82)|4(?:03|1[68]|[26]8|3[178]|50|74)|5(?:06|1[49]|48|79|8[147])|6(?:04|[18]3|39|47|72)|7(?:0[59]|42|53|78|8[02])|8(?:[06]7|19|25|7[39])|9(?:0[25]|42))[2-9]\\d{6}", [10]], ["", [10]], ["8(?:00|33|44|55|66|77|88)[2-9]\\d{6}", [10]], ["900[2-9]\\d{6}", [10]], ["52(?:3(?:[2-46-9][02-9]\\d|5(?:[02-46-9]\\d|5[0-46-9]))|4(?:[2-478][02-9]\\d|5(?:[034]\\d|2[024-9]|5[0-46-9])|6(?:0[1-9]|[2-9]\\d)|9(?:[05-9]\\d|2[0-5]|49)))\\d{4}|52[34][2-9]1[02-9]\\d{4}|(?:5(?:2[125-9]|3[23]|44|66|77|88)|6(?:22|33))[2-9]\\d{6}", [10]], 0, ["310\\d{4}", [7]], 0, ["600[2-9]\\d{6}", [10]]]], "CC": ["61", "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011", "1(?:[0-79]\\d{8}(?:\\d{2})?|8[0-24-9]\\d{7})|[148]\\d{8}|1\\d{5,7}", [6, 7, 8, 9, 10, 12], 0, "0", 0, "([59]\\d{7})$|0", "8$1", 0, 0, [["8(?:51(?:0(?:02|31|60|89)|1(?:18|76)|223)|91(?:0(?:1[0-2]|29)|1(?:[28]2|50|79)|2(?:10|64)|3(?:[06]8|22)|4[29]8|62\\d|70[23]|959))\\d{3}", [9]], ["4(?:79[01]|83[0-36-9]|95[0-3])\\d{5}|4(?:[0-36]\\d|4[047-9]|[58][0-24-9]|7[02-8]|9[0-47-9])\\d{6}", [9]], ["180(?:0\\d{3}|2)\\d{3}", [7, 10]], ["190[0-26]\\d{6}", [10]], 0, 0, 0, 0, ["14(?:5(?:1[0458]|[23][458])|71\\d)\\d{4}", [9]], ["13(?:00\\d{6}(?:\\d{2})?|45[0-4]\\d{3})|13\\d{4}", [6, 8, 10, 12]]], "0011"], "CD": ["243", "00", "(?:(?:[189]|5\\d)\\d|2)\\d{7}|[1-68]\\d{6}", [7, 8, 9, 10], [["(\\d{2})(\\d{2})(\\d{3})", "$1 $2 $3", ["88"], "0$1"], ["(\\d{2})(\\d{5})", "$1 $2", ["[1-6]"], "0$1"], ["(\\d{2})(\\d{2})(\\d{4})", "$1 $2 $3", ["2"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["1"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[89]"], "0$1"], ["(\\d{2})(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3 $4", ["5"], "0$1"]], "0"], "CF": ["236", "00", "(?:[27]\\d{3}|8776)\\d{4}", [8], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[278]"]]]], "CG": ["242", "00", "222\\d{6}|(?:0\\d|80)\\d{7}", [9], [["(\\d)(\\d{4})(\\d{4})", "$1 $2 $3", ["8"]], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["[02]"]]]], "CH": ["41", "00", "8\\d{11}|[2-9]\\d{8}", [9, 12], [["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["8[047]|90"], "0$1"], ["(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[2-79]|81"], "0$1"], ["(\\d{3})(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3 $4 $5", ["8"], "0$1"]], "0"], "CI": ["225", "00", "[02]\\d{9}", [10], [["(\\d{2})(\\d{2})(\\d)(\\d{5})", "$1 $2 $3 $4", ["2"]], ["(\\d{2})(\\d{2})(\\d{2})(\\d{4})", "$1 $2 $3 $4", ["0"]]]], "CK": ["682", "00", "[2-578]\\d{4}", [5], [["(\\d{2})(\\d{3})", "$1 $2", ["[2-578]"]]]], "CL": ["56", "(?:0|1(?:1[0-69]|2[02-5]|5[13-58]|69|7[0167]|8[018]))0", "12300\\d{6}|6\\d{9,10}|[2-9]\\d{8}", [9, 10, 11], [["(\\d{5})(\\d{4})", "$1 $2", ["219", "2196"], "($1)"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["60|809"]], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["44"]], ["(\\d)(\\d{4})(\\d{4})", "$1 $2 $3", ["2[1-36]"], "($1)"], ["(\\d)(\\d{4})(\\d{4})", "$1 $2 $3", ["9(?:10|[2-9])"]], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["3[2-5]|[47]|5[1-3578]|6[13-57]|8(?:0[1-8]|[1-9])"], "($1)"], ["(\\d{3})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["60|8"]], ["(\\d{4})(\\d{3})(\\d{4})", "$1 $2 $3", ["1"]], ["(\\d{3})(\\d{3})(\\d{2})(\\d{3})", "$1 $2 $3 $4", ["60"]]]], "CM": ["237", "00", "[26]\\d{8}|88\\d{6,7}", [8, 9], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["88"]], ["(\\d)(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4 $5", ["[26]|88"]]]], "CN": ["86", "00|1(?:[12]\\d|79)\\d\\d00", "(?:(?:1[03-689]|2\\d)\\d\\d|6)\\d{8}|1\\d{10}|[126]\\d{6}(?:\\d(?:\\d{2})?)?|86\\d{5,6}|(?:[3-579]\\d|8[0-57-9])\\d{5,9}", [7, 8, 9, 10, 11, 12], [["(\\d{2})(\\d{5,6})", "$1 $2", ["(?:10|2[0-57-9])[19]|3(?:[157]|35|49|9[1-68])|4(?:1[124-9]|2[179]|6[47-9]|7|8[23])|5(?:[1357]|2[37]|4[36]|6[1-46]|80)|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:07|1[236-8]|2[5-7]|[37]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|3|4[13]|5[1-5]|7[0-79]|9[0-35-9])|(?:4[35]|59|85)[1-9]", "(?:10|2[0-57-9])(?:1[02]|9[56])|8078|(?:3(?:[157]\\d|35|49|9[1-68])|4(?:1[124-9]|2[179]|[35][1-9]|6[47-9]|7\\d|8[23])|5(?:[1357]\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\d|5[1-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|3\\d|4[13]|5[1-5]|7[0-79]|9[0-35-9]))1", "10(?:1(?:0|23)|9[56])|2[0-57-9](?:1(?:00|23)|9[56])|80781|(?:3(?:[157]\\d|35|49|9[1-68])|4(?:1[124-9]|2[179]|[35][1-9]|6[47-9]|7\\d|8[23])|5(?:[1357]\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\d|5[1-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|3\\d|4[13]|5[1-5]|7[0-79]|9[0-35-9]))12", "10(?:1(?:0|23)|9[56])|2[0-57-9](?:1(?:00|23)|9[56])|807812|(?:3(?:[157]\\d|35|49|9[1-68])|4(?:1[124-9]|2[179]|[35][1-9]|6[47-9]|7\\d|8[23])|5(?:[1357]\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\d|5[1-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|3\\d|4[13]|5[1-5]|7[0-79]|9[0-35-9]))123", "10(?:1(?:0|23)|9[56])|2[0-57-9](?:1(?:00|23)|9[56])|(?:3(?:[157]\\d|35|49|9[1-68])|4(?:1[124-9]|2[179]|[35][1-9]|6[47-9]|7\\d|8[23])|5(?:[1357]\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:078|1[236-8]|2[5-7]|[37]\\d|5[1-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|3\\d|4[13]|5[1-5]|7[0-79]|9[0-35-9]))123"], "0$1"], ["(\\d{3})(\\d{5,6})", "$1 $2", ["3(?:[157]|35|49|9[1-68])|4(?:[17]|2[179]|6[47-9]|8[23])|5(?:[1357]|2[37]|4[36]|6[1-46]|80)|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|[379]|4[13]|5[1-5])|(?:4[35]|59|85)[1-9]", "(?:3(?:[157]\\d|35|49|9[1-68])|4(?:[17]\\d|2[179]|[35][1-9]|6[47-9]|8[23])|5(?:[1357]\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\d|5[1-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|[379]\\d|4[13]|5[1-5]))[19]", "85[23](?:10|95)|(?:3(?:[157]\\d|35|49|9[1-68])|4(?:[17]\\d|2[179]|[35][1-9]|6[47-9]|8[23])|5(?:[1357]\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\d|5[14-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|[379]\\d|4[13]|5[1-5]))(?:10|9[56])", "85[23](?:100|95)|(?:3(?:[157]\\d|35|49|9[1-68])|4(?:[17]\\d|2[179]|[35][1-9]|6[47-9]|8[23])|5(?:[1357]\\d|2[37]|4[36]|6[1-46]|80|9[1-9])|6(?:3[1-5]|6[0238]|9[12])|7(?:01|[1579]\\d|2[248]|3[014-9]|4[3-6]|6[023689])|8(?:1[236-8]|2[5-7]|[37]\\d|5[14-9]|8[36-8]|9[1-8])|9(?:0[1-3689]|1[1-79]|[379]\\d|4[13]|5[1-5]))(?:100|9[56])"], "0$1"], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["(?:4|80)0"]], ["(\\d{2})(\\d{4})(\\d{4})", "$1 $2 $3", ["10|2(?:[02-57-9]|1[1-9])", "10|2(?:[02-57-9]|1[1-9])", "10[0-79]|2(?:[02-57-9]|1[1-79])|(?:10|21)8(?:0[1-9]|[1-9])"], "0$1", 1], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["3(?:[3-59]|7[02-68])|4(?:[26-8]|3[3-9]|5[2-9])|5(?:3[03-9]|[468]|7[028]|9[2-46-9])|6|7(?:[0-247]|3[04-9]|5[0-4689]|6[2368])|8(?:[1-358]|9[1-7])|9(?:[013479]|5[1-5])|(?:[34]1|55|79|87)[02-9]"], "0$1", 1], ["(\\d{3})(\\d{7,8})", "$1 $2", ["9"]], ["(\\d{4})(\\d{3})(\\d{4})", "$1 $2 $3", ["80"], "0$1", 1], ["(\\d{3})(\\d{4})(\\d{4})", "$1 $2 $3", ["[3-578]"], "0$1", 1], ["(\\d{3})(\\d{4})(\\d{4})", "$1 $2 $3", ["1[3-9]"]], ["(\\d{2})(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3 $4", ["[12]"], "0$1", 1]], "0", 0, "(1(?:[12]\\d|79)\\d\\d)|0", 0, 0, 0, 0, "00"], "CO": ["57", "00(?:4(?:[14]4|56)|[579])", "(?:46|60\\d\\d)\\d{6}|(?:1\\d|[39])\\d{9}", [8, 10, 11], [["(\\d{4})(\\d{4})", "$1 $2", ["46"]], ["(\\d{3})(\\d{7})", "$1 $2", ["6|90"], "($1)"], ["(\\d{3})(\\d{7})", "$1 $2", ["3[0-357]|9[14]"]], ["(\\d)(\\d{3})(\\d{7})", "$1-$2-$3", ["1"], "0$1", 0, "$1 $2 $3"]], "0", 0, "0([3579]|4(?:[14]4|56))?"], "CR": ["506", "00", "(?:8\\d|90)\\d{8}|(?:[24-8]\\d{3}|3005)\\d{4}", [8, 10], [["(\\d{4})(\\d{4})", "$1 $2", ["[2-7]|8[3-9]"]], ["(\\d{3})(\\d{3})(\\d{4})", "$1-$2-$3", ["[89]"]]], 0, 0, "(19(?:0[0-2468]|1[09]|20|66|77|99))"], "CU": ["53", "119", "(?:[2-7]|8\\d\\d)\\d{7}|[2-47]\\d{6}|[34]\\d{5}", [6, 7, 8, 10], [["(\\d{2})(\\d{4,6})", "$1 $2", ["2[1-4]|[34]"], "(0$1)"], ["(\\d)(\\d{6,7})", "$1 $2", ["7"], "(0$1)"], ["(\\d)(\\d{7})", "$1 $2", ["[56]"], "0$1"], ["(\\d{3})(\\d{7})", "$1 $2", ["8"], "0$1"]], "0"], "CV": ["238", "0", "(?:[2-59]\\d\\d|800)\\d{4}", [7], [["(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3", ["[2-589]"]]]], "CW": ["599", "00", "(?:[34]1|60|(?:7|9\\d)\\d)\\d{5}", [7, 8], [["(\\d{3})(\\d{4})", "$1 $2", ["[3467]"]], ["(\\d)(\\d{3})(\\d{4})", "$1 $2 $3", ["9[4-8]"]]], 0, 0, 0, 0, 0, "[69]"], "CX": ["61", "001[14-689]|14(?:1[14]|34|4[17]|[56]6|7[47]|88)0011", "1(?:[0-79]\\d{8}(?:\\d{2})?|8[0-24-9]\\d{7})|[148]\\d{8}|1\\d{5,7}", [6, 7, 8, 9, 10, 12], 0, "0", 0, "([59]\\d{7})$|0", "8$1", 0, 0, [["8(?:51(?:0(?:01|30|59|88)|1(?:17|46|75)|2(?:22|35))|91(?:00[6-9]|1(?:[28]1|49|78)|2(?:09|63)|3(?:12|26|75)|4(?:56|97)|64\\d|7(?:0[01]|1[0-2])|958))\\d{3}", [9]], ["4(?:79[01]|83[0-36-9]|95[0-3])\\d{5}|4(?:[0-36]\\d|4[047-9]|[58][0-24-9]|7[02-8]|9[0-47-9])\\d{6}", [9]], ["180(?:0\\d{3}|2)\\d{3}", [7, 10]], ["190[0-26]\\d{6}", [10]], 0, 0, 0, 0, ["14(?:5(?:1[0458]|[23][458])|71\\d)\\d{4}", [9]], ["13(?:00\\d{6}(?:\\d{2})?|45[0-4]\\d{3})|13\\d{4}", [6, 8, 10, 12]]], "0011"], "CY": ["357", "00", "(?:[279]\\d|[58]0)\\d{6}", [8], [["(\\d{2})(\\d{6})", "$1 $2", ["[257-9]"]]]], "CZ": ["420", "00", "(?:[2-578]\\d|60)\\d{7}|9\\d{8,11}", [9, 10, 11, 12], [["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[2-8]|9[015-7]"]], ["(\\d{2})(\\d{3})(\\d{3})(\\d{2})", "$1 $2 $3 $4", ["96"]], ["(\\d{2})(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3 $4", ["9"]], ["(\\d{3})(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3 $4", ["9"]]]], "DE": ["49", "00", "[2579]\\d{5,14}|49(?:[34]0|69|8\\d)\\d\\d?|49(?:37|49|60|7[089]|9\\d)\\d{1,3}|49(?:2[024-9]|3[2-689]|7[1-7])\\d{1,8}|(?:1|[368]\\d|4[0-8])\\d{3,13}|49(?:[015]\\d|2[13]|31|[46][1-8])\\d{1,9}", [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], [["(\\d{2})(\\d{3,13})", "$1 $2", ["3[02]|40|[68]9"], "0$1"], ["(\\d{3})(\\d{3,12})", "$1 $2", ["2(?:0[1-389]|1[124]|2[18]|3[14])|3(?:[35-9][15]|4[015])|906|(?:2[4-9]|4[2-9]|[579][1-9]|[68][1-8])1", "2(?:0[1-389]|12[0-8])|3(?:[35-9][15]|4[015])|906|2(?:[13][14]|2[18])|(?:2[4-9]|4[2-9]|[579][1-9]|[68][1-8])1"], "0$1"], ["(\\d{4})(\\d{2,11})", "$1 $2", ["[24-6]|3(?:[3569][02-46-9]|4[2-4679]|7[2-467]|8[2-46-8])|70[2-8]|8(?:0[2-9]|[1-8])|90[7-9]|[79][1-9]", "[24-6]|3(?:3(?:0[1-467]|2[127-9]|3[124578]|7[1257-9]|8[1256]|9[145])|4(?:2[135]|4[13578]|9[1346])|5(?:0[14]|2[1-3589]|6[1-4]|7[13468]|8[13568])|6(?:2[1-489]|3[124-6]|6[13]|7[12579]|8[1-356]|9[135])|7(?:2[1-7]|4[145]|6[1-5]|7[1-4])|8(?:21|3[1468]|6|7[1467]|8[136])|9(?:0[12479]|2[1358]|4[134679]|6[1-9]|7[136]|8[147]|9[1468]))|70[2-8]|8(?:0[2-9]|[1-8])|90[7-9]|[79][1-9]|3[68]4[1347]|3(?:47|60)[1356]|3(?:3[46]|46|5[49])[1246]|3[4579]3[1357]"], "0$1"], ["(\\d{3})(\\d{4})", "$1 $2", ["138"], "0$1"], ["(\\d{5})(\\d{2,10})", "$1 $2", ["3"], "0$1"], ["(\\d{3})(\\d{5,11})", "$1 $2", ["181"], "0$1"], ["(\\d{3})(\\d)(\\d{4,10})", "$1 $2 $3", ["1(?:3|80)|9"], "0$1"], ["(\\d{3})(\\d{7,8})", "$1 $2", ["1[67]"], "0$1"], ["(\\d{3})(\\d{7,12})", "$1 $2", ["8"], "0$1"], ["(\\d{5})(\\d{6})", "$1 $2", ["185", "1850", "18500"], "0$1"], ["(\\d{3})(\\d{4})(\\d{4})", "$1 $2 $3", ["7"], "0$1"], ["(\\d{4})(\\d{7})", "$1 $2", ["18[68]"], "0$1"], ["(\\d{4})(\\d{7})", "$1 $2", ["15[1279]"], "0$1"], ["(\\d{5})(\\d{6})", "$1 $2", ["15[03568]", "15(?:[0568]|3[13])"], "0$1"], ["(\\d{3})(\\d{8})", "$1 $2", ["18"], "0$1"], ["(\\d{3})(\\d{2})(\\d{7,8})", "$1 $2 $3", ["1(?:6[023]|7)"], "0$1"], ["(\\d{4})(\\d{2})(\\d{7})", "$1 $2 $3", ["15[279]"], "0$1"], ["(\\d{3})(\\d{2})(\\d{8})", "$1 $2 $3", ["15"], "0$1"]], "0"], "DJ": ["253", "00", "(?:2\\d|77)\\d{6}", [8], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[27]"]]]], "DK": ["45", "00", "[2-9]\\d{7}", [8], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[2-9]"]]]], "DM": ["1", "011", "(?:[58]\\d\\d|767|900)\\d{7}", [10], 0, "1", 0, "([2-7]\\d{6})$|1", "767$1", 0, "767"], "DO": ["1", "011", "(?:[58]\\d\\d|900)\\d{7}", [10], 0, "1", 0, 0, 0, 0, "8001|8[024]9"], "DZ": ["213", "00", "(?:[1-4]|[5-79]\\d|80)\\d{7}", [8, 9], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[1-4]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["9"], "0$1"], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[5-8]"], "0$1"]], "0"], "EC": ["593", "00", "1\\d{9,10}|(?:[2-7]|9\\d)\\d{7}", [8, 9, 10, 11], [["(\\d)(\\d{3})(\\d{4})", "$1 $2-$3", ["[2-7]"], "(0$1)", 0, "$1-$2-$3"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["9"], "0$1"], ["(\\d{4})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["1"]]], "0"], "EE": ["372", "00", "8\\d{9}|[4578]\\d{7}|(?:[3-8]\\d|90)\\d{5}", [7, 8, 10], [["(\\d{3})(\\d{4})", "$1 $2", ["[369]|4[3-8]|5(?:[0-2]|5[0-478]|6[45])|7[1-9]|88", "[369]|4[3-8]|5(?:[02]|1(?:[0-8]|95)|5[0-478]|6(?:4[0-4]|5[1-589]))|7[1-9]|88"]], ["(\\d{4})(\\d{3,4})", "$1 $2", ["[45]|8(?:00|[1-49])", "[45]|8(?:00[1-9]|[1-49])"]], ["(\\d{2})(\\d{2})(\\d{4})", "$1 $2 $3", ["7"]], ["(\\d{4})(\\d{3})(\\d{3})", "$1 $2 $3", ["8"]]]], "EG": ["20", "00", "[189]\\d{8,9}|[24-6]\\d{8}|[135]\\d{7}", [8, 9, 10], [["(\\d)(\\d{7,8})", "$1 $2", ["[23]"], "0$1"], ["(\\d{2})(\\d{6,7})", "$1 $2", ["1[35]|[4-6]|8[2468]|9[235-7]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["[89]"], "0$1"], ["(\\d{2})(\\d{8})", "$1 $2", ["1"], "0$1"]], "0"], "EH": ["212", "00", "[5-8]\\d{8}", [9], 0, "0", 0, 0, 0, 0, "528[89]"], "ER": ["291", "00", "[178]\\d{6}", [7], [["(\\d)(\\d{3})(\\d{3})", "$1 $2 $3", ["[178]"], "0$1"]], "0"], "ES": ["34", "00", "[5-9]\\d{8}", [9], [["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[89]00"]], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[5-9]"]]]], "ET": ["251", "00", "(?:11|[2-579]\\d)\\d{7}", [9], [["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["[1-579]"], "0$1"]], "0"], "FI": ["358", "00|99(?:[01469]|5(?:[14]1|3[23]|5[59]|77|88|9[09]))", "[1-35689]\\d{4}|7\\d{10,11}|(?:[124-7]\\d|3[0-46-9])\\d{8}|[1-9]\\d{5,8}", [5, 6, 7, 8, 9, 10, 11, 12], [["(\\d{5})", "$1", ["20[2-59]"], "0$1"], ["(\\d{3})(\\d{3,7})", "$1 $2", ["(?:[1-3]0|[68])0|70[07-9]"], "0$1"], ["(\\d{2})(\\d{4,8})", "$1 $2", ["[14]|2[09]|50|7[135]"], "0$1"], ["(\\d{2})(\\d{6,10})", "$1 $2", ["7"], "0$1"], ["(\\d)(\\d{4,9})", "$1 $2", ["(?:19|[2568])[1-8]|3(?:0[1-9]|[1-9])|9"], "0$1"]], "0", 0, 0, 0, 0, "1[03-79]|[2-9]", 0, "00"], "FJ": ["679", "0(?:0|52)", "45\\d{5}|(?:0800\\d|[235-9])\\d{6}", [7, 11], [["(\\d{3})(\\d{4})", "$1 $2", ["[235-9]|45"]], ["(\\d{4})(\\d{3})(\\d{4})", "$1 $2 $3", ["0"]]], 0, 0, 0, 0, 0, 0, 0, "00"], "FK": ["500", "00", "[2-7]\\d{4}", [5]], "FM": ["691", "00", "(?:[39]\\d\\d|820)\\d{4}", [7], [["(\\d{3})(\\d{4})", "$1 $2", ["[389]"]]]], "FO": ["298", "00", "[2-9]\\d{5}", [6], [["(\\d{6})", "$1", ["[2-9]"]]], 0, 0, "(10(?:01|[12]0|88))"], "FR": ["33", "00", "[1-9]\\d{8}", [9], [["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["8"], "0 $1"], ["(\\d)(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4 $5", ["[1-79]"], "0$1"]], "0"], "GA": ["241", "00", "(?:[067]\\d|11)\\d{6}|[2-7]\\d{6}", [7, 8], [["(\\d)(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[2-7]"], "0$1"], ["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["0"]], ["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["11|[67]"], "0$1"]], 0, 0, "0(11\\d{6}|60\\d{6}|61\\d{6}|6[256]\\d{6}|7[467]\\d{6})", "$1"], "GB": ["44", "00", "[1-357-9]\\d{9}|[18]\\d{8}|8\\d{6}", [7, 9, 10], [["(\\d{3})(\\d{4})", "$1 $2", ["800", "8001", "80011", "800111", "8001111"], "0$1"], ["(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3", ["845", "8454", "84546", "845464"], "0$1"], ["(\\d{3})(\\d{6})", "$1 $2", ["800"], "0$1"], ["(\\d{5})(\\d{4,5})", "$1 $2", ["1(?:38|5[23]|69|76|94)", "1(?:(?:38|69)7|5(?:24|39)|768|946)", "1(?:3873|5(?:242|39[4-6])|(?:697|768)[347]|9467)"], "0$1"], ["(\\d{4})(\\d{5,6})", "$1 $2", ["1(?:[2-69][02-9]|[78])"], "0$1"], ["(\\d{2})(\\d{4})(\\d{4})", "$1 $2 $3", ["[25]|7(?:0|6[02-9])", "[25]|7(?:0|6(?:[03-9]|2[356]))"], "0$1"], ["(\\d{4})(\\d{6})", "$1 $2", ["7"], "0$1"], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["[1389]"], "0$1"]], "0", 0, "0|180020", 0, 0, 0, [["(?:1(?:1(?:3(?:[0-58]\\d\\d|73[0-5])|4(?:(?:[0-5]\\d|70)\\d|69[7-9])|(?:(?:5[0-26-9]|[78][0-49])\\d|6(?:[0-4]\\d|5[01]))\\d)|(?:2(?:(?:0[024-9]|2[3-9]|3[3-79]|4[1-689]|[58][02-9]|6[0-47-9]|7[013-9]|9\\d)\\d|1(?:[0-7]\\d|8[0-3]))|(?:3(?:0\\d|1[0-8]|[25][02-9]|3[02-579]|[468][0-46-9]|7[1-35-79]|9[2-578])|4(?:0[03-9]|[137]\\d|[28][02-57-9]|4[02-69]|5[0-8]|[69][0-79])|5(?:0[1-35-9]|[16]\\d|2[024-9]|3[015689]|4[02-9]|5[03-9]|7[0-35-9]|8[0-468]|9[0-57-9])|6(?:0[034689]|1\\d|2[0-35689]|[38][013-9]|4[1-467]|5[0-69]|6[13-9]|7[0-8]|9[0-24578])|7(?:0[0246-9]|2\\d|3[0236-8]|4[03-9]|5[0-46-9]|6[013-9]|7[0-35-9]|8[024-9]|9[02-9])|8(?:0[35-9]|2[1-57-9]|3[02-578]|4[0-578]|5[124-9]|6[2-69]|7\\d|8[02-9]|9[02569])|9(?:0[02-589]|[18]\\d|2[02-689]|3[1-57-9]|4[2-9]|5[0-579]|6[2-47-9]|7[0-24578]|9[2-57]))\\d)\\d)|2(?:0[013478]|3[0189]|4[017]|8[0-46-9]|9[0-2])\\d{3})\\d{4}|1(?:2(?:0(?:46[1-4]|87[2-9])|545[1-79]|76(?:2\\d|3[1-8]|6[1-6])|9(?:7(?:2[0-4]|3[2-5])|8(?:2[2-8]|7[0-47-9]|8[3-5])))|3(?:6(?:38[2-5]|47[23])|8(?:47[04-9]|64[0157-9]))|4(?:044[1-7]|20(?:2[23]|8\\d)|6(?:0(?:30|5[2-57]|6[1-8]|7[2-8])|140)|8(?:052|87[1-3]))|5(?:2(?:4(?:3[2-79]|6\\d)|76\\d)|6(?:26[06-9]|686))|6(?:06(?:4\\d|7[4-79])|295[5-7]|35[34]\\d|47(?:24|61)|59(?:5[08]|6[67]|74)|9(?:55[0-4]|77[23]))|7(?:26(?:6[13-9]|7[0-7])|(?:442|688)\\d|50(?:2[0-3]|[3-68]2|76))|8(?:27[56]\\d|37(?:5[2-5]|8[239])|843[2-58])|9(?:0(?:0(?:6[1-8]|85)|52\\d)|3583|4(?:66[1-8]|9(?:2[01]|81))|63(?:23|3[1-4])|9561))\\d{3}", [9, 10]], ["7(?:457[0-57-9]|700[01]|911[028])\\d{5}|7(?:[1-3]\\d\\d|4(?:[0-46-9]\\d|5[0-689])|5(?:0[0-8]|[13-9]\\d|2[0-35-9])|7(?:0[1-9]|[1-7]\\d|8[02-9]|9[0-689])|8(?:[014-9]\\d|[23][0-8])|9(?:[024-9]\\d|1[02-9]|3[0-689]))\\d{6}", [10]], ["80[08]\\d{7}|800\\d{6}|8001111"], ["(?:8(?:4[2-5]|7[0-3])|9(?:[01]\\d|8[2-49]))\\d{7}|845464\\d", [7, 10]], ["70\\d{8}", [10]], 0, ["(?:3[0347]|55)\\d{8}", [10]], ["76(?:464|652)\\d{5}|76(?:0[0-28]|2[356]|34|4[01347]|5[49]|6[0-369]|77|8[14]|9[139])\\d{6}", [10]], ["56\\d{8}", [10]]], 0, " x"], "GD": ["1", "011", "(?:473|[58]\\d\\d|900)\\d{7}", [10], 0, "1", 0, "([2-9]\\d{6})$|1", "473$1", 0, "473"], "GE": ["995", "00", "(?:[3-57]\\d\\d|800)\\d{6}", [9], [["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["70"], "0$1"], ["(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["32"], "0$1"], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[57]"]], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[348]"], "0$1"]], "0"], "GF": ["594", "00", "(?:[56]94\\d|7093)\\d{5}|(?:80|9\\d)\\d{7}", [9], [["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[5-7]|9[47]"], "0$1"], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[89]"], "0$1"]], "0"], "GG": ["44", "00", "(?:1481|[357-9]\\d{3})\\d{6}|8\\d{6}(?:\\d{2})?", [7, 9, 10], 0, "0", 0, "([25-9]\\d{5})$|0|180020", "1481$1", 0, 0, [["1481[25-9]\\d{5}", [10]], ["7(?:(?:781|839)\\d|911[17])\\d{5}", [10]], ["80[08]\\d{7}|800\\d{6}|8001111"], ["(?:8(?:4[2-5]|7[0-3])|9(?:[01]\\d|8[0-3]))\\d{7}|845464\\d", [7, 10]], ["70\\d{8}", [10]], 0, ["(?:3[0347]|55)\\d{8}", [10]], ["76(?:464|652)\\d{5}|76(?:0[0-28]|2[356]|34|4[01347]|5[49]|6[0-369]|77|8[14]|9[139])\\d{6}", [10]], ["56\\d{8}", [10]]]], "GH": ["233", "00", "(?:[235]\\d{3}|800)\\d{5}", [8, 9], [["(\\d{3})(\\d{5})", "$1 $2", ["8"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["[235]"], "0$1"]], "0"], "GI": ["350", "00", "(?:[25]\\d|60)\\d{6}", [8], [["(\\d{3})(\\d{5})", "$1 $2", ["2"]]]], "GL": ["299", "00", "(?:19|[2-689]\\d|70)\\d{4}", [6], [["(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3", ["19|[2-9]"]]]], "GM": ["220", "00", "[2-9]\\d{6}", [7], [["(\\d{3})(\\d{4})", "$1 $2", ["[2-9]"]]]], "GN": ["224", "00", "722\\d{6}|(?:3|6\\d)\\d{7}", [8, 9], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["3"]], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[67]"]]]], "GP": ["590", "00", "(?:590\\d|7090)\\d{5}|(?:69|80|9\\d)\\d{7}", [9], [["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[5-79]"], "0$1"], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["8"], "0$1"]], "0", 0, 0, 0, 0, 0, [["590(?:0[1-68]|[14][0-24-9]|2[0-68]|3[1-9]|5[3-579]|[68][0-689]|7[08]|9\\d)\\d{4}"], ["(?:69(?:0\\d\\d|1(?:2[2-9]|3[0-5])|4(?:0[89]|1[2-6]|9\\d)|6(?:1[016-9]|5[0-4]|[67]\\d))|7090[0-4])\\d{4}"], ["80[0-5]\\d{6}"], 0, 0, 0, 0, 0, ["9(?:(?:39[5-7]|76[018])\\d|475[0-6])\\d{4}"]]], "GQ": ["240", "00", "222\\d{6}|(?:3\\d|55|[89]0)\\d{7}", [9], [["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[235]"]], ["(\\d{3})(\\d{6})", "$1 $2", ["[89]"]]]], "GR": ["30", "00", "5005000\\d{3}|8\\d{9,11}|(?:[269]\\d|70)\\d{8}", [10, 11, 12], [["(\\d{2})(\\d{4})(\\d{4})", "$1 $2 $3", ["21|7"]], ["(\\d{4})(\\d{6})", "$1 $2", ["2(?:2|3[2-57-9]|4[2-469]|5[2-59]|6[2-9]|7[2-69]|8[2-49])|5"]], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["[2689]"]], ["(\\d{3})(\\d{3,4})(\\d{5})", "$1 $2 $3", ["8"]]]], "GT": ["502", "00", "80\\d{6}|(?:1\\d{3}|[2-7])\\d{7}", [8, 11], [["(\\d{4})(\\d{4})", "$1 $2", ["[2-8]"]], ["(\\d{4})(\\d{3})(\\d{4})", "$1 $2 $3", ["1"]]]], "GU": ["1", "011", "(?:[58]\\d\\d|671|900)\\d{7}", [10], 0, "1", 0, "([2-9]\\d{6})$|1", "671$1", 0, "671"], "GW": ["245", "00", "[49]\\d{8}|4\\d{6}", [7, 9], [["(\\d{3})(\\d{4})", "$1 $2", ["40"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[49]"]]]], "GY": ["592", "001", "(?:[2-8]\\d{3}|9008)\\d{3}", [7], [["(\\d{3})(\\d{4})", "$1 $2", ["[2-9]"]]]], "HK": ["852", "00(?:30|5[09]|[126-9]?)", "8[0-46-9]\\d{6,7}|9\\d{4,7}|(?:[2-7]|9\\d{3})\\d{7}", [5, 6, 7, 8, 9, 11], [["(\\d{3})(\\d{2,5})", "$1 $2", ["900", "9003"]], ["(\\d{4})(\\d{4})", "$1 $2", ["[2-7]|8[1-4]|9(?:0[1-9]|[1-8])"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["8"]], ["(\\d{3})(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3 $4", ["9"]]], 0, 0, 0, 0, 0, 0, 0, "00"], "HN": ["504", "00", "8\\d{10}|[237-9]\\d{7}", [8, 11], [["(\\d{4})(\\d{4})", "$1-$2", ["[237-9]"]]]], "HR": ["385", "00", "[2-69]\\d{8}|80\\d{5,7}|[1-79]\\d{7}|6\\d{6}", [7, 8, 9], [["(\\d{2})(\\d{2})(\\d{3})", "$1 $2 $3", ["6[01]"], "0$1"], ["(\\d{3})(\\d{2})(\\d{2,3})", "$1 $2 $3", ["8"], "0$1"], ["(\\d)(\\d{4})(\\d{3})", "$1 $2 $3", ["1"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["6|7[245]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["9"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[2-57]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["8"], "0$1"]], "0"], "HT": ["509", "00", "[2-589]\\d{7}", [8], [["(\\d{2})(\\d{2})(\\d{4})", "$1 $2 $3", ["[2-589]"]]]], "HU": ["36", "00", "[235-7]\\d{8}|[1-9]\\d{7}", [8, 9], [["(\\d)(\\d{3})(\\d{4})", "$1 $2 $3", ["1"], "(06 $1)"], ["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["[27][2-9]|3[2-7]|4[24-9]|5[2-79]|6|8[2-57-9]|9[2-69]"], "(06 $1)"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[2-9]"], "06 $1"]], "06"], "ID": ["62", "00[89]", "00[1-9]\\d{9,14}|(?:[1-36]|8\\d{5})\\d{6}|00\\d{9}|[1-9]\\d{8,10}|[2-9]\\d{7}", [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], [["(\\d)(\\d{3})(\\d{3})", "$1 $2 $3", ["15"]], ["(\\d{2})(\\d{5,9})", "$1 $2", ["2[124]|[36]1"], "(0$1)"], ["(\\d{3})(\\d{5,7})", "$1 $2", ["800"], "0$1"], ["(\\d{3})(\\d{5,8})", "$1 $2", ["[2-79]"], "(0$1)"], ["(\\d{3})(\\d{3,4})(\\d{3})", "$1-$2-$3", ["8[1-35-9]"], "0$1"], ["(\\d{3})(\\d{6,8})", "$1 $2", ["1"], "0$1"], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["804"], "0$1"], ["(\\d{3})(\\d)(\\d{3})(\\d{3})", "$1 $2 $3 $4", ["80"], "0$1"], ["(\\d{3})(\\d{4})(\\d{4,5})", "$1-$2-$3", ["8"], "0$1"]], "0"], "IE": ["353", "00", "(?:1\\d|[2569])\\d{6,8}|4\\d{6,9}|7\\d{8}|8\\d{8,9}", [7, 8, 9, 10], [["(\\d{2})(\\d{5})", "$1 $2", ["2[24-9]|47|58|6[237-9]|9[35-9]"], "(0$1)"], ["(\\d{3})(\\d{5})", "$1 $2", ["[45]0"], "(0$1)"], ["(\\d)(\\d{3,4})(\\d{4})", "$1 $2 $3", ["1"], "(0$1)"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[2569]|4[1-69]|7[14]"], "(0$1)"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["70"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["81"], "(0$1)"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["[78]"], "0$1"], ["(\\d{4})(\\d{3})(\\d{3})", "$1 $2 $3", ["1"]], ["(\\d{2})(\\d{4})(\\d{4})", "$1 $2 $3", ["4"], "(0$1)"], ["(\\d{2})(\\d)(\\d{3})(\\d{4})", "$1 $2 $3 $4", ["8"], "0$1"]], "0"], "IL": ["972", "0(?:0|1[2-9])", "1\\d{6}(?:\\d{3,5})?|[57]\\d{8}|[1-489]\\d{7}", [7, 8, 9, 10, 11, 12], [["(\\d{4})(\\d{3})", "$1-$2", ["125"]], ["(\\d{4})(\\d{2})(\\d{2})", "$1-$2-$3", ["121"]], ["(\\d)(\\d{3})(\\d{4})", "$1-$2-$3", ["[2-489]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1-$2-$3", ["[57]"], "0$1"], ["(\\d{4})(\\d{3})(\\d{3})", "$1-$2-$3", ["12"]], ["(\\d{4})(\\d{6})", "$1-$2", ["159"]], ["(\\d)(\\d{3})(\\d{3})(\\d{3})", "$1-$2-$3-$4", ["1[7-9]"]], ["(\\d{3})(\\d{1,2})(\\d{3})(\\d{4})", "$1-$2 $3-$4", ["15"]]], "0"], "IM": ["44", "00", "1624\\d{6}|(?:[3578]\\d|90)\\d{8}", [10], 0, "0", 0, "([25-8]\\d{5})$|0|180020", "1624$1", 0, "74576|(?:16|7[56])24"], "IN": ["91", "00", "(?:000800|[2-9]\\d\\d)\\d{7}|1\\d{7,12}", [8, 9, 10, 11, 12, 13], [["(\\d{8})", "$1", ["5(?:0|2[23]|3[03]|[67]1|88)", "5(?:0|2(?:21|3)|3(?:0|3[23])|616|717|888)", "5(?:0|2(?:21|3)|3(?:0|3[23])|616|717|8888)"], 0, 1], ["(\\d{4})(\\d{4,5})", "$1 $2", ["180", "1800"], 0, 1], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["140"], 0, 1], ["(\\d{2})(\\d{4})(\\d{4})", "$1 $2 $3", ["11|2[02]|33|4[04]|79[1-7]|80[2-46]", "11|2[02]|33|4[04]|79(?:[1-6]|7[19])|80(?:[2-4]|6[0-589])", "11|2[02]|33|4[04]|79(?:[124-6]|3(?:[02-9]|1[0-24-9])|7(?:1|9[1-6]))|80(?:[2-4]|6[0-589])"], "0$1", 1], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["1(?:2[0-249]|3[0-25]|4[145]|[68]|7[1257])|2(?:1[257]|3[013]|4[01]|5[0137]|6[0158]|78|8[1568])|3(?:26|4[1-3]|5[34]|6[01489]|7[02-46]|8[159])|4(?:1[36]|2[1-47]|5[12]|6[0-26-9]|7[0-24-9]|8[013-57]|9[014-7])|5(?:1[025]|22|[36][25]|4[28]|5[12]|[78]1)|6(?:12|[2-4]1|5[17]|6[13]|80)|7(?:12|3[134]|4[47]|61|88)|8(?:16|2[014]|3[126]|6[136]|7[078]|8[34]|91)|(?:43|59|75)[15]|(?:1[59]|29|67|72)[14]", "1(?:2[0-24]|3[0-25]|4[145]|[59][14]|6[1-9]|7[1257]|8[1-57-9])|2(?:1[257]|3[013]|4[01]|5[0137]|6[058]|78|8[1568]|9[14])|3(?:26|4[1-3]|5[34]|6[01489]|7[02-46]|8[159])|4(?:1[36]|2[1-47]|3[15]|5[12]|6[0-26-9]|7[0-24-9]|8[013-57]|9[014-7])|5(?:1[025]|22|[36][25]|4[28]|[578]1|9[15])|674|7(?:(?:2[14]|3[34]|5[15])[2-6]|61[346]|88[0-8])|8(?:70[2-6]|84[235-7]|91[3-7])|(?:1(?:29|60|8[06])|261|552|6(?:12|[2-47]1|5[17]|6[13]|80)|7(?:12|31|4[47])|8(?:16|2[014]|3[126]|6[136]|7[78]|83))[2-7]", "1(?:2[0-24]|3[0-25]|4[145]|[59][14]|6[1-9]|7[1257]|8[1-57-9])|2(?:1[257]|3[013]|4[01]|5[0137]|6[058]|78|8[1568]|9[14])|3(?:26|4[1-3]|5[34]|6[01489]|7[02-46]|8[159])|4(?:1[36]|2[1-47]|3[15]|5[12]|6[0-26-9]|7[0-24-9]|8[013-57]|9[014-7])|5(?:1[025]|22|[36][25]|4[28]|[578]1|9[15])|6(?:12(?:[2-6]|7[0-8])|74[2-7])|7(?:(?:2[14]|5[15])[2-6]|3171|61[346]|88(?:[2-7]|82))|8(?:70[2-6]|84(?:[2356]|7[19])|91(?:[3-6]|7[19]))|73[134][2-6]|(?:74[47]|8(?:16|2[014]|3[126]|6[136]|7[78]|83))(?:[2-6]|7[19])|(?:1(?:29|60|8[06])|261|552|6(?:[2-4]1|5[17]|6[13]|7(?:1|4[0189])|80)|7(?:12|88[01]))[2-7]"], "0$1", 1], ["(\\d{4})(\\d{3})(\\d{3})", "$1 $2 $3", ["1(?:[2-479]|5[0235-9])|[2-5]|6(?:1[1358]|2[2457-9]|3[2-5]|4[235-7]|5[2-689]|6[24578]|7[235689]|8[1-6])|7(?:1[013-9]|28|3[129]|4[1-35689]|5[29]|6[02-5]|70)|807", "1(?:[2-479]|5[0235-9])|[2-5]|6(?:1[1358]|2(?:[2457]|84|95)|3(?:[2-4]|55)|4[235-7]|5[2-689]|6[24578]|7[235689]|8[1-6])|7(?:1(?:[013-8]|9[6-9])|28[6-8]|3(?:17|2[0-49]|9[2-57])|4(?:1[2-4]|[29][0-7]|3[0-8]|[56]|8[0-24-7])|5(?:2[1-3]|9[0-6])|6(?:0[5689]|2[5-9]|3[02-8]|4|5[0-367])|70[13-7])|807[19]", "1(?:[2-479]|5(?:[0236-9]|5[013-9]))|[2-5]|6(?:2(?:84|95)|355|8(?:28[235-7]|3))|73179|807(?:1|9[1-3])|(?:1552|6(?:(?:1[1358]|2[2457]|3[2-4]|4[235-7]|5[2-689]|6[24578]|7[235689])\\d|8(?:[14-6]\\d|2[0-79]))|7(?:1(?:[013-8]\\d|9[6-9])|28[6-8]|3(?:2[0-49]|9[2-57])|4(?:1[2-4]|[29][0-7]|3[0-8]|[56]\\d|8[0-24-7])|5(?:2[1-3]|9[0-6])|6(?:0[5689]|2[5-9]|3[02-8]|4\\d|5[0-367])|70[13-7]))[2-7]"], "0$1", 1], ["(\\d{5})(\\d{5})", "$1 $2", ["16|[6-9]"], "0$1", 1], ["(\\d{4})(\\d{2,4})(\\d{4})", "$1 $2 $3", ["18[06]", "18[06]0"], 0, 1], ["(\\d{4})(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3 $4", ["18"], 0, 1]], "0"], "IO": ["246", "00", "3\\d{6}", [7], [["(\\d{3})(\\d{4})", "$1 $2", ["3"]]]], "IQ": ["964", "00", "(?:1|7\\d\\d)\\d{7}|[2-6]\\d{7,8}", [8, 9, 10], [["(\\d)(\\d{3})(\\d{4})", "$1 $2 $3", ["1"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[2-6]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["7"], "0$1"]], "0"], "IR": ["98", "00", "[1-9]\\d{9}|(?:[1-8]\\d\\d|9)\\d{3,4}", [4, 5, 6, 7, 10], [["(\\d{4,5})", "$1", ["96"], "0$1"], ["(\\d{2})(\\d{4,5})", "$1 $2", ["(?:1[137]|2[13-68]|3[1458]|4[145]|5[1468]|6[16]|7[1467]|8[13467])[12689]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["9"], "0$1"], ["(\\d{2})(\\d{4})(\\d{4})", "$1 $2 $3", ["[1-8]"], "0$1"]], "0"], "IS": ["354", "00|1(?:0(?:01|[12]0)|100)", "(?:38\\d|[4-9])\\d{6}", [7, 9], [["(\\d{3})(\\d{4})", "$1 $2", ["[4-9]"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["3"]]], 0, 0, 0, 0, 0, 0, 0, "00"], "IT": ["39", "00", "0\\d{5,11}|1\\d{8,10}|3(?:[0-8]\\d{7,10}|9\\d{7,8})|(?:43|55|70)\\d{8}|8\\d{5}(?:\\d{2,4})?", [6, 7, 8, 9, 10, 11, 12], [["(\\d{2})(\\d{4,6})", "$1 $2", ["0[26]"]], ["(\\d{3})(\\d{3,6})", "$1 $2", ["0[13-57-9][0159]|8(?:03|4[17]|9[2-5])", "0[13-57-9][0159]|8(?:03|4[17]|9(?:2|3[04]|[45][0-4]))"]], ["(\\d{4})(\\d{2,6})", "$1 $2", ["0(?:[13-579][2-46-8]|8[236-8])"]], ["(\\d{4})(\\d{4})", "$1 $2", ["894"]], ["(\\d{2})(\\d{3,4})(\\d{4})", "$1 $2 $3", ["0[26]|5"]], ["(\\d{3})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["1(?:44|[679])|[378]|43"]], ["(\\d{3})(\\d{3,4})(\\d{4})", "$1 $2 $3", ["0[13-57-9][0159]|14"]], ["(\\d{2})(\\d{4})(\\d{5})", "$1 $2 $3", ["0[26]"]], ["(\\d{4})(\\d{3})(\\d{4})", "$1 $2 $3", ["0"]], ["(\\d{3})(\\d{4})(\\d{4,5})", "$1 $2 $3", ["[03]"]]], 0, 0, 0, 0, 0, 0, [["0(?:669[0-79]\\d{1,6}|831\\d{2,8})|0(?:1(?:[0159]\\d|[27][1-5]|31|4[1-4]|6[1356]|8[2-57])|2\\d\\d|3(?:[0159]\\d|2[1-4]|3[12]|[48][1-6]|6[2-59]|7[1-7])|4(?:[0159]\\d|[23][1-9]|4[245]|6[1-5]|7[1-4]|81)|5(?:[0159]\\d|2[1-5]|3[2-6]|4[1-79]|6[4-6]|7[1-578]|8[3-8])|6(?:[0-57-9]\\d|6[0-8])|7(?:[0159]\\d|2[12]|3[1-7]|4[2-46]|6[13569]|7[13-6]|8[1-59])|8(?:[0159]\\d|2[3-578]|3[2356]|[6-8][1-5])|9(?:[0159]\\d|[238][1-5]|4[12]|6[1-8]|7[1-6]))\\d{2,7}"], ["3[2-9]\\d{7,8}|(?:31|43)\\d{8}", [9, 10]], ["80(?:0\\d{3}|3)\\d{3}", [6, 9]], ["(?:0878\\d{3}|89(?:2\\d|3[04]|4(?:[0-4]|[5-9]\\d\\d)|5[0-4]))\\d\\d|(?:1(?:44|6[346])|89(?:38|5[5-9]|9))\\d{6}", [6, 8, 9, 10]], ["1(?:78\\d|99)\\d{6}", [9, 10]], ["3[2-8]\\d{9,10}", [11, 12]], 0, 0, ["55\\d{8}", [10]], ["84(?:[08]\\d{3}|[17])\\d{3}", [6, 9]]]], "JE": ["44", "00", "1534\\d{6}|(?:[3578]\\d|90)\\d{8}", [10], 0, "0", 0, "([0-24-8]\\d{5})$|0|180020", "1534$1", 0, 0, [["1534[0-24-8]\\d{5}"], ["7(?:(?:(?:50|82)9|937)\\d|7(?:00[378]|97\\d))\\d{5}"], ["80(?:07(?:35|81)|8901)\\d{4}"], ["(?:8(?:4(?:4(?:4(?:05|42|69)|703)|5(?:041|800))|7(?:0002|1206))|90(?:066[59]|1810|71(?:07|55)))\\d{4}"], ["701511\\d{4}"], 0, ["(?:3(?:0(?:07(?:35|81)|8901)|3\\d{4}|4(?:4(?:4(?:05|42|69)|703)|5(?:041|800))|7(?:0002|1206))|55\\d{4})\\d{4}"], ["76(?:464|652)\\d{5}|76(?:0[0-28]|2[356]|34|4[01347]|5[49]|6[0-369]|77|8[14]|9[139])\\d{6}"], ["56\\d{8}"]]], "JM": ["1", "011", "(?:[58]\\d\\d|658|900)\\d{7}", [10], 0, "1", 0, 0, 0, 0, "658|876"], "JO": ["962", "00", "(?:(?:[2689]|7\\d)\\d|32|427|53)\\d{6}", [8, 9], [["(\\d)(\\d{3})(\\d{4})", "$1 $2 $3", ["[2356]|87"], "(0$1)"], ["(\\d{3})(\\d{5,6})", "$1 $2", ["[89]"], "0$1"], ["(\\d{2})(\\d{7})", "$1 $2", ["70"], "0$1"], ["(\\d)(\\d{4})(\\d{4})", "$1 $2 $3", ["[47]"], "0$1"]], "0"], "JP": ["81", "010", "00[1-9]\\d{6,14}|[25-9]\\d{9}|(?:00|[1-9]\\d\\d)\\d{6}", [8, 9, 10, 11, 12, 13, 14, 15, 16, 17], [["(\\d{3})(\\d{3})(\\d{3})", "$1-$2-$3", ["(?:12|57|99)0"], "0$1"], ["(\\d{4})(\\d)(\\d{4})", "$1-$2-$3", ["1(?:26|3[79]|4[56]|5[4-68]|6[3-5])|499|5(?:76|97)|746|8(?:3[89]|47|51)|9(?:80|9[16])", "1(?:267|3(?:7[247]|9[278])|466|5(?:47|58|64)|6(?:3[245]|48|5[4-68]))|499[2468]|5(?:76|97)9|7468|8(?:3(?:8[7-9]|96)|477|51[2-9])|9(?:802|9(?:1[23]|69))|1(?:45|58)[67]", "1(?:267|3(?:7[247]|9[278])|466|5(?:47|58|64)|6(?:3[245]|48|5[4-68]))|499[2468]|5(?:769|979[2-69])|7468|8(?:3(?:8[7-9]|96[2457-9])|477|51[2-9])|9(?:802|9(?:1[23]|69))|1(?:45|58)[67]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1-$2-$3", ["60"], "0$1"], ["(\\d)(\\d{4})(\\d{4})", "$1-$2-$3", ["3|4(?:2[09]|7[01])|6[1-9]", "3|4(?:2(?:0|9[02-69])|7(?:0[019]|1))|6[1-9]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1-$2-$3", ["1(?:1|5[45]|77|88|9[69])|2(?:2[1-37]|3[0-269]|4[59]|5|6[24]|7[1-358]|8[1369]|9[0-38])|4(?:[28][1-9]|3[0-57]|[45]|6[248]|7[2-579]|9[29])|5(?:2|3[0459]|4[0-369]|5[29]|8[02389]|9[0-389])|7(?:2[02-46-9]|34|[58]|6[0249]|7[57]|9[2-6])|8(?:2[124589]|3[26-9]|49|51|6|7[0-468]|8[68]|9[019])|9(?:[23][1-9]|4[15]|5[138]|6[1-3]|7[156]|8[189]|9[1-489])", "1(?:1|5(?:4[018]|5[017])|77|88|9[69])|2(?:2(?:[127]|3[014-9])|3[0-269]|4[59]|5(?:[1-3]|5[0-69]|9[19])|62|7(?:[1-35]|8[0189])|8(?:[16]|3[0134]|9[0-5])|9(?:[028]|17))|4(?:2(?:[13-79]|8[014-6])|3[0-57]|[45]|6[248]|7[2-47]|8[1-9]|9[29])|5(?:2|3(?:[045]|9[0-8])|4[0-369]|5[29]|8[02389]|9[0-3])|7(?:2[02-46-9]|34|[58]|6[0249]|7[57]|9(?:[23]|4[0-59]|5[01569]|6[0167]))|8(?:2(?:[1258]|4[0-39]|9[0-2469])|3(?:[29]|60)|49|51|6(?:[0-24]|36|5[0-3589]|7[23]|9[01459])|7[0-468]|8[68])|9(?:[23][1-9]|4[15]|5[138]|6[1-3]|7[156]|8[189]|9(?:[1289]|3[34]|4[0178]))|(?:264|837)[016-9]|2(?:57|93)[015-9]|(?:25[0468]|422|838)[01]|(?:47[59]|59[89]|8(?:6[68]|9))[019]", "1(?:1|5(?:4[018]|5[017])|77|88|9[69])|2(?:2[127]|3[0-269]|4[59]|5(?:[1-3]|5[0-69]|9(?:17|99))|6(?:2|4[016-9])|7(?:[1-35]|8[0189])|8(?:[16]|3[0134]|9[0-5])|9(?:[028]|17))|4(?:2(?:[13-79]|8[014-6])|3[0-57]|[45]|6[248]|7[2-47]|9[29])|5(?:2|3(?:[045]|9(?:[0-58]|6[4-9]|7[0-35689]))|4[0-369]|5[29]|8[02389]|9[0-3])|7(?:2[02-46-9]|34|[58]|6[0249]|7[57]|9(?:[23]|4[0-59]|5[01569]|6[0167]))|8(?:2(?:[1258]|4[0-39]|9[0169])|3(?:[29]|60|7(?:[017-9]|6[6-8]))|49|51|6(?:[0-24]|36[2-57-9]|5(?:[0-389]|5[23])|6(?:[01]|9[178])|7(?:2[2-468]|3[78])|9[0145])|7[0-468]|8[68])|9(?:4[15]|5[138]|7[156]|8[189]|9(?:[1289]|3(?:31|4[357])|4[0178]))|(?:8294|96)[1-3]|2(?:57|93)[015-9]|(?:223|8699)[014-9]|(?:25[0468]|422|838)[01]|(?:48|8292|9[23])[1-9]|(?:47[59]|59[89]|8(?:68|9))[019]"], "0$1"], ["(\\d{3})(\\d{2})(\\d{4})", "$1-$2-$3", ["[14]|[289][2-9]|5[3-9]|7[2-4679]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{4})", "$1-$2-$3", ["800"], "0$1"], ["(\\d{2})(\\d{4})(\\d{4})", "$1-$2-$3", ["[25-9]"], "0$1"]], "0", 0, "(000[2569]\\d{4,6})$|(?:(?:003768)0?)|0", "$1"], "KE": ["254", "000", "(?:[17]\\d\\d|900)\\d{6}|(?:2|80)0\\d{6,7}|[4-6]\\d{6,8}", [7, 8, 9, 10], [["(\\d{2})(\\d{5,7})", "$1 $2", ["[24-6]"], "0$1"], ["(\\d{3})(\\d{6})", "$1 $2", ["[17]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[89]"], "0$1"]], "0"], "KG": ["996", "00", "8\\d{9}|[235-9]\\d{8}", [9, 10], [["(\\d{4})(\\d{5})", "$1 $2", ["3(?:1[346]|[24-79])"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[235-79]|88"], "0$1"], ["(\\d{3})(\\d{3})(\\d)(\\d{2,3})", "$1 $2 $3 $4", ["8"], "0$1"]], "0"], "KH": ["855", "00[14-9]", "1\\d{9}|[1-9]\\d{7,8}", [8, 9, 10], [["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[1-9]"], "0$1"], ["(\\d{4})(\\d{3})(\\d{3})", "$1 $2 $3", ["1"]]], "0"], "KI": ["686", "00", "(?:[37]\\d|6[0-79])\\d{6}|(?:[2-48]\\d|50)\\d{3}", [5, 8], 0, "0"], "KM": ["269", "00", "[3478]\\d{6}", [7], [["(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3", ["[3478]"]]]], "KN": ["1", "011", "(?:[58]\\d\\d|900)\\d{7}", [10], 0, "1", 0, "([2-7]\\d{6})$|1", "869$1", 0, "869"], "KP": ["850", "00|99", "85\\d{6}|(?:19\\d|[2-7])\\d{7}", [8, 10], [["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["8"], "0$1"], ["(\\d)(\\d{3})(\\d{4})", "$1 $2 $3", ["[2-7]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["1"], "0$1"]], "0"], "KR": ["82", "00(?:[125689]|3(?:[46]5|91)|7(?:00|27|3|55|6[126]))", "00[1-9]\\d{8,11}|(?:[12]|5\\d{3})\\d{7}|[13-6]\\d{9}|(?:[1-6]\\d|80)\\d{7}|[3-6]\\d{4,5}|(?:00|7)0\\d{8}", [5, 6, 8, 9, 10, 11, 12, 13, 14], [["(\\d{2})(\\d{3,4})", "$1-$2", ["(?:3[1-3]|[46][1-4]|5[1-5])1"], "0$1"], ["(\\d{4})(\\d{4})", "$1-$2", ["1"]], ["(\\d)(\\d{3,4})(\\d{4})", "$1-$2-$3", ["2"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1-$2-$3", ["[36]0|8"], "0$1"], ["(\\d{2})(\\d{3,4})(\\d{4})", "$1-$2-$3", ["[1346]|5[1-5]"], "0$1"], ["(\\d{2})(\\d{4})(\\d{4})", "$1-$2-$3", ["[57]"], "0$1"], ["(\\d{2})(\\d{5})(\\d{4})", "$1-$2-$3", ["5"], "0$1"]], "0", 0, "0(8(?:[1-46-8]|5\\d\\d))?"], "KW": ["965", "00", "18\\d{5}|(?:[2569]\\d|41)\\d{6}", [7, 8], [["(\\d{4})(\\d{3,4})", "$1 $2", ["[169]|2(?:[235]|4[1-35-9])|52"]], ["(\\d{3})(\\d{5})", "$1 $2", ["[245]"]]]], "KY": ["1", "011", "(?:345|[58]\\d\\d|900)\\d{7}", [10], 0, "1", 0, "([2-9]\\d{6})$|1", "345$1", 0, "345"], "KZ": ["7", "810", "(?:33622|8\\d{8})\\d{5}|[78]\\d{9}", [10, 14], 0, "8", 0, 0, 0, 0, "33622|7", 0, "8~10"], "LA": ["856", "00", "[23]\\d{9}|3\\d{8}|(?:[235-8]\\d|41)\\d{6}", [8, 9, 10], [["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["2[13]|3[14]|[4-8]"], "0$1"], ["(\\d{2})(\\d{2})(\\d{2})(\\d{3})", "$1 $2 $3 $4", ["3"], "0$1"], ["(\\d{2})(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3 $4", ["[23]"], "0$1"]], "0"], "LB": ["961", "00", "[27-9]\\d{7}|[13-9]\\d{6}", [7, 8], [["(\\d)(\\d{3})(\\d{3})", "$1 $2 $3", ["[13-69]|7(?:[2-57]|62|8[0-6]|9[04-9])|8[02-9]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["[27-9]"]]], "0"], "LC": ["1", "011", "(?:[58]\\d\\d|758|900)\\d{7}", [10], 0, "1", 0, "([2-8]\\d{6})$|1", "758$1", 0, "758"], "LI": ["423", "00", "[68]\\d{8}|(?:[2378]\\d|90)\\d{5}", [7, 9], [["(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3", ["[2379]|8(?:0[09]|7)", "[2379]|8(?:0(?:02|9)|7)"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["8"]], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["69"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["6"]]], "0", 0, "(1001)|0"], "LK": ["94", "00", "[1-9]\\d{8}", [9], [["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["7"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[1-689]"], "0$1"]], "0"], "LR": ["231", "00", "(?:[2457]\\d|33|88)\\d{7}|(?:2\\d|[4-6])\\d{6}", [7, 8, 9], [["(\\d)(\\d{3})(\\d{3})", "$1 $2 $3", ["4[67]|[56]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["2"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["[2-578]"], "0$1"]], "0"], "LS": ["266", "00", "(?:[256]\\d\\d|800)\\d{5}", [8], [["(\\d{4})(\\d{4})", "$1 $2", ["[2568]"]]]], "LT": ["370", "00", "(?:[3469]\\d|52|[78]0)\\d{6}", [8], [["(\\d)(\\d{3})(\\d{4})", "$1 $2 $3", ["52[0-7]"], "(0-$1)", 1], ["(\\d{3})(\\d{2})(\\d{3})", "$1 $2 $3", ["[7-9]"], "0 $1", 1], ["(\\d{2})(\\d{6})", "$1 $2", ["37|4(?:[15]|6[1-8])"], "(0-$1)", 1], ["(\\d{3})(\\d{5})", "$1 $2", ["[3-6]"], "(0-$1)", 1]], "0", 0, "[08]"], "LU": ["352", "00", "35[013-9]\\d{4,8}|6\\d{8}|35\\d{2,4}|(?:[2457-9]\\d|3[0-46-9])\\d{2,9}", [4, 5, 6, 7, 8, 9, 10, 11], [["(\\d{2})(\\d{3})", "$1 $2", ["2(?:0[2-689]|[2-9])|[3-57]|8(?:0[2-9]|[13-9])|9(?:0[89]|[2-579])"]], ["(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3", ["2(?:0[2-689]|[2-9])|[3-57]|8(?:0[2-9]|[13-9])|9(?:0[89]|[2-579])"]], ["(\\d{2})(\\d{2})(\\d{3})", "$1 $2 $3", ["20[2-689]"]], ["(\\d{2})(\\d{2})(\\d{2})(\\d{1,2})", "$1 $2 $3 $4", ["2(?:[0367]|4[3-8])"]], ["(\\d{3})(\\d{2})(\\d{3})", "$1 $2 $3", ["80[01]|90[015]"]], ["(\\d{2})(\\d{2})(\\d{2})(\\d{3})", "$1 $2 $3 $4", ["20"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["6"]], ["(\\d{2})(\\d{2})(\\d{2})(\\d{2})(\\d{1,2})", "$1 $2 $3 $4 $5", ["2(?:[0367]|4[3-8])"]], ["(\\d{2})(\\d{2})(\\d{2})(\\d{1,5})", "$1 $2 $3 $4", ["[3-57]|8[13-9]|9(?:0[89]|[2-579])|(?:2|80)[2-9]"]]], 0, 0, "(15(?:0[06]|1[12]|[35]5|4[04]|6[26]|77|88|99)\\d)"], "LV": ["371", "00", "(?:[268]\\d|78|90)\\d{6}", [8], [["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["[2679]|8[01]"]]]], "LY": ["218", "00", "[2-9]\\d{8}", [9], [["(\\d{2})(\\d{7})", "$1-$2", ["[2-9]"], "0$1"]], "0"], "MA": ["212", "00", "[5-8]\\d{8}", [9], [["(\\d{4})(\\d{5})", "$1-$2", ["892"], "0$1"], ["(\\d{2})(\\d{7})", "$1-$2", ["8(?:0[0-7]|9)"], "0$1"], ["(\\d)(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4 $5", ["[5-8]"], "0$1"]], "0", 0, 0, 0, 0, 0, [["5(?:(?:18|4[0679]|5[03])\\d|2(?:[0-25-79]\\d|3[1-578]|4[02-46-8]|8[0235-7])|3(?:[0-47]\\d|5[02-9]|6[02-8]|8[014-9]|9[3-9]))\\d{5}"], ["(?:6(?:[0-79]\\d|8[0-247-9])|7(?:[016-8]\\d|2[0-8]|5[0-5]))\\d{6}"], ["80[0-7]\\d{6}"], ["89\\d{7}"], 0, 0, 0, 0, ["(?:592(?:4[0-2]|93)|80[89]\\d\\d)\\d{4}"]]], "MC": ["377", "00", "(?:[3489]|[67]\\d)\\d{7}", [8, 9], [["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["4"], "0$1"], ["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[389]"]], ["(\\d)(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4 $5", ["[67]"], "0$1"]], "0"], "MD": ["373", "00", "(?:[235-7]\\d|[89]0)\\d{6}", [8], [["(\\d{3})(\\d{5})", "$1 $2", ["[89]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["22|3"], "0$1"], ["(\\d{3})(\\d{2})(\\d{3})", "$1 $2 $3", ["[25-7]"], "0$1"]], "0"], "ME": ["382", "00", "(?:20|[3-79]\\d)\\d{6}|80\\d{6,7}", [8, 9], [["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[2-9]"], "0$1"]], "0"], "MF": ["590", "00", "(?:590\\d|7090)\\d{5}|(?:69|80|9\\d)\\d{7}", [9], 0, "0", 0, 0, 0, 0, 0, [["590(?:0[079]|[14]3|[27][79]|3[03-7]|5[0-268]|87)\\d{4}"], ["(?:69(?:0\\d\\d|1(?:2[2-9]|3[0-5])|4(?:0[89]|1[2-6]|9\\d)|6(?:1[016-9]|5[0-4]|[67]\\d))|7090[0-4])\\d{4}"], ["80[0-5]\\d{6}"], 0, 0, 0, 0, 0, ["9(?:(?:39[5-7]|76[018])\\d|475[0-6])\\d{4}"]]], "MG": ["261", "00", "[23]\\d{8}", [9], [["(\\d{2})(\\d{2})(\\d{3})(\\d{2})", "$1 $2 $3 $4", ["[23]"], "0$1"]], "0", 0, "([24-9]\\d{6})$|0", "20$1"], "MH": ["692", "011", "329\\d{4}|(?:[256]\\d|45)\\d{5}", [7], [["(\\d{3})(\\d{4})", "$1-$2", ["[2-6]"]]], "1"], "MK": ["389", "00", "[2-578]\\d{7}", [8], [["(\\d)(\\d{3})(\\d{4})", "$1 $2 $3", ["2|34[47]|4(?:[37]7|5[47]|64)"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["[347]"], "0$1"], ["(\\d{3})(\\d)(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[58]"], "0$1"]], "0"], "ML": ["223", "00", "[24-9]\\d{7}", [8], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[24-9]"]]]], "MM": ["95", "00", "1\\d{5,7}|95\\d{6}|(?:[4-7]|9[0-46-9])\\d{6,8}|(?:2|8\\d)\\d{5,8}", [6, 7, 8, 9, 10], [["(\\d)(\\d{2})(\\d{3})", "$1 $2 $3", ["16|2"], "0$1"], ["(\\d{2})(\\d{2})(\\d{3})", "$1 $2 $3", ["4(?:[2-46]|5[3-5])|5|6(?:[1-689]|7[235-7])|7(?:[0-4]|5[2-7])|8[1-5]|(?:60|86)[23]"], "0$1"], ["(\\d)(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[12]|452|678|86", "[12]|452|6788|86"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[4-7]|8[1-35]"], "0$1"], ["(\\d)(\\d{3})(\\d{4,6})", "$1 $2 $3", ["9(?:2[0-4]|[35-9]|4[137-9])"], "0$1"], ["(\\d)(\\d{4})(\\d{4})", "$1 $2 $3", ["2"], "0$1"], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["8"], "0$1"], ["(\\d)(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3 $4", ["92"], "0$1"], ["(\\d)(\\d{5})(\\d{4})", "$1 $2 $3", ["9"], "0$1"]], "0"], "MN": ["976", "001", "[12]\\d{7,9}|[5-9]\\d{7}", [8, 9, 10], [["(\\d{2})(\\d{2})(\\d{4})", "$1 $2 $3", ["[12]1"], "0$1"], ["(\\d{4})(\\d{4})", "$1 $2", ["[5-9]"]], ["(\\d{3})(\\d{5,6})", "$1 $2", ["[12]2[1-3]"], "0$1"], ["(\\d{4})(\\d{5,6})", "$1 $2", ["[12](?:27|3[2-8]|4[2-68]|5[1-4689])", "[12](?:27|3[2-8]|4[2-68]|5[1-4689])[0-3]"], "0$1"], ["(\\d{5})(\\d{4,5})", "$1 $2", ["[12]"], "0$1"]], "0"], "MO": ["853", "00", "0800\\d{3}|(?:28|[68]\\d)\\d{6}", [7, 8], [["(\\d{4})(\\d{3})", "$1 $2", ["0"]], ["(\\d{4})(\\d{4})", "$1 $2", ["[268]"]]]], "MP": ["1", "011", "[58]\\d{9}|(?:67|90)0\\d{7}", [10], 0, "1", 0, "([2-9]\\d{6})$|1", "670$1", 0, "670"], "MQ": ["596", "00", "(?:596\\d|7091)\\d{5}|(?:69|[89]\\d)\\d{7}", [9], [["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[5-79]|8(?:0[6-9]|[36])"], "0$1"], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["8"], "0$1"]], "0"], "MR": ["222", "00", "(?:[2-4]\\d\\d|800)\\d{5}", [8], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[2-48]"]]]], "MS": ["1", "011", "(?:[58]\\d\\d|664|900)\\d{7}", [10], 0, "1", 0, "([34]\\d{6})$|1", "664$1", 0, "664"], "MT": ["356", "00", "3550\\d{4}|(?:[2579]\\d\\d|800)\\d{5}", [8], [["(\\d{4})(\\d{4})", "$1 $2", ["[2357-9]"]]]], "MU": ["230", "0(?:0|[24-7]0|3[03])", "(?:[57]|8\\d\\d)\\d{7}|[2-468]\\d{6}", [7, 8, 10], [["(\\d{3})(\\d{4})", "$1 $2", ["[2-46]|8[013]"]], ["(\\d{4})(\\d{4})", "$1 $2", ["[57]"]], ["(\\d{5})(\\d{5})", "$1 $2", ["8"]]], 0, 0, 0, 0, 0, 0, 0, "020"], "MV": ["960", "0(?:0|19)", "(?:800|9[0-57-9]\\d)\\d{7}|[34679]\\d{6}", [7, 10], [["(\\d{3})(\\d{4})", "$1-$2", ["[34679]"]], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["[89]"]]], 0, 0, 0, 0, 0, 0, 0, "00"], "MW": ["265", "00", "(?:[1289]\\d|31|77)\\d{7}|1\\d{6}", [7, 9], [["(\\d)(\\d{3})(\\d{3})", "$1 $2 $3", ["1[2-9]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["2"], "0$1"], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[137-9]"], "0$1"]], "0"], "MX": ["52", "0[09]", "[2-9]\\d{9}", [10], [["(\\d{2})(\\d{4})(\\d{4})", "$1 $2 $3", ["33|5[56]|81"]], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["[2-9]"]]], 0, 0, 0, 0, 0, 0, 0, "00"], "MY": ["60", "00", "1\\d{8,9}|(?:3\\d|[4-9])\\d{7}", [8, 9, 10], [["(\\d)(\\d{3})(\\d{4})", "$1-$2 $3", ["[4-79]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1-$2 $3", ["1(?:[02469]|[378][1-9]|53)|8", "1(?:[02469]|[37][1-9]|53|8(?:[1-46-9]|5[7-9]))|8"], "0$1"], ["(\\d)(\\d{4})(\\d{4})", "$1-$2 $3", ["3"], "0$1"], ["(\\d)(\\d{3})(\\d{2})(\\d{4})", "$1-$2-$3-$4", ["1(?:[367]|80)"]], ["(\\d{3})(\\d{3})(\\d{4})", "$1-$2 $3", ["15"], "0$1"], ["(\\d{2})(\\d{4})(\\d{4})", "$1-$2 $3", ["1"], "0$1"]], "0"], "MZ": ["258", "00", "(?:2|8\\d)\\d{7}", [8, 9], [["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["2|8[2-79]"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["8"]]]], "NA": ["264", "00", "[68]\\d{7,8}", [8, 9], [["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["88"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["6"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["87"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["8"], "0$1"]], "0"], "NC": ["687", "00", "(?:050|[2-57-9]\\d\\d)\\d{3}", [6], [["(\\d{2})(\\d{2})(\\d{2})", "$1.$2.$3", ["[02-57-9]"]]]], "NE": ["227", "00", "[027-9]\\d{7}", [8], [["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["08"]], ["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[089]|2[013]|7[0467]"]]]], "NF": ["672", "00", "[13]\\d{5}", [6], [["(\\d{2})(\\d{4})", "$1 $2", ["1[0-3]"]], ["(\\d)(\\d{5})", "$1 $2", ["[13]"]]], 0, 0, "([0-258]\\d{4})$", "3$1"], "NG": ["234", "009", "(?:20|9\\d)\\d{8}|[78]\\d{9,13}", [10, 11, 12, 13, 14], [["(\\d{3})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[7-9]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["20[129]"], "0$1"], ["(\\d{4})(\\d{2})(\\d{4})", "$1 $2 $3", ["2"], "0$1"], ["(\\d{3})(\\d{4})(\\d{4,5})", "$1 $2 $3", ["[78]"], "0$1"], ["(\\d{3})(\\d{5})(\\d{5,6})", "$1 $2 $3", ["[78]"], "0$1"]], "0"], "NI": ["505", "00", "(?:1800|[25-8]\\d{3})\\d{4}", [8], [["(\\d{4})(\\d{4})", "$1 $2", ["[125-8]"]]]], "NL": ["31", "00", "(?:[124-7]\\d\\d|3(?:[02-9]\\d|1[0-8]))\\d{6}|8\\d{6,9}|9\\d{6,10}|1\\d{4,5}", [5, 6, 7, 8, 9, 10, 11], [["(\\d{3})(\\d{4,7})", "$1 $2", ["[89]0"], "0$1"], ["(\\d{2})(\\d{7})", "$1 $2", ["66"], "0$1"], ["(\\d)(\\d{8})", "$1 $2", ["6"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["1[16-8]|2[259]|3[124]|4[17-9]|5[124679]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["[1-578]|91"], "0$1"], ["(\\d{3})(\\d{3})(\\d{5})", "$1 $2 $3", ["9"], "0$1"]], "0"], "NO": ["47", "00", "(?:0|[2-9]\\d{3})\\d{4}", [5, 8], [["(\\d{3})(\\d{2})(\\d{3})", "$1 $2 $3", ["8"]], ["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[2-79]"]]], 0, 0, 0, 0, 0, "[02-689]|7[0-8]"], "NP": ["977", "00", "(?:1\\d|9)\\d{9}|[1-9]\\d{7}", [8, 10, 11], [["(\\d)(\\d{7})", "$1-$2", ["1[2-6]"], "0$1"], ["(\\d{2})(\\d{6})", "$1-$2", ["1[01]|[2-8]|9(?:[1-59]|[67][2-6])"], "0$1"], ["(\\d{3})(\\d{7})", "$1-$2", ["9"]]], "0"], "NR": ["674", "00", "(?:222|444|(?:55|8\\d)\\d|666|777|999)\\d{4}", [7], [["(\\d{3})(\\d{4})", "$1 $2", ["[24-9]"]]]], "NU": ["683", "00", "(?:[4-7]|888\\d)\\d{3}", [4, 7], [["(\\d{3})(\\d{4})", "$1 $2", ["8"]]]], "NZ": ["64", "0(?:0|161)", "[1289]\\d{9}|50\\d{5}(?:\\d{2,3})?|[27-9]\\d{7,8}|(?:[34]\\d|6[0-35-9])\\d{6}|8\\d{4,6}", [5, 6, 7, 8, 9, 10], [["(\\d{2})(\\d{3,8})", "$1 $2", ["8[1-79]"], "0$1"], ["(\\d{3})(\\d{2})(\\d{2,3})", "$1 $2 $3", ["50[036-8]|8|90", "50(?:[0367]|88)|8|90"], "0$1"], ["(\\d)(\\d{3})(\\d{4})", "$1 $2 $3", ["24|[346]|7[2-57-9]|9[2-9]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["2(?:10|74)|[589]"], "0$1"], ["(\\d{2})(\\d{3,4})(\\d{4})", "$1 $2 $3", ["1|2[028]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3,5})", "$1 $2 $3", ["2(?:[169]|7[0-35-9])|7"], "0$1"]], "0", 0, 0, 0, 0, 0, 0, "00"], "OM": ["968", "00", "(?:1505|[279]\\d{3}|500)\\d{4}|800\\d{5,6}", [7, 8, 9], [["(\\d{3})(\\d{4,6})", "$1 $2", ["[58]"]], ["(\\d{2})(\\d{6})", "$1 $2", ["2"]], ["(\\d{4})(\\d{4})", "$1 $2", ["[179]"]]]], "PA": ["507", "00", "(?:00800|8\\d{3})\\d{6}|[68]\\d{7}|[1-57-9]\\d{6}", [7, 8, 10, 11], [["(\\d{3})(\\d{4})", "$1-$2", ["[1-57-9]"]], ["(\\d{4})(\\d{4})", "$1-$2", ["[68]"]], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["8"]]]], "PE": ["51", "00|19(?:1[124]|77|90)00", "(?:[14-8]|9\\d)\\d{7}", [8, 9], [["(\\d{3})(\\d{5})", "$1 $2", ["80"], "(0$1)"], ["(\\d)(\\d{7})", "$1 $2", ["1"], "(0$1)"], ["(\\d{2})(\\d{6})", "$1 $2", ["[4-8]"], "(0$1)"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["9"]]], "0", 0, 0, 0, 0, 0, 0, "00", " Anexo "], "PF": ["689", "00", "4\\d{5}(?:\\d{2})?|8\\d{7,8}", [6, 8, 9], [["(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3", ["44"]], ["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["4|8[7-9]"]], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["8"]]]], "PG": ["675", "00|140[1-3]", "(?:180|[78]\\d{3})\\d{4}|(?:[2-589]\\d|64)\\d{5}", [7, 8], [["(\\d{3})(\\d{4})", "$1 $2", ["18|[2-69]|85"]], ["(\\d{4})(\\d{4})", "$1 $2", ["[78]"]]], 0, 0, 0, 0, 0, 0, 0, "00"], "PH": ["63", "00", "(?:[2-7]|9\\d)\\d{8}|2\\d{5}|(?:1800|8)\\d{7,9}", [6, 8, 9, 10, 11, 12, 13], [["(\\d)(\\d{5})", "$1 $2", ["2"], "(0$1)"], ["(\\d{4})(\\d{4,6})", "$1 $2", ["3(?:23|39|46)|4(?:2[3-6]|[35]9|4[26]|76)|544|88[245]|(?:52|64|86)2", "3(?:230|397|461)|4(?:2(?:35|[46]4|51)|396|4(?:22|63)|59[347]|76[15])|5(?:221|446)|642[23]|8(?:622|8(?:[24]2|5[13]))"], "(0$1)"], ["(\\d{5})(\\d{4})", "$1 $2", ["346|4(?:27|9[35])|883", "3469|4(?:279|9(?:30|56))|8834"], "(0$1)"], ["(\\d)(\\d{4})(\\d{4})", "$1 $2 $3", ["2"], "(0$1)"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["[3-7]|8[2-8]"], "(0$1)"], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["[89]"], "0$1"], ["(\\d{4})(\\d{3})(\\d{4})", "$1 $2 $3", ["1"]], ["(\\d{4})(\\d{1,2})(\\d{3})(\\d{4})", "$1 $2 $3 $4", ["1"]]], "0"], "PK": ["92", "00", "122\\d{6}|[24-8]\\d{10,11}|9(?:[013-9]\\d{8,10}|2(?:[01]\\d\\d|2(?:[06-8]\\d|1[01]))\\d{7})|(?:[2-8]\\d{3}|92(?:[0-7]\\d|8[1-9]))\\d{6}|[24-9]\\d{8}|[89]\\d{7}", [8, 9, 10, 11, 12], [["(\\d{3})(\\d{3})(\\d{2,7})", "$1 $2 $3", ["[89]0"], "0$1"], ["(\\d{4})(\\d{5})", "$1 $2", ["1"]], ["(\\d{3})(\\d{6,7})", "$1 $2", ["2(?:3[2358]|4[2-4]|9[2-8])|45[3479]|54[2-467]|60[468]|72[236]|8(?:2[2-689]|3[23578]|4[3478]|5[2356])|9(?:2[2-8]|3[27-9]|4[2-6]|6[3569]|9[25-8])", "9(?:2[3-8]|98)|(?:2(?:3[2358]|4[2-4]|9[2-8])|45[3479]|54[2-467]|60[468]|72[236]|8(?:2[2-689]|3[23578]|4[3478]|5[2356])|9(?:22|3[27-9]|4[2-6]|6[3569]|9[25-7]))[2-9]"], "(0$1)"], ["(\\d{2})(\\d{7,8})", "$1 $2", ["(?:2[125]|4[0-246-9]|5[1-35-7]|6[1-8]|7[14]|8[16]|91)[2-9]"], "(0$1)"], ["(\\d{5})(\\d{5})", "$1 $2", ["58"], "(0$1)"], ["(\\d{3})(\\d{7})", "$1 $2", ["3"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3 $4", ["2[125]|4[0-246-9]|5[1-35-7]|6[1-8]|7[14]|8[16]|91"], "(0$1)"], ["(\\d{3})(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3 $4", ["[24-9]"], "(0$1)"]], "0"], "PL": ["48", "00", "(?:6|8\\d\\d)\\d{7}|[1-9]\\d{6}(?:\\d{2})?|[26]\\d{5}", [6, 7, 8, 9, 10], [["(\\d{5})", "$1", ["19"]], ["(\\d{3})(\\d{3})", "$1 $2", ["11|20|64"]], ["(\\d{2})(\\d{2})(\\d{3})", "$1 $2 $3", ["(?:1[2-8]|2[2-69]|3[2-4]|4[1-468]|5[24-689]|6[1-3578]|7[14-7]|8[1-79]|9[145])1", "(?:1[2-8]|2[2-69]|3[2-4]|4[1-468]|5[24-689]|6[1-3578]|7[14-7]|8[1-79]|9[145])19"]], ["(\\d{3})(\\d{2})(\\d{2,3})", "$1 $2 $3", ["64"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["21|39|45|5[0137]|6[0469]|7[02389]|8(?:0[14]|8)"]], ["(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["1[2-8]|[2-7]|8[1-79]|9[145]"]], ["(\\d{3})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["8"]]]], "PM": ["508", "00", "[45]\\d{5}|(?:708|8\\d\\d)\\d{6}", [6, 9], [["(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3", ["[45]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["7"]], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["8"], "0$1"]], "0"], "PR": ["1", "011", "(?:[589]\\d\\d|787)\\d{7}", [10], 0, "1", 0, 0, 0, 0, "787|939"], "PS": ["970", "00", "[2489]2\\d{6}|(?:1\\d|5)\\d{8}", [8, 9, 10], [["(\\d)(\\d{3})(\\d{4})", "$1 $2 $3", ["[2489]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["5"], "0$1"], ["(\\d{4})(\\d{3})(\\d{3})", "$1 $2 $3", ["1"]]], "0"], "PT": ["351", "00", "1693\\d{5}|(?:[26-9]\\d|30)\\d{7}", [9], [["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["2[12]"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["16|[236-9]"]]]], "PW": ["680", "01[12]", "(?:[24-8]\\d\\d|345|900)\\d{4}", [7], [["(\\d{3})(\\d{4})", "$1 $2", ["[2-9]"]]]], "PY": ["595", "00", "59\\d{4,6}|9\\d{5,10}|(?:[2-46-8]\\d|5[0-8])\\d{4,7}", [6, 7, 8, 9, 10, 11], [["(\\d{3})(\\d{3,6})", "$1 $2", ["[2-9]0"], "0$1"], ["(\\d{2})(\\d{5})", "$1 $2", ["[26]1|3[289]|4[1246-8]|7[1-3]|8[1-36]"], "(0$1)"], ["(\\d{3})(\\d{4,5})", "$1 $2", ["2[279]|3[13-5]|4[359]|5|6(?:[34]|7[1-46-8])|7[46-8]|85"], "(0$1)"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["2[14-68]|3[26-9]|4[1246-8]|6(?:1|75)|7[1-35]|8[1-36]"], "(0$1)"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["87"]], ["(\\d{3})(\\d{6})", "$1 $2", ["9(?:[5-79]|8[1-7])"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[2-8]"], "0$1"], ["(\\d{4})(\\d{3})(\\d{4})", "$1 $2 $3", ["9"]]], "0"], "QA": ["974", "00", "800\\d{4}|(?:2|800)\\d{6}|(?:0080|[3-7])\\d{7}", [7, 8, 9, 11], [["(\\d{3})(\\d{4})", "$1 $2", ["2[136]|8"]], ["(\\d{4})(\\d{4})", "$1 $2", ["[3-7]"]]]], "RE": ["262", "00", "709\\d{6}|(?:26|[689]\\d)\\d{7}", [9], [["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[26-9]"], "0$1"]], "0", 0, 0, 0, 0, 0, [["26(?:2\\d\\d|3(?:0\\d|1[0-6]))\\d{4}"], ["(?:69(?:2\\d\\d|3(?:[06][0-6]|1[0-3]|2[0-2]|3[0-39]|4\\d|5[0-5]|7[0-37]|8[0-8]|9[0-479]))|7092[0-3])\\d{4}"], ["80\\d{7}"], ["89[1-37-9]\\d{6}"], 0, 0, 0, 0, ["9(?:399[0-3]|479[0-6]|76(?:2[278]|3[0-37]))\\d{4}"], ["8(?:1[019]|2[0156]|84|90)\\d{6}"]]], "RO": ["40", "00", "(?:[236-8]\\d|90)\\d{7}|[23]\\d{5}", [6, 9], [["(\\d{3})(\\d{3})", "$1 $2", ["2[3-6]", "2[3-6]\\d9"], "0$1"], ["(\\d{2})(\\d{4})", "$1 $2", ["219|31"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["[23]1"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[236-9]"], "0$1"]], "0", 0, 0, 0, 0, 0, 0, 0, " int "], "RS": ["381", "00", "38[02-9]\\d{6,9}|6\\d{7,9}|90\\d{4,8}|38\\d{5,6}|(?:7\\d\\d|800)\\d{3,9}|(?:[12]\\d|3[0-79])\\d{5,10}", [6, 7, 8, 9, 10, 11, 12], [["(\\d{3})(\\d{3,9})", "$1 $2", ["(?:2[389]|39)0|[7-9]"], "0$1"], ["(\\d{2})(\\d{5,10})", "$1 $2", ["[1-36]"], "0$1"]], "0"], "RU": ["7", "810", "8\\d{13}|[347-9]\\d{9}", [10, 14], [["(\\d{4})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["7(?:1[0-8]|2[1-9])", "7(?:1(?:[0-356]2|4[29]|7|8[27])|2(?:1[23]|[2-9]2))", "7(?:1(?:[0-356]2|4[29]|7|8[27])|2(?:13[03-69]|62[013-9]))|72[1-57-9]2"], "8 ($1)", 1], ["(\\d{5})(\\d)(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["7(?:1[0-68]|2[1-9])", "7(?:1(?:[06][3-6]|[18]|2[35]|[3-5][3-5])|2(?:[13][3-5]|[24-689]|7[457]))", "7(?:1(?:0(?:[356]|4[023])|[18]|2(?:3[013-9]|5)|3[45]|43[013-79]|5(?:3[1-8]|4[1-7]|5)|6(?:3[0-35-9]|[4-6]))|2(?:1(?:3[178]|[45])|[24-689]|3[35]|7[457]))|7(?:14|23)4[0-8]|71(?:33|45)[1-79]"], "8 ($1)", 1], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["7"], "8 ($1)", 1], ["(\\d{3})(\\d{3})(\\d{2})(\\d{2})", "$1 $2-$3-$4", ["[349]|8(?:[02-7]|1[1-8])"], "8 ($1)", 1], ["(\\d{4})(\\d{4})(\\d{3})(\\d{3})", "$1 $2 $3 $4", ["8"], "8 ($1)"]], "8", 0, 0, 0, 0, 0, [["336(?:[013-9]\\d|2[013-9])\\d{5}|(?:3(?:0[12]|4[1-35-79]|5[1-3]|65|8[1-58]|9[0145])|4(?:01|1[1356]|2[13467]|7[1-5]|8[1-7]|9[1-689])|8(?:1[1-8]|2[01]|3[13-6]|4[0-8]|5[15-7]|6[0-35-79]|7[1-37-9]))\\d{7}", [10]], ["9\\d{9}", [10]], ["8(?:0[04]|108\\d{3})\\d{7}"], ["80[39]\\d{7}", [10]], ["808\\d{7}", [10]]], "8~10"], "RW": ["250", "00", "(?:06|[27]\\d\\d|[89]00)\\d{6}", [8, 9], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["0"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["2"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[7-9]"], "0$1"]], "0"], "SA": ["966", "00", "(?:[15]\\d|800|92)\\d{7}", [9, 10], [["(\\d{4})(\\d{5})", "$1 $2", ["9"]], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["1"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["5"], "0$1"], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["8"]]], "0"], "SB": ["677", "0[01]", "[6-9]\\d{6}|[1-6]\\d{4}", [5, 7], [["(\\d{2})(\\d{5})", "$1 $2", ["6[89]|7|8[4-9]|9(?:[1-8]|9[0-8])"]]]], "SC": ["248", "010|0[0-2]", "(?:[2489]\\d|64)\\d{5}", [7], [["(\\d)(\\d{3})(\\d{3})", "$1 $2 $3", ["[246]|9[57]"]]], 0, 0, 0, 0, 0, 0, 0, "00"], "SD": ["249", "00", "[19]\\d{8}", [9], [["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["[19]"], "0$1"]], "0"], "SE": ["46", "00", "(?:[26]\\d\\d|9)\\d{9}|[1-9]\\d{8}|[1-689]\\d{7}|[1-4689]\\d{6}|2\\d{5}", [6, 7, 8, 9, 10, 12], [["(\\d{2})(\\d{2,3})(\\d{2})", "$1-$2 $3", ["20"], "0$1", 0, "$1 $2 $3"], ["(\\d{3})(\\d{4})", "$1-$2", ["9(?:00|39|44|9)"], "0$1", 0, "$1 $2"], ["(\\d{2})(\\d{3})(\\d{2})", "$1-$2 $3", ["[12][136]|3[356]|4[0246]|6[03]|90[1-9]"], "0$1", 0, "$1 $2 $3"], ["(\\d)(\\d{2,3})(\\d{2})(\\d{2})", "$1-$2 $3 $4", ["8"], "0$1", 0, "$1 $2 $3 $4"], ["(\\d{3})(\\d{2,3})(\\d{2})", "$1-$2 $3", ["1[2457]|2(?:[247-9]|5[0138])|3[0247-9]|4[1357-9]|5[0-35-9]|6(?:[125689]|4[02-57]|7[0-2])|9(?:[125-8]|3[02-5]|4[0-3])"], "0$1", 0, "$1 $2 $3"], ["(\\d{3})(\\d{2,3})(\\d{3})", "$1-$2 $3", ["9(?:00|39|44)"], "0$1", 0, "$1 $2 $3"], ["(\\d{2})(\\d{2,3})(\\d{2})(\\d{2})", "$1-$2 $3 $4", ["1[13689]|2[0136]|3[1356]|4[0246]|54|6[03]|90[1-9]"], "0$1", 0, "$1 $2 $3 $4"], ["(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1-$2 $3 $4", ["10|7"], "0$1", 0, "$1 $2 $3 $4"], ["(\\d)(\\d{3})(\\d{3})(\\d{2})", "$1-$2 $3 $4", ["8"], "0$1", 0, "$1 $2 $3 $4"], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1-$2 $3 $4", ["[13-5]|2(?:[247-9]|5[0138])|6(?:[124-689]|7[0-2])|9(?:[125-8]|3[02-5]|4[0-3])"], "0$1", 0, "$1 $2 $3 $4"], ["(\\d{3})(\\d{2})(\\d{2})(\\d{3})", "$1-$2 $3 $4", ["9"], "0$1", 0, "$1 $2 $3 $4"], ["(\\d{3})(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1-$2 $3 $4 $5", ["[26]"], "0$1", 0, "$1 $2 $3 $4 $5"]], "0"], "SG": ["65", "0[0-3]\\d", "(?:(?:1\\d|8)\\d\\d|7000)\\d{7}|[3689]\\d{7}", [8, 10, 11], [["(\\d{4})(\\d{4})", "$1 $2", ["[369]|8(?:0[1-9]|[1-9])"]], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["8"]], ["(\\d{4})(\\d{4})(\\d{3})", "$1 $2 $3", ["7"]], ["(\\d{4})(\\d{3})(\\d{4})", "$1 $2 $3", ["1"]]]], "SH": ["290", "00", "(?:[256]\\d|8)\\d{3}", [4, 5], 0, 0, 0, 0, 0, 0, "[256]"], "SI": ["386", "00|10(?:22|66|88|99)", "[1-7]\\d{7}|8\\d{4,7}|90\\d{4,6}", [5, 6, 7, 8], [["(\\d{2})(\\d{3,6})", "$1 $2", ["8[09]|9"], "0$1"], ["(\\d{3})(\\d{5})", "$1 $2", ["59|8"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["[37][01]|4[0139]|51|6"], "0$1"], ["(\\d)(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[1-57]"], "(0$1)"]], "0", 0, 0, 0, 0, 0, 0, "00"], "SJ": ["47", "00", "0\\d{4}|(?:[489]\\d|79)\\d{6}", [5, 8], 0, 0, 0, 0, 0, 0, "79"], "SK": ["421", "00", "[2-689]\\d{8}|[2-59]\\d{6}|[2-5]\\d{5}", [6, 7, 9], [["(\\d)(\\d{2})(\\d{3,4})", "$1 $2 $3", ["21"], "0$1"], ["(\\d{2})(\\d{2})(\\d{2,3})", "$1 $2 $3", ["[3-5][1-8]1", "[3-5][1-8]1[67]"], "0$1"], ["(\\d)(\\d{3})(\\d{3})(\\d{2})", "$1/$2 $3 $4", ["2"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[689]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1/$2 $3 $4", ["[3-5]"], "0$1"]], "0"], "SL": ["232", "00", "(?:[237-9]\\d|66)\\d{6}", [8], [["(\\d{2})(\\d{6})", "$1 $2", ["[236-9]"], "(0$1)"]], "0"], "SM": ["378", "00", "(?:0549|[5-7]\\d)\\d{6}", [8, 10], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[5-7]"]], ["(\\d{4})(\\d{6})", "$1 $2", ["0"]]], 0, 0, "([89]\\d{5})$", "0549$1"], "SN": ["221", "00", "(?:[378]\\d|93)\\d{7}", [9], [["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["8"]], ["(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[379]"]]]], "SO": ["252", "00", "[346-9]\\d{8}|[12679]\\d{7}|[1-5]\\d{6}|[1348]\\d{5}", [6, 7, 8, 9], [["(\\d{2})(\\d{4})", "$1 $2", ["8[125]"]], ["(\\d{6})", "$1", ["[134]"]], ["(\\d)(\\d{6})", "$1 $2", ["[15]|2[0-79]|3[0-46-8]|4[0-7]"]], ["(\\d)(\\d{7})", "$1 $2", ["(?:2|90)4|[67]"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[348]|64|79|90"]], ["(\\d{2})(\\d{5,7})", "$1 $2", ["1|28|6[0-35-9]|7[67]|9[2-9]"]]], "0"], "SR": ["597", "00", "(?:[2-5]|[6-8]\\d|90)\\d{5}", [6, 7], [["(\\d{2})(\\d{2})(\\d{2})", "$1-$2-$3", ["56"]], ["(\\d{3})(\\d{3})", "$1-$2", ["[2-5]"]], ["(\\d{3})(\\d{4})", "$1-$2", ["[6-9]"]]]], "SS": ["211", "00", "[19]\\d{8}", [9], [["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[19]"], "0$1"]], "0"], "ST": ["239", "00", "(?:22|9\\d)\\d{5}", [7], [["(\\d{3})(\\d{4})", "$1 $2", ["[29]"]]]], "SV": ["503", "00", "[25-7]\\d{7}|(?:80\\d|900)\\d{4}(?:\\d{4})?", [7, 8, 11], [["(\\d{3})(\\d{4})", "$1 $2", ["[89]"]], ["(\\d{4})(\\d{4})", "$1 $2", ["[25-7]"]], ["(\\d{3})(\\d{4})(\\d{4})", "$1 $2 $3", ["[89]"]]]], "SX": ["1", "011", "7215\\d{6}|(?:[58]\\d\\d|900)\\d{7}", [10], 0, "1", 0, "(5\\d{6})$|1", "721$1", 0, "721"], "SY": ["963", "00", "[1-359]\\d{8}|[1-5]\\d{7}", [8, 9], [["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[1-4]|5[1-3]"], "0$1", 1], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[59]"], "0$1", 1]], "0"], "SZ": ["268", "00", "0800\\d{4}|(?:[237]\\d|900)\\d{6}", [8, 9], [["(\\d{4})(\\d{4})", "$1 $2", ["[0237]"]], ["(\\d{5})(\\d{4})", "$1 $2", ["9"]]]], "TA": ["290", "00", "8\\d{3}", [4], 0, 0, 0, 0, 0, 0, "8"], "TC": ["1", "011", "(?:[58]\\d\\d|649|900)\\d{7}", [10], 0, "1", 0, "([2-479]\\d{6})$|1", "649$1", 0, "649"], "TD": ["235", "00|16", "(?:22|30|[689]\\d|77)\\d{6}", [8], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[236-9]"]]], 0, 0, 0, 0, 0, 0, 0, "00"], "TG": ["228", "00", "[279]\\d{7}", [8], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[279]"]]]], "TH": ["66", "00[1-9]", "(?:001800|[2-57]|[689]\\d)\\d{7}|1\\d{7,9}", [8, 9, 10, 13], [["(\\d)(\\d{3})(\\d{4})", "$1 $2 $3", ["2"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[13-9]"], "0$1"], ["(\\d{4})(\\d{3})(\\d{3})", "$1 $2 $3", ["1"]]], "0"], "TJ": ["992", "810", "(?:[0-57-9]\\d|66)\\d{7}", [9], [["(\\d{6})(\\d)(\\d{2})", "$1 $2 $3", ["331", "3317"]], ["(\\d{3})(\\d{2})(\\d{4})", "$1 $2 $3", ["44[02-479]|[34]7"]], ["(\\d{4})(\\d)(\\d{4})", "$1 $2 $3", ["3(?:[1245]|3[12])"]], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["\\d"]]], 0, 0, 0, 0, 0, 0, 0, "8~10"], "TK": ["690", "00", "[2-47]\\d{3,6}", [4, 5, 6, 7]], "TL": ["670", "00", "7\\d{7}|(?:[2-47]\\d|[89]0)\\d{5}", [7, 8], [["(\\d{3})(\\d{4})", "$1 $2", ["[2-489]|70"]], ["(\\d{4})(\\d{4})", "$1 $2", ["7"]]]], "TM": ["993", "810", "(?:[1-6]\\d|71)\\d{6}", [8], [["(\\d{2})(\\d{2})(\\d{2})(\\d{2})", "$1 $2-$3-$4", ["12"], "(8 $1)"], ["(\\d{3})(\\d)(\\d{2})(\\d{2})", "$1 $2-$3-$4", ["[1-5]"], "(8 $1)"], ["(\\d{2})(\\d{6})", "$1 $2", ["[67]"], "8 $1"]], "8", 0, 0, 0, 0, 0, 0, "8~10"], "TN": ["216", "00", "[2-57-9]\\d{7}", [8], [["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["[2-57-9]"]]]], "TO": ["676", "00", "(?:0800|(?:[5-8]\\d\\d|999)\\d)\\d{3}|[2-8]\\d{4}", [5, 7], [["(\\d{2})(\\d{3})", "$1-$2", ["[2-4]|50|6[09]|7[0-24-69]|8[05]"]], ["(\\d{4})(\\d{3})", "$1 $2", ["0"]], ["(\\d{3})(\\d{4})", "$1 $2", ["[5-9]"]]]], "TR": ["90", "00", "4\\d{6}|8\\d{11,12}|(?:[2-58]\\d\\d|900)\\d{7}", [7, 10, 12, 13], [["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["512|8[01589]|90"], "0$1", 1], ["(\\d{3})(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["5(?:[0-59]|61)", "5(?:[0-59]|61[06])", "5(?:[0-59]|61[06]1)"], "0$1", 1], ["(\\d{3})(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[24][1-8]|3[1-9]"], "(0$1)", 1], ["(\\d{3})(\\d{3})(\\d{6,7})", "$1 $2 $3", ["80"], "0$1", 1]], "0"], "TT": ["1", "011", "(?:[58]\\d\\d|900)\\d{7}", [10], 0, "1", 0, "([2-46-8]\\d{6})$|1", "868$1", 0, "868"], "TV": ["688", "00", "(?:2|7\\d\\d|90)\\d{4}", [5, 6, 7], [["(\\d{2})(\\d{3})", "$1 $2", ["2"]], ["(\\d{2})(\\d{4})", "$1 $2", ["90"]], ["(\\d{2})(\\d{5})", "$1 $2", ["7"]]]], "TW": ["886", "0(?:0[25-79]|19)", "[2-689]\\d{8}|7\\d{9,10}|[2-8]\\d{7}|2\\d{6}", [7, 8, 9, 10, 11], [["(\\d{2})(\\d)(\\d{4})", "$1 $2 $3", ["202"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[258]0"], "0$1"], ["(\\d)(\\d{3,4})(\\d{4})", "$1 $2 $3", ["[23568]|4(?:0[02-48]|[1-47-9])|7[1-9]", "[23568]|4(?:0[2-48]|[1-47-9])|(?:400|7)[1-9]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[49]"], "0$1"], ["(\\d{2})(\\d{4})(\\d{4,5})", "$1 $2 $3", ["7"], "0$1"]], "0", 0, 0, 0, 0, 0, 0, 0, "#"], "TZ": ["255", "00[056]", "(?:[25-8]\\d|41|90)\\d{7}", [9], [["(\\d{3})(\\d{2})(\\d{4})", "$1 $2 $3", ["[89]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["[24]"], "0$1"], ["(\\d{2})(\\d{7})", "$1 $2", ["5"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[67]"], "0$1"]], "0"], "UA": ["380", "00", "[89]\\d{9}|[3-9]\\d{8}", [9, 10], [["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["6[12][29]|(?:3[1-8]|4[136-8]|5[12457]|6[49])2|(?:56|65)[24]", "6[12][29]|(?:35|4[1378]|5[12457]|6[49])2|(?:56|65)[24]|(?:3[1-46-8]|46)2[013-9]"], "0$1"], ["(\\d{4})(\\d{5})", "$1 $2", ["3[1-8]|4(?:[1367]|[45][6-9]|8[4-6])|5(?:[1-5]|6[0135689]|7[4-6])|6(?:[12][3-7]|[459])", "3[1-8]|4(?:[1367]|[45][6-9]|8[4-6])|5(?:[1-5]|6(?:[015689]|3[02389])|7[4-6])|6(?:[12][3-7]|[459])"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["[3-7]|89|9[1-9]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[89]"], "0$1"]], "0", 0, 0, 0, 0, 0, 0, "0~0"], "UG": ["256", "00[057]", "800\\d{6}|(?:[29]0|[347]\\d)\\d{7}", [9], [["(\\d{4})(\\d{5})", "$1 $2", ["202", "2024"], "0$1"], ["(\\d{3})(\\d{6})", "$1 $2", ["[27-9]|4(?:6[45]|[7-9])"], "0$1"], ["(\\d{2})(\\d{7})", "$1 $2", ["[34]"], "0$1"]], "0"], "US": ["1", "011", "[2-9]\\d{9}|3\\d{6}", [10], [["(\\d{3})(\\d{4})", "$1-$2", ["310"], 0, 1], ["(\\d{3})(\\d{3})(\\d{4})", "($1) $2-$3", ["[2-9]"], 0, 1, "$1-$2-$3"]], "1", 0, 0, 0, 0, 0, [["(?:2742|(?:472|983)[2-47-9])\\d{6}|(?:2(?:0[1-35-9]|1[02-9]|2[03-57-9]|3[1459]|4[08]|5[1-46]|6[0279]|7[0269]|8[13])|3(?:0[1-57-9]|1[02-9]|2[013-79]|3[0-24679]|4[167]|5[0-3]|6[01349]|8[056])|4(?:0[124-9]|1[02-579]|2[3-5]|3[0245]|4[023578]|58|6[349]|7[0589]|8[04])|5(?:0[1-57-9]|1[0235-8]|20|3[0149]|4[01]|5[179]|6[1-47]|7[0-5]|8[0256])|6(?:0[1-35-9]|1[024-9]|2[03689]|3[016]|4[0156]|5[01679]|6[0-279]|78|8[0-269])|7(?:0[1-46-8]|1[2-9]|2[04-8]|3[0-247]|4[0378]|5[47]|6[02359]|7[0-59]|8[156])|8(?:0[1-68]|1[02-8]|2[0168]|3[0-2589]|4[03578]|5[046-9]|6[02-5]|7[028])|9(?:0[1346-9]|1[02-9]|2[0589]|3[0146-8]|4[01357-9]|5[12469]|7[0-3589]|8[04-69]))[2-9]\\d{6}"], [""], ["8(?:00|33|44|55|66|77|88)[2-9]\\d{6}"], ["900[2-9]\\d{6}"], ["52(?:3(?:[2-46-9][02-9]\\d|5(?:[02-46-9]\\d|5[0-46-9]))|4(?:[2-478][02-9]\\d|5(?:[034]\\d|2[024-9]|5[0-46-9])|6(?:0[1-9]|[2-9]\\d)|9(?:[05-9]\\d|2[0-5]|49)))\\d{4}|52[34][2-9]1[02-9]\\d{4}|5(?:00|2[125-9]|3[23]|44|66|77|88)[2-9]\\d{6}"]]], "UY": ["598", "0(?:0|1[3-9]\\d)", "0004\\d{2,9}|[1249]\\d{7}|2\\d{3,4}|(?:[49]\\d|80)\\d{5}", [4, 5, 6, 7, 8, 9, 10, 11, 12, 13], [["(\\d{4,5})", "$1", ["21"]], ["(\\d{3})(\\d{3,4})", "$1 $2", ["0"]], ["(\\d{3})(\\d{4})", "$1 $2", ["[49]0|8"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["9"], "0$1"], ["(\\d{4})(\\d{4})", "$1 $2", ["[124]"]], ["(\\d{3})(\\d{3})(\\d{2,4})", "$1 $2 $3", ["0"]], ["(\\d{3})(\\d{3})(\\d{3})(\\d{2,4})", "$1 $2 $3 $4", ["0"]]], "0", 0, 0, 0, 0, 0, 0, "00", " int. "], "UZ": ["998", "00", "(?:20|33|[5-9]\\d)\\d{7}", [9], [["(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["[235-9]"]]]], "VA": ["39", "00", "0\\d{5,10}|3[0-8]\\d{7,10}|55\\d{8}|8\\d{5}(?:\\d{2,4})?|(?:1\\d|39)\\d{7,8}", [6, 7, 8, 9, 10, 11, 12], 0, 0, 0, 0, 0, 0, "06698"], "VC": ["1", "011", "(?:[58]\\d\\d|784|900)\\d{7}", [10], 0, "1", 0, "([2-7]\\d{6})$|1", "784$1", 0, "784"], "VE": ["58", "00", "[68]00\\d{7}|(?:[24]\\d|[59]0)\\d{8}", [10], [["(\\d{3})(\\d{7})", "$1-$2", ["[24-689]"], "0$1"]], "0"], "VG": ["1", "011", "(?:284|[58]\\d\\d|900)\\d{7}", [10], 0, "1", 0, "([2-578]\\d{6})$|1", "284$1", 0, "284"], "VI": ["1", "011", "[58]\\d{9}|(?:34|90)0\\d{7}", [10], 0, "1", 0, "([2-9]\\d{6})$|1", "340$1", 0, "340"], "VN": ["84", "00", "[12]\\d{9}|[135-9]\\d{8}|[16]\\d{7}|[16-8]\\d{6}", [7, 8, 9, 10], [["(\\d{2})(\\d{5})", "$1 $2", ["80"], "0$1", 1], ["(\\d{4})(\\d{4,6})", "$1 $2", ["1"], 0, 1], ["(\\d{2})(\\d{3})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["6"], "0$1", 1], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[357-9]"], "0$1", 1], ["(\\d{2})(\\d{4})(\\d{4})", "$1 $2 $3", ["2[48]"], "0$1", 1], ["(\\d{3})(\\d{4})(\\d{3})", "$1 $2 $3", ["2"], "0$1", 1]], "0"], "VU": ["678", "00", "[57-9]\\d{6}|(?:[238]\\d|48)\\d{3}", [5, 7], [["(\\d{3})(\\d{4})", "$1 $2", ["[57-9]"]]]], "WF": ["681", "00", "(?:40|72|8\\d{4})\\d{4}|[89]\\d{5}", [6, 9], [["(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3", ["[47-9]"]], ["(\\d{3})(\\d{2})(\\d{2})(\\d{2})", "$1 $2 $3 $4", ["8"]]]], "WS": ["685", "0", "(?:[2-6]|8\\d{5})\\d{4}|[78]\\d{6}|[68]\\d{5}", [5, 6, 7, 10], [["(\\d{5})", "$1", ["[2-5]|6[1-9]"]], ["(\\d{3})(\\d{3,7})", "$1 $2", ["[68]"]], ["(\\d{2})(\\d{5})", "$1 $2", ["7"]]]], "XK": ["383", "00", "2\\d{7,8}|3\\d{7,11}|(?:4\\d\\d|[89]00)\\d{5}", [8, 9, 10, 11, 12], [["(\\d{3})(\\d{5})", "$1 $2", ["[89]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3})", "$1 $2 $3", ["[2-4]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["2|39"], "0$1"], ["(\\d{2})(\\d{7,10})", "$1 $2", ["3"], "0$1"]], "0"], "YE": ["967", "00", "(?:1|7\\d)\\d{7}|[1-7]\\d{6}", [7, 8, 9], [["(\\d)(\\d{3})(\\d{3,4})", "$1 $2 $3", ["[1-6]|7(?:[24-6]|8[0-7])"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["7"], "0$1"]], "0"], "YT": ["262", "00", "7093\\d{5}|(?:80|9\\d)\\d{7}|(?:26|63)9\\d{6}", [9], 0, "0", 0, 0, 0, 0, 0, [["269(?:0[0-467]|15|5[0-4]|6\\d|[78]0)\\d{4}"], ["(?:639(?:0[0-79]|1[019]|[267]\\d|3[09]|40|5[05-9]|9[04-79])|7093[5-7])\\d{4}"], ["80\\d{7}"], 0, 0, 0, 0, 0, ["9(?:(?:39|47)8[01]|769\\d)\\d{4}"]]], "ZA": ["27", "00", "[1-79]\\d{8}|8\\d{4,9}", [5, 6, 7, 8, 9, 10], [["(\\d{2})(\\d{3,4})", "$1 $2", ["8[1-4]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{2,3})", "$1 $2 $3", ["8[1-4]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["860"], "0$1"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["[1-9]"], "0$1"], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["8"], "0$1"]], "0"], "ZM": ["260", "00", "800\\d{6}|(?:21|[579]\\d|63)\\d{7}", [9], [["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[28]"], "0$1"], ["(\\d{2})(\\d{7})", "$1 $2", ["[579]"], "0$1"]], "0"], "ZW": ["263", "00", "2(?:[0-57-9]\\d{6,8}|6[0-24-9]\\d{6,7})|[38]\\d{9}|[35-8]\\d{8}|[3-6]\\d{7}|[1-689]\\d{6}|[1-3569]\\d{5}|[1356]\\d{4}", [5, 6, 7, 8, 9, 10], [["(\\d{3})(\\d{3,5})", "$1 $2", ["2(?:0[45]|2[278]|[49]8)|3(?:[09]8|17)|6(?:[29]8|37|75)|[23][78]|(?:33|5[15]|6[68])[78]"], "0$1"], ["(\\d)(\\d{3})(\\d{2,4})", "$1 $2 $3", ["[49]"], "0$1"], ["(\\d{3})(\\d{4})", "$1 $2", ["80"], "0$1"], ["(\\d{2})(\\d{7})", "$1 $2", ["24|8[13-59]|(?:2[05-79]|39|5[45]|6[15-8])2", "2(?:02[014]|4|[56]20|[79]2)|392|5(?:42|525)|6(?:[16-8]21|52[013])|8[13-59]"], "(0$1)"], ["(\\d{2})(\\d{3})(\\d{4})", "$1 $2 $3", ["7"], "0$1"], ["(\\d{3})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["2(?:1[39]|2[0157]|[378]|[56][14])|3(?:12|29)", "2(?:1[39]|2[0157]|[378]|[56][14])|3(?:123|29)"], "0$1"], ["(\\d{4})(\\d{6})", "$1 $2", ["8"], "0$1"], ["(\\d{2})(\\d{3,5})", "$1 $2", ["1|2(?:0[0-36-9]|12|29|[56])|3(?:1[0-689]|[24-6])|5(?:[0236-9]|1[2-4])|6(?:[013-59]|7[0-46-9])|(?:33|55|6[68])[0-69]|(?:29|3[09]|62)[0-79]"], "0$1"], ["(\\d{2})(\\d{3})(\\d{3,4})", "$1 $2 $3", ["29[013-9]|39|54"], "0$1"], ["(\\d{4})(\\d{3,5})", "$1 $2", ["(?:25|54)8", "258|5483"], "0$1"]], "0"] }, "nonGeographic": { "800": ["800", 0, "(?:00|[1-9]\\d)\\d{6}", [8], [["(\\d{4})(\\d{4})", "$1 $2", ["\\d"]]], 0, 0, 0, 0, 0, 0, [0, 0, ["(?:00|[1-9]\\d)\\d{6}"]]], "808": ["808", 0, "[1-9]\\d{7}", [8], [["(\\d{4})(\\d{4})", "$1 $2", ["[1-9]"]]], 0, 0, 0, 0, 0, 0, [0, 0, 0, 0, 0, 0, 0, 0, 0, ["[1-9]\\d{7}"]]], "870": ["870", 0, "7\\d{11}|[235-7]\\d{8}", [9, 12], [["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["[235-7]"]]], 0, 0, 0, 0, 0, 0, [0, ["(?:[356]|774[45])\\d{8}|7[6-8]\\d{7}"], 0, 0, 0, 0, 0, 0, ["2\\d{8}", [9]]]], "878": ["878", 0, "10\\d{10}", [12], [["(\\d{2})(\\d{5})(\\d{5})", "$1 $2 $3", ["1"]]], 0, 0, 0, 0, 0, 0, [0, 0, 0, 0, 0, 0, 0, 0, ["10\\d{10}"]]], "881": ["881", 0, "6\\d{9}|[0-36-9]\\d{8}", [9, 10], [["(\\d)(\\d{3})(\\d{5})", "$1 $2 $3", ["[0-37-9]"]], ["(\\d)(\\d{3})(\\d{5,6})", "$1 $2 $3", ["6"]]], 0, 0, 0, 0, 0, 0, [0, ["6\\d{9}|[0-36-9]\\d{8}"]]], "882": ["882", 0, "[13]\\d{6}(?:\\d{2,5})?|[19]\\d{7}|(?:[25]\\d\\d|4)\\d{7}(?:\\d{2})?", [7, 8, 9, 10, 11, 12], [["(\\d{2})(\\d{5})", "$1 $2", ["16|342"]], ["(\\d{2})(\\d{6})", "$1 $2", ["49"]], ["(\\d{2})(\\d{2})(\\d{4})", "$1 $2 $3", ["1[36]|9"]], ["(\\d{2})(\\d{4})(\\d{3})", "$1 $2 $3", ["3[23]"]], ["(\\d{2})(\\d{3,4})(\\d{4})", "$1 $2 $3", ["16"]], ["(\\d{2})(\\d{4})(\\d{4})", "$1 $2 $3", ["10|23|3(?:[15]|4[57])|4|51"]], ["(\\d{3})(\\d{4})(\\d{4})", "$1 $2 $3", ["34"]], ["(\\d{2})(\\d{4,5})(\\d{5})", "$1 $2 $3", ["[1-35]"]]], 0, 0, 0, 0, 0, 0, [0, ["342\\d{4}|(?:337|49)\\d{6}|(?:3(?:2|47|7\\d{3})|50\\d{3})\\d{7}", [7, 8, 9, 10, 12]], 0, 0, 0, ["348[57]\\d{7}", [11]], 0, 0, ["1(?:3(?:0[0347]|[13][0139]|2[035]|4[013568]|6[0459]|7[06]|8[15-8]|9[0689])\\d{4}|6\\d{5,10})|(?:345\\d|9[89])\\d{6}|(?:10|2(?:3|85\\d)|3(?:[15]|[69]\\d\\d)|4[15-8]|51)\\d{8}"]]], "883": ["883", 0, "(?:[1-4]\\d|51)\\d{6,10}", [8, 9, 10, 11, 12], [["(\\d{3})(\\d{3})(\\d{2,8})", "$1 $2 $3", ["[14]|2[24-689]|3[02-689]|51[24-9]"]], ["(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3", ["510"]], ["(\\d{3})(\\d{3})(\\d{4})", "$1 $2 $3", ["21"]], ["(\\d{4})(\\d{4})(\\d{4})", "$1 $2 $3", ["51[13]"]], ["(\\d{3})(\\d{3})(\\d{3})(\\d{3})", "$1 $2 $3 $4", ["[235]"]]], 0, 0, 0, 0, 0, 0, [0, 0, 0, 0, 0, 0, 0, 0, ["(?:2(?:00\\d\\d|10)|(?:370[1-9]|51\\d0)\\d)\\d{7}|51(?:00\\d{5}|[24-9]0\\d{4,7})|(?:1[0-79]|2[24-689]|3[02-689]|4[0-4])0\\d{5,9}"]]], "888": ["888", 0, "\\d{11}", [11], [["(\\d{3})(\\d{3})(\\d{5})", "$1 $2 $3"]], 0, 0, 0, 0, 0, 0, [0, 0, 0, 0, 0, 0, ["\\d{11}"]]], "979": ["979", 0, "[1359]\\d{8}", [9], [["(\\d)(\\d{4})(\\d{4})", "$1 $2 $3", ["[1359]"]]], 0, 0, 0, 0, 0, 0, [0, 0, 0, ["[1359]\\d{8}"]]] } };
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/withMetadataArgument.js
+function withMetadataArgument(func, _arguments) {
+  var args = Array.prototype.slice.call(_arguments);
+  args.push(metadata_min_json_default);
+  return func.apply(this, args);
+}
+var init_withMetadataArgument = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/withMetadataArgument.js"() {
+    init_metadata_min_json();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/tools/semver-compare.js
+function semver_compare_default(a2, b2) {
+  a2 = a2.split("-");
+  b2 = b2.split("-");
+  var pa = a2[0].split(".");
+  var pb = b2[0].split(".");
+  for (var i2 = 0; i2 < 3; i2++) {
+    var na = Number(pa[i2]);
+    var nb = Number(pb[i2]);
+    if (na > nb) return 1;
+    if (nb > na) return -1;
+    if (!isNaN(na) && isNaN(nb)) return 1;
+    if (isNaN(na) && !isNaN(nb)) return -1;
+  }
+  if (a2[1] && b2[1]) {
+    return a2[1] > b2[1] ? 1 : a2[1] < b2[1] ? -1 : 0;
+  }
+  return !a2[1] && b2[1] ? 1 : a2[1] && !b2[1] ? -1 : 0;
+}
+var init_semver_compare = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/tools/semver-compare.js"() {
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/isObject.js
+function isObject2(object) {
+  return object !== void 0 && object !== null && object.constructor === objectConstructor;
+}
+var objectConstructor;
+var init_isObject = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/isObject.js"() {
+    objectConstructor = {}.constructor;
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/metadata.js
+function _typeof(o2) {
+  "@babel/helpers - typeof";
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof(o2);
+}
+function _classCallCheck(a2, n2) {
+  if (!(a2 instanceof n2)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties(e2, r3) {
+  for (var t2 = 0; t2 < r3.length; t2++) {
+    var o2 = r3[t2];
+    o2.enumerable = o2.enumerable || false, o2.configurable = true, "value" in o2 && (o2.writable = true), Object.defineProperty(e2, _toPropertyKey(o2.key), o2);
+  }
+}
+function _createClass(e2, r3, t2) {
+  return r3 && _defineProperties(e2.prototype, r3), t2 && _defineProperties(e2, t2), Object.defineProperty(e2, "prototype", { writable: false }), e2;
+}
+function _toPropertyKey(t2) {
+  var i2 = _toPrimitive(t2, "string");
+  return "symbol" == _typeof(i2) ? i2 : i2 + "";
+}
+function _toPrimitive(t2, r3) {
+  if ("object" != _typeof(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function getType(types, type) {
+  switch (type) {
+    case "FIXED_LINE":
+      return types[0];
+    case "MOBILE":
+      return types[1];
+    case "TOLL_FREE":
+      return types[2];
+    case "PREMIUM_RATE":
+      return types[3];
+    case "PERSONAL_NUMBER":
+      return types[4];
+    case "VOICEMAIL":
+      return types[5];
+    case "UAN":
+      return types[6];
+    case "PAGER":
+      return types[7];
+    case "VOIP":
+      return types[8];
+    case "SHARED_COST":
+      return types[9];
+  }
+}
+function validateMetadata(metadata) {
+  if (!metadata) {
+    throw new Error("[libphonenumber-js] `metadata` argument not passed. Check your arguments.");
+  }
+  if (!isObject2(metadata) || !isObject2(metadata.countries)) {
+    throw new Error("[libphonenumber-js] `metadata` argument was passed but it's not a valid metadata. Must be an object having `.countries` child object property. Got ".concat(isObject2(metadata) ? "an object of shape: { " + Object.keys(metadata).join(", ") + " }" : "a " + typeOf(metadata) + ": " + metadata, "."));
+  }
+}
+function getExtPrefix(country2, metadata) {
+  metadata = new Metadata(metadata);
+  if (metadata.hasCountry(country2)) {
+    return metadata.selectNumberingPlan(country2).ext();
+  }
+  return DEFAULT_EXT_PREFIX;
+}
+function getCountryCallingCode(country2, metadata) {
+  metadata = new Metadata(metadata);
+  if (metadata.hasCountry(country2)) {
+    return metadata.selectNumberingPlan(country2).countryCallingCode();
+  }
+  throw new Error("Unknown country: ".concat(country2));
+}
+function isSupportedCountry(country2, metadata) {
+  return metadata.countries.hasOwnProperty(country2);
+}
+function setVersion(metadata) {
+  var version3 = metadata.version;
+  if (typeof version3 === "number") {
+    this.v1 = version3 === 1;
+    this.v2 = version3 === 2;
+    this.v3 = version3 === 3;
+    this.v4 = version3 === 4;
+  } else {
+    if (!version3) {
+      this.v1 = true;
+    } else if (semver_compare_default(version3, V3) === -1) {
+      this.v2 = true;
+    } else if (semver_compare_default(version3, V4) === -1) {
+      this.v3 = true;
+    } else {
+      this.v4 = true;
+    }
+  }
+}
+var V3, V4, DEFAULT_EXT_PREFIX, CALLING_CODE_REG_EXP, Metadata, NumberingPlan, Format, FIRST_GROUP_ONLY_PREFIX_PATTERN, Type, typeOf;
+var init_metadata = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/metadata.js"() {
+    init_semver_compare();
+    init_isObject();
+    V3 = "1.2.0";
+    V4 = "1.7.35";
+    DEFAULT_EXT_PREFIX = " ext. ";
+    CALLING_CODE_REG_EXP = /^\d+$/;
+    Metadata = /* @__PURE__ */ (function() {
+      function Metadata3(metadata) {
+        _classCallCheck(this, Metadata3);
+        validateMetadata(metadata);
+        this.metadata = metadata;
+        setVersion.call(this, metadata);
+      }
+      return _createClass(Metadata3, [{
+        key: "getCountries",
+        value: function getCountries3() {
+          return Object.keys(this.metadata.countries).filter(function(_) {
+            return _ !== "001";
+          });
+        }
+      }, {
+        key: "getCountryMetadata",
+        value: function getCountryMetadata(countryCode) {
+          return this.metadata.countries[countryCode];
+        }
+      }, {
+        key: "nonGeographic",
+        value: function nonGeographic() {
+          if (this.v1 || this.v2 || this.v3) return;
+          return this.metadata.nonGeographic || this.metadata.nonGeographical;
+        }
+      }, {
+        key: "hasCountry",
+        value: function hasCountry(country2) {
+          return this.getCountryMetadata(country2) !== void 0;
+        }
+      }, {
+        key: "hasCallingCode",
+        value: function hasCallingCode(callingCode) {
+          if (this.getCountryCodesForCallingCode(callingCode)) {
+            return true;
+          }
+          if (this.nonGeographic()) {
+            if (this.nonGeographic()[callingCode]) {
+              return true;
+            }
+          } else {
+            var countryCodes = this.countryCallingCodes()[callingCode];
+            if (countryCodes && countryCodes.length === 1 && countryCodes[0] === "001") {
+              return true;
+            }
+          }
+        }
+      }, {
+        key: "isNonGeographicCallingCode",
+        value: function isNonGeographicCallingCode(callingCode) {
+          if (this.nonGeographic()) {
+            return this.nonGeographic()[callingCode] ? true : false;
+          } else {
+            return this.getCountryCodesForCallingCode(callingCode) ? false : true;
+          }
+        }
+        // Deprecated.
+      }, {
+        key: "country",
+        value: function country2(countryCode) {
+          return this.selectNumberingPlan(countryCode);
+        }
+      }, {
+        key: "selectNumberingPlan",
+        value: function selectNumberingPlan(countryCode, callingCode) {
+          if (countryCode && CALLING_CODE_REG_EXP.test(countryCode)) {
+            callingCode = countryCode;
+            countryCode = null;
+          }
+          if (countryCode && countryCode !== "001") {
+            if (!this.hasCountry(countryCode)) {
+              throw new Error("Unknown country: ".concat(countryCode));
+            }
+            this.numberingPlan = new NumberingPlan(this.getCountryMetadata(countryCode), this);
+          } else if (callingCode) {
+            if (!this.hasCallingCode(callingCode)) {
+              throw new Error("Unknown calling code: ".concat(callingCode));
+            }
+            this.numberingPlan = new NumberingPlan(this.getNumberingPlanMetadata(callingCode), this);
+          } else {
+            this.numberingPlan = void 0;
+          }
+          return this;
+        }
+      }, {
+        key: "getCountryCodesForCallingCode",
+        value: function getCountryCodesForCallingCode(callingCode) {
+          var countryCodes = this.countryCallingCodes()[callingCode];
+          if (countryCodes) {
+            if (countryCodes.length === 1 && countryCodes[0].length === 3) {
+              return;
+            }
+            return countryCodes;
+          }
+        }
+      }, {
+        key: "getCountryCodeForCallingCode",
+        value: function getCountryCodeForCallingCode(callingCode) {
+          var countryCodes = this.getCountryCodesForCallingCode(callingCode);
+          if (countryCodes) {
+            return countryCodes[0];
+          }
+        }
+      }, {
+        key: "getNumberingPlanMetadata",
+        value: function getNumberingPlanMetadata(callingCode) {
+          var countryCode = this.getCountryCodeForCallingCode(callingCode);
+          if (countryCode) {
+            return this.getCountryMetadata(countryCode);
+          }
+          if (this.nonGeographic()) {
+            var metadata = this.nonGeographic()[callingCode];
+            if (metadata) {
+              return metadata;
+            }
+          } else {
+            var countryCodes = this.countryCallingCodes()[callingCode];
+            if (countryCodes && countryCodes.length === 1 && countryCodes[0] === "001") {
+              return this.metadata.countries["001"];
+            }
+          }
+        }
+        // Deprecated.
+      }, {
+        key: "countryCallingCode",
+        value: function countryCallingCode() {
+          return this.numberingPlan.callingCode();
+        }
+        // Deprecated.
+      }, {
+        key: "IDDPrefix",
+        value: function IDDPrefix() {
+          return this.numberingPlan.IDDPrefix();
+        }
+        // Deprecated.
+      }, {
+        key: "defaultIDDPrefix",
+        value: function defaultIDDPrefix() {
+          return this.numberingPlan.defaultIDDPrefix();
+        }
+        // Deprecated.
+      }, {
+        key: "nationalNumberPattern",
+        value: function nationalNumberPattern() {
+          return this.numberingPlan.nationalNumberPattern();
+        }
+        // Deprecated.
+      }, {
+        key: "possibleLengths",
+        value: function possibleLengths() {
+          return this.numberingPlan.possibleLengths();
+        }
+        // Deprecated.
+      }, {
+        key: "formats",
+        value: function formats() {
+          return this.numberingPlan.formats();
+        }
+        // Deprecated.
+      }, {
+        key: "nationalPrefixForParsing",
+        value: function nationalPrefixForParsing() {
+          return this.numberingPlan.nationalPrefixForParsing();
+        }
+        // Deprecated.
+      }, {
+        key: "nationalPrefixTransformRule",
+        value: function nationalPrefixTransformRule() {
+          return this.numberingPlan.nationalPrefixTransformRule();
+        }
+        // Deprecated.
+      }, {
+        key: "leadingDigits",
+        value: function leadingDigits() {
+          return this.numberingPlan.leadingDigits();
+        }
+        // Deprecated.
+      }, {
+        key: "hasTypes",
+        value: function hasTypes() {
+          return this.numberingPlan.hasTypes();
+        }
+        // Deprecated.
+      }, {
+        key: "type",
+        value: function type(_type) {
+          return this.numberingPlan.type(_type);
+        }
+        // Deprecated.
+      }, {
+        key: "ext",
+        value: function ext() {
+          return this.numberingPlan.ext();
+        }
+      }, {
+        key: "countryCallingCodes",
+        value: function countryCallingCodes() {
+          if (this.v1) return this.metadata.country_phone_code_to_countries;
+          return this.metadata.country_calling_codes;
+        }
+        // Deprecated.
+      }, {
+        key: "chooseCountryByCountryCallingCode",
+        value: function chooseCountryByCountryCallingCode(callingCode) {
+          return this.selectNumberingPlan(callingCode);
+        }
+      }, {
+        key: "hasSelectedNumberingPlan",
+        value: function hasSelectedNumberingPlan() {
+          return this.numberingPlan !== void 0;
+        }
+      }]);
+    })();
+    NumberingPlan = /* @__PURE__ */ (function() {
+      function NumberingPlan2(metadata, globalMetadataObject) {
+        _classCallCheck(this, NumberingPlan2);
+        this.globalMetadataObject = globalMetadataObject;
+        this.metadata = metadata;
+        setVersion.call(this, globalMetadataObject.metadata);
+      }
+      return _createClass(NumberingPlan2, [{
+        key: "callingCode",
+        value: function callingCode() {
+          return this.metadata[0];
+        }
+        // Formatting information for regions which share
+        // a country calling code is contained by only one region
+        // for performance reasons. For example, for NANPA region
+        // ("North American Numbering Plan Administration",
+        //  which includes USA, Canada, Cayman Islands, Bahamas, etc)
+        // it will be contained in the metadata for `US`.
+      }, {
+        key: "getDefaultCountryMetadataForRegion",
+        value: function getDefaultCountryMetadataForRegion() {
+          return this.globalMetadataObject.getNumberingPlanMetadata(this.callingCode());
+        }
+        // Is always present.
+      }, {
+        key: "IDDPrefix",
+        value: function IDDPrefix() {
+          if (this.v1 || this.v2) return;
+          return this.metadata[1];
+        }
+        // Is only present when a country supports multiple IDD prefixes.
+      }, {
+        key: "defaultIDDPrefix",
+        value: function defaultIDDPrefix() {
+          if (this.v1 || this.v2) return;
+          return this.metadata[12];
+        }
+      }, {
+        key: "nationalNumberPattern",
+        value: function nationalNumberPattern() {
+          if (this.v1 || this.v2) return this.metadata[1];
+          return this.metadata[2];
+        }
+        // "possible length" data is always present in Google's metadata.
+      }, {
+        key: "possibleLengths",
+        value: function possibleLengths() {
+          if (this.v1) return;
+          return this.metadata[this.v2 ? 2 : 3];
+        }
+      }, {
+        key: "_getFormats",
+        value: function _getFormats(metadata) {
+          return metadata[this.v1 ? 2 : this.v2 ? 3 : 4];
+        }
+        // For countries of the same region (e.g. NANPA)
+        // formats are all stored in the "main" country for that region.
+        // E.g. "RU" and "KZ", "US" and "CA".
+      }, {
+        key: "formats",
+        value: function formats() {
+          var _this = this;
+          var formats2 = this._getFormats(this.metadata) || this._getFormats(this.getDefaultCountryMetadataForRegion()) || [];
+          return formats2.map(function(_) {
+            return new Format(_, _this);
+          });
+        }
+      }, {
+        key: "nationalPrefix",
+        value: function nationalPrefix() {
+          return this.metadata[this.v1 ? 3 : this.v2 ? 4 : 5];
+        }
+      }, {
+        key: "_getNationalPrefixFormattingRule",
+        value: function _getNationalPrefixFormattingRule(metadata) {
+          return metadata[this.v1 ? 4 : this.v2 ? 5 : 6];
+        }
+        // For countries of the same region (e.g. NANPA)
+        // national prefix formatting rule is stored in the "main" country for that region.
+        // E.g. "RU" and "KZ", "US" and "CA".
+      }, {
+        key: "nationalPrefixFormattingRule",
+        value: function nationalPrefixFormattingRule() {
+          return this._getNationalPrefixFormattingRule(this.metadata) || this._getNationalPrefixFormattingRule(this.getDefaultCountryMetadataForRegion());
+        }
+      }, {
+        key: "_nationalPrefixForParsing",
+        value: function _nationalPrefixForParsing() {
+          return this.metadata[this.v1 ? 5 : this.v2 ? 6 : 7];
+        }
+      }, {
+        key: "nationalPrefixForParsing",
+        value: function nationalPrefixForParsing() {
+          return this._nationalPrefixForParsing() || this.nationalPrefix();
+        }
+      }, {
+        key: "nationalPrefixTransformRule",
+        value: function nationalPrefixTransformRule() {
+          return this.metadata[this.v1 ? 6 : this.v2 ? 7 : 8];
+        }
+      }, {
+        key: "_getNationalPrefixIsOptionalWhenFormatting",
+        value: function _getNationalPrefixIsOptionalWhenFormatting() {
+          return !!this.metadata[this.v1 ? 7 : this.v2 ? 8 : 9];
+        }
+        // For countries of the same region (e.g. NANPA)
+        // "national prefix is optional when formatting" flag is
+        // stored in the "main" country for that region.
+        // E.g. "RU" and "KZ", "US" and "CA".
+      }, {
+        key: "nationalPrefixIsOptionalWhenFormattingInNationalFormat",
+        value: function nationalPrefixIsOptionalWhenFormattingInNationalFormat() {
+          return this._getNationalPrefixIsOptionalWhenFormatting(this.metadata) || this._getNationalPrefixIsOptionalWhenFormatting(this.getDefaultCountryMetadataForRegion());
+        }
+      }, {
+        key: "leadingDigits",
+        value: function leadingDigits() {
+          return this.metadata[this.v1 ? 8 : this.v2 ? 9 : 10];
+        }
+      }, {
+        key: "types",
+        value: function types() {
+          return this.metadata[this.v1 ? 9 : this.v2 ? 10 : 11];
+        }
+      }, {
+        key: "hasTypes",
+        value: function hasTypes() {
+          if (this.types() && this.types().length === 0) {
+            return false;
+          }
+          return !!this.types();
+        }
+      }, {
+        key: "type",
+        value: function type(_type2) {
+          if (this.hasTypes() && getType(this.types(), _type2)) {
+            return new Type(getType(this.types(), _type2), this);
+          }
+        }
+      }, {
+        key: "ext",
+        value: function ext() {
+          if (this.v1 || this.v2) return DEFAULT_EXT_PREFIX;
+          return this.metadata[13] || DEFAULT_EXT_PREFIX;
+        }
+      }]);
+    })();
+    Format = /* @__PURE__ */ (function() {
+      function Format2(format7, metadata) {
+        _classCallCheck(this, Format2);
+        this._format = format7;
+        this.metadata = metadata;
+      }
+      return _createClass(Format2, [{
+        key: "pattern",
+        value: function pattern() {
+          return this._format[0];
+        }
+      }, {
+        key: "format",
+        value: function format7() {
+          return this._format[1];
+        }
+      }, {
+        key: "leadingDigitsPatterns",
+        value: function leadingDigitsPatterns() {
+          return this._format[2] || [];
+        }
+      }, {
+        key: "nationalPrefixFormattingRule",
+        value: function nationalPrefixFormattingRule() {
+          return this._format[3] || this.metadata.nationalPrefixFormattingRule();
+        }
+      }, {
+        key: "nationalPrefixIsOptionalWhenFormattingInNationalFormat",
+        value: function nationalPrefixIsOptionalWhenFormattingInNationalFormat() {
+          return !!this._format[4] || this.metadata.nationalPrefixIsOptionalWhenFormattingInNationalFormat();
+        }
+      }, {
+        key: "nationalPrefixIsMandatoryWhenFormattingInNationalFormat",
+        value: function nationalPrefixIsMandatoryWhenFormattingInNationalFormat() {
+          return this.usesNationalPrefix() && !this.nationalPrefixIsOptionalWhenFormattingInNationalFormat();
+        }
+        // Checks whether national prefix formatting rule contains national prefix.
+      }, {
+        key: "usesNationalPrefix",
+        value: function usesNationalPrefix() {
+          return this.nationalPrefixFormattingRule() && // Check that national prefix formatting rule is not a "dummy" one.
+          !FIRST_GROUP_ONLY_PREFIX_PATTERN.test(this.nationalPrefixFormattingRule()) ? true : false;
+        }
+      }, {
+        key: "internationalFormat",
+        value: function internationalFormat() {
+          return this._format[5] || this.format();
+        }
+      }]);
+    })();
+    FIRST_GROUP_ONLY_PREFIX_PATTERN = /^\(?\$1\)?$/;
+    Type = /* @__PURE__ */ (function() {
+      function Type2(type, metadata) {
+        _classCallCheck(this, Type2);
+        this.type = type;
+        this.metadata = metadata;
+      }
+      return _createClass(Type2, [{
+        key: "pattern",
+        value: function pattern() {
+          if (this.metadata.v1) return this.type;
+          return this.type[0];
+        }
+      }, {
+        key: "possibleLengths",
+        value: function possibleLengths() {
+          if (this.metadata.v1) return;
+          return this.type[1] || this.metadata.possibleLengths();
+        }
+      }]);
+    })();
+    typeOf = function typeOf2(_) {
+      return _typeof(_);
+    };
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/mergeArrays.js
+function _createForOfIteratorHelperLoose(r3, e2) {
+  var t2 = "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (t2) return (t2 = t2.call(r3)).next.bind(t2);
+  if (Array.isArray(r3) || (t2 = _unsupportedIterableToArray(r3)) || e2 && r3 && "number" == typeof r3.length) {
+    t2 && (r3 = t2);
+    var o2 = 0;
+    return function() {
+      return o2 >= r3.length ? { done: true } : { done: false, value: r3[o2++] };
+    };
+  }
+  throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray(r3, a2) {
+  if (r3) {
+    if ("string" == typeof r3) return _arrayLikeToArray(r3, a2);
+    var t2 = {}.toString.call(r3).slice(8, -1);
+    return "Object" === t2 && r3.constructor && (t2 = r3.constructor.name), "Map" === t2 || "Set" === t2 ? Array.from(r3) : "Arguments" === t2 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t2) ? _arrayLikeToArray(r3, a2) : void 0;
+  }
+}
+function _arrayLikeToArray(r3, a2) {
+  (null == a2 || a2 > r3.length) && (a2 = r3.length);
+  for (var e2 = 0, n2 = Array(a2); e2 < a2; e2++) n2[e2] = r3[e2];
+  return n2;
+}
+function mergeArrays(a2, b2) {
+  var merged = a2.slice();
+  for (var _iterator = _createForOfIteratorHelperLoose(b2), _step; !(_step = _iterator()).done; ) {
+    var element = _step.value;
+    if (a2.indexOf(element) < 0) {
+      merged.push(element);
+    }
+  }
+  return merged.sort(function(a3, b3) {
+    return a3 - b3;
+  });
+}
+var init_mergeArrays = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/mergeArrays.js"() {
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/checkNumberLength.js
+function checkNumberLength(nationalNumber, country2, metadata) {
+  return checkNumberLengthForType(nationalNumber, country2, void 0, metadata);
+}
+function checkNumberLengthForType(nationalNumber, country2, type, metadata) {
+  if (country2) {
+    metadata = new Metadata(metadata.metadata);
+    metadata.selectNumberingPlan(country2);
+  }
+  var type_info = metadata.type(type);
+  var possible_lengths = type_info && type_info.possibleLengths() || metadata.possibleLengths();
+  if (!possible_lengths) {
+    return "IS_POSSIBLE";
+  }
+  if (type === "FIXED_LINE_OR_MOBILE") {
+    if (!metadata.type("FIXED_LINE")) {
+      return checkNumberLengthForType(nationalNumber, country2, "MOBILE", metadata);
+    }
+    var mobile_type = metadata.type("MOBILE");
+    if (mobile_type) {
+      possible_lengths = mergeArrays(possible_lengths, mobile_type.possibleLengths());
+    }
+  } else if (type && !type_info) {
+    return "INVALID_LENGTH";
+  }
+  var actual_length = nationalNumber.length;
+  var minimum_length = possible_lengths[0];
+  if (minimum_length === actual_length) {
+    return "IS_POSSIBLE";
+  }
+  if (minimum_length > actual_length) {
+    return "TOO_SHORT";
+  }
+  if (possible_lengths[possible_lengths.length - 1] < actual_length) {
+    return "TOO_LONG";
+  }
+  return possible_lengths.indexOf(actual_length, 1) >= 0 ? "IS_POSSIBLE" : "INVALID_LENGTH";
+}
+var init_checkNumberLength = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/checkNumberLength.js"() {
+    init_metadata();
+    init_mergeArrays();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/isPossible.js
+function isPossiblePhoneNumber(input, options, metadata) {
+  if (options === void 0) {
+    options = {};
+  }
+  metadata = new Metadata(metadata);
+  if (options.v2) {
+    if (!input.countryCallingCode) {
+      throw new Error("Invalid phone number object passed");
+    }
+    metadata.selectNumberingPlan(input.countryCallingCode);
+  } else {
+    if (!input.phone) {
+      return false;
+    }
+    if (input.country) {
+      if (!metadata.hasCountry(input.country)) {
+        throw new Error("Unknown country: ".concat(input.country));
+      }
+      metadata.selectNumberingPlan(input.country);
+    } else {
+      if (!input.countryCallingCode) {
+        throw new Error("Invalid phone number object passed");
+      }
+      metadata.selectNumberingPlan(input.countryCallingCode);
+    }
+  }
+  if (metadata.possibleLengths()) {
+    return isPossibleNumber(input.phone || input.nationalNumber, input.country, metadata);
+  } else {
+    if (input.countryCallingCode && metadata.isNonGeographicCallingCode(input.countryCallingCode)) {
+      return true;
+    } else {
+      throw new Error('Missing "possibleLengths" in metadata. Perhaps the metadata has been generated before v1.0.18.');
+    }
+  }
+}
+function isPossibleNumber(nationalNumber, country2, metadata) {
+  switch (checkNumberLength(nationalNumber, country2, metadata)) {
+    case "IS_POSSIBLE":
+      return true;
+    // This library ignores "local-only" phone numbers (for simplicity).
+    // See the readme for more info on what are "local-only" phone numbers.
+    // case 'IS_POSSIBLE_LOCAL_ONLY':
+    // 	return !isInternational
+    default:
+      return false;
+  }
+}
+var init_isPossible = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/isPossible.js"() {
+    init_metadata();
+    init_checkNumberLength();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/matchesEntirely.js
+function matchesEntirely(text, regularExpressionText) {
+  text = text || "";
+  return new RegExp("^(?:" + regularExpressionText + ")$").test(text);
+}
+var init_matchesEntirely = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/matchesEntirely.js"() {
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/getNumberType.js
+function _createForOfIteratorHelperLoose2(r3, e2) {
+  var t2 = "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (t2) return (t2 = t2.call(r3)).next.bind(t2);
+  if (Array.isArray(r3) || (t2 = _unsupportedIterableToArray2(r3)) || e2 && r3 && "number" == typeof r3.length) {
+    t2 && (r3 = t2);
+    var o2 = 0;
+    return function() {
+      return o2 >= r3.length ? { done: true } : { done: false, value: r3[o2++] };
+    };
+  }
+  throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray2(r3, a2) {
+  if (r3) {
+    if ("string" == typeof r3) return _arrayLikeToArray2(r3, a2);
+    var t2 = {}.toString.call(r3).slice(8, -1);
+    return "Object" === t2 && r3.constructor && (t2 = r3.constructor.name), "Map" === t2 || "Set" === t2 ? Array.from(r3) : "Arguments" === t2 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t2) ? _arrayLikeToArray2(r3, a2) : void 0;
+  }
+}
+function _arrayLikeToArray2(r3, a2) {
+  (null == a2 || a2 > r3.length) && (a2 = r3.length);
+  for (var e2 = 0, n2 = Array(a2); e2 < a2; e2++) n2[e2] = r3[e2];
+  return n2;
+}
+function getNumberType(input, options, metadata) {
+  options = options || {};
+  if (!input.country && !input.countryCallingCode) {
+    return;
+  }
+  metadata = new Metadata(metadata);
+  metadata.selectNumberingPlan(input.country, input.countryCallingCode);
+  var nationalNumber = options.v2 ? input.nationalNumber : input.phone;
+  if (!matchesEntirely(nationalNumber, metadata.nationalNumberPattern())) {
+    return;
+  }
+  if (isNumberTypeEqualTo(nationalNumber, "FIXED_LINE", metadata)) {
+    if (metadata.type("MOBILE") && metadata.type("MOBILE").pattern() === "") {
+      return "FIXED_LINE_OR_MOBILE";
+    }
+    if (!metadata.type("MOBILE")) {
+      return "FIXED_LINE_OR_MOBILE";
+    }
+    if (isNumberTypeEqualTo(nationalNumber, "MOBILE", metadata)) {
+      return "FIXED_LINE_OR_MOBILE";
+    }
+    return "FIXED_LINE";
+  }
+  for (var _iterator = _createForOfIteratorHelperLoose2(NON_FIXED_LINE_PHONE_TYPES), _step; !(_step = _iterator()).done; ) {
+    var type = _step.value;
+    if (isNumberTypeEqualTo(nationalNumber, type, metadata)) {
+      return type;
+    }
+  }
+}
+function isNumberTypeEqualTo(nationalNumber, type, metadata) {
+  type = metadata.type(type);
+  if (!type || !type.pattern()) {
+    return false;
+  }
+  if (type.possibleLengths() && type.possibleLengths().indexOf(nationalNumber.length) < 0) {
+    return false;
+  }
+  return matchesEntirely(nationalNumber, type.pattern());
+}
+var NON_FIXED_LINE_PHONE_TYPES;
+var init_getNumberType = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/getNumberType.js"() {
+    init_metadata();
+    init_matchesEntirely();
+    NON_FIXED_LINE_PHONE_TYPES = ["MOBILE", "PREMIUM_RATE", "TOLL_FREE", "SHARED_COST", "VOIP", "PERSONAL_NUMBER", "PAGER", "UAN", "VOICEMAIL"];
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/isValid.js
+function isValidNumber(input, options, metadata) {
+  options = options || {};
+  metadata = new Metadata(metadata);
+  metadata.selectNumberingPlan(input.country, input.countryCallingCode);
+  if (metadata.hasTypes()) {
+    return getNumberType(input, options, metadata.metadata) !== void 0;
+  }
+  var nationalNumber = options.v2 ? input.nationalNumber : input.phone;
+  return matchesEntirely(nationalNumber, metadata.nationalNumberPattern());
+}
+var init_isValid = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/isValid.js"() {
+    init_metadata();
+    init_matchesEntirely();
+    init_getNumberType();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/getPossibleCountriesForNumber.js
+function getPossibleCountriesForNumber(callingCode, nationalNumber, metadata) {
+  var _metadata = new Metadata(metadata);
+  var possibleCountries = _metadata.getCountryCodesForCallingCode(callingCode);
+  if (!possibleCountries) {
+    return [];
+  }
+  return possibleCountries.filter(function(country2) {
+    return couldNationalNumberBelongToCountry(nationalNumber, country2, metadata);
+  });
+}
+function couldNationalNumberBelongToCountry(nationalNumber, country2, metadata) {
+  var _metadata = new Metadata(metadata);
+  _metadata.selectNumberingPlan(country2);
+  if (_metadata.numberingPlan.possibleLengths().indexOf(nationalNumber.length) >= 0) {
+    return true;
+  }
+  return false;
+}
+var init_getPossibleCountriesForNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/getPossibleCountriesForNumber.js"() {
+    init_metadata();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/constants.js
+var MIN_LENGTH_FOR_NSN, MAX_LENGTH_FOR_NSN, MAX_LENGTH_COUNTRY_CODE, VALID_DIGITS, DASHES, SLASHES, DOTS, WHITESPACE, BRACKETS, TILDES, VALID_PUNCTUATION, PLUS_CHARS;
+var init_constants = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/constants.js"() {
+    MIN_LENGTH_FOR_NSN = 2;
+    MAX_LENGTH_FOR_NSN = 17;
+    MAX_LENGTH_COUNTRY_CODE = 3;
+    VALID_DIGITS = "0-9\uFF10-\uFF19\u0660-\u0669\u06F0-\u06F9";
+    DASHES = "-\u2010-\u2015\u2212\u30FC\uFF0D";
+    SLASHES = "\uFF0F/";
+    DOTS = "\uFF0E.";
+    WHITESPACE = " \xA0\xAD\u200B\u2060\u3000";
+    BRACKETS = "()\uFF08\uFF09\uFF3B\uFF3D\\[\\]";
+    TILDES = "~\u2053\u223C\uFF5E";
+    VALID_PUNCTUATION = "".concat(DASHES).concat(SLASHES).concat(DOTS).concat(WHITESPACE).concat(BRACKETS).concat(TILDES);
+    PLUS_CHARS = "+\uFF0B";
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/stripIddPrefix.js
+function stripIddPrefix(number, country2, callingCode, metadata) {
+  if (!country2) {
+    return;
+  }
+  var countryMetadata = new Metadata(metadata);
+  countryMetadata.selectNumberingPlan(country2, callingCode);
+  var IDDPrefixPattern = new RegExp(countryMetadata.IDDPrefix());
+  if (number.search(IDDPrefixPattern) !== 0) {
+    return;
+  }
+  number = number.slice(number.match(IDDPrefixPattern)[0].length);
+  var matchedGroups = number.match(CAPTURING_DIGIT_PATTERN);
+  if (matchedGroups && matchedGroups[1] != null && matchedGroups[1].length > 0) {
+    if (matchedGroups[1] === "0") {
+      return;
+    }
+  }
+  return number;
+}
+var CAPTURING_DIGIT_PATTERN;
+var init_stripIddPrefix = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/stripIddPrefix.js"() {
+    init_metadata();
+    init_constants();
+    CAPTURING_DIGIT_PATTERN = new RegExp("([" + VALID_DIGITS + "])");
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extractNationalNumberFromPossiblyIncompleteNumber.js
+function extractNationalNumberFromPossiblyIncompleteNumber(number, metadata) {
+  if (number && metadata.numberingPlan.nationalPrefixForParsing()) {
+    var prefixPattern = new RegExp("^(?:" + metadata.numberingPlan.nationalPrefixForParsing() + ")");
+    var prefixMatch = prefixPattern.exec(number);
+    if (prefixMatch) {
+      var nationalNumber;
+      var carrierCode;
+      var capturedGroupsCount = prefixMatch.length - 1;
+      var hasCapturedGroups = capturedGroupsCount > 0 && prefixMatch[capturedGroupsCount];
+      if (metadata.nationalPrefixTransformRule() && hasCapturedGroups) {
+        nationalNumber = number.replace(prefixPattern, metadata.nationalPrefixTransformRule());
+        if (capturedGroupsCount > 1) {
+          carrierCode = prefixMatch[1];
+        }
+      } else {
+        var prefixBeforeNationalNumber = prefixMatch[0];
+        nationalNumber = number.slice(prefixBeforeNationalNumber.length);
+        if (hasCapturedGroups) {
+          carrierCode = prefixMatch[1];
+        }
+      }
+      var nationalPrefix;
+      if (hasCapturedGroups) {
+        var possiblePositionOfTheFirstCapturedGroup = number.indexOf(prefixMatch[1]);
+        var possibleNationalPrefix = number.slice(0, possiblePositionOfTheFirstCapturedGroup);
+        if (possibleNationalPrefix === metadata.numberingPlan.nationalPrefix()) {
+          nationalPrefix = metadata.numberingPlan.nationalPrefix();
+        }
+      } else {
+        nationalPrefix = prefixMatch[0];
+      }
+      return {
+        nationalNumber,
+        nationalPrefix,
+        carrierCode
+      };
+    }
+  }
+  return {
+    nationalNumber: number
+  };
+}
+var init_extractNationalNumberFromPossiblyIncompleteNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extractNationalNumberFromPossiblyIncompleteNumber.js"() {
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/getCountryByNationalNumber.js
+function _createForOfIteratorHelperLoose3(r3, e2) {
+  var t2 = "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (t2) return (t2 = t2.call(r3)).next.bind(t2);
+  if (Array.isArray(r3) || (t2 = _unsupportedIterableToArray3(r3)) || e2 && r3 && "number" == typeof r3.length) {
+    t2 && (r3 = t2);
+    var o2 = 0;
+    return function() {
+      return o2 >= r3.length ? { done: true } : { done: false, value: r3[o2++] };
+    };
+  }
+  throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray3(r3, a2) {
+  if (r3) {
+    if ("string" == typeof r3) return _arrayLikeToArray3(r3, a2);
+    var t2 = {}.toString.call(r3).slice(8, -1);
+    return "Object" === t2 && r3.constructor && (t2 = r3.constructor.name), "Map" === t2 || "Set" === t2 ? Array.from(r3) : "Arguments" === t2 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t2) ? _arrayLikeToArray3(r3, a2) : void 0;
+  }
+}
+function _arrayLikeToArray3(r3, a2) {
+  (null == a2 || a2 > r3.length) && (a2 = r3.length);
+  for (var e2 = 0, n2 = Array(a2); e2 < a2; e2++) n2[e2] = r3[e2];
+  return n2;
+}
+function getCountryByNationalNumber(nationalPhoneNumber, _ref) {
+  var countries = _ref.countries, metadata = _ref.metadata;
+  metadata = new Metadata(metadata);
+  for (var _iterator = _createForOfIteratorHelperLoose3(countries), _step; !(_step = _iterator()).done; ) {
+    var country2 = _step.value;
+    metadata.selectNumberingPlan(country2);
+    if (metadata.leadingDigits()) {
+      if (nationalPhoneNumber && nationalPhoneNumber.search(metadata.leadingDigits()) === 0) {
+        return country2;
+      }
+    } else if (getNumberType({
+      phone: nationalPhoneNumber,
+      country: country2
+    }, void 0, metadata.metadata)) {
+      return country2;
+    }
+  }
+}
+var init_getCountryByNationalNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/getCountryByNationalNumber.js"() {
+    init_metadata();
+    init_getNumberType();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/getCountryByCallingCode.js
+function getCountryByCallingCode(callingCode, _ref) {
+  var nationalPhoneNumber = _ref.nationalNumber, metadata = _ref.metadata;
+  if (USE_NON_GEOGRAPHIC_COUNTRY_CODE) {
+    if (metadata.isNonGeographicCallingCode(callingCode)) {
+      return "001";
+    }
+  }
+  var possibleCountries = metadata.getCountryCodesForCallingCode(callingCode);
+  if (!possibleCountries) {
+    return;
+  }
+  if (possibleCountries.length === 1) {
+    return possibleCountries[0];
+  }
+  return getCountryByNationalNumber(nationalPhoneNumber, {
+    countries: possibleCountries,
+    metadata: metadata.metadata
+  });
+}
+var USE_NON_GEOGRAPHIC_COUNTRY_CODE;
+var init_getCountryByCallingCode = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/getCountryByCallingCode.js"() {
+    init_getCountryByNationalNumber();
+    USE_NON_GEOGRAPHIC_COUNTRY_CODE = false;
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extractNationalNumber.js
+function extractNationalNumber(number, country2, metadata) {
+  var _extractNationalNumbe = extractNationalNumberFromPossiblyIncompleteNumber(number, metadata), carrierCode = _extractNationalNumbe.carrierCode, nationalNumber = _extractNationalNumbe.nationalNumber;
+  if (nationalNumber !== number) {
+    if (!shouldHaveExtractedNationalPrefix(number, nationalNumber, metadata)) {
+      return {
+        nationalNumber: number
+      };
+    }
+    if (metadata.numberingPlan.possibleLengths()) {
+      if (!country2) {
+        country2 = getCountryByCallingCode(metadata.numberingPlan.callingCode(), {
+          nationalNumber,
+          metadata
+        });
+      }
+      if (!isPossibleIncompleteNationalNumber(nationalNumber, country2, metadata)) {
+        return {
+          nationalNumber: number
+        };
+      }
+    }
+  }
+  return {
+    nationalNumber,
+    carrierCode
+  };
+}
+function shouldHaveExtractedNationalPrefix(nationalNumberBefore, nationalNumberAfter, metadata) {
+  if (matchesEntirely(nationalNumberBefore, metadata.nationalNumberPattern()) && !matchesEntirely(nationalNumberAfter, metadata.nationalNumberPattern())) {
+    return false;
+  }
+  return true;
+}
+function isPossibleIncompleteNationalNumber(nationalNumber, country2, metadata) {
+  switch (checkNumberLength(nationalNumber, country2, metadata)) {
+    case "TOO_SHORT":
+    case "INVALID_LENGTH":
+      return false;
+    default:
+      return true;
+  }
+}
+var init_extractNationalNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extractNationalNumber.js"() {
+    init_extractNationalNumberFromPossiblyIncompleteNumber();
+    init_matchesEntirely();
+    init_checkNumberLength();
+    init_getCountryByCallingCode();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/getCountryCallingCode.js
+var init_getCountryCallingCode = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/getCountryCallingCode.js"() {
+    init_metadata();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extractCountryCallingCodeFromInternationalNumberWithoutPlusSign.js
+function extractCountryCallingCodeFromInternationalNumberWithoutPlusSign(number, country2, defaultCountry, defaultCallingCode, metadata) {
+  var countryCallingCode = country2 || defaultCountry ? getCountryCallingCode(country2 || defaultCountry, metadata) : defaultCallingCode;
+  if (number.indexOf(countryCallingCode) === 0) {
+    metadata = new Metadata(metadata);
+    metadata.selectNumberingPlan(country2 || defaultCountry, countryCallingCode);
+    var possibleShorterNumber = number.slice(countryCallingCode.length);
+    var _extractNationalNumbe = extractNationalNumber(possibleShorterNumber, country2, metadata), possibleShorterNationalNumber = _extractNationalNumbe.nationalNumber;
+    var _extractNationalNumbe2 = extractNationalNumber(number, country2, metadata), nationalNumber = _extractNationalNumbe2.nationalNumber;
+    if (!matchesEntirely(nationalNumber, metadata.nationalNumberPattern()) && matchesEntirely(possibleShorterNationalNumber, metadata.nationalNumberPattern()) || checkNumberLength(nationalNumber, country2, metadata) === "TOO_LONG") {
+      return {
+        countryCallingCode,
+        number: possibleShorterNumber
+      };
+    }
+  }
+  return {
+    number
+  };
+}
+var init_extractCountryCallingCodeFromInternationalNumberWithoutPlusSign = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extractCountryCallingCodeFromInternationalNumberWithoutPlusSign.js"() {
+    init_metadata();
+    init_matchesEntirely();
+    init_extractNationalNumber();
+    init_checkNumberLength();
+    init_getCountryCallingCode();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extractCountryCallingCode.js
+function extractCountryCallingCode(number, country2, defaultCountry, defaultCallingCode, metadata) {
+  if (!number) {
+    return {};
+  }
+  var isNumberWithIddPrefix;
+  if (number[0] !== "+") {
+    var numberWithoutIDD = stripIddPrefix(number, country2 || defaultCountry, defaultCallingCode, metadata);
+    if (numberWithoutIDD && numberWithoutIDD !== number) {
+      isNumberWithIddPrefix = true;
+      number = "+" + numberWithoutIDD;
+    } else {
+      if (country2 || defaultCountry || defaultCallingCode) {
+        var _extractCountryCallin = extractCountryCallingCodeFromInternationalNumberWithoutPlusSign(number, country2, defaultCountry, defaultCallingCode, metadata), countryCallingCode = _extractCountryCallin.countryCallingCode, shorterNumber = _extractCountryCallin.number;
+        if (countryCallingCode) {
+          return {
+            countryCallingCodeSource: "FROM_NUMBER_WITHOUT_PLUS_SIGN",
+            countryCallingCode,
+            number: shorterNumber
+          };
+        }
+      }
+      return {
+        // No need to set it to `UNSPECIFIED`. It can be just `undefined`.
+        // countryCallingCodeSource: 'UNSPECIFIED',
+        number
+      };
+    }
+  }
+  if (number[1] === "0") {
+    return {};
+  }
+  metadata = new Metadata(metadata);
+  var i2 = 2;
+  while (i2 - 1 <= MAX_LENGTH_COUNTRY_CODE && i2 <= number.length) {
+    var _countryCallingCode = number.slice(1, i2);
+    if (metadata.hasCallingCode(_countryCallingCode)) {
+      metadata.selectNumberingPlan(_countryCallingCode);
+      return {
+        countryCallingCodeSource: isNumberWithIddPrefix ? "FROM_NUMBER_WITH_IDD" : "FROM_NUMBER_WITH_PLUS_SIGN",
+        countryCallingCode: _countryCallingCode,
+        number: number.slice(i2)
+      };
+    }
+    i2++;
+  }
+  return {};
+}
+var init_extractCountryCallingCode = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extractCountryCallingCode.js"() {
+    init_stripIddPrefix();
+    init_extractCountryCallingCodeFromInternationalNumberWithoutPlusSign();
+    init_metadata();
+    init_constants();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/applyInternationalSeparatorStyle.js
+function applyInternationalSeparatorStyle(formattedNumber) {
+  return formattedNumber.replace(new RegExp("[".concat(VALID_PUNCTUATION, "]+"), "g"), " ").trim();
+}
+var init_applyInternationalSeparatorStyle = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/applyInternationalSeparatorStyle.js"() {
+    init_constants();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/formatNationalNumberUsingFormat.js
+function formatNationalNumberUsingFormat(number, format7, _ref) {
+  var useInternationalFormat = _ref.useInternationalFormat, withNationalPrefix = _ref.withNationalPrefix, carrierCode = _ref.carrierCode, metadata = _ref.metadata;
+  var formattedNumber = number.replace(new RegExp(format7.pattern()), useInternationalFormat ? format7.internationalFormat() : (
+    // This library doesn't use `domestic_carrier_code_formatting_rule`,
+    // because that one is only used when formatting phone numbers
+    // for dialing from a mobile phone, and this is not a dialing library.
+    // carrierCode && format.domesticCarrierCodeFormattingRule()
+    // 	// First, replace the $CC in the formatting rule with the desired carrier code.
+    // 	// Then, replace the $FG in the formatting rule with the first group
+    // 	// and the carrier code combined in the appropriate way.
+    // 	? format.format().replace(FIRST_GROUP_PATTERN, format.domesticCarrierCodeFormattingRule().replace('$CC', carrierCode))
+    // 	: (
+    // 		withNationalPrefix && format.nationalPrefixFormattingRule()
+    // 			? format.format().replace(FIRST_GROUP_PATTERN, format.nationalPrefixFormattingRule())
+    // 			: format.format()
+    // 	)
+    withNationalPrefix && format7.nationalPrefixFormattingRule() ? format7.format().replace(FIRST_GROUP_PATTERN, format7.nationalPrefixFormattingRule()) : format7.format()
+  ));
+  if (useInternationalFormat) {
+    return applyInternationalSeparatorStyle(formattedNumber);
+  }
+  return formattedNumber;
+}
+var FIRST_GROUP_PATTERN;
+var init_formatNationalNumberUsingFormat = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/formatNationalNumberUsingFormat.js"() {
+    init_applyInternationalSeparatorStyle();
+    FIRST_GROUP_PATTERN = /(\$\d)/;
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/getIddPrefix.js
+function getIddPrefix(country2, callingCode, metadata) {
+  var countryMetadata = new Metadata(metadata);
+  countryMetadata.selectNumberingPlan(country2, callingCode);
+  if (countryMetadata.defaultIDDPrefix()) {
+    return countryMetadata.defaultIDDPrefix();
+  }
+  if (SINGLE_IDD_PREFIX_REG_EXP.test(countryMetadata.IDDPrefix())) {
+    return countryMetadata.IDDPrefix();
+  }
+}
+var SINGLE_IDD_PREFIX_REG_EXP;
+var init_getIddPrefix = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/getIddPrefix.js"() {
+    init_metadata();
+    SINGLE_IDD_PREFIX_REG_EXP = /^[\d]+(?:[~\u2053\u223C\uFF5E][\d]+)?$/;
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extension/createExtensionPattern.js
+function createExtensionPattern(purpose) {
+  var extLimitAfterExplicitLabel = "20";
+  var extLimitAfterLikelyLabel = "15";
+  var extLimitAfterAmbiguousChar = "9";
+  var extLimitWhenNotSure = "6";
+  var possibleSeparatorsBetweenNumberAndExtLabel = "[ \xA0\\t,]*";
+  var possibleCharsAfterExtLabel = "[:\\.\uFF0E]?[ \xA0\\t,-]*";
+  var optionalExtnSuffix = "#?";
+  var explicitExtLabels = "(?:e?xt(?:ensi(?:o\u0301?|\xF3))?n?|\uFF45?\uFF58\uFF54\uFF4E?|\u0434\u043E\u0431|anexo)";
+  var ambiguousExtLabels = "(?:[x\uFF58#\uFF03~\uFF5E]|int|\uFF49\uFF4E\uFF54)";
+  var ambiguousSeparator = "[- ]+";
+  var possibleSeparatorsNumberExtLabelNoComma = "[ \xA0\\t]*";
+  var autoDiallingAndExtLabelsFound = "(?:,{2}|;)";
+  var rfcExtn = RFC3966_EXTN_PREFIX + getExtensionDigitsPattern(extLimitAfterExplicitLabel);
+  var explicitExtn = possibleSeparatorsBetweenNumberAndExtLabel + explicitExtLabels + possibleCharsAfterExtLabel + getExtensionDigitsPattern(extLimitAfterExplicitLabel) + optionalExtnSuffix;
+  var ambiguousExtn = possibleSeparatorsBetweenNumberAndExtLabel + ambiguousExtLabels + possibleCharsAfterExtLabel + getExtensionDigitsPattern(extLimitAfterAmbiguousChar) + optionalExtnSuffix;
+  var americanStyleExtnWithSuffix = ambiguousSeparator + getExtensionDigitsPattern(extLimitWhenNotSure) + "#";
+  var autoDiallingExtn = possibleSeparatorsNumberExtLabelNoComma + autoDiallingAndExtLabelsFound + possibleCharsAfterExtLabel + getExtensionDigitsPattern(extLimitAfterLikelyLabel) + optionalExtnSuffix;
+  var onlyCommasExtn = possibleSeparatorsNumberExtLabelNoComma + "(?:,)+" + possibleCharsAfterExtLabel + getExtensionDigitsPattern(extLimitAfterAmbiguousChar) + optionalExtnSuffix;
+  return rfcExtn + "|" + explicitExtn + "|" + ambiguousExtn + "|" + americanStyleExtnWithSuffix + "|" + autoDiallingExtn + "|" + onlyCommasExtn;
+}
+var RFC3966_EXTN_PREFIX, getExtensionDigitsPattern;
+var init_createExtensionPattern = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extension/createExtensionPattern.js"() {
+    init_constants();
+    RFC3966_EXTN_PREFIX = ";ext=";
+    getExtensionDigitsPattern = function getExtensionDigitsPattern2(maxLength) {
+      return "([".concat(VALID_DIGITS, "]{1,").concat(maxLength, "})");
+    };
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/isViablePhoneNumber.js
+function isViablePhoneNumber(number) {
+  return number.length >= MIN_LENGTH_FOR_NSN && VALID_PHONE_NUMBER_PATTERN.test(number);
+}
+function isViablePhoneNumberStart(number) {
+  return VALID_PHONE_NUMBER_START_REG_EXP.test(number);
+}
+var MIN_LENGTH_PHONE_NUMBER_PATTERN, VALID_PHONE_NUMBER, VALID_PHONE_NUMBER_START_REG_EXP, VALID_PHONE_NUMBER_WITH_EXTENSION, VALID_PHONE_NUMBER_PATTERN;
+var init_isViablePhoneNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/isViablePhoneNumber.js"() {
+    init_constants();
+    init_createExtensionPattern();
+    MIN_LENGTH_PHONE_NUMBER_PATTERN = "[" + VALID_DIGITS + "]{" + MIN_LENGTH_FOR_NSN + "}";
+    VALID_PHONE_NUMBER = "[" + PLUS_CHARS + "]{0,1}(?:[" + VALID_PUNCTUATION + "]*[" + VALID_DIGITS + "]){3,}[" + VALID_PUNCTUATION + VALID_DIGITS + "]*";
+    VALID_PHONE_NUMBER_START_REG_EXP = new RegExp("^[" + PLUS_CHARS + "]{0,1}(?:[" + VALID_PUNCTUATION + "]*[" + VALID_DIGITS + "]){1,2}$", "i");
+    VALID_PHONE_NUMBER_WITH_EXTENSION = VALID_PHONE_NUMBER + // Phone number extensions
+    "(?:" + createExtensionPattern() + ")?";
+    VALID_PHONE_NUMBER_PATTERN = new RegExp(
+      // Either a short two-digit-only phone number
+      "^" + MIN_LENGTH_PHONE_NUMBER_PATTERN + "$|^" + VALID_PHONE_NUMBER_WITH_EXTENSION + "$",
+      "i"
+    );
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/RFC3966.js
+function _slicedToArray(r3, e2) {
+  return _arrayWithHoles(r3) || _iterableToArrayLimit(r3, e2) || _unsupportedIterableToArray4(r3, e2) || _nonIterableRest();
+}
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _iterableToArrayLimit(r3, l2) {
+  var t2 = null == r3 ? null : "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (null != t2) {
+    var e2, n2, i2, u2, a2 = [], f2 = true, o2 = false;
+    try {
+      if (i2 = (t2 = t2.call(r3)).next, 0 === l2) {
+        if (Object(t2) !== t2) return;
+        f2 = false;
+      } else for (; !(f2 = (e2 = i2.call(t2)).done) && (a2.push(e2.value), a2.length !== l2); f2 = true) ;
+    } catch (r4) {
+      o2 = true, n2 = r4;
+    } finally {
+      try {
+        if (!f2 && null != t2["return"] && (u2 = t2["return"](), Object(u2) !== u2)) return;
+      } finally {
+        if (o2) throw n2;
+      }
+    }
+    return a2;
+  }
+}
+function _arrayWithHoles(r3) {
+  if (Array.isArray(r3)) return r3;
+}
+function _createForOfIteratorHelperLoose4(r3, e2) {
+  var t2 = "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (t2) return (t2 = t2.call(r3)).next.bind(t2);
+  if (Array.isArray(r3) || (t2 = _unsupportedIterableToArray4(r3)) || e2 && r3 && "number" == typeof r3.length) {
+    t2 && (r3 = t2);
+    var o2 = 0;
+    return function() {
+      return o2 >= r3.length ? { done: true } : { done: false, value: r3[o2++] };
+    };
+  }
+  throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray4(r3, a2) {
+  if (r3) {
+    if ("string" == typeof r3) return _arrayLikeToArray4(r3, a2);
+    var t2 = {}.toString.call(r3).slice(8, -1);
+    return "Object" === t2 && r3.constructor && (t2 = r3.constructor.name), "Map" === t2 || "Set" === t2 ? Array.from(r3) : "Arguments" === t2 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t2) ? _arrayLikeToArray4(r3, a2) : void 0;
+  }
+}
+function _arrayLikeToArray4(r3, a2) {
+  (null == a2 || a2 > r3.length) && (a2 = r3.length);
+  for (var e2 = 0, n2 = Array(a2); e2 < a2; e2++) n2[e2] = r3[e2];
+  return n2;
+}
+function parseRFC3966(text) {
+  var number;
+  var ext;
+  text = text.replace(/^tel:/, "tel=");
+  for (var _iterator = _createForOfIteratorHelperLoose4(text.split(";")), _step; !(_step = _iterator()).done; ) {
+    var part = _step.value;
+    var _part$split = part.split("="), _part$split2 = _slicedToArray(_part$split, 2), name = _part$split2[0], value = _part$split2[1];
+    switch (name) {
+      case "tel":
+        number = value;
+        break;
+      case "ext":
+        ext = value;
+        break;
+      case "phone-context":
+        if (value[0] === "+") {
+          number = value + number;
+        }
+        break;
+    }
+  }
+  if (!isViablePhoneNumber(number)) {
+    return {};
+  }
+  var result2 = {
+    number
+  };
+  if (ext) {
+    result2.ext = ext;
+  }
+  return result2;
+}
+function formatRFC3966(_ref) {
+  var number = _ref.number, ext = _ref.ext;
+  if (!number) {
+    return "";
+  }
+  if (number[0] !== "+") {
+    throw new Error('"formatRFC3966()" expects "number" to be in E.164 format.');
+  }
+  return "tel:".concat(number).concat(ext ? ";ext=" + ext : "");
+}
+var init_RFC3966 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/RFC3966.js"() {
+    init_isViablePhoneNumber();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/format.js
+function formatNumber3(input, format7, options, metadata) {
+  if (options) {
+    options = merge({}, DEFAULT_OPTIONS, options);
+  } else {
+    options = DEFAULT_OPTIONS;
+  }
+  metadata = new Metadata(metadata);
+  if (input.country && input.country !== "001") {
+    if (!metadata.hasCountry(input.country)) {
+      throw new Error("Unknown country: ".concat(input.country));
+    }
+    metadata.selectNumberingPlan(input.country);
+  } else if (input.countryCallingCode) {
+    metadata.selectNumberingPlan(input.countryCallingCode);
+  } else return input.phone || "";
+  var countryCallingCode = metadata.countryCallingCode();
+  var nationalNumber = options.v2 ? input.nationalNumber : input.phone;
+  var number;
+  switch (format7) {
+    case "NATIONAL":
+      if (!nationalNumber) {
+        return "";
+      }
+      number = formatNationalNumber(nationalNumber, input.carrierCode, "NATIONAL", metadata, options);
+      return addExtension(number, input.ext, metadata, options.formatExtension);
+    case "INTERNATIONAL":
+      if (!nationalNumber) {
+        return "+".concat(countryCallingCode);
+      }
+      number = formatNationalNumber(nationalNumber, null, "INTERNATIONAL", metadata, options);
+      number = "+".concat(countryCallingCode, " ").concat(number);
+      return addExtension(number, input.ext, metadata, options.formatExtension);
+    case "E.164":
+      return "+".concat(countryCallingCode).concat(nationalNumber);
+    case "RFC3966":
+      return formatRFC3966({
+        number: "+".concat(countryCallingCode).concat(nationalNumber),
+        ext: input.ext
+      });
+    // For reference, here's Google's IDD formatter:
+    // https://github.com/google/libphonenumber/blob/32719cf74e68796788d1ca45abc85dcdc63ba5b9/java/libphonenumber/src/com/google/i18n/phonenumbers/PhoneNumberUtil.java#L1546
+    // Not saying that this IDD formatter replicates it 1:1, but it seems to work.
+    // Who would even need to format phone numbers in IDD format anyway?
+    case "IDD":
+      if (!options.fromCountry) {
+        return;
+      }
+      var formattedNumber = formatIDD(nationalNumber, input.carrierCode, countryCallingCode, options.fromCountry, metadata);
+      if (!formattedNumber) {
+        return;
+      }
+      return addExtension(formattedNumber, input.ext, metadata, options.formatExtension);
+    default:
+      throw new Error('Unknown "format" argument passed to "formatNumber()": "'.concat(format7, '"'));
+  }
+}
+function formatNationalNumber(number, carrierCode, formatAs, metadata, options) {
+  var format7 = chooseFormatForNumber(metadata.formats(), number);
+  if (!format7) {
+    return number;
+  }
+  return formatNationalNumberUsingFormat(number, format7, {
+    useInternationalFormat: formatAs === "INTERNATIONAL",
+    withNationalPrefix: format7.nationalPrefixIsOptionalWhenFormattingInNationalFormat() && options && options.nationalPrefix === false ? false : true,
+    carrierCode,
+    metadata
+  });
+}
+function chooseFormatForNumber(availableFormats, nationalNumber) {
+  return pickFirstMatchingElement(availableFormats, function(format7) {
+    if (format7.leadingDigitsPatterns().length > 0) {
+      var lastLeadingDigitsPattern = format7.leadingDigitsPatterns()[format7.leadingDigitsPatterns().length - 1];
+      if (nationalNumber.search(lastLeadingDigitsPattern) !== 0) {
+        return false;
+      }
+    }
+    return matchesEntirely(nationalNumber, format7.pattern());
+  });
+}
+function addExtension(formattedNumber, ext, metadata, formatExtension2) {
+  return ext ? formatExtension2(formattedNumber, ext, metadata) : formattedNumber;
+}
+function formatIDD(nationalNumber, carrierCode, countryCallingCode, fromCountry, metadata) {
+  var fromCountryCallingCode = getCountryCallingCode(fromCountry, metadata.metadata);
+  if (fromCountryCallingCode === countryCallingCode) {
+    var formattedNumber = formatNationalNumber(nationalNumber, carrierCode, "NATIONAL", metadata);
+    if (countryCallingCode === "1") {
+      return countryCallingCode + " " + formattedNumber;
+    }
+    return formattedNumber;
+  }
+  var iddPrefix = getIddPrefix(fromCountry, void 0, metadata.metadata);
+  if (iddPrefix) {
+    return "".concat(iddPrefix, " ").concat(countryCallingCode, " ").concat(formatNationalNumber(nationalNumber, null, "INTERNATIONAL", metadata));
+  }
+}
+function merge() {
+  var i2 = 1;
+  for (var _len = arguments.length, objects = new Array(_len), _key = 0; _key < _len; _key++) {
+    objects[_key] = arguments[_key];
+  }
+  while (i2 < objects.length) {
+    if (objects[i2]) {
+      for (var key in objects[i2]) {
+        objects[0][key] = objects[i2][key];
+      }
+    }
+    i2++;
+  }
+  return objects[0];
+}
+function pickFirstMatchingElement(elements, testFunction) {
+  var i2 = 0;
+  while (i2 < elements.length) {
+    if (testFunction(elements[i2])) {
+      return elements[i2];
+    }
+    i2++;
+  }
+}
+var DEFAULT_OPTIONS;
+var init_format = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/format.js"() {
+    init_matchesEntirely();
+    init_formatNationalNumberUsingFormat();
+    init_metadata();
+    init_getIddPrefix();
+    init_RFC3966();
+    DEFAULT_OPTIONS = {
+      formatExtension: function formatExtension(formattedNumber, extension, metadata) {
+        return "".concat(formattedNumber).concat(metadata.ext()).concat(extension);
+      }
+    };
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/PhoneNumber.js
+function _typeof2(o2) {
+  "@babel/helpers - typeof";
+  return _typeof2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof2(o2);
+}
+function ownKeys(e2, r3) {
+  var t2 = Object.keys(e2);
+  if (Object.getOwnPropertySymbols) {
+    var o2 = Object.getOwnPropertySymbols(e2);
+    r3 && (o2 = o2.filter(function(r4) {
+      return Object.getOwnPropertyDescriptor(e2, r4).enumerable;
+    })), t2.push.apply(t2, o2);
+  }
+  return t2;
+}
+function _objectSpread(e2) {
+  for (var r3 = 1; r3 < arguments.length; r3++) {
+    var t2 = null != arguments[r3] ? arguments[r3] : {};
+    r3 % 2 ? ownKeys(Object(t2), true).forEach(function(r4) {
+      _defineProperty(e2, r4, t2[r4]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e2, Object.getOwnPropertyDescriptors(t2)) : ownKeys(Object(t2)).forEach(function(r4) {
+      Object.defineProperty(e2, r4, Object.getOwnPropertyDescriptor(t2, r4));
+    });
+  }
+  return e2;
+}
+function _defineProperty(e2, r3, t2) {
+  return (r3 = _toPropertyKey2(r3)) in e2 ? Object.defineProperty(e2, r3, { value: t2, enumerable: true, configurable: true, writable: true }) : e2[r3] = t2, e2;
+}
+function _classCallCheck2(a2, n2) {
+  if (!(a2 instanceof n2)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties2(e2, r3) {
+  for (var t2 = 0; t2 < r3.length; t2++) {
+    var o2 = r3[t2];
+    o2.enumerable = o2.enumerable || false, o2.configurable = true, "value" in o2 && (o2.writable = true), Object.defineProperty(e2, _toPropertyKey2(o2.key), o2);
+  }
+}
+function _createClass2(e2, r3, t2) {
+  return r3 && _defineProperties2(e2.prototype, r3), t2 && _defineProperties2(e2, t2), Object.defineProperty(e2, "prototype", { writable: false }), e2;
+}
+function _toPropertyKey2(t2) {
+  var i2 = _toPrimitive2(t2, "string");
+  return "symbol" == _typeof2(i2) ? i2 : i2 + "";
+}
+function _toPrimitive2(t2, r3) {
+  if ("object" != _typeof2(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof2(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function getCountryAndCountryCallingCode(countryOrCountryCallingCode, metadataJson) {
+  var country2;
+  var countryCallingCode;
+  var metadata = new Metadata(metadataJson);
+  if (isCountryCode(countryOrCountryCallingCode)) {
+    country2 = countryOrCountryCallingCode;
+    metadata.selectNumberingPlan(country2);
+    countryCallingCode = metadata.countryCallingCode();
+  } else {
+    countryCallingCode = countryOrCountryCallingCode;
+    if (USE_NON_GEOGRAPHIC_COUNTRY_CODE2) {
+      if (metadata.isNonGeographicCallingCode(countryCallingCode)) {
+        country2 = "001";
+      }
+    }
+  }
+  return {
+    country: country2,
+    countryCallingCode
+  };
+}
+var USE_NON_GEOGRAPHIC_COUNTRY_CODE2, PhoneNumber, isCountryCode, E164_NUMBER_REGEXP;
+var init_PhoneNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/PhoneNumber.js"() {
+    init_metadata();
+    init_isPossible();
+    init_isValid();
+    init_getNumberType();
+    init_getPossibleCountriesForNumber();
+    init_extractCountryCallingCode();
+    init_isObject();
+    init_format();
+    USE_NON_GEOGRAPHIC_COUNTRY_CODE2 = false;
+    PhoneNumber = /* @__PURE__ */ (function() {
+      function PhoneNumber3(countryOrCountryCallingCode, nationalNumber, metadata) {
+        _classCallCheck2(this, PhoneNumber3);
+        if (!countryOrCountryCallingCode) {
+          throw new TypeError("First argument is required");
+        }
+        if (typeof countryOrCountryCallingCode !== "string") {
+          throw new TypeError("First argument must be a string");
+        }
+        if (countryOrCountryCallingCode[0] === "+" && !nationalNumber) {
+          throw new TypeError("`metadata` argument not passed");
+        }
+        if (isObject2(nationalNumber) && isObject2(nationalNumber.countries)) {
+          metadata = nationalNumber;
+          var e164Number = countryOrCountryCallingCode;
+          if (!E164_NUMBER_REGEXP.test(e164Number)) {
+            throw new Error('Invalid `number` argument passed: must consist of a "+" followed by digits');
+          }
+          var _extractCountryCallin = extractCountryCallingCode(e164Number, void 0, void 0, void 0, metadata), _countryCallingCode = _extractCountryCallin.countryCallingCode, number = _extractCountryCallin.number;
+          nationalNumber = number;
+          countryOrCountryCallingCode = _countryCallingCode;
+          if (!nationalNumber) {
+            throw new Error("Invalid `number` argument passed: too short");
+          }
+        }
+        if (!nationalNumber) {
+          throw new TypeError("`nationalNumber` argument is required");
+        }
+        if (typeof nationalNumber !== "string") {
+          throw new TypeError("`nationalNumber` argument must be a string");
+        }
+        validateMetadata(metadata);
+        var _getCountryAndCountry = getCountryAndCountryCallingCode(countryOrCountryCallingCode, metadata), country2 = _getCountryAndCountry.country, countryCallingCode = _getCountryAndCountry.countryCallingCode;
+        this.country = country2;
+        this.countryCallingCode = countryCallingCode;
+        this.nationalNumber = nationalNumber;
+        this.number = "+" + this.countryCallingCode + this.nationalNumber;
+        this.getMetadata = function() {
+          return metadata;
+        };
+      }
+      return _createClass2(PhoneNumber3, [{
+        key: "setExt",
+        value: function setExt(ext) {
+          this.ext = ext;
+        }
+      }, {
+        key: "getPossibleCountries",
+        value: function getPossibleCountries() {
+          if (this.country) {
+            return [this.country];
+          }
+          return getPossibleCountriesForNumber(this.countryCallingCode, this.nationalNumber, this.getMetadata());
+        }
+      }, {
+        key: "isPossible",
+        value: function isPossible() {
+          return isPossiblePhoneNumber(this, {
+            v2: true
+          }, this.getMetadata());
+        }
+      }, {
+        key: "isValid",
+        value: function isValid2() {
+          return isValidNumber(this, {
+            v2: true
+          }, this.getMetadata());
+        }
+      }, {
+        key: "isNonGeographic",
+        value: function isNonGeographic() {
+          var metadata = new Metadata(this.getMetadata());
+          return metadata.isNonGeographicCallingCode(this.countryCallingCode);
+        }
+      }, {
+        key: "isEqual",
+        value: function isEqual(phoneNumber) {
+          return this.number === phoneNumber.number && this.ext === phoneNumber.ext;
+        }
+        // This function was originally meant to be an equivalent for `validatePhoneNumberLength()`,
+        // but later it was found out that it doesn't include the possible `TOO_SHORT` result
+        // returned from `parsePhoneNumberWithError()` in the original `validatePhoneNumberLength()`,
+        // so eventually I simply commented out this method from the `PhoneNumber` class
+        // and just left the `validatePhoneNumberLength()` function, even though that one would require
+        // and additional step to also validate the actual country / calling code of the phone number.
+        // validateLength() {
+        // 	const metadata = new Metadata(this.getMetadata())
+        // 	metadata.selectNumberingPlan(this.countryCallingCode)
+        // 	const result = checkNumberLength(this.nationalNumber, metadata)
+        // 	if (result !== 'IS_POSSIBLE') {
+        // 		return result
+        // 	}
+        // }
+      }, {
+        key: "getType",
+        value: function getType2() {
+          return getNumberType(this, {
+            v2: true
+          }, this.getMetadata());
+        }
+      }, {
+        key: "format",
+        value: function format7(_format, options) {
+          return formatNumber3(this, _format, options ? _objectSpread(_objectSpread({}, options), {}, {
+            v2: true
+          }) : {
+            v2: true
+          }, this.getMetadata());
+        }
+      }, {
+        key: "formatNational",
+        value: function formatNational(options) {
+          return this.format("NATIONAL", options);
+        }
+      }, {
+        key: "formatInternational",
+        value: function formatInternational(options) {
+          return this.format("INTERNATIONAL", options);
+        }
+      }, {
+        key: "getURI",
+        value: function getURI(options) {
+          return this.format("RFC3966", options);
+        }
+      }]);
+    })();
+    isCountryCode = function isCountryCode2(value) {
+      return /^[A-Z]{2}$/.test(value);
+    };
+    E164_NUMBER_REGEXP = /^\+\d+$/;
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/ParseError.js
+function _typeof3(o2) {
+  "@babel/helpers - typeof";
+  return _typeof3 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof3(o2);
+}
+function _defineProperties3(e2, r3) {
+  for (var t2 = 0; t2 < r3.length; t2++) {
+    var o2 = r3[t2];
+    o2.enumerable = o2.enumerable || false, o2.configurable = true, "value" in o2 && (o2.writable = true), Object.defineProperty(e2, _toPropertyKey3(o2.key), o2);
+  }
+}
+function _createClass3(e2, r3, t2) {
+  return r3 && _defineProperties3(e2.prototype, r3), t2 && _defineProperties3(e2, t2), Object.defineProperty(e2, "prototype", { writable: false }), e2;
+}
+function _toPropertyKey3(t2) {
+  var i2 = _toPrimitive3(t2, "string");
+  return "symbol" == _typeof3(i2) ? i2 : i2 + "";
+}
+function _toPrimitive3(t2, r3) {
+  if ("object" != _typeof3(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof3(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function _classCallCheck3(a2, n2) {
+  if (!(a2 instanceof n2)) throw new TypeError("Cannot call a class as a function");
+}
+function _callSuper(t2, o2, e2) {
+  return o2 = _getPrototypeOf(o2), _possibleConstructorReturn(t2, _isNativeReflectConstruct() ? Reflect.construct(o2, e2 || [], _getPrototypeOf(t2).constructor) : o2.apply(t2, e2));
+}
+function _possibleConstructorReturn(t2, e2) {
+  if (e2 && ("object" == _typeof3(e2) || "function" == typeof e2)) return e2;
+  if (void 0 !== e2) throw new TypeError("Derived constructors may only return object or undefined");
+  return _assertThisInitialized(t2);
+}
+function _assertThisInitialized(e2) {
+  if (void 0 === e2) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  return e2;
+}
+function _inherits(t2, e2) {
+  if ("function" != typeof e2 && null !== e2) throw new TypeError("Super expression must either be null or a function");
+  t2.prototype = Object.create(e2 && e2.prototype, { constructor: { value: t2, writable: true, configurable: true } }), Object.defineProperty(t2, "prototype", { writable: false }), e2 && _setPrototypeOf(t2, e2);
+}
+function _wrapNativeSuper(t2) {
+  var r3 = "function" == typeof Map ? /* @__PURE__ */ new Map() : void 0;
+  return _wrapNativeSuper = function _wrapNativeSuper2(t3) {
+    if (null === t3 || !_isNativeFunction(t3)) return t3;
+    if ("function" != typeof t3) throw new TypeError("Super expression must either be null or a function");
+    if (void 0 !== r3) {
+      if (r3.has(t3)) return r3.get(t3);
+      r3.set(t3, Wrapper);
+    }
+    function Wrapper() {
+      return _construct(t3, arguments, _getPrototypeOf(this).constructor);
+    }
+    return Wrapper.prototype = Object.create(t3.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }), _setPrototypeOf(Wrapper, t3);
+  }, _wrapNativeSuper(t2);
+}
+function _construct(t2, e2, r3) {
+  if (_isNativeReflectConstruct()) return Reflect.construct.apply(null, arguments);
+  var o2 = [null];
+  o2.push.apply(o2, e2);
+  var p2 = new (t2.bind.apply(t2, o2))();
+  return r3 && _setPrototypeOf(p2, r3.prototype), p2;
+}
+function _isNativeReflectConstruct() {
+  try {
+    var t2 = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {
+    }));
+  } catch (t3) {
+  }
+  return (_isNativeReflectConstruct = function _isNativeReflectConstruct2() {
+    return !!t2;
+  })();
+}
+function _isNativeFunction(t2) {
+  try {
+    return -1 !== Function.toString.call(t2).indexOf("[native code]");
+  } catch (n2) {
+    return "function" == typeof t2;
+  }
+}
+function _setPrototypeOf(t2, e2) {
+  return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function(t3, e3) {
+    return t3.__proto__ = e3, t3;
+  }, _setPrototypeOf(t2, e2);
+}
+function _getPrototypeOf(t2) {
+  return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function(t3) {
+    return t3.__proto__ || Object.getPrototypeOf(t3);
+  }, _getPrototypeOf(t2);
+}
+var ParseError;
+var init_ParseError = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/ParseError.js"() {
+    ParseError = /* @__PURE__ */ (function(_Error) {
+      function ParseError2(code) {
+        var _this;
+        _classCallCheck3(this, ParseError2);
+        _this = _callSuper(this, ParseError2, [code]);
+        Object.setPrototypeOf(_this, ParseError2.prototype);
+        _this.name = _this.constructor.name;
+        return _this;
+      }
+      _inherits(ParseError2, _Error);
+      return _createClass3(ParseError2);
+    })(/* @__PURE__ */ _wrapNativeSuper(Error));
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extension/extractExtension.js
+function extractExtension(number) {
+  var start = number.search(EXTN_PATTERN);
+  if (start < 0) {
+    return {};
+  }
+  var numberWithoutExtension = number.slice(0, start);
+  var matches = number.match(EXTN_PATTERN);
+  var i2 = 1;
+  while (i2 < matches.length) {
+    if (matches[i2]) {
+      return {
+        number: numberWithoutExtension,
+        ext: matches[i2]
+      };
+    }
+    i2++;
+  }
+}
+var EXTN_PATTERN;
+var init_extractExtension = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extension/extractExtension.js"() {
+    init_createExtensionPattern();
+    EXTN_PATTERN = new RegExp("(?:" + createExtensionPattern() + ")$", "i");
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/parseDigits.js
+function _createForOfIteratorHelperLoose5(r3, e2) {
+  var t2 = "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (t2) return (t2 = t2.call(r3)).next.bind(t2);
+  if (Array.isArray(r3) || (t2 = _unsupportedIterableToArray5(r3)) || e2 && r3 && "number" == typeof r3.length) {
+    t2 && (r3 = t2);
+    var o2 = 0;
+    return function() {
+      return o2 >= r3.length ? { done: true } : { done: false, value: r3[o2++] };
+    };
+  }
+  throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray5(r3, a2) {
+  if (r3) {
+    if ("string" == typeof r3) return _arrayLikeToArray5(r3, a2);
+    var t2 = {}.toString.call(r3).slice(8, -1);
+    return "Object" === t2 && r3.constructor && (t2 = r3.constructor.name), "Map" === t2 || "Set" === t2 ? Array.from(r3) : "Arguments" === t2 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t2) ? _arrayLikeToArray5(r3, a2) : void 0;
+  }
+}
+function _arrayLikeToArray5(r3, a2) {
+  (null == a2 || a2 > r3.length) && (a2 = r3.length);
+  for (var e2 = 0, n2 = Array(a2); e2 < a2; e2++) n2[e2] = r3[e2];
+  return n2;
+}
+function parseDigit(character) {
+  return DIGITS[character];
+}
+function parseDigits(string) {
+  var result2 = "";
+  for (var _iterator = _createForOfIteratorHelperLoose5(string.split("")), _step; !(_step = _iterator()).done; ) {
+    var character = _step.value;
+    var digit = parseDigit(character);
+    if (digit) {
+      result2 += digit;
+    }
+  }
+  return result2;
+}
+var DIGITS;
+var init_parseDigits = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/parseDigits.js"() {
+    DIGITS = {
+      "0": "0",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "\uFF10": "0",
+      // Fullwidth digit 0
+      "\uFF11": "1",
+      // Fullwidth digit 1
+      "\uFF12": "2",
+      // Fullwidth digit 2
+      "\uFF13": "3",
+      // Fullwidth digit 3
+      "\uFF14": "4",
+      // Fullwidth digit 4
+      "\uFF15": "5",
+      // Fullwidth digit 5
+      "\uFF16": "6",
+      // Fullwidth digit 6
+      "\uFF17": "7",
+      // Fullwidth digit 7
+      "\uFF18": "8",
+      // Fullwidth digit 8
+      "\uFF19": "9",
+      // Fullwidth digit 9
+      "\u0660": "0",
+      // Arabic-indic digit 0
+      "\u0661": "1",
+      // Arabic-indic digit 1
+      "\u0662": "2",
+      // Arabic-indic digit 2
+      "\u0663": "3",
+      // Arabic-indic digit 3
+      "\u0664": "4",
+      // Arabic-indic digit 4
+      "\u0665": "5",
+      // Arabic-indic digit 5
+      "\u0666": "6",
+      // Arabic-indic digit 6
+      "\u0667": "7",
+      // Arabic-indic digit 7
+      "\u0668": "8",
+      // Arabic-indic digit 8
+      "\u0669": "9",
+      // Arabic-indic digit 9
+      "\u06F0": "0",
+      // Eastern-Arabic digit 0
+      "\u06F1": "1",
+      // Eastern-Arabic digit 1
+      "\u06F2": "2",
+      // Eastern-Arabic digit 2
+      "\u06F3": "3",
+      // Eastern-Arabic digit 3
+      "\u06F4": "4",
+      // Eastern-Arabic digit 4
+      "\u06F5": "5",
+      // Eastern-Arabic digit 5
+      "\u06F6": "6",
+      // Eastern-Arabic digit 6
+      "\u06F7": "7",
+      // Eastern-Arabic digit 7
+      "\u06F8": "8",
+      // Eastern-Arabic digit 8
+      "\u06F9": "9"
+      // Eastern-Arabic digit 9
+    };
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/parseIncompletePhoneNumber.js
+function _createForOfIteratorHelperLoose6(r3, e2) {
+  var t2 = "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (t2) return (t2 = t2.call(r3)).next.bind(t2);
+  if (Array.isArray(r3) || (t2 = _unsupportedIterableToArray6(r3)) || e2 && r3 && "number" == typeof r3.length) {
+    t2 && (r3 = t2);
+    var o2 = 0;
+    return function() {
+      return o2 >= r3.length ? { done: true } : { done: false, value: r3[o2++] };
+    };
+  }
+  throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray6(r3, a2) {
+  if (r3) {
+    if ("string" == typeof r3) return _arrayLikeToArray6(r3, a2);
+    var t2 = {}.toString.call(r3).slice(8, -1);
+    return "Object" === t2 && r3.constructor && (t2 = r3.constructor.name), "Map" === t2 || "Set" === t2 ? Array.from(r3) : "Arguments" === t2 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t2) ? _arrayLikeToArray6(r3, a2) : void 0;
+  }
+}
+function _arrayLikeToArray6(r3, a2) {
+  (null == a2 || a2 > r3.length) && (a2 = r3.length);
+  for (var e2 = 0, n2 = Array(a2); e2 < a2; e2++) n2[e2] = r3[e2];
+  return n2;
+}
+function parseIncompletePhoneNumber(string) {
+  var result2 = "";
+  for (var _iterator = _createForOfIteratorHelperLoose6(string.split("")), _step; !(_step = _iterator()).done; ) {
+    var character = _step.value;
+    result2 += parsePhoneNumberCharacter(character, result2) || "";
+  }
+  return result2;
+}
+function parsePhoneNumberCharacter(character, prevParsedCharacters, eventListener) {
+  if (character === "+") {
+    if (prevParsedCharacters) {
+      if (typeof eventListener === "function") {
+        eventListener("end");
+      }
+      return;
+    }
+    return "+";
+  }
+  return parseDigit(character);
+}
+var init_parseIncompletePhoneNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/parseIncompletePhoneNumber.js"() {
+    init_parseDigits();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extractPhoneContext.js
+function extractPhoneContext(numberToExtractFrom) {
+  var indexOfPhoneContext = numberToExtractFrom.indexOf(RFC3966_PHONE_CONTEXT_);
+  if (indexOfPhoneContext < 0) {
+    return null;
+  }
+  var phoneContextStart = indexOfPhoneContext + RFC3966_PHONE_CONTEXT_.length;
+  if (phoneContextStart >= numberToExtractFrom.length) {
+    return "";
+  }
+  var phoneContextEnd = numberToExtractFrom.indexOf(";", phoneContextStart);
+  if (phoneContextEnd >= 0) {
+    return numberToExtractFrom.substring(phoneContextStart, phoneContextEnd);
+  } else {
+    return numberToExtractFrom.substring(phoneContextStart);
+  }
+}
+function isPhoneContextValid(phoneContext) {
+  if (phoneContext === null) {
+    return true;
+  }
+  if (phoneContext.length === 0) {
+    return false;
+  }
+  return RFC3966_GLOBAL_NUMBER_DIGITS_PATTERN_.test(phoneContext) || RFC3966_DOMAINNAME_PATTERN_.test(phoneContext);
+}
+var PLUS_SIGN, RFC3966_VISUAL_SEPARATOR_, RFC3966_PHONE_DIGIT_, RFC3966_GLOBAL_NUMBER_DIGITS_, RFC3966_GLOBAL_NUMBER_DIGITS_PATTERN_, ALPHANUM_, RFC3966_DOMAINLABEL_, VALID_ALPHA_, RFC3966_TOPLABEL_, RFC3966_DOMAINNAME_, RFC3966_DOMAINNAME_PATTERN_, RFC3966_PREFIX_, RFC3966_PHONE_CONTEXT_, RFC3966_ISDN_SUBADDRESS_;
+var init_extractPhoneContext = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extractPhoneContext.js"() {
+    init_constants();
+    PLUS_SIGN = "+";
+    RFC3966_VISUAL_SEPARATOR_ = "[\\-\\.\\(\\)]?";
+    RFC3966_PHONE_DIGIT_ = "([" + VALID_DIGITS + "]|" + RFC3966_VISUAL_SEPARATOR_ + ")";
+    RFC3966_GLOBAL_NUMBER_DIGITS_ = "^\\" + PLUS_SIGN + RFC3966_PHONE_DIGIT_ + "*[" + VALID_DIGITS + "]" + RFC3966_PHONE_DIGIT_ + "*$";
+    RFC3966_GLOBAL_NUMBER_DIGITS_PATTERN_ = new RegExp(RFC3966_GLOBAL_NUMBER_DIGITS_, "g");
+    ALPHANUM_ = VALID_DIGITS;
+    RFC3966_DOMAINLABEL_ = "[" + ALPHANUM_ + "]+((\\-)*[" + ALPHANUM_ + "])*";
+    VALID_ALPHA_ = "a-zA-Z";
+    RFC3966_TOPLABEL_ = "[" + VALID_ALPHA_ + "]+((\\-)*[" + ALPHANUM_ + "])*";
+    RFC3966_DOMAINNAME_ = "^(" + RFC3966_DOMAINLABEL_ + "\\.)*" + RFC3966_TOPLABEL_ + "\\.?$";
+    RFC3966_DOMAINNAME_PATTERN_ = new RegExp(RFC3966_DOMAINNAME_, "g");
+    RFC3966_PREFIX_ = "tel:";
+    RFC3966_PHONE_CONTEXT_ = ";phone-context=";
+    RFC3966_ISDN_SUBADDRESS_ = ";isub=";
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extractFormattedPhoneNumberFromPossibleRfc3966NumberUri.js
+function extractFormattedPhoneNumberFromPossibleRfc3966NumberUri(numberToParse, _ref) {
+  var extractFormattedPhoneNumber2 = _ref.extractFormattedPhoneNumber;
+  var phoneContext = extractPhoneContext(numberToParse);
+  if (!isPhoneContextValid(phoneContext)) {
+    throw new ParseError("NOT_A_NUMBER");
+  }
+  var phoneNumberString;
+  if (phoneContext === null) {
+    phoneNumberString = extractFormattedPhoneNumber2(numberToParse) || "";
+  } else {
+    phoneNumberString = "";
+    if (phoneContext.charAt(0) === PLUS_SIGN) {
+      phoneNumberString += phoneContext;
+    }
+    var indexOfRfc3966Prefix = numberToParse.indexOf(RFC3966_PREFIX_);
+    var indexOfNationalNumber;
+    if (indexOfRfc3966Prefix >= 0) {
+      indexOfNationalNumber = indexOfRfc3966Prefix + RFC3966_PREFIX_.length;
+    } else {
+      indexOfNationalNumber = 0;
+    }
+    var indexOfPhoneContext = numberToParse.indexOf(RFC3966_PHONE_CONTEXT_);
+    phoneNumberString += numberToParse.substring(indexOfNationalNumber, indexOfPhoneContext);
+  }
+  var indexOfIsdn = phoneNumberString.indexOf(RFC3966_ISDN_SUBADDRESS_);
+  if (indexOfIsdn > 0) {
+    phoneNumberString = phoneNumberString.substring(0, indexOfIsdn);
+  }
+  if (phoneNumberString !== "") {
+    return phoneNumberString;
+  }
+}
+var init_extractFormattedPhoneNumberFromPossibleRfc3966NumberUri = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/helpers/extractFormattedPhoneNumberFromPossibleRfc3966NumberUri.js"() {
+    init_extractPhoneContext();
+    init_ParseError();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/parse.js
+function parse(text, options, metadata) {
+  options = options || {};
+  metadata = new Metadata(metadata);
+  if (options.defaultCountry && !metadata.hasCountry(options.defaultCountry)) {
+    if (options.v2) {
+      throw new ParseError("INVALID_COUNTRY");
+    }
+    throw new Error("Unknown country: ".concat(options.defaultCountry));
+  }
+  var _parseInput = parseInput(text, options.v2, options.extract), formattedPhoneNumber = _parseInput.number, ext = _parseInput.ext, error2 = _parseInput.error;
+  if (!formattedPhoneNumber) {
+    if (options.v2) {
+      if (error2 === "TOO_SHORT") {
+        throw new ParseError("TOO_SHORT");
+      }
+      throw new ParseError("NOT_A_NUMBER");
+    }
+    return {};
+  }
+  var _parsePhoneNumber = parsePhoneNumber(formattedPhoneNumber, options.defaultCountry, options.defaultCallingCode, metadata), country2 = _parsePhoneNumber.country, nationalNumber = _parsePhoneNumber.nationalNumber, countryCallingCode = _parsePhoneNumber.countryCallingCode, countryCallingCodeSource = _parsePhoneNumber.countryCallingCodeSource, carrierCode = _parsePhoneNumber.carrierCode;
+  if (!metadata.hasSelectedNumberingPlan()) {
+    if (options.v2) {
+      throw new ParseError("INVALID_COUNTRY");
+    }
+    return {};
+  }
+  if (!nationalNumber || nationalNumber.length < MIN_LENGTH_FOR_NSN) {
+    if (options.v2) {
+      throw new ParseError("TOO_SHORT");
+    }
+    return {};
+  }
+  if (nationalNumber.length > MAX_LENGTH_FOR_NSN) {
+    if (options.v2) {
+      throw new ParseError("TOO_LONG");
+    }
+    return {};
+  }
+  if (options.v2) {
+    var phoneNumber = new PhoneNumber(countryCallingCode, nationalNumber, metadata.metadata);
+    if (country2) {
+      phoneNumber.country = country2;
+    }
+    if (carrierCode) {
+      phoneNumber.carrierCode = carrierCode;
+    }
+    if (ext) {
+      phoneNumber.ext = ext;
+    }
+    phoneNumber.__countryCallingCodeSource = countryCallingCodeSource;
+    return phoneNumber;
+  }
+  var valid = (options.extended ? metadata.hasSelectedNumberingPlan() : country2) ? matchesEntirely(nationalNumber, metadata.nationalNumberPattern()) : false;
+  if (!options.extended) {
+    return valid ? result(country2, nationalNumber, ext) : {};
+  }
+  return {
+    country: country2,
+    countryCallingCode,
+    carrierCode,
+    valid,
+    possible: valid ? true : options.extended === true && metadata.possibleLengths() && isPossibleNumber(nationalNumber, country2, metadata) ? true : false,
+    phone: nationalNumber,
+    ext
+  };
+}
+function _extractFormattedPhoneNumber(text, extract, throwOnError) {
+  if (!text) {
+    return;
+  }
+  if (text.length > MAX_INPUT_STRING_LENGTH) {
+    if (throwOnError) {
+      throw new ParseError("TOO_LONG");
+    }
+    return;
+  }
+  if (extract === false) {
+    return text;
+  }
+  var startsAt = text.search(PHONE_NUMBER_START_PATTERN);
+  if (startsAt < 0) {
+    return;
+  }
+  return text.slice(startsAt).replace(AFTER_PHONE_NUMBER_END_PATTERN, "");
+}
+function parseInput(text, v2, extract) {
+  var number = extractFormattedPhoneNumberFromPossibleRfc3966NumberUri(text, {
+    extractFormattedPhoneNumber: function extractFormattedPhoneNumber2(text2) {
+      return _extractFormattedPhoneNumber(text2, extract, v2);
+    }
+  });
+  if (!number) {
+    return {};
+  }
+  if (!isViablePhoneNumber(number)) {
+    if (isViablePhoneNumberStart(number)) {
+      return {
+        error: "TOO_SHORT"
+      };
+    }
+    return {};
+  }
+  var withExtensionStripped = extractExtension(number);
+  if (withExtensionStripped.ext) {
+    return withExtensionStripped;
+  }
+  return {
+    number
+  };
+}
+function result(country2, nationalNumber, ext) {
+  var result2 = {
+    country: country2,
+    phone: nationalNumber
+  };
+  if (ext) {
+    result2.ext = ext;
+  }
+  return result2;
+}
+function parsePhoneNumber(formattedPhoneNumber, defaultCountry, defaultCallingCode, metadata) {
+  var _extractCountryCallin = extractCountryCallingCode(parseIncompletePhoneNumber(formattedPhoneNumber), void 0, defaultCountry, defaultCallingCode, metadata.metadata), countryCallingCodeSource = _extractCountryCallin.countryCallingCodeSource, countryCallingCode = _extractCountryCallin.countryCallingCode, number = _extractCountryCallin.number;
+  var country2;
+  if (countryCallingCode) {
+    metadata.selectNumberingPlan(countryCallingCode);
+  } else if (number && (defaultCountry || defaultCallingCode)) {
+    metadata.selectNumberingPlan(defaultCountry, defaultCallingCode);
+    if (defaultCountry) {
+      country2 = defaultCountry;
+    } else {
+      if (USE_NON_GEOGRAPHIC_COUNTRY_CODE3) {
+        if (metadata.isNonGeographicCallingCode(defaultCallingCode)) {
+          country2 = "001";
+        }
+      }
+    }
+    countryCallingCode = defaultCallingCode || getCountryCallingCode(defaultCountry, metadata.metadata);
+  } else return {};
+  if (!number) {
+    return {
+      countryCallingCodeSource,
+      countryCallingCode
+    };
+  }
+  var _extractNationalNumbe = extractNationalNumber(parseIncompletePhoneNumber(number), country2, metadata), nationalNumber = _extractNationalNumbe.nationalNumber, carrierCode = _extractNationalNumbe.carrierCode;
+  var exactCountry = getCountryByCallingCode(countryCallingCode, {
+    nationalNumber,
+    metadata
+  });
+  if (exactCountry) {
+    country2 = exactCountry;
+    if (exactCountry === "001") {
+    } else {
+      metadata.selectNumberingPlan(country2);
+    }
+  }
+  return {
+    country: country2,
+    countryCallingCode,
+    countryCallingCodeSource,
+    nationalNumber,
+    carrierCode
+  };
+}
+var MAX_INPUT_STRING_LENGTH, PHONE_NUMBER_START_PATTERN, AFTER_PHONE_NUMBER_END_PATTERN, USE_NON_GEOGRAPHIC_COUNTRY_CODE3;
+var init_parse = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/parse.js"() {
+    init_constants();
+    init_ParseError();
+    init_metadata();
+    init_isViablePhoneNumber();
+    init_extractExtension();
+    init_parseIncompletePhoneNumber();
+    init_getCountryCallingCode();
+    init_isPossible();
+    init_PhoneNumber();
+    init_matchesEntirely();
+    init_extractCountryCallingCode();
+    init_extractNationalNumber();
+    init_getCountryByCallingCode();
+    init_extractFormattedPhoneNumberFromPossibleRfc3966NumberUri();
+    MAX_INPUT_STRING_LENGTH = 250;
+    PHONE_NUMBER_START_PATTERN = new RegExp("[" + PLUS_CHARS + VALID_DIGITS + "]");
+    AFTER_PHONE_NUMBER_END_PATTERN = new RegExp("[^" + VALID_DIGITS + "#]+$");
+    USE_NON_GEOGRAPHIC_COUNTRY_CODE3 = false;
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/parsePhoneNumberWithError_.js
+function _typeof4(o2) {
+  "@babel/helpers - typeof";
+  return _typeof4 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof4(o2);
+}
+function ownKeys2(e2, r3) {
+  var t2 = Object.keys(e2);
+  if (Object.getOwnPropertySymbols) {
+    var o2 = Object.getOwnPropertySymbols(e2);
+    r3 && (o2 = o2.filter(function(r4) {
+      return Object.getOwnPropertyDescriptor(e2, r4).enumerable;
+    })), t2.push.apply(t2, o2);
+  }
+  return t2;
+}
+function _objectSpread2(e2) {
+  for (var r3 = 1; r3 < arguments.length; r3++) {
+    var t2 = null != arguments[r3] ? arguments[r3] : {};
+    r3 % 2 ? ownKeys2(Object(t2), true).forEach(function(r4) {
+      _defineProperty2(e2, r4, t2[r4]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e2, Object.getOwnPropertyDescriptors(t2)) : ownKeys2(Object(t2)).forEach(function(r4) {
+      Object.defineProperty(e2, r4, Object.getOwnPropertyDescriptor(t2, r4));
+    });
+  }
+  return e2;
+}
+function _defineProperty2(e2, r3, t2) {
+  return (r3 = _toPropertyKey4(r3)) in e2 ? Object.defineProperty(e2, r3, { value: t2, enumerable: true, configurable: true, writable: true }) : e2[r3] = t2, e2;
+}
+function _toPropertyKey4(t2) {
+  var i2 = _toPrimitive4(t2, "string");
+  return "symbol" == _typeof4(i2) ? i2 : i2 + "";
+}
+function _toPrimitive4(t2, r3) {
+  if ("object" != _typeof4(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof4(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function parsePhoneNumberWithError(text, options, metadata) {
+  return parse(text, _objectSpread2(_objectSpread2({}, options), {}, {
+    v2: true
+  }), metadata);
+}
+var init_parsePhoneNumberWithError = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/parsePhoneNumberWithError_.js"() {
+    init_parse();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/normalizeArguments.js
+function _typeof5(o2) {
+  "@babel/helpers - typeof";
+  return _typeof5 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof5(o2);
+}
+function ownKeys3(e2, r3) {
+  var t2 = Object.keys(e2);
+  if (Object.getOwnPropertySymbols) {
+    var o2 = Object.getOwnPropertySymbols(e2);
+    r3 && (o2 = o2.filter(function(r4) {
+      return Object.getOwnPropertyDescriptor(e2, r4).enumerable;
+    })), t2.push.apply(t2, o2);
+  }
+  return t2;
+}
+function _objectSpread3(e2) {
+  for (var r3 = 1; r3 < arguments.length; r3++) {
+    var t2 = null != arguments[r3] ? arguments[r3] : {};
+    r3 % 2 ? ownKeys3(Object(t2), true).forEach(function(r4) {
+      _defineProperty3(e2, r4, t2[r4]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e2, Object.getOwnPropertyDescriptors(t2)) : ownKeys3(Object(t2)).forEach(function(r4) {
+      Object.defineProperty(e2, r4, Object.getOwnPropertyDescriptor(t2, r4));
+    });
+  }
+  return e2;
+}
+function _defineProperty3(e2, r3, t2) {
+  return (r3 = _toPropertyKey5(r3)) in e2 ? Object.defineProperty(e2, r3, { value: t2, enumerable: true, configurable: true, writable: true }) : e2[r3] = t2, e2;
+}
+function _toPropertyKey5(t2) {
+  var i2 = _toPrimitive5(t2, "string");
+  return "symbol" == _typeof5(i2) ? i2 : i2 + "";
+}
+function _toPrimitive5(t2, r3) {
+  if ("object" != _typeof5(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof5(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function _slicedToArray2(r3, e2) {
+  return _arrayWithHoles2(r3) || _iterableToArrayLimit2(r3, e2) || _unsupportedIterableToArray7(r3, e2) || _nonIterableRest2();
+}
+function _nonIterableRest2() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray7(r3, a2) {
+  if (r3) {
+    if ("string" == typeof r3) return _arrayLikeToArray7(r3, a2);
+    var t2 = {}.toString.call(r3).slice(8, -1);
+    return "Object" === t2 && r3.constructor && (t2 = r3.constructor.name), "Map" === t2 || "Set" === t2 ? Array.from(r3) : "Arguments" === t2 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t2) ? _arrayLikeToArray7(r3, a2) : void 0;
+  }
+}
+function _arrayLikeToArray7(r3, a2) {
+  (null == a2 || a2 > r3.length) && (a2 = r3.length);
+  for (var e2 = 0, n2 = Array(a2); e2 < a2; e2++) n2[e2] = r3[e2];
+  return n2;
+}
+function _iterableToArrayLimit2(r3, l2) {
+  var t2 = null == r3 ? null : "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (null != t2) {
+    var e2, n2, i2, u2, a2 = [], f2 = true, o2 = false;
+    try {
+      if (i2 = (t2 = t2.call(r3)).next, 0 === l2) {
+        if (Object(t2) !== t2) return;
+        f2 = false;
+      } else for (; !(f2 = (e2 = i2.call(t2)).done) && (a2.push(e2.value), a2.length !== l2); f2 = true) ;
+    } catch (r4) {
+      o2 = true, n2 = r4;
+    } finally {
+      try {
+        if (!f2 && null != t2["return"] && (u2 = t2["return"](), Object(u2) !== u2)) return;
+      } finally {
+        if (o2) throw n2;
+      }
+    }
+    return a2;
+  }
+}
+function _arrayWithHoles2(r3) {
+  if (Array.isArray(r3)) return r3;
+}
+function normalizeArguments(args) {
+  var _Array$prototype$slic = Array.prototype.slice.call(args), _Array$prototype$slic2 = _slicedToArray2(_Array$prototype$slic, 4), arg_1 = _Array$prototype$slic2[0], arg_2 = _Array$prototype$slic2[1], arg_3 = _Array$prototype$slic2[2], arg_4 = _Array$prototype$slic2[3];
+  var text;
+  var options;
+  var metadata;
+  if (typeof arg_1 === "string") {
+    text = arg_1;
+  } else throw new TypeError("A text for parsing must be a string.");
+  if (!arg_2 || typeof arg_2 === "string") {
+    if (arg_4) {
+      options = arg_3;
+      metadata = arg_4;
+    } else {
+      options = void 0;
+      metadata = arg_3;
+    }
+    if (arg_2) {
+      options = _objectSpread3({
+        defaultCountry: arg_2
+      }, options);
+    }
+  } else if (isObject2(arg_2)) {
+    if (arg_3) {
+      options = arg_2;
+      metadata = arg_3;
+    } else {
+      metadata = arg_2;
+    }
+  } else throw new Error("Invalid second argument: ".concat(arg_2));
+  return {
+    text,
+    options,
+    metadata
+  };
+}
+var init_normalizeArguments = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/normalizeArguments.js"() {
+    init_isObject();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/parsePhoneNumberWithError.js
+function parsePhoneNumberWithError2() {
+  var _normalizeArguments = normalizeArguments(arguments), text = _normalizeArguments.text, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  return parsePhoneNumberWithError(text, options, metadata);
+}
+var init_parsePhoneNumberWithError2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/parsePhoneNumberWithError.js"() {
+    init_parsePhoneNumberWithError();
+    init_normalizeArguments();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/parsePhoneNumber_.js
+function _typeof6(o2) {
+  "@babel/helpers - typeof";
+  return _typeof6 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof6(o2);
+}
+function ownKeys4(e2, r3) {
+  var t2 = Object.keys(e2);
+  if (Object.getOwnPropertySymbols) {
+    var o2 = Object.getOwnPropertySymbols(e2);
+    r3 && (o2 = o2.filter(function(r4) {
+      return Object.getOwnPropertyDescriptor(e2, r4).enumerable;
+    })), t2.push.apply(t2, o2);
+  }
+  return t2;
+}
+function _objectSpread4(e2) {
+  for (var r3 = 1; r3 < arguments.length; r3++) {
+    var t2 = null != arguments[r3] ? arguments[r3] : {};
+    r3 % 2 ? ownKeys4(Object(t2), true).forEach(function(r4) {
+      _defineProperty4(e2, r4, t2[r4]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e2, Object.getOwnPropertyDescriptors(t2)) : ownKeys4(Object(t2)).forEach(function(r4) {
+      Object.defineProperty(e2, r4, Object.getOwnPropertyDescriptor(t2, r4));
+    });
+  }
+  return e2;
+}
+function _defineProperty4(e2, r3, t2) {
+  return (r3 = _toPropertyKey6(r3)) in e2 ? Object.defineProperty(e2, r3, { value: t2, enumerable: true, configurable: true, writable: true }) : e2[r3] = t2, e2;
+}
+function _toPropertyKey6(t2) {
+  var i2 = _toPrimitive6(t2, "string");
+  return "symbol" == _typeof6(i2) ? i2 : i2 + "";
+}
+function _toPrimitive6(t2, r3) {
+  if ("object" != _typeof6(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof6(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function parsePhoneNumber2(text, options, metadata) {
+  if (options && options.defaultCountry && !isSupportedCountry(options.defaultCountry, metadata)) {
+    options = _objectSpread4(_objectSpread4({}, options), {}, {
+      defaultCountry: void 0
+    });
+  }
+  try {
+    return parsePhoneNumberWithError(text, options, metadata);
+  } catch (error2) {
+    if (error2 instanceof ParseError) {
+    } else {
+      throw error2;
+    }
+  }
+}
+var init_parsePhoneNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/parsePhoneNumber_.js"() {
+    init_parsePhoneNumberWithError();
+    init_ParseError();
+    init_metadata();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/parsePhoneNumber.js
+function parsePhoneNumber3() {
+  var _normalizeArguments = normalizeArguments(arguments), text = _normalizeArguments.text, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  return parsePhoneNumber2(text, options, metadata);
+}
+var init_parsePhoneNumber2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/parsePhoneNumber.js"() {
+    init_normalizeArguments();
+    init_parsePhoneNumber();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/isValidPhoneNumber.js
+function _typeof7(o2) {
+  "@babel/helpers - typeof";
+  return _typeof7 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof7(o2);
+}
+function ownKeys5(e2, r3) {
+  var t2 = Object.keys(e2);
+  if (Object.getOwnPropertySymbols) {
+    var o2 = Object.getOwnPropertySymbols(e2);
+    r3 && (o2 = o2.filter(function(r4) {
+      return Object.getOwnPropertyDescriptor(e2, r4).enumerable;
+    })), t2.push.apply(t2, o2);
+  }
+  return t2;
+}
+function _objectSpread5(e2) {
+  for (var r3 = 1; r3 < arguments.length; r3++) {
+    var t2 = null != arguments[r3] ? arguments[r3] : {};
+    r3 % 2 ? ownKeys5(Object(t2), true).forEach(function(r4) {
+      _defineProperty5(e2, r4, t2[r4]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e2, Object.getOwnPropertyDescriptors(t2)) : ownKeys5(Object(t2)).forEach(function(r4) {
+      Object.defineProperty(e2, r4, Object.getOwnPropertyDescriptor(t2, r4));
+    });
+  }
+  return e2;
+}
+function _defineProperty5(e2, r3, t2) {
+  return (r3 = _toPropertyKey7(r3)) in e2 ? Object.defineProperty(e2, r3, { value: t2, enumerable: true, configurable: true, writable: true }) : e2[r3] = t2, e2;
+}
+function _toPropertyKey7(t2) {
+  var i2 = _toPrimitive7(t2, "string");
+  return "symbol" == _typeof7(i2) ? i2 : i2 + "";
+}
+function _toPrimitive7(t2, r3) {
+  if ("object" != _typeof7(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof7(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function isValidPhoneNumber() {
+  var _normalizeArguments = normalizeArguments(arguments), text = _normalizeArguments.text, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  options = _objectSpread5(_objectSpread5({}, options), {}, {
+    extract: false
+  });
+  var phoneNumber = parsePhoneNumber2(text, options, metadata);
+  return phoneNumber && phoneNumber.isValid() || false;
+}
+var init_isValidPhoneNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/isValidPhoneNumber.js"() {
+    init_normalizeArguments();
+    init_parsePhoneNumber();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/isPossiblePhoneNumber.js
+function _typeof8(o2) {
+  "@babel/helpers - typeof";
+  return _typeof8 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof8(o2);
+}
+function ownKeys6(e2, r3) {
+  var t2 = Object.keys(e2);
+  if (Object.getOwnPropertySymbols) {
+    var o2 = Object.getOwnPropertySymbols(e2);
+    r3 && (o2 = o2.filter(function(r4) {
+      return Object.getOwnPropertyDescriptor(e2, r4).enumerable;
+    })), t2.push.apply(t2, o2);
+  }
+  return t2;
+}
+function _objectSpread6(e2) {
+  for (var r3 = 1; r3 < arguments.length; r3++) {
+    var t2 = null != arguments[r3] ? arguments[r3] : {};
+    r3 % 2 ? ownKeys6(Object(t2), true).forEach(function(r4) {
+      _defineProperty6(e2, r4, t2[r4]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e2, Object.getOwnPropertyDescriptors(t2)) : ownKeys6(Object(t2)).forEach(function(r4) {
+      Object.defineProperty(e2, r4, Object.getOwnPropertyDescriptor(t2, r4));
+    });
+  }
+  return e2;
+}
+function _defineProperty6(e2, r3, t2) {
+  return (r3 = _toPropertyKey8(r3)) in e2 ? Object.defineProperty(e2, r3, { value: t2, enumerable: true, configurable: true, writable: true }) : e2[r3] = t2, e2;
+}
+function _toPropertyKey8(t2) {
+  var i2 = _toPrimitive8(t2, "string");
+  return "symbol" == _typeof8(i2) ? i2 : i2 + "";
+}
+function _toPrimitive8(t2, r3) {
+  if ("object" != _typeof8(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof8(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function isPossiblePhoneNumber2() {
+  var _normalizeArguments = normalizeArguments(arguments), text = _normalizeArguments.text, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  options = _objectSpread6(_objectSpread6({}, options), {}, {
+    extract: false
+  });
+  var phoneNumber = parsePhoneNumber2(text, options, metadata);
+  return phoneNumber && phoneNumber.isPossible() || false;
+}
+var init_isPossiblePhoneNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/isPossiblePhoneNumber.js"() {
+    init_normalizeArguments();
+    init_parsePhoneNumber();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/validatePhoneNumberLength.js
+function _typeof9(o2) {
+  "@babel/helpers - typeof";
+  return _typeof9 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof9(o2);
+}
+function ownKeys7(e2, r3) {
+  var t2 = Object.keys(e2);
+  if (Object.getOwnPropertySymbols) {
+    var o2 = Object.getOwnPropertySymbols(e2);
+    r3 && (o2 = o2.filter(function(r4) {
+      return Object.getOwnPropertyDescriptor(e2, r4).enumerable;
+    })), t2.push.apply(t2, o2);
+  }
+  return t2;
+}
+function _objectSpread7(e2) {
+  for (var r3 = 1; r3 < arguments.length; r3++) {
+    var t2 = null != arguments[r3] ? arguments[r3] : {};
+    r3 % 2 ? ownKeys7(Object(t2), true).forEach(function(r4) {
+      _defineProperty7(e2, r4, t2[r4]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e2, Object.getOwnPropertyDescriptors(t2)) : ownKeys7(Object(t2)).forEach(function(r4) {
+      Object.defineProperty(e2, r4, Object.getOwnPropertyDescriptor(t2, r4));
+    });
+  }
+  return e2;
+}
+function _defineProperty7(e2, r3, t2) {
+  return (r3 = _toPropertyKey9(r3)) in e2 ? Object.defineProperty(e2, r3, { value: t2, enumerable: true, configurable: true, writable: true }) : e2[r3] = t2, e2;
+}
+function _toPropertyKey9(t2) {
+  var i2 = _toPrimitive9(t2, "string");
+  return "symbol" == _typeof9(i2) ? i2 : i2 + "";
+}
+function _toPrimitive9(t2, r3) {
+  if ("object" != _typeof9(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof9(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function validatePhoneNumberLength() {
+  var _normalizeArguments = normalizeArguments(arguments), text = _normalizeArguments.text, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  options = _objectSpread7(_objectSpread7({}, options), {}, {
+    extract: false
+  });
+  try {
+    var phoneNumber = parsePhoneNumberWithError(text, options, metadata);
+    metadata = new Metadata(metadata);
+    metadata.selectNumberingPlan(phoneNumber.countryCallingCode);
+    var result2 = checkNumberLength(phoneNumber.nationalNumber, phoneNumber.country, metadata);
+    if (result2 !== "IS_POSSIBLE") {
+      return result2;
+    }
+  } catch (error2) {
+    if (error2 instanceof ParseError) {
+      return error2.message;
+    } else {
+      throw error2;
+    }
+  }
+}
+var init_validatePhoneNumberLength = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/validatePhoneNumberLength.js"() {
+    init_normalizeArguments();
+    init_parsePhoneNumberWithError();
+    init_ParseError();
+    init_metadata();
+    init_checkNumberLength();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/LRUCache.js
+function _typeof10(o2) {
+  "@babel/helpers - typeof";
+  return _typeof10 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof10(o2);
+}
+function _defineProperties4(e2, r3) {
+  for (var t2 = 0; t2 < r3.length; t2++) {
+    var o2 = r3[t2];
+    o2.enumerable = o2.enumerable || false, o2.configurable = true, "value" in o2 && (o2.writable = true), Object.defineProperty(e2, _toPropertyKey10(o2.key), o2);
+  }
+}
+function _createClass4(e2, r3, t2) {
+  return r3 && _defineProperties4(e2.prototype, r3), t2 && _defineProperties4(e2, t2), Object.defineProperty(e2, "prototype", { writable: false }), e2;
+}
+function _toPropertyKey10(t2) {
+  var i2 = _toPrimitive10(t2, "string");
+  return "symbol" == _typeof10(i2) ? i2 : i2 + "";
+}
+function _toPrimitive10(t2, r3) {
+  if ("object" != _typeof10(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof10(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function _classCallCheck4(a2, n2) {
+  if (!(a2 instanceof n2)) throw new TypeError("Cannot call a class as a function");
+}
+var Node2, LRUCache;
+var init_LRUCache = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/LRUCache.js"() {
+    Node2 = /* @__PURE__ */ _createClass4(function Node3(key, value) {
+      var next = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : null;
+      var prev = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : null;
+      _classCallCheck4(this, Node3);
+      this.key = key;
+      this.value = value;
+      this.next = next;
+      this.prev = prev;
+    });
+    LRUCache = /* @__PURE__ */ (function() {
+      function LRUCache2() {
+        var limit2 = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : 10;
+        _classCallCheck4(this, LRUCache2);
+        this.size = 0;
+        this.limit = limit2;
+        this.head = null;
+        this.tail = null;
+        this.cache = {};
+      }
+      return _createClass4(LRUCache2, [{
+        key: "put",
+        value: function put(key, value) {
+          this.ensureLimit();
+          if (!this.head) {
+            this.head = this.tail = new Node2(key, value);
+          } else {
+            var node = new Node2(key, value, this.head);
+            this.head.prev = node;
+            this.head = node;
+          }
+          this.cache[key] = this.head;
+          this.size++;
+        }
+        // Read from cache map and make that node as new Head of LinkedList
+      }, {
+        key: "get",
+        value: function get(key) {
+          if (this.cache[key]) {
+            var value = this.cache[key].value;
+            this.remove(key);
+            this.put(key, value);
+            return value;
+          }
+          console.log("Item not available in cache for key ".concat(key));
+        }
+      }, {
+        key: "ensureLimit",
+        value: function ensureLimit() {
+          if (this.size === this.limit) {
+            this.remove(this.tail.key);
+          }
+        }
+      }, {
+        key: "remove",
+        value: function remove(key) {
+          var node = this.cache[key];
+          if (node.prev !== null) {
+            node.prev.next = node.next;
+          } else {
+            this.head = node.next;
+          }
+          if (node.next !== null) {
+            node.next.prev = node.prev;
+          } else {
+            this.tail = node.prev;
+          }
+          delete this.cache[key];
+          this.size--;
+        }
+      }, {
+        key: "clear",
+        value: function clear() {
+          this.head = null;
+          this.tail = null;
+          this.size = 0;
+          this.cache = {};
+        }
+        // // Invokes the callback function with every node of the chain and the index of the node.
+        // forEach(fn) {
+        //   let node = this.head;
+        //   let counter = 0;
+        //   while (node) {
+        //     fn(node, counter);
+        //     node = node.next;
+        //     counter++;
+        //   }
+        // }
+        // // To iterate over LRU with a 'for...of' loop
+        // *[Symbol.iterator]() {
+        //   let node = this.head;
+        //   while (node) {
+        //     yield node;
+        //     node = node.next;
+        //   }
+        // }
+      }]);
+    })();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/RegExpCache.js
+function _typeof11(o2) {
+  "@babel/helpers - typeof";
+  return _typeof11 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof11(o2);
+}
+function _classCallCheck5(a2, n2) {
+  if (!(a2 instanceof n2)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties5(e2, r3) {
+  for (var t2 = 0; t2 < r3.length; t2++) {
+    var o2 = r3[t2];
+    o2.enumerable = o2.enumerable || false, o2.configurable = true, "value" in o2 && (o2.writable = true), Object.defineProperty(e2, _toPropertyKey11(o2.key), o2);
+  }
+}
+function _createClass5(e2, r3, t2) {
+  return r3 && _defineProperties5(e2.prototype, r3), t2 && _defineProperties5(e2, t2), Object.defineProperty(e2, "prototype", { writable: false }), e2;
+}
+function _toPropertyKey11(t2) {
+  var i2 = _toPrimitive11(t2, "string");
+  return "symbol" == _typeof11(i2) ? i2 : i2 + "";
+}
+function _toPrimitive11(t2, r3) {
+  if ("object" != _typeof11(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof11(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+var RegExpCache;
+var init_RegExpCache = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/RegExpCache.js"() {
+    init_LRUCache();
+    RegExpCache = /* @__PURE__ */ (function() {
+      function RegExpCache2(size) {
+        _classCallCheck5(this, RegExpCache2);
+        this.cache = new LRUCache(size);
+      }
+      return _createClass5(RegExpCache2, [{
+        key: "getPatternForRegExp",
+        value: function getPatternForRegExp(pattern) {
+          var regExp = this.cache.get(pattern);
+          if (!regExp) {
+            regExp = new RegExp("^" + pattern);
+            this.cache.put(pattern, regExp);
+          }
+          return regExp;
+        }
+      }]);
+    })();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/util.js
+function limit(lower, upper) {
+  if (lower < 0 || upper <= 0 || upper < lower) {
+    throw new TypeError();
+  }
+  return "{".concat(lower, ",").concat(upper, "}");
+}
+function trimAfterFirstMatch(regexp, string) {
+  var index = string.search(regexp);
+  if (index >= 0) {
+    return string.slice(0, index);
+  }
+  return string;
+}
+function startsWith(string, substring) {
+  return string.indexOf(substring) === 0;
+}
+function endsWith(string, substring) {
+  return string.indexOf(substring, string.length - substring.length) === string.length - substring.length;
+}
+var init_util = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/util.js"() {
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/utf-8.js
+function isLatinLetter(letter) {
+  if (!pL_regexp.test(letter) && !pMn_regexp.test(letter)) {
+    return false;
+  }
+  return latinLetterRegexp.test(letter);
+}
+function isInvalidPunctuationSymbol(character) {
+  return character === "%" || pSc_regexp.test(character);
+}
+var _pZ, pZ, PZ, _pN, _pNd, pNd, _pL, pL, pL_regexp, _pSc, pSc, pSc_regexp, _pMn, pMn, pMn_regexp, _InBasic_Latin, _InLatin_1_Supplement, _InLatin_Extended_A, _InLatin_Extended_Additional, _InLatin_Extended_B, _InCombining_Diacritical_Marks, latinLetterRegexp;
+var init_utf_8 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/utf-8.js"() {
+    _pZ = " \xA0\u1680\u180E\u2000-\u200A\u2028\u2029\u202F\u205F\u3000";
+    pZ = "[".concat(_pZ, "]");
+    PZ = "[^".concat(_pZ, "]");
+    _pN = "0-9\xB2\xB3\xB9\xBC-\xBE\u0660-\u0669\u06F0-\u06F9\u07C0-\u07C9\u0966-\u096F\u09E6-\u09EF\u09F4-\u09F9\u0A66-\u0A6F\u0AE6-\u0AEF\u0B66-\u0B6F\u0B72-\u0B77\u0BE6-\u0BF2\u0C66-\u0C6F\u0C78-\u0C7E\u0CE6-\u0CEF\u0D66-\u0D75\u0E50-\u0E59\u0ED0-\u0ED9\u0F20-\u0F33\u1040-\u1049\u1090-\u1099\u1369-\u137C\u16EE-\u16F0\u17E0-\u17E9\u17F0-\u17F9\u1810-\u1819\u1946-\u194F\u19D0-\u19DA\u1A80-\u1A89\u1A90-\u1A99\u1B50-\u1B59\u1BB0-\u1BB9\u1C40-\u1C49\u1C50-\u1C59\u2070\u2074-\u2079\u2080-\u2089\u2150-\u2182\u2185-\u2189\u2460-\u249B\u24EA-\u24FF\u2776-\u2793\u2CFD\u3007\u3021-\u3029\u3038-\u303A\u3192-\u3195\u3220-\u3229\u3248-\u324F\u3251-\u325F\u3280-\u3289\u32B1-\u32BF\uA620-\uA629\uA6E6-\uA6EF\uA830-\uA835\uA8D0-\uA8D9\uA900-\uA909\uA9D0-\uA9D9\uAA50-\uAA59\uABF0-\uABF9\uFF10-\uFF19";
+    _pNd = "0-9\u0660-\u0669\u06F0-\u06F9\u07C0-\u07C9\u0966-\u096F\u09E6-\u09EF\u0A66-\u0A6F\u0AE6-\u0AEF\u0B66-\u0B6F\u0BE6-\u0BEF\u0C66-\u0C6F\u0CE6-\u0CEF\u0D66-\u0D6F\u0E50-\u0E59\u0ED0-\u0ED9\u0F20-\u0F29\u1040-\u1049\u1090-\u1099\u17E0-\u17E9\u1810-\u1819\u1946-\u194F\u19D0-\u19D9\u1A80-\u1A89\u1A90-\u1A99\u1B50-\u1B59\u1BB0-\u1BB9\u1C40-\u1C49\u1C50-\u1C59\uA620-\uA629\uA8D0-\uA8D9\uA900-\uA909\uA9D0-\uA9D9\uAA50-\uAA59\uABF0-\uABF9\uFF10-\uFF19";
+    pNd = "[".concat(_pNd, "]");
+    _pL = "A-Za-z\xAA\xB5\xBA\xC0-\xD6\xD8-\xF6\xF8-\u02C1\u02C6-\u02D1\u02E0-\u02E4\u02EC\u02EE\u0370-\u0374\u0376\u0377\u037A-\u037D\u0386\u0388-\u038A\u038C\u038E-\u03A1\u03A3-\u03F5\u03F7-\u0481\u048A-\u0527\u0531-\u0556\u0559\u0561-\u0587\u05D0-\u05EA\u05F0-\u05F2\u0620-\u064A\u066E\u066F\u0671-\u06D3\u06D5\u06E5\u06E6\u06EE\u06EF\u06FA-\u06FC\u06FF\u0710\u0712-\u072F\u074D-\u07A5\u07B1\u07CA-\u07EA\u07F4\u07F5\u07FA\u0800-\u0815\u081A\u0824\u0828\u0840-\u0858\u08A0\u08A2-\u08AC\u0904-\u0939\u093D\u0950\u0958-\u0961\u0971-\u0977\u0979-\u097F\u0985-\u098C\u098F\u0990\u0993-\u09A8\u09AA-\u09B0\u09B2\u09B6-\u09B9\u09BD\u09CE\u09DC\u09DD\u09DF-\u09E1\u09F0\u09F1\u0A05-\u0A0A\u0A0F\u0A10\u0A13-\u0A28\u0A2A-\u0A30\u0A32\u0A33\u0A35\u0A36\u0A38\u0A39\u0A59-\u0A5C\u0A5E\u0A72-\u0A74\u0A85-\u0A8D\u0A8F-\u0A91\u0A93-\u0AA8\u0AAA-\u0AB0\u0AB2\u0AB3\u0AB5-\u0AB9\u0ABD\u0AD0\u0AE0\u0AE1\u0B05-\u0B0C\u0B0F\u0B10\u0B13-\u0B28\u0B2A-\u0B30\u0B32\u0B33\u0B35-\u0B39\u0B3D\u0B5C\u0B5D\u0B5F-\u0B61\u0B71\u0B83\u0B85-\u0B8A\u0B8E-\u0B90\u0B92-\u0B95\u0B99\u0B9A\u0B9C\u0B9E\u0B9F\u0BA3\u0BA4\u0BA8-\u0BAA\u0BAE-\u0BB9\u0BD0\u0C05-\u0C0C\u0C0E-\u0C10\u0C12-\u0C28\u0C2A-\u0C33\u0C35-\u0C39\u0C3D\u0C58\u0C59\u0C60\u0C61\u0C85-\u0C8C\u0C8E-\u0C90\u0C92-\u0CA8\u0CAA-\u0CB3\u0CB5-\u0CB9\u0CBD\u0CDE\u0CE0\u0CE1\u0CF1\u0CF2\u0D05-\u0D0C\u0D0E-\u0D10\u0D12-\u0D3A\u0D3D\u0D4E\u0D60\u0D61\u0D7A-\u0D7F\u0D85-\u0D96\u0D9A-\u0DB1\u0DB3-\u0DBB\u0DBD\u0DC0-\u0DC6\u0E01-\u0E30\u0E32\u0E33\u0E40-\u0E46\u0E81\u0E82\u0E84\u0E87\u0E88\u0E8A\u0E8D\u0E94-\u0E97\u0E99-\u0E9F\u0EA1-\u0EA3\u0EA5\u0EA7\u0EAA\u0EAB\u0EAD-\u0EB0\u0EB2\u0EB3\u0EBD\u0EC0-\u0EC4\u0EC6\u0EDC-\u0EDF\u0F00\u0F40-\u0F47\u0F49-\u0F6C\u0F88-\u0F8C\u1000-\u102A\u103F\u1050-\u1055\u105A-\u105D\u1061\u1065\u1066\u106E-\u1070\u1075-\u1081\u108E\u10A0-\u10C5\u10C7\u10CD\u10D0-\u10FA\u10FC-\u1248\u124A-\u124D\u1250-\u1256\u1258\u125A-\u125D\u1260-\u1288\u128A-\u128D\u1290-\u12B0\u12B2-\u12B5\u12B8-\u12BE\u12C0\u12C2-\u12C5\u12C8-\u12D6\u12D8-\u1310\u1312-\u1315\u1318-\u135A\u1380-\u138F\u13A0-\u13F4\u1401-\u166C\u166F-\u167F\u1681-\u169A\u16A0-\u16EA\u1700-\u170C\u170E-\u1711\u1720-\u1731\u1740-\u1751\u1760-\u176C\u176E-\u1770\u1780-\u17B3\u17D7\u17DC\u1820-\u1877\u1880-\u18A8\u18AA\u18B0-\u18F5\u1900-\u191C\u1950-\u196D\u1970-\u1974\u1980-\u19AB\u19C1-\u19C7\u1A00-\u1A16\u1A20-\u1A54\u1AA7\u1B05-\u1B33\u1B45-\u1B4B\u1B83-\u1BA0\u1BAE\u1BAF\u1BBA-\u1BE5\u1C00-\u1C23\u1C4D-\u1C4F\u1C5A-\u1C7D\u1CE9-\u1CEC\u1CEE-\u1CF1\u1CF5\u1CF6\u1D00-\u1DBF\u1E00-\u1F15\u1F18-\u1F1D\u1F20-\u1F45\u1F48-\u1F4D\u1F50-\u1F57\u1F59\u1F5B\u1F5D\u1F5F-\u1F7D\u1F80-\u1FB4\u1FB6-\u1FBC\u1FBE\u1FC2-\u1FC4\u1FC6-\u1FCC\u1FD0-\u1FD3\u1FD6-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FF4\u1FF6-\u1FFC\u2071\u207F\u2090-\u209C\u2102\u2107\u210A-\u2113\u2115\u2119-\u211D\u2124\u2126\u2128\u212A-\u212D\u212F-\u2139\u213C-\u213F\u2145-\u2149\u214E\u2183\u2184\u2C00-\u2C2E\u2C30-\u2C5E\u2C60-\u2CE4\u2CEB-\u2CEE\u2CF2\u2CF3\u2D00-\u2D25\u2D27\u2D2D\u2D30-\u2D67\u2D6F\u2D80-\u2D96\u2DA0-\u2DA6\u2DA8-\u2DAE\u2DB0-\u2DB6\u2DB8-\u2DBE\u2DC0-\u2DC6\u2DC8-\u2DCE\u2DD0-\u2DD6\u2DD8-\u2DDE\u2E2F\u3005\u3006\u3031-\u3035\u303B\u303C\u3041-\u3096\u309D-\u309F\u30A1-\u30FA\u30FC-\u30FF\u3105-\u312D\u3131-\u318E\u31A0-\u31BA\u31F0-\u31FF\u3400-\u4DB5\u4E00-\u9FCC\uA000-\uA48C\uA4D0-\uA4FD\uA500-\uA60C\uA610-\uA61F\uA62A\uA62B\uA640-\uA66E\uA67F-\uA697\uA6A0-\uA6E5\uA717-\uA71F\uA722-\uA788\uA78B-\uA78E\uA790-\uA793\uA7A0-\uA7AA\uA7F8-\uA801\uA803-\uA805\uA807-\uA80A\uA80C-\uA822\uA840-\uA873\uA882-\uA8B3\uA8F2-\uA8F7\uA8FB\uA90A-\uA925\uA930-\uA946\uA960-\uA97C\uA984-\uA9B2\uA9CF\uAA00-\uAA28\uAA40-\uAA42\uAA44-\uAA4B\uAA60-\uAA76\uAA7A\uAA80-\uAAAF\uAAB1\uAAB5\uAAB6\uAAB9-\uAABD\uAAC0\uAAC2\uAADB-\uAADD\uAAE0-\uAAEA\uAAF2-\uAAF4\uAB01-\uAB06\uAB09-\uAB0E\uAB11-\uAB16\uAB20-\uAB26\uAB28-\uAB2E\uABC0-\uABE2\uAC00-\uD7A3\uD7B0-\uD7C6\uD7CB-\uD7FB\uF900-\uFA6D\uFA70-\uFAD9\uFB00-\uFB06\uFB13-\uFB17\uFB1D\uFB1F-\uFB28\uFB2A-\uFB36\uFB38-\uFB3C\uFB3E\uFB40\uFB41\uFB43\uFB44\uFB46-\uFBB1\uFBD3-\uFD3D\uFD50-\uFD8F\uFD92-\uFDC7\uFDF0-\uFDFB\uFE70-\uFE74\uFE76-\uFEFC\uFF21-\uFF3A\uFF41-\uFF5A\uFF66-\uFFBE\uFFC2-\uFFC7\uFFCA-\uFFCF\uFFD2-\uFFD7\uFFDA-\uFFDC";
+    pL = "[".concat(_pL, "]");
+    pL_regexp = new RegExp(pL);
+    _pSc = "$\xA2-\xA5\u058F\u060B\u09F2\u09F3\u09FB\u0AF1\u0BF9\u0E3F\u17DB\u20A0-\u20B9\uA838\uFDFC\uFE69\uFF04\uFFE0\uFFE1\uFFE5\uFFE6";
+    pSc = "[".concat(_pSc, "]");
+    pSc_regexp = new RegExp(pSc);
+    _pMn = "\u0300-\u036F\u0483-\u0487\u0591-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED\u0711\u0730-\u074A\u07A6-\u07B0\u07EB-\u07F3\u0816-\u0819\u081B-\u0823\u0825-\u0827\u0829-\u082D\u0859-\u085B\u08E4-\u08FE\u0900-\u0902\u093A\u093C\u0941-\u0948\u094D\u0951-\u0957\u0962\u0963\u0981\u09BC\u09C1-\u09C4\u09CD\u09E2\u09E3\u0A01\u0A02\u0A3C\u0A41\u0A42\u0A47\u0A48\u0A4B-\u0A4D\u0A51\u0A70\u0A71\u0A75\u0A81\u0A82\u0ABC\u0AC1-\u0AC5\u0AC7\u0AC8\u0ACD\u0AE2\u0AE3\u0B01\u0B3C\u0B3F\u0B41-\u0B44\u0B4D\u0B56\u0B62\u0B63\u0B82\u0BC0\u0BCD\u0C3E-\u0C40\u0C46-\u0C48\u0C4A-\u0C4D\u0C55\u0C56\u0C62\u0C63\u0CBC\u0CBF\u0CC6\u0CCC\u0CCD\u0CE2\u0CE3\u0D41-\u0D44\u0D4D\u0D62\u0D63\u0DCA\u0DD2-\u0DD4\u0DD6\u0E31\u0E34-\u0E3A\u0E47-\u0E4E\u0EB1\u0EB4-\u0EB9\u0EBB\u0EBC\u0EC8-\u0ECD\u0F18\u0F19\u0F35\u0F37\u0F39\u0F71-\u0F7E\u0F80-\u0F84\u0F86\u0F87\u0F8D-\u0F97\u0F99-\u0FBC\u0FC6\u102D-\u1030\u1032-\u1037\u1039\u103A\u103D\u103E\u1058\u1059\u105E-\u1060\u1071-\u1074\u1082\u1085\u1086\u108D\u109D\u135D-\u135F\u1712-\u1714\u1732-\u1734\u1752\u1753\u1772\u1773\u17B4\u17B5\u17B7-\u17BD\u17C6\u17C9-\u17D3\u17DD\u180B-\u180D\u18A9\u1920-\u1922\u1927\u1928\u1932\u1939-\u193B\u1A17\u1A18\u1A56\u1A58-\u1A5E\u1A60\u1A62\u1A65-\u1A6C\u1A73-\u1A7C\u1A7F\u1B00-\u1B03\u1B34\u1B36-\u1B3A\u1B3C\u1B42\u1B6B-\u1B73\u1B80\u1B81\u1BA2-\u1BA5\u1BA8\u1BA9\u1BAB\u1BE6\u1BE8\u1BE9\u1BED\u1BEF-\u1BF1\u1C2C-\u1C33\u1C36\u1C37\u1CD0-\u1CD2\u1CD4-\u1CE0\u1CE2-\u1CE8\u1CED\u1CF4\u1DC0-\u1DE6\u1DFC-\u1DFF\u20D0-\u20DC\u20E1\u20E5-\u20F0\u2CEF-\u2CF1\u2D7F\u2DE0-\u2DFF\u302A-\u302D\u3099\u309A\uA66F\uA674-\uA67D\uA69F\uA6F0\uA6F1\uA802\uA806\uA80B\uA825\uA826\uA8C4\uA8E0-\uA8F1\uA926-\uA92D\uA947-\uA951\uA980-\uA982\uA9B3\uA9B6-\uA9B9\uA9BC\uAA29-\uAA2E\uAA31\uAA32\uAA35\uAA36\uAA43\uAA4C\uAAB0\uAAB2-\uAAB4\uAAB7\uAAB8\uAABE\uAABF\uAAC1\uAAEC\uAAED\uAAF6\uABE5\uABE8\uABED\uFB1E\uFE00-\uFE0F\uFE20-\uFE26";
+    pMn = "[".concat(_pMn, "]");
+    pMn_regexp = new RegExp(pMn);
+    _InBasic_Latin = "\0-\x7F";
+    _InLatin_1_Supplement = "\x80-\xFF";
+    _InLatin_Extended_A = "\u0100-\u017F";
+    _InLatin_Extended_Additional = "\u1E00-\u1EFF";
+    _InLatin_Extended_B = "\u0180-\u024F";
+    _InCombining_Diacritical_Marks = "\u0300-\u036F";
+    latinLetterRegexp = new RegExp("[" + _InBasic_Latin + _InLatin_1_Supplement + _InLatin_Extended_A + _InLatin_Extended_Additional + _InLatin_Extended_B + _InCombining_Diacritical_Marks + "]");
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/matchPhoneNumberStringAgainstPhoneNumber.js
+function matchPhoneNumberStringAgainstPhoneNumber(phoneNumberString, phoneNumber, metadata) {
+  var phoneNumberStringContainsCallingCode = true;
+  var parsedPhoneNumber = parsePhoneNumber3(phoneNumberString, metadata);
+  if (!parsedPhoneNumber) {
+    phoneNumberStringContainsCallingCode = false;
+    parsedPhoneNumber = parsePhoneNumber3(phoneNumberString, {
+      defaultCallingCode: phoneNumber.countryCallingCode
+    }, metadata);
+  }
+  if (!parsedPhoneNumber) {
+    return "INVALID_NUMBER";
+  }
+  if (phoneNumber.ext) {
+    if (parsedPhoneNumber.ext !== phoneNumber.ext) {
+      return "NO_MATCH";
+    }
+  } else {
+    if (parsedPhoneNumber.ext) {
+      return "NO_MATCH";
+    }
+  }
+  if (phoneNumberStringContainsCallingCode) {
+    if (phoneNumber.countryCallingCode !== parsedPhoneNumber.countryCallingCode) {
+      return "NO_MATCH";
+    }
+  }
+  if (phoneNumber.number === parsedPhoneNumber.number) {
+    if (phoneNumberStringContainsCallingCode) {
+      return "EXACT_MATCH";
+    } else {
+      return "NSN_MATCH";
+    }
+  }
+  if (phoneNumber.nationalNumber.indexOf(parsedPhoneNumber.nationalNumber) === 0 || parsedPhoneNumber.nationalNumber.indexOf(phoneNumber.nationalNumber) === 0) {
+    return "SHORT_NSN_MATCH";
+  }
+  return "NO_MATCH";
+}
+var init_matchPhoneNumberStringAgainstPhoneNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/matchPhoneNumberStringAgainstPhoneNumber.js"() {
+    init_parsePhoneNumber2();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/Leniency.js
+function _createForOfIteratorHelperLoose7(r3, e2) {
+  var t2 = "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (t2) return (t2 = t2.call(r3)).next.bind(t2);
+  if (Array.isArray(r3) || (t2 = _unsupportedIterableToArray8(r3)) || e2 && r3 && "number" == typeof r3.length) {
+    t2 && (r3 = t2);
+    var o2 = 0;
+    return function() {
+      return o2 >= r3.length ? { done: true } : { done: false, value: r3[o2++] };
+    };
+  }
+  throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray8(r3, a2) {
+  if (r3) {
+    if ("string" == typeof r3) return _arrayLikeToArray8(r3, a2);
+    var t2 = {}.toString.call(r3).slice(8, -1);
+    return "Object" === t2 && r3.constructor && (t2 = r3.constructor.name), "Map" === t2 || "Set" === t2 ? Array.from(r3) : "Arguments" === t2 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t2) ? _arrayLikeToArray8(r3, a2) : void 0;
+  }
+}
+function _arrayLikeToArray8(r3, a2) {
+  (null == a2 || a2 > r3.length) && (a2 = r3.length);
+  for (var e2 = 0, n2 = Array(a2); e2 < a2; e2++) n2[e2] = r3[e2];
+  return n2;
+}
+function containsOnlyValidXChars(phoneNumber, candidate, metadata) {
+  for (var index = 0; index < candidate.length - 1; index++) {
+    var charAtIndex = candidate.charAt(index);
+    if (charAtIndex === "x" || charAtIndex === "X") {
+      var charAtNextIndex = candidate.charAt(index + 1);
+      if (charAtNextIndex === "x" || charAtNextIndex === "X") {
+        index++;
+        if (matchPhoneNumberStringAgainstPhoneNumber(candidate.substring(index), phoneNumber, metadata) !== "NSN_MATCH") {
+          return false;
+        }
+      } else {
+        var ext = parseDigits(candidate.substring(index));
+        if (ext) {
+          if (phoneNumber.ext !== ext) {
+            return false;
+          }
+        } else {
+          if (phoneNumber.ext) {
+            return false;
+          }
+        }
+      }
+    }
+  }
+  return true;
+}
+function isNationalPrefixPresentIfRequired(phoneNumber, _ref5) {
+  var defaultCountry = _ref5.defaultCountry, _metadata = _ref5.metadata;
+  if (phoneNumber.__countryCallingCodeSource !== "FROM_DEFAULT_COUNTRY") {
+    return true;
+  }
+  var metadata = new Metadata(_metadata);
+  metadata.selectNumberingPlan(phoneNumber.countryCallingCode);
+  var phoneNumberRegion = phoneNumber.country || getCountryByCallingCode(phoneNumber.countryCallingCode, {
+    nationalNumber: phoneNumber.nationalNumber,
+    metadata
+  });
+  var nationalNumber = phoneNumber.nationalNumber;
+  var format7 = chooseFormatForNumber(metadata.numberingPlan.formats(), nationalNumber);
+  if (format7.nationalPrefixFormattingRule()) {
+    if (metadata.numberingPlan.nationalPrefixIsOptionalWhenFormattingInNationalFormat()) {
+      return true;
+    }
+    if (!format7.usesNationalPrefix()) {
+      return true;
+    }
+    return Boolean(phoneNumber.nationalPrefix);
+  }
+  return true;
+}
+function containsMoreThanOneSlashInNationalNumber(phoneNumber, candidate) {
+  var firstSlashInBodyIndex = candidate.indexOf("/");
+  if (firstSlashInBodyIndex < 0) {
+    return false;
+  }
+  var secondSlashInBodyIndex = candidate.indexOf("/", firstSlashInBodyIndex + 1);
+  if (secondSlashInBodyIndex < 0) {
+    return false;
+  }
+  var candidateHasCountryCode = phoneNumber.__countryCallingCodeSource === "FROM_NUMBER_WITH_PLUS_SIGN" || phoneNumber.__countryCallingCodeSource === "FROM_NUMBER_WITHOUT_PLUS_SIGN";
+  if (candidateHasCountryCode && parseDigits(candidate.substring(0, firstSlashInBodyIndex)) === phoneNumber.countryCallingCode) {
+    return candidate.slice(secondSlashInBodyIndex + 1).indexOf("/") >= 0;
+  }
+  return true;
+}
+function checkNumberGroupingIsValid(number, candidate, metadata, checkGroups, regExpCache) {
+  throw new Error("This part of code hasn't been ported");
+  var normalizedCandidate = normalizeDigits(
+    candidate,
+    true
+    /* keep non-digits */
+  );
+  var formattedNumberGroups = getNationalNumberGroups(metadata, number, null);
+  if (checkGroups(metadata, number, normalizedCandidate, formattedNumberGroups)) {
+    return true;
+  }
+  var alternateFormats = MetadataManager.getAlternateFormatsForCountry(number.getCountryCode());
+  var nationalSignificantNumber = util.getNationalSignificantNumber(number);
+  if (alternateFormats) {
+    for (var _iterator = _createForOfIteratorHelperLoose7(alternateFormats.numberFormats()), _step; !(_step = _iterator()).done; ) {
+      var alternateFormat = _step.value;
+      if (alternateFormat.leadingDigitsPatterns().length > 0) {
+        var leadingDigitsRegExp = regExpCache.getPatternForRegExp("^" + alternateFormat.leadingDigitsPatterns()[0]);
+        if (!leadingDigitsRegExp.test(nationalSignificantNumber)) {
+          continue;
+        }
+      }
+      formattedNumberGroups = getNationalNumberGroups(metadata, number, alternateFormat);
+      if (checkGroups(metadata, number, normalizedCandidate, formattedNumberGroups)) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+function getNationalNumberGroups(metadata, number, formattingPattern) {
+  throw new Error("This part of code hasn't been ported");
+  if (formattingPattern) {
+    var nationalSignificantNumber = util.getNationalSignificantNumber(number);
+    return util.formatNsnUsingPattern(nationalSignificantNumber, formattingPattern, "RFC3966", metadata).split("-");
+  }
+  var rfc3966Format = formatNumber(number, "RFC3966", metadata);
+  var endIndex = rfc3966Format.indexOf(";");
+  if (endIndex < 0) {
+    endIndex = rfc3966Format.length;
+  }
+  var startIndex = rfc3966Format.indexOf("-") + 1;
+  return rfc3966Format.slice(startIndex, endIndex).split("-");
+}
+function allNumberGroupsAreExactlyPresent(metadata, number, normalizedCandidate, formattedNumberGroups) {
+  throw new Error("This part of code hasn't been ported");
+  var candidateGroups = normalizedCandidate.split(NON_DIGITS_PATTERN);
+  var candidateNumberGroupIndex = number.hasExtension() ? candidateGroups.length - 2 : candidateGroups.length - 1;
+  if (candidateGroups.length == 1 || candidateGroups[candidateNumberGroupIndex].contains(util.getNationalSignificantNumber(number))) {
+    return true;
+  }
+  var formattedNumberGroupIndex = formattedNumberGroups.length - 1;
+  while (formattedNumberGroupIndex > 0 && candidateNumberGroupIndex >= 0) {
+    if (candidateGroups[candidateNumberGroupIndex] !== formattedNumberGroups[formattedNumberGroupIndex]) {
+      return false;
+    }
+    formattedNumberGroupIndex--;
+    candidateNumberGroupIndex--;
+  }
+  return candidateNumberGroupIndex >= 0 && endsWith(candidateGroups[candidateNumberGroupIndex], formattedNumberGroups[0]);
+}
+function allNumberGroupsRemainGrouped(metadata, number, normalizedCandidate, formattedNumberGroups) {
+  throw new Error("This part of code hasn't been ported");
+  var fromIndex = 0;
+  if (number.getCountryCodeSource() !== CountryCodeSource.FROM_DEFAULT_COUNTRY) {
+    var countryCode = String(number.getCountryCode());
+    fromIndex = normalizedCandidate.indexOf(countryCode) + countryCode.length();
+  }
+  for (var i2 = 0; i2 < formattedNumberGroups.length; i2++) {
+    fromIndex = normalizedCandidate.indexOf(formattedNumberGroups[i2], fromIndex);
+    if (fromIndex < 0) {
+      return false;
+    }
+    fromIndex += formattedNumberGroups[i2].length();
+    if (i2 == 0 && fromIndex < normalizedCandidate.length()) {
+      var region = util.getRegionCodeForCountryCode(number.getCountryCode());
+      if (util.getNddPrefixForRegion(region, true) != null && Character.isDigit(normalizedCandidate.charAt(fromIndex))) {
+        var nationalSignificantNumber = util.getNationalSignificantNumber(number);
+        return startsWith(normalizedCandidate.slice(fromIndex - formattedNumberGroups[i2].length), nationalSignificantNumber);
+      }
+    }
+  }
+  return normalizedCandidate.slice(fromIndex).contains(number.getExtension());
+}
+var Leniency_default;
+var init_Leniency = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/Leniency.js"() {
+    init_parseDigits();
+    init_matchPhoneNumberStringAgainstPhoneNumber();
+    init_metadata();
+    init_getCountryByCallingCode();
+    init_format();
+    init_util();
+    Leniency_default = {
+      /**
+       * Phone numbers accepted are "possible", but not necessarily "valid".
+       */
+      POSSIBLE: function POSSIBLE(phoneNumber, _ref) {
+        var candidate = _ref.candidate, metadata = _ref.metadata;
+        return true;
+      },
+      /**
+       * Phone numbers accepted are "possible" and "valid".
+       * Numbers written in national format must have their national-prefix
+       * present if it is usually written for a number of this type.
+       */
+      VALID: function VALID(phoneNumber, _ref2) {
+        var candidate = _ref2.candidate, defaultCountry = _ref2.defaultCountry, metadata = _ref2.metadata;
+        if (!phoneNumber.isValid() || !containsOnlyValidXChars(phoneNumber, candidate, metadata)) {
+          return false;
+        }
+        return true;
+      },
+      /**
+       * Phone numbers accepted are "valid" and
+       * are grouped in a possible way for this locale. For example, a US number written as
+       * "65 02 53 00 00" and "650253 0000" are not accepted at this leniency level, whereas
+       * "650 253 0000", "650 2530000" or "6502530000" are.
+       * Numbers with more than one '/' symbol in the national significant number
+       * are also dropped at this level.
+       *
+       * Warning: This level might result in lower coverage especially for regions outside of
+       * country code "+1". If you are not sure about which level to use,
+       * email the discussion group libphonenumber-discuss@googlegroups.com.
+       */
+      STRICT_GROUPING: function STRICT_GROUPING(phoneNumber, _ref3) {
+        var candidate = _ref3.candidate, defaultCountry = _ref3.defaultCountry, metadata = _ref3.metadata, regExpCache = _ref3.regExpCache;
+        if (!phoneNumber.isValid() || !containsOnlyValidXChars(phoneNumber, candidate, metadata) || containsMoreThanOneSlashInNationalNumber(phoneNumber, candidate) || !isNationalPrefixPresentIfRequired(phoneNumber, {
+          defaultCountry,
+          metadata
+        })) {
+          return false;
+        }
+        return checkNumberGroupingIsValid(phoneNumber, candidate, metadata, allNumberGroupsRemainGrouped, regExpCache);
+      },
+      /**
+       * Phone numbers accepted are "valid" and are grouped in the same way
+       * that we would have formatted it, or as a single block.
+       * For example, a US number written as "650 2530000" is not accepted
+       * at this leniency level, whereas "650 253 0000" or "6502530000" are.
+       * Numbers with more than one '/' symbol are also dropped at this level.
+       *
+       * Warning: This level might result in lower coverage especially for regions outside of
+       * country code "+1". If you are not sure about which level to use, email the discussion group
+       * libphonenumber-discuss@googlegroups.com.
+       */
+      EXACT_GROUPING: function EXACT_GROUPING(phoneNumber, _ref4) {
+        var candidate = _ref4.candidate, defaultCountry = _ref4.defaultCountry, metadata = _ref4.metadata, regExpCache = _ref4.regExpCache;
+        if (!phoneNumber.isValid() || !containsOnlyValidXChars(phoneNumber, candidate, metadata) || containsMoreThanOneSlashInNationalNumber(phoneNumber, candidate) || !isNationalPrefixPresentIfRequired(phoneNumber, {
+          defaultCountry,
+          metadata
+        })) {
+          return false;
+        }
+        return checkNumberGroupingIsValid(phoneNumber, candidate, metadata, allNumberGroupsAreExactlyPresent, regExpCache);
+      }
+    };
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/parsePreCandidate.js
+function parsePreCandidate(candidate) {
+  return trimAfterFirstMatch(SECOND_NUMBER_START_PATTERN, candidate);
+}
+var SECOND_NUMBER_START_PATTERN;
+var init_parsePreCandidate = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/parsePreCandidate.js"() {
+    init_util();
+    SECOND_NUMBER_START_PATTERN = /[\\/] *x/;
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/isValidPreCandidate.js
+function isValidPreCandidate(candidate, offset, text) {
+  if (SLASH_SEPARATED_DATES.test(candidate)) {
+    return false;
+  }
+  if (TIME_STAMPS.test(candidate)) {
+    var followingText = text.slice(offset + candidate.length);
+    if (TIME_STAMPS_SUFFIX_LEADING.test(followingText)) {
+      return false;
+    }
+  }
+  return true;
+}
+var SLASH_SEPARATED_DATES, TIME_STAMPS, TIME_STAMPS_SUFFIX_LEADING;
+var init_isValidPreCandidate = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/isValidPreCandidate.js"() {
+    SLASH_SEPARATED_DATES = /(?:(?:[0-3]?\d\/[01]?\d)|(?:[01]?\d\/[0-3]?\d))\/(?:[12]\d)?\d{2}/;
+    TIME_STAMPS = /[12]\d{3}[-/]?[01]\d[-/]?[0-3]\d +[0-2]\d$/;
+    TIME_STAMPS_SUFFIX_LEADING = /^:[0-5]\d/;
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/isValidCandidate.js
+function isValidCandidate(candidate, offset, text, leniency) {
+  if (!MATCHING_BRACKETS_ENTIRE.test(candidate) || PUB_PAGES.test(candidate)) {
+    return;
+  }
+  if (leniency !== "POSSIBLE") {
+    if (offset > 0 && !LEAD_CLASS_LEADING.test(candidate)) {
+      var previousChar = text[offset - 1];
+      if (isInvalidPunctuationSymbol(previousChar) || isLatinLetter(previousChar)) {
+        return false;
+      }
+    }
+    var lastCharIndex = offset + candidate.length;
+    if (lastCharIndex < text.length) {
+      var nextChar = text[lastCharIndex];
+      if (isInvalidPunctuationSymbol(nextChar) || isLatinLetter(nextChar)) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+var OPENING_PARENS, CLOSING_PARENS, NON_PARENS, LEAD_CLASS, LEAD_CLASS_LEADING, BRACKET_PAIR_LIMIT, MATCHING_BRACKETS_ENTIRE, PUB_PAGES;
+var init_isValidCandidate = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findNumbers/isValidCandidate.js"() {
+    init_constants();
+    init_util();
+    init_utf_8();
+    OPENING_PARENS = "(\\[\uFF08\uFF3B";
+    CLOSING_PARENS = ")\\]\uFF09\uFF3D";
+    NON_PARENS = "[^".concat(OPENING_PARENS).concat(CLOSING_PARENS, "]");
+    LEAD_CLASS = "[".concat(OPENING_PARENS).concat(PLUS_CHARS, "]");
+    LEAD_CLASS_LEADING = new RegExp("^" + LEAD_CLASS);
+    BRACKET_PAIR_LIMIT = limit(0, 3);
+    MATCHING_BRACKETS_ENTIRE = new RegExp("^(?:[" + OPENING_PARENS + "])?(?:" + NON_PARENS + "+[" + CLOSING_PARENS + "])?" + NON_PARENS + "+(?:[" + OPENING_PARENS + "]" + NON_PARENS + "+[" + CLOSING_PARENS + "])" + BRACKET_PAIR_LIMIT + NON_PARENS + "*$");
+    PUB_PAGES = /\d{1,5}-+\d{1,5}\s{0,4}\(\d{1,4}/;
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/PhoneNumberMatcher.js
+function _typeof12(o2) {
+  "@babel/helpers - typeof";
+  return _typeof12 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof12(o2);
+}
+function _createForOfIteratorHelperLoose8(r3, e2) {
+  var t2 = "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (t2) return (t2 = t2.call(r3)).next.bind(t2);
+  if (Array.isArray(r3) || (t2 = _unsupportedIterableToArray9(r3)) || e2 && r3 && "number" == typeof r3.length) {
+    t2 && (r3 = t2);
+    var o2 = 0;
+    return function() {
+      return o2 >= r3.length ? { done: true } : { done: false, value: r3[o2++] };
+    };
+  }
+  throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray9(r3, a2) {
+  if (r3) {
+    if ("string" == typeof r3) return _arrayLikeToArray9(r3, a2);
+    var t2 = {}.toString.call(r3).slice(8, -1);
+    return "Object" === t2 && r3.constructor && (t2 = r3.constructor.name), "Map" === t2 || "Set" === t2 ? Array.from(r3) : "Arguments" === t2 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t2) ? _arrayLikeToArray9(r3, a2) : void 0;
+  }
+}
+function _arrayLikeToArray9(r3, a2) {
+  (null == a2 || a2 > r3.length) && (a2 = r3.length);
+  for (var e2 = 0, n2 = Array(a2); e2 < a2; e2++) n2[e2] = r3[e2];
+  return n2;
+}
+function _classCallCheck6(a2, n2) {
+  if (!(a2 instanceof n2)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties6(e2, r3) {
+  for (var t2 = 0; t2 < r3.length; t2++) {
+    var o2 = r3[t2];
+    o2.enumerable = o2.enumerable || false, o2.configurable = true, "value" in o2 && (o2.writable = true), Object.defineProperty(e2, _toPropertyKey12(o2.key), o2);
+  }
+}
+function _createClass6(e2, r3, t2) {
+  return r3 && _defineProperties6(e2.prototype, r3), t2 && _defineProperties6(e2, t2), Object.defineProperty(e2, "prototype", { writable: false }), e2;
+}
+function _toPropertyKey12(t2) {
+  var i2 = _toPrimitive12(t2, "string");
+  return "symbol" == _typeof12(i2) ? i2 : i2 + "";
+}
+function _toPrimitive12(t2, r3) {
+  if ("object" != _typeof12(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof12(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+var USE_NON_GEOGRAPHIC_COUNTRY_CODE4, EXTN_PATTERNS_FOR_MATCHING, INNER_MATCHES, leadLimit, punctuationLimit, digitBlockLimit, blockLimit, punctuation, digitSequence, PATTERN, UNWANTED_END_CHAR_PATTERN, MAX_SAFE_INTEGER, PhoneNumberMatcher;
+var init_PhoneNumberMatcher = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/PhoneNumberMatcher.js"() {
+    init_constants();
+    init_createExtensionPattern();
+    init_RegExpCache();
+    init_util();
+    init_utf_8();
+    init_Leniency();
+    init_parsePreCandidate();
+    init_isValidPreCandidate();
+    init_isValidCandidate();
+    init_metadata();
+    init_parsePhoneNumber2();
+    USE_NON_GEOGRAPHIC_COUNTRY_CODE4 = false;
+    EXTN_PATTERNS_FOR_MATCHING = createExtensionPattern("matching");
+    INNER_MATCHES = [
+      // Breaks on the slash - e.g. "651-234-2345/332-445-1234"
+      "/+(.*)",
+      // Note that the bracket here is inside the capturing group, since we consider it part of the
+      // phone number. Will match a pattern like "(650) 223 3345 (754) 223 3321".
+      "(\\([^(]*)",
+      // Breaks on a hyphen - e.g. "12345 - 332-445-1234 is my number."
+      // We require a space on either side of the hyphen for it to be considered a separator.
+      "(?:".concat(pZ, "-|-").concat(pZ, ")").concat(pZ, "*(.+)"),
+      // Various types of wide hyphens. Note we have decided not to enforce a space here, since it's
+      // possible that it's supposed to be used to break two numbers without spaces, and we haven't
+      // seen many instances of it used within a number.
+      "[\u2012-\u2015\uFF0D]".concat(pZ, "*(.+)"),
+      // Breaks on a full stop - e.g. "12345. 332-445-1234 is my number."
+      "\\.+".concat(pZ, "*([^.]+)"),
+      // Breaks on space - e.g. "3324451234 8002341234"
+      "".concat(pZ, "+(").concat(PZ, "+)")
+    ];
+    leadLimit = limit(0, 2);
+    punctuationLimit = limit(0, 4);
+    digitBlockLimit = MAX_LENGTH_FOR_NSN + MAX_LENGTH_COUNTRY_CODE;
+    blockLimit = limit(0, digitBlockLimit);
+    punctuation = "[".concat(VALID_PUNCTUATION, "]") + punctuationLimit;
+    digitSequence = pNd + limit(1, digitBlockLimit);
+    PATTERN = "(?:" + LEAD_CLASS + punctuation + ")" + leadLimit + digitSequence + "(?:" + punctuation + digitSequence + ")" + blockLimit + "(?:" + EXTN_PATTERNS_FOR_MATCHING + ")?";
+    UNWANTED_END_CHAR_PATTERN = new RegExp("[^".concat(_pN).concat(_pL, "#]+$"));
+    MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || Math.pow(2, 53) - 1;
+    PhoneNumberMatcher = /* @__PURE__ */ (function() {
+      function PhoneNumberMatcher3() {
+        var text = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : "";
+        var options = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
+        var metadata = arguments.length > 2 ? arguments[2] : void 0;
+        _classCallCheck6(this, PhoneNumberMatcher3);
+        options = {
+          v2: options.v2,
+          defaultCallingCode: options.defaultCallingCode,
+          defaultCountry: options.defaultCountry && isSupportedCountry(options.defaultCountry, metadata) ? options.defaultCountry : void 0,
+          // Here it should've assigned a default value only if `options.leniency === undefined`.
+          leniency: options.leniency || (options.extended ? "POSSIBLE" : "VALID"),
+          // Here it should've assigned a default value only if `options.maxTries === undefined`.
+          maxTries: options.maxTries || MAX_SAFE_INTEGER
+        };
+        if (!Leniency_default[options.leniency]) {
+          throw new TypeError('Unknown leniency: "'.concat(options.leniency, '"'));
+        }
+        if (options.leniency !== "POSSIBLE" && options.leniency !== "VALID") {
+          throw new TypeError('Invalid `leniency`: "'.concat(options.leniency, '". Supported values: "POSSIBLE", "VALID".'));
+        }
+        if (options.maxTries < 0) {
+          throw new TypeError("`maxTries` must be `>= 0`");
+        }
+        this.text = text;
+        this.options = options;
+        this.metadata = metadata;
+        this.leniency = Leniency_default[options.leniency];
+        this.maxTries = options.maxTries;
+        this.PATTERN = new RegExp(PATTERN, "ig");
+        this.INNER_MATCHES = INNER_MATCHES.map(function(pattern) {
+          return new RegExp(pattern, "g");
+        });
+        this.state = "NOT_READY";
+        this.searchIndex = 0;
+        this.regExpCache = new RegExpCache(32);
+      }
+      return _createClass6(PhoneNumberMatcher3, [{
+        key: "find",
+        value: function find(index) {
+          this.PATTERN.lastIndex = index;
+          var matches;
+          while (this.maxTries > 0 && (matches = this.PATTERN.exec(this.text)) !== null) {
+            var candidate = matches[0];
+            var offset = matches.index;
+            candidate = parsePreCandidate(candidate);
+            if (isValidPreCandidate(candidate, offset, this.text)) {
+              var match2 = (
+                // Try to come up with a valid match given the entire candidate.
+                this.parseAndVerify(candidate, offset, this.text) || this.extractInnerMatch(candidate, offset, this.text)
+              );
+              if (match2) {
+                if (this.options.v2) {
+                  return {
+                    startsAt: match2.startsAt,
+                    endsAt: match2.endsAt,
+                    number: match2.phoneNumber
+                  };
+                } else {
+                  var phoneNumber = match2.phoneNumber;
+                  var result2 = {
+                    startsAt: match2.startsAt,
+                    endsAt: match2.endsAt,
+                    phone: phoneNumber.nationalNumber
+                  };
+                  if (phoneNumber.country) {
+                    if (USE_NON_GEOGRAPHIC_COUNTRY_CODE4 && country === "001") {
+                      result2.countryCallingCode = phoneNumber.countryCallingCode;
+                    } else {
+                      result2.country = phoneNumber.country;
+                    }
+                  } else {
+                    result2.countryCallingCode = phoneNumber.countryCallingCode;
+                  }
+                  if (phoneNumber.ext) {
+                    result2.ext = phoneNumber.ext;
+                  }
+                  return result2;
+                }
+              }
+            }
+            this.maxTries--;
+          }
+        }
+        /**
+         * Attempts to extract a match from `substring`
+         * if the substring itself does not qualify as a match.
+         */
+      }, {
+        key: "extractInnerMatch",
+        value: function extractInnerMatch(substring, offset, text) {
+          for (var _iterator = _createForOfIteratorHelperLoose8(this.INNER_MATCHES), _step; !(_step = _iterator()).done; ) {
+            var innerMatchRegExp = _step.value;
+            innerMatchRegExp.lastIndex = 0;
+            var isFirstMatch = true;
+            var candidateMatch = void 0;
+            while (this.maxTries > 0 && (candidateMatch = innerMatchRegExp.exec(substring)) !== null) {
+              if (isFirstMatch) {
+                var _candidate = trimAfterFirstMatch(UNWANTED_END_CHAR_PATTERN, substring.slice(0, candidateMatch.index));
+                var _match2 = this.parseAndVerify(_candidate, offset, text);
+                if (_match2) {
+                  return _match2;
+                }
+                this.maxTries--;
+                isFirstMatch = false;
+              }
+              var candidate = trimAfterFirstMatch(UNWANTED_END_CHAR_PATTERN, candidateMatch[1]);
+              var candidateIndexGuess = substring.indexOf(candidate, candidateMatch.index);
+              var match2 = this.parseAndVerify(candidate, offset + candidateIndexGuess, text);
+              if (match2) {
+                return match2;
+              }
+              this.maxTries--;
+            }
+          }
+        }
+        /**
+         * Parses a phone number from the `candidate` using `parse` and
+         * verifies it matches the requested `leniency`. If parsing and verification succeed,
+         * a corresponding `PhoneNumberMatch` is returned, otherwise this method returns `null`.
+         *
+         * @param candidate  the candidate match
+         * @param offset  the offset of {@code candidate} within {@link #text}
+         * @return  the parsed and validated phone number match, or null
+         */
+      }, {
+        key: "parseAndVerify",
+        value: function parseAndVerify(candidate, offset, text) {
+          if (!isValidCandidate(candidate, offset, text, this.options.leniency)) {
+            return;
+          }
+          var phoneNumber = parsePhoneNumber3(candidate, {
+            extended: true,
+            defaultCountry: this.options.defaultCountry,
+            defaultCallingCode: this.options.defaultCallingCode
+          }, this.metadata);
+          if (!phoneNumber) {
+            return;
+          }
+          if (!phoneNumber.isPossible()) {
+            return;
+          }
+          if (this.leniency(phoneNumber, {
+            candidate,
+            defaultCountry: this.options.defaultCountry,
+            metadata: this.metadata,
+            regExpCache: this.regExpCache
+          })) {
+            return {
+              startsAt: offset,
+              endsAt: offset + candidate.length,
+              phoneNumber
+            };
+          }
+        }
+      }, {
+        key: "hasNext",
+        value: function hasNext() {
+          if (this.state === "NOT_READY") {
+            this.lastMatch = this.find(this.searchIndex);
+            if (this.lastMatch) {
+              this.searchIndex = this.lastMatch.endsAt;
+              this.state = "READY";
+            } else {
+              this.state = "DONE";
+            }
+          }
+          return this.state === "READY";
+        }
+      }, {
+        key: "next",
+        value: function next() {
+          if (!this.hasNext()) {
+            throw new Error("No next element");
+          }
+          var result2 = this.lastMatch;
+          this.lastMatch = null;
+          this.state = "NOT_READY";
+          return result2;
+        }
+      }]);
+    })();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/findNumbers.js
+function findNumbers() {
+  var _normalizeArguments = normalizeArguments(arguments), text = _normalizeArguments.text, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  var matcher = new PhoneNumberMatcher(text, options, metadata);
+  var results = [];
+  while (matcher.hasNext()) {
+    results.push(matcher.next());
+  }
+  return results;
+}
+var init_findNumbers = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/findNumbers.js"() {
+    init_PhoneNumberMatcher();
+    init_normalizeArguments();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/searchNumbers.js
+function _typeof13(o2) {
+  "@babel/helpers - typeof";
+  return _typeof13 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof13(o2);
+}
+function _defineProperty8(e2, r3, t2) {
+  return (r3 = _toPropertyKey13(r3)) in e2 ? Object.defineProperty(e2, r3, { value: t2, enumerable: true, configurable: true, writable: true }) : e2[r3] = t2, e2;
+}
+function _toPropertyKey13(t2) {
+  var i2 = _toPrimitive13(t2, "string");
+  return "symbol" == _typeof13(i2) ? i2 : i2 + "";
+}
+function _toPrimitive13(t2, r3) {
+  if ("object" != _typeof13(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof13(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function searchNumbers() {
+  var _normalizeArguments = normalizeArguments(arguments), text = _normalizeArguments.text, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  var matcher = new PhoneNumberMatcher(text, options, metadata);
+  return _defineProperty8({}, Symbol.iterator, function() {
+    return {
+      next: function next() {
+        if (matcher.hasNext()) {
+          return {
+            done: false,
+            value: matcher.next()
+          };
+        }
+        return {
+          done: true
+        };
+      }
+    };
+  });
+}
+var init_searchNumbers = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/searchNumbers.js"() {
+    init_normalizeArguments();
+    init_PhoneNumberMatcher();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findPhoneNumbersInText.js
+function _typeof14(o2) {
+  "@babel/helpers - typeof";
+  return _typeof14 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof14(o2);
+}
+function ownKeys8(e2, r3) {
+  var t2 = Object.keys(e2);
+  if (Object.getOwnPropertySymbols) {
+    var o2 = Object.getOwnPropertySymbols(e2);
+    r3 && (o2 = o2.filter(function(r4) {
+      return Object.getOwnPropertyDescriptor(e2, r4).enumerable;
+    })), t2.push.apply(t2, o2);
+  }
+  return t2;
+}
+function _objectSpread8(e2) {
+  for (var r3 = 1; r3 < arguments.length; r3++) {
+    var t2 = null != arguments[r3] ? arguments[r3] : {};
+    r3 % 2 ? ownKeys8(Object(t2), true).forEach(function(r4) {
+      _defineProperty9(e2, r4, t2[r4]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e2, Object.getOwnPropertyDescriptors(t2)) : ownKeys8(Object(t2)).forEach(function(r4) {
+      Object.defineProperty(e2, r4, Object.getOwnPropertyDescriptor(t2, r4));
+    });
+  }
+  return e2;
+}
+function _defineProperty9(e2, r3, t2) {
+  return (r3 = _toPropertyKey14(r3)) in e2 ? Object.defineProperty(e2, r3, { value: t2, enumerable: true, configurable: true, writable: true }) : e2[r3] = t2, e2;
+}
+function _toPropertyKey14(t2) {
+  var i2 = _toPrimitive14(t2, "string");
+  return "symbol" == _typeof14(i2) ? i2 : i2 + "";
+}
+function _toPrimitive14(t2, r3) {
+  if ("object" != _typeof14(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof14(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function findPhoneNumbersInText() {
+  var _normalizeArguments = normalizeArguments(arguments), text = _normalizeArguments.text, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  var matcher = new PhoneNumberMatcher(text, _objectSpread8(_objectSpread8({}, options), {}, {
+    v2: true
+  }), metadata);
+  var results = [];
+  while (matcher.hasNext()) {
+    results.push(matcher.next());
+  }
+  return results;
+}
+var init_findPhoneNumbersInText = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/findPhoneNumbersInText.js"() {
+    init_PhoneNumberMatcher();
+    init_normalizeArguments();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/searchPhoneNumbersInText.js
+function _typeof15(o2) {
+  "@babel/helpers - typeof";
+  return _typeof15 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof15(o2);
+}
+function ownKeys9(e2, r3) {
+  var t2 = Object.keys(e2);
+  if (Object.getOwnPropertySymbols) {
+    var o2 = Object.getOwnPropertySymbols(e2);
+    r3 && (o2 = o2.filter(function(r4) {
+      return Object.getOwnPropertyDescriptor(e2, r4).enumerable;
+    })), t2.push.apply(t2, o2);
+  }
+  return t2;
+}
+function _objectSpread9(e2) {
+  for (var r3 = 1; r3 < arguments.length; r3++) {
+    var t2 = null != arguments[r3] ? arguments[r3] : {};
+    r3 % 2 ? ownKeys9(Object(t2), true).forEach(function(r4) {
+      _defineProperty10(e2, r4, t2[r4]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e2, Object.getOwnPropertyDescriptors(t2)) : ownKeys9(Object(t2)).forEach(function(r4) {
+      Object.defineProperty(e2, r4, Object.getOwnPropertyDescriptor(t2, r4));
+    });
+  }
+  return e2;
+}
+function _defineProperty10(e2, r3, t2) {
+  return (r3 = _toPropertyKey15(r3)) in e2 ? Object.defineProperty(e2, r3, { value: t2, enumerable: true, configurable: true, writable: true }) : e2[r3] = t2, e2;
+}
+function _toPropertyKey15(t2) {
+  var i2 = _toPrimitive15(t2, "string");
+  return "symbol" == _typeof15(i2) ? i2 : i2 + "";
+}
+function _toPrimitive15(t2, r3) {
+  if ("object" != _typeof15(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof15(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function searchPhoneNumbersInText() {
+  var _normalizeArguments = normalizeArguments(arguments), text = _normalizeArguments.text, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  var matcher = new PhoneNumberMatcher(text, _objectSpread9(_objectSpread9({}, options), {}, {
+    v2: true
+  }), metadata);
+  return _defineProperty10({}, Symbol.iterator, function() {
+    return {
+      next: function next() {
+        if (matcher.hasNext()) {
+          return {
+            done: false,
+            value: matcher.next()
+          };
+        }
+        return {
+          done: true
+        };
+      }
+    };
+  });
+}
+var init_searchPhoneNumbersInText = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/searchPhoneNumbersInText.js"() {
+    init_PhoneNumberMatcher();
+    init_normalizeArguments();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouTypeState.js
+function _typeof16(o2) {
+  "@babel/helpers - typeof";
+  return _typeof16 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof16(o2);
+}
+function _classCallCheck7(a2, n2) {
+  if (!(a2 instanceof n2)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties7(e2, r3) {
+  for (var t2 = 0; t2 < r3.length; t2++) {
+    var o2 = r3[t2];
+    o2.enumerable = o2.enumerable || false, o2.configurable = true, "value" in o2 && (o2.writable = true), Object.defineProperty(e2, _toPropertyKey16(o2.key), o2);
+  }
+}
+function _createClass7(e2, r3, t2) {
+  return r3 && _defineProperties7(e2.prototype, r3), t2 && _defineProperties7(e2, t2), Object.defineProperty(e2, "prototype", { writable: false }), e2;
+}
+function _toPropertyKey16(t2) {
+  var i2 = _toPrimitive16(t2, "string");
+  return "symbol" == _typeof16(i2) ? i2 : i2 + "";
+}
+function _toPrimitive16(t2, r3) {
+  if ("object" != _typeof16(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof16(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+var AsYouTypeState;
+var init_AsYouTypeState = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouTypeState.js"() {
+    AsYouTypeState = /* @__PURE__ */ (function() {
+      function AsYouTypeState2(_ref) {
+        var onCountryChange = _ref.onCountryChange, onCallingCodeChange = _ref.onCallingCodeChange;
+        _classCallCheck7(this, AsYouTypeState2);
+        this.onCountryChange = onCountryChange;
+        this.onCallingCodeChange = onCallingCodeChange;
+      }
+      return _createClass7(AsYouTypeState2, [{
+        key: "reset",
+        value: function reset(_ref2) {
+          var country2 = _ref2.country, callingCode = _ref2.callingCode;
+          this.international = false;
+          this.missingPlus = false;
+          this.IDDPrefix = void 0;
+          this.callingCode = void 0;
+          this.digits = "";
+          this.resetNationalSignificantNumber();
+          this.initCountryAndCallingCode(country2, callingCode);
+        }
+      }, {
+        key: "resetNationalSignificantNumber",
+        value: function resetNationalSignificantNumber() {
+          this.nationalSignificantNumber = this.getNationalDigits();
+          this.nationalSignificantNumberIsModified = false;
+          this.nationalPrefix = void 0;
+          this.carrierCode = void 0;
+          this.prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix = void 0;
+        }
+      }, {
+        key: "update",
+        value: function update3(properties) {
+          for (var _i = 0, _Object$keys = Object.keys(properties); _i < _Object$keys.length; _i++) {
+            var key = _Object$keys[_i];
+            this[key] = properties[key];
+          }
+        }
+      }, {
+        key: "initCountryAndCallingCode",
+        value: function initCountryAndCallingCode(country2, callingCode) {
+          this.setCountry(country2);
+          this.setCallingCode(callingCode);
+        }
+      }, {
+        key: "setCountry",
+        value: function setCountry(country2) {
+          this.country = country2;
+          this.onCountryChange(country2);
+        }
+      }, {
+        key: "setCallingCode",
+        value: function setCallingCode(callingCode) {
+          this.callingCode = callingCode;
+          this.onCallingCodeChange(callingCode, this.country);
+        }
+      }, {
+        key: "startInternationalNumber",
+        value: function startInternationalNumber(country2, callingCode) {
+          this.international = true;
+          this.initCountryAndCallingCode(country2, callingCode);
+        }
+      }, {
+        key: "appendDigits",
+        value: function appendDigits(nextDigits) {
+          this.digits += nextDigits;
+        }
+      }, {
+        key: "appendNationalSignificantNumberDigits",
+        value: function appendNationalSignificantNumberDigits(nextDigits) {
+          this.nationalSignificantNumber += nextDigits;
+        }
+        /**
+         * Returns the part of `this.digits` that corresponds to the national number.
+         * Basically, all digits that have been input by the user, except for the
+         * international prefix and the country calling code part
+         * (if the number is an international one).
+         * @return {string}
+         */
+      }, {
+        key: "getNationalDigits",
+        value: function getNationalDigits() {
+          if (this.international) {
+            return this.digits.slice((this.IDDPrefix ? this.IDDPrefix.length : 0) + (this.callingCode ? this.callingCode.length : 0));
+          }
+          return this.digits;
+        }
+      }, {
+        key: "getDigitsWithoutInternationalPrefix",
+        value: function getDigitsWithoutInternationalPrefix() {
+          if (this.international) {
+            if (this.IDDPrefix) {
+              return this.digits.slice(this.IDDPrefix.length);
+            }
+          }
+          return this.digits;
+        }
+      }]);
+    })();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouTypeFormatter.util.js
+function _createForOfIteratorHelperLoose9(r3, e2) {
+  var t2 = "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (t2) return (t2 = t2.call(r3)).next.bind(t2);
+  if (Array.isArray(r3) || (t2 = _unsupportedIterableToArray10(r3)) || e2 && r3 && "number" == typeof r3.length) {
+    t2 && (r3 = t2);
+    var o2 = 0;
+    return function() {
+      return o2 >= r3.length ? { done: true } : { done: false, value: r3[o2++] };
+    };
+  }
+  throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray10(r3, a2) {
+  if (r3) {
+    if ("string" == typeof r3) return _arrayLikeToArray10(r3, a2);
+    var t2 = {}.toString.call(r3).slice(8, -1);
+    return "Object" === t2 && r3.constructor && (t2 = r3.constructor.name), "Map" === t2 || "Set" === t2 ? Array.from(r3) : "Arguments" === t2 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t2) ? _arrayLikeToArray10(r3, a2) : void 0;
+  }
+}
+function _arrayLikeToArray10(r3, a2) {
+  (null == a2 || a2 > r3.length) && (a2 = r3.length);
+  for (var e2 = 0, n2 = Array(a2); e2 < a2; e2++) n2[e2] = r3[e2];
+  return n2;
+}
+function repeat(string, times) {
+  if (times < 1) {
+    return "";
+  }
+  var result2 = "";
+  while (times > 1) {
+    if (times & 1) {
+      result2 += string;
+    }
+    times >>= 1;
+    string += string;
+  }
+  return result2 + string;
+}
+function cutAndStripNonPairedParens(string, cutBeforeIndex) {
+  if (string[cutBeforeIndex] === ")") {
+    cutBeforeIndex++;
+  }
+  return stripNonPairedParens(string.slice(0, cutBeforeIndex));
+}
+function stripNonPairedParens(string) {
+  var dangling_braces = [];
+  var i2 = 0;
+  while (i2 < string.length) {
+    if (string[i2] === "(") {
+      dangling_braces.push(i2);
+    } else if (string[i2] === ")") {
+      dangling_braces.pop();
+    }
+    i2++;
+  }
+  var start = 0;
+  var cleared_string = "";
+  dangling_braces.push(string.length);
+  for (var _i = 0, _dangling_braces = dangling_braces; _i < _dangling_braces.length; _i++) {
+    var index = _dangling_braces[_i];
+    cleared_string += string.slice(start, index);
+    start = index + 1;
+  }
+  return cleared_string;
+}
+function populateTemplateWithDigits(template, position, digits) {
+  for (var _iterator2 = _createForOfIteratorHelperLoose9(digits.split("")), _step2; !(_step2 = _iterator2()).done; ) {
+    var digit = _step2.value;
+    if (template.slice(position + 1).search(DIGIT_PLACEHOLDER_MATCHER) < 0) {
+      return;
+    }
+    position = template.search(DIGIT_PLACEHOLDER_MATCHER);
+    template = template.replace(DIGIT_PLACEHOLDER_MATCHER, digit);
+  }
+  return [template, position];
+}
+var DIGIT_PLACEHOLDER, DIGIT_PLACEHOLDER_MATCHER;
+var init_AsYouTypeFormatter_util = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouTypeFormatter.util.js"() {
+    DIGIT_PLACEHOLDER = "x";
+    DIGIT_PLACEHOLDER_MATCHER = new RegExp(DIGIT_PLACEHOLDER);
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouTypeFormatter.complete.js
+function formatCompleteNumber(state, format7, _ref) {
+  var metadata = _ref.metadata, shouldTryNationalPrefixFormattingRule = _ref.shouldTryNationalPrefixFormattingRule, getSeparatorAfterNationalPrefix = _ref.getSeparatorAfterNationalPrefix;
+  var matcher = new RegExp("^(?:".concat(format7.pattern(), ")$"));
+  if (matcher.test(state.nationalSignificantNumber)) {
+    return formatNationalNumberWithAndWithoutNationalPrefixFormattingRule(state, format7, {
+      metadata,
+      shouldTryNationalPrefixFormattingRule,
+      getSeparatorAfterNationalPrefix
+    });
+  }
+}
+function canFormatCompleteNumber(nationalSignificantNumber, country2, metadata) {
+  return checkNumberLength(nationalSignificantNumber, country2, metadata) === "IS_POSSIBLE";
+}
+function formatNationalNumberWithAndWithoutNationalPrefixFormattingRule(state, format7, _ref2) {
+  var metadata = _ref2.metadata, shouldTryNationalPrefixFormattingRule = _ref2.shouldTryNationalPrefixFormattingRule, getSeparatorAfterNationalPrefix = _ref2.getSeparatorAfterNationalPrefix;
+  var nationalSignificantNumber = state.nationalSignificantNumber, international = state.international, nationalPrefix = state.nationalPrefix, carrierCode = state.carrierCode;
+  if (shouldTryNationalPrefixFormattingRule(format7)) {
+    var formattedNumber = formatNationalNumber2(state, format7, {
+      useNationalPrefixFormattingRule: true,
+      getSeparatorAfterNationalPrefix,
+      metadata
+    });
+    if (formattedNumber) {
+      return formattedNumber;
+    }
+  }
+  return formatNationalNumber2(state, format7, {
+    useNationalPrefixFormattingRule: false,
+    getSeparatorAfterNationalPrefix,
+    metadata
+  });
+}
+function formatNationalNumber2(state, format7, _ref3) {
+  var metadata = _ref3.metadata, useNationalPrefixFormattingRule = _ref3.useNationalPrefixFormattingRule, getSeparatorAfterNationalPrefix = _ref3.getSeparatorAfterNationalPrefix;
+  var formattedNationalNumber = formatNationalNumberUsingFormat(state.nationalSignificantNumber, format7, {
+    carrierCode: state.carrierCode,
+    useInternationalFormat: state.international,
+    withNationalPrefix: useNationalPrefixFormattingRule,
+    metadata
+  });
+  if (!useNationalPrefixFormattingRule) {
+    if (state.nationalPrefix) {
+      formattedNationalNumber = state.nationalPrefix + getSeparatorAfterNationalPrefix(format7) + formattedNationalNumber;
+    } else if (state.prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix) {
+      formattedNationalNumber = state.prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix + " " + formattedNationalNumber;
+    }
+  }
+  if (isValidFormattedNationalNumber(formattedNationalNumber, state)) {
+    return formattedNationalNumber;
+  }
+}
+function isValidFormattedNationalNumber(formattedNationalNumber, state) {
+  return parseDigits(formattedNationalNumber) === state.getNationalDigits();
+}
+var init_AsYouTypeFormatter_complete = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouTypeFormatter.complete.js"() {
+    init_checkNumberLength();
+    init_parseDigits();
+    init_formatNationalNumberUsingFormat();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouTypeFormatter.PatternParser.js
+function _typeof17(o2) {
+  "@babel/helpers - typeof";
+  return _typeof17 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof17(o2);
+}
+function _classCallCheck8(a2, n2) {
+  if (!(a2 instanceof n2)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties8(e2, r3) {
+  for (var t2 = 0; t2 < r3.length; t2++) {
+    var o2 = r3[t2];
+    o2.enumerable = o2.enumerable || false, o2.configurable = true, "value" in o2 && (o2.writable = true), Object.defineProperty(e2, _toPropertyKey17(o2.key), o2);
+  }
+}
+function _createClass8(e2, r3, t2) {
+  return r3 && _defineProperties8(e2.prototype, r3), t2 && _defineProperties8(e2, t2), Object.defineProperty(e2, "prototype", { writable: false }), e2;
+}
+function _toPropertyKey17(t2) {
+  var i2 = _toPrimitive17(t2, "string");
+  return "symbol" == _typeof17(i2) ? i2 : i2 + "";
+}
+function _toPrimitive17(t2, r3) {
+  if ("object" != _typeof17(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof17(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function parseOneOfSet(pattern) {
+  var values = [];
+  var i2 = 0;
+  while (i2 < pattern.length) {
+    if (pattern[i2] === "-") {
+      if (i2 === 0 || i2 === pattern.length - 1) {
+        throw new Error("Couldn't parse a one-of set pattern: ".concat(pattern));
+      }
+      var prevValue = pattern[i2 - 1].charCodeAt(0) + 1;
+      var nextValue = pattern[i2 + 1].charCodeAt(0) - 1;
+      var value = prevValue;
+      while (value <= nextValue) {
+        values.push(String.fromCharCode(value));
+        value++;
+      }
+    } else {
+      values.push(pattern[i2]);
+    }
+    i2++;
+  }
+  return values;
+}
+function expandSingleElementArray(array) {
+  if (array.length === 1) {
+    return array[0];
+  }
+  return array;
+}
+var PatternParser, ILLEGAL_CHARACTER_REGEXP, OPERATOR;
+var init_AsYouTypeFormatter_PatternParser = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouTypeFormatter.PatternParser.js"() {
+    PatternParser = /* @__PURE__ */ (function() {
+      function PatternParser2() {
+        _classCallCheck8(this, PatternParser2);
+      }
+      return _createClass8(PatternParser2, [{
+        key: "parse",
+        value: function parse3(pattern) {
+          this.context = [{
+            or: true,
+            instructions: []
+          }];
+          this.parsePattern(pattern);
+          if (this.context.length !== 1) {
+            throw new Error("Non-finalized contexts left when pattern parse ended");
+          }
+          var _this$context$ = this.context[0], branches = _this$context$.branches, instructions = _this$context$.instructions;
+          if (branches) {
+            return {
+              op: "|",
+              args: branches.concat([expandSingleElementArray(instructions)])
+            };
+          }
+          if (instructions.length === 0) {
+            throw new Error("Pattern is required");
+          }
+          if (instructions.length === 1) {
+            return instructions[0];
+          }
+          return instructions;
+        }
+      }, {
+        key: "startContext",
+        value: function startContext(context) {
+          this.context.push(context);
+        }
+      }, {
+        key: "endContext",
+        value: function endContext() {
+          this.context.pop();
+        }
+      }, {
+        key: "getContext",
+        value: function getContext() {
+          return this.context[this.context.length - 1];
+        }
+      }, {
+        key: "parsePattern",
+        value: function parsePattern(pattern) {
+          if (!pattern) {
+            throw new Error("Pattern is required");
+          }
+          var match2 = pattern.match(OPERATOR);
+          if (!match2) {
+            if (ILLEGAL_CHARACTER_REGEXP.test(pattern)) {
+              throw new Error("Illegal characters found in a pattern: ".concat(pattern));
+            }
+            this.getContext().instructions = this.getContext().instructions.concat(pattern.split(""));
+            return;
+          }
+          var operator = match2[1];
+          var before = pattern.slice(0, match2.index);
+          var rightPart = pattern.slice(match2.index + operator.length);
+          switch (operator) {
+            case "(?:":
+              if (before) {
+                this.parsePattern(before);
+              }
+              this.startContext({
+                or: true,
+                instructions: [],
+                branches: []
+              });
+              break;
+            case ")":
+              if (!this.getContext().or) {
+                throw new Error('")" operator must be preceded by "(?:" operator');
+              }
+              if (before) {
+                this.parsePattern(before);
+              }
+              if (this.getContext().instructions.length === 0) {
+                throw new Error('No instructions found after "|" operator in an "or" group');
+              }
+              var _this$getContext = this.getContext(), branches = _this$getContext.branches;
+              branches.push(expandSingleElementArray(this.getContext().instructions));
+              this.endContext();
+              this.getContext().instructions.push({
+                op: "|",
+                args: branches
+              });
+              break;
+            case "|":
+              if (!this.getContext().or) {
+                throw new Error('"|" operator can only be used inside "or" groups');
+              }
+              if (before) {
+                this.parsePattern(before);
+              }
+              if (!this.getContext().branches) {
+                if (this.context.length === 1) {
+                  this.getContext().branches = [];
+                } else {
+                  throw new Error('"branches" not found in an "or" group context');
+                }
+              }
+              this.getContext().branches.push(expandSingleElementArray(this.getContext().instructions));
+              this.getContext().instructions = [];
+              break;
+            case "[":
+              if (before) {
+                this.parsePattern(before);
+              }
+              this.startContext({
+                oneOfSet: true
+              });
+              break;
+            case "]":
+              if (!this.getContext().oneOfSet) {
+                throw new Error('"]" operator must be preceded by "[" operator');
+              }
+              this.endContext();
+              this.getContext().instructions.push({
+                op: "[]",
+                args: parseOneOfSet(before)
+              });
+              break;
+            /* istanbul ignore next */
+            default:
+              throw new Error("Unknown operator: ".concat(operator));
+          }
+          if (rightPart) {
+            this.parsePattern(rightPart);
+          }
+        }
+      }]);
+    })();
+    ILLEGAL_CHARACTER_REGEXP = /[\(\)\[\]\?\:\|]/;
+    OPERATOR = new RegExp(
+      // any of:
+      "(\\||\\(\\?\\:|\\)|\\[|\\])"
+    );
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouTypeFormatter.PatternMatcher.js
+function _createForOfIteratorHelperLoose10(r3, e2) {
+  var t2 = "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (t2) return (t2 = t2.call(r3)).next.bind(t2);
+  if (Array.isArray(r3) || (t2 = _unsupportedIterableToArray11(r3)) || e2 && r3 && "number" == typeof r3.length) {
+    t2 && (r3 = t2);
+    var o2 = 0;
+    return function() {
+      return o2 >= r3.length ? { done: true } : { done: false, value: r3[o2++] };
+    };
+  }
+  throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray11(r3, a2) {
+  if (r3) {
+    if ("string" == typeof r3) return _arrayLikeToArray11(r3, a2);
+    var t2 = {}.toString.call(r3).slice(8, -1);
+    return "Object" === t2 && r3.constructor && (t2 = r3.constructor.name), "Map" === t2 || "Set" === t2 ? Array.from(r3) : "Arguments" === t2 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t2) ? _arrayLikeToArray11(r3, a2) : void 0;
+  }
+}
+function _arrayLikeToArray11(r3, a2) {
+  (null == a2 || a2 > r3.length) && (a2 = r3.length);
+  for (var e2 = 0, n2 = Array(a2); e2 < a2; e2++) n2[e2] = r3[e2];
+  return n2;
+}
+function _typeof18(o2) {
+  "@babel/helpers - typeof";
+  return _typeof18 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof18(o2);
+}
+function _classCallCheck9(a2, n2) {
+  if (!(a2 instanceof n2)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties9(e2, r3) {
+  for (var t2 = 0; t2 < r3.length; t2++) {
+    var o2 = r3[t2];
+    o2.enumerable = o2.enumerable || false, o2.configurable = true, "value" in o2 && (o2.writable = true), Object.defineProperty(e2, _toPropertyKey18(o2.key), o2);
+  }
+}
+function _createClass9(e2, r3, t2) {
+  return r3 && _defineProperties9(e2.prototype, r3), t2 && _defineProperties9(e2, t2), Object.defineProperty(e2, "prototype", { writable: false }), e2;
+}
+function _toPropertyKey18(t2) {
+  var i2 = _toPrimitive18(t2, "string");
+  return "symbol" == _typeof18(i2) ? i2 : i2 + "";
+}
+function _toPrimitive18(t2, r3) {
+  if ("object" != _typeof18(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof18(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function _match(characters, tree, last) {
+  if (typeof tree === "string") {
+    var characterString = characters.join("");
+    if (tree.indexOf(characterString) === 0) {
+      if (characters.length === tree.length) {
+        return {
+          match: true,
+          matchedChars: characters
+        };
+      }
+      return {
+        partialMatch: true
+        // matchedChars: characters
+      };
+    }
+    if (characterString.indexOf(tree) === 0) {
+      if (last) {
+        if (characters.length > tree.length) {
+          return {
+            overflow: true
+          };
+        }
+      }
+      return {
+        match: true,
+        matchedChars: characters.slice(0, tree.length)
+      };
+    }
+    return;
+  }
+  if (Array.isArray(tree)) {
+    var restCharacters = characters.slice();
+    var i2 = 0;
+    while (i2 < tree.length) {
+      var subtree = tree[i2];
+      var result2 = _match(restCharacters, subtree, last && i2 === tree.length - 1);
+      if (!result2) {
+        return;
+      } else if (result2.overflow) {
+        return result2;
+      } else if (result2.match) {
+        restCharacters = restCharacters.slice(result2.matchedChars.length);
+        if (restCharacters.length === 0) {
+          if (i2 === tree.length - 1) {
+            return {
+              match: true,
+              matchedChars: characters
+            };
+          } else {
+            return {
+              partialMatch: true
+              // matchedChars: characters
+            };
+          }
+        }
+      } else {
+        if (result2.partialMatch) {
+          return {
+            partialMatch: true
+            // matchedChars: characters
+          };
+        } else {
+          throw new Error("Unsupported match result:\n".concat(JSON.stringify(result2, null, 2)));
+        }
+      }
+      i2++;
+    }
+    if (last) {
+      return {
+        overflow: true
+      };
+    }
+    return {
+      match: true,
+      matchedChars: characters.slice(0, characters.length - restCharacters.length)
+    };
+  }
+  switch (tree.op) {
+    case "|":
+      var partialMatch;
+      for (var _iterator = _createForOfIteratorHelperLoose10(tree.args), _step; !(_step = _iterator()).done; ) {
+        var branch = _step.value;
+        var _result = _match(characters, branch, last);
+        if (_result) {
+          if (_result.overflow) {
+            return _result;
+          } else if (_result.match) {
+            return {
+              match: true,
+              matchedChars: _result.matchedChars
+            };
+          } else {
+            if (_result.partialMatch) {
+              partialMatch = true;
+            } else {
+              throw new Error("Unsupported match result:\n".concat(JSON.stringify(_result, null, 2)));
+            }
+          }
+        }
+      }
+      if (partialMatch) {
+        return {
+          partialMatch: true
+          // matchedChars: ...
+        };
+      }
+      return;
+    case "[]":
+      for (var _iterator2 = _createForOfIteratorHelperLoose10(tree.args), _step2; !(_step2 = _iterator2()).done; ) {
+        var _char = _step2.value;
+        if (characters[0] === _char) {
+          if (characters.length === 1) {
+            return {
+              match: true,
+              matchedChars: characters
+            };
+          }
+          if (last) {
+            return {
+              overflow: true
+            };
+          }
+          return {
+            match: true,
+            matchedChars: [_char]
+          };
+        }
+      }
+      return;
+    /* istanbul ignore next */
+    default:
+      throw new Error("Unsupported instruction tree: ".concat(tree));
+  }
+}
+var PatternMatcher;
+var init_AsYouTypeFormatter_PatternMatcher = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouTypeFormatter.PatternMatcher.js"() {
+    init_AsYouTypeFormatter_PatternParser();
+    PatternMatcher = /* @__PURE__ */ (function() {
+      function PatternMatcher2(pattern) {
+        _classCallCheck9(this, PatternMatcher2);
+        this.matchTree = new PatternParser().parse(pattern);
+      }
+      return _createClass9(PatternMatcher2, [{
+        key: "match",
+        value: function match2(string) {
+          var _ref = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, allowOverflow = _ref.allowOverflow;
+          if (!string) {
+            throw new Error("String is required");
+          }
+          var result2 = _match(string.split(""), this.matchTree, true);
+          if (result2 && result2.match) {
+            delete result2.matchedChars;
+          }
+          if (result2 && result2.overflow) {
+            if (!allowOverflow) {
+              return;
+            }
+          }
+          return result2;
+        }
+      }]);
+    })();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouTypeFormatter.js
+function _typeof19(o2) {
+  "@babel/helpers - typeof";
+  return _typeof19 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof19(o2);
+}
+function _createForOfIteratorHelperLoose11(r3, e2) {
+  var t2 = "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (t2) return (t2 = t2.call(r3)).next.bind(t2);
+  if (Array.isArray(r3) || (t2 = _unsupportedIterableToArray12(r3)) || e2 && r3 && "number" == typeof r3.length) {
+    t2 && (r3 = t2);
+    var o2 = 0;
+    return function() {
+      return o2 >= r3.length ? { done: true } : { done: false, value: r3[o2++] };
+    };
+  }
+  throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray12(r3, a2) {
+  if (r3) {
+    if ("string" == typeof r3) return _arrayLikeToArray12(r3, a2);
+    var t2 = {}.toString.call(r3).slice(8, -1);
+    return "Object" === t2 && r3.constructor && (t2 = r3.constructor.name), "Map" === t2 || "Set" === t2 ? Array.from(r3) : "Arguments" === t2 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t2) ? _arrayLikeToArray12(r3, a2) : void 0;
+  }
+}
+function _arrayLikeToArray12(r3, a2) {
+  (null == a2 || a2 > r3.length) && (a2 = r3.length);
+  for (var e2 = 0, n2 = Array(a2); e2 < a2; e2++) n2[e2] = r3[e2];
+  return n2;
+}
+function _classCallCheck10(a2, n2) {
+  if (!(a2 instanceof n2)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties10(e2, r3) {
+  for (var t2 = 0; t2 < r3.length; t2++) {
+    var o2 = r3[t2];
+    o2.enumerable = o2.enumerable || false, o2.configurable = true, "value" in o2 && (o2.writable = true), Object.defineProperty(e2, _toPropertyKey19(o2.key), o2);
+  }
+}
+function _createClass10(e2, r3, t2) {
+  return r3 && _defineProperties10(e2.prototype, r3), t2 && _defineProperties10(e2, t2), Object.defineProperty(e2, "prototype", { writable: false }), e2;
+}
+function _toPropertyKey19(t2) {
+  var i2 = _toPrimitive19(t2, "string");
+  return "symbol" == _typeof19(i2) ? i2 : i2 + "";
+}
+function _toPrimitive19(t2, r3) {
+  if ("object" != _typeof19(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof19(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+var DUMMY_DIGIT, LONGEST_NATIONAL_PHONE_NUMBER_LENGTH, LONGEST_DUMMY_PHONE_NUMBER, NATIONAL_PREFIX_SEPARATORS_PATTERN, SUPPORT_LEGACY_FORMATTING_PATTERNS, CREATE_CHARACTER_CLASS_PATTERN, CREATE_STANDALONE_DIGIT_PATTERN, NON_ALTERING_FORMAT_REG_EXP, MIN_LEADING_DIGITS_LENGTH, AsYouTypeFormatter;
+var init_AsYouTypeFormatter = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouTypeFormatter.js"() {
+    init_AsYouTypeFormatter_util();
+    init_AsYouTypeFormatter_complete();
+    init_AsYouTypeFormatter_PatternMatcher();
+    init_parseDigits();
+    init_AsYouTypeFormatter_util();
+    init_formatNationalNumberUsingFormat();
+    init_constants();
+    init_applyInternationalSeparatorStyle();
+    DUMMY_DIGIT = "9";
+    LONGEST_NATIONAL_PHONE_NUMBER_LENGTH = 15;
+    LONGEST_DUMMY_PHONE_NUMBER = repeat(DUMMY_DIGIT, LONGEST_NATIONAL_PHONE_NUMBER_LENGTH);
+    NATIONAL_PREFIX_SEPARATORS_PATTERN = /[- ]/;
+    SUPPORT_LEGACY_FORMATTING_PATTERNS = true;
+    CREATE_CHARACTER_CLASS_PATTERN = SUPPORT_LEGACY_FORMATTING_PATTERNS && function() {
+      return /\[([^\[\]])*\]/g;
+    };
+    CREATE_STANDALONE_DIGIT_PATTERN = SUPPORT_LEGACY_FORMATTING_PATTERNS && function() {
+      return /\d(?=[^,}][^,}])/g;
+    };
+    NON_ALTERING_FORMAT_REG_EXP = new RegExp("[" + VALID_PUNCTUATION + "]*\\$1[" + VALID_PUNCTUATION + "]*(\\$\\d[" + VALID_PUNCTUATION + "]*)*$");
+    MIN_LEADING_DIGITS_LENGTH = 3;
+    AsYouTypeFormatter = /* @__PURE__ */ (function() {
+      function AsYouTypeFormatter2(_ref) {
+        var state = _ref.state, metadata = _ref.metadata;
+        _classCallCheck10(this, AsYouTypeFormatter2);
+        this.metadata = metadata;
+        this.resetFormat();
+      }
+      return _createClass10(AsYouTypeFormatter2, [{
+        key: "resetFormat",
+        value: function resetFormat() {
+          this.chosenFormat = void 0;
+          this.template = void 0;
+          this.nationalNumberTemplate = void 0;
+          this.populatedNationalNumberTemplate = void 0;
+          this.populatedNationalNumberTemplatePosition = -1;
+        }
+      }, {
+        key: "reset",
+        value: function reset(numberingPlan, state) {
+          this.resetFormat();
+          if (numberingPlan) {
+            this.isNANP = numberingPlan.callingCode() === "1";
+            this.matchingFormats = numberingPlan.formats();
+            if (state.nationalSignificantNumber) {
+              this.narrowDownMatchingFormats(state);
+            }
+          } else {
+            this.isNANP = void 0;
+            this.matchingFormats = [];
+          }
+        }
+        /**
+         * Formats an updated phone number.
+         * @param  {string} nextDigits — Additional phone number digits.
+         * @param  {object} state — `AsYouType` state.
+         * @return {[string]} Returns undefined if the updated phone number can't be formatted using any of the available formats.
+         */
+      }, {
+        key: "format",
+        value: function format7(nextDigits, state) {
+          var _this = this;
+          if (canFormatCompleteNumber(state.nationalSignificantNumber, state.country, this.metadata)) {
+            for (var _iterator = _createForOfIteratorHelperLoose11(this.matchingFormats), _step; !(_step = _iterator()).done; ) {
+              var _format = _step.value;
+              var formattedCompleteNumber = formatCompleteNumber(state, _format, {
+                metadata: this.metadata,
+                shouldTryNationalPrefixFormattingRule: function shouldTryNationalPrefixFormattingRule(format8) {
+                  return _this.shouldTryNationalPrefixFormattingRule(format8, {
+                    international: state.international,
+                    nationalPrefix: state.nationalPrefix
+                  });
+                },
+                getSeparatorAfterNationalPrefix: function getSeparatorAfterNationalPrefix(format8) {
+                  return _this.getSeparatorAfterNationalPrefix(format8);
+                }
+              });
+              if (formattedCompleteNumber) {
+                this.resetFormat();
+                this.chosenFormat = _format;
+                this.setNationalNumberTemplate(formattedCompleteNumber.replace(/\d/g, DIGIT_PLACEHOLDER), state);
+                this.populatedNationalNumberTemplate = formattedCompleteNumber;
+                this.populatedNationalNumberTemplatePosition = this.template.lastIndexOf(DIGIT_PLACEHOLDER);
+                return formattedCompleteNumber;
+              }
+            }
+          }
+          return this.formatNationalNumberWithNextDigits(nextDigits, state);
+        }
+        // Formats the next phone number digits.
+      }, {
+        key: "formatNationalNumberWithNextDigits",
+        value: function formatNationalNumberWithNextDigits(nextDigits, state) {
+          var previouslyChosenFormat = this.chosenFormat;
+          var newlyChosenFormat = this.chooseFormat(state);
+          if (newlyChosenFormat) {
+            if (newlyChosenFormat === previouslyChosenFormat) {
+              return this.formatNextNationalNumberDigits(nextDigits);
+            } else {
+              return this.formatNextNationalNumberDigits(state.getNationalDigits());
+            }
+          }
+        }
+      }, {
+        key: "narrowDownMatchingFormats",
+        value: function narrowDownMatchingFormats(_ref2) {
+          var _this2 = this;
+          var nationalSignificantNumber = _ref2.nationalSignificantNumber, nationalPrefix = _ref2.nationalPrefix, international = _ref2.international;
+          var leadingDigits = nationalSignificantNumber;
+          var leadingDigitsPatternIndex = leadingDigits.length - MIN_LEADING_DIGITS_LENGTH;
+          if (leadingDigitsPatternIndex < 0) {
+            leadingDigitsPatternIndex = 0;
+          }
+          this.matchingFormats = this.matchingFormats.filter(function(format7) {
+            return _this2.formatSuits(format7, international, nationalPrefix) && _this2.formatMatches(format7, leadingDigits, leadingDigitsPatternIndex);
+          });
+          if (this.chosenFormat && this.matchingFormats.indexOf(this.chosenFormat) === -1) {
+            this.resetFormat();
+          }
+        }
+      }, {
+        key: "formatSuits",
+        value: function formatSuits(format7, international, nationalPrefix) {
+          if (nationalPrefix && !format7.usesNationalPrefix() && // !format.domesticCarrierCodeFormattingRule() &&
+          !format7.nationalPrefixIsOptionalWhenFormattingInNationalFormat()) {
+            return false;
+          }
+          if (!international && !nationalPrefix && format7.nationalPrefixIsMandatoryWhenFormattingInNationalFormat()) {
+            return false;
+          }
+          return true;
+        }
+      }, {
+        key: "formatMatches",
+        value: function formatMatches(format7, leadingDigits, leadingDigitsPatternIndex) {
+          var leadingDigitsPatternsCount = format7.leadingDigitsPatterns().length;
+          if (leadingDigitsPatternsCount === 0) {
+            return true;
+          }
+          leadingDigitsPatternIndex = Math.min(leadingDigitsPatternIndex, leadingDigitsPatternsCount - 1);
+          var leadingDigitsPattern = format7.leadingDigitsPatterns()[leadingDigitsPatternIndex];
+          if (leadingDigits.length < MIN_LEADING_DIGITS_LENGTH) {
+            try {
+              return new PatternMatcher(leadingDigitsPattern).match(leadingDigits, {
+                allowOverflow: true
+              }) !== void 0;
+            } catch (error2) {
+              console.error(error2);
+              return true;
+            }
+          }
+          return new RegExp("^(".concat(leadingDigitsPattern, ")")).test(leadingDigits);
+        }
+      }, {
+        key: "getFormatFormat",
+        value: function getFormatFormat(format7, international) {
+          return international ? format7.internationalFormat() : format7.format();
+        }
+      }, {
+        key: "chooseFormat",
+        value: function chooseFormat(state) {
+          var _this3 = this;
+          var _loop = function _loop2() {
+            var format7 = _step2.value;
+            if (_this3.chosenFormat === format7) {
+              return 0;
+            }
+            if (!NON_ALTERING_FORMAT_REG_EXP.test(_this3.getFormatFormat(format7, state.international))) {
+              return 1;
+            }
+            if (!_this3.createTemplateForFormat(format7, state)) {
+              _this3.matchingFormats = _this3.matchingFormats.filter(function(_) {
+                return _ !== format7;
+              });
+              return 1;
+            }
+            _this3.chosenFormat = format7;
+            return 0;
+          }, _ret;
+          for (var _iterator2 = _createForOfIteratorHelperLoose11(this.matchingFormats.slice()), _step2; !(_step2 = _iterator2()).done; ) {
+            _ret = _loop();
+            if (_ret === 0) break;
+            if (_ret === 1) continue;
+          }
+          if (!this.chosenFormat) {
+            this.resetFormat();
+          }
+          return this.chosenFormat;
+        }
+      }, {
+        key: "createTemplateForFormat",
+        value: function createTemplateForFormat(format7, state) {
+          if (SUPPORT_LEGACY_FORMATTING_PATTERNS && format7.pattern().indexOf("|") >= 0) {
+            return;
+          }
+          var template = this.getTemplateForFormat(format7, state);
+          if (template) {
+            this.setNationalNumberTemplate(template, state);
+            return true;
+          }
+        }
+      }, {
+        key: "getSeparatorAfterNationalPrefix",
+        value: function getSeparatorAfterNationalPrefix(format7) {
+          if (this.isNANP) {
+            return " ";
+          }
+          if (format7 && format7.nationalPrefixFormattingRule() && NATIONAL_PREFIX_SEPARATORS_PATTERN.test(format7.nationalPrefixFormattingRule())) {
+            return " ";
+          }
+          return "";
+        }
+      }, {
+        key: "getInternationalPrefixBeforeCountryCallingCode",
+        value: function getInternationalPrefixBeforeCountryCallingCode(_ref3, options) {
+          var IDDPrefix = _ref3.IDDPrefix, missingPlus = _ref3.missingPlus;
+          if (IDDPrefix) {
+            return options && options.spacing === false ? IDDPrefix : IDDPrefix + " ";
+          }
+          if (missingPlus) {
+            return "";
+          }
+          return "+";
+        }
+      }, {
+        key: "getTemplate",
+        value: function getTemplate(state) {
+          if (!this.template) {
+            return;
+          }
+          var index = -1;
+          var i2 = 0;
+          var internationalPrefix = state.international ? this.getInternationalPrefixBeforeCountryCallingCode(state, {
+            spacing: false
+          }) : "";
+          while (i2 < internationalPrefix.length + state.getDigitsWithoutInternationalPrefix().length) {
+            index = this.template.indexOf(DIGIT_PLACEHOLDER, index + 1);
+            i2++;
+          }
+          return cutAndStripNonPairedParens(this.template, index + 1);
+        }
+      }, {
+        key: "setNationalNumberTemplate",
+        value: function setNationalNumberTemplate(template, state) {
+          this.nationalNumberTemplate = template;
+          this.populatedNationalNumberTemplate = template;
+          this.populatedNationalNumberTemplatePosition = -1;
+          if (state.international) {
+            this.template = this.getInternationalPrefixBeforeCountryCallingCode(state).replace(/[\d\+]/g, DIGIT_PLACEHOLDER) + repeat(DIGIT_PLACEHOLDER, state.callingCode.length) + " " + template;
+          } else {
+            this.template = template;
+          }
+        }
+        /**
+         * Generates formatting template for a national phone number,
+         * optionally containing a national prefix, for a format.
+         * @param  {Format} format
+         * @param  {string} nationalPrefix
+         * @return {string}
+         */
+      }, {
+        key: "getTemplateForFormat",
+        value: function getTemplateForFormat(format7, _ref4) {
+          var nationalSignificantNumber = _ref4.nationalSignificantNumber, international = _ref4.international, nationalPrefix = _ref4.nationalPrefix, prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix = _ref4.prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix;
+          var pattern = format7.pattern();
+          if (SUPPORT_LEGACY_FORMATTING_PATTERNS) {
+            pattern = pattern.replace(CREATE_CHARACTER_CLASS_PATTERN(), "\\d").replace(CREATE_STANDALONE_DIGIT_PATTERN(), "\\d");
+          }
+          var digits = LONGEST_DUMMY_PHONE_NUMBER.match(pattern)[0];
+          if (nationalSignificantNumber.length > digits.length) {
+            return;
+          }
+          var strictPattern = new RegExp("^" + pattern + "$");
+          var nationalNumberDummyDigits = nationalSignificantNumber.replace(/\d/g, DUMMY_DIGIT);
+          if (strictPattern.test(nationalNumberDummyDigits)) {
+            digits = nationalNumberDummyDigits;
+          }
+          var numberFormat2 = this.getFormatFormat(format7, international);
+          var nationalPrefixIncludedInTemplate;
+          if (this.shouldTryNationalPrefixFormattingRule(format7, {
+            international,
+            nationalPrefix
+          })) {
+            var numberFormatWithNationalPrefix = numberFormat2.replace(FIRST_GROUP_PATTERN, format7.nationalPrefixFormattingRule());
+            if (parseDigits(format7.nationalPrefixFormattingRule()) === (nationalPrefix || "") + parseDigits("$1")) {
+              numberFormat2 = numberFormatWithNationalPrefix;
+              nationalPrefixIncludedInTemplate = true;
+              if (nationalPrefix) {
+                var i2 = nationalPrefix.length;
+                while (i2 > 0) {
+                  numberFormat2 = numberFormat2.replace(/\d/, DIGIT_PLACEHOLDER);
+                  i2--;
+                }
+              }
+            }
+          }
+          var template = digits.replace(new RegExp(pattern), numberFormat2).replace(new RegExp(DUMMY_DIGIT, "g"), DIGIT_PLACEHOLDER);
+          if (!nationalPrefixIncludedInTemplate) {
+            if (prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix) {
+              template = repeat(DIGIT_PLACEHOLDER, prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix.length) + " " + template;
+            } else if (nationalPrefix) {
+              template = repeat(DIGIT_PLACEHOLDER, nationalPrefix.length) + this.getSeparatorAfterNationalPrefix(format7) + template;
+            }
+          }
+          if (international) {
+            template = applyInternationalSeparatorStyle(template);
+          }
+          return template;
+        }
+      }, {
+        key: "formatNextNationalNumberDigits",
+        value: function formatNextNationalNumberDigits(digits) {
+          var result2 = populateTemplateWithDigits(this.populatedNationalNumberTemplate, this.populatedNationalNumberTemplatePosition, digits);
+          if (!result2) {
+            this.resetFormat();
+            return;
+          }
+          this.populatedNationalNumberTemplate = result2[0];
+          this.populatedNationalNumberTemplatePosition = result2[1];
+          return cutAndStripNonPairedParens(this.populatedNationalNumberTemplate, this.populatedNationalNumberTemplatePosition + 1);
+        }
+      }, {
+        key: "shouldTryNationalPrefixFormattingRule",
+        value: function shouldTryNationalPrefixFormattingRule(format7, _ref5) {
+          var international = _ref5.international, nationalPrefix = _ref5.nationalPrefix;
+          if (format7.nationalPrefixFormattingRule()) {
+            var usesNationalPrefix = format7.usesNationalPrefix();
+            if (usesNationalPrefix && nationalPrefix || !usesNationalPrefix && !international) {
+              return true;
+            }
+          }
+        }
+      }]);
+    })();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouTypeParser.js
+function _typeof20(o2) {
+  "@babel/helpers - typeof";
+  return _typeof20 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof20(o2);
+}
+function _slicedToArray3(r3, e2) {
+  return _arrayWithHoles3(r3) || _iterableToArrayLimit3(r3, e2) || _unsupportedIterableToArray13(r3, e2) || _nonIterableRest3();
+}
+function _nonIterableRest3() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray13(r3, a2) {
+  if (r3) {
+    if ("string" == typeof r3) return _arrayLikeToArray13(r3, a2);
+    var t2 = {}.toString.call(r3).slice(8, -1);
+    return "Object" === t2 && r3.constructor && (t2 = r3.constructor.name), "Map" === t2 || "Set" === t2 ? Array.from(r3) : "Arguments" === t2 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t2) ? _arrayLikeToArray13(r3, a2) : void 0;
+  }
+}
+function _arrayLikeToArray13(r3, a2) {
+  (null == a2 || a2 > r3.length) && (a2 = r3.length);
+  for (var e2 = 0, n2 = Array(a2); e2 < a2; e2++) n2[e2] = r3[e2];
+  return n2;
+}
+function _iterableToArrayLimit3(r3, l2) {
+  var t2 = null == r3 ? null : "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (null != t2) {
+    var e2, n2, i2, u2, a2 = [], f2 = true, o2 = false;
+    try {
+      if (i2 = (t2 = t2.call(r3)).next, 0 === l2) {
+        if (Object(t2) !== t2) return;
+        f2 = false;
+      } else for (; !(f2 = (e2 = i2.call(t2)).done) && (a2.push(e2.value), a2.length !== l2); f2 = true) ;
+    } catch (r4) {
+      o2 = true, n2 = r4;
+    } finally {
+      try {
+        if (!f2 && null != t2["return"] && (u2 = t2["return"](), Object(u2) !== u2)) return;
+      } finally {
+        if (o2) throw n2;
+      }
+    }
+    return a2;
+  }
+}
+function _arrayWithHoles3(r3) {
+  if (Array.isArray(r3)) return r3;
+}
+function _classCallCheck11(a2, n2) {
+  if (!(a2 instanceof n2)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties11(e2, r3) {
+  for (var t2 = 0; t2 < r3.length; t2++) {
+    var o2 = r3[t2];
+    o2.enumerable = o2.enumerable || false, o2.configurable = true, "value" in o2 && (o2.writable = true), Object.defineProperty(e2, _toPropertyKey20(o2.key), o2);
+  }
+}
+function _createClass11(e2, r3, t2) {
+  return r3 && _defineProperties11(e2.prototype, r3), t2 && _defineProperties11(e2, t2), Object.defineProperty(e2, "prototype", { writable: false }), e2;
+}
+function _toPropertyKey20(t2) {
+  var i2 = _toPrimitive20(t2, "string");
+  return "symbol" == _typeof20(i2) ? i2 : i2 + "";
+}
+function _toPrimitive20(t2, r3) {
+  if ("object" != _typeof20(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof20(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+function extractFormattedPhoneNumber(text) {
+  var startsAt = text.search(VALID_FORMATTED_PHONE_NUMBER_PART);
+  if (startsAt < 0) {
+    return;
+  }
+  text = text.slice(startsAt);
+  var hasPlus;
+  if (text[0] === "+") {
+    hasPlus = true;
+    text = text.slice("+".length);
+  }
+  text = text.replace(AFTER_PHONE_NUMBER_DIGITS_END_PATTERN, "");
+  if (hasPlus) {
+    text = "+" + text;
+  }
+  return text;
+}
+function _extractFormattedDigitsAndPlus(text) {
+  var extractedNumber = extractFormattedPhoneNumber(text) || "";
+  if (extractedNumber[0] === "+") {
+    return [extractedNumber.slice("+".length), true];
+  }
+  return [extractedNumber];
+}
+function extractFormattedDigitsAndPlus(text) {
+  var _extractFormattedDigi3 = _extractFormattedDigitsAndPlus(text), _extractFormattedDigi4 = _slicedToArray3(_extractFormattedDigi3, 2), formattedDigits = _extractFormattedDigi4[0], hasPlus = _extractFormattedDigi4[1];
+  if (!VALID_FORMATTED_PHONE_NUMBER_DIGITS_PART_PATTERN.test(formattedDigits)) {
+    formattedDigits = "";
+  }
+  return [formattedDigits, hasPlus];
+}
+var VALID_FORMATTED_PHONE_NUMBER_DIGITS_PART, VALID_FORMATTED_PHONE_NUMBER_DIGITS_PART_PATTERN, VALID_FORMATTED_PHONE_NUMBER_PART, AFTER_PHONE_NUMBER_DIGITS_END_PATTERN, COMPLEX_NATIONAL_PREFIX, AsYouTypeParser;
+var init_AsYouTypeParser = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouTypeParser.js"() {
+    init_extractCountryCallingCode();
+    init_extractCountryCallingCodeFromInternationalNumberWithoutPlusSign();
+    init_extractNationalNumberFromPossiblyIncompleteNumber();
+    init_stripIddPrefix();
+    init_parseDigits();
+    init_constants();
+    VALID_FORMATTED_PHONE_NUMBER_DIGITS_PART = "[" + VALID_PUNCTUATION + VALID_DIGITS + "]+";
+    VALID_FORMATTED_PHONE_NUMBER_DIGITS_PART_PATTERN = new RegExp("^" + VALID_FORMATTED_PHONE_NUMBER_DIGITS_PART + "$", "i");
+    VALID_FORMATTED_PHONE_NUMBER_PART = "(?:[" + PLUS_CHARS + "][" + VALID_PUNCTUATION + VALID_DIGITS + "]*|[" + VALID_PUNCTUATION + VALID_DIGITS + "]+)";
+    AFTER_PHONE_NUMBER_DIGITS_END_PATTERN = new RegExp("[^" + VALID_PUNCTUATION + VALID_DIGITS + "]+.*$");
+    COMPLEX_NATIONAL_PREFIX = /[^\d\[\]]/;
+    AsYouTypeParser = /* @__PURE__ */ (function() {
+      function AsYouTypeParser2(_ref) {
+        var defaultCountry = _ref.defaultCountry, defaultCallingCode = _ref.defaultCallingCode, metadata = _ref.metadata, onNationalSignificantNumberChange = _ref.onNationalSignificantNumberChange;
+        _classCallCheck11(this, AsYouTypeParser2);
+        this.defaultCountry = defaultCountry;
+        this.defaultCallingCode = defaultCallingCode;
+        this.metadata = metadata;
+        this.onNationalSignificantNumberChange = onNationalSignificantNumberChange;
+      }
+      return _createClass11(AsYouTypeParser2, [{
+        key: "input",
+        value: function input(text, state) {
+          var _extractFormattedDigi = extractFormattedDigitsAndPlus(text), _extractFormattedDigi2 = _slicedToArray3(_extractFormattedDigi, 2), formattedDigits = _extractFormattedDigi2[0], hasPlus = _extractFormattedDigi2[1];
+          var digits = parseDigits(formattedDigits);
+          var justLeadingPlus;
+          if (hasPlus) {
+            if (!state.digits) {
+              state.startInternationalNumber(void 0, void 0);
+              if (!digits) {
+                justLeadingPlus = true;
+              }
+            }
+          }
+          if (digits) {
+            this.inputDigits(digits, state);
+          }
+          return {
+            digits,
+            justLeadingPlus
+          };
+        }
+        /**
+         * Inputs "next" phone number digits.
+         * @param  {string} digits
+         * @return {string} [formattedNumber] Formatted national phone number (if it can be formatted at this stage). Returning `undefined` means "don't format the national phone number at this stage".
+         */
+      }, {
+        key: "inputDigits",
+        value: function inputDigits(nextDigits, state) {
+          var digits = state.digits;
+          var hasReceivedThreeLeadingDigits = digits.length < 3 && digits.length + nextDigits.length >= 3;
+          state.appendDigits(nextDigits);
+          if (hasReceivedThreeLeadingDigits) {
+            this.extractIddPrefix(state);
+          }
+          if (this.isWaitingForCountryCallingCode(state)) {
+            if (!this.extractCountryCallingCode(state)) {
+              return;
+            }
+          } else {
+            state.appendNationalSignificantNumberDigits(nextDigits);
+          }
+          if (!state.international) {
+            if (!this.hasExtractedNationalSignificantNumber) {
+              this.extractNationalSignificantNumber(state.getNationalDigits(), function(stateUpdate) {
+                return state.update(stateUpdate);
+              });
+            }
+          }
+        }
+      }, {
+        key: "isWaitingForCountryCallingCode",
+        value: function isWaitingForCountryCallingCode(_ref2) {
+          var international = _ref2.international, callingCode = _ref2.callingCode;
+          return international && !callingCode;
+        }
+        // Extracts a country calling code from a number
+        // being entered in internatonal format.
+      }, {
+        key: "extractCountryCallingCode",
+        value: function extractCountryCallingCode2(state) {
+          var _extractCountryCallin = extractCountryCallingCode("+" + state.getDigitsWithoutInternationalPrefix(), state.country, this.defaultCountry, this.defaultCallingCode, this.metadata.metadata), countryCallingCode = _extractCountryCallin.countryCallingCode, number = _extractCountryCallin.number;
+          if (countryCallingCode) {
+            state.setCallingCode(countryCallingCode);
+            state.update({
+              nationalSignificantNumber: number
+            });
+            return true;
+          }
+        }
+      }, {
+        key: "reset",
+        value: function reset(numberingPlan) {
+          if (numberingPlan) {
+            this.hasSelectedNumberingPlan = true;
+            var nationalPrefixForParsing = numberingPlan._nationalPrefixForParsing();
+            this.couldPossiblyExtractAnotherNationalSignificantNumber = nationalPrefixForParsing && COMPLEX_NATIONAL_PREFIX.test(nationalPrefixForParsing);
+          } else {
+            this.hasSelectedNumberingPlan = void 0;
+            this.couldPossiblyExtractAnotherNationalSignificantNumber = void 0;
+          }
+        }
+        /**
+         * Extracts a national (significant) number from user input.
+         * Google's library is different in that it only applies `national_prefix_for_parsing`
+         * and doesn't apply `national_prefix_transform_rule` after that.
+         * https://github.com/google/libphonenumber/blob/a3d70b0487875475e6ad659af404943211d26456/java/libphonenumber/src/com/google/i18n/phonenumbers/AsYouTypeFormatter.java#L539
+         * @return {boolean} [extracted]
+         */
+      }, {
+        key: "extractNationalSignificantNumber",
+        value: function extractNationalSignificantNumber(nationalDigits, setState) {
+          if (!this.hasSelectedNumberingPlan) {
+            return;
+          }
+          var _extractNationalNumbe = extractNationalNumberFromPossiblyIncompleteNumber(nationalDigits, this.metadata), nationalPrefix = _extractNationalNumbe.nationalPrefix, nationalNumber = _extractNationalNumbe.nationalNumber, carrierCode = _extractNationalNumbe.carrierCode;
+          if (nationalNumber === nationalDigits) {
+            return;
+          }
+          this.onExtractedNationalNumber(nationalPrefix, carrierCode, nationalNumber, nationalDigits, setState);
+          return true;
+        }
+        /**
+         * In Google's code this function is called "attempt to extract longer NDD".
+         * "Some national prefixes are a substring of others", they say.
+         * @return {boolean} [result] — Returns `true` if extracting a national prefix produced different results from what they were.
+         */
+      }, {
+        key: "extractAnotherNationalSignificantNumber",
+        value: function extractAnotherNationalSignificantNumber(nationalDigits, prevNationalSignificantNumber, setState) {
+          if (!this.hasExtractedNationalSignificantNumber) {
+            return this.extractNationalSignificantNumber(nationalDigits, setState);
+          }
+          if (!this.couldPossiblyExtractAnotherNationalSignificantNumber) {
+            return;
+          }
+          var _extractNationalNumbe2 = extractNationalNumberFromPossiblyIncompleteNumber(nationalDigits, this.metadata), nationalPrefix = _extractNationalNumbe2.nationalPrefix, nationalNumber = _extractNationalNumbe2.nationalNumber, carrierCode = _extractNationalNumbe2.carrierCode;
+          if (nationalNumber === prevNationalSignificantNumber) {
+            return;
+          }
+          this.onExtractedNationalNumber(nationalPrefix, carrierCode, nationalNumber, nationalDigits, setState);
+          return true;
+        }
+      }, {
+        key: "onExtractedNationalNumber",
+        value: function onExtractedNationalNumber(nationalPrefix, carrierCode, nationalSignificantNumber, nationalDigits, setState) {
+          var nationalSignificantNumberIsModified = false;
+          var prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix;
+          var nationalSignificantNumberIndex = nationalDigits.lastIndexOf(nationalSignificantNumber);
+          if (nationalSignificantNumberIndex < 0 || nationalSignificantNumberIndex !== nationalDigits.length - nationalSignificantNumber.length) {
+            nationalSignificantNumberIsModified = true;
+          } else {
+            var prefixBeforeNationalNumber = nationalDigits.slice(0, nationalSignificantNumberIndex);
+            if (prefixBeforeNationalNumber) {
+              if (prefixBeforeNationalNumber !== nationalPrefix) {
+                prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix = prefixBeforeNationalNumber;
+              }
+            }
+          }
+          setState({
+            nationalPrefix,
+            carrierCode,
+            nationalSignificantNumber,
+            nationalSignificantNumberIsModified,
+            prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix
+          });
+          this.hasExtractedNationalSignificantNumber = true;
+          this.onNationalSignificantNumberChange();
+        }
+      }, {
+        key: "reExtractNationalSignificantNumber",
+        value: function reExtractNationalSignificantNumber(state) {
+          if (this.extractAnotherNationalSignificantNumber(state.getNationalDigits(), state.nationalSignificantNumber, function(stateUpdate) {
+            return state.update(stateUpdate);
+          })) {
+            return true;
+          }
+          if (this.extractIddPrefix(state)) {
+            this.extractCallingCodeAndNationalSignificantNumber(state);
+            return true;
+          }
+          if (this.fixMissingPlus(state)) {
+            this.extractCallingCodeAndNationalSignificantNumber(state);
+            return true;
+          }
+        }
+      }, {
+        key: "extractIddPrefix",
+        value: function extractIddPrefix(state) {
+          var international = state.international, IDDPrefix = state.IDDPrefix, digits = state.digits, nationalSignificantNumber = state.nationalSignificantNumber;
+          if (international || IDDPrefix) {
+            return;
+          }
+          var numberWithoutIDD = stripIddPrefix(digits, this.defaultCountry, this.defaultCallingCode, this.metadata.metadata);
+          if (numberWithoutIDD !== void 0 && numberWithoutIDD !== digits) {
+            state.update({
+              IDDPrefix: digits.slice(0, digits.length - numberWithoutIDD.length)
+            });
+            this.startInternationalNumber(state, {
+              country: void 0,
+              callingCode: void 0
+            });
+            return true;
+          }
+        }
+      }, {
+        key: "fixMissingPlus",
+        value: function fixMissingPlus(state) {
+          if (!state.international) {
+            var _extractCountryCallin2 = extractCountryCallingCodeFromInternationalNumberWithoutPlusSign(state.digits, state.country, this.defaultCountry, this.defaultCallingCode, this.metadata.metadata), newCallingCode = _extractCountryCallin2.countryCallingCode;
+            if (newCallingCode) {
+              state.update({
+                missingPlus: true
+              });
+              this.startInternationalNumber(state, {
+                country: state.country,
+                callingCode: newCallingCode
+              });
+              return true;
+            }
+          }
+        }
+      }, {
+        key: "startInternationalNumber",
+        value: function startInternationalNumber(state, _ref3) {
+          var country2 = _ref3.country, callingCode = _ref3.callingCode;
+          state.startInternationalNumber(country2, callingCode);
+          if (state.nationalSignificantNumber) {
+            state.resetNationalSignificantNumber();
+            this.onNationalSignificantNumberChange();
+            this.hasExtractedNationalSignificantNumber = void 0;
+          }
+        }
+      }, {
+        key: "extractCallingCodeAndNationalSignificantNumber",
+        value: function extractCallingCodeAndNationalSignificantNumber(state) {
+          if (this.extractCountryCallingCode(state)) {
+            this.extractNationalSignificantNumber(state.getNationalDigits(), function(stateUpdate) {
+              return state.update(stateUpdate);
+            });
+          }
+        }
+      }]);
+    })();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouType.js
+function _typeof21(o2) {
+  "@babel/helpers - typeof";
+  return _typeof21 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof21(o2);
+}
+function _slicedToArray4(r3, e2) {
+  return _arrayWithHoles4(r3) || _iterableToArrayLimit4(r3, e2) || _unsupportedIterableToArray14(r3, e2) || _nonIterableRest4();
+}
+function _nonIterableRest4() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+function _unsupportedIterableToArray14(r3, a2) {
+  if (r3) {
+    if ("string" == typeof r3) return _arrayLikeToArray14(r3, a2);
+    var t2 = {}.toString.call(r3).slice(8, -1);
+    return "Object" === t2 && r3.constructor && (t2 = r3.constructor.name), "Map" === t2 || "Set" === t2 ? Array.from(r3) : "Arguments" === t2 || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t2) ? _arrayLikeToArray14(r3, a2) : void 0;
+  }
+}
+function _arrayLikeToArray14(r3, a2) {
+  (null == a2 || a2 > r3.length) && (a2 = r3.length);
+  for (var e2 = 0, n2 = Array(a2); e2 < a2; e2++) n2[e2] = r3[e2];
+  return n2;
+}
+function _iterableToArrayLimit4(r3, l2) {
+  var t2 = null == r3 ? null : "undefined" != typeof Symbol && r3[Symbol.iterator] || r3["@@iterator"];
+  if (null != t2) {
+    var e2, n2, i2, u2, a2 = [], f2 = true, o2 = false;
+    try {
+      if (i2 = (t2 = t2.call(r3)).next, 0 === l2) {
+        if (Object(t2) !== t2) return;
+        f2 = false;
+      } else for (; !(f2 = (e2 = i2.call(t2)).done) && (a2.push(e2.value), a2.length !== l2); f2 = true) ;
+    } catch (r4) {
+      o2 = true, n2 = r4;
+    } finally {
+      try {
+        if (!f2 && null != t2["return"] && (u2 = t2["return"](), Object(u2) !== u2)) return;
+      } finally {
+        if (o2) throw n2;
+      }
+    }
+    return a2;
+  }
+}
+function _arrayWithHoles4(r3) {
+  if (Array.isArray(r3)) return r3;
+}
+function _classCallCheck12(a2, n2) {
+  if (!(a2 instanceof n2)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties12(e2, r3) {
+  for (var t2 = 0; t2 < r3.length; t2++) {
+    var o2 = r3[t2];
+    o2.enumerable = o2.enumerable || false, o2.configurable = true, "value" in o2 && (o2.writable = true), Object.defineProperty(e2, _toPropertyKey21(o2.key), o2);
+  }
+}
+function _createClass12(e2, r3, t2) {
+  return r3 && _defineProperties12(e2.prototype, r3), t2 && _defineProperties12(e2, t2), Object.defineProperty(e2, "prototype", { writable: false }), e2;
+}
+function _toPropertyKey21(t2) {
+  var i2 = _toPrimitive21(t2, "string");
+  return "symbol" == _typeof21(i2) ? i2 : i2 + "";
+}
+function _toPrimitive21(t2, r3) {
+  if ("object" != _typeof21(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof21(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+var USE_NON_GEOGRAPHIC_COUNTRY_CODE5, AsYouType;
+var init_AsYouType = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/AsYouType.js"() {
+    init_metadata();
+    init_PhoneNumber();
+    init_AsYouTypeState();
+    init_AsYouTypeFormatter();
+    init_AsYouTypeParser();
+    init_getCountryByCallingCode();
+    init_getCountryByNationalNumber();
+    init_isObject();
+    USE_NON_GEOGRAPHIC_COUNTRY_CODE5 = false;
+    AsYouType = /* @__PURE__ */ (function() {
+      function AsYouType3(optionsOrDefaultCountry, metadata) {
+        _classCallCheck12(this, AsYouType3);
+        this.metadata = new Metadata(metadata);
+        var _this$getCountryAndCa = this.getCountryAndCallingCode(optionsOrDefaultCountry), _this$getCountryAndCa2 = _slicedToArray4(_this$getCountryAndCa, 2), defaultCountry = _this$getCountryAndCa2[0], defaultCallingCode = _this$getCountryAndCa2[1];
+        this.defaultCountry = defaultCountry;
+        this.defaultCallingCode = defaultCallingCode;
+        this.reset();
+      }
+      return _createClass12(AsYouType3, [{
+        key: "getCountryAndCallingCode",
+        value: function getCountryAndCallingCode(optionsOrDefaultCountry) {
+          var defaultCountry;
+          var defaultCallingCode;
+          if (optionsOrDefaultCountry) {
+            if (isObject2(optionsOrDefaultCountry)) {
+              defaultCountry = optionsOrDefaultCountry.defaultCountry;
+              defaultCallingCode = optionsOrDefaultCountry.defaultCallingCode;
+            } else {
+              defaultCountry = optionsOrDefaultCountry;
+            }
+          }
+          if (defaultCountry && !this.metadata.hasCountry(defaultCountry)) {
+            defaultCountry = void 0;
+          }
+          if (defaultCallingCode) {
+            if (USE_NON_GEOGRAPHIC_COUNTRY_CODE5) {
+              if (this.metadata.isNonGeographicCallingCode(defaultCallingCode)) {
+                defaultCountry = "001";
+              }
+            }
+          }
+          return [defaultCountry, defaultCallingCode];
+        }
+        /**
+         * Inputs "next" phone number characters.
+         * @param  {string} text
+         * @return {string} Formatted phone number characters that have been input so far.
+         */
+      }, {
+        key: "input",
+        value: function input(text) {
+          var _this$parser$input = this.parser.input(text, this.state), digits = _this$parser$input.digits, justLeadingPlus = _this$parser$input.justLeadingPlus;
+          if (justLeadingPlus) {
+            this.formattedOutput = "+";
+          } else if (digits) {
+            this.determineTheCountryIfNeeded();
+            if (this.state.nationalSignificantNumber) {
+              this.formatter.narrowDownMatchingFormats(this.state);
+            }
+            var formattedNationalNumber;
+            if (this.metadata.hasSelectedNumberingPlan()) {
+              formattedNationalNumber = this.formatter.format(digits, this.state);
+            }
+            if (formattedNationalNumber === void 0) {
+              if (this.parser.reExtractNationalSignificantNumber(this.state)) {
+                this.determineTheCountryIfNeeded();
+                var nationalDigits = this.state.getNationalDigits();
+                if (nationalDigits) {
+                  formattedNationalNumber = this.formatter.format(nationalDigits, this.state);
+                }
+              }
+            }
+            this.formattedOutput = formattedNationalNumber ? this.getFullNumber(formattedNationalNumber) : this.getNonFormattedNumber();
+          }
+          return this.formattedOutput;
+        }
+      }, {
+        key: "reset",
+        value: function reset() {
+          var _this = this;
+          this.state = new AsYouTypeState({
+            onCountryChange: function onCountryChange(country2) {
+              _this.country = country2;
+            },
+            onCallingCodeChange: function onCallingCodeChange(callingCode, country2) {
+              _this.metadata.selectNumberingPlan(country2, callingCode);
+              _this.formatter.reset(_this.metadata.numberingPlan, _this.state);
+              _this.parser.reset(_this.metadata.numberingPlan);
+            }
+          });
+          this.formatter = new AsYouTypeFormatter({
+            state: this.state,
+            metadata: this.metadata
+          });
+          this.parser = new AsYouTypeParser({
+            defaultCountry: this.defaultCountry,
+            defaultCallingCode: this.defaultCallingCode,
+            metadata: this.metadata,
+            state: this.state,
+            onNationalSignificantNumberChange: function onNationalSignificantNumberChange() {
+              _this.determineTheCountryIfNeeded();
+              _this.formatter.reset(_this.metadata.numberingPlan, _this.state);
+            }
+          });
+          this.state.reset({
+            country: this.defaultCountry,
+            callingCode: this.defaultCallingCode
+          });
+          this.formattedOutput = "";
+          return this;
+        }
+        /**
+         * Returns `true` if the phone number is being input in international format.
+         * In other words, returns `true` if and only if the parsed phone number starts with a `"+"`.
+         * @return {boolean}
+         */
+      }, {
+        key: "isInternational",
+        value: function isInternational() {
+          return this.state.international;
+        }
+        /**
+         * Returns the "calling code" part of the phone number when it's being input
+         * in an international format.
+         * If no valid calling code has been entered so far, returns `undefined`.
+         * @return {string} [callingCode]
+         */
+      }, {
+        key: "getCallingCode",
+        value: function getCallingCode() {
+          if (this.isInternational()) {
+            return this.state.callingCode;
+          }
+        }
+        // A legacy alias.
+      }, {
+        key: "getCountryCallingCode",
+        value: function getCountryCallingCode3() {
+          return this.getCallingCode();
+        }
+        /**
+         * Returns a two-letter country code of the phone number.
+         * Returns `undefined` for "non-geographic" phone numbering plans.
+         * Returns `undefined` if no phone number has been input yet.
+         * @return {string} [country]
+         */
+      }, {
+        key: "getCountry",
+        value: function getCountry() {
+          var digits = this.state.digits;
+          if (digits) {
+            return this._getCountry();
+          }
+        }
+        /**
+         * Returns a two-letter country code of the phone number.
+         * Returns `undefined` for "non-geographic" phone numbering plans.
+         * @return {string} [country]
+         */
+      }, {
+        key: "_getCountry",
+        value: function _getCountry() {
+          var country2 = this.state.country;
+          if (USE_NON_GEOGRAPHIC_COUNTRY_CODE5) {
+            if (country2 === "001") {
+              return;
+            }
+          }
+          return country2;
+        }
+      }, {
+        key: "determineTheCountryIfNeeded",
+        value: function determineTheCountryIfNeeded() {
+          if (!this.state.country || this.isCountryCallingCodeAmbiguous()) {
+            this.determineTheCountry();
+          }
+        }
+        // Prepends `+CountryCode ` in case of an international phone number
+      }, {
+        key: "getFullNumber",
+        value: function getFullNumber(formattedNationalNumber) {
+          var _this2 = this;
+          if (this.isInternational()) {
+            var prefix = function prefix2(text) {
+              return _this2.formatter.getInternationalPrefixBeforeCountryCallingCode(_this2.state, {
+                spacing: text ? true : false
+              }) + text;
+            };
+            var callingCode = this.state.callingCode;
+            if (!callingCode) {
+              return prefix("".concat(this.state.getDigitsWithoutInternationalPrefix()));
+            }
+            if (!formattedNationalNumber) {
+              return prefix(callingCode);
+            }
+            return prefix("".concat(callingCode, " ").concat(formattedNationalNumber));
+          }
+          return formattedNationalNumber;
+        }
+      }, {
+        key: "getNonFormattedNationalNumberWithPrefix",
+        value: function getNonFormattedNationalNumberWithPrefix() {
+          var _this$state = this.state, nationalSignificantNumber = _this$state.nationalSignificantNumber, prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix = _this$state.prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix, nationalPrefix = _this$state.nationalPrefix;
+          var number = nationalSignificantNumber;
+          var prefix = prefixBeforeNationalSignificantNumberThatIsNotNationalPrefix || nationalPrefix;
+          if (prefix) {
+            number = prefix + number;
+          }
+          return number;
+        }
+      }, {
+        key: "getNonFormattedNumber",
+        value: function getNonFormattedNumber() {
+          var nationalSignificantNumberIsModified = this.state.nationalSignificantNumberIsModified;
+          return this.getFullNumber(nationalSignificantNumberIsModified ? this.state.getNationalDigits() : this.getNonFormattedNationalNumberWithPrefix());
+        }
+      }, {
+        key: "getNonFormattedTemplate",
+        value: function getNonFormattedTemplate() {
+          var number = this.getNonFormattedNumber();
+          if (number) {
+            return number.replace(/[\+\d]/g, DIGIT_PLACEHOLDER);
+          }
+        }
+      }, {
+        key: "isCountryCallingCodeAmbiguous",
+        value: function isCountryCallingCodeAmbiguous() {
+          var callingCode = this.state.callingCode;
+          var countryCodes = this.metadata.getCountryCodesForCallingCode(callingCode);
+          return countryCodes && countryCodes.length > 1;
+        }
+        // Determines the exact country of the phone number
+        // entered so far based on the country phone code
+        // and the national phone number.
+      }, {
+        key: "determineTheCountry",
+        value: function determineTheCountry() {
+          this.state.setCountry(getCountryByCallingCode(this.isInternational() ? this.state.callingCode : this.defaultCallingCode, {
+            nationalNumber: this.state.nationalSignificantNumber,
+            metadata: this.metadata
+          }));
+        }
+        /**
+         * Returns a E.164 phone number value for the user's input.
+         *
+         * For example, for country `"US"` and input `"(222) 333-4444"`
+         * it will return `"+12223334444"`.
+         *
+         * For international phone number input, it will also auto-correct
+         * some minor errors such as using a national prefix when writing
+         * an international phone number. For example, if the user inputs
+         * `"+44 0 7400 000000"` then it will return an auto-corrected
+         * `"+447400000000"` phone number value.
+         *
+         * Will return `undefined` if no digits have been input,
+         * or when inputting a phone number in national format and no
+         * default country or default "country calling code" have been set.
+         *
+         * @return {string} [value]
+         */
+      }, {
+        key: "getNumberValue",
+        value: function getNumberValue() {
+          var _this$state2 = this.state, digits = _this$state2.digits, callingCode = _this$state2.callingCode, country2 = _this$state2.country, nationalSignificantNumber = _this$state2.nationalSignificantNumber;
+          if (!digits) {
+            return;
+          }
+          if (this.isInternational()) {
+            if (callingCode) {
+              return "+" + callingCode + nationalSignificantNumber;
+            } else {
+              return "+" + digits;
+            }
+          } else {
+            if (country2 || callingCode) {
+              var callingCode_ = country2 ? this.metadata.countryCallingCode() : callingCode;
+              return "+" + callingCode_ + nationalSignificantNumber;
+            }
+          }
+        }
+        /**
+         * Returns an instance of `PhoneNumber` class.
+         * Will return `undefined` if no national (significant) number
+         * digits have been entered so far, or if no `defaultCountry` has been
+         * set and the user enters a phone number not in international format.
+         */
+      }, {
+        key: "getNumber",
+        value: function getNumber() {
+          var _this$state3 = this.state, nationalSignificantNumber = _this$state3.nationalSignificantNumber, carrierCode = _this$state3.carrierCode, callingCode = _this$state3.callingCode;
+          var country2 = this._getCountry();
+          if (!nationalSignificantNumber) {
+            return;
+          }
+          if (!country2 && !callingCode) {
+            return;
+          }
+          if (country2) {
+            if (country2 === this.defaultCountry) {
+              var metadata = new Metadata(this.metadata.metadata);
+              metadata.selectNumberingPlan(country2);
+              var _callingCode = metadata.numberingPlan.callingCode();
+              var ambiguousCountries = this.metadata.getCountryCodesForCallingCode(_callingCode);
+              if (ambiguousCountries.length > 1) {
+                var exactCountry = getCountryByNationalNumber(nationalSignificantNumber, {
+                  countries: ambiguousCountries,
+                  metadata: this.metadata.metadata
+                });
+                if (exactCountry) {
+                  country2 = exactCountry;
+                }
+              }
+            }
+          }
+          var phoneNumber = new PhoneNumber(country2 || callingCode, nationalSignificantNumber, this.metadata.metadata);
+          if (carrierCode) {
+            phoneNumber.carrierCode = carrierCode;
+          }
+          return phoneNumber;
+        }
+        /**
+         * Returns `true` if the phone number is "possible".
+         * Is just a shortcut for `PhoneNumber.isPossible()`.
+         * @return {boolean}
+         */
+      }, {
+        key: "isPossible",
+        value: function isPossible() {
+          var phoneNumber = this.getNumber();
+          if (!phoneNumber) {
+            return false;
+          }
+          return phoneNumber.isPossible();
+        }
+        /**
+         * Returns `true` if the phone number is "valid".
+         * Is just a shortcut for `PhoneNumber.isValid()`.
+         * @return {boolean}
+         */
+      }, {
+        key: "isValid",
+        value: function isValid2() {
+          var phoneNumber = this.getNumber();
+          if (!phoneNumber) {
+            return false;
+          }
+          return phoneNumber.isValid();
+        }
+        /**
+         * @deprecated
+         * This method is used in `react-phone-number-input/source/input-control.js`
+         * in versions before `3.0.16`.
+         */
+      }, {
+        key: "getNationalNumber",
+        value: function getNationalNumber() {
+          return this.state.nationalSignificantNumber;
+        }
+        /**
+         * Returns the phone number characters entered by the user.
+         * @return {string}
+         */
+      }, {
+        key: "getChars",
+        value: function getChars() {
+          return (this.state.international ? "+" : "") + this.state.digits;
+        }
+        /**
+         * Returns the template for the formatted phone number.
+         * @return {string}
+         */
+      }, {
+        key: "getTemplate",
+        value: function getTemplate() {
+          return this.formatter.getTemplate(this.state) || this.getNonFormattedTemplate() || "";
+        }
+      }]);
+    })();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/getCountries.js
+function getCountries(metadata) {
+  return new Metadata(metadata).getCountries();
+}
+var init_getCountries = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/getCountries.js"() {
+    init_metadata();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/getExampleNumber.js
+function getExampleNumber(country2, examples, metadata) {
+  if (examples[country2]) {
+    return new PhoneNumber(country2, examples[country2], metadata);
+  }
+}
+var init_getExampleNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/getExampleNumber.js"() {
+    init_PhoneNumber();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/formatIncompletePhoneNumber.js
+function formatIncompletePhoneNumber(value, optionsOrDefaultCountry, metadata) {
+  if (!metadata) {
+    metadata = optionsOrDefaultCountry;
+    optionsOrDefaultCountry = void 0;
+  }
+  return new AsYouType(optionsOrDefaultCountry, metadata).input(value);
+}
+var init_formatIncompletePhoneNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/formatIncompletePhoneNumber.js"() {
+    init_AsYouType();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/core/index.js
+var init_core = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/core/index.js"() {
+    init_PhoneNumber();
+    init_ParseError();
+    init_parsePhoneNumberWithError2();
+    init_parsePhoneNumber2();
+    init_isValidPhoneNumber();
+    init_isPossiblePhoneNumber();
+    init_validatePhoneNumberLength();
+    init_findNumbers();
+    init_searchNumbers();
+    init_findPhoneNumbersInText();
+    init_searchPhoneNumbersInText();
+    init_PhoneNumberMatcher();
+    init_AsYouType();
+    init_getCountries();
+    init_metadata();
+    init_getExampleNumber();
+    init_formatIncompletePhoneNumber();
+    init_parseIncompletePhoneNumber();
+    init_parseDigits();
+    init_RFC3966();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/parsePhoneNumberWithError.js
+function parsePhoneNumberWithError3() {
+  return withMetadataArgument(parsePhoneNumberWithError2, arguments);
+}
+var init_parsePhoneNumberWithError3 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/parsePhoneNumberWithError.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/parsePhoneNumber.js
+function parsePhoneNumber4() {
+  return withMetadataArgument(parsePhoneNumber3, arguments);
+}
+var init_parsePhoneNumber3 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/parsePhoneNumber.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/isValidPhoneNumber.js
+function isValidPhoneNumber2() {
+  return withMetadataArgument(isValidPhoneNumber, arguments);
+}
+var init_isValidPhoneNumber2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/isValidPhoneNumber.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/isPossiblePhoneNumber.js
+function isPossiblePhoneNumber3() {
+  return withMetadataArgument(isPossiblePhoneNumber2, arguments);
+}
+var init_isPossiblePhoneNumber2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/isPossiblePhoneNumber.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/validatePhoneNumberLength.js
+function validatePhoneNumberLength2() {
+  return withMetadataArgument(validatePhoneNumberLength, arguments);
+}
+var init_validatePhoneNumberLength2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/validatePhoneNumberLength.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/findNumbers.js
+function findNumbers2() {
+  return withMetadataArgument(findNumbers, arguments);
+}
+var init_findNumbers2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/findNumbers.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/searchNumbers.js
+function searchNumbers2() {
+  return withMetadataArgument(searchNumbers, arguments);
+}
+var init_searchNumbers2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/searchNumbers.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/findPhoneNumbersInText.js
+function findPhoneNumbersInText2() {
+  return withMetadataArgument(findPhoneNumbersInText, arguments);
+}
+var init_findPhoneNumbersInText2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/findPhoneNumbersInText.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/searchPhoneNumbersInText.js
+function searchPhoneNumbersInText2() {
+  return withMetadataArgument(searchPhoneNumbersInText, arguments);
+}
+var init_searchPhoneNumbersInText2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/searchPhoneNumbersInText.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/PhoneNumberMatcher.js
+function PhoneNumberMatcher2(text, options) {
+  return PhoneNumberMatcher.call(this, text, options, metadata_min_json_default);
+}
+var init_PhoneNumberMatcher2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/PhoneNumberMatcher.js"() {
+    init_metadata_min_json();
+    init_core();
+    PhoneNumberMatcher2.prototype = Object.create(PhoneNumberMatcher.prototype, {});
+    PhoneNumberMatcher2.prototype.constructor = PhoneNumberMatcher2;
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/AsYouType.js
+function AsYouType2(country2) {
+  return AsYouType.call(this, country2, metadata_min_json_default);
+}
+var init_AsYouType2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/AsYouType.js"() {
+    init_metadata_min_json();
+    init_core();
+    AsYouType2.prototype = Object.create(AsYouType.prototype, {});
+    AsYouType2.prototype.constructor = AsYouType2;
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/isSupportedCountry.js
+function isSupportedCountry2() {
+  return withMetadataArgument(isSupportedCountry, arguments);
+}
+var init_isSupportedCountry = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/isSupportedCountry.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/getCountries.js
+function getCountries2() {
+  return withMetadataArgument(getCountries, arguments);
+}
+var init_getCountries2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/getCountries.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/getCountryCallingCode.js
+function getCountryCallingCode2() {
+  return withMetadataArgument(getCountryCallingCode, arguments);
+}
+var init_getCountryCallingCode2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/getCountryCallingCode.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/getExtPrefix.js
+function getExtPrefix2() {
+  return withMetadataArgument(getExtPrefix, arguments);
+}
+var init_getExtPrefix = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/getExtPrefix.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/Metadata.js
+function Metadata2() {
+  return Metadata.call(this, metadata_min_json_default);
+}
+var init_Metadata = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/Metadata.js"() {
+    init_metadata_min_json();
+    init_core();
+    Metadata2.prototype = Object.create(Metadata.prototype, {});
+    Metadata2.prototype.constructor = Metadata2;
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/getExampleNumber.js
+function getExampleNumber2() {
+  return withMetadataArgument(getExampleNumber, arguments);
+}
+var init_getExampleNumber2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/getExampleNumber.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/formatIncompletePhoneNumber.js
+function formatIncompletePhoneNumber2() {
+  return withMetadataArgument(formatIncompletePhoneNumber, arguments);
+}
+var init_formatIncompletePhoneNumber2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/formatIncompletePhoneNumber.js"() {
+    init_withMetadataArgument();
+    init_core();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/PhoneNumber.js
+function PhoneNumber2(number) {
+  return PhoneNumber.call(this, number, metadata_min_json_default);
+}
+var init_PhoneNumber2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/min/exports/PhoneNumber.js"() {
+    init_metadata_min_json();
+    init_core();
+    PhoneNumber2.prototype = PhoneNumber.prototype;
+    PhoneNumber2.prototype.constructor = PhoneNumber2;
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/parse.js
+function parseNumber() {
+  var _normalizeArguments = normalizeArguments(arguments), text = _normalizeArguments.text, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  return parse(text, options, metadata);
+}
+var init_parse2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/parse.js"() {
+    init_parse();
+    init_normalizeArguments();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/parse.js
+function parse2() {
+  return withMetadataArgument(parseNumber, arguments);
+}
+var init_parse3 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/parse.js"() {
+    init_withMetadataArgument();
+    init_parse2();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/format.js
+function formatNumber4() {
+  var _normalizeArguments = normalizeArguments2(arguments), input = _normalizeArguments.input, format7 = _normalizeArguments.format, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  return formatNumber3(input, format7, options, metadata);
+}
+function normalizeArguments2(args) {
+  var arg_1 = args[0];
+  var arg_2 = args[1];
+  var arg_3 = args[2];
+  var arg_4 = args[3];
+  var arg_5 = args[4];
+  var input;
+  var format7;
+  var options;
+  var metadata;
+  if (typeof arg_1 === "string") {
+    if (typeof arg_3 === "string") {
+      format7 = arg_3;
+      if (arg_5) {
+        options = arg_4;
+        metadata = arg_5;
+      } else {
+        metadata = arg_4;
+      }
+      input = parse(arg_1, {
+        defaultCountry: arg_2,
+        extended: true
+      }, metadata);
+    } else {
+      if (typeof arg_2 !== "string") {
+        throw new Error("`format` argument not passed to `formatNumber(number, format)`");
+      }
+      format7 = arg_2;
+      if (arg_4) {
+        options = arg_3;
+        metadata = arg_4;
+      } else {
+        metadata = arg_3;
+      }
+      input = parse(arg_1, {
+        extended: true
+      }, metadata);
+    }
+  } else if (isObject2(arg_1)) {
+    input = arg_1;
+    format7 = arg_2;
+    if (arg_4) {
+      options = arg_3;
+      metadata = arg_4;
+    } else {
+      metadata = arg_3;
+    }
+  } else throw new TypeError("A phone number must either be a string or an object of shape { phone, [country] }.");
+  if (format7 === "International") {
+    format7 = "INTERNATIONAL";
+  } else if (format7 === "National") {
+    format7 = "NATIONAL";
+  }
+  return {
+    input,
+    format: format7,
+    options,
+    metadata
+  };
+}
+var init_format2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/format.js"() {
+    init_format();
+    init_parse();
+    init_isObject();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/format.js
+function format6() {
+  return withMetadataArgument(formatNumber4, arguments);
+}
+var init_format3 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/format.js"() {
+    init_withMetadataArgument();
+    init_format2();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/getNumberType.js
+function getNumberType2() {
+  var _normalizeArguments = normalizeArguments3(arguments), input = _normalizeArguments.input, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  if (!input.phone) {
+    return;
+  }
+  return getNumberType(input, options, metadata);
+}
+function normalizeArguments3(args) {
+  var arg_1 = args[0];
+  var arg_2 = args[1];
+  var arg_3 = args[2];
+  var arg_4 = args[3];
+  var input;
+  var options = {};
+  var metadata;
+  if (typeof arg_1 === "string") {
+    if (!isObject2(arg_2)) {
+      if (arg_4) {
+        options = arg_3;
+        metadata = arg_4;
+      } else {
+        metadata = arg_3;
+      }
+      if (isViablePhoneNumber(arg_1)) {
+        input = parse(arg_1, {
+          defaultCountry: arg_2
+        }, metadata);
+      } else {
+        input = {};
+      }
+    } else {
+      if (arg_3) {
+        options = arg_2;
+        metadata = arg_3;
+      } else {
+        metadata = arg_2;
+      }
+      if (isViablePhoneNumber(arg_1)) {
+        input = parse(arg_1, void 0, metadata);
+      } else {
+        input = {};
+      }
+    }
+  } else if (isObject2(arg_1)) {
+    input = arg_1;
+    if (arg_3) {
+      options = arg_2;
+      metadata = arg_3;
+    } else {
+      metadata = arg_2;
+    }
+  } else throw new TypeError("A phone number must either be a string or an object of shape { phone, [country] }.");
+  return {
+    input,
+    options,
+    metadata
+  };
+}
+var init_getNumberType2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/getNumberType.js"() {
+    init_isViablePhoneNumber();
+    init_getNumberType();
+    init_isObject();
+    init_parse();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/getNumberType.js
+function getNumberType3() {
+  return withMetadataArgument(getNumberType2, arguments);
+}
+var init_getNumberType3 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/getNumberType.js"() {
+    init_withMetadataArgument();
+    init_getNumberType2();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/isPossibleNumber.js
+function isPossibleNumber2() {
+  var _normalizeArguments = normalizeArguments3(arguments), input = _normalizeArguments.input, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  if (!input.phone && !(options && options.v2)) {
+    return false;
+  }
+  return isPossiblePhoneNumber(input, options, metadata);
+}
+var init_isPossibleNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/isPossibleNumber.js"() {
+    init_getNumberType2();
+    init_isPossible();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/isPossibleNumber.js
+function isPossibleNumber3() {
+  return withMetadataArgument(isPossibleNumber2, arguments);
+}
+var init_isPossibleNumber2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/isPossibleNumber.js"() {
+    init_withMetadataArgument();
+    init_isPossibleNumber();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/isValidNumber.js
+function isValidNumber2() {
+  var _normalizeArguments = normalizeArguments3(arguments), input = _normalizeArguments.input, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  if (!input.phone) {
+    return false;
+  }
+  return isValidNumber(input, options, metadata);
+}
+var init_isValidNumber = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/isValidNumber.js"() {
+    init_isValid();
+    init_getNumberType2();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/isValidNumber.js
+function isValidNumber3() {
+  return withMetadataArgument(isValidNumber2, arguments);
+}
+var init_isValidNumber2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/isValidNumber.js"() {
+    init_withMetadataArgument();
+    init_isValidNumber();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/isValidNumberForRegion_.js
+function isValidNumberForRegion(input, country2, options, metadata) {
+  options = options || {};
+  return input.country === country2 && isValidNumber(input, options, metadata);
+}
+var init_isValidNumberForRegion = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/isValidNumberForRegion_.js"() {
+    init_isValid();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/isValidNumberForRegion.js
+function isValidNumberForRegion2(number, country2, metadata) {
+  if (typeof number !== "string") {
+    throw new TypeError("number must be a string");
+  }
+  if (typeof country2 !== "string") {
+    throw new TypeError("country must be a string");
+  }
+  var input;
+  if (isViablePhoneNumber(number)) {
+    input = parse(number, {
+      defaultCountry: country2
+    }, metadata);
+  } else {
+    input = {};
+  }
+  return isValidNumberForRegion(input, country2, void 0, metadata);
+}
+var init_isValidNumberForRegion2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/isValidNumberForRegion.js"() {
+    init_isViablePhoneNumber();
+    init_parse();
+    init_isValidNumberForRegion();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/isValidNumberForRegion.js
+function isValidNumberForRegion3() {
+  return withMetadataArgument(isValidNumberForRegion2, arguments);
+}
+var init_isValidNumberForRegion3 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/isValidNumberForRegion.js"() {
+    init_withMetadataArgument();
+    init_isValidNumberForRegion2();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/PhoneNumberSearch.js
+function _typeof22(o2) {
+  "@babel/helpers - typeof";
+  return _typeof22 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o3) {
+    return typeof o3;
+  } : function(o3) {
+    return o3 && "function" == typeof Symbol && o3.constructor === Symbol && o3 !== Symbol.prototype ? "symbol" : typeof o3;
+  }, _typeof22(o2);
+}
+function _classCallCheck13(a2, n2) {
+  if (!(a2 instanceof n2)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties13(e2, r3) {
+  for (var t2 = 0; t2 < r3.length; t2++) {
+    var o2 = r3[t2];
+    o2.enumerable = o2.enumerable || false, o2.configurable = true, "value" in o2 && (o2.writable = true), Object.defineProperty(e2, _toPropertyKey22(o2.key), o2);
+  }
+}
+function _createClass13(e2, r3, t2) {
+  return r3 && _defineProperties13(e2.prototype, r3), t2 && _defineProperties13(e2, t2), Object.defineProperty(e2, "prototype", { writable: false }), e2;
+}
+function _toPropertyKey22(t2) {
+  var i2 = _toPrimitive22(t2, "string");
+  return "symbol" == _typeof22(i2) ? i2 : i2 + "";
+}
+function _toPrimitive22(t2, r3) {
+  if ("object" != _typeof22(t2) || !t2) return t2;
+  var e2 = t2[Symbol.toPrimitive];
+  if (void 0 !== e2) {
+    var i2 = e2.call(t2, r3 || "default");
+    if ("object" != _typeof22(i2)) return i2;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r3 ? String : Number)(t2);
+}
+var WHITESPACE_IN_THE_BEGINNING_PATTERN, PUNCTUATION_IN_THE_END_PATTERN, PhoneNumberSearch;
+var init_PhoneNumberSearch = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/PhoneNumberSearch.js"() {
+    init_parse();
+    init_isViablePhoneNumber();
+    init_parsePreCandidate();
+    init_isValidPreCandidate();
+    init_isValidCandidate();
+    init_constants();
+    WHITESPACE_IN_THE_BEGINNING_PATTERN = new RegExp("^[" + WHITESPACE + "]+");
+    PUNCTUATION_IN_THE_END_PATTERN = new RegExp("[" + VALID_PUNCTUATION + "]+$");
+    PhoneNumberSearch = /* @__PURE__ */ (function() {
+      function PhoneNumberSearch3(text, options, metadata) {
+        _classCallCheck13(this, PhoneNumberSearch3);
+        this.text = text;
+        this.options = options || {};
+        this.metadata = metadata;
+        this.state = "NOT_READY";
+        this.regexp = new RegExp(VALID_PHONE_NUMBER_WITH_EXTENSION, "ig");
+      }
+      return _createClass13(PhoneNumberSearch3, [{
+        key: "find",
+        value: function find() {
+          var matches = this.regexp.exec(this.text);
+          if (!matches) {
+            return;
+          }
+          var number = matches[0];
+          var startsAt = matches.index;
+          number = number.replace(WHITESPACE_IN_THE_BEGINNING_PATTERN, "");
+          startsAt += matches[0].length - number.length;
+          number = number.replace(PUNCTUATION_IN_THE_END_PATTERN, "");
+          number = parsePreCandidate(number);
+          var result2 = this.parseCandidate(number, startsAt);
+          if (result2) {
+            return result2;
+          }
+          return this.find();
+        }
+      }, {
+        key: "parseCandidate",
+        value: function parseCandidate(number, startsAt) {
+          if (!isValidPreCandidate(number, startsAt, this.text)) {
+            return;
+          }
+          if (!isValidCandidate(number, startsAt, this.text, this.options.extended ? "POSSIBLE" : "VALID")) {
+            return;
+          }
+          var result2 = parse(number, this.options, this.metadata);
+          if (!result2.phone) {
+            return;
+          }
+          result2.startsAt = startsAt;
+          result2.endsAt = startsAt + number.length;
+          return result2;
+        }
+      }, {
+        key: "hasNext",
+        value: function hasNext() {
+          if (this.state === "NOT_READY") {
+            this.last_match = this.find();
+            if (this.last_match) {
+              this.state = "READY";
+            } else {
+              this.state = "DONE";
+            }
+          }
+          return this.state === "READY";
+        }
+      }, {
+        key: "next",
+        value: function next() {
+          if (!this.hasNext()) {
+            throw new Error("No next element");
+          }
+          var result2 = this.last_match;
+          this.last_match = null;
+          this.state = "NOT_READY";
+          return result2;
+        }
+      }]);
+    })();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/findPhoneNumbersInitialImplementation.js
+function findPhoneNumbers(text, options, metadata) {
+  if (options === void 0) {
+    options = {};
+  }
+  var search = new PhoneNumberSearch(text, options, metadata);
+  var phones = [];
+  while (search.hasNext()) {
+    phones.push(search.next());
+  }
+  return phones;
+}
+function searchPhoneNumbers(text, options, metadata) {
+  if (options === void 0) {
+    options = {};
+  }
+  var search = new PhoneNumberSearch(text, options, metadata);
+  var iterator = function iterator2() {
+    return {
+      next: function next() {
+        if (search.hasNext()) {
+          return {
+            done: false,
+            value: search.next()
+          };
+        }
+        return {
+          done: true
+        };
+      }
+    };
+  };
+  var iterable = {};
+  iterable[Symbol.iterator] = iterator;
+  return iterable;
+}
+var EXTN_PATTERNS_FOR_PARSING;
+var init_findPhoneNumbersInitialImplementation = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/findPhoneNumbersInitialImplementation.js"() {
+    init_createExtensionPattern();
+    init_PhoneNumberSearch();
+    EXTN_PATTERNS_FOR_PARSING = createExtensionPattern("parsing");
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/findPhoneNumbers.js
+function findPhoneNumbers2() {
+  var _normalizeArguments = normalizeArguments(arguments), text = _normalizeArguments.text, options = _normalizeArguments.options, metadata = _normalizeArguments.metadata;
+  return findPhoneNumbers(text, options, metadata);
+}
+function searchPhoneNumbers2() {
+  var _normalizeArguments2 = normalizeArguments(arguments), text = _normalizeArguments2.text, options = _normalizeArguments2.options, metadata = _normalizeArguments2.metadata;
+  return searchPhoneNumbers(text, options, metadata);
+}
+var init_findPhoneNumbers = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/es6/legacy/findPhoneNumbers.js"() {
+    init_findPhoneNumbersInitialImplementation();
+    init_normalizeArguments();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/findPhoneNumbers.js
+function findPhoneNumbers3() {
+  return withMetadataArgument(findPhoneNumbers2, arguments);
+}
+var init_findPhoneNumbers2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/findPhoneNumbers.js"() {
+    init_withMetadataArgument();
+    init_findPhoneNumbers();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/searchPhoneNumbers.js
+function searchPhoneNumbers3() {
+  return withMetadataArgument(searchPhoneNumbers2, arguments);
+}
+var init_searchPhoneNumbers = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/searchPhoneNumbers.js"() {
+    init_withMetadataArgument();
+    init_findPhoneNumbers();
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/PhoneNumberSearch.js
+function PhoneNumberSearch2(text, options) {
+  PhoneNumberSearch.call(this, text, options, metadata_min_json_default);
+}
+var init_PhoneNumberSearch2 = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.es6.exports/PhoneNumberSearch.js"() {
+    init_metadata_min_json();
+    init_PhoneNumberSearch();
+    PhoneNumberSearch2.prototype = Object.create(PhoneNumberSearch.prototype, {});
+    PhoneNumberSearch2.prototype.constructor = PhoneNumberSearch2;
+  }
+});
+
+// ../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.js
+var libphonenumber_js_exports = {};
+__export(libphonenumber_js_exports, {
+  AsYouType: () => AsYouType2,
+  AsYouTypeCustom: () => AsYouType,
+  DIGITS: () => DIGITS,
+  DIGIT_PLACEHOLDER: () => DIGIT_PLACEHOLDER,
+  Metadata: () => Metadata2,
+  ParseError: () => ParseError,
+  PhoneNumber: () => PhoneNumber2,
+  PhoneNumberMatcher: () => PhoneNumberMatcher2,
+  PhoneNumberSearch: () => PhoneNumberSearch2,
+  PhoneNumberSearchCustom: () => PhoneNumberSearch,
+  default: () => parsePhoneNumber4,
+  findNumbers: () => findNumbers2,
+  findPhoneNumbers: () => findPhoneNumbers3,
+  findPhoneNumbersCustom: () => findPhoneNumbers2,
+  findPhoneNumbersInText: () => findPhoneNumbersInText2,
+  format: () => format6,
+  formatCustom: () => formatNumber4,
+  formatIncompletePhoneNumber: () => formatIncompletePhoneNumber2,
+  formatNumber: () => format6,
+  formatRFC3966: () => formatRFC3966,
+  getCountries: () => getCountries2,
+  getCountryCallingCode: () => getCountryCallingCode2,
+  getCountryCallingCodeCustom: () => getCountryCallingCode,
+  getExampleNumber: () => getExampleNumber2,
+  getExtPrefix: () => getExtPrefix2,
+  getNumberType: () => getNumberType3,
+  getNumberTypeCustom: () => getNumberType2,
+  getPhoneCode: () => getCountryCallingCode2,
+  getPhoneCodeCustom: () => getCountryCallingCode,
+  isPossibleNumber: () => isPossibleNumber3,
+  isPossiblePhoneNumber: () => isPossiblePhoneNumber3,
+  isSupportedCountry: () => isSupportedCountry2,
+  isValidNumber: () => isValidNumber3,
+  isValidNumberCustom: () => isValidNumber2,
+  isValidNumberForRegion: () => isValidNumberForRegion3,
+  isValidPhoneNumber: () => isValidPhoneNumber2,
+  parse: () => parse2,
+  parseCustom: () => parseNumber,
+  parseDigits: () => parseDigits,
+  parseIncompletePhoneNumber: () => parseIncompletePhoneNumber,
+  parseNumber: () => parse2,
+  parsePhoneNumber: () => parsePhoneNumberWithError3,
+  parsePhoneNumberCharacter: () => parsePhoneNumberCharacter,
+  parsePhoneNumberFromString: () => parsePhoneNumber4,
+  parsePhoneNumberWithError: () => parsePhoneNumberWithError3,
+  parseRFC3966: () => parseRFC3966,
+  searchNumbers: () => searchNumbers2,
+  searchPhoneNumbers: () => searchPhoneNumbers3,
+  searchPhoneNumbersCustom: () => searchPhoneNumbers2,
+  searchPhoneNumbersInText: () => searchPhoneNumbersInText2,
+  validatePhoneNumberLength: () => validatePhoneNumberLength2
+});
+var init_libphonenumber_js = __esm({
+  "../../../node_modules/.pnpm/libphonenumber-js@1.12.35/node_modules/libphonenumber-js/index.js"() {
+    init_parsePhoneNumberWithError3();
+    init_parsePhoneNumber3();
+    init_isValidPhoneNumber2();
+    init_isPossiblePhoneNumber2();
+    init_validatePhoneNumberLength2();
+    init_findNumbers2();
+    init_searchNumbers2();
+    init_findPhoneNumbersInText2();
+    init_searchPhoneNumbersInText2();
+    init_PhoneNumberMatcher2();
+    init_AsYouType2();
+    init_AsYouTypeFormatter();
+    init_isSupportedCountry();
+    init_getCountries2();
+    init_getCountryCallingCode2();
+    init_getExtPrefix();
+    init_Metadata();
+    init_getExampleNumber2();
+    init_formatIncompletePhoneNumber2();
+    init_PhoneNumber2();
+    init_core();
+    init_parse3();
+    init_format3();
+    init_getNumberType3();
+    init_isPossibleNumber2();
+    init_isValidNumber2();
+    init_isValidNumberForRegion3();
+    init_findPhoneNumbers2();
+    init_searchPhoneNumbers();
+    init_PhoneNumberSearch2();
+    init_parseDigits();
+    init_parse2();
+    init_format2();
+    init_isValidNumber();
+    init_findPhoneNumbers();
+    init_findPhoneNumbers();
+    init_PhoneNumberSearch();
+    init_getNumberType2();
+    init_getCountryCallingCode();
+    init_AsYouType();
   }
 });
 
@@ -4804,7 +11781,7 @@ function createNumberFormatters() {
   const setGeoLocation2 = (geoLocation) => {
     geoLocationState = geoLocation;
   };
-  const formatNumber2 = (number, { decimals = 0, forceLatin = true, numberFormatOptions = {} } = {}) => {
+  const formatNumber5 = (number, { decimals = 0, forceLatin = true, numberFormatOptions = {} } = {}) => {
     try {
       const formatter = numberFormat({
         browserSafeLocale: getBrowserSafeLocale(),
@@ -4857,7 +11834,7 @@ function createNumberFormatters() {
   return {
     setLocale: setLocale2,
     setGeoLocation: setGeoLocation2,
-    formatNumber: formatNumber2,
+    formatNumber: formatNumber5,
     formatNumberCompact: formatNumberCompact2,
     formatCurrency: formatCurrency2,
     getCurrencyObject: getCurrencyObject3
@@ -4867,13 +11844,13 @@ var create_number_formatters_default = createNumberFormatters;
 
 // ../../js-packages/number-formatters/dist/esm/index.js
 var defaultFormatter = create_number_formatters_default();
-var { setLocale, setGeoLocation, formatNumber, formatNumberCompact, formatCurrency, getCurrencyObject: getCurrencyObject2 } = defaultFormatter;
+var { setLocale, setGeoLocation, formatNumber: formatNumber2, formatNumberCompact, formatCurrency, getCurrencyObject: getCurrencyObject2 } = defaultFormatter;
 
 // ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/icon/index.mjs
 var import_element = __toESM(require_element(), 1);
 var icon_default = (0, import_element.forwardRef)(
-  ({ icon, size = 24, ...props }, ref) => {
-    return (0, import_element.cloneElement)(icon, {
+  ({ icon: icon15, size = 24, ...props }, ref) => {
+    return (0, import_element.cloneElement)(icon15, {
       width: size,
       height: size,
       ...props,
@@ -5051,11 +12028,16 @@ var import_primitives24 = __toESM(require_primitives(), 1);
 var import_jsx_runtime24 = __toESM(require_jsx_runtime(), 1);
 var globe_default = /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(import_primitives24.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(import_primitives24.Path, { d: "M12 4c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8Zm6.5 8c0 .6 0 1.2-.2 1.8h-2.7c0-.6.2-1.1.2-1.8s0-1.2-.2-1.8h2.7c.2.6.2 1.1.2 1.8Zm-.9-3.2h-2.4c-.3-.9-.7-1.8-1.1-2.4-.1-.2-.2-.4-.3-.5 1.6.5 3 1.6 3.8 3ZM12.8 17c-.3.5-.6 1-.8 1.3-.2-.3-.5-.8-.8-1.3-.3-.5-.6-1.1-.8-1.7h3.3c-.2.6-.5 1.2-.8 1.7Zm-2.9-3.2c-.1-.6-.2-1.1-.2-1.8s0-1.2.2-1.8H14c.1.6.2 1.1.2 1.8s0 1.2-.2 1.8H9.9ZM11.2 7c.3-.5.6-1 .8-1.3.2.3.5.8.8 1.3.3.5.6 1.1.8 1.7h-3.3c.2-.6.5-1.2.8-1.7Zm-1-1.2c-.1.2-.2.3-.3.5-.4.7-.8 1.5-1.1 2.4H6.4c.8-1.4 2.2-2.5 3.8-3Zm-1.8 8H5.7c-.2-.6-.2-1.1-.2-1.8s0-1.2.2-1.8h2.7c0 .6-.2 1.1-.2 1.8s0 1.2.2 1.8Zm-2 1.4h2.4c.3.9.7 1.8 1.1 2.4.1.2.2.4.3.5-1.6-.5-3-1.6-3.8-3Zm7.4 3c.1-.2.2-.3.3-.5.4-.7.8-1.5 1.1-2.4h2.4c-.8 1.4-2.2 2.5-3.8 3Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/info.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/image.mjs
 var import_primitives25 = __toESM(require_primitives(), 1);
 var import_jsx_runtime25 = __toESM(require_jsx_runtime(), 1);
-var info_default = /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(import_primitives25.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(
-  import_primitives25.Path,
+var image_default = /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(import_primitives25.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(import_primitives25.Path, { d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 4.5h14c.3 0 .5.2.5.5v8.4l-3-2.9c-.3-.3-.8-.3-1 0L11.9 14 9 12c-.3-.2-.6-.2-.8 0l-3.6 2.6V5c-.1-.3.1-.5.4-.5zm14 15H5c-.3 0-.5-.2-.5-.5v-2.4l4.1-3 3 1.9c.3.2.7.2.9-.1L16 12l3.5 3.4V19c0 .3-.2.5-.5.5z" }) });
+
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/info.mjs
+var import_primitives26 = __toESM(require_primitives(), 1);
+var import_jsx_runtime26 = __toESM(require_jsx_runtime(), 1);
+var info_default = /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(import_primitives26.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
+  import_primitives26.Path,
   {
     fillRule: "evenodd",
     clipRule: "evenodd",
@@ -5064,45 +12046,45 @@ var info_default = /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(import_primitiv
 ) });
 
 // ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/link.mjs
-var import_primitives26 = __toESM(require_primitives(), 1);
-var import_jsx_runtime26 = __toESM(require_jsx_runtime(), 1);
-var link_default = /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(import_primitives26.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(import_primitives26.Path, { d: "M10 17.389H8.444A5.194 5.194 0 1 1 8.444 7H10v1.5H8.444a3.694 3.694 0 0 0 0 7.389H10v1.5ZM14 7h1.556a5.194 5.194 0 0 1 0 10.39H14v-1.5h1.556a3.694 3.694 0 0 0 0-7.39H14V7Zm-4.5 6h5v-1.5h-5V13Z" }) });
-
-// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/mobile.mjs
 var import_primitives27 = __toESM(require_primitives(), 1);
 var import_jsx_runtime27 = __toESM(require_jsx_runtime(), 1);
-var mobile_default = /* @__PURE__ */ (0, import_jsx_runtime27.jsx)(import_primitives27.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime27.jsx)(import_primitives27.Path, { d: "M15 4H9c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm.5 14c0 .3-.2.5-.5.5H9c-.3 0-.5-.2-.5-.5V6c0-.3.2-.5.5-.5h6c.3 0 .5.2.5.5v12zm-4.5-.5h2V16h-2v1.5z" }) });
+var link_default = /* @__PURE__ */ (0, import_jsx_runtime27.jsx)(import_primitives27.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime27.jsx)(import_primitives27.Path, { d: "M10 17.389H8.444A5.194 5.194 0 1 1 8.444 7H10v1.5H8.444a3.694 3.694 0 0 0 0 7.389H10v1.5ZM14 7h1.556a5.194 5.194 0 0 1 0 10.39H14v-1.5h1.556a3.694 3.694 0 0 0 0-7.39H14V7Zm-4.5 6h5v-1.5h-5V13Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/more-vertical.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/mobile.mjs
 var import_primitives28 = __toESM(require_primitives(), 1);
 var import_jsx_runtime28 = __toESM(require_jsx_runtime(), 1);
-var more_vertical_default = /* @__PURE__ */ (0, import_jsx_runtime28.jsx)(import_primitives28.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime28.jsx)(import_primitives28.Path, { d: "M13 19h-2v-2h2v2zm0-6h-2v-2h2v2zm0-6h-2V5h2v2z" }) });
+var mobile_default = /* @__PURE__ */ (0, import_jsx_runtime28.jsx)(import_primitives28.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime28.jsx)(import_primitives28.Path, { d: "M15 4H9c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm.5 14c0 .3-.2.5-.5.5H9c-.3 0-.5-.2-.5-.5V6c0-.3.2-.5.5-.5h6c.3 0 .5.2.5.5v12zm-4.5-.5h2V16h-2v1.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/next.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/more-vertical.mjs
 var import_primitives29 = __toESM(require_primitives(), 1);
 var import_jsx_runtime29 = __toESM(require_jsx_runtime(), 1);
-var next_default = /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(import_primitives29.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(import_primitives29.Path, { d: "M6.6 6L5.4 7l4.5 5-4.5 5 1.1 1 5.5-6-5.4-6zm6 0l-1.1 1 4.5 5-4.5 5 1.1 1 5.5-6-5.5-6z" }) });
+var more_vertical_default = /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(import_primitives29.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(import_primitives29.Path, { d: "M13 19h-2v-2h2v2zm0-6h-2v-2h2v2zm0-6h-2V5h2v2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plugins.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/next.mjs
 var import_primitives30 = __toESM(require_primitives(), 1);
 var import_jsx_runtime30 = __toESM(require_jsx_runtime(), 1);
-var plugins_default = /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(import_primitives30.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(import_primitives30.Path, { d: "M10.5 4v4h3V4H15v4h1.5a1 1 0 011 1v4l-3 4v2a1 1 0 01-1 1h-3a1 1 0 01-1-1v-2l-3-4V9a1 1 0 011-1H9V4h1.5zm.5 12.5v2h2v-2l3-4v-3H8v3l3 4z" }) });
+var next_default = /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(import_primitives30.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(import_primitives30.Path, { d: "M6.6 6L5.4 7l4.5 5-4.5 5 1.1 1 5.5-6-5.4-6zm6 0l-1.1 1 4.5 5-4.5 5 1.1 1 5.5-6-5.5-6z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plus.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plugins.mjs
 var import_primitives31 = __toESM(require_primitives(), 1);
 var import_jsx_runtime31 = __toESM(require_jsx_runtime(), 1);
-var plus_default = /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(import_primitives31.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(import_primitives31.Path, { d: "M11 12.5V17.5H12.5V12.5H17.5V11H12.5V6H11V11H6V12.5H11Z" }) });
+var plugins_default = /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(import_primitives31.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(import_primitives31.Path, { d: "M10.5 4v4h3V4H15v4h1.5a1 1 0 011 1v4l-3 4v2a1 1 0 01-1 1h-3a1 1 0 01-1-1v-2l-3-4V9a1 1 0 011-1H9V4h1.5zm.5 12.5v2h2v-2l3-4v-3H8v3l3 4z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/previous.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plus.mjs
 var import_primitives32 = __toESM(require_primitives(), 1);
 var import_jsx_runtime32 = __toESM(require_jsx_runtime(), 1);
-var previous_default = /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(import_primitives32.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(import_primitives32.Path, { d: "M11.6 7l-1.1-1L5 12l5.5 6 1.1-1L7 12l4.6-5zm6 0l-1.1-1-5.5 6 5.5 6 1.1-1-4.6-5 4.6-5z" }) });
+var plus_default = /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(import_primitives32.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(import_primitives32.Path, { d: "M11 12.5V17.5H12.5V12.5H17.5V11H12.5V6H11V11H6V12.5H11Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/published.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/previous.mjs
 var import_primitives33 = __toESM(require_primitives(), 1);
 var import_jsx_runtime33 = __toESM(require_jsx_runtime(), 1);
-var published_default = /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(import_primitives33.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(
-  import_primitives33.Path,
+var previous_default = /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(import_primitives33.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(import_primitives33.Path, { d: "M11.6 7l-1.1-1L5 12l5.5 6 1.1-1L7 12l4.6-5zm6 0l-1.1-1-5.5 6 5.5 6 1.1-1-4.6-5 4.6-5z" }) });
+
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/published.mjs
+var import_primitives34 = __toESM(require_primitives(), 1);
+var import_jsx_runtime34 = __toESM(require_jsx_runtime(), 1);
+var published_default = /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(import_primitives34.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(
+  import_primitives34.Path,
   {
     fillRule: "evenodd",
     clipRule: "evenodd",
@@ -5111,10 +12093,10 @@ var published_default = /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(import_pri
 ) });
 
 // ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/scheduled.mjs
-var import_primitives34 = __toESM(require_primitives(), 1);
-var import_jsx_runtime34 = __toESM(require_jsx_runtime(), 1);
-var scheduled_default = /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(import_primitives34.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(
-  import_primitives34.Path,
+var import_primitives35 = __toESM(require_primitives(), 1);
+var import_jsx_runtime35 = __toESM(require_jsx_runtime(), 1);
+var scheduled_default = /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(import_primitives35.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(
+  import_primitives35.Path,
   {
     fillRule: "evenodd",
     clipRule: "evenodd",
@@ -5123,20 +12105,20 @@ var scheduled_default = /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(import_pri
 ) });
 
 // ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/search.mjs
-var import_primitives35 = __toESM(require_primitives(), 1);
-var import_jsx_runtime35 = __toESM(require_jsx_runtime(), 1);
-var search_default = /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(import_primitives35.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(import_primitives35.Path, { d: "M13 5c-3.3 0-6 2.7-6 6 0 1.4.5 2.7 1.3 3.7l-3.8 3.8 1.1 1.1 3.8-3.8c1 .8 2.3 1.3 3.7 1.3 3.3 0 6-2.7 6-6S16.3 5 13 5zm0 10.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z" }) });
-
-// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/seen.mjs
 var import_primitives36 = __toESM(require_primitives(), 1);
 var import_jsx_runtime36 = __toESM(require_jsx_runtime(), 1);
-var seen_default = /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(import_primitives36.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(import_primitives36.Path, { d: "M3.99961 13C4.67043 13.3354 4.6703 13.3357 4.67017 13.3359L4.67298 13.3305C4.67621 13.3242 4.68184 13.3135 4.68988 13.2985C4.70595 13.2686 4.7316 13.2218 4.76695 13.1608C4.8377 13.0385 4.94692 12.8592 5.09541 12.6419C5.39312 12.2062 5.84436 11.624 6.45435 11.0431C7.67308 9.88241 9.49719 8.75 11.9996 8.75C14.502 8.75 16.3261 9.88241 17.5449 11.0431C18.1549 11.624 18.6061 12.2062 18.9038 12.6419C19.0523 12.8592 19.1615 13.0385 19.2323 13.1608C19.2676 13.2218 19.2933 13.2686 19.3093 13.2985C19.3174 13.3135 19.323 13.3242 19.3262 13.3305L19.3291 13.3359C19.3289 13.3357 19.3288 13.3354 19.9996 13C20.6704 12.6646 20.6703 12.6643 20.6701 12.664L20.6697 12.6632L20.6688 12.6614L20.6662 12.6563L20.6583 12.6408C20.6517 12.6282 20.6427 12.6108 20.631 12.5892C20.6078 12.5459 20.5744 12.4852 20.5306 12.4096C20.4432 12.2584 20.3141 12.0471 20.1423 11.7956C19.7994 11.2938 19.2819 10.626 18.5794 9.9569C17.1731 8.61759 14.9972 7.25 11.9996 7.25C9.00203 7.25 6.82614 8.61759 5.41987 9.9569C4.71736 10.626 4.19984 11.2938 3.85694 11.7956C3.68511 12.0471 3.55605 12.2584 3.4686 12.4096C3.42484 12.4852 3.39142 12.5459 3.36818 12.5892C3.35656 12.6108 3.34748 12.6282 3.34092 12.6408L3.33297 12.6563L3.33041 12.6614L3.32948 12.6632L3.32911 12.664C3.32894 12.6643 3.32879 12.6646 3.99961 13ZM11.9996 16C13.9326 16 15.4996 14.433 15.4996 12.5C15.4996 10.567 13.9326 9 11.9996 9C10.0666 9 8.49961 10.567 8.49961 12.5C8.49961 14.433 10.0666 16 11.9996 16Z" }) });
+var search_default = /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(import_primitives36.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(import_primitives36.Path, { d: "M13 5c-3.3 0-6 2.7-6 6 0 1.4.5 2.7 1.3 3.7l-3.8 3.8 1.1 1.1 3.8-3.8c1 .8 2.3 1.3 3.7 1.3 3.3 0 6-2.7 6-6S16.3 5 13 5zm0 10.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/trash.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/seen.mjs
 var import_primitives37 = __toESM(require_primitives(), 1);
 var import_jsx_runtime37 = __toESM(require_jsx_runtime(), 1);
-var trash_default = /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(import_primitives37.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(
-  import_primitives37.Path,
+var seen_default = /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(import_primitives37.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(import_primitives37.Path, { d: "M3.99961 13C4.67043 13.3354 4.6703 13.3357 4.67017 13.3359L4.67298 13.3305C4.67621 13.3242 4.68184 13.3135 4.68988 13.2985C4.70595 13.2686 4.7316 13.2218 4.76695 13.1608C4.8377 13.0385 4.94692 12.8592 5.09541 12.6419C5.39312 12.2062 5.84436 11.624 6.45435 11.0431C7.67308 9.88241 9.49719 8.75 11.9996 8.75C14.502 8.75 16.3261 9.88241 17.5449 11.0431C18.1549 11.624 18.6061 12.2062 18.9038 12.6419C19.0523 12.8592 19.1615 13.0385 19.2323 13.1608C19.2676 13.2218 19.2933 13.2686 19.3093 13.2985C19.3174 13.3135 19.323 13.3242 19.3262 13.3305L19.3291 13.3359C19.3289 13.3357 19.3288 13.3354 19.9996 13C20.6704 12.6646 20.6703 12.6643 20.6701 12.664L20.6697 12.6632L20.6688 12.6614L20.6662 12.6563L20.6583 12.6408C20.6517 12.6282 20.6427 12.6108 20.631 12.5892C20.6078 12.5459 20.5744 12.4852 20.5306 12.4096C20.4432 12.2584 20.3141 12.0471 20.1423 11.7956C19.7994 11.2938 19.2819 10.626 18.5794 9.9569C17.1731 8.61759 14.9972 7.25 11.9996 7.25C9.00203 7.25 6.82614 8.61759 5.41987 9.9569C4.71736 10.626 4.19984 11.2938 3.85694 11.7956C3.68511 12.0471 3.55605 12.2584 3.4686 12.4096C3.42484 12.4852 3.39142 12.5459 3.36818 12.5892C3.35656 12.6108 3.34748 12.6282 3.34092 12.6408L3.33297 12.6563L3.33041 12.6614L3.32948 12.6632L3.32911 12.664C3.32894 12.6643 3.32879 12.6646 3.99961 13ZM11.9996 16C13.9326 16 15.4996 14.433 15.4996 12.5C15.4996 10.567 13.9326 9 11.9996 9C10.0666 9 8.49961 10.567 8.49961 12.5C8.49961 14.433 10.0666 16 11.9996 16Z" }) });
+
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/trash.mjs
+var import_primitives38 = __toESM(require_primitives(), 1);
+var import_jsx_runtime38 = __toESM(require_jsx_runtime(), 1);
+var trash_default = /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(import_primitives38.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(
+  import_primitives38.Path,
   {
     fillRule: "evenodd",
     clipRule: "evenodd",
@@ -5145,9 +12127,14 @@ var trash_default = /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(import_primiti
 ) });
 
 // ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/unseen.mjs
-var import_primitives38 = __toESM(require_primitives(), 1);
-var import_jsx_runtime38 = __toESM(require_jsx_runtime(), 1);
-var unseen_default = /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(import_primitives38.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(import_primitives38.Path, { d: "M20.7 12.7s0-.1-.1-.2c0-.2-.2-.4-.4-.6-.3-.5-.9-1.2-1.6-1.8-.7-.6-1.5-1.3-2.6-1.8l-.6 1.4c.9.4 1.6 1 2.1 1.5.6.6 1.1 1.2 1.4 1.6.1.2.3.4.3.5v.1l.7-.3.7-.3Zm-5.2-9.3-1.8 4c-.5-.1-1.1-.2-1.7-.2-3 0-5.2 1.4-6.6 2.7-.7.7-1.2 1.3-1.6 1.8-.2.3-.3.5-.4.6 0 0 0 .1-.1.2s0 0 .7.3l.7.3V13c0-.1.2-.3.3-.5.3-.4.7-1 1.4-1.6 1.2-1.2 3-2.3 5.5-2.3H13v.3c-.4 0-.8-.1-1.1-.1-1.9 0-3.5 1.6-3.5 3.5s.6 2.3 1.6 2.9l-2 4.4.9.4 7.6-16.2-.9-.4Zm-3 12.6c1.7-.2 3-1.7 3-3.5s-.2-1.4-.6-1.9L12.4 16Z" }) });
+var import_primitives39 = __toESM(require_primitives(), 1);
+var import_jsx_runtime39 = __toESM(require_jsx_runtime(), 1);
+var unseen_default = /* @__PURE__ */ (0, import_jsx_runtime39.jsx)(import_primitives39.SVG, { viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ (0, import_jsx_runtime39.jsx)(import_primitives39.Path, { d: "M20.7 12.7s0-.1-.1-.2c0-.2-.2-.4-.4-.6-.3-.5-.9-1.2-1.6-1.8-.7-.6-1.5-1.3-2.6-1.8l-.6 1.4c.9.4 1.6 1 2.1 1.5.6.6 1.1 1.2 1.4 1.6.1.2.3.4.3.5v.1l.7-.3.7-.3Zm-5.2-9.3-1.8 4c-.5-.1-1.1-.2-1.7-.2-3 0-5.2 1.4-6.6 2.7-.7.7-1.2 1.3-1.6 1.8-.2.3-.3.5-.4.6 0 0 0 .1-.1.2s0 0 .7.3l.7.3V13c0-.1.2-.3.3-.5.3-.4.7-1 1.4-1.6 1.2-1.2 3-2.3 5.5-2.3H13v.3c-.4 0-.8-.1-1.1-.1-1.9 0-3.5 1.6-3.5 3.5s.6 2.3 1.6 2.9l-2 4.4.9.4 7.6-16.2-.9-.4Zm-3 12.6c1.7-.2 3-1.7 3-3.5s-.2-1.4-.6-1.9L12.4 16Z" }) });
+
+// ../../../node_modules/.pnpm/@wordpress+icons@11.6.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/upload.mjs
+var import_primitives40 = __toESM(require_primitives(), 1);
+var import_jsx_runtime40 = __toESM(require_jsx_runtime(), 1);
+var upload_default = /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(import_primitives40.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(import_primitives40.Path, { d: "M18.5 15v3.5H13V6.7l4.5 4.1 1-1.1-6.2-5.8-5.8 5.8 1 1.1 4-4v11.7h-6V15H4v5h16v-5z" }) });
 
 // ../../../node_modules/.pnpm/clsx@2.1.1/node_modules/clsx/dist/clsx.mjs
 function r(e2) {
@@ -5167,9 +12154,9 @@ var clsx_default = clsx;
 
 // ../../../node_modules/.pnpm/@automattic+ui@1.0.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@automattic/ui/dist/index.js
 var import_element2 = __toESM(require_element(), 1);
-var import_primitives39 = __toESM(require_primitives(), 1);
-var import_jsx_runtime39 = __toESM(require_jsx_runtime(), 1);
-var import_jsx_runtime40 = __toESM(require_jsx_runtime(), 1);
+var import_primitives41 = __toESM(require_primitives(), 1);
+var import_jsx_runtime41 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime42 = __toESM(require_jsx_runtime(), 1);
 
 // ../../../node_modules/.pnpm/date-fns@4.1.0/node_modules/date-fns/constants.js
 var daysInYear = 365.2425;
@@ -5433,31 +12420,31 @@ var formatDistanceLocale = {
   }
 };
 var formatDistance = (token, count, options) => {
-  let result;
+  let result2;
   const tokenValue = formatDistanceLocale[token];
   if (typeof tokenValue === "string") {
-    result = tokenValue;
+    result2 = tokenValue;
   } else if (count === 1) {
-    result = tokenValue.one;
+    result2 = tokenValue.one;
   } else {
-    result = tokenValue.other.replace("{{count}}", count.toString());
+    result2 = tokenValue.other.replace("{{count}}", count.toString());
   }
   if (options?.addSuffix) {
     if (options.comparison && options.comparison > 0) {
-      return "in " + result;
+      return "in " + result2;
     } else {
-      return result + " ago";
+      return result2 + " ago";
     }
   }
-  return result;
+  return result2;
 };
 
 // ../../../node_modules/.pnpm/date-fns@4.1.0/node_modules/date-fns/locale/_lib/buildFormatLongFn.js
 function buildFormatLongFn(args) {
   return (options = {}) => {
     const width = options.width ? String(options.width) : args.defaultWidth;
-    const format6 = args.formats[width] || args.formats[args.defaultWidth];
-    return format6;
+    const format7 = args.formats[width] || args.formats[args.defaultWidth];
+    return format7;
   };
 }
 
@@ -6714,14 +13701,14 @@ function isProtectedDayOfYearToken(token) {
 function isProtectedWeekYearToken(token) {
   return weekYearTokenRE.test(token);
 }
-function warnOrThrowProtectedError(token, format6, input) {
-  const _message = message(token, format6, input);
+function warnOrThrowProtectedError(token, format7, input) {
+  const _message = message(token, format7, input);
   console.warn(_message);
   if (throwTokens.includes(token)) throw new RangeError(_message);
 }
-function message(token, format6, input) {
+function message(token, format7, input) {
   const subject = token[0] === "Y" ? "years" : "days of the month";
-  return `Use \`${token.toLowerCase()}\` instead of \`${token}\` (in \`${format6}\`) for formatting ${subject} to the input \`${input}\`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md`;
+  return `Use \`${token.toLowerCase()}\` instead of \`${token}\` (in \`${format7}\`) for formatting ${subject} to the input \`${input}\`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md`;
 }
 
 // ../../../node_modules/.pnpm/date-fns@4.1.0/node_modules/date-fns/format.js
@@ -6811,37 +13798,37 @@ function subYears(date, amount, options) {
 }
 
 // ../../../node_modules/.pnpm/@automattic+ui@1.0.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@automattic/ui/dist/index.js
-var import_jsx_runtime41 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime43 = __toESM(require_jsx_runtime(), 1);
 var import_react = __toESM(require_react(), 1);
 var import_i18n = __toESM(require_i18n(), 1);
 var import_react2 = __toESM(require_react(), 1);
-var import_jsx_runtime42 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime44 = __toESM(require_jsx_runtime(), 1);
 var import_react3 = __toESM(require_react(), 1);
-var import_jsx_runtime43 = __toESM(require_jsx_runtime(), 1);
-function Icon({ icon = null, size = 24, ...additionalProps }) {
-  if ("function" === typeof icon) {
-    return (0, import_element2.createElement)(icon, {
+var import_jsx_runtime45 = __toESM(require_jsx_runtime(), 1);
+function Icon({ icon: icon15 = null, size = 24, ...additionalProps }) {
+  if ("function" === typeof icon15) {
+    return (0, import_element2.createElement)(icon15, {
       size,
       ...additionalProps
     });
   }
-  if (icon && (icon.type === "svg" || icon.type === import_primitives39.SVG)) {
+  if (icon15 && (icon15.type === "svg" || icon15.type === import_primitives41.SVG)) {
     const appliedProps = {
-      ...icon.props,
+      ...icon15.props,
       width: size,
       height: size,
       ...additionalProps
     };
-    return /* @__PURE__ */ (0, import_jsx_runtime39.jsx)(import_primitives39.SVG, { ...appliedProps });
+    return /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(import_primitives41.SVG, { ...appliedProps });
   }
-  if ((0, import_element2.isValidElement)(icon)) {
-    return (0, import_element2.cloneElement)(icon, {
+  if ((0, import_element2.isValidElement)(icon15)) {
+    return (0, import_element2.cloneElement)(icon15, {
       // @ts-ignore Just forwarding the size prop along
       size,
       ...additionalProps
     });
   }
-  return icon;
+  return icon15;
 }
 var style_module_default = {
   "badge": "a8cui-DPKqWs",
@@ -6874,9 +13861,9 @@ function Badge({
   children,
   ...props
 }) {
-  const icon = contextBasedIcon(intent);
-  const hasIcon = !!icon;
-  return /* @__PURE__ */ (0, import_jsx_runtime40.jsxs)(
+  const icon15 = contextBasedIcon(intent);
+  const hasIcon = !!icon15;
+  return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(
     "span",
     {
       className: clsx_default(style_module_default["badge"], className, {
@@ -6885,8 +13872,8 @@ function Badge({
       }),
       ...props,
       children: [
-        hasIcon && /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(Icon, { icon, size: 16, fill: "currentColor", className: style_module_default["badge__icon"] }),
-        /* @__PURE__ */ (0, import_jsx_runtime40.jsx)("span", { className: style_module_default["badge__content"], children })
+        hasIcon && /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Icon, { icon: icon15, size: 16, fill: "currentColor", className: style_module_default["badge__icon"] }),
+        /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: style_module_default["badge__content"], children })
       ]
     }
   );
@@ -6964,21 +13951,21 @@ var MODIFIER_CLASSNAMES = {
 // ../../../node_modules/.pnpm/@wordpress+admin-ui@1.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/breadcrumbs/index.mjs
 var import_i18n2 = __toESM(require_i18n(), 1);
 var import_components = __toESM(require_components(), 1);
-var import_jsx_runtime44 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime46 = __toESM(require_jsx_runtime(), 1);
 import { Link } from "@wordpress/route";
 var BreadcrumbItem = ({
   item: { label, to }
 }) => {
   if (!to) {
-    return /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(import_components.__experimentalHeading, { level: 1, truncate: true, children: label }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(import_components.__experimentalHeading, { level: 1, truncate: true, children: label }) });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(Link, { to, children: label }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(Link, { to, children: label }) });
 };
 var Breadcrumbs = ({ items }) => {
   if (!items.length) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("nav", { "aria-label": (0, import_i18n2.__)("Breadcrumbs"), children: /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("nav", { "aria-label": (0, import_i18n2.__)("Breadcrumbs"), children: /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
     import_components.__experimentalHStack,
     {
       as: "ul",
@@ -6986,7 +13973,7 @@ var Breadcrumbs = ({ items }) => {
       spacing: 0,
       justify: "flex-start",
       alignment: "center",
-      children: items.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(BreadcrumbItem, { item }, index))
+      children: items.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(BreadcrumbItem, { item }, index))
     }
   ) });
 };
@@ -6994,10 +13981,10 @@ var breadcrumbs_default = Breadcrumbs;
 
 // ../../../node_modules/.pnpm/@wordpress+admin-ui@1.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/navigable-region/index.mjs
 var import_element3 = __toESM(require_element(), 1);
-var import_jsx_runtime45 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime47 = __toESM(require_jsx_runtime(), 1);
 var NavigableRegion = (0, import_element3.forwardRef)(
   ({ children, className, ariaLabel, as: Tag = "div", ...props }, ref) => {
-    return /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
       Tag,
       {
         ref,
@@ -7022,7 +14009,7 @@ var import_components2 = __toESM(require_components(), 1);
 var { Fill: SidebarToggleFill, Slot: SidebarToggleSlot } = (0, import_components2.createSlotFill)("SidebarToggle");
 
 // ../../../node_modules/.pnpm/@wordpress+admin-ui@1.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
-var import_jsx_runtime46 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime48 = __toESM(require_jsx_runtime(), 1);
 function Header({
   breadcrumbs,
   badges,
@@ -7031,21 +14018,21 @@ function Header({
   actions,
   showSidebarToggle = true
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)(import_components3.__experimentalVStack, { className: "admin-ui-page__header", as: "header", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)(import_components3.__experimentalHStack, { justify: "space-between", spacing: 2, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)(import_components3.__experimentalHStack, { spacing: 2, justify: "left", children: [
-        showSidebarToggle && /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(import_components3.__experimentalVStack, { className: "admin-ui-page__header", as: "header", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(import_components3.__experimentalHStack, { justify: "space-between", spacing: 2, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(import_components3.__experimentalHStack, { spacing: 2, justify: "left", children: [
+        showSidebarToggle && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
           SidebarToggleSlot,
           {
             bubblesVirtually: true,
             className: "admin-ui-page__sidebar-toggle-slot"
           }
         ),
-        title && /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(import_components3.__experimentalHeading, { as: "h2", level: 3, weight: 500, truncate: true, children: title }),
+        title && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(import_components3.__experimentalHeading, { as: "h2", level: 3, weight: 500, truncate: true, children: title }),
         breadcrumbs,
         badges
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
         import_components3.__experimentalHStack,
         {
           style: { width: "auto", flexShrink: 0 },
@@ -7055,12 +14042,12 @@ function Header({
         }
       )
     ] }),
-    subTitle && /* @__PURE__ */ (0, import_jsx_runtime46.jsx)("p", { className: "admin-ui-page__header-subtitle", children: subTitle })
+    subTitle && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("p", { className: "admin-ui-page__header-subtitle", children: subTitle })
   ] });
 }
 
 // ../../../node_modules/.pnpm/@wordpress+admin-ui@1.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/index.mjs
-var import_jsx_runtime47 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime49 = __toESM(require_jsx_runtime(), 1);
 function Page({
   breadcrumbs,
   badges,
@@ -7073,8 +14060,8 @@ function Page({
   showSidebarToggle = true
 }) {
   const classes = clsx_default("admin-ui-page", className);
-  return /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)(navigable_region_default, { className: classes, ariaLabel: title, children: [
-    (title || breadcrumbs || badges) && /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(navigable_region_default, { className: classes, ariaLabel: title, children: [
+    (title || breadcrumbs || badges) && /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
       Header,
       {
         breadcrumbs,
@@ -7085,7 +14072,7 @@ function Page({
         showSidebarToggle
       }
     ),
-    hasPadding ? /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("div", { className: "admin-ui-page__content has-padding", children }) : children
+    hasPadding ? /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("div", { className: "admin-ui-page__content has-padding", children }) : children
   ] });
 }
 Page.SidebarToggleFill = SidebarToggleFill;
@@ -7363,15 +14350,15 @@ function mergeEventHandlers(ourHandler, theirHandler) {
     if (isSyntheticEvent(event)) {
       const baseUIEvent = event;
       makeEventPreventable(baseUIEvent);
-      const result2 = theirHandler(baseUIEvent);
+      const result3 = theirHandler(baseUIEvent);
       if (!baseUIEvent.baseUIHandlerPrevented) {
         ourHandler?.(baseUIEvent);
       }
-      return result2;
+      return result3;
     }
-    const result = theirHandler(event);
+    const result2 = theirHandler(event);
     ourHandler?.(event);
-    return result;
+    return result2;
   };
 }
 function makeEventPreventable(event) {
@@ -7627,7 +14614,7 @@ var import_keycodes = __toESM(require_keycodes(), 1);
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-selection-checkbox/index.mjs
 var import_components4 = __toESM(require_components(), 1);
 var import_i18n4 = __toESM(require_i18n(), 1);
-var import_jsx_runtime48 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime50 = __toESM(require_jsx_runtime(), 1);
 function DataViewsSelectionCheckbox({
   selection,
   onChangeSelection,
@@ -7640,7 +14627,7 @@ function DataViewsSelectionCheckbox({
   const id = getItemId2(item);
   const checked = !disabled2 && selection.includes(id);
   const selectionLabel = titleField?.getValue?.({ item }) || (0, import_i18n4.__)("(no title)");
-  return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(
     import_components4.CheckboxControl,
     {
       className: "dataviews-selection-checkbox",
@@ -7675,7 +14662,7 @@ var { lock, unlock } = (0, import_private_apis.__dangerousOptInToUnstableAPIsOnl
 );
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-item-actions/index.mjs
-var import_jsx_runtime49 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime51 = __toESM(require_jsx_runtime(), 1);
 var { Menu, kebabCase } = unlock(import_components5.privateApis);
 function ButtonTrigger({
   action,
@@ -7684,7 +14671,7 @@ function ButtonTrigger({
   variant
 }) {
   const label = typeof action.label === "string" ? action.label : action.label(items);
-  return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
     import_components5.Button,
     {
       disabled: !!action.disabled,
@@ -7702,7 +14689,7 @@ function MenuItemTrigger({
   items
 }) {
   const label = typeof action.label === "string" ? action.label : action.label(items);
-  return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu.Item, { disabled: action.disabled, onClick, children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu.ItemLabel, { children: label }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu.Item, { disabled: action.disabled, onClick, children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu.ItemLabel, { children: label }) });
 }
 function ActionModal({
   action,
@@ -7711,7 +14698,7 @@ function ActionModal({
 }) {
   const label = typeof action.label === "string" ? action.label : action.label(items);
   const modalHeader = typeof action.modalHeader === "function" ? action.modalHeader(items) : action.modalHeader;
-  return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
     import_components5.Modal,
     {
       title: modalHeader || label,
@@ -7722,7 +14709,7 @@ function ActionModal({
       overlayClassName: `dataviews-action-modal dataviews-action-modal__${kebabCase(
         action.id
       )}`,
-      children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(action.RenderModal, { items, closeModal })
+      children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(action.RenderModal, { items, closeModal })
     }
   );
 }
@@ -7744,7 +14731,7 @@ function ActionsMenuGroup({
       }
     );
   }, [actions]);
-  const renderActionGroup = (actionList) => actionList.map((action) => /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
+  const renderActionGroup = (actionList) => actionList.map((action) => /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
     MenuItemTrigger,
     {
       action,
@@ -7759,9 +14746,9 @@ function ActionsMenuGroup({
     },
     action.id
   ));
-  return /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(Menu.Group, { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(Menu.Group, { children: [
     renderActionGroup(primaryActions),
-    primaryActions.length > 0 && regularActions.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu.Separator, {}),
+    primaryActions.length > 0 && regularActions.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu.Separator, {}),
     renderActionGroup(regularActions)
   ] });
 }
@@ -7785,7 +14772,7 @@ function ItemActions({
   }, [actions, item]);
   const isMobileViewport = (0, import_compose.useViewportMatch)("medium", "<");
   if (isCompact) {
-    return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
       CompactItemActions,
       {
         item,
@@ -7795,7 +14782,7 @@ function ItemActions({
       }
     );
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(
     Stack,
     {
       direction: "row",
@@ -7806,7 +14793,7 @@ function ItemActions({
         width: "auto"
       },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
           PrimaryActions,
           {
             item,
@@ -7816,7 +14803,7 @@ function ItemActions({
         ),
         (primaryActions.length < eligibleActions.length || // Since we hide primary actions on mobile, we need to show the menu
         // there if there are any actions at all.
-        isMobileViewport) && /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
+        isMobileViewport) && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
           CompactItemActions,
           {
             item,
@@ -7837,12 +14824,12 @@ function CompactItemActions({
   const [activeModalAction, setActiveModalAction] = (0, import_element6.useState)(
     null
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(import_jsx_runtime49.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(Menu, { placement: "bottom-end", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(import_jsx_runtime51.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(Menu, { placement: "bottom-end", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
         Menu.TriggerButton,
         {
-          render: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
+          render: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
             import_components5.Button,
             {
               size: isSmall ? "small" : "compact",
@@ -7855,7 +14842,7 @@ function CompactItemActions({
           )
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu.Popover, { children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu.Popover, { children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
         ActionsMenuGroup,
         {
           actions,
@@ -7865,7 +14852,7 @@ function CompactItemActions({
         }
       ) })
     ] }),
-    !!activeModalAction && /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
+    !!activeModalAction && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
       ActionModal,
       {
         action: activeModalAction,
@@ -7889,8 +14876,8 @@ function PrimaryActions({
   if (!Array.isArray(actions) || actions.length === 0) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(import_jsx_runtime49.Fragment, { children: [
-    actions.map((action) => /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(import_jsx_runtime51.Fragment, { children: [
+    actions.map((action) => /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
       ButtonTrigger,
       {
         action,
@@ -7906,7 +14893,7 @@ function PrimaryActions({
       },
       action.id
     )),
-    !!activeModalAction && /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
+    !!activeModalAction && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
       ActionModal,
       {
         action: activeModalAction,
@@ -7950,7 +14937,7 @@ function getFooterMessage(selectionCount, itemsCount, totalItems) {
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-bulk-actions/index.mjs
-var import_jsx_runtime50 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime52 = __toESM(require_jsx_runtime(), 1);
 function ActionWithModal({
   action,
   items,
@@ -7964,9 +14951,9 @@ function ActionWithModal({
     },
     items
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)(import_jsx_runtime50.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(ActionTriggerComponent, { ...actionTriggerProps }),
-    isModalOpen && /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(import_jsx_runtime52.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(ActionTriggerComponent, { ...actionTriggerProps }),
+    isModalOpen && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
       ActionModal,
       {
         action,
@@ -8010,7 +14997,7 @@ function BulkSelectionCheckbox({
     (item) => selection.includes(getItemId2(item)) && selectableItems.includes(item)
   );
   const areAllSelected = selectedItems.length === selectableItems.length;
-  return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
     import_components6.CheckboxControl,
     {
       className: "dataviews-view-table-selection-checkbox",
@@ -8038,7 +15025,7 @@ function ActionTrigger({
   const label = typeof action.label === "string" ? action.label : action.label(items);
   const isMobile = (0, import_compose2.useViewportMatch)("medium", "<");
   if (isMobile) {
-    return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
       import_components6.Button,
       {
         disabled: isBusy,
@@ -8051,7 +15038,7 @@ function ActionTrigger({
       }
     );
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
     import_components6.Button,
     {
       disabled: isBusy,
@@ -8077,7 +15064,7 @@ function ActionButton({
     });
   }, [action, selectedItems]);
   if ("RenderModal" in action) {
-    return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
       ActionWithModal,
       {
         action,
@@ -8087,7 +15074,7 @@ function ActionButton({
       action.id
     );
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
     ActionTrigger,
     {
       action,
@@ -8110,7 +15097,7 @@ function renderFooterContent(data, actions, getItemId2, selection, actionsToShow
     data.length,
     paginationInfo.totalItems
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(
     Stack,
     {
       direction: "row",
@@ -8118,7 +15105,7 @@ function renderFooterContent(data, actions, getItemId2, selection, actionsToShow
       gap: "sm",
       align: "center",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
           BulkSelectionCheckbox,
           {
             selection,
@@ -8128,8 +15115,8 @@ function renderFooterContent(data, actions, getItemId2, selection, actionsToShow
             getItemId: getItemId2
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("span", { className: "dataviews-bulk-actions-footer__item-count", children: message2 }),
-        /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("span", { className: "dataviews-bulk-actions-footer__item-count", children: message2 }),
+        /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(
           Stack,
           {
             direction: "row",
@@ -8137,7 +15124,7 @@ function renderFooterContent(data, actions, getItemId2, selection, actionsToShow
             gap: "2xs",
             children: [
               actionsToShow.map((action) => {
-                return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(
+                return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
                   ActionButton,
                   {
                     action,
@@ -8148,7 +15135,7 @@ function renderFooterContent(data, actions, getItemId2, selection, actionsToShow
                   action.id
                 );
               }),
-              selectedItems.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(
+              selectedItems.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
                 import_components6.Button,
                 {
                   icon: close_small_default,
@@ -8248,7 +15235,7 @@ function BulkActionsFooter() {
     getItemId: getItemId2,
     paginationInfo
   } = (0, import_element7.useContext)(dataviews_context_default);
-  return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
     FooterContent,
     {
       selection,
@@ -8279,11 +15266,11 @@ function getHideableFields(view, fields) {
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/column-header-menu.mjs
-var import_jsx_runtime51 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime53 = __toESM(require_jsx_runtime(), 1);
 var { Menu: Menu2 } = unlock(import_components7.privateApis);
 function WithMenuSeparators({ children }) {
-  return import_element8.Children.toArray(children).filter(Boolean).map((child, i2) => /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(import_element8.Fragment, { children: [
-    i2 > 0 && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.Separator, {}),
+  return import_element8.Children.toArray(children).filter(Boolean).map((child, i2) => /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)(import_element8.Fragment, { children: [
+    i2 > 0 && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.Separator, {}),
     child
   ] }, i2));
 }
@@ -8323,11 +15310,11 @@ var _HeaderMenu = (0, import_element8.forwardRef)(function HeaderMenu({
   );
   const canInsert = (canInsertLeft || canInsertRight) && !!hiddenFields.length;
   const isRtl = (0, import_i18n8.isRTL)();
-  return /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(Menu2, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)(Menu2, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)(
       Menu2.TriggerButton,
       {
-        render: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+        render: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
           import_components7.Button,
           {
             size: "compact",
@@ -8338,16 +15325,16 @@ var _HeaderMenu = (0, import_element8.forwardRef)(function HeaderMenu({
         ),
         children: [
           header,
-          view.sort && isSorted && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("span", { "aria-hidden": "true", children: sortArrows[view.sort.direction] })
+          view.sort && isSorted && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { "aria-hidden": "true", children: sortArrows[view.sort.direction] })
         ]
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.Popover, { style: { minWidth: "240px" }, children: /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(WithMenuSeparators, { children: [
-      isSortable && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.Group, { children: SORTING_DIRECTIONS.map(
+    /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.Popover, { style: { minWidth: "240px" }, children: /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)(WithMenuSeparators, { children: [
+      isSortable && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.Group, { children: SORTING_DIRECTIONS.map(
         (direction) => {
           const isChecked = view.sort && isSorted && view.sort.direction === direction;
           const value = `${fieldId}-${direction}`;
-          return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
             Menu2.RadioItem,
             {
               name: "view-table-sorting",
@@ -8363,16 +15350,16 @@ var _HeaderMenu = (0, import_element8.forwardRef)(function HeaderMenu({
                   showLevels: false
                 });
               },
-              children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.ItemLabel, { children: sortLabels[direction] })
+              children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.ItemLabel, { children: sortLabels[direction] })
             },
             value
           );
         }
       ) }),
-      canAddFilter && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.Group, { children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+      canAddFilter && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.Group, { children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
         Menu2.Item,
         {
-          prefix: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(import_components7.Icon, { icon: funnel_default }),
+          prefix: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(import_components7.Icon, { icon: funnel_default }),
           onClick: () => {
             setOpenedFilter(fieldId);
             setIsShowingFilter(true);
@@ -8389,14 +15376,14 @@ var _HeaderMenu = (0, import_element8.forwardRef)(function HeaderMenu({
               ]
             });
           },
-          children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.ItemLabel, { children: (0, import_i18n8.__)("Add filter") })
+          children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.ItemLabel, { children: (0, import_i18n8.__)("Add filter") })
         }
       ) }),
-      (canMove || isHidable || canInsert) && field && /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(Menu2.Group, { children: [
-        canMove && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+      (canMove || isHidable || canInsert) && field && /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)(Menu2.Group, { children: [
+        canMove && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
           Menu2.Item,
           {
-            prefix: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(import_components7.Icon, { icon: arrow_left_default }),
+            prefix: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(import_components7.Icon, { icon: arrow_left_default }),
             disabled: isRtl ? index >= visibleFieldIds.length - 1 : index < 1,
             onClick: () => {
               const targetIndex = isRtl ? index + 1 : index - 1;
@@ -8414,13 +15401,13 @@ var _HeaderMenu = (0, import_element8.forwardRef)(function HeaderMenu({
                 fields: newFields
               });
             },
-            children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.ItemLabel, { children: (0, import_i18n8.__)("Move left") })
+            children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.ItemLabel, { children: (0, import_i18n8.__)("Move left") })
           }
         ),
-        canMove && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+        canMove && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
           Menu2.Item,
           {
-            prefix: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(import_components7.Icon, { icon: arrow_right_default }),
+            prefix: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(import_components7.Icon, { icon: arrow_right_default }),
             disabled: isRtl ? index < 1 : index >= visibleFieldIds.length - 1,
             onClick: () => {
               const targetIndex = isRtl ? index - 1 : index + 1;
@@ -8438,14 +15425,14 @@ var _HeaderMenu = (0, import_element8.forwardRef)(function HeaderMenu({
                 fields: newFields
               });
             },
-            children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.ItemLabel, { children: (0, import_i18n8.__)("Move right") })
+            children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.ItemLabel, { children: (0, import_i18n8.__)("Move right") })
           }
         ),
-        canInsertLeft && !!hiddenFields.length && /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(Menu2, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.SubmenuTriggerItem, { children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.ItemLabel, { children: (0, import_i18n8.__)("Insert left") }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.Popover, { children: hiddenFields.map((hiddenField) => {
+        canInsertLeft && !!hiddenFields.length && /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)(Menu2, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.SubmenuTriggerItem, { children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.ItemLabel, { children: (0, import_i18n8.__)("Insert left") }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.Popover, { children: hiddenFields.map((hiddenField) => {
             const insertIndex = isRtl ? index + 1 : index;
-            return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+            return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
               Menu2.Item,
               {
                 onClick: () => {
@@ -8463,17 +15450,17 @@ var _HeaderMenu = (0, import_element8.forwardRef)(function HeaderMenu({
                     ]
                   });
                 },
-                children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.ItemLabel, { children: hiddenField.label })
+                children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.ItemLabel, { children: hiddenField.label })
               },
               hiddenField.id
             );
           }) })
         ] }),
-        canInsertRight && !!hiddenFields.length && /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(Menu2, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.SubmenuTriggerItem, { children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.ItemLabel, { children: (0, import_i18n8.__)("Insert right") }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.Popover, { children: hiddenFields.map((hiddenField) => {
+        canInsertRight && !!hiddenFields.length && /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)(Menu2, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.SubmenuTriggerItem, { children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.ItemLabel, { children: (0, import_i18n8.__)("Insert right") }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.Popover, { children: hiddenFields.map((hiddenField) => {
             const insertIndex = isRtl ? index : index + 1;
-            return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+            return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
               Menu2.Item,
               {
                 onClick: () => {
@@ -8491,16 +15478,16 @@ var _HeaderMenu = (0, import_element8.forwardRef)(function HeaderMenu({
                     ]
                   });
                 },
-                children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.ItemLabel, { children: hiddenField.label })
+                children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.ItemLabel, { children: hiddenField.label })
               },
               hiddenField.id
             );
           }) })
         ] }),
-        isHidable && field && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+        isHidable && field && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
           Menu2.Item,
           {
-            prefix: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(import_components7.Icon, { icon: unseen_default }),
+            prefix: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(import_components7.Icon, { icon: unseen_default }),
             onClick: () => {
               onHide(field);
               onChangeView({
@@ -8510,7 +15497,7 @@ var _HeaderMenu = (0, import_element8.forwardRef)(function HeaderMenu({
                 )
               });
             },
-            children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu2.ItemLabel, { children: (0, import_i18n8.__)("Hide column") })
+            children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(Menu2.ItemLabel, { children: (0, import_i18n8.__)("Hide column") })
           }
         )
       ] })
@@ -8522,7 +15509,7 @@ var column_header_menu_default = ColumnHeaderMenu;
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/item-click-wrapper.mjs
 var import_element9 = __toESM(require_element(), 1);
-var import_jsx_runtime52 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime54 = __toESM(require_jsx_runtime(), 1);
 function getClickableItemProps({
   item,
   isItemClickable,
@@ -8558,7 +15545,7 @@ function ItemClickWrapper({
   ...extraProps
 }) {
   if (!isItemClickable(item)) {
-    return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("div", { className, ...extraProps, children });
+    return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("div", { className, ...extraProps, children });
   }
   if (renderItemLink) {
     const renderedElement = renderItemLink({
@@ -8590,11 +15577,11 @@ function ItemClickWrapper({
     onClickItem,
     className
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("div", { ...clickProps, ...extraProps, children });
+  return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("div", { ...clickProps, ...extraProps, children });
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/column-primary.mjs
-var import_jsx_runtime53 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime55 = __toESM(require_jsx_runtime(), 1);
 function ColumnPrimary({
   item,
   level,
@@ -8605,8 +15592,8 @@ function ColumnPrimary({
   renderItemLink,
   isItemClickable
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)(Stack, { direction: "row", gap: "sm", align: "flex-start", justify: "flex-start", children: [
-    mediaField && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)(Stack, { direction: "row", gap: "sm", align: "flex-start", justify: "flex-start", children: [
+    mediaField && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
       ItemClickWrapper,
       {
         item,
@@ -8615,7 +15602,7 @@ function ColumnPrimary({
         renderItemLink,
         className: "dataviews-view-table__cell-content-wrapper dataviews-column-primary__media",
         "aria-label": isItemClickable(item) && (!!onClickItem || !!renderItemLink) && !!titleField ? titleField.getValue?.({ item }) : void 0,
-        children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
+        children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
           mediaField.render,
           {
             item,
@@ -8625,14 +15612,14 @@ function ColumnPrimary({
         )
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)(
+    /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)(
       Stack,
       {
         direction: "column",
         align: "flex-start",
         className: "dataviews-view-table__primary-column-content",
         children: [
-          titleField && /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)(
+          titleField && /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)(
             ItemClickWrapper,
             {
               item,
@@ -8641,15 +15628,15 @@ function ColumnPrimary({
               renderItemLink,
               className: "dataviews-view-table__cell-content-wrapper dataviews-title-field",
               children: [
-                level !== void 0 && level > 0 && /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("span", { className: "dataviews-view-table__level", children: [
+                level !== void 0 && level > 0 && /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("span", { className: "dataviews-view-table__level", children: [
                   Array(level).fill("\u2014").join(" "),
                   "\xA0"
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(titleField.render, { item, field: titleField })
+                /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(titleField.render, { item, field: titleField })
               ]
             }
           ),
-          descriptionField && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
+          descriptionField && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
             descriptionField.render,
             {
               item,
@@ -8726,15 +15713,15 @@ function getDataByGroup(data, groupByField) {
 var import_components8 = __toESM(require_components(), 1);
 var import_i18n10 = __toESM(require_i18n(), 1);
 var import_element11 = __toESM(require_element(), 1);
-var import_jsx_runtime54 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime56 = __toESM(require_jsx_runtime(), 1);
 function FieldItem({
   field,
   isVisible: isVisible2,
   onToggleVisibility
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(import_components8.__experimentalItem, { onClick: field.enableHiding ? onToggleVisibility : void 0, children: /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)(Stack, { direction: "row", gap: "xs", justify: "flex-start", align: "center", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("div", { style: { height: 24, width: 24 }, children: isVisible2 && /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(import_components8.Icon, { icon: check_default }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("span", { className: "dataviews-view-config__label", children: field.label })
+  return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_components8.__experimentalItem, { onClick: field.enableHiding ? onToggleVisibility : void 0, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(Stack, { direction: "row", gap: "xs", justify: "flex-start", align: "center", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { style: { height: 24, width: 24 }, children: isVisible2 && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_components8.Icon, { icon: check_default }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("span", { className: "dataviews-view-config__label", children: field.label })
   ] }) });
 }
 function isDefined(item) {
@@ -8779,18 +15766,18 @@ function PropertiesSection({
   );
   const totalVisibleFields = visibleLockedFields.length + visibleRegularFieldsCount;
   const isSingleVisibleLockedField = totalVisibleFields === 1 && visibleLockedFields.length === 1;
-  return /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)(Stack, { direction: "column", className: "dataviews-field-control", children: [
-    showLabel && /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(import_components8.BaseControl.VisualLabel, { children: (0, import_i18n10.__)("Properties") }),
-    /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(Stack, { direction: "column", className: "dataviews-field-control", children: [
+    showLabel && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_components8.BaseControl.VisualLabel, { children: (0, import_i18n10.__)("Properties") }),
+    /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
       Stack,
       {
         direction: "column",
         className: "dataviews-view-config__properties",
-        children: /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)(import_components8.__experimentalItemGroup, { isBordered: true, isSeparated: true, size: "medium", children: [
+        children: /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(import_components8.__experimentalItemGroup, { isBordered: true, isSeparated: true, size: "medium", children: [
           lockedFields.map(({ field, isVisibleFlag }) => {
             const isVisible2 = view[isVisibleFlag] ?? true;
             const fieldToRender = isSingleVisibleLockedField && isVisible2 ? { ...field, enableHiding: false } : field;
-            return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
+            return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
               FieldItem,
               {
                 field: fieldToRender,
@@ -8808,7 +15795,7 @@ function PropertiesSection({
           regularFields.map((field) => {
             const isVisible2 = visibleFieldIds.includes(field.id);
             const fieldToRender = totalVisibleFields === 1 && isVisible2 ? { ...field, enableHiding: false } : field;
-            return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
+            return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
               FieldItem,
               {
                 field: fieldToRender,
@@ -8832,7 +15819,7 @@ function PropertiesSection({
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/index.mjs
-var import_jsx_runtime55 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime57 = __toESM(require_jsx_runtime(), 1);
 function TableColumnField({
   item,
   fields,
@@ -8847,7 +15834,7 @@ function TableColumnField({
     "dataviews-view-table__cell-align-end": align === "end",
     "dataviews-view-table__cell-align-center": align === "center"
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("div", { className, children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(field.render, { item, field }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("div", { className, children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(field.render, { item, field }) });
 }
 function TableRow({
   hasBulkActions,
@@ -8881,7 +15868,7 @@ function TableRow({
   const isTouchDeviceRef = (0, import_element12.useRef)(false);
   const columns = view.fields ?? [];
   const hasPrimaryColumn = titleField && showTitle || mediaField && showMedia || descriptionField && showDescription;
-  return /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)(
     "tr",
     {
       className: clsx_default("dataviews-view-table__row", {
@@ -8912,7 +15899,7 @@ function TableRow({
         }
       },
       children: [
-        hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("td", { className: "dataviews-view-table__checkbox-column", children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("div", { className: "dataviews-view-table__cell-content-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+        hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("td", { className: "dataviews-view-table__checkbox-column", children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("div", { className: "dataviews-view-table__cell-content-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
           DataViewsSelectionCheckbox,
           {
             item,
@@ -8923,7 +15910,7 @@ function TableRow({
             disabled: !hasPossibleBulkAction
           }
         ) }) }),
-        hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+        hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
           column_primary_default,
           {
             item,
@@ -8938,7 +15925,7 @@ function TableRow({
         ) }),
         columns.map((column) => {
           const { width, maxWidth, minWidth, align } = view.layout?.styles?.[column] ?? {};
-          return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
             "td",
             {
               style: {
@@ -8946,7 +15933,7 @@ function TableRow({
                 maxWidth,
                 minWidth
               },
-              children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+              children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
                 TableColumnField,
                 {
                   fields,
@@ -8965,7 +15952,7 @@ function TableRow({
         // itself (to toggle row selection) without erroneously
         // intercepting click events from ItemActions.
         /* eslint-disable jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/click-events-have-key-events */
-        /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
           "td",
           {
             className: clsx_default("dataviews-view-table__actions-column", {
@@ -8973,7 +15960,7 @@ function TableRow({
               "dataviews-view-table__actions-column--stuck": isActionsColumnSticky
             }),
             onClick: (e2) => e2.stopPropagation(),
-            children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(ItemActions, { item, actions })
+            children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(ItemActions, { item, actions })
           }
         )
       ]
@@ -9068,8 +16055,8 @@ function ViewTable({
   };
   const isInfiniteScroll = view.infiniteScrollEnabled && !dataByGroup;
   const isRtl = (0, import_i18n11.isRTL)();
-  return /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)(import_jsx_runtime55.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)(import_jsx_runtime57.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)(
       "table",
       {
         className: clsx_default("dataviews-view-table", className, {
@@ -9082,10 +16069,10 @@ function ViewTable({
         "aria-describedby": tableNoticeId,
         role: isInfiniteScroll ? "feed" : void 0,
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("colgroup", { children: [
-            hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("col", { className: "dataviews-view-table__col-checkbox" }),
-            hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("col", { className: "dataviews-view-table__col-first-data" }),
-            columns.map((column, index) => /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("colgroup", { children: [
+            hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("col", { className: "dataviews-view-table__col-checkbox" }),
+            hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("col", { className: "dataviews-view-table__col-first-data" }),
+            columns.map((column, index) => /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
               "col",
               {
                 className: clsx_default(
@@ -9097,25 +16084,25 @@ function ViewTable({
               },
               `col-${column}`
             )),
-            !!actions?.length && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("col", { className: "dataviews-view-table__col-actions" })
+            !!actions?.length && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("col", { className: "dataviews-view-table__col-actions" })
           ] }),
-          contextMenuAnchor && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+          contextMenuAnchor && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
             import_components9.Popover,
             {
               anchor: contextMenuAnchor,
               onClose: () => setContextMenuAnchor(null),
               placement: "bottom-start",
-              children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(PropertiesSection, { showLabel: false })
+              children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(PropertiesSection, { showLabel: false })
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("thead", { onContextMenu: handleHeaderContextMenu, children: /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("tr", { className: "dataviews-view-table__row", children: [
-            hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("thead", { onContextMenu: handleHeaderContextMenu, children: /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("tr", { className: "dataviews-view-table__row", children: [
+            hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
               "th",
               {
                 className: "dataviews-view-table__checkbox-column",
                 scope: "col",
                 onContextMenu: handleHeaderContextMenu,
-                children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+                children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
                   BulkSelectionCheckbox,
                   {
                     selection,
@@ -9127,7 +16114,7 @@ function ViewTable({
                 )
               }
             ),
-            hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("th", { scope: "col", children: titleField && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+            hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("th", { scope: "col", children: titleField && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
               column_header_menu_default,
               {
                 ref: headerMenuRef(
@@ -9148,7 +16135,7 @@ function ViewTable({
             columns.map((column, index) => {
               const { width, maxWidth, minWidth, align } = view.layout?.styles?.[column] ?? {};
               const canInsertOrMove = view.layout?.enableMoving ?? true;
-              return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+              return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
                 "th",
                 {
                   style: {
@@ -9159,7 +16146,7 @@ function ViewTable({
                   },
                   "aria-sort": view.sort?.direction && view.sort?.field === column ? sortValues[view.sort.direction] : void 0,
                   scope: "col",
-                  children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+                  children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
                     column_header_menu_default,
                     {
                       ref: headerMenuRef(column, index),
@@ -9178,7 +16165,7 @@ function ViewTable({
                 column
               );
             }),
-            !!actions?.length && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+            !!actions?.length && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
               "th",
               {
                 className: clsx_default(
@@ -9188,13 +16175,13 @@ function ViewTable({
                     "dataviews-view-table__actions-column--stuck": !isHorizontalScrollEnd
                   }
                 ),
-                children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("span", { className: "dataviews-view-table-header", children: (0, import_i18n11.__)("Actions") })
+                children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("span", { className: "dataviews-view-table-header", children: (0, import_i18n11.__)("Actions") })
               }
             )
           ] }) }),
           hasData && groupField && dataByGroup ? Array.from(dataByGroup.entries()).map(
-            ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)("tbody", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("tr", { className: "dataviews-view-table__group-header-row", children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+            ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)("tbody", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("tr", { className: "dataviews-view-table__group-header-row", children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
                 "td",
                 {
                   colSpan: columns.length + (hasPrimaryColumn ? 1 : 0) + (hasBulkActions ? 1 : 0) + (actions?.length ? 1 : 0),
@@ -9207,7 +16194,7 @@ function ViewTable({
                   )
                 }
               ) }),
-              groupItems.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+              groupItems.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
                 TableRow,
                 {
                   item,
@@ -9231,7 +16218,7 @@ function ViewTable({
                 getItemId2(item)
               ))
             ] }, `group-${groupName}`)
-          ) : /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("tbody", { children: hasData && data.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+          ) : /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("tbody", { children: hasData && data.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
             TableRow,
             {
               item,
@@ -9258,7 +16245,7 @@ function ViewTable({
         ]
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)(
+    /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)(
       "div",
       {
         className: clsx_default({
@@ -9267,8 +16254,8 @@ function ViewTable({
         }),
         id: tableNoticeId,
         children: [
-          !hasData && (isLoading ? /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(import_components9.Spinner, {}) }) : empty),
-          hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(import_components9.Spinner, {}) })
+          !hasData && (isLoading ? /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(import_components9.Spinner, {}) }) : empty),
+          hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(import_components9.Spinner, {}) })
         ]
       }
     )
@@ -9291,7 +16278,7 @@ var import_element14 = __toESM(require_element(), 1);
 var import_components10 = __toESM(require_components(), 1);
 var import_i18n12 = __toESM(require_i18n(), 1);
 var import_element13 = __toESM(require_element(), 1);
-var import_jsx_runtime56 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime58 = __toESM(require_jsx_runtime(), 1);
 var imageSizes = [
   {
     value: 120,
@@ -9337,7 +16324,7 @@ function useGridColumns() {
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/grid/composite-grid.mjs
-var import_jsx_runtime57 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime59 = __toESM(require_jsx_runtime(), 1);
 var { Badge: Badge2 } = unlock(import_components11.privateApis);
 function chunk(array, size) {
   const chunks = [];
@@ -9370,7 +16357,7 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
   const id = getItemId2(item);
   const instanceId = (0, import_compose4.useInstanceId)(GridItem2);
   const isSelected2 = selection.includes(id);
-  const renderedMediaField = mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+  const renderedMediaField = mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
     mediaField.render,
     {
       item,
@@ -9378,7 +16365,7 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
       config
     }
   ) : null;
-  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(titleField.render, { item, field: titleField }) : null;
+  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(titleField.render, { item, field: titleField }) : null;
   const shouldRenderMedia = showMedia && renderedMediaField;
   let mediaA11yProps;
   let titleA11yProps;
@@ -9396,7 +16383,7 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
       };
     }
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(
     Stack,
     {
       direction: "column",
@@ -9424,7 +16411,7 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
         }
       },
       children: [
-        shouldRenderMedia && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+        shouldRenderMedia && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
           ItemClickWrapper,
           {
             item,
@@ -9436,7 +16423,7 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
             children: renderedMediaField
           }
         ),
-        hasBulkActions && shouldRenderMedia && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+        hasBulkActions && shouldRenderMedia && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
           DataViewsSelectionCheckbox,
           {
             item,
@@ -9447,15 +16434,15 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
             disabled: !hasBulkAction
           }
         ),
-        !showTitle && shouldRenderMedia && !!actions?.length && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("div", { className: "dataviews-view-grid__media-actions", children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(ItemActions, { item, actions, isCompact: true }) }),
-        showTitle && /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)(
+        !showTitle && shouldRenderMedia && !!actions?.length && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", { className: "dataviews-view-grid__media-actions", children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(ItemActions, { item, actions, isCompact: true }) }),
+        showTitle && /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(
           Stack,
           {
             direction: "row",
             gap: "xs",
             className: "dataviews-view-grid__title-actions",
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
                 ItemClickWrapper,
                 {
                   item,
@@ -9467,7 +16454,7 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
                   children: renderedTitleField
                 }
               ),
-              !!actions?.length && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+              !!actions?.length && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
                 ItemActions,
                 {
                   item,
@@ -9478,15 +16465,15 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
             ]
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
-          showDescription && descriptionField?.render && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
+          showDescription && descriptionField?.render && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
             descriptionField.render,
             {
               item,
               field: descriptionField
             }
           ),
-          !!badgeFields?.length && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+          !!badgeFields?.length && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
             Stack,
             {
               direction: "row",
@@ -9496,11 +16483,11 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
               align: "top",
               justify: "flex-start",
               children: badgeFields.map((field) => {
-                return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+                return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
                   Badge2,
                   {
                     className: "dataviews-view-grid__field-value",
-                    children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+                    children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
                       field.render,
                       {
                         item,
@@ -9513,14 +16500,14 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
               })
             }
           ),
-          !!regularFields?.length && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+          !!regularFields?.length && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
             Stack,
             {
               direction: "column",
               className: "dataviews-view-grid__fields",
               gap: "2xs",
               children: regularFields.map((field) => {
-                return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+                return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
                   import_components11.Flex,
                   {
                     className: "dataviews-view-grid__field",
@@ -9529,14 +16516,14 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
                     expanded: true,
                     style: { height: "auto" },
                     direction: "row",
-                    children: /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)(import_jsx_runtime57.Fragment, { children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(import_components11.Tooltip, { text: field.label, children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(import_components11.FlexItem, { className: "dataviews-view-grid__field-name", children: field.header }) }),
-                      /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+                    children: /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(import_jsx_runtime59.Fragment, { children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(import_components11.Tooltip, { text: field.label, children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(import_components11.FlexItem, { className: "dataviews-view-grid__field-name", children: field.header }) }),
+                      /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
                         import_components11.FlexItem,
                         {
                           className: "dataviews-view-grid__field-value",
                           style: { maxHeight: "none" },
-                          children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+                          children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
                             field.render,
                             {
                               item,
@@ -9599,7 +16586,7 @@ function CompositeGrid({
   );
   const size = "900px";
   const totalRows = Math.ceil(data.length / gridColumns);
-  return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
     import_components11.Composite,
     {
       role: isInfiniteScroll ? "feed" : "grid",
@@ -9608,10 +16595,10 @@ function CompositeGrid({
       "aria-busy": isLoading,
       "aria-rowcount": isInfiniteScroll ? void 0 : totalRows,
       ref: resizeObserverRef,
-      children: chunk(data, gridColumns).map((row, i2) => /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+      children: chunk(data, gridColumns).map((row, i2) => /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
         import_components11.Composite.Row,
         {
-          render: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+          render: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
             "div",
             {
               role: "row",
@@ -9629,10 +16616,10 @@ function CompositeGrid({
           ),
           children: row.map((item, indexInRow) => {
             const index = i2 * gridColumns + indexInRow;
-            return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+            return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
               import_components11.Composite.Item,
               {
-                render: (props) => /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+                render: (props) => /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
                   GridItem,
                   {
                     ...props,
@@ -9671,7 +16658,7 @@ function CompositeGrid({
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/grid/index.mjs
-var import_jsx_runtime58 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime60 = __toESM(require_jsx_runtime(), 1);
 function ViewGrid({
   actions,
   data,
@@ -9704,23 +16691,23 @@ function ViewGrid({
     getItemId: getItemId2,
     actions
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(import_jsx_runtime58.Fragment, {
+  return /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)(import_jsx_runtime60.Fragment, {
     // Render multiple groups.
     children: [
-      hasData && groupField && dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(Stack, { direction: "column", gap: "md", children: Array.from(dataByGroup.entries()).map(
-        ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(
+      hasData && groupField && dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(Stack, { direction: "column", gap: "md", children: Array.from(dataByGroup.entries()).map(
+        ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)(
           Stack,
           {
             direction: "column",
             gap: "xs",
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("h3", { className: "dataviews-view-grid__group-header", children: view.groupBy?.showLabel === false ? groupName : (0, import_i18n14.sprintf)(
+              /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("h3", { className: "dataviews-view-grid__group-header", children: view.groupBy?.showLabel === false ? groupName : (0, import_i18n14.sprintf)(
                 // translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022".
                 (0, import_i18n14.__)("%1$s: %2$s"),
                 groupField.label,
                 groupName
               ) }),
-              /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
                 CompositeGrid,
                 {
                   ...gridProps,
@@ -9734,7 +16721,7 @@ function ViewGrid({
         )
       ) }),
       // Render a single grid with all data.
-      hasData && !dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
+      hasData && !dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
         CompositeGrid,
         {
           ...gridProps,
@@ -9743,17 +16730,17 @@ function ViewGrid({
         }
       ),
       // Render empty state.
-      !hasData && /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
+      !hasData && /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
         "div",
         {
           className: clsx_default({
             "dataviews-loading": isLoading,
             "dataviews-no-results": !isLoading
           }),
-          children: isLoading ? /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(import_components12.Spinner, {}) }) : empty
+          children: isLoading ? /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(import_components12.Spinner, {}) }) : empty
         }
       ),
-      hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(import_components12.Spinner, {}) })
+      hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(import_components12.Spinner, {}) })
     ]
   });
 }
@@ -9765,7 +16752,7 @@ var import_components13 = __toESM(require_components(), 1);
 var import_element15 = __toESM(require_element(), 1);
 var import_i18n15 = __toESM(require_i18n(), 1);
 var import_data3 = __toESM(require_data(), 1);
-var import_jsx_runtime59 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime61 = __toESM(require_jsx_runtime(), 1);
 var { Menu: Menu3 } = unlock(import_components13.privateApis);
 function generateItemWrapperCompositeId(idPrefix) {
   return `${idPrefix}-item-wrapper`;
@@ -9788,11 +16775,11 @@ function PrimaryActionGridCell({
     primaryAction.id
   );
   const label = typeof primaryAction.label === "string" ? primaryAction.label : primaryAction.label([item]);
-  return "RenderModal" in primaryAction ? /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", { role: "gridcell", children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+  return "RenderModal" in primaryAction ? /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { role: "gridcell", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
     import_components13.Composite.Item,
     {
       id: compositeItemId,
-      render: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+      render: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
         import_components13.Button,
         {
           disabled: !!primaryAction.disabled,
@@ -9802,7 +16789,7 @@ function PrimaryActionGridCell({
           onClick: () => setIsModalOpen(true)
         }
       ),
-      children: isModalOpen && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+      children: isModalOpen && /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
         ActionModal,
         {
           action: primaryAction,
@@ -9811,11 +16798,11 @@ function PrimaryActionGridCell({
         }
       )
     }
-  ) }, primaryAction.id) : /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", { role: "gridcell", children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+  ) }, primaryAction.id) : /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { role: "gridcell", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
     import_components13.Composite.Item,
     {
       id: compositeItemId,
-      render: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+      render: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
         import_components13.Button,
         {
           disabled: !!primaryAction.disabled,
@@ -9885,7 +16872,7 @@ function ListItem({
     };
   }, [actions, item]);
   const hasOnlyOnePrimaryAction = primaryAction && actions.length === 1;
-  const renderedMediaField = showMedia && mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", { className: "dataviews-view-list__media-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+  const renderedMediaField = showMedia && mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { className: "dataviews-view-list__media-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
     mediaField.render,
     {
       item,
@@ -9893,15 +16880,15 @@ function ListItem({
       config: { sizes: "52px" }
     }
   ) }) : null;
-  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(titleField.render, { item, field: titleField }) : null;
-  const usedActions = eligibleActions?.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(
+  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(titleField.render, { item, field: titleField }) : null;
+  const usedActions = eligibleActions?.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(
     Stack,
     {
       direction: "row",
       gap: "sm",
       className: "dataviews-view-list__item-actions",
       children: [
-        primaryAction && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+        primaryAction && /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
           PrimaryActionGridCell,
           {
             idPrefix,
@@ -9909,18 +16896,18 @@ function ListItem({
             item
           }
         ),
-        !hasOnlyOnePrimaryAction && /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)("div", { role: "gridcell", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(Menu3, { placement: "bottom-end", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+        !hasOnlyOnePrimaryAction && /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)("div", { role: "gridcell", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(Menu3, { placement: "bottom-end", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
               Menu3.TriggerButton,
               {
-                render: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+                render: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
                   import_components13.Composite.Item,
                   {
                     id: generateDropdownTriggerCompositeId(
                       idPrefix
                     ),
-                    render: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+                    render: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
                       import_components13.Button,
                       {
                         size: "small",
@@ -9935,7 +16922,7 @@ function ListItem({
                 )
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(Menu3.Popover, { children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(Menu3.Popover, { children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
               ActionsMenuGroup,
               {
                 actions: eligibleActions,
@@ -9945,7 +16932,7 @@ function ListItem({
               }
             ) })
           ] }),
-          !!activeModalAction && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+          !!activeModalAction && /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
             ActionModal,
             {
               action: activeModalAction,
@@ -9957,13 +16944,13 @@ function ListItem({
       ]
     }
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
     import_components13.Composite.Row,
     {
       ref: itemRef,
       render: (
         /* aria-posinset breaks Composite.Row if passed to it directly. */
-        /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
           "div",
           {
             "aria-posinset": posinset,
@@ -9978,13 +16965,13 @@ function ListItem({
       }),
       onMouseEnter: handleHover,
       onMouseLeave: handleHover,
-      children: /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(
         Stack,
         {
           direction: "row",
           className: "dataviews-view-list__item-wrapper",
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", { role: "gridcell", children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { role: "gridcell", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
               import_components13.Composite.Item,
               {
                 id: generateItemWrapperCompositeId(idPrefix),
@@ -9995,7 +16982,7 @@ function ListItem({
                 onClick: () => onSelect(item)
               }
             ) }),
-            /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(
+            /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(
               Stack,
               {
                 direction: "row",
@@ -10005,15 +16992,15 @@ function ListItem({
                 style: { flex: 1 },
                 children: [
                   renderedMediaField,
-                  /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(
+                  /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(
                     Stack,
                     {
                       direction: "column",
                       gap: "2xs",
                       className: "dataviews-view-list__field-wrapper",
                       children: [
-                        /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(Stack, { direction: "row", align: "center", children: [
-                          /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+                        /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(Stack, { direction: "row", align: "center", children: [
+                          /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
                             "div",
                             {
                               className: "dataviews-title-field",
@@ -10024,24 +17011,24 @@ function ListItem({
                           ),
                           usedActions
                         ] }),
-                        showDescription && descriptionField?.render && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", { className: "dataviews-view-list__field", children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+                        showDescription && descriptionField?.render && /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { className: "dataviews-view-list__field", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
                           descriptionField.render,
                           {
                             item,
                             field: descriptionField
                           }
                         ) }),
-                        /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+                        /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
                           "div",
                           {
                             className: "dataviews-view-list__fields",
                             id: descriptionId,
-                            children: otherFields.map((field) => /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(
+                            children: otherFields.map((field) => /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(
                               "div",
                               {
                                 className: "dataviews-view-list__field",
                                 children: [
-                                  /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+                                  /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
                                     import_components13.VisuallyHidden,
                                     {
                                       as: "span",
@@ -10049,7 +17036,7 @@ function ListItem({
                                       children: field.label
                                     }
                                   ),
-                                  /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("span", { className: "dataviews-view-list__field-value", children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+                                  /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("span", { className: "dataviews-view-list__field-value", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
                                     field.render,
                                     {
                                       item,
@@ -10176,43 +17163,43 @@ function ViewList(props) {
   );
   const hasData = data?.length;
   if (!hasData) {
-    return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
       "div",
       {
         className: clsx_default({
           "dataviews-loading": isLoading,
           "dataviews-no-results": !hasData && !isLoading
         }),
-        children: !hasData && (isLoading ? /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(import_components13.Spinner, {}) }) : empty)
+        children: !hasData && (isLoading ? /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(import_components13.Spinner, {}) }) : empty)
       }
     );
   }
   const groupField = view.groupBy?.field ? fields.find((field) => field.id === view.groupBy?.field) : null;
   const dataByGroup = groupField ? getDataByGroup(data, groupField) : null;
   if (hasData && groupField && dataByGroup) {
-    return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
       import_components13.Composite,
       {
         id: `${baseId}`,
-        render: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", {}),
+        render: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", {}),
         className: "dataviews-view-list__group",
         role: "grid",
         activeId: activeCompositeId,
         setActiveId: setActiveCompositeId,
-        children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+        children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
           Stack,
           {
             direction: "column",
             gap: "md",
             className: clsx_default("dataviews-view-list", className),
             children: Array.from(dataByGroup.entries()).map(
-              ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(
+              ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(
                 Stack,
                 {
                   direction: "column",
                   gap: "xs",
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("h3", { className: "dataviews-view-list__group-header", children: view.groupBy?.showLabel === false ? groupName : (0, import_i18n15.sprintf)(
+                    /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("h3", { className: "dataviews-view-list__group-header", children: view.groupBy?.showLabel === false ? groupName : (0, import_i18n15.sprintf)(
                       // translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022".
                       (0, import_i18n15.__)("%1$s: %2$s"),
                       groupField.label,
@@ -10220,7 +17207,7 @@ function ViewList(props) {
                     ) }),
                     groupItems.map((item) => {
                       const id = generateCompositeItemIdPrefix(item);
-                      return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+                      return /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
                         ListItem,
                         {
                           view,
@@ -10248,12 +17235,12 @@ function ViewList(props) {
       }
     );
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(import_jsx_runtime59.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(import_jsx_runtime61.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
       import_components13.Composite,
       {
         id: baseId,
-        render: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", {}),
+        render: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", {}),
         className: clsx_default("dataviews-view-list", className, {
           [`has-${view.layout?.density}-density`]: view.layout?.density && ["compact", "comfortable"].includes(
             view.layout.density
@@ -10264,7 +17251,7 @@ function ViewList(props) {
         setActiveId: setActiveCompositeId,
         children: data.map((item, index) => {
           const id = generateCompositeItemIdPrefix(item);
-          return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
             ListItem,
             {
               view,
@@ -10285,7 +17272,7 @@ function ViewList(props) {
         })
       }
     ),
-    hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(import_components13.Spinner, {}) })
+    hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(import_components13.Spinner, {}) })
   ] });
 }
 
@@ -10295,7 +17282,7 @@ var import_components15 = __toESM(require_components(), 1);
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/activity/activity-group.mjs
 var import_i18n16 = __toESM(require_i18n(), 1);
 var import_element16 = __toESM(require_element(), 1);
-var import_jsx_runtime60 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime62 = __toESM(require_jsx_runtime(), 1);
 function ActivityGroup({
   groupName,
   groupData,
@@ -10307,7 +17294,7 @@ function ActivityGroup({
     // translators: %s: The label of the field e.g. "Status".
     (0, import_i18n16.sprintf)((0, import_i18n16.__)("%s: <groupName />"), groupField.label).trim(),
     {
-      groupName: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
+      groupName: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(
         groupField.render,
         {
           item: groupData[0],
@@ -10315,14 +17302,14 @@ function ActivityGroup({
         }
       )
     }
-  ) : /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(groupField.render, { item: groupData[0], field: groupField });
-  return /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)(
+  ) : /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(groupField.render, { item: groupData[0], field: groupField });
+  return /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)(
     Stack,
     {
       direction: "column",
       className: "dataviews-view-activity__group",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("h3", { className: "dataviews-view-activity__group-header", children: groupHeader }),
+        /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("h3", { className: "dataviews-view-activity__group-header", children: groupHeader }),
         children
       ]
     },
@@ -10335,7 +17322,7 @@ var import_components14 = __toESM(require_components(), 1);
 var import_element17 = __toESM(require_element(), 1);
 var import_data4 = __toESM(require_data(), 1);
 var import_compose6 = __toESM(require_compose(), 1);
-var import_jsx_runtime61 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime63 = __toESM(require_jsx_runtime(), 1);
 function ActivityItem(props) {
   const {
     view,
@@ -10373,7 +17360,7 @@ function ActivityItem(props) {
   }, [actions, item]);
   const isMobileViewport = (0, import_compose6.useViewportMatch)("medium", "<");
   const density = view.layout?.density ?? "balanced";
-  const mediaContent = showMedia && density !== "compact" && mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
+  const mediaContent = showMedia && density !== "compact" && mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
     mediaField.render,
     {
       item,
@@ -10383,14 +17370,14 @@ function ActivityItem(props) {
       }
     }
   ) : null;
-  const renderedMediaField = /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { className: "dataviews-view-activity__item-type-icon", children: mediaContent || /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
+  const renderedMediaField = /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", { className: "dataviews-view-activity__item-type-icon", children: mediaContent || /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
     "span",
     {
       className: "dataviews-view-activity__item-bullet",
       "aria-hidden": "true"
     }
   ) });
-  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(titleField.render, { item, field: titleField }) : null;
+  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(titleField.render, { item, field: titleField }) : null;
   const verticalGap = (0, import_element17.useMemo)(() => {
     switch (density) {
       case "comfortable":
@@ -10399,7 +17386,7 @@ function ActivityItem(props) {
         return "xs";
     }
   }, [density]);
-  return /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
     "div",
     {
       ref: itemRef,
@@ -10412,8 +17399,8 @@ function ActivityItem(props) {
         density === "balanced" && "is-balanced",
         density === "comfortable" && "is-comfortable"
       ),
-      children: /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(Stack, { direction: "row", gap: "md", justify: "start", align: "flex-start", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)(Stack, { direction: "row", gap: "md", justify: "start", align: "flex-start", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
           Stack,
           {
             direction: "column",
@@ -10423,7 +17410,7 @@ function ActivityItem(props) {
             children: renderedMediaField
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)(
           Stack,
           {
             direction: "column",
@@ -10431,7 +17418,7 @@ function ActivityItem(props) {
             align: "flex-start",
             className: "dataviews-view-activity__item-content",
             children: [
-              renderedTitleField && /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
+              renderedTitleField && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
                 ItemClickWrapper,
                 {
                   item,
@@ -10442,19 +17429,19 @@ function ActivityItem(props) {
                   children: renderedTitleField
                 }
               ),
-              showDescription && descriptionField && /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { className: "dataviews-view-activity__item-description", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
+              showDescription && descriptionField && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", { className: "dataviews-view-activity__item-description", children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
                 descriptionField.render,
                 {
                   item,
                   field: descriptionField
                 }
               ) }),
-              /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { className: "dataviews-view-activity__item-fields", children: otherFields.map((field) => /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(
+              /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", { className: "dataviews-view-activity__item-fields", children: otherFields.map((field) => /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)(
                 "div",
                 {
                   className: "dataviews-view-activity__item-field",
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
+                    /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
                       import_components14.VisuallyHidden,
                       {
                         as: "span",
@@ -10462,7 +17449,7 @@ function ActivityItem(props) {
                         children: field.label
                       }
                     ),
-                    /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("span", { className: "dataviews-view-activity__item-field-value", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
+                    /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("span", { className: "dataviews-view-activity__item-field-value", children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
                       field.render,
                       {
                         item,
@@ -10473,7 +17460,7 @@ function ActivityItem(props) {
                 },
                 field.id
               )) }),
-              !!primaryActions?.length && /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
+              !!primaryActions?.length && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
                 PrimaryActions,
                 {
                   item,
@@ -10488,7 +17475,7 @@ function ActivityItem(props) {
         (primaryActions.length < eligibleActions.length || // Since we hide primary actions on mobile, we need to show the menu
         // there if there are any actions at all.
         isMobileViewport && // At the same time, only show the menu if there are actions to show.
-        eligibleActions.length > 0) && /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { className: "dataviews-view-activity__item-actions", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
+        eligibleActions.length > 0) && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", { className: "dataviews-view-activity__item-actions", children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
           ItemActions,
           {
             item,
@@ -10533,19 +17520,19 @@ function ActivityItems(props) {
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/activity/index.mjs
-var import_jsx_runtime62 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime64 = __toESM(require_jsx_runtime(), 1);
 function ViewActivity(props) {
   const { empty, data, fields, isLoading, view, className } = props;
   const hasData = data?.length;
   if (!hasData) {
-    return /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
       "div",
       {
         className: clsx_default({
           "dataviews-loading": isLoading,
           "dataviews-no-results": !hasData && !isLoading
         }),
-        children: !hasData && (isLoading ? /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(import_components15.Spinner, {}) }) : empty)
+        children: !hasData && (isLoading ? /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(import_components15.Spinner, {}) }) : empty)
       }
     );
   }
@@ -10554,15 +17541,15 @@ function ViewActivity(props) {
   const dataByGroup = groupField ? getDataByGroup(data, groupField) : null;
   const groupedEntries = dataByGroup ? Array.from(dataByGroup.entries()) : [];
   if (hasData && groupField && dataByGroup) {
-    return /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(Stack, { direction: "column", gap: "xs", className: wrapperClassName, children: groupedEntries.map(
-      ([groupName, groupData]) => /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(Stack, { direction: "column", gap: "xs", className: wrapperClassName, children: groupedEntries.map(
+      ([groupName, groupData]) => /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
         ActivityGroup,
         {
           groupName,
           groupData,
           groupField,
           showLabel: view.groupBy?.showLabel !== false,
-          children: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(
+          children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
             ActivityItems,
             {
               ...props,
@@ -10574,16 +17561,16 @@ function ViewActivity(props) {
       )
     ) });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)(import_jsx_runtime62.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(import_jsx_runtime64.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
       "div",
       {
         className: wrapperClassName,
         role: view.infiniteScrollEnabled ? "feed" : void 0,
-        children: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(ActivityItems, { ...props })
+        children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(ActivityItems, { ...props })
       }
     ),
-    hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(import_components15.Spinner, {}) })
+    hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(import_components15.Spinner, {}) })
   ] });
 }
 
@@ -10603,7 +17590,7 @@ var import_i18n18 = __toESM(require_i18n(), 1);
 var import_components16 = __toESM(require_components(), 1);
 var import_element18 = __toESM(require_element(), 1);
 var import_i18n17 = __toESM(require_i18n(), 1);
-var import_jsx_runtime63 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime65 = __toESM(require_jsx_runtime(), 1);
 function DataViewsPagination() {
   const {
     view,
@@ -10629,7 +17616,7 @@ function DataViewsPagination() {
       };
     }
   );
-  return !!totalItems && totalPages !== 1 && /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)(
+  return !!totalItems && totalPages !== 1 && /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(
     Stack,
     {
       direction: "row",
@@ -10638,7 +17625,7 @@ function DataViewsPagination() {
       align: "center",
       gap: "lg",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
           Stack,
           {
             direction: "row",
@@ -10657,8 +17644,8 @@ function DataViewsPagination() {
                 totalPages
               ),
               {
-                div: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", { "aria-hidden": true }),
-                CurrentPage: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+                div: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { "aria-hidden": true }),
+                CurrentPage: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
                   import_components16.SelectControl,
                   {
                     "aria-label": (0, import_i18n17.__)("Current page"),
@@ -10678,8 +17665,8 @@ function DataViewsPagination() {
             )
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)(Stack, { direction: "row", gap: "2xs", align: "center", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(Stack, { direction: "row", gap: "2xs", align: "center", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
             import_components16.Button,
             {
               onClick: () => onChangeView({
@@ -10695,7 +17682,7 @@ function DataViewsPagination() {
               tooltipPosition: "top"
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
             import_components16.Button,
             {
               onClick: () => onChangeView({ ...view, page: currentPage + 1 }),
@@ -10716,7 +17703,7 @@ function DataViewsPagination() {
 var dataviews_pagination_default = (0, import_element18.memo)(DataViewsPagination);
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-picker-footer/index.mjs
-var import_jsx_runtime64 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime66 = __toESM(require_jsx_runtime(), 1);
 function useIsMultiselectPicker(actions) {
   return (0, import_element19.useMemo)(() => {
     return actions?.every((action) => action.supportsBulk);
@@ -10725,9 +17712,9 @@ function useIsMultiselectPicker(actions) {
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/grid-items.mjs
 var import_element20 = __toESM(require_element(), 1);
-var import_jsx_runtime65 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime67 = __toESM(require_jsx_runtime(), 1);
 var GridItems = (0, import_element20.forwardRef)(({ className, previewSize, ...props }, ref) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
     "div",
     {
       ref,
@@ -10741,7 +17728,7 @@ var GridItems = (0, import_element20.forwardRef)(({ className, previewSize, ...p
 });
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/picker-grid/index.mjs
-var import_jsx_runtime66 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime68 = __toESM(require_jsx_runtime(), 1);
 var { Badge: Badge3 } = unlock(import_components18.privateApis);
 function GridItem3({
   view,
@@ -10762,7 +17749,7 @@ function GridItem3({
   const { showTitle = true, showMedia = true, showDescription = true } = view;
   const id = getItemId2(item);
   const isSelected2 = selection.includes(id);
-  const renderedMediaField = mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+  const renderedMediaField = mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
     mediaField.render,
     {
       item,
@@ -10770,12 +17757,12 @@ function GridItem3({
       config
     }
   ) : null;
-  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(titleField.render, { item, field: titleField }) : null;
-  return /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)(
+  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(titleField.render, { item, field: titleField }) : null;
+  return /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(
     import_components18.Composite.Item,
     {
       "aria-label": titleField ? titleField.getValue({ item }) || (0, import_i18n19.__)("(no title)") : void 0,
-      render: ({ children, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(Stack, { direction: "column", children, ...props }),
+      render: ({ children, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(Stack, { direction: "column", children, ...props }),
       role: "option",
       "aria-posinset": posinset,
       "aria-setsize": setsize,
@@ -10794,8 +17781,8 @@ function GridItem3({
         }
       },
       children: [
-        showMedia && renderedMediaField && /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("div", { className: "dataviews-view-picker-grid__media", children: renderedMediaField }),
-        showMedia && renderedMediaField && /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+        showMedia && renderedMediaField && /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("div", { className: "dataviews-view-picker-grid__media", children: renderedMediaField }),
+        showMedia && renderedMediaField && /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
           DataViewsSelectionCheckbox,
           {
             item,
@@ -10808,24 +17795,24 @@ function GridItem3({
             tabIndex: -1
           }
         ),
-        showTitle && /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+        showTitle && /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
           Stack,
           {
             direction: "row",
             justify: "space-between",
             className: "dataviews-view-picker-grid__title-actions",
-            children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("div", { className: "dataviews-view-picker-grid__title-field dataviews-title-field", children: renderedTitleField })
+            children: /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("div", { className: "dataviews-view-picker-grid__title-field dataviews-title-field", children: renderedTitleField })
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
-          showDescription && descriptionField?.render && /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
+          showDescription && descriptionField?.render && /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
             descriptionField.render,
             {
               item,
               field: descriptionField
             }
           ),
-          !!badgeFields?.length && /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+          !!badgeFields?.length && /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
             Stack,
             {
               direction: "row",
@@ -10835,11 +17822,11 @@ function GridItem3({
               align: "top",
               justify: "flex-start",
               children: badgeFields.map((field) => {
-                return /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+                return /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                   Badge3,
                   {
                     className: "dataviews-view-picker-grid__field-value",
-                    children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+                    children: /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                       field.render,
                       {
                         item,
@@ -10852,14 +17839,14 @@ function GridItem3({
               })
             }
           ),
-          !!regularFields?.length && /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+          !!regularFields?.length && /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
             Stack,
             {
               direction: "column",
               className: "dataviews-view-picker-grid__fields",
               gap: "2xs",
               children: regularFields.map((field) => {
-                return /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+                return /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                   import_components18.Flex,
                   {
                     className: "dataviews-view-picker-grid__field",
@@ -10868,14 +17855,14 @@ function GridItem3({
                     expanded: true,
                     style: { height: "auto" },
                     direction: "row",
-                    children: /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)(import_jsx_runtime66.Fragment, { children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(import_components18.FlexItem, { className: "dataviews-view-picker-grid__field-name", children: field.header }),
-                      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+                    children: /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(import_jsx_runtime68.Fragment, { children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(import_components18.FlexItem, { className: "dataviews-view-picker-grid__field-name", children: field.header }),
+                      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                         import_components18.FlexItem,
                         {
                           className: "dataviews-view-picker-grid__field-value",
                           style: { maxHeight: "none" },
-                          children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+                          children: /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                             field.render,
                             {
                               item,
@@ -10907,7 +17894,7 @@ function GridGroup({
     GridGroup,
     "dataviews-view-picker-grid-group__header"
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(
     Stack,
     {
       direction: "column",
@@ -10915,7 +17902,7 @@ function GridGroup({
       role: "group",
       "aria-labelledby": headerId,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
           "h3",
           {
             className: "dataviews-view-picker-grid-group__header",
@@ -10979,10 +17966,10 @@ function ViewPickerGrid({
   const currentPage = view?.page ?? 1;
   const perPage = view?.perPage ?? 0;
   const setSize = isInfiniteScroll ? paginationInfo?.totalItems : void 0;
-  return /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)(import_jsx_runtime66.Fragment, {
+  return /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(import_jsx_runtime68.Fragment, {
     // Render multiple groups.
     children: [
-      hasData && groupField && dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+      hasData && groupField && dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
         import_components18.Composite,
         {
           virtualFocus: true,
@@ -10994,7 +17981,7 @@ function ViewPickerGrid({
             className
           ),
           "aria-label": itemListLabel,
-          render: ({ children, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+          render: ({ children, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
             Stack,
             {
               direction: "column",
@@ -11004,13 +17991,13 @@ function ViewPickerGrid({
             }
           ),
           children: Array.from(dataByGroup.entries()).map(
-            ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+            ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
               GridGroup,
               {
                 groupName,
                 groupField,
                 showLabel: view.groupBy?.showLabel !== false,
-                children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+                children: /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                   GridItems,
                   {
                     previewSize: usedPreviewSize,
@@ -11021,7 +18008,7 @@ function ViewPickerGrid({
                     ref: resizeObserverRef,
                     children: groupItems.map((item) => {
                       const posInSet = (currentPage - 1) * perPage + data.indexOf(item) + 1;
-                      return /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+                      return /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
                         GridItem3,
                         {
                           view,
@@ -11053,10 +18040,10 @@ function ViewPickerGrid({
         }
       ),
       // Render a single grid with all data.
-      hasData && !dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+      hasData && !dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
         import_components18.Composite,
         {
-          render: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+          render: /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
             GridItems,
             {
               className: clsx_default(
@@ -11078,7 +18065,7 @@ function ViewPickerGrid({
             if (!isInfiniteScroll) {
               posinset = (currentPage - 1) * perPage + index + 1;
             }
-            return /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+            return /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
               GridItem3,
               {
                 view,
@@ -11104,17 +18091,17 @@ function ViewPickerGrid({
         }
       ),
       // Render empty state.
-      !hasData && /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+      !hasData && /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
         "div",
         {
           className: clsx_default({
             "dataviews-loading": isLoading,
             "dataviews-no-results": !isLoading
           }),
-          children: isLoading ? /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(import_components18.Spinner, {}) }) : empty
+          children: isLoading ? /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(import_components18.Spinner, {}) }) : empty
         }
       ),
-      hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(import_components18.Spinner, {}) })
+      hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(import_components18.Spinner, {}) })
     ]
   });
 }
@@ -11124,7 +18111,7 @@ var picker_grid_default = ViewPickerGrid;
 var import_i18n20 = __toESM(require_i18n(), 1);
 var import_components19 = __toESM(require_components(), 1);
 var import_element22 = __toESM(require_element(), 1);
-var import_jsx_runtime67 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime69 = __toESM(require_jsx_runtime(), 1);
 function TableColumnField2({
   item,
   fields,
@@ -11139,7 +18126,7 @@ function TableColumnField2({
     "dataviews-view-table__cell-align-end": align === "end",
     "dataviews-view-table__cell-align-center": align === "center"
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("div", { className, children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(field.render, { item, field }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { className, children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(field.render, { item, field }) });
 }
 function TableRow2({
   item,
@@ -11172,10 +18159,10 @@ function TableRow2({
   };
   const columns = view.fields ?? [];
   const hasPrimaryColumn = titleField && showTitle || mediaField && showMedia || descriptionField && showDescription;
-  return /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(
     import_components19.Composite.Item,
     {
-      render: ({ children, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+      render: ({ children, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
         "tr",
         {
           className: clsx_default("dataviews-view-table__row", {
@@ -11203,12 +18190,12 @@ function TableRow2({
         }
       },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
           "td",
           {
             className: "dataviews-view-table__checkbox-column",
             role: "presentation",
-            children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("div", { className: "dataviews-view-table__cell-content-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+            children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { className: "dataviews-view-table__cell-content-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
               DataViewsSelectionCheckbox,
               {
                 item,
@@ -11223,7 +18210,7 @@ function TableRow2({
             ) })
           }
         ),
-        hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("td", { role: "presentation", children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+        hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("td", { role: "presentation", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
           column_primary_default,
           {
             item,
@@ -11235,7 +18222,7 @@ function TableRow2({
         ) }),
         columns.map((column) => {
           const { width, maxWidth, minWidth, align } = view.layout?.styles?.[column] ?? {};
-          return /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
             "td",
             {
               style: {
@@ -11244,7 +18231,7 @@ function TableRow2({
                 minWidth
               },
               role: "presentation",
-              children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+              children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
                 TableColumnField2,
                 {
                   fields,
@@ -11319,8 +18306,8 @@ function ViewPickerTable({
     }
   };
   const isInfiniteScroll = view.infiniteScrollEnabled && !dataByGroup;
-  return /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)(import_jsx_runtime67.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(import_jsx_runtime69.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(
       "table",
       {
         className: clsx_default(
@@ -11337,13 +18324,13 @@ function ViewPickerTable({
         "aria-describedby": tableNoticeId,
         role: isInfiniteScroll ? "feed" : "listbox",
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("thead", { role: "presentation", children: /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)(
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("thead", { role: "presentation", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(
             "tr",
             {
               className: "dataviews-view-table__row",
               role: "presentation",
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("th", { className: "dataviews-view-table__checkbox-column", children: isMultiselect && /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+                /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("th", { className: "dataviews-view-table__checkbox-column", children: isMultiselect && /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
                   BulkSelectionCheckbox,
                   {
                     selection,
@@ -11353,7 +18340,7 @@ function ViewPickerTable({
                     getItemId: getItemId2
                   }
                 ) }),
-                hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("th", { children: titleField && /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+                hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("th", { children: titleField && /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
                   column_header_menu_default,
                   {
                     ref: headerMenuRef(
@@ -11371,7 +18358,7 @@ function ViewPickerTable({
                 ) }),
                 columns.map((column, index) => {
                   const { width, maxWidth, minWidth, align } = view.layout?.styles?.[column] ?? {};
-                  return /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+                  return /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
                     "th",
                     {
                       style: {
@@ -11382,7 +18369,7 @@ function ViewPickerTable({
                       },
                       "aria-sort": view.sort?.direction && view.sort?.field === column ? sortValues[view.sort.direction] : void 0,
                       scope: "col",
-                      children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+                      children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
                         column_header_menu_default,
                         {
                           ref: headerMenuRef(column, index),
@@ -11403,19 +18390,19 @@ function ViewPickerTable({
             }
           ) }),
           hasData && groupField && dataByGroup ? Array.from(dataByGroup.entries()).map(
-            ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)(
+            ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(
               import_components19.Composite,
               {
                 virtualFocus: true,
                 orientation: "vertical",
-                render: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("tbody", { role: "group" }),
+                render: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("tbody", { role: "group" }),
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
                     "tr",
                     {
                       className: "dataviews-view-table__group-header-row",
                       role: "presentation",
-                      children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+                      children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
                         "td",
                         {
                           colSpan: columns.length + (hasPrimaryColumn ? 1 : 0) + 1,
@@ -11431,7 +18418,7 @@ function ViewPickerTable({
                       )
                     }
                   ),
-                  groupItems.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+                  groupItems.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
                     TableRow2,
                     {
                       item,
@@ -11452,13 +18439,13 @@ function ViewPickerTable({
               },
               `group-${groupName}`
             )
-          ) : /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+          ) : /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
             import_components19.Composite,
             {
-              render: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("tbody", { role: "presentation" }),
+              render: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("tbody", { role: "presentation" }),
               virtualFocus: true,
               orientation: "vertical",
-              children: hasData && data.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+              children: hasData && data.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
                 TableRow2,
                 {
                   item,
@@ -11481,7 +18468,7 @@ function ViewPickerTable({
         ]
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)(
+    /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(
       "div",
       {
         className: clsx_default({
@@ -11490,8 +18477,8 @@ function ViewPickerTable({
         }),
         id: tableNoticeId,
         children: [
-          !hasData && (isLoading ? /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(import_components19.Spinner, {}) }) : empty),
-          hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime67.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(import_components19.Spinner, {}) })
+          !hasData && (isLoading ? /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(import_components19.Spinner, {}) }) : empty),
+          hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(import_components19.Spinner, {}) })
         ]
       }
     )
@@ -11503,7 +18490,7 @@ var picker_table_default = ViewPickerTable;
 var import_components20 = __toESM(require_components(), 1);
 var import_i18n21 = __toESM(require_i18n(), 1);
 var import_element23 = __toESM(require_element(), 1);
-var import_jsx_runtime68 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime70 = __toESM(require_jsx_runtime(), 1);
 var imageSizes2 = [
   {
     value: 120,
@@ -11546,7 +18533,7 @@ function PreviewSizePicker() {
       value: index
     };
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
     import_components20.RangeControl,
     {
       __next40pxDefaultSize: true,
@@ -11575,11 +18562,11 @@ function PreviewSizePicker() {
 var import_components21 = __toESM(require_components(), 1);
 var import_i18n22 = __toESM(require_i18n(), 1);
 var import_element24 = __toESM(require_element(), 1);
-var import_jsx_runtime69 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime71 = __toESM(require_jsx_runtime(), 1);
 function DensityPicker() {
   const context = (0, import_element24.useContext)(dataviews_context_default);
   const view = context.view;
-  return /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(
     import_components21.__experimentalToggleGroupControl,
     {
       size: "__unstable-large",
@@ -11596,7 +18583,7 @@ function DensityPicker() {
       },
       isBlock: true,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
           import_components21.__experimentalToggleGroupControlOption,
           {
             value: "comfortable",
@@ -11607,7 +18594,7 @@ function DensityPicker() {
           },
           "comfortable"
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
           import_components21.__experimentalToggleGroupControlOption,
           {
             value: "balanced",
@@ -11615,7 +18602,7 @@ function DensityPicker() {
           },
           "balanced"
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
           import_components21.__experimentalToggleGroupControlOption,
           {
             value: "compact",
@@ -11719,22 +18706,22 @@ function normalizeString(str) {
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 function omit(object, keys) {
-  const result = { ...object };
+  const result2 = { ...object };
   for (const key of keys) {
-    if (hasOwnProperty(result, key)) {
-      delete result[key];
+    if (hasOwnProperty(result2, key)) {
+      delete result2[key];
     }
   }
-  return result;
+  return result2;
 }
 function pick(object, paths) {
-  const result = {};
+  const result2 = {};
   for (const key of paths) {
     if (hasOwnProperty(object, key)) {
-      result[key] = object[key];
+      result2[key] = object[key];
     }
   }
-  return result;
+  return result2;
 }
 function identity(value) {
   return value;
@@ -11748,21 +18735,21 @@ function getKeys(obj) {
   return Object.keys(obj);
 }
 function isFalsyBooleanCallback(booleanOrCallback, ...args) {
-  const result = typeof booleanOrCallback === "function" ? booleanOrCallback(...args) : booleanOrCallback;
-  if (result == null) return false;
-  return !result;
+  const result2 = typeof booleanOrCallback === "function" ? booleanOrCallback(...args) : booleanOrCallback;
+  if (result2 == null) return false;
+  return !result2;
 }
 function disabledFromProps(props) {
   return props.disabled || props["aria-disabled"] === true || props["aria-disabled"] === "true";
 }
 function removeUndefinedValues(obj) {
-  const result = {};
+  const result2 = {};
   for (const key in obj) {
     if (obj[key] !== void 0) {
-      result[key] = obj[key];
+      result2[key] = obj[key];
     }
   }
-  return result;
+  return result2;
 }
 function defaultValue(...values) {
   for (const value of values) {
@@ -12290,7 +19277,7 @@ function resetMouseMoving() {
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/GWSL6KNJ.js
 var React6 = __toESM(require_react(), 1);
-var import_jsx_runtime70 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime72 = __toESM(require_jsx_runtime(), 1);
 function forwardRef22(render4) {
   const Role = React6.forwardRef(
     // @ts-ignore Incompatible with React 19 types. Ignore for now.
@@ -12302,7 +19289,7 @@ function forwardRef22(render4) {
 function memo22(Component, propsAreEqual) {
   return React6.memo(Component, propsAreEqual);
 }
-function createElement4(Type, props) {
+function createElement4(Type2, props) {
   const { wrapElement, render: render4, ...rest } = props;
   const mergedRef = useMergeRefs(props.ref, getRefProperty(render4));
   let element;
@@ -12316,7 +19303,7 @@ function createElement4(Type, props) {
   } else if (render4) {
     element = render4(rest);
   } else {
-    element = /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(Type, { ...rest });
+    element = /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(Type2, { ...rest });
   }
   if (wrapElement) {
     return wrapElement(element);
@@ -12348,14 +19335,14 @@ function createStoreContext(providers = [], scopedProviders = []) {
   };
   const ContextProvider = (props) => {
     return providers.reduceRight(
-      (children, Provider) => /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(Provider, { ...props, children }),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(context.Provider, { ...props })
+      (children, Provider) => /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(Provider, { ...props, children }),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(context.Provider, { ...props })
     );
   };
   const ScopedContextProvider = (props) => {
-    return /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(ContextProvider, { ...props, children: scopedProviders.reduceRight(
-      (children, Provider) => /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(Provider, { ...props, children }),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(scopedContext.Provider, { ...props })
+    return /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(ContextProvider, { ...props, children: scopedProviders.reduceRight(
+      (children, Provider) => /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(Provider, { ...props, children }),
+      /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(scopedContext.Provider, { ...props })
     ) });
   };
   return {
@@ -13259,7 +20246,7 @@ function useStore(createStore2, props) {
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/WZWDIE3S.js
 var import_react14 = __toESM(require_react(), 1);
-var import_jsx_runtime71 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime73 = __toESM(require_jsx_runtime(), 1);
 var TagName4 = "button";
 function isEditableElement(element) {
   if (isTextbox(element)) return true;
@@ -13518,7 +20505,7 @@ var useCompositeItem = createHook(
     );
     props = useWrapElement(
       props,
-      (element) => /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(CompositeItemContext.Provider, { value: providerValue, children: element }),
+      (element) => /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(CompositeItemContext.Provider, { value: providerValue, children: element }),
       [providerValue]
     );
     props = {
@@ -13572,7 +20559,7 @@ function reverseArray(array) {
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/ZMWF7ASR.js
 var import_react15 = __toESM(require_react(), 1);
-var import_jsx_runtime72 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime74 = __toESM(require_jsx_runtime(), 1);
 var TagName5 = "div";
 function isGrid(items) {
   return items.some((item) => !!item.rowId);
@@ -13811,7 +20798,7 @@ var useComposite = createHook(
     });
     props = useWrapElement(
       props,
-      (element) => /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(CompositeContextProvider, { value: store4, children: element }),
+      (element) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(CompositeContextProvider, { value: store4, children: element }),
       [store4]
     );
     const activeDescendant = store4.useState((state) => {
@@ -13869,7 +20856,7 @@ var DialogDescriptionContext = (0, import_react16.createContext)(void 0);
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/6B3RXHKP.js
 var import_react17 = __toESM(require_react(), 1);
 var import_react_dom = __toESM(require_react_dom(), 1);
-var import_jsx_runtime73 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime75 = __toESM(require_jsx_runtime(), 1);
 var TagName6 = "div";
 function afterTimeout(timeoutMs, cb) {
   const timeoutId = setTimeout(cb, timeoutMs);
@@ -13983,7 +20970,7 @@ var useDisclosureContent = createHook(function useDisclosureContent2({ store: st
   }, [store4, animated, contentElement, otherElement, open, transition]);
   props = useWrapElement(
     props,
-    (element) => /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(DialogScopedContextProvider, { value: store4, children: element }),
+    (element) => /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(DialogScopedContextProvider, { value: store4, children: element }),
     [store4]
   );
   const hidden = isHidden(mounted, props.hidden, alwaysVisible);
@@ -14021,7 +21008,7 @@ var DisclosureContent = forwardRef22(function DisclosureContent2({
     (state) => !unmountOnHide || (state == null ? void 0 : state.mounted)
   );
   if (mounted === false) return null;
-  return /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(DisclosureContentImpl, { ...props });
+  return /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(DisclosureContentImpl, { ...props });
 });
 
 // ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/75BJEVSH.js
@@ -15111,7 +22098,7 @@ var Combobox = forwardRef22(function Combobox2(props) {
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/IBXZ2LQC.js
 var import_react21 = __toESM(require_react(), 1);
-var import_jsx_runtime74 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime76 = __toESM(require_jsx_runtime(), 1);
 var TagName10 = "div";
 function isSelected(storeValue, itemValue) {
   if (itemValue == null) return;
@@ -15228,7 +22215,7 @@ var useComboboxItem = createHook(
     }
     props = useWrapElement(
       props,
-      (element) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(ComboboxItemValueContext.Provider, { value, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(ComboboxItemCheckedContext.Provider, { value: selected != null ? selected : false, children: element }) }),
+      (element) => /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(ComboboxItemValueContext.Provider, { value, children: /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(ComboboxItemCheckedContext.Provider, { value: selected != null ? selected : false, children: element }) }),
       [value, selected]
     );
     const popupRole = (0, import_react21.useContext)(ComboboxListRoleContext);
@@ -15268,7 +22255,7 @@ var ComboboxItem = memo22(
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-item-value.js
 var import_react22 = __toESM(require_react(), 1);
-var import_jsx_runtime75 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime77 = __toESM(require_jsx_runtime(), 1);
 var TagName11 = "span";
 function normalizeValue(value) {
   return normalizeString(value).toLowerCase();
@@ -15303,7 +22290,7 @@ function splitValue(itemValue, userValue) {
   if (!userValue) return itemValue;
   const userValues = toArray(userValue).filter(Boolean).map(normalizeValue);
   const parts = [];
-  const span = (value, autocomplete = false) => /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(
+  const span = (value, autocomplete = false) => /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
     "span",
     {
       "data-autocomplete-value": autocomplete ? "" : void 0,
@@ -15391,7 +22378,7 @@ var ComboboxLabel = memo22(
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/2G6YEJT4.js
 var import_react23 = __toESM(require_react(), 1);
-var import_jsx_runtime76 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime78 = __toESM(require_jsx_runtime(), 1);
 var TagName13 = "div";
 var useComboboxList = createHook(
   function useComboboxList2({ store: store4, alwaysVisible, ...props }) {
@@ -15442,7 +22429,7 @@ var useComboboxList = createHook(
     }
     props = useWrapElement(
       props,
-      (element) => /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(ComboboxScopedContextProvider, { value: store4, children: /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(ComboboxListRoleContext.Provider, { value: role, children: element }) }),
+      (element) => /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(ComboboxScopedContextProvider, { value: store4, children: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(ComboboxListRoleContext.Provider, { value: role, children: element }) }),
       [store4, role]
     );
     const setContentElement = id && (!scopedContext || !scopedContextSameStore) ? store4.setContentElement : null;
@@ -15649,10 +22636,10 @@ function useComboboxStore(props = {}) {
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-provider.js
-var import_jsx_runtime77 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime79 = __toESM(require_jsx_runtime(), 1);
 function ComboboxProvider(props = {}) {
   const store4 = useComboboxStore(props);
-  return /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(ComboboxContextProvider, { value: store4, children: props.children });
+  return /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(ComboboxContextProvider, { value: store4, children: props.children });
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/search-widget.mjs
@@ -15719,7 +22706,7 @@ function useElements({
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/search-widget.mjs
-var import_jsx_runtime78 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime80 = __toESM(require_jsx_runtime(), 1);
 function normalizeSearchInput(input = "") {
   return (0, import_remove_accents.default)(input.trim().toLowerCase());
 }
@@ -15736,19 +22723,19 @@ function generateFilterElementCompositeItemId(prefix, filterElementValue) {
   return `${prefix}-${filterElementValue}`;
 }
 var MultiSelectionOption = ({ selected }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
     "span",
     {
       className: clsx_default(
         "dataviews-filters__search-widget-listitem-multi-selection",
         { "is-selected": selected }
       ),
-      children: selected && /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(import_components22.Icon, { icon: check_default })
+      children: selected && /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(import_components22.Icon, { icon: check_default })
     }
   );
 };
 var SingleSelectionOption = ({ selected }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
     "span",
     {
       className: clsx_default(
@@ -15773,7 +22760,7 @@ function ListBox({ view, filter, onChangeView }) {
     (f2) => f2.field === filter.field
   );
   const currentValue = getCurrentValue(filter, currentFilter);
-  return /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
     import_components22.Composite,
     {
       virtualFocus: true,
@@ -15797,18 +22784,18 @@ function ListBox({ view, filter, onChangeView }) {
           );
         }
       },
-      render: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(import_components22.Composite.Typeahead, {}),
-      children: filter.elements.map((element) => /* @__PURE__ */ (0, import_jsx_runtime78.jsxs)(
+      render: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(import_components22.Composite.Typeahead, {}),
+      children: filter.elements.map((element) => /* @__PURE__ */ (0, import_jsx_runtime80.jsxs)(
         import_components22.Composite.Hover,
         {
-          render: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
+          render: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
             import_components22.Composite.Item,
             {
               id: generateFilterElementCompositeItemId(
                 baseId,
                 element.value
               ),
-              render: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
+              render: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
                 "div",
                 {
                   "aria-label": element.label,
@@ -15855,19 +22842,19 @@ function ListBox({ view, filter, onChangeView }) {
             }
           ),
           children: [
-            filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
+            filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
               SingleSelectionOption,
               {
                 selected: currentValue === element.value
               }
             ),
-            !filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
+            !filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
               MultiSelectionOption,
               {
                 selected: currentValue.includes(element.value)
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime78.jsx)("span", { children: element.label })
+            /* @__PURE__ */ (0, import_jsx_runtime80.jsx)("span", { children: element.label })
           ]
         },
         element.value
@@ -15888,7 +22875,7 @@ function ComboboxList22({ view, filter, onChangeView }) {
       (item) => normalizeSearchInput(item.label).includes(normalizedSearch)
     );
   }, [filter.elements, deferredSearchValue]);
-  return /* @__PURE__ */ (0, import_jsx_runtime78.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime80.jsxs)(
     ComboboxProvider,
     {
       selectedValue: currentValue,
@@ -15920,15 +22907,15 @@ function ComboboxList22({ view, filter, onChangeView }) {
       },
       setValue: setSearchValue,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime78.jsxs)("div", { className: "dataviews-filters__search-widget-filter-combobox__wrapper", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime80.jsxs)("div", { className: "dataviews-filters__search-widget-filter-combobox__wrapper", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
             ComboboxLabel,
             {
-              render: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(import_components22.VisuallyHidden, { children: (0, import_i18n24.__)("Search items") }),
+              render: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(import_components22.VisuallyHidden, { children: (0, import_i18n24.__)("Search items") }),
               children: (0, import_i18n24.__)("Search items")
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
             Combobox,
             {
               autoSelect: "always",
@@ -15936,16 +22923,16 @@ function ComboboxList22({ view, filter, onChangeView }) {
               className: "dataviews-filters__search-widget-filter-combobox__input"
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime78.jsx)("div", { className: "dataviews-filters__search-widget-filter-combobox__icon", children: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(import_components22.Icon, { icon: search_default }) })
+          /* @__PURE__ */ (0, import_jsx_runtime80.jsx)("div", { className: "dataviews-filters__search-widget-filter-combobox__icon", children: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(import_components22.Icon, { icon: search_default }) })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime78.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime80.jsxs)(
           ComboboxList,
           {
             className: "dataviews-filters__search-widget-filter-combobox-list",
             alwaysVisible: true,
             children: [
               matches.map((element) => {
-                return /* @__PURE__ */ (0, import_jsx_runtime78.jsxs)(
+                return /* @__PURE__ */ (0, import_jsx_runtime80.jsxs)(
                   ComboboxItem,
                   {
                     resetValueOnSelect: false,
@@ -15955,13 +22942,13 @@ function ComboboxList22({ view, filter, onChangeView }) {
                     setValueOnClick: false,
                     focusOnHover: true,
                     children: [
-                      filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
+                      filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
                         SingleSelectionOption,
                         {
                           selected: currentValue === element.value
                         }
                       ),
-                      !filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
+                      !filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
                         MultiSelectionOption,
                         {
                           selected: currentValue.includes(
@@ -15969,22 +22956,22 @@ function ComboboxList22({ view, filter, onChangeView }) {
                           )
                         }
                       ),
-                      /* @__PURE__ */ (0, import_jsx_runtime78.jsxs)("span", { children: [
-                        /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
+                      /* @__PURE__ */ (0, import_jsx_runtime80.jsxs)("span", { children: [
+                        /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
                           ComboboxItemValue,
                           {
                             className: "dataviews-filters__search-widget-filter-combobox-item-value",
                             value: element.label
                           }
                         ),
-                        !!element.description && /* @__PURE__ */ (0, import_jsx_runtime78.jsx)("span", { className: "dataviews-filters__search-widget-listitem-description", children: element.description })
+                        !!element.description && /* @__PURE__ */ (0, import_jsx_runtime80.jsx)("span", { className: "dataviews-filters__search-widget-listitem-description", children: element.description })
                       ] })
                     ]
                   },
                   element.value
                 );
               }),
-              !matches.length && /* @__PURE__ */ (0, import_jsx_runtime78.jsx)("p", { children: (0, import_i18n24.__)("No results found") })
+              !matches.length && /* @__PURE__ */ (0, import_jsx_runtime80.jsx)("p", { children: (0, import_i18n24.__)("No results found") })
             ]
           }
         )
@@ -15998,13 +22985,13 @@ function SearchWidget(props) {
     getElements: props.filter.getElements
   });
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime78.jsx)("div", { className: "dataviews-filters__search-widget-no-elements", children: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(import_components22.Spinner, {}) });
+    return /* @__PURE__ */ (0, import_jsx_runtime80.jsx)("div", { className: "dataviews-filters__search-widget-no-elements", children: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(import_components22.Spinner, {}) });
   }
   if (elements.length === 0) {
-    return /* @__PURE__ */ (0, import_jsx_runtime78.jsx)("div", { className: "dataviews-filters__search-widget-no-elements", children: (0, import_i18n24.__)("No elements found") });
+    return /* @__PURE__ */ (0, import_jsx_runtime80.jsx)("div", { className: "dataviews-filters__search-widget-no-elements", children: (0, import_i18n24.__)("No elements found") });
   }
   const Widget = elements.length > 10 ? ComboboxList22 : ListBox;
-  return /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(Widget, { ...props, filter: { ...props.filter, elements } });
+  return /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(Widget, { ...props, filter: { ...props.filter, elements } });
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/input-widget.mjs
@@ -16012,7 +22999,7 @@ var import_es6 = __toESM(require_es6(), 1);
 var import_compose9 = __toESM(require_compose(), 1);
 var import_element27 = __toESM(require_element(), 1);
 var import_components23 = __toESM(require_components(), 1);
-var import_jsx_runtime79 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime81 = __toESM(require_jsx_runtime(), 1);
 function InputWidget({
   filter,
   view,
@@ -16076,13 +23063,13 @@ function InputWidget({
   if (!field || !field.Edit || !currentFilter) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
     import_components23.Flex,
     {
       className: "dataviews-filters__user-input-widget",
       gap: 2.5,
       direction: "column",
-      children: /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
         field.Edit,
         {
           hideLabelFromVision: true,
@@ -16100,10 +23087,10 @@ function InputWidget({
 var import_i18n25 = __toESM(require_i18n(), 1);
 var import_element28 = __toESM(require_element(), 1);
 var import_date2 = __toESM(require_date(), 1);
-var import_jsx_runtime80 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime82 = __toESM(require_jsx_runtime(), 1);
 var filterTextWrappers = {
-  Name: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)("span", { className: "dataviews-filters__summary-filter-text-name" }),
-  Value: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)("span", { className: "dataviews-filters__summary-filter-text-value" })
+  Name: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)("span", { className: "dataviews-filters__summary-filter-text-name" }),
+  Value: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)("span", { className: "dataviews-filters__summary-filter-text-value" })
 };
 function getRelativeDate(value, unit) {
   switch (unit) {
@@ -16639,7 +23626,7 @@ var isSingleSelectionOperator = (name) => OPERATORS.filter((op) => op.selection 
 var isRegisteredOperator = (name) => OPERATORS.some((op) => op.name === name);
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/filter.mjs
-var import_jsx_runtime81 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime83 = __toESM(require_jsx_runtime(), 1);
 var ENTER = "Enter";
 var SPACE = " ";
 var FilterText = ({
@@ -16673,7 +23660,7 @@ function OperatorSelector({
     (_filter) => _filter.field === filter.field
   );
   const value = currentFilter?.operator || filter.operators[0];
-  return operatorOptions.length > 1 && /* @__PURE__ */ (0, import_jsx_runtime81.jsxs)(
+  return operatorOptions.length > 1 && /* @__PURE__ */ (0, import_jsx_runtime83.jsxs)(
     Stack,
     {
       direction: "row",
@@ -16682,8 +23669,8 @@ function OperatorSelector({
       className: "dataviews-filters__summary-operators-container",
       align: "center",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(import_components24.FlexItem, { className: "dataviews-filters__summary-operators-filter-name", children: filter.name }),
-        /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(import_components24.FlexItem, { className: "dataviews-filters__summary-operators-filter-name", children: filter.name }),
+        /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
           import_components24.SelectControl,
           {
             className: "dataviews-filters__summary-operators-filter-select",
@@ -16809,7 +23796,7 @@ function Filter({
   const isLocked = filterInView?.isLocked;
   const hasValues = !isLocked && filterInView?.value !== void 0;
   const canResetOrRemove = !isLocked && (!isPrimary || hasValues);
-  return /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
     import_components24.Dropdown,
     {
       defaultOpen: openedFilter === filter.field,
@@ -16818,8 +23805,8 @@ function Filter({
       onClose: () => {
         toggleRef.current?.focus();
       },
-      renderToggle: ({ isOpen, onToggle }) => /* @__PURE__ */ (0, import_jsx_runtime81.jsxs)("div", { className: "dataviews-filters__summary-chip-container", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
+      renderToggle: ({ isOpen, onToggle }) => /* @__PURE__ */ (0, import_jsx_runtime83.jsxs)("div", { className: "dataviews-filters__summary-chip-container", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
           import_components24.Tooltip,
           {
             text: (0, import_i18n26.sprintf)(
@@ -16828,7 +23815,7 @@ function Filter({
               filter.name.toLowerCase()
             ),
             placement: "top",
-            children: /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
+            children: /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
               "div",
               {
                 className: clsx_default(
@@ -16856,7 +23843,7 @@ function Filter({
                 "aria-pressed": isOpen,
                 "aria-expanded": isOpen,
                 ref: toggleRef,
-                children: /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
+                children: /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
                   FilterText,
                   {
                     activeElements,
@@ -16868,12 +23855,12 @@ function Filter({
             )
           }
         ),
-        canResetOrRemove && /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
+        canResetOrRemove && /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
           import_components24.Tooltip,
           {
             text: isPrimary ? (0, import_i18n26.__)("Reset") : (0, import_i18n26.__)("Remove"),
             placement: "top",
-            children: /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
+            children: /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
               "button",
               {
                 className: clsx_default(
@@ -16894,16 +23881,16 @@ function Filter({
                     toggleRef.current?.focus();
                   }
                 },
-                children: /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(import_components24.Icon, { icon: close_small_default })
+                children: /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(import_components24.Icon, { icon: close_small_default })
               }
             )
           }
         )
       ] }),
       renderContent: () => {
-        return /* @__PURE__ */ (0, import_jsx_runtime81.jsxs)(Stack, { direction: "column", justify: "flex-start", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(OperatorSelector, { ...commonProps }),
-          commonProps.filter.hasElements ? /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
+        return /* @__PURE__ */ (0, import_jsx_runtime83.jsxs)(Stack, { direction: "column", justify: "flex-start", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(OperatorSelector, { ...commonProps }),
+          commonProps.filter.hasElements ? /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
             SearchWidget,
             {
               ...commonProps,
@@ -16912,7 +23899,7 @@ function Filter({
                 elements
               }
             }
-          ) : /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(InputWidget, { ...commonProps, fields })
+          ) : /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(InputWidget, { ...commonProps, fields })
         ] });
       }
     }
@@ -16923,7 +23910,7 @@ function Filter({
 var import_components25 = __toESM(require_components(), 1);
 var import_i18n27 = __toESM(require_i18n(), 1);
 var import_element30 = __toESM(require_element(), 1);
-var import_jsx_runtime82 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime84 = __toESM(require_jsx_runtime(), 1);
 var { Menu: Menu4 } = unlock(import_components25.privateApis);
 function AddFilterMenu({
   filters: filters2,
@@ -16933,10 +23920,10 @@ function AddFilterMenu({
   triggerProps
 }) {
   const inactiveFilters = filters2.filter((filter) => !filter.isVisible);
-  return /* @__PURE__ */ (0, import_jsx_runtime82.jsxs)(Menu4, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(Menu4.TriggerButton, { ...triggerProps }),
-    /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(Menu4.Popover, { children: inactiveFilters.map((filter) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime84.jsxs)(Menu4, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(Menu4.TriggerButton, { ...triggerProps }),
+    /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(Menu4.Popover, { children: inactiveFilters.map((filter) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(
         Menu4.Item,
         {
           onClick: () => {
@@ -16954,7 +23941,7 @@ function AddFilterMenu({
               ]
             });
           },
-          children: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(Menu4.ItemLabel, { children: filter.name })
+          children: /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(Menu4.ItemLabel, { children: filter.name })
         },
         filter.field
       );
@@ -16966,11 +23953,11 @@ function AddFilter({ filters: filters2, view, onChangeView, setOpenedFilter }, r
     return null;
   }
   const inactiveFilters = filters2.filter((filter) => !filter.isVisible);
-  return /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(
     AddFilterMenu,
     {
       triggerProps: {
-        render: /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(
+        render: /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(
           import_components25.Button,
           {
             accessibleWhenDisabled: true,
@@ -16992,7 +23979,7 @@ var add_filter_default = (0, import_element30.forwardRef)(AddFilter);
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/reset-filters.mjs
 var import_components26 = __toESM(require_components(), 1);
 var import_i18n28 = __toESM(require_i18n(), 1);
-var import_jsx_runtime83 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime85 = __toESM(require_jsx_runtime(), 1);
 function ResetFilter({
   filters: filters2,
   view,
@@ -17004,7 +23991,7 @@ function ResetFilter({
   const isDisabled = !view.search && !view.filters?.some(
     (_filter) => !_filter.isLocked && (_filter.value !== void 0 || !isPrimary(_filter.field))
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime85.jsx)(
     import_components26.Button,
     {
       disabled: isDisabled,
@@ -17077,12 +24064,12 @@ function useFilters(fields, view) {
 var use_filters_default = useFilters;
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/filters.mjs
-var import_jsx_runtime84 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime86 = __toESM(require_jsx_runtime(), 1);
 function Filters({ className }) {
   const { fields, view, onChangeView, openedFilter, setOpenedFilter } = (0, import_element32.useContext)(dataviews_context_default);
   const addFilterRef = (0, import_element32.useRef)(null);
   const filters2 = use_filters_default(fields, view);
-  const addFilter = /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(
+  const addFilter = /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(
     add_filter_default,
     {
       filters: filters2,
@@ -17099,7 +24086,7 @@ function Filters({ className }) {
   }
   const filterComponents = [
     ...visibleFilters.map((filter) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(
         Filter,
         {
           filter,
@@ -17115,7 +24102,7 @@ function Filters({ className }) {
     addFilter
   ];
   filterComponents.push(
-    /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(
       ResetFilter,
       {
         filters: filters2,
@@ -17125,7 +24112,7 @@ function Filters({ className }) {
       "reset-filters"
     )
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(
     Stack,
     {
       direction: "row",
@@ -17144,7 +24131,7 @@ var filters_default = (0, import_element32.memo)(Filters);
 var import_element33 = __toESM(require_element(), 1);
 var import_components27 = __toESM(require_components(), 1);
 var import_i18n29 = __toESM(require_i18n(), 1);
-var import_jsx_runtime85 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime87 = __toESM(require_jsx_runtime(), 1);
 function FiltersToggle() {
   const {
     filters: filters2,
@@ -17183,7 +24170,7 @@ function FiltersToggle() {
       setIsShowingFilter(!isShowingFilter);
     }
   };
-  const buttonComponent = /* @__PURE__ */ (0, import_jsx_runtime85.jsx)(
+  const buttonComponent = /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(
     import_components27.Button,
     {
       ref: buttonRef,
@@ -17193,7 +24180,7 @@ function FiltersToggle() {
       ...hasVisibleFilters ? toggleFiltersButtonProps : addFilterButtonProps
     }
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime85.jsx)("div", { className: "dataviews-filters__container-visibility-toggle", children: !hasVisibleFilters ? /* @__PURE__ */ (0, import_jsx_runtime85.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime87.jsx)("div", { className: "dataviews-filters__container-visibility-toggle", children: !hasVisibleFilters ? /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(
     AddFilterMenu,
     {
       filters: filters2,
@@ -17202,7 +24189,7 @@ function FiltersToggle() {
       setOpenedFilter,
       triggerProps: { render: buttonComponent }
     }
-  ) : /* @__PURE__ */ (0, import_jsx_runtime85.jsx)(
+  ) : /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(
     FilterVisibilityToggle,
     {
       buttonRef,
@@ -17222,29 +24209,29 @@ function FilterVisibilityToggle({
     },
     [buttonRef]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime85.jsxs)(import_jsx_runtime85.Fragment, { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime87.jsxs)(import_jsx_runtime87.Fragment, { children: [
     children,
-    !!filtersCount && /* @__PURE__ */ (0, import_jsx_runtime85.jsx)("span", { className: "dataviews-filters-toggle__count", children: filtersCount })
+    !!filtersCount && /* @__PURE__ */ (0, import_jsx_runtime87.jsx)("span", { className: "dataviews-filters-toggle__count", children: filtersCount })
   ] });
 }
 var toggle_default = FiltersToggle;
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/filters-toggled.mjs
 var import_element34 = __toESM(require_element(), 1);
-var import_jsx_runtime86 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime88 = __toESM(require_jsx_runtime(), 1);
 function FiltersToggled(props) {
   const { isShowingFilter } = (0, import_element34.useContext)(dataviews_context_default);
   if (!isShowingFilter) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(filters_default, { ...props });
+  return /* @__PURE__ */ (0, import_jsx_runtime88.jsx)(filters_default, { ...props });
 }
 var filters_toggled_default = FiltersToggled;
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-layout/index.mjs
 var import_element35 = __toESM(require_element(), 1);
 var import_i18n30 = __toESM(require_i18n(), 1);
-var import_jsx_runtime87 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime89 = __toESM(require_jsx_runtime(), 1);
 function DataViewsLayout({ className }) {
   const {
     actions = [],
@@ -17262,12 +24249,12 @@ function DataViewsLayout({ className }) {
     isItemClickable,
     renderItemLink,
     defaultLayouts: defaultLayouts3,
-    empty = /* @__PURE__ */ (0, import_jsx_runtime87.jsx)("p", { children: (0, import_i18n30.__)("No results") })
+    empty = /* @__PURE__ */ (0, import_jsx_runtime89.jsx)("p", { children: (0, import_i18n30.__)("No results") })
   } = (0, import_element35.useContext)(dataviews_context_default);
   const ViewComponent = VIEW_LAYOUTS.find(
     (v2) => v2.type === view.type && defaultLayouts3[v2.type]
   )?.component;
-  return /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(
     ViewComponent,
     {
       className,
@@ -17292,7 +24279,7 @@ function DataViewsLayout({ className }) {
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-footer/index.mjs
 var import_element36 = __toESM(require_element(), 1);
-var import_jsx_runtime88 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime90 = __toESM(require_jsx_runtime(), 1);
 var EMPTY_ARRAY5 = [];
 function DataViewsFooter() {
   const {
@@ -17305,7 +24292,7 @@ function DataViewsFooter() {
   if (!totalItems || !totalPages || totalPages <= 1 && !hasBulkActions) {
     return null;
   }
-  return !!totalItems && /* @__PURE__ */ (0, import_jsx_runtime88.jsxs)(
+  return !!totalItems && /* @__PURE__ */ (0, import_jsx_runtime90.jsxs)(
     Stack,
     {
       direction: "row",
@@ -17314,8 +24301,8 @@ function DataViewsFooter() {
       className: "dataviews-footer",
       gap: "xs",
       children: [
-        hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime88.jsx)(BulkActionsFooter, {}),
-        /* @__PURE__ */ (0, import_jsx_runtime88.jsx)(dataviews_pagination_default, {})
+        hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime90.jsx)(BulkActionsFooter, {}),
+        /* @__PURE__ */ (0, import_jsx_runtime90.jsx)(dataviews_pagination_default, {})
       ]
     }
   );
@@ -17326,7 +24313,7 @@ var import_i18n31 = __toESM(require_i18n(), 1);
 var import_element37 = __toESM(require_element(), 1);
 var import_components28 = __toESM(require_components(), 1);
 var import_compose10 = __toESM(require_compose(), 1);
-var import_jsx_runtime89 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime91 = __toESM(require_jsx_runtime(), 1);
 var DataViewsSearch = (0, import_element37.memo)(function Search({ label }) {
   const { view, onChangeView } = (0, import_element37.useContext)(dataviews_context_default);
   const [search, setSearch, debouncedSearch] = (0, import_compose10.useDebouncedInput)(
@@ -17351,7 +24338,7 @@ var DataViewsSearch = (0, import_element37.memo)(function Search({ label }) {
     }
   }, [debouncedSearch]);
   const searchLabel = label || (0, import_i18n31.__)("Search");
-  return /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
     import_components28.SearchControl,
     {
       className: "dataviews-search",
@@ -17376,7 +24363,7 @@ var import_compose11 = __toESM(require_compose(), 1);
 var import_components29 = __toESM(require_components(), 1);
 var import_i18n32 = __toESM(require_i18n(), 1);
 var import_element38 = __toESM(require_element(), 1);
-var import_jsx_runtime90 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime92 = __toESM(require_jsx_runtime(), 1);
 function InfiniteScrollToggle() {
   const context = (0, import_element38.useContext)(dataviews_context_default);
   const { view, onChangeView } = context;
@@ -17384,7 +24371,7 @@ function InfiniteScrollToggle() {
   if (!context.hasInfiniteScrollHandler) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime90.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime92.jsx)(
     import_components29.ToggleControl,
     {
       label: (0, import_i18n32.__)("Enable infinite scroll"),
@@ -17403,7 +24390,7 @@ function InfiniteScrollToggle() {
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-view-config/index.mjs
-var import_jsx_runtime91 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime93 = __toESM(require_jsx_runtime(), 1);
 var { Menu: Menu5 } = unlock(import_components30.privateApis);
 var DATAVIEWS_CONFIG_POPOVER_PROPS = {
   className: "dataviews-config__popover",
@@ -17417,11 +24404,11 @@ function ViewTypeMenu() {
     return null;
   }
   const activeView = VIEW_LAYOUTS.find((v2) => view.type === v2.type);
-  return /* @__PURE__ */ (0, import_jsx_runtime91.jsxs)(Menu5, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime93.jsxs)(Menu5, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
       Menu5.TriggerButton,
       {
-        render: /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+        render: /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
           import_components30.Button,
           {
             size: "compact",
@@ -17431,14 +24418,14 @@ function ViewTypeMenu() {
         )
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(Menu5.Popover, { children: availableLayouts.map((layout) => {
+    /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(Menu5.Popover, { children: availableLayouts.map((layout) => {
       const config = VIEW_LAYOUTS.find(
         (v2) => v2.type === layout
       );
       if (!config) {
         return null;
       }
-      return /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
         Menu5.RadioItem,
         {
           value: layout,
@@ -17465,7 +24452,7 @@ function ViewTypeMenu() {
             }
             (0, import_warning.default)("Invalid dataview");
           },
-          children: /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(Menu5.ItemLabel, { children: config.label })
+          children: /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(Menu5.ItemLabel, { children: config.label })
         },
         layout
       );
@@ -17485,7 +24472,7 @@ function SortFieldControl() {
       };
     });
   }, [fields]);
-  return /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
     import_components30.SelectControl,
     {
       __next40pxDefaultSize: true,
@@ -17517,7 +24504,7 @@ function SortDirectionControl() {
   if (!value && view.sort?.field) {
     value = "desc";
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
     import_components30.__experimentalToggleGroupControl,
     {
       className: "dataviews-view-config__sort-direction",
@@ -17543,7 +24530,7 @@ function SortDirectionControl() {
         (0, import_warning.default)("Invalid direction");
       },
       children: SORTING_DIRECTIONS.map((direction) => {
-        return /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+        return /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
           import_components30.__experimentalToggleGroupControlOptionIcon,
           {
             value: direction,
@@ -17562,7 +24549,7 @@ function ItemsPerPageControl() {
   if (!config || !config.perPageSizes || config.perPageSizes.length < 2 || config.perPageSizes.length > 6 || infiniteScrollEnabled) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
     import_components30.__experimentalToggleGroupControl,
     {
       __next40pxDefaultSize: true,
@@ -17579,7 +24566,7 @@ function ItemsPerPageControl() {
         });
       },
       children: config.perPageSizes.map((value) => {
-        return /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+        return /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
           import_components30.__experimentalToggleGroupControlOption,
           {
             value,
@@ -17596,9 +24583,9 @@ function SettingsSection({
   description,
   children
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime91.jsxs)(import_components30.__experimentalGrid, { columns: 12, className: "dataviews-settings-section", gap: 4, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime91.jsxs)("div", { className: "dataviews-settings-section__sidebar", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime93.jsxs)(import_components30.__experimentalGrid, { columns: 12, className: "dataviews-settings-section", gap: 4, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime93.jsxs)("div", { className: "dataviews-settings-section__sidebar", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
         import_components30.__experimentalHeading,
         {
           level: 2,
@@ -17606,7 +24593,7 @@ function SettingsSection({
           children: title
         }
       ),
-      description && /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+      description && /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
         import_components30.__experimentalText,
         {
           variant: "muted",
@@ -17615,7 +24602,7 @@ function SettingsSection({
         }
       )
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
       import_components30.__experimentalGrid,
       {
         columns: 8,
@@ -17635,7 +24622,7 @@ function DataviewsViewConfigDropdown() {
   const activeLayout = VIEW_LAYOUTS.find(
     (layout) => layout.type === view.type
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
     import_components30.Dropdown,
     {
       expandOnMobile: true,
@@ -17644,7 +24631,7 @@ function DataviewsViewConfigDropdown() {
         id: popoverId
       },
       renderToggle: ({ onToggle, isOpen }) => {
-        return /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+        return /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
           import_components30.Button,
           {
             size: "compact",
@@ -17656,34 +24643,34 @@ function DataviewsViewConfigDropdown() {
           }
         );
       },
-      renderContent: () => /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+      renderContent: () => /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
         import_components30.__experimentalDropdownContentWrapper,
         {
           paddingSize: "medium",
           className: "dataviews-config__popover-content-wrapper",
-          children: /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
+          children: /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
             Stack,
             {
               direction: "column",
               className: "dataviews-view-config",
               gap: "lg",
-              children: /* @__PURE__ */ (0, import_jsx_runtime91.jsxs)(SettingsSection, { title: (0, import_i18n33.__)("Appearance"), children: [
-                /* @__PURE__ */ (0, import_jsx_runtime91.jsxs)(
+              children: /* @__PURE__ */ (0, import_jsx_runtime93.jsxs)(SettingsSection, { title: (0, import_i18n33.__)("Appearance"), children: [
+                /* @__PURE__ */ (0, import_jsx_runtime93.jsxs)(
                   Stack,
                   {
                     direction: "row",
                     gap: "xs",
                     className: "is-divided-in-two",
                     children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(SortFieldControl, {}),
-                      /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(SortDirectionControl, {})
+                      /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(SortFieldControl, {}),
+                      /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(SortDirectionControl, {})
                     ]
                   }
                 ),
-                !!activeLayout?.viewConfigOptions && /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(activeLayout.viewConfigOptions, {}),
-                /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(InfiniteScrollToggle, {}),
-                /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(ItemsPerPageControl, {}),
-                /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(PropertiesSection, {})
+                !!activeLayout?.viewConfigOptions && /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(activeLayout.viewConfigOptions, {}),
+                /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(InfiniteScrollToggle, {}),
+                /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(ItemsPerPageControl, {}),
+                /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(PropertiesSection, {})
               ] })
             }
           )
@@ -17693,9 +24680,9 @@ function DataviewsViewConfigDropdown() {
   );
 }
 function _DataViewsViewConfig() {
-  return /* @__PURE__ */ (0, import_jsx_runtime91.jsxs)(import_jsx_runtime91.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(ViewTypeMenu, {}),
-    /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(DataviewsViewConfigDropdown, {})
+  return /* @__PURE__ */ (0, import_jsx_runtime93.jsxs)(import_jsx_runtime93.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(ViewTypeMenu, {}),
+    /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(DataviewsViewConfigDropdown, {})
   ] });
 }
 var DataViewsViewConfig = (0, import_element39.memo)(_DataViewsViewConfig);
@@ -17729,7 +24716,7 @@ function getCustomValidity(isValid2, validity) {
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/checkbox.mjs
-var import_jsx_runtime92 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime94 = __toESM(require_jsx_runtime(), 1);
 var { ValidatedCheckboxControl } = unlock(import_components31.privateApis);
 function Checkbox({
   field,
@@ -17744,7 +24731,7 @@ function Checkbox({
       setValue({ item: data, value: !getValue({ item: data }) })
     );
   }, [data, getValue, onChange, setValue]);
-  return /* @__PURE__ */ (0, import_jsx_runtime92.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
     ValidatedCheckboxControl,
     {
       required: !!field.isValid?.required,
@@ -17761,7 +24748,7 @@ function Checkbox({
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/combobox.mjs
 var import_components32 = __toESM(require_components(), 1);
 var import_element41 = __toESM(require_element(), 1);
-var import_jsx_runtime93 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime95 = __toESM(require_jsx_runtime(), 1);
 var { ValidatedComboboxControl } = unlock(import_components32.privateApis);
 function Combobox3({
   data,
@@ -17781,9 +24768,9 @@ function Combobox3({
     getElements: field.getElements
   });
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(import_components32.Spinner, {});
+    return /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(import_components32.Spinner, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(
     ValidatedComboboxControl,
     {
       required: !!field.isValid?.required,
@@ -17811,7 +24798,7 @@ var import_date4 = __toESM(require_date(), 1);
 var import_components33 = __toESM(require_components(), 1);
 var import_element42 = __toESM(require_element(), 1);
 var import_i18n34 = __toESM(require_i18n(), 1);
-var import_jsx_runtime94 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime96 = __toESM(require_jsx_runtime(), 1);
 var TIME_UNITS_OPTIONS = {
   [OPERATOR_IN_THE_PAST]: [
     { value: "days", label: (0, import_i18n34.__)("Days") },
@@ -17856,15 +24843,15 @@ function RelativeDateControl({
     ),
     [onChange, setValue, data, relValue]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
     import_components33.BaseControl,
     {
       id,
       className: clsx_default(className, "dataviews-controls__relative-date"),
       label,
       hideLabelFromVision,
-      children: /* @__PURE__ */ (0, import_jsx_runtime94.jsxs)(Stack, { direction: "row", gap: "xs", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime96.jsxs)(Stack, { direction: "row", gap: "xs", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
           import_components33.__experimentalNumberControl,
           {
             __next40pxDefaultSize: true,
@@ -17876,7 +24863,7 @@ function RelativeDateControl({
             onChange: onChangeValue
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
           import_components33.SelectControl,
           {
             className: "dataviews-controls__relative-date-unit",
@@ -17904,7 +24891,7 @@ function parseDateTime(dateTimeString) {
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/datetime.mjs
-var import_jsx_runtime95 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime97 = __toESM(require_jsx_runtime(), 1);
 var { DateCalendar, ValidatedInputControl } = unlock(import_components34.privateApis);
 var formatDateTime = (date) => {
   if (!date) {
@@ -18001,15 +24988,15 @@ function CalendarDateTimeControl({
     timezone: { string: timezoneString }
   } = (0, import_date4.getSettings)();
   const displayLabel = isValid2?.required && !hideLabelFromVision ? `${label} (${(0, import_i18n35.__)("Required")})` : label;
-  return /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime97.jsx)(
     import_components34.BaseControl,
     {
       id,
       label: displayLabel,
       help: description,
       hideLabelFromVision,
-      children: /* @__PURE__ */ (0, import_jsx_runtime95.jsxs)(Stack, { direction: "column", gap: "md", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime97.jsxs)(Stack, { direction: "column", gap: "md", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime97.jsx)(
           DateCalendar,
           {
             style: { width: "100%" },
@@ -18021,7 +25008,7 @@ function CalendarDateTimeControl({
             weekStartsOn
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime97.jsx)(
           ValidatedInputControl,
           {
             ref: inputControlRef,
@@ -18050,7 +25037,7 @@ function DateTime({
   validity
 }) {
   if (operator === OPERATOR_IN_THE_PAST || operator === OPERATOR_OVER) {
-    return /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime97.jsx)(
       RelativeDateControl,
       {
         className: "dataviews-controls__datetime",
@@ -18062,7 +25049,7 @@ function DateTime({
       }
     );
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime97.jsx)(
     CalendarDateTimeControl,
     {
       data,
@@ -18079,7 +25066,7 @@ var import_components35 = __toESM(require_components(), 1);
 var import_element44 = __toESM(require_element(), 1);
 var import_i18n36 = __toESM(require_i18n(), 1);
 var import_date5 = __toESM(require_date(), 1);
-var import_jsx_runtime96 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime98 = __toESM(require_jsx_runtime(), 1);
 var { DateCalendar: DateCalendar2, DateRangeCalendar } = unlock(import_components35.privateApis);
 var DATE_PRESETS = [
   {
@@ -18193,12 +25180,12 @@ function ValidatedDateControl({
   }, [inputRefs]);
   (0, import_element44.useEffect)(() => {
     const refs = Array.isArray(inputRefs) ? inputRefs : [inputRefs];
-    const result = validity ? getCustomValidity(isValid2, validity) : void 0;
+    const result2 = validity ? getCustomValidity(isValid2, validity) : void 0;
     for (const ref of refs) {
       const input = ref.current;
       if (input) {
         input.setCustomValidity(
-          result?.type === "invalid" && result.message ? result.message : ""
+          result2?.type === "invalid" && result2.message ? result2.message : ""
         );
       }
     }
@@ -18222,9 +25209,9 @@ function ValidatedDateControl({
     if (!isTouched) {
       return;
     }
-    const result = validity ? getCustomValidity(isValid2, validity) : void 0;
-    if (result) {
-      setCustomValidity(result);
+    const result2 = validity ? getCustomValidity(isValid2, validity) : void 0;
+    if (result2) {
+      setCustomValidity(result2);
     } else {
       validateRefs();
     }
@@ -18237,9 +25224,9 @@ function ValidatedDateControl({
       setIsTouched(true);
     }
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime96.jsxs)("div", { onBlur, children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime98.jsxs)("div", { onBlur, children: [
     children,
-    /* @__PURE__ */ (0, import_jsx_runtime96.jsx)("div", { "aria-live": "polite", children: customValidity && /* @__PURE__ */ (0, import_jsx_runtime96.jsxs)(
+    /* @__PURE__ */ (0, import_jsx_runtime98.jsx)("div", { "aria-live": "polite", children: customValidity && /* @__PURE__ */ (0, import_jsx_runtime98.jsxs)(
       "p",
       {
         className: clsx_default(
@@ -18248,7 +25235,7 @@ function ValidatedDateControl({
           customValidity.type === "valid" ? "is-valid" : void 0
         ),
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
             import_components35.Icon,
             {
               className: "components-validated-control__indicator-icon",
@@ -18332,7 +25319,7 @@ function CalendarDateControl({
     timezone: { string: timezoneString }
   } = (0, import_date5.getSettings)();
   const displayLabel = isValid2?.required ? `${label} (${(0, import_i18n36.__)("Required")})` : label;
-  return /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
     ValidatedDateControl,
     {
       field,
@@ -18340,15 +25327,15 @@ function CalendarDateControl({
       inputRefs: validityTargetRef,
       isTouched,
       setIsTouched,
-      children: /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
         import_components35.BaseControl,
         {
           id,
           className: "dataviews-controls__date",
           label: displayLabel,
           hideLabelFromVision,
-          children: /* @__PURE__ */ (0, import_jsx_runtime96.jsxs)(Stack, { direction: "column", gap: "md", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime96.jsxs)(
+          children: /* @__PURE__ */ (0, import_jsx_runtime98.jsxs)(Stack, { direction: "column", gap: "md", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime98.jsxs)(
               Stack,
               {
                 direction: "row",
@@ -18358,7 +25345,7 @@ function CalendarDateControl({
                 children: [
                   DATE_PRESETS.map((preset) => {
                     const isSelected2 = selectedPresetId === preset.id;
-                    return /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+                    return /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
                       import_components35.Button,
                       {
                         className: "dataviews-controls__date-preset",
@@ -18371,7 +25358,7 @@ function CalendarDateControl({
                       preset.id
                     );
                   }),
-                  /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
                     import_components35.Button,
                     {
                       className: "dataviews-controls__date-preset",
@@ -18386,7 +25373,7 @@ function CalendarDateControl({
                 ]
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
               import_components35.__experimentalInputControl,
               {
                 __next40pxDefaultSize: true,
@@ -18399,7 +25386,7 @@ function CalendarDateControl({
                 required: !!field.isValid?.required
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
               DateCalendar2,
               {
                 style: { width: "100%" },
@@ -18514,7 +25501,7 @@ function CalendarDateRangeControl({
   );
   const { timezone } = (0, import_date5.getSettings)();
   const displayLabel = field.isValid?.required ? `${label} (${(0, import_i18n36.__)("Required")})` : label;
-  return /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
     ValidatedDateControl,
     {
       field,
@@ -18522,15 +25509,15 @@ function CalendarDateRangeControl({
       inputRefs: [fromInputRef, toInputRef],
       isTouched,
       setIsTouched,
-      children: /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
         import_components35.BaseControl,
         {
           id,
           className: "dataviews-controls__date",
           label: displayLabel,
           hideLabelFromVision,
-          children: /* @__PURE__ */ (0, import_jsx_runtime96.jsxs)(Stack, { direction: "column", gap: "md", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime96.jsxs)(
+          children: /* @__PURE__ */ (0, import_jsx_runtime98.jsxs)(Stack, { direction: "column", gap: "md", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime98.jsxs)(
               Stack,
               {
                 direction: "row",
@@ -18540,7 +25527,7 @@ function CalendarDateRangeControl({
                 children: [
                   DATE_RANGE_PRESETS.map((preset) => {
                     const isSelected2 = selectedPresetId === preset.id;
-                    return /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+                    return /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
                       import_components35.Button,
                       {
                         className: "dataviews-controls__date-preset",
@@ -18553,7 +25540,7 @@ function CalendarDateRangeControl({
                       preset.id
                     );
                   }),
-                  /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
                     import_components35.Button,
                     {
                       className: "dataviews-controls__date-preset",
@@ -18568,7 +25555,7 @@ function CalendarDateRangeControl({
                 ]
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime96.jsxs)(
+            /* @__PURE__ */ (0, import_jsx_runtime98.jsxs)(
               Stack,
               {
                 direction: "row",
@@ -18576,7 +25563,7 @@ function CalendarDateRangeControl({
                 justify: "space-between",
                 className: "dataviews-controls__date-range-inputs",
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
                     import_components35.__experimentalInputControl,
                     {
                       __next40pxDefaultSize: true,
@@ -18589,7 +25576,7 @@ function CalendarDateRangeControl({
                       required: !!field.isValid?.required
                     }
                   ),
-                  /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
                     import_components35.__experimentalInputControl,
                     {
                       __next40pxDefaultSize: true,
@@ -18605,7 +25592,7 @@ function CalendarDateRangeControl({
                 ]
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
               DateRangeCalendar,
               {
                 style: { width: "100%" },
@@ -18632,7 +25619,7 @@ function DateControl({
   validity
 }) {
   if (operator === OPERATOR_IN_THE_PAST || operator === OPERATOR_OVER) {
-    return /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
       RelativeDateControl,
       {
         className: "dataviews-controls__date",
@@ -18645,7 +25632,7 @@ function DateControl({
     );
   }
   if (operator === OPERATOR_BETWEEN) {
-    return /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
       CalendarDateRangeControl,
       {
         data,
@@ -18656,7 +25643,7 @@ function DateControl({
       }
     );
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
     CalendarDateControl,
     {
       data,
@@ -18674,7 +25661,7 @@ var import_components37 = __toESM(require_components(), 1);
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/utils/validated-input.mjs
 var import_components36 = __toESM(require_components(), 1);
 var import_element45 = __toESM(require_element(), 1);
-var import_jsx_runtime97 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime99 = __toESM(require_jsx_runtime(), 1);
 var { ValidatedInputControl: ValidatedInputControl2 } = unlock(import_components36.privateApis);
 function ValidatedText({
   data,
@@ -18697,7 +25684,7 @@ function ValidatedText({
     ),
     [data, setValue, onChange]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime97.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime99.jsx)(
     ValidatedInputControl2,
     {
       required: !!isValid2.required,
@@ -18720,60 +25707,8 @@ function ValidatedText({
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/email.mjs
-var import_jsx_runtime98 = __toESM(require_jsx_runtime(), 1);
-function Email({
-  data,
-  field,
-  onChange,
-  hideLabelFromVision,
-  validity
-}) {
-  return /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(
-    ValidatedText,
-    {
-      ...{
-        data,
-        field,
-        onChange,
-        hideLabelFromVision,
-        validity,
-        type: "email",
-        prefix: /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(import_components37.__experimentalInputControlPrefixWrapper, { variant: "icon", children: /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(import_components37.Icon, { icon: envelope_default }) })
-      }
-    }
-  );
-}
-
-// ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/telephone.mjs
-var import_components38 = __toESM(require_components(), 1);
-var import_jsx_runtime99 = __toESM(require_jsx_runtime(), 1);
-function Telephone({
-  data,
-  field,
-  onChange,
-  hideLabelFromVision,
-  validity
-}) {
-  return /* @__PURE__ */ (0, import_jsx_runtime99.jsx)(
-    ValidatedText,
-    {
-      ...{
-        data,
-        field,
-        onChange,
-        hideLabelFromVision,
-        validity,
-        type: "tel",
-        prefix: /* @__PURE__ */ (0, import_jsx_runtime99.jsx)(import_components38.__experimentalInputControlPrefixWrapper, { variant: "icon", children: /* @__PURE__ */ (0, import_jsx_runtime99.jsx)(import_components38.Icon, { icon: mobile_default }) })
-      }
-    }
-  );
-}
-
-// ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/url.mjs
-var import_components39 = __toESM(require_components(), 1);
 var import_jsx_runtime100 = __toESM(require_jsx_runtime(), 1);
-function Url({
+function Email({
   data,
   field,
   onChange,
@@ -18789,8 +25724,60 @@ function Url({
         onChange,
         hideLabelFromVision,
         validity,
+        type: "email",
+        prefix: /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(import_components37.__experimentalInputControlPrefixWrapper, { variant: "icon", children: /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(import_components37.Icon, { icon: envelope_default }) })
+      }
+    }
+  );
+}
+
+// ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/telephone.mjs
+var import_components38 = __toESM(require_components(), 1);
+var import_jsx_runtime101 = __toESM(require_jsx_runtime(), 1);
+function Telephone({
+  data,
+  field,
+  onChange,
+  hideLabelFromVision,
+  validity
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime101.jsx)(
+    ValidatedText,
+    {
+      ...{
+        data,
+        field,
+        onChange,
+        hideLabelFromVision,
+        validity,
+        type: "tel",
+        prefix: /* @__PURE__ */ (0, import_jsx_runtime101.jsx)(import_components38.__experimentalInputControlPrefixWrapper, { variant: "icon", children: /* @__PURE__ */ (0, import_jsx_runtime101.jsx)(import_components38.Icon, { icon: mobile_default }) })
+      }
+    }
+  );
+}
+
+// ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/url.mjs
+var import_components39 = __toESM(require_components(), 1);
+var import_jsx_runtime102 = __toESM(require_jsx_runtime(), 1);
+function Url({
+  data,
+  field,
+  onChange,
+  hideLabelFromVision,
+  validity
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime102.jsx)(
+    ValidatedText,
+    {
+      ...{
+        data,
+        field,
+        onChange,
+        hideLabelFromVision,
+        validity,
         type: "url",
-        prefix: /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(import_components39.__experimentalInputControlPrefixWrapper, { variant: "icon", children: /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(import_components39.Icon, { icon: link_default }) })
+        prefix: /* @__PURE__ */ (0, import_jsx_runtime102.jsx)(import_components39.__experimentalInputControlPrefixWrapper, { variant: "icon", children: /* @__PURE__ */ (0, import_jsx_runtime102.jsx)(import_components39.Icon, { icon: link_default }) })
       }
     }
   );
@@ -18800,7 +25787,7 @@ function Url({
 var import_components40 = __toESM(require_components(), 1);
 var import_element46 = __toESM(require_element(), 1);
 var import_i18n37 = __toESM(require_i18n(), 1);
-var import_jsx_runtime101 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime103 = __toESM(require_jsx_runtime(), 1);
 var { ValidatedNumberControl } = unlock(import_components40.privateApis);
 function toNumberOrEmpty(value) {
   if (value === "" || value === void 0) {
@@ -18824,12 +25811,12 @@ function BetweenControls({
     (newValue) => onChange([min, toNumberOrEmpty(newValue)]),
     [onChange, min]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime101.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime103.jsx)(
     import_components40.BaseControl,
     {
       help: (0, import_i18n37.__)("The max. value must be greater than the min. value."),
-      children: /* @__PURE__ */ (0, import_jsx_runtime101.jsxs)(import_components40.Flex, { direction: "row", gap: 4, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime101.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime103.jsxs)(import_components40.Flex, { direction: "row", gap: 4, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime103.jsx)(
           import_components40.__experimentalNumberControl,
           {
             label: (0, import_i18n37.__)("Min."),
@@ -18841,7 +25828,7 @@ function BetweenControls({
             step
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime101.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime103.jsx)(
           import_components40.__experimentalNumberControl,
           {
             label: (0, import_i18n37.__)("Max."),
@@ -18901,7 +25888,7 @@ function ValidatedNumber({
     )) {
       valueBetween = value;
     }
-    return /* @__PURE__ */ (0, import_jsx_runtime101.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime103.jsx)(
       BetweenControls,
       {
         value: valueBetween,
@@ -18911,7 +25898,7 @@ function ValidatedNumber({
       }
     );
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime101.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime103.jsx)(
     ValidatedNumberControl,
     {
       required: !!isValid2.required,
@@ -18930,21 +25917,21 @@ function ValidatedNumber({
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/integer.mjs
-var import_jsx_runtime102 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime104 = __toESM(require_jsx_runtime(), 1);
 function Integer(props) {
-  return /* @__PURE__ */ (0, import_jsx_runtime102.jsx)(ValidatedNumber, { ...props });
+  return /* @__PURE__ */ (0, import_jsx_runtime104.jsx)(ValidatedNumber, { ...props });
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/number.mjs
-var import_jsx_runtime103 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime105 = __toESM(require_jsx_runtime(), 1);
 function Number2(props) {
-  return /* @__PURE__ */ (0, import_jsx_runtime103.jsx)(ValidatedNumber, { ...props });
+  return /* @__PURE__ */ (0, import_jsx_runtime105.jsx)(ValidatedNumber, { ...props });
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/radio.mjs
 var import_components41 = __toESM(require_components(), 1);
 var import_element47 = __toESM(require_element(), 1);
-var import_jsx_runtime104 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime106 = __toESM(require_jsx_runtime(), 1);
 var { ValidatedRadioControl } = unlock(import_components41.privateApis);
 function Radio({
   data,
@@ -18964,9 +25951,9 @@ function Radio({
     [data, onChange, setValue]
   );
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime104.jsx)(import_components41.Spinner, {});
+    return /* @__PURE__ */ (0, import_jsx_runtime106.jsx)(import_components41.Spinner, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime104.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime106.jsx)(
     ValidatedRadioControl,
     {
       required: !!field.isValid?.required,
@@ -18984,7 +25971,7 @@ function Radio({
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/select.mjs
 var import_components42 = __toESM(require_components(), 1);
 var import_element48 = __toESM(require_element(), 1);
-var import_jsx_runtime105 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime107 = __toESM(require_jsx_runtime(), 1);
 var { ValidatedSelectControl } = unlock(import_components42.privateApis);
 function Select({
   data,
@@ -19005,9 +25992,9 @@ function Select({
     getElements: field.getElements
   });
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime105.jsx)(import_components42.Spinner, {});
+    return /* @__PURE__ */ (0, import_jsx_runtime107.jsx)(import_components42.Spinner, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime105.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime107.jsx)(
     ValidatedSelectControl,
     {
       required: !!field.isValid?.required,
@@ -19026,7 +26013,7 @@ function Select({
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/text.mjs
 var import_element49 = __toESM(require_element(), 1);
-var import_jsx_runtime106 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime108 = __toESM(require_jsx_runtime(), 1);
 function Text2({
   data,
   field,
@@ -19036,7 +26023,7 @@ function Text2({
   validity
 }) {
   const { prefix, suffix } = config || {};
-  return /* @__PURE__ */ (0, import_jsx_runtime106.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime108.jsx)(
     ValidatedText,
     {
       ...{
@@ -19055,7 +26042,7 @@ function Text2({
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/toggle.mjs
 var import_components43 = __toESM(require_components(), 1);
 var import_element50 = __toESM(require_element(), 1);
-var import_jsx_runtime107 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime109 = __toESM(require_jsx_runtime(), 1);
 var { ValidatedToggleControl } = unlock(import_components43.privateApis);
 function Toggle({
   field,
@@ -19070,7 +26057,7 @@ function Toggle({
       setValue({ item: data, value: !getValue({ item: data }) })
     );
   }, [onChange, setValue, data, getValue]);
-  return /* @__PURE__ */ (0, import_jsx_runtime107.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime109.jsx)(
     ValidatedToggleControl,
     {
       required: !!isValid2.required,
@@ -19087,7 +26074,7 @@ function Toggle({
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/textarea.mjs
 var import_components44 = __toESM(require_components(), 1);
 var import_element51 = __toESM(require_element(), 1);
-var import_jsx_runtime108 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime110 = __toESM(require_jsx_runtime(), 1);
 var { ValidatedTextareaControl } = unlock(import_components44.privateApis);
 function Textarea({
   data,
@@ -19104,7 +26091,7 @@ function Textarea({
     (newValue) => onChange(setValue({ item: data, value: newValue })),
     [data, onChange, setValue]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime108.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(
     ValidatedTextareaControl,
     {
       required: !!isValid2.required,
@@ -19126,7 +26113,7 @@ function Textarea({
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/toggle-group.mjs
 var import_components45 = __toESM(require_components(), 1);
 var import_element52 = __toESM(require_element(), 1);
-var import_jsx_runtime109 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime111 = __toESM(require_jsx_runtime(), 1);
 var { ValidatedToggleGroupControl } = unlock(import_components45.privateApis);
 function ToggleGroup({
   data,
@@ -19146,13 +26133,13 @@ function ToggleGroup({
     getElements: field.getElements
   });
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime109.jsx)(import_components45.Spinner, {});
+    return /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(import_components45.Spinner, {});
   }
   if (elements.length === 0) {
     return null;
   }
   const selectedOption = elements.find((el) => el.value === value);
-  return /* @__PURE__ */ (0, import_jsx_runtime109.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(
     ValidatedToggleGroupControl,
     {
       required: !!field.isValid?.required,
@@ -19164,7 +26151,7 @@ function ToggleGroup({
       onChange: onChangeControl,
       value,
       hideLabelFromVision,
-      children: elements.map((el) => /* @__PURE__ */ (0, import_jsx_runtime109.jsx)(
+      children: elements.map((el) => /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(
         import_components45.__experimentalToggleGroupControlOption,
         {
           label: el.label,
@@ -19179,7 +26166,7 @@ function ToggleGroup({
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/array.mjs
 var import_components46 = __toESM(require_components(), 1);
 var import_element53 = __toESM(require_element(), 1);
-var import_jsx_runtime110 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime112 = __toESM(require_jsx_runtime(), 1);
 var { ValidatedFormTokenField } = unlock(import_components46.privateApis);
 function ArrayControl({
   data,
@@ -19216,9 +26203,9 @@ function ArrayControl({
     [onChange, setValue, data]
   );
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(import_components46.Spinner, {});
+    return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(import_components46.Spinner, {});
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(
     ValidatedFormTokenField,
     {
       required: !!isValid2?.required,
@@ -19255,9 +26242,9 @@ function ArrayControl({
           const element = elements.find(
             (el) => el.value === item
           );
-          return /* @__PURE__ */ (0, import_jsx_runtime110.jsx)("span", { children: element?.label || item });
+          return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)("span", { children: element?.label || item });
         }
-        return /* @__PURE__ */ (0, import_jsx_runtime110.jsx)("span", { children: item });
+        return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)("span", { children: item });
       }
     }
   );
@@ -19424,17 +26411,17 @@ var w = function(r3) {
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/color.mjs
 var import_components47 = __toESM(require_components(), 1);
 var import_element54 = __toESM(require_element(), 1);
-var import_jsx_runtime111 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime113 = __toESM(require_jsx_runtime(), 1);
 var { ValidatedInputControl: ValidatedInputControl3, Picker } = unlock(import_components47.privateApis);
 var ColorPicker = ({
   color,
   onColorChange
 }) => {
   const validColor = color && w(color).isValid() ? color : "#ffffff";
-  return /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime113.jsx)(
     import_components47.Dropdown,
     {
-      renderToggle: ({ onToggle, isOpen }) => /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(import_components47.__experimentalInputControlPrefixWrapper, { variant: "icon", children: /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(
+      renderToggle: ({ onToggle, isOpen }) => /* @__PURE__ */ (0, import_jsx_runtime113.jsx)(import_components47.__experimentalInputControlPrefixWrapper, { variant: "icon", children: /* @__PURE__ */ (0, import_jsx_runtime113.jsx)(
         "button",
         {
           type: "button",
@@ -19457,7 +26444,7 @@ var ColorPicker = ({
           "aria-label": "Open color picker"
         }
       ) }),
-      renderContent: () => /* @__PURE__ */ (0, import_jsx_runtime111.jsx)("div", { style: { padding: "16px" }, children: /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(
+      renderContent: () => /* @__PURE__ */ (0, import_jsx_runtime113.jsx)("div", { style: { padding: "16px" }, children: /* @__PURE__ */ (0, import_jsx_runtime113.jsx)(
         Picker,
         {
           color: w(validColor),
@@ -19489,7 +26476,7 @@ function Color({
     },
     [data, onChange, setValue]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime113.jsx)(
     ValidatedInputControl3,
     {
       required: !!field.isValid?.required,
@@ -19501,7 +26488,7 @@ function Color({
       onChange: handleInputChange,
       hideLabelFromVision,
       type: "text",
-      prefix: /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(
+      prefix: /* @__PURE__ */ (0, import_jsx_runtime113.jsx)(
         ColorPicker,
         {
           color: value,
@@ -19516,7 +26503,7 @@ function Color({
 var import_components48 = __toESM(require_components(), 1);
 var import_element55 = __toESM(require_element(), 1);
 var import_i18n38 = __toESM(require_i18n(), 1);
-var import_jsx_runtime112 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime114 = __toESM(require_jsx_runtime(), 1);
 function Password({
   data,
   field,
@@ -19528,7 +26515,7 @@ function Password({
   const toggleVisibility = (0, import_element55.useCallback)(() => {
     setIsVisible((prev) => !prev);
   }, []);
-  return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime114.jsx)(
     ValidatedText,
     {
       ...{
@@ -19538,7 +26525,7 @@ function Password({
         hideLabelFromVision,
         validity,
         type: isVisible2 ? "text" : "password",
-        suffix: /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(import_components48.__experimentalInputControlSuffixWrapper, { variant: "control", children: /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(
+        suffix: /* @__PURE__ */ (0, import_jsx_runtime114.jsx)(import_components48.__experimentalInputControlSuffixWrapper, { variant: "control", children: /* @__PURE__ */ (0, import_jsx_runtime114.jsx)(
           import_components48.Button,
           {
             icon: isVisible2 ? unseen_default : seen_default,
@@ -19558,7 +26545,7 @@ function hasElements(field) {
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/index.mjs
-var import_jsx_runtime113 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime115 = __toESM(require_jsx_runtime(), 1);
 var FORM_CONTROLS = {
   array: ArrayControl,
   checkbox: Checkbox,
@@ -19589,7 +26576,7 @@ function createConfiguredControl(config) {
     return null;
   }
   return function ConfiguredControl(props) {
-    return /* @__PURE__ */ (0, import_jsx_runtime113.jsx)(BaseControlType, { ...props, config: controlConfig });
+    return /* @__PURE__ */ (0, import_jsx_runtime115.jsx)(BaseControlType, { ...props, config: controlConfig });
   };
 }
 function getControl(field, fallback) {
@@ -19653,14 +26640,14 @@ var get_value_from_id_default = getValueFromId;
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/field-types/utils/set-value-from-id.mjs
 var setValueFromId = (id) => ({ value }) => {
   const path = id.split(".");
-  const result = {};
-  let current = result;
+  const result2 = {};
+  let current = result2;
   for (const segment of path.slice(0, -1)) {
     current[segment] = {};
     current = current[segment];
   }
   current[path.at(-1)] = value;
-  return result;
+  return result2;
 };
 var set_value_from_id_default = setValueFromId;
 
@@ -19687,13 +26674,13 @@ function RenderFromElements({
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/field-types/utils/render-default.mjs
-var import_jsx_runtime114 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime116 = __toESM(require_jsx_runtime(), 1);
 function render({
   item,
   field
 }) {
   if (field.hasElements) {
-    return /* @__PURE__ */ (0, import_jsx_runtime114.jsx)(RenderFromElements, { item, field });
+    return /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(RenderFromElements, { item, field });
   }
   return field.getValueFormatted({ item, field });
 }
@@ -19943,13 +26930,13 @@ function getValueFormatted3({
   if (!Number.isFinite(value)) {
     return String(value);
   }
-  let formatNumber2;
+  let formatNumber5;
   if (field.type !== "number") {
-    formatNumber2 = format3;
+    formatNumber5 = format3;
   } else {
-    formatNumber2 = field.format;
+    formatNumber5 = field.format;
   }
-  const { separatorThousand, separatorDecimal, decimals } = formatNumber2;
+  const { separatorThousand, separatorDecimal, decimals } = formatNumber5;
   const fixedValue = value.toFixed(decimals);
   const [integerPart, decimalPart] = fixedValue.split(".");
   const formattedInteger = separatorThousand ? integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, separatorThousand) : integerPart;
@@ -20371,17 +27358,17 @@ var telephone_default = {
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/field-types/color.mjs
 var import_i18n44 = __toESM(require_i18n(), 1);
-var import_jsx_runtime115 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime117 = __toESM(require_jsx_runtime(), 1);
 function render3({ item, field }) {
   if (field.hasElements) {
-    return /* @__PURE__ */ (0, import_jsx_runtime115.jsx)(RenderFromElements, { item, field });
+    return /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(RenderFromElements, { item, field });
   }
   const value = get_value_formatted_default_default({ item, field });
   if (!value || !w(value).isValid()) {
     return value;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime115.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: "8px" }, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime115.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime117.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: "8px" }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(
       "div",
       {
         style: {
@@ -20394,7 +27381,7 @@ function render3({ item, field }) {
         }
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime115.jsx)("span", { children: value })
+    /* @__PURE__ */ (0, import_jsx_runtime117.jsx)("span", { children: value })
   ] });
 }
 function isValidCustom6(item, field) {
@@ -20656,7 +27643,7 @@ function normalizeFields(fields) {
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
-var import_jsx_runtime116 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime118 = __toESM(require_jsx_runtime(), 1);
 var defaultGetItemId = (item) => item.id;
 var defaultIsItemClickable = () => true;
 var EMPTY_ARRAY6 = [];
@@ -20668,8 +27655,8 @@ function DefaultUI({
   search = true,
   searchLabel = void 0
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime116.jsxs)(import_jsx_runtime116.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime116.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime118.jsxs)(import_jsx_runtime118.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime118.jsxs)(
       Stack,
       {
         direction: "row",
@@ -20678,7 +27665,7 @@ function DefaultUI({
         className: "dataviews__view-actions",
         gap: "2xs",
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime116.jsxs)(
+          /* @__PURE__ */ (0, import_jsx_runtime118.jsxs)(
             Stack,
             {
               direction: "row",
@@ -20686,21 +27673,21 @@ function DefaultUI({
               gap: "xs",
               className: "dataviews__search",
               children: [
-                search && /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(dataviews_search_default, { label: searchLabel }),
-                /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(toggle_default, {})
+                search && /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(dataviews_search_default, { label: searchLabel }),
+                /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(toggle_default, {})
               ]
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime116.jsxs)(Stack, { direction: "row", gap: "2xs", style: { flexShrink: 0 }, children: [
-            /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(dataviews_view_config_default, {}),
+          /* @__PURE__ */ (0, import_jsx_runtime118.jsxs)(Stack, { direction: "row", gap: "2xs", style: { flexShrink: 0 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(dataviews_view_config_default, {}),
             header
           ] })
         ]
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(filters_toggled_default, { className: "dataviews-filters__container" }),
-    /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(DataViewsLayout, {}),
-    /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(DataViewsFooter, {})
+    /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(filters_toggled_default, { className: "dataviews-filters__container" }),
+    /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(DataViewsLayout, {}),
+    /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(DataViewsFooter, {})
   ] });
 }
 function DataViews({
@@ -20806,7 +27793,7 @@ function DataViews({
   if (!defaultLayouts3[view.type]) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(
     dataviews_context_default.Provider,
     {
       value: {
@@ -20837,7 +27824,7 @@ function DataViews({
         empty,
         hasInfiniteScrollHandler: !!infiniteScrollHandler
       },
-      children: /* @__PURE__ */ (0, import_jsx_runtime116.jsx)("div", { className: "dataviews-wrapper", ref: containerRef, children: children ?? /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime118.jsx)("div", { className: "dataviews-wrapper", ref: containerRef, children: children ?? /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(
         DefaultUI,
         {
           header,
@@ -21116,11 +28103,11 @@ var import_i18n46 = __toESM(require_i18n(), 1);
 
 // src/icons/akismet.tsx
 var import_i18n45 = __toESM(require_i18n(), 1);
-var import_primitives40 = __toESM(require_primitives(), 1);
-var import_jsx_runtime117 = __toESM(require_jsx_runtime(), 1);
+var import_primitives42 = __toESM(require_primitives(), 1);
+var import_jsx_runtime119 = __toESM(require_jsx_runtime(), 1);
 var AkismetIcon = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime117.jsxs)(
-    import_primitives40.SVG,
+  return /* @__PURE__ */ (0, import_jsx_runtime119.jsxs)(
+    import_primitives42.SVG,
     {
       width: props.width || 46,
       height: props.height || 46,
@@ -21131,39 +28118,39 @@ var AkismetIcon = (props) => {
       "aria-label": (0, import_i18n45.__)("Akismet icon", "jetpack-forms"),
       ...props,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(import_primitives40.Rect, { width: "46", height: "46", rx: "8", fill: "#357B49" }),
-        /* @__PURE__ */ (0, import_jsx_runtime117.jsxs)(import_primitives40.G, { clipPath: "url(#clip0_3308_44290)", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(
-            import_primitives40.Path,
+        /* @__PURE__ */ (0, import_jsx_runtime119.jsx)(import_primitives42.Rect, { width: "46", height: "46", rx: "8", fill: "#357B49" }),
+        /* @__PURE__ */ (0, import_jsx_runtime119.jsxs)(import_primitives42.G, { clipPath: "url(#clip0_3308_44290)", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime119.jsx)(
+            import_primitives42.Path,
             {
               d: "M24.4162 12.0335L31.0989 29.5939C31.6753 31.0964 32.5607 31.641 34.0748 31.7683C34.1301 31.7708 34.1843 31.7847 34.2341 31.8089C34.2839 31.8332 34.3281 31.8675 34.3641 31.9095C34.4001 31.9515 34.4271 32.0005 34.4435 32.0534C34.4598 32.1063 34.4651 32.162 34.459 32.217C34.4613 32.2738 34.4522 32.3305 34.4324 32.3837C34.4125 32.437 34.3823 32.4858 34.3435 32.5274C34.3046 32.5689 34.2579 32.6023 34.2061 32.6257C34.1542 32.6491 34.0982 32.6619 34.0414 32.6635H26.7218C26.6626 32.665 26.6037 32.6544 26.5488 32.6325C26.4938 32.6106 26.4438 32.5778 26.4019 32.536C26.3599 32.4943 26.3268 32.4445 26.3047 32.3897C26.2825 32.3349 26.2716 32.2761 26.2728 32.217C26.2684 32.1596 26.276 32.1019 26.2951 32.0476C26.3141 31.9933 26.3442 31.9435 26.3834 31.9014C26.4227 31.8593 26.4702 31.8257 26.523 31.8028C26.5758 31.7799 26.6328 31.7681 26.6904 31.7683C27.4255 31.7683 28.2588 31.5763 28.2588 30.6811C28.2523 30.3078 28.1758 29.939 28.0332 29.5939L26.4294 25.3389C26.3646 25.1469 26.3333 25.0822 26.1412 25.0822H20.0328C19.0722 25.0822 17.8881 25.0822 17.3431 26.2988L15.8812 29.5939C15.7326 29.8928 15.6452 30.2185 15.6244 30.5517C15.6244 31.7036 17.13 31.7683 17.9215 31.7683C17.9791 31.7681 18.0361 31.7799 18.0889 31.8028C18.1418 31.8257 18.1893 31.8593 18.2285 31.9014C18.2677 31.9435 18.2978 31.9933 18.3169 32.0476C18.3359 32.1019 18.3435 32.1596 18.3392 32.217C18.3404 32.2762 18.3294 32.335 18.3071 32.3899C18.2848 32.4448 18.2515 32.4945 18.2093 32.5361C18.1671 32.5777 18.1168 32.6103 18.0616 32.6318C18.0064 32.6534 17.9474 32.6635 17.8881 32.6615H11.3934C11.3343 32.6629 11.2756 32.6523 11.2207 32.6304C11.1658 32.6084 11.116 32.5756 11.0742 32.5338C11.0324 32.4921 10.9995 32.4423 10.9776 32.3875C10.9556 32.3326 10.9451 32.2739 10.9465 32.2149C10.9422 32.1575 10.9498 32.0998 10.9688 32.0455C10.9879 31.9912 11.0179 31.9414 11.0572 31.8993C11.0964 31.8572 11.1439 31.8236 11.1967 31.8007C11.2496 31.7778 11.3066 31.7661 11.3642 31.7662C12.9325 31.6702 13.4525 30.9315 14.0518 29.5918L21.7661 12.7033C22.1191 11.9667 22.8876 11.3281 23.5913 11.3281C24.0967 11.3302 24.2575 11.6182 24.4162 12.0335ZM18.5689 23.4837C18.5302 23.5406 18.5078 23.607 18.5042 23.6757C18.5042 23.7404 18.5689 23.7717 18.6963 23.7717H25.0344C25.4813 23.7717 25.6734 23.6757 25.6734 23.3877C25.6728 23.2432 25.64 23.1006 25.5773 22.9704L23.8169 18.2354C23.3992 17.1482 22.7936 15.7104 22.6015 14.5251C22.6015 14.4625 22.5681 14.4291 22.5367 14.4291C22.5054 14.4291 22.4741 14.4625 22.4741 14.5251C22.2337 15.3401 21.9228 16.1326 21.5448 16.8936L18.5689 23.4837Z",
               fill: "white"
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(
-            import_primitives40.Path,
+          /* @__PURE__ */ (0, import_jsx_runtime119.jsx)(
+            import_primitives42.Path,
             {
               d: "M24.4162 12.0335L31.0989 29.5939C31.6753 31.0964 32.5607 31.641 34.0748 31.7683C34.1301 31.7708 34.1843 31.7847 34.2341 31.809C34.2839 31.8332 34.3281 31.8675 34.3641 31.9095C34.4001 31.9516 34.4271 32.0005 34.4435 32.0534C34.4598 32.1063 34.4651 32.162 34.459 32.217C34.4613 32.2738 34.4522 32.3305 34.4324 32.3837C34.4125 32.437 34.3823 32.4858 34.3435 32.5274C34.3046 32.5689 34.2579 32.6023 34.2061 32.6257C34.1542 32.6491 34.0982 32.6619 34.0414 32.6636H26.7218C26.6626 32.665 26.6037 32.6544 26.5488 32.6325C26.4938 32.6106 26.4438 32.5778 26.4019 32.536C26.3599 32.4943 26.3268 32.4445 26.3047 32.3897C26.2825 32.3349 26.2716 32.2761 26.2728 32.217C26.2684 32.1596 26.276 32.1019 26.2951 32.0476C26.3141 31.9933 26.3442 31.9435 26.3834 31.9014C26.4227 31.8593 26.4702 31.8257 26.523 31.8028C26.5758 31.7799 26.6328 31.7682 26.6904 31.7683C27.4255 31.7683 28.2588 31.5763 28.2588 30.6811C28.2523 30.3078 28.1758 29.939 28.0332 29.5939L26.4294 25.3389C26.3647 25.1469 26.3333 25.0822 26.1412 25.0822H20.0328C19.0722 25.0822 17.8881 25.0822 17.3431 26.2988L15.8812 29.5939C15.7326 29.8929 15.6452 30.2185 15.6244 30.5517C15.6244 31.7036 17.13 31.7683 17.9215 31.7683C17.9791 31.7682 18.0361 31.7799 18.0889 31.8028C18.1418 31.8257 18.1893 31.8593 18.2285 31.9014C18.2677 31.9435 18.2978 31.9933 18.3169 32.0476C18.3359 32.1019 18.3435 32.1596 18.3392 32.217C18.3404 32.2762 18.3294 32.335 18.3071 32.3899C18.2848 32.4448 18.2515 32.4945 18.2093 32.5361C18.1671 32.5777 18.1168 32.6103 18.0616 32.6318C18.0064 32.6534 17.9474 32.6635 17.8881 32.6615H11.3934C11.3343 32.6629 11.2756 32.6523 11.2207 32.6304C11.1658 32.6084 11.116 32.5756 11.0742 32.5339C11.0324 32.4921 10.9995 32.4423 10.9776 32.3875C10.9556 32.3326 10.9451 32.2739 10.9465 32.2149C10.9422 32.1575 10.9498 32.0999 10.9688 32.0455C10.9879 31.9912 11.0179 31.9415 11.0572 31.8993C11.0964 31.8572 11.1439 31.8236 11.1967 31.8007C11.2496 31.7778 11.3066 31.7661 11.3642 31.7662C12.9325 31.6702 13.4525 30.9315 14.0518 29.5918L21.7661 12.7033C22.1191 11.9667 22.8876 11.3281 23.5913 11.3281C24.0967 11.3302 24.2575 11.6182 24.4162 12.0335ZM18.5689 23.4837C18.5302 23.5406 18.5078 23.607 18.5042 23.6757C18.5042 23.7404 18.5689 23.7717 18.6963 23.7717H25.0344C25.4813 23.7717 25.6734 23.6757 25.6734 23.3877C25.6728 23.2432 25.64 23.1006 25.5774 22.9704L23.8169 18.2354C23.3992 17.1482 22.7936 15.7104 22.6015 14.5251C22.6015 14.4625 22.5681 14.4291 22.5367 14.4291C22.5054 14.4291 22.4741 14.4625 22.4741 14.5251C22.2337 15.3401 21.9228 16.1326 21.5448 16.8936L18.5689 23.4837Z",
               fill: "white"
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(
-            import_primitives40.Path,
+          /* @__PURE__ */ (0, import_jsx_runtime119.jsx)(
+            import_primitives42.Path,
             {
               d: "M36.4557 22.7333C36.4557 23.5555 35.99 24.0209 35.1484 24.0209C34.3068 24.0209 33.9727 23.5931 33.9727 22.9399C33.9727 22.1177 34.4592 21.6523 35.28 21.6523C36.1007 21.6523 36.4557 22.0989 36.4557 22.7333Z",
               fill: "white"
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(
-            import_primitives40.Path,
+          /* @__PURE__ */ (0, import_jsx_runtime119.jsx)(
+            import_primitives42.Path,
             {
               d: "M11.3739 22.7588C11.3739 23.5789 10.9061 24.0464 10.0666 24.0464C9.22712 24.0464 8.88672 23.6165 8.88672 22.9633C8.88672 22.1432 9.3733 21.6758 10.194 21.6758C11.0147 21.6758 11.3739 22.1244 11.3739 22.7588Z",
               fill: "white"
             }
           )
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(import_primitives40.Defs, { children: /* @__PURE__ */ (0, import_jsx_runtime117.jsx)("clipPath", { id: "clip0_3308_44290", children: /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(
-          import_primitives40.Rect,
+        /* @__PURE__ */ (0, import_jsx_runtime119.jsx)(import_primitives42.Defs, { children: /* @__PURE__ */ (0, import_jsx_runtime119.jsx)("clipPath", { id: "clip0_3308_44290", children: /* @__PURE__ */ (0, import_jsx_runtime119.jsx)(
+          import_primitives42.Rect,
           {
             width: "27.5556",
             height: "21.3333",
@@ -21178,7 +28165,7 @@ var AkismetIcon = (props) => {
 var akismet_default = AkismetIcon;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/akismet.tsx
-var import_jsx_runtime118 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime120 = __toESM(require_jsx_runtime(), 1);
 function buildAkismetCard({
   integration,
   refreshIntegrations: refreshIntegrations2,
@@ -21194,7 +28181,7 @@ function buildAkismetCard({
     id: integration.id,
     title: integration.title,
     description: integration.subtitle,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(akismet_default, { width: 28, height: 28 }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime120.jsx)(akismet_default, { width: 28, height: 28 }),
     cardData: {
       ...integration,
       isLoading: typeof integration.isInstalled === "undefined",
@@ -21207,7 +28194,7 @@ function buildAkismetCard({
           "Add one-click spam protection for your forms with <a>Akismet</a>. Simply install the plugin and you're set.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(import_components49.ExternalLink, { href: marketingUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime120.jsx)(import_components49.ExternalLink, { href: marketingUrl, children: null }) }
       ),
       notActivatedMessage: (0, import_i18n46.__)(
         "Akismet is installed. Just activate the plugin to start blocking spam.",
@@ -21216,15 +28203,15 @@ function buildAkismetCard({
       trackEventName: "jetpack_forms_upsell_akismet_click"
     },
     toggleTooltip: (0, import_i18n46.__)("We keep your forms protected", "jetpack-forms"),
-    body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime118.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime118.jsx)("p", { className: "integration-card__description", children: (0, import_element57.createInterpolateElement)(
+    body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime120.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime120.jsx)("p", { className: "integration-card__description", children: (0, import_element57.createInterpolateElement)(
         (0, import_i18n46.__)(
           "Akismet is active. There is one step left. Please add your <a>Akismet key</a>.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(import_components49.ExternalLink, { href: settingsUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime120.jsx)(import_components49.ExternalLink, { href: settingsUrl, children: null }) }
       ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime120.jsx)(
         import_components49.Button,
         {
           variant: "secondary",
@@ -21235,16 +28222,16 @@ function buildAkismetCard({
           children: (0, import_i18n46.__)("Add Akismet key", "jetpack-forms")
         }
       )
-    ] }) : /* @__PURE__ */ (0, import_jsx_runtime118.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime118.jsx)("p", { className: "integration-card__description", children: (0, import_i18n46.__)("Your forms are automatically protected with Akismet.", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime118.jsxs)(import_components49.__experimentalHStack, { spacing: "2", justify: "start", className: "integration-card__links", children: [
-        context === "dashboard" && handlers?.goToSpam ? /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(import_components49.Button, { variant: "link", onClick: handlers.goToSpam, children: (0, import_i18n46.__)("View spam", "jetpack-forms") }) : /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(import_components49.Button, { variant: "link", href: spamUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n46.__)("View spam", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime118.jsx)("span", { children: "|" }),
-        settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime118.jsxs)(import_jsx_runtime118.Fragment, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(import_components49.Button, { variant: "link", href: settingsUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n46.__)("View stats and settings", "jetpack-forms") }),
-          /* @__PURE__ */ (0, import_jsx_runtime118.jsx)("span", { children: "|" })
+    ] }) : /* @__PURE__ */ (0, import_jsx_runtime120.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime120.jsx)("p", { className: "integration-card__description", children: (0, import_i18n46.__)("Your forms are automatically protected with Akismet.", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime120.jsxs)(import_components49.__experimentalHStack, { spacing: "2", justify: "start", className: "integration-card__links", children: [
+        context === "dashboard" && handlers?.goToSpam ? /* @__PURE__ */ (0, import_jsx_runtime120.jsx)(import_components49.Button, { variant: "link", onClick: handlers.goToSpam, children: (0, import_i18n46.__)("View spam", "jetpack-forms") }) : /* @__PURE__ */ (0, import_jsx_runtime120.jsx)(import_components49.Button, { variant: "link", href: spamUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n46.__)("View spam", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime120.jsx)("span", { children: "|" }),
+        settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime120.jsxs)(import_jsx_runtime120.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime120.jsx)(import_components49.Button, { variant: "link", href: settingsUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n46.__)("View stats and settings", "jetpack-forms") }),
+          /* @__PURE__ */ (0, import_jsx_runtime120.jsx)("span", { children: "|" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime118.jsx)(import_components49.ExternalLink, { href: getRedirectUrl("akismet-jetpack-forms-docs"), children: (0, import_i18n46.__)("Learn about Akismet", "jetpack-forms") })
+        /* @__PURE__ */ (0, import_jsx_runtime120.jsx)(import_components49.ExternalLink, { href: getRedirectUrl("akismet-jetpack-forms-docs"), children: (0, import_i18n46.__)("Learn about Akismet", "jetpack-forms") })
       ] })
     ] })
   };
@@ -21256,20 +28243,20 @@ var import_components52 = __toESM(require_components(), 1);
 var import_i18n49 = __toESM(require_i18n(), 1);
 
 // src/icons/google-sheets.tsx
-var import_primitives41 = __toESM(require_primitives(), 1);
-var import_jsx_runtime119 = __toESM(require_jsx_runtime(), 1);
+var import_primitives43 = __toESM(require_primitives(), 1);
+var import_jsx_runtime121 = __toESM(require_jsx_runtime(), 1);
 var GoogleSheetsIcon = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime119.jsxs)(import_primitives41.SVG, { viewBox: "0 0 64 88", width: props.width || 28, height: props.height || 28, ...props, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime119.jsx)(import_primitives41.Path, { d: "M 42,0 64,22 53,24 42,22 40,11 Z", fill: "#188038" }),
-    /* @__PURE__ */ (0, import_jsx_runtime119.jsx)(
-      import_primitives41.Path,
+  return /* @__PURE__ */ (0, import_jsx_runtime121.jsxs)(import_primitives43.SVG, { viewBox: "0 0 64 88", width: props.width || 28, height: props.height || 28, ...props, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(import_primitives43.Path, { d: "M 42,0 64,22 53,24 42,22 40,11 Z", fill: "#188038" }),
+    /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
+      import_primitives43.Path,
       {
         d: "M 42,22 V 0 H 6 C 2.685,0 0,2.685 0,6 v 76 c 0,3.315 2.685,6 6,6 h 52 c 3.315,0 6,-2.685 6,-6 V 22 Z",
         fill: "#34a853"
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime119.jsx)(
-      import_primitives41.Path,
+    /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
+      import_primitives43.Path,
       {
         d: "M 12,34 V 63 H 52 V 34 Z M 29.5,58 H 17 v -7 h 12.5 z m 0,-12 H 17 V 39 H 29.5 Z M 47,58 H 34.5 V 51 H 47 Z M 47,46 H 34.5 V 39 H 47 Z",
         fill: "#fff"
@@ -21346,13 +28333,13 @@ var requestExternalAccess = (url, cb) => {
   let lastMessage;
   popupMonitor.open(url, null, "toolbar=0,location=0,status=0,menubar=0," + popupMonitor.getScreenCenterSpecs(780, 700));
   popupMonitor.once("close", () => {
-    const result = {};
+    const result2 = {};
     if (lastMessage && lastMessage.keyring_id) {
-      result.keyring_id = Number(lastMessage.keyring_id);
-      result.id_token = lastMessage.id_token;
-      result.user = lastMessage.user;
+      result2.keyring_id = Number(lastMessage.keyring_id);
+      result2.id_token = lastMessage.id_token;
+      result2.user = lastMessage.user;
     }
-    cb(result);
+    cb(result2);
   });
   popupMonitor.on("message", (message2) => lastMessage = message2);
 };
@@ -21362,7 +28349,7 @@ var esm_default2 = requestExternalAccess;
 var import_components50 = __toESM(require_components(), 1);
 var import_element58 = __toESM(require_element(), 1);
 var import_i18n47 = __toESM(require_i18n(), 1);
-var import_jsx_runtime120 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime122 = __toESM(require_jsx_runtime(), 1);
 function GoogleDriveConnectButton({
   settingsUrl,
   onConnected,
@@ -21385,7 +28372,7 @@ function GoogleDriveConnectButton({
       }
     });
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime120.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(
     import_components50.Button,
     {
       variant: "secondary",
@@ -21402,7 +28389,7 @@ var import_api_fetch = __toESM(require_api_fetch(), 1);
 var import_components51 = __toESM(require_components(), 1);
 var import_element59 = __toESM(require_element(), 1);
 var import_i18n48 = __toESM(require_i18n(), 1);
-var import_jsx_runtime121 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime123 = __toESM(require_jsx_runtime(), 1);
 function GoogleDriveDisconnectButton({ onDisconnected, isConnected }) {
   const disconnectingText = (0, import_i18n48.__)("Disconnecting\u2026", "jetpack-forms");
   const disconnectText = (0, import_i18n48.__)("Disconnect Google Drive", "jetpack-forms");
@@ -21420,11 +28407,11 @@ function GoogleDriveDisconnectButton({ onDisconnected, isConnected }) {
       setIsToggling(false);
     });
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(import_components51.Button, { variant: "link", onClick: handleClick, disabled: isToggling, children: isToggling ? disconnectingText : disconnectText });
+  return /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(import_components51.Button, { variant: "link", onClick: handleClick, disabled: isToggling, children: isToggling ? disconnectingText : disconnectText });
 }
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/google-drive.tsx
-var import_jsx_runtime122 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime124 = __toESM(require_jsx_runtime(), 1);
 function buildGoogleDriveCard({
   integration,
   refreshIntegrations: refreshIntegrations2,
@@ -21439,7 +28426,7 @@ function buildGoogleDriveCard({
     id: integration.id,
     title: integration.title,
     description: integration.subtitle,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(google_sheets_default, { className: "google-sheets-icon" }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(google_sheets_default, { className: "google-sheets-icon" }),
     cardData: {
       ...integration,
       isLoading: typeof integration.isInstalled === "undefined",
@@ -21449,12 +28436,12 @@ function buildGoogleDriveCard({
       isActive: !!integration.isConnected,
       trackEventName: "jetpack_forms_upsell_googledrive_click"
     },
-    body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime122.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime122.jsx)("p", { className: "integration-card__description", children: (0, import_i18n49.__)(
+    body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime124.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime124.jsx)("p", { className: "integration-card__description", children: (0, import_i18n49.__)(
         "Connect your site to Google Drive to export form responses directly to Google Sheets.",
         "jetpack-forms"
       ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(
         GoogleDriveConnectButton,
         {
           settingsUrl,
@@ -21462,15 +28449,15 @@ function buildGoogleDriveCard({
           isConnected
         }
       )
-    ] }) : /* @__PURE__ */ (0, import_jsx_runtime122.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime122.jsx)("p", { className: "integration-card__description", children: (0, import_i18n49.__)(
+    ] }) : /* @__PURE__ */ (0, import_jsx_runtime124.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime124.jsx)("p", { className: "integration-card__description", children: (0, import_i18n49.__)(
         "Google Sheets is connected. You can export your form responses from the form responses page.",
         "jetpack-forms"
       ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime122.jsxs)(import_components52.__experimentalHStack, { spacing: "2", justify: "start", className: "integration-card__links", children: [
-        context === "dashboard" && handlers?.goToResponses ? /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(import_components52.Button, { variant: "link", onClick: handlers.goToResponses, children: (0, import_i18n49.__)("View form responses", "jetpack-forms") }) : /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(import_components52.Button, { variant: "link", href: responsesUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n49.__)("View form responses", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime122.jsx)("span", { children: "|" }),
-        /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime124.jsxs)(import_components52.__experimentalHStack, { spacing: "2", justify: "start", className: "integration-card__links", children: [
+        context === "dashboard" && handlers?.goToResponses ? /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(import_components52.Button, { variant: "link", onClick: handlers.goToResponses, children: (0, import_i18n49.__)("View form responses", "jetpack-forms") }) : /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(import_components52.Button, { variant: "link", href: responsesUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n49.__)("View form responses", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime124.jsx)("span", { children: "|" }),
+        /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(
           GoogleDriveDisconnectButton,
           {
             onDisconnected: refreshIntegrations2,
@@ -21490,10 +28477,10 @@ var import_i18n51 = __toESM(require_i18n(), 1);
 
 // src/icons/hostinger-reach.tsx
 var import_i18n50 = __toESM(require_i18n(), 1);
-var import_primitives42 = __toESM(require_primitives(), 1);
-var import_jsx_runtime123 = __toESM(require_jsx_runtime(), 1);
-var HostingerReachIcon = (props) => /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(
-  import_primitives42.SVG,
+var import_primitives44 = __toESM(require_primitives(), 1);
+var import_jsx_runtime125 = __toESM(require_jsx_runtime(), 1);
+var HostingerReachIcon = (props) => /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(
+  import_primitives44.SVG,
   {
     ...props,
     width: props.width || 30,
@@ -21503,8 +28490,8 @@ var HostingerReachIcon = (props) => /* @__PURE__ */ (0, import_jsx_runtime123.js
     xmlns: "http://www.w3.org/2000/svg",
     role: "img",
     "aria-label": (0, import_i18n50.__)("Hostinger Reach icon", "jetpack-forms"),
-    children: /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(
-      import_primitives42.Path,
+    children: /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(
+      import_primitives44.Path,
       {
         d: "m7.002 8.287 39.319 21.172v39.32h57.467l36.295 21.172h-133.081zm148.203 75.615v-54.443l-42.344-21.172v51.418zm0 99.811-39.319-21.172v-39.32h-57.467l-36.295-21.172h133.081zm-148.203-75.615v54.443l42.343 21.172v-51.418z",
         fill: "#6747c7",
@@ -21517,7 +28504,7 @@ var HostingerReachIcon = (props) => /* @__PURE__ */ (0, import_jsx_runtime123.js
 var hostinger_reach_default = HostingerReachIcon;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/hostinger-reach.tsx
-var import_jsx_runtime124 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime126 = __toESM(require_jsx_runtime(), 1);
 function buildHostingerReachCard({
   integration,
   refreshIntegrations: refreshIntegrations2,
@@ -21534,7 +28521,7 @@ function buildHostingerReachCard({
     id: integration.id,
     title: integration.title,
     description: integration.subtitle,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(hostinger_reach_default, { width: 28, height: 28 }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(hostinger_reach_default, { width: 28, height: 28 }),
     cardData: {
       ...integration,
       isLoading: typeof integration.isInstalled === "undefined",
@@ -21556,7 +28543,7 @@ function buildHostingerReachCard({
           "jetpack-forms"
         ),
         {
-          a: /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(import_components53.ExternalLink, { href: integration.marketingUrl || "", children: null })
+          a: /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(import_components53.ExternalLink, { href: integration.marketingUrl || "", children: null })
         }
       ),
       notActivatedMessage: (0, import_i18n51.__)(
@@ -21566,13 +28553,13 @@ function buildHostingerReachCard({
       trackEventName: "jetpack_forms_upsell_hostinger_reach_click"
     },
     toggleTooltip: (0, import_i18n51.__)("Grow your audience with Hostinger Reach", "jetpack-forms"),
-    body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime124.jsxs)(import_jsx_runtime124.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime124.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(import_components53.ExternalLink, { href: settingsUrl, children: (0, import_i18n51.__)(
+    body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime126.jsxs)(import_jsx_runtime126.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime126.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(import_components53.ExternalLink, { href: settingsUrl, children: (0, import_i18n51.__)(
         "Hostinger Reach is active. There is one step left. Please complete Hostinger Reach setup.",
         "jetpack-forms"
       ) }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime124.jsxs)(import_components53.__experimentalHStack, { spacing: "3", justify: "start", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime126.jsxs)(import_components53.__experimentalHStack, { spacing: "3", justify: "start", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(
           import_components53.Button,
           {
             variant: "secondary",
@@ -21583,10 +28570,10 @@ function buildHostingerReachCard({
             children: (0, import_i18n51.__)("Complete Hostinger Reach setup", "jetpack-forms")
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(import_components53.Button, { variant: "tertiary", onClick: refreshIntegrations2, __next40pxDefaultSize: true, children: (0, import_i18n51.__)("Refresh status", "jetpack-forms") })
+        /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(import_components53.Button, { variant: "tertiary", onClick: refreshIntegrations2, __next40pxDefaultSize: true, children: (0, import_i18n51.__)("Refresh status", "jetpack-forms") })
       ] })
-    ] }) : /* @__PURE__ */ (0, import_jsx_runtime124.jsxs)(import_jsx_runtime124.Fragment, { children: [
-      context === "block-editor" && /* @__PURE__ */ (0, import_jsx_runtime124.jsx)("div", { className: "integration-card__section", children: /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(
+    ] }) : /* @__PURE__ */ (0, import_jsx_runtime126.jsxs)(import_jsx_runtime126.Fragment, { children: [
+      context === "block-editor" && /* @__PURE__ */ (0, import_jsx_runtime126.jsx)("div", { className: "integration-card__section", children: /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(
         import_components53.TextControl,
         {
           label: (0, import_i18n51.__)("Group name (optional)", "jetpack-forms"),
@@ -21604,8 +28591,8 @@ function buildHostingerReachCard({
           __nextHasNoMarginBottom: true
         }
       ) }),
-      context === "block-editor" && ConsentToggle && /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(ConsentToggle, {}),
-      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime124.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime124.jsx)(import_components53.ExternalLink, { href: settingsUrl, children: (0, import_i18n51.__)("View Hostinger Reach dashboard", "jetpack-forms") }) })
+      context === "block-editor" && ConsentToggle && /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(ConsentToggle, {}),
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime126.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(import_components53.ExternalLink, { href: settingsUrl, children: (0, import_i18n51.__)("View Hostinger Reach dashboard", "jetpack-forms") }) })
     ] })
   };
   return base;
@@ -21803,12 +28790,12 @@ var colors_default = {
 };
 
 // ../../js-packages/components/build/components/jetpack-logo/index.js
-var import_jsx_runtime125 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime127 = __toESM(require_jsx_runtime(), 1);
 var import_i18n52 = __toESM(require_i18n(), 1);
 var JetpackLogo = ({ logoColor = "#069e08", showText = true, className, height = 32, title, ...otherProps }) => {
   const viewBox = showText ? "0 0 118 32" : "0 0 32 32";
   const logoTitle = title ?? (0, import_i18n52.__)("Jetpack Logo", "jetpack-components");
-  return (0, import_jsx_runtime125.jsxs)("svg", {
+  return (0, import_jsx_runtime127.jsxs)("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     x: "0px",
     y: "0px",
@@ -21819,7 +28806,7 @@ var JetpackLogo = ({ logoColor = "#069e08", showText = true, className, height =
     ...otherProps,
     // role="img" is required to prevent VoiceOver on Safari reading the content of the SVG
     role: "img",
-    children: [(0, import_jsx_runtime125.jsx)("title", { id: "jetpack-logo-title", children: logoTitle }), (0, import_jsx_runtime125.jsx)("path", { fill: logoColor, d: "M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M15,19H7l8-16V19z M17,29V13h8L17,29z" }), showText && (0, import_jsx_runtime125.jsxs)(import_jsx_runtime125.Fragment, { children: [(0, import_jsx_runtime125.jsx)("path", { d: "M41.3,26.6c-0.5-0.7-0.9-1.4-1.3-2.1c2.3-1.4,3-2.5,3-4.6V8h-3V6h6v13.4C46,22.8,45,24.8,41.3,26.6z" }), (0, import_jsx_runtime125.jsx)("path", { d: "M65,18.4c0,1.1,0.8,1.3,1.4,1.3c0.5,0,2-0.2,2.6-0.4v2.1c-0.9,0.3-2.5,0.5-3.7,0.5c-1.5,0-3.2-0.5-3.2-3.1V12H60v-2h2.1V7.1 H65V10h4v2h-4V18.4z" }), (0, import_jsx_runtime125.jsx)("path", { d: "M71,10h3v1.3c1.1-0.8,1.9-1.3,3.3-1.3c2.5,0,4.5,1.8,4.5,5.6s-2.2,6.3-5.8,6.3c-0.9,0-1.3-0.1-2-0.3V28h-3V10z M76.5,12.3 c-0.8,0-1.6,0.4-2.5,1.2v5.9c0.6,0.1,0.9,0.2,1.8,0.2c2,0,3.2-1.3,3.2-3.9C79,13.4,78.1,12.3,76.5,12.3z" }), (0, import_jsx_runtime125.jsx)("path", { d: "M93,22h-3v-1.5c-0.9,0.7-1.9,1.5-3.5,1.5c-1.5,0-3.1-1.1-3.1-3.2c0-2.9,2.5-3.4,4.2-3.7l2.4-0.3v-0.3c0-1.5-0.5-2.3-2-2.3 c-0.7,0-2.3,0.5-3.7,1.1L84,11c1.2-0.4,3-1,4.4-1c2.7,0,4.6,1.4,4.6,4.7L93,22z M90,16.4l-2.2,0.4c-0.7,0.1-1.4,0.5-1.4,1.6 c0,0.9,0.5,1.4,1.3,1.4s1.5-0.5,2.3-1V16.4z" }), (0, import_jsx_runtime125.jsx)("path", { d: "M104.5,21.3c-1.1,0.4-2.2,0.6-3.5,0.6c-4.2,0-5.9-2.4-5.9-5.9c0-3.7,2.3-6,6.1-6c1.4,0,2.3,0.2,3.2,0.5V13 c-0.8-0.3-2-0.6-3.2-0.6c-1.7,0-3.2,0.9-3.2,3.6c0,2.9,1.5,3.8,3.3,3.8c0.9,0,1.9-0.2,3.2-0.7V21.3z" }), (0, import_jsx_runtime125.jsx)("path", { d: "M110,15.2c0.2-0.3,0.2-0.8,3.8-5.2h3.7l-4.6,5.7l5,6.3h-3.7l-4.2-5.8V22h-3V6h3V15.2z" }), (0, import_jsx_runtime125.jsx)("path", { d: "M58.5,21.3c-1.5,0.5-2.7,0.6-4.2,0.6c-3.6,0-5.8-1.8-5.8-6c0-3.1,1.9-5.9,5.5-5.9s4.9,2.5,4.9,4.9c0,0.8,0,1.5-0.1,2h-7.3 c0.1,2.5,1.5,2.8,3.6,2.8c1.1,0,2.2-0.3,3.4-0.7C58.5,19,58.5,21.3,58.5,21.3z M56,15c0-1.4-0.5-2.9-2-2.9c-1.4,0-2.3,1.3-2.4,2.9 C51.6,15,56,15,56,15z" })] })]
+    children: [(0, import_jsx_runtime127.jsx)("title", { id: "jetpack-logo-title", children: logoTitle }), (0, import_jsx_runtime127.jsx)("path", { fill: logoColor, d: "M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M15,19H7l8-16V19z M17,29V13h8L17,29z" }), showText && (0, import_jsx_runtime127.jsxs)(import_jsx_runtime127.Fragment, { children: [(0, import_jsx_runtime127.jsx)("path", { d: "M41.3,26.6c-0.5-0.7-0.9-1.4-1.3-2.1c2.3-1.4,3-2.5,3-4.6V8h-3V6h6v13.4C46,22.8,45,24.8,41.3,26.6z" }), (0, import_jsx_runtime127.jsx)("path", { d: "M65,18.4c0,1.1,0.8,1.3,1.4,1.3c0.5,0,2-0.2,2.6-0.4v2.1c-0.9,0.3-2.5,0.5-3.7,0.5c-1.5,0-3.2-0.5-3.2-3.1V12H60v-2h2.1V7.1 H65V10h4v2h-4V18.4z" }), (0, import_jsx_runtime127.jsx)("path", { d: "M71,10h3v1.3c1.1-0.8,1.9-1.3,3.3-1.3c2.5,0,4.5,1.8,4.5,5.6s-2.2,6.3-5.8,6.3c-0.9,0-1.3-0.1-2-0.3V28h-3V10z M76.5,12.3 c-0.8,0-1.6,0.4-2.5,1.2v5.9c0.6,0.1,0.9,0.2,1.8,0.2c2,0,3.2-1.3,3.2-3.9C79,13.4,78.1,12.3,76.5,12.3z" }), (0, import_jsx_runtime127.jsx)("path", { d: "M93,22h-3v-1.5c-0.9,0.7-1.9,1.5-3.5,1.5c-1.5,0-3.1-1.1-3.1-3.2c0-2.9,2.5-3.4,4.2-3.7l2.4-0.3v-0.3c0-1.5-0.5-2.3-2-2.3 c-0.7,0-2.3,0.5-3.7,1.1L84,11c1.2-0.4,3-1,4.4-1c2.7,0,4.6,1.4,4.6,4.7L93,22z M90,16.4l-2.2,0.4c-0.7,0.1-1.4,0.5-1.4,1.6 c0,0.9,0.5,1.4,1.3,1.4s1.5-0.5,2.3-1V16.4z" }), (0, import_jsx_runtime127.jsx)("path", { d: "M104.5,21.3c-1.1,0.4-2.2,0.6-3.5,0.6c-4.2,0-5.9-2.4-5.9-5.9c0-3.7,2.3-6,6.1-6c1.4,0,2.3,0.2,3.2,0.5V13 c-0.8-0.3-2-0.6-3.2-0.6c-1.7,0-3.2,0.9-3.2,3.6c0,2.9,1.5,3.8,3.3,3.8c0.9,0,1.9-0.2,3.2-0.7V21.3z" }), (0, import_jsx_runtime127.jsx)("path", { d: "M110,15.2c0.2-0.3,0.2-0.8,3.8-5.2h3.7l-4.6,5.7l5,6.3h-3.7l-4.2-5.8V22h-3V6h3V15.2z" }), (0, import_jsx_runtime127.jsx)("path", { d: "M58.5,21.3c-1.5,0.5-2.7,0.6-4.2,0.6c-3.6,0-5.8-1.8-5.8-6c0-3.1,1.9-5.9,5.5-5.9s4.9,2.5,4.9,4.9c0,0.8,0,1.5-0.1,2h-7.3 c0.1,2.5,1.5,2.8,3.6,2.8c1.1,0,2.2-0.3,3.4-0.7C58.5,19,58.5,21.3,58.5,21.3z M56,15c0-1.4-0.5-2.9-2-2.9c-1.4,0-2.3,1.3-2.4,2.9 C51.6,15,56,15,56,15z" })] })]
   });
 };
 var jetpack_logo_default = JetpackLogo;
@@ -21829,7 +28816,7 @@ var import_components54 = __toESM(require_components(), 1);
 var import_element61 = __toESM(require_element(), 1);
 var import_i18n53 = __toESM(require_i18n(), 1);
 var import_semver = __toESM(require_semver2(), 1);
-var import_jsx_runtime126 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime128 = __toESM(require_jsx_runtime(), 1);
 var COLOR_JETPACK = colors_default.colors["Jetpack Green 40"];
 function buildJetpackCrmCard({
   integration,
@@ -21846,12 +28833,12 @@ function buildJetpackCrmCard({
   const connectedMsgDashboard = (0, import_i18n53.__)("Jetpack CRM is connected.", "jetpack-forms");
   const renderBody = () => {
     if (!isRecentVersion) {
-      return /* @__PURE__ */ (0, import_jsx_runtime126.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime126.jsx)("p", { className: "integration-card__description", children: (0, import_i18n53.__)(
+      return /* @__PURE__ */ (0, import_jsx_runtime128.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime128.jsx)("p", { className: "integration-card__description", children: (0, import_i18n53.__)(
           "Please update to the latest version of the Jetpack CRM plugin to integrate your contact form with your CRM.",
           "jetpack-forms"
         ) }),
-        /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime128.jsx)(
           import_components54.Button,
           {
             variant: "secondary",
@@ -21865,14 +28852,14 @@ function buildJetpackCrmCard({
       ] });
     }
     if (!hasExtension) {
-      return /* @__PURE__ */ (0, import_jsx_runtime126.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime126.jsx)("p", { className: "integration-card__description", children: (0, import_element61.createInterpolateElement)(
+      return /* @__PURE__ */ (0, import_jsx_runtime128.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime128.jsx)("p", { className: "integration-card__description", children: (0, import_element61.createInterpolateElement)(
           (0, import_i18n53.__)(
             "You can integrate this contact form with Jetpack CRM by enabling Jetpack CRM's <a>Jetpack Forms extension</a>.",
             "jetpack-forms"
           ),
           {
-            a: /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(
+            a: /* @__PURE__ */ (0, import_jsx_runtime128.jsx)(
               import_components54.Button,
               {
                 variant: "link",
@@ -21883,11 +28870,11 @@ function buildJetpackCrmCard({
             )
           }
         ) }),
-        !canActivateExtension && /* @__PURE__ */ (0, import_jsx_runtime126.jsx)("p", { children: (0, import_i18n53.__)(
+        !canActivateExtension && /* @__PURE__ */ (0, import_jsx_runtime128.jsx)("p", { children: (0, import_i18n53.__)(
           "A site administrator must enable the CRM Jetpack Forms extension.",
           "jetpack-forms"
         ) }),
-        canActivateExtension && /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(
+        canActivateExtension && /* @__PURE__ */ (0, import_jsx_runtime128.jsx)(
           import_components54.Button,
           {
             variant: "secondary",
@@ -21900,16 +28887,16 @@ function buildJetpackCrmCard({
         )
       ] });
     }
-    return /* @__PURE__ */ (0, import_jsx_runtime126.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime126.jsx)("p", { className: "integration-card__description", children: context === "block-editor" ? connectedMsgEditor : connectedMsgDashboard }),
-      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(import_components54.ExternalLink, { href: settingsUrl, children: (0, import_i18n53.__)("Open Jetpack CRM settings", "jetpack-forms") })
+    return /* @__PURE__ */ (0, import_jsx_runtime128.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime128.jsx)("p", { className: "integration-card__description", children: context === "block-editor" ? connectedMsgEditor : connectedMsgDashboard }),
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime128.jsx)(import_components54.ExternalLink, { href: settingsUrl, children: (0, import_i18n53.__)("Open Jetpack CRM settings", "jetpack-forms") })
     ] });
   };
   const base = {
     id: integration.id,
     title: integration.title,
     description: integration.subtitle,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(jetpack_logo_default, { showText: false, logoColor: COLOR_JETPACK }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime128.jsx)(jetpack_logo_default, { showText: false, logoColor: COLOR_JETPACK }),
     cardData: {
       ...integration,
       isLoading: typeof integration.isInstalled === "undefined",
@@ -21928,7 +28915,7 @@ function buildJetpackCrmCard({
           "You can save your form contacts in <a>Jetpack CRM</a>. To get started, please install the plugin.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(import_components54.ExternalLink, { href: marketingUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime128.jsx)(import_components54.ExternalLink, { href: marketingUrl, children: null }) }
       ),
       notActivatedMessage: (0, import_i18n53.__)(
         "Jetpack CRM is installed. To start saving contacts, simply activate the plugin.",
@@ -21947,11 +28934,11 @@ var import_i18n55 = __toESM(require_i18n(), 1);
 
 // src/icons/mailpoet.tsx
 var import_i18n54 = __toESM(require_i18n(), 1);
-var import_primitives43 = __toESM(require_primitives(), 1);
-var import_jsx_runtime127 = __toESM(require_jsx_runtime(), 1);
+var import_primitives45 = __toESM(require_primitives(), 1);
+var import_jsx_runtime129 = __toESM(require_jsx_runtime(), 1);
 var MailPoetIcon = (props) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime127.jsxs)(
-    import_primitives43.SVG,
+  return /* @__PURE__ */ (0, import_jsx_runtime129.jsxs)(
+    import_primitives45.SVG,
     {
       width: props.width || 32,
       height: props.height || 32,
@@ -21962,15 +28949,15 @@ var MailPoetIcon = (props) => {
       "aria-label": (0, import_i18n54.__)("MailPoet icon", "jetpack-forms"),
       ...props,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime127.jsx)(
-          import_primitives43.Path,
+        /* @__PURE__ */ (0, import_jsx_runtime129.jsx)(
+          import_primitives45.Path,
           {
             d: "M37.71,89.1c3.5,0,5.9-.8,7.2-2.3a8,8,0,0,0,2-5.4V35.7l17,45.1a12.68,12.68,0,0,0,3.7,5.4c1.6,1.3,4,2,7.2,2a12.54,12.54,0,0,0,5.9-1.4,8.41,8.41,0,0,0,3.9-5l18.1-50V81a8.53,8.53,0,0,0,2.1,6.1c1.4,1.4,3.7,2.2,6.9,2.2,3.5,0,5.9-.8,7.2-2.3a8,8,0,0,0,2-5.4V8.7a7.48,7.48,0,0,0-3.3-6.6c-2.1-1.4-5-2.1-8.6-2.1a19.3,19.3,0,0,0-9.4,2,11.63,11.63,0,0,0-5.1,6.8L74.91,67.1,54.41,8.4a12.4,12.4,0,0,0-4.5-6.2c-2.1-1.5-5-2.2-8.8-2.2a16.51,16.51,0,0,0-8.9,2.1c-2.3,1.5-3.5,3.9-3.5,7.2V80.8c0,2.8.7,4.8,2,6.2C32.21,88.4,34.41,89.1,37.71,89.1Z",
             fill: "#FF5301"
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime127.jsx)(
-          import_primitives43.Path,
+        /* @__PURE__ */ (0, import_jsx_runtime129.jsx)(
+          import_primitives45.Path,
           {
             d: "M149,116.6l-2.4-1.9a7.4,7.4,0,0,0-9.4.3,19.65,19.65,0,0,1-12.5,4.6h-21.4A37.08,37.08,0,0,0,77,130.5l-1.1,1.2-1.1-1.1a37.25,37.25,0,0,0-26.3-10.9H27a19.59,19.59,0,0,1-12.4-4.6,7.28,7.28,0,0,0-9.4-.3l-2.4,1.9A7.43,7.43,0,0,0,0,122.2a7.14,7.14,0,0,0,2.4,5.7A37.28,37.28,0,0,0,27,137.4h21.6a19.59,19.59,0,0,1,18.9,14.4v.2c.1.7,1.2,4.4,8.5,4.4s8.4-3.7,8.5-4.4v-.2a19.59,19.59,0,0,1,18.9-14.4H125a37.28,37.28,0,0,0,24.6-9.5,7.42,7.42,0,0,0,2.4-5.7A7.86,7.86,0,0,0,149,116.6Z",
             fill: "#FF5301"
@@ -21983,7 +28970,7 @@ var MailPoetIcon = (props) => {
 var mailpoet_default = MailPoetIcon;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/mailpoet.tsx
-var import_jsx_runtime128 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime130 = __toESM(require_jsx_runtime(), 1);
 function buildMailPoetCard({
   integration,
   refreshIntegrations: refreshIntegrations2,
@@ -22005,7 +28992,7 @@ function buildMailPoetCard({
     id: integration.id,
     title: integration.title,
     description: integration.subtitle,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime128.jsx)(mailpoet_default, { width: 28, height: 28 }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime130.jsx)(mailpoet_default, { width: 28, height: 28 }),
     cardData: {
       ...integration,
       isLoading: typeof integration.isInstalled === "undefined",
@@ -22026,7 +29013,7 @@ function buildMailPoetCard({
           "Add powerful email marketing to your forms with <a>MailPoet</a>. Simply install the plugin to start sending emails.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime128.jsx)(import_components55.ExternalLink, { href: marketingUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime130.jsx)(import_components55.ExternalLink, { href: marketingUrl, children: null }) }
       ),
       notActivatedMessage: (0, import_i18n55.__)(
         "MailPoet is installed. Just activate the plugin to start sending emails.",
@@ -22035,16 +29022,16 @@ function buildMailPoetCard({
       trackEventName: "jetpack_forms_upsell_mailpoet_click"
     },
     toggleTooltip: (0, import_i18n55.__)("Grow your audience with MailPoet", "jetpack-forms"),
-    body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime128.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime128.jsx)("p", { className: "integration-card__description", children: (0, import_element62.createInterpolateElement)(
+    body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime130.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime130.jsx)("p", { className: "integration-card__description", children: (0, import_element62.createInterpolateElement)(
         (0, import_i18n55.__)(
           "MailPoet is active. There is one step left. Please complete <a>MailPoet setup</a>.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime128.jsx)(import_components55.ExternalLink, { href: settingsUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime130.jsx)(import_components55.ExternalLink, { href: settingsUrl, children: null }) }
       ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime128.jsxs)(import_components55.__experimentalHStack, { spacing: "3", justify: "start", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime128.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime130.jsxs)(import_components55.__experimentalHStack, { spacing: "3", justify: "start", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime130.jsx)(
           import_components55.Button,
           {
             variant: "secondary",
@@ -22055,10 +29042,10 @@ function buildMailPoetCard({
             children: (0, import_i18n55.__)("Complete MailPoet setup", "jetpack-forms")
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime128.jsx)(import_components55.Button, { variant: "tertiary", onClick: refreshIntegrations2, __next40pxDefaultSize: true, children: (0, import_i18n55.__)("Refresh status", "jetpack-forms") })
+        /* @__PURE__ */ (0, import_jsx_runtime130.jsx)(import_components55.Button, { variant: "tertiary", onClick: refreshIntegrations2, __next40pxDefaultSize: true, children: (0, import_i18n55.__)("Refresh status", "jetpack-forms") })
       ] })
-    ] }) : /* @__PURE__ */ (0, import_jsx_runtime128.jsxs)("div", { children: [
-      context === "block-editor" && (lists.length ? /* @__PURE__ */ (0, import_jsx_runtime128.jsx)(
+    ] }) : /* @__PURE__ */ (0, import_jsx_runtime130.jsxs)("div", { children: [
+      context === "block-editor" && (lists.length ? /* @__PURE__ */ (0, import_jsx_runtime130.jsx)(
         import_components55.SelectControl,
         {
           label: (0, import_i18n55.__)("Which email list should contacts be added to?", "jetpack-forms"),
@@ -22073,12 +29060,12 @@ function buildMailPoetCard({
           __next40pxDefaultSize: true,
           __nextHasNoMarginBottom: true
         }
-      ) : /* @__PURE__ */ (0, import_jsx_runtime128.jsx)("p", { className: "integration-card__description", children: (0, import_i18n55.__)(
+      ) : /* @__PURE__ */ (0, import_jsx_runtime130.jsx)("p", { className: "integration-card__description", children: (0, import_i18n55.__)(
         'You do not have any MailPoet lists yet. Click the dashboard button below to create one, or contacts will be added to a "Jetpack Forms Subscribers" list.',
         "jetpack-forms"
       ) })),
-      context === "block-editor" && ConsentToggle && /* @__PURE__ */ (0, import_jsx_runtime128.jsx)(ConsentToggle, {}),
-      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime128.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime128.jsx)(import_components55.ExternalLink, { href: settingsUrl, children: (0, import_i18n55.__)("View dashboard", "jetpack-forms") }) })
+      context === "block-editor" && ConsentToggle && /* @__PURE__ */ (0, import_jsx_runtime130.jsx)(ConsentToggle, {}),
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime130.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime130.jsx)(import_components55.ExternalLink, { href: settingsUrl, children: (0, import_i18n55.__)("View dashboard", "jetpack-forms") }) })
     ] })
   };
   return base;
@@ -22097,10 +29084,10 @@ var import_components57 = __toESM(require_components(), 1);
 var import_i18n58 = __toESM(require_i18n(), 1);
 
 // src/icons/salesforce.tsx
-var import_primitives44 = __toESM(require_primitives(), 1);
-var import_jsx_runtime129 = __toESM(require_jsx_runtime(), 1);
-var SalesforceIcon = (props) => /* @__PURE__ */ (0, import_jsx_runtime129.jsxs)(
-  import_primitives44.SVG,
+var import_primitives46 = __toESM(require_primitives(), 1);
+var import_jsx_runtime131 = __toESM(require_jsx_runtime(), 1);
+var SalesforceIcon = (props) => /* @__PURE__ */ (0, import_jsx_runtime131.jsxs)(
+  import_primitives46.SVG,
   {
     width: props.width || 46,
     height: props.height || 32,
@@ -22110,8 +29097,8 @@ var SalesforceIcon = (props) => /* @__PURE__ */ (0, import_jsx_runtime129.jsxs)(
     role: "img",
     ...props,
     children: [
-      /* @__PURE__ */ (0, import_jsx_runtime129.jsx)(
-        import_primitives44.Path,
+      /* @__PURE__ */ (0, import_jsx_runtime131.jsx)(
+        import_primitives46.Path,
         {
           fillRule: "evenodd",
           clipRule: "evenodd",
@@ -22119,8 +29106,8 @@ var SalesforceIcon = (props) => /* @__PURE__ */ (0, import_jsx_runtime129.jsxs)(
           fill: "#00A1E0"
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime129.jsx)(
-        import_primitives44.Path,
+      /* @__PURE__ */ (0, import_jsx_runtime131.jsx)(
+        import_primitives46.Path,
         {
           d: "M26.6607 11.1632C26.7813 11.1619 26.9021 11.1717 27.021 11.1915C27.1093 11.2069 27.1969 11.2271 27.2827 11.253C27.3016 11.2605 27.3524 11.2861 27.3316 11.3458L27.1284 11.9015C27.1115 11.9433 27.1003 11.9687 27.0142 11.9425C26.9927 11.9361 26.9605 11.9268 26.8784 11.9093C26.8188 11.8969 26.7404 11.8878 26.6607 11.8878C26.5644 11.8865 26.4685 11.9004 26.3765 11.9288C26.2927 11.9563 26.2165 12.0035 26.1548 12.0665C26.0886 12.1329 26.0098 12.23 25.9683 12.3497C25.8711 12.6301 25.8328 12.9282 25.8286 12.9474H26.6753C26.7462 12.947 26.7691 12.9796 26.7622 13.0323L26.6636 13.5831C26.6487 13.661 26.5781 13.6603 26.5747 13.6603H25.7017L25.105 17.0382C25.0424 17.3871 24.9644 17.6866 24.8726 17.9278C24.7797 18.1714 24.6822 18.3501 24.5279 18.5206C24.3852 18.6786 24.2239 18.7954 24.0386 18.8624C23.8544 18.9289 23.632 18.963 23.3882 18.963C23.2718 18.963 23.147 18.9607 22.9995 18.9259C22.8938 18.901 22.8359 18.8833 22.7583 18.8556C22.7251 18.8437 22.6987 18.8024 22.7173 18.7501C22.7358 18.697 22.8916 18.2673 22.9136 18.2111C22.9407 18.1424 23.0093 18.1691 23.0093 18.1691C23.0563 18.1888 23.0892 18.2026 23.1519 18.215C23.2149 18.2276 23.3006 18.2384 23.3648 18.2384C23.4799 18.2384 23.585 18.2242 23.6763 18.1935C23.7869 18.1564 23.8508 18.0924 23.9185 18.006C23.9884 17.9166 24.0459 17.7933 24.104 17.629C24.1629 17.4627 24.2158 17.2433 24.2622 16.9767L24.856 13.6603H24.271C24.2006 13.6606 24.1783 13.6279 24.1851 13.5753L24.2837 13.0245C24.2992 12.9444 24.3726 12.9474 24.3726 12.9474H24.9742L25.0064 12.7677C25.0962 12.2358 25.2753 11.8309 25.5386 11.5655C25.8038 11.2983 26.1817 11.1632 26.6607 11.1632ZM8.31985 12.8527C8.82364 12.8527 9.31095 12.999 9.6636 13.214C9.69558 13.2332 9.72627 13.2704 9.70853 13.3195C9.69138 13.3674 9.53518 13.7854 9.51712 13.8331C9.48403 13.921 9.3931 13.8624 9.3931 13.8624C9.0858 13.6927 8.60568 13.5588 8.20267 13.5587C7.83989 13.5587 7.60403 13.7518 7.60403 14.0138V14.0294C7.6043 14.3349 8.00614 14.4665 8.47122 14.6173L8.5513 14.6427C9.16597 14.8358 9.82465 15.1065 9.82474 15.8487V15.8644C9.82474 16.6672 9.24141 17.1661 8.30423 17.1661C7.84427 17.1661 7.4047 17.0935 6.93802 16.8468C6.85071 16.7963 6.76308 16.7517 6.67728 16.6896C6.66805 16.6763 6.62924 16.6607 6.65774 16.5861L6.65677 16.5841L6.84134 16.0704C6.87056 15.9824 6.93849 16.0121 6.96536 16.0284C7.01606 16.0594 7.05384 16.0868 7.11966 16.1251C7.66551 16.4701 8.16962 16.4728 8.32767 16.4728C8.73377 16.4726 8.98676 16.2563 8.98685 15.9659V15.9503C8.98685 15.6346 8.59712 15.5135 8.147 15.3751L8.04837 15.3448C7.4303 15.1685 6.7681 14.9127 6.7681 14.13V14.1144C6.76812 13.372 7.36788 12.8527 8.2261 12.8527H8.31985ZM22.0396 12.8517C22.5433 12.8517 23.0307 12.9972 23.3833 13.212C23.4151 13.2311 23.4468 13.2686 23.4292 13.3175C23.4141 13.3645 23.2566 13.7846 23.2388 13.8321C23.2064 13.917 23.1199 13.8646 23.1148 13.8614C22.8058 13.6917 22.3274 13.5568 21.9243 13.5568C21.5617 13.5568 21.3259 13.75 21.3257 14.0118V14.0275C21.3257 14.3331 21.7277 14.4645 22.1929 14.6153L22.273 14.6417C22.8894 14.8349 23.5464 15.1054 23.5464 15.8478V15.8634C23.5464 16.6662 22.9631 17.1652 22.0259 17.1652C21.5658 17.1651 21.1255 17.0927 20.6587 16.8458C20.5716 16.7954 20.4842 16.7505 20.399 16.6886C20.3894 16.6753 20.3497 16.659 20.3784 16.5841L20.3765 16.5831L20.562 16.0695C20.5891 15.9855 20.6681 16.0157 20.6851 16.0265C20.7351 16.0587 20.7734 16.0857 20.8394 16.1241C21.3836 16.4691 21.889 16.4718 22.0474 16.4718C22.4536 16.4717 22.7075 16.2545 22.7075 15.964V15.9484C22.7073 15.6329 22.3192 15.5125 21.8677 15.3741L21.7681 15.3429C21.1501 15.1665 20.4878 14.9116 20.4878 14.129V14.1134C20.4878 13.3711 21.0877 12.8518 21.9458 12.8517H22.0396ZM28.7339 12.8663C29.0529 12.8663 29.3353 12.9227 29.5738 13.0343C29.8139 13.1451 30.0156 13.2999 30.1753 13.4913C30.3348 13.6827 30.4547 13.9108 30.5318 14.171H30.5298C30.6061 14.4297 30.645 14.7139 30.645 15.0128C30.645 15.3132 30.606 15.5952 30.5298 15.8536C30.4526 16.114 30.3328 16.3428 30.1734 16.5343C30.0139 16.7256 29.811 16.8786 29.5728 16.9874C29.3343 17.0963 29.0514 17.1525 28.7339 17.1525C28.4166 17.1524 28.1341 17.0962 27.8941 16.9874C27.6558 16.8783 27.4531 16.7256 27.2935 16.5343C27.1339 16.3428 27.0138 16.114 26.937 15.8536C26.8607 15.5952 26.8218 15.3132 26.8218 15.0128C26.8218 14.7122 26.8606 14.4297 26.937 14.171C27.0143 13.9108 27.1343 13.6827 27.2935 13.4913C27.4529 13.3 27.6558 13.1458 27.8941 13.0343C28.1341 12.923 28.415 12.8664 28.7339 12.8663ZM18.1538 12.8634C18.4146 12.8629 18.6726 12.9157 18.9126 13.0177C19.0789 13.0882 19.2452 13.2175 19.4165 13.4005C19.524 13.5163 19.6898 13.7695 19.7564 14.0196L19.7583 14.0206C19.9284 14.6168 19.8403 15.133 19.8374 15.1612C19.8302 15.2277 19.7632 15.2295 19.7603 15.2296L17.107 15.2277C17.1221 15.6306 17.2189 15.9147 17.4136 16.1095C17.6051 16.2998 17.911 16.4213 18.3208 16.422C18.9501 16.4237 19.219 16.2966 19.4087 16.2257C19.4087 16.2257 19.4826 16.1992 19.5093 16.2716L19.6822 16.757C19.7169 16.8387 19.6889 16.8674 19.6597 16.8839C19.495 16.9763 19.0914 17.146 18.3257 17.1486C17.9531 17.1497 17.6307 17.0965 17.3638 16.9933C17.0951 16.8892 16.8715 16.7416 16.6968 16.5519C16.5238 16.3638 16.3943 16.1367 16.314 15.878C16.2339 15.6211 16.1939 15.337 16.1939 15.0314C16.1939 14.7325 16.233 14.4469 16.3101 14.1866C16.3874 13.9231 16.5088 13.6929 16.6695 13.4982C16.8306 13.3035 17.0354 13.1478 17.2788 13.0333C17.5224 12.9196 17.823 12.8634 18.1538 12.8634ZM39.3667 12.8634C39.6275 12.863 39.8855 12.9156 40.1255 13.0177C40.2918 13.0882 40.4581 13.2174 40.6294 13.4005C40.7369 13.5164 40.9026 13.7695 40.9693 14.0196L40.9722 14.0206C41.1421 14.6168 41.0542 15.133 41.0513 15.1612C41.0439 15.2291 40.9742 15.2296 40.9742 15.2296L38.3208 15.2277C38.3359 15.6307 38.4336 15.9147 38.6284 16.1095C38.8199 16.2996 39.1235 16.4213 39.5347 16.422C40.1645 16.4237 40.4338 16.2966 40.6236 16.2257C40.6273 16.2244 40.6973 16.2011 40.7232 16.2716L40.896 16.757C40.9306 16.8387 40.903 16.8674 40.8736 16.8839C40.7089 16.9763 40.3053 17.146 39.5396 17.1486C39.1686 17.1497 38.8446 17.0965 38.5777 16.9933C38.309 16.8892 38.0853 16.7416 37.9107 16.5519C37.736 16.3638 37.6064 16.1367 37.5259 15.878C37.4463 15.6211 37.4058 15.337 37.4058 15.0314C37.4058 14.7325 37.4448 14.4469 37.522 14.1866C37.5992 13.9231 37.7204 13.6929 37.8814 13.4982C38.0426 13.3033 38.2482 13.1479 38.4917 13.0333C38.7352 12.9196 39.0359 12.8634 39.3667 12.8634ZM35.9605 12.8556C36.1821 12.8556 36.3788 12.8688 36.5484 12.8946C36.7297 12.922 36.9694 12.9869 37.0708 13.0265C37.0896 13.0338 37.1401 13.0591 37.1197 13.1183C37.046 13.3265 36.995 13.4628 36.9263 13.6525C36.8972 13.7323 36.8368 13.7077 36.8355 13.7071C36.5768 13.6262 36.3298 13.588 36.0074 13.588C35.6212 13.5881 35.3289 13.7199 35.1392 13.9718C34.947 14.227 34.8396 14.5598 34.8384 15.003C34.8368 15.4898 34.9578 15.8491 35.1743 16.0724C35.3893 16.2956 35.692 16.4083 36.0699 16.4083C36.2225 16.4083 36.3674 16.3985 36.4976 16.378C36.6269 16.3579 36.7491 16.3171 36.8628 16.2736C36.8683 16.2716 36.9377 16.2483 36.9624 16.3214H36.9634L37.1558 16.8517C37.1792 16.9146 37.1291 16.9421 37.1245 16.9445C36.829 17.0615 36.4175 17.1426 36.0161 17.1427C35.3376 17.1427 34.8162 16.9479 34.4702 16.5616C34.1244 16.1771 33.9497 15.6512 33.9497 15.003C33.9498 14.7025 33.9929 14.4188 34.0777 14.1603C34.1633 13.8999 34.2906 13.6711 34.4585 13.4796C34.6265 13.2882 34.8382 13.1339 35.0884 13.0226C35.3387 12.9111 35.6313 12.8556 35.9605 12.8556ZM12.0904 12.8575C12.6194 12.8575 13.0284 12.9802 13.3072 13.2237C13.5867 13.4673 13.7281 13.8622 13.7281 14.3927L13.73 16.8107C13.73 16.8107 13.7348 16.8809 13.6695 16.8976C13.6695 16.8976 13.5713 16.9241 13.4829 16.9445C13.2616 16.9924 13.0391 17.0358 12.8159 17.0743C12.554 17.1185 12.2833 17.1417 12.0113 17.1417C11.7528 17.1417 11.5173 17.117 11.3091 17.0695C11.0994 17.0224 10.9172 16.9431 10.77 16.8361C10.6222 16.7288 10.5033 16.5858 10.4243 16.421C10.3439 16.2548 10.3033 16.0515 10.3033 15.8165C10.3033 15.5849 10.351 15.3798 10.4449 15.2052C10.5379 15.0322 10.6697 14.8828 10.8296 14.7687C10.9891 14.6539 11.1759 14.5676 11.3824 14.5118C11.5872 14.4565 11.8071 14.4278 12.0337 14.4278C12.1999 14.4279 12.3393 14.4317 12.4468 14.4396L12.4497 14.4464C12.4606 14.4474 12.6656 14.4661 12.8863 14.4982V14.3859C12.8862 14.0333 12.8121 13.865 12.6675 13.754C12.5197 13.6408 12.2976 13.5831 12.0122 13.5831C11.9944 13.5829 11.3606 13.5786 10.8589 13.8517C10.8354 13.8656 10.815 13.8741 10.815 13.8741C10.8096 13.8759 10.7504 13.8932 10.7281 13.8312L10.5406 13.3273C10.5128 13.2562 10.5613 13.2235 10.564 13.2218C10.8025 13.035 11.3804 12.923 11.3804 12.923C11.5718 12.8845 11.8922 12.8576 12.0904 12.8575ZM15.3706 11.2491C15.4146 11.2494 15.4456 11.2844 15.4458 11.3282V16.9835C15.4457 17.0276 15.4147 17.0634 15.3706 17.0636H14.6675C14.6231 17.0635 14.5914 17.0277 14.5913 16.9835V11.3282C14.5915 11.2843 14.6232 11.2492 14.6675 11.2491H15.3706ZM33.2935 12.9034C33.4659 12.9142 33.6907 12.9614 33.7368 12.9786C33.7458 12.9821 33.7544 12.9876 33.7613 12.9943C33.7682 13.001 33.7732 13.0098 33.7769 13.0187C33.7805 13.0274 33.7827 13.0366 33.7827 13.046L33.7788 13.0636C33.7537 13.1358 33.6242 13.498 33.5786 13.6193C33.5613 13.6653 33.533 13.6963 33.482 13.6905C33.4759 13.6891 33.3275 13.6555 33.1919 13.6554C33.0715 13.6554 32.9512 13.672 32.8355 13.7052C32.7123 13.7434 32.6001 13.8109 32.5083 13.9015C32.4122 13.9955 32.3333 14.1269 32.2759 14.2911C32.2176 14.4574 32.189 14.7221 32.189 14.9874V16.9689C32.189 16.99 32.1804 17.0105 32.1656 17.0255C32.1505 17.0406 32.1292 17.0489 32.1079 17.0489H31.4126C31.3914 17.0488 31.371 17.0405 31.356 17.0255C31.341 17.0105 31.3326 16.9901 31.3325 16.9689V13.0216C31.3327 12.9774 31.3648 12.9415 31.4087 12.9415H32.0874C32.1318 12.9417 32.1625 12.9775 32.1626 13.0216L32.1636 13.3448C32.2643 13.2072 32.4457 13.0879 32.6099 13.0138C32.7761 12.9392 32.9611 12.8827 33.2935 12.9034ZM12.1656 15.0987C11.6392 15.0923 11.4073 15.2806 11.397 15.2902C11.2374 15.4027 11.1597 15.5711 11.1597 15.8028C11.1597 15.9503 11.1864 16.0655 11.2388 16.1466C11.2732 16.2005 11.2883 16.2209 11.3921 16.3038L11.3931 16.3048C11.3928 16.3054 11.6319 16.4924 12.1695 16.4601C12.549 16.4372 12.8853 16.3644 12.8853 16.3644H12.8843V15.1603C12.6464 15.1238 12.4062 15.1031 12.1656 15.0987ZM28.7359 13.5851C28.3866 13.5851 28.1396 13.7047 27.9771 13.9532C27.8136 14.2035 27.73 14.5594 27.73 15.0128C27.73 15.4662 27.813 15.8254 27.9771 16.0773C28.14 16.3268 28.3883 16.4483 28.7359 16.4484C29.0835 16.4484 29.3333 16.3256 29.4986 16.0753C29.6433 15.8535 29.7262 15.5522 29.7447 15.1769L29.7486 15.0128C29.7486 14.5595 29.665 14.2035 29.4986 13.9532C29.334 13.7058 29.0852 13.5851 28.7359 13.5851ZM39.3042 13.5646C38.9566 13.5646 38.7088 13.7008 38.5464 13.9493C38.438 14.1122 38.369 14.3225 38.3316 14.5743H40.2212C40.2034 14.3308 40.1556 14.1131 40.0464 13.9493C39.8818 13.7016 39.6518 13.5646 39.3042 13.5646ZM18.0913 13.5646C17.744 13.5647 17.497 13.701 17.3345 13.9493C17.2262 14.1122 17.1571 14.3224 17.1197 14.5743H19.0083C18.9904 14.3308 18.9435 14.1131 18.8345 13.9493C18.6699 13.7014 18.439 13.5646 18.0913 13.5646Z",
           fill: "#FFFFFE"
@@ -22143,15 +29130,15 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/blocks/contact-form/components/help-message/index.jsx
-var import_jsx_runtime130 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime132 = __toESM(require_jsx_runtime(), 1);
 var GridiconNoticeOutline = import_notice_outline.default.default || import_notice_outline.default;
 var help_message_default = ({ children = null, isError = false, ...props }) => {
   const classes = clsx_default("help-message", {
     "help-message-is-error": isError
   });
-  return children && /* @__PURE__ */ (0, import_jsx_runtime130.jsxs)("div", { className: classes, ...props, children: [
-    isError && /* @__PURE__ */ (0, import_jsx_runtime130.jsx)(GridiconNoticeOutline, { size: "24", "aria-hidden": "true", role: "img", focusable: "false" }),
-    /* @__PURE__ */ (0, import_jsx_runtime130.jsx)("span", { children })
+  return children && /* @__PURE__ */ (0, import_jsx_runtime132.jsxs)("div", { className: classes, ...props, children: [
+    isError && /* @__PURE__ */ (0, import_jsx_runtime132.jsx)(GridiconNoticeOutline, { size: "24", "aria-hidden": "true", role: "img", focusable: "false" }),
+    /* @__PURE__ */ (0, import_jsx_runtime132.jsx)("span", { children })
   ] });
 };
 
@@ -22201,10 +29188,10 @@ var UNKNOWN_ERROR_MESSAGE = (0, import_i18n56.__)("Unknown error", "jetpack-form
 var fetchConfigData = async (dispatch) => {
   dispatch(setConfigLoading(true));
   try {
-    const result = await (0, import_api_fetch2.default)({
+    const result2 = await (0, import_api_fetch2.default)({
       path: "/wp/v2/feedback/config"
     });
-    dispatch(receiveConfig(result));
+    dispatch(receiveConfig(result2));
   } catch (e2) {
     const message2 = e2 instanceof Error ? e2.message : UNKNOWN_ERROR_MESSAGE;
     dispatch(setConfigError(message2));
@@ -22391,7 +29378,7 @@ function useCreateForm() {
 }
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/components/create-salesforce-lead-form-button.tsx
-var import_jsx_runtime131 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime133 = __toESM(require_jsx_runtime(), 1);
 function CreateSalesforceLeadFormButton({ className }) {
   const { openNewForm } = useCreateForm();
   const handleClick = () => {
@@ -22404,11 +29391,11 @@ function CreateSalesforceLeadFormButton({ className }) {
       }
     });
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime131.jsx)(import_components56.Button, { variant: "primary", onClick: handleClick, className, children: (0, import_i18n57.__)("Create Salesforce lead form", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime133.jsx)(import_components56.Button, { variant: "primary", onClick: handleClick, className, children: (0, import_i18n57.__)("Create Salesforce lead form", "jetpack-forms") });
 }
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/salesforce.tsx
-var import_jsx_runtime132 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime134 = __toESM(require_jsx_runtime(), 1);
 var isValidSalesforceOrgId = (id) => typeof id === "string" && /^[a-zA-Z0-9]{15,18}$/.test(id.trim());
 function buildSalesforceCard({
   integration,
@@ -22423,7 +29410,7 @@ function buildSalesforceCard({
     id: integration.id,
     title: integration.title,
     description: integration.subtitle,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime132.jsx)(salesforce_default, { width: 32, height: 32 }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(salesforce_default, { width: 32, height: 32 }),
     cardData: {
       ...integration,
       isLoading: typeof integration.isInstalled === "undefined",
@@ -22441,10 +29428,10 @@ function buildSalesforceCard({
         toggleDisabledTooltip: !isValidSalesforceOrgId(organizationId) ? (0, import_i18n58.__)("Enter a Salesforce Organization ID to enable.", "jetpack-forms") : void 0,
         isConnected: isValidSalesforceOrgId(organizationId)
       },
-      setupBadge: context === "dashboard" ? /* @__PURE__ */ (0, import_jsx_runtime132.jsx)(Badge, { intent: "success", className: "integration-card__setup-badge", children: (0, import_i18n58.__)("Configured per form", "jetpack-forms") }) : /* @__PURE__ */ (0, import_jsx_runtime132.jsx)(Badge, { intent: "default", className: "integration-card__setup-badge", children: (0, import_i18n58.__)("Enter organization ID", "jetpack-forms") })
+      setupBadge: context === "dashboard" ? /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(Badge, { intent: "success", className: "integration-card__setup-badge", children: (0, import_i18n58.__)("Configured per form", "jetpack-forms") }) : /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(Badge, { intent: "default", className: "integration-card__setup-badge", children: (0, import_i18n58.__)("Enter organization ID", "jetpack-forms") })
     },
-    body: context === "block-editor" ? /* @__PURE__ */ (0, import_jsx_runtime132.jsxs)(import_components57.BaseControl, { __nextHasNoMarginBottom: true, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime132.jsx)(
+    body: context === "block-editor" ? /* @__PURE__ */ (0, import_jsx_runtime134.jsxs)(import_components57.BaseControl, { __nextHasNoMarginBottom: true, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(
         import_components57.TextControl,
         {
           label: (0, import_i18n58.__)("Organization ID", "jetpack-forms"),
@@ -22460,21 +29447,21 @@ function buildSalesforceCard({
           style: { maxWidth: "300px" }
         }
       ),
-      organizationId && !isValidSalesforceOrgId(organizationId) && /* @__PURE__ */ (0, import_jsx_runtime132.jsx)(help_message_default, { isError: true, style: { marginTop: "8px" }, children: (0, import_i18n58.__)(
+      organizationId && !isValidSalesforceOrgId(organizationId) && /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(help_message_default, { isError: true, style: { marginTop: "8px" }, children: (0, import_i18n58.__)(
         "Invalid Organization ID. Should be a 15\u201318 characters long alphanumeric string.",
         "jetpack-forms"
       ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime132.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime132.jsx)(import_components57.ExternalLink, { href: "https://help.salesforce.com/s/articleView?id=000325251&type=1", children: (0, import_i18n58.__)("Where to find your Salesforce Organization ID", "jetpack-forms") }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime132.jsx)("div", { style: { marginTop: "20px", marginBottom: "20px" }, children: (0, import_i18n58.__)(
+      /* @__PURE__ */ (0, import_jsx_runtime134.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(import_components57.ExternalLink, { href: "https://help.salesforce.com/s/articleView?id=000325251&type=1", children: (0, import_i18n58.__)("Where to find your Salesforce Organization ID", "jetpack-forms") }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime134.jsx)("div", { style: { marginTop: "20px", marginBottom: "20px" }, children: (0, import_i18n58.__)(
         "For integration with Salesforce to work, you must add specific fields with specific field IDs that match Salesforce.",
         "jetpack-forms"
       ) })
-    ] }) : /* @__PURE__ */ (0, import_jsx_runtime132.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime132.jsx)("p", { className: "integration-card__description", children: (0, import_i18n58.__)(
+    ] }) : /* @__PURE__ */ (0, import_jsx_runtime134.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime134.jsx)("p", { className: "integration-card__description", children: (0, import_i18n58.__)(
         "Salesforce connections are managed for each form individually in the block editor.",
         "jetpack-forms"
       ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime132.jsx)(CreateSalesforceLeadFormButton, { className: "jp-forms__create-form-button--large-green" })
+      /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(CreateSalesforceLeadFormButton, { className: "jp-forms__create-form-button--large-green" })
     ] })
   };
   return base;
@@ -22562,7 +29549,7 @@ var import_components61 = __toESM(require_components(), 1);
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integration-card/integration-card-body.tsx
 var import_components58 = __toESM(require_components(), 1);
-var import_jsx_runtime133 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime135 = __toESM(require_jsx_runtime(), 1);
 var IntegrationCardBody = ({
   isExpanded,
   children,
@@ -22586,11 +29573,11 @@ var IntegrationCardBody = ({
   const showPluginActivateMessage = !__isPartial && isPlugin && isInstalled && !isActive;
   const showContent = !__isPartial && (isPlugin && isInstalled && isActive || isService);
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime133.jsx)(import_components58.CardBody, { children: /* @__PURE__ */ (0, import_jsx_runtime133.jsx)(import_components58.Spinner, {}) });
+    return /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(import_components58.CardBody, { children: /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(import_components58.Spinner, {}) });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime133.jsxs)(import_components58.CardBody, { children: [
-    showPluginInstallMessage && /* @__PURE__ */ (0, import_jsx_runtime133.jsx)("p", { className: "integration-card__description", children: notInstalledMessage }),
-    showPluginActivateMessage && /* @__PURE__ */ (0, import_jsx_runtime133.jsx)("p", { className: "integration-card__description", children: notActivatedMessage }),
+  return /* @__PURE__ */ (0, import_jsx_runtime135.jsxs)(import_components58.CardBody, { children: [
+    showPluginInstallMessage && /* @__PURE__ */ (0, import_jsx_runtime135.jsx)("p", { className: "integration-card__description", children: notInstalledMessage }),
+    showPluginActivateMessage && /* @__PURE__ */ (0, import_jsx_runtime135.jsx)("p", { className: "integration-card__description", children: notActivatedMessage }),
     showContent && children
   ] });
 };
@@ -22616,6 +29603,9 @@ function getScriptData() {
 }
 function isSimpleSite() {
   return getScriptData()?.site?.host === "wpcom";
+}
+function isWoASite() {
+  return getScriptData()?.site?.host === "woa";
 }
 
 // src/blocks/contact-form/util/plugin-management.js
@@ -22736,7 +29726,7 @@ var usePluginInstallation = ({
 };
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integration-card/plugin-action-button.tsx
-var import_jsx_runtime134 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime136 = __toESM(require_jsx_runtime(), 1);
 var PluginActionButton = ({
   slug,
   pluginFile,
@@ -22796,14 +29786,14 @@ var PluginActionButton = ({
     }
     return String(isInstalled ? tooltipTextActivate : tooltipTextInstall);
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(import_components59.Tooltip, { text: getTooltipText(), children: /* @__PURE__ */ (0, import_jsx_runtime134.jsx)("span", { style: { display: "inline-flex" }, children: /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(import_components59.Tooltip, { text: getTooltipText(), children: /* @__PURE__ */ (0, import_jsx_runtime136.jsx)("span", { style: { display: "inline-flex" }, children: /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(
     import_components59.Button,
     {
       variant: "primary",
       onClick: handleAction,
       disabled: isDisabled,
       style: isDisabled ? { pointerEvents: "none" } : void 0,
-      icon: isInstalling || isReconcilingStatus ? /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(import_components59.Spinner, {}) : void 0,
+      icon: isInstalling || isReconcilingStatus ? /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(import_components59.Spinner, {}) : void 0,
       __next40pxDefaultSize: true,
       children: getButtonText()
     }
@@ -22812,7 +29802,7 @@ var PluginActionButton = ({
 var plugin_action_button_default = PluginActionButton;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integration-card/integration-card-header.tsx
-var import_jsx_runtime135 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime137 = __toESM(require_jsx_runtime(), 1);
 var noop2 = () => {
 };
 var IntegrationCardHeader = ({
@@ -22873,14 +29863,14 @@ var IntegrationCardHeader = ({
   const isHeaderToggleEnabledFinal = isHeaderToggleEnabled && !__isPartial;
   const showHeaderToggleFinal = showHeaderToggle && !__isPartial;
   const showIntegrationIcons = useConfigValue("showIntegrationIcons");
-  return /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
     import_components60.CardHeader,
     {
       onClick: __isPartial ? noop2 : handleHeaderClick,
       className: clsx_default("integration-card__header", { "is-clickable": !__isPartial }),
-      children: /* @__PURE__ */ (0, import_jsx_runtime135.jsxs)("div", { className: "integration-card__header-content", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime135.jsxs)("div", { className: "integration-card__header-main", children: [
-          showIntegrationIcons !== false && /* @__PURE__ */ (0, import_jsx_runtime135.jsx)("div", { className: "integration-card__service-icon-container", children: cardData?.iconUrl ? /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime137.jsxs)("div", { className: "integration-card__header-content", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime137.jsxs)("div", { className: "integration-card__header-main", children: [
+          showIntegrationIcons !== false && /* @__PURE__ */ (0, import_jsx_runtime137.jsx)("div", { className: "integration-card__service-icon-container", children: cardData?.iconUrl ? /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
             "img",
             {
               src: cardData.iconUrl,
@@ -22893,7 +29883,7 @@ var IntegrationCardHeader = ({
                 cardData.slug && `integration-card__service-icon--${cardData.slug}`
               )
             }
-          ) : /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(
+          ) : /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
             import_components60.Icon,
             {
               icon: plugins_default,
@@ -22905,11 +29895,11 @@ var IntegrationCardHeader = ({
               "aria-hidden": true
             }
           ) }),
-          /* @__PURE__ */ (0, import_jsx_runtime135.jsxs)("div", { className: "integration-card__title-section", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime135.jsx)("h3", { className: "integration-card__title", children: title }),
-            description && /* @__PURE__ */ (0, import_jsx_runtime135.jsx)("span", { className: "integration-card__description", children: description }),
-            __isPartial && /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(import_components60.Animate, { type: "loading", children: ({ className }) => /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(Badge, { className: clsx_default("integration-card__plugin-badge", className), children: " " }) }),
-            showPluginAction && /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime137.jsxs)("div", { className: "integration-card__title-section", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime137.jsx)("h3", { className: "integration-card__title", children: title }),
+            description && /* @__PURE__ */ (0, import_jsx_runtime137.jsx)("span", { className: "integration-card__description", children: description }),
+            __isPartial && /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(import_components60.Animate, { type: "loading", children: ({ className }) => /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(Badge, { className: clsx_default("integration-card__plugin-badge", className), children: " " }) }),
+            showPluginAction && /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
               Badge,
               {
                 intent: isInstalled && !isActive ? "warning" : "default",
@@ -22917,11 +29907,11 @@ var IntegrationCardHeader = ({
                 children: pluginActionLabel
               }
             ),
-            showConnectedBadge && /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(Badge, { intent: "success", className: "integration-card__connected-badge", children: (0, import_i18n60.__)("Enabled", "jetpack-forms") }),
-            showPendingBadge && (setupBadge || /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(Badge, { intent: "warning", className: "integration-card__setup-badge", children: (0, import_i18n60.__)("Needs connection", "jetpack-forms") }))
+            showConnectedBadge && /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(Badge, { intent: "success", className: "integration-card__connected-badge", children: (0, import_i18n60.__)("Enabled", "jetpack-forms") }),
+            showPendingBadge && (setupBadge || /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(Badge, { intent: "warning", className: "integration-card__setup-badge", children: (0, import_i18n60.__)("Needs connection", "jetpack-forms") }))
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime135.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime137.jsxs)(
           import_components60.__experimentalHStack,
           {
             className: "integration-card__header-actions",
@@ -22930,7 +29920,7 @@ var IntegrationCardHeader = ({
             justify: "end",
             expanded: false,
             children: [
-              showPluginAction && /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(
+              showPluginAction && /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
                 plugin_action_button_default,
                 {
                   slug: cardData.slug,
@@ -22941,11 +29931,11 @@ var IntegrationCardHeader = ({
                   trackEventName: cardData.trackEventName
                 }
               ),
-              !showPluginAction && showHeaderToggleFinal && /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(
+              !showPluginAction && showHeaderToggleFinal && /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
                 import_components60.Tooltip,
                 {
                   text: !isHeaderToggleEnabledFinal && toggleDisabledTooltip ? toggleDisabledTooltip : getTooltipText(headerToggleValue),
-                  children: /* @__PURE__ */ (0, import_jsx_runtime135.jsx)("span", { className: "integration-card__toggle-tooltip-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(
+                  children: /* @__PURE__ */ (0, import_jsx_runtime137.jsx)("span", { className: "integration-card__toggle-tooltip-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
                     import_components60.ToggleControl,
                     {
                       checked: headerToggleValue && (isActive || isConnected),
@@ -22956,7 +29946,7 @@ var IntegrationCardHeader = ({
                   ) })
                 }
               ),
-              !__isPartial && /* @__PURE__ */ (0, import_jsx_runtime135.jsx)(import_components60.Icon, { icon: isExpanded ? chevron_up_default : chevron_down_default })
+              !__isPartial && /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(import_components60.Icon, { icon: isExpanded ? chevron_up_default : chevron_down_default })
             ]
           }
         )
@@ -22975,7 +29965,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integration-card/index.tsx
-var import_jsx_runtime136 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime138 = __toESM(require_jsx_runtime(), 1);
 var IntegrationCard = ({
   title,
   description,
@@ -22986,7 +29976,7 @@ var IntegrationCard = ({
   toggleTooltip,
   borderBottom = true
 }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime136.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime138.jsxs)(
     import_components61.Card,
     {
       className: "integration-card",
@@ -22994,7 +29984,7 @@ var IntegrationCard = ({
       borderBottom,
       isRounded: false,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(
           integration_card_header_default,
           {
             title,
@@ -23005,7 +29995,7 @@ var IntegrationCard = ({
             toggleTooltip
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(integration_card_body_default, { isExpanded, cardData, children })
+        /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(integration_card_body_default, { isExpanded, cardData, children })
       ]
     }
   );
@@ -23013,7 +30003,7 @@ var IntegrationCard = ({
 var integration_card_default = IntegrationCard;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integrations-list.tsx
-var import_jsx_runtime137 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime139 = __toESM(require_jsx_runtime(), 1);
 var IntegrationsList = ({
   integrations = [],
   refreshIntegrations: refreshIntegrations2,
@@ -23055,7 +30045,7 @@ var IntegrationsList = ({
     },
     [context]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(import_jsx_runtime137.Fragment, { children: items.map((item) => /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime139.jsx)(import_jsx_runtime139.Fragment, { children: items.map((item) => /* @__PURE__ */ (0, import_jsx_runtime139.jsx)(
     integration_card_default,
     {
       title: item.title,
@@ -23080,7 +30070,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/index.tsx
-var import_jsx_runtime138 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime140 = __toESM(require_jsx_runtime(), 1);
 var IntegrationsModal = ({
   isOpen,
   onClose,
@@ -23094,14 +30084,14 @@ var IntegrationsModal = ({
   if (!isOpen) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
     import_components62.Modal,
     {
       title: (0, import_i18n61.__)("Manage integrations", "jetpack-forms"),
       onRequestClose: onClose,
       size: "large",
       className: "jetpack-forms-integrations-modal",
-      children: /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components62.__experimentalVStack, { spacing: "4", children: /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(import_components62.__experimentalVStack, { spacing: "4", children: /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
         integrations_list_default,
         {
           integrations: integrationsData,
@@ -23275,7 +30265,7 @@ var store2 = (0, import_data9.createReduxStore)(INTEGRATIONS_STORE, {
 var import_components63 = __toESM(require_components(), 1);
 var import_element67 = __toESM(require_element(), 1);
 var import_i18n62 = __toESM(require_i18n(), 1);
-var import_jsx_runtime139 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime141 = __toESM(require_jsx_runtime(), 1);
 function CreateFormButton({
   label = (0, import_i18n62.__)("Create a form", "jetpack-forms"),
   showPatterns = false,
@@ -23293,7 +30283,7 @@ function CreateFormButton({
     }),
     [openNewForm, showPatterns]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime139.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(
     import_components63.Button,
     {
       size: "compact",
@@ -23307,7 +30297,7 @@ function CreateFormButton({
 }
 
 // src/dashboard/components/empty-responses/index.tsx
-var import_jsx_runtime140 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime142 = __toESM(require_jsx_runtime(), 1);
 var useInstallAkismet = () => {
   const { akismetIntegration } = (0, import_data10.useSelect)((select) => {
     const store4 = select(INTEGRATIONS_STORE);
@@ -23336,7 +30326,7 @@ var useInstallAkismet = () => {
       "jetpack-forms"
     ),
     {
-      moreInfoLink: /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(import_components64.ExternalLink, { href: "https://akismet.com/", children: null })
+      moreInfoLink: /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(import_components64.ExternalLink, { href: "https://akismet.com/", children: null })
     }
   );
   const activateButtonText = (0, import_i18n63.__)("Activate Akismet Anti-spam", "jetpack-forms");
@@ -23387,10 +30377,10 @@ var useInstallAkismet = () => {
     handleAkismetSetup
   };
 };
-var EmptyWrapper = ({ heading = "", body = "", actions = null }) => /* @__PURE__ */ (0, import_jsx_runtime140.jsxs)(import_components64.__experimentalVStack, { alignment: "center", spacing: "2", children: [
-  heading && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(import_components64.__experimentalText, { as: "h3", weight: "500", size: "15", children: heading }),
-  body && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(import_components64.__experimentalText, { variant: "muted", children: body }),
-  actions && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)("span", { style: { marginBlockStart: "16px" }, children: actions })
+var EmptyWrapper = ({ heading = "", body = "", actions = null }) => /* @__PURE__ */ (0, import_jsx_runtime142.jsxs)(import_components64.__experimentalVStack, { alignment: "center", spacing: "2", children: [
+  heading && /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(import_components64.__experimentalText, { as: "h3", weight: "500", size: "15", children: heading }),
+  body && /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(import_components64.__experimentalText, { variant: "muted", children: body }),
+  actions && /* @__PURE__ */ (0, import_jsx_runtime142.jsx)("span", { style: { marginBlockStart: "16px" }, children: actions })
 ] });
 var EmptyResponses = ({ status, isSearch, readStatusFilter }) => {
   const emptyTrashDays = useConfigValue("emptyTrashDays") ?? 0;
@@ -23409,7 +30399,7 @@ var EmptyResponses = ({ status, isSearch, readStatusFilter }) => {
     "jetpack-forms"
   );
   if (isSearch || hasReadStatusFilter) {
-    return /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(EmptyWrapper, { heading: searchHeading, body: searchMessage });
+    return /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(EmptyWrapper, { heading: searchHeading, body: searchMessage });
   }
   const noTrashHeading = (0, import_i18n63.__)("Trash is empty", "jetpack-forms");
   const noTrashMessage = (0, import_i18n63.sprintf)(
@@ -23423,7 +30413,7 @@ var EmptyResponses = ({ status, isSearch, readStatusFilter }) => {
     emptyTrashDays
   );
   if (status === "trash") {
-    return /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(EmptyWrapper, { heading: noTrashHeading, body: emptyTrashDays > 0 && noTrashMessage });
+    return /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(EmptyWrapper, { heading: noTrashHeading, body: emptyTrashDays > 0 && noTrashMessage });
   }
   const noSpamHeading = (0, import_i18n63.__)("Lucky you, no spam!", "jetpack-forms");
   const noSpamMessage = (0, import_i18n63.__)(
@@ -23432,12 +30422,12 @@ var EmptyResponses = ({ status, isSearch, readStatusFilter }) => {
   );
   if (status === "spam") {
     if (shouldShowAkismetCta) {
-      return /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(
         EmptyWrapper,
         {
           heading: noSpamHeading,
           body: wrapperBody,
-          actions: /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
+          actions: /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(
             import_components64.Button,
             {
               variant: "primary",
@@ -23451,9 +30441,9 @@ var EmptyResponses = ({ status, isSearch, readStatusFilter }) => {
         }
       );
     }
-    return /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(EmptyWrapper, { heading: noSpamHeading, body: noSpamMessage });
+    return /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(EmptyWrapper, { heading: noSpamHeading, body: noSpamMessage });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(
     EmptyWrapper,
     {
       heading: (0, import_i18n63.__)("You're set up. No responses yet.", "jetpack-forms"),
@@ -23461,7 +30451,7 @@ var EmptyResponses = ({ status, isSearch, readStatusFilter }) => {
         "Share your form to start collecting responses. New items will appear here.",
         "jetpack-forms"
       ),
-      actions: /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(CreateFormButton, { label: (0, import_i18n63.__)("Create a new form", "jetpack-forms"), variant: "primary" })
+      actions: /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(CreateFormButton, { label: (0, import_i18n63.__)("Create a new form", "jetpack-forms"), variant: "primary" })
     }
   );
 };
@@ -24022,11 +31012,11 @@ Hovercards.createHovercard = function(profileData, _temp4) {
     return !!value;
   });
   var renderSocialLinks = verifiedAccounts.slice(0, 3).reduce(function(links, _ref10) {
-    var label = _ref10.label, icon = _ref10.icon, url = _ref10.url, type = _ref10.type, isHidden2 = _ref10.isHidden;
+    var label = _ref10.label, icon15 = _ref10.icon, url = _ref10.url, type = _ref10.type, isHidden2 = _ref10.isHidden;
     if (isHidden2) {
       return links;
     }
-    links.push('\n					<a class="gravatar-hovercard__social-link" href="' + escUrl(url) + '" target="_blank" data-service-name="' + type + '">\n						<img class="gravatar-hovercard__social-icon" src="' + escUrl(icon) + '" width="32" height="32" alt="' + escHtml(label) + '" />\n					</a>\n				');
+    links.push('\n					<a class="gravatar-hovercard__social-link" href="' + escUrl(url) + '" target="_blank" data-service-name="' + type + '">\n						<img class="gravatar-hovercard__social-icon" src="' + escUrl(icon15) + '" width="32" height="32" alt="' + escHtml(label) + '" />\n					</a>\n				');
     return links;
   }, []).join("");
   var headerImageHtml = "";
@@ -24115,7 +31105,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/gravatar/index.tsx
-var import_jsx_runtime141 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime143 = __toESM(require_jsx_runtime(), 1);
 function Gravatar({
   defaultImage = "initials",
   displayName,
@@ -24158,7 +31148,7 @@ function Gravatar({
     return null;
   }
   const hashedEmail = (0, import_js_sha256.sha256)(email);
-  return /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(
     "img",
     {
       alt: displayName || "",
@@ -24430,7 +31420,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/text-with-flag/index.tsx
-var import_jsx_runtime142 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime144 = __toESM(require_jsx_runtime(), 1);
 function getFlagEmoji(countryCode) {
   if (!countryCode || countryCode.length !== 2) {
     return "";
@@ -24455,13 +31445,13 @@ function TextWithFlag({
     flag = getFlagEmoji(countryCode);
     countryName = getTranslatedCountryName(countryCode);
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime142.jsxs)("span", { children: [
-    flag && /* @__PURE__ */ (0, import_jsx_runtime142.jsxs)(import_jsx_runtime142.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(import_components65.Tooltip, { text: countryName, children: /* @__PURE__ */ (0, import_jsx_runtime142.jsx)("span", { "aria-label": countryName, role: "img", className: "jp-forms__text-with-flag-emoji", children: flag }) }),
+  return /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)("span", { children: [
+    flag && /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)(import_jsx_runtime144.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(import_components65.Tooltip, { text: countryName, children: /* @__PURE__ */ (0, import_jsx_runtime144.jsx)("span", { "aria-label": countryName, role: "img", className: "jp-forms__text-with-flag-emoji", children: flag }) }),
       " "
     ] }),
-    !flag && fallbackIcon && /* @__PURE__ */ (0, import_jsx_runtime142.jsxs)(import_jsx_runtime142.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(icon_default, { icon: globe_default, size: 16, className: "jp-forms__text-with-flag-globe" }),
+    !flag && fallbackIcon && /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)(import_jsx_runtime144.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(icon_default, { icon: globe_default, size: 16, className: "jp-forms__text-with-flag-globe" }),
       " "
     ] }),
     children
@@ -24505,16 +31495,29 @@ var isLikelyPhoneNumber = (value) => {
 var isCollectionFormatField = (item) => {
   return item !== null && typeof item === "object" && "label" in item && "value" in item && "key" in item;
 };
+var isFieldsCollection = (fields) => {
+  if (Array.isArray(fields)) {
+    if (fields.length === 0) {
+      return true;
+    }
+    return isCollectionFormatField(fields[0]);
+  }
+  if (!fields || typeof fields !== "object") {
+    return false;
+  }
+  const values = Object.values(fields);
+  return values.length > 0 && isCollectionFormatField(values[0]);
+};
 
 // src/dashboard/router/dashboard-search-params-context.tsx
 var import_element70 = __toESM(require_element(), 1);
-var import_jsx_runtime143 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
 var DashboardSearchParamsContext = (0, import_element70.createContext)(null);
 function DashboardSearchParamsProvider({
   value,
   children
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(DashboardSearchParamsContext.Provider, { value, children });
+  return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(DashboardSearchParamsContext.Provider, { value, children });
 }
 function useDashboardSearchParams() {
   const ctx8 = (0, import_element70.useContext)(DashboardSearchParamsContext);
@@ -25055,7 +32058,7 @@ function updateBadge(element, count) {
     element.classList.add(`count-${count}`);
   }
   element.ariaHidden = count > 0 ? "false" : "true";
-  element.textContent = formatNumber(count);
+  element.textContent = formatNumber2(count);
 }
 var updateMenuCounter = (count) => {
   document.querySelectorAll(".jp-feedback-unread-counter").forEach((item) => {
@@ -25082,7 +32085,7 @@ var updateMenuCounterOptimistically = (count) => {
 // src/dashboard/router/wp-route-dashboard-search-params-provider.tsx
 var import_element72 = __toESM(require_element(), 1);
 import { useSearch, useNavigate } from "@wordpress/route";
-var import_jsx_runtime144 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime146 = __toESM(require_jsx_runtime(), 1);
 function searchRecordToUrlSearchParams(search) {
   const params = new URLSearchParams();
   for (const [key, value] of Object.entries(search || {})) {
@@ -25145,7 +32148,7 @@ function WpRouteDashboardSearchParamsProvider({
     () => [searchParams, setSearchParams],
     [searchParams, setSearchParams]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(DashboardSearchParamsProvider, { value, children });
+  return /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(DashboardSearchParamsProvider, { value, children });
 }
 
 // src/dashboard/wp-build/components/dataviews-header-row/index.tsx
@@ -25500,15 +32503,15 @@ function mergeEventHandlers2(ourHandler, theirHandler) {
     if (isSyntheticEvent2(event)) {
       const baseUIEvent = event;
       makeEventPreventable2(baseUIEvent);
-      const result2 = theirHandler(baseUIEvent);
+      const result3 = theirHandler(baseUIEvent);
       if (!baseUIEvent.baseUIHandlerPrevented) {
         ourHandler?.(baseUIEvent);
       }
-      return result2;
+      return result3;
     }
-    const result = theirHandler(event);
+    const result2 = theirHandler(event);
     ourHandler?.(event);
-    return result;
+    return result2;
   };
 }
 function makeEventPreventable2(event) {
@@ -25649,7 +32652,7 @@ function useCompositeListContext() {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/list/CompositeList.js
-var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime147 = __toESM(require_jsx_runtime(), 1);
 function CompositeList(props) {
   const {
     children,
@@ -25755,7 +32758,7 @@ function CompositeList(props) {
     labelsRef,
     nextIndexRef
   }), [register4, unregister, subscribeMapChange, elementsRef, labelsRef, nextIndexRef]);
-  return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(CompositeListContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(CompositeListContext.Provider, {
     value: contextValue,
     children
   });
@@ -25815,7 +32818,7 @@ var tabsStateAttributesMapping = {
 };
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/root/TabsRoot.js
-var import_jsx_runtime146 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime148 = __toESM(require_jsx_runtime(), 1);
 var TabsRoot = /* @__PURE__ */ React19.forwardRef(function TabsRoot2(componentProps, forwardedRef) {
   const {
     className,
@@ -25910,9 +32913,9 @@ var TabsRoot = /* @__PURE__ */ React19.forwardRef(function TabsRoot2(componentPr
     props: elementProps,
     stateAttributesMapping: tabsStateAttributesMapping
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(TabsRootContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(TabsRootContext.Provider, {
     value: tabsContextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(CompositeList, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(CompositeList, {
       elementsRef: tabPanelRefs,
       children: element
     })
@@ -26916,7 +33919,7 @@ var TabsIndicatorCssVars = /* @__PURE__ */ (function(TabsIndicatorCssVars2) {
 })({});
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/indicator/TabsIndicator.js
-var import_jsx_runtime147 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime149 = __toESM(require_jsx_runtime(), 1);
 var stateAttributesMapping = {
   ...tabsStateAttributesMapping,
   activeTabPosition: () => null,
@@ -27027,8 +34030,8 @@ var TabsIndicator = /* @__PURE__ */ React31.forwardRef(function TabIndicator(com
   if (activeTabValue == null) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime147.jsxs)(React31.Fragment, {
-    children: [element, !isMounted && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime147.jsx)("script", {
+  return /* @__PURE__ */ (0, import_jsx_runtime149.jsxs)(React31.Fragment, {
+    children: [element, !isMounted && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime149.jsx)("script", {
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML: {
         __html: script
@@ -27208,15 +34211,15 @@ function scrollIntoViewIfNeeded2(scrollContainer, element, direction, orientatio
 }
 function getOffset(ancestor, element, side) {
   const propName = side === "left" ? "offsetLeft" : "offsetTop";
-  let result = 0;
+  let result2 = 0;
   while (element.offsetParent) {
-    result += element[propName];
+    result2 += element[propName];
     if (element.offsetParent === ancestor) {
       break;
     }
     element = element.offsetParent;
   }
-  return result;
+  return result2;
 }
 function getStyles(element) {
   const styles = getComputedStyle(element);
@@ -27437,7 +34440,7 @@ function isModifierKeySet(event, ignoredModifierKeys) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/root/CompositeRoot.js
-var import_jsx_runtime148 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime150 = __toESM(require_jsx_runtime(), 1);
 function CompositeRoot(componentProps) {
   const {
     render: render4,
@@ -27498,9 +34501,9 @@ function CompositeRoot(componentProps) {
     highlightItemOnHover,
     relayKeyboardEvent
   }), [highlightedIndex, onHighlightedIndexChange, highlightItemOnHover, relayKeyboardEvent]);
-  return /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(CompositeRootContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(CompositeRootContext.Provider, {
     value: contextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(CompositeList, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(CompositeList, {
       elementsRef,
       onMapChange: (newMap) => {
         onMapChangeProp?.(newMap);
@@ -27512,7 +34515,7 @@ function CompositeRoot(componentProps) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/list/TabsList.js
-var import_jsx_runtime149 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime151 = __toESM(require_jsx_runtime(), 1);
 var TabsList = /* @__PURE__ */ React35.forwardRef(function TabsList2(componentProps, forwardedRef) {
   const {
     activateOnFocus = false,
@@ -27561,9 +34564,9 @@ var TabsList = /* @__PURE__ */ React35.forwardRef(function TabsList2(componentPr
     tabsListElement,
     value
   }), [activateOnFocus, highlightedTabIndex, onTabActivation, setHighlightedTabIndex, tabsListElement, value]);
-  return /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(TabsListContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(TabsListContext.Provider, {
     value: tabsListContextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(CompositeRoot, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(CompositeRoot, {
       render: render4,
       className,
       state,
@@ -27669,7 +34672,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/tabs/list.tsx
-var import_jsx_runtime150 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime152 = __toESM(require_jsx_runtime(), 1);
 var DEFAULT_SCROLL_MARGIN = 0;
 var List = (0, import_react26.forwardRef)(function TabList({ children, density = "default", className, activateOnFocus, render: render4, ...otherProps }, forwardedRef) {
   const [listEl, setListEl] = (0, import_react26.useState)(null);
@@ -27728,11 +34731,11 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
       } else if (typeof render4 === "function") {
         return render4(newProps, state);
       }
-      return /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("div", { ...newProps });
+      return /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("div", { ...newProps });
     },
     [render4]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(
     index_parts_exports.List,
     {
       ref: mergedListRef,
@@ -27749,7 +34752,7 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
       ...otherProps,
       children: [
         children,
-        /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(index_parts_exports.Indicator, { className: "jp-forms-tabs__indicator" })
+        /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(index_parts_exports.Indicator, { className: "jp-forms-tabs__indicator" })
       ]
     }
   );
@@ -27757,9 +34760,9 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
 
 // src/dashboard/components/tabs/panel.tsx
 var import_react27 = __toESM(require_react(), 1);
-var import_jsx_runtime151 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime153 = __toESM(require_jsx_runtime(), 1);
 var Panel = (0, import_react27.forwardRef)(function TabPanel2({ className, focusable = true, tabIndex, ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
     index_parts_exports.Panel,
     {
       ref: forwardedRef,
@@ -27772,27 +34775,27 @@ var Panel = (0, import_react27.forwardRef)(function TabPanel2({ className, focus
 
 // src/dashboard/components/tabs/root.tsx
 var import_react28 = __toESM(require_react(), 1);
-var import_jsx_runtime152 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime154 = __toESM(require_jsx_runtime(), 1);
 var Root = (0, import_react28.forwardRef)(function TabsRoot3({ ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps });
+  return /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps });
 });
 
 // src/dashboard/components/tabs/tab.tsx
 var import_react29 = __toESM(require_react(), 1);
-var import_jsx_runtime153 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime155 = __toESM(require_jsx_runtime(), 1);
 var ChevronRight = (props) => {
   return (0, import_react29.cloneElement)(chevron_right_default, props);
 };
 var Tab = (0, import_react29.forwardRef)(function Tab2({ className, children, ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(
     index_parts_exports.Tab,
     {
       ref: forwardedRef,
       className: clsx_default("jp-forms-tabs__tab", className),
       ...otherProps,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("span", { className: "jp-forms-tabs__tab__children", children }),
-        /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(ChevronRight, { className: "jp-forms-tabs__tab__chevron" })
+        /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("span", { className: "jp-forms-tabs__tab__children", children }),
+        /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(ChevronRight, { className: "jp-forms-tabs__tab__chevron" })
       ]
     }
   );
@@ -27852,7 +34855,7 @@ function useFormsData(page, perPage, search, status) {
 // src/dashboard/wp-build/components/inbox-status-toggle/index.tsx
 var import_element74 = __toESM(require_element(), 1);
 var import_i18n66 = __toESM(require_i18n(), 1);
-var import_jsx_runtime154 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime156 = __toESM(require_jsx_runtime(), 1);
 var getLabel = (status, count) => {
   let label;
   switch (status) {
@@ -27866,9 +34869,9 @@ var getLabel = (status, count) => {
       label = (0, import_i18n66._x)("Trash", "noun", "jetpack-forms");
       break;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)("span", { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime156.jsxs)("span", { children: [
     label,
-    /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(count || 0) })
+    /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(count || 0) })
   ] });
 };
 function InboxStatusToggle({
@@ -27893,7 +34896,7 @@ function InboxStatusToggle({
     ],
     [counts2.inbox, counts2.spam, counts2.trash]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(Root, { value: activeStatus, onValueChange: handleChange, children: /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(List, { density: "compact", children: statusTabs.map((option) => /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(Tab, { value: option.value, children: option.label }, option.value)) }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(Root, { value: activeStatus, onValueChange: handleChange, children: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(List, { density: "compact", children: statusTabs.map((option) => /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(Tab, { value: option.value, children: option.label }, option.value)) }) });
 }
 
 // src/dashboard/wp-build/components/dataviews-header-row/style.scss
@@ -27905,7 +34908,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/wp-build/components/dataviews-header-row/index.tsx
-var import_jsx_runtime155 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime157 = __toESM(require_jsx_runtime(), 1);
 function DataViewsHeaderRow({
   activeTab,
   isSingleFormView = false,
@@ -27929,8 +34932,8 @@ function DataViewsHeaderRow({
     },
     [navigate]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(import_jsx_runtime155.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(import_jsx_runtime157.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(
       Stack,
       {
         align: "center",
@@ -27938,7 +34941,7 @@ function DataViewsHeaderRow({
         gap: "sm",
         justify: "space-between",
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Stack, { align: "center", gap: "sm", children: isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Stack, { align: "center", gap: "sm", children: isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
             InboxStatusToggle,
             {
               activeStatus: activeStatus ?? "inbox",
@@ -27946,25 +34949,25 @@ function DataViewsHeaderRow({
               onChange: onStatusChange ?? (() => {
               })
             }
-          ) : /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(List, { density: "compact", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Tab, { value: "responses", children: /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)("span", { children: [
+          ) : /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(List, { density: "compact", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Tab, { value: "responses", children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("span", { children: [
               (0, import_i18n67.__)("Responses", "jetpack-forms"),
-              /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(responsesInboxCount || 0) })
+              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(responsesInboxCount || 0) })
             ] }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Tab, { value: "forms", children: /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)("span", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Tab, { value: "forms", children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("span", { children: [
               (0, import_i18n67.__)("Forms", "jetpack-forms"),
-              /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(formsCount || 0) })
+              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(formsCount || 0) })
             ] }) })
           ] }) }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(Stack, { align: "center", gap: "sm", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(dataviews_default.Search, {}),
-            isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(dataviews_default.FiltersToggle, {}) : null,
-            /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(dataviews_default.ViewConfig, {})
+          /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(Stack, { align: "center", gap: "sm", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(dataviews_default.Search, {}),
+            isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(dataviews_default.FiltersToggle, {}) : null,
+            /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(dataviews_default.ViewConfig, {})
           ] })
         ]
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(dataviews_default.FiltersToggled, { className: "jp-forms-dataviews-filters__container" })
+    /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(dataviews_default.FiltersToggled, { className: "jp-forms-dataviews-filters__container" })
   ] });
 }
 
@@ -27979,14 +34982,14 @@ var import_i18n74 = __toESM(require_i18n(), 1);
 var import_components66 = __toESM(require_components(), 1);
 var import_element76 = __toESM(require_element(), 1);
 var import_i18n68 = __toESM(require_i18n(), 1);
-var import_jsx_runtime156 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime158 = __toESM(require_jsx_runtime(), 1);
 function EditFormButton({ formId }) {
   const adminUrl = useConfigValue("adminUrl") || "";
   const onClick = (0, import_element76.useCallback)(() => {
     const editPath = `post.php?post=${formId}&action=edit`;
     window.location.href = adminUrl ? `${adminUrl}${editPath}` : editPath;
   }, [adminUrl, formId]);
-  return /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components66.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n68.__)("Edit form", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components66.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n68.__)("Edit form", "jetpack-forms") });
 }
 
 // src/dashboard/components/empty-spam-button/index.tsx
@@ -27997,7 +35000,7 @@ var import_data15 = __toESM(require_data(), 1);
 var import_element77 = __toESM(require_element(), 1);
 var import_i18n69 = __toESM(require_i18n(), 1);
 var import_notices2 = __toESM(require_notices(), 1);
-var import_jsx_runtime157 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime159 = __toESM(require_jsx_runtime(), 1);
 var EmptySpamButton = ({
   totalItemsSpam: totalItemsSpamProp,
   isLoadingCounts: isLoadingCountsProp
@@ -28037,7 +35040,7 @@ var EmptySpamButton = ({
           deleted,
           "jetpack-forms"
         ),
-        formatNumber(deleted)
+        formatNumber2(deleted)
       );
       createSuccessNotice(successMessage, { type: "snackbar", id: "empty-spam" });
     }).catch(() => {
@@ -28065,8 +35068,8 @@ var EmptySpamButton = ({
     isEmptying,
     currentQuery2
   ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(import_jsx_runtime157.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(import_jsx_runtime159.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
       import_components67.Button,
       {
         size: "compact",
@@ -28081,7 +35084,7 @@ var EmptySpamButton = ({
         children: (0, import_i18n69.__)("Delete spam", "jetpack-forms")
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(
+    /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(
       import_components67.__experimentalConfirmDialog,
       {
         onCancel: closeConfirmDialog,
@@ -28089,8 +35092,8 @@ var EmptySpamButton = ({
         isOpen: isConfirmDialogOpen,
         confirmButtonText: (0, import_i18n69.__)("Delete", "jetpack-forms"),
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("h3", { children: (0, import_i18n69.__)("Delete forever", "jetpack-forms") }),
-          /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n69.sprintf)(
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("h3", { children: (0, import_i18n69.__)("Delete forever", "jetpack-forms") }),
+          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n69.sprintf)(
             // translators: %s: the number of responses in spam
             (0, import_i18n69._n)(
               "%s response in spam will be deleted forever. This action cannot be undone.",
@@ -28098,7 +35101,7 @@ var EmptySpamButton = ({
               totalItemsSpam || 0,
               "jetpack-forms"
             ),
-            formatNumber(totalItemsSpam)
+            formatNumber2(totalItemsSpam)
           ) : (0, import_i18n69.__)(
             "All responses in spam will be deleted forever. This action cannot be undone.",
             "jetpack-forms"
@@ -28118,7 +35121,7 @@ var import_data16 = __toESM(require_data(), 1);
 var import_element78 = __toESM(require_element(), 1);
 var import_i18n70 = __toESM(require_i18n(), 1);
 var import_notices3 = __toESM(require_notices(), 1);
-var import_jsx_runtime158 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime160 = __toESM(require_jsx_runtime(), 1);
 var EmptyTrashButton = ({
   totalItemsTrash: totalItemsTrashProp,
   isLoadingCounts: isLoadingCountsProp
@@ -28158,7 +35161,7 @@ var EmptyTrashButton = ({
           deleted,
           "jetpack-forms"
         ),
-        formatNumber(deleted)
+        formatNumber2(deleted)
       );
       createSuccessNotice(successMessage, { type: "snackbar", id: "empty-trash" });
     }).catch(() => {
@@ -28186,8 +35189,8 @@ var EmptyTrashButton = ({
     isEmptying,
     currentQuery2
   ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(import_jsx_runtime158.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)(import_jsx_runtime160.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
       import_components68.Button,
       {
         size: "compact",
@@ -28202,7 +35205,7 @@ var EmptyTrashButton = ({
         children: (0, import_i18n70.__)("Empty trash", "jetpack-forms")
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(
+    /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)(
       import_components68.__experimentalConfirmDialog,
       {
         onCancel: closeConfirmDialog,
@@ -28210,8 +35213,8 @@ var EmptyTrashButton = ({
         isOpen: isConfirmDialogOpen,
         confirmButtonText: (0, import_i18n70.__)("Delete", "jetpack-forms"),
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("h3", { children: (0, import_i18n70.__)("Delete forever", "jetpack-forms") }),
-          /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n70.sprintf)(
+          /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("h3", { children: (0, import_i18n70.__)("Delete forever", "jetpack-forms") }),
+          /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n70.sprintf)(
             // translators: %s: the number of responses in the trash.
             (0, import_i18n70._n)(
               "%s response in trash will be deleted forever. This action cannot be undone.",
@@ -28219,7 +35222,7 @@ var EmptyTrashButton = ({
               totalItemsTrash || 0,
               "jetpack-forms"
             ),
-            formatNumber(totalItemsTrash)
+            formatNumber2(totalItemsTrash)
           ) : (0, import_i18n70.__)(
             "All responses in trash will be deleted forever. This action cannot be undone.",
             "jetpack-forms"
@@ -28235,23 +35238,23 @@ var empty_trash_button_default = EmptyTrashButton;
 var import_components69 = __toESM(require_components(), 1);
 var import_element79 = __toESM(require_element(), 1);
 var import_i18n71 = __toESM(require_i18n(), 1);
-var import_jsx_runtime159 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime161 = __toESM(require_jsx_runtime(), 1);
 import { useNavigate as useNavigate3 } from "@wordpress/route";
 function BackToFormsButton() {
   const navigate = useNavigate3();
   const onClick = (0, import_element79.useCallback)(() => navigate({ href: "/forms" }), [navigate]);
-  return /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components69.Button, { size: "compact", variant: "primary", onClick, children: (0, import_i18n71.__)("Back to forms", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(import_components69.Button, { size: "compact", variant: "primary", onClick, children: (0, import_i18n71.__)("Back to forms", "jetpack-forms") });
 }
 
 // src/dashboard/wp-build/components/export-responses-button/index.tsx
 var import_components70 = __toESM(require_components(), 1);
 var import_i18n72 = __toESM(require_i18n(), 1);
-var import_jsx_runtime160 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime162 = __toESM(require_jsx_runtime(), 1);
 function ExportResponsesButton({
   isPrimary = false,
   onClick
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(
     import_components70.Button,
     {
       size: "compact",
@@ -28266,13 +35269,13 @@ function ExportResponsesButton({
 // src/dashboard/wp-build/components/manage-integrations-button/index.tsx
 var import_components71 = __toESM(require_components(), 1);
 var import_i18n73 = __toESM(require_i18n(), 1);
-var import_jsx_runtime161 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime163 = __toESM(require_jsx_runtime(), 1);
 function ManageIntegrationsButton({ onClick }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(import_components71.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n73.__)("Manage integrations", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(import_components71.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n73.__)("Manage integrations", "jetpack-forms") });
 }
 
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
-var import_jsx_runtime162 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime164 = __toESM(require_jsx_runtime(), 1);
 function usePageHeaderDetails(props) {
   const { screen, sourceId, isIntegrationsEnabled, showDashboardIntegrations, onOpenIntegrations } = props;
   const statusView = props.statusView ?? "inbox";
@@ -28308,9 +35311,9 @@ function usePageHeaderDetails(props) {
     return [{ label: (0, import_i18n74.__)("Form Responses", "jetpack-forms") }];
   }, [formTitle, isFormsScreen, isSingleFormScreen]);
   const breadcrumbs = (0, import_element80.useMemo)(() => {
-    return /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)(Stack, { align: "center", gap: "xs", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
-      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(breadcrumbs_default, { items: breadcrumbsItems })
+    return /* @__PURE__ */ (0, import_jsx_runtime164.jsxs)(Stack, { align: "center", gap: "xs", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
+      /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(breadcrumbs_default, { items: breadcrumbsItems })
     ] });
   }, [breadcrumbsItems]);
   const subtitle = (0, import_element80.useMemo)(() => {
@@ -28332,25 +35335,25 @@ function usePageHeaderDetails(props) {
   const actions = (0, import_element80.useMemo)(() => {
     if (isFormsScreen) {
       return [
-        ...isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime162.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
-        /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(CreateFormButton, {}, "create")
+        ...isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
+        /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(CreateFormButton, {}, "create")
       ];
     }
     if (isSingleFormScreen) {
       return [
-        /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(BackToFormsButton, {}, "back-to-forms"),
-        ...sourceIdNumber ? [/* @__PURE__ */ (0, import_jsx_runtime162.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
-        /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(ExportResponsesButton, { isPrimary: false }, "export"),
-        ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime162.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
-        ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime162.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
+        /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(BackToFormsButton, {}, "back-to-forms"),
+        ...sourceIdNumber ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
+        /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(ExportResponsesButton, { isPrimary: false }, "export"),
+        ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
+        ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
       ];
     }
     return [
-      ...statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime162.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
-      ...statusView === "inbox" ? [/* @__PURE__ */ (0, import_jsx_runtime162.jsx)(CreateFormButton, { variant: "secondary", showPatterns: false }, "create")] : [],
-      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(ExportResponsesButton, { isPrimary: statusView === "inbox" }, "export"),
-      ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime162.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
-      ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime162.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
+      ...statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
+      ...statusView === "inbox" ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(CreateFormButton, { variant: "secondary", showPatterns: false }, "create")] : [],
+      /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(ExportResponsesButton, { isPrimary: statusView === "inbox" }, "export"),
+      ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
+      ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
     ];
   }, [
     isIntegrationsEnabled,
@@ -28372,15 +35375,15 @@ var import_i18n75 = __toESM(require_i18n());
 var import_notices4 = __toESM(require_notices());
 
 // src/dashboard/icons/not-spam.tsx
-var import_primitives45 = __toESM(require_primitives(), 1);
-var import_jsx_runtime163 = __toESM(require_jsx_runtime(), 1);
-var notSpam = /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(import_primitives45.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(import_primitives45.Path, { d: "M13 17v-2h-.9l-.9 2H13Zm3.6-11.9-.7 1.5 2.5 2.5v5.8l-3.6 3.6h-4.3L9.8 20h5.6l4.5-4.5v-7l-3.4-3.4ZM15 2.8 14.4 4h-6L3.9 8.5v7l3.6 3.6-.5 1.2.9.4L16 3.2l-.9-.4Zm-2 4.5V7h-2v4.6l-2.7 6-2.8-2.8V9l3.6-3.6h4.7L13 7.2Z" }) });
+var import_primitives47 = __toESM(require_primitives(), 1);
+var import_jsx_runtime165 = __toESM(require_jsx_runtime(), 1);
+var notSpam = /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_primitives47.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_primitives47.Path, { d: "M13 17v-2h-.9l-.9 2H13Zm3.6-11.9-.7 1.5 2.5 2.5v5.8l-3.6 3.6h-4.3L9.8 20h5.6l4.5-4.5v-7l-3.4-3.4ZM15 2.8 14.4 4h-6L3.9 8.5v7l3.6 3.6-.5 1.2.9.4L16 3.2l-.9-.4Zm-2 4.5V7h-2v4.6l-2.7 6-2.8-2.8V9l3.6-3.6h4.7L13 7.2Z" }) });
 var not_spam_default = notSpam;
 
 // src/dashboard/icons/spam.tsx
-var import_primitives46 = __toESM(require_primitives(), 1);
-var import_jsx_runtime164 = __toESM(require_jsx_runtime(), 1);
-var spam = /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(import_primitives46.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(import_primitives46.Path, { d: "M11 13h2V7h-2v6Zm0 4h2v-2h-2v2Zm4.5-13h-7L4 8.5v7L8.5 20h7l4.5-4.5v-7L15.5 4Zm3 10.9-3.6 3.6H9.1l-3.6-3.6V9.1l3.6-3.6h5.8l3.6 3.6v5.8Z" }) });
+var import_primitives48 = __toESM(require_primitives(), 1);
+var import_jsx_runtime166 = __toESM(require_jsx_runtime(), 1);
+var spam = /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(import_primitives48.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(import_primitives48.Path, { d: "M11 13h2V7h-2v6Zm0 4h2v-2h-2v2Zm4.5-13h-7L4 8.5v7L8.5 20h7l4.5-4.5v-7L15.5 4Zm3 10.9-3.6 3.6H9.1l-3.6-3.6V9.1l3.6-3.6h5.8l3.6 3.6v5.8Z" }) });
 var spam_default = spam;
 
 // src/dashboard/inbox/stage/views.js
@@ -28401,7 +35404,7 @@ var defaultLayouts = {
 };
 
 // routes/responses/actions.tsx
-var import_jsx_runtime165 = __toESM(require_jsx_runtime());
+var import_jsx_runtime167 = __toESM(require_jsx_runtime());
 var getCountQueryParams = (currentQuery2) => {
   const queryParams = {};
   if (currentQuery2?.search) {
@@ -28460,7 +35463,7 @@ var getGenericErrorMessage = (numberOfErrors) => {
       numberOfErrors,
       "jetpack-forms"
     ),
-    formatNumber(numberOfErrors)
+    formatNumber2(numberOfErrors)
   );
 };
 var withTimeout = (promise, timeoutMs = 3e4) => {
@@ -28537,7 +35540,7 @@ function getActions({
   const viewAction = {
     id: "view-response",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components72.Icon, { icon: comment_content_default }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: comment_content_default }),
     label: (0, import_i18n75.__)("View", "jetpack-forms"),
     async callback(items) {
       analytics_default.tracks.recordEvent("jetpack_forms_inbox_action_click", {
@@ -28556,7 +35559,7 @@ function getActions({
   const editFormAction = {
     id: "edit-form",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components72.Icon, { icon: backup_default }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: backup_default }),
     label: (0, import_i18n75.__)("Edit form", "jetpack-forms"),
     isEligible: (item) => !!item?.edit_form_url,
     supportsBulk: false,
@@ -28575,7 +35578,7 @@ function getActions({
   const markAsSpamAction = {
     id: "mark-as-spam",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components72.Icon, { icon: spam_default }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: spam_default }),
     label: (0, import_i18n75.__)("Spam", "jetpack-forms"),
     isEligible: (item) => item.status !== "spam",
     supportsBulk: true,
@@ -28598,12 +35601,12 @@ function getActions({
           items.length,
           "jetpack-forms"
         ),
-        formatNumber(items.length)
+        formatNumber2(items.length)
       );
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "mark-as-spam-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components72.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -28634,7 +35637,7 @@ function getActions({
               items.length,
               "jetpack-forms"
             ),
-            formatNumber(items.length)
+            formatNumber2(items.length)
           );
           if (!isUndo) {
             createSuccessNotice(successMessage, {
@@ -28681,7 +35684,7 @@ function getActions({
   const markAsNotSpamAction = {
     id: "mark-as-not-spam",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components72.Icon, { icon: not_spam_default }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: not_spam_default }),
     label: (0, import_i18n75.__)("Not spam", "jetpack-forms"),
     isEligible: (item) => item.status === "spam",
     supportsBulk: true,
@@ -28704,12 +35707,12 @@ function getActions({
           items.length,
           "jetpack-forms"
         ),
-        formatNumber(items.length)
+        formatNumber2(items.length)
       );
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "mark-as-not-spam-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components72.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -28736,7 +35739,7 @@ function getActions({
               items.length,
               "jetpack-forms"
             ),
-            formatNumber(items.length)
+            formatNumber2(items.length)
           );
           if (!isUndo) {
             createSuccessNotice(successMessage, {
@@ -28783,7 +35786,7 @@ function getActions({
   const restoreAction = {
     id: "restore",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components72.Icon, { icon: backup_default }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: backup_default }),
     label: (0, import_i18n75.__)("Restore", "jetpack-forms"),
     isEligible: (item) => item.status === "trash",
     supportsBulk: true,
@@ -28807,12 +35810,12 @@ function getActions({
           items.length,
           "jetpack-forms"
         ),
-        formatNumber(items.length)
+        formatNumber2(items.length)
       );
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "restore-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components72.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -28839,7 +35842,7 @@ function getActions({
               items.length,
               "jetpack-forms"
             ),
-            formatNumber(items.length)
+            formatNumber2(items.length)
           );
           if (!isUndo) {
             createSuccessNotice(successMessage, {
@@ -28880,7 +35883,7 @@ function getActions({
   const moveToTrashAction = {
     id: "move-to-trash",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components72.Icon, { icon: trash_default }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: trash_default }),
     label: (0, import_i18n75.__)("Trash", "jetpack-forms"),
     isEligible: (item) => item.status !== "trash",
     supportsBulk: true,
@@ -28904,12 +35907,12 @@ function getActions({
           items.length,
           "jetpack-forms"
         ),
-        formatNumber(items.length)
+        formatNumber2(items.length)
       );
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "move-to-trash-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components72.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -28940,7 +35943,7 @@ function getActions({
               items.length,
               "jetpack-forms"
             ),
-            formatNumber(items.length)
+            formatNumber2(items.length)
           );
           if (!isUndo) {
             receiveEntityRecords("postType", "feedback", items, queryParams, true);
@@ -28987,7 +35990,7 @@ function getActions({
   const deleteAction = {
     id: "delete",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components72.Icon, { icon: trash_default }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: trash_default }),
     label: (0, import_i18n75.__)("Delete", "jetpack-forms"),
     isEligible: (item) => item.status === "trash",
     supportsBulk: true,
@@ -29024,7 +36027,7 @@ function getActions({
             items.length,
             "jetpack-forms"
           ),
-          formatNumber(items.length)
+          formatNumber2(items.length)
         );
         createSuccessNotice(successMessage, { type: "snackbar", id: "delete-action" });
         const hash = window.location.hash;
@@ -29052,7 +36055,7 @@ function getActions({
   const markAsReadAction = {
     id: "mark-as-read",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components72.Icon, { icon: seen_default }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: seen_default }),
     label: (0, import_i18n75.__)("Mark as read", "jetpack-forms"),
     isEligible: (item) => item.is_unread,
     supportsBulk: true,
@@ -29110,7 +36113,7 @@ function getActions({
             items.length,
             "jetpack-forms"
           ),
-          formatNumber(items.length)
+          formatNumber2(items.length)
         );
         createSuccessNotice(successMessage, {
           type: "snackbar",
@@ -29134,7 +36137,7 @@ function getActions({
   const markAsUnreadAction = {
     id: "mark-as-unread",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components72.Icon, { icon: unseen_default }),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: unseen_default }),
     label: (0, import_i18n75.__)("Mark as unread", "jetpack-forms"),
     isEligible: (item) => !item.is_unread,
     supportsBulk: true,
@@ -29190,7 +36193,7 @@ function getActions({
             items.length,
             "jetpack-forms"
           ),
-          formatNumber(items.length)
+          formatNumber2(items.length)
         );
         createSuccessNotice(successMessage, {
           type: "snackbar",
@@ -29243,7 +36246,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // routes/responses/stage.tsx
-var import_jsx_runtime166 = __toESM(require_jsx_runtime());
+var import_jsx_runtime168 = __toESM(require_jsx_runtime());
 var EMPTY_ARRAY9 = [];
 var defaultLayouts2 = {
   table: {},
@@ -29268,14 +36271,14 @@ function styleUnreadValue(element, isUnread) {
     return element;
   }
   if (typeof element === "string") {
-    return /* @__PURE__ */ (0, import_jsx_runtime166.jsx)("span", { style: { fontWeight: 600 }, children: element });
+    return /* @__PURE__ */ (0, import_jsx_runtime168.jsx)("span", { style: { fontWeight: 600 }, children: element });
   }
   if (React36.isValidElement(element)) {
     return React36.cloneElement(element, {
       style: { ...element.props.style || {}, fontWeight: 600 }
     });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime166.jsx)("span", { style: { fontWeight: 600 }, children: element });
+  return /* @__PURE__ */ (0, import_jsx_runtime168.jsx)("span", { style: { fontWeight: 600 }, children: element });
 }
 function StageInner() {
   const params = useParams({ from: "/responses/$view" });
@@ -29442,7 +36445,7 @@ function StageInner() {
               label: (0, import_i18n76.sprintf)(
                 /* translators: %s is the number of inbox responses. */
                 (0, import_i18n76.__)("Inbox (%s)", "jetpack-forms"),
-                formatNumber(totalItemsInbox ?? 0)
+                formatNumber2(totalItemsInbox ?? 0)
               ),
               value: "inbox"
             },
@@ -29450,7 +36453,7 @@ function StageInner() {
               label: (0, import_i18n76.sprintf)(
                 /* translators: %s is the number of spam responses. */
                 (0, import_i18n76.__)("Spam (%s)", "jetpack-forms"),
-                formatNumber(totalItemsSpam ?? 0)
+                formatNumber2(totalItemsSpam ?? 0)
               ),
               value: "spam"
             },
@@ -29458,7 +36461,7 @@ function StageInner() {
               label: (0, import_i18n76.sprintf)(
                 /* translators: %s is the number of trash responses. */
                 (0, import_i18n76.__)("Trash (%s)", "jetpack-forms"),
-                formatNumber(totalItemsTrash ?? 0)
+                formatNumber2(totalItemsTrash ?? 0)
               ),
               value: "trash"
             }
@@ -29481,8 +36484,8 @@ function StageInner() {
           );
           const showEmail = item.author_email && displayName !== (0, import_html_entities5.decodeEntities)(item.author_email);
           const defaultImage = item.author_name || item.author_email ? "initials" : "mp";
-          return /* @__PURE__ */ (0, import_jsx_runtime166.jsxs)(Stack, { align: "center", gap: "sm", children: [
-            item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime168.jsxs)(Stack, { align: "center", gap: "sm", children: [
+            item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(
               "span",
               {
                 style: {
@@ -29495,7 +36498,7 @@ function StageInner() {
                 children: "\u25CF"
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(
               Gravatar,
               {
                 email: item.author_email || item.ip,
@@ -29506,9 +36509,9 @@ function StageInner() {
               }
             ),
             styleUnreadValue(
-              /* @__PURE__ */ (0, import_jsx_runtime166.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(import_components73.__experimentalText, { ellipsizeMode: "tail", limit: 50, truncate: true, children: displayName }),
-                showEmail && /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(import_components73.__experimentalText, { variant: "muted", size: 12, ellipsizeMode: "tail", limit: 50, truncate: true, children: item.author_email })
+              /* @__PURE__ */ (0, import_jsx_runtime168.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(import_components73.__experimentalText, { ellipsizeMode: "tail", limit: 50, truncate: true, children: displayName }),
+                showEmail && /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(import_components73.__experimentalText, { variant: "muted", size: 12, ellipsizeMode: "tail", limit: 50, truncate: true, children: item.author_email })
               ] }),
               item.is_unread
             )
@@ -29550,7 +36553,7 @@ function StageInner() {
             const source = item.entry_title || getPath(item) || (0, import_i18n76.__)("(no title)", "jetpack-forms");
             if (item.entry_permalink) {
               return styleUnreadValue(
-                /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(import_components73.ExternalLink, { href: item.entry_permalink, children: source }),
+                /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(import_components73.ExternalLink, { href: item.entry_permalink, children: source }),
                 item.is_unread
               );
             }
@@ -29576,7 +36579,7 @@ function StageInner() {
         filterBy: { operators: ["is"] },
         enableSorting: false,
         render: ({ item }) => {
-          return /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(Badge, { intent: "default", children: item.is_unread ? (0, import_i18n76.__)("Unread", "jetpack-forms") : (0, import_i18n76.__)("Read", "jetpack-forms") });
+          return /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(Badge, { intent: "default", children: item.is_unread ? (0, import_i18n76.__)("Unread", "jetpack-forms") : (0, import_i18n76.__)("Read", "jetpack-forms") });
         }
       },
       {
@@ -29586,7 +36589,7 @@ function StageInner() {
           if (!item.ip) {
             return styleUnreadValue("-", item.is_unread);
           }
-          return /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(TextWithFlag, { countryCode: item.country_code, fallbackIcon: true, children: styleUnreadValue(item.ip, item.is_unread) });
+          return /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(TextWithFlag, { countryCode: item.country_code, fallbackIcon: true, children: styleUnreadValue(item.ip, item.is_unread) });
         },
         enableSorting: false
       }
@@ -29633,7 +36636,7 @@ function StageInner() {
     },
     [onChangeSelection]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime166.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime168.jsxs)(
     page_default,
     {
       showSidebarToggle: false,
@@ -29642,10 +36645,10 @@ function StageInner() {
       actions: headerActions,
       hasPadding: false,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime166.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime168.jsxs)(
           dataviews_default,
           {
-            empty: /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(
+            empty: /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(
               empty_responses_default,
               {
                 status: statusView,
@@ -29666,7 +36669,7 @@ function StageInner() {
             onClickItem,
             actions,
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(
                 DataViewsHeaderRow,
                 {
                   activeTab: "responses",
@@ -29680,12 +36683,12 @@ function StageInner() {
                   onStatusChange
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(dataviews_default.Layout, {}),
-              /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(dataviews_default.Footer, {})
+              /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(dataviews_default.Layout, {}),
+              /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(dataviews_default.Footer, {})
             ]
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(
           jetpack_integrations_modal_default,
           {
             isOpen: isIntegrationsModalOpen,
@@ -29702,25 +36705,65 @@ function StageInner() {
   );
 }
 var Stage = () => {
-  return /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(StageInner, {}) });
+  return /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(StageInner, {}) });
 };
 
 // routes/responses/response/index.tsx
 var import_api_fetch11 = __toESM(require_api_fetch());
-var import_components79 = __toESM(require_components());
+var import_components85 = __toESM(require_components());
 var import_core_data8 = __toESM(require_core_data());
 var import_data20 = __toESM(require_data());
-var import_element85 = __toESM(require_element());
-var import_html_entities8 = __toESM(require_html_entities());
-var import_i18n82 = __toESM(require_i18n());
+var import_element86 = __toESM(require_element());
+var import_html_entities9 = __toESM(require_html_entities());
+var import_i18n84 = __toESM(require_i18n());
 import { useParams as useParams2, useSearch as useSearch3, useNavigate as useNavigate5 } from "@wordpress/route";
 
-// src/dashboard/components/copy-clipboard-button/index.tsx
+// src/dashboard/components/inspector/preview-file/index.tsx
 var import_components74 = __toESM(require_components(), 1);
+var import_html_entities6 = __toESM(require_html_entities(), 1);
+var import_i18n77 = __toESM(require_i18n(), 1);
+
+// src/dashboard/components/inspector/preview-file/style.scss
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='6858eb9077']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "6858eb9077");
+  style.appendChild(document.createTextNode(".jp-forms__inbox-file-preview-shell{max-height:70vh;overflow:hidden}.jp-forms__inbox-file-preview-container{aspect-ratio:16/9;margin-bottom:16px;max-height:70vh}.jp-forms__inbox-file-preview-container.is-loading{display:none}.jp-forms__inbox-file-preview-image{height:100%;max-height:66vh;object-fit:contain;width:100%}.components-modal__screen-overlay:nth-of-type(2){z-index:var(--jp-forms-z-modal-backdrop)}.jp-forms__inbox-file-loading{align-content:center;display:flex;flex-wrap:wrap;height:150px;justify-content:center}.jp-forms__inbox-file-spinner.jp-forms__inbox-file-spinner{margin-top:0}"));
+  document.head.appendChild(style);
+}
+
+// src/dashboard/components/inspector/preview-file/index.tsx
+var import_jsx_runtime169 = __toESM(require_jsx_runtime(), 1);
+var PreviewFile = ({ file, isLoading, onImageLoaded }) => {
+  const imageClass = clsx_default("jp-forms__inbox-file-preview-container", {
+    "is-loading": isLoading
+  });
+  return /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("div", { className: "jp-forms__inbox-file-preview-shell", children: [
+    isLoading && /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("div", { className: "jp-forms__inbox-file-loading", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_components74.Spinner, { className: "jp-forms__inbox-file-spinner" }),
+      /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("div", { className: "jp-forms__inbox-file-loading-message ", children: (0, import_i18n77.__)("Loading preview\u2026", "jetpack-forms") })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("div", { className: imageClass, children: /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(
+      "img",
+      {
+        src: file.url,
+        alt: (0, import_html_entities6.decodeEntities)(file.name),
+        onLoad: onImageLoaded,
+        className: "jp-forms__inbox-file-preview-image"
+      }
+    ) })
+  ] });
+};
+var preview_file_default = PreviewFile;
+
+// src/dashboard/components/inspector/response-fields/field-email/index.tsx
+var import_components76 = __toESM(require_components(), 1);
+
+// src/dashboard/components/copy-clipboard-button/index.tsx
+var import_components75 = __toESM(require_components(), 1);
 var import_compose15 = __toESM(require_compose(), 1);
 var import_element83 = __toESM(require_element(), 1);
-var import_i18n77 = __toESM(require_i18n(), 1);
-var import_jsx_runtime167 = __toESM(require_jsx_runtime(), 1);
+var import_i18n78 = __toESM(require_i18n(), 1);
+var import_jsx_runtime170 = __toESM(require_jsx_runtime(), 1);
 function CopyClipboardButton({ text }) {
   const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element83.useState)(false);
   const timeoutIdRef = (0, import_element83.useRef)(null);
@@ -29740,11 +36783,11 @@ function CopyClipboardButton({ text }) {
       }
     };
   }, []);
-  const copied = (0, import_i18n77.__)("Copied!", "jetpack-forms");
-  const copy = (0, import_i18n77.__)("Copy", "jetpack-forms");
+  const copied = (0, import_i18n78.__)("Copied!", "jetpack-forms");
+  const copy = (0, import_i18n78.__)("Copy", "jetpack-forms");
   const emailCopyLabel = showCopyConfirmation ? copied : copy;
-  return /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components74.Tooltip, { delay: 0, hideOnClick: false, text: emailCopyLabel, children: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(
-    import_components74.Button,
+  return /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components75.Tooltip, { delay: 0, hideOnClick: false, text: emailCopyLabel, children: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(
+    import_components75.Button,
     {
       size: "small",
       "aria-label": emailCopyLabel,
@@ -29755,48 +36798,722 @@ function CopyClipboardButton({ text }) {
   ) });
 }
 
-// src/dashboard/components/inspector/preview-file/index.tsx
-var import_components75 = __toESM(require_components(), 1);
-var import_html_entities6 = __toESM(require_html_entities(), 1);
-var import_i18n78 = __toESM(require_i18n(), 1);
-
-// src/dashboard/components/inspector/preview-file/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='6858eb9077']")) {
+// src/dashboard/components/inspector/response-fields/field-email/style.scss
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='48179e464b']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "6858eb9077");
-  style.appendChild(document.createTextNode(".jp-forms__inbox-file-preview-shell{max-height:70vh;overflow:hidden}.jp-forms__inbox-file-preview-container{aspect-ratio:16/9;margin-bottom:16px;max-height:70vh}.jp-forms__inbox-file-preview-container.is-loading{display:none}.jp-forms__inbox-file-preview-image{height:100%;max-height:66vh;object-fit:contain;width:100%}.components-modal__screen-overlay:nth-of-type(2){z-index:var(--jp-forms-z-modal-backdrop)}.jp-forms__inbox-file-loading{align-content:center;display:flex;flex-wrap:wrap;height:150px;justify-content:center}.jp-forms__inbox-file-spinner.jp-forms__inbox-file-spinner{margin-top:0}"));
+  style.setAttribute("data-wp-hash", "48179e464b");
+  style.appendChild(document.createTextNode(".jp-forms__inbox-response-field-email a{word-break:break-word}"));
   document.head.appendChild(style);
 }
 
-// src/dashboard/components/inspector/preview-file/index.tsx
-var import_jsx_runtime168 = __toESM(require_jsx_runtime(), 1);
-var PreviewFile = ({ file, isLoading, onImageLoaded }) => {
-  const imageClass = clsx_default("jp-forms__inbox-file-preview-container", {
-    "is-loading": isLoading
-  });
-  return /* @__PURE__ */ (0, import_jsx_runtime168.jsxs)("div", { className: "jp-forms__inbox-file-preview-shell", children: [
-    isLoading && /* @__PURE__ */ (0, import_jsx_runtime168.jsxs)("div", { className: "jp-forms__inbox-file-loading", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(import_components75.Spinner, { className: "jp-forms__inbox-file-spinner" }),
-      /* @__PURE__ */ (0, import_jsx_runtime168.jsx)("div", { className: "jp-forms__inbox-file-loading-message ", children: (0, import_i18n78.__)("Loading preview\u2026", "jetpack-forms") })
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime168.jsx)("div", { className: imageClass, children: /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(
-      "img",
-      {
-        src: file.url,
-        alt: (0, import_html_entities6.decodeEntities)(file.name),
-        onLoad: onImageLoaded,
-        className: "jp-forms__inbox-file-preview-image"
-      }
-    ) })
-  ] });
+// src/dashboard/components/inspector/response-fields/field-email/index.tsx
+var import_jsx_runtime171 = __toESM(require_jsx_runtime(), 1);
+var FieldEmail = ({ email }) => {
+  const emailParts = email.split("@");
+  return /* @__PURE__ */ (0, import_jsx_runtime171.jsxs)(
+    import_components76.__experimentalHStack,
+    {
+      alignment: "center",
+      className: "jp-forms__inbox-response-field-email",
+      justify: "left",
+      spacing: "2",
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime171.jsxs)("a", { href: `mailto:${email}`, children: [
+          emailParts[0],
+          /* @__PURE__ */ (0, import_jsx_runtime171.jsx)("wbr", {}),
+          "@",
+          emailParts[1]
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(CopyClipboardButton, { text: email })
+      ]
+    }
+  );
 };
-var preview_file_default = PreviewFile;
+var field_email_default = FieldEmail;
 
-// src/dashboard/components/inspector/response-meta/index.tsx
-var import_components76 = __toESM(require_components(), 1);
-var import_date11 = __toESM(require_date(), 1);
+// src/dashboard/components/inspector/response-fields/field-file/file.tsx
+var import_components77 = __toESM(require_components(), 1);
 var import_html_entities7 = __toESM(require_html_entities(), 1);
 var import_i18n79 = __toESM(require_i18n(), 1);
+var import_jsx_runtime172 = __toESM(require_jsx_runtime(), 1);
+var FieldFile = ({ file, onClick }) => {
+  const fileExtension = file.name.split(".").pop().toLowerCase();
+  const fileType = file.type.split("/")[0];
+  const iconMap = {
+    image: "png",
+    video: "mp4",
+    audio: "mp3",
+    document: "pdf",
+    application: "txt"
+  };
+  const extensionMap = {
+    pdf: "pdf",
+    png: "png",
+    jpg: "png",
+    jpeg: "png",
+    gif: "png",
+    mp4: "mp4",
+    mp3: "mp3",
+    webm: "webm",
+    doc: "doc",
+    docx: "doc",
+    txt: "txt",
+    ppt: "ppt",
+    pptx: "ppt",
+    xls: "xls",
+    xlsx: "xls",
+    csv: "xls",
+    zip: "zip",
+    sql: "sql",
+    cal: "cal"
+  };
+  const iconType = extensionMap[fileExtension] || iconMap[fileType] || "txt";
+  const iconClass = clsx_default("jp-forms__inbox-response-file__icon", "icon-" + iconType);
+  return /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)("div", { className: "jp-forms__inbox-response-file", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)("div", { className: "jp-forms__inbox-response-file__info", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("div", { className: iconClass }),
+      /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)("div", { className: "jp-forms__inbox-response-file__name", children: [
+        file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Button, { target: "_blank", variant: "link", onClick, children: (0, import_html_entities7.decodeEntities)(file.name) }),
+        !file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.ExternalLink, { href: file.url + "&preview=true", children: (0, import_html_entities7.decodeEntities)(file.name) }),
+        /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("div", { className: "jp-forms__inbox-response-file__meta-info", children: (0, import_i18n79.sprintf)(
+          /* translators: %1$s size of the file and %2$s is the file extension */
+          (0, import_i18n79.__)("%1$s, %2$s", "jetpack-forms"),
+          file.size,
+          fileExtension.toUpperCase()
+        ) })
+      ] })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("span", { className: "jp-forms__inbox-response-file__item-actions", children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Tooltip, { text: (0, import_i18n79.__)("Download", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Button, { variant: "secondary", href: file.url, target: "_blank", children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Icon, { icon: download_default }) }) }) })
+  ] });
+};
+var file_default = FieldFile;
+
+// src/dashboard/components/inspector/response-fields/field-file/style.scss
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='b323acbb85']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "b323acbb85");
+  style.appendChild(document.createTextNode(".jp-forms__inbox-response-field-file{margin-top:4px}.jp-forms__inbox-response-file{display:flex;gap:12px;justify-content:space-between}.jp-forms__inbox-response-file__icon{background-color:#f0f0f0;background-image:url(../../../../../contact-form/images/file-icons/txt.svg);background-position:50%;background-repeat:no-repeat;background-size:18px;border-radius:50%;height:32px;margin-top:8px;min-width:32px;width:32px}@media (min-width:783px){.jp-forms__inbox-response-file__icon{background-size:24px;height:40px;margin-top:0;min-width:40px;width:40px}}.jp-forms__inbox-response-file__icon.icon-cal{background-image:url(../../../../../contact-form/images/file-icons/cal.svg)}.jp-forms__inbox-response-file__icon.icon-html{background-image:url(../../../../../contact-form/images/file-icons/html.svg)}.jp-forms__inbox-response-file__icon.icon-mp3{background-image:url(../../../../../contact-form/images/file-icons/mp3.svg)}.jp-forms__inbox-response-file__icon.icon-mp4{background-image:url(../../../../../contact-form/images/file-icons/mp4.svg)}.jp-forms__inbox-response-file__icon.icon-pdf{background-image:url(../../../../../contact-form/images/file-icons/pdf.svg)}.jp-forms__inbox-response-file__icon.icon-png{background-image:url(../../../../../contact-form/images/file-icons/png.svg)}.jp-forms__inbox-response-file__icon.icon-ppt{background-image:url(../../../../../contact-form/images/file-icons/ppt.svg)}.jp-forms__inbox-response-file__icon.icon-sql{background-image:url(../../../../../contact-form/images/file-icons/sql.svg)}.jp-forms__inbox-response-file__icon.icon-txt{background-image:url(../../../../../contact-form/images/file-icons/txt.svg)}.jp-forms__inbox-response-file__icon.icon-xls{background-image:url(../../../../../contact-form/images/file-icons/xls.svg)}.jp-forms__inbox-response-file__icon.icon-zip{background-image:url(../../../../../contact-form/images/file-icons/zip.svg)}.jp-forms__inbox-response-file__info{display:flex;gap:12px}"));
+  document.head.appendChild(style);
+}
+
+// src/dashboard/components/inspector/response-fields/field-file/index.tsx
+var import_jsx_runtime173 = __toESM(require_jsx_runtime(), 1);
+var FieldFile2 = ({ files, handleFilePreview }) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__inbox-response-field-file", children: files?.length ? files.map((file) => {
+    if (!file || !file.name) {
+      return "-";
+    }
+    return /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(file_default, { file, onClick: handleFilePreview(file) }, file.file_id);
+  }) : "-" });
+};
+var field_file_default = FieldFile2;
+
+// ../../js-packages/shared-extension-utils/src/get-jetpack-data.js
+var JETPACK_DATA_PATH = "Jetpack_Editor_Initial_State";
+function getJetpackData() {
+  return "object" === typeof window ? window?.[JETPACK_DATA_PATH] ?? null : null;
+}
+
+// ../../js-packages/shared-extension-utils/src/site-type-utils.js
+function isPrivateSite() {
+  const jetpackData = getJetpackData();
+  return jetpackData?.jetpack?.is_private_site ?? false;
+}
+
+// src/dashboard/components/inspector/response-fields/field-image-select/index.tsx
+var import_components78 = __toESM(require_components(), 1);
+
+// ../../../node_modules/.pnpm/photon@4.1.1/node_modules/photon/dist/esm/index.js
+var import_crc32 = __toESM(require_crc32());
+var import_debug4 = __toESM(require_browser());
+var import_seed_random = __toESM(require_seed_random());
+var debug4 = (0, import_debug4.default)("photon");
+var mappings = {
+  width: "w",
+  height: "h",
+  letterboxing: "lb",
+  removeLetterboxing: "ulb"
+};
+var PARSE_BASE_HOST = "__domain__.invalid";
+var PARSE_BASE_URL = `https://${PARSE_BASE_HOST}`;
+var PHOTON_BASE_URL = "https://i0.wp.com";
+function photon(imageUrl, opts) {
+  let parsedUrl;
+  try {
+    parsedUrl = new URL(imageUrl, PARSE_BASE_URL);
+  } catch {
+    return null;
+  }
+  const wasSecure = parsedUrl.protocol === "https:";
+  const photonUrl = new URL(PHOTON_BASE_URL);
+  if (isAlreadyPhotoned(parsedUrl.host)) {
+    photonUrl.pathname = parsedUrl.pathname;
+    photonUrl.hostname = wasSecure ? "i0.wp.com" : parsedUrl.hostname;
+  } else {
+    if (parsedUrl.search) {
+      return null;
+    }
+    let formattedUrl = parsedUrl.href.replace(`${parsedUrl.protocol}/`, "");
+    if (parsedUrl.protocol === "blob:") {
+      formattedUrl = parsedUrl.pathname.replace("://", "//");
+    }
+    if (parsedUrl.hostname === PARSE_BASE_HOST) {
+      formattedUrl = parsedUrl.pathname;
+    }
+    photonUrl.pathname = formattedUrl;
+    photonUrl.hostname = serverFromUrlParts(formattedUrl, photonUrl.protocol === "https:");
+    if (wasSecure) {
+      photonUrl.searchParams.set("ssl", "1");
+    }
+  }
+  if (opts) {
+    for (const [opt, value] of Object.entries(opts)) {
+      if (opt === "host" || opt === "hostname") {
+        photonUrl.hostname = value;
+        continue;
+      }
+      if (opt === "secure" && !value) {
+        photonUrl.protocol = "http:";
+        continue;
+      }
+      photonUrl.searchParams.set(mappings[opt] ?? opt, value.toString());
+    }
+  }
+  debug4("generated Photon URL: %s", photonUrl.href);
+  return photonUrl.href;
+}
+function isAlreadyPhotoned(host) {
+  return /^i[0-2]\.wp\.com$/.test(host);
+}
+function serverFromUrlParts(pathname, isSecure) {
+  if (isSecure) {
+    return "i0.wp.com";
+  }
+  const hash = (0, import_crc32.default)(pathname);
+  const rng = (0, import_seed_random.default)(hash);
+  const server = "i" + Math.floor(rng() * 3);
+  debug4('determined server "%s" to use with "%s"', server, pathname);
+  return server + ".wp.com";
+}
+
+// src/dashboard/components/inspector/response-fields/field-image-select/style.scss
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='83dc91bb91']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "83dc91bb91");
+  style.appendChild(document.createTextNode(".jp-forms__image-select-field-button.components-button{height:auto;text-align:left;text-wrap:auto}.jp-forms__image-select-field-button.components-button.has-icon.has-text{gap:8px}"));
+  document.head.appendChild(style);
+}
+
+// src/dashboard/components/inspector/response-fields/field-image-select/index.tsx
+var import_jsx_runtime174 = __toESM(require_jsx_runtime(), 1);
+function photonSafeUrl(url = "") {
+  if (!url) {
+    return null;
+  }
+  if (url.startsWith("blob:") || /^https?:\/\/localhost/.test(url) || /^https?:\/\/.*\.local\//.test(url) || isWoASite() && isPrivateSite()) {
+    return url;
+  }
+  return photon(url.split("?", 1)[0], { width: 120, height: 120 });
+}
+var FieldImageSelect = ({ choices, handleFilePreview }) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)(import_jsx_runtime174.Fragment, { children: [
+    (choices?.length ?? 0) === 0 && "-",
+    (choices?.length ?? 0) > 0 && /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.__experimentalVStack, { spacing: "1", children: choices.map((choice) => {
+      const label = choice.label ? `${choice.selected}: ${choice.label}` : choice.selected;
+      const hasImage = choice.image?.src;
+      return /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
+        import_components78.Button,
+        {
+          __next40pxDefaultSize: true,
+          variant: "tertiary",
+          onClick: hasImage ? handleFilePreview({
+            file_id: choice.image.id,
+            name: label,
+            url: choice.image.src
+          }) : void 0,
+          className: "jp-forms__image-select-field-button",
+          icon: hasImage ? /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
+            "img",
+            {
+              alt: choice.selected,
+              loading: "lazy",
+              src: photonSafeUrl(choice.image.src),
+              style: { objectFit: "cover" }
+            }
+          ) : image_default,
+          iconSize: 60,
+          children: label
+        },
+        choice.selected
+      );
+    }) })
+  ] });
+};
+var field_image_select_default = FieldImageSelect;
+
+// src/dashboard/components/inspector/response-fields/field-preview/index.tsx
+var import_components81 = __toESM(require_components(), 1);
+
+// src/blocks/field-checkbox/icon.jsx
+var import_primitives49 = __toESM(require_primitives(), 1);
+var import_jsx_runtime175 = __toESM(require_jsx_runtime(), 1);
+var icon = /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(import_primitives49.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(
+  import_primitives49.Path,
+  {
+    fillRule: "evenodd",
+    d: "M6.125 6H17.875C17.944 6 18 6.05596 18 6.125V17.875C18 17.944 17.944 18 17.875 18H6.125C6.05596 18 6 17.944 6 17.875V6.125C6 6.05596 6.05596 6 6.125 6ZM4.5 6.125C4.5 5.22754 5.22754 4.5 6.125 4.5H17.875C18.7725 4.5 19.5 5.22754 19.5 6.125V17.875C19.5 18.7725 18.7725 19.5 17.875 19.5H6.125C5.22754 19.5 4.5 18.7725 4.5 17.875V6.125ZM10.5171 16.4421L16.5897 8.71335L15.4103 7.78662L10.4828 14.0579L8.57616 11.7698L7.42383 12.7301L10.5171 16.4421Z"
+  }
+) });
+var icon_default2 = {
+  src: icon
+};
+
+// src/blocks/field-consent/icon.jsx
+var import_primitives50 = __toESM(require_primitives(), 1);
+var import_jsx_runtime176 = __toESM(require_jsx_runtime(), 1);
+var icon2 = /* @__PURE__ */ (0, import_jsx_runtime176.jsxs)(import_primitives50.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: [
+  /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(import_primitives50.Path, { d: "M7 5.5H17C17.2761 5.5 17.5 5.72386 17.5 6V13H19V6C19 4.89543 18.1046 4 17 4H7C5.89543 4 5 4.89543 5 6V18C5 19.1046 5.89543 20 7 20H11.5V18.5H7C6.72386 18.5 6.5 18.2761 6.5 18V6C6.5 5.72386 6.72386 5.5 7 5.5ZM16 7.75H8V9.25H16V7.75ZM8 11H13V12.5H8V11Z" }),
+  /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(import_primitives50.Path, { d: "M20.1087 15.9382L15.9826 21.6689L12.959 18.5194L14.0411 17.4806L15.8175 19.331L18.8914 15.0618L20.1087 15.9382Z" })
+] });
+var icon_default3 = {
+  src: icon2
+};
+
+// src/blocks/field-date/icon.jsx
+var import_primitives51 = __toESM(require_primitives(), 1);
+var import_jsx_runtime177 = __toESM(require_jsx_runtime(), 1);
+var icon3 = /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(import_primitives51.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(
+  import_primitives51.Path,
+  {
+    fillRule: "evenodd",
+    d: "M4.5 7H19.5V19C19.5 19.2761 19.2761 19.5 19 19.5H5C4.72386 19.5 4.5 19.2761 4.5 19V7ZM3 5V7V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V7V5C21 3.89543 20.1046 3 19 3H5C3.89543 3 3 3.89543 3 5ZM11 9.25H7V13.25H11V9.25Z"
+  }
+) });
+var icon_default4 = {
+  src: icon3
+};
+
+// src/blocks/field-image-select/icon.tsx
+var import_primitives52 = __toESM(require_primitives(), 1);
+var import_jsx_runtime178 = __toESM(require_jsx_runtime(), 1);
+var icon4 = /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(import_primitives52.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(import_primitives52.Path, { d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 4.5h14c.3 0 .5.2.5.5v8.4l-3-2.9c-.3-.3-.8-.3-1 0L11.9 14 9 12c-.3-.2-.6-.2-.8 0l-3.6 2.6V5c-.1-.3.1-.5.4-.5zm14 15H5c-.3 0-.5-.2-.5-.5v-2.4l4.1-3 3 1.9c.3.2.7.2.9-.1L16 12l3.5 3.4V19c0 .3-.2.5-.5.5z" }) });
+var icon_default5 = {
+  src: icon4
+};
+
+// src/blocks/field-multiple-choice/icon.jsx
+var import_primitives53 = __toESM(require_primitives(), 1);
+var import_jsx_runtime179 = __toESM(require_jsx_runtime(), 1);
+var icon5 = /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_primitives53.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_primitives53.Path, { d: "M7.0812 10.1419L10.6001 5.45005L9.40006 4.55005L6.91891 7.85824L5.53039 6.46972L4.46973 7.53038L7.0812 10.1419ZM12 8.5H20V7H12V8.5ZM12 17H20V15.5H12V17ZM8.5 14.5H5.5V17.5H8.5V14.5ZM5.5 13H8.5C9.32843 13 10 13.6716 10 14.5V17.5C10 18.3284 9.32843 19 8.5 19H5.5C4.67157 19 4 18.3284 4 17.5V14.5C4 13.6716 4.67157 13 5.5 13Z" }) });
+var icon_default6 = {
+  src: icon5
+};
+
+// src/blocks/field-name/icon.jsx
+var import_primitives54 = __toESM(require_primitives(), 1);
+var import_jsx_runtime180 = __toESM(require_jsx_runtime(), 1);
+var icon6 = /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(import_primitives54.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(import_primitives54.Path, { d: "M8.25 11.5C9.63071 11.5 10.75 10.3807 10.75 9C10.75 7.61929 9.63071 6.5 8.25 6.5C6.86929 6.5 5.75 7.61929 5.75 9C5.75 10.3807 6.86929 11.5 8.25 11.5ZM8.25 10C8.80228 10 9.25 9.55228 9.25 9C9.25 8.44772 8.80228 8 8.25 8C7.69772 8 7.25 8.44772 7.25 9C7.25 9.55228 7.69772 10 8.25 10ZM13 15.5V17.5H11.5V15.5C11.5 14.8096 10.9404 14.25 10.25 14.25H6.25C5.55964 14.25 5 14.8096 5 15.5V17.5H3.5V15.5C3.5 13.9812 4.73122 12.75 6.25 12.75H10.25C11.7688 12.75 13 13.9812 13 15.5ZM20.5 11H14.5V9.5H20.5V11ZM20.5 14.5H14.5V13H20.5V14.5Z" }) });
+var icon_default7 = {
+  src: icon6
+};
+
+// src/blocks/field-number/icon.jsx
+var import_primitives55 = __toESM(require_primitives(), 1);
+var import_jsx_runtime181 = __toESM(require_jsx_runtime(), 1);
+var icon7 = /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(import_primitives55.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(import_primitives55.Path, { d: "M12 7H4V8.5H12V7ZM19.75 17.25V10.75H4.25V17.25H19.75ZM5.75 15.75V12.25H18.25V15.75H5.75Z" }) });
+var icon_default8 = {
+  src: icon7
+};
+
+// src/blocks/field-rating/icon.jsx
+var import_primitives56 = __toESM(require_primitives(), 1);
+var import_jsx_runtime182 = __toESM(require_jsx_runtime(), 1);
+var icon8 = /* @__PURE__ */ (0, import_jsx_runtime182.jsxs)(import_primitives56.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: [
+  /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(import_primitives56.Path, { d: "M4.90821 9.05978C4.91669 9.04183 4.92977 9.02672 4.94599 9.01616C4.96221 9.0056 4.98091 9 5 9C5.01909 9 5.03779 9.0056 5.05401 9.01616C5.07023 9.02672 5.08331 9.04183 5.09179 9.05978L5.93962 10.8628C5.94695 10.8785 5.95779 10.892 5.97121 10.9023C5.98463 10.9125 6.00023 10.9192 6.01666 10.9217L7.91228 11.2108C7.93118 11.2137 7.94893 11.222 7.96354 11.2349C7.97814 11.2478 7.98902 11.2648 7.99495 11.2838C8.00087 11.3029 8.0016 11.3233 7.99706 11.3428C7.99252 11.3622 7.98288 11.38 7.96924 11.394L6.59731 12.7975C6.58536 12.8097 6.57643 12.8247 6.57129 12.8414C6.56615 12.858 6.56495 12.8757 6.5678 12.893L6.89153 14.8745C6.89467 14.8942 6.89251 14.9144 6.8853 14.9329C6.87809 14.9514 6.86611 14.9675 6.8507 14.9792C6.8353 14.991 6.81707 14.998 6.79808 14.9995C6.77909 15.0009 6.76008 14.9968 6.74319 14.9876L5.04753 14.0521C5.03287 14.044 5.01656 14.0398 5 14.0398C4.98344 14.0398 4.96713 14.044 4.95247 14.0521L3.25681 14.9876C3.23991 14.997 3.22085 15.0012 3.20179 14.9997C3.18273 14.9983 3.16443 14.9913 3.14896 14.9795C3.13348 14.9678 3.12145 14.9517 3.11423 14.9331C3.107 14.9146 3.10487 14.8943 3.10806 14.8745L3.43178 12.893C3.43469 12.8758 3.43356 12.8581 3.42849 12.8414C3.42342 12.8248 3.41456 12.8097 3.40269 12.7975L2.03076 11.394C2.01712 11.38 2.00748 11.3622 2.00294 11.3428C1.9984 11.3233 1.99913 11.3029 2.00505 11.2838C2.01098 11.2648 2.02185 11.2478 2.03646 11.2349C2.05107 11.222 2.06882 11.2137 2.08772 11.2108L3.98334 10.9217C3.99977 10.9192 4.01537 10.9125 4.02879 10.9023C4.04221 10.892 4.05305 10.8785 4.06038 10.8628L4.90821 9.05978Z" }),
+  /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(import_primitives56.Path, { d: "M11.9082 9.05978C11.9167 9.04183 11.9298 9.02672 11.946 9.01616C11.9622 9.0056 11.9809 9 12 9C12.0191 9 12.0378 9.0056 12.054 9.01616C12.0702 9.02672 12.0833 9.04183 12.0918 9.05978L12.9396 10.8628C12.9469 10.8785 12.9578 10.892 12.9712 10.9023C12.9846 10.9125 13.0002 10.9192 13.0167 10.9217L14.9123 11.2108C14.9312 11.2137 14.9489 11.222 14.9635 11.2349C14.9781 11.2478 14.989 11.2648 14.9949 11.2838C15.0009 11.3029 15.0016 11.3233 14.9971 11.3428C14.9925 11.3622 14.9829 11.38 14.9692 11.394L13.5973 12.7975C13.5854 12.8097 13.5764 12.8247 13.5713 12.8414C13.5661 12.858 13.565 12.8757 13.5678 12.893L13.8915 14.8745C13.8947 14.8942 13.8925 14.9144 13.8853 14.9329C13.8781 14.9514 13.8661 14.9675 13.8507 14.9792C13.8353 14.991 13.8171 14.998 13.7981 14.9995C13.7791 15.0009 13.7601 14.9968 13.7432 14.9876L12.0475 14.0521C12.0329 14.044 12.0166 14.0398 12 14.0398C11.9834 14.0398 11.9671 14.044 11.9525 14.0521L10.2568 14.9876C10.2399 14.997 10.2208 15.0012 10.2018 14.9997C10.1827 14.9983 10.1644 14.9913 10.149 14.9795C10.1335 14.9678 10.1215 14.9517 10.1142 14.9331C10.107 14.9146 10.1049 14.8943 10.1081 14.8745L10.4318 12.893C10.4347 12.8758 10.4336 12.8581 10.4285 12.8414C10.4234 12.8248 10.4146 12.8097 10.4027 12.7975L9.03076 11.394C9.01712 11.38 9.00748 11.3622 9.00294 11.3428C8.9984 11.3233 8.99913 11.3029 9.00505 11.2838C9.01098 11.2648 9.02185 11.2478 9.03646 11.2349C9.05107 11.222 9.06882 11.2137 9.08772 11.2108L10.9833 10.9217C10.9998 10.9192 11.0154 10.9125 11.0288 10.9023C11.0422 10.892 11.0531 10.8785 11.0604 10.8628L11.9082 9.05978Z" }),
+  /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(
+    import_primitives56.Path,
+    {
+      fillRule: "evenodd",
+      clipRule: "evenodd",
+      d: "M18.0605 10.8627C18.0532 10.8784 18.0423 10.8919 18.0289 10.9022C18.0155 10.9125 17.9999 10.9191 17.9835 10.9217L16.0881 11.2107C16.0691 11.2135 16.0513 11.2219 16.0366 11.2348C16.0219 11.2477 16.011 11.2647 16.005 11.2839C15.9991 11.303 15.9984 11.3235 16.003 11.343C16.0076 11.3626 16.0174 11.3803 16.0311 11.3943L17.4029 12.7973C17.4148 12.8095 17.4238 12.8246 17.4289 12.8412C17.434 12.8579 17.4352 12.8756 17.4324 12.8928L17.1087 14.8743C17.1055 14.894 17.1076 14.9143 17.1147 14.9329C17.1219 14.9515 17.1339 14.9675 17.1493 14.9794C17.1647 14.9912 17.183 14.9982 17.202 14.9997C17.221 15.0012 17.2401 14.9971 17.257 14.9878L18.9525 14.0519C18.9672 14.0438 18.9836 14.0395 19.0002 14.0395C19.0168 14.0395 19.0332 14.0438 19.0479 14.0519L20.743 14.9874C20.7599 14.9967 20.7789 15.0009 20.798 14.9995C20.817 14.9981 20.8353 14.9911 20.8508 14.9793C20.8663 14.9676 20.8783 14.9515 20.8855 14.9329C20.8928 14.9144 20.8949 14.894 20.8917 14.8743L20.568 12.8928C20.5652 12.8756 20.5664 12.8579 20.5715 12.8412C20.5766 12.8246 20.5856 12.8095 20.5975 12.7973L21.9689 11.3943C21.9826 11.3803 21.9924 11.3626 21.997 11.343C22.0016 11.3235 22.0009 11.303 21.995 11.2839C21.989 11.2647 21.9781 11.2477 21.9634 11.2348C21.9487 11.2219 21.9309 11.2135 21.9119 11.2107L20.0165 10.9217C20.0001 10.9191 19.9845 10.9125 19.9711 10.9022C19.9577 10.8919 19.9468 10.8784 19.9395 10.8627L19.0918 9.05978C19.0833 9.04183 19.0702 9.02672 19.054 9.01616C19.0378 9.0056 19.0191 9 19 9C18.9809 9 18.9622 9.0056 18.946 9.01616C18.9298 9.02672 18.9167 9.04183 18.9082 9.05978L18.0605 10.8627ZM19.0004 10.3225L18.612 11.1488C18.5605 11.2581 18.4846 11.3527 18.3906 11.4244C18.2966 11.4961 18.1874 11.5428 18.0724 11.5604L17.2038 11.6928L17.8323 12.3358C18.0011 12.5087 18.0781 12.7582 18.0384 13.0025L17.8901 13.91L18.6669 13.4812C18.7698 13.4244 18.8843 13.3947 19.0006 13.3947C19.1169 13.3947 19.2314 13.4244 19.3343 13.4812L20.1108 13.91L19.9624 13.0025C19.9428 12.8821 19.9513 12.7585 19.9873 12.6424C20.0232 12.5262 20.0856 12.421 20.1689 12.3358L20.7971 11.6928L19.9284 11.5604C19.8135 11.5428 19.7043 11.4961 19.6103 11.4244C19.5163 11.3527 19.4403 11.2581 19.3888 11.1488L19.0004 10.3225Z"
+    }
+  )
+] });
+var icon_default9 = {
+  src: icon8
+};
+
+// src/blocks/field-select/icon.jsx
+var import_primitives57 = __toESM(require_primitives(), 1);
+var import_jsx_runtime183 = __toESM(require_jsx_runtime(), 1);
+var icon9 = /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(import_primitives57.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(import_primitives57.Path, { d: "M5 4.5H19C19.2761 4.5 19.5 4.72386 19.5 5V19C19.5 19.2761 19.2761 19.5 19 19.5H5C4.72386 19.5 4.5 19.2761 4.5 19V5C4.5 4.72386 4.72386 4.5 5 4.5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM8.93582 10.1396L8.06396 11.3602L11.9999 14.1716L15.9358 11.3602L15.064 10.1396L11.9999 12.3283L8.93582 10.1396Z" }) });
+var icon_default10 = {
+  src: icon9
+};
+
+// src/blocks/field-single-choice/icon.jsx
+var import_primitives58 = __toESM(require_primitives(), 1);
+var import_jsx_runtime184 = __toESM(require_jsx_runtime(), 1);
+var icon10 = /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(import_primitives58.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(import_primitives58.Path, { d: "M4 7.75C4 9.40685 5.34315 10.75 7 10.75C8.65685 10.75 10 9.40685 10 7.75C10 6.09315 8.65685 4.75 7 4.75C5.34315 4.75 4 6.09315 4 7.75ZM20 8.5H12V7H20V8.5ZM20 17H12V15.5H20V17ZM7 17.75C6.17157 17.75 5.5 17.0784 5.5 16.25C5.5 15.4216 6.17157 14.75 7 14.75C7.82843 14.75 8.5 15.4216 8.5 16.25C8.5 17.0784 7.82843 17.75 7 17.75ZM4 16.25C4 17.9069 5.34315 19.25 7 19.25C8.65685 19.25 10 17.9069 10 16.25C10 14.5931 8.65685 13.25 7 13.25C5.34315 13.25 4 14.5931 4 16.25Z" }) });
+var icon_default11 = {
+  src: icon10
+};
+
+// src/blocks/field-slider/icon.jsx
+var import_primitives59 = __toESM(require_primitives(), 1);
+var import_jsx_runtime185 = __toESM(require_jsx_runtime(), 1);
+var icon11 = /* @__PURE__ */ (0, import_jsx_runtime185.jsxs)(import_primitives59.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(import_primitives59.Line, { x1: "4", y1: "12", x2: "20", y2: "12", stroke: "currentColor", strokeWidth: "2" }),
+  /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(import_primitives59.Circle, { cx: "12", cy: "12", r: "2", fill: "currentColor" })
+] });
+var icon_default12 = {
+  src: icon11
+};
+
+// src/blocks/field-text/icon.jsx
+var import_primitives60 = __toESM(require_primitives(), 1);
+var import_jsx_runtime186 = __toESM(require_jsx_runtime(), 1);
+var icon12 = /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(import_primitives60.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(import_primitives60.Path, { d: "M12 7H4V8.5H12V7ZM19.75 17.25V10.75H4.25V17.25H19.75ZM5.75 15.75V12.25H18.25V15.75H5.75Z" }) });
+var icon_default13 = {
+  src: icon12
+};
+
+// src/blocks/field-textarea/icon.jsx
+var import_primitives61 = __toESM(require_primitives(), 1);
+var import_jsx_runtime187 = __toESM(require_jsx_runtime(), 1);
+var icon13 = /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(import_primitives61.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(import_primitives61.Path, { d: "M20 5H4V6.5H20V5ZM5.5 11.5H18.5V18.5H5.5V11.5ZM20 20V10H4V20H20Z" }) });
+var icon_default14 = {
+  src: icon13
+};
+
+// src/blocks/field-time/icon.jsx
+var import_primitives62 = __toESM(require_primitives(), 1);
+var import_jsx_runtime188 = __toESM(require_jsx_runtime(), 1);
+var icon14 = /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(import_primitives62.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(
+  import_primitives62.Path,
+  {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M12 18.5C10.2761 18.5 8.62279 17.8152 7.40381 16.5962C6.18482 15.3772 5.5 13.7239 5.5 12C5.5 10.2761 6.18482 8.62279 7.40381 7.40381C8.62279 6.18482 10.2761 5.5 12 5.5C13.7239 5.5 15.3772 6.18482 16.5962 7.40381C17.8152 8.62279 18.5 10.2761 18.5 12C18.5 13.7239 17.8152 15.3772 16.5962 16.5962C15.3772 17.8152 13.7239 18.5 12 18.5ZM4 12C4 9.87827 4.84285 7.84344 6.34315 6.34315C7.84344 4.84285 9.87827 4 12 4C14.1217 4 16.1566 4.84285 17.6569 6.34315C19.1571 7.84344 20 9.87827 20 12C20 14.1217 19.1571 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20C9.87827 20 7.84344 19.1571 6.34315 17.6569C4.84285 16.1566 4 14.1217 4 12ZM13 13V8H11.5V11.5H9.5V13H13Z"
+  }
+) });
+var icon_default15 = icon14;
+
+// src/dashboard/components/inspector/response-fields/field-icons.tsx
+var fieldIcons = {
+  checkbox: icon_default2.src,
+  "checkbox-multiple": icon_default6.src,
+  consent: icon_default3.src,
+  date: icon_default4.src,
+  email: envelope_default,
+  file: upload_default,
+  hidden: unseen_default,
+  "image-select": icon_default5.src,
+  name: icon_default7.src,
+  number: icon_default8.src,
+  phone: mobile_default,
+  radio: icon_default11.src,
+  range: icon_default12.src,
+  rating: icon_default9.src,
+  select: icon_default10.src,
+  slider: icon_default12.src,
+  telephone: mobile_default,
+  text: icon_default13.src,
+  textarea: icon_default14.src,
+  time: icon_default15,
+  url: globe_default
+};
+
+// src/dashboard/components/inspector/response-fields/field-phone/index.tsx
+var import_element84 = __toESM(require_element(), 1);
+var import_jsx_runtime189 = __toESM(require_jsx_runtime(), 1);
+var FieldPhone = ({ phone }) => {
+  const [displayInfo, setDisplayInfo] = (0, import_element84.useState)({
+    formattedNumber: phone
+  });
+  (0, import_element84.useEffect)(() => {
+    let cancelled = false;
+    setDisplayInfo({ formattedNumber: phone, countryCode: void 0 });
+    const formatPhone = async () => {
+      try {
+        const { parsePhoneNumber: parsePhoneNumber5 } = await Promise.resolve().then(() => (init_libphonenumber_js(), libphonenumber_js_exports));
+        if (cancelled) {
+          return;
+        }
+        const phoneNumber = parsePhoneNumber5(phone);
+        if (phoneNumber) {
+          setDisplayInfo({
+            formattedNumber: phoneNumber.formatInternational(),
+            countryCode: phoneNumber.country
+          });
+        }
+      } catch {
+      }
+    };
+    formatPhone();
+    return () => {
+      cancelled = true;
+    };
+  }, [phone]);
+  const { formattedNumber, countryCode } = displayInfo;
+  return /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(TextWithFlag, { countryCode, children: /* @__PURE__ */ (0, import_jsx_runtime189.jsx)("a", { href: `tel:${phone}`, children: formattedNumber }) });
+};
+var field_phone_default = FieldPhone;
+
+// src/dashboard/components/inspector/response-fields/field-rating/index.tsx
+var import_components80 = __toESM(require_components(), 1);
+var import_i18n80 = __toESM(require_i18n(), 1);
+
+// src/blocks/field-rating/rating-icon.jsx
+var import_components79 = __toESM(require_components(), 1);
+
+// src/blocks/field-rating/rating-icons.js
+var MAX_RATING_ICONS = 10;
+var RATING_ICONS = {
+  stars: "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z",
+  hearts: "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+};
+
+// src/blocks/field-rating/rating-icon.jsx
+var import_jsx_runtime190 = __toESM(require_jsx_runtime(), 1);
+var RatingIcon = ({
+  iconStyle,
+  strokeColor = "currentColor",
+  fillColor = "none",
+  strokeWidth = 2
+}) => {
+  const iconPath = RATING_ICONS[iconStyle] || RATING_ICONS.stars;
+  return /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(import_components79.SVG, { className: "jetpack-field-rating__icon", viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(
+    import_components79.Path,
+    {
+      d: iconPath,
+      fill: fillColor,
+      stroke: strokeColor,
+      strokeWidth,
+      strokeLinejoin: "round"
+    }
+  ) });
+};
+
+// src/dashboard/components/inspector/response-fields/field-rating/index.tsx
+var import_jsx_runtime191 = __toESM(require_jsx_runtime(), 1);
+var FieldRating = ({ value }) => {
+  const stringValue = value != null ? String(value) : "";
+  if (stringValue.trim() === "") {
+    return "-";
+  }
+  const [rateValue, outOf] = stringValue.split("/") ?? [];
+  if (!rateValue || rateValue.trim() === "") {
+    return "-";
+  }
+  if (!outOf || outOf.trim() === "") {
+    return "-";
+  }
+  const rateValueTrimmed = rateValue.trim();
+  const outOfTrimmed = outOf.trim();
+  if (!/^[0-9]+$/.test(rateValueTrimmed) || !/^[0-9]+$/.test(outOfTrimmed)) {
+    return "-";
+  }
+  const parsedRating = Number.parseInt(rateValueTrimmed, 10);
+  const parsedMax = Number.parseInt(outOfTrimmed, 10);
+  if (!Number.isFinite(parsedRating) || parsedRating < 0 || !Number.isFinite(parsedMax) || parsedMax < 0) {
+    return "-";
+  }
+  const clampedMax = Math.min(parsedMax, MAX_RATING_ICONS);
+  const displayRating = Math.min(Math.max(0, parsedRating), clampedMax);
+  const ratingLabel = (0, import_i18n80.sprintf)(
+    /* translators: 1: rating value, 2: maximum rating (e.g. "4" and "5" for "4 out of 5") */
+    (0, import_i18n80.__)("Rating %1$s out of %2$s", "jetpack-forms"),
+    String(displayRating),
+    String(clampedMax)
+  );
+  return /* @__PURE__ */ (0, import_jsx_runtime191.jsxs)(import_jsx_runtime191.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(import_components80.VisuallyHidden, { as: "span", children: ratingLabel }),
+    /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(import_components80.__experimentalHStack, { spacing: "1", alignment: "topLeft", children: Array.from({ length: clampedMax }, (_, index) => /* @__PURE__ */ (0, import_jsx_runtime191.jsx)("span", { style: { flex: "0 0 24px" }, children: /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(
+      RatingIcon,
+      {
+        iconStyle: "stars",
+        strokeColor: index < displayRating ? "#F0B849" : "#757575",
+        fillColor: index < displayRating ? "#F0B849" : "none",
+        strokeWidth: 1.5
+      }
+    ) }, index)) })
+  ] });
+};
+var field_rating_default = FieldRating;
+
+// src/dashboard/components/inspector/response-fields/field-preview/field-preview-utils.ts
+var EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+var FIELD_TYPE_LABEL_PREFIXES = [
+  // Contact info fields
+  ["first name", "name"],
+  ["last name", "name"],
+  ["name", "name"],
+  ["email", "email"],
+  ["phone", "telephone"],
+  ["website", "url"],
+  // Basic fields
+  ["text", "text"],
+  ["message", "textarea"],
+  ["number", "number"],
+  // Choice fields
+  ["dropdown", "select"],
+  ["choose one option", "radio"],
+  ["choose several options", "checkbox-multiple"],
+  // Advanced fields
+  ["date", "date"],
+  ["time", "time"],
+  ["upload a file", "file"],
+  ["slider", "slider"],
+  ["rating", "rating"],
+  // Consent field (partial match for long default label)
+  ["by submitting your information", "consent"],
+  ["can we send you an email from time to time", "consent"]
+];
+var inferFieldTypeFromLabel = (label) => {
+  const normalizedLabel = label.toLowerCase().replace(/:$/, "").trim();
+  for (const [prefix, fieldType] of FIELD_TYPE_LABEL_PREFIXES) {
+    if (normalizedLabel.startsWith(prefix)) {
+      return fieldType;
+    }
+  }
+  return null;
+};
+
+// src/dashboard/components/inspector/response-fields/field-preview/style.scss
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='4d8409450e']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "4d8409450e");
+  style.appendChild(document.createTextNode(".jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview{border-bottom:1px solid var(--jp-forms-border-color);padding-bottom:24px;padding-top:24px}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-icon{flex-shrink:0}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-content{min-width:0}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-label{color:var(--jp-gray-40,#757575);font-weight:300;line-height:24px}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-value{white-space:pre-wrap}"));
+  document.head.appendChild(style);
+}
+
+// src/dashboard/components/inspector/response-fields/field-preview/index.tsx
+var import_jsx_runtime192 = __toESM(require_jsx_runtime(), 1);
+var getFieldIcon = (fieldType) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_components81.Icon, { icon: fieldIcons[fieldType] ?? fieldIcons.text });
+};
+var BADGED_VALUE_FIELDS = ["consent", "checkbox", "radio", "select"];
+var FieldPreview = ({ field, onFilePreview }) => {
+  const { label, value, type } = field;
+  const fieldType = type && type !== "basic" ? type : inferFieldTypeFromLabel(label) ?? "text";
+  const icon15 = getFieldIcon(fieldType);
+  const typeClassName = `is-field-type-${fieldType}`;
+  const renderFieldValue = () => {
+    if (fieldType === "image-select") {
+      const choices = value?.choices;
+      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(field_image_select_default, { choices, handleFilePreview: onFilePreview });
+    }
+    if (fieldType === "file") {
+      const files = value?.files;
+      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(field_file_default, { files, handleFilePreview: onFilePreview });
+    }
+    if (fieldType === "checkbox-multiple" && Array.isArray(value)) {
+      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_components81.__experimentalVStack, { spacing: "2", alignment: "topLeft", children: value.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(Badge, { children: item }, index)) });
+    }
+    if (value === null || value === void 0) {
+      return "-";
+    }
+    if (Array.isArray(value)) {
+      return value.join(", ");
+    }
+    if (typeof value === "object") {
+      return JSON.stringify(value);
+    }
+    const stringValue = String(value);
+    if (stringValue.trim() === "") {
+      return "-";
+    }
+    if (BADGED_VALUE_FIELDS.includes(fieldType)) {
+      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(Badge, { children: stringValue });
+    }
+    if (fieldType === "number") {
+      return formatNumber2(Number(stringValue));
+    }
+    if (fieldType === "email" && EMAIL_REGEX.test(stringValue)) {
+      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(field_email_default, { email: stringValue });
+    }
+    if (fieldType === "phone" || fieldType === "telephone") {
+      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(field_phone_default, { phone: stringValue });
+    }
+    if (fieldType === "url" && /^https?:\/\//.test(stringValue)) {
+      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_components81.ExternalLink, { href: stringValue, children: stringValue });
+    }
+    if (fieldType === "rating") {
+      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(field_rating_default, { value: stringValue });
+    }
+    return stringValue;
+  };
+  return /* @__PURE__ */ (0, import_jsx_runtime192.jsxs)(
+    import_components81.__experimentalHStack,
+    {
+      alignment: "topLeft",
+      spacing: "4",
+      className: `jp-forms__field-preview ${typeClassName}`,
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime192.jsx)("div", { className: "jp-forms__field-preview-icon", children: icon15 }),
+        /* @__PURE__ */ (0, import_jsx_runtime192.jsxs)(import_components81.__experimentalVStack, { spacing: "0", className: "jp-forms__field-preview-content", children: [
+          label && /* @__PURE__ */ (0, import_jsx_runtime192.jsx)("div", { className: "jp-forms__field-preview-label", children: label }),
+          /* @__PURE__ */ (0, import_jsx_runtime192.jsx)("div", { className: "jp-forms__field-preview-value", children: renderFieldValue() })
+        ] })
+      ]
+    }
+  );
+};
+var field_preview_default = FieldPreview;
+
+// src/dashboard/components/inspector/response-fields/index.tsx
+var import_jsx_runtime193 = __toESM(require_jsx_runtime(), 1);
+var ResponseFieldsIterator = ({
+  fields,
+  onFilePreview,
+  className
+}) => {
+  const fieldsAreNewFormat = isFieldsCollection(fields);
+  const rootClass = clsx_default(className, {
+    "is-collection-format": fieldsAreNewFormat
+  });
+  const renderFieldValue = (value) => {
+    if (isImageSelectField(value)) {
+      return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(
+        field_image_select_default,
+        {
+          choices: value.choices,
+          handleFilePreview: onFilePreview
+        }
+      );
+    }
+    if (isFileUploadField(value)) {
+      const fileValue = value;
+      return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(field_file_default, { files: fileValue.files, handleFilePreview: onFilePreview });
+    }
+    const emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    if (typeof value === "string" && emailRegEx.test(value)) {
+      return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(field_email_default, { email: value });
+    }
+    if (isLikelyPhoneNumber(value)) {
+      return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)("a", { href: `tel:${value}`, children: String(value) });
+    }
+    return value;
+  };
+  return /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)("div", { className: rootClass, children: [
+    fields && !fieldsAreNewFormat && Object.entries(fields).map(([key, value]) => /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)("div", { className: "jp-forms__inbox-response-item", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime193.jsx)("div", { className: "jp-forms__inbox-response-data-label", children: key.endsWith("?") ? key : `${key}:` }),
+      /* @__PURE__ */ (0, import_jsx_runtime193.jsx)("div", { className: "jp-forms__inbox-response-data-value", children: renderFieldValue(value) })
+    ] }, key)),
+    fields && fieldsAreNewFormat && (Array.isArray(fields) ? fields : Object.values(fields)).map(
+      (field) => /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(field_preview_default, { field, onFilePreview }, field.key)
+    )
+  ] });
+};
+var response_fields_default = ResponseFieldsIterator;
+
+// src/dashboard/components/inspector/response-meta/index.tsx
+var import_components82 = __toESM(require_components(), 1);
+var import_date11 = __toESM(require_date(), 1);
+var import_html_entities8 = __toESM(require_html_entities(), 1);
+var import_i18n81 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/inspector/response-meta/style.scss
 if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='b5da50fde1']")) {
@@ -29807,19 +37524,19 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-meta/index.tsx
-var import_jsx_runtime169 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime194 = __toESM(require_jsx_runtime(), 1);
 var getDisplayName = (response) => {
   const { author_name, author_email, author_url, ip } = response;
-  return (0, import_html_entities7.decodeEntities)(author_name || author_email || author_url || ip);
+  return (0, import_html_entities8.decodeEntities)(author_name || author_email || author_url || ip);
 };
 var ResponseMeta = ({ response }) => {
   const displayName = getDisplayName(response);
   const gravatarEmail = response.author_email || response.ip;
   const defaultImage = response.author_name || response.author_email ? "initials" : "mp";
   const responseAuthorEmailParts = response.author_email?.split("@") ?? [];
-  return /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)(import_jsx_runtime169.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("div", { className: "jp-forms__inbox-response-header", children: /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)(import_components76.__experimentalHStack, { alignment: "topLeft", spacing: "3", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(import_jsx_runtime194.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("div", { className: "jp-forms__inbox-response-header", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(import_components82.__experimentalHStack, { alignment: "topLeft", spacing: "3", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
         Gravatar,
         {
           email: gravatarEmail,
@@ -29828,55 +37545,55 @@ var ResponseMeta = ({ response }) => {
         },
         gravatarEmail
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)(import_components76.__experimentalVStack, { spacing: "0", className: "jp-forms__inbox-response-header-title", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("h3", { className: "jp-forms__inbox-response-name", children: displayName }),
-        response.author_email && displayName !== response.author_email && /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("p", { className: "jp-forms__inbox-response-email", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("a", { href: `mailto:${response.author_email}`, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(import_components82.__experimentalVStack, { spacing: "0", className: "jp-forms__inbox-response-header-title", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("h3", { className: "jp-forms__inbox-response-name", children: displayName }),
+        response.author_email && displayName !== response.author_email && /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("p", { className: "jp-forms__inbox-response-email", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("a", { href: `mailto:${response.author_email}`, children: [
             responseAuthorEmailParts[0],
-            /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("wbr", {}),
+            /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("wbr", {}),
             "@",
             responseAuthorEmailParts[1]
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(CopyClipboardButton, { text: response.author_email })
+          /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(CopyClipboardButton, { text: response.author_email })
         ] })
       ] })
     ] }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("div", { className: "jp-forms__inbox-response-meta", children: /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("table", { children: /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("tbody", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("th", { children: (0, import_i18n79.__)("Date:", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("td", { children: (0, import_i18n79.sprintf)(
+    /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("div", { className: "jp-forms__inbox-response-meta", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("table", { children: /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("tbody", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("th", { children: (0, import_i18n81.__)("Date:", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("td", { children: (0, import_i18n81.sprintf)(
           /* Translators: %1$s is the date, %2$s is the time. */
-          (0, import_i18n79.__)("%1$s at %2$s", "jetpack-forms"),
+          (0, import_i18n81.__)("%1$s at %2$s", "jetpack-forms"),
           (0, import_date11.dateI18n)((0, import_date11.getSettings)().formats.date, response.date),
           (0, import_date11.dateI18n)((0, import_date11.getSettings)().formats.time, response.date)
         ) })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("th", { children: (0, import_i18n79.__)("Source:", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("td", { children: [
-          response.entry_permalink && /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_components76.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities7.decodeEntities)(response.entry_title) || getPath(response) }),
-          !response.entry_permalink && (0, import_html_entities7.decodeEntities)(response.entry_title)
+      /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("th", { children: (0, import_i18n81.__)("Source:", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("td", { children: [
+          response.entry_permalink && /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(import_components82.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities8.decodeEntities)(response.entry_title) || getPath(response) }),
+          !response.entry_permalink && (0, import_html_entities8.decodeEntities)(response.entry_title)
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("th", { children: [
-          (0, import_i18n79.__)("IP address:", "jetpack-forms"),
+      /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("th", { children: [
+          (0, import_i18n81.__)("IP address:", "jetpack-forms"),
           "\xA0"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(TextWithFlag, { countryCode: response.country_code, children: /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_components76.Tooltip, { text: (0, import_i18n79.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(
-          import_components76.ExternalLink,
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(TextWithFlag, { countryCode: response.country_code, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(import_components82.Tooltip, { text: (0, import_i18n81.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
+          import_components82.ExternalLink,
           {
             href: `https://apps.db.ripe.net/db-web-ui/query?searchtext=/${response.ip}`,
             children: response.ip
           }
         ) }) }) })
       ] }),
-      response.browser && /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("th", { children: [
-          (0, import_i18n79.__)("Browser:", "jetpack-forms"),
+      response.browser && /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("th", { children: [
+          (0, import_i18n81.__)("Browser:", "jetpack-forms"),
           "\xA0"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("td", { children: response.browser })
+        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("td", { children: response.browser })
       ] })
     ] }) }) })
   ] });
@@ -29885,12 +37602,12 @@ var response_meta_default = ResponseMeta;
 
 // routes/responses/response/actions.tsx
 var import_api_fetch10 = __toESM(require_api_fetch());
-var import_components77 = __toESM(require_components());
+var import_components83 = __toESM(require_components());
 var import_core_data7 = __toESM(require_core_data());
 var import_data19 = __toESM(require_data());
-var import_element84 = __toESM(require_element());
-var import_i18n80 = __toESM(require_i18n());
-var import_jsx_runtime170 = __toESM(require_jsx_runtime());
+var import_element85 = __toESM(require_element());
+var import_i18n82 = __toESM(require_i18n());
+var import_jsx_runtime195 = __toESM(require_jsx_runtime());
 function ResponseActions({
   response,
   onActionComplete
@@ -29901,8 +37618,8 @@ function ResponseActions({
   const { updateCountsOptimistically: updateCountsOptimistically2, invalidateCounts: invalidateCounts2 } = (0, import_data19.useDispatch)(
     store3
   );
-  const [isLoading] = (0, import_element84.useState)(false);
-  const handleMarkAsSpam = (0, import_element84.useCallback)(async () => {
+  const [isLoading] = (0, import_element85.useState)(false);
+  const handleMarkAsSpam = (0, import_element85.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "spam" });
     updateCountsOptimistically2(originalStatus, "spam", 1);
@@ -29925,7 +37642,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleMarkAsNotSpam = (0, import_element84.useCallback)(async () => {
+  const handleMarkAsNotSpam = (0, import_element85.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "publish" });
     updateCountsOptimistically2(originalStatus, "publish", 1);
@@ -29948,7 +37665,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleMoveToTrash = (0, import_element84.useCallback)(async () => {
+  const handleMoveToTrash = (0, import_element85.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "trash" });
     updateCountsOptimistically2(originalStatus, "trash", 1);
@@ -29968,7 +37685,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleRestore = (0, import_element84.useCallback)(async () => {
+  const handleRestore = (0, import_element85.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "publish" });
     updateCountsOptimistically2(originalStatus, "publish", 1);
@@ -29991,7 +37708,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleDelete = (0, import_element84.useCallback)(async () => {
+  const handleDelete = (0, import_element85.useCallback)(async () => {
     const originalStatus = response.status;
     updateCountsOptimistically2(originalStatus, "", 1);
     onActionComplete(response);
@@ -30008,7 +37725,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleToggleRead = (0, import_element84.useCallback)(async () => {
+  const handleToggleRead = (0, import_element85.useCallback)(async () => {
     const newIsUnread = !response.is_unread;
     editEntityRecord("postType", "feedback", response.id, { is_unread: newIsUnread });
     onActionComplete({ ...response, is_unread: newIsUnread });
@@ -30030,30 +37747,30 @@ function ResponseActions({
     // Compensate for button internal padding
   };
   if (response.status === "trash") {
-    return /* @__PURE__ */ (0, import_jsx_runtime170.jsxs)("div", { style: containerStyle, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components77.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n80.__)("Mark as read", "jetpack-forms") : (0, import_i18n80.__)("Mark as unread", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components77.Button, { onClick: handleRestore, isBusy: isLoading, size: "compact", children: (0, import_i18n80.__)("Restore", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components77.Button, { onClick: handleDelete, isBusy: isLoading, size: "compact", children: (0, import_i18n80.__)("Delete", "jetpack-forms") })
+    return /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)("div", { style: containerStyle, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n82.__)("Mark as read", "jetpack-forms") : (0, import_i18n82.__)("Mark as unread", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleRestore, isBusy: isLoading, size: "compact", children: (0, import_i18n82.__)("Restore", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleDelete, isBusy: isLoading, size: "compact", children: (0, import_i18n82.__)("Delete", "jetpack-forms") })
     ] });
   }
   if (response.status === "spam") {
-    return /* @__PURE__ */ (0, import_jsx_runtime170.jsxs)("div", { style: containerStyle, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components77.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n80.__)("Mark as read", "jetpack-forms") : (0, import_i18n80.__)("Mark as unread", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components77.Button, { onClick: handleMarkAsNotSpam, isBusy: isLoading, size: "compact", children: (0, import_i18n80.__)("Not spam", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components77.Button, { onClick: handleMoveToTrash, isBusy: isLoading, size: "compact", children: (0, import_i18n80.__)("Trash", "jetpack-forms") })
+    return /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)("div", { style: containerStyle, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n82.__)("Mark as read", "jetpack-forms") : (0, import_i18n82.__)("Mark as unread", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleMarkAsNotSpam, isBusy: isLoading, size: "compact", children: (0, import_i18n82.__)("Not spam", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleMoveToTrash, isBusy: isLoading, size: "compact", children: (0, import_i18n82.__)("Trash", "jetpack-forms") })
     ] });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime170.jsxs)("div", { style: containerStyle, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components77.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n80.__)("Mark as read", "jetpack-forms") : (0, import_i18n80.__)("Mark as unread", "jetpack-forms") }),
-    /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components77.Button, { onClick: handleMarkAsSpam, isBusy: isLoading, size: "compact", children: (0, import_i18n80.__)("Spam", "jetpack-forms") }),
-    /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components77.Button, { onClick: handleMoveToTrash, isBusy: isLoading, size: "compact", children: (0, import_i18n80.__)("Trash", "jetpack-forms") })
+  return /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)("div", { style: containerStyle, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleToggleRead, isBusy: isLoading, size: "compact", children: response.is_unread ? (0, import_i18n82.__)("Mark as read", "jetpack-forms") : (0, import_i18n82.__)("Mark as unread", "jetpack-forms") }),
+    /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleMarkAsSpam, isBusy: isLoading, size: "compact", children: (0, import_i18n82.__)("Spam", "jetpack-forms") }),
+    /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleMoveToTrash, isBusy: isLoading, size: "compact", children: (0, import_i18n82.__)("Trash", "jetpack-forms") })
   ] });
 }
 
 // routes/responses/response/navigation.tsx
-var import_components78 = __toESM(require_components());
-var import_i18n81 = __toESM(require_i18n());
-var import_jsx_runtime171 = __toESM(require_jsx_runtime());
+var import_components84 = __toESM(require_components());
+var import_i18n83 = __toESM(require_i18n());
+var import_jsx_runtime196 = __toESM(require_jsx_runtime());
 function ResponseNavigation({
   hasNext,
   hasPrevious,
@@ -30067,29 +37784,29 @@ function ResponseNavigation({
     showTooltip: true,
     size: "compact"
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime171.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: "8px", flexShrink: 0 }, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime171.jsxs)("div", { style: { display: "flex", alignItems: "center" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
-        import_components78.Button,
+  return /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: "8px", flexShrink: 0 }, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)("div", { style: { display: "flex", alignItems: "center" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
+        import_components84.Button,
         {
           ...sharedProps,
           disabled: !hasPrevious,
           icon: chevron_up_default,
-          label: (0, import_i18n81.__)("Previous", "jetpack-forms"),
+          label: (0, import_i18n83.__)("Previous", "jetpack-forms"),
           onClick: onPrevious
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
-        import_components78.Button,
+      /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
+        import_components84.Button,
         {
           ...sharedProps,
           disabled: !hasNext,
           icon: chevron_down_default,
-          label: (0, import_i18n81.__)("Next", "jetpack-forms"),
+          label: (0, import_i18n83.__)("Next", "jetpack-forms"),
           onClick: onNext
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
         "span",
         {
           style: {
@@ -30103,13 +37820,13 @@ function ResponseNavigation({
         }
       )
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
-      import_components78.Button,
+    /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
+      import_components84.Button,
       {
         ...sharedProps,
         iconSize: 20,
         icon: close_default,
-        label: (0, import_i18n81.__)("Close", "jetpack-forms"),
+        label: (0, import_i18n83.__)("Close", "jetpack-forms"),
         onClick: onClose
       }
     )
@@ -30125,85 +37842,16 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // routes/responses/response/index.tsx
-var import_jsx_runtime172 = __toESM(require_jsx_runtime());
-var getDisplayFields = (fields) => {
-  if (!fields) {
-    return [];
-  }
-  if (Array.isArray(fields)) {
-    return fields.map((field, index) => ({
-      label: field.label || field.key || String(index),
-      value: field.value,
-      key: field.key || field.id || `${index}-${field.label}`
-    }));
-  }
-  return Object.entries(fields).map(([label, value]) => ({
-    label,
-    value,
-    key: label
-  }));
-};
-function FieldFile({
-  files,
-  handleFilePreview
-}) {
-  return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("ul", { style: { margin: 0, paddingLeft: "20px" }, children: files.map((file, index) => /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("li", { children: file.is_image ? /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components79.Button, { variant: "link", onClick: handleFilePreview(file), children: (0, import_html_entities8.decodeEntities)(file.name) }) : /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components79.ExternalLink, { href: file.url, children: (0, import_html_entities8.decodeEntities)(file.name) }) }, index)) });
-}
-function FieldEmail({ email }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)("span", { style: { display: "inline-flex", alignItems: "center", gap: "4px" }, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("a", { href: `mailto:${email}`, children: email }),
-    /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(CopyClipboardButton, { text: email })
-  ] });
-}
-function createEnterKeyHandler(handler) {
-  return function handleEnterKeyDown(event) {
-    if (event.key === "Enter") {
-      handler();
-    }
-  };
-}
-function FieldImageSelect({
-  choices,
-  handleFilePreview
-}) {
-  return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("div", { style: { display: "flex", gap: "8px", flexWrap: "wrap" }, children: choices.map((choice, index) => {
-    const previewHandler = handleFilePreview(choice);
-    const keyDownHandler = createEnterKeyHandler(previewHandler);
-    return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
-      "div",
-      {
-        style: {
-          border: choice.selected ? "2px solid var(--wp-admin-theme-color)" : "1px solid #ddd",
-          borderRadius: "4px",
-          padding: "4px",
-          cursor: "pointer"
-        },
-        onClick: previewHandler,
-        onKeyDown: keyDownHandler,
-        role: "button",
-        tabIndex: 0,
-        children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
-          "img",
-          {
-            src: choice.url,
-            alt: choice.name,
-            style: { width: "60px", height: "60px", objectFit: "cover" }
-          }
-        )
-      },
-      index
-    );
-  }) });
-}
+var import_jsx_runtime197 = __toESM(require_jsx_runtime());
 function SingleResponseView({
   responseId,
   allResponseIds,
   onNavigate,
   onClose
 }) {
-  const [previewFile, setPreviewFile] = (0, import_element85.useState)(null);
-  const [isImageLoading, setIsImageLoading] = (0, import_element85.useState)(true);
-  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element85.useState)(null);
+  const [previewFile, setPreviewFile] = (0, import_element86.useState)(null);
+  const [isImageLoading, setIsImageLoading] = (0, import_element86.useState)(true);
+  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element86.useState)(null);
   const emptyTrashDays = useConfigValue("emptyTrashDays") ?? 0;
   const { editEntityRecord } = (0, import_data20.useDispatch)(import_core_data8.store);
   const { response, isLoading } = (0, import_data20.useSelect)(
@@ -30228,17 +37876,17 @@ function SingleResponseView({
   const currentIndex = allResponseIds.indexOf(responseId);
   const hasNext = currentIndex < allResponseIds.length - 1;
   const hasPrevious = currentIndex > 0;
-  const handleNext = (0, import_element85.useCallback)(() => {
+  const handleNext = (0, import_element86.useCallback)(() => {
     if (hasNext) {
       onNavigate(allResponseIds[currentIndex + 1]);
     }
   }, [hasNext, allResponseIds, currentIndex, onNavigate]);
-  const handlePrevious = (0, import_element85.useCallback)(() => {
+  const handlePrevious = (0, import_element86.useCallback)(() => {
     if (hasPrevious) {
       onNavigate(allResponseIds[currentIndex - 1]);
     }
   }, [hasPrevious, allResponseIds, currentIndex, onNavigate]);
-  (0, import_element85.useEffect)(() => {
+  (0, import_element86.useEffect)(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowUp" && hasPrevious) {
         event.preventDefault();
@@ -30253,7 +37901,7 @@ function SingleResponseView({
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [hasNext, hasPrevious, handleNext, handlePrevious, onClose]);
-  (0, import_element85.useEffect)(() => {
+  (0, import_element86.useEffect)(() => {
     if (!response || !response.id || !response.is_unread) {
       return;
     }
@@ -30274,21 +37922,21 @@ function SingleResponseView({
       });
     });
   }, [response, editEntityRecord, hasMarkedAsRead]);
-  const handleFilePreview = (0, import_element85.useCallback)(
+  const handleFilePreview = (0, import_element86.useCallback)(
     (file) => () => {
       setIsImageLoading(true);
       setPreviewFile(file);
     },
     []
   );
-  const closePreviewModal = (0, import_element85.useCallback)(() => {
+  const closePreviewModal = (0, import_element86.useCallback)(() => {
     setPreviewFile(null);
     setIsImageLoading(true);
   }, []);
-  const handleImageLoaded = (0, import_element85.useCallback)(() => {
+  const handleImageLoaded = (0, import_element86.useCallback)(() => {
     setIsImageLoading(false);
   }, []);
-  const handleActionComplete = (0, import_element85.useCallback)(
+  const handleActionComplete = (0, import_element86.useCallback)(
     (updatedItem) => {
       if (!updatedItem) {
         if (hasNext) {
@@ -30302,52 +37950,14 @@ function SingleResponseView({
     },
     [hasNext, hasPrevious, handleNext, handlePrevious, onClose]
   );
-  const renderFieldValue = (value) => {
-    if (value === null || value === void 0) {
-      return "-";
-    }
-    if (isImageSelectField(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
-        FieldImageSelect,
-        {
-          choices: value.choices,
-          handleFilePreview
-        }
-      );
-    }
-    if (isFileUploadField(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
-        FieldFile,
-        {
-          files: value.files,
-          handleFilePreview
-        }
-      );
-    }
-    const emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    if (typeof value === "string" && emailRegEx.test(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(FieldEmail, { email: value });
-    }
-    if (isLikelyPhoneNumber(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("a", { href: `tel:${value}`, children: value });
-    }
-    if (Array.isArray(value)) {
-      return value.join(", ");
-    }
-    if (typeof value === "object") {
-      return JSON.stringify(value);
-    }
-    return String(value);
-  };
-  const displayFields = (0, import_element85.useMemo)(() => getDisplayFields(response?.fields), [response?.fields]);
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("div", { style: { display: "flex", justifyContent: "center", padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components79.Spinner, {}) });
+    return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { style: { display: "flex", justifyContent: "center", padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Spinner, {}) });
   }
   if (!response) {
-    return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("div", { style: { padding: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("p", { children: (0, import_i18n82.__)("Response not found.", "jetpack-forms") }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { style: { padding: "20px" }, children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("p", { children: (0, import_i18n84.__)("Response not found.", "jetpack-forms") }) });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)(import_jsx_runtime172.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)(import_jsx_runtime197.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)(
       "div",
       {
         style: {
@@ -30360,8 +37970,8 @@ function SingleResponseView({
           flexWrap: "wrap"
         },
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(ResponseActions, { response, onActionComplete: handleActionComplete }),
-          /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(ResponseActions, { response, onActionComplete: handleActionComplete }),
+          /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
             ResponseNavigation,
             {
               hasNext,
@@ -30374,37 +37984,19 @@ function SingleResponseView({
         ]
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)("div", { style: { padding: "20px", overflowY: "auto" }, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(response_meta_default, { response }),
-      displayFields.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("div", { children: displayFields.map(({ label, value, key }) => /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)(
-        "div",
+    /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)("div", { style: { padding: "20px", overflowY: "auto" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(response_meta_default, { response }),
+      /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
+        response_fields_default,
         {
-          style: {
-            marginBottom: "16px",
-            paddingBottom: "16px",
-            borderBottom: "1px solid #eee"
-          },
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
-              "div",
-              {
-                style: {
-                  fontWeight: 600,
-                  marginBottom: "6px",
-                  color: "#1e1e1e",
-                  fontSize: "13px"
-                },
-                children: label.endsWith("?") ? label : `${label}:`
-              }
-            ),
-            /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("div", { style: { color: "#3c434a", fontSize: "14px" }, children: renderFieldValue(value) })
-          ]
-        },
-        key
-      )) }),
-      response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components79.Tip, { children: (0, import_i18n82.sprintf)(
+          fields: response.fields,
+          onFilePreview: handleFilePreview,
+          className: "jp-forms__inbox-response-data"
+        }
+      ),
+      response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Tip, { children: (0, import_i18n84.sprintf)(
         /* translators: %d number of days. */
-        (0, import_i18n82._n)(
+        (0, import_i18n84._n)(
           "Spam responses are permanently deleted after %d day.",
           "Spam responses are permanently deleted after %d days.",
           15,
@@ -30413,9 +38005,9 @@ function SingleResponseView({
         // Number from https://github.com/Automattic/jetpack/blob/bde3cf9a89ce0d02e50469df173a6253383bd276/projects/packages/forms/src/contact-form/class-contact-form-plugin.php#L132
         15
       ) }) }),
-      response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components79.Tip, { children: (0, import_i18n82.sprintf)(
+      response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Tip, { children: (0, import_i18n84.sprintf)(
         /* translators: %d number of days. */
-        (0, import_i18n82._n)(
+        (0, import_i18n84._n)(
           "Items in trash are permanently deleted after %d day.",
           "Items in trash are permanently deleted after %d days.",
           emptyTrashDays,
@@ -30424,7 +38016,7 @@ function SingleResponseView({
         emptyTrashDays
       ) }) })
     ] }),
-    previewFile && /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components79.Modal, { title: (0, import_html_entities8.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
+    previewFile && /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Modal, { title: (0, import_html_entities9.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
       preview_file_default,
       {
         file: previewFile,
@@ -30442,7 +38034,7 @@ function Response() {
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const { records } = useInboxData({ status: statusView });
   const allRecordIds = records?.map((record) => record.id) ?? [];
-  const handleClose = (0, import_element85.useCallback)(() => {
+  const handleClose = (0, import_element86.useCallback)(() => {
     navigate({
       search: {
         ...searchParams,
@@ -30450,7 +38042,7 @@ function Response() {
       }
     });
   }, [navigate, searchParams]);
-  const handleNavigate = (0, import_element85.useCallback)(
+  const handleNavigate = (0, import_element86.useCallback)(
     (id) => {
       navigate({
         search: {
@@ -30465,7 +38057,7 @@ function Response() {
     return null;
   }
   const selectedResponseId = Number(responseIds[0]);
-  return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
     SingleResponseView,
     {
       responseId: selectedResponseId,
@@ -30477,9 +38069,9 @@ function Response() {
 }
 
 // routes/responses/inspector.tsx
-var import_jsx_runtime173 = __toESM(require_jsx_runtime());
+var import_jsx_runtime198 = __toESM(require_jsx_runtime());
 function Inspector() {
-  return /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(page_default, { showSidebarToggle: false, hasPadding: false, children: /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(Response, {}) }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(page_default, { showSidebarToggle: false, hasPadding: false, children: /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(Response, {}) }) });
 }
 export {
   Inspector as inspector,
