@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add inline field icons module for wp-build compatibility.
 - Forms: add SVG icon files for all form field blocks and configure webpack for SVG component and raw imports.
 - Forms: Update sidebar information on wp-build dashboard.
+- Image select field: improve preview styling in response inspector.
 - Update package dependencies.
 - Use dynamic number values for spam and trash tip in response sidebar, and add styles.
 

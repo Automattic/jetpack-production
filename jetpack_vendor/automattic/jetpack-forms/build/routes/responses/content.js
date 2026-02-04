@@ -36997,10 +36997,10 @@ function serverFromUrlParts(pathname, isSecure) {
 }
 
 // src/dashboard/components/inspector/response-fields/field-image-select/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='83dc91bb91']")) {
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='5eb17986b2']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "83dc91bb91");
-  style.appendChild(document.createTextNode(".jp-forms__image-select-field-button.components-button{height:auto;text-align:left;text-wrap:auto}.jp-forms__image-select-field-button.components-button.has-icon.has-text{gap:8px}"));
+  style.setAttribute("data-wp-hash", "5eb17986b2");
+  style.appendChild(document.createTextNode(".jp-forms__image-select-preview-wrapper{padding-block-start:8px}.jp-forms__image-select-preview{--jp-forms--image-select-border-color:#0000001a}.jp-forms__image-select-preview img,.jp-forms__image-select-preview svg{display:block}.jp-forms__image-select-preview.has-image{cursor:pointer}.jp-forms__image-select-preview.has-image:hover{background-color:var(--jp-forms--image-select-border-color)}.jp-forms__image-select-preview .jp-forms__image-select-preview-image-wrapper{padding:8px}.jp-forms__image-select-preview .jp-forms__image-select-preview-image-wrapper .jp-forms__image-select-preview-image{object-fit:cover}.jp-forms__image-select-preview .jp-forms__image-select-preview-label-wrapper{align-items:baseline;max-width:138px}.jp-forms__image-select-preview .jp-forms__image-select-preview-label-wrapper .jp-forms__image-select-preview-selected{background-color:#fff;border-radius:2px;box-shadow:0 0 0 1px var(--jp-forms--image-select-border-color);color:#000;flex-shrink:0;min-width:1em;padding:4px;text-align:center}.jp-forms__image-select-preview .jp-forms__image-select-preview-label-wrapper .jp-forms__image-select-preview-label{flex-grow:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}"));
   document.head.appendChild(style);
 }
 
@@ -37013,40 +37013,81 @@ function photonSafeUrl(url = "") {
   if (url.startsWith("blob:") || /^https?:\/\/localhost/.test(url) || /^https?:\/\/.*\.local\//.test(url) || isWoASite() && isPrivateSite()) {
     return url;
   }
-  return photon(url.split("?", 1)[0], { width: 120, height: 120 });
+  return photon(url.split("?", 1)[0], { width: 138, height: 144 });
 }
+var ImageSelectButton = ({ choice, handleFilePreview }) => {
+  const label = choice.label ? `${choice.selected}: ${choice.label}` : choice.selected;
+  const hasImage = choice.image?.src;
+  return /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)(
+    import_components78.Card,
+    {
+      onClick: hasImage ? handleFilePreview({
+        file_id: choice.image.id,
+        name: label,
+        url: choice.image.src
+      }) : void 0,
+      className: `jp-forms__image-select-preview ${hasImage ? "has-image" : ""}`,
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.CardMedia, { children: /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("div", { className: "jp-forms__image-select-preview-image-wrapper", children: hasImage ? /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
+          "img",
+          {
+            className: "jp-forms__image-select-preview-image",
+            width: 138,
+            height: 144,
+            alt: choice.selected,
+            loading: "lazy",
+            src: photonSafeUrl(choice.image.src) ?? void 0
+          }
+        ) : /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.Icon, { icon: image_default, size: 144 }) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
+          import_components78.CardBody,
+          {
+            size: {
+              blockStart: "none",
+              blockEnd: "xSmall",
+              inlineStart: "xSmall",
+              inlineEnd: "xSmall"
+            },
+            children: /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)(
+              import_components78.__experimentalHStack,
+              {
+                className: "jp-forms__image-select-preview-label-wrapper",
+                spacing: "2",
+                alignment: "topLeft",
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.__experimentalText, { className: "jp-forms__image-select-preview-selected", children: choice.selected }),
+                  /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.__experimentalText, { title: choice.label, className: "jp-forms__image-select-preview-label", children: choice.label })
+                ]
+              }
+            )
+          }
+        )
+      ]
+    }
+  );
+};
 var FieldImageSelect = ({ choices, handleFilePreview }) => {
   return /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)(import_jsx_runtime174.Fragment, { children: [
     (choices?.length ?? 0) === 0 && "-",
-    (choices?.length ?? 0) > 0 && /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.__experimentalVStack, { spacing: "1", children: choices.map((choice) => {
-      const label = choice.label ? `${choice.selected}: ${choice.label}` : choice.selected;
-      const hasImage = choice.image?.src;
-      return /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
-        import_components78.Button,
-        {
-          __next40pxDefaultSize: true,
-          variant: "tertiary",
-          onClick: hasImage ? handleFilePreview({
-            file_id: choice.image.id,
-            name: label,
-            url: choice.image.src
-          }) : void 0,
-          className: "jp-forms__image-select-field-button",
-          icon: hasImage ? /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
-            "img",
+    (choices?.length ?? 0) > 0 && /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
+      import_components78.__experimentalHStack,
+      {
+        spacing: "2",
+        alignment: "topLeft",
+        wrap: true,
+        className: "jp-forms__image-select-preview-wrapper",
+        children: choices.map((choice) => {
+          return /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
+            ImageSelectButton,
             {
-              alt: choice.selected,
-              loading: "lazy",
-              src: photonSafeUrl(choice.image.src),
-              style: { objectFit: "cover" }
-            }
-          ) : image_default,
-          iconSize: 60,
-          children: label
-        },
-        choice.selected
-      );
-    }) })
+              choice,
+              handleFilePreview
+            },
+            choice.selected
+          );
+        })
+      }
+    )
   ] });
 };
 var field_image_select_default = FieldImageSelect;
