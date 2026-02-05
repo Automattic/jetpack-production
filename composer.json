@@ -55,7 +55,7 @@
 		"automattic/jetpack-sync": "^4.26.0",
 		"automattic/jetpack-videopress": "^0.34.0",
 		"automattic/jetpack-waf": "^0.27.10",
-		"automattic/woocommerce-analytics": "^0.15.2"
+		"automattic/woocommerce-analytics": "^0.15.3-alpha"
 	},
 	"require-dev": {
 		"antecedent/patchwork": "^2.2",
