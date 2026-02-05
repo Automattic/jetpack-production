@@ -154,6 +154,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_6_a_0
         'Automattic\\Jetpack\\Forms\\ContactForm\\Feedback_Author' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-feedback-author.php',
         'Automattic\\Jetpack\\Forms\\ContactForm\\Feedback_Field' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-feedback-field.php',
         'Automattic\\Jetpack\\Forms\\ContactForm\\Feedback_Source' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-feedback-source.php',
+        'Automattic\\Jetpack\\Forms\\ContactForm\\Form_Preview' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-form-preview.php',
         'Automattic\\Jetpack\\Forms\\ContactForm\\Form_Submission_Error' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-form-submission-error.php',
         'Automattic\\Jetpack\\Forms\\ContactForm\\Jetpack_Form_Endpoint' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-jetpack-form-endpoint.php',
         'Automattic\\Jetpack\\Forms\\ContactForm\\Util' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-util.php',

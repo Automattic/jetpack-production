@@ -56,6 +56,13 @@ var require_element = __commonJS({
   }
 });
 
+// package-external:@wordpress/api-fetch
+var require_api_fetch = __commonJS({
+  "package-external:@wordpress/api-fetch"(exports, module) {
+    module.exports = window.wp.apiFetch;
+  }
+});
+
 // package-external:@wordpress/data
 var require_data = __commonJS({
   "package-external:@wordpress/data"(exports, module) {
@@ -1562,13 +1569,6 @@ var require_events = __commonJS({
         throw new TypeError('The "emitter" argument must be of type EventEmitter. Received type ' + typeof emitter);
       }
     }
-  }
-});
-
-// package-external:@wordpress/api-fetch
-var require_api_fetch = __commonJS({
-  "package-external:@wordpress/api-fetch"(exports, module) {
-    module.exports = window.wp.apiFetch;
   }
 });
 
@@ -3717,6 +3717,7 @@ Page.SidebarToggleFill = SidebarToggleFill;
 var page_default = Page;
 
 // routes/forms/stage.tsx
+var import_api_fetch9 = __toESM(require_api_fetch());
 var import_components71 = __toESM(require_components());
 var import_data19 = __toESM(require_data());
 
@@ -27016,6 +27017,26 @@ function StageInner() {
           const editUrl = item.editUrl || fallbackEditUrl;
           const url = new URL(editUrl, window.location.origin);
           window.location.href = url.toString();
+        }
+      },
+      {
+        id: "preview-form",
+        isPrimary: false,
+        label: (0, import_i18n74.__)("Preview", "jetpack-forms"),
+        supportsBulk: false,
+        async callback(items) {
+          const [item] = items;
+          if (!item) {
+            return;
+          }
+          try {
+            const response = await (0, import_api_fetch9.default)({
+              path: `/wp/v2/jetpack-forms/${item.id}/preview-url`
+            });
+            window.open(response.preview_url, "_blank");
+          } catch (error2) {
+            console.error("Failed to get preview URL:", error2);
+          }
         }
       }
     ];
