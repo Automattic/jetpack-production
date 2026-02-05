@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: Fix loading spinner not showing on submit button.
 - Fix IP address lookup link in response inspector.
 - Forms: remove focus outline from form success message.
+- Handle deleted or missing form source in responses filter.
 - Prevent creating synced jetpack_form posts during block preview, and skip form wrapping when editing jetpack_form post type directly.
 
 ## [7.6.0] - 2026-02-02

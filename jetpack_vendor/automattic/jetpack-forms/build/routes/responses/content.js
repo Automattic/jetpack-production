@@ -32041,47 +32041,6 @@ function useInboxData(options = {}) {
   };
 }
 
-// src/dashboard/inbox/utils.js
-var getPath = (item) => {
-  try {
-    const url = new URL(item.entry_permalink);
-    return url.pathname;
-  } catch {
-    return "";
-  }
-};
-function updateBadge(element, count) {
-  const oldClass = [...element.classList].find((c2) => c2.startsWith("count-"));
-  if (oldClass) {
-    element.classList.replace(oldClass, `count-${count}`);
-  } else {
-    element.classList.add(`count-${count}`);
-  }
-  element.ariaHidden = count > 0 ? "false" : "true";
-  element.textContent = formatNumber2(count);
-}
-var updateMenuCounter = (count) => {
-  document.querySelectorAll(".jp-feedback-unread-counter").forEach((item) => {
-    if (item.dataset.unreadDiff) {
-      const unreadDiff = parseInt(item.dataset.unreadDiff, 10) + count;
-      updateBadge(item, unreadDiff);
-    } else {
-      updateBadge(item, count);
-    }
-  });
-};
-var updateMenuCounterOptimistically = (count) => {
-  document.querySelectorAll(".jp-feedback-unread-counter").forEach((item) => {
-    let optimisticCount = 0;
-    if (item.textContent !== "") {
-      optimisticCount = parseInt(item.textContent.replace(/\D/g, ""), 10) + count;
-    }
-    if (optimisticCount >= 0) {
-      updateBadge(item, optimisticCount);
-    }
-  });
-};
-
 // src/dashboard/router/wp-route-dashboard-search-params-provider.tsx
 var import_element72 = __toESM(require_element(), 1);
 import { useSearch, useNavigate } from "@wordpress/route";
@@ -35403,6 +35362,47 @@ var defaultLayouts = {
   [LAYOUT_TABLE2]: {}
 };
 
+// src/dashboard/inbox/utils.js
+var getPath = (item) => {
+  try {
+    const url = new URL(item.entry_permalink);
+    return url.pathname;
+  } catch {
+    return "";
+  }
+};
+function updateBadge(element, count) {
+  const oldClass = [...element.classList].find((c2) => c2.startsWith("count-"));
+  if (oldClass) {
+    element.classList.replace(oldClass, `count-${count}`);
+  } else {
+    element.classList.add(`count-${count}`);
+  }
+  element.ariaHidden = count > 0 ? "false" : "true";
+  element.textContent = formatNumber2(count);
+}
+var updateMenuCounter = (count) => {
+  document.querySelectorAll(".jp-feedback-unread-counter").forEach((item) => {
+    if (item.dataset.unreadDiff) {
+      const unreadDiff = parseInt(item.dataset.unreadDiff, 10) + count;
+      updateBadge(item, unreadDiff);
+    } else {
+      updateBadge(item, count);
+    }
+  });
+};
+var updateMenuCounterOptimistically = (count) => {
+  document.querySelectorAll(".jp-feedback-unread-counter").forEach((item) => {
+    let optimisticCount = 0;
+    if (item.textContent !== "") {
+      optimisticCount = parseInt(item.textContent.replace(/\D/g, ""), 10) + count;
+    }
+    if (optimisticCount >= 0) {
+      updateBadge(item, optimisticCount);
+    }
+  });
+};
+
 // routes/responses/actions.tsx
 var import_jsx_runtime167 = __toESM(require_jsx_runtime());
 var getCountQueryParams = (currentQuery2) => {
@@ -36280,6 +36280,14 @@ function styleUnreadValue(element, isUnread) {
   }
   return /* @__PURE__ */ (0, import_jsx_runtime168.jsx)("span", { style: { fontWeight: 600 }, children: element });
 }
+function getUrlPath(url) {
+  try {
+    const parsedUrl = new URL(url);
+    return parsedUrl.pathname;
+  } catch {
+    return null;
+  }
+}
 function StageInner() {
   const params = useParams({ from: "/responses/$view" });
   const searchParams = useSearch2({ from: "/responses/$view" });
@@ -36550,7 +36558,7 @@ function StageInner() {
           id: "source",
           label: (0, import_i18n76.__)("Source", "jetpack-forms"),
           render: ({ item }) => {
-            const source = item.entry_title || getPath(item) || (0, import_i18n76.__)("(no title)", "jetpack-forms");
+            const source = item.entry_title || getUrlPath(item.entry_permalink) || (0, import_i18n76.__)("(no title)", "jetpack-forms");
             if (item.entry_permalink) {
               return styleUnreadValue(
                 /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(import_components73.ExternalLink, { href: item.entry_permalink, children: source }),
@@ -36562,7 +36570,7 @@ function StageInner() {
           elements: (filterOptions?.source || []).map(
             (source) => ({
               value: source.id.toString(),
-              label: (0, import_html_entities5.decodeEntities)(source.title) || source.url
+              label: (0, import_html_entities5.decodeEntities)(source.title) || getUrlPath(source.url) || (0, import_i18n76.__)("(no title)", "jetpack-forms")
             })
           ),
           filterBy: { operators: ["is"] },
