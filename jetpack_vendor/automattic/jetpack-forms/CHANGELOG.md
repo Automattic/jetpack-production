@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: update response sidebar meta section visually and refactor styles.
 - Forms: Update sidebar information on wp-build dashboard.
 - Image select field: improve preview styling in response inspector.
+- Refine inspector field styles.
 - Update package dependencies.
 - Use dynamic number values for spam and trash tip in response sidebar, and add styles.
 

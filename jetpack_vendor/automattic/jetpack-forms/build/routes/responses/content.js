@@ -37434,10 +37434,10 @@ var inferFieldTypeFromLabel = (label) => {
 };
 
 // src/dashboard/components/inspector/response-fields/field-preview/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='e9d0341bc9']")) {
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='9fcc70600b']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "e9d0341bc9");
-  style.appendChild(document.createTextNode(".jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview{border-bottom:1px solid var(--jp-forms-border-color);padding-bottom:24px;padding-top:24px}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-icon{flex-shrink:0}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-content{min-width:0;word-break:break-word}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-label{color:var(--jp-gray-40,#757575);font-weight:300;line-height:24px}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-value{white-space:pre-wrap}"));
+  style.setAttribute("data-wp-hash", "9fcc70600b");
+  style.appendChild(document.createTextNode(".jp-forms__inbox-response-data{padding:0 16px;word-break:break-word}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview{border-bottom:1px solid var(--wpds-color-stroke-surface-neutral,var(--jp-forms-border-color,#e0e0e0));padding-bottom:24px;padding-top:24px}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-icon{flex-shrink:0}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-content{line-height:var(--wpds-font-line-height-sm,20px);min-width:0;word-break:break-word}.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-label,.jp-forms__inbox-response-data.is-collection-format .jp-forms__field-preview-value{margin-top:calc((24px - var(--wpds-font-line-height-sm, 20px))/2)}.jp-forms__inbox-response-data:not(.is-collection-format){display:flex;flex-direction:column;padding-bottom:24px;padding-top:24px;row-gap:24px}.jp-forms__field-preview-label{color:var(--wpds-color-fg-content-neutral-weak,#6d6d6d);font-weight:300}.jp-forms__inbox-response-data-value{white-space:pre-wrap}"));
   document.head.appendChild(style);
 }
 
@@ -37519,11 +37519,10 @@ var field_preview_default = FieldPreview;
 var import_jsx_runtime193 = __toESM(require_jsx_runtime(), 1);
 var ResponseFieldsIterator = ({
   fields,
-  onFilePreview,
-  className
+  onFilePreview
 }) => {
   const fieldsAreNewFormat = isFieldsCollection(fields);
-  const rootClass = clsx_default(className, {
+  const rootClass = clsx_default("jp-forms__inbox-response-data", {
     "is-collection-format": fieldsAreNewFormat
   });
   const renderFieldValue = (value) => {
@@ -37921,10 +37920,10 @@ function ResponseNavigation({
 }
 
 // routes/responses/response/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='76187199ce']")) {
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='8721584580']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "76187199ce");
-  style.appendChild(document.createTextNode(".jp-forms-response-header{border-bottom:1px solid var(--wpds-color-stroke-surface-neutral,#e0e0e0);padding:8px}.jp-forms-response-header-actions{gap:0!important}.jp-forms__inbox-response-data{font-size:var(--jp-forms-font-size-regular);line-height:24px;padding:0 16px}.jp-forms__inbox-response-data:not(.is-collection-format){display:flex;flex-direction:column;padding-bottom:24px;padding-top:24px;row-gap:24px}.jp-forms__inbox-response-data:not(.is-collection-format) .jp-forms__inbox-response-data-label{font-weight:600}.jp-forms__inbox-response-data:not(.is-collection-format) .jp-forms__inbox-response-data-value{white-space:pre-wrap}.jp-forms__inbox__tip-container{border-top:1px solid var(--wpds-color-stroke-surface-neutral,#e0e0e0);margin:auto 0 0;padding:16px;text-wrap:pretty}.jp-forms__inbox__tip-container .components-tip{align-items:anchor-center}"));
+  style.setAttribute("data-wp-hash", "8721584580");
+  style.appendChild(document.createTextNode(".jp-forms-response-header{border-bottom:1px solid var(--wpds-color-stroke-surface-neutral,#e0e0e0);padding:8px}.jp-forms-response-header-actions{gap:0!important}.jp-forms__inbox__tip-container{border-top:1px solid var(--wpds-color-stroke-surface-neutral,#e0e0e0);margin:auto 0 0;padding:16px;text-wrap:pretty}.jp-forms__inbox__tip-container .components-tip{align-items:anchor-center}"));
   document.head.appendChild(style);
 }
 
@@ -38058,14 +38057,7 @@ function SingleResponseView({
       )
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(response_meta_default, { response }),
-    /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__inbox-response-data", children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
-      response_fields_default,
-      {
-        fields: response.fields,
-        onFilePreview: handleFilePreview,
-        className: "jp-forms__inbox-response-data"
-      }
-    ) }),
+    /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(response_fields_default, { fields: response.fields, onFilePreview: handleFilePreview }),
     response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Tip, { children: (0, import_i18n84.sprintf)(
       /* translators: %d number of days. */
       (0, import_i18n84._n)(
