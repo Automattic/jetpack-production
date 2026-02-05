@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Improve the media selection UI in preview modal.
+- Make pre-publish confirmation opt-in by default.
 - Update package dependencies.
 
 ### Fixed
