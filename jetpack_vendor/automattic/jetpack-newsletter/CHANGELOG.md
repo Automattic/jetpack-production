@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Fix settings and categories API endpoints on WordPress.com Simple sites.
+
 ## [0.3.1] - 2026-02-02
 ### Added
 - Add a newsletter categories section to the settings screen. [#46708]
