@@ -37659,7 +37659,9 @@ var ResponseMeta = ({ response }) => {
         /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(TextWithFlag, { countryCode: response.country_code, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(import_components82.Tooltip, { text: (0, import_i18n81.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
           import_components82.ExternalLink,
           {
-            href: `https://apps.db.ripe.net/db-web-ui/query?searchtext=/${response.ip}`,
+            href: `https://apps.db.ripe.net/db-web-ui/query?searchtext=${encodeURIComponent(
+              response.ip
+            )}`,
             children: response.ip
           }
         ) }) }) })

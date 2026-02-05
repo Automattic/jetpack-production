@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Contact Form: Add support for form editing in widget editor context.
 - Contact Form: Fix loading spinner not showing on submit button.
+- Fix IP address lookup link in response inspector.
 - Forms: remove focus outline from form success message.
 - Prevent creating synced jetpack_form posts during block preview, and skip form wrapping when editing jetpack_form post type directly.
 
