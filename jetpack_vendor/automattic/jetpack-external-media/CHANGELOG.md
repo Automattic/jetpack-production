@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- External Media: pass media props to MediaSources during replace flow.
+
 ## [0.8.0] - 2026-02-02
 ### Changed
 - Update package dependencies. [#46854]
