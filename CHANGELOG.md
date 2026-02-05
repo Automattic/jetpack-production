@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin dashboard: add new "Reader" section.
 - AI: removed Chrome AI built-in API experiment code.
 - Janitorial: Clean up to-test.md.
+- Moving IDC stats from Jetpack plugin to connection package.
 - Update package dependencies.
 - VideoPress: Improve attachment details display with proper i18n support and WordPress core styling.
 
