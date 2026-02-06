@@ -4,10 +4,16 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __require = /* @__PURE__ */ ((x2) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x2, {
+  get: (a2, b2) => (typeof require !== "undefined" ? require : a2)[b2]
+}) : x2)(function(x2) {
+  if (typeof require !== "undefined") return require.apply(this, arguments);
+  throw Error('Dynamic require of "' + x2 + '" is not supported');
+});
 var __esm = (fn, res) => function __init() {
   return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
 };
-var __commonJS = (cb, mod) => function __require() {
+var __commonJS = (cb, mod) => function __require2() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 var __export = (target, all) => {
@@ -186,11 +192,11 @@ var require_common = __commonJS({
         let enableOverride = null;
         let namespacesCache;
         let enabledCache;
-        function debug5(...args) {
-          if (!debug5.enabled) {
+        function debug6(...args) {
+          if (!debug6.enabled) {
             return;
           }
-          const self2 = debug5;
+          const self2 = debug6;
           const curr = Number(/* @__PURE__ */ new Date());
           const ms = curr - (prevTime || curr);
           self2.diff = ms;
@@ -220,12 +226,12 @@ var require_common = __commonJS({
           const logFn = self2.log || createDebug.log;
           logFn.apply(self2, args);
         }
-        debug5.namespace = namespace;
-        debug5.useColors = createDebug.useColors();
-        debug5.color = createDebug.selectColor(namespace);
-        debug5.extend = extend;
-        debug5.destroy = createDebug.destroy;
-        Object.defineProperty(debug5, "enabled", {
+        debug6.namespace = namespace;
+        debug6.useColors = createDebug.useColors();
+        debug6.color = createDebug.selectColor(namespace);
+        debug6.extend = extend;
+        debug6.destroy = createDebug.destroy;
+        Object.defineProperty(debug6, "enabled", {
           enumerable: true,
           configurable: false,
           get: () => {
@@ -243,9 +249,9 @@ var require_common = __commonJS({
           }
         });
         if (typeof createDebug.init === "function") {
-          createDebug.init(debug5);
+          createDebug.init(debug6);
         }
-        return debug5;
+        return debug6;
       }
       function extend(namespace, delimiter) {
         const newDebug = createDebug(this.namespace + (typeof delimiter === "undefined" ? ":" : delimiter) + namespace);
@@ -583,7 +589,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
             "The result of getSnapshot should be cached to avoid an infinite loop"
           ), didWarnUncachedGetSnapshot = true);
         }
-        cachedValue = useState48({
+        cachedValue = useState52({
           inst: { value, getSnapshot }
         });
         var inst = cachedValue[0].inst, forceUpdate = cachedValue[1];
@@ -595,7 +601,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
           },
           [subscribe2, value, getSnapshot]
         );
-        useEffect35(
+        useEffect39(
           function() {
             checkIfSnapshotChanged(inst) && forceUpdate({ inst });
             return subscribe2(function() {
@@ -621,7 +627,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return getSnapshot();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React37 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState48 = React37.useState, useEffect35 = React37.useEffect, useLayoutEffect4 = React37.useLayoutEffect, useDebugValue = React37.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      var React37 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState52 = React37.useState, useEffect39 = React37.useEffect, useLayoutEffect4 = React37.useLayoutEffect, useDebugValue = React37.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
       exports.useSyncExternalStore = void 0 !== React37.useSyncExternalStore ? React37.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
@@ -1618,9 +1624,9 @@ var require_constants = __commonJS({
 var require_debug = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/internal/debug.js"(exports, module) {
     "use strict";
-    var debug5 = typeof process === "object" && process.env && process.env.NODE_DEBUG && /\bsemver\b/i.test(process.env.NODE_DEBUG) ? (...args) => console.error("SEMVER", ...args) : () => {
+    var debug6 = typeof process === "object" && process.env && process.env.NODE_DEBUG && /\bsemver\b/i.test(process.env.NODE_DEBUG) ? (...args) => console.error("SEMVER", ...args) : () => {
     };
-    module.exports = debug5;
+    module.exports = debug6;
   }
 });
 
@@ -1633,7 +1639,7 @@ var require_re = __commonJS({
       MAX_SAFE_BUILD_LENGTH,
       MAX_LENGTH
     } = require_constants();
-    var debug5 = require_debug();
+    var debug6 = require_debug();
     exports = module.exports = {};
     var re = exports.re = [];
     var safeRe = exports.safeRe = [];
@@ -1656,7 +1662,7 @@ var require_re = __commonJS({
     var createToken = (name, value, isGlobal) => {
       const safe = makeSafeRegex(value);
       const index = R++;
-      debug5(name, index, value);
+      debug6(name, index, value);
       t2[name] = index;
       src[index] = value;
       safeSrc[index] = safe;
@@ -1760,7 +1766,7 @@ var require_identifiers = __commonJS({
 var require_semver = __commonJS({
   "../../../node_modules/.pnpm/semver@7.7.3/node_modules/semver/classes/semver.js"(exports, module) {
     "use strict";
-    var debug5 = require_debug();
+    var debug6 = require_debug();
     var { MAX_LENGTH, MAX_SAFE_INTEGER: MAX_SAFE_INTEGER2 } = require_constants();
     var { safeRe: re, t: t2 } = require_re();
     var parseOptions = require_parse_options();
@@ -1782,7 +1788,7 @@ var require_semver = __commonJS({
             `version is longer than ${MAX_LENGTH} characters`
           );
         }
-        debug5("SemVer", version3, options);
+        debug6("SemVer", version3, options);
         this.options = options;
         this.loose = !!options.loose;
         this.includePrerelease = !!options.includePrerelease;
@@ -1830,7 +1836,7 @@ var require_semver = __commonJS({
         return this.version;
       }
       compare(other) {
-        debug5("SemVer.compare", this.version, this.options, other);
+        debug6("SemVer.compare", this.version, this.options, other);
         if (!(other instanceof _SemVer)) {
           if (typeof other === "string" && other === this.version) {
             return 0;
@@ -1881,7 +1887,7 @@ var require_semver = __commonJS({
         do {
           const a2 = this.prerelease[i2];
           const b2 = other.prerelease[i2];
-          debug5("prerelease compare", i2, a2, b2);
+          debug6("prerelease compare", i2, a2, b2);
           if (a2 === void 0 && b2 === void 0) {
             return 0;
           } else if (b2 === void 0) {
@@ -1903,7 +1909,7 @@ var require_semver = __commonJS({
         do {
           const a2 = this.build[i2];
           const b2 = other.build[i2];
-          debug5("build compare", i2, a2, b2);
+          debug6("build compare", i2, a2, b2);
           if (a2 === void 0 && b2 === void 0) {
             return 0;
           } else if (b2 === void 0) {
@@ -2531,21 +2537,21 @@ var require_range = __commonJS({
         const loose = this.options.loose;
         const hr = loose ? re[t2.HYPHENRANGELOOSE] : re[t2.HYPHENRANGE];
         range = range.replace(hr, hyphenReplace(this.options.includePrerelease));
-        debug5("hyphen replace", range);
+        debug6("hyphen replace", range);
         range = range.replace(re[t2.COMPARATORTRIM], comparatorTrimReplace);
-        debug5("comparator trim", range);
+        debug6("comparator trim", range);
         range = range.replace(re[t2.TILDETRIM], tildeTrimReplace);
-        debug5("tilde trim", range);
+        debug6("tilde trim", range);
         range = range.replace(re[t2.CARETTRIM], caretTrimReplace);
-        debug5("caret trim", range);
+        debug6("caret trim", range);
         let rangeList = range.split(" ").map((comp) => parseComparator(comp, this.options)).join(" ").split(/\s+/).map((comp) => replaceGTE0(comp, this.options));
         if (loose) {
           rangeList = rangeList.filter((comp) => {
-            debug5("loose invalid filter", comp, this.options);
+            debug6("loose invalid filter", comp, this.options);
             return !!comp.match(re[t2.COMPARATORLOOSE]);
           });
         }
-        debug5("range list", rangeList);
+        debug6("range list", rangeList);
         const rangeMap = /* @__PURE__ */ new Map();
         const comparators = rangeList.map((comp) => new Comparator(comp, this.options));
         for (const comp of comparators) {
@@ -2600,7 +2606,7 @@ var require_range = __commonJS({
     var cache = new LRU();
     var parseOptions = require_parse_options();
     var Comparator = require_comparator();
-    var debug5 = require_debug();
+    var debug6 = require_debug();
     var SemVer = require_semver();
     var {
       safeRe: re,
@@ -2626,15 +2632,15 @@ var require_range = __commonJS({
     };
     var parseComparator = (comp, options) => {
       comp = comp.replace(re[t2.BUILD], "");
-      debug5("comp", comp, options);
+      debug6("comp", comp, options);
       comp = replaceCarets(comp, options);
-      debug5("caret", comp);
+      debug6("caret", comp);
       comp = replaceTildes(comp, options);
-      debug5("tildes", comp);
+      debug6("tildes", comp);
       comp = replaceXRanges(comp, options);
-      debug5("xrange", comp);
+      debug6("xrange", comp);
       comp = replaceStars(comp, options);
-      debug5("stars", comp);
+      debug6("stars", comp);
       return comp;
     };
     var isX = (id) => !id || id.toLowerCase() === "x" || id === "*";
@@ -2644,7 +2650,7 @@ var require_range = __commonJS({
     var replaceTilde = (comp, options) => {
       const r3 = options.loose ? re[t2.TILDELOOSE] : re[t2.TILDE];
       return comp.replace(r3, (_, M2, m2, p2, pr) => {
-        debug5("tilde", comp, _, M2, m2, p2, pr);
+        debug6("tilde", comp, _, M2, m2, p2, pr);
         let ret;
         if (isX(M2)) {
           ret = "";
@@ -2653,12 +2659,12 @@ var require_range = __commonJS({
         } else if (isX(p2)) {
           ret = `>=${M2}.${m2}.0 <${M2}.${+m2 + 1}.0-0`;
         } else if (pr) {
-          debug5("replaceTilde pr", pr);
+          debug6("replaceTilde pr", pr);
           ret = `>=${M2}.${m2}.${p2}-${pr} <${M2}.${+m2 + 1}.0-0`;
         } else {
           ret = `>=${M2}.${m2}.${p2} <${M2}.${+m2 + 1}.0-0`;
         }
-        debug5("tilde return", ret);
+        debug6("tilde return", ret);
         return ret;
       });
     };
@@ -2666,11 +2672,11 @@ var require_range = __commonJS({
       return comp.trim().split(/\s+/).map((c2) => replaceCaret(c2, options)).join(" ");
     };
     var replaceCaret = (comp, options) => {
-      debug5("caret", comp, options);
+      debug6("caret", comp, options);
       const r3 = options.loose ? re[t2.CARETLOOSE] : re[t2.CARET];
       const z = options.includePrerelease ? "-0" : "";
       return comp.replace(r3, (_, M2, m2, p2, pr) => {
-        debug5("caret", comp, _, M2, m2, p2, pr);
+        debug6("caret", comp, _, M2, m2, p2, pr);
         let ret;
         if (isX(M2)) {
           ret = "";
@@ -2683,7 +2689,7 @@ var require_range = __commonJS({
             ret = `>=${M2}.${m2}.0${z} <${+M2 + 1}.0.0-0`;
           }
         } else if (pr) {
-          debug5("replaceCaret pr", pr);
+          debug6("replaceCaret pr", pr);
           if (M2 === "0") {
             if (m2 === "0") {
               ret = `>=${M2}.${m2}.${p2}-${pr} <${M2}.${m2}.${+p2 + 1}-0`;
@@ -2694,7 +2700,7 @@ var require_range = __commonJS({
             ret = `>=${M2}.${m2}.${p2}-${pr} <${+M2 + 1}.0.0-0`;
           }
         } else {
-          debug5("no pr");
+          debug6("no pr");
           if (M2 === "0") {
             if (m2 === "0") {
               ret = `>=${M2}.${m2}.${p2}${z} <${M2}.${m2}.${+p2 + 1}-0`;
@@ -2705,19 +2711,19 @@ var require_range = __commonJS({
             ret = `>=${M2}.${m2}.${p2} <${+M2 + 1}.0.0-0`;
           }
         }
-        debug5("caret return", ret);
+        debug6("caret return", ret);
         return ret;
       });
     };
     var replaceXRanges = (comp, options) => {
-      debug5("replaceXRanges", comp, options);
+      debug6("replaceXRanges", comp, options);
       return comp.split(/\s+/).map((c2) => replaceXRange(c2, options)).join(" ");
     };
     var replaceXRange = (comp, options) => {
       comp = comp.trim();
       const r3 = options.loose ? re[t2.XRANGELOOSE] : re[t2.XRANGE];
       return comp.replace(r3, (ret, gtlt, M2, m2, p2, pr) => {
-        debug5("xRange", comp, ret, gtlt, M2, m2, p2, pr);
+        debug6("xRange", comp, ret, gtlt, M2, m2, p2, pr);
         const xM = isX(M2);
         const xm = xM || isX(m2);
         const xp = xm || isX(p2);
@@ -2764,16 +2770,16 @@ var require_range = __commonJS({
         } else if (xp) {
           ret = `>=${M2}.${m2}.0${pr} <${M2}.${+m2 + 1}.0-0`;
         }
-        debug5("xRange return", ret);
+        debug6("xRange return", ret);
         return ret;
       });
     };
     var replaceStars = (comp, options) => {
-      debug5("replaceStars", comp, options);
+      debug6("replaceStars", comp, options);
       return comp.trim().replace(re[t2.STAR], "");
     };
     var replaceGTE0 = (comp, options) => {
-      debug5("replaceGTE0", comp, options);
+      debug6("replaceGTE0", comp, options);
       return comp.trim().replace(re[options.includePrerelease ? t2.GTE0PRE : t2.GTE0], "");
     };
     var hyphenReplace = (incPr) => ($0, from, fM, fm, fp, fpr, fb, to, tM, tm, tp, tpr) => {
@@ -2811,7 +2817,7 @@ var require_range = __commonJS({
       }
       if (version3.prerelease.length && !options.includePrerelease) {
         for (let i2 = 0; i2 < set2.length; i2++) {
-          debug5(set2[i2].semver);
+          debug6(set2[i2].semver);
           if (set2[i2].semver === Comparator.ANY) {
             continue;
           }
@@ -2848,7 +2854,7 @@ var require_comparator = __commonJS({
           }
         }
         comp = comp.trim().split(/\s+/).join(" ");
-        debug5("comparator", comp, options);
+        debug6("comparator", comp, options);
         this.options = options;
         this.loose = !!options.loose;
         this.parse(comp);
@@ -2857,7 +2863,7 @@ var require_comparator = __commonJS({
         } else {
           this.value = this.operator + this.semver.version;
         }
-        debug5("comp", this);
+        debug6("comp", this);
       }
       parse(comp) {
         const r3 = this.options.loose ? re[t2.COMPARATORLOOSE] : re[t2.COMPARATOR];
@@ -2879,7 +2885,7 @@ var require_comparator = __commonJS({
         return this.value;
       }
       test(version3) {
-        debug5("Comparator.test", version3, this.options.loose);
+        debug6("Comparator.test", version3, this.options.loose);
         if (this.semver === ANY || version3 === ANY) {
           return true;
         }
@@ -2936,7 +2942,7 @@ var require_comparator = __commonJS({
     var parseOptions = require_parse_options();
     var { safeRe: re, t: t2 } = require_re();
     var cmp = require_cmp();
-    var debug5 = require_debug();
+    var debug6 = require_debug();
     var SemVer = require_semver();
     var Range = require_range();
   }
@@ -4100,6 +4106,55 @@ var require_sha256 = __commonJS({
 var require_core_data = __commonJS({
   "package-external:@wordpress/core-data"(exports, module) {
     module.exports = window.wp.coreData;
+  }
+});
+
+// ../../js-packages/config/src/index.js
+var require_src = __commonJS({
+  "../../js-packages/config/src/index.js"(exports, module) {
+    var jetpackConfig = {};
+    try {
+      jetpackConfig = __require("jetpackConfig");
+    } catch {
+      console.error(
+        "jetpackConfig is missing in your webpack config file. See @automattic/jetpack-config"
+      );
+      jetpackConfig = { missingConfig: true };
+    }
+    var jetpackConfigHas2 = (key) => {
+      return Object.hasOwn(jetpackConfig, key);
+    };
+    var jetpackConfigGet2 = (key) => {
+      if (!jetpackConfigHas2(key)) {
+        throw 'This app requires the "' + key + '" Jetpack Config to be defined in your webpack configuration file. See details in @automattic/jetpack-config package docs.';
+      }
+      return jetpackConfig[key];
+    };
+    module.exports = {
+      jetpackConfigHas: jetpackConfigHas2,
+      jetpackConfigGet: jetpackConfigGet2
+    };
+  }
+});
+
+// package-external:@wordpress/plugins
+var require_plugins = __commonJS({
+  "package-external:@wordpress/plugins"(exports, module) {
+    module.exports = window.wp.plugins;
+  }
+});
+
+// package-external:@wordpress/hooks
+var require_hooks = __commonJS({
+  "package-external:@wordpress/hooks"(exports, module) {
+    module.exports = window.wp.hooks;
+  }
+});
+
+// package-external:@wordpress/dom-ready
+var require_dom_ready = __commonJS({
+  "package-external:@wordpress/dom-ready"(exports, module) {
+    module.exports = window.wp.domReady;
   }
 });
 
@@ -14015,7 +14070,7 @@ function Header({
   badges,
   title,
   subTitle,
-  actions,
+  actions: actions2,
   showSidebarToggle = true
 }) {
   return /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(import_components3.__experimentalVStack, { className: "admin-ui-page__header", as: "header", children: [
@@ -14038,7 +14093,7 @@ function Header({
           style: { width: "auto", flexShrink: 0 },
           spacing: 2,
           className: "admin-ui-page__header-actions",
-          children: actions
+          children: actions2
         }
       )
     ] }),
@@ -14055,7 +14110,7 @@ function Page({
   subTitle,
   children,
   className,
-  actions,
+  actions: actions2,
   hasPadding = false,
   showSidebarToggle = true
 }) {
@@ -14068,7 +14123,7 @@ function Page({
         badges,
         title,
         subTitle,
-        actions,
+        actions: actions2,
         showSidebarToggle
       }
     ),
@@ -14079,8 +14134,8 @@ Page.SidebarToggleFill = SidebarToggleFill;
 var page_default = Page;
 
 // routes/responses/stage.tsx
-var import_components73 = __toESM(require_components());
-var import_data18 = __toESM(require_data());
+var import_components76 = __toESM(require_components());
+var import_data31 = __toESM(require_data());
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
 var import_element56 = __toESM(require_element(), 1);
@@ -14714,13 +14769,13 @@ function ActionModal({
   );
 }
 function ActionsMenuGroup({
-  actions,
+  actions: actions2,
   item,
   registry,
   setActiveModalAction
 }) {
   const { primaryActions, regularActions } = (0, import_element6.useMemo)(() => {
-    return actions.reduce(
+    return actions2.reduce(
       (acc, action) => {
         (action.isPrimary ? acc.primaryActions : acc.regularActions).push(action);
         return acc;
@@ -14730,7 +14785,7 @@ function ActionsMenuGroup({
         regularActions: []
       }
     );
-  }, [actions]);
+  }, [actions2]);
   const renderActionGroup = (actionList) => actionList.map((action) => /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
     MenuItemTrigger,
     {
@@ -14754,12 +14809,12 @@ function ActionsMenuGroup({
 }
 function ItemActions({
   item,
-  actions,
+  actions: actions2,
   isCompact
 }) {
   const registry = (0, import_data.useRegistry)();
   const { primaryActions, eligibleActions } = (0, import_element6.useMemo)(() => {
-    const _eligibleActions = actions.filter(
+    const _eligibleActions = actions2.filter(
       (action) => !action.isEligible || action.isEligible(item)
     );
     const _primaryActions = _eligibleActions.filter(
@@ -14769,7 +14824,7 @@ function ItemActions({
       primaryActions: _primaryActions,
       eligibleActions: _eligibleActions
     };
-  }, [actions, item]);
+  }, [actions2, item]);
   const isMobileViewport = (0, import_compose.useViewportMatch)("medium", "<");
   if (isCompact) {
     return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
@@ -14817,7 +14872,7 @@ function ItemActions({
 }
 function CompactItemActions({
   item,
-  actions,
+  actions: actions2,
   isSmall,
   registry
 }) {
@@ -14836,7 +14891,7 @@ function CompactItemActions({
               icon: more_vertical_default,
               label: (0, import_i18n5.__)("Actions"),
               accessibleWhenDisabled: true,
-              disabled: !actions.length,
+              disabled: !actions2.length,
               className: "dataviews-all-actions-button"
             }
           )
@@ -14845,7 +14900,7 @@ function CompactItemActions({
       /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(Menu.Popover, { children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
         ActionsMenuGroup,
         {
-          actions,
+          actions: actions2,
           item,
           registry,
           setActiveModalAction
@@ -14864,7 +14919,7 @@ function CompactItemActions({
 }
 function PrimaryActions({
   item,
-  actions,
+  actions: actions2,
   registry,
   buttonVariant
 }) {
@@ -14873,11 +14928,11 @@ function PrimaryActions({
   if (isMobileViewport) {
     return null;
   }
-  if (!Array.isArray(actions) || actions.length === 0) {
+  if (!Array.isArray(actions2) || actions2.length === 0) {
     return null;
   }
   return /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(import_jsx_runtime51.Fragment, { children: [
-    actions.map((action) => /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+    actions2.map((action) => /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
       ButtonTrigger,
       {
         action,
@@ -14963,36 +15018,36 @@ function ActionWithModal({
     )
   ] });
 }
-function useHasAPossibleBulkAction(actions, item) {
+function useHasAPossibleBulkAction(actions2, item) {
   return (0, import_element7.useMemo)(() => {
-    return actions.some((action) => {
+    return actions2.some((action) => {
       return action.supportsBulk && (!action.isEligible || action.isEligible(item));
     });
-  }, [actions, item]);
+  }, [actions2, item]);
 }
-function useSomeItemHasAPossibleBulkAction(actions, data) {
+function useSomeItemHasAPossibleBulkAction(actions2, data) {
   return (0, import_element7.useMemo)(() => {
     return data.some((item) => {
-      return actions.some((action) => {
+      return actions2.some((action) => {
         return action.supportsBulk && (!action.isEligible || action.isEligible(item));
       });
     });
-  }, [actions, data]);
+  }, [actions2, data]);
 }
 function BulkSelectionCheckbox({
   selection,
   onChangeSelection,
   data,
-  actions,
+  actions: actions2,
   getItemId: getItemId2
 }) {
   const selectableItems = (0, import_element7.useMemo)(() => {
     return data.filter((item) => {
-      return actions.some(
+      return actions2.some(
         (action) => action.supportsBulk && (!action.isEligible || action.isEligible(item))
       );
     });
-  }, [data, actions]);
+  }, [data, actions2]);
   const selectedItems = data.filter(
     (item) => selection.includes(getItemId2(item)) && selectableItems.includes(item)
   );
@@ -15091,7 +15146,7 @@ function ActionButton({
     action.id
   );
 }
-function renderFooterContent(data, actions, getItemId2, selection, actionsToShow, selectedItems, actionInProgress, setActionInProgress, onChangeSelection, paginationInfo) {
+function renderFooterContent(data, actions2, getItemId2, selection, actionsToShow, selectedItems, actionInProgress, setActionInProgress, onChangeSelection, paginationInfo) {
   const message2 = getFooterMessage(
     selection.length,
     data.length,
@@ -15111,7 +15166,7 @@ function renderFooterContent(data, actions, getItemId2, selection, actionsToShow
             selection,
             onChangeSelection,
             data,
-            actions,
+            actions: actions2,
             getItemId: getItemId2
           }
         ),
@@ -15159,7 +15214,7 @@ function renderFooterContent(data, actions, getItemId2, selection, actionsToShow
 }
 function FooterContent({
   selection,
-  actions,
+  actions: actions2,
   onChangeSelection,
   data,
   getItemId: getItemId2,
@@ -15171,8 +15226,8 @@ function FooterContent({
   const footerContentRef = (0, import_element7.useRef)(null);
   const isMobile = (0, import_compose2.useViewportMatch)("medium", "<");
   const bulkActions = (0, import_element7.useMemo)(
-    () => actions.filter((action) => action.supportsBulk),
-    [actions]
+    () => actions2.filter((action) => action.supportsBulk),
+    [actions2]
   );
   const selectableItems = (0, import_element7.useMemo)(() => {
     return data.filter((item) => {
@@ -15187,12 +15242,12 @@ function FooterContent({
     );
   }, [selection, data, getItemId2, selectableItems]);
   const actionsToShow = (0, import_element7.useMemo)(
-    () => actions.filter((action) => {
+    () => actions2.filter((action) => {
       return action.supportsBulk && (!isMobile || action.icon) && selectedItems.some(
         (item) => !action.isEligible || action.isEligible(item)
       );
     }),
-    [actions, selectedItems, isMobile]
+    [actions2, selectedItems, isMobile]
   );
   if (!actionInProgress) {
     if (footerContentRef.current) {
@@ -15200,7 +15255,7 @@ function FooterContent({
     }
     return renderFooterContent(
       data,
-      actions,
+      actions2,
       getItemId2,
       selection,
       actionsToShow,
@@ -15213,7 +15268,7 @@ function FooterContent({
   } else if (!footerContentRef.current) {
     footerContentRef.current = renderFooterContent(
       data,
-      actions,
+      actions2,
       getItemId2,
       selection,
       actionsToShow,
@@ -15230,7 +15285,7 @@ function BulkActionsFooter() {
   const {
     data,
     selection,
-    actions = EMPTY_ARRAY2,
+    actions: actions2 = EMPTY_ARRAY2,
     onChangeSelection,
     getItemId: getItemId2,
     paginationInfo
@@ -15241,7 +15296,7 @@ function BulkActionsFooter() {
       selection,
       onChangeSelection,
       data,
-      actions,
+      actions: actions2,
       getItemId: getItemId2,
       paginationInfo
     }
@@ -15840,7 +15895,7 @@ function TableRow({
   hasBulkActions,
   item,
   level,
-  actions,
+  actions: actions2,
   fields,
   id,
   view,
@@ -15857,7 +15912,7 @@ function TableRow({
   posinset
 }) {
   const { paginationInfo } = (0, import_element12.useContext)(dataviews_context_default);
-  const hasPossibleBulkAction = useHasAPossibleBulkAction(actions, item);
+  const hasPossibleBulkAction = useHasAPossibleBulkAction(actions2, item);
   const isSelected2 = hasPossibleBulkAction && selection.includes(id);
   const {
     showTitle = true,
@@ -15946,7 +16001,7 @@ function TableRow({
             column
           );
         }),
-        !!actions?.length && // Disable reason: we are not making the element interactive,
+        !!actions2?.length && // Disable reason: we are not making the element interactive,
         // but preventing any click events from bubbling up to the
         // table row. This allows us to add a click handler to the row
         // itself (to toggle row selection) without erroneously
@@ -15960,7 +16015,7 @@ function TableRow({
               "dataviews-view-table__actions-column--stuck": isActionsColumnSticky
             }),
             onClick: (e2) => e2.stopPropagation(),
-            children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(ItemActions, { item, actions })
+            children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(ItemActions, { item, actions: actions2 })
           }
         )
       ]
@@ -15968,7 +16023,7 @@ function TableRow({
   );
 }
 function ViewTable({
-  actions,
+  actions: actions2,
   data,
   fields,
   getItemId: getItemId2,
@@ -15989,7 +16044,7 @@ function ViewTable({
   const headerMenuRefs = (0, import_element12.useRef)(/* @__PURE__ */ new Map());
   const headerMenuToFocusRef = (0, import_element12.useRef)();
   const [nextHeaderMenuToFocus, setNextHeaderMenuToFocus] = (0, import_element12.useState)();
-  const hasBulkActions = useSomeItemHasAPossibleBulkAction(actions, data);
+  const hasBulkActions = useSomeItemHasAPossibleBulkAction(actions2, data);
   const [contextMenuAnchor, setContextMenuAnchor] = (0, import_element12.useState)(null);
   (0, import_element12.useEffect)(() => {
     if (headerMenuToFocusRef.current) {
@@ -16000,7 +16055,7 @@ function ViewTable({
   const tableNoticeId = (0, import_element12.useId)();
   const isHorizontalScrollEnd = useIsHorizontalScrollEnd({
     scrollContainerRef: containerRef,
-    enabled: !!actions?.length
+    enabled: !!actions2?.length
   });
   if (nextHeaderMenuToFocus) {
     headerMenuToFocusRef.current = nextHeaderMenuToFocus;
@@ -16084,7 +16139,7 @@ function ViewTable({
               },
               `col-${column}`
             )),
-            !!actions?.length && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("col", { className: "dataviews-view-table__col-actions" })
+            !!actions2?.length && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("col", { className: "dataviews-view-table__col-actions" })
           ] }),
           contextMenuAnchor && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
             import_components9.Popover,
@@ -16108,7 +16163,7 @@ function ViewTable({
                     selection,
                     onChangeSelection,
                     data,
-                    actions,
+                    actions: actions2,
                     getItemId: getItemId2
                   }
                 )
@@ -16165,7 +16220,7 @@ function ViewTable({
                 column
               );
             }),
-            !!actions?.length && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+            !!actions2?.length && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
               "th",
               {
                 className: clsx_default(
@@ -16184,7 +16239,7 @@ function ViewTable({
               /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("tr", { className: "dataviews-view-table__group-header-row", children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
                 "td",
                 {
-                  colSpan: columns.length + (hasPrimaryColumn ? 1 : 0) + (hasBulkActions ? 1 : 0) + (actions?.length ? 1 : 0),
+                  colSpan: columns.length + (hasPrimaryColumn ? 1 : 0) + (hasBulkActions ? 1 : 0) + (actions2?.length ? 1 : 0),
                   className: "dataviews-view-table__group-header-cell",
                   children: view.groupBy?.showLabel === false ? groupName : (0, import_i18n11.sprintf)(
                     // translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022".
@@ -16200,7 +16255,7 @@ function ViewTable({
                   item,
                   level: view.showLevels && typeof getItemLevel === "function" ? getItemLevel(item) : void 0,
                   hasBulkActions,
-                  actions,
+                  actions: actions2,
                   fields,
                   id: getItemId2(item) || index.toString(),
                   view,
@@ -16224,7 +16279,7 @@ function ViewTable({
               item,
               level: view.showLevels && typeof getItemLevel === "function" ? getItemLevel(item) : void 0,
               hasBulkActions,
-              actions,
+              actions: actions2,
               fields,
               id: getItemId2(item) || index.toString(),
               view,
@@ -16342,7 +16397,7 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
   renderItemLink,
   getItemId: getItemId2,
   item,
-  actions,
+  actions: actions2,
   mediaField,
   titleField,
   descriptionField,
@@ -16353,7 +16408,7 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
   ...props
 }, ref) {
   const { showTitle = true, showMedia = true, showDescription = true } = view;
-  const hasBulkAction = useHasAPossibleBulkAction(actions, item);
+  const hasBulkAction = useHasAPossibleBulkAction(actions2, item);
   const id = getItemId2(item);
   const instanceId = (0, import_compose4.useInstanceId)(GridItem2);
   const isSelected2 = selection.includes(id);
@@ -16434,7 +16489,7 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
             disabled: !hasBulkAction
           }
         ),
-        !showTitle && shouldRenderMedia && !!actions?.length && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", { className: "dataviews-view-grid__media-actions", children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(ItemActions, { item, actions, isCompact: true }) }),
+        !showTitle && shouldRenderMedia && !!actions2?.length && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", { className: "dataviews-view-grid__media-actions", children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(ItemActions, { item, actions: actions2, isCompact: true }) }),
         showTitle && /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(
           Stack,
           {
@@ -16454,11 +16509,11 @@ var GridItem = (0, import_element14.forwardRef)(function GridItem2({
                   children: renderedTitleField
                 }
               ),
-              !!actions?.length && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+              !!actions2?.length && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
                 ItemActions,
                 {
                   item,
-                  actions,
+                  actions: actions2,
                   isCompact: true
                 }
               )
@@ -16557,11 +16612,11 @@ function CompositeGrid({
   isItemClickable,
   renderItemLink,
   getItemId: getItemId2,
-  actions
+  actions: actions2
 }) {
   const { paginationInfo, resizeObserverRef } = (0, import_element14.useContext)(dataviews_context_default);
   const gridColumns = useGridColumns();
-  const hasBulkActions = useSomeItemHasAPossibleBulkAction(actions, data);
+  const hasBulkActions = useSomeItemHasAPossibleBulkAction(actions2, data);
   const titleField = fields.find(
     (field) => field.id === view?.titleField
   );
@@ -16634,7 +16689,7 @@ function CompositeGrid({
                     renderItemLink,
                     getItemId: getItemId2,
                     item,
-                    actions,
+                    actions: actions2,
                     mediaField,
                     titleField,
                     descriptionField,
@@ -16660,7 +16715,7 @@ function CompositeGrid({
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/grid/index.mjs
 var import_jsx_runtime60 = __toESM(require_jsx_runtime(), 1);
 function ViewGrid({
-  actions,
+  actions: actions2,
   data,
   fields,
   getItemId: getItemId2,
@@ -16689,7 +16744,7 @@ function ViewGrid({
     isItemClickable,
     renderItemLink,
     getItemId: getItemId2,
-    actions
+    actions: actions2
   };
   return /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)(import_jsx_runtime60.Fragment, {
     // Render multiple groups.
@@ -16819,7 +16874,7 @@ function PrimaryActionGridCell({
 }
 function ListItem({
   view,
-  actions,
+  actions: actions2,
   idPrefix,
   isSelected: isSelected2,
   item,
@@ -16860,7 +16915,7 @@ function ListItem({
     }
   }, [isSelected2]);
   const { primaryAction, eligibleActions } = (0, import_element15.useMemo)(() => {
-    const _eligibleActions = actions.filter(
+    const _eligibleActions = actions2.filter(
       (action) => !action.isEligible || action.isEligible(item)
     );
     const _primaryActions = _eligibleActions.filter(
@@ -16870,8 +16925,8 @@ function ListItem({
       primaryAction: _primaryActions[0],
       eligibleActions: _eligibleActions
     };
-  }, [actions, item]);
-  const hasOnlyOnePrimaryAction = primaryAction && actions.length === 1;
+  }, [actions2, item]);
+  const hasOnlyOnePrimaryAction = primaryAction && actions2.length === 1;
   const renderedMediaField = showMedia && mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("div", { className: "dataviews-view-list__media-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
     mediaField.render,
     {
@@ -16914,7 +16969,7 @@ function ListItem({
                         icon: more_vertical_default,
                         label: (0, import_i18n15.__)("Actions"),
                         accessibleWhenDisabled: true,
-                        disabled: !actions.length,
+                        disabled: !actions2.length,
                         onKeyDown: onDropdownTriggerKeyDown
                       }
                     )
@@ -17066,7 +17121,7 @@ function isDefined2(item) {
 }
 function ViewList(props) {
   const {
-    actions,
+    actions: actions2,
     data,
     fields,
     getItemId: getItemId2,
@@ -17212,7 +17267,7 @@ function ViewList(props) {
                         {
                           view,
                           idPrefix: id,
-                          actions,
+                          actions: actions2,
                           item,
                           isSelected: item === selectedItem,
                           onSelect,
@@ -17256,7 +17311,7 @@ function ViewList(props) {
             {
               view,
               idPrefix: id,
-              actions,
+              actions: actions2,
               item,
               isSelected: item === selectedItem,
               onSelect,
@@ -17326,7 +17381,7 @@ var import_jsx_runtime63 = __toESM(require_jsx_runtime(), 1);
 function ActivityItem(props) {
   const {
     view,
-    actions,
+    actions: actions2,
     item,
     titleField,
     mediaField,
@@ -17347,7 +17402,7 @@ function ActivityItem(props) {
   const registry = (0, import_data4.useRegistry)();
   const { paginationInfo } = (0, import_element17.useContext)(dataviews_context_default);
   const { primaryActions, eligibleActions } = (0, import_element17.useMemo)(() => {
-    const _eligibleActions = actions.filter(
+    const _eligibleActions = actions2.filter(
       (action) => !action.isEligible || action.isEligible(item)
     );
     const _primaryActions = _eligibleActions.filter(
@@ -17357,7 +17412,7 @@ function ActivityItem(props) {
       primaryActions: _primaryActions,
       eligibleActions: _eligibleActions
     };
-  }, [actions, item]);
+  }, [actions2, item]);
   const isMobileViewport = (0, import_compose6.useViewportMatch)("medium", "<");
   const density = view.layout?.density ?? "balanced";
   const mediaContent = showMedia && density !== "compact" && mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
@@ -17704,10 +17759,10 @@ var dataviews_pagination_default = (0, import_element18.memo)(DataViewsPaginatio
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-picker-footer/index.mjs
 var import_jsx_runtime66 = __toESM(require_jsx_runtime(), 1);
-function useIsMultiselectPicker(actions) {
+function useIsMultiselectPicker(actions2) {
   return (0, import_element19.useMemo)(() => {
-    return actions?.every((action) => action.supportsBulk);
-  }, [actions]);
+    return actions2?.every((action) => action.supportsBulk);
+  }, [actions2]);
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/grid-items.mjs
@@ -17922,7 +17977,7 @@ function GridGroup({
   );
 }
 function ViewPickerGrid({
-  actions,
+  actions: actions2,
   data,
   fields,
   getItemId: getItemId2,
@@ -17958,7 +18013,7 @@ function ViewPickerGrid({
   );
   const hasData = !!data?.length;
   const usedPreviewSize = view.layout?.previewSize;
-  const isMultiselect = useIsMultiselectPicker(actions);
+  const isMultiselect = useIsMultiselectPicker(actions2);
   const size = "900px";
   const groupField = view.groupBy?.field ? fields.find((f2) => f2.id === view.groupBy?.field) : null;
   const dataByGroup = groupField ? getDataByGroup(data, groupField) : null;
@@ -18250,7 +18305,7 @@ function TableRow2({
   );
 }
 function ViewPickerTable({
-  actions,
+  actions: actions2,
   data,
   fields,
   getItemId: getItemId2,
@@ -18266,7 +18321,7 @@ function ViewPickerTable({
   const headerMenuRefs = (0, import_element22.useRef)(/* @__PURE__ */ new Map());
   const headerMenuToFocusRef = (0, import_element22.useRef)();
   const [nextHeaderMenuToFocus, setNextHeaderMenuToFocus] = (0, import_element22.useState)();
-  const isMultiselect = useIsMultiselectPicker(actions) ?? false;
+  const isMultiselect = useIsMultiselectPicker(actions2) ?? false;
   (0, import_element22.useEffect)(() => {
     if (headerMenuToFocusRef.current) {
       headerMenuToFocusRef.current.focus();
@@ -18336,7 +18391,7 @@ function ViewPickerTable({
                     selection,
                     onChangeSelection,
                     data,
-                    actions,
+                    actions: actions2,
                     getItemId: getItemId2
                   }
                 ) }),
@@ -19323,15 +19378,15 @@ function createStoreContext(providers = [], scopedProviders = []) {
   const useContext210 = () => React6.useContext(context);
   const useScopedContext = (onlyScoped = false) => {
     const scoped = React6.useContext(scopedContext);
-    const store4 = useContext210();
+    const store5 = useContext210();
     if (onlyScoped) return scoped;
-    return scoped || store4;
+    return scoped || store5;
   };
   const useProviderContext = () => {
     const scoped = React6.useContext(scopedContext);
-    const store4 = useContext210();
-    if (scoped && scoped === store4) return;
-    return store4;
+    const store5 = useContext210();
+    if (scoped && scoped === store5) return;
+    return store5;
   };
   const ContextProvider = (props) => {
     return providers.reduceRight(
@@ -19391,9 +19446,9 @@ function findFirstEnabledItem(items, excludeId) {
     return !item.disabled;
   });
 }
-function getEnabledItem(store4, id) {
+function getEnabledItem(store5, id) {
   if (!id) return null;
-  return store4.item(id) || null;
+  return store5.item(id) || null;
 }
 function groupItemsByRows(items) {
   const rows = [];
@@ -19434,10 +19489,10 @@ function silentlyFocused(element) {
   delete element[FOCUS_SILENTLY];
   return isSilentlyFocused;
 }
-function isItem(store4, element, exclude) {
+function isItem(store5, element, exclude) {
   if (!element) return false;
   if (element === exclude) return false;
-  const item = store4.item(element.id);
+  const item = store5.item(element.id);
   if (!item) return false;
   if (exclude && item.element === exclude) return false;
   return true;
@@ -19448,7 +19503,7 @@ var import_react10 = __toESM(require_react(), 1);
 var TagName = "div";
 var useCollectionItem = createHook(
   function useCollectionItem2({
-    store: store4,
+    store: store5,
     shouldRegisterItem = true,
     getItem = identity,
     // @ts-expect-error This prop may come from a collection renderer.
@@ -19456,7 +19511,7 @@ var useCollectionItem = createHook(
     ...props
   }) {
     const context = useCollectionContext();
-    store4 = store4 || context;
+    store5 = store5 || context;
     const id = useId3(props.id);
     const ref = (0, import_react10.useRef)(element);
     (0, import_react10.useEffect)(() => {
@@ -19465,8 +19520,8 @@ var useCollectionItem = createHook(
       if (!element2) return;
       if (!shouldRegisterItem) return;
       const item = getItem({ id, element: element2 });
-      return store4 == null ? void 0 : store4.renderItem(item);
-    }, [id, shouldRegisterItem, getItem, store4]);
+      return store5 == null ? void 0 : store5.renderItem(item);
+    }, [id, shouldRegisterItem, getItem, store5]);
     props = {
       ...props,
       ref: useMergeRefs(ref, props.ref)
@@ -19932,13 +19987,13 @@ var Command = forwardRef22(function Command2(props) {
 });
 
 // ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/SXKM4CGU.js
-function getInternal(store4, key) {
-  const internals = store4.__unstableInternals;
+function getInternal(store5, key) {
+  const internals = store5.__unstableInternals;
   invariant(internals, "Invalid store");
   return internals[key];
 }
-function createStore(initialState, ...stores) {
-  let state = initialState;
+function createStore(initialState4, ...stores) {
+  let state = initialState4;
   let prevStateBatch = state;
   let lastUpdate = /* @__PURE__ */ Symbol();
   let destroy = noop;
@@ -19965,12 +20020,12 @@ function createStore(initialState, ...stores) {
     if (initialized) return maybeDestroy;
     const desyncs = getKeys(state).map(
       (key) => chain(
-        ...stores.map((store4) => {
+        ...stores.map((store5) => {
           var _a;
-          const storeState = (_a = store4 == null ? void 0 : store4.getState) == null ? void 0 : _a.call(store4);
+          const storeState = (_a = store5 == null ? void 0 : store5.getState) == null ? void 0 : _a.call(store5);
           if (!storeState) return;
           if (!hasOwnProperty(storeState, key)) return;
-          return sync(store4, [key], (state2) => {
+          return sync(store5, [key], (state2) => {
             setState(
               key,
               state2[key],
@@ -20019,8 +20074,8 @@ function createStore(initialState, ...stores) {
     const nextValue = applyState(value, state[key]);
     if (nextValue === state[key]) return;
     if (!fromStores) {
-      for (const store4 of stores) {
-        (_a = store4 == null ? void 0 : store4.setState) == null ? void 0 : _a.call(store4, key, nextValue);
+      for (const store5 of stores) {
+        (_a = store5 == null ? void 0 : store5.setState) == null ? void 0 : _a.call(store5, key, nextValue);
       }
     }
     const prevState = state;
@@ -20065,56 +20120,56 @@ function createStore(initialState, ...stores) {
   };
   return finalStore;
 }
-function setup(store4, ...args) {
-  if (!store4) return;
-  return getInternal(store4, "setup")(...args);
+function setup(store5, ...args) {
+  if (!store5) return;
+  return getInternal(store5, "setup")(...args);
 }
-function init(store4, ...args) {
-  if (!store4) return;
-  return getInternal(store4, "init")(...args);
+function init(store5, ...args) {
+  if (!store5) return;
+  return getInternal(store5, "init")(...args);
 }
-function subscribe(store4, ...args) {
-  if (!store4) return;
-  return getInternal(store4, "subscribe")(...args);
+function subscribe(store5, ...args) {
+  if (!store5) return;
+  return getInternal(store5, "subscribe")(...args);
 }
-function sync(store4, ...args) {
-  if (!store4) return;
-  return getInternal(store4, "sync")(...args);
+function sync(store5, ...args) {
+  if (!store5) return;
+  return getInternal(store5, "sync")(...args);
 }
-function batch(store4, ...args) {
-  if (!store4) return;
-  return getInternal(store4, "batch")(...args);
+function batch(store5, ...args) {
+  if (!store5) return;
+  return getInternal(store5, "batch")(...args);
 }
-function omit2(store4, ...args) {
-  if (!store4) return;
-  return getInternal(store4, "omit")(...args);
+function omit2(store5, ...args) {
+  if (!store5) return;
+  return getInternal(store5, "omit")(...args);
 }
-function pick2(store4, ...args) {
-  if (!store4) return;
-  return getInternal(store4, "pick")(...args);
+function pick2(store5, ...args) {
+  if (!store5) return;
+  return getInternal(store5, "pick")(...args);
 }
 function mergeStore(...stores) {
   var _a;
-  const initialState = {};
+  const initialState4 = {};
   for (const store22 of stores) {
     const nextState = (_a = store22 == null ? void 0 : store22.getState) == null ? void 0 : _a.call(store22);
     if (nextState) {
-      Object.assign(initialState, nextState);
+      Object.assign(initialState4, nextState);
     }
   }
-  const store4 = createStore(initialState, ...stores);
-  return Object.assign({}, ...stores, store4);
+  const store5 = createStore(initialState4, ...stores);
+  return Object.assign({}, ...stores, store5);
 }
-function throwOnConflictingProps(props, store4) {
+function throwOnConflictingProps(props, store5) {
   if (false) return;
-  if (!store4) return;
+  if (!store5) return;
   const defaultKeys = Object.entries(props).filter(([key, value]) => key.startsWith("default") && value !== void 0).map(([key]) => {
     var _a;
     const stateKey = key.replace("default", "");
     return `${((_a = stateKey[0]) == null ? void 0 : _a.toLowerCase()) || ""}${stateKey.slice(1)}`;
   });
   if (!defaultKeys.length) return;
-  const storeState = store4.getState();
+  const storeState = store5.getState();
   const conflictingProps = defaultKeys.filter(
     (key) => hasOwnProperty(storeState, key)
   );
@@ -20144,18 +20199,18 @@ var import_shim = __toESM(require_shim(), 1);
 var { useSyncExternalStore } = import_shim.default;
 var noopSubscribe = () => () => {
 };
-function useStoreState(store4, keyOrSelector = identity) {
+function useStoreState(store5, keyOrSelector = identity) {
   const storeSubscribe = React7.useCallback(
     (callback) => {
-      if (!store4) return noopSubscribe();
-      return subscribe(store4, null, callback);
+      if (!store5) return noopSubscribe();
+      return subscribe(store5, null, callback);
     },
-    [store4]
+    [store5]
   );
   const getSnapshot = () => {
     const key = typeof keyOrSelector === "string" ? keyOrSelector : null;
     const selector2 = typeof keyOrSelector === "function" ? keyOrSelector : null;
-    const state = store4 == null ? void 0 : store4.getState();
+    const state = store5 == null ? void 0 : store5.getState();
     if (selector2) return selector2(state);
     if (!state) return;
     if (!key) return;
@@ -20164,19 +20219,19 @@ function useStoreState(store4, keyOrSelector = identity) {
   };
   return useSyncExternalStore(storeSubscribe, getSnapshot, getSnapshot);
 }
-function useStoreStateObject(store4, object) {
+function useStoreStateObject(store5, object) {
   const objRef = React7.useRef(
     {}
   );
   const storeSubscribe = React7.useCallback(
     (callback) => {
-      if (!store4) return noopSubscribe();
-      return subscribe(store4, null, callback);
+      if (!store5) return noopSubscribe();
+      return subscribe(store5, null, callback);
     },
-    [store4]
+    [store5]
   );
   const getSnapshot = () => {
-    const state = store4 == null ? void 0 : store4.getState();
+    const state = store5 == null ? void 0 : store5.getState();
     let updated = false;
     const obj = objRef.current;
     for (const prop in object) {
@@ -20205,38 +20260,38 @@ function useStoreStateObject(store4, object) {
   };
   return useSyncExternalStore(storeSubscribe, getSnapshot, getSnapshot);
 }
-function useStoreProps(store4, props, key, setKey) {
+function useStoreProps(store5, props, key, setKey) {
   const value = hasOwnProperty(props, key) ? props[key] : void 0;
   const setValue = setKey ? props[setKey] : void 0;
   const propsRef = useLiveRef({ value, setValue });
   useSafeLayoutEffect(() => {
-    return sync(store4, [key], (state, prev) => {
+    return sync(store5, [key], (state, prev) => {
       const { value: value2, setValue: setValue2 } = propsRef.current;
       if (!setValue2) return;
       if (state[key] === prev[key]) return;
       if (state[key] === value2) return;
       setValue2(state[key]);
     });
-  }, [store4, key]);
+  }, [store5, key]);
   useSafeLayoutEffect(() => {
     if (value === void 0) return;
-    store4.setState(key, value);
-    return batch(store4, [key], () => {
+    store5.setState(key, value);
+    return batch(store5, [key], () => {
       if (value === void 0) return;
-      store4.setState(key, value);
+      store5.setState(key, value);
     });
   });
 }
 function useStore(createStore2, props) {
-  const [store4, setStore] = React7.useState(() => createStore2(props));
-  useSafeLayoutEffect(() => init(store4), [store4]);
+  const [store5, setStore] = React7.useState(() => createStore2(props));
+  useSafeLayoutEffect(() => init(store5), [store5]);
   const useState210 = React7.useCallback(
-    (keyOrSelector) => useStoreState(store4, keyOrSelector),
-    [store4]
+    (keyOrSelector) => useStoreState(store5, keyOrSelector),
+    [store5]
   );
   const memoizedStore = React7.useMemo(
-    () => ({ ...store4, useState: useState210 }),
-    [store4, useState210]
+    () => ({ ...store5, useState: useState210 }),
+    [store5, useState210]
   );
   const updateStore = useEvent(() => {
     setStore((store22) => createStore2({ ...props, ...store22.getState() }));
@@ -20269,11 +20324,11 @@ function getItemOffset(itemElement, pageUp = false) {
   }
   return top;
 }
-function findNextPageItemId(element, store4, next, pageUp = false) {
+function findNextPageItemId(element, store5, next, pageUp = false) {
   var _a;
-  if (!store4) return;
+  if (!store5) return;
   if (!next) return;
-  const { renderedItems } = store4.getState();
+  const { renderedItems } = store5.getState();
   const scrollingElement = getScrollingElement(element);
   if (!scrollingElement) return;
   const nextPageOffset = getNextPageOffset(scrollingElement, pageUp);
@@ -20284,7 +20339,7 @@ function findNextPageItemId(element, store4, next, pageUp = false) {
     id = next(i2);
     if (!id) break;
     if (id === previousId) continue;
-    const itemElement = (_a = getEnabledItem(store4, id)) == null ? void 0 : _a.element;
+    const itemElement = (_a = getEnabledItem(store5, id)) == null ? void 0 : _a.element;
     if (!itemElement) continue;
     const itemOffset = getItemOffset(itemElement, pageUp);
     const difference = itemOffset - nextPageOffset;
@@ -20299,13 +20354,13 @@ function findNextPageItemId(element, store4, next, pageUp = false) {
   }
   return id;
 }
-function targetIsAnotherItem(event, store4) {
+function targetIsAnotherItem(event, store5) {
   if (isSelfTarget(event)) return false;
-  return isItem(store4, event.target);
+  return isItem(store5, event.target);
 }
 var useCompositeItem = createHook(
   function useCompositeItem2({
-    store: store4,
+    store: store5,
     rowId: rowIdProp,
     preventScrollOnKeyDown = false,
     moveOnKeyPress = true,
@@ -20316,7 +20371,7 @@ var useCompositeItem = createHook(
     ...props
   }) {
     const context = useCompositeContext();
-    store4 = store4 || context;
+    store5 = store5 || context;
     const id = useId3(props.id);
     const ref = (0, import_react14.useRef)(null);
     const row = (0, import_react14.useContext)(CompositeRowContext);
@@ -20329,7 +20384,7 @@ var useCompositeItem = createHook(
       ariaSetSize,
       ariaPosInSet,
       isTabbable
-    } = useStoreStateObject(store4, {
+    } = useStoreStateObject(store5, {
       rowId(state) {
         if (rowIdProp) return rowIdProp;
         if (!state) return;
@@ -20365,7 +20420,7 @@ var useCompositeItem = createHook(
         if (state.virtualFocus) return false;
         if (tabbable) return true;
         if (state.activeId === null) return false;
-        const item = store4 == null ? void 0 : store4.item(state.activeId);
+        const item = store5 == null ? void 0 : store5.item(state.activeId);
         if (item == null ? void 0 : item.disabled) return true;
         if (!(item == null ? void 0 : item.element)) return true;
         return state.activeId === id;
@@ -20395,10 +20450,10 @@ var useCompositeItem = createHook(
       if (event.defaultPrevented) return;
       if (isPortalEvent(event)) return;
       if (!id) return;
-      if (!store4) return;
-      if (targetIsAnotherItem(event, store4)) return;
-      const { virtualFocus, baseElement: baseElement2 } = store4.getState();
-      store4.setActiveId(id);
+      if (!store5) return;
+      if (targetIsAnotherItem(event, store5)) return;
+      const { virtualFocus, baseElement: baseElement2 } = store5.getState();
+      store5.setActiveId(id);
       if (isTextbox(event.currentTarget)) {
         selectTextField(event.currentTarget);
       }
@@ -20413,7 +20468,7 @@ var useCompositeItem = createHook(
         });
       }
       hasFocusedComposite.current = true;
-      const fromComposite = event.relatedTarget === baseElement2 || isItem(store4, event.relatedTarget);
+      const fromComposite = event.relatedTarget === baseElement2 || isItem(store5, event.relatedTarget);
       if (fromComposite) {
         focusSilently(baseElement2);
       } else {
@@ -20424,7 +20479,7 @@ var useCompositeItem = createHook(
     const onBlurCapture = useEvent((event) => {
       onBlurCaptureProp == null ? void 0 : onBlurCaptureProp(event);
       if (event.defaultPrevented) return;
-      const state = store4 == null ? void 0 : store4.getState();
+      const state = store5 == null ? void 0 : store5.getState();
       if ((state == null ? void 0 : state.virtualFocus) && hasFocusedComposite.current) {
         hasFocusedComposite.current = false;
         event.preventDefault();
@@ -20438,10 +20493,10 @@ var useCompositeItem = createHook(
       onKeyDownProp == null ? void 0 : onKeyDownProp(event);
       if (event.defaultPrevented) return;
       if (!isSelfTarget(event)) return;
-      if (!store4) return;
+      if (!store5) return;
       const { currentTarget } = event;
-      const state = store4.getState();
-      const item = store4.item(id);
+      const state = store5.getState();
+      const item = store5.item(id);
       const isGrid2 = !!(item == null ? void 0 : item.rowId);
       const isVertical = state.orientation !== "horizontal";
       const isHorizontal = state.orientation !== "vertical";
@@ -20453,29 +20508,29 @@ var useCompositeItem = createHook(
         return false;
       };
       const keyMap = {
-        ArrowUp: (isGrid2 || isVertical) && store4.up,
-        ArrowRight: (isGrid2 || isHorizontal) && store4.next,
-        ArrowDown: (isGrid2 || isVertical) && store4.down,
-        ArrowLeft: (isGrid2 || isHorizontal) && store4.previous,
+        ArrowUp: (isGrid2 || isVertical) && store5.up,
+        ArrowRight: (isGrid2 || isHorizontal) && store5.next,
+        ArrowDown: (isGrid2 || isVertical) && store5.down,
+        ArrowLeft: (isGrid2 || isHorizontal) && store5.previous,
         Home: () => {
           if (!canHomeEnd()) return;
           if (!isGrid2 || event.ctrlKey) {
-            return store4 == null ? void 0 : store4.first();
+            return store5 == null ? void 0 : store5.first();
           }
-          return store4 == null ? void 0 : store4.previous(-1);
+          return store5 == null ? void 0 : store5.previous(-1);
         },
         End: () => {
           if (!canHomeEnd()) return;
           if (!isGrid2 || event.ctrlKey) {
-            return store4 == null ? void 0 : store4.last();
+            return store5 == null ? void 0 : store5.last();
           }
-          return store4 == null ? void 0 : store4.next(-1);
+          return store5 == null ? void 0 : store5.next(-1);
         },
         PageUp: () => {
-          return findNextPageItemId(currentTarget, store4, store4 == null ? void 0 : store4.up, true);
+          return findNextPageItemId(currentTarget, store5, store5 == null ? void 0 : store5.up, true);
         },
         PageDown: () => {
-          return findNextPageItemId(currentTarget, store4, store4 == null ? void 0 : store4.down);
+          return findNextPageItemId(currentTarget, store5, store5 == null ? void 0 : store5.down);
         }
       };
       const action = keyMap[event.key];
@@ -20495,7 +20550,7 @@ var useCompositeItem = createHook(
         if (preventScrollOnKeyDownProp(event) || nextId !== void 0) {
           if (!moveOnKeyPressProp(event)) return;
           event.preventDefault();
-          store4.move(nextId);
+          store5.move(nextId);
         }
       }
     });
@@ -20520,7 +20575,7 @@ var useCompositeItem = createHook(
     };
     props = useCommand(props);
     props = useCollectionItem({
-      store: store4,
+      store: store5,
       ...props,
       getItem,
       shouldRegisterItem: id ? props.shouldRegisterItem : false
@@ -20572,7 +20627,7 @@ function isPrintableKey(event) {
 function isModifierKey(event) {
   return event.key === "Shift" || event.key === "Control" || event.key === "Alt" || event.key === "Meta";
 }
-function useKeyboardEventProxy(store4, onKeyboardEvent, previousElementRef) {
+function useKeyboardEventProxy(store5, onKeyboardEvent, previousElementRef) {
   return useEvent((event) => {
     var _a;
     onKeyboardEvent == null ? void 0 : onKeyboardEvent(event);
@@ -20581,8 +20636,8 @@ function useKeyboardEventProxy(store4, onKeyboardEvent, previousElementRef) {
     if (!isSelfTarget(event)) return;
     if (isModifierKey(event)) return;
     if (isPrintableKey(event)) return;
-    const state = store4.getState();
-    const activeElement2 = (_a = getEnabledItem(store4, state.activeId)) == null ? void 0 : _a.element;
+    const state = store5.getState();
+    const activeElement2 = (_a = getEnabledItem(store5, state.activeId)) == null ? void 0 : _a.element;
     if (!activeElement2) return;
     const { view, ...eventInit } = event;
     const previousElement = previousElementRef == null ? void 0 : previousElementRef.current;
@@ -20602,11 +20657,11 @@ function findFirstEnabledItemInTheLastRow(items) {
     flatten2DArray(reverseArray(groupItemsByRows(items)))
   );
 }
-function useScheduleFocus(store4) {
+function useScheduleFocus(store5) {
   const [scheduled, setScheduled] = (0, import_react15.useState)(false);
   const schedule = (0, import_react15.useCallback)(() => setScheduled(true), []);
-  const activeItem = store4.useState(
-    (state) => getEnabledItem(store4, state.activeId)
+  const activeItem = store5.useState(
+    (state) => getEnabledItem(store5, state.activeId)
   );
   (0, import_react15.useEffect)(() => {
     const activeElement2 = activeItem == null ? void 0 : activeItem.element;
@@ -20619,41 +20674,41 @@ function useScheduleFocus(store4) {
 }
 var useComposite = createHook(
   function useComposite2({
-    store: store4,
+    store: store5,
     composite = true,
     focusOnMove = composite,
     moveOnKeyPress = true,
     ...props
   }) {
     const context = useCompositeProviderContext();
-    store4 = store4 || context;
+    store5 = store5 || context;
     invariant(
-      store4,
+      store5,
       "Composite must receive a `store` prop or be wrapped in a CompositeProvider component."
     );
     const ref = (0, import_react15.useRef)(null);
     const previousElementRef = (0, import_react15.useRef)(null);
-    const scheduleFocus = useScheduleFocus(store4);
-    const moves = store4.useState("moves");
+    const scheduleFocus = useScheduleFocus(store5);
+    const moves = store5.useState("moves");
     const [, setBaseElement] = useTransactionState(
-      composite ? store4.setBaseElement : null
+      composite ? store5.setBaseElement : null
     );
     (0, import_react15.useEffect)(() => {
       var _a;
-      if (!store4) return;
+      if (!store5) return;
       if (!moves) return;
       if (!composite) return;
       if (!focusOnMove) return;
-      const { activeId: activeId2 } = store4.getState();
-      const itemElement = (_a = getEnabledItem(store4, activeId2)) == null ? void 0 : _a.element;
+      const { activeId: activeId2 } = store5.getState();
+      const itemElement = (_a = getEnabledItem(store5, activeId2)) == null ? void 0 : _a.element;
       if (!itemElement) return;
       focusIntoView(itemElement);
-    }, [store4, moves, composite, focusOnMove]);
+    }, [store5, moves, composite, focusOnMove]);
     useSafeLayoutEffect(() => {
-      if (!store4) return;
+      if (!store5) return;
       if (!moves) return;
       if (!composite) return;
-      const { baseElement, activeId: activeId2 } = store4.getState();
+      const { baseElement, activeId: activeId2 } = store5.getState();
       const isSelfAcive = activeId2 === null;
       if (!isSelfAcive) return;
       if (!baseElement) return;
@@ -20665,29 +20720,29 @@ var useComposite = createHook(
       if (!hasFocus(baseElement)) {
         baseElement.focus();
       }
-    }, [store4, moves, composite]);
-    const activeId = store4.useState("activeId");
-    const virtualFocus = store4.useState("virtualFocus");
+    }, [store5, moves, composite]);
+    const activeId = store5.useState("activeId");
+    const virtualFocus = store5.useState("virtualFocus");
     useSafeLayoutEffect(() => {
       var _a;
-      if (!store4) return;
+      if (!store5) return;
       if (!composite) return;
       if (!virtualFocus) return;
       const previousElement = previousElementRef.current;
       previousElementRef.current = null;
       if (!previousElement) return;
-      const activeElement2 = (_a = getEnabledItem(store4, activeId)) == null ? void 0 : _a.element;
+      const activeElement2 = (_a = getEnabledItem(store5, activeId)) == null ? void 0 : _a.element;
       const relatedTarget = activeElement2 || getActiveElement(previousElement);
       if (relatedTarget === previousElement) return;
       fireBlurEvent(previousElement, { relatedTarget });
-    }, [store4, activeId, virtualFocus, composite]);
+    }, [store5, activeId, virtualFocus, composite]);
     const onKeyDownCapture = useKeyboardEventProxy(
-      store4,
+      store5,
       props.onKeyDownCapture,
       previousElementRef
     );
     const onKeyUpCapture = useKeyboardEventProxy(
-      store4,
+      store5,
       props.onKeyUpCapture,
       previousElementRef
     );
@@ -20695,8 +20750,8 @@ var useComposite = createHook(
     const onFocusCapture = useEvent((event) => {
       onFocusCaptureProp == null ? void 0 : onFocusCaptureProp(event);
       if (event.defaultPrevented) return;
-      if (!store4) return;
-      const { virtualFocus: virtualFocus2 } = store4.getState();
+      if (!store5) return;
+      const { virtualFocus: virtualFocus2 } = store5.getState();
       if (!virtualFocus2) return;
       const previousActiveElement = event.relatedTarget;
       const isSilentlyFocused = silentlyFocused(event.currentTarget);
@@ -20710,15 +20765,15 @@ var useComposite = createHook(
       onFocusProp == null ? void 0 : onFocusProp(event);
       if (event.defaultPrevented) return;
       if (!composite) return;
-      if (!store4) return;
+      if (!store5) return;
       const { relatedTarget } = event;
-      const { virtualFocus: virtualFocus2 } = store4.getState();
+      const { virtualFocus: virtualFocus2 } = store5.getState();
       if (virtualFocus2) {
-        if (isSelfTarget(event) && !isItem(store4, relatedTarget)) {
+        if (isSelfTarget(event) && !isItem(store5, relatedTarget)) {
           queueMicrotask(scheduleFocus);
         }
       } else if (isSelfTarget(event)) {
-        store4.setActiveId(null);
+        store5.setActiveId(null);
       }
     });
     const onBlurCaptureProp = props.onBlurCapture;
@@ -20726,12 +20781,12 @@ var useComposite = createHook(
       var _a;
       onBlurCaptureProp == null ? void 0 : onBlurCaptureProp(event);
       if (event.defaultPrevented) return;
-      if (!store4) return;
-      const { virtualFocus: virtualFocus2, activeId: activeId2 } = store4.getState();
+      if (!store5) return;
+      const { virtualFocus: virtualFocus2, activeId: activeId2 } = store5.getState();
       if (!virtualFocus2) return;
-      const activeElement2 = (_a = getEnabledItem(store4, activeId2)) == null ? void 0 : _a.element;
+      const activeElement2 = (_a = getEnabledItem(store5, activeId2)) == null ? void 0 : _a.element;
       const nextActiveElement = event.relatedTarget;
-      const nextActiveElementIsItem = isItem(store4, nextActiveElement);
+      const nextActiveElementIsItem = isItem(store5, nextActiveElement);
       const previousElement = previousElementRef.current;
       previousElementRef.current = null;
       if (isSelfTarget(event) && nextActiveElementIsItem) {
@@ -20746,7 +20801,7 @@ var useComposite = createHook(
         }
         event.stopPropagation();
       } else {
-        const targetIsItem = isItem(store4, event.target);
+        const targetIsItem = isItem(store5, event.target);
         if (!targetIsItem && activeElement2) {
           fireBlurEvent(activeElement2, event);
         }
@@ -20759,10 +20814,10 @@ var useComposite = createHook(
       onKeyDownProp == null ? void 0 : onKeyDownProp(event);
       if (event.nativeEvent.isComposing) return;
       if (event.defaultPrevented) return;
-      if (!store4) return;
+      if (!store5) return;
       if (!isSelfTarget(event)) return;
-      const { orientation, renderedItems, activeId: activeId2 } = store4.getState();
-      const activeItem = getEnabledItem(store4, activeId2);
+      const { orientation, renderedItems, activeId: activeId2 } = store5.getState();
+      const activeItem = getEnabledItem(store5, activeId2);
       if ((_a = activeItem == null ? void 0 : activeItem.element) == null ? void 0 : _a.isConnected) return;
       const isVertical = orientation !== "horizontal";
       const isHorizontal = orientation !== "vertical";
@@ -20774,17 +20829,17 @@ var useComposite = createHook(
           const item = findFirstEnabledItemInTheLastRow(renderedItems);
           return item == null ? void 0 : item.id;
         }
-        return store4 == null ? void 0 : store4.last();
+        return store5 == null ? void 0 : store5.last();
       };
       const keyMap = {
         ArrowUp: (grid || isVertical) && up,
-        ArrowRight: (grid || isHorizontal) && store4.first,
-        ArrowDown: (grid || isVertical) && store4.first,
-        ArrowLeft: (grid || isHorizontal) && store4.last,
-        Home: store4.first,
-        End: store4.last,
-        PageUp: store4.first,
-        PageDown: store4.last
+        ArrowRight: (grid || isHorizontal) && store5.first,
+        ArrowDown: (grid || isVertical) && store5.first,
+        ArrowLeft: (grid || isHorizontal) && store5.last,
+        Home: store5.first,
+        End: store5.last,
+        PageUp: store5.first,
+        PageDown: store5.last
       };
       const action = keyMap[event.key];
       if (action) {
@@ -20792,21 +20847,21 @@ var useComposite = createHook(
         if (id !== void 0) {
           if (!moveOnKeyPressProp(event)) return;
           event.preventDefault();
-          store4.move(id);
+          store5.move(id);
         }
       }
     });
     props = useWrapElement(
       props,
-      (element) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(CompositeContextProvider, { value: store4, children: element }),
-      [store4]
+      (element) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(CompositeContextProvider, { value: store5, children: element }),
+      [store5]
     );
-    const activeDescendant = store4.useState((state) => {
+    const activeDescendant = store5.useState((state) => {
       var _a;
-      if (!store4) return;
+      if (!store5) return;
       if (!composite) return;
       if (!state.virtualFocus) return;
-      return (_a = getEnabledItem(store4, state.activeId)) == null ? void 0 : _a.id;
+      return (_a = getEnabledItem(store5, state.activeId)) == null ? void 0 : _a.id;
     });
     props = {
       "aria-activedescendant": activeDescendant,
@@ -20819,7 +20874,7 @@ var useComposite = createHook(
       onBlurCapture,
       onKeyDown
     };
-    const focusable = store4.useState(
+    const focusable = store5.useState(
       (state) => composite && (state.virtualFocus || state.activeId === null)
     );
     props = useFocusable({ focusable, ...props });
@@ -20879,36 +20934,36 @@ function parseCSSTime(...times) {
 function isHidden(mounted, hidden, alwaysVisible) {
   return !alwaysVisible && hidden !== false && (!mounted || !!hidden);
 }
-var useDisclosureContent = createHook(function useDisclosureContent2({ store: store4, alwaysVisible, ...props }) {
+var useDisclosureContent = createHook(function useDisclosureContent2({ store: store5, alwaysVisible, ...props }) {
   const context = useDisclosureProviderContext();
-  store4 = store4 || context;
+  store5 = store5 || context;
   invariant(
-    store4,
+    store5,
     "DisclosureContent must receive a `store` prop or be wrapped in a DisclosureProvider component."
   );
   const ref = (0, import_react17.useRef)(null);
   const id = useId3(props.id);
   const [transition, setTransition] = (0, import_react17.useState)(null);
-  const open = store4.useState("open");
-  const mounted = store4.useState("mounted");
-  const animated = store4.useState("animated");
-  const contentElement = store4.useState("contentElement");
-  const otherElement = useStoreState(store4.disclosure, "contentElement");
+  const open = store5.useState("open");
+  const mounted = store5.useState("mounted");
+  const animated = store5.useState("animated");
+  const contentElement = store5.useState("contentElement");
+  const otherElement = useStoreState(store5.disclosure, "contentElement");
   useSafeLayoutEffect(() => {
     if (!ref.current) return;
-    store4 == null ? void 0 : store4.setContentElement(ref.current);
-  }, [store4]);
+    store5 == null ? void 0 : store5.setContentElement(ref.current);
+  }, [store5]);
   useSafeLayoutEffect(() => {
     let previousAnimated;
-    store4 == null ? void 0 : store4.setState("animated", (animated2) => {
+    store5 == null ? void 0 : store5.setState("animated", (animated2) => {
       previousAnimated = animated2;
       return true;
     });
     return () => {
       if (previousAnimated === void 0) return;
-      store4 == null ? void 0 : store4.setState("animated", previousAnimated);
+      store5 == null ? void 0 : store5.setState("animated", previousAnimated);
     };
-  }, [store4]);
+  }, [store5]);
   useSafeLayoutEffect(() => {
     if (!animated) return;
     if (!(contentElement == null ? void 0 : contentElement.isConnected)) {
@@ -20920,11 +20975,11 @@ var useDisclosureContent = createHook(function useDisclosureContent2({ store: st
     });
   }, [animated, contentElement, open, mounted]);
   useSafeLayoutEffect(() => {
-    if (!store4) return;
+    if (!store5) return;
     if (!animated) return;
     if (!transition) return;
     if (!contentElement) return;
-    const stopAnimation = () => store4 == null ? void 0 : store4.setState("animating", false);
+    const stopAnimation = () => store5 == null ? void 0 : store5.setState("animating", false);
     const stopAnimationSync = () => (0, import_react_dom.flushSync)(stopAnimation);
     if (transition === "leave" && open) return;
     if (transition === "enter" && !open) return;
@@ -20959,7 +21014,7 @@ var useDisclosureContent = createHook(function useDisclosureContent2({ store: st
     const timeout = delay + duration;
     if (!timeout) {
       if (transition === "enter") {
-        store4.setState("animated", false);
+        store5.setState("animated", false);
       }
       stopAnimation();
       return;
@@ -20967,11 +21022,11 @@ var useDisclosureContent = createHook(function useDisclosureContent2({ store: st
     const frameRate = 1e3 / 60;
     const maxTimeout = Math.max(timeout - frameRate, 0);
     return afterTimeout(maxTimeout, stopAnimationSync);
-  }, [store4, animated, contentElement, otherElement, open, transition]);
+  }, [store5, animated, contentElement, otherElement, open, transition]);
   props = useWrapElement(
     props,
-    (element) => /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(DialogScopedContextProvider, { value: store4, children: element }),
-    [store4]
+    (element) => /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(DialogScopedContextProvider, { value: store5, children: element }),
+    [store5]
   );
   const hidden = isHidden(mounted, props.hidden, alwaysVisible);
   const styleProp = props.style;
@@ -20988,7 +21043,7 @@ var useDisclosureContent = createHook(function useDisclosureContent2({ store: st
     "data-leave": transition === "leave" || void 0,
     hidden,
     ...props,
-    ref: useMergeRefs(id ? store4.setContentElement : null, ref, props.ref),
+    ref: useMergeRefs(id ? store5.setContentElement : null, ref, props.ref),
     style
   };
   return removeUndefinedValues(props);
@@ -21002,9 +21057,9 @@ var DisclosureContent = forwardRef22(function DisclosureContent2({
   ...props
 }) {
   const context = useDisclosureProviderContext();
-  const store4 = props.store || context;
+  const store5 = props.store || context;
   const mounted = useStoreState(
-    store4,
+    store5,
     (state) => !unmountOnHide || (state == null ? void 0 : state.mounted)
   );
   if (mounted === false) return null;
@@ -21013,12 +21068,12 @@ var DisclosureContent = forwardRef22(function DisclosureContent2({
 
 // ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/75BJEVSH.js
 function createDisclosureStore(props = {}) {
-  const store4 = mergeStore(
+  const store5 = mergeStore(
     props.store,
     omit2(props.disclosure, ["contentElement", "disclosureElement"])
   );
-  throwOnConflictingProps(props, store4);
-  const syncState = store4 == null ? void 0 : store4.getState();
+  throwOnConflictingProps(props, store5);
+  const syncState = store5 == null ? void 0 : store5.getState();
   const open = defaultValue(
     props.open,
     syncState == null ? void 0 : syncState.open,
@@ -21026,7 +21081,7 @@ function createDisclosureStore(props = {}) {
     false
   );
   const animated = defaultValue(props.animated, syncState == null ? void 0 : syncState.animated, false);
-  const initialState = {
+  const initialState4 = {
     open,
     animated,
     animating: !!animated && open,
@@ -21034,7 +21089,7 @@ function createDisclosureStore(props = {}) {
     contentElement: defaultValue(syncState == null ? void 0 : syncState.contentElement, null),
     disclosureElement: defaultValue(syncState == null ? void 0 : syncState.disclosureElement, null)
   };
-  const disclosure = createStore(initialState, store4);
+  const disclosure = createStore(initialState4, store5);
   setup(
     disclosure,
     () => sync(disclosure, ["animated", "animating"], (state) => {
@@ -21069,12 +21124,12 @@ function createDisclosureStore(props = {}) {
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/WLZ6H5FH.js
-function useDisclosureStoreProps(store4, update3, props) {
+function useDisclosureStoreProps(store5, update3, props) {
   useUpdateEffect(update3, [props.store, props.disclosure]);
-  useStoreProps(store4, props, "open", "setOpen");
-  useStoreProps(store4, props, "mounted", "setMounted");
-  useStoreProps(store4, props, "animated");
-  return Object.assign(store4, { disclosure: props.disclosure });
+  useStoreProps(store5, props, "open", "setOpen");
+  useStoreProps(store5, props, "mounted", "setMounted");
+  useStoreProps(store5, props, "animated");
+  return Object.assign(store5, { disclosure: props.disclosure });
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/JMU4N4M5.js
@@ -21103,8 +21158,8 @@ function getCommonParent(items) {
   }
   return getDocument(parentElement).body;
 }
-function getPrivateStore(store4) {
-  return store4 == null ? void 0 : store4.__unstablePrivateStore;
+function getPrivateStore(store5) {
+  return store5 == null ? void 0 : store5.__unstablePrivateStore;
 }
 function createCollectionStore(props = {}) {
   var _a;
@@ -21117,16 +21172,16 @@ function createCollectionStore(props = {}) {
     []
   );
   const itemsMap = new Map(items.map((item) => [item.id, item]));
-  const initialState = {
+  const initialState4 = {
     items,
     renderedItems: defaultValue(syncState == null ? void 0 : syncState.renderedItems, [])
   };
   const syncPrivateStore = getPrivateStore(props.store);
   const privateStore = createStore(
-    { items, renderedItems: initialState.renderedItems },
+    { items, renderedItems: initialState4.renderedItems },
     syncPrivateStore
   );
-  const collection = createStore(initialState, props.store);
+  const collection = createStore(initialState4, props.store);
   const sortItems = (renderedItems) => {
     const sortedItems = sortBasedOnDOMPosition(renderedItems, (i2) => i2.element);
     privateStore.setState("renderedItems", sortedItems);
@@ -21236,10 +21291,10 @@ function createCollectionStore(props = {}) {
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/GVAFFF2B.js
-function useCollectionStoreProps(store4, update3, props) {
+function useCollectionStoreProps(store5, update3, props) {
   useUpdateEffect(update3, [props.store]);
-  useStoreProps(store4, props, "items", "setItems");
-  return store4;
+  useStoreProps(store5, props, "items", "setItems");
+  return store5;
 }
 
 // ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/RVTIKFRL.js
@@ -21347,7 +21402,7 @@ function createCompositeStore(props = {}) {
     syncState == null ? void 0 : syncState.activeId,
     props.defaultActiveId
   );
-  const initialState = {
+  const initialState4 = {
     ...collection.getState(),
     id: defaultValue(
       props.id,
@@ -21377,7 +21432,7 @@ function createCompositeStore(props = {}) {
     focusWrap: defaultValue(props.focusWrap, syncState == null ? void 0 : syncState.focusWrap, false),
     focusShift: defaultValue(props.focusShift, syncState == null ? void 0 : syncState.focusShift, false)
   };
-  const composite = createStore(initialState, collection, props.store);
+  const composite = createStore(initialState4, collection, props.store);
   setup(
     composite,
     () => sync(composite, ["renderedItems", "activeId"], (state) => {
@@ -21390,16 +21445,16 @@ function createCompositeStore(props = {}) {
   );
   const getNextId = (direction = "next", options = {}) => {
     var _a2, _b;
-    const defaultState = composite.getState();
+    const defaultState2 = composite.getState();
     const {
       skip = 0,
-      activeId: activeId2 = defaultState.activeId,
-      focusShift = defaultState.focusShift,
-      focusLoop = defaultState.focusLoop,
-      focusWrap = defaultState.focusWrap,
-      includesBaseElement = defaultState.includesBaseElement,
-      renderedItems = defaultState.renderedItems,
-      rtl = defaultState.rtl
+      activeId: activeId2 = defaultState2.activeId,
+      focusShift = defaultState2.focusShift,
+      focusLoop = defaultState2.focusLoop,
+      focusWrap = defaultState2.focusWrap,
+      includesBaseElement = defaultState2.includesBaseElement,
+      renderedItems = defaultState2.renderedItems,
+      rtl = defaultState2.rtl
     } = options;
     const isVerticalDirection = direction === "up" || direction === "down";
     const isNextDirection = direction === "next" || direction === "down";
@@ -21506,17 +21561,17 @@ function useCompositeStoreOptions(props) {
   const id = useId3(props.id);
   return { id, ...props };
 }
-function useCompositeStoreProps(store4, update3, props) {
-  store4 = useCollectionStoreProps(store4, update3, props);
-  useStoreProps(store4, props, "activeId", "setActiveId");
-  useStoreProps(store4, props, "includesBaseElement");
-  useStoreProps(store4, props, "virtualFocus");
-  useStoreProps(store4, props, "orientation");
-  useStoreProps(store4, props, "rtl");
-  useStoreProps(store4, props, "focusLoop");
-  useStoreProps(store4, props, "focusWrap");
-  useStoreProps(store4, props, "focusShift");
-  return store4;
+function useCompositeStoreProps(store5, update3, props) {
+  store5 = useCollectionStoreProps(store5, update3, props);
+  useStoreProps(store5, props, "activeId", "setActiveId");
+  useStoreProps(store5, props, "includesBaseElement");
+  useStoreProps(store5, props, "virtualFocus");
+  useStoreProps(store5, props, "orientation");
+  useStoreProps(store5, props, "rtl");
+  useStoreProps(store5, props, "focusLoop");
+  useStoreProps(store5, props, "focusWrap");
+  useStoreProps(store5, props, "focusShift");
+  return store5;
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/CVCFNOHX.js
@@ -21544,8 +21599,8 @@ function createDialogStore(props = {}) {
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/4NYSH4UO.js
-function useDialogStoreProps(store4, update3, props) {
-  return useDisclosureStoreProps(store4, update3, props);
+function useDialogStoreProps(store5, update3, props) {
+  return useDisclosureStoreProps(store5, update3, props);
 }
 
 // ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/BFGNM53A.js
@@ -21553,7 +21608,7 @@ function createPopoverStore({
   popover: otherPopover,
   ...props
 } = {}) {
-  const store4 = mergeStore(
+  const store5 = mergeStore(
     props.store,
     omit2(otherPopover, [
       "arrowElement",
@@ -21563,15 +21618,15 @@ function createPopoverStore({
       "disclosureElement"
     ])
   );
-  throwOnConflictingProps(props, store4);
-  const syncState = store4 == null ? void 0 : store4.getState();
-  const dialog = createDialogStore({ ...props, store: store4 });
+  throwOnConflictingProps(props, store5);
+  const syncState = store5 == null ? void 0 : store5.getState();
+  const dialog = createDialogStore({ ...props, store: store5 });
   const placement = defaultValue(
     props.placement,
     syncState == null ? void 0 : syncState.placement,
     "bottom"
   );
-  const initialState = {
+  const initialState4 = {
     ...dialog.getState(),
     placement,
     currentPlacement: placement,
@@ -21580,7 +21635,7 @@ function createPopoverStore({
     arrowElement: defaultValue(syncState == null ? void 0 : syncState.arrowElement, null),
     rendered: /* @__PURE__ */ Symbol("rendered")
   };
-  const popover = createStore(initialState, dialog, store4);
+  const popover = createStore(initialState4, dialog, store5);
   return {
     ...dialog,
     ...popover,
@@ -21592,21 +21647,21 @@ function createPopoverStore({
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/B6FLPFJM.js
-function usePopoverStoreProps(store4, update3, props) {
+function usePopoverStoreProps(store5, update3, props) {
   useUpdateEffect(update3, [props.popover]);
-  useStoreProps(store4, props, "placement");
-  return useDialogStoreProps(store4, update3, props);
+  useStoreProps(store5, props, "placement");
+  return useDialogStoreProps(store5, update3, props);
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/4POTBZ2J.js
 var TagName7 = "div";
 var usePopoverAnchor = createHook(
-  function usePopoverAnchor2({ store: store4, ...props }) {
+  function usePopoverAnchor2({ store: store5, ...props }) {
     const context = usePopoverProviderContext();
-    store4 = store4 || context;
+    store5 = store5 || context;
     props = {
       ...props,
-      ref: useMergeRefs(store4 == null ? void 0 : store4.setAnchorElement, props.ref)
+      ref: useMergeRefs(store5 == null ? void 0 : store5.setAnchorElement, props.ref)
     };
     return props;
   }
@@ -21643,15 +21698,15 @@ function movingToAnotherItem(event) {
 }
 var useCompositeHover = createHook(
   function useCompositeHover2({
-    store: store4,
+    store: store5,
     focusOnHover = true,
     blurOnHoverEnd = !!focusOnHover,
     ...props
   }) {
     const context = useCompositeContext();
-    store4 = store4 || context;
+    store5 = store5 || context;
     invariant(
-      store4,
+      store5,
       "CompositeHover must be wrapped in a Composite component."
     );
     const isMouseMoving = useIsMouseMoving();
@@ -21663,12 +21718,12 @@ var useCompositeHover = createHook(
       if (!isMouseMoving()) return;
       if (!focusOnHoverProp(event)) return;
       if (!hasFocusWithin(event.currentTarget)) {
-        const baseElement = store4 == null ? void 0 : store4.getState().baseElement;
+        const baseElement = store5 == null ? void 0 : store5.getState().baseElement;
         if (baseElement && !hasFocus(baseElement)) {
           baseElement.focus();
         }
       }
-      store4 == null ? void 0 : store4.setActiveId(event.currentTarget.id);
+      store5 == null ? void 0 : store5.setActiveId(event.currentTarget.id);
     });
     const onMouseLeaveProp = props.onMouseLeave;
     const blurOnHoverEndProp = useBooleanEvent(blurOnHoverEnd);
@@ -21681,8 +21736,8 @@ var useCompositeHover = createHook(
       if (movingToAnotherItem(event)) return;
       if (!focusOnHoverProp(event)) return;
       if (!blurOnHoverEndProp(event)) return;
-      store4 == null ? void 0 : store4.setActiveId(null);
-      (_a = store4 == null ? void 0 : store4.getState().baseElement) == null ? void 0 : _a.focus();
+      store5 == null ? void 0 : store5.setActiveId(null);
+      (_a = store5 == null ? void 0 : store5.getState().baseElement) == null ? void 0 : _a.focus();
     });
     const ref = (0, import_react19.useCallback)((element) => {
       if (!element) return;
@@ -21734,7 +21789,7 @@ function getDefaultAutoSelectId(items) {
 }
 var useCombobox = createHook(
   function useCombobox2({
-    store: store4,
+    store: store5,
     focusable = true,
     autoSelect: autoSelectProp = false,
     getAutoSelectId,
@@ -21752,16 +21807,16 @@ var useCombobox = createHook(
     ...props
   }) {
     const context = useComboboxProviderContext();
-    store4 = store4 || context;
+    store5 = store5 || context;
     invariant(
-      store4,
+      store5,
       "Combobox must receive a `store` prop or be wrapped in a ComboboxProvider component."
     );
     const ref = (0, import_react20.useRef)(null);
     const [valueUpdated, forceValueUpdate] = useForceUpdate();
     const canAutoSelectRef = (0, import_react20.useRef)(false);
     const composingRef = (0, import_react20.useRef)(false);
-    const autoSelect = store4.useState(
+    const autoSelect = store5.useState(
       (state) => state.virtualFocus && autoSelectProp
     );
     const inline = autoComplete === "inline" || autoComplete === "both";
@@ -21770,14 +21825,14 @@ var useCombobox = createHook(
       if (!inline) return;
       setCanInline(true);
     }, [inline]);
-    const storeValue = store4.useState("value");
+    const storeValue = store5.useState("value");
     const prevSelectedValueRef = (0, import_react20.useRef)(void 0);
     (0, import_react20.useEffect)(() => {
-      return sync(store4, ["selectedValue", "activeId"], (_, prev) => {
+      return sync(store5, ["selectedValue", "activeId"], (_, prev) => {
         prevSelectedValueRef.current = prev.selectedValue;
       });
     }, []);
-    const inlineActiveValue = store4.useState((state) => {
+    const inlineActiveValue = store5.useState((state) => {
       var _a;
       if (!inline) return;
       if (!canInline) return;
@@ -21787,9 +21842,9 @@ var useCombobox = createHook(
       }
       return state.activeValue;
     });
-    const items = store4.useState("renderedItems");
-    const open = store4.useState("open");
-    const contentElement = store4.useState("contentElement");
+    const items = store5.useState("renderedItems");
+    const open = store5.useState("open");
+    const contentElement = store5.useState("contentElement");
     const value = (0, import_react20.useMemo)(() => {
       if (!inline) return storeValue;
       if (!canInline) return storeValue;
@@ -21866,9 +21921,9 @@ var useCombobox = createHook(
         canAutoSelectRef.current = false;
       };
       const onScroll = () => {
-        if (!store4) return;
+        if (!store5) return;
         if (!canAutoSelectRef.current) return;
-        const { activeId } = store4.getState();
+        const { activeId } = store5.getState();
         if (activeId === null) return;
         if (activeId === autoSelectIdRef.current) return;
         canAutoSelectRef.current = false;
@@ -21882,7 +21937,7 @@ var useCombobox = createHook(
         scrollingElement.removeEventListener("touchmove", onUserScroll, true);
         scrollingElement.removeEventListener("scroll", onScroll, true);
       };
-    }, [open, contentElement, store4]);
+    }, [open, contentElement, store5]);
     useSafeLayoutEffect(() => {
       if (!storeValue) return;
       if (composingRef.current) return;
@@ -21892,14 +21947,14 @@ var useCombobox = createHook(
       if (autoSelect !== "always" && open) return;
       canAutoSelectRef.current = open;
     }, [autoSelect, open]);
-    const resetValueOnSelect = store4.useState("resetValueOnSelect");
+    const resetValueOnSelect = store5.useState("resetValueOnSelect");
     useUpdateEffect(() => {
       var _a, _b;
       const canAutoSelect = canAutoSelectRef.current;
-      if (!store4) return;
+      if (!store5) return;
       if (!open) return;
       if (!canAutoSelect && !resetValueOnSelect) return;
-      const { baseElement, contentElement: contentElement2, activeId } = store4.getState();
+      const { baseElement, contentElement: contentElement2, activeId } = store5.getState();
       if (baseElement && !hasFocus(baseElement)) return;
       if (contentElement2 == null ? void 0 : contentElement2.hasAttribute("data-placing")) {
         const observer = new MutationObserver(forceValueUpdate);
@@ -21908,18 +21963,18 @@ var useCombobox = createHook(
       }
       if (autoSelect && canAutoSelect) {
         const userAutoSelectId = getAutoSelectIdProp(items);
-        const autoSelectId = userAutoSelectId !== void 0 ? userAutoSelectId : (_a = getDefaultAutoSelectId(items)) != null ? _a : store4.first();
+        const autoSelectId = userAutoSelectId !== void 0 ? userAutoSelectId : (_a = getDefaultAutoSelectId(items)) != null ? _a : store5.first();
         autoSelectIdRef.current = autoSelectId;
-        store4.move(autoSelectId != null ? autoSelectId : null);
+        store5.move(autoSelectId != null ? autoSelectId : null);
       } else {
-        const element = (_b = store4.item(activeId || store4.first())) == null ? void 0 : _b.element;
+        const element = (_b = store5.item(activeId || store5.first())) == null ? void 0 : _b.element;
         if (element && "scrollIntoView" in element) {
           element.scrollIntoView({ block: "nearest", inline: "nearest" });
         }
       }
       return;
     }, [
-      store4,
+      store5,
       open,
       valueUpdated,
       storeValue,
@@ -21937,7 +21992,7 @@ var useCombobox = createHook(
       );
       const onBlur2 = (event) => {
         if (elements.every((el) => isFocusEventOutside(event, el))) {
-          store4 == null ? void 0 : store4.setValue(value);
+          store5 == null ? void 0 : store5.setValue(value);
         }
       };
       for (const element of elements) {
@@ -21948,7 +22003,7 @@ var useCombobox = createHook(
           element.removeEventListener("focusout", onBlur2);
         }
       };
-    }, [inline, contentElement, store4, value]);
+    }, [inline, contentElement, store5, value]);
     const canShow = (event) => {
       const currentTarget = event.currentTarget;
       return currentTarget.value.length >= showMinLength;
@@ -21958,12 +22013,12 @@ var useCombobox = createHook(
     const setValueOnChangeProp = useBooleanEvent(
       // If the combobox is combined with tags, the value will be set by the tag
       // input component.
-      setValueOnChange != null ? setValueOnChange : !store4.tag
+      setValueOnChange != null ? setValueOnChange : !store5.tag
     );
     const onChange = useEvent((event) => {
       onChangeProp == null ? void 0 : onChangeProp(event);
       if (event.defaultPrevented) return;
-      if (!store4) return;
+      if (!store5) return;
       const currentTarget = event.currentTarget;
       const { value: value2, selectionStart, selectionEnd } = currentTarget;
       const nativeEvent = event.nativeEvent;
@@ -21980,8 +22035,8 @@ var useCombobox = createHook(
         }
       }
       if (setValueOnChangeProp(event)) {
-        const isSameValue = value2 === store4.getState().value;
-        store4.setValue(value2);
+        const isSameValue = value2 === store5.getState().value;
+        store5.setValue(value2);
         queueMicrotask(() => {
           setSelectionRange(currentTarget, selectionStart, selectionEnd);
         });
@@ -21990,10 +22045,10 @@ var useCombobox = createHook(
         }
       }
       if (showOnChangeProp(event)) {
-        store4.show();
+        store5.show();
       }
       if (!autoSelect || !canAutoSelectRef.current) {
-        store4.setActiveId(null);
+        store5.setActiveId(null);
       }
     });
     const onCompositionEndProp = props.onCompositionEnd;
@@ -22007,7 +22062,7 @@ var useCombobox = createHook(
     });
     const onMouseDownProp = props.onMouseDown;
     const blurActiveItemOnClickProp = useBooleanEvent(
-      blurActiveItemOnClick != null ? blurActiveItemOnClick : (() => !!(store4 == null ? void 0 : store4.getState().includesBaseElement))
+      blurActiveItemOnClick != null ? blurActiveItemOnClick : (() => !!(store5 == null ? void 0 : store5.getState().includesBaseElement))
     );
     const setValueOnClickProp = useBooleanEvent(setValueOnClick);
     const showOnClickProp = useBooleanEvent(showOnClick != null ? showOnClick : canShow);
@@ -22016,15 +22071,15 @@ var useCombobox = createHook(
       if (event.defaultPrevented) return;
       if (event.button) return;
       if (event.ctrlKey) return;
-      if (!store4) return;
+      if (!store5) return;
       if (blurActiveItemOnClickProp(event)) {
-        store4.setActiveId(null);
+        store5.setActiveId(null);
       }
       if (setValueOnClickProp(event)) {
-        store4.setValue(value);
+        store5.setValue(value);
       }
       if (showOnClickProp(event)) {
-        queueBeforeEvent(event.currentTarget, "mouseup", store4.show);
+        queueBeforeEvent(event.currentTarget, "mouseup", store5.show);
       }
     });
     const onKeyDownProp = props.onKeyDown;
@@ -22039,13 +22094,13 @@ var useCombobox = createHook(
       if (event.altKey) return;
       if (event.shiftKey) return;
       if (event.metaKey) return;
-      if (!store4) return;
-      const { open: open2 } = store4.getState();
+      if (!store5) return;
+      const { open: open2 } = store5.getState();
       if (open2) return;
       if (event.key === "ArrowUp" || event.key === "ArrowDown") {
         if (showOnKeyPressProp(event)) {
           event.preventDefault();
-          store4.show();
+          store5.show();
         }
       }
     });
@@ -22057,7 +22112,7 @@ var useCombobox = createHook(
     });
     const id = useId3(props.id);
     const ariaAutoComplete = isAriaAutoCompleteValue(autoComplete) ? autoComplete : void 0;
-    const isActiveItem = store4.useState((state) => state.activeId === null);
+    const isActiveItem = store5.useState((state) => state.activeId === null);
     props = {
       id,
       role: "combobox",
@@ -22076,7 +22131,7 @@ var useCombobox = createHook(
       onBlur
     };
     props = useComposite({
-      store: store4,
+      store: store5,
       focusable,
       ...props,
       // Enable inline autocomplete when the user moves from the combobox input
@@ -22087,7 +22142,7 @@ var useCombobox = createHook(
         return true;
       }
     });
-    props = usePopoverAnchor({ store: store4, ...props });
+    props = usePopoverAnchor({ store: store5, ...props });
     return { autoComplete: "off", ...props };
   }
 );
@@ -22120,7 +22175,7 @@ function getItemRole(popupRole) {
 }
 var useComboboxItem = createHook(
   function useComboboxItem2({
-    store: store4,
+    store: store5,
     value,
     hideOnClick,
     setValueOnClick,
@@ -22133,12 +22188,12 @@ var useComboboxItem = createHook(
   }) {
     var _a;
     const context = useComboboxScopedContext();
-    store4 = store4 || context;
+    store5 = store5 || context;
     invariant(
-      store4,
+      store5,
       "ComboboxItem must be wrapped in a ComboboxList or ComboboxPopover component."
     );
-    const { resetValueOnSelectState, multiSelectable, selected } = useStoreStateObject(store4, {
+    const { resetValueOnSelectState, multiSelectable, selected } = useStoreStateObject(store5, {
       resetValueOnSelectState: "resetValueOnSelect",
       multiSelectable(state) {
         return Array.isArray(state.selectedValue);
@@ -22174,9 +22229,9 @@ var useComboboxItem = createHook(
       if (value != null) {
         if (selectValueOnClickProp(event)) {
           if (resetValueOnSelectProp(event)) {
-            store4 == null ? void 0 : store4.resetValue();
+            store5 == null ? void 0 : store5.resetValue();
           }
-          store4 == null ? void 0 : store4.setSelectedValue((prevValue) => {
+          store5 == null ? void 0 : store5.setSelectedValue((prevValue) => {
             if (!Array.isArray(prevValue)) return value;
             if (prevValue.includes(value)) {
               return prevValue.filter((v2) => v2 !== value);
@@ -22185,25 +22240,25 @@ var useComboboxItem = createHook(
           });
         }
         if (setValueOnClickProp(event)) {
-          store4 == null ? void 0 : store4.setValue(value);
+          store5 == null ? void 0 : store5.setValue(value);
         }
       }
       if (hideOnClickProp(event)) {
-        store4 == null ? void 0 : store4.hide();
+        store5 == null ? void 0 : store5.hide();
       }
     });
     const onKeyDownProp = props.onKeyDown;
     const onKeyDown = useEvent((event) => {
       onKeyDownProp == null ? void 0 : onKeyDownProp(event);
       if (event.defaultPrevented) return;
-      const baseElement = store4 == null ? void 0 : store4.getState().baseElement;
+      const baseElement = store5 == null ? void 0 : store5.getState().baseElement;
       if (!baseElement) return;
       if (hasFocus(baseElement)) return;
       const printable = event.key.length === 1;
       if (printable || event.key === "Backspace" || event.key === "Delete") {
         queueMicrotask(() => baseElement.focus());
         if (isTextField(baseElement)) {
-          store4 == null ? void 0 : store4.setValue(baseElement.value);
+          store5 == null ? void 0 : store5.setValue(baseElement.value);
         }
       }
     });
@@ -22228,7 +22283,7 @@ var useComboboxItem = createHook(
     };
     const moveOnKeyPressProp = useBooleanEvent(moveOnKeyPress);
     props = useCompositeItem({
-      store: store4,
+      store: store5,
       ...props,
       getItem,
       // Dispatch a custom event on the combobox input when moving to an item
@@ -22237,12 +22292,12 @@ var useComboboxItem = createHook(
       moveOnKeyPress: (event) => {
         if (!moveOnKeyPressProp(event)) return false;
         const moveEvent = new Event("combobox-item-move");
-        const baseElement = store4 == null ? void 0 : store4.getState().baseElement;
+        const baseElement = store5 == null ? void 0 : store5.getState().baseElement;
         baseElement == null ? void 0 : baseElement.dispatchEvent(moveEvent);
         return true;
       }
     });
-    props = useCompositeHover({ store: store4, focusOnHover, ...props });
+    props = useCompositeHover({ store: store5, focusOnHover, ...props });
     return props;
   }
 );
@@ -22326,12 +22381,12 @@ function splitValue(itemValue, userValue) {
   });
   return parts;
 }
-var useComboboxItemValue = createHook(function useComboboxItemValue2({ store: store4, value, userValue, ...props }) {
+var useComboboxItemValue = createHook(function useComboboxItemValue2({ store: store5, value, userValue, ...props }) {
   const context = useComboboxScopedContext();
-  store4 = store4 || context;
+  store5 = store5 || context;
   const itemContext = (0, import_react22.useContext)(ComboboxItemValueContext);
   const itemValue = value != null ? value : itemContext;
-  const inputValue = useStoreState(store4, (state) => userValue != null ? userValue : state == null ? void 0 : state.value);
+  const inputValue = useStoreState(store5, (state) => userValue != null ? userValue : state == null ? void 0 : state.value);
   const children = (0, import_react22.useMemo)(() => {
     if (!itemValue) return;
     if (!inputValue) return itemValue;
@@ -22351,14 +22406,14 @@ var ComboboxItemValue = forwardRef22(function ComboboxItemValue2(props) {
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-label.js
 var TagName12 = "label";
 var useComboboxLabel = createHook(
-  function useComboboxLabel2({ store: store4, ...props }) {
+  function useComboboxLabel2({ store: store5, ...props }) {
     const context = useComboboxProviderContext();
-    store4 = store4 || context;
+    store5 = store5 || context;
     invariant(
-      store4,
+      store5,
       "ComboboxLabel must receive a `store` prop or be wrapped in a ComboboxProvider component."
     );
-    const comboboxId = store4.useState((state) => {
+    const comboboxId = store5.useState((state) => {
       var _a;
       return (_a = state.baseElement) == null ? void 0 : _a.id;
     });
@@ -22381,28 +22436,28 @@ var import_react23 = __toESM(require_react(), 1);
 var import_jsx_runtime78 = __toESM(require_jsx_runtime(), 1);
 var TagName13 = "div";
 var useComboboxList = createHook(
-  function useComboboxList2({ store: store4, alwaysVisible, ...props }) {
+  function useComboboxList2({ store: store5, alwaysVisible, ...props }) {
     const scopedContext = useComboboxScopedContext(true);
     const context = useComboboxContext();
-    store4 = store4 || context;
-    const scopedContextSameStore = !!store4 && store4 === scopedContext;
+    store5 = store5 || context;
+    const scopedContextSameStore = !!store5 && store5 === scopedContext;
     invariant(
-      store4,
+      store5,
       "ComboboxList must receive a `store` prop or be wrapped in a ComboboxProvider component."
     );
     const ref = (0, import_react23.useRef)(null);
     const id = useId3(props.id);
-    const mounted = store4.useState("mounted");
+    const mounted = store5.useState("mounted");
     const hidden = isHidden(mounted, props.hidden, alwaysVisible);
     const style = hidden ? { ...props.style, display: "none" } : props.style;
-    const multiSelectable = store4.useState(
+    const multiSelectable = store5.useState(
       (state) => Array.isArray(state.selectedValue)
     );
     const role = useAttribute(ref, "role", props.role);
     const isCompositeRole = role === "listbox" || role === "tree" || role === "grid";
     const ariaMultiSelectable = isCompositeRole ? multiSelectable || void 0 : void 0;
     const [hasListboxInside, setHasListboxInside] = (0, import_react23.useState)(false);
-    const contentElement = store4.useState("contentElement");
+    const contentElement = store5.useState("contentElement");
     useSafeLayoutEffect(() => {
       if (!mounted) return;
       const element = ref.current;
@@ -22429,10 +22484,10 @@ var useComboboxList = createHook(
     }
     props = useWrapElement(
       props,
-      (element) => /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(ComboboxScopedContextProvider, { value: store4, children: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(ComboboxListRoleContext.Provider, { value: role, children: element }) }),
-      [store4, role]
+      (element) => /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(ComboboxScopedContextProvider, { value: store5, children: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(ComboboxListRoleContext.Provider, { value: role, children: element }) }),
+      [store5, role]
     );
-    const setContentElement = id && (!scopedContext || !scopedContextSameStore) ? store4.setContentElement : null;
+    const setContentElement = id && (!scopedContext || !scopedContextSameStore) ? store5.setContentElement : null;
     props = {
       id,
       hidden,
@@ -22470,10 +22525,10 @@ function createComboboxStore({
   tag,
   ...props
 } = {}) {
-  const store4 = mergeStore(props.store, pick2(tag, ["value", "rtl"]));
-  throwOnConflictingProps(props, store4);
+  const store5 = mergeStore(props.store, pick2(tag, ["value", "rtl"]));
+  throwOnConflictingProps(props, store5);
   const tagState = tag == null ? void 0 : tag.getState();
-  const syncState = store4 == null ? void 0 : store4.getState();
+  const syncState = store5 == null ? void 0 : store5.getState();
   const activeId = defaultValue(
     props.activeId,
     syncState == null ? void 0 : syncState.activeId,
@@ -22523,7 +22578,7 @@ function createComboboxStore({
     ""
   );
   const multiSelectable = Array.isArray(selectedValue);
-  const initialState = {
+  const initialState4 = {
     ...composite.getState(),
     ...popover.getState(),
     value,
@@ -22540,7 +22595,7 @@ function createComboboxStore({
     ),
     activeValue: syncState == null ? void 0 : syncState.activeValue
   };
-  const combobox = createStore(initialState, composite, popover, store4);
+  const combobox = createStore(initialState4, composite, popover, store5);
   if (isTouchSafari) {
     setup(
       combobox,
@@ -22600,7 +22655,7 @@ function createComboboxStore({
     ...combobox,
     tag,
     setValue: (value2) => combobox.setState("value", value2),
-    resetValue: () => combobox.setState("value", initialState.value),
+    resetValue: () => combobox.setState("value", initialState4.value),
     setSelectedValue: (selectedValue2) => combobox.setState("selectedValue", selectedValue2)
   };
 }
@@ -22614,15 +22669,15 @@ function useComboboxStoreOptions(props) {
   };
   return useCompositeStoreOptions(props);
 }
-function useComboboxStoreProps(store4, update3, props) {
+function useComboboxStoreProps(store5, update3, props) {
   useUpdateEffect(update3, [props.tag]);
-  useStoreProps(store4, props, "value", "setValue");
-  useStoreProps(store4, props, "selectedValue", "setSelectedValue");
-  useStoreProps(store4, props, "resetValueOnHide");
-  useStoreProps(store4, props, "resetValueOnSelect");
+  useStoreProps(store5, props, "value", "setValue");
+  useStoreProps(store5, props, "selectedValue", "setSelectedValue");
+  useStoreProps(store5, props, "resetValueOnHide");
+  useStoreProps(store5, props, "resetValueOnSelect");
   return Object.assign(
     useCompositeStoreProps(
-      usePopoverStoreProps(store4, update3, props),
+      usePopoverStoreProps(store5, update3, props),
       update3,
       props
     ),
@@ -22631,15 +22686,15 @@ function useComboboxStoreProps(store4, update3, props) {
 }
 function useComboboxStore(props = {}) {
   props = useComboboxStoreOptions(props);
-  const [store4, update3] = useStore(createComboboxStore, props);
-  return useComboboxStoreProps(store4, update3, props);
+  const [store5, update3] = useStore(createComboboxStore, props);
+  return useComboboxStoreProps(store5, update3, props);
 }
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-provider.js
 var import_jsx_runtime79 = __toESM(require_jsx_runtime(), 1);
 function ComboboxProvider(props = {}) {
-  const store4 = useComboboxStore(props);
-  return /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(ComboboxContextProvider, { value: store4, children: props.children });
+  const store5 = useComboboxStore(props);
+  return /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(ComboboxContextProvider, { value: store5, children: props.children });
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/search-widget.mjs
@@ -22673,14 +22728,14 @@ function useElements({
 }) {
   const staticElements = Array.isArray(elements) && elements.length > 0 ? elements : EMPTY_ARRAY4;
   const [records, setRecords] = (0, import_element25.useState)(staticElements);
-  const [isLoading, setIsLoading] = (0, import_element25.useState)(false);
+  const [isLoading, setIsLoading2] = (0, import_element25.useState)(false);
   (0, import_element25.useEffect)(() => {
     if (!getElements) {
       setRecords(staticElements);
       return;
     }
     let cancelled = false;
-    setIsLoading(true);
+    setIsLoading2(true);
     getElements().then((fetchedElements) => {
       if (!cancelled) {
         const dynamicElements = Array.isArray(fetchedElements) && fetchedElements.length > 0 ? fetchedElements : staticElements;
@@ -22692,7 +22747,7 @@ function useElements({
       }
     }).finally(() => {
       if (!cancelled) {
-        setIsLoading(false);
+        setIsLoading2(false);
       }
     });
     return () => {
@@ -24234,7 +24289,7 @@ var import_i18n30 = __toESM(require_i18n(), 1);
 var import_jsx_runtime89 = __toESM(require_jsx_runtime(), 1);
 function DataViewsLayout({ className }) {
   const {
-    actions = [],
+    actions: actions2 = [],
     data,
     fields,
     getItemId: getItemId2,
@@ -24258,7 +24313,7 @@ function DataViewsLayout({ className }) {
     ViewComponent,
     {
       className,
-      actions,
+      actions: actions2,
       data,
       fields,
       getItemId: getItemId2,
@@ -24286,9 +24341,9 @@ function DataViewsFooter() {
     view,
     paginationInfo: { totalItems = 0, totalPages },
     data,
-    actions = EMPTY_ARRAY5
+    actions: actions2 = EMPTY_ARRAY5
   } = (0, import_element36.useContext)(dataviews_context_default);
-  const hasBulkActions = useSomeItemHasAPossibleBulkAction(actions, data) && [LAYOUT_TABLE, LAYOUT_GRID].includes(view.type);
+  const hasBulkActions = useSomeItemHasAPossibleBulkAction(actions2, data) && [LAYOUT_TABLE, LAYOUT_GRID].includes(view.type);
   if (!totalItems || !totalPages || totalPages <= 1 && !hasBulkActions) {
     return null;
   }
@@ -27696,7 +27751,7 @@ function DataViews({
   fields,
   search = true,
   searchLabel = void 0,
-  actions = EMPTY_ARRAY6,
+  actions: actions2 = EMPTY_ARRAY6,
   data,
   getItemId: getItemId2 = defaultGetItemId,
   getItemLevel,
@@ -27800,7 +27855,7 @@ function DataViews({
         view,
         onChangeView,
         fields: _fields,
-        actions,
+        actions: actions2,
         data,
         isLoading,
         paginationInfo,
@@ -27850,9 +27905,9 @@ var dataviews_default = DataViewsSubComponents;
 
 // routes/responses/stage.tsx
 var import_date10 = __toESM(require_date());
-var import_element82 = __toESM(require_element());
+var import_element90 = __toESM(require_element());
 var import_html_entities5 = __toESM(require_html_entities());
-var import_i18n76 = __toESM(require_i18n());
+var import_i18n81 = __toESM(require_i18n());
 import { useParams, useSearch as useSearch2, useNavigate as useNavigate4 } from "@wordpress/route";
 var React36 = __toESM(require_react());
 
@@ -29185,23 +29240,23 @@ var import_i18n56 = __toESM(require_i18n(), 1);
 var UNKNOWN_ERROR_MESSAGE = (0, import_i18n56.__)("Unknown error", "jetpack-forms");
 
 // src/store/config/resolvers.ts
-var fetchConfigData = async (dispatch) => {
-  dispatch(setConfigLoading(true));
+var fetchConfigData = async (dispatch4) => {
+  dispatch4(setConfigLoading(true));
   try {
     const result2 = await (0, import_api_fetch2.default)({
       path: "/wp/v2/feedback/config"
     });
-    dispatch(receiveConfig(result2));
+    dispatch4(receiveConfig(result2));
   } catch (e2) {
     const message2 = e2 instanceof Error ? e2.message : UNKNOWN_ERROR_MESSAGE;
-    dispatch(setConfigError(message2));
+    dispatch4(setConfigError(message2));
   } finally {
-    dispatch(setConfigLoading(false));
+    dispatch4(setConfigLoading(false));
   }
 };
 function getConfig() {
-  return async ({ dispatch }) => {
-    await fetchConfigData(dispatch);
+  return async ({ dispatch: dispatch4 }) => {
+    await fetchConfigData(dispatch4);
   };
 }
 getConfig.isFulfilled = (state) => {
@@ -29306,8 +29361,8 @@ var store = (0, import_data6.createReduxStore)(CONFIG_STORE, {
 // src/hooks/use-config-value.ts
 function useConfigValue(key) {
   return (0, import_data7.useSelect)(
-    (select) => {
-      const configSelect = select(CONFIG_STORE);
+    (select3) => {
+      const configSelect = select3(CONFIG_STORE);
       const config = configSelect.getConfig();
       return config?.[key];
     },
@@ -30144,7 +30199,7 @@ var hasLoadedMeta = false;
 var resetMetadataFlag = () => {
   hasLoadedMeta = false;
 };
-var fetchIntegrationsMetadata = () => async ({ dispatch }) => {
+var fetchIntegrationsMetadata = () => async ({ dispatch: dispatch4 }) => {
   const metadataPath = "/wp/v2/feedback/integrations-metadata";
   const metadata = await (0, import_api_fetch4.default)({ path: metadataPath });
   const partialIntegrations = metadata.map((meta) => ({
@@ -30160,26 +30215,26 @@ var fetchIntegrationsMetadata = () => async ({ dispatch }) => {
     __isPartial: true
     // Flag to indicate this is metadata-only
   }));
-  dispatch(receiveIntegrations(partialIntegrations));
+  dispatch4(receiveIntegrations(partialIntegrations));
 };
-var fetchFullIntegrations = () => async ({ dispatch }) => {
+var fetchFullIntegrations = () => async ({ dispatch: dispatch4 }) => {
   const fullPath = (0, import_url3.addQueryArgs)("/wp/v2/feedback/integrations", { version: 2 });
   const fullIntegrations = await (0, import_api_fetch4.default)({ path: fullPath });
-  dispatch(receiveIntegrations(fullIntegrations));
+  dispatch4(receiveIntegrations(fullIntegrations));
 };
-var getIntegrations = () => async ({ dispatch }) => {
-  dispatch(setIntegrationsLoading(true));
+var getIntegrations = () => async ({ dispatch: dispatch4 }) => {
+  dispatch4(setIntegrationsLoading(true));
   try {
     if (!hasLoadedMeta) {
-      await fetchIntegrationsMetadata()({ dispatch });
+      await fetchIntegrationsMetadata()({ dispatch: dispatch4 });
       hasLoadedMeta = true;
     }
-    await fetchFullIntegrations()({ dispatch });
+    await fetchFullIntegrations()({ dispatch: dispatch4 });
   } catch (e2) {
     const message2 = e2 instanceof Error ? e2.message : UNKNOWN_ERROR_MESSAGE;
-    dispatch(setIntegrationsError(message2));
+    dispatch4(setIntegrationsError(message2));
   } finally {
-    dispatch(setIntegrationsLoading(false));
+    dispatch4(setIntegrationsLoading(false));
   }
 };
 getIntegrations.shouldInvalidate = (action) => action.type === INVALIDATE_INTEGRATIONS;
@@ -30299,9 +30354,9 @@ function CreateFormButton({
 // src/dashboard/components/empty-responses/index.tsx
 var import_jsx_runtime142 = __toESM(require_jsx_runtime(), 1);
 var useInstallAkismet = () => {
-  const { akismetIntegration } = (0, import_data10.useSelect)((select) => {
-    const store4 = select(INTEGRATIONS_STORE);
-    const integrations = store4.getIntegrations() || [];
+  const { akismetIntegration } = (0, import_data10.useSelect)((select3) => {
+    const store5 = select3(INTEGRATIONS_STORE);
+    const integrations = store5.getIntegrations() || [];
     return {
       akismetIntegration: integrations.find(
         (integration) => integration.id === "akismet"
@@ -30377,10 +30432,10 @@ var useInstallAkismet = () => {
     handleAkismetSetup
   };
 };
-var EmptyWrapper = ({ heading = "", body = "", actions = null }) => /* @__PURE__ */ (0, import_jsx_runtime142.jsxs)(import_components64.__experimentalVStack, { alignment: "center", spacing: "2", children: [
+var EmptyWrapper = ({ heading = "", body = "", actions: actions2 = null }) => /* @__PURE__ */ (0, import_jsx_runtime142.jsxs)(import_components64.__experimentalVStack, { alignment: "center", spacing: "2", children: [
   heading && /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(import_components64.__experimentalText, { as: "h3", weight: "500", size: "15", children: heading }),
   body && /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(import_components64.__experimentalText, { variant: "muted", children: body }),
-  actions && /* @__PURE__ */ (0, import_jsx_runtime142.jsx)("span", { style: { marginBlockStart: "16px" }, children: actions })
+  actions2 && /* @__PURE__ */ (0, import_jsx_runtime142.jsx)("span", { style: { marginBlockStart: "16px" }, children: actions2 })
 ] });
 var EmptyResponses = ({ status, isSearch, readStatusFilter }) => {
   const emptyTrashDays = useConfigValue("emptyTrashDays") ?? 0;
@@ -31581,20 +31636,20 @@ var setSelectedResponses = (selectedResponses) => ({
   selectedResponses
 });
 function setCurrentQuery(currentQuery2) {
-  return ({ dispatch, select, registry }) => {
-    const previousQuery = select.getCurrentQuery();
+  return ({ dispatch: dispatch4, select: select3, registry }) => {
+    const previousQuery = select3.getCurrentQuery();
     const queryWithFormat = {
       ...currentQuery2,
       fields_format: currentQuery2.fields_format ?? previousQuery.fields_format ?? "collection"
     };
     const filtersChanged = previousQuery.status !== queryWithFormat.status || previousQuery.search !== queryWithFormat.search || previousQuery.is_unread !== queryWithFormat.is_unread || previousQuery.parent !== queryWithFormat.parent || previousQuery.before !== queryWithFormat.before || previousQuery.after !== queryWithFormat.after;
     if (filtersChanged) {
-      dispatch(clearInvalidRecords());
+      dispatch4(clearInvalidRecords());
       if (registry && registry.dispatch("core")) {
         registry.dispatch("core").invalidateResolution("getEntityRecords", ["postType", "feedback", queryWithFormat]);
       }
     }
-    dispatch({
+    dispatch4({
       type: SET_CURRENT_QUERY,
       currentQuery: queryWithFormat
     });
@@ -31765,14 +31820,14 @@ __export(resolvers_exports3, {
 });
 var import_api_fetch6 = __toESM(require_api_fetch(), 1);
 var import_url4 = __toESM(require_url(), 1);
-var getFilters = () => async ({ dispatch }) => {
+var getFilters = () => async ({ dispatch: dispatch4 }) => {
   const results = await (0, import_api_fetch6.default)({
     path: "/wp/v2/feedback/filters"
   });
-  dispatch.receiveFilters(results);
+  dispatch4.receiveFilters(results);
 };
 getFilters.shouldInvalidate = (action) => action.type === INVALIDATE_FILTERS;
-var getCounts = (queryParams = {}) => async ({ dispatch }) => {
+var getCounts = (queryParams = {}) => async ({ dispatch: dispatch4 }) => {
   const params = {};
   if (queryParams?.search) {
     params.search = queryParams.search;
@@ -31791,7 +31846,7 @@ var getCounts = (queryParams = {}) => async ({ dispatch }) => {
   }
   const path = (0, import_url4.addQueryArgs)("/wp/v2/feedback/counts", params);
   const response = await (0, import_api_fetch6.default)({ path });
-  dispatch.setCounts(response, queryParams);
+  dispatch4.setCounts(response, queryParams);
 };
 getCounts.shouldInvalidate = (action) => action.type === INVALIDATE_COUNTS;
 
@@ -31922,13 +31977,13 @@ function useInboxData(options = {}) {
     invalidRecords: invalidRecords2,
     hasPendingActions: hasPendingActions2
   } = (0, import_data13.useSelect)(
-    (select) => ({
-      selectedResponsesCount: select(store3).getSelectedResponsesCount(),
-      currentStatus: select(store3).getCurrentStatus(),
-      currentQuery: select(store3).getCurrentQuery(),
-      filterOptions: select(store3).getFilters(),
-      invalidRecords: select(store3).getInvalidRecords(),
-      hasPendingActions: select(store3).hasPendingActions()
+    (select3) => ({
+      selectedResponsesCount: select3(store3).getSelectedResponsesCount(),
+      currentStatus: select3(store3).getCurrentStatus(),
+      currentQuery: select3(store3).getCurrentQuery(),
+      filterOptions: select3(store3).getFilters(),
+      invalidRecords: select3(store3).getInvalidRecords(),
+      hasPendingActions: select3(store3).hasPendingActions()
     }),
     []
   );
@@ -31962,9 +32017,9 @@ function useInboxData(options = {}) {
     totalPages
   } = (0, import_core_data.useEntityRecords)("postType", "feedback", queryWithInvalidIds);
   const editedRecords = (0, import_data13.useSelect)(
-    (select) => {
+    (select3) => {
       return (rawRecords || []).map((record) => {
-        const editedRecord = select(import_core_data.store).getEditedEntityRecord(
+        const editedRecord = select3(import_core_data.store).getEditedEntityRecord(
           "postType",
           "feedback",
           record.id
@@ -32012,12 +32067,12 @@ function useInboxData(options = {}) {
     return params;
   }, [currentQuery2]);
   const { totalItemsInbox, totalItemsSpam, totalItemsTrash } = (0, import_data13.useSelect)(
-    (select) => {
-      select(store3).getCounts(countsQueryParams);
+    (select3) => {
+      select3(store3).getCounts(countsQueryParams);
       return {
-        totalItemsInbox: select(store3).getInboxCount(countsQueryParams),
-        totalItemsSpam: select(store3).getSpamCount(countsQueryParams),
-        totalItemsTrash: select(store3).getTrashCount(countsQueryParams)
+        totalItemsInbox: select3(store3).getInboxCount(countsQueryParams),
+        totalItemsSpam: select3(store3).getSpamCount(countsQueryParams),
+        totalItemsTrash: select3(store3).getTrashCount(countsQueryParams)
       };
     },
     [countsQueryParams]
@@ -32625,7 +32680,7 @@ function CompositeList(props) {
   const map = useRefWithInit2(createMap).current;
   const [mapTick, setMapTick] = React16.useState(0);
   const lastTickRef = React16.useRef(mapTick);
-  const register4 = useStableCallback((node, metadata) => {
+  const register6 = useStableCallback((node, metadata) => {
     map.set(node, metadata ?? null);
     lastTickRef.current += 1;
     setMapTick(lastTickRef.current);
@@ -32710,13 +32765,13 @@ function CompositeList(props) {
     listeners.forEach((l2) => l2(sortedMap));
   }, [listeners, sortedMap]);
   const contextValue = React16.useMemo(() => ({
-    register: register4,
+    register: register6,
     unregister,
     subscribeMapChange,
     elementsRef,
     labelsRef,
     nextIndexRef
-  }), [register4, unregister, subscribeMapChange, elementsRef, labelsRef, nextIndexRef]);
+  }), [register6, unregister, subscribeMapChange, elementsRef, labelsRef, nextIndexRef]);
   return /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(CompositeListContext.Provider, {
     value: contextValue,
     children
@@ -33146,7 +33201,7 @@ function useCompositeListItem(params = {}) {
     index: externalIndex
   } = params;
   const {
-    register: register4,
+    register: register6,
     unregister,
     subscribeMapChange,
     elementsRef,
@@ -33179,13 +33234,13 @@ function useCompositeListItem(params = {}) {
     }
     const node = componentRef.current;
     if (node) {
-      register4(node, metadata);
+      register6(node, metadata);
       return () => {
         unregister(node);
       };
     }
     return void 0;
-  }, [externalIndex, register4, unregister, metadata]);
+  }, [externalIndex, register6, unregister, metadata]);
   useIsoLayoutEffect(() => {
     if (externalIndex != null) {
       return void 0;
@@ -34877,9 +34932,9 @@ function DataViewsHeaderRow({
 }) {
   const navigate = useNavigate2();
   const { totalItems: formsCount = 0 } = useFormsData(1, 1, "", NON_TRASH_FORM_STATUSES);
-  const responsesInboxCount = (0, import_data14.useSelect)((select) => {
-    select(store3).getCounts();
-    return select(store3).getInboxCount() ?? 0;
+  const responsesInboxCount = (0, import_data14.useSelect)((select3) => {
+    select3(store3).getCounts();
+    return select3(store3).getInboxCount() ?? 0;
   }, []);
   const onTabChange = (0, import_element75.useCallback)(
     (nextValue) => {
@@ -34931,11 +34986,11 @@ function DataViewsHeaderRow({
 }
 
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
-var import_core_data5 = __toESM(require_core_data(), 1);
-var import_data17 = __toESM(require_data(), 1);
-var import_element80 = __toESM(require_element(), 1);
+var import_core_data6 = __toESM(require_core_data(), 1);
+var import_data30 = __toESM(require_data(), 1);
+var import_element88 = __toESM(require_element(), 1);
 var import_html_entities4 = __toESM(require_html_entities(), 1);
-var import_i18n74 = __toESM(require_i18n(), 1);
+var import_i18n79 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/edit-form-button/index.tsx
 var import_components66 = __toESM(require_components(), 1);
@@ -35193,126 +35248,1520 @@ var EmptyTrashButton = ({
 };
 var empty_trash_button_default = EmptyTrashButton;
 
-// src/dashboard/wp-build/components/back-to-forms-button/index.tsx
-var import_components69 = __toESM(require_components(), 1);
+// src/dashboard/components/export-responses/button.tsx
+var import_components72 = __toESM(require_components(), 1);
+var import_i18n76 = __toESM(require_i18n(), 1);
+
+// ../../js-packages/components/build/components/layout/use-breakpoint-match/index.js
+var import_compose14 = __toESM(require_compose(), 1);
+
+// ../../js-packages/components/build/components/layout/breakpoints.module.scss
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='223cbd12e4']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "223cbd12e4");
+  style.appendChild(document.createTextNode(""));
+  document.head.appendChild(style);
+}
+var breakpoints_module_default = { "sm": "(max-width: 599px)", "md": "(min-width: 600px) and (max-width: 959px)", "lg": "(min-width: 960px)" };
+
+// ../../js-packages/components/build/components/layout/use-breakpoint-match/index.js
+var BREAKPOINTS = ["sm", "md", "lg"];
+var getMediaByOperator = (breakpoint, operator, matches) => {
+  const breakpointIndex = BREAKPOINTS.indexOf(breakpoint);
+  const breakpointIndexPlusOne = breakpointIndex + 1;
+  const isEqual = operator.includes("=");
+  let allNeededBreakpoints = [];
+  if (operator.startsWith("<")) {
+    allNeededBreakpoints = BREAKPOINTS.slice(0, isEqual ? breakpointIndexPlusOne : breakpointIndex);
+  }
+  if (operator.startsWith(">")) {
+    allNeededBreakpoints = BREAKPOINTS.slice(isEqual ? breakpointIndex : breakpointIndexPlusOne);
+  }
+  return allNeededBreakpoints?.length ? allNeededBreakpoints.some((brk) => matches[brk]) : matches[breakpoint];
+};
+var useBreakpointMatch = (breakpointToMatch, operatorToMatch) => {
+  const breakpoints = Array.isArray(breakpointToMatch) ? breakpointToMatch : [breakpointToMatch];
+  const operators = Array.isArray(operatorToMatch) ? operatorToMatch : [operatorToMatch];
+  const [smKey, mdKey, lgKey] = BREAKPOINTS;
+  const sm = (0, import_compose14.useMediaQuery)(breakpoints_module_default[smKey]);
+  const md = (0, import_compose14.useMediaQuery)(breakpoints_module_default[mdKey]);
+  const lg = (0, import_compose14.useMediaQuery)(breakpoints_module_default[lgKey]);
+  const matches = { sm, md, lg };
+  return breakpoints.map((breakpoint, idx) => {
+    const operator = operators[idx];
+    return operator ? getMediaByOperator(breakpoint, operator, matches) : matches[breakpoint];
+  });
+};
+var use_breakpoint_match_default = useBreakpointMatch;
+
+// ../../js-packages/api/index.jsx
+var import_jetpack_config = __toESM(require_src(), 1);
+var import_url5 = __toESM(require_url(), 1);
+function createCustomError(name) {
+  class CustomError extends Error {
+    constructor(...args) {
+      super(...args);
+      this.name = name;
+    }
+  }
+  return CustomError;
+}
+var JsonParseError = createCustomError("JsonParseError");
+var JsonParseAfterRedirectError = createCustomError("JsonParseAfterRedirectError");
+var Api404Error = createCustomError("Api404Error");
+var Api404AfterRedirectError = createCustomError("Api404AfterRedirectError");
+var FetchNetworkError = createCustomError("FetchNetworkError");
+function JetpackRestApiClient(root, nonce) {
+  let apiRoot = root, wpcomOriginApiUrl = root, headers = {
+    "X-WP-Nonce": nonce
+  }, getParams = {
+    credentials: "same-origin",
+    headers
+  }, postParams = {
+    method: "post",
+    credentials: "same-origin",
+    headers: Object.assign({}, headers, {
+      "Content-type": "application/json"
+    })
+  }, cacheBusterCallback = addCacheBuster;
+  const methods = {
+    setApiRoot(newRoot) {
+      apiRoot = newRoot;
+    },
+    /**
+     * Sets API root for search endpoints.
+     * They are routed through wpcom API for wpcom simple sites,
+     * so we add `/wp-json/wpcom-origin/` to this path on wpcom.
+     * For non-wpcom sites, this is the same as apiRoot.
+     *
+     * @param {string} newRoot - API root for search endpoints.
+     */
+    setWpcomOriginApiUrl(newRoot) {
+      wpcomOriginApiUrl = newRoot;
+    },
+    setApiNonce(newNonce) {
+      headers = {
+        "X-WP-Nonce": newNonce
+      };
+      getParams = {
+        credentials: "same-origin",
+        headers
+      };
+      postParams = {
+        method: "post",
+        credentials: "same-origin",
+        headers: Object.assign({}, headers, {
+          "Content-type": "application/json"
+        })
+      };
+    },
+    setCacheBusterCallback: (callback) => {
+      cacheBusterCallback = callback;
+    },
+    registerSite: (deprecated, redirectUri, from) => {
+      const params = {};
+      if ((0, import_jetpack_config.jetpackConfigHas)("consumer_slug")) {
+        params.plugin_slug = (0, import_jetpack_config.jetpackConfigGet)("consumer_slug");
+      }
+      if (null !== redirectUri) {
+        params.redirect_uri = redirectUri;
+      }
+      if (from) {
+        params.from = from;
+      }
+      return postRequest(`${apiRoot}jetpack/v4/connection/register`, postParams, {
+        body: JSON.stringify(params)
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    fetchAuthorizationUrl: (redirectUri) => getRequest(
+      (0, import_url5.addQueryArgs)(`${apiRoot}jetpack/v4/connection/authorize_url`, {
+        no_iframe: "1",
+        redirect_uri: redirectUri
+      }),
+      getParams
+    ).then(checkStatus).then(parseJsonResponse),
+    fetchSiteConnectionData: () => getRequest(`${apiRoot}jetpack/v4/connection/data`, getParams).then(parseJsonResponse),
+    fetchSiteConnectionStatus: () => getRequest(`${apiRoot}jetpack/v4/connection`, getParams).then(parseJsonResponse),
+    fetchSiteConnectionTest: () => getRequest(`${apiRoot}jetpack/v4/connection/test`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchUserConnectionData: () => getRequest(`${apiRoot}jetpack/v4/connection/data`, getParams).then(parseJsonResponse),
+    fetchUserTrackingSettings: () => getRequest(`${apiRoot}jetpack/v4/tracking/settings`, getParams).then(checkStatus).then(parseJsonResponse),
+    updateUserTrackingSettings: (newSettings) => postRequest(`${apiRoot}jetpack/v4/tracking/settings`, postParams, {
+      body: JSON.stringify(newSettings)
+    }).then(checkStatus).then(parseJsonResponse),
+    disconnectSite: () => postRequest(`${apiRoot}jetpack/v4/connection`, postParams, {
+      body: JSON.stringify({ isActive: false })
+    }).then(checkStatus).then(parseJsonResponse),
+    fetchConnectUrl: () => getRequest(`${apiRoot}jetpack/v4/connection/url`, getParams).then(checkStatus).then(parseJsonResponse),
+    unlinkUser: (force = false, options = {}) => {
+      const params = {
+        linked: false,
+        force: !!force
+      };
+      if (options.disconnectAllUsers) {
+        params["disconnect-all-users"] = true;
+      }
+      return postRequest(`${apiRoot}jetpack/v4/connection/user`, postParams, {
+        body: JSON.stringify(params)
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    reconnect: () => postRequest(`${apiRoot}jetpack/v4/connection/reconnect`, postParams).then(checkStatus).then(parseJsonResponse),
+    fetchConnectedPlugins: () => getRequest(`${apiRoot}jetpack/v4/connection/plugins`, getParams).then(checkStatus).then(parseJsonResponse),
+    setHasSeenWCConnectionModal: () => postRequest(`${apiRoot}jetpack/v4/seen-wc-connection-modal`, postParams).then(checkStatus).then(parseJsonResponse),
+    fetchModules: () => getRequest(`${apiRoot}jetpack/v4/module/all`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchModule: (slug) => getRequest(`${apiRoot}jetpack/v4/module/${slug}`, getParams).then(checkStatus).then(parseJsonResponse),
+    activateModule: (slug) => postRequest(`${apiRoot}jetpack/v4/module/${slug}/active`, postParams, {
+      body: JSON.stringify({ active: true })
+    }).then(checkStatus).then(parseJsonResponse),
+    deactivateModule: (slug) => postRequest(`${apiRoot}jetpack/v4/module/${slug}/active`, postParams, {
+      body: JSON.stringify({ active: false })
+    }),
+    updateModuleOptions: (slug, newOptionValues) => postRequest(`${apiRoot}jetpack/v4/module/${slug}`, postParams, {
+      body: JSON.stringify(newOptionValues)
+    }).then(checkStatus).then(parseJsonResponse),
+    updateSettings: (newOptionValues) => postRequest(`${apiRoot}jetpack/v4/settings`, postParams, {
+      body: JSON.stringify(newOptionValues)
+    }).then(checkStatus).then(parseJsonResponse),
+    getProtectCount: () => getRequest(`${apiRoot}jetpack/v4/module/protect/data`, getParams).then(checkStatus).then(parseJsonResponse),
+    resetOptions: (options) => postRequest(`${apiRoot}jetpack/v4/options/${options}`, postParams, {
+      body: JSON.stringify({ reset: true })
+    }).then(checkStatus).then(parseJsonResponse),
+    activateVaultPress: () => postRequest(`${apiRoot}jetpack/v4/plugins`, postParams, {
+      body: JSON.stringify({ slug: "vaultpress", status: "active" })
+    }).then(checkStatus).then(parseJsonResponse),
+    getVaultPressData: () => getRequest(`${apiRoot}jetpack/v4/module/vaultpress/data`, getParams).then(checkStatus).then(parseJsonResponse),
+    installPlugin: (slug, source) => {
+      const props = { slug, status: "active" };
+      if (source) {
+        props.source = source;
+      }
+      return postRequest(`${apiRoot}jetpack/v4/plugins`, postParams, {
+        body: JSON.stringify(props)
+      }).then(checkStatus).then(parseJsonResponse);
+    },
+    activateAkismet: () => postRequest(`${apiRoot}jetpack/v4/plugins`, postParams, {
+      body: JSON.stringify({ slug: "akismet", status: "active" })
+    }).then(checkStatus).then(parseJsonResponse),
+    getAkismetData: () => getRequest(`${apiRoot}jetpack/v4/module/akismet/data`, getParams).then(checkStatus).then(parseJsonResponse),
+    checkAkismetKey: () => getRequest(`${apiRoot}jetpack/v4/module/akismet/key/check`, getParams).then(checkStatus).then(parseJsonResponse),
+    checkAkismetKeyTyped: (apiKey) => postRequest(`${apiRoot}jetpack/v4/module/akismet/key/check`, postParams, {
+      body: JSON.stringify({ api_key: apiKey })
+    }).then(checkStatus).then(parseJsonResponse),
+    getFeatureTypeStatus: (customContentType) => getRequest(`${apiRoot}jetpack/v4/feature/${customContentType}`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchStatsData: (range) => getRequest(statsDataUrl(range), getParams).then(checkStatus).then(parseJsonResponse).then(handleStatsResponseError),
+    getPluginUpdates: () => getRequest(`${apiRoot}jetpack/v4/updates/plugins`, getParams).then(checkStatus).then(parseJsonResponse),
+    getPlans: () => getRequest(`${apiRoot}jetpack/v4/plans`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchSettings: () => getRequest(`${apiRoot}jetpack/v4/settings`, getParams).then(checkStatus).then(parseJsonResponse),
+    updateSetting: (updatedSetting) => postRequest(`${apiRoot}jetpack/v4/settings`, postParams, {
+      body: JSON.stringify(updatedSetting)
+    }).then(checkStatus).then(parseJsonResponse),
+    fetchSiteData: () => getRequest(`${apiRoot}jetpack/v4/site`, getParams).then(checkStatus).then(parseJsonResponse).then((body) => JSON.parse(body.data)),
+    fetchSiteFeatures: () => getRequest(`${apiRoot}jetpack/v4/site/features`, getParams).then(checkStatus).then(parseJsonResponse).then((body) => JSON.parse(body.data)),
+    fetchSiteProducts: () => getRequest(`${apiRoot}jetpack/v4/site/products`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchSitePurchases: () => getRequest(`${apiRoot}jetpack/v4/site/purchases`, getParams).then(checkStatus).then(parseJsonResponse).then((body) => JSON.parse(body.data)),
+    fetchSiteBenefits: () => getRequest(`${apiRoot}jetpack/v4/site/benefits`, getParams).then(checkStatus).then(parseJsonResponse).then((body) => JSON.parse(body.data)),
+    fetchSiteDiscount: () => getRequest(`${apiRoot}jetpack/v4/site/discount`, getParams).then(checkStatus).then(parseJsonResponse).then((body) => body.data),
+    fetchSetupQuestionnaire: () => getRequest(`${apiRoot}jetpack/v4/setup/questionnaire`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchRecommendationsData: () => getRequest(`${apiRoot}jetpack/v4/recommendations/data`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchRecommendationsProductSuggestions: () => getRequest(`${apiRoot}jetpack/v4/recommendations/product-suggestions`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchRecommendationsUpsell: () => getRequest(`${apiRoot}jetpack/v4/recommendations/upsell`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchRecommendationsConditional: () => getRequest(`${apiRoot}jetpack/v4/recommendations/conditional`, getParams).then(checkStatus).then(parseJsonResponse),
+    saveRecommendationsData: (data) => postRequest(`${apiRoot}jetpack/v4/recommendations/data`, postParams, {
+      body: JSON.stringify({ data })
+    }).then(checkStatus),
+    fetchProducts: () => getRequest(`${apiRoot}jetpack/v4/products`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchRewindStatus: () => getRequest(`${apiRoot}jetpack/v4/rewind`, getParams).then(checkStatus).then(parseJsonResponse).then((body) => JSON.parse(body.data)),
+    fetchScanStatus: () => getRequest(`${apiRoot}jetpack/v4/scan`, getParams).then(checkStatus).then(parseJsonResponse).then((body) => JSON.parse(body.data)),
+    dismissJetpackNotice: (notice) => postRequest(`${apiRoot}jetpack/v4/notice/${notice}`, postParams, {
+      body: JSON.stringify({ dismissed: true })
+    }).then(checkStatus).then(parseJsonResponse),
+    fetchPluginsData: () => getRequest(`${apiRoot}jetpack/v4/plugins`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchIntroOffers: () => getRequest(`${apiRoot}jetpack/v4/intro-offers`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchVerifySiteGoogleStatus: (keyringId) => {
+      const request = keyringId !== null ? getRequest(`${apiRoot}jetpack/v4/verify-site/google/${keyringId}`, getParams) : getRequest(`${apiRoot}jetpack/v4/verify-site/google`, getParams);
+      return request.then(checkStatus).then(parseJsonResponse);
+    },
+    verifySiteGoogle: (keyringId) => postRequest(`${apiRoot}jetpack/v4/verify-site/google`, postParams, {
+      body: JSON.stringify({ keyring_id: keyringId })
+    }).then(checkStatus).then(parseJsonResponse),
+    submitSurvey: (surveyResponse) => postRequest(`${apiRoot}jetpack/v4/marketing/survey`, postParams, {
+      body: JSON.stringify(surveyResponse)
+    }).then(checkStatus).then(parseJsonResponse),
+    saveSetupQuestionnaire: (props) => postRequest(`${apiRoot}jetpack/v4/setup/questionnaire`, postParams, {
+      body: JSON.stringify(props)
+    }).then(checkStatus).then(parseJsonResponse),
+    updateLicensingError: (props) => postRequest(`${apiRoot}jetpack/v4/licensing/error`, postParams, {
+      body: JSON.stringify(props)
+    }).then(checkStatus).then(parseJsonResponse),
+    updateLicenseKey: (license) => postRequest(`${apiRoot}jetpack/v4/licensing/set-license`, postParams, {
+      body: JSON.stringify({ license })
+    }).then(checkStatus).then(parseJsonResponse),
+    getUserLicensesCounts: () => getRequest(`${apiRoot}jetpack/v4/licensing/user/counts`, getParams).then(checkStatus).then(parseJsonResponse),
+    getUserLicenses: () => getRequest(`${apiRoot}jetpack/v4/licensing/user/licenses`, getParams).then(checkStatus).then(parseJsonResponse),
+    updateLicensingActivationNoticeDismiss: (lastDetachedCount) => postRequest(`${apiRoot}jetpack/v4/licensing/user/activation-notice-dismiss`, postParams, {
+      body: JSON.stringify({ last_detached_count: lastDetachedCount })
+    }).then(checkStatus).then(parseJsonResponse),
+    updateRecommendationsStep: (step) => postRequest(`${apiRoot}jetpack/v4/recommendations/step`, postParams, {
+      body: JSON.stringify({ step })
+    }).then(checkStatus),
+    confirmIDCSafeMode: () => postRequest(`${apiRoot}jetpack/v4/identity-crisis/confirm-safe-mode`, postParams).then(
+      checkStatus
+    ),
+    startIDCFresh: (redirectUri) => postRequest(`${apiRoot}jetpack/v4/identity-crisis/start-fresh`, postParams, {
+      body: JSON.stringify({ redirect_uri: redirectUri })
+    }).then(checkStatus).then(parseJsonResponse),
+    migrateIDC: () => postRequest(`${apiRoot}jetpack/v4/identity-crisis/migrate`, postParams).then(
+      checkStatus
+    ),
+    attachLicenses: (licenses) => postRequest(`${apiRoot}jetpack/v4/licensing/attach-licenses`, postParams, {
+      body: JSON.stringify({ licenses })
+    }).then(checkStatus).then(parseJsonResponse),
+    fetchSearchPlanInfo: () => getRequest(`${wpcomOriginApiUrl}jetpack/v4/search/plan`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchSearchSettings: () => getRequest(`${wpcomOriginApiUrl}jetpack/v4/search/settings`, getParams).then(checkStatus).then(parseJsonResponse),
+    updateSearchSettings: (newSettings) => postRequest(`${wpcomOriginApiUrl}jetpack/v4/search/settings`, postParams, {
+      body: JSON.stringify(newSettings)
+    }).then(checkStatus).then(parseJsonResponse),
+    fetchSearchStats: () => getRequest(`${wpcomOriginApiUrl}jetpack/v4/search/stats`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchWafSettings: () => getRequest(`${apiRoot}jetpack/v4/waf`, getParams).then(checkStatus).then(parseJsonResponse),
+    updateWafSettings: (newSettings) => postRequest(`${apiRoot}jetpack/v4/waf`, postParams, {
+      body: JSON.stringify(newSettings)
+    }).then(checkStatus).then(parseJsonResponse),
+    fetchWordAdsSettings: () => getRequest(`${apiRoot}jetpack/v4/wordads/settings`, getParams).then(checkStatus).then(parseJsonResponse),
+    updateWordAdsSettings: (newSettings) => postRequest(`${apiRoot}jetpack/v4/wordads/settings`, postParams, {
+      body: JSON.stringify(newSettings)
+    }),
+    fetchSearchPricing: () => getRequest(`${wpcomOriginApiUrl}jetpack/v4/search/pricing`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchMigrationStatus: () => getRequest(`${apiRoot}jetpack/v4/migration/status`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchBackupUndoEvent: () => getRequest(`${apiRoot}jetpack/v4/site/backup/undo-event`, getParams).then(checkStatus).then(parseJsonResponse),
+    fetchBackupPreflightStatus: () => getRequest(`${apiRoot}jetpack/v4/site/backup/preflight`, getParams).then(checkStatus).then(parseJsonResponse)
+  };
+  function addCacheBuster(route) {
+    const parts = route.split("?"), query = parts.length > 1 ? parts[1] : "", args = query.length ? query.split("&") : [];
+    args.push("_cacheBuster=" + (/* @__PURE__ */ new Date()).getTime());
+    return parts[0] + "?" + args.join("&");
+  }
+  function getRequest(route, params) {
+    return fetch(cacheBusterCallback(route), params);
+  }
+  function postRequest(route, params, body) {
+    return fetch(route, Object.assign({}, params, body)).catch(catchNetworkErrors);
+  }
+  function statsDataUrl(range) {
+    let url = `${apiRoot}jetpack/v4/module/stats/data`;
+    if (url.indexOf("?") !== -1) {
+      url = url + `&range=${encodeURIComponent(range)}`;
+    } else {
+      url = url + `?range=${encodeURIComponent(range)}`;
+    }
+    return url;
+  }
+  function handleStatsResponseError(statsData) {
+    const responseOk = statsData.general && statsData.general.response === void 0 || statsData.week && statsData.week.response === void 0 || statsData.month && statsData.month.response === void 0;
+    return responseOk ? statsData : {};
+  }
+  Object.assign(this, methods);
+}
+var restApi = new JetpackRestApiClient();
+var api_default = restApi;
+function checkStatus(response) {
+  if (response.status >= 200 && response.status < 300) {
+    return response;
+  }
+  if (response.status === 404) {
+    return new Promise(() => {
+      const err = response.redirected ? new Api404AfterRedirectError(response.redirected) : new Api404Error();
+      throw err;
+    });
+  }
+  return response.json().catch((e2) => catchJsonParseError(e2)).then((json) => {
+    const error2 = new Error(`${json.message} (Status ${response.status})`);
+    error2.response = json;
+    error2.name = "ApiError";
+    throw error2;
+  });
+}
+function parseJsonResponse(response) {
+  return response.json().catch((e2) => catchJsonParseError(e2, response.redirected, response.url));
+}
+function catchJsonParseError(e2, redirected, url) {
+  const err = redirected ? new JsonParseAfterRedirectError(url) : new JsonParseError();
+  throw err;
+}
+function catchNetworkErrors() {
+  throw new FetchNetworkError();
+}
+
+// src/dashboard/hooks/use-export-responses.ts
+var import_core_data5 = __toESM(require_core_data(), 1);
+var import_data17 = __toESM(require_data(), 1);
 var import_element79 = __toESM(require_element(), 1);
 var import_i18n71 = __toESM(require_i18n(), 1);
-var import_jsx_runtime161 = __toESM(require_jsx_runtime(), 1);
+function useExportResponses() {
+  const [isSm] = use_breakpoint_match_default("sm");
+  const [showExportModal, setShowExportModal] = (0, import_element79.useState)(false);
+  const closeModal = (0, import_element79.useCallback)(() => setShowExportModal(false), [setShowExportModal]);
+  const [autoConnectGdrive, setAutoConnectGdrive] = (0, import_element79.useState)(false);
+  const { selectedResponsesCount, currentStatus } = (0, import_data17.useSelect)(
+    (select3) => ({
+      selectedResponsesCount: select3(store3).getSelectedResponsesCount(),
+      currentStatus: select3(store3).getCurrentStatus()
+    }),
+    []
+  );
+  const isSpam = currentStatus.includes("spam");
+  const isTrash = currentStatus.includes("trash");
+  let statusLabel = (0, import_i18n71.__)("Export", "jetpack-forms");
+  if (isSpam) {
+    statusLabel = (0, import_i18n71.__)("Export spam", "jetpack-forms");
+  } else if (isTrash) {
+    statusLabel = (0, import_i18n71.__)("Export trash", "jetpack-forms");
+  }
+  const exportLabel = selectedResponsesCount > 0 ? `${statusLabel} (${formatNumber2(selectedResponsesCount)})` : statusLabel;
+  const openModal = (0, import_element79.useCallback)(() => {
+    setShowExportModal(true);
+    analytics_default.tracks.recordEvent("jetpack_forms_export_responses_modal_open", {
+      viewport: isSm ? "mobile" : "desktop"
+    });
+  }, [isSm]);
+  const userCanExport = (0, import_data17.useSelect)(
+    (select3) => select3(import_core_data5.store).canUser("update", "settings"),
+    []
+  );
+  const { selected, currentQuery: currentQuery2 } = (0, import_data17.useSelect)((select3) => {
+    const { getSelectedResponsesFromCurrentDataset: getSelectedResponsesFromCurrentDataset2, getCurrentQuery: getCurrentQuery2 } = select3(store3);
+    return { selected: getSelectedResponsesFromCurrentDataset2(), currentQuery: getCurrentQuery2() };
+  }, []);
+  const exportNonce = useConfigValue("exportNonce");
+  const onExport = (0, import_element79.useCallback)(
+    (action, nonceName) => {
+      const data = new FormData();
+      data.append("action", action);
+      data.append(nonceName, exportNonce);
+      selected.forEach((id) => data.append("selected[]", id));
+      data.append("post", currentQuery2.parent || "all");
+      data.append("search", currentQuery2.search || "");
+      data.append("status", currentQuery2.status);
+      if (currentQuery2.before && currentQuery2.after) {
+        data.append("before", currentQuery2.before);
+        data.append("after", currentQuery2.after);
+      }
+      return fetch(window.ajaxurl, { method: "POST", body: data });
+    },
+    [currentQuery2, selected, exportNonce]
+  );
+  (0, import_element79.useEffect)(() => {
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("connect-gdrive") === "true") {
+      setAutoConnectGdrive(true);
+      openModal();
+      url.searchParams.delete("connect-gdrive");
+      window.history.replaceState({}, "", url);
+    }
+  }, [openModal]);
+  return {
+    showExportModal,
+    openModal,
+    closeModal,
+    autoConnectGdrive,
+    userCanExport,
+    onExport,
+    selectedResponsesCount,
+    currentStatus,
+    exportLabel
+  };
+}
+
+// src/dashboard/components/export-responses/modal.tsx
+var import_components71 = __toESM(require_components(), 1);
+var import_data29 = __toESM(require_data(), 1);
+var import_i18n75 = __toESM(require_i18n(), 1);
+
+// ../../js-packages/shared-extension-utils/src/get-jetpack-data.js
+var JETPACK_DATA_PATH = "Jetpack_Editor_Initial_State";
+function getJetpackData() {
+  return "object" === typeof window ? window?.[JETPACK_DATA_PATH] ?? null : null;
+}
+
+// ../../js-packages/shared-extension-utils/src/site-type-utils.js
+function isPrivateSite() {
+  const jetpackData = getJetpackData();
+  return jetpackData?.jetpack?.is_private_site ?? false;
+}
+
+// ../../js-packages/shared-extension-utils/src/register-jetpack-plugin.js
+var import_plugins2 = __toESM(require_plugins());
+
+// ../../js-packages/shared-extension-utils/src/with-has-warning-is-interactive-class-names/index.jsx
+var import_compose15 = __toESM(require_compose());
+
+// ../../js-packages/shared-extension-utils/src/with-has-warning-is-interactive-class-names/style.scss
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='ce3503a0a4']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "ce3503a0a4");
+  style.appendChild(document.createTextNode(".block-editor-block-list__layout .block-editor-block-list__block.has-warning.is-interactive>*{pointer-events:auto;user-select:auto}.block-editor-block-list__layout .block-editor-block-list__block.has-warning.is-interactive:after{content:none}"));
+  document.head.appendChild(style);
+}
+
+// ../../js-packages/shared-extension-utils/src/with-has-warning-is-interactive-class-names/index.jsx
+var import_jsx_runtime161 = __toESM(require_jsx_runtime());
+
+// ../../js-packages/shared-extension-utils/src/plan-utils.js
+var import_i18n72 = __toESM(require_i18n());
+var import_url6 = __toESM(require_url());
+var usableBlockWithFreePlan = [
+  {
+    name: "core/cover",
+    mediaPlaceholder: true,
+    mediaReplaceFlow: true,
+    fileType: "video",
+    description: (0, import_i18n72.__)("Upgrade your plan to use video covers", "jetpack-shared-extension-utils")
+  },
+  {
+    name: "core/audio",
+    mediaPlaceholder: true,
+    mediaReplaceFlow: true,
+    fileType: "audio",
+    description: (0, import_i18n72.__)("Upgrade your plan to upload audio", "jetpack-shared-extension-utils")
+  }
+];
+
+// ../../js-packages/connection/components/use-connection/index.jsx
+var import_data22 = __toESM(require_data(), 1);
+var import_react30 = __toESM(require_react(), 1);
+
+// ../../js-packages/connection/state/actions.jsx
+var SET_CONNECTION_STATUS = "SET_CONNECTION_STATUS";
+var SET_CONNECTION_STATUS_IS_FETCHING = "SET_CONNECTION_STATUS_IS_FETCHING";
+var FETCH_CONNECTION_STATUS = "FETCH_CONNECTION_STATUS";
+var SET_SITE_IS_REGISTERING = "SET_SITE_IS_REGISTERING";
+var SET_USER_IS_CONNECTING = "SET_USER_IS_CONNECTING";
+var SET_REGISTRATION_ERROR = "SET_REGISTRATION_ERROR";
+var CLEAR_REGISTRATION_ERROR = "CLEAR_REGISTRATION_ERROR";
+var REGISTER_SITE = "REGISTER_SITE";
+var SET_AUTHORIZATION_URL = "SET_AUTHORIZATION_URL";
+var CONNECT_USER = "CONNECT_USER";
+var DISCONNECT_USER_SUCCESS = "DISCONNECT_USER_SUCCESS";
+var FETCH_AUTHORIZATION_URL = "FETCH_AUTHORIZATION_URL";
+var SET_CONNECTED_PLUGINS = "SET_CONNECTED_PLUGINS";
+var SET_CONNECTION_ERRORS = "SET_CONNECTION_ERRORS";
+var SET_IS_OFFLINE_MODE = "SET_IS_OFFLINE_MODE";
+var setConnectionStatus = (connectionStatus2) => {
+  return { type: SET_CONNECTION_STATUS, connectionStatus: connectionStatus2 };
+};
+var setConnectionStatusIsFetching = (isFetching) => {
+  return { type: SET_CONNECTION_STATUS_IS_FETCHING, isFetching };
+};
+var fetchConnectionStatus = () => {
+  return { type: FETCH_CONNECTION_STATUS };
+};
+var setSiteIsRegistering = (isRegistering) => {
+  return { type: SET_SITE_IS_REGISTERING, isRegistering };
+};
+var setUserIsConnecting = (isConnecting) => {
+  return { type: SET_USER_IS_CONNECTING, isConnecting };
+};
+var disconnectUserSuccess = () => {
+  return { type: DISCONNECT_USER_SUCCESS };
+};
+var setRegistrationError = (registrationError2) => {
+  return { type: SET_REGISTRATION_ERROR, registrationError: registrationError2 };
+};
+var clearRegistrationError = () => {
+  return { type: CLEAR_REGISTRATION_ERROR };
+};
+var setAuthorizationUrl = (authorizationUrl2) => {
+  return { type: SET_AUTHORIZATION_URL, authorizationUrl: authorizationUrl2 };
+};
+var fetchAuthorizationUrl = (redirectUri) => {
+  return { type: FETCH_AUTHORIZATION_URL, redirectUri };
+};
+var setConnectedPlugins = (connectedPlugins2) => {
+  return { type: SET_CONNECTED_PLUGINS, connectedPlugins: connectedPlugins2 };
+};
+var setConnectionErrors = (connectionErrors2) => {
+  return { type: SET_CONNECTION_ERRORS, connectionErrors: connectionErrors2 };
+};
+var setIsOfflineMode = (isOfflineMode2) => {
+  return { type: SET_IS_OFFLINE_MODE, isOfflineMode: isOfflineMode2 };
+};
+function* connectUser({ from, redirectFunc, redirectUri, skipPricingPage } = {}) {
+  yield setUserIsConnecting(true);
+  yield { type: CONNECT_USER, from, redirectFunc, redirectUri, skipPricingPage };
+}
+function* registerSite({ registrationNonce, redirectUri, from = "" }) {
+  yield clearRegistrationError();
+  yield setSiteIsRegistering(true);
+  try {
+    const response = yield { type: REGISTER_SITE, registrationNonce, redirectUri, from };
+    yield setConnectionStatus({ isRegistered: true });
+    yield setAuthorizationUrl(response.authorizeUrl);
+    yield setSiteIsRegistering(false);
+    return Promise.resolve(response);
+  } catch (error2) {
+    yield setRegistrationError(error2);
+    yield setSiteIsRegistering(false);
+    return Promise.reject(error2);
+  }
+}
+var refreshConnectedPlugins = () => async ({ dispatch: dispatch4 }) => {
+  return await new Promise((resolve) => {
+    return api_default.fetchConnectedPlugins().then((data) => {
+      dispatch4(setConnectedPlugins(data));
+      resolve(data);
+    });
+  });
+};
+var actions = {
+  setConnectionStatus,
+  setConnectionStatusIsFetching,
+  fetchConnectionStatus,
+  fetchAuthorizationUrl,
+  setSiteIsRegistering,
+  setUserIsConnecting,
+  setRegistrationError,
+  clearRegistrationError,
+  setAuthorizationUrl,
+  registerSite,
+  connectUser,
+  disconnectUserSuccess,
+  setConnectedPlugins,
+  refreshConnectedPlugins,
+  setConnectionErrors,
+  setIsOfflineMode
+};
+
+// ../../js-packages/connection/state/controls.jsx
+var import_data18 = __toESM(require_data(), 1);
+
+// ../../js-packages/connection/state/assignLocation.jsx
+function assignLocation(url) {
+  return window.location.assign(url);
+}
+
+// ../../js-packages/connection/state/store-id.jsx
+var STORE_ID = "jetpack-connection";
+var store_id_default = STORE_ID;
+
+// ../../js-packages/connection/state/controls.jsx
+var REGISTER_SITE2 = ({ redirectUri, from }) => api_default.registerSite(null, redirectUri, from);
+var CONNECT_USER2 = (0, import_data18.createRegistryControl)(
+  ({ resolveSelect }) => ({ from, redirectFunc, redirectUri, skipPricingPage } = {}) => {
+    return new Promise((resolve, reject) => {
+      resolveSelect(store_id_default).getAuthorizationUrl(redirectUri).then((authorizationUrl2) => {
+        const redirect = redirectFunc || ((url2) => assignLocation(url2));
+        const url = new URL(authorizationUrl2);
+        if (skipPricingPage) {
+          url.searchParams.set("skip_pricing", "true");
+        }
+        if (from) {
+          url.searchParams.set("from", encodeURIComponent(from));
+        }
+        const finalUrl = url.toString();
+        redirect(finalUrl);
+        resolve(finalUrl);
+      }).catch((error2) => {
+        reject(error2);
+      });
+    });
+  }
+);
+var FETCH_AUTHORIZATION_URL2 = ({ redirectUri }) => api_default.fetchAuthorizationUrl(redirectUri);
+var controls_default = {
+  FETCH_AUTHORIZATION_URL: FETCH_AUTHORIZATION_URL2,
+  REGISTER_SITE: REGISTER_SITE2,
+  CONNECT_USER: CONNECT_USER2
+};
+
+// ../../js-packages/connection/state/reducers.jsx
+var import_data19 = __toESM(require_data(), 1);
+var connectionStatus = (state = {}, action) => {
+  switch (action.type) {
+    case SET_CONNECTION_STATUS:
+      return { ...state, ...action.connectionStatus };
+    case DISCONNECT_USER_SUCCESS:
+      return { ...state, isUserConnected: false };
+  }
+  return state;
+};
+var connectedPlugins = (state = {}, action) => {
+  switch (action.type) {
+    case SET_CONNECTED_PLUGINS:
+      return action.connectedPlugins;
+  }
+  return state;
+};
+var connectionStatusIsFetching = (state = false, action) => {
+  switch (action.type) {
+    case SET_CONNECTION_STATUS_IS_FETCHING:
+      return action.isFetching;
+  }
+  return state;
+};
+var siteIsRegistering = (state = false, action) => {
+  switch (action.type) {
+    case SET_SITE_IS_REGISTERING:
+      return action.isRegistering;
+  }
+  return state;
+};
+var userIsConnecting = (state = false, action) => {
+  switch (action.type) {
+    case SET_USER_IS_CONNECTING:
+      return action.isConnecting;
+  }
+  return state;
+};
+var registrationError = (state, action) => {
+  switch (action.type) {
+    case CLEAR_REGISTRATION_ERROR:
+      return false;
+    case SET_REGISTRATION_ERROR:
+      return action.registrationError;
+    default:
+      return state;
+  }
+};
+var authorizationUrl = (state, action) => {
+  switch (action.type) {
+    case SET_AUTHORIZATION_URL:
+      return action.authorizationUrl;
+    default:
+      return state;
+  }
+};
+var userConnectionData = (state, action) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+var connectionErrors = (state = {}, action) => {
+  switch (action.type) {
+    case SET_CONNECTION_ERRORS:
+      return action.connectionErrors;
+  }
+  return state;
+};
+var isOfflineMode = (state = false, action) => {
+  switch (action.type) {
+    case SET_IS_OFFLINE_MODE:
+      return action.isConnecting;
+  }
+  return state;
+};
+var reducers = (0, import_data19.combineReducers)({
+  connectionStatus,
+  connectionStatusIsFetching,
+  siteIsRegistering,
+  userIsConnecting,
+  registrationError,
+  authorizationUrl,
+  userConnectionData,
+  connectedPlugins,
+  connectionErrors,
+  isOfflineMode
+});
+var reducers_default = reducers;
+
+// ../../js-packages/connection/state/resolvers.jsx
+var import_data20 = __toESM(require_data(), 1);
+var connectionResolvers = {
+  getAuthorizationUrl: {
+    isFulfilled: (state, ...args) => {
+      const hasAuthorization = Boolean(state.authorizationUrl);
+      const hasFinishedResolution = (0, import_data20.select)(store_id_default).hasFinishedResolution(
+        "getAuthorizationUrl",
+        args
+      );
+      if (hasAuthorization && !hasFinishedResolution) {
+        (0, import_data20.dispatch)(store_id_default).finishResolution("getAuthorizationUrl", args);
+      }
+      return hasAuthorization;
+    },
+    *fulfill(redirectUri) {
+      const response = yield actions.fetchAuthorizationUrl(redirectUri);
+      yield actions.setAuthorizationUrl(response.authorizeUrl);
+    }
+  }
+};
+var resolvers_default = {
+  ...connectionResolvers
+};
+
+// ../../js-packages/connection/state/selectors.jsx
+var getWpcomUser = (state) => {
+  return state?.userConnectionData?.currentUser?.wpcomUser;
+};
+var getBlogId = (state) => {
+  return state?.userConnectionData?.currentUser?.blogId;
+};
+var connectionSelectors = {
+  getConnectionStatus: (state) => state.connectionStatus || {},
+  /**
+   * Checks whether the store is fetching the connection status from the server
+   *
+   * @deprecated since 0.14.0
+   * @return {boolean} Is the store is fetching the connection status from the server?
+   */
+  getConnectionStatusIsFetching: () => false,
+  getSiteIsRegistering: (state) => state.siteIsRegistering || false,
+  getUserIsConnecting: (state) => state.userIsConnecting || false,
+  getRegistrationError: (state) => state.registrationError || false,
+  getAuthorizationUrl: (state) => state.authorizationUrl || false,
+  getUserConnectionData: (state) => state.userConnectionData || false,
+  getConnectedPlugins: (state) => state.connectedPlugins || [],
+  getConnectionErrors: (state) => state.connectionErrors || [],
+  getIsOfflineMode: (state) => state.isOfflineMode || false,
+  getWpcomUser,
+  getBlogId
+};
+var selectors = {
+  ...connectionSelectors
+};
+var selectors_default = selectors;
+
+// ../../js-packages/connection/state/store-holder.jsx
+var import_data21 = __toESM(require_data(), 1);
+var storeHolder = class _storeHolder {
+  static store = null;
+  static mayBeInit(storeId, storeConfig) {
+    if (null === _storeHolder.store) {
+      _storeHolder.store = (0, import_data21.createReduxStore)(storeId, storeConfig);
+      (0, import_data21.register)(_storeHolder.store);
+    }
+  }
+};
+var store_holder_default = storeHolder;
+
+// ../../js-packages/connection/state/store.jsx
+var initialState = window.JP_CONNECTION_INITIAL_STATE || getScriptData()?.connection;
+if (!initialState) {
+  console.error(
+    "Jetpack Connection package: Initial state is missing. Check documentation to see how to use the Connection composer package to set up the initial state."
+  );
+}
+store_holder_default.mayBeInit(store_id_default, {
+  __experimentalUseThunks: true,
+  reducer: reducers_default,
+  actions,
+  selectors: selectors_default,
+  resolvers: resolvers_default,
+  controls: controls_default,
+  initialState: initialState || {}
+});
+
+// ../../js-packages/connection/components/use-connection/index.jsx
+var initialState2 = window?.JP_CONNECTION_INITIAL_STATE || getScriptData()?.connection || {};
+function useConnection({
+  registrationNonce = initialState2.registrationNonce,
+  apiRoot = initialState2.apiRoot,
+  apiNonce = initialState2.apiNonce,
+  redirectUri,
+  autoTrigger,
+  from,
+  skipUserConnection,
+  skipPricingPage
+} = {}) {
+  const { registerSite: registerSite2, connectUser: connectUser2, refreshConnectedPlugins: refreshConnectedPlugins2 } = (0, import_data22.useDispatch)(store_id_default);
+  const registrationError2 = (0, import_data22.useSelect)((select3) => select3(store_id_default).getRegistrationError());
+  const {
+    siteIsRegistering: siteIsRegistering2,
+    userIsConnecting: userIsConnecting2,
+    userConnectionData: userConnectionData2,
+    connectedPlugins: connectedPlugins2,
+    connectionErrors: connectionErrors2,
+    isRegistered,
+    isUserConnected,
+    hasConnectedOwner,
+    isOfflineMode: isOfflineMode2
+  } = (0, import_data22.useSelect)((select3) => ({
+    siteIsRegistering: select3(store_id_default).getSiteIsRegistering(),
+    userIsConnecting: select3(store_id_default).getUserIsConnecting(),
+    userConnectionData: select3(store_id_default).getUserConnectionData(),
+    connectedPlugins: select3(store_id_default).getConnectedPlugins(),
+    connectionErrors: select3(store_id_default).getConnectionErrors(),
+    isOfflineMode: select3(store_id_default).getIsOfflineMode(),
+    ...select3(store_id_default).getConnectionStatus()
+  }));
+  const handleConnectUser = () => {
+    if (!skipUserConnection) {
+      return connectUser2({ from, redirectUri, skipPricingPage });
+    } else if (redirectUri) {
+      window.location = redirectUri;
+      return Promise.resolve(redirectUri);
+    }
+    return Promise.resolve();
+  };
+  const handleRegisterSite = (e2) => {
+    e2 && e2.preventDefault();
+    if (isRegistered) {
+      return handleConnectUser();
+    }
+    return registerSite2({ registrationNonce, redirectUri, from }).then(() => {
+      return handleConnectUser();
+    });
+  };
+  (0, import_react30.useEffect)(() => {
+    api_default.setApiRoot(apiRoot);
+    api_default.setApiNonce(apiNonce);
+  }, [apiRoot, apiNonce]);
+  (0, import_react30.useEffect)(() => {
+    if (autoTrigger && !siteIsRegistering2 && !userIsConnecting2) {
+      handleRegisterSite();
+    }
+  }, []);
+  return {
+    handleRegisterSite,
+    handleConnectUser,
+    refreshConnectedPlugins: refreshConnectedPlugins2,
+    isRegistered,
+    isUserConnected,
+    siteIsRegistering: siteIsRegistering2,
+    userIsConnecting: userIsConnecting2,
+    registrationError: registrationError2,
+    userConnectionData: userConnectionData2,
+    hasConnectedOwner,
+    connectedPlugins: connectedPlugins2,
+    connectionErrors: connectionErrors2,
+    isOfflineMode: isOfflineMode2
+  };
+}
+
+// ../../js-packages/shared-extension-utils/src/hooks/use-analytics.js
+var import_element80 = __toESM(require_element());
+var { tracks } = analytics_default;
+var { recordEvent } = tracks;
+var useAnalytics = ({
+  pageViewEventName = null,
+  pageViewNamespace = "jetpack",
+  pageViewSuffix = "page_view",
+  pageViewEventProperties = {}
+} = {}) => {
+  const [pageViewRecorded, setPageViewRecorded] = (0, import_element80.useState)(false);
+  const { isUserConnected, isRegistered, userConnectionData: userConnectionData2 = {} } = useConnection();
+  const { wpcomUser: { login, ID } = {}, blogId } = userConnectionData2.currentUser || {};
+  const recordEventAsync = (0, import_element80.useCallback)(
+    async (event, properties = {}) => {
+      if (!(isUserConnected && ID && login)) {
+        return;
+      }
+      recordEvent(event, properties);
+    },
+    [isUserConnected, ID, login]
+  );
+  (0, import_element80.useEffect)(() => {
+    if (!isUserConnected || !ID || !login || !blogId) {
+      return;
+    }
+    analytics_default.initialize(ID, login, {
+      blog_id: blogId
+    });
+  }, [blogId, ID, login, isUserConnected]);
+  (0, import_element80.useEffect)(() => {
+    const pageViewEvent = pageViewEventName ? `${pageViewNamespace}_${pageViewEventName}_${pageViewSuffix}` : null;
+    if (!isRegistered) {
+      return;
+    }
+    if (!pageViewEvent) {
+      return;
+    }
+    if (!pageViewRecorded) {
+      recordEventAsync(pageViewEvent, pageViewEventProperties);
+      setPageViewRecorded(true);
+    }
+  }, [
+    pageViewRecorded,
+    pageViewNamespace,
+    pageViewEventName,
+    pageViewSuffix,
+    isRegistered,
+    pageViewEventProperties,
+    recordEventAsync
+  ]);
+  return {
+    recordEvent: recordEventAsync,
+    tracks
+  };
+};
+var use_analytics_default = useAnalytics;
+
+// ../../js-packages/shared-extension-utils/src/hooks/use-autosave-and-redirect/index.js
+var import_data23 = __toESM(require_data());
+var import_element81 = __toESM(require_element());
+
+// ../../js-packages/shared-extension-utils/src/hooks/use-ref-interval.ts
+var import_element82 = __toESM(require_element());
+
+// ../../js-packages/shared-extension-utils/src/hooks/use-module-status/index.js
+var import_data26 = __toESM(require_data());
+var import_element83 = __toESM(require_element());
+
+// ../../js-packages/shared-extension-utils/src/modules-state/index.js
+var import_data25 = __toESM(require_data());
+
+// ../../js-packages/shared-extension-utils/src/modules-state/actions.js
+var import_data24 = __toESM(require_data());
+
+// ../../js-packages/shared-extension-utils/src/modules-state/controls.js
+var import_api_fetch9 = __toESM(require_api_fetch());
+var FETCH_JETPACK_MODULES = "FETCH_JETPACK_MODULES";
+var UPDATE_JETPACK_MODULE_STATUS = "UPDATE_JETPACK_MODULE_STATUS";
+var fetchJetpackModules = () => {
+  return {
+    type: FETCH_JETPACK_MODULES
+  };
+};
+var updateJetpackModuleStatus = (settings) => {
+  return {
+    type: UPDATE_JETPACK_MODULE_STATUS,
+    settings
+  };
+};
+var controls_default2 = {
+  [FETCH_JETPACK_MODULES]: function() {
+    return (0, import_api_fetch9.default)({
+      path: `/jetpack/v4/module/all`,
+      method: "GET"
+    });
+  },
+  [UPDATE_JETPACK_MODULE_STATUS]: function({ settings }) {
+    return (0, import_api_fetch9.default)({
+      path: `/jetpack/v4/module/${settings.name}/active`,
+      method: "POST",
+      data: {
+        active: settings.active
+      }
+    });
+  }
+};
+
+// ../../js-packages/shared-extension-utils/src/modules-state/actions.js
+var SET_JETPACK_MODULES = "SET_JETPACK_MODULES";
+var SET_MODULE_UPDATING = "SET_MODULE_UPDATING";
+function* updateJetpackModuleStatus2(settings) {
+  try {
+    yield setIsUpdating(settings.name, true);
+    yield updateJetpackModuleStatus(settings);
+    const data = yield fetchJetpackModules();
+    yield setJetpackModules({ data });
+    return true;
+  } catch {
+    const oldSettings = (0, import_data24.select)(JETPACK_MODULES_STORE_ID).getJetpackModules();
+    yield setJetpackModules(oldSettings);
+    return false;
+  } finally {
+    yield setIsUpdating(settings.name, false);
+  }
+}
+function* fetchModules() {
+  if (isSimpleSite()) {
+    return true;
+  }
+  try {
+    yield setIsLoading(true);
+    const data = yield fetchJetpackModules();
+    yield setJetpackModules({ data });
+    return true;
+  } catch {
+    const oldSettings = (0, import_data24.select)(JETPACK_MODULES_STORE_ID).getJetpackModules();
+    yield setJetpackModules(oldSettings);
+    return false;
+  } finally {
+    yield setIsLoading(false);
+  }
+}
+function setIsLoading(isLoading) {
+  return setJetpackModules({ isLoading });
+}
+function setIsUpdating(name, isUpdating) {
+  return { type: SET_MODULE_UPDATING, name, isUpdating };
+}
+function setJetpackModules(options) {
+  return { type: SET_JETPACK_MODULES, options };
+}
+var actions_default = { updateJetpackModuleStatus: updateJetpackModuleStatus2, setJetpackModules, fetchModules };
+
+// ../../js-packages/shared-extension-utils/src/modules-state/reducer.js
+var defaultState = {
+  isLoading: false,
+  isUpdating: {},
+  data: {}
+};
+var setModulesData = (state = defaultState, action) => {
+  switch (action.type) {
+    case "SET_JETPACK_MODULES":
+      return {
+        ...state,
+        ...action.options
+      };
+    case "SET_MODULE_UPDATING":
+      return {
+        ...state,
+        ...{
+          isUpdating: {
+            ...state.isUpdating,
+            [action.name]: action.isUpdating
+          }
+        }
+      };
+  }
+  return state;
+};
+var reducer_default2 = setModulesData;
+
+// ../../js-packages/shared-extension-utils/src/modules-state/resolvers.js
+function* getJetpackModules() {
+  try {
+    yield setIsLoading(true);
+    const data = yield fetchJetpackModules();
+    if (data) {
+      return setJetpackModules({ data });
+    }
+  } catch (e2) {
+    console.error(e2);
+  } finally {
+    yield setIsLoading(false);
+  }
+}
+var resolvers_default2 = { getJetpackModules };
+
+// ../../js-packages/shared-extension-utils/src/modules-state/selectors.js
+var jetpackModulesSelectors = {
+  getJetpackModules: (state) => state.data,
+  // We consider simple sites to have all modules active
+  // TODO: we would remove this when wrapping logic with hooks
+  isModuleActive: (state, moduleName) => isSimpleSite() || (state?.data?.[moduleName]?.activated ?? false),
+  areModulesLoading: (state) => state.isLoading ?? false,
+  isModuleUpdating: (state, moduleName) => state?.isUpdating?.[moduleName] ?? false
+};
+var selectors_default2 = jetpackModulesSelectors;
+
+// ../../js-packages/shared-extension-utils/src/modules-state/index.js
+var JETPACK_MODULES_STORE_ID = "jetpack-modules";
+var store4 = (0, import_data25.createReduxStore)(JETPACK_MODULES_STORE_ID, {
+  reducer: reducer_default2,
+  actions: actions_default,
+  controls: controls_default2,
+  resolvers: resolvers_default2,
+  selectors: selectors_default2
+});
+(0, import_data25.register)(store4);
+var initialData = window?.Initial_State?.getModules || // Jetpack Dashboard
+window?.Jetpack_Editor_Initial_State?.modules || // Gutenberg
+null;
+if (initialData !== null) {
+  (0, import_data25.dispatch)(JETPACK_MODULES_STORE_ID).setJetpackModules({
+    data: { ...initialData }
+  });
+}
+
+// ../../js-packages/shared-extension-utils/src/get-block-icon-from-metadata.js
+var import_element84 = __toESM(require_element());
+
+// ../../js-packages/shared-extension-utils/src/libs/connection/index.ts
+var import_debug4 = __toESM(require_browser());
+var initialState3 = window?.JP_CONNECTION_INITIAL_STATE;
+var debug4 = (0, import_debug4.default)("shared-extension-utils:connection");
+
+// ../../js-packages/shared-extension-utils/src/hooks/use-upgrade-flow/index.js
+var import_data27 = __toESM(require_data());
+var import_hooks = __toESM(require_hooks());
+
+// ../../js-packages/shared-extension-utils/src/block-editor-actions.js
+var import_dom_ready = __toESM(require_dom_ready());
+
+// src/dashboard/components/export-responses/csv.tsx
+var import_components69 = __toESM(require_components(), 1);
+var import_element85 = __toESM(require_element(), 1);
+var import_i18n73 = __toESM(require_i18n(), 1);
+var import_jsx_runtime162 = __toESM(require_jsx_runtime(), 1);
+var CSVExport = ({ onExport }) => {
+  const { tracks: tracks2 } = use_analytics_default();
+  const downloadCSV = (0, import_element85.useCallback)(() => {
+    tracks2.recordEvent("jetpack_forms_export_click", {
+      destination: "csv",
+      screen: "form-responses-inbox"
+    });
+    onExport("feedback_export", "feedback_export_nonce_csv").then(async (response) => {
+      const blob = await response.blob();
+      const a2 = document.createElement("a");
+      a2.href = window.URL.createObjectURL(blob);
+      const contentDispositionHeader = response.headers.get("Content-Disposition") ?? "";
+      a2.download = contentDispositionHeader.split("filename=")[1] || "Jetpack Form Responses.csv";
+      document.body.appendChild(a2);
+      a2.click();
+      document.body.removeChild(a2);
+      window.URL.revokeObjectURL(a2.href);
+    });
+  }, [onExport, tracks2]);
+  const buttonClasses = clsx_default("button", "export-button", "export-csv");
+  return /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)("div", { className: "jp-forms__export-modal-card", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)("div", { className: "jp-forms__export-modal-card-header", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(
+        import_components69.SVG,
+        {
+          width: "22",
+          height: "20",
+          viewBox: "0 0 22 20",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/SVG",
+          children: /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(
+            import_components69.Path,
+            {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M11.2309 5.04199L10.0797 2.73945C9.98086 2.54183 9.77887 2.41699 9.55792 2.41699H2.83333C2.51117 2.41699 2.25 2.67816 2.25 3.00033V16.7087C2.25 17.0308 2.51117 17.292 2.83333 17.292H19.1667C19.4888 17.292 19.75 17.0308 19.75 16.7087V5.62533C19.75 5.30316 19.4888 5.04199 19.1667 5.04199H11.2309ZM12.3125 3.29199L11.6449 1.95683C11.2497 1.16633 10.4417 0.666992 9.55792 0.666992H2.83333C1.54467 0.666992 0.5 1.71166 0.5 3.00033V16.7087C0.5 17.9973 1.54467 19.042 2.83333 19.042H19.1667C20.4553 19.042 21.5 17.9973 21.5 16.7087V5.62533C21.5 4.33666 20.4553 3.29199 19.1667 3.29199H12.3125Z",
+              fill: "#008710"
+            }
+          )
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n73.__)("CSV File", "jetpack-forms") })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: (0, import_i18n73.__)("Download your form response data as a CSV file.", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components69.Button, { variant: "primary", className: buttonClasses, onClick: downloadCSV, children: (0, import_i18n73.__)("Download", "jetpack-forms") }) })
+    ] })
+  ] });
+};
+var csv_default = CSVExport;
+
+// src/dashboard/components/export-responses/google-drive.tsx
+var import_components70 = __toESM(require_components(), 1);
+var import_data28 = __toESM(require_data(), 1);
+var import_element86 = __toESM(require_element(), 1);
+var import_i18n74 = __toESM(require_i18n(), 1);
+
+// src/util/get-preferred-responses-view.js
+var PARTIAL_RESPONSES_PATH = "admin.php?page=jetpack-forms-admin";
+var FULL_RESPONSES_PATH = getJetpackData()?.adminUrl + PARTIAL_RESPONSES_PATH;
+
+// src/dashboard/components/export-responses/google-drive.tsx
+var import_jsx_runtime163 = __toESM(require_jsx_runtime(), 1);
+var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
+  const [isExporting, setIsExporting] = (0, import_element86.useState)(false);
+  const { integration } = (0, import_data28.useSelect)((select3) => {
+    const store5 = select3(INTEGRATIONS_STORE);
+    const list = store5.getIntegrations() || [];
+    return { integration: list.find((i2) => i2.id === "google-drive") };
+  }, []);
+  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data28.useDispatch)(INTEGRATIONS_STORE);
+  const isConnectedToGoogleDrive = !!integration?.isConnected;
+  const gdriveConnectSupportURL = useConfigValue("gdriveConnectSupportURL");
+  const { tracks: tracks2 } = use_analytics_default();
+  const autoConnectOpened = (0, import_element86.useRef)(false);
+  const [isTogglingConnection, setIsTogglingConnection] = (0, import_element86.useState)(false);
+  const { isUserConnected, handleConnectUser, userIsConnecting: userIsConnecting2, isOfflineMode: isOfflineMode2 } = useConnection({
+    redirectUri: PARTIAL_RESPONSES_PATH + "&connect-gdrive=true"
+  });
+  const needsUserConnection = !isSimpleSite() && !isUserConnected;
+  const exportToGoogleDrive = (0, import_element86.useCallback)(() => {
+    if (isExporting) {
+      return;
+    }
+    setIsExporting(true);
+    tracks2.recordEvent("jetpack_forms_export_click", {
+      destination: "google-drive",
+      screen: "form-responses-inbox"
+    });
+    onExport("grunion_export_to_gdrive", "feedback_export_nonce_gdrive").then((response) => response.json()).then(({ data }) => {
+      window.open(data.sheet_link, "_blank");
+    }).finally(() => {
+      setIsExporting(false);
+    });
+  }, [tracks2, onExport, isExporting]);
+  const handleConnectClick = (0, import_element86.useCallback)(() => {
+    if (!integration?.settingsUrl) return;
+    tracks2.recordEvent("jetpack_forms_upsell_googledrive_click", {
+      screen: "form-responses-inbox"
+    });
+    setIsTogglingConnection(true);
+    esm_default2(integration?.settingsUrl, ({ keyring_id: keyringId }) => {
+      if (keyringId) {
+        refreshIntegrations2();
+      } else {
+        setIsTogglingConnection(false);
+      }
+    });
+  }, [tracks2, integration?.settingsUrl, refreshIntegrations2]);
+  if (isOfflineMode2) {
+    return null;
+  }
+  const buttonClasses = clsx_default("button", "export-button", "export-gdrive");
+  return /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)("div", { className: "jp-forms__export-modal-card", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)("div", { className: "jp-forms__export-modal-card-header", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+        import_components70.SVG,
+        {
+          width: "18",
+          height: "24",
+          viewBox: "0 0 18 24",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/SVG",
+          children: /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+            import_components70.Path,
+            {
+              d: "M11.8387 1.16016H2C1.44772 1.16016 1 1.60787 1 2.16016V21.8053V21.8376C1 22.3899 1.44772 22.8376 2 22.8376H16C16.5523 22.8376 17 22.3899 17 21.8376V5.80532M11.8387 1.16016V5.80532H17M11.8387 1.16016L17 5.80532M4.6129 13.0311V16.1279H9.25806M4.6129 13.0311V9.93435H9.25806M4.6129 13.0311H13.9032M13.9032 13.0311V9.93435H9.25806M13.9032 13.0311V16.1279H9.25806M9.25806 9.93435V16.1279",
+              stroke: "#008710",
+              strokeWidth: "1.5"
+            }
+          )
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n74.__)("Google Sheets", "jetpack-forms") })
+    ] }),
+    /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)("div", { children: [
+        (0, import_i18n74.__)("Export your data into a Google Sheets file.", "jetpack-forms"),
+        !isConnectedToGoogleDrive && /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)(import_jsx_runtime163.Fragment, { children: [
+          "\xA0",
+          /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+            "a",
+            {
+              href: gdriveConnectSupportURL,
+              title: (0, import_i18n74.__)("Connect to Google Drive", "jetpack-forms"),
+              target: "_blank",
+              rel: "noopener noreferrer",
+              children: (0, import_i18n74.__)("You need to connect to Google Drive.", "jetpack-forms")
+            }
+          )
+        ] })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: !integration ? /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(import_components70.Spinner, {}) : /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)(import_jsx_runtime163.Fragment, { children: [
+        isConnectedToGoogleDrive && /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+          import_components70.Button,
+          {
+            className: buttonClasses,
+            variant: "primary",
+            onClick: exportToGoogleDrive,
+            isBusy: isExporting,
+            children: (0, import_i18n74.__)("Export", "jetpack-forms")
+          }
+        ),
+        !isConnectedToGoogleDrive && needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+          import_components70.Button,
+          {
+            className: buttonClasses,
+            variant: "primary",
+            rel: "noopener noreferrer",
+            target: "_blank",
+            onClick: handleConnectUser,
+            isBusy: userIsConnecting2,
+            children: (0, import_i18n74.__)("Connect Jetpack user account", "jetpack-forms")
+          }
+        ),
+        !isConnectedToGoogleDrive && !needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+          import_components70.Button,
+          {
+            className: buttonClasses,
+            variant: "primary",
+            rel: "noopener noreferrer",
+            target: "_blank",
+            onClick: handleConnectClick,
+            disabled: !integration?.settingsUrl || isTogglingConnection,
+            ref: (el) => {
+              if (autoConnect && !autoConnectOpened.current) {
+                el?.click();
+                autoConnectOpened.current = true;
+              }
+            },
+            children: isTogglingConnection ? (0, import_i18n74.__)("Connecting\u2026", "jetpack-forms") : (0, import_i18n74._x)(
+              "Connect to Google Drive",
+              "",
+              // Dummy context to avoid bad minification. See https://github.com/Automattic/jetpack/tree/e3f007ec7ac80715f3d82db33c9ed8098a7b45b4/projects/js-packages/i18n-check-webpack-plugin#conditional-function-call-compaction
+              "jetpack-forms"
+            )
+          }
+        )
+      ] }) })
+    ] })
+  ] });
+};
+var google_drive_default = GoogleDriveExport;
+
+// src/dashboard/components/export-responses/modal.tsx
+var import_jsx_runtime164 = __toESM(require_jsx_runtime(), 1);
+var ExportResponsesModal = ({
+  onRequestClose,
+  onExport,
+  autoConnectGdrive
+}) => {
+  const { integrations } = (0, import_data29.useSelect)((select3) => {
+    const store5 = select3(INTEGRATIONS_STORE);
+    return {
+      integrations: store5.getIntegrations() || []
+    };
+  }, []);
+  const isGoogleDriveEnabled = integrations.some(
+    (integration) => integration.id === "google-drive"
+  );
+  return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
+    import_components71.Modal,
+    {
+      title: (0, import_i18n75.__)("Export responses", "jetpack-forms"),
+      onRequestClose,
+      size: "large",
+      children: /* @__PURE__ */ (0, import_jsx_runtime164.jsxs)(import_components71.__experimentalVStack, { spacing: 8, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(csv_default, { onExport }),
+        isGoogleDriveEnabled && /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(google_drive_default, { onExport, autoConnect: autoConnectGdrive })
+      ] })
+    }
+  );
+};
+var modal_default = ExportResponsesModal;
+
+// src/dashboard/components/export-responses/style.scss
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='734b1cba81']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "734b1cba81");
+  style.appendChild(document.createTextNode(".jp-forms__export-modal-card{border-radius:var(--jp-border-radius,4px);box-shadow:0 0 0 1px var(--jp-gray-10,#c3c4c7) inset;display:flex;flex-direction:column;isolation:isolate;padding:24px}.jp-forms__export-modal-card-body,.jp-forms__export-modal-card-header{display:flex}.jp-forms__export-modal-card-header{align-items:center;gap:16px;margin-bottom:16px}.jp-forms__export-modal-card-header-title{font-size:20px;font-style:normal;font-weight:700;line-height:30px}.jp-forms__export-modal-card-body{align-items:flex-start;flex-direction:column;gap:20px}@media (min-width:783px){.jp-forms__export-modal-card-body{align-items:center;flex-direction:row;gap:32px;justify-content:space-between}}.jp-forms__export-modal-card-body-description{color:#000;flex-grow:1;font-size:14px;font-style:normal;font-weight:400;letter-spacing:-.02em;line-height:24px;max-width:100%}@media (min-width:783px){.jp-forms__export-modal-card-body-description{max-width:60%}}.jp-forms__export-modal-card-body-description a{color:inherit}.jp-forms__export-modal-card-body-cta{align-self:flex-start}@media (min-width:783px){.jp-forms__export-modal-card-body-cta{align-self:flex-end}}.jp-forms__export-modal-card-body-cta a.export-gdrive{display:flex}"));
+  document.head.appendChild(style);
+}
+
+// src/dashboard/components/export-responses/button.tsx
+var import_jsx_runtime165 = __toESM(require_jsx_runtime(), 1);
+var ExportResponsesButton = ({ isPrimary = false }) => {
+  const {
+    showExportModal,
+    openModal,
+    closeModal,
+    userCanExport,
+    onExport,
+    autoConnectGdrive,
+    exportLabel
+  } = useExportResponses();
+  const { totalItems, isLoadingData } = useInboxData();
+  const isEmpty4 = isLoadingData || totalItems === 0;
+  const isDisabled = isEmpty4 || userCanExport === false;
+  if (userCanExport === false) {
+    return null;
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime165.jsxs)(import_jsx_runtime165.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(
+      import_components72.Button,
+      {
+        size: "compact",
+        variant: isPrimary ? "primary" : "secondary",
+        icon: download_default,
+        onClick: openModal,
+        accessibleWhenDisabled: true,
+        disabled: isDisabled,
+        label: isEmpty4 ? (0, import_i18n76.__)("Nothing to export.", "jetpack-forms") : "",
+        showTooltip: isEmpty4,
+        children: exportLabel
+      }
+    ),
+    showExportModal && /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(
+      modal_default,
+      {
+        onRequestClose: closeModal,
+        onExport,
+        autoConnectGdrive
+      }
+    )
+  ] });
+};
+var button_default = ExportResponsesButton;
+
+// src/dashboard/wp-build/components/back-to-forms-button/index.tsx
+var import_components73 = __toESM(require_components(), 1);
+var import_element87 = __toESM(require_element(), 1);
+var import_i18n77 = __toESM(require_i18n(), 1);
+var import_jsx_runtime166 = __toESM(require_jsx_runtime(), 1);
 import { useNavigate as useNavigate3 } from "@wordpress/route";
 function BackToFormsButton() {
   const navigate = useNavigate3();
-  const onClick = (0, import_element79.useCallback)(() => navigate({ href: "/forms" }), [navigate]);
-  return /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(import_components69.Button, { size: "compact", variant: "primary", onClick, children: (0, import_i18n71.__)("Back to forms", "jetpack-forms") });
-}
-
-// src/dashboard/wp-build/components/export-responses-button/index.tsx
-var import_components70 = __toESM(require_components(), 1);
-var import_i18n72 = __toESM(require_i18n(), 1);
-var import_jsx_runtime162 = __toESM(require_jsx_runtime(), 1);
-function ExportResponsesButton({
-  isPrimary = false,
-  onClick
-}) {
-  return /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(
-    import_components70.Button,
-    {
-      size: "compact",
-      variant: isPrimary ? "primary" : "secondary",
-      icon: download_default,
-      onClick,
-      children: (0, import_i18n72.__)("Export", "jetpack-forms")
-    }
-  );
+  const onClick = (0, import_element87.useCallback)(() => navigate({ href: "/forms" }), [navigate]);
+  return /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(import_components73.Button, { size: "compact", variant: "primary", onClick, children: (0, import_i18n77.__)("Back to forms", "jetpack-forms") });
 }
 
 // src/dashboard/wp-build/components/manage-integrations-button/index.tsx
-var import_components71 = __toESM(require_components(), 1);
-var import_i18n73 = __toESM(require_i18n(), 1);
-var import_jsx_runtime163 = __toESM(require_jsx_runtime(), 1);
+var import_components74 = __toESM(require_components(), 1);
+var import_i18n78 = __toESM(require_i18n(), 1);
+var import_jsx_runtime167 = __toESM(require_jsx_runtime(), 1);
 function ManageIntegrationsButton({ onClick }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(import_components71.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n73.__)("Manage integrations", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components74.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n78.__)("Manage integrations", "jetpack-forms") });
 }
 
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
-var import_jsx_runtime164 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime168 = __toESM(require_jsx_runtime(), 1);
 function usePageHeaderDetails(props) {
   const { screen, sourceId, isIntegrationsEnabled, showDashboardIntegrations, onOpenIntegrations } = props;
   const statusView = props.statusView ?? "inbox";
-  const sourceIdNumber = (0, import_element80.useMemo)(() => {
+  const sourceIdNumber = (0, import_element88.useMemo)(() => {
     const value = sourceId;
     const numberValue = typeof value === "number" ? value : Number(value);
     return Number.isFinite(numberValue) && numberValue > 0 ? numberValue : null;
   }, [sourceId]);
   const isFormsScreen = screen === "forms";
   const isSingleFormScreen = screen === "responses" && sourceIdNumber !== null;
-  const formRecord = (0, import_data17.useSelect)(
-    (select) => sourceIdNumber ? select(import_core_data5.store).getEntityRecord(
+  const formRecord = (0, import_data30.useSelect)(
+    (select3) => sourceIdNumber ? select3(import_core_data6.store).getEntityRecord(
       "postType",
       "jetpack_form",
       sourceIdNumber
     ) : void 0,
     [sourceIdNumber]
   );
-  const formTitle = (0, import_element80.useMemo)(() => {
+  const formTitle = (0, import_element88.useMemo)(() => {
     const rendered = formRecord?.title?.rendered || "";
     return (0, import_html_entities4.decodeEntities)(rendered);
   }, [formRecord?.title?.rendered]);
-  const breadcrumbsItems = (0, import_element80.useMemo)(() => {
+  const breadcrumbsItems = (0, import_element88.useMemo)(() => {
     if (isFormsScreen) {
-      return [{ label: (0, import_i18n74.__)("Forms", "jetpack-forms") }];
+      return [{ label: (0, import_i18n79.__)("Forms", "jetpack-forms") }];
     }
     if (isSingleFormScreen) {
       return [
-        { label: (0, import_i18n74.__)("Forms", "jetpack-forms"), to: "/forms" },
-        { label: formTitle || (0, import_i18n74.__)("Form responses", "jetpack-forms") }
+        { label: (0, import_i18n79.__)("Forms", "jetpack-forms"), to: "/forms" },
+        { label: formTitle || (0, import_i18n79.__)("Form responses", "jetpack-forms") }
       ];
     }
-    return [{ label: (0, import_i18n74.__)("Form Responses", "jetpack-forms") }];
+    return [{ label: (0, import_i18n79.__)("Form Responses", "jetpack-forms") }];
   }, [formTitle, isFormsScreen, isSingleFormScreen]);
-  const breadcrumbs = (0, import_element80.useMemo)(() => {
-    return /* @__PURE__ */ (0, import_jsx_runtime164.jsxs)(Stack, { align: "center", gap: "xs", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
-      /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(breadcrumbs_default, { items: breadcrumbsItems })
+  const breadcrumbs = (0, import_element88.useMemo)(() => {
+    return /* @__PURE__ */ (0, import_jsx_runtime168.jsxs)(Stack, { align: "center", gap: "xs", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
+      /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(breadcrumbs_default, { items: breadcrumbsItems })
     ] });
   }, [breadcrumbsItems]);
-  const subtitle = (0, import_element80.useMemo)(() => {
+  const subtitle = (0, import_element88.useMemo)(() => {
     if (isFormsScreen) {
-      return (0, import_i18n74.__)("View and manage all your forms in one place.", "jetpack-forms");
+      return (0, import_i18n79.__)("View and manage all your forms in one place.", "jetpack-forms");
     }
     if (isSingleFormScreen) {
       if (formTitle) {
-        return (0, import_i18n74.sprintf)(
+        return (0, import_i18n79.sprintf)(
           /* translators: %s: form name */
-          (0, import_i18n74.__)("View responses for %s.", "jetpack-forms"),
+          (0, import_i18n79.__)("View responses for %s.", "jetpack-forms"),
           formTitle
         );
       }
-      return (0, import_i18n74.__)("View responses for this form.", "jetpack-forms");
+      return (0, import_i18n79.__)("View responses for this form.", "jetpack-forms");
     }
-    return (0, import_i18n74.__)("View and manage all your form submissions in one place.", "jetpack-forms");
+    return (0, import_i18n79.__)("View and manage all your form submissions in one place.", "jetpack-forms");
   }, [formTitle, isFormsScreen, isSingleFormScreen]);
-  const actions = (0, import_element80.useMemo)(() => {
+  const actions2 = (0, import_element88.useMemo)(() => {
     if (isFormsScreen) {
       return [
-        ...isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
-        /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(CreateFormButton, {}, "create")
+        ...isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
+        /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(CreateFormButton, {}, "create")
       ];
     }
     if (isSingleFormScreen) {
       return [
-        /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(BackToFormsButton, {}, "back-to-forms"),
-        ...sourceIdNumber ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
-        /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(ExportResponsesButton, { isPrimary: false }, "export"),
-        ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
-        ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
+        /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(BackToFormsButton, {}, "back-to-forms"),
+        ...sourceIdNumber ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
+        /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(button_default, { isPrimary: false }, "export"),
+        ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
+        ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
       ];
     }
     return [
-      ...statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
-      ...statusView === "inbox" ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(CreateFormButton, { variant: "secondary", showPatterns: false }, "create")] : [],
-      /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(ExportResponsesButton, { isPrimary: statusView === "inbox" }, "export"),
-      ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
-      ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime164.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
+      ...statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
+      ...statusView === "inbox" ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(CreateFormButton, { variant: "secondary", showPatterns: false }, "create")] : [],
+      /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(button_default, { isPrimary: statusView === "inbox" }, "export"),
+      ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
+      ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
     ];
   }, [
     isIntegrationsEnabled,
@@ -35323,31 +36772,31 @@ function usePageHeaderDetails(props) {
     isSingleFormScreen,
     statusView
   ]);
-  return { breadcrumbs, subtitle, actions };
+  return { breadcrumbs, subtitle, actions: actions2 };
 }
 
 // routes/responses/actions.tsx
-var import_api_fetch9 = __toESM(require_api_fetch());
-var import_components72 = __toESM(require_components());
-var import_core_data6 = __toESM(require_core_data());
-var import_i18n75 = __toESM(require_i18n());
+var import_api_fetch10 = __toESM(require_api_fetch());
+var import_components75 = __toESM(require_components());
+var import_core_data7 = __toESM(require_core_data());
+var import_i18n80 = __toESM(require_i18n());
 var import_notices4 = __toESM(require_notices());
 
 // src/dashboard/icons/not-spam.tsx
 var import_primitives47 = __toESM(require_primitives(), 1);
-var import_jsx_runtime165 = __toESM(require_jsx_runtime(), 1);
-var notSpam = /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_primitives47.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_primitives47.Path, { d: "M13 17v-2h-.9l-.9 2H13Zm3.6-11.9-.7 1.5 2.5 2.5v5.8l-3.6 3.6h-4.3L9.8 20h5.6l4.5-4.5v-7l-3.4-3.4ZM15 2.8 14.4 4h-6L3.9 8.5v7l3.6 3.6-.5 1.2.9.4L16 3.2l-.9-.4Zm-2 4.5V7h-2v4.6l-2.7 6-2.8-2.8V9l3.6-3.6h4.7L13 7.2Z" }) });
+var import_jsx_runtime169 = __toESM(require_jsx_runtime(), 1);
+var notSpam = /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_primitives47.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_primitives47.Path, { d: "M13 17v-2h-.9l-.9 2H13Zm3.6-11.9-.7 1.5 2.5 2.5v5.8l-3.6 3.6h-4.3L9.8 20h5.6l4.5-4.5v-7l-3.4-3.4ZM15 2.8 14.4 4h-6L3.9 8.5v7l3.6 3.6-.5 1.2.9.4L16 3.2l-.9-.4Zm-2 4.5V7h-2v4.6l-2.7 6-2.8-2.8V9l3.6-3.6h4.7L13 7.2Z" }) });
 var not_spam_default = notSpam;
 
 // src/dashboard/icons/spam.tsx
 var import_primitives48 = __toESM(require_primitives(), 1);
-var import_jsx_runtime166 = __toESM(require_jsx_runtime(), 1);
-var spam = /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(import_primitives48.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(import_primitives48.Path, { d: "M11 13h2V7h-2v6Zm0 4h2v-2h-2v2Zm4.5-13h-7L4 8.5v7L8.5 20h7l4.5-4.5v-7L15.5 4Zm3 10.9-3.6 3.6H9.1l-3.6-3.6V9.1l3.6-3.6h5.8l3.6 3.6v5.8Z" }) });
+var import_jsx_runtime170 = __toESM(require_jsx_runtime(), 1);
+var spam = /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_primitives48.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_primitives48.Path, { d: "M11 13h2V7h-2v6Zm0 4h2v-2h-2v2Zm4.5-13h-7L4 8.5v7L8.5 20h7l4.5-4.5v-7L15.5 4Zm3 10.9-3.6 3.6H9.1l-3.6-3.6V9.1l3.6-3.6h5.8l3.6 3.6v5.8Z" }) });
 var spam_default = spam;
 
 // src/dashboard/inbox/stage/views.js
-var import_compose14 = __toESM(require_compose(), 1);
-var import_element81 = __toESM(require_element(), 1);
+var import_compose16 = __toESM(require_compose(), 1);
+var import_element89 = __toESM(require_element(), 1);
 var LAYOUT_TABLE2 = "table";
 var defaultView = {
   type: LAYOUT_TABLE2,
@@ -35404,7 +36853,7 @@ var updateMenuCounterOptimistically = (count) => {
 };
 
 // routes/responses/actions.tsx
-var import_jsx_runtime167 = __toESM(require_jsx_runtime());
+var import_jsx_runtime171 = __toESM(require_jsx_runtime());
 var getCountQueryParams = (currentQuery2) => {
   const queryParams = {};
   if (currentQuery2?.search) {
@@ -35424,7 +36873,7 @@ var getCountQueryParams = (currentQuery2) => {
   }
   return queryParams;
 };
-var undoingMessage = (0, import_i18n75.__)("Undoing\u2026", "jetpack-forms");
+var undoingMessage = (0, import_i18n80.__)("Undoing\u2026", "jetpack-forms");
 var pendingRefetches = /* @__PURE__ */ new Map();
 var invalidateCacheAndNavigate = (registry, currentQuery2, queryParams, statusBeingRemovedFrom) => {
   registry.dispatch(store3).invalidateCounts();
@@ -35455,9 +36904,9 @@ var invalidateCacheAndNavigate = (registry, currentQuery2, queryParams, statusBe
   setCurrentQuery2(updatedQuery);
 };
 var getGenericErrorMessage = (numberOfErrors) => {
-  return numberOfErrors === 1 ? (0, import_i18n75.__)("An error occurred.", "jetpack-forms") : (0, import_i18n75.sprintf)(
+  return numberOfErrors === 1 ? (0, import_i18n80.__)("An error occurred.", "jetpack-forms") : (0, import_i18n80.sprintf)(
     /* translators: %s: the number of responses. */
-    (0, import_i18n75._n)(
+    (0, import_i18n80._n)(
       "An error occurred for %s response.",
       "An error occurred for %s responses.",
       numberOfErrors,
@@ -35481,7 +36930,7 @@ var waitForEntityRecordsResolution = async (registry, currentQuery2) => {
   const querySnapshot = { ...currentQuery2 };
   try {
     await withTimeout(
-      registry.resolveSelect(import_core_data6.store).getEntityRecords("postType", "feedback", querySnapshot),
+      registry.resolveSelect(import_core_data7.store).getEntityRecords("postType", "feedback", querySnapshot),
       1e4
     );
   } catch {
@@ -35540,8 +36989,8 @@ function getActions({
   const viewAction = {
     id: "view-response",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: comment_content_default }),
-    label: (0, import_i18n75.__)("View", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: comment_content_default }),
+    label: (0, import_i18n80.__)("View", "jetpack-forms"),
     async callback(items) {
       analytics_default.tracks.recordEvent("jetpack_forms_inbox_action_click", {
         action: "view-response",
@@ -35559,8 +37008,8 @@ function getActions({
   const editFormAction = {
     id: "edit-form",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: backup_default }),
-    label: (0, import_i18n75.__)("Edit form", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: backup_default }),
+    label: (0, import_i18n80.__)("Edit form", "jetpack-forms"),
     isEligible: (item) => !!item?.edit_form_url,
     supportsBulk: false,
     async callback(items) {
@@ -35578,8 +37027,8 @@ function getActions({
   const markAsSpamAction = {
     id: "mark-as-spam",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: spam_default }),
-    label: (0, import_i18n75.__)("Spam", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: spam_default }),
+    label: (0, import_i18n80.__)("Spam", "jetpack-forms"),
     isEligible: (item) => item.status !== "spam",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false } = {}) {
@@ -35588,14 +37037,14 @@ function getActions({
         multiple: items.length > 1
       });
       const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices4.store);
-      const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data6.store);
+      const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data7.store);
       const { updateCountsOptimistically: updateCountsOptimistically2, addPendingAction: addPendingAction2, removePendingAction: removePendingAction2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const actionId = `mark-as-spam-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n75.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n80.sprintf)(
         /* translators: %s: the number of responses. */
-        (0, import_i18n75._n)(
+        (0, import_i18n80._n)(
           "Moving %s response to spam\u2026",
           "Moving %s responses to spam\u2026",
           items.length,
@@ -35606,7 +37055,7 @@ function getActions({
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "mark-as-spam-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -35629,9 +37078,9 @@ function getActions({
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n75.__)("Response marked as spam.", "jetpack-forms") : (0, import_i18n75.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n80.__)("Response marked as spam.", "jetpack-forms") : (0, import_i18n80.sprintf)(
             /* translators: %s: the number of responses. */
-            (0, import_i18n75._n)(
+            (0, import_i18n80._n)(
               "%s response marked as spam.",
               "%s responses marked as spam.",
               items.length,
@@ -35645,7 +37094,7 @@ function getActions({
               id: "mark-as-spam-action",
               actions: [
                 {
-                  label: (0, import_i18n75.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n80.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -35684,8 +37133,8 @@ function getActions({
   const markAsNotSpamAction = {
     id: "mark-as-not-spam",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: not_spam_default }),
-    label: (0, import_i18n75.__)("Not spam", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: not_spam_default }),
+    label: (0, import_i18n80.__)("Not spam", "jetpack-forms"),
     isEligible: (item) => item.status === "spam",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false } = {}) {
@@ -35694,14 +37143,14 @@ function getActions({
         multiple: items.length > 1
       });
       const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices4.store);
-      const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data6.store);
+      const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data7.store);
       const { updateCountsOptimistically: updateCountsOptimistically2, addPendingAction: addPendingAction2, removePendingAction: removePendingAction2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const actionId = `mark-as-not-spam-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n75.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n80.sprintf)(
         /* translators: %s: the number of responses. */
-        (0, import_i18n75._n)(
+        (0, import_i18n80._n)(
           "Marking %s response as not spam\u2026",
           "Marking %s responses as not spam\u2026",
           items.length,
@@ -35712,7 +37161,7 @@ function getActions({
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "mark-as-not-spam-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -35731,9 +37180,9 @@ function getActions({
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n75.__)("Response marked as not spam.", "jetpack-forms") : (0, import_i18n75.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n80.__)("Response marked as not spam.", "jetpack-forms") : (0, import_i18n80.sprintf)(
             /* translators: %s: the number of responses. */
-            (0, import_i18n75._n)(
+            (0, import_i18n80._n)(
               "%s response marked as not spam.",
               "%s responses marked as not spam.",
               items.length,
@@ -35747,7 +37196,7 @@ function getActions({
               id: "mark-as-not-spam-action",
               actions: [
                 {
-                  label: (0, import_i18n75.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n80.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -35786,8 +37235,8 @@ function getActions({
   const restoreAction = {
     id: "restore",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: backup_default }),
-    label: (0, import_i18n75.__)("Restore", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: backup_default }),
+    label: (0, import_i18n80.__)("Restore", "jetpack-forms"),
     isEligible: (item) => item.status === "trash",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false, targetStatus = "publish" } = {}) {
@@ -35795,16 +37244,16 @@ function getActions({
         action: "restore",
         multiple: items.length > 1
       });
-      const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data6.store);
+      const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data7.store);
       const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices4.store);
       const { updateCountsOptimistically: updateCountsOptimistically2, addPendingAction: addPendingAction2, removePendingAction: removePendingAction2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const newStatus = targetStatus === "trash" ? "publish" : targetStatus;
       const actionId = `restore-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n75.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n80.sprintf)(
         /* translators: %s: the number of responses. */
-        (0, import_i18n75._n)(
+        (0, import_i18n80._n)(
           "Restoring %s response\u2026",
           "Restoring %s responses\u2026",
           items.length,
@@ -35815,7 +37264,7 @@ function getActions({
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "restore-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -35834,9 +37283,9 @@ function getActions({
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n75.__)("Response restored.", "jetpack-forms") : (0, import_i18n75.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n80.__)("Response restored.", "jetpack-forms") : (0, import_i18n80.sprintf)(
             /* translators: %s: the number of responses. */
-            (0, import_i18n75._n)(
+            (0, import_i18n80._n)(
               "%s response restored.",
               "%s responses restored.",
               items.length,
@@ -35850,7 +37299,7 @@ function getActions({
               id: "restore-action",
               actions: [
                 {
-                  label: (0, import_i18n75.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n80.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -35883,8 +37332,8 @@ function getActions({
   const moveToTrashAction = {
     id: "move-to-trash",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: trash_default }),
-    label: (0, import_i18n75.__)("Trash", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: trash_default }),
+    label: (0, import_i18n80.__)("Trash", "jetpack-forms"),
     isEligible: (item) => item.status !== "trash",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false } = {}) {
@@ -35892,16 +37341,16 @@ function getActions({
         action: "move-to-trash",
         multiple: items.length > 1
       });
-      const { deleteEntityRecord, editEntityRecord, receiveEntityRecords } = registry.dispatch(import_core_data6.store);
+      const { deleteEntityRecord, editEntityRecord, receiveEntityRecords } = registry.dispatch(import_core_data7.store);
       const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices4.store);
       const { updateCountsOptimistically: updateCountsOptimistically2, addPendingAction: addPendingAction2, removePendingAction: removePendingAction2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const previousStatus = items[0]?.status;
       const actionId = `move-to-trash-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n75.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n80.sprintf)(
         /* translators: %s: the number of responses. */
-        (0, import_i18n75._n)(
+        (0, import_i18n80._n)(
           "Moving %s response to trash\u2026",
           "Moving %s responses to trash\u2026",
           items.length,
@@ -35912,7 +37361,7 @@ function getActions({
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "move-to-trash-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -35935,9 +37384,9 @@ function getActions({
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n75.__)("Response moved to trash.", "jetpack-forms") : (0, import_i18n75.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n80.__)("Response moved to trash.", "jetpack-forms") : (0, import_i18n80.sprintf)(
             /* translators: %s: the number of responses. */
-            (0, import_i18n75._n)(
+            (0, import_i18n80._n)(
               "%s response moved to trash.",
               "%s responses moved to trash.",
               items.length,
@@ -35952,7 +37401,7 @@ function getActions({
               id: "move-to-trash-action",
               actions: [
                 {
-                  label: (0, import_i18n75.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n80.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -35990,8 +37439,8 @@ function getActions({
   const deleteAction = {
     id: "delete",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: trash_default }),
-    label: (0, import_i18n75.__)("Delete", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: trash_default }),
+    label: (0, import_i18n80.__)("Delete", "jetpack-forms"),
     isEligible: (item) => item.status === "trash",
     supportsBulk: true,
     isDestructive: true,
@@ -36000,7 +37449,7 @@ function getActions({
         action: "delete",
         multiple: items.length > 1
       });
-      const { deleteEntityRecord } = registry.dispatch(import_core_data6.store);
+      const { deleteEntityRecord } = registry.dispatch(import_core_data7.store);
       const { invalidateFilters: invalidateFilters2, updateCountsOptimistically: updateCountsOptimistically2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const { createSuccessNotice, createErrorNotice } = registry.dispatch(import_notices4.store);
@@ -36019,9 +37468,9 @@ function getActions({
         invalidateCacheAndNavigate(registry, getCurrentQuery2(), queryParams, "trash");
       }
       if (itemsUpdated.length === items.length) {
-        const successMessage = items.length === 1 ? (0, import_i18n75.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n75.sprintf)(
+        const successMessage = items.length === 1 ? (0, import_i18n80.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n80.sprintf)(
           /* translators: %s: the number of responses. */
-          (0, import_i18n75._n)(
+          (0, import_i18n80._n)(
             "%s response deleted permanently.",
             "%s responses deleted permanently.",
             items.length,
@@ -36055,8 +37504,8 @@ function getActions({
   const markAsReadAction = {
     id: "mark-as-read",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: seen_default }),
-    label: (0, import_i18n75.__)("Mark as read", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: seen_default }),
+    label: (0, import_i18n80.__)("Mark as read", "jetpack-forms"),
     isEligible: (item) => item.is_unread,
     supportsBulk: true,
     async callback(items, { registry }) {
@@ -36064,8 +37513,8 @@ function getActions({
         action: "mark-as-read",
         multiple: items.length > 1
       });
-      const { editEntityRecord } = registry.dispatch(import_core_data6.store);
-      const { getEntityRecord } = registry.select(import_core_data6.store);
+      const { editEntityRecord } = registry.dispatch(import_core_data7.store);
+      const { getEntityRecord } = registry.select(import_core_data7.store);
       const { createSuccessNotice, createErrorNotice } = registry.dispatch(import_notices4.store);
       const { invalidateCounts: invalidateCounts2, markRecordsAsInvalid: markRecordsAsInvalid2 } = registry.dispatch(store3);
       const promises = await Promise.allSettled(
@@ -36079,7 +37528,7 @@ function getActions({
               updateMenuCounterOptimistically(-1);
             }
           }
-          return (0, import_api_fetch9.default)({
+          return (0, import_api_fetch10.default)({
             path: `/wp/v2/feedback/${id}/read`,
             method: "POST",
             data: { is_unread: false }
@@ -36105,9 +37554,9 @@ function getActions({
         markRecordsAsInvalid2(updatedIds);
       }
       if (promises.every(({ status }) => status === "fulfilled")) {
-        const successMessage = items.length === 1 ? (0, import_i18n75.__)("Response marked as read.", "jetpack-forms") : (0, import_i18n75.sprintf)(
+        const successMessage = items.length === 1 ? (0, import_i18n80.__)("Response marked as read.", "jetpack-forms") : (0, import_i18n80.sprintf)(
           /* translators: %s: the number of responses. */
-          (0, import_i18n75._n)(
+          (0, import_i18n80._n)(
             "%s response marked as read.",
             "%s responses marked as read.",
             items.length,
@@ -36120,7 +37569,7 @@ function getActions({
           id: "mark-as-read-action",
           actions: [
             {
-              label: (0, import_i18n75.__)("Undo", "jetpack-forms"),
+              label: (0, import_i18n80.__)("Undo", "jetpack-forms"),
               onClick: () => {
                 markAsUnreadAction.callback?.(items, { registry });
               }
@@ -36137,8 +37586,8 @@ function getActions({
   const markAsUnreadAction = {
     id: "mark-as-unread",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components72.Icon, { icon: unseen_default }),
-    label: (0, import_i18n75.__)("Mark as unread", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: unseen_default }),
+    label: (0, import_i18n80.__)("Mark as unread", "jetpack-forms"),
     isEligible: (item) => !item.is_unread,
     supportsBulk: true,
     async callback(items, { registry }) {
@@ -36146,8 +37595,8 @@ function getActions({
         action: "mark-as-unread",
         multiple: items.length > 1
       });
-      const { editEntityRecord } = registry.dispatch(import_core_data6.store);
-      const { getEntityRecord } = registry.select(import_core_data6.store);
+      const { editEntityRecord } = registry.dispatch(import_core_data7.store);
+      const { getEntityRecord } = registry.select(import_core_data7.store);
       const { createSuccessNotice, createErrorNotice } = registry.dispatch(import_notices4.store);
       const { invalidateCounts: invalidateCounts2, markRecordsAsInvalid: markRecordsAsInvalid2 } = registry.dispatch(store3);
       const promises = await Promise.allSettled(
@@ -36161,7 +37610,7 @@ function getActions({
               updateMenuCounterOptimistically(1);
             }
           }
-          return (0, import_api_fetch9.default)({
+          return (0, import_api_fetch10.default)({
             path: `/wp/v2/feedback/${id}/read`,
             method: "POST",
             data: { is_unread: true }
@@ -36185,9 +37634,9 @@ function getActions({
         invalidateCounts2();
         const updatedIds = items.map((item) => item.id);
         markRecordsAsInvalid2(updatedIds);
-        const successMessage = items.length === 1 ? (0, import_i18n75.__)("Response marked as unread.", "jetpack-forms") : (0, import_i18n75.sprintf)(
+        const successMessage = items.length === 1 ? (0, import_i18n80.__)("Response marked as unread.", "jetpack-forms") : (0, import_i18n80.sprintf)(
           /* translators: %s: the number of responses. */
-          (0, import_i18n75._n)(
+          (0, import_i18n80._n)(
             "%s response marked as unread.",
             "%s responses marked as unread.",
             items.length,
@@ -36200,7 +37649,7 @@ function getActions({
           id: "mark-as-unread-action",
           actions: [
             {
-              label: (0, import_i18n75.__)("Undo", "jetpack-forms"),
+              label: (0, import_i18n80.__)("Undo", "jetpack-forms"),
               onClick: () => {
                 markAsReadAction.callback?.(items, { registry });
               }
@@ -36246,7 +37695,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // routes/responses/stage.tsx
-var import_jsx_runtime168 = __toESM(require_jsx_runtime());
+var import_jsx_runtime172 = __toESM(require_jsx_runtime());
 var EMPTY_ARRAY9 = [];
 var defaultLayouts2 = {
   table: {},
@@ -36271,14 +37720,14 @@ function styleUnreadValue(element, isUnread) {
     return element;
   }
   if (typeof element === "string") {
-    return /* @__PURE__ */ (0, import_jsx_runtime168.jsx)("span", { style: { fontWeight: 600 }, children: element });
+    return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("span", { style: { fontWeight: 600 }, children: element });
   }
   if (React36.isValidElement(element)) {
     return React36.cloneElement(element, {
       style: { ...element.props.style || {}, fontWeight: 600 }
     });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime168.jsx)("span", { style: { fontWeight: 600 }, children: element });
+  return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("span", { style: { fontWeight: 600 }, children: element });
 }
 function getUrlPath(url) {
   try {
@@ -36297,19 +37746,19 @@ function StageInner() {
   const sourceIdValue = searchParams?.sourceId;
   const sourceIdNumber = typeof sourceIdValue === "number" ? sourceIdValue : Number(sourceIdValue);
   const isSingleFormView = Number.isFinite(sourceIdNumber) && sourceIdNumber > 0;
-  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element82.useState)(false);
-  const integrations = (0, import_data18.useSelect)(
-    (select) => select(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
+  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element90.useState)(false);
+  const integrations = (0, import_data31.useSelect)(
+    (select3) => select3(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
   );
-  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data18.useDispatch)(INTEGRATIONS_STORE);
+  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data31.useDispatch)(INTEGRATIONS_STORE);
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
-  const [view, setView] = (0, import_element82.useState)(() => ({
+  const [view, setView] = (0, import_element90.useState)(() => ({
     ...DEFAULT_VIEW,
     search: searchParams?.search || ""
   }));
-  const selection = (0, import_element82.useMemo)(() => searchParams?.responseIds ?? [], [searchParams?.responseIds]);
+  const selection = (0, import_element90.useMemo)(() => searchParams?.responseIds ?? [], [searchParams?.responseIds]);
   const {
     setCurrentQuery: setCurrentQuery2,
     setSelectedResponses: setSelectedResponses2,
@@ -36322,13 +37771,13 @@ function StageInner() {
     totalItemsSpam,
     totalItemsTrash
   } = useInboxData({ status: statusView });
-  (0, import_element82.useEffect)(() => {
+  (0, import_element90.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
     if (urlSearch !== view.search) {
       setView((prev) => ({ ...prev, search: urlSearch }));
     }
   }, [searchParams?.search]);
-  const onChangeView = (0, import_element82.useCallback)(
+  const onChangeView = (0, import_element90.useCallback)(
     (newView) => {
       if (!isSingleFormView) {
         const folderValue = newView.filters?.find((filter) => filter.field === "folder")?.value || "inbox";
@@ -36357,7 +37806,7 @@ function StageInner() {
     },
     [isSingleFormView, navigate, searchParams, statusView, view.search]
   );
-  const onChangeSelection = (0, import_element82.useCallback)(
+  const onChangeSelection = (0, import_element90.useCallback)(
     (items) => {
       navigate({
         search: {
@@ -36368,7 +37817,7 @@ function StageInner() {
     },
     [searchParams, navigate]
   );
-  const onStatusChange = (0, import_element82.useCallback)(
+  const onStatusChange = (0, import_element90.useCallback)(
     (nextStatus) => {
       navigate({
         to: "/responses/$view",
@@ -36382,7 +37831,7 @@ function StageInner() {
     },
     [isSingleFormView, navigate, searchParams, sourceIdNumber]
   );
-  (0, import_element82.useEffect)(() => {
+  (0, import_element90.useEffect)(() => {
     if (isSingleFormView) {
       return;
     }
@@ -36401,7 +37850,7 @@ function StageInner() {
       };
     });
   }, [isSingleFormView, setView, statusView]);
-  const queryParams = (0, import_element82.useMemo)(() => {
+  const queryParams = (0, import_element90.useMemo)(() => {
     const queryArgs = {
       status: statusFilter,
       per_page: view.perPage,
@@ -36433,42 +37882,42 @@ function StageInner() {
     });
     return queryArgs;
   }, [isSingleFormView, sourceIdNumber, statusFilter, view]);
-  (0, import_element82.useEffect)(() => {
+  (0, import_element90.useEffect)(() => {
     setCurrentQuery2(queryParams);
   }, [queryParams, setCurrentQuery2]);
-  (0, import_element82.useEffect)(() => {
+  (0, import_element90.useEffect)(() => {
     const validSelectedIds = (selection || []).filter((id) => {
       return records?.some((record) => getItemId(record) === id);
     });
     setSelectedResponses2(validSelectedIds);
   }, [records, selection, setSelectedResponses2]);
-  const fields = (0, import_element82.useMemo)(
+  const fields = (0, import_element90.useMemo)(
     () => [
       ...isSingleFormView ? [] : [
         {
           id: "folder",
-          label: (0, import_i18n76.__)("Folder", "jetpack-forms"),
+          label: (0, import_i18n81.__)("Folder", "jetpack-forms"),
           elements: [
             {
-              label: (0, import_i18n76.sprintf)(
+              label: (0, import_i18n81.sprintf)(
                 /* translators: %s is the number of inbox responses. */
-                (0, import_i18n76.__)("Inbox (%s)", "jetpack-forms"),
+                (0, import_i18n81.__)("Inbox (%s)", "jetpack-forms"),
                 formatNumber2(totalItemsInbox ?? 0)
               ),
               value: "inbox"
             },
             {
-              label: (0, import_i18n76.sprintf)(
+              label: (0, import_i18n81.sprintf)(
                 /* translators: %s is the number of spam responses. */
-                (0, import_i18n76.__)("Spam (%s)", "jetpack-forms"),
+                (0, import_i18n81.__)("Spam (%s)", "jetpack-forms"),
                 formatNumber2(totalItemsSpam ?? 0)
               ),
               value: "spam"
             },
             {
-              label: (0, import_i18n76.sprintf)(
+              label: (0, import_i18n81.sprintf)(
                 /* translators: %s is the number of trash responses. */
-                (0, import_i18n76.__)("Trash (%s)", "jetpack-forms"),
+                (0, import_i18n81.__)("Trash (%s)", "jetpack-forms"),
                 formatNumber2(totalItemsTrash ?? 0)
               ),
               value: "trash"
@@ -36485,15 +37934,15 @@ function StageInner() {
       ],
       {
         id: "from",
-        label: (0, import_i18n76.__)("From", "jetpack-forms"),
+        label: (0, import_i18n81.__)("From", "jetpack-forms"),
         render: ({ item }) => {
           const displayName = (0, import_html_entities5.decodeEntities)(
             item.author_name || item.author_email || item.author_url || item.ip || "Anonymous"
           );
           const showEmail = item.author_email && displayName !== (0, import_html_entities5.decodeEntities)(item.author_email);
           const defaultImage = item.author_name || item.author_email ? "initials" : "mp";
-          return /* @__PURE__ */ (0, import_jsx_runtime168.jsxs)(Stack, { align: "center", gap: "sm", children: [
-            item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)(Stack, { align: "center", gap: "sm", children: [
+            item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
               "span",
               {
                 style: {
@@ -36502,11 +37951,11 @@ function StageInner() {
                   position: "absolute",
                   marginLeft: "-12px"
                 },
-                "aria-label": (0, import_i18n76.__)("(Unread form response)", "jetpack-forms"),
+                "aria-label": (0, import_i18n81.__)("(Unread form response)", "jetpack-forms"),
                 children: "\u25CF"
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
               Gravatar,
               {
                 email: item.author_email || item.ip,
@@ -36517,9 +37966,9 @@ function StageInner() {
               }
             ),
             styleUnreadValue(
-              /* @__PURE__ */ (0, import_jsx_runtime168.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(import_components73.__experimentalText, { ellipsizeMode: "tail", limit: 50, truncate: true, children: displayName }),
-                showEmail && /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(import_components73.__experimentalText, { variant: "muted", size: 12, ellipsizeMode: "tail", limit: 50, truncate: true, children: item.author_email })
+              /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components76.__experimentalText, { ellipsizeMode: "tail", limit: 50, truncate: true, children: displayName }),
+                showEmail && /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components76.__experimentalText, { variant: "muted", size: 12, ellipsizeMode: "tail", limit: 50, truncate: true, children: item.author_email })
               ] }),
               item.is_unread
             )
@@ -36531,7 +37980,7 @@ function StageInner() {
       },
       {
         id: "date",
-        label: (0, import_i18n76.__)("Date", "jetpack-forms"),
+        label: (0, import_i18n81.__)("Date", "jetpack-forms"),
         render: ({ item }) => {
           const dateStr = new Date(item.date).toLocaleDateString(void 0, {
             year: "numeric",
@@ -36546,7 +37995,7 @@ function StageInner() {
           date.setMonth(filter.month - 1);
           date.setFullYear(filter.year);
           return {
-            label: (0, import_date10.dateI18n)((0, import_i18n76.__)("F Y", "jetpack-forms"), date),
+            label: (0, import_date10.dateI18n)((0, import_i18n81.__)("F Y", "jetpack-forms"), date),
             value: `${filter.year}/${filter.month}`
           };
         }),
@@ -36556,12 +38005,12 @@ function StageInner() {
       ...isSingleFormView ? [] : [
         {
           id: "source",
-          label: (0, import_i18n76.__)("Source", "jetpack-forms"),
+          label: (0, import_i18n81.__)("Source", "jetpack-forms"),
           render: ({ item }) => {
-            const source = item.entry_title || getUrlPath(item.entry_permalink) || (0, import_i18n76.__)("(no title)", "jetpack-forms");
+            const source = item.entry_title || getUrlPath(item.entry_permalink) || (0, import_i18n81.__)("(no title)", "jetpack-forms");
             if (item.entry_permalink) {
               return styleUnreadValue(
-                /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(import_components73.ExternalLink, { href: item.entry_permalink, children: source }),
+                /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components76.ExternalLink, { href: item.entry_permalink, children: source }),
                 item.is_unread
               );
             }
@@ -36570,7 +38019,7 @@ function StageInner() {
           elements: (filterOptions?.source || []).map(
             (source) => ({
               value: source.id.toString(),
-              label: (0, import_html_entities5.decodeEntities)(source.title) || getUrlPath(source.url) || (0, import_i18n76.__)("(no title)", "jetpack-forms")
+              label: (0, import_html_entities5.decodeEntities)(source.title) || getUrlPath(source.url) || (0, import_i18n81.__)("(no title)", "jetpack-forms")
             })
           ),
           filterBy: { operators: ["is"] },
@@ -36579,32 +38028,32 @@ function StageInner() {
       ],
       {
         id: "read_status",
-        label: (0, import_i18n76.__)("Status", "jetpack-forms"),
+        label: (0, import_i18n81.__)("Status", "jetpack-forms"),
         elements: [
-          { label: (0, import_i18n76.__)("Unread", "jetpack-forms"), value: "unread" },
-          { label: (0, import_i18n76.__)("Read", "jetpack-forms"), value: "read" }
+          { label: (0, import_i18n81.__)("Unread", "jetpack-forms"), value: "unread" },
+          { label: (0, import_i18n81.__)("Read", "jetpack-forms"), value: "read" }
         ],
         filterBy: { operators: ["is"] },
         enableSorting: false,
         render: ({ item }) => {
-          return /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(Badge, { intent: "default", children: item.is_unread ? (0, import_i18n76.__)("Unread", "jetpack-forms") : (0, import_i18n76.__)("Read", "jetpack-forms") });
+          return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(Badge, { intent: "default", children: item.is_unread ? (0, import_i18n81.__)("Unread", "jetpack-forms") : (0, import_i18n81.__)("Read", "jetpack-forms") });
         }
       },
       {
         id: "ip",
-        label: (0, import_i18n76.__)("IP Address", "jetpack-forms"),
+        label: (0, import_i18n81.__)("IP Address", "jetpack-forms"),
         render: ({ item }) => {
           if (!item.ip) {
             return styleUnreadValue("-", item.is_unread);
           }
-          return /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(TextWithFlag, { countryCode: item.country_code, fallbackIcon: true, children: styleUnreadValue(item.ip, item.is_unread) });
+          return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(TextWithFlag, { countryCode: item.country_code, fallbackIcon: true, children: styleUnreadValue(item.ip, item.is_unread) });
         },
         enableSorting: false
       }
     ],
     [filterOptions, isSingleFormView, totalItemsInbox, totalItemsSpam, totalItemsTrash]
   );
-  const actions = (0, import_element82.useMemo)(
+  const actions2 = (0, import_element90.useMemo)(
     () => getActions({
       navigate,
       searchParams,
@@ -36612,17 +38061,17 @@ function StageInner() {
     }),
     [navigate, searchParams, statusView]
   );
-  const paginationInfo = (0, import_element82.useMemo)(
+  const paginationInfo = (0, import_element90.useMemo)(
     () => ({
       totalItems: totalItems || 0,
       totalPages: totalPages || 1
     }),
     [totalItems, totalPages]
   );
-  const handleIntegrations = (0, import_element82.useCallback)(() => {
+  const handleIntegrations = (0, import_element90.useCallback)(() => {
     setIsIntegrationsModalOpen(true);
   }, []);
-  const closeIntegrationsModal = (0, import_element82.useCallback)(() => {
+  const closeIntegrationsModal = (0, import_element90.useCallback)(() => {
     setIsIntegrationsModalOpen(false);
   }, []);
   const {
@@ -36638,13 +38087,13 @@ function StageInner() {
     onOpenIntegrations: handleIntegrations
   });
   const readStatusFilter = view.filters?.find((filter) => filter.field === "read_status")?.value;
-  const onClickItem = (0, import_element82.useCallback)(
+  const onClickItem = (0, import_element90.useCallback)(
     (item) => {
       onChangeSelection([String(item.id)]);
     },
     [onChangeSelection]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime168.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)(
     page_default,
     {
       showSidebarToggle: false,
@@ -36653,10 +38102,10 @@ function StageInner() {
       actions: headerActions,
       hasPadding: false,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime168.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)(
           dataviews_default,
           {
-            empty: /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(
+            empty: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
               empty_responses_default,
               {
                 status: statusView,
@@ -36675,9 +38124,9 @@ function StageInner() {
             selection,
             onChangeSelection,
             onClickItem,
-            actions,
+            actions: actions2,
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
                 DataViewsHeaderRow,
                 {
                   activeTab: "responses",
@@ -36691,12 +38140,12 @@ function StageInner() {
                   onStatusChange
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(dataviews_default.Layout, {}),
-              /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(dataviews_default.Footer, {})
+              /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(dataviews_default.Layout, {}),
+              /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(dataviews_default.Footer, {})
             ]
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
           jetpack_integrations_modal_default,
           {
             isOpen: isIntegrationsModalOpen,
@@ -36713,23 +38162,23 @@ function StageInner() {
   );
 }
 var Stage = () => {
-  return /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(StageInner, {}) });
+  return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(StageInner, {}) });
 };
 
 // routes/responses/response/index.tsx
-var import_api_fetch11 = __toESM(require_api_fetch());
-var import_components85 = __toESM(require_components());
-var import_core_data8 = __toESM(require_core_data());
-var import_data20 = __toESM(require_data());
-var import_element86 = __toESM(require_element());
+var import_api_fetch12 = __toESM(require_api_fetch());
+var import_components88 = __toESM(require_components());
+var import_core_data9 = __toESM(require_core_data());
+var import_data33 = __toESM(require_data());
+var import_element94 = __toESM(require_element());
 var import_html_entities9 = __toESM(require_html_entities());
-var import_i18n84 = __toESM(require_i18n());
+var import_i18n89 = __toESM(require_i18n());
 import { useParams as useParams2, useSearch as useSearch3, useNavigate as useNavigate5 } from "@wordpress/route";
 
 // src/dashboard/components/inspector/preview-file/index.tsx
-var import_components74 = __toESM(require_components(), 1);
+var import_components77 = __toESM(require_components(), 1);
 var import_html_entities6 = __toESM(require_html_entities(), 1);
-var import_i18n77 = __toESM(require_i18n(), 1);
+var import_i18n82 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/inspector/preview-file/style.scss
 if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='6858eb9077']")) {
@@ -36740,17 +38189,17 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/preview-file/index.tsx
-var import_jsx_runtime169 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime173 = __toESM(require_jsx_runtime(), 1);
 var PreviewFile = ({ file, isLoading, onImageLoaded }) => {
   const imageClass = clsx_default("jp-forms__inbox-file-preview-container", {
     "is-loading": isLoading
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("div", { className: "jp-forms__inbox-file-preview-shell", children: [
-    isLoading && /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)("div", { className: "jp-forms__inbox-file-loading", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_components74.Spinner, { className: "jp-forms__inbox-file-spinner" }),
-      /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("div", { className: "jp-forms__inbox-file-loading-message ", children: (0, import_i18n77.__)("Loading preview\u2026", "jetpack-forms") })
+  return /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__inbox-file-preview-shell", children: [
+    isLoading && /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__inbox-file-loading", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(import_components77.Spinner, { className: "jp-forms__inbox-file-spinner" }),
+      /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__inbox-file-loading-message ", children: (0, import_i18n82.__)("Loading preview\u2026", "jetpack-forms") })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("div", { className: imageClass, children: /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: imageClass, children: /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
       "img",
       {
         src: file.url,
@@ -36764,13 +38213,13 @@ var PreviewFile = ({ file, isLoading, onImageLoaded }) => {
 var preview_file_default = PreviewFile;
 
 // src/dashboard/components/inspector/response-fields/field-email/index.tsx
-var import_components76 = __toESM(require_components(), 1);
+var import_components79 = __toESM(require_components(), 1);
 
 // src/dashboard/components/copy-clipboard-button/index.tsx
-var import_components75 = __toESM(require_components(), 1);
-var import_compose15 = __toESM(require_compose(), 1);
-var import_element83 = __toESM(require_element(), 1);
-var import_i18n78 = __toESM(require_i18n(), 1);
+var import_components78 = __toESM(require_components(), 1);
+var import_compose17 = __toESM(require_compose(), 1);
+var import_element91 = __toESM(require_element(), 1);
+var import_i18n83 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/copy-clipboard-button/style.scss
 if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='f2ba3be839']")) {
@@ -36781,11 +38230,11 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/copy-clipboard-button/index.tsx
-var import_jsx_runtime170 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime174 = __toESM(require_jsx_runtime(), 1);
 function CopyClipboardButton({ text }) {
-  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element83.useState)(false);
-  const timeoutIdRef = (0, import_element83.useRef)(null);
-  const ref = (0, import_compose15.useCopyToClipboard)(text, () => {
+  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element91.useState)(false);
+  const timeoutIdRef = (0, import_element91.useRef)(null);
+  const ref = (0, import_compose17.useCopyToClipboard)(text, () => {
     setShowCopyConfirmation(true);
     if (timeoutIdRef.current) {
       clearTimeout(timeoutIdRef.current);
@@ -36794,18 +38243,18 @@ function CopyClipboardButton({ text }) {
       setShowCopyConfirmation(false);
     }, 4e3);
   });
-  (0, import_element83.useEffect)(() => {
+  (0, import_element91.useEffect)(() => {
     return () => {
       if (timeoutIdRef.current) {
         clearTimeout(timeoutIdRef.current);
       }
     };
   }, []);
-  const copied = (0, import_i18n78.__)("Copied!", "jetpack-forms");
-  const copy = (0, import_i18n78.__)("Copy", "jetpack-forms");
+  const copied = (0, import_i18n83.__)("Copied!", "jetpack-forms");
+  const copy = (0, import_i18n83.__)("Copy", "jetpack-forms");
   const emailCopyLabel = showCopyConfirmation ? copied : copy;
-  return /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components75.Tooltip, { delay: 0, hideOnClick: false, text: emailCopyLabel, children: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(
-    import_components75.Button,
+  return /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.Tooltip, { delay: 0, hideOnClick: false, text: emailCopyLabel, children: /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
+    import_components78.Button,
     {
       className: "jp-forms__copy-clipboard-button",
       size: "small",
@@ -36826,24 +38275,24 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-fields/field-email/index.tsx
-var import_jsx_runtime171 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime175 = __toESM(require_jsx_runtime(), 1);
 var FieldEmail = ({ email }) => {
   const emailParts = email.split("@");
-  return /* @__PURE__ */ (0, import_jsx_runtime171.jsxs)(
-    import_components76.__experimentalHStack,
+  return /* @__PURE__ */ (0, import_jsx_runtime175.jsxs)(
+    import_components79.__experimentalHStack,
     {
       alignment: "center",
       className: "jp-forms__inbox-response-field-email",
       justify: "left",
       spacing: "2",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime171.jsxs)("a", { href: `mailto:${email}`, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime175.jsxs)("a", { href: `mailto:${email}`, children: [
           emailParts[0],
-          /* @__PURE__ */ (0, import_jsx_runtime171.jsx)("wbr", {}),
+          /* @__PURE__ */ (0, import_jsx_runtime175.jsx)("wbr", {}),
           "@",
           emailParts[1]
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(CopyClipboardButton, { text: email })
+        /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(CopyClipboardButton, { text: email })
       ]
     }
   );
@@ -36851,10 +38300,10 @@ var FieldEmail = ({ email }) => {
 var field_email_default = FieldEmail;
 
 // src/dashboard/components/inspector/response-fields/field-file/file.tsx
-var import_components77 = __toESM(require_components(), 1);
+var import_components80 = __toESM(require_components(), 1);
 var import_html_entities7 = __toESM(require_html_entities(), 1);
-var import_i18n79 = __toESM(require_i18n(), 1);
-var import_jsx_runtime172 = __toESM(require_jsx_runtime(), 1);
+var import_i18n84 = __toESM(require_i18n(), 1);
+var import_jsx_runtime176 = __toESM(require_jsx_runtime(), 1);
 var FieldFile = ({ file, onClick }) => {
   const fileExtension = file.name.split(".").pop().toLowerCase();
   const fileType = file.type.split("/")[0];
@@ -36888,21 +38337,21 @@ var FieldFile = ({ file, onClick }) => {
   };
   const iconType = extensionMap[fileExtension] || iconMap[fileType] || "txt";
   const iconClass = clsx_default("jp-forms__inbox-response-file__icon", "icon-" + iconType);
-  return /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)("div", { className: "jp-forms__inbox-response-file", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)("div", { className: "jp-forms__inbox-response-file__info", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("div", { className: iconClass }),
-      /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)("div", { className: "jp-forms__inbox-response-file__name", children: [
-        file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Button, { target: "_blank", variant: "link", onClick, children: (0, import_html_entities7.decodeEntities)(file.name) }),
-        !file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.ExternalLink, { href: file.url + "&preview=true", children: (0, import_html_entities7.decodeEntities)(file.name) }),
-        /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("div", { className: "jp-forms__inbox-response-file__meta-info", children: (0, import_i18n79.sprintf)(
+  return /* @__PURE__ */ (0, import_jsx_runtime176.jsxs)("div", { className: "jp-forms__inbox-response-file", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime176.jsxs)("div", { className: "jp-forms__inbox-response-file__info", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime176.jsx)("div", { className: iconClass }),
+      /* @__PURE__ */ (0, import_jsx_runtime176.jsxs)("div", { className: "jp-forms__inbox-response-file__name", children: [
+        file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(import_components80.Button, { target: "_blank", variant: "link", onClick, children: (0, import_html_entities7.decodeEntities)(file.name) }),
+        !file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(import_components80.ExternalLink, { href: file.url + "&preview=true", children: (0, import_html_entities7.decodeEntities)(file.name) }),
+        /* @__PURE__ */ (0, import_jsx_runtime176.jsx)("div", { className: "jp-forms__inbox-response-file__meta-info", children: (0, import_i18n84.sprintf)(
           /* translators: %1$s size of the file and %2$s is the file extension */
-          (0, import_i18n79.__)("%1$s, %2$s", "jetpack-forms"),
+          (0, import_i18n84.__)("%1$s, %2$s", "jetpack-forms"),
           file.size,
           fileExtension.toUpperCase()
         ) })
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("span", { className: "jp-forms__inbox-response-file__item-actions", children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Tooltip, { text: (0, import_i18n79.__)("Download", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Button, { variant: "secondary", href: file.url, target: "_blank", children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Icon, { icon: download_default }) }) }) })
+    /* @__PURE__ */ (0, import_jsx_runtime176.jsx)("span", { className: "jp-forms__inbox-response-file__item-actions", children: /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(import_components80.Tooltip, { text: (0, import_i18n84.__)("Download", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(import_components80.Button, { variant: "secondary", href: file.url, target: "_blank", children: /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(import_components80.Icon, { icon: download_default }) }) }) })
   ] });
 };
 var file_default = FieldFile;
@@ -36916,37 +38365,25 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-fields/field-file/index.tsx
-var import_jsx_runtime173 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime177 = __toESM(require_jsx_runtime(), 1);
 var FieldFile2 = ({ files, handleFilePreview }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__inbox-response-field-file", children: files?.length ? files.map((file) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime177.jsx)("div", { className: "jp-forms__inbox-response-field-file", children: files?.length ? files.map((file) => {
     if (!file || !file.name) {
       return "-";
     }
-    return /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(file_default, { file, onClick: handleFilePreview(file) }, file.file_id);
+    return /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(file_default, { file, onClick: handleFilePreview(file) }, file.file_id);
   }) : "-" });
 };
 var field_file_default = FieldFile2;
 
-// ../../js-packages/shared-extension-utils/src/get-jetpack-data.js
-var JETPACK_DATA_PATH = "Jetpack_Editor_Initial_State";
-function getJetpackData() {
-  return "object" === typeof window ? window?.[JETPACK_DATA_PATH] ?? null : null;
-}
-
-// ../../js-packages/shared-extension-utils/src/site-type-utils.js
-function isPrivateSite() {
-  const jetpackData = getJetpackData();
-  return jetpackData?.jetpack?.is_private_site ?? false;
-}
-
 // src/dashboard/components/inspector/response-fields/field-image-select/index.tsx
-var import_components78 = __toESM(require_components(), 1);
+var import_components81 = __toESM(require_components(), 1);
 
 // ../../../node_modules/.pnpm/photon@4.1.1/node_modules/photon/dist/esm/index.js
 var import_crc32 = __toESM(require_crc32());
-var import_debug4 = __toESM(require_browser());
+var import_debug5 = __toESM(require_browser());
 var import_seed_random = __toESM(require_seed_random());
-var debug4 = (0, import_debug4.default)("photon");
+var debug5 = (0, import_debug5.default)("photon");
 var mappings = {
   width: "w",
   height: "h",
@@ -36998,7 +38435,7 @@ function photon(imageUrl, opts) {
       photonUrl.searchParams.set(mappings[opt] ?? opt, value.toString());
     }
   }
-  debug4("generated Photon URL: %s", photonUrl.href);
+  debug5("generated Photon URL: %s", photonUrl.href);
   return photonUrl.href;
 }
 function isAlreadyPhotoned(host) {
@@ -37011,7 +38448,7 @@ function serverFromUrlParts(pathname, isSecure) {
   const hash = (0, import_crc32.default)(pathname);
   const rng = (0, import_seed_random.default)(hash);
   const server = "i" + Math.floor(rng() * 3);
-  debug4('determined server "%s" to use with "%s"', server, pathname);
+  debug5('determined server "%s" to use with "%s"', server, pathname);
   return server + ".wp.com";
 }
 
@@ -37024,7 +38461,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-fields/field-image-select/index.tsx
-var import_jsx_runtime174 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime178 = __toESM(require_jsx_runtime(), 1);
 function photonSafeUrl(url = "") {
   if (!url) {
     return null;
@@ -37037,8 +38474,8 @@ function photonSafeUrl(url = "") {
 var ImageSelectButton = ({ choice, handleFilePreview }) => {
   const label = choice.label ? `${choice.selected}: ${choice.label}` : choice.selected;
   const hasImage = choice.image?.src;
-  return /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)(
-    import_components78.Card,
+  return /* @__PURE__ */ (0, import_jsx_runtime178.jsxs)(
+    import_components81.Card,
     {
       onClick: hasImage ? handleFilePreview({
         file_id: choice.image.id,
@@ -37047,7 +38484,7 @@ var ImageSelectButton = ({ choice, handleFilePreview }) => {
       }) : void 0,
       className: `jp-forms__image-select-preview ${hasImage ? "has-image" : ""}`,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.CardMedia, { children: /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("div", { className: "jp-forms__image-select-preview-image-wrapper", children: hasImage ? /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(import_components81.CardMedia, { children: /* @__PURE__ */ (0, import_jsx_runtime178.jsx)("div", { className: "jp-forms__image-select-preview-image-wrapper", children: hasImage ? /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(
           "img",
           {
             className: "jp-forms__image-select-preview-image",
@@ -37057,9 +38494,9 @@ var ImageSelectButton = ({ choice, handleFilePreview }) => {
             loading: "lazy",
             src: photonSafeUrl(choice.image.src) ?? void 0
           }
-        ) : /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.Icon, { icon: image_default, size: 144 }) }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
-          import_components78.CardBody,
+        ) : /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(import_components81.Icon, { icon: image_default, size: 144 }) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(
+          import_components81.CardBody,
           {
             size: {
               blockStart: "none",
@@ -37067,15 +38504,15 @@ var ImageSelectButton = ({ choice, handleFilePreview }) => {
               inlineStart: "xSmall",
               inlineEnd: "xSmall"
             },
-            children: /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)(
-              import_components78.__experimentalHStack,
+            children: /* @__PURE__ */ (0, import_jsx_runtime178.jsxs)(
+              import_components81.__experimentalHStack,
               {
                 className: "jp-forms__image-select-preview-label-wrapper",
                 spacing: "2",
                 alignment: "topLeft",
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.__experimentalText, { className: "jp-forms__image-select-preview-selected", children: choice.selected }),
-                  /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.__experimentalText, { title: choice.label, className: "jp-forms__image-select-preview-label", children: choice.label })
+                  /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(import_components81.__experimentalText, { className: "jp-forms__image-select-preview-selected", children: choice.selected }),
+                  /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(import_components81.__experimentalText, { title: choice.label, className: "jp-forms__image-select-preview-label", children: choice.label })
                 ]
               }
             )
@@ -37086,17 +38523,17 @@ var ImageSelectButton = ({ choice, handleFilePreview }) => {
   );
 };
 var FieldImageSelect = ({ choices, handleFilePreview }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)(import_jsx_runtime174.Fragment, { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime178.jsxs)(import_jsx_runtime178.Fragment, { children: [
     (choices?.length ?? 0) === 0 && "-",
-    (choices?.length ?? 0) > 0 && /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
-      import_components78.__experimentalHStack,
+    (choices?.length ?? 0) > 0 && /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(
+      import_components81.__experimentalHStack,
       {
         spacing: "2",
         alignment: "topLeft",
         wrap: true,
         className: "jp-forms__image-select-preview-wrapper",
         children: choices.map((choice) => {
-          return /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(
             ImageSelectButton,
             {
               choice,
@@ -37112,12 +38549,12 @@ var FieldImageSelect = ({ choices, handleFilePreview }) => {
 var field_image_select_default = FieldImageSelect;
 
 // src/dashboard/components/inspector/response-fields/field-preview/index.tsx
-var import_components81 = __toESM(require_components(), 1);
+var import_components84 = __toESM(require_components(), 1);
 
 // src/blocks/field-checkbox/icon.jsx
 var import_primitives49 = __toESM(require_primitives(), 1);
-var import_jsx_runtime175 = __toESM(require_jsx_runtime(), 1);
-var icon = /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(import_primitives49.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(
+var import_jsx_runtime179 = __toESM(require_jsx_runtime(), 1);
+var icon = /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_primitives49.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(
   import_primitives49.Path,
   {
     fillRule: "evenodd",
@@ -37130,10 +38567,10 @@ var icon_default2 = {
 
 // src/blocks/field-consent/icon.jsx
 var import_primitives50 = __toESM(require_primitives(), 1);
-var import_jsx_runtime176 = __toESM(require_jsx_runtime(), 1);
-var icon2 = /* @__PURE__ */ (0, import_jsx_runtime176.jsxs)(import_primitives50.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: [
-  /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(import_primitives50.Path, { d: "M7 5.5H17C17.2761 5.5 17.5 5.72386 17.5 6V13H19V6C19 4.89543 18.1046 4 17 4H7C5.89543 4 5 4.89543 5 6V18C5 19.1046 5.89543 20 7 20H11.5V18.5H7C6.72386 18.5 6.5 18.2761 6.5 18V6C6.5 5.72386 6.72386 5.5 7 5.5ZM16 7.75H8V9.25H16V7.75ZM8 11H13V12.5H8V11Z" }),
-  /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(import_primitives50.Path, { d: "M20.1087 15.9382L15.9826 21.6689L12.959 18.5194L14.0411 17.4806L15.8175 19.331L18.8914 15.0618L20.1087 15.9382Z" })
+var import_jsx_runtime180 = __toESM(require_jsx_runtime(), 1);
+var icon2 = /* @__PURE__ */ (0, import_jsx_runtime180.jsxs)(import_primitives50.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: [
+  /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(import_primitives50.Path, { d: "M7 5.5H17C17.2761 5.5 17.5 5.72386 17.5 6V13H19V6C19 4.89543 18.1046 4 17 4H7C5.89543 4 5 4.89543 5 6V18C5 19.1046 5.89543 20 7 20H11.5V18.5H7C6.72386 18.5 6.5 18.2761 6.5 18V6C6.5 5.72386 6.72386 5.5 7 5.5ZM16 7.75H8V9.25H16V7.75ZM8 11H13V12.5H8V11Z" }),
+  /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(import_primitives50.Path, { d: "M20.1087 15.9382L15.9826 21.6689L12.959 18.5194L14.0411 17.4806L15.8175 19.331L18.8914 15.0618L20.1087 15.9382Z" })
 ] });
 var icon_default3 = {
   src: icon2
@@ -37141,8 +38578,8 @@ var icon_default3 = {
 
 // src/blocks/field-date/icon.jsx
 var import_primitives51 = __toESM(require_primitives(), 1);
-var import_jsx_runtime177 = __toESM(require_jsx_runtime(), 1);
-var icon3 = /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(import_primitives51.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(
+var import_jsx_runtime181 = __toESM(require_jsx_runtime(), 1);
+var icon3 = /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(import_primitives51.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
   import_primitives51.Path,
   {
     fillRule: "evenodd",
@@ -37155,43 +38592,43 @@ var icon_default4 = {
 
 // src/blocks/field-image-select/icon.tsx
 var import_primitives52 = __toESM(require_primitives(), 1);
-var import_jsx_runtime178 = __toESM(require_jsx_runtime(), 1);
-var icon4 = /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(import_primitives52.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(import_primitives52.Path, { d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 4.5h14c.3 0 .5.2.5.5v8.4l-3-2.9c-.3-.3-.8-.3-1 0L11.9 14 9 12c-.3-.2-.6-.2-.8 0l-3.6 2.6V5c-.1-.3.1-.5.4-.5zm14 15H5c-.3 0-.5-.2-.5-.5v-2.4l4.1-3 3 1.9c.3.2.7.2.9-.1L16 12l3.5 3.4V19c0 .3-.2.5-.5.5z" }) });
+var import_jsx_runtime182 = __toESM(require_jsx_runtime(), 1);
+var icon4 = /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(import_primitives52.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(import_primitives52.Path, { d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 4.5h14c.3 0 .5.2.5.5v8.4l-3-2.9c-.3-.3-.8-.3-1 0L11.9 14 9 12c-.3-.2-.6-.2-.8 0l-3.6 2.6V5c-.1-.3.1-.5.4-.5zm14 15H5c-.3 0-.5-.2-.5-.5v-2.4l4.1-3 3 1.9c.3.2.7.2.9-.1L16 12l3.5 3.4V19c0 .3-.2.5-.5.5z" }) });
 var icon_default5 = {
   src: icon4
 };
 
 // src/blocks/field-multiple-choice/icon.jsx
 var import_primitives53 = __toESM(require_primitives(), 1);
-var import_jsx_runtime179 = __toESM(require_jsx_runtime(), 1);
-var icon5 = /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_primitives53.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_primitives53.Path, { d: "M7.0812 10.1419L10.6001 5.45005L9.40006 4.55005L6.91891 7.85824L5.53039 6.46972L4.46973 7.53038L7.0812 10.1419ZM12 8.5H20V7H12V8.5ZM12 17H20V15.5H12V17ZM8.5 14.5H5.5V17.5H8.5V14.5ZM5.5 13H8.5C9.32843 13 10 13.6716 10 14.5V17.5C10 18.3284 9.32843 19 8.5 19H5.5C4.67157 19 4 18.3284 4 17.5V14.5C4 13.6716 4.67157 13 5.5 13Z" }) });
+var import_jsx_runtime183 = __toESM(require_jsx_runtime(), 1);
+var icon5 = /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(import_primitives53.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(import_primitives53.Path, { d: "M7.0812 10.1419L10.6001 5.45005L9.40006 4.55005L6.91891 7.85824L5.53039 6.46972L4.46973 7.53038L7.0812 10.1419ZM12 8.5H20V7H12V8.5ZM12 17H20V15.5H12V17ZM8.5 14.5H5.5V17.5H8.5V14.5ZM5.5 13H8.5C9.32843 13 10 13.6716 10 14.5V17.5C10 18.3284 9.32843 19 8.5 19H5.5C4.67157 19 4 18.3284 4 17.5V14.5C4 13.6716 4.67157 13 5.5 13Z" }) });
 var icon_default6 = {
   src: icon5
 };
 
 // src/blocks/field-name/icon.jsx
 var import_primitives54 = __toESM(require_primitives(), 1);
-var import_jsx_runtime180 = __toESM(require_jsx_runtime(), 1);
-var icon6 = /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(import_primitives54.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(import_primitives54.Path, { d: "M8.25 11.5C9.63071 11.5 10.75 10.3807 10.75 9C10.75 7.61929 9.63071 6.5 8.25 6.5C6.86929 6.5 5.75 7.61929 5.75 9C5.75 10.3807 6.86929 11.5 8.25 11.5ZM8.25 10C8.80228 10 9.25 9.55228 9.25 9C9.25 8.44772 8.80228 8 8.25 8C7.69772 8 7.25 8.44772 7.25 9C7.25 9.55228 7.69772 10 8.25 10ZM13 15.5V17.5H11.5V15.5C11.5 14.8096 10.9404 14.25 10.25 14.25H6.25C5.55964 14.25 5 14.8096 5 15.5V17.5H3.5V15.5C3.5 13.9812 4.73122 12.75 6.25 12.75H10.25C11.7688 12.75 13 13.9812 13 15.5ZM20.5 11H14.5V9.5H20.5V11ZM20.5 14.5H14.5V13H20.5V14.5Z" }) });
+var import_jsx_runtime184 = __toESM(require_jsx_runtime(), 1);
+var icon6 = /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(import_primitives54.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(import_primitives54.Path, { d: "M8.25 11.5C9.63071 11.5 10.75 10.3807 10.75 9C10.75 7.61929 9.63071 6.5 8.25 6.5C6.86929 6.5 5.75 7.61929 5.75 9C5.75 10.3807 6.86929 11.5 8.25 11.5ZM8.25 10C8.80228 10 9.25 9.55228 9.25 9C9.25 8.44772 8.80228 8 8.25 8C7.69772 8 7.25 8.44772 7.25 9C7.25 9.55228 7.69772 10 8.25 10ZM13 15.5V17.5H11.5V15.5C11.5 14.8096 10.9404 14.25 10.25 14.25H6.25C5.55964 14.25 5 14.8096 5 15.5V17.5H3.5V15.5C3.5 13.9812 4.73122 12.75 6.25 12.75H10.25C11.7688 12.75 13 13.9812 13 15.5ZM20.5 11H14.5V9.5H20.5V11ZM20.5 14.5H14.5V13H20.5V14.5Z" }) });
 var icon_default7 = {
   src: icon6
 };
 
 // src/blocks/field-number/icon.jsx
 var import_primitives55 = __toESM(require_primitives(), 1);
-var import_jsx_runtime181 = __toESM(require_jsx_runtime(), 1);
-var icon7 = /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(import_primitives55.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(import_primitives55.Path, { d: "M12 7H4V8.5H12V7ZM19.75 17.25V10.75H4.25V17.25H19.75ZM5.75 15.75V12.25H18.25V15.75H5.75Z" }) });
+var import_jsx_runtime185 = __toESM(require_jsx_runtime(), 1);
+var icon7 = /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(import_primitives55.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(import_primitives55.Path, { d: "M12 7H4V8.5H12V7ZM19.75 17.25V10.75H4.25V17.25H19.75ZM5.75 15.75V12.25H18.25V15.75H5.75Z" }) });
 var icon_default8 = {
   src: icon7
 };
 
 // src/blocks/field-rating/icon.jsx
 var import_primitives56 = __toESM(require_primitives(), 1);
-var import_jsx_runtime182 = __toESM(require_jsx_runtime(), 1);
-var icon8 = /* @__PURE__ */ (0, import_jsx_runtime182.jsxs)(import_primitives56.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: [
-  /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(import_primitives56.Path, { d: "M4.90821 9.05978C4.91669 9.04183 4.92977 9.02672 4.94599 9.01616C4.96221 9.0056 4.98091 9 5 9C5.01909 9 5.03779 9.0056 5.05401 9.01616C5.07023 9.02672 5.08331 9.04183 5.09179 9.05978L5.93962 10.8628C5.94695 10.8785 5.95779 10.892 5.97121 10.9023C5.98463 10.9125 6.00023 10.9192 6.01666 10.9217L7.91228 11.2108C7.93118 11.2137 7.94893 11.222 7.96354 11.2349C7.97814 11.2478 7.98902 11.2648 7.99495 11.2838C8.00087 11.3029 8.0016 11.3233 7.99706 11.3428C7.99252 11.3622 7.98288 11.38 7.96924 11.394L6.59731 12.7975C6.58536 12.8097 6.57643 12.8247 6.57129 12.8414C6.56615 12.858 6.56495 12.8757 6.5678 12.893L6.89153 14.8745C6.89467 14.8942 6.89251 14.9144 6.8853 14.9329C6.87809 14.9514 6.86611 14.9675 6.8507 14.9792C6.8353 14.991 6.81707 14.998 6.79808 14.9995C6.77909 15.0009 6.76008 14.9968 6.74319 14.9876L5.04753 14.0521C5.03287 14.044 5.01656 14.0398 5 14.0398C4.98344 14.0398 4.96713 14.044 4.95247 14.0521L3.25681 14.9876C3.23991 14.997 3.22085 15.0012 3.20179 14.9997C3.18273 14.9983 3.16443 14.9913 3.14896 14.9795C3.13348 14.9678 3.12145 14.9517 3.11423 14.9331C3.107 14.9146 3.10487 14.8943 3.10806 14.8745L3.43178 12.893C3.43469 12.8758 3.43356 12.8581 3.42849 12.8414C3.42342 12.8248 3.41456 12.8097 3.40269 12.7975L2.03076 11.394C2.01712 11.38 2.00748 11.3622 2.00294 11.3428C1.9984 11.3233 1.99913 11.3029 2.00505 11.2838C2.01098 11.2648 2.02185 11.2478 2.03646 11.2349C2.05107 11.222 2.06882 11.2137 2.08772 11.2108L3.98334 10.9217C3.99977 10.9192 4.01537 10.9125 4.02879 10.9023C4.04221 10.892 4.05305 10.8785 4.06038 10.8628L4.90821 9.05978Z" }),
-  /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(import_primitives56.Path, { d: "M11.9082 9.05978C11.9167 9.04183 11.9298 9.02672 11.946 9.01616C11.9622 9.0056 11.9809 9 12 9C12.0191 9 12.0378 9.0056 12.054 9.01616C12.0702 9.02672 12.0833 9.04183 12.0918 9.05978L12.9396 10.8628C12.9469 10.8785 12.9578 10.892 12.9712 10.9023C12.9846 10.9125 13.0002 10.9192 13.0167 10.9217L14.9123 11.2108C14.9312 11.2137 14.9489 11.222 14.9635 11.2349C14.9781 11.2478 14.989 11.2648 14.9949 11.2838C15.0009 11.3029 15.0016 11.3233 14.9971 11.3428C14.9925 11.3622 14.9829 11.38 14.9692 11.394L13.5973 12.7975C13.5854 12.8097 13.5764 12.8247 13.5713 12.8414C13.5661 12.858 13.565 12.8757 13.5678 12.893L13.8915 14.8745C13.8947 14.8942 13.8925 14.9144 13.8853 14.9329C13.8781 14.9514 13.8661 14.9675 13.8507 14.9792C13.8353 14.991 13.8171 14.998 13.7981 14.9995C13.7791 15.0009 13.7601 14.9968 13.7432 14.9876L12.0475 14.0521C12.0329 14.044 12.0166 14.0398 12 14.0398C11.9834 14.0398 11.9671 14.044 11.9525 14.0521L10.2568 14.9876C10.2399 14.997 10.2208 15.0012 10.2018 14.9997C10.1827 14.9983 10.1644 14.9913 10.149 14.9795C10.1335 14.9678 10.1215 14.9517 10.1142 14.9331C10.107 14.9146 10.1049 14.8943 10.1081 14.8745L10.4318 12.893C10.4347 12.8758 10.4336 12.8581 10.4285 12.8414C10.4234 12.8248 10.4146 12.8097 10.4027 12.7975L9.03076 11.394C9.01712 11.38 9.00748 11.3622 9.00294 11.3428C8.9984 11.3233 8.99913 11.3029 9.00505 11.2838C9.01098 11.2648 9.02185 11.2478 9.03646 11.2349C9.05107 11.222 9.06882 11.2137 9.08772 11.2108L10.9833 10.9217C10.9998 10.9192 11.0154 10.9125 11.0288 10.9023C11.0422 10.892 11.0531 10.8785 11.0604 10.8628L11.9082 9.05978Z" }),
-  /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(
+var import_jsx_runtime186 = __toESM(require_jsx_runtime(), 1);
+var icon8 = /* @__PURE__ */ (0, import_jsx_runtime186.jsxs)(import_primitives56.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: [
+  /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(import_primitives56.Path, { d: "M4.90821 9.05978C4.91669 9.04183 4.92977 9.02672 4.94599 9.01616C4.96221 9.0056 4.98091 9 5 9C5.01909 9 5.03779 9.0056 5.05401 9.01616C5.07023 9.02672 5.08331 9.04183 5.09179 9.05978L5.93962 10.8628C5.94695 10.8785 5.95779 10.892 5.97121 10.9023C5.98463 10.9125 6.00023 10.9192 6.01666 10.9217L7.91228 11.2108C7.93118 11.2137 7.94893 11.222 7.96354 11.2349C7.97814 11.2478 7.98902 11.2648 7.99495 11.2838C8.00087 11.3029 8.0016 11.3233 7.99706 11.3428C7.99252 11.3622 7.98288 11.38 7.96924 11.394L6.59731 12.7975C6.58536 12.8097 6.57643 12.8247 6.57129 12.8414C6.56615 12.858 6.56495 12.8757 6.5678 12.893L6.89153 14.8745C6.89467 14.8942 6.89251 14.9144 6.8853 14.9329C6.87809 14.9514 6.86611 14.9675 6.8507 14.9792C6.8353 14.991 6.81707 14.998 6.79808 14.9995C6.77909 15.0009 6.76008 14.9968 6.74319 14.9876L5.04753 14.0521C5.03287 14.044 5.01656 14.0398 5 14.0398C4.98344 14.0398 4.96713 14.044 4.95247 14.0521L3.25681 14.9876C3.23991 14.997 3.22085 15.0012 3.20179 14.9997C3.18273 14.9983 3.16443 14.9913 3.14896 14.9795C3.13348 14.9678 3.12145 14.9517 3.11423 14.9331C3.107 14.9146 3.10487 14.8943 3.10806 14.8745L3.43178 12.893C3.43469 12.8758 3.43356 12.8581 3.42849 12.8414C3.42342 12.8248 3.41456 12.8097 3.40269 12.7975L2.03076 11.394C2.01712 11.38 2.00748 11.3622 2.00294 11.3428C1.9984 11.3233 1.99913 11.3029 2.00505 11.2838C2.01098 11.2648 2.02185 11.2478 2.03646 11.2349C2.05107 11.222 2.06882 11.2137 2.08772 11.2108L3.98334 10.9217C3.99977 10.9192 4.01537 10.9125 4.02879 10.9023C4.04221 10.892 4.05305 10.8785 4.06038 10.8628L4.90821 9.05978Z" }),
+  /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(import_primitives56.Path, { d: "M11.9082 9.05978C11.9167 9.04183 11.9298 9.02672 11.946 9.01616C11.9622 9.0056 11.9809 9 12 9C12.0191 9 12.0378 9.0056 12.054 9.01616C12.0702 9.02672 12.0833 9.04183 12.0918 9.05978L12.9396 10.8628C12.9469 10.8785 12.9578 10.892 12.9712 10.9023C12.9846 10.9125 13.0002 10.9192 13.0167 10.9217L14.9123 11.2108C14.9312 11.2137 14.9489 11.222 14.9635 11.2349C14.9781 11.2478 14.989 11.2648 14.9949 11.2838C15.0009 11.3029 15.0016 11.3233 14.9971 11.3428C14.9925 11.3622 14.9829 11.38 14.9692 11.394L13.5973 12.7975C13.5854 12.8097 13.5764 12.8247 13.5713 12.8414C13.5661 12.858 13.565 12.8757 13.5678 12.893L13.8915 14.8745C13.8947 14.8942 13.8925 14.9144 13.8853 14.9329C13.8781 14.9514 13.8661 14.9675 13.8507 14.9792C13.8353 14.991 13.8171 14.998 13.7981 14.9995C13.7791 15.0009 13.7601 14.9968 13.7432 14.9876L12.0475 14.0521C12.0329 14.044 12.0166 14.0398 12 14.0398C11.9834 14.0398 11.9671 14.044 11.9525 14.0521L10.2568 14.9876C10.2399 14.997 10.2208 15.0012 10.2018 14.9997C10.1827 14.9983 10.1644 14.9913 10.149 14.9795C10.1335 14.9678 10.1215 14.9517 10.1142 14.9331C10.107 14.9146 10.1049 14.8943 10.1081 14.8745L10.4318 12.893C10.4347 12.8758 10.4336 12.8581 10.4285 12.8414C10.4234 12.8248 10.4146 12.8097 10.4027 12.7975L9.03076 11.394C9.01712 11.38 9.00748 11.3622 9.00294 11.3428C8.9984 11.3233 8.99913 11.3029 9.00505 11.2838C9.01098 11.2648 9.02185 11.2478 9.03646 11.2349C9.05107 11.222 9.06882 11.2137 9.08772 11.2108L10.9833 10.9217C10.9998 10.9192 11.0154 10.9125 11.0288 10.9023C11.0422 10.892 11.0531 10.8785 11.0604 10.8628L11.9082 9.05978Z" }),
+  /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(
     import_primitives56.Path,
     {
       fillRule: "evenodd",
@@ -37206,26 +38643,26 @@ var icon_default9 = {
 
 // src/blocks/field-select/icon.jsx
 var import_primitives57 = __toESM(require_primitives(), 1);
-var import_jsx_runtime183 = __toESM(require_jsx_runtime(), 1);
-var icon9 = /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(import_primitives57.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(import_primitives57.Path, { d: "M5 4.5H19C19.2761 4.5 19.5 4.72386 19.5 5V19C19.5 19.2761 19.2761 19.5 19 19.5H5C4.72386 19.5 4.5 19.2761 4.5 19V5C4.5 4.72386 4.72386 4.5 5 4.5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM8.93582 10.1396L8.06396 11.3602L11.9999 14.1716L15.9358 11.3602L15.064 10.1396L11.9999 12.3283L8.93582 10.1396Z" }) });
+var import_jsx_runtime187 = __toESM(require_jsx_runtime(), 1);
+var icon9 = /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(import_primitives57.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(import_primitives57.Path, { d: "M5 4.5H19C19.2761 4.5 19.5 4.72386 19.5 5V19C19.5 19.2761 19.2761 19.5 19 19.5H5C4.72386 19.5 4.5 19.2761 4.5 19V5C4.5 4.72386 4.72386 4.5 5 4.5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM8.93582 10.1396L8.06396 11.3602L11.9999 14.1716L15.9358 11.3602L15.064 10.1396L11.9999 12.3283L8.93582 10.1396Z" }) });
 var icon_default10 = {
   src: icon9
 };
 
 // src/blocks/field-single-choice/icon.jsx
 var import_primitives58 = __toESM(require_primitives(), 1);
-var import_jsx_runtime184 = __toESM(require_jsx_runtime(), 1);
-var icon10 = /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(import_primitives58.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(import_primitives58.Path, { d: "M4 7.75C4 9.40685 5.34315 10.75 7 10.75C8.65685 10.75 10 9.40685 10 7.75C10 6.09315 8.65685 4.75 7 4.75C5.34315 4.75 4 6.09315 4 7.75ZM20 8.5H12V7H20V8.5ZM20 17H12V15.5H20V17ZM7 17.75C6.17157 17.75 5.5 17.0784 5.5 16.25C5.5 15.4216 6.17157 14.75 7 14.75C7.82843 14.75 8.5 15.4216 8.5 16.25C8.5 17.0784 7.82843 17.75 7 17.75ZM4 16.25C4 17.9069 5.34315 19.25 7 19.25C8.65685 19.25 10 17.9069 10 16.25C10 14.5931 8.65685 13.25 7 13.25C5.34315 13.25 4 14.5931 4 16.25Z" }) });
+var import_jsx_runtime188 = __toESM(require_jsx_runtime(), 1);
+var icon10 = /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(import_primitives58.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(import_primitives58.Path, { d: "M4 7.75C4 9.40685 5.34315 10.75 7 10.75C8.65685 10.75 10 9.40685 10 7.75C10 6.09315 8.65685 4.75 7 4.75C5.34315 4.75 4 6.09315 4 7.75ZM20 8.5H12V7H20V8.5ZM20 17H12V15.5H20V17ZM7 17.75C6.17157 17.75 5.5 17.0784 5.5 16.25C5.5 15.4216 6.17157 14.75 7 14.75C7.82843 14.75 8.5 15.4216 8.5 16.25C8.5 17.0784 7.82843 17.75 7 17.75ZM4 16.25C4 17.9069 5.34315 19.25 7 19.25C8.65685 19.25 10 17.9069 10 16.25C10 14.5931 8.65685 13.25 7 13.25C5.34315 13.25 4 14.5931 4 16.25Z" }) });
 var icon_default11 = {
   src: icon10
 };
 
 // src/blocks/field-slider/icon.jsx
 var import_primitives59 = __toESM(require_primitives(), 1);
-var import_jsx_runtime185 = __toESM(require_jsx_runtime(), 1);
-var icon11 = /* @__PURE__ */ (0, import_jsx_runtime185.jsxs)(import_primitives59.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "none", children: [
-  /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(import_primitives59.Line, { x1: "4", y1: "12", x2: "20", y2: "12", stroke: "currentColor", strokeWidth: "2" }),
-  /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(import_primitives59.Circle, { cx: "12", cy: "12", r: "2", fill: "currentColor" })
+var import_jsx_runtime189 = __toESM(require_jsx_runtime(), 1);
+var icon11 = /* @__PURE__ */ (0, import_jsx_runtime189.jsxs)(import_primitives59.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(import_primitives59.Line, { x1: "4", y1: "12", x2: "20", y2: "12", stroke: "currentColor", strokeWidth: "2" }),
+  /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(import_primitives59.Circle, { cx: "12", cy: "12", r: "2", fill: "currentColor" })
 ] });
 var icon_default12 = {
   src: icon11
@@ -37233,24 +38670,24 @@ var icon_default12 = {
 
 // src/blocks/field-text/icon.jsx
 var import_primitives60 = __toESM(require_primitives(), 1);
-var import_jsx_runtime186 = __toESM(require_jsx_runtime(), 1);
-var icon12 = /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(import_primitives60.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(import_primitives60.Path, { d: "M12 7H4V8.5H12V7ZM19.75 17.25V10.75H4.25V17.25H19.75ZM5.75 15.75V12.25H18.25V15.75H5.75Z" }) });
+var import_jsx_runtime190 = __toESM(require_jsx_runtime(), 1);
+var icon12 = /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(import_primitives60.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(import_primitives60.Path, { d: "M12 7H4V8.5H12V7ZM19.75 17.25V10.75H4.25V17.25H19.75ZM5.75 15.75V12.25H18.25V15.75H5.75Z" }) });
 var icon_default13 = {
   src: icon12
 };
 
 // src/blocks/field-textarea/icon.jsx
 var import_primitives61 = __toESM(require_primitives(), 1);
-var import_jsx_runtime187 = __toESM(require_jsx_runtime(), 1);
-var icon13 = /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(import_primitives61.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(import_primitives61.Path, { d: "M20 5H4V6.5H20V5ZM5.5 11.5H18.5V18.5H5.5V11.5ZM20 20V10H4V20H20Z" }) });
+var import_jsx_runtime191 = __toESM(require_jsx_runtime(), 1);
+var icon13 = /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(import_primitives61.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(import_primitives61.Path, { d: "M20 5H4V6.5H20V5ZM5.5 11.5H18.5V18.5H5.5V11.5ZM20 20V10H4V20H20Z" }) });
 var icon_default14 = {
   src: icon13
 };
 
 // src/blocks/field-time/icon.jsx
 var import_primitives62 = __toESM(require_primitives(), 1);
-var import_jsx_runtime188 = __toESM(require_jsx_runtime(), 1);
-var icon14 = /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(import_primitives62.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(
+var import_jsx_runtime192 = __toESM(require_jsx_runtime(), 1);
+var icon14 = /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_primitives62.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(
   import_primitives62.Path,
   {
     fillRule: "evenodd",
@@ -37286,13 +38723,13 @@ var fieldIcons = {
 };
 
 // src/dashboard/components/inspector/response-fields/field-phone/index.tsx
-var import_element84 = __toESM(require_element(), 1);
-var import_jsx_runtime189 = __toESM(require_jsx_runtime(), 1);
+var import_element92 = __toESM(require_element(), 1);
+var import_jsx_runtime193 = __toESM(require_jsx_runtime(), 1);
 var FieldPhone = ({ phone }) => {
-  const [displayInfo, setDisplayInfo] = (0, import_element84.useState)({
+  const [displayInfo, setDisplayInfo] = (0, import_element92.useState)({
     formattedNumber: phone
   });
-  (0, import_element84.useEffect)(() => {
+  (0, import_element92.useEffect)(() => {
     let cancelled = false;
     setDisplayInfo({ formattedNumber: phone, countryCode: void 0 });
     const formatPhone = async () => {
@@ -37317,16 +38754,16 @@ var FieldPhone = ({ phone }) => {
     };
   }, [phone]);
   const { formattedNumber, countryCode } = displayInfo;
-  return /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(TextWithFlag, { countryCode, children: /* @__PURE__ */ (0, import_jsx_runtime189.jsx)("a", { href: `tel:${phone}`, children: formattedNumber }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(TextWithFlag, { countryCode, children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)("a", { href: `tel:${phone}`, children: formattedNumber }) });
 };
 var field_phone_default = FieldPhone;
 
 // src/dashboard/components/inspector/response-fields/field-rating/index.tsx
-var import_components80 = __toESM(require_components(), 1);
-var import_i18n80 = __toESM(require_i18n(), 1);
+var import_components83 = __toESM(require_components(), 1);
+var import_i18n85 = __toESM(require_i18n(), 1);
 
 // src/blocks/field-rating/rating-icon.jsx
-var import_components79 = __toESM(require_components(), 1);
+var import_components82 = __toESM(require_components(), 1);
 
 // src/blocks/field-rating/rating-icons.js
 var MAX_RATING_ICONS = 10;
@@ -37336,7 +38773,7 @@ var RATING_ICONS = {
 };
 
 // src/blocks/field-rating/rating-icon.jsx
-var import_jsx_runtime190 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime194 = __toESM(require_jsx_runtime(), 1);
 var RatingIcon = ({
   iconStyle,
   strokeColor = "currentColor",
@@ -37344,8 +38781,8 @@ var RatingIcon = ({
   strokeWidth = 2
 }) => {
   const iconPath = RATING_ICONS[iconStyle] || RATING_ICONS.stars;
-  return /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(import_components79.SVG, { className: "jetpack-field-rating__icon", viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(
-    import_components79.Path,
+  return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(import_components82.SVG, { className: "jetpack-field-rating__icon", viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
+    import_components82.Path,
     {
       d: iconPath,
       fill: fillColor,
@@ -37357,7 +38794,7 @@ var RatingIcon = ({
 };
 
 // src/dashboard/components/inspector/response-fields/field-rating/index.tsx
-var import_jsx_runtime191 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime195 = __toESM(require_jsx_runtime(), 1);
 var FieldRating = ({ value }) => {
   const stringValue = value != null ? String(value) : "";
   if (stringValue.trim() === "") {
@@ -37382,15 +38819,15 @@ var FieldRating = ({ value }) => {
   }
   const clampedMax = Math.min(parsedMax, MAX_RATING_ICONS);
   const displayRating = Math.min(Math.max(0, parsedRating), clampedMax);
-  const ratingLabel = (0, import_i18n80.sprintf)(
+  const ratingLabel = (0, import_i18n85.sprintf)(
     /* translators: 1: rating value, 2: maximum rating (e.g. "4" and "5" for "4 out of 5") */
-    (0, import_i18n80.__)("Rating %1$s out of %2$s", "jetpack-forms"),
+    (0, import_i18n85.__)("Rating %1$s out of %2$s", "jetpack-forms"),
     String(displayRating),
     String(clampedMax)
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime191.jsxs)(import_jsx_runtime191.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(import_components80.VisuallyHidden, { as: "span", children: ratingLabel }),
-    /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(import_components80.__experimentalHStack, { spacing: "1", alignment: "topLeft", children: Array.from({ length: clampedMax }, (_, index) => /* @__PURE__ */ (0, import_jsx_runtime191.jsx)("span", { style: { flex: "0 0 24px" }, children: /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(import_jsx_runtime195.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.VisuallyHidden, { as: "span", children: ratingLabel }),
+    /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.__experimentalHStack, { spacing: "1", alignment: "topLeft", children: Array.from({ length: clampedMax }, (_, index) => /* @__PURE__ */ (0, import_jsx_runtime195.jsx)("span", { style: { flex: "0 0 24px" }, children: /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(
       RatingIcon,
       {
         iconStyle: "stars",
@@ -37450,9 +38887,9 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-fields/field-preview/index.tsx
-var import_jsx_runtime192 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime196 = __toESM(require_jsx_runtime(), 1);
 var getFieldIcon = (fieldType) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_components81.Icon, { icon: fieldIcons[fieldType] ?? fieldIcons.text });
+  return /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(import_components84.Icon, { icon: fieldIcons[fieldType] ?? fieldIcons.text });
 };
 var BADGED_VALUE_FIELDS = ["consent", "checkbox", "radio", "select"];
 var FieldPreview = ({ field, onFilePreview }) => {
@@ -37463,14 +38900,14 @@ var FieldPreview = ({ field, onFilePreview }) => {
   const renderFieldValue = () => {
     if (fieldType === "image-select") {
       const choices = value?.choices;
-      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(field_image_select_default, { choices, handleFilePreview: onFilePreview });
+      return /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(field_image_select_default, { choices, handleFilePreview: onFilePreview });
     }
     if (fieldType === "file") {
       const files = value?.files;
-      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(field_file_default, { files, handleFilePreview: onFilePreview });
+      return /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(field_file_default, { files, handleFilePreview: onFilePreview });
     }
     if (fieldType === "checkbox-multiple" && Array.isArray(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_components81.__experimentalVStack, { spacing: "2", alignment: "topLeft", children: value.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(Badge, { children: item }, index)) });
+      return /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(import_components84.__experimentalVStack, { spacing: "2", alignment: "topLeft", children: value.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(Badge, { children: item }, index)) });
     }
     if (value === null || value === void 0) {
       return "-";
@@ -37486,36 +38923,36 @@ var FieldPreview = ({ field, onFilePreview }) => {
       return "-";
     }
     if (BADGED_VALUE_FIELDS.includes(fieldType)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(Badge, { children: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(Badge, { children: stringValue });
     }
     if (fieldType === "number") {
       return formatNumber2(Number(stringValue));
     }
     if (fieldType === "email" && EMAIL_REGEX.test(stringValue)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(field_email_default, { email: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(field_email_default, { email: stringValue });
     }
     if (fieldType === "phone" || fieldType === "telephone") {
-      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(field_phone_default, { phone: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(field_phone_default, { phone: stringValue });
     }
     if (fieldType === "url" && /^https?:\/\//.test(stringValue)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_components81.ExternalLink, { href: stringValue, children: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(import_components84.ExternalLink, { href: stringValue, children: stringValue });
     }
     if (fieldType === "rating") {
-      return /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(field_rating_default, { value: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(field_rating_default, { value: stringValue });
     }
     return stringValue;
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime192.jsxs)(
-    import_components81.__experimentalHStack,
+  return /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)(
+    import_components84.__experimentalHStack,
     {
       alignment: "topLeft",
       spacing: "4",
       className: `jp-forms__field-preview ${typeClassName}`,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime192.jsx)("div", { className: "jp-forms__field-preview-icon", children: icon15 }),
-        /* @__PURE__ */ (0, import_jsx_runtime192.jsxs)(import_components81.__experimentalVStack, { spacing: "0", className: "jp-forms__field-preview-content", children: [
-          label && /* @__PURE__ */ (0, import_jsx_runtime192.jsx)("div", { className: "jp-forms__field-preview-label", children: label }),
-          /* @__PURE__ */ (0, import_jsx_runtime192.jsx)("div", { className: "jp-forms__field-preview-value", children: renderFieldValue() })
+        /* @__PURE__ */ (0, import_jsx_runtime196.jsx)("div", { className: "jp-forms__field-preview-icon", children: icon15 }),
+        /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)(import_components84.__experimentalVStack, { spacing: "0", className: "jp-forms__field-preview-content", children: [
+          label && /* @__PURE__ */ (0, import_jsx_runtime196.jsx)("div", { className: "jp-forms__field-preview-label", children: label }),
+          /* @__PURE__ */ (0, import_jsx_runtime196.jsx)("div", { className: "jp-forms__field-preview-value", children: renderFieldValue() })
         ] })
       ]
     }
@@ -37524,7 +38961,7 @@ var FieldPreview = ({ field, onFilePreview }) => {
 var field_preview_default = FieldPreview;
 
 // src/dashboard/components/inspector/response-fields/index.tsx
-var import_jsx_runtime193 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime197 = __toESM(require_jsx_runtime(), 1);
 var ResponseFieldsIterator = ({
   fields,
   onFilePreview
@@ -37535,7 +38972,7 @@ var ResponseFieldsIterator = ({
   });
   const renderFieldValue = (value) => {
     if (isImageSelectField(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
         field_image_select_default,
         {
           choices: value.choices,
@@ -37545,34 +38982,34 @@ var ResponseFieldsIterator = ({
     }
     if (isFileUploadField(value)) {
       const fileValue = value;
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(field_file_default, { files: fileValue.files, handleFilePreview: onFilePreview });
+      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(field_file_default, { files: fileValue.files, handleFilePreview: onFilePreview });
     }
     const emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     if (typeof value === "string" && emailRegEx.test(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(field_email_default, { email: value });
+      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(field_email_default, { email: value });
     }
     if (isLikelyPhoneNumber(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime193.jsx)("a", { href: `tel:${value}`, children: String(value) });
+      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("a", { href: `tel:${value}`, children: String(value) });
     }
     return value;
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)("div", { className: rootClass, children: [
-    fields && !fieldsAreNewFormat && Object.entries(fields).map(([key, value]) => /* @__PURE__ */ (0, import_jsx_runtime193.jsxs)("div", { className: "jp-forms__inbox-response-item", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime193.jsx)("div", { className: "jp-forms__inbox-response-data-label", children: key.endsWith("?") ? key : `${key}:` }),
-      /* @__PURE__ */ (0, import_jsx_runtime193.jsx)("div", { className: "jp-forms__inbox-response-data-value", children: renderFieldValue(value) })
+  return /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)("div", { className: rootClass, children: [
+    fields && !fieldsAreNewFormat && Object.entries(fields).map(([key, value]) => /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)("div", { className: "jp-forms__inbox-response-item", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__inbox-response-data-label", children: key.endsWith("?") ? key : `${key}:` }),
+      /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__inbox-response-data-value", children: renderFieldValue(value) })
     ] }, key)),
     fields && fieldsAreNewFormat && (Array.isArray(fields) ? fields : Object.values(fields)).map(
-      (field) => /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(field_preview_default, { field, onFilePreview }, field.key)
+      (field) => /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(field_preview_default, { field, onFilePreview }, field.key)
     )
   ] });
 };
 var response_fields_default = ResponseFieldsIterator;
 
 // src/dashboard/components/inspector/response-meta/index.tsx
-var import_components82 = __toESM(require_components(), 1);
+var import_components85 = __toESM(require_components(), 1);
 var import_date11 = __toESM(require_date(), 1);
 var import_html_entities8 = __toESM(require_html_entities(), 1);
-var import_i18n81 = __toESM(require_i18n(), 1);
+var import_i18n86 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/inspector/response-meta/style.scss
 if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='67b6bdb86c']")) {
@@ -37583,7 +39020,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-meta/index.tsx
-var import_jsx_runtime194 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime198 = __toESM(require_jsx_runtime(), 1);
 var getDisplayName = (response) => {
   const { author_name, author_email, author_url, ip } = response;
   return (0, import_html_entities8.decodeEntities)(author_name || author_email || author_url || ip);
@@ -37594,9 +39031,9 @@ var ResponseMeta = ({ response }) => {
   const defaultImage = response.author_name || response.author_email ? "initials" : "mp";
   const responseAuthorEmailParts = response.author_email?.split("@") ?? [];
   const dateSettings = (0, import_date11.getSettings)();
-  return /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("div", { className: "jp-forms__inbox-response-meta", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(import_components82.__experimentalHStack, { alignment: "topLeft", spacing: "3", wrap: false, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)("div", { className: "jp-forms__inbox-response-meta", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)(import_components85.__experimentalHStack, { alignment: "topLeft", spacing: "3", wrap: false, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(
         Gravatar,
         {
           email: gravatarEmail,
@@ -37605,9 +39042,9 @@ var ResponseMeta = ({ response }) => {
         },
         gravatarEmail
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(import_components82.__experimentalVStack, { spacing: "0", className: "jp-forms__inbox-response-meta-from", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
-          import_components82.__experimentalText,
+      /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)(import_components85.__experimentalVStack, { spacing: "0", className: "jp-forms__inbox-response-meta-from", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(
+          import_components85.__experimentalText,
           {
             className: "jp-forms__inbox-response-meta-from-name",
             lineHeight: "20px",
@@ -37616,15 +39053,15 @@ var ResponseMeta = ({ response }) => {
             children: displayName
           }
         ),
-        response.author_email && displayName !== response.author_email && /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(
-          import_components82.__experimentalHStack,
+        response.author_email && displayName !== response.author_email && /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)(
+          import_components85.__experimentalHStack,
           {
             alignment: "center",
             className: "jp-forms__inbox-response-meta-from-email",
             justify: "start",
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)(
-                import_components82.__experimentalText,
+              /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)(
+                import_components85.__experimentalText,
                 {
                   as: "a",
                   href: `mailto:${response.author_email}`,
@@ -37634,37 +39071,37 @@ var ResponseMeta = ({ response }) => {
                   weight: "400",
                   children: [
                     responseAuthorEmailParts[0],
-                    /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("wbr", {}),
+                    /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("wbr", {}),
                     "@",
                     responseAuthorEmailParts[1]
                   ]
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(CopyClipboardButton, { text: response.author_email })
+              /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(CopyClipboardButton, { text: response.author_email })
             ]
           }
         )
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("table", { className: "jp-forms__inbox-response-meta-table", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("tbody", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("th", { children: (0, import_i18n81.__)("Date:", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("td", { children: (0, import_date11.dateI18n)(dateSettings.formats.datetime, response.date) })
+    /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("table", { className: "jp-forms__inbox-response-meta-table", children: /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)("tbody", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("th", { children: (0, import_i18n86.__)("Date:", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("td", { children: (0, import_date11.dateI18n)(dateSettings.formats.datetime, response.date) })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("th", { children: (0, import_i18n81.__)("Source:", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("td", { children: [
-          response.entry_permalink && /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(import_components82.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities8.decodeEntities)(response.entry_title) || getPath(response) }),
+      /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("th", { children: (0, import_i18n86.__)("Source:", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)("td", { children: [
+          response.entry_permalink && /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(import_components85.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities8.decodeEntities)(response.entry_title) || getPath(response) }),
           !response.entry_permalink && (0, import_html_entities8.decodeEntities)(response.entry_title)
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("th", { children: [
-          (0, import_i18n81.__)("IP address:", "jetpack-forms"),
+      /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)("th", { children: [
+          (0, import_i18n86.__)("IP address:", "jetpack-forms"),
           "\xA0"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(TextWithFlag, { countryCode: response.country_code, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(import_components82.Tooltip, { text: (0, import_i18n81.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
-          import_components82.ExternalLink,
+        /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(TextWithFlag, { countryCode: response.country_code, children: /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(import_components85.Tooltip, { text: (0, import_i18n86.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(
+          import_components85.ExternalLink,
           {
             href: `https://apps.db.ripe.net/db-web-ui/query?searchtext=${encodeURIComponent(
               response.ip
@@ -37673,12 +39110,12 @@ var ResponseMeta = ({ response }) => {
           }
         ) }) }) })
       ] }),
-      response.browser && /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsxs)("th", { children: [
-          (0, import_i18n81.__)("Browser:", "jetpack-forms"),
+      response.browser && /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)("th", { children: [
+          (0, import_i18n86.__)("Browser:", "jetpack-forms"),
           "\xA0"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("td", { children: response.browser })
+        /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("td", { children: response.browser })
       ] })
     ] }) })
   ] });
@@ -37686,25 +39123,25 @@ var ResponseMeta = ({ response }) => {
 var response_meta_default = ResponseMeta;
 
 // routes/responses/response/actions.tsx
-var import_api_fetch10 = __toESM(require_api_fetch());
-var import_components83 = __toESM(require_components());
-var import_core_data7 = __toESM(require_core_data());
-var import_data19 = __toESM(require_data());
-var import_element85 = __toESM(require_element());
-var import_i18n82 = __toESM(require_i18n());
-var import_jsx_runtime195 = __toESM(require_jsx_runtime());
+var import_api_fetch11 = __toESM(require_api_fetch());
+var import_components86 = __toESM(require_components());
+var import_core_data8 = __toESM(require_core_data());
+var import_data32 = __toESM(require_data());
+var import_element93 = __toESM(require_element());
+var import_i18n87 = __toESM(require_i18n());
+var import_jsx_runtime199 = __toESM(require_jsx_runtime());
 function ResponseActions({
   response,
   onActionComplete
 }) {
-  const { saveEntityRecord, deleteEntityRecord, editEntityRecord } = (0, import_data19.useDispatch)(
-    import_core_data7.store
+  const { saveEntityRecord, deleteEntityRecord, editEntityRecord } = (0, import_data32.useDispatch)(
+    import_core_data8.store
   );
-  const { updateCountsOptimistically: updateCountsOptimistically2, invalidateCounts: invalidateCounts2 } = (0, import_data19.useDispatch)(
+  const { updateCountsOptimistically: updateCountsOptimistically2, invalidateCounts: invalidateCounts2 } = (0, import_data32.useDispatch)(
     store3
   );
-  const [isLoading] = (0, import_element85.useState)(false);
-  const handleMarkAsSpam = (0, import_element85.useCallback)(async () => {
+  const [isLoading] = (0, import_element93.useState)(false);
+  const handleMarkAsSpam = (0, import_element93.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "spam" });
     updateCountsOptimistically2(originalStatus, "spam", 1);
@@ -37727,7 +39164,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleMarkAsNotSpam = (0, import_element85.useCallback)(async () => {
+  const handleMarkAsNotSpam = (0, import_element93.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "publish" });
     updateCountsOptimistically2(originalStatus, "publish", 1);
@@ -37750,7 +39187,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleMoveToTrash = (0, import_element85.useCallback)(async () => {
+  const handleMoveToTrash = (0, import_element93.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "trash" });
     updateCountsOptimistically2(originalStatus, "trash", 1);
@@ -37770,7 +39207,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleRestore = (0, import_element85.useCallback)(async () => {
+  const handleRestore = (0, import_element93.useCallback)(async () => {
     const originalStatus = response.status;
     editEntityRecord("postType", "feedback", response.id, { status: "publish" });
     updateCountsOptimistically2(originalStatus, "publish", 1);
@@ -37793,7 +39230,7 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleDelete = (0, import_element85.useCallback)(async () => {
+  const handleDelete = (0, import_element93.useCallback)(async () => {
     const originalStatus = response.status;
     updateCountsOptimistically2(originalStatus, "", 1);
     onActionComplete(response);
@@ -37810,12 +39247,12 @@ function ResponseActions({
     updateCountsOptimistically2,
     invalidateCounts2
   ]);
-  const handleToggleRead = (0, import_element85.useCallback)(async () => {
+  const handleToggleRead = (0, import_element93.useCallback)(async () => {
     const newIsUnread = !response.is_unread;
     editEntityRecord("postType", "feedback", response.id, { is_unread: newIsUnread });
     onActionComplete({ ...response, is_unread: newIsUnread });
     try {
-      await (0, import_api_fetch10.default)({
+      await (0, import_api_fetch11.default)({
         path: `/wp/v2/feedback/${response.id}/read`,
         method: "POST",
         data: { is_unread: newIsUnread }
@@ -37828,13 +39265,13 @@ function ResponseActions({
     isBusy: isLoading,
     size: "compact"
   };
-  const readUnreadButtons = /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleToggleRead, ...sharedProps, children: response.is_unread ? (0, import_i18n82.__)("Mark as read", "jetpack-forms") : (0, import_i18n82.__)("Mark as unread", "jetpack-forms") });
-  const trashButton = /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleMoveToTrash, ...sharedProps, children: (0, import_i18n82.__)("Trash", "jetpack-forms") });
-  const spamButton = /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleMarkAsSpam, ...sharedProps, children: (0, import_i18n82.__)("Spam", "jetpack-forms") });
-  const notSpamButton = /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleMarkAsNotSpam, ...sharedProps, children: (0, import_i18n82.__)("Not spam", "jetpack-forms") });
-  const deleteButton = /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleDelete, ...sharedProps, children: (0, import_i18n82.__)("Delete", "jetpack-forms") });
-  const restoreButton = /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.Button, { onClick: handleRestore, ...sharedProps, children: (0, import_i18n82.__)("Restore", "jetpack-forms") });
-  return /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(
+  const readUnreadButtons = /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(import_components86.Button, { onClick: handleToggleRead, ...sharedProps, children: response.is_unread ? (0, import_i18n87.__)("Mark as read", "jetpack-forms") : (0, import_i18n87.__)("Mark as unread", "jetpack-forms") });
+  const trashButton = /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(import_components86.Button, { onClick: handleMoveToTrash, ...sharedProps, children: (0, import_i18n87.__)("Trash", "jetpack-forms") });
+  const spamButton = /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(import_components86.Button, { onClick: handleMarkAsSpam, ...sharedProps, children: (0, import_i18n87.__)("Spam", "jetpack-forms") });
+  const notSpamButton = /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(import_components86.Button, { onClick: handleMarkAsNotSpam, ...sharedProps, children: (0, import_i18n87.__)("Not spam", "jetpack-forms") });
+  const deleteButton = /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(import_components86.Button, { onClick: handleDelete, ...sharedProps, children: (0, import_i18n87.__)("Delete", "jetpack-forms") });
+  const restoreButton = /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(import_components86.Button, { onClick: handleRestore, ...sharedProps, children: (0, import_i18n87.__)("Restore", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)(
     Stack,
     {
       direction: "row",
@@ -37843,17 +39280,17 @@ function ResponseActions({
       wrap: "wrap",
       className: "jp-forms-response-header-actions",
       children: [
-        response.status === "publish" && /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(import_jsx_runtime195.Fragment, { children: [
+        response.status === "publish" && /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)(import_jsx_runtime199.Fragment, { children: [
           readUnreadButtons,
           spamButton,
           trashButton
         ] }),
-        response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(import_jsx_runtime195.Fragment, { children: [
+        response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)(import_jsx_runtime199.Fragment, { children: [
           readUnreadButtons,
           restoreButton,
           deleteButton
         ] }),
-        response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(import_jsx_runtime195.Fragment, { children: [
+        response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)(import_jsx_runtime199.Fragment, { children: [
           readUnreadButtons,
           notSpamButton,
           trashButton
@@ -37864,9 +39301,9 @@ function ResponseActions({
 }
 
 // routes/responses/response/navigation.tsx
-var import_components84 = __toESM(require_components());
-var import_i18n83 = __toESM(require_i18n());
-var import_jsx_runtime196 = __toESM(require_jsx_runtime());
+var import_components87 = __toESM(require_components());
+var import_i18n88 = __toESM(require_i18n());
+var import_jsx_runtime200 = __toESM(require_jsx_runtime());
 function ResponseNavigation({
   hasNext,
   hasPrevious,
@@ -37880,28 +39317,28 @@ function ResponseNavigation({
     showTooltip: true,
     size: "compact"
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)(Stack, { direction: "row", gap: "xs", justify: "end", style: { flexShrink: 0 }, wrap: "wrap", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
-      import_components84.Button,
+  return /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(Stack, { direction: "row", gap: "xs", justify: "end", style: { flexShrink: 0 }, wrap: "wrap", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(
+      import_components87.Button,
       {
         ...sharedProps,
         disabled: !hasPrevious,
         icon: chevron_up_default,
-        label: (0, import_i18n83.__)("Previous", "jetpack-forms"),
+        label: (0, import_i18n88.__)("Previous", "jetpack-forms"),
         onClick: onPrevious
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
-      import_components84.Button,
+    /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(
+      import_components87.Button,
       {
         ...sharedProps,
         disabled: !hasNext,
         icon: chevron_down_default,
-        label: (0, import_i18n83.__)("Next", "jetpack-forms"),
+        label: (0, import_i18n88.__)("Next", "jetpack-forms"),
         onClick: onNext
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(
       "span",
       {
         style: {
@@ -37914,13 +39351,13 @@ function ResponseNavigation({
         }
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
-      import_components84.Button,
+    /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(
+      import_components87.Button,
       {
         ...sharedProps,
         iconSize: 20,
         icon: close_default,
-        label: (0, import_i18n83.__)("Close", "jetpack-forms"),
+        label: (0, import_i18n88.__)("Close", "jetpack-forms"),
         onClick: onClose
       }
     )
@@ -37936,30 +39373,30 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // routes/responses/response/index.tsx
-var import_jsx_runtime197 = __toESM(require_jsx_runtime());
+var import_jsx_runtime201 = __toESM(require_jsx_runtime());
 function SingleResponseView({
   responseId,
   allResponseIds,
   onNavigate,
   onClose
 }) {
-  const [previewFile, setPreviewFile] = (0, import_element86.useState)(null);
-  const [isImageLoading, setIsImageLoading] = (0, import_element86.useState)(true);
-  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element86.useState)(null);
+  const [previewFile, setPreviewFile] = (0, import_element94.useState)(null);
+  const [isImageLoading, setIsImageLoading] = (0, import_element94.useState)(true);
+  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element94.useState)(null);
   const emptyTrashDays = useConfigValue("emptyTrashDays") ?? 0;
-  const { editEntityRecord } = (0, import_data20.useDispatch)(import_core_data8.store);
-  const { response, isLoading } = (0, import_data20.useSelect)(
-    (select) => {
+  const { editEntityRecord } = (0, import_data33.useDispatch)(import_core_data9.store);
+  const { response, isLoading } = (0, import_data33.useSelect)(
+    (select3) => {
       if (!responseId) {
         return { response: null, isLoading: false };
       }
       return {
-        response: select(import_core_data8.store).getEntityRecord(
+        response: select3(import_core_data9.store).getEntityRecord(
           "postType",
           "feedback",
           responseId
         ),
-        isLoading: select(import_core_data8.store).isResolving(
+        isLoading: select3(import_core_data9.store).isResolving(
           "getEntityRecord",
           ["postType", "feedback", responseId]
         )
@@ -37970,17 +39407,17 @@ function SingleResponseView({
   const currentIndex = allResponseIds.indexOf(responseId);
   const hasNext = currentIndex < allResponseIds.length - 1;
   const hasPrevious = currentIndex > 0;
-  const handleNext = (0, import_element86.useCallback)(() => {
+  const handleNext = (0, import_element94.useCallback)(() => {
     if (hasNext) {
       onNavigate(allResponseIds[currentIndex + 1]);
     }
   }, [hasNext, allResponseIds, currentIndex, onNavigate]);
-  const handlePrevious = (0, import_element86.useCallback)(() => {
+  const handlePrevious = (0, import_element94.useCallback)(() => {
     if (hasPrevious) {
       onNavigate(allResponseIds[currentIndex - 1]);
     }
   }, [hasPrevious, allResponseIds, currentIndex, onNavigate]);
-  (0, import_element86.useEffect)(() => {
+  (0, import_element94.useEffect)(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowUp" && hasPrevious) {
         event.preventDefault();
@@ -37995,7 +39432,7 @@ function SingleResponseView({
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [hasNext, hasPrevious, handleNext, handlePrevious, onClose]);
-  (0, import_element86.useEffect)(() => {
+  (0, import_element94.useEffect)(() => {
     if (!response || !response.id || !response.is_unread) {
       return;
     }
@@ -38006,7 +39443,7 @@ function SingleResponseView({
     editEntityRecord("postType", "feedback", response.id, {
       is_unread: false
     });
-    (0, import_api_fetch11.default)({
+    (0, import_api_fetch12.default)({
       path: `/wp/v2/feedback/${response.id}/read`,
       method: "POST",
       data: { is_unread: false }
@@ -38016,21 +39453,21 @@ function SingleResponseView({
       });
     });
   }, [response, editEntityRecord, hasMarkedAsRead]);
-  const handleFilePreview = (0, import_element86.useCallback)(
+  const handleFilePreview = (0, import_element94.useCallback)(
     (file) => () => {
       setIsImageLoading(true);
       setPreviewFile(file);
     },
     []
   );
-  const closePreviewModal = (0, import_element86.useCallback)(() => {
+  const closePreviewModal = (0, import_element94.useCallback)(() => {
     setPreviewFile(null);
     setIsImageLoading(true);
   }, []);
-  const handleImageLoaded = (0, import_element86.useCallback)(() => {
+  const handleImageLoaded = (0, import_element94.useCallback)(() => {
     setIsImageLoading(false);
   }, []);
-  const handleActionComplete = (0, import_element86.useCallback)(
+  const handleActionComplete = (0, import_element94.useCallback)(
     (updatedItem) => {
       if (!updatedItem) {
         if (hasNext) {
@@ -38045,15 +39482,15 @@ function SingleResponseView({
     [hasNext, hasPrevious, handleNext, handlePrevious, onClose]
   );
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Spinner, {}) });
+    return /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Spinner, {}) });
   }
   if (!response) {
-    return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("p", { children: (0, import_i18n84.__)("Response not found.", "jetpack-forms") }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime201.jsx)("p", { children: (0, import_i18n89.__)("Response not found.", "jetpack-forms") }) });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)(import_jsx_runtime197.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)(Stack, { className: "jp-forms-response-header", direction: "row", gap: "xs", justify: "space-between", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(ResponseActions, { response, onActionComplete: handleActionComplete }),
-      /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(import_jsx_runtime201.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(Stack, { className: "jp-forms-response-header", direction: "row", gap: "xs", justify: "space-between", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(ResponseActions, { response, onActionComplete: handleActionComplete }),
+      /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(
         ResponseNavigation,
         {
           hasNext,
@@ -38064,11 +39501,11 @@ function SingleResponseView({
         }
       )
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(response_meta_default, { response }),
-    /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(response_fields_default, { fields: response.fields, onFilePreview: handleFilePreview }),
-    response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Tip, { children: (0, import_i18n84.sprintf)(
+    /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(response_meta_default, { response }),
+    /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(response_fields_default, { fields: response.fields, onFilePreview: handleFilePreview }),
+    response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime201.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Tip, { children: (0, import_i18n89.sprintf)(
       /* translators: %d number of days. */
-      (0, import_i18n84._n)(
+      (0, import_i18n89._n)(
         "Spam responses are permanently deleted after %d day.",
         "Spam responses are permanently deleted after %d days.",
         15,
@@ -38077,9 +39514,9 @@ function SingleResponseView({
       // Number from https://github.com/Automattic/jetpack/blob/bde3cf9a89ce0d02e50469df173a6253383bd276/projects/packages/forms/src/contact-form/class-contact-form-plugin.php#L132
       15
     ) }) }),
-    response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Tip, { children: (0, import_i18n84.sprintf)(
+    response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime201.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Tip, { children: (0, import_i18n89.sprintf)(
       /* translators: %d number of days. */
-      (0, import_i18n84._n)(
+      (0, import_i18n89._n)(
         "Items in trash are permanently deleted after %d day.",
         "Items in trash are permanently deleted after %d days.",
         emptyTrashDays,
@@ -38087,7 +39524,7 @@ function SingleResponseView({
       ),
       emptyTrashDays
     ) }) }),
-    previewFile && /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Modal, { title: (0, import_html_entities9.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
+    previewFile && /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Modal, { title: (0, import_html_entities9.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(
       preview_file_default,
       {
         file: previewFile,
@@ -38105,7 +39542,7 @@ function Response() {
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const { records } = useInboxData({ status: statusView });
   const allRecordIds = records?.map((record) => record.id) ?? [];
-  const handleClose = (0, import_element86.useCallback)(() => {
+  const handleClose = (0, import_element94.useCallback)(() => {
     navigate({
       search: {
         ...searchParams,
@@ -38113,7 +39550,7 @@ function Response() {
       }
     });
   }, [navigate, searchParams]);
-  const handleNavigate = (0, import_element86.useCallback)(
+  const handleNavigate = (0, import_element94.useCallback)(
     (id) => {
       navigate({
         search: {
@@ -38128,7 +39565,7 @@ function Response() {
     return null;
   }
   const selectedResponseId = Number(responseIds[0]);
-  return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(
     SingleResponseView,
     {
       responseId: selectedResponseId,
@@ -38140,9 +39577,9 @@ function Response() {
 }
 
 // routes/responses/inspector.tsx
-var import_jsx_runtime198 = __toESM(require_jsx_runtime());
+var import_jsx_runtime202 = __toESM(require_jsx_runtime());
 function Inspector() {
-  return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(page_default, { showSidebarToggle: false, hasPadding: false, children: /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(Response, {}) }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(page_default, { showSidebarToggle: false, hasPadding: false, children: /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(Response, {}) }) });
 }
 export {
   Inspector as inspector,
