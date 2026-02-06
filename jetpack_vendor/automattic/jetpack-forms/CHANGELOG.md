@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Contact Form: Add support for form editing in widget editor context.
 - Contact Form: Fix loading spinner not showing on submit button.
+- Contact Form: Prevent duplicate form display on the frontend after a successful submission.
 - Fix Export button on wp-build dashboard.
 - Fix IP address lookup link in response inspector.
 - Fix leftover icons after SVG restructuring revert.
