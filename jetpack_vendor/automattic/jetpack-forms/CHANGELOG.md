@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Contact Form: add shortcode transform support for synced form references.
 - Dashboard: update header tab counts.
+- Forms: Add field type icons to submission confirmation page to indicate field types.
 - Forms: add preview functionality allowing users with edit permissions to preview forms at a temporary nonce-based URL.
 - Forms: add single form view to wp-build dashboard.
 - Response inspector: display star rating icons for rating field submissions.
