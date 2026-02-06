@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix Export button on wp-build dashboard.
 - Fix IP address lookup link in response inspector.
 - Fix leftover icons after SVG restructuring revert.
+- Forms: add placeholder option for required shortcode-based select fields to fix validation.
 - Forms: convert step icons to function components to fix usage as React components.
 - Forms: remove focus outline from form success message.
 - Forms: set default value for confirmationType attribute to prevent unnecessary serialization.
