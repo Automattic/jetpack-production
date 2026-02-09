@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Improve the media selection UI in preview modal.
 - Make pre-publish confirmation opt-in by default.
 - Update package dependencies.
+- Update preview modal copy on pre-publish screen.
 
 ### Fixed
 - Fix customization form legend visibility and connection toggle margin.
