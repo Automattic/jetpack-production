@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Fix customization form legend visibility and connection toggle margin.
 - Preview Modal: Fix footer scroll on smaller screens.
 
 ## [0.72.1] - 2026-02-02
