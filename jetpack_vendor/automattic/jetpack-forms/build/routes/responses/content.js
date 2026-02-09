@@ -36999,11 +36999,7 @@ var BULK_ACTIONS = {
   markAsSpam: "mark_as_spam",
   markAsNotSpam: "mark_as_not_spam"
 };
-function getActions({
-  navigate,
-  searchParams,
-  view
-}) {
+function getActions({ navigate, searchParams }) {
   const viewAction = {
     id: "view-response",
     isPrimary: true,
@@ -37681,6 +37677,37 @@ function getActions({
       createErrorNotice(errorMessage, { type: "snackbar" });
     }
   };
+  return {
+    viewAction,
+    editFormAction,
+    markAsSpamAction,
+    markAsNotSpamAction,
+    restoreAction,
+    moveToTrashAction,
+    deleteAction,
+    markAsReadAction,
+    markAsUnreadAction
+  };
+}
+function getRowActions({
+  navigate,
+  searchParams,
+  view
+}) {
+  const {
+    viewAction,
+    editFormAction,
+    markAsSpamAction,
+    markAsNotSpamAction,
+    restoreAction,
+    moveToTrashAction,
+    deleteAction,
+    markAsReadAction,
+    markAsUnreadAction
+  } = getActions({
+    navigate,
+    searchParams
+  });
   switch (view) {
     case "trash":
       return [viewAction, restoreAction, deleteAction, markAsUnreadAction, editFormAction];
@@ -38072,7 +38099,7 @@ function StageInner() {
     [filterOptions, isSingleFormView, totalItemsInbox, totalItemsSpam, totalItemsTrash]
   );
   const actions2 = (0, import_element90.useMemo)(
-    () => getActions({
+    () => getRowActions({
       navigate,
       searchParams,
       view: statusView
@@ -38185,14 +38212,14 @@ var Stage = () => {
 };
 
 // routes/responses/response/index.tsx
-var import_api_fetch12 = __toESM(require_api_fetch());
+var import_api_fetch11 = __toESM(require_api_fetch());
 var import_components90 = __toESM(require_components());
-var import_core_data10 = __toESM(require_core_data());
+var import_core_data9 = __toESM(require_core_data());
 var import_data34 = __toESM(require_data());
 var import_element95 = __toESM(require_element());
 var import_html_entities9 = __toESM(require_html_entities());
 var import_i18n91 = __toESM(require_i18n());
-import { useParams as useParams2, useSearch as useSearch3, useNavigate as useNavigate5 } from "@wordpress/route";
+import { useParams as useParams2, useSearch as useSearch4, useNavigate as useNavigate6 } from "@wordpress/route";
 
 // src/dashboard/components/feedback-comments/index.tsx
 var import_components78 = __toESM(require_components(), 1);
@@ -39430,154 +39457,91 @@ var ResponseMeta = ({ response }) => {
 var response_meta_default = ResponseMeta;
 
 // routes/responses/response/actions.tsx
-var import_api_fetch11 = __toESM(require_api_fetch());
 var import_components88 = __toESM(require_components());
-var import_core_data9 = __toESM(require_core_data());
 var import_data33 = __toESM(require_data());
 var import_element94 = __toESM(require_element());
 var import_i18n89 = __toESM(require_i18n());
+import { useSearch as useSearch3, useNavigate as useNavigate5 } from "@wordpress/route";
 var import_jsx_runtime201 = __toESM(require_jsx_runtime());
 function ResponseActions({
   response,
   onActionComplete
 }) {
-  const { saveEntityRecord, deleteEntityRecord, editEntityRecord } = (0, import_data33.useDispatch)(
-    import_core_data9.store
+  const searchParams = useSearch3({ from: "/responses/$view" });
+  const navigate = useNavigate5();
+  const {
+    markAsSpamAction,
+    markAsNotSpamAction,
+    moveToTrashAction,
+    restoreAction,
+    deleteAction,
+    markAsReadAction,
+    markAsUnreadAction
+  } = (0, import_element94.useMemo)(
+    () => getActions({
+      navigate,
+      searchParams
+    }),
+    [navigate, searchParams]
   );
-  const { updateCountsOptimistically: updateCountsOptimistically2, invalidateCounts: invalidateCounts2 } = (0, import_data33.useDispatch)(
-    store3
-  );
-  const [isLoading] = (0, import_element94.useState)(false);
+  const [isMarkingAsSpam, setIsMarkingAsSpam] = (0, import_element94.useState)(false);
+  const [isMarkingAsNotSpam, setIsMarkingAsNotSpam] = (0, import_element94.useState)(false);
+  const [isMovingToTrash, setIsMovingToTrash] = (0, import_element94.useState)(false);
+  const [isRestoring, setIsRestoring] = (0, import_element94.useState)(false);
+  const [isDeleting, setIsDeleting] = (0, import_element94.useState)(false);
+  const [isTogglingReadStatus, setIsTogglingReadStatus] = (0, import_element94.useState)(false);
+  const registry = (0, import_data33.useRegistry)();
   const handleMarkAsSpam = (0, import_element94.useCallback)(async () => {
-    const originalStatus = response.status;
-    editEntityRecord("postType", "feedback", response.id, { status: "spam" });
-    updateCountsOptimistically2(originalStatus, "spam", 1);
-    onActionComplete({ ...response, status: "spam" });
-    try {
-      await saveEntityRecord("postType", "feedback", {
-        id: response.id,
-        status: "spam"
-      });
-      invalidateCounts2();
-    } catch {
-      editEntityRecord("postType", "feedback", response.id, { status: originalStatus });
-      updateCountsOptimistically2("spam", originalStatus, 1);
-    }
-  }, [
-    response,
-    saveEntityRecord,
-    editEntityRecord,
-    onActionComplete,
-    updateCountsOptimistically2,
-    invalidateCounts2
-  ]);
+    onActionComplete?.(response);
+    setIsMarkingAsSpam(true);
+    await markAsSpamAction.callback?.([response], { registry });
+    setIsMarkingAsSpam(false);
+  }, [onActionComplete, response, markAsSpamAction, registry]);
   const handleMarkAsNotSpam = (0, import_element94.useCallback)(async () => {
-    const originalStatus = response.status;
-    editEntityRecord("postType", "feedback", response.id, { status: "publish" });
-    updateCountsOptimistically2(originalStatus, "publish", 1);
-    onActionComplete({ ...response, status: "publish" });
-    try {
-      await saveEntityRecord("postType", "feedback", {
-        id: response.id,
-        status: "publish"
-      });
-      invalidateCounts2();
-    } catch {
-      editEntityRecord("postType", "feedback", response.id, { status: originalStatus });
-      updateCountsOptimistically2("publish", originalStatus, 1);
-    }
-  }, [
-    response,
-    saveEntityRecord,
-    editEntityRecord,
-    onActionComplete,
-    updateCountsOptimistically2,
-    invalidateCounts2
-  ]);
+    onActionComplete?.(response);
+    setIsMarkingAsNotSpam(true);
+    await markAsNotSpamAction?.callback?.([response], { registry });
+    setIsMarkingAsNotSpam(false);
+  }, [onActionComplete, response, markAsNotSpamAction, registry]);
   const handleMoveToTrash = (0, import_element94.useCallback)(async () => {
-    const originalStatus = response.status;
-    editEntityRecord("postType", "feedback", response.id, { status: "trash" });
-    updateCountsOptimistically2(originalStatus, "trash", 1);
-    onActionComplete({ ...response, status: "trash" });
-    try {
-      await deleteEntityRecord("postType", "feedback", response.id);
-      invalidateCounts2();
-    } catch {
-      editEntityRecord("postType", "feedback", response.id, { status: originalStatus });
-      updateCountsOptimistically2("trash", originalStatus, 1);
-    }
-  }, [
-    response,
-    deleteEntityRecord,
-    editEntityRecord,
-    onActionComplete,
-    updateCountsOptimistically2,
-    invalidateCounts2
-  ]);
+    onActionComplete?.(response);
+    setIsMovingToTrash(true);
+    await moveToTrashAction?.callback?.([response], { registry });
+    setIsMovingToTrash(false);
+  }, [onActionComplete, response, moveToTrashAction, registry]);
   const handleRestore = (0, import_element94.useCallback)(async () => {
-    const originalStatus = response.status;
-    editEntityRecord("postType", "feedback", response.id, { status: "publish" });
-    updateCountsOptimistically2(originalStatus, "publish", 1);
-    onActionComplete({ ...response, status: "publish" });
-    try {
-      await saveEntityRecord("postType", "feedback", {
-        id: response.id,
-        status: "publish"
-      });
-      invalidateCounts2();
-    } catch {
-      editEntityRecord("postType", "feedback", response.id, { status: originalStatus });
-      updateCountsOptimistically2("publish", originalStatus, 1);
-    }
-  }, [
-    response,
-    saveEntityRecord,
-    editEntityRecord,
-    onActionComplete,
-    updateCountsOptimistically2,
-    invalidateCounts2
-  ]);
+    onActionComplete?.(response);
+    setIsRestoring(true);
+    await restoreAction?.callback?.([response], { registry });
+    setIsRestoring(false);
+  }, [onActionComplete, response, restoreAction, registry]);
   const handleDelete = (0, import_element94.useCallback)(async () => {
-    const originalStatus = response.status;
-    updateCountsOptimistically2(originalStatus, "", 1);
-    onActionComplete(response);
-    try {
-      await deleteEntityRecord("postType", "feedback", response.id, { force: true });
-      invalidateCounts2();
-    } catch {
-      updateCountsOptimistically2("", originalStatus, 1);
-    }
-  }, [
-    response,
-    deleteEntityRecord,
-    onActionComplete,
-    updateCountsOptimistically2,
-    invalidateCounts2
-  ]);
-  const handleToggleRead = (0, import_element94.useCallback)(async () => {
-    const newIsUnread = !response.is_unread;
-    editEntityRecord("postType", "feedback", response.id, { is_unread: newIsUnread });
-    onActionComplete({ ...response, is_unread: newIsUnread });
-    try {
-      await (0, import_api_fetch11.default)({
-        path: `/wp/v2/feedback/${response.id}/read`,
-        method: "POST",
-        data: { is_unread: newIsUnread }
-      });
-    } catch {
-      editEntityRecord("postType", "feedback", response.id, { is_unread: !newIsUnread });
-    }
-  }, [response, editEntityRecord, onActionComplete]);
-  const sharedProps = {
-    isBusy: isLoading,
-    size: "compact"
-  };
-  const readUnreadButtons = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { onClick: handleToggleRead, ...sharedProps, children: response.is_unread ? (0, import_i18n89.__)("Mark as read", "jetpack-forms") : (0, import_i18n89.__)("Mark as unread", "jetpack-forms") });
-  const trashButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { onClick: handleMoveToTrash, ...sharedProps, children: (0, import_i18n89.__)("Trash", "jetpack-forms") });
-  const spamButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { onClick: handleMarkAsSpam, ...sharedProps, children: (0, import_i18n89.__)("Spam", "jetpack-forms") });
-  const notSpamButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { onClick: handleMarkAsNotSpam, ...sharedProps, children: (0, import_i18n89.__)("Not spam", "jetpack-forms") });
-  const deleteButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { onClick: handleDelete, ...sharedProps, children: (0, import_i18n89.__)("Delete", "jetpack-forms") });
-  const restoreButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { onClick: handleRestore, ...sharedProps, children: (0, import_i18n89.__)("Restore", "jetpack-forms") });
+    onActionComplete?.(response);
+    setIsDeleting(true);
+    await deleteAction?.callback?.([response], { registry });
+    setIsDeleting(false);
+  }, [onActionComplete, response, deleteAction, registry]);
+  const handleMarkAsRead = (0, import_element94.useCallback)(async () => {
+    setIsTogglingReadStatus(true);
+    await markAsReadAction?.callback?.([response], { registry });
+    setIsTogglingReadStatus(false);
+    onActionComplete?.({ ...response, is_unread: false });
+  }, [onActionComplete, response, markAsReadAction, registry]);
+  const handleMarkAsUnread = (0, import_element94.useCallback)(async () => {
+    setIsTogglingReadStatus(true);
+    await markAsUnreadAction?.callback?.([response], { registry });
+    setIsTogglingReadStatus(false);
+    onActionComplete?.({ ...response, is_unread: true });
+  }, [onActionComplete, response, markAsUnreadAction, registry]);
+  const readUnreadButtons = /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(import_jsx_runtime201.Fragment, { children: [
+    response.is_unread && /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { isBusy: isTogglingReadStatus, onClick: handleMarkAsRead, size: "compact", children: (0, import_i18n89.__)("Mark as read", "jetpack-forms") }),
+    !response.is_unread && /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { isBusy: isTogglingReadStatus, onClick: handleMarkAsUnread, size: "compact", children: (0, import_i18n89.__)("Mark as unread", "jetpack-forms") })
+  ] });
+  const trashButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { isBusy: isMovingToTrash, onClick: handleMoveToTrash, size: "compact", children: (0, import_i18n89.__)("Trash", "jetpack-forms") });
+  const spamButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { isBusy: isMarkingAsSpam, onClick: handleMarkAsSpam, size: "compact", children: (0, import_i18n89.__)("Spam", "jetpack-forms") });
+  const notSpamButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { isBusy: isMarkingAsNotSpam, onClick: handleMarkAsNotSpam, size: "compact", children: (0, import_i18n89.__)("Not spam", "jetpack-forms") });
+  const deleteButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { isBusy: isDeleting, onClick: handleDelete, size: "compact", children: (0, import_i18n89.__)("Delete", "jetpack-forms") });
+  const restoreButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { isBusy: isRestoring, onClick: handleRestore, size: "compact", children: (0, import_i18n89.__)("Restore", "jetpack-forms") });
   return /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(
     Stack,
     {
@@ -39692,19 +39656,19 @@ function SingleResponseView({
   const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element95.useState)(null);
   const emptyTrashDays = useConfigValue("emptyTrashDays") ?? 0;
   const isNotesEnabled = useConfigValue("isNotesEnabled") ?? false;
-  const { editEntityRecord } = (0, import_data34.useDispatch)(import_core_data10.store);
+  const { editEntityRecord } = (0, import_data34.useDispatch)(import_core_data9.store);
   const { response, isLoading } = (0, import_data34.useSelect)(
     (select3) => {
       if (!responseId) {
         return { response: null, isLoading: false };
       }
       return {
-        response: select3(import_core_data10.store).getEntityRecord(
+        response: select3(import_core_data9.store).getEditedEntityRecord(
           "postType",
           "feedback",
           responseId
         ),
-        isLoading: select3(import_core_data10.store).isResolving(
+        isLoading: select3(import_core_data9.store).isResolving(
           "getEntityRecord",
           ["postType", "feedback", responseId]
         )
@@ -39751,7 +39715,7 @@ function SingleResponseView({
     editEntityRecord("postType", "feedback", response.id, {
       is_unread: false
     });
-    (0, import_api_fetch12.default)({
+    (0, import_api_fetch11.default)({
       path: `/wp/v2/feedback/${response.id}/read`,
       method: "POST",
       data: { is_unread: false }
@@ -39845,8 +39809,8 @@ function SingleResponseView({
 }
 function Response() {
   const params = useParams2({ from: "/responses/$view" });
-  const searchParams = useSearch3({ from: "/responses/$view" });
-  const navigate = useNavigate5();
+  const searchParams = useSearch4({ from: "/responses/$view" });
+  const navigate = useNavigate6();
   const responseIds = searchParams?.responseIds || [];
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const { records } = useInboxData({ status: statusView });
