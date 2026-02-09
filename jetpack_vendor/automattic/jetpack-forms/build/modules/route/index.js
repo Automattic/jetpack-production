@@ -704,10 +704,10 @@ function createRandomKey() {
   return (Math.random() + 1).toString(36).substring(7);
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/isServer/client.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/isServer/client.js
 var isServer = false;
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/utils/batch.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/utils/batch.js
 function batch2(fn) {
   if (isServer) {
     return fn();
@@ -719,7 +719,7 @@ function batch2(fn) {
   return result;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/utils.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/utils.js
 function last(arr) {
   return arr[arr.length - 1];
 }
@@ -923,12 +923,12 @@ var HTML_ESCAPE_REGEX = /[&><\u2028\u2029]/g;
 function escapeHtml(str) {
   return str.replace(HTML_ESCAPE_REGEX, (match) => HTML_ESCAPE_LOOKUP[match]);
 }
-function decodePath(path, decodeIgnore) {
-  if (!path) return path;
+function decodePath(path) {
+  if (!path) return { path, handledProtocolRelativeURL: false };
   if (!/[%\\\x00-\x1f\x7f]/.test(path) && !path.startsWith("//")) {
-    return path;
+    return { path, handledProtocolRelativeURL: false };
   }
-  const re = decodeIgnore ? new RegExp(`${decodeIgnore.join("|")}`, "gi") : /%25|%5C/gi;
+  const re = /%25|%5C/gi;
   let cursor = 0;
   let result = "";
   let match;
@@ -937,14 +937,16 @@ function decodePath(path, decodeIgnore) {
     cursor = re.lastIndex;
   }
   result = result + decodeSegment(cursor ? path.slice(cursor) : path);
+  let handledProtocolRelativeURL = false;
   if (result.startsWith("//")) {
+    handledProtocolRelativeURL = true;
     result = "/" + result.replace(/^\/+/, "");
   }
-  return result;
+  return { path: result, handledProtocolRelativeURL };
 }
-function encodeNonAscii(path) {
-  if (!/[^\u0000-\u007F]/.test(path)) return path;
-  return path.replace(/[^\u0000-\u007F]/gu, encodeURIComponent);
+function encodePathLikeUrl(path) {
+  if (!/\s|[^\u0000-\u007F]/.test(path)) return path;
+  return path.replace(/\s|[^\u0000-\u007F]/gu, encodeURIComponent);
 }
 
 // ../../../node_modules/.pnpm/tiny-invariant@1.3.3/node_modules/tiny-invariant/dist/esm/tiny-invariant.js
@@ -962,7 +964,7 @@ function invariant(condition, message) {
   throw new Error(value);
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/lru-cache.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/lru-cache.js
 function createLRUCache(max) {
   const cache = /* @__PURE__ */ new Map();
   let oldest;
@@ -1027,7 +1029,7 @@ function createLRUCache(max) {
   };
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/new-process-route-tree.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/new-process-route-tree.js
 var SEGMENT_TYPE_PATHNAME = 0;
 var SEGMENT_TYPE_PARAM = 1;
 var SEGMENT_TYPE_WILDCARD = 2;
@@ -1846,7 +1848,7 @@ function isFrameMoreSpecific(prev, next) {
   return next.statics > prev.statics || next.statics === prev.statics && (next.dynamics > prev.dynamics || next.dynamics === prev.dynamics && (next.optionals > prev.optionals || next.optionals === prev.optionals && ((next.node.kind === SEGMENT_TYPE_INDEX) > (prev.node.kind === SEGMENT_TYPE_INDEX) || next.node.kind === SEGMENT_TYPE_INDEX === (prev.node.kind === SEGMENT_TYPE_INDEX) && next.depth > prev.depth)));
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/path.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/path.js
 function joinPaths(paths) {
   return cleanPath(
     paths.filter((val) => {
@@ -1967,7 +1969,8 @@ function encodeParam(key, params, decoder) {
   const value = params[key];
   if (typeof value !== "string") return value;
   if (key === "_splat") {
-    return encodeURI(value);
+    if (/^[a-zA-Z0-9\-._~!/]*$/.test(value)) return value;
+    return value.split("/").map((segment) => encodePathParam(segment, decoder)).join("/");
   } else {
     return encodePathParam(value, decoder);
   }
@@ -1976,7 +1979,10 @@ function interpolatePath({
   path,
   params,
   decoder,
-  server
+  // `server` is marked @internal and stripped from .d.ts by `stripInternal`.
+  // We avoid destructuring it in the function signature so the emitted
+  // declaration doesn't reference a property that no longer exists.
+  ...rest
 }) {
   let isMissingParams = false;
   const usedParams = {};
@@ -1984,7 +1990,7 @@ function interpolatePath({
     return { interpolatedPath: "/", usedParams, isMissingParams };
   if (!path.includes("$"))
     return { interpolatedPath: path, usedParams, isMissingParams };
-  if (isServer ?? server) {
+  if (isServer ?? rest.server) {
     if (path.indexOf("{") === -1) {
       const length2 = path.length;
       let cursor2 = 0;
@@ -2092,7 +2098,7 @@ function encodePathParam(value, decoder) {
   return decoder?.(encoded) ?? encoded;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/not-found.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/not-found.js
 function notFound(options = {}) {
   options.isNotFound = true;
   if (options.throw) throw options;
@@ -2102,7 +2108,7 @@ function isNotFound(obj) {
   return !!obj?.isNotFound;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/scroll-restoration.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/scroll-restoration.js
 function getSafeSessionStorage() {
   try {
     if (typeof window !== "undefined" && typeof window.sessionStorage === "object") {
@@ -2319,7 +2325,7 @@ function handleHashScroll(router) {
   }
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/qss.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/qss.js
 function encode(obj, stringify = String) {
   const result = new URLSearchParams();
   for (const key in obj) {
@@ -2352,7 +2358,7 @@ function decode(str) {
   return result;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/searchParams.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/searchParams.js
 var defaultParseSearch = parseSearchWith(JSON.parse);
 var defaultStringifySearch = stringifySearchWith(
   JSON.stringify,
@@ -2399,10 +2405,10 @@ function stringifySearchWith(stringify, parser) {
   };
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/root.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/root.js
 var rootRouteId = "__root__";
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/redirect.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/redirect.js
 function redirect(opts) {
   opts.statusCode = opts.statusCode || opts.code || 307;
   if (!opts._builtLocation && typeof opts.href === "string" && isDangerousProtocol(opts.href)) {
@@ -2435,7 +2441,7 @@ function isRedirect(obj) {
   return obj instanceof Response && !!obj.options;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/load-matches.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/load-matches.js
 var triggerOnReady = (inner) => {
   if (!inner.rendered) {
     inner.rendered = true;
@@ -2697,6 +2703,7 @@ var executeBeforeLoad = (inner, matchId, index, route) => {
     buildLocation: inner.router.buildLocation,
     cause: preload ? "preload" : cause,
     matches: inner.matches,
+    routeId: route.id,
     ...inner.router.options.additionalContext
   };
   const updateContext = (beforeLoadContext2) => {
@@ -2857,6 +2864,11 @@ var runLoader = async (inner, matchId, index, route) => {
     } catch (e) {
       let error = e;
       if (error?.name === "AbortError") {
+        if (match.abortController.signal.aborted) {
+          match._nonReactive.loaderPromise?.resolve();
+          match._nonReactive.loaderPromise = void 0;
+          return;
+        }
         inner.updateMatch(matchId, (prev) => ({
           ...prev,
           status: prev.status === "pending" ? "success" : prev.status,
@@ -2898,6 +2910,33 @@ var runLoader = async (inner, matchId, index, route) => {
   }
 };
 var loadRouteMatch = async (inner, index) => {
+  async function handleLoader(preload, prevMatch, match2, route2) {
+    const age = Date.now() - prevMatch.updatedAt;
+    const staleAge = preload ? route2.options.preloadStaleTime ?? inner.router.options.defaultPreloadStaleTime ?? 3e4 : route2.options.staleTime ?? inner.router.options.defaultStaleTime ?? 0;
+    const shouldReloadOption = route2.options.shouldReload;
+    const shouldReload = typeof shouldReloadOption === "function" ? shouldReloadOption(getLoaderContext(inner, matchId, index, route2)) : shouldReloadOption;
+    const { status, invalid } = match2;
+    loaderShouldRunAsync = status === "success" && (invalid || (shouldReload ?? age > staleAge));
+    if (preload && route2.options.preload === false) ;
+    else if (loaderShouldRunAsync && !inner.sync) {
+      loaderIsRunningAsync = true;
+      (async () => {
+        try {
+          await runLoader(inner, matchId, index, route2);
+          const match3 = inner.router.getMatch(matchId);
+          match3._nonReactive.loaderPromise?.resolve();
+          match3._nonReactive.loadPromise?.resolve();
+          match3._nonReactive.loaderPromise = void 0;
+        } catch (err) {
+          if (isRedirect(err)) {
+            await inner.router.navigate(err.options);
+          }
+        }
+      })();
+    } else if (status !== "success" || loaderShouldRunAsync && inner.sync) {
+      await runLoader(inner, matchId, index, route2);
+    }
+  }
   const { id: matchId, routeId } = inner.matches[index];
   let loaderShouldRunAsync = false;
   let loaderIsRunningAsync = false;
@@ -2908,6 +2947,7 @@ var loadRouteMatch = async (inner, index) => {
     }
   } else {
     const prevMatch = inner.router.getMatch(matchId);
+    const preload = resolvePreload(inner, matchId);
     if (prevMatch._nonReactive.loaderPromise) {
       if (prevMatch.status === "success" && !inner.sync && !prevMatch.preload) {
         return prevMatch;
@@ -2918,13 +2958,11 @@ var loadRouteMatch = async (inner, index) => {
       if (error) {
         handleRedirectAndNotFound(inner, match2, error);
       }
+      if (match2.status === "pending") {
+        await handleLoader(preload, prevMatch, match2, route);
+      }
     } else {
-      const age = Date.now() - prevMatch.updatedAt;
-      const preload = resolvePreload(inner, matchId);
-      const staleAge = preload ? route.options.preloadStaleTime ?? inner.router.options.defaultPreloadStaleTime ?? 3e4 : route.options.staleTime ?? inner.router.options.defaultStaleTime ?? 0;
-      const shouldReloadOption = route.options.shouldReload;
-      const shouldReload = typeof shouldReloadOption === "function" ? shouldReloadOption(getLoaderContext(inner, matchId, index, route)) : shouldReloadOption;
-      const nextPreload = !!preload && !inner.router.state.matches.some((d) => d.id === matchId);
+      const nextPreload = preload && !inner.router.state.matches.some((d) => d.id === matchId);
       const match2 = inner.router.getMatch(matchId);
       match2._nonReactive.loaderPromise = createControlledPromise();
       if (nextPreload !== match2.preload) {
@@ -2933,27 +2971,7 @@ var loadRouteMatch = async (inner, index) => {
           preload: nextPreload
         }));
       }
-      const { status, invalid } = match2;
-      loaderShouldRunAsync = status === "success" && (invalid || (shouldReload ?? age > staleAge));
-      if (preload && route.options.preload === false) ;
-      else if (loaderShouldRunAsync && !inner.sync) {
-        loaderIsRunningAsync = true;
-        (async () => {
-          try {
-            await runLoader(inner, matchId, index, route);
-            const match3 = inner.router.getMatch(matchId);
-            match3._nonReactive.loaderPromise?.resolve();
-            match3._nonReactive.loadPromise?.resolve();
-            match3._nonReactive.loaderPromise = void 0;
-          } catch (err) {
-            if (isRedirect(err)) {
-              await inner.router.navigate(err.options);
-            }
-          }
-        })();
-      } else if (status !== "success" || loaderShouldRunAsync && inner.sync) {
-        await runLoader(inner, matchId, index, route);
-      }
+      await handleLoader(preload, prevMatch, match2, route);
     }
   }
   const match = inner.router.getMatch(matchId);
@@ -3093,7 +3111,7 @@ var componentTypes = [
   "notFoundComponent"
 ];
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/rewrite.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/rewrite.js
 function composeRewrites(rewrites) {
   return {
     input: ({ url }) => {
@@ -3155,7 +3173,7 @@ function executeRewriteOutput(rewrite, url) {
   return url;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/router.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/router.js
 function getLocationChangeInfo(routerState) {
   const fromLocation = routerState.resolvedLocation;
   const toLocation = routerState.location;
@@ -3355,14 +3373,14 @@ var RouterCore = class {
           return {
             href: pathname + searchStr2 + hash,
             publicHref: href,
-            pathname: decodePath(pathname),
+            pathname: decodePath(pathname).path,
             external: false,
             searchStr: searchStr2,
             search: replaceEqualDeep(
               previousLocation?.search,
               parsedSearch2
             ),
-            hash: decodePath(hash.slice(1)),
+            hash: decodePath(hash.slice(1)).path,
             state: replaceEqualDeep(previousLocation?.state, state)
           };
         }
@@ -3375,11 +3393,11 @@ var RouterCore = class {
         return {
           href: fullPath,
           publicHref: href,
-          pathname: decodePath(url.pathname),
+          pathname: decodePath(url.pathname).path,
           external: !!this.rewrite && url.origin !== this.origin,
           searchStr,
           search: replaceEqualDeep(previousLocation?.search, parsedSearch),
-          hash: decodePath(url.hash.slice(1)),
+          hash: decodePath(url.hash.slice(1)).path,
           state: replaceEqualDeep(previousLocation?.state, state)
         };
       };
@@ -3506,7 +3524,7 @@ var RouterCore = class {
             decoder: this.pathParamsDecoder,
             server: this.isServer
           }).interpolatedPath
-        );
+        ).path;
         let nextSearch = fromSearch;
         if (opts._includeValidateSearch && this.options.search?.strict) {
           const validatedSearch = {};
@@ -3553,7 +3571,7 @@ var RouterCore = class {
             publicHref = rewrittenUrl.pathname + rewrittenUrl.search + rewrittenUrl.hash;
           }
         } else {
-          href = encodeNonAscii(fullPath);
+          href = encodePathLikeUrl(fullPath);
           publicHref = href;
         }
         return {
@@ -4225,6 +4243,11 @@ var RouterCore = class {
   get looseRoutesById() {
     return this.routesById;
   }
+  getParentContext(parentMatch) {
+    const parentMatchId = parentMatch?.id;
+    const parentContext = !parentMatchId ? this.options.context ?? void 0 : parentMatch.context ?? this.options.context ?? void 0;
+    return parentContext;
+  }
   matchRoutesInternal(next, opts) {
     const matchedRoutesResult = this.getMatchedRoutes(next.pathname);
     const { foundRoute, routeParams, parsedParams } = matchedRoutesResult;
@@ -4244,27 +4267,24 @@ var RouterCore = class {
       }
     }
     const globalNotFoundRouteId = isGlobalNotFound ? findGlobalNotFoundRouteId(this.options.notFoundMode, matchedRoutes) : void 0;
-    const matches = [];
-    const getParentContext = (parentMatch) => {
-      const parentMatchId = parentMatch?.id;
-      const parentContext = !parentMatchId ? this.options.context ?? void 0 : parentMatch.context ?? this.options.context ?? void 0;
-      return parentContext;
-    };
-    matchedRoutes.forEach((route, index) => {
+    const matches = new Array(matchedRoutes.length);
+    for (let index = 0; index < matchedRoutes.length; index++) {
+      const route = matchedRoutes[index];
       const parentMatch = matches[index - 1];
-      const [preMatchSearch, strictMatchSearch, searchError] = (() => {
+      let preMatchSearch;
+      let strictMatchSearch;
+      let searchError;
+      {
         const parentSearch = parentMatch?.search ?? next.search;
         const parentStrictSearch = parentMatch?._strictSearch ?? void 0;
         try {
           const strictSearch = validateSearch(route.options.validateSearch, { ...parentSearch }) ?? void 0;
-          return [
-            {
-              ...parentSearch,
-              ...strictSearch
-            },
-            { ...parentStrictSearch, ...strictSearch },
-            void 0
-          ];
+          preMatchSearch = {
+            ...parentSearch,
+            ...strictSearch
+          };
+          strictMatchSearch = { ...parentStrictSearch, ...strictSearch };
+          searchError = void 0;
         } catch (err) {
           let searchParamError = err;
           if (!(err instanceof SearchParamError)) {
@@ -4275,9 +4295,11 @@ var RouterCore = class {
           if (opts?.throwOnError) {
             throw searchParamError;
           }
-          return [parentSearch, {}, searchParamError];
+          preMatchSearch = parentSearch;
+          strictMatchSearch = {};
+          searchError = searchParamError;
         }
-      })();
+      }
       const loaderDeps = route.options.loaderDeps?.({
         search: preMatchSearch
       }) ?? "";
@@ -4370,20 +4392,21 @@ var RouterCore = class {
         match.globalNotFound = globalNotFoundRouteId === route.id;
       }
       match.searchError = searchError;
-      const parentContext = getParentContext(parentMatch);
+      const parentContext = this.getParentContext(parentMatch);
       match.context = {
         ...parentContext,
         ...match.__routeContext,
         ...match.__beforeLoadContext
       };
-      matches.push(match);
-    });
-    matches.forEach((match, index) => {
+      matches[index] = match;
+    }
+    for (let index = 0; index < matches.length; index++) {
+      const match = matches[index];
       const route = this.looseRoutesById[match.routeId];
       const existingMatch = this.getMatch(match.id);
       if (!existingMatch) {
         const parentMatch = matches[index - 1];
-        const parentContext = getParentContext(parentMatch);
+        const parentContext = this.getParentContext(parentMatch);
         if (route.options.context) {
           const contextFnContext = {
             deps: match.loaderDeps,
@@ -4395,7 +4418,8 @@ var RouterCore = class {
             cause: match.cause,
             abortController: match.abortController,
             preload: !!match.preload,
-            matches
+            matches,
+            routeId: route.id
           };
           match.__routeContext = route.options.context(contextFnContext) ?? void 0;
         }
@@ -4405,7 +4429,7 @@ var RouterCore = class {
           ...match.__beforeLoadContext
         };
       }
-    });
+    }
     return matches;
   }
   /**
@@ -4627,10 +4651,10 @@ function extractStrictParams(route, referenceParams, parsedParams, accumulatedPa
   }
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/link.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/link.js
 var preloadWarning = "Error preloading route! \u261D\uFE0F";
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.157.15/node_modules/@tanstack/router-core/dist/esm/route.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/route.js
 var BaseRoute = class {
   constructor(options) {
     this.init = (opts) => {
@@ -4720,7 +4744,7 @@ var BaseRootRoute = class extends BaseRoute {
   }
 };
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/utils.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/utils.js
 var React = __toESM(require_react(), 1);
 var REACT_USE = "use";
 var reactUse = React[REACT_USE];
@@ -4759,7 +4783,7 @@ function useForwardedRef(ref) {
   return innerRef;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/CatchBoundary.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/CatchBoundary.js
 var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
 var React2 = __toESM(require_react(), 1);
 function CatchBoundary(props) {
@@ -4853,7 +4877,7 @@ function ErrorComponent({ error }) {
   ] });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/ClientOnly.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/ClientOnly.js
 var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
 var import_react = __toESM(require_react(), 1);
 function ClientOnly({ children, fallback = null }) {
@@ -4890,11 +4914,11 @@ function warning(condition, message) {
 }
 var tiny_warning_esm_default = warning;
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/route.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/route.js
 var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
 var import_react3 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useMatch.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useMatch.js
 var React6 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@tanstack+react-store@0.8.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-store/dist/esm/index.js
@@ -4952,13 +4976,13 @@ function getOwnKeys(obj) {
   );
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouterState.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouterState.js
 var import_react2 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouter.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouter.js
 var React4 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/routerContext.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/routerContext.js
 var React3 = __toESM(require_react(), 1);
 var routerContext = React3.createContext(null);
 function getRouterContext() {
@@ -4972,7 +4996,7 @@ function getRouterContext() {
   return routerContext;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouter.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouter.js
 function useRouter(opts) {
   const value = React4.useContext(getRouterContext());
   tiny_warning_esm_default(
@@ -4982,7 +5006,7 @@ function useRouter(opts) {
   return value;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouterState.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouterState.js
 function useRouterState(opts) {
   const contextRouter = useRouter({
     warn: opts?.router === void 0
@@ -5013,14 +5037,14 @@ function useRouterState(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/matchContext.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/matchContext.js
 var React5 = __toESM(require_react(), 1);
 var matchContext = React5.createContext(void 0);
 var dummyMatchContext = React5.createContext(
   void 0
 );
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useMatch.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useMatch.js
 function useMatch(opts) {
   const nearestMatchId = React6.useContext(
     opts.from ? dummyMatchContext : matchContext
@@ -5044,7 +5068,7 @@ function useMatch(opts) {
   return matchSelection;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLoaderData.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLoaderData.js
 function useLoaderData(opts) {
   return useMatch({
     from: opts.from,
@@ -5056,7 +5080,7 @@ function useLoaderData(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLoaderDeps.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLoaderDeps.js
 function useLoaderDeps(opts) {
   const { select, ...rest } = opts;
   return useMatch({
@@ -5067,7 +5091,7 @@ function useLoaderDeps(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useParams.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useParams.js
 function useParams(opts) {
   return useMatch({
     from: opts.from,
@@ -5081,7 +5105,7 @@ function useParams(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useSearch.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useSearch.js
 function useSearch(opts) {
   return useMatch({
     from: opts.from,
@@ -5094,7 +5118,7 @@ function useSearch(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useNavigate.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useNavigate.js
 var React7 = __toESM(require_react(), 1);
 function useNavigate(_defaultOpts) {
   const router = useRouter();
@@ -5109,7 +5133,7 @@ function useNavigate(_defaultOpts) {
   );
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/link.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/link.js
 var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
 var React8 = __toESM(require_react(), 1);
 var import_react_dom = __toESM(require_react_dom(), 1);
@@ -5643,7 +5667,7 @@ function isCtrlEvent(e) {
   return !!(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey);
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/route.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/route.js
 var Route = class extends BaseRoute {
   /**
    * @deprecated Use the `createRoute` function instead.
@@ -5756,7 +5780,7 @@ function createRootRoute(options) {
   return new RootRoute(options);
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/fileRoute.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/fileRoute.js
 function createFileRoute(path) {
   if (typeof path === "object") {
     return new FileRoute(path, {
@@ -5840,11 +5864,11 @@ function createLazyFileRoute(id) {
   return (opts) => new LazyRoute({ id, ...opts });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Matches.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Matches.js
 var import_jsx_runtime11 = __toESM(require_jsx_runtime(), 1);
 var React11 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Transitioner.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Transitioner.js
 var React9 = __toESM(require_react(), 1);
 function Transitioner() {
   const router = useRouter();
@@ -5940,11 +5964,11 @@ function Transitioner() {
   return null;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Match.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Match.js
 var import_jsx_runtime10 = __toESM(require_jsx_runtime(), 1);
 var React10 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/not-found.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/not-found.js
 var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
 function CatchNotFound(props) {
   const resetKey = useRouterState({
@@ -5976,13 +6000,13 @@ function DefaultGlobalNotFound() {
   return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "Not Found" });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/SafeFragment.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/SafeFragment.js
 var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
 function SafeFragment(props) {
   return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_jsx_runtime6.Fragment, { children: props.children });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/renderRouteNotFound.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/renderRouteNotFound.js
 var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
 function renderRouteNotFound(router, route, data) {
   if (!route.options.notFoundComponent) {
@@ -6000,10 +6024,10 @@ function renderRouteNotFound(router, route, data) {
   return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(route.options.notFoundComponent, { ...data });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/scroll-restoration.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/scroll-restoration.js
 var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/ScriptOnce.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/ScriptOnce.js
 var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
 function ScriptOnce({ children }) {
   const router = useRouter();
@@ -6021,7 +6045,7 @@ function ScriptOnce({ children }) {
   );
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/scroll-restoration.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/scroll-restoration.js
 function ScrollRestoration() {
   const router = useRouter();
   if (!router.isScrollRestoring || !(isServer ?? router.isServer)) {
@@ -6053,7 +6077,7 @@ function ScrollRestoration() {
   );
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Match.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Match.js
 var Match = React10.memo(function MatchImpl({
   matchId
 }) {
@@ -6272,7 +6296,7 @@ var Outlet = React10.memo(function OutletImpl() {
   return nextMatch;
 });
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Matches.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Matches.js
 function Matches() {
   const router = useRouter();
   const rootRoute = router.routesById[rootRouteId];
@@ -6322,7 +6346,7 @@ function useMatches(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/router.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/router.js
 var createRouter = (options) => {
   return new Router(options);
 };
@@ -6339,7 +6363,7 @@ if (typeof globalThis !== "undefined") {
   window.createLazyFileRoute = createLazyFileRoute;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/RouterProvider.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/RouterProvider.js
 var import_jsx_runtime12 = __toESM(require_jsx_runtime(), 1);
 function RouterContextProvider({
   router,
@@ -6367,14 +6391,14 @@ function RouterProvider({ router, ...rest }) {
   return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(RouterContextProvider, { router, ...rest, children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Matches, {}) });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLocation.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLocation.js
 function useLocation(opts) {
   return useRouterState({
     select: (state) => opts?.select ? opts.select(state.location) : state.location
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.157.15_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useCanGoBack.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useCanGoBack.js
 function useCanGoBack() {
   return useRouterState({ select: (s) => s.location.state.__TSR_index !== 0 });
 }
