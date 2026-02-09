@@ -30437,7 +30437,12 @@ var EmptyWrapper = ({ heading = "", body = "", actions: actions2 = null }) => /*
   body && /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(import_components64.__experimentalText, { variant: "muted", children: body }),
   actions2 && /* @__PURE__ */ (0, import_jsx_runtime142.jsx)("span", { style: { marginBlockStart: "16px" }, children: actions2 })
 ] });
-var EmptyResponses = ({ status, isSearch, readStatusFilter }) => {
+var EmptyResponses = ({
+  isSearch,
+  isSingleFormView = false,
+  readStatusFilter,
+  status
+}) => {
   const emptyTrashDays = useConfigValue("emptyTrashDays") ?? 0;
   const {
     shouldShowAkismetCta,
@@ -30506,7 +30511,13 @@ var EmptyResponses = ({ status, isSearch, readStatusFilter }) => {
         "Share your form to start collecting responses. New items will appear here.",
         "jetpack-forms"
       ),
-      actions: /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(CreateFormButton, { label: (0, import_i18n63.__)("Create a new form", "jetpack-forms"), variant: "primary" })
+      actions: !isSingleFormView && /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(
+        CreateFormButton,
+        {
+          label: (0, import_i18n63.__)("Create a new form", "jetpack-forms"),
+          variant: "primary"
+        }
+      )
     }
   );
 };
@@ -38108,9 +38119,10 @@ function StageInner() {
             empty: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
               empty_responses_default,
               {
-                status: statusView,
                 isSearch: !!view.search,
-                readStatusFilter
+                isSingleFormView,
+                readStatusFilter,
+                status: statusView
               }
             ),
             data: records || EMPTY_ARRAY9,
