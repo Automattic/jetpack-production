@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin dashboard: add new "Reader" section.
 - AI: removed Chrome AI built-in API experiment code.
 - Cover RESTful JSON API with unit tests.
+- Cover the JSON API posts endpoint with unit tests.
 - Janitorial: Clean up to-test.md.
 - Moving IDC stats from Jetpack plugin to connection package.
 - Update package dependencies.
