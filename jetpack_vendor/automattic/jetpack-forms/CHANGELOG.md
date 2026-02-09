@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Update sidebar information on wp-build dashboard.
 - Hide 'Last Edited' panel in form editor.
 - Image select field: improve preview styling in response inspector.
+- Multi-step Forms: Replace jetpack/button with core/button for navigation buttons, with backwards compatibility for existing forms.
 - Refine inspector field styles.
 - Update package dependencies.
 - Use dynamic number values for spam and trash tip in response sidebar, and add styles.
