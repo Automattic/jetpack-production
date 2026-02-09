@@ -13,9 +13,11 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: add shortcode transform support for synced form references.
 - Dashboard: update header tab counts.
 - Forms: Add field type icons to submission confirmation page to indicate field types.
+- Forms: add icon extraction and rasterization pipeline for email templates.
 - Forms: add preview functionality allowing users with edit permissions to preview forms at a temporary nonce-based URL.
 - Forms: add single form view to wp-build dashboard.
 - Response inspector: display star rating icons for rating field submissions.
+- Single Response View: add notes feature to wp-build dashboard.
 
 ### Changed
 - Contain file preview modal component styles with component by moving preview-file component to its own folder with co-located styles.
@@ -26,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add SVG icon files for all form field blocks and configure webpack for SVG component and raw imports.
 - Forms: update response sidebar meta section visually and refactor styles.
 - Forms: Update sidebar information on wp-build dashboard.
+- Hide 'Last Edited' panel in form editor.
 - Image select field: improve preview styling in response inspector.
 - Refine inspector field styles.
 - Update package dependencies.
