@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Moving IDC stats from Jetpack plugin to connection package.
+- Update package dependencies.
 
 ## [7.0.2] - 2026-02-04
 ### Changed

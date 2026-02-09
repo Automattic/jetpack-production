@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - CSS: Ensure dataforms css is loaded.
 - Update dependencies.
+- Update package dependencies.
 
 ### Fixed
 - Fix settings and categories API endpoints on WordPress.com Simple sites.
