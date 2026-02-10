@@ -25,7 +25,7 @@
 		"automattic/jetpack-compat": "^4.0.1",
 		"automattic/jetpack-composer-plugin": "^4.0.5",
 		"automattic/jetpack-config": "^3.1.1",
-		"automattic/jetpack-connection": "^7.0.3",
+		"automattic/jetpack-connection": "^7.1.0-alpha",
 		"automattic/jetpack-constants": "^3.0.8",
 		"automattic/jetpack-device-detection": "^3.4.0",
 		"automattic/jetpack-error": "^3.0.6",
@@ -40,7 +40,7 @@
 		"automattic/jetpack-logo": "^3.0.5",
 		"automattic/jetpack-masterbar": "^0.27.11",
 		"automattic/jetpack-my-jetpack": "^5.31.2",
-		"automattic/jetpack-newsletter": "^0.3.3-alpha",
+		"automattic/jetpack-newsletter": "^0.4.0-alpha",
 		"automattic/jetpack-paypal-payments": "^0.6.4",
 		"automattic/jetpack-plugins-installer": "^0.5.7",
 		"automattic/jetpack-post-list": "^0.9.5",
@@ -102,7 +102,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_6_a_1",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_6_a_2",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true

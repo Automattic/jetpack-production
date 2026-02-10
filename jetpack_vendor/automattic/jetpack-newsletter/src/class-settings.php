@@ -20,7 +20,7 @@ use Automattic\Jetpack\Status\Host;
  */
 class Settings {
 
-	const PACKAGE_VERSION = '0.3.3-alpha';
+	const PACKAGE_VERSION = '0.4.0-alpha';
 	/**
 	 * Whether the class has been initialized
 	 *
