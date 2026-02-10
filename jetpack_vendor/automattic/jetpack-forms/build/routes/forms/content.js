@@ -28435,8 +28435,8 @@ function StageInner() {
     const actionsList = [
       {
         id: "view-responses",
-        isPrimary: false,
-        label: (0, import_i18n79.__)("View responses", "jetpack-forms"),
+        isPrimary: true,
+        label: (0, import_i18n79.__)("Responses", "jetpack-forms"),
         supportsBulk: false,
         callback(items) {
           const [item] = items;
@@ -28448,7 +28448,7 @@ function StageInner() {
       },
       {
         id: "edit-form",
-        isPrimary: false,
+        isPrimary: true,
         label: (0, import_i18n79.__)("Edit", "jetpack-forms"),
         supportsBulk: false,
         async callback(items) {
