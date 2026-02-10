@@ -40,7 +40,7 @@
 		"automattic/jetpack-logo": "^3.0.5",
 		"automattic/jetpack-masterbar": "^0.27.11",
 		"automattic/jetpack-my-jetpack": "^5.31.2",
-		"automattic/jetpack-newsletter": "^0.3.2",
+		"automattic/jetpack-newsletter": "^0.3.3-alpha",
 		"automattic/jetpack-paypal-payments": "^0.6.4",
 		"automattic/jetpack-plugins-installer": "^0.5.7",
 		"automattic/jetpack-post-list": "^0.9.5",
