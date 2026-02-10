@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- VideoPress: Accept SRT subtitle files for upload alongside VTT.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - WordPress.com Reader: load feature in new module.
 
