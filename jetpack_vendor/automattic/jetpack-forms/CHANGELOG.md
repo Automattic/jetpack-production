@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: set primary actions for wp-build forms list.
 - Forms: allow filtering forms dashboard URL.
 
+### Fixed
+- Form Editor: Prevent empty paragraphs from being inserted outside the form block.
+
 ## [7.7.0] - 2026-02-10
 ### Added
 - Contact Form: Add shortcode transform support for synced form references. [#46812]
