@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: allow filtering forms dashboard URL.
 
 ### Fixed
+- Form Editor: Fix synced form changes being lost when navigating between page editor and form editor.
 - Form Editor: Prevent empty paragraphs from being inserted outside the form block.
 - Load the wp-build dashboard independently of the Gutenberg plugin.
 
