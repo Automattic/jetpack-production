@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Allow filtering active tooltips for integrations from the backend.
 - Dashboard: set primary actions for wp-build forms list.
 - Dashboard: tweaks for wpbuild dashboard header.
+- Dashboard: update wp-build header buttons.
 - Forms: allow filtering forms dashboard URL.
 
 ### Fixed

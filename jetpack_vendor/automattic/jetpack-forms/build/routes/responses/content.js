@@ -30331,7 +30331,8 @@ var import_jsx_runtime141 = __toESM(require_jsx_runtime(), 1);
 function CreateFormButton({
   label = (0, import_i18n62.__)("Create a form", "jetpack-forms"),
   showPatterns = false,
-  variant = "secondary"
+  variant = "secondary",
+  showIcon = true
 }) {
   const { openNewForm } = useCreateForm();
   const onButtonClickHandler = (0, import_element67.useCallback)(
@@ -30351,7 +30352,7 @@ function CreateFormButton({
       size: "compact",
       variant,
       onClick: onButtonClickHandler,
-      icon: plus_default,
+      icon: showIcon ? plus_default : void 0,
       className: "create-form-button",
       children: label
     }
@@ -36637,7 +36638,10 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 
 // src/dashboard/components/export-responses/button.tsx
 var import_jsx_runtime165 = __toESM(require_jsx_runtime(), 1);
-var ExportResponsesButton = ({ isPrimary = false }) => {
+var ExportResponsesButton = ({
+  isPrimary = false,
+  showIcon = true
+}) => {
   const {
     showExportModal,
     openModal,
@@ -36659,7 +36663,7 @@ var ExportResponsesButton = ({ isPrimary = false }) => {
       {
         size: "compact",
         variant: isPrimary ? "primary" : "secondary",
-        icon: download_default,
+        icon: showIcon ? download_default : void 0,
         onClick: openModal,
         accessibleWhenDisabled: true,
         disabled: isDisabled,
@@ -36747,21 +36751,45 @@ function usePageHeaderDetails(props) {
     if (isFormsScreen) {
       return [
         ...isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
-        /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(CreateFormButton, {}, "create")
+        /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(CreateFormButton, { variant: "primary", showIcon: false }, "create")
       ];
     }
     if (isSingleFormScreen) {
       return [
         ...sourceIdNumber ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
-        /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(button_default, { isPrimary: false }, "export"),
+        /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(
+          button_default,
+          {
+            isPrimary: statusView === "inbox",
+            showIcon: false
+          },
+          "export"
+        ),
         ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
         ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
       ];
     }
     return [
       ...statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
-      ...statusView === "inbox" ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(CreateFormButton, { variant: "secondary", showPatterns: false }, "create")] : [],
-      /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(button_default, { isPrimary: statusView === "inbox" }, "export"),
+      ...statusView === "inbox" ? [
+        /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(
+          CreateFormButton,
+          {
+            variant: "secondary",
+            showPatterns: false,
+            showIcon: false
+          },
+          "create"
+        )
+      ] : [],
+      /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(
+        button_default,
+        {
+          isPrimary: statusView === "inbox",
+          showIcon: false
+        },
+        "export"
+      ),
       ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
       ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
     ];
