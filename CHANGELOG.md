@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Allow filtering Forms dashboard URL.
 - VideoPress: Accept SRT subtitle files for upload alongside VTT.
 
+### Bug fixes
+- Social: Refresh plan features on post-checkout redirect.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - WordPress.com Reader: load feature in new module.
 
