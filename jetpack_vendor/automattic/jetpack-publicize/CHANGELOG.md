@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add media validation notices to preview modal.
 
+### Changed
+- Replace form in the sidebar with message when using per-network customizations.
+
 ## [0.72.2] - 2026-02-10
 ### Changed
 - Improve the media selection UI in preview modal. [#46921]
