@@ -14141,7 +14141,7 @@ Page.SidebarToggleFill = SidebarToggleFill;
 var page_default = Page;
 
 // routes/responses/stage.tsx
-var import_components76 = __toESM(require_components());
+var import_components75 = __toESM(require_components());
 var import_data31 = __toESM(require_data());
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
@@ -27912,10 +27912,10 @@ var dataviews_default = DataViewsSubComponents;
 
 // routes/responses/stage.tsx
 var import_date10 = __toESM(require_date());
-var import_element90 = __toESM(require_element());
+var import_element89 = __toESM(require_element());
 var import_html_entities5 = __toESM(require_html_entities());
-var import_i18n81 = __toESM(require_i18n());
-import { useParams, useSearch as useSearch2, useNavigate as useNavigate4 } from "@wordpress/route";
+var import_i18n80 = __toESM(require_i18n());
+import { useParams, useSearch as useSearch2, useNavigate as useNavigate3 } from "@wordpress/route";
 var React36 = __toESM(require_react());
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/index.tsx
@@ -35006,9 +35006,9 @@ function DataViewsHeaderRow({
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
 var import_core_data6 = __toESM(require_core_data(), 1);
 var import_data30 = __toESM(require_data(), 1);
-var import_element88 = __toESM(require_element(), 1);
+var import_element87 = __toESM(require_element(), 1);
 var import_html_entities4 = __toESM(require_html_entities(), 1);
-var import_i18n79 = __toESM(require_i18n(), 1);
+var import_i18n78 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/edit-form-button/index.tsx
 var import_components66 = __toESM(require_components(), 1);
@@ -36680,32 +36680,20 @@ var ExportResponsesButton = ({ isPrimary = false }) => {
 };
 var button_default = ExportResponsesButton;
 
-// src/dashboard/wp-build/components/back-to-forms-button/index.tsx
+// src/dashboard/wp-build/components/manage-integrations-button/index.tsx
 var import_components73 = __toESM(require_components(), 1);
-var import_element87 = __toESM(require_element(), 1);
 var import_i18n77 = __toESM(require_i18n(), 1);
 var import_jsx_runtime166 = __toESM(require_jsx_runtime(), 1);
-import { useNavigate as useNavigate3 } from "@wordpress/route";
-function BackToFormsButton() {
-  const navigate = useNavigate3();
-  const onClick = (0, import_element87.useCallback)(() => navigate({ href: "/forms" }), [navigate]);
-  return /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(import_components73.Button, { size: "compact", variant: "primary", onClick, children: (0, import_i18n77.__)("Back to forms", "jetpack-forms") });
-}
-
-// src/dashboard/wp-build/components/manage-integrations-button/index.tsx
-var import_components74 = __toESM(require_components(), 1);
-var import_i18n78 = __toESM(require_i18n(), 1);
-var import_jsx_runtime167 = __toESM(require_jsx_runtime(), 1);
 function ManageIntegrationsButton({ onClick }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(import_components74.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n78.__)("Manage integrations", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(import_components73.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n77.__)("Manage integrations", "jetpack-forms") });
 }
 
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
-var import_jsx_runtime168 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime167 = __toESM(require_jsx_runtime(), 1);
 function usePageHeaderDetails(props) {
   const { screen, sourceId, isIntegrationsEnabled, showDashboardIntegrations, onOpenIntegrations } = props;
   const statusView = props.statusView ?? "inbox";
-  const sourceIdNumber = (0, import_element88.useMemo)(() => {
+  const sourceIdNumber = (0, import_element87.useMemo)(() => {
     const value = sourceId;
     const numberValue = typeof value === "number" ? value : Number(value);
     return Number.isFinite(numberValue) && numberValue > 0 ? numberValue : null;
@@ -36720,66 +36708,62 @@ function usePageHeaderDetails(props) {
     ) : void 0,
     [sourceIdNumber]
   );
-  const formTitle = (0, import_element88.useMemo)(() => {
+  const formTitle = (0, import_element87.useMemo)(() => {
     const rendered = formRecord?.title?.rendered || "";
     return (0, import_html_entities4.decodeEntities)(rendered);
   }, [formRecord?.title?.rendered]);
-  const breadcrumbsItems = (0, import_element88.useMemo)(() => {
-    if (isFormsScreen) {
-      return [{ label: (0, import_i18n79.__)("Forms", "jetpack-forms") }];
-    }
+  const breadcrumbsItems = (0, import_element87.useMemo)(() => {
     if (isSingleFormScreen) {
       return [
-        { label: (0, import_i18n79.__)("Forms", "jetpack-forms"), to: "/forms" },
-        { label: formTitle || (0, import_i18n79.__)("Form responses", "jetpack-forms") }
+        { label: (0, import_i18n78.__)("Forms", "jetpack-forms"), to: "/forms" },
+        { label: formTitle || (0, import_i18n78.__)("Form responses", "jetpack-forms") }
       ];
     }
-    return [{ label: (0, import_i18n79.__)("Form Responses", "jetpack-forms") }];
-  }, [formTitle, isFormsScreen, isSingleFormScreen]);
-  const breadcrumbs = (0, import_element88.useMemo)(() => {
-    return /* @__PURE__ */ (0, import_jsx_runtime168.jsxs)(Stack, { align: "center", gap: "xs", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
-      /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(breadcrumbs_default, { items: breadcrumbsItems })
+    return [{ label: (0, import_i18n78.__)("Forms", "jetpack-forms") }];
+  }, [formTitle, isSingleFormScreen]);
+  const breadcrumbs = (0, import_element87.useMemo)(() => {
+    return /* @__PURE__ */ (0, import_jsx_runtime167.jsxs)(Stack, { align: "center", gap: "xs", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
+      /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(breadcrumbs_default, { items: breadcrumbsItems })
     ] });
   }, [breadcrumbsItems]);
-  const subtitle = (0, import_element88.useMemo)(() => {
+  const subtitle = (0, import_element87.useMemo)(() => {
     if (isFormsScreen) {
-      return (0, import_i18n79.__)("View and manage all your forms in one place.", "jetpack-forms");
+      return (0, import_i18n78.__)("View and manage all your forms in one place.", "jetpack-forms");
     }
     if (isSingleFormScreen) {
       if (formTitle) {
-        return (0, import_i18n79.sprintf)(
+        return (0, import_i18n78.sprintf)(
           /* translators: %s: form name */
-          (0, import_i18n79.__)("View responses for %s.", "jetpack-forms"),
+          (0, import_i18n78.__)("View responses for %s.", "jetpack-forms"),
           formTitle
         );
       }
-      return (0, import_i18n79.__)("View responses for this form.", "jetpack-forms");
+      return (0, import_i18n78.__)("View responses for this form.", "jetpack-forms");
     }
-    return (0, import_i18n79.__)("View and manage all your form submissions in one place.", "jetpack-forms");
+    return (0, import_i18n78.__)("View and manage all your form submissions in one place.", "jetpack-forms");
   }, [formTitle, isFormsScreen, isSingleFormScreen]);
-  const actions2 = (0, import_element88.useMemo)(() => {
+  const actions2 = (0, import_element87.useMemo)(() => {
     if (isFormsScreen) {
       return [
-        ...isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
-        /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(CreateFormButton, {}, "create")
+        ...isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
+        /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(CreateFormButton, {}, "create")
       ];
     }
     if (isSingleFormScreen) {
       return [
-        /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(BackToFormsButton, {}, "back-to-forms"),
-        ...sourceIdNumber ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
-        /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(button_default, { isPrimary: false }, "export"),
-        ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
-        ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
+        ...sourceIdNumber ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
+        /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(button_default, { isPrimary: false }, "export"),
+        ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
+        ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
       ];
     }
     return [
-      ...statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
-      ...statusView === "inbox" ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(CreateFormButton, { variant: "secondary", showPatterns: false }, "create")] : [],
-      /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(button_default, { isPrimary: statusView === "inbox" }, "export"),
-      ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
-      ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime168.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
+      ...statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
+      ...statusView === "inbox" ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(CreateFormButton, { variant: "secondary", showPatterns: false }, "create")] : [],
+      /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(button_default, { isPrimary: statusView === "inbox" }, "export"),
+      ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
+      ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
     ];
   }, [
     isIntegrationsEnabled,
@@ -36795,26 +36779,26 @@ function usePageHeaderDetails(props) {
 
 // routes/responses/actions.tsx
 var import_api_fetch10 = __toESM(require_api_fetch());
-var import_components75 = __toESM(require_components());
+var import_components74 = __toESM(require_components());
 var import_core_data7 = __toESM(require_core_data());
-var import_i18n80 = __toESM(require_i18n());
+var import_i18n79 = __toESM(require_i18n());
 var import_notices4 = __toESM(require_notices());
 
 // src/dashboard/icons/not-spam.tsx
 var import_primitives47 = __toESM(require_primitives(), 1);
-var import_jsx_runtime169 = __toESM(require_jsx_runtime(), 1);
-var notSpam = /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_primitives47.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_primitives47.Path, { d: "M13 17v-2h-.9l-.9 2H13Zm3.6-11.9-.7 1.5 2.5 2.5v5.8l-3.6 3.6h-4.3L9.8 20h5.6l4.5-4.5v-7l-3.4-3.4ZM15 2.8 14.4 4h-6L3.9 8.5v7l3.6 3.6-.5 1.2.9.4L16 3.2l-.9-.4Zm-2 4.5V7h-2v4.6l-2.7 6-2.8-2.8V9l3.6-3.6h4.7L13 7.2Z" }) });
+var import_jsx_runtime168 = __toESM(require_jsx_runtime(), 1);
+var notSpam = /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(import_primitives47.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(import_primitives47.Path, { d: "M13 17v-2h-.9l-.9 2H13Zm3.6-11.9-.7 1.5 2.5 2.5v5.8l-3.6 3.6h-4.3L9.8 20h5.6l4.5-4.5v-7l-3.4-3.4ZM15 2.8 14.4 4h-6L3.9 8.5v7l3.6 3.6-.5 1.2.9.4L16 3.2l-.9-.4Zm-2 4.5V7h-2v4.6l-2.7 6-2.8-2.8V9l3.6-3.6h4.7L13 7.2Z" }) });
 var not_spam_default = notSpam;
 
 // src/dashboard/icons/spam.tsx
 var import_primitives48 = __toESM(require_primitives(), 1);
-var import_jsx_runtime170 = __toESM(require_jsx_runtime(), 1);
-var spam = /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_primitives48.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_primitives48.Path, { d: "M11 13h2V7h-2v6Zm0 4h2v-2h-2v2Zm4.5-13h-7L4 8.5v7L8.5 20h7l4.5-4.5v-7L15.5 4Zm3 10.9-3.6 3.6H9.1l-3.6-3.6V9.1l3.6-3.6h5.8l3.6 3.6v5.8Z" }) });
+var import_jsx_runtime169 = __toESM(require_jsx_runtime(), 1);
+var spam = /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_primitives48.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_primitives48.Path, { d: "M11 13h2V7h-2v6Zm0 4h2v-2h-2v2Zm4.5-13h-7L4 8.5v7L8.5 20h7l4.5-4.5v-7L15.5 4Zm3 10.9-3.6 3.6H9.1l-3.6-3.6V9.1l3.6-3.6h5.8l3.6 3.6v5.8Z" }) });
 var spam_default = spam;
 
 // src/dashboard/inbox/stage/views.js
 var import_compose16 = __toESM(require_compose(), 1);
-var import_element89 = __toESM(require_element(), 1);
+var import_element88 = __toESM(require_element(), 1);
 var LAYOUT_TABLE2 = "table";
 var defaultView = {
   type: LAYOUT_TABLE2,
@@ -36871,7 +36855,7 @@ var updateMenuCounterOptimistically = (count) => {
 };
 
 // routes/responses/actions.tsx
-var import_jsx_runtime171 = __toESM(require_jsx_runtime());
+var import_jsx_runtime170 = __toESM(require_jsx_runtime());
 var getCountQueryParams = (currentQuery2) => {
   const queryParams = {};
   if (currentQuery2?.search) {
@@ -36891,7 +36875,7 @@ var getCountQueryParams = (currentQuery2) => {
   }
   return queryParams;
 };
-var undoingMessage = (0, import_i18n80.__)("Undoing\u2026", "jetpack-forms");
+var undoingMessage = (0, import_i18n79.__)("Undoing\u2026", "jetpack-forms");
 var pendingRefetches = /* @__PURE__ */ new Map();
 var invalidateCacheAndNavigate = (registry, currentQuery2, queryParams, statusBeingRemovedFrom) => {
   registry.dispatch(store3).invalidateCounts();
@@ -36922,9 +36906,9 @@ var invalidateCacheAndNavigate = (registry, currentQuery2, queryParams, statusBe
   setCurrentQuery2(updatedQuery);
 };
 var getGenericErrorMessage = (numberOfErrors) => {
-  return numberOfErrors === 1 ? (0, import_i18n80.__)("An error occurred.", "jetpack-forms") : (0, import_i18n80.sprintf)(
+  return numberOfErrors === 1 ? (0, import_i18n79.__)("An error occurred.", "jetpack-forms") : (0, import_i18n79.sprintf)(
     /* translators: %s: the number of responses. */
-    (0, import_i18n80._n)(
+    (0, import_i18n79._n)(
       "An error occurred for %s response.",
       "An error occurred for %s responses.",
       numberOfErrors,
@@ -37003,8 +36987,8 @@ function getActions({ navigate, searchParams }) {
   const viewAction = {
     id: "view-response",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: comment_content_default }),
-    label: (0, import_i18n80.__)("View", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: comment_content_default }),
+    label: (0, import_i18n79.__)("View", "jetpack-forms"),
     async callback(items) {
       analytics_default.tracks.recordEvent("jetpack_forms_inbox_action_click", {
         action: "view-response",
@@ -37022,8 +37006,8 @@ function getActions({ navigate, searchParams }) {
   const editFormAction = {
     id: "edit-form",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: backup_default }),
-    label: (0, import_i18n80.__)("Edit form", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: backup_default }),
+    label: (0, import_i18n79.__)("Edit form", "jetpack-forms"),
     isEligible: (item) => !!item?.edit_form_url,
     supportsBulk: false,
     async callback(items) {
@@ -37041,8 +37025,8 @@ function getActions({ navigate, searchParams }) {
   const markAsSpamAction = {
     id: "mark-as-spam",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: spam_default }),
-    label: (0, import_i18n80.__)("Spam", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: spam_default }),
+    label: (0, import_i18n79.__)("Spam", "jetpack-forms"),
     isEligible: (item) => item.status !== "spam",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false } = {}) {
@@ -37056,9 +37040,9 @@ function getActions({ navigate, searchParams }) {
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const actionId = `mark-as-spam-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n80.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n79.sprintf)(
         /* translators: %s: the number of responses. */
-        (0, import_i18n80._n)(
+        (0, import_i18n79._n)(
           "Moving %s response to spam\u2026",
           "Moving %s responses to spam\u2026",
           items.length,
@@ -37069,7 +37053,7 @@ function getActions({ navigate, searchParams }) {
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "mark-as-spam-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -37092,9 +37076,9 @@ function getActions({ navigate, searchParams }) {
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n80.__)("Response marked as spam.", "jetpack-forms") : (0, import_i18n80.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n79.__)("Response marked as spam.", "jetpack-forms") : (0, import_i18n79.sprintf)(
             /* translators: %s: the number of responses. */
-            (0, import_i18n80._n)(
+            (0, import_i18n79._n)(
               "%s response marked as spam.",
               "%s responses marked as spam.",
               items.length,
@@ -37108,7 +37092,7 @@ function getActions({ navigate, searchParams }) {
               id: "mark-as-spam-action",
               actions: [
                 {
-                  label: (0, import_i18n80.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n79.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -37147,8 +37131,8 @@ function getActions({ navigate, searchParams }) {
   const markAsNotSpamAction = {
     id: "mark-as-not-spam",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: not_spam_default }),
-    label: (0, import_i18n80.__)("Not spam", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: not_spam_default }),
+    label: (0, import_i18n79.__)("Not spam", "jetpack-forms"),
     isEligible: (item) => item.status === "spam",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false } = {}) {
@@ -37162,9 +37146,9 @@ function getActions({ navigate, searchParams }) {
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const actionId = `mark-as-not-spam-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n80.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n79.sprintf)(
         /* translators: %s: the number of responses. */
-        (0, import_i18n80._n)(
+        (0, import_i18n79._n)(
           "Marking %s response as not spam\u2026",
           "Marking %s responses as not spam\u2026",
           items.length,
@@ -37175,7 +37159,7 @@ function getActions({ navigate, searchParams }) {
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "mark-as-not-spam-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -37194,9 +37178,9 @@ function getActions({ navigate, searchParams }) {
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n80.__)("Response marked as not spam.", "jetpack-forms") : (0, import_i18n80.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n79.__)("Response marked as not spam.", "jetpack-forms") : (0, import_i18n79.sprintf)(
             /* translators: %s: the number of responses. */
-            (0, import_i18n80._n)(
+            (0, import_i18n79._n)(
               "%s response marked as not spam.",
               "%s responses marked as not spam.",
               items.length,
@@ -37210,7 +37194,7 @@ function getActions({ navigate, searchParams }) {
               id: "mark-as-not-spam-action",
               actions: [
                 {
-                  label: (0, import_i18n80.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n79.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -37249,8 +37233,8 @@ function getActions({ navigate, searchParams }) {
   const restoreAction = {
     id: "restore",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: backup_default }),
-    label: (0, import_i18n80.__)("Restore", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: backup_default }),
+    label: (0, import_i18n79.__)("Restore", "jetpack-forms"),
     isEligible: (item) => item.status === "trash",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false, targetStatus = "publish" } = {}) {
@@ -37265,9 +37249,9 @@ function getActions({ navigate, searchParams }) {
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const newStatus = targetStatus === "trash" ? "publish" : targetStatus;
       const actionId = `restore-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n80.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n79.sprintf)(
         /* translators: %s: the number of responses. */
-        (0, import_i18n80._n)(
+        (0, import_i18n79._n)(
           "Restoring %s response\u2026",
           "Restoring %s responses\u2026",
           items.length,
@@ -37278,7 +37262,7 @@ function getActions({ navigate, searchParams }) {
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "restore-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -37297,9 +37281,9 @@ function getActions({ navigate, searchParams }) {
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n80.__)("Response restored.", "jetpack-forms") : (0, import_i18n80.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n79.__)("Response restored.", "jetpack-forms") : (0, import_i18n79.sprintf)(
             /* translators: %s: the number of responses. */
-            (0, import_i18n80._n)(
+            (0, import_i18n79._n)(
               "%s response restored.",
               "%s responses restored.",
               items.length,
@@ -37313,7 +37297,7 @@ function getActions({ navigate, searchParams }) {
               id: "restore-action",
               actions: [
                 {
-                  label: (0, import_i18n80.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n79.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -37346,8 +37330,8 @@ function getActions({ navigate, searchParams }) {
   const moveToTrashAction = {
     id: "move-to-trash",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: trash_default }),
-    label: (0, import_i18n80.__)("Trash", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: trash_default }),
+    label: (0, import_i18n79.__)("Trash", "jetpack-forms"),
     isEligible: (item) => item.status !== "trash",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false } = {}) {
@@ -37362,9 +37346,9 @@ function getActions({ navigate, searchParams }) {
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const previousStatus = items[0]?.status;
       const actionId = `move-to-trash-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n80.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n79.sprintf)(
         /* translators: %s: the number of responses. */
-        (0, import_i18n80._n)(
+        (0, import_i18n79._n)(
           "Moving %s response to trash\u2026",
           "Moving %s responses to trash\u2026",
           items.length,
@@ -37375,7 +37359,7 @@ function getActions({ navigate, searchParams }) {
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "move-to-trash-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -37398,9 +37382,9 @@ function getActions({ navigate, searchParams }) {
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n80.__)("Response moved to trash.", "jetpack-forms") : (0, import_i18n80.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n79.__)("Response moved to trash.", "jetpack-forms") : (0, import_i18n79.sprintf)(
             /* translators: %s: the number of responses. */
-            (0, import_i18n80._n)(
+            (0, import_i18n79._n)(
               "%s response moved to trash.",
               "%s responses moved to trash.",
               items.length,
@@ -37415,7 +37399,7 @@ function getActions({ navigate, searchParams }) {
               id: "move-to-trash-action",
               actions: [
                 {
-                  label: (0, import_i18n80.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n79.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -37453,8 +37437,8 @@ function getActions({ navigate, searchParams }) {
   const deleteAction = {
     id: "delete",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: trash_default }),
-    label: (0, import_i18n80.__)("Delete", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: trash_default }),
+    label: (0, import_i18n79.__)("Delete", "jetpack-forms"),
     isEligible: (item) => item.status === "trash",
     supportsBulk: true,
     isDestructive: true,
@@ -37482,9 +37466,9 @@ function getActions({ navigate, searchParams }) {
         invalidateCacheAndNavigate(registry, getCurrentQuery2(), queryParams, "trash");
       }
       if (itemsUpdated.length === items.length) {
-        const successMessage = items.length === 1 ? (0, import_i18n80.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n80.sprintf)(
+        const successMessage = items.length === 1 ? (0, import_i18n79.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n79.sprintf)(
           /* translators: %s: the number of responses. */
-          (0, import_i18n80._n)(
+          (0, import_i18n79._n)(
             "%s response deleted permanently.",
             "%s responses deleted permanently.",
             items.length,
@@ -37518,8 +37502,8 @@ function getActions({ navigate, searchParams }) {
   const markAsReadAction = {
     id: "mark-as-read",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: seen_default }),
-    label: (0, import_i18n80.__)("Mark as read", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: seen_default }),
+    label: (0, import_i18n79.__)("Mark as read", "jetpack-forms"),
     isEligible: (item) => item.is_unread,
     supportsBulk: true,
     async callback(items, { registry }) {
@@ -37568,9 +37552,9 @@ function getActions({ navigate, searchParams }) {
         markRecordsAsInvalid2(updatedIds);
       }
       if (promises.every(({ status }) => status === "fulfilled")) {
-        const successMessage = items.length === 1 ? (0, import_i18n80.__)("Response marked as read.", "jetpack-forms") : (0, import_i18n80.sprintf)(
+        const successMessage = items.length === 1 ? (0, import_i18n79.__)("Response marked as read.", "jetpack-forms") : (0, import_i18n79.sprintf)(
           /* translators: %s: the number of responses. */
-          (0, import_i18n80._n)(
+          (0, import_i18n79._n)(
             "%s response marked as read.",
             "%s responses marked as read.",
             items.length,
@@ -37583,7 +37567,7 @@ function getActions({ navigate, searchParams }) {
           id: "mark-as-read-action",
           actions: [
             {
-              label: (0, import_i18n80.__)("Undo", "jetpack-forms"),
+              label: (0, import_i18n79.__)("Undo", "jetpack-forms"),
               onClick: () => {
                 markAsUnreadAction.callback?.(items, { registry });
               }
@@ -37600,8 +37584,8 @@ function getActions({ navigate, searchParams }) {
   const markAsUnreadAction = {
     id: "mark-as-unread",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.Icon, { icon: unseen_default }),
-    label: (0, import_i18n80.__)("Mark as unread", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: unseen_default }),
+    label: (0, import_i18n79.__)("Mark as unread", "jetpack-forms"),
     isEligible: (item) => !item.is_unread,
     supportsBulk: true,
     async callback(items, { registry }) {
@@ -37648,9 +37632,9 @@ function getActions({ navigate, searchParams }) {
         invalidateCounts2();
         const updatedIds = items.map((item) => item.id);
         markRecordsAsInvalid2(updatedIds);
-        const successMessage = items.length === 1 ? (0, import_i18n80.__)("Response marked as unread.", "jetpack-forms") : (0, import_i18n80.sprintf)(
+        const successMessage = items.length === 1 ? (0, import_i18n79.__)("Response marked as unread.", "jetpack-forms") : (0, import_i18n79.sprintf)(
           /* translators: %s: the number of responses. */
-          (0, import_i18n80._n)(
+          (0, import_i18n79._n)(
             "%s response marked as unread.",
             "%s responses marked as unread.",
             items.length,
@@ -37663,7 +37647,7 @@ function getActions({ navigate, searchParams }) {
           id: "mark-as-unread-action",
           actions: [
             {
-              label: (0, import_i18n80.__)("Undo", "jetpack-forms"),
+              label: (0, import_i18n79.__)("Undo", "jetpack-forms"),
               onClick: () => {
                 markAsReadAction.callback?.(items, { registry });
               }
@@ -37731,6 +37715,14 @@ function getRowActions({
   }
 }
 
+// src/dashboard/wp-build/style.scss
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='8b3cc3f2f7']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "8b3cc3f2f7");
+  style.appendChild(document.createTextNode("body.jetpack-forms-responses .admin-ui-breadcrumbs__list li,body.jetpack_page_jetpack-forms-responses-wp-admin .admin-ui-breadcrumbs__list li{margin-bottom:0}body.jetpack-forms-responses .admin-ui-breadcrumbs__list li:first-of-type,body.jetpack_page_jetpack-forms-responses-wp-admin .admin-ui-breadcrumbs__list li:first-of-type{margin-inline-start:4px}body.jetpack-forms-responses .admin-ui-breadcrumbs__list li a,body.jetpack_page_jetpack-forms-responses-wp-admin .admin-ui-breadcrumbs__list li a{color:var(--wp-components-color-foreground,#1e1e1e);font-weight:600}"));
+  document.head.appendChild(style);
+}
+
 // routes/responses/style.scss
 if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='a26f17d7cc']")) {
   const style = document.createElement("style");
@@ -37740,7 +37732,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // routes/responses/stage.tsx
-var import_jsx_runtime172 = __toESM(require_jsx_runtime());
+var import_jsx_runtime171 = __toESM(require_jsx_runtime());
 var EMPTY_ARRAY9 = [];
 var defaultLayouts2 = {
   table: {},
@@ -37765,14 +37757,14 @@ function styleUnreadValue(element, isUnread) {
     return element;
   }
   if (typeof element === "string") {
-    return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("span", { style: { fontWeight: 600 }, children: element });
+    return /* @__PURE__ */ (0, import_jsx_runtime171.jsx)("span", { style: { fontWeight: 600 }, children: element });
   }
   if (React36.isValidElement(element)) {
     return React36.cloneElement(element, {
       style: { ...element.props.style || {}, fontWeight: 600 }
     });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("span", { style: { fontWeight: 600 }, children: element });
+  return /* @__PURE__ */ (0, import_jsx_runtime171.jsx)("span", { style: { fontWeight: 600 }, children: element });
 }
 function getUrlPath(url) {
   try {
@@ -37785,13 +37777,13 @@ function getUrlPath(url) {
 function StageInner() {
   const params = useParams({ from: "/responses/$view" });
   const searchParams = useSearch2({ from: "/responses/$view" });
-  const navigate = useNavigate4();
+  const navigate = useNavigate3();
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const statusFilter = statusView === "inbox" ? "draft,publish" : statusView;
   const sourceIdValue = searchParams?.sourceId;
   const sourceIdNumber = typeof sourceIdValue === "number" ? sourceIdValue : Number(sourceIdValue);
   const isSingleFormView = Number.isFinite(sourceIdNumber) && sourceIdNumber > 0;
-  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element90.useState)(false);
+  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element89.useState)(false);
   const integrations = (0, import_data31.useSelect)(
     (select3) => select3(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
@@ -37799,11 +37791,11 @@ function StageInner() {
   const { refreshIntegrations: refreshIntegrations2 } = (0, import_data31.useDispatch)(INTEGRATIONS_STORE);
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
-  const [view, setView] = (0, import_element90.useState)(() => ({
+  const [view, setView] = (0, import_element89.useState)(() => ({
     ...DEFAULT_VIEW,
     search: searchParams?.search || ""
   }));
-  const selection = (0, import_element90.useMemo)(() => searchParams?.responseIds ?? [], [searchParams?.responseIds]);
+  const selection = (0, import_element89.useMemo)(() => searchParams?.responseIds ?? [], [searchParams?.responseIds]);
   const {
     setCurrentQuery: setCurrentQuery2,
     setSelectedResponses: setSelectedResponses2,
@@ -37816,13 +37808,13 @@ function StageInner() {
     totalItemsSpam,
     totalItemsTrash
   } = useInboxData({ status: statusView });
-  (0, import_element90.useEffect)(() => {
+  (0, import_element89.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
     if (urlSearch !== view.search) {
       setView((prev) => ({ ...prev, search: urlSearch }));
     }
   }, [searchParams?.search]);
-  const onChangeView = (0, import_element90.useCallback)(
+  const onChangeView = (0, import_element89.useCallback)(
     (newView) => {
       if (!isSingleFormView) {
         const folderValue = newView.filters?.find((filter) => filter.field === "folder")?.value || "inbox";
@@ -37851,7 +37843,7 @@ function StageInner() {
     },
     [isSingleFormView, navigate, searchParams, statusView, view.search]
   );
-  const onChangeSelection = (0, import_element90.useCallback)(
+  const onChangeSelection = (0, import_element89.useCallback)(
     (items) => {
       navigate({
         search: {
@@ -37862,7 +37854,7 @@ function StageInner() {
     },
     [searchParams, navigate]
   );
-  const onStatusChange = (0, import_element90.useCallback)(
+  const onStatusChange = (0, import_element89.useCallback)(
     (nextStatus) => {
       navigate({
         to: "/responses/$view",
@@ -37876,7 +37868,7 @@ function StageInner() {
     },
     [isSingleFormView, navigate, searchParams, sourceIdNumber]
   );
-  (0, import_element90.useEffect)(() => {
+  (0, import_element89.useEffect)(() => {
     if (isSingleFormView) {
       return;
     }
@@ -37895,7 +37887,7 @@ function StageInner() {
       };
     });
   }, [isSingleFormView, setView, statusView]);
-  const queryParams = (0, import_element90.useMemo)(() => {
+  const queryParams = (0, import_element89.useMemo)(() => {
     const queryArgs = {
       status: statusFilter,
       per_page: view.perPage,
@@ -37927,42 +37919,42 @@ function StageInner() {
     });
     return queryArgs;
   }, [isSingleFormView, sourceIdNumber, statusFilter, view]);
-  (0, import_element90.useEffect)(() => {
+  (0, import_element89.useEffect)(() => {
     setCurrentQuery2(queryParams);
   }, [queryParams, setCurrentQuery2]);
-  (0, import_element90.useEffect)(() => {
+  (0, import_element89.useEffect)(() => {
     const validSelectedIds = (selection || []).filter((id) => {
       return records?.some((record) => getItemId(record) === id);
     });
     setSelectedResponses2(validSelectedIds);
   }, [records, selection, setSelectedResponses2]);
-  const fields = (0, import_element90.useMemo)(
+  const fields = (0, import_element89.useMemo)(
     () => [
       ...isSingleFormView ? [] : [
         {
           id: "folder",
-          label: (0, import_i18n81.__)("Folder", "jetpack-forms"),
+          label: (0, import_i18n80.__)("Folder", "jetpack-forms"),
           elements: [
             {
-              label: (0, import_i18n81.sprintf)(
+              label: (0, import_i18n80.sprintf)(
                 /* translators: %s is the number of inbox responses. */
-                (0, import_i18n81.__)("Inbox (%s)", "jetpack-forms"),
+                (0, import_i18n80.__)("Inbox (%s)", "jetpack-forms"),
                 formatNumber2(totalItemsInbox ?? 0)
               ),
               value: "inbox"
             },
             {
-              label: (0, import_i18n81.sprintf)(
+              label: (0, import_i18n80.sprintf)(
                 /* translators: %s is the number of spam responses. */
-                (0, import_i18n81.__)("Spam (%s)", "jetpack-forms"),
+                (0, import_i18n80.__)("Spam (%s)", "jetpack-forms"),
                 formatNumber2(totalItemsSpam ?? 0)
               ),
               value: "spam"
             },
             {
-              label: (0, import_i18n81.sprintf)(
+              label: (0, import_i18n80.sprintf)(
                 /* translators: %s is the number of trash responses. */
-                (0, import_i18n81.__)("Trash (%s)", "jetpack-forms"),
+                (0, import_i18n80.__)("Trash (%s)", "jetpack-forms"),
                 formatNumber2(totalItemsTrash ?? 0)
               ),
               value: "trash"
@@ -37979,15 +37971,15 @@ function StageInner() {
       ],
       {
         id: "from",
-        label: (0, import_i18n81.__)("From", "jetpack-forms"),
+        label: (0, import_i18n80.__)("From", "jetpack-forms"),
         render: ({ item }) => {
           const displayName = (0, import_html_entities5.decodeEntities)(
             item.author_name || item.author_email || item.author_url || item.ip || "Anonymous"
           );
           const showEmail = item.author_email && displayName !== (0, import_html_entities5.decodeEntities)(item.author_email);
           const defaultImage = item.author_name || item.author_email ? "initials" : "mp";
-          return /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)(Stack, { align: "center", gap: "sm", children: [
-            item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime171.jsxs)(Stack, { align: "center", gap: "sm", children: [
+            item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
               "span",
               {
                 style: {
@@ -37996,11 +37988,11 @@ function StageInner() {
                   position: "absolute",
                   marginLeft: "-12px"
                 },
-                "aria-label": (0, import_i18n81.__)("(Unread form response)", "jetpack-forms"),
+                "aria-label": (0, import_i18n80.__)("(Unread form response)", "jetpack-forms"),
                 children: "\u25CF"
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
               Gravatar,
               {
                 email: item.author_email || item.ip,
@@ -38011,9 +38003,9 @@ function StageInner() {
               }
             ),
             styleUnreadValue(
-              /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components76.__experimentalText, { ellipsizeMode: "tail", limit: 50, truncate: true, children: displayName }),
-                showEmail && /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components76.__experimentalText, { variant: "muted", size: 12, ellipsizeMode: "tail", limit: 50, truncate: true, children: item.author_email })
+              /* @__PURE__ */ (0, import_jsx_runtime171.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.__experimentalText, { ellipsizeMode: "tail", limit: 50, truncate: true, children: displayName }),
+                showEmail && /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.__experimentalText, { variant: "muted", size: 12, ellipsizeMode: "tail", limit: 50, truncate: true, children: item.author_email })
               ] }),
               item.is_unread
             )
@@ -38025,7 +38017,7 @@ function StageInner() {
       },
       {
         id: "date",
-        label: (0, import_i18n81.__)("Date", "jetpack-forms"),
+        label: (0, import_i18n80.__)("Date", "jetpack-forms"),
         render: ({ item }) => {
           const dateStr = new Date(item.date).toLocaleDateString(void 0, {
             year: "numeric",
@@ -38040,7 +38032,7 @@ function StageInner() {
           date.setMonth(filter.month - 1);
           date.setFullYear(filter.year);
           return {
-            label: (0, import_date10.dateI18n)((0, import_i18n81.__)("F Y", "jetpack-forms"), date),
+            label: (0, import_date10.dateI18n)((0, import_i18n80.__)("F Y", "jetpack-forms"), date),
             value: `${filter.year}/${filter.month}`
           };
         }),
@@ -38050,12 +38042,12 @@ function StageInner() {
       ...isSingleFormView ? [] : [
         {
           id: "source",
-          label: (0, import_i18n81.__)("Source", "jetpack-forms"),
+          label: (0, import_i18n80.__)("Source", "jetpack-forms"),
           render: ({ item }) => {
-            const source = item.entry_title || getUrlPath(item.entry_permalink) || (0, import_i18n81.__)("(no title)", "jetpack-forms");
+            const source = item.entry_title || getUrlPath(item.entry_permalink) || (0, import_i18n80.__)("(no title)", "jetpack-forms");
             if (item.entry_permalink) {
               return styleUnreadValue(
-                /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components76.ExternalLink, { href: item.entry_permalink, children: source }),
+                /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.ExternalLink, { href: item.entry_permalink, children: source }),
                 item.is_unread
               );
             }
@@ -38064,7 +38056,7 @@ function StageInner() {
           elements: (filterOptions?.source || []).map(
             (source) => ({
               value: source.id.toString(),
-              label: (0, import_html_entities5.decodeEntities)(source.title) || getUrlPath(source.url) || (0, import_i18n81.__)("(no title)", "jetpack-forms")
+              label: (0, import_html_entities5.decodeEntities)(source.title) || getUrlPath(source.url) || (0, import_i18n80.__)("(no title)", "jetpack-forms")
             })
           ),
           filterBy: { operators: ["is"] },
@@ -38073,32 +38065,32 @@ function StageInner() {
       ],
       {
         id: "read_status",
-        label: (0, import_i18n81.__)("Status", "jetpack-forms"),
+        label: (0, import_i18n80.__)("Status", "jetpack-forms"),
         elements: [
-          { label: (0, import_i18n81.__)("Unread", "jetpack-forms"), value: "unread" },
-          { label: (0, import_i18n81.__)("Read", "jetpack-forms"), value: "read" }
+          { label: (0, import_i18n80.__)("Unread", "jetpack-forms"), value: "unread" },
+          { label: (0, import_i18n80.__)("Read", "jetpack-forms"), value: "read" }
         ],
         filterBy: { operators: ["is"] },
         enableSorting: false,
         render: ({ item }) => {
-          return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(Badge, { intent: "default", children: item.is_unread ? (0, import_i18n81.__)("Unread", "jetpack-forms") : (0, import_i18n81.__)("Read", "jetpack-forms") });
+          return /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(Badge, { intent: "default", children: item.is_unread ? (0, import_i18n80.__)("Unread", "jetpack-forms") : (0, import_i18n80.__)("Read", "jetpack-forms") });
         }
       },
       {
         id: "ip",
-        label: (0, import_i18n81.__)("IP Address", "jetpack-forms"),
+        label: (0, import_i18n80.__)("IP Address", "jetpack-forms"),
         render: ({ item }) => {
           if (!item.ip) {
             return styleUnreadValue("-", item.is_unread);
           }
-          return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(TextWithFlag, { countryCode: item.country_code, fallbackIcon: true, children: styleUnreadValue(item.ip, item.is_unread) });
+          return /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(TextWithFlag, { countryCode: item.country_code, fallbackIcon: true, children: styleUnreadValue(item.ip, item.is_unread) });
         },
         enableSorting: false
       }
     ],
     [filterOptions, isSingleFormView, totalItemsInbox, totalItemsSpam, totalItemsTrash]
   );
-  const actions2 = (0, import_element90.useMemo)(
+  const actions2 = (0, import_element89.useMemo)(
     () => getRowActions({
       navigate,
       searchParams,
@@ -38106,17 +38098,17 @@ function StageInner() {
     }),
     [navigate, searchParams, statusView]
   );
-  const paginationInfo = (0, import_element90.useMemo)(
+  const paginationInfo = (0, import_element89.useMemo)(
     () => ({
       totalItems: totalItems || 0,
       totalPages: totalPages || 1
     }),
     [totalItems, totalPages]
   );
-  const handleIntegrations = (0, import_element90.useCallback)(() => {
+  const handleIntegrations = (0, import_element89.useCallback)(() => {
     setIsIntegrationsModalOpen(true);
   }, []);
-  const closeIntegrationsModal = (0, import_element90.useCallback)(() => {
+  const closeIntegrationsModal = (0, import_element89.useCallback)(() => {
     setIsIntegrationsModalOpen(false);
   }, []);
   const {
@@ -38132,13 +38124,13 @@ function StageInner() {
     onOpenIntegrations: handleIntegrations
   });
   const readStatusFilter = view.filters?.find((filter) => filter.field === "read_status")?.value;
-  const onClickItem = (0, import_element90.useCallback)(
+  const onClickItem = (0, import_element89.useCallback)(
     (item) => {
       onChangeSelection([String(item.id)]);
     },
     [onChangeSelection]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime171.jsxs)(
     page_default,
     {
       showSidebarToggle: false,
@@ -38147,10 +38139,10 @@ function StageInner() {
       actions: headerActions,
       hasPadding: false,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime171.jsxs)(
           dataviews_default,
           {
-            empty: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
+            empty: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
               empty_responses_default,
               {
                 isSearch: !!view.search,
@@ -38172,7 +38164,7 @@ function StageInner() {
             onClickItem,
             actions: actions2,
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
                 DataViewsHeaderRow,
                 {
                   activeTab: "responses",
@@ -38186,12 +38178,12 @@ function StageInner() {
                   onStatusChange
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(dataviews_default.Layout, {}),
-              /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(dataviews_default.Footer, {})
+              /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(dataviews_default.Layout, {}),
+              /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(dataviews_default.Footer, {})
             ]
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
           jetpack_integrations_modal_default,
           {
             isOpen: isIntegrationsModalOpen,
@@ -38208,54 +38200,54 @@ function StageInner() {
   );
 }
 var Stage = () => {
-  return /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(StageInner, {}) });
+  return /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(StageInner, {}) });
 };
 
 // routes/responses/response/index.tsx
 var import_api_fetch11 = __toESM(require_api_fetch());
-var import_components90 = __toESM(require_components());
+var import_components89 = __toESM(require_components());
 var import_core_data9 = __toESM(require_core_data());
 var import_data34 = __toESM(require_data());
-var import_element95 = __toESM(require_element());
+var import_element94 = __toESM(require_element());
 var import_html_entities9 = __toESM(require_html_entities());
-var import_i18n91 = __toESM(require_i18n());
-import { useParams as useParams2, useSearch as useSearch4, useNavigate as useNavigate6 } from "@wordpress/route";
+var import_i18n90 = __toESM(require_i18n());
+import { useParams as useParams2, useSearch as useSearch4, useNavigate as useNavigate5 } from "@wordpress/route";
 
 // src/dashboard/components/feedback-comments/index.tsx
-var import_components78 = __toESM(require_components(), 1);
+var import_components77 = __toESM(require_components(), 1);
 var import_core_data8 = __toESM(require_core_data(), 1);
 var import_data32 = __toESM(require_data(), 1);
-var import_element91 = __toESM(require_element(), 1);
-var import_i18n83 = __toESM(require_i18n(), 1);
+var import_element90 = __toESM(require_element(), 1);
+var import_i18n82 = __toESM(require_i18n(), 1);
 var import_notices5 = __toESM(require_notices(), 1);
 
 // src/dashboard/components/feedback-comments/comment-item.tsx
-var import_components77 = __toESM(require_components(), 1);
+var import_components76 = __toESM(require_components(), 1);
 var import_date11 = __toESM(require_date(), 1);
 var import_dom13 = __toESM(require_dom(), 1);
-var import_i18n82 = __toESM(require_i18n(), 1);
-var import_jsx_runtime173 = __toESM(require_jsx_runtime(), 1);
+var import_i18n81 = __toESM(require_i18n(), 1);
+var import_jsx_runtime172 = __toESM(require_jsx_runtime(), 1);
 function formatCommentDate(dateString) {
-  return (0, import_i18n82.sprintf)(
+  return (0, import_i18n81.sprintf)(
     /* Translators: %1$s is the date, %2$s is the time. */
-    (0, import_i18n82.__)("%1$s at %2$s", "jetpack-forms"),
+    (0, import_i18n81.__)("%1$s at %2$s", "jetpack-forms"),
     (0, import_date11.dateI18n)((0, import_date11.getSettings)().formats.date, dateString),
     (0, import_date11.dateI18n)((0, import_date11.getSettings)().formats.time, dateString)
   );
 }
 var CommentItem = ({ comment, onDelete, isDeleting }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__feedback-comments-comment", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__feedback-comments-comment-meta", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("strong", { className: "jp-forms__feedback-comments-comment-author", children: comment.author_name }),
-      /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("span", { className: "jp-forms__feedback-comments-comment-date", children: formatCommentDate(comment.date) }),
-      /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
-        import_components77.DropdownMenu,
+  return /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)("div", { className: "jp-forms__feedback-comments-comment", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)("div", { className: "jp-forms__feedback-comments-comment-meta", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("strong", { className: "jp-forms__feedback-comments-comment-author", children: comment.author_name }),
+      /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("span", { className: "jp-forms__feedback-comments-comment-date", children: formatCommentDate(comment.date) }),
+      /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
+        import_components76.DropdownMenu,
         {
           icon: more_vertical_default,
-          label: (0, import_i18n82.__)("Note options", "jetpack-forms"),
+          label: (0, import_i18n81.__)("Note options", "jetpack-forms"),
           controls: [
             {
-              title: (0, import_i18n82.__)("Delete", "jetpack-forms"),
+              title: (0, import_i18n81.__)("Delete", "jetpack-forms"),
               icon: trash_default,
               onClick: () => onDelete(comment.id),
               isDisabled: isDeleting
@@ -38264,7 +38256,7 @@ var CommentItem = ({ comment, onDelete, isDeleting }) => {
         }
       )
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
       "div",
       {
         className: "jp-forms__feedback-comments-comment-content",
@@ -38284,16 +38276,16 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/feedback-comments/index.tsx
-var import_jsx_runtime174 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime173 = __toESM(require_jsx_runtime(), 1);
 var FeedbackComments = ({ postId }) => {
-  const [newComment, setNewComment] = (0, import_element91.useState)("");
-  const [isSubmitting, setIsSubmitting] = (0, import_element91.useState)(false);
-  const [deletingCommentIds, setDeletingCommentIds] = (0, import_element91.useState)(/* @__PURE__ */ new Set());
-  const [error2, setError] = (0, import_element91.useState)(null);
-  const [page, setPage] = (0, import_element91.useState)(1);
+  const [newComment, setNewComment] = (0, import_element90.useState)("");
+  const [isSubmitting, setIsSubmitting] = (0, import_element90.useState)(false);
+  const [deletingCommentIds, setDeletingCommentIds] = (0, import_element90.useState)(/* @__PURE__ */ new Set());
+  const [error2, setError] = (0, import_element90.useState)(null);
+  const [page, setPage] = (0, import_element90.useState)(1);
   const perPage = 50;
-  const [loadedComments, setLoadedComments] = (0, import_element91.useState)([]);
-  const [clientAddedComments, setClientAddedComments] = (0, import_element91.useState)([]);
+  const [loadedComments, setLoadedComments] = (0, import_element90.useState)([]);
+  const [clientAddedComments, setClientAddedComments] = (0, import_element90.useState)([]);
   const { createSuccessNotice, createErrorNotice } = (0, import_data32.useDispatch)(import_notices5.store);
   const { deleteEntityRecord, saveEntityRecord } = (0, import_data32.useDispatch)(import_core_data8.store);
   const currentUser = (0, import_data32.useSelect)((select3) => {
@@ -38326,18 +38318,18 @@ var FeedbackComments = ({ postId }) => {
     [postId, page]
   );
   const hasMoreComments = page * perPage < (totalComments || 0);
-  (0, import_element91.useEffect)(() => {
+  (0, import_element90.useEffect)(() => {
     setPage(1);
     setLoadedComments([]);
     setClientAddedComments([]);
     setError(null);
   }, [postId]);
-  (0, import_element91.useEffect)(() => {
+  (0, import_element90.useEffect)(() => {
     if (!commentsPage) {
       return;
     }
     if (!Array.isArray(commentsPage)) {
-      const message2 = commentsPage.message || (0, import_i18n83.__)("Failed to load comments. Please try again.", "jetpack-forms");
+      const message2 = commentsPage.message || (0, import_i18n82.__)("Failed to load comments. Please try again.", "jetpack-forms");
       setError(message2);
       return;
     }
@@ -38354,16 +38346,16 @@ var FeedbackComments = ({ postId }) => {
       return prev.concat(toAdd);
     });
   }, [commentsPage]);
-  const scrollToBottom = (0, import_element91.useCallback)(() => {
+  const scrollToBottom = (0, import_element90.useCallback)(() => {
     const button = document.querySelector(".jp-forms__feedback-comments-form-button");
     if (button) {
       button.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
   }, []);
-  const handleLoadMore = (0, import_element91.useCallback)(() => {
+  const handleLoadMore = (0, import_element90.useCallback)(() => {
     setPage((prevPage) => prevPage + 1);
   }, []);
-  const handleNewComment = (0, import_element91.useCallback)(async () => {
+  const handleNewComment = (0, import_element90.useCallback)(async () => {
     if (!newComment.trim()) {
       return;
     }
@@ -38375,13 +38367,13 @@ var FeedbackComments = ({ postId }) => {
         content: newComment
       });
       if (saved === void 0) {
-        setError((0, import_i18n83.__)("Failed to save the note. Please try again.", "jetpack-forms"));
-        createErrorNotice((0, import_i18n83.__)("Failed to save the note.", "jetpack-forms"));
+        setError((0, import_i18n82.__)("Failed to save the note. Please try again.", "jetpack-forms"));
+        createErrorNotice((0, import_i18n82.__)("Failed to save the note.", "jetpack-forms"));
         setIsSubmitting(false);
         return;
       }
       setNewComment("");
-      createSuccessNotice((0, import_i18n83.__)("Note added successfully.", "jetpack-forms"));
+      createSuccessNotice((0, import_i18n82.__)("Note added successfully.", "jetpack-forms"));
       setClientAddedComments((prev) => {
         if (!saved || !saved.id) {
           return prev;
@@ -38395,8 +38387,8 @@ var FeedbackComments = ({ postId }) => {
       });
       scrollToBottom();
     } catch (err) {
-      setError((0, import_i18n83.__)("Failed to save the note. Please try again.", "jetpack-forms"));
-      createErrorNotice((0, import_i18n83.__)("Failed to save the note.", "jetpack-forms"));
+      setError((0, import_i18n82.__)("Failed to save the note. Please try again.", "jetpack-forms"));
+      createErrorNotice((0, import_i18n82.__)("Failed to save the note.", "jetpack-forms"));
     } finally {
       setIsSubmitting(false);
     }
@@ -38408,7 +38400,7 @@ var FeedbackComments = ({ postId }) => {
     scrollToBottom,
     createErrorNotice
   ]);
-  const handleKeyDown = (0, import_element91.useCallback)(
+  const handleKeyDown = (0, import_element90.useCallback)(
     (event) => {
       if (event.key === "Enter" && !event.shiftKey) {
         event.preventDefault();
@@ -38417,7 +38409,7 @@ var FeedbackComments = ({ postId }) => {
     },
     [handleNewComment]
   );
-  const handleDelete = (0, import_element91.useCallback)(
+  const handleDelete = (0, import_element90.useCallback)(
     async (commentId) => {
       setDeletingCommentIds((prev) => {
         const next = new Set(prev);
@@ -38426,12 +38418,12 @@ var FeedbackComments = ({ postId }) => {
       });
       try {
         await deleteEntityRecord("root", "comment", commentId, {}, { throwOnError: true });
-        createSuccessNotice((0, import_i18n83.__)("Note deleted.", "jetpack-forms"));
+        createSuccessNotice((0, import_i18n82.__)("Note deleted.", "jetpack-forms"));
         setLoadedComments((prev) => prev.filter((c2) => c2.id !== commentId));
         setClientAddedComments((prev) => prev.filter((c2) => c2.id !== commentId));
       } catch (err) {
-        setError((0, import_i18n83.__)("Failed to delete the note. Please try again.", "jetpack-forms"));
-        createErrorNotice((0, import_i18n83.__)("Failed to delete the note.", "jetpack-forms"));
+        setError((0, import_i18n82.__)("Failed to delete the note. Please try again.", "jetpack-forms"));
+        createErrorNotice((0, import_i18n82.__)("Failed to delete the note.", "jetpack-forms"));
       } finally {
         setDeletingCommentIds((prev) => {
           const next = new Set(prev);
@@ -38442,13 +38434,13 @@ var FeedbackComments = ({ postId }) => {
     },
     [deleteEntityRecord, createSuccessNotice, createErrorNotice]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)("div", { className: "jp-forms__feedback-comments", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)("h3", { className: "jp-forms__feedback-comments-heading", children: [
-      (0, import_i18n83.__)("Notes", "jetpack-forms"),
-      isLoadingComments && /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("span", { className: "jp-forms__feedback-loading", children: /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.Spinner, { height: 12, width: 12 }) })
+  return /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__feedback-comments", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("h3", { className: "jp-forms__feedback-comments-heading", children: [
+      (0, import_i18n82.__)("Notes", "jetpack-forms"),
+      isLoadingComments && /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("span", { className: "jp-forms__feedback-loading", children: /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(import_components77.Spinner, { height: 12, width: 12 }) })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)("div", { className: "jp-forms__feedback-comments-content", children: [
-      !isLoadingComments && loadedComments.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("div", { className: "jp-forms__feedback-comments-list", children: loadedComments.map((comment) => /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__feedback-comments-content", children: [
+      !isLoadingComments && loadedComments.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__feedback-comments-list", children: loadedComments.map((comment) => /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
         comment_item_default,
         {
           comment,
@@ -38457,8 +38449,8 @@ var FeedbackComments = ({ postId }) => {
         },
         comment.id
       )) }),
-      !isLoadingComments && hasMoreComments && /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("div", { className: "jp-forms__feedback-comments-load-more", children: /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.Button, { variant: "secondary", onClick: handleLoadMore, children: (0, import_i18n83.__)("Load more comments", "jetpack-forms") }) }),
-      clientAddedComments.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("div", { className: "jp-forms__feedback-comments-list jp-forms__feedback-comments-new", children: clientAddedComments.map((comment) => /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
+      !isLoadingComments && hasMoreComments && /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__feedback-comments-load-more", children: /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(import_components77.Button, { variant: "secondary", onClick: handleLoadMore, children: (0, import_i18n82.__)("Load more comments", "jetpack-forms") }) }),
+      clientAddedComments.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__feedback-comments-list jp-forms__feedback-comments-new", children: clientAddedComments.map((comment) => /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
         comment_item_default,
         {
           comment,
@@ -38468,14 +38460,14 @@ var FeedbackComments = ({ postId }) => {
         comment.id
       )) })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)("div", { className: "jp-forms__feedback-comments-form", children: [
-      error2 && /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("div", { className: "jp-forms__feedback-comments-error", children: error2 }),
-      /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)("div", { className: "jp-forms__feedback-comments-form-wrapper", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("div", { className: "jp-forms__feedback-comments-form-input", children: /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
-          import_components78.TextareaControl,
+    /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__feedback-comments-form", children: [
+      error2 && /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__feedback-comments-error", children: error2 }),
+      /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__feedback-comments-form-wrapper", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__feedback-comments-form-input", children: /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
+          import_components77.TextareaControl,
           {
             hideLabelFromVision: true,
-            label: (0, import_i18n83.__)("Leave a note", "jetpack-forms"),
+            label: (0, import_i18n82.__)("Leave a note", "jetpack-forms"),
             value: newComment,
             onChange: setNewComment,
             onKeyDown: handleKeyDown,
@@ -38483,23 +38475,23 @@ var FeedbackComments = ({ postId }) => {
             enterKeyHint: "send",
             rows: 1,
             disabled: isSubmitting,
-            placeholder: (0, import_i18n83.__)("Write a quick note\u2026", "jetpack-forms")
+            placeholder: (0, import_i18n82.__)("Write a quick note\u2026", "jetpack-forms")
           }
         ) }),
-        /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)("div", { className: "jp-forms__feedback-comments-user-info", children: [
-          currentUser && /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)("div", { className: "jp-forms__feedback-comments-form-avatar", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("img", { src: currentUser.avatar_urls?.["48"] || "", alt: "" }),
-            /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("strong", { children: currentUser.name })
+        /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__feedback-comments-user-info", children: [
+          currentUser && /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__feedback-comments-form-avatar", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("img", { src: currentUser.avatar_urls?.["48"] || "", alt: "" }),
+            /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("strong", { children: currentUser.name })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("div", { className: "jp-forms__feedback-comments-form-button", children: /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
-            import_components78.Button,
+          /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__feedback-comments-form-button", children: /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
+            import_components77.Button,
             {
               variant: "primary",
               type: "submit",
               onClick: handleNewComment,
               disabled: isSubmitting || !newComment.trim(),
               isBusy: isSubmitting,
-              children: (0, import_i18n83.__)("Add note", "jetpack-forms")
+              children: (0, import_i18n82.__)("Add note", "jetpack-forms")
             }
           ) })
         ] })
@@ -38510,9 +38502,9 @@ var FeedbackComments = ({ postId }) => {
 var feedback_comments_default = FeedbackComments;
 
 // src/dashboard/components/inspector/preview-file/index.tsx
-var import_components79 = __toESM(require_components(), 1);
+var import_components78 = __toESM(require_components(), 1);
 var import_html_entities6 = __toESM(require_html_entities(), 1);
-var import_i18n84 = __toESM(require_i18n(), 1);
+var import_i18n83 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/inspector/preview-file/style.scss
 if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='6858eb9077']")) {
@@ -38523,17 +38515,17 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/preview-file/index.tsx
-var import_jsx_runtime175 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime174 = __toESM(require_jsx_runtime(), 1);
 var PreviewFile = ({ file, isLoading, onImageLoaded }) => {
   const imageClass = clsx_default("jp-forms__inbox-file-preview-container", {
     "is-loading": isLoading
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime175.jsxs)("div", { className: "jp-forms__inbox-file-preview-shell", children: [
-    isLoading && /* @__PURE__ */ (0, import_jsx_runtime175.jsxs)("div", { className: "jp-forms__inbox-file-loading", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(import_components79.Spinner, { className: "jp-forms__inbox-file-spinner" }),
-      /* @__PURE__ */ (0, import_jsx_runtime175.jsx)("div", { className: "jp-forms__inbox-file-loading-message ", children: (0, import_i18n84.__)("Loading preview\u2026", "jetpack-forms") })
+  return /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)("div", { className: "jp-forms__inbox-file-preview-shell", children: [
+    isLoading && /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)("div", { className: "jp-forms__inbox-file-loading", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.Spinner, { className: "jp-forms__inbox-file-spinner" }),
+      /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("div", { className: "jp-forms__inbox-file-loading-message ", children: (0, import_i18n83.__)("Loading preview\u2026", "jetpack-forms") })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime175.jsx)("div", { className: imageClass, children: /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("div", { className: imageClass, children: /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
       "img",
       {
         src: file.url,
@@ -38547,13 +38539,13 @@ var PreviewFile = ({ file, isLoading, onImageLoaded }) => {
 var preview_file_default = PreviewFile;
 
 // src/dashboard/components/inspector/response-fields/field-email/index.tsx
-var import_components81 = __toESM(require_components(), 1);
+var import_components80 = __toESM(require_components(), 1);
 
 // src/dashboard/components/copy-clipboard-button/index.tsx
-var import_components80 = __toESM(require_components(), 1);
+var import_components79 = __toESM(require_components(), 1);
 var import_compose17 = __toESM(require_compose(), 1);
-var import_element92 = __toESM(require_element(), 1);
-var import_i18n85 = __toESM(require_i18n(), 1);
+var import_element91 = __toESM(require_element(), 1);
+var import_i18n84 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/copy-clipboard-button/style.scss
 if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='f2ba3be839']")) {
@@ -38564,10 +38556,10 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/copy-clipboard-button/index.tsx
-var import_jsx_runtime176 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime175 = __toESM(require_jsx_runtime(), 1);
 function CopyClipboardButton({ text }) {
-  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element92.useState)(false);
-  const timeoutIdRef = (0, import_element92.useRef)(null);
+  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element91.useState)(false);
+  const timeoutIdRef = (0, import_element91.useRef)(null);
   const ref = (0, import_compose17.useCopyToClipboard)(text, () => {
     setShowCopyConfirmation(true);
     if (timeoutIdRef.current) {
@@ -38577,18 +38569,18 @@ function CopyClipboardButton({ text }) {
       setShowCopyConfirmation(false);
     }, 4e3);
   });
-  (0, import_element92.useEffect)(() => {
+  (0, import_element91.useEffect)(() => {
     return () => {
       if (timeoutIdRef.current) {
         clearTimeout(timeoutIdRef.current);
       }
     };
   }, []);
-  const copied = (0, import_i18n85.__)("Copied!", "jetpack-forms");
-  const copy = (0, import_i18n85.__)("Copy", "jetpack-forms");
+  const copied = (0, import_i18n84.__)("Copied!", "jetpack-forms");
+  const copy = (0, import_i18n84.__)("Copy", "jetpack-forms");
   const emailCopyLabel = showCopyConfirmation ? copied : copy;
-  return /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(import_components80.Tooltip, { delay: 0, hideOnClick: false, text: emailCopyLabel, children: /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(
-    import_components80.Button,
+  return /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(import_components79.Tooltip, { delay: 0, hideOnClick: false, text: emailCopyLabel, children: /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(
+    import_components79.Button,
     {
       className: "jp-forms__copy-clipboard-button",
       size: "small",
@@ -38609,24 +38601,24 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-fields/field-email/index.tsx
-var import_jsx_runtime177 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime176 = __toESM(require_jsx_runtime(), 1);
 var FieldEmail = ({ email }) => {
   const emailParts = email.split("@");
-  return /* @__PURE__ */ (0, import_jsx_runtime177.jsxs)(
-    import_components81.__experimentalHStack,
+  return /* @__PURE__ */ (0, import_jsx_runtime176.jsxs)(
+    import_components80.__experimentalHStack,
     {
       alignment: "center",
       className: "jp-forms__inbox-response-field-email",
       justify: "left",
       spacing: "2",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime177.jsxs)("a", { href: `mailto:${email}`, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime176.jsxs)("a", { href: `mailto:${email}`, children: [
           emailParts[0],
-          /* @__PURE__ */ (0, import_jsx_runtime177.jsx)("wbr", {}),
+          /* @__PURE__ */ (0, import_jsx_runtime176.jsx)("wbr", {}),
           "@",
           emailParts[1]
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(CopyClipboardButton, { text: email })
+        /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(CopyClipboardButton, { text: email })
       ]
     }
   );
@@ -38634,10 +38626,10 @@ var FieldEmail = ({ email }) => {
 var field_email_default = FieldEmail;
 
 // src/dashboard/components/inspector/response-fields/field-file/file.tsx
-var import_components82 = __toESM(require_components(), 1);
+var import_components81 = __toESM(require_components(), 1);
 var import_html_entities7 = __toESM(require_html_entities(), 1);
-var import_i18n86 = __toESM(require_i18n(), 1);
-var import_jsx_runtime178 = __toESM(require_jsx_runtime(), 1);
+var import_i18n85 = __toESM(require_i18n(), 1);
+var import_jsx_runtime177 = __toESM(require_jsx_runtime(), 1);
 var FieldFile = ({ file, onClick }) => {
   const fileExtension = file.name.split(".").pop().toLowerCase();
   const fileType = file.type.split("/")[0];
@@ -38671,21 +38663,21 @@ var FieldFile = ({ file, onClick }) => {
   };
   const iconType = extensionMap[fileExtension] || iconMap[fileType] || "txt";
   const iconClass = clsx_default("jp-forms__inbox-response-file__icon", "icon-" + iconType);
-  return /* @__PURE__ */ (0, import_jsx_runtime178.jsxs)("div", { className: "jp-forms__inbox-response-file", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime178.jsxs)("div", { className: "jp-forms__inbox-response-file__info", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime178.jsx)("div", { className: iconClass }),
-      /* @__PURE__ */ (0, import_jsx_runtime178.jsxs)("div", { className: "jp-forms__inbox-response-file__name", children: [
-        file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(import_components82.Button, { target: "_blank", variant: "link", onClick, children: (0, import_html_entities7.decodeEntities)(file.name) }),
-        !file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(import_components82.ExternalLink, { href: file.url + "&preview=true", children: (0, import_html_entities7.decodeEntities)(file.name) }),
-        /* @__PURE__ */ (0, import_jsx_runtime178.jsx)("div", { className: "jp-forms__inbox-response-file__meta-info", children: (0, import_i18n86.sprintf)(
+  return /* @__PURE__ */ (0, import_jsx_runtime177.jsxs)("div", { className: "jp-forms__inbox-response-file", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime177.jsxs)("div", { className: "jp-forms__inbox-response-file__info", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime177.jsx)("div", { className: iconClass }),
+      /* @__PURE__ */ (0, import_jsx_runtime177.jsxs)("div", { className: "jp-forms__inbox-response-file__name", children: [
+        file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(import_components81.Button, { target: "_blank", variant: "link", onClick, children: (0, import_html_entities7.decodeEntities)(file.name) }),
+        !file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(import_components81.ExternalLink, { href: file.url + "&preview=true", children: (0, import_html_entities7.decodeEntities)(file.name) }),
+        /* @__PURE__ */ (0, import_jsx_runtime177.jsx)("div", { className: "jp-forms__inbox-response-file__meta-info", children: (0, import_i18n85.sprintf)(
           /* translators: %1$s size of the file and %2$s is the file extension */
-          (0, import_i18n86.__)("%1$s, %2$s", "jetpack-forms"),
+          (0, import_i18n85.__)("%1$s, %2$s", "jetpack-forms"),
           file.size,
           fileExtension.toUpperCase()
         ) })
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime178.jsx)("span", { className: "jp-forms__inbox-response-file__item-actions", children: /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(import_components82.Tooltip, { text: (0, import_i18n86.__)("Download", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(import_components82.Button, { variant: "secondary", href: file.url, target: "_blank", children: /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(import_components82.Icon, { icon: download_default }) }) }) })
+    /* @__PURE__ */ (0, import_jsx_runtime177.jsx)("span", { className: "jp-forms__inbox-response-file__item-actions", children: /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(import_components81.Tooltip, { text: (0, import_i18n85.__)("Download", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(import_components81.Button, { variant: "secondary", href: file.url, target: "_blank", children: /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(import_components81.Icon, { icon: download_default }) }) }) })
   ] });
 };
 var file_default = FieldFile;
@@ -38699,19 +38691,19 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-fields/field-file/index.tsx
-var import_jsx_runtime179 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime178 = __toESM(require_jsx_runtime(), 1);
 var FieldFile2 = ({ files, handleFilePreview }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime179.jsx)("div", { className: "jp-forms__inbox-response-field-file", children: files?.length ? files.map((file) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime178.jsx)("div", { className: "jp-forms__inbox-response-field-file", children: files?.length ? files.map((file) => {
     if (!file || !file.name) {
       return "-";
     }
-    return /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(file_default, { file, onClick: handleFilePreview(file) }, file.file_id);
+    return /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(file_default, { file, onClick: handleFilePreview(file) }, file.file_id);
   }) : "-" });
 };
 var field_file_default = FieldFile2;
 
 // src/dashboard/components/inspector/response-fields/field-image-select/index.tsx
-var import_components83 = __toESM(require_components(), 1);
+var import_components82 = __toESM(require_components(), 1);
 
 // ../../../node_modules/.pnpm/photon@4.1.1/node_modules/photon/dist/esm/index.js
 var import_crc32 = __toESM(require_crc32());
@@ -38795,7 +38787,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-fields/field-image-select/index.tsx
-var import_jsx_runtime180 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime179 = __toESM(require_jsx_runtime(), 1);
 function photonSafeUrl(url = "") {
   if (!url) {
     return null;
@@ -38808,8 +38800,8 @@ function photonSafeUrl(url = "") {
 var ImageSelectButton = ({ choice, handleFilePreview }) => {
   const label = choice.label ? `${choice.selected}: ${choice.label}` : choice.selected;
   const hasImage = choice.image?.src;
-  return /* @__PURE__ */ (0, import_jsx_runtime180.jsxs)(
-    import_components83.Card,
+  return /* @__PURE__ */ (0, import_jsx_runtime179.jsxs)(
+    import_components82.Card,
     {
       onClick: hasImage ? handleFilePreview({
         file_id: choice.image.id,
@@ -38818,7 +38810,7 @@ var ImageSelectButton = ({ choice, handleFilePreview }) => {
       }) : void 0,
       className: `jp-forms__image-select-preview ${hasImage ? "has-image" : ""}`,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(import_components83.CardMedia, { children: /* @__PURE__ */ (0, import_jsx_runtime180.jsx)("div", { className: "jp-forms__image-select-preview-image-wrapper", children: hasImage ? /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components82.CardMedia, { children: /* @__PURE__ */ (0, import_jsx_runtime179.jsx)("div", { className: "jp-forms__image-select-preview-image-wrapper", children: hasImage ? /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(
           "img",
           {
             className: "jp-forms__image-select-preview-image",
@@ -38828,9 +38820,9 @@ var ImageSelectButton = ({ choice, handleFilePreview }) => {
             loading: "lazy",
             src: photonSafeUrl(choice.image.src) ?? void 0
           }
-        ) : /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(import_components83.Icon, { icon: image_default, size: 144 }) }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(
-          import_components83.CardBody,
+        ) : /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components82.Icon, { icon: image_default, size: 144 }) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(
+          import_components82.CardBody,
           {
             size: {
               blockStart: "none",
@@ -38838,15 +38830,15 @@ var ImageSelectButton = ({ choice, handleFilePreview }) => {
               inlineStart: "xSmall",
               inlineEnd: "xSmall"
             },
-            children: /* @__PURE__ */ (0, import_jsx_runtime180.jsxs)(
-              import_components83.__experimentalHStack,
+            children: /* @__PURE__ */ (0, import_jsx_runtime179.jsxs)(
+              import_components82.__experimentalHStack,
               {
                 className: "jp-forms__image-select-preview-label-wrapper",
                 spacing: "2",
                 alignment: "topLeft",
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(import_components83.__experimentalText, { className: "jp-forms__image-select-preview-selected", children: choice.selected }),
-                  /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(import_components83.__experimentalText, { title: choice.label, className: "jp-forms__image-select-preview-label", children: choice.label })
+                  /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components82.__experimentalText, { className: "jp-forms__image-select-preview-selected", children: choice.selected }),
+                  /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components82.__experimentalText, { title: choice.label, className: "jp-forms__image-select-preview-label", children: choice.label })
                 ]
               }
             )
@@ -38857,17 +38849,17 @@ var ImageSelectButton = ({ choice, handleFilePreview }) => {
   );
 };
 var FieldImageSelect = ({ choices, handleFilePreview }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime180.jsxs)(import_jsx_runtime180.Fragment, { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime179.jsxs)(import_jsx_runtime179.Fragment, { children: [
     (choices?.length ?? 0) === 0 && "-",
-    (choices?.length ?? 0) > 0 && /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(
-      import_components83.__experimentalHStack,
+    (choices?.length ?? 0) > 0 && /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(
+      import_components82.__experimentalHStack,
       {
         spacing: "2",
         alignment: "topLeft",
         wrap: true,
         className: "jp-forms__image-select-preview-wrapper",
         children: choices.map((choice) => {
-          return /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(
             ImageSelectButton,
             {
               choice,
@@ -38883,12 +38875,12 @@ var FieldImageSelect = ({ choices, handleFilePreview }) => {
 var field_image_select_default = FieldImageSelect;
 
 // src/dashboard/components/inspector/response-fields/field-preview/index.tsx
-var import_components86 = __toESM(require_components(), 1);
+var import_components85 = __toESM(require_components(), 1);
 
 // src/blocks/field-checkbox/icon.jsx
 var import_primitives49 = __toESM(require_primitives(), 1);
-var import_jsx_runtime181 = __toESM(require_jsx_runtime(), 1);
-var icon = /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(import_primitives49.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
+var import_jsx_runtime180 = __toESM(require_jsx_runtime(), 1);
+var icon = /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(import_primitives49.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(
   import_primitives49.Path,
   {
     fillRule: "evenodd",
@@ -38901,10 +38893,10 @@ var icon_default2 = {
 
 // src/blocks/field-consent/icon.jsx
 var import_primitives50 = __toESM(require_primitives(), 1);
-var import_jsx_runtime182 = __toESM(require_jsx_runtime(), 1);
-var icon2 = /* @__PURE__ */ (0, import_jsx_runtime182.jsxs)(import_primitives50.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: [
-  /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(import_primitives50.Path, { d: "M7 5.5H17C17.2761 5.5 17.5 5.72386 17.5 6V13H19V6C19 4.89543 18.1046 4 17 4H7C5.89543 4 5 4.89543 5 6V18C5 19.1046 5.89543 20 7 20H11.5V18.5H7C6.72386 18.5 6.5 18.2761 6.5 18V6C6.5 5.72386 6.72386 5.5 7 5.5ZM16 7.75H8V9.25H16V7.75ZM8 11H13V12.5H8V11Z" }),
-  /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(import_primitives50.Path, { d: "M20.1087 15.9382L15.9826 21.6689L12.959 18.5194L14.0411 17.4806L15.8175 19.331L18.8914 15.0618L20.1087 15.9382Z" })
+var import_jsx_runtime181 = __toESM(require_jsx_runtime(), 1);
+var icon2 = /* @__PURE__ */ (0, import_jsx_runtime181.jsxs)(import_primitives50.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: [
+  /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(import_primitives50.Path, { d: "M7 5.5H17C17.2761 5.5 17.5 5.72386 17.5 6V13H19V6C19 4.89543 18.1046 4 17 4H7C5.89543 4 5 4.89543 5 6V18C5 19.1046 5.89543 20 7 20H11.5V18.5H7C6.72386 18.5 6.5 18.2761 6.5 18V6C6.5 5.72386 6.72386 5.5 7 5.5ZM16 7.75H8V9.25H16V7.75ZM8 11H13V12.5H8V11Z" }),
+  /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(import_primitives50.Path, { d: "M20.1087 15.9382L15.9826 21.6689L12.959 18.5194L14.0411 17.4806L15.8175 19.331L18.8914 15.0618L20.1087 15.9382Z" })
 ] });
 var icon_default3 = {
   src: icon2
@@ -38912,8 +38904,8 @@ var icon_default3 = {
 
 // src/blocks/field-date/icon.jsx
 var import_primitives51 = __toESM(require_primitives(), 1);
-var import_jsx_runtime183 = __toESM(require_jsx_runtime(), 1);
-var icon3 = /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(import_primitives51.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(
+var import_jsx_runtime182 = __toESM(require_jsx_runtime(), 1);
+var icon3 = /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(import_primitives51.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(
   import_primitives51.Path,
   {
     fillRule: "evenodd",
@@ -38926,43 +38918,43 @@ var icon_default4 = {
 
 // src/blocks/field-image-select/icon.tsx
 var import_primitives52 = __toESM(require_primitives(), 1);
-var import_jsx_runtime184 = __toESM(require_jsx_runtime(), 1);
-var icon4 = /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(import_primitives52.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(import_primitives52.Path, { d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 4.5h14c.3 0 .5.2.5.5v8.4l-3-2.9c-.3-.3-.8-.3-1 0L11.9 14 9 12c-.3-.2-.6-.2-.8 0l-3.6 2.6V5c-.1-.3.1-.5.4-.5zm14 15H5c-.3 0-.5-.2-.5-.5v-2.4l4.1-3 3 1.9c.3.2.7.2.9-.1L16 12l3.5 3.4V19c0 .3-.2.5-.5.5z" }) });
+var import_jsx_runtime183 = __toESM(require_jsx_runtime(), 1);
+var icon4 = /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(import_primitives52.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(import_primitives52.Path, { d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 4.5h14c.3 0 .5.2.5.5v8.4l-3-2.9c-.3-.3-.8-.3-1 0L11.9 14 9 12c-.3-.2-.6-.2-.8 0l-3.6 2.6V5c-.1-.3.1-.5.4-.5zm14 15H5c-.3 0-.5-.2-.5-.5v-2.4l4.1-3 3 1.9c.3.2.7.2.9-.1L16 12l3.5 3.4V19c0 .3-.2.5-.5.5z" }) });
 var icon_default5 = {
   src: icon4
 };
 
 // src/blocks/field-multiple-choice/icon.jsx
 var import_primitives53 = __toESM(require_primitives(), 1);
-var import_jsx_runtime185 = __toESM(require_jsx_runtime(), 1);
-var icon5 = /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(import_primitives53.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(import_primitives53.Path, { d: "M7.0812 10.1419L10.6001 5.45005L9.40006 4.55005L6.91891 7.85824L5.53039 6.46972L4.46973 7.53038L7.0812 10.1419ZM12 8.5H20V7H12V8.5ZM12 17H20V15.5H12V17ZM8.5 14.5H5.5V17.5H8.5V14.5ZM5.5 13H8.5C9.32843 13 10 13.6716 10 14.5V17.5C10 18.3284 9.32843 19 8.5 19H5.5C4.67157 19 4 18.3284 4 17.5V14.5C4 13.6716 4.67157 13 5.5 13Z" }) });
+var import_jsx_runtime184 = __toESM(require_jsx_runtime(), 1);
+var icon5 = /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(import_primitives53.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(import_primitives53.Path, { d: "M7.0812 10.1419L10.6001 5.45005L9.40006 4.55005L6.91891 7.85824L5.53039 6.46972L4.46973 7.53038L7.0812 10.1419ZM12 8.5H20V7H12V8.5ZM12 17H20V15.5H12V17ZM8.5 14.5H5.5V17.5H8.5V14.5ZM5.5 13H8.5C9.32843 13 10 13.6716 10 14.5V17.5C10 18.3284 9.32843 19 8.5 19H5.5C4.67157 19 4 18.3284 4 17.5V14.5C4 13.6716 4.67157 13 5.5 13Z" }) });
 var icon_default6 = {
   src: icon5
 };
 
 // src/blocks/field-name/icon.jsx
 var import_primitives54 = __toESM(require_primitives(), 1);
-var import_jsx_runtime186 = __toESM(require_jsx_runtime(), 1);
-var icon6 = /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(import_primitives54.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(import_primitives54.Path, { d: "M8.25 11.5C9.63071 11.5 10.75 10.3807 10.75 9C10.75 7.61929 9.63071 6.5 8.25 6.5C6.86929 6.5 5.75 7.61929 5.75 9C5.75 10.3807 6.86929 11.5 8.25 11.5ZM8.25 10C8.80228 10 9.25 9.55228 9.25 9C9.25 8.44772 8.80228 8 8.25 8C7.69772 8 7.25 8.44772 7.25 9C7.25 9.55228 7.69772 10 8.25 10ZM13 15.5V17.5H11.5V15.5C11.5 14.8096 10.9404 14.25 10.25 14.25H6.25C5.55964 14.25 5 14.8096 5 15.5V17.5H3.5V15.5C3.5 13.9812 4.73122 12.75 6.25 12.75H10.25C11.7688 12.75 13 13.9812 13 15.5ZM20.5 11H14.5V9.5H20.5V11ZM20.5 14.5H14.5V13H20.5V14.5Z" }) });
+var import_jsx_runtime185 = __toESM(require_jsx_runtime(), 1);
+var icon6 = /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(import_primitives54.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(import_primitives54.Path, { d: "M8.25 11.5C9.63071 11.5 10.75 10.3807 10.75 9C10.75 7.61929 9.63071 6.5 8.25 6.5C6.86929 6.5 5.75 7.61929 5.75 9C5.75 10.3807 6.86929 11.5 8.25 11.5ZM8.25 10C8.80228 10 9.25 9.55228 9.25 9C9.25 8.44772 8.80228 8 8.25 8C7.69772 8 7.25 8.44772 7.25 9C7.25 9.55228 7.69772 10 8.25 10ZM13 15.5V17.5H11.5V15.5C11.5 14.8096 10.9404 14.25 10.25 14.25H6.25C5.55964 14.25 5 14.8096 5 15.5V17.5H3.5V15.5C3.5 13.9812 4.73122 12.75 6.25 12.75H10.25C11.7688 12.75 13 13.9812 13 15.5ZM20.5 11H14.5V9.5H20.5V11ZM20.5 14.5H14.5V13H20.5V14.5Z" }) });
 var icon_default7 = {
   src: icon6
 };
 
 // src/blocks/field-number/icon.jsx
 var import_primitives55 = __toESM(require_primitives(), 1);
-var import_jsx_runtime187 = __toESM(require_jsx_runtime(), 1);
-var icon7 = /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(import_primitives55.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(import_primitives55.Path, { d: "M12 7H4V8.5H12V7ZM19.75 17.25V10.75H4.25V17.25H19.75ZM5.75 15.75V12.25H18.25V15.75H5.75Z" }) });
+var import_jsx_runtime186 = __toESM(require_jsx_runtime(), 1);
+var icon7 = /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(import_primitives55.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(import_primitives55.Path, { d: "M12 7H4V8.5H12V7ZM19.75 17.25V10.75H4.25V17.25H19.75ZM5.75 15.75V12.25H18.25V15.75H5.75Z" }) });
 var icon_default8 = {
   src: icon7
 };
 
 // src/blocks/field-rating/icon.jsx
 var import_primitives56 = __toESM(require_primitives(), 1);
-var import_jsx_runtime188 = __toESM(require_jsx_runtime(), 1);
-var icon8 = /* @__PURE__ */ (0, import_jsx_runtime188.jsxs)(import_primitives56.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: [
-  /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(import_primitives56.Path, { d: "M4.90821 9.05978C4.91669 9.04183 4.92977 9.02672 4.94599 9.01616C4.96221 9.0056 4.98091 9 5 9C5.01909 9 5.03779 9.0056 5.05401 9.01616C5.07023 9.02672 5.08331 9.04183 5.09179 9.05978L5.93962 10.8628C5.94695 10.8785 5.95779 10.892 5.97121 10.9023C5.98463 10.9125 6.00023 10.9192 6.01666 10.9217L7.91228 11.2108C7.93118 11.2137 7.94893 11.222 7.96354 11.2349C7.97814 11.2478 7.98902 11.2648 7.99495 11.2838C8.00087 11.3029 8.0016 11.3233 7.99706 11.3428C7.99252 11.3622 7.98288 11.38 7.96924 11.394L6.59731 12.7975C6.58536 12.8097 6.57643 12.8247 6.57129 12.8414C6.56615 12.858 6.56495 12.8757 6.5678 12.893L6.89153 14.8745C6.89467 14.8942 6.89251 14.9144 6.8853 14.9329C6.87809 14.9514 6.86611 14.9675 6.8507 14.9792C6.8353 14.991 6.81707 14.998 6.79808 14.9995C6.77909 15.0009 6.76008 14.9968 6.74319 14.9876L5.04753 14.0521C5.03287 14.044 5.01656 14.0398 5 14.0398C4.98344 14.0398 4.96713 14.044 4.95247 14.0521L3.25681 14.9876C3.23991 14.997 3.22085 15.0012 3.20179 14.9997C3.18273 14.9983 3.16443 14.9913 3.14896 14.9795C3.13348 14.9678 3.12145 14.9517 3.11423 14.9331C3.107 14.9146 3.10487 14.8943 3.10806 14.8745L3.43178 12.893C3.43469 12.8758 3.43356 12.8581 3.42849 12.8414C3.42342 12.8248 3.41456 12.8097 3.40269 12.7975L2.03076 11.394C2.01712 11.38 2.00748 11.3622 2.00294 11.3428C1.9984 11.3233 1.99913 11.3029 2.00505 11.2838C2.01098 11.2648 2.02185 11.2478 2.03646 11.2349C2.05107 11.222 2.06882 11.2137 2.08772 11.2108L3.98334 10.9217C3.99977 10.9192 4.01537 10.9125 4.02879 10.9023C4.04221 10.892 4.05305 10.8785 4.06038 10.8628L4.90821 9.05978Z" }),
-  /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(import_primitives56.Path, { d: "M11.9082 9.05978C11.9167 9.04183 11.9298 9.02672 11.946 9.01616C11.9622 9.0056 11.9809 9 12 9C12.0191 9 12.0378 9.0056 12.054 9.01616C12.0702 9.02672 12.0833 9.04183 12.0918 9.05978L12.9396 10.8628C12.9469 10.8785 12.9578 10.892 12.9712 10.9023C12.9846 10.9125 13.0002 10.9192 13.0167 10.9217L14.9123 11.2108C14.9312 11.2137 14.9489 11.222 14.9635 11.2349C14.9781 11.2478 14.989 11.2648 14.9949 11.2838C15.0009 11.3029 15.0016 11.3233 14.9971 11.3428C14.9925 11.3622 14.9829 11.38 14.9692 11.394L13.5973 12.7975C13.5854 12.8097 13.5764 12.8247 13.5713 12.8414C13.5661 12.858 13.565 12.8757 13.5678 12.893L13.8915 14.8745C13.8947 14.8942 13.8925 14.9144 13.8853 14.9329C13.8781 14.9514 13.8661 14.9675 13.8507 14.9792C13.8353 14.991 13.8171 14.998 13.7981 14.9995C13.7791 15.0009 13.7601 14.9968 13.7432 14.9876L12.0475 14.0521C12.0329 14.044 12.0166 14.0398 12 14.0398C11.9834 14.0398 11.9671 14.044 11.9525 14.0521L10.2568 14.9876C10.2399 14.997 10.2208 15.0012 10.2018 14.9997C10.1827 14.9983 10.1644 14.9913 10.149 14.9795C10.1335 14.9678 10.1215 14.9517 10.1142 14.9331C10.107 14.9146 10.1049 14.8943 10.1081 14.8745L10.4318 12.893C10.4347 12.8758 10.4336 12.8581 10.4285 12.8414C10.4234 12.8248 10.4146 12.8097 10.4027 12.7975L9.03076 11.394C9.01712 11.38 9.00748 11.3622 9.00294 11.3428C8.9984 11.3233 8.99913 11.3029 9.00505 11.2838C9.01098 11.2648 9.02185 11.2478 9.03646 11.2349C9.05107 11.222 9.06882 11.2137 9.08772 11.2108L10.9833 10.9217C10.9998 10.9192 11.0154 10.9125 11.0288 10.9023C11.0422 10.892 11.0531 10.8785 11.0604 10.8628L11.9082 9.05978Z" }),
-  /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(
+var import_jsx_runtime187 = __toESM(require_jsx_runtime(), 1);
+var icon8 = /* @__PURE__ */ (0, import_jsx_runtime187.jsxs)(import_primitives56.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: [
+  /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(import_primitives56.Path, { d: "M4.90821 9.05978C4.91669 9.04183 4.92977 9.02672 4.94599 9.01616C4.96221 9.0056 4.98091 9 5 9C5.01909 9 5.03779 9.0056 5.05401 9.01616C5.07023 9.02672 5.08331 9.04183 5.09179 9.05978L5.93962 10.8628C5.94695 10.8785 5.95779 10.892 5.97121 10.9023C5.98463 10.9125 6.00023 10.9192 6.01666 10.9217L7.91228 11.2108C7.93118 11.2137 7.94893 11.222 7.96354 11.2349C7.97814 11.2478 7.98902 11.2648 7.99495 11.2838C8.00087 11.3029 8.0016 11.3233 7.99706 11.3428C7.99252 11.3622 7.98288 11.38 7.96924 11.394L6.59731 12.7975C6.58536 12.8097 6.57643 12.8247 6.57129 12.8414C6.56615 12.858 6.56495 12.8757 6.5678 12.893L6.89153 14.8745C6.89467 14.8942 6.89251 14.9144 6.8853 14.9329C6.87809 14.9514 6.86611 14.9675 6.8507 14.9792C6.8353 14.991 6.81707 14.998 6.79808 14.9995C6.77909 15.0009 6.76008 14.9968 6.74319 14.9876L5.04753 14.0521C5.03287 14.044 5.01656 14.0398 5 14.0398C4.98344 14.0398 4.96713 14.044 4.95247 14.0521L3.25681 14.9876C3.23991 14.997 3.22085 15.0012 3.20179 14.9997C3.18273 14.9983 3.16443 14.9913 3.14896 14.9795C3.13348 14.9678 3.12145 14.9517 3.11423 14.9331C3.107 14.9146 3.10487 14.8943 3.10806 14.8745L3.43178 12.893C3.43469 12.8758 3.43356 12.8581 3.42849 12.8414C3.42342 12.8248 3.41456 12.8097 3.40269 12.7975L2.03076 11.394C2.01712 11.38 2.00748 11.3622 2.00294 11.3428C1.9984 11.3233 1.99913 11.3029 2.00505 11.2838C2.01098 11.2648 2.02185 11.2478 2.03646 11.2349C2.05107 11.222 2.06882 11.2137 2.08772 11.2108L3.98334 10.9217C3.99977 10.9192 4.01537 10.9125 4.02879 10.9023C4.04221 10.892 4.05305 10.8785 4.06038 10.8628L4.90821 9.05978Z" }),
+  /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(import_primitives56.Path, { d: "M11.9082 9.05978C11.9167 9.04183 11.9298 9.02672 11.946 9.01616C11.9622 9.0056 11.9809 9 12 9C12.0191 9 12.0378 9.0056 12.054 9.01616C12.0702 9.02672 12.0833 9.04183 12.0918 9.05978L12.9396 10.8628C12.9469 10.8785 12.9578 10.892 12.9712 10.9023C12.9846 10.9125 13.0002 10.9192 13.0167 10.9217L14.9123 11.2108C14.9312 11.2137 14.9489 11.222 14.9635 11.2349C14.9781 11.2478 14.989 11.2648 14.9949 11.2838C15.0009 11.3029 15.0016 11.3233 14.9971 11.3428C14.9925 11.3622 14.9829 11.38 14.9692 11.394L13.5973 12.7975C13.5854 12.8097 13.5764 12.8247 13.5713 12.8414C13.5661 12.858 13.565 12.8757 13.5678 12.893L13.8915 14.8745C13.8947 14.8942 13.8925 14.9144 13.8853 14.9329C13.8781 14.9514 13.8661 14.9675 13.8507 14.9792C13.8353 14.991 13.8171 14.998 13.7981 14.9995C13.7791 15.0009 13.7601 14.9968 13.7432 14.9876L12.0475 14.0521C12.0329 14.044 12.0166 14.0398 12 14.0398C11.9834 14.0398 11.9671 14.044 11.9525 14.0521L10.2568 14.9876C10.2399 14.997 10.2208 15.0012 10.2018 14.9997C10.1827 14.9983 10.1644 14.9913 10.149 14.9795C10.1335 14.9678 10.1215 14.9517 10.1142 14.9331C10.107 14.9146 10.1049 14.8943 10.1081 14.8745L10.4318 12.893C10.4347 12.8758 10.4336 12.8581 10.4285 12.8414C10.4234 12.8248 10.4146 12.8097 10.4027 12.7975L9.03076 11.394C9.01712 11.38 9.00748 11.3622 9.00294 11.3428C8.9984 11.3233 8.99913 11.3029 9.00505 11.2838C9.01098 11.2648 9.02185 11.2478 9.03646 11.2349C9.05107 11.222 9.06882 11.2137 9.08772 11.2108L10.9833 10.9217C10.9998 10.9192 11.0154 10.9125 11.0288 10.9023C11.0422 10.892 11.0531 10.8785 11.0604 10.8628L11.9082 9.05978Z" }),
+  /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(
     import_primitives56.Path,
     {
       fillRule: "evenodd",
@@ -38977,26 +38969,26 @@ var icon_default9 = {
 
 // src/blocks/field-select/icon.jsx
 var import_primitives57 = __toESM(require_primitives(), 1);
-var import_jsx_runtime189 = __toESM(require_jsx_runtime(), 1);
-var icon9 = /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(import_primitives57.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(import_primitives57.Path, { d: "M5 4.5H19C19.2761 4.5 19.5 4.72386 19.5 5V19C19.5 19.2761 19.2761 19.5 19 19.5H5C4.72386 19.5 4.5 19.2761 4.5 19V5C4.5 4.72386 4.72386 4.5 5 4.5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM8.93582 10.1396L8.06396 11.3602L11.9999 14.1716L15.9358 11.3602L15.064 10.1396L11.9999 12.3283L8.93582 10.1396Z" }) });
+var import_jsx_runtime188 = __toESM(require_jsx_runtime(), 1);
+var icon9 = /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(import_primitives57.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(import_primitives57.Path, { d: "M5 4.5H19C19.2761 4.5 19.5 4.72386 19.5 5V19C19.5 19.2761 19.2761 19.5 19 19.5H5C4.72386 19.5 4.5 19.2761 4.5 19V5C4.5 4.72386 4.72386 4.5 5 4.5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM8.93582 10.1396L8.06396 11.3602L11.9999 14.1716L15.9358 11.3602L15.064 10.1396L11.9999 12.3283L8.93582 10.1396Z" }) });
 var icon_default10 = {
   src: icon9
 };
 
 // src/blocks/field-single-choice/icon.jsx
 var import_primitives58 = __toESM(require_primitives(), 1);
-var import_jsx_runtime190 = __toESM(require_jsx_runtime(), 1);
-var icon10 = /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(import_primitives58.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(import_primitives58.Path, { d: "M4 7.75C4 9.40685 5.34315 10.75 7 10.75C8.65685 10.75 10 9.40685 10 7.75C10 6.09315 8.65685 4.75 7 4.75C5.34315 4.75 4 6.09315 4 7.75ZM20 8.5H12V7H20V8.5ZM20 17H12V15.5H20V17ZM7 17.75C6.17157 17.75 5.5 17.0784 5.5 16.25C5.5 15.4216 6.17157 14.75 7 14.75C7.82843 14.75 8.5 15.4216 8.5 16.25C8.5 17.0784 7.82843 17.75 7 17.75ZM4 16.25C4 17.9069 5.34315 19.25 7 19.25C8.65685 19.25 10 17.9069 10 16.25C10 14.5931 8.65685 13.25 7 13.25C5.34315 13.25 4 14.5931 4 16.25Z" }) });
+var import_jsx_runtime189 = __toESM(require_jsx_runtime(), 1);
+var icon10 = /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(import_primitives58.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(import_primitives58.Path, { d: "M4 7.75C4 9.40685 5.34315 10.75 7 10.75C8.65685 10.75 10 9.40685 10 7.75C10 6.09315 8.65685 4.75 7 4.75C5.34315 4.75 4 6.09315 4 7.75ZM20 8.5H12V7H20V8.5ZM20 17H12V15.5H20V17ZM7 17.75C6.17157 17.75 5.5 17.0784 5.5 16.25C5.5 15.4216 6.17157 14.75 7 14.75C7.82843 14.75 8.5 15.4216 8.5 16.25C8.5 17.0784 7.82843 17.75 7 17.75ZM4 16.25C4 17.9069 5.34315 19.25 7 19.25C8.65685 19.25 10 17.9069 10 16.25C10 14.5931 8.65685 13.25 7 13.25C5.34315 13.25 4 14.5931 4 16.25Z" }) });
 var icon_default11 = {
   src: icon10
 };
 
 // src/blocks/field-slider/icon.jsx
 var import_primitives59 = __toESM(require_primitives(), 1);
-var import_jsx_runtime191 = __toESM(require_jsx_runtime(), 1);
-var icon11 = /* @__PURE__ */ (0, import_jsx_runtime191.jsxs)(import_primitives59.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "none", children: [
-  /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(import_primitives59.Line, { x1: "4", y1: "12", x2: "20", y2: "12", stroke: "currentColor", strokeWidth: "2" }),
-  /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(import_primitives59.Circle, { cx: "12", cy: "12", r: "2", fill: "currentColor" })
+var import_jsx_runtime190 = __toESM(require_jsx_runtime(), 1);
+var icon11 = /* @__PURE__ */ (0, import_jsx_runtime190.jsxs)(import_primitives59.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(import_primitives59.Line, { x1: "4", y1: "12", x2: "20", y2: "12", stroke: "currentColor", strokeWidth: "2" }),
+  /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(import_primitives59.Circle, { cx: "12", cy: "12", r: "2", fill: "currentColor" })
 ] });
 var icon_default12 = {
   src: icon11
@@ -39004,24 +38996,24 @@ var icon_default12 = {
 
 // src/blocks/field-text/icon.jsx
 var import_primitives60 = __toESM(require_primitives(), 1);
-var import_jsx_runtime192 = __toESM(require_jsx_runtime(), 1);
-var icon12 = /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_primitives60.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_primitives60.Path, { d: "M12 7H4V8.5H12V7ZM19.75 17.25V10.75H4.25V17.25H19.75ZM5.75 15.75V12.25H18.25V15.75H5.75Z" }) });
+var import_jsx_runtime191 = __toESM(require_jsx_runtime(), 1);
+var icon12 = /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(import_primitives60.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(import_primitives60.Path, { d: "M12 7H4V8.5H12V7ZM19.75 17.25V10.75H4.25V17.25H19.75ZM5.75 15.75V12.25H18.25V15.75H5.75Z" }) });
 var icon_default13 = {
   src: icon12
 };
 
 // src/blocks/field-textarea/icon.jsx
 var import_primitives61 = __toESM(require_primitives(), 1);
-var import_jsx_runtime193 = __toESM(require_jsx_runtime(), 1);
-var icon13 = /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(import_primitives61.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(import_primitives61.Path, { d: "M20 5H4V6.5H20V5ZM5.5 11.5H18.5V18.5H5.5V11.5ZM20 20V10H4V20H20Z" }) });
+var import_jsx_runtime192 = __toESM(require_jsx_runtime(), 1);
+var icon13 = /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_primitives61.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_primitives61.Path, { d: "M20 5H4V6.5H20V5ZM5.5 11.5H18.5V18.5H5.5V11.5ZM20 20V10H4V20H20Z" }) });
 var icon_default14 = {
   src: icon13
 };
 
 // src/blocks/field-time/icon.jsx
 var import_primitives62 = __toESM(require_primitives(), 1);
-var import_jsx_runtime194 = __toESM(require_jsx_runtime(), 1);
-var icon14 = /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(import_primitives62.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(
+var import_jsx_runtime193 = __toESM(require_jsx_runtime(), 1);
+var icon14 = /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(import_primitives62.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(
   import_primitives62.Path,
   {
     fillRule: "evenodd",
@@ -39057,13 +39049,13 @@ var fieldIcons = {
 };
 
 // src/dashboard/components/inspector/response-fields/field-phone/index.tsx
-var import_element93 = __toESM(require_element(), 1);
-var import_jsx_runtime195 = __toESM(require_jsx_runtime(), 1);
+var import_element92 = __toESM(require_element(), 1);
+var import_jsx_runtime194 = __toESM(require_jsx_runtime(), 1);
 var FieldPhone = ({ phone }) => {
-  const [displayInfo, setDisplayInfo] = (0, import_element93.useState)({
+  const [displayInfo, setDisplayInfo] = (0, import_element92.useState)({
     formattedNumber: phone
   });
-  (0, import_element93.useEffect)(() => {
+  (0, import_element92.useEffect)(() => {
     let cancelled = false;
     setDisplayInfo({ formattedNumber: phone, countryCode: void 0 });
     const formatPhone = async () => {
@@ -39088,16 +39080,16 @@ var FieldPhone = ({ phone }) => {
     };
   }, [phone]);
   const { formattedNumber, countryCode } = displayInfo;
-  return /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(TextWithFlag, { countryCode, children: /* @__PURE__ */ (0, import_jsx_runtime195.jsx)("a", { href: `tel:${phone}`, children: formattedNumber }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(TextWithFlag, { countryCode, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("a", { href: `tel:${phone}`, children: formattedNumber }) });
 };
 var field_phone_default = FieldPhone;
 
 // src/dashboard/components/inspector/response-fields/field-rating/index.tsx
-var import_components85 = __toESM(require_components(), 1);
-var import_i18n87 = __toESM(require_i18n(), 1);
+var import_components84 = __toESM(require_components(), 1);
+var import_i18n86 = __toESM(require_i18n(), 1);
 
 // src/blocks/field-rating/rating-icon.jsx
-var import_components84 = __toESM(require_components(), 1);
+var import_components83 = __toESM(require_components(), 1);
 
 // src/blocks/field-rating/rating-icons.js
 var MAX_RATING_ICONS = 10;
@@ -39107,7 +39099,7 @@ var RATING_ICONS = {
 };
 
 // src/blocks/field-rating/rating-icon.jsx
-var import_jsx_runtime196 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime195 = __toESM(require_jsx_runtime(), 1);
 var RatingIcon = ({
   iconStyle,
   strokeColor = "currentColor",
@@ -39115,8 +39107,8 @@ var RatingIcon = ({
   strokeWidth = 2
 }) => {
   const iconPath = RATING_ICONS[iconStyle] || RATING_ICONS.stars;
-  return /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(import_components84.SVG, { className: "jetpack-field-rating__icon", viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
-    import_components84.Path,
+  return /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.SVG, { className: "jetpack-field-rating__icon", viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(
+    import_components83.Path,
     {
       d: iconPath,
       fill: fillColor,
@@ -39128,7 +39120,7 @@ var RatingIcon = ({
 };
 
 // src/dashboard/components/inspector/response-fields/field-rating/index.tsx
-var import_jsx_runtime197 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime196 = __toESM(require_jsx_runtime(), 1);
 var FieldRating = ({ value }) => {
   const stringValue = value != null ? String(value) : "";
   if (stringValue.trim() === "") {
@@ -39153,15 +39145,15 @@ var FieldRating = ({ value }) => {
   }
   const clampedMax = Math.min(parsedMax, MAX_RATING_ICONS);
   const displayRating = Math.min(Math.max(0, parsedRating), clampedMax);
-  const ratingLabel = (0, import_i18n87.sprintf)(
+  const ratingLabel = (0, import_i18n86.sprintf)(
     /* translators: 1: rating value, 2: maximum rating (e.g. "4" and "5" for "4 out of 5") */
-    (0, import_i18n87.__)("Rating %1$s out of %2$s", "jetpack-forms"),
+    (0, import_i18n86.__)("Rating %1$s out of %2$s", "jetpack-forms"),
     String(displayRating),
     String(clampedMax)
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)(import_jsx_runtime197.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.VisuallyHidden, { as: "span", children: ratingLabel }),
-    /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.__experimentalHStack, { spacing: "1", alignment: "topLeft", children: Array.from({ length: clampedMax }, (_, index) => /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("span", { style: { flex: "0 0 24px" }, children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)(import_jsx_runtime196.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(import_components84.VisuallyHidden, { as: "span", children: ratingLabel }),
+    /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(import_components84.__experimentalHStack, { spacing: "1", alignment: "topLeft", children: Array.from({ length: clampedMax }, (_, index) => /* @__PURE__ */ (0, import_jsx_runtime196.jsx)("span", { style: { flex: "0 0 24px" }, children: /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
       RatingIcon,
       {
         iconStyle: "stars",
@@ -39221,9 +39213,9 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-fields/field-preview/index.tsx
-var import_jsx_runtime198 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime197 = __toESM(require_jsx_runtime(), 1);
 var getFieldIcon = (fieldType) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(import_components86.Icon, { icon: fieldIcons[fieldType] ?? fieldIcons.text });
+  return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Icon, { icon: fieldIcons[fieldType] ?? fieldIcons.text });
 };
 var BADGED_VALUE_FIELDS = ["consent", "checkbox", "radio", "select"];
 var FieldPreview = ({ field, onFilePreview }) => {
@@ -39234,14 +39226,14 @@ var FieldPreview = ({ field, onFilePreview }) => {
   const renderFieldValue = () => {
     if (fieldType === "image-select") {
       const choices = value?.choices;
-      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(field_image_select_default, { choices, handleFilePreview: onFilePreview });
+      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(field_image_select_default, { choices, handleFilePreview: onFilePreview });
     }
     if (fieldType === "file") {
       const files = value?.files;
-      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(field_file_default, { files, handleFilePreview: onFilePreview });
+      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(field_file_default, { files, handleFilePreview: onFilePreview });
     }
     if (fieldType === "checkbox-multiple" && Array.isArray(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(import_components86.__experimentalVStack, { spacing: "2", alignment: "topLeft", children: value.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(Badge, { children: item }, index)) });
+      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.__experimentalVStack, { spacing: "2", alignment: "topLeft", children: value.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(Badge, { children: item }, index)) });
     }
     if (value === null || value === void 0) {
       return "-";
@@ -39257,36 +39249,36 @@ var FieldPreview = ({ field, onFilePreview }) => {
       return "-";
     }
     if (BADGED_VALUE_FIELDS.includes(fieldType)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(Badge, { children: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(Badge, { children: stringValue });
     }
     if (fieldType === "number") {
       return formatNumber2(Number(stringValue));
     }
     if (fieldType === "email" && EMAIL_REGEX.test(stringValue)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(field_email_default, { email: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(field_email_default, { email: stringValue });
     }
     if (fieldType === "phone" || fieldType === "telephone") {
-      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(field_phone_default, { phone: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(field_phone_default, { phone: stringValue });
     }
     if (fieldType === "url" && /^https?:\/\//.test(stringValue)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(import_components86.ExternalLink, { href: stringValue, children: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.ExternalLink, { href: stringValue, children: stringValue });
     }
     if (fieldType === "rating") {
-      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(field_rating_default, { value: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(field_rating_default, { value: stringValue });
     }
     return stringValue;
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)(
-    import_components86.__experimentalHStack,
+  return /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)(
+    import_components85.__experimentalHStack,
     {
       alignment: "topLeft",
       spacing: "4",
       className: `jp-forms__field-preview ${typeClassName}`,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("div", { className: "jp-forms__field-preview-icon", children: icon15 }),
-        /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)(import_components86.__experimentalVStack, { spacing: "0", className: "jp-forms__field-preview-content", children: [
-          label && /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("div", { className: "jp-forms__field-preview-label", children: label }),
-          /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("div", { className: "jp-forms__field-preview-value", children: renderFieldValue() })
+        /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__field-preview-icon", children: icon15 }),
+        /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)(import_components85.__experimentalVStack, { spacing: "0", className: "jp-forms__field-preview-content", children: [
+          label && /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__field-preview-label", children: label }),
+          /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__field-preview-value", children: renderFieldValue() })
         ] })
       ]
     }
@@ -39295,7 +39287,7 @@ var FieldPreview = ({ field, onFilePreview }) => {
 var field_preview_default = FieldPreview;
 
 // src/dashboard/components/inspector/response-fields/index.tsx
-var import_jsx_runtime199 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime198 = __toESM(require_jsx_runtime(), 1);
 var ResponseFieldsIterator = ({
   fields,
   onFilePreview
@@ -39306,7 +39298,7 @@ var ResponseFieldsIterator = ({
   });
   const renderFieldValue = (value) => {
     if (isImageSelectField(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(
         field_image_select_default,
         {
           choices: value.choices,
@@ -39316,34 +39308,34 @@ var ResponseFieldsIterator = ({
     }
     if (isFileUploadField(value)) {
       const fileValue = value;
-      return /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(field_file_default, { files: fileValue.files, handleFilePreview: onFilePreview });
+      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(field_file_default, { files: fileValue.files, handleFilePreview: onFilePreview });
     }
     const emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     if (typeof value === "string" && emailRegEx.test(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(field_email_default, { email: value });
+      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(field_email_default, { email: value });
     }
     if (isLikelyPhoneNumber(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("a", { href: `tel:${value}`, children: String(value) });
+      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("a", { href: `tel:${value}`, children: String(value) });
     }
     return value;
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("div", { className: rootClass, children: [
-    fields && !fieldsAreNewFormat && Object.entries(fields).map(([key, value]) => /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("div", { className: "jp-forms__inbox-response-item", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("div", { className: "jp-forms__inbox-response-data-label", children: key.endsWith("?") ? key : `${key}:` }),
-      /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("div", { className: "jp-forms__inbox-response-data-value", children: renderFieldValue(value) })
+  return /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)("div", { className: rootClass, children: [
+    fields && !fieldsAreNewFormat && Object.entries(fields).map(([key, value]) => /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)("div", { className: "jp-forms__inbox-response-item", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("div", { className: "jp-forms__inbox-response-data-label", children: key.endsWith("?") ? key : `${key}:` }),
+      /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("div", { className: "jp-forms__inbox-response-data-value", children: renderFieldValue(value) })
     ] }, key)),
     fields && fieldsAreNewFormat && (Array.isArray(fields) ? fields : Object.values(fields)).map(
-      (field) => /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(field_preview_default, { field, onFilePreview }, field.key)
+      (field) => /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(field_preview_default, { field, onFilePreview }, field.key)
     )
   ] });
 };
 var response_fields_default = ResponseFieldsIterator;
 
 // src/dashboard/components/inspector/response-meta/index.tsx
-var import_components87 = __toESM(require_components(), 1);
+var import_components86 = __toESM(require_components(), 1);
 var import_date12 = __toESM(require_date(), 1);
 var import_html_entities8 = __toESM(require_html_entities(), 1);
-var import_i18n88 = __toESM(require_i18n(), 1);
+var import_i18n87 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/inspector/response-meta/style.scss
 if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='67b6bdb86c']")) {
@@ -39354,7 +39346,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-meta/index.tsx
-var import_jsx_runtime200 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime199 = __toESM(require_jsx_runtime(), 1);
 var getDisplayName = (response) => {
   const { author_name, author_email, author_url, ip } = response;
   return (0, import_html_entities8.decodeEntities)(author_name || author_email || author_url || ip);
@@ -39365,9 +39357,9 @@ var ResponseMeta = ({ response }) => {
   const defaultImage = response.author_name || response.author_email ? "initials" : "mp";
   const responseAuthorEmailParts = response.author_email?.split("@") ?? [];
   const dateSettings = (0, import_date12.getSettings)();
-  return /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)("div", { className: "jp-forms__inbox-response-meta", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(import_components87.__experimentalHStack, { alignment: "topLeft", spacing: "3", wrap: false, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("div", { className: "jp-forms__inbox-response-meta", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)(import_components86.__experimentalHStack, { alignment: "topLeft", spacing: "3", wrap: false, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(
         Gravatar,
         {
           email: gravatarEmail,
@@ -39376,9 +39368,9 @@ var ResponseMeta = ({ response }) => {
         },
         gravatarEmail
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(import_components87.__experimentalVStack, { spacing: "0", className: "jp-forms__inbox-response-meta-from", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(
-          import_components87.__experimentalText,
+      /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)(import_components86.__experimentalVStack, { spacing: "0", className: "jp-forms__inbox-response-meta-from", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(
+          import_components86.__experimentalText,
           {
             className: "jp-forms__inbox-response-meta-from-name",
             lineHeight: "20px",
@@ -39387,15 +39379,15 @@ var ResponseMeta = ({ response }) => {
             children: displayName
           }
         ),
-        response.author_email && displayName !== response.author_email && /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(
-          import_components87.__experimentalHStack,
+        response.author_email && displayName !== response.author_email && /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)(
+          import_components86.__experimentalHStack,
           {
             alignment: "center",
             className: "jp-forms__inbox-response-meta-from-email",
             justify: "start",
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(
-                import_components87.__experimentalText,
+              /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)(
+                import_components86.__experimentalText,
                 {
                   as: "a",
                   href: `mailto:${response.author_email}`,
@@ -39405,37 +39397,37 @@ var ResponseMeta = ({ response }) => {
                   weight: "400",
                   children: [
                     responseAuthorEmailParts[0],
-                    /* @__PURE__ */ (0, import_jsx_runtime200.jsx)("wbr", {}),
+                    /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("wbr", {}),
                     "@",
                     responseAuthorEmailParts[1]
                   ]
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(CopyClipboardButton, { text: response.author_email })
+              /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(CopyClipboardButton, { text: response.author_email })
             ]
           }
         )
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime200.jsx)("table", { className: "jp-forms__inbox-response-meta-table", children: /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)("tbody", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime200.jsx)("th", { children: (0, import_i18n88.__)("Date:", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime200.jsx)("td", { children: (0, import_date12.dateI18n)(dateSettings.formats.datetime, response.date) })
+    /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("table", { className: "jp-forms__inbox-response-meta-table", children: /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("tbody", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("th", { children: (0, import_i18n87.__)("Date:", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("td", { children: (0, import_date12.dateI18n)(dateSettings.formats.datetime, response.date) })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime200.jsx)("th", { children: (0, import_i18n88.__)("Source:", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)("td", { children: [
-          response.entry_permalink && /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities8.decodeEntities)(response.entry_title) || getPath(response) }),
+      /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("th", { children: (0, import_i18n87.__)("Source:", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("td", { children: [
+          response.entry_permalink && /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(import_components86.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities8.decodeEntities)(response.entry_title) || getPath(response) }),
           !response.entry_permalink && (0, import_html_entities8.decodeEntities)(response.entry_title)
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)("th", { children: [
-          (0, import_i18n88.__)("IP address:", "jetpack-forms"),
+      /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("th", { children: [
+          (0, import_i18n87.__)("IP address:", "jetpack-forms"),
           "\xA0"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime200.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(TextWithFlag, { countryCode: response.country_code, children: /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Tooltip, { text: (0, import_i18n88.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(
-          import_components87.ExternalLink,
+        /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(TextWithFlag, { countryCode: response.country_code, children: /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(import_components86.Tooltip, { text: (0, import_i18n87.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(
+          import_components86.ExternalLink,
           {
             href: `https://apps.db.ripe.net/db-web-ui/query?searchtext=${encodeURIComponent(
               response.ip
@@ -39444,12 +39436,12 @@ var ResponseMeta = ({ response }) => {
           }
         ) }) }) })
       ] }),
-      response.browser && /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)("th", { children: [
-          (0, import_i18n88.__)("Browser:", "jetpack-forms"),
+      response.browser && /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("th", { children: [
+          (0, import_i18n87.__)("Browser:", "jetpack-forms"),
           "\xA0"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime200.jsx)("td", { children: response.browser })
+        /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("td", { children: response.browser })
       ] })
     ] }) })
   ] });
@@ -39457,18 +39449,18 @@ var ResponseMeta = ({ response }) => {
 var response_meta_default = ResponseMeta;
 
 // routes/responses/response/actions.tsx
-var import_components88 = __toESM(require_components());
+var import_components87 = __toESM(require_components());
 var import_data33 = __toESM(require_data());
-var import_element94 = __toESM(require_element());
-var import_i18n89 = __toESM(require_i18n());
-import { useSearch as useSearch3, useNavigate as useNavigate5 } from "@wordpress/route";
-var import_jsx_runtime201 = __toESM(require_jsx_runtime());
+var import_element93 = __toESM(require_element());
+var import_i18n88 = __toESM(require_i18n());
+import { useSearch as useSearch3, useNavigate as useNavigate4 } from "@wordpress/route";
+var import_jsx_runtime200 = __toESM(require_jsx_runtime());
 function ResponseActions({
   response,
   onActionComplete
 }) {
   const searchParams = useSearch3({ from: "/responses/$view" });
-  const navigate = useNavigate5();
+  const navigate = useNavigate4();
   const {
     markAsSpamAction,
     markAsNotSpamAction,
@@ -39477,72 +39469,72 @@ function ResponseActions({
     deleteAction,
     markAsReadAction,
     markAsUnreadAction
-  } = (0, import_element94.useMemo)(
+  } = (0, import_element93.useMemo)(
     () => getActions({
       navigate,
       searchParams
     }),
     [navigate, searchParams]
   );
-  const [isMarkingAsSpam, setIsMarkingAsSpam] = (0, import_element94.useState)(false);
-  const [isMarkingAsNotSpam, setIsMarkingAsNotSpam] = (0, import_element94.useState)(false);
-  const [isMovingToTrash, setIsMovingToTrash] = (0, import_element94.useState)(false);
-  const [isRestoring, setIsRestoring] = (0, import_element94.useState)(false);
-  const [isDeleting, setIsDeleting] = (0, import_element94.useState)(false);
-  const [isTogglingReadStatus, setIsTogglingReadStatus] = (0, import_element94.useState)(false);
+  const [isMarkingAsSpam, setIsMarkingAsSpam] = (0, import_element93.useState)(false);
+  const [isMarkingAsNotSpam, setIsMarkingAsNotSpam] = (0, import_element93.useState)(false);
+  const [isMovingToTrash, setIsMovingToTrash] = (0, import_element93.useState)(false);
+  const [isRestoring, setIsRestoring] = (0, import_element93.useState)(false);
+  const [isDeleting, setIsDeleting] = (0, import_element93.useState)(false);
+  const [isTogglingReadStatus, setIsTogglingReadStatus] = (0, import_element93.useState)(false);
   const registry = (0, import_data33.useRegistry)();
-  const handleMarkAsSpam = (0, import_element94.useCallback)(async () => {
+  const handleMarkAsSpam = (0, import_element93.useCallback)(async () => {
     onActionComplete?.(response);
     setIsMarkingAsSpam(true);
     await markAsSpamAction.callback?.([response], { registry });
     setIsMarkingAsSpam(false);
   }, [onActionComplete, response, markAsSpamAction, registry]);
-  const handleMarkAsNotSpam = (0, import_element94.useCallback)(async () => {
+  const handleMarkAsNotSpam = (0, import_element93.useCallback)(async () => {
     onActionComplete?.(response);
     setIsMarkingAsNotSpam(true);
     await markAsNotSpamAction?.callback?.([response], { registry });
     setIsMarkingAsNotSpam(false);
   }, [onActionComplete, response, markAsNotSpamAction, registry]);
-  const handleMoveToTrash = (0, import_element94.useCallback)(async () => {
+  const handleMoveToTrash = (0, import_element93.useCallback)(async () => {
     onActionComplete?.(response);
     setIsMovingToTrash(true);
     await moveToTrashAction?.callback?.([response], { registry });
     setIsMovingToTrash(false);
   }, [onActionComplete, response, moveToTrashAction, registry]);
-  const handleRestore = (0, import_element94.useCallback)(async () => {
+  const handleRestore = (0, import_element93.useCallback)(async () => {
     onActionComplete?.(response);
     setIsRestoring(true);
     await restoreAction?.callback?.([response], { registry });
     setIsRestoring(false);
   }, [onActionComplete, response, restoreAction, registry]);
-  const handleDelete = (0, import_element94.useCallback)(async () => {
+  const handleDelete = (0, import_element93.useCallback)(async () => {
     onActionComplete?.(response);
     setIsDeleting(true);
     await deleteAction?.callback?.([response], { registry });
     setIsDeleting(false);
   }, [onActionComplete, response, deleteAction, registry]);
-  const handleMarkAsRead = (0, import_element94.useCallback)(async () => {
+  const handleMarkAsRead = (0, import_element93.useCallback)(async () => {
     setIsTogglingReadStatus(true);
     await markAsReadAction?.callback?.([response], { registry });
     setIsTogglingReadStatus(false);
     onActionComplete?.({ ...response, is_unread: false });
   }, [onActionComplete, response, markAsReadAction, registry]);
-  const handleMarkAsUnread = (0, import_element94.useCallback)(async () => {
+  const handleMarkAsUnread = (0, import_element93.useCallback)(async () => {
     setIsTogglingReadStatus(true);
     await markAsUnreadAction?.callback?.([response], { registry });
     setIsTogglingReadStatus(false);
     onActionComplete?.({ ...response, is_unread: true });
   }, [onActionComplete, response, markAsUnreadAction, registry]);
-  const readUnreadButtons = /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(import_jsx_runtime201.Fragment, { children: [
-    response.is_unread && /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { isBusy: isTogglingReadStatus, onClick: handleMarkAsRead, size: "compact", children: (0, import_i18n89.__)("Mark as read", "jetpack-forms") }),
-    !response.is_unread && /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { isBusy: isTogglingReadStatus, onClick: handleMarkAsUnread, size: "compact", children: (0, import_i18n89.__)("Mark as unread", "jetpack-forms") })
+  const readUnreadButtons = /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(import_jsx_runtime200.Fragment, { children: [
+    response.is_unread && /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Button, { isBusy: isTogglingReadStatus, onClick: handleMarkAsRead, size: "compact", children: (0, import_i18n88.__)("Mark as read", "jetpack-forms") }),
+    !response.is_unread && /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Button, { isBusy: isTogglingReadStatus, onClick: handleMarkAsUnread, size: "compact", children: (0, import_i18n88.__)("Mark as unread", "jetpack-forms") })
   ] });
-  const trashButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { isBusy: isMovingToTrash, onClick: handleMoveToTrash, size: "compact", children: (0, import_i18n89.__)("Trash", "jetpack-forms") });
-  const spamButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { isBusy: isMarkingAsSpam, onClick: handleMarkAsSpam, size: "compact", children: (0, import_i18n89.__)("Spam", "jetpack-forms") });
-  const notSpamButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { isBusy: isMarkingAsNotSpam, onClick: handleMarkAsNotSpam, size: "compact", children: (0, import_i18n89.__)("Not spam", "jetpack-forms") });
-  const deleteButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { isBusy: isDeleting, onClick: handleDelete, size: "compact", children: (0, import_i18n89.__)("Delete", "jetpack-forms") });
-  const restoreButton = /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components88.Button, { isBusy: isRestoring, onClick: handleRestore, size: "compact", children: (0, import_i18n89.__)("Restore", "jetpack-forms") });
-  return /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(
+  const trashButton = /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Button, { isBusy: isMovingToTrash, onClick: handleMoveToTrash, size: "compact", children: (0, import_i18n88.__)("Trash", "jetpack-forms") });
+  const spamButton = /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Button, { isBusy: isMarkingAsSpam, onClick: handleMarkAsSpam, size: "compact", children: (0, import_i18n88.__)("Spam", "jetpack-forms") });
+  const notSpamButton = /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Button, { isBusy: isMarkingAsNotSpam, onClick: handleMarkAsNotSpam, size: "compact", children: (0, import_i18n88.__)("Not spam", "jetpack-forms") });
+  const deleteButton = /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Button, { isBusy: isDeleting, onClick: handleDelete, size: "compact", children: (0, import_i18n88.__)("Delete", "jetpack-forms") });
+  const restoreButton = /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Button, { isBusy: isRestoring, onClick: handleRestore, size: "compact", children: (0, import_i18n88.__)("Restore", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(
     Stack,
     {
       direction: "row",
@@ -39551,17 +39543,17 @@ function ResponseActions({
       wrap: "wrap",
       className: "jp-forms-response-header-actions",
       children: [
-        response.status === "publish" && /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(import_jsx_runtime201.Fragment, { children: [
+        response.status === "publish" && /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(import_jsx_runtime200.Fragment, { children: [
           readUnreadButtons,
           spamButton,
           trashButton
         ] }),
-        response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(import_jsx_runtime201.Fragment, { children: [
+        response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(import_jsx_runtime200.Fragment, { children: [
           readUnreadButtons,
           restoreButton,
           deleteButton
         ] }),
-        response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(import_jsx_runtime201.Fragment, { children: [
+        response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(import_jsx_runtime200.Fragment, { children: [
           readUnreadButtons,
           notSpamButton,
           trashButton
@@ -39572,9 +39564,9 @@ function ResponseActions({
 }
 
 // routes/responses/response/navigation.tsx
-var import_components89 = __toESM(require_components());
-var import_i18n90 = __toESM(require_i18n());
-var import_jsx_runtime202 = __toESM(require_jsx_runtime());
+var import_components88 = __toESM(require_components());
+var import_i18n89 = __toESM(require_i18n());
+var import_jsx_runtime201 = __toESM(require_jsx_runtime());
 function ResponseNavigation({
   hasNext,
   hasPrevious,
@@ -39588,28 +39580,28 @@ function ResponseNavigation({
     showTooltip: true,
     size: "compact"
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime202.jsxs)(Stack, { direction: "row", gap: "xs", justify: "end", style: { flexShrink: 0 }, wrap: "wrap", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(
-      import_components89.Button,
+  return /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(Stack, { direction: "row", gap: "xs", justify: "end", style: { flexShrink: 0 }, wrap: "wrap", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(
+      import_components88.Button,
       {
         ...sharedProps,
         disabled: !hasPrevious,
         icon: chevron_up_default,
-        label: (0, import_i18n90.__)("Previous", "jetpack-forms"),
+        label: (0, import_i18n89.__)("Previous", "jetpack-forms"),
         onClick: onPrevious
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(
-      import_components89.Button,
+    /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(
+      import_components88.Button,
       {
         ...sharedProps,
         disabled: !hasNext,
         icon: chevron_down_default,
-        label: (0, import_i18n90.__)("Next", "jetpack-forms"),
+        label: (0, import_i18n89.__)("Next", "jetpack-forms"),
         onClick: onNext
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(
       "span",
       {
         style: {
@@ -39622,13 +39614,13 @@ function ResponseNavigation({
         }
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(
-      import_components89.Button,
+    /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(
+      import_components88.Button,
       {
         ...sharedProps,
         iconSize: 20,
         icon: close_default,
-        label: (0, import_i18n90.__)("Close", "jetpack-forms"),
+        label: (0, import_i18n89.__)("Close", "jetpack-forms"),
         onClick: onClose
       }
     )
@@ -39644,16 +39636,16 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // routes/responses/response/index.tsx
-var import_jsx_runtime203 = __toESM(require_jsx_runtime());
+var import_jsx_runtime202 = __toESM(require_jsx_runtime());
 function SingleResponseView({
   responseId,
   allResponseIds,
   onNavigate,
   onClose
 }) {
-  const [previewFile, setPreviewFile] = (0, import_element95.useState)(null);
-  const [isImageLoading, setIsImageLoading] = (0, import_element95.useState)(true);
-  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element95.useState)(null);
+  const [previewFile, setPreviewFile] = (0, import_element94.useState)(null);
+  const [isImageLoading, setIsImageLoading] = (0, import_element94.useState)(true);
+  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element94.useState)(null);
   const emptyTrashDays = useConfigValue("emptyTrashDays") ?? 0;
   const isNotesEnabled = useConfigValue("isNotesEnabled") ?? false;
   const { editEntityRecord } = (0, import_data34.useDispatch)(import_core_data9.store);
@@ -39679,17 +39671,17 @@ function SingleResponseView({
   const currentIndex = allResponseIds.indexOf(responseId);
   const hasNext = currentIndex < allResponseIds.length - 1;
   const hasPrevious = currentIndex > 0;
-  const handleNext = (0, import_element95.useCallback)(() => {
+  const handleNext = (0, import_element94.useCallback)(() => {
     if (hasNext) {
       onNavigate(allResponseIds[currentIndex + 1]);
     }
   }, [hasNext, allResponseIds, currentIndex, onNavigate]);
-  const handlePrevious = (0, import_element95.useCallback)(() => {
+  const handlePrevious = (0, import_element94.useCallback)(() => {
     if (hasPrevious) {
       onNavigate(allResponseIds[currentIndex - 1]);
     }
   }, [hasPrevious, allResponseIds, currentIndex, onNavigate]);
-  (0, import_element95.useEffect)(() => {
+  (0, import_element94.useEffect)(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowUp" && hasPrevious) {
         event.preventDefault();
@@ -39704,7 +39696,7 @@ function SingleResponseView({
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [hasNext, hasPrevious, handleNext, handlePrevious, onClose]);
-  (0, import_element95.useEffect)(() => {
+  (0, import_element94.useEffect)(() => {
     if (!response || !response.id || !response.is_unread) {
       return;
     }
@@ -39725,21 +39717,21 @@ function SingleResponseView({
       });
     });
   }, [response, editEntityRecord, hasMarkedAsRead]);
-  const handleFilePreview = (0, import_element95.useCallback)(
+  const handleFilePreview = (0, import_element94.useCallback)(
     (file) => () => {
       setIsImageLoading(true);
       setPreviewFile(file);
     },
     []
   );
-  const closePreviewModal = (0, import_element95.useCallback)(() => {
+  const closePreviewModal = (0, import_element94.useCallback)(() => {
     setPreviewFile(null);
     setIsImageLoading(true);
   }, []);
-  const handleImageLoaded = (0, import_element95.useCallback)(() => {
+  const handleImageLoaded = (0, import_element94.useCallback)(() => {
     setIsImageLoading(false);
   }, []);
-  const handleActionComplete = (0, import_element95.useCallback)(
+  const handleActionComplete = (0, import_element94.useCallback)(
     (updatedItem) => {
       if (!updatedItem) {
         if (hasNext) {
@@ -39754,15 +39746,15 @@ function SingleResponseView({
     [hasNext, hasPrevious, handleNext, handlePrevious, onClose]
   );
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(import_components90.Spinner, {}) });
+    return /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components89.Spinner, {}) });
   }
   if (!response) {
-    return /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime203.jsx)("p", { children: (0, import_i18n91.__)("Response not found.", "jetpack-forms") }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime202.jsx)("p", { children: (0, import_i18n90.__)("Response not found.", "jetpack-forms") }) });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime203.jsxs)(import_jsx_runtime203.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime203.jsxs)(Stack, { className: "jp-forms-response-header", direction: "row", gap: "xs", justify: "space-between", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(ResponseActions, { response, onActionComplete: handleActionComplete }),
-      /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime202.jsxs)(import_jsx_runtime202.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime202.jsxs)(Stack, { className: "jp-forms-response-header", direction: "row", gap: "xs", justify: "space-between", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(ResponseActions, { response, onActionComplete: handleActionComplete }),
+      /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(
         ResponseNavigation,
         {
           hasNext,
@@ -39773,12 +39765,12 @@ function SingleResponseView({
         }
       )
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(response_meta_default, { response }),
-    /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(response_fields_default, { fields: response.fields, onFilePreview: handleFilePreview }),
-    isNotesEnabled && /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(feedback_comments_default, { postId: response.id }),
-    response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime203.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(import_components90.Tip, { children: (0, import_i18n91.sprintf)(
+    /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(response_meta_default, { response }),
+    /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(response_fields_default, { fields: response.fields, onFilePreview: handleFilePreview }),
+    isNotesEnabled && /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(feedback_comments_default, { postId: response.id }),
+    response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime202.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components89.Tip, { children: (0, import_i18n90.sprintf)(
       /* translators: %d number of days. */
-      (0, import_i18n91._n)(
+      (0, import_i18n90._n)(
         "Spam responses are permanently deleted after %d day.",
         "Spam responses are permanently deleted after %d days.",
         15,
@@ -39787,9 +39779,9 @@ function SingleResponseView({
       // Number from https://github.com/Automattic/jetpack/blob/bde3cf9a89ce0d02e50469df173a6253383bd276/projects/packages/forms/src/contact-form/class-contact-form-plugin.php#L132
       15
     ) }) }),
-    response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime203.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(import_components90.Tip, { children: (0, import_i18n91.sprintf)(
+    response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime202.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components89.Tip, { children: (0, import_i18n90.sprintf)(
       /* translators: %d number of days. */
-      (0, import_i18n91._n)(
+      (0, import_i18n90._n)(
         "Items in trash are permanently deleted after %d day.",
         "Items in trash are permanently deleted after %d days.",
         emptyTrashDays,
@@ -39797,7 +39789,7 @@ function SingleResponseView({
       ),
       emptyTrashDays
     ) }) }),
-    previewFile && /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(import_components90.Modal, { title: (0, import_html_entities9.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(
+    previewFile && /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components89.Modal, { title: (0, import_html_entities9.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(
       preview_file_default,
       {
         file: previewFile,
@@ -39810,12 +39802,12 @@ function SingleResponseView({
 function Response() {
   const params = useParams2({ from: "/responses/$view" });
   const searchParams = useSearch4({ from: "/responses/$view" });
-  const navigate = useNavigate6();
+  const navigate = useNavigate5();
   const responseIds = searchParams?.responseIds || [];
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const { records } = useInboxData({ status: statusView });
   const allRecordIds = records?.map((record) => record.id) ?? [];
-  const handleClose = (0, import_element95.useCallback)(() => {
+  const handleClose = (0, import_element94.useCallback)(() => {
     navigate({
       search: {
         ...searchParams,
@@ -39823,7 +39815,7 @@ function Response() {
       }
     });
   }, [navigate, searchParams]);
-  const handleNavigate = (0, import_element95.useCallback)(
+  const handleNavigate = (0, import_element94.useCallback)(
     (id) => {
       navigate({
         search: {
@@ -39838,7 +39830,7 @@ function Response() {
     return null;
   }
   const selectedResponseId = Number(responseIds[0]);
-  return /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(
     SingleResponseView,
     {
       responseId: selectedResponseId,
@@ -39850,9 +39842,9 @@ function Response() {
 }
 
 // routes/responses/inspector.tsx
-var import_jsx_runtime204 = __toESM(require_jsx_runtime());
+var import_jsx_runtime203 = __toESM(require_jsx_runtime());
 function Inspector() {
-  return /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(page_default, { showSidebarToggle: false, hasPadding: false, children: /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(Response, {}) }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(page_default, { showSidebarToggle: false, hasPadding: false, children: /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(Response, {}) }) });
 }
 export {
   Inspector as inspector,
