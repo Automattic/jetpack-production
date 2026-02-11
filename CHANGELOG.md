@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Refresh plan features on post-checkout redirect.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Remove Jetpack logo from Improve with AI panel in the Page sidebar.
 - WordPress.com Reader: load feature in new module.
 
 ## 15.6-a.1 - 2026-02-10
