@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Form Editor: Prevent empty paragraphs from being inserted outside the form block.
+- Load the wp-build dashboard independently of the Gutenberg plugin.
 
 ## [7.7.0] - 2026-02-10
 ### Added
