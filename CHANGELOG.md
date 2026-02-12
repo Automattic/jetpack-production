@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Forms: Allow filtering Forms dashboard URL.
 - VideoPress: Accept SRT subtitle files for upload alongside VTT.
+- WordPress.com Reader: automatically enable the admin bar link on sites newly connected to WordPress.com.
 
 ### Bug fixes
 - Social: Refresh plan features on post-checkout redirect.
