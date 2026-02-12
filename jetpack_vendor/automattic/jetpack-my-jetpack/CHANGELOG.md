@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update external menu links in My Jetpack to use an external-link arrow indicator (↗) for improved clarity and modern appearance.
 
+### Fixed
+- Compatibility: Clean up deprecated CSS.
+
 ## [5.31.2] - 2026-02-10
 ### Changed
 - Update package dependencies. [#47002]

@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin: remove default WordPress footer on Jetpack admin pages.
 - AI Assistant: Remove Jetpack logo from Improve with AI panel in the Page sidebar.
+- Compatibility: Clean up deprecated CSS.
 - SEO: Move the Optimize SEO panel from the Jetpack sidebar to the document settings panel.
 - WordPress.com Reader: load feature in new module.
 

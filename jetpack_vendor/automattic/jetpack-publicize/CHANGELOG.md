@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Replace form in the sidebar with message when using per-network customizations.
 
 ### Fixed
+- Compatibility: Clean up deprecated CSS.
 - Fix connection sync on toggle for published posts.
 - Refresh plan features on post-checkout redirect.
 
