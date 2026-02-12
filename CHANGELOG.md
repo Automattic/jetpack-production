@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: Allow filtering Forms dashboard URL.
+- Update external menu links to display an arrow indicator for improved performance and a more modern appearance.
 - VideoPress: Accept SRT subtitle files for upload alongside VTT.
 - WordPress.com Reader: automatically enable the admin bar link on sites newly connected to WordPress.com.
 
