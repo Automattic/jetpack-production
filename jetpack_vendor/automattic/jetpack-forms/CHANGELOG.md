@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Form Notifications: Add new HTML email template structure with respondent info section, metadata section (date, source, device, IP), and updated action buttons.
+- Forms: Add horizontal layout
 - Show status notice for non-published synced forms in the block editor and frontend preview when attempting to publish.
 
 ### Changed
