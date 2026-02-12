@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - WordPress.com Reader: automatically enable the admin bar link on sites newly connected to WordPress.com.
 
 ### Bug fixes
+- AI Assistant: restore Jetpack logo in pre-publish panel where branding is not otherwise apparent.
 - Social: Refresh plan features on post-checkout redirect.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
