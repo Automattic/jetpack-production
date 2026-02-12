@@ -18,7 +18,7 @@
 		"automattic/jetpack-assets": "^4.3.24-alpha",
 		"automattic/jetpack-autoloader": "^5.0.16-alpha",
 		"automattic/jetpack-backup": "^4.2.41-alpha",
-		"automattic/jetpack-blaze": "^0.27.2",
+		"automattic/jetpack-blaze": "^0.27.3-alpha",
 		"automattic/jetpack-blocks": "^3.3.0",
 		"automattic/jetpack-boost-speed-score": "^0.4.12",
 		"automattic/jetpack-classic-theme-helper": "^0.14.14-alpha",
@@ -29,7 +29,7 @@
 		"automattic/jetpack-constants": "^3.0.8",
 		"automattic/jetpack-device-detection": "^3.4.0",
 		"automattic/jetpack-error": "^3.0.6",
-		"automattic/jetpack-external-connections": "^0.1.15",
+		"automattic/jetpack-external-connections": "^0.1.16-alpha",
 		"automattic/jetpack-external-media": "^0.8.2-alpha",
 		"automattic/jetpack-forms": "^7.8.0-alpha",
 		"automattic/jetpack-image-cdn": "^0.7.24",
@@ -51,11 +51,11 @@
 		"automattic/jetpack-stats": "^0.17.8",
 		"automattic/jetpack-stats-admin": "^0.30.6",
 		"automattic/jetpack-status": "^6.1.2",
-		"automattic/jetpack-subscribers-dashboard": "^0.4.17",
+		"automattic/jetpack-subscribers-dashboard": "^0.4.18-alpha",
 		"automattic/jetpack-sync": "^4.27.0",
 		"automattic/jetpack-videopress": "^0.35.0-alpha",
 		"automattic/jetpack-waf": "^0.28.0-alpha",
-		"automattic/woocommerce-analytics": "^0.15.3"
+		"automattic/woocommerce-analytics": "^0.15.4-alpha"
 	},
 	"require-dev": {
 		"antecedent/patchwork": "^2.2",

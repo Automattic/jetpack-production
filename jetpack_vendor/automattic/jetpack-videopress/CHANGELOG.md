@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Tracks: Accept SRT subtitle files for upload alongside VTT.
 
+### Changed
+- Update package dependencies.
+
 ## [0.34.1] - 2026-02-10
 ### Changed
 - Update package dependencies. [#47002]

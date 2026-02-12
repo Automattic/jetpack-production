@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Automatically enable the admin bar link on sites newly connected to WordPress.com.
 - WordPress.com Reader: add new class to render a new navigation menu in the admin bar.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Settings: Improve feedback with toast notifications for save success/error and inline error for category load failures.
 

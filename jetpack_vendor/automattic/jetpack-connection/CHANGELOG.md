@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Connection: add maybe_add_origin_site_id method to the Urls class.
 
+### Changed
+- Update package dependencies.
+
 ## [7.0.3] - 2026-02-10
 ### Changed
 - Move IDC stats from Jetpack plugin to connection package. [#46967]

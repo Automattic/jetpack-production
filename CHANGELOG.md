@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Remove Jetpack logo from Improve with AI panel in the Page sidebar.
 - Compatibility: Clean up deprecated CSS.
 - SEO: Move the Optimize SEO panel from the Jetpack sidebar to the document settings panel.
+- Update package dependencies.
 - WordPress.com Reader: load feature in new module.
 
 ## 15.6-a.1 - 2026-02-10

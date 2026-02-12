@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Replace form in the sidebar with message when using per-network customizations.
+- Update package dependencies.
 
 ### Fixed
 - Compatibility: Clean up deprecated CSS.
