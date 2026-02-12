@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Compatibility: Clean up deprecated CSS.
+- Contact Form: fix button border color not following the text color on the frontend.
 - Form Editor: Fix synced form changes being lost when navigating between page editor and form editor.
 - Form Editor: Prevent empty paragraphs from being inserted outside the form block.
 - Load the wp-build dashboard independently of the Gutenberg plugin.
