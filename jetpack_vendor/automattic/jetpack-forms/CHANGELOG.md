@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Show status notice for non-published synced forms in the block editor and frontend preview when attempting to publish.
+
 ### Changed
 - Allow filtering active tooltips for integrations from the backend.
 - Dashboard: set primary actions for wp-build forms list.
