@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - File Upload Dropzone: Allow Icon block to be added inside the dropzone.
 - Forms: allow filtering forms dashboard URL.
 - Forms: extract method to util class, introduce new email renderer class
+- Forms: use new email renderer class
 - Update package dependencies.
 
 ### Fixed
