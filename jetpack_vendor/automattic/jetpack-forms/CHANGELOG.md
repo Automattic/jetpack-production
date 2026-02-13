@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Show status notice for non-published synced forms in the block editor and frontend preview when attempting to publish.
 
 ### Changed
+- Admin Bar: Replace dashicon with SVG icon and add tooltip to "Form Responses" link.
 - Allow Accordion, Details, and Icon blocks in forms.
 - Allow filtering active tooltips for integrations from the backend.
 - Consolidate temporary menus into one for WP build dashboard.
