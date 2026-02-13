@@ -128,6 +128,7 @@ return array(
     'Automattic\\Jetpack\\Forms\\ContactForm\\Editor_View' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-editor-view.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Feedback' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-feedback.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Feedback_Author' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-feedback-author.php',
+    'Automattic\\Jetpack\\Forms\\ContactForm\\Feedback_Email_Renderer' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-feedback-email-renderer.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Feedback_Field' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-feedback-field.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Feedback_Source' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-feedback-source.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Form_Preview' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-form-preview.php',

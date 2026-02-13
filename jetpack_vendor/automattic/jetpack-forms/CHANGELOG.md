@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: tweaks for wpbuild dashboard header.
 - Dashboard: update wp-build header buttons.
 - Forms: allow filtering forms dashboard URL.
+- Forms: extract method to util class, introduce new email renderer class
 - Update package dependencies.
 
 ### Fixed
