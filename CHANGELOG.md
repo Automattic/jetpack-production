@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Assistant: restore Jetpack logo in pre-publish panel where branding is not otherwise apparent.
 - Block Editor Assets: fix Gutenberg asset detection when assets are served from a CDN.
+- Social: Fix Tumblr preview to prioritize custom message when it is set.
 - Social: Refresh plan features on post-checkout redirect.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

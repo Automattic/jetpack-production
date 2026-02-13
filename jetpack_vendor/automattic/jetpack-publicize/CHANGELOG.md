@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Compatibility: Clean up deprecated CSS.
 - Fix connection sync on toggle for published posts.
+- Fix Tumblr preview to prioritize custom message when it is set.
 - Refresh plan features on post-checkout redirect.
 
 ## [0.72.2] - 2026-02-10
