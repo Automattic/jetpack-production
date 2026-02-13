@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: fix button border color not following the text color on the frontend.
 - Contact Form: Fix crash in block label function and display actual form title with status indicator.
 - Contact Form: fix layout display in widget areas.
+- Contact Form: remove grunion.css dependency from forms layout stylesheet.
 - Form Editor: Fix synced form changes being lost when navigating between page editor and form editor.
 - Form Editor: Prevent empty paragraphs from being inserted outside the form block.
 - Load the wp-build dashboard independently of the Gutenberg plugin.
