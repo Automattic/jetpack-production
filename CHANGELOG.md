@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Remove Jetpack logo from Improve with AI panel in the Page sidebar.
 - Compatibility: Clean up deprecated CSS.
 - Recommendations: drop redundant PNG fallback images in favor of WebP, reducing plugin zip size by ~7 MB.
+- Reduced plugin zip size by converting vendored package images from PNG to WebP.
 - SEO: Move the Optimize SEO panel from the Jetpack sidebar to the document settings panel.
 - Update package dependencies.
 - WordPress.com Reader: load feature in new module.

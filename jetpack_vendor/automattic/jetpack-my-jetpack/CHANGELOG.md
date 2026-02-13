@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Converted product interstitial and onboarding images from PNG to WebP.
 - Update external menu links in My Jetpack to use an external-link arrow indicator (↗) for improved clarity and modern appearance.
 - Update package dependencies.
 
