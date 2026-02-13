@@ -29378,11 +29378,9 @@ function useConfigValue(key) {
 }
 
 // src/dashboard/hooks/use-create-form.ts
-var openFormLinkInNewTab = (url) => {
+var openFormLink = (url) => {
   const link = document.createElement("a");
   link.setAttribute("href", url);
-  link.setAttribute("target", "_blank");
-  link.setAttribute("rel", "noopener noreferrer");
   link.style.display = "none";
   document.body.appendChild(link);
   link.click();
@@ -29421,14 +29419,14 @@ function useCreateForm() {
         if (isCentralFormManagementEnabled === true) {
           analyticsEvent?.({ formPattern: formPattern ?? "" });
           const url = `${adminUrl || ""}post-new.php?post_type=jetpack_form`;
-          openFormLinkInNewTab(url);
+          openFormLink(url);
           return;
         }
         const postUrl = await createForm(formPattern);
         if (postUrl) {
           analyticsEvent?.({ formPattern });
           const url = `${postUrl}${showPatterns && !formPattern ? "&showJetpackFormsPatterns" : ""}`;
-          openFormLinkInNewTab(url);
+          openFormLink(url);
         }
       } catch (error2) {
         console.error(error2.message);

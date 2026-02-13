@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Form Notifications: Add new HTML email template design with respondent info header, metadata section, and improved action buttons.
 - Forms: Allow Accordion, Details, and Icon blocks in forms, and Icon block to be added inside the file upload dropzone.
 - Forms: Allow filtering Forms dashboard URL.
+- Forms: create new forms in same tab.
 - Forms: Replace dashicon with SVG icon and add tooltip to admin bar "Form Responses" link.
 - Reader: Add Discover card to Reader settings page to highlight feature benefits.
 - Update external menu links to display an arrow indicator for improved performance and a more modern appearance.
