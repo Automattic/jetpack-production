@@ -15,11 +15,13 @@ This is an alpha version! The changes listed here are not final.
 - Show status notice for non-published synced forms in the block editor and frontend preview when attempting to publish.
 
 ### Changed
+- Allow Accordion, Details, and Icon blocks in forms.
 - Allow filtering active tooltips for integrations from the backend.
 - Consolidate temporary menus into one for WP build dashboard.
 - Dashboard: set primary actions for wp-build forms list.
 - Dashboard: tweaks for wpbuild dashboard header.
 - Dashboard: update wp-build header buttons.
+- File Upload Dropzone: Allow Icon block to be added inside the dropzone.
 - Forms: allow filtering forms dashboard URL.
 - Forms: extract method to util class, introduce new email renderer class
 - Update package dependencies.

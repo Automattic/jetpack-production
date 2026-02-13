@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Form Notifications: Add new HTML email template design with respondent info header, metadata section, and improved action buttons.
+- Forms: Allow Accordion, Details, and Icon blocks in forms, and Icon block to be added inside the file upload dropzone.
 - Forms: Allow filtering Forms dashboard URL.
 - Update external menu links to display an arrow indicator for improved performance and a more modern appearance.
 - VideoPress: Accept SRT subtitle files for upload alongside VTT.
