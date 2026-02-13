@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Allow filtering active tooltips for integrations from the backend.
 - Consolidate temporary menus into one for WP build dashboard.
 - Dashboard: create new forms in same tab.
+- Dashboard: make forms primary on wp-build dashboard
 - Dashboard: set primary actions for wp-build forms list.
 - Dashboard: tweaks for wpbuild dashboard header.
 - Dashboard: update wp-build header buttons.

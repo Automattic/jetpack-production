@@ -34981,13 +34981,13 @@ function DataViewsHeaderRow({
               })
             }
           ) : /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(List, { density: "compact", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Tab, { value: "responses", children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("span", { children: [
-              (0, import_i18n67.__)("Responses", "jetpack-forms"),
-              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(responsesInboxCount || 0) })
-            ] }) }),
             /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Tab, { value: "forms", children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("span", { children: [
               (0, import_i18n67.__)("Forms", "jetpack-forms"),
               /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(formsCount || 0) })
+            ] }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Tab, { value: "responses", children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("span", { children: [
+              (0, import_i18n67.__)("Responses", "jetpack-forms"),
+              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(responsesInboxCount || 0) })
             ] }) })
           ] }) }) }),
           /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(Stack, { align: "center", gap: "sm", children: [
