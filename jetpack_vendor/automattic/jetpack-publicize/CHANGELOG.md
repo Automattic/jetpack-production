@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add media validation notices to preview modal.
 
 ### Changed
+- Convert connection and illustration images from PNG to WebP.
 - Replace form in the sidebar with message when using per-network customizations.
 - Update package dependencies.
 
