@@ -14141,7 +14141,7 @@ Page.SidebarToggleFill = SidebarToggleFill;
 var page_default = Page;
 
 // routes/responses/stage.tsx
-var import_components75 = __toESM(require_components());
+var import_components78 = __toESM(require_components());
 var import_data31 = __toESM(require_data());
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
@@ -27914,7 +27914,7 @@ var dataviews_default = DataViewsSubComponents;
 var import_date10 = __toESM(require_date());
 var import_element89 = __toESM(require_element());
 var import_html_entities5 = __toESM(require_html_entities());
-var import_i18n80 = __toESM(require_i18n());
+var import_i18n84 = __toESM(require_i18n());
 import { useParams, useSearch as useSearch2, useNavigate as useNavigate3 } from "@wordpress/route";
 var React36 = __toESM(require_react());
 
@@ -35002,273 +35002,6 @@ function DataViewsHeaderRow({
   ] });
 }
 
-// src/dashboard/wp-build/hooks/use-page-header-details.tsx
-var import_core_data6 = __toESM(require_core_data(), 1);
-var import_data30 = __toESM(require_data(), 1);
-var import_element87 = __toESM(require_element(), 1);
-var import_html_entities4 = __toESM(require_html_entities(), 1);
-var import_i18n78 = __toESM(require_i18n(), 1);
-
-// src/dashboard/components/edit-form-button/index.tsx
-var import_components66 = __toESM(require_components(), 1);
-var import_element76 = __toESM(require_element(), 1);
-var import_i18n68 = __toESM(require_i18n(), 1);
-var import_jsx_runtime158 = __toESM(require_jsx_runtime(), 1);
-function EditFormButton({ formId }) {
-  const adminUrl = useConfigValue("adminUrl") || "";
-  const onClick = (0, import_element76.useCallback)(() => {
-    const editPath = `post.php?post=${formId}&action=edit`;
-    window.location.href = adminUrl ? `${adminUrl}${editPath}` : editPath;
-  }, [adminUrl, formId]);
-  return /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components66.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n68.__)("Edit form", "jetpack-forms") });
-}
-
-// src/dashboard/components/empty-spam-button/index.tsx
-var import_api_fetch7 = __toESM(require_api_fetch(), 1);
-var import_components67 = __toESM(require_components(), 1);
-var import_core_data3 = __toESM(require_core_data(), 1);
-var import_data15 = __toESM(require_data(), 1);
-var import_element77 = __toESM(require_element(), 1);
-var import_i18n69 = __toESM(require_i18n(), 1);
-var import_notices2 = __toESM(require_notices(), 1);
-var import_jsx_runtime159 = __toESM(require_jsx_runtime(), 1);
-var EmptySpamButton = ({
-  totalItemsSpam: totalItemsSpamProp,
-  isLoadingCounts: isLoadingCountsProp
-} = {}) => {
-  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element77.useState)(false);
-  const [isEmptying, setIsEmptying] = (0, import_element77.useState)(false);
-  const [isEmpty4, setIsEmpty] = (0, import_element77.useState)(true);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data15.useDispatch)(import_notices2.store);
-  const { invalidateResolution } = (0, import_data15.useDispatch)(import_core_data3.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data15.useDispatch)(store3);
-  const hookData = useInboxData();
-  const totalItemsSpam = totalItemsSpamProp ?? hookData.totalItemsSpam;
-  const isLoadingCounts = isLoadingCountsProp ?? false;
-  const { selectedResponsesCount, currentQuery: currentQuery2 } = hookData;
-  (0, import_element77.useEffect)(() => {
-    setIsEmpty(isLoadingCounts || !totalItemsSpam);
-  }, [totalItemsSpam, isLoadingCounts]);
-  const openConfirmDialog = (0, import_element77.useCallback)(() => setConfirmDialogOpen(true), []);
-  const closeConfirmDialog = (0, import_element77.useCallback)(() => setConfirmDialogOpen(false), []);
-  const onConfirmEmptying = (0, import_element77.useCallback)(async () => {
-    if (isEmptying || isEmpty4) {
-      return;
-    }
-    closeConfirmDialog();
-    setIsEmptying(true);
-    analytics_default.tracks.recordEvent("jetpack_forms_empty_spam_click");
-    (0, import_api_fetch7.default)({
-      method: "DELETE",
-      path: `/wp/v2/feedback/trash?status=spam`
-    }).then((response) => {
-      const deleted = response?.deleted ?? 0;
-      const successMessage = deleted === 1 ? (0, import_i18n69.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n69.sprintf)(
-        /* translators: %s: The number of responses. */
-        (0, import_i18n69._n)(
-          "%s response deleted permanently.",
-          "%s responses deleted permanently.",
-          deleted,
-          "jetpack-forms"
-        ),
-        formatNumber2(deleted)
-      );
-      createSuccessNotice(successMessage, { type: "snackbar", id: "empty-spam" });
-    }).catch(() => {
-      createErrorNotice((0, import_i18n69.__)("Could not empty spam.", "jetpack-forms"), {
-        type: "snackbar",
-        id: "empty-spam-error"
-      });
-    }).finally(() => {
-      setIsEmptying(false);
-      invalidateResolution("getEntityRecords", ["postType", "feedback", currentQuery2]);
-      invalidateResolution("getEntityRecords", [
-        "postType",
-        "feedback",
-        { ...currentQuery2, per_page: 1, _fields: "id" }
-      ]);
-      invalidateCounts2();
-    });
-  }, [
-    closeConfirmDialog,
-    createErrorNotice,
-    createSuccessNotice,
-    invalidateResolution,
-    invalidateCounts2,
-    isEmpty4,
-    isEmptying,
-    currentQuery2
-  ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(import_jsx_runtime159.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
-      import_components67.Button,
-      {
-        size: "compact",
-        accessibleWhenDisabled: true,
-        disabled: isEmpty4 || isEmptying,
-        icon: trash_default,
-        isBusy: isEmptying,
-        label: isEmpty4 ? (0, import_i18n69.__)("Spam is already empty.", "jetpack-forms") : "",
-        onClick: openConfirmDialog,
-        showTooltip: isEmpty4,
-        variant: "primary",
-        children: (0, import_i18n69.__)("Delete spam", "jetpack-forms")
-      }
-    ),
-    /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(
-      import_components67.__experimentalConfirmDialog,
-      {
-        onCancel: closeConfirmDialog,
-        onConfirm: onConfirmEmptying,
-        isOpen: isConfirmDialogOpen,
-        confirmButtonText: (0, import_i18n69.__)("Delete", "jetpack-forms"),
-        children: [
-          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("h3", { children: (0, import_i18n69.__)("Delete forever", "jetpack-forms") }),
-          /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n69.sprintf)(
-            // translators: %s: the number of responses in spam
-            (0, import_i18n69._n)(
-              "%s response in spam will be deleted forever. This action cannot be undone.",
-              "All %s responses in spam will be deleted forever. This action cannot be undone.",
-              totalItemsSpam || 0,
-              "jetpack-forms"
-            ),
-            formatNumber2(totalItemsSpam)
-          ) : (0, import_i18n69.__)(
-            "All responses in spam will be deleted forever. This action cannot be undone.",
-            "jetpack-forms"
-          ) })
-        ]
-      }
-    )
-  ] });
-};
-var empty_spam_button_default = EmptySpamButton;
-
-// src/dashboard/components/empty-trash-button/index.tsx
-var import_api_fetch8 = __toESM(require_api_fetch(), 1);
-var import_components68 = __toESM(require_components(), 1);
-var import_core_data4 = __toESM(require_core_data(), 1);
-var import_data16 = __toESM(require_data(), 1);
-var import_element78 = __toESM(require_element(), 1);
-var import_i18n70 = __toESM(require_i18n(), 1);
-var import_notices3 = __toESM(require_notices(), 1);
-var import_jsx_runtime160 = __toESM(require_jsx_runtime(), 1);
-var EmptyTrashButton = ({
-  totalItemsTrash: totalItemsTrashProp,
-  isLoadingCounts: isLoadingCountsProp
-} = {}) => {
-  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element78.useState)(false);
-  const [isEmptying, setIsEmptying] = (0, import_element78.useState)(false);
-  const [isEmpty4, setIsEmpty] = (0, import_element78.useState)(true);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data16.useDispatch)(import_notices3.store);
-  const { invalidateResolution } = (0, import_data16.useDispatch)(import_core_data4.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data16.useDispatch)(store3);
-  const hookData = useInboxData();
-  const totalItemsTrash = totalItemsTrashProp ?? hookData.totalItemsTrash;
-  const isLoadingCounts = isLoadingCountsProp ?? false;
-  const { selectedResponsesCount, currentQuery: currentQuery2 } = hookData;
-  (0, import_element78.useEffect)(() => {
-    setIsEmpty(isLoadingCounts || !totalItemsTrash);
-  }, [totalItemsTrash, isLoadingCounts]);
-  const openConfirmDialog = (0, import_element78.useCallback)(() => setConfirmDialogOpen(true), []);
-  const closeConfirmDialog = (0, import_element78.useCallback)(() => setConfirmDialogOpen(false), []);
-  const onConfirmEmptying = (0, import_element78.useCallback)(async () => {
-    if (isEmptying || isEmpty4) {
-      return;
-    }
-    closeConfirmDialog();
-    setIsEmptying(true);
-    analytics_default.tracks.recordEvent("jetpack_forms_empty_trash_click");
-    (0, import_api_fetch8.default)({
-      method: "DELETE",
-      path: `/wp/v2/feedback/trash`
-    }).then((response) => {
-      const deleted = response?.deleted ?? 0;
-      const successMessage = deleted === 1 ? (0, import_i18n70.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n70.sprintf)(
-        // translators: %s: the number of responses deleted permanently.
-        (0, import_i18n70._n)(
-          "%s response deleted permanently.",
-          "%s responses deleted permanently.",
-          deleted,
-          "jetpack-forms"
-        ),
-        formatNumber2(deleted)
-      );
-      createSuccessNotice(successMessage, { type: "snackbar", id: "empty-trash" });
-    }).catch(() => {
-      createErrorNotice((0, import_i18n70.__)("Could not empty trash.", "jetpack-forms"), {
-        type: "snackbar",
-        id: "empty-trash-error"
-      });
-    }).finally(() => {
-      setIsEmptying(false);
-      invalidateResolution("getEntityRecords", ["postType", "feedback", currentQuery2]);
-      invalidateResolution("getEntityRecords", [
-        "postType",
-        "feedback",
-        { ...currentQuery2, per_page: 1, _fields: "id" }
-      ]);
-      invalidateCounts2();
-    });
-  }, [
-    closeConfirmDialog,
-    createErrorNotice,
-    createSuccessNotice,
-    invalidateResolution,
-    invalidateCounts2,
-    isEmpty4,
-    isEmptying,
-    currentQuery2
-  ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)(import_jsx_runtime160.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
-      import_components68.Button,
-      {
-        size: "compact",
-        accessibleWhenDisabled: true,
-        disabled: isEmpty4 || isEmptying,
-        icon: trash_default,
-        isBusy: isEmptying,
-        label: isEmpty4 ? (0, import_i18n70.__)("Trash is already empty.", "jetpack-forms") : "",
-        onClick: openConfirmDialog,
-        showTooltip: isEmpty4,
-        variant: "primary",
-        children: (0, import_i18n70.__)("Empty trash", "jetpack-forms")
-      }
-    ),
-    /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)(
-      import_components68.__experimentalConfirmDialog,
-      {
-        onCancel: closeConfirmDialog,
-        onConfirm: onConfirmEmptying,
-        isOpen: isConfirmDialogOpen,
-        confirmButtonText: (0, import_i18n70.__)("Delete", "jetpack-forms"),
-        children: [
-          /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("h3", { children: (0, import_i18n70.__)("Delete forever", "jetpack-forms") }),
-          /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n70.sprintf)(
-            // translators: %s: the number of responses in the trash.
-            (0, import_i18n70._n)(
-              "%s response in trash will be deleted forever. This action cannot be undone.",
-              "All %s responses in trash will be deleted forever. This action cannot be undone.",
-              totalItemsTrash || 0,
-              "jetpack-forms"
-            ),
-            formatNumber2(totalItemsTrash)
-          ) : (0, import_i18n70.__)(
-            "All responses in trash will be deleted forever. This action cannot be undone.",
-            "jetpack-forms"
-          ) })
-        ]
-      }
-    )
-  ] });
-};
-var empty_trash_button_default = EmptyTrashButton;
-
-// src/dashboard/components/export-responses/button.tsx
-var import_components72 = __toESM(require_components(), 1);
-var import_i18n76 = __toESM(require_i18n(), 1);
-
 // ../../js-packages/components/build/components/layout/use-breakpoint-match/index.js
 var import_compose14 = __toESM(require_compose(), 1);
 
@@ -35607,11 +35340,383 @@ function catchNetworkErrors() {
   throw new FetchNetworkError();
 }
 
+// src/dashboard/wp-build/hooks/use-page-header-details.tsx
+var import_components76 = __toESM(require_components(), 1);
+var import_core_data6 = __toESM(require_core_data(), 1);
+var import_data30 = __toESM(require_data(), 1);
+var import_element87 = __toESM(require_element(), 1);
+var import_html_entities4 = __toESM(require_html_entities(), 1);
+var import_i18n82 = __toESM(require_i18n(), 1);
+
+// src/dashboard/components/edit-form-button/index.tsx
+var import_components66 = __toESM(require_components(), 1);
+var import_element76 = __toESM(require_element(), 1);
+var import_i18n68 = __toESM(require_i18n(), 1);
+var import_jsx_runtime158 = __toESM(require_jsx_runtime(), 1);
+function EditFormButton({ formId }) {
+  const adminUrl = useConfigValue("adminUrl") || "";
+  const onClick = (0, import_element76.useCallback)(() => {
+    const editPath = `post.php?post=${formId}&action=edit`;
+    window.location.href = adminUrl ? `${adminUrl}${editPath}` : editPath;
+  }, [adminUrl, formId]);
+  return /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components66.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n68.__)("Edit form", "jetpack-forms") });
+}
+
+// src/dashboard/components/empty-spam-button/index.tsx
+var import_components68 = __toESM(require_components(), 1);
+var import_i18n71 = __toESM(require_i18n(), 1);
+
+// src/dashboard/hooks/use-empty-spam.ts
+var import_api_fetch7 = __toESM(require_api_fetch(), 1);
+var import_core_data3 = __toESM(require_core_data(), 1);
+var import_data15 = __toESM(require_data(), 1);
+var import_element77 = __toESM(require_element(), 1);
+var import_i18n69 = __toESM(require_i18n(), 1);
+var import_notices2 = __toESM(require_notices(), 1);
+function useEmptySpam({
+  totalItemsSpam: totalItemsSpamProp
+} = {}) {
+  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element77.useState)(false);
+  const [isEmptying, setIsEmptying] = (0, import_element77.useState)(false);
+  const [isEmpty4, setIsEmpty] = (0, import_element77.useState)(true);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data15.useDispatch)(import_notices2.store);
+  const { invalidateResolution } = (0, import_data15.useDispatch)(import_core_data3.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data15.useDispatch)(store3);
+  const hookData = useInboxData();
+  const totalItemsSpam = totalItemsSpamProp ?? hookData.totalItemsSpam ?? 0;
+  const { selectedResponsesCount, currentQuery: currentQuery2 } = hookData;
+  (0, import_element77.useEffect)(() => {
+    setIsEmpty(!totalItemsSpam);
+  }, [totalItemsSpam]);
+  const openConfirmDialog = (0, import_element77.useCallback)(() => setConfirmDialogOpen(true), []);
+  const closeConfirmDialog = (0, import_element77.useCallback)(() => setConfirmDialogOpen(false), []);
+  const onConfirmEmptying = (0, import_element77.useCallback)(async () => {
+    if (isEmptying || isEmpty4) {
+      return;
+    }
+    closeConfirmDialog();
+    setIsEmptying(true);
+    analytics_default.tracks.recordEvent("jetpack_forms_empty_spam_click");
+    (0, import_api_fetch7.default)({
+      method: "DELETE",
+      path: `/wp/v2/feedback/trash?status=spam`
+    }).then((response) => {
+      const deleted = response?.deleted ?? 0;
+      const successMessage = deleted === 1 ? (0, import_i18n69.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n69.sprintf)(
+        /* translators: %s: The number of responses. */
+        (0, import_i18n69._n)(
+          "%s response deleted permanently.",
+          "%s responses deleted permanently.",
+          deleted,
+          "jetpack-forms"
+        ),
+        formatNumber2(deleted)
+      );
+      createSuccessNotice(successMessage, { type: "snackbar", id: "empty-spam" });
+    }).catch(() => {
+      createErrorNotice((0, import_i18n69.__)("Could not empty spam.", "jetpack-forms"), {
+        type: "snackbar",
+        id: "empty-spam-error"
+      });
+    }).finally(() => {
+      setIsEmptying(false);
+      invalidateResolution("getEntityRecords", ["postType", "feedback", currentQuery2]);
+      invalidateResolution("getEntityRecords", [
+        "postType",
+        "feedback",
+        { ...currentQuery2, per_page: 1, _fields: "id" }
+      ]);
+      invalidateCounts2();
+    });
+  }, [
+    closeConfirmDialog,
+    createErrorNotice,
+    createSuccessNotice,
+    invalidateResolution,
+    invalidateCounts2,
+    isEmpty4,
+    isEmptying,
+    currentQuery2
+  ]);
+  return {
+    isConfirmDialogOpen,
+    openConfirmDialog,
+    closeConfirmDialog,
+    onConfirmEmptying,
+    isEmpty: isEmpty4,
+    isEmptying,
+    totalItemsSpam,
+    selectedResponsesCount
+  };
+}
+
+// src/dashboard/components/empty-spam-button/confirmation-modal.tsx
+var import_components67 = __toESM(require_components(), 1);
+var import_i18n70 = __toESM(require_i18n(), 1);
+var import_jsx_runtime159 = __toESM(require_jsx_runtime(), 1);
+function EmptySpamConfirmationModal({
+  isOpen,
+  onCancel,
+  onConfirm,
+  totalItemsSpam,
+  selectedResponsesCount
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(
+    import_components67.__experimentalConfirmDialog,
+    {
+      onCancel,
+      onConfirm,
+      isOpen,
+      confirmButtonText: (0, import_i18n70.__)("Delete", "jetpack-forms"),
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("h3", { children: (0, import_i18n70.__)("Delete forever", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n70.sprintf)(
+          // translators: %s: the number of responses in spam
+          (0, import_i18n70._n)(
+            "%s response in spam will be deleted forever. This action cannot be undone.",
+            "All %s responses in spam will be deleted forever. This action cannot be undone.",
+            totalItemsSpam || 0,
+            "jetpack-forms"
+          ),
+          formatNumber2(totalItemsSpam)
+        ) : (0, import_i18n70.__)(
+          "All responses in spam will be deleted forever. This action cannot be undone.",
+          "jetpack-forms"
+        ) })
+      ]
+    }
+  );
+}
+
+// src/dashboard/components/empty-spam-button/index.tsx
+var import_jsx_runtime160 = __toESM(require_jsx_runtime(), 1);
+var EmptySpamButton = ({
+  totalItemsSpam: totalItemsSpamProp
+} = {}) => {
+  const {
+    isConfirmDialogOpen,
+    openConfirmDialog,
+    closeConfirmDialog,
+    onConfirmEmptying,
+    isEmpty: isEmpty4,
+    isEmptying,
+    totalItemsSpam,
+    selectedResponsesCount
+  } = useEmptySpam({
+    totalItemsSpam: totalItemsSpamProp
+  });
+  return /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)(import_jsx_runtime160.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
+      import_components68.Button,
+      {
+        size: "compact",
+        accessibleWhenDisabled: true,
+        disabled: isEmpty4 || isEmptying,
+        icon: trash_default,
+        isBusy: isEmptying,
+        label: isEmpty4 ? (0, import_i18n71.__)("Spam is already empty.", "jetpack-forms") : "",
+        onClick: openConfirmDialog,
+        showTooltip: isEmpty4,
+        variant: "primary",
+        children: (0, import_i18n71.__)("Delete spam", "jetpack-forms")
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
+      EmptySpamConfirmationModal,
+      {
+        isOpen: isConfirmDialogOpen,
+        onCancel: closeConfirmDialog,
+        onConfirm: onConfirmEmptying,
+        totalItemsSpam,
+        selectedResponsesCount
+      }
+    )
+  ] });
+};
+var empty_spam_button_default = EmptySpamButton;
+
+// src/dashboard/components/empty-trash-button/index.tsx
+var import_components70 = __toESM(require_components(), 1);
+var import_i18n74 = __toESM(require_i18n(), 1);
+
+// src/dashboard/hooks/use-empty-trash.ts
+var import_api_fetch8 = __toESM(require_api_fetch(), 1);
+var import_core_data4 = __toESM(require_core_data(), 1);
+var import_data16 = __toESM(require_data(), 1);
+var import_element78 = __toESM(require_element(), 1);
+var import_i18n72 = __toESM(require_i18n(), 1);
+var import_notices3 = __toESM(require_notices(), 1);
+function useEmptyTrash({
+  totalItemsTrash: totalItemsTrashProp
+} = {}) {
+  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element78.useState)(false);
+  const [isEmptying, setIsEmptying] = (0, import_element78.useState)(false);
+  const [isEmpty4, setIsEmpty] = (0, import_element78.useState)(true);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data16.useDispatch)(import_notices3.store);
+  const { invalidateResolution } = (0, import_data16.useDispatch)(import_core_data4.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data16.useDispatch)(store3);
+  const hookData = useInboxData();
+  const totalItemsTrash = totalItemsTrashProp ?? hookData.totalItemsTrash ?? 0;
+  const { selectedResponsesCount, currentQuery: currentQuery2 } = hookData;
+  (0, import_element78.useEffect)(() => {
+    setIsEmpty(!totalItemsTrash);
+  }, [totalItemsTrash]);
+  const openConfirmDialog = (0, import_element78.useCallback)(() => setConfirmDialogOpen(true), []);
+  const closeConfirmDialog = (0, import_element78.useCallback)(() => setConfirmDialogOpen(false), []);
+  const onConfirmEmptying = (0, import_element78.useCallback)(async () => {
+    if (isEmptying || isEmpty4) {
+      return;
+    }
+    closeConfirmDialog();
+    setIsEmptying(true);
+    analytics_default.tracks.recordEvent("jetpack_forms_empty_trash_click");
+    (0, import_api_fetch8.default)({
+      method: "DELETE",
+      path: `/wp/v2/feedback/trash`
+    }).then((response) => {
+      const deleted = response?.deleted ?? 0;
+      const successMessage = deleted === 1 ? (0, import_i18n72.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n72.sprintf)(
+        /* translators: %s: the number of responses deleted permanently. */
+        (0, import_i18n72._n)(
+          "%s response deleted permanently.",
+          "%s responses deleted permanently.",
+          deleted,
+          "jetpack-forms"
+        ),
+        formatNumber2(deleted)
+      );
+      createSuccessNotice(successMessage, { type: "snackbar", id: "empty-trash" });
+    }).catch(() => {
+      createErrorNotice((0, import_i18n72.__)("Could not empty trash.", "jetpack-forms"), {
+        type: "snackbar",
+        id: "empty-trash-error"
+      });
+    }).finally(() => {
+      setIsEmptying(false);
+      invalidateResolution("getEntityRecords", ["postType", "feedback", currentQuery2]);
+      invalidateResolution("getEntityRecords", [
+        "postType",
+        "feedback",
+        { ...currentQuery2, per_page: 1, _fields: "id" }
+      ]);
+      invalidateCounts2();
+    });
+  }, [
+    closeConfirmDialog,
+    createErrorNotice,
+    createSuccessNotice,
+    invalidateResolution,
+    invalidateCounts2,
+    isEmpty4,
+    isEmptying,
+    currentQuery2
+  ]);
+  return {
+    isConfirmDialogOpen,
+    openConfirmDialog,
+    closeConfirmDialog,
+    onConfirmEmptying,
+    isEmpty: isEmpty4,
+    isEmptying,
+    totalItemsTrash,
+    selectedResponsesCount
+  };
+}
+
+// src/dashboard/components/empty-trash-button/confirmation-modal.tsx
+var import_components69 = __toESM(require_components(), 1);
+var import_i18n73 = __toESM(require_i18n(), 1);
+var import_jsx_runtime161 = __toESM(require_jsx_runtime(), 1);
+function EmptyTrashConfirmationModal({
+  isOpen,
+  onCancel,
+  onConfirm,
+  totalItemsTrash,
+  selectedResponsesCount
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)(
+    import_components69.__experimentalConfirmDialog,
+    {
+      onCancel,
+      onConfirm,
+      isOpen,
+      confirmButtonText: (0, import_i18n73.__)("Delete", "jetpack-forms"),
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime161.jsx)("h3", { children: (0, import_i18n73.__)("Delete forever", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime161.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n73.sprintf)(
+          // translators: %s: the number of responses in the trash.
+          (0, import_i18n73._n)(
+            "%s response in trash will be deleted forever. This action cannot be undone.",
+            "All %s responses in trash will be deleted forever. This action cannot be undone.",
+            totalItemsTrash || 0,
+            "jetpack-forms"
+          ),
+          formatNumber2(totalItemsTrash)
+        ) : (0, import_i18n73.__)(
+          "All responses in trash will be deleted forever. This action cannot be undone.",
+          "jetpack-forms"
+        ) })
+      ]
+    }
+  );
+}
+
+// src/dashboard/components/empty-trash-button/index.tsx
+var import_jsx_runtime162 = __toESM(require_jsx_runtime(), 1);
+var EmptyTrashButton = ({
+  totalItemsTrash: totalItemsTrashProp
+} = {}) => {
+  const {
+    isConfirmDialogOpen,
+    openConfirmDialog,
+    closeConfirmDialog,
+    onConfirmEmptying,
+    isEmpty: isEmpty4,
+    isEmptying,
+    totalItemsTrash,
+    selectedResponsesCount
+  } = useEmptyTrash({
+    totalItemsTrash: totalItemsTrashProp
+  });
+  return /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)(import_jsx_runtime162.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(
+      import_components70.Button,
+      {
+        size: "compact",
+        accessibleWhenDisabled: true,
+        disabled: isEmpty4 || isEmptying,
+        icon: trash_default,
+        isBusy: isEmptying,
+        label: isEmpty4 ? (0, import_i18n74.__)("Trash is already empty.", "jetpack-forms") : "",
+        onClick: openConfirmDialog,
+        showTooltip: isEmpty4,
+        variant: "primary",
+        children: (0, import_i18n74.__)("Empty trash", "jetpack-forms")
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(
+      EmptyTrashConfirmationModal,
+      {
+        isOpen: isConfirmDialogOpen,
+        onCancel: closeConfirmDialog,
+        onConfirm: onConfirmEmptying,
+        totalItemsTrash,
+        selectedResponsesCount
+      }
+    )
+  ] });
+};
+var empty_trash_button_default = EmptyTrashButton;
+
+// src/dashboard/components/export-responses/button.tsx
+var import_components74 = __toESM(require_components(), 1);
+var import_i18n80 = __toESM(require_i18n(), 1);
+
 // src/dashboard/hooks/use-export-responses.ts
 var import_core_data5 = __toESM(require_core_data(), 1);
 var import_data17 = __toESM(require_data(), 1);
 var import_element79 = __toESM(require_element(), 1);
-var import_i18n71 = __toESM(require_i18n(), 1);
+var import_i18n75 = __toESM(require_i18n(), 1);
 function useExportResponses() {
   const [isSm] = use_breakpoint_match_default("sm");
   const [showExportModal, setShowExportModal] = (0, import_element79.useState)(false);
@@ -35626,11 +35731,11 @@ function useExportResponses() {
   );
   const isSpam = currentStatus.includes("spam");
   const isTrash = currentStatus.includes("trash");
-  let statusLabel = (0, import_i18n71.__)("Export", "jetpack-forms");
+  let statusLabel = (0, import_i18n75.__)("Export", "jetpack-forms");
   if (isSpam) {
-    statusLabel = (0, import_i18n71.__)("Export spam", "jetpack-forms");
+    statusLabel = (0, import_i18n75.__)("Export spam", "jetpack-forms");
   } else if (isTrash) {
-    statusLabel = (0, import_i18n71.__)("Export trash", "jetpack-forms");
+    statusLabel = (0, import_i18n75.__)("Export trash", "jetpack-forms");
   }
   const exportLabel = selectedResponsesCount > 0 ? `${statusLabel} (${formatNumber2(selectedResponsesCount)})` : statusLabel;
   const openModal = (0, import_element79.useCallback)(() => {
@@ -35688,9 +35793,9 @@ function useExportResponses() {
 }
 
 // src/dashboard/components/export-responses/modal.tsx
-var import_components71 = __toESM(require_components(), 1);
+var import_components73 = __toESM(require_components(), 1);
 var import_data29 = __toESM(require_data(), 1);
-var import_i18n75 = __toESM(require_i18n(), 1);
+var import_i18n79 = __toESM(require_i18n(), 1);
 
 // ../../js-packages/shared-extension-utils/src/get-jetpack-data.js
 var JETPACK_DATA_PATH = "Jetpack_Editor_Initial_State";
@@ -35719,10 +35824,10 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // ../../js-packages/shared-extension-utils/src/with-has-warning-is-interactive-class-names/index.jsx
-var import_jsx_runtime161 = __toESM(require_jsx_runtime());
+var import_jsx_runtime163 = __toESM(require_jsx_runtime());
 
 // ../../js-packages/shared-extension-utils/src/plan-utils.js
-var import_i18n72 = __toESM(require_i18n());
+var import_i18n76 = __toESM(require_i18n());
 var import_url6 = __toESM(require_url());
 var usableBlockWithFreePlan = [
   {
@@ -35730,14 +35835,14 @@ var usableBlockWithFreePlan = [
     mediaPlaceholder: true,
     mediaReplaceFlow: true,
     fileType: "video",
-    description: (0, import_i18n72.__)("Upgrade your plan to use video covers", "jetpack-shared-extension-utils")
+    description: (0, import_i18n76.__)("Upgrade your plan to use video covers", "jetpack-shared-extension-utils")
   },
   {
     name: "core/audio",
     mediaPlaceholder: true,
     mediaReplaceFlow: true,
     fileType: "audio",
-    description: (0, import_i18n72.__)("Upgrade your plan to upload audio", "jetpack-shared-extension-utils")
+    description: (0, import_i18n76.__)("Upgrade your plan to upload audio", "jetpack-shared-extension-utils")
   }
 ];
 
@@ -36387,10 +36492,10 @@ var import_hooks = __toESM(require_hooks());
 var import_dom_ready = __toESM(require_dom_ready());
 
 // src/dashboard/components/export-responses/csv.tsx
-var import_components69 = __toESM(require_components(), 1);
+var import_components71 = __toESM(require_components(), 1);
 var import_element85 = __toESM(require_element(), 1);
-var import_i18n73 = __toESM(require_i18n(), 1);
-var import_jsx_runtime162 = __toESM(require_jsx_runtime(), 1);
+var import_i18n77 = __toESM(require_i18n(), 1);
+var import_jsx_runtime164 = __toESM(require_jsx_runtime(), 1);
 var CSVExport = ({ onExport }) => {
   const { tracks: tracks2 } = use_analytics_default();
   const downloadCSV = (0, import_element85.useCallback)(() => {
@@ -36411,18 +36516,18 @@ var CSVExport = ({ onExport }) => {
     });
   }, [onExport, tracks2]);
   const buttonClasses = clsx_default("button", "export-button", "export-csv");
-  return /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)("div", { className: "jp-forms__export-modal-card", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)("div", { className: "jp-forms__export-modal-card-header", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(
-        import_components69.SVG,
+  return /* @__PURE__ */ (0, import_jsx_runtime164.jsxs)("div", { className: "jp-forms__export-modal-card", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime164.jsxs)("div", { className: "jp-forms__export-modal-card-header", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
+        import_components71.SVG,
         {
           width: "22",
           height: "20",
           viewBox: "0 0 22 20",
           fill: "none",
           xmlns: "http://www.w3.org/2000/SVG",
-          children: /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(
-            import_components69.Path,
+          children: /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
+            import_components71.Path,
             {
               fillRule: "evenodd",
               clipRule: "evenodd",
@@ -36432,28 +36537,28 @@ var CSVExport = ({ onExport }) => {
           )
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n73.__)("CSV File", "jetpack-forms") })
+      /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n77.__)("CSV File", "jetpack-forms") })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: (0, import_i18n73.__)("Download your form response data as a CSV file.", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime162.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components69.Button, { variant: "primary", className: buttonClasses, onClick: downloadCSV, children: (0, import_i18n73.__)("Download", "jetpack-forms") }) })
+    /* @__PURE__ */ (0, import_jsx_runtime164.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: (0, import_i18n77.__)("Download your form response data as a CSV file.", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime164.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(import_components71.Button, { variant: "primary", className: buttonClasses, onClick: downloadCSV, children: (0, import_i18n77.__)("Download", "jetpack-forms") }) })
     ] })
   ] });
 };
 var csv_default = CSVExport;
 
 // src/dashboard/components/export-responses/google-drive.tsx
-var import_components70 = __toESM(require_components(), 1);
+var import_components72 = __toESM(require_components(), 1);
 var import_data28 = __toESM(require_data(), 1);
 var import_element86 = __toESM(require_element(), 1);
-var import_i18n74 = __toESM(require_i18n(), 1);
+var import_i18n78 = __toESM(require_i18n(), 1);
 
 // src/util/get-preferred-responses-view.js
 var PARTIAL_RESPONSES_PATH = "admin.php?page=jetpack-forms-admin";
 var FULL_RESPONSES_PATH = getJetpackData()?.adminUrl + PARTIAL_RESPONSES_PATH;
 
 // src/dashboard/components/export-responses/google-drive.tsx
-var import_jsx_runtime163 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime165 = __toESM(require_jsx_runtime(), 1);
 var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
   const [isExporting, setIsExporting] = (0, import_element86.useState)(false);
   const { integration } = (0, import_data28.useSelect)((select3) => {
@@ -36504,18 +36609,18 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
     return null;
   }
   const buttonClasses = clsx_default("button", "export-button", "export-gdrive");
-  return /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)("div", { className: "jp-forms__export-modal-card", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)("div", { className: "jp-forms__export-modal-card-header", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
-        import_components70.SVG,
+  return /* @__PURE__ */ (0, import_jsx_runtime165.jsxs)("div", { className: "jp-forms__export-modal-card", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime165.jsxs)("div", { className: "jp-forms__export-modal-card-header", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(
+        import_components72.SVG,
         {
           width: "18",
           height: "24",
           viewBox: "0 0 18 24",
           fill: "none",
           xmlns: "http://www.w3.org/2000/SVG",
-          children: /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
-            import_components70.Path,
+          children: /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(
+            import_components72.Path,
             {
               d: "M11.8387 1.16016H2C1.44772 1.16016 1 1.60787 1 2.16016V21.8053V21.8376C1 22.3899 1.44772 22.8376 2 22.8376H16C16.5523 22.8376 17 22.3899 17 21.8376V5.80532M11.8387 1.16016V5.80532H17M11.8387 1.16016L17 5.80532M4.6129 13.0311V16.1279H9.25806M4.6129 13.0311V9.93435H9.25806M4.6129 13.0311H13.9032M13.9032 13.0311V9.93435H9.25806M13.9032 13.0311V16.1279H9.25806M9.25806 9.93435V16.1279",
               stroke: "#008710",
@@ -36524,38 +36629,38 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
           )
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n74.__)("Google Sheets", "jetpack-forms") })
+      /* @__PURE__ */ (0, import_jsx_runtime165.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n78.__)("Google Sheets", "jetpack-forms") })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)("div", { children: [
-        (0, import_i18n74.__)("Export your data into a Google Sheets file.", "jetpack-forms"),
-        !isConnectedToGoogleDrive && /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)(import_jsx_runtime163.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime165.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime165.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: /* @__PURE__ */ (0, import_jsx_runtime165.jsxs)("div", { children: [
+        (0, import_i18n78.__)("Export your data into a Google Sheets file.", "jetpack-forms"),
+        !isConnectedToGoogleDrive && /* @__PURE__ */ (0, import_jsx_runtime165.jsxs)(import_jsx_runtime165.Fragment, { children: [
           "\xA0",
-          /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(
             "a",
             {
               href: gdriveConnectSupportURL,
-              title: (0, import_i18n74.__)("Connect to Google Drive", "jetpack-forms"),
+              title: (0, import_i18n78.__)("Connect to Google Drive", "jetpack-forms"),
               target: "_blank",
               rel: "noopener noreferrer",
-              children: (0, import_i18n74.__)("You need to connect to Google Drive.", "jetpack-forms")
+              children: (0, import_i18n78.__)("You need to connect to Google Drive.", "jetpack-forms")
             }
           )
         ] })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: !integration ? /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(import_components70.Spinner, {}) : /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)(import_jsx_runtime163.Fragment, { children: [
-        isConnectedToGoogleDrive && /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
-          import_components70.Button,
+      /* @__PURE__ */ (0, import_jsx_runtime165.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: !integration ? /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(import_components72.Spinner, {}) : /* @__PURE__ */ (0, import_jsx_runtime165.jsxs)(import_jsx_runtime165.Fragment, { children: [
+        isConnectedToGoogleDrive && /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(
+          import_components72.Button,
           {
             className: buttonClasses,
             variant: "primary",
             onClick: exportToGoogleDrive,
             isBusy: isExporting,
-            children: (0, import_i18n74.__)("Export", "jetpack-forms")
+            children: (0, import_i18n78.__)("Export", "jetpack-forms")
           }
         ),
-        !isConnectedToGoogleDrive && needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
-          import_components70.Button,
+        !isConnectedToGoogleDrive && needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(
+          import_components72.Button,
           {
             className: buttonClasses,
             variant: "primary",
@@ -36563,11 +36668,11 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
             target: "_blank",
             onClick: handleConnectUser,
             isBusy: userIsConnecting2,
-            children: (0, import_i18n74.__)("Connect Jetpack user account", "jetpack-forms")
+            children: (0, import_i18n78.__)("Connect Jetpack user account", "jetpack-forms")
           }
         ),
-        !isConnectedToGoogleDrive && !needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
-          import_components70.Button,
+        !isConnectedToGoogleDrive && !needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(
+          import_components72.Button,
           {
             className: buttonClasses,
             variant: "primary",
@@ -36581,7 +36686,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
                 autoConnectOpened.current = true;
               }
             },
-            children: isTogglingConnection ? (0, import_i18n74.__)("Connecting\u2026", "jetpack-forms") : (0, import_i18n74._x)(
+            children: isTogglingConnection ? (0, import_i18n78.__)("Connecting\u2026", "jetpack-forms") : (0, import_i18n78._x)(
               "Connect to Google Drive",
               "",
               // Dummy context to avoid bad minification. See https://github.com/Automattic/jetpack/tree/e3f007ec7ac80715f3d82db33c9ed8098a7b45b4/projects/js-packages/i18n-check-webpack-plugin#conditional-function-call-compaction
@@ -36596,7 +36701,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
 var google_drive_default = GoogleDriveExport;
 
 // src/dashboard/components/export-responses/modal.tsx
-var import_jsx_runtime164 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime166 = __toESM(require_jsx_runtime(), 1);
 var ExportResponsesModal = ({
   onRequestClose,
   onExport,
@@ -36611,15 +36716,15 @@ var ExportResponsesModal = ({
   const isGoogleDriveEnabled = integrations.some(
     (integration) => integration.id === "google-drive"
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(
-    import_components71.Modal,
+  return /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(
+    import_components73.Modal,
     {
-      title: (0, import_i18n75.__)("Export responses", "jetpack-forms"),
+      title: (0, import_i18n79.__)("Export responses", "jetpack-forms"),
       onRequestClose,
       size: "large",
-      children: /* @__PURE__ */ (0, import_jsx_runtime164.jsxs)(import_components71.__experimentalVStack, { spacing: 8, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(csv_default, { onExport }),
-        isGoogleDriveEnabled && /* @__PURE__ */ (0, import_jsx_runtime164.jsx)(google_drive_default, { onExport, autoConnect: autoConnectGdrive })
+      children: /* @__PURE__ */ (0, import_jsx_runtime166.jsxs)(import_components73.__experimentalVStack, { spacing: 8, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(csv_default, { onExport }),
+        isGoogleDriveEnabled && /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(google_drive_default, { onExport, autoConnect: autoConnectGdrive })
       ] })
     }
   );
@@ -36635,7 +36740,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/export-responses/button.tsx
-var import_jsx_runtime165 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime167 = __toESM(require_jsx_runtime(), 1);
 var ExportResponsesButton = ({
   isPrimary = false,
   showIcon = true
@@ -36655,9 +36760,9 @@ var ExportResponsesButton = ({
   if (userCanExport === false) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime165.jsxs)(import_jsx_runtime165.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(
-      import_components72.Button,
+  return /* @__PURE__ */ (0, import_jsx_runtime167.jsxs)(import_jsx_runtime167.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(
+      import_components74.Button,
       {
         size: "compact",
         variant: isPrimary ? "primary" : "secondary",
@@ -36665,12 +36770,12 @@ var ExportResponsesButton = ({
         onClick: openModal,
         accessibleWhenDisabled: true,
         disabled: isDisabled,
-        label: isEmpty4 ? (0, import_i18n76.__)("Nothing to export.", "jetpack-forms") : "",
+        label: isEmpty4 ? (0, import_i18n80.__)("Nothing to export.", "jetpack-forms") : "",
         showTooltip: isEmpty4,
         children: exportLabel
       }
     ),
-    showExportModal && /* @__PURE__ */ (0, import_jsx_runtime165.jsx)(
+    showExportModal && /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(
       modal_default,
       {
         onRequestClose: closeModal,
@@ -36683,15 +36788,15 @@ var ExportResponsesButton = ({
 var button_default = ExportResponsesButton;
 
 // src/dashboard/wp-build/components/manage-integrations-button/index.tsx
-var import_components73 = __toESM(require_components(), 1);
-var import_i18n77 = __toESM(require_i18n(), 1);
-var import_jsx_runtime166 = __toESM(require_jsx_runtime(), 1);
+var import_components75 = __toESM(require_components(), 1);
+var import_i18n81 = __toESM(require_i18n(), 1);
+var import_jsx_runtime168 = __toESM(require_jsx_runtime(), 1);
 function ManageIntegrationsButton({ onClick }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(import_components73.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n77.__)("Manage integrations", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(import_components75.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n81.__)("Manage integrations", "jetpack-forms") });
 }
 
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
-var import_jsx_runtime167 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime169 = __toESM(require_jsx_runtime(), 1);
 function usePageHeaderDetails(props) {
   const { screen, sourceId, isIntegrationsEnabled, showDashboardIntegrations, onOpenIntegrations } = props;
   const statusView = props.statusView ?? "inbox";
@@ -36700,8 +36805,22 @@ function usePageHeaderDetails(props) {
     const numberValue = typeof value === "number" ? value : Number(value);
     return Number.isFinite(numberValue) && numberValue > 0 ? numberValue : null;
   }, [sourceId]);
+  const [isSm] = use_breakpoint_match_default("sm");
   const isFormsScreen = screen === "forms";
   const isSingleFormScreen = screen === "responses" && sourceIdNumber !== null;
+  const { openNewForm } = useCreateForm();
+  const {
+    showExportModal,
+    openModal: openExportModal,
+    closeModal: closeExportModal,
+    onExport,
+    autoConnectGdrive,
+    exportLabel
+  } = useExportResponses();
+  const { totalItems, isLoadingData } = useInboxData();
+  const hasResponses = !isLoadingData && totalItems > 0;
+  const emptySpam = useEmptySpam();
+  const emptyTrash = useEmptyTrash();
   const formRecord = (0, import_data30.useSelect)(
     (select3) => sourceIdNumber ? select3(import_core_data6.store).getEntityRecord(
       "postType",
@@ -36717,45 +36836,184 @@ function usePageHeaderDetails(props) {
   const breadcrumbsItems = (0, import_element87.useMemo)(() => {
     if (isSingleFormScreen) {
       return [
-        { label: (0, import_i18n78.__)("Forms", "jetpack-forms"), to: "/forms" },
-        { label: formTitle || (0, import_i18n78.__)("Form responses", "jetpack-forms") }
+        { label: (0, import_i18n82.__)("Forms", "jetpack-forms"), to: "/forms" },
+        { label: formTitle || (0, import_i18n82.__)("Form responses", "jetpack-forms") }
       ];
     }
-    return [{ label: (0, import_i18n78.__)("Forms", "jetpack-forms") }];
+    return [{ label: (0, import_i18n82.__)("Forms", "jetpack-forms") }];
   }, [formTitle, isSingleFormScreen]);
   const breadcrumbs = (0, import_element87.useMemo)(() => {
-    return /* @__PURE__ */ (0, import_jsx_runtime167.jsxs)(Stack, { align: "center", gap: "xs", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
-      /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(breadcrumbs_default, { items: breadcrumbsItems })
+    return /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)(Stack, { align: "center", gap: "xs", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
+      /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(breadcrumbs_default, { items: breadcrumbsItems })
     ] });
   }, [breadcrumbsItems]);
   const subtitle = (0, import_element87.useMemo)(() => {
     if (isFormsScreen) {
-      return (0, import_i18n78.__)("View and manage all your forms in one place.", "jetpack-forms");
+      return (0, import_i18n82.__)("View and manage all your forms in one place.", "jetpack-forms");
     }
     if (isSingleFormScreen) {
       if (formTitle) {
-        return (0, import_i18n78.sprintf)(
+        return (0, import_i18n82.sprintf)(
           /* translators: %s: form name */
-          (0, import_i18n78.__)("View responses for %s.", "jetpack-forms"),
+          (0, import_i18n82.__)("View responses for %s.", "jetpack-forms"),
           formTitle
         );
       }
-      return (0, import_i18n78.__)("View responses for this form.", "jetpack-forms");
+      return (0, import_i18n82.__)("View responses for this form.", "jetpack-forms");
     }
-    return (0, import_i18n78.__)("View and manage all your form submissions in one place.", "jetpack-forms");
+    return (0, import_i18n82.__)("View and manage all your form submissions in one place.", "jetpack-forms");
   }, [formTitle, isFormsScreen, isSingleFormScreen]);
   const actions2 = (0, import_element87.useMemo)(() => {
+    if (isSm) {
+      const dropdownControls = [];
+      if (isFormsScreen) {
+        if (isIntegrationsEnabled && showDashboardIntegrations) {
+          dropdownControls.push({
+            icon: plugins_default,
+            onClick: onOpenIntegrations,
+            title: (0, import_i18n82.__)("Manage integrations", "jetpack-forms")
+          });
+        }
+        dropdownControls.push({
+          icon: plus_default,
+          onClick: () => openNewForm({}),
+          title: (0, import_i18n82.__)("Create a form", "jetpack-forms")
+        });
+      } else if (isSingleFormScreen) {
+        if (statusView === "inbox" && sourceIdNumber) {
+          dropdownControls.push({
+            onClick: () => {
+              const fallbackEditUrl = `post.php?post=${sourceIdNumber}&action=edit&post_type=jetpack_form`;
+              const url = new URL(fallbackEditUrl, window.location.origin);
+              window.location.href = url.toString();
+            },
+            title: (0, import_i18n82.__)("Edit form", "jetpack-forms")
+          });
+        }
+        dropdownControls.push({
+          icon: download_default,
+          onClick: openExportModal,
+          title: exportLabel,
+          isDisabled: !hasResponses
+        });
+        if (statusView === "trash") {
+          dropdownControls.push({
+            icon: trash_default,
+            onClick: emptyTrash.openConfirmDialog,
+            title: (0, import_i18n82.__)("Empty trash", "jetpack-forms"),
+            isDisabled: emptyTrash.isEmpty || emptyTrash.isEmptying
+          });
+        }
+        if (statusView === "spam") {
+          dropdownControls.push({
+            icon: trash_default,
+            onClick: emptySpam.openConfirmDialog,
+            title: (0, import_i18n82.__)("Delete spam", "jetpack-forms"),
+            isDisabled: emptySpam.isEmpty || emptySpam.isEmptying
+          });
+        }
+      } else {
+        if (statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations) {
+          dropdownControls.push({
+            icon: plugins_default,
+            onClick: onOpenIntegrations,
+            title: (0, import_i18n82.__)("Manage integrations", "jetpack-forms")
+          });
+        }
+        if (statusView === "inbox") {
+          dropdownControls.push({
+            icon: plus_default,
+            onClick: () => openNewForm({ showPatterns: false }),
+            title: (0, import_i18n82.__)("Create a form", "jetpack-forms")
+          });
+        }
+        dropdownControls.push({
+          icon: download_default,
+          onClick: openExportModal,
+          title: exportLabel,
+          isDisabled: !hasResponses
+        });
+        if (statusView === "trash") {
+          dropdownControls.push({
+            icon: trash_default,
+            onClick: emptyTrash.openConfirmDialog,
+            title: (0, import_i18n82.__)("Empty trash", "jetpack-forms"),
+            isDisabled: emptyTrash.isEmpty || emptyTrash.isEmptying
+          });
+        }
+        if (statusView === "spam") {
+          dropdownControls.push({
+            icon: trash_default,
+            onClick: emptySpam.openConfirmDialog,
+            title: (0, import_i18n82.__)("Delete spam", "jetpack-forms"),
+            isDisabled: emptySpam.isEmpty || emptySpam.isEmptying
+          });
+        }
+      }
+      if (dropdownControls.length === 0) {
+        return null;
+      }
+      return [
+        /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(
+          import_components76.DropdownMenu,
+          {
+            controls: dropdownControls,
+            icon: more_vertical_default,
+            label: (0, import_i18n82.__)("More actions", "jetpack-forms")
+          },
+          "actions-menu"
+        ),
+        // Include modals when on mobile
+        ...showExportModal ? [
+          /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(
+            modal_default,
+            {
+              onRequestClose: closeExportModal,
+              onExport,
+              autoConnectGdrive
+            },
+            "export-modal"
+          )
+        ] : [],
+        ...emptyTrash.isConfirmDialogOpen ? [
+          /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(
+            EmptyTrashConfirmationModal,
+            {
+              isOpen: emptyTrash.isConfirmDialogOpen,
+              onCancel: emptyTrash.closeConfirmDialog,
+              onConfirm: emptyTrash.onConfirmEmptying,
+              totalItemsTrash: emptyTrash.totalItemsTrash,
+              selectedResponsesCount: emptyTrash.selectedResponsesCount
+            },
+            "empty-trash-confirm"
+          )
+        ] : [],
+        ...emptySpam.isConfirmDialogOpen ? [
+          /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(
+            EmptySpamConfirmationModal,
+            {
+              isOpen: emptySpam.isConfirmDialogOpen,
+              onCancel: emptySpam.closeConfirmDialog,
+              onConfirm: emptySpam.onConfirmEmptying,
+              totalItemsSpam: emptySpam.totalItemsSpam,
+              selectedResponsesCount: emptySpam.selectedResponsesCount
+            },
+            "empty-spam-confirm"
+          )
+        ] : []
+      ];
+    }
     if (isFormsScreen) {
       return [
-        ...isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
-        /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(CreateFormButton, { variant: "primary", showIcon: false }, "create")
+        ...isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime169.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
+        /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(CreateFormButton, { variant: "primary", showIcon: false }, "create")
       ];
     }
     if (isSingleFormScreen) {
       return [
-        ...sourceIdNumber ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
-        /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(
+        ...sourceIdNumber ? [/* @__PURE__ */ (0, import_jsx_runtime169.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
+        /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(
           button_default,
           {
             isPrimary: statusView === "inbox",
@@ -36763,14 +37021,14 @@ function usePageHeaderDetails(props) {
           },
           "export"
         ),
-        ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
-        ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
+        ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime169.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
+        ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime169.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
       ];
     }
     return [
-      ...statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
+      ...statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime169.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
       ...statusView === "inbox" ? [
-        /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(
           CreateFormButton,
           {
             variant: "secondary",
@@ -36780,7 +37038,7 @@ function usePageHeaderDetails(props) {
           "create"
         )
       ] : [],
-      /* @__PURE__ */ (0, import_jsx_runtime167.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(
         button_default,
         {
           isPrimary: statusView === "inbox",
@@ -36788,38 +37046,63 @@ function usePageHeaderDetails(props) {
         },
         "export"
       ),
-      ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
-      ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime167.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
+      ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime169.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
+      ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime169.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
     ];
   }, [
+    isSm,
     isIntegrationsEnabled,
     onOpenIntegrations,
     showDashboardIntegrations,
     sourceIdNumber,
     isFormsScreen,
     isSingleFormScreen,
-    statusView
+    statusView,
+    openNewForm,
+    openExportModal,
+    showExportModal,
+    closeExportModal,
+    onExport,
+    autoConnectGdrive,
+    hasResponses,
+    exportLabel,
+    emptyTrash.openConfirmDialog,
+    emptyTrash.isEmpty,
+    emptyTrash.isEmptying,
+    emptyTrash.isConfirmDialogOpen,
+    emptyTrash.closeConfirmDialog,
+    emptyTrash.onConfirmEmptying,
+    emptyTrash.totalItemsTrash,
+    emptyTrash.selectedResponsesCount,
+    emptySpam.openConfirmDialog,
+    emptySpam.isEmpty,
+    emptySpam.isEmptying,
+    emptySpam.isConfirmDialogOpen,
+    emptySpam.closeConfirmDialog,
+    emptySpam.onConfirmEmptying,
+    emptySpam.totalItemsSpam,
+    emptySpam.selectedResponsesCount
   ]);
   return { breadcrumbs, subtitle, actions: actions2 };
 }
 
 // routes/responses/actions.tsx
 var import_api_fetch10 = __toESM(require_api_fetch());
-var import_components74 = __toESM(require_components());
+var import_components77 = __toESM(require_components());
 var import_core_data7 = __toESM(require_core_data());
-var import_i18n79 = __toESM(require_i18n());
+var import_i18n83 = __toESM(require_i18n());
 var import_notices4 = __toESM(require_notices());
 
 // src/dashboard/icons/not-spam.tsx
 var import_primitives47 = __toESM(require_primitives(), 1);
-var import_jsx_runtime168 = __toESM(require_jsx_runtime(), 1);
-var notSpam = /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(import_primitives47.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime168.jsx)(import_primitives47.Path, { d: "M13 17v-2h-.9l-.9 2H13Zm3.6-11.9-.7 1.5 2.5 2.5v5.8l-3.6 3.6h-4.3L9.8 20h5.6l4.5-4.5v-7l-3.4-3.4ZM15 2.8 14.4 4h-6L3.9 8.5v7l3.6 3.6-.5 1.2.9.4L16 3.2l-.9-.4Zm-2 4.5V7h-2v4.6l-2.7 6-2.8-2.8V9l3.6-3.6h4.7L13 7.2Z" }) });
+var import_jsx_runtime170 = __toESM(require_jsx_runtime(), 1);
+var notSpam = /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_primitives47.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_primitives47.Path, { d: "M13 17v-2h-.9l-.9 2H13Zm3.6-11.9-.7 1.5 2.5 2.5v5.8l-3.6 3.6h-4.3L9.8 20h5.6l4.5-4.5v-7l-3.4-3.4ZM15 2.8 14.4 4h-6L3.9 8.5v7l3.6 3.6-.5 1.2.9.4L16 3.2l-.9-.4Zm-2 4.5V7h-2v4.6l-2.7 6-2.8-2.8V9l3.6-3.6h4.7L13 7.2Z" }) });
 var not_spam_default = notSpam;
 
 // src/dashboard/icons/spam.tsx
 var import_primitives48 = __toESM(require_primitives(), 1);
-var import_jsx_runtime169 = __toESM(require_jsx_runtime(), 1);
-var spam = /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_primitives48.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_primitives48.Path, { d: "M11 13h2V7h-2v6Zm0 4h2v-2h-2v2Zm4.5-13h-7L4 8.5v7L8.5 20h7l4.5-4.5v-7L15.5 4Zm3 10.9-3.6 3.6H9.1l-3.6-3.6V9.1l3.6-3.6h5.8l3.6 3.6v5.8Z" }) });
+var import_jsx_runtime171 = __toESM(require_jsx_runtime(), 1);
+var spam = /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_primitives48.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_primitives48.Path, { d: "M11 13h2V7h-2v6Zm0 4h2v-2h-2v2Zm4.5-13h-7L4 8.5v7L8.5 20h7l4.5-4.5v-7L15.5 4Zm3 10.9-3.6 3.6H9.1l-3.6-3.6V9.1l3.6-3.6h5.8l3.6 3.6v5.8Z" }) });
 var spam_default = spam;
 
 // src/dashboard/inbox/stage/views.js
@@ -36881,7 +37164,7 @@ var updateMenuCounterOptimistically = (count) => {
 };
 
 // routes/responses/actions.tsx
-var import_jsx_runtime170 = __toESM(require_jsx_runtime());
+var import_jsx_runtime172 = __toESM(require_jsx_runtime());
 var getCountQueryParams = (currentQuery2) => {
   const queryParams = {};
   if (currentQuery2?.search) {
@@ -36901,7 +37184,7 @@ var getCountQueryParams = (currentQuery2) => {
   }
   return queryParams;
 };
-var undoingMessage = (0, import_i18n79.__)("Undoing\u2026", "jetpack-forms");
+var undoingMessage = (0, import_i18n83.__)("Undoing\u2026", "jetpack-forms");
 var pendingRefetches = /* @__PURE__ */ new Map();
 var invalidateCacheAndNavigate = (registry, currentQuery2, queryParams, statusBeingRemovedFrom) => {
   registry.dispatch(store3).invalidateCounts();
@@ -36932,9 +37215,9 @@ var invalidateCacheAndNavigate = (registry, currentQuery2, queryParams, statusBe
   setCurrentQuery2(updatedQuery);
 };
 var getGenericErrorMessage = (numberOfErrors) => {
-  return numberOfErrors === 1 ? (0, import_i18n79.__)("An error occurred.", "jetpack-forms") : (0, import_i18n79.sprintf)(
+  return numberOfErrors === 1 ? (0, import_i18n83.__)("An error occurred.", "jetpack-forms") : (0, import_i18n83.sprintf)(
     /* translators: %s: the number of responses. */
-    (0, import_i18n79._n)(
+    (0, import_i18n83._n)(
       "An error occurred for %s response.",
       "An error occurred for %s responses.",
       numberOfErrors,
@@ -37013,8 +37296,8 @@ function getActions({ navigate, searchParams }) {
   const viewAction = {
     id: "view-response",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: comment_content_default }),
-    label: (0, import_i18n79.__)("View", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Icon, { icon: comment_content_default }),
+    label: (0, import_i18n83.__)("View", "jetpack-forms"),
     async callback(items) {
       analytics_default.tracks.recordEvent("jetpack_forms_inbox_action_click", {
         action: "view-response",
@@ -37032,8 +37315,8 @@ function getActions({ navigate, searchParams }) {
   const editFormAction = {
     id: "edit-form",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: backup_default }),
-    label: (0, import_i18n79.__)("Edit form", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Icon, { icon: backup_default }),
+    label: (0, import_i18n83.__)("Edit form", "jetpack-forms"),
     isEligible: (item) => !!item?.edit_form_url,
     supportsBulk: false,
     async callback(items) {
@@ -37051,8 +37334,8 @@ function getActions({ navigate, searchParams }) {
   const markAsSpamAction = {
     id: "mark-as-spam",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: spam_default }),
-    label: (0, import_i18n79.__)("Spam", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Icon, { icon: spam_default }),
+    label: (0, import_i18n83.__)("Spam", "jetpack-forms"),
     isEligible: (item) => item.status !== "spam",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false } = {}) {
@@ -37066,9 +37349,9 @@ function getActions({ navigate, searchParams }) {
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const actionId = `mark-as-spam-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n79.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n83.sprintf)(
         /* translators: %s: the number of responses. */
-        (0, import_i18n79._n)(
+        (0, import_i18n83._n)(
           "Moving %s response to spam\u2026",
           "Moving %s responses to spam\u2026",
           items.length,
@@ -37079,7 +37362,7 @@ function getActions({ navigate, searchParams }) {
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "mark-as-spam-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -37102,9 +37385,9 @@ function getActions({ navigate, searchParams }) {
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n79.__)("Response marked as spam.", "jetpack-forms") : (0, import_i18n79.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n83.__)("Response marked as spam.", "jetpack-forms") : (0, import_i18n83.sprintf)(
             /* translators: %s: the number of responses. */
-            (0, import_i18n79._n)(
+            (0, import_i18n83._n)(
               "%s response marked as spam.",
               "%s responses marked as spam.",
               items.length,
@@ -37118,7 +37401,7 @@ function getActions({ navigate, searchParams }) {
               id: "mark-as-spam-action",
               actions: [
                 {
-                  label: (0, import_i18n79.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n83.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -37157,8 +37440,8 @@ function getActions({ navigate, searchParams }) {
   const markAsNotSpamAction = {
     id: "mark-as-not-spam",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: not_spam_default }),
-    label: (0, import_i18n79.__)("Not spam", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Icon, { icon: not_spam_default }),
+    label: (0, import_i18n83.__)("Not spam", "jetpack-forms"),
     isEligible: (item) => item.status === "spam",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false } = {}) {
@@ -37172,9 +37455,9 @@ function getActions({ navigate, searchParams }) {
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const actionId = `mark-as-not-spam-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n79.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n83.sprintf)(
         /* translators: %s: the number of responses. */
-        (0, import_i18n79._n)(
+        (0, import_i18n83._n)(
           "Marking %s response as not spam\u2026",
           "Marking %s responses as not spam\u2026",
           items.length,
@@ -37185,7 +37468,7 @@ function getActions({ navigate, searchParams }) {
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "mark-as-not-spam-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -37204,9 +37487,9 @@ function getActions({ navigate, searchParams }) {
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n79.__)("Response marked as not spam.", "jetpack-forms") : (0, import_i18n79.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n83.__)("Response marked as not spam.", "jetpack-forms") : (0, import_i18n83.sprintf)(
             /* translators: %s: the number of responses. */
-            (0, import_i18n79._n)(
+            (0, import_i18n83._n)(
               "%s response marked as not spam.",
               "%s responses marked as not spam.",
               items.length,
@@ -37220,7 +37503,7 @@ function getActions({ navigate, searchParams }) {
               id: "mark-as-not-spam-action",
               actions: [
                 {
-                  label: (0, import_i18n79.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n83.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -37259,8 +37542,8 @@ function getActions({ navigate, searchParams }) {
   const restoreAction = {
     id: "restore",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: backup_default }),
-    label: (0, import_i18n79.__)("Restore", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Icon, { icon: backup_default }),
+    label: (0, import_i18n83.__)("Restore", "jetpack-forms"),
     isEligible: (item) => item.status === "trash",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false, targetStatus = "publish" } = {}) {
@@ -37275,9 +37558,9 @@ function getActions({ navigate, searchParams }) {
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const newStatus = targetStatus === "trash" ? "publish" : targetStatus;
       const actionId = `restore-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n79.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n83.sprintf)(
         /* translators: %s: the number of responses. */
-        (0, import_i18n79._n)(
+        (0, import_i18n83._n)(
           "Restoring %s response\u2026",
           "Restoring %s responses\u2026",
           items.length,
@@ -37288,7 +37571,7 @@ function getActions({ navigate, searchParams }) {
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "restore-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -37307,9 +37590,9 @@ function getActions({ navigate, searchParams }) {
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n79.__)("Response restored.", "jetpack-forms") : (0, import_i18n79.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n83.__)("Response restored.", "jetpack-forms") : (0, import_i18n83.sprintf)(
             /* translators: %s: the number of responses. */
-            (0, import_i18n79._n)(
+            (0, import_i18n83._n)(
               "%s response restored.",
               "%s responses restored.",
               items.length,
@@ -37323,7 +37606,7 @@ function getActions({ navigate, searchParams }) {
               id: "restore-action",
               actions: [
                 {
-                  label: (0, import_i18n79.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n83.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -37356,8 +37639,8 @@ function getActions({ navigate, searchParams }) {
   const moveToTrashAction = {
     id: "move-to-trash",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: trash_default }),
-    label: (0, import_i18n79.__)("Trash", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Icon, { icon: trash_default }),
+    label: (0, import_i18n83.__)("Trash", "jetpack-forms"),
     isEligible: (item) => item.status !== "trash",
     supportsBulk: true,
     async callback(items, { registry }, { isUndo = false } = {}) {
@@ -37372,9 +37655,9 @@ function getActions({ navigate, searchParams }) {
       const queryParams = getCountQueryParams(getCurrentQuery2());
       const previousStatus = items[0]?.status;
       const actionId = `move-to-trash-${Date.now()}-${items.map((i2) => i2.id).join("-")}`;
-      const busyMessage = isUndo ? undoingMessage : (0, import_i18n79.sprintf)(
+      const busyMessage = isUndo ? undoingMessage : (0, import_i18n83.sprintf)(
         /* translators: %s: the number of responses. */
-        (0, import_i18n79._n)(
+        (0, import_i18n83._n)(
           "Moving %s response to trash\u2026",
           "Moving %s responses to trash\u2026",
           items.length,
@@ -37385,7 +37668,7 @@ function getActions({ navigate, searchParams }) {
       createInfoNotice(busyMessage, {
         type: "snackbar",
         id: "move-to-trash-action",
-        icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Spinner, {})
+        icon: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Spinner, {})
       });
       addPendingAction2(actionId);
       let waitForRecordsPromise = null;
@@ -37408,9 +37691,9 @@ function getActions({ navigate, searchParams }) {
           pendingRefetches.set(actionId, waitForRecordsPromise);
         }
         if (numberOfErrors === 0) {
-          const successMessage = items.length === 1 ? (0, import_i18n79.__)("Response moved to trash.", "jetpack-forms") : (0, import_i18n79.sprintf)(
+          const successMessage = items.length === 1 ? (0, import_i18n83.__)("Response moved to trash.", "jetpack-forms") : (0, import_i18n83.sprintf)(
             /* translators: %s: the number of responses. */
-            (0, import_i18n79._n)(
+            (0, import_i18n83._n)(
               "%s response moved to trash.",
               "%s responses moved to trash.",
               items.length,
@@ -37425,7 +37708,7 @@ function getActions({ navigate, searchParams }) {
               id: "move-to-trash-action",
               actions: [
                 {
-                  label: (0, import_i18n79.__)("Undo", "jetpack-forms"),
+                  label: (0, import_i18n83.__)("Undo", "jetpack-forms"),
                   onClick: async () => {
                     const originalRefetch = pendingRefetches.get(actionId);
                     if (originalRefetch) {
@@ -37463,8 +37746,8 @@ function getActions({ navigate, searchParams }) {
   const deleteAction = {
     id: "delete",
     isPrimary: true,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: trash_default }),
-    label: (0, import_i18n79.__)("Delete", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Icon, { icon: trash_default }),
+    label: (0, import_i18n83.__)("Delete", "jetpack-forms"),
     isEligible: (item) => item.status === "trash",
     supportsBulk: true,
     isDestructive: true,
@@ -37492,9 +37775,9 @@ function getActions({ navigate, searchParams }) {
         invalidateCacheAndNavigate(registry, getCurrentQuery2(), queryParams, "trash");
       }
       if (itemsUpdated.length === items.length) {
-        const successMessage = items.length === 1 ? (0, import_i18n79.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n79.sprintf)(
+        const successMessage = items.length === 1 ? (0, import_i18n83.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n83.sprintf)(
           /* translators: %s: the number of responses. */
-          (0, import_i18n79._n)(
+          (0, import_i18n83._n)(
             "%s response deleted permanently.",
             "%s responses deleted permanently.",
             items.length,
@@ -37528,8 +37811,8 @@ function getActions({ navigate, searchParams }) {
   const markAsReadAction = {
     id: "mark-as-read",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: seen_default }),
-    label: (0, import_i18n79.__)("Mark as read", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Icon, { icon: seen_default }),
+    label: (0, import_i18n83.__)("Mark as read", "jetpack-forms"),
     isEligible: (item) => item.is_unread,
     supportsBulk: true,
     async callback(items, { registry }) {
@@ -37578,9 +37861,9 @@ function getActions({ navigate, searchParams }) {
         markRecordsAsInvalid2(updatedIds);
       }
       if (promises.every(({ status }) => status === "fulfilled")) {
-        const successMessage = items.length === 1 ? (0, import_i18n79.__)("Response marked as read.", "jetpack-forms") : (0, import_i18n79.sprintf)(
+        const successMessage = items.length === 1 ? (0, import_i18n83.__)("Response marked as read.", "jetpack-forms") : (0, import_i18n83.sprintf)(
           /* translators: %s: the number of responses. */
-          (0, import_i18n79._n)(
+          (0, import_i18n83._n)(
             "%s response marked as read.",
             "%s responses marked as read.",
             items.length,
@@ -37593,7 +37876,7 @@ function getActions({ navigate, searchParams }) {
           id: "mark-as-read-action",
           actions: [
             {
-              label: (0, import_i18n79.__)("Undo", "jetpack-forms"),
+              label: (0, import_i18n83.__)("Undo", "jetpack-forms"),
               onClick: () => {
                 markAsUnreadAction.callback?.(items, { registry });
               }
@@ -37610,8 +37893,8 @@ function getActions({ navigate, searchParams }) {
   const markAsUnreadAction = {
     id: "mark-as-unread",
     isPrimary: false,
-    icon: /* @__PURE__ */ (0, import_jsx_runtime170.jsx)(import_components74.Icon, { icon: unseen_default }),
-    label: (0, import_i18n79.__)("Mark as unread", "jetpack-forms"),
+    icon: /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(import_components77.Icon, { icon: unseen_default }),
+    label: (0, import_i18n83.__)("Mark as unread", "jetpack-forms"),
     isEligible: (item) => !item.is_unread,
     supportsBulk: true,
     async callback(items, { registry }) {
@@ -37658,9 +37941,9 @@ function getActions({ navigate, searchParams }) {
         invalidateCounts2();
         const updatedIds = items.map((item) => item.id);
         markRecordsAsInvalid2(updatedIds);
-        const successMessage = items.length === 1 ? (0, import_i18n79.__)("Response marked as unread.", "jetpack-forms") : (0, import_i18n79.sprintf)(
+        const successMessage = items.length === 1 ? (0, import_i18n83.__)("Response marked as unread.", "jetpack-forms") : (0, import_i18n83.sprintf)(
           /* translators: %s: the number of responses. */
-          (0, import_i18n79._n)(
+          (0, import_i18n83._n)(
             "%s response marked as unread.",
             "%s responses marked as unread.",
             items.length,
@@ -37673,7 +37956,7 @@ function getActions({ navigate, searchParams }) {
           id: "mark-as-unread-action",
           actions: [
             {
-              label: (0, import_i18n79.__)("Undo", "jetpack-forms"),
+              label: (0, import_i18n83.__)("Undo", "jetpack-forms"),
               onClick: () => {
                 markAsReadAction.callback?.(items, { registry });
               }
@@ -37750,15 +38033,15 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // routes/responses/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='a26f17d7cc']")) {
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='7f0fe2280e']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "a26f17d7cc");
-  style.appendChild(document.createTextNode(':root{--wpds-border-radius-lg:8px;--wpds-border-radius-md:4px;--wpds-border-radius-sm:2px;--wpds-border-radius-xs:1px;--wpds-border-width-focus:2px;--wpds-border-width-lg:8px;--wpds-border-width-md:4px;--wpds-border-width-sm:2px;--wpds-border-width-xs:1px;--wpds-color-bg-interactive-brand-strong:#3858e9;--wpds-color-bg-interactive-brand-strong-active:#2e49d9;--wpds-color-bg-interactive-brand-weak:#0000;--wpds-color-bg-interactive-brand-weak-active:#e6eaf4;--wpds-color-bg-interactive-error:#0000;--wpds-color-bg-interactive-error-active:#fff6f4;--wpds-color-bg-interactive-error-strong:#cc1818;--wpds-color-bg-interactive-error-strong-active:#b90000;--wpds-color-bg-interactive-error-weak:#0000;--wpds-color-bg-interactive-error-weak-active:#f6e6e3;--wpds-color-bg-interactive-neutral-strong:#2d2d2d;--wpds-color-bg-interactive-neutral-strong-active:#1e1e1e;--wpds-color-bg-interactive-neutral-strong-disabled:#e2e2e2;--wpds-color-bg-interactive-neutral-weak:#0000;--wpds-color-bg-interactive-neutral-weak-active:#eaeaea;--wpds-color-bg-interactive-neutral-weak-disabled:#0000;--wpds-color-bg-surface-brand:#ecf0f9;--wpds-color-bg-surface-caution:#fee994;--wpds-color-bg-surface-caution-weak:#fff9c9;--wpds-color-bg-surface-error:#f6e6e3;--wpds-color-bg-surface-error-weak:#fff6f4;--wpds-color-bg-surface-info:#deebfa;--wpds-color-bg-surface-info-weak:#f2f9ff;--wpds-color-bg-surface-neutral:#f8f8f8;--wpds-color-bg-surface-neutral-strong:#fff;--wpds-color-bg-surface-neutral-weak:#f0f0f0;--wpds-color-bg-surface-success:#c5f7cc;--wpds-color-bg-surface-success-weak:#eaffed;--wpds-color-bg-surface-warning:#fde6bd;--wpds-color-bg-surface-warning-weak:#fff7e0;--wpds-color-bg-thumb-brand:#3858e9;--wpds-color-bg-thumb-brand-active:#3858e9;--wpds-color-bg-thumb-neutral-disabled:#d8d8d8;--wpds-color-bg-thumb-neutral-weak:#8a8a8a;--wpds-color-bg-thumb-neutral-weak-active:#6c6c6c;--wpds-color-bg-track-neutral:#d8d8d8;--wpds-color-bg-track-neutral-weak:#e0e0e0;--wpds-color-fg-content-caution:#281d00;--wpds-color-fg-content-caution-weak:#826a00;--wpds-color-fg-content-error:#470000;--wpds-color-fg-content-error-weak:#cc1818;--wpds-color-fg-content-info:#001b4f;--wpds-color-fg-content-info-weak:#006bd7;--wpds-color-fg-content-neutral:#1e1e1e;--wpds-color-fg-content-neutral-weak:#6d6d6d;--wpds-color-fg-content-success:#002900;--wpds-color-fg-content-success-weak:#007f30;--wpds-color-fg-content-warning:#2e1900;--wpds-color-fg-content-warning-weak:#926300;--wpds-color-fg-interactive-brand:#3858e9;--wpds-color-fg-interactive-brand-active:#3858e9;--wpds-color-fg-interactive-brand-strong:#eff0f2;--wpds-color-fg-interactive-brand-strong-active:#eff0f2;--wpds-color-fg-interactive-error:#cc1818;--wpds-color-fg-interactive-error-active:#cc1818;--wpds-color-fg-interactive-error-strong:#f2efef;--wpds-color-fg-interactive-error-strong-active:#f2efef;--wpds-color-fg-interactive-neutral:#1e1e1e;--wpds-color-fg-interactive-neutral-active:#1e1e1e;--wpds-color-fg-interactive-neutral-disabled:#8a8a8a;--wpds-color-fg-interactive-neutral-strong:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-active:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-disabled:#8a8a8a;--wpds-color-fg-interactive-neutral-weak:#6d6d6d;--wpds-color-fg-interactive-neutral-weak-disabled:#8a8a8a;--wpds-color-stroke-focus-brand:#3858e9;--wpds-color-stroke-interactive-brand:#3858e9;--wpds-color-stroke-interactive-brand-active:#2337c8;--wpds-color-stroke-interactive-error:#cc1818;--wpds-color-stroke-interactive-error-active:#9d0000;--wpds-color-stroke-interactive-error-strong:#cc1818;--wpds-color-stroke-interactive-neutral:#8a8a8a;--wpds-color-stroke-interactive-neutral-active:#6c6c6c;--wpds-color-stroke-interactive-neutral-disabled:#d8d8d8;--wpds-color-stroke-interactive-neutral-strong:#6c6c6c;--wpds-color-stroke-surface-brand:#a3b1d4;--wpds-color-stroke-surface-brand-strong:#3858e9;--wpds-color-stroke-surface-error:#daa39b;--wpds-color-stroke-surface-error-strong:#cc1818;--wpds-color-stroke-surface-info:#9fbcdc;--wpds-color-stroke-surface-info-strong:#006bd7;--wpds-color-stroke-surface-neutral:#d8d8d8;--wpds-color-stroke-surface-neutral-strong:#8a8a8a;--wpds-color-stroke-surface-neutral-weak:#e0e0e0;--wpds-color-stroke-surface-success:#8ac894;--wpds-color-stroke-surface-success-strong:#007f30;--wpds-color-stroke-surface-warning:#d0b381;--wpds-color-stroke-surface-warning-strong:#926300;--wpds-dimension-base:4px;--wpds-dimension-gap-2xs:4px;--wpds-dimension-gap-lg:24px;--wpds-dimension-gap-md:16px;--wpds-dimension-gap-sm:12px;--wpds-dimension-gap-xl:40px;--wpds-dimension-gap-xs:8px;--wpds-dimension-padding-surface-2xs:4px;--wpds-dimension-padding-surface-lg:32px;--wpds-dimension-padding-surface-md:24px;--wpds-dimension-padding-surface-sm:16px;--wpds-dimension-padding-surface-xs:8px;--wpds-elevation-large:0 5px 15px 0 #00000014,0 15px 27px 0 #00000012,0 30px 36px 0 #0000000a,0 50px 43px 0 #00000005;--wpds-elevation-medium:0 2px 3px 0 #0000000d,0 4px 5px 0 #0000000a,0 12px 12px 0 #00000008,0 16px 16px 0 #00000005;--wpds-elevation-small:0 1px 2px 0 #0000000d,0 2px 3px 0 #0000000a,0 6px 6px 0 #00000008,0 8px 8px 0 #00000005;--wpds-elevation-x-small:0 1px 1px 0 #00000008,0 1px 2px 0 #00000005,0 3px 3px 0 #00000005,0 4px 4px 0 #00000003;--wpds-font-family-body:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-font-family-heading:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-font-family-mono:"Menlo","Consolas",monaco,monospace;--wpds-font-line-height-2xl:40px;--wpds-font-line-height-lg:28px;--wpds-font-line-height-md:24px;--wpds-font-line-height-sm:20px;--wpds-font-line-height-xl:32px;--wpds-font-line-height-xs:16px;--wpds-font-size-2xl:32px;--wpds-font-size-lg:15px;--wpds-font-size-md:13px;--wpds-font-size-sm:12px;--wpds-font-size-xl:20px;--wpds-font-size-xs:11px;--wpds-font-weight-medium:499;--wpds-font-weight-regular:400}[data-wpds-theme-provider-id][data-wpds-density=default]{--wpds-dimension-base:4px;--wpds-dimension-gap-2xs:4px;--wpds-dimension-gap-lg:24px;--wpds-dimension-gap-md:16px;--wpds-dimension-gap-sm:12px;--wpds-dimension-gap-xl:40px;--wpds-dimension-gap-xs:8px;--wpds-dimension-padding-surface-2xs:4px;--wpds-dimension-padding-surface-lg:32px;--wpds-dimension-padding-surface-md:24px;--wpds-dimension-padding-surface-sm:16px;--wpds-dimension-padding-surface-xs:8px}[data-wpds-theme-provider-id][data-wpds-density=compact]{--wpds-dimension-gap-2xs:4px;--wpds-dimension-gap-lg:20px;--wpds-dimension-gap-md:12px;--wpds-dimension-gap-sm:8px;--wpds-dimension-gap-xl:32px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-surface-2xs:4px;--wpds-dimension-padding-surface-lg:24px;--wpds-dimension-padding-surface-md:20px;--wpds-dimension-padding-surface-sm:12px;--wpds-dimension-padding-surface-xs:4px}[data-wpds-theme-provider-id][data-wpds-density=comfortable]{--wpds-dimension-gap-2xs:8px;--wpds-dimension-gap-lg:32px;--wpds-dimension-gap-md:20px;--wpds-dimension-gap-sm:16px;--wpds-dimension-gap-xl:48px;--wpds-dimension-gap-xs:12px;--wpds-dimension-padding-surface-2xs:8px;--wpds-dimension-padding-surface-lg:40px;--wpds-dimension-padding-surface-md:32px;--wpds-dimension-padding-surface-sm:20px;--wpds-dimension-padding-surface-xs:12px}@media (min-resolution:192dpi){:root{--wpds-border-width-focus:1.5px}}.dataviews-picker-wrapper,.dataviews-wrapper{background-color:var(--wp-dataviews-color-background,#fff);box-sizing:border-box;container:dataviews-wrapper/inline-size;display:flex;flex-direction:column;font-size:13px;height:100%;line-height:1.4;overflow:auto;scroll-padding-bottom:64px}.dataviews-filters__container,.dataviews__view-actions{background-color:inherit;box-sizing:border-box;flex-shrink:0;left:0;padding:16px 24px;position:sticky}@media not (prefers-reduced-motion){.dataviews-filters__container,.dataviews__view-actions{transition:padding .1s ease-out}}.dataviews-loading,.dataviews-no-results{align-items:center;display:flex;flex-grow:1;justify-content:center;padding:0 24px}@media not (prefers-reduced-motion){.dataviews-loading,.dataviews-no-results{transition:padding .1s ease-out}}.dataviews-loading-more{text-align:center}@container (max-width: 430px){.dataviews-filters__container,.dataviews__view-actions{padding:12px 24px}}.dataviews-title-field{font-size:13px;font-weight:499;width:100%}.dataviews-title-field,.dataviews-title-field a{color:#2f2f2f;text-overflow:ellipsis;white-space:nowrap}.dataviews-title-field a{display:block;flex-grow:0;overflow:hidden;text-decoration:none}.dataviews-title-field a:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field a:focus{border-radius:2px;box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color,#007cba);color:var(--wp-admin-theme-color--rgb)}.dataviews-title-field button.components-button.is-link{color:#1e1e1e;display:block;font-weight:inherit;overflow:hidden;text-decoration:none;text-overflow:ellipsis;white-space:nowrap;width:100%}.dataviews-title-field button.components-button.is-link:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field--clickable{color:#2f2f2f;cursor:pointer}.dataviews-title-field--clickable:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field--clickable:focus{border-radius:2px;box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color,#007cba);color:var(--wp-admin-theme-color--rgb)}.components-card__body:has(>.dataviews-picker-wrapper),.components-card__body:has(>.dataviews-wrapper){overflow:hidden;padding:8px 0 0}.dataviews-bulk-actions-footer__item-count{color:#1e1e1e}.dataviews-bulk-actions-footer__container{margin-right:auto;min-height:32px}.dataviews-filters__button{position:relative}.dataviews-filters__container{padding-top:0}.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true],.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true]:hover{opacity:0}.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true]:focus{opacity:1}.dataviews-filters__summary-popover{font-size:13px;line-height:1.4}.dataviews-filters__summary-popover .components-popover__content{border-radius:4px;max-width:250px;min-width:230px;width:100%}.dataviews-filters__summary-popover.components-dropdown__content .components-popover__content{padding:0}.dataviews-filters__summary-operators-container{padding:8px 16px}.dataviews-filters__summary-operators-container:has(+.dataviews-filters__search-widget-listbox),.dataviews-filters__summary-operators-container:has(+.dataviews-filters__search-widget-no-elements),.dataviews-filters__summary-operators-container:has(+.dataviews-filters__user-input-widget){border-bottom:1px solid #e0e0e0}.dataviews-filters__summary-operators-container:empty{display:none}.dataviews-filters__summary-operators-container .dataviews-filters__summary-operators-filter-name{color:#757575;flex-shrink:0;max-width:calc(100% - 55px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dataviews-filters__summary-operators-container .dataviews-filters__summary-operators-filter-select{overflow:hidden;white-space:nowrap;width:100%}.dataviews-filters__summary-chip-container{position:relative;white-space:pre-wrap}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip{align-items:center;background:#f0f0f0;border:1px solid #0000;border-radius:16px;box-sizing:border-box;color:#2f2f2f;cursor:pointer;display:flex;min-height:32px;padding:4px 12px;position:relative}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.is-not-clickable{cursor:default}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-reset{padding-inline-end:28px}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:focus-visible,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:hover:not(.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.is-not-clickable),.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip[aria-expanded=true]{background:#e0e0e0;color:#1e1e1e}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values{background:rgba(var(--wp-admin-theme-color--rgb),.04);color:var(--wp-admin-theme-color)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values:hover,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values[aria-expanded=true]{background:rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:focus-visible{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);outline:none}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip .dataviews-filters-__summary-filter-text-name{font-weight:499}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove{align-items:center;background:#0000;border:0;border-radius:50%;cursor:pointer;display:flex;height:24px;justify-content:center;padding:0;position:absolute;right:4px;top:50%;transform:translateY(-50%);width:24px}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove svg{fill:#757575}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:hover{background:#e0e0e0}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus svg,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:hover svg{fill:#1e1e1e}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove.has-values svg{fill:var(--wp-admin-theme-color)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove.has-values:hover{background:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus-visible{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);outline:none}.dataviews-filters__search-widget-filter-combobox-list{border-top:1px solid #e0e0e0;max-height:184px;overflow:auto;padding:4px}.dataviews-filters__search-widget-filter-combobox-list .dataviews-filters__search-widget-filter-combobox-item-value [data-user-value]{font-weight:600}.dataviews-filters__search-widget-listbox{overflow:auto;padding:4px}.dataviews-filters__search-widget-listitem{align-items:center;border-radius:2px;box-sizing:border-box;cursor:default;display:flex;font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:13px;font-weight:400;gap:8px;line-height:20px;min-height:32px;padding:4px 12px}.dataviews-filters__search-widget-listitem:last-child{margin-block-end:0}.dataviews-filters__search-widget-listitem:focus,.dataviews-filters__search-widget-listitem:hover,.dataviews-filters__search-widget-listitem[data-active-item]{background-color:var(--wp-admin-theme-color);color:#fff}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-description,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-description,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-description{color:#fff}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-single-selection,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-single-selection,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-single-selection{background:#fff;border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-single-selection.is-selected,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-single-selection.is-selected,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-single-selection.is-selected{background:var(--wp-admin-theme-color-darker-20,#183ad6);border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-multi-selection,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-multi-selection,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-multi-selection{border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-multi-selection.is-selected,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-multi-selection.is-selected,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-multi-selection.is-selected{background:var(--wp-admin-theme-color-darker-20,#183ad6);border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-description{color:#757575;display:block;font-size:12px;line-height:16px;overflow:hidden;text-overflow:ellipsis}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{border:1px solid #1e1e1e;border-radius:50%;height:24px;margin-right:12px;max-width:24px;min-width:24px;position:relative;transition:none;width:24px}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{height:16px;max-width:16px;min-width:16px;width:16px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked:before{background-color:#fff;border:4px solid #fff;box-sizing:inherit;height:12px;left:50%;margin:0;position:absolute;top:50%;transform:translate(-50%,-50%);width:12px}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked:before{height:8px;width:8px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked{background:var(--wp-admin-theme-color);border:none}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{margin:0;padding:0}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected{background:var(--wp-admin-theme-color,#3858e9);border-color:var(--wp-admin-theme-color,#3858e9)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected:before{background-color:#fff;border:4px solid #fff;border-radius:50%;box-sizing:inherit;content:"";height:12px;left:50%;margin:0;position:absolute;top:50%;transform:translate(-50%,-50%);width:12px}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected:before{height:8px;width:8px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{--checkbox-size:24px;border:1px solid #949494;border-radius:2px;box-shadow:0 0 0 #0000;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:16px;line-height:normal;margin-right:12px;padding:6px 8px;transition:none}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{font-size:13px;line-height:normal}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:focus{border-color:var(--wp-admin-theme-color);box-shadow:0 0 0 .5px var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection::placeholder{color:#1e1e1e9e}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked{background:var(--wp-admin-theme-color);border-color:var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked:before,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{color:#fff;margin:-3px -5px}@media (min-width:782px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked:before,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{margin:-4px 0 0 -5px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]{background:var(--wp-admin-theme-color);border-color:var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{content:"\\f460";display:inline-block;float:left;font:normal 30px/1 dashicons;vertical-align:middle;width:16px;speak:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (min-width:782px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{float:none;font-size:21px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:disabled,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-disabled=true]{background:#f0f0f0;border-color:#ddd;cursor:default;opacity:1}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{background:#fff;color:#1e1e1e;height:var(--checkbox-size);margin:0;padding:0;position:relative;width:var(--checkbox-size)}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{--checkbox-size:16px}}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{transition:border-color .1s ease-in-out}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected{background:var(--wp-admin-theme-color,#3858e9);border-color:var(--wp-admin-theme-color,#3858e9)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected svg{--checkmark-size:var(--checkbox-size);fill:#fff;height:var(--checkmark-size);left:50%;position:absolute;top:50%;transform:translate(-50%,-50%);width:var(--checkmark-size)}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected svg{--checkmark-size:calc(var(--checkbox-size) + 4px)}}.dataviews-filters__search-widget-filter-combobox__wrapper{padding:8px;position:relative}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{border:1px solid #949494;border-radius:2px;box-shadow:0 0 0 #0000;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;line-height:normal;padding:6px 8px}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{font-size:13px;line-height:normal}}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input:focus{border-color:var(--wp-admin-theme-color);box-shadow:0 0 0 .5px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::placeholder{color:#1e1e1e9e}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{display:block;font-size:16px;height:32px;margin-left:0;margin-right:0;padding:0 8px 0 32px;width:100%}@media (min-width:600px){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{font-size:13px}}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input:focus{background:#fff;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::placeholder{color:#757575}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-cancel-button,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-decoration,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-results-button,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-results-decoration{-webkit-appearance:none}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__icon{align-items:center;bottom:0;display:flex;inset-inline-start:12px;justify-content:center;position:absolute;top:0;width:24px}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__icon:dir(ltr){transform:scaleX(-1)}.dataviews-filters__container-visibility-toggle{flex-shrink:0;position:relative}.dataviews-filters-toggle__count{background:var(--wp-admin-theme-color,#3858e9);border-radius:8px;box-sizing:border-box;color:#fff;font-size:11px;height:16px;line-height:16px;min-width:16px;outline:var(--wp-admin-border-width-focus) solid #fff;padding:0 4px;position:absolute;right:0;text-align:center;top:0;transform:translate(50%,-50%)}.dataviews-search{width:fit-content}.dataviews-filters__user-input-widget{padding:16px}.dataviews-filters__user-input-widget .components-input-control__prefix{padding-left:8px}.dataviews-filters__search-widget-no-elements{align-items:center;display:flex;justify-content:center;padding:16px}.dataviews-footer{background-color:inherit;border-top:1px solid #f0f0f0;bottom:0;flex-shrink:0;left:0;padding:12px 24px;position:sticky}@media not (prefers-reduced-motion){.dataviews-footer{transition:padding .1s ease-out}}.dataviews-footer{z-index:2}@container (max-width: 560px){.dataviews-footer{flex-direction:column!important}.dataviews-footer .dataviews-bulk-actions-footer__container{width:100%}.dataviews-footer .dataviews-bulk-actions-footer__item-count{flex-grow:1}.dataviews-footer .dataviews-pagination{justify-content:space-between;width:100%}}.dataviews-pagination__page-select{font-size:11px;font-weight:499;text-transform:uppercase}@media (min-width:600px){.dataviews-pagination__page-select .components-select-control__input{font-size:11px!important;font-weight:499}}.dataviews-action-modal{z-index:1000001}.dataviews-selection-checkbox{--checkbox-input-size:24px}@media (min-width:600px){.dataviews-selection-checkbox{--checkbox-input-size:16px}}.dataviews-selection-checkbox{flex-shrink:0;line-height:0}.dataviews-selection-checkbox .components-checkbox-control__input-container{margin:0}.dataviews-view-config{container-type:inline-size;font-size:13px;line-height:1.4;width:320px}.dataviews-config__popover.is-expanded .dataviews-config__popover-content-wrapper{height:100%;overflow-y:scroll}.dataviews-config__popover.is-expanded .dataviews-config__popover-content-wrapper .dataviews-view-config{width:auto}.dataviews-view-config__sort-direction .components-toggle-group-control-option-base{text-transform:uppercase}.dataviews-settings-section__title.dataviews-settings-section__title{font-size:15px;line-height:24px}.dataviews-settings-section__sidebar{grid-column:span 4}.dataviews-settings-section__content,.dataviews-settings-section__content>*{grid-column:span 8}.dataviews-settings-section__content .is-divided-in-two{display:contents}.dataviews-settings-section__content .is-divided-in-two>*{grid-column:span 4}.dataviews-settings-section:has(.dataviews-settings-section__content:empty){display:none}@container (max-width: 500px){.dataviews-settings-section.dataviews-settings-section{grid-template-columns:repeat(2,1fr)}.dataviews-settings-section.dataviews-settings-section .dataviews-settings-section__content,.dataviews-settings-section.dataviews-settings-section .dataviews-settings-section__sidebar{grid-column:span 2}}.dataviews-view-config__label{text-wrap:nowrap}.dataviews-view-grid-items{container-type:inline-size;display:grid;gap:32px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));grid-template-rows:max-content;margin-bottom:auto;padding:0 24px 24px}@media not (prefers-reduced-motion){.dataviews-view-grid-items{transition:padding .1s ease-out}}.dataviews-view-grid{container-type:inline-size;display:flex;flex-direction:column;gap:32px;margin-bottom:auto;padding:0 24px 24px}@media not (prefers-reduced-motion){.dataviews-view-grid{transition:padding .1s ease-out}}.dataviews-view-grid .dataviews-view-grid__row{display:grid;gap:32px}.dataviews-view-grid .dataviews-view-grid__row .dataviews-view-grid__row__gridcell{border-radius:4px;position:relative}.dataviews-view-grid .dataviews-view-grid__row .dataviews-view-grid__row__gridcell[data-focus-visible]:after{border-radius:4px;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);content:"";height:100%;left:0;outline:2px solid #0000;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-grid .dataviews-view-grid__card{height:100%;justify-content:flex-start;position:relative}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-actions{padding:8px 0 4px}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-field{align-content:center;min-height:24px;overflow:hidden;text-align:start}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-field--clickable{width:fit-content}.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-value{color:#1e1e1e}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__media:focus:after,.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__media:after{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__media:after{box-shadow:inset 0 0 0 1px var(--wp-admin-theme-color)}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__media:focus:after{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-view-grid .dataviews-view-grid__media{aspect-ratio:1/1;background-color:#fff;border-radius:4px;overflow:hidden;position:relative;width:100%}.dataviews-view-grid .dataviews-view-grid__media img{height:100%;object-fit:cover;width:100%}.dataviews-view-grid .dataviews-view-grid__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-grid .dataviews-view-grid__fields{font-size:12px;line-height:16px;position:relative}.dataviews-view-grid .dataviews-view-grid__fields:not(:empty){padding:0 0 12px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field-value:not(:empty){line-height:20px;min-height:24px;padding-top:2px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field{align-items:center;min-height:24px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-name{color:#757575;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:35%}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-value{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:65%}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field:not(:has(.dataviews-view-grid__field-value:not(:empty))){display:none}.dataviews-view-grid .dataviews-view-grid__badge-fields:not(:empty){padding-bottom:12px}.dataviews-view-grid__field-value:empty,.dataviews-view-grid__field:empty{display:none}.dataviews-view-grid__card .dataviews-selection-checkbox{left:8px;opacity:0;position:absolute;top:-9999em;z-index:1}@media not (prefers-reduced-motion){.dataviews-view-grid__card .dataviews-selection-checkbox{transition:opacity .1s linear}}@media (hover:none){.dataviews-view-grid__card .dataviews-selection-checkbox{opacity:1;top:8px}}.dataviews-view-grid__card.is-selected .dataviews-selection-checkbox,.dataviews-view-grid__card:focus-within .dataviews-selection-checkbox,.dataviews-view-grid__card:hover .dataviews-selection-checkbox{opacity:1;top:8px}.dataviews-view-grid__card .dataviews-view-grid__media-actions{opacity:0;position:absolute;right:4px;top:4px}.dataviews-view-grid__card .dataviews-view-grid__media-actions .dataviews-all-actions-button{background-color:#fff}@media not (prefers-reduced-motion){.dataviews-view-grid__card .dataviews-view-grid__media-actions{transition:opacity .1s linear}}@media (hover:none){.dataviews-view-grid__card .dataviews-view-grid__media-actions{opacity:1;top:4px}}.dataviews-view-grid__card .dataviews-view-grid__media-actions:has(.dataviews-all-actions-button[aria-expanded=true]),.dataviews-view-grid__card:focus-within .dataviews-view-grid__media-actions,.dataviews-view-grid__card:hover .dataviews-view-grid__media-actions{opacity:1}.dataviews-view-grid__media--clickable{cursor:pointer}.dataviews-view-grid__group-header{color:#1e1e1e;container-type:inline-size;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 24px}div.dataviews-view-list{list-style-type:none}.dataviews-view-list{margin:0 0 auto}.dataviews-view-list div[role=article],.dataviews-view-list div[role=row]{border-top:1px solid #f0f0f0;margin:0}.dataviews-view-list div[role=article] .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row] .dataviews-view-list__item-wrapper{box-sizing:border-box;padding:16px 24px;position:relative}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions{display:flex;flex:0 0 auto;gap:4px;white-space:nowrap;width:max-content}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions .components-button,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions .components-button{position:relative;z-index:1}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>div,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>div{height:24px}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>:not(:last-child){flex:0;overflow:hidden;width:0}.dataviews-view-list div[role=article]:where(.is-selected,.is-hovered,:focus-within) .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row]:where(.is-selected,.is-hovered,:focus-within) .dataviews-view-list__item-actions>:not(:last-child){flex-basis:min-content;overflow:unset;width:auto}@media (hover:none){.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>:not(:last-child){flex-basis:min-content;overflow:unset;width:auto}}.dataviews-view-list div[role=article].is-selected.is-selected,.dataviews-view-list div[role=article].is-selected.is-selected+div[role=article],.dataviews-view-list div[role=article].is-selected.is-selected+div[role=row],.dataviews-view-list div[role=row].is-selected.is-selected,.dataviews-view-list div[role=row].is-selected.is-selected+div[role=article],.dataviews-view-list div[role=row].is-selected.is-selected+div[role=row]{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered,.dataviews-view-list div[role=article]:not(.is-selected):focus-within,.dataviews-view-list div[role=article]:not(.is-selected):hover,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered,.dataviews-view-list div[role=row]:not(.is-selected):focus-within,.dataviews-view-list div[role=row]:not(.is-selected):hover{background-color:rgba(var(--wp-admin-theme-color--rgb),.04);border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12);color:var(--wp-admin-theme-color)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected).is-hovered+div[role=row],.dataviews-view-list div[role=article]:not(.is-selected):focus-within+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected):focus-within+div[role=row],.dataviews-view-list div[role=article]:not(.is-selected):hover+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected):hover+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected).is-hovered+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected).is-hovered+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected):focus-within+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected):focus-within+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected):hover+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected):hover+div[role=row]{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected).is-hovered .dataviews-view-list__field,.dataviews-view-list div[role=article]:not(.is-selected):focus-within .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected):focus-within .dataviews-view-list__field,.dataviews-view-list div[role=article]:not(.is-selected):hover .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected):hover .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected):focus-within .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected):focus-within .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected):hover .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected):hover .dataviews-view-list__field{color:var(--wp-admin-theme-color)}.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper{background-color:rgba(var(--wp-admin-theme-color--rgb),.08);color:#1e1e1e}.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-view-list__field{color:#1e1e1e}.dataviews-view-list .dataviews-view-list__item{appearance:none;background:none;border:none;cursor:pointer;inset:0;padding:0;position:absolute;scroll-margin:8px 0;z-index:1}.dataviews-view-list .dataviews-view-list__item:focus-visible{outline:none}.dataviews-view-list .dataviews-view-list__item:focus-visible:before{border-radius:2px;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);content:"";inset:var(--wp-admin-border-width-focus);outline:2px solid #0000;position:absolute}.dataviews-view-list .dataviews-view-list__title-field{flex:1;line-height:24px;min-height:24px;overflow:hidden}.dataviews-view-list .dataviews-view-list__title-field:has(a,button){z-index:1}.dataviews-view-list .dataviews-view-list__media-wrapper{background-color:#fff;border-radius:4px;flex-shrink:0;height:52px;overflow:hidden;position:relative;width:52px}.dataviews-view-list .dataviews-view-list__media-wrapper img{height:100%;object-fit:cover;width:100%}.dataviews-view-list .dataviews-view-list__media-wrapper:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.dataviews-view-list .dataviews-view-list__field-wrapper{flex-grow:1;min-height:52px}.dataviews-view-list .dataviews-view-list__field{color:#757575}.dataviews-view-list .dataviews-view-list__fields{display:flex;flex-wrap:wrap;font-size:12px;gap:12px;row-gap:4px}.dataviews-view-list .dataviews-view-list__fields .dataviews-view-list__field:has(.dataviews-view-list__field-value:empty),.dataviews-view-list .dataviews-view-list__fields:empty{display:none}.dataviews-view-list .dataviews-view-list__fields .dataviews-view-list__field-value{align-items:center;display:flex;line-height:20px;min-height:24px}.dataviews-view-list+.dataviews-pagination{justify-content:space-between}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__item-wrapper{padding:8px 24px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__title-field{line-height:16px;min-height:16px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__media-wrapper{height:32px;width:32px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__field-wrapper{min-height:32px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__fields{gap:8px;row-gap:4px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__fields .dataviews-view-list__field-value{line-height:16px;min-height:16px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__item-wrapper{padding:24px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__title-field{line-height:32px;min-height:32px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__media-wrapper{height:64px;width:64px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__field-wrapper{min-height:64px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__fields{gap:16px;row-gap:8px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__fields .dataviews-view-list__field-value{line-height:24px;min-height:32px}.dataviews-view-list__group-header{color:#1e1e1e;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 24px}.dataviews-view-table{background-color:inherit;border-collapse:collapse;border-color:inherit;color:#757575;margin-bottom:auto;position:relative;text-indent:0;width:100%}.dataviews-view-table th{color:#1e1e1e;font-size:13px;font-weight:400;text-align:left}.dataviews-view-table td,.dataviews-view-table th{padding:12px}.dataviews-view-table td.dataviews-view-table__actions-column,.dataviews-view-table th.dataviews-view-table__actions-column{text-align:right}.dataviews-view-table td.dataviews-view-table__actions-column--sticky,.dataviews-view-table th.dataviews-view-table__actions-column--sticky{background-color:var(--wp-dataviews-color-background,#fff);position:sticky;right:0}.dataviews-view-table td.dataviews-view-table__actions-column--stuck:after,.dataviews-view-table th.dataviews-view-table__actions-column--stuck:after{background-color:#f0f0f0;bottom:0;content:"";display:block;left:0;position:absolute;top:0;width:1px}.dataviews-view-table td.dataviews-view-table__checkbox-column,.dataviews-view-table th.dataviews-view-table__checkbox-column{padding-right:0}.dataviews-view-table td.dataviews-view-table__checkbox-column .dataviews-view-table__cell-content-wrapper,.dataviews-view-table th.dataviews-view-table__checkbox-column .dataviews-view-table__cell-content-wrapper{max-width:auto;min-width:auto}.dataviews-view-table tr{background-color:inherit;border-top:1px solid #f0f0f0}.dataviews-view-table tr td:first-child,.dataviews-view-table tr th:first-child{padding-left:24px}.dataviews-view-table tr td:last-child,.dataviews-view-table tr th:last-child{padding-right:24px}.dataviews-view-table tr:last-child{border-bottom:0}.dataviews-view-table tr .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:0}@media (hover:none){.dataviews-view-table tr .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:1}}.dataviews-view-table tr.is-selected{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff);color:#757575}.dataviews-view-table tr.is-selected,.dataviews-view-table tr.is-selected+tr{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-table tr.is-selected .dataviews-view-table__actions-column--sticky{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff)}.dataviews-view-table tr.is-hovered .dataviews-item-actions .components-button:not(.dataviews-all-actions-button),.dataviews-view-table tr:focus-within .dataviews-item-actions .components-button:not(.dataviews-all-actions-button),.dataviews-view-table tr:hover .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:1}.dataviews-view-table.has-bulk-actions tr:focus-within .dataviews-view-table__actions-column--sticky,.dataviews-view-table.has-bulk-actions tr:hover .dataviews-view-table__actions-column--sticky{background-color:var(--wp-dataviews-color-background,#fff)}.dataviews-view-table.has-bulk-actions tr.is-selected .dataviews-view-table__actions-column--sticky,.dataviews-view-table.has-bulk-actions tr.is-selected:hover .dataviews-view-table__actions-column--sticky{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff)}.dataviews-view-table thead{background-color:inherit;inset-block-start:0;position:sticky;z-index:1}.dataviews-view-table thead tr{border:0}.dataviews-view-table thead th{background-color:inherit;font-size:11px;font-weight:499;padding-bottom:8px;padding-top:8px;text-transform:uppercase}.dataviews-view-table thead th:has(.dataviews-view-table-header-button){padding-left:4px;padding-right:4px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button) .dataviews-view-table-header-button{gap:4px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button):first-child{padding-left:40px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button):last-child{padding-right:40px}.dataviews-view-table tbody td{vertical-align:top}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper{align-items:center;display:flex;min-height:32px;white-space:nowrap}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper.dataviews-view-table__cell-align-end{justify-content:flex-end}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper.dataviews-view-table__cell-align-center{justify-content:center}.dataviews-view-table tbody .components-v-stack>.dataviews-view-table__cell-content-wrapper:not(:first-child){min-height:0}.dataviews-view-table .dataviews-view-table-header-button{font-size:11px;font-weight:499;padding:4px 8px;text-transform:uppercase}.dataviews-view-table .dataviews-view-table-header-button:not(:hover){color:#1e1e1e}.dataviews-view-table .dataviews-view-table-header-button span{speak:none}.dataviews-view-table .dataviews-view-table-header-button span:empty{display:none}.dataviews-view-table .dataviews-view-table-header{padding-left:4px}.dataviews-view-table .dataviews-view-table__actions-column{white-space:nowrap;width:auto}.dataviews-view-table.has-compact-density thead th:has(.dataviews-view-table-header-button):not(:first-child){padding-left:0}.dataviews-view-table.has-compact-density thead th:has(.dataviews-view-table-header-button):not(:last-child){padding-right:0}.dataviews-view-table.has-compact-density td,.dataviews-view-table.has-compact-density th{padding:4px 8px}.dataviews-view-table.has-comfortable-density td,.dataviews-view-table.has-comfortable-density th{padding:16px 12px}.dataviews-view-table.has-comfortable-density td.dataviews-view-table__checkbox-column,.dataviews-view-table.has-comfortable-density th.dataviews-view-table__checkbox-column,.dataviews-view-table.has-compact-density td.dataviews-view-table__checkbox-column,.dataviews-view-table.has-compact-density th.dataviews-view-table__checkbox-column{padding-right:0}.dataviews-view-table-selection-checkbox{--checkbox-input-size:24px}@media (min-width:600px){.dataviews-view-table-selection-checkbox{--checkbox-input-size:16px}}.dataviews-column-primary__media{background-color:#fff;border-radius:4px;flex-shrink:0;max-width:60px;min-height:32px;min-width:32px;overflow:hidden;position:relative}.dataviews-column-primary__media img{height:32px;object-fit:cover;width:32px}.dataviews-column-primary__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.dataviews-view-table__cell-content-wrapper:not(.dataviews-column-primary__media),.dataviews-view-table__primary-column-content:not(.dataviews-column-primary__media){max-width:80ch;min-width:15ch}.dataviews-view-table__group-header-row .dataviews-view-table__group-header-cell{color:#1e1e1e;font-weight:499;padding:12px 24px}.dataviews-view-table col[class^=dataviews-view-table__col-]:not(.dataviews-view-table__col-first-data){width:1%}.dataviews-view-picker-grid .dataviews-view-picker-grid__card{height:100%;justify-content:flex-start;position:relative}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-actions{padding:8px 0 4px}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-field{align-content:center;min-height:24px;overflow:hidden;text-align:start}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-field--clickable{width:fit-content}.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-value{color:#1e1e1e}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__media:focus:after,.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__media:after{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__media:after{box-shadow:inset 0 0 0 1px var(--wp-admin-theme-color)}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__media:focus:after{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-view-picker-grid:focus-visible[aria-activedescendant]{outline:none}.dataviews-view-picker-grid:focus-visible [data-active-item=true]{outline:2px solid var(--wp-admin-theme-color)}.dataviews-view-picker-grid .dataviews-selection-checkbox{top:8px!important}.dataviews-view-picker-grid .dataviews-selection-checkbox input{pointer-events:none}.dataviews-view-picker-grid .dataviews-view-picker-grid__media{aspect-ratio:1/1;background-color:#fff;border-radius:4px;min-height:0;position:relative;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__media img{height:100%;object-fit:cover;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields{font-size:12px;line-height:16px;position:relative}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields:not(:empty){padding:0 0 12px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field-value:not(:empty){line-height:20px;min-height:24px;padding-top:2px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field{align-items:center;min-height:24px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-name{color:#757575;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:35%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-value{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:65%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field:not(:has(.dataviews-view-picker-grid__field-value:not(:empty))){display:none}.dataviews-view-picker-grid .dataviews-view-picker-grid__badge-fields:not(:empty){padding-bottom:12px}.dataviews-view-picker-grid__field-value:empty,.dataviews-view-picker-grid__field:empty{display:none}.dataviews-view-picker-grid__card .dataviews-selection-checkbox{left:8px;position:absolute;top:-9999em;z-index:1}@media (hover:none){.dataviews-view-picker-grid__card .dataviews-selection-checkbox{top:8px}}.dataviews-view-picker-grid__card.is-selected .dataviews-selection-checkbox,.dataviews-view-picker-grid__card:focus-within .dataviews-selection-checkbox,.dataviews-view-picker-grid__card:hover .dataviews-selection-checkbox{top:8px}.dataviews-view-picker-grid__media--clickable{cursor:pointer}.dataviews-view-picker-grid-group__header{color:#1e1e1e;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 48px}.dataviews-view-picker-table{background-color:inherit}.dataviews-view-picker-table .dataviews-view-table__checkbox-column{width:48px}.dataviews-view-picker-table tbody:focus-visible[aria-activedescendant]{outline:none}.dataviews-view-picker-table tbody:focus-visible [data-active-item=true]{outline:2px solid var(--wp-admin-theme-color)}.dataviews-view-picker-table .dataviews-selection-checkbox .components-checkbox-control__input.components-checkbox-control__input{opacity:1;pointer-events:none}.dataviews-view-picker-table .dataviews-view-table__row{cursor:pointer}.dataviews-view-picker-table .dataviews-view-table__row.is-selected{background-color:rgba(var(--wp-admin-theme-color--rgb),.04)}.dataviews-view-picker-table .dataviews-view-table__row.is-hovered{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-picker-table .dataviews-view-table__row.is-selected.is-hovered{background-color:rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-activity{margin:0 0 auto;padding:8px 24px}.dataviews-view-activity .dataviews-view-activity__group-header{color:#949494;font-size:15px;font-weight:499;margin:0 0 8px;padding:0}.dataviews-view-activity .dataviews-view-activity__item-actions{min-width:24px}.dataviews-view-activity .dataviews-view-activity__item-content{flex-grow:1}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-description,.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields,.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title{min-height:16px}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title{align-items:center;display:flex;flex:1;overflow:hidden;position:relative}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title--clickable{cursor:pointer}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title--clickable:focus-visible{border-radius:2px;outline:var(--wp-admin-border-width-focus) solid var(--wp-admin-theme-color);outline-offset:var(--wp-admin-border-width-focus)}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__primary-actions{display:flex;flex:0 0 auto;width:max-content}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__primary-actions .components-button{position:relative;z-index:1}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields{color:#757575;display:flex;flex-wrap:wrap;gap:12px;row-gap:4px}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields .dataviews-view-activity__item-field:has(.dataviews-view-activity__item-field-value:empty),.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields:empty{display:none}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields .dataviews-view-activity__item-field-value{align-items:center;display:flex}.dataviews-view-activity .dataviews-view-activity__item-type{align-self:stretch;flex-shrink:0}.dataviews-view-activity .dataviews-view-activity__item-type:after{background-color:#ddd;content:"";flex:1 1 auto;margin:0 auto;width:1px}.dataviews-view-activity .dataviews-view-activity__item-type:before{background-color:#ddd;content:"";flex:0 0 auto;margin:0 auto;width:1px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type{width:8px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type:before{height:12px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type-icon{height:11px;width:11px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-content{margin:12px 0}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type{width:24px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type:before{height:12px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type-icon{height:25px;width:25px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-content{margin:12px 0;padding-top:8px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type{width:32px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type:before{height:8px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type-icon{height:33px;width:33px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-content{margin:8px 0 16px;padding-top:12px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-bullet,.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-bullet{height:9px;position:relative;top:50%;transform:translateY(-50%);width:9px}.dataviews-view-activity .dataviews-view-activity__item:first-child .dataviews-view-activity__item-type:before{visibility:hidden}.dataviews-view-activity .dataviews-view-activity__group:last-of-type>.dataviews-view-activity__item:last-of-type .dataviews-view-activity__item-type:after,.dataviews-view-activity>.dataviews-view-activity__item:last-child .dataviews-view-activity__item-type:after{background:linear-gradient(180deg,#ddd 0,#ddd3 60%,#ddd0)}.dataviews-view-activity .dataviews-view-activity__item-type-icon{background-color:#fff;flex-shrink:0;overflow:hidden}.dataviews-view-activity .dataviews-view-activity__item-type-icon .dataviews-view-activity__item-bullet,.dataviews-view-activity .dataviews-view-activity__item-type-icon img,.dataviews-view-activity .dataviews-view-activity__item-type-icon svg{border-radius:50%;box-shadow:inset 0 0 0 1px #ddd;box-sizing:border-box;display:block;height:100%;margin:0 auto;object-fit:cover;width:100%}.dataviews-view-activity .dataviews-view-activity__item-type-icon svg{padding:4px}.dataviews-view-activity .dataviews-view-activity__item-type-icon .dataviews-view-activity__item-bullet{background-color:#ddd;content:""}.dataviews-view-activity+.dataviews-pagination{justify-content:space-between}.dataviews-picker-footer__bulk-selection{align-self:flex-start;height:32px}.dataviews-picker-footer__actions{align-self:flex-end}.dataviews-controls__datetime{border:none;padding:0}.dataviews-controls__relative-date-number,.dataviews-controls__relative-date-unit{flex:1 1 50%}.dataviews-controls__date input[type=date]::-webkit-calendar-picker-indicator,.dataviews-controls__date input[type=date]::-webkit-inner-spin-button{-webkit-appearance:none;display:none}.dataviews-controls__date-range-inputs>*{min-width:0}.dataviews-controls__date-preset{border:1px solid #ddd}.dataviews-controls__date-preset:active{background-color:#000}.dataforms-layouts-panel__field{align-items:flex-start!important;justify-content:flex-start!important;min-height:32px;width:100%}.dataforms-layouts-panel__field--label-position-none{align-items:center!important}.dataforms-layouts-panel__field-label{align-items:center;display:flex;flex-shrink:0;hyphens:auto;line-height:20px;min-height:32px;width:38%}.dataforms-layouts-panel__field-label--label-position-side{align-self:center}.dataforms-layouts-panel__field-label.has-error{color:#cc1818}.dataforms-layouts-panel__field-label-error-content{cursor:help;fill:#cc1818}.dataforms-layouts-panel__field-label-error-content svg{fill:currentColor}.dataforms-layouts-panel__field-control{align-items:center;display:flex;flex-grow:1;min-height:32px}.dataforms-layouts-panel__field-control .components-button{max-width:100%;min-height:32px;text-align:left;text-wrap:balance;text-wrap:pretty;white-space:normal}.dataforms-layouts-panel__field-control.components-button.is-link[aria-disabled=true]{text-decoration:none}.dataforms-layouts-panel__field-control .components-dropdown{max-width:100%}.dataforms-layouts-panel__field-dropdown .components-popover__content{min-width:320px;padding:16px}.dataforms-layouts-panel__dropdown-header{margin-bottom:16px}.dataforms-layouts-panel__modal-footer{margin-top:16px}.components-popover.components-dropdown__content.dataforms-layouts-panel__field-dropdown{z-index:159990}.dataforms-layouts-panel__summary-button:empty{min-width:160px}.dataforms-layouts-regular__field{align-items:flex-start!important;justify-content:flex-start!important;min-height:32px;width:100%}.dataforms-layouts-regular__field-label{align-items:center;display:flex;flex-shrink:0;hyphens:auto;line-height:20px;min-height:32px;width:38%}.dataforms-layouts-regular__field-label--label-position-side{align-self:center}.dataforms-layouts-regular__field-control{align-items:center;display:flex;flex-grow:1;min-height:32px}.dataforms-layouts-card__field-header-label{font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:15px;font-weight:499;line-height:20px}.dataforms-layouts-card__field{width:100%}.dataforms-layouts-card__field-description{color:#757575;display:block;font-size:13px;margin-bottom:16px}.dataforms-layouts-card__field-summary{display:flex;flex-direction:row;gap:16px}.dataforms-layouts-details__content{padding-top:12px}.dataforms-layouts-row__field-control{width:100%}.dataforms-layouts__wrapper{font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:13px;font-weight:400;line-height:20px}@media (max-width:782px){.admin-ui-page__header{top:46px}}.jp-forms-dataviews__view-actions{border-bottom:1px solid var(--wpds-color-stroke-surface-neutral,#e0e0e0);box-sizing:border-box;container-type:inline-size;flex-shrink:0;overflow-x:auto;padding-inline:20px;width:100%}@container (width < 500px){.jp-forms-dataviews__view-actions{--wp-ui-stack-justify:flex-start;align-items:flex-start;flex-direction:column}}.jp-forms-dataviews__view-actions>div:not(:empty){min-height:48px}.jp-forms-dataviews-filters__container,.jp-forms-dataviews-filters__container:not(:empty){padding:0}.jp-forms-dataviews-filters__container:not(:empty){padding-block:12px;padding-inline:20px}'));
+  style.setAttribute("data-wp-hash", "7f0fe2280e");
+  style.appendChild(document.createTextNode(':root{--wpds-border-radius-lg:8px;--wpds-border-radius-md:4px;--wpds-border-radius-sm:2px;--wpds-border-radius-xs:1px;--wpds-border-width-focus:2px;--wpds-border-width-lg:8px;--wpds-border-width-md:4px;--wpds-border-width-sm:2px;--wpds-border-width-xs:1px;--wpds-color-bg-interactive-brand-strong:#3858e9;--wpds-color-bg-interactive-brand-strong-active:#2e49d9;--wpds-color-bg-interactive-brand-weak:#0000;--wpds-color-bg-interactive-brand-weak-active:#e6eaf4;--wpds-color-bg-interactive-error:#0000;--wpds-color-bg-interactive-error-active:#fff6f4;--wpds-color-bg-interactive-error-strong:#cc1818;--wpds-color-bg-interactive-error-strong-active:#b90000;--wpds-color-bg-interactive-error-weak:#0000;--wpds-color-bg-interactive-error-weak-active:#f6e6e3;--wpds-color-bg-interactive-neutral-strong:#2d2d2d;--wpds-color-bg-interactive-neutral-strong-active:#1e1e1e;--wpds-color-bg-interactive-neutral-strong-disabled:#e2e2e2;--wpds-color-bg-interactive-neutral-weak:#0000;--wpds-color-bg-interactive-neutral-weak-active:#eaeaea;--wpds-color-bg-interactive-neutral-weak-disabled:#0000;--wpds-color-bg-surface-brand:#ecf0f9;--wpds-color-bg-surface-caution:#fee994;--wpds-color-bg-surface-caution-weak:#fff9c9;--wpds-color-bg-surface-error:#f6e6e3;--wpds-color-bg-surface-error-weak:#fff6f4;--wpds-color-bg-surface-info:#deebfa;--wpds-color-bg-surface-info-weak:#f2f9ff;--wpds-color-bg-surface-neutral:#f8f8f8;--wpds-color-bg-surface-neutral-strong:#fff;--wpds-color-bg-surface-neutral-weak:#f0f0f0;--wpds-color-bg-surface-success:#c5f7cc;--wpds-color-bg-surface-success-weak:#eaffed;--wpds-color-bg-surface-warning:#fde6bd;--wpds-color-bg-surface-warning-weak:#fff7e0;--wpds-color-bg-thumb-brand:#3858e9;--wpds-color-bg-thumb-brand-active:#3858e9;--wpds-color-bg-thumb-neutral-disabled:#d8d8d8;--wpds-color-bg-thumb-neutral-weak:#8a8a8a;--wpds-color-bg-thumb-neutral-weak-active:#6c6c6c;--wpds-color-bg-track-neutral:#d8d8d8;--wpds-color-bg-track-neutral-weak:#e0e0e0;--wpds-color-fg-content-caution:#281d00;--wpds-color-fg-content-caution-weak:#826a00;--wpds-color-fg-content-error:#470000;--wpds-color-fg-content-error-weak:#cc1818;--wpds-color-fg-content-info:#001b4f;--wpds-color-fg-content-info-weak:#006bd7;--wpds-color-fg-content-neutral:#1e1e1e;--wpds-color-fg-content-neutral-weak:#6d6d6d;--wpds-color-fg-content-success:#002900;--wpds-color-fg-content-success-weak:#007f30;--wpds-color-fg-content-warning:#2e1900;--wpds-color-fg-content-warning-weak:#926300;--wpds-color-fg-interactive-brand:#3858e9;--wpds-color-fg-interactive-brand-active:#3858e9;--wpds-color-fg-interactive-brand-strong:#eff0f2;--wpds-color-fg-interactive-brand-strong-active:#eff0f2;--wpds-color-fg-interactive-error:#cc1818;--wpds-color-fg-interactive-error-active:#cc1818;--wpds-color-fg-interactive-error-strong:#f2efef;--wpds-color-fg-interactive-error-strong-active:#f2efef;--wpds-color-fg-interactive-neutral:#1e1e1e;--wpds-color-fg-interactive-neutral-active:#1e1e1e;--wpds-color-fg-interactive-neutral-disabled:#8a8a8a;--wpds-color-fg-interactive-neutral-strong:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-active:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-disabled:#8a8a8a;--wpds-color-fg-interactive-neutral-weak:#6d6d6d;--wpds-color-fg-interactive-neutral-weak-disabled:#8a8a8a;--wpds-color-stroke-focus-brand:#3858e9;--wpds-color-stroke-interactive-brand:#3858e9;--wpds-color-stroke-interactive-brand-active:#2337c8;--wpds-color-stroke-interactive-error:#cc1818;--wpds-color-stroke-interactive-error-active:#9d0000;--wpds-color-stroke-interactive-error-strong:#cc1818;--wpds-color-stroke-interactive-neutral:#8a8a8a;--wpds-color-stroke-interactive-neutral-active:#6c6c6c;--wpds-color-stroke-interactive-neutral-disabled:#d8d8d8;--wpds-color-stroke-interactive-neutral-strong:#6c6c6c;--wpds-color-stroke-surface-brand:#a3b1d4;--wpds-color-stroke-surface-brand-strong:#3858e9;--wpds-color-stroke-surface-error:#daa39b;--wpds-color-stroke-surface-error-strong:#cc1818;--wpds-color-stroke-surface-info:#9fbcdc;--wpds-color-stroke-surface-info-strong:#006bd7;--wpds-color-stroke-surface-neutral:#d8d8d8;--wpds-color-stroke-surface-neutral-strong:#8a8a8a;--wpds-color-stroke-surface-neutral-weak:#e0e0e0;--wpds-color-stroke-surface-success:#8ac894;--wpds-color-stroke-surface-success-strong:#007f30;--wpds-color-stroke-surface-warning:#d0b381;--wpds-color-stroke-surface-warning-strong:#926300;--wpds-dimension-base:4px;--wpds-dimension-gap-2xs:4px;--wpds-dimension-gap-lg:24px;--wpds-dimension-gap-md:16px;--wpds-dimension-gap-sm:12px;--wpds-dimension-gap-xl:40px;--wpds-dimension-gap-xs:8px;--wpds-dimension-padding-surface-2xs:4px;--wpds-dimension-padding-surface-lg:32px;--wpds-dimension-padding-surface-md:24px;--wpds-dimension-padding-surface-sm:16px;--wpds-dimension-padding-surface-xs:8px;--wpds-elevation-large:0 5px 15px 0 #00000014,0 15px 27px 0 #00000012,0 30px 36px 0 #0000000a,0 50px 43px 0 #00000005;--wpds-elevation-medium:0 2px 3px 0 #0000000d,0 4px 5px 0 #0000000a,0 12px 12px 0 #00000008,0 16px 16px 0 #00000005;--wpds-elevation-small:0 1px 2px 0 #0000000d,0 2px 3px 0 #0000000a,0 6px 6px 0 #00000008,0 8px 8px 0 #00000005;--wpds-elevation-x-small:0 1px 1px 0 #00000008,0 1px 2px 0 #00000005,0 3px 3px 0 #00000005,0 4px 4px 0 #00000003;--wpds-font-family-body:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-font-family-heading:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-font-family-mono:"Menlo","Consolas",monaco,monospace;--wpds-font-line-height-2xl:40px;--wpds-font-line-height-lg:28px;--wpds-font-line-height-md:24px;--wpds-font-line-height-sm:20px;--wpds-font-line-height-xl:32px;--wpds-font-line-height-xs:16px;--wpds-font-size-2xl:32px;--wpds-font-size-lg:15px;--wpds-font-size-md:13px;--wpds-font-size-sm:12px;--wpds-font-size-xl:20px;--wpds-font-size-xs:11px;--wpds-font-weight-medium:499;--wpds-font-weight-regular:400}[data-wpds-theme-provider-id][data-wpds-density=default]{--wpds-dimension-base:4px;--wpds-dimension-gap-2xs:4px;--wpds-dimension-gap-lg:24px;--wpds-dimension-gap-md:16px;--wpds-dimension-gap-sm:12px;--wpds-dimension-gap-xl:40px;--wpds-dimension-gap-xs:8px;--wpds-dimension-padding-surface-2xs:4px;--wpds-dimension-padding-surface-lg:32px;--wpds-dimension-padding-surface-md:24px;--wpds-dimension-padding-surface-sm:16px;--wpds-dimension-padding-surface-xs:8px}[data-wpds-theme-provider-id][data-wpds-density=compact]{--wpds-dimension-gap-2xs:4px;--wpds-dimension-gap-lg:20px;--wpds-dimension-gap-md:12px;--wpds-dimension-gap-sm:8px;--wpds-dimension-gap-xl:32px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-surface-2xs:4px;--wpds-dimension-padding-surface-lg:24px;--wpds-dimension-padding-surface-md:20px;--wpds-dimension-padding-surface-sm:12px;--wpds-dimension-padding-surface-xs:4px}[data-wpds-theme-provider-id][data-wpds-density=comfortable]{--wpds-dimension-gap-2xs:8px;--wpds-dimension-gap-lg:32px;--wpds-dimension-gap-md:20px;--wpds-dimension-gap-sm:16px;--wpds-dimension-gap-xl:48px;--wpds-dimension-gap-xs:12px;--wpds-dimension-padding-surface-2xs:8px;--wpds-dimension-padding-surface-lg:40px;--wpds-dimension-padding-surface-md:32px;--wpds-dimension-padding-surface-sm:20px;--wpds-dimension-padding-surface-xs:12px}@media (min-resolution:192dpi){:root{--wpds-border-width-focus:1.5px}}.dataviews-picker-wrapper,.dataviews-wrapper{background-color:var(--wp-dataviews-color-background,#fff);box-sizing:border-box;container:dataviews-wrapper/inline-size;display:flex;flex-direction:column;font-size:13px;height:100%;line-height:1.4;overflow:auto;scroll-padding-bottom:64px}.dataviews-filters__container,.dataviews__view-actions{background-color:inherit;box-sizing:border-box;flex-shrink:0;left:0;padding:16px 24px;position:sticky}@media not (prefers-reduced-motion){.dataviews-filters__container,.dataviews__view-actions{transition:padding .1s ease-out}}.dataviews-loading,.dataviews-no-results{align-items:center;display:flex;flex-grow:1;justify-content:center;padding:0 24px}@media not (prefers-reduced-motion){.dataviews-loading,.dataviews-no-results{transition:padding .1s ease-out}}.dataviews-loading-more{text-align:center}@container (max-width: 430px){.dataviews-filters__container,.dataviews__view-actions{padding:12px 24px}}.dataviews-title-field{font-size:13px;font-weight:499;width:100%}.dataviews-title-field,.dataviews-title-field a{color:#2f2f2f;text-overflow:ellipsis;white-space:nowrap}.dataviews-title-field a{display:block;flex-grow:0;overflow:hidden;text-decoration:none}.dataviews-title-field a:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field a:focus{border-radius:2px;box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color,#007cba);color:var(--wp-admin-theme-color--rgb)}.dataviews-title-field button.components-button.is-link{color:#1e1e1e;display:block;font-weight:inherit;overflow:hidden;text-decoration:none;text-overflow:ellipsis;white-space:nowrap;width:100%}.dataviews-title-field button.components-button.is-link:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field--clickable{color:#2f2f2f;cursor:pointer}.dataviews-title-field--clickable:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field--clickable:focus{border-radius:2px;box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color,#007cba);color:var(--wp-admin-theme-color--rgb)}.components-card__body:has(>.dataviews-picker-wrapper),.components-card__body:has(>.dataviews-wrapper){overflow:hidden;padding:8px 0 0}.dataviews-bulk-actions-footer__item-count{color:#1e1e1e}.dataviews-bulk-actions-footer__container{margin-right:auto;min-height:32px}.dataviews-filters__button{position:relative}.dataviews-filters__container{padding-top:0}.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true],.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true]:hover{opacity:0}.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true]:focus{opacity:1}.dataviews-filters__summary-popover{font-size:13px;line-height:1.4}.dataviews-filters__summary-popover .components-popover__content{border-radius:4px;max-width:250px;min-width:230px;width:100%}.dataviews-filters__summary-popover.components-dropdown__content .components-popover__content{padding:0}.dataviews-filters__summary-operators-container{padding:8px 16px}.dataviews-filters__summary-operators-container:has(+.dataviews-filters__search-widget-listbox),.dataviews-filters__summary-operators-container:has(+.dataviews-filters__search-widget-no-elements),.dataviews-filters__summary-operators-container:has(+.dataviews-filters__user-input-widget){border-bottom:1px solid #e0e0e0}.dataviews-filters__summary-operators-container:empty{display:none}.dataviews-filters__summary-operators-container .dataviews-filters__summary-operators-filter-name{color:#757575;flex-shrink:0;max-width:calc(100% - 55px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dataviews-filters__summary-operators-container .dataviews-filters__summary-operators-filter-select{overflow:hidden;white-space:nowrap;width:100%}.dataviews-filters__summary-chip-container{position:relative;white-space:pre-wrap}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip{align-items:center;background:#f0f0f0;border:1px solid #0000;border-radius:16px;box-sizing:border-box;color:#2f2f2f;cursor:pointer;display:flex;min-height:32px;padding:4px 12px;position:relative}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.is-not-clickable{cursor:default}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-reset{padding-inline-end:28px}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:focus-visible,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:hover:not(.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.is-not-clickable),.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip[aria-expanded=true]{background:#e0e0e0;color:#1e1e1e}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values{background:rgba(var(--wp-admin-theme-color--rgb),.04);color:var(--wp-admin-theme-color)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values:hover,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values[aria-expanded=true]{background:rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:focus-visible{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);outline:none}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip .dataviews-filters-__summary-filter-text-name{font-weight:499}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove{align-items:center;background:#0000;border:0;border-radius:50%;cursor:pointer;display:flex;height:24px;justify-content:center;padding:0;position:absolute;right:4px;top:50%;transform:translateY(-50%);width:24px}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove svg{fill:#757575}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:hover{background:#e0e0e0}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus svg,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:hover svg{fill:#1e1e1e}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove.has-values svg{fill:var(--wp-admin-theme-color)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove.has-values:hover{background:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus-visible{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);outline:none}.dataviews-filters__search-widget-filter-combobox-list{border-top:1px solid #e0e0e0;max-height:184px;overflow:auto;padding:4px}.dataviews-filters__search-widget-filter-combobox-list .dataviews-filters__search-widget-filter-combobox-item-value [data-user-value]{font-weight:600}.dataviews-filters__search-widget-listbox{overflow:auto;padding:4px}.dataviews-filters__search-widget-listitem{align-items:center;border-radius:2px;box-sizing:border-box;cursor:default;display:flex;font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:13px;font-weight:400;gap:8px;line-height:20px;min-height:32px;padding:4px 12px}.dataviews-filters__search-widget-listitem:last-child{margin-block-end:0}.dataviews-filters__search-widget-listitem:focus,.dataviews-filters__search-widget-listitem:hover,.dataviews-filters__search-widget-listitem[data-active-item]{background-color:var(--wp-admin-theme-color);color:#fff}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-description,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-description,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-description{color:#fff}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-single-selection,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-single-selection,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-single-selection{background:#fff;border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-single-selection.is-selected,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-single-selection.is-selected,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-single-selection.is-selected{background:var(--wp-admin-theme-color-darker-20,#183ad6);border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-multi-selection,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-multi-selection,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-multi-selection{border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-multi-selection.is-selected,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-multi-selection.is-selected,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-multi-selection.is-selected{background:var(--wp-admin-theme-color-darker-20,#183ad6);border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-description{color:#757575;display:block;font-size:12px;line-height:16px;overflow:hidden;text-overflow:ellipsis}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{border:1px solid #1e1e1e;border-radius:50%;height:24px;margin-right:12px;max-width:24px;min-width:24px;position:relative;transition:none;width:24px}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{height:16px;max-width:16px;min-width:16px;width:16px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked:before{background-color:#fff;border:4px solid #fff;box-sizing:inherit;height:12px;left:50%;margin:0;position:absolute;top:50%;transform:translate(-50%,-50%);width:12px}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked:before{height:8px;width:8px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked{background:var(--wp-admin-theme-color);border:none}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{margin:0;padding:0}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected{background:var(--wp-admin-theme-color,#3858e9);border-color:var(--wp-admin-theme-color,#3858e9)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected:before{background-color:#fff;border:4px solid #fff;border-radius:50%;box-sizing:inherit;content:"";height:12px;left:50%;margin:0;position:absolute;top:50%;transform:translate(-50%,-50%);width:12px}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected:before{height:8px;width:8px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{--checkbox-size:24px;border:1px solid #949494;border-radius:2px;box-shadow:0 0 0 #0000;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:16px;line-height:normal;margin-right:12px;padding:6px 8px;transition:none}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{font-size:13px;line-height:normal}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:focus{border-color:var(--wp-admin-theme-color);box-shadow:0 0 0 .5px var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection::placeholder{color:#1e1e1e9e}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked{background:var(--wp-admin-theme-color);border-color:var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked:before,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{color:#fff;margin:-3px -5px}@media (min-width:782px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked:before,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{margin:-4px 0 0 -5px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]{background:var(--wp-admin-theme-color);border-color:var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{content:"\\f460";display:inline-block;float:left;font:normal 30px/1 dashicons;vertical-align:middle;width:16px;speak:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (min-width:782px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{float:none;font-size:21px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:disabled,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-disabled=true]{background:#f0f0f0;border-color:#ddd;cursor:default;opacity:1}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{background:#fff;color:#1e1e1e;height:var(--checkbox-size);margin:0;padding:0;position:relative;width:var(--checkbox-size)}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{--checkbox-size:16px}}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{transition:border-color .1s ease-in-out}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected{background:var(--wp-admin-theme-color,#3858e9);border-color:var(--wp-admin-theme-color,#3858e9)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected svg{--checkmark-size:var(--checkbox-size);fill:#fff;height:var(--checkmark-size);left:50%;position:absolute;top:50%;transform:translate(-50%,-50%);width:var(--checkmark-size)}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected svg{--checkmark-size:calc(var(--checkbox-size) + 4px)}}.dataviews-filters__search-widget-filter-combobox__wrapper{padding:8px;position:relative}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{border:1px solid #949494;border-radius:2px;box-shadow:0 0 0 #0000;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;line-height:normal;padding:6px 8px}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{font-size:13px;line-height:normal}}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input:focus{border-color:var(--wp-admin-theme-color);box-shadow:0 0 0 .5px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::placeholder{color:#1e1e1e9e}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{display:block;font-size:16px;height:32px;margin-left:0;margin-right:0;padding:0 8px 0 32px;width:100%}@media (min-width:600px){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{font-size:13px}}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input:focus{background:#fff;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::placeholder{color:#757575}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-cancel-button,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-decoration,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-results-button,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-results-decoration{-webkit-appearance:none}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__icon{align-items:center;bottom:0;display:flex;inset-inline-start:12px;justify-content:center;position:absolute;top:0;width:24px}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__icon:dir(ltr){transform:scaleX(-1)}.dataviews-filters__container-visibility-toggle{flex-shrink:0;position:relative}.dataviews-filters-toggle__count{background:var(--wp-admin-theme-color,#3858e9);border-radius:8px;box-sizing:border-box;color:#fff;font-size:11px;height:16px;line-height:16px;min-width:16px;outline:var(--wp-admin-border-width-focus) solid #fff;padding:0 4px;position:absolute;right:0;text-align:center;top:0;transform:translate(50%,-50%)}.dataviews-search{width:fit-content}.dataviews-filters__user-input-widget{padding:16px}.dataviews-filters__user-input-widget .components-input-control__prefix{padding-left:8px}.dataviews-filters__search-widget-no-elements{align-items:center;display:flex;justify-content:center;padding:16px}.dataviews-footer{background-color:inherit;border-top:1px solid #f0f0f0;bottom:0;flex-shrink:0;left:0;padding:12px 24px;position:sticky}@media not (prefers-reduced-motion){.dataviews-footer{transition:padding .1s ease-out}}.dataviews-footer{z-index:2}@container (max-width: 560px){.dataviews-footer{flex-direction:column!important}.dataviews-footer .dataviews-bulk-actions-footer__container{width:100%}.dataviews-footer .dataviews-bulk-actions-footer__item-count{flex-grow:1}.dataviews-footer .dataviews-pagination{justify-content:space-between;width:100%}}.dataviews-pagination__page-select{font-size:11px;font-weight:499;text-transform:uppercase}@media (min-width:600px){.dataviews-pagination__page-select .components-select-control__input{font-size:11px!important;font-weight:499}}.dataviews-action-modal{z-index:1000001}.dataviews-selection-checkbox{--checkbox-input-size:24px}@media (min-width:600px){.dataviews-selection-checkbox{--checkbox-input-size:16px}}.dataviews-selection-checkbox{flex-shrink:0;line-height:0}.dataviews-selection-checkbox .components-checkbox-control__input-container{margin:0}.dataviews-view-config{container-type:inline-size;font-size:13px;line-height:1.4;width:320px}.dataviews-config__popover.is-expanded .dataviews-config__popover-content-wrapper{height:100%;overflow-y:scroll}.dataviews-config__popover.is-expanded .dataviews-config__popover-content-wrapper .dataviews-view-config{width:auto}.dataviews-view-config__sort-direction .components-toggle-group-control-option-base{text-transform:uppercase}.dataviews-settings-section__title.dataviews-settings-section__title{font-size:15px;line-height:24px}.dataviews-settings-section__sidebar{grid-column:span 4}.dataviews-settings-section__content,.dataviews-settings-section__content>*{grid-column:span 8}.dataviews-settings-section__content .is-divided-in-two{display:contents}.dataviews-settings-section__content .is-divided-in-two>*{grid-column:span 4}.dataviews-settings-section:has(.dataviews-settings-section__content:empty){display:none}@container (max-width: 500px){.dataviews-settings-section.dataviews-settings-section{grid-template-columns:repeat(2,1fr)}.dataviews-settings-section.dataviews-settings-section .dataviews-settings-section__content,.dataviews-settings-section.dataviews-settings-section .dataviews-settings-section__sidebar{grid-column:span 2}}.dataviews-view-config__label{text-wrap:nowrap}.dataviews-view-grid-items{container-type:inline-size;display:grid;gap:32px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));grid-template-rows:max-content;margin-bottom:auto;padding:0 24px 24px}@media not (prefers-reduced-motion){.dataviews-view-grid-items{transition:padding .1s ease-out}}.dataviews-view-grid{container-type:inline-size;display:flex;flex-direction:column;gap:32px;margin-bottom:auto;padding:0 24px 24px}@media not (prefers-reduced-motion){.dataviews-view-grid{transition:padding .1s ease-out}}.dataviews-view-grid .dataviews-view-grid__row{display:grid;gap:32px}.dataviews-view-grid .dataviews-view-grid__row .dataviews-view-grid__row__gridcell{border-radius:4px;position:relative}.dataviews-view-grid .dataviews-view-grid__row .dataviews-view-grid__row__gridcell[data-focus-visible]:after{border-radius:4px;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);content:"";height:100%;left:0;outline:2px solid #0000;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-grid .dataviews-view-grid__card{height:100%;justify-content:flex-start;position:relative}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-actions{padding:8px 0 4px}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-field{align-content:center;min-height:24px;overflow:hidden;text-align:start}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-field--clickable{width:fit-content}.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-value{color:#1e1e1e}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__media:focus:after,.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__media:after{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__media:after{box-shadow:inset 0 0 0 1px var(--wp-admin-theme-color)}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__media:focus:after{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-view-grid .dataviews-view-grid__media{aspect-ratio:1/1;background-color:#fff;border-radius:4px;overflow:hidden;position:relative;width:100%}.dataviews-view-grid .dataviews-view-grid__media img{height:100%;object-fit:cover;width:100%}.dataviews-view-grid .dataviews-view-grid__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-grid .dataviews-view-grid__fields{font-size:12px;line-height:16px;position:relative}.dataviews-view-grid .dataviews-view-grid__fields:not(:empty){padding:0 0 12px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field-value:not(:empty){line-height:20px;min-height:24px;padding-top:2px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field{align-items:center;min-height:24px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-name{color:#757575;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:35%}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-value{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:65%}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field:not(:has(.dataviews-view-grid__field-value:not(:empty))){display:none}.dataviews-view-grid .dataviews-view-grid__badge-fields:not(:empty){padding-bottom:12px}.dataviews-view-grid__field-value:empty,.dataviews-view-grid__field:empty{display:none}.dataviews-view-grid__card .dataviews-selection-checkbox{left:8px;opacity:0;position:absolute;top:-9999em;z-index:1}@media not (prefers-reduced-motion){.dataviews-view-grid__card .dataviews-selection-checkbox{transition:opacity .1s linear}}@media (hover:none){.dataviews-view-grid__card .dataviews-selection-checkbox{opacity:1;top:8px}}.dataviews-view-grid__card.is-selected .dataviews-selection-checkbox,.dataviews-view-grid__card:focus-within .dataviews-selection-checkbox,.dataviews-view-grid__card:hover .dataviews-selection-checkbox{opacity:1;top:8px}.dataviews-view-grid__card .dataviews-view-grid__media-actions{opacity:0;position:absolute;right:4px;top:4px}.dataviews-view-grid__card .dataviews-view-grid__media-actions .dataviews-all-actions-button{background-color:#fff}@media not (prefers-reduced-motion){.dataviews-view-grid__card .dataviews-view-grid__media-actions{transition:opacity .1s linear}}@media (hover:none){.dataviews-view-grid__card .dataviews-view-grid__media-actions{opacity:1;top:4px}}.dataviews-view-grid__card .dataviews-view-grid__media-actions:has(.dataviews-all-actions-button[aria-expanded=true]),.dataviews-view-grid__card:focus-within .dataviews-view-grid__media-actions,.dataviews-view-grid__card:hover .dataviews-view-grid__media-actions{opacity:1}.dataviews-view-grid__media--clickable{cursor:pointer}.dataviews-view-grid__group-header{color:#1e1e1e;container-type:inline-size;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 24px}div.dataviews-view-list{list-style-type:none}.dataviews-view-list{margin:0 0 auto}.dataviews-view-list div[role=article],.dataviews-view-list div[role=row]{border-top:1px solid #f0f0f0;margin:0}.dataviews-view-list div[role=article] .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row] .dataviews-view-list__item-wrapper{box-sizing:border-box;padding:16px 24px;position:relative}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions{display:flex;flex:0 0 auto;gap:4px;white-space:nowrap;width:max-content}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions .components-button,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions .components-button{position:relative;z-index:1}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>div,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>div{height:24px}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>:not(:last-child){flex:0;overflow:hidden;width:0}.dataviews-view-list div[role=article]:where(.is-selected,.is-hovered,:focus-within) .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row]:where(.is-selected,.is-hovered,:focus-within) .dataviews-view-list__item-actions>:not(:last-child){flex-basis:min-content;overflow:unset;width:auto}@media (hover:none){.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>:not(:last-child){flex-basis:min-content;overflow:unset;width:auto}}.dataviews-view-list div[role=article].is-selected.is-selected,.dataviews-view-list div[role=article].is-selected.is-selected+div[role=article],.dataviews-view-list div[role=article].is-selected.is-selected+div[role=row],.dataviews-view-list div[role=row].is-selected.is-selected,.dataviews-view-list div[role=row].is-selected.is-selected+div[role=article],.dataviews-view-list div[role=row].is-selected.is-selected+div[role=row]{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered,.dataviews-view-list div[role=article]:not(.is-selected):focus-within,.dataviews-view-list div[role=article]:not(.is-selected):hover,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered,.dataviews-view-list div[role=row]:not(.is-selected):focus-within,.dataviews-view-list div[role=row]:not(.is-selected):hover{background-color:rgba(var(--wp-admin-theme-color--rgb),.04);border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12);color:var(--wp-admin-theme-color)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected).is-hovered+div[role=row],.dataviews-view-list div[role=article]:not(.is-selected):focus-within+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected):focus-within+div[role=row],.dataviews-view-list div[role=article]:not(.is-selected):hover+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected):hover+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected).is-hovered+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected).is-hovered+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected):focus-within+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected):focus-within+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected):hover+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected):hover+div[role=row]{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected).is-hovered .dataviews-view-list__field,.dataviews-view-list div[role=article]:not(.is-selected):focus-within .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected):focus-within .dataviews-view-list__field,.dataviews-view-list div[role=article]:not(.is-selected):hover .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected):hover .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected):focus-within .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected):focus-within .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected):hover .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected):hover .dataviews-view-list__field{color:var(--wp-admin-theme-color)}.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper{background-color:rgba(var(--wp-admin-theme-color--rgb),.08);color:#1e1e1e}.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-view-list__field{color:#1e1e1e}.dataviews-view-list .dataviews-view-list__item{appearance:none;background:none;border:none;cursor:pointer;inset:0;padding:0;position:absolute;scroll-margin:8px 0;z-index:1}.dataviews-view-list .dataviews-view-list__item:focus-visible{outline:none}.dataviews-view-list .dataviews-view-list__item:focus-visible:before{border-radius:2px;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);content:"";inset:var(--wp-admin-border-width-focus);outline:2px solid #0000;position:absolute}.dataviews-view-list .dataviews-view-list__title-field{flex:1;line-height:24px;min-height:24px;overflow:hidden}.dataviews-view-list .dataviews-view-list__title-field:has(a,button){z-index:1}.dataviews-view-list .dataviews-view-list__media-wrapper{background-color:#fff;border-radius:4px;flex-shrink:0;height:52px;overflow:hidden;position:relative;width:52px}.dataviews-view-list .dataviews-view-list__media-wrapper img{height:100%;object-fit:cover;width:100%}.dataviews-view-list .dataviews-view-list__media-wrapper:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.dataviews-view-list .dataviews-view-list__field-wrapper{flex-grow:1;min-height:52px}.dataviews-view-list .dataviews-view-list__field{color:#757575}.dataviews-view-list .dataviews-view-list__fields{display:flex;flex-wrap:wrap;font-size:12px;gap:12px;row-gap:4px}.dataviews-view-list .dataviews-view-list__fields .dataviews-view-list__field:has(.dataviews-view-list__field-value:empty),.dataviews-view-list .dataviews-view-list__fields:empty{display:none}.dataviews-view-list .dataviews-view-list__fields .dataviews-view-list__field-value{align-items:center;display:flex;line-height:20px;min-height:24px}.dataviews-view-list+.dataviews-pagination{justify-content:space-between}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__item-wrapper{padding:8px 24px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__title-field{line-height:16px;min-height:16px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__media-wrapper{height:32px;width:32px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__field-wrapper{min-height:32px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__fields{gap:8px;row-gap:4px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__fields .dataviews-view-list__field-value{line-height:16px;min-height:16px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__item-wrapper{padding:24px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__title-field{line-height:32px;min-height:32px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__media-wrapper{height:64px;width:64px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__field-wrapper{min-height:64px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__fields{gap:16px;row-gap:8px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__fields .dataviews-view-list__field-value{line-height:24px;min-height:32px}.dataviews-view-list__group-header{color:#1e1e1e;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 24px}.dataviews-view-table{background-color:inherit;border-collapse:collapse;border-color:inherit;color:#757575;margin-bottom:auto;position:relative;text-indent:0;width:100%}.dataviews-view-table th{color:#1e1e1e;font-size:13px;font-weight:400;text-align:left}.dataviews-view-table td,.dataviews-view-table th{padding:12px}.dataviews-view-table td.dataviews-view-table__actions-column,.dataviews-view-table th.dataviews-view-table__actions-column{text-align:right}.dataviews-view-table td.dataviews-view-table__actions-column--sticky,.dataviews-view-table th.dataviews-view-table__actions-column--sticky{background-color:var(--wp-dataviews-color-background,#fff);position:sticky;right:0}.dataviews-view-table td.dataviews-view-table__actions-column--stuck:after,.dataviews-view-table th.dataviews-view-table__actions-column--stuck:after{background-color:#f0f0f0;bottom:0;content:"";display:block;left:0;position:absolute;top:0;width:1px}.dataviews-view-table td.dataviews-view-table__checkbox-column,.dataviews-view-table th.dataviews-view-table__checkbox-column{padding-right:0}.dataviews-view-table td.dataviews-view-table__checkbox-column .dataviews-view-table__cell-content-wrapper,.dataviews-view-table th.dataviews-view-table__checkbox-column .dataviews-view-table__cell-content-wrapper{max-width:auto;min-width:auto}.dataviews-view-table tr{background-color:inherit;border-top:1px solid #f0f0f0}.dataviews-view-table tr td:first-child,.dataviews-view-table tr th:first-child{padding-left:24px}.dataviews-view-table tr td:last-child,.dataviews-view-table tr th:last-child{padding-right:24px}.dataviews-view-table tr:last-child{border-bottom:0}.dataviews-view-table tr .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:0}@media (hover:none){.dataviews-view-table tr .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:1}}.dataviews-view-table tr.is-selected{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff);color:#757575}.dataviews-view-table tr.is-selected,.dataviews-view-table tr.is-selected+tr{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-table tr.is-selected .dataviews-view-table__actions-column--sticky{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff)}.dataviews-view-table tr.is-hovered .dataviews-item-actions .components-button:not(.dataviews-all-actions-button),.dataviews-view-table tr:focus-within .dataviews-item-actions .components-button:not(.dataviews-all-actions-button),.dataviews-view-table tr:hover .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:1}.dataviews-view-table.has-bulk-actions tr:focus-within .dataviews-view-table__actions-column--sticky,.dataviews-view-table.has-bulk-actions tr:hover .dataviews-view-table__actions-column--sticky{background-color:var(--wp-dataviews-color-background,#fff)}.dataviews-view-table.has-bulk-actions tr.is-selected .dataviews-view-table__actions-column--sticky,.dataviews-view-table.has-bulk-actions tr.is-selected:hover .dataviews-view-table__actions-column--sticky{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff)}.dataviews-view-table thead{background-color:inherit;inset-block-start:0;position:sticky;z-index:1}.dataviews-view-table thead tr{border:0}.dataviews-view-table thead th{background-color:inherit;font-size:11px;font-weight:499;padding-bottom:8px;padding-top:8px;text-transform:uppercase}.dataviews-view-table thead th:has(.dataviews-view-table-header-button){padding-left:4px;padding-right:4px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button) .dataviews-view-table-header-button{gap:4px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button):first-child{padding-left:40px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button):last-child{padding-right:40px}.dataviews-view-table tbody td{vertical-align:top}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper{align-items:center;display:flex;min-height:32px;white-space:nowrap}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper.dataviews-view-table__cell-align-end{justify-content:flex-end}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper.dataviews-view-table__cell-align-center{justify-content:center}.dataviews-view-table tbody .components-v-stack>.dataviews-view-table__cell-content-wrapper:not(:first-child){min-height:0}.dataviews-view-table .dataviews-view-table-header-button{font-size:11px;font-weight:499;padding:4px 8px;text-transform:uppercase}.dataviews-view-table .dataviews-view-table-header-button:not(:hover){color:#1e1e1e}.dataviews-view-table .dataviews-view-table-header-button span{speak:none}.dataviews-view-table .dataviews-view-table-header-button span:empty{display:none}.dataviews-view-table .dataviews-view-table-header{padding-left:4px}.dataviews-view-table .dataviews-view-table__actions-column{white-space:nowrap;width:auto}.dataviews-view-table.has-compact-density thead th:has(.dataviews-view-table-header-button):not(:first-child){padding-left:0}.dataviews-view-table.has-compact-density thead th:has(.dataviews-view-table-header-button):not(:last-child){padding-right:0}.dataviews-view-table.has-compact-density td,.dataviews-view-table.has-compact-density th{padding:4px 8px}.dataviews-view-table.has-comfortable-density td,.dataviews-view-table.has-comfortable-density th{padding:16px 12px}.dataviews-view-table.has-comfortable-density td.dataviews-view-table__checkbox-column,.dataviews-view-table.has-comfortable-density th.dataviews-view-table__checkbox-column,.dataviews-view-table.has-compact-density td.dataviews-view-table__checkbox-column,.dataviews-view-table.has-compact-density th.dataviews-view-table__checkbox-column{padding-right:0}.dataviews-view-table-selection-checkbox{--checkbox-input-size:24px}@media (min-width:600px){.dataviews-view-table-selection-checkbox{--checkbox-input-size:16px}}.dataviews-column-primary__media{background-color:#fff;border-radius:4px;flex-shrink:0;max-width:60px;min-height:32px;min-width:32px;overflow:hidden;position:relative}.dataviews-column-primary__media img{height:32px;object-fit:cover;width:32px}.dataviews-column-primary__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.dataviews-view-table__cell-content-wrapper:not(.dataviews-column-primary__media),.dataviews-view-table__primary-column-content:not(.dataviews-column-primary__media){max-width:80ch;min-width:15ch}.dataviews-view-table__group-header-row .dataviews-view-table__group-header-cell{color:#1e1e1e;font-weight:499;padding:12px 24px}.dataviews-view-table col[class^=dataviews-view-table__col-]:not(.dataviews-view-table__col-first-data){width:1%}.dataviews-view-picker-grid .dataviews-view-picker-grid__card{height:100%;justify-content:flex-start;position:relative}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-actions{padding:8px 0 4px}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-field{align-content:center;min-height:24px;overflow:hidden;text-align:start}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-field--clickable{width:fit-content}.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-value{color:#1e1e1e}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__media:focus:after,.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__media:after{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__media:after{box-shadow:inset 0 0 0 1px var(--wp-admin-theme-color)}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__media:focus:after{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-view-picker-grid:focus-visible[aria-activedescendant]{outline:none}.dataviews-view-picker-grid:focus-visible [data-active-item=true]{outline:2px solid var(--wp-admin-theme-color)}.dataviews-view-picker-grid .dataviews-selection-checkbox{top:8px!important}.dataviews-view-picker-grid .dataviews-selection-checkbox input{pointer-events:none}.dataviews-view-picker-grid .dataviews-view-picker-grid__media{aspect-ratio:1/1;background-color:#fff;border-radius:4px;min-height:0;position:relative;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__media img{height:100%;object-fit:cover;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields{font-size:12px;line-height:16px;position:relative}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields:not(:empty){padding:0 0 12px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field-value:not(:empty){line-height:20px;min-height:24px;padding-top:2px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field{align-items:center;min-height:24px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-name{color:#757575;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:35%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-value{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:65%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field:not(:has(.dataviews-view-picker-grid__field-value:not(:empty))){display:none}.dataviews-view-picker-grid .dataviews-view-picker-grid__badge-fields:not(:empty){padding-bottom:12px}.dataviews-view-picker-grid__field-value:empty,.dataviews-view-picker-grid__field:empty{display:none}.dataviews-view-picker-grid__card .dataviews-selection-checkbox{left:8px;position:absolute;top:-9999em;z-index:1}@media (hover:none){.dataviews-view-picker-grid__card .dataviews-selection-checkbox{top:8px}}.dataviews-view-picker-grid__card.is-selected .dataviews-selection-checkbox,.dataviews-view-picker-grid__card:focus-within .dataviews-selection-checkbox,.dataviews-view-picker-grid__card:hover .dataviews-selection-checkbox{top:8px}.dataviews-view-picker-grid__media--clickable{cursor:pointer}.dataviews-view-picker-grid-group__header{color:#1e1e1e;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 48px}.dataviews-view-picker-table{background-color:inherit}.dataviews-view-picker-table .dataviews-view-table__checkbox-column{width:48px}.dataviews-view-picker-table tbody:focus-visible[aria-activedescendant]{outline:none}.dataviews-view-picker-table tbody:focus-visible [data-active-item=true]{outline:2px solid var(--wp-admin-theme-color)}.dataviews-view-picker-table .dataviews-selection-checkbox .components-checkbox-control__input.components-checkbox-control__input{opacity:1;pointer-events:none}.dataviews-view-picker-table .dataviews-view-table__row{cursor:pointer}.dataviews-view-picker-table .dataviews-view-table__row.is-selected{background-color:rgba(var(--wp-admin-theme-color--rgb),.04)}.dataviews-view-picker-table .dataviews-view-table__row.is-hovered{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-picker-table .dataviews-view-table__row.is-selected.is-hovered{background-color:rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-activity{margin:0 0 auto;padding:8px 24px}.dataviews-view-activity .dataviews-view-activity__group-header{color:#949494;font-size:15px;font-weight:499;margin:0 0 8px;padding:0}.dataviews-view-activity .dataviews-view-activity__item-actions{min-width:24px}.dataviews-view-activity .dataviews-view-activity__item-content{flex-grow:1}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-description,.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields,.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title{min-height:16px}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title{align-items:center;display:flex;flex:1;overflow:hidden;position:relative}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title--clickable{cursor:pointer}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title--clickable:focus-visible{border-radius:2px;outline:var(--wp-admin-border-width-focus) solid var(--wp-admin-theme-color);outline-offset:var(--wp-admin-border-width-focus)}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__primary-actions{display:flex;flex:0 0 auto;width:max-content}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__primary-actions .components-button{position:relative;z-index:1}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields{color:#757575;display:flex;flex-wrap:wrap;gap:12px;row-gap:4px}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields .dataviews-view-activity__item-field:has(.dataviews-view-activity__item-field-value:empty),.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields:empty{display:none}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields .dataviews-view-activity__item-field-value{align-items:center;display:flex}.dataviews-view-activity .dataviews-view-activity__item-type{align-self:stretch;flex-shrink:0}.dataviews-view-activity .dataviews-view-activity__item-type:after{background-color:#ddd;content:"";flex:1 1 auto;margin:0 auto;width:1px}.dataviews-view-activity .dataviews-view-activity__item-type:before{background-color:#ddd;content:"";flex:0 0 auto;margin:0 auto;width:1px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type{width:8px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type:before{height:12px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type-icon{height:11px;width:11px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-content{margin:12px 0}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type{width:24px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type:before{height:12px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type-icon{height:25px;width:25px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-content{margin:12px 0;padding-top:8px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type{width:32px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type:before{height:8px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type-icon{height:33px;width:33px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-content{margin:8px 0 16px;padding-top:12px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-bullet,.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-bullet{height:9px;position:relative;top:50%;transform:translateY(-50%);width:9px}.dataviews-view-activity .dataviews-view-activity__item:first-child .dataviews-view-activity__item-type:before{visibility:hidden}.dataviews-view-activity .dataviews-view-activity__group:last-of-type>.dataviews-view-activity__item:last-of-type .dataviews-view-activity__item-type:after,.dataviews-view-activity>.dataviews-view-activity__item:last-child .dataviews-view-activity__item-type:after{background:linear-gradient(180deg,#ddd 0,#ddd3 60%,#ddd0)}.dataviews-view-activity .dataviews-view-activity__item-type-icon{background-color:#fff;flex-shrink:0;overflow:hidden}.dataviews-view-activity .dataviews-view-activity__item-type-icon .dataviews-view-activity__item-bullet,.dataviews-view-activity .dataviews-view-activity__item-type-icon img,.dataviews-view-activity .dataviews-view-activity__item-type-icon svg{border-radius:50%;box-shadow:inset 0 0 0 1px #ddd;box-sizing:border-box;display:block;height:100%;margin:0 auto;object-fit:cover;width:100%}.dataviews-view-activity .dataviews-view-activity__item-type-icon svg{padding:4px}.dataviews-view-activity .dataviews-view-activity__item-type-icon .dataviews-view-activity__item-bullet{background-color:#ddd;content:""}.dataviews-view-activity+.dataviews-pagination{justify-content:space-between}.dataviews-picker-footer__bulk-selection{align-self:flex-start;height:32px}.dataviews-picker-footer__actions{align-self:flex-end}.dataviews-controls__datetime{border:none;padding:0}.dataviews-controls__relative-date-number,.dataviews-controls__relative-date-unit{flex:1 1 50%}.dataviews-controls__date input[type=date]::-webkit-calendar-picker-indicator,.dataviews-controls__date input[type=date]::-webkit-inner-spin-button{-webkit-appearance:none;display:none}.dataviews-controls__date-range-inputs>*{min-width:0}.dataviews-controls__date-preset{border:1px solid #ddd}.dataviews-controls__date-preset:active{background-color:#000}.dataforms-layouts-panel__field{align-items:flex-start!important;justify-content:flex-start!important;min-height:32px;width:100%}.dataforms-layouts-panel__field--label-position-none{align-items:center!important}.dataforms-layouts-panel__field-label{align-items:center;display:flex;flex-shrink:0;hyphens:auto;line-height:20px;min-height:32px;width:38%}.dataforms-layouts-panel__field-label--label-position-side{align-self:center}.dataforms-layouts-panel__field-label.has-error{color:#cc1818}.dataforms-layouts-panel__field-label-error-content{cursor:help;fill:#cc1818}.dataforms-layouts-panel__field-label-error-content svg{fill:currentColor}.dataforms-layouts-panel__field-control{align-items:center;display:flex;flex-grow:1;min-height:32px}.dataforms-layouts-panel__field-control .components-button{max-width:100%;min-height:32px;text-align:left;text-wrap:balance;text-wrap:pretty;white-space:normal}.dataforms-layouts-panel__field-control.components-button.is-link[aria-disabled=true]{text-decoration:none}.dataforms-layouts-panel__field-control .components-dropdown{max-width:100%}.dataforms-layouts-panel__field-dropdown .components-popover__content{min-width:320px;padding:16px}.dataforms-layouts-panel__dropdown-header{margin-bottom:16px}.dataforms-layouts-panel__modal-footer{margin-top:16px}.components-popover.components-dropdown__content.dataforms-layouts-panel__field-dropdown{z-index:159990}.dataforms-layouts-panel__summary-button:empty{min-width:160px}.dataforms-layouts-regular__field{align-items:flex-start!important;justify-content:flex-start!important;min-height:32px;width:100%}.dataforms-layouts-regular__field-label{align-items:center;display:flex;flex-shrink:0;hyphens:auto;line-height:20px;min-height:32px;width:38%}.dataforms-layouts-regular__field-label--label-position-side{align-self:center}.dataforms-layouts-regular__field-control{align-items:center;display:flex;flex-grow:1;min-height:32px}.dataforms-layouts-card__field-header-label{font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:15px;font-weight:499;line-height:20px}.dataforms-layouts-card__field{width:100%}.dataforms-layouts-card__field-description{color:#757575;display:block;font-size:13px;margin-bottom:16px}.dataforms-layouts-card__field-summary{display:flex;flex-direction:row;gap:16px}.dataforms-layouts-details__content{padding-top:12px}.dataforms-layouts-row__field-control{width:100%}.dataforms-layouts__wrapper{font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:13px;font-weight:400;line-height:20px}@media (max-width:782px){.admin-ui-page{top:46px}}@container (width < 500px){.jp-forms-dataviews__view-actions{--wp-ui-stack-justify:flex-start;align-items:flex-start;flex-direction:column-reverse}}.jp-forms-dataviews__view-actions>div:not(:empty){min-height:48px}.jp-forms-dataviews-filters__container,.jp-forms-dataviews-filters__container:not(:empty){padding:0}.jp-forms-dataviews-filters__container:not(:empty){padding-block:12px;padding-inline:20px}'));
   document.head.appendChild(style);
 }
 
 // routes/responses/stage.tsx
-var import_jsx_runtime171 = __toESM(require_jsx_runtime());
+var import_jsx_runtime173 = __toESM(require_jsx_runtime());
 var EMPTY_ARRAY9 = [];
 var defaultLayouts2 = {
   table: {},
@@ -37783,14 +38066,14 @@ function styleUnreadValue(element, isUnread) {
     return element;
   }
   if (typeof element === "string") {
-    return /* @__PURE__ */ (0, import_jsx_runtime171.jsx)("span", { style: { fontWeight: 600 }, children: element });
+    return /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("span", { style: { fontWeight: 600 }, children: element });
   }
   if (React36.isValidElement(element)) {
     return React36.cloneElement(element, {
       style: { ...element.props.style || {}, fontWeight: 600 }
     });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime171.jsx)("span", { style: { fontWeight: 600 }, children: element });
+  return /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("span", { style: { fontWeight: 600 }, children: element });
 }
 function getUrlPath(url) {
   try {
@@ -37959,28 +38242,28 @@ function StageInner() {
       ...isSingleFormView ? [] : [
         {
           id: "folder",
-          label: (0, import_i18n80.__)("Folder", "jetpack-forms"),
+          label: (0, import_i18n84.__)("Folder", "jetpack-forms"),
           elements: [
             {
-              label: (0, import_i18n80.sprintf)(
+              label: (0, import_i18n84.sprintf)(
                 /* translators: %s is the number of inbox responses. */
-                (0, import_i18n80.__)("Inbox (%s)", "jetpack-forms"),
+                (0, import_i18n84.__)("Inbox (%s)", "jetpack-forms"),
                 formatNumber2(totalItemsInbox ?? 0)
               ),
               value: "inbox"
             },
             {
-              label: (0, import_i18n80.sprintf)(
+              label: (0, import_i18n84.sprintf)(
                 /* translators: %s is the number of spam responses. */
-                (0, import_i18n80.__)("Spam (%s)", "jetpack-forms"),
+                (0, import_i18n84.__)("Spam (%s)", "jetpack-forms"),
                 formatNumber2(totalItemsSpam ?? 0)
               ),
               value: "spam"
             },
             {
-              label: (0, import_i18n80.sprintf)(
+              label: (0, import_i18n84.sprintf)(
                 /* translators: %s is the number of trash responses. */
-                (0, import_i18n80.__)("Trash (%s)", "jetpack-forms"),
+                (0, import_i18n84.__)("Trash (%s)", "jetpack-forms"),
                 formatNumber2(totalItemsTrash ?? 0)
               ),
               value: "trash"
@@ -37997,15 +38280,15 @@ function StageInner() {
       ],
       {
         id: "from",
-        label: (0, import_i18n80.__)("From", "jetpack-forms"),
+        label: (0, import_i18n84.__)("From", "jetpack-forms"),
         render: ({ item }) => {
           const displayName = (0, import_html_entities5.decodeEntities)(
             item.author_name || item.author_email || item.author_url || item.ip || "Anonymous"
           );
           const showEmail = item.author_email && displayName !== (0, import_html_entities5.decodeEntities)(item.author_email);
           const defaultImage = item.author_name || item.author_email ? "initials" : "mp";
-          return /* @__PURE__ */ (0, import_jsx_runtime171.jsxs)(Stack, { align: "center", gap: "sm", children: [
-            item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)(Stack, { align: "center", gap: "sm", children: [
+            item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
               "span",
               {
                 style: {
@@ -38014,11 +38297,11 @@ function StageInner() {
                   position: "absolute",
                   marginLeft: "-12px"
                 },
-                "aria-label": (0, import_i18n80.__)("(Unread form response)", "jetpack-forms"),
+                "aria-label": (0, import_i18n84.__)("(Unread form response)", "jetpack-forms"),
                 children: "\u25CF"
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
               Gravatar,
               {
                 email: item.author_email || item.ip,
@@ -38029,9 +38312,9 @@ function StageInner() {
               }
             ),
             styleUnreadValue(
-              /* @__PURE__ */ (0, import_jsx_runtime171.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.__experimentalText, { ellipsizeMode: "tail", limit: 50, truncate: true, children: displayName }),
-                showEmail && /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.__experimentalText, { variant: "muted", size: 12, ellipsizeMode: "tail", limit: 50, truncate: true, children: item.author_email })
+              /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)(Stack, { direction: "column", gap: "2xs", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(import_components78.__experimentalText, { ellipsizeMode: "tail", limit: 50, truncate: true, children: displayName }),
+                showEmail && /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(import_components78.__experimentalText, { variant: "muted", size: 12, ellipsizeMode: "tail", limit: 50, truncate: true, children: item.author_email })
               ] }),
               item.is_unread
             )
@@ -38043,7 +38326,7 @@ function StageInner() {
       },
       {
         id: "date",
-        label: (0, import_i18n80.__)("Date", "jetpack-forms"),
+        label: (0, import_i18n84.__)("Date", "jetpack-forms"),
         render: ({ item }) => {
           const dateStr = new Date(item.date).toLocaleDateString(void 0, {
             year: "numeric",
@@ -38058,7 +38341,7 @@ function StageInner() {
           date.setMonth(filter.month - 1);
           date.setFullYear(filter.year);
           return {
-            label: (0, import_date10.dateI18n)((0, import_i18n80.__)("F Y", "jetpack-forms"), date),
+            label: (0, import_date10.dateI18n)((0, import_i18n84.__)("F Y", "jetpack-forms"), date),
             value: `${filter.year}/${filter.month}`
           };
         }),
@@ -38068,12 +38351,12 @@ function StageInner() {
       ...isSingleFormView ? [] : [
         {
           id: "source",
-          label: (0, import_i18n80.__)("Source", "jetpack-forms"),
+          label: (0, import_i18n84.__)("Source", "jetpack-forms"),
           render: ({ item }) => {
-            const source = item.entry_title || getUrlPath(item.entry_permalink) || (0, import_i18n80.__)("(no title)", "jetpack-forms");
+            const source = item.entry_title || getUrlPath(item.entry_permalink) || (0, import_i18n84.__)("(no title)", "jetpack-forms");
             if (item.entry_permalink) {
               return styleUnreadValue(
-                /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components75.ExternalLink, { href: item.entry_permalink, children: source }),
+                /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(import_components78.ExternalLink, { href: item.entry_permalink, children: source }),
                 item.is_unread
               );
             }
@@ -38082,7 +38365,7 @@ function StageInner() {
           elements: (filterOptions?.source || []).map(
             (source) => ({
               value: source.id.toString(),
-              label: (0, import_html_entities5.decodeEntities)(source.title) || getUrlPath(source.url) || (0, import_i18n80.__)("(no title)", "jetpack-forms")
+              label: (0, import_html_entities5.decodeEntities)(source.title) || getUrlPath(source.url) || (0, import_i18n84.__)("(no title)", "jetpack-forms")
             })
           ),
           filterBy: { operators: ["is"] },
@@ -38091,25 +38374,25 @@ function StageInner() {
       ],
       {
         id: "read_status",
-        label: (0, import_i18n80.__)("Status", "jetpack-forms"),
+        label: (0, import_i18n84.__)("Status", "jetpack-forms"),
         elements: [
-          { label: (0, import_i18n80.__)("Unread", "jetpack-forms"), value: "unread" },
-          { label: (0, import_i18n80.__)("Read", "jetpack-forms"), value: "read" }
+          { label: (0, import_i18n84.__)("Unread", "jetpack-forms"), value: "unread" },
+          { label: (0, import_i18n84.__)("Read", "jetpack-forms"), value: "read" }
         ],
         filterBy: { operators: ["is"] },
         enableSorting: false,
         render: ({ item }) => {
-          return /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(Badge, { intent: "default", children: item.is_unread ? (0, import_i18n80.__)("Unread", "jetpack-forms") : (0, import_i18n80.__)("Read", "jetpack-forms") });
+          return /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(Badge, { intent: "default", children: item.is_unread ? (0, import_i18n84.__)("Unread", "jetpack-forms") : (0, import_i18n84.__)("Read", "jetpack-forms") });
         }
       },
       {
         id: "ip",
-        label: (0, import_i18n80.__)("IP Address", "jetpack-forms"),
+        label: (0, import_i18n84.__)("IP Address", "jetpack-forms"),
         render: ({ item }) => {
           if (!item.ip) {
             return styleUnreadValue("-", item.is_unread);
           }
-          return /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(TextWithFlag, { countryCode: item.country_code, fallbackIcon: true, children: styleUnreadValue(item.ip, item.is_unread) });
+          return /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(TextWithFlag, { countryCode: item.country_code, fallbackIcon: true, children: styleUnreadValue(item.ip, item.is_unread) });
         },
         enableSorting: false
       }
@@ -38156,7 +38439,7 @@ function StageInner() {
     },
     [onChangeSelection]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime171.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)(
     page_default,
     {
       showSidebarToggle: false,
@@ -38165,10 +38448,10 @@ function StageInner() {
       actions: headerActions,
       hasPadding: false,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime171.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)(
           dataviews_default,
           {
-            empty: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
+            empty: /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
               empty_responses_default,
               {
                 isSearch: !!view.search,
@@ -38190,7 +38473,7 @@ function StageInner() {
             onClickItem,
             actions: actions2,
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
                 DataViewsHeaderRow,
                 {
                   activeTab: "responses",
@@ -38204,12 +38487,12 @@ function StageInner() {
                   onStatusChange
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(dataviews_default.Layout, {}),
-              /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(dataviews_default.Footer, {})
+              /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(dataviews_default.Layout, {}),
+              /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(dataviews_default.Footer, {})
             ]
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
           jetpack_integrations_modal_default,
           {
             isOpen: isIntegrationsModalOpen,
@@ -38226,54 +38509,54 @@ function StageInner() {
   );
 }
 var Stage = () => {
-  return /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(StageInner, {}) });
+  return /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(StageInner, {}) });
 };
 
 // routes/responses/response/index.tsx
 var import_api_fetch11 = __toESM(require_api_fetch());
-var import_components89 = __toESM(require_components());
+var import_components92 = __toESM(require_components());
 var import_core_data9 = __toESM(require_core_data());
 var import_data34 = __toESM(require_data());
 var import_element94 = __toESM(require_element());
 var import_html_entities9 = __toESM(require_html_entities());
-var import_i18n90 = __toESM(require_i18n());
+var import_i18n94 = __toESM(require_i18n());
 import { useParams as useParams2, useSearch as useSearch4, useNavigate as useNavigate5 } from "@wordpress/route";
 
 // src/dashboard/components/feedback-comments/index.tsx
-var import_components77 = __toESM(require_components(), 1);
+var import_components80 = __toESM(require_components(), 1);
 var import_core_data8 = __toESM(require_core_data(), 1);
 var import_data32 = __toESM(require_data(), 1);
 var import_element90 = __toESM(require_element(), 1);
-var import_i18n82 = __toESM(require_i18n(), 1);
+var import_i18n86 = __toESM(require_i18n(), 1);
 var import_notices5 = __toESM(require_notices(), 1);
 
 // src/dashboard/components/feedback-comments/comment-item.tsx
-var import_components76 = __toESM(require_components(), 1);
+var import_components79 = __toESM(require_components(), 1);
 var import_date11 = __toESM(require_date(), 1);
 var import_dom13 = __toESM(require_dom(), 1);
-var import_i18n81 = __toESM(require_i18n(), 1);
-var import_jsx_runtime172 = __toESM(require_jsx_runtime(), 1);
+var import_i18n85 = __toESM(require_i18n(), 1);
+var import_jsx_runtime174 = __toESM(require_jsx_runtime(), 1);
 function formatCommentDate(dateString) {
-  return (0, import_i18n81.sprintf)(
+  return (0, import_i18n85.sprintf)(
     /* Translators: %1$s is the date, %2$s is the time. */
-    (0, import_i18n81.__)("%1$s at %2$s", "jetpack-forms"),
+    (0, import_i18n85.__)("%1$s at %2$s", "jetpack-forms"),
     (0, import_date11.dateI18n)((0, import_date11.getSettings)().formats.date, dateString),
     (0, import_date11.dateI18n)((0, import_date11.getSettings)().formats.time, dateString)
   );
 }
 var CommentItem = ({ comment, onDelete, isDeleting }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)("div", { className: "jp-forms__feedback-comments-comment", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime172.jsxs)("div", { className: "jp-forms__feedback-comments-comment-meta", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("strong", { className: "jp-forms__feedback-comments-comment-author", children: comment.author_name }),
-      /* @__PURE__ */ (0, import_jsx_runtime172.jsx)("span", { className: "jp-forms__feedback-comments-comment-date", children: formatCommentDate(comment.date) }),
-      /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
-        import_components76.DropdownMenu,
+  return /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)("div", { className: "jp-forms__feedback-comments-comment", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)("div", { className: "jp-forms__feedback-comments-comment-meta", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("strong", { className: "jp-forms__feedback-comments-comment-author", children: comment.author_name }),
+      /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("span", { className: "jp-forms__feedback-comments-comment-date", children: formatCommentDate(comment.date) }),
+      /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
+        import_components79.DropdownMenu,
         {
           icon: more_vertical_default,
-          label: (0, import_i18n81.__)("Note options", "jetpack-forms"),
+          label: (0, import_i18n85.__)("Note options", "jetpack-forms"),
           controls: [
             {
-              title: (0, import_i18n81.__)("Delete", "jetpack-forms"),
+              title: (0, import_i18n85.__)("Delete", "jetpack-forms"),
               icon: trash_default,
               onClick: () => onDelete(comment.id),
               isDisabled: isDeleting
@@ -38282,7 +38565,7 @@ var CommentItem = ({ comment, onDelete, isDeleting }) => {
         }
       )
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime172.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
       "div",
       {
         className: "jp-forms__feedback-comments-comment-content",
@@ -38302,7 +38585,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/feedback-comments/index.tsx
-var import_jsx_runtime173 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime175 = __toESM(require_jsx_runtime(), 1);
 var FeedbackComments = ({ postId }) => {
   const [newComment, setNewComment] = (0, import_element90.useState)("");
   const [isSubmitting, setIsSubmitting] = (0, import_element90.useState)(false);
@@ -38355,7 +38638,7 @@ var FeedbackComments = ({ postId }) => {
       return;
     }
     if (!Array.isArray(commentsPage)) {
-      const message2 = commentsPage.message || (0, import_i18n82.__)("Failed to load comments. Please try again.", "jetpack-forms");
+      const message2 = commentsPage.message || (0, import_i18n86.__)("Failed to load comments. Please try again.", "jetpack-forms");
       setError(message2);
       return;
     }
@@ -38393,13 +38676,13 @@ var FeedbackComments = ({ postId }) => {
         content: newComment
       });
       if (saved === void 0) {
-        setError((0, import_i18n82.__)("Failed to save the note. Please try again.", "jetpack-forms"));
-        createErrorNotice((0, import_i18n82.__)("Failed to save the note.", "jetpack-forms"));
+        setError((0, import_i18n86.__)("Failed to save the note. Please try again.", "jetpack-forms"));
+        createErrorNotice((0, import_i18n86.__)("Failed to save the note.", "jetpack-forms"));
         setIsSubmitting(false);
         return;
       }
       setNewComment("");
-      createSuccessNotice((0, import_i18n82.__)("Note added successfully.", "jetpack-forms"));
+      createSuccessNotice((0, import_i18n86.__)("Note added successfully.", "jetpack-forms"));
       setClientAddedComments((prev) => {
         if (!saved || !saved.id) {
           return prev;
@@ -38413,8 +38696,8 @@ var FeedbackComments = ({ postId }) => {
       });
       scrollToBottom();
     } catch (err) {
-      setError((0, import_i18n82.__)("Failed to save the note. Please try again.", "jetpack-forms"));
-      createErrorNotice((0, import_i18n82.__)("Failed to save the note.", "jetpack-forms"));
+      setError((0, import_i18n86.__)("Failed to save the note. Please try again.", "jetpack-forms"));
+      createErrorNotice((0, import_i18n86.__)("Failed to save the note.", "jetpack-forms"));
     } finally {
       setIsSubmitting(false);
     }
@@ -38444,12 +38727,12 @@ var FeedbackComments = ({ postId }) => {
       });
       try {
         await deleteEntityRecord("root", "comment", commentId, {}, { throwOnError: true });
-        createSuccessNotice((0, import_i18n82.__)("Note deleted.", "jetpack-forms"));
+        createSuccessNotice((0, import_i18n86.__)("Note deleted.", "jetpack-forms"));
         setLoadedComments((prev) => prev.filter((c2) => c2.id !== commentId));
         setClientAddedComments((prev) => prev.filter((c2) => c2.id !== commentId));
       } catch (err) {
-        setError((0, import_i18n82.__)("Failed to delete the note. Please try again.", "jetpack-forms"));
-        createErrorNotice((0, import_i18n82.__)("Failed to delete the note.", "jetpack-forms"));
+        setError((0, import_i18n86.__)("Failed to delete the note. Please try again.", "jetpack-forms"));
+        createErrorNotice((0, import_i18n86.__)("Failed to delete the note.", "jetpack-forms"));
       } finally {
         setDeletingCommentIds((prev) => {
           const next = new Set(prev);
@@ -38460,13 +38743,13 @@ var FeedbackComments = ({ postId }) => {
     },
     [deleteEntityRecord, createSuccessNotice, createErrorNotice]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__feedback-comments", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("h3", { className: "jp-forms__feedback-comments-heading", children: [
-      (0, import_i18n82.__)("Notes", "jetpack-forms"),
-      isLoadingComments && /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("span", { className: "jp-forms__feedback-loading", children: /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(import_components77.Spinner, { height: 12, width: 12 }) })
+  return /* @__PURE__ */ (0, import_jsx_runtime175.jsxs)("div", { className: "jp-forms__feedback-comments", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime175.jsxs)("h3", { className: "jp-forms__feedback-comments-heading", children: [
+      (0, import_i18n86.__)("Notes", "jetpack-forms"),
+      isLoadingComments && /* @__PURE__ */ (0, import_jsx_runtime175.jsx)("span", { className: "jp-forms__feedback-loading", children: /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(import_components80.Spinner, { height: 12, width: 12 }) })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__feedback-comments-content", children: [
-      !isLoadingComments && loadedComments.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__feedback-comments-list", children: loadedComments.map((comment) => /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime175.jsxs)("div", { className: "jp-forms__feedback-comments-content", children: [
+      !isLoadingComments && loadedComments.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime175.jsx)("div", { className: "jp-forms__feedback-comments-list", children: loadedComments.map((comment) => /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(
         comment_item_default,
         {
           comment,
@@ -38475,8 +38758,8 @@ var FeedbackComments = ({ postId }) => {
         },
         comment.id
       )) }),
-      !isLoadingComments && hasMoreComments && /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__feedback-comments-load-more", children: /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(import_components77.Button, { variant: "secondary", onClick: handleLoadMore, children: (0, import_i18n82.__)("Load more comments", "jetpack-forms") }) }),
-      clientAddedComments.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__feedback-comments-list jp-forms__feedback-comments-new", children: clientAddedComments.map((comment) => /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
+      !isLoadingComments && hasMoreComments && /* @__PURE__ */ (0, import_jsx_runtime175.jsx)("div", { className: "jp-forms__feedback-comments-load-more", children: /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(import_components80.Button, { variant: "secondary", onClick: handleLoadMore, children: (0, import_i18n86.__)("Load more comments", "jetpack-forms") }) }),
+      clientAddedComments.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime175.jsx)("div", { className: "jp-forms__feedback-comments-list jp-forms__feedback-comments-new", children: clientAddedComments.map((comment) => /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(
         comment_item_default,
         {
           comment,
@@ -38486,14 +38769,14 @@ var FeedbackComments = ({ postId }) => {
         comment.id
       )) })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__feedback-comments-form", children: [
-      error2 && /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__feedback-comments-error", children: error2 }),
-      /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__feedback-comments-form-wrapper", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__feedback-comments-form-input", children: /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
-          import_components77.TextareaControl,
+    /* @__PURE__ */ (0, import_jsx_runtime175.jsxs)("div", { className: "jp-forms__feedback-comments-form", children: [
+      error2 && /* @__PURE__ */ (0, import_jsx_runtime175.jsx)("div", { className: "jp-forms__feedback-comments-error", children: error2 }),
+      /* @__PURE__ */ (0, import_jsx_runtime175.jsxs)("div", { className: "jp-forms__feedback-comments-form-wrapper", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime175.jsx)("div", { className: "jp-forms__feedback-comments-form-input", children: /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(
+          import_components80.TextareaControl,
           {
             hideLabelFromVision: true,
-            label: (0, import_i18n82.__)("Leave a note", "jetpack-forms"),
+            label: (0, import_i18n86.__)("Leave a note", "jetpack-forms"),
             value: newComment,
             onChange: setNewComment,
             onKeyDown: handleKeyDown,
@@ -38501,23 +38784,23 @@ var FeedbackComments = ({ postId }) => {
             enterKeyHint: "send",
             rows: 1,
             disabled: isSubmitting,
-            placeholder: (0, import_i18n82.__)("Write a quick note\u2026", "jetpack-forms")
+            placeholder: (0, import_i18n86.__)("Write a quick note\u2026", "jetpack-forms")
           }
         ) }),
-        /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__feedback-comments-user-info", children: [
-          currentUser && /* @__PURE__ */ (0, import_jsx_runtime173.jsxs)("div", { className: "jp-forms__feedback-comments-form-avatar", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("img", { src: currentUser.avatar_urls?.["48"] || "", alt: "" }),
-            /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("strong", { children: currentUser.name })
+        /* @__PURE__ */ (0, import_jsx_runtime175.jsxs)("div", { className: "jp-forms__feedback-comments-user-info", children: [
+          currentUser && /* @__PURE__ */ (0, import_jsx_runtime175.jsxs)("div", { className: "jp-forms__feedback-comments-form-avatar", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime175.jsx)("img", { src: currentUser.avatar_urls?.["48"] || "", alt: "" }),
+            /* @__PURE__ */ (0, import_jsx_runtime175.jsx)("strong", { children: currentUser.name })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime173.jsx)("div", { className: "jp-forms__feedback-comments-form-button", children: /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(
-            import_components77.Button,
+          /* @__PURE__ */ (0, import_jsx_runtime175.jsx)("div", { className: "jp-forms__feedback-comments-form-button", children: /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(
+            import_components80.Button,
             {
               variant: "primary",
               type: "submit",
               onClick: handleNewComment,
               disabled: isSubmitting || !newComment.trim(),
               isBusy: isSubmitting,
-              children: (0, import_i18n82.__)("Add note", "jetpack-forms")
+              children: (0, import_i18n86.__)("Add note", "jetpack-forms")
             }
           ) })
         ] })
@@ -38528,9 +38811,9 @@ var FeedbackComments = ({ postId }) => {
 var feedback_comments_default = FeedbackComments;
 
 // src/dashboard/components/inspector/preview-file/index.tsx
-var import_components78 = __toESM(require_components(), 1);
+var import_components81 = __toESM(require_components(), 1);
 var import_html_entities6 = __toESM(require_html_entities(), 1);
-var import_i18n83 = __toESM(require_i18n(), 1);
+var import_i18n87 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/inspector/preview-file/style.scss
 if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='6858eb9077']")) {
@@ -38541,17 +38824,17 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/preview-file/index.tsx
-var import_jsx_runtime174 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime176 = __toESM(require_jsx_runtime(), 1);
 var PreviewFile = ({ file, isLoading, onImageLoaded }) => {
   const imageClass = clsx_default("jp-forms__inbox-file-preview-container", {
     "is-loading": isLoading
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)("div", { className: "jp-forms__inbox-file-preview-shell", children: [
-    isLoading && /* @__PURE__ */ (0, import_jsx_runtime174.jsxs)("div", { className: "jp-forms__inbox-file-loading", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(import_components78.Spinner, { className: "jp-forms__inbox-file-spinner" }),
-      /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("div", { className: "jp-forms__inbox-file-loading-message ", children: (0, import_i18n83.__)("Loading preview\u2026", "jetpack-forms") })
+  return /* @__PURE__ */ (0, import_jsx_runtime176.jsxs)("div", { className: "jp-forms__inbox-file-preview-shell", children: [
+    isLoading && /* @__PURE__ */ (0, import_jsx_runtime176.jsxs)("div", { className: "jp-forms__inbox-file-loading", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(import_components81.Spinner, { className: "jp-forms__inbox-file-spinner" }),
+      /* @__PURE__ */ (0, import_jsx_runtime176.jsx)("div", { className: "jp-forms__inbox-file-loading-message ", children: (0, import_i18n87.__)("Loading preview\u2026", "jetpack-forms") })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime174.jsx)("div", { className: imageClass, children: /* @__PURE__ */ (0, import_jsx_runtime174.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime176.jsx)("div", { className: imageClass, children: /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(
       "img",
       {
         src: file.url,
@@ -38565,13 +38848,13 @@ var PreviewFile = ({ file, isLoading, onImageLoaded }) => {
 var preview_file_default = PreviewFile;
 
 // src/dashboard/components/inspector/response-fields/field-email/index.tsx
-var import_components80 = __toESM(require_components(), 1);
+var import_components83 = __toESM(require_components(), 1);
 
 // src/dashboard/components/copy-clipboard-button/index.tsx
-var import_components79 = __toESM(require_components(), 1);
+var import_components82 = __toESM(require_components(), 1);
 var import_compose17 = __toESM(require_compose(), 1);
 var import_element91 = __toESM(require_element(), 1);
-var import_i18n84 = __toESM(require_i18n(), 1);
+var import_i18n88 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/copy-clipboard-button/style.scss
 if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='f2ba3be839']")) {
@@ -38582,7 +38865,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/copy-clipboard-button/index.tsx
-var import_jsx_runtime175 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime177 = __toESM(require_jsx_runtime(), 1);
 function CopyClipboardButton({ text }) {
   const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element91.useState)(false);
   const timeoutIdRef = (0, import_element91.useRef)(null);
@@ -38602,11 +38885,11 @@ function CopyClipboardButton({ text }) {
       }
     };
   }, []);
-  const copied = (0, import_i18n84.__)("Copied!", "jetpack-forms");
-  const copy = (0, import_i18n84.__)("Copy", "jetpack-forms");
+  const copied = (0, import_i18n88.__)("Copied!", "jetpack-forms");
+  const copy = (0, import_i18n88.__)("Copy", "jetpack-forms");
   const emailCopyLabel = showCopyConfirmation ? copied : copy;
-  return /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(import_components79.Tooltip, { delay: 0, hideOnClick: false, text: emailCopyLabel, children: /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(
-    import_components79.Button,
+  return /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(import_components82.Tooltip, { delay: 0, hideOnClick: false, text: emailCopyLabel, children: /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(
+    import_components82.Button,
     {
       className: "jp-forms__copy-clipboard-button",
       size: "small",
@@ -38627,24 +38910,24 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-fields/field-email/index.tsx
-var import_jsx_runtime176 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime178 = __toESM(require_jsx_runtime(), 1);
 var FieldEmail = ({ email }) => {
   const emailParts = email.split("@");
-  return /* @__PURE__ */ (0, import_jsx_runtime176.jsxs)(
-    import_components80.__experimentalHStack,
+  return /* @__PURE__ */ (0, import_jsx_runtime178.jsxs)(
+    import_components83.__experimentalHStack,
     {
       alignment: "center",
       className: "jp-forms__inbox-response-field-email",
       justify: "left",
       spacing: "2",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime176.jsxs)("a", { href: `mailto:${email}`, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime178.jsxs)("a", { href: `mailto:${email}`, children: [
           emailParts[0],
-          /* @__PURE__ */ (0, import_jsx_runtime176.jsx)("wbr", {}),
+          /* @__PURE__ */ (0, import_jsx_runtime178.jsx)("wbr", {}),
           "@",
           emailParts[1]
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime176.jsx)(CopyClipboardButton, { text: email })
+        /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(CopyClipboardButton, { text: email })
       ]
     }
   );
@@ -38652,10 +38935,10 @@ var FieldEmail = ({ email }) => {
 var field_email_default = FieldEmail;
 
 // src/dashboard/components/inspector/response-fields/field-file/file.tsx
-var import_components81 = __toESM(require_components(), 1);
+var import_components84 = __toESM(require_components(), 1);
 var import_html_entities7 = __toESM(require_html_entities(), 1);
-var import_i18n85 = __toESM(require_i18n(), 1);
-var import_jsx_runtime177 = __toESM(require_jsx_runtime(), 1);
+var import_i18n89 = __toESM(require_i18n(), 1);
+var import_jsx_runtime179 = __toESM(require_jsx_runtime(), 1);
 var FieldFile = ({ file, onClick }) => {
   const fileExtension = file.name.split(".").pop().toLowerCase();
   const fileType = file.type.split("/")[0];
@@ -38689,21 +38972,21 @@ var FieldFile = ({ file, onClick }) => {
   };
   const iconType = extensionMap[fileExtension] || iconMap[fileType] || "txt";
   const iconClass = clsx_default("jp-forms__inbox-response-file__icon", "icon-" + iconType);
-  return /* @__PURE__ */ (0, import_jsx_runtime177.jsxs)("div", { className: "jp-forms__inbox-response-file", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime177.jsxs)("div", { className: "jp-forms__inbox-response-file__info", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime177.jsx)("div", { className: iconClass }),
-      /* @__PURE__ */ (0, import_jsx_runtime177.jsxs)("div", { className: "jp-forms__inbox-response-file__name", children: [
-        file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(import_components81.Button, { target: "_blank", variant: "link", onClick, children: (0, import_html_entities7.decodeEntities)(file.name) }),
-        !file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(import_components81.ExternalLink, { href: file.url + "&preview=true", children: (0, import_html_entities7.decodeEntities)(file.name) }),
-        /* @__PURE__ */ (0, import_jsx_runtime177.jsx)("div", { className: "jp-forms__inbox-response-file__meta-info", children: (0, import_i18n85.sprintf)(
+  return /* @__PURE__ */ (0, import_jsx_runtime179.jsxs)("div", { className: "jp-forms__inbox-response-file", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime179.jsxs)("div", { className: "jp-forms__inbox-response-file__info", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime179.jsx)("div", { className: iconClass }),
+      /* @__PURE__ */ (0, import_jsx_runtime179.jsxs)("div", { className: "jp-forms__inbox-response-file__name", children: [
+        file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components84.Button, { target: "_blank", variant: "link", onClick, children: (0, import_html_entities7.decodeEntities)(file.name) }),
+        !file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components84.ExternalLink, { href: file.url + "&preview=true", children: (0, import_html_entities7.decodeEntities)(file.name) }),
+        /* @__PURE__ */ (0, import_jsx_runtime179.jsx)("div", { className: "jp-forms__inbox-response-file__meta-info", children: (0, import_i18n89.sprintf)(
           /* translators: %1$s size of the file and %2$s is the file extension */
-          (0, import_i18n85.__)("%1$s, %2$s", "jetpack-forms"),
+          (0, import_i18n89.__)("%1$s, %2$s", "jetpack-forms"),
           file.size,
           fileExtension.toUpperCase()
         ) })
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime177.jsx)("span", { className: "jp-forms__inbox-response-file__item-actions", children: /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(import_components81.Tooltip, { text: (0, import_i18n85.__)("Download", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(import_components81.Button, { variant: "secondary", href: file.url, target: "_blank", children: /* @__PURE__ */ (0, import_jsx_runtime177.jsx)(import_components81.Icon, { icon: download_default }) }) }) })
+    /* @__PURE__ */ (0, import_jsx_runtime179.jsx)("span", { className: "jp-forms__inbox-response-file__item-actions", children: /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components84.Tooltip, { text: (0, import_i18n89.__)("Download", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components84.Button, { variant: "secondary", href: file.url, target: "_blank", children: /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components84.Icon, { icon: download_default }) }) }) })
   ] });
 };
 var file_default = FieldFile;
@@ -38717,19 +39000,19 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-fields/field-file/index.tsx
-var import_jsx_runtime178 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime180 = __toESM(require_jsx_runtime(), 1);
 var FieldFile2 = ({ files, handleFilePreview }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime178.jsx)("div", { className: "jp-forms__inbox-response-field-file", children: files?.length ? files.map((file) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime180.jsx)("div", { className: "jp-forms__inbox-response-field-file", children: files?.length ? files.map((file) => {
     if (!file || !file.name) {
       return "-";
     }
-    return /* @__PURE__ */ (0, import_jsx_runtime178.jsx)(file_default, { file, onClick: handleFilePreview(file) }, file.file_id);
+    return /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(file_default, { file, onClick: handleFilePreview(file) }, file.file_id);
   }) : "-" });
 };
 var field_file_default = FieldFile2;
 
 // src/dashboard/components/inspector/response-fields/field-image-select/index.tsx
-var import_components82 = __toESM(require_components(), 1);
+var import_components85 = __toESM(require_components(), 1);
 
 // ../../../node_modules/.pnpm/photon@4.1.1/node_modules/photon/dist/esm/index.js
 var import_crc32 = __toESM(require_crc32());
@@ -38813,7 +39096,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-fields/field-image-select/index.tsx
-var import_jsx_runtime179 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime181 = __toESM(require_jsx_runtime(), 1);
 function photonSafeUrl(url = "") {
   if (!url) {
     return null;
@@ -38826,8 +39109,8 @@ function photonSafeUrl(url = "") {
 var ImageSelectButton = ({ choice, handleFilePreview }) => {
   const label = choice.label ? `${choice.selected}: ${choice.label}` : choice.selected;
   const hasImage = choice.image?.src;
-  return /* @__PURE__ */ (0, import_jsx_runtime179.jsxs)(
-    import_components82.Card,
+  return /* @__PURE__ */ (0, import_jsx_runtime181.jsxs)(
+    import_components85.Card,
     {
       onClick: hasImage ? handleFilePreview({
         file_id: choice.image.id,
@@ -38836,7 +39119,7 @@ var ImageSelectButton = ({ choice, handleFilePreview }) => {
       }) : void 0,
       className: `jp-forms__image-select-preview ${hasImage ? "has-image" : ""}`,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components82.CardMedia, { children: /* @__PURE__ */ (0, import_jsx_runtime179.jsx)("div", { className: "jp-forms__image-select-preview-image-wrapper", children: hasImage ? /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(import_components85.CardMedia, { children: /* @__PURE__ */ (0, import_jsx_runtime181.jsx)("div", { className: "jp-forms__image-select-preview-image-wrapper", children: hasImage ? /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
           "img",
           {
             className: "jp-forms__image-select-preview-image",
@@ -38846,9 +39129,9 @@ var ImageSelectButton = ({ choice, handleFilePreview }) => {
             loading: "lazy",
             src: photonSafeUrl(choice.image.src) ?? void 0
           }
-        ) : /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components82.Icon, { icon: image_default, size: 144 }) }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(
-          import_components82.CardBody,
+        ) : /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(import_components85.Icon, { icon: image_default, size: 144 }) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
+          import_components85.CardBody,
           {
             size: {
               blockStart: "none",
@@ -38856,15 +39139,15 @@ var ImageSelectButton = ({ choice, handleFilePreview }) => {
               inlineStart: "xSmall",
               inlineEnd: "xSmall"
             },
-            children: /* @__PURE__ */ (0, import_jsx_runtime179.jsxs)(
-              import_components82.__experimentalHStack,
+            children: /* @__PURE__ */ (0, import_jsx_runtime181.jsxs)(
+              import_components85.__experimentalHStack,
               {
                 className: "jp-forms__image-select-preview-label-wrapper",
                 spacing: "2",
                 alignment: "topLeft",
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components82.__experimentalText, { className: "jp-forms__image-select-preview-selected", children: choice.selected }),
-                  /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components82.__experimentalText, { title: choice.label, className: "jp-forms__image-select-preview-label", children: choice.label })
+                  /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(import_components85.__experimentalText, { className: "jp-forms__image-select-preview-selected", children: choice.selected }),
+                  /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(import_components85.__experimentalText, { title: choice.label, className: "jp-forms__image-select-preview-label", children: choice.label })
                 ]
               }
             )
@@ -38875,17 +39158,17 @@ var ImageSelectButton = ({ choice, handleFilePreview }) => {
   );
 };
 var FieldImageSelect = ({ choices, handleFilePreview }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime179.jsxs)(import_jsx_runtime179.Fragment, { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime181.jsxs)(import_jsx_runtime181.Fragment, { children: [
     (choices?.length ?? 0) === 0 && "-",
-    (choices?.length ?? 0) > 0 && /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(
-      import_components82.__experimentalHStack,
+    (choices?.length ?? 0) > 0 && /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
+      import_components85.__experimentalHStack,
       {
         spacing: "2",
         alignment: "topLeft",
         wrap: true,
         className: "jp-forms__image-select-preview-wrapper",
         children: choices.map((choice) => {
-          return /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(
             ImageSelectButton,
             {
               choice,
@@ -38901,12 +39184,12 @@ var FieldImageSelect = ({ choices, handleFilePreview }) => {
 var field_image_select_default = FieldImageSelect;
 
 // src/dashboard/components/inspector/response-fields/field-preview/index.tsx
-var import_components85 = __toESM(require_components(), 1);
+var import_components88 = __toESM(require_components(), 1);
 
 // src/blocks/field-checkbox/icon.jsx
 var import_primitives49 = __toESM(require_primitives(), 1);
-var import_jsx_runtime180 = __toESM(require_jsx_runtime(), 1);
-var icon = /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(import_primitives49.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime180.jsx)(
+var import_jsx_runtime182 = __toESM(require_jsx_runtime(), 1);
+var icon = /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(import_primitives49.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(
   import_primitives49.Path,
   {
     fillRule: "evenodd",
@@ -38919,10 +39202,10 @@ var icon_default2 = {
 
 // src/blocks/field-consent/icon.jsx
 var import_primitives50 = __toESM(require_primitives(), 1);
-var import_jsx_runtime181 = __toESM(require_jsx_runtime(), 1);
-var icon2 = /* @__PURE__ */ (0, import_jsx_runtime181.jsxs)(import_primitives50.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: [
-  /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(import_primitives50.Path, { d: "M7 5.5H17C17.2761 5.5 17.5 5.72386 17.5 6V13H19V6C19 4.89543 18.1046 4 17 4H7C5.89543 4 5 4.89543 5 6V18C5 19.1046 5.89543 20 7 20H11.5V18.5H7C6.72386 18.5 6.5 18.2761 6.5 18V6C6.5 5.72386 6.72386 5.5 7 5.5ZM16 7.75H8V9.25H16V7.75ZM8 11H13V12.5H8V11Z" }),
-  /* @__PURE__ */ (0, import_jsx_runtime181.jsx)(import_primitives50.Path, { d: "M20.1087 15.9382L15.9826 21.6689L12.959 18.5194L14.0411 17.4806L15.8175 19.331L18.8914 15.0618L20.1087 15.9382Z" })
+var import_jsx_runtime183 = __toESM(require_jsx_runtime(), 1);
+var icon2 = /* @__PURE__ */ (0, import_jsx_runtime183.jsxs)(import_primitives50.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: [
+  /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(import_primitives50.Path, { d: "M7 5.5H17C17.2761 5.5 17.5 5.72386 17.5 6V13H19V6C19 4.89543 18.1046 4 17 4H7C5.89543 4 5 4.89543 5 6V18C5 19.1046 5.89543 20 7 20H11.5V18.5H7C6.72386 18.5 6.5 18.2761 6.5 18V6C6.5 5.72386 6.72386 5.5 7 5.5ZM16 7.75H8V9.25H16V7.75ZM8 11H13V12.5H8V11Z" }),
+  /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(import_primitives50.Path, { d: "M20.1087 15.9382L15.9826 21.6689L12.959 18.5194L14.0411 17.4806L15.8175 19.331L18.8914 15.0618L20.1087 15.9382Z" })
 ] });
 var icon_default3 = {
   src: icon2
@@ -38930,8 +39213,8 @@ var icon_default3 = {
 
 // src/blocks/field-date/icon.jsx
 var import_primitives51 = __toESM(require_primitives(), 1);
-var import_jsx_runtime182 = __toESM(require_jsx_runtime(), 1);
-var icon3 = /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(import_primitives51.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime182.jsx)(
+var import_jsx_runtime184 = __toESM(require_jsx_runtime(), 1);
+var icon3 = /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(import_primitives51.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(
   import_primitives51.Path,
   {
     fillRule: "evenodd",
@@ -38944,43 +39227,43 @@ var icon_default4 = {
 
 // src/blocks/field-image-select/icon.tsx
 var import_primitives52 = __toESM(require_primitives(), 1);
-var import_jsx_runtime183 = __toESM(require_jsx_runtime(), 1);
-var icon4 = /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(import_primitives52.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime183.jsx)(import_primitives52.Path, { d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 4.5h14c.3 0 .5.2.5.5v8.4l-3-2.9c-.3-.3-.8-.3-1 0L11.9 14 9 12c-.3-.2-.6-.2-.8 0l-3.6 2.6V5c-.1-.3.1-.5.4-.5zm14 15H5c-.3 0-.5-.2-.5-.5v-2.4l4.1-3 3 1.9c.3.2.7.2.9-.1L16 12l3.5 3.4V19c0 .3-.2.5-.5.5z" }) });
+var import_jsx_runtime185 = __toESM(require_jsx_runtime(), 1);
+var icon4 = /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(import_primitives52.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(import_primitives52.Path, { d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 4.5h14c.3 0 .5.2.5.5v8.4l-3-2.9c-.3-.3-.8-.3-1 0L11.9 14 9 12c-.3-.2-.6-.2-.8 0l-3.6 2.6V5c-.1-.3.1-.5.4-.5zm14 15H5c-.3 0-.5-.2-.5-.5v-2.4l4.1-3 3 1.9c.3.2.7.2.9-.1L16 12l3.5 3.4V19c0 .3-.2.5-.5.5z" }) });
 var icon_default5 = {
   src: icon4
 };
 
 // src/blocks/field-multiple-choice/icon.jsx
 var import_primitives53 = __toESM(require_primitives(), 1);
-var import_jsx_runtime184 = __toESM(require_jsx_runtime(), 1);
-var icon5 = /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(import_primitives53.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime184.jsx)(import_primitives53.Path, { d: "M7.0812 10.1419L10.6001 5.45005L9.40006 4.55005L6.91891 7.85824L5.53039 6.46972L4.46973 7.53038L7.0812 10.1419ZM12 8.5H20V7H12V8.5ZM12 17H20V15.5H12V17ZM8.5 14.5H5.5V17.5H8.5V14.5ZM5.5 13H8.5C9.32843 13 10 13.6716 10 14.5V17.5C10 18.3284 9.32843 19 8.5 19H5.5C4.67157 19 4 18.3284 4 17.5V14.5C4 13.6716 4.67157 13 5.5 13Z" }) });
+var import_jsx_runtime186 = __toESM(require_jsx_runtime(), 1);
+var icon5 = /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(import_primitives53.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(import_primitives53.Path, { d: "M7.0812 10.1419L10.6001 5.45005L9.40006 4.55005L6.91891 7.85824L5.53039 6.46972L4.46973 7.53038L7.0812 10.1419ZM12 8.5H20V7H12V8.5ZM12 17H20V15.5H12V17ZM8.5 14.5H5.5V17.5H8.5V14.5ZM5.5 13H8.5C9.32843 13 10 13.6716 10 14.5V17.5C10 18.3284 9.32843 19 8.5 19H5.5C4.67157 19 4 18.3284 4 17.5V14.5C4 13.6716 4.67157 13 5.5 13Z" }) });
 var icon_default6 = {
   src: icon5
 };
 
 // src/blocks/field-name/icon.jsx
 var import_primitives54 = __toESM(require_primitives(), 1);
-var import_jsx_runtime185 = __toESM(require_jsx_runtime(), 1);
-var icon6 = /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(import_primitives54.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime185.jsx)(import_primitives54.Path, { d: "M8.25 11.5C9.63071 11.5 10.75 10.3807 10.75 9C10.75 7.61929 9.63071 6.5 8.25 6.5C6.86929 6.5 5.75 7.61929 5.75 9C5.75 10.3807 6.86929 11.5 8.25 11.5ZM8.25 10C8.80228 10 9.25 9.55228 9.25 9C9.25 8.44772 8.80228 8 8.25 8C7.69772 8 7.25 8.44772 7.25 9C7.25 9.55228 7.69772 10 8.25 10ZM13 15.5V17.5H11.5V15.5C11.5 14.8096 10.9404 14.25 10.25 14.25H6.25C5.55964 14.25 5 14.8096 5 15.5V17.5H3.5V15.5C3.5 13.9812 4.73122 12.75 6.25 12.75H10.25C11.7688 12.75 13 13.9812 13 15.5ZM20.5 11H14.5V9.5H20.5V11ZM20.5 14.5H14.5V13H20.5V14.5Z" }) });
+var import_jsx_runtime187 = __toESM(require_jsx_runtime(), 1);
+var icon6 = /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(import_primitives54.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(import_primitives54.Path, { d: "M8.25 11.5C9.63071 11.5 10.75 10.3807 10.75 9C10.75 7.61929 9.63071 6.5 8.25 6.5C6.86929 6.5 5.75 7.61929 5.75 9C5.75 10.3807 6.86929 11.5 8.25 11.5ZM8.25 10C8.80228 10 9.25 9.55228 9.25 9C9.25 8.44772 8.80228 8 8.25 8C7.69772 8 7.25 8.44772 7.25 9C7.25 9.55228 7.69772 10 8.25 10ZM13 15.5V17.5H11.5V15.5C11.5 14.8096 10.9404 14.25 10.25 14.25H6.25C5.55964 14.25 5 14.8096 5 15.5V17.5H3.5V15.5C3.5 13.9812 4.73122 12.75 6.25 12.75H10.25C11.7688 12.75 13 13.9812 13 15.5ZM20.5 11H14.5V9.5H20.5V11ZM20.5 14.5H14.5V13H20.5V14.5Z" }) });
 var icon_default7 = {
   src: icon6
 };
 
 // src/blocks/field-number/icon.jsx
 var import_primitives55 = __toESM(require_primitives(), 1);
-var import_jsx_runtime186 = __toESM(require_jsx_runtime(), 1);
-var icon7 = /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(import_primitives55.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime186.jsx)(import_primitives55.Path, { d: "M12 7H4V8.5H12V7ZM19.75 17.25V10.75H4.25V17.25H19.75ZM5.75 15.75V12.25H18.25V15.75H5.75Z" }) });
+var import_jsx_runtime188 = __toESM(require_jsx_runtime(), 1);
+var icon7 = /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(import_primitives55.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(import_primitives55.Path, { d: "M12 7H4V8.5H12V7ZM19.75 17.25V10.75H4.25V17.25H19.75ZM5.75 15.75V12.25H18.25V15.75H5.75Z" }) });
 var icon_default8 = {
   src: icon7
 };
 
 // src/blocks/field-rating/icon.jsx
 var import_primitives56 = __toESM(require_primitives(), 1);
-var import_jsx_runtime187 = __toESM(require_jsx_runtime(), 1);
-var icon8 = /* @__PURE__ */ (0, import_jsx_runtime187.jsxs)(import_primitives56.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: [
-  /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(import_primitives56.Path, { d: "M4.90821 9.05978C4.91669 9.04183 4.92977 9.02672 4.94599 9.01616C4.96221 9.0056 4.98091 9 5 9C5.01909 9 5.03779 9.0056 5.05401 9.01616C5.07023 9.02672 5.08331 9.04183 5.09179 9.05978L5.93962 10.8628C5.94695 10.8785 5.95779 10.892 5.97121 10.9023C5.98463 10.9125 6.00023 10.9192 6.01666 10.9217L7.91228 11.2108C7.93118 11.2137 7.94893 11.222 7.96354 11.2349C7.97814 11.2478 7.98902 11.2648 7.99495 11.2838C8.00087 11.3029 8.0016 11.3233 7.99706 11.3428C7.99252 11.3622 7.98288 11.38 7.96924 11.394L6.59731 12.7975C6.58536 12.8097 6.57643 12.8247 6.57129 12.8414C6.56615 12.858 6.56495 12.8757 6.5678 12.893L6.89153 14.8745C6.89467 14.8942 6.89251 14.9144 6.8853 14.9329C6.87809 14.9514 6.86611 14.9675 6.8507 14.9792C6.8353 14.991 6.81707 14.998 6.79808 14.9995C6.77909 15.0009 6.76008 14.9968 6.74319 14.9876L5.04753 14.0521C5.03287 14.044 5.01656 14.0398 5 14.0398C4.98344 14.0398 4.96713 14.044 4.95247 14.0521L3.25681 14.9876C3.23991 14.997 3.22085 15.0012 3.20179 14.9997C3.18273 14.9983 3.16443 14.9913 3.14896 14.9795C3.13348 14.9678 3.12145 14.9517 3.11423 14.9331C3.107 14.9146 3.10487 14.8943 3.10806 14.8745L3.43178 12.893C3.43469 12.8758 3.43356 12.8581 3.42849 12.8414C3.42342 12.8248 3.41456 12.8097 3.40269 12.7975L2.03076 11.394C2.01712 11.38 2.00748 11.3622 2.00294 11.3428C1.9984 11.3233 1.99913 11.3029 2.00505 11.2838C2.01098 11.2648 2.02185 11.2478 2.03646 11.2349C2.05107 11.222 2.06882 11.2137 2.08772 11.2108L3.98334 10.9217C3.99977 10.9192 4.01537 10.9125 4.02879 10.9023C4.04221 10.892 4.05305 10.8785 4.06038 10.8628L4.90821 9.05978Z" }),
-  /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(import_primitives56.Path, { d: "M11.9082 9.05978C11.9167 9.04183 11.9298 9.02672 11.946 9.01616C11.9622 9.0056 11.9809 9 12 9C12.0191 9 12.0378 9.0056 12.054 9.01616C12.0702 9.02672 12.0833 9.04183 12.0918 9.05978L12.9396 10.8628C12.9469 10.8785 12.9578 10.892 12.9712 10.9023C12.9846 10.9125 13.0002 10.9192 13.0167 10.9217L14.9123 11.2108C14.9312 11.2137 14.9489 11.222 14.9635 11.2349C14.9781 11.2478 14.989 11.2648 14.9949 11.2838C15.0009 11.3029 15.0016 11.3233 14.9971 11.3428C14.9925 11.3622 14.9829 11.38 14.9692 11.394L13.5973 12.7975C13.5854 12.8097 13.5764 12.8247 13.5713 12.8414C13.5661 12.858 13.565 12.8757 13.5678 12.893L13.8915 14.8745C13.8947 14.8942 13.8925 14.9144 13.8853 14.9329C13.8781 14.9514 13.8661 14.9675 13.8507 14.9792C13.8353 14.991 13.8171 14.998 13.7981 14.9995C13.7791 15.0009 13.7601 14.9968 13.7432 14.9876L12.0475 14.0521C12.0329 14.044 12.0166 14.0398 12 14.0398C11.9834 14.0398 11.9671 14.044 11.9525 14.0521L10.2568 14.9876C10.2399 14.997 10.2208 15.0012 10.2018 14.9997C10.1827 14.9983 10.1644 14.9913 10.149 14.9795C10.1335 14.9678 10.1215 14.9517 10.1142 14.9331C10.107 14.9146 10.1049 14.8943 10.1081 14.8745L10.4318 12.893C10.4347 12.8758 10.4336 12.8581 10.4285 12.8414C10.4234 12.8248 10.4146 12.8097 10.4027 12.7975L9.03076 11.394C9.01712 11.38 9.00748 11.3622 9.00294 11.3428C8.9984 11.3233 8.99913 11.3029 9.00505 11.2838C9.01098 11.2648 9.02185 11.2478 9.03646 11.2349C9.05107 11.222 9.06882 11.2137 9.08772 11.2108L10.9833 10.9217C10.9998 10.9192 11.0154 10.9125 11.0288 10.9023C11.0422 10.892 11.0531 10.8785 11.0604 10.8628L11.9082 9.05978Z" }),
-  /* @__PURE__ */ (0, import_jsx_runtime187.jsx)(
+var import_jsx_runtime189 = __toESM(require_jsx_runtime(), 1);
+var icon8 = /* @__PURE__ */ (0, import_jsx_runtime189.jsxs)(import_primitives56.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: [
+  /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(import_primitives56.Path, { d: "M4.90821 9.05978C4.91669 9.04183 4.92977 9.02672 4.94599 9.01616C4.96221 9.0056 4.98091 9 5 9C5.01909 9 5.03779 9.0056 5.05401 9.01616C5.07023 9.02672 5.08331 9.04183 5.09179 9.05978L5.93962 10.8628C5.94695 10.8785 5.95779 10.892 5.97121 10.9023C5.98463 10.9125 6.00023 10.9192 6.01666 10.9217L7.91228 11.2108C7.93118 11.2137 7.94893 11.222 7.96354 11.2349C7.97814 11.2478 7.98902 11.2648 7.99495 11.2838C8.00087 11.3029 8.0016 11.3233 7.99706 11.3428C7.99252 11.3622 7.98288 11.38 7.96924 11.394L6.59731 12.7975C6.58536 12.8097 6.57643 12.8247 6.57129 12.8414C6.56615 12.858 6.56495 12.8757 6.5678 12.893L6.89153 14.8745C6.89467 14.8942 6.89251 14.9144 6.8853 14.9329C6.87809 14.9514 6.86611 14.9675 6.8507 14.9792C6.8353 14.991 6.81707 14.998 6.79808 14.9995C6.77909 15.0009 6.76008 14.9968 6.74319 14.9876L5.04753 14.0521C5.03287 14.044 5.01656 14.0398 5 14.0398C4.98344 14.0398 4.96713 14.044 4.95247 14.0521L3.25681 14.9876C3.23991 14.997 3.22085 15.0012 3.20179 14.9997C3.18273 14.9983 3.16443 14.9913 3.14896 14.9795C3.13348 14.9678 3.12145 14.9517 3.11423 14.9331C3.107 14.9146 3.10487 14.8943 3.10806 14.8745L3.43178 12.893C3.43469 12.8758 3.43356 12.8581 3.42849 12.8414C3.42342 12.8248 3.41456 12.8097 3.40269 12.7975L2.03076 11.394C2.01712 11.38 2.00748 11.3622 2.00294 11.3428C1.9984 11.3233 1.99913 11.3029 2.00505 11.2838C2.01098 11.2648 2.02185 11.2478 2.03646 11.2349C2.05107 11.222 2.06882 11.2137 2.08772 11.2108L3.98334 10.9217C3.99977 10.9192 4.01537 10.9125 4.02879 10.9023C4.04221 10.892 4.05305 10.8785 4.06038 10.8628L4.90821 9.05978Z" }),
+  /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(import_primitives56.Path, { d: "M11.9082 9.05978C11.9167 9.04183 11.9298 9.02672 11.946 9.01616C11.9622 9.0056 11.9809 9 12 9C12.0191 9 12.0378 9.0056 12.054 9.01616C12.0702 9.02672 12.0833 9.04183 12.0918 9.05978L12.9396 10.8628C12.9469 10.8785 12.9578 10.892 12.9712 10.9023C12.9846 10.9125 13.0002 10.9192 13.0167 10.9217L14.9123 11.2108C14.9312 11.2137 14.9489 11.222 14.9635 11.2349C14.9781 11.2478 14.989 11.2648 14.9949 11.2838C15.0009 11.3029 15.0016 11.3233 14.9971 11.3428C14.9925 11.3622 14.9829 11.38 14.9692 11.394L13.5973 12.7975C13.5854 12.8097 13.5764 12.8247 13.5713 12.8414C13.5661 12.858 13.565 12.8757 13.5678 12.893L13.8915 14.8745C13.8947 14.8942 13.8925 14.9144 13.8853 14.9329C13.8781 14.9514 13.8661 14.9675 13.8507 14.9792C13.8353 14.991 13.8171 14.998 13.7981 14.9995C13.7791 15.0009 13.7601 14.9968 13.7432 14.9876L12.0475 14.0521C12.0329 14.044 12.0166 14.0398 12 14.0398C11.9834 14.0398 11.9671 14.044 11.9525 14.0521L10.2568 14.9876C10.2399 14.997 10.2208 15.0012 10.2018 14.9997C10.1827 14.9983 10.1644 14.9913 10.149 14.9795C10.1335 14.9678 10.1215 14.9517 10.1142 14.9331C10.107 14.9146 10.1049 14.8943 10.1081 14.8745L10.4318 12.893C10.4347 12.8758 10.4336 12.8581 10.4285 12.8414C10.4234 12.8248 10.4146 12.8097 10.4027 12.7975L9.03076 11.394C9.01712 11.38 9.00748 11.3622 9.00294 11.3428C8.9984 11.3233 8.99913 11.3029 9.00505 11.2838C9.01098 11.2648 9.02185 11.2478 9.03646 11.2349C9.05107 11.222 9.06882 11.2137 9.08772 11.2108L10.9833 10.9217C10.9998 10.9192 11.0154 10.9125 11.0288 10.9023C11.0422 10.892 11.0531 10.8785 11.0604 10.8628L11.9082 9.05978Z" }),
+  /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(
     import_primitives56.Path,
     {
       fillRule: "evenodd",
@@ -38995,26 +39278,26 @@ var icon_default9 = {
 
 // src/blocks/field-select/icon.jsx
 var import_primitives57 = __toESM(require_primitives(), 1);
-var import_jsx_runtime188 = __toESM(require_jsx_runtime(), 1);
-var icon9 = /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(import_primitives57.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime188.jsx)(import_primitives57.Path, { d: "M5 4.5H19C19.2761 4.5 19.5 4.72386 19.5 5V19C19.5 19.2761 19.2761 19.5 19 19.5H5C4.72386 19.5 4.5 19.2761 4.5 19V5C4.5 4.72386 4.72386 4.5 5 4.5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM8.93582 10.1396L8.06396 11.3602L11.9999 14.1716L15.9358 11.3602L15.064 10.1396L11.9999 12.3283L8.93582 10.1396Z" }) });
+var import_jsx_runtime190 = __toESM(require_jsx_runtime(), 1);
+var icon9 = /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(import_primitives57.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(import_primitives57.Path, { d: "M5 4.5H19C19.2761 4.5 19.5 4.72386 19.5 5V19C19.5 19.2761 19.2761 19.5 19 19.5H5C4.72386 19.5 4.5 19.2761 4.5 19V5C4.5 4.72386 4.72386 4.5 5 4.5ZM19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3ZM8.93582 10.1396L8.06396 11.3602L11.9999 14.1716L15.9358 11.3602L15.064 10.1396L11.9999 12.3283L8.93582 10.1396Z" }) });
 var icon_default10 = {
   src: icon9
 };
 
 // src/blocks/field-single-choice/icon.jsx
 var import_primitives58 = __toESM(require_primitives(), 1);
-var import_jsx_runtime189 = __toESM(require_jsx_runtime(), 1);
-var icon10 = /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(import_primitives58.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime189.jsx)(import_primitives58.Path, { d: "M4 7.75C4 9.40685 5.34315 10.75 7 10.75C8.65685 10.75 10 9.40685 10 7.75C10 6.09315 8.65685 4.75 7 4.75C5.34315 4.75 4 6.09315 4 7.75ZM20 8.5H12V7H20V8.5ZM20 17H12V15.5H20V17ZM7 17.75C6.17157 17.75 5.5 17.0784 5.5 16.25C5.5 15.4216 6.17157 14.75 7 14.75C7.82843 14.75 8.5 15.4216 8.5 16.25C8.5 17.0784 7.82843 17.75 7 17.75ZM4 16.25C4 17.9069 5.34315 19.25 7 19.25C8.65685 19.25 10 17.9069 10 16.25C10 14.5931 8.65685 13.25 7 13.25C5.34315 13.25 4 14.5931 4 16.25Z" }) });
+var import_jsx_runtime191 = __toESM(require_jsx_runtime(), 1);
+var icon10 = /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(import_primitives58.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(import_primitives58.Path, { d: "M4 7.75C4 9.40685 5.34315 10.75 7 10.75C8.65685 10.75 10 9.40685 10 7.75C10 6.09315 8.65685 4.75 7 4.75C5.34315 4.75 4 6.09315 4 7.75ZM20 8.5H12V7H20V8.5ZM20 17H12V15.5H20V17ZM7 17.75C6.17157 17.75 5.5 17.0784 5.5 16.25C5.5 15.4216 6.17157 14.75 7 14.75C7.82843 14.75 8.5 15.4216 8.5 16.25C8.5 17.0784 7.82843 17.75 7 17.75ZM4 16.25C4 17.9069 5.34315 19.25 7 19.25C8.65685 19.25 10 17.9069 10 16.25C10 14.5931 8.65685 13.25 7 13.25C5.34315 13.25 4 14.5931 4 16.25Z" }) });
 var icon_default11 = {
   src: icon10
 };
 
 // src/blocks/field-slider/icon.jsx
 var import_primitives59 = __toESM(require_primitives(), 1);
-var import_jsx_runtime190 = __toESM(require_jsx_runtime(), 1);
-var icon11 = /* @__PURE__ */ (0, import_jsx_runtime190.jsxs)(import_primitives59.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "none", children: [
-  /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(import_primitives59.Line, { x1: "4", y1: "12", x2: "20", y2: "12", stroke: "currentColor", strokeWidth: "2" }),
-  /* @__PURE__ */ (0, import_jsx_runtime190.jsx)(import_primitives59.Circle, { cx: "12", cy: "12", r: "2", fill: "currentColor" })
+var import_jsx_runtime192 = __toESM(require_jsx_runtime(), 1);
+var icon11 = /* @__PURE__ */ (0, import_jsx_runtime192.jsxs)(import_primitives59.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "none", children: [
+  /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_primitives59.Line, { x1: "4", y1: "12", x2: "20", y2: "12", stroke: "currentColor", strokeWidth: "2" }),
+  /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_primitives59.Circle, { cx: "12", cy: "12", r: "2", fill: "currentColor" })
 ] });
 var icon_default12 = {
   src: icon11
@@ -39022,24 +39305,24 @@ var icon_default12 = {
 
 // src/blocks/field-text/icon.jsx
 var import_primitives60 = __toESM(require_primitives(), 1);
-var import_jsx_runtime191 = __toESM(require_jsx_runtime(), 1);
-var icon12 = /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(import_primitives60.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime191.jsx)(import_primitives60.Path, { d: "M12 7H4V8.5H12V7ZM19.75 17.25V10.75H4.25V17.25H19.75ZM5.75 15.75V12.25H18.25V15.75H5.75Z" }) });
+var import_jsx_runtime193 = __toESM(require_jsx_runtime(), 1);
+var icon12 = /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(import_primitives60.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(import_primitives60.Path, { d: "M12 7H4V8.5H12V7ZM19.75 17.25V10.75H4.25V17.25H19.75ZM5.75 15.75V12.25H18.25V15.75H5.75Z" }) });
 var icon_default13 = {
   src: icon12
 };
 
 // src/blocks/field-textarea/icon.jsx
 var import_primitives61 = __toESM(require_primitives(), 1);
-var import_jsx_runtime192 = __toESM(require_jsx_runtime(), 1);
-var icon13 = /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_primitives61.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime192.jsx)(import_primitives61.Path, { d: "M20 5H4V6.5H20V5ZM5.5 11.5H18.5V18.5H5.5V11.5ZM20 20V10H4V20H20Z" }) });
+var import_jsx_runtime194 = __toESM(require_jsx_runtime(), 1);
+var icon13 = /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(import_primitives61.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(import_primitives61.Path, { d: "M20 5H4V6.5H20V5ZM5.5 11.5H18.5V18.5H5.5V11.5ZM20 20V10H4V20H20Z" }) });
 var icon_default14 = {
   src: icon13
 };
 
 // src/blocks/field-time/icon.jsx
 var import_primitives62 = __toESM(require_primitives(), 1);
-var import_jsx_runtime193 = __toESM(require_jsx_runtime(), 1);
-var icon14 = /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(import_primitives62.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime193.jsx)(
+var import_jsx_runtime195 = __toESM(require_jsx_runtime(), 1);
+var icon14 = /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_primitives62.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(
   import_primitives62.Path,
   {
     fillRule: "evenodd",
@@ -39076,7 +39359,7 @@ var fieldIcons = {
 
 // src/dashboard/components/inspector/response-fields/field-phone/index.tsx
 var import_element92 = __toESM(require_element(), 1);
-var import_jsx_runtime194 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime196 = __toESM(require_jsx_runtime(), 1);
 var FieldPhone = ({ phone }) => {
   const [displayInfo, setDisplayInfo] = (0, import_element92.useState)({
     formattedNumber: phone
@@ -39106,16 +39389,16 @@ var FieldPhone = ({ phone }) => {
     };
   }, [phone]);
   const { formattedNumber, countryCode } = displayInfo;
-  return /* @__PURE__ */ (0, import_jsx_runtime194.jsx)(TextWithFlag, { countryCode, children: /* @__PURE__ */ (0, import_jsx_runtime194.jsx)("a", { href: `tel:${phone}`, children: formattedNumber }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(TextWithFlag, { countryCode, children: /* @__PURE__ */ (0, import_jsx_runtime196.jsx)("a", { href: `tel:${phone}`, children: formattedNumber }) });
 };
 var field_phone_default = FieldPhone;
 
 // src/dashboard/components/inspector/response-fields/field-rating/index.tsx
-var import_components84 = __toESM(require_components(), 1);
-var import_i18n86 = __toESM(require_i18n(), 1);
+var import_components87 = __toESM(require_components(), 1);
+var import_i18n90 = __toESM(require_i18n(), 1);
 
 // src/blocks/field-rating/rating-icon.jsx
-var import_components83 = __toESM(require_components(), 1);
+var import_components86 = __toESM(require_components(), 1);
 
 // src/blocks/field-rating/rating-icons.js
 var MAX_RATING_ICONS = 10;
@@ -39125,7 +39408,7 @@ var RATING_ICONS = {
 };
 
 // src/blocks/field-rating/rating-icon.jsx
-var import_jsx_runtime195 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime197 = __toESM(require_jsx_runtime(), 1);
 var RatingIcon = ({
   iconStyle,
   strokeColor = "currentColor",
@@ -39133,8 +39416,8 @@ var RatingIcon = ({
   strokeWidth = 2
 }) => {
   const iconPath = RATING_ICONS[iconStyle] || RATING_ICONS.stars;
-  return /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(import_components83.SVG, { className: "jetpack-field-rating__icon", viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(
-    import_components83.Path,
+  return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components86.SVG, { className: "jetpack-field-rating__icon", viewBox: "0 0 24 24", "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(
+    import_components86.Path,
     {
       d: iconPath,
       fill: fillColor,
@@ -39146,7 +39429,7 @@ var RatingIcon = ({
 };
 
 // src/dashboard/components/inspector/response-fields/field-rating/index.tsx
-var import_jsx_runtime196 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime198 = __toESM(require_jsx_runtime(), 1);
 var FieldRating = ({ value }) => {
   const stringValue = value != null ? String(value) : "";
   if (stringValue.trim() === "") {
@@ -39171,15 +39454,15 @@ var FieldRating = ({ value }) => {
   }
   const clampedMax = Math.min(parsedMax, MAX_RATING_ICONS);
   const displayRating = Math.min(Math.max(0, parsedRating), clampedMax);
-  const ratingLabel = (0, import_i18n86.sprintf)(
+  const ratingLabel = (0, import_i18n90.sprintf)(
     /* translators: 1: rating value, 2: maximum rating (e.g. "4" and "5" for "4 out of 5") */
-    (0, import_i18n86.__)("Rating %1$s out of %2$s", "jetpack-forms"),
+    (0, import_i18n90.__)("Rating %1$s out of %2$s", "jetpack-forms"),
     String(displayRating),
     String(clampedMax)
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime196.jsxs)(import_jsx_runtime196.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(import_components84.VisuallyHidden, { as: "span", children: ratingLabel }),
-    /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(import_components84.__experimentalHStack, { spacing: "1", alignment: "topLeft", children: Array.from({ length: clampedMax }, (_, index) => /* @__PURE__ */ (0, import_jsx_runtime196.jsx)("span", { style: { flex: "0 0 24px" }, children: /* @__PURE__ */ (0, import_jsx_runtime196.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)(import_jsx_runtime198.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(import_components87.VisuallyHidden, { as: "span", children: ratingLabel }),
+    /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(import_components87.__experimentalHStack, { spacing: "1", alignment: "topLeft", children: Array.from({ length: clampedMax }, (_, index) => /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("span", { style: { flex: "0 0 24px" }, children: /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(
       RatingIcon,
       {
         iconStyle: "stars",
@@ -39239,9 +39522,9 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-fields/field-preview/index.tsx
-var import_jsx_runtime197 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime199 = __toESM(require_jsx_runtime(), 1);
 var getFieldIcon = (fieldType) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.Icon, { icon: fieldIcons[fieldType] ?? fieldIcons.text });
+  return /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(import_components88.Icon, { icon: fieldIcons[fieldType] ?? fieldIcons.text });
 };
 var BADGED_VALUE_FIELDS = ["consent", "checkbox", "radio", "select"];
 var FieldPreview = ({ field, onFilePreview }) => {
@@ -39252,14 +39535,14 @@ var FieldPreview = ({ field, onFilePreview }) => {
   const renderFieldValue = () => {
     if (fieldType === "image-select") {
       const choices = value?.choices;
-      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(field_image_select_default, { choices, handleFilePreview: onFilePreview });
+      return /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(field_image_select_default, { choices, handleFilePreview: onFilePreview });
     }
     if (fieldType === "file") {
       const files = value?.files;
-      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(field_file_default, { files, handleFilePreview: onFilePreview });
+      return /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(field_file_default, { files, handleFilePreview: onFilePreview });
     }
     if (fieldType === "checkbox-multiple" && Array.isArray(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.__experimentalVStack, { spacing: "2", alignment: "topLeft", children: value.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(Badge, { children: item }, index)) });
+      return /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(import_components88.__experimentalVStack, { spacing: "2", alignment: "topLeft", children: value.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(Badge, { children: item }, index)) });
     }
     if (value === null || value === void 0) {
       return "-";
@@ -39275,36 +39558,36 @@ var FieldPreview = ({ field, onFilePreview }) => {
       return "-";
     }
     if (BADGED_VALUE_FIELDS.includes(fieldType)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(Badge, { children: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(Badge, { children: stringValue });
     }
     if (fieldType === "number") {
       return formatNumber2(Number(stringValue));
     }
     if (fieldType === "email" && EMAIL_REGEX.test(stringValue)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(field_email_default, { email: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(field_email_default, { email: stringValue });
     }
     if (fieldType === "phone" || fieldType === "telephone") {
-      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(field_phone_default, { phone: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(field_phone_default, { phone: stringValue });
     }
     if (fieldType === "url" && /^https?:\/\//.test(stringValue)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components85.ExternalLink, { href: stringValue, children: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(import_components88.ExternalLink, { href: stringValue, children: stringValue });
     }
     if (fieldType === "rating") {
-      return /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(field_rating_default, { value: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(field_rating_default, { value: stringValue });
     }
     return stringValue;
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)(
-    import_components85.__experimentalHStack,
+  return /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)(
+    import_components88.__experimentalHStack,
     {
       alignment: "topLeft",
       spacing: "4",
       className: `jp-forms__field-preview ${typeClassName}`,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__field-preview-icon", children: icon15 }),
-        /* @__PURE__ */ (0, import_jsx_runtime197.jsxs)(import_components85.__experimentalVStack, { spacing: "0", className: "jp-forms__field-preview-content", children: [
-          label && /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__field-preview-label", children: label }),
-          /* @__PURE__ */ (0, import_jsx_runtime197.jsx)("div", { className: "jp-forms__field-preview-value", children: renderFieldValue() })
+        /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("div", { className: "jp-forms__field-preview-icon", children: icon15 }),
+        /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)(import_components88.__experimentalVStack, { spacing: "0", className: "jp-forms__field-preview-content", children: [
+          label && /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("div", { className: "jp-forms__field-preview-label", children: label }),
+          /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("div", { className: "jp-forms__field-preview-value", children: renderFieldValue() })
         ] })
       ]
     }
@@ -39313,7 +39596,7 @@ var FieldPreview = ({ field, onFilePreview }) => {
 var field_preview_default = FieldPreview;
 
 // src/dashboard/components/inspector/response-fields/index.tsx
-var import_jsx_runtime198 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime200 = __toESM(require_jsx_runtime(), 1);
 var ResponseFieldsIterator = ({
   fields,
   onFilePreview
@@ -39324,7 +39607,7 @@ var ResponseFieldsIterator = ({
   });
   const renderFieldValue = (value) => {
     if (isImageSelectField(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(
         field_image_select_default,
         {
           choices: value.choices,
@@ -39334,34 +39617,34 @@ var ResponseFieldsIterator = ({
     }
     if (isFileUploadField(value)) {
       const fileValue = value;
-      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(field_file_default, { files: fileValue.files, handleFilePreview: onFilePreview });
+      return /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(field_file_default, { files: fileValue.files, handleFilePreview: onFilePreview });
     }
     const emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
     if (typeof value === "string" && emailRegEx.test(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(field_email_default, { email: value });
+      return /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(field_email_default, { email: value });
     }
     if (isLikelyPhoneNumber(value)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("a", { href: `tel:${value}`, children: String(value) });
+      return /* @__PURE__ */ (0, import_jsx_runtime200.jsx)("a", { href: `tel:${value}`, children: String(value) });
     }
     return value;
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)("div", { className: rootClass, children: [
-    fields && !fieldsAreNewFormat && Object.entries(fields).map(([key, value]) => /* @__PURE__ */ (0, import_jsx_runtime198.jsxs)("div", { className: "jp-forms__inbox-response-item", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("div", { className: "jp-forms__inbox-response-data-label", children: key.endsWith("?") ? key : `${key}:` }),
-      /* @__PURE__ */ (0, import_jsx_runtime198.jsx)("div", { className: "jp-forms__inbox-response-data-value", children: renderFieldValue(value) })
+  return /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)("div", { className: rootClass, children: [
+    fields && !fieldsAreNewFormat && Object.entries(fields).map(([key, value]) => /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)("div", { className: "jp-forms__inbox-response-item", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime200.jsx)("div", { className: "jp-forms__inbox-response-data-label", children: key.endsWith("?") ? key : `${key}:` }),
+      /* @__PURE__ */ (0, import_jsx_runtime200.jsx)("div", { className: "jp-forms__inbox-response-data-value", children: renderFieldValue(value) })
     ] }, key)),
     fields && fieldsAreNewFormat && (Array.isArray(fields) ? fields : Object.values(fields)).map(
-      (field) => /* @__PURE__ */ (0, import_jsx_runtime198.jsx)(field_preview_default, { field, onFilePreview }, field.key)
+      (field) => /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(field_preview_default, { field, onFilePreview }, field.key)
     )
   ] });
 };
 var response_fields_default = ResponseFieldsIterator;
 
 // src/dashboard/components/inspector/response-meta/index.tsx
-var import_components86 = __toESM(require_components(), 1);
+var import_components89 = __toESM(require_components(), 1);
 var import_date12 = __toESM(require_date(), 1);
 var import_html_entities8 = __toESM(require_html_entities(), 1);
-var import_i18n87 = __toESM(require_i18n(), 1);
+var import_i18n91 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/inspector/response-meta/style.scss
 if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='6c5f816f45']")) {
@@ -39372,7 +39655,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/inspector/response-meta/index.tsx
-var import_jsx_runtime199 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime201 = __toESM(require_jsx_runtime(), 1);
 var getDisplayName = (response) => {
   const { author_name, author_email, author_url, ip } = response;
   return (0, import_html_entities8.decodeEntities)(author_name || author_email || author_url || ip);
@@ -39383,9 +39666,9 @@ var ResponseMeta = ({ response }) => {
   const defaultImage = response.author_name || response.author_email ? "initials" : "mp";
   const responseAuthorEmailParts = response.author_email?.split("@") ?? [];
   const dateSettings = (0, import_date12.getSettings)();
-  return /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("div", { className: "jp-forms__inbox-response-meta", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)(import_components86.__experimentalHStack, { alignment: "topLeft", spacing: "3", wrap: false, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)("div", { className: "jp-forms__inbox-response-meta", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(import_components89.__experimentalHStack, { alignment: "topLeft", spacing: "3", wrap: false, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(
         Gravatar,
         {
           email: gravatarEmail,
@@ -39394,9 +39677,9 @@ var ResponseMeta = ({ response }) => {
         },
         gravatarEmail
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)(import_components86.__experimentalVStack, { spacing: "0", className: "jp-forms__inbox-response-meta-from", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(
-          import_components86.__experimentalText,
+      /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(import_components89.__experimentalVStack, { spacing: "0", className: "jp-forms__inbox-response-meta-from", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(
+          import_components89.__experimentalText,
           {
             className: "jp-forms__inbox-response-meta-from-name",
             lineHeight: "20px",
@@ -39405,15 +39688,15 @@ var ResponseMeta = ({ response }) => {
             children: displayName
           }
         ),
-        response.author_email && displayName !== response.author_email && /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)(
-          import_components86.__experimentalHStack,
+        response.author_email && displayName !== response.author_email && /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(
+          import_components89.__experimentalHStack,
           {
             alignment: "center",
             className: "jp-forms__inbox-response-meta-from-email",
             justify: "start",
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)(
-                import_components86.__experimentalText,
+              /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(
+                import_components89.__experimentalText,
                 {
                   as: "a",
                   href: `mailto:${response.author_email}`,
@@ -39423,37 +39706,37 @@ var ResponseMeta = ({ response }) => {
                   weight: "400",
                   children: [
                     responseAuthorEmailParts[0],
-                    /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("wbr", {}),
+                    /* @__PURE__ */ (0, import_jsx_runtime201.jsx)("wbr", {}),
                     "@",
                     responseAuthorEmailParts[1]
                   ]
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(CopyClipboardButton, { text: response.author_email })
+              /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(CopyClipboardButton, { text: response.author_email })
             ]
           }
         )
       ] })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("table", { className: "jp-forms__inbox-response-meta-table", children: /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("tbody", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("th", { children: (0, import_i18n87.__)("Date:", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("td", { children: (0, import_date12.dateI18n)(dateSettings.formats.datetime, response.date) })
+    /* @__PURE__ */ (0, import_jsx_runtime201.jsx)("table", { className: "jp-forms__inbox-response-meta-table", children: /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)("tbody", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime201.jsx)("th", { children: (0, import_i18n91.__)("Date:", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime201.jsx)("td", { children: (0, import_date12.dateI18n)(dateSettings.formats.datetime, response.date) })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("th", { children: (0, import_i18n87.__)("Source:", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("td", { children: [
-          response.entry_permalink && /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(import_components86.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities8.decodeEntities)(response.entry_title) || getPath(response) }),
+      /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime201.jsx)("th", { children: (0, import_i18n91.__)("Source:", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)("td", { children: [
+          response.entry_permalink && /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components89.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities8.decodeEntities)(response.entry_title) || getPath(response) }),
           !response.entry_permalink && (0, import_html_entities8.decodeEntities)(response.entry_title)
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("th", { children: [
-          (0, import_i18n87.__)("IP address:", "jetpack-forms"),
+      /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)("th", { children: [
+          (0, import_i18n91.__)("IP address:", "jetpack-forms"),
           "\xA0"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(TextWithFlag, { countryCode: response.country_code, children: /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(import_components86.Tooltip, { text: (0, import_i18n87.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime199.jsx)(
-          import_components86.ExternalLink,
+        /* @__PURE__ */ (0, import_jsx_runtime201.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(TextWithFlag, { countryCode: response.country_code, children: /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(import_components89.Tooltip, { text: (0, import_i18n91.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(
+          import_components89.ExternalLink,
           {
             href: `https://apps.db.ripe.net/db-web-ui/query?searchtext=${encodeURIComponent(
               response.ip
@@ -39462,12 +39745,12 @@ var ResponseMeta = ({ response }) => {
           }
         ) }) }) })
       ] }),
-      response.browser && /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("tr", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime199.jsxs)("th", { children: [
-          (0, import_i18n87.__)("Browser:", "jetpack-forms"),
+      response.browser && /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)("th", { children: [
+          (0, import_i18n91.__)("Browser:", "jetpack-forms"),
           "\xA0"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime199.jsx)("td", { children: response.browser })
+        /* @__PURE__ */ (0, import_jsx_runtime201.jsx)("td", { children: response.browser })
       ] })
     ] }) })
   ] });
@@ -39475,12 +39758,12 @@ var ResponseMeta = ({ response }) => {
 var response_meta_default = ResponseMeta;
 
 // routes/responses/response/actions.tsx
-var import_components87 = __toESM(require_components());
+var import_components90 = __toESM(require_components());
 var import_data33 = __toESM(require_data());
 var import_element93 = __toESM(require_element());
-var import_i18n88 = __toESM(require_i18n());
+var import_i18n92 = __toESM(require_i18n());
 import { useSearch as useSearch3, useNavigate as useNavigate4 } from "@wordpress/route";
-var import_jsx_runtime200 = __toESM(require_jsx_runtime());
+var import_jsx_runtime202 = __toESM(require_jsx_runtime());
 function ResponseActions({
   response,
   onActionComplete
@@ -39551,16 +39834,16 @@ function ResponseActions({
     setIsTogglingReadStatus(false);
     onActionComplete?.({ ...response, is_unread: true });
   }, [onActionComplete, response, markAsUnreadAction, registry]);
-  const readUnreadButtons = /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(import_jsx_runtime200.Fragment, { children: [
-    response.is_unread && /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Button, { isBusy: isTogglingReadStatus, onClick: handleMarkAsRead, size: "compact", children: (0, import_i18n88.__)("Mark as read", "jetpack-forms") }),
-    !response.is_unread && /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Button, { isBusy: isTogglingReadStatus, onClick: handleMarkAsUnread, size: "compact", children: (0, import_i18n88.__)("Mark as unread", "jetpack-forms") })
+  const readUnreadButtons = /* @__PURE__ */ (0, import_jsx_runtime202.jsxs)(import_jsx_runtime202.Fragment, { children: [
+    response.is_unread && /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isTogglingReadStatus, onClick: handleMarkAsRead, size: "compact", children: (0, import_i18n92.__)("Mark as read", "jetpack-forms") }),
+    !response.is_unread && /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isTogglingReadStatus, onClick: handleMarkAsUnread, size: "compact", children: (0, import_i18n92.__)("Mark as unread", "jetpack-forms") })
   ] });
-  const trashButton = /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Button, { isBusy: isMovingToTrash, onClick: handleMoveToTrash, size: "compact", children: (0, import_i18n88.__)("Trash", "jetpack-forms") });
-  const spamButton = /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Button, { isBusy: isMarkingAsSpam, onClick: handleMarkAsSpam, size: "compact", children: (0, import_i18n88.__)("Spam", "jetpack-forms") });
-  const notSpamButton = /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Button, { isBusy: isMarkingAsNotSpam, onClick: handleMarkAsNotSpam, size: "compact", children: (0, import_i18n88.__)("Not spam", "jetpack-forms") });
-  const deleteButton = /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Button, { isBusy: isDeleting, onClick: handleDelete, size: "compact", children: (0, import_i18n88.__)("Delete", "jetpack-forms") });
-  const restoreButton = /* @__PURE__ */ (0, import_jsx_runtime200.jsx)(import_components87.Button, { isBusy: isRestoring, onClick: handleRestore, size: "compact", children: (0, import_i18n88.__)("Restore", "jetpack-forms") });
-  return /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(
+  const trashButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isMovingToTrash, onClick: handleMoveToTrash, size: "compact", children: (0, import_i18n92.__)("Trash", "jetpack-forms") });
+  const spamButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isMarkingAsSpam, onClick: handleMarkAsSpam, size: "compact", children: (0, import_i18n92.__)("Spam", "jetpack-forms") });
+  const notSpamButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isMarkingAsNotSpam, onClick: handleMarkAsNotSpam, size: "compact", children: (0, import_i18n92.__)("Not spam", "jetpack-forms") });
+  const deleteButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isDeleting, onClick: handleDelete, size: "compact", children: (0, import_i18n92.__)("Delete", "jetpack-forms") });
+  const restoreButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isRestoring, onClick: handleRestore, size: "compact", children: (0, import_i18n92.__)("Restore", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime202.jsxs)(
     Stack,
     {
       direction: "row",
@@ -39569,17 +39852,17 @@ function ResponseActions({
       wrap: "wrap",
       className: "jp-forms-response-header-actions",
       children: [
-        response.status === "publish" && /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(import_jsx_runtime200.Fragment, { children: [
+        response.status === "publish" && /* @__PURE__ */ (0, import_jsx_runtime202.jsxs)(import_jsx_runtime202.Fragment, { children: [
           readUnreadButtons,
           spamButton,
           trashButton
         ] }),
-        response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(import_jsx_runtime200.Fragment, { children: [
+        response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime202.jsxs)(import_jsx_runtime202.Fragment, { children: [
           readUnreadButtons,
           restoreButton,
           deleteButton
         ] }),
-        response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime200.jsxs)(import_jsx_runtime200.Fragment, { children: [
+        response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime202.jsxs)(import_jsx_runtime202.Fragment, { children: [
           readUnreadButtons,
           notSpamButton,
           trashButton
@@ -39590,9 +39873,9 @@ function ResponseActions({
 }
 
 // routes/responses/response/navigation.tsx
-var import_components88 = __toESM(require_components());
-var import_i18n89 = __toESM(require_i18n());
-var import_jsx_runtime201 = __toESM(require_jsx_runtime());
+var import_components91 = __toESM(require_components());
+var import_i18n93 = __toESM(require_i18n());
+var import_jsx_runtime203 = __toESM(require_jsx_runtime());
 function ResponseNavigation({
   hasNext,
   hasPrevious,
@@ -39606,28 +39889,28 @@ function ResponseNavigation({
     showTooltip: true,
     size: "compact"
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime201.jsxs)(Stack, { direction: "row", gap: "xs", justify: "end", style: { flexShrink: 0 }, wrap: "wrap", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(
-      import_components88.Button,
+  return /* @__PURE__ */ (0, import_jsx_runtime203.jsxs)(Stack, { direction: "row", gap: "xs", justify: "end", style: { flexShrink: 0 }, wrap: "wrap", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(
+      import_components91.Button,
       {
         ...sharedProps,
         disabled: !hasPrevious,
         icon: chevron_up_default,
-        label: (0, import_i18n89.__)("Previous", "jetpack-forms"),
+        label: (0, import_i18n93.__)("Previous", "jetpack-forms"),
         onClick: onPrevious
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(
-      import_components88.Button,
+    /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(
+      import_components91.Button,
       {
         ...sharedProps,
         disabled: !hasNext,
         icon: chevron_down_default,
-        label: (0, import_i18n89.__)("Next", "jetpack-forms"),
+        label: (0, import_i18n93.__)("Next", "jetpack-forms"),
         onClick: onNext
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(
       "span",
       {
         style: {
@@ -39640,13 +39923,13 @@ function ResponseNavigation({
         }
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(
-      import_components88.Button,
+    /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(
+      import_components91.Button,
       {
         ...sharedProps,
         iconSize: 20,
         icon: close_default,
-        label: (0, import_i18n89.__)("Close", "jetpack-forms"),
+        label: (0, import_i18n93.__)("Close", "jetpack-forms"),
         onClick: onClose
       }
     )
@@ -39662,7 +39945,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // routes/responses/response/index.tsx
-var import_jsx_runtime202 = __toESM(require_jsx_runtime());
+var import_jsx_runtime204 = __toESM(require_jsx_runtime());
 function SingleResponseView({
   responseId,
   allResponseIds,
@@ -39772,15 +40055,15 @@ function SingleResponseView({
     [hasNext, hasPrevious, handleNext, handlePrevious, onClose]
   );
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components89.Spinner, {}) });
+    return /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(import_components92.Spinner, {}) });
   }
   if (!response) {
-    return /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime202.jsx)("p", { children: (0, import_i18n90.__)("Response not found.", "jetpack-forms") }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime204.jsx)("p", { children: (0, import_i18n94.__)("Response not found.", "jetpack-forms") }) });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime202.jsxs)(import_jsx_runtime202.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime202.jsxs)(Stack, { className: "jp-forms-response-header", direction: "row", gap: "xs", justify: "space-between", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(ResponseActions, { response, onActionComplete: handleActionComplete }),
-      /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime204.jsxs)(import_jsx_runtime204.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime204.jsxs)(Stack, { className: "jp-forms-response-header", direction: "row", gap: "xs", justify: "space-between", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(ResponseActions, { response, onActionComplete: handleActionComplete }),
+      /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(
         ResponseNavigation,
         {
           hasNext,
@@ -39791,12 +40074,12 @@ function SingleResponseView({
         }
       )
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(response_meta_default, { response }),
-    /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(response_fields_default, { fields: response.fields, onFilePreview: handleFilePreview }),
-    isNotesEnabled && /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(feedback_comments_default, { postId: response.id }),
-    response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime202.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components89.Tip, { children: (0, import_i18n90.sprintf)(
+    /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(response_meta_default, { response }),
+    /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(response_fields_default, { fields: response.fields, onFilePreview: handleFilePreview }),
+    isNotesEnabled && /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(feedback_comments_default, { postId: response.id }),
+    response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime204.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(import_components92.Tip, { children: (0, import_i18n94.sprintf)(
       /* translators: %d number of days. */
-      (0, import_i18n90._n)(
+      (0, import_i18n94._n)(
         "Spam responses are permanently deleted after %d day.",
         "Spam responses are permanently deleted after %d days.",
         15,
@@ -39805,9 +40088,9 @@ function SingleResponseView({
       // Number from https://github.com/Automattic/jetpack/blob/bde3cf9a89ce0d02e50469df173a6253383bd276/projects/packages/forms/src/contact-form/class-contact-form-plugin.php#L132
       15
     ) }) }),
-    response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime202.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components89.Tip, { children: (0, import_i18n90.sprintf)(
+    response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime204.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(import_components92.Tip, { children: (0, import_i18n94.sprintf)(
       /* translators: %d number of days. */
-      (0, import_i18n90._n)(
+      (0, import_i18n94._n)(
         "Items in trash are permanently deleted after %d day.",
         "Items in trash are permanently deleted after %d days.",
         emptyTrashDays,
@@ -39815,7 +40098,7 @@ function SingleResponseView({
       ),
       emptyTrashDays
     ) }) }),
-    previewFile && /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components89.Modal, { title: (0, import_html_entities9.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(
+    previewFile && /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(import_components92.Modal, { title: (0, import_html_entities9.decodeEntities)(previewFile.name), onRequestClose: closePreviewModal, children: /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(
       preview_file_default,
       {
         file: previewFile,
@@ -39856,7 +40139,7 @@ function Response() {
     return null;
   }
   const selectedResponseId = Number(responseIds[0]);
-  return /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(
     SingleResponseView,
     {
       responseId: selectedResponseId,
@@ -39868,9 +40151,9 @@ function Response() {
 }
 
 // routes/responses/inspector.tsx
-var import_jsx_runtime203 = __toESM(require_jsx_runtime());
+var import_jsx_runtime205 = __toESM(require_jsx_runtime());
 function Inspector() {
-  return /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(page_default, { showSidebarToggle: false, hasPadding: false, children: /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(Response, {}) }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime205.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime205.jsx)(page_default, { showSidebarToggle: false, hasPadding: false, children: /* @__PURE__ */ (0, import_jsx_runtime205.jsx)(Response, {}) }) });
 }
 export {
   Inspector as inspector,

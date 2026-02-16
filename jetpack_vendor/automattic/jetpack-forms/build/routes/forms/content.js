@@ -3773,7 +3773,7 @@ var page_default = Page;
 
 // routes/forms/stage.tsx
 var import_api_fetch10 = __toESM(require_api_fetch());
-var import_components73 = __toESM(require_components());
+var import_components76 = __toESM(require_components());
 var import_data32 = __toESM(require_data());
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.26_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
@@ -19411,10 +19411,10 @@ var dataviews_default = DataViewsSubComponents;
 
 // routes/forms/stage.tsx
 var import_date10 = __toESM(require_date());
-var import_element86 = __toESM(require_element());
-var import_i18n78 = __toESM(require_i18n());
+var import_element87 = __toESM(require_element());
+var import_i18n82 = __toESM(require_i18n());
 var import_notices5 = __toESM(require_notices());
-import { useSearch, useNavigate as useNavigate2 } from "@wordpress/route";
+import { useSearch as useSearch2, useNavigate as useNavigate3 } from "@wordpress/route";
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/index.tsx
 var import_components62 = __toESM(require_components(), 1);
@@ -22411,6 +22411,97 @@ function useDeleteForm({
   };
 }
 
+// src/dashboard/router/wp-route-dashboard-search-params-provider.tsx
+var import_element71 = __toESM(require_element(), 1);
+import { useSearch, useNavigate } from "@wordpress/route";
+
+// src/dashboard/router/dashboard-search-params-context.tsx
+var import_element70 = __toESM(require_element(), 1);
+var import_jsx_runtime136 = __toESM(require_jsx_runtime(), 1);
+var DashboardSearchParamsContext = (0, import_element70.createContext)(null);
+function DashboardSearchParamsProvider({
+  value,
+  children
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(DashboardSearchParamsContext.Provider, { value, children });
+}
+function useDashboardSearchParams() {
+  const ctx8 = (0, import_element70.useContext)(DashboardSearchParamsContext);
+  if (!ctx8) {
+    throw new Error(
+      "useDashboardSearchParams must be used within a DashboardSearchParamsProvider."
+    );
+  }
+  return ctx8;
+}
+
+// src/dashboard/router/wp-route-dashboard-search-params-provider.tsx
+var import_jsx_runtime137 = __toESM(require_jsx_runtime(), 1);
+function searchRecordToUrlSearchParams(search) {
+  const params = new URLSearchParams();
+  for (const [key, value] of Object.entries(search || {})) {
+    if (value === void 0 || value === null) {
+      continue;
+    }
+    if (Array.isArray(value)) {
+      for (const v2 of value) {
+        if (v2 === void 0 || v2 === null) {
+          continue;
+        }
+        params.append(key, String(v2));
+      }
+      continue;
+    }
+    params.set(key, String(value));
+  }
+  return params;
+}
+function urlSearchParamsToSearchRecord(params, options = {}) {
+  const { arrayKeys = /* @__PURE__ */ new Set() } = options;
+  const out = {};
+  for (const key of params.keys()) {
+    const values = params.getAll(key);
+    if (values.length < 1) {
+      continue;
+    }
+    if (arrayKeys.has(key)) {
+      out[key] = values;
+      continue;
+    }
+    out[key] = values[values.length - 1];
+  }
+  return out;
+}
+function WpRouteDashboardSearchParamsProvider({
+  from,
+  children
+}) {
+  const search = useSearch({
+    // In this build, the router type isn't registered, so `@wordpress/route` models `from` as `never`.
+    // We still want to pass the runtime route id through.
+    from,
+    strict: false
+  });
+  const navigate = useNavigate();
+  const searchParams = (0, import_element71.useMemo)(() => searchRecordToUrlSearchParams(search), [search]);
+  const setSearchParams = (0, import_element71.useCallback)(
+    (next) => {
+      const resolved = typeof next === "function" ? next(searchParams) : next;
+      const nextSearch = urlSearchParamsToSearchRecord(resolved, {
+        arrayKeys: /* @__PURE__ */ new Set(["responseIds"])
+      });
+      const replaceSearch = (() => nextSearch);
+      navigate({ search: replaceSearch });
+    },
+    [navigate, searchParams]
+  );
+  const value = (0, import_element71.useMemo)(
+    () => [searchParams, setSearchParams],
+    [searchParams, setSearchParams]
+  );
+  return /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(DashboardSearchParamsProvider, { value, children });
+}
+
 // ../../js-packages/number-formatters/dist/esm/create-number-formatters.js
 var import_date9 = __toESM(require_date(), 1);
 
@@ -23182,9 +23273,9 @@ var { setLocale, setGeoLocation, formatNumber, formatNumberCompact, formatCurren
 
 // src/dashboard/wp-build/components/dataviews-header-row/index.tsx
 var import_data14 = __toESM(require_data(), 1);
-var import_element71 = __toESM(require_element(), 1);
+var import_element73 = __toESM(require_element(), 1);
 var import_i18n66 = __toESM(require_i18n(), 1);
-import { useNavigate } from "@wordpress/route";
+import { useNavigate as useNavigate2 } from "@wordpress/route";
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/index.parts.js
 var index_parts_exports = {};
@@ -23681,7 +23772,7 @@ function useCompositeListContext() {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/list/CompositeList.js
-var import_jsx_runtime136 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime138 = __toESM(require_jsx_runtime(), 1);
 function CompositeList(props) {
   const {
     children,
@@ -23787,7 +23878,7 @@ function CompositeList(props) {
     labelsRef,
     nextIndexRef
   }), [register6, unregister, subscribeMapChange, elementsRef, labelsRef, nextIndexRef]);
-  return /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(CompositeListContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(CompositeListContext.Provider, {
     value: contextValue,
     children
   });
@@ -23847,7 +23938,7 @@ var tabsStateAttributesMapping = {
 };
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/root/TabsRoot.js
-var import_jsx_runtime137 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime139 = __toESM(require_jsx_runtime(), 1);
 var TabsRoot = /* @__PURE__ */ React19.forwardRef(function TabsRoot2(componentProps, forwardedRef) {
   const {
     className,
@@ -23942,9 +24033,9 @@ var TabsRoot = /* @__PURE__ */ React19.forwardRef(function TabsRoot2(componentPr
     props: elementProps,
     stateAttributesMapping: tabsStateAttributesMapping
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(TabsRootContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime139.jsx)(TabsRootContext.Provider, {
     value: tabsContextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(CompositeList, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime139.jsx)(CompositeList, {
       elementsRef: tabPanelRefs,
       children: element
     })
@@ -24948,7 +25039,7 @@ var TabsIndicatorCssVars = /* @__PURE__ */ (function(TabsIndicatorCssVars2) {
 })({});
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/indicator/TabsIndicator.js
-var import_jsx_runtime138 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime140 = __toESM(require_jsx_runtime(), 1);
 var stateAttributesMapping = {
   ...tabsStateAttributesMapping,
   activeTabPosition: () => null,
@@ -25059,8 +25150,8 @@ var TabsIndicator = /* @__PURE__ */ React31.forwardRef(function TabIndicator(com
   if (activeTabValue == null) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime138.jsxs)(React31.Fragment, {
-    children: [element, !isMounted && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime138.jsx)("script", {
+  return /* @__PURE__ */ (0, import_jsx_runtime140.jsxs)(React31.Fragment, {
+    children: [element, !isMounted && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)("script", {
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML: {
         __html: script
@@ -25469,7 +25560,7 @@ function isModifierKeySet(event, ignoredModifierKeys) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/composite/root/CompositeRoot.js
-var import_jsx_runtime139 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime141 = __toESM(require_jsx_runtime(), 1);
 function CompositeRoot(componentProps) {
   const {
     render: render4,
@@ -25530,9 +25621,9 @@ function CompositeRoot(componentProps) {
     highlightItemOnHover,
     relayKeyboardEvent
   }), [highlightedIndex, onHighlightedIndexChange, highlightItemOnHover, relayKeyboardEvent]);
-  return /* @__PURE__ */ (0, import_jsx_runtime139.jsx)(CompositeRootContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(CompositeRootContext.Provider, {
     value: contextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime139.jsx)(CompositeList, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(CompositeList, {
       elementsRef,
       onMapChange: (newMap) => {
         onMapChangeProp?.(newMap);
@@ -25544,7 +25635,7 @@ function CompositeRoot(componentProps) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui-components+react@1.0.0-rc.0_@types+react@18.3.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui-components/react/esm/tabs/list/TabsList.js
-var import_jsx_runtime140 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime142 = __toESM(require_jsx_runtime(), 1);
 var TabsList = /* @__PURE__ */ React35.forwardRef(function TabsList2(componentProps, forwardedRef) {
   const {
     activateOnFocus = false,
@@ -25593,9 +25684,9 @@ var TabsList = /* @__PURE__ */ React35.forwardRef(function TabsList2(componentPr
     tabsListElement,
     value
   }), [activateOnFocus, highlightedTabIndex, onTabActivation, setHighlightedTabIndex, tabsListElement, value]);
-  return /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(TabsListContext.Provider, {
+  return /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(TabsListContext.Provider, {
     value: tabsListContextValue,
-    children: /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(CompositeRoot, {
+    children: /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(CompositeRoot, {
       render: render4,
       className,
       state,
@@ -25701,7 +25792,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/tabs/list.tsx
-var import_jsx_runtime141 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime143 = __toESM(require_jsx_runtime(), 1);
 var DEFAULT_SCROLL_MARGIN = 0;
 var List = (0, import_react26.forwardRef)(function TabList({ children, density = "default", className, activateOnFocus, render: render4, ...otherProps }, forwardedRef) {
   const [listEl, setListEl] = (0, import_react26.useState)(null);
@@ -25760,11 +25851,11 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
       } else if (typeof render4 === "function") {
         return render4(newProps, state);
       }
-      return /* @__PURE__ */ (0, import_jsx_runtime141.jsx)("div", { ...newProps });
+      return /* @__PURE__ */ (0, import_jsx_runtime143.jsx)("div", { ...newProps });
     },
     [render4]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime141.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)(
     index_parts_exports.List,
     {
       ref: mergedListRef,
@@ -25781,7 +25872,7 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
       ...otherProps,
       children: [
         children,
-        /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(index_parts_exports.Indicator, { className: "jp-forms-tabs__indicator" })
+        /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(index_parts_exports.Indicator, { className: "jp-forms-tabs__indicator" })
       ]
     }
   );
@@ -25789,9 +25880,9 @@ var List = (0, import_react26.forwardRef)(function TabList({ children, density =
 
 // src/dashboard/components/tabs/panel.tsx
 var import_react27 = __toESM(require_react(), 1);
-var import_jsx_runtime142 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime144 = __toESM(require_jsx_runtime(), 1);
 var Panel = (0, import_react27.forwardRef)(function TabPanel2({ className, focusable = true, tabIndex, ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime142.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(
     index_parts_exports.Panel,
     {
       ref: forwardedRef,
@@ -25804,27 +25895,27 @@ var Panel = (0, import_react27.forwardRef)(function TabPanel2({ className, focus
 
 // src/dashboard/components/tabs/root.tsx
 var import_react28 = __toESM(require_react(), 1);
-var import_jsx_runtime143 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
 var Root = (0, import_react28.forwardRef)(function TabsRoot3({ ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps });
+  return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps });
 });
 
 // src/dashboard/components/tabs/tab.tsx
 var import_react29 = __toESM(require_react(), 1);
-var import_jsx_runtime144 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime146 = __toESM(require_jsx_runtime(), 1);
 var ChevronRight = (props) => {
   return (0, import_react29.cloneElement)(chevron_right_default, props);
 };
 var Tab = (0, import_react29.forwardRef)(function Tab2({ className, children, ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(
     index_parts_exports.Tab,
     {
       ref: forwardedRef,
       className: clsx_default("jp-forms-tabs__tab", className),
       ...otherProps,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime144.jsx)("span", { className: "jp-forms-tabs__tab__children", children }),
-        /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(ChevronRight, { className: "jp-forms-tabs__tab__chevron" })
+        /* @__PURE__ */ (0, import_jsx_runtime146.jsx)("span", { className: "jp-forms-tabs__tab__children", children }),
+        /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(ChevronRight, { className: "jp-forms-tabs__tab__chevron" })
       ]
     }
   );
@@ -26158,9 +26249,9 @@ var store3 = (0, import_data13.createReduxStore)(STORE_NAME, {
 (0, import_data13.register)(store3);
 
 // src/dashboard/wp-build/components/inbox-status-toggle/index.tsx
-var import_element70 = __toESM(require_element(), 1);
+var import_element72 = __toESM(require_element(), 1);
 var import_i18n65 = __toESM(require_i18n(), 1);
-var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime147 = __toESM(require_jsx_runtime(), 1);
 var getLabel = (status, count) => {
   let label;
   switch (status) {
@@ -26174,9 +26265,9 @@ var getLabel = (status, count) => {
       label = (0, import_i18n65._x)("Trash", "noun", "jetpack-forms");
       break;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)("span", { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime147.jsxs)("span", { children: [
     label,
-    /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(Badge3, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(count || 0) })
+    /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(Badge3, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(count || 0) })
   ] });
 };
 function InboxStatusToggle({
@@ -26184,7 +26275,7 @@ function InboxStatusToggle({
   counts: counts2,
   onChange
 }) {
-  const handleChange = (0, import_element70.useCallback)(
+  const handleChange = (0, import_element72.useCallback)(
     (nextStatus) => {
       if (nextStatus === activeStatus) {
         return;
@@ -26193,7 +26284,7 @@ function InboxStatusToggle({
     },
     [activeStatus, onChange]
   );
-  const statusTabs = (0, import_element70.useMemo)(
+  const statusTabs = (0, import_element72.useMemo)(
     () => [
       { value: "inbox", label: getLabel("inbox", counts2.inbox) },
       { value: "spam", label: getLabel("spam", counts2.spam) },
@@ -26201,7 +26292,7 @@ function InboxStatusToggle({
     ],
     [counts2.inbox, counts2.spam, counts2.trash]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(Root, { value: activeStatus, onValueChange: handleChange, children: /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(List, { density: "compact", children: statusTabs.map((option) => /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(Tab, { value: option.value, children: option.label }, option.value)) }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(Root, { value: activeStatus, onValueChange: handleChange, children: /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(List, { density: "compact", children: statusTabs.map((option) => /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(Tab, { value: option.value, children: option.label }, option.value)) }) });
 }
 
 // src/dashboard/wp-build/components/dataviews-header-row/style.scss
@@ -26213,7 +26304,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/wp-build/components/dataviews-header-row/index.tsx
-var import_jsx_runtime146 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime148 = __toESM(require_jsx_runtime(), 1);
 function DataViewsHeaderRow({
   activeTab,
   isSingleFormView = false,
@@ -26221,13 +26312,13 @@ function DataViewsHeaderRow({
   statusCounts,
   onStatusChange
 }) {
-  const navigate = useNavigate();
+  const navigate = useNavigate2();
   const { totalItems: formsCount = 0 } = useFormsData(1, 1, "", NON_TRASH_FORM_STATUSES);
   const responsesInboxCount = (0, import_data14.useSelect)((select3) => {
     select3(store3).getCounts();
     return select3(store3).getInboxCount() ?? 0;
   }, []);
-  const onTabChange = (0, import_element71.useCallback)(
+  const onTabChange = (0, import_element73.useCallback)(
     (nextValue) => {
       if (nextValue === "forms") {
         navigate({ href: "/forms" });
@@ -26237,8 +26328,8 @@ function DataViewsHeaderRow({
     },
     [navigate]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(import_jsx_runtime146.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime148.jsxs)(import_jsx_runtime148.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime148.jsxs)(
       Stack,
       {
         align: "center",
@@ -26246,7 +26337,7 @@ function DataViewsHeaderRow({
         gap: "sm",
         justify: "space-between",
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Stack, { align: "center", gap: "sm", children: isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(Stack, { align: "center", gap: "sm", children: isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(
             InboxStatusToggle,
             {
               activeStatus: activeStatus ?? "inbox",
@@ -26254,507 +26345,27 @@ function DataViewsHeaderRow({
               onChange: onStatusChange ?? (() => {
               })
             }
-          ) : /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(List, { density: "compact", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Tab, { value: "forms", children: /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)("span", { children: [
+          ) : /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime148.jsxs)(List, { density: "compact", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(Tab, { value: "forms", children: /* @__PURE__ */ (0, import_jsx_runtime148.jsxs)("span", { children: [
               (0, import_i18n66.__)("Forms", "jetpack-forms"),
-              /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Badge3, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(formsCount || 0) })
+              /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(Badge3, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(formsCount || 0) })
             ] }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Tab, { value: "responses", children: /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)("span", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(Tab, { value: "responses", children: /* @__PURE__ */ (0, import_jsx_runtime148.jsxs)("span", { children: [
               (0, import_i18n66.__)("Responses", "jetpack-forms"),
-              /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(Badge3, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(responsesInboxCount || 0) })
+              /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(Badge3, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(responsesInboxCount || 0) })
             ] }) })
           ] }) }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime146.jsxs)(Stack, { align: "center", gap: "sm", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(dataviews_default.Search, {}),
-            isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(dataviews_default.FiltersToggle, {}) : null,
-            /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(dataviews_default.ViewConfig, {})
+          /* @__PURE__ */ (0, import_jsx_runtime148.jsxs)(Stack, { align: "center", gap: "sm", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(dataviews_default.Search, {}),
+            isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(dataviews_default.FiltersToggle, {}) : null,
+            /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(dataviews_default.ViewConfig, {})
           ] })
         ]
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(dataviews_default.FiltersToggled, { className: "jp-forms-dataviews-filters__container" })
+    /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(dataviews_default.FiltersToggled, { className: "jp-forms-dataviews-filters__container" })
   ] });
 }
-
-// src/dashboard/wp-build/hooks/use-page-header-details.tsx
-var import_core_data6 = __toESM(require_core_data(), 1);
-var import_data31 = __toESM(require_data(), 1);
-var import_element85 = __toESM(require_element(), 1);
-var import_html_entities4 = __toESM(require_html_entities(), 1);
-var import_i18n77 = __toESM(require_i18n(), 1);
-
-// src/dashboard/components/edit-form-button/index.tsx
-var import_components65 = __toESM(require_components(), 1);
-var import_element72 = __toESM(require_element(), 1);
-var import_i18n67 = __toESM(require_i18n(), 1);
-var import_jsx_runtime147 = __toESM(require_jsx_runtime(), 1);
-function EditFormButton({ formId }) {
-  const adminUrl = useConfigValue("adminUrl") || "";
-  const onClick = (0, import_element72.useCallback)(() => {
-    const editPath = `post.php?post=${formId}&action=edit`;
-    window.location.href = adminUrl ? `${adminUrl}${editPath}` : editPath;
-  }, [adminUrl, formId]);
-  return /* @__PURE__ */ (0, import_jsx_runtime147.jsx)(import_components65.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n67.__)("Edit form", "jetpack-forms") });
-}
-
-// src/dashboard/components/empty-spam-button/index.tsx
-var import_api_fetch7 = __toESM(require_api_fetch(), 1);
-var import_components66 = __toESM(require_components(), 1);
-var import_core_data3 = __toESM(require_core_data(), 1);
-var import_data16 = __toESM(require_data(), 1);
-var import_element75 = __toESM(require_element(), 1);
-var import_i18n68 = __toESM(require_i18n(), 1);
-var import_notices3 = __toESM(require_notices(), 1);
-
-// src/dashboard/hooks/use-inbox-data.ts
-var import_core_data2 = __toESM(require_core_data(), 1);
-var import_data15 = __toESM(require_data(), 1);
-var import_element74 = __toESM(require_element(), 1);
-var import_html_entities3 = __toESM(require_html_entities(), 1);
-
-// src/dashboard/components/inspector/utils.ts
-var import_html_entities2 = __toESM(require_html_entities(), 1);
-var isCollectionFormatField = (item) => {
-  return item !== null && typeof item === "object" && "label" in item && "value" in item && "key" in item;
-};
-
-// src/dashboard/router/dashboard-search-params-context.tsx
-var import_element73 = __toESM(require_element(), 1);
-var import_jsx_runtime148 = __toESM(require_jsx_runtime(), 1);
-var DashboardSearchParamsContext = (0, import_element73.createContext)(null);
-function useDashboardSearchParams() {
-  const ctx8 = (0, import_element73.useContext)(DashboardSearchParamsContext);
-  if (!ctx8) {
-    throw new Error(
-      "useDashboardSearchParams must be used within a DashboardSearchParamsProvider."
-    );
-  }
-  return ctx8;
-}
-
-// src/dashboard/hooks/use-inbox-data.ts
-function getStatusFilter(urlStatus) {
-  const statusFilter = ["inbox", "spam", "trash"].includes(urlStatus) ? urlStatus : "inbox";
-  return statusFilter === "inbox" ? "draft,publish" : statusFilter;
-}
-var formatFieldName = (fieldName) => {
-  const match2 = fieldName.match(/^(\d+_)?(.*)/i);
-  if (match2) {
-    return match2[2];
-  }
-  return fieldName;
-};
-var isEmpty3 = (obj) => [Object, Array].includes((obj || {}).constructor) && !Object.entries(obj || {}).length;
-var formatFieldValue = (fieldValue) => {
-  if (!fieldValue || isEmpty3(fieldValue)) {
-    return "-";
-  }
-  if (Array.isArray(fieldValue)) {
-    return fieldValue.join(", ");
-  }
-  return fieldValue;
-};
-var decodeValue = (value) => {
-  if (typeof value === "string") {
-    return (0, import_html_entities3.decodeEntities)(value);
-  }
-  if (Array.isArray(value)) {
-    return value.map((v2) => typeof v2 === "string" ? (0, import_html_entities3.decodeEntities)(v2) : v2);
-  }
-  return value;
-};
-var hasOwn = (obj, key) => Object.prototype.hasOwnProperty.call(obj, key);
-var normalizeFieldsForDisplay = (fields) => {
-  if (!fields || !Array.isArray(fields)) {
-    return /* @__PURE__ */ Object.create(null);
-  }
-  if (isCollectionFormatField(fields[0])) {
-    return fields;
-  }
-  return Object.entries(fields || {}).reduce(
-    (accumulator, [key, value]) => {
-      let _key = formatFieldName(key);
-      let counter = 2;
-      while (hasOwn(accumulator, _key)) {
-        _key = `${formatFieldName(key)} (${counter})`;
-        counter++;
-      }
-      accumulator[_key] = formatFieldValue(decodeValue(value));
-      return accumulator;
-    },
-    /* @__PURE__ */ Object.create(null)
-  );
-};
-function useInboxData(options = {}) {
-  const [searchParams] = useDashboardSearchParams();
-  const { setCurrentQuery: setCurrentQuery2, setSelectedResponses: setSelectedResponses2 } = (0, import_data15.useDispatch)(store3);
-  const urlStatus = options.status ?? searchParams.get("status");
-  const statusFilter = getStatusFilter(urlStatus);
-  const {
-    selectedResponsesCount,
-    currentStatus,
-    currentQuery: currentQuery2,
-    filterOptions,
-    invalidRecords: invalidRecords2,
-    hasPendingActions: hasPendingActions2
-  } = (0, import_data15.useSelect)(
-    (select3) => ({
-      selectedResponsesCount: select3(store3).getSelectedResponsesCount(),
-      currentStatus: select3(store3).getCurrentStatus(),
-      currentQuery: select3(store3).getCurrentQuery(),
-      filterOptions: select3(store3).getFilters(),
-      invalidRecords: select3(store3).getInvalidRecords(),
-      hasPendingActions: select3(store3).hasPendingActions()
-    }),
-    []
-  );
-  const [frozenInvalidIds, setFrozenInvalidIds] = (0, import_element74.useState)([]);
-  const currentPageRef = (0, import_element74.useRef)(currentQuery2?.page || 1);
-  (0, import_element74.useEffect)(() => {
-    const newPage = currentQuery2?.page || 1;
-    const hasUnreadFilter = currentQuery2?.is_unread === true;
-    if (newPage !== currentPageRef.current) {
-      currentPageRef.current = newPage;
-      if (hasUnreadFilter) {
-        setFrozenInvalidIds(Array.from(invalidRecords2 || /* @__PURE__ */ new Set()));
-      } else {
-        setFrozenInvalidIds([]);
-      }
-    }
-  }, [currentQuery2?.page, currentQuery2?.is_unread, invalidRecords2]);
-  const queryWithInvalidIds = (0, import_element74.useMemo)(() => {
-    if (frozenInvalidIds.length > 0) {
-      return {
-        ...currentQuery2,
-        invalid_ids: frozenInvalidIds
-      };
-    }
-    return currentQuery2;
-  }, [currentQuery2, frozenInvalidIds]);
-  const {
-    records: rawRecords,
-    hasResolved,
-    totalItems,
-    totalPages
-  } = (0, import_core_data2.useEntityRecords)("postType", "feedback", queryWithInvalidIds);
-  const editedRecords = (0, import_data15.useSelect)(
-    (select3) => {
-      return (rawRecords || []).map((record) => {
-        const editedRecord = select3(import_core_data2.store).getEditedEntityRecord(
-          "postType",
-          "feedback",
-          record.id
-        );
-        return editedRecord || record;
-      });
-    },
-    [rawRecords]
-  );
-  const statusMatchesFilter = (status, filter) => {
-    if (filter.includes(",")) {
-      return filter.split(",").includes(status);
-    }
-    return status === filter;
-  };
-  const records = (0, import_element74.useMemo)(() => {
-    const filteredRecords = (editedRecords || []).filter((record) => {
-      return statusMatchesFilter(record.status, statusFilter);
-    });
-    return filteredRecords.map((record) => {
-      const formResponse = record;
-      return {
-        ...formResponse,
-        fields: normalizeFieldsForDisplay(formResponse.fields)
-      };
-    });
-  }, [editedRecords, statusFilter]);
-  const countsQueryParams = (0, import_element74.useMemo)(() => {
-    const params = {};
-    if (currentQuery2?.search) {
-      params.search = currentQuery2.search;
-    }
-    if (currentQuery2?.parent) {
-      params.parent = currentQuery2.parent;
-    }
-    if (currentQuery2?.before) {
-      params.before = currentQuery2.before;
-    }
-    if (currentQuery2?.after) {
-      params.after = currentQuery2.after;
-    }
-    if (currentQuery2?.is_unread !== void 0) {
-      params.is_unread = currentQuery2.is_unread;
-    }
-    return params;
-  }, [currentQuery2]);
-  const { totalItemsInbox, totalItemsSpam, totalItemsTrash } = (0, import_data15.useSelect)(
-    (select3) => {
-      select3(store3).getCounts(countsQueryParams);
-      return {
-        totalItemsInbox: select3(store3).getInboxCount(countsQueryParams),
-        totalItemsSpam: select3(store3).getSpamCount(countsQueryParams),
-        totalItemsTrash: select3(store3).getTrashCount(countsQueryParams)
-      };
-    },
-    [countsQueryParams]
-  );
-  const isLoadingData = !rawRecords?.length && !hasResolved || !records?.length && hasPendingActions2;
-  return {
-    totalItemsInbox,
-    totalItemsSpam,
-    totalItemsTrash,
-    records,
-    isLoadingData,
-    totalItems,
-    totalPages,
-    selectedResponsesCount,
-    setSelectedResponses: setSelectedResponses2,
-    statusFilter,
-    currentStatus,
-    currentQuery: currentQuery2,
-    setCurrentQuery: setCurrentQuery2,
-    filterOptions
-  };
-}
-
-// src/dashboard/components/empty-spam-button/index.tsx
-var import_jsx_runtime149 = __toESM(require_jsx_runtime(), 1);
-var EmptySpamButton = ({
-  totalItemsSpam: totalItemsSpamProp,
-  isLoadingCounts: isLoadingCountsProp
-} = {}) => {
-  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element75.useState)(false);
-  const [isEmptying, setIsEmptying] = (0, import_element75.useState)(false);
-  const [isEmpty4, setIsEmpty] = (0, import_element75.useState)(true);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data16.useDispatch)(import_notices3.store);
-  const { invalidateResolution } = (0, import_data16.useDispatch)(import_core_data3.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data16.useDispatch)(store3);
-  const hookData = useInboxData();
-  const totalItemsSpam = totalItemsSpamProp ?? hookData.totalItemsSpam;
-  const isLoadingCounts = isLoadingCountsProp ?? false;
-  const { selectedResponsesCount, currentQuery: currentQuery2 } = hookData;
-  (0, import_element75.useEffect)(() => {
-    setIsEmpty(isLoadingCounts || !totalItemsSpam);
-  }, [totalItemsSpam, isLoadingCounts]);
-  const openConfirmDialog = (0, import_element75.useCallback)(() => setConfirmDialogOpen(true), []);
-  const closeConfirmDialog = (0, import_element75.useCallback)(() => setConfirmDialogOpen(false), []);
-  const onConfirmEmptying = (0, import_element75.useCallback)(async () => {
-    if (isEmptying || isEmpty4) {
-      return;
-    }
-    closeConfirmDialog();
-    setIsEmptying(true);
-    analytics_default.tracks.recordEvent("jetpack_forms_empty_spam_click");
-    (0, import_api_fetch7.default)({
-      method: "DELETE",
-      path: `/wp/v2/feedback/trash?status=spam`
-    }).then((response) => {
-      const deleted = response?.deleted ?? 0;
-      const successMessage = deleted === 1 ? (0, import_i18n68.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n68.sprintf)(
-        /* translators: %s: The number of responses. */
-        (0, import_i18n68._n)(
-          "%s response deleted permanently.",
-          "%s responses deleted permanently.",
-          deleted,
-          "jetpack-forms"
-        ),
-        formatNumber(deleted)
-      );
-      createSuccessNotice(successMessage, { type: "snackbar", id: "empty-spam" });
-    }).catch(() => {
-      createErrorNotice((0, import_i18n68.__)("Could not empty spam.", "jetpack-forms"), {
-        type: "snackbar",
-        id: "empty-spam-error"
-      });
-    }).finally(() => {
-      setIsEmptying(false);
-      invalidateResolution("getEntityRecords", ["postType", "feedback", currentQuery2]);
-      invalidateResolution("getEntityRecords", [
-        "postType",
-        "feedback",
-        { ...currentQuery2, per_page: 1, _fields: "id" }
-      ]);
-      invalidateCounts2();
-    });
-  }, [
-    closeConfirmDialog,
-    createErrorNotice,
-    createSuccessNotice,
-    invalidateResolution,
-    invalidateCounts2,
-    isEmpty4,
-    isEmptying,
-    currentQuery2
-  ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime149.jsxs)(import_jsx_runtime149.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(
-      import_components66.Button,
-      {
-        size: "compact",
-        accessibleWhenDisabled: true,
-        disabled: isEmpty4 || isEmptying,
-        icon: trash_default,
-        isBusy: isEmptying,
-        label: isEmpty4 ? (0, import_i18n68.__)("Spam is already empty.", "jetpack-forms") : "",
-        onClick: openConfirmDialog,
-        showTooltip: isEmpty4,
-        variant: "primary",
-        children: (0, import_i18n68.__)("Delete spam", "jetpack-forms")
-      }
-    ),
-    /* @__PURE__ */ (0, import_jsx_runtime149.jsxs)(
-      import_components66.__experimentalConfirmDialog,
-      {
-        onCancel: closeConfirmDialog,
-        onConfirm: onConfirmEmptying,
-        isOpen: isConfirmDialogOpen,
-        confirmButtonText: (0, import_i18n68.__)("Delete", "jetpack-forms"),
-        children: [
-          /* @__PURE__ */ (0, import_jsx_runtime149.jsx)("h3", { children: (0, import_i18n68.__)("Delete forever", "jetpack-forms") }),
-          /* @__PURE__ */ (0, import_jsx_runtime149.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n68.sprintf)(
-            // translators: %s: the number of responses in spam
-            (0, import_i18n68._n)(
-              "%s response in spam will be deleted forever. This action cannot be undone.",
-              "All %s responses in spam will be deleted forever. This action cannot be undone.",
-              totalItemsSpam || 0,
-              "jetpack-forms"
-            ),
-            formatNumber(totalItemsSpam)
-          ) : (0, import_i18n68.__)(
-            "All responses in spam will be deleted forever. This action cannot be undone.",
-            "jetpack-forms"
-          ) })
-        ]
-      }
-    )
-  ] });
-};
-var empty_spam_button_default = EmptySpamButton;
-
-// src/dashboard/components/empty-trash-button/index.tsx
-var import_api_fetch8 = __toESM(require_api_fetch(), 1);
-var import_components67 = __toESM(require_components(), 1);
-var import_core_data4 = __toESM(require_core_data(), 1);
-var import_data17 = __toESM(require_data(), 1);
-var import_element76 = __toESM(require_element(), 1);
-var import_i18n69 = __toESM(require_i18n(), 1);
-var import_notices4 = __toESM(require_notices(), 1);
-var import_jsx_runtime150 = __toESM(require_jsx_runtime(), 1);
-var EmptyTrashButton = ({
-  totalItemsTrash: totalItemsTrashProp,
-  isLoadingCounts: isLoadingCountsProp
-} = {}) => {
-  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element76.useState)(false);
-  const [isEmptying, setIsEmptying] = (0, import_element76.useState)(false);
-  const [isEmpty4, setIsEmpty] = (0, import_element76.useState)(true);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data17.useDispatch)(import_notices4.store);
-  const { invalidateResolution } = (0, import_data17.useDispatch)(import_core_data4.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data17.useDispatch)(store3);
-  const hookData = useInboxData();
-  const totalItemsTrash = totalItemsTrashProp ?? hookData.totalItemsTrash;
-  const isLoadingCounts = isLoadingCountsProp ?? false;
-  const { selectedResponsesCount, currentQuery: currentQuery2 } = hookData;
-  (0, import_element76.useEffect)(() => {
-    setIsEmpty(isLoadingCounts || !totalItemsTrash);
-  }, [totalItemsTrash, isLoadingCounts]);
-  const openConfirmDialog = (0, import_element76.useCallback)(() => setConfirmDialogOpen(true), []);
-  const closeConfirmDialog = (0, import_element76.useCallback)(() => setConfirmDialogOpen(false), []);
-  const onConfirmEmptying = (0, import_element76.useCallback)(async () => {
-    if (isEmptying || isEmpty4) {
-      return;
-    }
-    closeConfirmDialog();
-    setIsEmptying(true);
-    analytics_default.tracks.recordEvent("jetpack_forms_empty_trash_click");
-    (0, import_api_fetch8.default)({
-      method: "DELETE",
-      path: `/wp/v2/feedback/trash`
-    }).then((response) => {
-      const deleted = response?.deleted ?? 0;
-      const successMessage = deleted === 1 ? (0, import_i18n69.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n69.sprintf)(
-        // translators: %s: the number of responses deleted permanently.
-        (0, import_i18n69._n)(
-          "%s response deleted permanently.",
-          "%s responses deleted permanently.",
-          deleted,
-          "jetpack-forms"
-        ),
-        formatNumber(deleted)
-      );
-      createSuccessNotice(successMessage, { type: "snackbar", id: "empty-trash" });
-    }).catch(() => {
-      createErrorNotice((0, import_i18n69.__)("Could not empty trash.", "jetpack-forms"), {
-        type: "snackbar",
-        id: "empty-trash-error"
-      });
-    }).finally(() => {
-      setIsEmptying(false);
-      invalidateResolution("getEntityRecords", ["postType", "feedback", currentQuery2]);
-      invalidateResolution("getEntityRecords", [
-        "postType",
-        "feedback",
-        { ...currentQuery2, per_page: 1, _fields: "id" }
-      ]);
-      invalidateCounts2();
-    });
-  }, [
-    closeConfirmDialog,
-    createErrorNotice,
-    createSuccessNotice,
-    invalidateResolution,
-    invalidateCounts2,
-    isEmpty4,
-    isEmptying,
-    currentQuery2
-  ]);
-  return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(import_jsx_runtime150.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
-      import_components67.Button,
-      {
-        size: "compact",
-        accessibleWhenDisabled: true,
-        disabled: isEmpty4 || isEmptying,
-        icon: trash_default,
-        isBusy: isEmptying,
-        label: isEmpty4 ? (0, import_i18n69.__)("Trash is already empty.", "jetpack-forms") : "",
-        onClick: openConfirmDialog,
-        showTooltip: isEmpty4,
-        variant: "primary",
-        children: (0, import_i18n69.__)("Empty trash", "jetpack-forms")
-      }
-    ),
-    /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(
-      import_components67.__experimentalConfirmDialog,
-      {
-        onCancel: closeConfirmDialog,
-        onConfirm: onConfirmEmptying,
-        isOpen: isConfirmDialogOpen,
-        confirmButtonText: (0, import_i18n69.__)("Delete", "jetpack-forms"),
-        children: [
-          /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("h3", { children: (0, import_i18n69.__)("Delete forever", "jetpack-forms") }),
-          /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n69.sprintf)(
-            // translators: %s: the number of responses in the trash.
-            (0, import_i18n69._n)(
-              "%s response in trash will be deleted forever. This action cannot be undone.",
-              "All %s responses in trash will be deleted forever. This action cannot be undone.",
-              totalItemsTrash || 0,
-              "jetpack-forms"
-            ),
-            formatNumber(totalItemsTrash)
-          ) : (0, import_i18n69.__)(
-            "All responses in trash will be deleted forever. This action cannot be undone.",
-            "jetpack-forms"
-          ) })
-        ]
-      }
-    )
-  ] });
-};
-var empty_trash_button_default = EmptyTrashButton;
-
-// src/dashboard/components/export-responses/button.tsx
-var import_components71 = __toESM(require_components(), 1);
-var import_i18n75 = __toESM(require_i18n(), 1);
 
 // ../../js-packages/components/build/components/layout/use-breakpoint-match/index.js
 var import_compose14 = __toESM(require_compose(), 1);
@@ -27094,16 +26705,587 @@ function catchNetworkErrors() {
   throw new FetchNetworkError();
 }
 
+// src/dashboard/wp-build/hooks/use-page-header-details.tsx
+var import_components75 = __toESM(require_components(), 1);
+var import_core_data6 = __toESM(require_core_data(), 1);
+var import_data31 = __toESM(require_data(), 1);
+var import_element86 = __toESM(require_element(), 1);
+var import_html_entities4 = __toESM(require_html_entities(), 1);
+var import_i18n81 = __toESM(require_i18n(), 1);
+
+// src/dashboard/components/edit-form-button/index.tsx
+var import_components65 = __toESM(require_components(), 1);
+var import_element74 = __toESM(require_element(), 1);
+var import_i18n67 = __toESM(require_i18n(), 1);
+var import_jsx_runtime149 = __toESM(require_jsx_runtime(), 1);
+function EditFormButton({ formId }) {
+  const adminUrl = useConfigValue("adminUrl") || "";
+  const onClick = (0, import_element74.useCallback)(() => {
+    const editPath = `post.php?post=${formId}&action=edit`;
+    window.location.href = adminUrl ? `${adminUrl}${editPath}` : editPath;
+  }, [adminUrl, formId]);
+  return /* @__PURE__ */ (0, import_jsx_runtime149.jsx)(import_components65.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n67.__)("Edit form", "jetpack-forms") });
+}
+
+// src/dashboard/components/empty-spam-button/index.tsx
+var import_components67 = __toESM(require_components(), 1);
+var import_i18n70 = __toESM(require_i18n(), 1);
+
+// src/dashboard/hooks/use-empty-spam.ts
+var import_api_fetch7 = __toESM(require_api_fetch(), 1);
+var import_core_data3 = __toESM(require_core_data(), 1);
+var import_data16 = __toESM(require_data(), 1);
+var import_element76 = __toESM(require_element(), 1);
+var import_i18n68 = __toESM(require_i18n(), 1);
+var import_notices3 = __toESM(require_notices(), 1);
+
+// src/dashboard/hooks/use-inbox-data.ts
+var import_core_data2 = __toESM(require_core_data(), 1);
+var import_data15 = __toESM(require_data(), 1);
+var import_element75 = __toESM(require_element(), 1);
+var import_html_entities3 = __toESM(require_html_entities(), 1);
+
+// src/dashboard/components/inspector/utils.ts
+var import_html_entities2 = __toESM(require_html_entities(), 1);
+var isCollectionFormatField = (item) => {
+  return item !== null && typeof item === "object" && "label" in item && "value" in item && "key" in item;
+};
+
+// src/dashboard/hooks/use-inbox-data.ts
+function getStatusFilter(urlStatus) {
+  const statusFilter = ["inbox", "spam", "trash"].includes(urlStatus) ? urlStatus : "inbox";
+  return statusFilter === "inbox" ? "draft,publish" : statusFilter;
+}
+var formatFieldName = (fieldName) => {
+  const match2 = fieldName.match(/^(\d+_)?(.*)/i);
+  if (match2) {
+    return match2[2];
+  }
+  return fieldName;
+};
+var isEmpty3 = (obj) => [Object, Array].includes((obj || {}).constructor) && !Object.entries(obj || {}).length;
+var formatFieldValue = (fieldValue) => {
+  if (!fieldValue || isEmpty3(fieldValue)) {
+    return "-";
+  }
+  if (Array.isArray(fieldValue)) {
+    return fieldValue.join(", ");
+  }
+  return fieldValue;
+};
+var decodeValue = (value) => {
+  if (typeof value === "string") {
+    return (0, import_html_entities3.decodeEntities)(value);
+  }
+  if (Array.isArray(value)) {
+    return value.map((v2) => typeof v2 === "string" ? (0, import_html_entities3.decodeEntities)(v2) : v2);
+  }
+  return value;
+};
+var hasOwn = (obj, key) => Object.prototype.hasOwnProperty.call(obj, key);
+var normalizeFieldsForDisplay = (fields) => {
+  if (!fields || !Array.isArray(fields)) {
+    return /* @__PURE__ */ Object.create(null);
+  }
+  if (isCollectionFormatField(fields[0])) {
+    return fields;
+  }
+  return Object.entries(fields || {}).reduce(
+    (accumulator, [key, value]) => {
+      let _key = formatFieldName(key);
+      let counter = 2;
+      while (hasOwn(accumulator, _key)) {
+        _key = `${formatFieldName(key)} (${counter})`;
+        counter++;
+      }
+      accumulator[_key] = formatFieldValue(decodeValue(value));
+      return accumulator;
+    },
+    /* @__PURE__ */ Object.create(null)
+  );
+};
+function useInboxData(options = {}) {
+  const [searchParams] = useDashboardSearchParams();
+  const { setCurrentQuery: setCurrentQuery2, setSelectedResponses: setSelectedResponses2 } = (0, import_data15.useDispatch)(store3);
+  const urlStatus = options.status ?? searchParams.get("status");
+  const statusFilter = getStatusFilter(urlStatus);
+  const {
+    selectedResponsesCount,
+    currentStatus,
+    currentQuery: currentQuery2,
+    filterOptions,
+    invalidRecords: invalidRecords2,
+    hasPendingActions: hasPendingActions2
+  } = (0, import_data15.useSelect)(
+    (select3) => ({
+      selectedResponsesCount: select3(store3).getSelectedResponsesCount(),
+      currentStatus: select3(store3).getCurrentStatus(),
+      currentQuery: select3(store3).getCurrentQuery(),
+      filterOptions: select3(store3).getFilters(),
+      invalidRecords: select3(store3).getInvalidRecords(),
+      hasPendingActions: select3(store3).hasPendingActions()
+    }),
+    []
+  );
+  const [frozenInvalidIds, setFrozenInvalidIds] = (0, import_element75.useState)([]);
+  const currentPageRef = (0, import_element75.useRef)(currentQuery2?.page || 1);
+  (0, import_element75.useEffect)(() => {
+    const newPage = currentQuery2?.page || 1;
+    const hasUnreadFilter = currentQuery2?.is_unread === true;
+    if (newPage !== currentPageRef.current) {
+      currentPageRef.current = newPage;
+      if (hasUnreadFilter) {
+        setFrozenInvalidIds(Array.from(invalidRecords2 || /* @__PURE__ */ new Set()));
+      } else {
+        setFrozenInvalidIds([]);
+      }
+    }
+  }, [currentQuery2?.page, currentQuery2?.is_unread, invalidRecords2]);
+  const queryWithInvalidIds = (0, import_element75.useMemo)(() => {
+    if (frozenInvalidIds.length > 0) {
+      return {
+        ...currentQuery2,
+        invalid_ids: frozenInvalidIds
+      };
+    }
+    return currentQuery2;
+  }, [currentQuery2, frozenInvalidIds]);
+  const {
+    records: rawRecords,
+    hasResolved,
+    totalItems,
+    totalPages
+  } = (0, import_core_data2.useEntityRecords)("postType", "feedback", queryWithInvalidIds);
+  const editedRecords = (0, import_data15.useSelect)(
+    (select3) => {
+      return (rawRecords || []).map((record) => {
+        const editedRecord = select3(import_core_data2.store).getEditedEntityRecord(
+          "postType",
+          "feedback",
+          record.id
+        );
+        return editedRecord || record;
+      });
+    },
+    [rawRecords]
+  );
+  const statusMatchesFilter = (status, filter) => {
+    if (filter.includes(",")) {
+      return filter.split(",").includes(status);
+    }
+    return status === filter;
+  };
+  const records = (0, import_element75.useMemo)(() => {
+    const filteredRecords = (editedRecords || []).filter((record) => {
+      return statusMatchesFilter(record.status, statusFilter);
+    });
+    return filteredRecords.map((record) => {
+      const formResponse = record;
+      return {
+        ...formResponse,
+        fields: normalizeFieldsForDisplay(formResponse.fields)
+      };
+    });
+  }, [editedRecords, statusFilter]);
+  const countsQueryParams = (0, import_element75.useMemo)(() => {
+    const params = {};
+    if (currentQuery2?.search) {
+      params.search = currentQuery2.search;
+    }
+    if (currentQuery2?.parent) {
+      params.parent = currentQuery2.parent;
+    }
+    if (currentQuery2?.before) {
+      params.before = currentQuery2.before;
+    }
+    if (currentQuery2?.after) {
+      params.after = currentQuery2.after;
+    }
+    if (currentQuery2?.is_unread !== void 0) {
+      params.is_unread = currentQuery2.is_unread;
+    }
+    return params;
+  }, [currentQuery2]);
+  const { totalItemsInbox, totalItemsSpam, totalItemsTrash } = (0, import_data15.useSelect)(
+    (select3) => {
+      select3(store3).getCounts(countsQueryParams);
+      return {
+        totalItemsInbox: select3(store3).getInboxCount(countsQueryParams),
+        totalItemsSpam: select3(store3).getSpamCount(countsQueryParams),
+        totalItemsTrash: select3(store3).getTrashCount(countsQueryParams)
+      };
+    },
+    [countsQueryParams]
+  );
+  const isLoadingData = !rawRecords?.length && !hasResolved || !records?.length && hasPendingActions2;
+  return {
+    totalItemsInbox,
+    totalItemsSpam,
+    totalItemsTrash,
+    records,
+    isLoadingData,
+    totalItems,
+    totalPages,
+    selectedResponsesCount,
+    setSelectedResponses: setSelectedResponses2,
+    statusFilter,
+    currentStatus,
+    currentQuery: currentQuery2,
+    setCurrentQuery: setCurrentQuery2,
+    filterOptions
+  };
+}
+
+// src/dashboard/hooks/use-empty-spam.ts
+function useEmptySpam({
+  totalItemsSpam: totalItemsSpamProp
+} = {}) {
+  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element76.useState)(false);
+  const [isEmptying, setIsEmptying] = (0, import_element76.useState)(false);
+  const [isEmpty4, setIsEmpty] = (0, import_element76.useState)(true);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data16.useDispatch)(import_notices3.store);
+  const { invalidateResolution } = (0, import_data16.useDispatch)(import_core_data3.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data16.useDispatch)(store3);
+  const hookData = useInboxData();
+  const totalItemsSpam = totalItemsSpamProp ?? hookData.totalItemsSpam ?? 0;
+  const { selectedResponsesCount, currentQuery: currentQuery2 } = hookData;
+  (0, import_element76.useEffect)(() => {
+    setIsEmpty(!totalItemsSpam);
+  }, [totalItemsSpam]);
+  const openConfirmDialog = (0, import_element76.useCallback)(() => setConfirmDialogOpen(true), []);
+  const closeConfirmDialog = (0, import_element76.useCallback)(() => setConfirmDialogOpen(false), []);
+  const onConfirmEmptying = (0, import_element76.useCallback)(async () => {
+    if (isEmptying || isEmpty4) {
+      return;
+    }
+    closeConfirmDialog();
+    setIsEmptying(true);
+    analytics_default.tracks.recordEvent("jetpack_forms_empty_spam_click");
+    (0, import_api_fetch7.default)({
+      method: "DELETE",
+      path: `/wp/v2/feedback/trash?status=spam`
+    }).then((response) => {
+      const deleted = response?.deleted ?? 0;
+      const successMessage = deleted === 1 ? (0, import_i18n68.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n68.sprintf)(
+        /* translators: %s: The number of responses. */
+        (0, import_i18n68._n)(
+          "%s response deleted permanently.",
+          "%s responses deleted permanently.",
+          deleted,
+          "jetpack-forms"
+        ),
+        formatNumber(deleted)
+      );
+      createSuccessNotice(successMessage, { type: "snackbar", id: "empty-spam" });
+    }).catch(() => {
+      createErrorNotice((0, import_i18n68.__)("Could not empty spam.", "jetpack-forms"), {
+        type: "snackbar",
+        id: "empty-spam-error"
+      });
+    }).finally(() => {
+      setIsEmptying(false);
+      invalidateResolution("getEntityRecords", ["postType", "feedback", currentQuery2]);
+      invalidateResolution("getEntityRecords", [
+        "postType",
+        "feedback",
+        { ...currentQuery2, per_page: 1, _fields: "id" }
+      ]);
+      invalidateCounts2();
+    });
+  }, [
+    closeConfirmDialog,
+    createErrorNotice,
+    createSuccessNotice,
+    invalidateResolution,
+    invalidateCounts2,
+    isEmpty4,
+    isEmptying,
+    currentQuery2
+  ]);
+  return {
+    isConfirmDialogOpen,
+    openConfirmDialog,
+    closeConfirmDialog,
+    onConfirmEmptying,
+    isEmpty: isEmpty4,
+    isEmptying,
+    totalItemsSpam,
+    selectedResponsesCount
+  };
+}
+
+// src/dashboard/components/empty-spam-button/confirmation-modal.tsx
+var import_components66 = __toESM(require_components(), 1);
+var import_i18n69 = __toESM(require_i18n(), 1);
+var import_jsx_runtime150 = __toESM(require_jsx_runtime(), 1);
+function EmptySpamConfirmationModal({
+  isOpen,
+  onCancel,
+  onConfirm,
+  totalItemsSpam,
+  selectedResponsesCount
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(
+    import_components66.__experimentalConfirmDialog,
+    {
+      onCancel,
+      onConfirm,
+      isOpen,
+      confirmButtonText: (0, import_i18n69.__)("Delete", "jetpack-forms"),
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("h3", { children: (0, import_i18n69.__)("Delete forever", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n69.sprintf)(
+          // translators: %s: the number of responses in spam
+          (0, import_i18n69._n)(
+            "%s response in spam will be deleted forever. This action cannot be undone.",
+            "All %s responses in spam will be deleted forever. This action cannot be undone.",
+            totalItemsSpam || 0,
+            "jetpack-forms"
+          ),
+          formatNumber(totalItemsSpam)
+        ) : (0, import_i18n69.__)(
+          "All responses in spam will be deleted forever. This action cannot be undone.",
+          "jetpack-forms"
+        ) })
+      ]
+    }
+  );
+}
+
+// src/dashboard/components/empty-spam-button/index.tsx
+var import_jsx_runtime151 = __toESM(require_jsx_runtime(), 1);
+var EmptySpamButton = ({
+  totalItemsSpam: totalItemsSpamProp
+} = {}) => {
+  const {
+    isConfirmDialogOpen,
+    openConfirmDialog,
+    closeConfirmDialog,
+    onConfirmEmptying,
+    isEmpty: isEmpty4,
+    isEmptying,
+    totalItemsSpam,
+    selectedResponsesCount
+  } = useEmptySpam({
+    totalItemsSpam: totalItemsSpamProp
+  });
+  return /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)(import_jsx_runtime151.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
+      import_components67.Button,
+      {
+        size: "compact",
+        accessibleWhenDisabled: true,
+        disabled: isEmpty4 || isEmptying,
+        icon: trash_default,
+        isBusy: isEmptying,
+        label: isEmpty4 ? (0, import_i18n70.__)("Spam is already empty.", "jetpack-forms") : "",
+        onClick: openConfirmDialog,
+        showTooltip: isEmpty4,
+        variant: "primary",
+        children: (0, import_i18n70.__)("Delete spam", "jetpack-forms")
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
+      EmptySpamConfirmationModal,
+      {
+        isOpen: isConfirmDialogOpen,
+        onCancel: closeConfirmDialog,
+        onConfirm: onConfirmEmptying,
+        totalItemsSpam,
+        selectedResponsesCount
+      }
+    )
+  ] });
+};
+var empty_spam_button_default = EmptySpamButton;
+
+// src/dashboard/components/empty-trash-button/index.tsx
+var import_components69 = __toESM(require_components(), 1);
+var import_i18n73 = __toESM(require_i18n(), 1);
+
+// src/dashboard/hooks/use-empty-trash.ts
+var import_api_fetch8 = __toESM(require_api_fetch(), 1);
+var import_core_data4 = __toESM(require_core_data(), 1);
+var import_data17 = __toESM(require_data(), 1);
+var import_element77 = __toESM(require_element(), 1);
+var import_i18n71 = __toESM(require_i18n(), 1);
+var import_notices4 = __toESM(require_notices(), 1);
+function useEmptyTrash({
+  totalItemsTrash: totalItemsTrashProp
+} = {}) {
+  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element77.useState)(false);
+  const [isEmptying, setIsEmptying] = (0, import_element77.useState)(false);
+  const [isEmpty4, setIsEmpty] = (0, import_element77.useState)(true);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data17.useDispatch)(import_notices4.store);
+  const { invalidateResolution } = (0, import_data17.useDispatch)(import_core_data4.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data17.useDispatch)(store3);
+  const hookData = useInboxData();
+  const totalItemsTrash = totalItemsTrashProp ?? hookData.totalItemsTrash ?? 0;
+  const { selectedResponsesCount, currentQuery: currentQuery2 } = hookData;
+  (0, import_element77.useEffect)(() => {
+    setIsEmpty(!totalItemsTrash);
+  }, [totalItemsTrash]);
+  const openConfirmDialog = (0, import_element77.useCallback)(() => setConfirmDialogOpen(true), []);
+  const closeConfirmDialog = (0, import_element77.useCallback)(() => setConfirmDialogOpen(false), []);
+  const onConfirmEmptying = (0, import_element77.useCallback)(async () => {
+    if (isEmptying || isEmpty4) {
+      return;
+    }
+    closeConfirmDialog();
+    setIsEmptying(true);
+    analytics_default.tracks.recordEvent("jetpack_forms_empty_trash_click");
+    (0, import_api_fetch8.default)({
+      method: "DELETE",
+      path: `/wp/v2/feedback/trash`
+    }).then((response) => {
+      const deleted = response?.deleted ?? 0;
+      const successMessage = deleted === 1 ? (0, import_i18n71.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n71.sprintf)(
+        /* translators: %s: the number of responses deleted permanently. */
+        (0, import_i18n71._n)(
+          "%s response deleted permanently.",
+          "%s responses deleted permanently.",
+          deleted,
+          "jetpack-forms"
+        ),
+        formatNumber(deleted)
+      );
+      createSuccessNotice(successMessage, { type: "snackbar", id: "empty-trash" });
+    }).catch(() => {
+      createErrorNotice((0, import_i18n71.__)("Could not empty trash.", "jetpack-forms"), {
+        type: "snackbar",
+        id: "empty-trash-error"
+      });
+    }).finally(() => {
+      setIsEmptying(false);
+      invalidateResolution("getEntityRecords", ["postType", "feedback", currentQuery2]);
+      invalidateResolution("getEntityRecords", [
+        "postType",
+        "feedback",
+        { ...currentQuery2, per_page: 1, _fields: "id" }
+      ]);
+      invalidateCounts2();
+    });
+  }, [
+    closeConfirmDialog,
+    createErrorNotice,
+    createSuccessNotice,
+    invalidateResolution,
+    invalidateCounts2,
+    isEmpty4,
+    isEmptying,
+    currentQuery2
+  ]);
+  return {
+    isConfirmDialogOpen,
+    openConfirmDialog,
+    closeConfirmDialog,
+    onConfirmEmptying,
+    isEmpty: isEmpty4,
+    isEmptying,
+    totalItemsTrash,
+    selectedResponsesCount
+  };
+}
+
+// src/dashboard/components/empty-trash-button/confirmation-modal.tsx
+var import_components68 = __toESM(require_components(), 1);
+var import_i18n72 = __toESM(require_i18n(), 1);
+var import_jsx_runtime152 = __toESM(require_jsx_runtime(), 1);
+function EmptyTrashConfirmationModal({
+  isOpen,
+  onCancel,
+  onConfirm,
+  totalItemsTrash,
+  selectedResponsesCount
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)(
+    import_components68.__experimentalConfirmDialog,
+    {
+      onCancel,
+      onConfirm,
+      isOpen,
+      confirmButtonText: (0, import_i18n72.__)("Delete", "jetpack-forms"),
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("h3", { children: (0, import_i18n72.__)("Delete forever", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n72.sprintf)(
+          // translators: %s: the number of responses in the trash.
+          (0, import_i18n72._n)(
+            "%s response in trash will be deleted forever. This action cannot be undone.",
+            "All %s responses in trash will be deleted forever. This action cannot be undone.",
+            totalItemsTrash || 0,
+            "jetpack-forms"
+          ),
+          formatNumber(totalItemsTrash)
+        ) : (0, import_i18n72.__)(
+          "All responses in trash will be deleted forever. This action cannot be undone.",
+          "jetpack-forms"
+        ) })
+      ]
+    }
+  );
+}
+
+// src/dashboard/components/empty-trash-button/index.tsx
+var import_jsx_runtime153 = __toESM(require_jsx_runtime(), 1);
+var EmptyTrashButton = ({
+  totalItemsTrash: totalItemsTrashProp
+} = {}) => {
+  const {
+    isConfirmDialogOpen,
+    openConfirmDialog,
+    closeConfirmDialog,
+    onConfirmEmptying,
+    isEmpty: isEmpty4,
+    isEmptying,
+    totalItemsTrash,
+    selectedResponsesCount
+  } = useEmptyTrash({
+    totalItemsTrash: totalItemsTrashProp
+  });
+  return /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)(import_jsx_runtime153.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
+      import_components69.Button,
+      {
+        size: "compact",
+        accessibleWhenDisabled: true,
+        disabled: isEmpty4 || isEmptying,
+        icon: trash_default,
+        isBusy: isEmptying,
+        label: isEmpty4 ? (0, import_i18n73.__)("Trash is already empty.", "jetpack-forms") : "",
+        onClick: openConfirmDialog,
+        showTooltip: isEmpty4,
+        variant: "primary",
+        children: (0, import_i18n73.__)("Empty trash", "jetpack-forms")
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
+      EmptyTrashConfirmationModal,
+      {
+        isOpen: isConfirmDialogOpen,
+        onCancel: closeConfirmDialog,
+        onConfirm: onConfirmEmptying,
+        totalItemsTrash,
+        selectedResponsesCount
+      }
+    )
+  ] });
+};
+var empty_trash_button_default = EmptyTrashButton;
+
+// src/dashboard/components/export-responses/button.tsx
+var import_components73 = __toESM(require_components(), 1);
+var import_i18n79 = __toESM(require_i18n(), 1);
+
 // src/dashboard/hooks/use-export-responses.ts
 var import_core_data5 = __toESM(require_core_data(), 1);
 var import_data18 = __toESM(require_data(), 1);
-var import_element77 = __toESM(require_element(), 1);
-var import_i18n70 = __toESM(require_i18n(), 1);
+var import_element78 = __toESM(require_element(), 1);
+var import_i18n74 = __toESM(require_i18n(), 1);
 function useExportResponses() {
   const [isSm] = use_breakpoint_match_default("sm");
-  const [showExportModal, setShowExportModal] = (0, import_element77.useState)(false);
-  const closeModal = (0, import_element77.useCallback)(() => setShowExportModal(false), [setShowExportModal]);
-  const [autoConnectGdrive, setAutoConnectGdrive] = (0, import_element77.useState)(false);
+  const [showExportModal, setShowExportModal] = (0, import_element78.useState)(false);
+  const closeModal = (0, import_element78.useCallback)(() => setShowExportModal(false), [setShowExportModal]);
+  const [autoConnectGdrive, setAutoConnectGdrive] = (0, import_element78.useState)(false);
   const { selectedResponsesCount, currentStatus } = (0, import_data18.useSelect)(
     (select3) => ({
       selectedResponsesCount: select3(store3).getSelectedResponsesCount(),
@@ -27113,14 +27295,14 @@ function useExportResponses() {
   );
   const isSpam = currentStatus.includes("spam");
   const isTrash = currentStatus.includes("trash");
-  let statusLabel = (0, import_i18n70.__)("Export", "jetpack-forms");
+  let statusLabel = (0, import_i18n74.__)("Export", "jetpack-forms");
   if (isSpam) {
-    statusLabel = (0, import_i18n70.__)("Export spam", "jetpack-forms");
+    statusLabel = (0, import_i18n74.__)("Export spam", "jetpack-forms");
   } else if (isTrash) {
-    statusLabel = (0, import_i18n70.__)("Export trash", "jetpack-forms");
+    statusLabel = (0, import_i18n74.__)("Export trash", "jetpack-forms");
   }
   const exportLabel = selectedResponsesCount > 0 ? `${statusLabel} (${formatNumber(selectedResponsesCount)})` : statusLabel;
-  const openModal = (0, import_element77.useCallback)(() => {
+  const openModal = (0, import_element78.useCallback)(() => {
     setShowExportModal(true);
     analytics_default.tracks.recordEvent("jetpack_forms_export_responses_modal_open", {
       viewport: isSm ? "mobile" : "desktop"
@@ -27135,7 +27317,7 @@ function useExportResponses() {
     return { selected: getSelectedResponsesFromCurrentDataset2(), currentQuery: getCurrentQuery2() };
   }, []);
   const exportNonce = useConfigValue("exportNonce");
-  const onExport = (0, import_element77.useCallback)(
+  const onExport = (0, import_element78.useCallback)(
     (action, nonceName) => {
       const data = new FormData();
       data.append("action", action);
@@ -27152,7 +27334,7 @@ function useExportResponses() {
     },
     [currentQuery2, selected, exportNonce]
   );
-  (0, import_element77.useEffect)(() => {
+  (0, import_element78.useEffect)(() => {
     const url = new URL(window.location.href);
     if (url.searchParams.get("connect-gdrive") === "true") {
       setAutoConnectGdrive(true);
@@ -27175,9 +27357,9 @@ function useExportResponses() {
 }
 
 // src/dashboard/components/export-responses/modal.tsx
-var import_components70 = __toESM(require_components(), 1);
+var import_components72 = __toESM(require_components(), 1);
 var import_data30 = __toESM(require_data(), 1);
-var import_i18n74 = __toESM(require_i18n(), 1);
+var import_i18n78 = __toESM(require_i18n(), 1);
 
 // ../../js-packages/shared-extension-utils/src/get-jetpack-data.js
 var JETPACK_DATA_PATH = "Jetpack_Editor_Initial_State";
@@ -27200,10 +27382,10 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // ../../js-packages/shared-extension-utils/src/with-has-warning-is-interactive-class-names/index.jsx
-var import_jsx_runtime151 = __toESM(require_jsx_runtime());
+var import_jsx_runtime154 = __toESM(require_jsx_runtime());
 
 // ../../js-packages/shared-extension-utils/src/plan-utils.js
-var import_i18n71 = __toESM(require_i18n());
+var import_i18n75 = __toESM(require_i18n());
 var import_url6 = __toESM(require_url());
 var usableBlockWithFreePlan = [
   {
@@ -27211,14 +27393,14 @@ var usableBlockWithFreePlan = [
     mediaPlaceholder: true,
     mediaReplaceFlow: true,
     fileType: "video",
-    description: (0, import_i18n71.__)("Upgrade your plan to use video covers", "jetpack-shared-extension-utils")
+    description: (0, import_i18n75.__)("Upgrade your plan to use video covers", "jetpack-shared-extension-utils")
   },
   {
     name: "core/audio",
     mediaPlaceholder: true,
     mediaReplaceFlow: true,
     fileType: "audio",
-    description: (0, import_i18n71.__)("Upgrade your plan to upload audio", "jetpack-shared-extension-utils")
+    description: (0, import_i18n75.__)("Upgrade your plan to upload audio", "jetpack-shared-extension-utils")
   }
 ];
 
@@ -27625,7 +27807,7 @@ function useConnection({
 }
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-analytics.js
-var import_element78 = __toESM(require_element());
+var import_element79 = __toESM(require_element());
 var { tracks } = analytics_default;
 var { recordEvent } = tracks;
 var useAnalytics = ({
@@ -27634,10 +27816,10 @@ var useAnalytics = ({
   pageViewSuffix = "page_view",
   pageViewEventProperties = {}
 } = {}) => {
-  const [pageViewRecorded, setPageViewRecorded] = (0, import_element78.useState)(false);
+  const [pageViewRecorded, setPageViewRecorded] = (0, import_element79.useState)(false);
   const { isUserConnected, isRegistered, userConnectionData: userConnectionData2 = {} } = useConnection();
   const { wpcomUser: { login, ID } = {}, blogId } = userConnectionData2.currentUser || {};
-  const recordEventAsync = (0, import_element78.useCallback)(
+  const recordEventAsync = (0, import_element79.useCallback)(
     async (event, properties = {}) => {
       if (!(isUserConnected && ID && login)) {
         return;
@@ -27646,7 +27828,7 @@ var useAnalytics = ({
     },
     [isUserConnected, ID, login]
   );
-  (0, import_element78.useEffect)(() => {
+  (0, import_element79.useEffect)(() => {
     if (!isUserConnected || !ID || !login || !blogId) {
       return;
     }
@@ -27654,7 +27836,7 @@ var useAnalytics = ({
       blog_id: blogId
     });
   }, [blogId, ID, login, isUserConnected]);
-  (0, import_element78.useEffect)(() => {
+  (0, import_element79.useEffect)(() => {
     const pageViewEvent = pageViewEventName ? `${pageViewNamespace}_${pageViewEventName}_${pageViewSuffix}` : null;
     if (!isRegistered) {
       return;
@@ -27684,14 +27866,14 @@ var use_analytics_default = useAnalytics;
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-autosave-and-redirect/index.js
 var import_data24 = __toESM(require_data());
-var import_element79 = __toESM(require_element());
+var import_element80 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-ref-interval.ts
-var import_element80 = __toESM(require_element());
+var import_element81 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-module-status/index.js
 var import_data27 = __toESM(require_data());
-var import_element81 = __toESM(require_element());
+var import_element82 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/modules-state/index.js
 var import_data26 = __toESM(require_data());
@@ -27853,7 +28035,7 @@ if (initialData !== null) {
 }
 
 // ../../js-packages/shared-extension-utils/src/get-block-icon-from-metadata.js
-var import_element82 = __toESM(require_element());
+var import_element83 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/libs/connection/index.ts
 var import_debug4 = __toESM(require_browser());
@@ -27868,13 +28050,13 @@ var import_hooks = __toESM(require_hooks());
 var import_dom_ready = __toESM(require_dom_ready());
 
 // src/dashboard/components/export-responses/csv.tsx
-var import_components68 = __toESM(require_components(), 1);
-var import_element83 = __toESM(require_element(), 1);
-var import_i18n72 = __toESM(require_i18n(), 1);
-var import_jsx_runtime152 = __toESM(require_jsx_runtime(), 1);
+var import_components70 = __toESM(require_components(), 1);
+var import_element84 = __toESM(require_element(), 1);
+var import_i18n76 = __toESM(require_i18n(), 1);
+var import_jsx_runtime155 = __toESM(require_jsx_runtime(), 1);
 var CSVExport = ({ onExport }) => {
   const { tracks: tracks2 } = use_analytics_default();
-  const downloadCSV = (0, import_element83.useCallback)(() => {
+  const downloadCSV = (0, import_element84.useCallback)(() => {
     tracks2.recordEvent("jetpack_forms_export_click", {
       destination: "csv",
       screen: "form-responses-inbox"
@@ -27892,18 +28074,18 @@ var CSVExport = ({ onExport }) => {
     });
   }, [onExport, tracks2]);
   const buttonClasses = clsx_default("button", "export-button", "export-csv");
-  return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("div", { className: "jp-forms__export-modal-card", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("div", { className: "jp-forms__export-modal-card-header", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
-        import_components68.SVG,
+  return /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)("div", { className: "jp-forms__export-modal-card", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)("div", { className: "jp-forms__export-modal-card-header", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(
+        import_components70.SVG,
         {
           width: "22",
           height: "20",
           viewBox: "0 0 22 20",
           fill: "none",
           xmlns: "http://www.w3.org/2000/SVG",
-          children: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
-            import_components68.Path,
+          children: /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(
+            import_components70.Path,
             {
               fillRule: "evenodd",
               clipRule: "evenodd",
@@ -27913,30 +28095,30 @@ var CSVExport = ({ onExport }) => {
           )
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n72.__)("CSV File", "jetpack-forms") })
+      /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n76.__)("CSV File", "jetpack-forms") })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: (0, import_i18n72.__)("Download your form response data as a CSV file.", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components68.Button, { variant: "primary", className: buttonClasses, onClick: downloadCSV, children: (0, import_i18n72.__)("Download", "jetpack-forms") }) })
+    /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: (0, import_i18n76.__)("Download your form response data as a CSV file.", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components70.Button, { variant: "primary", className: buttonClasses, onClick: downloadCSV, children: (0, import_i18n76.__)("Download", "jetpack-forms") }) })
     ] })
   ] });
 };
 var csv_default = CSVExport;
 
 // src/dashboard/components/export-responses/google-drive.tsx
-var import_components69 = __toESM(require_components(), 1);
+var import_components71 = __toESM(require_components(), 1);
 var import_data29 = __toESM(require_data(), 1);
-var import_element84 = __toESM(require_element(), 1);
-var import_i18n73 = __toESM(require_i18n(), 1);
+var import_element85 = __toESM(require_element(), 1);
+var import_i18n77 = __toESM(require_i18n(), 1);
 
 // src/util/get-preferred-responses-view.js
 var PARTIAL_RESPONSES_PATH = "admin.php?page=jetpack-forms-admin";
 var FULL_RESPONSES_PATH = getJetpackData()?.adminUrl + PARTIAL_RESPONSES_PATH;
 
 // src/dashboard/components/export-responses/google-drive.tsx
-var import_jsx_runtime153 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime156 = __toESM(require_jsx_runtime(), 1);
 var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
-  const [isExporting, setIsExporting] = (0, import_element84.useState)(false);
+  const [isExporting, setIsExporting] = (0, import_element85.useState)(false);
   const { integration } = (0, import_data29.useSelect)((select3) => {
     const store5 = select3(INTEGRATIONS_STORE);
     const list = store5.getIntegrations() || [];
@@ -27946,13 +28128,13 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
   const isConnectedToGoogleDrive = !!integration?.isConnected;
   const gdriveConnectSupportURL = useConfigValue("gdriveConnectSupportURL");
   const { tracks: tracks2 } = use_analytics_default();
-  const autoConnectOpened = (0, import_element84.useRef)(false);
-  const [isTogglingConnection, setIsTogglingConnection] = (0, import_element84.useState)(false);
+  const autoConnectOpened = (0, import_element85.useRef)(false);
+  const [isTogglingConnection, setIsTogglingConnection] = (0, import_element85.useState)(false);
   const { isUserConnected, handleConnectUser, userIsConnecting: userIsConnecting2, isOfflineMode: isOfflineMode2 } = useConnection({
     redirectUri: PARTIAL_RESPONSES_PATH + "&connect-gdrive=true"
   });
   const needsUserConnection = !isSimpleSite() && !isUserConnected;
-  const exportToGoogleDrive = (0, import_element84.useCallback)(() => {
+  const exportToGoogleDrive = (0, import_element85.useCallback)(() => {
     if (isExporting) {
       return;
     }
@@ -27967,7 +28149,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
       setIsExporting(false);
     });
   }, [tracks2, onExport, isExporting]);
-  const handleConnectClick = (0, import_element84.useCallback)(() => {
+  const handleConnectClick = (0, import_element85.useCallback)(() => {
     if (!integration?.settingsUrl) return;
     tracks2.recordEvent("jetpack_forms_upsell_googledrive_click", {
       screen: "form-responses-inbox"
@@ -27985,18 +28167,18 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
     return null;
   }
   const buttonClasses = clsx_default("button", "export-button", "export-gdrive");
-  return /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)("div", { className: "jp-forms__export-modal-card", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)("div", { className: "jp-forms__export-modal-card-header", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
-        import_components69.SVG,
+  return /* @__PURE__ */ (0, import_jsx_runtime156.jsxs)("div", { className: "jp-forms__export-modal-card", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime156.jsxs)("div", { className: "jp-forms__export-modal-card-header", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
+        import_components71.SVG,
         {
           width: "18",
           height: "24",
           viewBox: "0 0 18 24",
           fill: "none",
           xmlns: "http://www.w3.org/2000/SVG",
-          children: /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
-            import_components69.Path,
+          children: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
+            import_components71.Path,
             {
               d: "M11.8387 1.16016H2C1.44772 1.16016 1 1.60787 1 2.16016V21.8053V21.8376C1 22.3899 1.44772 22.8376 2 22.8376H16C16.5523 22.8376 17 22.3899 17 21.8376V5.80532M11.8387 1.16016V5.80532H17M11.8387 1.16016L17 5.80532M4.6129 13.0311V16.1279H9.25806M4.6129 13.0311V9.93435H9.25806M4.6129 13.0311H13.9032M13.9032 13.0311V9.93435H9.25806M13.9032 13.0311V16.1279H9.25806M9.25806 9.93435V16.1279",
               stroke: "#008710",
@@ -28005,38 +28187,38 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
           )
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n73.__)("Google Sheets", "jetpack-forms") })
+      /* @__PURE__ */ (0, import_jsx_runtime156.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n77.__)("Google Sheets", "jetpack-forms") })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)("div", { children: [
-        (0, import_i18n73.__)("Export your data into a Google Sheets file.", "jetpack-forms"),
-        !isConnectedToGoogleDrive && /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)(import_jsx_runtime153.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime156.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime156.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: /* @__PURE__ */ (0, import_jsx_runtime156.jsxs)("div", { children: [
+        (0, import_i18n77.__)("Export your data into a Google Sheets file.", "jetpack-forms"),
+        !isConnectedToGoogleDrive && /* @__PURE__ */ (0, import_jsx_runtime156.jsxs)(import_jsx_runtime156.Fragment, { children: [
           "\xA0",
-          /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
             "a",
             {
               href: gdriveConnectSupportURL,
-              title: (0, import_i18n73.__)("Connect to Google Drive", "jetpack-forms"),
+              title: (0, import_i18n77.__)("Connect to Google Drive", "jetpack-forms"),
               target: "_blank",
               rel: "noopener noreferrer",
-              children: (0, import_i18n73.__)("You need to connect to Google Drive.", "jetpack-forms")
+              children: (0, import_i18n77.__)("You need to connect to Google Drive.", "jetpack-forms")
             }
           )
         ] })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: !integration ? /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(import_components69.Spinner, {}) : /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)(import_jsx_runtime153.Fragment, { children: [
-        isConnectedToGoogleDrive && /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
-          import_components69.Button,
+      /* @__PURE__ */ (0, import_jsx_runtime156.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: !integration ? /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components71.Spinner, {}) : /* @__PURE__ */ (0, import_jsx_runtime156.jsxs)(import_jsx_runtime156.Fragment, { children: [
+        isConnectedToGoogleDrive && /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
+          import_components71.Button,
           {
             className: buttonClasses,
             variant: "primary",
             onClick: exportToGoogleDrive,
             isBusy: isExporting,
-            children: (0, import_i18n73.__)("Export", "jetpack-forms")
+            children: (0, import_i18n77.__)("Export", "jetpack-forms")
           }
         ),
-        !isConnectedToGoogleDrive && needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
-          import_components69.Button,
+        !isConnectedToGoogleDrive && needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
+          import_components71.Button,
           {
             className: buttonClasses,
             variant: "primary",
@@ -28044,11 +28226,11 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
             target: "_blank",
             onClick: handleConnectUser,
             isBusy: userIsConnecting2,
-            children: (0, import_i18n73.__)("Connect Jetpack user account", "jetpack-forms")
+            children: (0, import_i18n77.__)("Connect Jetpack user account", "jetpack-forms")
           }
         ),
-        !isConnectedToGoogleDrive && !needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
-          import_components69.Button,
+        !isConnectedToGoogleDrive && !needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
+          import_components71.Button,
           {
             className: buttonClasses,
             variant: "primary",
@@ -28062,7 +28244,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
                 autoConnectOpened.current = true;
               }
             },
-            children: isTogglingConnection ? (0, import_i18n73.__)("Connecting\u2026", "jetpack-forms") : (0, import_i18n73._x)(
+            children: isTogglingConnection ? (0, import_i18n77.__)("Connecting\u2026", "jetpack-forms") : (0, import_i18n77._x)(
               "Connect to Google Drive",
               "",
               // Dummy context to avoid bad minification. See https://github.com/Automattic/jetpack/tree/e3f007ec7ac80715f3d82db33c9ed8098a7b45b4/projects/js-packages/i18n-check-webpack-plugin#conditional-function-call-compaction
@@ -28077,7 +28259,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
 var google_drive_default = GoogleDriveExport;
 
 // src/dashboard/components/export-responses/modal.tsx
-var import_jsx_runtime154 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime157 = __toESM(require_jsx_runtime(), 1);
 var ExportResponsesModal = ({
   onRequestClose,
   onExport,
@@ -28092,15 +28274,15 @@ var ExportResponsesModal = ({
   const isGoogleDriveEnabled = integrations.some(
     (integration) => integration.id === "google-drive"
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(
-    import_components70.Modal,
+  return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+    import_components72.Modal,
     {
-      title: (0, import_i18n74.__)("Export responses", "jetpack-forms"),
+      title: (0, import_i18n78.__)("Export responses", "jetpack-forms"),
       onRequestClose,
       size: "large",
-      children: /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)(import_components70.__experimentalVStack, { spacing: 8, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(csv_default, { onExport }),
-        isGoogleDriveEnabled && /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(google_drive_default, { onExport, autoConnect: autoConnectGdrive })
+      children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(import_components72.__experimentalVStack, { spacing: 8, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(csv_default, { onExport }),
+        isGoogleDriveEnabled && /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(google_drive_default, { onExport, autoConnect: autoConnectGdrive })
       ] })
     }
   );
@@ -28116,7 +28298,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // src/dashboard/components/export-responses/button.tsx
-var import_jsx_runtime155 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime158 = __toESM(require_jsx_runtime(), 1);
 var ExportResponsesButton = ({
   isPrimary = false,
   showIcon = true
@@ -28136,9 +28318,9 @@ var ExportResponsesButton = ({
   if (userCanExport === false) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(import_jsx_runtime155.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(
-      import_components71.Button,
+  return /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(import_jsx_runtime158.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
+      import_components73.Button,
       {
         size: "compact",
         variant: isPrimary ? "primary" : "secondary",
@@ -28146,12 +28328,12 @@ var ExportResponsesButton = ({
         onClick: openModal,
         accessibleWhenDisabled: true,
         disabled: isDisabled,
-        label: isEmpty4 ? (0, import_i18n75.__)("Nothing to export.", "jetpack-forms") : "",
+        label: isEmpty4 ? (0, import_i18n79.__)("Nothing to export.", "jetpack-forms") : "",
         showTooltip: isEmpty4,
         children: exportLabel
       }
     ),
-    showExportModal && /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(
+    showExportModal && /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
       modal_default,
       {
         onRequestClose: closeModal,
@@ -28164,25 +28346,39 @@ var ExportResponsesButton = ({
 var button_default = ExportResponsesButton;
 
 // src/dashboard/wp-build/components/manage-integrations-button/index.tsx
-var import_components72 = __toESM(require_components(), 1);
-var import_i18n76 = __toESM(require_i18n(), 1);
-var import_jsx_runtime156 = __toESM(require_jsx_runtime(), 1);
+var import_components74 = __toESM(require_components(), 1);
+var import_i18n80 = __toESM(require_i18n(), 1);
+var import_jsx_runtime159 = __toESM(require_jsx_runtime(), 1);
 function ManageIntegrationsButton({ onClick }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components72.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n76.__)("Manage integrations", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components74.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n80.__)("Manage integrations", "jetpack-forms") });
 }
 
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
-var import_jsx_runtime157 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime160 = __toESM(require_jsx_runtime(), 1);
 function usePageHeaderDetails(props) {
   const { screen, sourceId, isIntegrationsEnabled, showDashboardIntegrations, onOpenIntegrations } = props;
   const statusView = props.statusView ?? "inbox";
-  const sourceIdNumber = (0, import_element85.useMemo)(() => {
+  const sourceIdNumber = (0, import_element86.useMemo)(() => {
     const value = sourceId;
     const numberValue = typeof value === "number" ? value : Number(value);
     return Number.isFinite(numberValue) && numberValue > 0 ? numberValue : null;
   }, [sourceId]);
+  const [isSm] = use_breakpoint_match_default("sm");
   const isFormsScreen = screen === "forms";
   const isSingleFormScreen = screen === "responses" && sourceIdNumber !== null;
+  const { openNewForm } = useCreateForm();
+  const {
+    showExportModal,
+    openModal: openExportModal,
+    closeModal: closeExportModal,
+    onExport,
+    autoConnectGdrive,
+    exportLabel
+  } = useExportResponses();
+  const { totalItems, isLoadingData } = useInboxData();
+  const hasResponses = !isLoadingData && totalItems > 0;
+  const emptySpam = useEmptySpam();
+  const emptyTrash = useEmptyTrash();
   const formRecord = (0, import_data31.useSelect)(
     (select3) => sourceIdNumber ? select3(import_core_data6.store).getEntityRecord(
       "postType",
@@ -28191,52 +28387,191 @@ function usePageHeaderDetails(props) {
     ) : void 0,
     [sourceIdNumber]
   );
-  const formTitle = (0, import_element85.useMemo)(() => {
+  const formTitle = (0, import_element86.useMemo)(() => {
     const rendered = formRecord?.title?.rendered || "";
     return (0, import_html_entities4.decodeEntities)(rendered);
   }, [formRecord?.title?.rendered]);
-  const breadcrumbsItems = (0, import_element85.useMemo)(() => {
+  const breadcrumbsItems = (0, import_element86.useMemo)(() => {
     if (isSingleFormScreen) {
       return [
-        { label: (0, import_i18n77.__)("Forms", "jetpack-forms"), to: "/forms" },
-        { label: formTitle || (0, import_i18n77.__)("Form responses", "jetpack-forms") }
+        { label: (0, import_i18n81.__)("Forms", "jetpack-forms"), to: "/forms" },
+        { label: formTitle || (0, import_i18n81.__)("Form responses", "jetpack-forms") }
       ];
     }
-    return [{ label: (0, import_i18n77.__)("Forms", "jetpack-forms") }];
+    return [{ label: (0, import_i18n81.__)("Forms", "jetpack-forms") }];
   }, [formTitle, isSingleFormScreen]);
-  const breadcrumbs = (0, import_element85.useMemo)(() => {
-    return /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(Stack, { align: "center", gap: "xs", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
-      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(breadcrumbs_default, { items: breadcrumbsItems })
+  const breadcrumbs = (0, import_element86.useMemo)(() => {
+    return /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)(Stack, { align: "center", gap: "xs", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
+      /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(breadcrumbs_default, { items: breadcrumbsItems })
     ] });
   }, [breadcrumbsItems]);
-  const subtitle = (0, import_element85.useMemo)(() => {
+  const subtitle = (0, import_element86.useMemo)(() => {
     if (isFormsScreen) {
-      return (0, import_i18n77.__)("View and manage all your forms in one place.", "jetpack-forms");
+      return (0, import_i18n81.__)("View and manage all your forms in one place.", "jetpack-forms");
     }
     if (isSingleFormScreen) {
       if (formTitle) {
-        return (0, import_i18n77.sprintf)(
+        return (0, import_i18n81.sprintf)(
           /* translators: %s: form name */
-          (0, import_i18n77.__)("View responses for %s.", "jetpack-forms"),
+          (0, import_i18n81.__)("View responses for %s.", "jetpack-forms"),
           formTitle
         );
       }
-      return (0, import_i18n77.__)("View responses for this form.", "jetpack-forms");
+      return (0, import_i18n81.__)("View responses for this form.", "jetpack-forms");
     }
-    return (0, import_i18n77.__)("View and manage all your form submissions in one place.", "jetpack-forms");
+    return (0, import_i18n81.__)("View and manage all your form submissions in one place.", "jetpack-forms");
   }, [formTitle, isFormsScreen, isSingleFormScreen]);
-  const actions2 = (0, import_element85.useMemo)(() => {
+  const actions2 = (0, import_element86.useMemo)(() => {
+    if (isSm) {
+      const dropdownControls = [];
+      if (isFormsScreen) {
+        if (isIntegrationsEnabled && showDashboardIntegrations) {
+          dropdownControls.push({
+            icon: plugins_default,
+            onClick: onOpenIntegrations,
+            title: (0, import_i18n81.__)("Manage integrations", "jetpack-forms")
+          });
+        }
+        dropdownControls.push({
+          icon: plus_default,
+          onClick: () => openNewForm({}),
+          title: (0, import_i18n81.__)("Create a form", "jetpack-forms")
+        });
+      } else if (isSingleFormScreen) {
+        if (statusView === "inbox" && sourceIdNumber) {
+          dropdownControls.push({
+            onClick: () => {
+              const fallbackEditUrl = `post.php?post=${sourceIdNumber}&action=edit&post_type=jetpack_form`;
+              const url = new URL(fallbackEditUrl, window.location.origin);
+              window.location.href = url.toString();
+            },
+            title: (0, import_i18n81.__)("Edit form", "jetpack-forms")
+          });
+        }
+        dropdownControls.push({
+          icon: download_default,
+          onClick: openExportModal,
+          title: exportLabel,
+          isDisabled: !hasResponses
+        });
+        if (statusView === "trash") {
+          dropdownControls.push({
+            icon: trash_default,
+            onClick: emptyTrash.openConfirmDialog,
+            title: (0, import_i18n81.__)("Empty trash", "jetpack-forms"),
+            isDisabled: emptyTrash.isEmpty || emptyTrash.isEmptying
+          });
+        }
+        if (statusView === "spam") {
+          dropdownControls.push({
+            icon: trash_default,
+            onClick: emptySpam.openConfirmDialog,
+            title: (0, import_i18n81.__)("Delete spam", "jetpack-forms"),
+            isDisabled: emptySpam.isEmpty || emptySpam.isEmptying
+          });
+        }
+      } else {
+        if (statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations) {
+          dropdownControls.push({
+            icon: plugins_default,
+            onClick: onOpenIntegrations,
+            title: (0, import_i18n81.__)("Manage integrations", "jetpack-forms")
+          });
+        }
+        if (statusView === "inbox") {
+          dropdownControls.push({
+            icon: plus_default,
+            onClick: () => openNewForm({ showPatterns: false }),
+            title: (0, import_i18n81.__)("Create a form", "jetpack-forms")
+          });
+        }
+        dropdownControls.push({
+          icon: download_default,
+          onClick: openExportModal,
+          title: exportLabel,
+          isDisabled: !hasResponses
+        });
+        if (statusView === "trash") {
+          dropdownControls.push({
+            icon: trash_default,
+            onClick: emptyTrash.openConfirmDialog,
+            title: (0, import_i18n81.__)("Empty trash", "jetpack-forms"),
+            isDisabled: emptyTrash.isEmpty || emptyTrash.isEmptying
+          });
+        }
+        if (statusView === "spam") {
+          dropdownControls.push({
+            icon: trash_default,
+            onClick: emptySpam.openConfirmDialog,
+            title: (0, import_i18n81.__)("Delete spam", "jetpack-forms"),
+            isDisabled: emptySpam.isEmpty || emptySpam.isEmptying
+          });
+        }
+      }
+      if (dropdownControls.length === 0) {
+        return null;
+      }
+      return [
+        /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
+          import_components75.DropdownMenu,
+          {
+            controls: dropdownControls,
+            icon: more_vertical_default,
+            label: (0, import_i18n81.__)("More actions", "jetpack-forms")
+          },
+          "actions-menu"
+        ),
+        // Include modals when on mobile
+        ...showExportModal ? [
+          /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
+            modal_default,
+            {
+              onRequestClose: closeExportModal,
+              onExport,
+              autoConnectGdrive
+            },
+            "export-modal"
+          )
+        ] : [],
+        ...emptyTrash.isConfirmDialogOpen ? [
+          /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
+            EmptyTrashConfirmationModal,
+            {
+              isOpen: emptyTrash.isConfirmDialogOpen,
+              onCancel: emptyTrash.closeConfirmDialog,
+              onConfirm: emptyTrash.onConfirmEmptying,
+              totalItemsTrash: emptyTrash.totalItemsTrash,
+              selectedResponsesCount: emptyTrash.selectedResponsesCount
+            },
+            "empty-trash-confirm"
+          )
+        ] : [],
+        ...emptySpam.isConfirmDialogOpen ? [
+          /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
+            EmptySpamConfirmationModal,
+            {
+              isOpen: emptySpam.isConfirmDialogOpen,
+              onCancel: emptySpam.closeConfirmDialog,
+              onConfirm: emptySpam.onConfirmEmptying,
+              totalItemsSpam: emptySpam.totalItemsSpam,
+              selectedResponsesCount: emptySpam.selectedResponsesCount
+            },
+            "empty-spam-confirm"
+          )
+        ] : []
+      ];
+    }
     if (isFormsScreen) {
       return [
-        ...isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime157.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
-        /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(CreateFormButton, { variant: "primary", showIcon: false }, "create")
+        ...isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime160.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
+        /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(CreateFormButton, { variant: "primary", showIcon: false }, "create")
       ];
     }
     if (isSingleFormScreen) {
       return [
-        ...sourceIdNumber ? [/* @__PURE__ */ (0, import_jsx_runtime157.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
-        /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+        ...sourceIdNumber ? [/* @__PURE__ */ (0, import_jsx_runtime160.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
+        /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
           button_default,
           {
             isPrimary: statusView === "inbox",
@@ -28244,14 +28579,14 @@ function usePageHeaderDetails(props) {
           },
           "export"
         ),
-        ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime157.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
-        ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime157.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
+        ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime160.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
+        ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime160.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
       ];
     }
     return [
-      ...statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime157.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
+      ...statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime160.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
       ...statusView === "inbox" ? [
-        /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
           CreateFormButton,
           {
             variant: "secondary",
@@ -28261,7 +28596,7 @@ function usePageHeaderDetails(props) {
           "create"
         )
       ] : [],
-      /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
         button_default,
         {
           isPrimary: statusView === "inbox",
@@ -28269,17 +28604,42 @@ function usePageHeaderDetails(props) {
         },
         "export"
       ),
-      ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime157.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
-      ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime157.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
+      ...statusView === "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime160.jsx)(empty_trash_button_default, {}, "empty-trash")] : [],
+      ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime160.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
     ];
   }, [
+    isSm,
     isIntegrationsEnabled,
     onOpenIntegrations,
     showDashboardIntegrations,
     sourceIdNumber,
     isFormsScreen,
     isSingleFormScreen,
-    statusView
+    statusView,
+    openNewForm,
+    openExportModal,
+    showExportModal,
+    closeExportModal,
+    onExport,
+    autoConnectGdrive,
+    hasResponses,
+    exportLabel,
+    emptyTrash.openConfirmDialog,
+    emptyTrash.isEmpty,
+    emptyTrash.isEmptying,
+    emptyTrash.isConfirmDialogOpen,
+    emptyTrash.closeConfirmDialog,
+    emptyTrash.onConfirmEmptying,
+    emptyTrash.totalItemsTrash,
+    emptyTrash.selectedResponsesCount,
+    emptySpam.openConfirmDialog,
+    emptySpam.isEmpty,
+    emptySpam.isEmptying,
+    emptySpam.isConfirmDialogOpen,
+    emptySpam.closeConfirmDialog,
+    emptySpam.onConfirmEmptying,
+    emptySpam.totalItemsSpam,
+    emptySpam.selectedResponsesCount
   ]);
   return { breadcrumbs, subtitle, actions: actions2 };
 }
@@ -28293,15 +28653,15 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 }
 
 // routes/forms/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='aaeeabe449']")) {
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='d39e964bb9']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "aaeeabe449");
-  style.appendChild(document.createTextNode(':root{--wpds-border-radius-lg:8px;--wpds-border-radius-md:4px;--wpds-border-radius-sm:2px;--wpds-border-radius-xs:1px;--wpds-border-width-focus:2px;--wpds-border-width-lg:8px;--wpds-border-width-md:4px;--wpds-border-width-sm:2px;--wpds-border-width-xs:1px;--wpds-color-bg-interactive-brand-strong:#3858e9;--wpds-color-bg-interactive-brand-strong-active:#2e49d9;--wpds-color-bg-interactive-brand-weak:#0000;--wpds-color-bg-interactive-brand-weak-active:#e6eaf4;--wpds-color-bg-interactive-error:#0000;--wpds-color-bg-interactive-error-active:#fff6f4;--wpds-color-bg-interactive-error-strong:#cc1818;--wpds-color-bg-interactive-error-strong-active:#b90000;--wpds-color-bg-interactive-error-weak:#0000;--wpds-color-bg-interactive-error-weak-active:#f6e6e3;--wpds-color-bg-interactive-neutral-strong:#2d2d2d;--wpds-color-bg-interactive-neutral-strong-active:#1e1e1e;--wpds-color-bg-interactive-neutral-strong-disabled:#e2e2e2;--wpds-color-bg-interactive-neutral-weak:#0000;--wpds-color-bg-interactive-neutral-weak-active:#eaeaea;--wpds-color-bg-interactive-neutral-weak-disabled:#0000;--wpds-color-bg-surface-brand:#ecf0f9;--wpds-color-bg-surface-caution:#fee994;--wpds-color-bg-surface-caution-weak:#fff9c9;--wpds-color-bg-surface-error:#f6e6e3;--wpds-color-bg-surface-error-weak:#fff6f4;--wpds-color-bg-surface-info:#deebfa;--wpds-color-bg-surface-info-weak:#f2f9ff;--wpds-color-bg-surface-neutral:#f8f8f8;--wpds-color-bg-surface-neutral-strong:#fff;--wpds-color-bg-surface-neutral-weak:#f0f0f0;--wpds-color-bg-surface-success:#c5f7cc;--wpds-color-bg-surface-success-weak:#eaffed;--wpds-color-bg-surface-warning:#fde6bd;--wpds-color-bg-surface-warning-weak:#fff7e0;--wpds-color-bg-thumb-brand:#3858e9;--wpds-color-bg-thumb-brand-active:#3858e9;--wpds-color-bg-thumb-neutral-disabled:#d8d8d8;--wpds-color-bg-thumb-neutral-weak:#8a8a8a;--wpds-color-bg-thumb-neutral-weak-active:#6c6c6c;--wpds-color-bg-track-neutral:#d8d8d8;--wpds-color-bg-track-neutral-weak:#e0e0e0;--wpds-color-fg-content-caution:#281d00;--wpds-color-fg-content-caution-weak:#826a00;--wpds-color-fg-content-error:#470000;--wpds-color-fg-content-error-weak:#cc1818;--wpds-color-fg-content-info:#001b4f;--wpds-color-fg-content-info-weak:#006bd7;--wpds-color-fg-content-neutral:#1e1e1e;--wpds-color-fg-content-neutral-weak:#6d6d6d;--wpds-color-fg-content-success:#002900;--wpds-color-fg-content-success-weak:#007f30;--wpds-color-fg-content-warning:#2e1900;--wpds-color-fg-content-warning-weak:#926300;--wpds-color-fg-interactive-brand:#3858e9;--wpds-color-fg-interactive-brand-active:#3858e9;--wpds-color-fg-interactive-brand-strong:#eff0f2;--wpds-color-fg-interactive-brand-strong-active:#eff0f2;--wpds-color-fg-interactive-error:#cc1818;--wpds-color-fg-interactive-error-active:#cc1818;--wpds-color-fg-interactive-error-strong:#f2efef;--wpds-color-fg-interactive-error-strong-active:#f2efef;--wpds-color-fg-interactive-neutral:#1e1e1e;--wpds-color-fg-interactive-neutral-active:#1e1e1e;--wpds-color-fg-interactive-neutral-disabled:#8a8a8a;--wpds-color-fg-interactive-neutral-strong:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-active:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-disabled:#8a8a8a;--wpds-color-fg-interactive-neutral-weak:#6d6d6d;--wpds-color-fg-interactive-neutral-weak-disabled:#8a8a8a;--wpds-color-stroke-focus-brand:#3858e9;--wpds-color-stroke-interactive-brand:#3858e9;--wpds-color-stroke-interactive-brand-active:#2337c8;--wpds-color-stroke-interactive-error:#cc1818;--wpds-color-stroke-interactive-error-active:#9d0000;--wpds-color-stroke-interactive-error-strong:#cc1818;--wpds-color-stroke-interactive-neutral:#8a8a8a;--wpds-color-stroke-interactive-neutral-active:#6c6c6c;--wpds-color-stroke-interactive-neutral-disabled:#d8d8d8;--wpds-color-stroke-interactive-neutral-strong:#6c6c6c;--wpds-color-stroke-surface-brand:#a3b1d4;--wpds-color-stroke-surface-brand-strong:#3858e9;--wpds-color-stroke-surface-error:#daa39b;--wpds-color-stroke-surface-error-strong:#cc1818;--wpds-color-stroke-surface-info:#9fbcdc;--wpds-color-stroke-surface-info-strong:#006bd7;--wpds-color-stroke-surface-neutral:#d8d8d8;--wpds-color-stroke-surface-neutral-strong:#8a8a8a;--wpds-color-stroke-surface-neutral-weak:#e0e0e0;--wpds-color-stroke-surface-success:#8ac894;--wpds-color-stroke-surface-success-strong:#007f30;--wpds-color-stroke-surface-warning:#d0b381;--wpds-color-stroke-surface-warning-strong:#926300;--wpds-dimension-base:4px;--wpds-dimension-gap-2xs:4px;--wpds-dimension-gap-lg:24px;--wpds-dimension-gap-md:16px;--wpds-dimension-gap-sm:12px;--wpds-dimension-gap-xl:40px;--wpds-dimension-gap-xs:8px;--wpds-dimension-padding-surface-2xs:4px;--wpds-dimension-padding-surface-lg:32px;--wpds-dimension-padding-surface-md:24px;--wpds-dimension-padding-surface-sm:16px;--wpds-dimension-padding-surface-xs:8px;--wpds-elevation-large:0 5px 15px 0 #00000014,0 15px 27px 0 #00000012,0 30px 36px 0 #0000000a,0 50px 43px 0 #00000005;--wpds-elevation-medium:0 2px 3px 0 #0000000d,0 4px 5px 0 #0000000a,0 12px 12px 0 #00000008,0 16px 16px 0 #00000005;--wpds-elevation-small:0 1px 2px 0 #0000000d,0 2px 3px 0 #0000000a,0 6px 6px 0 #00000008,0 8px 8px 0 #00000005;--wpds-elevation-x-small:0 1px 1px 0 #00000008,0 1px 2px 0 #00000005,0 3px 3px 0 #00000005,0 4px 4px 0 #00000003;--wpds-font-family-body:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-font-family-heading:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-font-family-mono:"Menlo","Consolas",monaco,monospace;--wpds-font-line-height-2xl:40px;--wpds-font-line-height-lg:28px;--wpds-font-line-height-md:24px;--wpds-font-line-height-sm:20px;--wpds-font-line-height-xl:32px;--wpds-font-line-height-xs:16px;--wpds-font-size-2xl:32px;--wpds-font-size-lg:15px;--wpds-font-size-md:13px;--wpds-font-size-sm:12px;--wpds-font-size-xl:20px;--wpds-font-size-xs:11px;--wpds-font-weight-medium:499;--wpds-font-weight-regular:400}[data-wpds-theme-provider-id][data-wpds-density=default]{--wpds-dimension-base:4px;--wpds-dimension-gap-2xs:4px;--wpds-dimension-gap-lg:24px;--wpds-dimension-gap-md:16px;--wpds-dimension-gap-sm:12px;--wpds-dimension-gap-xl:40px;--wpds-dimension-gap-xs:8px;--wpds-dimension-padding-surface-2xs:4px;--wpds-dimension-padding-surface-lg:32px;--wpds-dimension-padding-surface-md:24px;--wpds-dimension-padding-surface-sm:16px;--wpds-dimension-padding-surface-xs:8px}[data-wpds-theme-provider-id][data-wpds-density=compact]{--wpds-dimension-gap-2xs:4px;--wpds-dimension-gap-lg:20px;--wpds-dimension-gap-md:12px;--wpds-dimension-gap-sm:8px;--wpds-dimension-gap-xl:32px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-surface-2xs:4px;--wpds-dimension-padding-surface-lg:24px;--wpds-dimension-padding-surface-md:20px;--wpds-dimension-padding-surface-sm:12px;--wpds-dimension-padding-surface-xs:4px}[data-wpds-theme-provider-id][data-wpds-density=comfortable]{--wpds-dimension-gap-2xs:8px;--wpds-dimension-gap-lg:32px;--wpds-dimension-gap-md:20px;--wpds-dimension-gap-sm:16px;--wpds-dimension-gap-xl:48px;--wpds-dimension-gap-xs:12px;--wpds-dimension-padding-surface-2xs:8px;--wpds-dimension-padding-surface-lg:40px;--wpds-dimension-padding-surface-md:32px;--wpds-dimension-padding-surface-sm:20px;--wpds-dimension-padding-surface-xs:12px}@media (min-resolution:192dpi){:root{--wpds-border-width-focus:1.5px}}.dataviews-picker-wrapper,.dataviews-wrapper{background-color:var(--wp-dataviews-color-background,#fff);box-sizing:border-box;container:dataviews-wrapper/inline-size;display:flex;flex-direction:column;font-size:13px;height:100%;line-height:1.4;overflow:auto;scroll-padding-bottom:64px}.dataviews-filters__container,.dataviews__view-actions{background-color:inherit;box-sizing:border-box;flex-shrink:0;left:0;padding:16px 24px;position:sticky}@media not (prefers-reduced-motion){.dataviews-filters__container,.dataviews__view-actions{transition:padding .1s ease-out}}.dataviews-loading,.dataviews-no-results{align-items:center;display:flex;flex-grow:1;justify-content:center;padding:0 24px}@media not (prefers-reduced-motion){.dataviews-loading,.dataviews-no-results{transition:padding .1s ease-out}}.dataviews-loading-more{text-align:center}@container (max-width: 430px){.dataviews-filters__container,.dataviews__view-actions{padding:12px 24px}}.dataviews-title-field{font-size:13px;font-weight:499;width:100%}.dataviews-title-field,.dataviews-title-field a{color:#2f2f2f;text-overflow:ellipsis;white-space:nowrap}.dataviews-title-field a{display:block;flex-grow:0;overflow:hidden;text-decoration:none}.dataviews-title-field a:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field a:focus{border-radius:2px;box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color,#007cba);color:var(--wp-admin-theme-color--rgb)}.dataviews-title-field button.components-button.is-link{color:#1e1e1e;display:block;font-weight:inherit;overflow:hidden;text-decoration:none;text-overflow:ellipsis;white-space:nowrap;width:100%}.dataviews-title-field button.components-button.is-link:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field--clickable{color:#2f2f2f;cursor:pointer}.dataviews-title-field--clickable:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field--clickable:focus{border-radius:2px;box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color,#007cba);color:var(--wp-admin-theme-color--rgb)}.components-card__body:has(>.dataviews-picker-wrapper),.components-card__body:has(>.dataviews-wrapper){overflow:hidden;padding:8px 0 0}.dataviews-bulk-actions-footer__item-count{color:#1e1e1e}.dataviews-bulk-actions-footer__container{margin-right:auto;min-height:32px}.dataviews-filters__button{position:relative}.dataviews-filters__container{padding-top:0}.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true],.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true]:hover{opacity:0}.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true]:focus{opacity:1}.dataviews-filters__summary-popover{font-size:13px;line-height:1.4}.dataviews-filters__summary-popover .components-popover__content{border-radius:4px;max-width:250px;min-width:230px;width:100%}.dataviews-filters__summary-popover.components-dropdown__content .components-popover__content{padding:0}.dataviews-filters__summary-operators-container{padding:8px 16px}.dataviews-filters__summary-operators-container:has(+.dataviews-filters__search-widget-listbox),.dataviews-filters__summary-operators-container:has(+.dataviews-filters__search-widget-no-elements),.dataviews-filters__summary-operators-container:has(+.dataviews-filters__user-input-widget){border-bottom:1px solid #e0e0e0}.dataviews-filters__summary-operators-container:empty{display:none}.dataviews-filters__summary-operators-container .dataviews-filters__summary-operators-filter-name{color:#757575;flex-shrink:0;max-width:calc(100% - 55px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dataviews-filters__summary-operators-container .dataviews-filters__summary-operators-filter-select{overflow:hidden;white-space:nowrap;width:100%}.dataviews-filters__summary-chip-container{position:relative;white-space:pre-wrap}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip{align-items:center;background:#f0f0f0;border:1px solid #0000;border-radius:16px;box-sizing:border-box;color:#2f2f2f;cursor:pointer;display:flex;min-height:32px;padding:4px 12px;position:relative}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.is-not-clickable{cursor:default}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-reset{padding-inline-end:28px}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:focus-visible,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:hover:not(.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.is-not-clickable),.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip[aria-expanded=true]{background:#e0e0e0;color:#1e1e1e}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values{background:rgba(var(--wp-admin-theme-color--rgb),.04);color:var(--wp-admin-theme-color)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values:hover,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values[aria-expanded=true]{background:rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:focus-visible{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);outline:none}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip .dataviews-filters-__summary-filter-text-name{font-weight:499}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove{align-items:center;background:#0000;border:0;border-radius:50%;cursor:pointer;display:flex;height:24px;justify-content:center;padding:0;position:absolute;right:4px;top:50%;transform:translateY(-50%);width:24px}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove svg{fill:#757575}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:hover{background:#e0e0e0}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus svg,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:hover svg{fill:#1e1e1e}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove.has-values svg{fill:var(--wp-admin-theme-color)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove.has-values:hover{background:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus-visible{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);outline:none}.dataviews-filters__search-widget-filter-combobox-list{border-top:1px solid #e0e0e0;max-height:184px;overflow:auto;padding:4px}.dataviews-filters__search-widget-filter-combobox-list .dataviews-filters__search-widget-filter-combobox-item-value [data-user-value]{font-weight:600}.dataviews-filters__search-widget-listbox{overflow:auto;padding:4px}.dataviews-filters__search-widget-listitem{align-items:center;border-radius:2px;box-sizing:border-box;cursor:default;display:flex;font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:13px;font-weight:400;gap:8px;line-height:20px;min-height:32px;padding:4px 12px}.dataviews-filters__search-widget-listitem:last-child{margin-block-end:0}.dataviews-filters__search-widget-listitem:focus,.dataviews-filters__search-widget-listitem:hover,.dataviews-filters__search-widget-listitem[data-active-item]{background-color:var(--wp-admin-theme-color);color:#fff}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-description,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-description,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-description{color:#fff}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-single-selection,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-single-selection,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-single-selection{background:#fff;border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-single-selection.is-selected,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-single-selection.is-selected,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-single-selection.is-selected{background:var(--wp-admin-theme-color-darker-20,#183ad6);border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-multi-selection,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-multi-selection,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-multi-selection{border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-multi-selection.is-selected,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-multi-selection.is-selected,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-multi-selection.is-selected{background:var(--wp-admin-theme-color-darker-20,#183ad6);border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-description{color:#757575;display:block;font-size:12px;line-height:16px;overflow:hidden;text-overflow:ellipsis}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{border:1px solid #1e1e1e;border-radius:50%;height:24px;margin-right:12px;max-width:24px;min-width:24px;position:relative;transition:none;width:24px}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{height:16px;max-width:16px;min-width:16px;width:16px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked:before{background-color:#fff;border:4px solid #fff;box-sizing:inherit;height:12px;left:50%;margin:0;position:absolute;top:50%;transform:translate(-50%,-50%);width:12px}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked:before{height:8px;width:8px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked{background:var(--wp-admin-theme-color);border:none}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{margin:0;padding:0}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected{background:var(--wp-admin-theme-color,#3858e9);border-color:var(--wp-admin-theme-color,#3858e9)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected:before{background-color:#fff;border:4px solid #fff;border-radius:50%;box-sizing:inherit;content:"";height:12px;left:50%;margin:0;position:absolute;top:50%;transform:translate(-50%,-50%);width:12px}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected:before{height:8px;width:8px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{--checkbox-size:24px;border:1px solid #949494;border-radius:2px;box-shadow:0 0 0 #0000;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:16px;line-height:normal;margin-right:12px;padding:6px 8px;transition:none}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{font-size:13px;line-height:normal}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:focus{border-color:var(--wp-admin-theme-color);box-shadow:0 0 0 .5px var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection::placeholder{color:#1e1e1e9e}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked{background:var(--wp-admin-theme-color);border-color:var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked:before,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{color:#fff;margin:-3px -5px}@media (min-width:782px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked:before,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{margin:-4px 0 0 -5px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]{background:var(--wp-admin-theme-color);border-color:var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{content:"\\f460";display:inline-block;float:left;font:normal 30px/1 dashicons;vertical-align:middle;width:16px;speak:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (min-width:782px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{float:none;font-size:21px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:disabled,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-disabled=true]{background:#f0f0f0;border-color:#ddd;cursor:default;opacity:1}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{background:#fff;color:#1e1e1e;height:var(--checkbox-size);margin:0;padding:0;position:relative;width:var(--checkbox-size)}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{--checkbox-size:16px}}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{transition:border-color .1s ease-in-out}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected{background:var(--wp-admin-theme-color,#3858e9);border-color:var(--wp-admin-theme-color,#3858e9)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected svg{--checkmark-size:var(--checkbox-size);fill:#fff;height:var(--checkmark-size);left:50%;position:absolute;top:50%;transform:translate(-50%,-50%);width:var(--checkmark-size)}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected svg{--checkmark-size:calc(var(--checkbox-size) + 4px)}}.dataviews-filters__search-widget-filter-combobox__wrapper{padding:8px;position:relative}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{border:1px solid #949494;border-radius:2px;box-shadow:0 0 0 #0000;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;line-height:normal;padding:6px 8px}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{font-size:13px;line-height:normal}}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input:focus{border-color:var(--wp-admin-theme-color);box-shadow:0 0 0 .5px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::placeholder{color:#1e1e1e9e}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{display:block;font-size:16px;height:32px;margin-left:0;margin-right:0;padding:0 8px 0 32px;width:100%}@media (min-width:600px){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{font-size:13px}}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input:focus{background:#fff;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::placeholder{color:#757575}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-cancel-button,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-decoration,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-results-button,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-results-decoration{-webkit-appearance:none}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__icon{align-items:center;bottom:0;display:flex;inset-inline-start:12px;justify-content:center;position:absolute;top:0;width:24px}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__icon:dir(ltr){transform:scaleX(-1)}.dataviews-filters__container-visibility-toggle{flex-shrink:0;position:relative}.dataviews-filters-toggle__count{background:var(--wp-admin-theme-color,#3858e9);border-radius:8px;box-sizing:border-box;color:#fff;font-size:11px;height:16px;line-height:16px;min-width:16px;outline:var(--wp-admin-border-width-focus) solid #fff;padding:0 4px;position:absolute;right:0;text-align:center;top:0;transform:translate(50%,-50%)}.dataviews-search{width:fit-content}.dataviews-filters__user-input-widget{padding:16px}.dataviews-filters__user-input-widget .components-input-control__prefix{padding-left:8px}.dataviews-filters__search-widget-no-elements{align-items:center;display:flex;justify-content:center;padding:16px}.dataviews-footer{background-color:inherit;border-top:1px solid #f0f0f0;bottom:0;flex-shrink:0;left:0;padding:12px 24px;position:sticky}@media not (prefers-reduced-motion){.dataviews-footer{transition:padding .1s ease-out}}.dataviews-footer{z-index:2}@container (max-width: 560px){.dataviews-footer{flex-direction:column!important}.dataviews-footer .dataviews-bulk-actions-footer__container{width:100%}.dataviews-footer .dataviews-bulk-actions-footer__item-count{flex-grow:1}.dataviews-footer .dataviews-pagination{justify-content:space-between;width:100%}}.dataviews-pagination__page-select{font-size:11px;font-weight:499;text-transform:uppercase}@media (min-width:600px){.dataviews-pagination__page-select .components-select-control__input{font-size:11px!important;font-weight:499}}.dataviews-action-modal{z-index:1000001}.dataviews-selection-checkbox{--checkbox-input-size:24px}@media (min-width:600px){.dataviews-selection-checkbox{--checkbox-input-size:16px}}.dataviews-selection-checkbox{flex-shrink:0;line-height:0}.dataviews-selection-checkbox .components-checkbox-control__input-container{margin:0}.dataviews-view-config{container-type:inline-size;font-size:13px;line-height:1.4;width:320px}.dataviews-config__popover.is-expanded .dataviews-config__popover-content-wrapper{height:100%;overflow-y:scroll}.dataviews-config__popover.is-expanded .dataviews-config__popover-content-wrapper .dataviews-view-config{width:auto}.dataviews-view-config__sort-direction .components-toggle-group-control-option-base{text-transform:uppercase}.dataviews-settings-section__title.dataviews-settings-section__title{font-size:15px;line-height:24px}.dataviews-settings-section__sidebar{grid-column:span 4}.dataviews-settings-section__content,.dataviews-settings-section__content>*{grid-column:span 8}.dataviews-settings-section__content .is-divided-in-two{display:contents}.dataviews-settings-section__content .is-divided-in-two>*{grid-column:span 4}.dataviews-settings-section:has(.dataviews-settings-section__content:empty){display:none}@container (max-width: 500px){.dataviews-settings-section.dataviews-settings-section{grid-template-columns:repeat(2,1fr)}.dataviews-settings-section.dataviews-settings-section .dataviews-settings-section__content,.dataviews-settings-section.dataviews-settings-section .dataviews-settings-section__sidebar{grid-column:span 2}}.dataviews-view-config__label{text-wrap:nowrap}.dataviews-view-grid-items{container-type:inline-size;display:grid;gap:32px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));grid-template-rows:max-content;margin-bottom:auto;padding:0 24px 24px}@media not (prefers-reduced-motion){.dataviews-view-grid-items{transition:padding .1s ease-out}}.dataviews-view-grid{container-type:inline-size;display:flex;flex-direction:column;gap:32px;margin-bottom:auto;padding:0 24px 24px}@media not (prefers-reduced-motion){.dataviews-view-grid{transition:padding .1s ease-out}}.dataviews-view-grid .dataviews-view-grid__row{display:grid;gap:32px}.dataviews-view-grid .dataviews-view-grid__row .dataviews-view-grid__row__gridcell{border-radius:4px;position:relative}.dataviews-view-grid .dataviews-view-grid__row .dataviews-view-grid__row__gridcell[data-focus-visible]:after{border-radius:4px;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);content:"";height:100%;left:0;outline:2px solid #0000;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-grid .dataviews-view-grid__card{height:100%;justify-content:flex-start;position:relative}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-actions{padding:8px 0 4px}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-field{align-content:center;min-height:24px;overflow:hidden;text-align:start}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-field--clickable{width:fit-content}.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-value{color:#1e1e1e}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__media:focus:after,.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__media:after{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__media:after{box-shadow:inset 0 0 0 1px var(--wp-admin-theme-color)}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__media:focus:after{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-view-grid .dataviews-view-grid__media{aspect-ratio:1/1;background-color:#fff;border-radius:4px;overflow:hidden;position:relative;width:100%}.dataviews-view-grid .dataviews-view-grid__media img{height:100%;object-fit:cover;width:100%}.dataviews-view-grid .dataviews-view-grid__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-grid .dataviews-view-grid__fields{font-size:12px;line-height:16px;position:relative}.dataviews-view-grid .dataviews-view-grid__fields:not(:empty){padding:0 0 12px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field-value:not(:empty){line-height:20px;min-height:24px;padding-top:2px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field{align-items:center;min-height:24px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-name{color:#757575;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:35%}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-value{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:65%}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field:not(:has(.dataviews-view-grid__field-value:not(:empty))){display:none}.dataviews-view-grid .dataviews-view-grid__badge-fields:not(:empty){padding-bottom:12px}.dataviews-view-grid__field-value:empty,.dataviews-view-grid__field:empty{display:none}.dataviews-view-grid__card .dataviews-selection-checkbox{left:8px;opacity:0;position:absolute;top:-9999em;z-index:1}@media not (prefers-reduced-motion){.dataviews-view-grid__card .dataviews-selection-checkbox{transition:opacity .1s linear}}@media (hover:none){.dataviews-view-grid__card .dataviews-selection-checkbox{opacity:1;top:8px}}.dataviews-view-grid__card.is-selected .dataviews-selection-checkbox,.dataviews-view-grid__card:focus-within .dataviews-selection-checkbox,.dataviews-view-grid__card:hover .dataviews-selection-checkbox{opacity:1;top:8px}.dataviews-view-grid__card .dataviews-view-grid__media-actions{opacity:0;position:absolute;right:4px;top:4px}.dataviews-view-grid__card .dataviews-view-grid__media-actions .dataviews-all-actions-button{background-color:#fff}@media not (prefers-reduced-motion){.dataviews-view-grid__card .dataviews-view-grid__media-actions{transition:opacity .1s linear}}@media (hover:none){.dataviews-view-grid__card .dataviews-view-grid__media-actions{opacity:1;top:4px}}.dataviews-view-grid__card .dataviews-view-grid__media-actions:has(.dataviews-all-actions-button[aria-expanded=true]),.dataviews-view-grid__card:focus-within .dataviews-view-grid__media-actions,.dataviews-view-grid__card:hover .dataviews-view-grid__media-actions{opacity:1}.dataviews-view-grid__media--clickable{cursor:pointer}.dataviews-view-grid__group-header{color:#1e1e1e;container-type:inline-size;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 24px}div.dataviews-view-list{list-style-type:none}.dataviews-view-list{margin:0 0 auto}.dataviews-view-list div[role=article],.dataviews-view-list div[role=row]{border-top:1px solid #f0f0f0;margin:0}.dataviews-view-list div[role=article] .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row] .dataviews-view-list__item-wrapper{box-sizing:border-box;padding:16px 24px;position:relative}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions{display:flex;flex:0 0 auto;gap:4px;white-space:nowrap;width:max-content}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions .components-button,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions .components-button{position:relative;z-index:1}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>div,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>div{height:24px}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>:not(:last-child){flex:0;overflow:hidden;width:0}.dataviews-view-list div[role=article]:where(.is-selected,.is-hovered,:focus-within) .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row]:where(.is-selected,.is-hovered,:focus-within) .dataviews-view-list__item-actions>:not(:last-child){flex-basis:min-content;overflow:unset;width:auto}@media (hover:none){.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>:not(:last-child){flex-basis:min-content;overflow:unset;width:auto}}.dataviews-view-list div[role=article].is-selected.is-selected,.dataviews-view-list div[role=article].is-selected.is-selected+div[role=article],.dataviews-view-list div[role=article].is-selected.is-selected+div[role=row],.dataviews-view-list div[role=row].is-selected.is-selected,.dataviews-view-list div[role=row].is-selected.is-selected+div[role=article],.dataviews-view-list div[role=row].is-selected.is-selected+div[role=row]{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered,.dataviews-view-list div[role=article]:not(.is-selected):focus-within,.dataviews-view-list div[role=article]:not(.is-selected):hover,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered,.dataviews-view-list div[role=row]:not(.is-selected):focus-within,.dataviews-view-list div[role=row]:not(.is-selected):hover{background-color:rgba(var(--wp-admin-theme-color--rgb),.04);border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12);color:var(--wp-admin-theme-color)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected).is-hovered+div[role=row],.dataviews-view-list div[role=article]:not(.is-selected):focus-within+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected):focus-within+div[role=row],.dataviews-view-list div[role=article]:not(.is-selected):hover+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected):hover+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected).is-hovered+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected).is-hovered+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected):focus-within+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected):focus-within+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected):hover+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected):hover+div[role=row]{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected).is-hovered .dataviews-view-list__field,.dataviews-view-list div[role=article]:not(.is-selected):focus-within .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected):focus-within .dataviews-view-list__field,.dataviews-view-list div[role=article]:not(.is-selected):hover .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected):hover .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected):focus-within .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected):focus-within .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected):hover .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected):hover .dataviews-view-list__field{color:var(--wp-admin-theme-color)}.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper{background-color:rgba(var(--wp-admin-theme-color--rgb),.08);color:#1e1e1e}.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-view-list__field{color:#1e1e1e}.dataviews-view-list .dataviews-view-list__item{appearance:none;background:none;border:none;cursor:pointer;inset:0;padding:0;position:absolute;scroll-margin:8px 0;z-index:1}.dataviews-view-list .dataviews-view-list__item:focus-visible{outline:none}.dataviews-view-list .dataviews-view-list__item:focus-visible:before{border-radius:2px;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);content:"";inset:var(--wp-admin-border-width-focus);outline:2px solid #0000;position:absolute}.dataviews-view-list .dataviews-view-list__title-field{flex:1;line-height:24px;min-height:24px;overflow:hidden}.dataviews-view-list .dataviews-view-list__title-field:has(a,button){z-index:1}.dataviews-view-list .dataviews-view-list__media-wrapper{background-color:#fff;border-radius:4px;flex-shrink:0;height:52px;overflow:hidden;position:relative;width:52px}.dataviews-view-list .dataviews-view-list__media-wrapper img{height:100%;object-fit:cover;width:100%}.dataviews-view-list .dataviews-view-list__media-wrapper:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.dataviews-view-list .dataviews-view-list__field-wrapper{flex-grow:1;min-height:52px}.dataviews-view-list .dataviews-view-list__field{color:#757575}.dataviews-view-list .dataviews-view-list__fields{display:flex;flex-wrap:wrap;font-size:12px;gap:12px;row-gap:4px}.dataviews-view-list .dataviews-view-list__fields .dataviews-view-list__field:has(.dataviews-view-list__field-value:empty),.dataviews-view-list .dataviews-view-list__fields:empty{display:none}.dataviews-view-list .dataviews-view-list__fields .dataviews-view-list__field-value{align-items:center;display:flex;line-height:20px;min-height:24px}.dataviews-view-list+.dataviews-pagination{justify-content:space-between}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__item-wrapper{padding:8px 24px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__title-field{line-height:16px;min-height:16px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__media-wrapper{height:32px;width:32px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__field-wrapper{min-height:32px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__fields{gap:8px;row-gap:4px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__fields .dataviews-view-list__field-value{line-height:16px;min-height:16px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__item-wrapper{padding:24px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__title-field{line-height:32px;min-height:32px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__media-wrapper{height:64px;width:64px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__field-wrapper{min-height:64px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__fields{gap:16px;row-gap:8px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__fields .dataviews-view-list__field-value{line-height:24px;min-height:32px}.dataviews-view-list__group-header{color:#1e1e1e;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 24px}.dataviews-view-table{background-color:inherit;border-collapse:collapse;border-color:inherit;color:#757575;margin-bottom:auto;position:relative;text-indent:0;width:100%}.dataviews-view-table th{color:#1e1e1e;font-size:13px;font-weight:400;text-align:left}.dataviews-view-table td,.dataviews-view-table th{padding:12px}.dataviews-view-table td.dataviews-view-table__actions-column,.dataviews-view-table th.dataviews-view-table__actions-column{text-align:right}.dataviews-view-table td.dataviews-view-table__actions-column--sticky,.dataviews-view-table th.dataviews-view-table__actions-column--sticky{background-color:var(--wp-dataviews-color-background,#fff);position:sticky;right:0}.dataviews-view-table td.dataviews-view-table__actions-column--stuck:after,.dataviews-view-table th.dataviews-view-table__actions-column--stuck:after{background-color:#f0f0f0;bottom:0;content:"";display:block;left:0;position:absolute;top:0;width:1px}.dataviews-view-table td.dataviews-view-table__checkbox-column,.dataviews-view-table th.dataviews-view-table__checkbox-column{padding-right:0}.dataviews-view-table td.dataviews-view-table__checkbox-column .dataviews-view-table__cell-content-wrapper,.dataviews-view-table th.dataviews-view-table__checkbox-column .dataviews-view-table__cell-content-wrapper{max-width:auto;min-width:auto}.dataviews-view-table tr{background-color:inherit;border-top:1px solid #f0f0f0}.dataviews-view-table tr td:first-child,.dataviews-view-table tr th:first-child{padding-left:24px}.dataviews-view-table tr td:last-child,.dataviews-view-table tr th:last-child{padding-right:24px}.dataviews-view-table tr:last-child{border-bottom:0}.dataviews-view-table tr .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:0}@media (hover:none){.dataviews-view-table tr .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:1}}.dataviews-view-table tr.is-selected{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff);color:#757575}.dataviews-view-table tr.is-selected,.dataviews-view-table tr.is-selected+tr{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-table tr.is-selected .dataviews-view-table__actions-column--sticky{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff)}.dataviews-view-table tr.is-hovered .dataviews-item-actions .components-button:not(.dataviews-all-actions-button),.dataviews-view-table tr:focus-within .dataviews-item-actions .components-button:not(.dataviews-all-actions-button),.dataviews-view-table tr:hover .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:1}.dataviews-view-table.has-bulk-actions tr:focus-within .dataviews-view-table__actions-column--sticky,.dataviews-view-table.has-bulk-actions tr:hover .dataviews-view-table__actions-column--sticky{background-color:var(--wp-dataviews-color-background,#fff)}.dataviews-view-table.has-bulk-actions tr.is-selected .dataviews-view-table__actions-column--sticky,.dataviews-view-table.has-bulk-actions tr.is-selected:hover .dataviews-view-table__actions-column--sticky{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff)}.dataviews-view-table thead{background-color:inherit;inset-block-start:0;position:sticky;z-index:1}.dataviews-view-table thead tr{border:0}.dataviews-view-table thead th{background-color:inherit;font-size:11px;font-weight:499;padding-bottom:8px;padding-top:8px;text-transform:uppercase}.dataviews-view-table thead th:has(.dataviews-view-table-header-button){padding-left:4px;padding-right:4px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button) .dataviews-view-table-header-button{gap:4px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button):first-child{padding-left:40px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button):last-child{padding-right:40px}.dataviews-view-table tbody td{vertical-align:top}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper{align-items:center;display:flex;min-height:32px;white-space:nowrap}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper.dataviews-view-table__cell-align-end{justify-content:flex-end}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper.dataviews-view-table__cell-align-center{justify-content:center}.dataviews-view-table tbody .components-v-stack>.dataviews-view-table__cell-content-wrapper:not(:first-child){min-height:0}.dataviews-view-table .dataviews-view-table-header-button{font-size:11px;font-weight:499;padding:4px 8px;text-transform:uppercase}.dataviews-view-table .dataviews-view-table-header-button:not(:hover){color:#1e1e1e}.dataviews-view-table .dataviews-view-table-header-button span{speak:none}.dataviews-view-table .dataviews-view-table-header-button span:empty{display:none}.dataviews-view-table .dataviews-view-table-header{padding-left:4px}.dataviews-view-table .dataviews-view-table__actions-column{white-space:nowrap;width:auto}.dataviews-view-table.has-compact-density thead th:has(.dataviews-view-table-header-button):not(:first-child){padding-left:0}.dataviews-view-table.has-compact-density thead th:has(.dataviews-view-table-header-button):not(:last-child){padding-right:0}.dataviews-view-table.has-compact-density td,.dataviews-view-table.has-compact-density th{padding:4px 8px}.dataviews-view-table.has-comfortable-density td,.dataviews-view-table.has-comfortable-density th{padding:16px 12px}.dataviews-view-table.has-comfortable-density td.dataviews-view-table__checkbox-column,.dataviews-view-table.has-comfortable-density th.dataviews-view-table__checkbox-column,.dataviews-view-table.has-compact-density td.dataviews-view-table__checkbox-column,.dataviews-view-table.has-compact-density th.dataviews-view-table__checkbox-column{padding-right:0}.dataviews-view-table-selection-checkbox{--checkbox-input-size:24px}@media (min-width:600px){.dataviews-view-table-selection-checkbox{--checkbox-input-size:16px}}.dataviews-column-primary__media{background-color:#fff;border-radius:4px;flex-shrink:0;max-width:60px;min-height:32px;min-width:32px;overflow:hidden;position:relative}.dataviews-column-primary__media img{height:32px;object-fit:cover;width:32px}.dataviews-column-primary__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.dataviews-view-table__cell-content-wrapper:not(.dataviews-column-primary__media),.dataviews-view-table__primary-column-content:not(.dataviews-column-primary__media){max-width:80ch;min-width:15ch}.dataviews-view-table__group-header-row .dataviews-view-table__group-header-cell{color:#1e1e1e;font-weight:499;padding:12px 24px}.dataviews-view-table col[class^=dataviews-view-table__col-]:not(.dataviews-view-table__col-first-data){width:1%}.dataviews-view-picker-grid .dataviews-view-picker-grid__card{height:100%;justify-content:flex-start;position:relative}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-actions{padding:8px 0 4px}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-field{align-content:center;min-height:24px;overflow:hidden;text-align:start}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-field--clickable{width:fit-content}.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-value{color:#1e1e1e}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__media:focus:after,.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__media:after{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__media:after{box-shadow:inset 0 0 0 1px var(--wp-admin-theme-color)}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__media:focus:after{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-view-picker-grid:focus-visible[aria-activedescendant]{outline:none}.dataviews-view-picker-grid:focus-visible [data-active-item=true]{outline:2px solid var(--wp-admin-theme-color)}.dataviews-view-picker-grid .dataviews-selection-checkbox{top:8px!important}.dataviews-view-picker-grid .dataviews-selection-checkbox input{pointer-events:none}.dataviews-view-picker-grid .dataviews-view-picker-grid__media{aspect-ratio:1/1;background-color:#fff;border-radius:4px;min-height:0;position:relative;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__media img{height:100%;object-fit:cover;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields{font-size:12px;line-height:16px;position:relative}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields:not(:empty){padding:0 0 12px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field-value:not(:empty){line-height:20px;min-height:24px;padding-top:2px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field{align-items:center;min-height:24px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-name{color:#757575;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:35%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-value{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:65%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field:not(:has(.dataviews-view-picker-grid__field-value:not(:empty))){display:none}.dataviews-view-picker-grid .dataviews-view-picker-grid__badge-fields:not(:empty){padding-bottom:12px}.dataviews-view-picker-grid__field-value:empty,.dataviews-view-picker-grid__field:empty{display:none}.dataviews-view-picker-grid__card .dataviews-selection-checkbox{left:8px;position:absolute;top:-9999em;z-index:1}@media (hover:none){.dataviews-view-picker-grid__card .dataviews-selection-checkbox{top:8px}}.dataviews-view-picker-grid__card.is-selected .dataviews-selection-checkbox,.dataviews-view-picker-grid__card:focus-within .dataviews-selection-checkbox,.dataviews-view-picker-grid__card:hover .dataviews-selection-checkbox{top:8px}.dataviews-view-picker-grid__media--clickable{cursor:pointer}.dataviews-view-picker-grid-group__header{color:#1e1e1e;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 48px}.dataviews-view-picker-table{background-color:inherit}.dataviews-view-picker-table .dataviews-view-table__checkbox-column{width:48px}.dataviews-view-picker-table tbody:focus-visible[aria-activedescendant]{outline:none}.dataviews-view-picker-table tbody:focus-visible [data-active-item=true]{outline:2px solid var(--wp-admin-theme-color)}.dataviews-view-picker-table .dataviews-selection-checkbox .components-checkbox-control__input.components-checkbox-control__input{opacity:1;pointer-events:none}.dataviews-view-picker-table .dataviews-view-table__row{cursor:pointer}.dataviews-view-picker-table .dataviews-view-table__row.is-selected{background-color:rgba(var(--wp-admin-theme-color--rgb),.04)}.dataviews-view-picker-table .dataviews-view-table__row.is-hovered{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-picker-table .dataviews-view-table__row.is-selected.is-hovered{background-color:rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-activity{margin:0 0 auto;padding:8px 24px}.dataviews-view-activity .dataviews-view-activity__group-header{color:#949494;font-size:15px;font-weight:499;margin:0 0 8px;padding:0}.dataviews-view-activity .dataviews-view-activity__item-actions{min-width:24px}.dataviews-view-activity .dataviews-view-activity__item-content{flex-grow:1}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-description,.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields,.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title{min-height:16px}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title{align-items:center;display:flex;flex:1;overflow:hidden;position:relative}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title--clickable{cursor:pointer}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title--clickable:focus-visible{border-radius:2px;outline:var(--wp-admin-border-width-focus) solid var(--wp-admin-theme-color);outline-offset:var(--wp-admin-border-width-focus)}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__primary-actions{display:flex;flex:0 0 auto;width:max-content}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__primary-actions .components-button{position:relative;z-index:1}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields{color:#757575;display:flex;flex-wrap:wrap;gap:12px;row-gap:4px}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields .dataviews-view-activity__item-field:has(.dataviews-view-activity__item-field-value:empty),.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields:empty{display:none}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields .dataviews-view-activity__item-field-value{align-items:center;display:flex}.dataviews-view-activity .dataviews-view-activity__item-type{align-self:stretch;flex-shrink:0}.dataviews-view-activity .dataviews-view-activity__item-type:after{background-color:#ddd;content:"";flex:1 1 auto;margin:0 auto;width:1px}.dataviews-view-activity .dataviews-view-activity__item-type:before{background-color:#ddd;content:"";flex:0 0 auto;margin:0 auto;width:1px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type{width:8px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type:before{height:12px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type-icon{height:11px;width:11px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-content{margin:12px 0}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type{width:24px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type:before{height:12px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type-icon{height:25px;width:25px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-content{margin:12px 0;padding-top:8px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type{width:32px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type:before{height:8px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type-icon{height:33px;width:33px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-content{margin:8px 0 16px;padding-top:12px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-bullet,.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-bullet{height:9px;position:relative;top:50%;transform:translateY(-50%);width:9px}.dataviews-view-activity .dataviews-view-activity__item:first-child .dataviews-view-activity__item-type:before{visibility:hidden}.dataviews-view-activity .dataviews-view-activity__group:last-of-type>.dataviews-view-activity__item:last-of-type .dataviews-view-activity__item-type:after,.dataviews-view-activity>.dataviews-view-activity__item:last-child .dataviews-view-activity__item-type:after{background:linear-gradient(180deg,#ddd 0,#ddd3 60%,#ddd0)}.dataviews-view-activity .dataviews-view-activity__item-type-icon{background-color:#fff;flex-shrink:0;overflow:hidden}.dataviews-view-activity .dataviews-view-activity__item-type-icon .dataviews-view-activity__item-bullet,.dataviews-view-activity .dataviews-view-activity__item-type-icon img,.dataviews-view-activity .dataviews-view-activity__item-type-icon svg{border-radius:50%;box-shadow:inset 0 0 0 1px #ddd;box-sizing:border-box;display:block;height:100%;margin:0 auto;object-fit:cover;width:100%}.dataviews-view-activity .dataviews-view-activity__item-type-icon svg{padding:4px}.dataviews-view-activity .dataviews-view-activity__item-type-icon .dataviews-view-activity__item-bullet{background-color:#ddd;content:""}.dataviews-view-activity+.dataviews-pagination{justify-content:space-between}.dataviews-picker-footer__bulk-selection{align-self:flex-start;height:32px}.dataviews-picker-footer__actions{align-self:flex-end}.dataviews-controls__datetime{border:none;padding:0}.dataviews-controls__relative-date-number,.dataviews-controls__relative-date-unit{flex:1 1 50%}.dataviews-controls__date input[type=date]::-webkit-calendar-picker-indicator,.dataviews-controls__date input[type=date]::-webkit-inner-spin-button{-webkit-appearance:none;display:none}.dataviews-controls__date-range-inputs>*{min-width:0}.dataviews-controls__date-preset{border:1px solid #ddd}.dataviews-controls__date-preset:active{background-color:#000}.dataforms-layouts-panel__field{align-items:flex-start!important;justify-content:flex-start!important;min-height:32px;width:100%}.dataforms-layouts-panel__field--label-position-none{align-items:center!important}.dataforms-layouts-panel__field-label{align-items:center;display:flex;flex-shrink:0;hyphens:auto;line-height:20px;min-height:32px;width:38%}.dataforms-layouts-panel__field-label--label-position-side{align-self:center}.dataforms-layouts-panel__field-label.has-error{color:#cc1818}.dataforms-layouts-panel__field-label-error-content{cursor:help;fill:#cc1818}.dataforms-layouts-panel__field-label-error-content svg{fill:currentColor}.dataforms-layouts-panel__field-control{align-items:center;display:flex;flex-grow:1;min-height:32px}.dataforms-layouts-panel__field-control .components-button{max-width:100%;min-height:32px;text-align:left;text-wrap:balance;text-wrap:pretty;white-space:normal}.dataforms-layouts-panel__field-control.components-button.is-link[aria-disabled=true]{text-decoration:none}.dataforms-layouts-panel__field-control .components-dropdown{max-width:100%}.dataforms-layouts-panel__field-dropdown .components-popover__content{min-width:320px;padding:16px}.dataforms-layouts-panel__dropdown-header{margin-bottom:16px}.dataforms-layouts-panel__modal-footer{margin-top:16px}.components-popover.components-dropdown__content.dataforms-layouts-panel__field-dropdown{z-index:159990}.dataforms-layouts-panel__summary-button:empty{min-width:160px}.dataforms-layouts-regular__field{align-items:flex-start!important;justify-content:flex-start!important;min-height:32px;width:100%}.dataforms-layouts-regular__field-label{align-items:center;display:flex;flex-shrink:0;hyphens:auto;line-height:20px;min-height:32px;width:38%}.dataforms-layouts-regular__field-label--label-position-side{align-self:center}.dataforms-layouts-regular__field-control{align-items:center;display:flex;flex-grow:1;min-height:32px}.dataforms-layouts-card__field-header-label{font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:15px;font-weight:499;line-height:20px}.dataforms-layouts-card__field{width:100%}.dataforms-layouts-card__field-description{color:#757575;display:block;font-size:13px;margin-bottom:16px}.dataforms-layouts-card__field-summary{display:flex;flex-direction:row;gap:16px}.dataforms-layouts-details__content{padding-top:12px}.dataforms-layouts-row__field-control{width:100%}.dataforms-layouts__wrapper{font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:13px;font-weight:400;line-height:20px}'));
+  style.setAttribute("data-wp-hash", "d39e964bb9");
+  style.appendChild(document.createTextNode(':root{--wpds-border-radius-lg:8px;--wpds-border-radius-md:4px;--wpds-border-radius-sm:2px;--wpds-border-radius-xs:1px;--wpds-border-width-focus:2px;--wpds-border-width-lg:8px;--wpds-border-width-md:4px;--wpds-border-width-sm:2px;--wpds-border-width-xs:1px;--wpds-color-bg-interactive-brand-strong:#3858e9;--wpds-color-bg-interactive-brand-strong-active:#2e49d9;--wpds-color-bg-interactive-brand-weak:#0000;--wpds-color-bg-interactive-brand-weak-active:#e6eaf4;--wpds-color-bg-interactive-error:#0000;--wpds-color-bg-interactive-error-active:#fff6f4;--wpds-color-bg-interactive-error-strong:#cc1818;--wpds-color-bg-interactive-error-strong-active:#b90000;--wpds-color-bg-interactive-error-weak:#0000;--wpds-color-bg-interactive-error-weak-active:#f6e6e3;--wpds-color-bg-interactive-neutral-strong:#2d2d2d;--wpds-color-bg-interactive-neutral-strong-active:#1e1e1e;--wpds-color-bg-interactive-neutral-strong-disabled:#e2e2e2;--wpds-color-bg-interactive-neutral-weak:#0000;--wpds-color-bg-interactive-neutral-weak-active:#eaeaea;--wpds-color-bg-interactive-neutral-weak-disabled:#0000;--wpds-color-bg-surface-brand:#ecf0f9;--wpds-color-bg-surface-caution:#fee994;--wpds-color-bg-surface-caution-weak:#fff9c9;--wpds-color-bg-surface-error:#f6e6e3;--wpds-color-bg-surface-error-weak:#fff6f4;--wpds-color-bg-surface-info:#deebfa;--wpds-color-bg-surface-info-weak:#f2f9ff;--wpds-color-bg-surface-neutral:#f8f8f8;--wpds-color-bg-surface-neutral-strong:#fff;--wpds-color-bg-surface-neutral-weak:#f0f0f0;--wpds-color-bg-surface-success:#c5f7cc;--wpds-color-bg-surface-success-weak:#eaffed;--wpds-color-bg-surface-warning:#fde6bd;--wpds-color-bg-surface-warning-weak:#fff7e0;--wpds-color-bg-thumb-brand:#3858e9;--wpds-color-bg-thumb-brand-active:#3858e9;--wpds-color-bg-thumb-neutral-disabled:#d8d8d8;--wpds-color-bg-thumb-neutral-weak:#8a8a8a;--wpds-color-bg-thumb-neutral-weak-active:#6c6c6c;--wpds-color-bg-track-neutral:#d8d8d8;--wpds-color-bg-track-neutral-weak:#e0e0e0;--wpds-color-fg-content-caution:#281d00;--wpds-color-fg-content-caution-weak:#826a00;--wpds-color-fg-content-error:#470000;--wpds-color-fg-content-error-weak:#cc1818;--wpds-color-fg-content-info:#001b4f;--wpds-color-fg-content-info-weak:#006bd7;--wpds-color-fg-content-neutral:#1e1e1e;--wpds-color-fg-content-neutral-weak:#6d6d6d;--wpds-color-fg-content-success:#002900;--wpds-color-fg-content-success-weak:#007f30;--wpds-color-fg-content-warning:#2e1900;--wpds-color-fg-content-warning-weak:#926300;--wpds-color-fg-interactive-brand:#3858e9;--wpds-color-fg-interactive-brand-active:#3858e9;--wpds-color-fg-interactive-brand-strong:#eff0f2;--wpds-color-fg-interactive-brand-strong-active:#eff0f2;--wpds-color-fg-interactive-error:#cc1818;--wpds-color-fg-interactive-error-active:#cc1818;--wpds-color-fg-interactive-error-strong:#f2efef;--wpds-color-fg-interactive-error-strong-active:#f2efef;--wpds-color-fg-interactive-neutral:#1e1e1e;--wpds-color-fg-interactive-neutral-active:#1e1e1e;--wpds-color-fg-interactive-neutral-disabled:#8a8a8a;--wpds-color-fg-interactive-neutral-strong:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-active:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-disabled:#8a8a8a;--wpds-color-fg-interactive-neutral-weak:#6d6d6d;--wpds-color-fg-interactive-neutral-weak-disabled:#8a8a8a;--wpds-color-stroke-focus-brand:#3858e9;--wpds-color-stroke-interactive-brand:#3858e9;--wpds-color-stroke-interactive-brand-active:#2337c8;--wpds-color-stroke-interactive-error:#cc1818;--wpds-color-stroke-interactive-error-active:#9d0000;--wpds-color-stroke-interactive-error-strong:#cc1818;--wpds-color-stroke-interactive-neutral:#8a8a8a;--wpds-color-stroke-interactive-neutral-active:#6c6c6c;--wpds-color-stroke-interactive-neutral-disabled:#d8d8d8;--wpds-color-stroke-interactive-neutral-strong:#6c6c6c;--wpds-color-stroke-surface-brand:#a3b1d4;--wpds-color-stroke-surface-brand-strong:#3858e9;--wpds-color-stroke-surface-error:#daa39b;--wpds-color-stroke-surface-error-strong:#cc1818;--wpds-color-stroke-surface-info:#9fbcdc;--wpds-color-stroke-surface-info-strong:#006bd7;--wpds-color-stroke-surface-neutral:#d8d8d8;--wpds-color-stroke-surface-neutral-strong:#8a8a8a;--wpds-color-stroke-surface-neutral-weak:#e0e0e0;--wpds-color-stroke-surface-success:#8ac894;--wpds-color-stroke-surface-success-strong:#007f30;--wpds-color-stroke-surface-warning:#d0b381;--wpds-color-stroke-surface-warning-strong:#926300;--wpds-dimension-base:4px;--wpds-dimension-gap-2xs:4px;--wpds-dimension-gap-lg:24px;--wpds-dimension-gap-md:16px;--wpds-dimension-gap-sm:12px;--wpds-dimension-gap-xl:40px;--wpds-dimension-gap-xs:8px;--wpds-dimension-padding-surface-2xs:4px;--wpds-dimension-padding-surface-lg:32px;--wpds-dimension-padding-surface-md:24px;--wpds-dimension-padding-surface-sm:16px;--wpds-dimension-padding-surface-xs:8px;--wpds-elevation-large:0 5px 15px 0 #00000014,0 15px 27px 0 #00000012,0 30px 36px 0 #0000000a,0 50px 43px 0 #00000005;--wpds-elevation-medium:0 2px 3px 0 #0000000d,0 4px 5px 0 #0000000a,0 12px 12px 0 #00000008,0 16px 16px 0 #00000005;--wpds-elevation-small:0 1px 2px 0 #0000000d,0 2px 3px 0 #0000000a,0 6px 6px 0 #00000008,0 8px 8px 0 #00000005;--wpds-elevation-x-small:0 1px 1px 0 #00000008,0 1px 2px 0 #00000005,0 3px 3px 0 #00000005,0 4px 4px 0 #00000003;--wpds-font-family-body:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-font-family-heading:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-font-family-mono:"Menlo","Consolas",monaco,monospace;--wpds-font-line-height-2xl:40px;--wpds-font-line-height-lg:28px;--wpds-font-line-height-md:24px;--wpds-font-line-height-sm:20px;--wpds-font-line-height-xl:32px;--wpds-font-line-height-xs:16px;--wpds-font-size-2xl:32px;--wpds-font-size-lg:15px;--wpds-font-size-md:13px;--wpds-font-size-sm:12px;--wpds-font-size-xl:20px;--wpds-font-size-xs:11px;--wpds-font-weight-medium:499;--wpds-font-weight-regular:400}[data-wpds-theme-provider-id][data-wpds-density=default]{--wpds-dimension-base:4px;--wpds-dimension-gap-2xs:4px;--wpds-dimension-gap-lg:24px;--wpds-dimension-gap-md:16px;--wpds-dimension-gap-sm:12px;--wpds-dimension-gap-xl:40px;--wpds-dimension-gap-xs:8px;--wpds-dimension-padding-surface-2xs:4px;--wpds-dimension-padding-surface-lg:32px;--wpds-dimension-padding-surface-md:24px;--wpds-dimension-padding-surface-sm:16px;--wpds-dimension-padding-surface-xs:8px}[data-wpds-theme-provider-id][data-wpds-density=compact]{--wpds-dimension-gap-2xs:4px;--wpds-dimension-gap-lg:20px;--wpds-dimension-gap-md:12px;--wpds-dimension-gap-sm:8px;--wpds-dimension-gap-xl:32px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-surface-2xs:4px;--wpds-dimension-padding-surface-lg:24px;--wpds-dimension-padding-surface-md:20px;--wpds-dimension-padding-surface-sm:12px;--wpds-dimension-padding-surface-xs:4px}[data-wpds-theme-provider-id][data-wpds-density=comfortable]{--wpds-dimension-gap-2xs:8px;--wpds-dimension-gap-lg:32px;--wpds-dimension-gap-md:20px;--wpds-dimension-gap-sm:16px;--wpds-dimension-gap-xl:48px;--wpds-dimension-gap-xs:12px;--wpds-dimension-padding-surface-2xs:8px;--wpds-dimension-padding-surface-lg:40px;--wpds-dimension-padding-surface-md:32px;--wpds-dimension-padding-surface-sm:20px;--wpds-dimension-padding-surface-xs:12px}@media (min-resolution:192dpi){:root{--wpds-border-width-focus:1.5px}}.dataviews-picker-wrapper,.dataviews-wrapper{background-color:var(--wp-dataviews-color-background,#fff);box-sizing:border-box;container:dataviews-wrapper/inline-size;display:flex;flex-direction:column;font-size:13px;height:100%;line-height:1.4;overflow:auto;scroll-padding-bottom:64px}.dataviews-filters__container,.dataviews__view-actions{background-color:inherit;box-sizing:border-box;flex-shrink:0;left:0;padding:16px 24px;position:sticky}@media not (prefers-reduced-motion){.dataviews-filters__container,.dataviews__view-actions{transition:padding .1s ease-out}}.dataviews-loading,.dataviews-no-results{align-items:center;display:flex;flex-grow:1;justify-content:center;padding:0 24px}@media not (prefers-reduced-motion){.dataviews-loading,.dataviews-no-results{transition:padding .1s ease-out}}.dataviews-loading-more{text-align:center}@container (max-width: 430px){.dataviews-filters__container,.dataviews__view-actions{padding:12px 24px}}.dataviews-title-field{font-size:13px;font-weight:499;width:100%}.dataviews-title-field,.dataviews-title-field a{color:#2f2f2f;text-overflow:ellipsis;white-space:nowrap}.dataviews-title-field a{display:block;flex-grow:0;overflow:hidden;text-decoration:none}.dataviews-title-field a:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field a:focus{border-radius:2px;box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color,#007cba);color:var(--wp-admin-theme-color--rgb)}.dataviews-title-field button.components-button.is-link{color:#1e1e1e;display:block;font-weight:inherit;overflow:hidden;text-decoration:none;text-overflow:ellipsis;white-space:nowrap;width:100%}.dataviews-title-field button.components-button.is-link:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field--clickable{color:#2f2f2f;cursor:pointer}.dataviews-title-field--clickable:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field--clickable:focus{border-radius:2px;box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color,#007cba);color:var(--wp-admin-theme-color--rgb)}.components-card__body:has(>.dataviews-picker-wrapper),.components-card__body:has(>.dataviews-wrapper){overflow:hidden;padding:8px 0 0}.dataviews-bulk-actions-footer__item-count{color:#1e1e1e}.dataviews-bulk-actions-footer__container{margin-right:auto;min-height:32px}.dataviews-filters__button{position:relative}.dataviews-filters__container{padding-top:0}.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true],.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true]:hover{opacity:0}.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true]:focus{opacity:1}.dataviews-filters__summary-popover{font-size:13px;line-height:1.4}.dataviews-filters__summary-popover .components-popover__content{border-radius:4px;max-width:250px;min-width:230px;width:100%}.dataviews-filters__summary-popover.components-dropdown__content .components-popover__content{padding:0}.dataviews-filters__summary-operators-container{padding:8px 16px}.dataviews-filters__summary-operators-container:has(+.dataviews-filters__search-widget-listbox),.dataviews-filters__summary-operators-container:has(+.dataviews-filters__search-widget-no-elements),.dataviews-filters__summary-operators-container:has(+.dataviews-filters__user-input-widget){border-bottom:1px solid #e0e0e0}.dataviews-filters__summary-operators-container:empty{display:none}.dataviews-filters__summary-operators-container .dataviews-filters__summary-operators-filter-name{color:#757575;flex-shrink:0;max-width:calc(100% - 55px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dataviews-filters__summary-operators-container .dataviews-filters__summary-operators-filter-select{overflow:hidden;white-space:nowrap;width:100%}.dataviews-filters__summary-chip-container{position:relative;white-space:pre-wrap}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip{align-items:center;background:#f0f0f0;border:1px solid #0000;border-radius:16px;box-sizing:border-box;color:#2f2f2f;cursor:pointer;display:flex;min-height:32px;padding:4px 12px;position:relative}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.is-not-clickable{cursor:default}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-reset{padding-inline-end:28px}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:focus-visible,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:hover:not(.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.is-not-clickable),.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip[aria-expanded=true]{background:#e0e0e0;color:#1e1e1e}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values{background:rgba(var(--wp-admin-theme-color--rgb),.04);color:var(--wp-admin-theme-color)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values:hover,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values[aria-expanded=true]{background:rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:focus-visible{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);outline:none}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip .dataviews-filters-__summary-filter-text-name{font-weight:499}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove{align-items:center;background:#0000;border:0;border-radius:50%;cursor:pointer;display:flex;height:24px;justify-content:center;padding:0;position:absolute;right:4px;top:50%;transform:translateY(-50%);width:24px}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove svg{fill:#757575}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:hover{background:#e0e0e0}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus svg,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:hover svg{fill:#1e1e1e}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove.has-values svg{fill:var(--wp-admin-theme-color)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove.has-values:hover{background:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus-visible{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);outline:none}.dataviews-filters__search-widget-filter-combobox-list{border-top:1px solid #e0e0e0;max-height:184px;overflow:auto;padding:4px}.dataviews-filters__search-widget-filter-combobox-list .dataviews-filters__search-widget-filter-combobox-item-value [data-user-value]{font-weight:600}.dataviews-filters__search-widget-listbox{overflow:auto;padding:4px}.dataviews-filters__search-widget-listitem{align-items:center;border-radius:2px;box-sizing:border-box;cursor:default;display:flex;font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:13px;font-weight:400;gap:8px;line-height:20px;min-height:32px;padding:4px 12px}.dataviews-filters__search-widget-listitem:last-child{margin-block-end:0}.dataviews-filters__search-widget-listitem:focus,.dataviews-filters__search-widget-listitem:hover,.dataviews-filters__search-widget-listitem[data-active-item]{background-color:var(--wp-admin-theme-color);color:#fff}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-description,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-description,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-description{color:#fff}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-single-selection,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-single-selection,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-single-selection{background:#fff;border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-single-selection.is-selected,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-single-selection.is-selected,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-single-selection.is-selected{background:var(--wp-admin-theme-color-darker-20,#183ad6);border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-multi-selection,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-multi-selection,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-multi-selection{border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-multi-selection.is-selected,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-multi-selection.is-selected,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-multi-selection.is-selected{background:var(--wp-admin-theme-color-darker-20,#183ad6);border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-description{color:#757575;display:block;font-size:12px;line-height:16px;overflow:hidden;text-overflow:ellipsis}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{border:1px solid #1e1e1e;border-radius:50%;height:24px;margin-right:12px;max-width:24px;min-width:24px;position:relative;transition:none;width:24px}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{height:16px;max-width:16px;min-width:16px;width:16px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked:before{background-color:#fff;border:4px solid #fff;box-sizing:inherit;height:12px;left:50%;margin:0;position:absolute;top:50%;transform:translate(-50%,-50%);width:12px}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked:before{height:8px;width:8px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked{background:var(--wp-admin-theme-color);border:none}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{margin:0;padding:0}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected{background:var(--wp-admin-theme-color,#3858e9);border-color:var(--wp-admin-theme-color,#3858e9)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected:before{background-color:#fff;border:4px solid #fff;border-radius:50%;box-sizing:inherit;content:"";height:12px;left:50%;margin:0;position:absolute;top:50%;transform:translate(-50%,-50%);width:12px}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected:before{height:8px;width:8px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{--checkbox-size:24px;border:1px solid #949494;border-radius:2px;box-shadow:0 0 0 #0000;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:16px;line-height:normal;margin-right:12px;padding:6px 8px;transition:none}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{font-size:13px;line-height:normal}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:focus{border-color:var(--wp-admin-theme-color);box-shadow:0 0 0 .5px var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection::placeholder{color:#1e1e1e9e}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked{background:var(--wp-admin-theme-color);border-color:var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked:before,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{color:#fff;margin:-3px -5px}@media (min-width:782px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked:before,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{margin:-4px 0 0 -5px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]{background:var(--wp-admin-theme-color);border-color:var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{content:"\\f460";display:inline-block;float:left;font:normal 30px/1 dashicons;vertical-align:middle;width:16px;speak:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (min-width:782px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{float:none;font-size:21px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:disabled,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-disabled=true]{background:#f0f0f0;border-color:#ddd;cursor:default;opacity:1}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{background:#fff;color:#1e1e1e;height:var(--checkbox-size);margin:0;padding:0;position:relative;width:var(--checkbox-size)}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{--checkbox-size:16px}}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{transition:border-color .1s ease-in-out}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected{background:var(--wp-admin-theme-color,#3858e9);border-color:var(--wp-admin-theme-color,#3858e9)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected svg{--checkmark-size:var(--checkbox-size);fill:#fff;height:var(--checkmark-size);left:50%;position:absolute;top:50%;transform:translate(-50%,-50%);width:var(--checkmark-size)}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected svg{--checkmark-size:calc(var(--checkbox-size) + 4px)}}.dataviews-filters__search-widget-filter-combobox__wrapper{padding:8px;position:relative}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{border:1px solid #949494;border-radius:2px;box-shadow:0 0 0 #0000;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;line-height:normal;padding:6px 8px}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{font-size:13px;line-height:normal}}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input:focus{border-color:var(--wp-admin-theme-color);box-shadow:0 0 0 .5px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::placeholder{color:#1e1e1e9e}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{display:block;font-size:16px;height:32px;margin-left:0;margin-right:0;padding:0 8px 0 32px;width:100%}@media (min-width:600px){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{font-size:13px}}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input:focus{background:#fff;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::placeholder{color:#757575}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-cancel-button,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-decoration,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-results-button,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-results-decoration{-webkit-appearance:none}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__icon{align-items:center;bottom:0;display:flex;inset-inline-start:12px;justify-content:center;position:absolute;top:0;width:24px}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__icon:dir(ltr){transform:scaleX(-1)}.dataviews-filters__container-visibility-toggle{flex-shrink:0;position:relative}.dataviews-filters-toggle__count{background:var(--wp-admin-theme-color,#3858e9);border-radius:8px;box-sizing:border-box;color:#fff;font-size:11px;height:16px;line-height:16px;min-width:16px;outline:var(--wp-admin-border-width-focus) solid #fff;padding:0 4px;position:absolute;right:0;text-align:center;top:0;transform:translate(50%,-50%)}.dataviews-search{width:fit-content}.dataviews-filters__user-input-widget{padding:16px}.dataviews-filters__user-input-widget .components-input-control__prefix{padding-left:8px}.dataviews-filters__search-widget-no-elements{align-items:center;display:flex;justify-content:center;padding:16px}.dataviews-footer{background-color:inherit;border-top:1px solid #f0f0f0;bottom:0;flex-shrink:0;left:0;padding:12px 24px;position:sticky}@media not (prefers-reduced-motion){.dataviews-footer{transition:padding .1s ease-out}}.dataviews-footer{z-index:2}@container (max-width: 560px){.dataviews-footer{flex-direction:column!important}.dataviews-footer .dataviews-bulk-actions-footer__container{width:100%}.dataviews-footer .dataviews-bulk-actions-footer__item-count{flex-grow:1}.dataviews-footer .dataviews-pagination{justify-content:space-between;width:100%}}.dataviews-pagination__page-select{font-size:11px;font-weight:499;text-transform:uppercase}@media (min-width:600px){.dataviews-pagination__page-select .components-select-control__input{font-size:11px!important;font-weight:499}}.dataviews-action-modal{z-index:1000001}.dataviews-selection-checkbox{--checkbox-input-size:24px}@media (min-width:600px){.dataviews-selection-checkbox{--checkbox-input-size:16px}}.dataviews-selection-checkbox{flex-shrink:0;line-height:0}.dataviews-selection-checkbox .components-checkbox-control__input-container{margin:0}.dataviews-view-config{container-type:inline-size;font-size:13px;line-height:1.4;width:320px}.dataviews-config__popover.is-expanded .dataviews-config__popover-content-wrapper{height:100%;overflow-y:scroll}.dataviews-config__popover.is-expanded .dataviews-config__popover-content-wrapper .dataviews-view-config{width:auto}.dataviews-view-config__sort-direction .components-toggle-group-control-option-base{text-transform:uppercase}.dataviews-settings-section__title.dataviews-settings-section__title{font-size:15px;line-height:24px}.dataviews-settings-section__sidebar{grid-column:span 4}.dataviews-settings-section__content,.dataviews-settings-section__content>*{grid-column:span 8}.dataviews-settings-section__content .is-divided-in-two{display:contents}.dataviews-settings-section__content .is-divided-in-two>*{grid-column:span 4}.dataviews-settings-section:has(.dataviews-settings-section__content:empty){display:none}@container (max-width: 500px){.dataviews-settings-section.dataviews-settings-section{grid-template-columns:repeat(2,1fr)}.dataviews-settings-section.dataviews-settings-section .dataviews-settings-section__content,.dataviews-settings-section.dataviews-settings-section .dataviews-settings-section__sidebar{grid-column:span 2}}.dataviews-view-config__label{text-wrap:nowrap}.dataviews-view-grid-items{container-type:inline-size;display:grid;gap:32px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));grid-template-rows:max-content;margin-bottom:auto;padding:0 24px 24px}@media not (prefers-reduced-motion){.dataviews-view-grid-items{transition:padding .1s ease-out}}.dataviews-view-grid{container-type:inline-size;display:flex;flex-direction:column;gap:32px;margin-bottom:auto;padding:0 24px 24px}@media not (prefers-reduced-motion){.dataviews-view-grid{transition:padding .1s ease-out}}.dataviews-view-grid .dataviews-view-grid__row{display:grid;gap:32px}.dataviews-view-grid .dataviews-view-grid__row .dataviews-view-grid__row__gridcell{border-radius:4px;position:relative}.dataviews-view-grid .dataviews-view-grid__row .dataviews-view-grid__row__gridcell[data-focus-visible]:after{border-radius:4px;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);content:"";height:100%;left:0;outline:2px solid #0000;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-grid .dataviews-view-grid__card{height:100%;justify-content:flex-start;position:relative}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-actions{padding:8px 0 4px}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-field{align-content:center;min-height:24px;overflow:hidden;text-align:start}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-field--clickable{width:fit-content}.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-value{color:#1e1e1e}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__media:focus:after,.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__media:after{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__media:after{box-shadow:inset 0 0 0 1px var(--wp-admin-theme-color)}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__media:focus:after{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-view-grid .dataviews-view-grid__media{aspect-ratio:1/1;background-color:#fff;border-radius:4px;overflow:hidden;position:relative;width:100%}.dataviews-view-grid .dataviews-view-grid__media img{height:100%;object-fit:cover;width:100%}.dataviews-view-grid .dataviews-view-grid__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-grid .dataviews-view-grid__fields{font-size:12px;line-height:16px;position:relative}.dataviews-view-grid .dataviews-view-grid__fields:not(:empty){padding:0 0 12px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field-value:not(:empty){line-height:20px;min-height:24px;padding-top:2px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field{align-items:center;min-height:24px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-name{color:#757575;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:35%}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-value{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:65%}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field:not(:has(.dataviews-view-grid__field-value:not(:empty))){display:none}.dataviews-view-grid .dataviews-view-grid__badge-fields:not(:empty){padding-bottom:12px}.dataviews-view-grid__field-value:empty,.dataviews-view-grid__field:empty{display:none}.dataviews-view-grid__card .dataviews-selection-checkbox{left:8px;opacity:0;position:absolute;top:-9999em;z-index:1}@media not (prefers-reduced-motion){.dataviews-view-grid__card .dataviews-selection-checkbox{transition:opacity .1s linear}}@media (hover:none){.dataviews-view-grid__card .dataviews-selection-checkbox{opacity:1;top:8px}}.dataviews-view-grid__card.is-selected .dataviews-selection-checkbox,.dataviews-view-grid__card:focus-within .dataviews-selection-checkbox,.dataviews-view-grid__card:hover .dataviews-selection-checkbox{opacity:1;top:8px}.dataviews-view-grid__card .dataviews-view-grid__media-actions{opacity:0;position:absolute;right:4px;top:4px}.dataviews-view-grid__card .dataviews-view-grid__media-actions .dataviews-all-actions-button{background-color:#fff}@media not (prefers-reduced-motion){.dataviews-view-grid__card .dataviews-view-grid__media-actions{transition:opacity .1s linear}}@media (hover:none){.dataviews-view-grid__card .dataviews-view-grid__media-actions{opacity:1;top:4px}}.dataviews-view-grid__card .dataviews-view-grid__media-actions:has(.dataviews-all-actions-button[aria-expanded=true]),.dataviews-view-grid__card:focus-within .dataviews-view-grid__media-actions,.dataviews-view-grid__card:hover .dataviews-view-grid__media-actions{opacity:1}.dataviews-view-grid__media--clickable{cursor:pointer}.dataviews-view-grid__group-header{color:#1e1e1e;container-type:inline-size;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 24px}div.dataviews-view-list{list-style-type:none}.dataviews-view-list{margin:0 0 auto}.dataviews-view-list div[role=article],.dataviews-view-list div[role=row]{border-top:1px solid #f0f0f0;margin:0}.dataviews-view-list div[role=article] .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row] .dataviews-view-list__item-wrapper{box-sizing:border-box;padding:16px 24px;position:relative}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions{display:flex;flex:0 0 auto;gap:4px;white-space:nowrap;width:max-content}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions .components-button,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions .components-button{position:relative;z-index:1}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>div,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>div{height:24px}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>:not(:last-child){flex:0;overflow:hidden;width:0}.dataviews-view-list div[role=article]:where(.is-selected,.is-hovered,:focus-within) .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row]:where(.is-selected,.is-hovered,:focus-within) .dataviews-view-list__item-actions>:not(:last-child){flex-basis:min-content;overflow:unset;width:auto}@media (hover:none){.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>:not(:last-child){flex-basis:min-content;overflow:unset;width:auto}}.dataviews-view-list div[role=article].is-selected.is-selected,.dataviews-view-list div[role=article].is-selected.is-selected+div[role=article],.dataviews-view-list div[role=article].is-selected.is-selected+div[role=row],.dataviews-view-list div[role=row].is-selected.is-selected,.dataviews-view-list div[role=row].is-selected.is-selected+div[role=article],.dataviews-view-list div[role=row].is-selected.is-selected+div[role=row]{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered,.dataviews-view-list div[role=article]:not(.is-selected):focus-within,.dataviews-view-list div[role=article]:not(.is-selected):hover,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered,.dataviews-view-list div[role=row]:not(.is-selected):focus-within,.dataviews-view-list div[role=row]:not(.is-selected):hover{background-color:rgba(var(--wp-admin-theme-color--rgb),.04);border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12);color:var(--wp-admin-theme-color)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected).is-hovered+div[role=row],.dataviews-view-list div[role=article]:not(.is-selected):focus-within+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected):focus-within+div[role=row],.dataviews-view-list div[role=article]:not(.is-selected):hover+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected):hover+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected).is-hovered+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected).is-hovered+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected):focus-within+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected):focus-within+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected):hover+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected):hover+div[role=row]{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected).is-hovered .dataviews-view-list__field,.dataviews-view-list div[role=article]:not(.is-selected):focus-within .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected):focus-within .dataviews-view-list__field,.dataviews-view-list div[role=article]:not(.is-selected):hover .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected):hover .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected):focus-within .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected):focus-within .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected):hover .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected):hover .dataviews-view-list__field{color:var(--wp-admin-theme-color)}.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper{background-color:rgba(var(--wp-admin-theme-color--rgb),.08);color:#1e1e1e}.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-view-list__field{color:#1e1e1e}.dataviews-view-list .dataviews-view-list__item{appearance:none;background:none;border:none;cursor:pointer;inset:0;padding:0;position:absolute;scroll-margin:8px 0;z-index:1}.dataviews-view-list .dataviews-view-list__item:focus-visible{outline:none}.dataviews-view-list .dataviews-view-list__item:focus-visible:before{border-radius:2px;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);content:"";inset:var(--wp-admin-border-width-focus);outline:2px solid #0000;position:absolute}.dataviews-view-list .dataviews-view-list__title-field{flex:1;line-height:24px;min-height:24px;overflow:hidden}.dataviews-view-list .dataviews-view-list__title-field:has(a,button){z-index:1}.dataviews-view-list .dataviews-view-list__media-wrapper{background-color:#fff;border-radius:4px;flex-shrink:0;height:52px;overflow:hidden;position:relative;width:52px}.dataviews-view-list .dataviews-view-list__media-wrapper img{height:100%;object-fit:cover;width:100%}.dataviews-view-list .dataviews-view-list__media-wrapper:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.dataviews-view-list .dataviews-view-list__field-wrapper{flex-grow:1;min-height:52px}.dataviews-view-list .dataviews-view-list__field{color:#757575}.dataviews-view-list .dataviews-view-list__fields{display:flex;flex-wrap:wrap;font-size:12px;gap:12px;row-gap:4px}.dataviews-view-list .dataviews-view-list__fields .dataviews-view-list__field:has(.dataviews-view-list__field-value:empty),.dataviews-view-list .dataviews-view-list__fields:empty{display:none}.dataviews-view-list .dataviews-view-list__fields .dataviews-view-list__field-value{align-items:center;display:flex;line-height:20px;min-height:24px}.dataviews-view-list+.dataviews-pagination{justify-content:space-between}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__item-wrapper{padding:8px 24px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__title-field{line-height:16px;min-height:16px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__media-wrapper{height:32px;width:32px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__field-wrapper{min-height:32px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__fields{gap:8px;row-gap:4px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__fields .dataviews-view-list__field-value{line-height:16px;min-height:16px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__item-wrapper{padding:24px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__title-field{line-height:32px;min-height:32px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__media-wrapper{height:64px;width:64px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__field-wrapper{min-height:64px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__fields{gap:16px;row-gap:8px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__fields .dataviews-view-list__field-value{line-height:24px;min-height:32px}.dataviews-view-list__group-header{color:#1e1e1e;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 24px}.dataviews-view-table{background-color:inherit;border-collapse:collapse;border-color:inherit;color:#757575;margin-bottom:auto;position:relative;text-indent:0;width:100%}.dataviews-view-table th{color:#1e1e1e;font-size:13px;font-weight:400;text-align:left}.dataviews-view-table td,.dataviews-view-table th{padding:12px}.dataviews-view-table td.dataviews-view-table__actions-column,.dataviews-view-table th.dataviews-view-table__actions-column{text-align:right}.dataviews-view-table td.dataviews-view-table__actions-column--sticky,.dataviews-view-table th.dataviews-view-table__actions-column--sticky{background-color:var(--wp-dataviews-color-background,#fff);position:sticky;right:0}.dataviews-view-table td.dataviews-view-table__actions-column--stuck:after,.dataviews-view-table th.dataviews-view-table__actions-column--stuck:after{background-color:#f0f0f0;bottom:0;content:"";display:block;left:0;position:absolute;top:0;width:1px}.dataviews-view-table td.dataviews-view-table__checkbox-column,.dataviews-view-table th.dataviews-view-table__checkbox-column{padding-right:0}.dataviews-view-table td.dataviews-view-table__checkbox-column .dataviews-view-table__cell-content-wrapper,.dataviews-view-table th.dataviews-view-table__checkbox-column .dataviews-view-table__cell-content-wrapper{max-width:auto;min-width:auto}.dataviews-view-table tr{background-color:inherit;border-top:1px solid #f0f0f0}.dataviews-view-table tr td:first-child,.dataviews-view-table tr th:first-child{padding-left:24px}.dataviews-view-table tr td:last-child,.dataviews-view-table tr th:last-child{padding-right:24px}.dataviews-view-table tr:last-child{border-bottom:0}.dataviews-view-table tr .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:0}@media (hover:none){.dataviews-view-table tr .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:1}}.dataviews-view-table tr.is-selected{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff);color:#757575}.dataviews-view-table tr.is-selected,.dataviews-view-table tr.is-selected+tr{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-table tr.is-selected .dataviews-view-table__actions-column--sticky{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff)}.dataviews-view-table tr.is-hovered .dataviews-item-actions .components-button:not(.dataviews-all-actions-button),.dataviews-view-table tr:focus-within .dataviews-item-actions .components-button:not(.dataviews-all-actions-button),.dataviews-view-table tr:hover .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:1}.dataviews-view-table.has-bulk-actions tr:focus-within .dataviews-view-table__actions-column--sticky,.dataviews-view-table.has-bulk-actions tr:hover .dataviews-view-table__actions-column--sticky{background-color:var(--wp-dataviews-color-background,#fff)}.dataviews-view-table.has-bulk-actions tr.is-selected .dataviews-view-table__actions-column--sticky,.dataviews-view-table.has-bulk-actions tr.is-selected:hover .dataviews-view-table__actions-column--sticky{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff)}.dataviews-view-table thead{background-color:inherit;inset-block-start:0;position:sticky;z-index:1}.dataviews-view-table thead tr{border:0}.dataviews-view-table thead th{background-color:inherit;font-size:11px;font-weight:499;padding-bottom:8px;padding-top:8px;text-transform:uppercase}.dataviews-view-table thead th:has(.dataviews-view-table-header-button){padding-left:4px;padding-right:4px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button) .dataviews-view-table-header-button{gap:4px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button):first-child{padding-left:40px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button):last-child{padding-right:40px}.dataviews-view-table tbody td{vertical-align:top}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper{align-items:center;display:flex;min-height:32px;white-space:nowrap}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper.dataviews-view-table__cell-align-end{justify-content:flex-end}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper.dataviews-view-table__cell-align-center{justify-content:center}.dataviews-view-table tbody .components-v-stack>.dataviews-view-table__cell-content-wrapper:not(:first-child){min-height:0}.dataviews-view-table .dataviews-view-table-header-button{font-size:11px;font-weight:499;padding:4px 8px;text-transform:uppercase}.dataviews-view-table .dataviews-view-table-header-button:not(:hover){color:#1e1e1e}.dataviews-view-table .dataviews-view-table-header-button span{speak:none}.dataviews-view-table .dataviews-view-table-header-button span:empty{display:none}.dataviews-view-table .dataviews-view-table-header{padding-left:4px}.dataviews-view-table .dataviews-view-table__actions-column{white-space:nowrap;width:auto}.dataviews-view-table.has-compact-density thead th:has(.dataviews-view-table-header-button):not(:first-child){padding-left:0}.dataviews-view-table.has-compact-density thead th:has(.dataviews-view-table-header-button):not(:last-child){padding-right:0}.dataviews-view-table.has-compact-density td,.dataviews-view-table.has-compact-density th{padding:4px 8px}.dataviews-view-table.has-comfortable-density td,.dataviews-view-table.has-comfortable-density th{padding:16px 12px}.dataviews-view-table.has-comfortable-density td.dataviews-view-table__checkbox-column,.dataviews-view-table.has-comfortable-density th.dataviews-view-table__checkbox-column,.dataviews-view-table.has-compact-density td.dataviews-view-table__checkbox-column,.dataviews-view-table.has-compact-density th.dataviews-view-table__checkbox-column{padding-right:0}.dataviews-view-table-selection-checkbox{--checkbox-input-size:24px}@media (min-width:600px){.dataviews-view-table-selection-checkbox{--checkbox-input-size:16px}}.dataviews-column-primary__media{background-color:#fff;border-radius:4px;flex-shrink:0;max-width:60px;min-height:32px;min-width:32px;overflow:hidden;position:relative}.dataviews-column-primary__media img{height:32px;object-fit:cover;width:32px}.dataviews-column-primary__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.dataviews-view-table__cell-content-wrapper:not(.dataviews-column-primary__media),.dataviews-view-table__primary-column-content:not(.dataviews-column-primary__media){max-width:80ch;min-width:15ch}.dataviews-view-table__group-header-row .dataviews-view-table__group-header-cell{color:#1e1e1e;font-weight:499;padding:12px 24px}.dataviews-view-table col[class^=dataviews-view-table__col-]:not(.dataviews-view-table__col-first-data){width:1%}.dataviews-view-picker-grid .dataviews-view-picker-grid__card{height:100%;justify-content:flex-start;position:relative}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-actions{padding:8px 0 4px}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-field{align-content:center;min-height:24px;overflow:hidden;text-align:start}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-field--clickable{width:fit-content}.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-value{color:#1e1e1e}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__media:focus:after,.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__media:after{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__media:after{box-shadow:inset 0 0 0 1px var(--wp-admin-theme-color)}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__media:focus:after{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-view-picker-grid:focus-visible[aria-activedescendant]{outline:none}.dataviews-view-picker-grid:focus-visible [data-active-item=true]{outline:2px solid var(--wp-admin-theme-color)}.dataviews-view-picker-grid .dataviews-selection-checkbox{top:8px!important}.dataviews-view-picker-grid .dataviews-selection-checkbox input{pointer-events:none}.dataviews-view-picker-grid .dataviews-view-picker-grid__media{aspect-ratio:1/1;background-color:#fff;border-radius:4px;min-height:0;position:relative;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__media img{height:100%;object-fit:cover;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields{font-size:12px;line-height:16px;position:relative}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields:not(:empty){padding:0 0 12px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field-value:not(:empty){line-height:20px;min-height:24px;padding-top:2px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field{align-items:center;min-height:24px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-name{color:#757575;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:35%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-value{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:65%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field:not(:has(.dataviews-view-picker-grid__field-value:not(:empty))){display:none}.dataviews-view-picker-grid .dataviews-view-picker-grid__badge-fields:not(:empty){padding-bottom:12px}.dataviews-view-picker-grid__field-value:empty,.dataviews-view-picker-grid__field:empty{display:none}.dataviews-view-picker-grid__card .dataviews-selection-checkbox{left:8px;position:absolute;top:-9999em;z-index:1}@media (hover:none){.dataviews-view-picker-grid__card .dataviews-selection-checkbox{top:8px}}.dataviews-view-picker-grid__card.is-selected .dataviews-selection-checkbox,.dataviews-view-picker-grid__card:focus-within .dataviews-selection-checkbox,.dataviews-view-picker-grid__card:hover .dataviews-selection-checkbox{top:8px}.dataviews-view-picker-grid__media--clickable{cursor:pointer}.dataviews-view-picker-grid-group__header{color:#1e1e1e;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 48px}.dataviews-view-picker-table{background-color:inherit}.dataviews-view-picker-table .dataviews-view-table__checkbox-column{width:48px}.dataviews-view-picker-table tbody:focus-visible[aria-activedescendant]{outline:none}.dataviews-view-picker-table tbody:focus-visible [data-active-item=true]{outline:2px solid var(--wp-admin-theme-color)}.dataviews-view-picker-table .dataviews-selection-checkbox .components-checkbox-control__input.components-checkbox-control__input{opacity:1;pointer-events:none}.dataviews-view-picker-table .dataviews-view-table__row{cursor:pointer}.dataviews-view-picker-table .dataviews-view-table__row.is-selected{background-color:rgba(var(--wp-admin-theme-color--rgb),.04)}.dataviews-view-picker-table .dataviews-view-table__row.is-hovered{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-picker-table .dataviews-view-table__row.is-selected.is-hovered{background-color:rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-activity{margin:0 0 auto;padding:8px 24px}.dataviews-view-activity .dataviews-view-activity__group-header{color:#949494;font-size:15px;font-weight:499;margin:0 0 8px;padding:0}.dataviews-view-activity .dataviews-view-activity__item-actions{min-width:24px}.dataviews-view-activity .dataviews-view-activity__item-content{flex-grow:1}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-description,.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields,.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title{min-height:16px}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title{align-items:center;display:flex;flex:1;overflow:hidden;position:relative}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title--clickable{cursor:pointer}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title--clickable:focus-visible{border-radius:2px;outline:var(--wp-admin-border-width-focus) solid var(--wp-admin-theme-color);outline-offset:var(--wp-admin-border-width-focus)}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__primary-actions{display:flex;flex:0 0 auto;width:max-content}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__primary-actions .components-button{position:relative;z-index:1}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields{color:#757575;display:flex;flex-wrap:wrap;gap:12px;row-gap:4px}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields .dataviews-view-activity__item-field:has(.dataviews-view-activity__item-field-value:empty),.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields:empty{display:none}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields .dataviews-view-activity__item-field-value{align-items:center;display:flex}.dataviews-view-activity .dataviews-view-activity__item-type{align-self:stretch;flex-shrink:0}.dataviews-view-activity .dataviews-view-activity__item-type:after{background-color:#ddd;content:"";flex:1 1 auto;margin:0 auto;width:1px}.dataviews-view-activity .dataviews-view-activity__item-type:before{background-color:#ddd;content:"";flex:0 0 auto;margin:0 auto;width:1px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type{width:8px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type:before{height:12px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type-icon{height:11px;width:11px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-content{margin:12px 0}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type{width:24px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type:before{height:12px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type-icon{height:25px;width:25px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-content{margin:12px 0;padding-top:8px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type{width:32px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type:before{height:8px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type-icon{height:33px;width:33px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-content{margin:8px 0 16px;padding-top:12px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-bullet,.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-bullet{height:9px;position:relative;top:50%;transform:translateY(-50%);width:9px}.dataviews-view-activity .dataviews-view-activity__item:first-child .dataviews-view-activity__item-type:before{visibility:hidden}.dataviews-view-activity .dataviews-view-activity__group:last-of-type>.dataviews-view-activity__item:last-of-type .dataviews-view-activity__item-type:after,.dataviews-view-activity>.dataviews-view-activity__item:last-child .dataviews-view-activity__item-type:after{background:linear-gradient(180deg,#ddd 0,#ddd3 60%,#ddd0)}.dataviews-view-activity .dataviews-view-activity__item-type-icon{background-color:#fff;flex-shrink:0;overflow:hidden}.dataviews-view-activity .dataviews-view-activity__item-type-icon .dataviews-view-activity__item-bullet,.dataviews-view-activity .dataviews-view-activity__item-type-icon img,.dataviews-view-activity .dataviews-view-activity__item-type-icon svg{border-radius:50%;box-shadow:inset 0 0 0 1px #ddd;box-sizing:border-box;display:block;height:100%;margin:0 auto;object-fit:cover;width:100%}.dataviews-view-activity .dataviews-view-activity__item-type-icon svg{padding:4px}.dataviews-view-activity .dataviews-view-activity__item-type-icon .dataviews-view-activity__item-bullet{background-color:#ddd;content:""}.dataviews-view-activity+.dataviews-pagination{justify-content:space-between}.dataviews-picker-footer__bulk-selection{align-self:flex-start;height:32px}.dataviews-picker-footer__actions{align-self:flex-end}.dataviews-controls__datetime{border:none;padding:0}.dataviews-controls__relative-date-number,.dataviews-controls__relative-date-unit{flex:1 1 50%}.dataviews-controls__date input[type=date]::-webkit-calendar-picker-indicator,.dataviews-controls__date input[type=date]::-webkit-inner-spin-button{-webkit-appearance:none;display:none}.dataviews-controls__date-range-inputs>*{min-width:0}.dataviews-controls__date-preset{border:1px solid #ddd}.dataviews-controls__date-preset:active{background-color:#000}.dataforms-layouts-panel__field{align-items:flex-start!important;justify-content:flex-start!important;min-height:32px;width:100%}.dataforms-layouts-panel__field--label-position-none{align-items:center!important}.dataforms-layouts-panel__field-label{align-items:center;display:flex;flex-shrink:0;hyphens:auto;line-height:20px;min-height:32px;width:38%}.dataforms-layouts-panel__field-label--label-position-side{align-self:center}.dataforms-layouts-panel__field-label.has-error{color:#cc1818}.dataforms-layouts-panel__field-label-error-content{cursor:help;fill:#cc1818}.dataforms-layouts-panel__field-label-error-content svg{fill:currentColor}.dataforms-layouts-panel__field-control{align-items:center;display:flex;flex-grow:1;min-height:32px}.dataforms-layouts-panel__field-control .components-button{max-width:100%;min-height:32px;text-align:left;text-wrap:balance;text-wrap:pretty;white-space:normal}.dataforms-layouts-panel__field-control.components-button.is-link[aria-disabled=true]{text-decoration:none}.dataforms-layouts-panel__field-control .components-dropdown{max-width:100%}.dataforms-layouts-panel__field-dropdown .components-popover__content{min-width:320px;padding:16px}.dataforms-layouts-panel__dropdown-header{margin-bottom:16px}.dataforms-layouts-panel__modal-footer{margin-top:16px}.components-popover.components-dropdown__content.dataforms-layouts-panel__field-dropdown{z-index:159990}.dataforms-layouts-panel__summary-button:empty{min-width:160px}.dataforms-layouts-regular__field{align-items:flex-start!important;justify-content:flex-start!important;min-height:32px;width:100%}.dataforms-layouts-regular__field-label{align-items:center;display:flex;flex-shrink:0;hyphens:auto;line-height:20px;min-height:32px;width:38%}.dataforms-layouts-regular__field-label--label-position-side{align-self:center}.dataforms-layouts-regular__field-control{align-items:center;display:flex;flex-grow:1;min-height:32px}.dataforms-layouts-card__field-header-label{font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:15px;font-weight:499;line-height:20px}.dataforms-layouts-card__field{width:100%}.dataforms-layouts-card__field-description{color:#757575;display:block;font-size:13px;margin-bottom:16px}.dataforms-layouts-card__field-summary{display:flex;flex-direction:row;gap:16px}.dataforms-layouts-details__content{padding-top:12px}.dataforms-layouts-row__field-control{width:100%}.dataforms-layouts__wrapper{font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:13px;font-weight:400;line-height:20px}@media (max-width:782px){.admin-ui-page{top:46px}}@container (width < 500px){.jp-forms-dataviews__view-actions{--wp-ui-stack-justify:flex-start;align-items:flex-start;flex-direction:column-reverse}}.jp-forms-dataviews__view-actions>div:not(:empty){min-height:48px}'));
   document.head.appendChild(style);
 }
 
 // routes/forms/stage.tsx
-var import_jsx_runtime158 = __toESM(require_jsx_runtime());
+var import_jsx_runtime161 = __toESM(require_jsx_runtime());
 var DEFAULT_VIEW = {
   type: "table",
   search: "",
@@ -28316,10 +28676,10 @@ var defaultLayouts = {
   list: {}
 };
 function StageInner() {
-  const navigate = useNavigate2();
-  const searchParams = useSearch({ from: "/forms" });
+  const navigate = useNavigate3();
+  const searchParams = useSearch2({ from: "/forms" });
   const dateSettings = (0, import_date10.getSettings)();
-  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element86.useState)(false);
+  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element87.useState)(false);
   const integrations = (0, import_data32.useSelect)(
     (select3) => select3(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
@@ -28328,24 +28688,24 @@ function StageInner() {
   const { createSuccessNotice, createErrorNotice } = (0, import_data32.useDispatch)(import_notices5.store);
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
-  const [view, setView] = (0, import_element86.useState)(() => ({
+  const [view, setView] = (0, import_element87.useState)(() => ({
     ...DEFAULT_VIEW,
     search: searchParams?.search || ""
   }));
-  (0, import_element86.useEffect)(() => {
+  (0, import_element87.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
     if (urlSearch !== view.search) {
       setView((previous) => ({ ...previous, search: urlSearch }));
     }
   }, [searchParams?.search]);
-  const statusQuery = (0, import_element86.useMemo)(() => {
+  const statusQuery = (0, import_element87.useMemo)(() => {
     const statusFilterValue = view.filters?.find((filter) => filter.field === "status")?.value;
     if (!statusFilterValue || statusFilterValue === "all") {
       return NON_TRASH_FORM_STATUSES;
     }
     return statusFilterValue;
   }, [view.filters]);
-  const isViewingTrash = (0, import_element86.useMemo)(() => {
+  const isViewingTrash = (0, import_element87.useMemo)(() => {
     const statusFilterValue = view.filters?.find((filter) => filter.field === "status")?.value;
     return statusFilterValue === "trash";
   }, [view.filters]);
@@ -28369,23 +28729,23 @@ function StageInner() {
     recordsLength: records?.length ?? 0,
     statusQuery
   });
-  const [selection, setSelection] = (0, import_element86.useState)([]);
-  const [pendingPermanentDeleteCount, setPendingPermanentDeleteCount] = (0, import_element86.useState)(0);
-  (0, import_element86.useEffect)(() => {
+  const [selection, setSelection] = (0, import_element87.useState)([]);
+  const [pendingPermanentDeleteCount, setPendingPermanentDeleteCount] = (0, import_element87.useState)(0);
+  (0, import_element87.useEffect)(() => {
     setSelection([]);
   }, [view.page, view.perPage, view.search, view.filters]);
-  const onOpenPermanentDeleteConfirm = (0, import_element86.useCallback)(
+  const onOpenPermanentDeleteConfirm = (0, import_element87.useCallback)(
     (items) => {
       setPendingPermanentDeleteCount(items?.length ?? 0);
       openPermanentDeleteConfirm(items);
     },
     [openPermanentDeleteConfirm]
   );
-  const onClosePermanentDeleteConfirm = (0, import_element86.useCallback)(() => {
+  const onClosePermanentDeleteConfirm = (0, import_element87.useCallback)(() => {
     setPendingPermanentDeleteCount(0);
     closePermanentDeleteConfirm();
   }, [closePermanentDeleteConfirm]);
-  const onConfirmPermanentDelete = (0, import_element86.useCallback)(async () => {
+  const onConfirmPermanentDelete = (0, import_element87.useCallback)(async () => {
     setPendingPermanentDeleteCount(0);
     try {
       await confirmPermanentDelete();
@@ -28393,59 +28753,59 @@ function StageInner() {
       setSelection([]);
     }
   }, [confirmPermanentDelete]);
-  const statusLabel = (0, import_element86.useCallback)((status) => {
+  const statusLabel = (0, import_element87.useCallback)((status) => {
     switch (status) {
       case "publish":
-        return (0, import_i18n78.__)("Published", "jetpack-forms");
+        return (0, import_i18n82.__)("Published", "jetpack-forms");
       case "draft":
-        return (0, import_i18n78.__)("Draft", "jetpack-forms");
+        return (0, import_i18n82.__)("Draft", "jetpack-forms");
       case "pending":
-        return (0, import_i18n78.__)("Pending review", "jetpack-forms");
+        return (0, import_i18n82.__)("Pending review", "jetpack-forms");
       case "future":
-        return (0, import_i18n78.__)("Scheduled", "jetpack-forms");
+        return (0, import_i18n82.__)("Scheduled", "jetpack-forms");
       case "private":
-        return (0, import_i18n78.__)("Private", "jetpack-forms");
+        return (0, import_i18n82.__)("Private", "jetpack-forms");
       default:
         return status;
     }
   }, []);
-  const fields = (0, import_element86.useMemo)(
+  const fields = (0, import_element87.useMemo)(
     () => [
       {
         id: "title",
-        label: (0, import_i18n78.__)("Form name", "jetpack-forms"),
+        label: (0, import_i18n82.__)("Form name", "jetpack-forms"),
         getValue: ({ item }) => item.title,
-        render: ({ item }) => item.title || (0, import_i18n78.__)("(no title)", "jetpack-forms"),
+        render: ({ item }) => item.title || (0, import_i18n82.__)("(no title)", "jetpack-forms"),
         enableSorting: false,
         enableHiding: false
       },
       {
         id: "entries",
-        label: (0, import_i18n78.__)("Entries", "jetpack-forms"),
+        label: (0, import_i18n82.__)("Entries", "jetpack-forms"),
         getValue: ({ item }) => item.entriesCount ?? 0,
         render: ({ item }) => item.entriesCount ?? 0,
         enableSorting: false
       },
       {
         id: "status",
-        label: (0, import_i18n78.__)("Status", "jetpack-forms"),
+        label: (0, import_i18n82.__)("Status", "jetpack-forms"),
         getValue: ({ item }) => item.status,
         render: ({ item }) => statusLabel(item.status),
         elements: [
-          { label: (0, import_i18n78.__)("All", "jetpack-forms"), value: "all" },
-          { label: (0, import_i18n78.__)("Published", "jetpack-forms"), value: "publish" },
-          { label: (0, import_i18n78.__)("Draft", "jetpack-forms"), value: "draft" },
-          { label: (0, import_i18n78.__)("Pending review", "jetpack-forms"), value: "pending" },
-          { label: (0, import_i18n78.__)("Scheduled", "jetpack-forms"), value: "future" },
-          { label: (0, import_i18n78.__)("Private", "jetpack-forms"), value: "private" },
-          { label: (0, import_i18n78.__)("Trash", "jetpack-forms"), value: "trash" }
+          { label: (0, import_i18n82.__)("All", "jetpack-forms"), value: "all" },
+          { label: (0, import_i18n82.__)("Published", "jetpack-forms"), value: "publish" },
+          { label: (0, import_i18n82.__)("Draft", "jetpack-forms"), value: "draft" },
+          { label: (0, import_i18n82.__)("Pending review", "jetpack-forms"), value: "pending" },
+          { label: (0, import_i18n82.__)("Scheduled", "jetpack-forms"), value: "future" },
+          { label: (0, import_i18n82.__)("Private", "jetpack-forms"), value: "private" },
+          { label: (0, import_i18n82.__)("Trash", "jetpack-forms"), value: "trash" }
         ],
         filterBy: { operators: ["is"], isPrimary: true },
         enableSorting: false
       },
       {
         id: "modified",
-        label: (0, import_i18n78.__)("Last updated", "jetpack-forms"),
+        label: (0, import_i18n82.__)("Last updated", "jetpack-forms"),
         type: "date",
         render: ({ item }) => (0, import_date10.dateI18n)(dateSettings.formats.datetime, item.modified),
         enableSorting: false
@@ -28453,18 +28813,18 @@ function StageInner() {
     ],
     [dateSettings.formats.datetime, statusLabel]
   );
-  const openSingleFormView = (0, import_element86.useCallback)(
+  const openSingleFormView = (0, import_element87.useCallback)(
     (formId) => {
       navigate({ href: `/responses/inbox?sourceId=${encodeURIComponent(String(formId))}` });
     },
     [navigate]
   );
-  const actions2 = (0, import_element86.useMemo)(() => {
+  const actions2 = (0, import_element87.useMemo)(() => {
     const actionsList = [
       {
         id: "view-responses",
         isPrimary: true,
-        label: (0, import_i18n78.__)("Responses", "jetpack-forms"),
+        label: (0, import_i18n82.__)("Responses", "jetpack-forms"),
         supportsBulk: false,
         callback(items) {
           const [item] = items;
@@ -28479,7 +28839,7 @@ function StageInner() {
       actionsList.push({
         id: "restore-form",
         isPrimary: true,
-        label: (0, import_i18n78.__)("Restore", "jetpack-forms"),
+        label: (0, import_i18n82.__)("Restore", "jetpack-forms"),
         supportsBulk: true,
         async callback(items) {
           if (isDeleting) {
@@ -28495,7 +28855,7 @@ function StageInner() {
       actionsList.push({
         id: "delete-form-permanently",
         isPrimary: false,
-        label: (0, import_i18n78.__)("Delete permanently", "jetpack-forms"),
+        label: (0, import_i18n82.__)("Delete permanently", "jetpack-forms"),
         supportsBulk: true,
         async callback(items) {
           if (isDeleting) {
@@ -28512,7 +28872,7 @@ function StageInner() {
     actionsList.push({
       id: "edit-form",
       isPrimary: true,
-      label: (0, import_i18n78.__)("Edit", "jetpack-forms"),
+      label: (0, import_i18n82.__)("Edit", "jetpack-forms"),
       supportsBulk: false,
       async callback(items) {
         const [item] = items;
@@ -28528,7 +28888,7 @@ function StageInner() {
     actionsList.push({
       id: "preview-form",
       isPrimary: false,
-      label: (0, import_i18n78.__)("Preview", "jetpack-forms"),
+      label: (0, import_i18n82.__)("Preview", "jetpack-forms"),
       supportsBulk: false,
       async callback(items) {
         const [item] = items;
@@ -28549,7 +28909,7 @@ function StageInner() {
       actionsList.push({
         id: "copy-embed",
         isPrimary: false,
-        label: (0, import_i18n78.__)("Copy embed", "jetpack-forms"),
+        label: (0, import_i18n82.__)("Copy embed", "jetpack-forms"),
         supportsBulk: false,
         async callback(items) {
           const [item] = items;
@@ -28559,12 +28919,12 @@ function StageInner() {
           const embedCode = `<!-- wp:jetpack/contact-form {"ref":${item.id}} /-->`;
           try {
             await navigator.clipboard.writeText(embedCode);
-            createSuccessNotice((0, import_i18n78.__)("Embed code copied to clipboard.", "jetpack-forms"), {
+            createSuccessNotice((0, import_i18n82.__)("Embed code copied to clipboard.", "jetpack-forms"), {
               type: "snackbar"
             });
           } catch {
             createErrorNotice(
-              (0, import_i18n78.__)("Failed to copy embed code. Please try again.", "jetpack-forms"),
+              (0, import_i18n82.__)("Failed to copy embed code. Please try again.", "jetpack-forms"),
               { type: "snackbar" }
             );
           }
@@ -28573,7 +28933,7 @@ function StageInner() {
       actionsList.push({
         id: "copy-shortcode",
         isPrimary: false,
-        label: (0, import_i18n78.__)("Copy shortcode", "jetpack-forms"),
+        label: (0, import_i18n82.__)("Copy shortcode", "jetpack-forms"),
         supportsBulk: false,
         async callback(items) {
           const [item] = items;
@@ -28586,12 +28946,12 @@ function StageInner() {
           const shortcode = `[contact-form ref="${item.id}"]`;
           try {
             await navigator.clipboard.writeText(shortcode);
-            createSuccessNotice((0, import_i18n78.__)("Shortcode copied to clipboard.", "jetpack-forms"), {
+            createSuccessNotice((0, import_i18n82.__)("Shortcode copied to clipboard.", "jetpack-forms"), {
               type: "snackbar"
             });
           } catch {
             createErrorNotice(
-              (0, import_i18n78.__)("Failed to copy shortcode. Please try again.", "jetpack-forms"),
+              (0, import_i18n82.__)("Failed to copy shortcode. Please try again.", "jetpack-forms"),
               {
                 type: "snackbar"
               }
@@ -28603,7 +28963,7 @@ function StageInner() {
     actionsList.push({
       id: "trash-form",
       isPrimary: false,
-      label: (0, import_i18n78.__)("Trash", "jetpack-forms"),
+      label: (0, import_i18n82.__)("Trash", "jetpack-forms"),
       supportsBulk: true,
       async callback(items) {
         if (isDeleting) {
@@ -28627,14 +28987,14 @@ function StageInner() {
     restoreForms,
     trashForms
   ]);
-  const paginationInfo = (0, import_element86.useMemo)(
+  const paginationInfo = (0, import_element87.useMemo)(
     () => ({
       totalItems: totalItems ?? 0,
       totalPages: totalPages ?? 0
     }),
     [totalItems, totalPages]
   );
-  const onChangeView = (0, import_element86.useCallback)(
+  const onChangeView = (0, import_element87.useCallback)(
     (newView) => {
       setView(newView);
       if (newView.search !== view.search) {
@@ -28648,10 +29008,10 @@ function StageInner() {
     },
     [navigate, searchParams, view.search]
   );
-  const openIntegrationsModal = (0, import_element86.useCallback)(() => {
+  const openIntegrationsModal = (0, import_element87.useCallback)(() => {
     setIsIntegrationsModalOpen(true);
   }, []);
-  const closeIntegrationsModal = (0, import_element86.useCallback)(() => {
+  const closeIntegrationsModal = (0, import_element87.useCallback)(() => {
     setIsIntegrationsModalOpen(false);
   }, []);
   const {
@@ -28664,14 +29024,14 @@ function StageInner() {
     showDashboardIntegrations: !!showDashboardIntegrations,
     onOpenIntegrations: openIntegrationsModal
   });
-  const getItemId = (0, import_element86.useCallback)((item) => String(item.id), []);
-  const onClickItem = (0, import_element86.useCallback)(
+  const getItemId = (0, import_element87.useCallback)((item) => String(item.id), []);
+  const onClickItem = (0, import_element87.useCallback)(
     (item) => {
       openSingleFormView(item.id);
     },
     [openSingleFormView]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)(
     page_default,
     {
       showSidebarToggle: false,
@@ -28680,7 +29040,7 @@ function StageInner() {
       actions: headerActions,
       hasPadding: false,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)(
           dataviews_default,
           {
             paginationInfo,
@@ -28688,18 +29048,18 @@ function StageInner() {
             actions: actions2,
             data: records || [],
             isLoading,
-            empty: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
+            empty: /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(
               EmptyWrapper,
               {
-                heading: (0, import_i18n78.__)("You're set up. No forms yet.", "jetpack-forms"),
-                body: (0, import_i18n78.__)(
+                heading: (0, import_i18n82.__)("You're set up. No forms yet.", "jetpack-forms"),
+                body: (0, import_i18n82.__)(
                   "Create a shared form pattern to manage and reuse it across your site.",
                   "jetpack-forms"
                 ),
-                actions: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
+                actions: /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(
                   CreateFormButton,
                   {
-                    label: (0, import_i18n78.__)("Create a new form", "jetpack-forms"),
+                    label: (0, import_i18n82.__)("Create a new form", "jetpack-forms"),
                     variant: "primary",
                     showIcon: false
                   }
@@ -28714,21 +29074,21 @@ function StageInner() {
             getItemId,
             defaultLayouts,
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(
-                import_components73.__experimentalConfirmDialog,
+              /* @__PURE__ */ (0, import_jsx_runtime161.jsxs)(
+                import_components76.__experimentalConfirmDialog,
                 {
                   onCancel: onClosePermanentDeleteConfirm,
                   onConfirm: onConfirmPermanentDelete,
                   isOpen: isPermanentDeleteConfirmOpen,
-                  confirmButtonText: (0, import_i18n78.__)("Delete permanently", "jetpack-forms"),
+                  confirmButtonText: (0, import_i18n82.__)("Delete permanently", "jetpack-forms"),
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("h3", { children: (0, import_i18n78.__)("Delete permanently", "jetpack-forms") }),
-                    /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("p", { children: pendingPermanentDeleteCount === 1 ? (0, import_i18n78.__)(
+                    /* @__PURE__ */ (0, import_jsx_runtime161.jsx)("h3", { children: (0, import_i18n82.__)("Delete permanently", "jetpack-forms") }),
+                    /* @__PURE__ */ (0, import_jsx_runtime161.jsx)("p", { children: pendingPermanentDeleteCount === 1 ? (0, import_i18n82.__)(
                       "This will permanently delete this form. This action cannot be undone.",
                       "jetpack-forms"
-                    ) : (0, import_i18n78.sprintf)(
+                    ) : (0, import_i18n82.sprintf)(
                       /* translators: %d: number of forms */
-                      (0, import_i18n78._n)(
+                      (0, import_i18n82._n)(
                         "This will permanently delete %d form. This action cannot be undone.",
                         "This will permanently delete %d forms. This action cannot be undone.",
                         pendingPermanentDeleteCount,
@@ -28739,13 +29099,13 @@ function StageInner() {
                   ]
                 }
               ),
-              /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(DataViewsHeaderRow, { activeTab: "forms" }),
-              /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(dataviews_default.Layout, {}),
-              /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(dataviews_default.Footer, {})
+              /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(DataViewsHeaderRow, { activeTab: "forms" }),
+              /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(dataviews_default.Layout, {}),
+              /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(dataviews_default.Footer, {})
             ]
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(
           jetpack_integrations_modal_default,
           {
             isOpen: isIntegrationsModalOpen,
@@ -28761,7 +29121,9 @@ function StageInner() {
     }
   );
 }
-var Stage = () => /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(StageInner, {});
+var Stage = () => {
+  return /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/forms", children: /* @__PURE__ */ (0, import_jsx_runtime161.jsx)(StageInner, {}) });
+};
 export {
   Stage as stage
 };

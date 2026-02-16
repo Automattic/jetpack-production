@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Bar: Replace dashicon with SVG icon and add tooltip to "Form Responses" link.
 - Allow Accordion, Details, and Icon blocks in forms.
 - Allow filtering active tooltips for integrations from the backend.
+- Change forms dashboard URL filter to allow customizing the dashboard location and resolve legacy hash fragments from email links.
 - Consolidate temporary menus into one for WP build dashboard.
 - Dashboard: create new forms in same tab.
 - Dashboard: make forms primary on wp-build dashboard
@@ -40,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: fix layout classes applied to wrong element for synced forms.
 - Contact Form: fix layout display in widget areas.
 - Contact Form: remove grunion.css dependency from forms layout stylesheet.
+- Fix wp-build dashboard headers and content positioning on mobile.
 - Form Editor: Fix synced form changes being lost when navigating between page editor and form editor.
 - Form Editor: Prevent empty paragraphs from being inserted outside the form block.
 - Load the wp-build dashboard independently of the Gutenberg plugin.

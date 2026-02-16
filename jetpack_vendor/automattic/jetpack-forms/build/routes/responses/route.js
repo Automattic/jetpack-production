@@ -51,6 +51,7 @@ var require_url = __commonJS({
 
 // routes/responses/route.tsx
 var import_data4 = __toESM(require_data());
+import { redirect } from "@wordpress/route";
 
 // src/dashboard/wp-build/utils/preload.ts
 var import_data3 = __toESM(require_data(), 1);
@@ -450,6 +451,22 @@ var route = {
    * Checks if the feedback post type exists.
    */
   beforeLoad: async () => {
+    const hash = window.location.hash;
+    const legacyMatch = hash.match(/^#\/responses\?(.*)$/);
+    if (legacyMatch) {
+      const params = new URLSearchParams(legacyMatch[1]);
+      const r = params.get("r");
+      if (r) {
+        const status = params.get("status") || "inbox";
+        const validStatuses = ["inbox", "spam", "trash"];
+        const view = validStatuses.includes(status) ? status : "inbox";
+        throw redirect({
+          href: `/responses/${view}?responseIds=${encodeURIComponent(
+            JSON.stringify([r])
+          )}`
+        });
+      }
+    }
     try {
       await (0, import_data4.resolveSelect)("core").getPostType("feedback");
     } catch {
