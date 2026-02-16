@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - WordPress.com Reader: add new class to render a new navigation menu in the admin bar.
 
 ### Changed
+- Settings: wrap page with AdminPage component for consistency with other Jetpack pages.
 - Update package dependencies.
 
 ### Fixed
