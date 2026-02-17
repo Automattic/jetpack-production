@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Compatibility: Clean up deprecated CSS.
 - Recommendations: drop redundant PNG fallback images in favor of WebP, reducing plugin zip size by ~7 MB.
 - Reduced plugin zip size by converting vendored package images from PNG to WebP.
+- Removed Summer Special references and cleaned up code.
 - SEO: Move the Optimize SEO panel from the Jetpack sidebar to the document settings panel.
 - Update package dependencies.
 - WordPress.com Reader: load feature in new module.
