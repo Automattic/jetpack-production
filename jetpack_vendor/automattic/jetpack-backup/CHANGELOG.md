@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Converted testimonial and connection screen images from PNG to WebP.
+- Update package dependencies.
 
 ## [4.2.41] - 2026-02-16
 ### Changed

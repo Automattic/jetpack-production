@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Create reusable link previews modal and tabs component.
 
+### Changed
+- Update package dependencies.
+
 ## [0.72.3] - 2026-02-16
 ### Added
 - Add media validation notices to preview modal. [#47006]

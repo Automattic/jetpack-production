@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Settings: wrap page with AdminPage component for consistency with other Jetpack pages.
+- Update package dependencies.
 
 ## [0.4.0] - 2026-02-16
 ### Added

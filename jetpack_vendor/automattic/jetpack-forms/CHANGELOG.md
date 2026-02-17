@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Change forms dashboard URL filter to allow customizing the dashboard location and resolve legacy hash fragments from email links.
+- Update package dependencies.
 
 ### Fixed
 - Contact Form: fix layout classes applied to wrong element for synced forms.

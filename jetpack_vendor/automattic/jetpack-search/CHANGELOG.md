@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Jetpack Search: Add a new disable_tracking feature flag.
 
+### Changed
+- Update package dependencies.
+
 ## [0.55.4] - 2026-02-16
 ### Changed
 - Update package dependencies. [#47099]

@@ -1,6 +1,6 @@
 {
 	"name": "@automattic/woocommerce-analytics",
-	"version": "0.15.4",
+	"version": "0.15.5-alpha",
 	"private": true,
 	"description": "WooCommerce Analytics package to track frontend events",
 	"homepage": "https://github.com/Automattic/jetpack/tree/HEAD/projects/packages/woocommerce-analytics/#readme",
@@ -37,7 +37,7 @@
 		"@wordpress/browserslist-config": "6.39.0",
 		"jest": "30.2.0",
 		"typescript": "5.9.3",
-		"webpack": "5.104.1",
+		"webpack": "5.105.2",
 		"webpack-cli": "6.0.1"
 	}
 }
