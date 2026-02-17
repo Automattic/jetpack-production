@@ -346,7 +346,7 @@ class Dashboard {
 		 * Filters the Forms admin page URL.
 		 *
 		 * @module contact-form
-		 * @since 7.8.0-alpha
+		 * @since 7.8.0
 		 *
 		 * @param string      $url The Forms admin page URL.
 		 * @param string|null $tab Tab to open in the forms admin page.
@@ -458,13 +458,13 @@ class Dashboard {
 	/**
 	 * Get admin URL for given screen ID.
 	 *
-	 * @deprecated 7.8.0-alpha Use Dashboard::get_forms_admin_url() instead.
+	 * @deprecated 7.9.0-alpha Use Dashboard::get_forms_admin_url() instead.
 	 *
 	 * @param string $screen_id Screen ID.
 	 * @return string Admin URL.
 	 */
 	public static function get_admin_url( $screen_id ) {
-		_deprecated_function( __METHOD__, 'jetpack-7.8.0-alpha', 'Dashboard::get_forms_admin_url' );
+		_deprecated_function( __METHOD__, 'jetpack-7.9.0-alpha', 'Dashboard::get_forms_admin_url' );
 
 		if ( 'edit-jetpack_form' === $screen_id ) {
 			return self::get_forms_admin_url( 'forms' );

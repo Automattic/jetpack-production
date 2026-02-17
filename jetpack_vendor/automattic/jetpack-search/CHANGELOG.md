@@ -12,11 +12,12 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Jetpack Search: Add a new disable_tracking feature flag.
 
+## [0.55.4] - 2026-02-16
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#47099]
 
 ### Fixed
-- Compatibility: Clean up deprecated CSS.
+- Compatibility: Clean up deprecated CSS. [#47067]
 
 ## [0.55.3] - 2026-02-10
 ### Changed
@@ -1447,7 +1448,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.56.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.55.3...v0.56.0-alpha
+[0.56.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.55.4...v0.56.0-alpha
+[0.55.4]: https://github.com/Automattic/jetpack-search/compare/v0.55.3...v0.55.4
 [0.55.3]: https://github.com/Automattic/jetpack-search/compare/v0.55.2...v0.55.3
 [0.55.2]: https://github.com/Automattic/jetpack-search/compare/v0.55.1...v0.55.2
 [0.55.1]: https://github.com/Automattic/jetpack-search/compare/v0.55.0...v0.55.1
