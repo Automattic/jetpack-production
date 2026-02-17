@@ -589,7 +589,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
             "The result of getSnapshot should be cached to avoid an infinite loop"
           ), didWarnUncachedGetSnapshot = true);
         }
-        cachedValue = useState53({
+        cachedValue = useState54({
           inst: { value, getSnapshot }
         });
         var inst = cachedValue[0].inst, forceUpdate = cachedValue[1];
@@ -601,7 +601,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
           },
           [subscribe2, value, getSnapshot]
         );
-        useEffect40(
+        useEffect41(
           function() {
             checkIfSnapshotChanged(inst) && forceUpdate({ inst });
             return subscribe2(function() {
@@ -627,7 +627,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return getSnapshot();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React37 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState53 = React37.useState, useEffect40 = React37.useEffect, useLayoutEffect4 = React37.useLayoutEffect, useDebugValue = React37.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      var React37 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState54 = React37.useState, useEffect41 = React37.useEffect, useLayoutEffect4 = React37.useLayoutEffect, useDebugValue = React37.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
       exports.useSyncExternalStore = void 0 !== React37.useSyncExternalStore ? React37.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
@@ -38515,11 +38515,11 @@ var Stage = () => {
 // routes/responses/response/index.tsx
 var import_api_fetch11 = __toESM(require_api_fetch());
 var import_components92 = __toESM(require_components());
-var import_core_data9 = __toESM(require_core_data());
-var import_data34 = __toESM(require_data());
-var import_element94 = __toESM(require_element());
+var import_core_data10 = __toESM(require_core_data());
+var import_data35 = __toESM(require_data());
+var import_element95 = __toESM(require_element());
 var import_html_entities9 = __toESM(require_html_entities());
-var import_i18n94 = __toESM(require_i18n());
+var import_i18n95 = __toESM(require_i18n());
 import { useParams as useParams2, useSearch as useSearch4, useNavigate as useNavigate5 } from "@wordpress/route";
 
 // src/dashboard/components/feedback-comments/index.tsx
@@ -39757,11 +39757,63 @@ var ResponseMeta = ({ response }) => {
 };
 var response_meta_default = ResponseMeta;
 
+// src/dashboard/hooks/use-mark-as-spam.ts
+var import_core_data9 = __toESM(require_core_data(), 1);
+var import_data33 = __toESM(require_data(), 1);
+var import_element93 = __toESM(require_element(), 1);
+var import_i18n92 = __toESM(require_i18n(), 1);
+var useMarkAsSpam = (response, options) => {
+  const [isConfirmDialogOpen, setIsConfirmDialogOpen] = (0, import_element93.useState)(false);
+  const [isSaving, setIsSaving] = (0, import_element93.useState)(false);
+  const { saveEntityRecord } = (0, import_data33.useDispatch)(import_core_data9.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data33.useDispatch)(store3);
+  const markAsSpamConfirmationMessage = (0, import_element93.useMemo)(
+    () => (0, import_i18n92.__)("Are you sure you want to mark this response as spam?", "jetpack-forms"),
+    []
+  );
+  const { checkParameter, removeParameter, switchToSpam } = options;
+  const onConfirmMarkAsSpam = (0, import_element93.useCallback)(async () => {
+    if (!response) {
+      return;
+    }
+    try {
+      setIsSaving(true);
+      await saveEntityRecord("postType", "feedback", {
+        id: response.id,
+        status: "spam"
+      });
+      await invalidateCounts2();
+      setIsSaving(false);
+      setIsConfirmDialogOpen(false);
+      switchToSpam(response.id);
+    } catch {
+      setIsSaving(false);
+    }
+  }, [response, saveEntityRecord, invalidateCounts2, switchToSpam]);
+  const hasSpamParameter = (0, import_element93.useMemo)(() => checkParameter(), [checkParameter]);
+  const onCancelMarkAsSpam = (0, import_element93.useCallback)(() => {
+    setIsConfirmDialogOpen(false);
+    removeParameter();
+  }, [removeParameter]);
+  (0, import_element93.useEffect)(() => {
+    if (hasSpamParameter && response && !["spam", "trash"].includes(response.status)) {
+      setIsConfirmDialogOpen(true);
+    }
+  }, [response?.status, hasSpamParameter, response]);
+  return {
+    isConfirmDialogOpen,
+    onConfirmMarkAsSpam,
+    onCancelMarkAsSpam,
+    markAsSpamConfirmationMessage,
+    isSaving
+  };
+};
+
 // routes/responses/response/actions.tsx
 var import_components90 = __toESM(require_components());
-var import_data33 = __toESM(require_data());
-var import_element93 = __toESM(require_element());
-var import_i18n92 = __toESM(require_i18n());
+var import_data34 = __toESM(require_data());
+var import_element94 = __toESM(require_element());
+var import_i18n93 = __toESM(require_i18n());
 import { useSearch as useSearch3, useNavigate as useNavigate4 } from "@wordpress/route";
 var import_jsx_runtime202 = __toESM(require_jsx_runtime());
 function ResponseActions({
@@ -39778,71 +39830,71 @@ function ResponseActions({
     deleteAction,
     markAsReadAction,
     markAsUnreadAction
-  } = (0, import_element93.useMemo)(
+  } = (0, import_element94.useMemo)(
     () => getActions({
       navigate,
       searchParams
     }),
     [navigate, searchParams]
   );
-  const [isMarkingAsSpam, setIsMarkingAsSpam] = (0, import_element93.useState)(false);
-  const [isMarkingAsNotSpam, setIsMarkingAsNotSpam] = (0, import_element93.useState)(false);
-  const [isMovingToTrash, setIsMovingToTrash] = (0, import_element93.useState)(false);
-  const [isRestoring, setIsRestoring] = (0, import_element93.useState)(false);
-  const [isDeleting, setIsDeleting] = (0, import_element93.useState)(false);
-  const [isTogglingReadStatus, setIsTogglingReadStatus] = (0, import_element93.useState)(false);
-  const registry = (0, import_data33.useRegistry)();
-  const handleMarkAsSpam = (0, import_element93.useCallback)(async () => {
+  const [isMarkingAsSpam, setIsMarkingAsSpam] = (0, import_element94.useState)(false);
+  const [isMarkingAsNotSpam, setIsMarkingAsNotSpam] = (0, import_element94.useState)(false);
+  const [isMovingToTrash, setIsMovingToTrash] = (0, import_element94.useState)(false);
+  const [isRestoring, setIsRestoring] = (0, import_element94.useState)(false);
+  const [isDeleting, setIsDeleting] = (0, import_element94.useState)(false);
+  const [isTogglingReadStatus, setIsTogglingReadStatus] = (0, import_element94.useState)(false);
+  const registry = (0, import_data34.useRegistry)();
+  const handleMarkAsSpam = (0, import_element94.useCallback)(async () => {
     onActionComplete?.(response);
     setIsMarkingAsSpam(true);
     await markAsSpamAction.callback?.([response], { registry });
     setIsMarkingAsSpam(false);
   }, [onActionComplete, response, markAsSpamAction, registry]);
-  const handleMarkAsNotSpam = (0, import_element93.useCallback)(async () => {
+  const handleMarkAsNotSpam = (0, import_element94.useCallback)(async () => {
     onActionComplete?.(response);
     setIsMarkingAsNotSpam(true);
     await markAsNotSpamAction?.callback?.([response], { registry });
     setIsMarkingAsNotSpam(false);
   }, [onActionComplete, response, markAsNotSpamAction, registry]);
-  const handleMoveToTrash = (0, import_element93.useCallback)(async () => {
+  const handleMoveToTrash = (0, import_element94.useCallback)(async () => {
     onActionComplete?.(response);
     setIsMovingToTrash(true);
     await moveToTrashAction?.callback?.([response], { registry });
     setIsMovingToTrash(false);
   }, [onActionComplete, response, moveToTrashAction, registry]);
-  const handleRestore = (0, import_element93.useCallback)(async () => {
+  const handleRestore = (0, import_element94.useCallback)(async () => {
     onActionComplete?.(response);
     setIsRestoring(true);
     await restoreAction?.callback?.([response], { registry });
     setIsRestoring(false);
   }, [onActionComplete, response, restoreAction, registry]);
-  const handleDelete = (0, import_element93.useCallback)(async () => {
+  const handleDelete = (0, import_element94.useCallback)(async () => {
     onActionComplete?.(response);
     setIsDeleting(true);
     await deleteAction?.callback?.([response], { registry });
     setIsDeleting(false);
   }, [onActionComplete, response, deleteAction, registry]);
-  const handleMarkAsRead = (0, import_element93.useCallback)(async () => {
+  const handleMarkAsRead = (0, import_element94.useCallback)(async () => {
     setIsTogglingReadStatus(true);
     await markAsReadAction?.callback?.([response], { registry });
     setIsTogglingReadStatus(false);
     onActionComplete?.({ ...response, is_unread: false });
   }, [onActionComplete, response, markAsReadAction, registry]);
-  const handleMarkAsUnread = (0, import_element93.useCallback)(async () => {
+  const handleMarkAsUnread = (0, import_element94.useCallback)(async () => {
     setIsTogglingReadStatus(true);
     await markAsUnreadAction?.callback?.([response], { registry });
     setIsTogglingReadStatus(false);
     onActionComplete?.({ ...response, is_unread: true });
   }, [onActionComplete, response, markAsUnreadAction, registry]);
   const readUnreadButtons = /* @__PURE__ */ (0, import_jsx_runtime202.jsxs)(import_jsx_runtime202.Fragment, { children: [
-    response.is_unread && /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isTogglingReadStatus, onClick: handleMarkAsRead, size: "compact", children: (0, import_i18n92.__)("Mark as read", "jetpack-forms") }),
-    !response.is_unread && /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isTogglingReadStatus, onClick: handleMarkAsUnread, size: "compact", children: (0, import_i18n92.__)("Mark as unread", "jetpack-forms") })
+    response.is_unread && /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isTogglingReadStatus, onClick: handleMarkAsRead, size: "compact", children: (0, import_i18n93.__)("Mark as read", "jetpack-forms") }),
+    !response.is_unread && /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isTogglingReadStatus, onClick: handleMarkAsUnread, size: "compact", children: (0, import_i18n93.__)("Mark as unread", "jetpack-forms") })
   ] });
-  const trashButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isMovingToTrash, onClick: handleMoveToTrash, size: "compact", children: (0, import_i18n92.__)("Trash", "jetpack-forms") });
-  const spamButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isMarkingAsSpam, onClick: handleMarkAsSpam, size: "compact", children: (0, import_i18n92.__)("Spam", "jetpack-forms") });
-  const notSpamButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isMarkingAsNotSpam, onClick: handleMarkAsNotSpam, size: "compact", children: (0, import_i18n92.__)("Not spam", "jetpack-forms") });
-  const deleteButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isDeleting, onClick: handleDelete, size: "compact", children: (0, import_i18n92.__)("Delete", "jetpack-forms") });
-  const restoreButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isRestoring, onClick: handleRestore, size: "compact", children: (0, import_i18n92.__)("Restore", "jetpack-forms") });
+  const trashButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isMovingToTrash, onClick: handleMoveToTrash, size: "compact", children: (0, import_i18n93.__)("Trash", "jetpack-forms") });
+  const spamButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isMarkingAsSpam, onClick: handleMarkAsSpam, size: "compact", children: (0, import_i18n93.__)("Spam", "jetpack-forms") });
+  const notSpamButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isMarkingAsNotSpam, onClick: handleMarkAsNotSpam, size: "compact", children: (0, import_i18n93.__)("Not spam", "jetpack-forms") });
+  const deleteButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isDeleting, onClick: handleDelete, size: "compact", children: (0, import_i18n93.__)("Delete", "jetpack-forms") });
+  const restoreButton = /* @__PURE__ */ (0, import_jsx_runtime202.jsx)(import_components90.Button, { isBusy: isRestoring, onClick: handleRestore, size: "compact", children: (0, import_i18n93.__)("Restore", "jetpack-forms") });
   return /* @__PURE__ */ (0, import_jsx_runtime202.jsxs)(
     Stack,
     {
@@ -39874,7 +39926,7 @@ function ResponseActions({
 
 // routes/responses/response/navigation.tsx
 var import_components91 = __toESM(require_components());
-var import_i18n93 = __toESM(require_i18n());
+var import_i18n94 = __toESM(require_i18n());
 var import_jsx_runtime203 = __toESM(require_jsx_runtime());
 function ResponseNavigation({
   hasNext,
@@ -39896,7 +39948,7 @@ function ResponseNavigation({
         ...sharedProps,
         disabled: !hasPrevious,
         icon: chevron_up_default,
-        label: (0, import_i18n93.__)("Previous", "jetpack-forms"),
+        label: (0, import_i18n94.__)("Previous", "jetpack-forms"),
         onClick: onPrevious
       }
     ),
@@ -39906,7 +39958,7 @@ function ResponseNavigation({
         ...sharedProps,
         disabled: !hasNext,
         icon: chevron_down_default,
-        label: (0, import_i18n93.__)("Next", "jetpack-forms"),
+        label: (0, import_i18n94.__)("Next", "jetpack-forms"),
         onClick: onNext
       }
     ),
@@ -39929,7 +39981,7 @@ function ResponseNavigation({
         ...sharedProps,
         iconSize: 20,
         icon: close_default,
-        label: (0, import_i18n93.__)("Close", "jetpack-forms"),
+        label: (0, import_i18n94.__)("Close", "jetpack-forms"),
         onClick: onClose
       }
     )
@@ -39952,24 +40004,26 @@ function SingleResponseView({
   onNavigate,
   onClose
 }) {
-  const [previewFile, setPreviewFile] = (0, import_element94.useState)(null);
-  const [isImageLoading, setIsImageLoading] = (0, import_element94.useState)(true);
-  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element94.useState)(null);
+  const [previewFile, setPreviewFile] = (0, import_element95.useState)(null);
+  const [isImageLoading, setIsImageLoading] = (0, import_element95.useState)(true);
+  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element95.useState)(null);
   const emptyTrashDays = useConfigValue("emptyTrashDays") ?? 0;
   const isNotesEnabled = useConfigValue("isNotesEnabled") ?? false;
-  const { editEntityRecord } = (0, import_data34.useDispatch)(import_core_data9.store);
-  const { response, isLoading } = (0, import_data34.useSelect)(
+  const { editEntityRecord } = (0, import_data35.useDispatch)(import_core_data10.store);
+  const navigate = useNavigate5();
+  const searchParams = useSearch4({ from: "/responses/$view" });
+  const { response, isLoading } = (0, import_data35.useSelect)(
     (select3) => {
       if (!responseId) {
         return { response: null, isLoading: false };
       }
       return {
-        response: select3(import_core_data9.store).getEditedEntityRecord(
+        response: select3(import_core_data10.store).getEditedEntityRecord(
           "postType",
           "feedback",
           responseId
         ),
-        isLoading: select3(import_core_data9.store).isResolving(
+        isLoading: select3(import_core_data10.store).isResolving(
           "getEntityRecord",
           ["postType", "feedback", responseId]
         )
@@ -39977,20 +40031,47 @@ function SingleResponseView({
     },
     [responseId]
   );
+  const {
+    isConfirmDialogOpen,
+    onConfirmMarkAsSpam,
+    onCancelMarkAsSpam,
+    markAsSpamConfirmationMessage,
+    isSaving
+  } = useMarkAsSpam(response, {
+    checkParameter: () => searchParams?.mark_as_spam === 1,
+    removeParameter: () => {
+      navigate({
+        search: {
+          ...searchParams,
+          mark_as_spam: void 0
+        }
+      });
+    },
+    switchToSpam: (id) => {
+      navigate({
+        to: "/responses/spam",
+        search: {
+          ...searchParams,
+          responseIds: [String(id)],
+          mark_as_spam: void 0
+        }
+      });
+    }
+  });
   const currentIndex = allResponseIds.indexOf(responseId);
   const hasNext = currentIndex < allResponseIds.length - 1;
   const hasPrevious = currentIndex > 0;
-  const handleNext = (0, import_element94.useCallback)(() => {
+  const handleNext = (0, import_element95.useCallback)(() => {
     if (hasNext) {
       onNavigate(allResponseIds[currentIndex + 1]);
     }
   }, [hasNext, allResponseIds, currentIndex, onNavigate]);
-  const handlePrevious = (0, import_element94.useCallback)(() => {
+  const handlePrevious = (0, import_element95.useCallback)(() => {
     if (hasPrevious) {
       onNavigate(allResponseIds[currentIndex - 1]);
     }
   }, [hasPrevious, allResponseIds, currentIndex, onNavigate]);
-  (0, import_element94.useEffect)(() => {
+  (0, import_element95.useEffect)(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowUp" && hasPrevious) {
         event.preventDefault();
@@ -40005,7 +40086,7 @@ function SingleResponseView({
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [hasNext, hasPrevious, handleNext, handlePrevious, onClose]);
-  (0, import_element94.useEffect)(() => {
+  (0, import_element95.useEffect)(() => {
     if (!response || !response.id || !response.is_unread) {
       return;
     }
@@ -40026,21 +40107,21 @@ function SingleResponseView({
       });
     });
   }, [response, editEntityRecord, hasMarkedAsRead]);
-  const handleFilePreview = (0, import_element94.useCallback)(
+  const handleFilePreview = (0, import_element95.useCallback)(
     (file) => () => {
       setIsImageLoading(true);
       setPreviewFile(file);
     },
     []
   );
-  const closePreviewModal = (0, import_element94.useCallback)(() => {
+  const closePreviewModal = (0, import_element95.useCallback)(() => {
     setPreviewFile(null);
     setIsImageLoading(true);
   }, []);
-  const handleImageLoaded = (0, import_element94.useCallback)(() => {
+  const handleImageLoaded = (0, import_element95.useCallback)(() => {
     setIsImageLoading(false);
   }, []);
-  const handleActionComplete = (0, import_element94.useCallback)(
+  const handleActionComplete = (0, import_element95.useCallback)(
     (updatedItem) => {
       if (!updatedItem) {
         if (hasNext) {
@@ -40058,7 +40139,7 @@ function SingleResponseView({
     return /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(import_components92.Spinner, {}) });
   }
   if (!response) {
-    return /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime204.jsx)("p", { children: (0, import_i18n94.__)("Response not found.", "jetpack-forms") }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(Stack, { direction: "row", justify: "center", style: { padding: "40px" }, children: /* @__PURE__ */ (0, import_jsx_runtime204.jsx)("p", { children: (0, import_i18n95.__)("Response not found.", "jetpack-forms") }) });
   }
   return /* @__PURE__ */ (0, import_jsx_runtime204.jsxs)(import_jsx_runtime204.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime204.jsxs)(Stack, { className: "jp-forms-response-header", direction: "row", gap: "xs", justify: "space-between", children: [
@@ -40077,9 +40158,9 @@ function SingleResponseView({
     /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(response_meta_default, { response }),
     /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(response_fields_default, { fields: response.fields, onFilePreview: handleFilePreview }),
     isNotesEnabled && /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(feedback_comments_default, { postId: response.id }),
-    response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime204.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(import_components92.Tip, { children: (0, import_i18n94.sprintf)(
+    response.status === "spam" && /* @__PURE__ */ (0, import_jsx_runtime204.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(import_components92.Tip, { children: (0, import_i18n95.sprintf)(
       /* translators: %d number of days. */
-      (0, import_i18n94._n)(
+      (0, import_i18n95._n)(
         "Spam responses are permanently deleted after %d day.",
         "Spam responses are permanently deleted after %d days.",
         15,
@@ -40088,9 +40169,9 @@ function SingleResponseView({
       // Number from https://github.com/Automattic/jetpack/blob/bde3cf9a89ce0d02e50469df173a6253383bd276/projects/packages/forms/src/contact-form/class-contact-form-plugin.php#L132
       15
     ) }) }),
-    response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime204.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(import_components92.Tip, { children: (0, import_i18n94.sprintf)(
+    response.status === "trash" && /* @__PURE__ */ (0, import_jsx_runtime204.jsx)("div", { className: "jp-forms__inbox__tip-container", children: /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(import_components92.Tip, { children: (0, import_i18n95.sprintf)(
       /* translators: %d number of days. */
-      (0, import_i18n94._n)(
+      (0, import_i18n95._n)(
         "Items in trash are permanently deleted after %d day.",
         "Items in trash are permanently deleted after %d days.",
         emptyTrashDays,
@@ -40105,7 +40186,17 @@ function SingleResponseView({
         isLoading: isImageLoading,
         onImageLoaded: handleImageLoaded
       }
-    ) })
+    ) }),
+    /* @__PURE__ */ (0, import_jsx_runtime204.jsx)(
+      import_components92.__experimentalConfirmDialog,
+      {
+        isOpen: isConfirmDialogOpen,
+        onConfirm: onConfirmMarkAsSpam,
+        onCancel: onCancelMarkAsSpam,
+        isBusy: isSaving,
+        children: markAsSpamConfirmationMessage
+      }
+    )
   ] });
 }
 function Response() {
@@ -40116,7 +40207,7 @@ function Response() {
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const { records } = useInboxData({ status: statusView });
   const allRecordIds = records?.map((record) => record.id) ?? [];
-  const handleClose = (0, import_element94.useCallback)(() => {
+  const handleClose = (0, import_element95.useCallback)(() => {
     navigate({
       search: {
         ...searchParams,
@@ -40124,7 +40215,7 @@ function Response() {
       }
     });
   }, [navigate, searchParams]);
-  const handleNavigate = (0, import_element94.useCallback)(
+  const handleNavigate = (0, import_element95.useCallback)(
     (id) => {
       navigate({
         search: {

@@ -460,10 +460,15 @@ var route = {
         const status = params.get("status") || "inbox";
         const validStatuses = ["inbox", "spam", "trash"];
         const view = validStatuses.includes(status) ? status : "inbox";
+        const hasMarkAsSpam = params.has("mark_as_spam");
+        let redirectUrl = `/responses/${view}?responseIds=${encodeURIComponent(
+          JSON.stringify([r])
+        )}`;
+        if (hasMarkAsSpam) {
+          redirectUrl += "&mark_as_spam=1";
+        }
         throw redirect({
-          href: `/responses/${view}?responseIds=${encodeURIComponent(
-            JSON.stringify([r])
-          )}`
+          href: redirectUrl
         });
       }
     }
