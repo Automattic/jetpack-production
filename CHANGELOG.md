@@ -2,36 +2,33 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.6-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.6-a.3 - 2026-02-16
 ### Enhancements
-- Form Notifications: Add new HTML email template design with respondent info header, metadata section, and improved action buttons.
-- Forms: Allow Accordion, Details, and Icon blocks in forms, and Icon block to be added inside the file upload dropzone.
-- Forms: Allow filtering Forms dashboard URL.
-- Forms: create new forms in same tab.
-- Forms: Replace dashicon with SVG icon and add tooltip to admin bar "Form Responses" link.
-- Reader: Add Discover card to Reader settings page to highlight feature benefits.
-- Update external menu links to display an arrow indicator for improved performance and a more modern appearance.
-- VideoPress: Accept SRT subtitle files for upload alongside VTT.
-- WordPress.com Reader: automatically enable the admin bar link on sites newly connected to WordPress.com.
+- Form Notifications: Add new HTML email template design with respondent info header, metadata section, and improved action buttons. [#47022]
+- Forms: Allow Accordion, Details, and Icon blocks in forms, and Icon block to be added inside the file upload dropzone. [#47121]
+- Forms: Allow filtering Forms dashboard URL. [#47039]
+- Forms: Create new forms in same tab. [#47098]
+- Forms: Replace dashicon with SVG icon and add tooltip to admin bar "Form Responses" link. [#47120]
+- Reader: Add Discover card to Reader settings page to highlight feature benefits. [#47089]
+- Update external menu links to display an arrow indicator for improved performance and a more modern appearance. [#47076]
+- VideoPress: Accept SRT subtitle files for upload alongside VTT. [#46978]
+- WordPress.com Reader: Automatically enable the admin bar link on sites newly connected to WordPress.com. [#47033]
 
 ### Bug fixes
-- AI Assistant: restore Jetpack logo in pre-publish panel where branding is not otherwise apparent.
-- Block Editor Assets: fix Gutenberg asset detection when assets are served from a CDN.
-- Social: Fix Tumblr preview to prioritize custom message when it is set.
-- Social: Refresh plan features on post-checkout redirect.
+- AI Assistant: Restore Jetpack logo in pre-publish panel where branding is not otherwise apparent. [#47081]
+- Block Editor Assets: Fix Gutenberg asset detection when assets are served from a CDN. [#47072]
+- Social: Fix Tumblr preview to prioritize custom message when it is set. [#47075]
+- Social: Refresh plan features on post-checkout redirect. [#46961]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Admin: remove default WordPress footer on Jetpack admin pages.
-- AI Assistant: Remove Jetpack logo from Improve with AI panel in the Page sidebar.
-- Compatibility: Clean up deprecated CSS.
-- Recommendations: drop redundant PNG fallback images in favor of WebP, reducing plugin zip size by ~7 MB.
-- Reduced plugin zip size by converting vendored package images from PNG to WebP.
-- SEO: Move the Optimize SEO panel from the Jetpack sidebar to the document settings panel.
-- Update package dependencies.
-- WordPress.com Reader: load feature in new module.
+- Admin: Remove default WordPress footer on Jetpack admin pages. [#46876]
+- AI Assistant: Remove Jetpack logo from Improve with AI panel in the Page sidebar. [#47040]
+- Compatibility: Clean up deprecated CSS. [#47067]
+- Recommendations: Drop redundant PNG fallback images in favor of WebP, reducing plugin zip size by ~7 MB. [#47071]
+- Reduce plugin zip size by converting vendored package images from PNG to WebP. [#47083]
+- SEO: Move the Optimize SEO panel from the Jetpack sidebar to the document settings panel. [#47045]
+- Update package dependencies. [#47099]
+- WordPress.com Reader: Load feature in new module. [#46783]
 
 ## 15.6-a.1 - 2026-02-10
 ### Enhancements

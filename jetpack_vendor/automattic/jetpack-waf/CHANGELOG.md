@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.28.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.28.0] - 2026-02-16
 ### Added
-- Enable support for ModSecurity’s MATCHED_VAR* family of targets.
+- Enable support for ModSecurity's `MATCHED_VAR*` family of targets. [#47012]
 
 ## [0.27.11] - 2026-02-10
 ### Fixed
@@ -524,7 +521,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
-[0.28.0-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.27.11...v0.28.0-alpha
+[0.28.0]: https://github.com/Automattic/jetpack-waf/compare/v0.27.11...v0.28.0
 [0.27.11]: https://github.com/Automattic/jetpack-waf/compare/v0.27.10...v0.27.11
 [0.27.10]: https://github.com/Automattic/jetpack-waf/compare/v0.27.9...v0.27.10
 [0.27.9]: https://github.com/Automattic/jetpack-waf/compare/v0.27.8...v0.27.9

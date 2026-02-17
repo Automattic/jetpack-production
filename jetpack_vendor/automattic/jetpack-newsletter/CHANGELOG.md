@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.4.0] - 2026-02-16
 ### Added
-- Automatically enable the admin bar link on sites newly connected to WordPress.com.
-- WordPress.com Reader: add new class to render a new navigation menu in the admin bar.
+- Automatically enable the admin bar link on sites newly connected to WordPress.com. [#47033]
+- WordPress.com Reader: Add new class to render a new navigation menu in the admin bar. [#46783]
 
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#47099]
 
 ### Fixed
-- Settings: Improve feedback with toast notifications for save success/error and inline error for category load failures.
+- Settings: Improve feedback with toast notifications for save success/error and inline error for category load failures. [#46987]
 
 ## [0.3.2] - 2026-02-10
 ### Changed
@@ -69,7 +66,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.4.0-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.3.2...v0.4.0-alpha
+[0.4.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.3.2...v0.4.0
 [0.3.2]: https://github.com/Automattic/jetpack-newsletter/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.2.0...v0.3.0
