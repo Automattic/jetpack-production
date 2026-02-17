@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: fix layout classes applied to wrong element for synced forms.
 - Contact Form: fix layout display in widget areas.
 - Contact Form: remove grunion.css dependency from forms layout stylesheet.
+- Email template: fix button layout regression, add responsive mobile stacking, improve font sizes, and align field icons with labels.
 - Fix wp-build dashboard headers and content positioning on mobile.
 - Form Editor: Fix synced form changes being lost when navigating between page editor and form editor.
 - Form Editor: Prevent empty paragraphs from being inserted outside the form block.
