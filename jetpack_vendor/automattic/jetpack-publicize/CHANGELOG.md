@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add media validation notices to preview modal.
+- Create reusable link previews modal and tabs component.
 
 ### Changed
 - Convert connection and illustration images from PNG to WebP.
