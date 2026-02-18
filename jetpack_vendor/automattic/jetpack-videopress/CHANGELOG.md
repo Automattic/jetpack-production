@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Pass current user ID when deleting VideoPress videos on wpcom to fix activity log attribution.
+
 ## [0.35.0] - 2026-02-16
 ### Added
 - Tracks: Accept SRT subtitle files for upload alongside VTT. [#46978]
