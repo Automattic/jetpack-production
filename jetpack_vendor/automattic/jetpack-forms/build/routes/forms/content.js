@@ -28635,13 +28635,11 @@ function usePageHeaderDetails(props) {
       if (isFormsScreen) {
         if (isIntegrationsEnabled && showDashboardIntegrations) {
           dropdownControls.push({
-            icon: plugins_default,
             onClick: onOpenIntegrations,
             title: (0, import_i18n84.__)("Manage integrations", "jetpack-forms")
           });
         }
         dropdownControls.push({
-          icon: plus_default,
           onClick: () => openNewForm({}),
           title: (0, import_i18n84.__)("Create a form", "jetpack-forms")
         });
@@ -28657,14 +28655,12 @@ function usePageHeaderDetails(props) {
           });
         }
         dropdownControls.push({
-          icon: download_default,
           onClick: openExportModal,
           title: exportLabel,
           isDisabled: !hasResponses
         });
         if (statusView === "trash") {
           dropdownControls.push({
-            icon: trash_default,
             onClick: emptyTrash.openConfirmDialog,
             title: (0, import_i18n84.__)("Empty trash", "jetpack-forms"),
             isDisabled: emptyTrash.isEmpty || emptyTrash.isEmptying
@@ -28672,7 +28668,6 @@ function usePageHeaderDetails(props) {
         }
         if (statusView === "spam") {
           dropdownControls.push({
-            icon: trash_default,
             onClick: emptySpam.openConfirmDialog,
             title: (0, import_i18n84.__)("Delete spam", "jetpack-forms"),
             isDisabled: emptySpam.isEmpty || emptySpam.isEmptying
@@ -28682,27 +28677,23 @@ function usePageHeaderDetails(props) {
       } else {
         if (statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations) {
           dropdownControls.push({
-            icon: plugins_default,
             onClick: onOpenIntegrations,
             title: (0, import_i18n84.__)("Manage integrations", "jetpack-forms")
           });
         }
         if (statusView === "inbox") {
           dropdownControls.push({
-            icon: plus_default,
             onClick: () => openNewForm({ showPatterns: false }),
             title: (0, import_i18n84.__)("Create a form", "jetpack-forms")
           });
         }
         dropdownControls.push({
-          icon: download_default,
           onClick: openExportModal,
           title: exportLabel,
           isDisabled: !hasResponses
         });
         if (statusView === "trash") {
           dropdownControls.push({
-            icon: trash_default,
             onClick: emptyTrash.openConfirmDialog,
             title: (0, import_i18n84.__)("Empty trash", "jetpack-forms"),
             isDisabled: emptyTrash.isEmpty || emptyTrash.isEmptying
@@ -28710,7 +28701,6 @@ function usePageHeaderDetails(props) {
         }
         if (statusView === "spam") {
           dropdownControls.push({
-            icon: trash_default,
             onClick: emptySpam.openConfirmDialog,
             title: (0, import_i18n84.__)("Delete spam", "jetpack-forms"),
             isDisabled: emptySpam.isEmpty || emptySpam.isEmptying
