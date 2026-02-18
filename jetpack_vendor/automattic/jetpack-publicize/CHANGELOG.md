@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Create reusable link previews modal and tabs component.
 
 ### Changed
+- Replace link previews in the panel with the unified one.
 - Update package dependencies.
 
 ## [0.72.3] - 2026-02-16
