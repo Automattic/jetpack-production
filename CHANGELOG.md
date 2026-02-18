@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: render images from image select fields on email notifications.
 - SEO: Add social link previews to the SEO tools UI.
 
 ### Bug fixes

@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Change forms dashboard URL filter to allow customizing the dashboard location and resolve legacy hash fragments from email links.
+- Render images from image select fields on email notifications.
 - Update package dependencies.
 
 ### Fixed
