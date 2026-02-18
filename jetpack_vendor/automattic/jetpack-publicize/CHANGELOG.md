@@ -5,17 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.72.4-alpha] - unreleased
+## [0.72.5-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## [0.72.4] - 2026-02-18
 ### Added
-- Add analytics tracking for per network customizations UI.
-- Create reusable link previews modal and tabs component.
+- Add analytics tracking for per network customizations UI. [#47188]
+- Create reusable link previews modal and tabs component. [#47142]
 
 ### Changed
-- Replace link previews in the panel with the unified one.
-- Update package dependencies.
+- Replace link previews in the panel with the unified one. [#47153]
+- Update package dependencies. [#47173]
 
 ## [0.72.3] - 2026-02-16
 ### Added
@@ -1286,7 +1287,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.72.4-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.72.3...v0.72.4-alpha
+[0.72.5-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.72.4...v0.72.5-alpha
+[0.72.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.72.3...v0.72.4
 [0.72.3]: https://github.com/Automattic/jetpack-publicize/compare/v0.72.2...v0.72.3
 [0.72.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.72.1...v0.72.2
 [0.72.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.72.0...v0.72.1
