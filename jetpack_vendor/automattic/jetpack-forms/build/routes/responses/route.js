@@ -416,7 +416,7 @@ var route = {
    *
    * @return                         - Whether to show the inspector panel.
    */
-  inspector: async ({ search }) => {
+  inspector: ({ search }) => {
     return !!(search?.responseIds && search.responseIds.length === 1);
   },
   /**
@@ -442,7 +442,8 @@ var route = {
       page: search.page || 1,
       status,
       orderby: "date",
-      order: "desc"
+      order: "desc",
+      fields_format: "collection"
     });
     await preloadGlobalTabCounts();
   },

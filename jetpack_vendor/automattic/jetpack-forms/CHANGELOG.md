@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Contact Form: fix layout classes applied to wrong element for synced forms.
+- Dashboard: Fix flash of unstyled response data in the inspector sidebar on initial page load.
 - Email template: fix button layout regression, add responsive mobile stacking, improve font sizes, and align field icons with labels.
 - Fix 'Mark as spam' button in email notifications to work with wp-build dashboard.
 - Fix wp-build dashboard headers and content positioning on mobile.
