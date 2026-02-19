@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Add visual dot to active connection in preview modal.
 
 ### Bug fixes
+- Forms: Prevent fatal error when rendering image-select fields with invalid image payloads.
 - Shortcode embeds: improve handling of YouTube shorts in embeds.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

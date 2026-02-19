@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix 'Mark as spam' button in email notifications to work with wp-build dashboard.
 - Fix wp-build dashboard headers and content positioning on mobile.
 - Form Editor: add padding below title to prevent block toolbar overlap.
+- Image Select: Prevent fatal error when rendering image-select fields with invalid image payloads.
 
 ## [7.8.0] - 2026-02-16
 ### Added
