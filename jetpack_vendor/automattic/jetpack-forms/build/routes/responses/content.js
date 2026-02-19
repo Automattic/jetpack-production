@@ -38561,30 +38561,28 @@ function StageInner() {
         filterBy: { operators: ["is"] },
         enableSorting: false
       },
-      ...isSingleFormView ? [] : [
-        {
-          id: "source",
-          label: (0, import_i18n87.__)("Source", "jetpack-forms"),
-          render: ({ item }) => {
-            const source = item.entry_title || getUrlPath(item.entry_permalink) || (0, import_i18n87.__)("(no title)", "jetpack-forms");
-            if (item.entry_permalink) {
-              return styleUnreadValue(
-                /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(import_components78.ExternalLink, { href: item.entry_permalink, children: source }),
-                item.is_unread
-              );
-            }
-            return styleUnreadValue(source, item.is_unread);
-          },
-          elements: (filterOptions?.source || []).map(
-            (source) => ({
-              value: source.id.toString(),
-              label: (0, import_html_entities5.decodeEntities)(source.title) || getUrlPath(source.url) || (0, import_i18n87.__)("(no title)", "jetpack-forms")
-            })
-          ),
-          filterBy: { operators: ["is"] },
-          enableSorting: false
-        }
-      ],
+      {
+        id: "source",
+        label: (0, import_i18n87.__)("Source", "jetpack-forms"),
+        render: ({ item }) => {
+          const source = item.entry_title || getUrlPath(item.entry_permalink) || (0, import_i18n87.__)("(no title)", "jetpack-forms");
+          if (item.entry_permalink) {
+            return styleUnreadValue(
+              /* @__PURE__ */ (0, import_jsx_runtime173.jsx)(import_components78.ExternalLink, { href: item.entry_permalink, children: source }),
+              item.is_unread
+            );
+          }
+          return styleUnreadValue(source, item.is_unread);
+        },
+        elements: (filterOptions?.source || []).map(
+          (source) => ({
+            value: source.id.toString(),
+            label: (0, import_html_entities5.decodeEntities)(source.title) || getUrlPath(source.url) || (0, import_i18n87.__)("(no title)", "jetpack-forms")
+          })
+        ),
+        ...isSingleFormView ? {} : { filterBy: { operators: ["is"] } },
+        enableSorting: false
+      },
       {
         id: "read_status",
         label: (0, import_i18n87.__)("Status", "jetpack-forms"),
