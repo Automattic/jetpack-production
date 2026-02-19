@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Converted testimonial and connection screen images from PNG to WebP.
 - Update package dependencies.
 
+### Removed
+- Remove outdated "Restore points created with every edit" notice from the Backup admin page.
+
 ## [4.2.41] - 2026-02-16
 ### Changed
 - Update package dependencies. [#47099]
