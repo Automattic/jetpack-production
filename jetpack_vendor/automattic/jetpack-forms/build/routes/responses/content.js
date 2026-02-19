@@ -11804,7 +11804,8 @@ var getCurrencyObject = ({ number, browserSafeLocale, currency, stripZeros, isSm
     symbolPosition,
     integer,
     fraction,
-    hasNonZeroFraction
+    hasNonZeroFraction,
+    floatValue: numberAsFloat
   };
 };
 
