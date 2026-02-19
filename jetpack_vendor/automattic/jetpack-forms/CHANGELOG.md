@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Email template: fix button layout regression, add responsive mobile stacking, improve font sizes, and align field icons with labels.
 - Fix 'Mark as spam' button in email notifications to work with wp-build dashboard.
 - Fix wp-build dashboard headers and content positioning on mobile.
+- Form Editor: add padding below title to prevent block toolbar overlap.
 
 ## [7.8.0] - 2026-02-16
 ### Added
