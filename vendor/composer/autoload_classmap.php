@@ -249,6 +249,7 @@ return array(
     'Automattic\\Jetpack\\Paypal_Payments\\Widgets\\Simple_Payments_Widget' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/widget/class-simple-payments-widget.php',
     'Automattic\\Jetpack\\Plans' => $vendorDir . '/automattic/jetpack-plans/src/class-plans.php',
     'Automattic\\Jetpack\\Plugin\\Deprecate' => $baseDir . '/src/class-deprecate.php',
+    'Automattic\\Jetpack\\Plugin\\Jetpack_Script_Data' => $baseDir . '/src/class-jetpack-script-data.php',
     'Automattic\\Jetpack\\Plugin\\Tracking' => $baseDir . '/src/class-tracking.php',
     'Automattic\\Jetpack\\Plugins_Installer' => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-plugins-installer.php',
     'Automattic\\Jetpack\\Post_List\\Post_List' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-list.php',

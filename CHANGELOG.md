@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Block Editor: made Jetpack logo display behavior consistent across SEO and AI panels. Logo now appears in global contexts (document settings, pre-publish, post-publish) but not in the Jetpack sidebar.
 - Forms: render images from image select fields on email notifications.
 - SEO: Add social link previews to the SEO tools UI.
 - Social: Add visual dot to active connection in preview modal.

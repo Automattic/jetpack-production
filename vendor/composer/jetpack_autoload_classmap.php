@@ -990,6 +990,10 @@ return array(
 		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/class-deprecate.php'
 	),
+	'Automattic\\Jetpack\\Plugin\\Jetpack_Script_Data' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/class-jetpack-script-data.php'
+	),
 	'Automattic\\Jetpack\\Plugin\\Tracking' => array(
 		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/class-tracking.php'
