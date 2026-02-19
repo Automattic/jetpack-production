@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Contact Form: fix layout classes applied to wrong element for synced forms.
+- Contact Form: Fix shortcode ref attribute to load form from jetpack_form post type.
 - Dashboard: Fix flash of unstyled response data in the inspector sidebar on initial page load.
 - Dashboard: remove icons from mobile dropdown menu items for a cleaner appearance.
 - Email template: fix button layout regression, add responsive mobile stacking, improve font sizes, and align field icons with labels.
