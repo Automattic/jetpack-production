@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.72.6-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Twitter Cards: Use Automattic\Jetpack\Post_Media\Twitter_Cards instead of Jetpack_Twitter_Cards.
+
 ## [0.72.5] - 2026-02-19
 ### Added
 - Add visual dot to active connection in preview modal. [#47218]
@@ -1290,6 +1297,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.72.6-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.72.5...v0.72.6-alpha
 [0.72.5]: https://github.com/Automattic/jetpack-publicize/compare/v0.72.4...v0.72.5
 [0.72.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.72.3...v0.72.4
 [0.72.3]: https://github.com/Automattic/jetpack-publicize/compare/v0.72.2...v0.72.3
