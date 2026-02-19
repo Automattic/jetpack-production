@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add file field HTML output for emails
 
 ### Changed
+- Change default form layout from vertical to horizontal with wrap, allowing form fields to display side-by-side.
 - Change forms dashboard URL filter to allow customizing the dashboard location and resolve legacy hash fragments from email links.
 - Render images from image select fields on email notifications.
 - Update package dependencies.
