@@ -36978,7 +36978,15 @@ function useFormItemActions() {
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
 var import_jsx_runtime169 = __toESM(require_jsx_runtime(), 1);
 function usePageHeaderDetails(props) {
-  const { screen, sourceId, isIntegrationsEnabled, showDashboardIntegrations, onOpenIntegrations } = props;
+  const {
+    screen,
+    sourceId,
+    formsCount,
+    isIntegrationsEnabled,
+    showDashboardIntegrations,
+    onOpenIntegrations,
+    onOpenFormsHelp
+  } = props;
   const statusView = props.statusView ?? "inbox";
   const sourceIdNumber = (0, import_element89.useMemo)(() => {
     const value = sourceId;
@@ -37060,7 +37068,14 @@ function usePageHeaderDetails(props) {
   }, [breadcrumbsItems]);
   const subtitle = (0, import_element89.useMemo)(() => {
     if (isFormsScreen) {
-      return (0, import_i18n85.__)("View and manage all your forms in one place.", "jetpack-forms");
+      const shortMessage = (0, import_i18n85.__)("View and manage all your forms.", "jetpack-forms");
+      const longMessage = (0, import_i18n85.__)("View and manage all your forms in one place.", "jetpack-forms");
+      const shouldShowFormsHelpLink = !!onOpenFormsHelp && (typeof formsCount !== "number" || formsCount < 5);
+      return shouldShowFormsHelpLink ? /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)(import_jsx_runtime169.Fragment, { children: [
+        shortMessage,
+        " ",
+        /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(import_components76.Button, { variant: "link", onClick: onOpenFormsHelp, children: (0, import_i18n85.__)("Missing forms?", "jetpack-forms") })
+      ] }) : longMessage;
     }
     if (isSingleFormScreen) {
       if (formTitle) {
@@ -37073,7 +37088,7 @@ function usePageHeaderDetails(props) {
       return (0, import_i18n85.__)("View responses for this form.", "jetpack-forms");
     }
     return (0, import_i18n85.__)("View and manage all your form submissions in one place.", "jetpack-forms");
-  }, [formTitle, isFormsScreen, isSingleFormScreen]);
+  }, [formTitle, isFormsScreen, isSingleFormScreen, onOpenFormsHelp, formsCount]);
   const actions2 = (0, import_element89.useMemo)(() => {
     if (isSm) {
       const dropdownControls = [];

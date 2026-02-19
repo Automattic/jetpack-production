@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Dashboard: add "Duplicate" action to the wp-build forms list.
 - Dashboard: add actions dropdown (Duplicate, Preview, Copy embed, Copy shortcode) to the single form view header.
+- Dashboard: add help for blocks vs forms.
 - Forms: add file field HTML output for emails
 
 ### Changed
