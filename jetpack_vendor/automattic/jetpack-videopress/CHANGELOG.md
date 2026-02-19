@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Pass current user ID when deleting VideoPress videos on wpcom to fix activity log attribution.
+- Video block: only intercept video file uploads when the VideoPress module is active.
 
 ## [0.35.0] - 2026-02-16
 ### Added
