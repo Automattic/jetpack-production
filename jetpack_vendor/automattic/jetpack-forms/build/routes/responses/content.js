@@ -39165,42 +39165,53 @@ var import_components84 = __toESM(require_components(), 1);
 var import_html_entities7 = __toESM(require_html_entities(), 1);
 var import_i18n92 = __toESM(require_i18n(), 1);
 var import_jsx_runtime179 = __toESM(require_jsx_runtime(), 1);
+var extensionMap = {
+  pdf: "pdf",
+  png: "png",
+  jpg: "png",
+  jpeg: "png",
+  gif: "png",
+  mp4: "mp4",
+  mp3: "mp3",
+  webm: "mp4",
+  doc: "doc",
+  docx: "doc",
+  txt: "txt",
+  ppt: "ppt",
+  pptx: "ppt",
+  xls: "xls",
+  xlsx: "xls",
+  csv: "xls",
+  zip: "zip",
+  sql: "sql",
+  cal: "cal",
+  html: "html"
+};
+var mimeMap = {
+  image: "png",
+  video: "mp4",
+  audio: "mp3",
+  document: "pdf",
+  application: "txt"
+};
 var FieldFile = ({ file, onClick }) => {
   const fileExtension = file.name.split(".").pop().toLowerCase();
-  const fileType = file.type.split("/")[0];
-  const iconMap = {
-    image: "png",
-    video: "mp4",
-    audio: "mp3",
-    document: "pdf",
-    application: "txt"
-  };
-  const extensionMap = {
-    pdf: "pdf",
-    png: "png",
-    jpg: "png",
-    jpeg: "png",
-    gif: "png",
-    mp4: "mp4",
-    mp3: "mp3",
-    webm: "webm",
-    doc: "doc",
-    docx: "doc",
-    txt: "txt",
-    ppt: "ppt",
-    pptx: "ppt",
-    xls: "xls",
-    xlsx: "xls",
-    csv: "xls",
-    zip: "zip",
-    sql: "sql",
-    cal: "cal"
-  };
-  const iconType = extensionMap[fileExtension] || iconMap[fileType] || "txt";
-  const iconClass = clsx_default("jp-forms__inbox-response-file__icon", "icon-" + iconType);
+  const fileType = file.type?.split("/")?.[0];
+  const fileIconsUrl = useConfigValue("fileIconsUrl");
+  const iconType = extensionMap[fileExtension] || mimeMap[fileType] || "txt";
+  const iconClass = clsx_default("jp-forms__inbox-response-file__icon", {
+    ["icon-" + iconType]: !file.is_previewable,
+    "has-thumbnail": file.is_previewable
+  });
+  let iconStyle;
+  if (file.is_previewable) {
+    iconStyle = { backgroundImage: `url(${file.url})`, backgroundSize: "cover" };
+  } else if (fileIconsUrl) {
+    iconStyle = { backgroundImage: `url(${fileIconsUrl}${iconType}.svg)` };
+  }
   return /* @__PURE__ */ (0, import_jsx_runtime179.jsxs)("div", { className: "jp-forms__inbox-response-file", children: [
     /* @__PURE__ */ (0, import_jsx_runtime179.jsxs)("div", { className: "jp-forms__inbox-response-file__info", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime179.jsx)("div", { className: iconClass }),
+      /* @__PURE__ */ (0, import_jsx_runtime179.jsx)("div", { className: iconClass, style: iconStyle }),
       /* @__PURE__ */ (0, import_jsx_runtime179.jsxs)("div", { className: "jp-forms__inbox-response-file__name", children: [
         file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components84.Button, { target: "_blank", variant: "link", onClick, children: (0, import_html_entities7.decodeEntities)(file.name) }),
         !file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime179.jsx)(import_components84.ExternalLink, { href: file.url + "&preview=true", children: (0, import_html_entities7.decodeEntities)(file.name) }),
@@ -39218,10 +39229,10 @@ var FieldFile = ({ file, onClick }) => {
 var file_default = FieldFile;
 
 // src/dashboard/components/inspector/response-fields/field-file/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='b323acbb85']")) {
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='425b83a5a8']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "b323acbb85");
-  style.appendChild(document.createTextNode(".jp-forms__inbox-response-field-file{margin-top:4px}.jp-forms__inbox-response-file{display:flex;gap:12px;justify-content:space-between}.jp-forms__inbox-response-file__icon{background-color:#f0f0f0;background-image:url(../../../../../contact-form/images/file-icons/txt.svg);background-position:50%;background-repeat:no-repeat;background-size:18px;border-radius:50%;height:32px;margin-top:8px;min-width:32px;width:32px}@media (min-width:783px){.jp-forms__inbox-response-file__icon{background-size:24px;height:40px;margin-top:0;min-width:40px;width:40px}}.jp-forms__inbox-response-file__icon.icon-cal{background-image:url(../../../../../contact-form/images/file-icons/cal.svg)}.jp-forms__inbox-response-file__icon.icon-html{background-image:url(../../../../../contact-form/images/file-icons/html.svg)}.jp-forms__inbox-response-file__icon.icon-mp3{background-image:url(../../../../../contact-form/images/file-icons/mp3.svg)}.jp-forms__inbox-response-file__icon.icon-mp4{background-image:url(../../../../../contact-form/images/file-icons/mp4.svg)}.jp-forms__inbox-response-file__icon.icon-pdf{background-image:url(../../../../../contact-form/images/file-icons/pdf.svg)}.jp-forms__inbox-response-file__icon.icon-png{background-image:url(../../../../../contact-form/images/file-icons/png.svg)}.jp-forms__inbox-response-file__icon.icon-ppt{background-image:url(../../../../../contact-form/images/file-icons/ppt.svg)}.jp-forms__inbox-response-file__icon.icon-sql{background-image:url(../../../../../contact-form/images/file-icons/sql.svg)}.jp-forms__inbox-response-file__icon.icon-txt{background-image:url(../../../../../contact-form/images/file-icons/txt.svg)}.jp-forms__inbox-response-file__icon.icon-xls{background-image:url(../../../../../contact-form/images/file-icons/xls.svg)}.jp-forms__inbox-response-file__icon.icon-zip{background-image:url(../../../../../contact-form/images/file-icons/zip.svg)}.jp-forms__inbox-response-file__info{display:flex;gap:12px}"));
+  style.setAttribute("data-wp-hash", "425b83a5a8");
+  style.appendChild(document.createTextNode(".jp-forms__inbox-response-field-file{margin-top:4px}.jp-forms__inbox-response-file{display:flex;gap:12px;justify-content:space-between}.jp-forms__inbox-response-file__icon{background-color:#f0f0f0;background-image:url(../../../../../contact-form/images/file-icons/txt.svg);background-position:50%;background-repeat:no-repeat;background-size:18px;border-radius:50%;height:32px;margin-top:8px;min-width:32px;width:32px}@media (min-width:783px){.jp-forms__inbox-response-file__icon{background-size:24px;height:40px;margin-top:0;min-width:40px;width:40px}}.jp-forms__inbox-response-file__icon.icon-cal{background-image:url(../../../../../contact-form/images/file-icons/cal.svg)}.jp-forms__inbox-response-file__icon.icon-html{background-image:url(../../../../../contact-form/images/file-icons/html.svg)}.jp-forms__inbox-response-file__icon.icon-mp3{background-image:url(../../../../../contact-form/images/file-icons/mp3.svg)}.jp-forms__inbox-response-file__icon.icon-mp4{background-image:url(../../../../../contact-form/images/file-icons/mp4.svg)}.jp-forms__inbox-response-file__icon.icon-pdf{background-image:url(../../../../../contact-form/images/file-icons/pdf.svg)}.jp-forms__inbox-response-file__icon.icon-png{background-image:url(../../../../../contact-form/images/file-icons/png.svg)}.jp-forms__inbox-response-file__icon.icon-ppt{background-image:url(../../../../../contact-form/images/file-icons/ppt.svg)}.jp-forms__inbox-response-file__icon.icon-sql{background-image:url(../../../../../contact-form/images/file-icons/sql.svg)}.jp-forms__inbox-response-file__icon.icon-txt{background-image:url(../../../../../contact-form/images/file-icons/txt.svg)}.jp-forms__inbox-response-file__icon.icon-xls{background-image:url(../../../../../contact-form/images/file-icons/xls.svg)}.jp-forms__inbox-response-file__icon.icon-zip{background-image:url(../../../../../contact-form/images/file-icons/zip.svg)}.jp-forms__inbox-response-file__icon.has-thumbnail{background-image:none}.jp-forms__inbox-response-file__info{display:flex;gap:12px}"));
   document.head.appendChild(style);
 }
 
