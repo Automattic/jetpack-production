@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Social Icons: Update documentation links for available icons.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Hide backup and restore messaging on non-Business WPCom plans
 - Internal: Add unit tests for MCP actor fields in sync listener.
 - Removed Summer Special references and cleaned up code.
 - Remove Jetpack header from Settings => Sharing on WPCom sites
