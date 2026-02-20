@@ -255,6 +255,7 @@ return array(
     'Automattic\\Jetpack\\Post_List\\Post_List' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-list.php',
     'Automattic\\Jetpack\\Post_List\\Post_Thumbnail' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-thumbnail.php',
     'Automattic\\Jetpack\\Post_Media' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-post-media.php',
+    'Automattic\\Jetpack\\Post_Media\\Images' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-images.php',
     'Automattic\\Jetpack\\Post_Media\\Twitter_Cards' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-twitter-cards.php',
     'Automattic\\Jetpack\\Protect_Models' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-protect-models.php',
     'Automattic\\Jetpack\\Protect_Models\\Extension_Model' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-extension-model.php',
