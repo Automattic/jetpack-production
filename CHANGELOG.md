@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: Prevent fatal error when rendering image-select fields with invalid image payloads.
+- Sharing: Remove Pocket sharing button.
 - Shortcode embeds: improve handling of YouTube shorts in embeds.
 - Slideshow block: fix further issues with aspect ratio.
 - Social Icons: Update documentation links for available icons.

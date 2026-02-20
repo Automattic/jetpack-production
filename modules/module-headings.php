@@ -875,7 +875,7 @@ function jetpack_get_module_info( $key ) {
 	    'auto_activate' => 'No',
 	    'module_tags' => 'Social, Recommended',
 	    'feature' => 'Engagement',
-	    'additional_search_queries' => 'share, sharing, sharedaddy, social buttons, buttons, share facebook, share twitter, social media sharing, social media share, social share, icons, email, facebook, twitter, linkedin, pinterest, pocket, social widget, social media',
+	    'additional_search_queries' => 'share, sharing, sharedaddy, social buttons, buttons, share facebook, share twitter, social media sharing, social media share, social share, icons, email, facebook, twitter, linkedin, pinterest, social widget, social media',
 	    'plan_classes' => '',
 	  ),
 	  'shortcodes' => 

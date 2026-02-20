@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Social Menu: Remove Pocket sharing button.
+
 ## [0.14.14] - 2026-02-16
 ### Changed
 - Update package dependencies. [#47099]
