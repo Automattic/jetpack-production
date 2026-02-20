@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Sync: Add MCP information to the actor.
 
+### Fixed
+- Listener: Replace redundant filter_var with sanitize_text_field for user agent sanitization.
+
 ## [4.28.0] - 2026-02-19
 ### Added
 - Add WooCommerce store address details (`address`, `address_2`, `city`, `postcode`) and admin install timestamp to sync whitelist for improved WooCommerce site settings sync. [#47192]

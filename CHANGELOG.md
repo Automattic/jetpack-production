@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Shortcode embeds: improve handling of YouTube shorts in embeds.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Internal: Add unit tests for MCP actor fields in sync listener.
 - Removed Summer Special references and cleaned up code.
 - Remove Jetpack header from Settings => Sharing on WPCom sites
 - Twitter Cards: Deprecate Jetpack_Twitter_Cards class in favor of Automattic\Jetpack\Post_Media\Twitter_Cards.
