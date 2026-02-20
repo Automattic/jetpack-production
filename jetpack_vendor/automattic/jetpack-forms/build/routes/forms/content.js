@@ -28838,7 +28838,8 @@ function usePageHeaderDetails(props) {
           {
             controls: dropdownControls,
             icon: more_vertical_default,
-            label: (0, import_i18n86.__)("More actions", "jetpack-forms")
+            label: (0, import_i18n86.__)("More actions", "jetpack-forms"),
+            toggleProps: { size: "compact" }
           },
           "actions-menu"
         ),
@@ -28907,7 +28908,8 @@ function usePageHeaderDetails(props) {
             {
               controls: formItemControls,
               icon: more_vertical_default,
-              label: (0, import_i18n86.__)("More actions", "jetpack-forms")
+              label: (0, import_i18n86.__)("More actions", "jetpack-forms"),
+              toggleProps: { size: "compact" }
             },
             "form-actions-menu"
           )
@@ -28977,10 +28979,10 @@ function usePageHeaderDetails(props) {
 }
 
 // src/dashboard/wp-build/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='8b3cc3f2f7']")) {
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='cbc7186354']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "8b3cc3f2f7");
-  style.appendChild(document.createTextNode("body.jetpack-forms-responses .admin-ui-breadcrumbs__list li,body.jetpack_page_jetpack-forms-responses-wp-admin .admin-ui-breadcrumbs__list li{margin-bottom:0}body.jetpack-forms-responses .admin-ui-breadcrumbs__list li:first-of-type,body.jetpack_page_jetpack-forms-responses-wp-admin .admin-ui-breadcrumbs__list li:first-of-type{margin-inline-start:4px}body.jetpack-forms-responses .admin-ui-breadcrumbs__list li a,body.jetpack_page_jetpack-forms-responses-wp-admin .admin-ui-breadcrumbs__list li a{color:var(--wp-components-color-foreground,#1e1e1e);font-weight:600}"));
+  style.setAttribute("data-wp-hash", "cbc7186354");
+  style.appendChild(document.createTextNode("body.jetpack-forms-responses .admin-ui-breadcrumbs__list li,body.jetpack_page_jetpack-forms-responses-wp-admin .admin-ui-breadcrumbs__list li{margin-bottom:0}body.jetpack-forms-responses .admin-ui-breadcrumbs__list li:first-of-type,body.jetpack_page_jetpack-forms-responses-wp-admin .admin-ui-breadcrumbs__list li:first-of-type{margin-inline-start:4px}body.jetpack-forms-responses .admin-ui-breadcrumbs__list li a,body.jetpack_page_jetpack-forms-responses-wp-admin .admin-ui-breadcrumbs__list li a{color:var(--wp-components-color-foreground,#1e1e1e);font-weight:600}body.jetpack-forms-responses .dataviews-search .components-base-control__field,body.jetpack_page_jetpack-forms-responses-wp-admin .dataviews-search .components-base-control__field{margin-bottom:0}"));
   document.head.appendChild(style);
 }
 

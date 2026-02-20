@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: Fix shortcode ref attribute to load form from jetpack_form post type.
 - Dashboard: Fix flash of unstyled response data in the inspector sidebar on initial page load.
 - Dashboard: re-add the source column to the single form view responses table.
+- Dashboard: remove bottom margin on search control that caused vertical misalignment in the header row.
 - Dashboard: remove icons from mobile dropdown menu items for a cleaner appearance.
 - Dashboard: use consistent "responses" terminology instead of "entries" and "submissions".
 - Email template: fix button layout regression, add responsive mobile stacking, improve font sizes, and align field icons with labels.
