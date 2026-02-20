@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Email template: fix button layout regression, add responsive mobile stacking, improve font sizes, and align field icons with labels.
 - Fix 'Mark as spam' button in email notifications to work with wp-build dashboard.
 - Fix file-type icon paths and show image thumbnails for file fields in the inspector
+- Fix image-select field preview styling on the wp-build dashboard
 - Fix wp-build dashboard headers and content positioning on mobile.
 - Form Editor: add padding below title to prevent block toolbar overlap.
 - Image Select: Prevent fatal error when rendering image-select fields with invalid image payloads.
