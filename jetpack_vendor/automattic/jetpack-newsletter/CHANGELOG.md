@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Tracks analytics to track user interactions on the newsletter settings page.
 
 ### Changed
+- Reader Link: Open the Reader in a different tab on self-hosted sites.
 - Settings: wrap page with AdminPage component for consistency with other Jetpack pages.
 - Update package dependencies.
 
