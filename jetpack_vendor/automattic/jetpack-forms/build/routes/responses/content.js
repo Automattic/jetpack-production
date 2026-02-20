@@ -37087,7 +37087,7 @@ function usePageHeaderDetails(props) {
       }
       return (0, import_i18n85.__)("View responses for this form.", "jetpack-forms");
     }
-    return (0, import_i18n85.__)("View and manage all your form submissions in one place.", "jetpack-forms");
+    return (0, import_i18n85.__)("View and manage all your form responses in one place.", "jetpack-forms");
   }, [formTitle, isFormsScreen, isSingleFormScreen, onOpenFormsHelp, formsCount]);
   const actions2 = (0, import_element89.useMemo)(() => {
     if (isSm) {

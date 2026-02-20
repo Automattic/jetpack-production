@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Fix flash of unstyled response data in the inspector sidebar on initial page load.
 - Dashboard: re-add the source column to the single form view responses table.
 - Dashboard: remove icons from mobile dropdown menu items for a cleaner appearance.
+- Dashboard: use consistent "responses" terminology instead of "entries" and "submissions".
 - Email template: fix button layout regression, add responsive mobile stacking, improve font sizes, and align field icons with labels.
 - Fix 'Mark as spam' button in email notifications to work with wp-build dashboard.
 - Fix file-type icon paths and show image thumbnails for file fields in the inspector

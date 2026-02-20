@@ -28749,7 +28749,7 @@ function usePageHeaderDetails(props) {
       }
       return (0, import_i18n86.__)("View responses for this form.", "jetpack-forms");
     }
-    return (0, import_i18n86.__)("View and manage all your form submissions in one place.", "jetpack-forms");
+    return (0, import_i18n86.__)("View and manage all your form responses in one place.", "jetpack-forms");
   }, [formTitle, isFormsScreen, isSingleFormScreen, onOpenFormsHelp, formsCount]);
   const actions2 = (0, import_element89.useMemo)(() => {
     if (isSm) {
@@ -29163,7 +29163,7 @@ function StageInner() {
       },
       {
         id: "entries",
-        label: (0, import_i18n87.__)("Entries", "jetpack-forms"),
+        label: (0, import_i18n87.__)("Responses", "jetpack-forms"),
         getValue: ({ item }) => item.entriesCount ?? 0,
         render: ({ item }) => item.entriesCount ?? 0,
         enableSorting: false
