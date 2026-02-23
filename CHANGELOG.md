@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Image Studio: add Image Studio plugin support to block editor and media library.
 - Post Images: Add `jetpack-ignore-thumbnail` CSS class and `jetpack_postimages_exclude_image` filter to exclude specific images from post image discovery.
 - SEO: Add social link previews to the SEO tools UI.
+- Site: Ensure is_garden is included in default site fields for server-side rendering.
 - Social: Add visual dot to active connection in preview modal.
 
 ### Bug fixes
