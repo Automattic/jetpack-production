@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix image-select field preview styling on the wp-build dashboard
 - Fix wp-build dashboard headers and content positioning on mobile.
 - Form Editor: add padding below title to prevent block toolbar overlap.
+- Forms: Fix unwanted border appearing in Gutenberg 22.6.0.
 - Image Select: Prevent fatal error when rendering image-select fields with invalid image payloads.
 
 ## [7.8.0] - 2026-02-16
