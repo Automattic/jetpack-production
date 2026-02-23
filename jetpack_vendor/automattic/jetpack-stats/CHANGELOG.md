@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add Transient_Cleanup class to periodically clean up expired stats cache transients on sites without persistent object cache.
 
+### Changed
+- Transient cleanup: Skip scheduling cron job entirely on sites with persistent object cache
+
 ## [0.17.8] - 2026-02-02
 ### Changed
 - Update dependencies. [#39260]
