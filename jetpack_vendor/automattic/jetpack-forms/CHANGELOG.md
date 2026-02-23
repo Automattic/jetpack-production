@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Change default form layout from vertical to horizontal with wrap, allowing form fields to display side-by-side.
 - Change forms dashboard URL filter to allow customizing the dashboard location and resolve legacy hash fragments from email links.
+- Forms: revert https://github.com/Automattic/jetpack/pull/47097 - restore button border colors to previous state
 - Render images from image select fields on email notifications.
 - Update package dependencies.
 
