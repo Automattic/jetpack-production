@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Social: Add `jetpack.ai.imageGenerationHandler` filter to allow external plugins (e.g. Image Studio) to replace the built-in AI image generation flow for the "Generate image" entry point.
 
+### Changed
+- Update package dependencies.
+
 ## [0.72.6] - 2026-02-23
 ### Changed
 - Twitter Cards: Use `Automattic\Jetpack\Post_Media\Twitter_Cards` instead of `Jetpack_Twitter_Cards`. [#47169]

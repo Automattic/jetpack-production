@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Subscriptions Block: make excerpt filter more broad.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
+
 ## 15.6-a.5 - 2026-02-23
 ### Enhancements
 - AI Sidebar: Add `jetpack.ai.imageGenerationHandler` filter to allow external plugins (e.g. Image Studio) to replace the built-in AI image generation flow for the "Get Featured Image" entry point. [#47124]
