@@ -707,7 +707,7 @@ class Jetpack_PostImages {
 			 * for Related Posts, Open Graph tags, and other features. Returning a truthy
 			 * value causes the image to be skipped.
 			 *
-			 * @since 15.6-a.4
+			 * @since 15.6
 			 *
 			 * @param bool  $exclude Whether to exclude the image. Default false.
 			 * @param array $image   {

@@ -21,7 +21,7 @@ namespace Automattic\Jetpack\Stats;
  * based on query parameters, so expired entries are rarely accessed again and
  * accumulate indefinitely in wp_options on sites without an external object cache.
  *
- * @since 0.18.0-alpha
+ * @since 0.18.0
  */
 class Transient_Cleanup {
 
@@ -122,7 +122,7 @@ class Transient_Cleanup {
 		/**
 		 * Filter the list of transient prefixes to clean up.
 		 *
-		 * @since 0.18.0-alpha
+		 * @since 0.18.0
 		 *
 		 * @param array $prefixes List of transient prefixes.
 		 */
@@ -152,7 +152,7 @@ class Transient_Cleanup {
 		/**
 		 * Filter to disable transient cleanup.
 		 *
-		 * @since 0.18.0-alpha
+		 * @since 0.18.0
 		 *
 		 * @param bool $disabled Whether to disable transient cleanup. Default false.
 		 */

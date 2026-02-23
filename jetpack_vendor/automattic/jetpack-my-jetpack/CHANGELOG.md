@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.31.6-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.31.6] - 2026-02-23
 ### Changed
-- Move wpcom-reader module from Other to Growth category in My Jetpack tab panel
+- Move `wpcom-reader` module from Other to Growth category in My Jetpack tab panel. [#47245]
 
 ## [5.31.5] - 2026-02-19
 ### Changed
@@ -2546,7 +2543,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.31.6-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.31.5...5.31.6-alpha
+[5.31.6]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.31.5...5.31.6
 [5.31.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.31.4...5.31.5
 [5.31.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.31.3...5.31.4
 [5.31.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.31.2...5.31.3

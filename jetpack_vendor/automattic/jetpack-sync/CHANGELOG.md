@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.29.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.29.0] - 2026-02-23
 ### Added
-- Sync: Add MCP information to the actor.
+- Add MCP information to the actor. [#47223]
 
 ### Fixed
-- Listener: Replace redundant filter_var with sanitize_text_field for user agent sanitization.
+- Listener: Replace redundant `filter_var` with `sanitize_text_field` for user agent sanitization. [#47244]
 
 ## [4.28.0] - 2026-02-19
 ### Added
@@ -1667,7 +1664,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.29.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.28.0...v4.29.0-alpha
+[4.29.0]: https://github.com/Automattic/jetpack-sync/compare/v4.28.0...v4.29.0
 [4.28.0]: https://github.com/Automattic/jetpack-sync/compare/v4.27.0...v4.28.0
 [4.27.0]: https://github.com/Automattic/jetpack-sync/compare/v4.26.0...v4.27.0
 [4.26.0]: https://github.com/Automattic/jetpack-sync/compare/v4.25.2...v4.26.0
