@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Forms: Fix unwanted border appearing in Gutenberg 22.6.0.
+- Prevent decorative icons from being included when copy/pasting form response emails.
 
 ## [7.9.0] - 2026-02-23
 ### Added
