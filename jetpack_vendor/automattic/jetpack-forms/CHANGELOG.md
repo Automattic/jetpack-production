@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Add rename action to forms list.
 - Forms: add file field HTML output for emails
 - Forms: add pre-publish panel with settings summary and quick navigation to the form editor.
+- Forms block: Add border styling support.
 
 ### Changed
 - Change default form layout from vertical to horizontal with wrap, allowing form fields to display side-by-side.
