@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update package dependencies.
+- VideoPress: use `apiFetch` in GutenbergKit for token authentication middleware support.
 
 ## [0.35.1] - 2026-02-23
 ### Changed
