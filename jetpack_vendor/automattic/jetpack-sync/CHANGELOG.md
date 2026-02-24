@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Full Sync: Store last_item in status to avoid re-running an expensive query on every invocation.
+- Listener: Add per-request in-memory cache to avoid repeated get_transient calls when checking queue state.
 
 ## [4.29.0] - 2026-02-23
 ### Added
