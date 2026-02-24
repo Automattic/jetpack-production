@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add print-friendly styles to form submission emails: hide decorative field icons, tighten spacing, and remove non-essential elements when printing. Minify email CSS to stay under Gmail's 8,192-character style block limit.
 - Forms: add View Responses button and More Actions dropdown to form editor header.
 - Forms block: Add border styling support.
 
