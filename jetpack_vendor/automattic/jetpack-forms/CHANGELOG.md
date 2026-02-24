@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms: Optimize CSS loading by moving status notice styles to separate file loaded only when needed.
 - Forms: revert https://github.com/Automattic/jetpack/pull/47097 - restore button border colors to previous state
+- Update package dependencies.
 
 ### Fixed
 - Fix duplicate title in plain text email by removing the preheader element before generating plain text alternative.
