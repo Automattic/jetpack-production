@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Full Sync: Store last_item in status to avoid re-running an expensive query on every invocation.
 - Listener: Add per-request in-memory cache to avoid repeated get_transient calls when checking queue state.
 
+### Fixed
+- Full Sync: Fix chunk size adjustment when sync is stuck to correctly preserve adjusted chunk size and stuck count across invocations.
+
 ## [4.29.0] - 2026-02-23
 ### Added
 - Add MCP information to the actor. [#47223]
