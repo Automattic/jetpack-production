@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Forms: Fix duplicate title in plain text form submission notification emails.
 - Full Sync: Fix chunk size adjustment when sync is stuck to correctly preserve adjusted chunk size and stuck count across invocations.
 - Subscriptions Block: make excerpt filter more broad.
 

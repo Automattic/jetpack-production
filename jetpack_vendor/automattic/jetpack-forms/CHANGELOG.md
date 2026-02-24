@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: revert https://github.com/Automattic/jetpack/pull/47097 - restore button border colors to previous state
 
 ### Fixed
+- Fix duplicate title in plain text email by removing the preheader element before generating plain text alternative.
 - Fix infinite loop in Name field block when initializing fieldVariant attribute
 - Forms: Fix unwanted border appearing in Gutenberg 22.6.0.
 - Prevent decorative icons from being included when copy/pasting form response emails.
