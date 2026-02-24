@@ -52,23 +52,23 @@ var wp;
     }
   });
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/index.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/index.mjs
   var build_module_exports = {};
   __export(build_module_exports, {
     privateApis: () => privateApis
   });
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/lock-unlock.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/lock-unlock.mjs
   var import_private_apis = __toESM(require_private_apis(), 1);
   var { lock, unlock } = (0, import_private_apis.__dangerousOptInToUnstableAPIsOnlyForCoreModules)(
     "I acknowledge private features are not for use in themes or plugins and doing so will break in the next version of WordPress.",
     "@wordpress/theme"
   );
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/theme-provider.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/theme-provider.mjs
   var import_element3 = __toESM(require_element(), 1);
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/context.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/context.mjs
   var import_element = __toESM(require_element(), 1);
   var ThemeContext = (0, import_element.createContext)({
     resolvedSettings: {
@@ -3027,16 +3027,16 @@ var wp;
     return memoized;
   }
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/use-theme-provider-styles.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/use-theme-provider-styles.mjs
   var import_element2 = __toESM(require_element(), 1);
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/register-color-spaces.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/register-color-spaces.mjs
   ColorSpace.register(srgb_default);
   ColorSpace.register(oklch_default);
   ColorSpace.register(p3_default);
   ColorSpace.register(hsl_default);
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/prebuilt/ts/color-tokens.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/prebuilt/ts/color-tokens.mjs
   var color_tokens_default = {
     "primary-bgFill1": ["bg-interactive-brand-strong"],
     "primary-fgFill": [
@@ -3152,7 +3152,7 @@ var wp;
     "caution-fgSurface3": ["fg-content-caution-weak"]
   };
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/color-utils.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/color-utils.mjs
   function getColorString(color) {
     const rgbRounded = serialize(to(color, srgb_default));
     return serialize(rgbRounded, { format: "hex" });
@@ -3164,7 +3164,7 @@ var wp;
     return to(toGamut(c, { space: srgb_default, method: "css" }), oklch_default);
   }
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/constants.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/constants.mjs
   var WHITE = to("white", oklch_default);
   var BLACK = to("black", oklch_default);
   var UNIVERSAL_CONTRAST_TOPUP = 0.02;
@@ -3185,7 +3185,7 @@ var wp;
     error: "#cc1818"
   };
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/utils.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/utils.mjs
   function buildDependencyGraph(config) {
     const dependencies = /* @__PURE__ */ new Map();
     const dependents = /* @__PURE__ */ new Map();
@@ -3311,7 +3311,7 @@ var wp;
     return bestC;
   }
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/taper-chroma.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/taper-chroma.mjs
   function taperChroma(seed, lTarget, options = {}) {
     const gamut = options.gamut ?? srgb_default;
     const alpha = options.alpha ?? 0.65;
@@ -3423,7 +3423,7 @@ var wp;
     return get(clamped, [oklch_default, "c"]);
   }
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/find-color-with-constraints.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/find-color-with-constraints.mjs
   function cdiff(c13, c23) {
     return Math.log(c13 / c23);
   }
@@ -3500,7 +3500,7 @@ var wp;
     };
   }
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/index.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/index.mjs
   function calculateRamp({
     seed,
     sortedSteps,
@@ -3696,7 +3696,7 @@ var wp;
     };
   }
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/ramp-configs.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/lib/ramp-configs.mjs
   var lightnessConstraintForegroundHighContrast = (direction) => direction === "lighter" ? 0.9551 : 0.235;
   var lightnessConstraintForegroundMediumContrast = (direction) => direction === "lighter" ? 0.77 : 0.56;
   var lightnessConstraintBgFill = (direction) => direction === "lighter" ? 0.67 : 0.45;
@@ -3983,7 +3983,7 @@ var wp;
     }
   };
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/index.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/color-ramps/index.mjs
   function buildBgRamp(seed) {
     if (typeof seed !== "string" || seed.trim() === "") {
       throw new Error("Seed color must be a non-empty string");
@@ -4011,7 +4011,7 @@ var wp;
     return buildRamp(seed, ACCENT_RAMP_CONFIG, bgRampInfo);
   }
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/use-theme-provider-styles.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/use-theme-provider-styles.mjs
   var getCachedBgRamp = memize(buildBgRamp, { maxSize: 10 });
   var getCachedAccentRamp = memize(buildAccentRamp, { maxSize: 10 });
   var legacyWpComponentsOverridesCSS = [
@@ -4174,7 +4174,7 @@ var wp;
     };
   }
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/theme-provider.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/theme-provider.mjs
   var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
   if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='662a5161a8']")) {
     const style = document.createElement("style");
@@ -4235,7 +4235,7 @@ var wp;
     ] });
   };
 
-  // ../../../node_modules/.pnpm/@wordpress+theme@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/private-apis.mjs
+  // ../../../node_modules/.pnpm/@wordpress+theme@0.7.0_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/theme/build-module/private-apis.mjs
   var privateApis = {};
   lock(privateApis, {
     ThemeProvider,

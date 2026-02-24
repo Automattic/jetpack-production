@@ -18,13 +18,13 @@ var wp;
   };
   var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.39.0/node_modules/@wordpress/private-apis/build-module/index.mjs
+  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.40.0/node_modules/@wordpress/private-apis/build-module/index.mjs
   var build_module_exports = {};
   __export(build_module_exports, {
     __dangerousOptInToUnstableAPIsOnlyForCoreModules: () => __dangerousOptInToUnstableAPIsOnlyForCoreModules
   });
 
-  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.39.0/node_modules/@wordpress/private-apis/build-module/implementation.mjs
+  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.40.0/node_modules/@wordpress/private-apis/build-module/implementation.mjs
   var CORE_MODULES_USING_PRIVATE_APIS = [
     "@wordpress/block-directory",
     "@wordpress/block-editor",
@@ -47,12 +47,12 @@ var wp;
     "@wordpress/patterns",
     "@wordpress/preferences",
     "@wordpress/reusable-blocks",
+    "@wordpress/rich-text",
     "@wordpress/route",
     "@wordpress/router",
     "@wordpress/routes",
     "@wordpress/sync",
     "@wordpress/theme",
-    "@wordpress/ui",
     "@wordpress/dataviews",
     "@wordpress/fields",
     "@wordpress/lazy-editor",
