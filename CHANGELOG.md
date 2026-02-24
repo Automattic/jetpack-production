@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions Block: make excerpt filter more broad.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Sync: Store last_item in status to improve Full Sync performance.
 - Update package dependencies.
 
 ## 15.6-a.5 - 2026-02-23
