@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update package dependencies.
+- Use the new Post_Media Images class instead of Jetpack_PostImages for featured image fallbacks.
 
 ## [0.14.15] - 2026-02-23
 ### Changed

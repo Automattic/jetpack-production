@@ -44,7 +44,7 @@
 		"automattic/jetpack-paypal-payments": "^0.6.7-alpha",
 		"automattic/jetpack-plugins-installer": "^0.5.7",
 		"automattic/jetpack-post-list": "^0.9.8-alpha",
-		"automattic/jetpack-post-media": "^0.1.0",
+		"automattic/jetpack-post-media": "^0.1.1-alpha",
 		"automattic/jetpack-publicize": "^0.73.0-alpha",
 		"automattic/jetpack-redirect": "^3.0.9",
 		"automattic/jetpack-roles": "^3.0.8",
