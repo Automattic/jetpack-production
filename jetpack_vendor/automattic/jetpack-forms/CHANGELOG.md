@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms block: Add border styling support.
 
 ### Changed
+- Forms: Optimize CSS loading by moving status notice styles to separate file loaded only when needed.
 - Forms: revert https://github.com/Automattic/jetpack/pull/47097 - restore button border colors to previous state
 
 ### Fixed
