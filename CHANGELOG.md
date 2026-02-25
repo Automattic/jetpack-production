@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions Block: make excerpt filter more broad.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Admin Menu: add inlineIcon support to the admin-menu REST endpoint.
 - Image Studio: Enqueue string translations for non-English locales.
 - Replace Jetpack_PostImages usage with the new Post_Media Images class.
 - Sync: Add per-request in-memory cache in the Listener to reduce get_transient calls during action queue checks.
