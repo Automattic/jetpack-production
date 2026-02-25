@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: allow customizing other option in radio field.
+- Sync: Add clear-queue REST endpoint to allow clearing a Sync queue.
 
 ### Bug fixes
 - Forms: Fix duplicate title in plain text form submission notification emails.
