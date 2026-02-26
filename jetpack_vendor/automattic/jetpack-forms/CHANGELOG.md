@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix infinite loop in Name field block when initializing fieldVariant attribute
 - Forms: button locator on multi-step-navigation was aiming at the wrong element (block parent container instead of button element)
 - Forms: Fix unwanted border appearing in Gutenberg 22.6.0.
+- Multi-step Form: Fix navigation button styling to support granular CSS customization.
 - Prevent decorative icons from being included when copy/pasting form response emails.
 
 ## [7.9.0] - 2026-02-23
