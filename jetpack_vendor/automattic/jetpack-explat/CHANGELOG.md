@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.14-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.4.14] - 2026-02-26
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#47285] [#47300]
 
 ## [0.4.13] - 2026-02-23
 ### Changed
@@ -309,7 +306,7 @@ This is an alpha version! The changes listed here are not final.
 - ExPlat: add condition to prevent fetching the experiment assignment if there's not anon id (meaning that Tracks is likely disabled) [#38327]
 - Updated package dependencies. [#38132]
 
-[0.4.14-alpha]: https://github.com/Automattic/jetpack-explat/compare/v0.4.13...v0.4.14-alpha
+[0.4.14]: https://github.com/Automattic/jetpack-explat/compare/v0.4.13...v0.4.14
 [0.4.13]: https://github.com/Automattic/jetpack-explat/compare/v0.4.12...v0.4.13
 [0.4.12]: https://github.com/Automattic/jetpack-explat/compare/v0.4.11...v0.4.12
 [0.4.11]: https://github.com/Automattic/jetpack-explat/compare/v0.4.10...v0.4.11

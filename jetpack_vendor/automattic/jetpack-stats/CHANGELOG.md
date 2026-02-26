@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.18.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.18.1] - 2026-02-26
 ### Added
-- Add AGENTS.md for coding agent guidelines compliance.
+- Add `AGENTS.md` for coding agent guidelines compliance. [#47330]
 
 ### Changed
-- Exclude AGENTS.md and CLAUDE.md from production builds.
+- Exclude `AGENTS.md` and `CLAUDE.md` from production builds. [#47333]
 
 ## [0.18.0] - 2026-02-23
 ### Added
@@ -315,7 +312,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
-[0.18.1-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.18.0...v0.18.1-alpha
+[0.18.1]: https://github.com/Automattic/jetpack-stats/compare/v0.18.0...v0.18.1
 [0.18.0]: https://github.com/Automattic/jetpack-stats/compare/v0.17.8...v0.18.0
 [0.17.8]: https://github.com/Automattic/jetpack-stats/compare/v0.17.7...v0.17.8
 [0.17.7]: https://github.com/Automattic/jetpack-stats/compare/v0.17.6...v0.17.7

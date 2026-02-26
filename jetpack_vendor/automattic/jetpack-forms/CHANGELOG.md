@@ -5,28 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.10.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [7.10.0] - 2026-02-26
 ### Added
-- Add 'Other' option support for radio fields with custom text input, including ARIA accessibility, proper validation, and metadata storage for form submissions
-- Add print-friendly styles to form submission emails: hide decorative field icons, tighten spacing, and remove non-essential elements when printing. Minify email CSS to stay under Gmail's 8,192-character style block limit.
-- Forms: add View Responses button and More Actions dropdown to form editor header.
-- Forms block: Add border styling support.
+- Add 'Other' option support for radio fields with custom text input, including ARIA accessibility, proper validation, and metadata storage for form submissions. [#46461]
+- Add print-friendly styles to form submission emails: hide decorative field icons, tighten spacing, and remove non-essential elements when printing. Minify email CSS to stay under Gmail's 8,192-character style block limit. [#47287]
+- Add View Responses button and More Actions dropdown to form editor header. [#47175]
+- Forms block: Add border styling support. [#47274]
 
 ### Changed
-- Forms: Optimize CSS loading by moving status notice styles to separate file loaded only when needed.
-- Forms: revert https://github.com/Automattic/jetpack/pull/47097 - restore button border colors to previous state
-- Update package dependencies.
+- Optimize CSS loading by moving status notice styles to separate file loaded only when needed. [#47273]
+- Revert https://github.com/Automattic/jetpack/pull/47097 - restore button border colors to previous state. [#47260]
+- Update package dependencies. [#47285] [#47295] [#47300]
 
 ### Fixed
-- Fix "Other" option toggle not updating the option label in the editor
-- Fix duplicate title in plain text email by removing the preheader element before generating plain text alternative.
-- Fix infinite loop in Name field block when initializing fieldVariant attribute
-- Forms: button locator on multi-step-navigation was aiming at the wrong element (block parent container instead of button element)
-- Forms: Fix unwanted border appearing in Gutenberg 22.6.0.
-- Prevent decorative icons from being included when copy/pasting form response emails.
+- Fix "Other" option toggle not updating the option label in the editor. [#47316]
+- Fix duplicate title in plain text email by removing the preheader element before generating plain text alternative. [#47291]
+- Fix infinite loop in Name field block when initializing `fieldVariant` attribute. [#47266]
+- Button locator on `multi-step-navigation` was aiming at the wrong element (block parent container instead of button element). [#47286]
+- Fix unwanted border appearing in Gutenberg 22.6.0. [#47275]
+- Prevent decorative icons from being included when copy/pasting form response emails. [#47279]
 
 ## [7.9.0] - 2026-02-23
 ### Added
@@ -2276,7 +2273,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.10.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.9.0...v7.10.0-alpha
+[7.10.0]: https://github.com/automattic/jetpack-forms/compare/v7.9.0...v7.10.0
 [7.9.0]: https://github.com/automattic/jetpack-forms/compare/v7.8.0...v7.9.0
 [7.8.0]: https://github.com/automattic/jetpack-forms/compare/v7.7.0...v7.8.0
 [7.7.0]: https://github.com/automattic/jetpack-forms/compare/v7.6.0...v7.7.0
