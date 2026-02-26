@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Fix Threads social preview for posts with gallery.
 - Social admin: Expand toggle sections width to fill container
 
 ## [0.72.6] - 2026-02-23
