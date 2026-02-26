@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Optimize CSS loading by moving status notice styles to separate file loaded only when needed.
 - Forms: revert https://github.com/Automattic/jetpack/pull/47097 - restore button border colors to previous state
 - Update package dependencies.
+- Use block type title instead of post title for synced form naming
 
 ### Fixed
 - Fix "Other" option toggle not updating the option label in the editor
