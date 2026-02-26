@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Refactor settings to use @automattic/jetpack-script-data utilities for site info and admin URLs
 - Update package dependencies.
+- Use Status class methods for isSitePublic check (filterable and handles coming soon state)
 
 ## [0.5.0] - 2026-02-23
 ### Added
