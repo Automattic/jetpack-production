@@ -34853,7 +34853,7 @@ var getLabel = (status, count) => {
   }
   return /* @__PURE__ */ (0, import_jsx_runtime156.jsxs)("span", { children: [
     label,
-    /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(count || 0) })
+    /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(Badge, { intent: "default", className: "jp-forms-badge", children: formatNumberCompact(count || 0) })
   ] });
 };
 function InboxStatusToggle({
@@ -34882,10 +34882,10 @@ function InboxStatusToggle({
 }
 
 // src/dashboard/wp-build/components/dataviews-header-row/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='08f8b50a11']")) {
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='6d35f1108e']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "08f8b50a11");
-  style.appendChild(document.createTextNode(".jp-forms-dataviews__view-actions{border-bottom:1px solid var(--wpds-color-stroke-surface-neutral,#e0e0e0);box-sizing:border-box;container-type:inline-size;flex-shrink:0;overflow-x:auto;padding-inline:20px;width:100%}@container (width < 500px){.jp-forms-dataviews__view-actions{--wp-ui-stack-justify:flex-start;align-items:flex-start;flex-direction:column}}.jp-forms-dataviews__view-actions>div:not(:empty){min-height:48px}.jp-forms-dataviews-filters__container,.jp-forms-dataviews-filters__container:not(:empty){padding:0}.jp-forms-dataviews-filters__container:not(:empty){padding-block:12px;padding-inline:20px}.jp-forms-count-badge{background-color:#f0f0f0;color:#2f2f2f;margin-inline-start:4px;vertical-align:middle}"));
+  style.setAttribute("data-wp-hash", "6d35f1108e");
+  style.appendChild(document.createTextNode(".jp-forms-dataviews__view-actions{border-bottom:1px solid var(--wpds-color-stroke-surface-neutral,#e0e0e0);box-sizing:border-box;container-type:inline-size;flex-shrink:0;overflow-x:auto;padding-inline:20px;width:100%}@container (width < 500px){.jp-forms-dataviews__view-actions{--wp-ui-stack-justify:flex-start;align-items:flex-start;flex-direction:column}}.jp-forms-dataviews__view-actions>div:not(:empty){min-height:48px}.jp-forms-dataviews-filters__container,.jp-forms-dataviews-filters__container:not(:empty){padding:0}.jp-forms-dataviews-filters__container:not(:empty){padding-block:12px;padding-inline:20px}.jp-forms-badge{background-color:#f0f0f0;color:#2f2f2f;margin-inline-start:4px;vertical-align:middle}"));
   document.head.appendChild(style);
 }
 
@@ -34934,11 +34934,11 @@ function DataViewsHeaderRow({
           ) : /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(List, { density: "compact", children: [
             /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Tab, { value: "forms", children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("span", { children: [
               (0, import_i18n67.__)("Forms", "jetpack-forms"),
-              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(formsCount || 0) })
+              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Badge, { intent: "default", className: "jp-forms-badge", children: formatNumberCompact(formsCount || 0) })
             ] }) }),
             /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Tab, { value: "responses", children: /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)("span", { children: [
               (0, import_i18n67.__)("Responses", "jetpack-forms"),
-              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Badge, { intent: "default", className: "jp-forms-count-badge", children: formatNumberCompact(responsesInboxCount || 0) })
+              /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(Badge, { intent: "default", className: "jp-forms-badge", children: formatNumberCompact(responsesInboxCount || 0) })
             ] }) })
           ] }) }) }),
           /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(Stack3, { align: "center", gap: "sm", children: [
@@ -36971,6 +36971,29 @@ function usePageHeaderDetails(props) {
     const rendered = formRecord?.title?.rendered || "";
     return (0, import_html_entities4.decodeEntities)(rendered);
   }, [formRecord?.title?.rendered]);
+  const formStatus = formRecord?.status;
+  const statusLabel = (0, import_element90.useMemo)(() => {
+    switch (formStatus) {
+      case "publish":
+        return (0, import_i18n85.__)("Published", "jetpack-forms");
+      case "draft":
+        return (0, import_i18n85.__)("Draft", "jetpack-forms");
+      case "pending":
+        return (0, import_i18n85.__)("Pending review", "jetpack-forms");
+      case "future":
+        return (0, import_i18n85.__)("Scheduled", "jetpack-forms");
+      case "private":
+        return (0, import_i18n85.__)("Private", "jetpack-forms");
+      default:
+        return formStatus;
+    }
+  }, [formStatus]);
+  const badges = (0, import_element90.useMemo)(() => {
+    if (!isSingleFormScreen || !formStatus || formStatus === "publish") {
+      return void 0;
+    }
+    return /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(Badge, { className: "jp-forms-badge", intent: "default", children: statusLabel });
+  }, [isSingleFormScreen, formStatus, statusLabel]);
   const { duplicateForm, previewForm, copyEmbed, copyShortcode } = useFormItemActions();
   const formItemControls = (0, import_element90.useMemo)(() => {
     if (!sourceIdNumber) {
@@ -37263,7 +37286,7 @@ function usePageHeaderDetails(props) {
     emptySpam.totalItemsSpam,
     emptySpam.selectedResponsesCount
   ]);
-  return { breadcrumbs, subtitle, actions: actions2 };
+  return { breadcrumbs, badges, subtitle, actions: actions2 };
 }
 
 // routes/responses/actions.tsx
@@ -38600,6 +38623,7 @@ function StageInner() {
   }, []);
   const {
     breadcrumbs,
+    badges,
     subtitle,
     actions: headerActions
   } = usePageHeaderDetails({
@@ -38622,6 +38646,7 @@ function StageInner() {
     {
       showSidebarToggle: false,
       breadcrumbs,
+      badges,
       subTitle: subtitle,
       actions: headerActions,
       hasPadding: false,
