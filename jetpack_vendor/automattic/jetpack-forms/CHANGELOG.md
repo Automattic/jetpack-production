@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fix "Other" option toggle not updating the option label in the editor
 - Fix duplicate title in plain text email by removing the preheader element before generating plain text alternative.
+- Fixed synced form loading state to correctly report loading during initial IDLE status
 - Fix infinite loop in Name field block when initializing fieldVariant attribute
 - Forms: button locator on multi-step-navigation was aiming at the wrong element (block parent container instead of button element)
 - Forms: Fix unwanted border appearing in Gutenberg 22.6.0.
