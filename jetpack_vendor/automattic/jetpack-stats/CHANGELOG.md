@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add AGENTS.md for coding agent guidelines compliance.
 
+### Changed
+- Exclude AGENTS.md and CLAUDE.md from production builds.
+
 ## [0.18.0] - 2026-02-23
 ### Added
 - Add `Transient_Cleanup` class to periodically clean up expired stats cache transients on sites without persistent object cache. [#47212]
