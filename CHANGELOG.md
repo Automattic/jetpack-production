@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Forms: Create new form pages without a placeholder title.
 - Forms: Fix extra margin on badges in the forms dashboard.
+- Image Studio: Fix console warnings
 - Sync: Fix sync health check to verify queue size and lag before allowing status to be set to in_sync.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
