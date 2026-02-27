@@ -28754,8 +28754,8 @@ function StageInner() {
       {
         id: "entries",
         label: (0, import_i18n86.__)("Responses", "jetpack-forms"),
+        type: "integer",
         getValue: ({ item }) => item.entriesCount ?? 0,
-        render: ({ item }) => item.entriesCount ?? 0,
         enableSorting: false
       },
       {

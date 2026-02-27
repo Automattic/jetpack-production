@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: allow customizing other option in radio field.
+- Forms: Use integer format for response count in dataviews.
 - SEO: Add Canonical URLs module for archive pages to prevent duplicate content in search engines.
 - Sync: Add clear-queue REST endpoint to allow clearing a Sync queue.
 
