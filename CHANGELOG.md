@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Sync: Add clear-queue REST endpoint to allow clearing a Sync queue.
 
 ### Bug fixes
+- Forms: Create new form pages without a placeholder title.
 - Forms: Fix duplicate title in plain text form submission notification emails.
 - Forms: Fix extra margin on badges in the forms dashboard.
 - Full Sync: Fix chunk size adjustment when sync is stuck to correctly preserve adjusted chunk size and stuck count across invocations.
