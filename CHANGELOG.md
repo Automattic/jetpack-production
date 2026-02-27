@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: Fix duplicate title in plain text form submission notification emails.
+- Forms: Fix extra margin on badges in the forms dashboard.
 - Full Sync: Fix chunk size adjustment when sync is stuck to correctly preserve adjusted chunk size and stuck count across invocations.
 - Social: Fix Threads social preview for posts with gallery.
 - Subscriptions: Stop appending the “View post … subscribe” message to post excerpts in subscription emails.
