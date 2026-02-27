@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add 'Other' option support for radio fields with custom text input, including ARIA accessibility, proper validation, and metadata storage for form submissions
 - Add print-friendly styles to form submission emails: hide decorative field icons, tighten spacing, and remove non-essential elements when printing. Minify email CSS to stay under Gmail's 8,192-character style block limit.
+- Auto-create synced form when AI generates form fields with central form management enabled
 - Forms: add View Responses button and More Actions dropdown to form editor header.
 - Forms block: Add border styling support.
 - Forms Dashboard: Display form status badge in the single form view header
