@@ -2,36 +2,44 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.6-a.6 - unreleased
+## 15.6-a.8 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Assistant: Add jetpack_ai_assistant_generation_complete action hook for cross-package communication
-- Forms: allow customizing other option in radio field.
 - Forms: Use integer format for response count in dataviews.
-- SEO: Add Canonical URLs module for archive pages to prevent duplicate content in search engines.
-- Sync: Add clear-queue REST endpoint to allow clearing a Sync queue.
 
 ### Bug fixes
 - Forms: Create new form pages without a placeholder title.
-- Forms: Fix duplicate title in plain text form submission notification emails.
 - Forms: Fix extra margin on badges in the forms dashboard.
-- Full Sync: Fix chunk size adjustment when sync is stuck to correctly preserve adjusted chunk size and stuck count across invocations.
-- Social: Fix Threads social preview for posts with gallery.
-- Subscriptions: Stop appending the “View post … subscribe” message to post excerpts in subscription emails.
-- Subscriptions Block: make excerpt filter more broad.
 - Sync: Fix sync health check to verify queue size and lag before allowing status to be set to in_sync.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Admin Menu: add inlineIcon support to the admin-menu REST endpoint.
-- Image Studio: Enqueue string translations for non-English locales.
 - Image Studio: Only enable when AI features are available
 - Remove baseUrl from tsconfig for tsgo migration.
-- Replace Jetpack_PostImages usage with the new Post_Media Images class.
-- Sync: Add per-request in-memory cache in the Listener to reduce get_transient calls during action queue checks.
-- Sync: Store last_item in status to improve Full Sync performance.
 - Update package dependencies.
+
+## 15.6-a.7 - 2026-02-26
+### Enhancements
+- Forms: Allow customizing other option in radio field. [#46461]
+- SEO: Add Canonical URLs module for archive pages to prevent duplicate content in search engines. [#47234]
+- Sync: Add `clear-queue` REST endpoint to allow clearing a Sync queue. [#47303]
+
+### Bug fixes
+- Forms: Fix duplicate title in plain text form submission notification emails. [#47291]
+- Full Sync: Fix chunk size adjustment when sync is stuck to correctly preserve adjusted chunk size and stuck count across invocations. [#47293]
+- Social: Fix Threads social preview for posts with gallery. [#47322]
+- Subscriptions: Stop appending the “View post … subscribe” message to post excerpts in subscription emails. [#47311]
+- Subscriptions Block: Make excerpt filter more broad. [#46599]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Admin Menu: Add `inlineIcon` support to the admin-menu REST endpoint. [#47146]
+- Image Studio: Enqueue string translations for non-English locales. [#47215]
+- Replace `Jetpack_PostImages` usage with the new `Post_Media` `Images` class. [#47249]
+- Sync: Add per-request in-memory cache in the Listener to reduce `get_transient` calls during action queue checks. [#47282]
+- Sync: Store `last_item` in status to improve Full Sync performance. [#47292]
+- Update package dependencies. [#47285] [#47288] [#47300]
 
 ## 15.6-a.5 - 2026-02-23
 ### Enhancements
