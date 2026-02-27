@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - REST_Endpoints: Add clear-queue endpoint to allow clearing a Sync queue via REST API.
 
 ### Changed
+- Documentation: Update variable type in docblock to match reality.
 - Full Sync: Store last_item in status to avoid re-running an expensive query on every invocation.
 - Listener: Add per-request in-memory cache to avoid repeated get_transient calls when checking queue state.
 
