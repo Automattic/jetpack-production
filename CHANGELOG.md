@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: add inlineIcon support to the admin-menu REST endpoint.
 - Image Studio: Enqueue string translations for non-English locales.
 - Image Studio: Only enable when AI features are available
+- Remove baseUrl from tsconfig for tsgo migration.
 - Replace Jetpack_PostImages usage with the new Post_Media Images class.
 - Sync: Add per-request in-memory cache in the Listener to reduce get_transient calls during action queue checks.
 - Sync: Store last_item in status to improve Full Sync performance.
