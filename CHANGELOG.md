@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Fix Threads social preview for posts with gallery.
 - Subscriptions: Stop appending the “View post … subscribe” message to post excerpts in subscription emails.
 - Subscriptions Block: make excerpt filter more broad.
+- Sync: Fix sync health check to verify queue size and lag before allowing status to be set to in_sync.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin Menu: add inlineIcon support to the admin-menu REST endpoint.

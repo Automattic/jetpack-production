@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Full Sync: Fix chunk size adjustment when sync is stuck to correctly preserve adjusted chunk size and stuck count across invocations.
+- REST_Endpoints: Fix sync health check to verify queue size and lag before allowing status to be set to in_sync.
 
 ## [4.29.0] - 2026-02-23
 ### Added
