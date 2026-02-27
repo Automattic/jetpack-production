@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: revert https://github.com/Automattic/jetpack/pull/47097 - restore button border colors to previous state
 - Update package dependencies.
 - Use block type title instead of post title for synced form naming
+- Use `Tabs` component from `@wordpress/ui`.
 
 ### Fixed
 - Fix "Other" option toggle not updating the option label in the editor
