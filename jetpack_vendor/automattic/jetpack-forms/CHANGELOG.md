@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fixed synced form loading state to correctly report loading during initial IDLE status
+- Fix MailPoet subscriber not created on form submission due to list ID type mismatch and email field not detected by type attribute.
 - Forms: Create new form pages without a placeholder title.
 - Multi-step Form: Fix navigation button styling to support granular CSS customization.
 
