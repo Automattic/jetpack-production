@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.31.1-alpha] - unreleased
+## [4.32.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- REST_Endpoints: Add use_memory_limit argument to the checkout endpoint, enabling memory-based queue checkout that skips item count validation.
 
 ## [4.31.0] - 2026-03-02
 ### Added
@@ -1689,7 +1692,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.31.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.31.0...v4.31.1-alpha
+[4.32.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.31.0...v4.32.0-alpha
 [4.31.0]: https://github.com/Automattic/jetpack-sync/compare/v4.30.0...v4.31.0
 [4.30.0]: https://github.com/Automattic/jetpack-sync/compare/v4.29.0...v4.30.0
 [4.29.0]: https://github.com/Automattic/jetpack-sync/compare/v4.28.0...v4.29.0
