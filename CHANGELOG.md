@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Image Studio: Add an "Edit with AI" row action in the Media Library list view and disable overlapping Jetpack AI image extensions globally when Image Studio is available.
+
 ### Bug fixes
 - Canonical URLs: Fix flaky author archive canonical URL resolution on WordPress trunk.
 
