@@ -35398,7 +35398,7 @@ var usableBlockWithFreePlan = [
   }
 ];
 
-// ../../js-packages/connection/components/use-connection/index.jsx
+// ../../js-packages/connection/components/use-connection/index.ts
 var import_data22 = __toESM(require_data(), 1);
 var import_react24 = __toESM(require_react(), 1);
 
@@ -35723,7 +35723,7 @@ store_holder_default.mayBeInit(store_id_default, {
   initialState: initialState || {}
 });
 
-// ../../js-packages/connection/components/use-connection/index.jsx
+// ../../js-packages/connection/components/use-connection/index.ts
 var initialState2 = window?.JP_CONNECTION_INITIAL_STATE || getScriptData()?.connection || {};
 function useConnection({
   registrationNonce = initialState2.registrationNonce,
@@ -35736,7 +35736,10 @@ function useConnection({
   skipPricingPage
 } = {}) {
   const { registerSite: registerSite2, connectUser: connectUser2, refreshConnectedPlugins: refreshConnectedPlugins2 } = (0, import_data22.useDispatch)(store_id_default);
-  const registrationError2 = (0, import_data22.useSelect)((select3) => select3(store_id_default).getRegistrationError());
+  const registrationError2 = (0, import_data22.useSelect)(
+    (select3) => select3(store_id_default).getRegistrationError(),
+    []
+  );
   const {
     siteIsRegistering: siteIsRegistering2,
     userIsConnecting: userIsConnecting2,
@@ -35747,20 +35750,25 @@ function useConnection({
     isUserConnected,
     hasConnectedOwner,
     isOfflineMode: isOfflineMode2
-  } = (0, import_data22.useSelect)((select3) => ({
-    siteIsRegistering: select3(store_id_default).getSiteIsRegistering(),
-    userIsConnecting: select3(store_id_default).getUserIsConnecting(),
-    userConnectionData: select3(store_id_default).getUserConnectionData(),
-    connectedPlugins: select3(store_id_default).getConnectedPlugins(),
-    connectionErrors: select3(store_id_default).getConnectionErrors(),
-    isOfflineMode: select3(store_id_default).getIsOfflineMode(),
-    ...select3(store_id_default).getConnectionStatus()
-  }));
+  } = (0, import_data22.useSelect)((select3) => {
+    const connectionStatus2 = select3(store_id_default).getConnectionStatus();
+    return {
+      siteIsRegistering: select3(store_id_default).getSiteIsRegistering(),
+      userIsConnecting: select3(store_id_default).getUserIsConnecting(),
+      userConnectionData: select3(store_id_default).getUserConnectionData() || {},
+      connectedPlugins: select3(store_id_default).getConnectedPlugins(),
+      connectionErrors: select3(store_id_default).getConnectionErrors(),
+      isOfflineMode: select3(store_id_default).getIsOfflineMode(),
+      isRegistered: connectionStatus2.isRegistered ?? false,
+      isUserConnected: connectionStatus2.isUserConnected ?? false,
+      hasConnectedOwner: connectionStatus2.hasConnectedOwner ?? false
+    };
+  }, []);
   const handleConnectUser = () => {
     if (!skipUserConnection) {
       return connectUser2({ from, redirectUri, skipPricingPage });
     } else if (redirectUri) {
-      window.location = redirectUri;
+      window.location.href = redirectUri;
       return Promise.resolve(redirectUri);
     }
     return Promise.resolve();
