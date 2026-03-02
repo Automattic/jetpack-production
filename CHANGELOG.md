@@ -2,25 +2,22 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.6-a.8 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.6-beta - 2026-03-02
 ### Enhancements
-- AI Assistant: Add jetpack_ai_assistant_generation_complete action hook for cross-package communication
-- Forms: Use integer format for response count in dataviews.
+- AI Assistant: Add `jetpack_ai_assistant_generation_complete` action hook for cross-package communication. [#47267]
+- Forms: Use integer format for response count in dataviews. [#47381]
 
 ### Bug fixes
-- Forms: Create new form pages without a placeholder title.
-- Forms: Fix extra margin on badges in the forms dashboard.
-- Image Studio: Fix console warnings
-- Sync: Fix sync health check to verify queue size and lag before allowing status to be set to in_sync.
+- Forms: Create new form pages without a placeholder title. [#47383]
+- Forms: Fix extra margin on badges in the forms dashboard. [#47377]
+- Image Studio: Fix console warnings. [#47353]
+- Sync: Fix sync health check to verify queue size and lag before allowing status to be set to `in_sync`. [#47323]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Image Studio: Only enable when AI features are available
-- Newsletters: add JP branding to dashboard widget.
-- Remove baseUrl from tsconfig for tsgo migration.
-- Update package dependencies.
+- Image Studio: Only enable when AI features are available. [#47315]
+- Newsletters: Add JP branding to dashboard widget. [#47387]
+- Remove `baseUrl` from `tsconfig` for `tsgo` migration. [#47374]
+- Update package dependencies. [#47371]
 
 ## 15.6-a.7 - 2026-02-26
 ### Enhancements
