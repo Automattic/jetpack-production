@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.7-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Canonical URLs: Fix flaky author archive canonical URL resolution on WordPress trunk.
+
 ## 15.6-beta - 2026-03-02
 ### Enhancements
 - AI Assistant: Add `jetpack_ai_assistant_generation_complete` action hook for cross-package communication. [#47267]
