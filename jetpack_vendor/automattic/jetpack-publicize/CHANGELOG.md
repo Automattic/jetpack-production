@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.73.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Convert hooks to TypeScript and fix JSDoc return types for tsgo compatibility
+
 ## [0.73.1] - 2026-03-02
 ### Changed
 - Update dependencies. [#46383]
@@ -1309,6 +1316,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.73.2-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.73.1...v0.73.2-alpha
 [0.73.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.73.0...v0.73.1
 [0.73.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.72.6...v0.73.0
 [0.72.6]: https://github.com/Automattic/jetpack-publicize/compare/v0.72.5...v0.72.6
