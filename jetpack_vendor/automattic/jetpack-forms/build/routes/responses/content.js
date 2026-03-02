@@ -35866,7 +35866,7 @@ var useAnalytics = ({
 };
 var use_analytics_default = useAnalytics;
 
-// ../../js-packages/shared-extension-utils/src/hooks/use-autosave-and-redirect/index.js
+// ../../js-packages/shared-extension-utils/src/hooks/use-autosave-and-redirect/index.ts
 var import_data23 = __toESM(require_data());
 var import_element87 = __toESM(require_element());
 
