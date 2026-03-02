@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Extract the Onboarding E2E utility for re-usability.
+- Forms: Fix admin page header CSS specificity to prevent style conflicts.
+- Migrate Settings page header to unified header pattern and left-align navigation tabs.
+- Remove header border-bottom from the admin page for a cleaner unified header appearance.
 
 ## 15.6-beta - 2026-03-02
 ### Enhancements
