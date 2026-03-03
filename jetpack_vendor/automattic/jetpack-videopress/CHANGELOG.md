@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Migrate main admin page header to use unified AdminHeader component from jetpack-components.
 
+### Fixed
+- Automatically refresh VideoPress video thumbnails in the Media Library grid after transcoding completes, instead of requiring a page reload.
+
 ## [0.35.3] - 2026-03-02
 ### Changed
 - Update dependencies. [#46758]

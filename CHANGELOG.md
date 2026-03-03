@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Extract the Onboarding E2E utility for re-usability.
 - Fix flakiness in tests
+- Fix phpdoc type for deprecated videopress_prepare_attachment_for_js wrapper.
 - Fix TS errors detected by tsgo.
 - Fix TS type errors detected by tsgo.
 - Forms: Fix admin page header CSS specificity to prevent style conflicts.
