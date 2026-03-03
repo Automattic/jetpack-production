@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Hide the Jetpack block collection from the form editor block inserter.
 
 ### Fixed
+- Contact Form: show synced forms as read-only preview in widget editor with Edit Form button.
 - Dashboard: Fix admin page header CSS specificity to prevent style conflicts.
 - Fix TS type errors detected by tsgo.
 

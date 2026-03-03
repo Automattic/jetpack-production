@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Admin Menu: Reorder menu items so that links opening in new windows appear last.
+- Block Notes: Add Block Notes as a standalone Jetpack extension plugin, migrated from big-sky-plugin.
 - Image Studio: Add an "Edit with AI" row action in the Media Library list view and disable overlapping Jetpack AI image extensions globally when Image Studio is available.
 
 ### Bug fixes
