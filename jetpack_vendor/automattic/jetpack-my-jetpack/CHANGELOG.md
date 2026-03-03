@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix Hello Dolly banner z-index to prevent overlap on the My Jetpack page.
+- Fix TS errors detected by tsgo.
 
 ## [5.31.8] - 2026-03-02
 ### Fixed
