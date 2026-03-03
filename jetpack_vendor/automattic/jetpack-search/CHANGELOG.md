@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Remove global CSS overrides and move admin notices inside the main container.
 - Migrate upsell page header to use unified AdminHeader component.
 
+### Fixed
+- Constrain license activation link width on mobile to prevent header overflow.
+
 ## [0.56.2] - 2026-03-02
 ### Changed
 - Update package dependencies. [#47357]

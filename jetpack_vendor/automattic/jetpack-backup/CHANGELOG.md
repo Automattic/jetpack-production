@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Replace @automattic/jetpack-components Button with @wordpress/components Button in BackupNowButton component.
 - Simplify admin menu title from 'VaultPress Backup' to 'Backups'.
 
+### Fixed
+- Constrain license activation link width on mobile to prevent header overflow.
+
 ## [4.2.44] - 2026-03-02
 ### Changed
 - Update dependencies. [#46758]

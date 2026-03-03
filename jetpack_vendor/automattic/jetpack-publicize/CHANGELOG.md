@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Convert hooks to TypeScript and fix JSDoc return types for tsgo compatibility
 - Migrate admin page header to use unified AdminHeader component.
 
+### Fixed
+- Constrain license activation link width on mobile to prevent header overflow.
+
 ## [0.73.1] - 2026-03-02
 ### Changed
 - Update dependencies. [#46383]
