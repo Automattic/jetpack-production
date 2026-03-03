@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Canonical URLs: Fix flaky author archive canonical URL resolution on WordPress trunk.
+- Social: Fix slow page loads due to Social Image generation
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Extract the Onboarding E2E utility for re-usability.
