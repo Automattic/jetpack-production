@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: Fix admin page header CSS specificity to prevent style conflicts.
+- Fix TS type errors detected by tsgo.
 
 ## [7.11.0] - 2026-03-02
 ### Added
