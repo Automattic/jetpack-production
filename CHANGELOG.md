@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Reorder menu items so that links opening in new windows appear last.
 - Block Notes: Add Block Notes as a standalone Jetpack extension plugin, migrated from big-sky-plugin.
 - Image Studio: Add an "Edit with AI" row action in the Media Library list view and disable overlapping Jetpack AI image extensions globally when Image Studio is available.
+- QR Post Code: Use site icon (favicon) instead of site logo for better rendering in the QR code center area.
 
 ### Bug fixes
 - Canonical URLs: Fix flaky author archive canonical URL resolution on WordPress trunk.
