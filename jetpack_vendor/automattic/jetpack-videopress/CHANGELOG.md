@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Cleaned up REST API endpoint schemas to use proper JSON Schema types and constraints.
 - Migrate main admin page header to use unified AdminHeader component from jetpack-components.
 
 ### Fixed
