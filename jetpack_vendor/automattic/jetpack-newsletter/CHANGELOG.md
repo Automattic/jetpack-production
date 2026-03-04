@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Migrate admin page header to use unified header pattern.
+- Update newsletter sections to use new component patterns.
 
 ### Fixed
 - Settings: Fix Hello Dolly banner display and box-sizing on the newsletter settings page.
