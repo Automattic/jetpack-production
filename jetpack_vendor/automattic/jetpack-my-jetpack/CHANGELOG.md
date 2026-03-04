@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Migrate admin page header to use unified AdminHeader component.
 - Reorder admin menu items so external links appear last.
+- Unified Header: add back border to the header.
 
 ### Fixed
 - Fix Hello Dolly banner z-index to prevent overlap on the My Jetpack page.

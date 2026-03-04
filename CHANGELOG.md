@@ -13,7 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - QR Post Code: Use site icon (favicon) instead of site logo for better rendering in the QR code center area.
 
 ### Bug fixes
+- Admin Page: Restore border on header component.
 - Canonical URLs: Fix flaky author archive canonical URL resolution on WordPress trunk.
+- Settings: Add bottom border to the masthead header for visual consistency.
 - Social: Fix slow page loads due to Social Image generation
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
