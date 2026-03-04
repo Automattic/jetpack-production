@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.11.1-alpha] - unreleased
+## [7.12.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add embed code panel to form editor for copying embed code.
 
 ### Changed
 - Forms: Hide the Jetpack block collection from the form editor block inserter.
@@ -2306,7 +2309,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.11.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.11.0...v7.11.1-alpha
+[7.12.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.11.0...v7.12.0-alpha
 [7.11.0]: https://github.com/automattic/jetpack-forms/compare/v7.10.0...v7.11.0
 [7.10.0]: https://github.com/automattic/jetpack-forms/compare/v7.9.0...v7.10.0
 [7.9.0]: https://github.com/automattic/jetpack-forms/compare/v7.8.0...v7.9.0
