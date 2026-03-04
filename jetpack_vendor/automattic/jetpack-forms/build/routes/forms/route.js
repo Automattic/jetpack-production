@@ -35,6 +35,13 @@ var require_data = __commonJS({
   }
 });
 
+// package-external:@wordpress/i18n
+var require_i18n = __commonJS({
+  "package-external:@wordpress/i18n"(exports, module) {
+    module.exports = window.wp.i18n;
+  }
+});
+
 // package-external:@wordpress/api-fetch
 var require_api_fetch = __commonJS({
   "package-external:@wordpress/api-fetch"(exports, module) {
@@ -53,6 +60,7 @@ var require_url = __commonJS({
 var import_data3 = __toESM(require_data(), 1);
 
 // src/dashboard/constants.ts
+var import_i18n = __toESM(require_i18n(), 1);
 var NON_TRASH_FORM_STATUSES = "publish,draft,pending,future,private";
 
 // src/dashboard/store/index.js
