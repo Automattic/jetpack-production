@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Contact Form: show synced forms as read-only preview in widget editor with Edit Form button.
 - Dashboard: Fix admin page header CSS specificity to prevent style conflicts.
+- Extract WidgetEditorReadonlyView into its own component to scope useBlockEditingMode to widget editor context only
 - Fix TS type errors detected by tsgo.
 - Update submit button handling to support core/button blocks as part of the jetpack/button to core/button migration.
 
