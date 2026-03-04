@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: show synced forms as read-only preview in widget editor with Edit Form button.
 - Dashboard: Fix admin page header CSS specificity to prevent style conflicts.
 - Fix TS type errors detected by tsgo.
+- Update submit button handling to support core/button blocks as part of the jetpack/button to core/button migration.
 
 ## [7.11.0] - 2026-03-02
 ### Added

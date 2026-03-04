@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Canonical URLs: Fix flaky author archive canonical URL resolution on WordPress trunk.
 - Settings: Add bottom border to the masthead header for visual consistency.
 - Social: Fix slow page loads due to Social Image generation
+- Update AI form assistant to detect and create core/button blocks instead of jetpack/button.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Extract the Onboarding E2E utility for re-usability.
