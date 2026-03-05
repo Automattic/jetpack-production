@@ -66,7 +66,7 @@ return array(
     ),
     'jetpack-forms' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-forms',
-      'ver' => '7.12.0-alpha1772729677',
+      'ver' => '7.12.0-alpha1772729938',
     ),
     'jetpack-image-cdn' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-image-cdn',

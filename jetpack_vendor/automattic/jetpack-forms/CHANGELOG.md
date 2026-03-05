@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add embed code panel to form editor for copying embed code.
 
 ### Changed
+- Form Editor: Auto-open the block inserter on load so form field blocks are immediately discoverable.
 - Forms: Hide the Jetpack block collection from the form editor block inserter.
 - Switch to Native TypeScript compiler based on Go.
 
