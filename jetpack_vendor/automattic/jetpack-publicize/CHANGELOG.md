@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Convert hooks to TypeScript and fix JSDoc return types for tsgo compatibility
 - Migrate admin page header to use unified AdminHeader component.
+- Replace license activation link with a "Use license key" button in the header actions area.
 - Switch to Native TypeScript compiler based on Go.
 
 ### Fixed

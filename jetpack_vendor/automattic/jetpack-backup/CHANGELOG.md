@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Migrate admin page header to use unified AdminHeader component from jetpack-components.
 - Replace @automattic/jetpack-components Button with @wordpress/components Button in BackupNowButton component.
+- Replace license activation link with a "Use license key" button in the header actions area.
 - Simplify admin menu title from 'VaultPress Backup' to 'Backups'.
 - Storage popover: use core components and remove custom CSS.
 - Switch to Native TypeScript compiler based on Go.
