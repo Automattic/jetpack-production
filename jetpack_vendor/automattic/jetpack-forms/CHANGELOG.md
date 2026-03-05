@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Forms: Hide the Jetpack block collection from the form editor block inserter.
+- Switch to Native TypeScript compiler based on Go.
 
 ### Fixed
 - Add missing 'Trash' status label in stage component.

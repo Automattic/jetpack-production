@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Migrate admin page header to use unified header pattern.
+- Switch to Native TypeScript compiler based on Go.
 - Update newsletter sections to use new component patterns.
 
 ### Fixed

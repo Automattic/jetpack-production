@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Mark all methods in the Jetpack_PostImages class as deprecated in favor of the Post_Media package's Images class.
 - Migrate Settings page header to unified header pattern and left-align navigation tabs.
 - Remove header border-bottom from the admin page for a cleaner unified header appearance.
+- Switch to Native TypeScript compiler based on Go.
 
 ## 15.6 - 2026-03-03
 ### Enhancements

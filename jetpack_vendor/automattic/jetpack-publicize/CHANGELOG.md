@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Convert hooks to TypeScript and fix JSDoc return types for tsgo compatibility
 - Migrate admin page header to use unified AdminHeader component.
+- Switch to Native TypeScript compiler based on Go.
 
 ### Fixed
 - Constrain license activation link width on mobile to prevent header overflow.
