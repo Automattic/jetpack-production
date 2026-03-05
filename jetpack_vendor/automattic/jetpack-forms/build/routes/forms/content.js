@@ -3625,7 +3625,7 @@ var require_dom_ready = __commonJS({
   }
 });
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.8.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/breadcrumbs/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/breadcrumbs/index.mjs
 var import_i18n = __toESM(require_i18n(), 1);
 var import_components = __toESM(require_components(), 1);
 var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
@@ -3672,7 +3672,7 @@ function clsx() {
 }
 var clsx_default = clsx;
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.8.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/navigable-region/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/navigable-region/index.mjs
 var import_element = __toESM(require_element(), 1);
 var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
 var NavigableRegion = (0, import_element.forwardRef)(
@@ -3694,14 +3694,14 @@ var NavigableRegion = (0, import_element.forwardRef)(
 NavigableRegion.displayName = "NavigableRegion";
 var navigable_region_default = NavigableRegion;
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.8.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
 var import_components3 = __toESM(require_components(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.8.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/sidebar-toggle-slot.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/sidebar-toggle-slot.mjs
 var import_components2 = __toESM(require_components(), 1);
 var { Fill: SidebarToggleFill, Slot: SidebarToggleSlot } = (0, import_components2.createSlotFill)("SidebarToggle");
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.8.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
 var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
 function Header({
   breadcrumbs,
@@ -3739,7 +3739,7 @@ function Header({
   ] });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.8.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.9.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/index.mjs
 var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
 function Page({
   breadcrumbs,
@@ -3749,11 +3749,13 @@ function Page({
   children,
   className,
   actions: actions2,
+  ariaLabel,
   hasPadding = false,
   showSidebarToggle = true
 }) {
   const classes = clsx_default("admin-ui-page", className);
-  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(navigable_region_default, { className: classes, ariaLabel: title, children: [
+  const effectiveAriaLabel = ariaLabel ?? (typeof title === "string" ? title : "");
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(navigable_region_default, { className: classes, ariaLabel: effectiveAriaLabel, children: [
     (title || breadcrumbs || badges) && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(
       Header,
       {
