@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Hide the Jetpack block collection from the form editor block inserter.
 - Switch to Native TypeScript compiler based on Go.
 
+### Removed
+- Removed the form title modal from the form editor
+
 ### Fixed
 - Add missing 'Trash' status label in stage component.
 - Contact Form: show synced forms as read-only preview in widget editor with Edit Form button.
