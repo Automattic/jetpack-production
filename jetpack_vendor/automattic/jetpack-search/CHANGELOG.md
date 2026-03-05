@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Dashboard: Remove global CSS overrides and move admin notices inside the main container.
 - Migrate upsell page header to use unified AdminHeader component.
+- Search: Use the core WordPress spinner component for the dashboard loading state.
 
 ### Fixed
 - Constrain license activation link width on mobile to prevent header overflow.
