@@ -18,13 +18,13 @@ var wp;
   };
   var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.40.0/node_modules/@wordpress/private-apis/build-module/index.mjs
+  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.41.0/node_modules/@wordpress/private-apis/build-module/index.mjs
   var build_module_exports = {};
   __export(build_module_exports, {
     __dangerousOptInToUnstableAPIsOnlyForCoreModules: () => __dangerousOptInToUnstableAPIsOnlyForCoreModules
   });
 
-  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.40.0/node_modules/@wordpress/private-apis/build-module/implementation.mjs
+  // ../../../node_modules/.pnpm/@wordpress+private-apis@1.41.0/node_modules/@wordpress/private-apis/build-module/implementation.mjs
   var CORE_MODULES_USING_PRIVATE_APIS = [
     "@wordpress/block-directory",
     "@wordpress/block-editor",
@@ -32,6 +32,7 @@ var wp;
     "@wordpress/blocks",
     "@wordpress/boot",
     "@wordpress/commands",
+    "@wordpress/connectors",
     "@wordpress/workflows",
     "@wordpress/components",
     "@wordpress/core-commands",

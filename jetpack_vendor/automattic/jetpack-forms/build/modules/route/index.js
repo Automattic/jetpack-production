@@ -6403,6 +6403,38 @@ function useCanGoBack() {
   return useRouterState({ select: (s) => s.location.state.__TSR_index !== 0 });
 }
 
+// ../../../node_modules/.pnpm/@tanstack+history@1.161.4/node_modules/@tanstack/history/dist/esm/index.js
+var stateIndexKey2 = "__TSR_index";
+function sanitizePath2(path) {
+  let sanitized = path.replace(/[\x00-\x1f\x7f]/g, "");
+  if (sanitized.startsWith("//")) {
+    sanitized = "/" + sanitized.replace(/^\/+/, "");
+  }
+  return sanitized;
+}
+function parseHref2(href, state) {
+  const sanitizedHref = sanitizePath2(href);
+  const hashIndex = sanitizedHref.indexOf("#");
+  const searchIndex = sanitizedHref.indexOf("?");
+  const addedKey = createRandomKey2();
+  return {
+    href: sanitizedHref,
+    pathname: sanitizedHref.substring(
+      0,
+      hashIndex > 0 ? searchIndex > 0 ? Math.min(hashIndex, searchIndex) : hashIndex : searchIndex > 0 ? searchIndex : sanitizedHref.length
+    ),
+    hash: hashIndex > -1 ? sanitizedHref.substring(hashIndex) : "",
+    search: searchIndex > -1 ? sanitizedHref.slice(
+      searchIndex,
+      hashIndex === -1 ? void 0 : hashIndex
+    ) : "",
+    state: state || { [stateIndexKey2]: 0, key: addedKey, __TSR_key: addedKey }
+  };
+}
+function createRandomKey2() {
+  return (Math.random() + 1).toString(36).substring(7);
+}
+
 // ../../../node_modules/.pnpm/@wordpress+route@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/route/build-module/lock-unlock.mjs
 var import_private_apis = __toESM(require_private_apis(), 1);
 var { lock, unlock } = (0, import_private_apis.__dangerousOptInToUnstableAPIsOnlyForCoreModules)(
@@ -6431,7 +6463,7 @@ lock(privateApis, {
   useRouter,
   useRouterState,
   // History utilities
-  parseHref
+  parseHref: parseHref2
 });
 
 // ../../../node_modules/.pnpm/@wordpress+route@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/route/build-module/index.mjs
