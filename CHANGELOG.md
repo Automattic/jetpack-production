@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: use core components for storage popover.
 - Block Notes: Add Block Notes as a standalone Jetpack extension plugin, migrated from big-sky-plugin.
 - Donations: Use the core WordPress spinner component.
+- Forms: Use title header on top-level dashboard pages for consistency with other Jetpack pages.
 - Image Studio: Add an "Edit with AI" row action in the Media Library list view and disable overlapping Jetpack AI image extensions globally when Image Studio is available.
 - QR Post Code: Use site icon (favicon) instead of site logo for better rendering in the QR code center area.
 

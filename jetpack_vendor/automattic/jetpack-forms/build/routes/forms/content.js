@@ -28327,21 +28327,30 @@ function usePageHeaderDetails(props) {
     }
     return controls;
   }, [sourceIdNumber, formTitle, duplicateForm, previewForm, copyEmbed, copyShortcode]);
-  const breadcrumbsItems = (0, import_element95.useMemo)(() => {
+  const WrapWithJetpackLogo = ({ children }) => /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(Stack3, { align: "center", gap: "xs", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
+    children
+  ] });
+  const title = (0, import_element95.useMemo)(() => {
     if (isSingleFormScreen) {
-      return [
-        { label: (0, import_i18n86.__)("Forms", "jetpack-forms"), to: "/forms" },
-        { label: formTitle || (0, import_i18n86.__)("Form responses", "jetpack-forms") }
-      ];
+      return null;
     }
-    return [{ label: (0, import_i18n86.__)("Forms", "jetpack-forms") }];
-  }, [formTitle, isSingleFormScreen]);
+    return /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(WrapWithJetpackLogo, { children: "Forms" });
+  }, [isSingleFormScreen]);
   const breadcrumbs = (0, import_element95.useMemo)(() => {
-    return /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(Stack3, { align: "center", gap: "xs", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
-      /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(breadcrumbs_default, { items: breadcrumbsItems })
-    ] });
-  }, [breadcrumbsItems]);
+    if (!isSingleFormScreen) {
+      return null;
+    }
+    return /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(WrapWithJetpackLogo, { children: /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(
+      breadcrumbs_default,
+      {
+        items: [
+          { label: (0, import_i18n86.__)("Forms", "jetpack-forms"), to: "/forms" },
+          { label: formTitle || (0, import_i18n86.__)("Form responses", "jetpack-forms") }
+        ]
+      }
+    ) });
+  }, [isSingleFormScreen, formTitle]);
   const subtitle = (0, import_element95.useMemo)(() => {
     if (isFormsScreen) {
       const shortMessage = (0, import_i18n86.__)("View and manage all your forms.", "jetpack-forms");
@@ -28589,7 +28598,7 @@ function usePageHeaderDetails(props) {
     emptySpam.totalItemsSpam,
     emptySpam.selectedResponsesCount
   ]);
-  return { breadcrumbs, badges, subtitle, actions: actions2 };
+  return { breadcrumbs, title, badges, subtitle, actions: actions2 };
 }
 
 // src/dashboard/wp-build/style.scss
@@ -28994,6 +29003,7 @@ function StageInner() {
     setIsFormsHelpModalOpen(false);
   }, []);
   const {
+    title,
     breadcrumbs,
     subtitle,
     actions: headerActions
@@ -29017,6 +29027,7 @@ function StageInner() {
     {
       showSidebarToggle: false,
       breadcrumbs,
+      title,
       subTitle: subtitle,
       actions: headerActions,
       hasPadding: false,

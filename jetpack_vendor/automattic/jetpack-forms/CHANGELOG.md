@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Form Editor: Auto-open the block inserter on load so form field blocks are immediately discoverable.
 - Forms: Hide the Jetpack block collection from the form editor block inserter.
+- Forms dashboard: Use title header on top-level pages for consistency with other Jetpack pages.
 - Switch to Native TypeScript compiler based on Go.
 
 ### Removed
