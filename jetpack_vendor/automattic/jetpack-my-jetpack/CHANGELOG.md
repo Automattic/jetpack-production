@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Migrate admin page header to use unified AdminHeader component.
+- Newsletter: Updated manage URL to redirect to new settings page when wp-admin newsletter settings are enabled.
 - Reorder admin menu items so external links appear last.
 - Switch to Native TypeScript compiler based on Go.
 - Unified Header: add back border to the header.

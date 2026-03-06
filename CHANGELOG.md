@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Donations: Use the core WordPress spinner component.
 - Forms: Use title header on top-level dashboard pages for consistency with other Jetpack pages.
 - Image Studio: Add an "Edit with AI" row action in the Media Library list view and disable overlapping Jetpack AI image extensions globally when Image Studio is available.
+- Newsletter: Hide settings tab and redirect to new settings page when wp-admin newsletter settings are enabled.
 - QR Post Code: Use site icon (favicon) instead of site logo for better rendering in the QR code center area.
 
 ### Bug fixes

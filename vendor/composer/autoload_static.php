@@ -262,6 +262,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_7_a_0
         'Automattic\\Jetpack\\My_Jetpack\\Wpcom_Products' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-wpcom-products.php',
         'Automattic\\Jetpack\\Newsletter\\Reader_Link' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-reader-link.php',
         'Automattic\\Jetpack\\Newsletter\\Settings' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-settings.php',
+        'Automattic\\Jetpack\\Newsletter\\Urls' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-urls.php',
         'Automattic\\Jetpack\\Partner' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-partner.php',
         'Automattic\\Jetpack\\Partner_Coupon' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-partner-coupon.php',
         'Automattic\\Jetpack\\Password_Checker' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-password-checker/src/class-password-checker.php',

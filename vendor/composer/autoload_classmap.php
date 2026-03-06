@@ -238,6 +238,7 @@ return array(
     'Automattic\\Jetpack\\My_Jetpack\\Wpcom_Products' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-wpcom-products.php',
     'Automattic\\Jetpack\\Newsletter\\Reader_Link' => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-reader-link.php',
     'Automattic\\Jetpack\\Newsletter\\Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-settings.php',
+    'Automattic\\Jetpack\\Newsletter\\Urls' => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-urls.php',
     'Automattic\\Jetpack\\Partner' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-partner.php',
     'Automattic\\Jetpack\\Partner_Coupon' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-partner-coupon.php',
     'Automattic\\Jetpack\\Password_Checker' => $baseDir . '/jetpack_vendor/automattic/jetpack-password-checker/src/class-password-checker.php',
