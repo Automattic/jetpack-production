@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Cleaned up REST API endpoint schemas to use proper JSON Schema types and constraints.
 - Migrate main admin page header to use unified AdminHeader component from jetpack-components.
 - Switch to Native TypeScript compiler based on Go.
+- Update package dependencies.
 
 ### Fixed
 - Automatically refresh VideoPress video thumbnails in the Media Library grid after transcoding completes, instead of requiring a page reload.

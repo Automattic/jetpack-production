@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Hide the Jetpack block collection from the form editor block inserter.
 - Forms dashboard: Use title header on top-level pages for consistency with other Jetpack pages.
 - Switch to Native TypeScript compiler based on Go.
+- Update package dependencies.
 
 ### Removed
 - Removed the form title modal from the form editor
