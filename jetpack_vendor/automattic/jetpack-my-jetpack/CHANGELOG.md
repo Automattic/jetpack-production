@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Reorder admin menu items so external links appear last.
 - Switch to Native TypeScript compiler based on Go.
 - Unified Header: add back border to the header.
+- Update package dependencies.
 
 ### Fixed
 - Fix Hello Dolly banner z-index to prevent overlap on the My Jetpack page.

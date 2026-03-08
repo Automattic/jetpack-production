@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Simplify admin menu title from 'VaultPress Backup' to 'Backups'.
 - Storage popover: use core components and remove custom CSS.
 - Switch to Native TypeScript compiler based on Go.
+- Update package dependencies.
 
 ### Fixed
 - Constrain license activation link width on mobile to prevent header overflow.

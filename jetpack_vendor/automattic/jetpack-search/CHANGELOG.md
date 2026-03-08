@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Migrate upsell page header to use unified AdminHeader component.
 - Replace license activation link with a "Use license key" button in the header actions area.
 - Search: Use the core WordPress spinner component for the dashboard loading state.
+- Update package dependencies.
 
 ### Fixed
 - Constrain license activation link width on mobile to prevent header overflow.

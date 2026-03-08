@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Migrate admin page header to use unified AdminHeader component.
 - Replace license activation link with a "Use license key" button in the header actions area.
 - Switch to Native TypeScript compiler based on Go.
+- Update package dependencies.
 
 ### Fixed
 - Constrain license activation link width on mobile to prevent header overflow.

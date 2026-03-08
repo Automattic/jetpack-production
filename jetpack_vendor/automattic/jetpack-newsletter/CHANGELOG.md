@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Migrate admin page header to use unified header pattern.
 - Switch to Native TypeScript compiler based on Go.
 - Update newsletter sections to use new component patterns.
+- Update package dependencies.
 
 ### Fixed
 - Settings: Fix Hello Dolly banner display and box-sizing on the newsletter settings page.

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Switch to Native TypeScript compiler based on Go.
+- Update package dependencies.
 
 ## 0.4.20 - 2026-02-26
 ### Changed
