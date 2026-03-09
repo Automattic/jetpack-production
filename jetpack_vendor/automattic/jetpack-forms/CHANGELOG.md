@@ -5,31 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.12.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [7.12.0] - 2026-03-09
 ### Added
-- Add embed code panel to form editor for copying embed code.
+- Form Editor: Show form embed code. [#47238]
 
 ### Changed
-- Form Editor: Auto-open the block inserter on load so form field blocks are immediately discoverable.
-- Forms: Hide the Jetpack block collection from the form editor block inserter.
-- Forms dashboard: Use title header on top-level pages for consistency with other Jetpack pages.
-- Switch to Native TypeScript compiler based on Go.
-- Update package dependencies.
+- Form Editor: Auto-open the block inserter on load so form field blocks are immediately discoverable. [#47413]
+- Hide the Jetpack block collection from the form editor block inserter. [#47390]
+- Forms dashboard: Use title header on top-level pages for consistency with other Jetpack pages. [#47446]
+- Switch to Native TypeScript compiler based on Go. [#47375]
+- Update package dependencies. [#47496] [#47499]
 
 ### Removed
-- Removed the form title modal from the form editor
+- Remove the form title modal from the form editor. [#47458]
 
 ### Fixed
-- Add missing 'Trash' status label in stage component.
-- Contact Form: show synced forms as read-only preview in widget editor with Edit Form button.
-- Dashboard: Fix admin page header CSS specificity to prevent style conflicts.
-- Decode HTML entities in form dropdown titles in the variation picker
-- Extract WidgetEditorReadonlyView into its own component to scope useBlockEditingMode to widget editor context only
-- Fix TS type errors detected by tsgo.
-- Update submit button handling to support core/button blocks as part of the jetpack/button to core/button migration.
+- Add missing 'Trash' status label in stage component. [#47450]
+- Contact Form: Show synced forms as read-only preview in widget editor with Edit Form button. [#47235]
+- Dashboard: Fix admin page header CSS specificity to prevent style conflicts. [#47313]
+- Decode HTML entities in form dropdown titles in the variation picker. [#47474]
+- Extract `WidgetEditorReadonlyView` into its own component to scope `useBlockEditingMode` to widget editor context only. [#47452]
+- Fix TypeScipt type errors detected by `tsgo`. [#47423]
+- Update submit button handling to support core/button blocks as part of the jetpack/button to core/button migration. [#47438]
 
 ## [7.11.0] - 2026-03-02
 ### Added
@@ -2317,7 +2314,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.12.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.11.0...v7.12.0-alpha
+[7.12.0]: https://github.com/automattic/jetpack-forms/compare/v7.11.0...v7.12.0
 [7.11.0]: https://github.com/automattic/jetpack-forms/compare/v7.10.0...v7.11.0
 [7.10.0]: https://github.com/automattic/jetpack-forms/compare/v7.9.0...v7.10.0
 [7.9.0]: https://github.com/automattic/jetpack-forms/compare/v7.8.0...v7.9.0
