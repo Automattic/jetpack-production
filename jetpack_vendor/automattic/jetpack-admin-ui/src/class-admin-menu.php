@@ -13,7 +13,7 @@ namespace Automattic\Jetpack\Admin_UI;
  */
 class Admin_Menu {
 
-	const PACKAGE_VERSION = '0.5.12-alpha';
+	const PACKAGE_VERSION = '0.5.12';
 
 	/**
 	 * Whether this class has been initialized
