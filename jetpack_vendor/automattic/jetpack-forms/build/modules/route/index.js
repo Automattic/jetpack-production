@@ -207,143 +207,588 @@ var require_private_apis = __commonJS({
   }
 });
 
-// ../../../node_modules/.pnpm/@tanstack+store@0.8.0/node_modules/@tanstack/store/dist/esm/scheduler.js
-var __storeToDerived = /* @__PURE__ */ new WeakMap();
-var __derivedToStore = /* @__PURE__ */ new WeakMap();
-var __depsThatHaveWrittenThisTick = {
-  current: []
-};
-var __isFlushing = false;
-var __batchDepth = 0;
-var __pendingUpdates = /* @__PURE__ */ new Set();
-var __initialBatchValues = /* @__PURE__ */ new Map();
-function __flush_internals(relatedVals) {
-  for (const derived of relatedVals) {
-    if (__depsThatHaveWrittenThisTick.current.includes(derived)) {
-      continue;
-    }
-    __depsThatHaveWrittenThisTick.current.push(derived);
-    derived.recompute();
-    const stores = __derivedToStore.get(derived);
-    if (stores) {
-      for (const store of stores) {
-        const relatedLinkedDerivedVals = __storeToDerived.get(store);
-        if (!(relatedLinkedDerivedVals == null ? void 0 : relatedLinkedDerivedVals.length)) continue;
-        __flush_internals(relatedLinkedDerivedVals);
-      }
-    }
-  }
-}
-function __notifyListeners(store) {
-  const value = {
-    prevVal: store.prevState,
-    currentVal: store.state
+// ../../../node_modules/.pnpm/@tanstack+store@0.9.2/node_modules/@tanstack/store/dist/esm/alien.js
+var ReactiveFlags = /* @__PURE__ */ ((ReactiveFlags2) => {
+  ReactiveFlags2[ReactiveFlags2["None"] = 0] = "None";
+  ReactiveFlags2[ReactiveFlags2["Mutable"] = 1] = "Mutable";
+  ReactiveFlags2[ReactiveFlags2["Watching"] = 2] = "Watching";
+  ReactiveFlags2[ReactiveFlags2["RecursedCheck"] = 4] = "RecursedCheck";
+  ReactiveFlags2[ReactiveFlags2["Recursed"] = 8] = "Recursed";
+  ReactiveFlags2[ReactiveFlags2["Dirty"] = 16] = "Dirty";
+  ReactiveFlags2[ReactiveFlags2["Pending"] = 32] = "Pending";
+  return ReactiveFlags2;
+})(ReactiveFlags || {});
+function createReactiveSystem({
+  update,
+  notify,
+  unwatched
+}) {
+  return {
+    link: link22,
+    unlink: unlink22,
+    propagate: propagate22,
+    checkDirty: checkDirty22,
+    shallowPropagate: shallowPropagate22
   };
-  for (const listener of store.listeners) {
-    listener(value);
+  function link22(dep, sub, version) {
+    const prevDep = sub.depsTail;
+    if (prevDep !== void 0 && prevDep.dep === dep) {
+      return;
+    }
+    const nextDep = prevDep !== void 0 ? prevDep.nextDep : sub.deps;
+    if (nextDep !== void 0 && nextDep.dep === dep) {
+      nextDep.version = version;
+      sub.depsTail = nextDep;
+      return;
+    }
+    const prevSub = dep.subsTail;
+    if (prevSub !== void 0 && prevSub.version === version && prevSub.sub === sub) {
+      return;
+    }
+    const newLink = sub.depsTail = dep.subsTail = {
+      version,
+      dep,
+      sub,
+      prevDep,
+      nextDep,
+      prevSub,
+      nextSub: void 0
+    };
+    if (nextDep !== void 0) {
+      nextDep.prevDep = newLink;
+    }
+    if (prevDep !== void 0) {
+      prevDep.nextDep = newLink;
+    } else {
+      sub.deps = newLink;
+    }
+    if (prevSub !== void 0) {
+      prevSub.nextSub = newLink;
+    } else {
+      dep.subs = newLink;
+    }
   }
-}
-function __notifyDerivedListeners(derived) {
-  const value = {
-    prevVal: derived.prevState,
-    currentVal: derived.state
-  };
-  for (const listener of derived.listeners) {
-    listener(value);
+  function unlink22(link3, sub = link3.sub) {
+    const dep = link3.dep;
+    const prevDep = link3.prevDep;
+    const nextDep = link3.nextDep;
+    const nextSub = link3.nextSub;
+    const prevSub = link3.prevSub;
+    if (nextDep !== void 0) {
+      nextDep.prevDep = prevDep;
+    } else {
+      sub.depsTail = prevDep;
+    }
+    if (prevDep !== void 0) {
+      prevDep.nextDep = nextDep;
+    } else {
+      sub.deps = nextDep;
+    }
+    if (nextSub !== void 0) {
+      nextSub.prevSub = prevSub;
+    } else {
+      dep.subsTail = prevSub;
+    }
+    if (prevSub !== void 0) {
+      prevSub.nextSub = nextSub;
+    } else if ((dep.subs = nextSub) === void 0) {
+      unwatched(dep);
+    }
+    return nextDep;
   }
-}
-function __flush(store) {
-  if (__batchDepth > 0 && !__initialBatchValues.has(store)) {
-    __initialBatchValues.set(store, store.prevState);
-  }
-  __pendingUpdates.add(store);
-  if (__batchDepth > 0) return;
-  if (__isFlushing) return;
-  try {
-    __isFlushing = true;
-    while (__pendingUpdates.size > 0) {
-      const stores = Array.from(__pendingUpdates);
-      __pendingUpdates.clear();
-      for (const store2 of stores) {
-        const prevState = __initialBatchValues.get(store2) ?? store2.prevState;
-        store2.prevState = prevState;
-        __notifyListeners(store2);
+  function propagate22(link3) {
+    let next = link3.nextSub;
+    let stack;
+    top: do {
+      const sub = link3.sub;
+      let flags = sub.flags;
+      if (!(flags & (4 | 8 | 16 | 32))) {
+        sub.flags = flags | 32;
+      } else if (!(flags & (4 | 8))) {
+        flags = 0;
+      } else if (!(flags & 4)) {
+        sub.flags = flags & -9 | 32;
+      } else if (!(flags & (16 | 32)) && isValidLink(link3, sub)) {
+        sub.flags = flags | (8 | 32);
+        flags &= 1;
+      } else {
+        flags = 0;
       }
-      for (const store2 of stores) {
-        const derivedVals = __storeToDerived.get(store2);
-        if (!derivedVals) continue;
-        __depsThatHaveWrittenThisTick.current.push(store2);
-        __flush_internals(derivedVals);
+      if (flags & 2) {
+        notify(sub);
       }
-      for (const store2 of stores) {
-        const derivedVals = __storeToDerived.get(store2);
-        if (!derivedVals) continue;
-        for (const derived of derivedVals) {
-          __notifyDerivedListeners(derived);
+      if (flags & 1) {
+        const subSubs = sub.subs;
+        if (subSubs !== void 0) {
+          const nextSub = (link3 = subSubs).nextSub;
+          if (nextSub !== void 0) {
+            stack = { value: next, prev: stack };
+            next = nextSub;
+          }
+          continue;
         }
       }
+      if ((link3 = next) !== void 0) {
+        next = link3.nextSub;
+        continue;
+      }
+      while (stack !== void 0) {
+        link3 = stack.value;
+        stack = stack.prev;
+        if (link3 !== void 0) {
+          next = link3.nextSub;
+          continue top;
+        }
+      }
+      break;
+    } while (true);
+  }
+  function checkDirty22(link3, sub) {
+    let stack;
+    let checkDepth = 0;
+    let dirty = false;
+    top: do {
+      const dep = link3.dep;
+      const flags = dep.flags;
+      if (sub.flags & 16) {
+        dirty = true;
+      } else if ((flags & (1 | 16)) === (1 | 16)) {
+        if (update(dep)) {
+          const subs = dep.subs;
+          if (subs.nextSub !== void 0) {
+            shallowPropagate22(subs);
+          }
+          dirty = true;
+        }
+      } else if ((flags & (1 | 32)) === (1 | 32)) {
+        if (link3.nextSub !== void 0 || link3.prevSub !== void 0) {
+          stack = { value: link3, prev: stack };
+        }
+        link3 = dep.deps;
+        sub = dep;
+        ++checkDepth;
+        continue;
+      }
+      if (!dirty) {
+        const nextDep = link3.nextDep;
+        if (nextDep !== void 0) {
+          link3 = nextDep;
+          continue;
+        }
+      }
+      while (checkDepth--) {
+        const firstSub = sub.subs;
+        const hasMultipleSubs = firstSub.nextSub !== void 0;
+        if (hasMultipleSubs) {
+          link3 = stack.value;
+          stack = stack.prev;
+        } else {
+          link3 = firstSub;
+        }
+        if (dirty) {
+          if (update(sub)) {
+            if (hasMultipleSubs) {
+              shallowPropagate22(firstSub);
+            }
+            sub = link3.sub;
+            continue;
+          }
+          dirty = false;
+        } else {
+          sub.flags &= -33;
+        }
+        sub = link3.sub;
+        const nextDep = link3.nextDep;
+        if (nextDep !== void 0) {
+          link3 = nextDep;
+          continue top;
+        }
+      }
+      return dirty;
+    } while (true);
+  }
+  function shallowPropagate22(link3) {
+    do {
+      const sub = link3.sub;
+      const flags = sub.flags;
+      if ((flags & (32 | 16)) === 32) {
+        sub.flags = flags | 16;
+        if ((flags & (2 | 4)) === 2) {
+          notify(sub);
+        }
+      }
+    } while ((link3 = link3.nextSub) !== void 0);
+  }
+  function isValidLink(checkLink, sub) {
+    let link3 = sub.depsTail;
+    while (link3 !== void 0) {
+      if (link3 === checkLink) {
+        return true;
+      }
+      link3 = link3.prevDep;
     }
-  } finally {
-    __isFlushing = false;
-    __depsThatHaveWrittenThisTick.current = [];
-    __initialBatchValues.clear();
+    return false;
   }
 }
-function batch(fn) {
-  __batchDepth++;
+var batchDepth = 0;
+var notifyIndex = 0;
+var queuedLength = 0;
+var queued = [];
+var { link, unlink, propagate, checkDirty, shallowPropagate } = createReactiveSystem({
+  update(node) {
+    if (node.depsTail !== void 0) {
+      return updateComputed(node);
+    } else {
+      return updateSignal(node);
+    }
+  },
+  notify(effect2) {
+    let insertIndex = queuedLength;
+    let firstInsertedIndex = insertIndex;
+    do {
+      queued[insertIndex++] = effect2;
+      effect2.flags &= -3;
+      effect2 = effect2.subs?.sub;
+      if (effect2 === void 0 || !(effect2.flags & 2)) {
+        break;
+      }
+    } while (true);
+    queuedLength = insertIndex;
+    while (firstInsertedIndex < --insertIndex) {
+      const left = queued[firstInsertedIndex];
+      queued[firstInsertedIndex++] = queued[insertIndex];
+      queued[insertIndex] = left;
+    }
+  },
+  unwatched(node) {
+    if (!(node.flags & 1)) {
+      effectScopeOper.call(node);
+    } else if (node.depsTail !== void 0) {
+      node.depsTail = void 0;
+      node.flags = 1 | 16;
+      purgeDeps(node);
+    }
+  }
+});
+function getBatchDepth() {
+  return batchDepth;
+}
+function startBatch() {
+  ++batchDepth;
+}
+function endBatch() {
+  if (!--batchDepth) {
+    flush();
+  }
+}
+function updateComputed(c) {
+  c.depsTail = void 0;
+  c.flags = 1 | 4;
   try {
-    fn();
+    const oldValue = c.value;
+    return oldValue !== (c.value = c.getter(oldValue));
   } finally {
-    __batchDepth--;
-    if (__batchDepth === 0) {
-      const pendingUpdateToFlush = __pendingUpdates.values().next().value;
-      if (pendingUpdateToFlush) {
-        __flush(pendingUpdateToFlush);
+    c.flags &= -5;
+    purgeDeps(c);
+  }
+}
+function updateSignal(s) {
+  s.flags = 1;
+  return s.currentValue !== (s.currentValue = s.pendingValue);
+}
+function run(e) {
+  const flags = e.flags;
+  if (flags & 16 || flags & 32 && checkDirty(e.deps, e)) {
+    e.depsTail = void 0;
+    e.flags = 2 | 4;
+    try {
+      ;
+      e.fn();
+    } finally {
+      e.flags &= -5;
+      purgeDeps(e);
+    }
+  } else {
+    e.flags = 2;
+  }
+}
+function flush() {
+  try {
+    while (notifyIndex < queuedLength) {
+      const effect2 = queued[notifyIndex];
+      queued[notifyIndex++] = void 0;
+      run(effect2);
+    }
+  } finally {
+    while (notifyIndex < queuedLength) {
+      const effect2 = queued[notifyIndex];
+      queued[notifyIndex++] = void 0;
+      effect2.flags |= 2 | 8;
+    }
+    notifyIndex = 0;
+    queuedLength = 0;
+  }
+}
+function effectScopeOper() {
+  this.depsTail = void 0;
+  this.flags = 0;
+  purgeDeps(this);
+  const sub = this.subs;
+  if (sub !== void 0) {
+    unlink(sub);
+  }
+}
+function purgeDeps(sub) {
+  const depsTail = sub.depsTail;
+  let dep = depsTail !== void 0 ? depsTail.nextDep : sub.deps;
+  while (dep !== void 0) {
+    dep = unlink(dep, sub);
+  }
+}
+
+// ../../../node_modules/.pnpm/@tanstack+store@0.9.2/node_modules/@tanstack/store/dist/esm/atom.js
+function toObserver(nextHandler, errorHandler, completionHandler) {
+  const isObserver = typeof nextHandler === "object";
+  const self2 = isObserver ? nextHandler : void 0;
+  return {
+    next: (isObserver ? nextHandler.next : nextHandler)?.bind(self2),
+    error: (isObserver ? nextHandler.error : errorHandler)?.bind(self2),
+    complete: (isObserver ? nextHandler.complete : completionHandler)?.bind(
+      self2
+    )
+  };
+}
+var queuedEffects = [];
+var cycle = 0;
+var { link: link2, unlink: unlink2, propagate: propagate2, checkDirty: checkDirty2, shallowPropagate: shallowPropagate2 } = createReactiveSystem({
+  update(atom) {
+    return atom._update();
+  },
+  // eslint-disable-next-line no-shadow
+  notify(effect2) {
+    queuedEffects[queuedEffectsLength++] = effect2;
+    effect2.flags &= ~ReactiveFlags.Watching;
+  },
+  unwatched(atom) {
+    if (atom.depsTail !== void 0) {
+      atom.depsTail = void 0;
+      atom.flags = ReactiveFlags.Mutable | ReactiveFlags.Dirty;
+      purgeDeps2(atom);
+    }
+  }
+});
+var notifyIndex2 = 0;
+var queuedEffectsLength = 0;
+var activeSub;
+function purgeDeps2(sub) {
+  const depsTail = sub.depsTail;
+  let dep = depsTail !== void 0 ? depsTail.nextDep : sub.deps;
+  while (dep !== void 0) {
+    dep = unlink2(dep, sub);
+  }
+}
+function flush2() {
+  if (getBatchDepth() > 0) {
+    return;
+  }
+  while (notifyIndex2 < queuedEffectsLength) {
+    const effect2 = queuedEffects[notifyIndex2];
+    queuedEffects[notifyIndex2++] = void 0;
+    effect2.notify();
+  }
+  notifyIndex2 = 0;
+  queuedEffectsLength = 0;
+}
+function createAtom(valueOrFn, options) {
+  const isComputed = typeof valueOrFn === "function";
+  const getter = valueOrFn;
+  const atom = {
+    _snapshot: isComputed ? void 0 : valueOrFn,
+    subs: void 0,
+    subsTail: void 0,
+    deps: void 0,
+    depsTail: void 0,
+    flags: isComputed ? ReactiveFlags.None : ReactiveFlags.Mutable,
+    get() {
+      if (activeSub !== void 0) {
+        link2(atom, activeSub, cycle);
+      }
+      return atom._snapshot;
+    },
+    subscribe(observerOrFn) {
+      const obs = toObserver(observerOrFn);
+      const observed = { current: false };
+      const e = effect(() => {
+        atom.get();
+        if (!observed.current) {
+          observed.current = true;
+        } else {
+          obs.next?.(atom._snapshot);
+        }
+      });
+      return {
+        unsubscribe: () => {
+          e.stop();
+        }
+      };
+    },
+    _update(getValue) {
+      const prevSub = activeSub;
+      const compare = options?.compare ?? Object.is;
+      if (isComputed) {
+        activeSub = atom;
+        ++cycle;
+        atom.depsTail = void 0;
+      } else if (getValue === void 0) {
+        return false;
+      }
+      if (isComputed) {
+        atom.flags = ReactiveFlags.Mutable | ReactiveFlags.RecursedCheck;
+      }
+      try {
+        const oldValue = atom._snapshot;
+        const newValue = typeof getValue === "function" ? getValue(oldValue) : getValue === void 0 && isComputed ? getter(oldValue) : getValue;
+        if (oldValue === void 0 || !compare(oldValue, newValue)) {
+          atom._snapshot = newValue;
+          return true;
+        }
+        return false;
+      } finally {
+        activeSub = prevSub;
+        if (isComputed) {
+          atom.flags &= ~ReactiveFlags.RecursedCheck;
+        }
+        purgeDeps2(atom);
       }
     }
-  }
-}
-
-// ../../../node_modules/.pnpm/@tanstack+store@0.8.0/node_modules/@tanstack/store/dist/esm/types.js
-function isUpdaterFunction(updater) {
-  return typeof updater === "function";
-}
-
-// ../../../node_modules/.pnpm/@tanstack+store@0.8.0/node_modules/@tanstack/store/dist/esm/store.js
-var Store = class {
-  constructor(initialState, options) {
-    this.listeners = /* @__PURE__ */ new Set();
-    this.subscribe = (listener) => {
-      var _a, _b;
-      this.listeners.add(listener);
-      const unsub = (_b = (_a = this.options) == null ? void 0 : _a.onSubscribe) == null ? void 0 : _b.call(_a, listener, this);
-      return () => {
-        this.listeners.delete(listener);
-        unsub == null ? void 0 : unsub();
-      };
+  };
+  if (isComputed) {
+    atom.flags = ReactiveFlags.Mutable | ReactiveFlags.Dirty;
+    atom.get = function() {
+      const flags = atom.flags;
+      if (flags & ReactiveFlags.Dirty || flags & ReactiveFlags.Pending && checkDirty2(atom.deps, atom)) {
+        if (atom._update()) {
+          const subs = atom.subs;
+          if (subs !== void 0) {
+            shallowPropagate2(subs);
+          }
+        }
+      } else if (flags & ReactiveFlags.Pending) {
+        atom.flags = flags & ~ReactiveFlags.Pending;
+      }
+      if (activeSub !== void 0) {
+        link2(atom, activeSub, cycle);
+      }
+      return atom._snapshot;
     };
-    this.prevState = initialState;
-    this.state = initialState;
-    this.options = options;
+  } else {
+    atom.set = function(valueOrFn2) {
+      if (atom._update(valueOrFn2)) {
+        const subs = atom.subs;
+        if (subs !== void 0) {
+          propagate2(subs);
+          shallowPropagate2(subs);
+          flush2();
+        }
+      }
+    };
+  }
+  return atom;
+}
+function effect(fn) {
+  const run2 = () => {
+    const prevSub = activeSub;
+    activeSub = effectObj;
+    ++cycle;
+    effectObj.depsTail = void 0;
+    effectObj.flags = ReactiveFlags.Watching | ReactiveFlags.RecursedCheck;
+    try {
+      return fn();
+    } finally {
+      activeSub = prevSub;
+      effectObj.flags &= ~ReactiveFlags.RecursedCheck;
+      purgeDeps2(effectObj);
+    }
+  };
+  const effectObj = {
+    deps: void 0,
+    depsTail: void 0,
+    subs: void 0,
+    subsTail: void 0,
+    flags: ReactiveFlags.Watching | ReactiveFlags.RecursedCheck,
+    notify() {
+      const flags = this.flags;
+      if (flags & ReactiveFlags.Dirty || flags & ReactiveFlags.Pending && checkDirty2(this.deps, this)) {
+        run2();
+      } else {
+        this.flags = ReactiveFlags.Watching;
+      }
+    },
+    stop() {
+      this.flags = ReactiveFlags.None;
+      this.depsTail = void 0;
+      purgeDeps2(this);
+    }
+  };
+  run2();
+  return effectObj;
+}
+
+// ../../../node_modules/.pnpm/@tanstack+store@0.9.2/node_modules/@tanstack/store/dist/esm/store.js
+var Store = class {
+  constructor(valueOrFn) {
+    this.atom = createAtom(
+      valueOrFn
+    );
   }
   setState(updater) {
-    var _a, _b, _c;
-    this.prevState = this.state;
-    if ((_a = this.options) == null ? void 0 : _a.updateFn) {
-      this.state = this.options.updateFn(this.prevState)(updater);
-    } else {
-      if (isUpdaterFunction(updater)) {
-        this.state = updater(this.prevState);
-      } else {
-        this.state = updater;
-      }
-    }
-    (_c = (_b = this.options) == null ? void 0 : _b.onUpdate) == null ? void 0 : _c.call(_b);
-    __flush(this);
+    this.atom.set(updater);
+  }
+  get state() {
+    return this.atom.get();
+  }
+  get() {
+    return this.state;
+  }
+  subscribe(observerOrFn) {
+    return this.atom.subscribe(toObserver(observerOrFn));
   }
 };
+var ReadonlyStore = class {
+  constructor(valueOrFn) {
+    this.atom = createAtom(
+      valueOrFn
+    );
+  }
+  get state() {
+    return this.atom.get();
+  }
+  get() {
+    return this.state;
+  }
+  subscribe(observerOrFn) {
+    return this.atom.subscribe(toObserver(observerOrFn));
+  }
+};
+function createStore(valueOrFn) {
+  if (typeof valueOrFn === "function") {
+    return new ReadonlyStore(valueOrFn);
+  }
+  return new Store(valueOrFn);
+}
 
-// ../../../node_modules/.pnpm/@tanstack+history@1.154.14/node_modules/@tanstack/history/dist/esm/index.js
+// ../../../node_modules/.pnpm/@tanstack+store@0.9.2/node_modules/@tanstack/store/dist/esm/batch.js
+function batch(fn) {
+  try {
+    startBatch();
+    fn();
+  } finally {
+    endBatch();
+    flush2();
+  }
+}
+
+// ../../../node_modules/.pnpm/@tanstack+history@1.161.4/node_modules/@tanstack/history/dist/esm/index.js
 var stateIndexKey = "__TSR_index";
 var popStateEvent = "popstate";
 var beforeUnloadEvent = "beforeunload";
@@ -521,7 +966,7 @@ function createBrowserHistory(opts) {
   const getLocation = () => currentLocation;
   let next;
   let scheduled;
-  const flush = () => {
+  const flush3 = () => {
     if (!next) {
       return;
     }
@@ -548,7 +993,7 @@ function createBrowserHistory(opts) {
       isPush: next?.isPush || type === "push"
     };
     if (!scheduled) {
-      scheduled = Promise.resolve().then(() => flush());
+      scheduled = Promise.resolve().then(() => flush3());
     }
   };
   const onPushPop = (type) => {
@@ -642,7 +1087,7 @@ function createBrowserHistory(opts) {
       win.history.go(n);
     },
     createHref: (href) => createHref(href),
-    flush,
+    flush: flush3,
     destroy: () => {
       win.history.pushState = originalPushState;
       win.history.replaceState = originalReplaceState;
@@ -704,10 +1149,10 @@ function createRandomKey() {
   return (Math.random() + 1).toString(36).substring(7);
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/isServer/client.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/isServer/client.js
 var isServer = false;
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/utils/batch.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/utils/batch.js
 function batch2(fn) {
   if (isServer) {
     return fn();
@@ -719,7 +1164,7 @@ function batch2(fn) {
   return result;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/utils.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/utils.js
 function last(arr) {
   return arr[arr.length - 1];
 }
@@ -902,12 +1347,19 @@ function decodeSegment(segment) {
   }
   return sanitizePathSegment(decoded);
 }
-var SAFE_URL_PROTOCOLS = ["http:", "https:", "mailto:", "tel:"];
-function isDangerousProtocol(url) {
+var DEFAULT_PROTOCOL_ALLOWLIST = [
+  // Standard web navigation
+  "http:",
+  "https:",
+  // Common browser-safe actions
+  "mailto:",
+  "tel:"
+];
+function isDangerousProtocol(url, allowlist) {
   if (!url) return false;
   try {
     const parsed = new URL(url);
-    return !SAFE_URL_PROTOCOLS.includes(parsed.protocol);
+    return !allowlist.has(parsed.protocol);
   } catch {
     return false;
   }
@@ -964,7 +1416,7 @@ function invariant(condition, message) {
   throw new Error(value);
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/lru-cache.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/lru-cache.js
 function createLRUCache(max) {
   const cache = /* @__PURE__ */ new Map();
   let oldest;
@@ -1029,7 +1481,7 @@ function createLRUCache(max) {
   };
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/new-process-route-tree.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/new-process-route-tree.js
 var SEGMENT_TYPE_PATHNAME = 0;
 var SEGMENT_TYPE_PARAM = 1;
 var SEGMENT_TYPE_WILDCARD = 2;
@@ -1848,7 +2300,7 @@ function isFrameMoreSpecific(prev, next) {
   return next.statics > prev.statics || next.statics === prev.statics && (next.dynamics > prev.dynamics || next.dynamics === prev.dynamics && (next.optionals > prev.optionals || next.optionals === prev.optionals && ((next.node.kind === SEGMENT_TYPE_INDEX) > (prev.node.kind === SEGMENT_TYPE_INDEX) || next.node.kind === SEGMENT_TYPE_INDEX === (prev.node.kind === SEGMENT_TYPE_INDEX) && next.depth > prev.depth)));
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/path.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/path.js
 function joinPaths(paths) {
   return cleanPath(
     paths.filter((val) => {
@@ -2098,7 +2550,7 @@ function encodePathParam(value, decoder) {
   return decoder?.(encoded) ?? encoded;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/not-found.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/not-found.js
 function notFound(options = {}) {
   options.isNotFound = true;
   if (options.throw) throw options;
@@ -2108,7 +2560,7 @@ function isNotFound(obj) {
   return !!obj?.isNotFound;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/scroll-restoration.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/scroll-restoration.js
 function getSafeSessionStorage() {
   try {
     if (typeof window !== "undefined" && typeof window.sessionStorage === "object") {
@@ -2325,7 +2777,7 @@ function handleHashScroll(router) {
   }
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/qss.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/qss.js
 function encode(obj, stringify = String) {
   const result = new URLSearchParams();
   for (const key in obj) {
@@ -2358,7 +2810,7 @@ function decode(str) {
   return result;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/searchParams.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/searchParams.js
 var defaultParseSearch = parseSearchWith(JSON.parse);
 var defaultStringifySearch = stringifySearchWith(
   JSON.stringify,
@@ -2405,17 +2857,12 @@ function stringifySearchWith(stringify, parser) {
   };
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/root.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/root.js
 var rootRouteId = "__root__";
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/redirect.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/redirect.js
 function redirect(opts) {
   opts.statusCode = opts.statusCode || opts.code || 307;
-  if (!opts._builtLocation && typeof opts.href === "string" && isDangerousProtocol(opts.href)) {
-    throw new Error(
-      `Redirect blocked: unsafe protocol in href "${opts.href}". Only ${SAFE_URL_PROTOCOLS.join(", ")} protocols are allowed.`
-    );
-  }
   if (!opts._builtLocation && !opts.reloadDocument && typeof opts.href === "string") {
     try {
       new URL(opts.href);
@@ -2441,7 +2888,7 @@ function isRedirect(obj) {
   return obj instanceof Response && !!obj.options;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/load-matches.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/load-matches.js
 var triggerOnReady = (inner) => {
   if (!inner.rendered) {
     inner.rendered = true;
@@ -2465,27 +2912,27 @@ var buildMatchContext = (inner, index, includeCurrentMatch = true) => {
   }
   return context;
 };
-var _handleNotFound = (inner, err) => {
-  const routeCursor = inner.router.routesById[err.routeId ?? ""] ?? inner.router.routeTree;
-  if (!routeCursor.options.notFoundComponent && inner.router.options?.defaultNotFoundComponent) {
-    routeCursor.options.notFoundComponent = inner.router.options.defaultNotFoundComponent;
+var getNotFoundBoundaryIndex = (inner, err) => {
+  if (!inner.matches.length) {
+    return void 0;
   }
-  invariant(
-    routeCursor.options.notFoundComponent,
-    "No notFoundComponent found. Please set a notFoundComponent on your route or provide a defaultNotFoundComponent to the router."
+  const requestedRouteId = err.routeId;
+  const matchedRootIndex = inner.matches.findIndex(
+    (m) => m.routeId === inner.router.routeTree.id
   );
-  const matchForRoute = inner.matches.find((m) => m.routeId === routeCursor.id);
-  invariant(matchForRoute, "Could not find match for route: " + routeCursor.id);
-  inner.updateMatch(matchForRoute.id, (prev) => ({
-    ...prev,
-    status: "notFound",
-    error: err,
-    isFetching: false
-  }));
-  if (err.routerCode === "BEFORE_LOAD" && routeCursor.parentRoute) {
-    err.routeId = routeCursor.parentRoute.id;
-    _handleNotFound(inner, err);
+  const rootIndex = matchedRootIndex >= 0 ? matchedRootIndex : 0;
+  let startIndex = requestedRouteId ? inner.matches.findIndex((match) => match.routeId === requestedRouteId) : inner.firstBadMatchIndex ?? inner.matches.length - 1;
+  if (startIndex < 0) {
+    startIndex = rootIndex;
   }
+  for (let i = startIndex; i >= 0; i--) {
+    const match = inner.matches[i];
+    const route = inner.router.looseRoutesById[match.routeId];
+    if (route.options.notFoundComponent) {
+      return i;
+    }
+  }
+  return requestedRouteId ? startIndex : rootIndex;
 };
 var handleRedirectAndNotFound = (inner, match, err) => {
   if (!isRedirect(err) && !isNotFound(err)) return;
@@ -2497,11 +2944,10 @@ var handleRedirectAndNotFound = (inner, match, err) => {
     match._nonReactive.loaderPromise?.resolve();
     match._nonReactive.beforeLoadPromise = void 0;
     match._nonReactive.loaderPromise = void 0;
-    const status = isRedirect(err) ? "redirected" : "notFound";
     match._nonReactive.error = err;
     inner.updateMatch(match.id, (prev) => ({
       ...prev,
-      status,
+      status: isRedirect(err) ? "redirected" : prev.status === "pending" ? "success" : prev.status,
       context: buildMatchContext(inner, match.index),
       isFetching: false,
       error: err
@@ -2516,11 +2962,8 @@ var handleRedirectAndNotFound = (inner, match, err) => {
     err.options._fromLocation = inner.location;
     err.redirectHandled = true;
     err = inner.router.resolveRedirect(err);
-    throw err;
-  } else {
-    _handleNotFound(inner, err);
-    throw err;
   }
+  throw err;
 };
 var shouldSkipLoader = (inner, matchId) => {
   const match = inner.router.getMatch(matchId);
@@ -2560,6 +3003,9 @@ var handleSerialError = (inner, index, err, routerCode) => {
       abortController: new AbortController()
     };
   });
+  if (!inner.preload && !isRedirect(err) && !isNotFound(err)) {
+    inner.serialError ??= err;
+  }
 };
 var isBeforeLoadSsr = (inner, matchId, index, route) => {
   const existingMatch = inner.router.getMatch(matchId);
@@ -2795,8 +3241,8 @@ var executeHead = (inner, matchId, route) => {
     };
   });
 };
-var getLoaderContext = (inner, matchId, index, route) => {
-  const parentMatchPromise = inner.matchPromises[index - 1];
+var getLoaderContext = (inner, matchPromises, matchId, index, route) => {
+  const parentMatchPromise = matchPromises[index - 1];
   const { params, loaderDeps, abortController, cause } = inner.router.getMatch(matchId);
   const context = buildMatchContext(inner, index);
   const preload = resolvePreload(inner, matchId);
@@ -2817,7 +3263,7 @@ var getLoaderContext = (inner, matchId, index, route) => {
     ...inner.router.options.additionalContext
   };
 };
-var runLoader = async (inner, matchId, index, route) => {
+var runLoader = async (inner, matchPromises, matchId, index, route) => {
   try {
     const match = inner.router.getMatch(matchId);
     try {
@@ -2825,7 +3271,7 @@ var runLoader = async (inner, matchId, index, route) => {
         loadRouteChunk(route);
       }
       const loaderResult = route.options.loader?.(
-        getLoaderContext(inner, matchId, index, route)
+        getLoaderContext(inner, matchPromises, matchId, index, route)
       );
       const loaderResultIsPromise = route.options.loader && isPromise(loaderResult);
       const willLoadSomething = !!(loaderResultIsPromise || route._lazyPromise || route._componentsPromise || route.options.head || route.options.scripts || route.options.headers || match._nonReactive.minPendingPromise);
@@ -2909,12 +3355,14 @@ var runLoader = async (inner, matchId, index, route) => {
     handleRedirectAndNotFound(inner, match, err);
   }
 };
-var loadRouteMatch = async (inner, index) => {
+var loadRouteMatch = async (inner, matchPromises, index) => {
   async function handleLoader(preload, prevMatch, match2, route2) {
     const age = Date.now() - prevMatch.updatedAt;
     const staleAge = preload ? route2.options.preloadStaleTime ?? inner.router.options.defaultPreloadStaleTime ?? 3e4 : route2.options.staleTime ?? inner.router.options.defaultStaleTime ?? 0;
     const shouldReloadOption = route2.options.shouldReload;
-    const shouldReload = typeof shouldReloadOption === "function" ? shouldReloadOption(getLoaderContext(inner, matchId, index, route2)) : shouldReloadOption;
+    const shouldReload = typeof shouldReloadOption === "function" ? shouldReloadOption(
+      getLoaderContext(inner, matchPromises, matchId, index, route2)
+    ) : shouldReloadOption;
     const { status, invalid } = match2;
     loaderShouldRunAsync = status === "success" && (invalid || (shouldReload ?? age > staleAge));
     if (preload && route2.options.preload === false) ;
@@ -2922,7 +3370,7 @@ var loadRouteMatch = async (inner, index) => {
       loaderIsRunningAsync = true;
       (async () => {
         try {
-          await runLoader(inner, matchId, index, route2);
+          await runLoader(inner, matchPromises, matchId, index, route2);
           const match3 = inner.router.getMatch(matchId);
           match3._nonReactive.loaderPromise?.resolve();
           match3._nonReactive.loadPromise?.resolve();
@@ -2934,7 +3382,7 @@ var loadRouteMatch = async (inner, index) => {
         }
       })();
     } else if (status !== "success" || loaderShouldRunAsync && inner.sync) {
-      await runLoader(inner, matchId, index, route2);
+      await runLoader(inner, matchPromises, matchId, index, route2);
     }
   }
   const { id: matchId, routeId } = inner.matches[index];
@@ -2996,64 +3444,140 @@ var loadRouteMatch = async (inner, index) => {
   }
 };
 async function loadMatches(arg) {
-  const inner = Object.assign(arg, {
-    matchPromises: []
-  });
+  const inner = arg;
+  const matchPromises = [];
   if (!(isServer ?? inner.router.isServer) && inner.router.state.matches.some((d) => d._forcePending)) {
     triggerOnReady(inner);
   }
-  try {
-    for (let i = 0; i < inner.matches.length; i++) {
+  let beforeLoadNotFound;
+  for (let i = 0; i < inner.matches.length; i++) {
+    try {
       const beforeLoad = handleBeforeLoad(inner, i);
       if (isPromise(beforeLoad)) await beforeLoad;
-    }
-    const max = inner.firstBadMatchIndex ?? inner.matches.length;
-    for (let i = 0; i < max; i++) {
-      inner.matchPromises.push(loadRouteMatch(inner, i));
-    }
-    const results = await Promise.allSettled(inner.matchPromises);
-    const failures = results.filter(
-      (result) => result.status === "rejected"
-    ).map((result) => result.reason);
-    let firstNotFound;
-    for (const err of failures) {
+    } catch (err) {
       if (isRedirect(err)) {
         throw err;
       }
-      if (!firstNotFound && isNotFound(err)) {
-        firstNotFound = err;
+      if (isNotFound(err)) {
+        beforeLoadNotFound = err;
+      } else {
+        if (!inner.preload) throw err;
+      }
+      break;
+    }
+    if (inner.serialError) {
+      break;
+    }
+  }
+  const baseMaxIndexExclusive = inner.firstBadMatchIndex ?? inner.matches.length;
+  const boundaryIndex = beforeLoadNotFound && !inner.preload ? getNotFoundBoundaryIndex(inner, beforeLoadNotFound) : void 0;
+  const maxIndexExclusive = beforeLoadNotFound && inner.preload ? 0 : boundaryIndex !== void 0 ? Math.min(boundaryIndex + 1, baseMaxIndexExclusive) : baseMaxIndexExclusive;
+  let firstNotFound;
+  let firstUnhandledRejection;
+  for (let i = 0; i < maxIndexExclusive; i++) {
+    matchPromises.push(loadRouteMatch(inner, matchPromises, i));
+  }
+  try {
+    await Promise.all(matchPromises);
+  } catch {
+    const settled = await Promise.allSettled(matchPromises);
+    for (const result of settled) {
+      if (result.status !== "rejected") continue;
+      const reason = result.reason;
+      if (isRedirect(reason)) {
+        throw reason;
+      }
+      if (isNotFound(reason)) {
+        firstNotFound ??= reason;
+      } else {
+        firstUnhandledRejection ??= reason;
       }
     }
-    for (const match of inner.matches) {
-      const { id: matchId, routeId } = match;
-      const route = inner.router.looseRoutesById[routeId];
-      try {
-        const headResult = executeHead(inner, matchId, route);
-        if (headResult) {
-          const head = await headResult;
-          inner.updateMatch(matchId, (prev) => ({
-            ...prev,
-            ...head
-          }));
-        }
-      } catch (err) {
-        console.error(`Error executing head for route ${routeId}:`, err);
+    if (firstUnhandledRejection !== void 0) {
+      throw firstUnhandledRejection;
+    }
+  }
+  const notFoundToThrow = firstNotFound ?? (beforeLoadNotFound && !inner.preload ? beforeLoadNotFound : void 0);
+  let headMaxIndex = inner.serialError ? inner.firstBadMatchIndex ?? 0 : inner.matches.length - 1;
+  if (!notFoundToThrow && beforeLoadNotFound && inner.preload) {
+    return inner.matches;
+  }
+  if (notFoundToThrow) {
+    const renderedBoundaryIndex = getNotFoundBoundaryIndex(
+      inner,
+      notFoundToThrow
+    );
+    invariant(
+      renderedBoundaryIndex !== void 0,
+      "Could not find match for notFound boundary"
+    );
+    const boundaryMatch = inner.matches[renderedBoundaryIndex];
+    const boundaryRoute = inner.router.looseRoutesById[boundaryMatch.routeId];
+    const defaultNotFoundComponent = inner.router.options?.defaultNotFoundComponent;
+    if (!boundaryRoute.options.notFoundComponent && defaultNotFoundComponent) {
+      boundaryRoute.options.notFoundComponent = defaultNotFoundComponent;
+    }
+    notFoundToThrow.routeId = boundaryMatch.routeId;
+    const boundaryIsRoot = boundaryMatch.routeId === inner.router.routeTree.id;
+    inner.updateMatch(boundaryMatch.id, (prev) => ({
+      ...prev,
+      ...boundaryIsRoot ? (
+        // For root boundary, use globalNotFound so the root component's
+        // shell still renders and <Outlet> handles the not-found display,
+        // instead of replacing the entire root shell via status='notFound'.
+        { status: "success", globalNotFound: true, error: void 0 }
+      ) : (
+        // For non-root boundaries, set status:'notFound' so MatchInner
+        // renders the notFoundComponent directly.
+        { status: "notFound", error: notFoundToThrow }
+      ),
+      isFetching: false
+    }));
+    headMaxIndex = renderedBoundaryIndex;
+    await loadRouteChunk(boundaryRoute);
+  } else if (!inner.preload) {
+    const rootMatch = inner.matches[0];
+    if (!rootMatch.globalNotFound) {
+      const currentRootMatch = inner.router.getMatch(rootMatch.id);
+      if (currentRootMatch?.globalNotFound) {
+        inner.updateMatch(rootMatch.id, (prev) => ({
+          ...prev,
+          globalNotFound: false,
+          error: void 0
+        }));
       }
     }
-    if (firstNotFound) {
-      throw firstNotFound;
+  }
+  if (inner.serialError && inner.firstBadMatchIndex !== void 0) {
+    const errorRoute = inner.router.looseRoutesById[inner.matches[inner.firstBadMatchIndex].routeId];
+    await loadRouteChunk(errorRoute);
+  }
+  for (let i = 0; i <= headMaxIndex; i++) {
+    const match = inner.matches[i];
+    const { id: matchId, routeId } = match;
+    const route = inner.router.looseRoutesById[routeId];
+    try {
+      const headResult = executeHead(inner, matchId, route);
+      if (headResult) {
+        const head = await headResult;
+        inner.updateMatch(matchId, (prev) => ({
+          ...prev,
+          ...head
+        }));
+      }
+    } catch (err) {
+      console.error(`Error executing head for route ${routeId}:`, err);
     }
-    const readyPromise = triggerOnReady(inner);
-    if (isPromise(readyPromise)) await readyPromise;
-  } catch (err) {
-    if (isNotFound(err) && !inner.preload) {
-      const readyPromise = triggerOnReady(inner);
-      if (isPromise(readyPromise)) await readyPromise;
-      throw err;
-    }
-    if (isRedirect(err)) {
-      throw err;
-    }
+  }
+  const readyPromise = triggerOnReady(inner);
+  if (isPromise(readyPromise)) {
+    await readyPromise;
+  }
+  if (notFoundToThrow) {
+    throw notFoundToThrow;
+  }
+  if (inner.serialError && !inner.preload && !inner.onReady) {
+    throw inner.serialError;
   }
   return inner.matches;
 }
@@ -3111,7 +3635,7 @@ var componentTypes = [
   "notFoundComponent"
 ];
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/rewrite.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/rewrite.js
 function composeRewrites(rewrites) {
   return {
     input: ({ url }) => {
@@ -3173,7 +3697,7 @@ function executeRewriteOutput(rewrite, url) {
   return url;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/router.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/router.js
 function getLocationChangeInfo(routerState) {
   const fromLocation = routerState.resolvedLocation;
   const toLocation = routerState.location;
@@ -3181,6 +3705,10 @@ function getLocationChangeInfo(routerState) {
   const hrefChanged = fromLocation?.href !== toLocation.href;
   const hashChanged = fromLocation?.hash !== toLocation.hash;
   return { fromLocation, toLocation, pathChanged, hrefChanged, hashChanged };
+}
+function filterRedirectedCachedMatches(matches) {
+  const filtered = matches.filter((d) => d.status !== "redirected");
+  return filtered.length === matches.length ? matches : filtered;
 }
 function createServerStore(initialState) {
   const store = {
@@ -3207,10 +3735,12 @@ var RouterCore = class {
     this.isScrollRestorationSetup = false;
     this.startTransition = (fn) => fn();
     this.update = (newOptions) => {
-      if (newOptions.notFoundRoute) {
-        console.warn(
-          "The notFoundRoute API is deprecated and will be removed in the next major version. See https://tanstack.com/router/v1/docs/framework/react/guide/not-found-errors#migrating-from-notfoundroute for more info."
-        );
+      if (true) {
+        if (newOptions.notFoundRoute) {
+          console.warn(
+            "The notFoundRoute API is deprecated and will be removed in the next major version. See https://tanstack.com/router/v1/docs/framework/react/guide/not-found-errors#migrating-from-notfoundroute for more info."
+          );
+        }
       }
       const prevOptions = this.options;
       const prevBasepath = this.basepath ?? prevOptions?.basepath ?? "/";
@@ -3221,6 +3751,7 @@ var RouterCore = class {
         ...newOptions
       };
       this.isServer = this.options.isServer ?? typeof document === "undefined";
+      this.protocolAllowlist = new Set(this.options.protocolAllowlist);
       if (this.options.pathParamsAllowedCharacters)
         this.pathParamsDecoder = compileDecodeCharMap(
           this.options.pathParamsAllowedCharacters
@@ -3248,14 +3779,14 @@ var RouterCore = class {
       if (this.options.routeTree !== this.routeTree) {
         this.routeTree = this.options.routeTree;
         let processRouteTreeResult;
-        if ((isServer ?? this.isServer) && globalThis.__TSR_CACHE__ && globalThis.__TSR_CACHE__.routeTree === this.routeTree) {
+        if ((isServer ?? this.isServer) && false) {
           const cached = globalThis.__TSR_CACHE__;
           this.resolvePathCache = cached.resolvePathCache;
           processRouteTreeResult = cached.processRouteTreeResult;
         } else {
           this.resolvePathCache = createLRUCache(1e3);
           processRouteTreeResult = this.buildRouteTree();
-          if ((isServer ?? this.isServer) && globalThis.__TSR_CACHE__ === void 0) {
+          if ((isServer ?? this.isServer) && false) {
             globalThis.__TSR_CACHE__ = {
               routeTree: this.routeTree,
               processRouteTreeResult,
@@ -3271,16 +3802,7 @@ var RouterCore = class {
             getInitialRouterState(this.latestLocation)
           );
         } else {
-          this.__store = new Store(getInitialRouterState(this.latestLocation), {
-            onUpdate: () => {
-              this.__store.state = {
-                ...this.state,
-                cachedMatches: this.state.cachedMatches.filter(
-                  (d) => !["redirected"].includes(d.status)
-                )
-              };
-            }
-          });
+          this.__store = createStore(getInitialRouterState(this.latestLocation));
           setupScrollRestoration(this);
         }
       }
@@ -3310,10 +3832,10 @@ var RouterCore = class {
         needsLocationUpdate = true;
       }
       if (needsLocationUpdate && this.__store) {
-        this.__store.state = {
-          ...this.state,
+        this.__store.setState((s) => ({
+          ...s,
           location: this.latestLocation
-        };
+        }));
       }
       if (typeof window !== "undefined" && "CSS" in window && typeof window.CSS?.supports === "function") {
         this.isViewTransitionTypesSupported = window.CSS.supports(
@@ -3491,25 +4013,20 @@ var RouterCore = class {
           fromParams,
           functionalUpdate(dest.params, fromParams)
         );
-        const interpolatedNextTo = interpolatePath({
-          path: nextTo,
-          params: nextParams,
-          decoder: this.pathParamsDecoder,
-          server: this.isServer
-        }).interpolatedPath;
-        const destMatchResult = this.getMatchedRoutes(interpolatedNextTo);
+        const destMatchResult = this.getMatchedRoutes(nextTo);
         let destRoutes = destMatchResult.matchedRoutes;
-        const isGlobalNotFound = destMatchResult.foundRoute ? destMatchResult.foundRoute.path !== "/" && destMatchResult.routeParams["**"] : trimPathRight2(interpolatedNextTo);
+        const isGlobalNotFound = !destMatchResult.foundRoute || destMatchResult.foundRoute.path !== "/" && destMatchResult.routeParams["**"];
         if (isGlobalNotFound && this.options.notFoundRoute) {
           destRoutes = [...destRoutes, this.options.notFoundRoute];
         }
-        let changedParams = false;
         if (Object.keys(nextParams).length > 0) {
           for (const route of destRoutes) {
             const fn = route.options.params?.stringify ?? route.options.stringifyParams;
             if (fn) {
-              changedParams = true;
-              Object.assign(nextParams, fn(nextParams));
+              try {
+                Object.assign(nextParams, fn(nextParams));
+              } catch {
+              }
             }
           }
         }
@@ -3518,7 +4035,7 @@ var RouterCore = class {
           // This preserves the original parameter syntax including optional parameters
           nextTo
         ) : decodePath(
-          !changedParams ? interpolatedNextTo : interpolatePath({
+          interpolatePath({
             path: nextTo,
             params: nextParams,
             decoder: this.pathParamsDecoder,
@@ -3766,7 +4283,7 @@ var RouterCore = class {
           publicHref = publicHref ?? location.publicHref;
         }
         const reloadHref = !hrefIsUrl && publicHref ? publicHref : href;
-        if (isDangerousProtocol(reloadHref)) {
+        if (isDangerousProtocol(reloadHref, this.protocolAllowlist)) {
           if (true) {
             console.warn(
               `Blocked navigation to dangerous protocol: ${reloadHref}`
@@ -3877,8 +4394,9 @@ var RouterCore = class {
                 this.startTransition(() => {
                   this.startViewTransition(async () => {
                     let exitingMatches = [];
-                    let enteringMatches = [];
-                    let stayingMatches = [];
+                    let hookExitingMatches = [];
+                    let hookEnteringMatches = [];
+                    let hookStayingMatches = [];
                     batch2(() => {
                       this.__store.setState((s) => {
                         const previousMatches = s.matches;
@@ -3886,11 +4404,18 @@ var RouterCore = class {
                         exitingMatches = previousMatches.filter(
                           (match) => !newMatches.some((d) => d.id === match.id)
                         );
-                        enteringMatches = newMatches.filter(
-                          (match) => !previousMatches.some((d) => d.id === match.id)
+                        hookExitingMatches = previousMatches.filter(
+                          (match) => !newMatches.some((d) => d.routeId === match.routeId)
                         );
-                        stayingMatches = newMatches.filter(
-                          (match) => previousMatches.some((d) => d.id === match.id)
+                        hookEnteringMatches = newMatches.filter(
+                          (match) => !previousMatches.some(
+                            (d) => d.routeId === match.routeId
+                          )
+                        );
+                        hookStayingMatches = newMatches.filter(
+                          (match) => previousMatches.some(
+                            (d) => d.routeId === match.routeId
+                          )
                         );
                         return {
                           ...s,
@@ -3907,7 +4432,7 @@ var RouterCore = class {
                           cachedMatches: [
                             ...s.cachedMatches,
                             ...exitingMatches.filter(
-                              (d) => d.status !== "error" && d.status !== "notFound"
+                              (d) => d.status !== "error" && d.status !== "notFound" && d.status !== "redirected"
                             )
                           ]
                         };
@@ -3915,9 +4440,9 @@ var RouterCore = class {
                       this.clearExpiredCache();
                     });
                     [
-                      [exitingMatches, "onLeave"],
-                      [enteringMatches, "onEnter"],
-                      [stayingMatches, "onStay"]
+                      [hookExitingMatches, "onLeave"],
+                      [hookEnteringMatches, "onEnter"],
+                      [hookStayingMatches, "onStay"]
                     ].forEach(([matches, hook]) => {
                       matches.forEach((match) => {
                         this.looseRoutesById[match.routeId].options[hook]?.(
@@ -4008,12 +4533,21 @@ var RouterCore = class {
       this.startTransition(() => {
         const matchesKey = this.state.pendingMatches?.some((d) => d.id === id) ? "pendingMatches" : this.state.matches.some((d) => d.id === id) ? "matches" : this.state.cachedMatches.some((d) => d.id === id) ? "cachedMatches" : "";
         if (matchesKey) {
-          this.__store.setState((s) => ({
-            ...s,
-            [matchesKey]: s[matchesKey]?.map(
-              (d) => d.id === id ? updater(d) : d
-            )
-          }));
+          if (matchesKey === "cachedMatches") {
+            this.__store.setState((s) => ({
+              ...s,
+              cachedMatches: filterRedirectedCachedMatches(
+                s.cachedMatches.map((d) => d.id === id ? updater(d) : d)
+              )
+            }));
+          } else {
+            this.__store.setState((s) => ({
+              ...s,
+              [matchesKey]: s[matchesKey]?.map(
+                (d) => d.id === id ? updater(d) : d
+              )
+            }));
+          }
         }
       });
     };
@@ -4062,6 +4596,12 @@ var RouterCore = class {
         } catch {
         }
       }
+      if (redirect2.options.href && !redirect2.options._builtLocation && // Check for dangerous protocols before processing the redirect
+      isDangerousProtocol(redirect2.options.href, this.protocolAllowlist)) {
+        throw new Error(
+          true ? `Redirect blocked: unsafe protocol in href "${redirect2.options.href}". Allowed protocols: ${Array.from(this.protocolAllowlist).join(", ")}.` : "Redirect blocked: unsafe protocol"
+        );
+      }
       if (!redirect2.headers.get("Location")) {
         redirect2.headers.set("Location", redirect2.options.href);
       }
@@ -4103,7 +4643,7 @@ var RouterCore = class {
     };
     this.loadRouteChunk = loadRouteChunk;
     this.preloadRoute = async (opts) => {
-      const next = this.buildLocation(opts);
+      const next = opts._builtLocation ?? this.buildLocation(opts);
       let matches = this.matchRoutes(next, {
         throwOnError: true,
         preload: true,
@@ -4162,10 +4702,7 @@ var RouterCore = class {
     this.matchRoute = (location, opts) => {
       const matchLocation = {
         ...location,
-        to: location.to ? this.resolvePathWithBase(
-          location.from || "",
-          location.to
-        ) : void 0,
+        to: location.to ? this.resolvePathWithBase(location.from || "", location.to) : void 0,
         params: location.params || {},
         leaveParams: true
       };
@@ -4209,7 +4746,8 @@ var RouterCore = class {
       caseSensitive: options.caseSensitive ?? false,
       notFoundMode: options.notFoundMode ?? "fuzzy",
       stringifySearch: options.stringifySearch ?? defaultStringifySearch,
-      parseSearch: options.parseSearch ?? defaultParseSearch
+      parseSearch: options.parseSearch ?? defaultParseSearch,
+      protocolAllowlist: options.protocolAllowlist ?? DEFAULT_PROTOCOL_ALLOWLIST
     });
     if (typeof document !== "undefined") {
       self.__TSR_ROUTER__ = this;
@@ -4268,6 +4806,9 @@ var RouterCore = class {
     }
     const globalNotFoundRouteId = isGlobalNotFound ? findGlobalNotFoundRouteId(this.options.notFoundMode, matchedRoutes) : void 0;
     const matches = new Array(matchedRoutes.length);
+    const previousMatchesByRouteId = new Map(
+      this.state.matches.map((match) => [match.routeId, match])
+    );
     for (let index = 0; index < matchedRoutes.length; index++) {
       const route = matchedRoutes[index];
       const parentMatch = matches[index - 1];
@@ -4317,9 +4858,7 @@ var RouterCore = class {
         loaderDepsHash
       );
       const existingMatch = this.getMatch(matchId);
-      const previousMatch = this.state.matches.find(
-        (d) => d.routeId === route.id
-      );
+      const previousMatch = previousMatchesByRouteId.get(route.id);
       const strictParams = existingMatch?._strictParams ?? usedParams;
       let paramsError = void 0;
       if (!existingMatch) {
@@ -4345,7 +4884,7 @@ var RouterCore = class {
         match = {
           ...existingMatch,
           cause,
-          params: previousMatch ? replaceEqualDeep(previousMatch.params, routeParams) : routeParams,
+          params: previousMatch?.params ?? routeParams,
           _strictParams: strictParams,
           search: previousMatch ? replaceEqualDeep(previousMatch.search, preMatchSearch) : replaceEqualDeep(existingMatch.search, preMatchSearch),
           _strictSearch: strictMatchSearch
@@ -4357,7 +4896,7 @@ var RouterCore = class {
           ssr: isServer ?? this.isServer ? void 0 : route.options.ssr,
           index,
           routeId: route.id,
-          params: previousMatch ? replaceEqualDeep(previousMatch.params, routeParams) : routeParams,
+          params: previousMatch?.params ?? routeParams,
           _strictParams: strictParams,
           pathname: interpolatedPath,
           updatedAt: Date.now(),
@@ -4404,6 +4943,8 @@ var RouterCore = class {
       const match = matches[index];
       const route = this.looseRoutesById[match.routeId];
       const existingMatch = this.getMatch(match.id);
+      const previousMatch = previousMatchesByRouteId.get(match.routeId);
+      match.params = previousMatch ? replaceEqualDeep(previousMatch.params, routeParams) : routeParams;
       if (!existingMatch) {
         const parentMatch = matches[index - 1];
         const parentContext = this.getParentContext(parentMatch);
@@ -4651,10 +5192,10 @@ function extractStrictParams(route, referenceParams, parsedParams, accumulatedPa
   }
 }
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/link.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/link.js
 var preloadWarning = "Error preloading route! \u261D\uFE0F";
 
-// ../../../node_modules/.pnpm/@tanstack+router-core@1.158.4/node_modules/@tanstack/router-core/dist/esm/route.js
+// ../../../node_modules/.pnpm/@tanstack+router-core@1.166.2/node_modules/@tanstack/router-core/dist/esm/route.js
 var BaseRoute = class {
   constructor(options) {
     this.init = (opts) => {
@@ -4744,7 +5285,7 @@ var BaseRootRoute = class extends BaseRoute {
   }
 };
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/utils.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/utils.js
 var React = __toESM(require_react(), 1);
 var REACT_USE = "use";
 var reactUse = React[REACT_USE];
@@ -4783,7 +5324,7 @@ function useForwardedRef(ref) {
   return innerRef;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/CatchBoundary.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/CatchBoundary.js
 var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
 var React2 = __toESM(require_react(), 1);
 function CatchBoundary(props) {
@@ -4877,7 +5418,7 @@ function ErrorComponent({ error }) {
   ] });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/ClientOnly.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/ClientOnly.js
 var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
 var import_react = __toESM(require_react(), 1);
 function ClientOnly({ children, fallback = null }) {
@@ -4914,91 +5455,55 @@ function warning(condition, message) {
 }
 var tiny_warning_esm_default = warning;
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/route.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/route.js
 var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
-var import_react3 = __toESM(require_react(), 1);
+var import_react4 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useMatch.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useMatch.js
 var React6 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-store@0.8.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-store/dist/esm/index.js
-var import_with_selector = __toESM(require_with_selector(), 1);
-function useStore(store, selector = (d) => d, options = {}) {
-  const equal = options.equal ?? shallow;
-  const slice = (0, import_with_selector.useSyncExternalStoreWithSelector)(
-    store.subscribe,
-    () => store.state,
-    () => store.state,
-    selector,
-    equal
-  );
-  return slice;
-}
-function shallow(objA, objB) {
-  if (Object.is(objA, objB)) {
-    return true;
-  }
-  if (typeof objA !== "object" || objA === null || typeof objB !== "object" || objB === null) {
-    return false;
-  }
-  if (objA instanceof Map && objB instanceof Map) {
-    if (objA.size !== objB.size) return false;
-    for (const [k, v] of objA) {
-      if (!objB.has(k) || !Object.is(v, objB.get(k))) return false;
-    }
-    return true;
-  }
-  if (objA instanceof Set && objB instanceof Set) {
-    if (objA.size !== objB.size) return false;
-    for (const v of objA) {
-      if (!objB.has(v)) return false;
-    }
-    return true;
-  }
-  if (objA instanceof Date && objB instanceof Date) {
-    if (objA.getTime() !== objB.getTime()) return false;
-    return true;
-  }
-  const keysA = getOwnKeys(objA);
-  if (keysA.length !== getOwnKeys(objB).length) {
-    return false;
-  }
-  for (let i = 0; i < keysA.length; i++) {
-    if (!Object.prototype.hasOwnProperty.call(objB, keysA[i]) || !Object.is(objA[keysA[i]], objB[keysA[i]])) {
-      return false;
-    }
-  }
-  return true;
-}
-function getOwnKeys(obj) {
-  return Object.keys(obj).concat(
-    Object.getOwnPropertySymbols(obj)
-  );
-}
-
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouterState.js
+// ../../../node_modules/.pnpm/@tanstack+react-store@0.9.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-store/dist/esm/useStore.js
 var import_react2 = __toESM(require_react(), 1);
+var import_with_selector = __toESM(require_with_selector(), 1);
+function defaultCompare(a, b) {
+  return a === b;
+}
+function useStore(atom, selector, compare = defaultCompare) {
+  const subscribe2 = (0, import_react2.useCallback)(
+    (handleStoreChange) => {
+      if (!atom) {
+        return () => {
+        };
+      }
+      const { unsubscribe } = atom.subscribe(handleStoreChange);
+      return unsubscribe;
+    },
+    [atom]
+  );
+  const boundGetSnapshot = (0, import_react2.useCallback)(() => atom?.get(), [atom]);
+  const selectedSnapshot = (0, import_with_selector.useSyncExternalStoreWithSelector)(
+    subscribe2,
+    boundGetSnapshot,
+    boundGetSnapshot,
+    selector,
+    compare
+  );
+  return selectedSnapshot;
+}
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouter.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouterState.js
+var import_react3 = __toESM(require_react(), 1);
+
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouter.js
 var React4 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/routerContext.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/routerContext.js
 var React3 = __toESM(require_react(), 1);
 var routerContext = React3.createContext(null);
-function getRouterContext() {
-  if (typeof document === "undefined") {
-    return routerContext;
-  }
-  if (window.__TSR_ROUTER_CONTEXT__) {
-    return window.__TSR_ROUTER_CONTEXT__;
-  }
-  window.__TSR_ROUTER_CONTEXT__ = routerContext;
-  return routerContext;
-}
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouter.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouter.js
 function useRouter(opts) {
-  const value = React4.useContext(getRouterContext());
+  const value = React4.useContext(routerContext);
   tiny_warning_esm_default(
     !((opts?.warn ?? true) && !value),
     "useRouter must be used inside a <RouterProvider> component!"
@@ -5006,7 +5511,7 @@ function useRouter(opts) {
   return value;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouterState.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useRouterState.js
 function useRouterState(opts) {
   const contextRouter = useRouter({
     warn: opts?.router === void 0
@@ -5019,7 +5524,7 @@ function useRouterState(opts) {
   }
   const previousResult = (
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    (0, import_react2.useRef)(void 0)
+    (0, import_react3.useRef)(void 0)
   );
   return useStore(router.__store, (state) => {
     if (opts?.select) {
@@ -5037,14 +5542,14 @@ function useRouterState(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/matchContext.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/matchContext.js
 var React5 = __toESM(require_react(), 1);
 var matchContext = React5.createContext(void 0);
 var dummyMatchContext = React5.createContext(
   void 0
 );
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useMatch.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useMatch.js
 function useMatch(opts) {
   const nearestMatchId = React6.useContext(
     opts.from ? dummyMatchContext : matchContext
@@ -5068,7 +5573,7 @@ function useMatch(opts) {
   return matchSelection;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLoaderData.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLoaderData.js
 function useLoaderData(opts) {
   return useMatch({
     from: opts.from,
@@ -5080,7 +5585,7 @@ function useLoaderData(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLoaderDeps.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLoaderDeps.js
 function useLoaderDeps(opts) {
   const { select, ...rest } = opts;
   return useMatch({
@@ -5091,7 +5596,7 @@ function useLoaderDeps(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useParams.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useParams.js
 function useParams(opts) {
   return useMatch({
     from: opts.from,
@@ -5105,7 +5610,7 @@ function useParams(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useSearch.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useSearch.js
 function useSearch(opts) {
   return useMatch({
     from: opts.from,
@@ -5118,7 +5623,7 @@ function useSearch(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useNavigate.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useNavigate.js
 var React7 = __toESM(require_react(), 1);
 function useNavigate(_defaultOpts) {
   const router = useRouter();
@@ -5133,7 +5638,7 @@ function useNavigate(_defaultOpts) {
   );
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/link.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/link.js
 var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
 var React8 = __toESM(require_react(), 1);
 var import_react_dom = __toESM(require_react_dom(), 1);
@@ -5161,6 +5666,7 @@ function useLinkProps(options, forwardedRef) {
     style,
     className,
     onClick,
+    onBlur,
     onFocus,
     onMouseEnter,
     onMouseLeave,
@@ -5184,7 +5690,7 @@ function useLinkProps(options, forwardedRef) {
     to.indexOf(":") > -1) {
       try {
         new URL(to);
-        if (isDangerousProtocol(to)) {
+        if (isDangerousProtocol(to, router.protocolAllowlist)) {
           if (true) {
             console.warn(`Blocked Link with dangerous protocol: ${to}`);
           }
@@ -5223,7 +5729,7 @@ function useLinkProps(options, forwardedRef) {
     );
     const externalLink2 = (() => {
       if (hrefOption2?.external) {
-        if (isDangerousProtocol(hrefOption2.href)) {
+        if (isDangerousProtocol(hrefOption2.href, router.protocolAllowlist)) {
           if (true) {
             console.warn(
               `Blocked Link with dangerous protocol: ${hrefOption2.href}`
@@ -5237,7 +5743,7 @@ function useLinkProps(options, forwardedRef) {
       if (typeof to === "string" && to.indexOf(":") > -1) {
         try {
           new URL(to);
-          if (isDangerousProtocol(to)) {
+          if (isDangerousProtocol(to, router.protocolAllowlist)) {
             if (true) {
               console.warn(`Blocked Link with dangerous protocol: ${to}`);
             }
@@ -5367,8 +5873,16 @@ function useLinkProps(options, forwardedRef) {
     };
   }
   const isHydrated = useHydrated();
-  const currentSearch = useRouterState({
-    select: (s) => s.location.search,
+  const currentLocationState = useRouterState({
+    select: (s) => {
+      const leaf = s.matches[s.matches.length - 1];
+      return {
+        search: leaf?.search,
+        hash: s.location.hash,
+        path: leaf?.pathname
+        // path + params
+      };
+    },
     structuralSharing: true
   });
   const from = options.from;
@@ -5379,7 +5893,7 @@ function useLinkProps(options, forwardedRef) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [
       router,
-      currentSearch,
+      currentLocationState,
       from,
       options._fromLocation,
       options.hash,
@@ -5408,7 +5922,7 @@ function useLinkProps(options, forwardedRef) {
   );
   const externalLink = React8.useMemo(() => {
     if (hrefOption?.external) {
-      if (isDangerousProtocol(hrefOption.href)) {
+      if (isDangerousProtocol(hrefOption.href, router.protocolAllowlist)) {
         if (true) {
           console.warn(
             `Blocked Link with dangerous protocol: ${hrefOption.href}`
@@ -5423,7 +5937,7 @@ function useLinkProps(options, forwardedRef) {
     if (typeof to !== "string" || to.indexOf(":") === -1) return void 0;
     try {
       new URL(to);
-      if (isDangerousProtocol(to)) {
+      if (isDangerousProtocol(to, router.protocolAllowlist)) {
         if (true) {
           console.warn(`Blocked Link with dangerous protocol: ${to}`);
         }
@@ -5433,7 +5947,7 @@ function useLinkProps(options, forwardedRef) {
     } catch {
     }
     return void 0;
-  }, [to, hrefOption]);
+  }, [to, hrefOption, router.protocolAllowlist]);
   const isActive = useRouterState({
     select: (s) => {
       if (externalLink) return false;
@@ -5492,11 +6006,11 @@ function useLinkProps(options, forwardedRef) {
   const preload = options.reloadDocument || externalLink ? false : userPreload ?? router.options.defaultPreload;
   const preloadDelay = userPreloadDelay ?? router.options.defaultPreloadDelay ?? 0;
   const doPreload = React8.useCallback(() => {
-    router.preloadRoute({ ..._options }).catch((err) => {
+    router.preloadRoute({ ..._options, _builtLocation: next }).catch((err) => {
       console.warn(err);
       console.warn(preloadWarning);
     });
-  }, [router, _options]);
+  }, [router, _options, next]);
   const preloadViewportIoCallback = React8.useCallback(
     (entry) => {
       if (entry?.isIntersecting) {
@@ -5554,38 +6068,36 @@ function useLinkProps(options, forwardedRef) {
       ...style && { style },
       ...className && { className },
       ...onClick && { onClick },
+      ...onBlur && { onBlur },
       ...onFocus && { onFocus },
       ...onMouseEnter && { onMouseEnter },
       ...onMouseLeave && { onMouseLeave },
       ...onTouchStart && { onTouchStart }
     };
   }
-  const handleFocus = (_) => {
-    if (disabled) return;
-    if (preload) {
-      doPreload();
-    }
-  };
-  const handleTouchStart = handleFocus;
-  const handleEnter = (e) => {
-    if (disabled || !preload) return;
+  const enqueueIntentPreload = (e) => {
+    if (disabled || preload !== "intent") return;
     if (!preloadDelay) {
       doPreload();
-    } else {
-      const eventTarget = e.target;
-      if (timeoutMap.has(eventTarget)) {
-        return;
-      }
-      const id = setTimeout(() => {
-        timeoutMap.delete(eventTarget);
-        doPreload();
-      }, preloadDelay);
-      timeoutMap.set(eventTarget, id);
+      return;
     }
+    const eventTarget = e.currentTarget;
+    if (timeoutMap.has(eventTarget)) {
+      return;
+    }
+    const id = setTimeout(() => {
+      timeoutMap.delete(eventTarget);
+      doPreload();
+    }, preloadDelay);
+    timeoutMap.set(eventTarget, id);
+  };
+  const handleTouchStart = (_) => {
+    if (disabled || preload !== "intent") return;
+    doPreload();
   };
   const handleLeave = (e) => {
     if (disabled || !preload || !preloadDelay) return;
-    const eventTarget = e.target;
+    const eventTarget = e.currentTarget;
     const id = timeoutMap.get(eventTarget);
     if (id) {
       clearTimeout(id);
@@ -5599,8 +6111,9 @@ function useLinkProps(options, forwardedRef) {
     href: hrefOption?.href,
     ref: innerRef,
     onClick: composeHandlers([onClick, handleClick]),
-    onFocus: composeHandlers([onFocus, handleFocus]),
-    onMouseEnter: composeHandlers([onMouseEnter, handleEnter]),
+    onBlur: composeHandlers([onBlur, handleLeave]),
+    onFocus: composeHandlers([onFocus, enqueueIntentPreload]),
+    onMouseEnter: composeHandlers([onMouseEnter, enqueueIntentPreload]),
     onMouseLeave: composeHandlers([onMouseLeave, handleLeave]),
     onTouchStart: composeHandlers([onTouchStart, handleTouchStart]),
     disabled: !!disabled,
@@ -5667,7 +6180,7 @@ function isCtrlEvent(e) {
   return !!(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey);
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/route.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/route.js
 var Route = class extends BaseRoute {
   /**
    * @deprecated Use the `createRoute` function instead.
@@ -5711,7 +6224,7 @@ var Route = class extends BaseRoute {
     this.useNavigate = () => {
       return useNavigate({ from: this.fullPath });
     };
-    this.Link = import_react3.default.forwardRef(
+    this.Link = import_react4.default.forwardRef(
       (props, ref) => {
         return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Link, { ref, from: this.fullPath, ...props });
       }
@@ -5768,7 +6281,7 @@ var RootRoute = class extends BaseRootRoute {
     this.useNavigate = () => {
       return useNavigate({ from: this.fullPath });
     };
-    this.Link = import_react3.default.forwardRef(
+    this.Link = import_react4.default.forwardRef(
       (props, ref) => {
         return /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Link, { ref, from: this.fullPath, ...props });
       }
@@ -5780,7 +6293,7 @@ function createRootRoute(options) {
   return new RootRoute(options);
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/fileRoute.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/fileRoute.js
 function createFileRoute(path) {
   if (typeof path === "object") {
     return new FileRoute(path, {
@@ -5795,10 +6308,12 @@ var FileRoute = class {
   constructor(path, _opts) {
     this.path = path;
     this.createRoute = (options) => {
-      tiny_warning_esm_default(
-        this.silent,
-        "FileRoute is deprecated and will be removed in the next major version. Use the createFileRoute(path)(options) function instead."
-      );
+      if (true) {
+        tiny_warning_esm_default(
+          this.silent,
+          "FileRoute is deprecated and will be removed in the next major version. Use the createFileRoute(path)(options) function instead."
+        );
+      }
       const route = createRoute(options);
       route.isRoot = false;
       return route;
@@ -5864,11 +6379,11 @@ function createLazyFileRoute(id) {
   return (opts) => new LazyRoute({ id, ...opts });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Matches.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Matches.js
 var import_jsx_runtime11 = __toESM(require_jsx_runtime(), 1);
 var React11 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Transitioner.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Transitioner.js
 var React9 = __toESM(require_react(), 1);
 function Transitioner() {
   const router = useRouter();
@@ -5964,11 +6479,11 @@ function Transitioner() {
   return null;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Match.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Match.js
 var import_jsx_runtime10 = __toESM(require_jsx_runtime(), 1);
 var React10 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/not-found.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/not-found.js
 var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
 function CatchNotFound(props) {
   const resetKey = useRouterState({
@@ -6000,13 +6515,13 @@ function DefaultGlobalNotFound() {
   return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "Not Found" });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/SafeFragment.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/SafeFragment.js
 var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
 function SafeFragment(props) {
   return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(import_jsx_runtime6.Fragment, { children: props.children });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/renderRouteNotFound.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/renderRouteNotFound.js
 var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
 function renderRouteNotFound(router, route, data) {
   if (!route.options.notFoundComponent) {
@@ -6024,10 +6539,10 @@ function renderRouteNotFound(router, route, data) {
   return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(route.options.notFoundComponent, { ...data });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/scroll-restoration.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/scroll-restoration.js
 var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/ScriptOnce.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/ScriptOnce.js
 var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
 function ScriptOnce({ children }) {
   const router = useRouter();
@@ -6045,7 +6560,7 @@ function ScriptOnce({ children }) {
   );
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/scroll-restoration.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/scroll-restoration.js
 function ScrollRestoration() {
   const router = useRouter();
   if (!router.isScrollRestoring || !(isServer ?? router.isServer)) {
@@ -6077,7 +6592,7 @@ function ScrollRestoration() {
   );
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Match.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Match.js
 var Match = React10.memo(function MatchImpl({
   matchId
 }) {
@@ -6296,7 +6811,7 @@ var Outlet = React10.memo(function OutletImpl() {
   return nextMatch;
 });
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Matches.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/Matches.js
 function Matches() {
   const router = useRouter();
   const rootRoute = router.routesById[rootRouteId];
@@ -6325,13 +6840,13 @@ function MatchesInner() {
     {
       getResetKey: () => resetKey,
       errorComponent: ErrorComponent,
-      onCatch: (error) => {
+      onCatch: true ? (error) => {
         tiny_warning_esm_default(
           false,
           `The following error wasn't caught by any route! At the very least, consider setting an 'errorComponent' in your RootRoute!`
         );
         tiny_warning_esm_default(false, error.message || error.toString());
-      },
+      } : void 0,
       children: matchComponent
     }
   ) });
@@ -6346,7 +6861,7 @@ function useMatches(opts) {
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/router.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/router.js
 var createRouter = (options) => {
   return new Router(options);
 };
@@ -6363,7 +6878,7 @@ if (typeof globalThis !== "undefined") {
   window.createLazyFileRoute = createLazyFileRoute;
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/RouterProvider.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/RouterProvider.js
 var import_jsx_runtime12 = __toESM(require_jsx_runtime(), 1);
 function RouterContextProvider({
   router,
@@ -6380,8 +6895,7 @@ function RouterContextProvider({
       }
     });
   }
-  const routerContext2 = getRouterContext();
-  const provider = /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(routerContext2.Provider, { value: router, children });
+  const provider = /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(routerContext.Provider, { value: router, children });
   if (router.options.Wrap) {
     return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(router.options.Wrap, { children: provider });
   }
@@ -6391,48 +6905,16 @@ function RouterProvider({ router, ...rest }) {
   return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(RouterContextProvider, { router, ...rest, children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(Matches, {}) });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLocation.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useLocation.js
 function useLocation(opts) {
   return useRouterState({
     select: (state) => opts?.select ? opts.select(state.location) : state.location
   });
 }
 
-// ../../../node_modules/.pnpm/@tanstack+react-router@1.158.4_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useCanGoBack.js
+// ../../../node_modules/.pnpm/@tanstack+react-router@1.166.2_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@tanstack/react-router/dist/esm/useCanGoBack.js
 function useCanGoBack() {
   return useRouterState({ select: (s) => s.location.state.__TSR_index !== 0 });
-}
-
-// ../../../node_modules/.pnpm/@tanstack+history@1.161.4/node_modules/@tanstack/history/dist/esm/index.js
-var stateIndexKey2 = "__TSR_index";
-function sanitizePath2(path) {
-  let sanitized = path.replace(/[\x00-\x1f\x7f]/g, "");
-  if (sanitized.startsWith("//")) {
-    sanitized = "/" + sanitized.replace(/^\/+/, "");
-  }
-  return sanitized;
-}
-function parseHref2(href, state) {
-  const sanitizedHref = sanitizePath2(href);
-  const hashIndex = sanitizedHref.indexOf("#");
-  const searchIndex = sanitizedHref.indexOf("?");
-  const addedKey = createRandomKey2();
-  return {
-    href: sanitizedHref,
-    pathname: sanitizedHref.substring(
-      0,
-      hashIndex > 0 ? searchIndex > 0 ? Math.min(hashIndex, searchIndex) : hashIndex : searchIndex > 0 ? searchIndex : sanitizedHref.length
-    ),
-    hash: hashIndex > -1 ? sanitizedHref.substring(hashIndex) : "",
-    search: searchIndex > -1 ? sanitizedHref.slice(
-      searchIndex,
-      hashIndex === -1 ? void 0 : hashIndex
-    ) : "",
-    state: state || { [stateIndexKey2]: 0, key: addedKey, __TSR_key: addedKey }
-  };
-}
-function createRandomKey2() {
-  return (Math.random() + 1).toString(36).substring(7);
 }
 
 // ../../../node_modules/.pnpm/@wordpress+route@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/route/build-module/lock-unlock.mjs
@@ -6463,7 +6945,7 @@ lock(privateApis, {
   useRouter,
   useRouterState,
   // History utilities
-  parseHref: parseHref2
+  parseHref
 });
 
 // ../../../node_modules/.pnpm/@wordpress+route@0.6.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/route/build-module/index.mjs

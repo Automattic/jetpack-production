@@ -572,7 +572,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return x2 === y2 && (0 !== x2 || 1 / x2 === 1 / y2) || x2 !== x2 && y2 !== y2;
       }
       function useSyncExternalStore$2(subscribe2, getSnapshot) {
-        didWarnOld18Alpha || void 0 === React34.startTransition || (didWarnOld18Alpha = true, console.error(
+        didWarnOld18Alpha || void 0 === React36.startTransition || (didWarnOld18Alpha = true, console.error(
           "You are using an outdated, pre-release alpha of React 18 that does not support useSyncExternalStore. The use-sync-external-store shim will not work correctly. Upgrade to a newer pre-release."
         ));
         var value = getSnapshot();
@@ -582,7 +582,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
             "The result of getSnapshot should be cached to avoid an infinite loop"
           ), didWarnUncachedGetSnapshot = true);
         }
-        cachedValue = useState53({
+        cachedValue = useState54({
           inst: { value, getSnapshot }
         });
         var inst = cachedValue[0].inst, forceUpdate = cachedValue[1];
@@ -594,7 +594,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
           },
           [subscribe2, value, getSnapshot]
         );
-        useEffect41(
+        useEffect42(
           function() {
             checkIfSnapshotChanged(inst) && forceUpdate({ inst });
             return subscribe2(function() {
@@ -620,8 +620,8 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return getSnapshot();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React34 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState53 = React34.useState, useEffect41 = React34.useEffect, useLayoutEffect4 = React34.useLayoutEffect, useDebugValue = React34.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
-      exports.useSyncExternalStore = void 0 !== React34.useSyncExternalStore ? React34.useSyncExternalStore : shim;
+      var React36 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState54 = React36.useState, useEffect42 = React36.useEffect, useLayoutEffect4 = React36.useLayoutEffect, useDebugValue = React36.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      exports.useSyncExternalStore = void 0 !== React36.useSyncExternalStore ? React36.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
   }
@@ -12065,7 +12065,7 @@ var import_data33 = __toESM(require_data());
 var import_element55 = __toESM(require_element(), 1);
 var import_compose12 = __toESM(require_compose(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useControlled.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useControlled.js
 var React = __toESM(require_react(), 1);
 function useControlled({
   controlled,
@@ -12101,10 +12101,10 @@ function useControlled({
   return [value, setValueIfUncontrolled];
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useStableCallback.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useStableCallback.js
 var React3 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useRefWithInit.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useRefWithInit.js
 var React2 = __toESM(require_react(), 1);
 var UNINITIALIZED = {};
 function useRefWithInit(init2, initArg) {
@@ -12115,7 +12115,7 @@ function useRefWithInit(init2, initArg) {
   return ref;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useStableCallback.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useStableCallback.js
 var useInsertionEffect = React3[`useInsertionEffect${Math.random().toFixed(1)}`.slice(0, -3)];
 var useSafeInsertionEffect = (
   // React 17 doesn't have useInsertionEffect.
@@ -12141,20 +12141,23 @@ function createStableCallback() {
 }
 function assertNotCalled() {
   if (true) {
-    throw new Error("Base UI: Cannot call an event handler while rendering.");
+    throw (
+      /* minify-error-disabled */
+      new Error("Base UI: Cannot call an event handler while rendering.")
+    );
   }
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useIsoLayoutEffect.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useIsoLayoutEffect.js
 var React4 = __toESM(require_react(), 1);
 var noop = () => {
 };
 var useIsoLayoutEffect = typeof document !== "undefined" ? React4.useLayoutEffect : noop;
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeList.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeList.js
 var React6 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeListContext.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeListContext.js
 var React5 = __toESM(require_react(), 1);
 var CompositeListContext = /* @__PURE__ */ React5.createContext({
   register: () => {
@@ -12177,7 +12180,7 @@ function useCompositeListContext() {
   return React5.useContext(CompositeListContext);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeList.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeList.js
 var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
 function CompositeList(props) {
   const {
@@ -12308,7 +12311,7 @@ function sortByDocumentPosition(a2, b2) {
 function disableEslintWarning(_) {
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/direction-provider/DirectionContext.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/direction-provider/DirectionContext.js
 var React7 = __toESM(require_react(), 1);
 var DirectionContext = /* @__PURE__ */ React7.createContext(void 0);
 if (true) DirectionContext.displayName = "DirectionContext";
@@ -12317,10 +12320,10 @@ function useDirection() {
   return context?.direction ?? "ltr";
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useRenderElement.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useRenderElement.js
 var React10 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useMergedRefs.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useMergedRefs.js
 function useMergedRefs(a2, b2, c2, d2) {
   const forkRef = useRefWithInit(createForkRef).current;
   if (didChange(forkRef, a2, b2, c2, d2)) {
@@ -12409,17 +12412,17 @@ function update(forkRef, refs) {
   };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/getReactElementRef.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/getReactElementRef.js
 var React9 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/reactVersion.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/reactVersion.js
 var React8 = __toESM(require_react(), 1);
 var majorVersion = parseInt(React8.version, 10);
 function isReactVersionAtLeast(reactVersionToCheck) {
   return majorVersion >= reactVersionToCheck;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/getReactElementRef.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/getReactElementRef.js
 function getReactElementRef(element) {
   if (!/* @__PURE__ */ React9.isValidElement(element)) {
     return null;
@@ -12429,7 +12432,7 @@ function getReactElementRef(element) {
   return (isReactVersionAtLeast(19) ? propsWithRef?.ref : reactElement.ref) ?? null;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/mergeObjects.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/mergeObjects.js
 function mergeObjects(a2, b2) {
   if (a2 && !b2) {
     return a2;
@@ -12446,7 +12449,7 @@ function mergeObjects(a2, b2) {
   return void 0;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/getStateAttributesProps.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/getStateAttributesProps.js
 function getStateAttributesProps(state, customMapping) {
   const props = {};
   for (const key in state) {
@@ -12467,17 +12470,17 @@ function getStateAttributesProps(state, customMapping) {
   return props;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveClassName.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveClassName.js
 function resolveClassName(className, state) {
   return typeof className === "function" ? className(state) : className;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveStyle.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveStyle.js
 function resolveStyle(style, state) {
   return typeof style === "function" ? style(state) : style;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/merge-props/mergeProps.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/merge-props/mergeProps.js
 var EMPTY_PROPS = {};
 function mergeProps(a2, b2, c2, d2, e2) {
   let merged = {
@@ -12600,11 +12603,11 @@ function isSyntheticEvent(event) {
   return event != null && typeof event === "object" && "nativeEvent" in event;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/empty.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/empty.js
 var EMPTY_ARRAY = Object.freeze([]);
 var EMPTY_OBJECT = Object.freeze({});
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useRenderElement.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useRenderElement.js
 var import_react = __toESM(require_react(), 1);
 function useRenderElement(element, componentProps, params = {}) {
   const renderProp = componentProps.render;
@@ -12625,12 +12628,12 @@ function useRenderElementProps(componentProps, params = {}) {
     state = EMPTY_OBJECT,
     ref,
     props,
-    stateAttributesMapping: stateAttributesMapping2,
+    stateAttributesMapping: stateAttributesMapping3,
     enabled = true
   } = params;
   const className = enabled ? resolveClassName(classNameProp, state) : void 0;
   const style = enabled ? resolveStyle(styleProp, state) : void 0;
-  const stateProps = enabled ? getStateAttributesProps(state, stateAttributesMapping2) : EMPTY_OBJECT;
+  const stateProps = enabled ? getStateAttributesProps(state, stateAttributesMapping3) : EMPTY_OBJECT;
   const outProps = enabled ? mergeObjects(stateProps, Array.isArray(props) ? mergePropsN(props) : props) ?? EMPTY_OBJECT : EMPTY_OBJECT;
   if (typeof document !== "undefined") {
     if (!enabled) {
@@ -12652,6 +12655,7 @@ function useRenderElementProps(componentProps, params = {}) {
   }
   return outProps;
 }
+var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
 function evaluateRenderProp(element, render4, props, state) {
   if (render4) {
     if (typeof render4 === "function") {
@@ -12659,7 +12663,17 @@ function evaluateRenderProp(element, render4, props, state) {
     }
     const mergedProps = mergeProps(props, render4.props);
     mergedProps.ref = props.ref;
-    return /* @__PURE__ */ React10.cloneElement(render4, mergedProps);
+    let newElement = render4;
+    if (newElement?.$$typeof === REACT_LAZY_TYPE) {
+      const children = React10.Children.toArray(render4);
+      newElement = children[0];
+    }
+    if (true) {
+      if (!/* @__PURE__ */ React10.isValidElement(newElement)) {
+        throw new Error(["Base UI: The `render` prop was provided an invalid React element as `React.isValidElement(render)` is `false`.", "A valid React element must be provided to the `render` prop because it is cloned with props to replace the default element.", "https://base-ui.com/r/invalid-render-prop"].join("\n"));
+      }
+    }
+    return /* @__PURE__ */ React10.cloneElement(newElement, mergedProps);
   }
   if (element) {
     if (typeof element === "string") {
@@ -12686,13 +12700,14 @@ function renderTag(Tag, props) {
   return /* @__PURE__ */ React10.createElement(Tag, props);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/reason-parts.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/reason-parts.js
 var reason_parts_exports = {};
 __export(reason_parts_exports, {
   cancelOpen: () => cancelOpen,
   chipRemovePress: () => chipRemovePress,
   clearPress: () => clearPress,
   closePress: () => closePress,
+  closeWatcher: () => closeWatcher,
   decrementPress: () => decrementPress,
   disabled: () => disabled,
   drag: () => drag,
@@ -12704,6 +12719,7 @@ __export(reason_parts_exports, {
   inputChange: () => inputChange,
   inputClear: () => inputClear,
   inputPaste: () => inputPaste,
+  inputPress: () => inputPress,
   itemPress: () => itemPress,
   keyboard: () => keyboard,
   linkPress: () => linkPress,
@@ -12713,6 +12729,7 @@ __export(reason_parts_exports, {
   pointer: () => pointer,
   scrub: () => scrub,
   siblingOpen: () => siblingOpen,
+  swipe: () => swipe,
   trackPress: () => trackPress,
   triggerFocus: () => triggerFocus,
   triggerHover: () => triggerHover,
@@ -12737,8 +12754,10 @@ var inputChange = "input-change";
 var inputClear = "input-clear";
 var inputBlur = "input-blur";
 var inputPaste = "input-paste";
+var inputPress = "input-press";
 var focusOut = "focus-out";
 var escapeKey = "escape-key";
+var closeWatcher = "close-watcher";
 var listNavigation = "list-navigation";
 var keyboard = "keyboard";
 var pointer = "pointer";
@@ -12749,9 +12768,10 @@ var cancelOpen = "cancel-open";
 var siblingOpen = "sibling-open";
 var disabled = "disabled";
 var imperativeAction = "imperative-action";
+var swipe = "swipe";
 var windowResize = "window-resize";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/createBaseUIEventDetails.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/createBaseUIEventDetails.js
 function createChangeEventDetails(reason, event, trigger, customProperties) {
   let canceled = false;
   let allowPropagation = false;
@@ -12777,16 +12797,16 @@ function createChangeEventDetails(reason, event, trigger, customProperties) {
   return details;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useId.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useId.js
 var React12 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/safeReact.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/safeReact.js
 var React11 = __toESM(require_react(), 1);
 var SafeReact = {
   ...React11
 };
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useId.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useId.js
 var globalId = 0;
 function useGlobalId(idOverride, prefix = "mui") {
   const [defaultId, setDefaultId] = React12.useState(idOverride);
@@ -12808,20 +12828,263 @@ function useId(idOverride, prefix) {
   return useGlobalId(idOverride, prefix);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useBaseUiId.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useBaseUiId.js
 function useBaseUiId(idOverride) {
   return useId(idOverride, "base-ui");
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useOnMount.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useAnimationsFinished.js
+var ReactDOM = __toESM(require_react_dom(), 1);
+
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useOnMount.js
 var React13 = __toESM(require_react(), 1);
 var EMPTY = [];
 function useOnMount(fn) {
   React13.useEffect(fn, EMPTY);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/useCompositeListItem.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useAnimationFrame.js
+var EMPTY2 = null;
+var LAST_RAF = globalThis.requestAnimationFrame;
+var Scheduler = class {
+  /* This implementation uses an array as a backing data-structure for frame callbacks.
+   * It allows `O(1)` callback cancelling by inserting a `null` in the array, though it
+   * never calls the native `cancelAnimationFrame` if there are no frames left. This can
+   * be much more efficient if there is a call pattern that alterns as
+   * "request-cancel-request-cancel-…".
+   * But in the case of "request-request-…-cancel-cancel-…", it leaves the final animation
+   * frame to run anyway. We turn that frame into a `O(1)` no-op via `callbacksCount`. */
+  callbacks = [];
+  callbacksCount = 0;
+  nextId = 1;
+  startId = 1;
+  isScheduled = false;
+  tick = (timestamp) => {
+    this.isScheduled = false;
+    const currentCallbacks = this.callbacks;
+    const currentCallbacksCount = this.callbacksCount;
+    this.callbacks = [];
+    this.callbacksCount = 0;
+    this.startId = this.nextId;
+    if (currentCallbacksCount > 0) {
+      for (let i2 = 0; i2 < currentCallbacks.length; i2 += 1) {
+        currentCallbacks[i2]?.(timestamp);
+      }
+    }
+  };
+  request(fn) {
+    const id = this.nextId;
+    this.nextId += 1;
+    this.callbacks.push(fn);
+    this.callbacksCount += 1;
+    const didRAFChange = LAST_RAF !== requestAnimationFrame && (LAST_RAF = requestAnimationFrame, true);
+    if (!this.isScheduled || didRAFChange) {
+      requestAnimationFrame(this.tick);
+      this.isScheduled = true;
+    }
+    return id;
+  }
+  cancel(id) {
+    const index = id - this.startId;
+    if (index < 0 || index >= this.callbacks.length) {
+      return;
+    }
+    this.callbacks[index] = null;
+    this.callbacksCount -= 1;
+  }
+};
+var scheduler = new Scheduler();
+var AnimationFrame = class _AnimationFrame {
+  static create() {
+    return new _AnimationFrame();
+  }
+  static request(fn) {
+    return scheduler.request(fn);
+  }
+  static cancel(id) {
+    return scheduler.cancel(id);
+  }
+  currentId = EMPTY2;
+  /**
+   * Executes `fn` after `delay`, clearing any previously scheduled call.
+   */
+  request(fn) {
+    this.cancel();
+    this.currentId = scheduler.request(() => {
+      this.currentId = EMPTY2;
+      fn();
+    });
+  }
+  cancel = () => {
+    if (this.currentId !== EMPTY2) {
+      scheduler.cancel(this.currentId);
+      this.currentId = EMPTY2;
+    }
+  };
+  disposeEffect = () => {
+    return this.cancel;
+  };
+};
+function useAnimationFrame() {
+  const timeout = useRefWithInit(AnimationFrame.create).current;
+  useOnMount(timeout.disposeEffect);
+  return timeout;
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveRef.js
+function resolveRef(maybeRef) {
+  if (maybeRef == null) {
+    return maybeRef;
+  }
+  return "current" in maybeRef ? maybeRef.current : maybeRef;
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/stateAttributesMapping.js
+var TransitionStatusDataAttributes = /* @__PURE__ */ (function(TransitionStatusDataAttributes2) {
+  TransitionStatusDataAttributes2["startingStyle"] = "data-starting-style";
+  TransitionStatusDataAttributes2["endingStyle"] = "data-ending-style";
+  return TransitionStatusDataAttributes2;
+})({});
+var STARTING_HOOK = {
+  [TransitionStatusDataAttributes.startingStyle]: ""
+};
+var ENDING_HOOK = {
+  [TransitionStatusDataAttributes.endingStyle]: ""
+};
+var transitionStatusMapping = {
+  transitionStatus(value) {
+    if (value === "starting") {
+      return STARTING_HOOK;
+    }
+    if (value === "ending") {
+      return ENDING_HOOK;
+    }
+    return null;
+  }
+};
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useAnimationsFinished.js
+function useAnimationsFinished(elementOrRef, waitForStartingStyleRemoved = false, treatAbortedAsFinished = true) {
+  const frame = useAnimationFrame();
+  return useStableCallback((fnToExecute, signal = null) => {
+    frame.cancel();
+    function done() {
+      ReactDOM.flushSync(fnToExecute);
+    }
+    const element = resolveRef(elementOrRef);
+    if (element == null) {
+      return;
+    }
+    const resolvedElement = element;
+    if (typeof resolvedElement.getAnimations !== "function" || globalThis.BASE_UI_ANIMATIONS_DISABLED) {
+      fnToExecute();
+    } else {
+      let execWaitForStartingStyleRemoved = function() {
+        const startingStyleAttribute = TransitionStatusDataAttributes.startingStyle;
+        if (!resolvedElement.hasAttribute(startingStyleAttribute)) {
+          frame.request(exec);
+          return;
+        }
+        const attributeObserver = new MutationObserver(() => {
+          if (!resolvedElement.hasAttribute(startingStyleAttribute)) {
+            attributeObserver.disconnect();
+            exec();
+          }
+        });
+        attributeObserver.observe(resolvedElement, {
+          attributes: true,
+          attributeFilter: [startingStyleAttribute]
+        });
+        signal?.addEventListener("abort", () => attributeObserver.disconnect(), {
+          once: true
+        });
+      }, exec = function() {
+        Promise.all(resolvedElement.getAnimations().map((anim) => anim.finished)).then(() => {
+          if (signal?.aborted) {
+            return;
+          }
+          done();
+        }).catch(() => {
+          const currentAnimations = resolvedElement.getAnimations();
+          if (treatAbortedAsFinished) {
+            if (signal?.aborted) {
+              return;
+            }
+            done();
+          } else if (currentAnimations.length > 0 && currentAnimations.some((anim) => anim.pending || anim.playState !== "finished")) {
+            exec();
+          }
+        });
+      };
+      if (waitForStartingStyleRemoved) {
+        execWaitForStartingStyleRemoved();
+        return;
+      }
+      frame.request(exec);
+    }
+  });
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useTransitionStatus.js
 var React14 = __toESM(require_react(), 1);
+function useTransitionStatus(open, enableIdleState = false, deferEndingState = false) {
+  const [transitionStatus, setTransitionStatus] = React14.useState(open && enableIdleState ? "idle" : void 0);
+  const [mounted, setMounted] = React14.useState(open);
+  if (open && !mounted) {
+    setMounted(true);
+    setTransitionStatus("starting");
+  }
+  if (!open && mounted && transitionStatus !== "ending" && !deferEndingState) {
+    setTransitionStatus("ending");
+  }
+  if (!open && !mounted && transitionStatus === "ending") {
+    setTransitionStatus(void 0);
+  }
+  useIsoLayoutEffect(() => {
+    if (!open && mounted && transitionStatus !== "ending" && deferEndingState) {
+      const frame = AnimationFrame.request(() => {
+        setTransitionStatus("ending");
+      });
+      return () => {
+        AnimationFrame.cancel(frame);
+      };
+    }
+    return void 0;
+  }, [open, mounted, transitionStatus, deferEndingState]);
+  useIsoLayoutEffect(() => {
+    if (!open || enableIdleState) {
+      return void 0;
+    }
+    const frame = AnimationFrame.request(() => {
+      setTransitionStatus(void 0);
+    });
+    return () => {
+      AnimationFrame.cancel(frame);
+    };
+  }, [enableIdleState, open]);
+  useIsoLayoutEffect(() => {
+    if (!open || !enableIdleState) {
+      return void 0;
+    }
+    if (open && mounted && transitionStatus !== "idle") {
+      setTransitionStatus("starting");
+    }
+    const frame = AnimationFrame.request(() => {
+      setTransitionStatus("idle");
+    });
+    return () => {
+      AnimationFrame.cancel(frame);
+    };
+  }, [enableIdleState, open, mounted, setTransitionStatus, transitionStatus]);
+  return React14.useMemo(() => ({
+    mounted,
+    setMounted,
+    transitionStatus
+  }), [mounted, transitionStatus]);
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/useCompositeListItem.js
+var React15 = __toESM(require_react(), 1);
 var IndexGuessBehavior = /* @__PURE__ */ (function(IndexGuessBehavior2) {
   IndexGuessBehavior2[IndexGuessBehavior2["None"] = 0] = "None";
   IndexGuessBehavior2[IndexGuessBehavior2["GuessFromOrder"] = 1] = "GuessFromOrder";
@@ -12843,8 +13106,8 @@ function useCompositeListItem(params = {}) {
     labelsRef,
     nextIndexRef
   } = useCompositeListContext();
-  const indexRef = React14.useRef(-1);
-  const [index, setIndex] = React14.useState(externalIndex ?? (indexGuessBehavior === IndexGuessBehavior.GuessFromOrder ? () => {
+  const indexRef = React15.useRef(-1);
+  const [index, setIndex] = React15.useState(externalIndex ?? (indexGuessBehavior === IndexGuessBehavior.GuessFromOrder ? () => {
     if (indexRef.current === -1) {
       const newIndex = nextIndexRef.current;
       nextIndexRef.current += 1;
@@ -12852,8 +13115,8 @@ function useCompositeListItem(params = {}) {
     }
     return indexRef.current;
   } : -1));
-  const componentRef = React14.useRef(null);
-  const ref = React14.useCallback((node) => {
+  const componentRef = React15.useRef(null);
+  const ref = React15.useCallback((node) => {
     componentRef.current = node;
     if (index !== -1 && node !== null) {
       elementsRef.current[index] = node;
@@ -12887,21 +13150,21 @@ function useCompositeListItem(params = {}) {
       }
     });
   }, [externalIndex, subscribeMapChange, setIndex]);
-  return React14.useMemo(() => ({
+  return React15.useMemo(() => ({
     ref,
     index
   }), [index, ref]);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/isElementDisabled.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/isElementDisabled.js
 function isElementDisabled(element) {
   return element == null || element.hasAttribute("disabled") || element.getAttribute("aria-disabled") === "true";
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-button/useButton.js
-var React17 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-button/useButton.js
+var React18 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@floating-ui+utils@0.2.10/node_modules/@floating-ui/utils/dist/floating-ui.utils.dom.mjs
+// ../../../node_modules/.pnpm/@floating-ui+utils@0.2.11/node_modules/@floating-ui/utils/dist/floating-ui.utils.dom.mjs
 function hasWindow() {
   return typeof window !== "undefined";
 }
@@ -12925,7 +13188,7 @@ function getComputedStyle2(element) {
   return getWindow(element).getComputedStyle(element);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/error.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/error.js
 var set;
 if (true) {
   set = /* @__PURE__ */ new Set();
@@ -12940,20 +13203,20 @@ function error(...messages) {
   }
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRootContext.js
-var React15 = __toESM(require_react(), 1);
-var CompositeRootContext = /* @__PURE__ */ React15.createContext(void 0);
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRootContext.js
+var React16 = __toESM(require_react(), 1);
+var CompositeRootContext = /* @__PURE__ */ React16.createContext(void 0);
 if (true) CompositeRootContext.displayName = "CompositeRootContext";
 function useCompositeRootContext(optional = false) {
-  const context = React15.useContext(CompositeRootContext);
+  const context = React16.useContext(CompositeRootContext);
   if (context === void 0 && !optional) {
     throw new Error(true ? "Base UI: CompositeRootContext is missing. Composite parts must be placed within <Composite.Root>." : formatErrorMessage(16));
   }
   return context;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useFocusableWhenDisabled.js
-var React16 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useFocusableWhenDisabled.js
+var React17 = __toESM(require_react(), 1);
 function useFocusableWhenDisabled(parameters) {
   const {
     focusableWhenDisabled,
@@ -12964,7 +13227,7 @@ function useFocusableWhenDisabled(parameters) {
   } = parameters;
   const isFocusableComposite = composite && focusableWhenDisabled !== false;
   const isNonFocusableComposite = composite && focusableWhenDisabled === false;
-  const props = React16.useMemo(() => {
+  const props = React17.useMemo(() => {
     const additionalProps = {
       // allow Tabbing away from focusableWhenDisabled elements
       onKeyDown(event) {
@@ -12992,7 +13255,7 @@ function useFocusableWhenDisabled(parameters) {
   };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-button/useButton.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-button/useButton.js
 function useButton(parameters = {}) {
   const {
     disabled: disabled2 = false,
@@ -13000,7 +13263,7 @@ function useButton(parameters = {}) {
     tabIndex = 0,
     native: isNativeButton = true
   } = parameters;
-  const elementRef = React17.useRef(null);
+  const elementRef = React18.useRef(null);
   const isCompositeItem = useCompositeRootContext(true) !== void 0;
   const isValidLink = useStableCallback(() => {
     const element = elementRef.current;
@@ -13016,21 +13279,25 @@ function useButton(parameters = {}) {
     isNativeButton
   });
   if (true) {
-    React17.useEffect(() => {
+    React18.useEffect(() => {
       if (!elementRef.current) {
         return;
       }
       const isButtonTag = elementRef.current.tagName === "BUTTON";
       if (isNativeButton) {
         if (!isButtonTag) {
-          error("A component that acts as a button was not rendered as a native <button>, which does not match the default. Ensure that the element passed to the `render` prop of the component is a real <button>, or set the `nativeButton` prop on the component to `false`.");
+          const ownerStackMessage = SafeReact.captureOwnerStack?.() || "";
+          const message2 = "A component that acts as a button expected a native <button> because the `nativeButton` prop is true. Rendering a non-<button> removes native button semantics, which can impact forms and accessibility. Use a real <button> in the `render` prop, or set `nativeButton` to `false`.";
+          error(`${message2}${ownerStackMessage}`);
         }
       } else if (isButtonTag) {
-        error("A component that acts as a button was rendered as a native <button>, which does not match the default. Ensure that the element passed to the `render` prop of the component is not a real <button>, or set the `nativeButton` prop on the component to `true`.");
+        const ownerStackMessage = SafeReact.captureOwnerStack?.() || "";
+        const message2 = "A component that acts as a button expected a non-<button> because the `nativeButton` prop is false. Rendering a <button> keeps native behavior while Base UI applies non-native attributes and handlers, which can add unintended extra attributes (such as `role` or `aria-disabled`). Use a non-<button> in the `render` prop, or set `nativeButton` to `true`.";
+        error(`${message2}${ownerStackMessage}`);
       }
     }, [isNativeButton]);
   }
-  const updateDisabled = React17.useCallback(() => {
+  const updateDisabled = React18.useCallback(() => {
     const element = elementRef.current;
     if (!isButtonElement(element)) {
       return;
@@ -13040,7 +13307,7 @@ function useButton(parameters = {}) {
     }
   }, [disabled2, focusableWhenDisabledProps.disabled, isCompositeItem]);
   useIsoLayoutEffect(updateDisabled, [updateDisabled]);
-  const getButtonProps = React17.useCallback((externalProps = {}) => {
+  const getButtonProps = React18.useCallback((externalProps = {}) => {
     const {
       onClick: externalOnClick,
       onMouseDown: externalOnMouseDown,
@@ -13120,13 +13387,13 @@ function isButtonElement(elem) {
   return isHTMLElement(elem) && elem.tagName === "BUTTON";
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/constants.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/constants.js
 var ARROW_LEFT = "ArrowLeft";
 var ARROW_RIGHT = "ArrowRight";
 var ARROW_UP = "ArrowUp";
 var ARROW_DOWN = "ArrowDown";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/element.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/element.js
 function activeElement(doc) {
   let element = doc.activeElement;
   while (element?.shadowRoot?.activeElement != null) {
@@ -13154,17 +13421,17 @@ function contains(parent, child) {
   return false;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/event.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/event.js
 function stopEvent(event) {
   event.preventDefault();
   event.stopPropagation();
 }
 
-// ../../../node_modules/.pnpm/@floating-ui+utils@0.2.10/node_modules/@floating-ui/utils/dist/floating-ui.utils.mjs
+// ../../../node_modules/.pnpm/@floating-ui+utils@0.2.11/node_modules/@floating-ui/utils/dist/floating-ui.utils.mjs
 var round = Math.round;
 var floor = Math.floor;
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/composite.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/composite.js
 function isDifferentGridRow(index, cols, prevRow) {
   return Math.floor(index / cols) !== prevRow;
 }
@@ -13421,7 +13688,7 @@ function createGridCellMap(sizes, cols, dense) {
   }, index) => {
     if (width > cols) {
       if (true) {
-        throw new Error(true ? `[Floating UI]: Invalid grid - item width at index ${index} is greater than grid columns` : formatErrorMessage(29, index));
+        throw new Error(`[Floating UI]: Invalid grid - item width at index ${index} is greater than grid columns`);
       }
     }
     let itemPlaced = false;
@@ -13489,7 +13756,12 @@ function isListIndexDisabled(listRef, index, disabledIndices) {
   return element.hasAttribute("disabled") || element.getAttribute("aria-disabled") === "true";
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/composite.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/owner.js
+function ownerDocument(node) {
+  return node?.ownerDocument || document;
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/composite.js
 var ARROW_UP2 = "ArrowUp";
 var ARROW_DOWN2 = "ArrowDown";
 var ARROW_LEFT2 = "ArrowLeft";
@@ -13588,22 +13860,48 @@ function getStyles(element) {
   };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/owner.js
-function ownerDocument(node) {
-  return node?.ownerDocument || document;
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useOpenChangeComplete.js
+var React19 = __toESM(require_react(), 1);
+function useOpenChangeComplete(parameters) {
+  const {
+    enabled = true,
+    open,
+    ref,
+    onComplete: onCompleteParam
+  } = parameters;
+  const onComplete = useStableCallback(onCompleteParam);
+  const runOnceAnimationsFinish = useAnimationsFinished(ref, open, false);
+  React19.useEffect(() => {
+    if (!enabled) {
+      return void 0;
+    }
+    const abortController = new AbortController();
+    runOnceAnimationsFinish(onComplete, abortController.signal);
+    return () => {
+      abortController.abort();
+    };
+  }, [enabled, open, onComplete, runOnceAnimationsFinish]);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.4_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useForcedRerendering.js
-var React18 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useForcedRerendering.js
+var React20 = __toESM(require_react(), 1);
 function useForcedRerendering() {
-  const [, setState] = React18.useState({});
-  return React18.useCallback(() => {
+  const [, setState] = React20.useState({});
+  return React20.useCallback(() => {
     setState({});
   }, []);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/item/useCompositeItem.js
-var React19 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/inertValue.js
+function inertValue(value) {
+  if (isReactVersionAtLeast(19)) {
+    return value;
+  }
+  return value ? "true" : void 0;
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/item/useCompositeItem.js
+var React21 = __toESM(require_react(), 1);
 function useCompositeItem(params = {}) {
   const {
     highlightItemOnHover,
@@ -13615,9 +13913,9 @@ function useCompositeItem(params = {}) {
     index
   } = useCompositeListItem(params);
   const isHighlighted = highlightedIndex === index;
-  const itemRef = React19.useRef(null);
+  const itemRef = React21.useRef(null);
   const mergedRef = useMergedRefs(ref, itemRef);
-  const compositeProps = React19.useMemo(() => ({
+  const compositeProps = React21.useMemo(() => ({
     tabIndex: isHighlighted ? 0 : -1,
     onFocus() {
       onHighlightedIndexChange(index);
@@ -13640,27 +13938,27 @@ function useCompositeItem(params = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/csp-provider/CSPContext.js
-var React20 = __toESM(require_react(), 1);
-var CSPContext = /* @__PURE__ */ React20.createContext(void 0);
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/csp-provider/CSPContext.js
+var React22 = __toESM(require_react(), 1);
+var CSPContext = /* @__PURE__ */ React22.createContext(void 0);
 if (true) CSPContext.displayName = "CSPContext";
 var DEFAULT_CSP_CONTEXT_VALUE = {
   disableStyleElements: false
 };
 function useCSPContext() {
-  return React20.useContext(CSPContext) ?? DEFAULT_CSP_CONTEXT_VALUE;
+  return React22.useContext(CSPContext) ?? DEFAULT_CSP_CONTEXT_VALUE;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRoot.js
-var React22 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRoot.js
+var React24 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/useCompositeRoot.js
-var React21 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/useCompositeRoot.js
+var React23 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/constants.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/constants.js
 var ACTIVE_COMPOSITE_ITEM = "data-composite-item-active";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/useCompositeRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/useCompositeRoot.js
 var EMPTY_ARRAY2 = [];
 function useCompositeRoot(params) {
   const {
@@ -13678,12 +13976,12 @@ function useCompositeRoot(params) {
     disabledIndices,
     modifierKeys = EMPTY_ARRAY2
   } = params;
-  const [internalHighlightedIndex, internalSetHighlightedIndex] = React21.useState(0);
+  const [internalHighlightedIndex, internalSetHighlightedIndex] = React23.useState(0);
   const isGrid2 = cols > 1;
-  const rootRef = React21.useRef(null);
+  const rootRef = React23.useRef(null);
   const mergedRef = useMergedRefs(rootRef, externalRef);
-  const elementsRef = React21.useRef([]);
-  const hasSetDefaultIndexRef = React21.useRef(false);
+  const elementsRef = React23.useRef([]);
+  const hasSetDefaultIndexRef = React23.useRef(false);
   const highlightedIndex = externalHighlightedIndex ?? internalHighlightedIndex;
   const onHighlightedIndexChange = useStableCallback((index, shouldScrollIntoView = false) => {
     (externalSetHighlightedIndex ?? internalSetHighlightedIndex)(index);
@@ -13705,7 +14003,7 @@ function useCompositeRoot(params) {
     }
     scrollIntoViewIfNeeded(rootRef.current, activeItem, direction, orientation);
   });
-  const props = React21.useMemo(() => ({
+  const props = React23.useMemo(() => ({
     "aria-orientation": orientation === "both" ? void 0 : orientation,
     ref: mergedRef,
     onFocus(event) {
@@ -13842,7 +14140,7 @@ function useCompositeRoot(params) {
       }
     }
   }), [cols, dense, direction, disabledIndices, elementsRef, enableHomeAndEndKeys, highlightedIndex, isGrid2, itemSizes, loopFocus, mergedRef, modifierKeys, onHighlightedIndexChange, orientation, stopEventPropagation]);
-  return React21.useMemo(() => ({
+  return React23.useMemo(() => ({
     props,
     highlightedIndex,
     onHighlightedIndexChange,
@@ -13864,7 +14162,7 @@ function isModifierKeySet(event, ignoredModifierKeys) {
   return false;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRoot.js
 var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
 function CompositeRoot(componentProps) {
   const {
@@ -13873,7 +14171,7 @@ function CompositeRoot(componentProps) {
     refs = EMPTY_ARRAY,
     props = EMPTY_ARRAY,
     state = EMPTY_OBJECT,
-    stateAttributesMapping: stateAttributesMapping2,
+    stateAttributesMapping: stateAttributesMapping3,
     highlightedIndex: highlightedIndexProp,
     onHighlightedIndexChange: onHighlightedIndexChangeProp,
     orientation,
@@ -13918,9 +14216,9 @@ function CompositeRoot(componentProps) {
     state,
     ref: refs,
     props: [defaultProps, ...props, elementProps],
-    stateAttributesMapping: stateAttributesMapping2
+    stateAttributesMapping: stateAttributesMapping3
   });
-  const contextValue = React22.useMemo(() => ({
+  const contextValue = React24.useMemo(() => ({
     highlightedIndex,
     onHighlightedIndexChange,
     highlightItemOnHover,
@@ -13939,7 +14237,7 @@ function CompositeRoot(componentProps) {
   });
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/getCssDimensions.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/getCssDimensions.js
 function getCssDimensions(element) {
   const css = getComputedStyle2(element);
   let width = parseFloat(css.width) || 0;
@@ -13958,7 +14256,7 @@ function getCssDimensions(element) {
   };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/index.parts.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/index.parts.js
 var index_parts_exports = {};
 __export(index_parts_exports, {
   Indicator: () => TabsIndicator,
@@ -13968,38 +14266,38 @@ __export(index_parts_exports, {
   Tab: () => TabsTab
 });
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRoot.js
-var React24 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRoot.js
+var React26 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRootContext.js
-var React23 = __toESM(require_react(), 1);
-var TabsRootContext = /* @__PURE__ */ React23.createContext(void 0);
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRootContext.js
+var React25 = __toESM(require_react(), 1);
+var TabsRootContext = /* @__PURE__ */ React25.createContext(void 0);
 if (true) TabsRootContext.displayName = "TabsRootContext";
 function useTabsRootContext() {
-  const context = React23.useContext(TabsRootContext);
+  const context = React25.useContext(TabsRootContext);
   if (context === void 0) {
     throw new Error(true ? "Base UI: TabsRootContext is missing. Tabs parts must be placed within <Tabs.Root>." : formatErrorMessage(64));
   }
   return context;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRootDataAttributes.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRootDataAttributes.js
 var TabsRootDataAttributes = /* @__PURE__ */ (function(TabsRootDataAttributes2) {
   TabsRootDataAttributes2["activationDirection"] = "data-activation-direction";
   TabsRootDataAttributes2["orientation"] = "data-orientation";
   return TabsRootDataAttributes2;
 })({});
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/stateAttributesMapping.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/stateAttributesMapping.js
 var tabsStateAttributesMapping = {
   tabActivationDirection: (dir) => ({
     [TabsRootDataAttributes.activationDirection]: dir
   })
 };
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRoot.js
 var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
-var TabsRoot = /* @__PURE__ */ React24.forwardRef(function TabsRoot2(componentProps, forwardedRef) {
+var TabsRoot = /* @__PURE__ */ React26.forwardRef(function TabsRoot2(componentProps, forwardedRef) {
   const {
     className,
     defaultValue: defaultValueProp = 0,
@@ -14011,8 +14309,8 @@ var TabsRoot = /* @__PURE__ */ React24.forwardRef(function TabsRoot2(componentPr
   } = componentProps;
   const direction = useDirection();
   const hasExplicitDefaultValueProp = Object.hasOwn(componentProps, "defaultValue");
-  const tabPanelRefs = React24.useRef([]);
-  const [mountedTabPanels, setMountedTabPanels] = React24.useState(() => /* @__PURE__ */ new Map());
+  const tabPanelRefs = React26.useRef([]);
+  const [mountedTabPanels, setMountedTabPanels] = React26.useState(() => /* @__PURE__ */ new Map());
   const [value, setValue] = useControlled({
     controlled: valueProp,
     default: defaultValueProp,
@@ -14020,8 +14318,8 @@ var TabsRoot = /* @__PURE__ */ React24.forwardRef(function TabsRoot2(componentPr
     state: "value"
   });
   const isControlled = valueProp !== void 0;
-  const [tabMap, setTabMap] = React24.useState(() => /* @__PURE__ */ new Map());
-  const [tabActivationDirection, setTabActivationDirection] = React24.useState("none");
+  const [tabMap, setTabMap] = React26.useState(() => /* @__PURE__ */ new Map());
+  const [tabActivationDirection, setTabActivationDirection] = React26.useState("none");
   const onValueChange = useStableCallback((newValue, eventDetails) => {
     onValueChangeProp?.(newValue, eventDetails);
     if (eventDetails.isCanceled) {
@@ -14050,10 +14348,10 @@ var TabsRoot = /* @__PURE__ */ React24.forwardRef(function TabsRoot2(componentPr
       return next;
     });
   });
-  const getTabPanelIdByValue = React24.useCallback((tabValue) => {
+  const getTabPanelIdByValue = React26.useCallback((tabValue) => {
     return mountedTabPanels.get(tabValue);
   }, [mountedTabPanels]);
-  const getTabIdByPanelValue = React24.useCallback((tabPanelValue) => {
+  const getTabIdByPanelValue = React26.useCallback((tabPanelValue) => {
     for (const tabMetadata of tabMap.values()) {
       if (tabPanelValue === tabMetadata?.value) {
         return tabMetadata?.id;
@@ -14061,7 +14359,7 @@ var TabsRoot = /* @__PURE__ */ React24.forwardRef(function TabsRoot2(componentPr
     }
     return void 0;
   }, [tabMap]);
-  const getTabElementBySelectedValue = React24.useCallback((selectedValue) => {
+  const getTabElementBySelectedValue = React26.useCallback((selectedValue) => {
     if (selectedValue === void 0) {
       return null;
     }
@@ -14072,7 +14370,7 @@ var TabsRoot = /* @__PURE__ */ React24.forwardRef(function TabsRoot2(componentPr
     }
     return null;
   }, [tabMap]);
-  const tabsContextValue = React24.useMemo(() => ({
+  const tabsContextValue = React26.useMemo(() => ({
     direction,
     getTabElementBySelectedValue,
     getTabIdByPanelValue,
@@ -14085,7 +14383,7 @@ var TabsRoot = /* @__PURE__ */ React24.forwardRef(function TabsRoot2(componentPr
     tabActivationDirection,
     value
   }), [direction, getTabElementBySelectedValue, getTabIdByPanelValue, getTabPanelIdByValue, onValueChange, orientation, registerMountedTabPanel, setTabMap, unregisterMountedTabPanel, tabActivationDirection, value]);
-  const selectedTabMetadata = React24.useMemo(() => {
+  const selectedTabMetadata = React26.useMemo(() => {
     for (const tabMetadata of tabMap.values()) {
       if (tabMetadata != null && tabMetadata.value === value) {
         return tabMetadata;
@@ -14093,7 +14391,7 @@ var TabsRoot = /* @__PURE__ */ React24.forwardRef(function TabsRoot2(componentPr
     }
     return void 0;
   }, [tabMap, value]);
-  const firstEnabledTabValue = React24.useMemo(() => {
+  const firstEnabledTabValue = React26.useMemo(() => {
     for (const tabMetadata of tabMap.values()) {
       if (tabMetadata != null && !tabMetadata.disabled) {
         return tabMetadata.value;
@@ -14141,23 +14439,23 @@ var TabsRoot = /* @__PURE__ */ React24.forwardRef(function TabsRoot2(componentPr
 });
 if (true) TabsRoot.displayName = "TabsRoot";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/tab/TabsTab.js
-var React26 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/tab/TabsTab.js
+var React28 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/list/TabsListContext.js
-var React25 = __toESM(require_react(), 1);
-var TabsListContext = /* @__PURE__ */ React25.createContext(void 0);
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/list/TabsListContext.js
+var React27 = __toESM(require_react(), 1);
+var TabsListContext = /* @__PURE__ */ React27.createContext(void 0);
 if (true) TabsListContext.displayName = "TabsListContext";
 function useTabsListContext() {
-  const context = React25.useContext(TabsListContext);
+  const context = React27.useContext(TabsListContext);
   if (context === void 0) {
     throw new Error(true ? "Base UI: TabsListContext is missing. TabsList parts must be placed within <Tabs.List>." : formatErrorMessage(65));
   }
   return context;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/tab/TabsTab.js
-var TabsTab = /* @__PURE__ */ React26.forwardRef(function TabsTab2(componentProps, forwardedRef) {
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/tab/TabsTab.js
+var TabsTab = /* @__PURE__ */ React28.forwardRef(function TabsTab2(componentProps, forwardedRef) {
   const {
     className,
     disabled: disabled2 = false,
@@ -14180,7 +14478,7 @@ var TabsTab = /* @__PURE__ */ React26.forwardRef(function TabsTab2(componentProp
     tabsListElement
   } = useTabsListContext();
   const id = useBaseUiId(idProp);
-  const tabMetadata = React26.useMemo(() => ({
+  const tabMetadata = React28.useMemo(() => ({
     disabled: disabled2,
     id,
     value
@@ -14195,7 +14493,7 @@ var TabsTab = /* @__PURE__ */ React26.forwardRef(function TabsTab2(componentProp
     metadata: tabMetadata
   });
   const active = value === activeTabValue;
-  const isNavigatingRef = React26.useRef(false);
+  const isNavigatingRef = React28.useRef(false);
   useIsoLayoutEffect(() => {
     if (isNavigatingRef.current) {
       isNavigatingRef.current = false;
@@ -14224,8 +14522,8 @@ var TabsTab = /* @__PURE__ */ React26.forwardRef(function TabsTab2(componentProp
     focusableWhenDisabled: true
   });
   const tabPanelId = getTabPanelIdByValue(value);
-  const isPressingRef = React26.useRef(false);
-  const isMainButtonRef = React26.useRef(false);
+  const isPressingRef = React28.useRef(false);
+  const isMainButtonRef = React28.useRef(false);
   function onClick(event) {
     if (active || disabled2) {
       return;
@@ -14268,11 +14566,11 @@ var TabsTab = /* @__PURE__ */ React26.forwardRef(function TabsTab2(componentProp
       });
     }
   }
-  const state = React26.useMemo(() => ({
+  const state = {
     disabled: disabled2,
     active,
     orientation
-  }), [disabled2, active, orientation]);
+  };
   const element = useRenderElement("button", componentProps, {
     state,
     ref: [forwardedRef, buttonRef, compositeRef],
@@ -14294,13 +14592,13 @@ var TabsTab = /* @__PURE__ */ React26.forwardRef(function TabsTab2(componentProp
 });
 if (true) TabsTab.displayName = "TabsTab";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicator.js
-var React27 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicator.js
+var React29 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/prehydrationScript.min.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/prehydrationScript.min.js
 var script = '!function(){const t=document.currentScript.previousElementSibling;if(!t)return;const e=t.closest(\'[role="tablist"]\');if(!e)return;const i=e.querySelector("[data-active]");if(!i)return;if(0===i.offsetWidth||0===e.offsetWidth)return;let o=0,n=0,h=0,l=0,r=0,f=0;function s(t){const e=getComputedStyle(t);let i=parseFloat(e.width)||0,o=parseFloat(e.height)||0;return(Math.round(i)!==t.offsetWidth||Math.round(o)!==t.offsetHeight)&&(i=t.offsetWidth,o=t.offsetHeight),{width:i,height:o}}if(null!=i&&null!=e){const{width:t,height:c}=s(i),{width:u,height:d}=s(e),a=i.getBoundingClientRect(),g=e.getBoundingClientRect(),p=u>0?g.width/u:1,b=d>0?g.height/d:1;if(Math.abs(p)>Number.EPSILON&&Math.abs(b)>Number.EPSILON){const t=a.left-g.left,i=a.top-g.top;o=t/p+e.scrollLeft-e.clientLeft,h=i/b+e.scrollTop-e.clientTop}else o=i.offsetLeft,h=i.offsetTop;r=t,f=c,n=e.scrollWidth-o-r,l=e.scrollHeight-h-f}function c(e,i){t.style.setProperty(`--active-tab-${e}`,`${i}px`)}c("left",o),c("right",n),c("top",h),c("bottom",l),c("width",r),c("height",f),r>0&&f>0&&t.removeAttribute("hidden")}();';
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicatorCssVars.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicatorCssVars.js
 var TabsIndicatorCssVars = /* @__PURE__ */ (function(TabsIndicatorCssVars2) {
   TabsIndicatorCssVars2["activeTabLeft"] = "--active-tab-left";
   TabsIndicatorCssVars2["activeTabRight"] = "--active-tab-right";
@@ -14311,14 +14609,14 @@ var TabsIndicatorCssVars = /* @__PURE__ */ (function(TabsIndicatorCssVars2) {
   return TabsIndicatorCssVars2;
 })({});
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicator.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicator.js
 var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
 var stateAttributesMapping = {
   ...tabsStateAttributesMapping,
   activeTabPosition: () => null,
   activeTabSize: () => null
 };
-var TabsIndicator = /* @__PURE__ */ React27.forwardRef(function TabIndicator(componentProps, forwardedRef) {
+var TabsIndicator = /* @__PURE__ */ React29.forwardRef(function TabIndicator(componentProps, forwardedRef) {
   const {
     className,
     render: render4,
@@ -14337,13 +14635,13 @@ var TabsIndicator = /* @__PURE__ */ React27.forwardRef(function TabIndicator(com
   const {
     tabsListElement
   } = useTabsListContext();
-  const [isMounted, setIsMounted] = React27.useState(false);
+  const [isMounted, setIsMounted] = React29.useState(false);
   const {
     value: activeTabValue
   } = useTabsRootContext();
   useOnMount(() => setIsMounted(true));
   const rerender = useForcedRerendering();
-  React27.useEffect(() => {
+  React29.useEffect(() => {
     if (value != null && tabsListElement != null && typeof ResizeObserver !== "undefined") {
       const resizeObserver = new ResizeObserver(rerender);
       resizeObserver.observe(tabsListElement);
@@ -14392,17 +14690,17 @@ var TabsIndicator = /* @__PURE__ */ React27.forwardRef(function TabIndicator(com
       bottom = tabsListElement.scrollHeight - top - height;
     }
   }
-  const activeTabPosition = React27.useMemo(() => isTabSelected ? {
+  const activeTabPosition = React29.useMemo(() => isTabSelected ? {
     left,
     right,
     top,
     bottom
   } : null, [left, right, top, bottom, isTabSelected]);
-  const activeTabSize = React27.useMemo(() => isTabSelected ? {
+  const activeTabSize = React29.useMemo(() => isTabSelected ? {
     width,
     height
   } : null, [width, height, isTabSelected]);
-  const style = React27.useMemo(() => {
+  const style = React29.useMemo(() => {
     if (!isTabSelected) {
       return void 0;
     }
@@ -14416,12 +14714,12 @@ var TabsIndicator = /* @__PURE__ */ React27.forwardRef(function TabIndicator(com
     };
   }, [left, right, top, bottom, width, height, isTabSelected]);
   const displayIndicator = isTabSelected && width > 0 && height > 0;
-  const state = React27.useMemo(() => ({
+  const state = {
     orientation,
     activeTabPosition,
     activeTabSize,
     tabActivationDirection
-  }), [orientation, activeTabPosition, activeTabSize, tabActivationDirection]);
+  };
   const element = useRenderElement("span", componentProps, {
     state,
     ref: forwardedRef,
@@ -14438,7 +14736,7 @@ var TabsIndicator = /* @__PURE__ */ React27.forwardRef(function TabIndicator(com
   if (activeTabValue == null) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(React27.Fragment, {
+  return /* @__PURE__ */ (0, import_jsx_runtime8.jsxs)(React29.Fragment, {
     children: [element, !isMounted && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("script", {
       nonce,
       dangerouslySetInnerHTML: {
@@ -14450,10 +14748,10 @@ var TabsIndicator = /* @__PURE__ */ React27.forwardRef(function TabIndicator(com
 });
 if (true) TabsIndicator.displayName = "TabsIndicator";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanel.js
-var React28 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanel.js
+var React30 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanelDataAttributes.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanelDataAttributes.js
 var TabsPanelDataAttributes = /* @__PURE__ */ (function(TabsPanelDataAttributes2) {
   TabsPanelDataAttributes2["index"] = "data-index";
   TabsPanelDataAttributes2["activationDirection"] = "data-activation-direction";
@@ -14462,8 +14760,12 @@ var TabsPanelDataAttributes = /* @__PURE__ */ (function(TabsPanelDataAttributes2
   return TabsPanelDataAttributes2;
 })({});
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanel.js
-var TabsPanel = /* @__PURE__ */ React28.forwardRef(function TabPanel(componentProps, forwardedRef) {
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanel.js
+var stateAttributesMapping2 = {
+  ...tabsStateAttributesMapping,
+  ...transitionStatusMapping
+};
+var TabsPanel = /* @__PURE__ */ React30.forwardRef(function TabPanel(componentProps, forwardedRef) {
   const {
     className,
     value,
@@ -14480,7 +14782,7 @@ var TabsPanel = /* @__PURE__ */ React28.forwardRef(function TabPanel(componentPr
     unregisterMountedTabPanel
   } = useTabsRootContext();
   const id = useBaseUiId();
-  const metadata = React28.useMemo(() => ({
+  const metadata = React30.useMemo(() => ({
     id,
     value
   }), [id, value]);
@@ -14490,25 +14792,43 @@ var TabsPanel = /* @__PURE__ */ React28.forwardRef(function TabPanel(componentPr
   } = useCompositeListItem({
     metadata
   });
-  const hidden = value !== selectedValue;
+  const open = value === selectedValue;
+  const {
+    mounted,
+    transitionStatus,
+    setMounted
+  } = useTransitionStatus(open);
+  const hidden = !mounted;
   const correspondingTabId = getTabIdByPanelValue(value);
-  const state = React28.useMemo(() => ({
+  const state = {
     hidden,
     orientation,
-    tabActivationDirection
-  }), [hidden, orientation, tabActivationDirection]);
+    tabActivationDirection,
+    transitionStatus
+  };
+  const panelRef = React30.useRef(null);
   const element = useRenderElement("div", componentProps, {
     state,
-    ref: [forwardedRef, listItemRef],
+    ref: [forwardedRef, listItemRef, panelRef],
     props: [{
       "aria-labelledby": correspondingTabId,
       hidden,
-      id: id ?? void 0,
+      id,
       role: "tabpanel",
-      tabIndex: hidden ? -1 : 0,
+      tabIndex: open ? 0 : -1,
+      inert: inertValue(!open),
       [TabsPanelDataAttributes.index]: index
     }, elementProps],
-    stateAttributesMapping: tabsStateAttributesMapping
+    stateAttributesMapping: stateAttributesMapping2
+  });
+  useOpenChangeComplete({
+    open,
+    ref: panelRef,
+    onComplete() {
+      if (!open) {
+        setMounted(false);
+      }
+    }
   });
   useIsoLayoutEffect(() => {
     if (hidden && !keepMounted) {
@@ -14522,7 +14842,7 @@ var TabsPanel = /* @__PURE__ */ React28.forwardRef(function TabPanel(componentPr
       unregisterMountedTabPanel(value, id);
     };
   }, [hidden, keepMounted, value, id, registerMountedTabPanel, unregisterMountedTabPanel]);
-  const shouldRender = !hidden || keepMounted;
+  const shouldRender = keepMounted || mounted;
   if (!shouldRender) {
     return null;
   }
@@ -14530,10 +14850,10 @@ var TabsPanel = /* @__PURE__ */ React28.forwardRef(function TabPanel(componentPr
 });
 if (true) TabsPanel.displayName = "TabsPanel";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/list/TabsList.js
-var React29 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/list/TabsList.js
+var React31 = __toESM(require_react(), 1);
 var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
-var TabsList = /* @__PURE__ */ React29.forwardRef(function TabsList2(componentProps, forwardedRef) {
+var TabsList = /* @__PURE__ */ React31.forwardRef(function TabsList2(componentProps, forwardedRef) {
   const {
     activateOnFocus = false,
     className,
@@ -14549,8 +14869,8 @@ var TabsList = /* @__PURE__ */ React29.forwardRef(function TabsList2(componentPr
     setTabMap,
     tabActivationDirection
   } = useTabsRootContext();
-  const [highlightedTabIndex, setHighlightedTabIndex] = React29.useState(0);
-  const [tabsListElement, setTabsListElement] = React29.useState(null);
+  const [highlightedTabIndex, setHighlightedTabIndex] = React31.useState(0);
+  const [tabsListElement, setTabsListElement] = React31.useState(null);
   const detectActivationDirection = useActivationDirectionDetector(
     value,
     // the old value
@@ -14565,15 +14885,15 @@ var TabsList = /* @__PURE__ */ React29.forwardRef(function TabsList2(componentPr
       onValueChange(newValue, eventDetails);
     }
   });
-  const state = React29.useMemo(() => ({
+  const state = {
     orientation,
     tabActivationDirection
-  }), [orientation, tabActivationDirection]);
+  };
   const defaultProps = {
     "aria-orientation": orientation === "vertical" ? "vertical" : void 0,
     role: "tablist"
   };
-  const tabsListContextValue = React29.useMemo(() => ({
+  const tabsListContextValue = React31.useMemo(() => ({
     activateOnFocus,
     highlightedTabIndex,
     onTabActivation,
@@ -14618,7 +14938,7 @@ function getInset(tab, tabsList) {
   };
 }
 function useActivationDirectionDetector(activeTabValue, orientation, tabsListElement, getTabElement) {
-  const [previousTabEdge, setPreviousTabEdge] = React29.useState(null);
+  const [previousTabEdge, setPreviousTabEdge] = React31.useState(null);
   useIsoLayoutEffect(() => {
     if (activeTabValue == null || tabsListElement == null) {
       setPreviousTabEdge(null);
@@ -14635,7 +14955,7 @@ function useActivationDirectionDetector(activeTabValue, orientation, tabsListEle
     } = getInset(activeTab, tabsListElement);
     setPreviousTabEdge(orientation === "horizontal" ? left : top);
   }, [orientation, getTabElement, tabsListElement, activeTabValue]);
-  return React29.useCallback((newValue) => {
+  return React31.useCallback((newValue) => {
     if (newValue === activeTabValue) {
       return "none";
     }
@@ -14676,7 +14996,7 @@ function useActivationDirectionDetector(activeTabValue, orientation, tabsListEle
   }, [getTabElement, orientation, previousTabEdge, tabsListElement, activeTabValue]);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.1.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-render/useRender.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-render/useRender.js
 function useRender(params) {
   return useRenderElement(params.defaultTagName ?? "div", params, params);
 }
@@ -19142,7 +19462,7 @@ function defaultValue(...values) {
   return void 0;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/YXGXYGQX.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/YXGXYGQX.js
 var import_react4 = __toESM(require_react(), 1);
 function setRef(ref, value) {
   if (typeof ref === "function") {
@@ -19465,10 +19785,10 @@ function addGlobalEventListener(type, listener, options, scope = window) {
   return removeEventListener;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/KPHZR4MB.js
-var React30 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/KPHZR4MB.js
+var React32 = __toESM(require_react(), 1);
 var import_react5 = __toESM(require_react(), 1);
-var _React = { ...React30 };
+var _React = { ...React32 };
 var useReactId = _React.useId;
 var useReactDeferredValue = _React.useDeferredValue;
 var useReactInsertionEffect = _React.useInsertionEffect;
@@ -19659,11 +19979,11 @@ function resetMouseMoving() {
   mouseMoving = false;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/GWSL6KNJ.js
-var React31 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/GWSL6KNJ.js
+var React33 = __toESM(require_react(), 1);
 var import_jsx_runtime69 = __toESM(require_jsx_runtime(), 1);
 function forwardRef22(render4) {
-  const Role = React31.forwardRef(
+  const Role = React33.forwardRef(
     // @ts-ignore Incompatible with React 19 types. Ignore for now.
     (props, ref) => render4({ ...props, ref })
   );
@@ -19671,19 +19991,19 @@ function forwardRef22(render4) {
   return Role;
 }
 function memo22(Component, propsAreEqual) {
-  return React31.memo(Component, propsAreEqual);
+  return React33.memo(Component, propsAreEqual);
 }
 function createElement3(Type2, props) {
   const { wrapElement, render: render4, ...rest } = props;
   const mergedRef = useMergeRefs(props.ref, getRefProperty(render4));
   let element;
-  if (React31.isValidElement(render4)) {
+  if (React33.isValidElement(render4)) {
     const renderProps = {
       // @ts-ignore Incompatible with React 19 types. Ignore for now.
       ...render4.props,
       ref: mergedRef
     };
-    element = React31.cloneElement(render4, mergeProps2(rest, renderProps));
+    element = React33.cloneElement(render4, mergeProps2(rest, renderProps));
   } else if (render4) {
     element = render4(rest);
   } else {
@@ -19702,17 +20022,17 @@ function createHook(useProps) {
   return useRole;
 }
 function createStoreContext(providers = [], scopedProviders = []) {
-  const context = React31.createContext(void 0);
-  const scopedContext = React31.createContext(void 0);
-  const useContext210 = () => React31.useContext(context);
+  const context = React33.createContext(void 0);
+  const scopedContext = React33.createContext(void 0);
+  const useContext210 = () => React33.useContext(context);
   const useScopedContext = (onlyScoped = false) => {
-    const scoped = React31.useContext(scopedContext);
+    const scoped = React33.useContext(scopedContext);
     const store5 = useContext210();
     if (onlyScoped) return scoped;
     return scoped || store5;
   };
   const useProviderContext = () => {
-    const scoped = React31.useContext(scopedContext);
+    const scoped = React33.useContext(scopedContext);
     const store5 = useContext210();
     if (scoped && scoped === store5) return;
     return store5;
@@ -19740,7 +20060,7 @@ function createStoreContext(providers = [], scopedProviders = []) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SMPCIMZM.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SMPCIMZM.js
 var ctx = createStoreContext();
 var useCollectionContext = ctx.useContext;
 var useCollectionScopedContext = ctx.useScopedContext;
@@ -19748,7 +20068,7 @@ var useCollectionProviderContext = ctx.useProviderContext;
 var CollectionContextProvider = ctx.ContextProvider;
 var CollectionScopedContextProvider = ctx.ScopedContextProvider;
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/AVVXDJMZ.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/AVVXDJMZ.js
 var import_react6 = __toESM(require_react(), 1);
 var ctx2 = createStoreContext(
   [CollectionContextProvider],
@@ -19766,7 +20086,7 @@ var CompositeRowContext = (0, import_react6.createContext)(
   void 0
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/5VQZOHHZ.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/5VQZOHHZ.js
 function findFirstEnabledItem(items, excludeId) {
   return items.find((item) => {
     if (excludeId) {
@@ -19827,7 +20147,7 @@ function isItem(store5, element, exclude) {
   return true;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/Z2O3VLAQ.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/Z2O3VLAQ.js
 var import_react7 = __toESM(require_react(), 1);
 var TagName = "div";
 var useCollectionItem = createHook(
@@ -19863,7 +20183,7 @@ var CollectionItem = forwardRef22(function CollectionItem2(props) {
   return createElement3(TagName, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SWN3JYXT.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SWN3JYXT.js
 var import_react8 = __toESM(require_react(), 1);
 var FocusableContext = (0, import_react8.createContext)(true);
 
@@ -19913,7 +20233,7 @@ function focusIntoView(element, options) {
   }
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/U6HHPQDW.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/U6HHPQDW.js
 var import_react9 = __toESM(require_react(), 1);
 var TagName2 = "div";
 var isSafariBrowser = isSafari();
@@ -20211,7 +20531,7 @@ var Focusable = forwardRef22(function Focusable2(props) {
   return createElement3(TagName2, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/PZ3OL7I2.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/PZ3OL7I2.js
 var import_react10 = __toESM(require_react(), 1);
 var TagName3 = "button";
 function isNativeClick(event) {
@@ -20522,14 +20842,14 @@ If there's a particular need for this, please submit a feature request at https:
   );
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/Q5W46E73.js
-var React32 = __toESM(require_react(), 1);
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/Q5W46E73.js
+var React34 = __toESM(require_react(), 1);
 var import_shim = __toESM(require_shim(), 1);
 var { useSyncExternalStore } = import_shim.default;
 var noopSubscribe = () => () => {
 };
 function useStoreState(store5, keyOrSelector = identity) {
-  const storeSubscribe = React32.useCallback(
+  const storeSubscribe = React34.useCallback(
     (callback) => {
       if (!store5) return noopSubscribe();
       return subscribe(store5, null, callback);
@@ -20549,10 +20869,10 @@ function useStoreState(store5, keyOrSelector = identity) {
   return useSyncExternalStore(storeSubscribe, getSnapshot, getSnapshot);
 }
 function useStoreStateObject(store5, object) {
-  const objRef = React32.useRef(
+  const objRef = React34.useRef(
     {}
   );
-  const storeSubscribe = React32.useCallback(
+  const storeSubscribe = React34.useCallback(
     (callback) => {
       if (!store5) return noopSubscribe();
       return subscribe(store5, null, callback);
@@ -20612,13 +20932,13 @@ function useStoreProps(store5, props, key, setKey) {
   });
 }
 function useStore(createStore2, props) {
-  const [store5, setStore] = React32.useState(() => createStore2(props));
+  const [store5, setStore] = React34.useState(() => createStore2(props));
   useSafeLayoutEffect(() => init(store5), [store5]);
-  const useState210 = React32.useCallback(
+  const useState210 = React34.useCallback(
     (keyOrSelector) => useStoreState(store5, keyOrSelector),
     [store5]
   );
-  const memoizedStore = React32.useMemo(
+  const memoizedStore = React34.useMemo(
     () => ({ ...store5, useState: useState210 }),
     [store5, useState210]
   );
@@ -20628,7 +20948,7 @@ function useStore(createStore2, props) {
   return [memoizedStore, updateStore];
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/WZWDIE3S.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/WZWDIE3S.js
 var import_react11 = __toESM(require_react(), 1);
 var import_jsx_runtime70 = __toESM(require_jsx_runtime(), 1);
 var TagName4 = "button";
@@ -20941,7 +21261,7 @@ function reverseArray(array) {
   return array.slice().reverse();
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/ZMWF7ASR.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/ZMWF7ASR.js
 var import_react12 = __toESM(require_react(), 1);
 var import_jsx_runtime71 = __toESM(require_jsx_runtime(), 1);
 var TagName5 = "div";
@@ -21215,7 +21535,7 @@ var Composite5 = forwardRef22(function Composite22(props) {
   return createElement3(TagName5, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/LVDQFHCH.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/LVDQFHCH.js
 var ctx3 = createStoreContext();
 var useDisclosureContext = ctx3.useContext;
 var useDisclosureScopedContext = ctx3.useScopedContext;
@@ -21223,7 +21543,7 @@ var useDisclosureProviderContext = ctx3.useProviderContext;
 var DisclosureContextProvider = ctx3.ContextProvider;
 var DisclosureScopedContextProvider = ctx3.ScopedContextProvider;
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/A62MDFCW.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/A62MDFCW.js
 var import_react13 = __toESM(require_react(), 1);
 var ctx4 = createStoreContext(
   [DisclosureContextProvider],
@@ -21237,7 +21557,7 @@ var DialogScopedContextProvider = ctx4.ScopedContextProvider;
 var DialogHeadingContext = (0, import_react13.createContext)(void 0);
 var DialogDescriptionContext = (0, import_react13.createContext)(void 0);
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/6B3RXHKP.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/6B3RXHKP.js
 var import_react14 = __toESM(require_react(), 1);
 var import_react_dom = __toESM(require_react_dom(), 1);
 var import_jsx_runtime72 = __toESM(require_jsx_runtime(), 1);
@@ -21452,7 +21772,7 @@ function createDisclosureStore(props = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/WLZ6H5FH.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/WLZ6H5FH.js
 function useDisclosureStoreProps(store5, update2, props) {
   useUpdateEffect(update2, [props.store, props.disclosure]);
   useStoreProps(store5, props, "open", "setOpen");
@@ -21461,7 +21781,7 @@ function useDisclosureStoreProps(store5, update2, props) {
   return Object.assign(store5, { disclosure: props.disclosure });
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/JMU4N4M5.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/JMU4N4M5.js
 var ctx5 = createStoreContext(
   [DialogContextProvider],
   [DialogScopedContextProvider]
@@ -21619,7 +21939,7 @@ function createCollectionStore(props = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/GVAFFF2B.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/GVAFFF2B.js
 function useCollectionStoreProps(store5, update2, props) {
   useUpdateEffect(update2, [props.store]);
   useStoreProps(store5, props, "items", "setItems");
@@ -21885,7 +22205,7 @@ function createCompositeStore(props = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/IQYAUKXT.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/IQYAUKXT.js
 function useCompositeStoreOptions(props) {
   const id = useId4(props.id);
   return { id, ...props };
@@ -21903,7 +22223,7 @@ function useCompositeStoreProps(store5, update2, props) {
   return store5;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/CVCFNOHX.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/CVCFNOHX.js
 var import_react15 = __toESM(require_react(), 1);
 var ComboboxListRoleContext = (0, import_react15.createContext)(
   void 0
@@ -21927,7 +22247,7 @@ function createDialogStore(props = {}) {
   return createDisclosureStore(props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/4NYSH4UO.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/4NYSH4UO.js
 function useDialogStoreProps(store5, update2, props) {
   return useDisclosureStoreProps(store5, update2, props);
 }
@@ -21975,14 +22295,14 @@ function createPopoverStore({
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/B6FLPFJM.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/B6FLPFJM.js
 function usePopoverStoreProps(store5, update2, props) {
   useUpdateEffect(update2, [props.popover]);
   useStoreProps(store5, props, "placement");
   return useDialogStoreProps(store5, update2, props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/4POTBZ2J.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/4POTBZ2J.js
 var TagName7 = "div";
 var usePopoverAnchor = createHook(
   function usePopoverAnchor2({ store: store5, ...props }) {
@@ -22000,7 +22320,7 @@ var PopoverAnchor = forwardRef22(function PopoverAnchor2(props) {
   return createElement3(TagName7, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/X6LNAU2F.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/X6LNAU2F.js
 var import_react16 = __toESM(require_react(), 1);
 var TagName8 = "div";
 function getMouseDestination(event) {
@@ -22088,7 +22408,7 @@ var CompositeHover = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox.js
 var import_react17 = __toESM(require_react(), 1);
 var TagName9 = "input";
 function isFirstItemAutoSelected(items, activeValue, autoSelect) {
@@ -22480,7 +22800,7 @@ var Combobox = forwardRef22(function Combobox2(props) {
   return createElement3(TagName9, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/IBXZ2LQC.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/IBXZ2LQC.js
 var import_react18 = __toESM(require_react(), 1);
 var import_jsx_runtime73 = __toESM(require_jsx_runtime(), 1);
 var TagName10 = "div";
@@ -22637,7 +22957,7 @@ var ComboboxItem = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-item-value.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-item-value.js
 var import_react19 = __toESM(require_react(), 1);
 var import_jsx_runtime74 = __toESM(require_jsx_runtime(), 1);
 var TagName11 = "span";
@@ -22732,7 +23052,7 @@ var ComboboxItemValue = forwardRef22(function ComboboxItemValue2(props) {
   return createElement3(TagName11, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-label.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-label.js
 var TagName12 = "label";
 var useComboboxLabel = createHook(
   function useComboboxLabel2({ store: store5, ...props }) {
@@ -22760,7 +23080,7 @@ var ComboboxLabel = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/2G6YEJT4.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/2G6YEJT4.js
 var import_react20 = __toESM(require_react(), 1);
 var import_jsx_runtime75 = __toESM(require_jsx_runtime(), 1);
 var TagName13 = "div";
@@ -22832,7 +23152,7 @@ var ComboboxList = forwardRef22(function ComboboxList2(props) {
   return createElement3(TagName13, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/XSIEPKGA.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/XSIEPKGA.js
 var import_react21 = __toESM(require_react(), 1);
 var TagValueContext = (0, import_react21.createContext)(null);
 var TagRemoveIdContext = (0, import_react21.createContext)(
@@ -22989,7 +23309,7 @@ function createComboboxStore({
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SVN33SY6.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SVN33SY6.js
 function useComboboxStoreOptions(props) {
   const tag = useTagContext();
   props = {
@@ -23019,7 +23339,7 @@ function useComboboxStore(props = {}) {
   return useComboboxStoreProps(store5, update2, props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.21_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-provider.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-provider.js
 var import_jsx_runtime76 = __toESM(require_jsx_runtime(), 1);
 function ComboboxProvider(props = {}) {
   const store5 = useComboboxStore(props);
@@ -30115,7 +30435,7 @@ var Tab = (0, import_element62.forwardRef)(function Tab2({ className, children, 
 });
 
 // routes/responses/stage.tsx
-var React33 = __toESM(require_react());
+var React35 = __toESM(require_react());
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/index.tsx
 var import_components62 = __toESM(require_components(), 1);
@@ -37907,8 +38227,8 @@ function styleUnreadValue(element, isUnread) {
   if (typeof element === "string") {
     return /* @__PURE__ */ (0, import_jsx_runtime166.jsx)("span", { style: { fontWeight: 600 }, children: element });
   }
-  if (React33.isValidElement(element)) {
-    return React33.cloneElement(element, {
+  if (React35.isValidElement(element)) {
+    return React35.cloneElement(element, {
       style: { ...element.props.style || {}, fontWeight: 600 }
     });
   }
