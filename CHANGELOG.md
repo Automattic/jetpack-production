@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- SEO: Add Canonical URLs toggle to the Traffic settings page.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Image Studio: Enable if BigSky is enabled
 - Update dependencies.
