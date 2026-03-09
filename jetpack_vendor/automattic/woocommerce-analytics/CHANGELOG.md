@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.15.8-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update dependencies.
+
 ## [0.15.7] - 2026-03-09
 ### Changed
 - Switch to Native TypeScript compiler based on Go. [#47375]
@@ -286,6 +293,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fix namespace issue with WooCommerce class reference. [#35857]
 - General: bail early when WooCommerce is not active. [#36278]
 
+[0.15.8-alpha]: https://github.com/Automattic/woocommerce-analytics/compare/v0.15.7...v0.15.8-alpha
 [0.15.7]: https://github.com/Automattic/woocommerce-analytics/compare/v0.15.6...v0.15.7
 [0.15.6]: https://github.com/Automattic/woocommerce-analytics/compare/v0.15.5...v0.15.6
 [0.15.5]: https://github.com/Automattic/woocommerce-analytics/compare/v0.15.4...v0.15.5
