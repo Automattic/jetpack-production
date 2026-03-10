@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Add spacing below warning notice in Email content settings section
+
 ## [0.6.0] - 2026-03-09
 ### Added
 - Add `jetpack_show_newsletter_menu_item` filter to show menu regardless of subscriptions module state. [#47347]
