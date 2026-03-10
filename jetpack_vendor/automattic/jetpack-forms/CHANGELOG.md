@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 
 ### Fixed
+- Fix HTML entities not being decoded in form title on pre-publish panel
 - Fix number field min and max values not displaying in the UI after page reload.
 - Show 'No results found' empty state when search or filters are active in the forms list view instead of the onboarding empty state.
 
