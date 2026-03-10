@@ -32982,6 +32982,16 @@ var EmptyWrapper = ({ heading = "", body = "", actions: actions2 = null }) => /*
   body && /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(import_components64.__experimentalText, { variant: "muted", children: body }),
   actions2 && /* @__PURE__ */ (0, import_jsx_runtime144.jsx)("span", { style: { marginBlockStart: "16px" }, children: actions2 })
 ] });
+var NoResults = () => /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(
+  EmptyWrapper,
+  {
+    heading: (0, import_i18n62.__)("No results found", "jetpack-forms"),
+    body: (0, import_i18n62.__)(
+      "Try adjusting your search or filters to find what you're looking for.",
+      "jetpack-forms"
+    )
+  }
+);
 var EmptyResponses = ({
   isSearch,
   isSingleFormView = false,
@@ -32998,13 +33008,8 @@ var EmptyResponses = ({
     handleAkismetSetup
   } = useInstallAkismet();
   const hasReadStatusFilter = !!readStatusFilter;
-  const searchHeading = (0, import_i18n62.__)("No results found", "jetpack-forms");
-  const searchMessage = (0, import_i18n62.__)(
-    "Try adjusting your search or filters to find what you're looking for.",
-    "jetpack-forms"
-  );
   if (isSearch || hasReadStatusFilter) {
-    return /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(EmptyWrapper, { heading: searchHeading, body: searchMessage });
+    return /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(NoResults, {});
   }
   const noTrashHeading = (0, import_i18n62.__)("Trash is empty", "jetpack-forms");
   const noTrashMessage = (0, import_i18n62.sprintf)(

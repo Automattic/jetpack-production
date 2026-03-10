@@ -24598,6 +24598,16 @@ var EmptyWrapper = ({ heading = "", body = "", actions: actions2 = null }) => /*
   body && /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(import_components64.__experimentalText, { variant: "muted", children: body }),
   actions2 && /* @__PURE__ */ (0, import_jsx_runtime137.jsx)("span", { style: { marginBlockStart: "16px" }, children: actions2 })
 ] });
+var NoResults = () => /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
+  EmptyWrapper,
+  {
+    heading: (0, import_i18n63.__)("No results found", "jetpack-forms"),
+    body: (0, import_i18n63.__)(
+      "Try adjusting your search or filters to find what you're looking for.",
+      "jetpack-forms"
+    )
+  }
+);
 
 // src/dashboard/components/form-name-modal/index.tsx
 var import_components65 = __toESM(require_components(), 1);
@@ -28985,15 +28995,15 @@ function StageInner() {
     }
   }, [searchParams?.search]);
   const statusQuery = (0, import_element96.useMemo)(() => {
-    const statusFilterValue = view.filters?.find((filter) => filter.field === "status")?.value;
-    if (!statusFilterValue || statusFilterValue === "all") {
+    const statusFilterValue2 = view.filters?.find((filter) => filter.field === "status")?.value;
+    if (!statusFilterValue2 || statusFilterValue2 === "all") {
       return NON_TRASH_FORM_STATUSES;
     }
-    return statusFilterValue;
+    return statusFilterValue2;
   }, [view.filters]);
   const isViewingTrash = (0, import_element96.useMemo)(() => {
-    const statusFilterValue = view.filters?.find((filter) => filter.field === "status")?.value;
-    return statusFilterValue === "trash";
+    const statusFilterValue2 = view.filters?.find((filter) => filter.field === "status")?.value;
+    return statusFilterValue2 === "trash";
   }, [view.filters]);
   const { totalItems: totalNonTrashForms } = useFormsData(1, 1, "", NON_TRASH_FORM_STATUSES);
   const { records, isLoading, totalItems, totalPages } = useFormsData(
@@ -29344,6 +29354,8 @@ function StageInner() {
     onOpenIntegrations: openIntegrationsModal,
     onOpenFormsHelp: openFormsHelpModal
   });
+  const statusFilterValue = view.filters?.find((filter) => filter.field === "status")?.value;
+  const hasActiveFilters = !!view.search?.trim() || !!statusFilterValue && statusFilterValue !== "all";
   const getItemId = (0, import_element96.useCallback)((item) => String(item.id), []);
   const onClickItem = (0, import_element96.useCallback)(
     (item) => {
@@ -29369,7 +29381,7 @@ function StageInner() {
             actions: actions2,
             data: records || [],
             isLoading,
-            empty: /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
+            empty: hasActiveFilters ? /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(NoResults, {}) : /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
               EmptyWrapper,
               {
                 heading: (0, import_i18n87.__)("You're set up. No forms yet.", "jetpack-forms"),
