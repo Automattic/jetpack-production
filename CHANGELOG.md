@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix number field min and max values not displaying in the UI after page reload.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Editor: Fix plan upgrade notice for Simple sites
 - Update dependencies.
 - Update package dependencies.
 
