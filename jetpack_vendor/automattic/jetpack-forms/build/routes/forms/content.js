@@ -27165,11 +27165,11 @@ function useEmptySpam({
   const [isEmptying, setIsEmptying] = (0, import_element85.useState)(false);
   const [isEmpty4, setIsEmpty] = (0, import_element85.useState)(true);
   const { createSuccessNotice, createErrorNotice } = (0, import_data18.useDispatch)(import_notices5.store);
-  const { invalidateResolution } = (0, import_data18.useDispatch)(import_core_data3.store);
+  const { invalidateResolutionForStoreSelector } = (0, import_data18.useDispatch)(import_core_data3.store);
   const { invalidateCounts: invalidateCounts2 } = (0, import_data18.useDispatch)(store3);
   const hookData = useInboxData();
   const totalItemsSpam = totalItemsSpamProp ?? hookData.totalItemsSpam ?? 0;
-  const { selectedResponsesCount, currentQuery: currentQuery2 } = hookData;
+  const { selectedResponsesCount } = hookData;
   (0, import_element85.useEffect)(() => {
     setIsEmpty(!totalItemsSpam);
   }, [totalItemsSpam]);
@@ -27205,23 +27205,17 @@ function useEmptySpam({
       });
     }).finally(() => {
       setIsEmptying(false);
-      invalidateResolution("getEntityRecords", ["postType", "feedback", currentQuery2]);
-      invalidateResolution("getEntityRecords", [
-        "postType",
-        "feedback",
-        { ...currentQuery2, per_page: 1, _fields: "id" }
-      ]);
       invalidateCounts2();
+      invalidateResolutionForStoreSelector("getEntityRecords");
     });
   }, [
     closeConfirmDialog,
     createErrorNotice,
     createSuccessNotice,
-    invalidateResolution,
+    invalidateResolutionForStoreSelector,
     invalidateCounts2,
     isEmpty4,
-    isEmptying,
-    currentQuery2
+    isEmptying
   ]);
   return {
     isConfirmDialogOpen,
@@ -27338,11 +27332,11 @@ function useEmptyTrash({
   const [isEmptying, setIsEmptying] = (0, import_element86.useState)(false);
   const [isEmpty4, setIsEmpty] = (0, import_element86.useState)(true);
   const { createSuccessNotice, createErrorNotice } = (0, import_data19.useDispatch)(import_notices6.store);
-  const { invalidateResolution } = (0, import_data19.useDispatch)(import_core_data4.store);
+  const { invalidateResolutionForStoreSelector } = (0, import_data19.useDispatch)(import_core_data4.store);
   const { invalidateCounts: invalidateCounts2 } = (0, import_data19.useDispatch)(store3);
   const hookData = useInboxData();
   const totalItemsTrash = totalItemsTrashProp ?? hookData.totalItemsTrash ?? 0;
-  const { selectedResponsesCount, currentQuery: currentQuery2 } = hookData;
+  const { selectedResponsesCount } = hookData;
   (0, import_element86.useEffect)(() => {
     setIsEmpty(!totalItemsTrash);
   }, [totalItemsTrash]);
@@ -27378,23 +27372,17 @@ function useEmptyTrash({
       });
     }).finally(() => {
       setIsEmptying(false);
-      invalidateResolution("getEntityRecords", ["postType", "feedback", currentQuery2]);
-      invalidateResolution("getEntityRecords", [
-        "postType",
-        "feedback",
-        { ...currentQuery2, per_page: 1, _fields: "id" }
-      ]);
       invalidateCounts2();
+      invalidateResolutionForStoreSelector("getEntityRecords");
     });
   }, [
     closeConfirmDialog,
     createErrorNotice,
     createSuccessNotice,
-    invalidateResolution,
+    invalidateResolutionForStoreSelector,
     invalidateCounts2,
     isEmpty4,
-    isEmptying,
-    currentQuery2
+    isEmptying
   ]);
   return {
     isConfirmDialogOpen,
