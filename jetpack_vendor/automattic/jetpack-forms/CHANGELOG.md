@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Form Editor: Hide word count and reading time panel
+- Hide "Browse form patterns" button in the form placeholder when central form management is enabled
 - Update 'View form responses' button to link to the specific form's responses when the form has a ref.
 - Update dependencies.
 
