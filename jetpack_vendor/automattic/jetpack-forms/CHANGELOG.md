@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 
 ### Fixed
+- Fix aria-label attribute by passing a string value to the Page component.
 - Fix HTML entities not being decoded in form title on pre-publish panel
 - Fix number field min and max values not displaying in the UI after page reload.
 - Purge edge cache when a jetpack_form post is published, updated, or unpublished.

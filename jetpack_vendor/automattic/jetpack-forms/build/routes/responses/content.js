@@ -36989,6 +36989,12 @@ function usePageHeaderDetails(props) {
     /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
     children
   ] });
+  const ariaLabel = (0, import_element95.useMemo)(() => {
+    if (isSingleFormScreen) {
+      return formTitle || (0, import_i18n85.__)("Form responses", "jetpack-forms");
+    }
+    return "Jetpack Forms";
+  }, [isSingleFormScreen, formTitle]);
   const title = (0, import_element95.useMemo)(() => {
     if (isSingleFormScreen) {
       return null;
@@ -37256,7 +37262,7 @@ function usePageHeaderDetails(props) {
     emptySpam.totalItemsSpam,
     emptySpam.selectedResponsesCount
   ]);
-  return { breadcrumbs, title, badges, subtitle, actions: actions2 };
+  return { ariaLabel, breadcrumbs, title, badges, subtitle, actions: actions2 };
 }
 
 // routes/responses/actions.tsx
@@ -38592,6 +38598,7 @@ function StageInner() {
     setIsIntegrationsModalOpen(false);
   }, []);
   const {
+    ariaLabel,
     breadcrumbs,
     badges,
     subtitle,
@@ -38619,6 +38626,7 @@ function StageInner() {
       breadcrumbs,
       badges,
       title,
+      ariaLabel,
       subTitle: subtitle,
       actions: headerActions,
       hasPadding: false,
