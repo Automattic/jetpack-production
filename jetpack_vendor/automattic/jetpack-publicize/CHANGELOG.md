@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add support for X connection.
 
 ### Changed
+- Clean up Twitter notices in classic editor.
 - Update dependencies.
 
 ## [0.73.2] - 2026-03-09
