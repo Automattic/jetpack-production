@@ -939,15 +939,15 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-wpcom-products.php'
 	),
 	'Automattic\\Jetpack\\Newsletter\\Reader_Link' => array(
-		'version' => '0.6.1.0-alpha1773145246',
+		'version' => '0.6.1.0-alpha1773411167',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-reader-link.php'
 	),
 	'Automattic\\Jetpack\\Newsletter\\Settings' => array(
-		'version' => '0.6.1.0-alpha1773145246',
+		'version' => '0.6.1.0-alpha1773411167',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-settings.php'
 	),
 	'Automattic\\Jetpack\\Newsletter\\Urls' => array(
-		'version' => '0.6.1.0-alpha1773145246',
+		'version' => '0.6.1.0-alpha1773411167',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-urls.php'
 	),
 	'Automattic\\Jetpack\\Partner' => array(
