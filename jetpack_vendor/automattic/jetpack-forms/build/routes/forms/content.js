@@ -116,7 +116,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
             "The result of getSnapshot should be cached to avoid an infinite loop"
           ), didWarnUncachedGetSnapshot = true);
         }
-        cachedValue = useState49({
+        cachedValue = useState51({
           inst: { value, getSnapshot }
         });
         var inst = cachedValue[0].inst, forceUpdate = cachedValue[1];
@@ -154,7 +154,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return getSnapshot();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React35 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState49 = React35.useState, useEffect36 = React35.useEffect, useLayoutEffect4 = React35.useLayoutEffect, useDebugValue = React35.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      var React35 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState51 = React35.useState, useEffect36 = React35.useEffect, useLayoutEffect4 = React35.useLayoutEffect, useDebugValue = React35.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
       exports.useSyncExternalStore = void 0 !== React35.useSyncExternalStore ? React35.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
@@ -23612,11 +23612,15 @@ function useCreateForm() {
     [newFormNonce, ajaxUrl]
   );
   const openNewForm = (0, import_element68.useCallback)(
-    async ({ formPattern, showPatterns, analyticsEvent }) => {
+    async ({ formPattern, formTitle, showPatterns, analyticsEvent }) => {
       try {
         if (isCentralFormManagementEnabled === true) {
           analyticsEvent?.({ formPattern: formPattern ?? "" });
-          const url = `${adminUrl || ""}post-new.php?post_type=jetpack_form`;
+          let url = `${adminUrl || ""}post-new.php?post_type=jetpack_form`;
+          const trimmedFormTitle = formTitle?.trim();
+          if (trimmedFormTitle) {
+            url += `&post_title=${encodeURIComponent(trimmedFormTitle)}`;
+          }
           openFormLink(url);
           return;
         }
@@ -24402,46 +24406,166 @@ var FORM_POST_TYPE = "jetpack_form";
 var FORM_SOURCE_META_KEY = "_jetpack_forms_source_post_id";
 
 // src/dashboard/components/create-form-button/index.tsx
+var import_components64 = __toESM(require_components(), 1);
+var import_element73 = __toESM(require_element(), 1);
+var import_i18n63 = __toESM(require_i18n(), 1);
+
+// src/dashboard/components/form-name-modal/index.tsx
 var import_components63 = __toESM(require_components(), 1);
 var import_element72 = __toESM(require_element(), 1);
 var import_i18n62 = __toESM(require_i18n(), 1);
+
+// src/dashboard/components/form-name-modal/style.scss
+if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='8415034dc0']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "8415034dc0");
+  style.appendChild(document.createTextNode(".jp-forms-name-modal__buttons{display:flex;gap:8px;justify-content:flex-end;margin-block-start:16px}"));
+  document.head.appendChild(style);
+}
+
+// src/dashboard/components/form-name-modal/index.tsx
 var import_jsx_runtime136 = __toESM(require_jsx_runtime(), 1);
+function FormNameModal({
+  isOpen,
+  onClose,
+  onSave,
+  title,
+  initialValue = "",
+  primaryButtonLabel,
+  secondaryButtonLabel,
+  placeholder,
+  inputLabel,
+  fallbackName
+}) {
+  const [name, setName] = (0, import_element72.useState)(initialValue);
+  const [isSaving, setIsSaving] = (0, import_element72.useState)(false);
+  (0, import_element72.useEffect)(() => {
+    if (isOpen) {
+      setName(initialValue);
+    }
+  }, [isOpen, initialValue]);
+  const handleClose = (0, import_element72.useCallback)(() => {
+    if (!isSaving) {
+      onClose();
+    }
+  }, [isSaving, onClose]);
+  const handleConfirm = (0, import_element72.useCallback)(async () => {
+    if (isSaving) {
+      return;
+    }
+    setIsSaving(true);
+    const finalName = name.trim() || fallbackName || (0, import_i18n62.__)("Untitled Form", "jetpack-forms");
+    try {
+      await onSave(finalName);
+    } catch {
+    } finally {
+      setIsSaving(false);
+      onClose();
+    }
+  }, [name, fallbackName, isSaving, onSave, onClose]);
+  const onSubmitForm = (0, import_element72.useCallback)(
+    (event) => {
+      event.preventDefault();
+      handleConfirm();
+    },
+    [handleConfirm]
+  );
+  if (!isOpen) {
+    return null;
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(import_components63.Modal, { title, onRequestClose: handleClose, size: "medium", children: /* @__PURE__ */ (0, import_jsx_runtime136.jsxs)("form", { onSubmit: onSubmitForm, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(
+      import_components63.TextControl,
+      {
+        label: inputLabel || (0, import_i18n62.__)("Name", "jetpack-forms"),
+        value: name,
+        onChange: setName,
+        __next40pxDefaultSize: true,
+        placeholder,
+        disabled: isSaving
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime136.jsxs)("div", { className: "jp-forms-name-modal__buttons", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(import_components63.Button, { variant: "tertiary", onClick: handleClose, disabled: isSaving, children: secondaryButtonLabel || (0, import_i18n62.__)("Cancel", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(import_components63.Button, { "aria-disabled": isSaving, isBusy: isSaving, variant: "primary", type: "submit", children: primaryButtonLabel || (0, import_i18n62.__)("Save", "jetpack-forms") })
+    ] })
+  ] }) });
+}
+
+// src/dashboard/components/create-form-button/index.tsx
+var import_jsx_runtime137 = __toESM(require_jsx_runtime(), 1);
 function CreateFormButton({
-  label = (0, import_i18n62.__)("Create a form", "jetpack-forms"),
+  label = (0, import_i18n63.__)("Create a form", "jetpack-forms"),
   showPatterns = false,
   variant = "secondary",
-  showIcon = true
+  showIcon = true,
+  showNameModal = false
 }) {
   const { openNewForm } = useCreateForm();
-  const onButtonClickHandler = (0, import_element72.useCallback)(
-    () => openNewForm({
+  const [isModalOpen, setIsModalOpen] = (0, import_element73.useState)(false);
+  const onButtonClickHandler = (0, import_element73.useCallback)(() => {
+    if (showNameModal) {
+      setIsModalOpen(true);
+      return;
+    }
+    openNewForm({
       showPatterns,
       analyticsEvent: () => {
         analytics_default.tracks.recordEvent("jetpack_wpa_forms_landing_page_cta_click", {
           button: "forms"
         });
       }
-    }),
+    });
+  }, [showNameModal, openNewForm, showPatterns]);
+  const handleModalClose = (0, import_element73.useCallback)(() => {
+    setIsModalOpen(false);
+  }, []);
+  const handleModalSave = (0, import_element73.useCallback)(
+    async (formTitle) => {
+      await openNewForm({
+        showPatterns,
+        formTitle,
+        analyticsEvent: () => {
+          analytics_default.tracks.recordEvent("jetpack_wpa_forms_landing_page_cta_click", {
+            button: "forms"
+          });
+        }
+      });
+    },
     [openNewForm, showPatterns]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime136.jsx)(
-    import_components63.Button,
-    {
-      size: "compact",
-      variant,
-      onClick: onButtonClickHandler,
-      icon: showIcon ? plus_default : void 0,
-      className: "create-form-button",
-      children: label
-    }
-  );
+  return /* @__PURE__ */ (0, import_jsx_runtime137.jsxs)(import_jsx_runtime137.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
+      import_components64.Button,
+      {
+        size: "compact",
+        variant,
+        onClick: onButtonClickHandler,
+        icon: showIcon ? plus_default : void 0,
+        className: "create-form-button",
+        children: label
+      }
+    ),
+    /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
+      FormNameModal,
+      {
+        isOpen: isModalOpen,
+        onClose: handleModalClose,
+        onSave: handleModalSave,
+        title: (0, import_i18n63.__)("Create form", "jetpack-forms"),
+        primaryButtonLabel: (0, import_i18n63.__)("Create", "jetpack-forms"),
+        secondaryButtonLabel: (0, import_i18n63.__)("Cancel", "jetpack-forms"),
+        placeholder: (0, import_i18n63.__)("Enter form title", "jetpack-forms")
+      }
+    )
+  ] });
 }
 
 // src/dashboard/components/empty-responses/index.tsx
-var import_components64 = __toESM(require_components(), 1);
+var import_components65 = __toESM(require_components(), 1);
 var import_data10 = __toESM(require_data(), 1);
-var import_element73 = __toESM(require_element(), 1);
-var import_i18n63 = __toESM(require_i18n(), 1);
+var import_element74 = __toESM(require_element(), 1);
+var import_i18n64 = __toESM(require_i18n(), 1);
 
 // src/store/integrations/index.ts
 var import_data9 = __toESM(require_data(), 1);
@@ -24592,104 +24716,22 @@ var store2 = (0, import_data9.createReduxStore)(INTEGRATIONS_STORE, {
 (0, import_data9.register)(store2);
 
 // src/dashboard/components/empty-responses/index.tsx
-var import_jsx_runtime137 = __toESM(require_jsx_runtime(), 1);
-var EmptyWrapper = ({ heading = "", body = "", actions: actions2 = null }) => /* @__PURE__ */ (0, import_jsx_runtime137.jsxs)(import_components64.__experimentalVStack, { alignment: "center", spacing: "2", children: [
-  heading && /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(import_components64.__experimentalText, { as: "h3", weight: "500", size: "15", children: heading }),
-  body && /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(import_components64.__experimentalText, { variant: "muted", children: body }),
-  actions2 && /* @__PURE__ */ (0, import_jsx_runtime137.jsx)("span", { style: { marginBlockStart: "16px" }, children: actions2 })
+var import_jsx_runtime138 = __toESM(require_jsx_runtime(), 1);
+var EmptyWrapper = ({ heading = "", body = "", actions: actions2 = null }) => /* @__PURE__ */ (0, import_jsx_runtime138.jsxs)(import_components65.__experimentalVStack, { alignment: "center", spacing: "2", children: [
+  heading && /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components65.__experimentalText, { as: "h3", weight: "500", size: "15", children: heading }),
+  body && /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components65.__experimentalText, { variant: "muted", children: body }),
+  actions2 && /* @__PURE__ */ (0, import_jsx_runtime138.jsx)("span", { style: { marginBlockStart: "16px" }, children: actions2 })
 ] });
-var NoResults = () => /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
+var NoResults = () => /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(
   EmptyWrapper,
   {
-    heading: (0, import_i18n63.__)("No results found", "jetpack-forms"),
-    body: (0, import_i18n63.__)(
+    heading: (0, import_i18n64.__)("No results found", "jetpack-forms"),
+    body: (0, import_i18n64.__)(
       "Try adjusting your search or filters to find what you're looking for.",
       "jetpack-forms"
     )
   }
 );
-
-// src/dashboard/components/form-name-modal/index.tsx
-var import_components65 = __toESM(require_components(), 1);
-var import_element74 = __toESM(require_element(), 1);
-var import_i18n64 = __toESM(require_i18n(), 1);
-
-// src/dashboard/components/form-name-modal/style.scss
-if (typeof document !== "undefined" && !document.head.querySelector("style[data-wp-hash='8415034dc0']")) {
-  const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "8415034dc0");
-  style.appendChild(document.createTextNode(".jp-forms-name-modal__buttons{display:flex;gap:8px;justify-content:flex-end;margin-block-start:16px}"));
-  document.head.appendChild(style);
-}
-
-// src/dashboard/components/form-name-modal/index.tsx
-var import_jsx_runtime138 = __toESM(require_jsx_runtime(), 1);
-function FormNameModal({
-  isOpen,
-  onClose,
-  onSave,
-  title,
-  initialValue = "",
-  primaryButtonLabel,
-  secondaryButtonLabel,
-  placeholder,
-  inputLabel,
-  fallbackName
-}) {
-  const [name, setName] = (0, import_element74.useState)(initialValue);
-  const [isSaving, setIsSaving] = (0, import_element74.useState)(false);
-  (0, import_element74.useEffect)(() => {
-    if (isOpen) {
-      setName(initialValue);
-    }
-  }, [isOpen, initialValue]);
-  const handleClose = (0, import_element74.useCallback)(() => {
-    if (!isSaving) {
-      onClose();
-    }
-  }, [isSaving, onClose]);
-  const handleConfirm = (0, import_element74.useCallback)(async () => {
-    if (isSaving) {
-      return;
-    }
-    setIsSaving(true);
-    const finalName = name.trim() || fallbackName || (0, import_i18n64.__)("Untitled Form", "jetpack-forms");
-    try {
-      await onSave(finalName);
-    } catch {
-    } finally {
-      setIsSaving(false);
-      onClose();
-    }
-  }, [name, fallbackName, isSaving, onSave, onClose]);
-  const onSubmitForm = (0, import_element74.useCallback)(
-    (event) => {
-      event.preventDefault();
-      handleConfirm();
-    },
-    [handleConfirm]
-  );
-  if (!isOpen) {
-    return null;
-  }
-  return /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components65.Modal, { title, onRequestClose: handleClose, size: "medium", children: /* @__PURE__ */ (0, import_jsx_runtime138.jsxs)("form", { onSubmit: onSubmitForm, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(
-      import_components65.TextControl,
-      {
-        label: inputLabel || (0, import_i18n64.__)("Name", "jetpack-forms"),
-        value: name,
-        onChange: setName,
-        __next40pxDefaultSize: true,
-        placeholder,
-        disabled: isSaving
-      }
-    ),
-    /* @__PURE__ */ (0, import_jsx_runtime138.jsxs)("div", { className: "jp-forms-name-modal__buttons", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components65.Button, { variant: "tertiary", onClick: handleClose, disabled: isSaving, children: secondaryButtonLabel || (0, import_i18n64.__)("Cancel", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components65.Button, { "aria-disabled": isSaving, isBusy: isSaving, variant: "primary", type: "submit", children: primaryButtonLabel || (0, import_i18n64.__)("Save", "jetpack-forms") })
-    ] })
-  ] }) });
-}
 
 // src/dashboard/constants.ts
 var import_i18n65 = __toESM(require_i18n(), 1);
@@ -28592,6 +28634,17 @@ function usePageHeaderDetails(props) {
   const isFormsScreen = screen === "forms";
   const isSingleFormScreen = screen === "responses" && sourceIdNumber !== null;
   const { openNewForm } = useCreateForm();
+  const [isCreateFormModalOpen, setIsCreateFormModalOpen] = (0, import_element95.useState)(false);
+  const handleCreateFormClick = (0, import_element95.useCallback)(() => {
+    setIsCreateFormModalOpen(true);
+  }, []);
+  const closeCreateFormModal = (0, import_element95.useCallback)(() => setIsCreateFormModalOpen(false), []);
+  const handleCreateFormSave = (0, import_element95.useCallback)(
+    async (formName) => {
+      await openNewForm({ formTitle: formName });
+    },
+    [openNewForm]
+  );
   const {
     showExportModal,
     openModal: openExportModal,
@@ -28718,7 +28771,7 @@ function usePageHeaderDetails(props) {
           });
         }
         dropdownControls.push({
-          onClick: () => openNewForm({}),
+          onClick: handleCreateFormClick,
           title: (0, import_i18n86.__)("Create a form", "jetpack-forms")
         });
       } else if (isSingleFormScreen) {
@@ -28761,7 +28814,7 @@ function usePageHeaderDetails(props) {
         }
         if (statusView === "inbox") {
           dropdownControls.push({
-            onClick: () => openNewForm({ showPatterns: false }),
+            onClick: handleCreateFormClick,
             title: (0, import_i18n86.__)("Create a form", "jetpack-forms")
           });
         }
@@ -28800,6 +28853,21 @@ function usePageHeaderDetails(props) {
           "actions-menu"
         ),
         // Include modals when on mobile
+        ...isCreateFormModalOpen ? [
+          /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(
+            FormNameModal,
+            {
+              isOpen: isCreateFormModalOpen,
+              onClose: closeCreateFormModal,
+              onSave: handleCreateFormSave,
+              title: (0, import_i18n86.__)("Create form", "jetpack-forms"),
+              primaryButtonLabel: (0, import_i18n86.__)("Create", "jetpack-forms"),
+              secondaryButtonLabel: (0, import_i18n86.__)("Cancel", "jetpack-forms"),
+              placeholder: (0, import_i18n86.__)("Enter form title", "jetpack-forms")
+            },
+            "create-form-modal"
+          )
+        ] : [],
         ...showExportModal ? [
           /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(
             modal_default,
@@ -28842,7 +28910,7 @@ function usePageHeaderDetails(props) {
     if (isFormsScreen) {
       return [
         ...isIntegrationsEnabled && showDashboardIntegrations ? [/* @__PURE__ */ (0, import_jsx_runtime155.jsx)(ManageIntegrationsButton, { onClick: onOpenIntegrations }, "integrations")] : [],
-        /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(CreateFormButton, { variant: "primary", showIcon: false }, "create")
+        /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(CreateFormButton, { variant: "primary", showIcon: false, showNameModal: true }, "create")
       ];
     }
     if (isSingleFormScreen) {
@@ -28880,7 +28948,8 @@ function usePageHeaderDetails(props) {
           {
             variant: "secondary",
             showPatterns: false,
-            showIcon: false
+            showIcon: false,
+            showNameModal: true
           },
           "create"
         )
@@ -28906,7 +28975,10 @@ function usePageHeaderDetails(props) {
     isSingleFormScreen,
     formItemControls,
     statusView,
-    openNewForm,
+    handleCreateFormClick,
+    isCreateFormModalOpen,
+    closeCreateFormModal,
+    handleCreateFormSave,
     openExportModal,
     showExportModal,
     closeExportModal,
