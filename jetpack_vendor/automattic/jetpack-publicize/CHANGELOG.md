@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Clean up Twitter notices in classic editor.
 - Update dependencies.
+- Update media restrictions for all the networks.
 
 ## [0.73.2] - 2026-03-09
 ### Changed
