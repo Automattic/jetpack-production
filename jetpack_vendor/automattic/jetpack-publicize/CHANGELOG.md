@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 - Update media restrictions for all the networks.
 
+### Removed
+- Clean up Twitter deprecation blocks.
+
 ## [0.73.2] - 2026-03-09
 ### Changed
 - Convert hooks to TypeScript and fix JSDoc return types for `tsgo` compatibility. [#47404]
