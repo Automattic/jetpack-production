@@ -34882,7 +34882,7 @@ function getFormStatusLabel(status) {
 var import_core_data2 = __toESM(require_core_data(), 1);
 var import_element80 = __toESM(require_element(), 1);
 var import_html_entities3 = __toESM(require_html_entities(), 1);
-function getFormsListQuery(page, perPage, search, status) {
+function getFormsListQuery(page, perPage, search, status, hasResponses) {
   const queryParams = {
     context: "edit",
     jetpack_forms_context: "dashboard",
@@ -34895,12 +34895,15 @@ function getFormsListQuery(page, perPage, search, status) {
   if (search) {
     queryParams.search = search;
   }
+  if (hasResponses) {
+    queryParams.has_responses = hasResponses;
+  }
   return queryParams;
 }
-function useFormsData(page, perPage, search, status) {
+function useFormsData(page, perPage, search, status, hasResponses) {
   const query = (0, import_element80.useMemo)(() => {
-    return getFormsListQuery(page, perPage, search, status);
-  }, [page, perPage, search, status]);
+    return getFormsListQuery(page, perPage, search, status, hasResponses);
+  }, [page, perPage, search, status, hasResponses]);
   const {
     records: rawRecords,
     hasResolved,
@@ -38689,7 +38692,7 @@ function StageInner() {
             label: (0, import_html_entities5.decodeEntities)(source.title) || getUrlPath(source.url) || (0, import_i18n88.__)("(no title)", "jetpack-forms")
           })
         ),
-        ...isSingleFormView ? {} : { filterBy: { operators: ["is"] } },
+        filterBy: isSingleFormView ? false : { operators: ["is"] },
         enableSorting: false
       },
       {
