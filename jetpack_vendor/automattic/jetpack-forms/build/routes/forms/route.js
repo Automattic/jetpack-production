@@ -35,13 +35,6 @@ var require_data = __commonJS({
   }
 });
 
-// package-external:@wordpress/i18n
-var require_i18n = __commonJS({
-  "package-external:@wordpress/i18n"(exports, module) {
-    module.exports = window.wp.i18n;
-  }
-});
-
 // package-external:@wordpress/api-fetch
 var require_api_fetch = __commonJS({
   "package-external:@wordpress/api-fetch"(exports, module) {
@@ -59,10 +52,6 @@ var require_url = __commonJS({
 // src/dashboard/wp-build/utils/preload.ts
 var import_data3 = __toESM(require_data(), 1);
 
-// src/dashboard/constants.ts
-var import_i18n = __toESM(require_i18n(), 1);
-var NON_TRASH_FORM_STATUSES = "publish,draft,pending,future,private";
-
 // src/dashboard/store/index.js
 var import_data2 = __toESM(require_data(), 1);
 
@@ -74,11 +63,13 @@ __export(actions_exports, {
   doBulkAction: () => doBulkAction,
   invalidateCounts: () => invalidateCounts,
   invalidateFilters: () => invalidateFilters,
+  invalidateFormStatusCounts: () => invalidateFormStatusCounts,
   markRecordsAsInvalid: () => markRecordsAsInvalid,
   receiveFilters: () => receiveFilters,
   removePendingAction: () => removePendingAction,
   setCounts: () => setCounts,
   setCurrentQuery: () => setCurrentQuery,
+  setFormStatusCounts: () => setFormStatusCounts,
   setSelectedResponses: () => setSelectedResponses,
   updateCountsOptimistically: () => updateCountsOptimistically
 });
@@ -96,6 +87,8 @@ var MARK_RECORDS_AS_INVALID = "MARK_RECORDS_AS_INVALID";
 var CLEAR_INVALID_RECORDS = "CLEAR_INVALID_RECORDS";
 var ADD_PENDING_ACTION = "ADD_PENDING_ACTION";
 var REMOVE_PENDING_ACTION = "REMOVE_PENDING_ACTION";
+var SET_FORM_STATUS_COUNTS = "SET_FORM_STATUS_COUNTS";
+var INVALIDATE_FORM_STATUS_COUNTS = "INVALIDATE_FORM_STATUS_COUNTS";
 
 // src/dashboard/store/actions.js
 function receiveFilters(filters2) {
@@ -173,6 +166,15 @@ function removePendingAction(actionId) {
     actionId
   };
 }
+function setFormStatusCounts(formStatusCounts2) {
+  return {
+    type: SET_FORM_STATUS_COUNTS,
+    formStatusCounts: formStatusCounts2
+  };
+}
+var invalidateFormStatusCounts = () => {
+  return { type: INVALIDATE_FORM_STATUS_COUNTS };
+};
 var doBulkAction = (ids, action) => async () => {
   try {
     await (0, import_api_fetch.default)({
@@ -282,20 +284,28 @@ var pendingActions = (state = /* @__PURE__ */ new Set(), action) => {
   }
   return state;
 };
+var formStatusCounts = (state = null, action) => {
+  if (action.type === SET_FORM_STATUS_COUNTS) {
+    return action.formStatusCounts;
+  }
+  return state;
+};
 var reducer_default = (0, import_data.combineReducers)({
   selectedResponsesFromCurrentDataset,
   filters,
   currentQuery,
   counts,
   invalidRecords,
-  pendingActions
+  pendingActions,
+  formStatusCounts
 });
 
 // src/dashboard/store/resolvers.js
 var resolvers_exports = {};
 __export(resolvers_exports, {
   getCounts: () => getCounts,
-  getFilters: () => getFilters
+  getFilters: () => getFilters,
+  getFormStatusCounts: () => getFormStatusCounts
 });
 var import_api_fetch2 = __toESM(require_api_fetch(), 1);
 var import_url = __toESM(require_url(), 1);
@@ -328,6 +338,11 @@ var getCounts = (queryParams = {}) => async ({ dispatch }) => {
   dispatch.setCounts(response, queryParams);
 };
 getCounts.shouldInvalidate = (action) => action.type === INVALIDATE_COUNTS;
+var getFormStatusCounts = () => async ({ dispatch }) => {
+  const response = await (0, import_api_fetch2.default)({ path: "/wp/v2/jetpack-forms/status-counts" });
+  dispatch.setFormStatusCounts(response);
+};
+getFormStatusCounts.shouldInvalidate = (action) => action.type === INVALIDATE_FORM_STATUS_COUNTS;
 
 // src/dashboard/store/selectors.js
 var selectors_exports = {};
@@ -336,6 +351,7 @@ __export(selectors_exports, {
   getCurrentQuery: () => getCurrentQuery,
   getCurrentStatus: () => getCurrentStatus,
   getFilters: () => getFilters2,
+  getFormStatusCounts: () => getFormStatusCounts2,
   getInboxCount: () => getInboxCount,
   getInvalidRecords: () => getInvalidRecords,
   getPendingActions: () => getPendingActions,
@@ -379,6 +395,9 @@ var getPendingActions = (state) => {
 var hasPendingActions = (state) => {
   return (state.pendingActions?.size ?? 0) > 0;
 };
+var getFormStatusCounts2 = (state) => {
+  return state.formStatusCounts;
+};
 
 // src/dashboard/store/index.js
 var STORE_NAME = "FORM_RESPONSES";
@@ -392,21 +411,10 @@ var store = (0, import_data2.createReduxStore)(STORE_NAME, {
 
 // src/dashboard/wp-build/utils/preload.ts
 async function preloadGlobalInboxCounts() {
-  await (0, import_data3.resolveSelect)(STORE_NAME).getCounts();
-}
-async function preloadGlobalNonTrashFormsCount() {
-  await (0, import_data3.resolveSelect)("core").getEntityRecords("postType", "jetpack_form", {
-    context: "edit",
-    jetpack_forms_context: "dashboard",
-    order: "desc",
-    orderby: "modified",
-    page: 1,
-    per_page: 1,
-    status: NON_TRASH_FORM_STATUSES
-  });
+  await (0, import_data3.resolveSelect)(STORE_NAME).getCounts({});
 }
 async function preloadGlobalTabCounts() {
-  await Promise.all([preloadGlobalInboxCounts(), preloadGlobalNonTrashFormsCount()]);
+  await preloadGlobalInboxCounts();
 }
 
 // routes/forms/route.tsx

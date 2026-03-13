@@ -4546,7 +4546,7 @@ var page_default = Page;
 // routes/forms/stage.tsx
 var import_components78 = __toESM(require_components());
 var import_core_data7 = __toESM(require_core_data());
-var import_data34 = __toESM(require_data());
+var import_data35 = __toESM(require_data());
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.28_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
 var import_element54 = __toESM(require_element(), 1);
@@ -25505,9 +25505,22 @@ var NoResults = () => /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(
 
 // src/dashboard/constants.ts
 var import_i18n65 = __toESM(require_i18n(), 1);
-var NON_TRASH_FORM_STATUSES = "publish,draft,pending,future,private";
+var FORM_STATUSES = [
+  "all",
+  "publish",
+  "draft",
+  "pending",
+  "future",
+  "private",
+  "trash"
+];
+var NON_TRASH_FORM_STATUSES = FORM_STATUSES.filter(
+  (s2) => s2 !== "all" && s2 !== "trash"
+).join(",");
 function getFormStatusLabel(status) {
   switch (status) {
+    case "all":
+      return (0, import_i18n65.__)("All", "jetpack-forms");
     case "publish":
       return (0, import_i18n65.__)("Published", "jetpack-forms");
     case "draft":
@@ -25526,10 +25539,367 @@ function getFormStatusLabel(status) {
 }
 
 // src/dashboard/hooks/use-delete-form.ts
-var import_data11 = __toESM(require_data(), 1);
+var import_data13 = __toESM(require_data(), 1);
 var import_element76 = __toESM(require_element(), 1);
 var import_i18n66 = __toESM(require_i18n(), 1);
 var import_notices2 = __toESM(require_notices(), 1);
+
+// src/dashboard/store/index.js
+var import_data12 = __toESM(require_data(), 1);
+
+// src/dashboard/store/actions.js
+var actions_exports3 = {};
+__export(actions_exports3, {
+  addPendingAction: () => addPendingAction,
+  clearInvalidRecords: () => clearInvalidRecords,
+  doBulkAction: () => doBulkAction,
+  invalidateCounts: () => invalidateCounts,
+  invalidateFilters: () => invalidateFilters,
+  invalidateFormStatusCounts: () => invalidateFormStatusCounts,
+  markRecordsAsInvalid: () => markRecordsAsInvalid,
+  receiveFilters: () => receiveFilters,
+  removePendingAction: () => removePendingAction,
+  setCounts: () => setCounts,
+  setCurrentQuery: () => setCurrentQuery,
+  setFormStatusCounts: () => setFormStatusCounts,
+  setSelectedResponses: () => setSelectedResponses,
+  updateCountsOptimistically: () => updateCountsOptimistically
+});
+var import_api_fetch5 = __toESM(require_api_fetch(), 1);
+
+// src/dashboard/store/action-types.js
+var RECEIVE_FILTERS = "RECEIVE_FILTERS";
+var INVALIDATE_FILTERS = "INVALIDATE_FILTERS";
+var SET_CURRENT_QUERY = "SET_CURRENT_QUERY";
+var SET_SELECTED_RESPONSES = "SET_SELECTED_RESPONSES";
+var SET_COUNTS = "SET_COUNTS";
+var UPDATE_COUNTS_OPTIMISTICALLY = "UPDATE_COUNTS_OPTIMISTICALLY";
+var INVALIDATE_COUNTS = "INVALIDATE_COUNTS";
+var MARK_RECORDS_AS_INVALID = "MARK_RECORDS_AS_INVALID";
+var CLEAR_INVALID_RECORDS = "CLEAR_INVALID_RECORDS";
+var ADD_PENDING_ACTION = "ADD_PENDING_ACTION";
+var REMOVE_PENDING_ACTION = "REMOVE_PENDING_ACTION";
+var SET_FORM_STATUS_COUNTS = "SET_FORM_STATUS_COUNTS";
+var INVALIDATE_FORM_STATUS_COUNTS = "INVALIDATE_FORM_STATUS_COUNTS";
+
+// src/dashboard/store/actions.js
+function receiveFilters(filters2) {
+  return {
+    type: RECEIVE_FILTERS,
+    filters: filters2
+  };
+}
+var invalidateFilters = () => {
+  return { type: INVALIDATE_FILTERS };
+};
+var invalidateCounts = () => {
+  return { type: INVALIDATE_COUNTS };
+};
+var setSelectedResponses = (selectedResponses) => ({
+  type: SET_SELECTED_RESPONSES,
+  selectedResponses
+});
+function setCurrentQuery(currentQuery2) {
+  return ({ dispatch: dispatch4, select: select3, registry }) => {
+    const previousQuery = select3.getCurrentQuery();
+    const queryWithFormat = {
+      ...currentQuery2,
+      fields_format: currentQuery2.fields_format ?? previousQuery.fields_format ?? "collection"
+    };
+    const filtersChanged = previousQuery.status !== queryWithFormat.status || previousQuery.search !== queryWithFormat.search || previousQuery.is_unread !== queryWithFormat.is_unread || previousQuery.parent !== queryWithFormat.parent || previousQuery.before !== queryWithFormat.before || previousQuery.after !== queryWithFormat.after;
+    if (filtersChanged) {
+      dispatch4(clearInvalidRecords());
+      if (registry && registry.dispatch("core")) {
+        registry.dispatch("core").invalidateResolution("getEntityRecords", ["postType", "feedback", queryWithFormat]);
+      }
+    }
+    dispatch4({
+      type: SET_CURRENT_QUERY,
+      currentQuery: queryWithFormat
+    });
+  };
+}
+function setCounts(counts2, queryParams = {}) {
+  return {
+    type: SET_COUNTS,
+    counts: counts2,
+    queryParams
+  };
+}
+function updateCountsOptimistically(fromStatus, toStatus, count = 1, queryParams = {}) {
+  return {
+    type: UPDATE_COUNTS_OPTIMISTICALLY,
+    fromStatus,
+    toStatus,
+    count,
+    queryParams
+  };
+}
+function markRecordsAsInvalid(recordIds) {
+  return {
+    type: MARK_RECORDS_AS_INVALID,
+    recordIds
+  };
+}
+function clearInvalidRecords() {
+  return {
+    type: CLEAR_INVALID_RECORDS
+  };
+}
+function addPendingAction(actionId) {
+  return {
+    type: ADD_PENDING_ACTION,
+    actionId
+  };
+}
+function removePendingAction(actionId) {
+  return {
+    type: REMOVE_PENDING_ACTION,
+    actionId
+  };
+}
+function setFormStatusCounts(formStatusCounts2) {
+  return {
+    type: SET_FORM_STATUS_COUNTS,
+    formStatusCounts: formStatusCounts2
+  };
+}
+var invalidateFormStatusCounts = () => {
+  return { type: INVALIDATE_FORM_STATUS_COUNTS };
+};
+var doBulkAction = (ids, action) => async () => {
+  try {
+    await (0, import_api_fetch5.default)({
+      path: `wp/v2/feedback/bulk_actions`,
+      method: "POST",
+      data: {
+        action,
+        post_ids: ids
+      }
+    });
+  } catch {
+  }
+};
+
+// src/dashboard/store/reducer.js
+var import_data11 = __toESM(require_data(), 1);
+var filters = (state = {}, action) => {
+  if (action.type === RECEIVE_FILTERS) {
+    return action.filters;
+  }
+  return state;
+};
+var currentQuery = (state = {
+  order: "desc",
+  orderby: "date",
+  page: 1,
+  per_page: 20,
+  status: "draft,publish",
+  fields_format: "collection"
+}, action) => {
+  if (action.type === SET_CURRENT_QUERY) {
+    return action.currentQuery;
+  }
+  return state;
+};
+var selectedResponsesFromCurrentDataset = (state = [], action) => {
+  if (action.type === SET_SELECTED_RESPONSES) {
+    return action.selectedResponses;
+  }
+  return state;
+};
+var normalizeValue2 = (value) => {
+  if (Array.isArray(value)) {
+    return value.slice().sort().join(",");
+  }
+  if (typeof value === "boolean") {
+    return value ? "1" : "0";
+  }
+  return String(value);
+};
+var getCacheKey = (queryParams = {}) => {
+  const keys = ["search", "parent", "before", "after", "is_unread"];
+  const parts = keys.filter((key) => queryParams[key] !== void 0).map((key) => `${key}:${normalizeValue2(queryParams[key])}`);
+  return parts.length > 0 ? parts.join("|") : "default";
+};
+var counts = (state = {}, action) => {
+  if (action.type === SET_COUNTS) {
+    const cacheKey = getCacheKey(action.queryParams);
+    return {
+      ...state,
+      [cacheKey]: action.counts
+    };
+  }
+  if (action.type === UPDATE_COUNTS_OPTIMISTICALLY) {
+    const { fromStatus, toStatus, count, queryParams } = action;
+    const cacheKey = getCacheKey(queryParams);
+    const currentCounts = state[cacheKey] || { inbox: 0, spam: 0, trash: 0 };
+    const newCounts = { ...currentCounts };
+    if (fromStatus === "inbox" || fromStatus === "publish" || fromStatus === "draft") {
+      newCounts.inbox = Math.max(0, newCounts.inbox - count);
+    } else if (fromStatus === "spam") {
+      newCounts.spam = Math.max(0, newCounts.spam - count);
+    } else if (fromStatus === "trash") {
+      newCounts.trash = Math.max(0, newCounts.trash - count);
+    }
+    if (toStatus === "publish" || toStatus === "draft") {
+      newCounts.inbox += count;
+    } else if (toStatus === "spam") {
+      newCounts.spam += count;
+    } else if (toStatus === "trash") {
+      newCounts.trash += count;
+    }
+    return {
+      ...state,
+      [cacheKey]: newCounts
+    };
+  }
+  return state;
+};
+var invalidRecords = (state = /* @__PURE__ */ new Set(), action) => {
+  if (action.type === MARK_RECORDS_AS_INVALID) {
+    return /* @__PURE__ */ new Set([...state, ...action.recordIds]);
+  }
+  if (action.type === CLEAR_INVALID_RECORDS) {
+    return /* @__PURE__ */ new Set();
+  }
+  return state;
+};
+var pendingActions = (state = /* @__PURE__ */ new Set(), action) => {
+  if (action.type === ADD_PENDING_ACTION) {
+    return /* @__PURE__ */ new Set([...state, action.actionId]);
+  }
+  if (action.type === REMOVE_PENDING_ACTION) {
+    const newState = new Set(state);
+    newState.delete(action.actionId);
+    return newState;
+  }
+  return state;
+};
+var formStatusCounts = (state = null, action) => {
+  if (action.type === SET_FORM_STATUS_COUNTS) {
+    return action.formStatusCounts;
+  }
+  return state;
+};
+var reducer_default = (0, import_data11.combineReducers)({
+  selectedResponsesFromCurrentDataset,
+  filters,
+  currentQuery,
+  counts,
+  invalidRecords,
+  pendingActions,
+  formStatusCounts
+});
+
+// src/dashboard/store/resolvers.js
+var resolvers_exports3 = {};
+__export(resolvers_exports3, {
+  getCounts: () => getCounts,
+  getFilters: () => getFilters,
+  getFormStatusCounts: () => getFormStatusCounts
+});
+var import_api_fetch6 = __toESM(require_api_fetch(), 1);
+var import_url4 = __toESM(require_url(), 1);
+var getFilters = () => async ({ dispatch: dispatch4 }) => {
+  const results = await (0, import_api_fetch6.default)({
+    path: "/wp/v2/feedback/filters"
+  });
+  dispatch4.receiveFilters(results);
+};
+getFilters.shouldInvalidate = (action) => action.type === INVALIDATE_FILTERS;
+var getCounts = (queryParams = {}) => async ({ dispatch: dispatch4 }) => {
+  const params = {};
+  if (queryParams?.search) {
+    params.search = queryParams.search;
+  }
+  if (queryParams?.parent) {
+    params.parent = queryParams.parent;
+  }
+  if (queryParams?.before) {
+    params.before = queryParams.before;
+  }
+  if (queryParams?.after) {
+    params.after = queryParams.after;
+  }
+  if (queryParams?.is_unread !== void 0) {
+    params.is_unread = queryParams.is_unread;
+  }
+  const path = (0, import_url4.addQueryArgs)("/wp/v2/feedback/counts", params);
+  const response = await (0, import_api_fetch6.default)({ path });
+  dispatch4.setCounts(response, queryParams);
+};
+getCounts.shouldInvalidate = (action) => action.type === INVALIDATE_COUNTS;
+var getFormStatusCounts = () => async ({ dispatch: dispatch4 }) => {
+  const response = await (0, import_api_fetch6.default)({ path: "/wp/v2/jetpack-forms/status-counts" });
+  dispatch4.setFormStatusCounts(response);
+};
+getFormStatusCounts.shouldInvalidate = (action) => action.type === INVALIDATE_FORM_STATUS_COUNTS;
+
+// src/dashboard/store/selectors.js
+var selectors_exports3 = {};
+__export(selectors_exports3, {
+  getCounts: () => getCounts2,
+  getCurrentQuery: () => getCurrentQuery,
+  getCurrentStatus: () => getCurrentStatus,
+  getFilters: () => getFilters2,
+  getFormStatusCounts: () => getFormStatusCounts2,
+  getInboxCount: () => getInboxCount,
+  getInvalidRecords: () => getInvalidRecords,
+  getPendingActions: () => getPendingActions,
+  getSelectedResponsesCount: () => getSelectedResponsesCount,
+  getSelectedResponsesFromCurrentDataset: () => getSelectedResponsesFromCurrentDataset,
+  getSpamCount: () => getSpamCount,
+  getTrashCount: () => getTrashCount,
+  hasPendingActions: () => hasPendingActions,
+  isRecordInvalid: () => isRecordInvalid
+});
+var getFilters2 = (state) => state.filters;
+var getCurrentQuery = (state) => state.currentQuery;
+var getCurrentStatus = (state) => state.currentQuery?.status ?? "draft,publish";
+var getSelectedResponsesFromCurrentDataset = (state) => state.selectedResponsesFromCurrentDataset;
+var getSelectedResponsesCount = (state) => state.selectedResponsesFromCurrentDataset.length;
+var getCounts2 = (state, queryParams = {}) => {
+  const cacheKey = getCacheKey(queryParams);
+  return state.counts[cacheKey] || { inbox: 0, spam: 0, trash: 0 };
+};
+var getInboxCount = (state, queryParams = {}) => {
+  const counts2 = getCounts2(state, queryParams);
+  return counts2.inbox;
+};
+var getSpamCount = (state, queryParams = {}) => {
+  const counts2 = getCounts2(state, queryParams);
+  return counts2.spam;
+};
+var getTrashCount = (state, queryParams = {}) => {
+  const counts2 = getCounts2(state, queryParams);
+  return counts2.trash;
+};
+var getInvalidRecords = (state) => {
+  return state.invalidRecords || /* @__PURE__ */ new Set();
+};
+var isRecordInvalid = (state, recordId) => {
+  return state.invalidRecords?.has(recordId) || false;
+};
+var getPendingActions = (state) => {
+  return state.pendingActions || /* @__PURE__ */ new Set();
+};
+var hasPendingActions = (state) => {
+  return (state.pendingActions?.size ?? 0) > 0;
+};
+var getFormStatusCounts2 = (state) => {
+  return state.formStatusCounts;
+};
+
+// src/dashboard/store/index.js
+var STORE_NAME = "FORM_RESPONSES";
+var store3 = (0, import_data12.createReduxStore)(STORE_NAME, {
+  actions: actions_exports3,
+  reducer: reducer_default,
+  selectors: selectors_exports3,
+  resolvers: resolvers_exports3
+});
+(0, import_data12.register)(store3);
 
 // src/dashboard/hooks/use-forms-data.ts
 var import_core_data = __toESM(require_core_data(), 1);
@@ -25601,10 +25971,11 @@ function useDeleteForm({
   const [isDeleting, setIsDeleting] = (0, import_element76.useState)(false);
   const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element76.useState)(false);
   const [permanentDeleteItems, setPermanentDeleteItems] = (0, import_element76.useState)([]);
-  const { saveEntityRecord, deleteEntityRecord, invalidateResolution } = (0, import_data11.useDispatch)(
+  const { saveEntityRecord, deleteEntityRecord, invalidateResolution } = (0, import_data13.useDispatch)(
     "core"
   );
-  const { createSuccessNotice, createErrorNotice } = (0, import_data11.useDispatch)(import_notices2.store);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data13.useDispatch)(import_notices2.store);
+  const { invalidateFormStatusCounts: invalidateFormStatusCounts2 } = (0, import_data13.useDispatch)(store3);
   const page = view.page ?? 1;
   const perPage = view.perPage ?? 20;
   const search = view.search ?? "";
@@ -25690,6 +26061,7 @@ function useDeleteForm({
       } finally {
         setIsDeleting(false);
         invalidateListQueries(currentQuerySnapshot);
+        invalidateFormStatusCounts2();
         if (shouldNavigateToPreviousPage) {
           invalidateListQueries(
             getFormsListQuery(page - 1, perPage, search, statusQuery)
@@ -25699,6 +26071,7 @@ function useDeleteForm({
     },
     [
       currentQuery2,
+      invalidateFormStatusCounts2,
       invalidateListQueries,
       isDeleting,
       page,
@@ -25726,9 +26099,16 @@ function useDeleteForm({
       } finally {
         setIsDeleting(false);
         invalidateListQueries(currentQuerySnapshot);
+        invalidateFormStatusCounts2();
       }
     },
-    [currentQuery2, invalidateListQueries, isDeleting, restoreItemsToPublish]
+    [
+      currentQuery2,
+      invalidateFormStatusCounts2,
+      invalidateListQueries,
+      isDeleting,
+      restoreItemsToPublish
+    ]
   );
   const trashForms = (0, import_element76.useCallback)(
     async (items) => {
@@ -25799,6 +26179,7 @@ function useDeleteForm({
       } finally {
         setIsDeleting(false);
         invalidateListQueries(currentQuerySnapshot);
+        invalidateFormStatusCounts2();
         if (shouldNavigateToPreviousPage) {
           invalidateListQueries(
             getFormsListQuery(page - 1, perPage, search, statusQuery)
@@ -25811,6 +26192,7 @@ function useDeleteForm({
       createSuccessNotice,
       currentQuery2,
       deleteEntityRecord,
+      invalidateFormStatusCounts2,
       invalidateListQueries,
       isDeleting,
       page,
@@ -25897,6 +26279,7 @@ function useDeleteForm({
       setIsDeleting(false);
       setPermanentDeleteItems([]);
       invalidateListQueries(currentQuerySnapshot);
+      invalidateFormStatusCounts2();
       if (shouldNavigateToPreviousPage) {
         invalidateListQueries(
           getFormsListQuery(page - 1, perPage, search, statusQuery)
@@ -25908,6 +26291,7 @@ function useDeleteForm({
     createSuccessNotice,
     currentQuery2,
     deleteEntityRecord,
+    invalidateFormStatusCounts2,
     invalidateListQueries,
     isDeleting,
     page,
@@ -25928,6 +26312,24 @@ function useDeleteForm({
     closePermanentDeleteConfirm,
     confirmPermanentDelete
   };
+}
+
+// src/dashboard/hooks/use-form-status-counts.ts
+var import_data14 = __toESM(require_data(), 1);
+var DEFAULT_COUNTS = {
+  all: 0,
+  publish: 0,
+  draft: 0,
+  pending: 0,
+  future: 0,
+  private: 0,
+  trash: 0
+};
+function useFormStatusCounts() {
+  return (0, import_data14.useSelect)(
+    (select3) => select3(store3).getFormStatusCounts() ?? DEFAULT_COUNTS,
+    []
+  );
 }
 
 // src/dashboard/router/wp-route-dashboard-search-params-provider.tsx
@@ -26022,337 +26424,10 @@ function WpRouteDashboardSearchParamsProvider({
 }
 
 // src/dashboard/wp-build/components/dataviews-header-row/index.tsx
-var import_data14 = __toESM(require_data(), 1);
+var import_data15 = __toESM(require_data(), 1);
 var import_element80 = __toESM(require_element(), 1);
 var import_i18n68 = __toESM(require_i18n(), 1);
 import { useNavigate as useNavigate2 } from "@wordpress/route";
-
-// src/dashboard/store/index.js
-var import_data13 = __toESM(require_data(), 1);
-
-// src/dashboard/store/actions.js
-var actions_exports3 = {};
-__export(actions_exports3, {
-  addPendingAction: () => addPendingAction,
-  clearInvalidRecords: () => clearInvalidRecords,
-  doBulkAction: () => doBulkAction,
-  invalidateCounts: () => invalidateCounts,
-  invalidateFilters: () => invalidateFilters,
-  markRecordsAsInvalid: () => markRecordsAsInvalid,
-  receiveFilters: () => receiveFilters,
-  removePendingAction: () => removePendingAction,
-  setCounts: () => setCounts,
-  setCurrentQuery: () => setCurrentQuery,
-  setSelectedResponses: () => setSelectedResponses,
-  updateCountsOptimistically: () => updateCountsOptimistically
-});
-var import_api_fetch5 = __toESM(require_api_fetch(), 1);
-
-// src/dashboard/store/action-types.js
-var RECEIVE_FILTERS = "RECEIVE_FILTERS";
-var INVALIDATE_FILTERS = "INVALIDATE_FILTERS";
-var SET_CURRENT_QUERY = "SET_CURRENT_QUERY";
-var SET_SELECTED_RESPONSES = "SET_SELECTED_RESPONSES";
-var SET_COUNTS = "SET_COUNTS";
-var UPDATE_COUNTS_OPTIMISTICALLY = "UPDATE_COUNTS_OPTIMISTICALLY";
-var INVALIDATE_COUNTS = "INVALIDATE_COUNTS";
-var MARK_RECORDS_AS_INVALID = "MARK_RECORDS_AS_INVALID";
-var CLEAR_INVALID_RECORDS = "CLEAR_INVALID_RECORDS";
-var ADD_PENDING_ACTION = "ADD_PENDING_ACTION";
-var REMOVE_PENDING_ACTION = "REMOVE_PENDING_ACTION";
-
-// src/dashboard/store/actions.js
-function receiveFilters(filters2) {
-  return {
-    type: RECEIVE_FILTERS,
-    filters: filters2
-  };
-}
-var invalidateFilters = () => {
-  return { type: INVALIDATE_FILTERS };
-};
-var invalidateCounts = () => {
-  return { type: INVALIDATE_COUNTS };
-};
-var setSelectedResponses = (selectedResponses) => ({
-  type: SET_SELECTED_RESPONSES,
-  selectedResponses
-});
-function setCurrentQuery(currentQuery2) {
-  return ({ dispatch: dispatch4, select: select3, registry }) => {
-    const previousQuery = select3.getCurrentQuery();
-    const queryWithFormat = {
-      ...currentQuery2,
-      fields_format: currentQuery2.fields_format ?? previousQuery.fields_format ?? "collection"
-    };
-    const filtersChanged = previousQuery.status !== queryWithFormat.status || previousQuery.search !== queryWithFormat.search || previousQuery.is_unread !== queryWithFormat.is_unread || previousQuery.parent !== queryWithFormat.parent || previousQuery.before !== queryWithFormat.before || previousQuery.after !== queryWithFormat.after;
-    if (filtersChanged) {
-      dispatch4(clearInvalidRecords());
-      if (registry && registry.dispatch("core")) {
-        registry.dispatch("core").invalidateResolution("getEntityRecords", ["postType", "feedback", queryWithFormat]);
-      }
-    }
-    dispatch4({
-      type: SET_CURRENT_QUERY,
-      currentQuery: queryWithFormat
-    });
-  };
-}
-function setCounts(counts2, queryParams = {}) {
-  return {
-    type: SET_COUNTS,
-    counts: counts2,
-    queryParams
-  };
-}
-function updateCountsOptimistically(fromStatus, toStatus, count = 1, queryParams = {}) {
-  return {
-    type: UPDATE_COUNTS_OPTIMISTICALLY,
-    fromStatus,
-    toStatus,
-    count,
-    queryParams
-  };
-}
-function markRecordsAsInvalid(recordIds) {
-  return {
-    type: MARK_RECORDS_AS_INVALID,
-    recordIds
-  };
-}
-function clearInvalidRecords() {
-  return {
-    type: CLEAR_INVALID_RECORDS
-  };
-}
-function addPendingAction(actionId) {
-  return {
-    type: ADD_PENDING_ACTION,
-    actionId
-  };
-}
-function removePendingAction(actionId) {
-  return {
-    type: REMOVE_PENDING_ACTION,
-    actionId
-  };
-}
-var doBulkAction = (ids, action) => async () => {
-  try {
-    await (0, import_api_fetch5.default)({
-      path: `wp/v2/feedback/bulk_actions`,
-      method: "POST",
-      data: {
-        action,
-        post_ids: ids
-      }
-    });
-  } catch {
-  }
-};
-
-// src/dashboard/store/reducer.js
-var import_data12 = __toESM(require_data(), 1);
-var filters = (state = {}, action) => {
-  if (action.type === RECEIVE_FILTERS) {
-    return action.filters;
-  }
-  return state;
-};
-var currentQuery = (state = {
-  order: "desc",
-  orderby: "date",
-  page: 1,
-  per_page: 20,
-  status: "draft,publish",
-  fields_format: "collection"
-}, action) => {
-  if (action.type === SET_CURRENT_QUERY) {
-    return action.currentQuery;
-  }
-  return state;
-};
-var selectedResponsesFromCurrentDataset = (state = [], action) => {
-  if (action.type === SET_SELECTED_RESPONSES) {
-    return action.selectedResponses;
-  }
-  return state;
-};
-var normalizeValue2 = (value) => {
-  if (Array.isArray(value)) {
-    return value.slice().sort().join(",");
-  }
-  if (typeof value === "boolean") {
-    return value ? "1" : "0";
-  }
-  return String(value);
-};
-var getCacheKey = (queryParams = {}) => {
-  const keys = ["search", "parent", "before", "after", "is_unread"];
-  const parts = keys.filter((key) => queryParams[key] !== void 0).map((key) => `${key}:${normalizeValue2(queryParams[key])}`);
-  return parts.length > 0 ? parts.join("|") : "default";
-};
-var counts = (state = {}, action) => {
-  if (action.type === SET_COUNTS) {
-    const cacheKey = getCacheKey(action.queryParams);
-    return {
-      ...state,
-      [cacheKey]: action.counts
-    };
-  }
-  if (action.type === UPDATE_COUNTS_OPTIMISTICALLY) {
-    const { fromStatus, toStatus, count, queryParams } = action;
-    const cacheKey = getCacheKey(queryParams);
-    const currentCounts = state[cacheKey] || { inbox: 0, spam: 0, trash: 0 };
-    const newCounts = { ...currentCounts };
-    if (fromStatus === "inbox" || fromStatus === "publish" || fromStatus === "draft") {
-      newCounts.inbox = Math.max(0, newCounts.inbox - count);
-    } else if (fromStatus === "spam") {
-      newCounts.spam = Math.max(0, newCounts.spam - count);
-    } else if (fromStatus === "trash") {
-      newCounts.trash = Math.max(0, newCounts.trash - count);
-    }
-    if (toStatus === "publish" || toStatus === "draft") {
-      newCounts.inbox += count;
-    } else if (toStatus === "spam") {
-      newCounts.spam += count;
-    } else if (toStatus === "trash") {
-      newCounts.trash += count;
-    }
-    return {
-      ...state,
-      [cacheKey]: newCounts
-    };
-  }
-  return state;
-};
-var invalidRecords = (state = /* @__PURE__ */ new Set(), action) => {
-  if (action.type === MARK_RECORDS_AS_INVALID) {
-    return /* @__PURE__ */ new Set([...state, ...action.recordIds]);
-  }
-  if (action.type === CLEAR_INVALID_RECORDS) {
-    return /* @__PURE__ */ new Set();
-  }
-  return state;
-};
-var pendingActions = (state = /* @__PURE__ */ new Set(), action) => {
-  if (action.type === ADD_PENDING_ACTION) {
-    return /* @__PURE__ */ new Set([...state, action.actionId]);
-  }
-  if (action.type === REMOVE_PENDING_ACTION) {
-    const newState = new Set(state);
-    newState.delete(action.actionId);
-    return newState;
-  }
-  return state;
-};
-var reducer_default = (0, import_data12.combineReducers)({
-  selectedResponsesFromCurrentDataset,
-  filters,
-  currentQuery,
-  counts,
-  invalidRecords,
-  pendingActions
-});
-
-// src/dashboard/store/resolvers.js
-var resolvers_exports3 = {};
-__export(resolvers_exports3, {
-  getCounts: () => getCounts,
-  getFilters: () => getFilters
-});
-var import_api_fetch6 = __toESM(require_api_fetch(), 1);
-var import_url4 = __toESM(require_url(), 1);
-var getFilters = () => async ({ dispatch: dispatch4 }) => {
-  const results = await (0, import_api_fetch6.default)({
-    path: "/wp/v2/feedback/filters"
-  });
-  dispatch4.receiveFilters(results);
-};
-getFilters.shouldInvalidate = (action) => action.type === INVALIDATE_FILTERS;
-var getCounts = (queryParams = {}) => async ({ dispatch: dispatch4 }) => {
-  const params = {};
-  if (queryParams?.search) {
-    params.search = queryParams.search;
-  }
-  if (queryParams?.parent) {
-    params.parent = queryParams.parent;
-  }
-  if (queryParams?.before) {
-    params.before = queryParams.before;
-  }
-  if (queryParams?.after) {
-    params.after = queryParams.after;
-  }
-  if (queryParams?.is_unread !== void 0) {
-    params.is_unread = queryParams.is_unread;
-  }
-  const path = (0, import_url4.addQueryArgs)("/wp/v2/feedback/counts", params);
-  const response = await (0, import_api_fetch6.default)({ path });
-  dispatch4.setCounts(response, queryParams);
-};
-getCounts.shouldInvalidate = (action) => action.type === INVALIDATE_COUNTS;
-
-// src/dashboard/store/selectors.js
-var selectors_exports3 = {};
-__export(selectors_exports3, {
-  getCounts: () => getCounts2,
-  getCurrentQuery: () => getCurrentQuery,
-  getCurrentStatus: () => getCurrentStatus,
-  getFilters: () => getFilters2,
-  getInboxCount: () => getInboxCount,
-  getInvalidRecords: () => getInvalidRecords,
-  getPendingActions: () => getPendingActions,
-  getSelectedResponsesCount: () => getSelectedResponsesCount,
-  getSelectedResponsesFromCurrentDataset: () => getSelectedResponsesFromCurrentDataset,
-  getSpamCount: () => getSpamCount,
-  getTrashCount: () => getTrashCount,
-  hasPendingActions: () => hasPendingActions,
-  isRecordInvalid: () => isRecordInvalid
-});
-var getFilters2 = (state) => state.filters;
-var getCurrentQuery = (state) => state.currentQuery;
-var getCurrentStatus = (state) => state.currentQuery?.status ?? "draft,publish";
-var getSelectedResponsesFromCurrentDataset = (state) => state.selectedResponsesFromCurrentDataset;
-var getSelectedResponsesCount = (state) => state.selectedResponsesFromCurrentDataset.length;
-var getCounts2 = (state, queryParams = {}) => {
-  const cacheKey = getCacheKey(queryParams);
-  return state.counts[cacheKey] || { inbox: 0, spam: 0, trash: 0 };
-};
-var getInboxCount = (state, queryParams = {}) => {
-  const counts2 = getCounts2(state, queryParams);
-  return counts2.inbox;
-};
-var getSpamCount = (state, queryParams = {}) => {
-  const counts2 = getCounts2(state, queryParams);
-  return counts2.spam;
-};
-var getTrashCount = (state, queryParams = {}) => {
-  const counts2 = getCounts2(state, queryParams);
-  return counts2.trash;
-};
-var getInvalidRecords = (state) => {
-  return state.invalidRecords || /* @__PURE__ */ new Set();
-};
-var isRecordInvalid = (state, recordId) => {
-  return state.invalidRecords?.has(recordId) || false;
-};
-var getPendingActions = (state) => {
-  return state.pendingActions || /* @__PURE__ */ new Set();
-};
-var hasPendingActions = (state) => {
-  return (state.pendingActions?.size ?? 0) > 0;
-};
-
-// src/dashboard/store/index.js
-var STORE_NAME = "FORM_RESPONSES";
-var store3 = (0, import_data13.createReduxStore)(STORE_NAME, {
-  actions: actions_exports3,
-  reducer: reducer_default,
-  selectors: selectors_exports3,
-  resolvers: resolvers_exports3
-});
-(0, import_data13.register)(store3);
 
 // src/dashboard/wp-build/components/inbox-status-toggle/index.tsx
 var import_element79 = __toESM(require_element(), 1);
@@ -26419,10 +26494,10 @@ function DataViewsHeaderRow({
   onStatusChange
 }) {
   const navigate = useNavigate2();
-  const { totalItems: formsCount = 0 } = useFormsData(1, 1, "", NON_TRASH_FORM_STATUSES);
-  const responsesInboxCount = (0, import_data14.useSelect)((select3) => {
-    select3(store3).getCounts();
-    return select3(store3).getInboxCount() ?? 0;
+  const { all: formsCount } = useFormStatusCounts();
+  const responsesInboxCount = (0, import_data15.useSelect)((select3) => {
+    select3(store3).getCounts({});
+    return select3(store3).getInboxCount({}) ?? 0;
   }, []);
   const onTabChange = (0, import_element80.useCallback)(
     (nextValue) => {
@@ -26498,20 +26573,21 @@ function FormsHelpModal({ isOpen, onClose }) {
 
 // src/dashboard/wp-build/hooks/use-form-item-actions.ts
 var import_api_fetch7 = __toESM(require_api_fetch(), 1);
-var import_data16 = __toESM(require_data(), 1);
+var import_data17 = __toESM(require_data(), 1);
 var import_element82 = __toESM(require_element(), 1);
 var import_i18n71 = __toESM(require_i18n(), 1);
 var import_notices4 = __toESM(require_notices(), 1);
 
 // src/dashboard/wp-build/hooks/use-duplicate-form.ts
-var import_data15 = __toESM(require_data(), 1);
+var import_data16 = __toESM(require_data(), 1);
 var import_element81 = __toESM(require_element(), 1);
 var import_i18n70 = __toESM(require_i18n(), 1);
 var import_notices3 = __toESM(require_notices(), 1);
 function useDuplicateForm() {
   const [isDuplicating, setIsDuplicating] = (0, import_element81.useState)(false);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data15.useDispatch)(import_notices3.store);
-  const { saveEntityRecord } = (0, import_data15.useDispatch)("core");
+  const { createSuccessNotice, createErrorNotice } = (0, import_data16.useDispatch)(import_notices3.store);
+  const { saveEntityRecord } = (0, import_data16.useDispatch)("core");
+  const { invalidateFormStatusCounts: invalidateFormStatusCounts2 } = (0, import_data16.useDispatch)(store3);
   const adminUrl = useConfigValue("adminUrl") || "";
   const duplicateForm = (0, import_element81.useCallback)(
     async (item) => {
@@ -26523,7 +26599,7 @@ function useDuplicateForm() {
       }
       setIsDuplicating(true);
       try {
-        const original = await (0, import_data15.resolveSelect)("core").getEntityRecord(
+        const original = await (0, import_data16.resolveSelect)("core").getEntityRecord(
           "postType",
           "jetpack_form",
           item.id,
@@ -26586,20 +26662,28 @@ function useDuplicateForm() {
         });
       } finally {
         setIsDuplicating(false);
+        invalidateFormStatusCounts2();
       }
     },
-    [createErrorNotice, createSuccessNotice, adminUrl, isDuplicating, saveEntityRecord]
+    [
+      createErrorNotice,
+      createSuccessNotice,
+      adminUrl,
+      invalidateFormStatusCounts2,
+      isDuplicating,
+      saveEntityRecord
+    ]
   );
   return { duplicateForm, isDuplicating };
 }
 
 // src/dashboard/wp-build/hooks/use-form-item-actions.ts
 function useFormItemActions() {
-  const { createSuccessNotice, createErrorNotice } = (0, import_data16.useDispatch)(import_notices4.store);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data17.useDispatch)(import_notices4.store);
   const { duplicateForm, isDuplicating } = useDuplicateForm();
   const [isUpdatingStatus, setIsUpdatingStatus] = (0, import_element82.useState)(false);
   const isUpdatingStatusRef = (0, import_element82.useRef)(false);
-  const { saveEntityRecord, invalidateResolution } = (0, import_data16.useDispatch)("core");
+  const { saveEntityRecord, invalidateResolution } = (0, import_data17.useDispatch)("core");
   const previewForm = (0, import_element82.useCallback)(async (item) => {
     try {
       const response = await (0, import_api_fetch7.default)({
@@ -27128,7 +27212,7 @@ function catchNetworkErrors() {
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
 var import_components77 = __toESM(require_components(), 1);
 var import_core_data6 = __toESM(require_core_data(), 1);
-var import_data33 = __toESM(require_data(), 1);
+var import_data34 = __toESM(require_data(), 1);
 var import_element95 = __toESM(require_element(), 1);
 var import_html_entities4 = __toESM(require_html_entities(), 1);
 var import_i18n86 = __toESM(require_i18n(), 1);
@@ -27154,14 +27238,14 @@ var import_i18n75 = __toESM(require_i18n(), 1);
 // src/dashboard/hooks/use-empty-spam.ts
 var import_api_fetch8 = __toESM(require_api_fetch(), 1);
 var import_core_data3 = __toESM(require_core_data(), 1);
-var import_data18 = __toESM(require_data(), 1);
+var import_data19 = __toESM(require_data(), 1);
 var import_element85 = __toESM(require_element(), 1);
 var import_i18n73 = __toESM(require_i18n(), 1);
 var import_notices5 = __toESM(require_notices(), 1);
 
 // src/dashboard/hooks/use-inbox-data.ts
 var import_core_data2 = __toESM(require_core_data(), 1);
-var import_data17 = __toESM(require_data(), 1);
+var import_data18 = __toESM(require_data(), 1);
 var import_element84 = __toESM(require_element(), 1);
 var import_html_entities3 = __toESM(require_html_entities(), 1);
 
@@ -27226,7 +27310,7 @@ var normalizeFieldsForDisplay = (fields) => {
 };
 function useInboxData(options = {}) {
   const [searchParams] = useDashboardSearchParams();
-  const { setCurrentQuery: setCurrentQuery2, setSelectedResponses: setSelectedResponses2 } = (0, import_data17.useDispatch)(store3);
+  const { setCurrentQuery: setCurrentQuery2, setSelectedResponses: setSelectedResponses2 } = (0, import_data18.useDispatch)(store3);
   const urlStatus = options.status ?? searchParams.get("status");
   const statusFilter = getStatusFilter(urlStatus);
   const {
@@ -27236,7 +27320,7 @@ function useInboxData(options = {}) {
     filterOptions,
     invalidRecords: invalidRecords2,
     hasPendingActions: hasPendingActions2
-  } = (0, import_data17.useSelect)(
+  } = (0, import_data18.useSelect)(
     (select3) => ({
       selectedResponsesCount: select3(store3).getSelectedResponsesCount(),
       currentStatus: select3(store3).getCurrentStatus(),
@@ -27276,7 +27360,7 @@ function useInboxData(options = {}) {
     totalItems,
     totalPages
   } = (0, import_core_data2.useEntityRecords)("postType", "feedback", queryWithInvalidIds);
-  const editedRecords = (0, import_data17.useSelect)(
+  const editedRecords = (0, import_data18.useSelect)(
     (select3) => {
       return (rawRecords || []).map((record) => {
         const editedRecord = select3(import_core_data2.store).getEditedEntityRecord(
@@ -27326,7 +27410,7 @@ function useInboxData(options = {}) {
     }
     return params;
   }, [currentQuery2]);
-  const { totalItemsInbox, totalItemsSpam, totalItemsTrash } = (0, import_data17.useSelect)(
+  const { totalItemsInbox, totalItemsSpam, totalItemsTrash } = (0, import_data18.useSelect)(
     (select3) => {
       select3(store3).getCounts(countsQueryParams);
       return {
@@ -27363,9 +27447,9 @@ function useEmptySpam({
   const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element85.useState)(false);
   const [isEmptying, setIsEmptying] = (0, import_element85.useState)(false);
   const [isEmpty4, setIsEmpty] = (0, import_element85.useState)(true);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data18.useDispatch)(import_notices5.store);
-  const { invalidateResolutionForStoreSelector } = (0, import_data18.useDispatch)(import_core_data3.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data18.useDispatch)(store3);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data19.useDispatch)(import_notices5.store);
+  const { invalidateResolutionForStoreSelector } = (0, import_data19.useDispatch)(import_core_data3.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data19.useDispatch)(store3);
   const hookData = useInboxData();
   const totalItemsSpam = totalItemsSpamProp ?? hookData.totalItemsSpam ?? 0;
   const { selectedResponsesCount } = hookData;
@@ -27520,7 +27604,7 @@ var import_i18n78 = __toESM(require_i18n(), 1);
 // src/dashboard/hooks/use-empty-trash.ts
 var import_api_fetch9 = __toESM(require_api_fetch(), 1);
 var import_core_data4 = __toESM(require_core_data(), 1);
-var import_data19 = __toESM(require_data(), 1);
+var import_data20 = __toESM(require_data(), 1);
 var import_element86 = __toESM(require_element(), 1);
 var import_i18n76 = __toESM(require_i18n(), 1);
 var import_notices6 = __toESM(require_notices(), 1);
@@ -27530,9 +27614,9 @@ function useEmptyTrash({
   const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element86.useState)(false);
   const [isEmptying, setIsEmptying] = (0, import_element86.useState)(false);
   const [isEmpty4, setIsEmpty] = (0, import_element86.useState)(true);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data19.useDispatch)(import_notices6.store);
-  const { invalidateResolutionForStoreSelector } = (0, import_data19.useDispatch)(import_core_data4.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data19.useDispatch)(store3);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data20.useDispatch)(import_notices6.store);
+  const { invalidateResolutionForStoreSelector } = (0, import_data20.useDispatch)(import_core_data4.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data20.useDispatch)(store3);
   const hookData = useInboxData();
   const totalItemsTrash = totalItemsTrashProp ?? hookData.totalItemsTrash ?? 0;
   const { selectedResponsesCount } = hookData;
@@ -27686,7 +27770,7 @@ var import_i18n84 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-export-responses.ts
 var import_core_data5 = __toESM(require_core_data(), 1);
-var import_data20 = __toESM(require_data(), 1);
+var import_data21 = __toESM(require_data(), 1);
 var import_element87 = __toESM(require_element(), 1);
 var import_i18n79 = __toESM(require_i18n(), 1);
 function useExportResponses() {
@@ -27694,7 +27778,7 @@ function useExportResponses() {
   const [showExportModal, setShowExportModal] = (0, import_element87.useState)(false);
   const closeModal = (0, import_element87.useCallback)(() => setShowExportModal(false), [setShowExportModal]);
   const [autoConnectGdrive, setAutoConnectGdrive] = (0, import_element87.useState)(false);
-  const { selectedResponsesCount, currentStatus } = (0, import_data20.useSelect)(
+  const { selectedResponsesCount, currentStatus } = (0, import_data21.useSelect)(
     (select3) => ({
       selectedResponsesCount: select3(store3).getSelectedResponsesCount(),
       currentStatus: select3(store3).getCurrentStatus()
@@ -27716,11 +27800,11 @@ function useExportResponses() {
       viewport: isSm ? "mobile" : "desktop"
     });
   }, [isSm]);
-  const userCanExport = (0, import_data20.useSelect)(
+  const userCanExport = (0, import_data21.useSelect)(
     (select3) => select3(import_core_data5.store).canUser("update", "settings"),
     []
   );
-  const { selected, currentQuery: currentQuery2 } = (0, import_data20.useSelect)((select3) => {
+  const { selected, currentQuery: currentQuery2 } = (0, import_data21.useSelect)((select3) => {
     const { getSelectedResponsesFromCurrentDataset: getSelectedResponsesFromCurrentDataset2, getCurrentQuery: getCurrentQuery2 } = select3(store3);
     return { selected: getSelectedResponsesFromCurrentDataset2(), currentQuery: getCurrentQuery2() };
   }, []);
@@ -27766,7 +27850,7 @@ function useExportResponses() {
 
 // src/dashboard/components/export-responses/modal.tsx
 var import_components74 = __toESM(require_components(), 1);
-var import_data32 = __toESM(require_data(), 1);
+var import_data33 = __toESM(require_data(), 1);
 var import_i18n83 = __toESM(require_i18n(), 1);
 
 // ../../js-packages/shared-extension-utils/src/get-jetpack-data.js
@@ -27813,7 +27897,7 @@ var usableBlockWithFreePlan = [
 ];
 
 // ../../js-packages/connection/components/use-connection/index.ts
-var import_data25 = __toESM(require_data(), 1);
+var import_data26 = __toESM(require_data(), 1);
 var import_react24 = __toESM(require_react(), 1);
 
 // ../../js-packages/connection/state/actions.jsx
@@ -27918,7 +28002,7 @@ var actions = {
 };
 
 // ../../js-packages/connection/state/controls.jsx
-var import_data21 = __toESM(require_data(), 1);
+var import_data22 = __toESM(require_data(), 1);
 
 // ../../js-packages/connection/state/assignLocation.jsx
 function assignLocation(url) {
@@ -27931,7 +28015,7 @@ var store_id_default = STORE_ID;
 
 // ../../js-packages/connection/state/controls.jsx
 var REGISTER_SITE2 = ({ redirectUri, from }) => api_default.registerSite(null, redirectUri, from);
-var CONNECT_USER2 = (0, import_data21.createRegistryControl)(
+var CONNECT_USER2 = (0, import_data22.createRegistryControl)(
   ({ resolveSelect: resolveSelect2 }) => ({ from, redirectFunc, redirectUri, skipPricingPage } = {}) => {
     return new Promise((resolve, reject) => {
       resolveSelect2(store_id_default).getAuthorizationUrl(redirectUri).then((authorizationUrl2) => {
@@ -27960,7 +28044,7 @@ var controls_default = {
 };
 
 // ../../js-packages/connection/state/reducers.jsx
-var import_data22 = __toESM(require_data(), 1);
+var import_data23 = __toESM(require_data(), 1);
 var connectionStatus = (state = {}, action) => {
   switch (action.type) {
     case SET_CONNECTION_STATUS:
@@ -28036,7 +28120,7 @@ var isOfflineMode = (state = false, action) => {
   }
   return state;
 };
-var reducers = (0, import_data22.combineReducers)({
+var reducers = (0, import_data23.combineReducers)({
   connectionStatus,
   connectionStatusIsFetching,
   siteIsRegistering,
@@ -28051,17 +28135,17 @@ var reducers = (0, import_data22.combineReducers)({
 var reducers_default = reducers;
 
 // ../../js-packages/connection/state/resolvers.jsx
-var import_data23 = __toESM(require_data(), 1);
+var import_data24 = __toESM(require_data(), 1);
 var connectionResolvers = {
   getAuthorizationUrl: {
     isFulfilled: (state, ...args) => {
       const hasAuthorization = Boolean(state.authorizationUrl);
-      const hasFinishedResolution = (0, import_data23.select)(store_id_default).hasFinishedResolution(
+      const hasFinishedResolution = (0, import_data24.select)(store_id_default).hasFinishedResolution(
         "getAuthorizationUrl",
         args
       );
       if (hasAuthorization && !hasFinishedResolution) {
-        (0, import_data23.dispatch)(store_id_default).finishResolution("getAuthorizationUrl", args);
+        (0, import_data24.dispatch)(store_id_default).finishResolution("getAuthorizationUrl", args);
       }
       return hasAuthorization;
     },
@@ -28108,13 +28192,13 @@ var selectors = {
 var selectors_default = selectors;
 
 // ../../js-packages/connection/state/store-holder.jsx
-var import_data24 = __toESM(require_data(), 1);
+var import_data25 = __toESM(require_data(), 1);
 var storeHolder = class _storeHolder {
   static store = null;
   static mayBeInit(storeId, storeConfig) {
     if (null === _storeHolder.store) {
-      _storeHolder.store = (0, import_data24.createReduxStore)(storeId, storeConfig);
-      (0, import_data24.register)(_storeHolder.store);
+      _storeHolder.store = (0, import_data25.createReduxStore)(storeId, storeConfig);
+      (0, import_data25.register)(_storeHolder.store);
     }
   }
 };
@@ -28149,8 +28233,8 @@ function useConnection({
   skipUserConnection,
   skipPricingPage
 } = {}) {
-  const { registerSite: registerSite2, connectUser: connectUser2, refreshConnectedPlugins: refreshConnectedPlugins2 } = (0, import_data25.useDispatch)(store_id_default);
-  const registrationError2 = (0, import_data25.useSelect)(
+  const { registerSite: registerSite2, connectUser: connectUser2, refreshConnectedPlugins: refreshConnectedPlugins2 } = (0, import_data26.useDispatch)(store_id_default);
+  const registrationError2 = (0, import_data26.useSelect)(
     (select3) => select3(store_id_default).getRegistrationError(),
     []
   );
@@ -28164,7 +28248,7 @@ function useConnection({
     isUserConnected,
     hasConnectedOwner,
     isOfflineMode: isOfflineMode2
-  } = (0, import_data25.useSelect)((select3) => {
+  } = (0, import_data26.useSelect)((select3) => {
     const connectionStatus2 = select3(store_id_default).getConnectionStatus();
     return {
       siteIsRegistering: select3(store_id_default).getSiteIsRegistering(),
@@ -28281,21 +28365,21 @@ var useAnalytics = ({
 var use_analytics_default = useAnalytics;
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-autosave-and-redirect/index.ts
-var import_data26 = __toESM(require_data());
+var import_data27 = __toESM(require_data());
 var import_element89 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-ref-interval.ts
 var import_element90 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-module-status/index.js
-var import_data29 = __toESM(require_data());
+var import_data30 = __toESM(require_data());
 var import_element91 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/modules-state/index.js
-var import_data28 = __toESM(require_data());
+var import_data29 = __toESM(require_data());
 
 // ../../js-packages/shared-extension-utils/src/modules-state/actions.js
-var import_data27 = __toESM(require_data());
+var import_data28 = __toESM(require_data());
 
 // ../../js-packages/shared-extension-utils/src/modules-state/controls.js
 var import_api_fetch10 = __toESM(require_api_fetch());
@@ -28341,7 +28425,7 @@ function* updateJetpackModuleStatus2(settings) {
     yield setJetpackModules({ data });
     return true;
   } catch {
-    const oldSettings = (0, import_data27.select)(JETPACK_MODULES_STORE_ID).getJetpackModules();
+    const oldSettings = (0, import_data28.select)(JETPACK_MODULES_STORE_ID).getJetpackModules();
     yield setJetpackModules(oldSettings);
     return false;
   } finally {
@@ -28358,7 +28442,7 @@ function* fetchModules() {
     yield setJetpackModules({ data });
     return true;
   } catch {
-    const oldSettings = (0, import_data27.select)(JETPACK_MODULES_STORE_ID).getJetpackModules();
+    const oldSettings = (0, import_data28.select)(JETPACK_MODULES_STORE_ID).getJetpackModules();
     yield setJetpackModules(oldSettings);
     return false;
   } finally {
@@ -28433,19 +28517,19 @@ var selectors_default2 = jetpackModulesSelectors;
 
 // ../../js-packages/shared-extension-utils/src/modules-state/index.js
 var JETPACK_MODULES_STORE_ID = "jetpack-modules";
-var store4 = (0, import_data28.createReduxStore)(JETPACK_MODULES_STORE_ID, {
+var store4 = (0, import_data29.createReduxStore)(JETPACK_MODULES_STORE_ID, {
   reducer: reducer_default2,
   actions: actions_default,
   controls: controls_default2,
   resolvers: resolvers_default2,
   selectors: selectors_default2
 });
-(0, import_data28.register)(store4);
+(0, import_data29.register)(store4);
 var initialData = window?.Initial_State?.getModules || // Jetpack Dashboard
 window?.Jetpack_Editor_Initial_State?.modules || // Gutenberg
 null;
 if (initialData !== null) {
-  (0, import_data28.dispatch)(JETPACK_MODULES_STORE_ID).setJetpackModules({
+  (0, import_data29.dispatch)(JETPACK_MODULES_STORE_ID).setJetpackModules({
     data: { ...initialData }
   });
 }
@@ -28459,7 +28543,7 @@ var initialState3 = window?.JP_CONNECTION_INITIAL_STATE;
 var debug4 = (0, import_debug4.default)("shared-extension-utils:connection");
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-upgrade-flow/index.js
-var import_data30 = __toESM(require_data());
+var import_data31 = __toESM(require_data());
 var import_hooks = __toESM(require_hooks());
 
 // ../../js-packages/shared-extension-utils/src/block-editor-actions.js
@@ -28523,7 +28607,7 @@ var csv_default = CSVExport;
 
 // src/dashboard/components/export-responses/google-drive.tsx
 var import_components73 = __toESM(require_components(), 1);
-var import_data31 = __toESM(require_data(), 1);
+var import_data32 = __toESM(require_data(), 1);
 var import_element94 = __toESM(require_element(), 1);
 var import_i18n82 = __toESM(require_i18n(), 1);
 
@@ -28535,12 +28619,12 @@ var FULL_RESPONSES_PATH = getJetpackData()?.adminUrl + PARTIAL_RESPONSES_PATH;
 var import_jsx_runtime151 = __toESM(require_jsx_runtime(), 1);
 var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
   const [isExporting, setIsExporting] = (0, import_element94.useState)(false);
-  const { integration } = (0, import_data31.useSelect)((select3) => {
+  const { integration } = (0, import_data32.useSelect)((select3) => {
     const store5 = select3(INTEGRATIONS_STORE);
     const list = store5.getIntegrations() || [];
     return { integration: list.find((i2) => i2.id === "google-drive") };
   }, []);
-  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data31.useDispatch)(INTEGRATIONS_STORE);
+  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data32.useDispatch)(INTEGRATIONS_STORE);
   const isConnectedToGoogleDrive = !!integration?.isConnected;
   const gdriveConnectSupportURL = useConfigValue("gdriveConnectSupportURL");
   const { tracks: tracks2 } = use_analytics_default();
@@ -28681,7 +28765,7 @@ var ExportResponsesModal = ({
   onExport,
   autoConnectGdrive
 }) => {
-  const { integrations } = (0, import_data32.useSelect)((select3) => {
+  const { integrations } = (0, import_data33.useSelect)((select3) => {
     const store5 = select3(INTEGRATIONS_STORE);
     return {
       integrations: store5.getIntegrations() || []
@@ -28814,7 +28898,7 @@ function usePageHeaderDetails(props) {
   const hasResponses = !isLoadingData && totalItems > 0;
   const emptySpam = useEmptySpam();
   const emptyTrash = useEmptyTrash();
-  const formRecord = (0, import_data33.useSelect)(
+  const formRecord = (0, import_data34.useSelect)(
     (select3) => sourceIdNumber ? select3(import_core_data6.store).getEntityRecord(
       "postType",
       "jetpack_form",
@@ -29238,11 +29322,11 @@ function StageInner() {
   const dateSettings = (0, import_date10.getSettings)();
   const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element96.useState)(false);
   const [isFormsHelpModalOpen, setIsFormsHelpModalOpen] = (0, import_element96.useState)(false);
-  const integrations = (0, import_data34.useSelect)(
+  const integrations = (0, import_data35.useSelect)(
     (select3) => select3(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
   );
-  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data34.useDispatch)(INTEGRATIONS_STORE);
+  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data35.useDispatch)(INTEGRATIONS_STORE);
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
   const [view, setView] = (0, import_element96.useState)(() => ({
@@ -29276,7 +29360,7 @@ function StageInner() {
     }
     return void 0;
   }, [view.filters]);
-  const { totalItems: totalNonTrashForms } = useFormsData(1, 1, "", NON_TRASH_FORM_STATUSES);
+  const statusCounts = useFormStatusCounts();
   const { records, isLoading, totalItems, totalPages } = useFormsData(
     view.page ?? 1,
     view.perPage ?? 20,
@@ -29311,8 +29395,8 @@ function StageInner() {
   const [pendingPermanentDeleteCount, setPendingPermanentDeleteCount] = (0, import_element96.useState)(0);
   const [renameFormItem, setRenameFormItem] = (0, import_element96.useState)(null);
   const renameRetryRef = (0, import_element96.useRef)(null);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data34.useDispatch)(import_notices7.store);
-  const { saveEntityRecord } = (0, import_data34.useDispatch)(import_core_data7.store);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data35.useDispatch)(import_notices7.store);
+  const { saveEntityRecord } = (0, import_data35.useDispatch)(import_core_data7.store);
   (0, import_element96.useEffect)(() => {
     setSelection([]);
   }, [view.page, view.perPage, view.search, view.filters]);
@@ -29406,15 +29490,15 @@ function StageInner() {
         label: (0, import_i18n87.__)("Status", "jetpack-forms"),
         getValue: ({ item }) => item.status,
         render: ({ item }) => /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(Badge3, { intent: "draft", children: getFormStatusLabel(item.status) }),
-        elements: [
-          { label: (0, import_i18n87.__)("All", "jetpack-forms"), value: "all" },
-          { label: (0, import_i18n87.__)("Published", "jetpack-forms"), value: "publish" },
-          { label: (0, import_i18n87.__)("Draft", "jetpack-forms"), value: "draft" },
-          { label: (0, import_i18n87.__)("Pending review", "jetpack-forms"), value: "pending" },
-          { label: (0, import_i18n87.__)("Scheduled", "jetpack-forms"), value: "future" },
-          { label: (0, import_i18n87.__)("Private", "jetpack-forms"), value: "private" },
-          { label: (0, import_i18n87.__)("Trash", "jetpack-forms"), value: "trash" }
-        ],
+        elements: FORM_STATUSES.map((value) => ({
+          value,
+          label: (0, import_i18n87.sprintf)(
+            /* translators: 1: status name, 2: form count */
+            (0, import_i18n87.__)("%1$s (%2$s)", "jetpack-forms"),
+            getFormStatusLabel(value),
+            formatNumber(statusCounts[value])
+          )
+        })),
         filterBy: { operators: ["is"], isPrimary: true },
         enableSorting: false
       },
@@ -29427,7 +29511,7 @@ function StageInner() {
         filterBy: false
       }
     ],
-    [dateSettings.formats.datetime]
+    [dateSettings.formats.datetime, statusCounts]
   );
   const openSingleFormView = (0, import_element96.useCallback)(
     (formId) => {
@@ -29691,7 +29775,7 @@ function StageInner() {
     actions: headerActions
   } = usePageHeaderDetails({
     screen: "forms",
-    formsCount: totalNonTrashForms ?? 0,
+    formsCount: statusCounts.all,
     isIntegrationsEnabled: !!isIntegrationsEnabled,
     showDashboardIntegrations: !!showDashboardIntegrations,
     onOpenIntegrations: openIntegrationsModal,

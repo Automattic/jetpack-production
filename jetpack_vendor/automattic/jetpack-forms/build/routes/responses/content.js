@@ -12059,7 +12059,7 @@ var page_default = Page;
 
 // routes/responses/stage.tsx
 var import_components79 = __toESM(require_components());
-var import_data33 = __toESM(require_data());
+var import_data34 = __toESM(require_data());
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.28_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
 var import_element55 = __toESM(require_element(), 1);
@@ -34280,11 +34280,13 @@ __export(actions_exports3, {
   doBulkAction: () => doBulkAction,
   invalidateCounts: () => invalidateCounts,
   invalidateFilters: () => invalidateFilters,
+  invalidateFormStatusCounts: () => invalidateFormStatusCounts,
   markRecordsAsInvalid: () => markRecordsAsInvalid,
   receiveFilters: () => receiveFilters,
   removePendingAction: () => removePendingAction,
   setCounts: () => setCounts,
   setCurrentQuery: () => setCurrentQuery,
+  setFormStatusCounts: () => setFormStatusCounts,
   setSelectedResponses: () => setSelectedResponses,
   updateCountsOptimistically: () => updateCountsOptimistically
 });
@@ -34302,6 +34304,8 @@ var MARK_RECORDS_AS_INVALID = "MARK_RECORDS_AS_INVALID";
 var CLEAR_INVALID_RECORDS = "CLEAR_INVALID_RECORDS";
 var ADD_PENDING_ACTION = "ADD_PENDING_ACTION";
 var REMOVE_PENDING_ACTION = "REMOVE_PENDING_ACTION";
+var SET_FORM_STATUS_COUNTS = "SET_FORM_STATUS_COUNTS";
+var INVALIDATE_FORM_STATUS_COUNTS = "INVALIDATE_FORM_STATUS_COUNTS";
 
 // src/dashboard/store/actions.js
 function receiveFilters(filters2) {
@@ -34379,6 +34383,15 @@ function removePendingAction(actionId) {
     actionId
   };
 }
+function setFormStatusCounts(formStatusCounts2) {
+  return {
+    type: SET_FORM_STATUS_COUNTS,
+    formStatusCounts: formStatusCounts2
+  };
+}
+var invalidateFormStatusCounts = () => {
+  return { type: INVALIDATE_FORM_STATUS_COUNTS };
+};
 var doBulkAction = (ids, action) => async () => {
   try {
     await (0, import_api_fetch5.default)({
@@ -34488,20 +34501,28 @@ var pendingActions = (state = /* @__PURE__ */ new Set(), action) => {
   }
   return state;
 };
+var formStatusCounts = (state = null, action) => {
+  if (action.type === SET_FORM_STATUS_COUNTS) {
+    return action.formStatusCounts;
+  }
+  return state;
+};
 var reducer_default = (0, import_data11.combineReducers)({
   selectedResponsesFromCurrentDataset,
   filters,
   currentQuery,
   counts,
   invalidRecords,
-  pendingActions
+  pendingActions,
+  formStatusCounts
 });
 
 // src/dashboard/store/resolvers.js
 var resolvers_exports3 = {};
 __export(resolvers_exports3, {
   getCounts: () => getCounts,
-  getFilters: () => getFilters
+  getFilters: () => getFilters,
+  getFormStatusCounts: () => getFormStatusCounts
 });
 var import_api_fetch6 = __toESM(require_api_fetch(), 1);
 var import_url4 = __toESM(require_url(), 1);
@@ -34534,6 +34555,11 @@ var getCounts = (queryParams = {}) => async ({ dispatch: dispatch4 }) => {
   dispatch4.setCounts(response, queryParams);
 };
 getCounts.shouldInvalidate = (action) => action.type === INVALIDATE_COUNTS;
+var getFormStatusCounts = () => async ({ dispatch: dispatch4 }) => {
+  const response = await (0, import_api_fetch6.default)({ path: "/wp/v2/jetpack-forms/status-counts" });
+  dispatch4.setFormStatusCounts(response);
+};
+getFormStatusCounts.shouldInvalidate = (action) => action.type === INVALIDATE_FORM_STATUS_COUNTS;
 
 // src/dashboard/store/selectors.js
 var selectors_exports3 = {};
@@ -34542,6 +34568,7 @@ __export(selectors_exports3, {
   getCurrentQuery: () => getCurrentQuery,
   getCurrentStatus: () => getCurrentStatus,
   getFilters: () => getFilters2,
+  getFormStatusCounts: () => getFormStatusCounts2,
   getInboxCount: () => getInboxCount,
   getInvalidRecords: () => getInvalidRecords,
   getPendingActions: () => getPendingActions,
@@ -34584,6 +34611,9 @@ var getPendingActions = (state) => {
 };
 var hasPendingActions = (state) => {
   return (state.pendingActions?.size ?? 0) > 0;
+};
+var getFormStatusCounts2 = (state) => {
+  return state.formStatusCounts;
 };
 
 // src/dashboard/store/index.js
@@ -34851,108 +34881,44 @@ function WpRouteDashboardSearchParamsProvider({
 }
 
 // src/dashboard/wp-build/components/dataviews-header-row/index.tsx
-var import_data14 = __toESM(require_data(), 1);
-var import_element82 = __toESM(require_element(), 1);
-var import_i18n68 = __toESM(require_i18n(), 1);
+var import_data15 = __toESM(require_data(), 1);
+var import_element81 = __toESM(require_element(), 1);
+var import_i18n67 = __toESM(require_i18n(), 1);
 import { useNavigate as useNavigate2 } from "@wordpress/route";
 
-// src/dashboard/constants.ts
-var import_i18n66 = __toESM(require_i18n(), 1);
-var NON_TRASH_FORM_STATUSES = "publish,draft,pending,future,private";
-function getFormStatusLabel(status) {
-  switch (status) {
-    case "publish":
-      return (0, import_i18n66.__)("Published", "jetpack-forms");
-    case "draft":
-      return (0, import_i18n66.__)("Draft", "jetpack-forms");
-    case "pending":
-      return (0, import_i18n66.__)("Pending review", "jetpack-forms");
-    case "future":
-      return (0, import_i18n66.__)("Scheduled", "jetpack-forms");
-    case "private":
-      return (0, import_i18n66.__)("Private", "jetpack-forms");
-    case "trash":
-      return (0, import_i18n66.__)("Trash", "jetpack-forms");
-    default:
-      return status;
-  }
-}
-
-// src/dashboard/hooks/use-forms-data.ts
-var import_core_data2 = __toESM(require_core_data(), 1);
-var import_element80 = __toESM(require_element(), 1);
-var import_html_entities3 = __toESM(require_html_entities(), 1);
-function getFormsListQuery(page, perPage, search, status, hasResponses) {
-  const queryParams = {
-    context: "edit",
-    jetpack_forms_context: "dashboard",
-    order: "desc",
-    orderby: "modified",
-    page,
-    per_page: perPage,
-    status
-  };
-  if (search) {
-    queryParams.search = search;
-  }
-  if (hasResponses) {
-    queryParams.has_responses = hasResponses;
-  }
-  return queryParams;
-}
-function useFormsData(page, perPage, search, status, hasResponses) {
-  const query = (0, import_element80.useMemo)(() => {
-    return getFormsListQuery(page, perPage, search, status, hasResponses);
-  }, [page, perPage, search, status, hasResponses]);
-  const {
-    records: rawRecords,
-    hasResolved,
-    totalItems,
-    totalPages
-  } = (0, import_core_data2.useEntityRecords)("postType", "jetpack_form", query);
-  const records = (0, import_element80.useMemo)(() => {
-    const seen = /* @__PURE__ */ new Set();
-    const items = [];
-    for (const item of rawRecords || []) {
-      const typedItem = item;
-      if (seen.has(typedItem.id)) {
-        continue;
-      }
-      seen.add(typedItem.id);
-      items.push({
-        id: typedItem.id,
-        title: (0, import_html_entities3.decodeEntities)(typedItem.title?.rendered || ""),
-        status: typedItem.status,
-        modified: typedItem.modified,
-        entriesCount: typedItem.entries_count ?? 0,
-        editUrl: typedItem.edit_url
-      });
-    }
-    return items;
-  }, [rawRecords]);
-  return {
-    records,
-    isLoading: !hasResolved,
-    totalItems: totalItems ?? 0,
-    totalPages: totalPages ?? 0
-  };
+// src/dashboard/hooks/use-form-status-counts.ts
+var import_data14 = __toESM(require_data(), 1);
+var DEFAULT_COUNTS = {
+  all: 0,
+  publish: 0,
+  draft: 0,
+  pending: 0,
+  future: 0,
+  private: 0,
+  trash: 0
+};
+function useFormStatusCounts() {
+  return (0, import_data14.useSelect)(
+    (select3) => select3(store3).getFormStatusCounts() ?? DEFAULT_COUNTS,
+    []
+  );
 }
 
 // src/dashboard/wp-build/components/inbox-status-toggle/index.tsx
-var import_element81 = __toESM(require_element(), 1);
-var import_i18n67 = __toESM(require_i18n(), 1);
+var import_element80 = __toESM(require_element(), 1);
+var import_i18n66 = __toESM(require_i18n(), 1);
 var import_jsx_runtime150 = __toESM(require_jsx_runtime(), 1);
 var getLabel = (status, count) => {
   let label;
   switch (status) {
     case "inbox":
-      label = (0, import_i18n67.__)("Inbox", "jetpack-forms");
+      label = (0, import_i18n66.__)("Inbox", "jetpack-forms");
       break;
     case "spam":
-      label = (0, import_i18n67.__)("Spam", "jetpack-forms");
+      label = (0, import_i18n66.__)("Spam", "jetpack-forms");
       break;
     case "trash":
-      label = (0, import_i18n67._x)("Trash", "noun", "jetpack-forms");
+      label = (0, import_i18n66._x)("Trash", "noun", "jetpack-forms");
       break;
   }
   return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("span", { children: [
@@ -34965,7 +34931,7 @@ function InboxStatusToggle({
   counts: counts2,
   onChange
 }) {
-  const handleChange = (0, import_element81.useCallback)(
+  const handleChange = (0, import_element80.useCallback)(
     (nextStatus) => {
       if (nextStatus === activeStatus) {
         return;
@@ -34974,7 +34940,7 @@ function InboxStatusToggle({
     },
     [activeStatus, onChange]
   );
-  const statusTabs = (0, import_element81.useMemo)(
+  const statusTabs = (0, import_element80.useMemo)(
     () => [
       { value: "inbox", label: getLabel("inbox", counts2.inbox) },
       { value: "spam", label: getLabel("spam", counts2.spam) },
@@ -35003,12 +34969,12 @@ function DataViewsHeaderRow({
   onStatusChange
 }) {
   const navigate = useNavigate2();
-  const { totalItems: formsCount = 0 } = useFormsData(1, 1, "", NON_TRASH_FORM_STATUSES);
-  const responsesInboxCount = (0, import_data14.useSelect)((select3) => {
-    select3(store3).getCounts();
-    return select3(store3).getInboxCount() ?? 0;
+  const { all: formsCount } = useFormStatusCounts();
+  const responsesInboxCount = (0, import_data15.useSelect)((select3) => {
+    select3(store3).getCounts({});
+    return select3(store3).getInboxCount({}) ?? 0;
   }, []);
-  const onTabChange = (0, import_element82.useCallback)(
+  const onTabChange = (0, import_element81.useCallback)(
     (nextValue) => {
       if (nextValue === "forms") {
         navigate({ href: "/forms" });
@@ -35037,11 +35003,11 @@ function DataViewsHeaderRow({
             }
           ) : /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(tabs_exports.Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)(tabs_exports.List, { variant: "minimal", children: [
             /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(tabs_exports.Tab, { value: "forms", children: /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)("span", { children: [
-              (0, import_i18n68.__)("Forms", "jetpack-forms"),
+              (0, import_i18n67.__)("Forms", "jetpack-forms"),
               /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(Badge3, { intent: "draft", className: "jp-forms-tabs-count", children: formatNumberCompact(formsCount || 0) })
             ] }) }),
             /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(tabs_exports.Tab, { value: "responses", children: /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)("span", { children: [
-              (0, import_i18n68.__)("Responses", "jetpack-forms"),
+              (0, import_i18n67.__)("Responses", "jetpack-forms"),
               /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(Badge3, { intent: "draft", className: "jp-forms-tabs-count", children: formatNumberCompact(responsesInboxCount || 0) })
             ] }) })
           ] }) }) }),
@@ -35398,54 +35364,54 @@ function catchNetworkErrors() {
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
 var import_components77 = __toESM(require_components(), 1);
 var import_core_data6 = __toESM(require_core_data(), 1);
-var import_data32 = __toESM(require_data(), 1);
+var import_data33 = __toESM(require_data(), 1);
 var import_element96 = __toESM(require_element(), 1);
 var import_html_entities4 = __toESM(require_html_entities(), 1);
 var import_i18n86 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/edit-form-button/index.tsx
 var import_components67 = __toESM(require_components(), 1);
-var import_element83 = __toESM(require_element(), 1);
-var import_i18n69 = __toESM(require_i18n(), 1);
+var import_element82 = __toESM(require_element(), 1);
+var import_i18n68 = __toESM(require_i18n(), 1);
 var import_jsx_runtime152 = __toESM(require_jsx_runtime(), 1);
 function EditFormButton({ formId }) {
   const adminUrl = useConfigValue("adminUrl") || "";
-  const onClick = (0, import_element83.useCallback)(() => {
+  const onClick = (0, import_element82.useCallback)(() => {
     const editPath = `post.php?post=${formId}&action=edit`;
     window.location.href = adminUrl ? `${adminUrl}${editPath}` : editPath;
   }, [adminUrl, formId]);
-  return /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components67.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n69.__)("Edit form", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components67.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n68.__)("Edit form", "jetpack-forms") });
 }
 
 // src/dashboard/components/empty-spam-button/index.tsx
 var import_components69 = __toESM(require_components(), 1);
-var import_i18n72 = __toESM(require_i18n(), 1);
+var import_i18n71 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-empty-spam.ts
 var import_api_fetch7 = __toESM(require_api_fetch(), 1);
-var import_core_data3 = __toESM(require_core_data(), 1);
-var import_data15 = __toESM(require_data(), 1);
-var import_element84 = __toESM(require_element(), 1);
-var import_i18n70 = __toESM(require_i18n(), 1);
+var import_core_data2 = __toESM(require_core_data(), 1);
+var import_data16 = __toESM(require_data(), 1);
+var import_element83 = __toESM(require_element(), 1);
+var import_i18n69 = __toESM(require_i18n(), 1);
 var import_notices2 = __toESM(require_notices(), 1);
 function useEmptySpam({
   totalItemsSpam: totalItemsSpamProp
 } = {}) {
-  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element84.useState)(false);
-  const [isEmptying, setIsEmptying] = (0, import_element84.useState)(false);
-  const [isEmpty4, setIsEmpty] = (0, import_element84.useState)(true);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data15.useDispatch)(import_notices2.store);
-  const { invalidateResolutionForStoreSelector } = (0, import_data15.useDispatch)(import_core_data3.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data15.useDispatch)(store3);
+  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element83.useState)(false);
+  const [isEmptying, setIsEmptying] = (0, import_element83.useState)(false);
+  const [isEmpty4, setIsEmpty] = (0, import_element83.useState)(true);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data16.useDispatch)(import_notices2.store);
+  const { invalidateResolutionForStoreSelector } = (0, import_data16.useDispatch)(import_core_data2.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data16.useDispatch)(store3);
   const hookData = useInboxData();
   const totalItemsSpam = totalItemsSpamProp ?? hookData.totalItemsSpam ?? 0;
   const { selectedResponsesCount } = hookData;
-  (0, import_element84.useEffect)(() => {
+  (0, import_element83.useEffect)(() => {
     setIsEmpty(!totalItemsSpam);
   }, [totalItemsSpam]);
-  const openConfirmDialog = (0, import_element84.useCallback)(() => setConfirmDialogOpen(true), []);
-  const closeConfirmDialog = (0, import_element84.useCallback)(() => setConfirmDialogOpen(false), []);
-  const onConfirmEmptying = (0, import_element84.useCallback)(async () => {
+  const openConfirmDialog = (0, import_element83.useCallback)(() => setConfirmDialogOpen(true), []);
+  const closeConfirmDialog = (0, import_element83.useCallback)(() => setConfirmDialogOpen(false), []);
+  const onConfirmEmptying = (0, import_element83.useCallback)(async () => {
     if (isEmptying || isEmpty4) {
       return;
     }
@@ -35457,9 +35423,9 @@ function useEmptySpam({
       path: `/wp/v2/feedback/trash?status=spam`
     }).then((response) => {
       const deleted = response?.deleted ?? 0;
-      const successMessage = deleted === 1 ? (0, import_i18n70.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n70.sprintf)(
+      const successMessage = deleted === 1 ? (0, import_i18n69.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n69.sprintf)(
         /* translators: %s: The number of responses. */
-        (0, import_i18n70._n)(
+        (0, import_i18n69._n)(
           "%s response deleted permanently.",
           "%s responses deleted permanently.",
           deleted,
@@ -35469,7 +35435,7 @@ function useEmptySpam({
       );
       createSuccessNotice(successMessage, { type: "snackbar", id: "empty-spam" });
     }).catch(() => {
-      createErrorNotice((0, import_i18n70.__)("Could not empty spam.", "jetpack-forms"), {
+      createErrorNotice((0, import_i18n69.__)("Could not empty spam.", "jetpack-forms"), {
         type: "snackbar",
         id: "empty-spam-error"
       });
@@ -35501,7 +35467,7 @@ function useEmptySpam({
 
 // src/dashboard/components/empty-spam-button/confirmation-modal.tsx
 var import_components68 = __toESM(require_components(), 1);
-var import_i18n71 = __toESM(require_i18n(), 1);
+var import_i18n70 = __toESM(require_i18n(), 1);
 var import_jsx_runtime153 = __toESM(require_jsx_runtime(), 1);
 function EmptySpamConfirmationModal({
   isOpen,
@@ -35516,19 +35482,19 @@ function EmptySpamConfirmationModal({
       onCancel,
       onConfirm,
       isOpen,
-      confirmButtonText: (0, import_i18n71.__)("Delete", "jetpack-forms"),
+      confirmButtonText: (0, import_i18n70.__)("Delete", "jetpack-forms"),
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("h3", { children: (0, import_i18n71.__)("Delete forever", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n71.sprintf)(
+        /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("h3", { children: (0, import_i18n70.__)("Delete forever", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n70.sprintf)(
           // translators: %s: the number of responses in spam
-          (0, import_i18n71._n)(
+          (0, import_i18n70._n)(
             "%s response in spam will be deleted forever. This action cannot be undone.",
             "All %s responses in spam will be deleted forever. This action cannot be undone.",
             totalItemsSpam || 0,
             "jetpack-forms"
           ),
           formatNumber2(totalItemsSpam)
-        ) : (0, import_i18n71.__)(
+        ) : (0, import_i18n70.__)(
           "All responses in spam will be deleted forever. This action cannot be undone.",
           "jetpack-forms"
         ) })
@@ -35563,11 +35529,11 @@ var EmptySpamButton = ({
         disabled: isEmpty4 || isEmptying,
         icon: trash_default,
         isBusy: isEmptying,
-        label: isEmpty4 ? (0, import_i18n72.__)("Spam is already empty.", "jetpack-forms") : "",
+        label: isEmpty4 ? (0, import_i18n71.__)("Spam is already empty.", "jetpack-forms") : "",
         onClick: openConfirmDialog,
         showTooltip: isEmpty4,
         variant: "primary",
-        children: (0, import_i18n72.__)("Delete spam", "jetpack-forms")
+        children: (0, import_i18n71.__)("Delete spam", "jetpack-forms")
       }
     ),
     /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(
@@ -35586,33 +35552,33 @@ var empty_spam_button_default = EmptySpamButton;
 
 // src/dashboard/components/empty-trash-button/index.tsx
 var import_components71 = __toESM(require_components(), 1);
-var import_i18n75 = __toESM(require_i18n(), 1);
+var import_i18n74 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-empty-trash.ts
 var import_api_fetch8 = __toESM(require_api_fetch(), 1);
-var import_core_data4 = __toESM(require_core_data(), 1);
-var import_data16 = __toESM(require_data(), 1);
-var import_element85 = __toESM(require_element(), 1);
-var import_i18n73 = __toESM(require_i18n(), 1);
+var import_core_data3 = __toESM(require_core_data(), 1);
+var import_data17 = __toESM(require_data(), 1);
+var import_element84 = __toESM(require_element(), 1);
+var import_i18n72 = __toESM(require_i18n(), 1);
 var import_notices3 = __toESM(require_notices(), 1);
 function useEmptyTrash({
   totalItemsTrash: totalItemsTrashProp
 } = {}) {
-  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element85.useState)(false);
-  const [isEmptying, setIsEmptying] = (0, import_element85.useState)(false);
-  const [isEmpty4, setIsEmpty] = (0, import_element85.useState)(true);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data16.useDispatch)(import_notices3.store);
-  const { invalidateResolutionForStoreSelector } = (0, import_data16.useDispatch)(import_core_data4.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data16.useDispatch)(store3);
+  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element84.useState)(false);
+  const [isEmptying, setIsEmptying] = (0, import_element84.useState)(false);
+  const [isEmpty4, setIsEmpty] = (0, import_element84.useState)(true);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data17.useDispatch)(import_notices3.store);
+  const { invalidateResolutionForStoreSelector } = (0, import_data17.useDispatch)(import_core_data3.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data17.useDispatch)(store3);
   const hookData = useInboxData();
   const totalItemsTrash = totalItemsTrashProp ?? hookData.totalItemsTrash ?? 0;
   const { selectedResponsesCount } = hookData;
-  (0, import_element85.useEffect)(() => {
+  (0, import_element84.useEffect)(() => {
     setIsEmpty(!totalItemsTrash);
   }, [totalItemsTrash]);
-  const openConfirmDialog = (0, import_element85.useCallback)(() => setConfirmDialogOpen(true), []);
-  const closeConfirmDialog = (0, import_element85.useCallback)(() => setConfirmDialogOpen(false), []);
-  const onConfirmEmptying = (0, import_element85.useCallback)(async () => {
+  const openConfirmDialog = (0, import_element84.useCallback)(() => setConfirmDialogOpen(true), []);
+  const closeConfirmDialog = (0, import_element84.useCallback)(() => setConfirmDialogOpen(false), []);
+  const onConfirmEmptying = (0, import_element84.useCallback)(async () => {
     if (isEmptying || isEmpty4) {
       return;
     }
@@ -35624,9 +35590,9 @@ function useEmptyTrash({
       path: `/wp/v2/feedback/trash`
     }).then((response) => {
       const deleted = response?.deleted ?? 0;
-      const successMessage = deleted === 1 ? (0, import_i18n73.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n73.sprintf)(
+      const successMessage = deleted === 1 ? (0, import_i18n72.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n72.sprintf)(
         /* translators: %s: the number of responses deleted permanently. */
-        (0, import_i18n73._n)(
+        (0, import_i18n72._n)(
           "%s response deleted permanently.",
           "%s responses deleted permanently.",
           deleted,
@@ -35636,7 +35602,7 @@ function useEmptyTrash({
       );
       createSuccessNotice(successMessage, { type: "snackbar", id: "empty-trash" });
     }).catch(() => {
-      createErrorNotice((0, import_i18n73.__)("Could not empty trash.", "jetpack-forms"), {
+      createErrorNotice((0, import_i18n72.__)("Could not empty trash.", "jetpack-forms"), {
         type: "snackbar",
         id: "empty-trash-error"
       });
@@ -35668,7 +35634,7 @@ function useEmptyTrash({
 
 // src/dashboard/components/empty-trash-button/confirmation-modal.tsx
 var import_components70 = __toESM(require_components(), 1);
-var import_i18n74 = __toESM(require_i18n(), 1);
+var import_i18n73 = __toESM(require_i18n(), 1);
 var import_jsx_runtime155 = __toESM(require_jsx_runtime(), 1);
 function EmptyTrashConfirmationModal({
   isOpen,
@@ -35683,19 +35649,19 @@ function EmptyTrashConfirmationModal({
       onCancel,
       onConfirm,
       isOpen,
-      confirmButtonText: (0, import_i18n74.__)("Delete", "jetpack-forms"),
+      confirmButtonText: (0, import_i18n73.__)("Delete", "jetpack-forms"),
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("h3", { children: (0, import_i18n74.__)("Delete forever", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n74.sprintf)(
+        /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("h3", { children: (0, import_i18n73.__)("Delete forever", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n73.sprintf)(
           // translators: %s: the number of responses in the trash.
-          (0, import_i18n74._n)(
+          (0, import_i18n73._n)(
             "%s response in trash will be deleted forever. This action cannot be undone.",
             "All %s responses in trash will be deleted forever. This action cannot be undone.",
             totalItemsTrash || 0,
             "jetpack-forms"
           ),
           formatNumber2(totalItemsTrash)
-        ) : (0, import_i18n74.__)(
+        ) : (0, import_i18n73.__)(
           "All responses in trash will be deleted forever. This action cannot be undone.",
           "jetpack-forms"
         ) })
@@ -35730,11 +35696,11 @@ var EmptyTrashButton = ({
         disabled: isEmpty4 || isEmptying,
         icon: trash_default,
         isBusy: isEmptying,
-        label: isEmpty4 ? (0, import_i18n75.__)("Trash is already empty.", "jetpack-forms") : "",
+        label: isEmpty4 ? (0, import_i18n74.__)("Trash is already empty.", "jetpack-forms") : "",
         onClick: openConfirmDialog,
         showTooltip: isEmpty4,
         variant: "primary",
-        children: (0, import_i18n75.__)("Empty trash", "jetpack-forms")
+        children: (0, import_i18n74.__)("Empty trash", "jetpack-forms")
       }
     ),
     /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
@@ -35753,19 +35719,19 @@ var empty_trash_button_default = EmptyTrashButton;
 
 // src/dashboard/components/export-responses/button.tsx
 var import_components75 = __toESM(require_components(), 1);
-var import_i18n81 = __toESM(require_i18n(), 1);
+var import_i18n80 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-export-responses.ts
-var import_core_data5 = __toESM(require_core_data(), 1);
-var import_data17 = __toESM(require_data(), 1);
-var import_element86 = __toESM(require_element(), 1);
-var import_i18n76 = __toESM(require_i18n(), 1);
+var import_core_data4 = __toESM(require_core_data(), 1);
+var import_data18 = __toESM(require_data(), 1);
+var import_element85 = __toESM(require_element(), 1);
+var import_i18n75 = __toESM(require_i18n(), 1);
 function useExportResponses() {
   const [isSm] = use_breakpoint_match_default("sm");
-  const [showExportModal, setShowExportModal] = (0, import_element86.useState)(false);
-  const closeModal = (0, import_element86.useCallback)(() => setShowExportModal(false), [setShowExportModal]);
-  const [autoConnectGdrive, setAutoConnectGdrive] = (0, import_element86.useState)(false);
-  const { selectedResponsesCount, currentStatus } = (0, import_data17.useSelect)(
+  const [showExportModal, setShowExportModal] = (0, import_element85.useState)(false);
+  const closeModal = (0, import_element85.useCallback)(() => setShowExportModal(false), [setShowExportModal]);
+  const [autoConnectGdrive, setAutoConnectGdrive] = (0, import_element85.useState)(false);
+  const { selectedResponsesCount, currentStatus } = (0, import_data18.useSelect)(
     (select3) => ({
       selectedResponsesCount: select3(store3).getSelectedResponsesCount(),
       currentStatus: select3(store3).getCurrentStatus()
@@ -35774,29 +35740,29 @@ function useExportResponses() {
   );
   const isSpam = currentStatus.includes("spam");
   const isTrash = currentStatus.includes("trash");
-  let statusLabel = (0, import_i18n76.__)("Export", "jetpack-forms");
+  let statusLabel = (0, import_i18n75.__)("Export", "jetpack-forms");
   if (isSpam) {
-    statusLabel = (0, import_i18n76.__)("Export spam", "jetpack-forms");
+    statusLabel = (0, import_i18n75.__)("Export spam", "jetpack-forms");
   } else if (isTrash) {
-    statusLabel = (0, import_i18n76.__)("Export trash", "jetpack-forms");
+    statusLabel = (0, import_i18n75.__)("Export trash", "jetpack-forms");
   }
   const exportLabel = selectedResponsesCount > 0 ? `${statusLabel} (${formatNumber2(selectedResponsesCount)})` : statusLabel;
-  const openModal = (0, import_element86.useCallback)(() => {
+  const openModal = (0, import_element85.useCallback)(() => {
     setShowExportModal(true);
     analytics_default.tracks.recordEvent("jetpack_forms_export_responses_modal_open", {
       viewport: isSm ? "mobile" : "desktop"
     });
   }, [isSm]);
-  const userCanExport = (0, import_data17.useSelect)(
-    (select3) => select3(import_core_data5.store).canUser("update", "settings"),
+  const userCanExport = (0, import_data18.useSelect)(
+    (select3) => select3(import_core_data4.store).canUser("update", "settings"),
     []
   );
-  const { selected, currentQuery: currentQuery2 } = (0, import_data17.useSelect)((select3) => {
+  const { selected, currentQuery: currentQuery2 } = (0, import_data18.useSelect)((select3) => {
     const { getSelectedResponsesFromCurrentDataset: getSelectedResponsesFromCurrentDataset2, getCurrentQuery: getCurrentQuery2 } = select3(store3);
     return { selected: getSelectedResponsesFromCurrentDataset2(), currentQuery: getCurrentQuery2() };
   }, []);
   const exportNonce = useConfigValue("exportNonce");
-  const onExport = (0, import_element86.useCallback)(
+  const onExport = (0, import_element85.useCallback)(
     (action, nonceName) => {
       const data = new FormData();
       data.append("action", action);
@@ -35813,7 +35779,7 @@ function useExportResponses() {
     },
     [currentQuery2, selected, exportNonce]
   );
-  (0, import_element86.useEffect)(() => {
+  (0, import_element85.useEffect)(() => {
     const url = new URL(window.location.href);
     if (url.searchParams.get("connect-gdrive") === "true") {
       setAutoConnectGdrive(true);
@@ -35837,8 +35803,8 @@ function useExportResponses() {
 
 // src/dashboard/components/export-responses/modal.tsx
 var import_components74 = __toESM(require_components(), 1);
-var import_data29 = __toESM(require_data(), 1);
-var import_i18n80 = __toESM(require_i18n(), 1);
+var import_data30 = __toESM(require_data(), 1);
+var import_i18n79 = __toESM(require_i18n(), 1);
 
 // ../../js-packages/shared-extension-utils/src/get-jetpack-data.js
 var JETPACK_DATA_PATH = "Jetpack_Editor_Initial_State";
@@ -35870,7 +35836,7 @@ if (typeof document !== "undefined" && !document.head.querySelector("style[data-
 var import_jsx_runtime157 = __toESM(require_jsx_runtime());
 
 // ../../js-packages/shared-extension-utils/src/plan-utils.js
-var import_i18n77 = __toESM(require_i18n());
+var import_i18n76 = __toESM(require_i18n());
 var import_url6 = __toESM(require_url());
 var usableBlockWithFreePlan = [
   {
@@ -35878,19 +35844,19 @@ var usableBlockWithFreePlan = [
     mediaPlaceholder: true,
     mediaReplaceFlow: true,
     fileType: "video",
-    description: (0, import_i18n77.__)("Upgrade your plan to use video covers", "jetpack-shared-extension-utils")
+    description: (0, import_i18n76.__)("Upgrade your plan to use video covers", "jetpack-shared-extension-utils")
   },
   {
     name: "core/audio",
     mediaPlaceholder: true,
     mediaReplaceFlow: true,
     fileType: "audio",
-    description: (0, import_i18n77.__)("Upgrade your plan to upload audio", "jetpack-shared-extension-utils")
+    description: (0, import_i18n76.__)("Upgrade your plan to upload audio", "jetpack-shared-extension-utils")
   }
 ];
 
 // ../../js-packages/connection/components/use-connection/index.ts
-var import_data22 = __toESM(require_data(), 1);
+var import_data23 = __toESM(require_data(), 1);
 var import_react24 = __toESM(require_react(), 1);
 
 // ../../js-packages/connection/state/actions.jsx
@@ -35995,7 +35961,7 @@ var actions = {
 };
 
 // ../../js-packages/connection/state/controls.jsx
-var import_data18 = __toESM(require_data(), 1);
+var import_data19 = __toESM(require_data(), 1);
 
 // ../../js-packages/connection/state/assignLocation.jsx
 function assignLocation(url) {
@@ -36008,7 +35974,7 @@ var store_id_default = STORE_ID;
 
 // ../../js-packages/connection/state/controls.jsx
 var REGISTER_SITE2 = ({ redirectUri, from }) => api_default.registerSite(null, redirectUri, from);
-var CONNECT_USER2 = (0, import_data18.createRegistryControl)(
+var CONNECT_USER2 = (0, import_data19.createRegistryControl)(
   ({ resolveSelect: resolveSelect2 }) => ({ from, redirectFunc, redirectUri, skipPricingPage } = {}) => {
     return new Promise((resolve, reject) => {
       resolveSelect2(store_id_default).getAuthorizationUrl(redirectUri).then((authorizationUrl2) => {
@@ -36037,7 +36003,7 @@ var controls_default = {
 };
 
 // ../../js-packages/connection/state/reducers.jsx
-var import_data19 = __toESM(require_data(), 1);
+var import_data20 = __toESM(require_data(), 1);
 var connectionStatus = (state = {}, action) => {
   switch (action.type) {
     case SET_CONNECTION_STATUS:
@@ -36113,7 +36079,7 @@ var isOfflineMode = (state = false, action) => {
   }
   return state;
 };
-var reducers = (0, import_data19.combineReducers)({
+var reducers = (0, import_data20.combineReducers)({
   connectionStatus,
   connectionStatusIsFetching,
   siteIsRegistering,
@@ -36128,17 +36094,17 @@ var reducers = (0, import_data19.combineReducers)({
 var reducers_default = reducers;
 
 // ../../js-packages/connection/state/resolvers.jsx
-var import_data20 = __toESM(require_data(), 1);
+var import_data21 = __toESM(require_data(), 1);
 var connectionResolvers = {
   getAuthorizationUrl: {
     isFulfilled: (state, ...args) => {
       const hasAuthorization = Boolean(state.authorizationUrl);
-      const hasFinishedResolution = (0, import_data20.select)(store_id_default).hasFinishedResolution(
+      const hasFinishedResolution = (0, import_data21.select)(store_id_default).hasFinishedResolution(
         "getAuthorizationUrl",
         args
       );
       if (hasAuthorization && !hasFinishedResolution) {
-        (0, import_data20.dispatch)(store_id_default).finishResolution("getAuthorizationUrl", args);
+        (0, import_data21.dispatch)(store_id_default).finishResolution("getAuthorizationUrl", args);
       }
       return hasAuthorization;
     },
@@ -36185,13 +36151,13 @@ var selectors = {
 var selectors_default = selectors;
 
 // ../../js-packages/connection/state/store-holder.jsx
-var import_data21 = __toESM(require_data(), 1);
+var import_data22 = __toESM(require_data(), 1);
 var storeHolder = class _storeHolder {
   static store = null;
   static mayBeInit(storeId, storeConfig) {
     if (null === _storeHolder.store) {
-      _storeHolder.store = (0, import_data21.createReduxStore)(storeId, storeConfig);
-      (0, import_data21.register)(_storeHolder.store);
+      _storeHolder.store = (0, import_data22.createReduxStore)(storeId, storeConfig);
+      (0, import_data22.register)(_storeHolder.store);
     }
   }
 };
@@ -36226,8 +36192,8 @@ function useConnection({
   skipUserConnection,
   skipPricingPage
 } = {}) {
-  const { registerSite: registerSite2, connectUser: connectUser2, refreshConnectedPlugins: refreshConnectedPlugins2 } = (0, import_data22.useDispatch)(store_id_default);
-  const registrationError2 = (0, import_data22.useSelect)(
+  const { registerSite: registerSite2, connectUser: connectUser2, refreshConnectedPlugins: refreshConnectedPlugins2 } = (0, import_data23.useDispatch)(store_id_default);
+  const registrationError2 = (0, import_data23.useSelect)(
     (select3) => select3(store_id_default).getRegistrationError(),
     []
   );
@@ -36241,7 +36207,7 @@ function useConnection({
     isUserConnected,
     hasConnectedOwner,
     isOfflineMode: isOfflineMode2
-  } = (0, import_data22.useSelect)((select3) => {
+  } = (0, import_data23.useSelect)((select3) => {
     const connectionStatus2 = select3(store_id_default).getConnectionStatus();
     return {
       siteIsRegistering: select3(store_id_default).getSiteIsRegistering(),
@@ -36300,7 +36266,7 @@ function useConnection({
 }
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-analytics.js
-var import_element87 = __toESM(require_element());
+var import_element86 = __toESM(require_element());
 var { tracks } = analytics_default;
 var { recordEvent } = tracks;
 var useAnalytics = ({
@@ -36309,10 +36275,10 @@ var useAnalytics = ({
   pageViewSuffix = "page_view",
   pageViewEventProperties = {}
 } = {}) => {
-  const [pageViewRecorded, setPageViewRecorded] = (0, import_element87.useState)(false);
+  const [pageViewRecorded, setPageViewRecorded] = (0, import_element86.useState)(false);
   const { isUserConnected, isRegistered, userConnectionData: userConnectionData2 = {} } = useConnection();
   const { wpcomUser: { login, ID } = {}, blogId } = userConnectionData2.currentUser || {};
-  const recordEventAsync = (0, import_element87.useCallback)(
+  const recordEventAsync = (0, import_element86.useCallback)(
     async (event, properties = {}) => {
       if (!(isUserConnected && ID && login)) {
         return;
@@ -36321,7 +36287,7 @@ var useAnalytics = ({
     },
     [isUserConnected, ID, login]
   );
-  (0, import_element87.useEffect)(() => {
+  (0, import_element86.useEffect)(() => {
     if (!isUserConnected || !ID || !login || !blogId) {
       return;
     }
@@ -36329,7 +36295,7 @@ var useAnalytics = ({
       blog_id: blogId
     });
   }, [blogId, ID, login, isUserConnected]);
-  (0, import_element87.useEffect)(() => {
+  (0, import_element86.useEffect)(() => {
     const pageViewEvent = pageViewEventName ? `${pageViewNamespace}_${pageViewEventName}_${pageViewSuffix}` : null;
     if (!isRegistered) {
       return;
@@ -36358,21 +36324,21 @@ var useAnalytics = ({
 var use_analytics_default = useAnalytics;
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-autosave-and-redirect/index.ts
-var import_data23 = __toESM(require_data());
-var import_element88 = __toESM(require_element());
+var import_data24 = __toESM(require_data());
+var import_element87 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-ref-interval.ts
-var import_element89 = __toESM(require_element());
+var import_element88 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-module-status/index.js
-var import_data26 = __toESM(require_data());
-var import_element90 = __toESM(require_element());
+var import_data27 = __toESM(require_data());
+var import_element89 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/modules-state/index.js
-var import_data25 = __toESM(require_data());
+var import_data26 = __toESM(require_data());
 
 // ../../js-packages/shared-extension-utils/src/modules-state/actions.js
-var import_data24 = __toESM(require_data());
+var import_data25 = __toESM(require_data());
 
 // ../../js-packages/shared-extension-utils/src/modules-state/controls.js
 var import_api_fetch9 = __toESM(require_api_fetch());
@@ -36418,7 +36384,7 @@ function* updateJetpackModuleStatus2(settings) {
     yield setJetpackModules({ data });
     return true;
   } catch {
-    const oldSettings = (0, import_data24.select)(JETPACK_MODULES_STORE_ID).getJetpackModules();
+    const oldSettings = (0, import_data25.select)(JETPACK_MODULES_STORE_ID).getJetpackModules();
     yield setJetpackModules(oldSettings);
     return false;
   } finally {
@@ -36435,7 +36401,7 @@ function* fetchModules() {
     yield setJetpackModules({ data });
     return true;
   } catch {
-    const oldSettings = (0, import_data24.select)(JETPACK_MODULES_STORE_ID).getJetpackModules();
+    const oldSettings = (0, import_data25.select)(JETPACK_MODULES_STORE_ID).getJetpackModules();
     yield setJetpackModules(oldSettings);
     return false;
   } finally {
@@ -36510,25 +36476,25 @@ var selectors_default2 = jetpackModulesSelectors;
 
 // ../../js-packages/shared-extension-utils/src/modules-state/index.js
 var JETPACK_MODULES_STORE_ID = "jetpack-modules";
-var store4 = (0, import_data25.createReduxStore)(JETPACK_MODULES_STORE_ID, {
+var store4 = (0, import_data26.createReduxStore)(JETPACK_MODULES_STORE_ID, {
   reducer: reducer_default2,
   actions: actions_default,
   controls: controls_default2,
   resolvers: resolvers_default2,
   selectors: selectors_default2
 });
-(0, import_data25.register)(store4);
+(0, import_data26.register)(store4);
 var initialData = window?.Initial_State?.getModules || // Jetpack Dashboard
 window?.Jetpack_Editor_Initial_State?.modules || // Gutenberg
 null;
 if (initialData !== null) {
-  (0, import_data25.dispatch)(JETPACK_MODULES_STORE_ID).setJetpackModules({
+  (0, import_data26.dispatch)(JETPACK_MODULES_STORE_ID).setJetpackModules({
     data: { ...initialData }
   });
 }
 
 // ../../js-packages/shared-extension-utils/src/get-block-icon-from-metadata.js
-var import_element91 = __toESM(require_element());
+var import_element90 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/libs/connection/index.ts
 var import_debug4 = __toESM(require_browser());
@@ -36536,7 +36502,7 @@ var initialState3 = window?.JP_CONNECTION_INITIAL_STATE;
 var debug4 = (0, import_debug4.default)("shared-extension-utils:connection");
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-upgrade-flow/index.js
-var import_data27 = __toESM(require_data());
+var import_data28 = __toESM(require_data());
 var import_hooks = __toESM(require_hooks());
 
 // ../../js-packages/shared-extension-utils/src/block-editor-actions.js
@@ -36544,12 +36510,12 @@ var import_dom_ready = __toESM(require_dom_ready());
 
 // src/dashboard/components/export-responses/csv.tsx
 var import_components72 = __toESM(require_components(), 1);
-var import_element92 = __toESM(require_element(), 1);
-var import_i18n78 = __toESM(require_i18n(), 1);
+var import_element91 = __toESM(require_element(), 1);
+var import_i18n77 = __toESM(require_i18n(), 1);
 var import_jsx_runtime158 = __toESM(require_jsx_runtime(), 1);
 var CSVExport = ({ onExport }) => {
   const { tracks: tracks2 } = use_analytics_default();
-  const downloadCSV = (0, import_element92.useCallback)(() => {
+  const downloadCSV = (0, import_element91.useCallback)(() => {
     tracks2.recordEvent("jetpack_forms_export_click", {
       destination: "csv",
       screen: "form-responses-inbox"
@@ -36588,11 +36554,11 @@ var CSVExport = ({ onExport }) => {
           )
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n78.__)("CSV File", "jetpack-forms") })
+      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n77.__)("CSV File", "jetpack-forms") })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: (0, import_i18n78.__)("Download your form response data as a CSV file.", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components72.Button, { variant: "primary", className: buttonClasses, onClick: downloadCSV, children: (0, import_i18n78.__)("Download", "jetpack-forms") }) })
+      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: (0, import_i18n77.__)("Download your form response data as a CSV file.", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components72.Button, { variant: "primary", className: buttonClasses, onClick: downloadCSV, children: (0, import_i18n77.__)("Download", "jetpack-forms") }) })
     ] })
   ] });
 };
@@ -36600,9 +36566,9 @@ var csv_default = CSVExport;
 
 // src/dashboard/components/export-responses/google-drive.tsx
 var import_components73 = __toESM(require_components(), 1);
-var import_data28 = __toESM(require_data(), 1);
-var import_element93 = __toESM(require_element(), 1);
-var import_i18n79 = __toESM(require_i18n(), 1);
+var import_data29 = __toESM(require_data(), 1);
+var import_element92 = __toESM(require_element(), 1);
+var import_i18n78 = __toESM(require_i18n(), 1);
 
 // src/util/get-preferred-responses-view.js
 var PARTIAL_RESPONSES_PATH = "admin.php?page=jetpack-forms-admin";
@@ -36611,23 +36577,23 @@ var FULL_RESPONSES_PATH = getJetpackData()?.adminUrl + PARTIAL_RESPONSES_PATH;
 // src/dashboard/components/export-responses/google-drive.tsx
 var import_jsx_runtime159 = __toESM(require_jsx_runtime(), 1);
 var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
-  const [isExporting, setIsExporting] = (0, import_element93.useState)(false);
-  const { integration } = (0, import_data28.useSelect)((select3) => {
+  const [isExporting, setIsExporting] = (0, import_element92.useState)(false);
+  const { integration } = (0, import_data29.useSelect)((select3) => {
     const store5 = select3(INTEGRATIONS_STORE);
     const list = store5.getIntegrations() || [];
     return { integration: list.find((i2) => i2.id === "google-drive") };
   }, []);
-  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data28.useDispatch)(INTEGRATIONS_STORE);
+  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data29.useDispatch)(INTEGRATIONS_STORE);
   const isConnectedToGoogleDrive = !!integration?.isConnected;
   const gdriveConnectSupportURL = useConfigValue("gdriveConnectSupportURL");
   const { tracks: tracks2 } = use_analytics_default();
-  const autoConnectOpened = (0, import_element93.useRef)(false);
-  const [isTogglingConnection, setIsTogglingConnection] = (0, import_element93.useState)(false);
+  const autoConnectOpened = (0, import_element92.useRef)(false);
+  const [isTogglingConnection, setIsTogglingConnection] = (0, import_element92.useState)(false);
   const { isUserConnected, handleConnectUser, userIsConnecting: userIsConnecting2, isOfflineMode: isOfflineMode2 } = useConnection({
     redirectUri: PARTIAL_RESPONSES_PATH + "&connect-gdrive=true"
   });
   const needsUserConnection = !isSimpleSite() && !isUserConnected;
-  const exportToGoogleDrive = (0, import_element93.useCallback)(() => {
+  const exportToGoogleDrive = (0, import_element92.useCallback)(() => {
     if (isExporting) {
       return;
     }
@@ -36642,7 +36608,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
       setIsExporting(false);
     });
   }, [tracks2, onExport, isExporting]);
-  const handleConnectClick = (0, import_element93.useCallback)(() => {
+  const handleConnectClick = (0, import_element92.useCallback)(() => {
     if (!integration?.settingsUrl) return;
     tracks2.recordEvent("jetpack_forms_upsell_googledrive_click", {
       screen: "form-responses-inbox"
@@ -36680,21 +36646,21 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
           )
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n79.__)("Google Sheets", "jetpack-forms") })
+      /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n78.__)("Google Sheets", "jetpack-forms") })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
       /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("div", { children: [
-        (0, import_i18n79.__)("Export your data into a Google Sheets file.", "jetpack-forms"),
+        (0, import_i18n78.__)("Export your data into a Google Sheets file.", "jetpack-forms"),
         !isConnectedToGoogleDrive && /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(import_jsx_runtime159.Fragment, { children: [
           "\xA0",
           /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
             "a",
             {
               href: gdriveConnectSupportURL,
-              title: (0, import_i18n79.__)("Connect to Google Drive", "jetpack-forms"),
+              title: (0, import_i18n78.__)("Connect to Google Drive", "jetpack-forms"),
               target: "_blank",
               rel: "noopener noreferrer",
-              children: (0, import_i18n79.__)("You need to connect to Google Drive.", "jetpack-forms")
+              children: (0, import_i18n78.__)("You need to connect to Google Drive.", "jetpack-forms")
             }
           )
         ] })
@@ -36707,7 +36673,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
             variant: "primary",
             onClick: exportToGoogleDrive,
             isBusy: isExporting,
-            children: (0, import_i18n79.__)("Export", "jetpack-forms")
+            children: (0, import_i18n78.__)("Export", "jetpack-forms")
           }
         ),
         !isConnectedToGoogleDrive && needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
@@ -36719,7 +36685,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
             target: "_blank",
             onClick: handleConnectUser,
             isBusy: userIsConnecting2,
-            children: (0, import_i18n79.__)("Connect Jetpack user account", "jetpack-forms")
+            children: (0, import_i18n78.__)("Connect Jetpack user account", "jetpack-forms")
           }
         ),
         !isConnectedToGoogleDrive && !needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
@@ -36737,7 +36703,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
                 autoConnectOpened.current = true;
               }
             },
-            children: isTogglingConnection ? (0, import_i18n79.__)("Connecting\u2026", "jetpack-forms") : (0, import_i18n79._x)(
+            children: isTogglingConnection ? (0, import_i18n78.__)("Connecting\u2026", "jetpack-forms") : (0, import_i18n78._x)(
               "Connect to Google Drive",
               "",
               // Dummy context to avoid bad minification. See https://github.com/Automattic/jetpack/tree/e3f007ec7ac80715f3d82db33c9ed8098a7b45b4/projects/js-packages/i18n-check-webpack-plugin#conditional-function-call-compaction
@@ -36758,7 +36724,7 @@ var ExportResponsesModal = ({
   onExport,
   autoConnectGdrive
 }) => {
-  const { integrations } = (0, import_data29.useSelect)((select3) => {
+  const { integrations } = (0, import_data30.useSelect)((select3) => {
     const store5 = select3(INTEGRATIONS_STORE);
     return {
       integrations: store5.getIntegrations() || []
@@ -36770,7 +36736,7 @@ var ExportResponsesModal = ({
   return /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
     import_components74.Modal,
     {
-      title: (0, import_i18n80.__)("Export responses", "jetpack-forms"),
+      title: (0, import_i18n79.__)("Export responses", "jetpack-forms"),
       onRequestClose,
       size: "large",
       children: /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)(import_components74.__experimentalVStack, { spacing: 8, children: [
@@ -36821,7 +36787,7 @@ var ExportResponsesButton = ({
         onClick: openModal,
         accessibleWhenDisabled: true,
         disabled: isDisabled,
-        label: isEmpty4 ? (0, import_i18n81.__)("Nothing to export.", "jetpack-forms") : "",
+        label: isEmpty4 ? (0, import_i18n80.__)("Nothing to export.", "jetpack-forms") : "",
         showTooltip: isEmpty4,
         children: exportLabel
       }
@@ -36838,6 +36804,41 @@ var ExportResponsesButton = ({
 };
 var button_default = ExportResponsesButton;
 
+// src/dashboard/constants.ts
+var import_i18n81 = __toESM(require_i18n(), 1);
+var FORM_STATUSES = [
+  "all",
+  "publish",
+  "draft",
+  "pending",
+  "future",
+  "private",
+  "trash"
+];
+var NON_TRASH_FORM_STATUSES = FORM_STATUSES.filter(
+  (s2) => s2 !== "all" && s2 !== "trash"
+).join(",");
+function getFormStatusLabel(status) {
+  switch (status) {
+    case "all":
+      return (0, import_i18n81.__)("All", "jetpack-forms");
+    case "publish":
+      return (0, import_i18n81.__)("Published", "jetpack-forms");
+    case "draft":
+      return (0, import_i18n81.__)("Draft", "jetpack-forms");
+    case "pending":
+      return (0, import_i18n81.__)("Pending review", "jetpack-forms");
+    case "future":
+      return (0, import_i18n81.__)("Scheduled", "jetpack-forms");
+    case "private":
+      return (0, import_i18n81.__)("Private", "jetpack-forms");
+    case "trash":
+      return (0, import_i18n81.__)("Trash", "jetpack-forms");
+    default:
+      return status;
+  }
+}
+
 // src/dashboard/wp-build/components/manage-integrations-button/index.tsx
 var import_components76 = __toESM(require_components(), 1);
 var import_i18n82 = __toESM(require_i18n(), 1);
@@ -36848,7 +36849,7 @@ function ManageIntegrationsButton({ onClick }) {
 
 // src/dashboard/wp-build/hooks/use-form-item-actions.ts
 var import_api_fetch10 = __toESM(require_api_fetch(), 1);
-var import_data31 = __toESM(require_data(), 1);
+var import_data32 = __toESM(require_data(), 1);
 var import_element95 = __toESM(require_element(), 1);
 var import_i18n85 = __toESM(require_i18n(), 1);
 var import_notices5 = __toESM(require_notices(), 1);
@@ -36885,15 +36886,39 @@ var DATE_FORMAT_OPTIONS = DATE_FORMATS.map(
 var FORM_POST_TYPE = "jetpack_form";
 var FORM_SOURCE_META_KEY = "_jetpack_forms_source_post_id";
 
+// src/dashboard/hooks/use-forms-data.ts
+var import_core_data5 = __toESM(require_core_data(), 1);
+var import_element93 = __toESM(require_element(), 1);
+var import_html_entities3 = __toESM(require_html_entities(), 1);
+function getFormsListQuery(page, perPage, search, status, hasResponses) {
+  const queryParams = {
+    context: "edit",
+    jetpack_forms_context: "dashboard",
+    order: "desc",
+    orderby: "modified",
+    page,
+    per_page: perPage,
+    status
+  };
+  if (search) {
+    queryParams.search = search;
+  }
+  if (hasResponses) {
+    queryParams.has_responses = hasResponses;
+  }
+  return queryParams;
+}
+
 // src/dashboard/wp-build/hooks/use-duplicate-form.ts
-var import_data30 = __toESM(require_data(), 1);
+var import_data31 = __toESM(require_data(), 1);
 var import_element94 = __toESM(require_element(), 1);
 var import_i18n84 = __toESM(require_i18n(), 1);
 var import_notices4 = __toESM(require_notices(), 1);
 function useDuplicateForm() {
   const [isDuplicating, setIsDuplicating] = (0, import_element94.useState)(false);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data30.useDispatch)(import_notices4.store);
-  const { saveEntityRecord } = (0, import_data30.useDispatch)("core");
+  const { createSuccessNotice, createErrorNotice } = (0, import_data31.useDispatch)(import_notices4.store);
+  const { saveEntityRecord } = (0, import_data31.useDispatch)("core");
+  const { invalidateFormStatusCounts: invalidateFormStatusCounts2 } = (0, import_data31.useDispatch)(store3);
   const adminUrl = useConfigValue("adminUrl") || "";
   const duplicateForm = (0, import_element94.useCallback)(
     async (item) => {
@@ -36905,7 +36930,7 @@ function useDuplicateForm() {
       }
       setIsDuplicating(true);
       try {
-        const original = await (0, import_data30.resolveSelect)("core").getEntityRecord(
+        const original = await (0, import_data31.resolveSelect)("core").getEntityRecord(
           "postType",
           "jetpack_form",
           item.id,
@@ -36968,20 +36993,28 @@ function useDuplicateForm() {
         });
       } finally {
         setIsDuplicating(false);
+        invalidateFormStatusCounts2();
       }
     },
-    [createErrorNotice, createSuccessNotice, adminUrl, isDuplicating, saveEntityRecord]
+    [
+      createErrorNotice,
+      createSuccessNotice,
+      adminUrl,
+      invalidateFormStatusCounts2,
+      isDuplicating,
+      saveEntityRecord
+    ]
   );
   return { duplicateForm, isDuplicating };
 }
 
 // src/dashboard/wp-build/hooks/use-form-item-actions.ts
 function useFormItemActions() {
-  const { createSuccessNotice, createErrorNotice } = (0, import_data31.useDispatch)(import_notices5.store);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data32.useDispatch)(import_notices5.store);
   const { duplicateForm, isDuplicating } = useDuplicateForm();
   const [isUpdatingStatus, setIsUpdatingStatus] = (0, import_element95.useState)(false);
   const isUpdatingStatusRef = (0, import_element95.useRef)(false);
-  const { saveEntityRecord, invalidateResolution } = (0, import_data31.useDispatch)("core");
+  const { saveEntityRecord, invalidateResolution } = (0, import_data32.useDispatch)("core");
   const previewForm = (0, import_element95.useCallback)(async (item) => {
     try {
       const response = await (0, import_api_fetch10.default)({
@@ -37214,7 +37247,7 @@ function usePageHeaderDetails(props) {
   const hasResponses = !isLoadingData && totalItems > 0;
   const emptySpam = useEmptySpam();
   const emptyTrash = useEmptyTrash();
-  const formRecord = (0, import_data32.useSelect)(
+  const formRecord = (0, import_data33.useSelect)(
     (select3) => sourceIdNumber ? select3(import_core_data6.store).getEntityRecord(
       "postType",
       "jetpack_form",
@@ -38609,11 +38642,11 @@ function StageInner() {
   const sourceIdNumber = typeof sourceIdValue === "number" ? sourceIdValue : Number(sourceIdValue);
   const isSingleFormView = Number.isFinite(sourceIdNumber) && sourceIdNumber > 0;
   const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element98.useState)(false);
-  const integrations = (0, import_data33.useSelect)(
+  const integrations = (0, import_data34.useSelect)(
     (select3) => select3(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
   );
-  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data33.useDispatch)(INTEGRATIONS_STORE);
+  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data34.useDispatch)(INTEGRATIONS_STORE);
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
   const [view, setView] = (0, import_element98.useState)(() => ({
@@ -39036,7 +39069,7 @@ var Stage = () => {
 var import_api_fetch12 = __toESM(require_api_fetch());
 var import_components93 = __toESM(require_components());
 var import_core_data10 = __toESM(require_core_data());
-var import_data37 = __toESM(require_data());
+var import_data38 = __toESM(require_data());
 var import_element104 = __toESM(require_element());
 var import_html_entities9 = __toESM(require_html_entities());
 var import_i18n99 = __toESM(require_i18n());
@@ -39045,7 +39078,7 @@ import { useParams as useParams2, useSearch as useSearch4, useNavigate as useNav
 // src/dashboard/components/feedback-comments/index.tsx
 var import_components81 = __toESM(require_components(), 1);
 var import_core_data8 = __toESM(require_core_data(), 1);
-var import_data34 = __toESM(require_data(), 1);
+var import_data35 = __toESM(require_data(), 1);
 var import_element99 = __toESM(require_element(), 1);
 var import_i18n90 = __toESM(require_i18n(), 1);
 var import_notices7 = __toESM(require_notices(), 1);
@@ -39115,16 +39148,16 @@ var FeedbackComments = ({ postId }) => {
   const perPage = 50;
   const [loadedComments, setLoadedComments] = (0, import_element99.useState)([]);
   const [clientAddedComments, setClientAddedComments] = (0, import_element99.useState)([]);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data34.useDispatch)(import_notices7.store);
-  const { deleteEntityRecord, saveEntityRecord } = (0, import_data34.useDispatch)(import_core_data8.store);
-  const currentUser = (0, import_data34.useSelect)((select3) => {
+  const { createSuccessNotice, createErrorNotice } = (0, import_data35.useDispatch)(import_notices7.store);
+  const { deleteEntityRecord, saveEntityRecord } = (0, import_data35.useDispatch)(import_core_data8.store);
+  const currentUser = (0, import_data35.useSelect)((select3) => {
     return select3(import_core_data8.store).getCurrentUser();
   }, []);
   const {
     comments: commentsPage,
     totalComments,
     isLoadingComments
-  } = (0, import_data34.useSelect)(
+  } = (0, import_data35.useSelect)(
     (select3) => {
       const commentsData = select3(import_core_data8.store).getEntityRecords("root", "comment", {
         per_page: perPage,
@@ -40290,14 +40323,14 @@ var response_meta_default = ResponseMeta;
 
 // src/dashboard/hooks/use-mark-as-spam.ts
 var import_core_data9 = __toESM(require_core_data(), 1);
-var import_data35 = __toESM(require_data(), 1);
+var import_data36 = __toESM(require_data(), 1);
 var import_element102 = __toESM(require_element(), 1);
 var import_i18n96 = __toESM(require_i18n(), 1);
 var useMarkAsSpam = (response, options) => {
   const [isConfirmDialogOpen, setIsConfirmDialogOpen] = (0, import_element102.useState)(false);
   const [isSaving, setIsSaving] = (0, import_element102.useState)(false);
-  const { saveEntityRecord } = (0, import_data35.useDispatch)(import_core_data9.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data35.useDispatch)(store3);
+  const { saveEntityRecord } = (0, import_data36.useDispatch)(import_core_data9.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data36.useDispatch)(store3);
   const markAsSpamConfirmationMessage = (0, import_element102.useMemo)(
     () => (0, import_i18n96.__)("Are you sure you want to mark this response as spam?", "jetpack-forms"),
     []
@@ -40342,7 +40375,7 @@ var useMarkAsSpam = (response, options) => {
 
 // routes/responses/response/actions.tsx
 var import_components91 = __toESM(require_components());
-var import_data36 = __toESM(require_data());
+var import_data37 = __toESM(require_data());
 var import_element103 = __toESM(require_element());
 var import_i18n97 = __toESM(require_i18n());
 import { useSearch as useSearch3, useNavigate as useNavigate4 } from "@wordpress/route";
@@ -40374,7 +40407,7 @@ function ResponseActions({
   const [isRestoring, setIsRestoring] = (0, import_element103.useState)(false);
   const [isDeleting, setIsDeleting] = (0, import_element103.useState)(false);
   const [isTogglingReadStatus, setIsTogglingReadStatus] = (0, import_element103.useState)(false);
-  const registry = (0, import_data36.useRegistry)();
+  const registry = (0, import_data37.useRegistry)();
   const handleMarkAsSpam = (0, import_element103.useCallback)(async () => {
     onActionComplete?.(response);
     setIsMarkingAsSpam(true);
@@ -40540,10 +40573,10 @@ function SingleResponseView({
   const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element104.useState)(null);
   const emptyTrashDays = useConfigValue("emptyTrashDays") ?? 0;
   const isNotesEnabled = useConfigValue("isNotesEnabled") ?? false;
-  const { editEntityRecord } = (0, import_data37.useDispatch)(import_core_data10.store);
+  const { editEntityRecord } = (0, import_data38.useDispatch)(import_core_data10.store);
   const navigate = useNavigate5();
   const searchParams = useSearch4({ from: "/responses/$view" });
-  const { response, isLoading } = (0, import_data37.useSelect)(
+  const { response, isLoading } = (0, import_data38.useSelect)(
     (select3) => {
       if (!responseId) {
         return { response: null, isLoading: false };
