@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Added a form name modal to the wp-build forms dashboard, prompting users to name their form before entering the editor.
+- Forms: add publish/unpublish actions.
 
 ### Changed
 - Form Editor: Hide word count and reading time panel

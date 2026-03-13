@@ -582,7 +582,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
             "The result of getSnapshot should be cached to avoid an infinite loop"
           ), didWarnUncachedGetSnapshot = true);
         }
-        cachedValue = useState57({
+        cachedValue = useState58({
           inst: { value, getSnapshot }
         });
         var inst = cachedValue[0].inst, forceUpdate = cachedValue[1];
@@ -620,7 +620,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return getSnapshot();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React36 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState57 = React36.useState, useEffect43 = React36.useEffect, useLayoutEffect4 = React36.useLayoutEffect, useDebugValue = React36.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      var React36 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState58 = React36.useState, useEffect43 = React36.useEffect, useLayoutEffect4 = React36.useLayoutEffect, useDebugValue = React36.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
       exports.useSyncExternalStore = void 0 !== React36.useSyncExternalStore ? React36.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
@@ -34910,17 +34910,26 @@ function useFormsData(page, perPage, search, status, hasResponses) {
     totalItems,
     totalPages
   } = (0, import_core_data2.useEntityRecords)("postType", "jetpack_form", query);
-  const records = (rawRecords || []).map((item) => {
-    const typedItem = item;
-    return {
-      id: typedItem.id,
-      title: (0, import_html_entities3.decodeEntities)(typedItem.title?.rendered || ""),
-      status: typedItem.status,
-      modified: typedItem.modified,
-      entriesCount: typedItem.entries_count ?? 0,
-      editUrl: typedItem.edit_url
-    };
-  });
+  const records = (0, import_element80.useMemo)(() => {
+    const seen = /* @__PURE__ */ new Set();
+    const items = [];
+    for (const item of rawRecords || []) {
+      const typedItem = item;
+      if (seen.has(typedItem.id)) {
+        continue;
+      }
+      seen.add(typedItem.id);
+      items.push({
+        id: typedItem.id,
+        title: (0, import_html_entities3.decodeEntities)(typedItem.title?.rendered || ""),
+        status: typedItem.status,
+        modified: typedItem.modified,
+        entriesCount: typedItem.entries_count ?? 0,
+        editUrl: typedItem.edit_url
+      });
+    }
+    return items;
+  }, [rawRecords]);
   return {
     records,
     isLoading: !hasResolved,
@@ -36844,12 +36853,6 @@ var import_element95 = __toESM(require_element(), 1);
 var import_i18n85 = __toESM(require_i18n(), 1);
 var import_notices5 = __toESM(require_notices(), 1);
 
-// src/dashboard/wp-build/hooks/use-duplicate-form.ts
-var import_data30 = __toESM(require_data(), 1);
-var import_element94 = __toESM(require_element(), 1);
-var import_i18n84 = __toESM(require_i18n(), 1);
-var import_notices4 = __toESM(require_notices(), 1);
-
 // src/blocks/shared/util/constants.js
 var import_i18n83 = __toESM(require_i18n(), 1);
 var currentYear = (/* @__PURE__ */ new Date()).getFullYear();
@@ -36879,9 +36882,14 @@ var DATE_FORMAT_OPTIONS = DATE_FORMATS.map(
     value
   })
 );
+var FORM_POST_TYPE = "jetpack_form";
 var FORM_SOURCE_META_KEY = "_jetpack_forms_source_post_id";
 
 // src/dashboard/wp-build/hooks/use-duplicate-form.ts
+var import_data30 = __toESM(require_data(), 1);
+var import_element94 = __toESM(require_element(), 1);
+var import_i18n84 = __toESM(require_i18n(), 1);
+var import_notices4 = __toESM(require_notices(), 1);
 function useDuplicateForm() {
   const [isDuplicating, setIsDuplicating] = (0, import_element94.useState)(false);
   const { createSuccessNotice, createErrorNotice } = (0, import_data30.useDispatch)(import_notices4.store);
@@ -36971,6 +36979,9 @@ function useDuplicateForm() {
 function useFormItemActions() {
   const { createSuccessNotice, createErrorNotice } = (0, import_data31.useDispatch)(import_notices5.store);
   const { duplicateForm, isDuplicating } = useDuplicateForm();
+  const [isUpdatingStatus, setIsUpdatingStatus] = (0, import_element95.useState)(false);
+  const isUpdatingStatusRef = (0, import_element95.useRef)(false);
+  const { saveEntityRecord, invalidateResolution } = (0, import_data31.useDispatch)("core");
   const previewForm = (0, import_element95.useCallback)(async (item) => {
     try {
       const response = await (0, import_api_fetch10.default)({
@@ -37013,7 +37024,149 @@ function useFormItemActions() {
     },
     [createErrorNotice, createSuccessNotice]
   );
-  return { duplicateForm, previewForm, copyEmbed, copyShortcode, isDuplicating };
+  const invalidateListQuery = (0, import_element95.useCallback)(
+    (query) => {
+      invalidateResolution("getEntityRecords", ["postType", FORM_POST_TYPE, query]);
+      invalidateResolution("getEntityRecords", [
+        "postType",
+        FORM_POST_TYPE,
+        { ...query, per_page: 1, _fields: "id" }
+      ]);
+    },
+    [invalidateResolution]
+  );
+  const updateStatus = (0, import_element95.useCallback)(
+    async (items, nextStatus, options = {}) => {
+      if (isUpdatingStatusRef.current || !items?.length) {
+        return;
+      }
+      isUpdatingStatusRef.current = true;
+      setIsUpdatingStatus(true);
+      try {
+        const previousStatuses = new Map(items.map((item) => [item.id, item.status]));
+        const promises = await Promise.allSettled(
+          items.map(
+            (item) => saveEntityRecord(
+              "postType",
+              FORM_POST_TYPE,
+              { id: item.id, status: nextStatus },
+              { throwOnError: true }
+            )
+          )
+        );
+        const updatedCount = promises.filter((p2) => p2.status === "fulfilled").length;
+        const failedCount = promises.length - updatedCount;
+        if (updatedCount) {
+          const message2 = nextStatus === "publish" ? (0, import_i18n85.sprintf)(
+            /* translators: %d: number of forms */
+            (0, import_i18n85._n)("%d form published.", "%d forms published.", updatedCount, "jetpack-forms"),
+            updatedCount
+          ) : (0, import_i18n85.sprintf)(
+            /* translators: %d: number of forms */
+            (0, import_i18n85._n)(
+              "%d form set to draft.",
+              "%d forms set to draft.",
+              updatedCount,
+              "jetpack-forms"
+            ),
+            updatedCount
+          );
+          const fallbackStatus = nextStatus === "publish" ? "draft" : "publish";
+          createSuccessNotice(message2, {
+            type: "snackbar",
+            actions: [
+              {
+                label: (0, import_i18n85.__)("Undo", "jetpack-forms"),
+                onClick: async () => {
+                  if (isUpdatingStatusRef.current) {
+                    return;
+                  }
+                  isUpdatingStatusRef.current = true;
+                  setIsUpdatingStatus(true);
+                  try {
+                    await Promise.allSettled(
+                      items.map(
+                        (item) => saveEntityRecord(
+                          "postType",
+                          FORM_POST_TYPE,
+                          {
+                            id: item.id,
+                            status: previousStatuses.get(item.id) || fallbackStatus
+                          },
+                          { throwOnError: true }
+                        )
+                      )
+                    );
+                    const undoQueries = options.invalidateQueries?.length ? options.invalidateQueries : [
+                      getFormsListQuery(1, 20, "", NON_TRASH_FORM_STATUSES)
+                    ];
+                    undoQueries.forEach(invalidateListQuery);
+                  } finally {
+                    isUpdatingStatusRef.current = false;
+                    setIsUpdatingStatus(false);
+                  }
+                }
+              }
+            ]
+          });
+        }
+        if (failedCount) {
+          const errorMessage = nextStatus === "publish" ? (0, import_i18n85.sprintf)(
+            /* translators: %d: number of forms */
+            (0, import_i18n85._n)(
+              "Could not publish %d form.",
+              "Could not publish %d forms.",
+              failedCount,
+              "jetpack-forms"
+            ),
+            failedCount
+          ) : (0, import_i18n85.sprintf)(
+            /* translators: %d: number of forms */
+            (0, import_i18n85._n)(
+              "Could not set %d form to draft.",
+              "Could not set %d forms to draft.",
+              failedCount,
+              "jetpack-forms"
+            ),
+            failedCount
+          );
+          createErrorNotice(errorMessage, {
+            type: "snackbar"
+          });
+        }
+        const invalidateQueries = options.invalidateQueries?.length ? options.invalidateQueries : [
+          getFormsListQuery(1, 20, "", NON_TRASH_FORM_STATUSES)
+        ];
+        invalidateQueries.forEach(invalidateListQuery);
+      } finally {
+        isUpdatingStatusRef.current = false;
+        setIsUpdatingStatus(false);
+      }
+    },
+    [createErrorNotice, createSuccessNotice, invalidateListQuery, saveEntityRecord]
+  );
+  const publishForms = (0, import_element95.useCallback)(
+    async (items, options) => {
+      await updateStatus(items, "publish", options);
+    },
+    [updateStatus]
+  );
+  const setFormsToDraft = (0, import_element95.useCallback)(
+    async (items, options) => {
+      await updateStatus(items, "draft", options);
+    },
+    [updateStatus]
+  );
+  return {
+    duplicateForm,
+    previewForm,
+    copyEmbed,
+    copyShortcode,
+    isDuplicating,
+    isUpdatingStatus,
+    publishForms,
+    setFormsToDraft
+  };
 }
 
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
@@ -37081,7 +37234,15 @@ function usePageHeaderDetails(props) {
     }
     return /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(Badge3, { intent: "draft", children: statusLabel });
   }, [isSingleFormScreen, formStatus, statusLabel]);
-  const { duplicateForm, previewForm, copyEmbed, copyShortcode } = useFormItemActions();
+  const {
+    duplicateForm,
+    previewForm,
+    copyEmbed,
+    copyShortcode,
+    publishForms,
+    setFormsToDraft,
+    isUpdatingStatus
+  } = useFormItemActions();
   const formItemControls = (0, import_element96.useMemo)(() => {
     if (!sourceIdNumber) {
       return [];
@@ -37109,8 +37270,38 @@ function usePageHeaderDetails(props) {
         }
       );
     }
+    if (formRecord?.status === "publish") {
+      controls.push({
+        title: (0, import_i18n86.__)("Unpublish", "jetpack-forms"),
+        onClick: () => {
+          if (!isUpdatingStatus) {
+            setFormsToDraft([formItem]);
+          }
+        }
+      });
+    } else {
+      controls.push({
+        title: (0, import_i18n86.__)("Publish", "jetpack-forms"),
+        onClick: () => {
+          if (!isUpdatingStatus) {
+            publishForms([formItem]);
+          }
+        }
+      });
+    }
     return controls;
-  }, [sourceIdNumber, formTitle, duplicateForm, previewForm, copyEmbed, copyShortcode]);
+  }, [
+    copyEmbed,
+    copyShortcode,
+    duplicateForm,
+    formRecord?.status,
+    formTitle,
+    isUpdatingStatus,
+    publishForms,
+    previewForm,
+    setFormsToDraft,
+    sourceIdNumber
+  ]);
   const WrapWithJetpackLogo = ({ children }) => /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)(Stack3, { align: "center", gap: "xs", children: [
     /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
     children
