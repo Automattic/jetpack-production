@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 
 ### Fixed
+- Create synced form when inserting form variations via the block inserter.
 - Fix aria-label attribute by passing a string value to the Page component.
 - Fix forms list entries count not updating after trashing responses
 - Fix HTML entities not being decoded in form title on pre-publish panel
