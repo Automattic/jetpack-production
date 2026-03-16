@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Handle proxy requests at MU-plugin stage and exit early for faster response time.
 - Update dependencies.
 
 ## [0.15.7] - 2026-03-09

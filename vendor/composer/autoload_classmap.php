@@ -495,5 +495,5 @@ return array(
     'VideoPressUploader\\Tus_File' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/tus/class-tus-file.php',
     'VideoPress_Divi_Extension' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/videopress-divi/class-videopress-divi-extension.php',
     'VideoPress_Divi_Module' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/videopress-divi/class-videopress-divi-module.php',
-    'WooCommerceAnalyticsProxySpeed' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/mu-plugin/woocommerce-analytics-proxy-speed-module.php',
+    'WooCommerceAnalyticsProxySpeed' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/mu-plugin/woocommerce-analytics-proxy-speed-module-template.php',
 );
