@@ -2,24 +2,21 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.7-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.7-a.3 - 2026-03-16
 ### Enhancements
-- Newsletter: Add wpcom_newsletter_send_default site option to control whether posts are sent to subscribers by default.
-- SEO: Add Canonical URLs toggle to the Traffic settings page.
+- Newsletter: Add `wpcom_newsletter_send_default` site option to control whether posts are sent to subscribers by default. [#47564]
+- SEO: Add Canonical URLs toggle to the Traffic settings page. [#47364]
 
 ### Bug fixes
-- Forms: Fix number field min and max values not displaying in the UI after page reload.
+- Forms: Ensure number field min and max values display in the UI after page reload. [#47511]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Add missing newsletter post metas to sync whitelist
-- Editor: Fix plan upgrade notice for Simple sites
-- Image Studio: Enable if BigSky is enabled
-- Newsletter editor panel: update to reflect previous email sends and update copies.
-- Update dependencies.
-- Update package dependencies.
+- Add missing newsletter post metas to sync whitelist. [#47560]
+- Editor: Fix plan upgrade notice for Simple sites. [#47543]
+- Image Studio: Enable if BigSky is enabled. [#47533]
+- Newsletter editor panel: Update to reflect previous email sends and update copies. [#47301]
+- Update dependencies. [#47472]
+- Update package dependencies. [#47505]
 
 ## 15.7-a.1 - 2026-03-09
 ### Enhancements
