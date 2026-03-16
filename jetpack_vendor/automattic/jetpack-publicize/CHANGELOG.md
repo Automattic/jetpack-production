@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add support for X connection.
+- Google Search Preview: Wire up site icon to display the actual site favicon in the link preview.
 
 ### Changed
 - Clean up Twitter notices in classic editor.
