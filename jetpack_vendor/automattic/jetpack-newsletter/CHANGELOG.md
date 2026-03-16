@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Add spacing below warning notice in Email content settings section
+- Fix mobile alignment of Preview and edit links in Subscriptions settings
 
 ## [0.6.0] - 2026-03-09
 ### Added
