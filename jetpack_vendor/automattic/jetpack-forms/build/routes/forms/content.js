@@ -25994,7 +25994,7 @@ function useDeleteForm({
     },
     [invalidateResolution]
   );
-  const restoreItemsToPublish = (0, import_element76.useCallback)(
+  const restoreItemsToDraft = (0, import_element76.useCallback)(
     async (items, {
       successNoticeIdPrefix,
       errorNoticeIdPrefix
@@ -26004,7 +26004,7 @@ function useDeleteForm({
           (item) => saveEntityRecord(
             "postType",
             "jetpack_form",
-            { id: item.id, status: "publish" },
+            { id: item.id, status: "draft" },
             { throwOnError: true }
           )
         )
@@ -26012,9 +26012,14 @@ function useDeleteForm({
       const restoredCount = promises.filter((p2) => p2.status === "fulfilled").length;
       const failedCount = promises.length - restoredCount;
       if (restoredCount) {
-        const successMessage = restoredCount === 1 ? (0, import_i18n66.__)("Form restored.", "jetpack-forms") : (0, import_i18n66.sprintf)(
+        const successMessage = restoredCount === 1 ? (0, import_i18n66.__)("Form restored as draft.", "jetpack-forms") : (0, import_i18n66.sprintf)(
           /* translators: %d: number of forms. */
-          (0, import_i18n66._n)("%d form restored.", "%d forms restored.", restoredCount, "jetpack-forms"),
+          (0, import_i18n66._n)(
+            "%d form restored as draft.",
+            "%d forms restored as draft.",
+            restoredCount,
+            "jetpack-forms"
+          ),
           restoredCount
         );
         createSuccessNotice(successMessage, {
@@ -26050,7 +26055,7 @@ function useDeleteForm({
       const currentQuerySnapshot = currentQuery2;
       let shouldNavigateToPreviousPage = false;
       try {
-        const { restoredCount } = await restoreItemsToPublish(items, {
+        const { restoredCount } = await restoreItemsToDraft(items, {
           successNoticeIdPrefix: "restore-forms",
           errorNoticeIdPrefix: "restore-forms-error"
         });
@@ -26077,7 +26082,7 @@ function useDeleteForm({
       page,
       perPage,
       recordsLength,
-      restoreItemsToPublish,
+      restoreItemsToDraft,
       search,
       setView,
       statusQuery,
@@ -26092,7 +26097,7 @@ function useDeleteForm({
       setIsDeleting(true);
       const currentQuerySnapshot = currentQuery2;
       try {
-        await restoreItemsToPublish(items, {
+        await restoreItemsToDraft(items, {
           successNoticeIdPrefix: "undo-trash-forms",
           errorNoticeIdPrefix: "undo-trash-forms-error"
         });
@@ -26107,7 +26112,7 @@ function useDeleteForm({
       invalidateFormStatusCounts2,
       invalidateListQueries,
       isDeleting,
-      restoreItemsToPublish
+      restoreItemsToDraft
     ]
   );
   const trashForms = (0, import_element76.useCallback)(

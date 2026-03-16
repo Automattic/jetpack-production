@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: add publish/unpublish actions.
 
 ### Changed
+- Dashboard: Restore trashed forms as draft instead of publish
 - Form Editor: Hide word count and reading time panel
 - Forms Dashboard: Remove modified date filter and add entries filter to filter forms by whether they have responses
 - Hide "Browse form patterns" button in the form placeholder when central form management is enabled
