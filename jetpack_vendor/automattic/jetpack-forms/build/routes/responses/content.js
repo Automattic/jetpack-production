@@ -35373,12 +35373,18 @@ var import_i18n86 = __toESM(require_i18n(), 1);
 var import_components67 = __toESM(require_components(), 1);
 var import_element82 = __toESM(require_element(), 1);
 var import_i18n68 = __toESM(require_i18n(), 1);
+
+// src/dashboard/utils.ts
+function getFormEditUrl(formId, adminUrl) {
+  return `${adminUrl ?? ""}post.php?post=${formId}&action=edit`;
+}
+
+// src/dashboard/components/edit-form-button/index.tsx
 var import_jsx_runtime152 = __toESM(require_jsx_runtime(), 1);
 function EditFormButton({ formId }) {
   const adminUrl = useConfigValue("adminUrl") || "";
   const onClick = (0, import_element82.useCallback)(() => {
-    const editPath = `post.php?post=${formId}&action=edit`;
-    window.location.href = adminUrl ? `${adminUrl}${editPath}` : editPath;
+    window.location.href = getFormEditUrl(formId, adminUrl);
   }, [adminUrl, formId]);
   return /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components67.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n68.__)("Edit form", "jetpack-forms") });
 }
@@ -36981,7 +36987,7 @@ function useDuplicateForm() {
               label: (0, import_i18n84.__)("Edit", "jetpack-forms"),
               onClick: () => {
                 if (adminUrl) {
-                  window.location.href = `${adminUrl}post.php?post=${createdId}&action=edit&post_type=jetpack_form`;
+                  window.location.href = getFormEditUrl(createdId, adminUrl);
                 }
               }
             }
@@ -37214,6 +37220,7 @@ function usePageHeaderDetails(props) {
     onOpenIntegrations,
     onOpenFormsHelp
   } = props;
+  const adminUrl = useConfigValue("adminUrl") || "";
   const statusView = props.statusView ?? "inbox";
   const sourceIdNumber = (0, import_element96.useMemo)(() => {
     const value = sourceId;
@@ -37406,9 +37413,7 @@ function usePageHeaderDetails(props) {
         if (statusView === "inbox" && sourceIdNumber) {
           dropdownControls.push({
             onClick: () => {
-              const fallbackEditUrl = `post.php?post=${sourceIdNumber}&action=edit&post_type=jetpack_form`;
-              const url = new URL(fallbackEditUrl, window.location.origin);
-              window.location.href = url.toString();
+              window.location.href = getFormEditUrl(sourceIdNumber, adminUrl);
             },
             title: (0, import_i18n86.__)("Edit form", "jetpack-forms")
           });
@@ -37594,6 +37599,7 @@ function usePageHeaderDetails(props) {
       ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime163.jsx)(empty_spam_button_default, {}, "empty-spam")] : []
     ];
   }, [
+    adminUrl,
     isSm,
     isIntegrationsEnabled,
     onOpenIntegrations,
