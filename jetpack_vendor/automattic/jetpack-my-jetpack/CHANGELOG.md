@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add Canonical URLs module to the Growth section in My Jetpack.
+- Display MCP client actor attribution in My Jetpack backup card
 
 ### Changed
 - Update dependencies.
