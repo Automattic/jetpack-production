@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add privacy information link to the newsletter settings section
+
 ### Changed
 - Fix inconsistent punctuation and casing on settings screen labels
 - Settings links: link to WordPress.com for WordPress.com sites (not just simple sites)
