@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 
 ### Fixed
+- Add polyfills for wp-build unbundled dependencies
 - Create synced form when inserting form variations via the block inserter.
 - Fix aria-label attribute by passing a string value to the Page component.
 - Fix design-tokens.css 404 error on the route-based dashboard by inlining CSS via Sass meta.load-css instead of using CSS @import.
