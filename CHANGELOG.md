@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Newsletter: Add wpcom_newsletter_send_default site option to control whether posts are sent to subscribers by default.
 - SEO: Add Canonical URLs toggle to the Traffic settings page.
 
 ### Bug fixes
