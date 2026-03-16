@@ -26624,7 +26624,8 @@ function useDuplicateForm() {
           );
           return;
         }
-        const raw = original.content?.raw;
+        const typedOriginal = original;
+        const raw = typedOriginal.content?.raw;
         const originalContentRaw = typeof raw === "string" ? raw : "";
         const originalTitle = item.title || (0, import_i18n70.__)("Untitled Form", "jetpack-forms");
         const newTitle = (0, import_i18n70.sprintf)(
@@ -26639,7 +26640,7 @@ function useDuplicateForm() {
             title: newTitle,
             // Duplicate the raw block content so the form is an exact copy.
             content: originalContentRaw,
-            status: "publish",
+            status: typedOriginal.status === "publish" ? "draft" : typedOriginal.status,
             meta: {
               [FORM_SOURCE_META_KEY]: item.id
             }
