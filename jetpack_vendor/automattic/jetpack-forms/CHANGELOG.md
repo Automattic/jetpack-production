@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Security
+- Fix incomplete string sanitization in legacy classic editor form builder (esc_attr and newline replacement now escape all occurrences, not just the first).
+
 ### Added
 - Added a form name modal to the wp-build forms dashboard, prompting users to name their form before entering the editor.
 - Add per-status form counts REST endpoint and display counts in Forms dashboard status filters.
