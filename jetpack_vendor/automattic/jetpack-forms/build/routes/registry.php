@@ -20,12 +20,5 @@ return array(
 		'page'        => 'jetpack-forms-responses',
 		'has_route'   => true,
 		'has_content' => true,
-	),
-	array(
-		'name'        => 'root',
-		'path'        => '/',
-		'page'        => 'jetpack-forms-responses',
-		'has_route'   => true,
-		'has_content' => false,
 	)
 );
