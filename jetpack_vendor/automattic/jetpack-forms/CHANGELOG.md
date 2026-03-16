@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Create synced form when inserting form variations via the block inserter.
 - Fix aria-label attribute by passing a string value to the Page component.
+- Fix design-tokens.css 404 error on the route-based dashboard by inlining CSS via Sass meta.load-css instead of using CSS @import.
 - Fix forms list entries count not updating after trashing responses
 - Fix HTML entities not being decoded in form title on pre-publish panel
 - Fix number field min and max values not displaying in the UI after page reload.
