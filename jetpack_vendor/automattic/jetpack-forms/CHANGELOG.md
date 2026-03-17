@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Added a form name modal to the wp-build forms dashboard, prompting users to name their form before entering the editor.
 - Add per-status form counts REST endpoint and display counts in Forms dashboard status filters.
+- Add rename and trash actions to the single form dashboard dropdown menu, and reorder menu items.
 - Forms: add publish/unpublish actions.
 
 ### Changed

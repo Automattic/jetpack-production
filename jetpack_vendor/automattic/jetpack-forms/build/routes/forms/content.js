@@ -22634,8 +22634,8 @@ var dataviews_default = DataViewsSubComponents;
 var import_date10 = __toESM(require_date());
 var import_element96 = __toESM(require_element());
 var import_i18n87 = __toESM(require_i18n());
-var import_notices7 = __toESM(require_notices());
-import { useSearch as useSearch2, useNavigate as useNavigate3 } from "@wordpress/route";
+var import_notices8 = __toESM(require_notices());
+import { useSearch as useSearch2, useNavigate as useNavigate4 } from "@wordpress/route";
 
 // ../../../node_modules/.pnpm/@wordpress+ui@0.8.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/ui/build-module/badge/badge.mjs
 var import_element55 = __toESM(require_element(), 1);
@@ -27227,6 +27227,8 @@ var import_data34 = __toESM(require_data(), 1);
 var import_element95 = __toESM(require_element(), 1);
 var import_html_entities4 = __toESM(require_html_entities(), 1);
 var import_i18n86 = __toESM(require_i18n(), 1);
+var import_notices7 = __toESM(require_notices(), 1);
+import { useNavigate as useNavigate3 } from "@wordpress/route";
 
 // src/dashboard/components/edit-form-button/index.tsx
 var import_components67 = __toESM(require_components(), 1);
@@ -28883,6 +28885,7 @@ function usePageHeaderDetails(props) {
     return Number.isFinite(numberValue) && numberValue > 0 ? numberValue : null;
   }, [sourceId]);
   const [isSm] = use_breakpoint_match_default("sm");
+  const navigate = useNavigate3();
   const isFormsScreen = screen === "forms";
   const isSingleFormScreen = screen === "responses" && sourceIdNumber !== null;
   const { openNewForm } = useCreateForm();
@@ -28909,18 +28912,194 @@ function usePageHeaderDetails(props) {
   const hasResponses = !isLoadingData && totalItems > 0;
   const emptySpam = useEmptySpam();
   const emptyTrash = useEmptyTrash();
+  const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element95.useState)(false);
+  const permanentDeleteItemRef = (0, import_element95.useRef)(null);
+  const [renameFormItem, setRenameFormItem] = (0, import_element95.useState)(
+    null
+  );
+  const renameRetryRef = (0, import_element95.useRef)(
+    null
+  );
+  const { saveEntityRecord, deleteEntityRecord } = (0, import_data34.useDispatch)(import_core_data6.store);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data34.useDispatch)(import_notices7.store);
+  const { invalidateFormStatusCounts: invalidateFormStatusCounts2 } = (0, import_data34.useDispatch)(store3);
   const formRecord = (0, import_data34.useSelect)(
-    (select3) => sourceIdNumber ? select3(import_core_data6.store).getEntityRecord(
-      "postType",
-      "jetpack_form",
-      sourceIdNumber
-    ) : void 0,
+    (select3) => {
+      if (!sourceIdNumber) {
+        return void 0;
+      }
+      const record = select3(import_core_data6.store).getEntityRecord(
+        "postType",
+        "jetpack_form",
+        sourceIdNumber
+      );
+      return record;
+    },
     [sourceIdNumber]
   );
   const formTitle = (0, import_element95.useMemo)(() => {
     const rendered = formRecord?.title?.rendered || "";
     return (0, import_html_entities4.decodeEntities)(rendered);
   }, [formRecord?.title?.rendered]);
+  const closeRenameModal = (0, import_element95.useCallback)(() => {
+    setRenameFormItem(null);
+    renameRetryRef.current = null;
+  }, []);
+  const handleRename = (0, import_element95.useCallback)(
+    async (newTitle) => {
+      if (!renameFormItem) {
+        return;
+      }
+      try {
+        await saveEntityRecord(
+          "postType",
+          FORM_POST_TYPE,
+          {
+            id: renameFormItem.id,
+            title: newTitle
+          },
+          { throwOnError: true }
+        );
+        createSuccessNotice((0, import_i18n86.__)("Form renamed.", "jetpack-forms"), { type: "snackbar" });
+        renameRetryRef.current = null;
+      } catch (error2) {
+        const retryItem = renameFormItem;
+        const retryTitle = newTitle;
+        createErrorNotice((0, import_i18n86.__)("Failed to rename form.", "jetpack-forms"), {
+          type: "snackbar",
+          actions: [
+            {
+              label: (0, import_i18n86.__)("Retry", "jetpack-forms"),
+              onClick: () => {
+                renameRetryRef.current = { item: retryItem, title: retryTitle };
+                setRenameFormItem(retryItem);
+              }
+            }
+          ]
+        });
+        console.error("Failed to rename form:", error2);
+      }
+    },
+    [renameFormItem, saveEntityRecord, createSuccessNotice, createErrorNotice]
+  );
+  const trashForm = (0, import_element95.useCallback)(
+    async (item) => {
+      const previousStatus = formRecord?.status || "draft";
+      try {
+        await deleteEntityRecord(
+          "postType",
+          FORM_POST_TYPE,
+          item.id,
+          { force: false },
+          { throwOnError: true }
+        );
+        invalidateFormStatusCounts2();
+        createSuccessNotice((0, import_i18n86.__)("Form moved to trash.", "jetpack-forms"), {
+          type: "snackbar",
+          actions: [
+            {
+              label: (0, import_i18n86.__)("Undo", "jetpack-forms"),
+              onClick: () => {
+                saveEntityRecord(
+                  "postType",
+                  FORM_POST_TYPE,
+                  { id: item.id, status: previousStatus },
+                  { throwOnError: true }
+                ).then(() => {
+                  invalidateFormStatusCounts2();
+                  createSuccessNotice((0, import_i18n86.__)("Form restored.", "jetpack-forms"), {
+                    type: "snackbar"
+                  });
+                }).catch(() => {
+                  createErrorNotice((0, import_i18n86.__)("Could not restore form.", "jetpack-forms"), {
+                    type: "snackbar"
+                  });
+                });
+              }
+            }
+          ]
+        });
+        navigate({ to: "/forms" });
+      } catch (error2) {
+        createErrorNotice((0, import_i18n86.__)("Failed to move form to trash.", "jetpack-forms"), {
+          type: "snackbar"
+        });
+        console.error("Failed to trash form:", error2);
+      }
+    },
+    [
+      deleteEntityRecord,
+      formRecord?.status,
+      invalidateFormStatusCounts2,
+      createSuccessNotice,
+      createErrorNotice,
+      saveEntityRecord,
+      navigate
+    ]
+  );
+  const restoreForm = (0, import_element95.useCallback)(
+    async (item) => {
+      try {
+        await saveEntityRecord(
+          "postType",
+          FORM_POST_TYPE,
+          { id: item.id, status: "publish" },
+          { throwOnError: true }
+        );
+        invalidateFormStatusCounts2();
+        createSuccessNotice((0, import_i18n86.__)("Form restored.", "jetpack-forms"), {
+          type: "snackbar"
+        });
+      } catch (error2) {
+        createErrorNotice((0, import_i18n86.__)("Could not restore form.", "jetpack-forms"), {
+          type: "snackbar"
+        });
+        console.error("Failed to restore form:", error2);
+      }
+    },
+    [saveEntityRecord, invalidateFormStatusCounts2, createSuccessNotice, createErrorNotice]
+  );
+  const openPermanentDeleteConfirm = (0, import_element95.useCallback)((item) => {
+    permanentDeleteItemRef.current = item;
+    setIsPermanentDeleteConfirmOpen(true);
+  }, []);
+  const closePermanentDeleteConfirm = (0, import_element95.useCallback)(() => {
+    setIsPermanentDeleteConfirmOpen(false);
+    permanentDeleteItemRef.current = null;
+  }, []);
+  const confirmPermanentDelete = (0, import_element95.useCallback)(async () => {
+    const item = permanentDeleteItemRef.current;
+    if (!item) {
+      return;
+    }
+    setIsPermanentDeleteConfirmOpen(false);
+    permanentDeleteItemRef.current = null;
+    try {
+      await deleteEntityRecord(
+        "postType",
+        FORM_POST_TYPE,
+        item.id,
+        { force: true },
+        { throwOnError: true }
+      );
+      invalidateFormStatusCounts2();
+      createSuccessNotice((0, import_i18n86.__)("Form deleted permanently.", "jetpack-forms"), {
+        type: "snackbar"
+      });
+      navigate({ to: "/forms" });
+    } catch (error2) {
+      createErrorNotice((0, import_i18n86.__)("Could not delete form.", "jetpack-forms"), {
+        type: "snackbar"
+      });
+      console.error("Failed to permanently delete form:", error2);
+    }
+  }, [
+    deleteEntityRecord,
+    invalidateFormStatusCounts2,
+    createSuccessNotice,
+    createErrorNotice,
+    navigate
+  ]);
   const formStatus = formRecord?.status;
   const statusLabel = formStatus ? getFormStatusLabel(formStatus) : void 0;
   const badges = (0, import_element95.useMemo)(() => {
@@ -28943,11 +29122,19 @@ function usePageHeaderDetails(props) {
       return [];
     }
     const formItem = { id: sourceIdNumber, title: formTitle };
+    if (formRecord?.status === "trash") {
+      return [
+        {
+          title: (0, import_i18n86.__)("Restore", "jetpack-forms"),
+          onClick: () => restoreForm(formItem)
+        },
+        {
+          title: (0, import_i18n86.__)("Delete permanently", "jetpack-forms"),
+          onClick: () => openPermanentDeleteConfirm(formItem)
+        }
+      ];
+    }
     const controls = [
-      {
-        title: (0, import_i18n86.__)("Duplicate", "jetpack-forms"),
-        onClick: () => duplicateForm(formItem)
-      },
       {
         title: (0, import_i18n86.__)("Preview", "jetpack-forms"),
         onClick: () => previewForm(formItem)
@@ -28984,11 +29171,28 @@ function usePageHeaderDetails(props) {
         }
       });
     }
+    controls.push(
+      {
+        title: (0, import_i18n86.__)("Rename", "jetpack-forms"),
+        onClick: () => setRenameFormItem(formItem)
+      },
+      {
+        title: (0, import_i18n86.__)("Duplicate", "jetpack-forms"),
+        onClick: () => duplicateForm(formItem)
+      },
+      {
+        title: (0, import_i18n86.__)("Trash", "jetpack-forms"),
+        onClick: () => trashForm(formItem)
+      }
+    );
     return controls;
   }, [
     copyEmbed,
     copyShortcode,
     duplicateForm,
+    trashForm,
+    restoreForm,
+    openPermanentDeleteConfirm,
     formRecord?.status,
     formTitle,
     isUpdatingStatus,
@@ -29192,6 +29396,38 @@ function usePageHeaderDetails(props) {
             },
             "empty-spam-confirm"
           )
+        ] : [],
+        ...renameFormItem ? [
+          /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(
+            FormNameModal,
+            {
+              isOpen: !!renameFormItem,
+              onClose: closeRenameModal,
+              onSave: handleRename,
+              title: (0, import_i18n86.__)("Rename form", "jetpack-forms"),
+              initialValue: renameRetryRef.current?.title || renameFormItem?.title || ""
+            },
+            "rename-form-modal"
+          )
+        ] : [],
+        ...isPermanentDeleteConfirmOpen ? [
+          /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(
+            import_components77.__experimentalConfirmDialog,
+            {
+              onCancel: closePermanentDeleteConfirm,
+              onConfirm: confirmPermanentDelete,
+              isOpen: isPermanentDeleteConfirmOpen,
+              confirmButtonText: (0, import_i18n86.__)("Delete permanently", "jetpack-forms"),
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("h3", { children: (0, import_i18n86.__)("Delete permanently", "jetpack-forms") }),
+                /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("p", { children: (0, import_i18n86.__)(
+                  "This will permanently delete this form. This action cannot be undone.",
+                  "jetpack-forms"
+                ) })
+              ]
+            },
+            "permanent-delete-confirm"
+          )
         ] : []
       ];
     }
@@ -29203,7 +29439,7 @@ function usePageHeaderDetails(props) {
     }
     if (isSingleFormScreen) {
       return [
-        ...sourceIdNumber ? [/* @__PURE__ */ (0, import_jsx_runtime155.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
+        ...sourceIdNumber && formStatus !== "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime155.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
         /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(
           button_default,
           {
@@ -29224,6 +29460,38 @@ function usePageHeaderDetails(props) {
               toggleProps: { size: "compact" }
             },
             "form-actions-menu"
+          )
+        ] : [],
+        ...renameFormItem ? [
+          /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(
+            FormNameModal,
+            {
+              isOpen: !!renameFormItem,
+              onClose: closeRenameModal,
+              onSave: handleRename,
+              title: (0, import_i18n86.__)("Rename form", "jetpack-forms"),
+              initialValue: renameRetryRef.current?.title || renameFormItem?.title || ""
+            },
+            "rename-form-modal"
+          )
+        ] : [],
+        ...isPermanentDeleteConfirmOpen ? [
+          /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(
+            import_components77.__experimentalConfirmDialog,
+            {
+              onCancel: closePermanentDeleteConfirm,
+              onConfirm: confirmPermanentDelete,
+              isOpen: isPermanentDeleteConfirmOpen,
+              confirmButtonText: (0, import_i18n86.__)("Delete permanently", "jetpack-forms"),
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("h3", { children: (0, import_i18n86.__)("Delete permanently", "jetpack-forms") }),
+                /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("p", { children: (0, import_i18n86.__)(
+                  "This will permanently delete this form. This action cannot be undone.",
+                  "jetpack-forms"
+                ) })
+              ]
+            },
+            "permanent-delete-confirm"
           )
         ] : []
       ];
@@ -29290,7 +29558,14 @@ function usePageHeaderDetails(props) {
     emptySpam.closeConfirmDialog,
     emptySpam.onConfirmEmptying,
     emptySpam.totalItemsSpam,
-    emptySpam.selectedResponsesCount
+    emptySpam.selectedResponsesCount,
+    renameFormItem,
+    closeRenameModal,
+    handleRename,
+    isPermanentDeleteConfirmOpen,
+    closePermanentDeleteConfirm,
+    confirmPermanentDelete,
+    formStatus
   ]);
   return { ariaLabel, breadcrumbs, title, badges, subtitle, actions: actions2 };
 }
@@ -29327,7 +29602,7 @@ var defaultLayouts = {
   list: {}
 };
 function StageInner() {
-  const navigate = useNavigate3();
+  const navigate = useNavigate4();
   const searchParams = useSearch2({ from: "/forms" });
   const dateSettings = (0, import_date10.getSettings)();
   const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element96.useState)(false);
@@ -29406,7 +29681,7 @@ function StageInner() {
   const [pendingPermanentDeleteCount, setPendingPermanentDeleteCount] = (0, import_element96.useState)(0);
   const [renameFormItem, setRenameFormItem] = (0, import_element96.useState)(null);
   const renameRetryRef = (0, import_element96.useRef)(null);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data35.useDispatch)(import_notices7.store);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data35.useDispatch)(import_notices8.store);
   const { saveEntityRecord } = (0, import_data35.useDispatch)(import_core_data7.store);
   (0, import_element96.useEffect)(() => {
     setSelection([]);

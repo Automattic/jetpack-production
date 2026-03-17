@@ -30196,7 +30196,7 @@ var import_date10 = __toESM(require_date());
 var import_element98 = __toESM(require_element());
 var import_html_entities5 = __toESM(require_html_entities());
 var import_i18n88 = __toESM(require_i18n());
-import { useParams, useSearch as useSearch2, useNavigate as useNavigate3 } from "@wordpress/route";
+import { useParams, useSearch as useSearch2, useNavigate as useNavigate4 } from "@wordpress/route";
 
 // ../../../node_modules/.pnpm/@wordpress+ui@0.8.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/ui/build-module/badge/badge.mjs
 var import_element56 = __toESM(require_element(), 1);
@@ -35368,11 +35368,45 @@ var import_data33 = __toESM(require_data(), 1);
 var import_element96 = __toESM(require_element(), 1);
 var import_html_entities4 = __toESM(require_html_entities(), 1);
 var import_i18n86 = __toESM(require_i18n(), 1);
+var import_notices6 = __toESM(require_notices(), 1);
+import { useNavigate as useNavigate3 } from "@wordpress/route";
+
+// src/blocks/shared/util/constants.js
+var import_i18n68 = __toESM(require_i18n(), 1);
+var currentYear = (/* @__PURE__ */ new Date()).getFullYear();
+var DATE_FORMATS = [
+  {
+    value: "mm/dd/yy",
+    /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 12/31/2023). */
+    label: (0, import_i18n68.__)("MM/DD/YYYY", "jetpack-forms"),
+    example: `12/31/${currentYear}`
+  },
+  {
+    value: "dd/mm/yy",
+    /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 31/12/2023). */
+    label: (0, import_i18n68.__)("DD/MM/YYYY", "jetpack-forms"),
+    example: `21/12/${currentYear}`
+  },
+  {
+    value: "yy-mm-dd",
+    /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 2023-12-31). */
+    label: (0, import_i18n68.__)("YYYY-MM-DD", "jetpack-forms"),
+    example: `${currentYear}-12-31`
+  }
+];
+var DATE_FORMAT_OPTIONS = DATE_FORMATS.map(
+  ({ value, label: optionLabel, example }) => ({
+    label: `${optionLabel} (${example})`,
+    value
+  })
+);
+var FORM_POST_TYPE = "jetpack_form";
+var FORM_SOURCE_META_KEY = "_jetpack_forms_source_post_id";
 
 // src/dashboard/components/edit-form-button/index.tsx
 var import_components67 = __toESM(require_components(), 1);
 var import_element82 = __toESM(require_element(), 1);
-var import_i18n68 = __toESM(require_i18n(), 1);
+var import_i18n69 = __toESM(require_i18n(), 1);
 
 // src/dashboard/utils.ts
 function getFormEditUrl(formId, adminUrl) {
@@ -35386,19 +35420,19 @@ function EditFormButton({ formId }) {
   const onClick = (0, import_element82.useCallback)(() => {
     window.location.href = getFormEditUrl(formId, adminUrl);
   }, [adminUrl, formId]);
-  return /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components67.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n68.__)("Edit form", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components67.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n69.__)("Edit form", "jetpack-forms") });
 }
 
 // src/dashboard/components/empty-spam-button/index.tsx
 var import_components69 = __toESM(require_components(), 1);
-var import_i18n71 = __toESM(require_i18n(), 1);
+var import_i18n72 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-empty-spam.ts
 var import_api_fetch7 = __toESM(require_api_fetch(), 1);
 var import_core_data2 = __toESM(require_core_data(), 1);
 var import_data16 = __toESM(require_data(), 1);
 var import_element83 = __toESM(require_element(), 1);
-var import_i18n69 = __toESM(require_i18n(), 1);
+var import_i18n70 = __toESM(require_i18n(), 1);
 var import_notices2 = __toESM(require_notices(), 1);
 function useEmptySpam({
   totalItemsSpam: totalItemsSpamProp
@@ -35429,9 +35463,9 @@ function useEmptySpam({
       path: `/wp/v2/feedback/trash?status=spam`
     }).then((response) => {
       const deleted = response?.deleted ?? 0;
-      const successMessage = deleted === 1 ? (0, import_i18n69.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n69.sprintf)(
+      const successMessage = deleted === 1 ? (0, import_i18n70.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n70.sprintf)(
         /* translators: %s: The number of responses. */
-        (0, import_i18n69._n)(
+        (0, import_i18n70._n)(
           "%s response deleted permanently.",
           "%s responses deleted permanently.",
           deleted,
@@ -35441,7 +35475,7 @@ function useEmptySpam({
       );
       createSuccessNotice(successMessage, { type: "snackbar", id: "empty-spam" });
     }).catch(() => {
-      createErrorNotice((0, import_i18n69.__)("Could not empty spam.", "jetpack-forms"), {
+      createErrorNotice((0, import_i18n70.__)("Could not empty spam.", "jetpack-forms"), {
         type: "snackbar",
         id: "empty-spam-error"
       });
@@ -35473,7 +35507,7 @@ function useEmptySpam({
 
 // src/dashboard/components/empty-spam-button/confirmation-modal.tsx
 var import_components68 = __toESM(require_components(), 1);
-var import_i18n70 = __toESM(require_i18n(), 1);
+var import_i18n71 = __toESM(require_i18n(), 1);
 var import_jsx_runtime153 = __toESM(require_jsx_runtime(), 1);
 function EmptySpamConfirmationModal({
   isOpen,
@@ -35488,19 +35522,19 @@ function EmptySpamConfirmationModal({
       onCancel,
       onConfirm,
       isOpen,
-      confirmButtonText: (0, import_i18n70.__)("Delete", "jetpack-forms"),
+      confirmButtonText: (0, import_i18n71.__)("Delete", "jetpack-forms"),
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("h3", { children: (0, import_i18n70.__)("Delete forever", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n70.sprintf)(
+        /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("h3", { children: (0, import_i18n71.__)("Delete forever", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n71.sprintf)(
           // translators: %s: the number of responses in spam
-          (0, import_i18n70._n)(
+          (0, import_i18n71._n)(
             "%s response in spam will be deleted forever. This action cannot be undone.",
             "All %s responses in spam will be deleted forever. This action cannot be undone.",
             totalItemsSpam || 0,
             "jetpack-forms"
           ),
           formatNumber2(totalItemsSpam)
-        ) : (0, import_i18n70.__)(
+        ) : (0, import_i18n71.__)(
           "All responses in spam will be deleted forever. This action cannot be undone.",
           "jetpack-forms"
         ) })
@@ -35535,11 +35569,11 @@ var EmptySpamButton = ({
         disabled: isEmpty4 || isEmptying,
         icon: trash_default,
         isBusy: isEmptying,
-        label: isEmpty4 ? (0, import_i18n71.__)("Spam is already empty.", "jetpack-forms") : "",
+        label: isEmpty4 ? (0, import_i18n72.__)("Spam is already empty.", "jetpack-forms") : "",
         onClick: openConfirmDialog,
         showTooltip: isEmpty4,
         variant: "primary",
-        children: (0, import_i18n71.__)("Delete spam", "jetpack-forms")
+        children: (0, import_i18n72.__)("Delete spam", "jetpack-forms")
       }
     ),
     /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(
@@ -35558,14 +35592,14 @@ var empty_spam_button_default = EmptySpamButton;
 
 // src/dashboard/components/empty-trash-button/index.tsx
 var import_components71 = __toESM(require_components(), 1);
-var import_i18n74 = __toESM(require_i18n(), 1);
+var import_i18n75 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-empty-trash.ts
 var import_api_fetch8 = __toESM(require_api_fetch(), 1);
 var import_core_data3 = __toESM(require_core_data(), 1);
 var import_data17 = __toESM(require_data(), 1);
 var import_element84 = __toESM(require_element(), 1);
-var import_i18n72 = __toESM(require_i18n(), 1);
+var import_i18n73 = __toESM(require_i18n(), 1);
 var import_notices3 = __toESM(require_notices(), 1);
 function useEmptyTrash({
   totalItemsTrash: totalItemsTrashProp
@@ -35596,9 +35630,9 @@ function useEmptyTrash({
       path: `/wp/v2/feedback/trash`
     }).then((response) => {
       const deleted = response?.deleted ?? 0;
-      const successMessage = deleted === 1 ? (0, import_i18n72.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n72.sprintf)(
+      const successMessage = deleted === 1 ? (0, import_i18n73.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n73.sprintf)(
         /* translators: %s: the number of responses deleted permanently. */
-        (0, import_i18n72._n)(
+        (0, import_i18n73._n)(
           "%s response deleted permanently.",
           "%s responses deleted permanently.",
           deleted,
@@ -35608,7 +35642,7 @@ function useEmptyTrash({
       );
       createSuccessNotice(successMessage, { type: "snackbar", id: "empty-trash" });
     }).catch(() => {
-      createErrorNotice((0, import_i18n72.__)("Could not empty trash.", "jetpack-forms"), {
+      createErrorNotice((0, import_i18n73.__)("Could not empty trash.", "jetpack-forms"), {
         type: "snackbar",
         id: "empty-trash-error"
       });
@@ -35640,7 +35674,7 @@ function useEmptyTrash({
 
 // src/dashboard/components/empty-trash-button/confirmation-modal.tsx
 var import_components70 = __toESM(require_components(), 1);
-var import_i18n73 = __toESM(require_i18n(), 1);
+var import_i18n74 = __toESM(require_i18n(), 1);
 var import_jsx_runtime155 = __toESM(require_jsx_runtime(), 1);
 function EmptyTrashConfirmationModal({
   isOpen,
@@ -35655,19 +35689,19 @@ function EmptyTrashConfirmationModal({
       onCancel,
       onConfirm,
       isOpen,
-      confirmButtonText: (0, import_i18n73.__)("Delete", "jetpack-forms"),
+      confirmButtonText: (0, import_i18n74.__)("Delete", "jetpack-forms"),
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("h3", { children: (0, import_i18n73.__)("Delete forever", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n73.sprintf)(
+        /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("h3", { children: (0, import_i18n74.__)("Delete forever", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n74.sprintf)(
           // translators: %s: the number of responses in the trash.
-          (0, import_i18n73._n)(
+          (0, import_i18n74._n)(
             "%s response in trash will be deleted forever. This action cannot be undone.",
             "All %s responses in trash will be deleted forever. This action cannot be undone.",
             totalItemsTrash || 0,
             "jetpack-forms"
           ),
           formatNumber2(totalItemsTrash)
-        ) : (0, import_i18n73.__)(
+        ) : (0, import_i18n74.__)(
           "All responses in trash will be deleted forever. This action cannot be undone.",
           "jetpack-forms"
         ) })
@@ -35702,11 +35736,11 @@ var EmptyTrashButton = ({
         disabled: isEmpty4 || isEmptying,
         icon: trash_default,
         isBusy: isEmptying,
-        label: isEmpty4 ? (0, import_i18n74.__)("Trash is already empty.", "jetpack-forms") : "",
+        label: isEmpty4 ? (0, import_i18n75.__)("Trash is already empty.", "jetpack-forms") : "",
         onClick: openConfirmDialog,
         showTooltip: isEmpty4,
         variant: "primary",
-        children: (0, import_i18n74.__)("Empty trash", "jetpack-forms")
+        children: (0, import_i18n75.__)("Empty trash", "jetpack-forms")
       }
     ),
     /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
@@ -35725,13 +35759,13 @@ var empty_trash_button_default = EmptyTrashButton;
 
 // src/dashboard/components/export-responses/button.tsx
 var import_components75 = __toESM(require_components(), 1);
-var import_i18n80 = __toESM(require_i18n(), 1);
+var import_i18n81 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-export-responses.ts
 var import_core_data4 = __toESM(require_core_data(), 1);
 var import_data18 = __toESM(require_data(), 1);
 var import_element85 = __toESM(require_element(), 1);
-var import_i18n75 = __toESM(require_i18n(), 1);
+var import_i18n76 = __toESM(require_i18n(), 1);
 function useExportResponses() {
   const [isSm] = use_breakpoint_match_default("sm");
   const [showExportModal, setShowExportModal] = (0, import_element85.useState)(false);
@@ -35746,11 +35780,11 @@ function useExportResponses() {
   );
   const isSpam = currentStatus.includes("spam");
   const isTrash = currentStatus.includes("trash");
-  let statusLabel = (0, import_i18n75.__)("Export", "jetpack-forms");
+  let statusLabel = (0, import_i18n76.__)("Export", "jetpack-forms");
   if (isSpam) {
-    statusLabel = (0, import_i18n75.__)("Export spam", "jetpack-forms");
+    statusLabel = (0, import_i18n76.__)("Export spam", "jetpack-forms");
   } else if (isTrash) {
-    statusLabel = (0, import_i18n75.__)("Export trash", "jetpack-forms");
+    statusLabel = (0, import_i18n76.__)("Export trash", "jetpack-forms");
   }
   const exportLabel = selectedResponsesCount > 0 ? `${statusLabel} (${formatNumber2(selectedResponsesCount)})` : statusLabel;
   const openModal = (0, import_element85.useCallback)(() => {
@@ -35810,7 +35844,7 @@ function useExportResponses() {
 // src/dashboard/components/export-responses/modal.tsx
 var import_components74 = __toESM(require_components(), 1);
 var import_data30 = __toESM(require_data(), 1);
-var import_i18n79 = __toESM(require_i18n(), 1);
+var import_i18n80 = __toESM(require_i18n(), 1);
 
 // ../../js-packages/shared-extension-utils/src/get-jetpack-data.js
 var JETPACK_DATA_PATH = "Jetpack_Editor_Initial_State";
@@ -35842,7 +35876,7 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 var import_jsx_runtime157 = __toESM(require_jsx_runtime());
 
 // ../../js-packages/shared-extension-utils/src/plan-utils.js
-var import_i18n76 = __toESM(require_i18n());
+var import_i18n77 = __toESM(require_i18n());
 var import_url6 = __toESM(require_url());
 var usableBlockWithFreePlan = [
   {
@@ -35850,14 +35884,14 @@ var usableBlockWithFreePlan = [
     mediaPlaceholder: true,
     mediaReplaceFlow: true,
     fileType: "video",
-    description: (0, import_i18n76.__)("Upgrade your plan to use video covers", "jetpack-shared-extension-utils")
+    description: (0, import_i18n77.__)("Upgrade your plan to use video covers", "jetpack-shared-extension-utils")
   },
   {
     name: "core/audio",
     mediaPlaceholder: true,
     mediaReplaceFlow: true,
     fileType: "audio",
-    description: (0, import_i18n76.__)("Upgrade your plan to upload audio", "jetpack-shared-extension-utils")
+    description: (0, import_i18n77.__)("Upgrade your plan to upload audio", "jetpack-shared-extension-utils")
   }
 ];
 
@@ -36517,7 +36551,7 @@ var import_dom_ready = __toESM(require_dom_ready());
 // src/dashboard/components/export-responses/csv.tsx
 var import_components72 = __toESM(require_components(), 1);
 var import_element91 = __toESM(require_element(), 1);
-var import_i18n77 = __toESM(require_i18n(), 1);
+var import_i18n78 = __toESM(require_i18n(), 1);
 var import_jsx_runtime158 = __toESM(require_jsx_runtime(), 1);
 var CSVExport = ({ onExport }) => {
   const { tracks: tracks2 } = use_analytics_default();
@@ -36560,11 +36594,11 @@ var CSVExport = ({ onExport }) => {
           )
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n77.__)("CSV File", "jetpack-forms") })
+      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n78.__)("CSV File", "jetpack-forms") })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: (0, import_i18n77.__)("Download your form response data as a CSV file.", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components72.Button, { variant: "primary", className: buttonClasses, onClick: downloadCSV, children: (0, import_i18n77.__)("Download", "jetpack-forms") }) })
+      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: (0, import_i18n78.__)("Download your form response data as a CSV file.", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components72.Button, { variant: "primary", className: buttonClasses, onClick: downloadCSV, children: (0, import_i18n78.__)("Download", "jetpack-forms") }) })
     ] })
   ] });
 };
@@ -36574,7 +36608,7 @@ var csv_default = CSVExport;
 var import_components73 = __toESM(require_components(), 1);
 var import_data29 = __toESM(require_data(), 1);
 var import_element92 = __toESM(require_element(), 1);
-var import_i18n78 = __toESM(require_i18n(), 1);
+var import_i18n79 = __toESM(require_i18n(), 1);
 
 // src/util/get-preferred-responses-view.js
 var PARTIAL_RESPONSES_PATH = "admin.php?page=jetpack-forms-admin";
@@ -36652,21 +36686,21 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
           )
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n78.__)("Google Sheets", "jetpack-forms") })
+      /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n79.__)("Google Sheets", "jetpack-forms") })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
       /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)("div", { children: [
-        (0, import_i18n78.__)("Export your data into a Google Sheets file.", "jetpack-forms"),
+        (0, import_i18n79.__)("Export your data into a Google Sheets file.", "jetpack-forms"),
         !isConnectedToGoogleDrive && /* @__PURE__ */ (0, import_jsx_runtime159.jsxs)(import_jsx_runtime159.Fragment, { children: [
           "\xA0",
           /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
             "a",
             {
               href: gdriveConnectSupportURL,
-              title: (0, import_i18n78.__)("Connect to Google Drive", "jetpack-forms"),
+              title: (0, import_i18n79.__)("Connect to Google Drive", "jetpack-forms"),
               target: "_blank",
               rel: "noopener noreferrer",
-              children: (0, import_i18n78.__)("You need to connect to Google Drive.", "jetpack-forms")
+              children: (0, import_i18n79.__)("You need to connect to Google Drive.", "jetpack-forms")
             }
           )
         ] })
@@ -36679,7 +36713,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
             variant: "primary",
             onClick: exportToGoogleDrive,
             isBusy: isExporting,
-            children: (0, import_i18n78.__)("Export", "jetpack-forms")
+            children: (0, import_i18n79.__)("Export", "jetpack-forms")
           }
         ),
         !isConnectedToGoogleDrive && needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
@@ -36691,7 +36725,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
             target: "_blank",
             onClick: handleConnectUser,
             isBusy: userIsConnecting2,
-            children: (0, import_i18n78.__)("Connect Jetpack user account", "jetpack-forms")
+            children: (0, import_i18n79.__)("Connect Jetpack user account", "jetpack-forms")
           }
         ),
         !isConnectedToGoogleDrive && !needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(
@@ -36709,7 +36743,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
                 autoConnectOpened.current = true;
               }
             },
-            children: isTogglingConnection ? (0, import_i18n78.__)("Connecting\u2026", "jetpack-forms") : (0, import_i18n78._x)(
+            children: isTogglingConnection ? (0, import_i18n79.__)("Connecting\u2026", "jetpack-forms") : (0, import_i18n79._x)(
               "Connect to Google Drive",
               "",
               // Dummy context to avoid bad minification. See https://github.com/Automattic/jetpack/tree/e3f007ec7ac80715f3d82db33c9ed8098a7b45b4/projects/js-packages/i18n-check-webpack-plugin#conditional-function-call-compaction
@@ -36742,7 +36776,7 @@ var ExportResponsesModal = ({
   return /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(
     import_components74.Modal,
     {
-      title: (0, import_i18n79.__)("Export responses", "jetpack-forms"),
+      title: (0, import_i18n80.__)("Export responses", "jetpack-forms"),
       onRequestClose,
       size: "large",
       children: /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)(import_components74.__experimentalVStack, { spacing: 8, children: [
@@ -36793,7 +36827,7 @@ var ExportResponsesButton = ({
         onClick: openModal,
         accessibleWhenDisabled: true,
         disabled: isDisabled,
-        label: isEmpty4 ? (0, import_i18n80.__)("Nothing to export.", "jetpack-forms") : "",
+        label: isEmpty4 ? (0, import_i18n81.__)("Nothing to export.", "jetpack-forms") : "",
         showTooltip: isEmpty4,
         children: exportLabel
       }
@@ -36811,7 +36845,7 @@ var ExportResponsesButton = ({
 var button_default = ExportResponsesButton;
 
 // src/dashboard/constants.ts
-var import_i18n81 = __toESM(require_i18n(), 1);
+var import_i18n82 = __toESM(require_i18n(), 1);
 var FORM_STATUSES = [
   "all",
   "publish",
@@ -36827,19 +36861,19 @@ var NON_TRASH_FORM_STATUSES = FORM_STATUSES.filter(
 function getFormStatusLabel(status) {
   switch (status) {
     case "all":
-      return (0, import_i18n81.__)("All", "jetpack-forms");
+      return (0, import_i18n82.__)("All", "jetpack-forms");
     case "publish":
-      return (0, import_i18n81.__)("Published", "jetpack-forms");
+      return (0, import_i18n82.__)("Published", "jetpack-forms");
     case "draft":
-      return (0, import_i18n81.__)("Draft", "jetpack-forms");
+      return (0, import_i18n82.__)("Draft", "jetpack-forms");
     case "pending":
-      return (0, import_i18n81.__)("Pending review", "jetpack-forms");
+      return (0, import_i18n82.__)("Pending review", "jetpack-forms");
     case "future":
-      return (0, import_i18n81.__)("Scheduled", "jetpack-forms");
+      return (0, import_i18n82.__)("Scheduled", "jetpack-forms");
     case "private":
-      return (0, import_i18n81.__)("Private", "jetpack-forms");
+      return (0, import_i18n82.__)("Private", "jetpack-forms");
     case "trash":
-      return (0, import_i18n81.__)("Trash", "jetpack-forms");
+      return (0, import_i18n82.__)("Trash", "jetpack-forms");
     default:
       return status;
   }
@@ -36847,10 +36881,10 @@ function getFormStatusLabel(status) {
 
 // src/dashboard/wp-build/components/manage-integrations-button/index.tsx
 var import_components76 = __toESM(require_components(), 1);
-var import_i18n82 = __toESM(require_i18n(), 1);
+var import_i18n83 = __toESM(require_i18n(), 1);
 var import_jsx_runtime162 = __toESM(require_jsx_runtime(), 1);
 function ManageIntegrationsButton({ onClick }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components76.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n82.__)("Manage integrations", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components76.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n83.__)("Manage integrations", "jetpack-forms") });
 }
 
 // src/dashboard/wp-build/hooks/use-form-item-actions.ts
@@ -36859,38 +36893,6 @@ var import_data32 = __toESM(require_data(), 1);
 var import_element95 = __toESM(require_element(), 1);
 var import_i18n85 = __toESM(require_i18n(), 1);
 var import_notices5 = __toESM(require_notices(), 1);
-
-// src/blocks/shared/util/constants.js
-var import_i18n83 = __toESM(require_i18n(), 1);
-var currentYear = (/* @__PURE__ */ new Date()).getFullYear();
-var DATE_FORMATS = [
-  {
-    value: "mm/dd/yy",
-    /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 12/31/2023). */
-    label: (0, import_i18n83.__)("MM/DD/YYYY", "jetpack-forms"),
-    example: `12/31/${currentYear}`
-  },
-  {
-    value: "dd/mm/yy",
-    /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 31/12/2023). */
-    label: (0, import_i18n83.__)("DD/MM/YYYY", "jetpack-forms"),
-    example: `21/12/${currentYear}`
-  },
-  {
-    value: "yy-mm-dd",
-    /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 2023-12-31). */
-    label: (0, import_i18n83.__)("YYYY-MM-DD", "jetpack-forms"),
-    example: `${currentYear}-12-31`
-  }
-];
-var DATE_FORMAT_OPTIONS = DATE_FORMATS.map(
-  ({ value, label: optionLabel, example }) => ({
-    label: `${optionLabel} (${example})`,
-    value
-  })
-);
-var FORM_POST_TYPE = "jetpack_form";
-var FORM_SOURCE_META_KEY = "_jetpack_forms_source_post_id";
 
 // src/dashboard/hooks/use-forms-data.ts
 var import_core_data5 = __toESM(require_core_data(), 1);
@@ -37229,6 +37231,7 @@ function usePageHeaderDetails(props) {
     return Number.isFinite(numberValue) && numberValue > 0 ? numberValue : null;
   }, [sourceId]);
   const [isSm] = use_breakpoint_match_default("sm");
+  const navigate = useNavigate3();
   const isFormsScreen = screen === "forms";
   const isSingleFormScreen = screen === "responses" && sourceIdNumber !== null;
   const { openNewForm } = useCreateForm();
@@ -37255,18 +37258,194 @@ function usePageHeaderDetails(props) {
   const hasResponses = !isLoadingData && totalItems > 0;
   const emptySpam = useEmptySpam();
   const emptyTrash = useEmptyTrash();
+  const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element96.useState)(false);
+  const permanentDeleteItemRef = (0, import_element96.useRef)(null);
+  const [renameFormItem, setRenameFormItem] = (0, import_element96.useState)(
+    null
+  );
+  const renameRetryRef = (0, import_element96.useRef)(
+    null
+  );
+  const { saveEntityRecord, deleteEntityRecord } = (0, import_data33.useDispatch)(import_core_data6.store);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data33.useDispatch)(import_notices6.store);
+  const { invalidateFormStatusCounts: invalidateFormStatusCounts2 } = (0, import_data33.useDispatch)(store3);
   const formRecord = (0, import_data33.useSelect)(
-    (select3) => sourceIdNumber ? select3(import_core_data6.store).getEntityRecord(
-      "postType",
-      "jetpack_form",
-      sourceIdNumber
-    ) : void 0,
+    (select3) => {
+      if (!sourceIdNumber) {
+        return void 0;
+      }
+      const record = select3(import_core_data6.store).getEntityRecord(
+        "postType",
+        "jetpack_form",
+        sourceIdNumber
+      );
+      return record;
+    },
     [sourceIdNumber]
   );
   const formTitle = (0, import_element96.useMemo)(() => {
     const rendered = formRecord?.title?.rendered || "";
     return (0, import_html_entities4.decodeEntities)(rendered);
   }, [formRecord?.title?.rendered]);
+  const closeRenameModal = (0, import_element96.useCallback)(() => {
+    setRenameFormItem(null);
+    renameRetryRef.current = null;
+  }, []);
+  const handleRename = (0, import_element96.useCallback)(
+    async (newTitle) => {
+      if (!renameFormItem) {
+        return;
+      }
+      try {
+        await saveEntityRecord(
+          "postType",
+          FORM_POST_TYPE,
+          {
+            id: renameFormItem.id,
+            title: newTitle
+          },
+          { throwOnError: true }
+        );
+        createSuccessNotice((0, import_i18n86.__)("Form renamed.", "jetpack-forms"), { type: "snackbar" });
+        renameRetryRef.current = null;
+      } catch (error2) {
+        const retryItem = renameFormItem;
+        const retryTitle = newTitle;
+        createErrorNotice((0, import_i18n86.__)("Failed to rename form.", "jetpack-forms"), {
+          type: "snackbar",
+          actions: [
+            {
+              label: (0, import_i18n86.__)("Retry", "jetpack-forms"),
+              onClick: () => {
+                renameRetryRef.current = { item: retryItem, title: retryTitle };
+                setRenameFormItem(retryItem);
+              }
+            }
+          ]
+        });
+        console.error("Failed to rename form:", error2);
+      }
+    },
+    [renameFormItem, saveEntityRecord, createSuccessNotice, createErrorNotice]
+  );
+  const trashForm = (0, import_element96.useCallback)(
+    async (item) => {
+      const previousStatus = formRecord?.status || "draft";
+      try {
+        await deleteEntityRecord(
+          "postType",
+          FORM_POST_TYPE,
+          item.id,
+          { force: false },
+          { throwOnError: true }
+        );
+        invalidateFormStatusCounts2();
+        createSuccessNotice((0, import_i18n86.__)("Form moved to trash.", "jetpack-forms"), {
+          type: "snackbar",
+          actions: [
+            {
+              label: (0, import_i18n86.__)("Undo", "jetpack-forms"),
+              onClick: () => {
+                saveEntityRecord(
+                  "postType",
+                  FORM_POST_TYPE,
+                  { id: item.id, status: previousStatus },
+                  { throwOnError: true }
+                ).then(() => {
+                  invalidateFormStatusCounts2();
+                  createSuccessNotice((0, import_i18n86.__)("Form restored.", "jetpack-forms"), {
+                    type: "snackbar"
+                  });
+                }).catch(() => {
+                  createErrorNotice((0, import_i18n86.__)("Could not restore form.", "jetpack-forms"), {
+                    type: "snackbar"
+                  });
+                });
+              }
+            }
+          ]
+        });
+        navigate({ to: "/forms" });
+      } catch (error2) {
+        createErrorNotice((0, import_i18n86.__)("Failed to move form to trash.", "jetpack-forms"), {
+          type: "snackbar"
+        });
+        console.error("Failed to trash form:", error2);
+      }
+    },
+    [
+      deleteEntityRecord,
+      formRecord?.status,
+      invalidateFormStatusCounts2,
+      createSuccessNotice,
+      createErrorNotice,
+      saveEntityRecord,
+      navigate
+    ]
+  );
+  const restoreForm = (0, import_element96.useCallback)(
+    async (item) => {
+      try {
+        await saveEntityRecord(
+          "postType",
+          FORM_POST_TYPE,
+          { id: item.id, status: "publish" },
+          { throwOnError: true }
+        );
+        invalidateFormStatusCounts2();
+        createSuccessNotice((0, import_i18n86.__)("Form restored.", "jetpack-forms"), {
+          type: "snackbar"
+        });
+      } catch (error2) {
+        createErrorNotice((0, import_i18n86.__)("Could not restore form.", "jetpack-forms"), {
+          type: "snackbar"
+        });
+        console.error("Failed to restore form:", error2);
+      }
+    },
+    [saveEntityRecord, invalidateFormStatusCounts2, createSuccessNotice, createErrorNotice]
+  );
+  const openPermanentDeleteConfirm = (0, import_element96.useCallback)((item) => {
+    permanentDeleteItemRef.current = item;
+    setIsPermanentDeleteConfirmOpen(true);
+  }, []);
+  const closePermanentDeleteConfirm = (0, import_element96.useCallback)(() => {
+    setIsPermanentDeleteConfirmOpen(false);
+    permanentDeleteItemRef.current = null;
+  }, []);
+  const confirmPermanentDelete = (0, import_element96.useCallback)(async () => {
+    const item = permanentDeleteItemRef.current;
+    if (!item) {
+      return;
+    }
+    setIsPermanentDeleteConfirmOpen(false);
+    permanentDeleteItemRef.current = null;
+    try {
+      await deleteEntityRecord(
+        "postType",
+        FORM_POST_TYPE,
+        item.id,
+        { force: true },
+        { throwOnError: true }
+      );
+      invalidateFormStatusCounts2();
+      createSuccessNotice((0, import_i18n86.__)("Form deleted permanently.", "jetpack-forms"), {
+        type: "snackbar"
+      });
+      navigate({ to: "/forms" });
+    } catch (error2) {
+      createErrorNotice((0, import_i18n86.__)("Could not delete form.", "jetpack-forms"), {
+        type: "snackbar"
+      });
+      console.error("Failed to permanently delete form:", error2);
+    }
+  }, [
+    deleteEntityRecord,
+    invalidateFormStatusCounts2,
+    createSuccessNotice,
+    createErrorNotice,
+    navigate
+  ]);
   const formStatus = formRecord?.status;
   const statusLabel = formStatus ? getFormStatusLabel(formStatus) : void 0;
   const badges = (0, import_element96.useMemo)(() => {
@@ -37289,11 +37468,19 @@ function usePageHeaderDetails(props) {
       return [];
     }
     const formItem = { id: sourceIdNumber, title: formTitle };
+    if (formRecord?.status === "trash") {
+      return [
+        {
+          title: (0, import_i18n86.__)("Restore", "jetpack-forms"),
+          onClick: () => restoreForm(formItem)
+        },
+        {
+          title: (0, import_i18n86.__)("Delete permanently", "jetpack-forms"),
+          onClick: () => openPermanentDeleteConfirm(formItem)
+        }
+      ];
+    }
     const controls = [
-      {
-        title: (0, import_i18n86.__)("Duplicate", "jetpack-forms"),
-        onClick: () => duplicateForm(formItem)
-      },
       {
         title: (0, import_i18n86.__)("Preview", "jetpack-forms"),
         onClick: () => previewForm(formItem)
@@ -37330,11 +37517,28 @@ function usePageHeaderDetails(props) {
         }
       });
     }
+    controls.push(
+      {
+        title: (0, import_i18n86.__)("Rename", "jetpack-forms"),
+        onClick: () => setRenameFormItem(formItem)
+      },
+      {
+        title: (0, import_i18n86.__)("Duplicate", "jetpack-forms"),
+        onClick: () => duplicateForm(formItem)
+      },
+      {
+        title: (0, import_i18n86.__)("Trash", "jetpack-forms"),
+        onClick: () => trashForm(formItem)
+      }
+    );
     return controls;
   }, [
     copyEmbed,
     copyShortcode,
     duplicateForm,
+    trashForm,
+    restoreForm,
+    openPermanentDeleteConfirm,
     formRecord?.status,
     formTitle,
     isUpdatingStatus,
@@ -37538,6 +37742,38 @@ function usePageHeaderDetails(props) {
             },
             "empty-spam-confirm"
           )
+        ] : [],
+        ...renameFormItem ? [
+          /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+            FormNameModal,
+            {
+              isOpen: !!renameFormItem,
+              onClose: closeRenameModal,
+              onSave: handleRename,
+              title: (0, import_i18n86.__)("Rename form", "jetpack-forms"),
+              initialValue: renameRetryRef.current?.title || renameFormItem?.title || ""
+            },
+            "rename-form-modal"
+          )
+        ] : [],
+        ...isPermanentDeleteConfirmOpen ? [
+          /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)(
+            import_components77.__experimentalConfirmDialog,
+            {
+              onCancel: closePermanentDeleteConfirm,
+              onConfirm: confirmPermanentDelete,
+              isOpen: isPermanentDeleteConfirmOpen,
+              confirmButtonText: (0, import_i18n86.__)("Delete permanently", "jetpack-forms"),
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("h3", { children: (0, import_i18n86.__)("Delete permanently", "jetpack-forms") }),
+                /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("p", { children: (0, import_i18n86.__)(
+                  "This will permanently delete this form. This action cannot be undone.",
+                  "jetpack-forms"
+                ) })
+              ]
+            },
+            "permanent-delete-confirm"
+          )
         ] : []
       ];
     }
@@ -37549,7 +37785,7 @@ function usePageHeaderDetails(props) {
     }
     if (isSingleFormScreen) {
       return [
-        ...sourceIdNumber ? [/* @__PURE__ */ (0, import_jsx_runtime163.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
+        ...sourceIdNumber && formStatus !== "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime163.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
         /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
           button_default,
           {
@@ -37570,6 +37806,38 @@ function usePageHeaderDetails(props) {
               toggleProps: { size: "compact" }
             },
             "form-actions-menu"
+          )
+        ] : [],
+        ...renameFormItem ? [
+          /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(
+            FormNameModal,
+            {
+              isOpen: !!renameFormItem,
+              onClose: closeRenameModal,
+              onSave: handleRename,
+              title: (0, import_i18n86.__)("Rename form", "jetpack-forms"),
+              initialValue: renameRetryRef.current?.title || renameFormItem?.title || ""
+            },
+            "rename-form-modal"
+          )
+        ] : [],
+        ...isPermanentDeleteConfirmOpen ? [
+          /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)(
+            import_components77.__experimentalConfirmDialog,
+            {
+              onCancel: closePermanentDeleteConfirm,
+              onConfirm: confirmPermanentDelete,
+              isOpen: isPermanentDeleteConfirmOpen,
+              confirmButtonText: (0, import_i18n86.__)("Delete permanently", "jetpack-forms"),
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("h3", { children: (0, import_i18n86.__)("Delete permanently", "jetpack-forms") }),
+                /* @__PURE__ */ (0, import_jsx_runtime163.jsx)("p", { children: (0, import_i18n86.__)(
+                  "This will permanently delete this form. This action cannot be undone.",
+                  "jetpack-forms"
+                ) })
+              ]
+            },
+            "permanent-delete-confirm"
           )
         ] : []
       ];
@@ -37636,7 +37904,14 @@ function usePageHeaderDetails(props) {
     emptySpam.closeConfirmDialog,
     emptySpam.onConfirmEmptying,
     emptySpam.totalItemsSpam,
-    emptySpam.selectedResponsesCount
+    emptySpam.selectedResponsesCount,
+    renameFormItem,
+    closeRenameModal,
+    handleRename,
+    isPermanentDeleteConfirmOpen,
+    closePermanentDeleteConfirm,
+    confirmPermanentDelete,
+    formStatus
   ]);
   return { ariaLabel, breadcrumbs, title, badges, subtitle, actions: actions2 };
 }
@@ -37646,7 +37921,7 @@ var import_api_fetch11 = __toESM(require_api_fetch());
 var import_components78 = __toESM(require_components());
 var import_core_data7 = __toESM(require_core_data());
 var import_i18n87 = __toESM(require_i18n());
-var import_notices6 = __toESM(require_notices());
+var import_notices7 = __toESM(require_notices());
 
 // src/dashboard/icons/not-spam.tsx
 var import_primitives44 = __toESM(require_primitives(), 1);
@@ -37899,7 +38174,7 @@ function getActions({ navigate, searchParams }) {
         action: "mark-as-spam",
         multiple: items.length > 1
       });
-      const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices6.store);
+      const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices7.store);
       const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data7.store);
       const { updateCountsOptimistically: updateCountsOptimistically2, addPendingAction: addPendingAction2, removePendingAction: removePendingAction2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
@@ -38005,7 +38280,7 @@ function getActions({ navigate, searchParams }) {
         action: "mark-as-not-spam",
         multiple: items.length > 1
       });
-      const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices6.store);
+      const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices7.store);
       const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data7.store);
       const { updateCountsOptimistically: updateCountsOptimistically2, addPendingAction: addPendingAction2, removePendingAction: removePendingAction2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
@@ -38108,7 +38383,7 @@ function getActions({ navigate, searchParams }) {
         multiple: items.length > 1
       });
       const { saveEntityRecord, editEntityRecord } = registry.dispatch(import_core_data7.store);
-      const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices6.store);
+      const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices7.store);
       const { updateCountsOptimistically: updateCountsOptimistically2, addPendingAction: addPendingAction2, removePendingAction: removePendingAction2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const queryParams = getCountQueryParams(getCurrentQuery2());
@@ -38205,7 +38480,7 @@ function getActions({ navigate, searchParams }) {
         multiple: items.length > 1
       });
       const { deleteEntityRecord, editEntityRecord, receiveEntityRecords } = registry.dispatch(import_core_data7.store);
-      const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices6.store);
+      const { createSuccessNotice, createErrorNotice, createInfoNotice, removeNotice } = registry.dispatch(import_notices7.store);
       const { updateCountsOptimistically: updateCountsOptimistically2, addPendingAction: addPendingAction2, removePendingAction: removePendingAction2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
       const queryParams = getCountQueryParams(getCurrentQuery2());
@@ -38315,7 +38590,7 @@ function getActions({ navigate, searchParams }) {
       const { deleteEntityRecord } = registry.dispatch(import_core_data7.store);
       const { invalidateFilters: invalidateFilters2, updateCountsOptimistically: updateCountsOptimistically2 } = registry.dispatch(store3);
       const { getCurrentQuery: getCurrentQuery2 } = registry.select(store3);
-      const { createSuccessNotice, createErrorNotice } = registry.dispatch(import_notices6.store);
+      const { createSuccessNotice, createErrorNotice } = registry.dispatch(import_notices7.store);
       const queryParams = getCountQueryParams(getCurrentQuery2());
       items.forEach(() => {
         updateCountsOptimistically2("trash", "deleted", 1, queryParams);
@@ -38378,7 +38653,7 @@ function getActions({ navigate, searchParams }) {
       });
       const { editEntityRecord } = registry.dispatch(import_core_data7.store);
       const { getEntityRecord } = registry.select(import_core_data7.store);
-      const { createSuccessNotice, createErrorNotice } = registry.dispatch(import_notices6.store);
+      const { createSuccessNotice, createErrorNotice } = registry.dispatch(import_notices7.store);
       const { invalidateCounts: invalidateCounts2, markRecordsAsInvalid: markRecordsAsInvalid2 } = registry.dispatch(store3);
       const promises = await Promise.allSettled(
         items.map(async ({ id, status }) => {
@@ -38460,7 +38735,7 @@ function getActions({ navigate, searchParams }) {
       });
       const { editEntityRecord } = registry.dispatch(import_core_data7.store);
       const { getEntityRecord } = registry.select(import_core_data7.store);
-      const { createSuccessNotice, createErrorNotice } = registry.dispatch(import_notices6.store);
+      const { createSuccessNotice, createErrorNotice } = registry.dispatch(import_notices7.store);
       const { invalidateCounts: invalidateCounts2, markRecordsAsInvalid: markRecordsAsInvalid2 } = registry.dispatch(store3);
       const promises = await Promise.allSettled(
         items.map(async ({ id, status }) => {
@@ -38642,7 +38917,7 @@ function getUrlPath(url) {
 function StageInner() {
   const params = useParams({ from: "/responses/$view" });
   const searchParams = useSearch2({ from: "/responses/$view" });
-  const navigate = useNavigate3();
+  const navigate = useNavigate4();
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const statusFilter = statusView === "inbox" ? "draft,publish" : statusView;
   const sourceIdValue = searchParams?.sourceId;
@@ -39080,7 +39355,7 @@ var import_data38 = __toESM(require_data());
 var import_element104 = __toESM(require_element());
 var import_html_entities9 = __toESM(require_html_entities());
 var import_i18n99 = __toESM(require_i18n());
-import { useParams as useParams2, useSearch as useSearch4, useNavigate as useNavigate5 } from "@wordpress/route";
+import { useParams as useParams2, useSearch as useSearch4, useNavigate as useNavigate6 } from "@wordpress/route";
 
 // src/dashboard/components/feedback-comments/index.tsx
 var import_components81 = __toESM(require_components(), 1);
@@ -39088,7 +39363,7 @@ var import_core_data8 = __toESM(require_core_data(), 1);
 var import_data35 = __toESM(require_data(), 1);
 var import_element99 = __toESM(require_element(), 1);
 var import_i18n90 = __toESM(require_i18n(), 1);
-var import_notices7 = __toESM(require_notices(), 1);
+var import_notices8 = __toESM(require_notices(), 1);
 
 // src/dashboard/components/feedback-comments/comment-item.tsx
 var import_components80 = __toESM(require_components(), 1);
@@ -39155,7 +39430,7 @@ var FeedbackComments = ({ postId }) => {
   const perPage = 50;
   const [loadedComments, setLoadedComments] = (0, import_element99.useState)([]);
   const [clientAddedComments, setClientAddedComments] = (0, import_element99.useState)([]);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data35.useDispatch)(import_notices7.store);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data35.useDispatch)(import_notices8.store);
   const { deleteEntityRecord, saveEntityRecord } = (0, import_data35.useDispatch)(import_core_data8.store);
   const currentUser = (0, import_data35.useSelect)((select3) => {
     return select3(import_core_data8.store).getCurrentUser();
@@ -40385,14 +40660,14 @@ var import_components91 = __toESM(require_components());
 var import_data37 = __toESM(require_data());
 var import_element103 = __toESM(require_element());
 var import_i18n97 = __toESM(require_i18n());
-import { useSearch as useSearch3, useNavigate as useNavigate4 } from "@wordpress/route";
+import { useSearch as useSearch3, useNavigate as useNavigate5 } from "@wordpress/route";
 var import_jsx_runtime196 = __toESM(require_jsx_runtime());
 function ResponseActions({
   response,
   onActionComplete
 }) {
   const searchParams = useSearch3({ from: "/responses/$view" });
-  const navigate = useNavigate4();
+  const navigate = useNavigate5();
   const {
     markAsSpamAction,
     markAsNotSpamAction,
@@ -40581,7 +40856,7 @@ function SingleResponseView({
   const emptyTrashDays = useConfigValue("emptyTrashDays") ?? 0;
   const isNotesEnabled = useConfigValue("isNotesEnabled") ?? false;
   const { editEntityRecord } = (0, import_data38.useDispatch)(import_core_data10.store);
-  const navigate = useNavigate5();
+  const navigate = useNavigate6();
   const searchParams = useSearch4({ from: "/responses/$view" });
   const { response, isLoading } = (0, import_data38.useSelect)(
     (select3) => {
@@ -40773,7 +41048,7 @@ function SingleResponseView({
 function Response() {
   const params = useParams2({ from: "/responses/$view" });
   const searchParams = useSearch4({ from: "/responses/$view" });
-  const navigate = useNavigate5();
+  const navigate = useNavigate6();
   const responseIds = searchParams?.responseIds || [];
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const { records } = useInboxData({ status: statusView });
