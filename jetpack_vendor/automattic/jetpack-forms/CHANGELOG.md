@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Gravatar hovercard: Add translation string for private profile error state.
 - Remove unnecessary post_type parameter from form edit URLs that caused incorrect redirects.
 - Set duplicated form status to draft when the original form is published, preserving the original status otherwise.
+- Show distinct error message when user lacks permission to edit a form block vs when the form does not exist.
 
 ## [7.13.0] - 2026-03-16
 ### Added
