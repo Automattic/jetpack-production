@@ -28,6 +28,9 @@ This is an alpha version! The changes listed here are not final.
 - Update 'View form responses' button to link to the specific form's responses when the form has a ref.
 - Update dependencies.
 
+### Removed
+- Remove dead grunion.js legacy form builder script that is no longer loaded or used.
+
 ### Fixed
 - Add polyfills for wp-build unbundled dependencies
 - Create synced form when inserting form variations via the block inserter.
