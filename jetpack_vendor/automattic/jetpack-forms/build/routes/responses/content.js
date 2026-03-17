@@ -33869,6 +33869,7 @@ function Gravatar({
             "jetpack-forms"
           ),
           "Gravatar not found.": (0, import_i18n64.__)("Gravatar not found.", "jetpack-forms"),
+          "This profile is private.": (0, import_i18n64.__)("This profile is private.", "jetpack-forms"),
           "Too Many Requests.": (0, import_i18n64.__)("Too many requests.", "jetpack-forms"),
           "Internal Server Error.": (0, import_i18n64.__)("Internal server error.", "jetpack-forms"),
           "Is this you?": (0, import_i18n64.__)("Is this you?", "jetpack-forms"),

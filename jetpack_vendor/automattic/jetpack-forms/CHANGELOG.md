@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix forms list entries count not updating after trashing responses
 - Fix HTML entities not being decoded in form title on pre-publish panel
 - Fix number field min and max values not displaying in the UI after page reload.
+- Gravatar hovercard: Add translation string for private profile error state.
 - Purge edge cache when a jetpack_form post is published, updated, or unpublished.
 - Remove unnecessary post_type parameter from form edit URLs that caused incorrect redirects.
 - Set duplicated form status to draft when the original form is published, preserving the original status otherwise.
