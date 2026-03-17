@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add missing newsletter post metas to sync whitelist
+- Application Passwords: allow authenticating VideoPress AJAX actions via application passwords.
 - Editor: Fix plan upgrade notice for Simple sites
 - Image Studio: Enable if BigSky is enabled
 - Newsletter editor panel: update to reflect previous email sends and update copies.
