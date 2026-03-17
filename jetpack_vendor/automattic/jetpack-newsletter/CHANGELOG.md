@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix inconsistent punctuation and casing on settings screen labels
 - Settings links: link to WordPress.com for WordPress.com sites (not just simple sites)
 - Update dependencies.
+- Update newsletter settings max width to 660px to match MSD and future settings pages
 
 ### Fixed
 - Add spacing below warning notice in Email content settings section
