@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.32.1-alpha] - unreleased
+## [4.33.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Instant Search: add article-type taxonomy for coolhunting.com.
 
 ### Changed
 - Add wpcom_newsletter_send_default to sync options whitelist.
@@ -1696,7 +1699,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.32.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.32.0...v4.32.1-alpha
+[4.33.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.32.0...v4.33.0-alpha
 [4.32.0]: https://github.com/Automattic/jetpack-sync/compare/v4.31.0...v4.32.0
 [4.31.0]: https://github.com/Automattic/jetpack-sync/compare/v4.30.0...v4.31.0
 [4.30.0]: https://github.com/Automattic/jetpack-sync/compare/v4.29.0...v4.30.0
