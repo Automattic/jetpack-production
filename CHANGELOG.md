@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Display MCP client actor on backup undo card and backup card attribution
 - Google Search Preview: Fix site icon not being shown on some sites.
+- Migrated the Settings page header and navigation to use the shared AdminPage component, replacing the legacy Masthead and Calypso SectionNav with a standardized layout matching other Jetpack admin pages.
 - Newsletter: Add wpcom_newsletter_send_default site option to control whether posts are sent to subscribers by default.
 - SEO: Add Canonical URLs toggle to the Traffic settings page.
 
