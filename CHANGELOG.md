@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Image Studio: Enable if BigSky is enabled
 - Newsletter editor panel: update to reflect previous email sends and update copies.
 - Update dependencies.
+- Update disabled newsletter notice to have a better copy for private sites not set for coming soon.
 - Update package dependencies.
 
 ## 15.7-a.1 - 2026-03-09
