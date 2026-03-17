@@ -586,7 +586,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
             "The result of getSnapshot should be cached to avoid an infinite loop"
           ), didWarnUncachedGetSnapshot = true);
         }
-        cachedValue = useState52({
+        cachedValue = useState53({
           inst: { value, getSnapshot }
         });
         var inst = cachedValue[0].inst, forceUpdate = cachedValue[1];
@@ -624,7 +624,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return getSnapshot();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React35 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState52 = React35.useState, useEffect36 = React35.useEffect, useLayoutEffect4 = React35.useLayoutEffect, useDebugValue = React35.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      var React35 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState53 = React35.useState, useEffect36 = React35.useEffect, useLayoutEffect4 = React35.useLayoutEffect, useDebugValue = React35.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
       exports.useSyncExternalStore = void 0 !== React35.useSyncExternalStore ? React35.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
@@ -4546,7 +4546,7 @@ var page_default = Page;
 // routes/forms/stage.tsx
 var import_components78 = __toESM(require_components());
 var import_core_data7 = __toESM(require_core_data());
-var import_data35 = __toESM(require_data());
+var import_data36 = __toESM(require_data());
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@11.3.0_@types+react@18.3.28_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
 var import_element54 = __toESM(require_element(), 1);
@@ -22632,7 +22632,7 @@ var dataviews_default = DataViewsSubComponents;
 
 // routes/forms/stage.tsx
 var import_date10 = __toESM(require_date());
-var import_element96 = __toESM(require_element());
+var import_element97 = __toESM(require_element());
 var import_i18n87 = __toESM(require_i18n());
 var import_notices8 = __toESM(require_notices());
 import { useSearch as useSearch2, useNavigate as useNavigate4 } from "@wordpress/route";
@@ -26559,47 +26559,80 @@ function DataViewsHeaderRow({
 }
 
 // src/dashboard/wp-build/components/forms-help-modal/index.tsx
+var import_api_fetch7 = __toESM(require_api_fetch(), 1);
 var import_components66 = __toESM(require_components(), 1);
+var import_data16 = __toESM(require_data(), 1);
+var import_element81 = __toESM(require_element(), 1);
 var import_i18n69 = __toESM(require_i18n(), 1);
 var import_jsx_runtime143 = __toESM(require_jsx_runtime(), 1);
 function FormsHelpModal({ isOpen, onClose }) {
+  const [dontShowAgain, setDontShowAgain] = (0, import_element81.useState)(false);
+  const { receiveConfigValue: receiveConfigValue2 } = (0, import_data16.useDispatch)(CONFIG_STORE);
+  const handleClose = (0, import_element81.useCallback)(() => {
+    if (dontShowAgain) {
+      receiveConfigValue2("hasClassicForms", false);
+      (0, import_api_fetch7.default)({
+        path: "/wp/v2/feedback/dismiss-classic-forms-notice",
+        method: "POST"
+      });
+    }
+    onClose();
+  }, [dontShowAgain, onClose, receiveConfigValue2]);
   if (!isOpen) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(import_components66.Modal, { title: (0, import_i18n69.__)("Not seeing all your forms?", "jetpack-forms"), onRequestClose: onClose, children: /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)(import_components66.__experimentalVStack, { spacing: "4", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(import_components66.__experimentalText, { children: (0, import_i18n69.__)("The Forms list shows reusable forms, not simple form blocks.", "jetpack-forms") }),
-    /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(import_components66.__experimentalText, { as: "p", weight: "500", children: (0, import_i18n69.__)("To convert a form block to a reusable form:", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)("ol", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime143.jsx)("li", { children: (0, import_i18n69.__)("Open the page or post where your form block is embedded.", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime143.jsx)("li", { children: (0, import_i18n69.__)("Select the form block.", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime143.jsx)("li", { children: (0, import_i18n69.__)("Click \u201CEdit Form\u201D in the block toolbar to convert it.", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime143.jsx)("li", { children: (0, import_i18n69.__)("Save the page or post.", "jetpack-forms") })
+  return /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(
+    import_components66.Modal,
+    {
+      title: (0, import_i18n69.__)("Not seeing all your forms?", "jetpack-forms"),
+      onRequestClose: handleClose,
+      children: /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)(import_components66.__experimentalVStack, { spacing: "4", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(import_components66.__experimentalText, { children: (0, import_i18n69.__)("The Forms list shows reusable forms, not simple form blocks.", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(import_components66.__experimentalText, { as: "p", weight: "500", children: (0, import_i18n69.__)("To convert a form block to a reusable form:", "jetpack-forms") }),
+          /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)("ol", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime143.jsx)("li", { children: (0, import_i18n69.__)("Open the page or post where your form block is embedded.", "jetpack-forms") }),
+            /* @__PURE__ */ (0, import_jsx_runtime143.jsx)("li", { children: (0, import_i18n69.__)("Select the form block.", "jetpack-forms") }),
+            /* @__PURE__ */ (0, import_jsx_runtime143.jsx)("li", { children: (0, import_i18n69.__)('Click "Edit Form" in the block toolbar to convert it.', "jetpack-forms") }),
+            /* @__PURE__ */ (0, import_jsx_runtime143.jsx)("li", { children: (0, import_i18n69.__)("Save the page or post.", "jetpack-forms") })
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)(import_components66.__experimentalHStack, { justify: "space-between", alignment: "center", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(
+            import_components66.CheckboxControl,
+            {
+              __nextHasNoMarginBottom: true,
+              label: (0, import_i18n69.__)("Don't show this again", "jetpack-forms"),
+              checked: dontShowAgain,
+              onChange: setDontShowAgain
+            }
+          ),
+          /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(import_components66.Button, { variant: "primary", onClick: handleClose, children: (0, import_i18n69.__)("Got it", "jetpack-forms") })
+        ] })
       ] })
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime143.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime143.jsx)(import_components66.Button, { variant: "primary", onClick: onClose, children: (0, import_i18n69.__)("Got it", "jetpack-forms") }) })
-  ] }) });
+    }
+  );
 }
 
 // src/dashboard/wp-build/hooks/use-form-item-actions.ts
-var import_api_fetch7 = __toESM(require_api_fetch(), 1);
-var import_data17 = __toESM(require_data(), 1);
-var import_element82 = __toESM(require_element(), 1);
+var import_api_fetch8 = __toESM(require_api_fetch(), 1);
+var import_data18 = __toESM(require_data(), 1);
+var import_element83 = __toESM(require_element(), 1);
 var import_i18n71 = __toESM(require_i18n(), 1);
 var import_notices4 = __toESM(require_notices(), 1);
 
 // src/dashboard/wp-build/hooks/use-duplicate-form.ts
-var import_data16 = __toESM(require_data(), 1);
-var import_element81 = __toESM(require_element(), 1);
+var import_data17 = __toESM(require_data(), 1);
+var import_element82 = __toESM(require_element(), 1);
 var import_i18n70 = __toESM(require_i18n(), 1);
 var import_notices3 = __toESM(require_notices(), 1);
 function useDuplicateForm() {
-  const [isDuplicating, setIsDuplicating] = (0, import_element81.useState)(false);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data16.useDispatch)(import_notices3.store);
-  const { saveEntityRecord } = (0, import_data16.useDispatch)("core");
-  const { invalidateFormStatusCounts: invalidateFormStatusCounts2 } = (0, import_data16.useDispatch)(store3);
+  const [isDuplicating, setIsDuplicating] = (0, import_element82.useState)(false);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data17.useDispatch)(import_notices3.store);
+  const { saveEntityRecord } = (0, import_data17.useDispatch)("core");
+  const { invalidateFormStatusCounts: invalidateFormStatusCounts2 } = (0, import_data17.useDispatch)(store3);
   const adminUrl = useConfigValue("adminUrl") || "";
-  const duplicateForm = (0, import_element81.useCallback)(
+  const duplicateForm = (0, import_element82.useCallback)(
     async (item) => {
       if (isDuplicating) {
         return;
@@ -26609,7 +26642,7 @@ function useDuplicateForm() {
       }
       setIsDuplicating(true);
       try {
-        const original = await (0, import_data16.resolveSelect)("core").getEntityRecord(
+        const original = await (0, import_data17.resolveSelect)("core").getEntityRecord(
           "postType",
           "jetpack_form",
           item.id,
@@ -26690,14 +26723,14 @@ function useDuplicateForm() {
 
 // src/dashboard/wp-build/hooks/use-form-item-actions.ts
 function useFormItemActions() {
-  const { createSuccessNotice, createErrorNotice } = (0, import_data17.useDispatch)(import_notices4.store);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data18.useDispatch)(import_notices4.store);
   const { duplicateForm, isDuplicating } = useDuplicateForm();
-  const [isUpdatingStatus, setIsUpdatingStatus] = (0, import_element82.useState)(false);
-  const isUpdatingStatusRef = (0, import_element82.useRef)(false);
-  const { saveEntityRecord, invalidateResolution } = (0, import_data17.useDispatch)("core");
-  const previewForm = (0, import_element82.useCallback)(async (item) => {
+  const [isUpdatingStatus, setIsUpdatingStatus] = (0, import_element83.useState)(false);
+  const isUpdatingStatusRef = (0, import_element83.useRef)(false);
+  const { saveEntityRecord, invalidateResolution } = (0, import_data18.useDispatch)("core");
+  const previewForm = (0, import_element83.useCallback)(async (item) => {
     try {
-      const response = await (0, import_api_fetch7.default)({
+      const response = await (0, import_api_fetch8.default)({
         path: `/wp/v2/jetpack-forms/${item.id}/preview-url`
       });
       window.open(response.preview_url, "_blank");
@@ -26705,7 +26738,7 @@ function useFormItemActions() {
       console.error("Failed to get preview URL:", error2);
     }
   }, []);
-  const copyEmbed = (0, import_element82.useCallback)(
+  const copyEmbed = (0, import_element83.useCallback)(
     async (item) => {
       const embedCode = `<!-- wp:jetpack/contact-form {"ref":${item.id}} /-->`;
       try {
@@ -26721,7 +26754,7 @@ function useFormItemActions() {
     },
     [createErrorNotice, createSuccessNotice]
   );
-  const copyShortcode = (0, import_element82.useCallback)(
+  const copyShortcode = (0, import_element83.useCallback)(
     async (item) => {
       const shortcode = `[contact-form ref="${item.id}"]`;
       try {
@@ -26737,7 +26770,7 @@ function useFormItemActions() {
     },
     [createErrorNotice, createSuccessNotice]
   );
-  const invalidateListQuery = (0, import_element82.useCallback)(
+  const invalidateListQuery = (0, import_element83.useCallback)(
     (query) => {
       invalidateResolution("getEntityRecords", ["postType", FORM_POST_TYPE, query]);
       invalidateResolution("getEntityRecords", [
@@ -26748,7 +26781,7 @@ function useFormItemActions() {
     },
     [invalidateResolution]
   );
-  const updateStatus = (0, import_element82.useCallback)(
+  const updateStatus = (0, import_element83.useCallback)(
     async (items, nextStatus, options = {}) => {
       if (isUpdatingStatusRef.current || !items?.length) {
         return;
@@ -26858,13 +26891,13 @@ function useFormItemActions() {
     },
     [createErrorNotice, createSuccessNotice, invalidateListQuery, saveEntityRecord]
   );
-  const publishForms = (0, import_element82.useCallback)(
+  const publishForms = (0, import_element83.useCallback)(
     async (items, options) => {
       await updateStatus(items, "publish", options);
     },
     [updateStatus]
   );
-  const setFormsToDraft = (0, import_element82.useCallback)(
+  const setFormsToDraft = (0, import_element83.useCallback)(
     async (items, options) => {
       await updateStatus(items, "draft", options);
     },
@@ -27223,8 +27256,8 @@ function catchNetworkErrors() {
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
 var import_components77 = __toESM(require_components(), 1);
 var import_core_data6 = __toESM(require_core_data(), 1);
-var import_data34 = __toESM(require_data(), 1);
-var import_element95 = __toESM(require_element(), 1);
+var import_data35 = __toESM(require_data(), 1);
+var import_element96 = __toESM(require_element(), 1);
 var import_html_entities4 = __toESM(require_html_entities(), 1);
 var import_i18n86 = __toESM(require_i18n(), 1);
 var import_notices7 = __toESM(require_notices(), 1);
@@ -27232,12 +27265,12 @@ import { useNavigate as useNavigate3 } from "@wordpress/route";
 
 // src/dashboard/components/edit-form-button/index.tsx
 var import_components67 = __toESM(require_components(), 1);
-var import_element83 = __toESM(require_element(), 1);
+var import_element84 = __toESM(require_element(), 1);
 var import_i18n72 = __toESM(require_i18n(), 1);
 var import_jsx_runtime144 = __toESM(require_jsx_runtime(), 1);
 function EditFormButton({ formId }) {
   const adminUrl = useConfigValue("adminUrl") || "";
-  const onClick = (0, import_element83.useCallback)(() => {
+  const onClick = (0, import_element84.useCallback)(() => {
     window.location.href = getFormEditUrl(formId, adminUrl);
   }, [adminUrl, formId]);
   return /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(import_components67.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n72.__)("Edit form", "jetpack-forms") });
@@ -27248,17 +27281,17 @@ var import_components69 = __toESM(require_components(), 1);
 var import_i18n75 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-empty-spam.ts
-var import_api_fetch8 = __toESM(require_api_fetch(), 1);
+var import_api_fetch9 = __toESM(require_api_fetch(), 1);
 var import_core_data3 = __toESM(require_core_data(), 1);
-var import_data19 = __toESM(require_data(), 1);
-var import_element85 = __toESM(require_element(), 1);
+var import_data20 = __toESM(require_data(), 1);
+var import_element86 = __toESM(require_element(), 1);
 var import_i18n73 = __toESM(require_i18n(), 1);
 var import_notices5 = __toESM(require_notices(), 1);
 
 // src/dashboard/hooks/use-inbox-data.ts
 var import_core_data2 = __toESM(require_core_data(), 1);
-var import_data18 = __toESM(require_data(), 1);
-var import_element84 = __toESM(require_element(), 1);
+var import_data19 = __toESM(require_data(), 1);
+var import_element85 = __toESM(require_element(), 1);
 var import_html_entities3 = __toESM(require_html_entities(), 1);
 
 // src/dashboard/components/inspector/utils.ts
@@ -27322,7 +27355,7 @@ var normalizeFieldsForDisplay = (fields) => {
 };
 function useInboxData(options = {}) {
   const [searchParams] = useDashboardSearchParams();
-  const { setCurrentQuery: setCurrentQuery2, setSelectedResponses: setSelectedResponses2 } = (0, import_data18.useDispatch)(store3);
+  const { setCurrentQuery: setCurrentQuery2, setSelectedResponses: setSelectedResponses2 } = (0, import_data19.useDispatch)(store3);
   const urlStatus = options.status ?? searchParams.get("status");
   const statusFilter = getStatusFilter(urlStatus);
   const {
@@ -27332,7 +27365,7 @@ function useInboxData(options = {}) {
     filterOptions,
     invalidRecords: invalidRecords2,
     hasPendingActions: hasPendingActions2
-  } = (0, import_data18.useSelect)(
+  } = (0, import_data19.useSelect)(
     (select3) => ({
       selectedResponsesCount: select3(store3).getSelectedResponsesCount(),
       currentStatus: select3(store3).getCurrentStatus(),
@@ -27343,9 +27376,9 @@ function useInboxData(options = {}) {
     }),
     []
   );
-  const [frozenInvalidIds, setFrozenInvalidIds] = (0, import_element84.useState)([]);
-  const currentPageRef = (0, import_element84.useRef)(currentQuery2?.page || 1);
-  (0, import_element84.useEffect)(() => {
+  const [frozenInvalidIds, setFrozenInvalidIds] = (0, import_element85.useState)([]);
+  const currentPageRef = (0, import_element85.useRef)(currentQuery2?.page || 1);
+  (0, import_element85.useEffect)(() => {
     const newPage = currentQuery2?.page || 1;
     const hasUnreadFilter = currentQuery2?.is_unread === true;
     if (newPage !== currentPageRef.current) {
@@ -27357,7 +27390,7 @@ function useInboxData(options = {}) {
       }
     }
   }, [currentQuery2?.page, currentQuery2?.is_unread, invalidRecords2]);
-  const queryWithInvalidIds = (0, import_element84.useMemo)(() => {
+  const queryWithInvalidIds = (0, import_element85.useMemo)(() => {
     if (frozenInvalidIds.length > 0) {
       return {
         ...currentQuery2,
@@ -27372,7 +27405,7 @@ function useInboxData(options = {}) {
     totalItems,
     totalPages
   } = (0, import_core_data2.useEntityRecords)("postType", "feedback", queryWithInvalidIds);
-  const editedRecords = (0, import_data18.useSelect)(
+  const editedRecords = (0, import_data19.useSelect)(
     (select3) => {
       return (rawRecords || []).map((record) => {
         const editedRecord = select3(import_core_data2.store).getEditedEntityRecord(
@@ -27391,7 +27424,7 @@ function useInboxData(options = {}) {
     }
     return status === filter;
   };
-  const records = (0, import_element84.useMemo)(() => {
+  const records = (0, import_element85.useMemo)(() => {
     const filteredRecords = (editedRecords || []).filter((record) => {
       return statusMatchesFilter(record.status, statusFilter);
     });
@@ -27403,7 +27436,7 @@ function useInboxData(options = {}) {
       };
     });
   }, [editedRecords, statusFilter]);
-  const countsQueryParams = (0, import_element84.useMemo)(() => {
+  const countsQueryParams = (0, import_element85.useMemo)(() => {
     const params = {};
     if (currentQuery2?.search) {
       params.search = currentQuery2.search;
@@ -27422,7 +27455,7 @@ function useInboxData(options = {}) {
     }
     return params;
   }, [currentQuery2]);
-  const { totalItemsInbox, totalItemsSpam, totalItemsTrash } = (0, import_data18.useSelect)(
+  const { totalItemsInbox, totalItemsSpam, totalItemsTrash } = (0, import_data19.useSelect)(
     (select3) => {
       select3(store3).getCounts(countsQueryParams);
       return {
@@ -27456,28 +27489,28 @@ function useInboxData(options = {}) {
 function useEmptySpam({
   totalItemsSpam: totalItemsSpamProp
 } = {}) {
-  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element85.useState)(false);
-  const [isEmptying, setIsEmptying] = (0, import_element85.useState)(false);
-  const [isEmpty4, setIsEmpty] = (0, import_element85.useState)(true);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data19.useDispatch)(import_notices5.store);
-  const { invalidateResolutionForStoreSelector } = (0, import_data19.useDispatch)(import_core_data3.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data19.useDispatch)(store3);
+  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element86.useState)(false);
+  const [isEmptying, setIsEmptying] = (0, import_element86.useState)(false);
+  const [isEmpty4, setIsEmpty] = (0, import_element86.useState)(true);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data20.useDispatch)(import_notices5.store);
+  const { invalidateResolutionForStoreSelector } = (0, import_data20.useDispatch)(import_core_data3.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data20.useDispatch)(store3);
   const hookData = useInboxData();
   const totalItemsSpam = totalItemsSpamProp ?? hookData.totalItemsSpam ?? 0;
   const { selectedResponsesCount } = hookData;
-  (0, import_element85.useEffect)(() => {
+  (0, import_element86.useEffect)(() => {
     setIsEmpty(!totalItemsSpam);
   }, [totalItemsSpam]);
-  const openConfirmDialog = (0, import_element85.useCallback)(() => setConfirmDialogOpen(true), []);
-  const closeConfirmDialog = (0, import_element85.useCallback)(() => setConfirmDialogOpen(false), []);
-  const onConfirmEmptying = (0, import_element85.useCallback)(async () => {
+  const openConfirmDialog = (0, import_element86.useCallback)(() => setConfirmDialogOpen(true), []);
+  const closeConfirmDialog = (0, import_element86.useCallback)(() => setConfirmDialogOpen(false), []);
+  const onConfirmEmptying = (0, import_element86.useCallback)(async () => {
     if (isEmptying || isEmpty4) {
       return;
     }
     closeConfirmDialog();
     setIsEmptying(true);
     analytics_default.tracks.recordEvent("jetpack_forms_empty_spam_click");
-    (0, import_api_fetch8.default)({
+    (0, import_api_fetch9.default)({
       method: "DELETE",
       path: `/wp/v2/feedback/trash?status=spam`
     }).then((response) => {
@@ -27614,37 +27647,37 @@ var import_components71 = __toESM(require_components(), 1);
 var import_i18n78 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-empty-trash.ts
-var import_api_fetch9 = __toESM(require_api_fetch(), 1);
+var import_api_fetch10 = __toESM(require_api_fetch(), 1);
 var import_core_data4 = __toESM(require_core_data(), 1);
-var import_data20 = __toESM(require_data(), 1);
-var import_element86 = __toESM(require_element(), 1);
+var import_data21 = __toESM(require_data(), 1);
+var import_element87 = __toESM(require_element(), 1);
 var import_i18n76 = __toESM(require_i18n(), 1);
 var import_notices6 = __toESM(require_notices(), 1);
 function useEmptyTrash({
   totalItemsTrash: totalItemsTrashProp
 } = {}) {
-  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element86.useState)(false);
-  const [isEmptying, setIsEmptying] = (0, import_element86.useState)(false);
-  const [isEmpty4, setIsEmpty] = (0, import_element86.useState)(true);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data20.useDispatch)(import_notices6.store);
-  const { invalidateResolutionForStoreSelector } = (0, import_data20.useDispatch)(import_core_data4.store);
-  const { invalidateCounts: invalidateCounts2 } = (0, import_data20.useDispatch)(store3);
+  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element87.useState)(false);
+  const [isEmptying, setIsEmptying] = (0, import_element87.useState)(false);
+  const [isEmpty4, setIsEmpty] = (0, import_element87.useState)(true);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data21.useDispatch)(import_notices6.store);
+  const { invalidateResolutionForStoreSelector } = (0, import_data21.useDispatch)(import_core_data4.store);
+  const { invalidateCounts: invalidateCounts2 } = (0, import_data21.useDispatch)(store3);
   const hookData = useInboxData();
   const totalItemsTrash = totalItemsTrashProp ?? hookData.totalItemsTrash ?? 0;
   const { selectedResponsesCount } = hookData;
-  (0, import_element86.useEffect)(() => {
+  (0, import_element87.useEffect)(() => {
     setIsEmpty(!totalItemsTrash);
   }, [totalItemsTrash]);
-  const openConfirmDialog = (0, import_element86.useCallback)(() => setConfirmDialogOpen(true), []);
-  const closeConfirmDialog = (0, import_element86.useCallback)(() => setConfirmDialogOpen(false), []);
-  const onConfirmEmptying = (0, import_element86.useCallback)(async () => {
+  const openConfirmDialog = (0, import_element87.useCallback)(() => setConfirmDialogOpen(true), []);
+  const closeConfirmDialog = (0, import_element87.useCallback)(() => setConfirmDialogOpen(false), []);
+  const onConfirmEmptying = (0, import_element87.useCallback)(async () => {
     if (isEmptying || isEmpty4) {
       return;
     }
     closeConfirmDialog();
     setIsEmptying(true);
     analytics_default.tracks.recordEvent("jetpack_forms_empty_trash_click");
-    (0, import_api_fetch9.default)({
+    (0, import_api_fetch10.default)({
       method: "DELETE",
       path: `/wp/v2/feedback/trash`
     }).then((response) => {
@@ -27782,15 +27815,15 @@ var import_i18n84 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-export-responses.ts
 var import_core_data5 = __toESM(require_core_data(), 1);
-var import_data21 = __toESM(require_data(), 1);
-var import_element87 = __toESM(require_element(), 1);
+var import_data22 = __toESM(require_data(), 1);
+var import_element88 = __toESM(require_element(), 1);
 var import_i18n79 = __toESM(require_i18n(), 1);
 function useExportResponses() {
   const [isSm] = use_breakpoint_match_default("sm");
-  const [showExportModal, setShowExportModal] = (0, import_element87.useState)(false);
-  const closeModal = (0, import_element87.useCallback)(() => setShowExportModal(false), [setShowExportModal]);
-  const [autoConnectGdrive, setAutoConnectGdrive] = (0, import_element87.useState)(false);
-  const { selectedResponsesCount, currentStatus } = (0, import_data21.useSelect)(
+  const [showExportModal, setShowExportModal] = (0, import_element88.useState)(false);
+  const closeModal = (0, import_element88.useCallback)(() => setShowExportModal(false), [setShowExportModal]);
+  const [autoConnectGdrive, setAutoConnectGdrive] = (0, import_element88.useState)(false);
+  const { selectedResponsesCount, currentStatus } = (0, import_data22.useSelect)(
     (select3) => ({
       selectedResponsesCount: select3(store3).getSelectedResponsesCount(),
       currentStatus: select3(store3).getCurrentStatus()
@@ -27806,22 +27839,22 @@ function useExportResponses() {
     statusLabel = (0, import_i18n79.__)("Export trash", "jetpack-forms");
   }
   const exportLabel = selectedResponsesCount > 0 ? `${statusLabel} (${formatNumber(selectedResponsesCount)})` : statusLabel;
-  const openModal = (0, import_element87.useCallback)(() => {
+  const openModal = (0, import_element88.useCallback)(() => {
     setShowExportModal(true);
     analytics_default.tracks.recordEvent("jetpack_forms_export_responses_modal_open", {
       viewport: isSm ? "mobile" : "desktop"
     });
   }, [isSm]);
-  const userCanExport = (0, import_data21.useSelect)(
+  const userCanExport = (0, import_data22.useSelect)(
     (select3) => select3(import_core_data5.store).canUser("update", "settings"),
     []
   );
-  const { selected, currentQuery: currentQuery2 } = (0, import_data21.useSelect)((select3) => {
+  const { selected, currentQuery: currentQuery2 } = (0, import_data22.useSelect)((select3) => {
     const { getSelectedResponsesFromCurrentDataset: getSelectedResponsesFromCurrentDataset2, getCurrentQuery: getCurrentQuery2 } = select3(store3);
     return { selected: getSelectedResponsesFromCurrentDataset2(), currentQuery: getCurrentQuery2() };
   }, []);
   const exportNonce = useConfigValue("exportNonce");
-  const onExport = (0, import_element87.useCallback)(
+  const onExport = (0, import_element88.useCallback)(
     (action, nonceName) => {
       const data = new FormData();
       data.append("action", action);
@@ -27838,7 +27871,7 @@ function useExportResponses() {
     },
     [currentQuery2, selected, exportNonce]
   );
-  (0, import_element87.useEffect)(() => {
+  (0, import_element88.useEffect)(() => {
     const url = new URL(window.location.href);
     if (url.searchParams.get("connect-gdrive") === "true") {
       setAutoConnectGdrive(true);
@@ -27862,7 +27895,7 @@ function useExportResponses() {
 
 // src/dashboard/components/export-responses/modal.tsx
 var import_components74 = __toESM(require_components(), 1);
-var import_data33 = __toESM(require_data(), 1);
+var import_data34 = __toESM(require_data(), 1);
 var import_i18n83 = __toESM(require_i18n(), 1);
 
 // ../../js-packages/shared-extension-utils/src/get-jetpack-data.js
@@ -27909,7 +27942,7 @@ var usableBlockWithFreePlan = [
 ];
 
 // ../../js-packages/connection/components/use-connection/index.ts
-var import_data26 = __toESM(require_data(), 1);
+var import_data27 = __toESM(require_data(), 1);
 var import_react24 = __toESM(require_react(), 1);
 
 // ../../js-packages/connection/state/actions.jsx
@@ -28014,7 +28047,7 @@ var actions = {
 };
 
 // ../../js-packages/connection/state/controls.jsx
-var import_data22 = __toESM(require_data(), 1);
+var import_data23 = __toESM(require_data(), 1);
 
 // ../../js-packages/connection/state/assignLocation.jsx
 function assignLocation(url) {
@@ -28027,7 +28060,7 @@ var store_id_default = STORE_ID;
 
 // ../../js-packages/connection/state/controls.jsx
 var REGISTER_SITE2 = ({ redirectUri, from }) => api_default.registerSite(null, redirectUri, from);
-var CONNECT_USER2 = (0, import_data22.createRegistryControl)(
+var CONNECT_USER2 = (0, import_data23.createRegistryControl)(
   ({ resolveSelect: resolveSelect2 }) => ({ from, redirectFunc, redirectUri, skipPricingPage } = {}) => {
     return new Promise((resolve, reject) => {
       resolveSelect2(store_id_default).getAuthorizationUrl(redirectUri).then((authorizationUrl2) => {
@@ -28056,7 +28089,7 @@ var controls_default = {
 };
 
 // ../../js-packages/connection/state/reducers.jsx
-var import_data23 = __toESM(require_data(), 1);
+var import_data24 = __toESM(require_data(), 1);
 var connectionStatus = (state = {}, action) => {
   switch (action.type) {
     case SET_CONNECTION_STATUS:
@@ -28132,7 +28165,7 @@ var isOfflineMode = (state = false, action) => {
   }
   return state;
 };
-var reducers = (0, import_data23.combineReducers)({
+var reducers = (0, import_data24.combineReducers)({
   connectionStatus,
   connectionStatusIsFetching,
   siteIsRegistering,
@@ -28147,17 +28180,17 @@ var reducers = (0, import_data23.combineReducers)({
 var reducers_default = reducers;
 
 // ../../js-packages/connection/state/resolvers.jsx
-var import_data24 = __toESM(require_data(), 1);
+var import_data25 = __toESM(require_data(), 1);
 var connectionResolvers = {
   getAuthorizationUrl: {
     isFulfilled: (state, ...args) => {
       const hasAuthorization = Boolean(state.authorizationUrl);
-      const hasFinishedResolution = (0, import_data24.select)(store_id_default).hasFinishedResolution(
+      const hasFinishedResolution = (0, import_data25.select)(store_id_default).hasFinishedResolution(
         "getAuthorizationUrl",
         args
       );
       if (hasAuthorization && !hasFinishedResolution) {
-        (0, import_data24.dispatch)(store_id_default).finishResolution("getAuthorizationUrl", args);
+        (0, import_data25.dispatch)(store_id_default).finishResolution("getAuthorizationUrl", args);
       }
       return hasAuthorization;
     },
@@ -28204,13 +28237,13 @@ var selectors = {
 var selectors_default = selectors;
 
 // ../../js-packages/connection/state/store-holder.jsx
-var import_data25 = __toESM(require_data(), 1);
+var import_data26 = __toESM(require_data(), 1);
 var storeHolder = class _storeHolder {
   static store = null;
   static mayBeInit(storeId, storeConfig) {
     if (null === _storeHolder.store) {
-      _storeHolder.store = (0, import_data25.createReduxStore)(storeId, storeConfig);
-      (0, import_data25.register)(_storeHolder.store);
+      _storeHolder.store = (0, import_data26.createReduxStore)(storeId, storeConfig);
+      (0, import_data26.register)(_storeHolder.store);
     }
   }
 };
@@ -28245,8 +28278,8 @@ function useConnection({
   skipUserConnection,
   skipPricingPage
 } = {}) {
-  const { registerSite: registerSite2, connectUser: connectUser2, refreshConnectedPlugins: refreshConnectedPlugins2 } = (0, import_data26.useDispatch)(store_id_default);
-  const registrationError2 = (0, import_data26.useSelect)(
+  const { registerSite: registerSite2, connectUser: connectUser2, refreshConnectedPlugins: refreshConnectedPlugins2 } = (0, import_data27.useDispatch)(store_id_default);
+  const registrationError2 = (0, import_data27.useSelect)(
     (select3) => select3(store_id_default).getRegistrationError(),
     []
   );
@@ -28260,7 +28293,7 @@ function useConnection({
     isUserConnected,
     hasConnectedOwner,
     isOfflineMode: isOfflineMode2
-  } = (0, import_data26.useSelect)((select3) => {
+  } = (0, import_data27.useSelect)((select3) => {
     const connectionStatus2 = select3(store_id_default).getConnectionStatus();
     return {
       siteIsRegistering: select3(store_id_default).getSiteIsRegistering(),
@@ -28319,7 +28352,7 @@ function useConnection({
 }
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-analytics.js
-var import_element88 = __toESM(require_element());
+var import_element89 = __toESM(require_element());
 var { tracks } = analytics_default;
 var { recordEvent } = tracks;
 var useAnalytics = ({
@@ -28328,10 +28361,10 @@ var useAnalytics = ({
   pageViewSuffix = "page_view",
   pageViewEventProperties = {}
 } = {}) => {
-  const [pageViewRecorded, setPageViewRecorded] = (0, import_element88.useState)(false);
+  const [pageViewRecorded, setPageViewRecorded] = (0, import_element89.useState)(false);
   const { isUserConnected, isRegistered, userConnectionData: userConnectionData2 = {} } = useConnection();
   const { wpcomUser: { login, ID } = {}, blogId } = userConnectionData2.currentUser || {};
-  const recordEventAsync = (0, import_element88.useCallback)(
+  const recordEventAsync = (0, import_element89.useCallback)(
     async (event, properties = {}) => {
       if (!(isUserConnected && ID && login)) {
         return;
@@ -28340,7 +28373,7 @@ var useAnalytics = ({
     },
     [isUserConnected, ID, login]
   );
-  (0, import_element88.useEffect)(() => {
+  (0, import_element89.useEffect)(() => {
     if (!isUserConnected || !ID || !login || !blogId) {
       return;
     }
@@ -28348,7 +28381,7 @@ var useAnalytics = ({
       blog_id: blogId
     });
   }, [blogId, ID, login, isUserConnected]);
-  (0, import_element88.useEffect)(() => {
+  (0, import_element89.useEffect)(() => {
     const pageViewEvent = pageViewEventName ? `${pageViewNamespace}_${pageViewEventName}_${pageViewSuffix}` : null;
     if (!isRegistered) {
       return;
@@ -28377,24 +28410,24 @@ var useAnalytics = ({
 var use_analytics_default = useAnalytics;
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-autosave-and-redirect/index.ts
-var import_data27 = __toESM(require_data());
-var import_element89 = __toESM(require_element());
-
-// ../../js-packages/shared-extension-utils/src/hooks/use-ref-interval.ts
+var import_data28 = __toESM(require_data());
 var import_element90 = __toESM(require_element());
 
-// ../../js-packages/shared-extension-utils/src/hooks/use-module-status/index.js
-var import_data30 = __toESM(require_data());
+// ../../js-packages/shared-extension-utils/src/hooks/use-ref-interval.ts
 var import_element91 = __toESM(require_element());
 
+// ../../js-packages/shared-extension-utils/src/hooks/use-module-status/index.js
+var import_data31 = __toESM(require_data());
+var import_element92 = __toESM(require_element());
+
 // ../../js-packages/shared-extension-utils/src/modules-state/index.js
-var import_data29 = __toESM(require_data());
+var import_data30 = __toESM(require_data());
 
 // ../../js-packages/shared-extension-utils/src/modules-state/actions.js
-var import_data28 = __toESM(require_data());
+var import_data29 = __toESM(require_data());
 
 // ../../js-packages/shared-extension-utils/src/modules-state/controls.js
-var import_api_fetch10 = __toESM(require_api_fetch());
+var import_api_fetch11 = __toESM(require_api_fetch());
 var FETCH_JETPACK_MODULES = "FETCH_JETPACK_MODULES";
 var UPDATE_JETPACK_MODULE_STATUS = "UPDATE_JETPACK_MODULE_STATUS";
 var fetchJetpackModules = () => {
@@ -28410,13 +28443,13 @@ var updateJetpackModuleStatus = (settings) => {
 };
 var controls_default2 = {
   [FETCH_JETPACK_MODULES]: function() {
-    return (0, import_api_fetch10.default)({
+    return (0, import_api_fetch11.default)({
       path: `/jetpack/v4/module/all`,
       method: "GET"
     });
   },
   [UPDATE_JETPACK_MODULE_STATUS]: function({ settings }) {
-    return (0, import_api_fetch10.default)({
+    return (0, import_api_fetch11.default)({
       path: `/jetpack/v4/module/${settings.name}/active`,
       method: "POST",
       data: {
@@ -28437,7 +28470,7 @@ function* updateJetpackModuleStatus2(settings) {
     yield setJetpackModules({ data });
     return true;
   } catch {
-    const oldSettings = (0, import_data28.select)(JETPACK_MODULES_STORE_ID).getJetpackModules();
+    const oldSettings = (0, import_data29.select)(JETPACK_MODULES_STORE_ID).getJetpackModules();
     yield setJetpackModules(oldSettings);
     return false;
   } finally {
@@ -28454,7 +28487,7 @@ function* fetchModules() {
     yield setJetpackModules({ data });
     return true;
   } catch {
-    const oldSettings = (0, import_data28.select)(JETPACK_MODULES_STORE_ID).getJetpackModules();
+    const oldSettings = (0, import_data29.select)(JETPACK_MODULES_STORE_ID).getJetpackModules();
     yield setJetpackModules(oldSettings);
     return false;
   } finally {
@@ -28529,25 +28562,25 @@ var selectors_default2 = jetpackModulesSelectors;
 
 // ../../js-packages/shared-extension-utils/src/modules-state/index.js
 var JETPACK_MODULES_STORE_ID = "jetpack-modules";
-var store4 = (0, import_data29.createReduxStore)(JETPACK_MODULES_STORE_ID, {
+var store4 = (0, import_data30.createReduxStore)(JETPACK_MODULES_STORE_ID, {
   reducer: reducer_default2,
   actions: actions_default,
   controls: controls_default2,
   resolvers: resolvers_default2,
   selectors: selectors_default2
 });
-(0, import_data29.register)(store4);
+(0, import_data30.register)(store4);
 var initialData = window?.Initial_State?.getModules || // Jetpack Dashboard
 window?.Jetpack_Editor_Initial_State?.modules || // Gutenberg
 null;
 if (initialData !== null) {
-  (0, import_data29.dispatch)(JETPACK_MODULES_STORE_ID).setJetpackModules({
+  (0, import_data30.dispatch)(JETPACK_MODULES_STORE_ID).setJetpackModules({
     data: { ...initialData }
   });
 }
 
 // ../../js-packages/shared-extension-utils/src/get-block-icon-from-metadata.js
-var import_element92 = __toESM(require_element());
+var import_element93 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/libs/connection/index.ts
 var import_debug4 = __toESM(require_browser());
@@ -28555,7 +28588,7 @@ var initialState3 = window?.JP_CONNECTION_INITIAL_STATE;
 var debug4 = (0, import_debug4.default)("shared-extension-utils:connection");
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-upgrade-flow/index.js
-var import_data31 = __toESM(require_data());
+var import_data32 = __toESM(require_data());
 var import_hooks = __toESM(require_hooks());
 
 // ../../js-packages/shared-extension-utils/src/block-editor-actions.js
@@ -28563,12 +28596,12 @@ var import_dom_ready = __toESM(require_dom_ready());
 
 // src/dashboard/components/export-responses/csv.tsx
 var import_components72 = __toESM(require_components(), 1);
-var import_element93 = __toESM(require_element(), 1);
+var import_element94 = __toESM(require_element(), 1);
 var import_i18n81 = __toESM(require_i18n(), 1);
 var import_jsx_runtime150 = __toESM(require_jsx_runtime(), 1);
 var CSVExport = ({ onExport }) => {
   const { tracks: tracks2 } = use_analytics_default();
-  const downloadCSV = (0, import_element93.useCallback)(() => {
+  const downloadCSV = (0, import_element94.useCallback)(() => {
     tracks2.recordEvent("jetpack_forms_export_click", {
       destination: "csv",
       screen: "form-responses-inbox"
@@ -28619,8 +28652,8 @@ var csv_default = CSVExport;
 
 // src/dashboard/components/export-responses/google-drive.tsx
 var import_components73 = __toESM(require_components(), 1);
-var import_data32 = __toESM(require_data(), 1);
-var import_element94 = __toESM(require_element(), 1);
+var import_data33 = __toESM(require_data(), 1);
+var import_element95 = __toESM(require_element(), 1);
 var import_i18n82 = __toESM(require_i18n(), 1);
 
 // src/util/get-preferred-responses-view.js
@@ -28630,23 +28663,23 @@ var FULL_RESPONSES_PATH = getJetpackData()?.adminUrl + PARTIAL_RESPONSES_PATH;
 // src/dashboard/components/export-responses/google-drive.tsx
 var import_jsx_runtime151 = __toESM(require_jsx_runtime(), 1);
 var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
-  const [isExporting, setIsExporting] = (0, import_element94.useState)(false);
-  const { integration } = (0, import_data32.useSelect)((select3) => {
+  const [isExporting, setIsExporting] = (0, import_element95.useState)(false);
+  const { integration } = (0, import_data33.useSelect)((select3) => {
     const store5 = select3(INTEGRATIONS_STORE);
     const list = store5.getIntegrations() || [];
     return { integration: list.find((i2) => i2.id === "google-drive") };
   }, []);
-  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data32.useDispatch)(INTEGRATIONS_STORE);
+  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data33.useDispatch)(INTEGRATIONS_STORE);
   const isConnectedToGoogleDrive = !!integration?.isConnected;
   const gdriveConnectSupportURL = useConfigValue("gdriveConnectSupportURL");
   const { tracks: tracks2 } = use_analytics_default();
-  const autoConnectOpened = (0, import_element94.useRef)(false);
-  const [isTogglingConnection, setIsTogglingConnection] = (0, import_element94.useState)(false);
+  const autoConnectOpened = (0, import_element95.useRef)(false);
+  const [isTogglingConnection, setIsTogglingConnection] = (0, import_element95.useState)(false);
   const { isUserConnected, handleConnectUser, userIsConnecting: userIsConnecting2, isOfflineMode: isOfflineMode2 } = useConnection({
     redirectUri: PARTIAL_RESPONSES_PATH + "&connect-gdrive=true"
   });
   const needsUserConnection = !isSimpleSite() && !isUserConnected;
-  const exportToGoogleDrive = (0, import_element94.useCallback)(() => {
+  const exportToGoogleDrive = (0, import_element95.useCallback)(() => {
     if (isExporting) {
       return;
     }
@@ -28661,7 +28694,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
       setIsExporting(false);
     });
   }, [tracks2, onExport, isExporting]);
-  const handleConnectClick = (0, import_element94.useCallback)(() => {
+  const handleConnectClick = (0, import_element95.useCallback)(() => {
     if (!integration?.settingsUrl) return;
     tracks2.recordEvent("jetpack_forms_upsell_googledrive_click", {
       screen: "form-responses-inbox"
@@ -28777,7 +28810,7 @@ var ExportResponsesModal = ({
   onExport,
   autoConnectGdrive
 }) => {
-  const { integrations } = (0, import_data33.useSelect)((select3) => {
+  const { integrations } = (0, import_data34.useSelect)((select3) => {
     const store5 = select3(INTEGRATIONS_STORE);
     return {
       integrations: store5.getIntegrations() || []
@@ -28871,7 +28904,7 @@ function usePageHeaderDetails(props) {
   const {
     screen,
     sourceId,
-    formsCount,
+    hasClassicForms,
     isIntegrationsEnabled,
     showDashboardIntegrations,
     onOpenIntegrations,
@@ -28879,7 +28912,7 @@ function usePageHeaderDetails(props) {
   } = props;
   const adminUrl = useConfigValue("adminUrl") || "";
   const statusView = props.statusView ?? "inbox";
-  const sourceIdNumber = (0, import_element95.useMemo)(() => {
+  const sourceIdNumber = (0, import_element96.useMemo)(() => {
     const value = sourceId;
     const numberValue = typeof value === "number" ? value : Number(value);
     return Number.isFinite(numberValue) && numberValue > 0 ? numberValue : null;
@@ -28889,12 +28922,12 @@ function usePageHeaderDetails(props) {
   const isFormsScreen = screen === "forms";
   const isSingleFormScreen = screen === "responses" && sourceIdNumber !== null;
   const { openNewForm } = useCreateForm();
-  const [isCreateFormModalOpen, setIsCreateFormModalOpen] = (0, import_element95.useState)(false);
-  const handleCreateFormClick = (0, import_element95.useCallback)(() => {
+  const [isCreateFormModalOpen, setIsCreateFormModalOpen] = (0, import_element96.useState)(false);
+  const handleCreateFormClick = (0, import_element96.useCallback)(() => {
     setIsCreateFormModalOpen(true);
   }, []);
-  const closeCreateFormModal = (0, import_element95.useCallback)(() => setIsCreateFormModalOpen(false), []);
-  const handleCreateFormSave = (0, import_element95.useCallback)(
+  const closeCreateFormModal = (0, import_element96.useCallback)(() => setIsCreateFormModalOpen(false), []);
+  const handleCreateFormSave = (0, import_element96.useCallback)(
     async (formName) => {
       await openNewForm({ formTitle: formName });
     },
@@ -28912,18 +28945,18 @@ function usePageHeaderDetails(props) {
   const hasResponses = !isLoadingData && totalItems > 0;
   const emptySpam = useEmptySpam();
   const emptyTrash = useEmptyTrash();
-  const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element95.useState)(false);
-  const permanentDeleteItemRef = (0, import_element95.useRef)(null);
-  const [renameFormItem, setRenameFormItem] = (0, import_element95.useState)(
+  const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element96.useState)(false);
+  const permanentDeleteItemRef = (0, import_element96.useRef)(null);
+  const [renameFormItem, setRenameFormItem] = (0, import_element96.useState)(
     null
   );
-  const renameRetryRef = (0, import_element95.useRef)(
+  const renameRetryRef = (0, import_element96.useRef)(
     null
   );
-  const { saveEntityRecord, deleteEntityRecord } = (0, import_data34.useDispatch)(import_core_data6.store);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data34.useDispatch)(import_notices7.store);
-  const { invalidateFormStatusCounts: invalidateFormStatusCounts2 } = (0, import_data34.useDispatch)(store3);
-  const formRecord = (0, import_data34.useSelect)(
+  const { saveEntityRecord, deleteEntityRecord } = (0, import_data35.useDispatch)(import_core_data6.store);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data35.useDispatch)(import_notices7.store);
+  const { invalidateFormStatusCounts: invalidateFormStatusCounts2 } = (0, import_data35.useDispatch)(store3);
+  const formRecord = (0, import_data35.useSelect)(
     (select3) => {
       if (!sourceIdNumber) {
         return void 0;
@@ -28937,15 +28970,15 @@ function usePageHeaderDetails(props) {
     },
     [sourceIdNumber]
   );
-  const formTitle = (0, import_element95.useMemo)(() => {
+  const formTitle = (0, import_element96.useMemo)(() => {
     const rendered = formRecord?.title?.rendered || "";
     return (0, import_html_entities4.decodeEntities)(rendered);
   }, [formRecord?.title?.rendered]);
-  const closeRenameModal = (0, import_element95.useCallback)(() => {
+  const closeRenameModal = (0, import_element96.useCallback)(() => {
     setRenameFormItem(null);
     renameRetryRef.current = null;
   }, []);
-  const handleRename = (0, import_element95.useCallback)(
+  const handleRename = (0, import_element96.useCallback)(
     async (newTitle) => {
       if (!renameFormItem) {
         return;
@@ -28982,7 +29015,7 @@ function usePageHeaderDetails(props) {
     },
     [renameFormItem, saveEntityRecord, createSuccessNotice, createErrorNotice]
   );
-  const trashForm = (0, import_element95.useCallback)(
+  const trashForm = (0, import_element96.useCallback)(
     async (item) => {
       const previousStatus = formRecord?.status || "draft";
       try {
@@ -29037,7 +29070,7 @@ function usePageHeaderDetails(props) {
       navigate
     ]
   );
-  const restoreForm = (0, import_element95.useCallback)(
+  const restoreForm = (0, import_element96.useCallback)(
     async (item) => {
       try {
         await saveEntityRecord(
@@ -29059,15 +29092,15 @@ function usePageHeaderDetails(props) {
     },
     [saveEntityRecord, invalidateFormStatusCounts2, createSuccessNotice, createErrorNotice]
   );
-  const openPermanentDeleteConfirm = (0, import_element95.useCallback)((item) => {
+  const openPermanentDeleteConfirm = (0, import_element96.useCallback)((item) => {
     permanentDeleteItemRef.current = item;
     setIsPermanentDeleteConfirmOpen(true);
   }, []);
-  const closePermanentDeleteConfirm = (0, import_element95.useCallback)(() => {
+  const closePermanentDeleteConfirm = (0, import_element96.useCallback)(() => {
     setIsPermanentDeleteConfirmOpen(false);
     permanentDeleteItemRef.current = null;
   }, []);
-  const confirmPermanentDelete = (0, import_element95.useCallback)(async () => {
+  const confirmPermanentDelete = (0, import_element96.useCallback)(async () => {
     const item = permanentDeleteItemRef.current;
     if (!item) {
       return;
@@ -29102,7 +29135,7 @@ function usePageHeaderDetails(props) {
   ]);
   const formStatus = formRecord?.status;
   const statusLabel = formStatus ? getFormStatusLabel(formStatus) : void 0;
-  const badges = (0, import_element95.useMemo)(() => {
+  const badges = (0, import_element96.useMemo)(() => {
     if (!isSingleFormScreen || !formStatus || formStatus === "publish") {
       return void 0;
     }
@@ -29117,7 +29150,7 @@ function usePageHeaderDetails(props) {
     setFormsToDraft,
     isUpdatingStatus
   } = useFormItemActions();
-  const formItemControls = (0, import_element95.useMemo)(() => {
+  const formItemControls = (0, import_element96.useMemo)(() => {
     if (!sourceIdNumber) {
       return [];
     }
@@ -29205,19 +29238,19 @@ function usePageHeaderDetails(props) {
     /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
     children
   ] });
-  const ariaLabel = (0, import_element95.useMemo)(() => {
+  const ariaLabel = (0, import_element96.useMemo)(() => {
     if (isSingleFormScreen) {
       return formTitle || (0, import_i18n86.__)("Form responses", "jetpack-forms");
     }
     return "Jetpack Forms";
   }, [isSingleFormScreen, formTitle]);
-  const title = (0, import_element95.useMemo)(() => {
+  const title = (0, import_element96.useMemo)(() => {
     if (isSingleFormScreen) {
       return null;
     }
     return /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(WrapWithJetpackLogo, { children: "Forms" });
   }, [isSingleFormScreen]);
-  const breadcrumbs = (0, import_element95.useMemo)(() => {
+  const breadcrumbs = (0, import_element96.useMemo)(() => {
     if (!isSingleFormScreen) {
       return null;
     }
@@ -29231,15 +29264,14 @@ function usePageHeaderDetails(props) {
       }
     ) });
   }, [isSingleFormScreen, formTitle]);
-  const subtitle = (0, import_element95.useMemo)(() => {
+  const subtitle = (0, import_element96.useMemo)(() => {
     if (isFormsScreen) {
       const shortMessage = (0, import_i18n86.__)("View and manage all your forms.", "jetpack-forms");
       const longMessage = (0, import_i18n86.__)("View and manage all your forms in one place.", "jetpack-forms");
-      const shouldShowFormsHelpLink = !!onOpenFormsHelp && (typeof formsCount !== "number" || formsCount < 5);
-      return shouldShowFormsHelpLink ? /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(import_jsx_runtime155.Fragment, { children: [
+      return hasClassicForms ? /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(import_jsx_runtime155.Fragment, { children: [
         shortMessage,
         " ",
-        /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components77.Button, { variant: "link", onClick: onOpenFormsHelp, children: (0, import_i18n86.__)("Missing forms?", "jetpack-forms") })
+        /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components77.Button, { variant: "link", onClick: onOpenFormsHelp, children: (0, import_i18n86.__)("Not seeing all your forms?", "jetpack-forms") })
       ] }) : longMessage;
     }
     if (isSingleFormScreen) {
@@ -29253,8 +29285,8 @@ function usePageHeaderDetails(props) {
       return (0, import_i18n86.__)("View responses for this form.", "jetpack-forms");
     }
     return (0, import_i18n86.__)("View and manage all your form responses in one place.", "jetpack-forms");
-  }, [formTitle, isFormsScreen, isSingleFormScreen, onOpenFormsHelp, formsCount]);
-  const actions2 = (0, import_element95.useMemo)(() => {
+  }, [formTitle, isFormsScreen, isSingleFormScreen, onOpenFormsHelp, hasClassicForms]);
+  const actions2 = (0, import_element96.useMemo)(() => {
     if (isSm) {
       const dropdownControls = [];
       if (isFormsScreen) {
@@ -29605,38 +29637,39 @@ function StageInner() {
   const navigate = useNavigate4();
   const searchParams = useSearch2({ from: "/forms" });
   const dateSettings = (0, import_date10.getSettings)();
-  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element96.useState)(false);
-  const [isFormsHelpModalOpen, setIsFormsHelpModalOpen] = (0, import_element96.useState)(false);
-  const integrations = (0, import_data35.useSelect)(
+  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element97.useState)(false);
+  const [isFormsHelpModalOpen, setIsFormsHelpModalOpen] = (0, import_element97.useState)(false);
+  const integrations = (0, import_data36.useSelect)(
     (select3) => select3(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
   );
-  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data35.useDispatch)(INTEGRATIONS_STORE);
+  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data36.useDispatch)(INTEGRATIONS_STORE);
   const adminUrl = useConfigValue("adminUrl") || "";
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
-  const [view, setView] = (0, import_element96.useState)(() => ({
+  const hasClassicForms = useConfigValue("hasClassicForms");
+  const [view, setView] = (0, import_element97.useState)(() => ({
     ...DEFAULT_VIEW,
     search: searchParams?.search || ""
   }));
-  (0, import_element96.useEffect)(() => {
+  (0, import_element97.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
     if (urlSearch !== view.search) {
       setView((previous) => ({ ...previous, search: urlSearch }));
     }
   }, [searchParams?.search]);
-  const statusQuery = (0, import_element96.useMemo)(() => {
+  const statusQuery = (0, import_element97.useMemo)(() => {
     const statusFilterValue2 = view.filters?.find((filter) => filter.field === "status")?.value;
     if (!statusFilterValue2 || statusFilterValue2 === "all") {
       return NON_TRASH_FORM_STATUSES;
     }
     return statusFilterValue2;
   }, [view.filters]);
-  const isViewingTrash = (0, import_element96.useMemo)(() => {
+  const isViewingTrash = (0, import_element97.useMemo)(() => {
     const statusFilterValue2 = view.filters?.find((filter) => filter.field === "status")?.value;
     return statusFilterValue2 === "trash";
   }, [view.filters]);
-  const hasResponsesQuery = (0, import_element96.useMemo)(() => {
+  const hasResponsesQuery = (0, import_element97.useMemo)(() => {
     const entriesFilterValue = view.filters?.find((filter) => filter.field === "entries")?.value;
     if (entriesFilterValue === "has_responses") {
       return "true";
@@ -29677,27 +29710,27 @@ function StageInner() {
     recordsLength: records?.length ?? 0,
     statusQuery
   });
-  const [selection, setSelection] = (0, import_element96.useState)([]);
-  const [pendingPermanentDeleteCount, setPendingPermanentDeleteCount] = (0, import_element96.useState)(0);
-  const [renameFormItem, setRenameFormItem] = (0, import_element96.useState)(null);
-  const renameRetryRef = (0, import_element96.useRef)(null);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data35.useDispatch)(import_notices8.store);
-  const { saveEntityRecord } = (0, import_data35.useDispatch)(import_core_data7.store);
-  (0, import_element96.useEffect)(() => {
+  const [selection, setSelection] = (0, import_element97.useState)([]);
+  const [pendingPermanentDeleteCount, setPendingPermanentDeleteCount] = (0, import_element97.useState)(0);
+  const [renameFormItem, setRenameFormItem] = (0, import_element97.useState)(null);
+  const renameRetryRef = (0, import_element97.useRef)(null);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data36.useDispatch)(import_notices8.store);
+  const { saveEntityRecord } = (0, import_data36.useDispatch)(import_core_data7.store);
+  (0, import_element97.useEffect)(() => {
     setSelection([]);
   }, [view.page, view.perPage, view.search, view.filters]);
-  const onOpenPermanentDeleteConfirm = (0, import_element96.useCallback)(
+  const onOpenPermanentDeleteConfirm = (0, import_element97.useCallback)(
     (items) => {
       setPendingPermanentDeleteCount(items?.length ?? 0);
       openPermanentDeleteConfirm(items);
     },
     [openPermanentDeleteConfirm]
   );
-  const onClosePermanentDeleteConfirm = (0, import_element96.useCallback)(() => {
+  const onClosePermanentDeleteConfirm = (0, import_element97.useCallback)(() => {
     setPendingPermanentDeleteCount(0);
     closePermanentDeleteConfirm();
   }, [closePermanentDeleteConfirm]);
-  const onConfirmPermanentDelete = (0, import_element96.useCallback)(async () => {
+  const onConfirmPermanentDelete = (0, import_element97.useCallback)(async () => {
     setPendingPermanentDeleteCount(0);
     try {
       await confirmPermanentDelete();
@@ -29705,14 +29738,14 @@ function StageInner() {
       setSelection([]);
     }
   }, [confirmPermanentDelete]);
-  const openRenameModal = (0, import_element96.useCallback)((item) => {
+  const openRenameModal = (0, import_element97.useCallback)((item) => {
     setRenameFormItem(item);
   }, []);
-  const closeRenameModal = (0, import_element96.useCallback)(() => {
+  const closeRenameModal = (0, import_element97.useCallback)(() => {
     setRenameFormItem(null);
     renameRetryRef.current = null;
   }, []);
-  const handleRename = (0, import_element96.useCallback)(
+  const handleRename = (0, import_element97.useCallback)(
     async (newTitle) => {
       if (!renameFormItem) {
         return;
@@ -29749,7 +29782,7 @@ function StageInner() {
     },
     [renameFormItem, saveEntityRecord, createSuccessNotice, createErrorNotice]
   );
-  const fields = (0, import_element96.useMemo)(
+  const fields = (0, import_element97.useMemo)(
     () => [
       {
         id: "title",
@@ -29799,13 +29832,13 @@ function StageInner() {
     ],
     [dateSettings.formats.datetime, statusCounts]
   );
-  const openSingleFormView = (0, import_element96.useCallback)(
+  const openSingleFormView = (0, import_element97.useCallback)(
     (formId) => {
       navigate({ href: `/responses/inbox?sourceId=${encodeURIComponent(String(formId))}` });
     },
     [navigate]
   );
-  const actions2 = (0, import_element96.useMemo)(() => {
+  const actions2 = (0, import_element97.useMemo)(() => {
     const actionsList = [
       {
         id: "view-responses",
@@ -30019,14 +30052,14 @@ function StageInner() {
     view.perPage,
     view.search
   ]);
-  const paginationInfo = (0, import_element96.useMemo)(
+  const paginationInfo = (0, import_element97.useMemo)(
     () => ({
       totalItems: totalItems ?? 0,
       totalPages: totalPages ?? 0
     }),
     [totalItems, totalPages]
   );
-  const onChangeView = (0, import_element96.useCallback)(
+  const onChangeView = (0, import_element97.useCallback)(
     (newView) => {
       setView(newView);
       if (newView.search !== view.search) {
@@ -30040,16 +30073,16 @@ function StageInner() {
     },
     [navigate, searchParams, view.search]
   );
-  const openIntegrationsModal = (0, import_element96.useCallback)(() => {
+  const openIntegrationsModal = (0, import_element97.useCallback)(() => {
     setIsIntegrationsModalOpen(true);
   }, []);
-  const closeIntegrationsModal = (0, import_element96.useCallback)(() => {
+  const closeIntegrationsModal = (0, import_element97.useCallback)(() => {
     setIsIntegrationsModalOpen(false);
   }, []);
-  const openFormsHelpModal = (0, import_element96.useCallback)(() => {
+  const openFormsHelpModal = (0, import_element97.useCallback)(() => {
     setIsFormsHelpModalOpen(true);
   }, []);
-  const closeFormsHelpModal = (0, import_element96.useCallback)(() => {
+  const closeFormsHelpModal = (0, import_element97.useCallback)(() => {
     setIsFormsHelpModalOpen(false);
   }, []);
   const {
@@ -30060,7 +30093,7 @@ function StageInner() {
     actions: headerActions
   } = usePageHeaderDetails({
     screen: "forms",
-    formsCount: statusCounts.all,
+    hasClassicForms: !!hasClassicForms,
     isIntegrationsEnabled: !!isIntegrationsEnabled,
     showDashboardIntegrations: !!showDashboardIntegrations,
     onOpenIntegrations: openIntegrationsModal,
@@ -30068,8 +30101,8 @@ function StageInner() {
   });
   const statusFilterValue = view.filters?.find((filter) => filter.field === "status")?.value;
   const hasActiveFilters = !!view.search?.trim() || !!statusFilterValue && statusFilterValue !== "all";
-  const getItemId = (0, import_element96.useCallback)((item) => String(item.id), []);
-  const onClickItem = (0, import_element96.useCallback)(
+  const getItemId = (0, import_element97.useCallback)((item) => String(item.id), []);
+  const onClickItem = (0, import_element97.useCallback)(
     (item) => {
       openSingleFormView(item.id);
     },
@@ -30111,7 +30144,7 @@ function StageInner() {
                       showIcon: false
                     }
                   ),
-                  /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components78.Button, { size: "compact", variant: "secondary", onClick: openFormsHelpModal, children: (0, import_i18n87.__)("Missing forms?", "jetpack-forms") })
+                  hasClassicForms && /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components78.Button, { size: "compact", variant: "secondary", onClick: openFormsHelpModal, children: (0, import_i18n87.__)("Not seeing all your forms?", "jetpack-forms") })
                 ] })
               }
             ),

@@ -37218,7 +37218,7 @@ function usePageHeaderDetails(props) {
   const {
     screen,
     sourceId,
-    formsCount,
+    hasClassicForms,
     isIntegrationsEnabled,
     showDashboardIntegrations,
     onOpenIntegrations,
@@ -37582,11 +37582,10 @@ function usePageHeaderDetails(props) {
     if (isFormsScreen) {
       const shortMessage = (0, import_i18n86.__)("View and manage all your forms.", "jetpack-forms");
       const longMessage = (0, import_i18n86.__)("View and manage all your forms in one place.", "jetpack-forms");
-      const shouldShowFormsHelpLink = !!onOpenFormsHelp && (typeof formsCount !== "number" || formsCount < 5);
-      return shouldShowFormsHelpLink ? /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)(import_jsx_runtime163.Fragment, { children: [
+      return hasClassicForms ? /* @__PURE__ */ (0, import_jsx_runtime163.jsxs)(import_jsx_runtime163.Fragment, { children: [
         shortMessage,
         " ",
-        /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(import_components77.Button, { variant: "link", onClick: onOpenFormsHelp, children: (0, import_i18n86.__)("Missing forms?", "jetpack-forms") })
+        /* @__PURE__ */ (0, import_jsx_runtime163.jsx)(import_components77.Button, { variant: "link", onClick: onOpenFormsHelp, children: (0, import_i18n86.__)("Not seeing all your forms?", "jetpack-forms") })
       ] }) : longMessage;
     }
     if (isSingleFormScreen) {
@@ -37600,7 +37599,7 @@ function usePageHeaderDetails(props) {
       return (0, import_i18n86.__)("View responses for this form.", "jetpack-forms");
     }
     return (0, import_i18n86.__)("View and manage all your form responses in one place.", "jetpack-forms");
-  }, [formTitle, isFormsScreen, isSingleFormScreen, onOpenFormsHelp, formsCount]);
+  }, [formTitle, isFormsScreen, isSingleFormScreen, onOpenFormsHelp, hasClassicForms]);
   const actions2 = (0, import_element96.useMemo)(() => {
     if (isSm) {
       const dropdownControls = [];
