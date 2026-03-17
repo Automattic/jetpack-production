@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.13.0-alpha] - unreleased
+## [7.14.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -13,37 +13,45 @@ This is an alpha version! The changes listed here are not final.
 - Fix incomplete string sanitization in legacy classic editor form builder (esc_attr and newline replacement now escape all occurrences, not just the first).
 
 ### Added
-- Added a form name modal to the wp-build forms dashboard, prompting users to name their form before entering the editor.
-- Add per-status form counts REST endpoint and display counts in Forms dashboard status filters.
 - Add rename and trash actions to the single form dashboard dropdown menu, and reorder menu items.
-- Forms: add publish/unpublish actions.
 
 ### Changed
 - Dashboard: Restore trashed forms as draft instead of publish
-- Form Editor: Hide word count and reading time panel
-- Forms Dashboard: Remove modified date filter and add entries filter to filter forms by whether they have responses
-- Hide "Browse form patterns" button in the form placeholder when central form management is enabled
 - Remove the root route in favor of PHP redirect.
 - Send blog_lang and permalink to Akismet for improved spam detection on contact form submissions.
-- Update 'View form responses' button to link to the specific form's responses when the form has a ref.
-- Update dependencies.
 
 ### Removed
 - Remove dead grunion.js legacy form builder script that is no longer loaded or used.
 
 ### Fixed
 - Add polyfills for wp-build unbundled dependencies
-- Create synced form when inserting form variations via the block inserter.
-- Fix aria-label attribute by passing a string value to the Page component.
 - Fix design-tokens.css 404 error on the route-based dashboard by inlining CSS via Sass meta.load-css instead of using CSS @import.
-- Fix forms list entries count not updating after trashing responses
-- Fix HTML entities not being decoded in form title on pre-publish panel
-- Fix number field min and max values not displaying in the UI after page reload.
 - Gravatar hovercard: Add translation string for private profile error state.
-- Purge edge cache when a jetpack_form post is published, updated, or unpublished.
 - Remove unnecessary post_type parameter from form edit URLs that caused incorrect redirects.
 - Set duplicated form status to draft when the original form is published, preserving the original status otherwise.
-- Show 'No results found' empty state when search or filters are active in the forms list view instead of the onboarding empty state.
+
+## [7.13.0] - 2026-03-16
+### Added
+- Add entries filter to filter forms by whether they have responses. [#47523]
+- Add form name modal to the wp-build forms dashboard, prompting users to name their form before entering the editor. [#47395]
+- Add per-status form counts REST endpoint and display counts in Forms dashboard status filters. [#47475]
+- Forms: Add publish/unpublish actions. [#47325]
+
+### Changed
+- Editor: Hide word count and reading time panel. [#47528]
+- Dashboard: Remove modified date filter. [#47523]
+- Hide "Browse form patterns" button in the form placeholder when central form management is enabled. [#47527]
+- Update "View form responses" button to link to the specific form's responses when the form has a ref. [#47530]
+- Update dependencies. [#47472]
+
+### Fixed
+- Create synced form when inserting form variations via the block inserter. [#47335]
+- Ensure forms list entries count updates after trashing responses. [#47526]
+- Ensure HTML entities are decoded in form title on pre-publish panel. [#47531]
+- Ensure number field min and max values display in the UI after page reload. [#47511]
+- Fix aria-label attribute by passing a string value to the Page component. [#47481]
+- Purge edge cache when a jetpack_form post is published, updated, or unpublished. [#47532]
+- Show "No results found" empty state when search or filters are active in the forms list view instead of the onboarding empty state. [#47525]
 
 ## [7.12.0] - 2026-03-09
 ### Added
@@ -2354,7 +2362,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.13.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.12.0...v7.13.0-alpha
+[7.14.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.13.0...v7.14.0-alpha
+[7.13.0]: https://github.com/automattic/jetpack-forms/compare/v7.12.0...v7.13.0
 [7.12.0]: https://github.com/automattic/jetpack-forms/compare/v7.11.0...v7.12.0
 [7.11.0]: https://github.com/automattic/jetpack-forms/compare/v7.10.0...v7.11.0
 [7.10.0]: https://github.com/automattic/jetpack-forms/compare/v7.9.0...v7.10.0

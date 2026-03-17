@@ -5,24 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.1-alpha] - unreleased
+## [0.6.2-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Added
-- Add privacy information link to the newsletter settings section
-
 ### Changed
-- Fix inconsistent punctuation and casing on settings screen labels
-- Settings links: link to WordPress.com for WordPress.com sites (not just simple sites)
-- Update dependencies.
 - Update newsletter settings max width to 660px to match MSD and future settings pages
 
 ### Fixed
-- Add spacing below warning notice in Email content settings section
 - Fix i18n translator comment concatenation caused by dataviews function aliasing
-- Fix mobile alignment of Preview and edit links in Subscriptions settings
-- Fix module configure URL not pointing to the new newsletter settings page
+
+## [0.6.1] - 2026-03-16
+### Added
+- Settings: Add privacy information link. [#47587]
+
+### Changed
+- Settings: Fix inconsistent punctuation and casing on labels. [#47559]
+- Settings: Link to WordPress.com for all WordPress.com sites. [#47578]
+- Update dependencies. [#47472]
+
+### Fixed
+- Add spacing below warning notice in Email content settings section. [#47516]
+- Subscriptions: Fix mobile alignment of Preview and edit links in settings. [#47561]
+- Ensure module configure URL points to the new newsletter settings page. [#47584]
 
 ## [0.6.0] - 2026-03-09
 ### Added
@@ -120,7 +125,8 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.6.1-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.6.0...v0.6.1-alpha
+[0.6.2-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.6.1...v0.6.2-alpha
+[0.6.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.5.2...v0.6.0
 [0.5.2]: https://github.com/Automattic/jetpack-newsletter/compare/v0.5.1...v0.5.2
 [0.5.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.5.0...v0.5.1
