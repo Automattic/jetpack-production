@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Migrated the Settings page header and navigation to use the shared AdminPage component, replacing the legacy Masthead and Calypso SectionNav with a standardized layout matching other Jetpack admin pages.
 
 ### Bug fixes
+- AI Assistant: Fix modal shaking when content streams in by correcting header margins and making the header sticky.
 - Image Compare Block: Fix disappearing link toolbar when highlighting caption text to add a hyperlink.
 - Sync: Prevent incremental sync for posts with unregistered post types.
 
