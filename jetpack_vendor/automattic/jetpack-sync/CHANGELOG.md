@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Add wpcom_newsletter_send_default to sync options whitelist.
 
+### Fixed
+- Prevent incremental sync for posts with unregistered post types.
+
 ## [4.32.0] - 2026-03-09
 ### Added
 - `REST_Endpoints`: Add `use_memory_limit` argument to the checkout endpoint, enabling memory-based queue checkout that skips item count validation. [#47338]
