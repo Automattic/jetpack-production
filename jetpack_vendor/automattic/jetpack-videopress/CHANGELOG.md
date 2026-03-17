@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- VideoPress: auto-complete upload when user hasn't edited title or poster, and self-heal failed oEmbed cache.
+
 ## [0.35.4] - 2026-03-09
 ### Changed
 - Clean up REST API endpoint schemas to use proper JSON Schema types and constraints. [#47017]
