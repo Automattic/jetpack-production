@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Sync: Prevent incremental sync for posts with unregistered post types.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- API: Allow `is_garden` and `garden_name` fields to be returned by /me/sites requests by non-member users.
 - Application Passwords: allow authenticating VideoPress AJAX actions via application passwords.
 - Newsletter: Add Send newsletter by default toggle to settings.
 - Update disabled newsletter notice to have a better copy for private sites not set for coming soon.
