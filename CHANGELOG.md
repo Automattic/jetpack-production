@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Assistant: Fix modal shaking when content streams in by correcting header margins and making the header sticky.
 - Image Compare Block: Fix disappearing link toolbar when highlighting caption text to add a hyperlink.
+- Newsletter: Fix email sent confirmation to show 'all subscribers' when post had paywall block and was emailed to everyone.
 - Sync: Prevent incremental sync for posts with unregistered post types.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
