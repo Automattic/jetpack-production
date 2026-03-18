@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Application Passwords: allow authenticating VideoPress AJAX actions via application passwords.
 - Newsletter: Add Send newsletter by default toggle to settings.
 - Update disabled newsletter notice to have a better copy for private sites not set for coming soon.
+- Update subscribers affirmation copies for newsletters "will send to" message to better include access and categories both, and remove misrepresentative numbers.
 
 ## 15.7-a.3 - 2026-03-16
 ### Enhancements
