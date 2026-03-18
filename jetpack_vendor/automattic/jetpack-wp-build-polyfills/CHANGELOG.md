@@ -11,3 +11,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Created wp-build polyfills package
+
+### Changed
+- Update @wordpress/boot version
