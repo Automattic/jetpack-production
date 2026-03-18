@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Add Send newsletter by default toggle to Newsletter settings section.
 - Update newsletter settings max width to 660px to match MSD and future settings pages
 
 ### Fixed
