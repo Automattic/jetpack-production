@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a filter to customize the actor.
 - Instant Search: add article-type taxonomy for coolhunting.com.
+- Jetpack Sync: Add page_condition taxonomy to approved sync list.
 
 ### Changed
 - Sync: Improve checksum performance for meta tables by generalizing filter stripping to all parent tables and adding parent table count optimization to avoid expensive COUNT(DISTINCT) queries.
