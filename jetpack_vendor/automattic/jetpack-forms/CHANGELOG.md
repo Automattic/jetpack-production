@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix design-tokens.css 404 error on the route-based dashboard by inlining CSS via Sass meta.load-css instead of using CSS @import.
 - Fix header spacing for wp-build dashboard on mobile viewport
 - Force block editor for jetpack_form post type when Classic Editor plugin is active
+- Form Editor: Insert new blocks into the active step in multistep forms instead of the form root
 - Gravatar hovercard: Add translation string for private profile error state.
 - Remove unnecessary post_type parameter from form edit URLs that caused incorrect redirects.
 - Set duplicated form status to draft when the original form is published, preserving the original status otherwise.
