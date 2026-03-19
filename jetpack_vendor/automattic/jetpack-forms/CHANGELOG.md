@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Force block editor for jetpack_form post type when Classic Editor plugin is active
 - Form Editor: Insert new blocks into the active step in multistep forms instead of the form root
 - Gravatar hovercard: Add translation string for private profile error state.
+- Removes tabs from the wp-build dashboard when CFM is disabled
 - Remove unnecessary post_type parameter from form edit URLs that caused incorrect redirects.
 - Set duplicated form status to draft when the original form is published, preserving the original status otherwise.
 - Show distinct error message when user lacks permission to edit a form block vs when the form does not exist.

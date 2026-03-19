@@ -34970,6 +34970,7 @@ function DataViewsHeaderRow({
   onStatusChange
 }) {
   const navigate = useNavigate2();
+  const isCFMEnabled = useConfigValue("isCentralFormManagementEnabled");
   const { all: formsCount } = useFormStatusCounts();
   const responsesInboxCount = (0, import_data15.useSelect)((select3) => {
     select3(store3).getCounts({});
@@ -35002,7 +35003,7 @@ function DataViewsHeaderRow({
               onChange: onStatusChange ?? (() => {
               })
             }
-          ) : /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(tabs_exports.Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)(tabs_exports.List, { variant: "minimal", children: [
+          ) : isCFMEnabled && /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(tabs_exports.Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)(tabs_exports.List, { variant: "minimal", children: [
             /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(tabs_exports.Tab, { value: "forms", children: /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)("span", { children: [
               (0, import_i18n67.__)("Forms", "jetpack-forms"),
               /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(Badge3, { intent: "draft", className: "jp-forms-tabs-count", children: formatNumberCompact(formsCount || 0) })
