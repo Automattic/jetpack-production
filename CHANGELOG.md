@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add logged-in user display name and ID to form submission emails and response sidebar.
 - Google Search Preview: Fix site icon not being shown on some sites.
 - Migrated the Settings page header and navigation to use the shared AdminPage component, replacing the legacy Masthead and Calypso SectionNav with a standardized layout matching other Jetpack admin pages.
+- REST API: Add big_sky_enabled field to the site endpoint response.
 
 ### Bug fixes
 - AI Assistant: Fix modal shaking when content streams in by correcting header margins and making the header sticky.
