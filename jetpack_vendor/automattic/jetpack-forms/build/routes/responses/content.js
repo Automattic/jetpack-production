@@ -36896,6 +36896,10 @@ var import_element95 = __toESM(require_element(), 1);
 var import_i18n85 = __toESM(require_i18n(), 1);
 var import_notices5 = __toESM(require_notices(), 1);
 
+// src/blocks/shared/util/embed-codes.ts
+var getEmbedCode = (postId) => `<!-- wp:jetpack/contact-form {"ref":${postId}} /-->`;
+var getShortcode = (postId) => `[contact-form ref="${postId}"]`;
+
 // src/dashboard/hooks/use-forms-data.ts
 var import_core_data5 = __toESM(require_core_data(), 1);
 var import_element93 = __toESM(require_element(), 1);
@@ -37038,7 +37042,7 @@ function useFormItemActions() {
   }, []);
   const copyEmbed = (0, import_element95.useCallback)(
     async (item) => {
-      const embedCode = `<!-- wp:jetpack/contact-form {"ref":${item.id}} /-->`;
+      const embedCode = getEmbedCode(item.id);
       try {
         await navigator.clipboard.writeText(embedCode);
         createSuccessNotice((0, import_i18n85.__)("Embed code copied to clipboard.", "jetpack-forms"), {
@@ -37054,7 +37058,7 @@ function useFormItemActions() {
   );
   const copyShortcode = (0, import_element95.useCallback)(
     async (item) => {
-      const shortcode = `[contact-form ref="${item.id}"]`;
+      const shortcode = getShortcode(item.id);
       try {
         await navigator.clipboard.writeText(shortcode);
         createSuccessNotice((0, import_i18n85.__)("Shortcode copied to clipboard.", "jetpack-forms"), {
@@ -39702,7 +39706,11 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 
 // src/dashboard/components/copy-clipboard-button/index.tsx
 var import_jsx_runtime171 = __toESM(require_jsx_runtime(), 1);
-function CopyClipboardButton({ text }) {
+function CopyClipboardButton({
+  text,
+  copyMessage,
+  copiedMessage
+}) {
   const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element100.useState)(false);
   const timeoutIdRef = (0, import_element100.useRef)(null);
   const ref = (0, import_compose17.useCopyToClipboard)(text, () => {
@@ -39721,20 +39729,20 @@ function CopyClipboardButton({ text }) {
       }
     };
   }, []);
-  const copied = (0, import_i18n92.__)("Copied!", "jetpack-forms");
-  const copy = (0, import_i18n92.__)("Copy", "jetpack-forms");
-  const emailCopyLabel = showCopyConfirmation ? copied : copy;
-  return /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components83.Tooltip, { delay: 0, hideOnClick: false, text: emailCopyLabel, children: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
+  const copied = copiedMessage || (0, import_i18n92.__)("Copied!", "jetpack-forms");
+  const copy = copyMessage || (0, import_i18n92.__)("Copy", "jetpack-forms");
+  const label = showCopyConfirmation ? copied : copy;
+  return /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(import_components83.Tooltip, { delay: 0, hideOnClick: false, text: label, children: /* @__PURE__ */ (0, import_jsx_runtime171.jsx)(
     import_components83.Button,
     {
       className: "jp-forms__copy-clipboard-button",
       size: "small",
-      "aria-label": emailCopyLabel,
+      "aria-label": label,
       ref,
       icon: showCopyConfirmation ? check_default : copy_small_default,
       showTooltip: false
     }
-  ) });
+  ) }, label);
 }
 
 // src/dashboard/components/inspector/response-fields/field-email/style.scss

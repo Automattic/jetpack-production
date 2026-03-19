@@ -26622,6 +26622,10 @@ var import_element83 = __toESM(require_element(), 1);
 var import_i18n71 = __toESM(require_i18n(), 1);
 var import_notices4 = __toESM(require_notices(), 1);
 
+// src/blocks/shared/util/embed-codes.ts
+var getEmbedCode = (postId) => `<!-- wp:jetpack/contact-form {"ref":${postId}} /-->`;
+var getShortcode = (postId) => `[contact-form ref="${postId}"]`;
+
 // src/dashboard/wp-build/hooks/use-duplicate-form.ts
 var import_data17 = __toESM(require_data(), 1);
 var import_element82 = __toESM(require_element(), 1);
@@ -26741,7 +26745,7 @@ function useFormItemActions() {
   }, []);
   const copyEmbed = (0, import_element83.useCallback)(
     async (item) => {
-      const embedCode = `<!-- wp:jetpack/contact-form {"ref":${item.id}} /-->`;
+      const embedCode = getEmbedCode(item.id);
       try {
         await navigator.clipboard.writeText(embedCode);
         createSuccessNotice((0, import_i18n71.__)("Embed code copied to clipboard.", "jetpack-forms"), {
@@ -26757,7 +26761,7 @@ function useFormItemActions() {
   );
   const copyShortcode = (0, import_element83.useCallback)(
     async (item) => {
-      const shortcode = `[contact-form ref="${item.id}"]`;
+      const shortcode = getShortcode(item.id);
       try {
         await navigator.clipboard.writeText(shortcode);
         createSuccessNotice((0, import_i18n71.__)("Shortcode copied to clipboard.", "jetpack-forms"), {

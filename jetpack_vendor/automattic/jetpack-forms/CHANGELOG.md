@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add logged-in user display name and ID to form submission emails and response sidebar.
 - Add rename and trash actions to the single form dashboard dropdown menu, and reorder menu items.
+- Form Editor: Show a post-publish modal guiding users to add their form to a page.
 
 ### Changed
 - Clean up old png files.
