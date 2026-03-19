@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove greeting text from form response notification emails.
 - Remove the root route in favor of PHP redirect.
 - Send blog_lang and permalink to Akismet for improved spam detection on contact form submissions.
+- Update package dependencies.
 
 ### Removed
 - Remove dead grunion.js legacy form builder script that is no longer loaded or used.
