@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Image Compare Block: Fix disappearing link toolbar when highlighting caption text to add a hyperlink.
 - Newsletter: Fix email sent confirmation to show 'all subscribers' when post had paywall block and was emailed to everyone.
 - Sync: Prevent incremental sync for posts with unregistered post types.
+- WAF: Fix issue that potentially allowed bypassing WAF rules.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - API: Allow `is_garden` and `garden_name` fields to be returned by /me/sites requests by non-member users.
