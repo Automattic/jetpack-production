@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - API: Allow `is_garden` and `garden_name` fields to be returned by /me/sites requests by non-member users.
 - Application Passwords: allow authenticating VideoPress AJAX actions via application passwords.
 - Enable Image Studio for Big Sky and CIAB sites, regardless of Jetpack AI enabled status.
+- Improve string output handling.
 - Newsletter: Add Send newsletter by default toggle to settings.
 - Social: Remove post publish review prompt.
 - Sync: add unit test.
