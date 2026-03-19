@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.56.5-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Search: Update header action buttons to use compact size for consistent UI.
+
 ## [0.56.4] - 2026-03-16
 ### Changed
 - Update dependencies. [#47472]
@@ -1472,6 +1479,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
+[0.56.5-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.56.4...v0.56.5-alpha
 [0.56.4]: https://github.com/Automattic/jetpack-search/compare/v0.56.3...v0.56.4
 [0.56.3]: https://github.com/Automattic/jetpack-search/compare/v0.56.2...v0.56.3
 [0.56.2]: https://github.com/Automattic/jetpack-search/compare/v0.56.1...v0.56.2

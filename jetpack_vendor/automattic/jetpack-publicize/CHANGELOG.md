@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Google Search Preview: Wire up site icon to display the actual site favicon in the link preview.
 
+### Changed
+- Publicize: Update header action buttons to use compact size for consistent UI.
+
 ### Removed
 - Remove post publish review prompt.
 
