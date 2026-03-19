@@ -33189,7 +33189,8 @@ var EmptyResponses = ({
         CreateFormButton,
         {
           label: (0, import_i18n63.__)("Create a new form", "jetpack-forms"),
-          variant: "primary"
+          variant: "primary",
+          showNameModal: true
         }
       )
     }

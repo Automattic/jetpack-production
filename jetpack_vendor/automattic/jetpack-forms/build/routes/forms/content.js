@@ -30137,7 +30137,7 @@ function StageInner() {
               {
                 heading: (0, import_i18n87.__)("You're set up. No forms yet.", "jetpack-forms"),
                 body: (0, import_i18n87.__)(
-                  "Create a shared form pattern to manage and reuse it across your site.",
+                  "Create a form to manage and reuse it across your site.",
                   "jetpack-forms"
                 ),
                 actions: /* @__PURE__ */ (0, import_jsx_runtime156.jsxs)(import_components78.__experimentalHStack, { justify: "center", spacing: "2", children: [
@@ -30146,7 +30146,7 @@ function StageInner() {
                     {
                       label: (0, import_i18n87.__)("Create a new form", "jetpack-forms"),
                       variant: "primary",
-                      showIcon: false
+                      showNameModal: true
                     }
                   ),
                   hasClassicForms && /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components78.Button, { size: "compact", variant: "secondary", onClick: openFormsHelpModal, children: (0, import_i18n87.__)("Not seeing all your forms?", "jetpack-forms") })
