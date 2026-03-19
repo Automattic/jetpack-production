@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Assistant: Fix modal shaking when content streams in by correcting header margins and making the header sticky.
 - Image Compare Block: Fix disappearing link toolbar when highlighting caption text to add a hyperlink.
+- Map block: fix markers displaying as bullet points on Simple sites by moving data to inline JS and hiding fallback list via CSS.
 - Newsletter: Fix email sent confirmation to show 'all subscribers' when post had paywall block and was emailed to everyone.
 - Sync: Prevent incremental sync for posts with unregistered post types.
 - WAF: Fix issue that potentially allowed bypassing WAF rules.
