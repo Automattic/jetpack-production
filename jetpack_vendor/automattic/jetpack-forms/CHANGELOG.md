@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Add polyfills for wp-build unbundled dependencies
+- Fix blocks disappearing after navigating back from form editor when page has multiple form blocks.
 - Fix default wp-build dashboard URL to point to /responses/inbox instead of / which caused a 404
 - Fix design-tokens.css 404 error on the route-based dashboard by inlining CSS via Sass meta.load-css instead of using CSS @import.
 - Fix header spacing for wp-build dashboard on mobile viewport
