@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Google Search Preview: Wire up site icon to display the actual site favicon in the link preview.
 
+### Removed
+- Remove post publish review prompt.
+
 ## [0.74.0] - 2026-03-16
 ### Added
 - Add support for X connection. [#47538]

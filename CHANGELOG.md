@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Application Passwords: allow authenticating VideoPress AJAX actions via application passwords.
 - Enable Image Studio for Big Sky and CIAB sites, regardless of Jetpack AI enabled status.
 - Newsletter: Add Send newsletter by default toggle to settings.
+- Social: Remove post publish review prompt.
 - Sync: Improve checksum performance for meta tables.
 - Update disabled newsletter notice to have a better copy for private sites not set for coming soon.
 - Update subscribers affirmation copies for newsletters "will send to" message to better include access and categories both, and remove misrepresentative numbers.
