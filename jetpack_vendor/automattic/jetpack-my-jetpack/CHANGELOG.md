@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Display MCP client actor attribution in My Jetpack backup card
 
+### Fixed
+- Move admin notices and JITMs below the tab bar instead of rendering inside the page header.
+
 ## [5.32.0] - 2026-03-16
 ### Added
 - Add Canonical URLs module to the Growth section in My Jetpack. [#47364]

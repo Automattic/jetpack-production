@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Search: Update header action buttons to use compact size for consistent UI.
 
+### Fixed
+- Move admin notices and JITMs below the page header instead of rendering inside it.
+
 ## [0.56.4] - 2026-03-16
 ### Changed
 - Update dependencies. [#47472]

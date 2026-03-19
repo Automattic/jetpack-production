@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Remove post publish review prompt.
 
+### Fixed
+- Move admin notices and JITMs below the page header instead of rendering inside it.
+
 ## [0.74.0] - 2026-03-16
 ### Added
 - Add support for X connection. [#47538]
