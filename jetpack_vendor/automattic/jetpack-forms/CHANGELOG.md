@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Dashboard: Improve "Missing forms?" empty state for new users by removing it from the empty state and updating the subtitle copy to "Not seeing all your forms?" shown only when the user has existing forms.
 - Dashboard: Restore trashed forms as draft instead of publish
+- Remove greeting text from form response notification emails.
 - Remove the root route in favor of PHP redirect.
 - Send blog_lang and permalink to Akismet for improved spam detection on contact form submissions.
 
