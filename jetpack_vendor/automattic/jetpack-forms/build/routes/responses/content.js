@@ -40512,6 +40512,12 @@ var ResponseMeta = ({ response }) => {
   const defaultImage = response.author_name || response.author_email ? "initials" : "mp";
   const responseAuthorEmailParts = response.author_email?.split("@") ?? [];
   const dateSettings = (0, import_date12.getSettings)();
+  const loggedInUser = response?.logged_in_user?.id ? response.logged_in_user : null;
+  const loggedInUserName = loggedInUser?.display_name || loggedInUser?.username || null;
+  let loggedInUserDisplay = null;
+  if (loggedInUser) {
+    loggedInUserDisplay = loggedInUserName ? `${loggedInUserName} (#${loggedInUser.id})` : `#${loggedInUser.id}`;
+  }
   return /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)("div", { className: "jp-forms__inbox-response-meta", children: [
     /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)(import_components90.__experimentalHStack, { alignment: "topLeft", spacing: "3", wrap: false, children: [
       /* @__PURE__ */ (0, import_jsx_runtime195.jsx)(
@@ -40597,6 +40603,13 @@ var ResponseMeta = ({ response }) => {
           "\xA0"
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime195.jsx)("td", { children: response.browser })
+      ] }),
+      loggedInUserDisplay && /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)("tr", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime195.jsxs)("th", { children: [
+          (0, import_i18n95.__)("Logged-in user:", "jetpack-forms"),
+          "\xA0"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime195.jsx)("td", { children: loggedInUserDisplay })
       ] })
     ] }) })
   ] });

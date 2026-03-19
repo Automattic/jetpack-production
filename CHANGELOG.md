@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Display MCP client actor on backup undo card and backup card attribution
+- Forms: Add logged-in user display name and ID to form submission emails and response sidebar.
 - Google Search Preview: Fix site icon not being shown on some sites.
 - Migrated the Settings page header and navigation to use the shared AdminPage component, replacing the legacy Masthead and Calypso SectionNav with a standardized layout matching other Jetpack admin pages.
 

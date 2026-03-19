@@ -13,9 +13,11 @@ This is an alpha version! The changes listed here are not final.
 - Fix incomplete string sanitization in legacy classic editor form builder (esc_attr and newline replacement now escape all occurrences, not just the first).
 
 ### Added
+- Add logged-in user display name and ID to form submission emails and response sidebar.
 - Add rename and trash actions to the single form dashboard dropdown menu, and reorder menu items.
 
 ### Changed
+- Clean up old png files.
 - Dashboard: Improve "Missing forms?" empty state for new users by removing it from the empty state and updating the subtitle copy to "Not seeing all your forms?" shown only when the user has existing forms.
 - Dashboard: Restore trashed forms as draft instead of publish
 - Remove greeting text from form response notification emails.
