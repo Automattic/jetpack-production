@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Instant Search: add article-type taxonomy for coolhunting.com.
 
+### Changed
+- Sync: Improve checksum performance for meta tables by generalizing filter stripping to all parent tables and adding parent table count optimization to avoid expensive COUNT(DISTINCT) queries.
+
 ### Fixed
 - Prevent incremental sync for posts with unregistered post types.
 
