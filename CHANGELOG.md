@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Google Search Preview: Fix site icon not being shown on some sites.
 - Migrated the Settings page header and navigation to use the shared AdminPage component, replacing the legacy Masthead and Calypso SectionNav with a standardized layout matching other Jetpack admin pages.
 - REST API: Add big_sky_enabled field to the site endpoint response.
+- Settings: modernize settings page UI using @wordpress/components Card and constrain content to 660px max-width.
 
 ### Bug fixes
 - AI Assistant: Fix modal shaking when content streams in by correcting header margins and making the header sticky.
