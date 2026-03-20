@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove dead grunion.js legacy form builder script that is no longer loaded or used.
 
 ### Fixed
+- Add padding to the form editor visual editor area
 - Add polyfills for wp-build unbundled dependencies
 - Fix blocks disappearing after navigating back from form editor when page has multiple form blocks.
 - Fix default wp-build dashboard URL to point to /responses/inbox instead of / which caused a 404
