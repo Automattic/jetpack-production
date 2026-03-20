@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: modernize settings page UI using @wordpress/components Card and constrain content to 660px max-width.
 
 ### Bug fixes
+- Add memberships_gift_is_sandboxed to the Jetpack sync post meta whitelist so gifting works on self-hosted Jetpack sites
 - AI Assistant: Fix modal shaking when content streams in by correcting header margins and making the header sticky.
 - Comments: Remove resource hints for outdated gravatar domains and use secure.gravatar.com instead.
 - Image Compare Block: Fix disappearing link toolbar when highlighting caption text to add a hyperlink.
