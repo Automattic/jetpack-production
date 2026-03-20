@@ -15,3 +15,6 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update @wordpress/boot version
 - Update package dependencies.
+
+### Fixed
+- Add @wordpress/ui to devDependencies so the boot module bundles it instead of externalizing it as an unregistered wp-ui script handle, which caused a blank page at runtime.
