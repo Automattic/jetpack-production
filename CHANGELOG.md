@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Sync: add unit test.
 - Sync: Improve checksum performance for meta tables.
 - Update disabled newsletter notice to have a better copy for private sites not set for coming soon.
+- Update package dependencies.
 - Update subscribers affirmation copies for newsletters "will send to" message to better include access and categories both, and remove misrepresentative numbers.
 
 ## 15.7-a.3 - 2026-03-16

@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Publicize: Update header action buttons to use compact size for consistent UI.
+- Update package dependencies.
 
 ### Removed
 - Remove post publish review prompt.

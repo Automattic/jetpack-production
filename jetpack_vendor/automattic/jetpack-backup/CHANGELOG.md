@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Backup: Update header action buttons to use compact size for consistent UI.
+- Update package dependencies.
 
 ## [4.2.46] - 2026-03-16
 ### Changed

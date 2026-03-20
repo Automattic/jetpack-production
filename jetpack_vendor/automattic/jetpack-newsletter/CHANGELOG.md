@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Add Send newsletter by default toggle to Newsletter settings section.
 - Update newsletter settings max width to 660px to match MSD and future settings pages
+- Update package dependencies.
 
 ### Fixed
 - Fix i18n translator comment concatenation caused by dataviews function aliasing

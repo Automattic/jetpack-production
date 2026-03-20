@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Display MCP client actor attribution in My Jetpack backup card
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Move admin notices and JITMs below the tab bar instead of rendering inside the page header.
 
