@@ -50,7 +50,7 @@
 		"automattic/jetpack-roles": "^3.0.8",
 		"automattic/jetpack-search": "^0.56.5-alpha",
 		"automattic/jetpack-stats": "^0.18.1",
-		"automattic/jetpack-stats-admin": "^0.30.8",
+		"automattic/jetpack-stats-admin": "^0.30.9-alpha",
 		"automattic/jetpack-status": "^6.1.2",
 		"automattic/jetpack-subscribers-dashboard": "^0.4.22",
 		"automattic/jetpack-sync": "^4.33.0-alpha",
