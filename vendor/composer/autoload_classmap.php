@@ -288,6 +288,7 @@ return array(
     'Automattic\\Jetpack\\Publicize\\REST_API\\Share_Post_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-share-post-controller.php',
     'Automattic\\Jetpack\\Publicize\\REST_API\\Share_Status_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-share-status-controller.php',
     'Automattic\\Jetpack\\Publicize\\REST_API\\Social_Image_Generator_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-social-image-generator-controller.php',
+    'Automattic\\Jetpack\\Publicize\\REST_API\\X_Usage_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-x-usage-controller.php',
     'Automattic\\Jetpack\\Publicize\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-rest-controller.php',
     'Automattic\\Jetpack\\Publicize\\Services' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-services.php',
     'Automattic\\Jetpack\\Publicize\\Share_Status' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-share-status.php',
