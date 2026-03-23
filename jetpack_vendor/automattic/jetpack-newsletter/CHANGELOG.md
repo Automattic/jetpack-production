@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix i18n translator comment concatenation caused by dataviews function aliasing
+- Move admin notices and JITMs below the page header instead of rendering inside it
 
 ## [0.6.1] - 2026-03-16
 ### Added
