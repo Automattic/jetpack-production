@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Sync: Add page_condition taxonomy to approved sync list.
 
 ### Changed
+- Reduce debug_backtrace overhead in Users sync module: use DEBUG_BACKTRACE_IGNORE_ARGS, consolidate backtrace calls, and remove get_reassigned_network_user_id() in favor of the $reassign hook parameter available since WP 5.4.
 - Sync: Improve checksum performance for meta tables by generalizing filter stripping to all parent tables and adding parent table count optimization to avoid expensive COUNT(DISTINCT) queries.
 
 ### Fixed
