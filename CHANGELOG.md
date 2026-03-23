@@ -2,41 +2,41 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.7-a.4 - unreleased
+## 15.7-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## 15.7-a.5 - 2026-03-23
 ### Enhancements
-- Display MCP client actor on backup undo card and backup card attribution
-- Forms: Add logged-in user display name and ID to form submission emails and response sidebar.
-- Google Search Preview: Fix site icon not being shown on some sites.
-- Migrated the Settings page header and navigation to use the shared AdminPage component, replacing the legacy Masthead and Calypso SectionNav with a standardized layout matching other Jetpack admin pages.
-- REST API: Add big_sky_enabled field to the site endpoint response.
-- Settings: modernize settings page UI using @wordpress/components Card and constrain content to 660px max-width.
+- Forms: Add logged-in user display name and ID to form submission emails and response sidebar. [#47652]
+- Newsletter: Add "Send newsletter by default" toggle to settings. [#47565]
+- Settings: Modernize page UI. [#47490] [#47656]
+- Sync: Improve checksum performance for meta tables. [#47579]
 
 ### Bug fixes
-- Add memberships_gift_is_sandboxed to the Jetpack sync post meta whitelist so gifting works on self-hosted Jetpack sites
-- AI Assistant: Fix modal shaking when content streams in by correcting header margins and making the header sticky.
-- Comments: Remove resource hints for outdated gravatar domains and use secure.gravatar.com instead.
-- Image Compare Block: Fix disappearing link toolbar when highlighting caption text to add a hyperlink.
-- Map block: fix markers displaying as bullet points on Simple sites by moving data to inline JS and hiding fallback list via CSS.
-- Newsletter: Fix email sent confirmation to show 'all subscribers' when post had paywall block and was emailed to everyone.
-- Sync: Prevent incremental sync for posts with unregistered post types.
-- WAF: Fix issue that potentially allowed bypassing WAF rules.
+- AI Assistant: Prevent modal shaking from when content streams in. [#47616]
+- Comments: Remove resource hints for outdated gravatar domains and use secure.gravatar.com instead. [#47695]
+- Google Search Preview: Ensure site icon is shown on all sites. [#47551]
+- Image Compare Block: Fix disappearing link toolbar when highlighting caption text to add a hyperlink. [#47197]
+- Map block: Fix markers displaying as bullet points on Simple sites. [#47586]
+- Newsletter: Fix "email sent" confirmation to show "all subscribers" when post had paywall block and was emailed to everyone. [#47629]
+- Sync: Prevent incremental sync for posts with unregistered post types. [#47580]
+- WAF: Fix issue that potentially allowed bypassing WAF rules. [#47692]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- API: Allow `is_garden` and `garden_name` fields to be returned by /me/sites requests by non-member users.
-- Application Passwords: allow authenticating VideoPress AJAX actions via application passwords.
-- Enable Image Studio for Big Sky and CIAB sites, regardless of Jetpack AI enabled status.
-- Improve string output handling.
-- Newsletter: Add Send newsletter by default toggle to settings.
-- Social: Remove post publish review prompt.
-- Sync: add unit test.
-- Sync: Improve checksum performance for meta tables.
-- Update disabled newsletter notice to have a better copy for private sites not set for coming soon.
-- Update package dependencies.
-- Update subscribers affirmation copies for newsletters "will send to" message to better include access and categories both, and remove misrepresentative numbers.
-- Update sync user test assertion to expect 0 instead of false for reassigned user ID, matching the $reassign hook parameter now used directly.
+- Add memberships_gift_is_sandboxed to the Jetpack sync post meta whitelist so gifting works on self-hosted Jetpack sites. [#47715]
+- API: Allow `is_garden` and `garden_name` fields to be returned by /me/sites requests by non-member users. [#47211]
+- Application Passwords: Allow authenticating VideoPress AJAX actions via application passwords. [#45220]
+- Display MCP client actor on backup undo card and backup card attribution. [#47429]
+- Enable Image Studio for Big Sky and CIAB sites regardless of Jetpack AI enabled status. [#47572]
+- Improve disabled newsletter notice copy for private sites not set for coming soon. [#47583]
+- Improve string output handling. [#47636]
+- REST API: Add big_sky_enabled field to the site endpoint response. [#47690]
+- Social: Remove post publish review prompt. [#47650]
+- Sync: Add unit test. [#47634]
+- Update package dependencies. [#47684]
+- Update subscribers affirmation copies for newsletters "will send to" message to better include access and categories both, and remove misrepresentative numbers. [#47605]
+- Update sync user test assertion to expect 0 instead of false for reassigned user ID, matching the $reassign hook parameter now used directly. [#47658]
 
 ## 15.7-a.3 - 2026-03-16
 ### Enhancements
