@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Update header action buttons to use compact size for consistent UI.
 - Update package dependencies.
 
+### Fixed
+- Fix progress animation overlapping the page header by clipping animation overflow.
+
 ## [4.2.46] - 2026-03-16
 ### Changed
 - Update dependencies. [#47472]
