@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.30.9-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 0.30.9 - 2026-03-23
 ### Fixed
-- Hide stats column for non-public post types in the WP Admin post list.
+- Hide stats column for non-public post types in the WP Admin post list. [#47704]
 
 ## 0.30.8 - 2026-02-26
 ### Changed
