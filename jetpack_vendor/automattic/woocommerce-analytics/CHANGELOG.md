@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Disable batched analytics requests when a SOCKS proxy is configured, falling back to wp_remote_get() which respects WP_PROXY_* settings.
+
 ## [0.16.0] - 2026-03-16
 ### Changed
 - Handle proxy requests at MU-plugin stage and exit early for faster response time. [#46757]
