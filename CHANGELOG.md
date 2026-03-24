@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Bug fixes
+- Forms: Remove duplicate display of form blocks under the "Jetpack" block inserter section; form blocks now only appear under the "Forms" category.
+
 ## 15.7-a.5 - 2026-03-23
 ### Enhancements
 - Forms: Add logged-in user display name and ID to form submission emails and response sidebar. [#47652]
