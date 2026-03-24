@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update DataViews dependency.
 
+### Removed
+- Remove unused components.
+
 ## [0.75.0] - 2026-03-23
 ### Added
 - Google Search Preview: Wire up site icon to display the actual site favicon in the link preview. [#47551]
