@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update DataViews dependency.
 
+### Fixed
+- Suppress backup failure and scan threat notifications on multisite installations where these products are not supported.
+
 ## [5.33.0] - 2026-03-23
 ### Added
 - Display MCP client actor attribution in My Jetpack backup card. [#47429]
