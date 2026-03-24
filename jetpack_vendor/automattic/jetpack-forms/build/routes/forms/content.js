@@ -34,13 +34,6 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 
-// package-external:@wordpress/date
-var require_date = __commonJS({
-  "package-external:@wordpress/date"(exports, module) {
-    module.exports = window.wp.date;
-  }
-});
-
 // ../../../node_modules/.pnpm/ms@2.1.3/node_modules/ms/index.js
 var require_ms = __commonJS({
   "../../../node_modules/.pnpm/ms@2.1.3/node_modules/ms/index.js"(exports, module) {
@@ -501,6 +494,13 @@ var require_browser = __commonJS({
         return "[UnexpectedJSONParseError]: " + error2.message;
       }
     };
+  }
+});
+
+// package-external:@wordpress/date
+var require_date = __commonJS({
+  "package-external:@wordpress/date"(exports, module) {
+    module.exports = window.wp.date;
   }
 });
 
@@ -3625,6 +3625,212 @@ var require_dom_ready = __commonJS({
   }
 });
 
+// ../../js-packages/analytics/index.jsx
+var import_debug = __toESM(require_browser(), 1);
+var debug = (0, import_debug.default)("dops:analytics");
+var _superProps;
+var _user;
+window._tkq = window._tkq || [];
+window.ga = window.ga || function() {
+  (window.ga.q = window.ga.q || []).push(arguments);
+};
+window.ga.l = +/* @__PURE__ */ new Date();
+function buildQuerystring(group, name) {
+  let uriComponent = "";
+  if ("object" === typeof group) {
+    for (const key in group) {
+      uriComponent += "&x_" + encodeURIComponent(key) + "=" + encodeURIComponent(group[key]);
+    }
+    debug("Bumping stats %o", group);
+  } else {
+    uriComponent = "&x_" + encodeURIComponent(group) + "=" + encodeURIComponent(name);
+    debug('Bumping stat "%s" in group "%s"', name, group);
+  }
+  return uriComponent;
+}
+function buildQuerystringNoPrefix(group, name) {
+  let uriComponent = "";
+  if ("object" === typeof group) {
+    for (const key in group) {
+      uriComponent += "&" + encodeURIComponent(key) + "=" + encodeURIComponent(group[key]);
+    }
+    debug("Built stats %o", group);
+  } else {
+    uriComponent = "&" + encodeURIComponent(group) + "=" + encodeURIComponent(name);
+    debug('Built stat "%s" in group "%s"', name, group);
+  }
+  return uriComponent;
+}
+var analytics = {
+  initialize: function(userId, username, superProps) {
+    analytics.setUser(userId, username);
+    analytics.setSuperProps(superProps);
+    analytics.identifyUser();
+  },
+  setGoogleAnalyticsEnabled: function(googleAnalyticsEnabled, googleAnalyticsKey = null) {
+    this.googleAnalyticsEnabled = googleAnalyticsEnabled;
+    this.googleAnalyticsKey = googleAnalyticsKey;
+  },
+  setMcAnalyticsEnabled: function(mcAnalyticsEnabled) {
+    this.mcAnalyticsEnabled = mcAnalyticsEnabled;
+  },
+  setUser: function(userId, username) {
+    _user = { ID: userId, username };
+  },
+  setSuperProps: function(superProps) {
+    _superProps = superProps;
+  },
+  /**
+   * Add global properties to be applied to all "tracks" events.
+   * This function will add the new properties, overwrite the existing one.
+   * Unlike `setSuperProps()`, it will not replace the whole object.
+   *
+   * @param {object} props - Super props to add.
+   */
+  assignSuperProps: function(props) {
+    _superProps = Object.assign(_superProps || {}, props);
+  },
+  mc: {
+    bumpStat: function(group, name) {
+      const uriComponent = buildQuerystring(group, name);
+      if (analytics.mcAnalyticsEnabled) {
+        new Image().src = document.location.protocol + "//pixel.wp.com/g.gif?v=wpcom-no-pv" + uriComponent + "&t=" + Math.random();
+      }
+    },
+    bumpStatWithPageView: function(group, name) {
+      const uriComponent = buildQuerystringNoPrefix(group, name);
+      if (analytics.mcAnalyticsEnabled) {
+        new Image().src = document.location.protocol + "//pixel.wp.com/g.gif?v=wpcom" + uriComponent + "&t=" + Math.random();
+      }
+    }
+  },
+  // pageView is a wrapper for pageview events across Tracks and GA
+  pageView: {
+    record: function(urlPath, pageTitle) {
+      analytics.tracks.recordPageView(urlPath);
+      analytics.ga.recordPageView(urlPath, pageTitle);
+    }
+  },
+  purchase: {
+    record: function(transactionId, itemName, itemId, revenue, price, qty, currency) {
+      analytics.ga.recordPurchase(transactionId, itemName, itemId, revenue, price, qty, currency);
+    }
+  },
+  tracks: {
+    recordEvent: function(eventName, eventProperties) {
+      eventProperties = eventProperties || {};
+      if (eventName.indexOf("akismet_") !== 0 && eventName.indexOf("jetpack_") !== 0) {
+        debug('- Event name must be prefixed by "akismet_" or "jetpack_"');
+        return;
+      }
+      if (_superProps) {
+        debug("- Super Props: %o", _superProps);
+        eventProperties = Object.assign(eventProperties, _superProps);
+      }
+      debug(
+        'Record event "%s" called with props %s',
+        eventName,
+        JSON.stringify(eventProperties)
+      );
+      window._tkq.push(["recordEvent", eventName, eventProperties]);
+    },
+    recordJetpackClick: function(target) {
+      const props = "object" === typeof target ? target : { target };
+      analytics.tracks.recordEvent("jetpack_wpa_click", props);
+    },
+    recordPageView: function(urlPath) {
+      analytics.tracks.recordEvent("akismet_page_view", {
+        path: urlPath
+      });
+    },
+    setOptOut: function(isOptingOut) {
+      debug("Pushing setOptOut: %o", isOptingOut);
+      window._tkq.push(["setOptOut", isOptingOut]);
+    }
+  },
+  // Google Analytics usage and event stat tracking
+  ga: {
+    initialized: false,
+    initialize: function() {
+      let parameters = {};
+      if (!analytics.ga.initialized) {
+        if (_user) {
+          parameters = {
+            userId: "u-" + _user.ID
+          };
+        }
+        window.ga("create", this.googleAnalyticsKey, "auto", parameters);
+        analytics.ga.initialized = true;
+      }
+    },
+    recordPageView: function(urlPath, pageTitle) {
+      analytics.ga.initialize();
+      debug("Recording Page View ~ [URL: " + urlPath + "] [Title: " + pageTitle + "]");
+      if (this.googleAnalyticsEnabled) {
+        window.ga("set", "page", urlPath);
+        window.ga("send", {
+          hitType: "pageview",
+          page: urlPath,
+          title: pageTitle
+        });
+      }
+    },
+    recordEvent: function(category, action, label, value) {
+      analytics.ga.initialize();
+      let debugText = "Recording Event ~ [Category: " + category + "] [Action: " + action + "]";
+      if ("undefined" !== typeof label) {
+        debugText += " [Option Label: " + label + "]";
+      }
+      if ("undefined" !== typeof value) {
+        debugText += " [Option Value: " + value + "]";
+      }
+      debug(debugText);
+      if (this.googleAnalyticsEnabled) {
+        window.ga("send", "event", category, action, label, value);
+      }
+    },
+    recordPurchase: function(transactionId, itemName, itemId, revenue, price, qty, currency) {
+      window.ga("require", "ecommerce");
+      window.ga("ecommerce:addTransaction", {
+        id: transactionId,
+        // Transaction ID. Required.
+        // 'affiliation': 'Acme Clothing',   // Affiliation or store name.
+        revenue,
+        // Grand Total.
+        // 'tax': '1.29',                     // Tax.
+        currency
+        // local currency code.
+      });
+      window.ga("ecommerce:addItem", {
+        id: transactionId,
+        // Transaction ID. Required.
+        name: itemName,
+        // Product name. Required.
+        sku: itemId,
+        // SKU/code.
+        // 'category': 'Party Toys',         // Category or variation.
+        price,
+        // Unit price.
+        quantity: qty
+        // Quantity.
+      });
+      window.ga("ecommerce:send");
+    }
+  },
+  identifyUser: function() {
+    if (_user) {
+      window._tkq.push(["identifyUser", _user.ID, _user.username]);
+    }
+  },
+  setProperties: function(properties) {
+    window._tkq.push(["setProperties", properties]);
+  },
+  clearedIdentity: function() {
+    window._tkq.push(["clearIdentity"]);
+  }
+};
+var analytics_default = analytics;
+
 // ../../js-packages/number-formatters/dist/esm/create-number-formatters.js
 var import_date = __toESM(require_date(), 1);
 
@@ -3633,18 +3839,18 @@ var FALLBACK_LOCALE = "en";
 var FALLBACK_CURRENCY = "USD";
 
 // ../../js-packages/number-formatters/dist/esm/number-format-currency/index.js
-var import_debug2 = __toESM(require_browser(), 1);
+var import_debug3 = __toESM(require_browser(), 1);
 
 // ../../js-packages/number-formatters/dist/esm/get-cached-formatter.js
-var import_debug = __toESM(require_browser(), 1);
-var debug = (0, import_debug.default)("number-formatters:get-cached-formatter");
+var import_debug2 = __toESM(require_browser(), 1);
+var debug2 = (0, import_debug2.default)("number-formatters:get-cached-formatter");
 var formatterCache = /* @__PURE__ */ new Map();
 function getCachedFormatter({ locale, fallbackLocale = FALLBACK_LOCALE, options, retries = 1 }) {
   const cacheKey = JSON.stringify([locale, options]);
   try {
     return formatterCache.get(cacheKey) ?? formatterCache.set(cacheKey, new Intl.NumberFormat(locale, options)).get(cacheKey);
   } catch (error2) {
-    debug(`Intl.NumberFormat was called with a non-existent locale "${locale}"; falling back to ${fallbackLocale}`);
+    debug2(`Intl.NumberFormat was called with a non-existent locale "${locale}"; falling back to ${fallbackLocale}`);
     if (retries) {
       return getCachedFormatter({
         locale: fallbackLocale,
@@ -4144,7 +4350,7 @@ var defaultCurrencyOverrides = {
 };
 
 // ../../js-packages/number-formatters/dist/esm/number-format-currency/index.js
-var debug2 = (0, import_debug2.default)("number-formatters:number-format-currency");
+var debug3 = (0, import_debug3.default)("number-formatters:number-format-currency");
 function getCurrencyOverride(currency, geoLocation) {
   if (currency === "USD" && geoLocation && geoLocation !== "" && geoLocation !== "US") {
     return { symbol: "US$" };
@@ -4153,7 +4359,7 @@ function getCurrencyOverride(currency, geoLocation) {
 }
 function getValidCurrency(currency, geoLocation) {
   if (!getCurrencyOverride(currency, geoLocation)) {
-    debug2(`getValidCurrency was called with a non-existent currency "${currency}"; falling back to ${FALLBACK_CURRENCY}`);
+    debug3(`getValidCurrency was called with a non-existent currency "${currency}"; falling back to ${FALLBACK_CURRENCY}`);
     return FALLBACK_CURRENCY;
   }
   return currency;
@@ -4188,12 +4394,12 @@ function scaleNumberForPrecision(number, currencyPrecision) {
 }
 function prepareNumberForFormatting(number, currencyPrecision, isSmallestUnit) {
   if (isNaN(number)) {
-    debug2("formatCurrency was called with NaN");
+    debug3("formatCurrency was called with NaN");
     return 0;
   }
   if (isSmallestUnit) {
     if (!Number.isInteger(number)) {
-      debug2("formatCurrency was called with isSmallestUnit and a float which will be rounded", number);
+      debug3("formatCurrency was called with isSmallestUnit and a float which will be rounded", number);
     }
     const smallestUnitDivisor = 10 ** currencyPrecision;
     return scaleNumberForPrecision(Math.round(number) / smallestUnitDivisor, currencyPrecision);
@@ -22893,7 +23099,7 @@ var dataviews_default = DataViewsSubComponents;
 
 // routes/forms/stage.tsx
 var import_date10 = __toESM(require_date());
-var import_element97 = __toESM(require_element());
+var import_element98 = __toESM(require_element());
 var import_i18n87 = __toESM(require_i18n());
 var import_notices8 = __toESM(require_notices());
 import { useSearch as useSearch2, useNavigate as useNavigate4 } from "@wordpress/route";
@@ -22901,212 +23107,6 @@ import { useSearch as useSearch2, useNavigate as useNavigate4 } from "@wordpress
 // src/blocks/contact-form/components/jetpack-integrations-modal/index.tsx
 var import_components61 = __toESM(require_components(), 1);
 var import_i18n60 = __toESM(require_i18n(), 1);
-
-// ../../js-packages/analytics/index.jsx
-var import_debug3 = __toESM(require_browser(), 1);
-var debug3 = (0, import_debug3.default)("dops:analytics");
-var _superProps;
-var _user;
-window._tkq = window._tkq || [];
-window.ga = window.ga || function() {
-  (window.ga.q = window.ga.q || []).push(arguments);
-};
-window.ga.l = +/* @__PURE__ */ new Date();
-function buildQuerystring(group, name) {
-  let uriComponent = "";
-  if ("object" === typeof group) {
-    for (const key in group) {
-      uriComponent += "&x_" + encodeURIComponent(key) + "=" + encodeURIComponent(group[key]);
-    }
-    debug3("Bumping stats %o", group);
-  } else {
-    uriComponent = "&x_" + encodeURIComponent(group) + "=" + encodeURIComponent(name);
-    debug3('Bumping stat "%s" in group "%s"', name, group);
-  }
-  return uriComponent;
-}
-function buildQuerystringNoPrefix(group, name) {
-  let uriComponent = "";
-  if ("object" === typeof group) {
-    for (const key in group) {
-      uriComponent += "&" + encodeURIComponent(key) + "=" + encodeURIComponent(group[key]);
-    }
-    debug3("Built stats %o", group);
-  } else {
-    uriComponent = "&" + encodeURIComponent(group) + "=" + encodeURIComponent(name);
-    debug3('Built stat "%s" in group "%s"', name, group);
-  }
-  return uriComponent;
-}
-var analytics = {
-  initialize: function(userId, username, superProps) {
-    analytics.setUser(userId, username);
-    analytics.setSuperProps(superProps);
-    analytics.identifyUser();
-  },
-  setGoogleAnalyticsEnabled: function(googleAnalyticsEnabled, googleAnalyticsKey = null) {
-    this.googleAnalyticsEnabled = googleAnalyticsEnabled;
-    this.googleAnalyticsKey = googleAnalyticsKey;
-  },
-  setMcAnalyticsEnabled: function(mcAnalyticsEnabled) {
-    this.mcAnalyticsEnabled = mcAnalyticsEnabled;
-  },
-  setUser: function(userId, username) {
-    _user = { ID: userId, username };
-  },
-  setSuperProps: function(superProps) {
-    _superProps = superProps;
-  },
-  /**
-   * Add global properties to be applied to all "tracks" events.
-   * This function will add the new properties, overwrite the existing one.
-   * Unlike `setSuperProps()`, it will not replace the whole object.
-   *
-   * @param {object} props - Super props to add.
-   */
-  assignSuperProps: function(props) {
-    _superProps = Object.assign(_superProps || {}, props);
-  },
-  mc: {
-    bumpStat: function(group, name) {
-      const uriComponent = buildQuerystring(group, name);
-      if (analytics.mcAnalyticsEnabled) {
-        new Image().src = document.location.protocol + "//pixel.wp.com/g.gif?v=wpcom-no-pv" + uriComponent + "&t=" + Math.random();
-      }
-    },
-    bumpStatWithPageView: function(group, name) {
-      const uriComponent = buildQuerystringNoPrefix(group, name);
-      if (analytics.mcAnalyticsEnabled) {
-        new Image().src = document.location.protocol + "//pixel.wp.com/g.gif?v=wpcom" + uriComponent + "&t=" + Math.random();
-      }
-    }
-  },
-  // pageView is a wrapper for pageview events across Tracks and GA
-  pageView: {
-    record: function(urlPath, pageTitle) {
-      analytics.tracks.recordPageView(urlPath);
-      analytics.ga.recordPageView(urlPath, pageTitle);
-    }
-  },
-  purchase: {
-    record: function(transactionId, itemName, itemId, revenue, price, qty, currency) {
-      analytics.ga.recordPurchase(transactionId, itemName, itemId, revenue, price, qty, currency);
-    }
-  },
-  tracks: {
-    recordEvent: function(eventName, eventProperties) {
-      eventProperties = eventProperties || {};
-      if (eventName.indexOf("akismet_") !== 0 && eventName.indexOf("jetpack_") !== 0) {
-        debug3('- Event name must be prefixed by "akismet_" or "jetpack_"');
-        return;
-      }
-      if (_superProps) {
-        debug3("- Super Props: %o", _superProps);
-        eventProperties = Object.assign(eventProperties, _superProps);
-      }
-      debug3(
-        'Record event "%s" called with props %s',
-        eventName,
-        JSON.stringify(eventProperties)
-      );
-      window._tkq.push(["recordEvent", eventName, eventProperties]);
-    },
-    recordJetpackClick: function(target) {
-      const props = "object" === typeof target ? target : { target };
-      analytics.tracks.recordEvent("jetpack_wpa_click", props);
-    },
-    recordPageView: function(urlPath) {
-      analytics.tracks.recordEvent("akismet_page_view", {
-        path: urlPath
-      });
-    },
-    setOptOut: function(isOptingOut) {
-      debug3("Pushing setOptOut: %o", isOptingOut);
-      window._tkq.push(["setOptOut", isOptingOut]);
-    }
-  },
-  // Google Analytics usage and event stat tracking
-  ga: {
-    initialized: false,
-    initialize: function() {
-      let parameters = {};
-      if (!analytics.ga.initialized) {
-        if (_user) {
-          parameters = {
-            userId: "u-" + _user.ID
-          };
-        }
-        window.ga("create", this.googleAnalyticsKey, "auto", parameters);
-        analytics.ga.initialized = true;
-      }
-    },
-    recordPageView: function(urlPath, pageTitle) {
-      analytics.ga.initialize();
-      debug3("Recording Page View ~ [URL: " + urlPath + "] [Title: " + pageTitle + "]");
-      if (this.googleAnalyticsEnabled) {
-        window.ga("set", "page", urlPath);
-        window.ga("send", {
-          hitType: "pageview",
-          page: urlPath,
-          title: pageTitle
-        });
-      }
-    },
-    recordEvent: function(category, action, label, value) {
-      analytics.ga.initialize();
-      let debugText = "Recording Event ~ [Category: " + category + "] [Action: " + action + "]";
-      if ("undefined" !== typeof label) {
-        debugText += " [Option Label: " + label + "]";
-      }
-      if ("undefined" !== typeof value) {
-        debugText += " [Option Value: " + value + "]";
-      }
-      debug3(debugText);
-      if (this.googleAnalyticsEnabled) {
-        window.ga("send", "event", category, action, label, value);
-      }
-    },
-    recordPurchase: function(transactionId, itemName, itemId, revenue, price, qty, currency) {
-      window.ga("require", "ecommerce");
-      window.ga("ecommerce:addTransaction", {
-        id: transactionId,
-        // Transaction ID. Required.
-        // 'affiliation': 'Acme Clothing',   // Affiliation or store name.
-        revenue,
-        // Grand Total.
-        // 'tax': '1.29',                     // Tax.
-        currency
-        // local currency code.
-      });
-      window.ga("ecommerce:addItem", {
-        id: transactionId,
-        // Transaction ID. Required.
-        name: itemName,
-        // Product name. Required.
-        sku: itemId,
-        // SKU/code.
-        // 'category': 'Party Toys',         // Category or variation.
-        price,
-        // Unit price.
-        quantity: qty
-        // Quantity.
-      });
-      window.ga("ecommerce:send");
-    }
-  },
-  identifyUser: function() {
-    if (_user) {
-      window._tkq.push(["identifyUser", _user.ID, _user.username]);
-    }
-  },
-  setProperties: function(properties) {
-    window._tkq.push(["setProperties", properties]);
-  },
-  clearedIdentity: function() {
-    window._tkq.push(["clearIdentity"]);
-  }
-};
-var analytics_default = analytics;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integrations-list.tsx
 var import_element71 = __toESM(require_element(), 1);
@@ -27278,7 +27278,7 @@ function catchNetworkErrors() {
 var import_components76 = __toESM(require_components(), 1);
 var import_core_data6 = __toESM(require_core_data(), 1);
 var import_data35 = __toESM(require_data(), 1);
-var import_element96 = __toESM(require_element(), 1);
+var import_element97 = __toESM(require_element(), 1);
 var import_html_entities4 = __toESM(require_html_entities(), 1);
 var import_i18n86 = __toESM(require_i18n(), 1);
 var import_notices7 = __toESM(require_notices(), 1);
@@ -27289,11 +27289,15 @@ var import_components66 = __toESM(require_components(), 1);
 var import_element84 = __toESM(require_element(), 1);
 var import_i18n72 = __toESM(require_i18n(), 1);
 var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
-function EditFormButton({ formId }) {
+function EditFormButton({
+  formId,
+  onClick: onClickProp
+}) {
   const adminUrl = useConfigValue("adminUrl") || "";
   const onClick = (0, import_element84.useCallback)(() => {
+    onClickProp?.();
     window.location.href = getFormEditUrl(formId, adminUrl);
-  }, [adminUrl, formId]);
+  }, [adminUrl, formId, onClickProp]);
   return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components66.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n72.__)("Edit form", "jetpack-forms") });
 }
 
@@ -27832,6 +27836,7 @@ var empty_trash_button_default = EmptyTrashButton;
 
 // src/dashboard/components/export-responses/button.tsx
 var import_components74 = __toESM(require_components(), 1);
+var import_element96 = __toESM(require_element(), 1);
 var import_i18n84 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-export-responses.ts
@@ -28867,7 +28872,8 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 var import_jsx_runtime154 = __toESM(require_jsx_runtime(), 1);
 var ExportResponsesButton = ({
   isPrimary = false,
-  showIcon = true
+  showIcon = true,
+  onClick: onClickProp
 }) => {
   const {
     showExportModal,
@@ -28881,6 +28887,10 @@ var ExportResponsesButton = ({
   const { totalItems, isLoadingData } = useInboxData();
   const isEmpty4 = isLoadingData || totalItems === 0;
   const isDisabled = isEmpty4 || userCanExport === false;
+  const handleClick = (0, import_element96.useCallback)(() => {
+    onClickProp?.();
+    openModal();
+  }, [onClickProp, openModal]);
   if (userCanExport === false) {
     return null;
   }
@@ -28891,7 +28901,7 @@ var ExportResponsesButton = ({
         size: "compact",
         variant: isPrimary ? "primary" : "secondary",
         icon: showIcon ? download_default : void 0,
-        onClick: openModal,
+        onClick: handleClick,
         accessibleWhenDisabled: true,
         disabled: isDisabled,
         label: isEmpty4 ? (0, import_i18n84.__)("Nothing to export.", "jetpack-forms") : "",
@@ -28933,7 +28943,7 @@ function usePageHeaderDetails(props) {
   } = props;
   const adminUrl = useConfigValue("adminUrl") || "";
   const statusView = props.statusView ?? "inbox";
-  const sourceIdNumber = (0, import_element96.useMemo)(() => {
+  const sourceIdNumber = (0, import_element97.useMemo)(() => {
     const value = sourceId;
     const numberValue = typeof value === "number" ? value : Number(value);
     return Number.isFinite(numberValue) && numberValue > 0 ? numberValue : null;
@@ -28943,12 +28953,12 @@ function usePageHeaderDetails(props) {
   const isFormsScreen = screen === "forms";
   const isSingleFormScreen = screen === "responses" && sourceIdNumber !== null;
   const { openNewForm } = useCreateForm();
-  const [isCreateFormModalOpen, setIsCreateFormModalOpen] = (0, import_element96.useState)(false);
-  const handleCreateFormClick = (0, import_element96.useCallback)(() => {
+  const [isCreateFormModalOpen, setIsCreateFormModalOpen] = (0, import_element97.useState)(false);
+  const handleCreateFormClick = (0, import_element97.useCallback)(() => {
     setIsCreateFormModalOpen(true);
   }, []);
-  const closeCreateFormModal = (0, import_element96.useCallback)(() => setIsCreateFormModalOpen(false), []);
-  const handleCreateFormSave = (0, import_element96.useCallback)(
+  const closeCreateFormModal = (0, import_element97.useCallback)(() => setIsCreateFormModalOpen(false), []);
+  const handleCreateFormSave = (0, import_element97.useCallback)(
     async (formName) => {
       await openNewForm({ formTitle: formName });
     },
@@ -28966,12 +28976,12 @@ function usePageHeaderDetails(props) {
   const hasResponses = !isLoadingData && totalItems > 0;
   const emptySpam = useEmptySpam();
   const emptyTrash = useEmptyTrash();
-  const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element96.useState)(false);
-  const permanentDeleteItemRef = (0, import_element96.useRef)(null);
-  const [renameFormItem, setRenameFormItem] = (0, import_element96.useState)(
+  const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element97.useState)(false);
+  const permanentDeleteItemRef = (0, import_element97.useRef)(null);
+  const [renameFormItem, setRenameFormItem] = (0, import_element97.useState)(
     null
   );
-  const renameRetryRef = (0, import_element96.useRef)(
+  const renameRetryRef = (0, import_element97.useRef)(
     null
   );
   const { saveEntityRecord, deleteEntityRecord } = (0, import_data35.useDispatch)(import_core_data6.store);
@@ -28991,15 +29001,15 @@ function usePageHeaderDetails(props) {
     },
     [sourceIdNumber]
   );
-  const formTitle = (0, import_element96.useMemo)(() => {
+  const formTitle = (0, import_element97.useMemo)(() => {
     const rendered = formRecord?.title?.rendered || "";
     return (0, import_html_entities4.decodeEntities)(rendered);
   }, [formRecord?.title?.rendered]);
-  const closeRenameModal = (0, import_element96.useCallback)(() => {
+  const closeRenameModal = (0, import_element97.useCallback)(() => {
     setRenameFormItem(null);
     renameRetryRef.current = null;
   }, []);
-  const handleRename = (0, import_element96.useCallback)(
+  const handleRename = (0, import_element97.useCallback)(
     async (newTitle) => {
       if (!renameFormItem) {
         return;
@@ -29036,7 +29046,7 @@ function usePageHeaderDetails(props) {
     },
     [renameFormItem, saveEntityRecord, createSuccessNotice, createErrorNotice]
   );
-  const trashForm = (0, import_element96.useCallback)(
+  const trashForm = (0, import_element97.useCallback)(
     async (item) => {
       const previousStatus = formRecord?.status || "draft";
       try {
@@ -29091,7 +29101,7 @@ function usePageHeaderDetails(props) {
       navigate
     ]
   );
-  const restoreForm = (0, import_element96.useCallback)(
+  const restoreForm = (0, import_element97.useCallback)(
     async (item) => {
       try {
         await saveEntityRecord(
@@ -29113,15 +29123,15 @@ function usePageHeaderDetails(props) {
     },
     [saveEntityRecord, invalidateFormStatusCounts2, createSuccessNotice, createErrorNotice]
   );
-  const openPermanentDeleteConfirm = (0, import_element96.useCallback)((item) => {
+  const openPermanentDeleteConfirm = (0, import_element97.useCallback)((item) => {
     permanentDeleteItemRef.current = item;
     setIsPermanentDeleteConfirmOpen(true);
   }, []);
-  const closePermanentDeleteConfirm = (0, import_element96.useCallback)(() => {
+  const closePermanentDeleteConfirm = (0, import_element97.useCallback)(() => {
     setIsPermanentDeleteConfirmOpen(false);
     permanentDeleteItemRef.current = null;
   }, []);
-  const confirmPermanentDelete = (0, import_element96.useCallback)(async () => {
+  const confirmPermanentDelete = (0, import_element97.useCallback)(async () => {
     const item = permanentDeleteItemRef.current;
     if (!item) {
       return;
@@ -29156,7 +29166,7 @@ function usePageHeaderDetails(props) {
   ]);
   const formStatus = formRecord?.status;
   const statusLabel = formStatus ? getFormStatusLabel(formStatus) : void 0;
-  const badges = (0, import_element96.useMemo)(() => {
+  const badges = (0, import_element97.useMemo)(() => {
     if (!isSingleFormScreen || !formStatus || formStatus === "publish") {
       return void 0;
     }
@@ -29171,7 +29181,12 @@ function usePageHeaderDetails(props) {
     setFormsToDraft,
     isUpdatingStatus
   } = useFormItemActions();
-  const formItemControls = (0, import_element96.useMemo)(() => {
+  const trackAction = (0, import_element97.useCallback)((eventName, source = "form_header") => {
+    analytics_default.tracks.recordEvent(eventName, {
+      source
+    });
+  }, []);
+  const formItemControls = (0, import_element97.useMemo)(() => {
     if (!sourceIdNumber) {
       return [];
     }
@@ -29180,29 +29195,44 @@ function usePageHeaderDetails(props) {
       return [
         {
           title: (0, import_i18n86.__)("Restore", "jetpack-forms"),
-          onClick: () => restoreForm(formItem)
+          onClick: () => {
+            trackAction("jetpack_forms_form_restore_click");
+            restoreForm(formItem);
+          }
         },
         {
           title: (0, import_i18n86.__)("Delete permanently", "jetpack-forms"),
-          onClick: () => openPermanentDeleteConfirm(formItem)
+          onClick: () => {
+            trackAction("jetpack_forms_form_delete_permanently_click");
+            openPermanentDeleteConfirm(formItem);
+          }
         }
       ];
     }
     const controls = [
       {
         title: (0, import_i18n86.__)("Preview", "jetpack-forms"),
-        onClick: () => previewForm(formItem)
+        onClick: () => {
+          trackAction("jetpack_forms_form_preview_click");
+          previewForm(formItem);
+        }
       }
     ];
     if (navigator?.clipboard) {
       controls.push(
         {
           title: (0, import_i18n86.__)("Copy embed", "jetpack-forms"),
-          onClick: () => copyEmbed(formItem)
+          onClick: () => {
+            trackAction("jetpack_forms_form_copy_embed_click");
+            copyEmbed(formItem);
+          }
         },
         {
           title: (0, import_i18n86.__)("Copy shortcode", "jetpack-forms"),
-          onClick: () => copyShortcode(formItem)
+          onClick: () => {
+            trackAction("jetpack_forms_form_copy_shortcode_click");
+            copyShortcode(formItem);
+          }
         }
       );
     }
@@ -29211,6 +29241,7 @@ function usePageHeaderDetails(props) {
         title: (0, import_i18n86.__)("Unpublish", "jetpack-forms"),
         onClick: () => {
           if (!isUpdatingStatus) {
+            trackAction("jetpack_forms_form_unpublish_click");
             setFormsToDraft([formItem]);
           }
         }
@@ -29220,6 +29251,7 @@ function usePageHeaderDetails(props) {
         title: (0, import_i18n86.__)("Publish", "jetpack-forms"),
         onClick: () => {
           if (!isUpdatingStatus) {
+            trackAction("jetpack_forms_form_publish_click");
             publishForms([formItem]);
           }
         }
@@ -29228,15 +29260,24 @@ function usePageHeaderDetails(props) {
     controls.push(
       {
         title: (0, import_i18n86.__)("Rename", "jetpack-forms"),
-        onClick: () => setRenameFormItem(formItem)
+        onClick: () => {
+          trackAction("jetpack_forms_form_rename_click");
+          setRenameFormItem(formItem);
+        }
       },
       {
         title: (0, import_i18n86.__)("Duplicate", "jetpack-forms"),
-        onClick: () => duplicateForm(formItem)
+        onClick: () => {
+          trackAction("jetpack_forms_form_duplicate_click");
+          duplicateForm(formItem);
+        }
       },
       {
         title: (0, import_i18n86.__)("Trash", "jetpack-forms"),
-        onClick: () => trashForm(formItem)
+        onClick: () => {
+          trackAction("jetpack_forms_form_trash_click");
+          trashForm(formItem);
+        }
       }
     );
     return controls;
@@ -29253,25 +29294,26 @@ function usePageHeaderDetails(props) {
     publishForms,
     previewForm,
     setFormsToDraft,
-    sourceIdNumber
+    sourceIdNumber,
+    trackAction
   ]);
   const WrapWithJetpackLogo = ({ children }) => /* @__PURE__ */ (0, import_jsx_runtime156.jsxs)(Stack, { align: "center", gap: "xs", children: [
     /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
     children
   ] });
-  const ariaLabel = (0, import_element96.useMemo)(() => {
+  const ariaLabel = (0, import_element97.useMemo)(() => {
     if (isSingleFormScreen) {
       return formTitle || (0, import_i18n86.__)("Form responses", "jetpack-forms");
     }
     return "Jetpack Forms";
   }, [isSingleFormScreen, formTitle]);
-  const title = (0, import_element96.useMemo)(() => {
+  const title = (0, import_element97.useMemo)(() => {
     if (isSingleFormScreen) {
       return null;
     }
     return /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(WrapWithJetpackLogo, { children: "Forms" });
   }, [isSingleFormScreen]);
-  const breadcrumbs = (0, import_element96.useMemo)(() => {
+  const breadcrumbs = (0, import_element97.useMemo)(() => {
     if (!isSingleFormScreen) {
       return null;
     }
@@ -29285,7 +29327,7 @@ function usePageHeaderDetails(props) {
       }
     ) });
   }, [isSingleFormScreen, formTitle]);
-  const subtitle = (0, import_element96.useMemo)(() => {
+  const subtitle = (0, import_element97.useMemo)(() => {
     if (isFormsScreen) {
       const shortMessage = (0, import_i18n86.__)("View and manage all your forms.", "jetpack-forms");
       const longMessage = (0, import_i18n86.__)("View and manage all your forms in one place.", "jetpack-forms");
@@ -29307,7 +29349,19 @@ function usePageHeaderDetails(props) {
     }
     return (0, import_i18n86.__)("View and manage all your form responses in one place.", "jetpack-forms");
   }, [formTitle, isFormsScreen, isSingleFormScreen, onOpenFormsHelp, hasClassicForms]);
-  const actions2 = (0, import_element96.useMemo)(() => {
+  const trackEditFormClick = (0, import_element97.useCallback)(
+    () => trackAction("jetpack_forms_form_edit_form_click"),
+    [trackAction]
+  );
+  const trackExportClick = (0, import_element97.useCallback)(
+    () => trackAction("jetpack_forms_form_export_click"),
+    [trackAction]
+  );
+  const trackExportClickResponsesList = (0, import_element97.useCallback)(
+    () => trackAction("jetpack_forms_form_export_click", "responses_list"),
+    [trackAction]
+  );
+  const actions2 = (0, import_element97.useMemo)(() => {
     if (isSm) {
       const dropdownControls = [];
       if (isFormsScreen) {
@@ -29325,13 +29379,17 @@ function usePageHeaderDetails(props) {
         if (statusView === "inbox" && sourceIdNumber) {
           dropdownControls.push({
             onClick: () => {
+              trackAction("jetpack_forms_form_edit_form_click");
               window.location.href = getFormEditUrl(sourceIdNumber, adminUrl);
             },
             title: (0, import_i18n86.__)("Edit form", "jetpack-forms")
           });
         }
         dropdownControls.push({
-          onClick: openExportModal,
+          onClick: () => {
+            trackAction("jetpack_forms_form_export_click");
+            openExportModal();
+          },
           title: exportLabel,
           isDisabled: !hasResponses
         });
@@ -29364,7 +29422,10 @@ function usePageHeaderDetails(props) {
           });
         }
         dropdownControls.push({
-          onClick: openExportModal,
+          onClick: () => {
+            trackAction("jetpack_forms_form_export_click", "responses_list");
+            openExportModal();
+          },
           title: exportLabel,
           isDisabled: !hasResponses
         });
@@ -29492,12 +29553,22 @@ function usePageHeaderDetails(props) {
     }
     if (isSingleFormScreen) {
       return [
-        ...sourceIdNumber && formStatus !== "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime156.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
+        ...sourceIdNumber && formStatus !== "trash" ? [
+          /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
+            EditFormButton,
+            {
+              formId: sourceIdNumber,
+              onClick: trackEditFormClick
+            },
+            "edit-form"
+          )
+        ] : [],
         /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(
           button_default,
           {
             isPrimary: statusView === "inbox",
-            showIcon: false
+            showIcon: false,
+            onClick: trackExportClick
           },
           "export"
         ),
@@ -29567,7 +29638,8 @@ function usePageHeaderDetails(props) {
         button_default,
         {
           isPrimary: statusView === "inbox",
-          showIcon: false
+          showIcon: false,
+          onClick: trackExportClickResponsesList
         },
         "export"
       ),
@@ -29618,7 +29690,11 @@ function usePageHeaderDetails(props) {
     isPermanentDeleteConfirmOpen,
     closePermanentDeleteConfirm,
     confirmPermanentDelete,
-    formStatus
+    formStatus,
+    trackAction,
+    trackEditFormClick,
+    trackExportClick,
+    trackExportClickResponsesList
   ]);
   return { ariaLabel, breadcrumbs, title, badges, subtitle, actions: actions2 };
 }
@@ -29658,8 +29734,8 @@ function StageInner() {
   const navigate = useNavigate4();
   const searchParams = useSearch2({ from: "/forms" });
   const dateSettings = (0, import_date10.getSettings)();
-  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element97.useState)(false);
-  const [isFormsHelpModalOpen, setIsFormsHelpModalOpen] = (0, import_element97.useState)(false);
+  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element98.useState)(false);
+  const [isFormsHelpModalOpen, setIsFormsHelpModalOpen] = (0, import_element98.useState)(false);
   const integrations = (0, import_data36.useSelect)(
     (select3) => select3(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
@@ -29669,28 +29745,28 @@ function StageInner() {
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
   const hasClassicForms = useConfigValue("hasClassicForms");
-  const [view, setView] = (0, import_element97.useState)(() => ({
+  const [view, setView] = (0, import_element98.useState)(() => ({
     ...DEFAULT_VIEW,
     search: searchParams?.search || ""
   }));
-  (0, import_element97.useEffect)(() => {
+  (0, import_element98.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
     if (urlSearch !== view.search) {
       setView((previous) => ({ ...previous, search: urlSearch }));
     }
   }, [searchParams?.search]);
-  const statusQuery = (0, import_element97.useMemo)(() => {
+  const statusQuery = (0, import_element98.useMemo)(() => {
     const statusFilterValue2 = view.filters?.find((filter) => filter.field === "status")?.value;
     if (!statusFilterValue2 || statusFilterValue2 === "all") {
       return NON_TRASH_FORM_STATUSES;
     }
     return statusFilterValue2;
   }, [view.filters]);
-  const isViewingTrash = (0, import_element97.useMemo)(() => {
+  const isViewingTrash = (0, import_element98.useMemo)(() => {
     const statusFilterValue2 = view.filters?.find((filter) => filter.field === "status")?.value;
     return statusFilterValue2 === "trash";
   }, [view.filters]);
-  const hasResponsesQuery = (0, import_element97.useMemo)(() => {
+  const hasResponsesQuery = (0, import_element98.useMemo)(() => {
     const entriesFilterValue = view.filters?.find((filter) => filter.field === "entries")?.value;
     if (entriesFilterValue === "has_responses") {
       return "true";
@@ -29731,27 +29807,27 @@ function StageInner() {
     recordsLength: records?.length ?? 0,
     statusQuery
   });
-  const [selection, setSelection] = (0, import_element97.useState)([]);
-  const [pendingPermanentDeleteCount, setPendingPermanentDeleteCount] = (0, import_element97.useState)(0);
-  const [renameFormItem, setRenameFormItem] = (0, import_element97.useState)(null);
-  const renameRetryRef = (0, import_element97.useRef)(null);
+  const [selection, setSelection] = (0, import_element98.useState)([]);
+  const [pendingPermanentDeleteCount, setPendingPermanentDeleteCount] = (0, import_element98.useState)(0);
+  const [renameFormItem, setRenameFormItem] = (0, import_element98.useState)(null);
+  const renameRetryRef = (0, import_element98.useRef)(null);
   const { createSuccessNotice, createErrorNotice } = (0, import_data36.useDispatch)(import_notices8.store);
   const { saveEntityRecord } = (0, import_data36.useDispatch)(import_core_data7.store);
-  (0, import_element97.useEffect)(() => {
+  (0, import_element98.useEffect)(() => {
     setSelection([]);
   }, [view.page, view.perPage, view.search, view.filters]);
-  const onOpenPermanentDeleteConfirm = (0, import_element97.useCallback)(
+  const onOpenPermanentDeleteConfirm = (0, import_element98.useCallback)(
     (items) => {
       setPendingPermanentDeleteCount(items?.length ?? 0);
       openPermanentDeleteConfirm(items);
     },
     [openPermanentDeleteConfirm]
   );
-  const onClosePermanentDeleteConfirm = (0, import_element97.useCallback)(() => {
+  const onClosePermanentDeleteConfirm = (0, import_element98.useCallback)(() => {
     setPendingPermanentDeleteCount(0);
     closePermanentDeleteConfirm();
   }, [closePermanentDeleteConfirm]);
-  const onConfirmPermanentDelete = (0, import_element97.useCallback)(async () => {
+  const onConfirmPermanentDelete = (0, import_element98.useCallback)(async () => {
     setPendingPermanentDeleteCount(0);
     try {
       await confirmPermanentDelete();
@@ -29759,14 +29835,14 @@ function StageInner() {
       setSelection([]);
     }
   }, [confirmPermanentDelete]);
-  const openRenameModal = (0, import_element97.useCallback)((item) => {
+  const openRenameModal = (0, import_element98.useCallback)((item) => {
     setRenameFormItem(item);
   }, []);
-  const closeRenameModal = (0, import_element97.useCallback)(() => {
+  const closeRenameModal = (0, import_element98.useCallback)(() => {
     setRenameFormItem(null);
     renameRetryRef.current = null;
   }, []);
-  const handleRename = (0, import_element97.useCallback)(
+  const handleRename = (0, import_element98.useCallback)(
     async (newTitle) => {
       if (!renameFormItem) {
         return;
@@ -29803,7 +29879,7 @@ function StageInner() {
     },
     [renameFormItem, saveEntityRecord, createSuccessNotice, createErrorNotice]
   );
-  const fields = (0, import_element97.useMemo)(
+  const fields = (0, import_element98.useMemo)(
     () => [
       {
         id: "title",
@@ -29853,13 +29929,13 @@ function StageInner() {
     ],
     [dateSettings.formats.datetime, statusCounts]
   );
-  const openSingleFormView = (0, import_element97.useCallback)(
+  const openSingleFormView = (0, import_element98.useCallback)(
     (formId) => {
       navigate({ href: `/responses/inbox?sourceId=${encodeURIComponent(String(formId))}` });
     },
     [navigate]
   );
-  const actions2 = (0, import_element97.useMemo)(() => {
+  const actions2 = (0, import_element98.useMemo)(() => {
     const actionsList = [
       {
         id: "view-responses",
@@ -29867,6 +29943,9 @@ function StageInner() {
         label: (0, import_i18n87.__)("Responses", "jetpack-forms"),
         supportsBulk: false,
         callback(items) {
+          analytics_default.tracks.recordEvent("jetpack_forms_form_view_responses_click", {
+            source: "forms_list"
+          });
           const [item] = items;
           if (!item) {
             return;
@@ -29882,6 +29961,10 @@ function StageInner() {
         label: (0, import_i18n87.__)("Restore", "jetpack-forms"),
         supportsBulk: true,
         async callback(items) {
+          analytics_default.tracks.recordEvent("jetpack_forms_form_restore_click", {
+            source: "forms_list",
+            multiple: items.length > 1
+          });
           if (isDeleting) {
             return;
           }
@@ -29898,6 +29981,10 @@ function StageInner() {
         label: (0, import_i18n87.__)("Delete permanently", "jetpack-forms"),
         supportsBulk: true,
         async callback(items) {
+          analytics_default.tracks.recordEvent("jetpack_forms_form_delete_permanently_click", {
+            source: "forms_list",
+            multiple: items.length > 1
+          });
           if (isDeleting) {
             return;
           }
@@ -29915,6 +30002,9 @@ function StageInner() {
       label: (0, import_i18n87.__)("Edit", "jetpack-forms"),
       supportsBulk: false,
       async callback(items) {
+        analytics_default.tracks.recordEvent("jetpack_forms_form_edit_form_click", {
+          source: "forms_list"
+        });
         const [item] = items;
         if (!item) {
           return;
@@ -29929,6 +30019,9 @@ function StageInner() {
       label: (0, import_i18n87.__)("Preview", "jetpack-forms"),
       supportsBulk: false,
       async callback(items) {
+        analytics_default.tracks.recordEvent("jetpack_forms_form_preview_click", {
+          source: "forms_list"
+        });
         const [item] = items;
         if (item) {
           await previewForm(item);
@@ -29942,6 +30035,9 @@ function StageInner() {
         label: (0, import_i18n87.__)("Copy embed", "jetpack-forms"),
         supportsBulk: false,
         async callback(items) {
+          analytics_default.tracks.recordEvent("jetpack_forms_form_copy_embed_click", {
+            source: "forms_list"
+          });
           const [item] = items;
           if (item) {
             await copyEmbed(item);
@@ -29954,6 +30050,9 @@ function StageInner() {
         label: (0, import_i18n87.__)("Copy shortcode", "jetpack-forms"),
         supportsBulk: false,
         async callback(items) {
+          analytics_default.tracks.recordEvent("jetpack_forms_form_copy_shortcode_click", {
+            source: "forms_list"
+          });
           const [item] = items;
           if (item) {
             await copyShortcode(item);
@@ -29975,6 +30074,10 @@ function StageInner() {
       isEligible: (item) => item.status !== "publish",
       supportsBulk: true,
       async callback(items) {
+        analytics_default.tracks.recordEvent("jetpack_forms_form_publish_click", {
+          source: "forms_list",
+          multiple: items.length > 1
+        });
         if (isDeleting || isUpdatingStatus) {
           return;
         }
@@ -29996,6 +30099,10 @@ function StageInner() {
       isEligible: (item) => item.status === "publish",
       supportsBulk: true,
       async callback(items) {
+        analytics_default.tracks.recordEvent("jetpack_forms_form_unpublish_click", {
+          source: "forms_list",
+          multiple: items.length > 1
+        });
         if (isDeleting || isUpdatingStatus) {
           return;
         }
@@ -30016,6 +30123,9 @@ function StageInner() {
       label: (0, import_i18n87.__)("Rename", "jetpack-forms"),
       supportsBulk: false,
       callback(items) {
+        analytics_default.tracks.recordEvent("jetpack_forms_form_rename_click", {
+          source: "forms_list"
+        });
         const [item] = items;
         if (!item) {
           return;
@@ -30029,6 +30139,9 @@ function StageInner() {
       label: (0, import_i18n87.__)("Duplicate", "jetpack-forms"),
       supportsBulk: false,
       async callback(items) {
+        analytics_default.tracks.recordEvent("jetpack_forms_form_duplicate_click", {
+          source: "forms_list"
+        });
         const [item] = items;
         if (item) {
           await duplicateForm(item);
@@ -30041,6 +30154,10 @@ function StageInner() {
       label: (0, import_i18n87.__)("Trash", "jetpack-forms"),
       supportsBulk: true,
       async callback(items) {
+        analytics_default.tracks.recordEvent("jetpack_forms_form_trash_click", {
+          source: "forms_list",
+          multiple: items.length > 1
+        });
         if (isDeleting) {
           return;
         }
@@ -30073,14 +30190,14 @@ function StageInner() {
     view.perPage,
     view.search
   ]);
-  const paginationInfo = (0, import_element97.useMemo)(
+  const paginationInfo = (0, import_element98.useMemo)(
     () => ({
       totalItems: totalItems ?? 0,
       totalPages: totalPages ?? 0
     }),
     [totalItems, totalPages]
   );
-  const onChangeView = (0, import_element97.useCallback)(
+  const onChangeView = (0, import_element98.useCallback)(
     (newView) => {
       setView(newView);
       if (newView.search !== view.search) {
@@ -30094,16 +30211,16 @@ function StageInner() {
     },
     [navigate, searchParams, view.search]
   );
-  const openIntegrationsModal = (0, import_element97.useCallback)(() => {
+  const openIntegrationsModal = (0, import_element98.useCallback)(() => {
     setIsIntegrationsModalOpen(true);
   }, []);
-  const closeIntegrationsModal = (0, import_element97.useCallback)(() => {
+  const closeIntegrationsModal = (0, import_element98.useCallback)(() => {
     setIsIntegrationsModalOpen(false);
   }, []);
-  const openFormsHelpModal = (0, import_element97.useCallback)(() => {
+  const openFormsHelpModal = (0, import_element98.useCallback)(() => {
     setIsFormsHelpModalOpen(true);
   }, []);
-  const closeFormsHelpModal = (0, import_element97.useCallback)(() => {
+  const closeFormsHelpModal = (0, import_element98.useCallback)(() => {
     setIsFormsHelpModalOpen(false);
   }, []);
   const {
@@ -30122,8 +30239,8 @@ function StageInner() {
   });
   const statusFilterValue = view.filters?.find((filter) => filter.field === "status")?.value;
   const hasActiveFilters = !!view.search?.trim() || !!statusFilterValue && statusFilterValue !== "all";
-  const getItemId = (0, import_element97.useCallback)((item) => String(item.id), []);
-  const onClickItem = (0, import_element97.useCallback)(
+  const getItemId = (0, import_element98.useCallback)((item) => String(item.id), []);
+  const onClickItem = (0, import_element98.useCallback)(
     (item) => {
       openSingleFormView(item.id);
     },

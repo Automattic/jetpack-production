@@ -30479,7 +30479,7 @@ var dataviews_default = DataViewsSubComponents;
 
 // routes/responses/stage.tsx
 var import_date10 = __toESM(require_date());
-var import_element98 = __toESM(require_element());
+var import_element99 = __toESM(require_element());
 var import_html_entities5 = __toESM(require_html_entities());
 var import_i18n88 = __toESM(require_i18n());
 import { useParams, useSearch as useSearch2, useNavigate as useNavigate4 } from "@wordpress/route";
@@ -35407,7 +35407,7 @@ function catchNetworkErrors() {
 var import_components76 = __toESM(require_components(), 1);
 var import_core_data6 = __toESM(require_core_data(), 1);
 var import_data33 = __toESM(require_data(), 1);
-var import_element96 = __toESM(require_element(), 1);
+var import_element97 = __toESM(require_element(), 1);
 var import_html_entities4 = __toESM(require_html_entities(), 1);
 var import_i18n86 = __toESM(require_i18n(), 1);
 var import_notices6 = __toESM(require_notices(), 1);
@@ -35457,11 +35457,15 @@ function getFormEditUrl(formId, adminUrl) {
 
 // src/dashboard/components/edit-form-button/index.tsx
 var import_jsx_runtime158 = __toESM(require_jsx_runtime(), 1);
-function EditFormButton({ formId }) {
+function EditFormButton({
+  formId,
+  onClick: onClickProp
+}) {
   const adminUrl = useConfigValue("adminUrl") || "";
   const onClick = (0, import_element82.useCallback)(() => {
+    onClickProp?.();
     window.location.href = getFormEditUrl(formId, adminUrl);
-  }, [adminUrl, formId]);
+  }, [adminUrl, formId, onClickProp]);
   return /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components66.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n69.__)("Edit form", "jetpack-forms") });
 }
 
@@ -35801,6 +35805,7 @@ var empty_trash_button_default = EmptyTrashButton;
 
 // src/dashboard/components/export-responses/button.tsx
 var import_components74 = __toESM(require_components(), 1);
+var import_element93 = __toESM(require_element(), 1);
 var import_i18n81 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-export-responses.ts
@@ -36842,7 +36847,8 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 var import_jsx_runtime167 = __toESM(require_jsx_runtime(), 1);
 var ExportResponsesButton = ({
   isPrimary = false,
-  showIcon = true
+  showIcon = true,
+  onClick: onClickProp
 }) => {
   const {
     showExportModal,
@@ -36856,6 +36862,10 @@ var ExportResponsesButton = ({
   const { totalItems, isLoadingData } = useInboxData();
   const isEmpty4 = isLoadingData || totalItems === 0;
   const isDisabled = isEmpty4 || userCanExport === false;
+  const handleClick = (0, import_element93.useCallback)(() => {
+    onClickProp?.();
+    openModal();
+  }, [onClickProp, openModal]);
   if (userCanExport === false) {
     return null;
   }
@@ -36866,7 +36876,7 @@ var ExportResponsesButton = ({
         size: "compact",
         variant: isPrimary ? "primary" : "secondary",
         icon: showIcon ? download_default : void 0,
-        onClick: openModal,
+        onClick: handleClick,
         accessibleWhenDisabled: true,
         disabled: isDisabled,
         label: isEmpty4 ? (0, import_i18n81.__)("Nothing to export.", "jetpack-forms") : "",
@@ -36932,7 +36942,7 @@ function ManageIntegrationsButton({ onClick }) {
 // src/dashboard/wp-build/hooks/use-form-item-actions.ts
 var import_api_fetch10 = __toESM(require_api_fetch(), 1);
 var import_data32 = __toESM(require_data(), 1);
-var import_element95 = __toESM(require_element(), 1);
+var import_element96 = __toESM(require_element(), 1);
 var import_i18n85 = __toESM(require_i18n(), 1);
 var import_notices5 = __toESM(require_notices(), 1);
 
@@ -36942,7 +36952,7 @@ var getShortcode = (postId) => `[contact-form ref="${postId}"]`;
 
 // src/dashboard/hooks/use-forms-data.ts
 var import_core_data5 = __toESM(require_core_data(), 1);
-var import_element93 = __toESM(require_element(), 1);
+var import_element94 = __toESM(require_element(), 1);
 var import_html_entities3 = __toESM(require_html_entities(), 1);
 function getFormsListQuery(page, perPage, search, status, hasResponses) {
   const queryParams = {
@@ -36965,16 +36975,16 @@ function getFormsListQuery(page, perPage, search, status, hasResponses) {
 
 // src/dashboard/wp-build/hooks/use-duplicate-form.ts
 var import_data31 = __toESM(require_data(), 1);
-var import_element94 = __toESM(require_element(), 1);
+var import_element95 = __toESM(require_element(), 1);
 var import_i18n84 = __toESM(require_i18n(), 1);
 var import_notices4 = __toESM(require_notices(), 1);
 function useDuplicateForm() {
-  const [isDuplicating, setIsDuplicating] = (0, import_element94.useState)(false);
+  const [isDuplicating, setIsDuplicating] = (0, import_element95.useState)(false);
   const { createSuccessNotice, createErrorNotice } = (0, import_data31.useDispatch)(import_notices4.store);
   const { saveEntityRecord } = (0, import_data31.useDispatch)("core");
   const { invalidateFormStatusCounts: invalidateFormStatusCounts2 } = (0, import_data31.useDispatch)(store3);
   const adminUrl = useConfigValue("adminUrl") || "";
-  const duplicateForm = (0, import_element94.useCallback)(
+  const duplicateForm = (0, import_element95.useCallback)(
     async (item) => {
       if (isDuplicating) {
         return;
@@ -37067,10 +37077,10 @@ function useDuplicateForm() {
 function useFormItemActions() {
   const { createSuccessNotice, createErrorNotice } = (0, import_data32.useDispatch)(import_notices5.store);
   const { duplicateForm, isDuplicating } = useDuplicateForm();
-  const [isUpdatingStatus, setIsUpdatingStatus] = (0, import_element95.useState)(false);
-  const isUpdatingStatusRef = (0, import_element95.useRef)(false);
+  const [isUpdatingStatus, setIsUpdatingStatus] = (0, import_element96.useState)(false);
+  const isUpdatingStatusRef = (0, import_element96.useRef)(false);
   const { saveEntityRecord, invalidateResolution } = (0, import_data32.useDispatch)("core");
-  const previewForm = (0, import_element95.useCallback)(async (item) => {
+  const previewForm = (0, import_element96.useCallback)(async (item) => {
     try {
       const response = await (0, import_api_fetch10.default)({
         path: `/wp/v2/jetpack-forms/${item.id}/preview-url`
@@ -37080,7 +37090,7 @@ function useFormItemActions() {
       console.error("Failed to get preview URL:", error2);
     }
   }, []);
-  const copyEmbed = (0, import_element95.useCallback)(
+  const copyEmbed = (0, import_element96.useCallback)(
     async (item) => {
       const embedCode = getEmbedCode(item.id);
       try {
@@ -37096,7 +37106,7 @@ function useFormItemActions() {
     },
     [createErrorNotice, createSuccessNotice]
   );
-  const copyShortcode = (0, import_element95.useCallback)(
+  const copyShortcode = (0, import_element96.useCallback)(
     async (item) => {
       const shortcode = getShortcode(item.id);
       try {
@@ -37112,7 +37122,7 @@ function useFormItemActions() {
     },
     [createErrorNotice, createSuccessNotice]
   );
-  const invalidateListQuery = (0, import_element95.useCallback)(
+  const invalidateListQuery = (0, import_element96.useCallback)(
     (query) => {
       invalidateResolution("getEntityRecords", ["postType", FORM_POST_TYPE, query]);
       invalidateResolution("getEntityRecords", [
@@ -37123,7 +37133,7 @@ function useFormItemActions() {
     },
     [invalidateResolution]
   );
-  const updateStatus = (0, import_element95.useCallback)(
+  const updateStatus = (0, import_element96.useCallback)(
     async (items, nextStatus, options = {}) => {
       if (isUpdatingStatusRef.current || !items?.length) {
         return;
@@ -37233,13 +37243,13 @@ function useFormItemActions() {
     },
     [createErrorNotice, createSuccessNotice, invalidateListQuery, saveEntityRecord]
   );
-  const publishForms = (0, import_element95.useCallback)(
+  const publishForms = (0, import_element96.useCallback)(
     async (items, options) => {
       await updateStatus(items, "publish", options);
     },
     [updateStatus]
   );
-  const setFormsToDraft = (0, import_element95.useCallback)(
+  const setFormsToDraft = (0, import_element96.useCallback)(
     async (items, options) => {
       await updateStatus(items, "draft", options);
     },
@@ -37271,7 +37281,7 @@ function usePageHeaderDetails(props) {
   } = props;
   const adminUrl = useConfigValue("adminUrl") || "";
   const statusView = props.statusView ?? "inbox";
-  const sourceIdNumber = (0, import_element96.useMemo)(() => {
+  const sourceIdNumber = (0, import_element97.useMemo)(() => {
     const value = sourceId;
     const numberValue = typeof value === "number" ? value : Number(value);
     return Number.isFinite(numberValue) && numberValue > 0 ? numberValue : null;
@@ -37281,12 +37291,12 @@ function usePageHeaderDetails(props) {
   const isFormsScreen = screen === "forms";
   const isSingleFormScreen = screen === "responses" && sourceIdNumber !== null;
   const { openNewForm } = useCreateForm();
-  const [isCreateFormModalOpen, setIsCreateFormModalOpen] = (0, import_element96.useState)(false);
-  const handleCreateFormClick = (0, import_element96.useCallback)(() => {
+  const [isCreateFormModalOpen, setIsCreateFormModalOpen] = (0, import_element97.useState)(false);
+  const handleCreateFormClick = (0, import_element97.useCallback)(() => {
     setIsCreateFormModalOpen(true);
   }, []);
-  const closeCreateFormModal = (0, import_element96.useCallback)(() => setIsCreateFormModalOpen(false), []);
-  const handleCreateFormSave = (0, import_element96.useCallback)(
+  const closeCreateFormModal = (0, import_element97.useCallback)(() => setIsCreateFormModalOpen(false), []);
+  const handleCreateFormSave = (0, import_element97.useCallback)(
     async (formName) => {
       await openNewForm({ formTitle: formName });
     },
@@ -37304,12 +37314,12 @@ function usePageHeaderDetails(props) {
   const hasResponses = !isLoadingData && totalItems > 0;
   const emptySpam = useEmptySpam();
   const emptyTrash = useEmptyTrash();
-  const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element96.useState)(false);
-  const permanentDeleteItemRef = (0, import_element96.useRef)(null);
-  const [renameFormItem, setRenameFormItem] = (0, import_element96.useState)(
+  const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element97.useState)(false);
+  const permanentDeleteItemRef = (0, import_element97.useRef)(null);
+  const [renameFormItem, setRenameFormItem] = (0, import_element97.useState)(
     null
   );
-  const renameRetryRef = (0, import_element96.useRef)(
+  const renameRetryRef = (0, import_element97.useRef)(
     null
   );
   const { saveEntityRecord, deleteEntityRecord } = (0, import_data33.useDispatch)(import_core_data6.store);
@@ -37329,15 +37339,15 @@ function usePageHeaderDetails(props) {
     },
     [sourceIdNumber]
   );
-  const formTitle = (0, import_element96.useMemo)(() => {
+  const formTitle = (0, import_element97.useMemo)(() => {
     const rendered = formRecord?.title?.rendered || "";
     return (0, import_html_entities4.decodeEntities)(rendered);
   }, [formRecord?.title?.rendered]);
-  const closeRenameModal = (0, import_element96.useCallback)(() => {
+  const closeRenameModal = (0, import_element97.useCallback)(() => {
     setRenameFormItem(null);
     renameRetryRef.current = null;
   }, []);
-  const handleRename = (0, import_element96.useCallback)(
+  const handleRename = (0, import_element97.useCallback)(
     async (newTitle) => {
       if (!renameFormItem) {
         return;
@@ -37374,7 +37384,7 @@ function usePageHeaderDetails(props) {
     },
     [renameFormItem, saveEntityRecord, createSuccessNotice, createErrorNotice]
   );
-  const trashForm = (0, import_element96.useCallback)(
+  const trashForm = (0, import_element97.useCallback)(
     async (item) => {
       const previousStatus = formRecord?.status || "draft";
       try {
@@ -37429,7 +37439,7 @@ function usePageHeaderDetails(props) {
       navigate
     ]
   );
-  const restoreForm = (0, import_element96.useCallback)(
+  const restoreForm = (0, import_element97.useCallback)(
     async (item) => {
       try {
         await saveEntityRecord(
@@ -37451,15 +37461,15 @@ function usePageHeaderDetails(props) {
     },
     [saveEntityRecord, invalidateFormStatusCounts2, createSuccessNotice, createErrorNotice]
   );
-  const openPermanentDeleteConfirm = (0, import_element96.useCallback)((item) => {
+  const openPermanentDeleteConfirm = (0, import_element97.useCallback)((item) => {
     permanentDeleteItemRef.current = item;
     setIsPermanentDeleteConfirmOpen(true);
   }, []);
-  const closePermanentDeleteConfirm = (0, import_element96.useCallback)(() => {
+  const closePermanentDeleteConfirm = (0, import_element97.useCallback)(() => {
     setIsPermanentDeleteConfirmOpen(false);
     permanentDeleteItemRef.current = null;
   }, []);
-  const confirmPermanentDelete = (0, import_element96.useCallback)(async () => {
+  const confirmPermanentDelete = (0, import_element97.useCallback)(async () => {
     const item = permanentDeleteItemRef.current;
     if (!item) {
       return;
@@ -37494,7 +37504,7 @@ function usePageHeaderDetails(props) {
   ]);
   const formStatus = formRecord?.status;
   const statusLabel = formStatus ? getFormStatusLabel(formStatus) : void 0;
-  const badges = (0, import_element96.useMemo)(() => {
+  const badges = (0, import_element97.useMemo)(() => {
     if (!isSingleFormScreen || !formStatus || formStatus === "publish") {
       return void 0;
     }
@@ -37509,7 +37519,12 @@ function usePageHeaderDetails(props) {
     setFormsToDraft,
     isUpdatingStatus
   } = useFormItemActions();
-  const formItemControls = (0, import_element96.useMemo)(() => {
+  const trackAction = (0, import_element97.useCallback)((eventName, source = "form_header") => {
+    analytics_default.tracks.recordEvent(eventName, {
+      source
+    });
+  }, []);
+  const formItemControls = (0, import_element97.useMemo)(() => {
     if (!sourceIdNumber) {
       return [];
     }
@@ -37518,29 +37533,44 @@ function usePageHeaderDetails(props) {
       return [
         {
           title: (0, import_i18n86.__)("Restore", "jetpack-forms"),
-          onClick: () => restoreForm(formItem)
+          onClick: () => {
+            trackAction("jetpack_forms_form_restore_click");
+            restoreForm(formItem);
+          }
         },
         {
           title: (0, import_i18n86.__)("Delete permanently", "jetpack-forms"),
-          onClick: () => openPermanentDeleteConfirm(formItem)
+          onClick: () => {
+            trackAction("jetpack_forms_form_delete_permanently_click");
+            openPermanentDeleteConfirm(formItem);
+          }
         }
       ];
     }
     const controls = [
       {
         title: (0, import_i18n86.__)("Preview", "jetpack-forms"),
-        onClick: () => previewForm(formItem)
+        onClick: () => {
+          trackAction("jetpack_forms_form_preview_click");
+          previewForm(formItem);
+        }
       }
     ];
     if (navigator?.clipboard) {
       controls.push(
         {
           title: (0, import_i18n86.__)("Copy embed", "jetpack-forms"),
-          onClick: () => copyEmbed(formItem)
+          onClick: () => {
+            trackAction("jetpack_forms_form_copy_embed_click");
+            copyEmbed(formItem);
+          }
         },
         {
           title: (0, import_i18n86.__)("Copy shortcode", "jetpack-forms"),
-          onClick: () => copyShortcode(formItem)
+          onClick: () => {
+            trackAction("jetpack_forms_form_copy_shortcode_click");
+            copyShortcode(formItem);
+          }
         }
       );
     }
@@ -37549,6 +37579,7 @@ function usePageHeaderDetails(props) {
         title: (0, import_i18n86.__)("Unpublish", "jetpack-forms"),
         onClick: () => {
           if (!isUpdatingStatus) {
+            trackAction("jetpack_forms_form_unpublish_click");
             setFormsToDraft([formItem]);
           }
         }
@@ -37558,6 +37589,7 @@ function usePageHeaderDetails(props) {
         title: (0, import_i18n86.__)("Publish", "jetpack-forms"),
         onClick: () => {
           if (!isUpdatingStatus) {
+            trackAction("jetpack_forms_form_publish_click");
             publishForms([formItem]);
           }
         }
@@ -37566,15 +37598,24 @@ function usePageHeaderDetails(props) {
     controls.push(
       {
         title: (0, import_i18n86.__)("Rename", "jetpack-forms"),
-        onClick: () => setRenameFormItem(formItem)
+        onClick: () => {
+          trackAction("jetpack_forms_form_rename_click");
+          setRenameFormItem(formItem);
+        }
       },
       {
         title: (0, import_i18n86.__)("Duplicate", "jetpack-forms"),
-        onClick: () => duplicateForm(formItem)
+        onClick: () => {
+          trackAction("jetpack_forms_form_duplicate_click");
+          duplicateForm(formItem);
+        }
       },
       {
         title: (0, import_i18n86.__)("Trash", "jetpack-forms"),
-        onClick: () => trashForm(formItem)
+        onClick: () => {
+          trackAction("jetpack_forms_form_trash_click");
+          trashForm(formItem);
+        }
       }
     );
     return controls;
@@ -37591,25 +37632,26 @@ function usePageHeaderDetails(props) {
     publishForms,
     previewForm,
     setFormsToDraft,
-    sourceIdNumber
+    sourceIdNumber,
+    trackAction
   ]);
   const WrapWithJetpackLogo = ({ children }) => /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)(Stack, { align: "center", gap: "xs", children: [
     /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
     children
   ] });
-  const ariaLabel = (0, import_element96.useMemo)(() => {
+  const ariaLabel = (0, import_element97.useMemo)(() => {
     if (isSingleFormScreen) {
       return formTitle || (0, import_i18n86.__)("Form responses", "jetpack-forms");
     }
     return "Jetpack Forms";
   }, [isSingleFormScreen, formTitle]);
-  const title = (0, import_element96.useMemo)(() => {
+  const title = (0, import_element97.useMemo)(() => {
     if (isSingleFormScreen) {
       return null;
     }
     return /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(WrapWithJetpackLogo, { children: "Forms" });
   }, [isSingleFormScreen]);
-  const breadcrumbs = (0, import_element96.useMemo)(() => {
+  const breadcrumbs = (0, import_element97.useMemo)(() => {
     if (!isSingleFormScreen) {
       return null;
     }
@@ -37623,7 +37665,7 @@ function usePageHeaderDetails(props) {
       }
     ) });
   }, [isSingleFormScreen, formTitle]);
-  const subtitle = (0, import_element96.useMemo)(() => {
+  const subtitle = (0, import_element97.useMemo)(() => {
     if (isFormsScreen) {
       const shortMessage = (0, import_i18n86.__)("View and manage all your forms.", "jetpack-forms");
       const longMessage = (0, import_i18n86.__)("View and manage all your forms in one place.", "jetpack-forms");
@@ -37645,7 +37687,19 @@ function usePageHeaderDetails(props) {
     }
     return (0, import_i18n86.__)("View and manage all your form responses in one place.", "jetpack-forms");
   }, [formTitle, isFormsScreen, isSingleFormScreen, onOpenFormsHelp, hasClassicForms]);
-  const actions2 = (0, import_element96.useMemo)(() => {
+  const trackEditFormClick = (0, import_element97.useCallback)(
+    () => trackAction("jetpack_forms_form_edit_form_click"),
+    [trackAction]
+  );
+  const trackExportClick = (0, import_element97.useCallback)(
+    () => trackAction("jetpack_forms_form_export_click"),
+    [trackAction]
+  );
+  const trackExportClickResponsesList = (0, import_element97.useCallback)(
+    () => trackAction("jetpack_forms_form_export_click", "responses_list"),
+    [trackAction]
+  );
+  const actions2 = (0, import_element97.useMemo)(() => {
     if (isSm) {
       const dropdownControls = [];
       if (isFormsScreen) {
@@ -37663,13 +37717,17 @@ function usePageHeaderDetails(props) {
         if (statusView === "inbox" && sourceIdNumber) {
           dropdownControls.push({
             onClick: () => {
+              trackAction("jetpack_forms_form_edit_form_click");
               window.location.href = getFormEditUrl(sourceIdNumber, adminUrl);
             },
             title: (0, import_i18n86.__)("Edit form", "jetpack-forms")
           });
         }
         dropdownControls.push({
-          onClick: openExportModal,
+          onClick: () => {
+            trackAction("jetpack_forms_form_export_click");
+            openExportModal();
+          },
           title: exportLabel,
           isDisabled: !hasResponses
         });
@@ -37702,7 +37760,10 @@ function usePageHeaderDetails(props) {
           });
         }
         dropdownControls.push({
-          onClick: openExportModal,
+          onClick: () => {
+            trackAction("jetpack_forms_form_export_click", "responses_list");
+            openExportModal();
+          },
           title: exportLabel,
           isDisabled: !hasResponses
         });
@@ -37830,12 +37891,22 @@ function usePageHeaderDetails(props) {
     }
     if (isSingleFormScreen) {
       return [
-        ...sourceIdNumber && formStatus !== "trash" ? [/* @__PURE__ */ (0, import_jsx_runtime169.jsx)(EditFormButton, { formId: sourceIdNumber }, "edit-form")] : [],
+        ...sourceIdNumber && formStatus !== "trash" ? [
+          /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(
+            EditFormButton,
+            {
+              formId: sourceIdNumber,
+              onClick: trackEditFormClick
+            },
+            "edit-form"
+          )
+        ] : [],
         /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(
           button_default,
           {
             isPrimary: statusView === "inbox",
-            showIcon: false
+            showIcon: false,
+            onClick: trackExportClick
           },
           "export"
         ),
@@ -37905,7 +37976,8 @@ function usePageHeaderDetails(props) {
         button_default,
         {
           isPrimary: statusView === "inbox",
-          showIcon: false
+          showIcon: false,
+          onClick: trackExportClickResponsesList
         },
         "export"
       ),
@@ -37956,7 +38028,11 @@ function usePageHeaderDetails(props) {
     isPermanentDeleteConfirmOpen,
     closePermanentDeleteConfirm,
     confirmPermanentDelete,
-    formStatus
+    formStatus,
+    trackAction,
+    trackEditFormClick,
+    trackExportClick,
+    trackExportClickResponsesList
   ]);
   return { ariaLabel, breadcrumbs, title, badges, subtitle, actions: actions2 };
 }
@@ -37982,7 +38058,7 @@ var spam_default = spam;
 
 // src/dashboard/inbox/stage/views.js
 var import_compose16 = __toESM(require_compose(), 1);
-var import_element97 = __toESM(require_element(), 1);
+var import_element98 = __toESM(require_element(), 1);
 var LAYOUT_TABLE2 = "table";
 var defaultView = {
   type: LAYOUT_TABLE2,
@@ -38968,7 +39044,7 @@ function StageInner() {
   const sourceIdValue = searchParams?.sourceId;
   const sourceIdNumber = typeof sourceIdValue === "number" ? sourceIdValue : Number(sourceIdValue);
   const isSingleFormView = Number.isFinite(sourceIdNumber) && sourceIdNumber > 0;
-  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element98.useState)(false);
+  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element99.useState)(false);
   const integrations = (0, import_data34.useSelect)(
     (select3) => select3(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
@@ -38976,11 +39052,11 @@ function StageInner() {
   const { refreshIntegrations: refreshIntegrations2 } = (0, import_data34.useDispatch)(INTEGRATIONS_STORE);
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
-  const [view, setView] = (0, import_element98.useState)(() => ({
+  const [view, setView] = (0, import_element99.useState)(() => ({
     ...DEFAULT_VIEW,
     search: searchParams?.search || ""
   }));
-  const selection = (0, import_element98.useMemo)(() => searchParams?.responseIds ?? [], [searchParams?.responseIds]);
+  const selection = (0, import_element99.useMemo)(() => searchParams?.responseIds ?? [], [searchParams?.responseIds]);
   const {
     setCurrentQuery: setCurrentQuery2,
     setSelectedResponses: setSelectedResponses2,
@@ -38993,13 +39069,13 @@ function StageInner() {
     totalItemsSpam,
     totalItemsTrash
   } = useInboxData({ status: statusView });
-  (0, import_element98.useEffect)(() => {
+  (0, import_element99.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
     if (urlSearch !== view.search) {
       setView((prev) => ({ ...prev, search: urlSearch }));
     }
   }, [searchParams?.search]);
-  const onChangeView = (0, import_element98.useCallback)(
+  const onChangeView = (0, import_element99.useCallback)(
     (newView) => {
       if (!isSingleFormView) {
         const folderValue = newView.filters?.find((filter) => filter.field === "folder")?.value || "inbox";
@@ -39028,7 +39104,7 @@ function StageInner() {
     },
     [isSingleFormView, navigate, searchParams, statusView, view.search]
   );
-  const onChangeSelection = (0, import_element98.useCallback)(
+  const onChangeSelection = (0, import_element99.useCallback)(
     (items) => {
       navigate({
         search: {
@@ -39039,7 +39115,7 @@ function StageInner() {
     },
     [searchParams, navigate]
   );
-  const onStatusChange = (0, import_element98.useCallback)(
+  const onStatusChange = (0, import_element99.useCallback)(
     (nextStatus) => {
       navigate({
         to: "/responses/$view",
@@ -39053,7 +39129,7 @@ function StageInner() {
     },
     [isSingleFormView, navigate, searchParams, sourceIdNumber]
   );
-  (0, import_element98.useEffect)(() => {
+  (0, import_element99.useEffect)(() => {
     if (isSingleFormView) {
       return;
     }
@@ -39072,7 +39148,7 @@ function StageInner() {
       };
     });
   }, [isSingleFormView, setView, statusView]);
-  const queryParams = (0, import_element98.useMemo)(() => {
+  const queryParams = (0, import_element99.useMemo)(() => {
     const queryArgs = {
       status: statusFilter,
       per_page: view.perPage,
@@ -39104,16 +39180,16 @@ function StageInner() {
     });
     return queryArgs;
   }, [isSingleFormView, sourceIdNumber, statusFilter, view]);
-  (0, import_element98.useEffect)(() => {
+  (0, import_element99.useEffect)(() => {
     setCurrentQuery2(queryParams);
   }, [queryParams, setCurrentQuery2]);
-  (0, import_element98.useEffect)(() => {
+  (0, import_element99.useEffect)(() => {
     const validSelectedIds = (selection || []).filter((id) => {
       return records?.some((record) => getItemId(record) === id);
     });
     setSelectedResponses2(validSelectedIds);
   }, [records, selection, setSelectedResponses2]);
-  const fields = (0, import_element98.useMemo)(
+  const fields = (0, import_element99.useMemo)(
     () => [
       ...isSingleFormView ? [] : [
         {
@@ -39273,7 +39349,7 @@ function StageInner() {
     ],
     [filterOptions, isSingleFormView, totalItemsInbox, totalItemsSpam, totalItemsTrash]
   );
-  const actions2 = (0, import_element98.useMemo)(
+  const actions2 = (0, import_element99.useMemo)(
     () => getRowActions({
       navigate,
       searchParams,
@@ -39281,17 +39357,17 @@ function StageInner() {
     }),
     [navigate, searchParams, statusView]
   );
-  const paginationInfo = (0, import_element98.useMemo)(
+  const paginationInfo = (0, import_element99.useMemo)(
     () => ({
       totalItems: totalItems || 0,
       totalPages: totalPages || 1
     }),
     [totalItems, totalPages]
   );
-  const handleIntegrations = (0, import_element98.useCallback)(() => {
+  const handleIntegrations = (0, import_element99.useCallback)(() => {
     setIsIntegrationsModalOpen(true);
   }, []);
-  const closeIntegrationsModal = (0, import_element98.useCallback)(() => {
+  const closeIntegrationsModal = (0, import_element99.useCallback)(() => {
     setIsIntegrationsModalOpen(false);
   }, []);
   const {
@@ -39310,7 +39386,7 @@ function StageInner() {
     onOpenIntegrations: handleIntegrations
   });
   const readStatusFilter = view.filters?.find((filter) => filter.field === "read_status")?.value;
-  const onClickItem = (0, import_element98.useCallback)(
+  const onClickItem = (0, import_element99.useCallback)(
     (item) => {
       onChangeSelection([String(item.id)]);
     },
@@ -39397,7 +39473,7 @@ var import_api_fetch12 = __toESM(require_api_fetch());
 var import_components92 = __toESM(require_components());
 var import_core_data10 = __toESM(require_core_data());
 var import_data38 = __toESM(require_data());
-var import_element104 = __toESM(require_element());
+var import_element105 = __toESM(require_element());
 var import_html_entities9 = __toESM(require_html_entities());
 var import_i18n99 = __toESM(require_i18n());
 import { useParams as useParams2, useSearch as useSearch4, useNavigate as useNavigate6 } from "@wordpress/route";
@@ -39406,7 +39482,7 @@ import { useParams as useParams2, useSearch as useSearch4, useNavigate as useNav
 var import_components80 = __toESM(require_components(), 1);
 var import_core_data8 = __toESM(require_core_data(), 1);
 var import_data35 = __toESM(require_data(), 1);
-var import_element99 = __toESM(require_element(), 1);
+var import_element100 = __toESM(require_element(), 1);
 var import_i18n90 = __toESM(require_i18n(), 1);
 var import_notices8 = __toESM(require_notices(), 1);
 
@@ -39467,14 +39543,14 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 // src/dashboard/components/feedback-comments/index.tsx
 var import_jsx_runtime175 = __toESM(require_jsx_runtime(), 1);
 var FeedbackComments = ({ postId }) => {
-  const [newComment, setNewComment] = (0, import_element99.useState)("");
-  const [isSubmitting, setIsSubmitting] = (0, import_element99.useState)(false);
-  const [deletingCommentIds, setDeletingCommentIds] = (0, import_element99.useState)(/* @__PURE__ */ new Set());
-  const [error2, setError] = (0, import_element99.useState)(null);
-  const [page, setPage] = (0, import_element99.useState)(1);
+  const [newComment, setNewComment] = (0, import_element100.useState)("");
+  const [isSubmitting, setIsSubmitting] = (0, import_element100.useState)(false);
+  const [deletingCommentIds, setDeletingCommentIds] = (0, import_element100.useState)(/* @__PURE__ */ new Set());
+  const [error2, setError] = (0, import_element100.useState)(null);
+  const [page, setPage] = (0, import_element100.useState)(1);
   const perPage = 50;
-  const [loadedComments, setLoadedComments] = (0, import_element99.useState)([]);
-  const [clientAddedComments, setClientAddedComments] = (0, import_element99.useState)([]);
+  const [loadedComments, setLoadedComments] = (0, import_element100.useState)([]);
+  const [clientAddedComments, setClientAddedComments] = (0, import_element100.useState)([]);
   const { createSuccessNotice, createErrorNotice } = (0, import_data35.useDispatch)(import_notices8.store);
   const { deleteEntityRecord, saveEntityRecord } = (0, import_data35.useDispatch)(import_core_data8.store);
   const currentUser = (0, import_data35.useSelect)((select3) => {
@@ -39507,13 +39583,13 @@ var FeedbackComments = ({ postId }) => {
     [postId, page]
   );
   const hasMoreComments = page * perPage < (totalComments || 0);
-  (0, import_element99.useEffect)(() => {
+  (0, import_element100.useEffect)(() => {
     setPage(1);
     setLoadedComments([]);
     setClientAddedComments([]);
     setError(null);
   }, [postId]);
-  (0, import_element99.useEffect)(() => {
+  (0, import_element100.useEffect)(() => {
     if (!commentsPage) {
       return;
     }
@@ -39535,16 +39611,16 @@ var FeedbackComments = ({ postId }) => {
       return prev.concat(toAdd);
     });
   }, [commentsPage]);
-  const scrollToBottom = (0, import_element99.useCallback)(() => {
+  const scrollToBottom = (0, import_element100.useCallback)(() => {
     const button = document.querySelector(".jp-forms__feedback-comments-form-button");
     if (button) {
       button.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
   }, []);
-  const handleLoadMore = (0, import_element99.useCallback)(() => {
+  const handleLoadMore = (0, import_element100.useCallback)(() => {
     setPage((prevPage) => prevPage + 1);
   }, []);
-  const handleNewComment = (0, import_element99.useCallback)(async () => {
+  const handleNewComment = (0, import_element100.useCallback)(async () => {
     if (!newComment.trim()) {
       return;
     }
@@ -39589,7 +39665,7 @@ var FeedbackComments = ({ postId }) => {
     scrollToBottom,
     createErrorNotice
   ]);
-  const handleKeyDown = (0, import_element99.useCallback)(
+  const handleKeyDown = (0, import_element100.useCallback)(
     (event) => {
       if (event.key === "Enter" && !event.shiftKey) {
         event.preventDefault();
@@ -39598,7 +39674,7 @@ var FeedbackComments = ({ postId }) => {
     },
     [handleNewComment]
   );
-  const handleDelete = (0, import_element99.useCallback)(
+  const handleDelete = (0, import_element100.useCallback)(
     async (commentId) => {
       setDeletingCommentIds((prev) => {
         const next = new Set(prev);
@@ -39733,7 +39809,7 @@ var import_components83 = __toESM(require_components(), 1);
 // src/dashboard/components/copy-clipboard-button/index.tsx
 var import_components82 = __toESM(require_components(), 1);
 var import_compose17 = __toESM(require_compose(), 1);
-var import_element100 = __toESM(require_element(), 1);
+var import_element101 = __toESM(require_element(), 1);
 var import_i18n92 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/copy-clipboard-button/style.scss
@@ -39751,8 +39827,8 @@ function CopyClipboardButton({
   copyMessage,
   copiedMessage
 }) {
-  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element100.useState)(false);
-  const timeoutIdRef = (0, import_element100.useRef)(null);
+  const [showCopyConfirmation, setShowCopyConfirmation] = (0, import_element101.useState)(false);
+  const timeoutIdRef = (0, import_element101.useRef)(null);
   const ref = (0, import_compose17.useCopyToClipboard)(text, () => {
     setShowCopyConfirmation(true);
     if (timeoutIdRef.current) {
@@ -39762,7 +39838,7 @@ function CopyClipboardButton({
       setShowCopyConfirmation(false);
     }, 4e3);
   });
-  (0, import_element100.useEffect)(() => {
+  (0, import_element101.useEffect)(() => {
     return () => {
       if (timeoutIdRef.current) {
         clearTimeout(timeoutIdRef.current);
@@ -40253,13 +40329,13 @@ var fieldIcons = {
 };
 
 // src/dashboard/components/inspector/response-fields/field-phone/index.tsx
-var import_element101 = __toESM(require_element(), 1);
+var import_element102 = __toESM(require_element(), 1);
 var import_jsx_runtime196 = __toESM(require_jsx_runtime(), 1);
 var FieldPhone = ({ phone }) => {
-  const [displayInfo, setDisplayInfo] = (0, import_element101.useState)({
+  const [displayInfo, setDisplayInfo] = (0, import_element102.useState)({
     formattedNumber: phone
   });
-  (0, import_element101.useEffect)(() => {
+  (0, import_element102.useEffect)(() => {
     let cancelled = false;
     setDisplayInfo({ formattedNumber: phone, countryCode: void 0 });
     const formatPhone = async () => {
@@ -40668,19 +40744,19 @@ var response_meta_default = ResponseMeta;
 // src/dashboard/hooks/use-mark-as-spam.ts
 var import_core_data9 = __toESM(require_core_data(), 1);
 var import_data36 = __toESM(require_data(), 1);
-var import_element102 = __toESM(require_element(), 1);
+var import_element103 = __toESM(require_element(), 1);
 var import_i18n96 = __toESM(require_i18n(), 1);
 var useMarkAsSpam = (response, options) => {
-  const [isConfirmDialogOpen, setIsConfirmDialogOpen] = (0, import_element102.useState)(false);
-  const [isSaving, setIsSaving] = (0, import_element102.useState)(false);
+  const [isConfirmDialogOpen, setIsConfirmDialogOpen] = (0, import_element103.useState)(false);
+  const [isSaving, setIsSaving] = (0, import_element103.useState)(false);
   const { saveEntityRecord } = (0, import_data36.useDispatch)(import_core_data9.store);
   const { invalidateCounts: invalidateCounts2 } = (0, import_data36.useDispatch)(store3);
-  const markAsSpamConfirmationMessage = (0, import_element102.useMemo)(
+  const markAsSpamConfirmationMessage = (0, import_element103.useMemo)(
     () => (0, import_i18n96.__)("Are you sure you want to mark this response as spam?", "jetpack-forms"),
     []
   );
   const { checkParameter, removeParameter, switchToSpam } = options;
-  const onConfirmMarkAsSpam = (0, import_element102.useCallback)(async () => {
+  const onConfirmMarkAsSpam = (0, import_element103.useCallback)(async () => {
     if (!response) {
       return;
     }
@@ -40698,12 +40774,12 @@ var useMarkAsSpam = (response, options) => {
       setIsSaving(false);
     }
   }, [response, saveEntityRecord, invalidateCounts2, switchToSpam]);
-  const hasSpamParameter = (0, import_element102.useMemo)(() => checkParameter(), [checkParameter]);
-  const onCancelMarkAsSpam = (0, import_element102.useCallback)(() => {
+  const hasSpamParameter = (0, import_element103.useMemo)(() => checkParameter(), [checkParameter]);
+  const onCancelMarkAsSpam = (0, import_element103.useCallback)(() => {
     setIsConfirmDialogOpen(false);
     removeParameter();
   }, [removeParameter]);
-  (0, import_element102.useEffect)(() => {
+  (0, import_element103.useEffect)(() => {
     if (hasSpamParameter && response && !["spam", "trash"].includes(response.status)) {
       setIsConfirmDialogOpen(true);
     }
@@ -40720,7 +40796,7 @@ var useMarkAsSpam = (response, options) => {
 // routes/responses/response/actions.tsx
 var import_components90 = __toESM(require_components());
 var import_data37 = __toESM(require_data());
-var import_element103 = __toESM(require_element());
+var import_element104 = __toESM(require_element());
 var import_i18n97 = __toESM(require_i18n());
 import { useSearch as useSearch3, useNavigate as useNavigate5 } from "@wordpress/route";
 var import_jsx_runtime202 = __toESM(require_jsx_runtime());
@@ -40738,57 +40814,57 @@ function ResponseActions({
     deleteAction,
     markAsReadAction,
     markAsUnreadAction
-  } = (0, import_element103.useMemo)(
+  } = (0, import_element104.useMemo)(
     () => getActions({
       navigate,
       searchParams
     }),
     [navigate, searchParams]
   );
-  const [isMarkingAsSpam, setIsMarkingAsSpam] = (0, import_element103.useState)(false);
-  const [isMarkingAsNotSpam, setIsMarkingAsNotSpam] = (0, import_element103.useState)(false);
-  const [isMovingToTrash, setIsMovingToTrash] = (0, import_element103.useState)(false);
-  const [isRestoring, setIsRestoring] = (0, import_element103.useState)(false);
-  const [isDeleting, setIsDeleting] = (0, import_element103.useState)(false);
-  const [isTogglingReadStatus, setIsTogglingReadStatus] = (0, import_element103.useState)(false);
+  const [isMarkingAsSpam, setIsMarkingAsSpam] = (0, import_element104.useState)(false);
+  const [isMarkingAsNotSpam, setIsMarkingAsNotSpam] = (0, import_element104.useState)(false);
+  const [isMovingToTrash, setIsMovingToTrash] = (0, import_element104.useState)(false);
+  const [isRestoring, setIsRestoring] = (0, import_element104.useState)(false);
+  const [isDeleting, setIsDeleting] = (0, import_element104.useState)(false);
+  const [isTogglingReadStatus, setIsTogglingReadStatus] = (0, import_element104.useState)(false);
   const registry = (0, import_data37.useRegistry)();
-  const handleMarkAsSpam = (0, import_element103.useCallback)(async () => {
+  const handleMarkAsSpam = (0, import_element104.useCallback)(async () => {
     onActionComplete?.(response);
     setIsMarkingAsSpam(true);
     await markAsSpamAction.callback?.([response], { registry });
     setIsMarkingAsSpam(false);
   }, [onActionComplete, response, markAsSpamAction, registry]);
-  const handleMarkAsNotSpam = (0, import_element103.useCallback)(async () => {
+  const handleMarkAsNotSpam = (0, import_element104.useCallback)(async () => {
     onActionComplete?.(response);
     setIsMarkingAsNotSpam(true);
     await markAsNotSpamAction?.callback?.([response], { registry });
     setIsMarkingAsNotSpam(false);
   }, [onActionComplete, response, markAsNotSpamAction, registry]);
-  const handleMoveToTrash = (0, import_element103.useCallback)(async () => {
+  const handleMoveToTrash = (0, import_element104.useCallback)(async () => {
     onActionComplete?.(response);
     setIsMovingToTrash(true);
     await moveToTrashAction?.callback?.([response], { registry });
     setIsMovingToTrash(false);
   }, [onActionComplete, response, moveToTrashAction, registry]);
-  const handleRestore = (0, import_element103.useCallback)(async () => {
+  const handleRestore = (0, import_element104.useCallback)(async () => {
     onActionComplete?.(response);
     setIsRestoring(true);
     await restoreAction?.callback?.([response], { registry });
     setIsRestoring(false);
   }, [onActionComplete, response, restoreAction, registry]);
-  const handleDelete = (0, import_element103.useCallback)(async () => {
+  const handleDelete = (0, import_element104.useCallback)(async () => {
     onActionComplete?.(response);
     setIsDeleting(true);
     await deleteAction?.callback?.([response], { registry });
     setIsDeleting(false);
   }, [onActionComplete, response, deleteAction, registry]);
-  const handleMarkAsRead = (0, import_element103.useCallback)(async () => {
+  const handleMarkAsRead = (0, import_element104.useCallback)(async () => {
     setIsTogglingReadStatus(true);
     await markAsReadAction?.callback?.([response], { registry });
     setIsTogglingReadStatus(false);
     onActionComplete?.({ ...response, is_unread: false });
   }, [onActionComplete, response, markAsReadAction, registry]);
-  const handleMarkAsUnread = (0, import_element103.useCallback)(async () => {
+  const handleMarkAsUnread = (0, import_element104.useCallback)(async () => {
     setIsTogglingReadStatus(true);
     await markAsUnreadAction?.callback?.([response], { registry });
     setIsTogglingReadStatus(false);
@@ -40912,9 +40988,9 @@ function SingleResponseView({
   onNavigate,
   onClose
 }) {
-  const [previewFile, setPreviewFile] = (0, import_element104.useState)(null);
-  const [isImageLoading, setIsImageLoading] = (0, import_element104.useState)(true);
-  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element104.useState)(null);
+  const [previewFile, setPreviewFile] = (0, import_element105.useState)(null);
+  const [isImageLoading, setIsImageLoading] = (0, import_element105.useState)(true);
+  const [hasMarkedAsRead, setHasMarkedAsRead] = (0, import_element105.useState)(null);
   const emptyTrashDays = useConfigValue("emptyTrashDays") ?? 0;
   const isNotesEnabled = useConfigValue("isNotesEnabled") ?? false;
   const { editEntityRecord } = (0, import_data38.useDispatch)(import_core_data10.store);
@@ -40969,17 +41045,17 @@ function SingleResponseView({
   const currentIndex = allResponseIds.indexOf(responseId);
   const hasNext = currentIndex < allResponseIds.length - 1;
   const hasPrevious = currentIndex > 0;
-  const handleNext = (0, import_element104.useCallback)(() => {
+  const handleNext = (0, import_element105.useCallback)(() => {
     if (hasNext) {
       onNavigate(allResponseIds[currentIndex + 1]);
     }
   }, [hasNext, allResponseIds, currentIndex, onNavigate]);
-  const handlePrevious = (0, import_element104.useCallback)(() => {
+  const handlePrevious = (0, import_element105.useCallback)(() => {
     if (hasPrevious) {
       onNavigate(allResponseIds[currentIndex - 1]);
     }
   }, [hasPrevious, allResponseIds, currentIndex, onNavigate]);
-  (0, import_element104.useEffect)(() => {
+  (0, import_element105.useEffect)(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowUp" && hasPrevious) {
         event.preventDefault();
@@ -40994,7 +41070,7 @@ function SingleResponseView({
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [hasNext, hasPrevious, handleNext, handlePrevious, onClose]);
-  (0, import_element104.useEffect)(() => {
+  (0, import_element105.useEffect)(() => {
     if (!response || !response.id || !response.is_unread) {
       return;
     }
@@ -41015,21 +41091,21 @@ function SingleResponseView({
       });
     });
   }, [response, editEntityRecord, hasMarkedAsRead]);
-  const handleFilePreview = (0, import_element104.useCallback)(
+  const handleFilePreview = (0, import_element105.useCallback)(
     (file) => () => {
       setIsImageLoading(true);
       setPreviewFile(file);
     },
     []
   );
-  const closePreviewModal = (0, import_element104.useCallback)(() => {
+  const closePreviewModal = (0, import_element105.useCallback)(() => {
     setPreviewFile(null);
     setIsImageLoading(true);
   }, []);
-  const handleImageLoaded = (0, import_element104.useCallback)(() => {
+  const handleImageLoaded = (0, import_element105.useCallback)(() => {
     setIsImageLoading(false);
   }, []);
-  const handleActionComplete = (0, import_element104.useCallback)(
+  const handleActionComplete = (0, import_element105.useCallback)(
     (updatedItem) => {
       if (!updatedItem) {
         if (hasNext) {
@@ -41115,7 +41191,7 @@ function Response() {
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const { records } = useInboxData({ status: statusView });
   const allRecordIds = records?.map((record) => record.id) ?? [];
-  const handleClose = (0, import_element104.useCallback)(() => {
+  const handleClose = (0, import_element105.useCallback)(() => {
     navigate({
       search: {
         ...searchParams,
@@ -41123,7 +41199,7 @@ function Response() {
       }
     });
   }, [navigate, searchParams]);
-  const handleNavigate = (0, import_element104.useCallback)(
+  const handleNavigate = (0, import_element105.useCallback)(
     (id) => {
       navigate({
         search: {
