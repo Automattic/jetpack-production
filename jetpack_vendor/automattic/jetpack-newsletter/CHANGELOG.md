@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Enable wp-admin newsletter settings by default by changing the jetpack_wp_admin_newsletter_settings_enabled filter default to true. Defer the expose_to_users() check in init_hooks() to avoid timing issues with late-registered filters.
 - Update DataViews dependency.
 - Update legacy Node calls.
 
