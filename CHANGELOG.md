@@ -8,6 +8,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: Remove duplicate display of form blocks under the "Jetpack" block inserter section; form blocks now only appear under the "Forms" category.
+- Newsletter Email Status: Fix access control for the newsletter email sent status endpoint.
+- Newsletter Email Status: Fix IDOR vulnerability by adding per-post access control to the newsletter email sent status endpoint.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Brute Force Protection: Update error when module can't be activated.
