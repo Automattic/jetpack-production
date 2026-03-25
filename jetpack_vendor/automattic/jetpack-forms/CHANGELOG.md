@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Remove reduntant de-registration of Jetpack collection in forms editor.
 - Update DataViews dependency.
+- Update legacy Node calls.
 
 ### Fixed
 - Fix phone field initialization failure when script module loads after DOMContentLoaded.
