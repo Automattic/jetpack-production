@@ -1863,39 +1863,39 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php'
 	),
 	'Automattic\\Woocommerce_Analytics' => array(
-		'version' => '0.16.1.0',
+		'version' => '0.16.2.0-alpha1774428529',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woocommerce-analytics.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\Consent_Manager' => array(
-		'version' => '0.16.1.0',
+		'version' => '0.16.2.0-alpha1774428529',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-consent-manager.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\Features' => array(
-		'version' => '0.16.1.0',
+		'version' => '0.16.2.0-alpha1774428529',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-features.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\My_Account' => array(
-		'version' => '0.16.1.0',
+		'version' => '0.16.2.0-alpha1774428529',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-my-account.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\Pixel_Builder' => array(
-		'version' => '0.16.1.0',
+		'version' => '0.16.2.0-alpha1774428529',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-pixel-builder.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\Universal' => array(
-		'version' => '0.16.1.0',
+		'version' => '0.16.2.0-alpha1774428529',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-universal.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\WC_Analytics_Tracking' => array(
-		'version' => '0.16.1.0',
+		'version' => '0.16.2.0-alpha1774428529',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-wc-analytics-tracking.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\WC_Analytics_Tracking_Proxy' => array(
-		'version' => '0.16.1.0',
+		'version' => '0.16.2.0-alpha1774428529',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/API/class-wc-analytics-tracking-proxy.php'
 	),
 	'Automattic\\Woocommerce_Analytics\\Woo_Analytics_Trait' => array(
-		'version' => '0.16.1.0',
+		'version' => '0.16.2.0-alpha1774428529',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woo-analytics-trait.php'
 	),
 	'Container' => array(
@@ -2023,7 +2023,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/videopress-divi/class-videopress-divi-module.php'
 	),
 	'WooCommerceAnalyticsProxySpeed' => array(
-		'version' => '0.16.1.0',
+		'version' => '0.16.2.0-alpha1774428529',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/mu-plugin/woocommerce-analytics-proxy-speed-module-template.php'
 	),
 );
