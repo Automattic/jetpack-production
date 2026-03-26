@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Unify admin dashboard page header with admin-ui components
+- Update package dependencies.
 
 ## [0.35.6] - 2026-03-23
 ### Changed

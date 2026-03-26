@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update DataViews dependency.
+- Update package dependencies.
 
 ## 0.4.23 - 2026-03-23
 ### Changed

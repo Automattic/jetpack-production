@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update DataViews dependency.
 - Update Newsletter manage URL to default to new wp-admin settings page.
+- Update package dependencies.
 
 ### Fixed
 - Suppress backup failure and scan threat notifications on multisite installations where these products are not supported.

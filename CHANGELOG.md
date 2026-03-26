@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Brute Force Protection: Update error when module can't be activated.
 - Newsletter: Default the jetpack_wp_admin_newsletter_settings_enabled filter to true and hide the old settings tab when the new settings page is active.
+- Update package dependencies.
 
 ## 15.7-a.5 - 2026-03-23
 ### Enhancements

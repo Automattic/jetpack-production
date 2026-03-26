@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update DataViews dependency.
+- Update package dependencies.
 
 ### Removed
 - Remove unused components.
