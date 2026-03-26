@@ -33427,7 +33427,7 @@ var EmptyResponses = ({
 };
 var empty_responses_default = EmptyResponses;
 
-// ../../../node_modules/.pnpm/@gravatar-com+hovercards@0.15.0/node_modules/@gravatar-com/hovercards/dist/index.mjs
+// ../../../node_modules/.pnpm/@gravatar-com+hovercards@0.16.0/node_modules/@gravatar-com/hovercards/dist/index.mjs
 var __webpack_require__ = {};
 (() => {
   __webpack_require__.d = (exports, definition) => {
@@ -33882,6 +33882,9 @@ var Hovercards = /* @__PURE__ */ (function() {
         })["catch"](function(code) {
           var message2 = __t(_this3._i18n, "Sorry, we are unable to load this Gravatar profile.");
           switch (code) {
+            case 403:
+              message2 = __t(_this3._i18n, "This profile is private.");
+              break;
             case 404:
               message2 = __t(_this3._i18n, "Gravatar not found.");
               break;
@@ -34053,7 +34056,7 @@ Hovercards.createHovercardError = function(avatarUrl, message2, _temp6) {
 };
 var __webpack_exports__Hovercards = __webpack_exports__.S;
 
-// ../../../node_modules/.pnpm/@gravatar-com+hovercards@0.15.0/node_modules/@gravatar-com/hovercards/dist/style.css
+// ../../../node_modules/.pnpm/@gravatar-com+hovercards@0.16.0/node_modules/@gravatar-com/hovercards/dist/style.css
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='7b5ece90c6']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "7b5ece90c6");
