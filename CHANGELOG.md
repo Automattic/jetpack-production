@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Add 'note' to the default whitelisted comment types for Sync.
+
 ### Bug fixes
 - Forms: Remove duplicate display of form blocks under the "Jetpack" block inserter section; form blocks now only appear under the "Forms" category.
 - Newsletter Email Status: Fix access control for the newsletter email sent status endpoint.
