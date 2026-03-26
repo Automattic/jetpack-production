@@ -62,7 +62,7 @@
 		"antecedent/patchwork": "^2.2",
 		"automattic/jetpack-changelogger": "^6.0.14",
 		"automattic/patchwork-redefine-exit": "^2.0.9",
-		"automattic/phpunit-select-config": "^1.0.3",
+		"automattic/phpunit-select-config": "^1.0.4-alpha",
 		"yoast/phpunit-polyfills": "^4.0.0"
 	},
 	"scripts": {
