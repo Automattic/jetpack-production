@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add 'note' to the default whitelisted comment types and centralize the list in the Defaults class.
 
+### Fixed
+- Users: Use the effective role when the role-change payload is empty, and avoid syncing empty roles.
+
 ## [4.33.0] - 2026-03-23
 ### Added
 - Add a filter to customize the actor. [#47634]
