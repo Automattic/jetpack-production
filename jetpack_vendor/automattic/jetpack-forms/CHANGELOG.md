@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Security
 - Gravatar: Do not include email or IP address in Gravatar image URL to prevent PII leakage to third parties.
+- Improved form submission validation.
 
 ### Added
 - Forms Dashboard: Add tracking events for form-level actions (preview, copy embed, copy shortcode, duplicate, trash, restore, delete, rename, publish/unpublish, edit, view responses)
