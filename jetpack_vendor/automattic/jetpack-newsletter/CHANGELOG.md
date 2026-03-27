@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- avoid fatals from newsletter settings for disconnected jetpack errors
 - Move admin notices and JITMs below the page header instead of rendering inside it
 
 ## [0.6.2] - 2026-03-23
