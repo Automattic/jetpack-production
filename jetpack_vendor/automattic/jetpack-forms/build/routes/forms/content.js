@@ -565,7 +565,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
             "The result of getSnapshot should be cached to avoid an infinite loop"
           ), didWarnUncachedGetSnapshot = true);
         }
-        cachedValue = useState55({
+        cachedValue = useState56({
           inst: { value, getSnapshot }
         });
         var inst = cachedValue[0].inst, forceUpdate = cachedValue[1];
@@ -603,7 +603,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return getSnapshot();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React35 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState55 = React35.useState, useEffect38 = React35.useEffect, useLayoutEffect4 = React35.useLayoutEffect, useDebugValue = React35.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      var React35 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState56 = React35.useState, useEffect38 = React35.useEffect, useLayoutEffect4 = React35.useLayoutEffect, useDebugValue = React35.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
       exports.useSyncExternalStore = void 0 !== React35.useSyncExternalStore ? React35.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
@@ -640,13 +640,6 @@ var require_private_apis = __commonJS({
 var require_compose = __commonJS({
   "package-external:@wordpress/compose"(exports, module) {
     module.exports = window.wp.compose;
-  }
-});
-
-// package-external:@wordpress/core-data
-var require_core_data = __commonJS({
-  "package-external:@wordpress/core-data"(exports, module) {
-    module.exports = window.wp.coreData;
   }
 });
 
@@ -1206,13 +1199,6 @@ var require_es6 = __commonJS({
 var require_warning = __commonJS({
   "package-external:@wordpress/warning"(exports, module) {
     module.exports = window.wp.warning;
-  }
-});
-
-// package-external:@wordpress/notices
-var require_notices = __commonJS({
-  "package-external:@wordpress/notices"(exports, module) {
-    module.exports = window.wp.notices;
   }
 });
 
@@ -3562,10 +3548,24 @@ var require_notice_outline = __commonJS({
   }
 });
 
+// package-external:@wordpress/notices
+var require_notices = __commonJS({
+  "package-external:@wordpress/notices"(exports, module) {
+    module.exports = window.wp.notices;
+  }
+});
+
 // package-external:@wordpress/url
 var require_url = __commonJS({
   "package-external:@wordpress/url"(exports, module) {
     module.exports = window.wp.url;
+  }
+});
+
+// package-external:@wordpress/core-data
+var require_core_data = __commonJS({
+  "package-external:@wordpress/core-data"(exports, module) {
+    module.exports = window.wp.coreData;
   }
 });
 
@@ -8093,8 +8093,7 @@ var page_default = Page;
 
 // routes/forms/stage.tsx
 var import_components78 = __toESM(require_components());
-var import_core_data7 = __toESM(require_core_data());
-var import_data36 = __toESM(require_data());
+var import_data37 = __toESM(require_data());
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@16.26.1/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
 var import_element62 = __toESM(require_element(), 1);
@@ -23314,9 +23313,8 @@ var dataviews_default = DataViewsSubComponents;
 
 // routes/forms/stage.tsx
 var import_date10 = __toESM(require_date());
-var import_element99 = __toESM(require_element());
-var import_i18n88 = __toESM(require_i18n());
-var import_notices8 = __toESM(require_notices());
+var import_element100 = __toESM(require_element());
+var import_i18n89 = __toESM(require_i18n());
 import { useSearch as useSearch2, useNavigate as useNavigate4 } from "@wordpress/route";
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/index.tsx
@@ -25374,47 +25372,15 @@ var IntegrationsModal = ({
 };
 var jetpack_integrations_modal_default = IntegrationsModal;
 
-// src/blocks/shared/util/constants.js
-var import_i18n62 = __toESM(require_i18n(), 1);
-var currentYear = (/* @__PURE__ */ new Date()).getFullYear();
-var DATE_FORMATS = [
-  {
-    value: "mm/dd/yy",
-    /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 12/31/2023). */
-    label: (0, import_i18n62.__)("MM/DD/YYYY", "jetpack-forms"),
-    example: `12/31/${currentYear}`
-  },
-  {
-    value: "dd/mm/yy",
-    /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 31/12/2023). */
-    label: (0, import_i18n62.__)("DD/MM/YYYY", "jetpack-forms"),
-    example: `21/12/${currentYear}`
-  },
-  {
-    value: "yy-mm-dd",
-    /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 2023-12-31). */
-    label: (0, import_i18n62.__)("YYYY-MM-DD", "jetpack-forms"),
-    example: `${currentYear}-12-31`
-  }
-];
-var DATE_FORMAT_OPTIONS = DATE_FORMATS.map(
-  ({ value, label: optionLabel, example }) => ({
-    label: `${optionLabel} (${example})`,
-    value
-  })
-);
-var FORM_POST_TYPE = "jetpack_form";
-var FORM_SOURCE_META_KEY = "_jetpack_forms_source_post_id";
-
 // src/dashboard/components/create-form-button/index.tsx
 var import_components64 = __toESM(require_components(), 1);
 var import_element74 = __toESM(require_element(), 1);
-var import_i18n64 = __toESM(require_i18n(), 1);
+var import_i18n63 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/form-name-modal/index.tsx
 var import_components63 = __toESM(require_components(), 1);
 var import_element73 = __toESM(require_element(), 1);
-var import_i18n63 = __toESM(require_i18n(), 1);
+var import_i18n62 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/form-name-modal/style.scss
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='8415034dc0']")) {
@@ -25455,13 +25421,13 @@ function FormNameModal({
       return;
     }
     setIsSaving(true);
-    const finalName = name.trim() || fallbackName || (0, import_i18n63.__)("Untitled Form", "jetpack-forms");
+    const finalName = name.trim() || fallbackName || (0, import_i18n62.__)("Untitled Form", "jetpack-forms");
     try {
       await onSave(finalName);
+      onClose();
     } catch {
     } finally {
       setIsSaving(false);
-      onClose();
     }
   }, [name, fallbackName, isSaving, onSave, onClose]);
   const onSubmitForm = (0, import_element73.useCallback)(
@@ -25478,7 +25444,7 @@ function FormNameModal({
     /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(
       import_components63.TextControl,
       {
-        label: inputLabel || (0, import_i18n63.__)("Name", "jetpack-forms"),
+        label: inputLabel || (0, import_i18n62.__)("Name", "jetpack-forms"),
         value: name,
         onChange: setName,
         __next40pxDefaultSize: true,
@@ -25487,8 +25453,8 @@ function FormNameModal({
       }
     ),
     /* @__PURE__ */ (0, import_jsx_runtime138.jsxs)("div", { className: "jp-forms-name-modal__buttons", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components63.Button, { variant: "tertiary", onClick: handleClose, disabled: isSaving, children: secondaryButtonLabel || (0, import_i18n63.__)("Cancel", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components63.Button, { "aria-disabled": isSaving, isBusy: isSaving, variant: "primary", type: "submit", children: primaryButtonLabel || (0, import_i18n63.__)("Save", "jetpack-forms") })
+      /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components63.Button, { variant: "tertiary", onClick: handleClose, disabled: isSaving, children: secondaryButtonLabel || (0, import_i18n62.__)("Cancel", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components63.Button, { "aria-disabled": isSaving, isBusy: isSaving, variant: "primary", type: "submit", children: primaryButtonLabel || (0, import_i18n62.__)("Save", "jetpack-forms") })
     ] })
   ] }) });
 }
@@ -25496,7 +25462,7 @@ function FormNameModal({
 // src/dashboard/components/create-form-button/index.tsx
 var import_jsx_runtime139 = __toESM(require_jsx_runtime(), 1);
 function CreateFormButton({
-  label = (0, import_i18n64.__)("Create a form", "jetpack-forms"),
+  label = (0, import_i18n63.__)("Create a form", "jetpack-forms"),
   showPatterns = false,
   variant = "secondary",
   showIcon = true,
@@ -25553,10 +25519,10 @@ function CreateFormButton({
         isOpen: isModalOpen,
         onClose: handleModalClose,
         onSave: handleModalSave,
-        title: (0, import_i18n64.__)("Create form", "jetpack-forms"),
-        primaryButtonLabel: (0, import_i18n64.__)("Create", "jetpack-forms"),
-        secondaryButtonLabel: (0, import_i18n64.__)("Cancel", "jetpack-forms"),
-        placeholder: (0, import_i18n64.__)("Enter form title", "jetpack-forms")
+        title: (0, import_i18n63.__)("Create form", "jetpack-forms"),
+        primaryButtonLabel: (0, import_i18n63.__)("Create", "jetpack-forms"),
+        secondaryButtonLabel: (0, import_i18n63.__)("Cancel", "jetpack-forms"),
+        placeholder: (0, import_i18n63.__)("Enter form title", "jetpack-forms")
       }
     )
   ] });
@@ -25566,7 +25532,7 @@ function CreateFormButton({
 var import_components65 = __toESM(require_components(), 1);
 var import_data10 = __toESM(require_data(), 1);
 var import_element75 = __toESM(require_element(), 1);
-var import_i18n65 = __toESM(require_i18n(), 1);
+var import_i18n64 = __toESM(require_i18n(), 1);
 
 // src/store/integrations/index.ts
 var import_data9 = __toESM(require_data(), 1);
@@ -25726,8 +25692,8 @@ var EmptyWrapper = ({ heading = "", body = "", actions: actions2 = null }) => /*
 var NoResults = () => /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
   EmptyWrapper,
   {
-    heading: (0, import_i18n65.__)("No results found", "jetpack-forms"),
-    body: (0, import_i18n65.__)(
+    heading: (0, import_i18n64.__)("No results found", "jetpack-forms"),
+    body: (0, import_i18n64.__)(
       "Try adjusting your search or filters to find what you're looking for.",
       "jetpack-forms"
     )
@@ -25735,7 +25701,7 @@ var NoResults = () => /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
 );
 
 // src/dashboard/constants.ts
-var import_i18n66 = __toESM(require_i18n(), 1);
+var import_i18n65 = __toESM(require_i18n(), 1);
 var FORM_STATUSES = [
   "all",
   "publish",
@@ -25751,19 +25717,19 @@ var NON_TRASH_FORM_STATUSES = FORM_STATUSES.filter(
 function getFormStatusLabel(status) {
   switch (status) {
     case "all":
-      return (0, import_i18n66.__)("All", "jetpack-forms");
+      return (0, import_i18n65.__)("All", "jetpack-forms");
     case "publish":
-      return (0, import_i18n66.__)("Published", "jetpack-forms");
+      return (0, import_i18n65.__)("Published", "jetpack-forms");
     case "draft":
-      return (0, import_i18n66.__)("Draft", "jetpack-forms");
+      return (0, import_i18n65.__)("Draft", "jetpack-forms");
     case "pending":
-      return (0, import_i18n66.__)("Pending review", "jetpack-forms");
+      return (0, import_i18n65.__)("Pending review", "jetpack-forms");
     case "future":
-      return (0, import_i18n66.__)("Scheduled", "jetpack-forms");
+      return (0, import_i18n65.__)("Scheduled", "jetpack-forms");
     case "private":
-      return (0, import_i18n66.__)("Private", "jetpack-forms");
+      return (0, import_i18n65.__)("Private", "jetpack-forms");
     case "trash":
-      return (0, import_i18n66.__)("Trash", "jetpack-forms");
+      return (0, import_i18n65.__)("Trash", "jetpack-forms");
     default:
       return status;
   }
@@ -25772,7 +25738,7 @@ function getFormStatusLabel(status) {
 // src/dashboard/hooks/use-delete-form.ts
 var import_data13 = __toESM(require_data(), 1);
 var import_element77 = __toESM(require_element(), 1);
-var import_i18n67 = __toESM(require_i18n(), 1);
+var import_i18n66 = __toESM(require_i18n(), 1);
 var import_notices2 = __toESM(require_notices(), 1);
 
 // src/dashboard/store/index.js
@@ -26243,9 +26209,9 @@ function useDeleteForm({
       const restoredCount = promises.filter((p2) => p2.status === "fulfilled").length;
       const failedCount = promises.length - restoredCount;
       if (restoredCount) {
-        const successMessage = restoredCount === 1 ? (0, import_i18n67.__)("Form restored as draft.", "jetpack-forms") : (0, import_i18n67.sprintf)(
+        const successMessage = restoredCount === 1 ? (0, import_i18n66.__)("Form restored as draft.", "jetpack-forms") : (0, import_i18n66.sprintf)(
           /* translators: %d: number of forms. */
-          (0, import_i18n67._n)(
+          (0, import_i18n66._n)(
             "%d form restored as draft.",
             "%d forms restored as draft.",
             restoredCount,
@@ -26260,9 +26226,9 @@ function useDeleteForm({
       }
       if (failedCount) {
         createErrorNotice(
-          (0, import_i18n67.sprintf)(
+          (0, import_i18n66.sprintf)(
             /* translators: %d: number of forms. */
-            (0, import_i18n67._n)(
+            (0, import_i18n66._n)(
               "Could not restore %d form.",
               "Could not restore %d forms.",
               failedCount,
@@ -26372,9 +26338,9 @@ function useDeleteForm({
         const trashedCount = trashedItems.length;
         const failedCount = items.length - trashedCount;
         if (trashedCount) {
-          const successMessage = trashedCount === 1 ? (0, import_i18n67.__)("Form moved to trash.", "jetpack-forms") : (0, import_i18n67.sprintf)(
+          const successMessage = trashedCount === 1 ? (0, import_i18n66.__)("Form moved to trash.", "jetpack-forms") : (0, import_i18n66.sprintf)(
             /* translators: %d: number of forms. */
-            (0, import_i18n67._n)(
+            (0, import_i18n66._n)(
               "%d form moved to trash.",
               "%d forms moved to trash.",
               trashedCount,
@@ -26387,7 +26353,7 @@ function useDeleteForm({
             id: `trash-forms-${Date.now()}`,
             actions: [
               {
-                label: (0, import_i18n67.__)("Undo", "jetpack-forms"),
+                label: (0, import_i18n66.__)("Undo", "jetpack-forms"),
                 onClick: () => void undoTrashForms(trashedItems)
               }
             ]
@@ -26399,9 +26365,9 @@ function useDeleteForm({
         }
         if (failedCount) {
           createErrorNotice(
-            (0, import_i18n67.sprintf)(
+            (0, import_i18n66.sprintf)(
               /* translators: %d: number of forms. */
-              (0, import_i18n67._n)(
+              (0, import_i18n66._n)(
                 "Could not move %d form to trash.",
                 "Could not move %d forms to trash.",
                 failedCount,
@@ -26472,9 +26438,9 @@ function useDeleteForm({
       const deletedCount = promises.filter((p2) => p2.status === "fulfilled").length;
       const failedCount = promises.length - deletedCount;
       if (deletedCount) {
-        const successMessage = deletedCount === 1 ? (0, import_i18n67.__)("Form deleted permanently.", "jetpack-forms") : (0, import_i18n67.sprintf)(
+        const successMessage = deletedCount === 1 ? (0, import_i18n66.__)("Form deleted permanently.", "jetpack-forms") : (0, import_i18n66.sprintf)(
           /* translators: %d: number of forms. */
-          (0, import_i18n67._n)(
+          (0, import_i18n66._n)(
             "%d form deleted permanently.",
             "%d forms deleted permanently.",
             deletedCount,
@@ -26493,9 +26459,9 @@ function useDeleteForm({
       }
       if (failedCount) {
         createErrorNotice(
-          (0, import_i18n67.sprintf)(
+          (0, import_i18n66.sprintf)(
             /* translators: %d: number of forms. */
-            (0, import_i18n67._n)(
+            (0, import_i18n66._n)(
               "Could not permanently delete %d form.",
               "Could not permanently delete %d forms.",
               failedCount,
@@ -26507,7 +26473,7 @@ function useDeleteForm({
         );
       }
     } catch {
-      createErrorNotice((0, import_i18n67.__)("Could not delete forms permanently.", "jetpack-forms"), {
+      createErrorNotice((0, import_i18n66.__)("Could not delete forms permanently.", "jetpack-forms"), {
         type: "snackbar",
         id: `delete-forms-permanently-error-${Date.now()}`
       });
@@ -26667,24 +26633,24 @@ function getFormEditUrl(formId, adminUrl) {
 // src/dashboard/wp-build/components/dataviews-header-row/index.tsx
 var import_data15 = __toESM(require_data(), 1);
 var import_element81 = __toESM(require_element(), 1);
-var import_i18n69 = __toESM(require_i18n(), 1);
+var import_i18n68 = __toESM(require_i18n(), 1);
 import { useNavigate as useNavigate2 } from "@wordpress/route";
 
 // src/dashboard/wp-build/components/inbox-status-toggle/index.tsx
 var import_element80 = __toESM(require_element(), 1);
-var import_i18n68 = __toESM(require_i18n(), 1);
+var import_i18n67 = __toESM(require_i18n(), 1);
 var import_jsx_runtime143 = __toESM(require_jsx_runtime(), 1);
 var getLabel = (status, count) => {
   let label;
   switch (status) {
     case "inbox":
-      label = (0, import_i18n68.__)("Inbox", "jetpack-forms");
+      label = (0, import_i18n67.__)("Inbox", "jetpack-forms");
       break;
     case "spam":
-      label = (0, import_i18n68.__)("Spam", "jetpack-forms");
+      label = (0, import_i18n67.__)("Spam", "jetpack-forms");
       break;
     case "trash":
-      label = (0, import_i18n68._x)("Trash", "noun", "jetpack-forms");
+      label = (0, import_i18n67._x)("Trash", "noun", "jetpack-forms");
       break;
   }
   return /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)("span", { children: [
@@ -26770,11 +26736,11 @@ function DataViewsHeaderRow({
             }
           ) : isCFMEnabled && /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(tabs_exports.Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)(tabs_exports.List, { variant: "minimal", children: [
             /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(tabs_exports.Tab, { value: "forms", children: /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)("span", { children: [
-              (0, import_i18n69.__)("Forms", "jetpack-forms"),
+              (0, import_i18n68.__)("Forms", "jetpack-forms"),
               /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(Badge, { intent: "draft", className: "jp-forms-tabs-count", children: formatNumberCompact(formsCount || 0) })
             ] }) }),
             /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(tabs_exports.Tab, { value: "responses", children: /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)("span", { children: [
-              (0, import_i18n69.__)("Responses", "jetpack-forms"),
+              (0, import_i18n68.__)("Responses", "jetpack-forms"),
               /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(Badge, { intent: "draft", className: "jp-forms-tabs-count", children: formatNumberCompact(responsesInboxCount || 0) })
             ] }) })
           ] }) }) }),
@@ -26795,7 +26761,7 @@ var import_api_fetch7 = __toESM(require_api_fetch(), 1);
 var import_components66 = __toESM(require_components(), 1);
 var import_data16 = __toESM(require_data(), 1);
 var import_element82 = __toESM(require_element(), 1);
-var import_i18n70 = __toESM(require_i18n(), 1);
+var import_i18n69 = __toESM(require_i18n(), 1);
 var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
 function FormsHelpModal({ isOpen, onClose }) {
   const [dontShowAgain, setDontShowAgain] = (0, import_element82.useState)(false);
@@ -26816,17 +26782,17 @@ function FormsHelpModal({ isOpen, onClose }) {
   return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(
     import_components66.Modal,
     {
-      title: (0, import_i18n70.__)("Not seeing all your forms?", "jetpack-forms"),
+      title: (0, import_i18n69.__)("Not seeing all your forms?", "jetpack-forms"),
       onRequestClose: handleClose,
       children: /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)(import_components66.__experimentalVStack, { spacing: "4", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components66.__experimentalText, { children: (0, import_i18n70.__)("The Forms list shows reusable forms, not simple form blocks.", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components66.__experimentalText, { children: (0, import_i18n69.__)("The Forms list shows reusable forms, not simple form blocks.", "jetpack-forms") }),
         /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components66.__experimentalText, { as: "p", weight: "500", children: (0, import_i18n70.__)("To convert a form block to a reusable form:", "jetpack-forms") }),
+          /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components66.__experimentalText, { as: "p", weight: "500", children: (0, import_i18n69.__)("To convert a form block to a reusable form:", "jetpack-forms") }),
           /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)("ol", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n70.__)("Open the page or post where your form block is embedded.", "jetpack-forms") }),
-            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n70.__)("Select the form block.", "jetpack-forms") }),
-            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n70.__)('Click "Edit Form" in the block toolbar to convert it.', "jetpack-forms") }),
-            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n70.__)("Save the page or post.", "jetpack-forms") })
+            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n69.__)("Open the page or post where your form block is embedded.", "jetpack-forms") }),
+            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n69.__)("Select the form block.", "jetpack-forms") }),
+            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n69.__)('Click "Edit Form" in the block toolbar to convert it.', "jetpack-forms") }),
+            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n69.__)("Save the page or post.", "jetpack-forms") })
           ] })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)(import_components66.__experimentalHStack, { justify: "space-between", alignment: "center", children: [
@@ -26834,12 +26800,12 @@ function FormsHelpModal({ isOpen, onClose }) {
             import_components66.CheckboxControl,
             {
               __nextHasNoMarginBottom: true,
-              label: (0, import_i18n70.__)("Don't show this again", "jetpack-forms"),
+              label: (0, import_i18n69.__)("Don't show this again", "jetpack-forms"),
               checked: dontShowAgain,
               onChange: setDontShowAgain
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components66.Button, { variant: "primary", onClick: handleClose, children: (0, import_i18n70.__)("Got it", "jetpack-forms") })
+          /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components66.Button, { variant: "primary", onClick: handleClose, children: (0, import_i18n69.__)("Got it", "jetpack-forms") })
         ] })
       ] })
     }
@@ -26852,6 +26818,38 @@ var import_data18 = __toESM(require_data(), 1);
 var import_element84 = __toESM(require_element(), 1);
 var import_i18n72 = __toESM(require_i18n(), 1);
 var import_notices4 = __toESM(require_notices(), 1);
+
+// src/blocks/shared/util/constants.js
+var import_i18n70 = __toESM(require_i18n(), 1);
+var currentYear = (/* @__PURE__ */ new Date()).getFullYear();
+var DATE_FORMATS = [
+  {
+    value: "mm/dd/yy",
+    /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 12/31/2023). */
+    label: (0, import_i18n70.__)("MM/DD/YYYY", "jetpack-forms"),
+    example: `12/31/${currentYear}`
+  },
+  {
+    value: "dd/mm/yy",
+    /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 31/12/2023). */
+    label: (0, import_i18n70.__)("DD/MM/YYYY", "jetpack-forms"),
+    example: `21/12/${currentYear}`
+  },
+  {
+    value: "yy-mm-dd",
+    /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 2023-12-31). */
+    label: (0, import_i18n70.__)("YYYY-MM-DD", "jetpack-forms"),
+    example: `${currentYear}-12-31`
+  }
+];
+var DATE_FORMAT_OPTIONS = DATE_FORMATS.map(
+  ({ value, label: optionLabel, example }) => ({
+    label: `${optionLabel} (${example})`,
+    value
+  })
+);
+var FORM_POST_TYPE = "jetpack_form";
+var FORM_SOURCE_META_KEY = "_jetpack_forms_source_post_id";
 
 // src/blocks/shared/util/embed-codes.ts
 var getEmbedCode = (postId) => `<!-- wp:jetpack/contact-form {"ref":${postId}} /-->`;
@@ -27491,12 +27489,12 @@ function catchNetworkErrors() {
 
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
 var import_components77 = __toESM(require_components(), 1);
-var import_core_data6 = __toESM(require_core_data(), 1);
-var import_data35 = __toESM(require_data(), 1);
-var import_element98 = __toESM(require_element(), 1);
+var import_core_data7 = __toESM(require_core_data(), 1);
+var import_data36 = __toESM(require_data(), 1);
+var import_element99 = __toESM(require_element(), 1);
 var import_html_entities4 = __toESM(require_html_entities(), 1);
-var import_i18n87 = __toESM(require_i18n(), 1);
-var import_notices7 = __toESM(require_notices(), 1);
+var import_i18n88 = __toESM(require_i18n(), 1);
+var import_notices8 = __toESM(require_notices(), 1);
 import { useNavigate as useNavigate3 } from "@wordpress/route";
 
 // src/dashboard/components/edit-form-button/index.tsx
@@ -29144,85 +29142,21 @@ function ManageIntegrationsButton({ onClick }) {
   return /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components76.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n86.__)("Manage integrations", "jetpack-forms") });
 }
 
-// src/dashboard/wp-build/hooks/use-page-header-details.tsx
-var import_jsx_runtime157 = __toESM(require_jsx_runtime(), 1);
-function usePageHeaderDetails(props) {
-  const {
-    screen,
-    sourceId,
-    hasClassicForms,
-    isIntegrationsEnabled,
-    showDashboardIntegrations,
-    onOpenIntegrations,
-    onOpenFormsHelp
-  } = props;
-  const adminUrl = useConfigValue("adminUrl") || "";
-  const statusView = props.statusView ?? "inbox";
-  const sourceIdNumber = (0, import_element98.useMemo)(() => {
-    const value = sourceId;
-    const numberValue = typeof value === "number" ? value : Number(value);
-    return Number.isFinite(numberValue) && numberValue > 0 ? numberValue : null;
-  }, [sourceId]);
-  const [isSm] = use_breakpoint_match_default("sm");
-  const navigate = useNavigate3();
-  const isFormsScreen = screen === "forms";
-  const isSingleFormScreen = screen === "responses" && sourceIdNumber !== null;
-  const { openNewForm } = useCreateForm();
-  const [isCreateFormModalOpen, setIsCreateFormModalOpen] = (0, import_element98.useState)(false);
-  const handleCreateFormClick = (0, import_element98.useCallback)(() => {
-    setIsCreateFormModalOpen(true);
-  }, []);
-  const closeCreateFormModal = (0, import_element98.useCallback)(() => setIsCreateFormModalOpen(false), []);
-  const handleCreateFormSave = (0, import_element98.useCallback)(
-    async (formName) => {
-      await openNewForm({ formTitle: formName });
-    },
-    [openNewForm]
-  );
-  const {
-    showExportModal,
-    openModal: openExportModal,
-    closeModal: closeExportModal,
-    onExport,
-    autoConnectGdrive,
-    exportLabel
-  } = useExportResponses();
-  const { totalItems, isLoadingData } = useInboxData();
-  const hasResponses = !isLoadingData && totalItems > 0;
-  const emptySpam = useEmptySpam();
-  const emptyTrash = useEmptyTrash();
-  const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element98.useState)(false);
-  const permanentDeleteItemRef = (0, import_element98.useRef)(null);
-  const [renameFormItem, setRenameFormItem] = (0, import_element98.useState)(
-    null
-  );
-  const renameRetryRef = (0, import_element98.useRef)(
-    null
-  );
-  const { saveEntityRecord, deleteEntityRecord } = (0, import_data35.useDispatch)(import_core_data6.store);
+// src/dashboard/wp-build/hooks/use-rename-form.ts
+var import_core_data6 = __toESM(require_core_data(), 1);
+var import_data35 = __toESM(require_data(), 1);
+var import_element98 = __toESM(require_element(), 1);
+var import_i18n87 = __toESM(require_i18n(), 1);
+var import_notices7 = __toESM(require_notices(), 1);
+function useRenameForm() {
+  const [renameFormItem, setRenameFormItem] = (0, import_element98.useState)(null);
+  const { saveEntityRecord } = (0, import_data35.useDispatch)(import_core_data6.store);
   const { createSuccessNotice, createErrorNotice } = (0, import_data35.useDispatch)(import_notices7.store);
-  const { invalidateFormStatusCounts: invalidateFormStatusCounts2 } = (0, import_data35.useDispatch)(store3);
-  const formRecord = (0, import_data35.useSelect)(
-    (select3) => {
-      if (!sourceIdNumber) {
-        return void 0;
-      }
-      const record = select3(import_core_data6.store).getEntityRecord(
-        "postType",
-        "jetpack_form",
-        sourceIdNumber
-      );
-      return record;
-    },
-    [sourceIdNumber]
-  );
-  const formTitle = (0, import_element98.useMemo)(() => {
-    const rendered = formRecord?.title?.rendered || "";
-    return (0, import_html_entities4.decodeEntities)(rendered);
-  }, [formRecord?.title?.rendered]);
+  const openRenameModal = (0, import_element98.useCallback)((item) => {
+    setRenameFormItem(item);
+  }, []);
   const closeRenameModal = (0, import_element98.useCallback)(() => {
     setRenameFormItem(null);
-    renameRetryRef.current = null;
   }, []);
   const handleRename = (0, import_element98.useCallback)(
     async (newTitle) => {
@@ -29240,28 +29174,96 @@ function usePageHeaderDetails(props) {
           { throwOnError: true }
         );
         createSuccessNotice((0, import_i18n87.__)("Form renamed.", "jetpack-forms"), { type: "snackbar" });
-        renameRetryRef.current = null;
       } catch (error2) {
-        const retryItem = renameFormItem;
-        const retryTitle = newTitle;
         createErrorNotice((0, import_i18n87.__)("Failed to rename form.", "jetpack-forms"), {
-          type: "snackbar",
-          actions: [
-            {
-              label: (0, import_i18n87.__)("Retry", "jetpack-forms"),
-              onClick: () => {
-                renameRetryRef.current = { item: retryItem, title: retryTitle };
-                setRenameFormItem(retryItem);
-              }
-            }
-          ]
+          type: "snackbar"
         });
         console.error("Failed to rename form:", error2);
+        throw error2;
       }
     },
     [renameFormItem, saveEntityRecord, createSuccessNotice, createErrorNotice]
   );
-  const trashForm = (0, import_element98.useCallback)(
+  return {
+    renameFormItem,
+    openRenameModal,
+    closeRenameModal,
+    handleRename
+  };
+}
+
+// src/dashboard/wp-build/hooks/use-page-header-details.tsx
+var import_jsx_runtime157 = __toESM(require_jsx_runtime(), 1);
+function usePageHeaderDetails(props) {
+  const {
+    screen,
+    sourceId,
+    hasClassicForms,
+    isIntegrationsEnabled,
+    showDashboardIntegrations,
+    onOpenIntegrations,
+    onOpenFormsHelp
+  } = props;
+  const adminUrl = useConfigValue("adminUrl") || "";
+  const statusView = props.statusView ?? "inbox";
+  const sourceIdNumber = (0, import_element99.useMemo)(() => {
+    const value = sourceId;
+    const numberValue = typeof value === "number" ? value : Number(value);
+    return Number.isFinite(numberValue) && numberValue > 0 ? numberValue : null;
+  }, [sourceId]);
+  const [isSm] = use_breakpoint_match_default("sm");
+  const navigate = useNavigate3();
+  const isFormsScreen = screen === "forms";
+  const isSingleFormScreen = screen === "responses" && sourceIdNumber !== null;
+  const { openNewForm } = useCreateForm();
+  const [isCreateFormModalOpen, setIsCreateFormModalOpen] = (0, import_element99.useState)(false);
+  const handleCreateFormClick = (0, import_element99.useCallback)(() => {
+    setIsCreateFormModalOpen(true);
+  }, []);
+  const closeCreateFormModal = (0, import_element99.useCallback)(() => setIsCreateFormModalOpen(false), []);
+  const handleCreateFormSave = (0, import_element99.useCallback)(
+    async (formName) => {
+      await openNewForm({ formTitle: formName });
+    },
+    [openNewForm]
+  );
+  const {
+    showExportModal,
+    openModal: openExportModal,
+    closeModal: closeExportModal,
+    onExport,
+    autoConnectGdrive,
+    exportLabel
+  } = useExportResponses();
+  const { totalItems, isLoadingData } = useInboxData();
+  const hasResponses = !isLoadingData && totalItems > 0;
+  const emptySpam = useEmptySpam();
+  const emptyTrash = useEmptyTrash();
+  const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element99.useState)(false);
+  const permanentDeleteItemRef = (0, import_element99.useRef)(null);
+  const { renameFormItem, openRenameModal, closeRenameModal, handleRename } = useRenameForm();
+  const { saveEntityRecord, deleteEntityRecord } = (0, import_data36.useDispatch)(import_core_data7.store);
+  const { createSuccessNotice, createErrorNotice } = (0, import_data36.useDispatch)(import_notices8.store);
+  const { invalidateFormStatusCounts: invalidateFormStatusCounts2 } = (0, import_data36.useDispatch)(store3);
+  const formRecord = (0, import_data36.useSelect)(
+    (select3) => {
+      if (!sourceIdNumber) {
+        return void 0;
+      }
+      const record = select3(import_core_data7.store).getEntityRecord(
+        "postType",
+        "jetpack_form",
+        sourceIdNumber
+      );
+      return record;
+    },
+    [sourceIdNumber]
+  );
+  const formTitle = (0, import_element99.useMemo)(() => {
+    const rendered = formRecord?.title?.rendered || "";
+    return (0, import_html_entities4.decodeEntities)(rendered);
+  }, [formRecord?.title?.rendered]);
+  const trashForm = (0, import_element99.useCallback)(
     async (item) => {
       const previousStatus = formRecord?.status || "draft";
       try {
@@ -29273,11 +29275,11 @@ function usePageHeaderDetails(props) {
           { throwOnError: true }
         );
         invalidateFormStatusCounts2();
-        createSuccessNotice((0, import_i18n87.__)("Form moved to trash.", "jetpack-forms"), {
+        createSuccessNotice((0, import_i18n88.__)("Form moved to trash.", "jetpack-forms"), {
           type: "snackbar",
           actions: [
             {
-              label: (0, import_i18n87.__)("Undo", "jetpack-forms"),
+              label: (0, import_i18n88.__)("Undo", "jetpack-forms"),
               onClick: () => {
                 saveEntityRecord(
                   "postType",
@@ -29286,11 +29288,11 @@ function usePageHeaderDetails(props) {
                   { throwOnError: true }
                 ).then(() => {
                   invalidateFormStatusCounts2();
-                  createSuccessNotice((0, import_i18n87.__)("Form restored.", "jetpack-forms"), {
+                  createSuccessNotice((0, import_i18n88.__)("Form restored.", "jetpack-forms"), {
                     type: "snackbar"
                   });
                 }).catch(() => {
-                  createErrorNotice((0, import_i18n87.__)("Could not restore form.", "jetpack-forms"), {
+                  createErrorNotice((0, import_i18n88.__)("Could not restore form.", "jetpack-forms"), {
                     type: "snackbar"
                   });
                 });
@@ -29300,7 +29302,7 @@ function usePageHeaderDetails(props) {
         });
         navigate({ to: "/forms" });
       } catch (error2) {
-        createErrorNotice((0, import_i18n87.__)("Failed to move form to trash.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n88.__)("Failed to move form to trash.", "jetpack-forms"), {
           type: "snackbar"
         });
         console.error("Failed to trash form:", error2);
@@ -29316,7 +29318,7 @@ function usePageHeaderDetails(props) {
       navigate
     ]
   );
-  const restoreForm = (0, import_element98.useCallback)(
+  const restoreForm = (0, import_element99.useCallback)(
     async (item) => {
       try {
         await saveEntityRecord(
@@ -29326,11 +29328,11 @@ function usePageHeaderDetails(props) {
           { throwOnError: true }
         );
         invalidateFormStatusCounts2();
-        createSuccessNotice((0, import_i18n87.__)("Form restored.", "jetpack-forms"), {
+        createSuccessNotice((0, import_i18n88.__)("Form restored.", "jetpack-forms"), {
           type: "snackbar"
         });
       } catch (error2) {
-        createErrorNotice((0, import_i18n87.__)("Could not restore form.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n88.__)("Could not restore form.", "jetpack-forms"), {
           type: "snackbar"
         });
         console.error("Failed to restore form:", error2);
@@ -29338,15 +29340,15 @@ function usePageHeaderDetails(props) {
     },
     [saveEntityRecord, invalidateFormStatusCounts2, createSuccessNotice, createErrorNotice]
   );
-  const openPermanentDeleteConfirm = (0, import_element98.useCallback)((item) => {
+  const openPermanentDeleteConfirm = (0, import_element99.useCallback)((item) => {
     permanentDeleteItemRef.current = item;
     setIsPermanentDeleteConfirmOpen(true);
   }, []);
-  const closePermanentDeleteConfirm = (0, import_element98.useCallback)(() => {
+  const closePermanentDeleteConfirm = (0, import_element99.useCallback)(() => {
     setIsPermanentDeleteConfirmOpen(false);
     permanentDeleteItemRef.current = null;
   }, []);
-  const confirmPermanentDelete = (0, import_element98.useCallback)(async () => {
+  const confirmPermanentDelete = (0, import_element99.useCallback)(async () => {
     const item = permanentDeleteItemRef.current;
     if (!item) {
       return;
@@ -29362,12 +29364,12 @@ function usePageHeaderDetails(props) {
         { throwOnError: true }
       );
       invalidateFormStatusCounts2();
-      createSuccessNotice((0, import_i18n87.__)("Form deleted permanently.", "jetpack-forms"), {
+      createSuccessNotice((0, import_i18n88.__)("Form deleted permanently.", "jetpack-forms"), {
         type: "snackbar"
       });
       navigate({ to: "/forms" });
     } catch (error2) {
-      createErrorNotice((0, import_i18n87.__)("Could not delete form.", "jetpack-forms"), {
+      createErrorNotice((0, import_i18n88.__)("Could not delete form.", "jetpack-forms"), {
         type: "snackbar"
       });
       console.error("Failed to permanently delete form:", error2);
@@ -29381,7 +29383,7 @@ function usePageHeaderDetails(props) {
   ]);
   const formStatus = formRecord?.status;
   const statusLabel = formStatus ? getFormStatusLabel(formStatus) : void 0;
-  const badges = (0, import_element98.useMemo)(() => {
+  const badges = (0, import_element99.useMemo)(() => {
     if (!isSingleFormScreen || !formStatus || formStatus === "publish") {
       return void 0;
     }
@@ -29396,12 +29398,12 @@ function usePageHeaderDetails(props) {
     setFormsToDraft,
     isUpdatingStatus
   } = useFormItemActions();
-  const trackAction = (0, import_element98.useCallback)((eventName, source = "form_header") => {
+  const trackAction = (0, import_element99.useCallback)((eventName, source = "form_header") => {
     analytics_default.tracks.recordEvent(eventName, {
       source
     });
   }, []);
-  const formItemControls = (0, import_element98.useMemo)(() => {
+  const formItemControls = (0, import_element99.useMemo)(() => {
     if (!sourceIdNumber) {
       return [];
     }
@@ -29409,14 +29411,14 @@ function usePageHeaderDetails(props) {
     if (formRecord?.status === "trash") {
       return [
         {
-          title: (0, import_i18n87.__)("Restore", "jetpack-forms"),
+          title: (0, import_i18n88.__)("Restore", "jetpack-forms"),
           onClick: () => {
             trackAction("jetpack_forms_form_restore_click");
             restoreForm(formItem);
           }
         },
         {
-          title: (0, import_i18n87.__)("Delete permanently", "jetpack-forms"),
+          title: (0, import_i18n88.__)("Delete permanently", "jetpack-forms"),
           onClick: () => {
             trackAction("jetpack_forms_form_delete_permanently_click");
             openPermanentDeleteConfirm(formItem);
@@ -29426,7 +29428,7 @@ function usePageHeaderDetails(props) {
     }
     const controls = [
       {
-        title: (0, import_i18n87.__)("Preview", "jetpack-forms"),
+        title: (0, import_i18n88.__)("Preview", "jetpack-forms"),
         onClick: () => {
           trackAction("jetpack_forms_form_preview_click");
           previewForm(formItem);
@@ -29436,14 +29438,14 @@ function usePageHeaderDetails(props) {
     if (navigator?.clipboard) {
       controls.push(
         {
-          title: (0, import_i18n87.__)("Copy embed", "jetpack-forms"),
+          title: (0, import_i18n88.__)("Copy embed", "jetpack-forms"),
           onClick: () => {
             trackAction("jetpack_forms_form_copy_embed_click");
             copyEmbed(formItem);
           }
         },
         {
-          title: (0, import_i18n87.__)("Copy shortcode", "jetpack-forms"),
+          title: (0, import_i18n88.__)("Copy shortcode", "jetpack-forms"),
           onClick: () => {
             trackAction("jetpack_forms_form_copy_shortcode_click");
             copyShortcode(formItem);
@@ -29453,7 +29455,7 @@ function usePageHeaderDetails(props) {
     }
     if (formRecord?.status === "publish") {
       controls.push({
-        title: (0, import_i18n87.__)("Unpublish", "jetpack-forms"),
+        title: (0, import_i18n88.__)("Unpublish", "jetpack-forms"),
         onClick: () => {
           if (!isUpdatingStatus) {
             trackAction("jetpack_forms_form_unpublish_click");
@@ -29463,7 +29465,7 @@ function usePageHeaderDetails(props) {
       });
     } else {
       controls.push({
-        title: (0, import_i18n87.__)("Publish", "jetpack-forms"),
+        title: (0, import_i18n88.__)("Publish", "jetpack-forms"),
         onClick: () => {
           if (!isUpdatingStatus) {
             trackAction("jetpack_forms_form_publish_click");
@@ -29474,21 +29476,21 @@ function usePageHeaderDetails(props) {
     }
     controls.push(
       {
-        title: (0, import_i18n87.__)("Rename", "jetpack-forms"),
+        title: (0, import_i18n88.__)("Rename", "jetpack-forms"),
         onClick: () => {
           trackAction("jetpack_forms_form_rename_click");
-          setRenameFormItem(formItem);
+          openRenameModal(formItem);
         }
       },
       {
-        title: (0, import_i18n87.__)("Duplicate", "jetpack-forms"),
+        title: (0, import_i18n88.__)("Duplicate", "jetpack-forms"),
         onClick: () => {
           trackAction("jetpack_forms_form_duplicate_click");
           duplicateForm(formItem);
         }
       },
       {
-        title: (0, import_i18n87.__)("Trash", "jetpack-forms"),
+        title: (0, import_i18n88.__)("Trash", "jetpack-forms"),
         onClick: () => {
           trackAction("jetpack_forms_form_trash_click");
           trashForm(formItem);
@@ -29510,25 +29512,26 @@ function usePageHeaderDetails(props) {
     previewForm,
     setFormsToDraft,
     sourceIdNumber,
+    openRenameModal,
     trackAction
   ]);
   const WrapWithJetpackLogo = ({ children }) => /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(Stack, { align: "center", gap: "xs", children: [
     /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
     children
   ] });
-  const ariaLabel = (0, import_element98.useMemo)(() => {
+  const ariaLabel = (0, import_element99.useMemo)(() => {
     if (isSingleFormScreen) {
-      return formTitle || (0, import_i18n87.__)("Form responses", "jetpack-forms");
+      return formTitle || (0, import_i18n88.__)("Form responses", "jetpack-forms");
     }
     return "Jetpack Forms";
   }, [isSingleFormScreen, formTitle]);
-  const title = (0, import_element98.useMemo)(() => {
+  const title = (0, import_element99.useMemo)(() => {
     if (isSingleFormScreen) {
       return null;
     }
     return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(WrapWithJetpackLogo, { children: "Forms" });
   }, [isSingleFormScreen]);
-  const breadcrumbs = (0, import_element98.useMemo)(() => {
+  const breadcrumbs = (0, import_element99.useMemo)(() => {
     if (!isSingleFormScreen) {
       return null;
     }
@@ -29536,59 +29539,59 @@ function usePageHeaderDetails(props) {
       breadcrumbs_default,
       {
         items: [
-          { label: (0, import_i18n87.__)("Forms", "jetpack-forms"), to: "/forms" },
-          { label: formTitle || (0, import_i18n87.__)("Form responses", "jetpack-forms") }
+          { label: (0, import_i18n88.__)("Forms", "jetpack-forms"), to: "/forms" },
+          { label: formTitle || (0, import_i18n88.__)("Form responses", "jetpack-forms") }
         ]
       }
     ) });
   }, [isSingleFormScreen, formTitle]);
-  const subtitle = (0, import_element98.useMemo)(() => {
+  const subtitle = (0, import_element99.useMemo)(() => {
     if (isFormsScreen) {
-      const shortMessage = (0, import_i18n87.__)("View and manage all your forms.", "jetpack-forms");
-      const longMessage = (0, import_i18n87.__)("View and manage all your forms in one place.", "jetpack-forms");
+      const shortMessage = (0, import_i18n88.__)("View and manage all your forms.", "jetpack-forms");
+      const longMessage = (0, import_i18n88.__)("View and manage all your forms in one place.", "jetpack-forms");
       return hasClassicForms ? /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(import_jsx_runtime157.Fragment, { children: [
         shortMessage,
         " ",
-        /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components77.Button, { variant: "link", onClick: onOpenFormsHelp, children: (0, import_i18n87.__)("Not seeing all your forms?", "jetpack-forms") })
+        /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components77.Button, { variant: "link", onClick: onOpenFormsHelp, children: (0, import_i18n88.__)("Not seeing all your forms?", "jetpack-forms") })
       ] }) : longMessage;
     }
     if (isSingleFormScreen) {
       if (formTitle) {
-        return (0, import_i18n87.sprintf)(
+        return (0, import_i18n88.sprintf)(
           /* translators: %s: form name */
-          (0, import_i18n87.__)("View responses for %s.", "jetpack-forms"),
+          (0, import_i18n88.__)("View responses for %s.", "jetpack-forms"),
           formTitle
         );
       }
-      return (0, import_i18n87.__)("View responses for this form.", "jetpack-forms");
+      return (0, import_i18n88.__)("View responses for this form.", "jetpack-forms");
     }
-    return (0, import_i18n87.__)("View and manage all your form responses in one place.", "jetpack-forms");
+    return (0, import_i18n88.__)("View and manage all your form responses in one place.", "jetpack-forms");
   }, [formTitle, isFormsScreen, isSingleFormScreen, onOpenFormsHelp, hasClassicForms]);
-  const trackEditFormClick = (0, import_element98.useCallback)(
+  const trackEditFormClick = (0, import_element99.useCallback)(
     () => trackAction("jetpack_forms_form_edit_form_click"),
     [trackAction]
   );
-  const trackExportClick = (0, import_element98.useCallback)(
+  const trackExportClick = (0, import_element99.useCallback)(
     () => trackAction("jetpack_forms_form_export_click"),
     [trackAction]
   );
-  const trackExportClickResponsesList = (0, import_element98.useCallback)(
+  const trackExportClickResponsesList = (0, import_element99.useCallback)(
     () => trackAction("jetpack_forms_form_export_click", "responses_list"),
     [trackAction]
   );
-  const actions2 = (0, import_element98.useMemo)(() => {
+  const actions2 = (0, import_element99.useMemo)(() => {
     if (isSm) {
       const dropdownControls = [];
       if (isFormsScreen) {
         if (isIntegrationsEnabled && showDashboardIntegrations) {
           dropdownControls.push({
             onClick: onOpenIntegrations,
-            title: (0, import_i18n87.__)("Manage integrations", "jetpack-forms")
+            title: (0, import_i18n88.__)("Manage integrations", "jetpack-forms")
           });
         }
         dropdownControls.push({
           onClick: handleCreateFormClick,
-          title: (0, import_i18n87.__)("Create a form", "jetpack-forms")
+          title: (0, import_i18n88.__)("Create a form", "jetpack-forms")
         });
       } else if (isSingleFormScreen) {
         if (statusView === "inbox" && sourceIdNumber) {
@@ -29597,7 +29600,7 @@ function usePageHeaderDetails(props) {
               trackAction("jetpack_forms_form_edit_form_click");
               window.location.href = getFormEditUrl(sourceIdNumber, adminUrl);
             },
-            title: (0, import_i18n87.__)("Edit form", "jetpack-forms")
+            title: (0, import_i18n88.__)("Edit form", "jetpack-forms")
           });
         }
         dropdownControls.push({
@@ -29611,14 +29614,14 @@ function usePageHeaderDetails(props) {
         if (statusView === "trash") {
           dropdownControls.push({
             onClick: emptyTrash.openConfirmDialog,
-            title: (0, import_i18n87.__)("Empty trash", "jetpack-forms"),
+            title: (0, import_i18n88.__)("Empty trash", "jetpack-forms"),
             isDisabled: emptyTrash.isEmpty || emptyTrash.isEmptying
           });
         }
         if (statusView === "spam") {
           dropdownControls.push({
             onClick: emptySpam.openConfirmDialog,
-            title: (0, import_i18n87.__)("Delete spam", "jetpack-forms"),
+            title: (0, import_i18n88.__)("Delete spam", "jetpack-forms"),
             isDisabled: emptySpam.isEmpty || emptySpam.isEmptying
           });
         }
@@ -29627,13 +29630,13 @@ function usePageHeaderDetails(props) {
         if (statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations) {
           dropdownControls.push({
             onClick: onOpenIntegrations,
-            title: (0, import_i18n87.__)("Manage integrations", "jetpack-forms")
+            title: (0, import_i18n88.__)("Manage integrations", "jetpack-forms")
           });
         }
         if (statusView === "inbox") {
           dropdownControls.push({
             onClick: handleCreateFormClick,
-            title: (0, import_i18n87.__)("Create a form", "jetpack-forms")
+            title: (0, import_i18n88.__)("Create a form", "jetpack-forms")
           });
         }
         dropdownControls.push({
@@ -29647,14 +29650,14 @@ function usePageHeaderDetails(props) {
         if (statusView === "trash") {
           dropdownControls.push({
             onClick: emptyTrash.openConfirmDialog,
-            title: (0, import_i18n87.__)("Empty trash", "jetpack-forms"),
+            title: (0, import_i18n88.__)("Empty trash", "jetpack-forms"),
             isDisabled: emptyTrash.isEmpty || emptyTrash.isEmptying
           });
         }
         if (statusView === "spam") {
           dropdownControls.push({
             onClick: emptySpam.openConfirmDialog,
-            title: (0, import_i18n87.__)("Delete spam", "jetpack-forms"),
+            title: (0, import_i18n88.__)("Delete spam", "jetpack-forms"),
             isDisabled: emptySpam.isEmpty || emptySpam.isEmptying
           });
         }
@@ -29668,7 +29671,7 @@ function usePageHeaderDetails(props) {
           {
             controls: dropdownControls,
             icon: more_vertical_default,
-            label: (0, import_i18n87.__)("More actions", "jetpack-forms"),
+            label: (0, import_i18n88.__)("More actions", "jetpack-forms"),
             toggleProps: { size: "compact" }
           },
           "actions-menu"
@@ -29681,10 +29684,10 @@ function usePageHeaderDetails(props) {
               isOpen: isCreateFormModalOpen,
               onClose: closeCreateFormModal,
               onSave: handleCreateFormSave,
-              title: (0, import_i18n87.__)("Create form", "jetpack-forms"),
-              primaryButtonLabel: (0, import_i18n87.__)("Create", "jetpack-forms"),
-              secondaryButtonLabel: (0, import_i18n87.__)("Cancel", "jetpack-forms"),
-              placeholder: (0, import_i18n87.__)("Enter form title", "jetpack-forms")
+              title: (0, import_i18n88.__)("Create form", "jetpack-forms"),
+              primaryButtonLabel: (0, import_i18n88.__)("Create", "jetpack-forms"),
+              secondaryButtonLabel: (0, import_i18n88.__)("Cancel", "jetpack-forms"),
+              placeholder: (0, import_i18n88.__)("Enter form title", "jetpack-forms")
             },
             "create-form-modal"
           )
@@ -29733,8 +29736,8 @@ function usePageHeaderDetails(props) {
               isOpen: !!renameFormItem,
               onClose: closeRenameModal,
               onSave: handleRename,
-              title: (0, import_i18n87.__)("Rename form", "jetpack-forms"),
-              initialValue: renameRetryRef.current?.title || renameFormItem?.title || ""
+              title: (0, import_i18n88.__)("Rename form", "jetpack-forms"),
+              initialValue: renameFormItem?.title || ""
             },
             "rename-form-modal"
           )
@@ -29746,10 +29749,10 @@ function usePageHeaderDetails(props) {
               onCancel: closePermanentDeleteConfirm,
               onConfirm: confirmPermanentDelete,
               isOpen: isPermanentDeleteConfirmOpen,
-              confirmButtonText: (0, import_i18n87.__)("Delete permanently", "jetpack-forms"),
+              confirmButtonText: (0, import_i18n88.__)("Delete permanently", "jetpack-forms"),
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("h3", { children: (0, import_i18n87.__)("Delete permanently", "jetpack-forms") }),
-                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("p", { children: (0, import_i18n87.__)(
+                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("h3", { children: (0, import_i18n88.__)("Delete permanently", "jetpack-forms") }),
+                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("p", { children: (0, import_i18n88.__)(
                   "This will permanently delete this form. This action cannot be undone.",
                   "jetpack-forms"
                 ) })
@@ -29795,7 +29798,7 @@ function usePageHeaderDetails(props) {
             {
               controls: formItemControls,
               icon: more_vertical_default,
-              label: (0, import_i18n87.__)("More actions", "jetpack-forms"),
+              label: (0, import_i18n88.__)("More actions", "jetpack-forms"),
               toggleProps: { size: "compact" }
             },
             "form-actions-menu"
@@ -29808,8 +29811,8 @@ function usePageHeaderDetails(props) {
               isOpen: !!renameFormItem,
               onClose: closeRenameModal,
               onSave: handleRename,
-              title: (0, import_i18n87.__)("Rename form", "jetpack-forms"),
-              initialValue: renameRetryRef.current?.title || renameFormItem?.title || ""
+              title: (0, import_i18n88.__)("Rename form", "jetpack-forms"),
+              initialValue: renameFormItem?.title || ""
             },
             "rename-form-modal"
           )
@@ -29821,10 +29824,10 @@ function usePageHeaderDetails(props) {
               onCancel: closePermanentDeleteConfirm,
               onConfirm: confirmPermanentDelete,
               isOpen: isPermanentDeleteConfirmOpen,
-              confirmButtonText: (0, import_i18n87.__)("Delete permanently", "jetpack-forms"),
+              confirmButtonText: (0, import_i18n88.__)("Delete permanently", "jetpack-forms"),
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("h3", { children: (0, import_i18n87.__)("Delete permanently", "jetpack-forms") }),
-                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("p", { children: (0, import_i18n87.__)(
+                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("h3", { children: (0, import_i18n88.__)("Delete permanently", "jetpack-forms") }),
+                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("p", { children: (0, import_i18n88.__)(
                   "This will permanently delete this form. This action cannot be undone.",
                   "jetpack-forms"
                 ) })
@@ -29949,39 +29952,39 @@ function StageInner() {
   const navigate = useNavigate4();
   const searchParams = useSearch2({ from: "/forms" });
   const dateSettings = (0, import_date10.getSettings)();
-  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element99.useState)(false);
-  const [isFormsHelpModalOpen, setIsFormsHelpModalOpen] = (0, import_element99.useState)(false);
-  const integrations = (0, import_data36.useSelect)(
+  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element100.useState)(false);
+  const [isFormsHelpModalOpen, setIsFormsHelpModalOpen] = (0, import_element100.useState)(false);
+  const integrations = (0, import_data37.useSelect)(
     (select3) => select3(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
   );
-  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data36.useDispatch)(INTEGRATIONS_STORE);
+  const { refreshIntegrations: refreshIntegrations2 } = (0, import_data37.useDispatch)(INTEGRATIONS_STORE);
   const adminUrl = useConfigValue("adminUrl") || "";
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
   const hasClassicForms = useConfigValue("hasClassicForms");
-  const [view, setView] = (0, import_element99.useState)(() => ({
+  const [view, setView] = (0, import_element100.useState)(() => ({
     ...DEFAULT_VIEW,
     search: searchParams?.search || ""
   }));
-  (0, import_element99.useEffect)(() => {
+  (0, import_element100.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
     if (urlSearch !== view.search) {
       setView((previous) => ({ ...previous, search: urlSearch }));
     }
   }, [searchParams?.search]);
-  const statusQuery = (0, import_element99.useMemo)(() => {
+  const statusQuery = (0, import_element100.useMemo)(() => {
     const statusFilterValue2 = view.filters?.find((filter) => filter.field === "status")?.value;
     if (!statusFilterValue2 || statusFilterValue2 === "all") {
       return NON_TRASH_FORM_STATUSES;
     }
     return statusFilterValue2;
   }, [view.filters]);
-  const isViewingTrash = (0, import_element99.useMemo)(() => {
+  const isViewingTrash = (0, import_element100.useMemo)(() => {
     const statusFilterValue2 = view.filters?.find((filter) => filter.field === "status")?.value;
     return statusFilterValue2 === "trash";
   }, [view.filters]);
-  const hasResponsesQuery = (0, import_element99.useMemo)(() => {
+  const hasResponsesQuery = (0, import_element100.useMemo)(() => {
     const entriesFilterValue = view.filters?.find((filter) => filter.field === "entries")?.value;
     if (entriesFilterValue === "has_responses") {
       return "true";
@@ -30022,27 +30025,24 @@ function StageInner() {
     recordsLength: records?.length ?? 0,
     statusQuery
   });
-  const [selection, setSelection] = (0, import_element99.useState)([]);
-  const [pendingPermanentDeleteCount, setPendingPermanentDeleteCount] = (0, import_element99.useState)(0);
-  const [renameFormItem, setRenameFormItem] = (0, import_element99.useState)(null);
-  const renameRetryRef = (0, import_element99.useRef)(null);
-  const { createSuccessNotice, createErrorNotice } = (0, import_data36.useDispatch)(import_notices8.store);
-  const { saveEntityRecord } = (0, import_data36.useDispatch)(import_core_data7.store);
-  (0, import_element99.useEffect)(() => {
+  const [selection, setSelection] = (0, import_element100.useState)([]);
+  const [pendingPermanentDeleteCount, setPendingPermanentDeleteCount] = (0, import_element100.useState)(0);
+  const { renameFormItem, openRenameModal, closeRenameModal, handleRename } = useRenameForm();
+  (0, import_element100.useEffect)(() => {
     setSelection([]);
   }, [view.page, view.perPage, view.search, view.filters]);
-  const onOpenPermanentDeleteConfirm = (0, import_element99.useCallback)(
+  const onOpenPermanentDeleteConfirm = (0, import_element100.useCallback)(
     (items) => {
       setPendingPermanentDeleteCount(items?.length ?? 0);
       openPermanentDeleteConfirm(items);
     },
     [openPermanentDeleteConfirm]
   );
-  const onClosePermanentDeleteConfirm = (0, import_element99.useCallback)(() => {
+  const onClosePermanentDeleteConfirm = (0, import_element100.useCallback)(() => {
     setPendingPermanentDeleteCount(0);
     closePermanentDeleteConfirm();
   }, [closePermanentDeleteConfirm]);
-  const onConfirmPermanentDelete = (0, import_element99.useCallback)(async () => {
+  const onConfirmPermanentDelete = (0, import_element100.useCallback)(async () => {
     setPendingPermanentDeleteCount(0);
     try {
       await confirmPermanentDelete();
@@ -30050,82 +30050,38 @@ function StageInner() {
       setSelection([]);
     }
   }, [confirmPermanentDelete]);
-  const openRenameModal = (0, import_element99.useCallback)((item) => {
-    setRenameFormItem(item);
-  }, []);
-  const closeRenameModal = (0, import_element99.useCallback)(() => {
-    setRenameFormItem(null);
-    renameRetryRef.current = null;
-  }, []);
-  const handleRename = (0, import_element99.useCallback)(
-    async (newTitle) => {
-      if (!renameFormItem) {
-        return;
-      }
-      try {
-        await saveEntityRecord(
-          "postType",
-          FORM_POST_TYPE,
-          {
-            id: renameFormItem.id,
-            title: newTitle
-          },
-          { throwOnError: true }
-        );
-        createSuccessNotice((0, import_i18n88.__)("Form renamed.", "jetpack-forms"), { type: "snackbar" });
-        renameRetryRef.current = null;
-      } catch (error2) {
-        const retryItem = renameFormItem;
-        const retryTitle = newTitle;
-        createErrorNotice((0, import_i18n88.__)("Failed to rename form.", "jetpack-forms"), {
-          type: "snackbar",
-          actions: [
-            {
-              label: (0, import_i18n88.__)("Retry", "jetpack-forms"),
-              onClick: () => {
-                renameRetryRef.current = { item: retryItem, title: retryTitle };
-                setRenameFormItem(retryItem);
-              }
-            }
-          ]
-        });
-        console.error("Failed to rename form:", error2);
-      }
-    },
-    [renameFormItem, saveEntityRecord, createSuccessNotice, createErrorNotice]
-  );
-  const fields = (0, import_element99.useMemo)(
+  const fields = (0, import_element100.useMemo)(
     () => [
       {
         id: "title",
-        label: (0, import_i18n88.__)("Form name", "jetpack-forms"),
+        label: (0, import_i18n89.__)("Form name", "jetpack-forms"),
         getValue: ({ item }) => item.title,
-        render: ({ item }) => item.title || (0, import_i18n88.__)("(no title)", "jetpack-forms"),
+        render: ({ item }) => item.title || (0, import_i18n89.__)("(no title)", "jetpack-forms"),
         enableSorting: false,
         enableHiding: false
       },
       {
         id: "entries",
-        label: (0, import_i18n88.__)("Responses", "jetpack-forms"),
+        label: (0, import_i18n89.__)("Responses", "jetpack-forms"),
         getValue: ({ item }) => (item.entriesCount ?? 0) > 0 ? "has_responses" : "no_responses",
         render: ({ item }) => formatNumber(item.entriesCount ?? 0),
         elements: [
-          { label: (0, import_i18n88.__)("Has responses", "jetpack-forms"), value: "has_responses" },
-          { label: (0, import_i18n88.__)("No responses", "jetpack-forms"), value: "no_responses" }
+          { label: (0, import_i18n89.__)("Has responses", "jetpack-forms"), value: "has_responses" },
+          { label: (0, import_i18n89.__)("No responses", "jetpack-forms"), value: "no_responses" }
         ],
         filterBy: { operators: ["is"] },
         enableSorting: false
       },
       {
         id: "status",
-        label: (0, import_i18n88.__)("Status", "jetpack-forms"),
+        label: (0, import_i18n89.__)("Status", "jetpack-forms"),
         getValue: ({ item }) => item.status,
         render: ({ item }) => /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(Badge, { intent: "draft", children: getFormStatusLabel(item.status) }),
         elements: FORM_STATUSES.map((value) => ({
           value,
-          label: (0, import_i18n88.sprintf)(
+          label: (0, import_i18n89.sprintf)(
             /* translators: 1: status name, 2: form count */
-            (0, import_i18n88.__)("%1$s (%2$s)", "jetpack-forms"),
+            (0, import_i18n89.__)("%1$s (%2$s)", "jetpack-forms"),
             getFormStatusLabel(value),
             formatNumber(statusCounts[value])
           )
@@ -30135,7 +30091,7 @@ function StageInner() {
       },
       {
         id: "modified",
-        label: (0, import_i18n88.__)("Last updated", "jetpack-forms"),
+        label: (0, import_i18n89.__)("Last updated", "jetpack-forms"),
         type: "date",
         render: ({ item }) => (0, import_date10.dateI18n)(dateSettings.formats.datetime, item.modified),
         enableSorting: false,
@@ -30144,18 +30100,18 @@ function StageInner() {
     ],
     [dateSettings.formats.datetime, statusCounts]
   );
-  const openSingleFormView = (0, import_element99.useCallback)(
+  const openSingleFormView = (0, import_element100.useCallback)(
     (formId) => {
       navigate({ href: `/responses/inbox?sourceId=${encodeURIComponent(String(formId))}` });
     },
     [navigate]
   );
-  const actions2 = (0, import_element99.useMemo)(() => {
+  const actions2 = (0, import_element100.useMemo)(() => {
     const actionsList = [
       {
         id: "view-responses",
         isPrimary: true,
-        label: (0, import_i18n88.__)("Responses", "jetpack-forms"),
+        label: (0, import_i18n89.__)("Responses", "jetpack-forms"),
         supportsBulk: false,
         callback(items) {
           analytics_default.tracks.recordEvent("jetpack_forms_form_view_responses_click", {
@@ -30173,7 +30129,7 @@ function StageInner() {
       actionsList.push({
         id: "restore-form",
         isPrimary: true,
-        label: (0, import_i18n88.__)("Restore", "jetpack-forms"),
+        label: (0, import_i18n89.__)("Restore", "jetpack-forms"),
         supportsBulk: true,
         async callback(items) {
           analytics_default.tracks.recordEvent("jetpack_forms_form_restore_click", {
@@ -30193,7 +30149,7 @@ function StageInner() {
       actionsList.push({
         id: "delete-form-permanently",
         isPrimary: false,
-        label: (0, import_i18n88.__)("Delete permanently", "jetpack-forms"),
+        label: (0, import_i18n89.__)("Delete permanently", "jetpack-forms"),
         supportsBulk: true,
         async callback(items) {
           analytics_default.tracks.recordEvent("jetpack_forms_form_delete_permanently_click", {
@@ -30214,7 +30170,7 @@ function StageInner() {
     actionsList.push({
       id: "edit-form",
       isPrimary: true,
-      label: (0, import_i18n88.__)("Edit", "jetpack-forms"),
+      label: (0, import_i18n89.__)("Edit", "jetpack-forms"),
       supportsBulk: false,
       async callback(items) {
         analytics_default.tracks.recordEvent("jetpack_forms_form_edit_form_click", {
@@ -30231,7 +30187,7 @@ function StageInner() {
     actionsList.push({
       id: "preview-form",
       isPrimary: false,
-      label: (0, import_i18n88.__)("Preview", "jetpack-forms"),
+      label: (0, import_i18n89.__)("Preview", "jetpack-forms"),
       supportsBulk: false,
       async callback(items) {
         analytics_default.tracks.recordEvent("jetpack_forms_form_preview_click", {
@@ -30247,7 +30203,7 @@ function StageInner() {
       actionsList.push({
         id: "copy-embed",
         isPrimary: false,
-        label: (0, import_i18n88.__)("Copy embed", "jetpack-forms"),
+        label: (0, import_i18n89.__)("Copy embed", "jetpack-forms"),
         supportsBulk: false,
         async callback(items) {
           analytics_default.tracks.recordEvent("jetpack_forms_form_copy_embed_click", {
@@ -30262,7 +30218,7 @@ function StageInner() {
       actionsList.push({
         id: "copy-shortcode",
         isPrimary: false,
-        label: (0, import_i18n88.__)("Copy shortcode", "jetpack-forms"),
+        label: (0, import_i18n89.__)("Copy shortcode", "jetpack-forms"),
         supportsBulk: false,
         async callback(items) {
           analytics_default.tracks.recordEvent("jetpack_forms_form_copy_shortcode_click", {
@@ -30285,7 +30241,7 @@ function StageInner() {
     actionsList.push({
       id: "publish-form",
       isPrimary: false,
-      label: (0, import_i18n88.__)("Publish", "jetpack-forms"),
+      label: (0, import_i18n89.__)("Publish", "jetpack-forms"),
       isEligible: (item) => item.status !== "publish",
       supportsBulk: true,
       async callback(items) {
@@ -30310,7 +30266,7 @@ function StageInner() {
     actionsList.push({
       id: "unpublish-form",
       isPrimary: false,
-      label: (0, import_i18n88.__)("Unpublish", "jetpack-forms"),
+      label: (0, import_i18n89.__)("Unpublish", "jetpack-forms"),
       isEligible: (item) => item.status === "publish",
       supportsBulk: true,
       async callback(items) {
@@ -30335,7 +30291,7 @@ function StageInner() {
     actionsList.push({
       id: "rename-form",
       isPrimary: false,
-      label: (0, import_i18n88.__)("Rename", "jetpack-forms"),
+      label: (0, import_i18n89.__)("Rename", "jetpack-forms"),
       supportsBulk: false,
       callback(items) {
         analytics_default.tracks.recordEvent("jetpack_forms_form_rename_click", {
@@ -30351,7 +30307,7 @@ function StageInner() {
     actionsList.push({
       id: "duplicate-form",
       isPrimary: false,
-      label: (0, import_i18n88.__)("Duplicate", "jetpack-forms"),
+      label: (0, import_i18n89.__)("Duplicate", "jetpack-forms"),
       supportsBulk: false,
       async callback(items) {
         analytics_default.tracks.recordEvent("jetpack_forms_form_duplicate_click", {
@@ -30366,7 +30322,7 @@ function StageInner() {
     actionsList.push({
       id: "trash-form",
       isPrimary: false,
-      label: (0, import_i18n88.__)("Trash", "jetpack-forms"),
+      label: (0, import_i18n89.__)("Trash", "jetpack-forms"),
       supportsBulk: true,
       async callback(items) {
         analytics_default.tracks.recordEvent("jetpack_forms_form_trash_click", {
@@ -30405,14 +30361,14 @@ function StageInner() {
     view.perPage,
     view.search
   ]);
-  const paginationInfo = (0, import_element99.useMemo)(
+  const paginationInfo = (0, import_element100.useMemo)(
     () => ({
       totalItems: totalItems ?? 0,
       totalPages: totalPages ?? 0
     }),
     [totalItems, totalPages]
   );
-  const onChangeView = (0, import_element99.useCallback)(
+  const onChangeView = (0, import_element100.useCallback)(
     (newView) => {
       setView(newView);
       if (newView.search !== view.search) {
@@ -30426,16 +30382,16 @@ function StageInner() {
     },
     [navigate, searchParams, view.search]
   );
-  const openIntegrationsModal = (0, import_element99.useCallback)(() => {
+  const openIntegrationsModal = (0, import_element100.useCallback)(() => {
     setIsIntegrationsModalOpen(true);
   }, []);
-  const closeIntegrationsModal = (0, import_element99.useCallback)(() => {
+  const closeIntegrationsModal = (0, import_element100.useCallback)(() => {
     setIsIntegrationsModalOpen(false);
   }, []);
-  const openFormsHelpModal = (0, import_element99.useCallback)(() => {
+  const openFormsHelpModal = (0, import_element100.useCallback)(() => {
     setIsFormsHelpModalOpen(true);
   }, []);
-  const closeFormsHelpModal = (0, import_element99.useCallback)(() => {
+  const closeFormsHelpModal = (0, import_element100.useCallback)(() => {
     setIsFormsHelpModalOpen(false);
   }, []);
   const {
@@ -30454,8 +30410,8 @@ function StageInner() {
   });
   const statusFilterValue = view.filters?.find((filter) => filter.field === "status")?.value;
   const hasActiveFilters = !!view.search?.trim() || !!statusFilterValue && statusFilterValue !== "all";
-  const getItemId = (0, import_element99.useCallback)((item) => String(item.id), []);
-  const onClickItem = (0, import_element99.useCallback)(
+  const getItemId = (0, import_element100.useCallback)((item) => String(item.id), []);
+  const onClickItem = (0, import_element100.useCallback)(
     (item) => {
       openSingleFormView(item.id);
     },
@@ -30483,8 +30439,8 @@ function StageInner() {
             empty: hasActiveFilters ? /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(NoResults, {}) : /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
               EmptyWrapper,
               {
-                heading: (0, import_i18n88.__)("You're set up. No forms yet.", "jetpack-forms"),
-                body: (0, import_i18n88.__)(
+                heading: (0, import_i18n89.__)("You're set up. No forms yet.", "jetpack-forms"),
+                body: (0, import_i18n89.__)(
                   "Create a form to manage and reuse it across your site.",
                   "jetpack-forms"
                 ),
@@ -30492,12 +30448,12 @@ function StageInner() {
                   /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
                     CreateFormButton,
                     {
-                      label: (0, import_i18n88.__)("Create a new form", "jetpack-forms"),
+                      label: (0, import_i18n89.__)("Create a new form", "jetpack-forms"),
                       variant: "primary",
                       showNameModal: true
                     }
                   ),
-                  hasClassicForms && /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components78.Button, { size: "compact", variant: "secondary", onClick: openFormsHelpModal, children: (0, import_i18n88.__)("Not seeing all your forms?", "jetpack-forms") })
+                  hasClassicForms && /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components78.Button, { size: "compact", variant: "secondary", onClick: openFormsHelpModal, children: (0, import_i18n89.__)("Not seeing all your forms?", "jetpack-forms") })
                 ] })
               }
             ),
@@ -30515,15 +30471,15 @@ function StageInner() {
                   onCancel: onClosePermanentDeleteConfirm,
                   onConfirm: onConfirmPermanentDelete,
                   isOpen: isPermanentDeleteConfirmOpen,
-                  confirmButtonText: (0, import_i18n88.__)("Delete permanently", "jetpack-forms"),
+                  confirmButtonText: (0, import_i18n89.__)("Delete permanently", "jetpack-forms"),
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("h3", { children: (0, import_i18n88.__)("Delete permanently", "jetpack-forms") }),
-                    /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("p", { children: pendingPermanentDeleteCount === 1 ? (0, import_i18n88.__)(
+                    /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("h3", { children: (0, import_i18n89.__)("Delete permanently", "jetpack-forms") }),
+                    /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("p", { children: pendingPermanentDeleteCount === 1 ? (0, import_i18n89.__)(
                       "This will permanently delete this form. This action cannot be undone.",
                       "jetpack-forms"
-                    ) : (0, import_i18n88.sprintf)(
+                    ) : (0, import_i18n89.sprintf)(
                       /* translators: %d: number of forms */
-                      (0, import_i18n88._n)(
+                      (0, import_i18n89._n)(
                         "This will permanently delete %d form. This action cannot be undone.",
                         "This will permanently delete %d forms. This action cannot be undone.",
                         pendingPermanentDeleteCount,
@@ -30546,8 +30502,8 @@ function StageInner() {
             isOpen: !!renameFormItem,
             onClose: closeRenameModal,
             onSave: handleRename,
-            title: (0, import_i18n88.__)("Rename form", "jetpack-forms"),
-            initialValue: renameRetryRef.current?.title || renameFormItem?.title || ""
+            title: (0, import_i18n89.__)("Rename form", "jetpack-forms"),
+            initialValue: renameFormItem?.title || ""
           }
         ),
         /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
