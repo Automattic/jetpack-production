@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Replace transient-based SSO broker URL storage with a constant-based approach gated by a WordPress.com authorization signal, and fall back to WordPress.com SSO when the referrer is a WordPress.com domain.
+- Update package dependencies.
 
 ### Fixed
 - Fixed SSO login conflict with Two-Factor plugin 0.15.0+ that caused a redundant local 2FA prompt after completing WordPress.com 2FA.
