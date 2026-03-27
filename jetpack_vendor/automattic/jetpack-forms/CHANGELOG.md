@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Improved form submission validation.
 
 ### Added
+- Add WordPress Playground blueprint for Forms development.
 - Forms Dashboard: Add tracking events for form-level actions (preview, copy embed, copy shortcode, duplicate, trash, restore, delete, rename, publish/unpublish, edit, view responses)
 
 ### Changed
