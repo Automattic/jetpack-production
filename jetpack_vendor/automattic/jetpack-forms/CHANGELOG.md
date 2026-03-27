@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Fixed undo restoring wrong form status for non-standard statuses in dashboard header actions
 - Fix phone field initialization failure when script module loads after DOMContentLoaded.
 
 ## [7.14.0] - 2026-03-23

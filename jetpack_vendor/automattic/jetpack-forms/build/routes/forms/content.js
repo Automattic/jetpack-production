@@ -29405,7 +29405,7 @@ function usePageHeaderDetails(props) {
     if (!sourceIdNumber) {
       return [];
     }
-    const formItem = { id: sourceIdNumber, title: formTitle };
+    const formItem = { id: sourceIdNumber, title: formTitle, status: formRecord?.status };
     if (formRecord?.status === "trash") {
       return [
         {
