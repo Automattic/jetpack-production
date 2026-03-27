@@ -39431,7 +39431,8 @@ function StageInner() {
             item.author_name || item.author_email || item.author_url || item.ip || "Anonymous"
           );
           const showEmail = item.author_email && displayName !== (0, import_html_entities5.decodeEntities)(item.author_email);
-          const defaultImage = item.author_name ? "initials" : "mp";
+          const gravatarName = item.author_name ? (0, import_html_entities5.decodeEntities)(item.author_name) : item.author_email?.split("@")[0];
+          const defaultImage = gravatarName ? "initials" : "mp";
           return /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)(Stack, { align: "center", gap: "sm", children: [
             item.is_unread && /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(
               "span",
@@ -39451,7 +39452,7 @@ function StageInner() {
               {
                 email: item.author_email || item.ip,
                 defaultImage,
-                displayName: item.author_name ? (0, import_html_entities5.decodeEntities)(item.author_name) : void 0,
+                displayName: gravatarName,
                 size: 32,
                 useHovercard: false
               }
@@ -40827,8 +40828,8 @@ var getDisplayName = (response) => {
 var ResponseMeta = ({ response }) => {
   const displayName = getDisplayName(response);
   const gravatarEmail = response.author_email || response.ip;
-  const gravatarDisplayName = response.author_name ? (0, import_html_entities8.decodeEntities)(response.author_name) : void 0;
-  const defaultImage = response.author_name ? "initials" : "mp";
+  const gravatarDisplayName = response.author_name ? (0, import_html_entities8.decodeEntities)(response.author_name) : response.author_email?.split("@")[0];
+  const defaultImage = gravatarDisplayName ? "initials" : "mp";
   const responseAuthorEmailParts = response.author_email?.split("@") ?? [];
   const dateSettings = (0, import_date12.getSettings)();
   const loggedInUser = response?.logged_in_user?.id ? response.logged_in_user : null;
