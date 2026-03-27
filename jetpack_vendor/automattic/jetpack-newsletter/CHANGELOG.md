@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - avoid fatals from newsletter settings for disconnected jetpack errors
 - Move admin notices and JITMs below the page header instead of rendering inside it
+- Reader Link: Add compatibility check for Urls::maybe_add_origin_site_id() to prevent fatal errors with older connection package versions.
 
 ## [0.6.2] - 2026-03-23
 ### Changed
