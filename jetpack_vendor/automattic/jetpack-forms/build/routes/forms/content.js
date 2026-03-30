@@ -25,6 +25,7 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
+var __reExport = (target, mod, secondTarget) => (__copyProps(target, mod, "default"), secondTarget && __copyProps(secondTarget, mod, "default"));
 var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
   // If the importer is in node compatibility mode or this is not an ESM
   // file that has been converted to a CommonJS file using a Babel-
@@ -3831,10 +3832,13 @@ var analytics = {
 };
 var analytics_default = analytics;
 
-// ../../js-packages/number-formatters/dist/esm/create-number-formatters.js
-var import_date = __toESM(require_date(), 1);
-
 // ../../js-packages/number-formatters/dist/esm/constants.js
+var constants_exports = {};
+__export(constants_exports, {
+  FALLBACK_CURRENCY: () => FALLBACK_CURRENCY,
+  FALLBACK_LOCALE: () => FALLBACK_LOCALE
+});
+__reExport(constants_exports, __toESM(require_date(), 1));
 var FALLBACK_LOCALE = "en";
 var FALLBACK_CURRENCY = "USD";
 
@@ -4530,8 +4534,9 @@ function createNumberFormatters() {
     localeState = locale;
   };
   const getBrowserSafeLocale = () => {
-    const { l10n: { locale: localeFromUserSettings } } = (0, import_date.getSettings)();
-    return (localeState ?? (localeFromUserSettings || global?.window?.navigator?.language) ?? FALLBACK_LOCALE).split("_")[0];
+    const localeFromUserSettings = typeof window !== "undefined" ? window.wp?.date?.getSettings?.()?.l10n?.locale : void 0;
+    const localeFromNavigator = typeof window !== "undefined" ? window?.navigator?.language : void 0;
+    return (localeState ?? (localeFromUserSettings || localeFromNavigator) ?? FALLBACK_LOCALE).split("_")[0];
   };
   const setGeoLocation2 = (geoLocation) => {
     geoLocationState = geoLocation;
@@ -18406,7 +18411,7 @@ function subYears(date, amount, options) {
 // ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/utils/operators.mjs
 var import_i18n24 = __toESM(require_i18n(), 1);
 var import_element33 = __toESM(require_element(), 1);
-var import_date2 = __toESM(require_date(), 1);
+var import_date = __toESM(require_date(), 1);
 var import_jsx_runtime78 = __toESM(require_jsx_runtime(), 1);
 var filterTextWrappers = {
   Name: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)("span", { className: "dataviews-filters__summary-filter-text-name" }),
@@ -18566,7 +18571,7 @@ var OPERATORS = [
         filterValue.value,
         filterValue.unit
       );
-      const fieldValue = (0, import_date2.getDate)(field.getValue({ item }));
+      const fieldValue = (0, import_date.getDate)(field.getValue({ item }));
       return fieldValue >= targetDate && fieldValue <= /* @__PURE__ */ new Date();
     },
     selection: "custom"
@@ -18592,7 +18597,7 @@ var OPERATORS = [
         filterValue.value,
         filterValue.unit
       );
-      const fieldValue = (0, import_date2.getDate)(field.getValue({ item }));
+      const fieldValue = (0, import_date.getDate)(field.getValue({ item }));
       return fieldValue < targetDate;
     },
     selection: "custom"
@@ -18744,8 +18749,8 @@ var OPERATORS = [
       if (filterValue === void 0) {
         return true;
       }
-      const filterDate = (0, import_date2.getDate)(filterValue);
-      const fieldDate = (0, import_date2.getDate)(field.getValue({ item }));
+      const filterDate = (0, import_date.getDate)(filterValue);
+      const fieldDate = (0, import_date.getDate)(field.getValue({ item }));
       return fieldDate < filterDate;
     },
     selection: "single"
@@ -18767,8 +18772,8 @@ var OPERATORS = [
       if (filterValue === void 0) {
         return true;
       }
-      const filterDate = (0, import_date2.getDate)(filterValue);
-      const fieldDate = (0, import_date2.getDate)(field.getValue({ item }));
+      const filterDate = (0, import_date.getDate)(filterValue);
+      const fieldDate = (0, import_date.getDate)(field.getValue({ item }));
       return fieldDate > filterDate;
     },
     selection: "single"
@@ -18792,8 +18797,8 @@ var OPERATORS = [
       if (filterValue === void 0) {
         return true;
       }
-      const filterDate = (0, import_date2.getDate)(filterValue);
-      const fieldDate = (0, import_date2.getDate)(field.getValue({ item }));
+      const filterDate = (0, import_date.getDate)(filterValue);
+      const fieldDate = (0, import_date.getDate)(field.getValue({ item }));
       return fieldDate <= filterDate;
     },
     selection: "single"
@@ -18817,8 +18822,8 @@ var OPERATORS = [
       if (filterValue === void 0) {
         return true;
       }
-      const filterDate = (0, import_date2.getDate)(filterValue);
-      const fieldDate = (0, import_date2.getDate)(field.getValue({ item }));
+      const filterDate = (0, import_date.getDate)(filterValue);
+      const fieldDate = (0, import_date.getDate)(field.getValue({ item }));
       return fieldDate >= filterDate;
     },
     selection: "single"
@@ -18908,8 +18913,8 @@ var OPERATORS = [
       if (filterValue === void 0) {
         return true;
       }
-      const filterDate = (0, import_date2.getDate)(filterValue);
-      const fieldDate = (0, import_date2.getDate)(field.getValue({ item }));
+      const filterDate = (0, import_date.getDate)(filterValue);
+      const fieldDate = (0, import_date.getDate)(field.getValue({ item }));
       return filterDate.getTime() === fieldDate.getTime();
     },
     selection: "single"
@@ -18931,8 +18936,8 @@ var OPERATORS = [
       if (filterValue === void 0) {
         return true;
       }
-      const filterDate = (0, import_date2.getDate)(filterValue);
-      const fieldDate = (0, import_date2.getDate)(field.getValue({ item }));
+      const filterDate = (0, import_date.getDate)(filterValue);
+      const fieldDate = (0, import_date.getDate)(field.getValue({ item }));
       return filterDate.getTime() !== fieldDate.getTime();
     },
     selection: "single"
@@ -20163,7 +20168,7 @@ function Combobox3({
 var import_components34 = __toESM(require_components(), 1);
 var import_element48 = __toESM(require_element(), 1);
 var import_i18n34 = __toESM(require_i18n(), 1);
-var import_date4 = __toESM(require_date(), 1);
+var import_date3 = __toESM(require_date(), 1);
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/utils/relative-date-control.mjs
 var import_components33 = __toESM(require_components(), 1);
@@ -20253,12 +20258,12 @@ function RelativeDateControl({
 }
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/parse-date-time.mjs
-var import_date3 = __toESM(require_date(), 1);
+var import_date2 = __toESM(require_date(), 1);
 function parseDateTime(dateTimeString) {
   if (!dateTimeString) {
     return null;
   }
-  const parsed = (0, import_date3.getDate)(dateTimeString);
+  const parsed = (0, import_date2.getDate)(dateTimeString);
   return parsed && isValid(parsed) ? parsed : null;
 }
 
@@ -20269,7 +20274,7 @@ var formatDateTime = (value) => {
   if (!value) {
     return "";
   }
-  return (0, import_date4.dateI18n)("Y-m-d\\TH:i", (0, import_date4.getDate)(value));
+  return (0, import_date3.dateI18n)("Y-m-d\\TH:i", (0, import_date3.getDate)(value));
 };
 function CalendarDateTimeControl({
   data,
@@ -20304,14 +20309,14 @@ function CalendarDateTimeControl({
     (newDate) => {
       let dateTimeValue;
       if (newDate) {
-        const wpDate = (0, import_date4.dateI18n)("Y-m-d", newDate);
+        const wpDate = (0, import_date3.dateI18n)("Y-m-d", newDate);
         let wpTime;
         if (value) {
-          wpTime = (0, import_date4.dateI18n)("H:i", (0, import_date4.getDate)(value));
+          wpTime = (0, import_date3.dateI18n)("H:i", (0, import_date3.getDate)(value));
         } else {
-          wpTime = (0, import_date4.dateI18n)("H:i", newDate);
+          wpTime = (0, import_date3.dateI18n)("H:i", newDate);
         }
-        const finalDateTime = (0, import_date4.getDate)(`${wpDate}T${wpTime}`);
+        const finalDateTime = (0, import_date3.getDate)(`${wpDate}T${wpTime}`);
         dateTimeValue = finalDateTime.toISOString();
         onChangeCallback(dateTimeValue);
         if (validationTimeoutRef.current) {
@@ -20337,7 +20342,7 @@ function CalendarDateTimeControl({
   const handleManualDateTimeChange = (0, import_element48.useCallback)(
     (newValue) => {
       if (newValue) {
-        const dateTime = (0, import_date4.getDate)(newValue);
+        const dateTime = (0, import_date3.getDate)(newValue);
         onChangeCallback(dateTime.toISOString());
         const parsedDate = parseDateTime(dateTime.toISOString());
         if (parsedDate) {
@@ -20350,10 +20355,10 @@ function CalendarDateTimeControl({
     [onChangeCallback]
   );
   const { format: fieldFormat } = field;
-  const weekStartsOn = fieldFormat.weekStartsOn ?? (0, import_date4.getSettings)().l10n.startOfWeek;
+  const weekStartsOn = fieldFormat.weekStartsOn ?? (0, import_date3.getSettings)().l10n.startOfWeek;
   const {
     timezone: { string: timezoneString }
-  } = (0, import_date4.getSettings)();
+  } = (0, import_date3.getSettings)();
   let displayLabel = label;
   if (isValid2?.required && !markWhenOptional && !hideLabelFromVision) {
     displayLabel = `${label} (${(0, import_i18n34.__)("Required")})`;
@@ -20437,20 +20442,20 @@ function DateTime({
 var import_components35 = __toESM(require_components(), 1);
 var import_element49 = __toESM(require_element(), 1);
 var import_i18n35 = __toESM(require_i18n(), 1);
-var import_date5 = __toESM(require_date(), 1);
+var import_date4 = __toESM(require_date(), 1);
 var import_jsx_runtime94 = __toESM(require_jsx_runtime(), 1);
 var { DateCalendar: DateCalendar2, DateRangeCalendar } = unlock(import_components35.privateApis);
 var DATE_PRESETS = [
   {
     id: "today",
     label: (0, import_i18n35.__)("Today"),
-    getValue: () => (0, import_date5.getDate)(null)
+    getValue: () => (0, import_date4.getDate)(null)
   },
   {
     id: "yesterday",
     label: (0, import_i18n35.__)("Yesterday"),
     getValue: () => {
-      const today = (0, import_date5.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return subDays(today, 1);
     }
   },
@@ -20458,7 +20463,7 @@ var DATE_PRESETS = [
     id: "past-week",
     label: (0, import_i18n35.__)("Past week"),
     getValue: () => {
-      const today = (0, import_date5.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return subDays(today, 7);
     }
   },
@@ -20466,7 +20471,7 @@ var DATE_PRESETS = [
     id: "past-month",
     label: (0, import_i18n35.__)("Past month"),
     getValue: () => {
-      const today = (0, import_date5.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return subMonths(today, 1);
     }
   }
@@ -20476,7 +20481,7 @@ var DATE_RANGE_PRESETS = [
     id: "last-7-days",
     label: (0, import_i18n35.__)("Last 7 days"),
     getValue: () => {
-      const today = (0, import_date5.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return [subDays(today, 7), today];
     }
   },
@@ -20484,7 +20489,7 @@ var DATE_RANGE_PRESETS = [
     id: "last-30-days",
     label: (0, import_i18n35.__)("Last 30 days"),
     getValue: () => {
-      const today = (0, import_date5.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return [subDays(today, 30), today];
     }
   },
@@ -20492,7 +20497,7 @@ var DATE_RANGE_PRESETS = [
     id: "month-to-date",
     label: (0, import_i18n35.__)("Month to date"),
     getValue: () => {
-      const today = (0, import_date5.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return [startOfMonth(today), today];
     }
   },
@@ -20500,7 +20505,7 @@ var DATE_RANGE_PRESETS = [
     id: "last-year",
     label: (0, import_i18n35.__)("Last year"),
     getValue: () => {
-      const today = (0, import_date5.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return [subYears(today, 1), today];
     }
   },
@@ -20508,7 +20513,7 @@ var DATE_RANGE_PRESETS = [
     id: "year-to-date",
     label: (0, import_i18n35.__)("Year to date"),
     getValue: () => {
-      const today = (0, import_date5.getDate)(null);
+      const today = (0, import_date4.getDate)(null);
       return [startOfYear(today), today];
     }
   }
@@ -20517,7 +20522,7 @@ var parseDate = (dateString) => {
   if (!dateString) {
     return null;
   }
-  const parsed = (0, import_date5.getDate)(dateString);
+  const parsed = (0, import_date4.getDate)(dateString);
   return parsed && isValid(parsed) ? parsed : null;
 };
 var formatDate = (date) => {
@@ -20641,7 +20646,7 @@ function CalendarDateControl({
   const [selectedPresetId, setSelectedPresetId] = (0, import_element49.useState)(
     null
   );
-  const weekStartsOn = fieldFormat.weekStartsOn ?? (0, import_date5.getSettings)().l10n.startOfWeek;
+  const weekStartsOn = fieldFormat.weekStartsOn ?? (0, import_date4.getSettings)().l10n.startOfWeek;
   const fieldValue = getValue({ item: data });
   const value = typeof fieldValue === "string" ? fieldValue : void 0;
   const [calendarMonth, setCalendarMonth] = (0, import_element49.useState)(() => {
@@ -20690,7 +20695,7 @@ function CalendarDateControl({
   );
   const {
     timezone: { string: timezoneString }
-  } = (0, import_date5.getSettings)();
+  } = (0, import_date4.getSettings)();
   let displayLabel = label;
   if (isValid2?.required && !markWhenOptional) {
     displayLabel = `${label} (${(0, import_i18n35.__)("Required")})`;
@@ -20804,7 +20809,7 @@ function CalendarDateRangeControl({
   if (Array.isArray(fieldValue) && fieldValue.length === 2 && fieldValue.every((date) => typeof date === "string")) {
     value = fieldValue;
   }
-  const weekStartsOn = fieldFormat.weekStartsOn ?? (0, import_date5.getSettings)().l10n.startOfWeek;
+  const weekStartsOn = fieldFormat.weekStartsOn ?? (0, import_date4.getSettings)().l10n.startOfWeek;
   const onChangeCallback = (0, import_element49.useCallback)(
     (newValue) => {
       onChange(
@@ -20886,7 +20891,7 @@ function CalendarDateRangeControl({
     },
     [value, updateDateRange]
   );
-  const { timezone } = (0, import_date5.getSettings)();
+  const { timezone } = (0, import_date4.getSettings)();
   let displayLabel = label;
   if (field.isValid?.required && !markWhenOptional) {
     displayLabel = `${label} (${(0, import_i18n35.__)("Required")})`;
@@ -22457,10 +22462,10 @@ var text_default = {
 };
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/datetime.mjs
-var import_date7 = __toESM(require_date(), 1);
+var import_date6 = __toESM(require_date(), 1);
 var format4 = {
-  datetime: (0, import_date7.getSettings)().formats.datetime,
-  weekStartsOn: (0, import_date7.getSettings)().l10n.startOfWeek
+  datetime: (0, import_date6.getSettings)().formats.datetime,
+  weekStartsOn: (0, import_date6.getSettings)().l10n.startOfWeek
 };
 function getValueFormatted4({
   item,
@@ -22476,7 +22481,7 @@ function getValueFormatted4({
   } else {
     formatDatetime = field.format;
   }
-  return (0, import_date7.dateI18n)(formatDatetime.datetime, (0, import_date7.getDate)(value));
+  return (0, import_date6.dateI18n)(formatDatetime.datetime, (0, import_date6.getDate)(value));
 }
 var sort = (a2, b2, direction) => {
   const timeA = new Date(a2).getTime();
@@ -22519,10 +22524,10 @@ var datetime_default = {
 };
 
 // ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/date.mjs
-var import_date8 = __toESM(require_date(), 1);
+var import_date7 = __toESM(require_date(), 1);
 var format5 = {
-  date: (0, import_date8.getSettings)().formats.date,
-  weekStartsOn: (0, import_date8.getSettings)().l10n.startOfWeek
+  date: (0, import_date7.getSettings)().formats.date,
+  weekStartsOn: (0, import_date7.getSettings)().l10n.startOfWeek
 };
 function getValueFormatted5({
   item,
@@ -22538,7 +22543,7 @@ function getValueFormatted5({
   } else {
     formatDate2 = field.format;
   }
-  return (0, import_date8.dateI18n)(formatDate2.date, (0, import_date8.getDate)(value));
+  return (0, import_date7.dateI18n)(formatDate2.date, (0, import_date7.getDate)(value));
 }
 var sort2 = (a2, b2, direction) => {
   const timeA = new Date(a2).getTime();
@@ -23312,7 +23317,7 @@ DataViewsSubComponents.Footer = DataViewsFooter;
 var dataviews_default = DataViewsSubComponents;
 
 // routes/forms/stage.tsx
-var import_date10 = __toESM(require_date());
+var import_date9 = __toESM(require_date());
 var import_element100 = __toESM(require_element());
 var import_i18n89 = __toESM(require_i18n());
 import { useSearch as useSearch2, useNavigate as useNavigate4 } from "@wordpress/route";
@@ -29951,7 +29956,7 @@ var defaultLayouts = {
 function StageInner() {
   const navigate = useNavigate4();
   const searchParams = useSearch2({ from: "/forms" });
-  const dateSettings = (0, import_date10.getSettings)();
+  const dateSettings = (0, import_date9.getSettings)();
   const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element100.useState)(false);
   const [isFormsHelpModalOpen, setIsFormsHelpModalOpen] = (0, import_element100.useState)(false);
   const integrations = (0, import_data37.useSelect)(
@@ -30093,7 +30098,7 @@ function StageInner() {
         id: "modified",
         label: (0, import_i18n89.__)("Last updated", "jetpack-forms"),
         type: "date",
-        render: ({ item }) => (0, import_date10.dateI18n)(dateSettings.formats.datetime, item.modified),
+        render: ({ item }) => (0, import_date9.dateI18n)(dateSettings.formats.datetime, item.modified),
         enableSorting: false,
         filterBy: false
       }
