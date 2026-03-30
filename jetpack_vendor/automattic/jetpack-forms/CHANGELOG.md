@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Fixed form rename modal closing even when save fails, so users can retry without losing their input
 - Fixed ref attribute being cleared instead of set during synced form conversion.
 - Fixed undo restoring wrong form status for non-standard statuses in dashboard header actions
+- Fix Forms dashboard black screen when The Events Calendar is active by replacing fragile import() in inline script with a proper script module.
 - Fix phone field initialization failure when script module loads after DOMContentLoaded.
 
 ## [7.14.0] - 2026-03-23
