@@ -2,25 +2,21 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.7-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.7-a.7 - 2026-03-30
 ### Enhancements
-- Add 'note' to the default whitelisted comment types for Sync.
+- Add 'note' to the default whitelisted comment types for Sync. [#47746]
 
 ### Bug fixes
-- Forms: Remove duplicate display of form blocks under the "Jetpack" block inserter section; form blocks now only appear under the "Forms" category.
-- Newsletter Email Status: Fix access control for the newsletter email sent status endpoint.
-- Newsletter Email Status: Fix IDOR vulnerability by adding per-post access control to the newsletter email sent status endpoint.
+- Forms: Only show form blocks under the "Forms" category of the block inserter. [#47614]
+- Newsletter Email Status: Add per-post access control to the newsletter email sent status endpoint. [#47778]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Brute Force Protection: Update error when module can't be activated.
-- Build: Sync Social Logos font from @automattic/social-logos.
-- Newsletter: Default the jetpack_wp_admin_newsletter_settings_enabled filter to true and hide the old settings tab when the new settings page is active.
-- SEO Tools: Prevent PHP warnings when handling malformed data.
-- Sharing: Prevent warning when handling malformed data.
-- Update package dependencies.
+- Brute Force Protection: Update error when module can't be activated. [#47660]
+- Build: Sync Social Logos font from @automattic/social-logos. [#47753]
+- Newsletter: Default the jetpack_wp_admin_newsletter_settings_enabled filter to true and hide the old settings tab when the new settings page is active. [#47750]
+- SEO Tools: Prevent PHP warnings when handling malformed data. [#47804]
+- Sharing: Prevent warning when handling malformed data. [#47805]
+- Update package dependencies. [#47799] [#47818] [#47825]
 
 ## 15.7-a.5 - 2026-03-23
 ### Enhancements

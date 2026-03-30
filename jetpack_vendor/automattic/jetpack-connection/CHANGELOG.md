@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.1.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [8.1.0] - 2026-03-30
 ### Changed
-- Replace transient-based SSO broker URL storage with a constant-based approach gated by a WordPress.com authorization signal, and fall back to WordPress.com SSO when the referrer is a WordPress.com domain.
-- Update package dependencies.
+- Replace transient-based SSO broker URL storage with a constant-based approach gated by a WordPress.com authorization signal, and fall back to WordPress.com SSO when the referrer is a WordPress.com domain. [#47630]
+- Update package dependencies. [#47818]
 
 ### Fixed
-- Fixed SSO login conflict with Two-Factor plugin 0.15.0+ that caused a redundant local 2FA prompt after completing WordPress.com 2FA.
+- Fixed SSO login conflict with Two-Factor plugin 0.15.0+ that caused a redundant local 2FA prompt after completing WordPress.com 2FA. [#47306]
 
 ## [8.0.5] - 2026-03-23
 ### Changed
@@ -1763,7 +1760,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[8.1.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.0.5...v8.1.0-alpha
+[8.1.0]: https://github.com/Automattic/jetpack-connection/compare/v8.0.5...v8.1.0
 [8.0.5]: https://github.com/Automattic/jetpack-connection/compare/v8.0.4...v8.0.5
 [8.0.4]: https://github.com/Automattic/jetpack-connection/compare/v8.0.3...v8.0.4
 [8.0.3]: https://github.com/Automattic/jetpack-connection/compare/v8.0.2...v8.0.3

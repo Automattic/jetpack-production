@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.36.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.36.0] - 2026-03-30
 ### Changed
-- Unify admin dashboard page header with admin-ui components
-- Update package dependencies.
+- Unify admin dashboard page header with admin-ui components. [#47641]
+- Update package dependencies. [#47799]
 
 ## [0.35.6] - 2026-03-23
 ### Changed
@@ -1892,7 +1889,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.36.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.35.6...v0.36.0-alpha
+[0.36.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.35.6...v0.36.0
 [0.35.6]: https://github.com/Automattic/jetpack-videopress/compare/v0.35.5...v0.35.6
 [0.35.5]: https://github.com/Automattic/jetpack-videopress/compare/v0.35.4...v0.35.5
 [0.35.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.35.3...v0.35.4
