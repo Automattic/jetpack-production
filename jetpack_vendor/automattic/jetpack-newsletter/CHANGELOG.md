@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - avoid fatals from newsletter settings for disconnected jetpack errors
+- Fix spacing between the send-default toggle description and the Manage all subscribers link in the Newsletter settings card.
 - Move admin notices and JITMs below the page header instead of rendering inside it
 - Reader Link: Add compatibility check for Urls::maybe_add_origin_site_id() to prevent fatal errors with older connection package versions.
 
