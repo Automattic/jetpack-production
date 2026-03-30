@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.34.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.34.0] - 2026-03-30
 ### Changed
-- Update DataViews dependency.
-- Update Newsletter manage URL to default to new wp-admin settings page.
-- Update package dependencies.
+- Update DataViews dependency. [#46973]
+- Update Newsletter manage URL to default to new WP Admin settings page. [#47750]
+- Update package dependencies. [#47799]
 
 ### Fixed
-- Suppress backup failure and scan threat notifications on multisite installations where these products are not supported.
+- Suppress backup failure and scan threat notifications on multisite installations where these products are not supported. [#47284]
 
 ## [5.33.0] - 2026-03-23
 ### Added
@@ -2593,7 +2590,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.34.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.33.0...5.34.0-alpha
+[5.34.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.33.0...5.34.0
 [5.33.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.32.0...5.33.0
 [5.32.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.31.9...5.32.0
 [5.31.9]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.31.8...5.31.9

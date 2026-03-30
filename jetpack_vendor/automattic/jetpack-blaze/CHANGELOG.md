@@ -12,6 +12,10 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Rename "Advertising" to "Blaze Ads", add context-aware menu placement and campaign-based top-level promotion.
 
+## [0.27.10] - 2026-03-30
+### Changed
+- Update dependencies. [#47038]
+
 ## [0.27.9] - 2026-03-23
 ### Changed
 - Update package dependencies. [#47684]
@@ -806,7 +810,8 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies. [#27906]
 
-[0.28.0-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.27.9...v0.28.0-alpha
+[0.28.0-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.27.10...v0.28.0-alpha
+[0.27.10]: https://github.com/automattic/jetpack-blaze/compare/v0.27.9...v0.27.10
 [0.27.9]: https://github.com/automattic/jetpack-blaze/compare/v0.27.8...v0.27.9
 [0.27.8]: https://github.com/automattic/jetpack-blaze/compare/v0.27.7...v0.27.8
 [0.27.7]: https://github.com/automattic/jetpack-blaze/compare/v0.27.6...v0.27.7

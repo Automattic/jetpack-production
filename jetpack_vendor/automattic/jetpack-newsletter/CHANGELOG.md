@@ -5,21 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.7.0] - 2026-03-30
 ### Changed
-- Enable wp-admin newsletter settings by default by changing the jetpack_wp_admin_newsletter_settings_enabled filter default to true. Defer the expose_to_users() check in init_hooks() to avoid timing issues with late-registered filters.
-- Update DataViews dependency.
-- Update legacy Node calls.
-- Update package dependencies.
+- Enable WP Admin newsletter settings by default. [#47750]
+- Update DataViews dependency. [#46973]
+- Update legacy Node calls. [#47770]
+- Update package dependencies. [#47799]
 
 ### Fixed
-- avoid fatals from newsletter settings for disconnected jetpack errors
-- Fix spacing between the send-default toggle description and the Manage all subscribers link in the Newsletter settings card.
-- Move admin notices and JITMs below the page header instead of rendering inside it
-- Reader Link: Add compatibility check for Urls::maybe_add_origin_site_id() to prevent fatal errors with older connection package versions.
+- Fix spacing between the send-default toggle description and the "Manage all subscribers" link in the Newsletter settings card. [#47830]
+- Move admin notices and JITMs below the page header. [#47714]
+- Reader Link: Add compatibility check for Urls::maybe_add_origin_site_id() to prevent fatal errors with older connection package versions. [#47808]
+- Settings: Avoid fatals for disconnected jetpack errors. [#47782]
 
 ## [0.6.2] - 2026-03-23
 ### Changed
@@ -140,7 +137,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.7.0-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.6.2...v0.7.0-alpha
+[0.7.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.6.2...v0.7.0
 [0.6.2]: https://github.com/Automattic/jetpack-newsletter/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.5.2...v0.6.0
