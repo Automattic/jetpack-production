@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms Dashboard: Add tracking events for form-level actions (preview, copy embed, copy shortcode, duplicate, trash, restore, delete, rename, publish/unpublish, edit, view responses)
 
 ### Changed
+- Exclude blueprints directory from production builds
 - Gravatar: Show initials derived from email prefix instead of mystery person avatar when no name is provided.
 - Remove reduntant de-registration of Jetpack collection in forms editor.
 - Update DataViews dependency.
