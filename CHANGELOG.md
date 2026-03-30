@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Brute Force Protection: Update error when module can't be activated.
 - Build: Sync Social Logos font from @automattic/social-logos.
 - Newsletter: Default the jetpack_wp_admin_newsletter_settings_enabled filter to true and hide the old settings tab when the new settings page is active.
+- SEO Tools: Prevent PHP warnings when handling malformed data.
 - Sharing: Prevent warning when handling malformed data.
 - Update package dependencies.
 
