@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Blaze: rename Advertising menu to Blaze Ads and move it under Jetpack submenu.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Module list: Ensure capitalization is consistent.
+
 ## 15.7-a.7 - 2026-03-30
 ### Enhancements
 - Add 'note' to the default whitelisted comment types for Sync. [#47746]
