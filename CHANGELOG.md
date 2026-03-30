@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add 'note' to the default whitelisted comment types for Sync.
+- Blaze: rename Advertising menu to Blaze Ads and move it under Jetpack submenu.
 
 ### Bug fixes
 - Forms: Remove duplicate display of form blocks under the "Jetpack" block inserter section; form blocks now only appear under the "Forms" category.
