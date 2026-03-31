@@ -9,9 +9,6 @@ This is an alpha version! The changes listed here are not final.
 ### Major Enhancements
 - Jetpack AI Image Generation & Editing: Evolve & enhance Jetpack AI Image Generation
 
-### Enhancements
-- Blaze: rename Advertising menu to Blaze Ads and move it under Jetpack submenu.
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Module list: Ensure capitalization is consistent.
 
