@@ -30,7 +30,7 @@
 		"automattic/jetpack-device-detection": "^3.4.0",
 		"automattic/jetpack-error": "^3.0.6",
 		"automattic/jetpack-external-connections": "^0.1.22",
-		"automattic/jetpack-external-media": "^0.8.9",
+		"automattic/jetpack-external-media": "^0.8.10-alpha",
 		"automattic/jetpack-forms": "^7.15.0",
 		"automattic/jetpack-image-cdn": "^0.7.24",
 		"automattic/jetpack-import": "^0.9.15",
