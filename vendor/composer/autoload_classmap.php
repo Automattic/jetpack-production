@@ -102,6 +102,7 @@ return array(
     'Automattic\\Jetpack\\Connection\\Utils' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-utils.php',
     'Automattic\\Jetpack\\Connection\\Webhooks' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-webhooks.php',
     'Automattic\\Jetpack\\Connection\\Webhooks\\Authorize_Redirect' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/webhooks/class-authorize-redirect.php',
+    'Automattic\\Jetpack\\Connection\\Wpcom_Connector' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/connectors/class-wpcom-connector.php',
     'Automattic\\Jetpack\\Connection\\XMLRPC_Async_Call' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-xmlrpc-async-call.php',
     'Automattic\\Jetpack\\Connection\\XMLRPC_Connector' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-xmlrpc-connector.php',
     'Automattic\\Jetpack\\Constants' => $baseDir . '/jetpack_vendor/automattic/jetpack-constants/src/class-constants.php',
