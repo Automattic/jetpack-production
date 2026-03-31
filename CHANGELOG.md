@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Major Enhancements
 - Jetpack AI Image Generation & Editing: Evolve & enhance Jetpack AI Image Generation
 
+### Enhancements
+- Block Notes: Update enablement logic to use AI feature checks and gate feature behind a paid Jetpack AI plan.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Module list: Ensure capitalization is consistent.
 
