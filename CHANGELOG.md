@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Block Notes: Update enablement logic to use AI feature checks and gate feature behind a paid Jetpack AI plan.
+- Update admin page footer with Products and Help navigation links, replacing About, Privacy, and Terms links.
 
 ### Improved compatibility
 - External Media: ensure that WordPress' new "Embed video from URL" option appears in the Cover block options alongside Jetpack's External Media options.

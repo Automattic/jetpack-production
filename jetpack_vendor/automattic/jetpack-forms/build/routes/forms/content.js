@@ -27154,48 +27154,6 @@ function useFormItemActions() {
   };
 }
 
-// ../../js-packages/components/build/components/layout/use-breakpoint-match/index.js
-var import_compose13 = __toESM(require_compose(), 1);
-
-// ../../js-packages/components/build/components/layout/breakpoints.module.scss
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='223cbd12e4']")) {
-  const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "223cbd12e4");
-  style.appendChild(document.createTextNode(""));
-  document.head.appendChild(style);
-}
-var breakpoints_module_default = { "sm": "(max-width: 599px)", "md": "(min-width: 600px) and (max-width: 959px)", "lg": "(min-width: 960px)" };
-
-// ../../js-packages/components/build/components/layout/use-breakpoint-match/index.js
-var BREAKPOINTS = ["sm", "md", "lg"];
-var getMediaByOperator = (breakpoint, operator, matches) => {
-  const breakpointIndex = BREAKPOINTS.indexOf(breakpoint);
-  const breakpointIndexPlusOne = breakpointIndex + 1;
-  const isEqual = operator.includes("=");
-  let allNeededBreakpoints = [];
-  if (operator.startsWith("<")) {
-    allNeededBreakpoints = BREAKPOINTS.slice(0, isEqual ? breakpointIndexPlusOne : breakpointIndex);
-  }
-  if (operator.startsWith(">")) {
-    allNeededBreakpoints = BREAKPOINTS.slice(isEqual ? breakpointIndex : breakpointIndexPlusOne);
-  }
-  return allNeededBreakpoints?.length ? allNeededBreakpoints.some((brk) => matches[brk]) : matches[breakpoint];
-};
-var useBreakpointMatch = (breakpointToMatch, operatorToMatch) => {
-  const breakpoints = Array.isArray(breakpointToMatch) ? breakpointToMatch : [breakpointToMatch];
-  const operators = Array.isArray(operatorToMatch) ? operatorToMatch : [operatorToMatch];
-  const [smKey, mdKey, lgKey] = BREAKPOINTS;
-  const sm = (0, import_compose13.useMediaQuery)(breakpoints_module_default[smKey]);
-  const md = (0, import_compose13.useMediaQuery)(breakpoints_module_default[mdKey]);
-  const lg = (0, import_compose13.useMediaQuery)(breakpoints_module_default[lgKey]);
-  const matches = { sm, md, lg };
-  return breakpoints.map((breakpoint, idx) => {
-    const operator = operators[idx];
-    return operator ? getMediaByOperator(breakpoint, operator, matches) : matches[breakpoint];
-  });
-};
-var use_breakpoint_match_default = useBreakpointMatch;
-
 // ../../js-packages/api/index.jsx
 var import_jetpack_config = __toESM(require_src(), 1);
 var import_url5 = __toESM(require_url(), 1);
@@ -27491,6 +27449,48 @@ function catchJsonParseError(e2, redirected, url) {
 function catchNetworkErrors() {
   throw new FetchNetworkError();
 }
+
+// ../../js-packages/components/build/components/layout/use-breakpoint-match/index.js
+var import_compose13 = __toESM(require_compose(), 1);
+
+// ../../js-packages/components/build/components/layout/breakpoints.module.scss
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='223cbd12e4']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "223cbd12e4");
+  style.appendChild(document.createTextNode(""));
+  document.head.appendChild(style);
+}
+var breakpoints_module_default = { "sm": "(max-width: 599px)", "md": "(min-width: 600px) and (max-width: 959px)", "lg": "(min-width: 960px)" };
+
+// ../../js-packages/components/build/components/layout/use-breakpoint-match/index.js
+var BREAKPOINTS = ["sm", "md", "lg"];
+var getMediaByOperator = (breakpoint, operator, matches) => {
+  const breakpointIndex = BREAKPOINTS.indexOf(breakpoint);
+  const breakpointIndexPlusOne = breakpointIndex + 1;
+  const isEqual = operator.includes("=");
+  let allNeededBreakpoints = [];
+  if (operator.startsWith("<")) {
+    allNeededBreakpoints = BREAKPOINTS.slice(0, isEqual ? breakpointIndexPlusOne : breakpointIndex);
+  }
+  if (operator.startsWith(">")) {
+    allNeededBreakpoints = BREAKPOINTS.slice(isEqual ? breakpointIndex : breakpointIndexPlusOne);
+  }
+  return allNeededBreakpoints?.length ? allNeededBreakpoints.some((brk) => matches[brk]) : matches[breakpoint];
+};
+var useBreakpointMatch = (breakpointToMatch, operatorToMatch) => {
+  const breakpoints = Array.isArray(breakpointToMatch) ? breakpointToMatch : [breakpointToMatch];
+  const operators = Array.isArray(operatorToMatch) ? operatorToMatch : [operatorToMatch];
+  const [smKey, mdKey, lgKey] = BREAKPOINTS;
+  const sm = (0, import_compose13.useMediaQuery)(breakpoints_module_default[smKey]);
+  const md = (0, import_compose13.useMediaQuery)(breakpoints_module_default[mdKey]);
+  const lg = (0, import_compose13.useMediaQuery)(breakpoints_module_default[lgKey]);
+  const matches = { sm, md, lg };
+  return breakpoints.map((breakpoint, idx) => {
+    const operator = operators[idx];
+    return operator ? getMediaByOperator(breakpoint, operator, matches) : matches[breakpoint];
+  });
+};
+var use_breakpoint_match_default = useBreakpointMatch;
 
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
 var import_components77 = __toESM(require_components(), 1);
