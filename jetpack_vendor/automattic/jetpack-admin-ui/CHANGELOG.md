@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add "Upgrade Jetpack" menu item for free users in the Jetpack admin menu.
+
 ## [0.6.0] - 2026-03-30
 ### Changed
 - Sidebar: Change "Anti-spam" to "Akismet Anti-spam". [#47834]
@@ -220,6 +227,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixing menu visibility issues.
 
+[0.7.0-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.6.0...0.7.0-alpha
 [0.6.0]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.12...0.6.0
 [0.5.12]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.11...0.5.12
 [0.5.11]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.10...0.5.11

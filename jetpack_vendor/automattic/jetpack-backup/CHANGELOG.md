@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Replace @automattic/jetpack-components Button with @wordpress/components Button in BackupNowButton component.
+- Simplify admin menu title from 'VaultPress Backup' to 'Backups'.
 - Update admin page footer design.
 - Update package dependencies.
 

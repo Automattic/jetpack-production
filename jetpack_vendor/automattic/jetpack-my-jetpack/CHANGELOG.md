@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Reorder admin menu items so external links appear last.
 - Update admin page footer design.
 - Update package dependencies.
 

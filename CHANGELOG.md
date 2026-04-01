@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI Image Generation & Editing: Evolve & enhance Jetpack AI Image Generation
 
 ### Enhancements
+- Admin Menu: Reorder menu items so that links opening in new windows appear last.
 - Block Notes: Update enablement logic to use AI feature checks and gate feature behind a paid Jetpack AI plan.
 - Update admin page footer with Products and Help navigation links, replacing About, Privacy, and Terms links.
 
