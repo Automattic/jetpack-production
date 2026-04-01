@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add WordPress.com connector card for the WP 7.0+ Settings > Connectors screen with connection details and disconnect support.
+- Connection: Display inline error notices for site registration, authorization, and disconnect failures in the WordPress.com Connectors card.
 
 ### Changed
 - Connector card: Prevent site disconnection and owner account unlinking on WoA and VIP sites.
