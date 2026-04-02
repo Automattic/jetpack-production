@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Connector card: Prevent site disconnection and owner account unlinking on WoA and VIP sites.
 
+### Fixed
+- Connection Details: Fix layout of the connection details modal to properly handle varying URL lengths and screen sizes.
+
 ## [8.1.0] - 2026-03-30
 ### Changed
 - Replace transient-based SSO broker URL storage with a constant-based approach gated by a WordPress.com authorization signal, and fall back to WordPress.com SSO when the referrer is a WordPress.com domain. [#47630]
