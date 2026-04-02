@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Clean up old about page images.
+- Update package dependencies.
 
 ## [7.15.0] - 2026-03-30
 ### Security

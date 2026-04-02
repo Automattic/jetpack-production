@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - External Media: ensure that WordPress' new "Embed video from URL" option appears in the Cover block options alongside Jetpack's External Media options.
 
