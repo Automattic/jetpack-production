@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Clean up old about page images.
+- Forms: allow browsers to lazy-load avatars in responses.
 - Update package dependencies.
 
 ### Fixed

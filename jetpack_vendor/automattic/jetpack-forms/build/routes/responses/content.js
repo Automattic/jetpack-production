@@ -34133,9 +34133,10 @@ function Gravatar({
       alt: displayName || "",
       className: "jp-forms__gravatar",
       ref: profileImageRef,
-      src: `https://0.gravatar.com/avatar/${hashedEmail}?d=${defaultImage}${displayName ? `&name=${encodeURIComponent(displayName)}` : ""}`,
+      src: `https://secure.gravatar.com/avatar/${hashedEmail}?d=${defaultImage}${displayName ? `&name=${encodeURIComponent(displayName)}` : ""}`,
       width: size,
-      height: size
+      height: size,
+      loading: "lazy"
     }
   );
 }
