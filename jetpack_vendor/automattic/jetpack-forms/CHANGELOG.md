@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Clean up old about page images.
 - Update package dependencies.
 
+### Fixed
+- Fix missing margin prop in SelectControl component.
+
 ## [7.15.0] - 2026-03-30
 ### Security
 - Gravatar: Do not include email or IP address in Gravatar image URL. [#47779]
