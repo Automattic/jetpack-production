@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add "Upgrade Jetpack" menu item for free users in the Jetpack admin menu.
 
+### Fixed
+- Fix upgrade menu item color on problematic admin color schemes and add build pipeline for CSS assets.
+
 ## [0.6.0] - 2026-03-30
 ### Changed
 - Sidebar: Change "Anti-spam" to "Akismet Anti-spam". [#47834]
