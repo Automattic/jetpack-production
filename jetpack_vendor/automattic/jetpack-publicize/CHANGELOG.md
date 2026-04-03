@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Update admin page footer design.
 - Update package dependencies.
 
+### Removed
+- Remove UNIFIED_UI_V1 feature flag usage.
+
 ### Fixed
 - Fix edit template changes not saving when using the back arrow or close button.
 
