@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix edit template changes not saving when using the back arrow or close button.
+- Fix useSelect warning for notesConfig on Social admin page.
 
 ## [0.76.0] - 2026-03-30
 ### Added
