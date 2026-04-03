@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Connection Details: Fix layout of the connection details modal to properly handle varying URL lengths and screen sizes.
 - Fix connection flow in connector card when using Gutenberg and ensure modals always show on disconnection.
+- Update Woo logo on connector card.
 
 ## [8.1.0] - 2026-03-30
 ### Changed
