@@ -578,7 +578,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
           },
           [subscribe2, value, getSnapshot]
         );
-        useEffect38(
+        useEffect40(
           function() {
             checkIfSnapshotChanged(inst) && forceUpdate({ inst });
             return subscribe2(function() {
@@ -604,7 +604,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return getSnapshot();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React35 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState56 = React35.useState, useEffect38 = React35.useEffect, useLayoutEffect4 = React35.useLayoutEffect, useDebugValue = React35.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      var React35 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState56 = React35.useState, useEffect40 = React35.useEffect, useLayoutEffect4 = React35.useLayoutEffect, useDebugValue = React35.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
       exports.useSyncExternalStore = void 0 !== React35.useSyncExternalStore ? React35.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
@@ -2800,20 +2800,20 @@ var require_range = __commonJS({
       }
       return `${from} ${to}`.trim();
     };
-    var testSet = (set2, version2, options) => {
-      for (let i2 = 0; i2 < set2.length; i2++) {
-        if (!set2[i2].test(version2)) {
+    var testSet = (set3, version2, options) => {
+      for (let i2 = 0; i2 < set3.length; i2++) {
+        if (!set3[i2].test(version2)) {
           return false;
         }
       }
       if (version2.prerelease.length && !options.includePrerelease) {
-        for (let i2 = 0; i2 < set2.length; i2++) {
-          debug5(set2[i2].semver);
-          if (set2[i2].semver === Comparator.ANY) {
+        for (let i2 = 0; i2 < set3.length; i2++) {
+          debug5(set3[i2].semver);
+          if (set3[i2].semver === Comparator.ANY) {
             continue;
           }
-          if (set2[i2].semver.prerelease.length > 0) {
-            const allowed = set2[i2].semver;
+          if (set3[i2].semver.prerelease.length > 0) {
+            const allowed = set3[i2].semver;
             if (allowed.major === version2.major && allowed.minor === version2.minor && allowed.patch === version2.patch) {
               return true;
             }
@@ -3209,7 +3209,7 @@ var require_simplify = __commonJS({
     var satisfies = require_satisfies();
     var compare = require_compare();
     module.exports = (versions, range, options) => {
-      const set2 = [];
+      const set3 = [];
       let first = null;
       let prev = null;
       const v2 = versions.sort((a2, b2) => compare(a2, b2, options));
@@ -3222,17 +3222,17 @@ var require_simplify = __commonJS({
           }
         } else {
           if (prev) {
-            set2.push([first, prev]);
+            set3.push([first, prev]);
           }
           prev = null;
           first = null;
         }
       }
       if (first) {
-        set2.push([first, null]);
+        set3.push([first, null]);
       }
       const ranges = [];
-      for (const [min, max] of set2) {
+      for (const [min, max] of set3) {
         if (min === max) {
           ranges.push(min);
         } else if (!max && min === v2[0]) {
@@ -4675,7 +4675,7 @@ var NavigableRegion = (0, import_element.forwardRef)(
 NavigableRegion.displayName = "NavigableRegion";
 var navigable_region_default = NavigableRegion;
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useControlled.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useControlled.js
 var React = __toESM(require_react(), 1);
 function useControlled({
   controlled,
@@ -4711,10 +4711,10 @@ function useControlled({
   return [value, setValueIfUncontrolled];
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useStableCallback.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useStableCallback.js
 var React3 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useRefWithInit.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useRefWithInit.js
 var React2 = __toESM(require_react(), 1);
 var UNINITIALIZED = {};
 function useRefWithInit(init2, initArg) {
@@ -4725,7 +4725,7 @@ function useRefWithInit(init2, initArg) {
   return ref;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useStableCallback.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useStableCallback.js
 var useInsertionEffect = React3[`useInsertionEffect${Math.random().toFixed(1)}`.slice(0, -3)];
 var useSafeInsertionEffect = (
   // React 17 doesn't have useInsertionEffect.
@@ -4758,16 +4758,31 @@ function assertNotCalled() {
   }
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useIsoLayoutEffect.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useIsoLayoutEffect.js
 var React4 = __toESM(require_react(), 1);
 var noop = () => {
 };
 var useIsoLayoutEffect = typeof document !== "undefined" ? React4.useLayoutEffect : noop;
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeList.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/warn.js
+var set;
+if (true) {
+  set = /* @__PURE__ */ new Set();
+}
+function warn(...messages) {
+  if (true) {
+    const messageKey = messages.join(" ");
+    if (!set.has(messageKey)) {
+      set.add(messageKey);
+      console.warn(`Base UI: ${messageKey}`);
+    }
+  }
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeList.js
 var React6 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeListContext.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeListContext.js
 var React5 = __toESM(require_react(), 1);
 var CompositeListContext = /* @__PURE__ */ React5.createContext({
   register: () => {
@@ -4790,7 +4805,7 @@ function useCompositeListContext() {
   return React5.useContext(CompositeListContext);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeList.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeList.js
 var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
 function CompositeList(props) {
   const {
@@ -4921,7 +4936,7 @@ function sortByDocumentPosition(a2, b2) {
 function disableEslintWarning(_) {
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/direction-provider/DirectionContext.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/direction-provider/DirectionContext.js
 var React7 = __toESM(require_react(), 1);
 var DirectionContext = /* @__PURE__ */ React7.createContext(void 0);
 if (true) DirectionContext.displayName = "DirectionContext";
@@ -4930,10 +4945,10 @@ function useDirection() {
   return context?.direction ?? "ltr";
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useRenderElement.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useRenderElement.js
 var React10 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useMergedRefs.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useMergedRefs.js
 function useMergedRefs(a2, b2, c2, d2) {
   const forkRef = useRefWithInit(createForkRef).current;
   if (didChange(forkRef, a2, b2, c2, d2)) {
@@ -5022,17 +5037,17 @@ function update(forkRef, refs) {
   };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/getReactElementRef.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/getReactElementRef.js
 var React9 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/reactVersion.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/reactVersion.js
 var React8 = __toESM(require_react(), 1);
 var majorVersion = parseInt(React8.version, 10);
 function isReactVersionAtLeast(reactVersionToCheck) {
   return majorVersion >= reactVersionToCheck;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/getReactElementRef.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/getReactElementRef.js
 function getReactElementRef(element) {
   if (!/* @__PURE__ */ React9.isValidElement(element)) {
     return null;
@@ -5042,7 +5057,7 @@ function getReactElementRef(element) {
   return (isReactVersionAtLeast(19) ? propsWithRef?.ref : reactElement.ref) ?? null;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/mergeObjects.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/mergeObjects.js
 function mergeObjects(a2, b2) {
   if (a2 && !b2) {
     return a2;
@@ -5059,7 +5074,7 @@ function mergeObjects(a2, b2) {
   return void 0;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/getStateAttributesProps.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/getStateAttributesProps.js
 function getStateAttributesProps(state, customMapping) {
   const props = {};
   for (const key in state) {
@@ -5080,17 +5095,17 @@ function getStateAttributesProps(state, customMapping) {
   return props;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveClassName.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveClassName.js
 function resolveClassName(className, state) {
   return typeof className === "function" ? className(state) : className;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveStyle.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveStyle.js
 function resolveStyle(style, state) {
   return typeof style === "function" ? style(state) : style;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/merge-props/mergeProps.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/merge-props/mergeProps.js
 var EMPTY_PROPS = {};
 function mergeProps(a2, b2, c2, d2, e2) {
   let merged = {
@@ -5213,11 +5228,17 @@ function isSyntheticEvent(event) {
   return event != null && typeof event === "object" && "nativeEvent" in event;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/empty.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/empty.js
 var EMPTY_ARRAY = Object.freeze([]);
 var EMPTY_OBJECT = Object.freeze({});
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useRenderElement.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/constants.js
+var BASE_UI_SWIPE_IGNORE_ATTRIBUTE = "data-base-ui-swipe-ignore";
+var LEGACY_SWIPE_IGNORE_ATTRIBUTE = "data-swipe-ignore";
+var BASE_UI_SWIPE_IGNORE_SELECTOR = `[${BASE_UI_SWIPE_IGNORE_ATTRIBUTE}]`;
+var LEGACY_SWIPE_IGNORE_SELECTOR = `[${LEGACY_SWIPE_IGNORE_ATTRIBUTE}]`;
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useRenderElement.js
 var import_react = __toESM(require_react(), 1);
 function useRenderElement(element, componentProps, params = {}) {
   const renderProp = componentProps.render;
@@ -5269,6 +5290,9 @@ var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
 function evaluateRenderProp(element, render4, props, state) {
   if (render4) {
     if (typeof render4 === "function") {
+      if (true) {
+        warnIfRenderPropLooksLikeComponent(render4);
+      }
       return render4(props, state);
     }
     const mergedProps = mergeProps(props, render4.props);
@@ -5290,7 +5314,18 @@ function evaluateRenderProp(element, render4, props, state) {
       return renderTag(element, props);
     }
   }
-  throw new Error(true ? "Base UI: Render element or function are not defined." : formatErrorMessage(8));
+  throw new Error(true ? "Base UI: Render element or function are not defined." : formatErrorMessage_default(8));
+}
+function warnIfRenderPropLooksLikeComponent(renderFn) {
+  const functionName = renderFn.name;
+  if (functionName.length === 0) {
+    return;
+  }
+  const firstCharacterCode = functionName.charCodeAt(0);
+  if (firstCharacterCode < 65 || firstCharacterCode > 90) {
+    return;
+  }
+  warn(`The \`render\` prop received a function named \`${functionName}\` that starts with an uppercase letter.`, "This usually means a React component was passed directly as `render={Component}`.", "Base UI calls `render` as a plain function, which can break the Rules of Hooks during reconciliation.", "If this is an intentional render callback, rename it to start with a lowercase letter.", "Use `render={<Component />}` or `render={(props) => <Component {...props} />}` instead.", "https://base-ui.com/r/invalid-render-prop");
 }
 function renderTag(Tag, props) {
   if (Tag === "button") {
@@ -5310,7 +5345,7 @@ function renderTag(Tag, props) {
   return /* @__PURE__ */ React10.createElement(Tag, props);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/reason-parts.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/reason-parts.js
 var reason_parts_exports = {};
 __export(reason_parts_exports, {
   cancelOpen: () => cancelOpen,
@@ -5381,7 +5416,7 @@ var imperativeAction = "imperative-action";
 var swipe = "swipe";
 var windowResize = "window-resize";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/createBaseUIEventDetails.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/createBaseUIEventDetails.js
 function createChangeEventDetails(reason, event, trigger, customProperties) {
   let canceled = false;
   let allowPropagation = false;
@@ -5407,16 +5442,16 @@ function createChangeEventDetails(reason, event, trigger, customProperties) {
   return details;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useId.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useId.js
 var React12 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/safeReact.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/safeReact.js
 var React11 = __toESM(require_react(), 1);
 var SafeReact = {
   ...React11
 };
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useId.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useId.js
 var globalId = 0;
 function useGlobalId(idOverride, prefix = "mui") {
   const [defaultId, setDefaultId] = React12.useState(idOverride);
@@ -5438,22 +5473,22 @@ function useId(idOverride, prefix) {
   return useGlobalId(idOverride, prefix);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useBaseUiId.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useBaseUiId.js
 function useBaseUiId(idOverride) {
   return useId(idOverride, "base-ui");
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useAnimationsFinished.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useAnimationsFinished.js
 var ReactDOM = __toESM(require_react_dom(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useOnMount.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useOnMount.js
 var React13 = __toESM(require_react(), 1);
 var EMPTY = [];
 function useOnMount(fn) {
   React13.useEffect(fn, EMPTY);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useAnimationFrame.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useAnimationFrame.js
 var EMPTY2 = null;
 var LAST_RAF = globalThis.requestAnimationFrame;
 var Scheduler = class {
@@ -5541,7 +5576,7 @@ function useAnimationFrame() {
   return timeout;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveRef.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveRef.js
 function resolveRef(maybeRef) {
   if (maybeRef == null) {
     return maybeRef;
@@ -5549,7 +5584,7 @@ function resolveRef(maybeRef) {
   return "current" in maybeRef ? maybeRef.current : maybeRef;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/stateAttributesMapping.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/stateAttributesMapping.js
 var TransitionStatusDataAttributes = /* @__PURE__ */ (function(TransitionStatusDataAttributes2) {
   TransitionStatusDataAttributes2["startingStyle"] = "data-starting-style";
   TransitionStatusDataAttributes2["endingStyle"] = "data-ending-style";
@@ -5573,7 +5608,7 @@ var transitionStatusMapping = {
   }
 };
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useAnimationsFinished.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useAnimationsFinished.js
 function useAnimationsFinished(elementOrRef, waitForStartingStyleRemoved = false, treatAbortedAsFinished = true) {
   const frame = useAnimationFrame();
   return useStableCallback((fnToExecute, signal = null) => {
@@ -5635,7 +5670,7 @@ function useAnimationsFinished(elementOrRef, waitForStartingStyleRemoved = false
   });
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useTransitionStatus.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useTransitionStatus.js
 var React14 = __toESM(require_react(), 1);
 function useTransitionStatus(open, enableIdleState = false, deferEndingState = false) {
   const [transitionStatus, setTransitionStatus] = React14.useState(open && enableIdleState ? "idle" : void 0);
@@ -5693,7 +5728,7 @@ function useTransitionStatus(open, enableIdleState = false, deferEndingState = f
   }), [mounted, transitionStatus]);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/useCompositeListItem.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/useCompositeListItem.js
 var React15 = __toESM(require_react(), 1);
 var IndexGuessBehavior = /* @__PURE__ */ (function(IndexGuessBehavior2) {
   IndexGuessBehavior2[IndexGuessBehavior2["None"] = 0] = "None";
@@ -5766,12 +5801,12 @@ function useCompositeListItem(params = {}) {
   }), [index, ref]);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/isElementDisabled.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/isElementDisabled.js
 function isElementDisabled(element) {
   return element == null || element.hasAttribute("disabled") || element.getAttribute("aria-disabled") === "true";
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-button/useButton.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-button/useButton.js
 var React18 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@floating-ui+utils@0.2.11/node_modules/@floating-ui/utils/dist/floating-ui.utils.dom.mjs
@@ -5798,34 +5833,34 @@ function getComputedStyle2(element) {
   return getWindow(element).getComputedStyle(element);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/error.js
-var set;
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/error.js
+var set2;
 if (true) {
-  set = /* @__PURE__ */ new Set();
+  set2 = /* @__PURE__ */ new Set();
 }
 function error(...messages) {
   if (true) {
     const messageKey = messages.join(" ");
-    if (!set.has(messageKey)) {
-      set.add(messageKey);
+    if (!set2.has(messageKey)) {
+      set2.add(messageKey);
       console.error(`Base UI: ${messageKey}`);
     }
   }
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRootContext.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRootContext.js
 var React16 = __toESM(require_react(), 1);
 var CompositeRootContext = /* @__PURE__ */ React16.createContext(void 0);
 if (true) CompositeRootContext.displayName = "CompositeRootContext";
 function useCompositeRootContext(optional = false) {
   const context = React16.useContext(CompositeRootContext);
   if (context === void 0 && !optional) {
-    throw new Error(true ? "Base UI: CompositeRootContext is missing. Composite parts must be placed within <Composite.Root>." : formatErrorMessage(16));
+    throw new Error(true ? "Base UI: CompositeRootContext is missing. Composite parts must be placed within <Composite.Root>." : formatErrorMessage_default(16));
   }
   return context;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useFocusableWhenDisabled.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useFocusableWhenDisabled.js
 var React17 = __toESM(require_react(), 1);
 function useFocusableWhenDisabled(parameters) {
   const {
@@ -5865,20 +5900,18 @@ function useFocusableWhenDisabled(parameters) {
   };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-button/useButton.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-button/useButton.js
 function useButton(parameters = {}) {
   const {
     disabled: disabled2 = false,
     focusableWhenDisabled,
     tabIndex = 0,
-    native: isNativeButton = true
+    native: isNativeButton = true,
+    composite: compositeProp
   } = parameters;
   const elementRef = React18.useRef(null);
-  const isCompositeItem = useCompositeRootContext(true) !== void 0;
-  const isValidLink = useStableCallback(() => {
-    const element = elementRef.current;
-    return Boolean(element?.tagName === "A" && element?.href);
-  });
+  const compositeRootContext = useCompositeRootContext(true);
+  const isCompositeItem = compositeProp ?? compositeRootContext !== void 0;
   const {
     props: focusableWhenDisabledProps
   } = useFocusableWhenDisabled({
@@ -5893,7 +5926,7 @@ function useButton(parameters = {}) {
       if (!elementRef.current) {
         return;
       }
-      const isButtonTag = elementRef.current.tagName === "BUTTON";
+      const isButtonTag = isButtonElement(elementRef.current);
       if (isNativeButton) {
         if (!isButtonTag) {
           const ownerStackMessage = SafeReact.captureOwnerStack?.() || "";
@@ -5942,34 +5975,60 @@ function useButton(parameters = {}) {
         }
       },
       onKeyDown(event) {
-        if (!disabled2) {
-          makeEventPreventable(event);
-          externalOnKeyDown?.(event);
+        if (disabled2) {
+          return;
         }
+        makeEventPreventable(event);
+        externalOnKeyDown?.(event);
         if (event.baseUIHandlerPrevented) {
           return;
         }
-        const shouldClick = event.target === event.currentTarget && !isNativeButton && !isValidLink() && !disabled2;
+        const isCurrentTarget = event.target === event.currentTarget;
+        const currentTarget = event.currentTarget;
+        const isButton2 = isButtonElement(currentTarget);
+        const isLink = !isNativeButton && isValidLinkElement(currentTarget);
+        const shouldClick = isCurrentTarget && (isNativeButton ? isButton2 : !isLink);
         const isEnterKey = event.key === "Enter";
         const isSpaceKey = event.key === " ";
+        const role = currentTarget.getAttribute("role");
+        const isTextNavigationRole = role?.startsWith("menuitem") || role === "option" || role === "gridcell";
+        if (isCurrentTarget && isCompositeItem && isSpaceKey) {
+          if (event.defaultPrevented && isTextNavigationRole) {
+            return;
+          }
+          event.preventDefault();
+          if (isLink || isNativeButton && isButton2) {
+            currentTarget.click();
+            event.preventBaseUIHandler();
+          } else if (shouldClick) {
+            externalOnClick?.(event);
+            event.preventBaseUIHandler();
+          }
+          return;
+        }
         if (shouldClick) {
-          if (isSpaceKey || isEnterKey) {
+          if (!isNativeButton && (isSpaceKey || isEnterKey)) {
             event.preventDefault();
           }
-          if (isEnterKey) {
+          if (!isNativeButton && isEnterKey) {
             externalOnClick?.(event);
           }
         }
       },
       onKeyUp(event) {
-        if (!disabled2) {
-          makeEventPreventable(event);
-          externalOnKeyUp?.(event);
+        if (disabled2) {
+          return;
+        }
+        makeEventPreventable(event);
+        externalOnKeyUp?.(event);
+        if (event.target === event.currentTarget && isNativeButton && isCompositeItem && isButtonElement(event.currentTarget) && event.key === " ") {
+          event.preventDefault();
+          return;
         }
         if (event.baseUIHandlerPrevented) {
           return;
         }
-        if (event.target === event.currentTarget && !isNativeButton && !disabled2 && event.key === " ") {
+        if (event.target === event.currentTarget && !isNativeButton && !isCompositeItem && event.key === " ") {
           externalOnClick?.(event);
         }
       },
@@ -5983,7 +6042,7 @@ function useButton(parameters = {}) {
     }, !isNativeButton ? {
       role: "button"
     } : void 0, focusableWhenDisabledProps, otherExternalProps);
-  }, [disabled2, focusableWhenDisabledProps, isNativeButton, isValidLink]);
+  }, [disabled2, focusableWhenDisabledProps, isCompositeItem, isNativeButton]);
   const buttonRef = useStableCallback((element) => {
     elementRef.current = element;
     updateDisabled();
@@ -5996,14 +6055,17 @@ function useButton(parameters = {}) {
 function isButtonElement(elem) {
   return isHTMLElement(elem) && elem.tagName === "BUTTON";
 }
+function isValidLinkElement(elem) {
+  return Boolean(elem?.tagName === "A" && elem?.href);
+}
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/constants.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/constants.js
 var ARROW_LEFT = "ArrowLeft";
 var ARROW_RIGHT = "ArrowRight";
 var ARROW_UP = "ArrowUp";
 var ARROW_DOWN = "ArrowDown";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/element.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/element.js
 function activeElement(doc) {
   let element = doc.activeElement;
   while (element?.shadowRoot?.activeElement != null) {
@@ -6031,7 +6093,7 @@ function contains(parent, child) {
   return false;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/event.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/event.js
 function stopEvent(event) {
   event.preventDefault();
   event.stopPropagation();
@@ -6041,7 +6103,7 @@ function stopEvent(event) {
 var round = Math.round;
 var floor = Math.floor;
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/composite.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/composite.js
 function isDifferentGridRow(index, cols, prevRow) {
   return Math.floor(index / cols) !== prevRow;
 }
@@ -6085,139 +6147,141 @@ function getGridNavigatedIndex(listRef, {
   stopEvent: stop = false
 }) {
   let nextIndex = prevIndex;
-  const rows = [];
-  const rowIndexMap = {};
-  let hasRoleRow = false;
-  {
-    let currentRowEl = null;
-    let currentRowIndex = -1;
-    listRef.current.forEach((el, idx) => {
-      if (el == null) {
-        return;
-      }
-      const rowEl = el.closest('[role="row"]');
-      if (rowEl) {
-        hasRoleRow = true;
-      }
-      if (rowEl !== currentRowEl || currentRowIndex === -1) {
-        currentRowEl = rowEl;
-        currentRowIndex += 1;
-        rows[currentRowIndex] = [];
-      }
-      rows[currentRowIndex].push(idx);
-      rowIndexMap[idx] = currentRowIndex;
-    });
-  }
-  const hasDomRows = hasRoleRow && rows.length > 0 && rows.some((row) => row.length !== cols);
-  function navigateVertically(direction) {
-    if (!hasDomRows || prevIndex === -1) {
-      return void 0;
-    }
-    const currentRow = rowIndexMap[prevIndex];
-    if (currentRow == null) {
-      return void 0;
-    }
-    const colInRow = rows[currentRow].indexOf(prevIndex);
-    let nextRow = direction === "up" ? currentRow - 1 : currentRow + 1;
-    if (loopFocus) {
-      if (nextRow < 0) {
-        nextRow = rows.length - 1;
-      } else if (nextRow >= rows.length) {
-        nextRow = 0;
-      }
-    }
-    const visited = /* @__PURE__ */ new Set();
-    while (nextRow >= 0 && nextRow < rows.length && !visited.has(nextRow)) {
-      visited.add(nextRow);
-      const targetRow = rows[nextRow];
-      if (targetRow.length === 0) {
-        nextRow = direction === "up" ? nextRow - 1 : nextRow + 1;
-        continue;
-      }
-      const clampedCol = Math.min(colInRow, targetRow.length - 1);
-      for (let col = clampedCol; col >= 0; col -= 1) {
-        const candidate = targetRow[col];
-        if (!isListIndexDisabled(listRef, candidate, disabledIndices)) {
-          return candidate;
-        }
-      }
-      nextRow = direction === "up" ? nextRow - 1 : nextRow + 1;
-      if (loopFocus) {
-        if (nextRow < 0) {
-          nextRow = rows.length - 1;
-        } else if (nextRow >= rows.length) {
-          nextRow = 0;
-        }
-      }
-    }
-    return void 0;
-  }
+  let verticalDirection;
   if (event.key === ARROW_UP) {
-    const domBasedCandidate = navigateVertically("up");
-    if (domBasedCandidate !== void 0) {
-      if (stop) {
-        stopEvent(event);
+    verticalDirection = "up";
+  } else if (event.key === ARROW_DOWN) {
+    verticalDirection = "down";
+  }
+  if (verticalDirection) {
+    const rows = [];
+    const rowIndexMap = [];
+    let hasRoleRow = false;
+    let visibleItemCount = 0;
+    {
+      let currentRowEl = null;
+      let currentRowIndex = -1;
+      listRef.current.forEach((el, idx) => {
+        if (el == null) {
+          return;
+        }
+        visibleItemCount += 1;
+        const rowEl = el.closest('[role="row"]');
+        if (rowEl) {
+          hasRoleRow = true;
+        }
+        if (rowEl !== currentRowEl || currentRowIndex === -1) {
+          currentRowEl = rowEl;
+          currentRowIndex += 1;
+          rows[currentRowIndex] = [];
+        }
+        rows[currentRowIndex].push(idx);
+        rowIndexMap[idx] = currentRowIndex;
+      });
+    }
+    let hasDomRows = false;
+    let inferredDomCols = 0;
+    if (hasRoleRow) {
+      for (const row of rows) {
+        const rowLength = row.length;
+        if (rowLength > inferredDomCols) {
+          inferredDomCols = rowLength;
+        }
+        if (rowLength !== cols) {
+          hasDomRows = true;
+        }
       }
-      nextIndex = domBasedCandidate;
+    }
+    const hasVirtualizedGaps = hasDomRows && visibleItemCount < listRef.current.length;
+    const verticalCols = inferredDomCols || cols;
+    const navigateVertically = (direction) => {
+      if (!hasDomRows || prevIndex === -1) {
+        return void 0;
+      }
+      const currentRow = rowIndexMap[prevIndex];
+      if (currentRow == null) {
+        return void 0;
+      }
+      const colInRow = rows[currentRow].indexOf(prevIndex);
+      const step = direction === "up" ? -1 : 1;
+      for (let nextRow = currentRow + step, i2 = 0; i2 < rows.length; i2 += 1, nextRow += step) {
+        if (nextRow < 0 || nextRow >= rows.length) {
+          if (!loopFocus || hasVirtualizedGaps) {
+            return void 0;
+          }
+          nextRow = nextRow < 0 ? rows.length - 1 : 0;
+        }
+        const targetRow = rows[nextRow];
+        for (let col = Math.min(colInRow, targetRow.length - 1); col >= 0; col -= 1) {
+          const candidate = targetRow[col];
+          if (!isListIndexDisabled(listRef, candidate, disabledIndices)) {
+            return candidate;
+          }
+        }
+      }
+      return void 0;
+    };
+    const navigateVerticallyWithInferredRows = (direction) => {
+      if (!hasVirtualizedGaps || prevIndex === -1) {
+        return void 0;
+      }
+      const colInRow = prevIndex % verticalCols;
+      const rowStep = direction === "up" ? -verticalCols : verticalCols;
+      const lastRowStart = maxIndex - maxIndex % verticalCols;
+      const rowCount = floor(maxIndex / verticalCols) + 1;
+      for (let rowStart = prevIndex - colInRow + rowStep, i2 = 0; i2 < rowCount; i2 += 1, rowStart += rowStep) {
+        if (rowStart < 0 || rowStart > maxIndex) {
+          if (!loopFocus) {
+            return void 0;
+          }
+          rowStart = rowStart < 0 ? lastRowStart : 0;
+        }
+        const rowEnd = Math.min(rowStart + verticalCols - 1, maxIndex);
+        for (let candidate = Math.min(rowStart + colInRow, rowEnd); candidate >= rowStart; candidate -= 1) {
+          if (!isListIndexDisabled(listRef, candidate, disabledIndices)) {
+            return candidate;
+          }
+        }
+      }
+      return void 0;
+    };
+    if (stop) {
+      stopEvent(event);
+    }
+    const verticalCandidate = navigateVertically(verticalDirection) ?? navigateVerticallyWithInferredRows(verticalDirection);
+    if (verticalCandidate !== void 0) {
+      nextIndex = verticalCandidate;
+    } else if (prevIndex === -1) {
+      nextIndex = verticalDirection === "up" ? maxIndex : minIndex;
     } else {
-      if (stop) {
-        stopEvent(event);
-      }
-      if (prevIndex === -1) {
-        nextIndex = maxIndex;
-      } else {
-        nextIndex = findNonDisabledListIndex(listRef, {
-          startingIndex: nextIndex,
-          amount: cols,
-          decrement: true,
-          disabledIndices
-        });
-        if (loopFocus && (prevIndex - cols < minIndex || nextIndex < 0)) {
-          const col = prevIndex % cols;
-          const maxCol = maxIndex % cols;
+      nextIndex = findNonDisabledListIndex(listRef, {
+        startingIndex: prevIndex,
+        amount: verticalCols,
+        decrement: verticalDirection === "up",
+        disabledIndices
+      });
+      if (loopFocus) {
+        if (verticalDirection === "up" && (prevIndex - verticalCols < minIndex || nextIndex < 0)) {
+          const col = prevIndex % verticalCols;
+          const maxCol = maxIndex % verticalCols;
           const offset = maxIndex - (maxCol - col);
           if (maxCol === col) {
             nextIndex = maxIndex;
           } else {
-            nextIndex = maxCol > col ? offset : offset - cols;
+            nextIndex = maxCol > col ? offset : offset - verticalCols;
           }
         }
-      }
-      if (isIndexOutOfListBounds(listRef, nextIndex)) {
-        nextIndex = prevIndex;
-      }
-    }
-  }
-  if (event.key === ARROW_DOWN) {
-    const domBasedCandidate = navigateVertically("down");
-    if (domBasedCandidate !== void 0) {
-      if (stop) {
-        stopEvent(event);
-      }
-      nextIndex = domBasedCandidate;
-    } else {
-      if (stop) {
-        stopEvent(event);
-      }
-      if (prevIndex === -1) {
-        nextIndex = minIndex;
-      } else {
-        nextIndex = findNonDisabledListIndex(listRef, {
-          startingIndex: prevIndex,
-          amount: cols,
-          disabledIndices
-        });
-        if (loopFocus && prevIndex + cols > maxIndex) {
+        if (verticalDirection === "down" && prevIndex + verticalCols > maxIndex) {
           nextIndex = findNonDisabledListIndex(listRef, {
-            startingIndex: prevIndex % cols - cols,
-            amount: cols,
+            startingIndex: prevIndex % verticalCols - verticalCols,
+            amount: verticalCols,
             disabledIndices
           });
         }
       }
-      if (isIndexOutOfListBounds(listRef, nextIndex)) {
-        nextIndex = prevIndex;
-      }
+    }
+    if (isIndexOutOfListBounds(listRef, nextIndex)) {
+      nextIndex = prevIndex;
     }
   }
   if (orientation === "both") {
@@ -6353,25 +6417,29 @@ function getGridCellIndices(indices, cellMap) {
   return cellMap.flatMap((index, cellIndex) => indices.includes(index) ? [cellIndex] : []);
 }
 function isListIndexDisabled(listRef, index, disabledIndices) {
-  if (typeof disabledIndices === "function") {
-    return disabledIndices(index);
-  }
-  if (disabledIndices) {
-    return disabledIndices.includes(index);
+  const isExplicitlyDisabled = typeof disabledIndices === "function" ? disabledIndices(index) : disabledIndices?.includes(index) ?? false;
+  if (isExplicitlyDisabled) {
+    return true;
   }
   const element = listRef.current[index];
   if (!element) {
     return false;
   }
-  return element.hasAttribute("disabled") || element.getAttribute("aria-disabled") === "true";
+  if (!isElementVisible(element)) {
+    return true;
+  }
+  return !disabledIndices && (element.hasAttribute("disabled") || element.getAttribute("aria-disabled") === "true");
+}
+function isElementVisible(element) {
+  return getComputedStyle2(element).display !== "none";
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/owner.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/owner.js
 function ownerDocument(node) {
   return node?.ownerDocument || document;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/composite.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/composite.js
 var ARROW_UP2 = "ArrowUp";
 var ARROW_DOWN2 = "ArrowDown";
 var ARROW_LEFT2 = "ArrowLeft";
@@ -6470,7 +6538,7 @@ function getStyles(element) {
   };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useOpenChangeComplete.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useOpenChangeComplete.js
 var React19 = __toESM(require_react(), 1);
 function useOpenChangeComplete(parameters) {
   const {
@@ -6493,7 +6561,7 @@ function useOpenChangeComplete(parameters) {
   }, [enabled, open, onComplete, runOnceAnimationsFinish]);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useForcedRerendering.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useForcedRerendering.js
 var React20 = __toESM(require_react(), 1);
 function useForcedRerendering() {
   const [, setState] = React20.useState({});
@@ -6502,7 +6570,7 @@ function useForcedRerendering() {
   }, []);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.5_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/inertValue.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/inertValue.js
 function inertValue(value) {
   if (isReactVersionAtLeast(19)) {
     return value;
@@ -6510,7 +6578,7 @@ function inertValue(value) {
   return value ? "true" : void 0;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/item/useCompositeItem.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/item/useCompositeItem.js
 var React21 = __toESM(require_react(), 1);
 function useCompositeItem(params = {}) {
   const {
@@ -6548,7 +6616,26 @@ function useCompositeItem(params = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/csp-provider/CSPContext.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/getCssDimensions.js
+function getCssDimensions(element) {
+  const css = getComputedStyle2(element);
+  let width = parseFloat(css.width) || 0;
+  let height = parseFloat(css.height) || 0;
+  const hasOffset = isHTMLElement(element);
+  const offsetWidth = hasOffset ? element.offsetWidth : width;
+  const offsetHeight = hasOffset ? element.offsetHeight : height;
+  const shouldFallback = round(width) !== offsetWidth || round(height) !== offsetHeight;
+  if (shouldFallback) {
+    width = offsetWidth;
+    height = offsetHeight;
+  }
+  return {
+    width,
+    height
+  };
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/csp-provider/CSPContext.js
 var React22 = __toESM(require_react(), 1);
 var CSPContext = /* @__PURE__ */ React22.createContext(void 0);
 if (true) CSPContext.displayName = "CSPContext";
@@ -6559,16 +6646,16 @@ function useCSPContext() {
   return React22.useContext(CSPContext) ?? DEFAULT_CSP_CONTEXT_VALUE;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRoot.js
 var React24 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/useCompositeRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/useCompositeRoot.js
 var React23 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/constants.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/constants.js
 var ACTIVE_COMPOSITE_ITEM = "data-composite-item-active";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/useCompositeRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/useCompositeRoot.js
 var EMPTY_ARRAY2 = [];
 function useCompositeRoot(params) {
   const {
@@ -6772,7 +6859,7 @@ function isModifierKeySet(event, ignoredModifierKeys) {
   return false;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRoot.js
 var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
 function CompositeRoot(componentProps) {
   const {
@@ -6847,26 +6934,7 @@ function CompositeRoot(componentProps) {
   });
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/getCssDimensions.js
-function getCssDimensions(element) {
-  const css = getComputedStyle2(element);
-  let width = parseFloat(css.width) || 0;
-  let height = parseFloat(css.height) || 0;
-  const hasOffset = isHTMLElement(element);
-  const offsetWidth = hasOffset ? element.offsetWidth : width;
-  const offsetHeight = hasOffset ? element.offsetHeight : height;
-  const shouldFallback = round(width) !== offsetWidth || round(height) !== offsetHeight;
-  if (shouldFallback) {
-    width = offsetWidth;
-    height = offsetHeight;
-  }
-  return {
-    width,
-    height
-  };
-}
-
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/index.parts.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/index.parts.js
 var index_parts_exports = {};
 __export(index_parts_exports, {
   Indicator: () => TabsIndicator,
@@ -6876,36 +6944,36 @@ __export(index_parts_exports, {
   Tab: () => TabsTab
 });
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRoot.js
 var React26 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRootContext.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRootContext.js
 var React25 = __toESM(require_react(), 1);
 var TabsRootContext = /* @__PURE__ */ React25.createContext(void 0);
 if (true) TabsRootContext.displayName = "TabsRootContext";
 function useTabsRootContext() {
   const context = React25.useContext(TabsRootContext);
   if (context === void 0) {
-    throw new Error(true ? "Base UI: TabsRootContext is missing. Tabs parts must be placed within <Tabs.Root>." : formatErrorMessage(64));
+    throw new Error(true ? "Base UI: TabsRootContext is missing. Tabs parts must be placed within <Tabs.Root>." : formatErrorMessage_default(64));
   }
   return context;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRootDataAttributes.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRootDataAttributes.js
 var TabsRootDataAttributes = /* @__PURE__ */ (function(TabsRootDataAttributes2) {
   TabsRootDataAttributes2["activationDirection"] = "data-activation-direction";
   TabsRootDataAttributes2["orientation"] = "data-orientation";
   return TabsRootDataAttributes2;
 })({});
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/stateAttributesMapping.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/stateAttributesMapping.js
 var tabsStateAttributesMapping = {
   tabActivationDirection: (dir) => ({
     [TabsRootDataAttributes.activationDirection]: dir
   })
 };
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRoot.js
 var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
 var TabsRoot = /* @__PURE__ */ React26.forwardRef(function TabsRoot2(componentProps, forwardedRef) {
   const {
@@ -7049,22 +7117,22 @@ var TabsRoot = /* @__PURE__ */ React26.forwardRef(function TabsRoot2(componentPr
 });
 if (true) TabsRoot.displayName = "TabsRoot";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/tab/TabsTab.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/tab/TabsTab.js
 var React28 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/list/TabsListContext.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/list/TabsListContext.js
 var React27 = __toESM(require_react(), 1);
 var TabsListContext = /* @__PURE__ */ React27.createContext(void 0);
 if (true) TabsListContext.displayName = "TabsListContext";
 function useTabsListContext() {
   const context = React27.useContext(TabsListContext);
   if (context === void 0) {
-    throw new Error(true ? "Base UI: TabsListContext is missing. TabsList parts must be placed within <Tabs.List>." : formatErrorMessage(65));
+    throw new Error(true ? "Base UI: TabsListContext is missing. TabsList parts must be placed within <Tabs.List>." : formatErrorMessage_default(65));
   }
   return context;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/tab/TabsTab.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/tab/TabsTab.js
 var TabsTab = /* @__PURE__ */ React28.forwardRef(function TabsTab2(componentProps, forwardedRef) {
   const {
     className,
@@ -7084,6 +7152,7 @@ var TabsTab = /* @__PURE__ */ React28.forwardRef(function TabsTab2(componentProp
     activateOnFocus,
     highlightedTabIndex,
     onTabActivation,
+    registerTabResizeObserverElement,
     setHighlightedTabIndex,
     tabsListElement
   } = useTabsListContext();
@@ -7104,6 +7173,14 @@ var TabsTab = /* @__PURE__ */ React28.forwardRef(function TabsTab2(componentProp
   });
   const active = value === activeTabValue;
   const isNavigatingRef = React28.useRef(false);
+  const tabElementRef = React28.useRef(null);
+  React28.useEffect(() => {
+    const tabElement = tabElementRef.current;
+    if (!tabElement) {
+      return void 0;
+    }
+    return registerTabResizeObserverElement(tabElement);
+  }, [registerTabResizeObserverElement]);
   useIsoLayoutEffect(() => {
     if (isNavigatingRef.current) {
       isNavigatingRef.current = false;
@@ -7183,7 +7260,7 @@ var TabsTab = /* @__PURE__ */ React28.forwardRef(function TabsTab2(componentProp
   };
   const element = useRenderElement("button", componentProps, {
     state,
-    ref: [forwardedRef, buttonRef, compositeRef],
+    ref: [forwardedRef, buttonRef, compositeRef, tabElementRef],
     props: [compositeProps, {
       role: "tab",
       "aria-controls": tabPanelId,
@@ -7202,13 +7279,13 @@ var TabsTab = /* @__PURE__ */ React28.forwardRef(function TabsTab2(componentProp
 });
 if (true) TabsTab.displayName = "TabsTab";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicator.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicator.js
 var React29 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/prehydrationScript.min.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/prehydrationScript.min.js
 var script = '!function(){const t=document.currentScript.previousElementSibling;if(!t)return;const e=t.closest(\'[role="tablist"]\');if(!e)return;const i=e.querySelector("[data-active]");if(!i)return;if(0===i.offsetWidth||0===e.offsetWidth)return;let o=0,n=0,h=0,l=0,r=0,f=0;function s(t){const e=getComputedStyle(t);let i=parseFloat(e.width)||0,o=parseFloat(e.height)||0;return(Math.round(i)!==t.offsetWidth||Math.round(o)!==t.offsetHeight)&&(i=t.offsetWidth,o=t.offsetHeight),{width:i,height:o}}if(null!=i&&null!=e){const{width:t,height:c}=s(i),{width:u,height:d}=s(e),a=i.getBoundingClientRect(),g=e.getBoundingClientRect(),p=u>0?g.width/u:1,b=d>0?g.height/d:1;if(Math.abs(p)>Number.EPSILON&&Math.abs(b)>Number.EPSILON){const t=a.left-g.left,i=a.top-g.top;o=t/p+e.scrollLeft-e.clientLeft,h=i/b+e.scrollTop-e.clientTop}else o=i.offsetLeft,h=i.offsetTop;r=t,f=c,n=e.scrollWidth-o-r,l=e.scrollHeight-h-f}function c(e,i){t.style.setProperty(`--active-tab-${e}`,`${i}px`)}c("left",o),c("right",n),c("top",h),c("bottom",l),c("width",r),c("height",f),r>0&&f>0&&t.removeAttribute("hidden")}();';
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicatorCssVars.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicatorCssVars.js
 var TabsIndicatorCssVars = /* @__PURE__ */ (function(TabsIndicatorCssVars2) {
   TabsIndicatorCssVars2["activeTabLeft"] = "--active-tab-left";
   TabsIndicatorCssVars2["activeTabRight"] = "--active-tab-right";
@@ -7219,7 +7296,7 @@ var TabsIndicatorCssVars = /* @__PURE__ */ (function(TabsIndicatorCssVars2) {
   return TabsIndicatorCssVars2;
 })({});
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicator.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicator.js
 var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
 var stateAttributesMapping = {
   ...tabsStateAttributesMapping,
@@ -7243,24 +7320,15 @@ var TabsIndicator = /* @__PURE__ */ React29.forwardRef(function TabIndicator(com
     value
   } = useTabsRootContext();
   const {
-    tabsListElement
+    tabsListElement,
+    registerIndicatorUpdateListener
   } = useTabsListContext();
   const [isMounted, setIsMounted] = React29.useState(false);
-  const {
-    value: activeTabValue
-  } = useTabsRootContext();
   useOnMount(() => setIsMounted(true));
   const rerender = useForcedRerendering();
   React29.useEffect(() => {
-    if (value != null && tabsListElement != null && typeof ResizeObserver !== "undefined") {
-      const resizeObserver = new ResizeObserver(rerender);
-      resizeObserver.observe(tabsListElement);
-      return () => {
-        resizeObserver.disconnect();
-      };
-    }
-    return void 0;
-  }, [value, tabsListElement, rerender]);
+    return registerIndicatorUpdateListener(rerender);
+  }, [registerIndicatorUpdateListener, rerender]);
   let left = 0;
   let right = 0;
   let top = 0;
@@ -7343,7 +7411,7 @@ var TabsIndicator = /* @__PURE__ */ React29.forwardRef(function TabIndicator(com
     }],
     stateAttributesMapping
   });
-  if (activeTabValue == null) {
+  if (value == null) {
     return null;
   }
   return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(React29.Fragment, {
@@ -7358,19 +7426,21 @@ var TabsIndicator = /* @__PURE__ */ React29.forwardRef(function TabIndicator(com
 });
 if (true) TabsIndicator.displayName = "TabsIndicator";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanel.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanel.js
 var React30 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanelDataAttributes.js
-var TabsPanelDataAttributes = /* @__PURE__ */ (function(TabsPanelDataAttributes2) {
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanelDataAttributes.js
+var TabsPanelDataAttributes = (function(TabsPanelDataAttributes2) {
   TabsPanelDataAttributes2["index"] = "data-index";
   TabsPanelDataAttributes2["activationDirection"] = "data-activation-direction";
   TabsPanelDataAttributes2["orientation"] = "data-orientation";
   TabsPanelDataAttributes2["hidden"] = "data-hidden";
+  TabsPanelDataAttributes2[TabsPanelDataAttributes2["startingStyle"] = TransitionStatusDataAttributes.startingStyle] = "startingStyle";
+  TabsPanelDataAttributes2[TabsPanelDataAttributes2["endingStyle"] = TransitionStatusDataAttributes.endingStyle] = "endingStyle";
   return TabsPanelDataAttributes2;
 })({});
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanel.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanel.js
 var stateAttributesMapping2 = {
   ...tabsStateAttributesMapping,
   ...transitionStatusMapping
@@ -7460,7 +7530,7 @@ var TabsPanel = /* @__PURE__ */ React30.forwardRef(function TabPanel(componentPr
 });
 if (true) TabsPanel.displayName = "TabsPanel";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/list/TabsList.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/list/TabsList.js
 var React31 = __toESM(require_react(), 1);
 var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
 var TabsList = /* @__PURE__ */ React31.forwardRef(function TabsList2(componentProps, forwardedRef) {
@@ -7481,6 +7551,50 @@ var TabsList = /* @__PURE__ */ React31.forwardRef(function TabsList2(componentPr
   } = useTabsRootContext();
   const [highlightedTabIndex, setHighlightedTabIndex] = React31.useState(0);
   const [tabsListElement, setTabsListElement] = React31.useState(null);
+  const indicatorUpdateListenersRef = React31.useRef(/* @__PURE__ */ new Set());
+  const tabResizeObserverElementsRef = React31.useRef(/* @__PURE__ */ new Set());
+  const resizeObserverRef = React31.useRef(null);
+  const notifyIndicatorUpdateListeners = useStableCallback(() => {
+    indicatorUpdateListenersRef.current.forEach((listener) => {
+      listener();
+    });
+  });
+  React31.useEffect(() => {
+    if (typeof ResizeObserver === "undefined") {
+      return void 0;
+    }
+    const resizeObserver = new ResizeObserver(() => {
+      if (!indicatorUpdateListenersRef.current.size) {
+        return;
+      }
+      notifyIndicatorUpdateListeners();
+    });
+    resizeObserverRef.current = resizeObserver;
+    if (tabsListElement) {
+      resizeObserver.observe(tabsListElement);
+    }
+    tabResizeObserverElementsRef.current.forEach((element) => {
+      resizeObserver.observe(element);
+    });
+    return () => {
+      resizeObserver.disconnect();
+      resizeObserverRef.current = null;
+    };
+  }, [tabsListElement, notifyIndicatorUpdateListeners]);
+  const registerIndicatorUpdateListener = useStableCallback((listener) => {
+    indicatorUpdateListenersRef.current.add(listener);
+    return () => {
+      indicatorUpdateListenersRef.current.delete(listener);
+    };
+  });
+  const registerTabResizeObserverElement = useStableCallback((element) => {
+    tabResizeObserverElementsRef.current.add(element);
+    resizeObserverRef.current?.observe(element);
+    return () => {
+      tabResizeObserverElementsRef.current.delete(element);
+      resizeObserverRef.current?.unobserve(element);
+    };
+  });
   const detectActivationDirection = useActivationDirectionDetector(
     value,
     // the old value
@@ -7506,11 +7620,12 @@ var TabsList = /* @__PURE__ */ React31.forwardRef(function TabsList2(componentPr
   const tabsListContextValue = React31.useMemo(() => ({
     activateOnFocus,
     highlightedTabIndex,
+    registerIndicatorUpdateListener,
+    registerTabResizeObserverElement,
     onTabActivation,
     setHighlightedTabIndex,
-    tabsListElement,
-    value
-  }), [activateOnFocus, highlightedTabIndex, onTabActivation, setHighlightedTabIndex, tabsListElement, value]);
+    tabsListElement
+  }), [activateOnFocus, highlightedTabIndex, registerIndicatorUpdateListener, registerTabResizeObserverElement, onTabActivation, setHighlightedTabIndex, tabsListElement]);
   return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(TabsListContext.Provider, {
     value: tabsListContextValue,
     children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(CompositeRoot, {
@@ -7606,7 +7721,7 @@ function useActivationDirectionDetector(activeTabValue, orientation, tabsListEle
   }, [getTabElement, orientation, previousTabEdge, tabsListElement, activeTabValue]);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.2.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-render/useRender.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-render/useRender.js
 function useRender(params) {
   return useRenderElement(params.defaultTagName ?? "div", params, params);
 }
@@ -13662,15 +13777,15 @@ function createStore(initialState4, ...stores) {
     destroy = chain(...desyncs, ...teardowns, ...cleanups);
     return maybeDestroy;
   };
-  const sub = (keys, listener, set2 = listeners) => {
-    set2.add(listener);
+  const sub = (keys, listener, set3 = listeners) => {
+    set3.add(listener);
     listenerKeys.set(listener, keys);
     return () => {
       var _a;
       (_a = disposables.get(listener)) == null ? void 0 : _a();
       disposables.delete(listener);
       listenerKeys.delete(listener);
-      set2.delete(listener);
+      set3.delete(listener);
     };
   };
   const storeSubscribe = (keys, listener) => sub(keys, listener);
