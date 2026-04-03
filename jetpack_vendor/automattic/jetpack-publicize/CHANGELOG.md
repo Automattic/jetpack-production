@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Update admin page footer design.
 - Update package dependencies.
 
+### Fixed
+- Fix edit template changes not saving when using the back arrow or close button.
+
 ## [0.76.0] - 2026-03-30
 ### Added
 - Add notices for X usage in the connections modal. [#47677]
