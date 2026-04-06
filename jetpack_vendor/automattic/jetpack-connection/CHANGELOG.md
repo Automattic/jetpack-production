@@ -5,22 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.2.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [8.2.0] - 2026-04-06
 ### Added
-- Add SSO details to the Connection details card.
-- Add WordPress.com connector card for the WP 7.0+ Settings > Connectors screen with connection details and disconnect support.
-- Connection: Display inline error notices for site registration, authorization, and disconnect failures in the WordPress.com Connectors card.
+- Add SSO details to the Connection details card. [#47861]
+- Add WordPress.com connector card for the WP 7.0+ Settings > Connectors screen with connection details and disconnect support. [#47792]
+- Connection: Display inline error notices for site registration, authorization, and disconnect failures in the WordPress.com Connectors card. [#47865]
 
 ### Changed
-- Connector card: Prevent site disconnection and owner account unlinking on WoA and VIP sites.
+- Connector card: Prevent site disconnection and owner account unlinking on Wordpress.com and VIP sites. [#47862]
 
 ### Fixed
-- Connection Details: Fix layout of the connection details modal to properly handle varying URL lengths and screen sizes.
-- Fix connection flow in connector card when using Gutenberg and ensure modals always show on disconnection.
-- Update Woo logo on connector card.
+- Connection Details: Fix layout of the connection details modal to properly handle varying URL lengths and screen sizes. [#47879]
+- Fix connection flow in connector card when using Gutenberg and ensure modals always show on disconnection. [#47902]
+- Update Woo logo on connector card. [#47884]
 
 ## [8.1.0] - 2026-03-30
 ### Changed
@@ -1777,7 +1774,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[8.2.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.1.0...v8.2.0-alpha
+[8.2.0]: https://github.com/Automattic/jetpack-connection/compare/v8.1.0...v8.2.0
 [8.1.0]: https://github.com/Automattic/jetpack-connection/compare/v8.0.5...v8.1.0
 [8.0.5]: https://github.com/Automattic/jetpack-connection/compare/v8.0.4...v8.0.5
 [8.0.4]: https://github.com/Automattic/jetpack-connection/compare/v8.0.3...v8.0.4

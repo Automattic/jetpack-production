@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.16.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [7.16.0] - 2026-04-06
 ### Changed
-- Clean up old about page images.
-- Forms: allow browsers to lazy-load avatars in responses.
-- Update package dependencies.
+- Clean up old About page images. [#47897]
+- Forms: Allow browsers to lazy-load avatars in responses. [#47900]
+- Update package dependencies. [#47889] [#47892] [#47899]
 
 ### Fixed
-- Fix missing margin prop in SelectControl component.
+- Fix missing margin prop in SelectControl component. [#47904]
 
 ## [7.15.0] - 2026-03-30
 ### Security
@@ -2408,7 +2405,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.16.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.15.0...v7.16.0-alpha
+[7.16.0]: https://github.com/automattic/jetpack-forms/compare/v7.15.0...v7.16.0
 [7.15.0]: https://github.com/automattic/jetpack-forms/compare/v7.14.0...v7.15.0
 [7.14.0]: https://github.com/automattic/jetpack-forms/compare/v7.13.0...v7.14.0
 [7.13.0]: https://github.com/automattic/jetpack-forms/compare/v7.12.0...v7.13.0
