@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Major Enhancements
+- AI Assistant: Disable the Write Brief (Breve) proofreading feature by default. It can be re-enabled via the 'breve_enabled' filter.
 - Jetpack AI Image Generation & Editing: Evolve & enhance Jetpack AI Image Generation
 
 ### Enhancements
