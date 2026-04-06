@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin: Record Tracks when the Jetpack sidebar "Upgrade Jetpack" link is clicked.
 
 ### Changed
+- Comment: update Tracks event prop names to be lowercase.
 - Update design of the sidebar upsell.
 
 ### Fixed
