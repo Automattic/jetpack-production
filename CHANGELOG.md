@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: Reorder menu items so that links opening in new windows appear last.
 - Block Notes: Update enablement logic to use AI feature checks and gate feature behind a paid Jetpack AI plan.
 - Network Admin: Replace legacy PHP masthead on Network Sites and Network Settings pages with the unified AdminPage header from @automattic/jetpack-components.
+- Settings: Align tab navigation font and color with WordPress design system tokens.
 - Update admin page footer with Products and Help navigation links, replacing About, Privacy, and Terms links.
 - Update network admin settings visually.
 
