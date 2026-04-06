@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add "Upgrade Jetpack" menu item for free users in the Jetpack admin menu.
 
+### Changed
+- Update design of the sidebar upsell.
+
 ### Fixed
 - Fix upgrade menu item color on problematic admin color schemes and add build pipeline for CSS assets.
 

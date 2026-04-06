@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Module list: Ensure capitalization is consistent.
 - Remove memberships_gift CPT, replaced by COMPS on wpcom.
 - Subscriptions: update panel name to include "jetpack"
+- Update design of the sidebar upsell.
 - Update package dependencies.
 
 ## 15.7-a.7 - 2026-03-30
