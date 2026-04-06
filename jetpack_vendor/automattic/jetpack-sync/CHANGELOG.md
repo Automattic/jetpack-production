@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.35.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Sync: add documentation_category to taxonomy allowlist
+
 ## [4.34.0] - 2026-03-30
 ### Added
 - Add 'note' to the default whitelisted comment types and centralize the list in the Defaults class. [#47746]
@@ -1713,6 +1720,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[4.35.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.34.0...v4.35.0-alpha
 [4.34.0]: https://github.com/Automattic/jetpack-sync/compare/v4.33.0...v4.34.0
 [4.33.0]: https://github.com/Automattic/jetpack-sync/compare/v4.32.1...v4.33.0
 [4.32.1]: https://github.com/Automattic/jetpack-sync/compare/v4.32.0...v4.32.1
