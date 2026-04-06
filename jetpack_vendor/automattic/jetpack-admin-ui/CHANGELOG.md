@@ -5,20 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.7.0] - 2026-04-06
 ### Added
-- Add "Upgrade Jetpack" menu item for free users in the Jetpack admin menu.
-- Admin: Record Tracks when the Jetpack sidebar "Upgrade Jetpack" link is clicked.
+- Add "Upgrade Jetpack" menu item for free users in the Jetpack admin menu. [#47418]
+- Admin: Record Tracks when the Jetpack sidebar "Upgrade Jetpack" link is clicked. [#47937]
 
 ### Changed
-- Comment: update Tracks event prop names to be lowercase.
-- Update design of the sidebar upsell.
+- Comment: Update Tracks event prop names to be lowercase. [#47955]
+- Update design of the sidebar upsell. [#47909]
 
 ### Fixed
-- Fix upgrade menu item color on problematic admin color schemes and add build pipeline for CSS assets.
+- Fix upgrade menu item color on problematic admin color schemes and add build pipeline for CSS assets. [#47903]
 
 ## [0.6.0] - 2026-03-30
 ### Changed
@@ -235,7 +232,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing menu visibility issues.
 
-[0.7.0-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.6.0...0.7.0-alpha
+[0.7.0]: https://github.com/Automattic/jetpack-admin-ui/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.12...0.6.0
 [0.5.12]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.11...0.5.12
 [0.5.11]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.10...0.5.11
