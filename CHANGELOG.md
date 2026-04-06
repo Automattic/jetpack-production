@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - External Media: ensure that WordPress' new "Embed video from URL" option appears in the Cover block options alongside Jetpack's External Media options.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Comment: Add Tracking to Jetpack upsell link.
 - Fix upgrade menu item color on problematic admin color schemes.
 - Module list: Ensure capitalization is consistent.
 - Remove memberships_gift CPT, replaced by COMPS on wpcom.

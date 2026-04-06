@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add "Upgrade Jetpack" menu item for free users in the Jetpack admin menu.
+- Admin: Record Tracks when the Jetpack sidebar "Upgrade Jetpack" link is clicked.
 
 ### Changed
 - Update design of the sidebar upsell.
