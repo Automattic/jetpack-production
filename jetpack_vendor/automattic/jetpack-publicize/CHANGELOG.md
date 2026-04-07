@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Include platform name in social preview toggle labels and tab titles for clearer identification.
 - Update package dependencies.
 
+### Fixed
+- Fix Social Image Generator preview infinite spinner when the default background image has been deleted from the media library.
+
 ## [0.76.1] - 2026-04-06
 ### Changed
 - Make link preview icons clickable to open the clicked service tab by default. [#47878]
