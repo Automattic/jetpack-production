@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Bundle admin-ui base CSS in wp-build output so host applications don't need to load it separately.
+
 ## [7.16.0] - 2026-04-06
 ### Changed
 - Clean up old About page images. [#47897]
