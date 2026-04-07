@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Skip force-replacing polyfill scripts when the Gutenberg plugin is active, preventing crashes from allowlist mismatches (e.g. @wordpress/views).
+
 ## [0.1.2] - 2026-04-06
 ### Fixed
 - Update @wordpress/private-apis to v1.43.0 to include @wordpress/views in the core modules allowlist, fixing a crash with latest Gutenberg trunk. [#47905]
