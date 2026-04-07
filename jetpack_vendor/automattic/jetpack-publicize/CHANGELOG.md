@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Fix edit template modal not preselecting Default Image when a default image is configured
 - Fix Social Image Generator preview infinite spinner when the default background image has been deleted from the media library.
 
 ## [0.76.1] - 2026-04-06
