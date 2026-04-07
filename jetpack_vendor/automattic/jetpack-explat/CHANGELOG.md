@@ -10,7 +10,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
-- Temporarily reverted Launch Site experiment.
 - Update package dependencies.
 
 ## [0.4.19] - 2026-04-06
