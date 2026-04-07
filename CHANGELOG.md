@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Assistant: Add an "Update on Write Brief (Beta)" link in the sidebar when Write Brief is disabled. When re-enabled via the 'breve_enabled' filter, the full UI is shown instead.
 - Update package dependencies.
 
 ## 15.7-beta - 2026-04-06
