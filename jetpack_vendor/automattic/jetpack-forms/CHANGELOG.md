@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Bundle admin-ui base CSS in wp-build output so host applications don't need to load it separately.
+- Load build.php unconditionally when alpha is enabled, so host applications can integrate Forms routes without manual file loading.
 
 ## [7.16.0] - 2026-04-06
 ### Changed
