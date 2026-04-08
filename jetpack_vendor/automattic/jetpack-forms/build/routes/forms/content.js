@@ -30544,7 +30544,6 @@ function StageInner() {
   return /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(
     page_default,
     {
-      showSidebarToggle: false,
       breadcrumbs,
       title,
       ariaLabel,

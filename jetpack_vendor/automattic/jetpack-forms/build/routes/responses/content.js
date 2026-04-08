@@ -39715,7 +39715,6 @@ function StageInner() {
   return /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)(
     page_default,
     {
-      showSidebarToggle: false,
       breadcrumbs,
       badges,
       title,
@@ -41549,7 +41548,7 @@ function Response() {
 // routes/responses/inspector.tsx
 var import_jsx_runtime201 = __toESM(require_jsx_runtime());
 function Inspector() {
-  return /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(page_default, { showSidebarToggle: false, hasPadding: false, children: /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(Response, {}) }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(WpRouteDashboardSearchParamsProvider, { from: "/responses/$view", children: /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(page_default, { hasPadding: false, children: /* @__PURE__ */ (0, import_jsx_runtime201.jsx)(Response, {}) }) });
 }
 export {
   Inspector as inspector,
