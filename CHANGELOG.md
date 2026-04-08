@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- AI Site Logo extension: fix static import of @wordpress/edit-post that caused the no-post-editor bundle to list wp-edit-post as a dependency, breaking the P2 frontend block inserter.
 - Block Notes: Temporarily disable feature to prevent expensive API calls on every Gutenberg page load.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
