@@ -26887,6 +26887,10 @@ function FormsHelpModal({ isOpen, onClose }) {
   const [dontShowAgain, setDontShowAgain] = (0, import_element82.useState)(false);
   const { receiveConfigValue: receiveConfigValue2 } = (0, import_data16.useDispatch)(CONFIG_STORE);
   const handleClose = (0, import_element82.useCallback)(() => {
+    setDontShowAgain(false);
+    onClose();
+  }, [onClose]);
+  const handleSubmit = (0, import_element82.useCallback)(() => {
     if (dontShowAgain) {
       receiveConfigValue2("hasClassicForms", false);
       (0, import_api_fetch7.default)({
@@ -26894,8 +26898,8 @@ function FormsHelpModal({ isOpen, onClose }) {
         method: "POST"
       });
     }
-    onClose();
-  }, [dontShowAgain, onClose, receiveConfigValue2]);
+    handleClose();
+  }, [dontShowAgain, handleClose, receiveConfigValue2]);
   if (!isOpen) {
     return null;
   }
@@ -26925,7 +26929,7 @@ function FormsHelpModal({ isOpen, onClose }) {
               onChange: setDontShowAgain
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components66.Button, { variant: "primary", onClick: handleClose, children: (0, import_i18n69.__)("Got it", "jetpack-forms") })
+          /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components66.Button, { variant: "primary", onClick: handleSubmit, children: (0, import_i18n69.__)("Got it", "jetpack-forms") })
         ] })
       ] })
     }
