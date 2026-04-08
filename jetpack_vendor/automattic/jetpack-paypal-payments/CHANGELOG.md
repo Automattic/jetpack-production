@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- PayPal Payments Button: fix escaping issue for stacked payments buttons
+
 ## [0.6.13] - 2026-04-06
 ### Changed
 - Update package dependencies. [#47899]

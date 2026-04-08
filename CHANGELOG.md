@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Site Logo extension: fix static import of @wordpress/edit-post that caused the no-post-editor bundle to list wp-edit-post as a dependency, breaking the P2 frontend block inserter.
 - Block Notes: Temporarily disable feature to prevent expensive API calls on every Gutenberg page load.
+- PayPal Payments Button: fix escaping issue for stacked payments buttons
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Add an "Update on Write Brief (Beta)" link in the sidebar when Write Brief is disabled. When re-enabled via the 'breve_enabled' filter, the full UI is shown instead.
