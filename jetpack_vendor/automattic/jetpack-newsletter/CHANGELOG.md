@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Defer is_connected() check from init to admin_menu callback to avoid caching a false result before External Storage providers are registered.
+
 ## [0.8.0] - 2026-04-06
 ### Added
 - Newsletter settings: Disable settings and show a connection notice when the site has no connected owner. [#47927]
