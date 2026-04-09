@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Enable mobile navigation sidebar toggle on all Forms dashboard pages.
 - Forms: Fix 'Don't show this again' checkbox in the help modal so it only dismisses permanently when clicking 'Got it', not when closing via the X button or Escape key.
 - Forms: Handle non-string values in the phone field rendering pipeline.
+- Forms: Handle non-string values in the rating field rendering pipeline.
 - Forms: Validate the field type before resolving the block icon path.
 - Load build.php unconditionally when alpha is enabled, so host applications can integrate Forms routes without manual file loading.
 
