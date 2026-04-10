@@ -11,7 +11,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Hide the sidebar upsell when the site is not connected to Jetpack or is in offline mode.
-- Update package dependencies.
+
+## [0.7.1] - 2026-04-09
+### Changed
+- Update package dependencies. [#47890]
 
 ## [0.7.0] - 2026-04-06
 ### Added
@@ -240,7 +243,8 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing menu visibility issues.
 
-[0.8.0-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.7.0...0.8.0-alpha
+[0.8.0-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.7.1...0.8.0-alpha
+[0.7.1]: https://github.com/Automattic/jetpack-admin-ui/compare/0.7.0...0.7.1
 [0.7.0]: https://github.com/Automattic/jetpack-admin-ui/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.12...0.6.0
 [0.5.12]: https://github.com/Automattic/jetpack-admin-ui/compare/0.5.11...0.5.12
