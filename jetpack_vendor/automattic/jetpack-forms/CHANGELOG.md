@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Handle non-string values in the rating field rendering pipeline.
 - Forms: Validate the field type before resolving the block icon path.
 - Load build.php unconditionally when alpha is enabled, so host applications can integrate Forms routes without manual file loading.
+- Prevent fatal error when a non-checkbox field's render value or POST-submitted value is an array.
 
 ## [7.16.0] - 2026-04-06
 ### Changed
