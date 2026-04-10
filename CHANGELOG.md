@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Site Logo extension: fix static import of @wordpress/edit-post that caused the no-post-editor bundle to list wp-edit-post as a dependency, breaking the P2 frontend block inserter.
 - Block Notes: Temporarily disable feature to prevent expensive API calls on every Gutenberg page load.
+- Newsletter: Fail silently on email stats fetch errors in the editor and skip the fetch for drafts so timeouts no longer flash as errors in Gutenberg.
 - PayPal Payments Button: fix escaping issue for stacked payments buttons
 - Subscriptions: avoid conflicts in the block editor when editing custom post types.
 
