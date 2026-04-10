@@ -943,15 +943,15 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-wpcom-products.php'
 	),
 	'Automattic\\Jetpack\\Newsletter\\Reader_Link' => array(
-		'version' => '0.8.2.0-alpha1775854510',
+		'version' => '0.8.2.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-reader-link.php'
 	),
 	'Automattic\\Jetpack\\Newsletter\\Settings' => array(
-		'version' => '0.8.2.0-alpha1775854510',
+		'version' => '0.8.2.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-settings.php'
 	),
 	'Automattic\\Jetpack\\Newsletter\\Urls' => array(
-		'version' => '0.8.2.0-alpha1775854510',
+		'version' => '0.8.2.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-urls.php'
 	),
 	'Automattic\\Jetpack\\Partner' => array(
@@ -1343,39 +1343,39 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-xmlrpc-provider.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\Admin_Post_List_Column' => array(
-		'version' => '0.31.0.0-alpha1775822813',
+		'version' => '0.31.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-admin-post-list-column.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\Dashboard' => array(
-		'version' => '0.31.0.0-alpha1775822813',
+		'version' => '0.31.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-dashboard.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\Main' => array(
-		'version' => '0.31.0.0-alpha1775822813',
+		'version' => '0.31.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-main.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\Notices' => array(
-		'version' => '0.31.0.0-alpha1775822813',
+		'version' => '0.31.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-notices.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\Odyssey_Assets' => array(
-		'version' => '0.31.0.0-alpha1775822813',
+		'version' => '0.31.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-odyssey-assets.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\Odyssey_Config_Data' => array(
-		'version' => '0.31.0.0-alpha1775822813',
+		'version' => '0.31.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-odyssey-config-data.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\REST_Controller' => array(
-		'version' => '0.31.0.0-alpha1775822813',
+		'version' => '0.31.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\WPCOM_Client' => array(
-		'version' => '0.31.0.0-alpha1775822813',
+		'version' => '0.31.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-wpcom-client.php'
 	),
 	'Automattic\\Jetpack\\Stats_Admin\\WP_Dashboard_Odyssey_Widget' => array(
-		'version' => '0.31.0.0-alpha1775822813',
+		'version' => '0.31.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-wp-dashboard-odyssey-widget.php'
 	),
 	'Automattic\\Jetpack\\Status' => array(
