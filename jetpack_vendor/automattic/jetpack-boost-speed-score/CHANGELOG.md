@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.13-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [0.4.13] - 2026-04-10
+### Changed
+- Internal updates.
 
 ## [0.4.12] - 2025-11-17
 ### Changed
@@ -152,7 +152,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a new package for Boost Speed Score [#30914]
 - Add a new argument to `Speed_Score` to identify where the request was made from (e.g. 'boost-plugin', 'jetpack-dashboard', etc). [#31012]
 
-[0.4.13-alpha]: https://github.com/Automattic/jetpack-boost-speed-score/compare/v0.4.12...v0.4.13-alpha
+[0.4.13]: https://github.com/Automattic/jetpack-boost-speed-score/compare/v0.4.12...v0.4.13
 [0.4.12]: https://github.com/Automattic/jetpack-boost-speed-score/compare/v0.4.11...v0.4.12
 [0.4.11]: https://github.com/Automattic/jetpack-boost-speed-score/compare/v0.4.10...v0.4.11
 [0.4.10]: https://github.com/Automattic/jetpack-boost-speed-score/compare/v0.4.9...v0.4.10
