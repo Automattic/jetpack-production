@@ -13,7 +13,7 @@
 		"ext-openssl": "*",
 		"automattic/block-delimiter": "^0.3.5",
 		"automattic/jetpack-a8c-mc-stats": "^3.0.5",
-		"automattic/jetpack-account-protection": "^0.3.0-alpha",
+		"automattic/jetpack-account-protection": "^0.3.0",
 		"automattic/jetpack-admin-ui": "^0.8.0",
 		"automattic/jetpack-assets": "^4.3.32",
 		"automattic/jetpack-autoloader": "^5.0.16",

@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.3.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.3.0] - 2026-04-11
 ### Added
-- Add `jetpack_account_protection_send_auth_email` filter to allow custom handling of the verification email.
+- Add `jetpack_account_protection_send_auth_email` filter to allow custom handling of the verification email. [#48003]
 
 ## [0.2.12] - 2026-02-23
 ### Changed
@@ -76,7 +73,7 @@ This is an alpha version! The changes listed here are not final.
 - Use jetpack-config package for Account Protection initialization. [#40925]
 - Use jetpack-logo package for Account Protection logos. [#40925]
 
-[0.3.0-alpha]: https://github.com/Automattic/jetpack-account-protection/compare/v0.2.12...v0.3.0-alpha
+[0.3.0]: https://github.com/Automattic/jetpack-account-protection/compare/v0.2.12...v0.3.0
 [0.2.12]: https://github.com/Automattic/jetpack-account-protection/compare/v0.2.11...v0.2.12
 [0.2.11]: https://github.com/Automattic/jetpack-account-protection/compare/v0.2.10...v0.2.11
 [0.2.10]: https://github.com/Automattic/jetpack-account-protection/compare/v0.2.9...v0.2.10
