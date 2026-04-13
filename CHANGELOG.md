@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
 - Update purchases endpoint from v1.1 /sites/$site/purchases to v1.2 /upgrades?site=$site.
 
 ## 15.8-a.1 - 2026-04-13
