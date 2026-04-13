@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.8-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update purchases endpoint from v1.1 /sites/$site/purchases to v1.2 /upgrades?site=$site.
+
 ## 15.8-a.1 - 2026-04-13
 ### Bug fixes
 - AI Site Logo extension: Fix static import of @wordpress/edit-post that caused the no-post-editor bundle to list wp-edit-post as a dependency, breaking the P2 frontend block inserter. [#47987]
