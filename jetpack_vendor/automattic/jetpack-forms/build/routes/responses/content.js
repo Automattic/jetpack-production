@@ -39395,7 +39395,8 @@ function StageInner() {
     totalPages,
     totalItemsInbox,
     totalItemsSpam,
-    totalItemsTrash
+    totalItemsTrash,
+    currentQuery: currentQuery2
   } = useInboxData({ status: statusView });
   (0, import_element101.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
@@ -39511,6 +39512,15 @@ function StageInner() {
   (0, import_element101.useEffect)(() => {
     setCurrentQuery2(queryParams);
   }, [queryParams, setCurrentQuery2]);
+  const isQueryStale = (0, import_element101.useMemo)(() => {
+    if (!currentQuery2) {
+      return true;
+    }
+    const allKeys = /* @__PURE__ */ new Set([...Object.keys(currentQuery2), ...Object.keys(queryParams)]);
+    return Array.from(allKeys).some(
+      (key) => currentQuery2[key] !== queryParams[key]
+    );
+  }, [currentQuery2, queryParams]);
   (0, import_element101.useEffect)(() => {
     const validSelectedIds = (selection || []).filter((id) => {
       return records?.some((record) => getItemId(record) === id);
@@ -39744,12 +39754,12 @@ function StageInner() {
                 status: statusView
               }
             ),
-            data: records || EMPTY_ARRAY8,
+            data: isQueryStale ? EMPTY_ARRAY8 : records || EMPTY_ARRAY8,
             fields,
             view,
             onChangeView,
             paginationInfo,
-            isLoading: isLoadingData,
+            isLoading: isLoadingData || isQueryStale,
             getItemId,
             defaultLayouts: defaultLayouts2,
             selection,
