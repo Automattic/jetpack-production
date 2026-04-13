@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fixed the Form block not being usable when the Blocks module is inactive.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Subscriptions: Prevent warning when $post global is malformed.
 - Update package dependencies.
 - Update purchases endpoint from v1.1 /sites/$site/purchases to v1.2 /upgrades?site=$site.
 - WordAds: Prevent PHP warning when headers are already sent.
