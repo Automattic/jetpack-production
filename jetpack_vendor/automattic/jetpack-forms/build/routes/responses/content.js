@@ -39483,7 +39483,8 @@ function StageInner() {
       per_page: view.perPage,
       page: view.page || 1,
       orderby: view.sort?.field || "date",
-      order: view.sort?.direction || "desc"
+      order: view.sort?.direction || "desc",
+      fields_format: "collection"
     };
     if (view.search) {
       queryArgs.search = view.search;
