@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Subscriptions: Prevent warning when $post global is malformed.
+- Update Forms e2e test to use explicit inner blocks for compatibility with Central Forms Management.
 - Update package dependencies.
 - Update purchases endpoint from v1.1 /sites/$site/purchases to v1.2 /upgrades?site=$site.
 - WordAds: Prevent PHP warning when headers are already sent.
