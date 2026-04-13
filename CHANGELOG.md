@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Forms: Support granular date filter in inbox.
+
 ### Bug fixes
 - Forms: Fixed the Form block not being usable when the Blocks module is inactive.
 

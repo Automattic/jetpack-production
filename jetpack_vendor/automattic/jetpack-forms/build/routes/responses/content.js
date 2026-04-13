@@ -39369,6 +39369,7 @@ function StageInner() {
   const navigate = useNavigate4();
   const statusView = params.view === "spam" || params.view === "trash" ? params.view : "inbox";
   const statusFilter = statusView === "inbox" ? "draft,publish" : statusView;
+  const dateSettings = (0, import_date9.getSettings)();
   const sourceIdValue = searchParams?.sourceId;
   const sourceIdNumber = typeof sourceIdValue === "number" ? sourceIdValue : Number(sourceIdValue);
   const isSingleFormView = Number.isFinite(sourceIdNumber) && sourceIdNumber > 0;
@@ -39503,9 +39504,48 @@ function StageInner() {
         queryArgs.source = filter.value;
       }
       if (filter.field === "date") {
-        const [year, month] = filter.value.split("/").map(Number);
-        queryArgs.after = new Date(Date.UTC(year, month - 1, 1)).toISOString();
-        queryArgs.before = new Date(Date.UTC(year, month, 0, 23, 59, 59)).toISOString();
+        const filterValue = filter.value;
+        const operator = filter.operator ?? "is";
+        if (filterValue) {
+          let startDate;
+          let endDate;
+          if (Array.isArray(filterValue)) {
+            const firstValue = filterValue[0];
+            const secondValue = filterValue[1];
+            startDate = new Date(
+              typeof firstValue === "string" || typeof firstValue === "number" || firstValue instanceof Date ? firstValue : ""
+            );
+            endDate = new Date(
+              typeof secondValue === "string" || typeof secondValue === "number" || secondValue instanceof Date ? secondValue : ""
+            );
+          } else {
+            const dateValue = typeof filterValue === "string" || typeof filterValue === "number" || filterValue instanceof Date ? filterValue : "";
+            startDate = new Date(dateValue);
+            endDate = new Date(dateValue);
+          }
+          if (!isNaN(startDate.getTime()) && !isNaN(endDate.getTime())) {
+            startDate.setUTCHours(0, 0, 0, 0);
+            endDate.setUTCHours(23, 59, 59, 999);
+            const startOfDayISO = startDate.toISOString();
+            const endOfDayISO = endDate.toISOString();
+            switch (operator) {
+              case "on":
+                queryArgs.after = startOfDayISO;
+                queryArgs.before = endOfDayISO;
+                break;
+              case "before":
+                queryArgs.before = endOfDayISO;
+                break;
+              case "after":
+                queryArgs.after = startOfDayISO;
+                break;
+              case "between":
+                queryArgs.after = startOfDayISO;
+                queryArgs.before = endOfDayISO;
+                break;
+            }
+          }
+        }
       }
     });
     return queryArgs;
@@ -39618,27 +39658,21 @@ function StageInner() {
       },
       {
         id: "date",
+        type: "date",
         label: (0, import_i18n90.__)("Date", "jetpack-forms"),
-        render: ({ item }) => {
-          const dateStr = new Date(item.date).toLocaleDateString(void 0, {
-            year: "numeric",
-            month: "long",
-            day: "numeric"
-          });
-          return styleUnreadValue(dateStr, item.is_unread);
+        filterBy: {
+          operators: ["on", "between", "before", "after"]
         },
-        elements: (filterOptions?.date || []).map((filter) => {
-          const date = /* @__PURE__ */ new Date();
-          date.setDate(1);
-          date.setMonth(filter.month - 1);
-          date.setFullYear(filter.year);
-          return {
-            label: (0, import_date9.dateI18n)((0, import_i18n90.__)("F Y", "jetpack-forms"), date),
-            value: `${filter.year}/${filter.month}`
-          };
-        }),
-        filterBy: { operators: ["is"] },
-        enableSorting: false
+        render: ({ item }) => {
+          const datetime = (0, import_date9.dateI18n)(dateSettings.formats.datetime, item.date);
+          return styleUnreadValue(datetime, item.is_unread);
+        },
+        getValue: ({ item }) => {
+          if (typeof item.date !== "string") {
+            return "";
+          }
+          return item.date;
+        }
       },
       {
         id: "source",
@@ -39687,7 +39721,14 @@ function StageInner() {
         enableSorting: false
       }
     ],
-    [filterOptions, isSingleFormView, totalItemsInbox, totalItemsSpam, totalItemsTrash]
+    [
+      dateSettings.formats.datetime,
+      filterOptions,
+      isSingleFormView,
+      totalItemsInbox,
+      totalItemsSpam,
+      totalItemsTrash
+    ]
   );
   const actions2 = (0, import_element101.useMemo)(
     () => getRowActions({
@@ -40971,12 +41012,12 @@ var getDisplayName = (response) => {
   return (0, import_html_entities8.decodeEntities)(author_name || author_email || author_url || ip);
 };
 var ResponseMeta = ({ response }) => {
+  const dateSettings = (0, import_date11.getSettings)();
   const displayName = getDisplayName(response);
   const gravatarEmail = response.author_email || response.ip;
   const gravatarDisplayName = response.author_name ? (0, import_html_entities8.decodeEntities)(response.author_name) : response.author_email?.split("@")[0];
   const defaultImage = gravatarDisplayName ? "initials" : "mp";
   const responseAuthorEmailParts = response.author_email?.split("@") ?? [];
-  const dateSettings = (0, import_date11.getSettings)();
   const loggedInUser = response?.logged_in_user?.id ? response.logged_in_user : null;
   const loggedInUserName = loggedInUser?.display_name || loggedInUser?.username || null;
   let loggedInUserDisplay = null;
