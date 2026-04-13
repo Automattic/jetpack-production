@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add WooCommerce Accounts and Privacy settings page options to sync whitelist, as part of activity log improvements.
 
+### Fixed
+- Tests: Increase lock time tolerance.
+
 ## [4.35.0] - 2026-04-06
 ### Added
 - Sync: Add documentation_category to taxonomy allowlist. [#47951]
