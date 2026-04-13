@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.77.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.77.0] - 2026-04-13
 ### Changed
-- Include platform name in social preview toggle labels and tab titles for clearer identification.
-- Update package dependencies.
+- Include platform name in social preview toggle labels and tab titles for clearer identification. [#47895]
+- Update package dependencies. [#47890] [#47998]
 
 ### Fixed
-- Fix edit template modal not preselecting Default Image when a default image is configured
-- Fix Social Image Generator preview infinite spinner when the default background image has been deleted from the media library.
-- Require a nonce before refreshing plan data from the Social admin page.
-- Social: Fix independent scrolling in preview modal panels on mobile
+- Fix edit template modal not preselecting Default Image when a default image is configured. [#47948]
+- Fix Social Image Generator preview infinite spinner when the default background image has been deleted from the media library. [#47945]
+- Require a nonce before refreshing plan data from the Social admin page. [#47844]
+- Social: Fix independent scrolling in preview modal panels on mobile. [#48050]
 
 ## [0.76.1] - 2026-04-06
 ### Changed
@@ -1384,7 +1381,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.77.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.76.1...v0.77.0-alpha
+[0.77.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.76.1...v0.77.0
 [0.76.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.76.0...v0.76.1
 [0.76.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.75.0...v0.76.0
 [0.75.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.74.0...v0.75.0
