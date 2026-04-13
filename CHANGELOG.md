@@ -2,20 +2,16 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.8-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.8-a.1 - 2026-04-13
 ### Bug fixes
-- AI Site Logo extension: fix static import of @wordpress/edit-post that caused the no-post-editor bundle to list wp-edit-post as a dependency, breaking the P2 frontend block inserter.
-- Block Notes: Temporarily disable feature to prevent expensive API calls on every Gutenberg page load.
-- Newsletter: Fail silently on email stats fetch errors in the editor and skip the fetch for drafts so timeouts no longer flash as errors in Gutenberg.
-- PayPal Payments Button: fix escaping issue for stacked payments buttons
-- Subscriptions: avoid conflicts in the block editor when editing custom post types.
+- AI Site Logo extension: Fix static import of @wordpress/edit-post that caused the no-post-editor bundle to list wp-edit-post as a dependency, breaking the P2 frontend block inserter. [#47987]
+- Newsletter: Fail silently on email stats fetch errors in the editor and skip the fetch for drafts so timeouts no longer flash as errors in Gutenberg. [#48002]
+- PayPal Payments Button: Fix escaping issue for stacked payments buttons. [#47761]
+- Subscriptions: Avoid conflicts in the block editor when editing custom post types. [#47876]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- AI Assistant: Add an "Update on Write Brief (Beta)" link in the sidebar when Write Brief is disabled. When re-enabled via the 'breve_enabled' filter, the full UI is shown instead.
-- Update package dependencies.
+- AI Assistant: Add an "Update on Write Brief (Beta)" link in the sidebar when Write Brief is disabled. [#47947]
+- Update package dependencies. [#47890] [#47998]
 
 ## 15.7 - 2026-04-08
 ### Major Enhancements
