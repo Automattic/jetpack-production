@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Fixed the Form block when the Blocks module is inactive by registering it directly from the Forms package and providing the required editor initial state.
 - Show loading state instead of stale data when navigating between form response listings.
 
 ## [7.17.0] - 2026-04-13
