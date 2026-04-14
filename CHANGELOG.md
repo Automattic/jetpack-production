@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Sync: Increase lock time tolerance in tests.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- oEmbed: Prevent PHP warnings when a registered provider is malformed.
 - Subscriptions: Prevent warning when $post global is malformed.
 - Update Forms e2e test to use explicit inner blocks for compatibility with Central Forms Management.
 - Update package dependencies.
