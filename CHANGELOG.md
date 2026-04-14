@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Fix taxonomies endpoint returning error when number parameter exceeds 1000.
 - Forms: Fixed the Form block not being usable when the Blocks module is inactive.
+- Sync: Increase lock time tolerance in tests.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Subscriptions: Prevent warning when $post global is malformed.
