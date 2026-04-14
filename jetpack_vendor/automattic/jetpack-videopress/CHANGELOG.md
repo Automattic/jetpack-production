@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Security
 - Ensure only users who can upload media can request VideoPress upload tokens via AJAX.
 
+### Changed
+- Clean up postMessage bridge code: use specific targetOrigin values, add origin checks to message listeners, remove unused legacy token bridge, and add unit tests.
+
 ## [0.36.2] - 2026-04-10
 ### Changed
 - Update package dependencies. [#47890]
