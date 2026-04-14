@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms responses dashboard: request field values as a keyed collection from the API.
 
 ### Fixed
+- Ensure central-form-management feature flag is registered at bootstrap so early callers (including the dashboard default-tab redirect) see the correct value.
 - Fixed the Form block when the Blocks module is inactive by registering it directly from the Forms package and providing the required editor initial state.
 - Rename 'preview_nonce' query var to 'jetpack_form_preview_nonce' to avoid collision with WordPress core preview URLs, which caused static front page previews to show the blog index on wpcom sites.
 - Show loading state instead of stale data when navigating between form response listings.
