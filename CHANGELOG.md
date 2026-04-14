@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Support granular date filter in inbox.
 
 ### Bug fixes
+- Fix taxonomies endpoint returning error when number parameter exceeds 1000.
 - Forms: Fixed the Form block not being usable when the Blocks module is inactive.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
