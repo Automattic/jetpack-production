@@ -48,7 +48,7 @@
 		"automattic/jetpack-publicize": "^0.77.0",
 		"automattic/jetpack-redirect": "^3.0.9",
 		"automattic/jetpack-roles": "^3.0.8",
-		"automattic/jetpack-search": "^0.56.8",
+		"automattic/jetpack-search": "^0.56.9-alpha",
 		"automattic/jetpack-stats": "^0.18.1",
 		"automattic/jetpack-stats-admin": "^0.31.1-alpha",
 		"automattic/jetpack-status": "^6.1.2",
