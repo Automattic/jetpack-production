@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 - Update purchases endpoint from v1.1 /sites/$site/purchases to v1.2 /upgrades?site=$site.
 
+### Fixed
+- My Jetpack: Fix Hybrid products not deactivating when activated via the Jetpack-module path.
+
 ## [5.34.2] - 2026-04-10
 ### Changed
 - Update package dependencies. [#47890] [#47998]
