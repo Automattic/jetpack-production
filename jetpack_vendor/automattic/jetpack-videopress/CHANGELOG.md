@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Clean up postMessage bridge code: use specific targetOrigin values, add origin checks to message listeners, remove unused legacy token bridge, and add unit tests.
+- Update package dependencies.
 
 ### Fixed
 - Fix poster image not saving when selected during video upload.

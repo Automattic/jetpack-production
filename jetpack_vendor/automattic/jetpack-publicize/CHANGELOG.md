@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Social: Move media section buttons below preview to be more apparent.
+- Update package dependencies.
 
 ## [0.77.0] - 2026-04-13
 ### Changed

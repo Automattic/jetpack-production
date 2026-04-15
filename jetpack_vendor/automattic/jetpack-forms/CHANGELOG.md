@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Enable Central Forms Management (wp-build dashboard and synced forms) by default for all sites, including self-hosted Jetpack installations.
 - Forms responses dashboard: request field values as a keyed collection from the API.
+- Update package dependencies.
 
 ### Fixed
 - Ensure central-form-management feature flag is registered at bootstrap so early callers (including the dashboard default-tab redirect) see the correct value.
