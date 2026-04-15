@@ -2,26 +2,23 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.8-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.8-a.3 - 2026-04-15
 ### Enhancements
-- Forms: Support granular date filter in inbox.
-- Settings: Replace custom tab navigation with @wordpress/ui Tabs component for proper ARIA semantics, built-in overflow handling, and animated indicator.
+- Forms: Support granular date filter in inbox. [#46760]
+- Settings: Replace custom tab navigation with @wordpress/ui Tabs component for proper ARIA semantics, built-in overflow handling, and animated indicator. [#47940]
 
 ### Bug fixes
-- Fix taxonomies endpoint returning error when number parameter exceeds 1000.
-- Forms: Fixed the Form block not being usable when the Blocks module is inactive.
-- Sync: Increase lock time tolerance in tests.
+- Fix taxonomies endpoint returning error when number parameter exceeds 1000. [#48070]
+- Forms: Fix the Form block not being usable when the Blocks module is inactive. [#48037]
+- Sync: Increase lock time tolerance in tests. [#48078]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- oEmbed: Prevent PHP warnings when a registered provider is malformed.
-- Subscriptions: Prevent warning when $post global is malformed.
-- Update Forms e2e test to use explicit inner blocks for compatibility with Central Forms Management.
-- Update package dependencies.
-- Update purchases endpoint from v1.1 /sites/$site/purchases to v1.2 /upgrades?site=$site.
-- WordAds: Prevent PHP warning when headers are already sent.
+- oEmbed: Prevent PHP warnings when a registered provider is malformed. [#48077]
+- Subscriptions: Prevent warning when $post global is malformed. [#48074]
+- Update Forms e2e test to use explicit inner blocks for compatibility with Central Forms Management. [#47826]
+- Update package dependencies. [#47907] [#48064]
+- Update purchases endpoint from v1.1 /sites/$site/purchases to v1.2 /upgrades?site=$site. [#48035]
+- WordAds: Prevent PHP warning when headers are already sent. [#48073]
 
 ## 15.8-a.1 - 2026-04-13
 ### Bug fixes
