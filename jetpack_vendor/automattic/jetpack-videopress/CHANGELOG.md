@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix poster image not saving when selected during video upload.
+- Fix stuck loading state on video card after deleting a video.
 
 ## [0.36.2] - 2026-04-10
 ### Changed
