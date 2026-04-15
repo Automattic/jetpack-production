@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: Support granular date filter in inbox.
+- Settings: Replace custom tab navigation with @wordpress/ui Tabs component for proper ARIA semantics, built-in overflow handling, and animated indicator.
 
 ### Bug fixes
 - Fix taxonomies endpoint returning error when number parameter exceeds 1000.
