@@ -28833,6 +28833,9 @@ function useExportResponses() {
       data.append("post", currentQuery2.parent || "all");
       data.append("search", currentQuery2.search || "");
       data.append("status", currentQuery2.status);
+      if (currentQuery2.source) {
+        data.append("source", currentQuery2.source);
+      }
       if (currentQuery2.before && currentQuery2.after) {
         data.append("before", currentQuery2.before);
         data.append("after", currentQuery2.after);
