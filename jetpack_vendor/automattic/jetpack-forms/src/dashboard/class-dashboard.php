@@ -176,7 +176,7 @@ class Dashboard {
 		 * Enabled by default since Central Forms Management is now available for all sites.
 		 * Can be disabled by returning false from this filter.
 		 *
-		 * @since 7.18.0-alpha
+		 * @since 7.18.0
 		 *
 		 * @param bool $enabled Whether the wp-build dashboard is enabled. Default true.
 		 */

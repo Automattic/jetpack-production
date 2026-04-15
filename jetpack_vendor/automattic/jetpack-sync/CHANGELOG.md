@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.36.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.36.0] - 2026-04-15
 ### Added
-- Add WooCommerce Accounts and Privacy settings page options to sync whitelist, as part of activity log improvements.
+- Add WooCommerce Accounts and Privacy settings page options to sync whitelist, as part of activity log improvements. [#48041]
 
 ### Fixed
-- Tests: Increase lock time tolerance.
+- Tests: Increase lock time tolerance. [#48054]
 
 ## [4.35.0] - 2026-04-06
 ### Added
@@ -1727,7 +1724,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.36.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.35.0...v4.36.0-alpha
+[4.36.0]: https://github.com/Automattic/jetpack-sync/compare/v4.35.0...v4.36.0
 [4.35.0]: https://github.com/Automattic/jetpack-sync/compare/v4.34.0...v4.35.0
 [4.34.0]: https://github.com/Automattic/jetpack-sync/compare/v4.33.0...v4.34.0
 [4.33.0]: https://github.com/Automattic/jetpack-sync/compare/v4.32.1...v4.33.0
