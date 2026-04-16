@@ -570,7 +570,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
           inst: { value, getSnapshot }
         });
         var inst = cachedValue[0].inst, forceUpdate = cachedValue[1];
-        useLayoutEffect4(
+        useLayoutEffect5(
           function() {
             inst.value = value;
             inst.getSnapshot = getSnapshot;
@@ -578,7 +578,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
           },
           [subscribe2, value, getSnapshot]
         );
-        useEffect40(
+        useEffect43(
           function() {
             checkIfSnapshotChanged(inst) && forceUpdate({ inst });
             return subscribe2(function() {
@@ -604,7 +604,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return getSnapshot();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React35 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState56 = React35.useState, useEffect40 = React35.useEffect, useLayoutEffect4 = React35.useLayoutEffect, useDebugValue = React35.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      var React35 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState56 = React35.useState, useEffect43 = React35.useEffect, useLayoutEffect5 = React35.useLayoutEffect, useDebugValue = React35.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
       exports.useSyncExternalStore = void 0 !== React35.useSyncExternalStore ? React35.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
@@ -4606,24 +4606,26 @@ var create_number_formatters_default = createNumberFormatters;
 var defaultFormatter = create_number_formatters_default();
 var { setLocale, setGeoLocation, formatNumber, formatNumberCompact, formatCurrency, getCurrencyObject: getCurrencyObject2 } = defaultFormatter;
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/admin-ui/build-module/breadcrumbs/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/admin-ui/build-module/breadcrumbs/index.mjs
 var import_i18n = __toESM(require_i18n(), 1);
 var import_components = __toESM(require_components(), 1);
 var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
 import { Link } from "@wordpress/route";
-var BreadcrumbItem = ({
-  item: { label, to }
-}) => {
-  if (!to) {
-    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_components.__experimentalHeading, { level: 1, truncate: true, children: label }) });
-  }
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, { to, children: label }) });
-};
 var Breadcrumbs = ({ items }) => {
   if (!items.length) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("nav", { "aria-label": (0, import_i18n.__)("Breadcrumbs"), children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+  const precedingItems = items.slice(0, -1);
+  const lastItem = items[items.length - 1];
+  if (true) {
+    const invalidItem = precedingItems.find((item) => !item.to);
+    if (invalidItem) {
+      throw new Error(
+        `Breadcrumbs: item "${invalidItem.label}" is missing a \`to\` prop. All items except the last one must have a \`to\` prop.`
+      );
+    }
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("nav", { "aria-label": (0, import_i18n.__)("Breadcrumbs"), children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
     import_components.__experimentalHStack,
     {
       as: "ul",
@@ -4631,7 +4633,10 @@ var Breadcrumbs = ({ items }) => {
       spacing: 0,
       justify: "flex-start",
       alignment: "center",
-      children: items.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BreadcrumbItem, { item }, index))
+      children: [
+        precedingItems.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, { to: item.to, children: item.label }) }, index)),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("li", { children: lastItem.to ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, { to: lastItem.to, children: lastItem.label }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_components.__experimentalHeading, { level: 1, truncate: true, children: lastItem.label }) })
+      ]
     }
   ) });
 };
@@ -4653,7 +4658,7 @@ function clsx() {
 }
 var clsx_default = clsx;
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/admin-ui/build-module/navigable-region/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/admin-ui/build-module/navigable-region/index.mjs
 var import_element = __toESM(require_element(), 1);
 var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
 var NavigableRegion = (0, import_element.forwardRef)(
@@ -7726,11 +7731,11 @@ function useRender(params) {
   return useRenderElement(params.defaultTagName ?? "div", params, params);
 }
 
-// ../../../node_modules/.pnpm/@wordpress+ui@0.9.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/ui/build-module/badge/badge.mjs
+// ../../../node_modules/.pnpm/@wordpress+ui@0.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/ui/build-module/badge/badge.mjs
 var import_element2 = __toESM(require_element(), 1);
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='d16010fae9']")) {
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='a407d6dd3d']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "d16010fae9");
+  style.setAttribute("data-wp-hash", "a407d6dd3d");
   style.appendChild(document.createTextNode('@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._96e6251aad1a6136__badge{border-radius:var(--wpds-border-radius-lg,8px);font-family:var(--wpds-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-font-size-sm,12px);font-weight:var(--wpds-font-weight-regular,400);line-height:var(--wpds-font-line-height-xs,16px);padding-block:var(--wpds-dimension-padding-xs,4px);padding-inline:var(--wpds-dimension-padding-sm,8px)}._99f7158cb520f750__is-high-intent{background-color:var(--wpds-color-bg-surface-error,#f6e6e3);color:var(--wpds-color-fg-content-error,#470000)}.c20ebef2365bc8b7__is-medium-intent{background-color:var(--wpds-color-bg-surface-warning,#fde6bd);color:var(--wpds-color-fg-content-warning,#2e1900)}._365e1626c6202e52__is-low-intent{background-color:var(--wpds-color-bg-surface-caution,#fee994);color:var(--wpds-color-fg-content-caution,#281d00)}._33f8198127ddf4ef__is-stable-intent{background-color:var(--wpds-color-bg-surface-success,#c5f7cc);color:var(--wpds-color-fg-content-success,#002900)}._04c1aca8fc449412__is-informational-intent{background-color:var(--wpds-color-bg-surface-info,#deebfa);color:var(--wpds-color-fg-content-info,#001b4f)}._90726e69d495ec19__is-draft-intent{background-color:var(--wpds-color-bg-surface-neutral-weak,#f0f0f0);color:var(--wpds-color-fg-content-neutral,#1e1e1e)}._898f4a544993bd39__is-none-intent{background-color:var(--wpds-color-bg-surface-neutral-strong,#fff);border:var(--wpds-border-width-xs,1px) solid var(--wpds-color-stroke-surface-neutral,#d8d8d8);color:var(--wpds-color-fg-content-neutral,#1e1e1e);padding-block:calc(var(--wpds-dimension-padding-xs, 4px) - var(--wpds-border-width-xs, 1px));padding-inline:calc(var(--wpds-dimension-padding-sm, 8px) - var(--wpds-border-width-xs, 1px))}}'));
   document.head.appendChild(style);
 }
@@ -7752,7 +7757,7 @@ var Badge = (0, import_element2.forwardRef)(function Badge2({ children, intent =
   return element;
 });
 
-// ../../../node_modules/.pnpm/@wordpress+ui@0.9.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/ui/build-module/icon/icon.mjs
+// ../../../node_modules/.pnpm/@wordpress+ui@0.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/ui/build-module/icon/icon.mjs
 var import_element3 = __toESM(require_element(), 1);
 var import_primitives = __toESM(require_primitives(), 1);
 var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
@@ -7770,161 +7775,161 @@ var Icon = (0, import_element3.forwardRef)(function Icon2({ icon, size = 24, ...
   );
 });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-down.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-down.mjs
 var import_primitives2 = __toESM(require_primitives(), 1);
 var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
 var arrow_down_default = /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_primitives2.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(import_primitives2.Path, { d: "m16.5 13.5-3.7 3.7V4h-1.5v13.2l-3.8-3.7-1 1 5.5 5.6 5.5-5.6z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-left.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-left.mjs
 var import_primitives3 = __toESM(require_primitives(), 1);
 var import_jsx_runtime10 = __toESM(require_jsx_runtime(), 1);
 var arrow_left_default = /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_primitives3.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_primitives3.Path, { d: "M20 11.2H6.8l3.7-3.7-1-1L3.9 12l5.6 5.5 1-1-3.7-3.7H20z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-right.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-right.mjs
 var import_primitives4 = __toESM(require_primitives(), 1);
 var import_jsx_runtime11 = __toESM(require_jsx_runtime(), 1);
 var arrow_right_default = /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_primitives4.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_primitives4.Path, { d: "m14.5 6.5-1 1 3.7 3.7H4v1.6h13.2l-3.7 3.7 1 1 5.6-5.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-up.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/arrow-up.mjs
 var import_primitives5 = __toESM(require_primitives(), 1);
 var import_jsx_runtime12 = __toESM(require_jsx_runtime(), 1);
 var arrow_up_default = /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(import_primitives5.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(import_primitives5.Path, { d: "M12 3.9 6.5 9.5l1 1 3.8-3.7V20h1.5V6.8l3.7 3.7 1-1z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/block-table.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/block-table.mjs
 var import_primitives6 = __toESM(require_primitives(), 1);
 var import_jsx_runtime13 = __toESM(require_jsx_runtime(), 1);
 var block_table_default = /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(import_primitives6.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(import_primitives6.Path, { d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 4.5h14c.3 0 .5.2.5.5v3.5h-15V5c0-.3.2-.5.5-.5zm8 5.5h6.5v3.5H13V10zm-1.5 3.5h-7V10h7v3.5zm-7 5.5v-4h7v4.5H5c-.3 0-.5-.2-.5-.5zm14.5.5h-6V15h6.5v4c0 .3-.2.5-.5.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/category.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/category.mjs
 var import_primitives7 = __toESM(require_primitives(), 1);
 var import_jsx_runtime14 = __toESM(require_jsx_runtime(), 1);
 var category_default = /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(import_primitives7.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(import_primitives7.Path, { fillRule: "evenodd", clipRule: "evenodd", d: "M6 5.5h3a.5.5 0 01.5.5v3a.5.5 0 01-.5.5H6a.5.5 0 01-.5-.5V6a.5.5 0 01.5-.5zM4 6a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm11-.5h3a.5.5 0 01.5.5v3a.5.5 0 01-.5.5h-3a.5.5 0 01-.5-.5V6a.5.5 0 01.5-.5zM13 6a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2h-3a2 2 0 01-2-2V6zm5 8.5h-3a.5.5 0 00-.5.5v3a.5.5 0 00.5.5h3a.5.5 0 00.5-.5v-3a.5.5 0 00-.5-.5zM15 13a2 2 0 00-2 2v3a2 2 0 002 2h3a2 2 0 002-2v-3a2 2 0 00-2-2h-3zm-9 1.5h3a.5.5 0 01.5.5v3a.5.5 0 01-.5.5H6a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5zM4 15a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2H6a2 2 0 01-2-2v-3z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/check.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/check.mjs
 var import_primitives8 = __toESM(require_primitives(), 1);
 var import_jsx_runtime15 = __toESM(require_jsx_runtime(), 1);
 var check_default = /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(import_primitives8.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(import_primitives8.Path, { d: "M16.5 7.5 10 13.9l-2.5-2.4-1 1 3.5 3.6 7.5-7.6z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-down.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-down.mjs
 var import_primitives9 = __toESM(require_primitives(), 1);
 var import_jsx_runtime16 = __toESM(require_jsx_runtime(), 1);
 var chevron_down_default = /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(import_primitives9.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(import_primitives9.Path, { d: "M17.5 11.6L12 16l-5.5-4.4.9-1.2L12 14l4.5-3.6 1 1.2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-right.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-right.mjs
 var import_primitives10 = __toESM(require_primitives(), 1);
 var import_jsx_runtime17 = __toESM(require_jsx_runtime(), 1);
 var chevron_right_default = /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_primitives10.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(import_primitives10.Path, { d: "M10.6 6L9.4 7l4.6 5-4.6 5 1.2 1 5.4-6z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-up.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-up.mjs
 var import_primitives11 = __toESM(require_primitives(), 1);
 var import_jsx_runtime18 = __toESM(require_jsx_runtime(), 1);
 var chevron_up_default = /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_primitives11.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(import_primitives11.Path, { d: "M6.5 12.4L12 8l5.5 4.4-.9 1.2L12 10l-4.5 3.6-1-1.2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/close-small.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/close-small.mjs
 var import_primitives12 = __toESM(require_primitives(), 1);
 var import_jsx_runtime19 = __toESM(require_jsx_runtime(), 1);
 var close_small_default = /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(import_primitives12.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(import_primitives12.Path, { d: "M12 13.06l3.712 3.713 1.061-1.06L13.061 12l3.712-3.712-1.06-1.06L12 10.938 8.288 7.227l-1.061 1.06L10.939 12l-3.712 3.712 1.06 1.061L12 13.061z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/cog.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/cog.mjs
 var import_primitives13 = __toESM(require_primitives(), 1);
 var import_jsx_runtime20 = __toESM(require_jsx_runtime(), 1);
 var cog_default = /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(import_primitives13.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime20.jsx)(import_primitives13.Path, { fillRule: "evenodd", clipRule: "evenodd", d: "M10.289 4.836A1 1 0 0111.275 4h1.306a1 1 0 01.987.836l.244 1.466c.787.26 1.503.679 2.108 1.218l1.393-.522a1 1 0 011.216.437l.653 1.13a1 1 0 01-.23 1.273l-1.148.944a6.025 6.025 0 010 2.435l1.149.946a1 1 0 01.23 1.272l-.653 1.13a1 1 0 01-1.216.437l-1.394-.522c-.605.54-1.32.958-2.108 1.218l-.244 1.466a1 1 0 01-.987.836h-1.306a1 1 0 01-.986-.836l-.244-1.466a5.995 5.995 0 01-2.108-1.218l-1.394.522a1 1 0 01-1.217-.436l-.653-1.131a1 1 0 01.23-1.272l1.149-.946a6.026 6.026 0 010-2.435l-1.148-.944a1 1 0 01-.23-1.272l.653-1.131a1 1 0 011.217-.437l1.393.522a5.994 5.994 0 012.108-1.218l.244-1.466zM14.929 12a3 3 0 11-6 0 3 3 0 016 0z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/download.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/download.mjs
 var import_primitives14 = __toESM(require_primitives(), 1);
 var import_jsx_runtime21 = __toESM(require_jsx_runtime(), 1);
 var download_default = /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(import_primitives14.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(import_primitives14.Path, { d: "M18 11.3l-1-1.1-4 4V3h-1.5v11.3L7 10.2l-1 1.1 6.2 5.8 5.8-5.8zm.5 3.7v3.5h-13V15H4v5h16v-5h-1.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/envelope.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/envelope.mjs
 var import_primitives15 = __toESM(require_primitives(), 1);
 var import_jsx_runtime22 = __toESM(require_jsx_runtime(), 1);
 var envelope_default = /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(import_primitives15.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(import_primitives15.Path, { fillRule: "evenodd", clipRule: "evenodd", d: "M3 7c0-1.1.9-2 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Zm2-.5h14c.3 0 .5.2.5.5v1L12 13.5 4.5 7.9V7c0-.3.2-.5.5-.5Zm-.5 3.3V17c0 .3.2.5.5.5h14c.3 0 .5-.2.5-.5V9.8L12 15.4 4.5 9.8Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/error.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/error.mjs
 var import_primitives16 = __toESM(require_primitives(), 1);
 var import_jsx_runtime23 = __toESM(require_jsx_runtime(), 1);
 var error_default = /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(import_primitives16.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(import_primitives16.Path, { fillRule: "evenodd", clipRule: "evenodd", d: "M12.218 5.377a.25.25 0 0 0-.436 0l-7.29 12.96a.25.25 0 0 0 .218.373h14.58a.25.25 0 0 0 .218-.372l-7.29-12.96Zm-1.743-.735c.669-1.19 2.381-1.19 3.05 0l7.29 12.96a1.75 1.75 0 0 1-1.525 2.608H4.71a1.75 1.75 0 0 1-1.525-2.608l7.29-12.96ZM12.75 17.46h-1.5v-1.5h1.5v1.5Zm-1.5-3h1.5v-5h-1.5v5Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/format-list-bullets-rtl.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/format-list-bullets-rtl.mjs
 var import_primitives17 = __toESM(require_primitives(), 1);
 var import_jsx_runtime24 = __toESM(require_jsx_runtime(), 1);
 var format_list_bullets_rtl_default = /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(import_primitives17.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(import_primitives17.Path, { d: "M4 8.8h8.9V7.2H4v1.6zm0 7h8.9v-1.5H4v1.5zM18 13c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/format-list-bullets.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/format-list-bullets.mjs
 var import_primitives18 = __toESM(require_primitives(), 1);
 var import_jsx_runtime25 = __toESM(require_jsx_runtime(), 1);
 var format_list_bullets_default = /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(import_primitives18.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(import_primitives18.Path, { d: "M11.1 15.8H20v-1.5h-8.9v1.5zm0-8.6v1.5H20V7.2h-8.9zM6 13c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-7c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/funnel.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/funnel.mjs
 var import_primitives19 = __toESM(require_primitives(), 1);
 var import_jsx_runtime26 = __toESM(require_jsx_runtime(), 1);
 var funnel_default = /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(import_primitives19.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(import_primitives19.Path, { d: "M10 17.5H14V16H10V17.5ZM6 6V7.5H18V6H6ZM8 12.5H16V11H8V12.5Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/link.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/link.mjs
 var import_primitives20 = __toESM(require_primitives(), 1);
 var import_jsx_runtime27 = __toESM(require_jsx_runtime(), 1);
 var link_default = /* @__PURE__ */ (0, import_jsx_runtime27.jsx)(import_primitives20.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime27.jsx)(import_primitives20.Path, { d: "M10 17.389H8.444A5.194 5.194 0 1 1 8.444 7H10v1.5H8.444a3.694 3.694 0 0 0 0 7.389H10v1.5ZM14 7h1.556a5.194 5.194 0 0 1 0 10.39H14v-1.5h1.556a3.694 3.694 0 0 0 0-7.39H14V7Zm-4.5 6h5v-1.5h-5V13Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/mobile.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/mobile.mjs
 var import_primitives21 = __toESM(require_primitives(), 1);
 var import_jsx_runtime28 = __toESM(require_jsx_runtime(), 1);
 var mobile_default = /* @__PURE__ */ (0, import_jsx_runtime28.jsx)(import_primitives21.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime28.jsx)(import_primitives21.Path, { d: "M15 4H9c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm.5 14c0 .3-.2.5-.5.5H9c-.3 0-.5-.2-.5-.5V6c0-.3.2-.5.5-.5h6c.3 0 .5.2.5.5v12zm-4.5-.5h2V16h-2v1.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/more-vertical.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/more-vertical.mjs
 var import_primitives22 = __toESM(require_primitives(), 1);
 var import_jsx_runtime29 = __toESM(require_jsx_runtime(), 1);
 var more_vertical_default = /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(import_primitives22.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime29.jsx)(import_primitives22.Path, { d: "M13 19h-2v-2h2v2zm0-6h-2v-2h2v2zm0-6h-2V5h2v2z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/next.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/next.mjs
 var import_primitives23 = __toESM(require_primitives(), 1);
 var import_jsx_runtime30 = __toESM(require_jsx_runtime(), 1);
 var next_default = /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(import_primitives23.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime30.jsx)(import_primitives23.Path, { d: "M6.6 6L5.4 7l4.5 5-4.5 5 1.1 1 5.5-6-5.4-6zm6 0l-1.1 1 4.5 5-4.5 5 1.1 1 5.5-6-5.5-6z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plugins.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plugins.mjs
 var import_primitives24 = __toESM(require_primitives(), 1);
 var import_jsx_runtime31 = __toESM(require_jsx_runtime(), 1);
 var plugins_default = /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(import_primitives24.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime31.jsx)(import_primitives24.Path, { d: "M10.5 4v4h3V4H15v4h1.5a1 1 0 011 1v4l-3 4v2a1 1 0 01-1 1h-3a1 1 0 01-1-1v-2l-3-4V9a1 1 0 011-1H9V4h1.5zm.5 12.5v2h2v-2l3-4v-3H8v3l3 4z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plus.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/plus.mjs
 var import_primitives25 = __toESM(require_primitives(), 1);
 var import_jsx_runtime32 = __toESM(require_jsx_runtime(), 1);
 var plus_default = /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(import_primitives25.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime32.jsx)(import_primitives25.Path, { d: "M11 12.5V17.5H12.5V12.5H17.5V11H12.5V6H11V11H6V12.5H11Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/previous.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/previous.mjs
 var import_primitives26 = __toESM(require_primitives(), 1);
 var import_jsx_runtime33 = __toESM(require_jsx_runtime(), 1);
 var previous_default = /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(import_primitives26.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime33.jsx)(import_primitives26.Path, { d: "M11.6 7l-1.1-1L5 12l5.5 6 1.1-1L7 12l4.6-5zm6 0l-1.1-1-5.5 6 5.5 6 1.1-1-4.6-5 4.6-5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/scheduled.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/scheduled.mjs
 var import_primitives27 = __toESM(require_primitives(), 1);
 var import_jsx_runtime34 = __toESM(require_jsx_runtime(), 1);
 var scheduled_default = /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(import_primitives27.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime34.jsx)(import_primitives27.Path, { fillRule: "evenodd", clipRule: "evenodd", d: "M12 18.5a6.5 6.5 0 1 1 0-13 6.5 6.5 0 0 1 0 13ZM4 12a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm9 1V8h-1.5v3.5h-2V13H13Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/search.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/search.mjs
 var import_primitives28 = __toESM(require_primitives(), 1);
 var import_jsx_runtime35 = __toESM(require_jsx_runtime(), 1);
 var search_default = /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(import_primitives28.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime35.jsx)(import_primitives28.Path, { d: "M13 5c-3.3 0-6 2.7-6 6 0 1.4.5 2.7 1.3 3.7l-3.8 3.8 1.1 1.1 3.8-3.8c1 .8 2.3 1.3 3.7 1.3 3.3 0 6-2.7 6-6S16.3 5 13 5zm0 10.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/seen.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/seen.mjs
 var import_primitives29 = __toESM(require_primitives(), 1);
 var import_jsx_runtime36 = __toESM(require_jsx_runtime(), 1);
 var seen_default = /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(import_primitives29.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime36.jsx)(import_primitives29.Path, { d: "M3.99961 13C4.67043 13.3354 4.6703 13.3357 4.67017 13.3359L4.67298 13.3305C4.67621 13.3242 4.68184 13.3135 4.68988 13.2985C4.70595 13.2686 4.7316 13.2218 4.76695 13.1608C4.8377 13.0385 4.94692 12.8592 5.09541 12.6419C5.39312 12.2062 5.84436 11.624 6.45435 11.0431C7.67308 9.88241 9.49719 8.75 11.9996 8.75C14.502 8.75 16.3261 9.88241 17.5449 11.0431C18.1549 11.624 18.6061 12.2062 18.9038 12.6419C19.0523 12.8592 19.1615 13.0385 19.2323 13.1608C19.2676 13.2218 19.2933 13.2686 19.3093 13.2985C19.3174 13.3135 19.323 13.3242 19.3262 13.3305L19.3291 13.3359C19.3289 13.3357 19.3288 13.3354 19.9996 13C20.6704 12.6646 20.6703 12.6643 20.6701 12.664L20.6697 12.6632L20.6688 12.6614L20.6662 12.6563L20.6583 12.6408C20.6517 12.6282 20.6427 12.6108 20.631 12.5892C20.6078 12.5459 20.5744 12.4852 20.5306 12.4096C20.4432 12.2584 20.3141 12.0471 20.1423 11.7956C19.7994 11.2938 19.2819 10.626 18.5794 9.9569C17.1731 8.61759 14.9972 7.25 11.9996 7.25C9.00203 7.25 6.82614 8.61759 5.41987 9.9569C4.71736 10.626 4.19984 11.2938 3.85694 11.7956C3.68511 12.0471 3.55605 12.2584 3.4686 12.4096C3.42484 12.4852 3.39142 12.5459 3.36818 12.5892C3.35656 12.6108 3.34748 12.6282 3.34092 12.6408L3.33297 12.6563L3.33041 12.6614L3.32948 12.6632L3.32911 12.664C3.32894 12.6643 3.32879 12.6646 3.99961 13ZM11.9996 16C13.9326 16 15.4996 14.433 15.4996 12.5C15.4996 10.567 13.9326 9 11.9996 9C10.0666 9 8.49961 10.567 8.49961 12.5C8.49961 14.433 10.0666 16 11.9996 16Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/trash.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/trash.mjs
 var import_primitives30 = __toESM(require_primitives(), 1);
 var import_jsx_runtime37 = __toESM(require_jsx_runtime(), 1);
 var trash_default = /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(import_primitives30.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(import_primitives30.Path, { fillRule: "evenodd", clipRule: "evenodd", d: "M12 5.5A2.25 2.25 0 0 0 9.878 7h4.244A2.251 2.251 0 0 0 12 5.5ZM12 4a3.751 3.751 0 0 0-3.675 3H5v1.5h1.27l.818 8.997a2.75 2.75 0 0 0 2.739 2.501h4.347a2.75 2.75 0 0 0 2.738-2.5L17.73 8.5H19V7h-3.325A3.751 3.751 0 0 0 12 4Zm4.224 4.5H7.776l.806 8.861a1.25 1.25 0 0 0 1.245 1.137h4.347a1.25 1.25 0 0 0 1.245-1.137l.805-8.861Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+icons@12.0.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/unseen.mjs
+// ../../../node_modules/.pnpm/@wordpress+icons@12.1.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/unseen.mjs
 var import_primitives31 = __toESM(require_primitives(), 1);
 var import_jsx_runtime38 = __toESM(require_jsx_runtime(), 1);
 var unseen_default = /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(import_primitives31.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime38.jsx)(import_primitives31.Path, { d: "M20.7 12.7s0-.1-.1-.2c0-.2-.2-.4-.4-.6-.3-.5-.9-1.2-1.6-1.8-.7-.6-1.5-1.3-2.6-1.8l-.6 1.4c.9.4 1.6 1 2.1 1.5.6.6 1.1 1.2 1.4 1.6.1.2.3.4.3.5v.1l.7-.3.7-.3Zm-5.2-9.3-1.8 4c-.5-.1-1.1-.2-1.7-.2-3 0-5.2 1.4-6.6 2.7-.7.7-1.2 1.3-1.6 1.8-.2.3-.3.5-.4.6 0 0 0 .1-.1.2s0 0 .7.3l.7.3V13c0-.1.2-.3.3-.5.3-.4.7-1 1.4-1.6 1.2-1.2 3-2.3 5.5-2.3H13v.3c-.4 0-.8-.1-1.1-.1-1.9 0-3.5 1.6-3.5 3.5s.6 2.3 1.6 2.9l-2 4.4.9.4 7.6-16.2-.9-.4Zm-3 12.6c1.7-.2 3-1.7 3-3.5s-.2-1.4-.6-1.9L12.4 16Z" }) });
 
-// ../../../node_modules/.pnpm/@wordpress+ui@0.9.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/ui/build-module/stack/stack.mjs
+// ../../../node_modules/.pnpm/@wordpress+ui@0.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/ui/build-module/stack/stack.mjs
 var import_element4 = __toESM(require_element(), 1);
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='71d20935c2']")) {
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='b51ff41489']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "71d20935c2");
+  style.setAttribute("data-wp-hash", "b51ff41489");
   style.appendChild(document.createTextNode("@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._19ce0419607e1896__stack{display:flex}}"));
   document.head.appendChild(style);
 }
@@ -7954,7 +7959,7 @@ var Stack = (0, import_element4.forwardRef)(function Stack2({ direction, gap, al
   return element;
 });
 
-// ../../../node_modules/.pnpm/@wordpress+ui@0.9.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/ui/build-module/tabs/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+ui@0.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/ui/build-module/tabs/index.mjs
 var tabs_exports = {};
 __export(tabs_exports, {
   List: () => List,
@@ -7963,14 +7968,14 @@ __export(tabs_exports, {
   Tab: () => Tab
 });
 
-// ../../../node_modules/.pnpm/@wordpress+ui@0.9.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/ui/build-module/tabs/list.mjs
+// ../../../node_modules/.pnpm/@wordpress+ui@0.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/ui/build-module/tabs/list.mjs
 var import_element5 = __toESM(require_element(), 1);
 var import_compose = __toESM(require_compose(), 1);
 var import_jsx_runtime39 = __toESM(require_jsx_runtime(), 1);
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='21e6ce9e14']")) {
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='abbf48f53e']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "21e6ce9e14");
-  style.appendChild(document.createTextNode('@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._7313adbc8a112e90__tablist{--direction-factor:1;--direction-start:left;--direction-end:right;align-items:stretch;display:flex;overflow-inline:auto;overscroll-behavior-inline:none;position:relative;&:dir(rtl){--direction-factor:-1;--direction-start:right;--direction-end:left}&[data-orientation=horizontal]{--fade-width:4rem;--fade-gradient-base:#0000 0%,#000 var(--fade-width);--fade-gradient-composed:var(--fade-gradient-base),#000 60%,#0000 50%;width:fit-content;&._9f2ac729c68a735a__is-overflowing-first{mask-image:linear-gradient(to var(--direction-end),var(--fade-gradient-base))}&._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to var(--direction-start),var(--fade-gradient-base))}&._9f2ac729c68a735a__is-overflowing-first._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to right,var(--fade-gradient-composed)),linear-gradient(to left,var(--fade-gradient-composed))}&._59228b5227f38a99__is-minimal-variant{gap:1rem}}&[data-orientation=vertical]{flex-direction:column}}._1c37dcfaa1ad8cda__indicator{@media not (prefers-reduced-motion){transition-duration:.2s;transition-property:translate,width,height,border-radius,border-block;transition-timing-function:ease-out}outline:2px solid #0000;outline-offset:-1px;pointer-events:none;position:absolute;&[data-orientation=horizontal]{background-color:var(--wpds-color-stroke-interactive-neutral-strong,#6c6c6c);bottom:0;height:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px));left:0;translate:var(--active-tab-left) 0;width:var(--active-tab-width);z-index:1}&[data-orientation=vertical]{background-color:var(--wpds-color-bg-interactive-neutral-weak-active,#eaeaea);border-radius:var(--wpds-border-radius-sm,2px);height:var(--active-tab-height);left:50%;top:0;translate:-50% var(--active-tab-top);width:100%;z-index:0}._7313adbc8a112e90__tablist[data-select-on-move=true]:has(:focus-visible)\n		&[data-orientation=vertical]{border:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));box-sizing:border-box}}.a5fd8814f195aa5e__tab{align-items:center;background:#0000;border:none;border-radius:0;box-shadow:none;color:var(--wpds-color-fg-interactive-neutral,#1e1e1e);cursor:var(--wpds-cursor-control,default);display:flex;flex:1 0 auto;font-family:var(--wpds-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-font-size-md,13px);font-weight:400;line-height:1.2;outline:none;padding:0;position:relative;white-space:nowrap;z-index:1;&[data-disabled]{color:var(--wpds-color-fg-interactive-neutral-disabled,#8a8a8a);cursor:default;@media (forced-colors:active){color:GrayText}}&:not([data-disabled]):is(:hover,:focus-visible){color:var(--wpds-color-fg-interactive-neutral-active,#1e1e1e)}&:after{border-radius:var(--wpds-border-radius-sm,2px);opacity:0;outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));pointer-events:none;position:absolute;z-index:-1;@media not (prefers-reduced-motion){transition:opacity .1s linear}}&:focus-visible:after{opacity:1}[data-orientation=horizontal] &{height:48px;padding-inline:var(--wpds-dimension-padding-lg,16px);scroll-margin:24px;&:after{content:"";inset:var(--wpds-dimension-padding-md,12px)}}._59228b5227f38a99__is-minimal-variant[data-orientation=horizontal] &{padding-inline:0;&:after{inset-inline:round(up,var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)),1px)}}[data-orientation=vertical] &{min-height:40px;padding:var(--wpds-dimension-padding-sm,8px) var(--wpds-dimension-padding-md,12px)}[data-orientation=vertical][data-select-on-move=false] &:after{content:"";inset:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px))}}._5dfc77e6edd345d4__tab-children{align-items:center;display:flex;flex-grow:1;[data-orientation=horizontal] &{justify-content:center}[data-orientation=vertical] &{justify-content:start}}._4a20e969d15e5ac1__tab-chevron{flex-shrink:0;margin-inline-end:calc(var(--wpds-dimension-gap-xs, 4px)*-1);opacity:0;[data-orientation=horizontal] &{display:none}[role=tab]:is([aria-selected=true],:focus-visible,:hover) &{opacity:1}@media not (prefers-reduced-motion){[data-select-on-move=true]\n			[role=tab]:is([aria-selected=true])\n			&{transition:opacity .15s linear .15s}}&:dir(rtl){rotate:180deg}}._49f4bf715948892a__tabpanel{&:focus{box-shadow:none;outline:none}&:focus-visible{box-shadow:0 0 0 var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));outline:2px solid #0000;outline-offset:0}}}'));
+  style.setAttribute("data-wp-hash", "abbf48f53e");
+  style.appendChild(document.createTextNode('@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._7313adbc8a112e90__tablist{--direction-factor:1;--direction-start:left;--direction-end:right;align-items:stretch;display:flex;overflow-inline:auto;overscroll-behavior-inline:none;position:relative;&:dir(rtl){--direction-factor:-1;--direction-start:right;--direction-end:left}&[data-orientation=horizontal]{--fade-width:4rem;--fade-gradient-base:#0000 0%,#000 var(--fade-width);--fade-gradient-composed:var(--fade-gradient-base),#000 60%,#0000 50%;width:fit-content;&._9f2ac729c68a735a__is-overflowing-first{mask-image:linear-gradient(to var(--direction-end),var(--fade-gradient-base))}&._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to var(--direction-start),var(--fade-gradient-base))}&._9f2ac729c68a735a__is-overflowing-first._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to right,var(--fade-gradient-composed)),linear-gradient(to left,var(--fade-gradient-composed))}&._59228b5227f38a99__is-minimal-variant{gap:1rem}}&[data-orientation=vertical]{flex-direction:column}}._1c37dcfaa1ad8cda__indicator{@media not (prefers-reduced-motion){transition-duration:.2s;transition-property:translate,width,height,border-radius,border-block;transition-timing-function:ease-out}outline:2px solid #0000;outline-offset:-1px;pointer-events:none;position:absolute;&[data-orientation=horizontal]{background-color:var(--wpds-color-stroke-interactive-neutral-strong,#6c6c6c);bottom:0;height:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px));left:0;translate:var(--active-tab-left) 0;width:var(--active-tab-width);z-index:1}&[data-orientation=vertical]{background-color:var(--wpds-color-bg-interactive-neutral-weak-active,#eaeaea);border-radius:var(--wpds-border-radius-sm,2px);height:var(--active-tab-height);left:50%;top:0;translate:-50% var(--active-tab-top);width:100%;z-index:0}._7313adbc8a112e90__tablist[data-select-on-move=true]:has(:focus-visible)\n		&[data-orientation=vertical]{border:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));box-sizing:border-box}}.a5fd8814f195aa5e__tab{align-items:center;background:#0000;border:none;border-radius:0;box-shadow:none;color:var(--wpds-color-fg-interactive-neutral,#1e1e1e);cursor:var(--wpds-cursor-control,pointer);display:flex;flex:1 0 auto;font-family:var(--wpds-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-font-size-md,13px);font-weight:400;line-height:1.2;outline:none;padding:0;position:relative;white-space:nowrap;z-index:1;&[data-disabled]{color:var(--wpds-color-fg-interactive-neutral-disabled,#8a8a8a);cursor:default;@media (forced-colors:active){color:GrayText}}&:not([data-disabled]):is(:hover,:focus-visible){color:var(--wpds-color-fg-interactive-neutral-active,#1e1e1e)}&:after{border-radius:var(--wpds-border-radius-sm,2px);opacity:0;outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));pointer-events:none;position:absolute;z-index:-1;@media not (prefers-reduced-motion){transition:opacity .1s linear}}&:focus-visible:after{opacity:1}[data-orientation=horizontal] &{height:48px;padding-inline:var(--wpds-dimension-padding-lg,16px);scroll-margin:24px;&:after{content:"";inset:var(--wpds-dimension-padding-md,12px)}}._59228b5227f38a99__is-minimal-variant[data-orientation=horizontal] &{padding-inline:0;&:after{inset-inline:round(up,var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)),1px)}}[data-orientation=vertical] &{min-height:40px;padding:var(--wpds-dimension-padding-sm,8px) var(--wpds-dimension-padding-md,12px)}[data-orientation=vertical][data-select-on-move=false] &:after{content:"";inset:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px))}}._5dfc77e6edd345d4__tab-children{align-items:center;display:flex;flex-grow:1;[data-orientation=horizontal] &{justify-content:center}[data-orientation=vertical] &{justify-content:start}}._4a20e969d15e5ac1__tab-chevron{flex-shrink:0;margin-inline-end:calc(var(--wpds-dimension-gap-xs, 4px)*-1);opacity:0;[data-orientation=horizontal] &{display:none}[role=tab]:is([aria-selected=true],:focus-visible,:hover) &{opacity:1}@media not (prefers-reduced-motion){[data-select-on-move=true]\n			[role=tab]:is([aria-selected=true])\n			&{transition:opacity .15s linear .15s}}&:dir(rtl){rotate:180deg}}._49f4bf715948892a__tabpanel{&:focus{box-shadow:none;outline:none}&:focus-visible{box-shadow:0 0 0 var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));outline:2px solid #0000;outline-offset:0}}}'));
   document.head.appendChild(style);
 }
 var style_default3 = { "tablist": "_7313adbc8a112e90__tablist", "is-overflowing-first": "_9f2ac729c68a735a__is-overflowing-first", "is-overflowing-last": "_81c799c1f3cdd261__is-overflowing-last", "is-minimal-variant": "_59228b5227f38a99__is-minimal-variant", "indicator": "_1c37dcfaa1ad8cda__indicator", "tab": "a5fd8814f195aa5e__tab", "tab-children": "_5dfc77e6edd345d4__tab-children", "tab-chevron": "_4a20e969d15e5ac1__tab-chevron", "tabpanel": "_49f4bf715948892a__tabpanel" };
@@ -8064,19 +8069,111 @@ var List = (0, import_element5.forwardRef)(
   }
 );
 
-// ../../../node_modules/.pnpm/@wordpress+ui@0.9.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/ui/build-module/tabs/panel.mjs
+// ../../../node_modules/.pnpm/@wordpress+ui@0.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/ui/build-module/tabs/panel.mjs
+var import_element7 = __toESM(require_element(), 1);
+
+// ../../../node_modules/.pnpm/@wordpress+ui@0.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/ui/build-module/tabs/context.mjs
 var import_element6 = __toESM(require_element(), 1);
 var import_jsx_runtime40 = __toESM(require_jsx_runtime(), 1);
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='21e6ce9e14']")) {
+var VALIDATION_ENABLED = true;
+var TabsValidationContext = VALIDATION_ENABLED ? (0, import_element6.createContext)(null) : null;
+function useRegisterTabDev() {
+  const context = (0, import_element6.useContext)(TabsValidationContext);
+  (0, import_element6.useEffect)(() => {
+    if (context) {
+      return context.registerTab();
+    }
+    return void 0;
+  }, [context]);
+}
+function useRegisterTabProd() {
+}
+var useRegisterTab = VALIDATION_ENABLED ? useRegisterTabDev : useRegisterTabProd;
+function useRegisterPanelDev() {
+  const context = (0, import_element6.useContext)(TabsValidationContext);
+  (0, import_element6.useEffect)(() => {
+    if (context) {
+      return context.registerPanel();
+    }
+    return void 0;
+  }, [context]);
+}
+function useRegisterPanelProd() {
+}
+var useRegisterPanel = VALIDATION_ENABLED ? useRegisterPanelDev : useRegisterPanelProd;
+function TabsValidationProviderDev({
+  children
+}) {
+  const tabCountRef = (0, import_element6.useRef)(0);
+  const panelCountRef = (0, import_element6.useRef)(0);
+  const validationScheduledRef = (0, import_element6.useRef)(null);
+  const scheduleValidation = (0, import_element6.useCallback)(() => {
+    if (validationScheduledRef.current) {
+      clearTimeout(validationScheduledRef.current);
+    }
+    validationScheduledRef.current = setTimeout(() => {
+      const tabCount = tabCountRef.current;
+      const panelCount = panelCountRef.current;
+      if (tabCount !== panelCount) {
+        throw new Error(
+          `Tabs: Tab/Panel count mismatch (${tabCount} Tabs, ${panelCount} Panels). Each Tab must be associated with exactly one Panel. Mismatched or missing associations can break screen reader navigation and violate WAI-ARIA Tabs pattern requirements.`
+        );
+      }
+      validationScheduledRef.current = null;
+    }, 0);
+  }, []);
+  const registerTab = (0, import_element6.useCallback)(() => {
+    tabCountRef.current += 1;
+    scheduleValidation();
+    return () => {
+      tabCountRef.current -= 1;
+      scheduleValidation();
+    };
+  }, [scheduleValidation]);
+  const registerPanel = (0, import_element6.useCallback)(() => {
+    panelCountRef.current += 1;
+    scheduleValidation();
+    return () => {
+      panelCountRef.current -= 1;
+      scheduleValidation();
+    };
+  }, [scheduleValidation]);
+  (0, import_element6.useEffect)(() => {
+    return () => {
+      if (validationScheduledRef.current) {
+        clearTimeout(validationScheduledRef.current);
+      }
+    };
+  }, []);
+  const contextValue = (0, import_element6.useMemo)(
+    () => ({
+      registerTab,
+      registerPanel
+    }),
+    [registerTab, registerPanel]
+  );
+  return /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(TabsValidationContext.Provider, { value: contextValue, children });
+}
+function TabsValidationProviderProd({
+  children
+}) {
+  return /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(import_jsx_runtime40.Fragment, { children });
+}
+var TabsValidationProvider = VALIDATION_ENABLED ? TabsValidationProviderDev : TabsValidationProviderProd;
+
+// ../../../node_modules/.pnpm/@wordpress+ui@0.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/ui/build-module/tabs/panel.mjs
+var import_jsx_runtime41 = __toESM(require_jsx_runtime(), 1);
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='abbf48f53e']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "21e6ce9e14");
-  style.appendChild(document.createTextNode('@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._7313adbc8a112e90__tablist{--direction-factor:1;--direction-start:left;--direction-end:right;align-items:stretch;display:flex;overflow-inline:auto;overscroll-behavior-inline:none;position:relative;&:dir(rtl){--direction-factor:-1;--direction-start:right;--direction-end:left}&[data-orientation=horizontal]{--fade-width:4rem;--fade-gradient-base:#0000 0%,#000 var(--fade-width);--fade-gradient-composed:var(--fade-gradient-base),#000 60%,#0000 50%;width:fit-content;&._9f2ac729c68a735a__is-overflowing-first{mask-image:linear-gradient(to var(--direction-end),var(--fade-gradient-base))}&._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to var(--direction-start),var(--fade-gradient-base))}&._9f2ac729c68a735a__is-overflowing-first._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to right,var(--fade-gradient-composed)),linear-gradient(to left,var(--fade-gradient-composed))}&._59228b5227f38a99__is-minimal-variant{gap:1rem}}&[data-orientation=vertical]{flex-direction:column}}._1c37dcfaa1ad8cda__indicator{@media not (prefers-reduced-motion){transition-duration:.2s;transition-property:translate,width,height,border-radius,border-block;transition-timing-function:ease-out}outline:2px solid #0000;outline-offset:-1px;pointer-events:none;position:absolute;&[data-orientation=horizontal]{background-color:var(--wpds-color-stroke-interactive-neutral-strong,#6c6c6c);bottom:0;height:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px));left:0;translate:var(--active-tab-left) 0;width:var(--active-tab-width);z-index:1}&[data-orientation=vertical]{background-color:var(--wpds-color-bg-interactive-neutral-weak-active,#eaeaea);border-radius:var(--wpds-border-radius-sm,2px);height:var(--active-tab-height);left:50%;top:0;translate:-50% var(--active-tab-top);width:100%;z-index:0}._7313adbc8a112e90__tablist[data-select-on-move=true]:has(:focus-visible)\n		&[data-orientation=vertical]{border:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));box-sizing:border-box}}.a5fd8814f195aa5e__tab{align-items:center;background:#0000;border:none;border-radius:0;box-shadow:none;color:var(--wpds-color-fg-interactive-neutral,#1e1e1e);cursor:var(--wpds-cursor-control,default);display:flex;flex:1 0 auto;font-family:var(--wpds-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-font-size-md,13px);font-weight:400;line-height:1.2;outline:none;padding:0;position:relative;white-space:nowrap;z-index:1;&[data-disabled]{color:var(--wpds-color-fg-interactive-neutral-disabled,#8a8a8a);cursor:default;@media (forced-colors:active){color:GrayText}}&:not([data-disabled]):is(:hover,:focus-visible){color:var(--wpds-color-fg-interactive-neutral-active,#1e1e1e)}&:after{border-radius:var(--wpds-border-radius-sm,2px);opacity:0;outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));pointer-events:none;position:absolute;z-index:-1;@media not (prefers-reduced-motion){transition:opacity .1s linear}}&:focus-visible:after{opacity:1}[data-orientation=horizontal] &{height:48px;padding-inline:var(--wpds-dimension-padding-lg,16px);scroll-margin:24px;&:after{content:"";inset:var(--wpds-dimension-padding-md,12px)}}._59228b5227f38a99__is-minimal-variant[data-orientation=horizontal] &{padding-inline:0;&:after{inset-inline:round(up,var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)),1px)}}[data-orientation=vertical] &{min-height:40px;padding:var(--wpds-dimension-padding-sm,8px) var(--wpds-dimension-padding-md,12px)}[data-orientation=vertical][data-select-on-move=false] &:after{content:"";inset:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px))}}._5dfc77e6edd345d4__tab-children{align-items:center;display:flex;flex-grow:1;[data-orientation=horizontal] &{justify-content:center}[data-orientation=vertical] &{justify-content:start}}._4a20e969d15e5ac1__tab-chevron{flex-shrink:0;margin-inline-end:calc(var(--wpds-dimension-gap-xs, 4px)*-1);opacity:0;[data-orientation=horizontal] &{display:none}[role=tab]:is([aria-selected=true],:focus-visible,:hover) &{opacity:1}@media not (prefers-reduced-motion){[data-select-on-move=true]\n			[role=tab]:is([aria-selected=true])\n			&{transition:opacity .15s linear .15s}}&:dir(rtl){rotate:180deg}}._49f4bf715948892a__tabpanel{&:focus{box-shadow:none;outline:none}&:focus-visible{box-shadow:0 0 0 var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));outline:2px solid #0000;outline-offset:0}}}'));
+  style.setAttribute("data-wp-hash", "abbf48f53e");
+  style.appendChild(document.createTextNode('@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._7313adbc8a112e90__tablist{--direction-factor:1;--direction-start:left;--direction-end:right;align-items:stretch;display:flex;overflow-inline:auto;overscroll-behavior-inline:none;position:relative;&:dir(rtl){--direction-factor:-1;--direction-start:right;--direction-end:left}&[data-orientation=horizontal]{--fade-width:4rem;--fade-gradient-base:#0000 0%,#000 var(--fade-width);--fade-gradient-composed:var(--fade-gradient-base),#000 60%,#0000 50%;width:fit-content;&._9f2ac729c68a735a__is-overflowing-first{mask-image:linear-gradient(to var(--direction-end),var(--fade-gradient-base))}&._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to var(--direction-start),var(--fade-gradient-base))}&._9f2ac729c68a735a__is-overflowing-first._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to right,var(--fade-gradient-composed)),linear-gradient(to left,var(--fade-gradient-composed))}&._59228b5227f38a99__is-minimal-variant{gap:1rem}}&[data-orientation=vertical]{flex-direction:column}}._1c37dcfaa1ad8cda__indicator{@media not (prefers-reduced-motion){transition-duration:.2s;transition-property:translate,width,height,border-radius,border-block;transition-timing-function:ease-out}outline:2px solid #0000;outline-offset:-1px;pointer-events:none;position:absolute;&[data-orientation=horizontal]{background-color:var(--wpds-color-stroke-interactive-neutral-strong,#6c6c6c);bottom:0;height:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px));left:0;translate:var(--active-tab-left) 0;width:var(--active-tab-width);z-index:1}&[data-orientation=vertical]{background-color:var(--wpds-color-bg-interactive-neutral-weak-active,#eaeaea);border-radius:var(--wpds-border-radius-sm,2px);height:var(--active-tab-height);left:50%;top:0;translate:-50% var(--active-tab-top);width:100%;z-index:0}._7313adbc8a112e90__tablist[data-select-on-move=true]:has(:focus-visible)\n		&[data-orientation=vertical]{border:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));box-sizing:border-box}}.a5fd8814f195aa5e__tab{align-items:center;background:#0000;border:none;border-radius:0;box-shadow:none;color:var(--wpds-color-fg-interactive-neutral,#1e1e1e);cursor:var(--wpds-cursor-control,pointer);display:flex;flex:1 0 auto;font-family:var(--wpds-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-font-size-md,13px);font-weight:400;line-height:1.2;outline:none;padding:0;position:relative;white-space:nowrap;z-index:1;&[data-disabled]{color:var(--wpds-color-fg-interactive-neutral-disabled,#8a8a8a);cursor:default;@media (forced-colors:active){color:GrayText}}&:not([data-disabled]):is(:hover,:focus-visible){color:var(--wpds-color-fg-interactive-neutral-active,#1e1e1e)}&:after{border-radius:var(--wpds-border-radius-sm,2px);opacity:0;outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));pointer-events:none;position:absolute;z-index:-1;@media not (prefers-reduced-motion){transition:opacity .1s linear}}&:focus-visible:after{opacity:1}[data-orientation=horizontal] &{height:48px;padding-inline:var(--wpds-dimension-padding-lg,16px);scroll-margin:24px;&:after{content:"";inset:var(--wpds-dimension-padding-md,12px)}}._59228b5227f38a99__is-minimal-variant[data-orientation=horizontal] &{padding-inline:0;&:after{inset-inline:round(up,var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)),1px)}}[data-orientation=vertical] &{min-height:40px;padding:var(--wpds-dimension-padding-sm,8px) var(--wpds-dimension-padding-md,12px)}[data-orientation=vertical][data-select-on-move=false] &:after{content:"";inset:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px))}}._5dfc77e6edd345d4__tab-children{align-items:center;display:flex;flex-grow:1;[data-orientation=horizontal] &{justify-content:center}[data-orientation=vertical] &{justify-content:start}}._4a20e969d15e5ac1__tab-chevron{flex-shrink:0;margin-inline-end:calc(var(--wpds-dimension-gap-xs, 4px)*-1);opacity:0;[data-orientation=horizontal] &{display:none}[role=tab]:is([aria-selected=true],:focus-visible,:hover) &{opacity:1}@media not (prefers-reduced-motion){[data-select-on-move=true]\n			[role=tab]:is([aria-selected=true])\n			&{transition:opacity .15s linear .15s}}&:dir(rtl){rotate:180deg}}._49f4bf715948892a__tabpanel{&:focus{box-shadow:none;outline:none}&:focus-visible{box-shadow:0 0 0 var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));outline:2px solid #0000;outline-offset:0}}}'));
   document.head.appendChild(style);
 }
 var style_default4 = { "tablist": "_7313adbc8a112e90__tablist", "is-overflowing-first": "_9f2ac729c68a735a__is-overflowing-first", "is-overflowing-last": "_81c799c1f3cdd261__is-overflowing-last", "is-minimal-variant": "_59228b5227f38a99__is-minimal-variant", "indicator": "_1c37dcfaa1ad8cda__indicator", "tab": "a5fd8814f195aa5e__tab", "tab-children": "_5dfc77e6edd345d4__tab-children", "tab-chevron": "_4a20e969d15e5ac1__tab-chevron", "tabpanel": "_49f4bf715948892a__tabpanel" };
-var Panel = (0, import_element6.forwardRef)(
+var Panel = (0, import_element7.forwardRef)(
   function TabPanel2({ className, ...otherProps }, forwardedRef) {
-    return /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(
+    useRegisterPanel();
+    return /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(
       index_parts_exports.Panel,
       {
         ref: forwardedRef,
@@ -8087,46 +8184,47 @@ var Panel = (0, import_element6.forwardRef)(
   }
 );
 
-// ../../../node_modules/.pnpm/@wordpress+ui@0.9.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/ui/build-module/tabs/root.mjs
-var import_element7 = __toESM(require_element(), 1);
-var import_jsx_runtime41 = __toESM(require_jsx_runtime(), 1);
-var Root = (0, import_element7.forwardRef)(
+// ../../../node_modules/.pnpm/@wordpress+ui@0.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/ui/build-module/tabs/root.mjs
+var import_element8 = __toESM(require_element(), 1);
+var import_jsx_runtime42 = __toESM(require_jsx_runtime(), 1);
+var Root = (0, import_element8.forwardRef)(
   function TabsRoot3({ ...otherProps }, forwardedRef) {
-    return /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps });
+    return /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(TabsValidationProvider, { children: /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps }) });
   }
 );
 
-// ../../../node_modules/.pnpm/@wordpress+ui@0.9.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/ui/build-module/tabs/tab.mjs
-var import_element8 = __toESM(require_element(), 1);
-var import_jsx_runtime42 = __toESM(require_jsx_runtime(), 1);
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='21e6ce9e14']")) {
+// ../../../node_modules/.pnpm/@wordpress+ui@0.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/ui/build-module/tabs/tab.mjs
+var import_element9 = __toESM(require_element(), 1);
+var import_jsx_runtime43 = __toESM(require_jsx_runtime(), 1);
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='abbf48f53e']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "21e6ce9e14");
-  style.appendChild(document.createTextNode('@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._7313adbc8a112e90__tablist{--direction-factor:1;--direction-start:left;--direction-end:right;align-items:stretch;display:flex;overflow-inline:auto;overscroll-behavior-inline:none;position:relative;&:dir(rtl){--direction-factor:-1;--direction-start:right;--direction-end:left}&[data-orientation=horizontal]{--fade-width:4rem;--fade-gradient-base:#0000 0%,#000 var(--fade-width);--fade-gradient-composed:var(--fade-gradient-base),#000 60%,#0000 50%;width:fit-content;&._9f2ac729c68a735a__is-overflowing-first{mask-image:linear-gradient(to var(--direction-end),var(--fade-gradient-base))}&._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to var(--direction-start),var(--fade-gradient-base))}&._9f2ac729c68a735a__is-overflowing-first._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to right,var(--fade-gradient-composed)),linear-gradient(to left,var(--fade-gradient-composed))}&._59228b5227f38a99__is-minimal-variant{gap:1rem}}&[data-orientation=vertical]{flex-direction:column}}._1c37dcfaa1ad8cda__indicator{@media not (prefers-reduced-motion){transition-duration:.2s;transition-property:translate,width,height,border-radius,border-block;transition-timing-function:ease-out}outline:2px solid #0000;outline-offset:-1px;pointer-events:none;position:absolute;&[data-orientation=horizontal]{background-color:var(--wpds-color-stroke-interactive-neutral-strong,#6c6c6c);bottom:0;height:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px));left:0;translate:var(--active-tab-left) 0;width:var(--active-tab-width);z-index:1}&[data-orientation=vertical]{background-color:var(--wpds-color-bg-interactive-neutral-weak-active,#eaeaea);border-radius:var(--wpds-border-radius-sm,2px);height:var(--active-tab-height);left:50%;top:0;translate:-50% var(--active-tab-top);width:100%;z-index:0}._7313adbc8a112e90__tablist[data-select-on-move=true]:has(:focus-visible)\n		&[data-orientation=vertical]{border:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));box-sizing:border-box}}.a5fd8814f195aa5e__tab{align-items:center;background:#0000;border:none;border-radius:0;box-shadow:none;color:var(--wpds-color-fg-interactive-neutral,#1e1e1e);cursor:var(--wpds-cursor-control,default);display:flex;flex:1 0 auto;font-family:var(--wpds-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-font-size-md,13px);font-weight:400;line-height:1.2;outline:none;padding:0;position:relative;white-space:nowrap;z-index:1;&[data-disabled]{color:var(--wpds-color-fg-interactive-neutral-disabled,#8a8a8a);cursor:default;@media (forced-colors:active){color:GrayText}}&:not([data-disabled]):is(:hover,:focus-visible){color:var(--wpds-color-fg-interactive-neutral-active,#1e1e1e)}&:after{border-radius:var(--wpds-border-radius-sm,2px);opacity:0;outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));pointer-events:none;position:absolute;z-index:-1;@media not (prefers-reduced-motion){transition:opacity .1s linear}}&:focus-visible:after{opacity:1}[data-orientation=horizontal] &{height:48px;padding-inline:var(--wpds-dimension-padding-lg,16px);scroll-margin:24px;&:after{content:"";inset:var(--wpds-dimension-padding-md,12px)}}._59228b5227f38a99__is-minimal-variant[data-orientation=horizontal] &{padding-inline:0;&:after{inset-inline:round(up,var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)),1px)}}[data-orientation=vertical] &{min-height:40px;padding:var(--wpds-dimension-padding-sm,8px) var(--wpds-dimension-padding-md,12px)}[data-orientation=vertical][data-select-on-move=false] &:after{content:"";inset:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px))}}._5dfc77e6edd345d4__tab-children{align-items:center;display:flex;flex-grow:1;[data-orientation=horizontal] &{justify-content:center}[data-orientation=vertical] &{justify-content:start}}._4a20e969d15e5ac1__tab-chevron{flex-shrink:0;margin-inline-end:calc(var(--wpds-dimension-gap-xs, 4px)*-1);opacity:0;[data-orientation=horizontal] &{display:none}[role=tab]:is([aria-selected=true],:focus-visible,:hover) &{opacity:1}@media not (prefers-reduced-motion){[data-select-on-move=true]\n			[role=tab]:is([aria-selected=true])\n			&{transition:opacity .15s linear .15s}}&:dir(rtl){rotate:180deg}}._49f4bf715948892a__tabpanel{&:focus{box-shadow:none;outline:none}&:focus-visible{box-shadow:0 0 0 var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));outline:2px solid #0000;outline-offset:0}}}'));
+  style.setAttribute("data-wp-hash", "abbf48f53e");
+  style.appendChild(document.createTextNode('@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._7313adbc8a112e90__tablist{--direction-factor:1;--direction-start:left;--direction-end:right;align-items:stretch;display:flex;overflow-inline:auto;overscroll-behavior-inline:none;position:relative;&:dir(rtl){--direction-factor:-1;--direction-start:right;--direction-end:left}&[data-orientation=horizontal]{--fade-width:4rem;--fade-gradient-base:#0000 0%,#000 var(--fade-width);--fade-gradient-composed:var(--fade-gradient-base),#000 60%,#0000 50%;width:fit-content;&._9f2ac729c68a735a__is-overflowing-first{mask-image:linear-gradient(to var(--direction-end),var(--fade-gradient-base))}&._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to var(--direction-start),var(--fade-gradient-base))}&._9f2ac729c68a735a__is-overflowing-first._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to right,var(--fade-gradient-composed)),linear-gradient(to left,var(--fade-gradient-composed))}&._59228b5227f38a99__is-minimal-variant{gap:1rem}}&[data-orientation=vertical]{flex-direction:column}}._1c37dcfaa1ad8cda__indicator{@media not (prefers-reduced-motion){transition-duration:.2s;transition-property:translate,width,height,border-radius,border-block;transition-timing-function:ease-out}outline:2px solid #0000;outline-offset:-1px;pointer-events:none;position:absolute;&[data-orientation=horizontal]{background-color:var(--wpds-color-stroke-interactive-neutral-strong,#6c6c6c);bottom:0;height:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px));left:0;translate:var(--active-tab-left) 0;width:var(--active-tab-width);z-index:1}&[data-orientation=vertical]{background-color:var(--wpds-color-bg-interactive-neutral-weak-active,#eaeaea);border-radius:var(--wpds-border-radius-sm,2px);height:var(--active-tab-height);left:50%;top:0;translate:-50% var(--active-tab-top);width:100%;z-index:0}._7313adbc8a112e90__tablist[data-select-on-move=true]:has(:focus-visible)\n		&[data-orientation=vertical]{border:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));box-sizing:border-box}}.a5fd8814f195aa5e__tab{align-items:center;background:#0000;border:none;border-radius:0;box-shadow:none;color:var(--wpds-color-fg-interactive-neutral,#1e1e1e);cursor:var(--wpds-cursor-control,pointer);display:flex;flex:1 0 auto;font-family:var(--wpds-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-font-size-md,13px);font-weight:400;line-height:1.2;outline:none;padding:0;position:relative;white-space:nowrap;z-index:1;&[data-disabled]{color:var(--wpds-color-fg-interactive-neutral-disabled,#8a8a8a);cursor:default;@media (forced-colors:active){color:GrayText}}&:not([data-disabled]):is(:hover,:focus-visible){color:var(--wpds-color-fg-interactive-neutral-active,#1e1e1e)}&:after{border-radius:var(--wpds-border-radius-sm,2px);opacity:0;outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));pointer-events:none;position:absolute;z-index:-1;@media not (prefers-reduced-motion){transition:opacity .1s linear}}&:focus-visible:after{opacity:1}[data-orientation=horizontal] &{height:48px;padding-inline:var(--wpds-dimension-padding-lg,16px);scroll-margin:24px;&:after{content:"";inset:var(--wpds-dimension-padding-md,12px)}}._59228b5227f38a99__is-minimal-variant[data-orientation=horizontal] &{padding-inline:0;&:after{inset-inline:round(up,var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)),1px)}}[data-orientation=vertical] &{min-height:40px;padding:var(--wpds-dimension-padding-sm,8px) var(--wpds-dimension-padding-md,12px)}[data-orientation=vertical][data-select-on-move=false] &:after{content:"";inset:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px))}}._5dfc77e6edd345d4__tab-children{align-items:center;display:flex;flex-grow:1;[data-orientation=horizontal] &{justify-content:center}[data-orientation=vertical] &{justify-content:start}}._4a20e969d15e5ac1__tab-chevron{flex-shrink:0;margin-inline-end:calc(var(--wpds-dimension-gap-xs, 4px)*-1);opacity:0;[data-orientation=horizontal] &{display:none}[role=tab]:is([aria-selected=true],:focus-visible,:hover) &{opacity:1}@media not (prefers-reduced-motion){[data-select-on-move=true]\n			[role=tab]:is([aria-selected=true])\n			&{transition:opacity .15s linear .15s}}&:dir(rtl){rotate:180deg}}._49f4bf715948892a__tabpanel{&:focus{box-shadow:none;outline:none}&:focus-visible{box-shadow:0 0 0 var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));outline:2px solid #0000;outline-offset:0}}}'));
   document.head.appendChild(style);
 }
 var style_default5 = { "tablist": "_7313adbc8a112e90__tablist", "is-overflowing-first": "_9f2ac729c68a735a__is-overflowing-first", "is-overflowing-last": "_81c799c1f3cdd261__is-overflowing-last", "is-minimal-variant": "_59228b5227f38a99__is-minimal-variant", "indicator": "_1c37dcfaa1ad8cda__indicator", "tab": "a5fd8814f195aa5e__tab", "tab-children": "_5dfc77e6edd345d4__tab-children", "tab-chevron": "_4a20e969d15e5ac1__tab-chevron", "tabpanel": "_49f4bf715948892a__tabpanel" };
-var Tab = (0, import_element8.forwardRef)(function Tab2({ className, children, ...otherProps }, forwardedRef) {
-  return /* @__PURE__ */ (0, import_jsx_runtime42.jsxs)(
+var Tab = (0, import_element9.forwardRef)(function Tab2({ className, children, ...otherProps }, forwardedRef) {
+  useRegisterTab();
+  return /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)(
     index_parts_exports.Tab,
     {
       ref: forwardedRef,
       className: clsx_default(style_default5.tab, className),
       ...otherProps,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime42.jsx)("span", { className: style_default5["tab-children"], children }),
-        /* @__PURE__ */ (0, import_jsx_runtime42.jsx)(Icon, { icon: chevron_right_default, className: style_default5["tab-chevron"] })
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("span", { className: style_default5["tab-children"], children }),
+        /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(Icon, { icon: chevron_right_default, className: style_default5["tab-chevron"] })
       ]
     }
   );
 });
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/admin-ui/build-module/page/sidebar-toggle-slot.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/admin-ui/build-module/page/sidebar-toggle-slot.mjs
 var import_components2 = __toESM(require_components(), 1);
 var { Fill: SidebarToggleFill, Slot: SidebarToggleSlot } = (0, import_components2.createSlotFill)("SidebarToggle");
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
-var import_jsx_runtime43 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
+var import_jsx_runtime44 = __toESM(require_jsx_runtime(), 1);
 function Header({
   headingLevel = 2,
   breadcrumbs,
@@ -8137,27 +8235,27 @@ function Header({
   showSidebarToggle = true
 }) {
   const HeadingTag = `h${headingLevel}`;
-  return /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(
     Stack,
     {
       direction: "column",
       className: "admin-ui-page__header",
-      render: /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("header", {}),
+      render: /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("header", {}),
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)(Stack, { direction: "row", justify: "space-between", gap: "sm", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime43.jsxs)(Stack, { direction: "row", gap: "sm", align: "center", justify: "start", children: [
-            showSidebarToggle && /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(Stack, { direction: "row", justify: "space-between", gap: "sm", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(Stack, { direction: "row", gap: "sm", align: "center", justify: "start", children: [
+            showSidebarToggle && /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
               SidebarToggleSlot,
               {
                 bubblesVirtually: true,
                 className: "admin-ui-page__sidebar-toggle-slot"
               }
             ),
-            title && /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(HeadingTag, { className: "admin-ui-page__header-title", children: title }),
+            title && /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(HeadingTag, { className: "admin-ui-page__header-title", children: title }),
             breadcrumbs,
             badges
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime43.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
             Stack,
             {
               direction: "row",
@@ -8169,14 +8267,14 @@ function Header({
             }
           )
         ] }),
-        subTitle && /* @__PURE__ */ (0, import_jsx_runtime43.jsx)("p", { className: "admin-ui-page__header-subtitle", children: subTitle })
+        subTitle && /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("p", { className: "admin-ui-page__header-subtitle", children: subTitle })
       ]
     }
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.10.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/admin-ui/build-module/page/index.mjs
-var import_jsx_runtime44 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/admin-ui/build-module/page/index.mjs
+var import_jsx_runtime45 = __toESM(require_jsx_runtime(), 1);
 function Page({
   headingLevel,
   breadcrumbs,
@@ -8192,8 +8290,8 @@ function Page({
 }) {
   const classes = clsx_default("admin-ui-page", className);
   const effectiveAriaLabel = ariaLabel ?? (typeof title === "string" ? title : "");
-  return /* @__PURE__ */ (0, import_jsx_runtime44.jsxs)(navigable_region_default, { className: classes, ariaLabel: effectiveAriaLabel, children: [
-    (title || breadcrumbs || badges) && /* @__PURE__ */ (0, import_jsx_runtime44.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime45.jsxs)(navigable_region_default, { className: classes, ariaLabel: effectiveAriaLabel, children: [
+    (title || breadcrumbs || badges || actions2) && /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(
       Header,
       {
         headingLevel,
@@ -8205,24 +8303,24 @@ function Page({
         showSidebarToggle
       }
     ),
-    hasPadding ? /* @__PURE__ */ (0, import_jsx_runtime44.jsx)("div", { className: "admin-ui-page__content has-padding", children }) : children
+    hasPadding ? /* @__PURE__ */ (0, import_jsx_runtime45.jsx)("div", { className: "admin-ui-page__content has-padding", children }) : children
   ] });
 }
 Page.SidebarToggleFill = SidebarToggleFill;
 var page_default = Page;
 
 // routes/forms/stage.tsx
-var import_components78 = __toESM(require_components());
+var import_components77 = __toESM(require_components());
 var import_data37 = __toESM(require_data());
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
-var import_element62 = __toESM(require_element(), 1);
-var import_compose12 = __toESM(require_compose(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
+var import_element64 = __toESM(require_element(), 1);
+var import_compose13 = __toESM(require_compose(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-context/index.mjs
-var import_element9 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-context/index.mjs
+var import_element10 = __toESM(require_element(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/constants.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/constants.mjs
 var import_i18n2 = __toESM(require_i18n(), 1);
 var OPERATOR_IS_ANY = "isAny";
 var OPERATOR_IS_NONE = "isNone";
@@ -8264,8 +8362,8 @@ var LAYOUT_ACTIVITY = "activity";
 var LAYOUT_PICKER_GRID = "pickerGrid";
 var LAYOUT_PICKER_TABLE = "pickerTable";
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-context/index.mjs
-var DataViewsContext = (0, import_element9.createContext)({
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-context/index.mjs
+var DataViewsContext = (0, import_element10.createContext)({
   view: { type: LAYOUT_TABLE },
   onChangeView: () => {
   },
@@ -8285,7 +8383,7 @@ var DataViewsContext = (0, import_element9.createContext)({
   isItemClickable: () => true,
   renderItemLink: void 0,
   containerWidth: 0,
-  containerRef: (0, import_element9.createRef)(),
+  containerRef: (0, import_element10.createRef)(),
   resizeObserverRef: () => {
   },
   defaultLayouts: { list: {}, grid: {}, table: {} },
@@ -8294,27 +8392,27 @@ var DataViewsContext = (0, import_element9.createContext)({
   setIsShowingFilter: () => {
   },
   hasInitiallyLoaded: false,
-  hasInfiniteScrollHandler: false,
   config: {
     perPageSizes: []
-  }
+  },
+  intersectionObserver: null
 });
 DataViewsContext.displayName = "DataViewsContext";
 var dataviews_context_default = DataViewsContext;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/index.mjs
 var import_i18n22 = __toESM(require_i18n(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/index.mjs
 var import_i18n10 = __toESM(require_i18n(), 1);
 var import_components8 = __toESM(require_components(), 1);
-var import_element17 = __toESM(require_element(), 1);
+var import_element18 = __toESM(require_element(), 1);
 var import_keycodes = __toESM(require_keycodes(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-selection-checkbox/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-selection-checkbox/index.mjs
 var import_components3 = __toESM(require_components(), 1);
 var import_i18n3 = __toESM(require_i18n(), 1);
-var import_jsx_runtime45 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime46 = __toESM(require_jsx_runtime(), 1);
 function DataViewsSelectionCheckbox({
   selection,
   onChangeSelection,
@@ -8325,9 +8423,10 @@ function DataViewsSelectionCheckbox({
   ...extraProps
 }) {
   const id = getItemId(item);
-  const checked = !disabled2 && selection.includes(id);
+  const isInSelectionArray = selection.includes(id);
+  const checked = !disabled2 && isInSelectionArray;
   const selectionLabel = titleField?.getValue?.({ item }) || (0, import_i18n3.__)("(no title)");
-  return /* @__PURE__ */ (0, import_jsx_runtime45.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
     import_components3.CheckboxControl,
     {
       className: "dataviews-selection-checkbox",
@@ -8339,7 +8438,7 @@ function DataViewsSelectionCheckbox({
           return;
         }
         onChangeSelection(
-          selection.includes(id) ? selection.filter((itemId) => id !== itemId) : [...selection, id]
+          isInSelectionArray ? selection.filter((itemId) => id !== itemId) : [...selection, id]
         );
       },
       ...extraProps
@@ -8347,22 +8446,22 @@ function DataViewsSelectionCheckbox({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-item-actions/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-item-actions/index.mjs
 var import_components4 = __toESM(require_components(), 1);
 var import_i18n4 = __toESM(require_i18n(), 1);
-var import_element10 = __toESM(require_element(), 1);
+var import_element11 = __toESM(require_element(), 1);
 var import_data = __toESM(require_data(), 1);
 var import_compose2 = __toESM(require_compose(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/lock-unlock.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/lock-unlock.mjs
 var import_private_apis = __toESM(require_private_apis(), 1);
 var { lock, unlock } = (0, import_private_apis.__dangerousOptInToUnstableAPIsOnlyForCoreModules)(
   "I acknowledge private features are not for use in themes or plugins and doing so will break in the next version of WordPress.",
   "@wordpress/dataviews"
 );
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-item-actions/index.mjs
-var import_jsx_runtime46 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-item-actions/index.mjs
+var import_jsx_runtime47 = __toESM(require_jsx_runtime(), 1);
 var { Menu, kebabCase } = unlock(import_components4.privateApis);
 function ButtonTrigger({
   action,
@@ -8371,7 +8470,7 @@ function ButtonTrigger({
   variant
 }) {
   const label = typeof action.label === "string" ? action.label : action.label(items);
-  return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
     import_components4.Button,
     {
       disabled: !!action.disabled,
@@ -8389,7 +8488,7 @@ function MenuItemTrigger({
   items
 }) {
   const label = typeof action.label === "string" ? action.label : action.label(items);
-  return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(Menu.Item, { disabled: action.disabled, onClick, children: /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(Menu.ItemLabel, { children: label }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(Menu.Item, { disabled: action.disabled, onClick, children: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(Menu.ItemLabel, { children: label }) });
 }
 function ActionModal({
   action,
@@ -8398,7 +8497,7 @@ function ActionModal({
 }) {
   const label = typeof action.label === "string" ? action.label : action.label(items);
   const modalHeader = typeof action.modalHeader === "function" ? action.modalHeader(items) : action.modalHeader;
-  return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
     import_components4.Modal,
     {
       title: modalHeader || label,
@@ -8409,7 +8508,7 @@ function ActionModal({
       overlayClassName: `dataviews-action-modal dataviews-action-modal__${kebabCase(
         action.id
       )}`,
-      children: /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(action.RenderModal, { items, closeModal })
+      children: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(action.RenderModal, { items, closeModal })
     }
   );
 }
@@ -8419,7 +8518,7 @@ function ActionsMenuGroup({
   registry,
   setActiveModalAction
 }) {
-  const { primaryActions, regularActions } = (0, import_element10.useMemo)(() => {
+  const { primaryActions, regularActions } = (0, import_element11.useMemo)(() => {
     return actions2.reduce(
       (acc, action) => {
         (action.isPrimary ? acc.primaryActions : acc.regularActions).push(action);
@@ -8431,7 +8530,7 @@ function ActionsMenuGroup({
       }
     );
   }, [actions2]);
-  const renderActionGroup = (actionList) => actionList.map((action) => /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+  const renderActionGroup = (actionList) => actionList.map((action) => /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
     MenuItemTrigger,
     {
       action,
@@ -8446,7 +8545,7 @@ function ActionsMenuGroup({
     },
     action.id
   ));
-  return /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)(Menu.Group, { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)(Menu.Group, { children: [
     renderActionGroup(primaryActions),
     renderActionGroup(regularActions)
   ] });
@@ -8457,7 +8556,7 @@ function ItemActions({
   isCompact
 }) {
   const registry = (0, import_data.useRegistry)();
-  const { primaryActions, eligibleActions } = (0, import_element10.useMemo)(() => {
+  const { primaryActions, eligibleActions } = (0, import_element11.useMemo)(() => {
     const _eligibleActions = actions2.filter(
       (action) => !action.isEligible || action.isEligible(item)
     );
@@ -8471,7 +8570,7 @@ function ItemActions({
   }, [actions2, item]);
   const isMobileViewport = (0, import_compose2.useViewportMatch)("medium", "<");
   if (isCompact) {
-    return /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
       CompactItemActions,
       {
         item,
@@ -8481,7 +8580,7 @@ function ItemActions({
       }
     );
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)(
     Stack,
     {
       direction: "row",
@@ -8492,7 +8591,7 @@ function ItemActions({
         width: "auto"
       },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
           PrimaryActions,
           {
             item,
@@ -8502,7 +8601,7 @@ function ItemActions({
         ),
         (primaryActions.length < eligibleActions.length || // Since we hide primary actions on mobile, we need to show the menu
         // there if there are any actions at all.
-        isMobileViewport) && /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+        isMobileViewport) && /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
           CompactItemActions,
           {
             item,
@@ -8520,15 +8619,15 @@ function CompactItemActions({
   isSmall,
   registry
 }) {
-  const [activeModalAction, setActiveModalAction] = (0, import_element10.useState)(
+  const [activeModalAction, setActiveModalAction] = (0, import_element11.useState)(
     null
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)(import_jsx_runtime46.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)(Menu, { placement: "bottom-end", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)(import_jsx_runtime47.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)(Menu, { placement: "bottom-end", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
         Menu.TriggerButton,
         {
-          render: /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+          render: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
             import_components4.Button,
             {
               size: isSmall ? "small" : "compact",
@@ -8541,7 +8640,7 @@ function CompactItemActions({
           )
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(Menu.Popover, { children: /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(Menu.Popover, { children: /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
         ActionsMenuGroup,
         {
           actions: actions2,
@@ -8551,7 +8650,7 @@ function CompactItemActions({
         }
       ) })
     ] }),
-    !!activeModalAction && /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+    !!activeModalAction && /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
       ActionModal,
       {
         action: activeModalAction,
@@ -8567,7 +8666,7 @@ function PrimaryActions({
   registry,
   buttonVariant
 }) {
-  const [activeModalAction, setActiveModalAction] = (0, import_element10.useState)(null);
+  const [activeModalAction, setActiveModalAction] = (0, import_element11.useState)(null);
   const isMobileViewport = (0, import_compose2.useViewportMatch)("medium", "<");
   if (isMobileViewport) {
     return null;
@@ -8575,8 +8674,8 @@ function PrimaryActions({
   if (!Array.isArray(actions2) || actions2.length === 0) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime46.jsxs)(import_jsx_runtime46.Fragment, { children: [
-    actions2.map((action) => /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)(import_jsx_runtime47.Fragment, { children: [
+    actions2.map((action) => /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
       ButtonTrigger,
       {
         action,
@@ -8592,7 +8691,7 @@ function PrimaryActions({
       },
       action.id
     )),
-    !!activeModalAction && /* @__PURE__ */ (0, import_jsx_runtime46.jsx)(
+    !!activeModalAction && /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
       ActionModal,
       {
         action: activeModalAction,
@@ -8603,16 +8702,16 @@ function PrimaryActions({
   ] });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-bulk-actions/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-bulk-actions/index.mjs
 var import_components5 = __toESM(require_components(), 1);
 var import_i18n6 = __toESM(require_i18n(), 1);
-var import_element11 = __toESM(require_element(), 1);
+var import_element12 = __toESM(require_element(), 1);
 var import_data2 = __toESM(require_data(), 1);
 var import_compose3 = __toESM(require_compose(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/utils/get-footer-message.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/utils/get-footer-message.mjs
 var import_i18n5 = __toESM(require_i18n(), 1);
-function getFooterMessage(selectionCount, itemsCount, totalItems) {
+function getFooterMessage(selectionCount, itemsCount, totalItems, onlyTotalCount = false) {
   if (selectionCount > 0) {
     return (0, import_i18n5.sprintf)(
       /* translators: %d: number of items. */
@@ -8620,29 +8719,29 @@ function getFooterMessage(selectionCount, itemsCount, totalItems) {
       selectionCount
     );
   }
-  if (totalItems > itemsCount) {
+  if (onlyTotalCount || totalItems <= itemsCount) {
     return (0, import_i18n5.sprintf)(
-      /* translators: %1$d: number of items. %2$d: total number of items. */
-      (0, import_i18n5._n)("%1$d of %2$d Item", "%1$d of %2$d Items", totalItems),
-      itemsCount,
+      /* translators: %d: number of items. */
+      (0, import_i18n5._n)("%d Item", "%d Items", totalItems),
       totalItems
     );
   }
   return (0, import_i18n5.sprintf)(
-    /* translators: %d: number of items. */
-    (0, import_i18n5._n)("%d Item", "%d Items", itemsCount),
-    itemsCount
+    /* translators: %1$d: number of items. %2$d: total number of items. */
+    (0, import_i18n5._n)("%1$d of %2$d Item", "%1$d of %2$d Items", totalItems),
+    itemsCount,
+    totalItems
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-bulk-actions/index.mjs
-var import_jsx_runtime47 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-bulk-actions/index.mjs
+var import_jsx_runtime48 = __toESM(require_jsx_runtime(), 1);
 function ActionWithModal({
   action,
   items,
   ActionTriggerComponent
 }) {
-  const [isModalOpen, setIsModalOpen] = (0, import_element11.useState)(false);
+  const [isModalOpen, setIsModalOpen] = (0, import_element12.useState)(false);
   const actionTriggerProps = {
     action,
     onClick: () => {
@@ -8650,9 +8749,9 @@ function ActionWithModal({
     },
     items
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)(import_jsx_runtime47.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(ActionTriggerComponent, { ...actionTriggerProps }),
-    isModalOpen && /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(import_jsx_runtime48.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(ActionTriggerComponent, { ...actionTriggerProps }),
+    isModalOpen && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
       ActionModal,
       {
         action,
@@ -8663,14 +8762,14 @@ function ActionWithModal({
   ] });
 }
 function useHasAPossibleBulkAction(actions2, item) {
-  return (0, import_element11.useMemo)(() => {
+  return (0, import_element12.useMemo)(() => {
     return actions2.some((action) => {
       return action.supportsBulk && (!action.isEligible || action.isEligible(item));
     });
   }, [actions2, item]);
 }
 function useSomeItemHasAPossibleBulkAction(actions2, data) {
-  return (0, import_element11.useMemo)(() => {
+  return (0, import_element12.useMemo)(() => {
     return data.some((item) => {
       return actions2.some((action) => {
         return action.supportsBulk && (!action.isEligible || action.isEligible(item));
@@ -8683,9 +8782,10 @@ function BulkSelectionCheckbox({
   onChangeSelection,
   data,
   actions: actions2,
-  getItemId
+  getItemId,
+  disableSelectAll = false
 }) {
-  const selectableItems = (0, import_element11.useMemo)(() => {
+  const selectableItems = (0, import_element12.useMemo)(() => {
     return data.filter((item) => {
       return actions2.some(
         (action) => action.supportsBulk && (!action.isEligible || action.isEligible(item))
@@ -8695,8 +8795,23 @@ function BulkSelectionCheckbox({
   const selectedItems = data.filter(
     (item) => selection.includes(getItemId(item)) && selectableItems.includes(item)
   );
+  const hasSelection = selection.length > 0;
   const areAllSelected = selectedItems.length === selectableItems.length;
-  return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
+  if (disableSelectAll) {
+    return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
+      import_components5.CheckboxControl,
+      {
+        className: "dataviews-view-table-selection-checkbox",
+        checked: hasSelection,
+        disabled: !hasSelection,
+        onChange: () => {
+          onChangeSelection([]);
+        },
+        "aria-label": (0, import_i18n6.__)("Deselect all")
+      }
+    );
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
     import_components5.CheckboxControl,
     {
       className: "dataviews-view-table-selection-checkbox",
@@ -8724,7 +8839,7 @@ function ActionTrigger({
   const label = typeof action.label === "string" ? action.label : action.label(items);
   const isMobile = (0, import_compose3.useViewportMatch)("medium", "<");
   if (isMobile) {
-    return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
       import_components5.Button,
       {
         disabled: isBusy,
@@ -8737,7 +8852,7 @@ function ActionTrigger({
       }
     );
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
     import_components5.Button,
     {
       disabled: isBusy,
@@ -8757,13 +8872,13 @@ function ActionButton({
   setActionInProgress
 }) {
   const registry = (0, import_data2.useRegistry)();
-  const selectedEligibleItems = (0, import_element11.useMemo)(() => {
+  const selectedEligibleItems = (0, import_element12.useMemo)(() => {
     return selectedItems.filter((item) => {
       return !action.isEligible || action.isEligible(item);
     });
   }, [action, selectedItems]);
   if ("RenderModal" in action) {
-    return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
       ActionWithModal,
       {
         action,
@@ -8773,7 +8888,7 @@ function ActionButton({
       action.id
     );
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
     ActionTrigger,
     {
       action,
@@ -8790,13 +8905,14 @@ function ActionButton({
     action.id
   );
 }
-function renderFooterContent(data, actions2, getItemId, selection, actionsToShow, selectedItems, actionInProgress, setActionInProgress, onChangeSelection, paginationInfo) {
+function renderFooterContent(data, actions2, getItemId, isInfiniteScroll, selection, actionsToShow, selectedItems, actionInProgress, setActionInProgress, onChangeSelection, paginationInfo) {
   const message2 = getFooterMessage(
     selection.length,
     data.length,
-    paginationInfo.totalItems
+    paginationInfo.totalItems,
+    isInfiniteScroll
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(
     Stack,
     {
       direction: "row",
@@ -8804,18 +8920,19 @@ function renderFooterContent(data, actions2, getItemId, selection, actionsToShow
       gap: "md",
       align: "center",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
           BulkSelectionCheckbox,
           {
             selection,
             onChangeSelection,
             data,
             actions: actions2,
-            getItemId
+            getItemId,
+            disableSelectAll: isInfiniteScroll
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("span", { className: "dataviews-bulk-actions-footer__item-count", children: message2 }),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { className: "dataviews-bulk-actions-footer__item-count", children: message2 }),
+        /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(
           Stack,
           {
             direction: "row",
@@ -8823,7 +8940,7 @@ function renderFooterContent(data, actions2, getItemId, selection, actionsToShow
             gap: "xs",
             children: [
               actionsToShow.map((action) => {
-                return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
+                return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
                   ActionButton,
                   {
                     action,
@@ -8834,7 +8951,7 @@ function renderFooterContent(data, actions2, getItemId, selection, actionsToShow
                   action.id
                 );
               }),
-              selectedItems.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
+              selectedItems.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
                 import_components5.Button,
                 {
                   icon: close_small_default,
@@ -8862,30 +8979,31 @@ function FooterContent({
   onChangeSelection,
   data,
   getItemId,
+  isInfiniteScroll,
   paginationInfo
 }) {
-  const [actionInProgress, setActionInProgress] = (0, import_element11.useState)(
+  const [actionInProgress, setActionInProgress] = (0, import_element12.useState)(
     null
   );
-  const footerContentRef = (0, import_element11.useRef)(void 0);
+  const footerContentRef = (0, import_element12.useRef)(void 0);
   const isMobile = (0, import_compose3.useViewportMatch)("medium", "<");
-  const bulkActions = (0, import_element11.useMemo)(
+  const bulkActions = (0, import_element12.useMemo)(
     () => actions2.filter((action) => action.supportsBulk),
     [actions2]
   );
-  const selectableItems = (0, import_element11.useMemo)(() => {
+  const selectableItems = (0, import_element12.useMemo)(() => {
     return data.filter((item) => {
       return bulkActions.some(
         (action) => !action.isEligible || action.isEligible(item)
       );
     });
   }, [data, bulkActions]);
-  const selectedItems = (0, import_element11.useMemo)(() => {
+  const selectedItems = (0, import_element12.useMemo)(() => {
     return data.filter(
       (item) => selection.includes(getItemId(item)) && selectableItems.includes(item)
     );
   }, [selection, data, getItemId, selectableItems]);
-  const actionsToShow = (0, import_element11.useMemo)(
+  const actionsToShow = (0, import_element12.useMemo)(
     () => actions2.filter((action) => {
       return action.supportsBulk && (!isMobile || action.icon) && selectedItems.some(
         (item) => !action.isEligible || action.isEligible(item)
@@ -8901,6 +9019,7 @@ function FooterContent({
       data,
       actions2,
       getItemId,
+      isInfiniteScroll,
       selection,
       actionsToShow,
       selectedItems,
@@ -8914,6 +9033,7 @@ function FooterContent({
       data,
       actions2,
       getItemId,
+      isInfiniteScroll,
       selection,
       actionsToShow,
       selectedItems,
@@ -8932,9 +9052,10 @@ function BulkActionsFooter() {
     actions: actions2 = EMPTY_ARRAY3,
     onChangeSelection,
     getItemId,
-    paginationInfo
-  } = (0, import_element11.useContext)(dataviews_context_default);
-  return /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
+    paginationInfo,
+    view
+  } = (0, import_element12.useContext)(dataviews_context_default);
+  return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
     FooterContent,
     {
       selection,
@@ -8942,17 +9063,18 @@ function BulkActionsFooter() {
       data,
       actions: actions2,
       getItemId,
+      isInfiniteScroll: !!view.infiniteScrollEnabled,
       paginationInfo
     }
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/column-header-menu.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/column-header-menu.mjs
 var import_i18n7 = __toESM(require_i18n(), 1);
 var import_components6 = __toESM(require_components(), 1);
-var import_element12 = __toESM(require_element(), 1);
+var import_element13 = __toESM(require_element(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/utils/get-hideable-fields.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/utils/get-hideable-fields.mjs
 function getHideableFields(view, fields) {
   const togglableFields = [
     view?.titleField,
@@ -8964,16 +9086,16 @@ function getHideableFields(view, fields) {
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/column-header-menu.mjs
-var import_jsx_runtime48 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/column-header-menu.mjs
+var import_jsx_runtime49 = __toESM(require_jsx_runtime(), 1);
 var { Menu: Menu2 } = unlock(import_components6.privateApis);
 function WithMenuSeparators({ children }) {
-  return import_element12.Children.toArray(children).filter(Boolean).map((child, i2) => /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(import_element12.Fragment, { children: [
-    i2 > 0 && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.Separator, {}),
+  return import_element13.Children.toArray(children).filter(Boolean).map((child, i2) => /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(import_element13.Fragment, { children: [
+    i2 > 0 && /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.Separator, {}),
     child
   ] }, i2));
 }
-var _HeaderMenu = (0, import_element12.forwardRef)(function HeaderMenu({
+var _HeaderMenu = (0, import_element13.forwardRef)(function HeaderMenu({
   fieldId,
   view,
   fields,
@@ -8992,7 +9114,7 @@ var _HeaderMenu = (0, import_element12.forwardRef)(function HeaderMenu({
   let canAddFilter = false;
   let operators = [];
   const field = fields.find((f2) => f2.id === fieldId);
-  const { setIsShowingFilter } = (0, import_element12.useContext)(dataviews_context_default);
+  const { setIsShowingFilter } = (0, import_element13.useContext)(dataviews_context_default);
   if (!field) {
     return null;
   }
@@ -9009,11 +9131,11 @@ var _HeaderMenu = (0, import_element12.forwardRef)(function HeaderMenu({
   );
   const canInsert = (canInsertLeft || canInsertRight) && !!hiddenFields.length;
   const isRtl = (0, import_i18n7.isRTL)();
-  return /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(Menu2, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(Menu2, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(
       Menu2.TriggerButton,
       {
-        render: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
+        render: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
           import_components6.Button,
           {
             size: "compact",
@@ -9024,16 +9146,16 @@ var _HeaderMenu = (0, import_element12.forwardRef)(function HeaderMenu({
         ),
         children: [
           header,
-          view.sort && isSorted && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)("span", { "aria-hidden": "true", children: sortArrows[view.sort.direction] })
+          view.sort && isSorted && /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("span", { "aria-hidden": "true", children: sortArrows[view.sort.direction] })
         ]
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.Popover, { style: { minWidth: "240px" }, children: /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(WithMenuSeparators, { children: [
-      isSortable && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.Group, { children: SORTING_DIRECTIONS.map(
+    /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.Popover, { style: { minWidth: "240px" }, children: /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(WithMenuSeparators, { children: [
+      isSortable && /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.Group, { children: SORTING_DIRECTIONS.map(
         (direction) => {
           const isChecked = view.sort && isSorted && view.sort.direction === direction;
           const value = `${fieldId}-${direction}`;
-          return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
             Menu2.RadioItem,
             {
               name: "view-table-sorting",
@@ -9049,16 +9171,16 @@ var _HeaderMenu = (0, import_element12.forwardRef)(function HeaderMenu({
                   showLevels: false
                 });
               },
-              children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.ItemLabel, { children: sortLabels[direction] })
+              children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.ItemLabel, { children: sortLabels[direction] })
             },
             value
           );
         }
       ) }),
-      canAddFilter && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.Group, { children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
+      canAddFilter && /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.Group, { children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
         Menu2.Item,
         {
-          prefix: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(import_components6.Icon, { icon: funnel_default }),
+          prefix: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(import_components6.Icon, { icon: funnel_default }),
           onClick: () => {
             setOpenedFilter(fieldId);
             setIsShowingFilter(true);
@@ -9075,14 +9197,14 @@ var _HeaderMenu = (0, import_element12.forwardRef)(function HeaderMenu({
               ]
             });
           },
-          children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.ItemLabel, { children: (0, import_i18n7.__)("Add filter") })
+          children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.ItemLabel, { children: (0, import_i18n7.__)("Add filter") })
         }
       ) }),
-      (canMove || isHidable || canInsert) && field && /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(Menu2.Group, { children: [
-        canMove && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
+      (canMove || isHidable || canInsert) && field && /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(Menu2.Group, { children: [
+        canMove && /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
           Menu2.Item,
           {
-            prefix: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(import_components6.Icon, { icon: arrow_left_default }),
+            prefix: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(import_components6.Icon, { icon: arrow_left_default }),
             disabled: isRtl ? index >= visibleFieldIds.length - 1 : index < 1,
             onClick: () => {
               const targetIndex = isRtl ? index + 1 : index - 1;
@@ -9100,13 +9222,13 @@ var _HeaderMenu = (0, import_element12.forwardRef)(function HeaderMenu({
                 fields: newFields
               });
             },
-            children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.ItemLabel, { children: (0, import_i18n7.__)("Move left") })
+            children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.ItemLabel, { children: (0, import_i18n7.__)("Move left") })
           }
         ),
-        canMove && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
+        canMove && /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
           Menu2.Item,
           {
-            prefix: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(import_components6.Icon, { icon: arrow_right_default }),
+            prefix: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(import_components6.Icon, { icon: arrow_right_default }),
             disabled: isRtl ? index < 1 : index >= visibleFieldIds.length - 1,
             onClick: () => {
               const targetIndex = isRtl ? index - 1 : index + 1;
@@ -9124,14 +9246,14 @@ var _HeaderMenu = (0, import_element12.forwardRef)(function HeaderMenu({
                 fields: newFields
               });
             },
-            children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.ItemLabel, { children: (0, import_i18n7.__)("Move right") })
+            children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.ItemLabel, { children: (0, import_i18n7.__)("Move right") })
           }
         ),
-        canInsertLeft && !!hiddenFields.length && /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(Menu2, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.SubmenuTriggerItem, { children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.ItemLabel, { children: (0, import_i18n7.__)("Insert left") }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.Popover, { children: hiddenFields.map((hiddenField) => {
+        canInsertLeft && !!hiddenFields.length && /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(Menu2, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.SubmenuTriggerItem, { children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.ItemLabel, { children: (0, import_i18n7.__)("Insert left") }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.Popover, { children: hiddenFields.map((hiddenField) => {
             const insertIndex = isRtl ? index + 1 : index;
-            return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
+            return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
               Menu2.Item,
               {
                 onClick: () => {
@@ -9149,17 +9271,17 @@ var _HeaderMenu = (0, import_element12.forwardRef)(function HeaderMenu({
                     ]
                   });
                 },
-                children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.ItemLabel, { children: hiddenField.label })
+                children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.ItemLabel, { children: hiddenField.label })
               },
               hiddenField.id
             );
           }) })
         ] }),
-        canInsertRight && !!hiddenFields.length && /* @__PURE__ */ (0, import_jsx_runtime48.jsxs)(Menu2, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.SubmenuTriggerItem, { children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.ItemLabel, { children: (0, import_i18n7.__)("Insert right") }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.Popover, { children: hiddenFields.map((hiddenField) => {
+        canInsertRight && !!hiddenFields.length && /* @__PURE__ */ (0, import_jsx_runtime49.jsxs)(Menu2, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.SubmenuTriggerItem, { children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.ItemLabel, { children: (0, import_i18n7.__)("Insert right") }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.Popover, { children: hiddenFields.map((hiddenField) => {
             const insertIndex = isRtl ? index : index + 1;
-            return /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
+            return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
               Menu2.Item,
               {
                 onClick: () => {
@@ -9177,16 +9299,16 @@ var _HeaderMenu = (0, import_element12.forwardRef)(function HeaderMenu({
                     ]
                   });
                 },
-                children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.ItemLabel, { children: hiddenField.label })
+                children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.ItemLabel, { children: hiddenField.label })
               },
               hiddenField.id
             );
           }) })
         ] }),
-        isHidable && field && /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(
+        isHidable && field && /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(
           Menu2.Item,
           {
-            prefix: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(import_components6.Icon, { icon: unseen_default }),
+            prefix: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(import_components6.Icon, { icon: unseen_default }),
             onClick: () => {
               onHide(field);
               onChangeView({
@@ -9196,7 +9318,7 @@ var _HeaderMenu = (0, import_element12.forwardRef)(function HeaderMenu({
                 )
               });
             },
-            children: /* @__PURE__ */ (0, import_jsx_runtime48.jsx)(Menu2.ItemLabel, { children: (0, import_i18n7.__)("Hide column") })
+            children: /* @__PURE__ */ (0, import_jsx_runtime49.jsx)(Menu2.ItemLabel, { children: (0, import_i18n7.__)("Hide column") })
           }
         )
       ] })
@@ -9206,9 +9328,9 @@ var _HeaderMenu = (0, import_element12.forwardRef)(function HeaderMenu({
 var ColumnHeaderMenu = _HeaderMenu;
 var column_header_menu_default = ColumnHeaderMenu;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/item-click-wrapper.mjs
-var import_element13 = __toESM(require_element(), 1);
-var import_jsx_runtime49 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/item-click-wrapper.mjs
+var import_element14 = __toESM(require_element(), 1);
+var import_jsx_runtime50 = __toESM(require_jsx_runtime(), 1);
 function getClickableItemProps({
   item,
   isItemClickable,
@@ -9244,7 +9366,7 @@ function ItemClickWrapper({
   ...extraProps
 }) {
   if (!isItemClickable(item)) {
-    return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("div", { className, ...extraProps, children });
+    return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("div", { className, ...extraProps, children });
   }
   if (renderItemLink) {
     const renderedElement = renderItemLink({
@@ -9253,7 +9375,7 @@ function ItemClickWrapper({
       ...extraProps,
       children
     });
-    return (0, import_element13.cloneElement)(renderedElement, {
+    return (0, import_element14.cloneElement)(renderedElement, {
       onClick: (event) => {
         event.stopPropagation();
         if (renderedElement.props.onClick) {
@@ -9276,11 +9398,11 @@ function ItemClickWrapper({
     onClickItem,
     className
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime49.jsx)("div", { ...clickProps, ...extraProps, children });
+  return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)("div", { ...clickProps, ...extraProps, children });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/column-primary.mjs
-var import_jsx_runtime50 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/column-primary.mjs
+var import_jsx_runtime51 = __toESM(require_jsx_runtime(), 1);
 function ColumnPrimary({
   item,
   level,
@@ -9291,8 +9413,8 @@ function ColumnPrimary({
   renderItemLink,
   isItemClickable
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)(Stack, { direction: "row", gap: "md", align: "flex-start", justify: "flex-start", children: [
-    mediaField && /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(Stack, { direction: "row", gap: "md", align: "flex-start", justify: "flex-start", children: [
+    mediaField && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
       ItemClickWrapper,
       {
         item,
@@ -9301,7 +9423,7 @@ function ColumnPrimary({
         renderItemLink,
         className: "dataviews-view-table__cell-content-wrapper dataviews-column-primary__media",
         "aria-label": isItemClickable(item) && (!!onClickItem || !!renderItemLink) && !!titleField ? titleField.getValue?.({ item }) : void 0,
-        children: /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(
+        children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
           mediaField.render,
           {
             item,
@@ -9311,14 +9433,14 @@ function ColumnPrimary({
         )
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)(
+    /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(
       Stack,
       {
         direction: "column",
         align: "flex-start",
         className: "dataviews-view-table__primary-column-content",
         children: [
-          titleField && /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)(
+          titleField && /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(
             ItemClickWrapper,
             {
               item,
@@ -9327,15 +9449,15 @@ function ColumnPrimary({
               renderItemLink,
               className: "dataviews-view-table__cell-content-wrapper dataviews-title-field",
               children: [
-                level !== void 0 && level > 0 && /* @__PURE__ */ (0, import_jsx_runtime50.jsxs)("span", { className: "dataviews-view-table__level", children: [
+                level !== void 0 && level > 0 && /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)("span", { className: "dataviews-view-table__level", children: [
                   Array(level).fill("\u2014").join(" "),
                   "\xA0"
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(titleField.render, { item, field: titleField })
+                /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(titleField.render, { item, field: titleField })
               ]
             }
           ),
-          descriptionField && /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(
+          descriptionField && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
             descriptionField.render,
             {
               item,
@@ -9349,8 +9471,8 @@ function ColumnPrimary({
 }
 var column_primary_default = ColumnPrimary;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/use-scroll-state.mjs
-var import_element14 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/use-scroll-state.mjs
+var import_element15 = __toESM(require_element(), 1);
 var import_i18n8 = __toESM(require_i18n(), 1);
 var isScrolledToEnd = (element) => {
   if ((0, import_i18n8.isRTL)()) {
@@ -9363,9 +9485,9 @@ function useScrollState({
   scrollContainerRef,
   enabledHorizontal = false
 }) {
-  const [isHorizontalScrollEnd, setIsHorizontalScrollEnd] = (0, import_element14.useState)(false);
-  const [isVerticallyScrolled, setIsVerticallyScrolled] = (0, import_element14.useState)(false);
-  const handleScroll = (0, import_element14.useCallback)(() => {
+  const [isHorizontalScrollEnd, setIsHorizontalScrollEnd] = (0, import_element15.useState)(false);
+  const [isVerticallyScrolled, setIsVerticallyScrolled] = (0, import_element15.useState)(false);
+  const handleScroll = (0, import_element15.useCallback)(() => {
     const scrollContainer = scrollContainerRef.current;
     if (!scrollContainer) {
       return;
@@ -9375,7 +9497,7 @@ function useScrollState({
     }
     setIsVerticallyScrolled(scrollContainer.scrollTop > 0);
   }, [scrollContainerRef, enabledHorizontal]);
-  (0, import_element14.useEffect)(() => {
+  (0, import_element15.useEffect)(() => {
     if (typeof window === "undefined" || !scrollContainerRef.current) {
       return () => {
       };
@@ -9392,7 +9514,7 @@ function useScrollState({
   return { isHorizontalScrollEnd, isVerticallyScrolled };
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/get-data-by-group.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/get-data-by-group.mjs
 function getDataByGroup(data, groupByField) {
   return data.reduce((groups, item) => {
     const groupName = groupByField.getValue({ item });
@@ -9404,19 +9526,19 @@ function getDataByGroup(data, groupByField) {
   }, /* @__PURE__ */ new Map());
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-view-config/properties-section.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-view-config/properties-section.mjs
 var import_components7 = __toESM(require_components(), 1);
 var import_i18n9 = __toESM(require_i18n(), 1);
-var import_element15 = __toESM(require_element(), 1);
-var import_jsx_runtime51 = __toESM(require_jsx_runtime(), 1);
+var import_element16 = __toESM(require_element(), 1);
+var import_jsx_runtime52 = __toESM(require_jsx_runtime(), 1);
 function FieldItem({
   field,
   isVisible: isVisible2,
   onToggleVisibility
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(import_components7.__experimentalItem, { onClick: field.enableHiding ? onToggleVisibility : void 0, children: /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(Stack, { direction: "row", gap: "sm", justify: "flex-start", align: "center", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("div", { style: { height: 24, width: 24 }, children: isVisible2 && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(import_components7.Icon, { icon: check_default }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime51.jsx)("span", { className: "dataviews-view-config__label", children: field.label })
+  return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(import_components7.__experimentalItem, { onClick: field.enableHiding ? onToggleVisibility : void 0, children: /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(Stack, { direction: "row", gap: "sm", justify: "flex-start", align: "center", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("div", { style: { height: 24, width: 24 }, children: isVisible2 && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(import_components7.Icon, { icon: check_default }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("span", { className: "dataviews-view-config__label", children: field.label })
   ] }) });
 }
 function isDefined(item) {
@@ -9425,7 +9547,7 @@ function isDefined(item) {
 function PropertiesSection({
   showLabel = true
 }) {
-  const { view, fields, onChangeView } = (0, import_element15.useContext)(dataviews_context_default);
+  const { view, fields, onChangeView } = (0, import_element16.useContext)(dataviews_context_default);
   const regularFields = getHideableFields(view, fields);
   if (!regularFields?.length) {
     return null;
@@ -9461,18 +9583,18 @@ function PropertiesSection({
   );
   const totalVisibleFields = visibleLockedFields.length + visibleRegularFieldsCount;
   const isSingleVisibleLockedField = totalVisibleFields === 1 && visibleLockedFields.length === 1;
-  return /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(Stack, { direction: "column", className: "dataviews-field-control", children: [
-    showLabel && /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(import_components7.BaseControl.VisualLabel, { children: (0, import_i18n9.__)("Properties") }),
-    /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(Stack, { direction: "column", className: "dataviews-field-control", children: [
+    showLabel && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(import_components7.BaseControl.VisualLabel, { children: (0, import_i18n9.__)("Properties") }),
+    /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
       Stack,
       {
         direction: "column",
         className: "dataviews-view-config__properties",
-        children: /* @__PURE__ */ (0, import_jsx_runtime51.jsxs)(import_components7.__experimentalItemGroup, { isBordered: true, isSeparated: true, size: "medium", children: [
+        children: /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(import_components7.__experimentalItemGroup, { isBordered: true, isSeparated: true, size: "medium", children: [
           lockedFields.map(({ field, isVisibleFlag }) => {
             const isVisible2 = view[isVisibleFlag] ?? true;
             const fieldToRender = isSingleVisibleLockedField && isVisible2 ? { ...field, enableHiding: false } : field;
-            return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+            return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
               FieldItem,
               {
                 field: fieldToRender,
@@ -9490,7 +9612,7 @@ function PropertiesSection({
           regularFields.map((field) => {
             const isVisible2 = visibleFieldIds.includes(field.id);
             const fieldToRender = totalVisibleFields === 1 && isVisible2 ? { ...field, enableHiding: false } : field;
-            return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
+            return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
               FieldItem,
               {
                 field: fieldToRender,
@@ -9513,11 +9635,11 @@ function PropertiesSection({
   ] });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/hooks/use-delayed-loading.mjs
-var import_element16 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/hooks/use-delayed-loading.mjs
+var import_element17 = __toESM(require_element(), 1);
 function useDelayedLoading(isLoading, options = { delay: 400 }) {
-  const [showLoader, setShowLoader] = (0, import_element16.useState)(false);
-  (0, import_element16.useEffect)(() => {
+  const [showLoader, setShowLoader] = (0, import_element17.useState)(false);
+  (0, import_element17.useEffect)(() => {
     if (!isLoading) {
       return;
     }
@@ -9532,8 +9654,8 @@ function useDelayedLoading(isLoading, options = { delay: 400 }) {
   return showLoader;
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/index.mjs
-var import_jsx_runtime52 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/table/index.mjs
+var import_jsx_runtime53 = __toESM(require_jsx_runtime(), 1);
 function getEffectiveAlign(explicitAlign, fieldType) {
   if (explicitAlign) {
     return explicitAlign;
@@ -9557,7 +9679,7 @@ function TableColumnField({
     "dataviews-view-table__cell-align-end": align === "end",
     "dataviews-view-table__cell-align-center": align === "center"
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("div", { className, children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(field.render, { item, field }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("div", { className, children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(field.render, { item, field }) });
 }
 function TableRow({
   hasBulkActions,
@@ -9579,7 +9701,7 @@ function TableRow({
   isActionsColumnSticky,
   posinset
 }) {
-  const { paginationInfo } = (0, import_element17.useContext)(dataviews_context_default);
+  const { paginationInfo } = (0, import_element18.useContext)(dataviews_context_default);
   const hasPossibleBulkAction = useHasAPossibleBulkAction(actions2, item);
   const isSelected2 = hasPossibleBulkAction && selection.includes(id);
   const {
@@ -9588,10 +9710,10 @@ function TableRow({
     showDescription = true,
     infiniteScrollEnabled
   } = view;
-  const isTouchDeviceRef = (0, import_element17.useRef)(false);
+  const isTouchDeviceRef = (0, import_element18.useRef)(false);
   const columns = view.fields ?? [];
   const hasPrimaryColumn = titleField && showTitle || mediaField && showMedia || descriptionField && showDescription;
-  return /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)(
     "tr",
     {
       className: clsx_default("dataviews-view-table__row", {
@@ -9622,7 +9744,7 @@ function TableRow({
         }
       },
       children: [
-        hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("td", { className: "dataviews-view-table__checkbox-column", children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("div", { className: "dataviews-view-table__cell-content-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+        hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("td", { className: "dataviews-view-table__checkbox-column", children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("div", { className: "dataviews-view-table__cell-content-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
           DataViewsSelectionCheckbox,
           {
             item,
@@ -9633,7 +9755,7 @@ function TableRow({
             disabled: !hasPossibleBulkAction
           }
         ) }) }),
-        hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+        hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
           column_primary_default,
           {
             item,
@@ -9650,7 +9772,7 @@ function TableRow({
           const { width, maxWidth, minWidth, align } = view.layout?.styles?.[column] ?? {};
           const field = fields.find((f2) => f2.id === column);
           const effectiveAlign = getEffectiveAlign(align, field?.type);
-          return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
             "td",
             {
               style: {
@@ -9658,7 +9780,7 @@ function TableRow({
                 maxWidth,
                 minWidth
               },
-              children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+              children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
                 TableColumnField,
                 {
                   fields,
@@ -9677,7 +9799,7 @@ function TableRow({
         // itself (to toggle row selection) without erroneously
         // intercepting click events from ItemActions.
         /* eslint-disable jsx-a11y/no-noninteractive-element-interactions, jsx-a11y/click-events-have-key-events */
-        /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
           "td",
           {
             className: clsx_default("dataviews-view-table__actions-column", {
@@ -9685,7 +9807,7 @@ function TableRow({
               "dataviews-view-table__actions-column--stuck": isActionsColumnSticky
             }),
             onClick: (e2) => e2.stopPropagation(),
-            children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(ItemActions, { item, actions: actions2 })
+            children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(ItemActions, { item, actions: actions2 })
           }
         )
       ]
@@ -9710,19 +9832,19 @@ function ViewTable({
   className,
   empty
 }) {
-  const { containerRef } = (0, import_element17.useContext)(dataviews_context_default);
+  const { containerRef } = (0, import_element18.useContext)(dataviews_context_default);
   const isDelayedLoading = useDelayedLoading(isLoading);
-  const headerMenuRefs = (0, import_element17.useRef)(/* @__PURE__ */ new Map());
-  const headerMenuToFocusRef = (0, import_element17.useRef)(void 0);
-  const [nextHeaderMenuToFocus, setNextHeaderMenuToFocus] = (0, import_element17.useState)();
-  const [contextMenuAnchor, setContextMenuAnchor] = (0, import_element17.useState)(null);
-  (0, import_element17.useEffect)(() => {
+  const headerMenuRefs = (0, import_element18.useRef)(/* @__PURE__ */ new Map());
+  const headerMenuToFocusRef = (0, import_element18.useRef)(void 0);
+  const [nextHeaderMenuToFocus, setNextHeaderMenuToFocus] = (0, import_element18.useState)();
+  const [contextMenuAnchor, setContextMenuAnchor] = (0, import_element18.useState)(null);
+  (0, import_element18.useEffect)(() => {
     if (headerMenuToFocusRef.current) {
       headerMenuToFocusRef.current.focus();
       headerMenuToFocusRef.current = void 0;
     }
   });
-  const tableNoticeId = (0, import_element17.useId)();
+  const tableNoticeId = (0, import_element18.useId)();
   const { isHorizontalScrollEnd, isVerticallyScrolled } = useScrollState({
     scrollContainerRef: containerRef,
     enabledHorizontal: !!actions2?.length
@@ -9782,7 +9904,7 @@ function ViewTable({
   const isInfiniteScroll = view.infiniteScrollEnabled && !dataByGroup;
   const isRtl = (0, import_i18n10.isRTL)();
   if (!hasData) {
-    return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
       "div",
       {
         className: clsx_default("dataviews-no-results", {
@@ -9793,8 +9915,8 @@ function ViewTable({
       }
     );
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(import_jsx_runtime52.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)(import_jsx_runtime53.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)(
       "table",
       {
         className: clsx_default("dataviews-view-table", className, {
@@ -9809,10 +9931,10 @@ function ViewTable({
         role: isInfiniteScroll ? "feed" : void 0,
         inert: !isInfiniteScroll && isLoading ? "true" : void 0,
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("colgroup", { children: [
-            hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("col", { className: "dataviews-view-table__col-checkbox" }),
-            hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("col", { className: "dataviews-view-table__col-first-data" }),
-            columns.map((column, index) => /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("colgroup", { children: [
+            hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("col", { className: "dataviews-view-table__col-checkbox" }),
+            hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("col", { className: "dataviews-view-table__col-first-data" }),
+            columns.map((column, index) => /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
               "col",
               {
                 className: clsx_default(
@@ -9824,32 +9946,32 @@ function ViewTable({
               },
               `col-${column}`
             )),
-            !!actions2?.length && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("col", { className: "dataviews-view-table__col-actions" })
+            !!actions2?.length && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("col", { className: "dataviews-view-table__col-actions" })
           ] }),
-          contextMenuAnchor && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+          contextMenuAnchor && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
             import_components8.Popover,
             {
               anchor: contextMenuAnchor,
               onClose: () => setContextMenuAnchor(null),
               placement: "bottom-start",
-              children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(PropertiesSection, { showLabel: false })
+              children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(PropertiesSection, { showLabel: false })
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
             "thead",
             {
               className: clsx_default({
                 "dataviews-view-table__thead--stuck": isVerticallyScrolled
               }),
               onContextMenu: handleHeaderContextMenu,
-              children: /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("tr", { className: "dataviews-view-table__row", children: [
-                hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+              children: /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("tr", { className: "dataviews-view-table__row", children: [
+                hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
                   "th",
                   {
                     className: "dataviews-view-table__checkbox-column",
                     scope: "col",
                     onContextMenu: handleHeaderContextMenu,
-                    children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+                    children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
                       BulkSelectionCheckbox,
                       {
                         selection,
@@ -9861,7 +9983,7 @@ function ViewTable({
                     )
                   }
                 ),
-                hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("th", { scope: "col", children: titleField && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+                hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("th", { scope: "col", children: titleField && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
                   column_header_menu_default,
                   {
                     ref: headerMenuRef(
@@ -9889,7 +10011,7 @@ function ViewTable({
                     field?.type
                   );
                   const canInsertOrMove = view.layout?.enableMoving ?? true;
-                  return /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+                  return /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
                     "th",
                     {
                       style: {
@@ -9900,7 +10022,7 @@ function ViewTable({
                       },
                       "aria-sort": view.sort?.direction && view.sort?.field === column ? sortValues[view.sort.direction] : void 0,
                       scope: "col",
-                      children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+                      children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
                         column_header_menu_default,
                         {
                           ref: headerMenuRef(column, index),
@@ -9919,7 +10041,7 @@ function ViewTable({
                     column
                   );
                 }),
-                !!actions2?.length && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+                !!actions2?.length && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
                   "th",
                   {
                     className: clsx_default(
@@ -9929,15 +10051,15 @@ function ViewTable({
                         "dataviews-view-table__actions-column--stuck": !isHorizontalScrollEnd
                       }
                     ),
-                    children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("span", { className: "dataviews-view-table-header", children: (0, import_i18n10.__)("Actions") })
+                    children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("span", { className: "dataviews-view-table-header", children: (0, import_i18n10.__)("Actions") })
                   }
                 )
               ] })
             }
           ),
           hasData && groupField && dataByGroup ? Array.from(dataByGroup.entries()).map(
-            ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime52.jsxs)("tbody", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("tr", { className: "dataviews-view-table__group-header-row", children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+            ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime53.jsxs)("tbody", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("tr", { className: "dataviews-view-table__group-header-row", children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
                 "td",
                 {
                   colSpan: columns.length + (hasPrimaryColumn ? 1 : 0) + (hasBulkActions ? 1 : 0) + (actions2?.length ? 1 : 0),
@@ -9950,7 +10072,7 @@ function ViewTable({
                   )
                 }
               ) }),
-              groupItems.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+              groupItems.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
                 TableRow,
                 {
                   item,
@@ -9974,7 +10096,7 @@ function ViewTable({
                 getItemId(item)
               ))
             ] }, `group-${groupName}`)
-          ) : /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("tbody", { children: hasData && data.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(
+          ) : /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("tbody", { children: hasData && data.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(
             TableRow,
             {
               item,
@@ -10001,27 +10123,27 @@ function ViewTable({
         ]
       }
     ),
-    isInfiniteScroll && isLoading && /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("div", { className: "dataviews-loading", id: tableNoticeId, children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime52.jsx)(import_components8.Spinner, {}) }) })
+    isInfiniteScroll && isLoading && /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("div", { className: "dataviews-loading", id: tableNoticeId, children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime53.jsx)(import_components8.Spinner, {}) }) })
   ] });
 }
 var table_default = ViewTable;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/grid/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/grid/index.mjs
 var import_components11 = __toESM(require_components(), 1);
 var import_i18n13 = __toESM(require_i18n(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/grid/composite-grid.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/grid/composite-grid.mjs
 var import_components10 = __toESM(require_components(), 1);
 var import_i18n12 = __toESM(require_i18n(), 1);
 var import_compose4 = __toESM(require_compose(), 1);
 var import_keycodes2 = __toESM(require_keycodes(), 1);
-var import_element19 = __toESM(require_element(), 1);
+var import_element22 = __toESM(require_element(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/grid/preview-size-picker.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/grid/preview-size-picker.mjs
 var import_components9 = __toESM(require_components(), 1);
 var import_i18n11 = __toESM(require_i18n(), 1);
-var import_element18 = __toESM(require_element(), 1);
-var import_jsx_runtime53 = __toESM(require_jsx_runtime(), 1);
+var import_element19 = __toESM(require_element(), 1);
+var import_jsx_runtime54 = __toESM(require_jsx_runtime(), 1);
 var imageSizes = [
   {
     value: 120,
@@ -10053,9 +10175,9 @@ var imageSizes = [
 ];
 var DEFAULT_PREVIEW_SIZE = imageSizes[2].value;
 function useGridColumns() {
-  const context = (0, import_element18.useContext)(dataviews_context_default);
+  const context = (0, import_element19.useContext)(dataviews_context_default);
   const view = context.view;
-  return (0, import_element18.useMemo)(() => {
+  return (0, import_element19.useMemo)(() => {
     const containerWidth = context.containerWidth;
     const gap = 32;
     const previewSize = view.layout?.previewSize ?? DEFAULT_PREVIEW_SIZE;
@@ -10066,8 +10188,46 @@ function useGridColumns() {
   }, [context.containerWidth, view.layout?.previewSize]);
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/grid/composite-grid.mjs
-var import_jsx_runtime54 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/grid-items.mjs
+var import_element20 = __toESM(require_element(), 1);
+var import_jsx_runtime55 = __toESM(require_jsx_runtime(), 1);
+var GridItems = (0, import_element20.forwardRef)(({ className, previewSize, ...props }, ref) => {
+  return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+    "div",
+    {
+      ref,
+      className: clsx_default("dataviews-view-grid-items", className),
+      style: {
+        gridTemplateColumns: previewSize && `repeat(auto-fill, minmax(${previewSize}px, 1fr))`
+      },
+      ...props
+    }
+  );
+});
+
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/use-infinite-scroll.mjs
+var import_element21 = __toESM(require_element(), 1);
+function useIntersectionObserver(elementRef, posinset) {
+  const { intersectionObserver } = (0, import_element21.useContext)(dataviews_context_default);
+  (0, import_element21.useEffect)(() => {
+    const element = elementRef.current;
+    if (!element || posinset === void 0 || !intersectionObserver) {
+      return;
+    }
+    intersectionObserver.observe(element);
+    return () => {
+      intersectionObserver.unobserve(element);
+    };
+  }, [elementRef, intersectionObserver, posinset]);
+}
+function usePlaceholdersNeeded(data, isInfiniteScroll, gridColumns) {
+  const hasData = !!data?.length;
+  const firstItemPosition = hasData && isInfiniteScroll ? data[0].position : void 0;
+  return firstItemPosition && gridColumns ? (firstItemPosition - 1) % gridColumns : 0;
+}
+
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/grid/composite-grid.mjs
+var import_jsx_runtime56 = __toESM(require_jsx_runtime(), 1);
 var { Badge: Badge3 } = unlock(import_components10.privateApis);
 function chunk(array, size) {
   const chunks = [];
@@ -10076,206 +10236,238 @@ function chunk(array, size) {
   }
   return chunks;
 }
-var GridItem = (0, import_element19.forwardRef)(function GridItem2({
-  view,
-  selection,
-  onChangeSelection,
-  onClickItem,
-  isItemClickable,
-  renderItemLink,
-  getItemId,
-  item,
-  actions: actions2,
-  mediaField,
-  titleField,
-  descriptionField,
-  regularFields,
-  badgeFields,
-  hasBulkActions,
-  config,
-  ...props
-}, ref) {
-  const { showTitle = true, showMedia = true, showDescription = true } = view;
-  const hasBulkAction = useHasAPossibleBulkAction(actions2, item);
-  const id = getItemId(item);
-  const instanceId = (0, import_compose4.useInstanceId)(GridItem2);
-  const isSelected2 = selection.includes(id);
-  const mediaPlaceholder = /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("span", { className: "dataviews-view-grid__media-placeholder" });
-  const rendersMediaField = showMedia && mediaField?.render;
-  const renderedMediaField = rendersMediaField ? /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-    mediaField.render,
-    {
-      item,
-      field: mediaField,
-      config
-    }
-  ) : mediaPlaceholder;
-  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(titleField.render, { item, field: titleField }) : null;
-  let mediaA11yProps;
-  let titleA11yProps;
-  if (isItemClickable(item) && onClickItem) {
-    if (renderedTitleField) {
-      mediaA11yProps = {
-        "aria-labelledby": `dataviews-view-grid__title-field-${instanceId}`
-      };
-      titleA11yProps = {
-        id: `dataviews-view-grid__title-field-${instanceId}`
-      };
-    } else {
-      mediaA11yProps = {
-        "aria-label": (0, import_i18n12.__)("Navigate to item")
-      };
-    }
-  }
-  return /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)(
-    Stack,
-    {
-      direction: "column",
-      ...props,
-      ref,
-      className: clsx_default(
-        props.className,
-        "dataviews-view-grid__row__gridcell",
-        "dataviews-view-grid__card",
-        {
-          "is-selected": hasBulkAction && isSelected2
-        }
-      ),
-      onClickCapture: (event) => {
-        props.onClickCapture?.(event);
-        if ((0, import_keycodes2.isAppleOS)() ? event.metaKey : event.ctrlKey) {
-          event.stopPropagation();
-          event.preventDefault();
-          if (!hasBulkAction) {
-            return;
-          }
-          onChangeSelection(
-            selection.includes(id) ? selection.filter((itemId) => id !== itemId) : [...selection, id]
-          );
+var GridItem = (0, import_element22.forwardRef)(
+  function GridItem2({
+    view,
+    selection,
+    onChangeSelection,
+    onClickItem,
+    isItemClickable,
+    renderItemLink,
+    getItemId,
+    item,
+    actions: actions2,
+    mediaField,
+    titleField,
+    descriptionField,
+    regularFields,
+    badgeFields,
+    hasBulkActions,
+    config,
+    posinset,
+    setsize,
+    ...props
+  }, forwardedRef) {
+    const {
+      showTitle = true,
+      showMedia = true,
+      showDescription = true
+    } = view;
+    const hasBulkAction = useHasAPossibleBulkAction(actions2, item);
+    const id = getItemId(item);
+    const elementRef = (0, import_element22.useRef)(null);
+    const setRefs = (0, import_element22.useCallback)(
+      (node) => {
+        elementRef.current = node;
+        if (typeof forwardedRef === "function") {
+          forwardedRef(node);
+        } else if (forwardedRef) {
+          forwardedRef.current = node;
         }
       },
-      children: [
-        /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-          ItemClickWrapper,
+      [forwardedRef]
+    );
+    useIntersectionObserver(elementRef, posinset);
+    const instanceId = (0, import_compose4.useInstanceId)(GridItem2);
+    const isSelected2 = selection.includes(id);
+    const mediaPlaceholder = /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("span", { className: "dataviews-view-grid__media-placeholder" });
+    const rendersMediaField = showMedia && mediaField?.render;
+    const renderedMediaField = rendersMediaField ? /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+      mediaField.render,
+      {
+        item,
+        field: mediaField,
+        config
+      }
+    ) : mediaPlaceholder;
+    const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(titleField.render, { item, field: titleField }) : null;
+    let mediaA11yProps;
+    let titleA11yProps;
+    if (isItemClickable(item) && onClickItem) {
+      if (renderedTitleField) {
+        mediaA11yProps = {
+          "aria-labelledby": `dataviews-view-grid__title-field-${instanceId}`
+        };
+        titleA11yProps = {
+          id: `dataviews-view-grid__title-field-${instanceId}`
+        };
+      } else {
+        mediaA11yProps = {
+          "aria-label": (0, import_i18n12.__)("Navigate to item")
+        };
+      }
+    }
+    return /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(
+      Stack,
+      {
+        direction: "column",
+        ...props,
+        ref: setRefs,
+        "aria-setsize": setsize,
+        "aria-posinset": posinset,
+        className: clsx_default(
+          props.className,
+          "dataviews-view-grid__row__gridcell",
+          "dataviews-view-grid__card",
           {
-            item,
-            isItemClickable,
-            onClickItem,
-            renderItemLink,
-            className: clsx_default("dataviews-view-grid__media", {
-              "dataviews-view-grid__media--placeholder": !rendersMediaField
-            }),
-            ...mediaA11yProps,
-            children: renderedMediaField
+            "is-selected": hasBulkAction && isSelected2
           }
         ),
-        hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-          DataViewsSelectionCheckbox,
-          {
-            item,
-            selection,
-            onChangeSelection,
-            getItemId,
-            titleField,
-            disabled: !hasBulkAction
+        onClickCapture: (event) => {
+          props.onClickCapture?.(event);
+          if ((0, import_keycodes2.isAppleOS)() ? event.metaKey : event.ctrlKey) {
+            event.stopPropagation();
+            event.preventDefault();
+            if (!hasBulkAction) {
+              return;
+            }
+            onChangeSelection(
+              isSelected2 ? selection.filter(
+                (itemId) => id !== itemId
+              ) : [...selection, id]
+            );
           }
-        ),
-        !!actions2?.length && /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("div", { className: "dataviews-view-grid__media-actions", children: /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(ItemActions, { item, actions: actions2, isCompact: true }) }),
-        showTitle && /* @__PURE__ */ (0, import_jsx_runtime54.jsx)("div", { className: "dataviews-view-grid__title", children: /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-          ItemClickWrapper,
-          {
-            item,
-            isItemClickable,
-            onClickItem,
-            renderItemLink,
-            className: "dataviews-view-grid__title-field dataviews-title-field",
-            ...titleA11yProps,
-            title: titleField?.getValueFormatted({
-              item,
-              field: titleField
-            }) || void 0,
-            children: renderedTitleField
-          }
-        ) }),
-        /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)(Stack, { direction: "column", gap: "xs", children: [
-          showDescription && descriptionField?.render && /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-            descriptionField.render,
+        },
+        children: [
+          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+            ItemClickWrapper,
             {
               item,
-              field: descriptionField
+              isItemClickable,
+              onClickItem,
+              renderItemLink,
+              className: clsx_default("dataviews-view-grid__media", {
+                "dataviews-view-grid__media--placeholder": !rendersMediaField
+              }),
+              ...mediaA11yProps,
+              children: renderedMediaField
             }
           ),
-          !!badgeFields?.length && /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-            Stack,
+          hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+            DataViewsSelectionCheckbox,
             {
-              direction: "row",
-              className: "dataviews-view-grid__badge-fields",
-              gap: "sm",
-              wrap: "wrap",
-              align: "top",
-              justify: "flex-start",
-              children: badgeFields.map((field) => {
-                return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-                  Badge3,
-                  {
-                    className: "dataviews-view-grid__field-value",
-                    children: /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-                      field.render,
-                      {
-                        item,
-                        field
-                      }
-                    )
-                  },
-                  field.id
-                );
-              })
+              item,
+              selection,
+              onChangeSelection,
+              getItemId,
+              titleField,
+              disabled: !hasBulkAction
             }
           ),
-          !!regularFields?.length && /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-            Stack,
+          !!actions2?.length && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { className: "dataviews-view-grid__media-actions", children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+            ItemActions,
             {
-              direction: "column",
-              className: "dataviews-view-grid__fields",
-              gap: "xs",
-              children: regularFields.map((field) => {
-                return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-                  import_components10.Flex,
-                  {
-                    className: "dataviews-view-grid__field",
-                    gap: 1,
-                    justify: "flex-start",
-                    expanded: true,
-                    style: { height: "auto" },
-                    direction: "row",
-                    children: /* @__PURE__ */ (0, import_jsx_runtime54.jsxs)(import_jsx_runtime54.Fragment, { children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(import_components10.Tooltip, { text: field.label, children: /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(import_components10.FlexItem, { className: "dataviews-view-grid__field-name", children: field.header }) }),
-                      /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-                        import_components10.FlexItem,
+              item,
+              actions: actions2,
+              isCompact: true
+            }
+          ) }),
+          showTitle && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { className: "dataviews-view-grid__title", children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+            ItemClickWrapper,
+            {
+              item,
+              isItemClickable,
+              onClickItem,
+              renderItemLink,
+              className: "dataviews-view-grid__title-field dataviews-title-field",
+              ...titleA11yProps,
+              title: titleField?.getValueFormatted({
+                item,
+                field: titleField
+              }) || void 0,
+              children: renderedTitleField
+            }
+          ) }),
+          /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(Stack, { direction: "column", gap: "xs", children: [
+            showDescription && descriptionField?.render && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+              descriptionField.render,
+              {
+                item,
+                field: descriptionField
+              }
+            ),
+            !!badgeFields?.length && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+              Stack,
+              {
+                direction: "row",
+                className: "dataviews-view-grid__badge-fields",
+                gap: "sm",
+                wrap: "wrap",
+                align: "top",
+                justify: "flex-start",
+                children: badgeFields.map((field) => {
+                  return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                    Badge3,
+                    {
+                      className: "dataviews-view-grid__field-value",
+                      children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                        field.render,
                         {
-                          className: "dataviews-view-grid__field-value",
-                          style: { maxHeight: "none" },
-                          children: /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-                            field.render,
-                            {
-                              item,
-                              field
-                            }
-                          )
+                          item,
+                          field
                         }
                       )
-                    ] })
-                  },
-                  field.id
-                );
-              })
-            }
-          )
-        ] })
-      ]
-    }
-  );
-});
+                    },
+                    field.id
+                  );
+                })
+              }
+            ),
+            !!regularFields?.length && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+              Stack,
+              {
+                direction: "column",
+                className: "dataviews-view-grid__fields",
+                gap: "xs",
+                children: regularFields.map((field) => {
+                  return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                    import_components10.Flex,
+                    {
+                      className: "dataviews-view-grid__field",
+                      gap: 1,
+                      justify: "flex-start",
+                      expanded: true,
+                      style: { height: "auto" },
+                      direction: "row",
+                      children: /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(import_jsx_runtime56.Fragment, { children: [
+                        /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_components10.Tooltip, { text: field.label, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_components10.FlexItem, { className: "dataviews-view-grid__field-name", children: field.header }) }),
+                        /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                          import_components10.FlexItem,
+                          {
+                            className: "dataviews-view-grid__field-value",
+                            style: { maxHeight: "none" },
+                            children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                              field.render,
+                              {
+                                item,
+                                field
+                              }
+                            )
+                          }
+                        )
+                      ] })
+                    },
+                    field.id
+                  );
+                })
+              }
+            )
+          ] })
+        ]
+      }
+    );
+  }
+);
 function CompositeGrid({
   data,
   isInfiniteScroll,
@@ -10292,7 +10484,7 @@ function CompositeGrid({
   getItemId,
   actions: actions2
 }) {
-  const { paginationInfo, resizeObserverRef } = (0, import_element19.useContext)(dataviews_context_default);
+  const { paginationInfo, resizeObserverRef } = (0, import_element22.useContext)(dataviews_context_default);
   const gridColumns = useGridColumns();
   const hasBulkActions = useSomeItemHasAPossibleBulkAction(actions2, data);
   const titleField = fields.find(
@@ -10319,84 +10511,179 @@ function CompositeGrid({
   );
   const size = "900px";
   const totalRows = Math.ceil(data.length / gridColumns);
-  return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-    import_components10.Composite,
-    {
-      role: isInfiniteScroll ? "feed" : "grid",
-      className: clsx_default("dataviews-view-grid", className, {
-        [`has-${view.layout?.density}-density`]: view.layout?.density && ["compact", "comfortable"].includes(
-          view.layout.density
-        )
-      }),
-      focusWrap: true,
-      "aria-busy": isLoading,
-      "aria-rowcount": isInfiniteScroll ? void 0 : totalRows,
-      ref: resizeObserverRef,
-      inert,
-      children: chunk(data, gridColumns).map((row, i2) => /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-        import_components10.Composite.Row,
+  const placeholdersNeeded = usePlaceholdersNeeded(
+    data,
+    isInfiniteScroll,
+    gridColumns
+  );
+  return /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(import_jsx_runtime56.Fragment, {
+    // Render infinite scroll layout (no rows, feed semantics)
+    children: [
+      isInfiniteScroll && /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(
+        import_components10.Composite,
         {
-          render: /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-            "div",
+          render: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+            GridItems,
             {
-              role: "row",
-              "aria-rowindex": i2 + 1,
-              "aria-label": (0, import_i18n12.sprintf)(
-                /* translators: %d: The row number in the grid */
-                (0, import_i18n12.__)("Row %d"),
-                i2 + 1
+              className: clsx_default(
+                "dataviews-view-grid-infinite-scroll",
+                className,
+                {
+                  [`has-${view.layout?.density}-density`]: view.layout?.density && [
+                    "compact",
+                    "comfortable"
+                  ].includes(view.layout.density)
+                }
               ),
-              className: "dataviews-view-grid__row",
-              style: {
-                gridTemplateColumns: `repeat( ${gridColumns}, minmax(0, 1fr) )`
-              }
+              previewSize: view.layout?.previewSize,
+              "aria-busy": isLoading,
+              ref: resizeObserverRef
             }
           ),
-          children: row.map((item, indexInRow) => {
-            const index = i2 * gridColumns + indexInRow;
-            return /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-              import_components10.Composite.Item,
-              {
-                render: (props) => /* @__PURE__ */ (0, import_jsx_runtime54.jsx)(
-                  GridItem,
-                  {
-                    ...props,
-                    role: isInfiniteScroll ? "article" : "gridcell",
-                    "aria-setsize": isInfiniteScroll ? paginationInfo.totalItems : void 0,
-                    "aria-posinset": isInfiniteScroll ? index + 1 : void 0,
-                    view,
-                    selection,
-                    onChangeSelection,
-                    onClickItem,
-                    isItemClickable,
-                    renderItemLink,
-                    getItemId,
-                    item,
-                    actions: actions2,
-                    mediaField,
-                    titleField,
-                    descriptionField,
-                    regularFields,
-                    badgeFields,
-                    hasBulkActions,
-                    config: {
-                      sizes: size
+          role: "feed",
+          focusWrap: true,
+          inert,
+          children: [
+            Array.from({ length: placeholdersNeeded }).map(
+              (_, index) => /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                import_components10.Composite.Item,
+                {
+                  render: (props) => /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                    Stack,
+                    {
+                      ...props,
+                      direction: "column",
+                      role: "article",
+                      className: "dataviews-view-grid__row__gridcell dataviews-view-grid__card dataviews-view-grid__placeholder"
                     }
+                  ),
+                  "aria-hidden": true,
+                  tabIndex: -1
+                },
+                `placeholder-${index}`
+              )
+            ),
+            data.map((item) => {
+              const itemId = getItemId(item);
+              const stablePosition = item.position;
+              return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                import_components10.Composite.Item,
+                {
+                  render: (props) => /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                    GridItem,
+                    {
+                      ...props,
+                      id: itemId,
+                      role: "article",
+                      view,
+                      selection,
+                      onChangeSelection,
+                      onClickItem,
+                      isItemClickable,
+                      renderItemLink,
+                      getItemId,
+                      item,
+                      actions: actions2,
+                      mediaField,
+                      titleField,
+                      descriptionField,
+                      regularFields,
+                      badgeFields,
+                      hasBulkActions,
+                      posinset: stablePosition,
+                      setsize: paginationInfo.totalItems,
+                      config: {
+                        sizes: size
+                      }
+                    }
+                  )
+                },
+                itemId
+              );
+            })
+          ]
+        }
+      ),
+      // Render standard grid layout (with rows, grid semantics)
+      !isInfiniteScroll && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+        import_components10.Composite,
+        {
+          role: "grid",
+          className: clsx_default("dataviews-view-grid", className, {
+            [`has-${view.layout?.density}-density`]: view.layout?.density && ["compact", "comfortable"].includes(
+              view.layout.density
+            )
+          }),
+          focusWrap: true,
+          "aria-busy": isLoading,
+          "aria-rowcount": totalRows,
+          ref: resizeObserverRef,
+          inert,
+          children: chunk(data, gridColumns).map((row, i2) => /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+            import_components10.Composite.Row,
+            {
+              render: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                "div",
+                {
+                  role: "row",
+                  "aria-rowindex": i2 + 1,
+                  "aria-label": (0, import_i18n12.sprintf)(
+                    /* translators: %d: The row number in the grid */
+                    (0, import_i18n12.__)("Row %d"),
+                    i2 + 1
+                  ),
+                  className: "dataviews-view-grid__row",
+                  style: {
+                    gridTemplateColumns: `repeat( ${gridColumns}, minmax(0, 1fr) )`
                   }
-                )
-              },
-              getItemId(item)
-            );
-          })
-        },
-        i2
-      ))
-    }
-  );
+                }
+              ),
+              children: row.map((item) => {
+                const itemId = getItemId(item);
+                return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                  import_components10.Composite.Item,
+                  {
+                    render: (props) => /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                      GridItem,
+                      {
+                        ...props,
+                        id: itemId,
+                        role: "gridcell",
+                        view,
+                        selection,
+                        onChangeSelection,
+                        onClickItem,
+                        isItemClickable,
+                        renderItemLink,
+                        getItemId,
+                        item,
+                        actions: actions2,
+                        mediaField,
+                        titleField,
+                        descriptionField,
+                        regularFields,
+                        badgeFields,
+                        hasBulkActions,
+                        config: {
+                          sizes: size
+                        }
+                      }
+                    )
+                  },
+                  itemId
+                );
+              })
+            },
+            i2
+          ))
+        }
+      )
+    ]
+  });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/grid/index.mjs
-var import_jsx_runtime55 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/grid/index.mjs
+var import_jsx_runtime57 = __toESM(require_jsx_runtime(), 1);
 function ViewGrid({
   actions: actions2,
   data,
@@ -10418,7 +10705,7 @@ function ViewGrid({
   const dataByGroup = groupField ? getDataByGroup(data, groupField) : null;
   const isInfiniteScroll = view.infiniteScrollEnabled && !dataByGroup;
   if (!hasData) {
-    return /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
       "div",
       {
         className: clsx_default("dataviews-no-results", {
@@ -10444,23 +10731,23 @@ function ViewGrid({
     getItemId,
     actions: actions2
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)(import_jsx_runtime55.Fragment, {
+  return /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)(import_jsx_runtime57.Fragment, {
     // Render multiple groups.
     children: [
-      hasData && groupField && dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(Stack, { direction: "column", gap: "lg", children: Array.from(dataByGroup.entries()).map(
-        ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime55.jsxs)(
+      hasData && groupField && dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(Stack, { direction: "column", gap: "lg", children: Array.from(dataByGroup.entries()).map(
+        ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)(
           Stack,
           {
             direction: "column",
             gap: "sm",
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("h3", { className: "dataviews-view-grid__group-header", children: view.groupBy?.showLabel === false ? groupName : (0, import_i18n13.sprintf)(
+              /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("h3", { className: "dataviews-view-grid__group-header", children: view.groupBy?.showLabel === false ? groupName : (0, import_i18n13.sprintf)(
                 // translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022".
                 (0, import_i18n13.__)("%1$s: %2$s"),
                 groupField.label,
                 groupName
               ) }),
-              /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
                 CompositeGrid,
                 {
                   ...gridProps,
@@ -10474,7 +10761,7 @@ function ViewGrid({
         )
       ) }),
       // Render a single grid with all data.
-      !dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(
+      !dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
         CompositeGrid,
         {
           ...gridProps,
@@ -10482,19 +10769,19 @@ function ViewGrid({
           isInfiniteScroll: !!isInfiniteScroll
         }
       ),
-      isInfiniteScroll && isLoading && /* @__PURE__ */ (0, import_jsx_runtime55.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime55.jsx)(import_components11.Spinner, {}) })
+      isInfiniteScroll && isLoading && /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(import_components11.Spinner, {}) })
     ]
   });
 }
 var grid_default = ViewGrid;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/list/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/list/index.mjs
 var import_compose5 = __toESM(require_compose(), 1);
 var import_components12 = __toESM(require_components(), 1);
-var import_element20 = __toESM(require_element(), 1);
+var import_element23 = __toESM(require_element(), 1);
 var import_i18n14 = __toESM(require_i18n(), 1);
 var import_data3 = __toESM(require_data(), 1);
-var import_jsx_runtime56 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime58 = __toESM(require_jsx_runtime(), 1);
 var { Menu: Menu3 } = unlock(import_components12.privateApis);
 function generateItemWrapperCompositeId(idPrefix) {
   return `${idPrefix}-item-wrapper`;
@@ -10511,17 +10798,17 @@ function PrimaryActionGridCell({
   item
 }) {
   const registry = (0, import_data3.useRegistry)();
-  const [isModalOpen, setIsModalOpen] = (0, import_element20.useState)(false);
+  const [isModalOpen, setIsModalOpen] = (0, import_element23.useState)(false);
   const compositeItemId = generatePrimaryActionCompositeId(
     idPrefix,
     primaryAction.id
   );
   const label = typeof primaryAction.label === "string" ? primaryAction.label : primaryAction.label([item]);
-  return "RenderModal" in primaryAction ? /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { role: "gridcell", children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+  return "RenderModal" in primaryAction ? /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", { role: "gridcell", children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
     import_components12.Composite.Item,
     {
       id: compositeItemId,
-      render: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+      render: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
         import_components12.Button,
         {
           disabled: !!primaryAction.disabled,
@@ -10531,7 +10818,7 @@ function PrimaryActionGridCell({
           onClick: () => setIsModalOpen(true)
         }
       ),
-      children: isModalOpen && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+      children: isModalOpen && /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
         ActionModal,
         {
           action: primaryAction,
@@ -10540,11 +10827,11 @@ function PrimaryActionGridCell({
         }
       )
     }
-  ) }, primaryAction.id) : /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { role: "gridcell", children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+  ) }, primaryAction.id) : /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", { role: "gridcell", children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
     import_components12.Composite.Item,
     {
       id: compositeItemId,
-      render: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+      render: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
         import_components12.Button,
         {
           disabled: !!primaryAction.disabled,
@@ -10579,20 +10866,20 @@ function ListItem({
     showDescription = true,
     infiniteScrollEnabled
   } = view;
-  const itemRef = (0, import_element20.useRef)(null);
+  const itemRef = (0, import_element23.useRef)(null);
   const labelId = `${idPrefix}-label`;
   const descriptionId = `${idPrefix}-description`;
   const registry = (0, import_data3.useRegistry)();
-  const [isHovered, setIsHovered] = (0, import_element20.useState)(false);
-  const [activeModalAction, setActiveModalAction] = (0, import_element20.useState)(
+  const [isHovered, setIsHovered] = (0, import_element23.useState)(false);
+  const [activeModalAction, setActiveModalAction] = (0, import_element23.useState)(
     null
   );
   const handleHover = ({ type }) => {
     const isHover = type === "mouseenter";
     setIsHovered(isHover);
   };
-  const { paginationInfo } = (0, import_element20.useContext)(dataviews_context_default);
-  (0, import_element20.useEffect)(() => {
+  const { paginationInfo } = (0, import_element23.useContext)(dataviews_context_default);
+  (0, import_element23.useEffect)(() => {
     if (isSelected2) {
       itemRef.current?.scrollIntoView({
         behavior: "auto",
@@ -10601,7 +10888,7 @@ function ListItem({
       });
     }
   }, [isSelected2]);
-  const { primaryAction, eligibleActions } = (0, import_element20.useMemo)(() => {
+  const { primaryAction, eligibleActions } = (0, import_element23.useMemo)(() => {
     const _eligibleActions = actions2.filter(
       (action) => !action.isEligible || action.isEligible(item)
     );
@@ -10614,7 +10901,7 @@ function ListItem({
     };
   }, [actions2, item]);
   const hasOnlyOnePrimaryAction = primaryAction && actions2.length === 1;
-  const renderedMediaField = showMedia && mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { className: "dataviews-view-list__media-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+  const renderedMediaField = showMedia && mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", { className: "dataviews-view-list__media-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
     mediaField.render,
     {
       item,
@@ -10622,17 +10909,17 @@ function ListItem({
       config: { sizes: "52px" }
     }
   ) }) : null;
-  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(titleField.render, { item, field: titleField }) : null;
+  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(titleField.render, { item, field: titleField }) : null;
   const renderDescription = showDescription && descriptionField?.render;
   const hasOnlyMediaAndTitle = !!renderedMediaField && !renderDescription && !otherFields.length;
-  const usedActions = eligibleActions?.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(
+  const usedActions = eligibleActions?.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(
     Stack,
     {
       direction: "row",
       gap: "md",
       className: "dataviews-view-list__item-actions",
       children: [
-        primaryAction && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+        primaryAction && /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
           PrimaryActionGridCell,
           {
             idPrefix,
@@ -10640,18 +10927,18 @@ function ListItem({
             item
           }
         ),
-        !hasOnlyOnePrimaryAction && /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)("div", { role: "gridcell", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(Menu3, { placement: "bottom-end", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+        !hasOnlyOnePrimaryAction && /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)("div", { role: "gridcell", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(Menu3, { placement: "bottom-end", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
               Menu3.TriggerButton,
               {
-                render: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                render: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
                   import_components12.Composite.Item,
                   {
                     id: generateDropdownTriggerCompositeId(
                       idPrefix
                     ),
-                    render: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                    render: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
                       import_components12.Button,
                       {
                         size: "small",
@@ -10666,7 +10953,7 @@ function ListItem({
                 )
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(Menu3.Popover, { children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(Menu3.Popover, { children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
               ActionsMenuGroup,
               {
                 actions: eligibleActions,
@@ -10676,7 +10963,7 @@ function ListItem({
               }
             ) })
           ] }),
-          !!activeModalAction && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+          !!activeModalAction && /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
             ActionModal,
             {
               action: activeModalAction,
@@ -10688,13 +10975,13 @@ function ListItem({
       ]
     }
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
     import_components12.Composite.Row,
     {
       ref: itemRef,
       render: (
         /* aria-posinset breaks Composite.Row if passed to it directly. */
-        /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
           "div",
           {
             "aria-posinset": posinset,
@@ -10709,13 +10996,13 @@ function ListItem({
       }),
       onMouseEnter: handleHover,
       onMouseLeave: handleHover,
-      children: /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(
         Stack,
         {
           direction: "row",
           className: "dataviews-view-list__item-wrapper",
           children: [
-            /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { role: "gridcell", children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", { role: "gridcell", children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
               import_components12.Composite.Item,
               {
                 id: generateItemWrapperCompositeId(idPrefix),
@@ -10726,7 +11013,7 @@ function ListItem({
                 onClick: () => onSelect(item)
               }
             ) }),
-            /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(
+            /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(
               Stack,
               {
                 direction: "row",
@@ -10736,15 +11023,15 @@ function ListItem({
                 style: { flex: 1, minWidth: 0 },
                 children: [
                   renderedMediaField,
-                  /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(
+                  /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(
                     Stack,
                     {
                       direction: "column",
                       gap: "xs",
                       className: "dataviews-view-list__field-wrapper",
                       children: [
-                        /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(Stack, { direction: "row", align: "center", children: [
-                          /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                        /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(Stack, { direction: "row", align: "center", children: [
+                          /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
                             "div",
                             {
                               className: "dataviews-title-field dataviews-view-list__title-field",
@@ -10754,24 +11041,24 @@ function ListItem({
                           ),
                           usedActions
                         ] }),
-                        renderDescription && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", { className: "dataviews-view-list__field", children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                        renderDescription && /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", { className: "dataviews-view-list__field", children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
                           descriptionField.render,
                           {
                             item,
                             field: descriptionField
                           }
                         ) }),
-                        /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                        /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
                           "div",
                           {
                             className: "dataviews-view-list__fields",
                             id: descriptionId,
-                            children: otherFields.map((field) => /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(
+                            children: otherFields.map((field) => /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(
                               "div",
                               {
                                 className: "dataviews-view-list__field",
                                 children: [
-                                  /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                                  /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
                                     import_components12.VisuallyHidden,
                                     {
                                       as: "span",
@@ -10779,7 +11066,7 @@ function ListItem({
                                       children: field.label
                                     }
                                   ),
-                                  /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("span", { className: "dataviews-view-list__field-value", children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                                  /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("span", { className: "dataviews-view-list__field-value", children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
                                     field.render,
                                     {
                                       item,
@@ -10832,11 +11119,11 @@ function ViewList(props) {
   );
   const otherFields = (view?.fields ?? []).map((fieldId) => fields.find((f2) => fieldId === f2.id)).filter(isDefined2);
   const onSelect = (item) => onChangeSelection([getItemId(item)]);
-  const generateCompositeItemIdPrefix = (0, import_element20.useCallback)(
+  const generateCompositeItemIdPrefix = (0, import_element23.useCallback)(
     (item) => `${baseId}-${getItemId(item)}`,
     [baseId, getItemId]
   );
-  const isActiveCompositeItem = (0, import_element20.useCallback)(
+  const isActiveCompositeItem = (0, import_element23.useCallback)(
     (item, idToCheck) => {
       return idToCheck.startsWith(
         generateCompositeItemIdPrefix(item)
@@ -10844,9 +11131,9 @@ function ViewList(props) {
     },
     [generateCompositeItemIdPrefix]
   );
-  const [activeCompositeId, setActiveCompositeId] = (0, import_element20.useState)(void 0);
-  const compositeRef = (0, import_element20.useRef)(null);
-  (0, import_element20.useEffect)(() => {
+  const [activeCompositeId, setActiveCompositeId] = (0, import_element23.useState)(void 0);
+  const compositeRef = (0, import_element23.useRef)(null);
+  (0, import_element23.useEffect)(() => {
     if (selectedItem) {
       setActiveCompositeId(
         generateItemWrapperCompositeId(
@@ -10860,7 +11147,7 @@ function ViewList(props) {
   );
   const previousActiveItemIndex = (0, import_compose5.usePrevious)(activeItemIndex);
   const isActiveIdInList = activeItemIndex !== -1;
-  const selectCompositeItem = (0, import_element20.useCallback)(
+  const selectCompositeItem = (0, import_element23.useCallback)(
     (targetIndex, generateCompositeId) => {
       const clampedIndex = Math.min(
         data.length - 1,
@@ -10882,7 +11169,7 @@ function ViewList(props) {
     },
     [data, generateCompositeItemIdPrefix]
   );
-  (0, import_element20.useEffect)(() => {
+  (0, import_element23.useEffect)(() => {
     const wasActiveIdInList = previousActiveItemIndex !== void 0 && previousActiveItemIndex !== -1;
     if (!isActiveIdInList && wasActiveIdInList) {
       selectCompositeItem(
@@ -10891,7 +11178,7 @@ function ViewList(props) {
       );
     }
   }, [isActiveIdInList, selectCompositeItem, previousActiveItemIndex]);
-  const onDropdownTriggerKeyDown = (0, import_element20.useCallback)(
+  const onDropdownTriggerKeyDown = (0, import_element23.useCallback)(
     (event) => {
       if (event.key === "ArrowDown") {
         event.preventDefault();
@@ -10915,7 +11202,7 @@ function ViewList(props) {
   const dataByGroup = hasData && groupField ? getDataByGroup(data, groupField) : null;
   const isInfiniteScroll = view.infiniteScrollEnabled && !dataByGroup;
   if (!hasData) {
-    return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
       "div",
       {
         className: clsx_default("dataviews-no-results", {
@@ -10926,30 +11213,30 @@ function ViewList(props) {
     );
   }
   if (hasData && groupField && dataByGroup) {
-    return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
       import_components12.Composite,
       {
         ref: compositeRef,
         id: `${baseId}`,
-        render: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", {}),
+        render: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", {}),
         className: "dataviews-view-list__group",
         role: "grid",
         activeId: activeCompositeId,
         setActiveId: setActiveCompositeId,
-        children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+        children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
           Stack,
           {
             direction: "column",
             gap: "lg",
             className: clsx_default("dataviews-view-list", className),
             children: Array.from(dataByGroup.entries()).map(
-              ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(
+              ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(
                 Stack,
                 {
                   direction: "column",
                   gap: "sm",
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("h3", { className: "dataviews-view-list__group-header", children: view.groupBy?.showLabel === false ? groupName : (0, import_i18n14.sprintf)(
+                    /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("h3", { className: "dataviews-view-list__group-header", children: view.groupBy?.showLabel === false ? groupName : (0, import_i18n14.sprintf)(
                       // translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022".
                       (0, import_i18n14.__)("%1$s: %2$s"),
                       groupField.label,
@@ -10957,7 +11244,7 @@ function ViewList(props) {
                     ) }),
                     groupItems.map((item) => {
                       const id = generateCompositeItemIdPrefix(item);
-                      return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+                      return /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
                         ListItem,
                         {
                           view,
@@ -10985,13 +11272,13 @@ function ViewList(props) {
       }
     );
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(import_jsx_runtime56.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(import_jsx_runtime58.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
       import_components12.Composite,
       {
         ref: compositeRef,
         id: baseId,
-        render: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("div", {}),
+        render: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", {}),
         className: clsx_default("dataviews-view-list", className, {
           [`has-${view.layout?.density}-density`]: view.layout?.density && ["compact", "comfortable"].includes(
             view.layout.density
@@ -11004,7 +11291,7 @@ function ViewList(props) {
         inert: !isInfiniteScroll && !!isLoading ? "true" : void 0,
         children: data.map((item, index) => {
           const id = generateCompositeItemIdPrefix(item);
-          return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
             ListItem,
             {
               view,
@@ -11025,17 +11312,17 @@ function ViewList(props) {
         })
       }
     ),
-    isInfiniteScroll && isLoading && /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(import_components12.Spinner, {}) })
+    isInfiniteScroll && isLoading && /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(import_components12.Spinner, {}) })
   ] });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/activity/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/activity/index.mjs
 var import_components14 = __toESM(require_components(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/activity/activity-group.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/activity/activity-group.mjs
 var import_i18n15 = __toESM(require_i18n(), 1);
-var import_element21 = __toESM(require_element(), 1);
-var import_jsx_runtime57 = __toESM(require_jsx_runtime(), 1);
+var import_element24 = __toESM(require_element(), 1);
+var import_jsx_runtime59 = __toESM(require_jsx_runtime(), 1);
 function ActivityGroup({
   groupName,
   groupData,
@@ -11043,11 +11330,11 @@ function ActivityGroup({
   showLabel = true,
   children
 }) {
-  const groupHeader = showLabel ? (0, import_element21.createInterpolateElement)(
+  const groupHeader = showLabel ? (0, import_element24.createInterpolateElement)(
     // translators: %s: The label of the field e.g. "Status".
     (0, import_i18n15.sprintf)((0, import_i18n15.__)("%s: <groupName />"), groupField.label).trim(),
     {
-      groupName: /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(
+      groupName: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
         groupField.render,
         {
           item: groupData[0],
@@ -11055,14 +11342,14 @@ function ActivityGroup({
         }
       )
     }
-  ) : /* @__PURE__ */ (0, import_jsx_runtime57.jsx)(groupField.render, { item: groupData[0], field: groupField });
-  return /* @__PURE__ */ (0, import_jsx_runtime57.jsxs)(
+  ) : /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(groupField.render, { item: groupData[0], field: groupField });
+  return /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(
     Stack,
     {
       direction: "column",
       className: "dataviews-view-activity__group",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime57.jsx)("h3", { className: "dataviews-view-activity__group-header", children: groupHeader }),
+        /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("h3", { className: "dataviews-view-activity__group-header", children: groupHeader }),
         children
       ]
     },
@@ -11070,12 +11357,12 @@ function ActivityGroup({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/activity/activity-item.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/activity/activity-item.mjs
 var import_components13 = __toESM(require_components(), 1);
-var import_element22 = __toESM(require_element(), 1);
+var import_element25 = __toESM(require_element(), 1);
 var import_data4 = __toESM(require_data(), 1);
 var import_compose6 = __toESM(require_compose(), 1);
-var import_jsx_runtime58 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime60 = __toESM(require_jsx_runtime(), 1);
 function ActivityItem(props) {
   const {
     view,
@@ -11096,10 +11383,10 @@ function ActivityItem(props) {
     showDescription = true,
     infiniteScrollEnabled
   } = view;
-  const itemRef = (0, import_element22.useRef)(null);
+  const itemRef = (0, import_element25.useRef)(null);
   const registry = (0, import_data4.useRegistry)();
-  const { paginationInfo } = (0, import_element22.useContext)(dataviews_context_default);
-  const { primaryActions, eligibleActions } = (0, import_element22.useMemo)(() => {
+  const { paginationInfo } = (0, import_element25.useContext)(dataviews_context_default);
+  const { primaryActions, eligibleActions } = (0, import_element25.useMemo)(() => {
     const _eligibleActions = actions2.filter(
       (action) => !action.isEligible || action.isEligible(item)
     );
@@ -11113,7 +11400,7 @@ function ActivityItem(props) {
   }, [actions2, item]);
   const isMobileViewport = (0, import_compose6.useViewportMatch)("medium", "<");
   const density = view.layout?.density ?? "balanced";
-  const mediaContent = showMedia && density !== "compact" && mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
+  const mediaContent = showMedia && density !== "compact" && mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
     mediaField.render,
     {
       item,
@@ -11123,15 +11410,15 @@ function ActivityItem(props) {
       }
     }
   ) : null;
-  const renderedMediaField = /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", { className: "dataviews-view-activity__item-type-icon", children: mediaContent || /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
+  const renderedMediaField = /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("div", { className: "dataviews-view-activity__item-type-icon", children: mediaContent || /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
     "span",
     {
       className: "dataviews-view-activity__item-bullet",
       "aria-hidden": "true"
     }
   ) });
-  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(titleField.render, { item, field: titleField }) : null;
-  const verticalGap = (0, import_element22.useMemo)(() => {
+  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(titleField.render, { item, field: titleField }) : null;
+  const verticalGap = (0, import_element25.useMemo)(() => {
     switch (density) {
       case "comfortable":
         return "md";
@@ -11139,7 +11426,7 @@ function ActivityItem(props) {
         return "sm";
     }
   }, [density]);
-  return /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
     "div",
     {
       ref: itemRef,
@@ -11152,8 +11439,8 @@ function ActivityItem(props) {
         density === "balanced" && "is-balanced",
         density === "comfortable" && "is-comfortable"
       ),
-      children: /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(Stack, { direction: "row", gap: "lg", justify: "start", align: "flex-start", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)(Stack, { direction: "row", gap: "lg", justify: "start", align: "flex-start", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
           Stack,
           {
             direction: "column",
@@ -11163,7 +11450,7 @@ function ActivityItem(props) {
             children: renderedMediaField
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)(
           Stack,
           {
             direction: "column",
@@ -11171,7 +11458,7 @@ function ActivityItem(props) {
             align: "flex-start",
             className: "dataviews-view-activity__item-content",
             children: [
-              renderedTitleField && /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
+              renderedTitleField && /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
                 ItemClickWrapper,
                 {
                   item,
@@ -11182,19 +11469,19 @@ function ActivityItem(props) {
                   children: renderedTitleField
                 }
               ),
-              showDescription && descriptionField && /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", { className: "dataviews-view-activity__item-description", children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
+              showDescription && descriptionField && /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("div", { className: "dataviews-view-activity__item-description", children: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
                 descriptionField.render,
                 {
                   item,
                   field: descriptionField
                 }
               ) }),
-              /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", { className: "dataviews-view-activity__item-fields", children: otherFields.map((field) => /* @__PURE__ */ (0, import_jsx_runtime58.jsxs)(
+              /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("div", { className: "dataviews-view-activity__item-fields", children: otherFields.map((field) => /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)(
                 "div",
                 {
                   className: "dataviews-view-activity__item-field",
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
+                    /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
                       import_components13.VisuallyHidden,
                       {
                         as: "span",
@@ -11202,7 +11489,7 @@ function ActivityItem(props) {
                         children: field.label
                       }
                     ),
-                    /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("span", { className: "dataviews-view-activity__item-field-value", children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
+                    /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("span", { className: "dataviews-view-activity__item-field-value", children: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
                       field.render,
                       {
                         item,
@@ -11213,7 +11500,7 @@ function ActivityItem(props) {
                 },
                 field.id
               )) }),
-              !!primaryActions?.length && /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
+              !!primaryActions?.length && /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
                 PrimaryActions,
                 {
                   item,
@@ -11228,7 +11515,7 @@ function ActivityItem(props) {
         (primaryActions.length < eligibleActions.length || // Since we hide primary actions on mobile, we need to show the menu
         // there if there are any actions at all.
         isMobileViewport && // At the same time, only show the menu if there are actions to show.
-        eligibleActions.length > 0) && /* @__PURE__ */ (0, import_jsx_runtime58.jsx)("div", { className: "dataviews-view-activity__item-actions", children: /* @__PURE__ */ (0, import_jsx_runtime58.jsx)(
+        eligibleActions.length > 0) && /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("div", { className: "dataviews-view-activity__item-actions", children: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
           ItemActions,
           {
             item,
@@ -11242,7 +11529,7 @@ function ActivityItem(props) {
 }
 var activity_item_default = ActivityItem;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/activity/activity-items.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/activity/activity-items.mjs
 var import_react4 = __toESM(require_react(), 1);
 function isDefined3(item) {
   return !!item;
@@ -11272,8 +11559,8 @@ function ActivityItems(props) {
   });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/activity/index.mjs
-var import_jsx_runtime59 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/activity/index.mjs
+var import_jsx_runtime61 = __toESM(require_jsx_runtime(), 1);
 function ViewActivity(props) {
   const { empty, data, fields, isLoading, view, className } = props;
   const isDelayedLoading = useDelayedLoading(!!isLoading);
@@ -11282,7 +11569,7 @@ function ViewActivity(props) {
   const dataByGroup = hasData && groupField ? getDataByGroup(data, groupField) : null;
   const isInfiniteScroll = view.infiniteScrollEnabled && !dataByGroup;
   if (!hasData) {
-    return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
       "div",
       {
         className: clsx_default("dataviews-no-results", {
@@ -11298,7 +11585,7 @@ function ViewActivity(props) {
   });
   const groupedEntries = dataByGroup ? Array.from(dataByGroup.entries()) : [];
   if (hasData && groupField && dataByGroup) {
-    return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
       Stack,
       {
         direction: "column",
@@ -11306,14 +11593,14 @@ function ViewActivity(props) {
         className: wrapperClassName,
         inert: isInert ? "true" : void 0,
         children: groupedEntries.map(
-          ([groupName, groupData]) => /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+          ([groupName, groupData]) => /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
             ActivityGroup,
             {
               groupName,
               groupData,
               groupField,
               showLabel: view.groupBy?.showLabel !== false,
-              children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+              children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
                 ActivityItems,
                 {
                   ...props,
@@ -11327,43 +11614,43 @@ function ViewActivity(props) {
       }
     );
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(import_jsx_runtime59.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime61.jsxs)(import_jsx_runtime61.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(
       "div",
       {
         className: wrapperClassName,
         role: view.infiniteScrollEnabled ? "feed" : void 0,
         inert: isInert ? "true" : void 0,
-        children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(ActivityItems, { ...props })
+        children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(ActivityItems, { ...props })
       }
     ),
-    isInfiniteScroll && isLoading && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(import_components14.Spinner, {}) })
+    isInfiniteScroll && isLoading && /* @__PURE__ */ (0, import_jsx_runtime61.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime61.jsx)(import_components14.Spinner, {}) })
   ] });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/picker-grid/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/picker-grid/index.mjs
 var import_components17 = __toESM(require_components(), 1);
 var import_i18n18 = __toESM(require_i18n(), 1);
 var import_compose7 = __toESM(require_compose(), 1);
-var import_element26 = __toESM(require_element(), 1);
+var import_element28 = __toESM(require_element(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-picker-footer/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-picker-footer/index.mjs
 var import_components16 = __toESM(require_components(), 1);
 var import_data5 = __toESM(require_data(), 1);
-var import_element24 = __toESM(require_element(), 1);
+var import_element27 = __toESM(require_element(), 1);
 var import_i18n17 = __toESM(require_i18n(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-pagination/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-pagination/index.mjs
 var import_components15 = __toESM(require_components(), 1);
-var import_element23 = __toESM(require_element(), 1);
+var import_element26 = __toESM(require_element(), 1);
 var import_i18n16 = __toESM(require_i18n(), 1);
-var import_jsx_runtime60 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime62 = __toESM(require_jsx_runtime(), 1);
 function DataViewsPagination() {
   const {
     view,
     onChangeView,
     paginationInfo: { totalItems = 0, totalPages }
-  } = (0, import_element23.useContext)(dataviews_context_default);
+  } = (0, import_element26.useContext)(dataviews_context_default);
   if (!totalItems || !totalPages || view.infiniteScrollEnabled) {
     return null;
   }
@@ -11383,7 +11670,7 @@ function DataViewsPagination() {
       };
     }
   );
-  return !!totalItems && totalPages !== 1 && /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)(
+  return !!totalItems && totalPages !== 1 && /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)(
     Stack,
     {
       direction: "row",
@@ -11392,7 +11679,7 @@ function DataViewsPagination() {
       align: "center",
       gap: "xl",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(
           Stack,
           {
             direction: "row",
@@ -11400,7 +11687,7 @@ function DataViewsPagination() {
             align: "center",
             gap: "xs",
             className: "dataviews-pagination__page-select",
-            children: (0, import_element23.createInterpolateElement)(
+            children: (0, import_element26.createInterpolateElement)(
               (0, import_i18n16.sprintf)(
                 // translators: 1: Current page number, 2: Total number of pages.
                 (0, import_i18n16._x)(
@@ -11411,8 +11698,8 @@ function DataViewsPagination() {
                 totalPages
               ),
               {
-                div: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("div", { "aria-hidden": true }),
-                CurrentPage: /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
+                div: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)("div", { "aria-hidden": true }),
+                CurrentPage: /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(
                   import_components15.SelectControl,
                   {
                     "aria-label": (0, import_i18n16.__)("Current page"),
@@ -11432,8 +11719,8 @@ function DataViewsPagination() {
             )
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime60.jsxs)(Stack, { direction: "row", gap: "xs", align: "center", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime62.jsxs)(Stack, { direction: "row", gap: "xs", align: "center", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(
             import_components15.Button,
             {
               onClick: () => onChangeView({
@@ -11449,7 +11736,7 @@ function DataViewsPagination() {
               tooltipPosition: "top"
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(
             import_components15.Button,
             {
               onClick: () => onChangeView({ ...view, page: currentPage + 1 }),
@@ -11467,35 +11754,18 @@ function DataViewsPagination() {
     }
   );
 }
-var dataviews_pagination_default = (0, import_element23.memo)(DataViewsPagination);
+var dataviews_pagination_default = (0, import_element26.memo)(DataViewsPagination);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-picker-footer/index.mjs
-var import_jsx_runtime61 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-picker-footer/index.mjs
+var import_jsx_runtime63 = __toESM(require_jsx_runtime(), 1);
 function useIsMultiselectPicker(actions2) {
-  return (0, import_element24.useMemo)(() => {
+  return (0, import_element27.useMemo)(() => {
     return actions2?.every((action) => action.supportsBulk);
   }, [actions2]);
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/grid-items.mjs
-var import_element25 = __toESM(require_element(), 1);
-var import_jsx_runtime62 = __toESM(require_jsx_runtime(), 1);
-var GridItems = (0, import_element25.forwardRef)(({ className, previewSize, ...props }, ref) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime62.jsx)(
-    "div",
-    {
-      ref,
-      className: clsx_default("dataviews-view-grid-items", className),
-      style: {
-        gridTemplateColumns: previewSize && `repeat(auto-fill, minmax(${previewSize}px, 1fr))`
-      },
-      ...props
-    }
-  );
-});
-
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/picker-grid/index.mjs
-var import_jsx_runtime63 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/picker-grid/index.mjs
+var import_jsx_runtime64 = __toESM(require_jsx_runtime(), 1);
 var { Badge: Badge4 } = unlock(import_components17.privateApis);
 function GridItem3({
   view,
@@ -11515,8 +11785,13 @@ function GridItem3({
 }) {
   const { showTitle = true, showMedia = true, showDescription = true } = view;
   const id = getItemId(item);
+  const elementRef = (0, import_element28.useRef)(null);
   const isSelected2 = selection.includes(id);
-  const renderedMediaField = mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+  const setElementRef = (element) => {
+    elementRef.current = element;
+  };
+  useIntersectionObserver(elementRef, posinset);
+  const renderedMediaField = mediaField?.render ? /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
     mediaField.render,
     {
       item,
@@ -11524,12 +11799,13 @@ function GridItem3({
       config
     }
   ) : null;
-  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(titleField.render, { item, field: titleField }) : null;
-  return /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)(
+  const renderedTitleField = showTitle && titleField?.render ? /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(titleField.render, { item, field: titleField }) : null;
+  return /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(
     import_components17.Composite.Item,
     {
+      ref: setElementRef,
       "aria-label": titleField ? titleField.getValue({ item }) || (0, import_i18n18.__)("(no title)") : void 0,
-      render: ({ children, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(Stack, { direction: "column", children, ...props }),
+      render: ({ children, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(Stack, { direction: "column", children, ...props }),
       role: "option",
       "aria-posinset": posinset,
       "aria-setsize": setsize,
@@ -11548,8 +11824,8 @@ function GridItem3({
         }
       },
       children: [
-        showMedia && renderedMediaField && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", { className: "dataviews-view-picker-grid__media", children: renderedMediaField }),
-        showMedia && renderedMediaField && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+        showMedia && renderedMediaField && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", { className: "dataviews-view-picker-grid__media", children: renderedMediaField }),
+        showMedia && renderedMediaField && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
           DataViewsSelectionCheckbox,
           {
             item,
@@ -11562,24 +11838,24 @@ function GridItem3({
             tabIndex: -1
           }
         ),
-        showTitle && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+        showTitle && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
           Stack,
           {
             direction: "row",
             justify: "space-between",
             className: "dataviews-view-picker-grid__title-actions",
-            children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("div", { className: "dataviews-view-picker-grid__title-field dataviews-title-field", children: renderedTitleField })
+            children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", { className: "dataviews-view-picker-grid__title-field dataviews-title-field", children: renderedTitleField })
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)(Stack, { direction: "column", gap: "xs", children: [
-          showDescription && descriptionField?.render && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(Stack, { direction: "column", gap: "xs", children: [
+          showDescription && descriptionField?.render && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
             descriptionField.render,
             {
               item,
               field: descriptionField
             }
           ),
-          !!badgeFields?.length && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+          !!badgeFields?.length && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
             Stack,
             {
               direction: "row",
@@ -11589,11 +11865,11 @@ function GridItem3({
               align: "top",
               justify: "flex-start",
               children: badgeFields.map((field) => {
-                return /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+                return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
                   Badge4,
                   {
                     className: "dataviews-view-picker-grid__field-value",
-                    children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+                    children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
                       field.render,
                       {
                         item,
@@ -11606,14 +11882,14 @@ function GridItem3({
               })
             }
           ),
-          !!regularFields?.length && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+          !!regularFields?.length && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
             Stack,
             {
               direction: "column",
               className: "dataviews-view-picker-grid__fields",
               gap: "xs",
               children: regularFields.map((field) => {
-                return /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+                return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
                   import_components17.Flex,
                   {
                     className: "dataviews-view-picker-grid__field",
@@ -11622,14 +11898,14 @@ function GridItem3({
                     expanded: true,
                     style: { height: "auto" },
                     direction: "row",
-                    children: /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)(import_jsx_runtime63.Fragment, { children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(import_components17.FlexItem, { className: "dataviews-view-picker-grid__field-name", children: field.header }),
-                      /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+                    children: /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(import_jsx_runtime64.Fragment, { children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(import_components17.FlexItem, { className: "dataviews-view-picker-grid__field-name", children: field.header }),
+                      /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
                         import_components17.FlexItem,
                         {
                           className: "dataviews-view-picker-grid__field-value",
                           style: { maxHeight: "none" },
-                          children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+                          children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
                             field.render,
                             {
                               item,
@@ -11661,7 +11937,7 @@ function GridGroup({
     GridGroup,
     "dataviews-view-picker-grid-group__header"
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(
     Stack,
     {
       direction: "column",
@@ -11669,7 +11945,7 @@ function GridGroup({
       role: "group",
       "aria-labelledby": headerId,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
           "h3",
           {
             className: "dataviews-view-picker-grid-group__header",
@@ -11700,7 +11976,7 @@ function ViewPickerGrid({
   className,
   empty
 }) {
-  const { resizeObserverRef, paginationInfo, itemListLabel } = (0, import_element26.useContext)(dataviews_context_default);
+  const { resizeObserverRef, paginationInfo, itemListLabel } = (0, import_element28.useContext)(dataviews_context_default);
   const titleField = fields.find(
     (field) => field.id === view?.titleField
   );
@@ -11729,14 +12005,20 @@ function ViewPickerGrid({
   const size = "900px";
   const groupField = view.groupBy?.field ? fields.find((f2) => f2.id === view.groupBy?.field) : null;
   const dataByGroup = groupField ? getDataByGroup(data, groupField) : null;
-  const isInfiniteScroll = view.infiniteScrollEnabled && !dataByGroup;
+  const isInfiniteScroll = (view.infiniteScrollEnabled && !dataByGroup) ?? false;
   const currentPage = view?.page ?? 1;
   const perPage = view?.perPage ?? 0;
   const setSize = isInfiniteScroll ? paginationInfo?.totalItems : void 0;
-  return /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)(import_jsx_runtime63.Fragment, {
+  const gridColumns = useGridColumns();
+  const placeholdersNeeded = usePlaceholdersNeeded(
+    data,
+    isInfiniteScroll,
+    gridColumns
+  );
+  return /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(import_jsx_runtime64.Fragment, {
     // Render multiple groups.
     children: [
-      hasData && groupField && dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+      hasData && groupField && dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
         import_components17.Composite,
         {
           virtualFocus: true,
@@ -11753,7 +12035,7 @@ function ViewPickerGrid({
             }
           ),
           "aria-label": itemListLabel,
-          render: ({ children, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+          render: ({ children, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
             Stack,
             {
               direction: "column",
@@ -11763,13 +12045,13 @@ function ViewPickerGrid({
             }
           ),
           children: Array.from(dataByGroup.entries()).map(
-            ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+            ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
               GridGroup,
               {
                 groupName,
                 groupField,
                 showLabel: view.groupBy?.showLabel !== false,
-                children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+                children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
                   GridItems,
                   {
                     previewSize: usedPreviewSize,
@@ -11779,8 +12061,8 @@ function ViewPickerGrid({
                     "aria-busy": isLoading,
                     ref: resizeObserverRef,
                     children: groupItems.map((item) => {
-                      const posInSet = (currentPage - 1) * perPage + data.indexOf(item) + 1;
-                      return /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+                      const posInSet = item.position ?? (currentPage - 1) * perPage + data.indexOf(item) + 1;
+                      return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
                         GridItem3,
                         {
                           view,
@@ -11812,10 +12094,10 @@ function ViewPickerGrid({
         }
       ),
       // Render a single grid with all data.
-      hasData && !dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+      hasData && !dataByGroup && /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(
         import_components17.Composite,
         {
-          render: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+          render: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
             GridItems,
             {
               className: clsx_default(
@@ -11838,58 +12120,77 @@ function ViewPickerGrid({
           role: "listbox",
           "aria-multiselectable": isMultiselect,
           "aria-label": itemListLabel,
-          children: data.map((item, index) => {
-            let posinset = isInfiniteScroll ? index + 1 : void 0;
-            if (!isInfiniteScroll) {
-              posinset = (currentPage - 1) * perPage + index + 1;
-            }
-            return /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
-              GridItem3,
-              {
-                view,
-                multiselect: isMultiselect,
-                selection,
-                onChangeSelection,
-                getItemId,
-                item,
-                mediaField,
-                titleField,
-                descriptionField,
-                regularFields,
-                badgeFields,
-                config: {
-                  sizes: size
+          children: [
+            Array.from({ length: placeholdersNeeded }).map(
+              (_, index) => /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+                import_components17.Composite.Item,
+                {
+                  render: ({ children, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+                    Stack,
+                    {
+                      direction: "column",
+                      children,
+                      ...props
+                    }
+                  ),
+                  role: "option",
+                  "aria-hidden": true,
+                  tabIndex: -1,
+                  className: "dataviews-view-picker-grid__card dataviews-view-picker-grid__placeholder"
                 },
-                posinset,
-                setsize: setSize
-              },
-              getItemId(item)
-            );
-          })
+                `placeholder-${index}`
+              )
+            ),
+            data.map((item) => {
+              const posinset = item.position;
+              return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+                GridItem3,
+                {
+                  view,
+                  multiselect: isMultiselect,
+                  selection,
+                  onChangeSelection,
+                  getItemId,
+                  item,
+                  mediaField,
+                  titleField,
+                  descriptionField,
+                  regularFields,
+                  badgeFields,
+                  config: {
+                    sizes: size
+                  },
+                  posinset,
+                  setsize: setSize
+                },
+                getItemId(item)
+              );
+            })
+          ]
         }
       ),
       // Render empty state.
-      !hasData && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
+      !hasData && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
         "div",
         {
           className: clsx_default({
             "dataviews-loading": isLoading,
             "dataviews-no-results": !isLoading
           }),
-          children: isLoading ? /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(import_components17.Spinner, {}) }) : empty
+          children: isLoading ? /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(import_components17.Spinner, {}) }) : empty
         }
       ),
-      hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime63.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(import_components17.Spinner, {}) })
+      hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(import_components17.Spinner, {}) })
     ]
   });
 }
 var picker_grid_default = ViewPickerGrid;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/picker-table/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/picker-table/index.mjs
 var import_i18n19 = __toESM(require_i18n(), 1);
 var import_components18 = __toESM(require_components(), 1);
-var import_element27 = __toESM(require_element(), 1);
-var import_jsx_runtime64 = __toESM(require_jsx_runtime(), 1);
+var import_element29 = __toESM(require_element(), 1);
+var import_jsx_runtime65 = __toESM(require_jsx_runtime(), 1);
 function TableColumnField2({
   item,
   fields,
@@ -11904,7 +12205,7 @@ function TableColumnField2({
     "dataviews-view-table__cell-align-end": align === "end",
     "dataviews-view-table__cell-align-center": align === "center"
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", { className, children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(field.render, { item, field }) });
+  return /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className, children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(field.render, { item, field }) });
 }
 function TableRow2({
   item,
@@ -11920,9 +12221,14 @@ function TableRow2({
   multiselect,
   posinset
 }) {
-  const { paginationInfo } = (0, import_element27.useContext)(dataviews_context_default);
+  const { paginationInfo } = (0, import_element29.useContext)(dataviews_context_default);
   const isSelected2 = selection.includes(id);
-  const [isHovered, setIsHovered] = (0, import_element27.useState)(false);
+  const [isHovered, setIsHovered] = (0, import_element29.useState)(false);
+  const elementRef = (0, import_element29.useRef)(null);
+  const setElementRef = (element) => {
+    elementRef.current = element;
+  };
+  useIntersectionObserver(elementRef, posinset);
   const {
     showTitle = true,
     showMedia = true,
@@ -11937,10 +12243,11 @@ function TableRow2({
   };
   const columns = view.fields ?? [];
   const hasPrimaryColumn = titleField && showTitle || mediaField && showMedia || descriptionField && showDescription;
-  return /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(
     import_components18.Composite.Item,
     {
-      render: ({ children, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+      ref: setElementRef,
+      render: ({ children, ...props }) => /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
         "tr",
         {
           className: clsx_default("dataviews-view-table__row", {
@@ -11968,12 +12275,12 @@ function TableRow2({
         }
       },
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
           "td",
           {
             className: "dataviews-view-table__checkbox-column",
             role: "presentation",
-            children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", { className: "dataviews-view-table__cell-content-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+            children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "dataviews-view-table__cell-content-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
               DataViewsSelectionCheckbox,
               {
                 item,
@@ -11988,7 +12295,7 @@ function TableRow2({
             ) })
           }
         ),
-        hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("td", { role: "presentation", children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+        hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("td", { role: "presentation", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
           column_primary_default,
           {
             item,
@@ -12000,7 +12307,7 @@ function TableRow2({
         ) }),
         columns.map((column) => {
           const { width, maxWidth, minWidth, align } = view.layout?.styles?.[column] ?? {};
-          return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+          return /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
             "td",
             {
               style: {
@@ -12009,7 +12316,7 @@ function TableRow2({
                 minWidth
               },
               role: "presentation",
-              children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+              children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
                 TableColumnField2,
                 {
                   fields,
@@ -12041,17 +12348,20 @@ function ViewPickerTable({
   className,
   empty
 }) {
-  const headerMenuRefs = (0, import_element27.useRef)(/* @__PURE__ */ new Map());
-  const headerMenuToFocusRef = (0, import_element27.useRef)(void 0);
-  const [nextHeaderMenuToFocus, setNextHeaderMenuToFocus] = (0, import_element27.useState)();
+  const headerMenuRefs = (0, import_element29.useRef)(/* @__PURE__ */ new Map());
+  const headerMenuToFocusRef = (0, import_element29.useRef)(void 0);
+  const [nextHeaderMenuToFocus, setNextHeaderMenuToFocus] = (0, import_element29.useState)();
   const isMultiselect = useIsMultiselectPicker(actions2) ?? false;
-  (0, import_element27.useEffect)(() => {
+  (0, import_element29.useEffect)(() => {
     if (headerMenuToFocusRef.current) {
       headerMenuToFocusRef.current.focus();
       headerMenuToFocusRef.current = void 0;
     }
   });
-  const tableNoticeId = (0, import_element27.useId)();
+  const groupField = view.groupBy?.field ? fields.find((f2) => f2.id === view.groupBy?.field) : null;
+  const dataByGroup = groupField ? getDataByGroup(data, groupField) : null;
+  const isInfiniteScroll = view.infiniteScrollEnabled && !dataByGroup;
+  const tableNoticeId = (0, import_element29.useId)();
   if (nextHeaderMenuToFocus) {
     headerMenuToFocusRef.current = nextHeaderMenuToFocus;
     setNextHeaderMenuToFocus(void 0);
@@ -12068,8 +12378,6 @@ function ViewPickerTable({
   const descriptionField = fields.find(
     (field) => field.id === view.descriptionField
   );
-  const groupField = view.groupBy?.field ? fields.find((f2) => f2.id === view.groupBy?.field) : null;
-  const dataByGroup = groupField ? getDataByGroup(data, groupField) : null;
   const { showTitle = true, showMedia = true, showDescription = true } = view;
   const hasPrimaryColumn = titleField && showTitle || mediaField && showMedia || descriptionField && showDescription;
   const columns = view.fields ?? [];
@@ -12083,9 +12391,8 @@ function ViewPickerTable({
       headerMenuRefs.current.delete(column);
     }
   };
-  const isInfiniteScroll = view.infiniteScrollEnabled && !dataByGroup;
-  return /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(import_jsx_runtime64.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(import_jsx_runtime65.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(
       "table",
       {
         className: clsx_default(
@@ -12102,23 +12409,24 @@ function ViewPickerTable({
         "aria-describedby": tableNoticeId,
         role: isInfiniteScroll ? "feed" : "listbox",
         children: [
-          /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("thead", { role: "presentation", children: /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(
+          /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("thead", { role: "presentation", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(
             "tr",
             {
               className: "dataviews-view-table__row",
               role: "presentation",
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("th", { className: "dataviews-view-table__checkbox-column", children: isMultiselect && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+                /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("th", { className: "dataviews-view-table__checkbox-column", children: isMultiselect && /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
                   BulkSelectionCheckbox,
                   {
                     selection,
                     onChangeSelection,
                     data,
                     actions: actions2,
-                    getItemId
+                    getItemId,
+                    disableSelectAll: isInfiniteScroll
                   }
                 ) }),
-                hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("th", { children: titleField && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+                hasPrimaryColumn && /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("th", { children: titleField && /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
                   column_header_menu_default,
                   {
                     ref: headerMenuRef(
@@ -12136,7 +12444,7 @@ function ViewPickerTable({
                 ) }),
                 columns.map((column, index) => {
                   const { width, maxWidth, minWidth, align } = view.layout?.styles?.[column] ?? {};
-                  return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+                  return /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
                     "th",
                     {
                       style: {
@@ -12147,7 +12455,7 @@ function ViewPickerTable({
                       },
                       "aria-sort": view.sort?.direction && view.sort?.field === column ? sortValues[view.sort.direction] : void 0,
                       scope: "col",
-                      children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+                      children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
                         column_header_menu_default,
                         {
                           ref: headerMenuRef(column, index),
@@ -12168,19 +12476,19 @@ function ViewPickerTable({
             }
           ) }),
           hasData && groupField && dataByGroup ? Array.from(dataByGroup.entries()).map(
-            ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(
+            ([groupName, groupItems]) => /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(
               import_components18.Composite,
               {
                 virtualFocus: true,
                 orientation: "vertical",
-                render: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("tbody", { role: "group" }),
+                render: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("tbody", { role: "group" }),
                 children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+                  /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
                     "tr",
                     {
                       className: "dataviews-view-table__group-header-row",
                       role: "presentation",
-                      children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+                      children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
                         "td",
                         {
                           colSpan: columns.length + (hasPrimaryColumn ? 1 : 0) + 1,
@@ -12196,7 +12504,7 @@ function ViewPickerTable({
                       )
                     }
                   ),
-                  groupItems.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+                  groupItems.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
                     TableRow2,
                     {
                       item,
@@ -12217,36 +12525,40 @@ function ViewPickerTable({
               },
               `group-${groupName}`
             )
-          ) : /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+          ) : /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
             import_components18.Composite,
             {
-              render: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("tbody", { role: "presentation" }),
+              render: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("tbody", { role: "presentation" }),
               virtualFocus: true,
               orientation: "vertical",
-              children: hasData && data.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
-                TableRow2,
-                {
-                  item,
-                  fields,
-                  id: getItemId(item) || index.toString(),
-                  view,
-                  titleField,
-                  mediaField,
-                  descriptionField,
-                  selection,
-                  getItemId,
-                  onChangeSelection,
-                  multiselect: isMultiselect,
-                  posinset: index + 1
-                },
-                getItemId(item)
-              ))
+              children: hasData && data.map((item, index) => {
+                const itemId = getItemId(item);
+                const posinset = item.position;
+                return /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+                  TableRow2,
+                  {
+                    item,
+                    fields,
+                    id: itemId || index.toString(),
+                    view,
+                    titleField,
+                    mediaField,
+                    descriptionField,
+                    selection,
+                    getItemId,
+                    onChangeSelection,
+                    multiselect: isMultiselect,
+                    posinset
+                  },
+                  itemId
+                );
+              })
             }
           )
         ]
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(
+    /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(
       "div",
       {
         className: clsx_default({
@@ -12255,8 +12567,8 @@ function ViewPickerTable({
         }),
         id: tableNoticeId,
         children: [
-          !hasData && (isLoading ? /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(import_components18.Spinner, {}) }) : empty),
-          hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(import_components18.Spinner, {}) })
+          !hasData && (isLoading ? /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(import_components18.Spinner, {}) }) : empty),
+          hasData && isLoading && /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("p", { className: "dataviews-loading-more", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(import_components18.Spinner, {}) })
         ]
       }
     )
@@ -12264,15 +12576,15 @@ function ViewPickerTable({
 }
 var picker_table_default = ViewPickerTable;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/density-picker.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/density-picker.mjs
 var import_components19 = __toESM(require_components(), 1);
 var import_i18n20 = __toESM(require_i18n(), 1);
-var import_element28 = __toESM(require_element(), 1);
-var import_jsx_runtime65 = __toESM(require_jsx_runtime(), 1);
+var import_element30 = __toESM(require_element(), 1);
+var import_jsx_runtime66 = __toESM(require_jsx_runtime(), 1);
 function DensityPicker() {
-  const context = (0, import_element28.useContext)(dataviews_context_default);
+  const context = (0, import_element30.useContext)(dataviews_context_default);
   const view = context.view;
-  return /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)(
     import_components19.__experimentalToggleGroupControl,
     {
       size: "__unstable-large",
@@ -12289,7 +12601,7 @@ function DensityPicker() {
       },
       isBlock: true,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
           import_components19.__experimentalToggleGroupControlOption,
           {
             value: "comfortable",
@@ -12300,7 +12612,7 @@ function DensityPicker() {
           },
           "comfortable"
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
           import_components19.__experimentalToggleGroupControlOption,
           {
             value: "balanced",
@@ -12308,7 +12620,7 @@ function DensityPicker() {
           },
           "balanced"
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
           import_components19.__experimentalToggleGroupControlOption,
           {
             value: "compact",
@@ -12321,11 +12633,11 @@ function DensityPicker() {
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/preview-size-picker.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/preview-size-picker.mjs
 var import_components20 = __toESM(require_components(), 1);
 var import_i18n21 = __toESM(require_i18n(), 1);
-var import_element29 = __toESM(require_element(), 1);
-var import_jsx_runtime66 = __toESM(require_jsx_runtime(), 1);
+var import_element31 = __toESM(require_element(), 1);
+var import_jsx_runtime67 = __toESM(require_jsx_runtime(), 1);
 var imageSizes2 = [
   {
     value: 120,
@@ -12356,7 +12668,7 @@ var imageSizes2 = [
   }
 ];
 function PreviewSizePicker() {
-  const context = (0, import_element29.useContext)(dataviews_context_default);
+  const context = (0, import_element31.useContext)(dataviews_context_default);
   const view = context.view;
   const breakValues = imageSizes2.filter((size) => {
     return context.containerWidth >= size.breakpoint;
@@ -12368,7 +12680,7 @@ function PreviewSizePicker() {
       value: index
     };
   });
-  return /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
     import_components20.RangeControl,
     {
       __next40pxDefaultSize: true,
@@ -12393,16 +12705,16 @@ function PreviewSizePicker() {
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/grid-config-options.mjs
-var import_jsx_runtime67 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/utils/grid-config-options.mjs
+var import_jsx_runtime68 = __toESM(require_jsx_runtime(), 1);
 function GridConfigOptions() {
-  return /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)(import_jsx_runtime67.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(DensityPicker, {}),
-    /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(PreviewSizePicker, {})
+  return /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(import_jsx_runtime68.Fragment, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(DensityPicker, {}),
+    /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(PreviewSizePicker, {})
   ] });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layouts/index.mjs
 var VIEW_LAYOUTS = [
   {
     type: LAYOUT_TABLE,
@@ -12450,15 +12762,15 @@ var VIEW_LAYOUTS = [
   }
 ];
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/filters.mjs
-var import_element37 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/filters.mjs
+var import_element39 = __toESM(require_element(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/filter.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/filter.mjs
 var import_components23 = __toESM(require_components(), 1);
 var import_i18n25 = __toESM(require_i18n(), 1);
-var import_element34 = __toESM(require_element(), 1);
+var import_element36 = __toESM(require_element(), 1);
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/XMCVU3LR.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/UWJK2WK2.js
 function noop2(..._) {
 }
 function applyState(argument, currentValue) {
@@ -12545,7 +12857,7 @@ function defaultValue(...values) {
   return void 0;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/YXGXYGQX.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/YXGXYGQX.js
 var import_react5 = __toESM(require_react(), 1);
 function setRef(ref, value) {
   if (typeof ref === "function") {
@@ -12596,7 +12908,7 @@ function mergeProps2(base, overrides) {
   return props;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/3DNM6L6E.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/G7XPWBXK.js
 var canUseDOM = checkIsBrowser();
 function checkIsBrowser() {
   var _a;
@@ -12761,7 +13073,7 @@ function isElementPreceding(a2, b2) {
   );
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/SNHYQNEZ.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/GMGLSF2B.js
 function isTouchDevice() {
   return canUseDOM && !!navigator.maxTouchPoints;
 }
@@ -12776,7 +13088,7 @@ function isFirefox() {
   return canUseDOM && /firefox\//i.test(navigator.userAgent);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/utils/events.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/utils/events.js
 function isPortalEvent(event) {
   return Boolean(
     event.currentTarget && !contains2(event.currentTarget, event.target)
@@ -12854,12 +13166,12 @@ function addGlobalEventListener(type, listener, options, scope = window) {
     for (const frame of Array.from(scope.frames)) {
       children.push(addGlobalEventListener(type, listener, options, frame));
     }
-  } catch (e2) {
+  } catch {
   }
   const removeEventListener = () => {
     try {
       scope.document.removeEventListener(type, listener, options);
-    } catch (e2) {
+    } catch {
     }
     for (const remove of children) {
       remove();
@@ -12868,7 +13180,7 @@ function addGlobalEventListener(type, listener, options, scope = window) {
   return removeEventListener;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/KPHZR4MB.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/CEM7J6TT.js
 var React32 = __toESM(require_react(), 1);
 var import_react6 = __toESM(require_react(), 1);
 var _React = { ...React32 };
@@ -13018,6 +13330,7 @@ function useWrapElement(props, callback, deps = []) {
       }
       return callback(element);
     },
+    // oxlint-disable-next-line exhaustive-deps
     [...deps, props.wrapElement]
   );
   return { ...props, wrapElement };
@@ -13025,8 +13338,12 @@ function useWrapElement(props, callback, deps = []) {
 function useMetadataProps(props, key, value) {
   const parent = props.onLoadedMetadataCapture;
   const onLoadedMetadataCapture = (0, import_react6.useMemo)(() => {
-    return Object.assign(() => {
-    }, { ...parent, [key]: value });
+    return Object.assign(
+      () => {
+      },
+      parent,
+      ...value !== void 0 ? [{ [key]: value }] : []
+    );
   }, [parent, key, value]);
   return [parent == null ? void 0 : parent[key], { onLoadedMetadataCapture }];
 }
@@ -13062,9 +13379,9 @@ function resetMouseMoving() {
   mouseMoving = false;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/GWSL6KNJ.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/TVXRYIJB.js
 var React33 = __toESM(require_react(), 1);
-var import_jsx_runtime68 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime69 = __toESM(require_jsx_runtime(), 1);
 function forwardRef22(render4) {
   const Role = React33.forwardRef(
     // @ts-ignore Incompatible with React 19 types. Ignore for now.
@@ -13090,7 +13407,7 @@ function createElement3(Type, props) {
   } else if (render4) {
     element = render4(rest);
   } else {
-    element = /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(Type, { ...rest });
+    element = /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(Type, { ...rest });
   }
   if (wrapElement) {
     return wrapElement(element);
@@ -13122,14 +13439,14 @@ function createStoreContext(providers = [], scopedProviders = []) {
   };
   const ContextProvider = (props) => {
     return providers.reduceRight(
-      (children, Provider) => /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(Provider, { ...props, children }),
-      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(context.Provider, { ...props })
+      (children, Provider) => /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(Provider, { ...props, children }),
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(context.Provider, { ...props })
     );
   };
   const ScopedContextProvider = (props) => {
-    return /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(ContextProvider, { ...props, children: scopedProviders.reduceRight(
-      (children, Provider) => /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(Provider, { ...props, children }),
-      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(scopedContext.Provider, { ...props })
+    return /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(ContextProvider, { ...props, children: scopedProviders.reduceRight(
+      (children, Provider) => /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(Provider, { ...props, children }),
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(scopedContext.Provider, { ...props })
     ) });
   };
   return {
@@ -13143,7 +13460,7 @@ function createStoreContext(providers = [], scopedProviders = []) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SMPCIMZM.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/FQHJBBMI.js
 var ctx = createStoreContext();
 var useCollectionContext = ctx.useContext;
 var useCollectionScopedContext = ctx.useScopedContext;
@@ -13151,7 +13468,7 @@ var useCollectionProviderContext = ctx.useProviderContext;
 var CollectionContextProvider = ctx.ContextProvider;
 var CollectionScopedContextProvider = ctx.ScopedContextProvider;
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/AVVXDJMZ.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/55FNNNML.js
 var import_react7 = __toESM(require_react(), 1);
 var ctx2 = createStoreContext(
   [CollectionContextProvider],
@@ -13169,7 +13486,7 @@ var CompositeRowContext = (0, import_react7.createContext)(
   void 0
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/5VQZOHHZ.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/7NJRHOSP.js
 function findFirstEnabledItem(items, excludeId) {
   return items.find((item) => {
     if (excludeId) {
@@ -13230,7 +13547,7 @@ function isItem(store5, element, exclude) {
   return true;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/Z2O3VLAQ.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/IKWLDXMV.js
 var import_react8 = __toESM(require_react(), 1);
 var TagName = "div";
 var useCollectionItem = createHook(
@@ -13266,23 +13583,17 @@ var CollectionItem = forwardRef22(function CollectionItem2(props) {
   return createElement3(TagName, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SWN3JYXT.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SWN3JYXT.js
 var import_react9 = __toESM(require_react(), 1);
 var FocusableContext = (0, import_react9.createContext)(true);
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/utils/focus.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/utils/focus.js
 var selector = "input:not([type='hidden']):not([disabled]), select:not([disabled]), textarea:not([disabled]), a[href], button:not([disabled]), [tabindex], summary, iframe, object, embed, area[href], audio[controls], video[controls], [contenteditable]:not([contenteditable='false'])";
 function isFocusable(element) {
   if (!element.matches(selector)) return false;
   if (!isVisible(element)) return false;
   if (element.closest("[inert]")) return false;
   return true;
-}
-function getClosestFocusable(element) {
-  while (element && !isFocusable(element)) {
-    element = element.closest(selector);
-  }
-  return element || null;
 }
 function hasFocus(element) {
   const activeElement2 = getActiveElement(element);
@@ -13302,11 +13613,6 @@ function hasFocusWithin(element) {
   if (activeDescendant === element.id) return true;
   return !!element.querySelector(`#${CSS.escape(activeDescendant)}`);
 }
-function focusIfNeeded(element) {
-  if (!hasFocusWithin(element) && isFocusable(element)) {
-    element.focus();
-  }
-}
 function focusIntoView(element, options) {
   if (!("scrollIntoView" in element)) {
     element.focus();
@@ -13316,9 +13622,10 @@ function focusIntoView(element, options) {
   }
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/U6HHPQDW.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/GR523XJ6.js
 var import_react10 = __toESM(require_react(), 1);
 var TagName2 = "div";
+var accessibleWhenDisabledSymbol = /* @__PURE__ */ Symbol("accessibleWhenDisabled");
 var isSafariBrowser = isSafari();
 var alwaysFocusVisibleInputTypes = [
   "text",
@@ -13335,11 +13642,6 @@ var alwaysFocusVisibleInputTypes = [
   "datetime",
   "datetime-local"
 ];
-var safariFocusAncestorSymbol = /* @__PURE__ */ Symbol("safariFocusAncestor");
-function markSafariFocusAncestor(element, value) {
-  if (!element) return;
-  element[safariFocusAncestorSymbol] = value;
-}
 function isAlwaysFocusVisible(element) {
   const { tagName, readOnly, type } = element;
   if (tagName === "TEXTAREA" && !readOnly) return true;
@@ -13354,19 +13656,6 @@ function isAlwaysFocusVisible(element) {
   }
   return false;
 }
-function getLabels(element) {
-  if ("labels" in element) {
-    return element.labels;
-  }
-  return null;
-}
-function isNativeCheckboxOrRadio(element) {
-  const tagName = element.tagName.toLowerCase();
-  if (tagName === "input" && element.type) {
-    return element.type === "radio" || element.type === "checkbox";
-  }
-  return false;
-}
 function isNativeTabbable(tagName) {
   if (!tagName) return true;
   return tagName === "button" || tagName === "summary" || tagName === "input" || tagName === "select" || tagName === "textarea" || tagName === "a";
@@ -13375,10 +13664,31 @@ function supportsDisabledAttribute(tagName) {
   if (!tagName) return true;
   return tagName === "button" || tagName === "input" || tagName === "select" || tagName === "textarea";
 }
-function getTabIndex(focusable, trulyDisabled, nativeTabbable, supportsDisabled, tabIndexProp) {
-  if (!focusable) {
-    return tabIndexProp;
+var buttonInputTypes2 = [
+  "button",
+  "color",
+  "file",
+  "image",
+  "reset",
+  "submit"
+];
+function needsSafariTabIndex(tagName, inputType) {
+  if (tagName === "button") return true;
+  if (tagName === "input" && inputType) {
+    if (inputType === "checkbox" || inputType === "radio") return true;
+    return buttonInputTypes2.includes(inputType);
   }
+  return false;
+}
+function getTabIndex({
+  focusable,
+  trulyDisabled,
+  nativeTabbable,
+  supportsDisabled,
+  safariTabIndex,
+  tabIndexProp
+}) {
+  if (!focusable) return tabIndexProp;
   if (trulyDisabled) {
     if (nativeTabbable && !supportsDisabled) {
       return -1;
@@ -13386,9 +13696,12 @@ function getTabIndex(focusable, trulyDisabled, nativeTabbable, supportsDisabled,
     return;
   }
   if (nativeTabbable) {
+    if (safariTabIndex && tabIndexProp == null) {
+      return 0;
+    }
     return tabIndexProp;
   }
-  return tabIndexProp || 0;
+  return tabIndexProp != null ? tabIndexProp : 0;
 }
 function useDisableEvent(onEvent, disabled2) {
   return useEvent((event) => {
@@ -13425,6 +13738,12 @@ var useFocusable = createHook(
     ...props
   }) {
     const ref = (0, import_react10.useRef)(null);
+    const [parentAccessibleWhenDisabled, metadataProps] = useMetadataProps(
+      props,
+      accessibleWhenDisabledSymbol,
+      accessibleWhenDisabled
+    );
+    accessibleWhenDisabled != null ? accessibleWhenDisabled : accessibleWhenDisabled = parentAccessibleWhenDisabled;
     (0, import_react10.useEffect)(() => {
       if (!focusable) return;
       if (hasInstalledGlobalEventListeners2) return;
@@ -13432,25 +13751,6 @@ var useFocusable = createHook(
       addGlobalEventListener("keydown", onGlobalKeyDown, true);
       hasInstalledGlobalEventListeners2 = true;
     }, [focusable]);
-    if (isSafariBrowser) {
-      (0, import_react10.useEffect)(() => {
-        if (!focusable) return;
-        const element = ref.current;
-        if (!element) return;
-        if (!isNativeCheckboxOrRadio(element)) return;
-        const labels = getLabels(element);
-        if (!labels) return;
-        const onMouseUp = () => queueMicrotask(() => element.focus());
-        for (const label of labels) {
-          label.addEventListener("mouseup", onMouseUp);
-        }
-        return () => {
-          for (const label of labels) {
-            label.removeEventListener("mouseup", onMouseUp);
-          }
-        };
-      }, [focusable]);
-    }
     const disabled2 = focusable && disabledFromProps(props);
     const trulyDisabled = !!disabled2 && !accessibleWhenDisabled;
     const [focusVisible, setFocusVisible] = (0, import_react10.useState)(false);
@@ -13483,30 +13783,6 @@ var useFocusable = createHook(
       disabled2
     );
     const onClickCapture = useDisableEvent(props.onClickCapture, disabled2);
-    const onMouseDownProp = props.onMouseDown;
-    const onMouseDown = useEvent((event) => {
-      onMouseDownProp == null ? void 0 : onMouseDownProp(event);
-      if (event.defaultPrevented) return;
-      if (!focusable) return;
-      const element = event.currentTarget;
-      if (!isSafariBrowser) return;
-      if (isPortalEvent(event)) return;
-      if (!isButton(element) && !isNativeCheckboxOrRadio(element)) return;
-      let receivedFocus = false;
-      const onFocus = () => {
-        receivedFocus = true;
-      };
-      const options = { capture: true, once: true };
-      element.addEventListener("focusin", onFocus, options);
-      const focusableContainer = getClosestFocusable(element.parentElement);
-      markSafariFocusAncestor(focusableContainer, true);
-      queueBeforeEvent(element, "mouseup", () => {
-        element.removeEventListener("focusin", onFocus, true);
-        markSafariFocusAncestor(focusableContainer, false);
-        if (receivedFocus) return;
-        focusIfNeeded(element);
-      });
-    });
     const handleFocusVisible = (event, currentTarget) => {
       if (currentTarget) {
         event.currentTarget = currentTarget;
@@ -13574,6 +13850,17 @@ var useFocusable = createHook(
     const tagName = useTagName(ref);
     const nativeTabbable = focusable && isNativeTabbable(tagName);
     const supportsDisabled = focusable && supportsDisabledAttribute(tagName);
+    const [safariTabIndex, setSafariTabIndex] = (0, import_react10.useState)(false);
+    if (isSafariBrowser) {
+      (0, import_react10.useEffect)(() => {
+        if (!focusable) return;
+        const element = ref.current;
+        if (!element) return;
+        const tag = element.tagName.toLowerCase();
+        const type = element.type;
+        setSafariTabIndex(needsSafariTabIndex(tag, type));
+      }, [focusable]);
+    }
     const styleProp = props.style;
     const style = (0, import_react10.useMemo)(() => {
       if (trulyDisabled) {
@@ -13586,22 +13873,23 @@ var useFocusable = createHook(
       "data-autofocus": autoFocus || void 0,
       "aria-disabled": disabled2 || void 0,
       ...props,
+      ...metadataProps,
       ref: useMergeRefs2(ref, autoFocusRef, props.ref),
       style,
-      tabIndex: getTabIndex(
+      tabIndex: getTabIndex({
         focusable,
         trulyDisabled,
         nativeTabbable,
         supportsDisabled,
-        props.tabIndex
-      ),
+        safariTabIndex,
+        tabIndexProp: props.tabIndex
+      }),
       disabled: supportsDisabled && trulyDisabled ? true : void 0,
       // TODO: Test Focusable contentEditable.
       contentEditable: disabled2 ? void 0 : props.contentEditable,
       onKeyPressCapture,
       onClickCapture,
       onMouseDownCapture,
-      onMouseDown,
       onKeyDownCapture,
       onFocusCapture,
       onBlur
@@ -13614,7 +13902,7 @@ var Focusable = forwardRef22(function Focusable2(props) {
   return createElement3(TagName2, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/PZ3OL7I2.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/GHQLK2M5.js
 var import_react11 = __toESM(require_react(), 1);
 var TagName3 = "button";
 function isNativeClick(event) {
@@ -13718,7 +14006,7 @@ var Command = forwardRef22(function Command2(props) {
   return createElement3(TagName3, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/SXKM4CGU.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/XTZ53NXG.js
 function getInternal(store5, key) {
   const internals = store5.__unstableInternals;
   invariant(internals, "Invalid store");
@@ -13925,10 +14213,9 @@ If there's a particular need for this, please submit a feature request at https:
   );
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/Q5W46E73.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/YAS7X7HB.js
 var React34 = __toESM(require_react(), 1);
 var import_shim = __toESM(require_shim(), 1);
-var { useSyncExternalStore } = import_shim.default;
 var noopSubscribe = () => () => {
 };
 function useStoreState(store5, keyOrSelector = identity) {
@@ -13949,7 +14236,7 @@ function useStoreState(store5, keyOrSelector = identity) {
     if (!hasOwnProperty(state, key)) return;
     return state[key];
   };
-  return useSyncExternalStore(storeSubscribe, getSnapshot, getSnapshot);
+  return (0, import_shim.useSyncExternalStore)(storeSubscribe, getSnapshot, getSnapshot);
 }
 function useStoreStateObject(store5, object) {
   const objRef = React34.useRef(
@@ -13990,7 +14277,7 @@ function useStoreStateObject(store5, object) {
     }
     return objRef.current;
   };
-  return useSyncExternalStore(storeSubscribe, getSnapshot, getSnapshot);
+  return (0, import_shim.useSyncExternalStore)(storeSubscribe, getSnapshot, getSnapshot);
 }
 function useStoreProps(store5, props, key, setKey) {
   const value = hasOwnProperty(props, key) ? props[key] : void 0;
@@ -14031,9 +14318,9 @@ function useStore(createStore2, props) {
   return [memoizedStore, updateStore];
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/WZWDIE3S.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/ZCYMVQGT.js
 var import_react12 = __toESM(require_react(), 1);
-var import_jsx_runtime69 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime70 = __toESM(require_jsx_runtime(), 1);
 var TagName4 = "button";
 function isEditableElement(element) {
   if (isTextbox(element)) return true;
@@ -14292,13 +14579,13 @@ var useCompositeItem2 = createHook(
     );
     props = useWrapElement(
       props,
-      (element) => /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(CompositeItemContext.Provider, { value: providerValue, children: element }),
+      (element) => /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(CompositeItemContext.Provider, { value: providerValue, children: element }),
       [providerValue]
     );
     props = {
-      id,
       "data-active-item": isActiveItem || void 0,
       ...props,
+      id,
       ref: useMergeRefs2(ref, props.ref),
       tabIndex: isTabbable ? props.tabIndex : -1,
       onFocus,
@@ -14326,7 +14613,7 @@ var CompositeItem = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/7PRQYBBV.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/7PRQYBBV.js
 function toArray(arg) {
   if (Array.isArray(arg)) {
     return arg;
@@ -14344,9 +14631,9 @@ function reverseArray(array) {
   return array.slice().reverse();
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/ZMWF7ASR.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/6PX47O7P.js
 var import_react13 = __toESM(require_react(), 1);
-var import_jsx_runtime70 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime71 = __toESM(require_jsx_runtime(), 1);
 var TagName5 = "div";
 function isGrid(items) {
   return items.some((item) => !!item.rowId);
@@ -14389,10 +14676,23 @@ function findFirstEnabledItemInTheLastRow(items) {
     flatten2DArray(reverseArray(groupItemsByRows(items)))
   );
 }
+function withBaseScrollPreserved(store5, callback) {
+  const { virtualFocus, baseElement } = store5.getState();
+  if (!virtualFocus || !baseElement || !isTextField(baseElement)) {
+    callback();
+    return;
+  }
+  const savedScrollLeft = baseElement.scrollLeft;
+  const savedScrollTop = baseElement.scrollTop;
+  callback();
+  baseElement.scrollLeft = savedScrollLeft;
+  baseElement.scrollTop = savedScrollTop;
+}
 function useScheduleFocus(store5) {
   const [scheduled, setScheduled] = (0, import_react13.useState)(false);
   const schedule = (0, import_react13.useCallback)(() => setScheduled(true), []);
-  const activeItem = store5.useState(
+  const activeItem = useStoreState(
+    store5,
     (state) => getEnabledItem(store5, state.activeId)
   );
   (0, import_react13.useEffect)(() => {
@@ -14400,8 +14700,10 @@ function useScheduleFocus(store5) {
     if (!scheduled) return;
     if (!activeElement2) return;
     setScheduled(false);
-    activeElement2.focus({ preventScroll: true });
-  }, [activeItem, scheduled]);
+    withBaseScrollPreserved(store5, () => {
+      activeElement2.focus({ preventScroll: true });
+    });
+  }, [store5, activeItem, scheduled]);
   return schedule;
 }
 var useComposite = createHook(
@@ -14421,7 +14723,7 @@ var useComposite = createHook(
     const ref = (0, import_react13.useRef)(null);
     const previousElementRef = (0, import_react13.useRef)(null);
     const scheduleFocus = useScheduleFocus(store5);
-    const moves = store5.useState("moves");
+    const moves = useStoreState(store5, "moves");
     const [, setBaseElement] = useTransactionState(
       composite ? store5.setBaseElement : null
     );
@@ -14434,7 +14736,7 @@ var useComposite = createHook(
       const { activeId: activeId2 } = store5.getState();
       const itemElement = (_a = getEnabledItem(store5, activeId2)) == null ? void 0 : _a.element;
       if (!itemElement) return;
-      focusIntoView(itemElement);
+      withBaseScrollPreserved(store5, () => focusIntoView(itemElement));
     }, [store5, moves, composite, focusOnMove]);
     useSafeLayoutEffect(() => {
       if (!store5) return;
@@ -14453,8 +14755,8 @@ var useComposite = createHook(
         baseElement.focus();
       }
     }, [store5, moves, composite]);
-    const activeId = store5.useState("activeId");
-    const virtualFocus = store5.useState("virtualFocus");
+    const activeId = useStoreState(store5, "activeId");
+    const virtualFocus = useStoreState(store5, "virtualFocus");
     useSafeLayoutEffect(() => {
       var _a;
       if (!store5) return;
@@ -14585,10 +14887,10 @@ var useComposite = createHook(
     });
     props = useWrapElement(
       props,
-      (element) => /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(CompositeContextProvider, { value: store5, children: element }),
+      (element) => /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(CompositeContextProvider, { value: store5, children: element }),
       [store5]
     );
-    const activeDescendant = store5.useState((state) => {
+    const activeDescendant = useStoreState(store5, (state) => {
       var _a;
       if (!store5) return;
       if (!composite) return;
@@ -14606,7 +14908,8 @@ var useComposite = createHook(
       onBlurCapture,
       onKeyDown
     };
-    const focusable = store5.useState(
+    const focusable = useStoreState(
+      store5,
       (state) => composite && (state.virtualFocus || state.activeId === null)
     );
     props = useFocusable({ focusable, ...props });
@@ -14618,7 +14921,7 @@ var Composite5 = forwardRef22(function Composite22(props) {
   return createElement3(TagName5, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/LVDQFHCH.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SF4KD2LD.js
 var ctx3 = createStoreContext();
 var useDisclosureContext = ctx3.useContext;
 var useDisclosureScopedContext = ctx3.useScopedContext;
@@ -14626,7 +14929,7 @@ var useDisclosureProviderContext = ctx3.useProviderContext;
 var DisclosureContextProvider = ctx3.ContextProvider;
 var DisclosureScopedContextProvider = ctx3.ScopedContextProvider;
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/A62MDFCW.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/W43ISTP6.js
 var import_react14 = __toESM(require_react(), 1);
 var ctx4 = createStoreContext(
   [DisclosureContextProvider],
@@ -14640,10 +14943,10 @@ var DialogScopedContextProvider = ctx4.ScopedContextProvider;
 var DialogHeadingContext = (0, import_react14.createContext)(void 0);
 var DialogDescriptionContext = (0, import_react14.createContext)(void 0);
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/6B3RXHKP.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/WLLNEL2X.js
 var import_react15 = __toESM(require_react(), 1);
 var import_react_dom = __toESM(require_react_dom(), 1);
-var import_jsx_runtime71 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime72 = __toESM(require_jsx_runtime(), 1);
 var TagName6 = "div";
 function afterTimeout(timeoutMs, cb) {
   const timeoutId = setTimeout(cb, timeoutMs);
@@ -14676,10 +14979,10 @@ var useDisclosureContent = createHook(function useDisclosureContent2({ store: st
   const ref = (0, import_react15.useRef)(null);
   const id = useId4(props.id);
   const [transition, setTransition] = (0, import_react15.useState)(null);
-  const open = store5.useState("open");
-  const mounted = store5.useState("mounted");
-  const animated = store5.useState("animated");
-  const contentElement = store5.useState("contentElement");
+  const open = useStoreState(store5, "open");
+  const mounted = useStoreState(store5, "mounted");
+  const animated = useStoreState(store5, "animated");
+  const contentElement = useStoreState(store5, "contentElement");
   const otherElement = useStoreState(store5.disclosure, "contentElement");
   useSafeLayoutEffect(() => {
     if (!ref.current) return;
@@ -14757,7 +15060,7 @@ var useDisclosureContent = createHook(function useDisclosureContent2({ store: st
   }, [store5, animated, contentElement, otherElement, open, transition]);
   props = useWrapElement(
     props,
-    (element) => /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(DialogScopedContextProvider, { value: store5, children: element }),
+    (element) => /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(DialogScopedContextProvider, { value: store5, children: element }),
     [store5]
   );
   const hidden = isHidden(mounted, props.hidden, alwaysVisible);
@@ -14769,12 +15072,12 @@ var useDisclosureContent = createHook(function useDisclosureContent2({ store: st
     return styleProp;
   }, [hidden, styleProp]);
   props = {
-    id,
     "data-open": open || void 0,
     "data-enter": transition === "enter" || void 0,
     "data-leave": transition === "leave" || void 0,
     hidden,
     ...props,
+    id,
     ref: useMergeRefs2(id ? store5.setContentElement : null, ref, props.ref),
     style
   };
@@ -14795,10 +15098,10 @@ var DisclosureContent = forwardRef22(function DisclosureContent2({
     (state) => !unmountOnHide || (state == null ? void 0 : state.mounted)
   );
   if (mounted === false) return null;
-  return /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(DisclosureContentImpl, { ...props });
+  return /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(DisclosureContentImpl, { ...props });
 });
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/75BJEVSH.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/IHNLLH3I.js
 function createDisclosureStore(props = {}) {
   const store5 = mergeStore(
     props.store,
@@ -14855,7 +15158,7 @@ function createDisclosureStore(props = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/WLZ6H5FH.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/FL7NPBCY.js
 function useDisclosureStoreProps(store5, update2, props) {
   useUpdateEffect(update2, [props.store, props.disclosure]);
   useStoreProps(store5, props, "open", "setOpen");
@@ -14864,7 +15167,7 @@ function useDisclosureStoreProps(store5, update2, props) {
   return Object.assign(store5, { disclosure: props.disclosure });
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/JMU4N4M5.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/E4DZA6YM.js
 var ctx5 = createStoreContext(
   [DialogContextProvider],
   [DialogScopedContextProvider]
@@ -14875,15 +15178,18 @@ var usePopoverProviderContext = ctx5.useProviderContext;
 var PopoverContextProvider = ctx5.ContextProvider;
 var PopoverScopedContextProvider = ctx5.ScopedContextProvider;
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/N5XGANPW.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/KZX46JDB.js
 function getCommonParent(items) {
-  var _a;
+  var _a, _b;
   const firstItem = items.find((item) => !!item.element);
-  const lastItem = [...items].reverse().find((item) => !!item.element);
-  let parentElement = (_a = firstItem == null ? void 0 : firstItem.element) == null ? void 0 : _a.parentElement;
-  while (parentElement && (lastItem == null ? void 0 : lastItem.element)) {
+  const lastElement = (_a = [...items].reverse().find((item) => !!item.element)) == null ? void 0 : _a.element;
+  let parentElement = (_b = firstItem == null ? void 0 : firstItem.element) == null ? void 0 : _b.parentElement;
+  if (!lastElement) {
+    return getDocument(parentElement).body;
+  }
+  while (parentElement) {
     const parent = parentElement;
-    if (lastItem && parent.contains(lastItem.element)) {
+    if (parent.contains(lastElement)) {
       return parentElement;
     }
     parentElement = parentElement.parentElement;
@@ -15022,14 +15328,14 @@ function createCollectionStore(props = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/GVAFFF2B.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/6S37ITHJ.js
 function useCollectionStoreProps(store5, update2, props) {
   useUpdateEffect(update2, [props.store]);
   useStoreProps(store5, props, "items", "setItems");
   return store5;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/RVTIKFRL.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/UNDE2QJS.js
 var NULL_ITEM = { id: null };
 function findFirstEnabledItem2(items, excludeId) {
   return items.find((item) => {
@@ -15288,7 +15594,7 @@ function createCompositeStore(props = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/IQYAUKXT.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/ZJG6VNPS.js
 function useCompositeStoreOptions(props) {
   const id = useId4(props.id);
   return { id, ...props };
@@ -15306,7 +15612,7 @@ function useCompositeStoreProps(store5, update2, props) {
   return store5;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/CVCFNOHX.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/H55QERR5.js
 var import_react16 = __toESM(require_react(), 1);
 var ComboboxListRoleContext = (0, import_react16.createContext)(
   void 0
@@ -15325,17 +15631,17 @@ var ComboboxItemValueContext = (0, import_react16.createContext)(
 );
 var ComboboxItemCheckedContext = (0, import_react16.createContext)(false);
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/KMAUV3TY.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/7KNZCZ55.js
 function createDialogStore(props = {}) {
   return createDisclosureStore(props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/4NYSH4UO.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/EX4LS7ZU.js
 function useDialogStoreProps(store5, update2, props) {
   return useDisclosureStoreProps(store5, update2, props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/__chunks/BFGNM53A.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/MJ4ZJEIM.js
 function createPopoverStore({
   popover: otherPopover,
   ...props
@@ -15378,14 +15684,14 @@ function createPopoverStore({
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/B6FLPFJM.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/RPKQBJCW.js
 function usePopoverStoreProps(store5, update2, props) {
   useUpdateEffect(update2, [props.popover]);
   useStoreProps(store5, props, "placement");
   return useDialogStoreProps(store5, update2, props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/4POTBZ2J.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/BLCLYOQG.js
 var TagName7 = "div";
 var usePopoverAnchor = createHook(
   function usePopoverAnchor2({ store: store5, ...props }) {
@@ -15403,7 +15709,7 @@ var PopoverAnchor = forwardRef22(function PopoverAnchor2(props) {
   return createElement3(TagName7, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/X6LNAU2F.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/CI3WD73H.js
 var import_react17 = __toESM(require_react(), 1);
 var TagName8 = "div";
 function getMouseDestination(event) {
@@ -15491,7 +15797,7 @@ var CompositeHover = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox.js
 var import_react18 = __toESM(require_react(), 1);
 var TagName9 = "input";
 function isFirstItemAutoSelected(items, activeValue, autoSelect) {
@@ -15548,7 +15854,8 @@ var useCombobox = createHook(
     const [valueUpdated, forceValueUpdate] = useForceUpdate();
     const canAutoSelectRef = (0, import_react18.useRef)(false);
     const composingRef = (0, import_react18.useRef)(false);
-    const autoSelect = store5.useState(
+    const autoSelect = useStoreState(
+      store5,
       (state) => state.virtualFocus && autoSelectProp
     );
     const inline = autoComplete === "inline" || autoComplete === "both";
@@ -15557,14 +15864,14 @@ var useCombobox = createHook(
       if (!inline) return;
       setCanInline(true);
     }, [inline]);
-    const storeValue = store5.useState("value");
+    const storeValue = useStoreState(store5, "value");
     const prevSelectedValueRef = (0, import_react18.useRef)(void 0);
     (0, import_react18.useEffect)(() => {
       return sync(store5, ["selectedValue", "activeId"], (_, prev) => {
         prevSelectedValueRef.current = prev.selectedValue;
       });
-    }, []);
-    const inlineActiveValue = store5.useState((state) => {
+    }, [store5]);
+    const inlineActiveValue = useStoreState(store5, (state) => {
       var _a;
       if (!inline) return;
       if (!canInline) return;
@@ -15574,9 +15881,9 @@ var useCombobox = createHook(
       }
       return state.activeValue;
     });
-    const items = store5.useState("renderedItems");
-    const open = store5.useState("open");
-    const contentElement = store5.useState("contentElement");
+    const items = useStoreState(store5, "renderedItems");
+    const open = useStoreState(store5, "open");
+    const contentElement = useStoreState(store5, "contentElement");
     const value = (0, import_react18.useMemo)(() => {
       if (!inline) return storeValue;
       if (!canInline) return storeValue;
@@ -15643,6 +15950,8 @@ var useCombobox = createHook(
     const scrollingElementRef = (0, import_react18.useRef)(null);
     const getAutoSelectIdProp = useEvent(getAutoSelectId);
     const autoSelectIdRef = (0, import_react18.useRef)(null);
+    const userScrolledRef = (0, import_react18.useRef)(false);
+    const isAutoScrollingRef = (0, import_react18.useRef)(false);
     (0, import_react18.useEffect)(() => {
       if (!open) return;
       if (!contentElement) return;
@@ -15651,8 +15960,12 @@ var useCombobox = createHook(
       scrollingElementRef.current = scrollingElement;
       const onUserScroll = () => {
         canAutoSelectRef.current = false;
+        userScrolledRef.current = true;
       };
       const onScroll = () => {
+        if (!isAutoScrollingRef.current) {
+          userScrolledRef.current = true;
+        }
         if (!store5) return;
         if (!canAutoSelectRef.current) return;
         const { activeId } = store5.getState();
@@ -15671,6 +15984,7 @@ var useCombobox = createHook(
       };
     }, [open, contentElement, store5]);
     useSafeLayoutEffect(() => {
+      userScrolledRef.current = false;
       if (!storeValue) return;
       if (composingRef.current) return;
       canAutoSelectRef.current = true;
@@ -15679,13 +15993,14 @@ var useCombobox = createHook(
       if (autoSelect !== "always" && open) return;
       canAutoSelectRef.current = open;
     }, [autoSelect, open]);
-    const resetValueOnSelect = store5.useState("resetValueOnSelect");
+    const resetValueOnSelect = useStoreState(store5, "resetValueOnSelect");
     useUpdateEffect(() => {
       var _a, _b;
       const canAutoSelect = canAutoSelectRef.current;
       if (!store5) return;
       if (!open) return;
-      if (!canAutoSelect && !resetValueOnSelect) return;
+      if (!canAutoSelect && (!resetValueOnSelect || userScrolledRef.current))
+        return;
       const { baseElement, contentElement: contentElement2, activeId } = store5.getState();
       if (baseElement && !hasFocus(baseElement)) return;
       if (contentElement2 == null ? void 0 : contentElement2.hasAttribute("data-placing")) {
@@ -15701,7 +16016,11 @@ var useCombobox = createHook(
       } else {
         const element = (_b = store5.item(activeId || store5.first())) == null ? void 0 : _b.element;
         if (element && "scrollIntoView" in element) {
+          isAutoScrollingRef.current = true;
           element.scrollIntoView({ block: "nearest", inline: "nearest" });
+          requestAnimationFrame(() => {
+            isAutoScrollingRef.current = false;
+          });
         }
       }
       return;
@@ -15844,9 +16163,11 @@ var useCombobox = createHook(
     });
     const id = useId4(props.id);
     const ariaAutoComplete = isAriaAutoCompleteValue(autoComplete) ? autoComplete : void 0;
-    const isActiveItem = store5.useState((state) => state.activeId === null);
+    const isActiveItem = useStoreState(
+      store5,
+      (state) => state.activeId === null
+    );
     props = {
-      id,
       role: "combobox",
       "aria-autocomplete": ariaAutoComplete,
       "aria-haspopup": getPopupRole(contentElement, "listbox"),
@@ -15855,6 +16176,7 @@ var useCombobox = createHook(
       "data-active-item": isActiveItem || void 0,
       value,
       ...props,
+      id,
       ref: useMergeRefs2(ref, props.ref),
       onChange,
       onCompositionEnd,
@@ -15883,9 +16205,9 @@ var Combobox = forwardRef22(function Combobox2(props) {
   return createElement3(TagName9, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/IBXZ2LQC.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/CRB22UI4.js
 var import_react19 = __toESM(require_react(), 1);
-var import_jsx_runtime72 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime73 = __toESM(require_jsx_runtime(), 1);
 var TagName10 = "div";
 function isSelected(storeValue, itemValue) {
   if (itemValue == null) return;
@@ -16002,7 +16324,7 @@ var useComboboxItem = createHook(
     }
     props = useWrapElement(
       props,
-      (element) => /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(ComboboxItemValueContext.Provider, { value, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(ComboboxItemCheckedContext.Provider, { value: selected != null ? selected : false, children: element }) }),
+      (element) => /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(ComboboxItemValueContext.Provider, { value, children: /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(ComboboxItemCheckedContext.Provider, { value: selected != null ? selected : false, children: element }) }),
       [value, selected]
     );
     const popupRole = (0, import_react19.useContext)(ComboboxListRoleContext);
@@ -16040,9 +16362,9 @@ var ComboboxItem = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-item-value.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-item-value.js
 var import_react20 = __toESM(require_react(), 1);
-var import_jsx_runtime73 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime74 = __toESM(require_jsx_runtime(), 1);
 var TagName11 = "span";
 function normalizeValue(value) {
   return normalizeString(value).toLowerCase();
@@ -16077,7 +16399,7 @@ function splitValue(itemValue, userValue) {
   if (!userValue) return itemValue;
   const userValues = toArray(userValue).filter(Boolean).map(normalizeValue);
   const parts = [];
-  const span = (value, autocomplete = false) => /* @__PURE__ */ (0, import_jsx_runtime73.jsx)(
+  const span = (value, autocomplete = false) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(
     "span",
     {
       "data-autocomplete-value": autocomplete ? "" : void 0,
@@ -16092,11 +16414,12 @@ function splitValue(itemValue, userValue) {
       getOffsets(normalizeValue(itemValue), new Set(userValues))
     )
   );
-  if (!offsets.length) {
+  const firstEntry = offsets[0];
+  if (!firstEntry) {
     parts.push(span(itemValue, true));
     return parts;
   }
-  const [firstOffset] = offsets[0];
+  const [firstOffset] = firstEntry;
   const values = [
     itemValue.slice(0, firstOffset),
     ...offsets.flatMap(([offset, length], i2) => {
@@ -16135,7 +16458,7 @@ var ComboboxItemValue = forwardRef22(function ComboboxItemValue2(props) {
   return createElement3(TagName11, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-label.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-label.js
 var TagName12 = "label";
 var useComboboxLabel = createHook(
   function useComboboxLabel2({ store: store5, ...props }) {
@@ -16145,7 +16468,7 @@ var useComboboxLabel = createHook(
       store5,
       "ComboboxLabel must receive a `store` prop or be wrapped in a ComboboxProvider component."
     );
-    const comboboxId = store5.useState((state) => {
+    const comboboxId = useStoreState(store5, (state) => {
       var _a;
       return (_a = state.baseElement) == null ? void 0 : _a.id;
     });
@@ -16163,9 +16486,9 @@ var ComboboxLabel = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/2G6YEJT4.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/ZJYMN66B.js
 var import_react21 = __toESM(require_react(), 1);
-var import_jsx_runtime74 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime75 = __toESM(require_jsx_runtime(), 1);
 var TagName13 = "div";
 var useComboboxList = createHook(
   function useComboboxList2({ store: store5, alwaysVisible, ...props }) {
@@ -16179,17 +16502,18 @@ var useComboboxList = createHook(
     );
     const ref = (0, import_react21.useRef)(null);
     const id = useId4(props.id);
-    const mounted = store5.useState("mounted");
+    const mounted = useStoreState(store5, "mounted");
     const hidden = isHidden(mounted, props.hidden, alwaysVisible);
     const style = hidden ? { ...props.style, display: "none" } : props.style;
-    const multiSelectable = store5.useState(
+    const multiSelectable = useStoreState(
+      store5,
       (state) => Array.isArray(state.selectedValue)
     );
     const role = useAttribute(ref, "role", props.role);
     const isCompositeRole = role === "listbox" || role === "tree" || role === "grid";
     const ariaMultiSelectable = isCompositeRole ? multiSelectable || void 0 : void 0;
     const [hasListboxInside, setHasListboxInside] = (0, import_react21.useState)(false);
-    const contentElement = store5.useState("contentElement");
+    const contentElement = useStoreState(store5, "contentElement");
     useSafeLayoutEffect(() => {
       if (!mounted) return;
       const element = ref.current;
@@ -16216,14 +16540,14 @@ var useComboboxList = createHook(
     }
     props = useWrapElement(
       props,
-      (element) => /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(ComboboxScopedContextProvider, { value: store5, children: /* @__PURE__ */ (0, import_jsx_runtime74.jsx)(ComboboxListRoleContext.Provider, { value: role, children: element }) }),
+      (element) => /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(ComboboxScopedContextProvider, { value: store5, children: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(ComboboxListRoleContext.Provider, { value: role, children: element }) }),
       [store5, role]
     );
     const setContentElement = id && (!scopedContext || !scopedContextSameStore) ? store5.setContentElement : null;
     props = {
-      id,
       hidden,
       ...props,
+      id,
       ref: useMergeRefs2(setContentElement, ref, props.ref),
       style
     };
@@ -16235,7 +16559,7 @@ var ComboboxList = forwardRef22(function ComboboxList2(props) {
   return createElement3(TagName13, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/XSIEPKGA.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/KR5NJL64.js
 var import_react22 = __toESM(require_react(), 1);
 var TagValueContext = (0, import_react22.createContext)(null);
 var TagRemoveIdContext = (0, import_react22.createContext)(
@@ -16251,7 +16575,7 @@ var useTagProviderContext = ctx7.useProviderContext;
 var TagContextProvider = ctx7.ContextProvider;
 var TagScopedContextProvider = ctx7.ScopedContextProvider;
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.18/node_modules/@ariakit/core/esm/combobox/combobox-store.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/combobox/combobox-store.js
 var isTouchSafari = isSafari() && isTouchDevice();
 function createComboboxStore({
   tag,
@@ -16392,7 +16716,7 @@ function createComboboxStore({
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SVN33SY6.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/KQS2CH22.js
 function useComboboxStoreOptions(props) {
   const tag = useTagContext();
   props = {
@@ -16422,21 +16746,21 @@ function useComboboxStore(props = {}) {
   return useComboboxStoreProps(store5, update2, props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.22_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-provider.js
-var import_jsx_runtime75 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-provider.js
+var import_jsx_runtime76 = __toESM(require_jsx_runtime(), 1);
 function ComboboxProvider(props = {}) {
   const store5 = useComboboxStore(props);
-  return /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(ComboboxContextProvider, { value: store5, children: props.children });
+  return /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(ComboboxContextProvider, { value: store5, children: props.children });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/search-widget.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/search-widget.mjs
 var import_remove_accents = __toESM(require_remove_accents(), 1);
 var import_compose8 = __toESM(require_compose(), 1);
 var import_i18n23 = __toESM(require_i18n(), 1);
-var import_element31 = __toESM(require_element(), 1);
+var import_element33 = __toESM(require_element(), 1);
 var import_components21 = __toESM(require_components(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/utils.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/utils.mjs
 var EMPTY_ARRAY4 = [];
 var getCurrentValue = (filterDefinition, currentFilter) => {
   if (filterDefinition.singleSelection) {
@@ -16451,17 +16775,17 @@ var getCurrentValue = (filterDefinition, currentFilter) => {
   return EMPTY_ARRAY4;
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/hooks/use-elements.mjs
-var import_element30 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/hooks/use-elements.mjs
+var import_element32 = __toESM(require_element(), 1);
 var EMPTY_ARRAY5 = [];
 function useElements({
   elements,
   getElements
 }) {
   const staticElements = Array.isArray(elements) && elements.length > 0 ? elements : EMPTY_ARRAY5;
-  const [records, setRecords] = (0, import_element30.useState)(staticElements);
-  const [isLoading, setIsLoading2] = (0, import_element30.useState)(false);
-  (0, import_element30.useEffect)(() => {
+  const [records, setRecords] = (0, import_element32.useState)(staticElements);
+  const [isLoading, setIsLoading2] = (0, import_element32.useState)(false);
+  (0, import_element32.useEffect)(() => {
     if (!getElements) {
       setRecords(staticElements);
       return;
@@ -16492,8 +16816,8 @@ function useElements({
   };
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/search-widget.mjs
-var import_jsx_runtime76 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/search-widget.mjs
+var import_jsx_runtime77 = __toESM(require_jsx_runtime(), 1);
 function normalizeSearchInput(input = "") {
   return (0, import_remove_accents.default)(input.trim().toLowerCase());
 }
@@ -16510,19 +16834,19 @@ function generateFilterElementCompositeItemId(prefix, filterElementValue) {
   return `${prefix}-${filterElementValue}`;
 }
 var MultiSelectionOption = ({ selected }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
     "span",
     {
       className: clsx_default(
         "dataviews-filters__search-widget-listitem-multi-selection",
         { "is-selected": selected }
       ),
-      children: selected && /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(import_components21.Icon, { icon: check_default })
+      children: selected && /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(import_components21.Icon, { icon: check_default })
     }
   );
 };
 var SingleSelectionOption = ({ selected }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
     "span",
     {
       className: clsx_default(
@@ -16534,7 +16858,7 @@ var SingleSelectionOption = ({ selected }) => {
 };
 function ListBox({ view, filter, onChangeView }) {
   const baseId = (0, import_compose8.useInstanceId)(ListBox, "dataviews-filter-list-box");
-  const [activeCompositeId, setActiveCompositeId] = (0, import_element31.useState)(
+  const [activeCompositeId, setActiveCompositeId] = (0, import_element33.useState)(
     // When there are one or less operators, the first item is set as active
     // (by setting the initial `activeId` to `undefined`).
     // With 2 or more operators, the focus is moved on the operators control
@@ -16547,7 +16871,7 @@ function ListBox({ view, filter, onChangeView }) {
     (f2) => f2.field === filter.field
   );
   const currentValue = getCurrentValue(filter, currentFilter);
-  return /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
     import_components21.Composite,
     {
       virtualFocus: true,
@@ -16571,18 +16895,18 @@ function ListBox({ view, filter, onChangeView }) {
           );
         }
       },
-      render: /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(import_components21.Composite.Typeahead, {}),
-      children: filter.elements.map((element) => /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)(
+      render: /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(import_components21.Composite.Typeahead, {}),
+      children: filter.elements.map((element) => /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)(
         import_components21.Composite.Hover,
         {
-          render: /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(
+          render: /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
             import_components21.Composite.Item,
             {
               id: generateFilterElementCompositeItemId(
                 baseId,
                 element.value
               ),
-              render: /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(
+              render: /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
                 "div",
                 {
                   "aria-label": element.label,
@@ -16629,19 +16953,19 @@ function ListBox({ view, filter, onChangeView }) {
             }
           ),
           children: [
-            filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(
+            filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
               SingleSelectionOption,
               {
                 selected: currentValue === element.value
               }
             ),
-            !filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(
+            !filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
               MultiSelectionOption,
               {
                 selected: currentValue.includes(element.value)
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(
+            /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
               "span",
               {
                 className: "dataviews-filters__search-widget-listitem-value",
@@ -16657,19 +16981,19 @@ function ListBox({ view, filter, onChangeView }) {
   );
 }
 function ComboboxList22({ view, filter, onChangeView }) {
-  const [searchValue, setSearchValue] = (0, import_element31.useState)("");
-  const deferredSearchValue = (0, import_element31.useDeferredValue)(searchValue);
+  const [searchValue, setSearchValue] = (0, import_element33.useState)("");
+  const deferredSearchValue = (0, import_element33.useDeferredValue)(searchValue);
   const currentFilter = view.filters?.find(
     (_filter) => _filter.field === filter.field
   );
   const currentValue = getCurrentValue(filter, currentFilter);
-  const matches = (0, import_element31.useMemo)(() => {
+  const matches = (0, import_element33.useMemo)(() => {
     const normalizedSearch = normalizeSearchInput(deferredSearchValue);
     return filter.elements.filter(
       (item) => normalizeSearchInput(item.label).includes(normalizedSearch)
     );
   }, [filter.elements, deferredSearchValue]);
-  return /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)(
     ComboboxProvider,
     {
       selectedValue: currentValue,
@@ -16701,15 +17025,15 @@ function ComboboxList22({ view, filter, onChangeView }) {
       },
       setValue: setSearchValue,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)("div", { className: "dataviews-filters__search-widget-filter-combobox__wrapper", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)("div", { className: "dataviews-filters__search-widget-filter-combobox__wrapper", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
             ComboboxLabel,
             {
-              render: /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(import_components21.VisuallyHidden, { children: (0, import_i18n23.__)("Search items") }),
+              render: /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(import_components21.VisuallyHidden, { children: (0, import_i18n23.__)("Search items") }),
               children: (0, import_i18n23.__)("Search items")
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(
+          /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
             Combobox,
             {
               autoSelect: "always",
@@ -16717,16 +17041,16 @@ function ComboboxList22({ view, filter, onChangeView }) {
               className: "dataviews-filters__search-widget-filter-combobox__input"
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", { className: "dataviews-filters__search-widget-filter-combobox__icon", children: /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(import_components21.Icon, { icon: search_default }) })
+          /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("div", { className: "dataviews-filters__search-widget-filter-combobox__icon", children: /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(import_components21.Icon, { icon: search_default }) })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)(
           ComboboxList,
           {
             className: "dataviews-filters__search-widget-filter-combobox-list",
             alwaysVisible: true,
             children: [
               matches.map((element) => {
-                return /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)(
+                return /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)(
                   ComboboxItem,
                   {
                     resetValueOnSelect: false,
@@ -16736,13 +17060,13 @@ function ComboboxList22({ view, filter, onChangeView }) {
                     setValueOnClick: false,
                     focusOnHover: true,
                     children: [
-                      filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(
+                      filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
                         SingleSelectionOption,
                         {
                           selected: currentValue === element.value
                         }
                       ),
-                      !filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(
+                      !filter.singleSelection && /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
                         MultiSelectionOption,
                         {
                           selected: currentValue.includes(
@@ -16750,20 +17074,20 @@ function ComboboxList22({ view, filter, onChangeView }) {
                           )
                         }
                       ),
-                      /* @__PURE__ */ (0, import_jsx_runtime76.jsxs)(
+                      /* @__PURE__ */ (0, import_jsx_runtime77.jsxs)(
                         "span",
                         {
                           className: "dataviews-filters__search-widget-listitem-value",
                           title: element.label,
                           children: [
-                            /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(
+                            /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
                               ComboboxItemValue,
                               {
                                 className: "dataviews-filters__search-widget-filter-combobox-item-value",
                                 value: element.label
                               }
                             ),
-                            !!element.description && /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("span", { className: "dataviews-filters__search-widget-listitem-description", children: element.description })
+                            !!element.description && /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("span", { className: "dataviews-filters__search-widget-listitem-description", children: element.description })
                           ]
                         }
                       )
@@ -16772,7 +17096,7 @@ function ComboboxList22({ view, filter, onChangeView }) {
                   element.value
                 );
               }),
-              !matches.length && /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("p", { children: (0, import_i18n23.__)("No results found") })
+              !matches.length && /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("p", { children: (0, import_i18n23.__)("No results found") })
             ]
           }
         )
@@ -16786,21 +17110,21 @@ function SearchWidget(props) {
     getElements: props.filter.getElements
   });
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", { className: "dataviews-filters__search-widget-no-elements", children: /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(import_components21.Spinner, {}) });
+    return /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("div", { className: "dataviews-filters__search-widget-no-elements", children: /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(import_components21.Spinner, {}) });
   }
   if (elements.length === 0) {
-    return /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", { className: "dataviews-filters__search-widget-no-elements", children: (0, import_i18n23.__)("No elements found") });
+    return /* @__PURE__ */ (0, import_jsx_runtime77.jsx)("div", { className: "dataviews-filters__search-widget-no-elements", children: (0, import_i18n23.__)("No elements found") });
   }
   const Widget = elements.length > 10 ? ComboboxList22 : ListBox;
-  return /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(Widget, { ...props, filter: { ...props.filter, elements } });
+  return /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(Widget, { ...props, filter: { ...props.filter, elements } });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/input-widget.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/input-widget.mjs
 var import_es6 = __toESM(require_es6(), 1);
 var import_compose9 = __toESM(require_compose(), 1);
-var import_element32 = __toESM(require_element(), 1);
+var import_element34 = __toESM(require_element(), 1);
 var import_components22 = __toESM(require_components(), 1);
-var import_jsx_runtime77 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime78 = __toESM(require_jsx_runtime(), 1);
 function InputWidget({
   filter,
   view,
@@ -16811,7 +17135,7 @@ function InputWidget({
     (f2) => f2.field === filter.field
   );
   const currentValue = getCurrentValue(filter, currentFilter);
-  const field = (0, import_element32.useMemo)(() => {
+  const field = (0, import_element34.useMemo)(() => {
     const currentField = fields.find((f2) => f2.id === filter.field);
     if (currentField) {
       return {
@@ -16827,7 +17151,7 @@ function InputWidget({
     }
     return currentField;
   }, [fields, filter.field]);
-  const data = (0, import_element32.useMemo)(() => {
+  const data = (0, import_element34.useMemo)(() => {
     return (view.filters ?? []).reduce(
       (acc, activeFilter) => {
         acc[activeFilter.field] = activeFilter.value;
@@ -16864,13 +17188,13 @@ function InputWidget({
   if (!field || !field.Edit || !currentFilter) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
     import_components22.Flex,
     {
       className: "dataviews-filters__user-input-widget",
       gap: 2.5,
       direction: "column",
-      children: /* @__PURE__ */ (0, import_jsx_runtime77.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)(
         field.Edit,
         {
           hideLabelFromVision: true,
@@ -18523,14 +18847,14 @@ function subYears(date, amount, options) {
   return addYears(date, -amount, options);
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/utils/operators.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/utils/operators.mjs
 var import_i18n24 = __toESM(require_i18n(), 1);
-var import_element33 = __toESM(require_element(), 1);
+var import_element35 = __toESM(require_element(), 1);
 var import_date = __toESM(require_date(), 1);
-var import_jsx_runtime78 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime79 = __toESM(require_jsx_runtime(), 1);
 var filterTextWrappers = {
-  Name: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)("span", { className: "dataviews-filters__summary-filter-text-name" }),
-  Value: /* @__PURE__ */ (0, import_jsx_runtime78.jsx)("span", { className: "dataviews-filters__summary-filter-text-value" })
+  Name: /* @__PURE__ */ (0, import_jsx_runtime79.jsx)("span", { className: "dataviews-filters__summary-filter-text-name" }),
+  Value: /* @__PURE__ */ (0, import_jsx_runtime79.jsx)("span", { className: "dataviews-filters__summary-filter-text-value" })
 };
 function getRelativeDate(value, unit) {
   switch (unit) {
@@ -18549,7 +18873,7 @@ function getRelativeDate(value, unit) {
 var isNoneOperatorDefinition = {
   /* translators: DataViews operator name */
   label: (0, import_i18n24.__)("Is none of"),
-  filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+  filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
     (0, import_i18n24.sprintf)(
       /* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is none of: Admin, Editor". */
       (0, import_i18n24.__)("<Name>%1$s is none of: </Name><Value>%2$s</Value>"),
@@ -18579,7 +18903,7 @@ var OPERATORS = [
     name: OPERATOR_IS_ANY,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Includes"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is any: Admin, Editor". */
         (0, import_i18n24.__)("<Name>%1$s includes: </Name><Value>%2$s</Value>"),
@@ -18612,7 +18936,7 @@ var OPERATORS = [
     name: OPERATOR_IS_ALL,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Includes all"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author includes all: Admin, Editor". */
         (0, import_i18n24.__)("<Name>%1$s includes all: </Name><Value>%2$s</Value>"),
@@ -18639,7 +18963,7 @@ var OPERATORS = [
     name: OPERATOR_BETWEEN,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Between (inc)"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Item count"). 2: Filter value min. 3: Filter value max. e.g.: "Item count between (inc): 10 and 180". */
         (0, import_i18n24.__)(
@@ -18667,7 +18991,7 @@ var OPERATORS = [
     name: OPERATOR_IN_THE_PAST,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("In the past"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is in the past: 7 days". */
         (0, import_i18n24.__)(
@@ -18695,7 +19019,7 @@ var OPERATORS = [
     name: OPERATOR_OVER,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Over"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is over: 7 days". */
         (0, import_i18n24.__)("<Name>%1$s is over: </Name><Value>%2$s</Value>"),
@@ -18721,7 +19045,7 @@ var OPERATORS = [
     name: OPERATOR_IS,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Is"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is: Admin". */
         (0, import_i18n24.__)("<Name>%1$s is: </Name><Value>%2$s</Value>"),
@@ -18739,7 +19063,7 @@ var OPERATORS = [
     name: OPERATOR_IS_NOT,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Is not"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is not: Admin". */
         (0, import_i18n24.__)("<Name>%1$s is not: </Name><Value>%2$s</Value>"),
@@ -18757,7 +19081,7 @@ var OPERATORS = [
     name: OPERATOR_LESS_THAN,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Less than"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than: 10". */
         (0, import_i18n24.__)("<Name>%1$s is less than: </Name><Value>%2$s</Value>"),
@@ -18779,7 +19103,7 @@ var OPERATORS = [
     name: OPERATOR_GREATER_THAN,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Greater than"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than: 10". */
         (0, import_i18n24.__)(
@@ -18803,7 +19127,7 @@ var OPERATORS = [
     name: OPERATOR_LESS_THAN_OR_EQUAL,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Less than or equal"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than or equal to: 10". */
         (0, import_i18n24.__)(
@@ -18827,7 +19151,7 @@ var OPERATORS = [
     name: OPERATOR_GREATER_THAN_OR_EQUAL,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Greater than or equal"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than or equal to: 10". */
         (0, import_i18n24.__)(
@@ -18851,7 +19175,7 @@ var OPERATORS = [
     name: OPERATOR_BEFORE,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Before"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is before: 2024-01-01". */
         (0, import_i18n24.__)("<Name>%1$s is before: </Name><Value>%2$s</Value>"),
@@ -18874,7 +19198,7 @@ var OPERATORS = [
     name: OPERATOR_AFTER,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("After"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is after: 2024-01-01". */
         (0, import_i18n24.__)("<Name>%1$s is after: </Name><Value>%2$s</Value>"),
@@ -18897,7 +19221,7 @@ var OPERATORS = [
     name: OPERATOR_BEFORE_INC,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Before (inc)"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or before: 2024-01-01". */
         (0, import_i18n24.__)(
@@ -18922,7 +19246,7 @@ var OPERATORS = [
     name: OPERATOR_AFTER_INC,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("After (inc)"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or after: 2024-01-01". */
         (0, import_i18n24.__)(
@@ -18947,7 +19271,7 @@ var OPERATORS = [
     name: OPERATOR_CONTAINS,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Contains"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title contains: Hello". */
         (0, import_i18n24.__)("<Name>%1$s contains: </Name><Value>%2$s</Value>"),
@@ -18969,7 +19293,7 @@ var OPERATORS = [
     name: OPERATOR_NOT_CONTAINS,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Doesn't contain"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title doesn't contain: Hello". */
         (0, import_i18n24.__)(
@@ -18993,7 +19317,7 @@ var OPERATORS = [
     name: OPERATOR_STARTS_WITH,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Starts with"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title starts with: Hello". */
         (0, import_i18n24.__)("<Name>%1$s starts with: </Name><Value>%2$s</Value>"),
@@ -19015,7 +19339,7 @@ var OPERATORS = [
     name: OPERATOR_ON,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("On"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is: 2024-01-01". */
         (0, import_i18n24.__)("<Name>%1$s is: </Name><Value>%2$s</Value>"),
@@ -19038,7 +19362,7 @@ var OPERATORS = [
     name: OPERATOR_NOT_ON,
     /* translators: DataViews operator name */
     label: (0, import_i18n24.__)("Not on"),
-    filterText: (filter, activeElements) => (0, import_element33.createInterpolateElement)(
+    filterText: (filter, activeElements) => (0, import_element35.createInterpolateElement)(
       (0, import_i18n24.sprintf)(
         /* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is not: 2024-01-01". */
         (0, import_i18n24.__)("<Name>%1$s is not: </Name><Value>%2$s</Value>"),
@@ -19065,8 +19389,8 @@ var isSingleSelectionOperator = (name) => OPERATORS.filter((op) => op.selection 
 );
 var isRegisteredOperator = (name) => OPERATORS.some((op) => op.name === name);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/filter.mjs
-var import_jsx_runtime79 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/filter.mjs
+var import_jsx_runtime80 = __toESM(require_jsx_runtime(), 1);
 var ENTER = "Enter";
 var SPACE = " ";
 var FilterText = ({
@@ -19100,7 +19424,7 @@ function OperatorSelector({
     (_filter) => _filter.field === filter.field
   );
   const value = currentFilter?.operator || filter.operators[0];
-  return operatorOptions.length > 1 && /* @__PURE__ */ (0, import_jsx_runtime79.jsxs)(
+  return operatorOptions.length > 1 && /* @__PURE__ */ (0, import_jsx_runtime80.jsxs)(
     Stack,
     {
       direction: "row",
@@ -19109,8 +19433,8 @@ function OperatorSelector({
       className: "dataviews-filters__summary-operators-container",
       align: "center",
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(import_components23.FlexItem, { className: "dataviews-filters__summary-operators-filter-name", children: filter.name }),
-        /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(import_components23.FlexItem, { className: "dataviews-filters__summary-operators-filter-name", children: filter.name }),
+        /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
           import_components23.SelectControl,
           {
             className: "dataviews-filters__summary-operators-filter-select",
@@ -19172,13 +19496,13 @@ function Filter({
   fields,
   ...commonProps
 }) {
-  const toggleRef = (0, import_element34.useRef)(null);
+  const toggleRef = (0, import_element36.useRef)(null);
   const { filter, view, onChangeView } = commonProps;
   const filterInView = view.filters?.find(
     (f2) => f2.field === filter.field
   );
   let activeElements = [];
-  const field = (0, import_element34.useMemo)(() => {
+  const field = (0, import_element36.useMemo)(() => {
     const currentField = fields.find((f2) => f2.id === filter.field);
     if (currentField) {
       return {
@@ -19236,7 +19560,7 @@ function Filter({
   const isLocked = filterInView?.isLocked;
   const hasValues = !isLocked && filterInView?.value !== void 0;
   const canResetOrRemove = !isLocked && (!isPrimary || hasValues);
-  return /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
     import_components23.Dropdown,
     {
       defaultOpen: openedFilter === filter.field,
@@ -19245,8 +19569,8 @@ function Filter({
       onClose: () => {
         toggleRef.current?.focus();
       },
-      renderToggle: ({ isOpen, onToggle }) => /* @__PURE__ */ (0, import_jsx_runtime79.jsxs)("div", { className: "dataviews-filters__summary-chip-container", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(
+      renderToggle: ({ isOpen, onToggle }) => /* @__PURE__ */ (0, import_jsx_runtime80.jsxs)("div", { className: "dataviews-filters__summary-chip-container", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
           import_components23.Tooltip,
           {
             text: (0, import_i18n25.sprintf)(
@@ -19255,7 +19579,7 @@ function Filter({
               filter.name.toLowerCase()
             ),
             placement: "top",
-            children: /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(
+            children: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
               "div",
               {
                 className: clsx_default(
@@ -19283,7 +19607,7 @@ function Filter({
                 "aria-pressed": isOpen,
                 "aria-expanded": isOpen,
                 ref: toggleRef,
-                children: /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(
+                children: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
                   FilterText,
                   {
                     activeElements,
@@ -19295,12 +19619,12 @@ function Filter({
             )
           }
         ),
-        canResetOrRemove && /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(
+        canResetOrRemove && /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
           import_components23.Tooltip,
           {
             text: isPrimary ? (0, import_i18n25.__)("Reset") : (0, import_i18n25.__)("Remove"),
             placement: "top",
-            children: /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(
+            children: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
               "button",
               {
                 className: clsx_default(
@@ -19321,16 +19645,16 @@ function Filter({
                     toggleRef.current?.focus();
                   }
                 },
-                children: /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(import_components23.Icon, { icon: close_small_default })
+                children: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(import_components23.Icon, { icon: close_small_default })
               }
             )
           }
         )
       ] }),
       renderContent: () => {
-        return /* @__PURE__ */ (0, import_jsx_runtime79.jsxs)(Stack, { direction: "column", justify: "flex-start", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(OperatorSelector, { ...commonProps }),
-          commonProps.filter.hasElements ? /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(
+        return /* @__PURE__ */ (0, import_jsx_runtime80.jsxs)(Stack, { direction: "column", justify: "flex-start", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(OperatorSelector, { ...commonProps }),
+          commonProps.filter.hasElements ? /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
             SearchWidget,
             {
               ...commonProps,
@@ -19339,18 +19663,18 @@ function Filter({
                 elements
               }
             }
-          ) : /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(InputWidget, { ...commonProps, fields })
+          ) : /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(InputWidget, { ...commonProps, fields })
         ] });
       }
     }
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/add-filter.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/add-filter.mjs
 var import_components24 = __toESM(require_components(), 1);
 var import_i18n26 = __toESM(require_i18n(), 1);
-var import_element35 = __toESM(require_element(), 1);
-var import_jsx_runtime80 = __toESM(require_jsx_runtime(), 1);
+var import_element37 = __toESM(require_element(), 1);
+var import_jsx_runtime81 = __toESM(require_jsx_runtime(), 1);
 var { Menu: Menu4 } = unlock(import_components24.privateApis);
 function AddFilterMenu({
   filters: filters2,
@@ -19360,10 +19684,10 @@ function AddFilterMenu({
   triggerProps
 }) {
   const inactiveFilters = filters2.filter((filter) => !filter.isVisible);
-  return /* @__PURE__ */ (0, import_jsx_runtime80.jsxs)(Menu4, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(Menu4.TriggerButton, { ...triggerProps }),
-    /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(Menu4.Popover, { children: inactiveFilters.map((filter) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime81.jsxs)(Menu4, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(Menu4.TriggerButton, { ...triggerProps }),
+    /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(Menu4.Popover, { children: inactiveFilters.map((filter) => {
+      return /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
         Menu4.Item,
         {
           onClick: () => {
@@ -19381,7 +19705,7 @@ function AddFilterMenu({
               ]
             });
           },
-          children: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(Menu4.ItemLabel, { children: filter.name })
+          children: /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(Menu4.ItemLabel, { children: filter.name })
         },
         filter.field
       );
@@ -19393,11 +19717,11 @@ function AddFilter({ filters: filters2, view, onChangeView, setOpenedFilter }, r
     return null;
   }
   const inactiveFilters = filters2.filter((filter) => !filter.isVisible);
-  return /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
     AddFilterMenu,
     {
       triggerProps: {
-        render: /* @__PURE__ */ (0, import_jsx_runtime80.jsx)(
+        render: /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
           import_components24.Button,
           {
             accessibleWhenDisabled: true,
@@ -19414,12 +19738,12 @@ function AddFilter({ filters: filters2, view, onChangeView, setOpenedFilter }, r
     }
   );
 }
-var add_filter_default = (0, import_element35.forwardRef)(AddFilter);
+var add_filter_default = (0, import_element37.forwardRef)(AddFilter);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/reset-filters.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/reset-filters.mjs
 var import_components25 = __toESM(require_components(), 1);
 var import_i18n27 = __toESM(require_i18n(), 1);
-var import_jsx_runtime81 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime82 = __toESM(require_jsx_runtime(), 1);
 function ResetFilter({
   filters: filters2,
   view,
@@ -19431,7 +19755,7 @@ function ResetFilter({
   const isDisabled = !view.search && !view.filters?.some(
     (_filter) => !_filter.isLocked && (_filter.value !== void 0 || !isPrimary(_filter.field))
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime81.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(
     import_components25.Button,
     {
       disabled: isDisabled,
@@ -19452,10 +19776,10 @@ function ResetFilter({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/use-filters.mjs
-var import_element36 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/use-filters.mjs
+var import_element38 = __toESM(require_element(), 1);
 function useFilters(fields, view) {
-  return (0, import_element36.useMemo)(() => {
+  return (0, import_element38.useMemo)(() => {
     const filters2 = [];
     fields.forEach((field) => {
       if (field.filterBy === false || !field.hasElements && !field.Edit) {
@@ -19503,13 +19827,13 @@ function useFilters(fields, view) {
 }
 var use_filters_default = useFilters;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/filters.mjs
-var import_jsx_runtime82 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/filters.mjs
+var import_jsx_runtime83 = __toESM(require_jsx_runtime(), 1);
 function Filters({ className }) {
-  const { fields, view, onChangeView, openedFilter, setOpenedFilter } = (0, import_element37.useContext)(dataviews_context_default);
-  const addFilterRef = (0, import_element37.useRef)(null);
+  const { fields, view, onChangeView, openedFilter, setOpenedFilter } = (0, import_element39.useContext)(dataviews_context_default);
+  const addFilterRef = (0, import_element39.useRef)(null);
   const filters2 = use_filters_default(fields, view);
-  const addFilter = /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(
+  const addFilter = /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
     add_filter_default,
     {
       filters: filters2,
@@ -19526,7 +19850,7 @@ function Filters({ className }) {
   }
   const filterComponents = [
     ...visibleFilters.map((filter) => {
-      return /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(
+      return /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
         Filter,
         {
           filter,
@@ -19542,7 +19866,7 @@ function Filters({ className }) {
     addFilter
   ];
   filterComponents.push(
-    /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
       ResetFilter,
       {
         filters: filters2,
@@ -19552,7 +19876,7 @@ function Filters({ className }) {
       "reset-filters"
     )
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime82.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
     Stack,
     {
       direction: "row",
@@ -19565,13 +19889,13 @@ function Filters({ className }) {
     }
   );
 }
-var filters_default = (0, import_element37.memo)(Filters);
+var filters_default = (0, import_element39.memo)(Filters);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/toggle.mjs
-var import_element38 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/toggle.mjs
+var import_element40 = __toESM(require_element(), 1);
 var import_components26 = __toESM(require_components(), 1);
 var import_i18n28 = __toESM(require_i18n(), 1);
-var import_jsx_runtime83 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime84 = __toESM(require_jsx_runtime(), 1);
 function FiltersToggle() {
   const {
     filters: filters2,
@@ -19580,9 +19904,9 @@ function FiltersToggle() {
     setOpenedFilter,
     isShowingFilter,
     setIsShowingFilter
-  } = (0, import_element38.useContext)(dataviews_context_default);
-  const buttonRef = (0, import_element38.useRef)(null);
-  const onChangeViewWithFilterVisibility = (0, import_element38.useCallback)(
+  } = (0, import_element40.useContext)(dataviews_context_default);
+  const buttonRef = (0, import_element40.useRef)(null);
+  const onChangeViewWithFilterVisibility = (0, import_element40.useCallback)(
     (_view) => {
       onChangeView(_view);
       setIsShowingFilter(true);
@@ -19612,7 +19936,7 @@ function FiltersToggle() {
   const hasPrimaryOrLockedFilters = filters2.some(
     (filter) => filter.isPrimary || filter.isLocked
   );
-  const buttonComponent = /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
+  const buttonComponent = /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(
     import_components26.Button,
     {
       ref: buttonRef,
@@ -19624,7 +19948,7 @@ function FiltersToggle() {
       ...hasVisibleFilters ? toggleFiltersButtonProps : addFilterButtonProps
     }
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime83.jsx)("div", { className: "dataviews-filters__container-visibility-toggle", children: !hasVisibleFilters ? /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)("div", { className: "dataviews-filters__container-visibility-toggle", children: !hasVisibleFilters ? /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(
     AddFilterMenu,
     {
       filters: filters2,
@@ -19633,7 +19957,7 @@ function FiltersToggle() {
       setOpenedFilter,
       triggerProps: { render: buttonComponent }
     }
-  ) : /* @__PURE__ */ (0, import_jsx_runtime83.jsx)(
+  ) : /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(
     FilterVisibilityToggle,
     {
       buttonRef,
@@ -19647,36 +19971,36 @@ function FilterVisibilityToggle({
   filtersCount,
   children
 }) {
-  (0, import_element38.useEffect)(
+  (0, import_element40.useEffect)(
     () => () => {
       buttonRef.current?.focus();
     },
     [buttonRef]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime83.jsxs)(import_jsx_runtime83.Fragment, { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime84.jsxs)(import_jsx_runtime84.Fragment, { children: [
     children,
-    !!filtersCount && /* @__PURE__ */ (0, import_jsx_runtime83.jsx)("span", { className: "dataviews-filters-toggle__count", children: filtersCount })
+    !!filtersCount && /* @__PURE__ */ (0, import_jsx_runtime84.jsx)("span", { className: "dataviews-filters-toggle__count", children: filtersCount })
   ] });
 }
 var toggle_default = FiltersToggle;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/filters-toggled.mjs
-var import_element39 = __toESM(require_element(), 1);
-var import_jsx_runtime84 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-filters/filters-toggled.mjs
+var import_element41 = __toESM(require_element(), 1);
+var import_jsx_runtime85 = __toESM(require_jsx_runtime(), 1);
 function FiltersToggled(props) {
-  const { isShowingFilter } = (0, import_element39.useContext)(dataviews_context_default);
+  const { isShowingFilter } = (0, import_element41.useContext)(dataviews_context_default);
   if (!isShowingFilter) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(filters_default, { ...props });
+  return /* @__PURE__ */ (0, import_jsx_runtime85.jsx)(filters_default, { ...props });
 }
 var filters_toggled_default = FiltersToggled;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layout/index.mjs
-var import_element40 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-layout/index.mjs
+var import_element42 = __toESM(require_element(), 1);
 var import_components27 = __toESM(require_components(), 1);
 var import_i18n29 = __toESM(require_i18n(), 1);
-var import_jsx_runtime85 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime86 = __toESM(require_jsx_runtime(), 1);
 function DataViewsLayout({ className }) {
   const {
     actions: actions2 = [],
@@ -19696,8 +20020,8 @@ function DataViewsLayout({ className }) {
     renderItemLink,
     defaultLayouts: defaultLayouts2,
     containerRef,
-    empty = /* @__PURE__ */ (0, import_jsx_runtime85.jsx)("p", { children: (0, import_i18n29.__)("No results") })
-  } = (0, import_element40.useContext)(dataviews_context_default);
+    empty = /* @__PURE__ */ (0, import_jsx_runtime86.jsx)("p", { children: (0, import_i18n29.__)("No results") })
+  } = (0, import_element42.useContext)(dataviews_context_default);
   const isDelayedInitialLoading = useDelayedLoading(!hasInitiallyLoaded, {
     delay: 200
   });
@@ -19705,12 +20029,12 @@ function DataViewsLayout({ className }) {
     if (!isDelayedInitialLoading) {
       return null;
     }
-    return /* @__PURE__ */ (0, import_jsx_runtime85.jsx)("div", { className: "dataviews-loading", children: /* @__PURE__ */ (0, import_jsx_runtime85.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime85.jsx)(import_components27.Spinner, {}) }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime86.jsx)("div", { className: "dataviews-loading", children: /* @__PURE__ */ (0, import_jsx_runtime86.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(import_components27.Spinner, {}) }) });
   }
   const ViewComponent = VIEW_LAYOUTS.find(
     (v2) => v2.type === view.type && defaultLayouts2[v2.type]
   )?.component;
-  return /* @__PURE__ */ (0, import_jsx_runtime85.jsx)("div", { className: "dataviews-layout__container", ref: containerRef, children: /* @__PURE__ */ (0, import_jsx_runtime85.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime86.jsx)("div", { className: "dataviews-layout__container", ref: containerRef, children: /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(
     ViewComponent,
     {
       className,
@@ -19733,9 +20057,9 @@ function DataViewsLayout({ className }) {
   ) });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-footer/index.mjs
-var import_element41 = __toESM(require_element(), 1);
-var import_jsx_runtime86 = __toESM(require_jsx_runtime(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-footer/index.mjs
+var import_element43 = __toESM(require_element(), 1);
+var import_jsx_runtime87 = __toESM(require_jsx_runtime(), 1);
 var EMPTY_ARRAY6 = [];
 function DataViewsFooter() {
   const {
@@ -19744,21 +20068,20 @@ function DataViewsFooter() {
     data,
     actions: actions2 = EMPTY_ARRAY6,
     isLoading,
-    hasInitiallyLoaded,
-    hasInfiniteScrollHandler
-  } = (0, import_element41.useContext)(dataviews_context_default);
-  const isRefreshing = !!isLoading && hasInitiallyLoaded && !hasInfiniteScrollHandler && !!data?.length;
+    hasInitiallyLoaded
+  } = (0, import_element43.useContext)(dataviews_context_default);
+  const isRefreshing = !!isLoading && hasInitiallyLoaded && !!data?.length;
   const isDelayedRefreshing = useDelayedLoading(!!isRefreshing);
   const hasBulkActions = useSomeItemHasAPossibleBulkAction(actions2, data) && [LAYOUT_TABLE, LAYOUT_GRID].includes(view.type);
   if (!isRefreshing && (!totalItems || !totalPages || totalPages <= 1 && !hasBulkActions)) {
     return null;
   }
-  return (!!totalItems || isRefreshing) && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(
+  return (!!totalItems || isRefreshing) && /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(
     "div",
     {
       className: "dataviews-footer",
       inert: isRefreshing ? "true" : void 0,
-      children: /* @__PURE__ */ (0, import_jsx_runtime86.jsxs)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime87.jsxs)(
         Stack,
         {
           direction: "row",
@@ -19769,8 +20092,8 @@ function DataViewsFooter() {
           }),
           gap: "sm",
           children: [
-            hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(BulkActionsFooter, {}),
-            /* @__PURE__ */ (0, import_jsx_runtime86.jsx)(dataviews_pagination_default, {})
+            hasBulkActions && /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(BulkActionsFooter, {}),
+            /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(dataviews_pagination_default, {})
           ]
         }
       )
@@ -19778,39 +20101,40 @@ function DataViewsFooter() {
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-search/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-search/index.mjs
 var import_i18n30 = __toESM(require_i18n(), 1);
-var import_element42 = __toESM(require_element(), 1);
+var import_element44 = __toESM(require_element(), 1);
 var import_components28 = __toESM(require_components(), 1);
 var import_compose10 = __toESM(require_compose(), 1);
-var import_jsx_runtime87 = __toESM(require_jsx_runtime(), 1);
-var DataViewsSearch = (0, import_element42.memo)(function Search({ label }) {
-  const { view, onChangeView } = (0, import_element42.useContext)(dataviews_context_default);
+var import_jsx_runtime88 = __toESM(require_jsx_runtime(), 1);
+var DataViewsSearch = (0, import_element44.memo)(function Search({ label }) {
+  const { view, onChangeView } = (0, import_element44.useContext)(dataviews_context_default);
   const [search, setSearch, debouncedSearch] = (0, import_compose10.useDebouncedInput)(
     view.search
   );
-  (0, import_element42.useEffect)(() => {
+  (0, import_element44.useEffect)(() => {
     if (view.search !== debouncedSearch) {
       setSearch(view.search ?? "");
     }
   }, [view.search, setSearch]);
-  const onChangeViewRef = (0, import_element42.useRef)(onChangeView);
-  const viewRef = (0, import_element42.useRef)(view);
-  (0, import_element42.useEffect)(() => {
+  const onChangeViewRef = (0, import_element44.useRef)(onChangeView);
+  const viewRef = (0, import_element44.useRef)(view);
+  (0, import_element44.useEffect)(() => {
     onChangeViewRef.current = onChangeView;
     viewRef.current = view;
   }, [onChangeView, view]);
-  (0, import_element42.useEffect)(() => {
+  (0, import_element44.useEffect)(() => {
     if (debouncedSearch !== viewRef.current?.search) {
       onChangeViewRef.current({
         ...viewRef.current,
-        page: 1,
+        page: view.page ? 1 : void 0,
+        startPosition: view.startPosition ? 1 : void 0,
         search: debouncedSearch
       });
     }
   }, [debouncedSearch]);
   const searchLabel = label || (0, import_i18n30.__)("Search");
-  return /* @__PURE__ */ (0, import_jsx_runtime87.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime88.jsx)(
     import_components28.SearchControl,
     {
       className: "dataviews-search",
@@ -19824,53 +20148,21 @@ var DataViewsSearch = (0, import_element42.memo)(function Search({ label }) {
 });
 var dataviews_search_default = DataViewsSearch;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-view-config/index.mjs
-var import_components30 = __toESM(require_components(), 1);
-var import_i18n32 = __toESM(require_i18n(), 1);
-var import_element44 = __toESM(require_element(), 1);
-var import_warning = __toESM(require_warning(), 1);
-var import_compose11 = __toESM(require_compose(), 1);
-
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-view-config/infinite-scroll-toggle.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-view-config/index.mjs
 var import_components29 = __toESM(require_components(), 1);
 var import_i18n31 = __toESM(require_i18n(), 1);
-var import_element43 = __toESM(require_element(), 1);
-var import_jsx_runtime88 = __toESM(require_jsx_runtime(), 1);
-function InfiniteScrollToggle() {
-  const context = (0, import_element43.useContext)(dataviews_context_default);
-  const { view, onChangeView } = context;
-  const infiniteScrollEnabled = view.infiniteScrollEnabled ?? false;
-  if (!context.hasInfiniteScrollHandler) {
-    return null;
-  }
-  return /* @__PURE__ */ (0, import_jsx_runtime88.jsx)(
-    import_components29.ToggleControl,
-    {
-      label: (0, import_i18n31.__)("Enable infinite scroll"),
-      help: (0, import_i18n31.__)(
-        "Automatically load more content as you scroll, instead of showing pagination links."
-      ),
-      checked: infiniteScrollEnabled,
-      onChange: (newValue) => {
-        onChangeView({
-          ...view,
-          infiniteScrollEnabled: newValue
-        });
-      }
-    }
-  );
-}
-
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataviews-view-config/index.mjs
+var import_element45 = __toESM(require_element(), 1);
+var import_warning = __toESM(require_warning(), 1);
+var import_compose11 = __toESM(require_compose(), 1);
 var import_jsx_runtime89 = __toESM(require_jsx_runtime(), 1);
-var { Menu: Menu5 } = unlock(import_components30.privateApis);
+var { Menu: Menu5 } = unlock(import_components29.privateApis);
 var DATAVIEWS_CONFIG_POPOVER_PROPS = {
   className: "dataviews-config__popover",
   placement: "bottom-end",
   offset: 9
 };
 function ViewTypeMenu() {
-  const { view, onChangeView, defaultLayouts: defaultLayouts2 } = (0, import_element44.useContext)(dataviews_context_default);
+  const { view, onChangeView, defaultLayouts: defaultLayouts2 } = (0, import_element45.useContext)(dataviews_context_default);
   const availableLayouts = Object.keys(defaultLayouts2);
   if (availableLayouts.length <= 1) {
     return null;
@@ -19881,11 +20173,11 @@ function ViewTypeMenu() {
       Menu5.TriggerButton,
       {
         render: /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(
-          import_components30.Button,
+          import_components29.Button,
           {
             size: "compact",
             icon: activeView?.icon,
-            label: (0, import_i18n32.__)("Layout")
+            label: (0, import_i18n31.__)("Layout")
           }
         )
       }
@@ -19932,8 +20224,8 @@ function ViewTypeMenu() {
   ] });
 }
 function SortFieldControl() {
-  const { view, fields, onChangeView } = (0, import_element44.useContext)(dataviews_context_default);
-  const orderOptions = (0, import_element44.useMemo)(() => {
+  const { view, fields, onChangeView } = (0, import_element45.useContext)(dataviews_context_default);
+  const orderOptions = (0, import_element45.useMemo)(() => {
     const sortableFields = fields.filter(
       (field) => field.enableSorting !== false
     );
@@ -19945,10 +20237,10 @@ function SortFieldControl() {
     });
   }, [fields]);
   return /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(
-    import_components30.SelectControl,
+    import_components29.SelectControl,
     {
       __next40pxDefaultSize: true,
-      label: (0, import_i18n32.__)("Sort by"),
+      label: (0, import_i18n31.__)("Sort by"),
       value: view.sort?.field,
       options: orderOptions,
       onChange: (value) => {
@@ -19965,7 +20257,7 @@ function SortFieldControl() {
   );
 }
 function SortDirectionControl() {
-  const { view, fields, onChangeView } = (0, import_element44.useContext)(dataviews_context_default);
+  const { view, fields, onChangeView } = (0, import_element45.useContext)(dataviews_context_default);
   const sortableFields = fields.filter(
     (field) => field.enableSorting !== false
   );
@@ -19977,12 +20269,12 @@ function SortDirectionControl() {
     value = "desc";
   }
   return /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(
-    import_components30.__experimentalToggleGroupControl,
+    import_components29.__experimentalToggleGroupControl,
     {
       className: "dataviews-view-config__sort-direction",
       __next40pxDefaultSize: true,
       isBlock: true,
-      label: (0, import_i18n32.__)("Order"),
+      label: (0, import_i18n31.__)("Order"),
       value,
       onChange: (newDirection) => {
         if (newDirection === "asc" || newDirection === "desc") {
@@ -20003,7 +20295,7 @@ function SortDirectionControl() {
       },
       children: SORTING_DIRECTIONS.map((direction) => {
         return /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(
-          import_components30.__experimentalToggleGroupControlOptionIcon,
+          import_components29.__experimentalToggleGroupControlOptionIcon,
           {
             value: direction,
             icon: sortIcons[direction],
@@ -20016,17 +20308,17 @@ function SortDirectionControl() {
   );
 }
 function ItemsPerPageControl() {
-  const { view, config, onChangeView } = (0, import_element44.useContext)(dataviews_context_default);
+  const { view, config, onChangeView } = (0, import_element45.useContext)(dataviews_context_default);
   const { infiniteScrollEnabled } = view;
   if (!config || !config.perPageSizes || config.perPageSizes.length < 2 || config.perPageSizes.length > 6 || infiniteScrollEnabled) {
     return null;
   }
   return /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(
-    import_components30.__experimentalToggleGroupControl,
+    import_components29.__experimentalToggleGroupControl,
     {
       __next40pxDefaultSize: true,
       isBlock: true,
-      label: (0, import_i18n32.__)("Items per page"),
+      label: (0, import_i18n31.__)("Items per page"),
       value: view.perPage || 10,
       disabled: !view?.sort?.field,
       onChange: (newItemsPerPage) => {
@@ -20039,7 +20331,7 @@ function ItemsPerPageControl() {
       },
       children: config.perPageSizes.map((value) => {
         return /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(
-          import_components30.__experimentalToggleGroupControlOption,
+          import_components29.__experimentalToggleGroupControlOption,
           {
             value,
             label: value.toString()
@@ -20051,13 +20343,13 @@ function ItemsPerPageControl() {
   );
 }
 function ResetViewButton() {
-  const { onReset } = (0, import_element44.useContext)(dataviews_context_default);
+  const { onReset } = (0, import_element45.useContext)(dataviews_context_default);
   if (onReset === void 0) {
     return null;
   }
   const isDisabled = onReset === false;
   return /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(
-    import_components30.Button,
+    import_components29.Button,
     {
       variant: "tertiary",
       size: "compact",
@@ -20069,12 +20361,12 @@ function ResetViewButton() {
           onReset();
         }
       },
-      children: (0, import_i18n32.__)("Reset view")
+      children: (0, import_i18n31.__)("Reset view")
     }
   );
 }
 function DataviewsViewConfigDropdown() {
-  const { view, onReset } = (0, import_element44.useContext)(dataviews_context_default);
+  const { view, onReset } = (0, import_element45.useContext)(dataviews_context_default);
   const popoverId = (0, import_compose11.useInstanceId)(
     _DataViewsViewConfig,
     "dataviews-view-config-dropdown"
@@ -20084,7 +20376,7 @@ function DataviewsViewConfigDropdown() {
   );
   const isModified = typeof onReset === "function";
   return /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(
-    import_components30.Dropdown,
+    import_components29.Dropdown,
     {
       expandOnMobile: true,
       popoverProps: {
@@ -20094,11 +20386,11 @@ function DataviewsViewConfigDropdown() {
       renderToggle: ({ onToggle, isOpen }) => {
         return /* @__PURE__ */ (0, import_jsx_runtime89.jsxs)("div", { className: "dataviews-view-config__toggle-wrapper", children: [
           /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(
-            import_components30.Button,
+            import_components29.Button,
             {
               size: "compact",
               icon: cog_default,
-              label: (0, import_i18n32._x)(
+              label: (0, import_i18n31._x)(
                 "View options",
                 "View is used as a noun"
               ),
@@ -20111,7 +20403,7 @@ function DataviewsViewConfigDropdown() {
         ] });
       },
       renderContent: () => /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(
-        import_components30.__experimentalDropdownContentWrapper,
+        import_components29.__experimentalDropdownContentWrapper,
         {
           paddingSize: "medium",
           className: "dataviews-config__popover-content-wrapper",
@@ -20131,11 +20423,11 @@ function DataviewsViewConfigDropdown() {
                     className: "dataviews-view-config__header",
                     children: [
                       /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(
-                        import_components30.__experimentalHeading,
+                        import_components29.__experimentalHeading,
                         {
                           level: 2,
                           className: "dataviews-settings-section__title",
-                          children: (0, import_i18n32.__)("Appearance")
+                          children: (0, import_i18n31.__)("Appearance")
                         }
                       ),
                       /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(ResetViewButton, {})
@@ -20156,7 +20448,6 @@ function DataviewsViewConfigDropdown() {
                     }
                   ),
                   !!activeLayout?.viewConfigOptions && /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(activeLayout.viewConfigOptions, {}),
-                  /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(InfiniteScrollToggle, {}),
                   /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(ItemsPerPageControl, {}),
                   /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(PropertiesSection, {})
                 ] })
@@ -20174,14 +20465,14 @@ function _DataViewsViewConfig() {
     /* @__PURE__ */ (0, import_jsx_runtime89.jsx)(DataviewsViewConfigDropdown, {})
   ] });
 }
-var DataViewsViewConfig = (0, import_element44.memo)(_DataViewsViewConfig);
+var DataViewsViewConfig = (0, import_element45.memo)(_DataViewsViewConfig);
 var dataviews_view_config_default = DataViewsViewConfig;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/checkbox.mjs
-var import_components31 = __toESM(require_components(), 1);
-var import_element45 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/checkbox.mjs
+var import_components30 = __toESM(require_components(), 1);
+var import_element46 = __toESM(require_element(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/utils/get-custom-validity.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/utils/get-custom-validity.mjs
 function getCustomValidity(isValid2, validity) {
   let customValidity;
   if (isValid2?.required && validity?.required) {
@@ -20204,9 +20495,9 @@ function getCustomValidity(isValid2, validity) {
   return customValidity;
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/checkbox.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/checkbox.mjs
 var import_jsx_runtime90 = __toESM(require_jsx_runtime(), 1);
-var { ValidatedCheckboxControl } = unlock(import_components31.privateApis);
+var { ValidatedCheckboxControl } = unlock(import_components30.privateApis);
 function Checkbox({
   field,
   onChange,
@@ -20216,7 +20507,7 @@ function Checkbox({
   validity
 }) {
   const { getValue, setValue, label, description, isValid: isValid2 } = field;
-  const onChangeControl = (0, import_element45.useCallback)(() => {
+  const onChangeControl = (0, import_element46.useCallback)(() => {
     onChange(
       setValue({ item: data, value: !getValue({ item: data }) })
     );
@@ -20236,11 +20527,11 @@ function Checkbox({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/combobox.mjs
-var import_components32 = __toESM(require_components(), 1);
-var import_element46 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/combobox.mjs
+var import_components31 = __toESM(require_components(), 1);
+var import_element47 = __toESM(require_element(), 1);
 var import_jsx_runtime91 = __toESM(require_jsx_runtime(), 1);
-var { ValidatedComboboxControl } = unlock(import_components32.privateApis);
+var { ValidatedComboboxControl } = unlock(import_components31.privateApis);
 function Combobox3({
   data,
   field,
@@ -20250,7 +20541,7 @@ function Combobox3({
 }) {
   const { label, description, placeholder, getValue, setValue, isValid: isValid2 } = field;
   const value = getValue({ item: data }) ?? "";
-  const onChangeControl = (0, import_element46.useCallback)(
+  const onChangeControl = (0, import_element47.useCallback)(
     (newValue) => onChange(setValue({ item: data, value: newValue ?? "" })),
     [data, onChange, setValue]
   );
@@ -20259,7 +20550,7 @@ function Combobox3({
     getElements: field.getElements
   });
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(import_components32.Spinner, {});
+    return /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(import_components31.Spinner, {});
   }
   return /* @__PURE__ */ (0, import_jsx_runtime91.jsx)(
     ValidatedComboboxControl,
@@ -20279,29 +20570,29 @@ function Combobox3({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/datetime.mjs
-var import_components34 = __toESM(require_components(), 1);
-var import_element48 = __toESM(require_element(), 1);
-var import_i18n34 = __toESM(require_i18n(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/datetime.mjs
+var import_components33 = __toESM(require_components(), 1);
+var import_element49 = __toESM(require_element(), 1);
+var import_i18n33 = __toESM(require_i18n(), 1);
 var import_date3 = __toESM(require_date(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/utils/relative-date-control.mjs
-var import_components33 = __toESM(require_components(), 1);
-var import_element47 = __toESM(require_element(), 1);
-var import_i18n33 = __toESM(require_i18n(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/utils/relative-date-control.mjs
+var import_components32 = __toESM(require_components(), 1);
+var import_element48 = __toESM(require_element(), 1);
+var import_i18n32 = __toESM(require_i18n(), 1);
 var import_jsx_runtime92 = __toESM(require_jsx_runtime(), 1);
 var TIME_UNITS_OPTIONS = {
   [OPERATOR_IN_THE_PAST]: [
-    { value: "days", label: (0, import_i18n33.__)("Days") },
-    { value: "weeks", label: (0, import_i18n33.__)("Weeks") },
-    { value: "months", label: (0, import_i18n33.__)("Months") },
-    { value: "years", label: (0, import_i18n33.__)("Years") }
+    { value: "days", label: (0, import_i18n32.__)("Days") },
+    { value: "weeks", label: (0, import_i18n32.__)("Weeks") },
+    { value: "months", label: (0, import_i18n32.__)("Months") },
+    { value: "years", label: (0, import_i18n32.__)("Years") }
   ],
   [OPERATOR_OVER]: [
-    { value: "days", label: (0, import_i18n33.__)("Days ago") },
-    { value: "weeks", label: (0, import_i18n33.__)("Weeks ago") },
-    { value: "months", label: (0, import_i18n33.__)("Months ago") },
-    { value: "years", label: (0, import_i18n33.__)("Years ago") }
+    { value: "days", label: (0, import_i18n32.__)("Days ago") },
+    { value: "weeks", label: (0, import_i18n32.__)("Weeks ago") },
+    { value: "months", label: (0, import_i18n32.__)("Months ago") },
+    { value: "years", label: (0, import_i18n32.__)("Years ago") }
   ]
 };
 function RelativeDateControl({
@@ -20316,7 +20607,7 @@ function RelativeDateControl({
   const { id, label, description, getValue, setValue } = field;
   const fieldValue = getValue({ item: data });
   const { value: relValue = "", unit = options[0].value } = fieldValue && typeof fieldValue === "object" ? fieldValue : {};
-  const onChangeValue = (0, import_element47.useCallback)(
+  const onChangeValue = (0, import_element48.useCallback)(
     (newValue) => onChange(
       setValue({
         item: data,
@@ -20325,7 +20616,7 @@ function RelativeDateControl({
     ),
     [onChange, setValue, data, unit]
   );
-  const onChangeUnit = (0, import_element47.useCallback)(
+  const onChangeUnit = (0, import_element48.useCallback)(
     (newUnit) => onChange(
       setValue({
         item: data,
@@ -20335,7 +20626,7 @@ function RelativeDateControl({
     [onChange, setValue, data, relValue]
   );
   return /* @__PURE__ */ (0, import_jsx_runtime92.jsx)(
-    import_components33.BaseControl,
+    import_components32.BaseControl,
     {
       id,
       className: clsx_default(className, "dataviews-controls__relative-date"),
@@ -20344,7 +20635,7 @@ function RelativeDateControl({
       help: description,
       children: /* @__PURE__ */ (0, import_jsx_runtime92.jsxs)(Stack, { direction: "row", gap: "sm", children: [
         /* @__PURE__ */ (0, import_jsx_runtime92.jsx)(
-          import_components33.__experimentalNumberControl,
+          import_components32.__experimentalNumberControl,
           {
             __next40pxDefaultSize: true,
             className: "dataviews-controls__relative-date-number",
@@ -20356,11 +20647,11 @@ function RelativeDateControl({
           }
         ),
         /* @__PURE__ */ (0, import_jsx_runtime92.jsx)(
-          import_components33.SelectControl,
+          import_components32.SelectControl,
           {
             className: "dataviews-controls__relative-date-unit",
             __next40pxDefaultSize: true,
-            label: (0, import_i18n33.__)("Unit"),
+            label: (0, import_i18n32.__)("Unit"),
             value: unit,
             options,
             onChange: onChangeUnit,
@@ -20372,7 +20663,7 @@ function RelativeDateControl({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/parse-date-time.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/parse-date-time.mjs
 var import_date2 = __toESM(require_date(), 1);
 function parseDateTime(dateTimeString) {
   if (!dateTimeString) {
@@ -20382,9 +20673,9 @@ function parseDateTime(dateTimeString) {
   return parsed && isValid(parsed) ? parsed : null;
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/datetime.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/datetime.mjs
 var import_jsx_runtime93 = __toESM(require_jsx_runtime(), 1);
-var { DateCalendar, ValidatedInputControl } = unlock(import_components34.privateApis);
+var { DateCalendar, ValidatedInputControl } = unlock(import_components33.privateApis);
 var formatDateTime = (value) => {
   if (!value) {
     return "";
@@ -20397,30 +20688,32 @@ function CalendarDateTimeControl({
   onChange,
   hideLabelFromVision,
   markWhenOptional,
-  validity
+  validity,
+  config
 }) {
+  const { compact } = config || {};
   const { id, label, description, setValue, getValue, isValid: isValid2 } = field;
   const fieldValue = getValue({ item: data });
   const value = typeof fieldValue === "string" ? fieldValue : void 0;
-  const [calendarMonth, setCalendarMonth] = (0, import_element48.useState)(() => {
+  const [calendarMonth, setCalendarMonth] = (0, import_element49.useState)(() => {
     const parsedDate = parseDateTime(value);
     return parsedDate || /* @__PURE__ */ new Date();
   });
-  const inputControlRef = (0, import_element48.useRef)(null);
-  const validationTimeoutRef = (0, import_element48.useRef)(void 0);
-  const previousFocusRef = (0, import_element48.useRef)(null);
-  const onChangeCallback = (0, import_element48.useCallback)(
+  const inputControlRef = (0, import_element49.useRef)(null);
+  const validationTimeoutRef = (0, import_element49.useRef)(void 0);
+  const previousFocusRef = (0, import_element49.useRef)(null);
+  const onChangeCallback = (0, import_element49.useCallback)(
     (newValue) => onChange(setValue({ item: data, value: newValue })),
     [data, onChange, setValue]
   );
-  (0, import_element48.useEffect)(() => {
+  (0, import_element49.useEffect)(() => {
     return () => {
       if (validationTimeoutRef.current) {
         clearTimeout(validationTimeoutRef.current);
       }
     };
   }, []);
-  const onSelectDate = (0, import_element48.useCallback)(
+  const onSelectDate = (0, import_element49.useCallback)(
     (newDate) => {
       let dateTimeValue;
       if (newDate) {
@@ -20454,7 +20747,7 @@ function CalendarDateTimeControl({
     },
     [onChangeCallback, value]
   );
-  const handleManualDateTimeChange = (0, import_element48.useCallback)(
+  const handleManualDateTimeChange = (0, import_element49.useCallback)(
     (newValue) => {
       if (newValue) {
         const dateTime = (0, import_date3.getDate)(newValue);
@@ -20476,12 +20769,12 @@ function CalendarDateTimeControl({
   } = (0, import_date3.getSettings)();
   let displayLabel = label;
   if (isValid2?.required && !markWhenOptional && !hideLabelFromVision) {
-    displayLabel = `${label} (${(0, import_i18n34.__)("Required")})`;
+    displayLabel = `${label} (${(0, import_i18n33.__)("Required")})`;
   } else if (!isValid2?.required && markWhenOptional && !hideLabelFromVision) {
-    displayLabel = `${label} (${(0, import_i18n34.__)("Optional")})`;
+    displayLabel = `${label} (${(0, import_i18n33.__)("Optional")})`;
   }
   return /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
-    import_components34.BaseControl,
+    import_components33.BaseControl,
     {
       id,
       label: displayLabel,
@@ -20496,13 +20789,13 @@ function CalendarDateTimeControl({
             required: !!isValid2?.required,
             customValidity: getCustomValidity(isValid2, validity),
             type: "datetime-local",
-            label: (0, import_i18n34.__)("Date time"),
+            label: (0, import_i18n33.__)("Date time"),
             hideLabelFromVision: true,
             value: formatDateTime(value),
             onChange: handleManualDateTimeChange
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
+        !compact && /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
           DateCalendar,
           {
             style: { width: "100%" },
@@ -20525,7 +20818,8 @@ function DateTime({
   hideLabelFromVision,
   markWhenOptional,
   operator,
-  validity
+  validity,
+  config
 }) {
   if (operator === OPERATOR_IN_THE_PAST || operator === OPERATOR_OVER) {
     return /* @__PURE__ */ (0, import_jsx_runtime93.jsx)(
@@ -20548,27 +20842,28 @@ function DateTime({
       onChange,
       hideLabelFromVision,
       markWhenOptional,
-      validity
+      validity,
+      config
     }
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/date.mjs
-var import_components35 = __toESM(require_components(), 1);
-var import_element49 = __toESM(require_element(), 1);
-var import_i18n35 = __toESM(require_i18n(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/date.mjs
+var import_components34 = __toESM(require_components(), 1);
+var import_element50 = __toESM(require_element(), 1);
+var import_i18n34 = __toESM(require_i18n(), 1);
 var import_date4 = __toESM(require_date(), 1);
 var import_jsx_runtime94 = __toESM(require_jsx_runtime(), 1);
-var { DateCalendar: DateCalendar2, DateRangeCalendar } = unlock(import_components35.privateApis);
+var { DateCalendar: DateCalendar2, DateRangeCalendar } = unlock(import_components34.privateApis);
 var DATE_PRESETS = [
   {
     id: "today",
-    label: (0, import_i18n35.__)("Today"),
+    label: (0, import_i18n34.__)("Today"),
     getValue: () => (0, import_date4.getDate)(null)
   },
   {
     id: "yesterday",
-    label: (0, import_i18n35.__)("Yesterday"),
+    label: (0, import_i18n34.__)("Yesterday"),
     getValue: () => {
       const today = (0, import_date4.getDate)(null);
       return subDays(today, 1);
@@ -20576,7 +20871,7 @@ var DATE_PRESETS = [
   },
   {
     id: "past-week",
-    label: (0, import_i18n35.__)("Past week"),
+    label: (0, import_i18n34.__)("Past week"),
     getValue: () => {
       const today = (0, import_date4.getDate)(null);
       return subDays(today, 7);
@@ -20584,7 +20879,7 @@ var DATE_PRESETS = [
   },
   {
     id: "past-month",
-    label: (0, import_i18n35.__)("Past month"),
+    label: (0, import_i18n34.__)("Past month"),
     getValue: () => {
       const today = (0, import_date4.getDate)(null);
       return subMonths(today, 1);
@@ -20594,7 +20889,7 @@ var DATE_PRESETS = [
 var DATE_RANGE_PRESETS = [
   {
     id: "last-7-days",
-    label: (0, import_i18n35.__)("Last 7 days"),
+    label: (0, import_i18n34.__)("Last 7 days"),
     getValue: () => {
       const today = (0, import_date4.getDate)(null);
       return [subDays(today, 7), today];
@@ -20602,7 +20897,7 @@ var DATE_RANGE_PRESETS = [
   },
   {
     id: "last-30-days",
-    label: (0, import_i18n35.__)("Last 30 days"),
+    label: (0, import_i18n34.__)("Last 30 days"),
     getValue: () => {
       const today = (0, import_date4.getDate)(null);
       return [subDays(today, 30), today];
@@ -20610,7 +20905,7 @@ var DATE_RANGE_PRESETS = [
   },
   {
     id: "month-to-date",
-    label: (0, import_i18n35.__)("Month to date"),
+    label: (0, import_i18n34.__)("Month to date"),
     getValue: () => {
       const today = (0, import_date4.getDate)(null);
       return [startOfMonth(today), today];
@@ -20618,7 +20913,7 @@ var DATE_RANGE_PRESETS = [
   },
   {
     id: "last-year",
-    label: (0, import_i18n35.__)("Last year"),
+    label: (0, import_i18n34.__)("Last year"),
     getValue: () => {
       const today = (0, import_date4.getDate)(null);
       return [subYears(today, 1), today];
@@ -20626,7 +20921,7 @@ var DATE_RANGE_PRESETS = [
   },
   {
     id: "year-to-date",
-    label: (0, import_i18n35.__)("Year to date"),
+    label: (0, import_i18n34.__)("Year to date"),
     getValue: () => {
       const today = (0, import_date4.getDate)(null);
       return [startOfYear(today), today];
@@ -20655,8 +20950,8 @@ function ValidatedDateControl({
   children
 }) {
   const { isValid: isValid2 } = field;
-  const [customValidity, setCustomValidity] = (0, import_element49.useState)(void 0);
-  const validateRefs = (0, import_element49.useCallback)(() => {
+  const [customValidity, setCustomValidity] = (0, import_element50.useState)(void 0);
+  const validateRefs = (0, import_element50.useCallback)(() => {
     const refs = Array.isArray(inputRefs) ? inputRefs : [inputRefs];
     for (const ref of refs) {
       const input = ref.current;
@@ -20670,7 +20965,7 @@ function ValidatedDateControl({
     }
     setCustomValidity(void 0);
   }, [inputRefs]);
-  (0, import_element49.useEffect)(() => {
+  (0, import_element50.useEffect)(() => {
     const refs = Array.isArray(inputRefs) ? inputRefs : [inputRefs];
     const result = validity ? getCustomValidity(isValid2, validity) : void 0;
     for (const ref of refs) {
@@ -20682,7 +20977,7 @@ function ValidatedDateControl({
       }
     }
   }, [inputRefs, isValid2, validity]);
-  (0, import_element49.useEffect)(() => {
+  (0, import_element50.useEffect)(() => {
     const refs = Array.isArray(inputRefs) ? inputRefs : [inputRefs];
     const handleInvalid = (event) => {
       event.preventDefault();
@@ -20697,7 +20992,7 @@ function ValidatedDateControl({
       }
     };
   }, [inputRefs, setIsTouched]);
-  (0, import_element49.useEffect)(() => {
+  (0, import_element50.useEffect)(() => {
     if (!isTouched) {
       return;
     }
@@ -20727,7 +21022,7 @@ function ValidatedDateControl({
         ),
         children: [
           /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
-            import_components35.Icon,
+            import_components34.Icon,
             {
               className: "components-validated-control__indicator-icon",
               icon: error_default,
@@ -20758,23 +21053,23 @@ function CalendarDateControl({
     isValid: isValid2,
     format: fieldFormat
   } = field;
-  const [selectedPresetId, setSelectedPresetId] = (0, import_element49.useState)(
+  const [selectedPresetId, setSelectedPresetId] = (0, import_element50.useState)(
     null
   );
   const weekStartsOn = fieldFormat.weekStartsOn ?? (0, import_date4.getSettings)().l10n.startOfWeek;
   const fieldValue = getValue({ item: data });
   const value = typeof fieldValue === "string" ? fieldValue : void 0;
-  const [calendarMonth, setCalendarMonth] = (0, import_element49.useState)(() => {
+  const [calendarMonth, setCalendarMonth] = (0, import_element50.useState)(() => {
     const parsedDate = parseDate(value);
     return parsedDate || /* @__PURE__ */ new Date();
   });
-  const [isTouched, setIsTouched] = (0, import_element49.useState)(false);
-  const validityTargetRef = (0, import_element49.useRef)(null);
-  const onChangeCallback = (0, import_element49.useCallback)(
+  const [isTouched, setIsTouched] = (0, import_element50.useState)(false);
+  const validityTargetRef = (0, import_element50.useRef)(null);
+  const onChangeCallback = (0, import_element50.useCallback)(
     (newValue) => onChange(setValue({ item: data, value: newValue })),
     [data, onChange, setValue]
   );
-  const onSelectDate = (0, import_element49.useCallback)(
+  const onSelectDate = (0, import_element50.useCallback)(
     (newDate) => {
       const dateValue = newDate ? format(newDate, "yyyy-MM-dd") : void 0;
       onChangeCallback(dateValue);
@@ -20783,7 +21078,7 @@ function CalendarDateControl({
     },
     [onChangeCallback]
   );
-  const handlePresetClick = (0, import_element49.useCallback)(
+  const handlePresetClick = (0, import_element50.useCallback)(
     (preset) => {
       const presetDate = preset.getValue();
       const dateValue = formatDate(presetDate);
@@ -20794,7 +21089,7 @@ function CalendarDateControl({
     },
     [onChangeCallback]
   );
-  const handleManualDateChange = (0, import_element49.useCallback)(
+  const handleManualDateChange = (0, import_element50.useCallback)(
     (newValue) => {
       onChangeCallback(newValue);
       if (newValue) {
@@ -20813,9 +21108,9 @@ function CalendarDateControl({
   } = (0, import_date4.getSettings)();
   let displayLabel = label;
   if (isValid2?.required && !markWhenOptional) {
-    displayLabel = `${label} (${(0, import_i18n35.__)("Required")})`;
+    displayLabel = `${label} (${(0, import_i18n34.__)("Required")})`;
   } else if (!isValid2?.required && markWhenOptional) {
-    displayLabel = `${label} (${(0, import_i18n35.__)("Optional")})`;
+    displayLabel = `${label} (${(0, import_i18n34.__)("Optional")})`;
   }
   return /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
     ValidatedDateControl,
@@ -20826,7 +21121,7 @@ function CalendarDateControl({
       isTouched,
       setIsTouched,
       children: /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
-        import_components35.BaseControl,
+        import_components34.BaseControl,
         {
           id,
           className: "dataviews-controls__date",
@@ -20845,7 +21140,7 @@ function CalendarDateControl({
                   DATE_PRESETS.map((preset) => {
                     const isSelected2 = selectedPresetId === preset.id;
                     return /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
-                      import_components35.Button,
+                      import_components34.Button,
                       {
                         className: "dataviews-controls__date-preset",
                         variant: "tertiary",
@@ -20858,7 +21153,7 @@ function CalendarDateControl({
                     );
                   }),
                   /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
-                    import_components35.Button,
+                    import_components34.Button,
                     {
                       className: "dataviews-controls__date-preset",
                       variant: "tertiary",
@@ -20866,19 +21161,19 @@ function CalendarDateControl({
                       size: "small",
                       disabled: !!selectedPresetId,
                       accessibleWhenDisabled: false,
-                      children: (0, import_i18n35.__)("Custom")
+                      children: (0, import_i18n34.__)("Custom")
                     }
                   )
                 ]
               }
             ),
             /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
-              import_components35.__experimentalInputControl,
+              import_components34.__experimentalInputControl,
               {
                 __next40pxDefaultSize: true,
                 ref: validityTargetRef,
                 type: "date",
-                label: (0, import_i18n35.__)("Date"),
+                label: (0, import_i18n34.__)("Date"),
                 hideLabelFromVision: true,
                 value,
                 onChange: handleManualDateChange,
@@ -20925,7 +21220,7 @@ function CalendarDateRangeControl({
     value = fieldValue;
   }
   const weekStartsOn = fieldFormat.weekStartsOn ?? (0, import_date4.getSettings)().l10n.startOfWeek;
-  const onChangeCallback = (0, import_element49.useCallback)(
+  const onChangeCallback = (0, import_element50.useCallback)(
     (newValue) => {
       onChange(
         setValue({
@@ -20936,10 +21231,10 @@ function CalendarDateRangeControl({
     },
     [data, onChange, setValue]
   );
-  const [selectedPresetId, setSelectedPresetId] = (0, import_element49.useState)(
+  const [selectedPresetId, setSelectedPresetId] = (0, import_element50.useState)(
     null
   );
-  const selectedRange = (0, import_element49.useMemo)(() => {
+  const selectedRange = (0, import_element50.useMemo)(() => {
     if (!value) {
       return { from: void 0, to: void 0 };
     }
@@ -20949,13 +21244,13 @@ function CalendarDateRangeControl({
       to: parseDate(to) || void 0
     };
   }, [value]);
-  const [calendarMonth, setCalendarMonth] = (0, import_element49.useState)(() => {
+  const [calendarMonth, setCalendarMonth] = (0, import_element50.useState)(() => {
     return selectedRange.from || /* @__PURE__ */ new Date();
   });
-  const [isTouched, setIsTouched] = (0, import_element49.useState)(false);
-  const fromInputRef = (0, import_element49.useRef)(null);
-  const toInputRef = (0, import_element49.useRef)(null);
-  const updateDateRange = (0, import_element49.useCallback)(
+  const [isTouched, setIsTouched] = (0, import_element50.useState)(false);
+  const fromInputRef = (0, import_element50.useRef)(null);
+  const toInputRef = (0, import_element50.useRef)(null);
+  const updateDateRange = (0, import_element50.useCallback)(
     (fromDate, toDate2) => {
       if (fromDate && toDate2) {
         onChangeCallback([
@@ -20968,7 +21263,7 @@ function CalendarDateRangeControl({
     },
     [onChangeCallback]
   );
-  const onSelectCalendarRange = (0, import_element49.useCallback)(
+  const onSelectCalendarRange = (0, import_element50.useCallback)(
     (newRange) => {
       updateDateRange(newRange?.from, newRange?.to);
       setSelectedPresetId(null);
@@ -20976,7 +21271,7 @@ function CalendarDateRangeControl({
     },
     [updateDateRange]
   );
-  const handlePresetClick = (0, import_element49.useCallback)(
+  const handlePresetClick = (0, import_element50.useCallback)(
     (preset) => {
       const [startDate, endDate] = preset.getValue();
       setCalendarMonth(startDate);
@@ -20986,7 +21281,7 @@ function CalendarDateRangeControl({
     },
     [updateDateRange]
   );
-  const handleManualDateChange = (0, import_element49.useCallback)(
+  const handleManualDateChange = (0, import_element50.useCallback)(
     (fromOrTo, newValue) => {
       const [currentFrom, currentTo] = value || [
         void 0,
@@ -21009,9 +21304,9 @@ function CalendarDateRangeControl({
   const { timezone } = (0, import_date4.getSettings)();
   let displayLabel = label;
   if (field.isValid?.required && !markWhenOptional) {
-    displayLabel = `${label} (${(0, import_i18n35.__)("Required")})`;
+    displayLabel = `${label} (${(0, import_i18n34.__)("Required")})`;
   } else if (!field.isValid?.required && markWhenOptional) {
-    displayLabel = `${label} (${(0, import_i18n35.__)("Optional")})`;
+    displayLabel = `${label} (${(0, import_i18n34.__)("Optional")})`;
   }
   return /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
     ValidatedDateControl,
@@ -21022,7 +21317,7 @@ function CalendarDateRangeControl({
       isTouched,
       setIsTouched,
       children: /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
-        import_components35.BaseControl,
+        import_components34.BaseControl,
         {
           id,
           className: "dataviews-controls__date",
@@ -21041,7 +21336,7 @@ function CalendarDateRangeControl({
                   DATE_RANGE_PRESETS.map((preset) => {
                     const isSelected2 = selectedPresetId === preset.id;
                     return /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
-                      import_components35.Button,
+                      import_components34.Button,
                       {
                         className: "dataviews-controls__date-preset",
                         variant: "tertiary",
@@ -21054,7 +21349,7 @@ function CalendarDateRangeControl({
                     );
                   }),
                   /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
-                    import_components35.Button,
+                    import_components34.Button,
                     {
                       className: "dataviews-controls__date-preset",
                       variant: "tertiary",
@@ -21062,7 +21357,7 @@ function CalendarDateRangeControl({
                       size: "small",
                       accessibleWhenDisabled: false,
                       disabled: !!selectedPresetId,
-                      children: (0, import_i18n35.__)("Custom")
+                      children: (0, import_i18n34.__)("Custom")
                     }
                   )
                 ]
@@ -21077,12 +21372,12 @@ function CalendarDateRangeControl({
                 className: "dataviews-controls__date-range-inputs",
                 children: [
                   /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
-                    import_components35.__experimentalInputControl,
+                    import_components34.__experimentalInputControl,
                     {
                       __next40pxDefaultSize: true,
                       ref: fromInputRef,
                       type: "date",
-                      label: (0, import_i18n35.__)("From"),
+                      label: (0, import_i18n34.__)("From"),
                       hideLabelFromVision: true,
                       value: value?.[0],
                       onChange: (newValue) => handleManualDateChange("from", newValue),
@@ -21090,12 +21385,12 @@ function CalendarDateRangeControl({
                     }
                   ),
                   /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
-                    import_components35.__experimentalInputControl,
+                    import_components34.__experimentalInputControl,
                     {
                       __next40pxDefaultSize: true,
                       ref: toInputRef,
                       type: "date",
-                      label: (0, import_i18n35.__)("To"),
+                      label: (0, import_i18n34.__)("To"),
                       hideLabelFromVision: true,
                       value: value?.[1],
                       onChange: (newValue) => handleManualDateChange("to", newValue),
@@ -21171,11 +21466,11 @@ function DateControl({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/select.mjs
-var import_components36 = __toESM(require_components(), 1);
-var import_element50 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/select.mjs
+var import_components35 = __toESM(require_components(), 1);
+var import_element51 = __toESM(require_element(), 1);
 var import_jsx_runtime95 = __toESM(require_jsx_runtime(), 1);
-var { ValidatedSelectControl } = unlock(import_components36.privateApis);
+var { ValidatedSelectControl } = unlock(import_components35.privateApis);
 function Select({
   data,
   field,
@@ -21187,7 +21482,7 @@ function Select({
   const { type, label, description, getValue, setValue, isValid: isValid2 } = field;
   const isMultiple = type === "array";
   const value = getValue({ item: data }) ?? (isMultiple ? [] : "");
-  const onChangeControl = (0, import_element50.useCallback)(
+  const onChangeControl = (0, import_element51.useCallback)(
     (newValue) => onChange(setValue({ item: data, value: newValue })),
     [data, onChange, setValue]
   );
@@ -21196,7 +21491,7 @@ function Select({
     getElements: field.getElements
   });
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(import_components36.Spinner, {});
+    return /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(import_components35.Spinner, {});
   }
   return /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(
     ValidatedSelectControl,
@@ -21216,7 +21511,7 @@ function Select({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/adaptive-select.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/adaptive-select.mjs
 var import_jsx_runtime96 = __toESM(require_jsx_runtime(), 1);
 var ELEMENTS_THRESHOLD = 10;
 function AdaptiveSelect(props) {
@@ -21231,14 +21526,14 @@ function AdaptiveSelect(props) {
   return /* @__PURE__ */ (0, import_jsx_runtime96.jsx)(Select, { ...props });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/email.mjs
-var import_components38 = __toESM(require_components(), 1);
-
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/utils/validated-input.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/email.mjs
 var import_components37 = __toESM(require_components(), 1);
-var import_element51 = __toESM(require_element(), 1);
+
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/utils/validated-input.mjs
+var import_components36 = __toESM(require_components(), 1);
+var import_element52 = __toESM(require_element(), 1);
 var import_jsx_runtime97 = __toESM(require_jsx_runtime(), 1);
-var { ValidatedInputControl: ValidatedInputControl2 } = unlock(import_components37.privateApis);
+var { ValidatedInputControl: ValidatedInputControl2 } = unlock(import_components36.privateApis);
 function ValidatedText({
   data,
   field,
@@ -21252,7 +21547,7 @@ function ValidatedText({
 }) {
   const { label, placeholder, description, getValue, setValue, isValid: isValid2 } = field;
   const value = getValue({ item: data });
-  const onChangeControl = (0, import_element51.useCallback)(
+  const onChangeControl = (0, import_element52.useCallback)(
     (newValue) => onChange(
       setValue({
         item: data,
@@ -21284,7 +21579,7 @@ function ValidatedText({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/email.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/email.mjs
 var import_jsx_runtime98 = __toESM(require_jsx_runtime(), 1);
 function Email({
   data,
@@ -21305,14 +21600,14 @@ function Email({
         markWhenOptional,
         validity,
         type: "email",
-        prefix: /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(import_components38.__experimentalInputControlPrefixWrapper, { variant: "icon", children: /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(import_components38.Icon, { icon: envelope_default }) })
+        prefix: /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(import_components37.__experimentalInputControlPrefixWrapper, { variant: "icon", children: /* @__PURE__ */ (0, import_jsx_runtime98.jsx)(import_components37.Icon, { icon: envelope_default }) })
       }
     }
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/telephone.mjs
-var import_components39 = __toESM(require_components(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/telephone.mjs
+var import_components38 = __toESM(require_components(), 1);
 var import_jsx_runtime99 = __toESM(require_jsx_runtime(), 1);
 function Telephone({
   data,
@@ -21333,14 +21628,14 @@ function Telephone({
         markWhenOptional,
         validity,
         type: "tel",
-        prefix: /* @__PURE__ */ (0, import_jsx_runtime99.jsx)(import_components39.__experimentalInputControlPrefixWrapper, { variant: "icon", children: /* @__PURE__ */ (0, import_jsx_runtime99.jsx)(import_components39.Icon, { icon: mobile_default }) })
+        prefix: /* @__PURE__ */ (0, import_jsx_runtime99.jsx)(import_components38.__experimentalInputControlPrefixWrapper, { variant: "icon", children: /* @__PURE__ */ (0, import_jsx_runtime99.jsx)(import_components38.Icon, { icon: mobile_default }) })
       }
     }
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/url.mjs
-var import_components40 = __toESM(require_components(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/url.mjs
+var import_components39 = __toESM(require_components(), 1);
 var import_jsx_runtime100 = __toESM(require_jsx_runtime(), 1);
 function Url({
   data,
@@ -21361,18 +21656,18 @@ function Url({
         markWhenOptional,
         validity,
         type: "url",
-        prefix: /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(import_components40.__experimentalInputControlPrefixWrapper, { variant: "icon", children: /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(import_components40.Icon, { icon: link_default }) })
+        prefix: /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(import_components39.__experimentalInputControlPrefixWrapper, { variant: "icon", children: /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(import_components39.Icon, { icon: link_default }) })
       }
     }
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/utils/validated-number.mjs
-var import_components41 = __toESM(require_components(), 1);
-var import_element52 = __toESM(require_element(), 1);
-var import_i18n36 = __toESM(require_i18n(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/utils/validated-number.mjs
+var import_components40 = __toESM(require_components(), 1);
+var import_element53 = __toESM(require_element(), 1);
+var import_i18n35 = __toESM(require_i18n(), 1);
 var import_jsx_runtime101 = __toESM(require_jsx_runtime(), 1);
-var { ValidatedNumberControl } = unlock(import_components41.privateApis);
+var { ValidatedNumberControl } = unlock(import_components40.privateApis);
 function toNumberOrEmpty(value) {
   if (value === "" || value === void 0) {
     return "";
@@ -21387,23 +21682,23 @@ function BetweenControls({
   step
 }) {
   const [min = "", max = ""] = value;
-  const onChangeMin = (0, import_element52.useCallback)(
+  const onChangeMin = (0, import_element53.useCallback)(
     (newValue) => onChange([toNumberOrEmpty(newValue), max]),
     [onChange, max]
   );
-  const onChangeMax = (0, import_element52.useCallback)(
+  const onChangeMax = (0, import_element53.useCallback)(
     (newValue) => onChange([min, toNumberOrEmpty(newValue)]),
     [onChange, min]
   );
   return /* @__PURE__ */ (0, import_jsx_runtime101.jsx)(
-    import_components41.BaseControl,
+    import_components40.BaseControl,
     {
-      help: (0, import_i18n36.__)("The max. value must be greater than the min. value."),
-      children: /* @__PURE__ */ (0, import_jsx_runtime101.jsxs)(import_components41.Flex, { direction: "row", gap: 4, children: [
+      help: (0, import_i18n35.__)("The max. value must be greater than the min. value."),
+      children: /* @__PURE__ */ (0, import_jsx_runtime101.jsxs)(import_components40.Flex, { direction: "row", gap: 4, children: [
         /* @__PURE__ */ (0, import_jsx_runtime101.jsx)(
-          import_components41.__experimentalNumberControl,
+          import_components40.__experimentalNumberControl,
           {
-            label: (0, import_i18n36.__)("Min."),
+            label: (0, import_i18n35.__)("Min."),
             value: min,
             max: max ? Number(max) - step : void 0,
             onChange: onChangeMin,
@@ -21413,9 +21708,9 @@ function BetweenControls({
           }
         ),
         /* @__PURE__ */ (0, import_jsx_runtime101.jsx)(
-          import_components41.__experimentalNumberControl,
+          import_components40.__experimentalNumberControl,
           {
-            label: (0, import_i18n36.__)("Max."),
+            label: (0, import_i18n35.__)("Max."),
             value: max,
             min: min ? Number(min) + step : void 0,
             onChange: onChangeMax,
@@ -21441,7 +21736,7 @@ function ValidatedNumber({
   const step = Math.pow(10, Math.abs(decimals) * -1);
   const { label, description, getValue, setValue, isValid: isValid2 } = field;
   const value = getValue({ item: data }) ?? "";
-  const onChangeControl = (0, import_element52.useCallback)(
+  const onChangeControl = (0, import_element53.useCallback)(
     (newValue) => {
       onChange(
         setValue({
@@ -21455,7 +21750,7 @@ function ValidatedNumber({
     },
     [data, onChange, setValue]
   );
-  const onChangeBetweenControls = (0, import_element52.useCallback)(
+  const onChangeBetweenControls = (0, import_element53.useCallback)(
     (newValue) => {
       onChange(
         setValue({
@@ -21502,23 +21797,23 @@ function ValidatedNumber({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/integer.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/integer.mjs
 var import_jsx_runtime102 = __toESM(require_jsx_runtime(), 1);
 function Integer(props) {
   return /* @__PURE__ */ (0, import_jsx_runtime102.jsx)(ValidatedNumber, { ...props });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/number.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/number.mjs
 var import_jsx_runtime103 = __toESM(require_jsx_runtime(), 1);
 function Number2(props) {
   return /* @__PURE__ */ (0, import_jsx_runtime103.jsx)(ValidatedNumber, { ...props });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/radio.mjs
-var import_components42 = __toESM(require_components(), 1);
-var import_element53 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/radio.mjs
+var import_components41 = __toESM(require_components(), 1);
+var import_element54 = __toESM(require_element(), 1);
 var import_jsx_runtime104 = __toESM(require_jsx_runtime(), 1);
-var { ValidatedRadioControl } = unlock(import_components42.privateApis);
+var { ValidatedRadioControl } = unlock(import_components41.privateApis);
 function Radio({
   data,
   field,
@@ -21533,12 +21828,12 @@ function Radio({
     getElements: field.getElements
   });
   const value = getValue({ item: data });
-  const onChangeControl = (0, import_element53.useCallback)(
+  const onChangeControl = (0, import_element54.useCallback)(
     (newValue) => onChange(setValue({ item: data, value: newValue })),
     [data, onChange, setValue]
   );
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime104.jsx)(import_components42.Spinner, {});
+    return /* @__PURE__ */ (0, import_jsx_runtime104.jsx)(import_components41.Spinner, {});
   }
   return /* @__PURE__ */ (0, import_jsx_runtime104.jsx)(
     ValidatedRadioControl,
@@ -21556,8 +21851,8 @@ function Radio({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/text.mjs
-var import_element54 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/text.mjs
+var import_element55 = __toESM(require_element(), 1);
 var import_jsx_runtime105 = __toESM(require_jsx_runtime(), 1);
 function Text({
   data,
@@ -21579,18 +21874,18 @@ function Text({
         hideLabelFromVision,
         markWhenOptional,
         validity,
-        prefix: prefix ? (0, import_element54.createElement)(prefix) : void 0,
-        suffix: suffix ? (0, import_element54.createElement)(suffix) : void 0
+        prefix: prefix ? (0, import_element55.createElement)(prefix) : void 0,
+        suffix: suffix ? (0, import_element55.createElement)(suffix) : void 0
       }
     }
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/toggle.mjs
-var import_components43 = __toESM(require_components(), 1);
-var import_element55 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/toggle.mjs
+var import_components42 = __toESM(require_components(), 1);
+var import_element56 = __toESM(require_element(), 1);
 var import_jsx_runtime106 = __toESM(require_jsx_runtime(), 1);
-var { ValidatedToggleControl } = unlock(import_components43.privateApis);
+var { ValidatedToggleControl } = unlock(import_components42.privateApis);
 function Toggle({
   field,
   onChange,
@@ -21600,7 +21895,7 @@ function Toggle({
   validity
 }) {
   const { label, description, getValue, setValue, isValid: isValid2 } = field;
-  const onChangeControl = (0, import_element55.useCallback)(() => {
+  const onChangeControl = (0, import_element56.useCallback)(() => {
     onChange(
       setValue({ item: data, value: !getValue({ item: data }) })
     );
@@ -21620,11 +21915,11 @@ function Toggle({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/textarea.mjs
-var import_components44 = __toESM(require_components(), 1);
-var import_element56 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/textarea.mjs
+var import_components43 = __toESM(require_components(), 1);
+var import_element57 = __toESM(require_element(), 1);
 var import_jsx_runtime107 = __toESM(require_jsx_runtime(), 1);
-var { ValidatedTextareaControl } = unlock(import_components44.privateApis);
+var { ValidatedTextareaControl } = unlock(import_components43.privateApis);
 function Textarea({
   data,
   field,
@@ -21637,7 +21932,7 @@ function Textarea({
   const { rows = 4 } = config || {};
   const { label, placeholder, description, setValue, isValid: isValid2 } = field;
   const value = field.getValue({ item: data });
-  const onChangeControl = (0, import_element56.useCallback)(
+  const onChangeControl = (0, import_element57.useCallback)(
     (newValue) => onChange(setValue({ item: data, value: newValue })),
     [data, onChange, setValue]
   );
@@ -21661,11 +21956,11 @@ function Textarea({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/toggle-group.mjs
-var import_components45 = __toESM(require_components(), 1);
-var import_element57 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/toggle-group.mjs
+var import_components44 = __toESM(require_components(), 1);
+var import_element58 = __toESM(require_element(), 1);
 var import_jsx_runtime108 = __toESM(require_jsx_runtime(), 1);
-var { ValidatedToggleGroupControl } = unlock(import_components45.privateApis);
+var { ValidatedToggleGroupControl } = unlock(import_components44.privateApis);
 function ToggleGroup({
   data,
   field,
@@ -21676,7 +21971,7 @@ function ToggleGroup({
 }) {
   const { getValue, setValue, isValid: isValid2 } = field;
   const value = getValue({ item: data });
-  const onChangeControl = (0, import_element57.useCallback)(
+  const onChangeControl = (0, import_element58.useCallback)(
     (newValue) => onChange(setValue({ item: data, value: newValue })),
     [data, onChange, setValue]
   );
@@ -21685,7 +21980,7 @@ function ToggleGroup({
     getElements: field.getElements
   });
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime108.jsx)(import_components45.Spinner, {});
+    return /* @__PURE__ */ (0, import_jsx_runtime108.jsx)(import_components44.Spinner, {});
   }
   if (elements.length === 0) {
     return null;
@@ -21705,7 +22000,7 @@ function ToggleGroup({
       value,
       hideLabelFromVision,
       children: elements.map((el) => /* @__PURE__ */ (0, import_jsx_runtime108.jsx)(
-        import_components45.__experimentalToggleGroupControlOption,
+        import_components44.__experimentalToggleGroupControlOption,
         {
           label: el.label,
           value: el.value
@@ -21716,11 +22011,11 @@ function ToggleGroup({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/array.mjs
-var import_components46 = __toESM(require_components(), 1);
-var import_element58 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/array.mjs
+var import_components45 = __toESM(require_components(), 1);
+var import_element59 = __toESM(require_element(), 1);
 var import_jsx_runtime109 = __toESM(require_jsx_runtime(), 1);
-var { ValidatedFormTokenField } = unlock(import_components46.privateApis);
+var { ValidatedFormTokenField } = unlock(import_components45.privateApis);
 function ArrayControl({
   data,
   field,
@@ -21735,7 +22030,7 @@ function ArrayControl({
     elements: field.elements,
     getElements: field.getElements
   });
-  const arrayValueAsElements = (0, import_element58.useMemo)(
+  const arrayValueAsElements = (0, import_element59.useMemo)(
     () => Array.isArray(value) ? value.map((token) => {
       const element = elements?.find(
         (suggestion) => suggestion.value === token
@@ -21744,7 +22039,7 @@ function ArrayControl({
     }) : [],
     [value, elements]
   );
-  const onChangeControl = (0, import_element58.useCallback)(
+  const onChangeControl = (0, import_element59.useCallback)(
     (tokens) => {
       const valueTokens = tokens.map((token) => {
         if (typeof token === "object" && "value" in token) {
@@ -21757,7 +22052,7 @@ function ArrayControl({
     [onChange, setValue, data]
   );
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime109.jsx)(import_components46.Spinner, {});
+    return /* @__PURE__ */ (0, import_jsx_runtime109.jsx)(import_components45.Spinner, {});
   }
   return /* @__PURE__ */ (0, import_jsx_runtime109.jsx)(
     ValidatedFormTokenField,
@@ -21963,33 +22258,33 @@ var w = function(r3) {
   return r3 instanceof j ? r3 : new j(r3);
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/color.mjs
-var import_components47 = __toESM(require_components(), 1);
-var import_element59 = __toESM(require_element(), 1);
-var import_i18n37 = __toESM(require_i18n(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/color.mjs
+var import_components46 = __toESM(require_components(), 1);
+var import_element60 = __toESM(require_element(), 1);
+var import_i18n36 = __toESM(require_i18n(), 1);
 var import_jsx_runtime110 = __toESM(require_jsx_runtime(), 1);
-var { ValidatedInputControl: ValidatedInputControl3 } = unlock(import_components47.privateApis);
+var { ValidatedInputControl: ValidatedInputControl3 } = unlock(import_components46.privateApis);
 var ColorPickerDropdown = ({
   color,
   onColorChange
 }) => {
   const validColor = color && w(color).isValid() ? color : "#ffffff";
   return /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(
-    import_components47.Dropdown,
+    import_components46.Dropdown,
     {
       className: "dataviews-controls__color-picker-dropdown",
       popoverProps: { resize: false },
       renderToggle: ({ onToggle }) => /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(
-        import_components47.Button,
+        import_components46.Button,
         {
           onClick: onToggle,
-          "aria-label": (0, import_i18n37.__)("Open color picker"),
+          "aria-label": (0, import_i18n36.__)("Open color picker"),
           size: "small",
-          icon: () => /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(import_components47.ColorIndicator, { colorValue: validColor })
+          icon: () => /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(import_components46.ColorIndicator, { colorValue: validColor })
         }
       ),
-      renderContent: () => /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(import_components47.__experimentalDropdownContentWrapper, { paddingSize: "none", children: /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(
-        import_components47.ColorPicker,
+      renderContent: () => /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(import_components46.__experimentalDropdownContentWrapper, { paddingSize: "none", children: /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(
+        import_components46.ColorPicker,
         {
           color: validColor,
           onChange: onColorChange,
@@ -22009,13 +22304,13 @@ function Color({
 }) {
   const { label, placeholder, description, setValue, isValid: isValid2 } = field;
   const value = field.getValue({ item: data }) || "";
-  const handleColorChange = (0, import_element59.useCallback)(
+  const handleColorChange = (0, import_element60.useCallback)(
     (newColor) => {
       onChange(setValue({ item: data, value: newColor }));
     },
     [data, onChange, setValue]
   );
-  const handleInputChange = (0, import_element59.useCallback)(
+  const handleInputChange = (0, import_element60.useCallback)(
     (newValue) => {
       onChange(setValue({ item: data, value: newValue || "" }));
     },
@@ -22034,7 +22329,7 @@ function Color({
       onChange: handleInputChange,
       hideLabelFromVision,
       type: "text",
-      prefix: /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(import_components47.__experimentalInputControlPrefixWrapper, { variant: "control", children: /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(
+      prefix: /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(import_components46.__experimentalInputControlPrefixWrapper, { variant: "control", children: /* @__PURE__ */ (0, import_jsx_runtime110.jsx)(
         ColorPickerDropdown,
         {
           color: value,
@@ -22045,10 +22340,10 @@ function Color({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/password.mjs
-var import_components48 = __toESM(require_components(), 1);
-var import_element60 = __toESM(require_element(), 1);
-var import_i18n38 = __toESM(require_i18n(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/password.mjs
+var import_components47 = __toESM(require_components(), 1);
+var import_element61 = __toESM(require_element(), 1);
+var import_i18n37 = __toESM(require_i18n(), 1);
 var import_jsx_runtime111 = __toESM(require_jsx_runtime(), 1);
 function Password({
   data,
@@ -22058,8 +22353,8 @@ function Password({
   markWhenOptional,
   validity
 }) {
-  const [isVisible2, setIsVisible] = (0, import_element60.useState)(false);
-  const toggleVisibility = (0, import_element60.useCallback)(() => {
+  const [isVisible2, setIsVisible] = (0, import_element61.useState)(false);
+  const toggleVisibility = (0, import_element61.useCallback)(() => {
     setIsVisible((prev) => !prev);
   }, []);
   return /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(
@@ -22073,13 +22368,13 @@ function Password({
         markWhenOptional,
         validity,
         type: isVisible2 ? "text" : "password",
-        suffix: /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(import_components48.__experimentalInputControlSuffixWrapper, { variant: "control", children: /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(
-          import_components48.Button,
+        suffix: /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(import_components47.__experimentalInputControlSuffixWrapper, { variant: "control", children: /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(
+          import_components47.Button,
           {
             icon: isVisible2 ? unseen_default : seen_default,
             onClick: toggleVisibility,
             size: "small",
-            label: isVisible2 ? (0, import_i18n38.__)("Hide password") : (0, import_i18n38.__)("Show password")
+            label: isVisible2 ? (0, import_i18n37.__)("Hide password") : (0, import_i18n37.__)("Show password")
           }
         ) })
       }
@@ -22087,12 +22382,12 @@ function Password({
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/has-elements.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/has-elements.mjs
 function hasElements(field) {
   return Array.isArray(field.elements) && field.elements.length > 0 || typeof field.getElements === "function";
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/components/dataform-controls/index.mjs
 var import_jsx_runtime112 = __toESM(require_jsx_runtime(), 1);
 var FORM_CONTROLS = {
   adaptiveSelect: AdaptiveSelect,
@@ -22153,7 +22448,7 @@ function getControlByType(type) {
   return null;
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/get-filter-by.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/get-filter-by.mjs
 function getFilterBy(field, defaultOperators, validOperators) {
   if (field.filterBy === false) {
     return false;
@@ -22171,7 +22466,7 @@ function getFilterBy(field, defaultOperators, validOperators) {
 }
 var get_filter_by_default = getFilterBy;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/get-value-from-id.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/get-value-from-id.mjs
 var getValueFromId = (id) => ({ item }) => {
   const path = id.split(".");
   let value = item;
@@ -22186,7 +22481,7 @@ var getValueFromId = (id) => ({ item }) => {
 };
 var get_value_from_id_default = getValueFromId;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/set-value-from-id.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/set-value-from-id.mjs
 var setValueFromId = (id) => ({ value }) => {
   const path = id.split(".");
   const result = {};
@@ -22200,10 +22495,10 @@ var setValueFromId = (id) => ({ value }) => {
 };
 var set_value_from_id_default = setValueFromId;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/email.mjs
-var import_i18n39 = __toESM(require_i18n(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/email.mjs
+var import_i18n38 = __toESM(require_i18n(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/render-from-elements.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/render-from-elements.mjs
 function RenderFromElements({
   item,
   field
@@ -22222,7 +22517,7 @@ function RenderFromElements({
   return elements?.find((element) => element.value === value)?.label || field.getValue({ item });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/render-default.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/render-default.mjs
 var import_jsx_runtime113 = __toESM(require_jsx_runtime(), 1);
 function render({
   item,
@@ -22234,18 +22529,18 @@ function render({
   return field.getValueFormatted({ item, field });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/sort-text.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/sort-text.mjs
 var sort_text_default = (a2, b2, direction) => {
   return direction === "asc" ? a2.localeCompare(b2) : b2.localeCompare(a2);
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-required.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-required.mjs
 function isValidRequired(item, field) {
   const value = field.getValue({ item });
   return ![void 0, "", null].includes(value);
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-min-length.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-min-length.mjs
 function isValidMinLength(item, field) {
   if (typeof field.isValid.minLength?.constraint !== "number") {
     return false;
@@ -22257,7 +22552,7 @@ function isValidMinLength(item, field) {
   return String(value).length >= field.isValid.minLength.constraint;
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-max-length.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-max-length.mjs
 function isValidMaxLength(item, field) {
   if (typeof field.isValid.maxLength?.constraint !== "number") {
     return false;
@@ -22269,7 +22564,7 @@ function isValidMaxLength(item, field) {
   return String(value).length <= field.isValid.maxLength.constraint;
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-pattern.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-pattern.mjs
 function isValidPattern(item, field) {
   if (field.isValid.pattern?.constraint === void 0) {
     return true;
@@ -22286,7 +22581,7 @@ function isValidPattern(item, field) {
   }
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-elements.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-elements.mjs
 function isValidElements(item, field) {
   const elements = field.elements ?? [];
   const validValues = elements.map((el) => el.value);
@@ -22297,7 +22592,7 @@ function isValidElements(item, field) {
   return [].concat(value).every((v2) => validValues.includes(v2));
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/get-value-formatted-default.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/get-value-formatted-default.mjs
 function getValueFormatted({
   item,
   field
@@ -22306,12 +22601,12 @@ function getValueFormatted({
 }
 var get_value_formatted_default_default = getValueFormatted;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/email.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/email.mjs
 var emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 function isValidCustom(item, field) {
   const value = field.getValue({ item });
   if (![void 0, "", null].includes(value) && !emailRegex.test(value)) {
-    return (0, import_i18n39.__)("Value must be a valid email address.");
+    return (0, import_i18n38.__)("Value must be a valid email address.");
   }
   return null;
 }
@@ -22347,15 +22642,15 @@ var email_default = {
   }
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/integer.mjs
-var import_i18n40 = __toESM(require_i18n(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/integer.mjs
+var import_i18n39 = __toESM(require_i18n(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/sort-number.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/sort-number.mjs
 var sort_number_default = (a2, b2, direction) => {
   return direction === "asc" ? a2 - b2 : b2 - a2;
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-min.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-min.mjs
 function isValidMin(item, field) {
   if (typeof field.isValid.min?.constraint !== "number") {
     return false;
@@ -22367,7 +22662,7 @@ function isValidMin(item, field) {
   return Number(value) >= field.isValid.min.constraint;
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-max.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-max.mjs
 function isValidMax(item, field) {
   if (typeof field.isValid.max?.constraint !== "number") {
     return false;
@@ -22379,7 +22674,7 @@ function isValidMax(item, field) {
   return Number(value) <= field.isValid.max.constraint;
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/integer.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/integer.mjs
 var format2 = {
   separatorThousand: ","
 };
@@ -22414,7 +22709,7 @@ function getValueFormatted2({
 function isValidCustom2(item, field) {
   const value = field.getValue({ item });
   if (![void 0, "", null].includes(value) && !Number.isInteger(value)) {
-    return (0, import_i18n40.__)("Value must be an integer.");
+    return (0, import_i18n39.__)("Value must be an integer.");
   }
   return null;
 }
@@ -22460,8 +22755,8 @@ var integer_default = {
   }
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/number.mjs
-var import_i18n41 = __toESM(require_i18n(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/number.mjs
+var import_i18n40 = __toESM(require_i18n(), 1);
 var format3 = {
   separatorThousand: ",",
   separatorDecimal: ".",
@@ -22497,7 +22792,7 @@ function isEmpty2(value) {
 function isValidCustom3(item, field) {
   const value = field.getValue({ item });
   if (!isEmpty2(value) && !Number.isFinite(value)) {
-    return (0, import_i18n41.__)("Value must be a number.");
+    return (0, import_i18n40.__)("Value must be a number.");
   }
   return null;
 }
@@ -22543,7 +22838,7 @@ var number_default = {
   }
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/text.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/text.mjs
 var text_default = {
   type: "text",
   render,
@@ -22576,7 +22871,7 @@ var text_default = {
   }
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/datetime.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/datetime.mjs
 var import_date6 = __toESM(require_date(), 1);
 var format4 = {
   datetime: (0, import_date6.getSettings)().formats.datetime,
@@ -22638,7 +22933,7 @@ var datetime_default = {
   }
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/date.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/date.mjs
 var import_date7 = __toESM(require_date(), 1);
 var format5 = {
   date: (0, import_date7.getSettings)().formats.date,
@@ -22702,33 +22997,33 @@ var date_default = {
   }
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/boolean.mjs
-var import_i18n42 = __toESM(require_i18n(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/boolean.mjs
+var import_i18n41 = __toESM(require_i18n(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-required-for-bool.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-required-for-bool.mjs
 function isValidRequiredForBool(item, field) {
   const value = field.getValue({ item });
   return value === true;
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/boolean.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/boolean.mjs
 function getValueFormatted6({
   item,
   field
 }) {
   const value = field.getValue({ item });
   if (value === true) {
-    return (0, import_i18n42.__)("True");
+    return (0, import_i18n41.__)("True");
   }
   if (value === false) {
-    return (0, import_i18n42.__)("False");
+    return (0, import_i18n41.__)("False");
   }
   return "";
 }
 function isValidCustom4(item, field) {
   const value = field.getValue({ item });
   if (![void 0, "", null].includes(value) && ![true, false].includes(value)) {
-    return (0, import_i18n42.__)("Value must be true, false, or undefined");
+    return (0, import_i18n41.__)("Value must be true, false, or undefined");
   }
   return null;
 }
@@ -22761,7 +23056,7 @@ var boolean_default = {
   getValueFormatted: getValueFormatted6
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/media.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/media.mjs
 var media_default = {
   type: "media",
   render: () => null,
@@ -22779,10 +23074,10 @@ var media_default = {
   validate: {}
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/array.mjs
-var import_i18n43 = __toESM(require_i18n(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/array.mjs
+var import_i18n42 = __toESM(require_i18n(), 1);
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-required-for-array.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/is-valid-required-for-array.mjs
 function isValidRequiredForArray(item, field) {
   const value = field.getValue({ item });
   return Array.isArray(value) && value.length > 0 && value.every(
@@ -22790,7 +23085,7 @@ function isValidRequiredForArray(item, field) {
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/array.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/array.mjs
 function getValueFormatted7({
   item,
   field
@@ -22805,10 +23100,10 @@ function render2({ item, field }) {
 function isValidCustom5(item, field) {
   const value = field.getValue({ item });
   if (![void 0, "", null].includes(value) && !Array.isArray(value)) {
-    return (0, import_i18n43.__)("Value must be an array.");
+    return (0, import_i18n42.__)("Value must be an array.");
   }
   if (!value.every((v2) => typeof v2 === "string")) {
-    return (0, import_i18n43.__)("Every value must be a string.");
+    return (0, import_i18n42.__)("Every value must be a string.");
   }
   return null;
 }
@@ -22845,7 +23140,7 @@ var array_default = {
   }
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/password.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/password.mjs
 function getValueFormatted8({
   item,
   field
@@ -22873,7 +23168,7 @@ var password_default = {
   }
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/telephone.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/telephone.mjs
 var telephone_default = {
   type: "telephone",
   render,
@@ -22905,8 +23200,8 @@ var telephone_default = {
   }
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/color.mjs
-var import_i18n44 = __toESM(require_i18n(), 1);
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/color.mjs
+var import_i18n43 = __toESM(require_i18n(), 1);
 var import_jsx_runtime114 = __toESM(require_jsx_runtime(), 1);
 function render3({ item, field }) {
   if (field.hasElements) {
@@ -22936,7 +23231,7 @@ function render3({ item, field }) {
 function isValidCustom6(item, field) {
   const value = field.getValue({ item });
   if (![void 0, "", null].includes(value) && !w(value).isValid()) {
-    return (0, import_i18n44.__)("Value must be a valid color.");
+    return (0, import_i18n43.__)("Value must be a valid color.");
   }
   return null;
 }
@@ -22985,7 +23280,7 @@ var color_default = {
   }
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/url.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/url.mjs
 var url_default = {
   type: "url",
   render,
@@ -23017,7 +23312,7 @@ var url_default = {
   }
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/no-type.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/no-type.mjs
 var sort6 = (a2, b2, direction) => {
   if (typeof a2 === "number" && typeof b2 === "number") {
     return sort_number_default(a2, b2, direction);
@@ -23041,7 +23336,7 @@ var no_type_default = {
   }
 };
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/get-is-valid.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/get-is-valid.mjs
 function getIsValid(field, fieldType) {
   let required;
   if (field.isValid?.required === true && fieldType.validate.required !== void 0) {
@@ -23106,7 +23401,7 @@ function getIsValid(field, fieldType) {
   };
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/get-filter.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/get-filter.mjs
 function getFilter(fieldType) {
   return fieldType.validOperators.reduce((accumulator, operator) => {
     const operatorObj = getOperatorByName(operator);
@@ -23117,7 +23412,7 @@ function getFilter(fieldType) {
   }, {});
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/get-format.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/utils/get-format.mjs
 function getFormat(field, fieldType) {
   return {
     ...fieldType.format,
@@ -23126,7 +23421,7 @@ function getFormat(field, fieldType) {
 }
 var get_format_default = getFormat;
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/field-types/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/field-types/index.mjs
 function getFieldTypeByName(type) {
   const found = [
     email_default,
@@ -23191,29 +23486,346 @@ function normalizeFields(fields) {
   });
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/hooks/use-data.mjs
-var import_element61 = __toESM(require_element(), 1);
-function useData(data, isLoading, paginationInfo) {
-  const previousDataRef = (0, import_element61.useRef)(data);
-  const previousPaginationInfoRef = (0, import_element61.useRef)(paginationInfo);
-  const [hasInitiallyLoaded, setHasInitiallyLoaded] = (0, import_element61.useState)(
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/hooks/use-data.mjs
+var import_element62 = __toESM(require_element(), 1);
+function useData({
+  view,
+  data: shownData,
+  getItemId,
+  isLoading,
+  paginationInfo,
+  selection
+}) {
+  const isInfiniteScrollEnabled = view.infiniteScrollEnabled;
+  const [hasInitiallyLoaded, setHasInitiallyLoaded] = (0, import_element62.useState)(
     !isLoading
   );
-  (0, import_element61.useEffect)(() => {
+  (0, import_element62.useEffect)(() => {
     if (!isLoading) {
-      previousDataRef.current = data;
-      previousPaginationInfoRef.current = paginationInfo;
       setHasInitiallyLoaded(true);
     }
-  }, [data, isLoading, paginationInfo]);
+  }, [isLoading]);
+  const previousDataRef = (0, import_element62.useRef)(shownData);
+  const previousPaginationInfoRef = (0, import_element62.useRef)(paginationInfo);
+  (0, import_element62.useEffect)(() => {
+    if (!isLoading) {
+      previousDataRef.current = shownData;
+      previousPaginationInfoRef.current = paginationInfo;
+    }
+  }, [shownData, isLoading, paginationInfo]);
+  const [visibleEntries, setVisibleEntries] = (0, import_element62.useState)([]);
+  const positionMapRef = (0, import_element62.useRef)(/* @__PURE__ */ new Map());
+  const allLoadedRecordsRef = (0, import_element62.useRef)([]);
+  const prevViewParamsRef = (0, import_element62.useRef)({
+    search: void 0,
+    filters: void 0,
+    perPage: void 0
+  });
+  const scrollDirectionRef = (0, import_element62.useRef)(void 0);
+  const prevStartPositionRef = (0, import_element62.useRef)(void 0);
+  const hasInitializedRef = (0, import_element62.useRef)(false);
+  const allLoadedRecords = (0, import_element62.useMemo)(() => {
+    if (view.startPosition !== void 0 && prevStartPositionRef.current !== void 0) {
+      if (view.startPosition < prevStartPositionRef.current) {
+        scrollDirectionRef.current = "up";
+      } else if (view.startPosition > prevStartPositionRef.current) {
+        scrollDirectionRef.current = "down";
+      }
+    }
+    prevStartPositionRef.current = view.startPosition;
+    const currentFiltersKey = JSON.stringify(view.filters ?? []);
+    const prevFiltersKey = prevViewParamsRef.current.filters;
+    const shouldReset = !hasInitializedRef.current || !view.infiniteScrollEnabled || view.search !== prevViewParamsRef.current.search || currentFiltersKey !== prevFiltersKey || view.perPage !== prevViewParamsRef.current.perPage;
+    hasInitializedRef.current = true;
+    prevViewParamsRef.current = {
+      search: view.search,
+      filters: currentFiltersKey,
+      perPage: view.perPage
+    };
+    if (shouldReset) {
+      positionMapRef.current.clear();
+      scrollDirectionRef.current = void 0;
+      const startPosition = view.search ? 1 : view.startPosition ?? 1;
+      const records = shownData.map((record, index) => {
+        const position = startPosition + index;
+        positionMapRef.current.set(getItemId(record), position);
+        return {
+          ...record,
+          position
+        };
+      });
+      allLoadedRecordsRef.current = records;
+      return records;
+    }
+    const prev = allLoadedRecordsRef.current;
+    const shownDataIds = new Set(shownData.map(getItemId));
+    const scrollDirection = scrollDirectionRef.current;
+    const basePosition = view.search ? 1 : view.startPosition ?? 1;
+    const newRecords = shownData.map((record, index) => {
+      const itemId = getItemId(record);
+      const position = view.infiniteScrollEnabled ? basePosition + index : void 0;
+      if (position !== void 0) {
+        positionMapRef.current.set(itemId, position);
+      }
+      return {
+        ...record,
+        position
+      };
+    });
+    if (newRecords.length === 0) {
+      return prev;
+    }
+    const prevWithoutDuplicates = prev.filter(
+      (record) => !shownDataIds.has(getItemId(record))
+    );
+    const allRecords = scrollDirection === "up" ? [...newRecords, ...prevWithoutDuplicates] : [...prevWithoutDuplicates, ...newRecords];
+    allRecords.sort((a2, b2) => {
+      const posA = a2.position;
+      const posB = b2.position;
+      return posA - posB;
+    });
+    let result = allRecords;
+    if (visibleEntries.length > 0) {
+      const visibleMin = Math.min(...visibleEntries);
+      const visibleMax = Math.max(...visibleEntries);
+      const buffer = 20;
+      const recordPositions = allRecords.map(
+        (r3) => r3.position
+      );
+      const minRecordPos = Math.min(...recordPositions);
+      const maxRecordPos = Math.max(...recordPositions);
+      const hasOverlap = !(maxRecordPos < visibleMin - buffer || minRecordPos > visibleMax + buffer);
+      if (hasOverlap) {
+        result = allRecords.filter((record) => {
+          const itemId = getItemId(record);
+          const isSelected2 = selection?.includes(itemId);
+          if (isSelected2) {
+            return true;
+          }
+          const itemPosition = record.position;
+          if (scrollDirection === "up") {
+            return itemPosition <= visibleMax + buffer;
+          } else if (scrollDirection === "down") {
+            return itemPosition >= visibleMin - buffer;
+          }
+          return itemPosition >= visibleMin - buffer && itemPosition <= visibleMax + buffer;
+        });
+      }
+    }
+    allLoadedRecordsRef.current = result;
+    return result;
+  }, [
+    shownData,
+    view.search,
+    view.filters,
+    view.perPage,
+    view.startPosition,
+    view.infiniteScrollEnabled,
+    visibleEntries,
+    selection,
+    getItemId
+  ]);
+  if (!isInfiniteScrollEnabled) {
+    const dataToReturn = isLoading && previousDataRef.current?.length ? previousDataRef.current : shownData;
+    return {
+      data: dataToReturn.map((item) => ({
+        ...item,
+        position: void 0
+      })),
+      paginationInfo: isLoading && previousDataRef.current?.length ? previousPaginationInfoRef.current : paginationInfo,
+      hasInitiallyLoaded,
+      setVisibleEntries: void 0
+    };
+  }
   return {
-    data: isLoading && previousDataRef.current?.length ? previousDataRef.current : data,
-    paginationInfo: isLoading && previousDataRef.current?.length ? previousPaginationInfoRef.current : paginationInfo,
-    hasInitiallyLoaded
+    data: allLoadedRecords,
+    paginationInfo,
+    hasInitiallyLoaded,
+    setVisibleEntries
   };
 }
 
-// ../../../node_modules/.pnpm/@wordpress+dataviews@13.1.0_@types+react@18.3.28_react@18.3.1_stylelint@17.5.0/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/hooks/use-infinite-scroll.mjs
+var import_element63 = __toESM(require_element(), 1);
+var import_compose12 = __toESM(require_compose(), 1);
+function captureAnchorElement(container, anchorElementRef, direction) {
+  const containerRect = container.getBoundingClientRect();
+  const centerY = containerRect.top + containerRect.height / 2;
+  const items = Array.from(container.querySelectorAll("[aria-posinset]"));
+  if (items.length === 0) {
+    return false;
+  }
+  const bestAnchor = items.reduce((best, item) => {
+    const itemRect = item.getBoundingClientRect();
+    const itemCenterY = itemRect.top + itemRect.height / 2;
+    const distance = Math.abs(itemCenterY - centerY);
+    const bestRect = best.getBoundingClientRect();
+    const bestCenterY = bestRect.top + bestRect.height / 2;
+    const bestDistance = Math.abs(bestCenterY - centerY);
+    return distance < bestDistance ? item : best;
+  });
+  const posinset = Number(bestAnchor.getAttribute("aria-posinset"));
+  const anchorRect = bestAnchor.getBoundingClientRect();
+  anchorElementRef.current = {
+    posinset,
+    viewportOffset: anchorRect.top - containerRect.top,
+    direction
+  };
+  return true;
+}
+function useInfiniteScroll({
+  view,
+  onChangeView,
+  isLoading,
+  paginationInfo,
+  containerRef,
+  setVisibleEntries
+}) {
+  const anchorElementRef = (0, import_element63.useRef)(null);
+  const viewRef = (0, import_element63.useRef)(view);
+  const isLoadingRef = (0, import_element63.useRef)(isLoading);
+  const onChangeViewRef = (0, import_element63.useRef)(onChangeView);
+  const totalItemsRef = (0, import_element63.useRef)(paginationInfo.totalItems);
+  (0, import_element63.useLayoutEffect)(() => {
+    viewRef.current = view;
+    isLoadingRef.current = isLoading;
+    onChangeViewRef.current = onChangeView;
+    totalItemsRef.current = paginationInfo.totalItems;
+  }, [view, isLoading, onChangeView, paginationInfo.totalItems]);
+  const intersectionObserverCallback = (0, import_element63.useCallback)(
+    (entries) => {
+      if (!setVisibleEntries) {
+        return;
+      }
+      setVisibleEntries((prev) => {
+        const newVisibleEntries = new Set(prev);
+        let hasChanged = false;
+        entries.forEach((entry) => {
+          const posInSet = Number(
+            entry.target?.attributes?.getNamedItem(
+              "aria-posinset"
+            )?.value
+          );
+          if (isNaN(posInSet)) {
+            return;
+          }
+          if (entry.isIntersecting) {
+            if (!newVisibleEntries.has(posInSet)) {
+              newVisibleEntries.add(posInSet);
+              hasChanged = true;
+            }
+          } else if (newVisibleEntries.has(posInSet)) {
+            newVisibleEntries.delete(posInSet);
+            hasChanged = true;
+          }
+        });
+        return hasChanged ? Array.from(newVisibleEntries).sort() : prev;
+      });
+    },
+    [setVisibleEntries]
+  );
+  (0, import_element63.useLayoutEffect)(() => {
+    const container = containerRef.current;
+    const anchor = anchorElementRef.current;
+    if (!container || !view.infiniteScrollEnabled || !anchor || isLoading) {
+      return;
+    }
+    const anchorElement = container.querySelector(
+      `[aria-posinset="${anchor.posinset}"]`
+    );
+    if (anchorElement) {
+      const containerRect = container.getBoundingClientRect();
+      const anchorRect = anchorElement.getBoundingClientRect();
+      const currentOffset = anchorRect.top - containerRect.top;
+      const scrollAdjustment = currentOffset - anchor.viewportOffset;
+      if (Math.abs(scrollAdjustment) > 1) {
+        container.scrollTop += scrollAdjustment;
+      }
+    }
+    anchorElementRef.current = null;
+  }, [containerRef, isLoading, view.infiniteScrollEnabled]);
+  const intersectionObserverRef = (0, import_element63.useRef)(
+    null
+  );
+  (0, import_element63.useEffect)(() => {
+    if (!view.infiniteScrollEnabled || !intersectionObserverCallback) {
+      if (intersectionObserverRef.current) {
+        intersectionObserverRef.current.disconnect();
+        intersectionObserverRef.current = null;
+      }
+      return;
+    }
+    intersectionObserverRef.current = new IntersectionObserver(
+      intersectionObserverCallback,
+      { root: null, rootMargin: "0px", threshold: 0.1 }
+    );
+    return () => {
+      if (intersectionObserverRef.current) {
+        intersectionObserverRef.current.disconnect();
+        intersectionObserverRef.current = null;
+      }
+    };
+  }, [view.infiniteScrollEnabled, intersectionObserverCallback]);
+  (0, import_element63.useEffect)(() => {
+    if (!view.infiniteScrollEnabled || !containerRef.current) {
+      return;
+    }
+    let lastScrollTop = 0;
+    const BOTTOM_THRESHOLD = 600;
+    const TOP_THRESHOLD = 800;
+    const handleScroll = (0, import_compose12.throttle)((event) => {
+      const currentView = viewRef.current;
+      const totalItems = totalItemsRef.current;
+      const target = event.target;
+      const scrollTop = target.scrollTop;
+      const scrollHeight = target.scrollHeight;
+      const clientHeight = target.clientHeight;
+      const scrollDirection = scrollTop > lastScrollTop ? "down" : "up";
+      lastScrollTop = scrollTop;
+      if (isLoadingRef.current) {
+        return;
+      }
+      const currentStartPosition = currentView.startPosition || 1;
+      const batchSize = currentView.perPage || 10;
+      const currentEndPosition = Math.min(
+        currentStartPosition + batchSize,
+        totalItems
+      );
+      if (scrollDirection === "down" && scrollTop + clientHeight >= scrollHeight - BOTTOM_THRESHOLD) {
+        if (currentEndPosition < totalItems) {
+          const newStartPosition = currentEndPosition;
+          captureAnchorElement(target, anchorElementRef, "down");
+          onChangeViewRef.current({
+            ...currentView,
+            startPosition: newStartPosition
+          });
+        }
+      }
+      if (scrollDirection === "up" && scrollTop <= TOP_THRESHOLD) {
+        if (currentStartPosition > 1) {
+          const calculatedStartPosition = currentStartPosition - batchSize;
+          const newStartPosition = calculatedStartPosition < 6 ? 1 : calculatedStartPosition;
+          captureAnchorElement(target, anchorElementRef, "up");
+          onChangeViewRef.current({
+            ...currentView,
+            startPosition: newStartPosition
+          });
+        }
+      }
+    }, 50);
+    const container = containerRef.current;
+    container.addEventListener("scroll", handleScroll);
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+      handleScroll.cancel();
+    };
+  }, [containerRef, view.infiniteScrollEnabled]);
+  return {
+    intersectionObserver: intersectionObserverRef.current
+  };
+}
+
+// ../../../node_modules/.pnpm/@wordpress+dataviews@14.0.0_@types+react@18.3.28_react@18.3.1_stylelint@17.7.0/node_modules/@wordpress/dataviews/build-module/dataviews/index.mjs
 var import_jsx_runtime115 = __toESM(require_jsx_runtime(), 1);
 var defaultGetItemId = (item) => item.id;
 var defaultIsItemClickable = () => true;
@@ -23226,6 +23838,8 @@ function DefaultUI({
   search = true,
   searchLabel = void 0
 }) {
+  const { view } = (0, import_element64.useContext)(dataviews_context_default);
+  const isInfiniteScroll = view.infiniteScrollEnabled;
   return /* @__PURE__ */ (0, import_jsx_runtime115.jsxs)(import_jsx_runtime115.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime115.jsxs)(
       Stack,
@@ -23233,7 +23847,9 @@ function DefaultUI({
         direction: "row",
         align: "top",
         justify: "space-between",
-        className: "dataviews__view-actions",
+        className: clsx_default("dataviews__view-actions", {
+          "dataviews__view-actions--infinite-scroll": isInfiniteScroll
+        }),
         gap: "xs",
         children: [
           /* @__PURE__ */ (0, import_jsx_runtime115.jsxs)(
@@ -23285,10 +23901,25 @@ function DataViews({
   empty,
   onReset
 }) {
-  const { infiniteScrollHandler } = paginationInfo;
-  const containerRef = (0, import_element62.useRef)(null);
-  const [containerWidth, setContainerWidth] = (0, import_element62.useState)(0);
-  const resizeObserverRef = (0, import_compose12.useResizeObserver)(
+  const [selectionState, setSelectionState] = (0, import_element64.useState)([]);
+  const isUncontrolled = selectionProperty === void 0 || onChangeSelection === void 0;
+  const selection = isUncontrolled ? selectionState : selectionProperty;
+  const {
+    data: displayData,
+    paginationInfo: displayPaginationInfo,
+    hasInitiallyLoaded,
+    setVisibleEntries
+  } = useData({
+    view,
+    data,
+    getItemId,
+    isLoading,
+    selection,
+    paginationInfo
+  });
+  const containerRef = (0, import_element64.useRef)(null);
+  const [containerWidth, setContainerWidth] = (0, import_element64.useState)(0);
+  const resizeObserverRef = (0, import_compose13.useResizeObserver)(
     (resizeObserverEntries) => {
       setContainerWidth(
         resizeObserverEntries[0].borderBoxSize[0].inlineSize
@@ -23296,10 +23927,7 @@ function DataViews({
     },
     { box: "border-box" }
   );
-  const [selectionState, setSelectionState] = (0, import_element62.useState)([]);
-  const isUncontrolled = selectionProperty === void 0 || onChangeSelection === void 0;
-  const selection = isUncontrolled ? selectionState : selectionProperty;
-  const [openedFilter, setOpenedFilter] = (0, import_element62.useState)(null);
+  const [openedFilter, setOpenedFilter] = (0, import_element64.useState)(null);
   function setSelectionWithChange(value) {
     const newValue = typeof value === "function" ? value(selection) : value;
     if (isUncontrolled) {
@@ -23309,57 +23937,39 @@ function DataViews({
       onChangeSelection(newValue);
     }
   }
-  const _fields = (0, import_element62.useMemo)(() => normalizeFields(fields), [fields]);
-  const _selection = (0, import_element62.useMemo)(() => {
+  const _fields = (0, import_element64.useMemo)(() => normalizeFields(fields), [fields]);
+  const _selection = (0, import_element64.useMemo)(() => {
+    if (view.infiniteScrollEnabled) {
+      return selection;
+    }
     return selection.filter(
       (id) => data.some((item) => getItemId(item) === id)
     );
-  }, [selection, data, getItemId]);
+  }, [selection, data, getItemId, view.infiniteScrollEnabled]);
   const filters2 = use_filters_default(_fields, view);
-  const hasPrimaryOrLockedFilters = (0, import_element62.useMemo)(
+  const hasPrimaryOrLockedFilters = (0, import_element64.useMemo)(
     () => (filters2 || []).some(
       (filter) => filter.isPrimary || filter.isLocked
     ),
     [filters2]
   );
-  const [isShowingFilter, setIsShowingFilter] = (0, import_element62.useState)(
+  const [isShowingFilter, setIsShowingFilter] = (0, import_element64.useState)(
     hasPrimaryOrLockedFilters
   );
-  (0, import_element62.useEffect)(() => {
+  const { intersectionObserver } = useInfiniteScroll({
+    view,
+    onChangeView,
+    isLoading,
+    paginationInfo,
+    containerRef,
+    setVisibleEntries
+  });
+  (0, import_element64.useEffect)(() => {
     if (hasPrimaryOrLockedFilters && !isShowingFilter) {
       setIsShowingFilter(true);
     }
   }, [hasPrimaryOrLockedFilters, isShowingFilter]);
-  const {
-    data: displayData,
-    paginationInfo: displayPaginationInfo,
-    hasInitiallyLoaded
-  } = useData(data, isLoading, paginationInfo);
-  (0, import_element62.useEffect)(() => {
-    if (!hasInitiallyLoaded || !view.infiniteScrollEnabled || !containerRef.current) {
-      return;
-    }
-    const handleScroll = (0, import_compose12.throttle)((event) => {
-      const target = event.target;
-      const scrollTop = target.scrollTop;
-      const scrollHeight = target.scrollHeight;
-      const clientHeight = target.clientHeight;
-      if (scrollTop + clientHeight >= scrollHeight - 100) {
-        infiniteScrollHandler?.();
-      }
-    }, 100);
-    const container = containerRef.current;
-    container.addEventListener("scroll", handleScroll);
-    return () => {
-      container.removeEventListener("scroll", handleScroll);
-      handleScroll.cancel();
-    };
-  }, [
-    hasInitiallyLoaded,
-    infiniteScrollHandler,
-    view.infiniteScrollEnabled
-  ]);
-  const defaultLayouts2 = (0, import_element62.useMemo)(
+  const defaultLayouts2 = (0, import_element64.useMemo)(
     () => Object.fromEntries(
       Object.entries(defaultLayoutsProperty).filter(
         ([layoutType]) => {
@@ -23404,8 +24014,8 @@ function DataViews({
         config,
         empty,
         hasInitiallyLoaded,
-        hasInfiniteScrollHandler: !!infiniteScrollHandler,
-        onReset
+        onReset,
+        intersectionObserver
       },
       children: /* @__PURE__ */ (0, import_jsx_runtime115.jsx)("div", { className: "dataviews-wrapper", children: children ?? /* @__PURE__ */ (0, import_jsx_runtime115.jsx)(
         DefaultUI,
@@ -23433,16 +24043,16 @@ var dataviews_default = DataViewsSubComponents;
 
 // routes/forms/stage.tsx
 var import_date9 = __toESM(require_date());
-var import_element100 = __toESM(require_element());
-var import_i18n89 = __toESM(require_i18n());
+var import_element102 = __toESM(require_element());
+var import_i18n88 = __toESM(require_i18n());
 import { useSearch as useSearch2, useNavigate as useNavigate4 } from "@wordpress/route";
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/index.tsx
-var import_components62 = __toESM(require_components(), 1);
-var import_i18n61 = __toESM(require_i18n(), 1);
+var import_components61 = __toESM(require_components(), 1);
+var import_i18n60 = __toESM(require_i18n(), 1);
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integrations-list.tsx
-var import_element72 = __toESM(require_element(), 1);
+var import_element74 = __toESM(require_element(), 1);
 
 // ../../js-packages/components/build/tools/jp-redirect/index.js
 function getRedirectUrl(source, args = {}) {
@@ -23472,12 +24082,12 @@ function getRedirectUrl(source, args = {}) {
 }
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/akismet.tsx
-var import_components49 = __toESM(require_components(), 1);
-var import_element63 = __toESM(require_element(), 1);
-var import_i18n46 = __toESM(require_i18n(), 1);
+var import_components48 = __toESM(require_components(), 1);
+var import_element65 = __toESM(require_element(), 1);
+var import_i18n45 = __toESM(require_i18n(), 1);
 
 // src/icons/akismet.tsx
-var import_i18n45 = __toESM(require_i18n(), 1);
+var import_i18n44 = __toESM(require_i18n(), 1);
 var import_primitives32 = __toESM(require_primitives(), 1);
 var import_jsx_runtime116 = __toESM(require_jsx_runtime(), 1);
 var AkismetIcon = (props) => {
@@ -23490,7 +24100,7 @@ var AkismetIcon = (props) => {
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
       role: "img",
-      "aria-label": (0, import_i18n45.__)("Akismet icon", "jetpack-forms"),
+      "aria-label": (0, import_i18n44.__)("Akismet icon", "jetpack-forms"),
       ...props,
       children: [
         /* @__PURE__ */ (0, import_jsx_runtime116.jsx)(import_primitives32.Rect, { width: "46", height: "46", rx: "8", fill: "#357B49" }),
@@ -23564,49 +24174,49 @@ function buildAkismetCard({
       showHeaderToggle: context === "block-editor",
       headerToggleValue: isConnected,
       isHeaderToggleEnabled: false,
-      notInstalledMessage: (0, import_element63.createInterpolateElement)(
-        (0, import_i18n46.__)(
+      notInstalledMessage: (0, import_element65.createInterpolateElement)(
+        (0, import_i18n45.__)(
           "Add one-click spam protection for your forms with <a>Akismet</a>. Simply install the plugin and you're set.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(import_components49.ExternalLink, { href: marketingUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(import_components48.ExternalLink, { href: marketingUrl, children: null }) }
       ),
-      notActivatedMessage: (0, import_i18n46.__)(
+      notActivatedMessage: (0, import_i18n45.__)(
         "Akismet is installed. Just activate the plugin to start blocking spam.",
         "jetpack-forms"
       ),
       trackEventName: "jetpack_forms_upsell_akismet_click"
     },
-    toggleTooltip: (0, import_i18n46.__)("We keep your forms protected", "jetpack-forms"),
+    toggleTooltip: (0, import_i18n45.__)("We keep your forms protected", "jetpack-forms"),
     body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime117.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime117.jsx)("p", { className: "integration-card__description", children: (0, import_element63.createInterpolateElement)(
-        (0, import_i18n46.__)(
+      /* @__PURE__ */ (0, import_jsx_runtime117.jsx)("p", { className: "integration-card__description", children: (0, import_element65.createInterpolateElement)(
+        (0, import_i18n45.__)(
           "Akismet is active. There is one step left. Please add your <a>Akismet key</a>.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(import_components49.ExternalLink, { href: settingsUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(import_components48.ExternalLink, { href: settingsUrl, children: null }) }
       ) }),
       /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(
-        import_components49.Button,
+        import_components48.Button,
         {
           variant: "secondary",
           href: settingsUrl,
           target: "_blank",
           rel: "noopener noreferrer",
           __next40pxDefaultSize: true,
-          children: (0, import_i18n46.__)("Add Akismet key", "jetpack-forms")
+          children: (0, import_i18n45.__)("Add Akismet key", "jetpack-forms")
         }
       )
     ] }) : /* @__PURE__ */ (0, import_jsx_runtime117.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime117.jsx)("p", { className: "integration-card__description", children: (0, import_i18n46.__)("Your forms are automatically protected with Akismet.", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime117.jsxs)(import_components49.__experimentalHStack, { spacing: "2", justify: "start", className: "integration-card__links", children: [
-        context === "dashboard" && handlers?.goToSpam ? /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(import_components49.Button, { variant: "link", onClick: handlers.goToSpam, children: (0, import_i18n46.__)("View spam", "jetpack-forms") }) : /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(import_components49.Button, { variant: "link", href: spamUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n46.__)("View spam", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime117.jsx)("p", { className: "integration-card__description", children: (0, import_i18n45.__)("Your forms are automatically protected with Akismet.", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime117.jsxs)(import_components48.__experimentalHStack, { spacing: "2", justify: "start", className: "integration-card__links", children: [
+        context === "dashboard" && handlers?.goToSpam ? /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(import_components48.Button, { variant: "link", onClick: handlers.goToSpam, children: (0, import_i18n45.__)("View spam", "jetpack-forms") }) : /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(import_components48.Button, { variant: "link", href: spamUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n45.__)("View spam", "jetpack-forms") }),
         /* @__PURE__ */ (0, import_jsx_runtime117.jsx)("span", { children: "|" }),
         settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime117.jsxs)(import_jsx_runtime117.Fragment, { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(import_components49.Button, { variant: "link", href: settingsUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n46.__)("View stats and settings", "jetpack-forms") }),
+          /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(import_components48.Button, { variant: "link", href: settingsUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n45.__)("View stats and settings", "jetpack-forms") }),
           /* @__PURE__ */ (0, import_jsx_runtime117.jsx)("span", { children: "|" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(import_components49.ExternalLink, { href: getRedirectUrl("akismet-jetpack-forms-docs"), children: (0, import_i18n46.__)("Learn about Akismet", "jetpack-forms") })
+        /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(import_components48.ExternalLink, { href: getRedirectUrl("akismet-jetpack-forms-docs"), children: (0, import_i18n45.__)("Learn about Akismet", "jetpack-forms") })
       ] })
     ] })
   };
@@ -23614,8 +24224,8 @@ function buildAkismetCard({
 }
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/google-drive.tsx
-var import_components52 = __toESM(require_components(), 1);
-var import_i18n49 = __toESM(require_i18n(), 1);
+var import_components51 = __toESM(require_components(), 1);
+var import_i18n48 = __toESM(require_i18n(), 1);
 
 // src/icons/google-sheets.tsx
 var import_primitives33 = __toESM(require_primitives(), 1);
@@ -23721,19 +24331,19 @@ var requestExternalAccess = (url, cb) => {
 var esm_default2 = requestExternalAccess;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/components/google-drive-connect-button.tsx
-var import_components50 = __toESM(require_components(), 1);
-var import_element64 = __toESM(require_element(), 1);
-var import_i18n47 = __toESM(require_i18n(), 1);
+var import_components49 = __toESM(require_components(), 1);
+var import_element66 = __toESM(require_element(), 1);
+var import_i18n46 = __toESM(require_i18n(), 1);
 var import_jsx_runtime119 = __toESM(require_jsx_runtime(), 1);
 function GoogleDriveConnectButton({
   settingsUrl,
   onConnected,
   isConnected
 }) {
-  const connectingText = (0, import_i18n47.__)("Connecting\u2026", "jetpack-forms");
-  const connectText = (0, import_i18n47.__)("Connect to Google Drive", "jetpack-forms");
-  const [isToggling, setIsToggling] = (0, import_element64.useState)(false);
-  (0, import_element64.useEffect)(() => {
+  const connectingText = (0, import_i18n46.__)("Connecting\u2026", "jetpack-forms");
+  const connectText = (0, import_i18n46.__)("Connect to Google Drive", "jetpack-forms");
+  const [isToggling, setIsToggling] = (0, import_element66.useState)(false);
+  (0, import_element66.useEffect)(() => {
     setIsToggling(false);
   }, [isConnected]);
   const handleClick = () => {
@@ -23748,7 +24358,7 @@ function GoogleDriveConnectButton({
     });
   };
   return /* @__PURE__ */ (0, import_jsx_runtime119.jsx)(
-    import_components50.Button,
+    import_components49.Button,
     {
       variant: "secondary",
       onClick: handleClick,
@@ -23761,15 +24371,15 @@ function GoogleDriveConnectButton({
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/components/google-drive-disconnect-button.tsx
 var import_api_fetch = __toESM(require_api_fetch(), 1);
-var import_components51 = __toESM(require_components(), 1);
-var import_element65 = __toESM(require_element(), 1);
-var import_i18n48 = __toESM(require_i18n(), 1);
+var import_components50 = __toESM(require_components(), 1);
+var import_element67 = __toESM(require_element(), 1);
+var import_i18n47 = __toESM(require_i18n(), 1);
 var import_jsx_runtime120 = __toESM(require_jsx_runtime(), 1);
 function GoogleDriveDisconnectButton({ onDisconnected, isConnected }) {
-  const disconnectingText = (0, import_i18n48.__)("Disconnecting\u2026", "jetpack-forms");
-  const disconnectText = (0, import_i18n48.__)("Disconnect Google Drive", "jetpack-forms");
-  const [isToggling, setIsToggling] = (0, import_element65.useState)(false);
-  (0, import_element65.useEffect)(() => {
+  const disconnectingText = (0, import_i18n47.__)("Disconnecting\u2026", "jetpack-forms");
+  const disconnectText = (0, import_i18n47.__)("Disconnect Google Drive", "jetpack-forms");
+  const [isToggling, setIsToggling] = (0, import_element67.useState)(false);
+  (0, import_element67.useEffect)(() => {
     setIsToggling(false);
   }, [isConnected]);
   const handleClick = () => {
@@ -23782,7 +24392,7 @@ function GoogleDriveDisconnectButton({ onDisconnected, isConnected }) {
       setIsToggling(false);
     });
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime120.jsx)(import_components51.Button, { variant: "link", onClick: handleClick, disabled: isToggling, children: isToggling ? disconnectingText : disconnectText });
+  return /* @__PURE__ */ (0, import_jsx_runtime120.jsx)(import_components50.Button, { variant: "link", onClick: handleClick, disabled: isToggling, children: isToggling ? disconnectingText : disconnectText });
 }
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/google-drive.tsx
@@ -23812,7 +24422,7 @@ function buildGoogleDriveCard({
       trackEventName: "jetpack_forms_upsell_googledrive_click"
     },
     body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime121.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("p", { className: "integration-card__description", children: (0, import_i18n49.__)(
+      /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("p", { className: "integration-card__description", children: (0, import_i18n48.__)(
         "Connect your site to Google Drive to export form responses directly to Google Sheets.",
         "jetpack-forms"
       ) }),
@@ -23825,12 +24435,12 @@ function buildGoogleDriveCard({
         }
       )
     ] }) : /* @__PURE__ */ (0, import_jsx_runtime121.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("p", { className: "integration-card__description", children: (0, import_i18n49.__)(
+      /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("p", { className: "integration-card__description", children: (0, import_i18n48.__)(
         "Google Sheets is connected. You can export your form responses from the form responses page.",
         "jetpack-forms"
       ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime121.jsxs)(import_components52.__experimentalHStack, { spacing: "2", justify: "start", className: "integration-card__links", children: [
-        context === "dashboard" && handlers?.goToResponses ? /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(import_components52.Button, { variant: "link", onClick: handlers.goToResponses, children: (0, import_i18n49.__)("View form responses", "jetpack-forms") }) : /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(import_components52.Button, { variant: "link", href: responsesUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n49.__)("View form responses", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime121.jsxs)(import_components51.__experimentalHStack, { spacing: "2", justify: "start", className: "integration-card__links", children: [
+        context === "dashboard" && handlers?.goToResponses ? /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(import_components51.Button, { variant: "link", onClick: handlers.goToResponses, children: (0, import_i18n48.__)("View form responses", "jetpack-forms") }) : /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(import_components51.Button, { variant: "link", href: responsesUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n48.__)("View form responses", "jetpack-forms") }),
         /* @__PURE__ */ (0, import_jsx_runtime121.jsx)("span", { children: "|" }),
         /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
           GoogleDriveDisconnectButton,
@@ -23846,12 +24456,12 @@ function buildGoogleDriveCard({
 }
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/hostinger-reach.tsx
-var import_components53 = __toESM(require_components(), 1);
-var import_element66 = __toESM(require_element(), 1);
-var import_i18n51 = __toESM(require_i18n(), 1);
+var import_components52 = __toESM(require_components(), 1);
+var import_element68 = __toESM(require_element(), 1);
+var import_i18n50 = __toESM(require_i18n(), 1);
 
 // src/icons/hostinger-reach.tsx
-var import_i18n50 = __toESM(require_i18n(), 1);
+var import_i18n49 = __toESM(require_i18n(), 1);
 var import_primitives34 = __toESM(require_primitives(), 1);
 var import_jsx_runtime122 = __toESM(require_jsx_runtime(), 1);
 var HostingerReachIcon = (props) => /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(
@@ -23864,7 +24474,7 @@ var HostingerReachIcon = (props) => /* @__PURE__ */ (0, import_jsx_runtime122.js
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
     role: "img",
-    "aria-label": (0, import_i18n50.__)("Hostinger Reach icon", "jetpack-forms"),
+    "aria-label": (0, import_i18n49.__)("Hostinger Reach icon", "jetpack-forms"),
     children: /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(
       import_primitives34.Path,
       {
@@ -23912,47 +24522,47 @@ function buildHostingerReachCard({
           }
         })
       },
-      notInstalledMessage: (0, import_element66.createInterpolateElement)(
-        (0, import_i18n51.__)(
+      notInstalledMessage: (0, import_element68.createInterpolateElement)(
+        (0, import_i18n50.__)(
           "Add powerful email marketing to your forms with <a>Hostinger Reach</a>. Simply install the plugin to start sending emails.",
           "jetpack-forms"
         ),
         {
-          a: /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(import_components53.ExternalLink, { href: integration.marketingUrl || "", children: null })
+          a: /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(import_components52.ExternalLink, { href: integration.marketingUrl || "", children: null })
         }
       ),
-      notActivatedMessage: (0, import_i18n51.__)(
+      notActivatedMessage: (0, import_i18n50.__)(
         "Hostinger Reach is installed. Just activate the plugin to start sending emails.",
         "jetpack-forms"
       ),
       trackEventName: "jetpack_forms_upsell_hostinger_reach_click"
     },
-    toggleTooltip: (0, import_i18n51.__)("Grow your audience with Hostinger Reach", "jetpack-forms"),
+    toggleTooltip: (0, import_i18n50.__)("Grow your audience with Hostinger Reach", "jetpack-forms"),
     body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime123.jsxs)(import_jsx_runtime123.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime123.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(import_components53.ExternalLink, { href: settingsUrl, children: (0, import_i18n51.__)(
+      /* @__PURE__ */ (0, import_jsx_runtime123.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(import_components52.ExternalLink, { href: settingsUrl, children: (0, import_i18n50.__)(
         "Hostinger Reach is active. There is one step left. Please complete Hostinger Reach setup.",
         "jetpack-forms"
       ) }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime123.jsxs)(import_components53.__experimentalHStack, { spacing: "3", justify: "start", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime123.jsxs)(import_components52.__experimentalHStack, { spacing: "3", justify: "start", children: [
         /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(
-          import_components53.Button,
+          import_components52.Button,
           {
             variant: "secondary",
             href: settingsUrl,
             target: "_blank",
             rel: "noopener noreferrer",
             __next40pxDefaultSize: true,
-            children: (0, import_i18n51.__)("Complete Hostinger Reach setup", "jetpack-forms")
+            children: (0, import_i18n50.__)("Complete Hostinger Reach setup", "jetpack-forms")
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(import_components53.Button, { variant: "tertiary", onClick: refreshIntegrations2, __next40pxDefaultSize: true, children: (0, import_i18n51.__)("Refresh status", "jetpack-forms") })
+        /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(import_components52.Button, { variant: "tertiary", onClick: refreshIntegrations2, __next40pxDefaultSize: true, children: (0, import_i18n50.__)("Refresh status", "jetpack-forms") })
       ] })
     ] }) : /* @__PURE__ */ (0, import_jsx_runtime123.jsxs)(import_jsx_runtime123.Fragment, { children: [
       context === "block-editor" && /* @__PURE__ */ (0, import_jsx_runtime123.jsx)("div", { className: "integration-card__section", children: /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(
-        import_components53.TextControl,
+        import_components52.TextControl,
         {
-          label: (0, import_i18n51.__)("Group name (optional)", "jetpack-forms"),
-          help: (0, import_i18n51.__)(
+          label: (0, import_i18n50.__)("Group name (optional)", "jetpack-forms"),
+          help: (0, import_i18n50.__)(
             'If empty, contacts will be added under "Jetpack Forms".',
             "jetpack-forms"
           ),
@@ -23967,7 +24577,7 @@ function buildHostingerReachCard({
         }
       ) }),
       context === "block-editor" && ConsentToggle && /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(ConsentToggle, {}),
-      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime123.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(import_components53.ExternalLink, { href: settingsUrl, children: (0, import_i18n51.__)("View Hostinger Reach dashboard", "jetpack-forms") }) })
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime123.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(import_components52.ExternalLink, { href: settingsUrl, children: (0, import_i18n50.__)("View Hostinger Reach dashboard", "jetpack-forms") }) })
     ] })
   };
   return base;
@@ -24166,10 +24776,10 @@ var colors_default = {
 
 // ../../js-packages/components/build/components/jetpack-logo/index.js
 var import_jsx_runtime124 = __toESM(require_jsx_runtime(), 1);
-var import_i18n52 = __toESM(require_i18n(), 1);
+var import_i18n51 = __toESM(require_i18n(), 1);
 var JetpackLogo = ({ logoColor = "#069e08", showText = true, className, height = 32, title, ...otherProps }) => {
   const viewBox = showText ? "0 0 118 32" : "0 0 32 32";
-  const logoTitle = title ?? (0, import_i18n52.__)("Jetpack Logo", "jetpack-components");
+  const logoTitle = title ?? (0, import_i18n51.__)("Jetpack Logo", "jetpack-components");
   return (0, import_jsx_runtime124.jsxs)("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     x: "0px",
@@ -24199,9 +24809,9 @@ var JetpackLogo = ({ logoColor = "#069e08", showText = true, className, height =
 var jetpack_logo_default = JetpackLogo;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/jetpack-crm.tsx
-var import_components54 = __toESM(require_components(), 1);
-var import_element67 = __toESM(require_element(), 1);
-var import_i18n53 = __toESM(require_i18n(), 1);
+var import_components53 = __toESM(require_components(), 1);
+var import_element69 = __toESM(require_element(), 1);
+var import_i18n52 = __toESM(require_i18n(), 1);
 var import_semver = __toESM(require_semver2(), 1);
 var import_jsx_runtime125 = __toESM(require_jsx_runtime(), 1);
 var COLOR_JETPACK = colors_default.colors["Jetpack Green 40"];
@@ -24216,38 +24826,38 @@ function buildJetpackCrmCard({
   const { hasExtension = false, canActivateExtension = false } = details;
   const crmVersion = import_semver.default.coerce(version2);
   const isRecentVersion = crmVersion && import_semver.default.gte(crmVersion, "4.9.1");
-  const connectedMsgEditor = (0, import_i18n53.__)("This form is connected to Jetpack CRM.", "jetpack-forms");
-  const connectedMsgDashboard = (0, import_i18n53.__)("Jetpack CRM is connected.", "jetpack-forms");
+  const connectedMsgEditor = (0, import_i18n52.__)("This form is connected to Jetpack CRM.", "jetpack-forms");
+  const connectedMsgDashboard = (0, import_i18n52.__)("Jetpack CRM is connected.", "jetpack-forms");
   const renderBody = () => {
     if (!isRecentVersion) {
       return /* @__PURE__ */ (0, import_jsx_runtime125.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime125.jsx)("p", { className: "integration-card__description", children: (0, import_i18n53.__)(
+        /* @__PURE__ */ (0, import_jsx_runtime125.jsx)("p", { className: "integration-card__description", children: (0, import_i18n52.__)(
           "Please update to the latest version of the Jetpack CRM plugin to integrate your contact form with your CRM.",
           "jetpack-forms"
         ) }),
         /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(
-          import_components54.Button,
+          import_components53.Button,
           {
             variant: "secondary",
             href: settingsUrl,
             target: "_blank",
             rel: "noopener noreferrer",
             __next40pxDefaultSize: true,
-            children: (0, import_i18n53.__)("Update Jetpack CRM", "jetpack-forms")
+            children: (0, import_i18n52.__)("Update Jetpack CRM", "jetpack-forms")
           }
         )
       ] });
     }
     if (!hasExtension) {
       return /* @__PURE__ */ (0, import_jsx_runtime125.jsxs)("div", { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime125.jsx)("p", { className: "integration-card__description", children: (0, import_element67.createInterpolateElement)(
-          (0, import_i18n53.__)(
+        /* @__PURE__ */ (0, import_jsx_runtime125.jsx)("p", { className: "integration-card__description", children: (0, import_element69.createInterpolateElement)(
+          (0, import_i18n52.__)(
             "You can integrate this contact form with Jetpack CRM by enabling Jetpack CRM's <a>Jetpack Forms extension</a>.",
             "jetpack-forms"
           ),
           {
             a: /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(
-              import_components54.Button,
+              import_components53.Button,
               {
                 variant: "link",
                 href: settingsUrl,
@@ -24257,26 +24867,26 @@ function buildJetpackCrmCard({
             )
           }
         ) }),
-        !canActivateExtension && /* @__PURE__ */ (0, import_jsx_runtime125.jsx)("p", { children: (0, import_i18n53.__)(
+        !canActivateExtension && /* @__PURE__ */ (0, import_jsx_runtime125.jsx)("p", { children: (0, import_i18n52.__)(
           "A site administrator must enable the CRM Jetpack Forms extension.",
           "jetpack-forms"
         ) }),
         canActivateExtension && /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(
-          import_components54.Button,
+          import_components53.Button,
           {
             variant: "secondary",
             href: settingsUrl,
             target: "_blank",
             rel: "noopener noreferrer",
             __next40pxDefaultSize: true,
-            children: (0, import_i18n53.__)("Enable Jetpack Forms extension", "jetpack-forms")
+            children: (0, import_i18n52.__)("Enable Jetpack Forms extension", "jetpack-forms")
           }
         )
       ] });
     }
     return /* @__PURE__ */ (0, import_jsx_runtime125.jsxs)("div", { children: [
       /* @__PURE__ */ (0, import_jsx_runtime125.jsx)("p", { className: "integration-card__description", children: context === "block-editor" ? connectedMsgEditor : connectedMsgDashboard }),
-      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(import_components54.ExternalLink, { href: settingsUrl, children: (0, import_i18n53.__)("Open Jetpack CRM settings", "jetpack-forms") })
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(import_components53.ExternalLink, { href: settingsUrl, children: (0, import_i18n52.__)("Open Jetpack CRM settings", "jetpack-forms") })
     ] });
   };
   const base = {
@@ -24297,14 +24907,14 @@ function buildJetpackCrmCard({
         }
       },
       trackEventName: "jetpack_forms_upsell_crm_click",
-      notInstalledMessage: (0, import_element67.createInterpolateElement)(
-        (0, import_i18n53.__)(
+      notInstalledMessage: (0, import_element69.createInterpolateElement)(
+        (0, import_i18n52.__)(
           "You can save your form contacts in <a>Jetpack CRM</a>. To get started, please install the plugin.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(import_components54.ExternalLink, { href: marketingUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime125.jsx)(import_components53.ExternalLink, { href: marketingUrl, children: null }) }
       ),
-      notActivatedMessage: (0, import_i18n53.__)(
+      notActivatedMessage: (0, import_i18n52.__)(
         "Jetpack CRM is installed. To start saving contacts, simply activate the plugin.",
         "jetpack-forms"
       )
@@ -24315,12 +24925,12 @@ function buildJetpackCrmCard({
 }
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/mailpoet.tsx
-var import_components55 = __toESM(require_components(), 1);
-var import_element68 = __toESM(require_element(), 1);
-var import_i18n55 = __toESM(require_i18n(), 1);
+var import_components54 = __toESM(require_components(), 1);
+var import_element70 = __toESM(require_element(), 1);
+var import_i18n54 = __toESM(require_i18n(), 1);
 
 // src/icons/mailpoet.tsx
-var import_i18n54 = __toESM(require_i18n(), 1);
+var import_i18n53 = __toESM(require_i18n(), 1);
 var import_primitives35 = __toESM(require_primitives(), 1);
 var import_jsx_runtime126 = __toESM(require_jsx_runtime(), 1);
 var MailPoetIcon = (props) => {
@@ -24333,7 +24943,7 @@ var MailPoetIcon = (props) => {
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
       role: "img",
-      "aria-label": (0, import_i18n54.__)("MailPoet icon", "jetpack-forms"),
+      "aria-label": (0, import_i18n53.__)("MailPoet icon", "jetpack-forms"),
       ...props,
       children: [
         /* @__PURE__ */ (0, import_jsx_runtime126.jsx)(
@@ -24395,47 +25005,47 @@ function buildMailPoetCard({
           }
         })
       },
-      notInstalledMessage: (0, import_element68.createInterpolateElement)(
-        (0, import_i18n55.__)(
+      notInstalledMessage: (0, import_element70.createInterpolateElement)(
+        (0, import_i18n54.__)(
           "Add powerful email marketing to your forms with <a>MailPoet</a>. Simply install the plugin to start sending emails.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime127.jsx)(import_components55.ExternalLink, { href: marketingUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime127.jsx)(import_components54.ExternalLink, { href: marketingUrl, children: null }) }
       ),
-      notActivatedMessage: (0, import_i18n55.__)(
+      notActivatedMessage: (0, import_i18n54.__)(
         "MailPoet is installed. Just activate the plugin to start sending emails.",
         "jetpack-forms"
       ),
       trackEventName: "jetpack_forms_upsell_mailpoet_click"
     },
-    toggleTooltip: (0, import_i18n55.__)("Grow your audience with MailPoet", "jetpack-forms"),
+    toggleTooltip: (0, import_i18n54.__)("Grow your audience with MailPoet", "jetpack-forms"),
     body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime127.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime127.jsx)("p", { className: "integration-card__description", children: (0, import_element68.createInterpolateElement)(
-        (0, import_i18n55.__)(
+      /* @__PURE__ */ (0, import_jsx_runtime127.jsx)("p", { className: "integration-card__description", children: (0, import_element70.createInterpolateElement)(
+        (0, import_i18n54.__)(
           "MailPoet is active. There is one step left. Please complete <a>MailPoet setup</a>.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime127.jsx)(import_components55.ExternalLink, { href: settingsUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime127.jsx)(import_components54.ExternalLink, { href: settingsUrl, children: null }) }
       ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime127.jsxs)(import_components55.__experimentalHStack, { spacing: "3", justify: "start", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime127.jsxs)(import_components54.__experimentalHStack, { spacing: "3", justify: "start", children: [
         /* @__PURE__ */ (0, import_jsx_runtime127.jsx)(
-          import_components55.Button,
+          import_components54.Button,
           {
             variant: "secondary",
             href: settingsUrl,
             target: "_blank",
             rel: "noopener noreferrer",
             __next40pxDefaultSize: true,
-            children: (0, import_i18n55.__)("Complete MailPoet setup", "jetpack-forms")
+            children: (0, import_i18n54.__)("Complete MailPoet setup", "jetpack-forms")
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime127.jsx)(import_components55.Button, { variant: "tertiary", onClick: refreshIntegrations2, __next40pxDefaultSize: true, children: (0, import_i18n55.__)("Refresh status", "jetpack-forms") })
+        /* @__PURE__ */ (0, import_jsx_runtime127.jsx)(import_components54.Button, { variant: "tertiary", onClick: refreshIntegrations2, __next40pxDefaultSize: true, children: (0, import_i18n54.__)("Refresh status", "jetpack-forms") })
       ] })
     ] }) : /* @__PURE__ */ (0, import_jsx_runtime127.jsxs)("div", { children: [
       context === "block-editor" && (lists.length ? /* @__PURE__ */ (0, import_jsx_runtime127.jsx)(
-        import_components55.SelectControl,
+        import_components54.SelectControl,
         {
-          label: (0, import_i18n55.__)("Which email list should contacts be added to?", "jetpack-forms"),
+          label: (0, import_i18n54.__)("Which email list should contacts be added to?", "jetpack-forms"),
           value: selectedListId,
           options: lists.map((list) => ({ label: list.name, value: list.id })),
           onChange: (newId) => setAttributes?.({
@@ -24447,20 +25057,20 @@ function buildMailPoetCard({
           __next40pxDefaultSize: true,
           __nextHasNoMarginBottom: true
         }
-      ) : /* @__PURE__ */ (0, import_jsx_runtime127.jsx)("p", { className: "integration-card__description", children: (0, import_i18n55.__)(
+      ) : /* @__PURE__ */ (0, import_jsx_runtime127.jsx)("p", { className: "integration-card__description", children: (0, import_i18n54.__)(
         'You do not have any MailPoet lists yet. Click the dashboard button below to create one, or contacts will be added to a "Jetpack Forms Subscribers" list.',
         "jetpack-forms"
       ) })),
       context === "block-editor" && ConsentToggle && /* @__PURE__ */ (0, import_jsx_runtime127.jsx)(ConsentToggle, {}),
-      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime127.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime127.jsx)(import_components55.ExternalLink, { href: settingsUrl, children: (0, import_i18n55.__)("View dashboard", "jetpack-forms") }) })
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime127.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime127.jsx)(import_components54.ExternalLink, { href: settingsUrl, children: (0, import_i18n54.__)("View dashboard", "jetpack-forms") }) })
     ] })
   };
   return base;
 }
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/salesforce.tsx
-var import_components57 = __toESM(require_components(), 1);
-var import_i18n58 = __toESM(require_i18n(), 1);
+var import_components56 = __toESM(require_components(), 1);
+var import_i18n57 = __toESM(require_i18n(), 1);
 
 // src/icons/salesforce.tsx
 var import_primitives36 = __toESM(require_primitives(), 1);
@@ -24522,11 +25132,11 @@ var help_message_default = ({ children = null, isError = false, ...props }) => {
 };
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/components/create-salesforce-lead-form-button.tsx
-var import_components56 = __toESM(require_components(), 1);
-var import_i18n57 = __toESM(require_i18n(), 1);
+var import_components55 = __toESM(require_components(), 1);
+var import_i18n56 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-create-form.ts
-var import_element69 = __toESM(require_element(), 1);
+var import_element71 = __toESM(require_element(), 1);
 
 // src/hooks/use-config-value.ts
 var import_data7 = __toESM(require_data(), 1);
@@ -24560,8 +25170,8 @@ __export(resolvers_exports, {
 var import_api_fetch2 = __toESM(require_api_fetch(), 1);
 
 // src/store/constants.ts
-var import_i18n56 = __toESM(require_i18n(), 1);
-var UNKNOWN_ERROR_MESSAGE = (0, import_i18n56.__)("Unknown error", "jetpack-forms");
+var import_i18n55 = __toESM(require_i18n(), 1);
+var UNKNOWN_ERROR_MESSAGE = (0, import_i18n55.__)("Unknown error", "jetpack-forms");
 
 // src/store/config/resolvers.ts
 var fetchConfigData = async (dispatch4) => {
@@ -24708,7 +25318,7 @@ function useCreateForm() {
   const isCentralFormManagementEnabled = useConfigValue("isCentralFormManagementEnabled");
   const adminUrl = useConfigValue("adminUrl");
   const ajaxUrl = useConfigValue("ajaxUrl");
-  const createForm = (0, import_element69.useCallback)(
+  const createForm = (0, import_element71.useCallback)(
     async (formPattern) => {
       const data = new FormData();
       data.append("action", "create_new_form");
@@ -24730,7 +25340,7 @@ function useCreateForm() {
     },
     [newFormNonce, ajaxUrl]
   );
-  const openNewForm = (0, import_element69.useCallback)(
+  const openNewForm = (0, import_element71.useCallback)(
     async ({ formPattern, formTitle, showPatterns, analyticsEvent }) => {
       try {
         if (isCentralFormManagementEnabled === true) {
@@ -24772,7 +25382,7 @@ function CreateSalesforceLeadFormButton({ className }) {
       }
     });
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime130.jsx)(import_components56.Button, { variant: "primary", onClick: handleClick, className, children: (0, import_i18n57.__)("Create Salesforce lead form", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime130.jsx)(import_components55.Button, { variant: "primary", onClick: handleClick, className, children: (0, import_i18n56.__)("Create Salesforce lead form", "jetpack-forms") });
 }
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/helpers/salesforce.tsx
@@ -24806,16 +25416,16 @@ function buildSalesforceCard({
             sendToSalesforce: value
           }
         }),
-        toggleDisabledTooltip: !isValidSalesforceOrgId(organizationId) ? (0, import_i18n58.__)("Enter a Salesforce Organization ID to enable.", "jetpack-forms") : void 0,
+        toggleDisabledTooltip: !isValidSalesforceOrgId(organizationId) ? (0, import_i18n57.__)("Enter a Salesforce Organization ID to enable.", "jetpack-forms") : void 0,
         isConnected: isValidSalesforceOrgId(organizationId)
       },
-      setupBadge: context === "dashboard" ? /* @__PURE__ */ (0, import_jsx_runtime131.jsx)(Badge, { intent: "stable", className: "integration-card__setup-badge", children: (0, import_i18n58.__)("Configured per form", "jetpack-forms") }) : /* @__PURE__ */ (0, import_jsx_runtime131.jsx)(Badge, { intent: "draft", className: "integration-card__setup-badge", children: (0, import_i18n58.__)("Enter organization ID", "jetpack-forms") })
+      setupBadge: context === "dashboard" ? /* @__PURE__ */ (0, import_jsx_runtime131.jsx)(Badge, { intent: "stable", className: "integration-card__setup-badge", children: (0, import_i18n57.__)("Configured per form", "jetpack-forms") }) : /* @__PURE__ */ (0, import_jsx_runtime131.jsx)(Badge, { intent: "draft", className: "integration-card__setup-badge", children: (0, import_i18n57.__)("Enter organization ID", "jetpack-forms") })
     },
-    body: context === "block-editor" ? /* @__PURE__ */ (0, import_jsx_runtime131.jsxs)(import_components57.BaseControl, { __nextHasNoMarginBottom: true, children: [
+    body: context === "block-editor" ? /* @__PURE__ */ (0, import_jsx_runtime131.jsxs)(import_components56.BaseControl, { __nextHasNoMarginBottom: true, children: [
       /* @__PURE__ */ (0, import_jsx_runtime131.jsx)(
-        import_components57.TextControl,
+        import_components56.TextControl,
         {
-          label: (0, import_i18n58.__)("Organization ID", "jetpack-forms"),
+          label: (0, import_i18n57.__)("Organization ID", "jetpack-forms"),
           value: organizationId,
           onChange: (newId) => setAttributes?.({
             salesforceData: {
@@ -24828,17 +25438,17 @@ function buildSalesforceCard({
           style: { maxWidth: "300px" }
         }
       ),
-      organizationId && !isValidSalesforceOrgId(organizationId) && /* @__PURE__ */ (0, import_jsx_runtime131.jsx)(help_message_default, { isError: true, style: { marginTop: "8px" }, children: (0, import_i18n58.__)(
+      organizationId && !isValidSalesforceOrgId(organizationId) && /* @__PURE__ */ (0, import_jsx_runtime131.jsx)(help_message_default, { isError: true, style: { marginTop: "8px" }, children: (0, import_i18n57.__)(
         "Invalid Organization ID. Should be a 15\u201318 characters long alphanumeric string.",
         "jetpack-forms"
       ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime131.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime131.jsx)(import_components57.ExternalLink, { href: "https://help.salesforce.com/s/articleView?id=000325251&type=1", children: (0, import_i18n58.__)("Where to find your Salesforce Organization ID", "jetpack-forms") }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime131.jsx)("div", { style: { marginTop: "20px", marginBottom: "20px" }, children: (0, import_i18n58.__)(
+      /* @__PURE__ */ (0, import_jsx_runtime131.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime131.jsx)(import_components56.ExternalLink, { href: "https://help.salesforce.com/s/articleView?id=000325251&type=1", children: (0, import_i18n57.__)("Where to find your Salesforce Organization ID", "jetpack-forms") }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime131.jsx)("div", { style: { marginTop: "20px", marginBottom: "20px" }, children: (0, import_i18n57.__)(
         "For integration with Salesforce to work, you must add specific fields with specific field IDs that match Salesforce.",
         "jetpack-forms"
       ) })
     ] }) : /* @__PURE__ */ (0, import_jsx_runtime131.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime131.jsx)("p", { className: "integration-card__description", children: (0, import_i18n58.__)(
+      /* @__PURE__ */ (0, import_jsx_runtime131.jsx)("p", { className: "integration-card__description", children: (0, import_i18n57.__)(
         "Salesforce connections are managed for each form individually in the block editor.",
         "jetpack-forms"
       ) }),
@@ -24926,10 +25536,10 @@ var useIntegrationCardsData = ({
 var use_integration_cards_data_default = useIntegrationCardsData;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integration-card/index.tsx
-var import_components61 = __toESM(require_components(), 1);
+var import_components60 = __toESM(require_components(), 1);
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integration-card/integration-card-body.tsx
-var import_components58 = __toESM(require_components(), 1);
+var import_components57 = __toESM(require_components(), 1);
 var import_jsx_runtime132 = __toESM(require_jsx_runtime(), 1);
 var IntegrationCardBody = ({
   isExpanded,
@@ -24954,9 +25564,9 @@ var IntegrationCardBody = ({
   const showPluginActivateMessage = !__isPartial && isPlugin && isInstalled && !isActive;
   const showContent = !__isPartial && (isPlugin && isInstalled && isActive || isService);
   if (isLoading) {
-    return /* @__PURE__ */ (0, import_jsx_runtime132.jsx)(import_components58.CardBody, { children: /* @__PURE__ */ (0, import_jsx_runtime132.jsx)(import_components58.Spinner, {}) });
+    return /* @__PURE__ */ (0, import_jsx_runtime132.jsx)(import_components57.CardBody, { children: /* @__PURE__ */ (0, import_jsx_runtime132.jsx)(import_components57.Spinner, {}) });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime132.jsxs)(import_components58.CardBody, { children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime132.jsxs)(import_components57.CardBody, { children: [
     showPluginInstallMessage && /* @__PURE__ */ (0, import_jsx_runtime132.jsx)("p", { className: "integration-card__description", children: notInstalledMessage }),
     showPluginActivateMessage && /* @__PURE__ */ (0, import_jsx_runtime132.jsx)("p", { className: "integration-card__description", children: notActivatedMessage }),
     showContent && children
@@ -24965,17 +25575,17 @@ var IntegrationCardBody = ({
 var integration_card_body_default = IntegrationCardBody;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integration-card/integration-card-header.tsx
-var import_components60 = __toESM(require_components(), 1);
-var import_i18n60 = __toESM(require_i18n(), 1);
+var import_components59 = __toESM(require_components(), 1);
+var import_i18n59 = __toESM(require_i18n(), 1);
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/integration-card/plugin-action-button.tsx
-var import_components59 = __toESM(require_components(), 1);
-var import_element71 = __toESM(require_element(), 1);
-var import_i18n59 = __toESM(require_i18n(), 1);
+var import_components58 = __toESM(require_components(), 1);
+var import_element73 = __toESM(require_element(), 1);
+var import_i18n58 = __toESM(require_i18n(), 1);
 
 // src/hooks/use-plugin-installation.ts
 var import_data8 = __toESM(require_data(), 1);
-var import_element70 = __toESM(require_element(), 1);
+var import_element72 = __toESM(require_element(), 1);
 var import_notices = __toESM(require_notices(), 1);
 
 // ../../js-packages/script-data/src/utils.ts
@@ -25037,11 +25647,11 @@ var usePluginInstallation = ({
   successNotices,
   errorNotice
 }) => {
-  const [isInstalling, setIsInstalling] = (0, import_element70.useState)(false);
+  const [isInstalling, setIsInstalling] = (0, import_element72.useState)(false);
   const { createSuccessNotice, createErrorNotice } = (0, import_data8.useDispatch)(import_notices.store);
   const canInstallPlugins = useConfigValue("canInstallPlugins");
   const canActivatePlugins = useConfigValue("canActivatePlugins");
-  const installPlugin = (0, import_element70.useCallback)(async () => {
+  const installPlugin = (0, import_element72.useCallback)(async () => {
     setIsInstalling(true);
     if (trackEventName) {
       analytics_default.tracks.recordEvent(trackEventName, {
@@ -25124,7 +25734,7 @@ var PluginActionButton = ({
     trackEventProps
   });
   const canPerformAction = isInstalled ? canActivatePlugins : canInstallPlugins;
-  const [isReconcilingStatus, setIsReconcilingStatus] = (0, import_element71.useState)(false);
+  const [isReconcilingStatus, setIsReconcilingStatus] = (0, import_element73.useState)(false);
   const isDisabled = isInstalling || isReconcilingStatus || !canPerformAction;
   const handleAction = async (event) => {
     event.stopPropagation();
@@ -25137,21 +25747,21 @@ var PluginActionButton = ({
       refreshStatus();
     }
   };
-  (0, import_element71.useEffect)(() => {
+  (0, import_element73.useEffect)(() => {
     if (isReconcilingStatus && isActive) {
       setIsReconcilingStatus(false);
     }
   }, [isReconcilingStatus, isActive]);
   const getButtonText = () => {
-    return (isInstalling || isReconcilingStatus) && isInstalled && (0, import_i18n59.__)("Activating\u2026", "jetpack-forms") || (isInstalling || isReconcilingStatus) && (0, import_i18n59.__)("Installing\u2026", "jetpack-forms") || isInstalled && (0, import_i18n59.__)("Activate", "jetpack-forms") || (0, import_i18n59.__)("Install", "jetpack-forms");
+    return (isInstalling || isReconcilingStatus) && isInstalled && (0, import_i18n58.__)("Activating\u2026", "jetpack-forms") || (isInstalling || isReconcilingStatus) && (0, import_i18n58.__)("Installing\u2026", "jetpack-forms") || isInstalled && (0, import_i18n58.__)("Activate", "jetpack-forms") || (0, import_i18n58.__)("Install", "jetpack-forms");
   };
-  const tooltipTextActivate = (0, import_i18n59.__)("Activate this plugin", "jetpack-forms");
-  const tooltipTextInstall = (0, import_i18n59.__)("Install this plugin", "jetpack-forms");
-  const tooltipTextNoInstallPerms = (0, import_i18n59.__)(
+  const tooltipTextActivate = (0, import_i18n58.__)("Activate this plugin", "jetpack-forms");
+  const tooltipTextInstall = (0, import_i18n58.__)("Install this plugin", "jetpack-forms");
+  const tooltipTextNoInstallPerms = (0, import_i18n58.__)(
     "You do not have permission to install plugins.",
     "jetpack-forms"
   );
-  const tooltipTextNoActivatePerms = (0, import_i18n59.__)(
+  const tooltipTextNoActivatePerms = (0, import_i18n58.__)(
     "You do not have permission to activate plugins.",
     "jetpack-forms"
   );
@@ -25164,14 +25774,14 @@ var PluginActionButton = ({
     }
     return String(isInstalled ? tooltipTextActivate : tooltipTextInstall);
   };
-  return /* @__PURE__ */ (0, import_jsx_runtime133.jsx)(import_components59.Tooltip, { text: getTooltipText(), children: /* @__PURE__ */ (0, import_jsx_runtime133.jsx)("span", { style: { display: "inline-flex" }, children: /* @__PURE__ */ (0, import_jsx_runtime133.jsx)(
-    import_components59.Button,
+  return /* @__PURE__ */ (0, import_jsx_runtime133.jsx)(import_components58.Tooltip, { text: getTooltipText(), children: /* @__PURE__ */ (0, import_jsx_runtime133.jsx)("span", { style: { display: "inline-flex" }, children: /* @__PURE__ */ (0, import_jsx_runtime133.jsx)(
+    import_components58.Button,
     {
       variant: "primary",
       onClick: handleAction,
       disabled: isDisabled,
       style: isDisabled ? { pointerEvents: "none" } : void 0,
-      icon: isInstalling || isReconcilingStatus ? /* @__PURE__ */ (0, import_jsx_runtime133.jsx)(import_components59.Spinner, {}) : void 0,
+      icon: isInstalling || isReconcilingStatus ? /* @__PURE__ */ (0, import_jsx_runtime133.jsx)(import_components58.Spinner, {}) : void 0,
       __next40pxDefaultSize: true,
       children: getButtonText()
     }
@@ -25207,11 +25817,11 @@ var IntegrationCardHeader = ({
   } = cardData;
   const showPluginAction = !__isPartial && type === "plugin" && (!isInstalled || !isActive);
   const showConnectedBadge = !__isPartial && (isConnected || isActive && !needsConnection);
-  const disableFormText = (0, import_i18n60.__)("Disable for this form", "jetpack-forms");
-  const enableFormText = (0, import_i18n60.__)("Enable for this form", "jetpack-forms");
+  const disableFormText = (0, import_i18n59.__)("Disable for this form", "jetpack-forms");
+  const enableFormText = (0, import_i18n59.__)("Enable for this form", "jetpack-forms");
   const showPendingBadge = !__isPartial && !showPluginAction && !isConnected && needsConnection;
-  const installPluginActionLabel = (0, import_i18n60.__)("Plugin needs install", "jetpack-forms");
-  const activatePluginActionLabel = (0, import_i18n60.__)("Plugin needs activation", "jetpack-forms");
+  const installPluginActionLabel = (0, import_i18n59.__)("Plugin needs install", "jetpack-forms");
+  const activatePluginActionLabel = (0, import_i18n59.__)("Plugin needs activation", "jetpack-forms");
   const pluginActionLabel = !isInstalled ? installPluginActionLabel : activatePluginActionLabel;
   const getTooltipText = (checked) => {
     if (toggleTooltip) {
@@ -25242,7 +25852,7 @@ var IntegrationCardHeader = ({
   const showHeaderToggleFinal = showHeaderToggle && !__isPartial;
   const showIntegrationIcons = useConfigValue("showIntegrationIcons");
   return /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(
-    import_components60.CardHeader,
+    import_components59.CardHeader,
     {
       onClick: __isPartial ? noop3 : handleHeaderClick,
       className: clsx_default("integration-card__header", { "is-clickable": !__isPartial }),
@@ -25262,7 +25872,7 @@ var IntegrationCardHeader = ({
               )
             }
           ) : /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(
-            import_components60.Icon,
+            import_components59.Icon,
             {
               icon: plugins_default,
               className: clsx_default(
@@ -25276,7 +25886,7 @@ var IntegrationCardHeader = ({
           /* @__PURE__ */ (0, import_jsx_runtime134.jsxs)("div", { className: "integration-card__title-section", children: [
             /* @__PURE__ */ (0, import_jsx_runtime134.jsx)("h3", { className: "integration-card__title", children: title }),
             description && /* @__PURE__ */ (0, import_jsx_runtime134.jsx)("span", { className: "integration-card__description", children: description }),
-            __isPartial && /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(import_components60.Animate, { type: "loading", children: ({ className }) => /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(
+            __isPartial && /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(import_components59.Animate, { type: "loading", children: ({ className }) => /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(
               Badge,
               {
                 intent: "draft",
@@ -25292,12 +25902,12 @@ var IntegrationCardHeader = ({
                 children: pluginActionLabel
               }
             ),
-            showConnectedBadge && /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(Badge, { intent: "stable", className: "integration-card__connected-badge", children: (0, import_i18n60.__)("Enabled", "jetpack-forms") }),
-            showPendingBadge && (setupBadge || /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(Badge, { intent: "low", className: "integration-card__setup-badge", children: (0, import_i18n60.__)("Needs connection", "jetpack-forms") }))
+            showConnectedBadge && /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(Badge, { intent: "stable", className: "integration-card__connected-badge", children: (0, import_i18n59.__)("Enabled", "jetpack-forms") }),
+            showPendingBadge && (setupBadge || /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(Badge, { intent: "low", className: "integration-card__setup-badge", children: (0, import_i18n59.__)("Needs connection", "jetpack-forms") }))
           ] })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime134.jsxs)(
-          import_components60.__experimentalHStack,
+          import_components59.__experimentalHStack,
           {
             className: "integration-card__header-actions",
             spacing: "3",
@@ -25317,11 +25927,11 @@ var IntegrationCardHeader = ({
                 }
               ),
               !showPluginAction && showHeaderToggleFinal && /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(
-                import_components60.Tooltip,
+                import_components59.Tooltip,
                 {
                   text: !isHeaderToggleEnabledFinal && toggleDisabledTooltip ? toggleDisabledTooltip : getTooltipText(headerToggleValue),
                   children: /* @__PURE__ */ (0, import_jsx_runtime134.jsx)("span", { className: "integration-card__toggle-tooltip-wrapper", children: /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(
-                    import_components60.ToggleControl,
+                    import_components59.ToggleControl,
                     {
                       checked: headerToggleValue && (isActive || isConnected),
                       onChange: handleToggleChange,
@@ -25331,7 +25941,7 @@ var IntegrationCardHeader = ({
                   ) })
                 }
               ),
-              !__isPartial && /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(import_components60.Icon, { icon: isExpanded ? chevron_up_default : chevron_down_default })
+              !__isPartial && /* @__PURE__ */ (0, import_jsx_runtime134.jsx)(import_components59.Icon, { icon: isExpanded ? chevron_up_default : chevron_down_default })
             ]
           }
         )
@@ -25362,7 +25972,7 @@ var IntegrationCard = ({
   borderBottom = true
 }) => {
   return /* @__PURE__ */ (0, import_jsx_runtime135.jsxs)(
-    import_components61.Card,
+    import_components60.Card,
     {
       className: "integration-card",
       isBorderless: true,
@@ -25407,15 +26017,15 @@ var IntegrationsList = ({
     setAttributes,
     components
   });
-  const initialCardsExpandedState = (0, import_element72.useMemo)(() => {
+  const initialCardsExpandedState = (0, import_element74.useMemo)(() => {
     const state = {};
     integrations.forEach((integration) => {
       state[integration.id] = false;
     });
     return state;
   }, [integrations]);
-  const [expandedCards, setExpandedCards] = (0, import_element72.useState)(initialCardsExpandedState);
-  const toggleCard = (0, import_element72.useCallback)(
+  const [expandedCards, setExpandedCards] = (0, import_element74.useState)(initialCardsExpandedState);
+  const toggleCard = (0, import_element74.useCallback)(
     (id) => {
       setExpandedCards((prev) => {
         const isExpanding = !prev[id];
@@ -25447,10 +26057,10 @@ var IntegrationsList = ({
 var integrations_list_default = IntegrationsList;
 
 // src/blocks/contact-form/components/jetpack-integrations-modal/style.scss
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='bb8e47b955']")) {
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='c629c83777']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "bb8e47b955");
-  style.appendChild(document.createTextNode(':root{--wpds-border-radius-lg:8px;--wpds-border-radius-md:4px;--wpds-border-radius-sm:2px;--wpds-border-radius-xs:1px;--wpds-border-width-focus:2px;--wpds-border-width-lg:8px;--wpds-border-width-md:4px;--wpds-border-width-sm:2px;--wpds-border-width-xs:1px;--wpds-color-bg-interactive-brand-strong:#3858e9;--wpds-color-bg-interactive-brand-strong-active:#2e49d9;--wpds-color-bg-interactive-brand-weak:#0000;--wpds-color-bg-interactive-brand-weak-active:#e6eaf4;--wpds-color-bg-interactive-error:#0000;--wpds-color-bg-interactive-error-active:#fff6f4;--wpds-color-bg-interactive-error-strong:#cc1818;--wpds-color-bg-interactive-error-strong-active:#b90000;--wpds-color-bg-interactive-error-weak:#0000;--wpds-color-bg-interactive-error-weak-active:#f6e6e3;--wpds-color-bg-interactive-neutral-strong:#2d2d2d;--wpds-color-bg-interactive-neutral-strong-active:#1e1e1e;--wpds-color-bg-interactive-neutral-strong-disabled:#e2e2e2;--wpds-color-bg-interactive-neutral-weak:#0000;--wpds-color-bg-interactive-neutral-weak-active:#eaeaea;--wpds-color-bg-interactive-neutral-weak-disabled:#0000;--wpds-color-bg-surface-brand:#ecf0f9;--wpds-color-bg-surface-caution:#fee994;--wpds-color-bg-surface-caution-weak:#fff9c9;--wpds-color-bg-surface-error:#f6e6e3;--wpds-color-bg-surface-error-weak:#fff6f4;--wpds-color-bg-surface-info:#deebfa;--wpds-color-bg-surface-info-weak:#f2f9ff;--wpds-color-bg-surface-neutral:#f8f8f8;--wpds-color-bg-surface-neutral-strong:#fff;--wpds-color-bg-surface-neutral-weak:#f0f0f0;--wpds-color-bg-surface-success:#c5f7cc;--wpds-color-bg-surface-success-weak:#eaffed;--wpds-color-bg-surface-warning:#fde6bd;--wpds-color-bg-surface-warning-weak:#fff7e0;--wpds-color-bg-thumb-brand:#3858e9;--wpds-color-bg-thumb-brand-active:#3858e9;--wpds-color-bg-thumb-neutral-disabled:#d8d8d8;--wpds-color-bg-thumb-neutral-weak:#8a8a8a;--wpds-color-bg-thumb-neutral-weak-active:#6c6c6c;--wpds-color-bg-track-neutral:#d8d8d8;--wpds-color-bg-track-neutral-weak:#e0e0e0;--wpds-color-fg-content-caution:#281d00;--wpds-color-fg-content-caution-weak:#826a00;--wpds-color-fg-content-error:#470000;--wpds-color-fg-content-error-weak:#cc1818;--wpds-color-fg-content-info:#001b4f;--wpds-color-fg-content-info-weak:#006bd7;--wpds-color-fg-content-neutral:#1e1e1e;--wpds-color-fg-content-neutral-weak:#6d6d6d;--wpds-color-fg-content-success:#002900;--wpds-color-fg-content-success-weak:#007f30;--wpds-color-fg-content-warning:#2e1900;--wpds-color-fg-content-warning-weak:#926300;--wpds-color-fg-interactive-brand:#3858e9;--wpds-color-fg-interactive-brand-active:#3858e9;--wpds-color-fg-interactive-brand-strong:#eff0f2;--wpds-color-fg-interactive-brand-strong-active:#eff0f2;--wpds-color-fg-interactive-error:#cc1818;--wpds-color-fg-interactive-error-active:#cc1818;--wpds-color-fg-interactive-error-strong:#f2efef;--wpds-color-fg-interactive-error-strong-active:#f2efef;--wpds-color-fg-interactive-neutral:#1e1e1e;--wpds-color-fg-interactive-neutral-active:#1e1e1e;--wpds-color-fg-interactive-neutral-disabled:#8a8a8a;--wpds-color-fg-interactive-neutral-strong:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-active:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-disabled:#8a8a8a;--wpds-color-fg-interactive-neutral-weak:#6d6d6d;--wpds-color-fg-interactive-neutral-weak-disabled:#8a8a8a;--wpds-color-stroke-focus-brand:#3858e9;--wpds-color-stroke-interactive-brand:#3858e9;--wpds-color-stroke-interactive-brand-active:#2337c8;--wpds-color-stroke-interactive-error:#cc1818;--wpds-color-stroke-interactive-error-active:#9d0000;--wpds-color-stroke-interactive-error-strong:#cc1818;--wpds-color-stroke-interactive-neutral:#8a8a8a;--wpds-color-stroke-interactive-neutral-active:#6c6c6c;--wpds-color-stroke-interactive-neutral-disabled:#d8d8d8;--wpds-color-stroke-interactive-neutral-strong:#6c6c6c;--wpds-color-stroke-surface-brand:#a3b1d4;--wpds-color-stroke-surface-brand-strong:#3858e9;--wpds-color-stroke-surface-error:#daa39b;--wpds-color-stroke-surface-error-strong:#cc1818;--wpds-color-stroke-surface-info:#9fbcdc;--wpds-color-stroke-surface-info-strong:#006bd7;--wpds-color-stroke-surface-neutral:#d8d8d8;--wpds-color-stroke-surface-neutral-strong:#8a8a8a;--wpds-color-stroke-surface-neutral-weak:#e0e0e0;--wpds-color-stroke-surface-success:#8ac894;--wpds-color-stroke-surface-success-strong:#007f30;--wpds-color-stroke-surface-warning:#d0b381;--wpds-color-stroke-surface-warning-strong:#926300;--wpds-cursor-control:default;--wpds-dimension-base:4px;--wpds-dimension-gap-2xl:32px;--wpds-dimension-gap-3xl:40px;--wpds-dimension-gap-lg:16px;--wpds-dimension-gap-md:12px;--wpds-dimension-gap-sm:8px;--wpds-dimension-gap-xl:24px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-2xl:24px;--wpds-dimension-padding-3xl:32px;--wpds-dimension-padding-lg:16px;--wpds-dimension-padding-md:12px;--wpds-dimension-padding-sm:8px;--wpds-dimension-padding-xl:20px;--wpds-dimension-padding-xs:4px;--wpds-dimension-surface-width-2xl:960px;--wpds-dimension-surface-width-lg:560px;--wpds-dimension-surface-width-md:400px;--wpds-dimension-surface-width-sm:320px;--wpds-dimension-surface-width-xl:720px;--wpds-dimension-surface-width-xs:240px;--wpds-elevation-lg:0 5px 15px 0 #00000014,0 15px 27px 0 #00000012,0 30px 36px 0 #0000000a,0 50px 43px 0 #00000005;--wpds-elevation-md:0 2px 3px 0 #0000000d,0 4px 5px 0 #0000000a,0 12px 12px 0 #00000008,0 16px 16px 0 #00000005;--wpds-elevation-sm:0 1px 2px 0 #0000000d,0 2px 3px 0 #0000000a,0 6px 6px 0 #00000008,0 8px 8px 0 #00000005;--wpds-elevation-xs:0 1px 1px 0 #00000008,0 1px 2px 0 #00000005,0 3px 3px 0 #00000005,0 4px 4px 0 #00000003;--wpds-font-family-body:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-font-family-heading:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-font-family-mono:"Menlo","Consolas",monaco,monospace;--wpds-font-line-height-2xl:40px;--wpds-font-line-height-lg:28px;--wpds-font-line-height-md:24px;--wpds-font-line-height-sm:20px;--wpds-font-line-height-xl:32px;--wpds-font-line-height-xs:16px;--wpds-font-size-2xl:32px;--wpds-font-size-lg:15px;--wpds-font-size-md:13px;--wpds-font-size-sm:12px;--wpds-font-size-xl:20px;--wpds-font-size-xs:11px;--wpds-font-weight-medium:499;--wpds-font-weight-regular:400}[data-wpds-theme-provider-id][data-wpds-density=compact]{--wpds-dimension-gap-2xl:24px;--wpds-dimension-gap-3xl:32px;--wpds-dimension-gap-lg:12px;--wpds-dimension-gap-md:8px;--wpds-dimension-gap-sm:4px;--wpds-dimension-gap-xl:20px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-2xl:20px;--wpds-dimension-padding-3xl:24px;--wpds-dimension-padding-lg:12px;--wpds-dimension-padding-md:8px;--wpds-dimension-padding-sm:4px;--wpds-dimension-padding-xl:16px;--wpds-dimension-padding-xs:4px}[data-wpds-theme-provider-id][data-wpds-density=comfortable]{--wpds-dimension-gap-2xl:40px;--wpds-dimension-gap-3xl:48px;--wpds-dimension-gap-lg:20px;--wpds-dimension-gap-md:16px;--wpds-dimension-gap-sm:12px;--wpds-dimension-gap-xl:32px;--wpds-dimension-gap-xs:8px;--wpds-dimension-padding-2xl:32px;--wpds-dimension-padding-3xl:40px;--wpds-dimension-padding-lg:20px;--wpds-dimension-padding-md:16px;--wpds-dimension-padding-sm:12px;--wpds-dimension-padding-xl:24px;--wpds-dimension-padding-xs:8px}[data-wpds-theme-provider-id][data-wpds-density=default]{--wpds-dimension-base:4px;--wpds-dimension-gap-2xl:32px;--wpds-dimension-gap-3xl:40px;--wpds-dimension-gap-lg:16px;--wpds-dimension-gap-md:12px;--wpds-dimension-gap-sm:8px;--wpds-dimension-gap-xl:24px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-2xl:24px;--wpds-dimension-padding-3xl:32px;--wpds-dimension-padding-lg:16px;--wpds-dimension-padding-md:12px;--wpds-dimension-padding-sm:8px;--wpds-dimension-padding-xl:20px;--wpds-dimension-padding-xs:4px;--wpds-dimension-surface-width-2xl:960px;--wpds-dimension-surface-width-lg:560px;--wpds-dimension-surface-width-md:400px;--wpds-dimension-surface-width-sm:320px;--wpds-dimension-surface-width-xl:720px;--wpds-dimension-surface-width-xs:240px}@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){:root{--wpds-border-width-focus:1.5px}}.jetpack-forms-integrations-modal .components-modal__header-heading{font-weight:400}'));
+  style.setAttribute("data-wp-hash", "c629c83777");
+  style.appendChild(document.createTextNode(':root{--wpds-border-radius-lg:8px;--wpds-border-radius-md:4px;--wpds-border-radius-sm:2px;--wpds-border-radius-xs:1px;--wpds-border-width-focus:2px;--wpds-border-width-lg:8px;--wpds-border-width-md:4px;--wpds-border-width-sm:2px;--wpds-border-width-xs:1px;--wpds-color-bg-interactive-brand-strong:#3858e9;--wpds-color-bg-interactive-brand-strong-active:#2e49d9;--wpds-color-bg-interactive-brand-weak:#0000;--wpds-color-bg-interactive-brand-weak-active:#e6eaf4;--wpds-color-bg-interactive-error:#0000;--wpds-color-bg-interactive-error-active:#fff6f4;--wpds-color-bg-interactive-error-strong:#cc1818;--wpds-color-bg-interactive-error-strong-active:#b90000;--wpds-color-bg-interactive-error-weak:#0000;--wpds-color-bg-interactive-error-weak-active:#f6e6e3;--wpds-color-bg-interactive-neutral-strong:#2d2d2d;--wpds-color-bg-interactive-neutral-strong-active:#1e1e1e;--wpds-color-bg-interactive-neutral-strong-disabled:#e2e2e2;--wpds-color-bg-interactive-neutral-weak:#0000;--wpds-color-bg-interactive-neutral-weak-active:#eaeaea;--wpds-color-bg-interactive-neutral-weak-disabled:#0000;--wpds-color-bg-surface-brand:#ecf0f9;--wpds-color-bg-surface-caution:#fee994;--wpds-color-bg-surface-caution-weak:#fff9c9;--wpds-color-bg-surface-error:#f6e6e3;--wpds-color-bg-surface-error-weak:#fff6f4;--wpds-color-bg-surface-info:#deebfa;--wpds-color-bg-surface-info-weak:#f2f9ff;--wpds-color-bg-surface-neutral:#f8f8f8;--wpds-color-bg-surface-neutral-strong:#fff;--wpds-color-bg-surface-neutral-weak:#f0f0f0;--wpds-color-bg-surface-success:#c5f7cc;--wpds-color-bg-surface-success-weak:#eaffed;--wpds-color-bg-surface-warning:#fde6bd;--wpds-color-bg-surface-warning-weak:#fff7e0;--wpds-color-bg-thumb-brand:#3858e9;--wpds-color-bg-thumb-brand-active:#3858e9;--wpds-color-bg-thumb-neutral-disabled:#d8d8d8;--wpds-color-bg-thumb-neutral-weak:#8a8a8a;--wpds-color-bg-thumb-neutral-weak-active:#6c6c6c;--wpds-color-bg-track-neutral:#d8d8d8;--wpds-color-bg-track-neutral-weak:#e0e0e0;--wpds-color-fg-content-caution:#281d00;--wpds-color-fg-content-caution-weak:#826a00;--wpds-color-fg-content-error:#470000;--wpds-color-fg-content-error-weak:#cc1818;--wpds-color-fg-content-info:#001b4f;--wpds-color-fg-content-info-weak:#006bd7;--wpds-color-fg-content-neutral:#1e1e1e;--wpds-color-fg-content-neutral-weak:#6d6d6d;--wpds-color-fg-content-success:#002900;--wpds-color-fg-content-success-weak:#007f30;--wpds-color-fg-content-warning:#2e1900;--wpds-color-fg-content-warning-weak:#926300;--wpds-color-fg-interactive-brand:#3858e9;--wpds-color-fg-interactive-brand-active:#3858e9;--wpds-color-fg-interactive-brand-strong:#eff0f2;--wpds-color-fg-interactive-brand-strong-active:#eff0f2;--wpds-color-fg-interactive-error:#cc1818;--wpds-color-fg-interactive-error-active:#cc1818;--wpds-color-fg-interactive-error-strong:#f2efef;--wpds-color-fg-interactive-error-strong-active:#f2efef;--wpds-color-fg-interactive-neutral:#1e1e1e;--wpds-color-fg-interactive-neutral-active:#1e1e1e;--wpds-color-fg-interactive-neutral-disabled:#8a8a8a;--wpds-color-fg-interactive-neutral-strong:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-active:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-disabled:#8a8a8a;--wpds-color-fg-interactive-neutral-weak:#6d6d6d;--wpds-color-fg-interactive-neutral-weak-disabled:#8a8a8a;--wpds-color-stroke-focus-brand:#3858e9;--wpds-color-stroke-interactive-brand:#3858e9;--wpds-color-stroke-interactive-brand-active:#2337c8;--wpds-color-stroke-interactive-error:#cc1818;--wpds-color-stroke-interactive-error-active:#9d0000;--wpds-color-stroke-interactive-error-strong:#cc1818;--wpds-color-stroke-interactive-neutral:#8a8a8a;--wpds-color-stroke-interactive-neutral-active:#6c6c6c;--wpds-color-stroke-interactive-neutral-disabled:#d8d8d8;--wpds-color-stroke-interactive-neutral-strong:#6c6c6c;--wpds-color-stroke-surface-brand:#a3b1d4;--wpds-color-stroke-surface-brand-strong:#3858e9;--wpds-color-stroke-surface-error:#daa39b;--wpds-color-stroke-surface-error-strong:#cc1818;--wpds-color-stroke-surface-info:#9fbcdc;--wpds-color-stroke-surface-info-strong:#006bd7;--wpds-color-stroke-surface-neutral:#d8d8d8;--wpds-color-stroke-surface-neutral-strong:#8a8a8a;--wpds-color-stroke-surface-neutral-weak:#e0e0e0;--wpds-color-stroke-surface-success:#8ac894;--wpds-color-stroke-surface-success-strong:#007f30;--wpds-color-stroke-surface-warning:#d0b381;--wpds-color-stroke-surface-warning-strong:#926300;--wpds-cursor-control:pointer;--wpds-dimension-base:4px;--wpds-dimension-gap-2xl:32px;--wpds-dimension-gap-3xl:40px;--wpds-dimension-gap-lg:16px;--wpds-dimension-gap-md:12px;--wpds-dimension-gap-sm:8px;--wpds-dimension-gap-xl:24px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-2xl:24px;--wpds-dimension-padding-3xl:32px;--wpds-dimension-padding-lg:16px;--wpds-dimension-padding-md:12px;--wpds-dimension-padding-sm:8px;--wpds-dimension-padding-xl:20px;--wpds-dimension-padding-xs:4px;--wpds-dimension-surface-width-2xl:960px;--wpds-dimension-surface-width-lg:560px;--wpds-dimension-surface-width-md:400px;--wpds-dimension-surface-width-sm:320px;--wpds-dimension-surface-width-xl:720px;--wpds-dimension-surface-width-xs:240px;--wpds-elevation-lg:0 5px 15px 0 #00000014,0 15px 27px 0 #00000012,0 30px 36px 0 #0000000a,0 50px 43px 0 #00000005;--wpds-elevation-md:0 2px 3px 0 #0000000d,0 4px 5px 0 #0000000a,0 12px 12px 0 #00000008,0 16px 16px 0 #00000005;--wpds-elevation-sm:0 1px 2px 0 #0000000d,0 2px 3px 0 #0000000a,0 6px 6px 0 #00000008,0 8px 8px 0 #00000005;--wpds-elevation-xs:0 1px 1px 0 #00000008,0 1px 2px 0 #00000005,0 3px 3px 0 #00000005,0 4px 4px 0 #00000003;--wpds-font-family-body:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-font-family-heading:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-font-family-mono:"Menlo","Consolas",monaco,monospace;--wpds-font-line-height-2xl:40px;--wpds-font-line-height-lg:28px;--wpds-font-line-height-md:24px;--wpds-font-line-height-sm:20px;--wpds-font-line-height-xl:32px;--wpds-font-line-height-xs:16px;--wpds-font-size-2xl:32px;--wpds-font-size-lg:15px;--wpds-font-size-md:13px;--wpds-font-size-sm:12px;--wpds-font-size-xl:20px;--wpds-font-size-xs:11px;--wpds-font-weight-medium:499;--wpds-font-weight-regular:400}[data-wpds-theme-provider-id][data-wpds-density=compact]{--wpds-dimension-gap-2xl:24px;--wpds-dimension-gap-3xl:32px;--wpds-dimension-gap-lg:12px;--wpds-dimension-gap-md:8px;--wpds-dimension-gap-sm:4px;--wpds-dimension-gap-xl:20px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-2xl:20px;--wpds-dimension-padding-3xl:24px;--wpds-dimension-padding-lg:12px;--wpds-dimension-padding-md:8px;--wpds-dimension-padding-sm:4px;--wpds-dimension-padding-xl:16px;--wpds-dimension-padding-xs:4px}[data-wpds-theme-provider-id][data-wpds-density=comfortable]{--wpds-dimension-gap-2xl:40px;--wpds-dimension-gap-3xl:48px;--wpds-dimension-gap-lg:20px;--wpds-dimension-gap-md:16px;--wpds-dimension-gap-sm:12px;--wpds-dimension-gap-xl:32px;--wpds-dimension-gap-xs:8px;--wpds-dimension-padding-2xl:32px;--wpds-dimension-padding-3xl:40px;--wpds-dimension-padding-lg:20px;--wpds-dimension-padding-md:16px;--wpds-dimension-padding-sm:12px;--wpds-dimension-padding-xl:24px;--wpds-dimension-padding-xs:8px}[data-wpds-theme-provider-id][data-wpds-density=default]{--wpds-dimension-base:4px;--wpds-dimension-gap-2xl:32px;--wpds-dimension-gap-3xl:40px;--wpds-dimension-gap-lg:16px;--wpds-dimension-gap-md:12px;--wpds-dimension-gap-sm:8px;--wpds-dimension-gap-xl:24px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-2xl:24px;--wpds-dimension-padding-3xl:32px;--wpds-dimension-padding-lg:16px;--wpds-dimension-padding-md:12px;--wpds-dimension-padding-sm:8px;--wpds-dimension-padding-xl:20px;--wpds-dimension-padding-xs:4px;--wpds-dimension-surface-width-2xl:960px;--wpds-dimension-surface-width-lg:560px;--wpds-dimension-surface-width-md:400px;--wpds-dimension-surface-width-sm:320px;--wpds-dimension-surface-width-xl:720px;--wpds-dimension-surface-width-xs:240px}@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){:root{--wpds-border-width-focus:1.5px}}.jetpack-forms-integrations-modal .components-modal__header-heading{font-weight:400}'));
   document.head.appendChild(style);
 }
 
@@ -25470,13 +26080,13 @@ var IntegrationsModal = ({
     return null;
   }
   return /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
-    import_components62.Modal,
+    import_components61.Modal,
     {
-      title: (0, import_i18n61.__)("Manage integrations", "jetpack-forms"),
+      title: (0, import_i18n60.__)("Manage integrations", "jetpack-forms"),
       onRequestClose: onClose,
       size: "large",
       className: "jetpack-forms-integrations-modal",
-      children: /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(import_components62.__experimentalVStack, { spacing: "4", children: /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
+      children: /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(import_components61.__experimentalVStack, { spacing: "4", children: /* @__PURE__ */ (0, import_jsx_runtime137.jsx)(
         integrations_list_default,
         {
           integrations: integrationsData,
@@ -25493,14 +26103,14 @@ var IntegrationsModal = ({
 var jetpack_integrations_modal_default = IntegrationsModal;
 
 // src/dashboard/components/create-form-button/index.tsx
-var import_components64 = __toESM(require_components(), 1);
-var import_element74 = __toESM(require_element(), 1);
-var import_i18n63 = __toESM(require_i18n(), 1);
+var import_components63 = __toESM(require_components(), 1);
+var import_element76 = __toESM(require_element(), 1);
+var import_i18n62 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/form-name-modal/index.tsx
-var import_components63 = __toESM(require_components(), 1);
-var import_element73 = __toESM(require_element(), 1);
-var import_i18n62 = __toESM(require_i18n(), 1);
+var import_components62 = __toESM(require_components(), 1);
+var import_element75 = __toESM(require_element(), 1);
+var import_i18n61 = __toESM(require_i18n(), 1);
 
 // src/dashboard/components/form-name-modal/style.scss
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='e3be9dcb8f']")) {
@@ -25524,24 +26134,24 @@ function FormNameModal({
   inputLabel,
   fallbackName
 }) {
-  const [name, setName] = (0, import_element73.useState)(initialValue);
-  const [isSaving, setIsSaving] = (0, import_element73.useState)(false);
-  (0, import_element73.useEffect)(() => {
+  const [name, setName] = (0, import_element75.useState)(initialValue);
+  const [isSaving, setIsSaving] = (0, import_element75.useState)(false);
+  (0, import_element75.useEffect)(() => {
     if (isOpen) {
       setName(initialValue);
     }
   }, [isOpen, initialValue]);
-  const handleClose = (0, import_element73.useCallback)(() => {
+  const handleClose = (0, import_element75.useCallback)(() => {
     if (!isSaving) {
       onClose();
     }
   }, [isSaving, onClose]);
-  const handleConfirm = (0, import_element73.useCallback)(async () => {
+  const handleConfirm = (0, import_element75.useCallback)(async () => {
     if (isSaving) {
       return;
     }
     setIsSaving(true);
-    const finalName = name.trim() || fallbackName || (0, import_i18n62.__)("Untitled Form", "jetpack-forms");
+    const finalName = name.trim() || fallbackName || (0, import_i18n61.__)("Untitled Form", "jetpack-forms");
     try {
       await onSave(finalName);
       onClose();
@@ -25550,7 +26160,7 @@ function FormNameModal({
       setIsSaving(false);
     }
   }, [name, fallbackName, isSaving, onSave, onClose]);
-  const onSubmitForm = (0, import_element73.useCallback)(
+  const onSubmitForm = (0, import_element75.useCallback)(
     (event) => {
       event.preventDefault();
       handleConfirm();
@@ -25560,11 +26170,11 @@ function FormNameModal({
   if (!isOpen) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components63.Modal, { title, onRequestClose: handleClose, size: "medium", children: /* @__PURE__ */ (0, import_jsx_runtime138.jsxs)("form", { onSubmit: onSubmitForm, children: [
+  return /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components62.Modal, { title, onRequestClose: handleClose, size: "medium", children: /* @__PURE__ */ (0, import_jsx_runtime138.jsxs)("form", { onSubmit: onSubmitForm, children: [
     /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(
-      import_components63.TextControl,
+      import_components62.TextControl,
       {
-        label: inputLabel || (0, import_i18n62.__)("Name", "jetpack-forms"),
+        label: inputLabel || (0, import_i18n61.__)("Name", "jetpack-forms"),
         value: name,
         onChange: setName,
         __next40pxDefaultSize: true,
@@ -25573,8 +26183,8 @@ function FormNameModal({
       }
     ),
     /* @__PURE__ */ (0, import_jsx_runtime138.jsxs)("div", { className: "jp-forms-name-modal__buttons", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components63.Button, { variant: "tertiary", onClick: handleClose, disabled: isSaving, children: secondaryButtonLabel || (0, import_i18n62.__)("Cancel", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components63.Button, { "aria-disabled": isSaving, isBusy: isSaving, variant: "primary", type: "submit", children: primaryButtonLabel || (0, import_i18n62.__)("Save", "jetpack-forms") })
+      /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components62.Button, { variant: "tertiary", onClick: handleClose, disabled: isSaving, children: secondaryButtonLabel || (0, import_i18n61.__)("Cancel", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(import_components62.Button, { "aria-disabled": isSaving, isBusy: isSaving, variant: "primary", type: "submit", children: primaryButtonLabel || (0, import_i18n61.__)("Save", "jetpack-forms") })
     ] })
   ] }) });
 }
@@ -25582,15 +26192,15 @@ function FormNameModal({
 // src/dashboard/components/create-form-button/index.tsx
 var import_jsx_runtime139 = __toESM(require_jsx_runtime(), 1);
 function CreateFormButton({
-  label = (0, import_i18n63.__)("Create a form", "jetpack-forms"),
+  label = (0, import_i18n62.__)("Create a form", "jetpack-forms"),
   showPatterns = false,
   variant = "secondary",
   showIcon = true,
   showNameModal = false
 }) {
   const { openNewForm } = useCreateForm();
-  const [isModalOpen, setIsModalOpen] = (0, import_element74.useState)(false);
-  const onButtonClickHandler = (0, import_element74.useCallback)(() => {
+  const [isModalOpen, setIsModalOpen] = (0, import_element76.useState)(false);
+  const onButtonClickHandler = (0, import_element76.useCallback)(() => {
     if (showNameModal) {
       setIsModalOpen(true);
       return;
@@ -25604,10 +26214,10 @@ function CreateFormButton({
       }
     });
   }, [showNameModal, openNewForm, showPatterns]);
-  const handleModalClose = (0, import_element74.useCallback)(() => {
+  const handleModalClose = (0, import_element76.useCallback)(() => {
     setIsModalOpen(false);
   }, []);
-  const handleModalSave = (0, import_element74.useCallback)(
+  const handleModalSave = (0, import_element76.useCallback)(
     async (formTitle) => {
       await openNewForm({
         showPatterns,
@@ -25623,7 +26233,7 @@ function CreateFormButton({
   );
   return /* @__PURE__ */ (0, import_jsx_runtime139.jsxs)(import_jsx_runtime139.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime139.jsx)(
-      import_components64.Button,
+      import_components63.Button,
       {
         size: "compact",
         variant,
@@ -25639,20 +26249,20 @@ function CreateFormButton({
         isOpen: isModalOpen,
         onClose: handleModalClose,
         onSave: handleModalSave,
-        title: (0, import_i18n63.__)("Create form", "jetpack-forms"),
-        primaryButtonLabel: (0, import_i18n63.__)("Create", "jetpack-forms"),
-        secondaryButtonLabel: (0, import_i18n63.__)("Cancel", "jetpack-forms"),
-        placeholder: (0, import_i18n63.__)("Enter form title", "jetpack-forms")
+        title: (0, import_i18n62.__)("Create form", "jetpack-forms"),
+        primaryButtonLabel: (0, import_i18n62.__)("Create", "jetpack-forms"),
+        secondaryButtonLabel: (0, import_i18n62.__)("Cancel", "jetpack-forms"),
+        placeholder: (0, import_i18n62.__)("Enter form title", "jetpack-forms")
       }
     )
   ] });
 }
 
 // src/dashboard/components/empty-responses/index.tsx
-var import_components65 = __toESM(require_components(), 1);
+var import_components64 = __toESM(require_components(), 1);
 var import_data10 = __toESM(require_data(), 1);
-var import_element75 = __toESM(require_element(), 1);
-var import_i18n64 = __toESM(require_i18n(), 1);
+var import_element77 = __toESM(require_element(), 1);
+var import_i18n63 = __toESM(require_i18n(), 1);
 
 // src/store/integrations/index.ts
 var import_data9 = __toESM(require_data(), 1);
@@ -25804,16 +26414,16 @@ var store2 = (0, import_data9.createReduxStore)(INTEGRATIONS_STORE, {
 
 // src/dashboard/components/empty-responses/index.tsx
 var import_jsx_runtime140 = __toESM(require_jsx_runtime(), 1);
-var EmptyWrapper = ({ heading = "", body = "", actions: actions2 = null }) => /* @__PURE__ */ (0, import_jsx_runtime140.jsxs)(import_components65.__experimentalVStack, { alignment: "center", spacing: "2", children: [
-  heading && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(import_components65.__experimentalText, { as: "h3", weight: "500", size: "15", children: heading }),
-  body && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(import_components65.__experimentalText, { variant: "muted", children: body }),
+var EmptyWrapper = ({ heading = "", body = "", actions: actions2 = null }) => /* @__PURE__ */ (0, import_jsx_runtime140.jsxs)(import_components64.__experimentalVStack, { alignment: "center", spacing: "2", children: [
+  heading && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(import_components64.__experimentalText, { as: "h3", weight: "500", size: "15", children: heading }),
+  body && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(import_components64.__experimentalText, { variant: "muted", children: body }),
   actions2 && /* @__PURE__ */ (0, import_jsx_runtime140.jsx)("span", { style: { marginBlockStart: "16px" }, children: actions2 })
 ] });
 var NoResults = () => /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
   EmptyWrapper,
   {
-    heading: (0, import_i18n64.__)("No results found", "jetpack-forms"),
-    body: (0, import_i18n64.__)(
+    heading: (0, import_i18n63.__)("No results found", "jetpack-forms"),
+    body: (0, import_i18n63.__)(
       "Try adjusting your search or filters to find what you're looking for.",
       "jetpack-forms"
     )
@@ -25821,7 +26431,7 @@ var NoResults = () => /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
 );
 
 // src/dashboard/constants.ts
-var import_i18n65 = __toESM(require_i18n(), 1);
+var import_i18n64 = __toESM(require_i18n(), 1);
 var FORM_STATUSES = [
   "all",
   "publish",
@@ -25837,19 +26447,19 @@ var NON_TRASH_FORM_STATUSES = FORM_STATUSES.filter(
 function getFormStatusLabel(status) {
   switch (status) {
     case "all":
-      return (0, import_i18n65.__)("All", "jetpack-forms");
+      return (0, import_i18n64.__)("All", "jetpack-forms");
     case "publish":
-      return (0, import_i18n65.__)("Published", "jetpack-forms");
+      return (0, import_i18n64.__)("Published", "jetpack-forms");
     case "draft":
-      return (0, import_i18n65.__)("Draft", "jetpack-forms");
+      return (0, import_i18n64.__)("Draft", "jetpack-forms");
     case "pending":
-      return (0, import_i18n65.__)("Pending review", "jetpack-forms");
+      return (0, import_i18n64.__)("Pending review", "jetpack-forms");
     case "future":
-      return (0, import_i18n65.__)("Scheduled", "jetpack-forms");
+      return (0, import_i18n64.__)("Scheduled", "jetpack-forms");
     case "private":
-      return (0, import_i18n65.__)("Private", "jetpack-forms");
+      return (0, import_i18n64.__)("Private", "jetpack-forms");
     case "trash":
-      return (0, import_i18n65.__)("Trash", "jetpack-forms");
+      return (0, import_i18n64.__)("Trash", "jetpack-forms");
     default:
       return status;
   }
@@ -25857,8 +26467,8 @@ function getFormStatusLabel(status) {
 
 // src/dashboard/hooks/use-delete-form.ts
 var import_data13 = __toESM(require_data(), 1);
-var import_element77 = __toESM(require_element(), 1);
-var import_i18n66 = __toESM(require_i18n(), 1);
+var import_element79 = __toESM(require_element(), 1);
+var import_i18n65 = __toESM(require_i18n(), 1);
 var import_notices2 = __toESM(require_notices(), 1);
 
 // src/dashboard/store/index.js
@@ -25923,7 +26533,7 @@ function setCurrentQuery(currentQuery2) {
       ...currentQuery2,
       fields_format: currentQuery2.fields_format ?? previousQuery.fields_format ?? "collection"
     };
-    const filtersChanged = previousQuery.status !== queryWithFormat.status || previousQuery.search !== queryWithFormat.search || previousQuery.is_unread !== queryWithFormat.is_unread || previousQuery.parent !== queryWithFormat.parent || previousQuery.before !== queryWithFormat.before || previousQuery.after !== queryWithFormat.after;
+    const filtersChanged = previousQuery.status !== queryWithFormat.status || previousQuery.search !== queryWithFormat.search || previousQuery.is_unread !== queryWithFormat.is_unread || previousQuery.parent !== queryWithFormat.parent || previousQuery.source !== queryWithFormat.source || previousQuery.before !== queryWithFormat.before || previousQuery.after !== queryWithFormat.after;
     if (filtersChanged) {
       dispatch4(clearInvalidRecords());
       if (registry && registry.dispatch("core")) {
@@ -26035,7 +26645,7 @@ var normalizeValue2 = (value) => {
   return String(value);
 };
 var getCacheKey = (queryParams = {}) => {
-  const keys = ["search", "parent", "before", "after", "is_unread"];
+  const keys = ["search", "parent", "source", "before", "after", "is_unread"];
   const parts = keys.filter((key) => queryParams[key] !== void 0).map((key) => `${key}:${normalizeValue2(queryParams[key])}`);
   return parts.length > 0 ? parts.join("|") : "default";
 };
@@ -26133,6 +26743,9 @@ var getCounts = (queryParams = {}) => async ({ dispatch: dispatch4 }) => {
   if (queryParams?.parent) {
     params.parent = queryParams.parent;
   }
+  if (queryParams?.source) {
+    params.source = queryParams.source;
+  }
   if (queryParams?.before) {
     params.before = queryParams.before;
   }
@@ -26220,7 +26833,7 @@ var store3 = (0, import_data12.createReduxStore)(STORE_NAME, {
 
 // src/dashboard/hooks/use-forms-data.ts
 var import_core_data = __toESM(require_core_data(), 1);
-var import_element76 = __toESM(require_element(), 1);
+var import_element78 = __toESM(require_element(), 1);
 var import_html_entities = __toESM(require_html_entities(), 1);
 function getFormsListQuery(page, perPage, search, status, hasResponses) {
   const queryParams = {
@@ -26241,7 +26854,7 @@ function getFormsListQuery(page, perPage, search, status, hasResponses) {
   return queryParams;
 }
 function useFormsData(page, perPage, search, status, hasResponses) {
-  const query = (0, import_element76.useMemo)(() => {
+  const query = (0, import_element78.useMemo)(() => {
     return getFormsListQuery(page, perPage, search, status, hasResponses);
   }, [page, perPage, search, status, hasResponses]);
   const {
@@ -26250,7 +26863,7 @@ function useFormsData(page, perPage, search, status, hasResponses) {
     totalItems,
     totalPages
   } = (0, import_core_data.useEntityRecords)("postType", "jetpack_form", query);
-  const records = (0, import_element76.useMemo)(() => {
+  const records = (0, import_element78.useMemo)(() => {
     const seen = /* @__PURE__ */ new Set();
     const items = [];
     for (const item of rawRecords || []) {
@@ -26285,9 +26898,9 @@ function useDeleteForm({
   recordsLength,
   statusQuery
 }) {
-  const [isDeleting, setIsDeleting] = (0, import_element77.useState)(false);
-  const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element77.useState)(false);
-  const [permanentDeleteItems, setPermanentDeleteItems] = (0, import_element77.useState)([]);
+  const [isDeleting, setIsDeleting] = (0, import_element79.useState)(false);
+  const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element79.useState)(false);
+  const [permanentDeleteItems, setPermanentDeleteItems] = (0, import_element79.useState)([]);
   const { saveEntityRecord, deleteEntityRecord, invalidateResolution } = (0, import_data13.useDispatch)(
     "core"
   );
@@ -26296,11 +26909,11 @@ function useDeleteForm({
   const page = view.page ?? 1;
   const perPage = view.perPage ?? 20;
   const search = view.search ?? "";
-  const currentQuery2 = (0, import_element77.useMemo)(
+  const currentQuery2 = (0, import_element79.useMemo)(
     () => getFormsListQuery(page, perPage, search, statusQuery),
     [page, perPage, search, statusQuery]
   );
-  const invalidateListQueries = (0, import_element77.useCallback)(
+  const invalidateListQueries = (0, import_element79.useCallback)(
     (query) => {
       invalidateResolution("getEntityRecords", ["postType", "jetpack_form", query]);
       invalidateResolution("getEntityRecords", [
@@ -26311,7 +26924,7 @@ function useDeleteForm({
     },
     [invalidateResolution]
   );
-  const restoreItemsToDraft = (0, import_element77.useCallback)(
+  const restoreItemsToDraft = (0, import_element79.useCallback)(
     async (items, {
       successNoticeIdPrefix,
       errorNoticeIdPrefix
@@ -26329,9 +26942,9 @@ function useDeleteForm({
       const restoredCount = promises.filter((p2) => p2.status === "fulfilled").length;
       const failedCount = promises.length - restoredCount;
       if (restoredCount) {
-        const successMessage = restoredCount === 1 ? (0, import_i18n66.__)("Form restored as draft.", "jetpack-forms") : (0, import_i18n66.sprintf)(
+        const successMessage = restoredCount === 1 ? (0, import_i18n65.__)("Form restored as draft.", "jetpack-forms") : (0, import_i18n65.sprintf)(
           /* translators: %d: number of forms. */
-          (0, import_i18n66._n)(
+          (0, import_i18n65._n)(
             "%d form restored as draft.",
             "%d forms restored as draft.",
             restoredCount,
@@ -26346,9 +26959,9 @@ function useDeleteForm({
       }
       if (failedCount) {
         createErrorNotice(
-          (0, import_i18n66.sprintf)(
+          (0, import_i18n65.sprintf)(
             /* translators: %d: number of forms. */
-            (0, import_i18n66._n)(
+            (0, import_i18n65._n)(
               "Could not restore %d form.",
               "Could not restore %d forms.",
               failedCount,
@@ -26363,7 +26976,7 @@ function useDeleteForm({
     },
     [createErrorNotice, createSuccessNotice, saveEntityRecord]
   );
-  const restoreForms = (0, import_element77.useCallback)(
+  const restoreForms = (0, import_element79.useCallback)(
     async (items) => {
       if (isDeleting || !items?.length) {
         return;
@@ -26406,7 +27019,7 @@ function useDeleteForm({
       view
     ]
   );
-  const undoTrashForms = (0, import_element77.useCallback)(
+  const undoTrashForms = (0, import_element79.useCallback)(
     async (items) => {
       if (isDeleting || !items?.length) {
         return;
@@ -26432,7 +27045,7 @@ function useDeleteForm({
       restoreItemsToDraft
     ]
   );
-  const trashForms = (0, import_element77.useCallback)(
+  const trashForms = (0, import_element79.useCallback)(
     async (items) => {
       if (isDeleting || !items?.length) {
         return;
@@ -26458,9 +27071,9 @@ function useDeleteForm({
         const trashedCount = trashedItems.length;
         const failedCount = items.length - trashedCount;
         if (trashedCount) {
-          const successMessage = trashedCount === 1 ? (0, import_i18n66.__)("Form moved to trash.", "jetpack-forms") : (0, import_i18n66.sprintf)(
+          const successMessage = trashedCount === 1 ? (0, import_i18n65.__)("Form moved to trash.", "jetpack-forms") : (0, import_i18n65.sprintf)(
             /* translators: %d: number of forms. */
-            (0, import_i18n66._n)(
+            (0, import_i18n65._n)(
               "%d form moved to trash.",
               "%d forms moved to trash.",
               trashedCount,
@@ -26473,7 +27086,7 @@ function useDeleteForm({
             id: `trash-forms-${Date.now()}`,
             actions: [
               {
-                label: (0, import_i18n66.__)("Undo", "jetpack-forms"),
+                label: (0, import_i18n65.__)("Undo", "jetpack-forms"),
                 onClick: () => void undoTrashForms(trashedItems)
               }
             ]
@@ -26485,9 +27098,9 @@ function useDeleteForm({
         }
         if (failedCount) {
           createErrorNotice(
-            (0, import_i18n66.sprintf)(
+            (0, import_i18n65.sprintf)(
               /* translators: %d: number of forms. */
-              (0, import_i18n66._n)(
+              (0, import_i18n65._n)(
                 "Could not move %d form to trash.",
                 "Could not move %d forms to trash.",
                 failedCount,
@@ -26527,15 +27140,15 @@ function useDeleteForm({
       view
     ]
   );
-  const openPermanentDeleteConfirm = (0, import_element77.useCallback)((items) => {
+  const openPermanentDeleteConfirm = (0, import_element79.useCallback)((items) => {
     setPermanentDeleteItems(items || []);
     setIsPermanentDeleteConfirmOpen(true);
   }, []);
-  const closePermanentDeleteConfirm = (0, import_element77.useCallback)(() => {
+  const closePermanentDeleteConfirm = (0, import_element79.useCallback)(() => {
     setIsPermanentDeleteConfirmOpen(false);
     setPermanentDeleteItems([]);
   }, []);
-  const confirmPermanentDelete = (0, import_element77.useCallback)(async () => {
+  const confirmPermanentDelete = (0, import_element79.useCallback)(async () => {
     if (!permanentDeleteItems.length || isDeleting) {
       return;
     }
@@ -26558,9 +27171,9 @@ function useDeleteForm({
       const deletedCount = promises.filter((p2) => p2.status === "fulfilled").length;
       const failedCount = promises.length - deletedCount;
       if (deletedCount) {
-        const successMessage = deletedCount === 1 ? (0, import_i18n66.__)("Form deleted permanently.", "jetpack-forms") : (0, import_i18n66.sprintf)(
+        const successMessage = deletedCount === 1 ? (0, import_i18n65.__)("Form deleted permanently.", "jetpack-forms") : (0, import_i18n65.sprintf)(
           /* translators: %d: number of forms. */
-          (0, import_i18n66._n)(
+          (0, import_i18n65._n)(
             "%d form deleted permanently.",
             "%d forms deleted permanently.",
             deletedCount,
@@ -26579,9 +27192,9 @@ function useDeleteForm({
       }
       if (failedCount) {
         createErrorNotice(
-          (0, import_i18n66.sprintf)(
+          (0, import_i18n65.sprintf)(
             /* translators: %d: number of forms. */
-            (0, import_i18n66._n)(
+            (0, import_i18n65._n)(
               "Could not permanently delete %d form.",
               "Could not permanently delete %d forms.",
               failedCount,
@@ -26593,7 +27206,7 @@ function useDeleteForm({
         );
       }
     } catch {
-      createErrorNotice((0, import_i18n66.__)("Could not delete forms permanently.", "jetpack-forms"), {
+      createErrorNotice((0, import_i18n65.__)("Could not delete forms permanently.", "jetpack-forms"), {
         type: "snackbar",
         id: `delete-forms-permanently-error-${Date.now()}`
       });
@@ -26655,13 +27268,13 @@ function useFormStatusCounts() {
 }
 
 // src/dashboard/router/wp-route-dashboard-search-params-provider.tsx
-var import_element79 = __toESM(require_element(), 1);
+var import_element81 = __toESM(require_element(), 1);
 import { useSearch, useNavigate } from "@wordpress/route";
 
 // src/dashboard/router/dashboard-search-params-context.tsx
-var import_element78 = __toESM(require_element(), 1);
+var import_element80 = __toESM(require_element(), 1);
 var import_jsx_runtime141 = __toESM(require_jsx_runtime(), 1);
-var DashboardSearchParamsContext = (0, import_element78.createContext)(null);
+var DashboardSearchParamsContext = (0, import_element80.createContext)(null);
 function DashboardSearchParamsProvider({
   value,
   children
@@ -26669,7 +27282,7 @@ function DashboardSearchParamsProvider({
   return /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(DashboardSearchParamsContext.Provider, { value, children });
 }
 function useDashboardSearchParams() {
-  const ctx8 = (0, import_element78.useContext)(DashboardSearchParamsContext);
+  const ctx8 = (0, import_element80.useContext)(DashboardSearchParamsContext);
   if (!ctx8) {
     throw new Error(
       "useDashboardSearchParams must be used within a DashboardSearchParamsProvider."
@@ -26726,8 +27339,8 @@ function WpRouteDashboardSearchParamsProvider({
     strict: false
   });
   const navigate = useNavigate();
-  const searchParams = (0, import_element79.useMemo)(() => searchRecordToUrlSearchParams(search), [search]);
-  const setSearchParams = (0, import_element79.useCallback)(
+  const searchParams = (0, import_element81.useMemo)(() => searchRecordToUrlSearchParams(search), [search]);
+  const setSearchParams = (0, import_element81.useCallback)(
     (next) => {
       const resolved = typeof next === "function" ? next(searchParams) : next;
       const nextSearch = urlSearchParamsToSearchRecord(resolved, {
@@ -26738,7 +27351,7 @@ function WpRouteDashboardSearchParamsProvider({
     },
     [navigate, searchParams]
   );
-  const value = (0, import_element79.useMemo)(
+  const value = (0, import_element81.useMemo)(
     () => [searchParams, setSearchParams],
     [searchParams, setSearchParams]
   );
@@ -26752,25 +27365,25 @@ function getFormEditUrl(formId, adminUrl) {
 
 // src/dashboard/wp-build/components/dataviews-header-row/index.tsx
 var import_data15 = __toESM(require_data(), 1);
-var import_element81 = __toESM(require_element(), 1);
-var import_i18n68 = __toESM(require_i18n(), 1);
+var import_element83 = __toESM(require_element(), 1);
+var import_i18n67 = __toESM(require_i18n(), 1);
 import { useNavigate as useNavigate2 } from "@wordpress/route";
 
 // src/dashboard/wp-build/components/inbox-status-toggle/index.tsx
-var import_element80 = __toESM(require_element(), 1);
-var import_i18n67 = __toESM(require_i18n(), 1);
+var import_element82 = __toESM(require_element(), 1);
+var import_i18n66 = __toESM(require_i18n(), 1);
 var import_jsx_runtime143 = __toESM(require_jsx_runtime(), 1);
 var getLabel = (status, count) => {
   let label;
   switch (status) {
     case "inbox":
-      label = (0, import_i18n67.__)("Inbox", "jetpack-forms");
+      label = (0, import_i18n66.__)("Inbox", "jetpack-forms");
       break;
     case "spam":
-      label = (0, import_i18n67.__)("Spam", "jetpack-forms");
+      label = (0, import_i18n66.__)("Spam", "jetpack-forms");
       break;
     case "trash":
-      label = (0, import_i18n67._x)("Trash", "noun", "jetpack-forms");
+      label = (0, import_i18n66._x)("Trash", "noun", "jetpack-forms");
       break;
   }
   return /* @__PURE__ */ (0, import_jsx_runtime143.jsxs)("span", { children: [
@@ -26783,7 +27396,7 @@ function InboxStatusToggle({
   counts: counts2,
   onChange
 }) {
-  const handleChange = (0, import_element80.useCallback)(
+  const handleChange = (0, import_element82.useCallback)(
     (nextStatus) => {
       if (nextStatus === activeStatus) {
         return;
@@ -26792,7 +27405,7 @@ function InboxStatusToggle({
     },
     [activeStatus, onChange]
   );
-  const statusTabs = (0, import_element80.useMemo)(
+  const statusTabs = (0, import_element82.useMemo)(
     () => [
       { value: "inbox", label: getLabel("inbox", counts2.inbox) },
       { value: "spam", label: getLabel("spam", counts2.spam) },
@@ -26827,7 +27440,7 @@ function DataViewsHeaderRow({
     select3(store3).getCounts({});
     return select3(store3).getInboxCount({}) ?? 0;
   }, []);
-  const onTabChange = (0, import_element81.useCallback)(
+  const onTabChange = (0, import_element83.useCallback)(
     (nextValue) => {
       if (nextValue === "forms") {
         navigate({ href: "/forms" });
@@ -26838,55 +27451,50 @@ function DataViewsHeaderRow({
     [navigate]
   );
   return /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)(import_jsx_runtime144.Fragment, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)(
-      Stack,
-      {
-        align: "center",
-        className: "jp-forms-dataviews__view-actions",
-        gap: "sm",
-        justify: "space-between",
-        children: [
-          /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(Stack, { align: "center", gap: "sm", children: isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(
-            InboxStatusToggle,
-            {
-              activeStatus: activeStatus ?? "inbox",
-              counts: statusCounts ?? { inbox: 0, spam: 0, trash: 0 },
-              onChange: onStatusChange ?? (() => {
-              })
-            }
-          ) : isCFMEnabled && /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(tabs_exports.Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)(tabs_exports.List, { variant: "minimal", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(tabs_exports.Tab, { value: "forms", children: /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)("span", { children: [
-              (0, import_i18n68.__)("Forms", "jetpack-forms"),
-              /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(Badge, { intent: "draft", className: "jp-forms-tabs-count", children: formatNumberCompact(formsCount || 0) })
-            ] }) }),
-            /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(tabs_exports.Tab, { value: "responses", children: /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)("span", { children: [
-              (0, import_i18n68.__)("Responses", "jetpack-forms"),
-              /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(Badge, { intent: "draft", className: "jp-forms-tabs-count", children: formatNumberCompact(responsesInboxCount || 0) })
-            ] }) })
-          ] }) }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)(Stack, { align: "center", gap: "sm", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(dataviews_default.Search, {}),
-            isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(dataviews_default.FiltersToggle, {}) : null,
-            /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(dataviews_default.ViewConfig, {})
-          ] })
-        ]
-      }
-    ),
+    /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)(Stack, { className: "jp-forms-dataviews__view-actions", justify: "space-between", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(Stack, { align: "center", gap: "sm", children: isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(
+        InboxStatusToggle,
+        {
+          activeStatus: activeStatus ?? "inbox",
+          counts: statusCounts ?? { inbox: 0, spam: 0, trash: 0 },
+          onChange: onStatusChange ?? (() => {
+          })
+        }
+      ) : isCFMEnabled && /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(tabs_exports.Root, { value: activeTab, onValueChange: onTabChange, children: /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)(tabs_exports.List, { variant: "minimal", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(tabs_exports.Tab, { value: "forms", children: /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)("span", { children: [
+          (0, import_i18n67.__)("Forms", "jetpack-forms"),
+          /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(Badge, { intent: "draft", className: "jp-forms-tabs-count", children: formatNumberCompact(formsCount || 0) })
+        ] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(tabs_exports.Tab, { value: "responses", children: /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)("span", { children: [
+          (0, import_i18n67.__)("Responses", "jetpack-forms"),
+          /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(Badge, { intent: "draft", className: "jp-forms-tabs-count", children: formatNumberCompact(responsesInboxCount || 0) })
+        ] }) })
+      ] }) }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime144.jsxs)(Stack, { align: "center", gap: "sm", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(dataviews_default.Search, {}),
+        isSingleFormView ? /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(dataviews_default.FiltersToggle, {}) : null,
+        /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(dataviews_default.ViewConfig, {})
+      ] })
+    ] }),
     /* @__PURE__ */ (0, import_jsx_runtime144.jsx)(dataviews_default.FiltersToggled, { className: "jp-forms-dataviews-filters__container" })
   ] });
 }
 
 // src/dashboard/wp-build/components/forms-help-modal/index.tsx
 var import_api_fetch7 = __toESM(require_api_fetch(), 1);
-var import_components66 = __toESM(require_components(), 1);
+var import_components65 = __toESM(require_components(), 1);
 var import_data16 = __toESM(require_data(), 1);
-var import_element82 = __toESM(require_element(), 1);
-var import_i18n69 = __toESM(require_i18n(), 1);
+var import_element84 = __toESM(require_element(), 1);
+var import_i18n68 = __toESM(require_i18n(), 1);
 var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
 function FormsHelpModal({ isOpen, onClose }) {
-  const [dontShowAgain, setDontShowAgain] = (0, import_element82.useState)(false);
+  const [dontShowAgain, setDontShowAgain] = (0, import_element84.useState)(false);
   const { receiveConfigValue: receiveConfigValue2 } = (0, import_data16.useDispatch)(CONFIG_STORE);
-  const handleClose = (0, import_element82.useCallback)(() => {
+  const handleClose = (0, import_element84.useCallback)(() => {
+    setDontShowAgain(false);
+    onClose();
+  }, [onClose]);
+  const handleSubmit = (0, import_element84.useCallback)(() => {
     if (dontShowAgain) {
       receiveConfigValue2("hasClassicForms", false);
       (0, import_api_fetch7.default)({
@@ -26894,38 +27502,38 @@ function FormsHelpModal({ isOpen, onClose }) {
         method: "POST"
       });
     }
-    onClose();
-  }, [dontShowAgain, onClose, receiveConfigValue2]);
+    handleClose();
+  }, [dontShowAgain, handleClose, receiveConfigValue2]);
   if (!isOpen) {
     return null;
   }
   return /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(
-    import_components66.Modal,
+    import_components65.Modal,
     {
-      title: (0, import_i18n69.__)("Not seeing all your forms?", "jetpack-forms"),
+      title: (0, import_i18n68.__)("Not seeing all your forms?", "jetpack-forms"),
       onRequestClose: handleClose,
-      children: /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)(import_components66.__experimentalVStack, { spacing: "4", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components66.__experimentalText, { children: (0, import_i18n69.__)("The Forms list shows reusable forms, not simple form blocks.", "jetpack-forms") }),
+      children: /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)(import_components65.__experimentalVStack, { spacing: "4", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components65.__experimentalText, { children: (0, import_i18n68.__)("The Forms list shows reusable forms, not simple form blocks.", "jetpack-forms") }),
         /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components66.__experimentalText, { as: "p", weight: "500", children: (0, import_i18n69.__)("To convert a form block to a reusable form:", "jetpack-forms") }),
+          /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components65.__experimentalText, { as: "p", weight: "500", children: (0, import_i18n68.__)("To convert a form block to a reusable form:", "jetpack-forms") }),
           /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)("ol", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n69.__)("Open the page or post where your form block is embedded.", "jetpack-forms") }),
-            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n69.__)("Select the form block.", "jetpack-forms") }),
-            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n69.__)('Click "Edit Form" in the block toolbar to convert it.', "jetpack-forms") }),
-            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n69.__)("Save the page or post.", "jetpack-forms") })
+            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n68.__)("Open the page or post where your form block is embedded.", "jetpack-forms") }),
+            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n68.__)("Select the form block.", "jetpack-forms") }),
+            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n68.__)('Click "Edit Form" in the block toolbar to convert it.', "jetpack-forms") }),
+            /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("li", { children: (0, import_i18n68.__)("Save the page or post.", "jetpack-forms") })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)(import_components66.__experimentalHStack, { justify: "space-between", alignment: "center", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime145.jsxs)(import_components65.__experimentalHStack, { justify: "space-between", alignment: "center", children: [
           /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(
-            import_components66.CheckboxControl,
+            import_components65.CheckboxControl,
             {
               __nextHasNoMarginBottom: true,
-              label: (0, import_i18n69.__)("Don't show this again", "jetpack-forms"),
+              label: (0, import_i18n68.__)("Don't show this again", "jetpack-forms"),
               checked: dontShowAgain,
               onChange: setDontShowAgain
             }
           ),
-          /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components66.Button, { variant: "primary", onClick: handleClose, children: (0, import_i18n69.__)("Got it", "jetpack-forms") })
+          /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components65.Button, { variant: "primary", onClick: handleSubmit, children: (0, import_i18n68.__)("Got it", "jetpack-forms") })
         ] })
       ] })
     }
@@ -26935,30 +27543,30 @@ function FormsHelpModal({ isOpen, onClose }) {
 // src/dashboard/wp-build/hooks/use-form-item-actions.ts
 var import_api_fetch8 = __toESM(require_api_fetch(), 1);
 var import_data18 = __toESM(require_data(), 1);
-var import_element84 = __toESM(require_element(), 1);
-var import_i18n72 = __toESM(require_i18n(), 1);
+var import_element86 = __toESM(require_element(), 1);
+var import_i18n71 = __toESM(require_i18n(), 1);
 var import_notices4 = __toESM(require_notices(), 1);
 
 // src/blocks/shared/util/constants.js
-var import_i18n70 = __toESM(require_i18n(), 1);
+var import_i18n69 = __toESM(require_i18n(), 1);
 var currentYear = (/* @__PURE__ */ new Date()).getFullYear();
 var DATE_FORMATS = [
   {
     value: "mm/dd/yy",
     /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 12/31/2023). */
-    label: (0, import_i18n70.__)("MM/DD/YYYY", "jetpack-forms"),
+    label: (0, import_i18n69.__)("MM/DD/YYYY", "jetpack-forms"),
     example: `12/31/${currentYear}`
   },
   {
     value: "dd/mm/yy",
     /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 31/12/2023). */
-    label: (0, import_i18n70.__)("DD/MM/YYYY", "jetpack-forms"),
+    label: (0, import_i18n69.__)("DD/MM/YYYY", "jetpack-forms"),
     example: `21/12/${currentYear}`
   },
   {
     value: "yy-mm-dd",
     /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 2023-12-31). */
-    label: (0, import_i18n70.__)("YYYY-MM-DD", "jetpack-forms"),
+    label: (0, import_i18n69.__)("YYYY-MM-DD", "jetpack-forms"),
     example: `${currentYear}-12-31`
   }
 ];
@@ -26977,16 +27585,16 @@ var getShortcode = (postId) => `[contact-form ref="${postId}"]`;
 
 // src/dashboard/wp-build/hooks/use-duplicate-form.ts
 var import_data17 = __toESM(require_data(), 1);
-var import_element83 = __toESM(require_element(), 1);
-var import_i18n71 = __toESM(require_i18n(), 1);
+var import_element85 = __toESM(require_element(), 1);
+var import_i18n70 = __toESM(require_i18n(), 1);
 var import_notices3 = __toESM(require_notices(), 1);
 function useDuplicateForm() {
-  const [isDuplicating, setIsDuplicating] = (0, import_element83.useState)(false);
+  const [isDuplicating, setIsDuplicating] = (0, import_element85.useState)(false);
   const { createSuccessNotice, createErrorNotice } = (0, import_data17.useDispatch)(import_notices3.store);
   const { saveEntityRecord } = (0, import_data17.useDispatch)("core");
   const { invalidateFormStatusCounts: invalidateFormStatusCounts2 } = (0, import_data17.useDispatch)(store3);
   const adminUrl = useConfigValue("adminUrl") || "";
-  const duplicateForm = (0, import_element83.useCallback)(
+  const duplicateForm = (0, import_element85.useCallback)(
     async (item) => {
       if (isDuplicating) {
         return;
@@ -27004,7 +27612,7 @@ function useDuplicateForm() {
         );
         if (!original) {
           createErrorNotice(
-            (0, import_i18n71.__)("Could not load the form to duplicate. Please try again.", "jetpack-forms"),
+            (0, import_i18n70.__)("Could not load the form to duplicate. Please try again.", "jetpack-forms"),
             {
               type: "snackbar"
             }
@@ -27014,10 +27622,10 @@ function useDuplicateForm() {
         const typedOriginal = original;
         const raw = typedOriginal.content?.raw;
         const originalContentRaw = typeof raw === "string" ? raw : "";
-        const originalTitle = item.title || (0, import_i18n71.__)("Untitled Form", "jetpack-forms");
-        const newTitle = (0, import_i18n71.sprintf)(
+        const originalTitle = item.title || (0, import_i18n70.__)("Untitled Form", "jetpack-forms");
+        const newTitle = (0, import_i18n70.sprintf)(
           /* translators: %s: original form title */
-          (0, import_i18n71.__)("%s Copy", "jetpack-forms"),
+          (0, import_i18n70.__)("%s Copy", "jetpack-forms"),
           originalTitle
         );
         const created = await saveEntityRecord(
@@ -27036,16 +27644,16 @@ function useDuplicateForm() {
         );
         const createdId = created?.id;
         if (!createdId) {
-          createErrorNotice((0, import_i18n71.__)("Could not duplicate form. Please try again.", "jetpack-forms"), {
+          createErrorNotice((0, import_i18n70.__)("Could not duplicate form. Please try again.", "jetpack-forms"), {
             type: "snackbar"
           });
           return;
         }
-        createSuccessNotice((0, import_i18n71.__)("Form duplicated.", "jetpack-forms"), {
+        createSuccessNotice((0, import_i18n70.__)("Form duplicated.", "jetpack-forms"), {
           type: "snackbar",
           actions: [
             {
-              label: (0, import_i18n71.__)("Edit", "jetpack-forms"),
+              label: (0, import_i18n70.__)("Edit", "jetpack-forms"),
               onClick: () => {
                 if (adminUrl) {
                   window.location.href = getFormEditUrl(createdId, adminUrl);
@@ -27055,7 +27663,7 @@ function useDuplicateForm() {
           ]
         });
       } catch {
-        createErrorNotice((0, import_i18n71.__)("Could not duplicate form. Please try again.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n70.__)("Could not duplicate form. Please try again.", "jetpack-forms"), {
           type: "snackbar"
         });
       } finally {
@@ -27079,10 +27687,10 @@ function useDuplicateForm() {
 function useFormItemActions() {
   const { createSuccessNotice, createErrorNotice } = (0, import_data18.useDispatch)(import_notices4.store);
   const { duplicateForm, isDuplicating } = useDuplicateForm();
-  const [isUpdatingStatus, setIsUpdatingStatus] = (0, import_element84.useState)(false);
-  const isUpdatingStatusRef = (0, import_element84.useRef)(false);
+  const [isUpdatingStatus, setIsUpdatingStatus] = (0, import_element86.useState)(false);
+  const isUpdatingStatusRef = (0, import_element86.useRef)(false);
   const { saveEntityRecord, invalidateResolution } = (0, import_data18.useDispatch)("core");
-  const previewForm = (0, import_element84.useCallback)(async (item) => {
+  const previewForm = (0, import_element86.useCallback)(async (item) => {
     try {
       const response = await (0, import_api_fetch8.default)({
         path: `/wp/v2/jetpack-forms/${item.id}/preview-url`
@@ -27092,39 +27700,39 @@ function useFormItemActions() {
       console.error("Failed to get preview URL:", error2);
     }
   }, []);
-  const copyEmbed = (0, import_element84.useCallback)(
+  const copyEmbed = (0, import_element86.useCallback)(
     async (item) => {
       const embedCode = getEmbedCode(item.id);
       try {
         await navigator.clipboard.writeText(embedCode);
-        createSuccessNotice((0, import_i18n72.__)("Embed code copied to clipboard.", "jetpack-forms"), {
+        createSuccessNotice((0, import_i18n71.__)("Embed code copied to clipboard.", "jetpack-forms"), {
           type: "snackbar"
         });
       } catch {
-        createErrorNotice((0, import_i18n72.__)("Failed to copy embed code. Please try again.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n71.__)("Failed to copy embed code. Please try again.", "jetpack-forms"), {
           type: "snackbar"
         });
       }
     },
     [createErrorNotice, createSuccessNotice]
   );
-  const copyShortcode = (0, import_element84.useCallback)(
+  const copyShortcode = (0, import_element86.useCallback)(
     async (item) => {
       const shortcode = getShortcode(item.id);
       try {
         await navigator.clipboard.writeText(shortcode);
-        createSuccessNotice((0, import_i18n72.__)("Shortcode copied to clipboard.", "jetpack-forms"), {
+        createSuccessNotice((0, import_i18n71.__)("Shortcode copied to clipboard.", "jetpack-forms"), {
           type: "snackbar"
         });
       } catch {
-        createErrorNotice((0, import_i18n72.__)("Failed to copy shortcode. Please try again.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n71.__)("Failed to copy shortcode. Please try again.", "jetpack-forms"), {
           type: "snackbar"
         });
       }
     },
     [createErrorNotice, createSuccessNotice]
   );
-  const invalidateListQuery = (0, import_element84.useCallback)(
+  const invalidateListQuery = (0, import_element86.useCallback)(
     (query) => {
       invalidateResolution("getEntityRecords", ["postType", FORM_POST_TYPE, query]);
       invalidateResolution("getEntityRecords", [
@@ -27135,7 +27743,7 @@ function useFormItemActions() {
     },
     [invalidateResolution]
   );
-  const updateStatus = (0, import_element84.useCallback)(
+  const updateStatus = (0, import_element86.useCallback)(
     async (items, nextStatus, options = {}) => {
       if (isUpdatingStatusRef.current || !items?.length) {
         return;
@@ -27157,13 +27765,13 @@ function useFormItemActions() {
         const updatedCount = promises.filter((p2) => p2.status === "fulfilled").length;
         const failedCount = promises.length - updatedCount;
         if (updatedCount) {
-          const message2 = nextStatus === "publish" ? (0, import_i18n72.sprintf)(
+          const message2 = nextStatus === "publish" ? (0, import_i18n71.sprintf)(
             /* translators: %d: number of forms */
-            (0, import_i18n72._n)("%d form published.", "%d forms published.", updatedCount, "jetpack-forms"),
+            (0, import_i18n71._n)("%d form published.", "%d forms published.", updatedCount, "jetpack-forms"),
             updatedCount
-          ) : (0, import_i18n72.sprintf)(
+          ) : (0, import_i18n71.sprintf)(
             /* translators: %d: number of forms */
-            (0, import_i18n72._n)(
+            (0, import_i18n71._n)(
               "%d form set to draft.",
               "%d forms set to draft.",
               updatedCount,
@@ -27176,7 +27784,7 @@ function useFormItemActions() {
             type: "snackbar",
             actions: [
               {
-                label: (0, import_i18n72.__)("Undo", "jetpack-forms"),
+                label: (0, import_i18n71.__)("Undo", "jetpack-forms"),
                 onClick: async () => {
                   if (isUpdatingStatusRef.current) {
                     return;
@@ -27211,18 +27819,18 @@ function useFormItemActions() {
           });
         }
         if (failedCount) {
-          const errorMessage = nextStatus === "publish" ? (0, import_i18n72.sprintf)(
+          const errorMessage = nextStatus === "publish" ? (0, import_i18n71.sprintf)(
             /* translators: %d: number of forms */
-            (0, import_i18n72._n)(
+            (0, import_i18n71._n)(
               "Could not publish %d form.",
               "Could not publish %d forms.",
               failedCount,
               "jetpack-forms"
             ),
             failedCount
-          ) : (0, import_i18n72.sprintf)(
+          ) : (0, import_i18n71.sprintf)(
             /* translators: %d: number of forms */
-            (0, import_i18n72._n)(
+            (0, import_i18n71._n)(
               "Could not set %d form to draft.",
               "Could not set %d forms to draft.",
               failedCount,
@@ -27245,13 +27853,13 @@ function useFormItemActions() {
     },
     [createErrorNotice, createSuccessNotice, invalidateListQuery, saveEntityRecord]
   );
-  const publishForms = (0, import_element84.useCallback)(
+  const publishForms = (0, import_element86.useCallback)(
     async (items, options) => {
       await updateStatus(items, "publish", options);
     },
     [updateStatus]
   );
-  const setFormsToDraft = (0, import_element84.useCallback)(
+  const setFormsToDraft = (0, import_element86.useCallback)(
     async (items, options) => {
       await updateStatus(items, "draft", options);
     },
@@ -27566,7 +28174,7 @@ function catchNetworkErrors() {
 }
 
 // ../../js-packages/components/build/components/layout/use-breakpoint-match/index.js
-var import_compose13 = __toESM(require_compose(), 1);
+var import_compose14 = __toESM(require_compose(), 1);
 
 // ../../js-packages/components/build/components/layout/breakpoints.module.scss
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='da39a3ee5e']")) {
@@ -27596,9 +28204,9 @@ var useBreakpointMatch = (breakpointToMatch, operatorToMatch) => {
   const breakpoints = Array.isArray(breakpointToMatch) ? breakpointToMatch : [breakpointToMatch];
   const operators = Array.isArray(operatorToMatch) ? operatorToMatch : [operatorToMatch];
   const [smKey, mdKey, lgKey] = BREAKPOINTS;
-  const sm = (0, import_compose13.useMediaQuery)(breakpoints_module_default[smKey]);
-  const md = (0, import_compose13.useMediaQuery)(breakpoints_module_default[mdKey]);
-  const lg = (0, import_compose13.useMediaQuery)(breakpoints_module_default[lgKey]);
+  const sm = (0, import_compose14.useMediaQuery)(breakpoints_module_default[smKey]);
+  const md = (0, import_compose14.useMediaQuery)(breakpoints_module_default[mdKey]);
+  const lg = (0, import_compose14.useMediaQuery)(breakpoints_module_default[lgKey]);
   const matches = { sm, md, lg };
   return breakpoints.map((breakpoint, idx) => {
     const operator = operators[idx];
@@ -27608,48 +28216,48 @@ var useBreakpointMatch = (breakpointToMatch, operatorToMatch) => {
 var use_breakpoint_match_default = useBreakpointMatch;
 
 // src/dashboard/wp-build/hooks/use-page-header-details.tsx
-var import_components77 = __toESM(require_components(), 1);
+var import_components76 = __toESM(require_components(), 1);
 var import_core_data7 = __toESM(require_core_data(), 1);
 var import_data36 = __toESM(require_data(), 1);
-var import_element99 = __toESM(require_element(), 1);
+var import_element101 = __toESM(require_element(), 1);
 var import_html_entities4 = __toESM(require_html_entities(), 1);
-var import_i18n88 = __toESM(require_i18n(), 1);
+var import_i18n87 = __toESM(require_i18n(), 1);
 var import_notices8 = __toESM(require_notices(), 1);
 import { useNavigate as useNavigate3 } from "@wordpress/route";
 
 // src/dashboard/components/edit-form-button/index.tsx
-var import_components67 = __toESM(require_components(), 1);
-var import_element85 = __toESM(require_element(), 1);
-var import_i18n73 = __toESM(require_i18n(), 1);
+var import_components66 = __toESM(require_components(), 1);
+var import_element87 = __toESM(require_element(), 1);
+var import_i18n72 = __toESM(require_i18n(), 1);
 var import_jsx_runtime146 = __toESM(require_jsx_runtime(), 1);
 function EditFormButton({
   formId,
   onClick: onClickProp
 }) {
   const adminUrl = useConfigValue("adminUrl") || "";
-  const onClick = (0, import_element85.useCallback)(() => {
+  const onClick = (0, import_element87.useCallback)(() => {
     onClickProp?.();
     window.location.href = getFormEditUrl(formId, adminUrl);
   }, [adminUrl, formId, onClickProp]);
-  return /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(import_components67.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n73.__)("Edit form", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime146.jsx)(import_components66.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n72.__)("Edit form", "jetpack-forms") });
 }
 
 // src/dashboard/components/empty-spam-button/index.tsx
-var import_components69 = __toESM(require_components(), 1);
-var import_i18n76 = __toESM(require_i18n(), 1);
+var import_components68 = __toESM(require_components(), 1);
+var import_i18n75 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-empty-spam.ts
 var import_api_fetch9 = __toESM(require_api_fetch(), 1);
 var import_core_data3 = __toESM(require_core_data(), 1);
 var import_data20 = __toESM(require_data(), 1);
-var import_element87 = __toESM(require_element(), 1);
-var import_i18n74 = __toESM(require_i18n(), 1);
+var import_element89 = __toESM(require_element(), 1);
+var import_i18n73 = __toESM(require_i18n(), 1);
 var import_notices5 = __toESM(require_notices(), 1);
 
 // src/dashboard/hooks/use-inbox-data.ts
 var import_core_data2 = __toESM(require_core_data(), 1);
 var import_data19 = __toESM(require_data(), 1);
-var import_element86 = __toESM(require_element(), 1);
+var import_element88 = __toESM(require_element(), 1);
 var import_html_entities3 = __toESM(require_html_entities(), 1);
 
 // src/dashboard/components/inspector/utils.ts
@@ -27734,9 +28342,9 @@ function useInboxData(options = {}) {
     }),
     []
   );
-  const [frozenInvalidIds, setFrozenInvalidIds] = (0, import_element86.useState)([]);
-  const currentPageRef = (0, import_element86.useRef)(currentQuery2?.page || 1);
-  (0, import_element86.useEffect)(() => {
+  const [frozenInvalidIds, setFrozenInvalidIds] = (0, import_element88.useState)([]);
+  const currentPageRef = (0, import_element88.useRef)(currentQuery2?.page || 1);
+  (0, import_element88.useEffect)(() => {
     const newPage = currentQuery2?.page || 1;
     const hasUnreadFilter = currentQuery2?.is_unread === true;
     if (newPage !== currentPageRef.current) {
@@ -27748,7 +28356,7 @@ function useInboxData(options = {}) {
       }
     }
   }, [currentQuery2?.page, currentQuery2?.is_unread, invalidRecords2]);
-  const queryWithInvalidIds = (0, import_element86.useMemo)(() => {
+  const queryWithInvalidIds = (0, import_element88.useMemo)(() => {
     if (frozenInvalidIds.length > 0) {
       return {
         ...currentQuery2,
@@ -27782,7 +28390,7 @@ function useInboxData(options = {}) {
     }
     return status === filter;
   };
-  const records = (0, import_element86.useMemo)(() => {
+  const records = (0, import_element88.useMemo)(() => {
     const filteredRecords = (editedRecords || []).filter((record) => {
       return statusMatchesFilter(record.status, statusFilter);
     });
@@ -27794,13 +28402,16 @@ function useInboxData(options = {}) {
       };
     });
   }, [editedRecords, statusFilter]);
-  const countsQueryParams = (0, import_element86.useMemo)(() => {
+  const countsQueryParams = (0, import_element88.useMemo)(() => {
     const params = {};
     if (currentQuery2?.search) {
       params.search = currentQuery2.search;
     }
     if (currentQuery2?.parent) {
       params.parent = currentQuery2.parent;
+    }
+    if (currentQuery2?.source) {
+      params.source = currentQuery2.source;
     }
     if (currentQuery2?.before) {
       params.before = currentQuery2.before;
@@ -27847,21 +28458,21 @@ function useInboxData(options = {}) {
 function useEmptySpam({
   totalItemsSpam: totalItemsSpamProp
 } = {}) {
-  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element87.useState)(false);
-  const [isEmptying, setIsEmptying] = (0, import_element87.useState)(false);
-  const [isEmpty4, setIsEmpty] = (0, import_element87.useState)(true);
+  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element89.useState)(false);
+  const [isEmptying, setIsEmptying] = (0, import_element89.useState)(false);
+  const [isEmpty4, setIsEmpty] = (0, import_element89.useState)(true);
   const { createSuccessNotice, createErrorNotice } = (0, import_data20.useDispatch)(import_notices5.store);
   const { invalidateResolutionForStoreSelector } = (0, import_data20.useDispatch)(import_core_data3.store);
   const { invalidateCounts: invalidateCounts2 } = (0, import_data20.useDispatch)(store3);
   const hookData = useInboxData();
   const totalItemsSpam = totalItemsSpamProp ?? hookData.totalItemsSpam ?? 0;
   const { selectedResponsesCount } = hookData;
-  (0, import_element87.useEffect)(() => {
+  (0, import_element89.useEffect)(() => {
     setIsEmpty(!totalItemsSpam);
   }, [totalItemsSpam]);
-  const openConfirmDialog = (0, import_element87.useCallback)(() => setConfirmDialogOpen(true), []);
-  const closeConfirmDialog = (0, import_element87.useCallback)(() => setConfirmDialogOpen(false), []);
-  const onConfirmEmptying = (0, import_element87.useCallback)(async () => {
+  const openConfirmDialog = (0, import_element89.useCallback)(() => setConfirmDialogOpen(true), []);
+  const closeConfirmDialog = (0, import_element89.useCallback)(() => setConfirmDialogOpen(false), []);
+  const onConfirmEmptying = (0, import_element89.useCallback)(async () => {
     if (isEmptying || isEmpty4) {
       return;
     }
@@ -27873,9 +28484,9 @@ function useEmptySpam({
       path: `/wp/v2/feedback/trash?status=spam`
     }).then((response) => {
       const deleted = response?.deleted ?? 0;
-      const successMessage = deleted === 1 ? (0, import_i18n74.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n74.sprintf)(
+      const successMessage = deleted === 1 ? (0, import_i18n73.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n73.sprintf)(
         /* translators: %s: The number of responses. */
-        (0, import_i18n74._n)(
+        (0, import_i18n73._n)(
           "%s response deleted permanently.",
           "%s responses deleted permanently.",
           deleted,
@@ -27885,7 +28496,7 @@ function useEmptySpam({
       );
       createSuccessNotice(successMessage, { type: "snackbar", id: "empty-spam" });
     }).catch(() => {
-      createErrorNotice((0, import_i18n74.__)("Could not empty spam.", "jetpack-forms"), {
+      createErrorNotice((0, import_i18n73.__)("Could not empty spam.", "jetpack-forms"), {
         type: "snackbar",
         id: "empty-spam-error"
       });
@@ -27916,8 +28527,8 @@ function useEmptySpam({
 }
 
 // src/dashboard/components/empty-spam-button/confirmation-modal.tsx
-var import_components68 = __toESM(require_components(), 1);
-var import_i18n75 = __toESM(require_i18n(), 1);
+var import_components67 = __toESM(require_components(), 1);
+var import_i18n74 = __toESM(require_i18n(), 1);
 var import_jsx_runtime147 = __toESM(require_jsx_runtime(), 1);
 function EmptySpamConfirmationModal({
   isOpen,
@@ -27927,24 +28538,24 @@ function EmptySpamConfirmationModal({
   selectedResponsesCount
 }) {
   return /* @__PURE__ */ (0, import_jsx_runtime147.jsxs)(
-    import_components68.__experimentalConfirmDialog,
+    import_components67.__experimentalConfirmDialog,
     {
       onCancel,
       onConfirm,
       isOpen,
-      confirmButtonText: (0, import_i18n75.__)("Delete", "jetpack-forms"),
+      confirmButtonText: (0, import_i18n74.__)("Delete", "jetpack-forms"),
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime147.jsx)("h3", { children: (0, import_i18n75.__)("Delete forever", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime147.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n75.sprintf)(
+        /* @__PURE__ */ (0, import_jsx_runtime147.jsx)("h3", { children: (0, import_i18n74.__)("Delete forever", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime147.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n74.sprintf)(
           // translators: %s: the number of responses in spam
-          (0, import_i18n75._n)(
+          (0, import_i18n74._n)(
             "%s response in spam will be deleted forever. This action cannot be undone.",
             "All %s responses in spam will be deleted forever. This action cannot be undone.",
             totalItemsSpam || 0,
             "jetpack-forms"
           ),
           formatNumber(totalItemsSpam)
-        ) : (0, import_i18n75.__)(
+        ) : (0, import_i18n74.__)(
           "All responses in spam will be deleted forever. This action cannot be undone.",
           "jetpack-forms"
         ) })
@@ -27972,18 +28583,18 @@ var EmptySpamButton = ({
   });
   return /* @__PURE__ */ (0, import_jsx_runtime148.jsxs)(import_jsx_runtime148.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(
-      import_components69.Button,
+      import_components68.Button,
       {
         size: "compact",
         accessibleWhenDisabled: true,
         disabled: isEmpty4 || isEmptying,
         icon: trash_default,
         isBusy: isEmptying,
-        label: isEmpty4 ? (0, import_i18n76.__)("Spam is already empty.", "jetpack-forms") : "",
+        label: isEmpty4 ? (0, import_i18n75.__)("Spam is already empty.", "jetpack-forms") : "",
         onClick: openConfirmDialog,
         showTooltip: isEmpty4,
         variant: "primary",
-        children: (0, import_i18n76.__)("Delete spam", "jetpack-forms")
+        children: (0, import_i18n75.__)("Delete spam", "jetpack-forms")
       }
     ),
     /* @__PURE__ */ (0, import_jsx_runtime148.jsx)(
@@ -28001,34 +28612,34 @@ var EmptySpamButton = ({
 var empty_spam_button_default = EmptySpamButton;
 
 // src/dashboard/components/empty-trash-button/index.tsx
-var import_components71 = __toESM(require_components(), 1);
-var import_i18n79 = __toESM(require_i18n(), 1);
+var import_components70 = __toESM(require_components(), 1);
+var import_i18n78 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-empty-trash.ts
 var import_api_fetch10 = __toESM(require_api_fetch(), 1);
 var import_core_data4 = __toESM(require_core_data(), 1);
 var import_data21 = __toESM(require_data(), 1);
-var import_element88 = __toESM(require_element(), 1);
-var import_i18n77 = __toESM(require_i18n(), 1);
+var import_element90 = __toESM(require_element(), 1);
+var import_i18n76 = __toESM(require_i18n(), 1);
 var import_notices6 = __toESM(require_notices(), 1);
 function useEmptyTrash({
   totalItemsTrash: totalItemsTrashProp
 } = {}) {
-  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element88.useState)(false);
-  const [isEmptying, setIsEmptying] = (0, import_element88.useState)(false);
-  const [isEmpty4, setIsEmpty] = (0, import_element88.useState)(true);
+  const [isConfirmDialogOpen, setConfirmDialogOpen] = (0, import_element90.useState)(false);
+  const [isEmptying, setIsEmptying] = (0, import_element90.useState)(false);
+  const [isEmpty4, setIsEmpty] = (0, import_element90.useState)(true);
   const { createSuccessNotice, createErrorNotice } = (0, import_data21.useDispatch)(import_notices6.store);
   const { invalidateResolutionForStoreSelector } = (0, import_data21.useDispatch)(import_core_data4.store);
   const { invalidateCounts: invalidateCounts2 } = (0, import_data21.useDispatch)(store3);
   const hookData = useInboxData();
   const totalItemsTrash = totalItemsTrashProp ?? hookData.totalItemsTrash ?? 0;
   const { selectedResponsesCount } = hookData;
-  (0, import_element88.useEffect)(() => {
+  (0, import_element90.useEffect)(() => {
     setIsEmpty(!totalItemsTrash);
   }, [totalItemsTrash]);
-  const openConfirmDialog = (0, import_element88.useCallback)(() => setConfirmDialogOpen(true), []);
-  const closeConfirmDialog = (0, import_element88.useCallback)(() => setConfirmDialogOpen(false), []);
-  const onConfirmEmptying = (0, import_element88.useCallback)(async () => {
+  const openConfirmDialog = (0, import_element90.useCallback)(() => setConfirmDialogOpen(true), []);
+  const closeConfirmDialog = (0, import_element90.useCallback)(() => setConfirmDialogOpen(false), []);
+  const onConfirmEmptying = (0, import_element90.useCallback)(async () => {
     if (isEmptying || isEmpty4) {
       return;
     }
@@ -28040,9 +28651,9 @@ function useEmptyTrash({
       path: `/wp/v2/feedback/trash`
     }).then((response) => {
       const deleted = response?.deleted ?? 0;
-      const successMessage = deleted === 1 ? (0, import_i18n77.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n77.sprintf)(
+      const successMessage = deleted === 1 ? (0, import_i18n76.__)("Response deleted permanently.", "jetpack-forms") : (0, import_i18n76.sprintf)(
         /* translators: %s: the number of responses deleted permanently. */
-        (0, import_i18n77._n)(
+        (0, import_i18n76._n)(
           "%s response deleted permanently.",
           "%s responses deleted permanently.",
           deleted,
@@ -28052,7 +28663,7 @@ function useEmptyTrash({
       );
       createSuccessNotice(successMessage, { type: "snackbar", id: "empty-trash" });
     }).catch(() => {
-      createErrorNotice((0, import_i18n77.__)("Could not empty trash.", "jetpack-forms"), {
+      createErrorNotice((0, import_i18n76.__)("Could not empty trash.", "jetpack-forms"), {
         type: "snackbar",
         id: "empty-trash-error"
       });
@@ -28083,8 +28694,8 @@ function useEmptyTrash({
 }
 
 // src/dashboard/components/empty-trash-button/confirmation-modal.tsx
-var import_components70 = __toESM(require_components(), 1);
-var import_i18n78 = __toESM(require_i18n(), 1);
+var import_components69 = __toESM(require_components(), 1);
+var import_i18n77 = __toESM(require_i18n(), 1);
 var import_jsx_runtime149 = __toESM(require_jsx_runtime(), 1);
 function EmptyTrashConfirmationModal({
   isOpen,
@@ -28094,24 +28705,24 @@ function EmptyTrashConfirmationModal({
   selectedResponsesCount
 }) {
   return /* @__PURE__ */ (0, import_jsx_runtime149.jsxs)(
-    import_components70.__experimentalConfirmDialog,
+    import_components69.__experimentalConfirmDialog,
     {
       onCancel,
       onConfirm,
       isOpen,
-      confirmButtonText: (0, import_i18n78.__)("Delete", "jetpack-forms"),
+      confirmButtonText: (0, import_i18n77.__)("Delete", "jetpack-forms"),
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime149.jsx)("h3", { children: (0, import_i18n78.__)("Delete forever", "jetpack-forms") }),
-        /* @__PURE__ */ (0, import_jsx_runtime149.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n78.sprintf)(
+        /* @__PURE__ */ (0, import_jsx_runtime149.jsx)("h3", { children: (0, import_i18n77.__)("Delete forever", "jetpack-forms") }),
+        /* @__PURE__ */ (0, import_jsx_runtime149.jsx)("p", { children: selectedResponsesCount > 0 ? (0, import_i18n77.sprintf)(
           // translators: %s: the number of responses in the trash.
-          (0, import_i18n78._n)(
+          (0, import_i18n77._n)(
             "%s response in trash will be deleted forever. This action cannot be undone.",
             "All %s responses in trash will be deleted forever. This action cannot be undone.",
             totalItemsTrash || 0,
             "jetpack-forms"
           ),
           formatNumber(totalItemsTrash)
-        ) : (0, import_i18n78.__)(
+        ) : (0, import_i18n77.__)(
           "All responses in trash will be deleted forever. This action cannot be undone.",
           "jetpack-forms"
         ) })
@@ -28139,18 +28750,18 @@ var EmptyTrashButton = ({
   });
   return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)(import_jsx_runtime150.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
-      import_components71.Button,
+      import_components70.Button,
       {
         size: "compact",
         accessibleWhenDisabled: true,
         disabled: isEmpty4 || isEmptying,
         icon: trash_default,
         isBusy: isEmptying,
-        label: isEmpty4 ? (0, import_i18n79.__)("Trash is already empty.", "jetpack-forms") : "",
+        label: isEmpty4 ? (0, import_i18n78.__)("Trash is already empty.", "jetpack-forms") : "",
         onClick: openConfirmDialog,
         showTooltip: isEmpty4,
         variant: "primary",
-        children: (0, import_i18n79.__)("Empty trash", "jetpack-forms")
+        children: (0, import_i18n78.__)("Empty trash", "jetpack-forms")
       }
     ),
     /* @__PURE__ */ (0, import_jsx_runtime150.jsx)(
@@ -28168,20 +28779,20 @@ var EmptyTrashButton = ({
 var empty_trash_button_default = EmptyTrashButton;
 
 // src/dashboard/components/export-responses/button.tsx
-var import_components75 = __toESM(require_components(), 1);
-var import_element97 = __toESM(require_element(), 1);
-var import_i18n85 = __toESM(require_i18n(), 1);
+var import_components74 = __toESM(require_components(), 1);
+var import_element99 = __toESM(require_element(), 1);
+var import_i18n84 = __toESM(require_i18n(), 1);
 
 // src/dashboard/hooks/use-export-responses.ts
 var import_core_data5 = __toESM(require_core_data(), 1);
 var import_data22 = __toESM(require_data(), 1);
-var import_element89 = __toESM(require_element(), 1);
-var import_i18n80 = __toESM(require_i18n(), 1);
+var import_element91 = __toESM(require_element(), 1);
+var import_i18n79 = __toESM(require_i18n(), 1);
 function useExportResponses() {
   const [isSm] = use_breakpoint_match_default("sm");
-  const [showExportModal, setShowExportModal] = (0, import_element89.useState)(false);
-  const closeModal = (0, import_element89.useCallback)(() => setShowExportModal(false), [setShowExportModal]);
-  const [autoConnectGdrive, setAutoConnectGdrive] = (0, import_element89.useState)(false);
+  const [showExportModal, setShowExportModal] = (0, import_element91.useState)(false);
+  const closeModal = (0, import_element91.useCallback)(() => setShowExportModal(false), [setShowExportModal]);
+  const [autoConnectGdrive, setAutoConnectGdrive] = (0, import_element91.useState)(false);
   const { selectedResponsesCount, currentStatus } = (0, import_data22.useSelect)(
     (select3) => ({
       selectedResponsesCount: select3(store3).getSelectedResponsesCount(),
@@ -28191,14 +28802,14 @@ function useExportResponses() {
   );
   const isSpam = currentStatus.includes("spam");
   const isTrash = currentStatus.includes("trash");
-  let statusLabel = (0, import_i18n80.__)("Export", "jetpack-forms");
+  let statusLabel = (0, import_i18n79.__)("Export", "jetpack-forms");
   if (isSpam) {
-    statusLabel = (0, import_i18n80.__)("Export spam", "jetpack-forms");
+    statusLabel = (0, import_i18n79.__)("Export spam", "jetpack-forms");
   } else if (isTrash) {
-    statusLabel = (0, import_i18n80.__)("Export trash", "jetpack-forms");
+    statusLabel = (0, import_i18n79.__)("Export trash", "jetpack-forms");
   }
   const exportLabel = selectedResponsesCount > 0 ? `${statusLabel} (${formatNumber(selectedResponsesCount)})` : statusLabel;
-  const openModal = (0, import_element89.useCallback)(() => {
+  const openModal = (0, import_element91.useCallback)(() => {
     setShowExportModal(true);
     analytics_default.tracks.recordEvent("jetpack_forms_export_responses_modal_open", {
       viewport: isSm ? "mobile" : "desktop"
@@ -28213,7 +28824,7 @@ function useExportResponses() {
     return { selected: getSelectedResponsesFromCurrentDataset2(), currentQuery: getCurrentQuery2() };
   }, []);
   const exportNonce = useConfigValue("exportNonce");
-  const onExport = (0, import_element89.useCallback)(
+  const onExport = (0, import_element91.useCallback)(
     (action, nonceName) => {
       const data = new FormData();
       data.append("action", action);
@@ -28230,7 +28841,7 @@ function useExportResponses() {
     },
     [currentQuery2, selected, exportNonce]
   );
-  (0, import_element89.useEffect)(() => {
+  (0, import_element91.useEffect)(() => {
     const url = new URL(window.location.href);
     if (url.searchParams.get("connect-gdrive") === "true") {
       setAutoConnectGdrive(true);
@@ -28253,9 +28864,9 @@ function useExportResponses() {
 }
 
 // src/dashboard/components/export-responses/modal.tsx
-var import_components74 = __toESM(require_components(), 1);
+var import_components73 = __toESM(require_components(), 1);
 var import_data34 = __toESM(require_data(), 1);
-var import_i18n84 = __toESM(require_i18n(), 1);
+var import_i18n83 = __toESM(require_i18n(), 1);
 
 // ../../js-packages/shared-extension-utils/src/get-jetpack-data.js
 var JETPACK_DATA_PATH = "Jetpack_Editor_Initial_State";
@@ -28267,7 +28878,7 @@ function getJetpackData() {
 var import_plugins2 = __toESM(require_plugins());
 
 // ../../js-packages/shared-extension-utils/src/with-has-warning-is-interactive-class-names/index.jsx
-var import_compose14 = __toESM(require_compose());
+var import_compose15 = __toESM(require_compose());
 
 // ../../js-packages/shared-extension-utils/src/with-has-warning-is-interactive-class-names/style.scss
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='977d89d9b0']")) {
@@ -28281,7 +28892,7 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 var import_jsx_runtime151 = __toESM(require_jsx_runtime());
 
 // ../../js-packages/shared-extension-utils/src/plan-utils.js
-var import_i18n81 = __toESM(require_i18n());
+var import_i18n80 = __toESM(require_i18n());
 var import_url6 = __toESM(require_url());
 var usableBlockWithFreePlan = [
   {
@@ -28289,14 +28900,14 @@ var usableBlockWithFreePlan = [
     mediaPlaceholder: true,
     mediaReplaceFlow: true,
     fileType: "video",
-    description: (0, import_i18n81.__)("Upgrade your plan to use video covers", "jetpack-shared-extension-utils")
+    description: (0, import_i18n80.__)("Upgrade your plan to use video covers", "jetpack-shared-extension-utils")
   },
   {
     name: "core/audio",
     mediaPlaceholder: true,
     mediaReplaceFlow: true,
     fileType: "audio",
-    description: (0, import_i18n81.__)("Upgrade your plan to upload audio", "jetpack-shared-extension-utils")
+    description: (0, import_i18n80.__)("Upgrade your plan to upload audio", "jetpack-shared-extension-utils")
   }
 ];
 
@@ -28711,7 +29322,7 @@ function useConnection({
 }
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-analytics.js
-var import_element90 = __toESM(require_element());
+var import_element92 = __toESM(require_element());
 var { tracks } = analytics_default;
 var { recordEvent } = tracks;
 var useAnalytics = ({
@@ -28720,10 +29331,10 @@ var useAnalytics = ({
   pageViewSuffix = "page_view",
   pageViewEventProperties = {}
 } = {}) => {
-  const [pageViewRecorded, setPageViewRecorded] = (0, import_element90.useState)(false);
+  const [pageViewRecorded, setPageViewRecorded] = (0, import_element92.useState)(false);
   const { isUserConnected, isRegistered, userConnectionData: userConnectionData2 = {} } = useConnection();
   const { wpcomUser: { login, ID } = {}, blogId } = userConnectionData2.currentUser || {};
-  const recordEventAsync = (0, import_element90.useCallback)(
+  const recordEventAsync = (0, import_element92.useCallback)(
     async (event, properties = {}) => {
       if (!(isUserConnected && ID && login)) {
         return;
@@ -28732,7 +29343,7 @@ var useAnalytics = ({
     },
     [isUserConnected, ID, login]
   );
-  (0, import_element90.useEffect)(() => {
+  (0, import_element92.useEffect)(() => {
     if (!isUserConnected || !ID || !login || !blogId) {
       return;
     }
@@ -28740,7 +29351,7 @@ var useAnalytics = ({
       blog_id: blogId
     });
   }, [blogId, ID, login, isUserConnected]);
-  (0, import_element90.useEffect)(() => {
+  (0, import_element92.useEffect)(() => {
     const pageViewEvent = pageViewEventName ? `${pageViewNamespace}_${pageViewEventName}_${pageViewSuffix}` : null;
     if (!isRegistered) {
       return;
@@ -28770,14 +29381,14 @@ var use_analytics_default = useAnalytics;
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-autosave-and-redirect/index.ts
 var import_data28 = __toESM(require_data());
-var import_element91 = __toESM(require_element());
+var import_element93 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-ref-interval.ts
-var import_element92 = __toESM(require_element());
+var import_element94 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/hooks/use-module-status/index.js
 var import_data31 = __toESM(require_data());
-var import_element93 = __toESM(require_element());
+var import_element95 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/modules-state/index.js
 var import_data30 = __toESM(require_data());
@@ -28939,7 +29550,7 @@ if (initialData !== null) {
 }
 
 // ../../js-packages/shared-extension-utils/src/get-block-icon-from-metadata.js
-var import_element94 = __toESM(require_element());
+var import_element96 = __toESM(require_element());
 
 // ../../js-packages/shared-extension-utils/src/libs/connection/index.ts
 var import_debug4 = __toESM(require_browser());
@@ -28954,13 +29565,13 @@ var import_hooks = __toESM(require_hooks());
 var import_dom_ready = __toESM(require_dom_ready());
 
 // src/dashboard/components/export-responses/csv.tsx
-var import_components72 = __toESM(require_components(), 1);
-var import_element95 = __toESM(require_element(), 1);
-var import_i18n82 = __toESM(require_i18n(), 1);
+var import_components71 = __toESM(require_components(), 1);
+var import_element97 = __toESM(require_element(), 1);
+var import_i18n81 = __toESM(require_i18n(), 1);
 var import_jsx_runtime152 = __toESM(require_jsx_runtime(), 1);
 var CSVExport = ({ onExport }) => {
   const { tracks: tracks2 } = use_analytics_default();
-  const downloadCSV = (0, import_element95.useCallback)(() => {
+  const downloadCSV = (0, import_element97.useCallback)(() => {
     tracks2.recordEvent("jetpack_forms_export_click", {
       destination: "csv",
       screen: "form-responses-inbox"
@@ -28981,7 +29592,7 @@ var CSVExport = ({ onExport }) => {
   return /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("div", { className: "jp-forms__export-modal-card", children: [
     /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("div", { className: "jp-forms__export-modal-card-header", children: [
       /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
-        import_components72.SVG,
+        import_components71.SVG,
         {
           width: "22",
           height: "20",
@@ -28989,7 +29600,7 @@ var CSVExport = ({ onExport }) => {
           fill: "none",
           xmlns: "http://www.w3.org/2000/SVG",
           children: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
-            import_components72.Path,
+            import_components71.Path,
             {
               fillRule: "evenodd",
               clipRule: "evenodd",
@@ -28999,21 +29610,21 @@ var CSVExport = ({ onExport }) => {
           )
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n82.__)("CSV File", "jetpack-forms") })
+      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n81.__)("CSV File", "jetpack-forms") })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime152.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: (0, import_i18n82.__)("Download your form response data as a CSV file.", "jetpack-forms") }),
-      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components72.Button, { variant: "primary", className: buttonClasses, onClick: downloadCSV, children: (0, import_i18n82.__)("Download", "jetpack-forms") }) })
+      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: (0, import_i18n81.__)("Download your form response data as a CSV file.", "jetpack-forms") }),
+      /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components71.Button, { variant: "primary", className: buttonClasses, onClick: downloadCSV, children: (0, import_i18n81.__)("Download", "jetpack-forms") }) })
     ] })
   ] });
 };
 var csv_default = CSVExport;
 
 // src/dashboard/components/export-responses/google-drive.tsx
-var import_components73 = __toESM(require_components(), 1);
+var import_components72 = __toESM(require_components(), 1);
 var import_data33 = __toESM(require_data(), 1);
-var import_element96 = __toESM(require_element(), 1);
-var import_i18n83 = __toESM(require_i18n(), 1);
+var import_element98 = __toESM(require_element(), 1);
+var import_i18n82 = __toESM(require_i18n(), 1);
 
 // src/util/get-preferred-responses-view.js
 var PARTIAL_RESPONSES_PATH = "admin.php?page=jetpack-forms-admin";
@@ -29022,7 +29633,7 @@ var FULL_RESPONSES_PATH = getJetpackData()?.adminUrl + PARTIAL_RESPONSES_PATH;
 // src/dashboard/components/export-responses/google-drive.tsx
 var import_jsx_runtime153 = __toESM(require_jsx_runtime(), 1);
 var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
-  const [isExporting, setIsExporting] = (0, import_element96.useState)(false);
+  const [isExporting, setIsExporting] = (0, import_element98.useState)(false);
   const { integration } = (0, import_data33.useSelect)((select3) => {
     const store5 = select3(INTEGRATIONS_STORE);
     const list = store5.getIntegrations() || [];
@@ -29032,13 +29643,13 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
   const isConnectedToGoogleDrive = !!integration?.isConnected;
   const gdriveConnectSupportURL = useConfigValue("gdriveConnectSupportURL");
   const { tracks: tracks2 } = use_analytics_default();
-  const autoConnectOpened = (0, import_element96.useRef)(false);
-  const [isTogglingConnection, setIsTogglingConnection] = (0, import_element96.useState)(false);
+  const autoConnectOpened = (0, import_element98.useRef)(false);
+  const [isTogglingConnection, setIsTogglingConnection] = (0, import_element98.useState)(false);
   const { isUserConnected, handleConnectUser, userIsConnecting: userIsConnecting2, isOfflineMode: isOfflineMode2 } = useConnection({
     redirectUri: PARTIAL_RESPONSES_PATH + "&connect-gdrive=true"
   });
   const needsUserConnection = !isSimpleSite() && !isUserConnected;
-  const exportToGoogleDrive = (0, import_element96.useCallback)(() => {
+  const exportToGoogleDrive = (0, import_element98.useCallback)(() => {
     if (isExporting) {
       return;
     }
@@ -29053,7 +29664,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
       setIsExporting(false);
     });
   }, [tracks2, onExport, isExporting]);
-  const handleConnectClick = (0, import_element96.useCallback)(() => {
+  const handleConnectClick = (0, import_element98.useCallback)(() => {
     if (!integration?.settingsUrl) return;
     tracks2.recordEvent("jetpack_forms_upsell_googledrive_click", {
       screen: "form-responses-inbox"
@@ -29074,7 +29685,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
   return /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)("div", { className: "jp-forms__export-modal-card", children: [
     /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)("div", { className: "jp-forms__export-modal-card-header", children: [
       /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
-        import_components73.SVG,
+        import_components72.SVG,
         {
           width: "18",
           height: "24",
@@ -29082,7 +29693,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
           fill: "none",
           xmlns: "http://www.w3.org/2000/SVG",
           children: /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
-            import_components73.Path,
+            import_components72.Path,
             {
               d: "M11.8387 1.16016H2C1.44772 1.16016 1 1.60787 1 2.16016V21.8053V21.8376C1 22.3899 1.44772 22.8376 2 22.8376H16C16.5523 22.8376 17 22.3899 17 21.8376V5.80532M11.8387 1.16016V5.80532H17M11.8387 1.16016L17 5.80532M4.6129 13.0311V16.1279H9.25806M4.6129 13.0311V9.93435H9.25806M4.6129 13.0311H13.9032M13.9032 13.0311V9.93435H9.25806M13.9032 13.0311V16.1279H9.25806M9.25806 9.93435V16.1279",
               stroke: "#008710",
@@ -29091,38 +29702,38 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
           )
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n83.__)("Google Sheets", "jetpack-forms") })
+      /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("div", { className: "jp-forms__export-modal-card-header-title", children: (0, import_i18n82.__)("Google Sheets", "jetpack-forms") })
     ] }),
     /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)("div", { className: "jp-forms__export-modal-card-body", children: [
       /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("div", { className: "jp-forms__export-modal-card-body-description", children: /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)("div", { children: [
-        (0, import_i18n83.__)("Export your data into a Google Sheets file.", "jetpack-forms"),
+        (0, import_i18n82.__)("Export your data into a Google Sheets file.", "jetpack-forms"),
         !isConnectedToGoogleDrive && /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)(import_jsx_runtime153.Fragment, { children: [
           "\xA0",
           /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
             "a",
             {
               href: gdriveConnectSupportURL,
-              title: (0, import_i18n83.__)("Connect to Google Drive", "jetpack-forms"),
+              title: (0, import_i18n82.__)("Connect to Google Drive", "jetpack-forms"),
               target: "_blank",
               rel: "noopener noreferrer",
-              children: (0, import_i18n83.__)("You need to connect to Google Drive.", "jetpack-forms")
+              children: (0, import_i18n82.__)("You need to connect to Google Drive.", "jetpack-forms")
             }
           )
         ] })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: !integration ? /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(import_components73.Spinner, {}) : /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)(import_jsx_runtime153.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("div", { className: "jp-forms__export-modal-card-body-cta", children: !integration ? /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(import_components72.Spinner, {}) : /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)(import_jsx_runtime153.Fragment, { children: [
         isConnectedToGoogleDrive && /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
-          import_components73.Button,
+          import_components72.Button,
           {
             className: buttonClasses,
             variant: "primary",
             onClick: exportToGoogleDrive,
             isBusy: isExporting,
-            children: (0, import_i18n83.__)("Export", "jetpack-forms")
+            children: (0, import_i18n82.__)("Export", "jetpack-forms")
           }
         ),
         !isConnectedToGoogleDrive && needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
-          import_components73.Button,
+          import_components72.Button,
           {
             className: buttonClasses,
             variant: "primary",
@@ -29130,11 +29741,11 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
             target: "_blank",
             onClick: handleConnectUser,
             isBusy: userIsConnecting2,
-            children: (0, import_i18n83.__)("Connect Jetpack user account", "jetpack-forms")
+            children: (0, import_i18n82.__)("Connect Jetpack user account", "jetpack-forms")
           }
         ),
         !isConnectedToGoogleDrive && !needsUserConnection && /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(
-          import_components73.Button,
+          import_components72.Button,
           {
             className: buttonClasses,
             variant: "primary",
@@ -29148,7 +29759,7 @@ var GoogleDriveExport = ({ onExport, autoConnect = false }) => {
                 autoConnectOpened.current = true;
               }
             },
-            children: isTogglingConnection ? (0, import_i18n83.__)("Connecting\u2026", "jetpack-forms") : (0, import_i18n83._x)(
+            children: isTogglingConnection ? (0, import_i18n82.__)("Connecting\u2026", "jetpack-forms") : (0, import_i18n82._x)(
               "Connect to Google Drive",
               "",
               // Dummy context to avoid bad minification. See https://github.com/Automattic/jetpack/tree/e3f007ec7ac80715f3d82db33c9ed8098a7b45b4/projects/js-packages/i18n-check-webpack-plugin#conditional-function-call-compaction
@@ -29179,12 +29790,12 @@ var ExportResponsesModal = ({
     (integration) => integration.id === "google-drive"
   );
   return /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(
-    import_components74.Modal,
+    import_components73.Modal,
     {
-      title: (0, import_i18n84.__)("Export responses", "jetpack-forms"),
+      title: (0, import_i18n83.__)("Export responses", "jetpack-forms"),
       onRequestClose,
       size: "large",
-      children: /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)(import_components74.__experimentalVStack, { spacing: 8, children: [
+      children: /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)(import_components73.__experimentalVStack, { spacing: 8, children: [
         /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(csv_default, { onExport }),
         isGoogleDriveEnabled && /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(google_drive_default, { onExport, autoConnect: autoConnectGdrive })
       ] })
@@ -29220,7 +29831,7 @@ var ExportResponsesButton = ({
   const { totalItems, isLoadingData } = useInboxData();
   const isEmpty4 = isLoadingData || totalItems === 0;
   const isDisabled = isEmpty4 || userCanExport === false;
-  const handleClick = (0, import_element97.useCallback)(() => {
+  const handleClick = (0, import_element99.useCallback)(() => {
     onClickProp?.();
     openModal();
   }, [onClickProp, openModal]);
@@ -29229,7 +29840,7 @@ var ExportResponsesButton = ({
   }
   return /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(import_jsx_runtime155.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(
-      import_components75.Button,
+      import_components74.Button,
       {
         size: "compact",
         variant: isPrimary ? "primary" : "secondary",
@@ -29237,7 +29848,7 @@ var ExportResponsesButton = ({
         onClick: handleClick,
         accessibleWhenDisabled: true,
         disabled: isDisabled,
-        label: isEmpty4 ? (0, import_i18n85.__)("Nothing to export.", "jetpack-forms") : "",
+        label: isEmpty4 ? (0, import_i18n84.__)("Nothing to export.", "jetpack-forms") : "",
         showTooltip: isEmpty4,
         children: exportLabel
       }
@@ -29255,30 +29866,30 @@ var ExportResponsesButton = ({
 var button_default = ExportResponsesButton;
 
 // src/dashboard/wp-build/components/manage-integrations-button/index.tsx
-var import_components76 = __toESM(require_components(), 1);
-var import_i18n86 = __toESM(require_i18n(), 1);
+var import_components75 = __toESM(require_components(), 1);
+var import_i18n85 = __toESM(require_i18n(), 1);
 var import_jsx_runtime156 = __toESM(require_jsx_runtime(), 1);
 function ManageIntegrationsButton({ onClick }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components76.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n86.__)("Manage integrations", "jetpack-forms") });
+  return /* @__PURE__ */ (0, import_jsx_runtime156.jsx)(import_components75.Button, { size: "compact", variant: "secondary", onClick, children: (0, import_i18n85.__)("Manage integrations", "jetpack-forms") });
 }
 
 // src/dashboard/wp-build/hooks/use-rename-form.ts
 var import_core_data6 = __toESM(require_core_data(), 1);
 var import_data35 = __toESM(require_data(), 1);
-var import_element98 = __toESM(require_element(), 1);
-var import_i18n87 = __toESM(require_i18n(), 1);
+var import_element100 = __toESM(require_element(), 1);
+var import_i18n86 = __toESM(require_i18n(), 1);
 var import_notices7 = __toESM(require_notices(), 1);
 function useRenameForm() {
-  const [renameFormItem, setRenameFormItem] = (0, import_element98.useState)(null);
+  const [renameFormItem, setRenameFormItem] = (0, import_element100.useState)(null);
   const { saveEntityRecord } = (0, import_data35.useDispatch)(import_core_data6.store);
   const { createSuccessNotice, createErrorNotice } = (0, import_data35.useDispatch)(import_notices7.store);
-  const openRenameModal = (0, import_element98.useCallback)((item) => {
+  const openRenameModal = (0, import_element100.useCallback)((item) => {
     setRenameFormItem(item);
   }, []);
-  const closeRenameModal = (0, import_element98.useCallback)(() => {
+  const closeRenameModal = (0, import_element100.useCallback)(() => {
     setRenameFormItem(null);
   }, []);
-  const handleRename = (0, import_element98.useCallback)(
+  const handleRename = (0, import_element100.useCallback)(
     async (newTitle) => {
       if (!renameFormItem) {
         return;
@@ -29293,9 +29904,9 @@ function useRenameForm() {
           },
           { throwOnError: true }
         );
-        createSuccessNotice((0, import_i18n87.__)("Form renamed.", "jetpack-forms"), { type: "snackbar" });
+        createSuccessNotice((0, import_i18n86.__)("Form renamed.", "jetpack-forms"), { type: "snackbar" });
       } catch (error2) {
-        createErrorNotice((0, import_i18n87.__)("Failed to rename form.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n86.__)("Failed to rename form.", "jetpack-forms"), {
           type: "snackbar"
         });
         console.error("Failed to rename form:", error2);
@@ -29326,7 +29937,7 @@ function usePageHeaderDetails(props) {
   } = props;
   const adminUrl = useConfigValue("adminUrl") || "";
   const statusView = props.statusView ?? "inbox";
-  const sourceIdNumber = (0, import_element99.useMemo)(() => {
+  const sourceIdNumber = (0, import_element101.useMemo)(() => {
     const value = sourceId;
     const numberValue = typeof value === "number" ? value : Number(value);
     return Number.isFinite(numberValue) && numberValue > 0 ? numberValue : null;
@@ -29336,12 +29947,12 @@ function usePageHeaderDetails(props) {
   const isFormsScreen = screen === "forms";
   const isSingleFormScreen = screen === "responses" && sourceIdNumber !== null;
   const { openNewForm } = useCreateForm();
-  const [isCreateFormModalOpen, setIsCreateFormModalOpen] = (0, import_element99.useState)(false);
-  const handleCreateFormClick = (0, import_element99.useCallback)(() => {
+  const [isCreateFormModalOpen, setIsCreateFormModalOpen] = (0, import_element101.useState)(false);
+  const handleCreateFormClick = (0, import_element101.useCallback)(() => {
     setIsCreateFormModalOpen(true);
   }, []);
-  const closeCreateFormModal = (0, import_element99.useCallback)(() => setIsCreateFormModalOpen(false), []);
-  const handleCreateFormSave = (0, import_element99.useCallback)(
+  const closeCreateFormModal = (0, import_element101.useCallback)(() => setIsCreateFormModalOpen(false), []);
+  const handleCreateFormSave = (0, import_element101.useCallback)(
     async (formName) => {
       await openNewForm({ formTitle: formName });
     },
@@ -29359,8 +29970,8 @@ function usePageHeaderDetails(props) {
   const hasResponses = !isLoadingData && totalItems > 0;
   const emptySpam = useEmptySpam();
   const emptyTrash = useEmptyTrash();
-  const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element99.useState)(false);
-  const permanentDeleteItemRef = (0, import_element99.useRef)(null);
+  const [isPermanentDeleteConfirmOpen, setIsPermanentDeleteConfirmOpen] = (0, import_element101.useState)(false);
+  const permanentDeleteItemRef = (0, import_element101.useRef)(null);
   const { renameFormItem, openRenameModal, closeRenameModal, handleRename } = useRenameForm();
   const { saveEntityRecord, deleteEntityRecord } = (0, import_data36.useDispatch)(import_core_data7.store);
   const { createSuccessNotice, createErrorNotice } = (0, import_data36.useDispatch)(import_notices8.store);
@@ -29379,11 +29990,11 @@ function usePageHeaderDetails(props) {
     },
     [sourceIdNumber]
   );
-  const formTitle = (0, import_element99.useMemo)(() => {
+  const formTitle = (0, import_element101.useMemo)(() => {
     const rendered = formRecord?.title?.rendered || "";
     return (0, import_html_entities4.decodeEntities)(rendered);
   }, [formRecord?.title?.rendered]);
-  const trashForm = (0, import_element99.useCallback)(
+  const trashForm = (0, import_element101.useCallback)(
     async (item) => {
       const previousStatus = formRecord?.status || "draft";
       try {
@@ -29395,11 +30006,11 @@ function usePageHeaderDetails(props) {
           { throwOnError: true }
         );
         invalidateFormStatusCounts2();
-        createSuccessNotice((0, import_i18n88.__)("Form moved to trash.", "jetpack-forms"), {
+        createSuccessNotice((0, import_i18n87.__)("Form moved to trash.", "jetpack-forms"), {
           type: "snackbar",
           actions: [
             {
-              label: (0, import_i18n88.__)("Undo", "jetpack-forms"),
+              label: (0, import_i18n87.__)("Undo", "jetpack-forms"),
               onClick: () => {
                 saveEntityRecord(
                   "postType",
@@ -29408,11 +30019,11 @@ function usePageHeaderDetails(props) {
                   { throwOnError: true }
                 ).then(() => {
                   invalidateFormStatusCounts2();
-                  createSuccessNotice((0, import_i18n88.__)("Form restored.", "jetpack-forms"), {
+                  createSuccessNotice((0, import_i18n87.__)("Form restored.", "jetpack-forms"), {
                     type: "snackbar"
                   });
                 }).catch(() => {
-                  createErrorNotice((0, import_i18n88.__)("Could not restore form.", "jetpack-forms"), {
+                  createErrorNotice((0, import_i18n87.__)("Could not restore form.", "jetpack-forms"), {
                     type: "snackbar"
                   });
                 });
@@ -29422,7 +30033,7 @@ function usePageHeaderDetails(props) {
         });
         navigate({ to: "/forms" });
       } catch (error2) {
-        createErrorNotice((0, import_i18n88.__)("Failed to move form to trash.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n87.__)("Failed to move form to trash.", "jetpack-forms"), {
           type: "snackbar"
         });
         console.error("Failed to trash form:", error2);
@@ -29438,7 +30049,7 @@ function usePageHeaderDetails(props) {
       navigate
     ]
   );
-  const restoreForm = (0, import_element99.useCallback)(
+  const restoreForm = (0, import_element101.useCallback)(
     async (item) => {
       try {
         await saveEntityRecord(
@@ -29448,11 +30059,11 @@ function usePageHeaderDetails(props) {
           { throwOnError: true }
         );
         invalidateFormStatusCounts2();
-        createSuccessNotice((0, import_i18n88.__)("Form restored.", "jetpack-forms"), {
+        createSuccessNotice((0, import_i18n87.__)("Form restored.", "jetpack-forms"), {
           type: "snackbar"
         });
       } catch (error2) {
-        createErrorNotice((0, import_i18n88.__)("Could not restore form.", "jetpack-forms"), {
+        createErrorNotice((0, import_i18n87.__)("Could not restore form.", "jetpack-forms"), {
           type: "snackbar"
         });
         console.error("Failed to restore form:", error2);
@@ -29460,15 +30071,15 @@ function usePageHeaderDetails(props) {
     },
     [saveEntityRecord, invalidateFormStatusCounts2, createSuccessNotice, createErrorNotice]
   );
-  const openPermanentDeleteConfirm = (0, import_element99.useCallback)((item) => {
+  const openPermanentDeleteConfirm = (0, import_element101.useCallback)((item) => {
     permanentDeleteItemRef.current = item;
     setIsPermanentDeleteConfirmOpen(true);
   }, []);
-  const closePermanentDeleteConfirm = (0, import_element99.useCallback)(() => {
+  const closePermanentDeleteConfirm = (0, import_element101.useCallback)(() => {
     setIsPermanentDeleteConfirmOpen(false);
     permanentDeleteItemRef.current = null;
   }, []);
-  const confirmPermanentDelete = (0, import_element99.useCallback)(async () => {
+  const confirmPermanentDelete = (0, import_element101.useCallback)(async () => {
     const item = permanentDeleteItemRef.current;
     if (!item) {
       return;
@@ -29484,12 +30095,12 @@ function usePageHeaderDetails(props) {
         { throwOnError: true }
       );
       invalidateFormStatusCounts2();
-      createSuccessNotice((0, import_i18n88.__)("Form deleted permanently.", "jetpack-forms"), {
+      createSuccessNotice((0, import_i18n87.__)("Form deleted permanently.", "jetpack-forms"), {
         type: "snackbar"
       });
       navigate({ to: "/forms" });
     } catch (error2) {
-      createErrorNotice((0, import_i18n88.__)("Could not delete form.", "jetpack-forms"), {
+      createErrorNotice((0, import_i18n87.__)("Could not delete form.", "jetpack-forms"), {
         type: "snackbar"
       });
       console.error("Failed to permanently delete form:", error2);
@@ -29503,7 +30114,7 @@ function usePageHeaderDetails(props) {
   ]);
   const formStatus = formRecord?.status;
   const statusLabel = formStatus ? getFormStatusLabel(formStatus) : void 0;
-  const badges = (0, import_element99.useMemo)(() => {
+  const badges = (0, import_element101.useMemo)(() => {
     if (!isSingleFormScreen || !formStatus || formStatus === "publish") {
       return void 0;
     }
@@ -29518,12 +30129,12 @@ function usePageHeaderDetails(props) {
     setFormsToDraft,
     isUpdatingStatus
   } = useFormItemActions();
-  const trackAction = (0, import_element99.useCallback)((eventName, source = "form_header") => {
+  const trackAction = (0, import_element101.useCallback)((eventName, source = "form_header") => {
     analytics_default.tracks.recordEvent(eventName, {
       source
     });
   }, []);
-  const formItemControls = (0, import_element99.useMemo)(() => {
+  const formItemControls = (0, import_element101.useMemo)(() => {
     if (!sourceIdNumber) {
       return [];
     }
@@ -29531,14 +30142,14 @@ function usePageHeaderDetails(props) {
     if (formRecord?.status === "trash") {
       return [
         {
-          title: (0, import_i18n88.__)("Restore", "jetpack-forms"),
+          title: (0, import_i18n87.__)("Restore", "jetpack-forms"),
           onClick: () => {
             trackAction("jetpack_forms_form_restore_click");
             restoreForm(formItem);
           }
         },
         {
-          title: (0, import_i18n88.__)("Delete permanently", "jetpack-forms"),
+          title: (0, import_i18n87.__)("Delete permanently", "jetpack-forms"),
           onClick: () => {
             trackAction("jetpack_forms_form_delete_permanently_click");
             openPermanentDeleteConfirm(formItem);
@@ -29548,7 +30159,7 @@ function usePageHeaderDetails(props) {
     }
     const controls = [
       {
-        title: (0, import_i18n88.__)("Preview", "jetpack-forms"),
+        title: (0, import_i18n87.__)("Preview", "jetpack-forms"),
         onClick: () => {
           trackAction("jetpack_forms_form_preview_click");
           previewForm(formItem);
@@ -29558,14 +30169,14 @@ function usePageHeaderDetails(props) {
     if (navigator?.clipboard) {
       controls.push(
         {
-          title: (0, import_i18n88.__)("Copy embed", "jetpack-forms"),
+          title: (0, import_i18n87.__)("Copy embed", "jetpack-forms"),
           onClick: () => {
             trackAction("jetpack_forms_form_copy_embed_click");
             copyEmbed(formItem);
           }
         },
         {
-          title: (0, import_i18n88.__)("Copy shortcode", "jetpack-forms"),
+          title: (0, import_i18n87.__)("Copy shortcode", "jetpack-forms"),
           onClick: () => {
             trackAction("jetpack_forms_form_copy_shortcode_click");
             copyShortcode(formItem);
@@ -29575,7 +30186,7 @@ function usePageHeaderDetails(props) {
     }
     if (formRecord?.status === "publish") {
       controls.push({
-        title: (0, import_i18n88.__)("Unpublish", "jetpack-forms"),
+        title: (0, import_i18n87.__)("Unpublish", "jetpack-forms"),
         onClick: () => {
           if (!isUpdatingStatus) {
             trackAction("jetpack_forms_form_unpublish_click");
@@ -29585,7 +30196,7 @@ function usePageHeaderDetails(props) {
       });
     } else {
       controls.push({
-        title: (0, import_i18n88.__)("Publish", "jetpack-forms"),
+        title: (0, import_i18n87.__)("Publish", "jetpack-forms"),
         onClick: () => {
           if (!isUpdatingStatus) {
             trackAction("jetpack_forms_form_publish_click");
@@ -29596,21 +30207,21 @@ function usePageHeaderDetails(props) {
     }
     controls.push(
       {
-        title: (0, import_i18n88.__)("Rename", "jetpack-forms"),
+        title: (0, import_i18n87.__)("Rename", "jetpack-forms"),
         onClick: () => {
           trackAction("jetpack_forms_form_rename_click");
           openRenameModal(formItem);
         }
       },
       {
-        title: (0, import_i18n88.__)("Duplicate", "jetpack-forms"),
+        title: (0, import_i18n87.__)("Duplicate", "jetpack-forms"),
         onClick: () => {
           trackAction("jetpack_forms_form_duplicate_click");
           duplicateForm(formItem);
         }
       },
       {
-        title: (0, import_i18n88.__)("Trash", "jetpack-forms"),
+        title: (0, import_i18n87.__)("Trash", "jetpack-forms"),
         onClick: () => {
           trackAction("jetpack_forms_form_trash_click");
           trashForm(formItem);
@@ -29639,19 +30250,19 @@ function usePageHeaderDetails(props) {
     /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(jetpack_logo_default, { showText: false, width: 20 }),
     children
   ] });
-  const ariaLabel = (0, import_element99.useMemo)(() => {
+  const ariaLabel = (0, import_element101.useMemo)(() => {
     if (isSingleFormScreen) {
-      return formTitle || (0, import_i18n88.__)("Form responses", "jetpack-forms");
+      return formTitle || (0, import_i18n87.__)("Form responses", "jetpack-forms");
     }
     return "Jetpack Forms";
   }, [isSingleFormScreen, formTitle]);
-  const title = (0, import_element99.useMemo)(() => {
+  const title = (0, import_element101.useMemo)(() => {
     if (isSingleFormScreen) {
       return null;
     }
     return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(WrapWithJetpackLogo, { children: "Forms" });
   }, [isSingleFormScreen]);
-  const breadcrumbs = (0, import_element99.useMemo)(() => {
+  const breadcrumbs = (0, import_element101.useMemo)(() => {
     if (!isSingleFormScreen) {
       return null;
     }
@@ -29659,59 +30270,59 @@ function usePageHeaderDetails(props) {
       breadcrumbs_default,
       {
         items: [
-          { label: (0, import_i18n88.__)("Forms", "jetpack-forms"), to: "/forms" },
-          { label: formTitle || (0, import_i18n88.__)("Form responses", "jetpack-forms") }
+          { label: (0, import_i18n87.__)("Forms", "jetpack-forms"), to: "/forms" },
+          { label: formTitle || (0, import_i18n87.__)("Form responses", "jetpack-forms") }
         ]
       }
     ) });
   }, [isSingleFormScreen, formTitle]);
-  const subtitle = (0, import_element99.useMemo)(() => {
+  const subtitle = (0, import_element101.useMemo)(() => {
     if (isFormsScreen) {
-      const shortMessage = (0, import_i18n88.__)("View and manage all your forms.", "jetpack-forms");
-      const longMessage = (0, import_i18n88.__)("View and manage all your forms in one place.", "jetpack-forms");
+      const shortMessage = (0, import_i18n87.__)("View and manage all your forms.", "jetpack-forms");
+      const longMessage = (0, import_i18n87.__)("View and manage all your forms in one place.", "jetpack-forms");
       return hasClassicForms ? /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(import_jsx_runtime157.Fragment, { children: [
         shortMessage,
         " ",
-        /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components77.Button, { variant: "link", onClick: onOpenFormsHelp, children: (0, import_i18n88.__)("Not seeing all your forms?", "jetpack-forms") })
+        /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(import_components76.Button, { variant: "link", onClick: onOpenFormsHelp, children: (0, import_i18n87.__)("Not seeing all your forms?", "jetpack-forms") })
       ] }) : longMessage;
     }
     if (isSingleFormScreen) {
       if (formTitle) {
-        return (0, import_i18n88.sprintf)(
+        return (0, import_i18n87.sprintf)(
           /* translators: %s: form name */
-          (0, import_i18n88.__)("View responses for %s.", "jetpack-forms"),
+          (0, import_i18n87.__)("View responses for %s.", "jetpack-forms"),
           formTitle
         );
       }
-      return (0, import_i18n88.__)("View responses for this form.", "jetpack-forms");
+      return (0, import_i18n87.__)("View responses for this form.", "jetpack-forms");
     }
-    return (0, import_i18n88.__)("View and manage all your form responses in one place.", "jetpack-forms");
+    return (0, import_i18n87.__)("View and manage all your form responses in one place.", "jetpack-forms");
   }, [formTitle, isFormsScreen, isSingleFormScreen, onOpenFormsHelp, hasClassicForms]);
-  const trackEditFormClick = (0, import_element99.useCallback)(
+  const trackEditFormClick = (0, import_element101.useCallback)(
     () => trackAction("jetpack_forms_form_edit_form_click"),
     [trackAction]
   );
-  const trackExportClick = (0, import_element99.useCallback)(
+  const trackExportClick = (0, import_element101.useCallback)(
     () => trackAction("jetpack_forms_form_export_click"),
     [trackAction]
   );
-  const trackExportClickResponsesList = (0, import_element99.useCallback)(
+  const trackExportClickResponsesList = (0, import_element101.useCallback)(
     () => trackAction("jetpack_forms_form_export_click", "responses_list"),
     [trackAction]
   );
-  const actions2 = (0, import_element99.useMemo)(() => {
+  const actions2 = (0, import_element101.useMemo)(() => {
     if (isSm) {
       const dropdownControls = [];
       if (isFormsScreen) {
         if (isIntegrationsEnabled && showDashboardIntegrations) {
           dropdownControls.push({
             onClick: onOpenIntegrations,
-            title: (0, import_i18n88.__)("Manage integrations", "jetpack-forms")
+            title: (0, import_i18n87.__)("Manage integrations", "jetpack-forms")
           });
         }
         dropdownControls.push({
           onClick: handleCreateFormClick,
-          title: (0, import_i18n88.__)("Create a form", "jetpack-forms")
+          title: (0, import_i18n87.__)("Create a form", "jetpack-forms")
         });
       } else if (isSingleFormScreen) {
         if (statusView === "inbox" && sourceIdNumber) {
@@ -29720,7 +30331,7 @@ function usePageHeaderDetails(props) {
               trackAction("jetpack_forms_form_edit_form_click");
               window.location.href = getFormEditUrl(sourceIdNumber, adminUrl);
             },
-            title: (0, import_i18n88.__)("Edit form", "jetpack-forms")
+            title: (0, import_i18n87.__)("Edit form", "jetpack-forms")
           });
         }
         dropdownControls.push({
@@ -29734,14 +30345,14 @@ function usePageHeaderDetails(props) {
         if (statusView === "trash") {
           dropdownControls.push({
             onClick: emptyTrash.openConfirmDialog,
-            title: (0, import_i18n88.__)("Empty trash", "jetpack-forms"),
+            title: (0, import_i18n87.__)("Empty trash", "jetpack-forms"),
             isDisabled: emptyTrash.isEmpty || emptyTrash.isEmptying
           });
         }
         if (statusView === "spam") {
           dropdownControls.push({
             onClick: emptySpam.openConfirmDialog,
-            title: (0, import_i18n88.__)("Delete spam", "jetpack-forms"),
+            title: (0, import_i18n87.__)("Delete spam", "jetpack-forms"),
             isDisabled: emptySpam.isEmpty || emptySpam.isEmptying
           });
         }
@@ -29750,13 +30361,13 @@ function usePageHeaderDetails(props) {
         if (statusView === "inbox" && isIntegrationsEnabled && showDashboardIntegrations) {
           dropdownControls.push({
             onClick: onOpenIntegrations,
-            title: (0, import_i18n88.__)("Manage integrations", "jetpack-forms")
+            title: (0, import_i18n87.__)("Manage integrations", "jetpack-forms")
           });
         }
         if (statusView === "inbox") {
           dropdownControls.push({
             onClick: handleCreateFormClick,
-            title: (0, import_i18n88.__)("Create a form", "jetpack-forms")
+            title: (0, import_i18n87.__)("Create a form", "jetpack-forms")
           });
         }
         dropdownControls.push({
@@ -29770,14 +30381,14 @@ function usePageHeaderDetails(props) {
         if (statusView === "trash") {
           dropdownControls.push({
             onClick: emptyTrash.openConfirmDialog,
-            title: (0, import_i18n88.__)("Empty trash", "jetpack-forms"),
+            title: (0, import_i18n87.__)("Empty trash", "jetpack-forms"),
             isDisabled: emptyTrash.isEmpty || emptyTrash.isEmptying
           });
         }
         if (statusView === "spam") {
           dropdownControls.push({
             onClick: emptySpam.openConfirmDialog,
-            title: (0, import_i18n88.__)("Delete spam", "jetpack-forms"),
+            title: (0, import_i18n87.__)("Delete spam", "jetpack-forms"),
             isDisabled: emptySpam.isEmpty || emptySpam.isEmptying
           });
         }
@@ -29787,11 +30398,11 @@ function usePageHeaderDetails(props) {
       }
       return [
         /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
-          import_components77.DropdownMenu,
+          import_components76.DropdownMenu,
           {
             controls: dropdownControls,
             icon: more_vertical_default,
-            label: (0, import_i18n88.__)("More actions", "jetpack-forms"),
+            label: (0, import_i18n87.__)("More actions", "jetpack-forms"),
             toggleProps: { size: "compact" }
           },
           "actions-menu"
@@ -29804,10 +30415,10 @@ function usePageHeaderDetails(props) {
               isOpen: isCreateFormModalOpen,
               onClose: closeCreateFormModal,
               onSave: handleCreateFormSave,
-              title: (0, import_i18n88.__)("Create form", "jetpack-forms"),
-              primaryButtonLabel: (0, import_i18n88.__)("Create", "jetpack-forms"),
-              secondaryButtonLabel: (0, import_i18n88.__)("Cancel", "jetpack-forms"),
-              placeholder: (0, import_i18n88.__)("Enter form title", "jetpack-forms")
+              title: (0, import_i18n87.__)("Create form", "jetpack-forms"),
+              primaryButtonLabel: (0, import_i18n87.__)("Create", "jetpack-forms"),
+              secondaryButtonLabel: (0, import_i18n87.__)("Cancel", "jetpack-forms"),
+              placeholder: (0, import_i18n87.__)("Enter form title", "jetpack-forms")
             },
             "create-form-modal"
           )
@@ -29856,7 +30467,7 @@ function usePageHeaderDetails(props) {
               isOpen: !!renameFormItem,
               onClose: closeRenameModal,
               onSave: handleRename,
-              title: (0, import_i18n88.__)("Rename form", "jetpack-forms"),
+              title: (0, import_i18n87.__)("Rename form", "jetpack-forms"),
               initialValue: renameFormItem?.title || ""
             },
             "rename-form-modal"
@@ -29864,15 +30475,15 @@ function usePageHeaderDetails(props) {
         ] : [],
         ...isPermanentDeleteConfirmOpen ? [
           /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(
-            import_components77.__experimentalConfirmDialog,
+            import_components76.__experimentalConfirmDialog,
             {
               onCancel: closePermanentDeleteConfirm,
               onConfirm: confirmPermanentDelete,
               isOpen: isPermanentDeleteConfirmOpen,
-              confirmButtonText: (0, import_i18n88.__)("Delete permanently", "jetpack-forms"),
+              confirmButtonText: (0, import_i18n87.__)("Delete permanently", "jetpack-forms"),
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("h3", { children: (0, import_i18n88.__)("Delete permanently", "jetpack-forms") }),
-                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("p", { children: (0, import_i18n88.__)(
+                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("h3", { children: (0, import_i18n87.__)("Delete permanently", "jetpack-forms") }),
+                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("p", { children: (0, import_i18n87.__)(
                   "This will permanently delete this form. This action cannot be undone.",
                   "jetpack-forms"
                 ) })
@@ -29914,11 +30525,11 @@ function usePageHeaderDetails(props) {
         ...statusView === "spam" ? [/* @__PURE__ */ (0, import_jsx_runtime157.jsx)(empty_spam_button_default, {}, "empty-spam")] : [],
         ...formItemControls.length > 0 ? [
           /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
-            import_components77.DropdownMenu,
+            import_components76.DropdownMenu,
             {
               controls: formItemControls,
               icon: more_vertical_default,
-              label: (0, import_i18n88.__)("More actions", "jetpack-forms"),
+              label: (0, import_i18n87.__)("More actions", "jetpack-forms"),
               toggleProps: { size: "compact" }
             },
             "form-actions-menu"
@@ -29931,7 +30542,7 @@ function usePageHeaderDetails(props) {
               isOpen: !!renameFormItem,
               onClose: closeRenameModal,
               onSave: handleRename,
-              title: (0, import_i18n88.__)("Rename form", "jetpack-forms"),
+              title: (0, import_i18n87.__)("Rename form", "jetpack-forms"),
               initialValue: renameFormItem?.title || ""
             },
             "rename-form-modal"
@@ -29939,15 +30550,15 @@ function usePageHeaderDetails(props) {
         ] : [],
         ...isPermanentDeleteConfirmOpen ? [
           /* @__PURE__ */ (0, import_jsx_runtime157.jsxs)(
-            import_components77.__experimentalConfirmDialog,
+            import_components76.__experimentalConfirmDialog,
             {
               onCancel: closePermanentDeleteConfirm,
               onConfirm: confirmPermanentDelete,
               isOpen: isPermanentDeleteConfirmOpen,
-              confirmButtonText: (0, import_i18n88.__)("Delete permanently", "jetpack-forms"),
+              confirmButtonText: (0, import_i18n87.__)("Delete permanently", "jetpack-forms"),
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("h3", { children: (0, import_i18n88.__)("Delete permanently", "jetpack-forms") }),
-                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("p", { children: (0, import_i18n88.__)(
+                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("h3", { children: (0, import_i18n87.__)("Delete permanently", "jetpack-forms") }),
+                /* @__PURE__ */ (0, import_jsx_runtime157.jsx)("p", { children: (0, import_i18n87.__)(
                   "This will permanently delete this form. This action cannot be undone.",
                   "jetpack-forms"
                 ) })
@@ -30046,10 +30657,10 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 }
 
 // routes/forms/style.scss
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='2fca3b7f32']")) {
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='2cf0b0b6f3']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "2fca3b7f32");
-  style.appendChild(document.createTextNode('.dataviews-picker-wrapper,.dataviews-wrapper{background-color:var(--wp-dataviews-color-background,#fff);box-sizing:border-box;container:dataviews-wrapper/inline-size;display:flex;flex-direction:column;font-size:13px;height:100%;line-height:1.4;scroll-padding-bottom:64px}.dataviews-filters__container,.dataviews__view-actions{background-color:inherit;box-sizing:border-box;flex-shrink:0;left:0;padding:16px 24px;position:sticky}@media not (prefers-reduced-motion){.dataviews-filters__container,.dataviews__view-actions{transition:padding .1s ease-out}}.dataviews-loading,.dataviews-no-results{align-items:center;display:flex;flex-grow:1;justify-content:center;padding:0 24px}@media not (prefers-reduced-motion){.dataviews-loading,.dataviews-no-results{transition:padding .1s ease-out}}.dataviews-no-results.is-refreshing{opacity:.5;pointer-events:none}@media not (prefers-reduced-motion){.dataviews-no-results.is-refreshing{animation:dataviews-pulse 1s ease-in-out infinite;opacity:1}}@keyframes dataviews-pulse{0%,to{opacity:1}50%{opacity:.5}}.dataviews-loading-more{text-align:center}@container (max-width: 430px){.dataviews-filters__container,.dataviews__view-actions{padding:12px 24px}}.dataviews-title-field{font-size:13px;font-weight:499;width:100%}.dataviews-title-field,.dataviews-title-field a{color:#2f2f2f;text-overflow:ellipsis;white-space:nowrap}.dataviews-title-field a{display:block;flex-grow:0;overflow:hidden;text-decoration:none}.dataviews-title-field a:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field a:focus{border-radius:2px;box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color,#007cba);color:var(--wp-admin-theme-color--rgb)}.dataviews-title-field button.components-button.is-link{color:#1e1e1e;display:block;font-weight:inherit;overflow:hidden;text-decoration:none;text-overflow:ellipsis;white-space:nowrap;width:100%}.dataviews-title-field button.components-button.is-link:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field--clickable{color:#2f2f2f;cursor:pointer}.dataviews-title-field--clickable:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field--clickable:focus{border-radius:2px;box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color,#007cba);color:var(--wp-admin-theme-color--rgb)}.components-card__body:has(>.dataviews-picker-wrapper),.components-card__body:has(>.dataviews-wrapper){overflow:hidden;padding:8px 0 0}.dataviews-bulk-actions-footer__item-count{color:#1e1e1e}.dataviews-bulk-actions-footer__container{margin-right:auto;min-height:32px}.dataviews-layout__container{background-color:inherit;display:flex;flex:1;flex-direction:column;min-height:0;overflow:auto}.dataviews-filters__button{position:relative}.dataviews-filters__container{padding-top:0}.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true],.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true]:hover{opacity:0}.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true]:focus{opacity:1}.dataviews-filters__summary-popover{font-size:13px;line-height:1.4}.dataviews-filters__summary-popover .components-popover__content{border-radius:4px;max-width:250px;min-width:230px;width:100%}.dataviews-filters__summary-popover.components-dropdown__content .components-popover__content{padding:0}.dataviews-filters__summary-operators-container{padding:8px 16px}.dataviews-filters__summary-operators-container:has(+.dataviews-filters__search-widget-listbox),.dataviews-filters__summary-operators-container:has(+.dataviews-filters__search-widget-no-elements),.dataviews-filters__summary-operators-container:has(+.dataviews-filters__user-input-widget){border-bottom:1px solid #e0e0e0}.dataviews-filters__summary-operators-container:empty{display:none}.dataviews-filters__summary-operators-container .dataviews-filters__summary-operators-filter-name{color:#757575;flex-shrink:0;max-width:calc(100% - 55px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dataviews-filters__summary-operators-container .dataviews-filters__summary-operators-filter-select{overflow:hidden;white-space:nowrap;width:100%}.dataviews-filters__summary-chip-container{position:relative;white-space:pre-wrap}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip{align-items:center;background:#f0f0f0;border:1px solid #0000;border-radius:16px;box-sizing:border-box;color:#2f2f2f;cursor:pointer;display:flex;min-height:32px;padding:4px 12px;position:relative}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.is-not-clickable{cursor:default}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-reset{padding-inline-end:28px}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:focus-visible,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:hover:not(.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.is-not-clickable),.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip[aria-expanded=true]{background:#e0e0e0;color:#1e1e1e}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values{background:rgba(var(--wp-admin-theme-color--rgb),.04);color:var(--wp-admin-theme-color)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values:hover,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values[aria-expanded=true]{background:rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:focus-visible{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);outline:none}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip .dataviews-filters-__summary-filter-text-name{font-weight:499}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove{align-items:center;background:#0000;border:0;border-radius:50%;cursor:pointer;display:flex;height:24px;justify-content:center;padding:0;position:absolute;right:4px;top:50%;transform:translateY(-50%);width:24px}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove svg{fill:#757575}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:hover{background:#e0e0e0}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus svg,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:hover svg{fill:#1e1e1e}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove.has-values svg{fill:var(--wp-admin-theme-color)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove.has-values:hover{background:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus-visible{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);outline:none}.dataviews-filters__search-widget-filter-combobox-list{border-top:1px solid #e0e0e0;max-height:184px;overflow:auto;padding:4px}.dataviews-filters__search-widget-filter-combobox-list .dataviews-filters__search-widget-filter-combobox-item-value [data-user-value]{font-weight:600}.dataviews-filters__search-widget-listbox{overflow:auto;padding:4px}.dataviews-filters__search-widget-listitem{align-items:center;border-radius:2px;box-sizing:border-box;cursor:default;display:flex;font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:13px;font-weight:400;gap:8px;line-height:20px;min-height:32px;padding:4px 12px}.dataviews-filters__search-widget-listitem:last-child{margin-block-end:0}.dataviews-filters__search-widget-listitem:focus,.dataviews-filters__search-widget-listitem:hover,.dataviews-filters__search-widget-listitem[data-active-item]{background-color:var(--wp-admin-theme-color);color:#fff}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-description,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-description,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-description{color:#fff}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-single-selection,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-single-selection,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-single-selection{background:#fff;border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-single-selection.is-selected,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-single-selection.is-selected,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-single-selection.is-selected{background:var(--wp-admin-theme-color-darker-20,#183ad6);border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-multi-selection,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-multi-selection,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-multi-selection{border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-multi-selection.is-selected,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-multi-selection.is-selected,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-multi-selection.is-selected{background:var(--wp-admin-theme-color-darker-20,#183ad6);border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-value{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-description{color:#757575;display:block;font-size:12px;line-height:16px;overflow:hidden;text-overflow:ellipsis}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{border:1px solid #1e1e1e;border-radius:50%;height:24px;margin-right:12px;max-width:24px;min-width:24px;position:relative;transition:none;width:24px}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{height:16px;max-width:16px;min-width:16px;width:16px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked:before{background-color:#fff;border:4px solid #fff;box-sizing:inherit;height:12px;left:50%;margin:0;position:absolute;top:50%;transform:translate(-50%,-50%);width:12px}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked:before{height:8px;width:8px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked{background:var(--wp-admin-theme-color);border:none}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{margin:0;padding:0}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected{background:var(--wp-admin-theme-color,#3858e9);border-color:var(--wp-admin-theme-color,#3858e9)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected:before{background-color:#fff;border:4px solid #fff;border-radius:50%;box-sizing:inherit;content:"";height:12px;left:50%;margin:0;position:absolute;top:50%;transform:translate(-50%,-50%);width:12px}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected:before{height:8px;width:8px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{--checkbox-size:24px;border:1px solid #949494;border-radius:2px;box-shadow:0 0 0 #0000;flex-shrink:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:16px;line-height:normal;margin-right:12px;padding:6px 8px;transition:none}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{font-size:13px;line-height:normal}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:focus{border-color:var(--wp-admin-theme-color);box-shadow:0 0 0 .5px var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection::placeholder{color:#1e1e1e9e}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked{background:var(--wp-admin-theme-color);border-color:var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked:before,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{color:#fff;margin:-3px -5px}@media (min-width:782px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked:before,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{margin:-4px 0 0 -5px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]{background:var(--wp-admin-theme-color);border-color:var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{content:"\\f460";display:inline-block;float:left;font:normal 30px/1 dashicons;vertical-align:middle;width:16px;speak:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (min-width:782px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{float:none;font-size:21px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:disabled,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-disabled=true]{background:#f0f0f0;border-color:#ddd;cursor:default;opacity:1}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{background:#fff;color:#1e1e1e;height:var(--checkbox-size);margin:0;padding:0;position:relative;width:var(--checkbox-size)}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{--checkbox-size:16px}}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{transition:border-color .1s ease-in-out}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected{background:var(--wp-admin-theme-color,#3858e9);border-color:var(--wp-admin-theme-color,#3858e9)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected svg{--checkmark-size:var(--checkbox-size);fill:#fff;height:var(--checkmark-size);left:50%;position:absolute;top:50%;transform:translate(-50%,-50%);width:var(--checkmark-size)}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected svg{--checkmark-size:calc(var(--checkbox-size) + 4px)}}.dataviews-filters__search-widget-filter-combobox__wrapper{padding:8px;position:relative}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{border:1px solid #949494;border-radius:2px;box-shadow:0 0 0 #0000;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;line-height:normal;padding:6px 8px}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{font-size:13px;line-height:normal}}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input:focus{border-color:var(--wp-admin-theme-color);box-shadow:0 0 0 .5px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::placeholder{color:#1e1e1e9e}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{display:block;font-size:16px;height:32px;margin-left:0;margin-right:0;padding:0 8px 0 32px;width:100%}@media (min-width:600px){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{font-size:13px}}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input:focus{background:#fff;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::placeholder{color:#757575}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-cancel-button,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-decoration,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-results-button,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-results-decoration{-webkit-appearance:none}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__icon{align-items:center;bottom:0;display:flex;inset-inline-start:12px;justify-content:center;position:absolute;top:0;width:24px}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__icon:dir(ltr){transform:scaleX(-1)}.dataviews-filters__container-visibility-toggle{flex-shrink:0;position:relative}.dataviews-filters-toggle__count{background:var(--wp-admin-theme-color,#3858e9);border-radius:8px;box-sizing:border-box;color:#fff;font-size:11px;height:16px;line-height:16px;min-width:16px;outline:var(--wp-admin-border-width-focus) solid #fff;padding:0 4px;position:absolute;right:0;text-align:center;top:0;transform:translate(50%,-50%)}.dataviews-search{width:fit-content}.dataviews-filters__user-input-widget{padding:16px}.dataviews-filters__user-input-widget .components-input-control__prefix{padding-left:8px}.dataviews-filters__search-widget-no-elements{align-items:center;display:flex;justify-content:center;padding:16px}.dataviews-footer{background-color:inherit;border-top:1px solid #f0f0f0;bottom:0;flex-shrink:0;left:0;padding:12px 24px;position:sticky}@media not (prefers-reduced-motion){.dataviews-footer{transition:padding .1s ease-out}}.dataviews-footer{z-index:2}.dataviews-footer .is-refreshing{opacity:.5;pointer-events:none}@media not (prefers-reduced-motion){.dataviews-footer .is-refreshing{animation:dataviews-pulse 1s ease-in-out infinite;opacity:1}}@container (max-width: 560px){.dataviews-footer__content{flex-direction:column!important}.dataviews-footer__content .dataviews-bulk-actions-footer__container{width:100%}.dataviews-footer__content .dataviews-bulk-actions-footer__item-count{flex-grow:1}.dataviews-footer__content .dataviews-pagination{justify-content:space-between;width:100%}}.dataviews-pagination__page-select{font-size:11px;font-weight:499;text-transform:uppercase}@media (min-width:600px){.dataviews-pagination__page-select .components-select-control__input{font-size:11px!important;font-weight:499}}.dataviews-action-modal{z-index:1000001}.dataviews-item-actions .components-button:not(.dataviews-all-actions-button){padding:0 4px}.dataviews-selection-checkbox{--checkbox-input-size:24px}@media (min-width:600px){.dataviews-selection-checkbox{--checkbox-input-size:16px}}.dataviews-selection-checkbox{flex-shrink:0;line-height:0}.dataviews-selection-checkbox .components-checkbox-control__input-container{margin:0}.dataviews-view-config{container-type:inline-size;font-size:13px;line-height:1.4;width:320px}.dataviews-config__popover.is-expanded .dataviews-config__popover-content-wrapper{height:100%;overflow-y:scroll}.dataviews-config__popover.is-expanded .dataviews-config__popover-content-wrapper .dataviews-view-config{width:auto}.dataviews-view-config__sort-direction .components-toggle-group-control-option-base{text-transform:uppercase}.dataviews-settings-section__title.dataviews-settings-section__title{font-size:15px;line-height:24px}.dataviews-settings-section__sidebar{grid-column:span 4}.dataviews-settings-section__content,.dataviews-settings-section__content>*{grid-column:span 8}.dataviews-settings-section__content .is-divided-in-two{display:contents}.dataviews-settings-section__content .is-divided-in-two>*{grid-column:span 4}.dataviews-settings-section:has(.dataviews-settings-section__content:empty){display:none}@container (max-width: 500px){.dataviews-settings-section.dataviews-settings-section{grid-template-columns:repeat(2,1fr)}.dataviews-settings-section.dataviews-settings-section .dataviews-settings-section__content,.dataviews-settings-section.dataviews-settings-section .dataviews-settings-section__sidebar{grid-column:span 2}}.dataviews-view-config__sort-controls>*{flex:1}.dataviews-view-config__label{text-wrap:nowrap}.dataviews-view-config__toggle-wrapper{display:inline-flex;position:relative}.dataviews-view-config__modified-indicator{background:var(--wp-admin-theme-color,#3858e9);border-radius:50%;height:4px;pointer-events:none;position:absolute;right:4px;top:4px;width:4px}.dataviews-view-grid-items{container-type:inline-size;display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));grid-template-rows:max-content;margin-bottom:auto;padding:0 24px 24px}@media not (prefers-reduced-motion){.dataviews-view-grid-items{transition:padding .1s ease-out}}.dataviews-view-grid-items.has-compact-density{gap:16px}.dataviews-view-grid-items.has-comfortable-density{gap:32px}.dataviews-view-grid{container-type:inline-size;display:flex;flex-direction:column;gap:24px;margin-bottom:auto;padding:0 24px 24px}@media not (prefers-reduced-motion){.dataviews-view-grid{transition:padding .1s ease-out}}.dataviews-view-grid.has-compact-density,.dataviews-view-grid.has-compact-density .dataviews-view-grid__row{gap:16px}.dataviews-view-grid.has-comfortable-density,.dataviews-view-grid.has-comfortable-density .dataviews-view-grid__row{gap:32px}.dataviews-view-grid .dataviews-view-grid__row{display:grid;gap:24px}.dataviews-view-grid .dataviews-view-grid__row .dataviews-view-grid__row__gridcell{border-radius:4px;position:relative}.dataviews-view-grid .dataviews-view-grid__row .dataviews-view-grid__row__gridcell[data-focus-visible]:after{border-radius:4px;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);content:"";height:100%;left:0;outline:2px solid #0000;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-grid .dataviews-view-grid__card{height:100%;justify-content:flex-start;position:relative}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title{padding:8px 0 4px}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-field{align-content:center;min-height:24px;overflow:hidden;text-align:start}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-field--clickable{width:fit-content}.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-value{color:#1e1e1e}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__media:focus:after,.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__media:after{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__media:after{box-shadow:inset 0 0 0 1px var(--wp-admin-theme-color)}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__media:focus:after{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-view-grid .dataviews-view-grid__media{aspect-ratio:1/1;background-color:#fff;border-radius:4px;overflow:hidden;position:relative;width:100%}.dataviews-view-grid .dataviews-view-grid__media.dataviews-view-grid__media--placeholder{aspect-ratio:3/1}.dataviews-view-grid .dataviews-view-grid__media img{height:100%;object-fit:cover;width:100%}.dataviews-view-grid .dataviews-view-grid__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-grid .dataviews-view-grid__media .dataviews-view-grid__media-placeholder{background:#f0f0f0;border-radius:4px;box-shadow:none;display:block;height:100%;width:100%}.dataviews-view-grid .dataviews-view-grid__fields{font-size:12px;line-height:16px;position:relative}.dataviews-view-grid .dataviews-view-grid__fields:not(:empty){padding:0 0 12px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field-value:not(:empty){line-height:20px;min-height:24px;padding-top:2px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field{align-items:center;min-height:24px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-name{color:#757575;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:35%}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-value{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:65%}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field:not(:has(.dataviews-view-grid__field-value:not(:empty))){display:none}.dataviews-view-grid .dataviews-view-grid__badge-fields:not(:empty){padding-bottom:12px}.dataviews-view-grid.is-refreshing{opacity:.5;pointer-events:none}@media not (prefers-reduced-motion){.dataviews-view-grid.is-refreshing{animation:dataviews-pulse 1s ease-in-out infinite;opacity:1}}.dataviews-view-grid__field-value:empty,.dataviews-view-grid__field:empty{display:none}.dataviews-view-grid__card .dataviews-selection-checkbox{left:8px;opacity:0;position:absolute;top:-9999em;z-index:1}@media not (prefers-reduced-motion){.dataviews-view-grid__card .dataviews-selection-checkbox{transition:opacity .1s linear}}@media (hover:none){.dataviews-view-grid__card .dataviews-selection-checkbox{opacity:1;top:8px}}.dataviews-view-grid__card.is-selected .dataviews-selection-checkbox,.dataviews-view-grid__card:focus-within .dataviews-selection-checkbox,.dataviews-view-grid__card:hover .dataviews-selection-checkbox{opacity:1;top:8px}.dataviews-view-grid__card .dataviews-view-grid__media-actions{opacity:0;position:absolute;right:4px;top:4px;z-index:1}.dataviews-view-grid__card .dataviews-view-grid__media-actions .dataviews-all-actions-button{background-color:#fff}@media not (prefers-reduced-motion){.dataviews-view-grid__card .dataviews-view-grid__media-actions{transition:opacity .1s linear}}@media (hover:none){.dataviews-view-grid__card .dataviews-view-grid__media-actions{opacity:1;top:4px}}.dataviews-view-grid__card .dataviews-view-grid__media-actions:has(.dataviews-all-actions-button[aria-expanded=true]),.dataviews-view-grid__card:focus-within .dataviews-view-grid__media-actions,.dataviews-view-grid__card:hover .dataviews-view-grid__media-actions{opacity:1}.dataviews-view-grid__media--clickable{cursor:pointer}.dataviews-view-grid__group-header{color:#1e1e1e;container-type:inline-size;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 24px}div.dataviews-view-list{list-style-type:none}.dataviews-view-list{margin:0 0 auto}.dataviews-view-list div[role=article],.dataviews-view-list div[role=row]{border-top:1px solid #f0f0f0;margin:0}.dataviews-view-list div[role=article] .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row] .dataviews-view-list__item-wrapper{box-sizing:border-box;padding:16px 24px;position:relative}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions{display:flex;flex:0 0 auto;gap:4px;white-space:nowrap;width:max-content}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions .components-button,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions .components-button{position:relative;z-index:1}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>div,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>div{height:24px}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>:not(:last-child){flex:0;overflow:hidden;width:0}.dataviews-view-list div[role=article]:where(.is-selected,.is-hovered,:focus-within) .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row]:where(.is-selected,.is-hovered,:focus-within) .dataviews-view-list__item-actions>:not(:last-child){flex-basis:min-content;overflow:unset;width:auto}@media (hover:none){.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>:not(:last-child){flex-basis:min-content;overflow:unset;width:auto}}.dataviews-view-list div[role=article].is-selected.is-selected,.dataviews-view-list div[role=article].is-selected.is-selected+div[role=article],.dataviews-view-list div[role=article].is-selected.is-selected+div[role=row],.dataviews-view-list div[role=row].is-selected.is-selected,.dataviews-view-list div[role=row].is-selected.is-selected+div[role=article],.dataviews-view-list div[role=row].is-selected.is-selected+div[role=row]{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered,.dataviews-view-list div[role=article]:not(.is-selected):focus-within,.dataviews-view-list div[role=article]:not(.is-selected):hover,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered,.dataviews-view-list div[role=row]:not(.is-selected):focus-within,.dataviews-view-list div[role=row]:not(.is-selected):hover{background-color:rgba(var(--wp-admin-theme-color--rgb),.04);border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12);color:var(--wp-admin-theme-color)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected).is-hovered+div[role=row],.dataviews-view-list div[role=article]:not(.is-selected):focus-within+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected):focus-within+div[role=row],.dataviews-view-list div[role=article]:not(.is-selected):hover+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected):hover+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected).is-hovered+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected).is-hovered+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected):focus-within+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected):focus-within+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected):hover+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected):hover+div[role=row]{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected).is-hovered .dataviews-view-list__field,.dataviews-view-list div[role=article]:not(.is-selected):focus-within .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected):focus-within .dataviews-view-list__field,.dataviews-view-list div[role=article]:not(.is-selected):hover .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected):hover .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected):focus-within .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected):focus-within .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected):hover .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected):hover .dataviews-view-list__field{color:var(--wp-admin-theme-color)}.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper{background-color:rgba(var(--wp-admin-theme-color--rgb),.08);color:#1e1e1e}.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-view-list__field{color:#1e1e1e}.dataviews-view-list .dataviews-view-list__item{appearance:none;background:none;border:none;cursor:pointer;inset:0;padding:0;position:absolute;scroll-margin:8px 0;z-index:1}.dataviews-view-list .dataviews-view-list__item:focus-visible{outline:none}.dataviews-view-list .dataviews-view-list__item:focus-visible:before{border-radius:2px;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);content:"";inset:var(--wp-admin-border-width-focus);outline:2px solid #0000;position:absolute}.dataviews-view-list .dataviews-view-list__title-field{flex:1;line-height:24px;min-height:24px;overflow:hidden}.dataviews-view-list .dataviews-view-list__title-field:has(a,button){z-index:1}.dataviews-view-list .dataviews-view-list__media-wrapper{background-color:#fff;border-radius:4px;flex-shrink:0;height:52px;overflow:hidden;position:relative;width:52px}.dataviews-view-list .dataviews-view-list__media-wrapper img{height:100%;object-fit:cover;width:100%}.dataviews-view-list .dataviews-view-list__media-wrapper:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.dataviews-view-list .dataviews-view-list__field-wrapper{flex-grow:1;min-width:0}.dataviews-view-list .dataviews-view-list__field{color:#757575}.dataviews-view-list .dataviews-view-list__fields{display:flex;flex-wrap:wrap;font-size:12px;gap:12px;row-gap:4px}.dataviews-view-list .dataviews-view-list__fields .dataviews-view-list__field:has(.dataviews-view-list__field-value:empty),.dataviews-view-list .dataviews-view-list__fields:empty{display:none}.dataviews-view-list .dataviews-view-list__fields .dataviews-view-list__field-value{align-items:center;display:flex;line-height:20px;min-height:24px}.dataviews-view-list+.dataviews-pagination{justify-content:space-between}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__item-wrapper{padding:8px 24px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__title-field{line-height:16px;min-height:16px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__media-wrapper{height:32px;width:32px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__fields{gap:8px;row-gap:4px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__fields .dataviews-view-list__field-value{line-height:16px;min-height:16px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__item-wrapper{padding:24px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__title-field{line-height:32px;min-height:32px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__media-wrapper{height:64px;width:64px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__fields{gap:16px;row-gap:8px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__fields .dataviews-view-list__field-value{line-height:24px;min-height:32px}.dataviews-view-list.is-refreshing{opacity:.5;pointer-events:none}@media not (prefers-reduced-motion){.dataviews-view-list.is-refreshing{animation:dataviews-pulse 1s ease-in-out infinite;opacity:1}}.dataviews-view-list__group-header{color:#1e1e1e;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 24px}.dataviews-view-table{background-color:inherit;border-collapse:collapse;border-color:inherit;color:#757575;margin-bottom:auto;position:relative;text-indent:0;width:100%}.dataviews-view-table th{color:#1e1e1e;font-size:13px;font-weight:400;text-align:left}.dataviews-view-table td,.dataviews-view-table th{padding:12px}.dataviews-view-table td.dataviews-view-table__actions-column,.dataviews-view-table th.dataviews-view-table__actions-column{text-align:right}.dataviews-view-table td.dataviews-view-table__actions-column--sticky,.dataviews-view-table th.dataviews-view-table__actions-column--sticky{background-color:var(--wp-dataviews-color-background,#fff);position:sticky;right:0}.dataviews-view-table td.dataviews-view-table__actions-column--stuck:after,.dataviews-view-table th.dataviews-view-table__actions-column--stuck:after{background-color:#f0f0f0;bottom:0;content:"";display:block;left:0;position:absolute;top:0;width:1px}.dataviews-view-table td.dataviews-view-table__checkbox-column,.dataviews-view-table th.dataviews-view-table__checkbox-column{padding-right:0}.dataviews-view-table td.dataviews-view-table__checkbox-column .dataviews-view-table__cell-content-wrapper,.dataviews-view-table th.dataviews-view-table__checkbox-column .dataviews-view-table__cell-content-wrapper{max-width:auto;min-width:auto}.dataviews-view-table tr{background-color:inherit;border-top:1px solid #f0f0f0}.dataviews-view-table tr td:first-child,.dataviews-view-table tr th:first-child{padding-left:24px}.dataviews-view-table tr td:last-child,.dataviews-view-table tr th:last-child{padding-right:24px}.dataviews-view-table tr:last-child{border-bottom:0}.dataviews-view-table tr .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:0}@media (hover:none){.dataviews-view-table tr .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:1}}.dataviews-view-table tr.is-selected{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff);color:#757575}.dataviews-view-table tr.is-selected,.dataviews-view-table tr.is-selected+tr{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-table tr.is-selected .dataviews-view-table__actions-column--sticky{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff)}.dataviews-view-table tr.is-hovered .dataviews-item-actions .components-button:not(.dataviews-all-actions-button),.dataviews-view-table tr:focus-within .dataviews-item-actions .components-button:not(.dataviews-all-actions-button),.dataviews-view-table tr:hover .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:1}.dataviews-view-table.has-bulk-actions tr:focus-within .dataviews-view-table__actions-column--sticky,.dataviews-view-table.has-bulk-actions tr:hover .dataviews-view-table__actions-column--sticky{background-color:var(--wp-dataviews-color-background,#fff)}.dataviews-view-table.has-bulk-actions tr.is-selected .dataviews-view-table__actions-column--sticky,.dataviews-view-table.has-bulk-actions tr.is-selected:hover .dataviews-view-table__actions-column--sticky{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff)}.dataviews-view-table thead{background-color:inherit;inset-block-start:0;position:sticky;z-index:1}.dataviews-view-table thead.dataviews-view-table__thead--stuck:after{background-color:#f0f0f0;bottom:0;content:"";display:block;height:1px;left:0;position:absolute;right:0}.dataviews-view-table thead tr{border:0}.dataviews-view-table thead th{background-color:inherit;font-size:11px;font-weight:499;padding-bottom:8px;padding-top:8px;text-transform:uppercase}.dataviews-view-table thead th:has(.dataviews-view-table-header-button){padding-left:4px;padding-right:4px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button) .dataviews-view-table-header-button{gap:4px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button):first-child{padding-left:16px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button):last-child{padding-right:16px}.dataviews-view-table tbody td{vertical-align:top}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper{align-items:center;display:flex;min-height:32px;white-space:nowrap}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper.dataviews-view-table__cell-align-end{font-variant-numeric:tabular-nums;justify-content:flex-end}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper.dataviews-view-table__cell-align-center{justify-content:center}.dataviews-view-table tbody .components-v-stack>.dataviews-view-table__cell-content-wrapper:not(:first-child){min-height:0}.dataviews-view-table .dataviews-view-table-header-button{font-size:11px;font-weight:499;padding:4px 8px;text-transform:uppercase}.dataviews-view-table .dataviews-view-table-header-button:not(:hover){color:#1e1e1e}.dataviews-view-table .dataviews-view-table-header-button span{speak:none}.dataviews-view-table .dataviews-view-table-header-button span:empty{display:none}.dataviews-view-table .dataviews-view-table-header{padding-left:4px}.dataviews-view-table .dataviews-view-table__actions-column{white-space:nowrap;width:auto}.dataviews-view-table.has-compact-density thead th:has(.dataviews-view-table-header-button):not(:first-child){padding-left:0}.dataviews-view-table.has-compact-density thead th:has(.dataviews-view-table-header-button):not(:last-child){padding-right:0}.dataviews-view-table.has-compact-density td,.dataviews-view-table.has-compact-density th{padding:4px 8px}.dataviews-view-table.has-comfortable-density td,.dataviews-view-table.has-comfortable-density th{padding:16px 12px}.dataviews-view-table.has-comfortable-density td.dataviews-view-table__checkbox-column,.dataviews-view-table.has-comfortable-density th.dataviews-view-table__checkbox-column,.dataviews-view-table.has-compact-density td.dataviews-view-table__checkbox-column,.dataviews-view-table.has-compact-density th.dataviews-view-table__checkbox-column{padding-right:0}.dataviews-view-table-selection-checkbox{--checkbox-input-size:24px}@media (min-width:600px){.dataviews-view-table-selection-checkbox{--checkbox-input-size:16px}}.dataviews-column-primary__media{background-color:#fff;border-radius:4px;flex-shrink:0;max-width:60px;min-height:32px;min-width:32px;overflow:hidden;position:relative}.dataviews-column-primary__media img{height:32px;object-fit:cover;width:32px}.dataviews-column-primary__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.dataviews-view-table__cell-content-wrapper:not(.dataviews-column-primary__media),.dataviews-view-table__primary-column-content:not(.dataviews-column-primary__media){max-width:80ch;min-width:15ch}.dataviews-view-table__group-header-row .dataviews-view-table__group-header-cell{color:#1e1e1e;font-weight:499;padding:12px 24px}.dataviews-view-table col[class^=dataviews-view-table__col-]:not(.dataviews-view-table__col-first-data):not(.dataviews-view-table__col-expand){width:1%}.dataviews-view-table.is-refreshing{opacity:.5;pointer-events:none}@media not (prefers-reduced-motion){.dataviews-view-table.is-refreshing{animation:dataviews-pulse 1s ease-in-out infinite;opacity:1}}.dataviews-view-picker-grid.has-compact-density .dataviews-view-grid-items{gap:16px}.dataviews-view-picker-grid.has-comfortable-density .dataviews-view-grid-items{gap:32px}.dataviews-view-picker-grid .dataviews-view-picker-grid__card{height:100%;justify-content:flex-start;position:relative}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-actions{padding:8px 0 4px}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-field{align-content:center;min-height:24px;overflow:hidden;text-align:start}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-field--clickable{width:fit-content}.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-value{color:#1e1e1e}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__media:focus:after,.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__media:after{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__media:after{box-shadow:inset 0 0 0 1px var(--wp-admin-theme-color)}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__media:focus:after{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-view-picker-grid:focus-visible[aria-activedescendant]{outline:none}.dataviews-view-picker-grid:focus-visible [data-active-item=true]{outline:2px solid var(--wp-admin-theme-color)}.dataviews-view-picker-grid .dataviews-selection-checkbox{top:8px!important}.dataviews-view-picker-grid .dataviews-selection-checkbox input{pointer-events:none}.dataviews-view-picker-grid .dataviews-view-picker-grid__media{aspect-ratio:1/1;background-color:#fff;border-radius:4px;min-height:0;position:relative;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__media img{height:100%;object-fit:cover;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields{font-size:12px;line-height:16px;position:relative}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields:not(:empty){padding:0 0 12px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field-value:not(:empty){line-height:20px;min-height:24px;padding-top:2px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field{align-items:center;min-height:24px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-name{color:#757575;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:35%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-value{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:65%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field:not(:has(.dataviews-view-picker-grid__field-value:not(:empty))){display:none}.dataviews-view-picker-grid .dataviews-view-picker-grid__badge-fields:not(:empty){padding-bottom:12px}.dataviews-view-picker-grid__field-value:empty,.dataviews-view-picker-grid__field:empty{display:none}.dataviews-view-picker-grid__card .dataviews-selection-checkbox{left:8px;position:absolute;top:-9999em;z-index:1}@media (hover:none){.dataviews-view-picker-grid__card .dataviews-selection-checkbox{top:8px}}.dataviews-view-picker-grid__card.is-selected .dataviews-selection-checkbox,.dataviews-view-picker-grid__card:focus-within .dataviews-selection-checkbox,.dataviews-view-picker-grid__card:hover .dataviews-selection-checkbox{top:8px}.dataviews-view-picker-grid__media--clickable{cursor:pointer}.dataviews-view-picker-grid-group__header{color:#1e1e1e;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 48px}.dataviews-view-picker-table{background-color:inherit}.dataviews-view-picker-table .dataviews-view-table__checkbox-column{width:48px}.dataviews-view-picker-table tbody:focus-visible[aria-activedescendant]{outline:none}.dataviews-view-picker-table tbody:focus-visible [data-active-item=true]{outline:2px solid var(--wp-admin-theme-color)}.dataviews-view-picker-table .dataviews-selection-checkbox .components-checkbox-control__input.components-checkbox-control__input{opacity:1;pointer-events:none}.dataviews-view-picker-table .dataviews-view-table__row{cursor:pointer}.dataviews-view-picker-table .dataviews-view-table__row.is-selected{background-color:rgba(var(--wp-admin-theme-color--rgb),.04)}.dataviews-view-picker-table .dataviews-view-table__row.is-hovered{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-picker-table .dataviews-view-table__row.is-selected.is-hovered{background-color:rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-activity{margin:0 0 auto;padding:8px 24px}.dataviews-view-activity .dataviews-view-activity__group-header{color:#949494;font-size:15px;font-weight:499;margin:0 0 8px;padding:0}.dataviews-view-activity .dataviews-view-activity__item-actions{min-width:24px}.dataviews-view-activity .dataviews-view-activity__item-content{flex-grow:1}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-description,.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields,.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title{min-height:16px}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title{align-items:center;display:flex;flex:1;overflow:hidden;position:relative}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title--clickable{cursor:pointer}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title--clickable:focus-visible{border-radius:2px;outline:var(--wp-admin-border-width-focus) solid var(--wp-admin-theme-color);outline-offset:var(--wp-admin-border-width-focus)}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__primary-actions{display:flex;flex:0 0 auto;width:max-content}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__primary-actions .components-button{position:relative;z-index:1}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields{color:#757575;display:flex;flex-wrap:wrap;gap:12px;row-gap:4px}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields .dataviews-view-activity__item-field:has(.dataviews-view-activity__item-field-value:empty),.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields:empty{display:none}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields .dataviews-view-activity__item-field-value{align-items:center;display:flex}.dataviews-view-activity .dataviews-view-activity__item-type{align-self:stretch;flex-shrink:0}.dataviews-view-activity .dataviews-view-activity__item-type:after{background-color:#ddd;content:"";flex:1 1 auto;margin:0 auto;width:1px}.dataviews-view-activity .dataviews-view-activity__item-type:before{background-color:#ddd;content:"";flex:0 0 auto;margin:0 auto;width:1px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type{width:8px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type:before{height:12px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type-icon{height:11px;width:11px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-content{margin:12px 0}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type{width:24px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type:before{height:12px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type-icon{height:25px;width:25px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-content{margin:12px 0;padding-top:8px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type{width:32px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type:before{height:8px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type-icon{height:33px;width:33px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-content{margin:8px 0 16px;padding-top:12px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-bullet,.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-bullet{height:9px;position:relative;top:50%;transform:translateY(-50%);width:9px}.dataviews-view-activity .dataviews-view-activity__item:first-child .dataviews-view-activity__item-type:before{visibility:hidden}.dataviews-view-activity .dataviews-view-activity__group:last-of-type>.dataviews-view-activity__item:last-of-type .dataviews-view-activity__item-type:after,.dataviews-view-activity>.dataviews-view-activity__item:last-child .dataviews-view-activity__item-type:after{background:linear-gradient(180deg,#ddd 0,#ddd3 60%,#ddd0)}.dataviews-view-activity .dataviews-view-activity__item-type-icon{background-color:#fff;flex-shrink:0;overflow:hidden}.dataviews-view-activity .dataviews-view-activity__item-type-icon .dataviews-view-activity__item-bullet,.dataviews-view-activity .dataviews-view-activity__item-type-icon img,.dataviews-view-activity .dataviews-view-activity__item-type-icon svg{border-radius:50%;box-shadow:inset 0 0 0 1px #ddd;box-sizing:border-box;display:block;height:100%;margin:0 auto;object-fit:cover;width:100%}.dataviews-view-activity .dataviews-view-activity__item-type-icon svg{padding:4px}.dataviews-view-activity .dataviews-view-activity__item-type-icon .dataviews-view-activity__item-bullet{background-color:#ddd;content:""}.dataviews-view-activity.is-refreshing{opacity:.5;pointer-events:none}@media not (prefers-reduced-motion){.dataviews-view-activity.is-refreshing{animation:dataviews-pulse 1s ease-in-out infinite;opacity:1}}.dataviews-view-activity+.dataviews-pagination{justify-content:space-between}.dataviews-picker-footer__bulk-selection{align-self:flex-start;height:32px}.dataviews-picker-footer__actions{align-self:flex-end}.dataviews-controls__datetime{border:none;padding:0}.dataviews-controls__relative-date-number,.dataviews-controls__relative-date-unit{flex:1 1 50%}.dataviews-controls__date input[type=date]::-webkit-calendar-picker-indicator,.dataviews-controls__date input[type=date]::-webkit-inner-spin-button{-webkit-appearance:none;display:none}.dataviews-controls__date-range-inputs>*{min-width:0}.dataviews-controls__color-picker-dropdown{display:flex}.dataviews-controls__date-preset{border:1px solid #ddd}.dataviews-controls__date-preset:active{background-color:#000}.dataforms-layouts-panel__field-trigger{align-items:flex-start;border-radius:2px;color:inherit;cursor:pointer;display:flex;isolation:isolate;min-height:24px;position:relative;width:100%}.dataforms-layouts-panel__field-trigger--label-side{flex-direction:row;gap:var(--wpds-dimension-gap-md,12px)}.dataforms-layouts-panel__field-trigger--label-top{display:grid;grid-template-columns:1fr auto}.dataforms-layouts-panel__field-trigger--label-none{align-items:center}.dataforms-layouts-panel__field-trigger:not(.is-disabled):hover{color:var(--wp-admin-theme-color)}.dataforms-layouts-panel__field-trigger:not(.is-disabled):hover .dataforms-layouts-panel__field-trigger-icon{opacity:1}.dataforms-layouts-panel__field-trigger:not(.is-disabled):hover .dataforms-layouts-panel__field-label{color:var(--wp-admin-theme-color)}.dataforms-layouts-panel__field-trigger.is-disabled{cursor:default}.dataforms-layouts-panel__field-trigger.is-disabled .dataforms-layouts-panel__field-control{color:#757575;font-weight:var(--wpds-font-weight-regular,400)}.dataforms-layouts-panel__field-trigger--edit-always .dataforms-layouts-panel__field-trigger-icon{fill:currentColor;opacity:1}.dataforms-layouts-panel__field-trigger--edit-always .dataforms-layouts-panel__field-trigger-icon:focus-visible,.dataforms-layouts-panel__field-trigger--edit-always .dataforms-layouts-panel__field-trigger-icon:hover{fill:var(--wp-admin-theme-color)}.dataforms-layouts-panel__field-trigger-icon{border-radius:var(--wpds-border-radius-xs,1px);color:var(--wp-admin-theme-color);flex:0 0 auto;opacity:0;padding:0}.dataforms-layouts-panel__field-trigger-icon:focus-visible{opacity:1;outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wp-admin-theme-color)}.dataforms-layouts-panel__field-dropdown-anchor,.dataforms-layouts-panel__field-dropdown-anchor .components-dropdown{width:100%}.dataforms-layouts-panel__field-label{align-items:center;color:#757575;display:flex;flex-shrink:0;hyphens:auto;line-height:20px;min-height:24px;text-transform:capitalize;width:38%}.dataforms-layouts-panel__field-label .components-base-control__label{display:inline;line-height:inherit;margin-bottom:0}.dataforms-layouts-panel__field-label.has-error{color:#cc1818}.dataforms-layouts-panel__field-label-error-content{align-items:center;cursor:help;display:inline-flex;fill:#cc1818;flex-direction:row;gap:4px;position:relative;z-index:1}.dataforms-layouts-panel__field-label-error-content svg{fill:currentColor}.dataforms-layouts-panel__field-control{align-items:center;display:flex;flex-grow:1;font-weight:var(--wpds-font-weight-medium,499);line-height:var(--wpds-font-line-height-md,24px);min-height:24px;min-width:0;overflow:hidden;word-break:break-word}.dataforms-layouts-panel__field-control>*{min-width:0}.dataforms-layouts-panel__field-trigger--label-top .dataforms-layouts-panel__field-label{width:100%}.dataforms-layouts-panel__field-trigger--label-top .dataforms-layouts-panel__field-control{grid-column:1/-1}.dataforms-layouts-panel__field-trigger--label-top .dataforms-layouts-panel__field-trigger-icon{grid-column:2;grid-row:1}.dataforms-layouts-panel__field-dropdown .components-popover__content{min-width:256px;padding:16px}.dataforms-layouts-panel__dropdown-header{margin-bottom:16px}.dataforms-layouts-panel__modal-footer{margin-top:16px}.components-popover.components-dropdown__content.dataforms-layouts-panel__field-dropdown{z-index:159990}.dataforms-layouts-regular__field{align-items:flex-start!important;justify-content:flex-start!important;min-height:32px;width:100%}.dataforms-layouts-regular__field .components-base-control__label,.dataforms-layouts-regular__field .components-form-token-field__label,.dataforms-layouts-regular__field .components-input-control__label{color:#1e1e1e}.dataforms-layouts-regular__field-label{align-items:center;display:flex;flex-shrink:0;hyphens:auto;line-height:20px;min-height:32px;width:38%}.dataforms-layouts-regular__field-label--label-position-side{align-self:center}.dataforms-layouts-regular__field-label .components-base-control__label{margin-bottom:0}.dataforms-layouts-regular__field-control{align-items:center;display:flex;flex-grow:1;min-height:32px}.dataforms-layouts-card__field-header-label{font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:15px;font-weight:499;line-height:20px}.dataforms-layouts-card__field{width:100%}.dataforms-layouts-card__field-description{color:#757575;display:block;font-size:13px;margin-bottom:16px}.dataforms-layouts-card__field-summary{align-items:center;display:flex;flex-direction:row;gap:16px}.dataforms-layouts-details__summary-content{display:inline-flex;min-height:24px}.dataforms-layouts-details__content{padding-top:12px}.dataforms-layouts-row__field-control{width:100%}.dataforms-layouts__wrapper{font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:13px;font-weight:400;line-height:20px}@container (width < 500px){.jp-forms-dataviews__view-actions{--wp-ui-stack-justify:flex-start;align-items:flex-start;flex-direction:column-reverse}}.jp-forms-dataviews__view-actions>div:not(:empty){min-height:48px}'));
+  style.setAttribute("data-wp-hash", "2cf0b0b6f3");
+  style.appendChild(document.createTextNode('.admin-ui-page{background-color:var(--wpds-color-bg-surface-neutral-strong,#fff);color:var(--wpds-color-fg-content-neutral,#1e1e1e);display:flex;flex-flow:column;height:100%;position:relative;text-wrap:pretty;z-index:1}.admin-ui-page__header{background:var(--wpds-color-bg-surface-neutral-strong,#fff);border-bottom:var(--wpds-border-width-xs,1px) solid var(--wpds-color-stroke-surface-neutral-weak,#e0e0e0);padding:var(--wpds-dimension-padding-md,12px) var(--wpds-dimension-padding-2xl,24px);position:sticky;top:0;z-index:1}.admin-ui-page__header-title{font-family:var(--wpds-font-family-heading,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-font-size-lg,15px);font-weight:var(--wpds-font-weight-medium,499);line-height:var(--wpds-font-line-height-lg,28px);margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.admin-ui-page__sidebar-toggle-slot:empty{display:none}.admin-ui-page__header-subtitle{color:var(--wpds-color-fg-content-neutral-weak,#6d6d6d);font-size:var(--wpds-font-size-md,13px);line-height:var(--wpds-font-line-height-md,24px);margin:0;padding-block-end:var(--wpds-dimension-padding-xs,4px)}.admin-ui-page__content{display:flex;flex-direction:column;flex-grow:1;overflow:auto}.admin-ui-page__content.has-padding{padding:var(--wpds-dimension-padding-lg,16px) var(--wpds-dimension-padding-2xl,24px)}.show-icon-labels .admin-ui-page__header-actions .components-button.has-icon{padding:0 var(--wpds-dimension-padding-xs,4px);width:auto}.show-icon-labels .admin-ui-page__header-actions .components-button.has-icon svg{display:none}.show-icon-labels .admin-ui-page__header-actions .components-button.has-icon:after{content:attr(aria-label);font-size:var(--wpds-font-size-sm,12px)}.admin-ui-breadcrumbs__list{font-family:var(--wpds-font-family-heading,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-font-size-lg,15px);font-weight:var(--wpds-font-weight-medium,499);gap:0;line-height:var(--wpds-font-line-height-lg,28px);list-style:none;margin:0;min-height:32px;padding:0}.admin-ui-breadcrumbs__list li:not(:last-child):after{content:"/";margin:0 8px}.admin-ui-breadcrumbs__list h1{font-size:inherit;line-height:inherit}.dataviews-picker-wrapper,.dataviews-wrapper{background-color:var(--wp-dataviews-color-background,#fff);box-sizing:border-box;container:dataviews-wrapper/inline-size;display:flex;flex-direction:column;font-size:13px;height:100%;line-height:1.4;scroll-padding-bottom:64px}.dataviews-filters__container,.dataviews__view-actions{background-color:inherit;box-sizing:border-box;flex-shrink:0;left:0;padding:16px 24px;position:sticky}@media not (prefers-reduced-motion){.dataviews-filters__container,.dataviews__view-actions{transition:padding .1s ease-out}}.dataviews-loading,.dataviews-no-results{align-items:center;display:flex;flex-grow:1;justify-content:center;padding:0 24px}@media not (prefers-reduced-motion){.dataviews-loading,.dataviews-no-results{transition:padding .1s ease-out}}.dataviews-no-results.is-refreshing{opacity:.5;pointer-events:none}@media not (prefers-reduced-motion){.dataviews-no-results.is-refreshing{animation:dataviews-pulse 1s ease-in-out infinite;opacity:1}}@keyframes dataviews-pulse{0%,to{opacity:1}50%{opacity:.5}}.dataviews-loading-more{text-align:center}@container (max-width: 430px){.dataviews-filters__container,.dataviews__view-actions{padding:12px 24px}}.dataviews-title-field{font-size:13px;font-weight:499;width:100%}.dataviews-title-field,.dataviews-title-field a{color:#2f2f2f;text-overflow:ellipsis;white-space:nowrap}.dataviews-title-field a{display:block;flex-grow:0;overflow:hidden;text-decoration:none}.dataviews-title-field a:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field a:focus{border-radius:2px;box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color,#007cba);color:var(--wp-admin-theme-color--rgb)}.dataviews-title-field button.components-button.is-link{color:#1e1e1e;display:block;font-weight:inherit;overflow:hidden;text-decoration:none;text-overflow:ellipsis;white-space:nowrap;width:100%}.dataviews-title-field button.components-button.is-link:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field--clickable{color:#2f2f2f;cursor:pointer}.dataviews-title-field--clickable:hover{color:var(--wp-admin-theme-color)}.dataviews-title-field--clickable:focus{border-radius:2px;box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color,#007cba);color:var(--wp-admin-theme-color--rgb)}.dataviews__view-actions--infinite-scroll{background-color:#fff;position:sticky;top:0;z-index:2}.dataviews-bulk-actions-footer__item-count{color:#1e1e1e}.dataviews-bulk-actions-footer__container{margin-right:auto;min-height:32px}.dataviews-layout__container{background-color:inherit;display:flex;flex:1;flex-direction:column;min-height:0;overflow:auto}.dataviews-filters__button{position:relative}.dataviews-filters__container{padding-top:0}.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true],.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true]:hover{opacity:0}.dataviews-filters__reset-button.dataviews-filters__reset-button[aria-disabled=true]:focus{opacity:1}.dataviews-filters__summary-popover{font-size:13px;line-height:1.4}.dataviews-filters__summary-popover .components-popover__content{border-radius:4px;max-width:250px;min-width:230px;width:100%}.dataviews-filters__summary-popover.components-dropdown__content .components-popover__content{padding:0}.dataviews-filters__summary-operators-container{padding:8px 16px}.dataviews-filters__summary-operators-container:has(+.dataviews-filters__search-widget-listbox),.dataviews-filters__summary-operators-container:has(+.dataviews-filters__search-widget-no-elements),.dataviews-filters__summary-operators-container:has(+.dataviews-filters__user-input-widget){border-bottom:1px solid #e0e0e0}.dataviews-filters__summary-operators-container:empty{display:none}.dataviews-filters__summary-operators-container .dataviews-filters__summary-operators-filter-name{color:#757575;flex-shrink:0;max-width:calc(100% - 55px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dataviews-filters__summary-operators-container .dataviews-filters__summary-operators-filter-select{overflow:hidden;white-space:nowrap;width:100%}.dataviews-filters__summary-chip-container{position:relative;white-space:pre-wrap}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip{align-items:center;background:#f0f0f0;border:1px solid #0000;border-radius:16px;box-sizing:border-box;color:#2f2f2f;cursor:pointer;display:flex;min-height:32px;padding:4px 12px;position:relative}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.is-not-clickable{cursor:default}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-reset{padding-inline-end:28px}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:focus-visible,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:hover:not(.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.is-not-clickable),.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip[aria-expanded=true]{background:#e0e0e0;color:#1e1e1e}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values{background:rgba(var(--wp-admin-theme-color--rgb),.04);color:var(--wp-admin-theme-color)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values:hover,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip.has-values[aria-expanded=true]{background:rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip:focus-visible{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);outline:none}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip .dataviews-filters-__summary-filter-text-name{font-weight:499}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove{align-items:center;background:#0000;border:0;border-radius:50%;cursor:pointer;display:flex;height:24px;justify-content:center;padding:0;position:absolute;right:4px;top:50%;transform:translateY(-50%);width:24px}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove svg{fill:#757575}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:hover{background:#e0e0e0}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus svg,.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:hover svg{fill:#1e1e1e}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove.has-values svg{fill:var(--wp-admin-theme-color)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove.has-values:hover{background:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-filters__summary-chip-container .dataviews-filters__summary-chip-remove:focus-visible{box-shadow:0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);outline:none}.dataviews-filters__search-widget-filter-combobox-list{border-top:1px solid #e0e0e0;max-height:184px;overflow:auto;padding:4px}.dataviews-filters__search-widget-filter-combobox-list .dataviews-filters__search-widget-filter-combobox-item-value [data-user-value]{font-weight:600}.dataviews-filters__search-widget-listbox{overflow:auto;padding:4px}.dataviews-filters__search-widget-listitem{align-items:center;border-radius:2px;box-sizing:border-box;cursor:default;display:flex;font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:13px;font-weight:400;gap:8px;line-height:20px;min-height:32px;padding:4px 12px}.dataviews-filters__search-widget-listitem:last-child{margin-block-end:0}.dataviews-filters__search-widget-listitem:focus,.dataviews-filters__search-widget-listitem:hover,.dataviews-filters__search-widget-listitem[data-active-item]{background-color:var(--wp-admin-theme-color);color:#fff}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-description,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-description,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-description{color:#fff}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-single-selection,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-single-selection,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-single-selection{background:#fff;border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-single-selection.is-selected,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-single-selection.is-selected,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-single-selection.is-selected{background:var(--wp-admin-theme-color-darker-20,#183ad6);border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-multi-selection,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-multi-selection,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-multi-selection{border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem:focus .dataviews-filters__search-widget-listitem-multi-selection.is-selected,.dataviews-filters__search-widget-listitem:hover .dataviews-filters__search-widget-listitem-multi-selection.is-selected,.dataviews-filters__search-widget-listitem[data-active-item] .dataviews-filters__search-widget-listitem-multi-selection.is-selected{background:var(--wp-admin-theme-color-darker-20,#183ad6);border-color:var(--wp-admin-theme-color-darker-20,#183ad6)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-value{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-description{color:#757575;display:block;font-size:12px;line-height:16px;overflow:hidden;text-overflow:ellipsis}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{border:1px solid #1e1e1e;border-radius:50%;height:24px;margin-right:12px;max-width:24px;min-width:24px;position:relative;transition:none;width:24px}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{height:16px;max-width:16px;min-width:16px;width:16px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked:before{background-color:#fff;border:4px solid #fff;box-sizing:inherit;height:12px;left:50%;margin:0;position:absolute;top:50%;transform:translate(-50%,-50%);width:12px}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked:before{height:8px;width:8px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection:checked{background:var(--wp-admin-theme-color);border:none}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection{margin:0;padding:0}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected{background:var(--wp-admin-theme-color,#3858e9);border-color:var(--wp-admin-theme-color,#3858e9)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected:before{background-color:#fff;border:4px solid #fff;border-radius:50%;box-sizing:inherit;content:"";height:12px;left:50%;margin:0;position:absolute;top:50%;transform:translate(-50%,-50%);width:12px}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-single-selection.is-selected:before{height:8px;width:8px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{--checkbox-size:24px;border:1px solid #949494;border-radius:2px;box-shadow:0 0 0 #0000;flex-shrink:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:16px;line-height:normal;margin-right:12px;padding:6px 8px;transition:none}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{font-size:13px;line-height:normal}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:focus{border-color:var(--wp-admin-theme-color);box-shadow:0 0 0 .5px var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection::placeholder{color:#1e1e1e9e}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:focus{box-shadow:0 0 0 2px #fff,0 0 0 4px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked{background:var(--wp-admin-theme-color);border-color:var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked:before,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{color:#fff;margin:-3px -5px}@media (min-width:782px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:checked:before,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{margin:-4px 0 0 -5px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]{background:var(--wp-admin-theme-color);border-color:var(--wp-admin-theme-color)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{content:"\\f460";display:inline-block;float:left;font:normal 30px/1 dashicons;vertical-align:middle;width:16px;speak:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (min-width:782px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-checked=mixed]:before{float:none;font-size:21px}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection:disabled,.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection[aria-disabled=true]{background:#f0f0f0;border-color:#ddd;cursor:default;opacity:1}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{background:#fff;color:#1e1e1e;height:var(--checkbox-size);margin:0;padding:0;position:relative;width:var(--checkbox-size)}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{--checkbox-size:16px}}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection{transition:border-color .1s ease-in-out}}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected{background:var(--wp-admin-theme-color,#3858e9);border-color:var(--wp-admin-theme-color,#3858e9)}.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected svg{--checkmark-size:var(--checkbox-size);fill:#fff;height:var(--checkmark-size);left:50%;position:absolute;top:50%;transform:translate(-50%,-50%);width:var(--checkmark-size)}@media (min-width:600px){.dataviews-filters__search-widget-listitem .dataviews-filters__search-widget-listitem-multi-selection.is-selected svg{--checkmark-size:calc(var(--checkbox-size) + 4px)}}.dataviews-filters__search-widget-filter-combobox__wrapper{padding:8px;position:relative}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{border:1px solid #949494;border-radius:2px;box-shadow:0 0 0 #0000;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;line-height:normal;padding:6px 8px}@media not (prefers-reduced-motion){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{transition:box-shadow .1s linear}}@media (min-width:600px){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{font-size:13px;line-height:normal}}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input:focus{border-color:var(--wp-admin-theme-color);box-shadow:0 0 0 .5px var(--wp-admin-theme-color);outline:2px solid #0000}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::placeholder{color:#1e1e1e9e}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{display:block;font-size:16px;height:32px;margin-left:0;margin-right:0;padding:0 8px 0 32px;width:100%}@media (min-width:600px){.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input{font-size:13px}}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input:focus{background:#fff;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::placeholder{color:#757575}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-cancel-button,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-decoration,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-results-button,.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__input::-webkit-search-results-decoration{-webkit-appearance:none}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__icon{align-items:center;bottom:0;display:flex;inset-inline-start:12px;justify-content:center;position:absolute;top:0;width:24px}.dataviews-filters__search-widget-filter-combobox__wrapper .dataviews-filters__search-widget-filter-combobox__icon:dir(ltr){transform:scaleX(-1)}.dataviews-filters__container-visibility-toggle{flex-shrink:0;position:relative}.dataviews-filters-toggle__count{background:var(--wp-admin-theme-color,#3858e9);border-radius:8px;box-sizing:border-box;color:#fff;font-size:11px;height:16px;line-height:16px;min-width:16px;outline:var(--wp-admin-border-width-focus) solid #fff;padding:0 4px;position:absolute;right:0;text-align:center;top:0;transform:translate(50%,-50%)}.dataviews-search{width:fit-content}.dataviews-filters__user-input-widget{padding:16px}.dataviews-filters__user-input-widget .components-input-control__prefix{padding-left:8px}.dataviews-filters__search-widget-no-elements{align-items:center;display:flex;justify-content:center;padding:16px}.dataviews-footer{background-color:inherit;border-top:1px solid #f0f0f0;bottom:0;flex-shrink:0;left:0;padding:12px 24px;position:sticky}@media not (prefers-reduced-motion){.dataviews-footer{transition:padding .1s ease-out}}.dataviews-footer{z-index:2}.dataviews-footer .is-refreshing{opacity:.5;pointer-events:none}@media not (prefers-reduced-motion){.dataviews-footer .is-refreshing{animation:dataviews-pulse 1s ease-in-out infinite;opacity:1}}@container (max-width: 560px){.dataviews-footer__content{flex-direction:column!important}.dataviews-footer__content .dataviews-bulk-actions-footer__container{width:100%}.dataviews-footer__content .dataviews-bulk-actions-footer__item-count{flex-grow:1}.dataviews-footer__content .dataviews-pagination{justify-content:space-between;width:100%}}.dataviews-pagination__page-select{font-size:11px;font-weight:499;text-transform:uppercase}@media (min-width:600px){.dataviews-pagination__page-select .components-select-control__input{font-size:11px!important;font-weight:499}}.dataviews-action-modal{z-index:1000001}.dataviews-item-actions .components-button:not(.dataviews-all-actions-button){padding:0 4px}.dataviews-selection-checkbox{--checkbox-input-size:24px}@media (min-width:600px){.dataviews-selection-checkbox{--checkbox-input-size:16px}}.dataviews-selection-checkbox{flex-shrink:0;line-height:0}.dataviews-selection-checkbox .components-checkbox-control__input-container{margin:0}.dataviews-view-config{container-type:inline-size;font-size:13px;line-height:1.4;width:320px}.dataviews-config__popover.is-expanded .dataviews-config__popover-content-wrapper{height:100%;overflow-y:scroll}.dataviews-config__popover.is-expanded .dataviews-config__popover-content-wrapper .dataviews-view-config{width:auto}.dataviews-view-config__sort-direction .components-toggle-group-control-option-base{text-transform:uppercase}.dataviews-settings-section__title.dataviews-settings-section__title{font-size:15px;line-height:24px}.dataviews-settings-section__sidebar{grid-column:span 4}.dataviews-settings-section__content,.dataviews-settings-section__content>*{grid-column:span 8}.dataviews-settings-section__content .is-divided-in-two{display:contents}.dataviews-settings-section__content .is-divided-in-two>*{grid-column:span 4}.dataviews-settings-section:has(.dataviews-settings-section__content:empty){display:none}@container (max-width: 500px){.dataviews-settings-section.dataviews-settings-section{grid-template-columns:repeat(2,1fr)}.dataviews-settings-section.dataviews-settings-section .dataviews-settings-section__content,.dataviews-settings-section.dataviews-settings-section .dataviews-settings-section__sidebar{grid-column:span 2}}.dataviews-view-config__sort-controls>*{flex:1}.dataviews-view-config__label{text-wrap:nowrap}.dataviews-view-config__toggle-wrapper{display:inline-flex;position:relative}.dataviews-view-config__modified-indicator{background:var(--wp-admin-theme-color,#3858e9);border-radius:50%;height:4px;pointer-events:none;position:absolute;right:4px;top:4px;width:4px}.dataviews-view-grid-items{container-type:inline-size;display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));grid-template-rows:max-content;margin-bottom:auto;padding:0 24px 24px}@media not (prefers-reduced-motion){.dataviews-view-grid-items{transition:padding .1s ease-out}}.dataviews-view-grid-items.has-compact-density{gap:16px}.dataviews-view-grid-items.has-comfortable-density{gap:32px}.dataviews-view-grid{container-type:inline-size;display:flex;flex-direction:column;gap:24px;margin-bottom:auto;padding:0 24px 24px}@media not (prefers-reduced-motion){.dataviews-view-grid{transition:padding .1s ease-out}}.dataviews-view-grid.has-compact-density,.dataviews-view-grid.has-compact-density .dataviews-view-grid__row{gap:16px}.dataviews-view-grid.has-comfortable-density,.dataviews-view-grid.has-comfortable-density .dataviews-view-grid__row{gap:32px}.dataviews-view-grid .dataviews-view-grid__row{display:grid;gap:24px}.dataviews-view-grid .dataviews-view-grid__row .dataviews-view-grid__row__gridcell{border-radius:4px;position:relative}.dataviews-view-grid .dataviews-view-grid__row .dataviews-view-grid__row__gridcell[data-focus-visible]:after{border-radius:4px;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);content:"";height:100%;left:0;outline:2px solid #0000;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-grid .dataviews-view-grid__card,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__card{height:100%;justify-content:flex-start;position:relative}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__card .dataviews-view-grid__title{padding:8px 0 4px}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-field,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__card .dataviews-view-grid__title-field{align-content:center;min-height:24px;overflow:hidden;text-align:start}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__title-field--clickable,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__card .dataviews-view-grid__title-field--clickable{width:fit-content}.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-value,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__card.is-selected .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-value{color:#1e1e1e}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__media:focus:after,.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__media:after,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__card .dataviews-view-grid__media:focus:after,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__card.is-selected .dataviews-view-grid__media:after{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-grid .dataviews-view-grid__card.is-selected .dataviews-view-grid__media:after,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__card.is-selected .dataviews-view-grid__media:after{box-shadow:inset 0 0 0 1px var(--wp-admin-theme-color)}.dataviews-view-grid .dataviews-view-grid__card .dataviews-view-grid__media:focus:after,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__card .dataviews-view-grid__media:focus:after{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-view-grid .dataviews-view-grid__media,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__media{aspect-ratio:1/1;background-color:#fff;border-radius:4px;overflow:hidden;position:relative;width:100%}.dataviews-view-grid .dataviews-view-grid__media.dataviews-view-grid__media--placeholder,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__media.dataviews-view-grid__media--placeholder{aspect-ratio:3/1}.dataviews-view-grid .dataviews-view-grid__media img,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__media img{height:100%;object-fit:cover;width:100%}.dataviews-view-grid .dataviews-view-grid__media:after,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-grid .dataviews-view-grid__media .dataviews-view-grid__media-placeholder,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__media .dataviews-view-grid__media-placeholder{background:#f0f0f0;border-radius:4px;box-shadow:none;display:block;height:100%;width:100%}.dataviews-view-grid .dataviews-view-grid__fields,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__fields{font-size:12px;line-height:16px;position:relative}.dataviews-view-grid .dataviews-view-grid__fields:not(:empty),.dataviews-view-grid-infinite-scroll .dataviews-view-grid__fields:not(:empty){padding:0 0 12px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field-value:not(:empty),.dataviews-view-grid-infinite-scroll .dataviews-view-grid__fields .dataviews-view-grid__field-value:not(:empty){line-height:20px;min-height:24px;padding-top:2px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__fields .dataviews-view-grid__field{align-items:center;min-height:24px}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-name,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-name{color:#757575;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:35%}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-value,.dataviews-view-grid-infinite-scroll .dataviews-view-grid__fields .dataviews-view-grid__field .dataviews-view-grid__field-value{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:65%}.dataviews-view-grid .dataviews-view-grid__fields .dataviews-view-grid__field:not(:has(.dataviews-view-grid__field-value:not(:empty))),.dataviews-view-grid-infinite-scroll .dataviews-view-grid__fields .dataviews-view-grid__field:not(:has(.dataviews-view-grid__field-value:not(:empty))){display:none}.dataviews-view-grid .dataviews-view-grid__badge-fields:not(:empty),.dataviews-view-grid-infinite-scroll .dataviews-view-grid__badge-fields:not(:empty){padding-bottom:12px}.dataviews-view-grid-infinite-scroll.is-refreshing,.dataviews-view-grid.is-refreshing{opacity:.5;pointer-events:none}@media not (prefers-reduced-motion){.dataviews-view-grid-infinite-scroll.is-refreshing,.dataviews-view-grid.is-refreshing{animation:dataviews-pulse 1s ease-in-out infinite;opacity:1}}.dataviews-view-grid__field-value:empty,.dataviews-view-grid__field:empty{display:none}.dataviews-view-grid__card .dataviews-selection-checkbox{left:8px;opacity:0;position:absolute;top:-9999em;z-index:1}@media not (prefers-reduced-motion){.dataviews-view-grid__card .dataviews-selection-checkbox{transition:opacity .1s linear}}@media (hover:none){.dataviews-view-grid__card .dataviews-selection-checkbox{opacity:1;top:8px}}.dataviews-view-grid__card.is-selected .dataviews-selection-checkbox,.dataviews-view-grid__card:focus-within .dataviews-selection-checkbox,.dataviews-view-grid__card:hover .dataviews-selection-checkbox{opacity:1;top:8px}.dataviews-view-grid__card .dataviews-view-grid__media-actions{opacity:0;position:absolute;right:4px;top:4px;z-index:1}.dataviews-view-grid__card .dataviews-view-grid__media-actions .dataviews-all-actions-button{background-color:#fff}@media not (prefers-reduced-motion){.dataviews-view-grid__card .dataviews-view-grid__media-actions{transition:opacity .1s linear}}@media (hover:none){.dataviews-view-grid__card .dataviews-view-grid__media-actions{opacity:1;top:4px}}.dataviews-view-grid__card .dataviews-view-grid__media-actions:has(.dataviews-all-actions-button[aria-expanded=true]),.dataviews-view-grid__card:focus-within .dataviews-view-grid__media-actions,.dataviews-view-grid__card:hover .dataviews-view-grid__media-actions{opacity:1}.dataviews-view-grid__media--clickable{cursor:pointer}.dataviews-view-grid__group-header{color:#1e1e1e;container-type:inline-size;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 24px}div.dataviews-view-list{list-style-type:none}.dataviews-view-list{margin:0 0 auto}.dataviews-view-list div[role=article],.dataviews-view-list div[role=row]{border-top:1px solid #f0f0f0;margin:0}.dataviews-view-list div[role=article] .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row] .dataviews-view-list__item-wrapper{box-sizing:border-box;padding:16px 24px;position:relative}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions{display:flex;flex:0 0 auto;gap:4px;white-space:nowrap;width:max-content}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions .components-button,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions .components-button{position:relative;z-index:1}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>div,.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>div{height:24px}.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>:not(:last-child){flex:0;overflow:hidden;width:0}.dataviews-view-list div[role=article]:where(.is-selected,.is-hovered,:focus-within) .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row]:where(.is-selected,.is-hovered,:focus-within) .dataviews-view-list__item-actions>:not(:last-child){flex-basis:min-content;overflow:unset;width:auto}@media (hover:none){.dataviews-view-list div[role=article] .dataviews-view-list__item-actions>:not(:last-child),.dataviews-view-list div[role=row] .dataviews-view-list__item-actions>:not(:last-child){flex-basis:min-content;overflow:unset;width:auto}}.dataviews-view-list div[role=article].is-selected.is-selected,.dataviews-view-list div[role=article].is-selected.is-selected+div[role=article],.dataviews-view-list div[role=article].is-selected.is-selected+div[role=row],.dataviews-view-list div[role=row].is-selected.is-selected,.dataviews-view-list div[role=row].is-selected.is-selected+div[role=article],.dataviews-view-list div[role=row].is-selected.is-selected+div[role=row]{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered,.dataviews-view-list div[role=article]:not(.is-selected):focus-within,.dataviews-view-list div[role=article]:not(.is-selected):hover,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered,.dataviews-view-list div[role=row]:not(.is-selected):focus-within,.dataviews-view-list div[role=row]:not(.is-selected):hover{background-color:rgba(var(--wp-admin-theme-color--rgb),.04);border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12);color:var(--wp-admin-theme-color)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected).is-hovered+div[role=row],.dataviews-view-list div[role=article]:not(.is-selected):focus-within+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected):focus-within+div[role=row],.dataviews-view-list div[role=article]:not(.is-selected):hover+div[role=article],.dataviews-view-list div[role=article]:not(.is-selected):hover+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected).is-hovered+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected).is-hovered+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected):focus-within+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected):focus-within+div[role=row],.dataviews-view-list div[role=row]:not(.is-selected):hover+div[role=article],.dataviews-view-list div[role=row]:not(.is-selected):hover+div[role=row]{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-list div[role=article]:not(.is-selected).is-hovered .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected).is-hovered .dataviews-view-list__field,.dataviews-view-list div[role=article]:not(.is-selected):focus-within .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected):focus-within .dataviews-view-list__field,.dataviews-view-list div[role=article]:not(.is-selected):hover .dataviews-title-field,.dataviews-view-list div[role=article]:not(.is-selected):hover .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected).is-hovered .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected):focus-within .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected):focus-within .dataviews-view-list__field,.dataviews-view-list div[role=row]:not(.is-selected):hover .dataviews-title-field,.dataviews-view-list div[role=row]:not(.is-selected):hover .dataviews-view-list__field{color:var(--wp-admin-theme-color)}.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper{background-color:rgba(var(--wp-admin-theme-color--rgb),.08);color:#1e1e1e}.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=article].is-selected .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=article].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=row].is-selected .dataviews-view-list__item-wrapper .dataviews-view-list__field,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-title-field,.dataviews-view-list div[role=row].is-selected:focus-within .dataviews-view-list__item-wrapper .dataviews-view-list__field{color:#1e1e1e}.dataviews-view-list .dataviews-view-list__item{appearance:none;background:none;border:none;cursor:pointer;inset:0;padding:0;position:absolute;scroll-margin:8px 0;z-index:1}.dataviews-view-list .dataviews-view-list__item:focus-visible{outline:none}.dataviews-view-list .dataviews-view-list__item:focus-visible:before{border-radius:2px;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color);content:"";inset:var(--wp-admin-border-width-focus);outline:2px solid #0000;position:absolute}.dataviews-view-list .dataviews-view-list__title-field{flex:1;line-height:24px;min-height:24px;overflow:hidden}.dataviews-view-list .dataviews-view-list__title-field:has(a,button){z-index:1}.dataviews-view-list .dataviews-view-list__media-wrapper{background-color:#fff;border-radius:4px;flex-shrink:0;height:52px;overflow:hidden;position:relative;width:52px}.dataviews-view-list .dataviews-view-list__media-wrapper img{height:100%;object-fit:cover;width:100%}.dataviews-view-list .dataviews-view-list__media-wrapper:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.dataviews-view-list .dataviews-view-list__field-wrapper{flex-grow:1;min-width:0}.dataviews-view-list .dataviews-view-list__field{color:#757575}.dataviews-view-list .dataviews-view-list__fields{display:flex;flex-wrap:wrap;font-size:12px;gap:12px;row-gap:4px}.dataviews-view-list .dataviews-view-list__fields .dataviews-view-list__field:has(.dataviews-view-list__field-value:empty),.dataviews-view-list .dataviews-view-list__fields:empty{display:none}.dataviews-view-list .dataviews-view-list__fields .dataviews-view-list__field-value{align-items:center;display:flex;line-height:20px;min-height:24px}.dataviews-view-list+.dataviews-pagination{justify-content:space-between}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__item-wrapper{padding:8px 24px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__title-field{line-height:16px;min-height:16px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__media-wrapper{height:32px;width:32px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__fields{gap:8px;row-gap:4px}.dataviews-view-list.has-compact-density div[role=row] .dataviews-view-list__fields .dataviews-view-list__field-value{line-height:16px;min-height:16px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__item-wrapper{padding:24px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__title-field{line-height:32px;min-height:32px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__media-wrapper{height:64px;width:64px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__fields{gap:16px;row-gap:8px}.dataviews-view-list.has-comfortable-density div[role=row] .dataviews-view-list__fields .dataviews-view-list__field-value{line-height:24px;min-height:32px}.dataviews-view-list.is-refreshing{opacity:.5;pointer-events:none}@media not (prefers-reduced-motion){.dataviews-view-list.is-refreshing{animation:dataviews-pulse 1s ease-in-out infinite;opacity:1}}.dataviews-view-list__group-header{color:#1e1e1e;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 24px}.dataviews-view-table{background-color:inherit;border-collapse:collapse;border-color:inherit;color:#757575;margin-bottom:auto;position:relative;text-indent:0;width:100%}.dataviews-view-table th{color:#1e1e1e;font-size:13px;font-weight:400;text-align:left}.dataviews-view-table td,.dataviews-view-table th{padding:12px}.dataviews-view-table td.dataviews-view-table__actions-column,.dataviews-view-table th.dataviews-view-table__actions-column{text-align:right}.dataviews-view-table td.dataviews-view-table__actions-column--sticky,.dataviews-view-table th.dataviews-view-table__actions-column--sticky{background-color:var(--wp-dataviews-color-background,#fff);position:sticky;right:0}.dataviews-view-table td.dataviews-view-table__actions-column--stuck:after,.dataviews-view-table th.dataviews-view-table__actions-column--stuck:after{background-color:#f0f0f0;bottom:0;content:"";display:block;left:0;position:absolute;top:0;width:1px}.dataviews-view-table td.dataviews-view-table__checkbox-column,.dataviews-view-table th.dataviews-view-table__checkbox-column{padding-right:0}.dataviews-view-table td.dataviews-view-table__checkbox-column .dataviews-view-table__cell-content-wrapper,.dataviews-view-table th.dataviews-view-table__checkbox-column .dataviews-view-table__cell-content-wrapper{max-width:auto;min-width:auto}.dataviews-view-table tr{background-color:inherit;border-top:1px solid #f0f0f0}.dataviews-view-table tr td:first-child,.dataviews-view-table tr th:first-child{padding-left:24px}.dataviews-view-table tr td:last-child,.dataviews-view-table tr th:last-child{padding-right:24px}.dataviews-view-table tr:last-child{border-bottom:0}.dataviews-view-table tr .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:0}@media (hover:none){.dataviews-view-table tr .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:1}}.dataviews-view-table tr.is-selected{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff);color:#757575}.dataviews-view-table tr.is-selected,.dataviews-view-table tr.is-selected+tr{border-top:1px solid rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-table tr.is-selected .dataviews-view-table__actions-column--sticky{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff)}.dataviews-view-table tr.is-hovered .dataviews-item-actions .components-button:not(.dataviews-all-actions-button),.dataviews-view-table tr:focus-within .dataviews-item-actions .components-button:not(.dataviews-all-actions-button),.dataviews-view-table tr:hover .dataviews-item-actions .components-button:not(.dataviews-all-actions-button){opacity:1}.dataviews-view-table.has-bulk-actions tr:focus-within .dataviews-view-table__actions-column--sticky,.dataviews-view-table.has-bulk-actions tr:hover .dataviews-view-table__actions-column--sticky{background-color:var(--wp-dataviews-color-background,#fff)}.dataviews-view-table.has-bulk-actions tr.is-selected .dataviews-view-table__actions-column--sticky,.dataviews-view-table.has-bulk-actions tr.is-selected:hover .dataviews-view-table__actions-column--sticky{background-color:color-mix(in srgb,rgb(var(--wp-admin-theme-color--rgb)) 4%,#fff)}.dataviews-view-table thead{background-color:inherit;inset-block-start:0;position:sticky;z-index:1}.dataviews-view-table thead.dataviews-view-table__thead--stuck:after{background-color:#f0f0f0;bottom:0;content:"";display:block;height:1px;left:0;position:absolute;right:0}.dataviews-view-table thead tr{border:0}.dataviews-view-table thead th{background-color:inherit;font-size:11px;font-weight:499;padding-bottom:8px;padding-top:8px;text-transform:uppercase}.dataviews-view-table thead th:has(.dataviews-view-table-header-button){padding-left:4px;padding-right:4px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button) .dataviews-view-table-header-button{gap:4px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button):first-child{padding-left:16px}.dataviews-view-table thead th:has(.dataviews-view-table-header-button):last-child{padding-right:16px}.dataviews-view-table tbody td{vertical-align:top}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper{align-items:center;display:flex;min-height:32px;white-space:nowrap}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper.dataviews-view-table__cell-align-end{font-variant-numeric:tabular-nums;justify-content:flex-end}.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper.dataviews-view-table__cell-align-center{justify-content:center}.dataviews-view-table tbody .components-v-stack>.dataviews-view-table__cell-content-wrapper:not(:first-child){min-height:0}.dataviews-view-table .dataviews-view-table-header-button{font-size:11px;font-weight:499;padding:4px 8px;text-transform:uppercase}.dataviews-view-table .dataviews-view-table-header-button:not(:hover){color:#1e1e1e}.dataviews-view-table .dataviews-view-table-header-button span{speak:none}.dataviews-view-table .dataviews-view-table-header-button span:empty{display:none}.dataviews-view-table .dataviews-view-table-header{padding-left:4px}.dataviews-view-table .dataviews-view-table__actions-column{white-space:nowrap;width:auto}.dataviews-view-table.has-compact-density thead th:has(.dataviews-view-table-header-button):not(:first-child){padding-left:0}.dataviews-view-table.has-compact-density thead th:has(.dataviews-view-table-header-button):not(:last-child){padding-right:0}.dataviews-view-table.has-compact-density td,.dataviews-view-table.has-compact-density th{padding:4px 8px}.dataviews-view-table.has-comfortable-density td,.dataviews-view-table.has-comfortable-density th{padding:16px 12px}.dataviews-view-table.has-comfortable-density td.dataviews-view-table__checkbox-column,.dataviews-view-table.has-comfortable-density th.dataviews-view-table__checkbox-column,.dataviews-view-table.has-compact-density td.dataviews-view-table__checkbox-column,.dataviews-view-table.has-compact-density th.dataviews-view-table__checkbox-column{padding-right:0}.dataviews-view-table-selection-checkbox{--checkbox-input-size:24px}@media (min-width:600px){.dataviews-view-table-selection-checkbox{--checkbox-input-size:16px}}.dataviews-column-primary__media{background-color:#fff;border-radius:4px;flex-shrink:0;max-width:60px;min-height:32px;min-width:32px;overflow:hidden;position:relative}.dataviews-column-primary__media img{height:32px;object-fit:cover;width:32px}.dataviews-column-primary__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.dataviews-view-table__cell-content-wrapper:not(.dataviews-column-primary__media),.dataviews-view-table__primary-column-content:not(.dataviews-column-primary__media){max-width:80ch;min-width:15ch}.dataviews-view-table__group-header-row .dataviews-view-table__group-header-cell{color:#1e1e1e;font-weight:499;padding:12px 24px}.dataviews-view-table col[class^=dataviews-view-table__col-]:not(.dataviews-view-table__col-first-data):not(.dataviews-view-table__col-expand){width:1%}.dataviews-view-table.is-refreshing{opacity:.5;pointer-events:none}@media not (prefers-reduced-motion){.dataviews-view-table.is-refreshing{animation:dataviews-pulse 1s ease-in-out infinite;opacity:1}}.dataviews-view-picker-grid.has-compact-density .dataviews-view-grid-items{gap:16px}.dataviews-view-picker-grid.has-comfortable-density .dataviews-view-grid-items{gap:32px}.dataviews-view-picker-grid .dataviews-view-picker-grid__card{height:100%;justify-content:flex-start;position:relative}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-actions{padding:8px 0 4px}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-field{align-content:center;min-height:24px;overflow:hidden;text-align:start}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__title-field--clickable{width:fit-content}.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-value{color:#1e1e1e}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__media:focus:after,.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__media:after{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-picker-grid .dataviews-view-picker-grid__card.is-selected .dataviews-view-picker-grid__media:after{box-shadow:inset 0 0 0 1px var(--wp-admin-theme-color)}.dataviews-view-picker-grid .dataviews-view-picker-grid__card .dataviews-view-picker-grid__media:focus:after{box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-admin-theme-color)}.dataviews-view-picker-grid:focus-visible[aria-activedescendant]{outline:none}.dataviews-view-picker-grid:focus-visible [data-active-item=true]{outline:2px solid var(--wp-admin-theme-color)}.dataviews-view-picker-grid .dataviews-selection-checkbox{top:8px!important}.dataviews-view-picker-grid .dataviews-selection-checkbox input{pointer-events:none}.dataviews-view-picker-grid .dataviews-view-picker-grid__media{aspect-ratio:1/1;background-color:#fff;border-radius:4px;min-height:0;position:relative;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__media img{height:100%;object-fit:cover;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__media:after{border-radius:4px;box-shadow:inset 0 0 0 1px #0000001a;content:"";height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields{font-size:12px;line-height:16px;position:relative}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields:not(:empty){padding:0 0 12px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field-value:not(:empty){line-height:20px;min-height:24px;padding-top:2px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field{align-items:center;min-height:24px}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-name{color:#757575;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:35%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field .dataviews-view-picker-grid__field-value{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:65%}.dataviews-view-picker-grid .dataviews-view-picker-grid__fields .dataviews-view-picker-grid__field:not(:has(.dataviews-view-picker-grid__field-value:not(:empty))){display:none}.dataviews-view-picker-grid .dataviews-view-picker-grid__badge-fields:not(:empty){padding-bottom:12px}.dataviews-view-picker-grid__field-value:empty,.dataviews-view-picker-grid__field:empty{display:none}.dataviews-view-picker-grid__card .dataviews-selection-checkbox{left:8px;position:absolute;top:-9999em;z-index:1}@media (hover:none){.dataviews-view-picker-grid__card .dataviews-selection-checkbox{top:8px}}.dataviews-view-picker-grid__card.is-selected .dataviews-selection-checkbox,.dataviews-view-picker-grid__card:focus-within .dataviews-selection-checkbox,.dataviews-view-picker-grid__card:hover .dataviews-selection-checkbox{top:8px}.dataviews-view-picker-grid__media--clickable{cursor:pointer}.dataviews-view-picker-grid-group__header{color:#1e1e1e;font-size:15px;font-weight:499;margin:0 0 8px;padding:0 48px}.dataviews-view-picker-table{background-color:inherit}.dataviews-view-picker-table .dataviews-view-table__checkbox-column{width:48px}.dataviews-view-picker-table tbody:focus-visible[aria-activedescendant]{outline:none}.dataviews-view-picker-table tbody:focus-visible [data-active-item=true]{outline:2px solid var(--wp-admin-theme-color)}.dataviews-view-picker-table .dataviews-selection-checkbox .components-checkbox-control__input.components-checkbox-control__input{opacity:1;pointer-events:none}.dataviews-view-picker-table .dataviews-view-table__row{cursor:pointer}.dataviews-view-picker-table .dataviews-view-table__row.is-selected{background-color:rgba(var(--wp-admin-theme-color--rgb),.04)}.dataviews-view-picker-table .dataviews-view-table__row.is-hovered{background-color:rgba(var(--wp-admin-theme-color--rgb),.08)}.dataviews-view-picker-table .dataviews-view-table__row.is-selected.is-hovered{background-color:rgba(var(--wp-admin-theme-color--rgb),.12)}.dataviews-view-activity{margin:0 0 auto;padding:8px 24px}.dataviews-view-activity .dataviews-view-activity__group-header{color:#949494;font-size:15px;font-weight:499;margin:0 0 8px;padding:0}.dataviews-view-activity .dataviews-view-activity__item-actions{min-width:24px}.dataviews-view-activity .dataviews-view-activity__item-content{flex-grow:1}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-description,.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields,.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title{min-height:16px}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title{align-items:center;display:flex;flex:1;overflow:hidden;position:relative}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title--clickable{cursor:pointer}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-title--clickable:focus-visible{border-radius:2px;outline:var(--wp-admin-border-width-focus) solid var(--wp-admin-theme-color);outline-offset:var(--wp-admin-border-width-focus)}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__primary-actions{display:flex;flex:0 0 auto;width:max-content}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__primary-actions .components-button{position:relative;z-index:1}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields{color:#757575;display:flex;flex-wrap:wrap;gap:12px;row-gap:4px}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields .dataviews-view-activity__item-field:has(.dataviews-view-activity__item-field-value:empty),.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields:empty{display:none}.dataviews-view-activity .dataviews-view-activity__item-content .dataviews-view-activity__item-fields .dataviews-view-activity__item-field-value{align-items:center;display:flex}.dataviews-view-activity .dataviews-view-activity__item-type{align-self:stretch;flex-shrink:0}.dataviews-view-activity .dataviews-view-activity__item-type:after{background-color:#ddd;content:"";flex:1 1 auto;margin:0 auto;width:1px}.dataviews-view-activity .dataviews-view-activity__item-type:before{background-color:#ddd;content:"";flex:0 0 auto;margin:0 auto;width:1px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type{width:8px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type:before{height:12px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-type-icon{height:11px;width:11px}.dataviews-view-activity .dataviews-view-activity__item.is-compact .dataviews-view-activity__item-content{margin:12px 0}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type{width:24px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type:before{height:12px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-type-icon{height:25px;width:25px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-content{margin:12px 0;padding-top:8px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type{width:32px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type:before{height:8px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-type-icon{height:33px;width:33px}.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-content{margin:8px 0 16px;padding-top:12px}.dataviews-view-activity .dataviews-view-activity__item.is-balanced .dataviews-view-activity__item-bullet,.dataviews-view-activity .dataviews-view-activity__item.is-comfortable .dataviews-view-activity__item-bullet{height:9px;position:relative;top:50%;transform:translateY(-50%);width:9px}.dataviews-view-activity .dataviews-view-activity__item:first-child .dataviews-view-activity__item-type:before{visibility:hidden}.dataviews-view-activity .dataviews-view-activity__group:last-of-type>.dataviews-view-activity__item:last-of-type .dataviews-view-activity__item-type:after,.dataviews-view-activity>.dataviews-view-activity__item:last-child .dataviews-view-activity__item-type:after{background:linear-gradient(180deg,#ddd 0,#ddd3 60%,#ddd0)}.dataviews-view-activity .dataviews-view-activity__item-type-icon{background-color:#fff;flex-shrink:0;overflow:hidden}.dataviews-view-activity .dataviews-view-activity__item-type-icon .dataviews-view-activity__item-bullet,.dataviews-view-activity .dataviews-view-activity__item-type-icon img,.dataviews-view-activity .dataviews-view-activity__item-type-icon svg{border-radius:50%;box-shadow:inset 0 0 0 1px #ddd;box-sizing:border-box;display:block;height:100%;margin:0 auto;object-fit:cover;width:100%}.dataviews-view-activity .dataviews-view-activity__item-type-icon svg{padding:4px}.dataviews-view-activity .dataviews-view-activity__item-type-icon .dataviews-view-activity__item-bullet{background-color:#ddd;content:""}.dataviews-view-activity.is-refreshing{opacity:.5;pointer-events:none}@media not (prefers-reduced-motion){.dataviews-view-activity.is-refreshing{animation:dataviews-pulse 1s ease-in-out infinite;opacity:1}}.dataviews-view-activity+.dataviews-pagination{justify-content:space-between}.dataviews-picker-footer__bulk-selection{align-self:flex-start;height:32px}.dataviews-picker-footer__actions{align-self:flex-end}.dataviews-controls__datetime{border:none;padding:0}.dataviews-controls__relative-date-number,.dataviews-controls__relative-date-unit{flex:1 1 50%}.dataviews-controls__date input[type=date]::-webkit-calendar-picker-indicator,.dataviews-controls__date input[type=date]::-webkit-inner-spin-button{-webkit-appearance:none;display:none}.dataviews-controls__date-range-inputs>*{min-width:0}.dataviews-controls__color-picker-dropdown{display:flex}.dataviews-controls__date-preset{border:1px solid #ddd}.dataviews-controls__date-preset:active{background-color:#000}.dataforms-layouts-panel__field-trigger{align-items:flex-start;border-radius:2px;color:inherit;cursor:pointer;display:flex;isolation:isolate;min-height:24px;position:relative;width:100%}.dataforms-layouts-panel__field-trigger--label-side{flex-direction:row;gap:var(--wpds-dimension-gap-md,12px)}.dataforms-layouts-panel__field-trigger--label-top{display:grid;grid-template-columns:1fr auto}.dataforms-layouts-panel__field-trigger--label-none{align-items:center}.dataforms-layouts-panel__field-trigger:not(.is-disabled):hover{color:var(--wp-admin-theme-color)}.dataforms-layouts-panel__field-trigger:not(.is-disabled):hover .dataforms-layouts-panel__field-trigger-icon{opacity:1}.dataforms-layouts-panel__field-trigger:not(.is-disabled):hover .dataforms-layouts-panel__field-label{color:var(--wp-admin-theme-color)}.dataforms-layouts-panel__field-trigger.is-disabled{cursor:default}.dataforms-layouts-panel__field-trigger.is-disabled .dataforms-layouts-panel__field-control{color:#757575;font-weight:var(--wpds-font-weight-regular,400)}.dataforms-layouts-panel__field-trigger--edit-always .dataforms-layouts-panel__field-trigger-icon{fill:currentColor;opacity:1}.dataforms-layouts-panel__field-trigger--edit-always .dataforms-layouts-panel__field-trigger-icon:focus-visible,.dataforms-layouts-panel__field-trigger--edit-always .dataforms-layouts-panel__field-trigger-icon:hover{fill:var(--wp-admin-theme-color)}.dataforms-layouts-panel__field-trigger-icon{border-radius:var(--wpds-border-radius-xs,1px);color:var(--wp-admin-theme-color);flex:0 0 auto;opacity:0;padding:0}.dataforms-layouts-panel__field-trigger-icon:focus-visible{opacity:1;outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wp-admin-theme-color)}.dataforms-layouts-panel__field-dropdown-anchor,.dataforms-layouts-panel__field-dropdown-anchor .components-dropdown{width:100%}.dataforms-layouts-panel__field-label{align-items:center;color:#757575;display:flex;flex-shrink:0;hyphens:auto;line-height:20px;min-height:24px;text-transform:capitalize;width:38%}.dataforms-layouts-panel__field-label .components-base-control__label{display:inline;line-height:inherit;margin-bottom:0}.dataforms-layouts-panel__field-label.has-error{color:#cc1818}.dataforms-layouts-panel__field-label-error-content{align-items:center;cursor:help;display:inline-flex;fill:#cc1818;flex-direction:row;gap:4px;position:relative;z-index:1}.dataforms-layouts-panel__field-label-error-content svg{fill:currentColor}.dataforms-layouts-panel__field-control{align-items:center;display:flex;flex-grow:1;font-weight:var(--wpds-font-weight-medium,499);line-height:var(--wpds-font-line-height-md,24px);min-height:24px;min-width:0;overflow:hidden;word-break:break-word}.dataforms-layouts-panel__field-control>*{min-width:0}.dataforms-layouts-panel__field-trigger--label-top .dataforms-layouts-panel__field-label{width:100%}.dataforms-layouts-panel__field-trigger--label-top .dataforms-layouts-panel__field-control{grid-column:1/-1}.dataforms-layouts-panel__field-trigger--label-top .dataforms-layouts-panel__field-trigger-icon{grid-column:2;grid-row:1}.dataforms-layouts-panel__field-dropdown .components-popover__content{min-width:256px;padding:16px}.dataforms-layouts-panel__dropdown-header{margin-bottom:16px}.dataforms-layouts-panel__modal-footer{margin-top:16px}.components-popover.components-dropdown__content.dataforms-layouts-panel__field-dropdown{z-index:159990}.dataforms-layouts-regular__field{align-items:flex-start!important;justify-content:flex-start!important;min-height:32px;width:100%}.dataforms-layouts-regular__field .components-base-control__label,.dataforms-layouts-regular__field .components-form-token-field__label,.dataforms-layouts-regular__field .components-input-control__label{color:#1e1e1e}.dataforms-layouts-regular__field-label{align-items:center;display:flex;flex-shrink:0;hyphens:auto;line-height:20px;min-height:32px;width:38%}.dataforms-layouts-regular__field-label--label-position-side{align-self:center}.dataforms-layouts-regular__field-label .components-base-control__label{margin-bottom:0}.dataforms-layouts-regular__field-control{align-items:center;display:flex;flex-grow:1;min-height:32px}.dataforms-layouts-card__field{width:100%}.dataforms-layouts-card__field-header-content{min-height:24px}.dataforms-layouts-card__field-header-content-description{display:contents}.dataforms-layouts-card__field-description{color:#757575;display:block;font-size:13px;margin-bottom:16px}.dataforms-layouts-card__field-summary{align-items:center;display:flex;flex-direction:row;gap:16px}.dataforms-layouts-details__summary-content{display:inline-flex;min-height:24px}.dataforms-layouts-details__content{padding-top:12px}.dataforms-layouts-row__field-control{width:100%}.dataforms-layouts__wrapper{font-family:-apple-system,"system-ui",Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:13px;font-weight:400;line-height:20px}.jp-forms-dataviews__view-actions>div:not(:empty){min-height:48px}'));
   document.head.appendChild(style);
 }
 
@@ -30072,8 +30683,8 @@ function StageInner() {
   const navigate = useNavigate4();
   const searchParams = useSearch2({ from: "/forms" });
   const dateSettings = (0, import_date9.getSettings)();
-  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element100.useState)(false);
-  const [isFormsHelpModalOpen, setIsFormsHelpModalOpen] = (0, import_element100.useState)(false);
+  const [isIntegrationsModalOpen, setIsIntegrationsModalOpen] = (0, import_element102.useState)(false);
+  const [isFormsHelpModalOpen, setIsFormsHelpModalOpen] = (0, import_element102.useState)(false);
   const integrations = (0, import_data37.useSelect)(
     (select3) => select3(INTEGRATIONS_STORE).getIntegrations?.() ?? [],
     []
@@ -30083,28 +30694,28 @@ function StageInner() {
   const isIntegrationsEnabled = useConfigValue("isIntegrationsEnabled");
   const showDashboardIntegrations = useConfigValue("showDashboardIntegrations");
   const hasClassicForms = useConfigValue("hasClassicForms");
-  const [view, setView] = (0, import_element100.useState)(() => ({
+  const [view, setView] = (0, import_element102.useState)(() => ({
     ...DEFAULT_VIEW,
     search: searchParams?.search || ""
   }));
-  (0, import_element100.useEffect)(() => {
+  (0, import_element102.useEffect)(() => {
     const urlSearch = searchParams?.search || "";
     if (urlSearch !== view.search) {
       setView((previous) => ({ ...previous, search: urlSearch }));
     }
   }, [searchParams?.search]);
-  const statusQuery = (0, import_element100.useMemo)(() => {
+  const statusQuery = (0, import_element102.useMemo)(() => {
     const statusFilterValue2 = view.filters?.find((filter) => filter.field === "status")?.value;
     if (!statusFilterValue2 || statusFilterValue2 === "all") {
       return NON_TRASH_FORM_STATUSES;
     }
     return statusFilterValue2;
   }, [view.filters]);
-  const isViewingTrash = (0, import_element100.useMemo)(() => {
+  const isViewingTrash = (0, import_element102.useMemo)(() => {
     const statusFilterValue2 = view.filters?.find((filter) => filter.field === "status")?.value;
     return statusFilterValue2 === "trash";
   }, [view.filters]);
-  const hasResponsesQuery = (0, import_element100.useMemo)(() => {
+  const hasResponsesQuery = (0, import_element102.useMemo)(() => {
     const entriesFilterValue = view.filters?.find((filter) => filter.field === "entries")?.value;
     if (entriesFilterValue === "has_responses") {
       return "true";
@@ -30145,24 +30756,24 @@ function StageInner() {
     recordsLength: records?.length ?? 0,
     statusQuery
   });
-  const [selection, setSelection] = (0, import_element100.useState)([]);
-  const [pendingPermanentDeleteCount, setPendingPermanentDeleteCount] = (0, import_element100.useState)(0);
+  const [selection, setSelection] = (0, import_element102.useState)([]);
+  const [pendingPermanentDeleteCount, setPendingPermanentDeleteCount] = (0, import_element102.useState)(0);
   const { renameFormItem, openRenameModal, closeRenameModal, handleRename } = useRenameForm();
-  (0, import_element100.useEffect)(() => {
+  (0, import_element102.useEffect)(() => {
     setSelection([]);
   }, [view.page, view.perPage, view.search, view.filters]);
-  const onOpenPermanentDeleteConfirm = (0, import_element100.useCallback)(
+  const onOpenPermanentDeleteConfirm = (0, import_element102.useCallback)(
     (items) => {
       setPendingPermanentDeleteCount(items?.length ?? 0);
       openPermanentDeleteConfirm(items);
     },
     [openPermanentDeleteConfirm]
   );
-  const onClosePermanentDeleteConfirm = (0, import_element100.useCallback)(() => {
+  const onClosePermanentDeleteConfirm = (0, import_element102.useCallback)(() => {
     setPendingPermanentDeleteCount(0);
     closePermanentDeleteConfirm();
   }, [closePermanentDeleteConfirm]);
-  const onConfirmPermanentDelete = (0, import_element100.useCallback)(async () => {
+  const onConfirmPermanentDelete = (0, import_element102.useCallback)(async () => {
     setPendingPermanentDeleteCount(0);
     try {
       await confirmPermanentDelete();
@@ -30170,38 +30781,38 @@ function StageInner() {
       setSelection([]);
     }
   }, [confirmPermanentDelete]);
-  const fields = (0, import_element100.useMemo)(
+  const fields = (0, import_element102.useMemo)(
     () => [
       {
         id: "title",
-        label: (0, import_i18n89.__)("Form name", "jetpack-forms"),
+        label: (0, import_i18n88.__)("Form name", "jetpack-forms"),
         getValue: ({ item }) => item.title,
-        render: ({ item }) => item.title || (0, import_i18n89.__)("(no title)", "jetpack-forms"),
+        render: ({ item }) => item.title || (0, import_i18n88.__)("(no title)", "jetpack-forms"),
         enableSorting: false,
         enableHiding: false
       },
       {
         id: "entries",
-        label: (0, import_i18n89.__)("Responses", "jetpack-forms"),
+        label: (0, import_i18n88.__)("Responses", "jetpack-forms"),
         getValue: ({ item }) => (item.entriesCount ?? 0) > 0 ? "has_responses" : "no_responses",
         render: ({ item }) => formatNumber(item.entriesCount ?? 0),
         elements: [
-          { label: (0, import_i18n89.__)("Has responses", "jetpack-forms"), value: "has_responses" },
-          { label: (0, import_i18n89.__)("No responses", "jetpack-forms"), value: "no_responses" }
+          { label: (0, import_i18n88.__)("Has responses", "jetpack-forms"), value: "has_responses" },
+          { label: (0, import_i18n88.__)("No responses", "jetpack-forms"), value: "no_responses" }
         ],
         filterBy: { operators: ["is"] },
         enableSorting: false
       },
       {
         id: "status",
-        label: (0, import_i18n89.__)("Status", "jetpack-forms"),
+        label: (0, import_i18n88.__)("Status", "jetpack-forms"),
         getValue: ({ item }) => item.status,
         render: ({ item }) => /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(Badge, { intent: "draft", children: getFormStatusLabel(item.status) }),
         elements: FORM_STATUSES.map((value) => ({
           value,
-          label: (0, import_i18n89.sprintf)(
+          label: (0, import_i18n88.sprintf)(
             /* translators: 1: status name, 2: form count */
-            (0, import_i18n89.__)("%1$s (%2$s)", "jetpack-forms"),
+            (0, import_i18n88.__)("%1$s (%2$s)", "jetpack-forms"),
             getFormStatusLabel(value),
             formatNumber(statusCounts[value])
           )
@@ -30211,7 +30822,7 @@ function StageInner() {
       },
       {
         id: "modified",
-        label: (0, import_i18n89.__)("Last updated", "jetpack-forms"),
+        label: (0, import_i18n88.__)("Last updated", "jetpack-forms"),
         type: "date",
         render: ({ item }) => (0, import_date9.dateI18n)(dateSettings.formats.datetime, item.modified),
         enableSorting: false,
@@ -30220,18 +30831,18 @@ function StageInner() {
     ],
     [dateSettings.formats.datetime, statusCounts]
   );
-  const openSingleFormView = (0, import_element100.useCallback)(
+  const openSingleFormView = (0, import_element102.useCallback)(
     (formId) => {
       navigate({ href: `/responses/inbox?sourceId=${encodeURIComponent(String(formId))}` });
     },
     [navigate]
   );
-  const actions2 = (0, import_element100.useMemo)(() => {
+  const actions2 = (0, import_element102.useMemo)(() => {
     const actionsList = [
       {
         id: "view-responses",
         isPrimary: true,
-        label: (0, import_i18n89.__)("Responses", "jetpack-forms"),
+        label: (0, import_i18n88.__)("Responses", "jetpack-forms"),
         supportsBulk: false,
         callback(items) {
           analytics_default.tracks.recordEvent("jetpack_forms_form_view_responses_click", {
@@ -30249,7 +30860,7 @@ function StageInner() {
       actionsList.push({
         id: "restore-form",
         isPrimary: true,
-        label: (0, import_i18n89.__)("Restore", "jetpack-forms"),
+        label: (0, import_i18n88.__)("Restore", "jetpack-forms"),
         supportsBulk: true,
         async callback(items) {
           analytics_default.tracks.recordEvent("jetpack_forms_form_restore_click", {
@@ -30269,7 +30880,7 @@ function StageInner() {
       actionsList.push({
         id: "delete-form-permanently",
         isPrimary: false,
-        label: (0, import_i18n89.__)("Delete permanently", "jetpack-forms"),
+        label: (0, import_i18n88.__)("Delete permanently", "jetpack-forms"),
         supportsBulk: true,
         async callback(items) {
           analytics_default.tracks.recordEvent("jetpack_forms_form_delete_permanently_click", {
@@ -30290,7 +30901,7 @@ function StageInner() {
     actionsList.push({
       id: "edit-form",
       isPrimary: true,
-      label: (0, import_i18n89.__)("Edit", "jetpack-forms"),
+      label: (0, import_i18n88.__)("Edit", "jetpack-forms"),
       supportsBulk: false,
       async callback(items) {
         analytics_default.tracks.recordEvent("jetpack_forms_form_edit_form_click", {
@@ -30307,7 +30918,7 @@ function StageInner() {
     actionsList.push({
       id: "preview-form",
       isPrimary: false,
-      label: (0, import_i18n89.__)("Preview", "jetpack-forms"),
+      label: (0, import_i18n88.__)("Preview", "jetpack-forms"),
       supportsBulk: false,
       async callback(items) {
         analytics_default.tracks.recordEvent("jetpack_forms_form_preview_click", {
@@ -30323,7 +30934,7 @@ function StageInner() {
       actionsList.push({
         id: "copy-embed",
         isPrimary: false,
-        label: (0, import_i18n89.__)("Copy embed", "jetpack-forms"),
+        label: (0, import_i18n88.__)("Copy embed", "jetpack-forms"),
         supportsBulk: false,
         async callback(items) {
           analytics_default.tracks.recordEvent("jetpack_forms_form_copy_embed_click", {
@@ -30338,7 +30949,7 @@ function StageInner() {
       actionsList.push({
         id: "copy-shortcode",
         isPrimary: false,
-        label: (0, import_i18n89.__)("Copy shortcode", "jetpack-forms"),
+        label: (0, import_i18n88.__)("Copy shortcode", "jetpack-forms"),
         supportsBulk: false,
         async callback(items) {
           analytics_default.tracks.recordEvent("jetpack_forms_form_copy_shortcode_click", {
@@ -30361,7 +30972,7 @@ function StageInner() {
     actionsList.push({
       id: "publish-form",
       isPrimary: false,
-      label: (0, import_i18n89.__)("Publish", "jetpack-forms"),
+      label: (0, import_i18n88.__)("Publish", "jetpack-forms"),
       isEligible: (item) => item.status !== "publish",
       supportsBulk: true,
       async callback(items) {
@@ -30386,7 +30997,7 @@ function StageInner() {
     actionsList.push({
       id: "unpublish-form",
       isPrimary: false,
-      label: (0, import_i18n89.__)("Unpublish", "jetpack-forms"),
+      label: (0, import_i18n88.__)("Unpublish", "jetpack-forms"),
       isEligible: (item) => item.status === "publish",
       supportsBulk: true,
       async callback(items) {
@@ -30411,7 +31022,7 @@ function StageInner() {
     actionsList.push({
       id: "rename-form",
       isPrimary: false,
-      label: (0, import_i18n89.__)("Rename", "jetpack-forms"),
+      label: (0, import_i18n88.__)("Rename", "jetpack-forms"),
       supportsBulk: false,
       callback(items) {
         analytics_default.tracks.recordEvent("jetpack_forms_form_rename_click", {
@@ -30427,7 +31038,7 @@ function StageInner() {
     actionsList.push({
       id: "duplicate-form",
       isPrimary: false,
-      label: (0, import_i18n89.__)("Duplicate", "jetpack-forms"),
+      label: (0, import_i18n88.__)("Duplicate", "jetpack-forms"),
       supportsBulk: false,
       async callback(items) {
         analytics_default.tracks.recordEvent("jetpack_forms_form_duplicate_click", {
@@ -30442,7 +31053,7 @@ function StageInner() {
     actionsList.push({
       id: "trash-form",
       isPrimary: false,
-      label: (0, import_i18n89.__)("Trash", "jetpack-forms"),
+      label: (0, import_i18n88.__)("Trash", "jetpack-forms"),
       supportsBulk: true,
       async callback(items) {
         analytics_default.tracks.recordEvent("jetpack_forms_form_trash_click", {
@@ -30481,14 +31092,14 @@ function StageInner() {
     view.perPage,
     view.search
   ]);
-  const paginationInfo = (0, import_element100.useMemo)(
+  const paginationInfo = (0, import_element102.useMemo)(
     () => ({
       totalItems: totalItems ?? 0,
       totalPages: totalPages ?? 0
     }),
     [totalItems, totalPages]
   );
-  const onChangeView = (0, import_element100.useCallback)(
+  const onChangeView = (0, import_element102.useCallback)(
     (newView) => {
       setView(newView);
       if (newView.search !== view.search) {
@@ -30502,16 +31113,16 @@ function StageInner() {
     },
     [navigate, searchParams, view.search]
   );
-  const openIntegrationsModal = (0, import_element100.useCallback)(() => {
+  const openIntegrationsModal = (0, import_element102.useCallback)(() => {
     setIsIntegrationsModalOpen(true);
   }, []);
-  const closeIntegrationsModal = (0, import_element100.useCallback)(() => {
+  const closeIntegrationsModal = (0, import_element102.useCallback)(() => {
     setIsIntegrationsModalOpen(false);
   }, []);
-  const openFormsHelpModal = (0, import_element100.useCallback)(() => {
+  const openFormsHelpModal = (0, import_element102.useCallback)(() => {
     setIsFormsHelpModalOpen(true);
   }, []);
-  const closeFormsHelpModal = (0, import_element100.useCallback)(() => {
+  const closeFormsHelpModal = (0, import_element102.useCallback)(() => {
     setIsFormsHelpModalOpen(false);
   }, []);
   const {
@@ -30530,8 +31141,8 @@ function StageInner() {
   });
   const statusFilterValue = view.filters?.find((filter) => filter.field === "status")?.value;
   const hasActiveFilters = !!view.search?.trim() || !!statusFilterValue && statusFilterValue !== "all";
-  const getItemId = (0, import_element100.useCallback)((item) => String(item.id), []);
-  const onClickItem = (0, import_element100.useCallback)(
+  const getItemId = (0, import_element102.useCallback)((item) => String(item.id), []);
+  const onClickItem = (0, import_element102.useCallback)(
     (item) => {
       openSingleFormView(item.id);
     },
@@ -30540,7 +31151,6 @@ function StageInner() {
   return /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(
     page_default,
     {
-      showSidebarToggle: false,
       breadcrumbs,
       title,
       ariaLabel,
@@ -30559,21 +31169,21 @@ function StageInner() {
             empty: hasActiveFilters ? /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(NoResults, {}) : /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
               EmptyWrapper,
               {
-                heading: (0, import_i18n89.__)("You're set up. No forms yet.", "jetpack-forms"),
-                body: (0, import_i18n89.__)(
+                heading: (0, import_i18n88.__)("You're set up. No forms yet.", "jetpack-forms"),
+                body: (0, import_i18n88.__)(
                   "Create a form to manage and reuse it across your site.",
                   "jetpack-forms"
                 ),
-                actions: /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(import_components78.__experimentalHStack, { justify: "center", spacing: "2", children: [
+                actions: /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(import_components77.__experimentalHStack, { justify: "center", spacing: "2", children: [
                   /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
                     CreateFormButton,
                     {
-                      label: (0, import_i18n89.__)("Create a new form", "jetpack-forms"),
+                      label: (0, import_i18n88.__)("Create a new form", "jetpack-forms"),
                       variant: "primary",
                       showNameModal: true
                     }
                   ),
-                  hasClassicForms && /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components78.Button, { size: "compact", variant: "secondary", onClick: openFormsHelpModal, children: (0, import_i18n89.__)("Not seeing all your forms?", "jetpack-forms") })
+                  hasClassicForms && /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components77.Button, { size: "compact", variant: "secondary", onClick: openFormsHelpModal, children: (0, import_i18n88.__)("Not seeing all your forms?", "jetpack-forms") })
                 ] })
               }
             ),
@@ -30586,20 +31196,20 @@ function StageInner() {
             defaultLayouts,
             children: [
               /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(
-                import_components78.__experimentalConfirmDialog,
+                import_components77.__experimentalConfirmDialog,
                 {
                   onCancel: onClosePermanentDeleteConfirm,
                   onConfirm: onConfirmPermanentDelete,
                   isOpen: isPermanentDeleteConfirmOpen,
-                  confirmButtonText: (0, import_i18n89.__)("Delete permanently", "jetpack-forms"),
+                  confirmButtonText: (0, import_i18n88.__)("Delete permanently", "jetpack-forms"),
                   children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("h3", { children: (0, import_i18n89.__)("Delete permanently", "jetpack-forms") }),
-                    /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("p", { children: pendingPermanentDeleteCount === 1 ? (0, import_i18n89.__)(
+                    /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("h3", { children: (0, import_i18n88.__)("Delete permanently", "jetpack-forms") }),
+                    /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("p", { children: pendingPermanentDeleteCount === 1 ? (0, import_i18n88.__)(
                       "This will permanently delete this form. This action cannot be undone.",
                       "jetpack-forms"
-                    ) : (0, import_i18n89.sprintf)(
+                    ) : (0, import_i18n88.sprintf)(
                       /* translators: %d: number of forms */
-                      (0, import_i18n89._n)(
+                      (0, import_i18n88._n)(
                         "This will permanently delete %d form. This action cannot be undone.",
                         "This will permanently delete %d forms. This action cannot be undone.",
                         pendingPermanentDeleteCount,
@@ -30622,7 +31232,7 @@ function StageInner() {
             isOpen: !!renameFormItem,
             onClose: closeRenameModal,
             onSave: handleRename,
-            title: (0, import_i18n89.__)("Rename form", "jetpack-forms"),
+            title: (0, import_i18n88.__)("Rename form", "jetpack-forms"),
             initialValue: renameFormItem?.title || ""
           }
         ),

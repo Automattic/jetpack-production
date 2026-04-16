@@ -118,7 +118,7 @@ function setCurrentQuery(currentQuery2) {
       ...currentQuery2,
       fields_format: currentQuery2.fields_format ?? previousQuery.fields_format ?? "collection"
     };
-    const filtersChanged = previousQuery.status !== queryWithFormat.status || previousQuery.search !== queryWithFormat.search || previousQuery.is_unread !== queryWithFormat.is_unread || previousQuery.parent !== queryWithFormat.parent || previousQuery.before !== queryWithFormat.before || previousQuery.after !== queryWithFormat.after;
+    const filtersChanged = previousQuery.status !== queryWithFormat.status || previousQuery.search !== queryWithFormat.search || previousQuery.is_unread !== queryWithFormat.is_unread || previousQuery.parent !== queryWithFormat.parent || previousQuery.source !== queryWithFormat.source || previousQuery.before !== queryWithFormat.before || previousQuery.after !== queryWithFormat.after;
     if (filtersChanged) {
       dispatch(clearInvalidRecords());
       if (registry && registry.dispatch("core")) {
@@ -230,7 +230,7 @@ var normalizeValue = (value) => {
   return String(value);
 };
 var getCacheKey = (queryParams = {}) => {
-  const keys = ["search", "parent", "before", "after", "is_unread"];
+  const keys = ["search", "parent", "source", "before", "after", "is_unread"];
   const parts = keys.filter((key) => queryParams[key] !== void 0).map((key) => `${key}:${normalizeValue(queryParams[key])}`);
   return parts.length > 0 ? parts.join("|") : "default";
 };
@@ -327,6 +327,9 @@ var getCounts = (queryParams = {}) => async ({ dispatch }) => {
   }
   if (queryParams?.parent) {
     params.parent = queryParams.parent;
+  }
+  if (queryParams?.source) {
+    params.source = queryParams.source;
   }
   if (queryParams?.before) {
     params.before = queryParams.before;
