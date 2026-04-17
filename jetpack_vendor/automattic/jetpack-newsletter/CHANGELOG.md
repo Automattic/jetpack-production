@@ -12,9 +12,6 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
-### Fixed
-- Reader Link: Only enqueue styles when the admin bar is visible.
-
 ## [0.8.3] - 2026-04-15
 ### Changed
 - Update package dependencies. [#47907]
