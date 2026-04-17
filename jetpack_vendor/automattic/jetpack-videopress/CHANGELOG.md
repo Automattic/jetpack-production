@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- VideoPress admin: add padding around the Settings section, make the hero full width on medium screens, and remove an empty pagination placeholder below the video library.
+
 ## [0.36.4] - 2026-04-16
 ### Fixed
 - Fix block editor errors when used with Gutenberg 23.0.0+, where the SandBox component no longer defaults to same-origin. [#48117]
