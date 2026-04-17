@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- AI Assistant: Add Jetpack AI sidebar that loads Agents Manager from the widgets.wp.com CDN and registers a Jetpack AI provider for title optimization in the block editor. Gated by the jetpack_ai_sidebar_enabled filter (opt-in, defaults to false). Removes the unused Title_Optimization_Ability stub since the real wpcom/optimize-title ability lives in the wpcom codebase.
+
 ### Improved compatibility
 - Tested up to WordPress 7.0.
 
