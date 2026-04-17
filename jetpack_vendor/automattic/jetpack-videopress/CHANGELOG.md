@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update package dependencies.
+- Video Thumbnail: Remove Jetpack color override on loading spinner.
 
 ### Fixed
 - VideoPress admin: add padding around the Settings section, make the hero full width on medium screens, and remove an empty pagination placeholder below the video library.

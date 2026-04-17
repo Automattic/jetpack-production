@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add Jetpack AI sidebar that loads Agents Manager from the widgets.wp.com CDN and registers a Jetpack AI provider for title optimization in the block editor. Gated by the jetpack_ai_sidebar_enabled filter (opt-in, defaults to false). Removes the unused Title_Optimization_Ability stub since the real wpcom/optimize-title ability lives in the wpcom codebase.
 
 ### Improved compatibility
+- Componentry: use WordPress admin theme color variable instead of hardcoded color for text input focus state.
 - Tested up to WordPress 7.0.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
