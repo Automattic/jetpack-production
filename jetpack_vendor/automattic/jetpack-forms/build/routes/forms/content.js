@@ -555,37 +555,37 @@ var require_use_sync_external_store_shim_development = __commonJS({
       function is(x2, y2) {
         return x2 === y2 && (0 !== x2 || 1 / x2 === 1 / y2) || x2 !== x2 && y2 !== y2;
       }
-      function useSyncExternalStore$2(subscribe2, getSnapshot) {
+      function useSyncExternalStore$2(subscribe3, getSnapshot2) {
         didWarnOld18Alpha || void 0 === React35.startTransition || (didWarnOld18Alpha = true, console.error(
           "You are using an outdated, pre-release alpha of React 18 that does not support useSyncExternalStore. The use-sync-external-store shim will not work correctly. Upgrade to a newer pre-release."
         ));
-        var value = getSnapshot();
+        var value = getSnapshot2();
         if (!didWarnUncachedGetSnapshot) {
-          var cachedValue = getSnapshot();
+          var cachedValue = getSnapshot2();
           objectIs(value, cachedValue) || (console.error(
             "The result of getSnapshot should be cached to avoid an infinite loop"
           ), didWarnUncachedGetSnapshot = true);
         }
-        cachedValue = useState56({
-          inst: { value, getSnapshot }
+        cachedValue = useState55({
+          inst: { value, getSnapshot: getSnapshot2 }
         });
         var inst = cachedValue[0].inst, forceUpdate = cachedValue[1];
         useLayoutEffect5(
           function() {
             inst.value = value;
-            inst.getSnapshot = getSnapshot;
+            inst.getSnapshot = getSnapshot2;
             checkIfSnapshotChanged(inst) && forceUpdate({ inst });
           },
-          [subscribe2, value, getSnapshot]
+          [subscribe3, value, getSnapshot2]
         );
         useEffect43(
           function() {
             checkIfSnapshotChanged(inst) && forceUpdate({ inst });
-            return subscribe2(function() {
+            return subscribe3(function() {
               checkIfSnapshotChanged(inst) && forceUpdate({ inst });
             });
           },
-          [subscribe2]
+          [subscribe3]
         );
         useDebugValue(value);
         return value;
@@ -600,11 +600,11 @@ var require_use_sync_external_store_shim_development = __commonJS({
           return true;
         }
       }
-      function useSyncExternalStore$1(subscribe2, getSnapshot) {
-        return getSnapshot();
+      function useSyncExternalStore$1(subscribe3, getSnapshot2) {
+        return getSnapshot2();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React35 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState56 = React35.useState, useEffect43 = React35.useEffect, useLayoutEffect5 = React35.useLayoutEffect, useDebugValue = React35.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      var React35 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState55 = React35.useState, useEffect43 = React35.useEffect, useLayoutEffect5 = React35.useLayoutEffect, useDebugValue = React35.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
       exports.useSyncExternalStore = void 0 !== React35.useSyncExternalStore ? React35.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
@@ -4680,8 +4680,25 @@ var NavigableRegion = (0, import_element.forwardRef)(
 NavigableRegion.displayName = "NavigableRegion";
 var navigable_region_default = NavigableRegion;
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useControlled.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useControlled.js
 var React = __toESM(require_react(), 1);
+
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/error.js
+var set;
+if (true) {
+  set = /* @__PURE__ */ new Set();
+}
+function error(...messages) {
+  if (true) {
+    const messageKey = messages.join(" ");
+    if (!set.has(messageKey)) {
+      set.add(messageKey);
+      console.error(`Base UI: ${messageKey}`);
+    }
+  }
+}
+
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useControlled.js
 function useControlled({
   controlled,
   default: defaultProp,
@@ -4696,17 +4713,17 @@ function useControlled({
   if (true) {
     React.useEffect(() => {
       if (isControlled !== (controlled !== void 0)) {
-        console.error([`Base UI: A component is changing the ${isControlled ? "" : "un"}controlled ${state} state of ${name} to be ${isControlled ? "un" : ""}controlled.`, "Elements should not switch from uncontrolled to controlled (or vice versa).", `Decide between using a controlled or uncontrolled ${name} element for the lifetime of the component.`, "The nature of the state is determined during the first render. It's considered controlled if the value is not `undefined`.", "More info: https://fb.me/react-controlled-components"].join("\n"));
+        error([`A component is changing the ${isControlled ? "" : "un"}controlled ${state} state of ${name} to be ${isControlled ? "un" : ""}controlled.`, "Elements should not switch from uncontrolled to controlled (or vice versa).", `Decide between using a controlled or uncontrolled ${name} element for the lifetime of the component.`, "The nature of the state is determined during the first render. It's considered controlled if the value is not `undefined`.", "More info: https://fb.me/react-controlled-components"].join("\n"));
       }
     }, [state, name, controlled]);
     const {
       current: defaultValue2
     } = React.useRef(defaultProp);
     React.useEffect(() => {
-      if (!isControlled && JSON.stringify(defaultValue2) !== JSON.stringify(defaultProp)) {
-        console.error([`Base UI: A component is changing the default ${state} state of an uncontrolled ${name} after being initialized. To suppress this warning opt to use a controlled ${name}.`].join("\n"));
+      if (!isControlled && serializeToDevModeString(defaultValue2) !== serializeToDevModeString(defaultProp)) {
+        error([`A component is changing the default ${state} state of an uncontrolled ${name} after being initialized. To suppress this warning opt to use a controlled ${name}.`].join("\n"));
       }
-    }, [JSON.stringify(defaultProp)]);
+    }, [defaultProp]);
   }
   const setValueIfUncontrolled = React.useCallback((newValue) => {
     if (!isControlled) {
@@ -4715,11 +4732,37 @@ function useControlled({
   }, []);
   return [value, setValueIfUncontrolled];
 }
+function serializeToDevModeString(input) {
+  let nextId = 0;
+  const seen = /* @__PURE__ */ new WeakMap();
+  try {
+    const result = JSON.stringify(input, function replacer(key, value) {
+      if (key === "_owner" && this != null && typeof this === "object" && "$$typeof" in this) {
+        return void 0;
+      }
+      if (typeof value === "bigint") {
+        return `__bigint__:${value}`;
+      }
+      if (value !== null && typeof value === "object") {
+        const id = seen.get(value);
+        if (id !== void 0) {
+          return `__object__:${id}`;
+        }
+        seen.set(value, nextId);
+        nextId += 1;
+      }
+      return value;
+    });
+    return result ?? `__top__:${typeof input}`;
+  } catch {
+    return "__unserializable__";
+  }
+}
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useStableCallback.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useStableCallback.js
 var React3 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useRefWithInit.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useRefWithInit.js
 var React2 = __toESM(require_react(), 1);
 var UNINITIALIZED = {};
 function useRefWithInit(init2, initArg) {
@@ -4730,7 +4773,7 @@ function useRefWithInit(init2, initArg) {
   return ref;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useStableCallback.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useStableCallback.js
 var useInsertionEffect = React3[`useInsertionEffect${Math.random().toFixed(1)}`.slice(0, -3)];
 var useSafeInsertionEffect = (
   // React 17 doesn't have useInsertionEffect.
@@ -4763,31 +4806,31 @@ function assertNotCalled() {
   }
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useIsoLayoutEffect.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useIsoLayoutEffect.js
 var React4 = __toESM(require_react(), 1);
 var noop = () => {
 };
 var useIsoLayoutEffect = typeof document !== "undefined" ? React4.useLayoutEffect : noop;
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/warn.js
-var set;
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/warn.js
+var set2;
 if (true) {
-  set = /* @__PURE__ */ new Set();
+  set2 = /* @__PURE__ */ new Set();
 }
 function warn(...messages) {
   if (true) {
     const messageKey = messages.join(" ");
-    if (!set.has(messageKey)) {
-      set.add(messageKey);
+    if (!set2.has(messageKey)) {
+      set2.add(messageKey);
       console.warn(`Base UI: ${messageKey}`);
     }
   }
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeList.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeList.js
 var React6 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeListContext.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeListContext.js
 var React5 = __toESM(require_react(), 1);
 var CompositeListContext = /* @__PURE__ */ React5.createContext({
   register: () => {
@@ -4810,7 +4853,7 @@ function useCompositeListContext() {
   return React5.useContext(CompositeListContext);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeList.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/CompositeList.js
 var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
 function CompositeList(props) {
   const {
@@ -4941,7 +4984,7 @@ function sortByDocumentPosition(a2, b2) {
 function disableEslintWarning(_) {
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/direction-provider/DirectionContext.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/direction-provider/DirectionContext.js
 var React7 = __toESM(require_react(), 1);
 var DirectionContext = /* @__PURE__ */ React7.createContext(void 0);
 if (true) DirectionContext.displayName = "DirectionContext";
@@ -4950,10 +4993,10 @@ function useDirection() {
   return context?.direction ?? "ltr";
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useRenderElement.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useRenderElement.js
 var React10 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useMergedRefs.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useMergedRefs.js
 function useMergedRefs(a2, b2, c2, d2) {
   const forkRef = useRefWithInit(createForkRef).current;
   if (didChange(forkRef, a2, b2, c2, d2)) {
@@ -5042,17 +5085,17 @@ function update(forkRef, refs) {
   };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/getReactElementRef.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/getReactElementRef.js
 var React9 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/reactVersion.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/reactVersion.js
 var React8 = __toESM(require_react(), 1);
 var majorVersion = parseInt(React8.version, 10);
 function isReactVersionAtLeast(reactVersionToCheck) {
   return majorVersion >= reactVersionToCheck;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/getReactElementRef.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/getReactElementRef.js
 function getReactElementRef(element) {
   if (!/* @__PURE__ */ React9.isValidElement(element)) {
     return null;
@@ -5062,7 +5105,7 @@ function getReactElementRef(element) {
   return (isReactVersionAtLeast(19) ? propsWithRef?.ref : reactElement.ref) ?? null;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/mergeObjects.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/mergeObjects.js
 function mergeObjects(a2, b2) {
   if (a2 && !b2) {
     return a2;
@@ -5079,7 +5122,7 @@ function mergeObjects(a2, b2) {
   return void 0;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/getStateAttributesProps.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/getStateAttributesProps.js
 function getStateAttributesProps(state, customMapping) {
   const props = {};
   for (const key in state) {
@@ -5100,33 +5143,34 @@ function getStateAttributesProps(state, customMapping) {
   return props;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveClassName.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveClassName.js
 function resolveClassName(className, state) {
   return typeof className === "function" ? className(state) : className;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveStyle.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveStyle.js
 function resolveStyle(style, state) {
   return typeof style === "function" ? style(state) : style;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/merge-props/mergeProps.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/merge-props/mergeProps.js
 var EMPTY_PROPS = {};
 function mergeProps(a2, b2, c2, d2, e2) {
-  let merged = {
-    ...resolvePropsGetter(a2, EMPTY_PROPS)
-  };
+  if (!c2 && !d2 && !e2 && !a2) {
+    return createInitialMergedProps(b2);
+  }
+  let merged = createInitialMergedProps(a2);
   if (b2) {
-    merged = mergeOne(merged, b2);
+    merged = mergeInto(merged, b2);
   }
   if (c2) {
-    merged = mergeOne(merged, c2);
+    merged = mergeInto(merged, c2);
   }
   if (d2) {
-    merged = mergeOne(merged, d2);
+    merged = mergeInto(merged, d2);
   }
   if (e2) {
-    merged = mergeOne(merged, e2);
+    merged = mergeInto(merged, e2);
   }
   return merged;
 }
@@ -5135,21 +5179,39 @@ function mergePropsN(props) {
     return EMPTY_PROPS;
   }
   if (props.length === 1) {
-    return resolvePropsGetter(props[0], EMPTY_PROPS);
+    return createInitialMergedProps(props[0]);
   }
-  let merged = {
-    ...resolvePropsGetter(props[0], EMPTY_PROPS)
-  };
+  let merged = createInitialMergedProps(props[0]);
   for (let i2 = 1; i2 < props.length; i2 += 1) {
-    merged = mergeOne(merged, props[i2]);
+    merged = mergeInto(merged, props[i2]);
   }
   return merged;
 }
-function mergeOne(merged, inputProps) {
+function createInitialMergedProps(inputProps) {
   if (isPropsGetter(inputProps)) {
-    return inputProps(merged);
+    return {
+      ...resolvePropsGetter(inputProps, EMPTY_PROPS)
+    };
+  }
+  return copyInitialProps(inputProps);
+}
+function mergeInto(merged, inputProps) {
+  if (isPropsGetter(inputProps)) {
+    return resolvePropsGetter(inputProps, merged);
   }
   return mutablyMergeInto(merged, inputProps);
+}
+function copyInitialProps(inputProps) {
+  const copiedProps = {
+    ...inputProps
+  };
+  for (const propName in copiedProps) {
+    const propValue = copiedProps[propName];
+    if (isEventHandler(propName, propValue)) {
+      copiedProps[propName] = wrapEventHandler(propValue);
+    }
+  }
+  return copiedProps;
 }
 function mutablyMergeInto(mergedProps, externalProps) {
   if (!externalProps) {
@@ -5197,7 +5259,7 @@ function mergeEventHandlers(ourHandler, theirHandler) {
     return ourHandler;
   }
   if (!ourHandler) {
-    return theirHandler;
+    return wrapEventHandler(theirHandler);
   }
   return (event) => {
     if (isSyntheticEvent(event)) {
@@ -5212,6 +5274,17 @@ function mergeEventHandlers(ourHandler, theirHandler) {
     const result = theirHandler(event);
     ourHandler?.(event);
     return result;
+  };
+}
+function wrapEventHandler(handler) {
+  if (!handler) {
+    return handler;
+  }
+  return (event) => {
+    if (isSyntheticEvent(event)) {
+      makeEventPreventable(event);
+    }
+    return handler(event);
   };
 }
 function makeEventPreventable(event) {
@@ -5233,17 +5306,19 @@ function isSyntheticEvent(event) {
   return event != null && typeof event === "object" && "nativeEvent" in event;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/empty.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/empty.js
+function NOOP() {
+}
 var EMPTY_ARRAY = Object.freeze([]);
 var EMPTY_OBJECT = Object.freeze({});
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/constants.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/constants.js
 var BASE_UI_SWIPE_IGNORE_ATTRIBUTE = "data-base-ui-swipe-ignore";
 var LEGACY_SWIPE_IGNORE_ATTRIBUTE = "data-swipe-ignore";
 var BASE_UI_SWIPE_IGNORE_SELECTOR = `[${BASE_UI_SWIPE_IGNORE_ATTRIBUTE}]`;
 var LEGACY_SWIPE_IGNORE_SELECTOR = `[${LEGACY_SWIPE_IGNORE_ATTRIBUTE}]`;
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useRenderElement.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useRenderElement.js
 var import_react = __toESM(require_react(), 1);
 function useRenderElement(element, componentProps, params = {}) {
   const renderProp = componentProps.render;
@@ -5270,7 +5345,8 @@ function useRenderElementProps(componentProps, params = {}) {
   const className = enabled ? resolveClassName(classNameProp, state) : void 0;
   const style = enabled ? resolveStyle(styleProp, state) : void 0;
   const stateProps = enabled ? getStateAttributesProps(state, stateAttributesMapping3) : EMPTY_OBJECT;
-  const outProps = enabled ? mergeObjects(stateProps, Array.isArray(props) ? mergePropsN(props) : props) ?? EMPTY_OBJECT : EMPTY_OBJECT;
+  const resolvedProps = enabled && props ? resolveRenderFunctionProps(props) : void 0;
+  const outProps = enabled ? mergeObjects(stateProps, resolvedProps) ?? {} : EMPTY_OBJECT;
   if (typeof document !== "undefined") {
     if (!enabled) {
       useMergedRefs(null, null);
@@ -5291,7 +5367,15 @@ function useRenderElementProps(componentProps, params = {}) {
   }
   return outProps;
 }
+function resolveRenderFunctionProps(props) {
+  if (Array.isArray(props)) {
+    return mergePropsN(props);
+  }
+  return mergeProps(void 0, props);
+}
 var REACT_LAZY_TYPE = /* @__PURE__ */ Symbol.for("react.lazy");
+var COMPONENT_IDENTIFIER_PATTERN = /^[A-Z][A-Za-z0-9$]*$/;
+var LOWERCASE_CHARACTER_PATTERN = /[a-z]/;
 function evaluateRenderProp(element, render4, props, state) {
   if (render4) {
     if (typeof render4 === "function") {
@@ -5326,8 +5410,10 @@ function warnIfRenderPropLooksLikeComponent(renderFn) {
   if (functionName.length === 0) {
     return;
   }
-  const firstCharacterCode = functionName.charCodeAt(0);
-  if (firstCharacterCode < 65 || firstCharacterCode > 90) {
+  if (!COMPONENT_IDENTIFIER_PATTERN.test(functionName)) {
+    return;
+  }
+  if (!LOWERCASE_CHARACTER_PATTERN.test(functionName)) {
     return;
   }
   warn(`The \`render\` prop received a function named \`${functionName}\` that starts with an uppercase letter.`, "This usually means a React component was passed directly as `render={Component}`.", "Base UI calls `render` as a plain function, which can break the Rules of Hooks during reconciliation.", "If this is an intentional render callback, rename it to start with a lowercase letter.", "Use `render={<Component />}` or `render={(props) => <Component {...props} />}` instead.", "https://base-ui.com/r/invalid-render-prop");
@@ -5350,7 +5436,7 @@ function renderTag(Tag, props) {
   return /* @__PURE__ */ React10.createElement(Tag, props);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/reason-parts.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/reason-parts.js
 var reason_parts_exports = {};
 __export(reason_parts_exports, {
   cancelOpen: () => cancelOpen,
@@ -5358,6 +5444,7 @@ __export(reason_parts_exports, {
   clearPress: () => clearPress,
   closePress: () => closePress,
   closeWatcher: () => closeWatcher,
+  dayPress: () => dayPress,
   decrementPress: () => decrementPress,
   disabled: () => disabled,
   drag: () => drag,
@@ -5374,6 +5461,7 @@ __export(reason_parts_exports, {
   keyboard: () => keyboard,
   linkPress: () => linkPress,
   listNavigation: () => listNavigation,
+  monthChange: () => monthChange,
   none: () => none,
   outsidePress: () => outsidePress,
   pointer: () => pointer,
@@ -5384,6 +5472,7 @@ __export(reason_parts_exports, {
   triggerFocus: () => triggerFocus,
   triggerHover: () => triggerHover,
   triggerPress: () => triggerPress,
+  valuePropChange: () => valuePropChange,
   wheel: () => wheel,
   windowResize: () => windowResize
 });
@@ -5420,8 +5509,11 @@ var disabled = "disabled";
 var imperativeAction = "imperative-action";
 var swipe = "swipe";
 var windowResize = "window-resize";
+var dayPress = "day-press";
+var monthChange = "month-change";
+var valuePropChange = "value-prop-change";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/createBaseUIEventDetails.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/createBaseUIEventDetails.js
 function createChangeEventDetails(reason, event, trigger, customProperties) {
   let canceled = false;
   let allowPropagation = false;
@@ -5447,16 +5539,16 @@ function createChangeEventDetails(reason, event, trigger, customProperties) {
   return details;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useId.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useId.js
 var React12 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/safeReact.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/safeReact.js
 var React11 = __toESM(require_react(), 1);
 var SafeReact = {
   ...React11
 };
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useId.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useId.js
 var globalId = 0;
 function useGlobalId(idOverride, prefix = "mui") {
   const [defaultId, setDefaultId] = React12.useState(idOverride);
@@ -5478,22 +5570,22 @@ function useId(idOverride, prefix) {
   return useGlobalId(idOverride, prefix);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useBaseUiId.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useBaseUiId.js
 function useBaseUiId(idOverride) {
   return useId(idOverride, "base-ui");
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useAnimationsFinished.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useAnimationsFinished.js
 var ReactDOM = __toESM(require_react_dom(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useOnMount.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useOnMount.js
 var React13 = __toESM(require_react(), 1);
 var EMPTY = [];
 function useOnMount(fn) {
   React13.useEffect(fn, EMPTY);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useAnimationFrame.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useAnimationFrame.js
 var EMPTY2 = null;
 var LAST_RAF = globalThis.requestAnimationFrame;
 var Scheduler = class {
@@ -5581,7 +5673,7 @@ function useAnimationFrame() {
   return timeout;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveRef.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/resolveRef.js
 function resolveRef(maybeRef) {
   if (maybeRef == null) {
     return maybeRef;
@@ -5589,7 +5681,7 @@ function resolveRef(maybeRef) {
   return "current" in maybeRef ? maybeRef.current : maybeRef;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/stateAttributesMapping.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/stateAttributesMapping.js
 var TransitionStatusDataAttributes = /* @__PURE__ */ (function(TransitionStatusDataAttributes2) {
   TransitionStatusDataAttributes2["startingStyle"] = "data-starting-style";
   TransitionStatusDataAttributes2["endingStyle"] = "data-ending-style";
@@ -5613,69 +5705,67 @@ var transitionStatusMapping = {
   }
 };
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useAnimationsFinished.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useAnimationsFinished.js
 function useAnimationsFinished(elementOrRef, waitForStartingStyleRemoved = false, treatAbortedAsFinished = true) {
   const frame = useAnimationFrame();
   return useStableCallback((fnToExecute, signal = null) => {
     frame.cancel();
-    function done() {
-      ReactDOM.flushSync(fnToExecute);
-    }
     const element = resolveRef(elementOrRef);
     if (element == null) {
       return;
     }
     const resolvedElement = element;
+    const done = () => {
+      ReactDOM.flushSync(fnToExecute);
+    };
     if (typeof resolvedElement.getAnimations !== "function" || globalThis.BASE_UI_ANIMATIONS_DISABLED) {
       fnToExecute();
-    } else {
-      let execWaitForStartingStyleRemoved = function() {
-        const startingStyleAttribute = TransitionStatusDataAttributes.startingStyle;
-        if (!resolvedElement.hasAttribute(startingStyleAttribute)) {
-          frame.request(exec);
+      return;
+    }
+    function exec() {
+      Promise.all(resolvedElement.getAnimations().map((animation) => animation.finished)).then(() => {
+        if (!signal?.aborted) {
+          done();
+        }
+      }).catch(() => {
+        if (treatAbortedAsFinished) {
+          if (!signal?.aborted) {
+            done();
+          }
           return;
         }
-        const attributeObserver = new MutationObserver(() => {
-          if (!resolvedElement.hasAttribute(startingStyleAttribute)) {
-            attributeObserver.disconnect();
-            exec();
-          }
-        });
-        attributeObserver.observe(resolvedElement, {
-          attributes: true,
-          attributeFilter: [startingStyleAttribute]
-        });
-        signal?.addEventListener("abort", () => attributeObserver.disconnect(), {
-          once: true
-        });
-      }, exec = function() {
-        Promise.all(resolvedElement.getAnimations().map((anim) => anim.finished)).then(() => {
-          if (signal?.aborted) {
-            return;
-          }
-          done();
-        }).catch(() => {
-          const currentAnimations = resolvedElement.getAnimations();
-          if (treatAbortedAsFinished) {
-            if (signal?.aborted) {
-              return;
-            }
-            done();
-          } else if (currentAnimations.length > 0 && currentAnimations.some((anim) => anim.pending || anim.playState !== "finished")) {
-            exec();
-          }
-        });
-      };
-      if (waitForStartingStyleRemoved) {
-        execWaitForStartingStyleRemoved();
+        const currentAnimations = resolvedElement.getAnimations();
+        if (!signal?.aborted && currentAnimations.length > 0 && currentAnimations.some((animation) => animation.pending || animation.playState !== "finished")) {
+          exec();
+        }
+      });
+    }
+    if (waitForStartingStyleRemoved) {
+      const startingStyleAttribute = TransitionStatusDataAttributes.startingStyle;
+      if (!resolvedElement.hasAttribute(startingStyleAttribute)) {
+        frame.request(exec);
         return;
       }
-      frame.request(exec);
+      const attributeObserver = new MutationObserver(() => {
+        if (!resolvedElement.hasAttribute(startingStyleAttribute)) {
+          attributeObserver.disconnect();
+          exec();
+        }
+      });
+      attributeObserver.observe(resolvedElement, {
+        attributes: true,
+        attributeFilter: [startingStyleAttribute]
+      });
+      signal?.addEventListener("abort", () => attributeObserver.disconnect(), {
+        once: true
+      });
+      return;
     }
+    frame.request(exec);
   });
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useTransitionStatus.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useTransitionStatus.js
 var React14 = __toESM(require_react(), 1);
 function useTransitionStatus(open, enableIdleState = false, deferEndingState = false) {
   const [transitionStatus, setTransitionStatus] = React14.useState(open && enableIdleState ? "idle" : void 0);
@@ -5725,15 +5815,15 @@ function useTransitionStatus(open, enableIdleState = false, deferEndingState = f
     return () => {
       AnimationFrame.cancel(frame);
     };
-  }, [enableIdleState, open, mounted, setTransitionStatus, transitionStatus]);
-  return React14.useMemo(() => ({
+  }, [enableIdleState, open, mounted, transitionStatus]);
+  return {
     mounted,
     setMounted,
     transitionStatus
-  }), [mounted, transitionStatus]);
+  };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/useCompositeListItem.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/list/useCompositeListItem.js
 var React15 = __toESM(require_react(), 1);
 var IndexGuessBehavior = /* @__PURE__ */ (function(IndexGuessBehavior2) {
   IndexGuessBehavior2[IndexGuessBehavior2["None"] = 0] = "None";
@@ -5806,12 +5896,12 @@ function useCompositeListItem(params = {}) {
   }), [index, ref]);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/isElementDisabled.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/isElementDisabled.js
 function isElementDisabled(element) {
   return element == null || element.hasAttribute("disabled") || element.getAttribute("aria-disabled") === "true";
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-button/useButton.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-button/useButton.js
 var React18 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@floating-ui+utils@0.2.11/node_modules/@floating-ui/utils/dist/floating-ui.utils.dom.mjs
@@ -5838,22 +5928,7 @@ function getComputedStyle2(element) {
   return getWindow(element).getComputedStyle(element);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/error.js
-var set2;
-if (true) {
-  set2 = /* @__PURE__ */ new Set();
-}
-function error(...messages) {
-  if (true) {
-    const messageKey = messages.join(" ");
-    if (!set2.has(messageKey)) {
-      set2.add(messageKey);
-      console.error(`Base UI: ${messageKey}`);
-    }
-  }
-}
-
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRootContext.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRootContext.js
 var React16 = __toESM(require_react(), 1);
 var CompositeRootContext = /* @__PURE__ */ React16.createContext(void 0);
 if (true) CompositeRootContext.displayName = "CompositeRootContext";
@@ -5865,7 +5940,7 @@ function useCompositeRootContext(optional = false) {
   return context;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useFocusableWhenDisabled.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useFocusableWhenDisabled.js
 var React17 = __toESM(require_react(), 1);
 function useFocusableWhenDisabled(parameters) {
   const {
@@ -5905,7 +5980,7 @@ function useFocusableWhenDisabled(parameters) {
   };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-button/useButton.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-button/useButton.js
 function useButton(parameters = {}) {
   const {
     disabled: disabled2 = false,
@@ -6064,13 +6139,13 @@ function isValidLinkElement(elem) {
   return Boolean(elem?.tagName === "A" && elem?.href);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/constants.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/constants.js
 var ARROW_LEFT = "ArrowLeft";
 var ARROW_RIGHT = "ArrowRight";
 var ARROW_UP = "ArrowUp";
 var ARROW_DOWN = "ArrowDown";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/element.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/shadowDom.js
 function activeElement(doc) {
   let element = doc.activeElement;
   while (element?.shadowRoot?.activeElement != null) {
@@ -6097,8 +6172,14 @@ function contains(parent, child) {
   }
   return false;
 }
+function getTarget(event) {
+  if ("composedPath" in event) {
+    return event.composedPath()[0];
+  }
+  return event.target;
+}
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/event.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/event.js
 function stopEvent(event) {
   event.preventDefault();
   event.stopPropagation();
@@ -6108,26 +6189,26 @@ function stopEvent(event) {
 var round = Math.round;
 var floor = Math.floor;
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/composite.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/floating-ui-react/utils/composite.js
 function isDifferentGridRow(index, cols, prevRow) {
   return Math.floor(index / cols) !== prevRow;
 }
-function isIndexOutOfListBounds(listRef, index) {
-  return index < 0 || index >= listRef.current.length;
+function isIndexOutOfListBounds(list, index) {
+  return index < 0 || index >= list.length;
 }
 function getMinListIndex(listRef, disabledIndices) {
-  return findNonDisabledListIndex(listRef, {
+  return findNonDisabledListIndex(listRef.current, {
     disabledIndices
   });
 }
 function getMaxListIndex(listRef, disabledIndices) {
-  return findNonDisabledListIndex(listRef, {
+  return findNonDisabledListIndex(listRef.current, {
     decrement: true,
     startingIndex: listRef.current.length,
     disabledIndices
   });
 }
-function findNonDisabledListIndex(listRef, {
+function findNonDisabledListIndex(list, {
   startingIndex = -1,
   decrement = false,
   disabledIndices,
@@ -6136,13 +6217,14 @@ function findNonDisabledListIndex(listRef, {
   let index = startingIndex;
   do {
     index += decrement ? -amount : amount;
-  } while (index >= 0 && index <= listRef.current.length - 1 && isListIndexDisabled(listRef, index, disabledIndices));
+  } while (index >= 0 && index <= list.length - 1 && isListIndexDisabled(list, index, disabledIndices));
   return index;
 }
-function getGridNavigatedIndex(listRef, {
+function getGridNavigatedIndex(list, {
   event,
   orientation,
   loopFocus,
+  onLoop,
   rtl,
   cols,
   disabledIndices,
@@ -6166,7 +6248,7 @@ function getGridNavigatedIndex(listRef, {
     {
       let currentRowEl = null;
       let currentRowIndex = -1;
-      listRef.current.forEach((el, idx) => {
+      list.forEach((el, idx) => {
         if (el == null) {
           return;
         }
@@ -6197,7 +6279,7 @@ function getGridNavigatedIndex(listRef, {
         }
       }
     }
-    const hasVirtualizedGaps = hasDomRows && visibleItemCount < listRef.current.length;
+    const hasVirtualizedGaps = hasDomRows && visibleItemCount < list.length;
     const verticalCols = inferredDomCols || cols;
     const navigateVertically = (direction) => {
       if (!hasDomRows || prevIndex === -1) {
@@ -6215,11 +6297,17 @@ function getGridNavigatedIndex(listRef, {
             return void 0;
           }
           nextRow = nextRow < 0 ? rows.length - 1 : 0;
+          if (onLoop) {
+            const clampedCol = Math.min(colInRow, rows[nextRow].length - 1);
+            const targetItemIndex = rows[nextRow][clampedCol] ?? rows[nextRow][0];
+            const returnedItemIndex = onLoop(event, prevIndex, targetItemIndex);
+            nextRow = rowIndexMap[returnedItemIndex] ?? nextRow;
+          }
         }
         const targetRow = rows[nextRow];
         for (let col = Math.min(colInRow, targetRow.length - 1); col >= 0; col -= 1) {
           const candidate = targetRow[col];
-          if (!isListIndexDisabled(listRef, candidate, disabledIndices)) {
+          if (!isListIndexDisabled(list, candidate, disabledIndices)) {
             return candidate;
           }
         }
@@ -6243,7 +6331,7 @@ function getGridNavigatedIndex(listRef, {
         }
         const rowEnd = Math.min(rowStart + verticalCols - 1, maxIndex);
         for (let candidate = Math.min(rowStart + colInRow, rowEnd); candidate >= rowStart; candidate -= 1) {
-          if (!isListIndexDisabled(listRef, candidate, disabledIndices)) {
+          if (!isListIndexDisabled(list, candidate, disabledIndices)) {
             return candidate;
           }
         }
@@ -6259,7 +6347,7 @@ function getGridNavigatedIndex(listRef, {
     } else if (prevIndex === -1) {
       nextIndex = verticalDirection === "up" ? maxIndex : minIndex;
     } else {
-      nextIndex = findNonDisabledListIndex(listRef, {
+      nextIndex = findNonDisabledListIndex(list, {
         startingIndex: prevIndex,
         amount: verticalCols,
         decrement: verticalDirection === "up",
@@ -6275,17 +6363,23 @@ function getGridNavigatedIndex(listRef, {
           } else {
             nextIndex = maxCol > col ? offset : offset - verticalCols;
           }
+          if (onLoop) {
+            nextIndex = onLoop(event, prevIndex, nextIndex);
+          }
         }
         if (verticalDirection === "down" && prevIndex + verticalCols > maxIndex) {
-          nextIndex = findNonDisabledListIndex(listRef, {
+          nextIndex = findNonDisabledListIndex(list, {
             startingIndex: prevIndex % verticalCols - verticalCols,
             amount: verticalCols,
             disabledIndices
           });
+          if (onLoop) {
+            nextIndex = onLoop(event, prevIndex, nextIndex);
+          }
         }
       }
     }
-    if (isIndexOutOfListBounds(listRef, nextIndex)) {
+    if (isIndexOutOfListBounds(list, nextIndex)) {
       nextIndex = prevIndex;
     }
   }
@@ -6296,21 +6390,27 @@ function getGridNavigatedIndex(listRef, {
         stopEvent(event);
       }
       if (prevIndex % cols !== cols - 1) {
-        nextIndex = findNonDisabledListIndex(listRef, {
+        nextIndex = findNonDisabledListIndex(list, {
           startingIndex: prevIndex,
           disabledIndices
         });
         if (loopFocus && isDifferentGridRow(nextIndex, cols, prevRow)) {
-          nextIndex = findNonDisabledListIndex(listRef, {
+          nextIndex = findNonDisabledListIndex(list, {
             startingIndex: prevIndex - prevIndex % cols - 1,
             disabledIndices
           });
+          if (onLoop) {
+            nextIndex = onLoop(event, prevIndex, nextIndex);
+          }
         }
       } else if (loopFocus) {
-        nextIndex = findNonDisabledListIndex(listRef, {
+        nextIndex = findNonDisabledListIndex(list, {
           startingIndex: prevIndex - prevIndex % cols - 1,
           disabledIndices
         });
+        if (onLoop) {
+          nextIndex = onLoop(event, prevIndex, nextIndex);
+        }
       }
       if (isDifferentGridRow(nextIndex, cols, prevRow)) {
         nextIndex = prevIndex;
@@ -6321,36 +6421,45 @@ function getGridNavigatedIndex(listRef, {
         stopEvent(event);
       }
       if (prevIndex % cols !== 0) {
-        nextIndex = findNonDisabledListIndex(listRef, {
+        nextIndex = findNonDisabledListIndex(list, {
           startingIndex: prevIndex,
           decrement: true,
           disabledIndices
         });
         if (loopFocus && isDifferentGridRow(nextIndex, cols, prevRow)) {
-          nextIndex = findNonDisabledListIndex(listRef, {
+          nextIndex = findNonDisabledListIndex(list, {
             startingIndex: prevIndex + (cols - prevIndex % cols),
             decrement: true,
             disabledIndices
           });
+          if (onLoop) {
+            nextIndex = onLoop(event, prevIndex, nextIndex);
+          }
         }
       } else if (loopFocus) {
-        nextIndex = findNonDisabledListIndex(listRef, {
+        nextIndex = findNonDisabledListIndex(list, {
           startingIndex: prevIndex + (cols - prevIndex % cols),
           decrement: true,
           disabledIndices
         });
+        if (onLoop) {
+          nextIndex = onLoop(event, prevIndex, nextIndex);
+        }
       }
       if (isDifferentGridRow(nextIndex, cols, prevRow)) {
         nextIndex = prevIndex;
       }
     }
     const lastRow = floor(maxIndex / cols) === prevRow;
-    if (isIndexOutOfListBounds(listRef, nextIndex)) {
+    if (isIndexOutOfListBounds(list, nextIndex)) {
       if (loopFocus && lastRow) {
-        nextIndex = event.key === (rtl ? ARROW_RIGHT : ARROW_LEFT) ? maxIndex : findNonDisabledListIndex(listRef, {
+        nextIndex = event.key === (rtl ? ARROW_RIGHT : ARROW_LEFT) ? maxIndex : findNonDisabledListIndex(list, {
           startingIndex: prevIndex - prevIndex % cols - 1,
           disabledIndices
         });
+        if (onLoop) {
+          nextIndex = onLoop(event, prevIndex, nextIndex);
+        }
       } else {
         nextIndex = prevIndex;
       }
@@ -6421,12 +6530,12 @@ function getGridCellIndexOfCorner(index, sizes, cellMap, cols, corner) {
 function getGridCellIndices(indices, cellMap) {
   return cellMap.flatMap((index, cellIndex) => indices.includes(index) ? [cellIndex] : []);
 }
-function isListIndexDisabled(listRef, index, disabledIndices) {
+function isListIndexDisabled(list, index, disabledIndices) {
   const isExplicitlyDisabled = typeof disabledIndices === "function" ? disabledIndices(index) : disabledIndices?.includes(index) ?? false;
   if (isExplicitlyDisabled) {
     return true;
   }
-  const element = listRef.current[index];
+  const element = list[index];
   if (!element) {
     return false;
   }
@@ -6436,15 +6545,18 @@ function isListIndexDisabled(listRef, index, disabledIndices) {
   return !disabledIndices && (element.hasAttribute("disabled") || element.getAttribute("aria-disabled") === "true");
 }
 function isElementVisible(element) {
+  if (typeof element.checkVisibility === "function") {
+    return element.checkVisibility();
+  }
   return getComputedStyle2(element).display !== "none";
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/owner.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/owner.js
 function ownerDocument(node) {
   return node?.ownerDocument || document;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/composite.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/composite.js
 var ARROW_UP2 = "ArrowUp";
 var ARROW_DOWN2 = "ArrowDown";
 var ARROW_LEFT2 = "ArrowLeft";
@@ -6543,7 +6655,7 @@ function getStyles(element) {
   };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useOpenChangeComplete.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useOpenChangeComplete.js
 var React19 = __toESM(require_react(), 1);
 function useOpenChangeComplete(parameters) {
   const {
@@ -6566,7 +6678,7 @@ function useOpenChangeComplete(parameters) {
   }, [enabled, open, onComplete, runOnceAnimationsFinish]);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useForcedRerendering.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/useForcedRerendering.js
 var React20 = __toESM(require_react(), 1);
 function useForcedRerendering() {
   const [, setState] = React20.useState({});
@@ -6575,7 +6687,7 @@ function useForcedRerendering() {
   }, []);
 }
 
-// ../../../node_modules/.pnpm/@base-ui+utils@0.2.6_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/inertValue.js
+// ../../../node_modules/.pnpm/@base-ui+utils@0.2.7_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/utils/esm/inertValue.js
 function inertValue(value) {
   if (isReactVersionAtLeast(19)) {
     return value;
@@ -6583,7 +6695,7 @@ function inertValue(value) {
   return value ? "true" : void 0;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/item/useCompositeItem.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/item/useCompositeItem.js
 var React21 = __toESM(require_react(), 1);
 function useCompositeItem(params = {}) {
   const {
@@ -6621,7 +6733,7 @@ function useCompositeItem(params = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/getCssDimensions.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/getCssDimensions.js
 function getCssDimensions(element) {
   const css = getComputedStyle2(element);
   let width = parseFloat(css.width) || 0;
@@ -6640,7 +6752,7 @@ function getCssDimensions(element) {
   };
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/csp-provider/CSPContext.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/csp-provider/CSPContext.js
 var React22 = __toESM(require_react(), 1);
 var CSPContext = /* @__PURE__ */ React22.createContext(void 0);
 if (true) CSPContext.displayName = "CSPContext";
@@ -6651,22 +6763,23 @@ function useCSPContext() {
   return React22.useContext(CSPContext) ?? DEFAULT_CSP_CONTEXT_VALUE;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRoot.js
 var React24 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/useCompositeRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/useCompositeRoot.js
 var React23 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/constants.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/constants.js
 var ACTIVE_COMPOSITE_ITEM = "data-composite-item-active";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/useCompositeRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/useCompositeRoot.js
 var EMPTY_ARRAY2 = [];
 function useCompositeRoot(params) {
   const {
     itemSizes,
     cols = 1,
     loopFocus = true,
+    onLoop,
     dense = false,
     orientation = "both",
     direction,
@@ -6705,15 +6818,22 @@ function useCompositeRoot(params) {
     }
     scrollIntoViewIfNeeded(rootRef.current, activeItem, direction, orientation);
   });
+  const wrappedOnLoop = useStableCallback((event, prevIndex, nextIndex) => {
+    if (!onLoop) {
+      return nextIndex;
+    }
+    return onLoop?.(event, prevIndex, nextIndex, elementsRef);
+  });
   const props = React23.useMemo(() => ({
     "aria-orientation": orientation === "both" ? void 0 : orientation,
     ref: mergedRef,
     onFocus(event) {
       const element = rootRef.current;
-      if (!element || !isNativeInput(event.target)) {
+      const target = getTarget(event.nativeEvent);
+      if (!element || target == null || !isNativeInput(target)) {
         return;
       }
-      event.target.setSelectionRange(0, event.target.value.length ?? 0);
+      target.setSelectionRange(0, target.value.length ?? 0);
     },
     onKeyDown(event) {
       const RELEVANT_KEYS = enableHomeAndEndKeys ? ALL_KEYS : ARROW_KEYS;
@@ -6740,10 +6860,11 @@ function useCompositeRoot(params) {
         vertical: ARROW_UP2,
         both: horizontalBackwardKey
       }[orientation];
-      if (isNativeInput(event.target) && !isElementDisabled(event.target)) {
-        const selectionStart = event.target.selectionStart;
-        const selectionEnd = event.target.selectionEnd;
-        const textContent = event.target.value ?? "";
+      const target = getTarget(event.nativeEvent);
+      if (target != null && isNativeInput(target) && !isElementDisabled(target)) {
+        const selectionStart = target.selectionStart;
+        const selectionEnd = target.selectionEnd;
+        const textContent = target.value ?? "";
         if (selectionStart == null || event.shiftKey || selectionStart !== selectionEnd) {
           return;
         }
@@ -6765,18 +6886,17 @@ function useCompositeRoot(params) {
           height: 1
         }));
         const cellMap = createGridCellMap(sizes, cols, dense);
-        const minGridIndex = cellMap.findIndex((index) => index != null && !isListIndexDisabled(elementsRef, index, disabledIndices));
-        const maxGridIndex = cellMap.reduce((foundIndex, index, cellIndex) => index != null && !isListIndexDisabled(elementsRef, index, disabledIndices) ? cellIndex : foundIndex, -1);
-        nextIndex = cellMap[getGridNavigatedIndex({
-          current: cellMap.map((itemIndex) => itemIndex ? elementsRef.current[itemIndex] : null)
-        }, {
+        const minGridIndex = cellMap.findIndex((index) => index != null && !isListIndexDisabled(elementsRef.current, index, disabledIndices));
+        const maxGridIndex = cellMap.reduce((foundIndex, index, cellIndex) => index != null && !isListIndexDisabled(elementsRef.current, index, disabledIndices) ? cellIndex : foundIndex, -1);
+        nextIndex = cellMap[getGridNavigatedIndex(cellMap.map((itemIndex) => itemIndex != null ? elementsRef.current[itemIndex] : null), {
           event,
           orientation,
           loopFocus,
+          onLoop: wrappedOnLoop,
           cols,
           // treat undefined (empty grid spaces) as disabled indices so we
           // don't end up in them
-          disabledIndices: getGridCellIndices([...disabledIndices || elementsRef.current.map((_, index) => isListIndexDisabled(elementsRef, index) ? index : void 0), void 0], cellMap),
+          disabledIndices: getGridCellIndices([...disabledIndices || elementsRef.current.map((_, index) => isListIndexDisabled(elementsRef.current, index) ? index : void 0), void 0], cellMap),
           minIndex: minGridIndex,
           maxIndex: maxGridIndex,
           prevIndex: getGridCellIndexOfCorner(
@@ -6818,17 +6938,23 @@ function useCompositeRoot(params) {
       if (nextIndex === highlightedIndex && (forwardKeys.includes(event.key) || backwardKeys.includes(event.key))) {
         if (loopFocus && nextIndex === maxIndex && forwardKeys.includes(event.key)) {
           nextIndex = minIndex;
+          if (onLoop) {
+            nextIndex = onLoop(event, highlightedIndex, nextIndex, elementsRef);
+          }
         } else if (loopFocus && nextIndex === minIndex && backwardKeys.includes(event.key)) {
           nextIndex = maxIndex;
+          if (onLoop) {
+            nextIndex = onLoop(event, highlightedIndex, nextIndex, elementsRef);
+          }
         } else {
-          nextIndex = findNonDisabledListIndex(elementsRef, {
+          nextIndex = findNonDisabledListIndex(elementsRef.current, {
             startingIndex: nextIndex,
             decrement: backwardKeys.includes(event.key),
             disabledIndices
           });
         }
       }
-      if (nextIndex !== highlightedIndex && !isIndexOutOfListBounds(elementsRef, nextIndex)) {
+      if (nextIndex !== highlightedIndex && !isIndexOutOfListBounds(elementsRef.current, nextIndex)) {
         if (stopEventPropagation) {
           event.stopPropagation();
         }
@@ -6841,7 +6967,7 @@ function useCompositeRoot(params) {
         });
       }
     }
-  }), [cols, dense, direction, disabledIndices, elementsRef, enableHomeAndEndKeys, highlightedIndex, isGrid2, itemSizes, loopFocus, mergedRef, modifierKeys, onHighlightedIndexChange, orientation, stopEventPropagation]);
+  }), [cols, dense, direction, disabledIndices, elementsRef, enableHomeAndEndKeys, highlightedIndex, isGrid2, itemSizes, loopFocus, onLoop, wrappedOnLoop, mergedRef, modifierKeys, onHighlightedIndexChange, orientation, stopEventPropagation]);
   return React23.useMemo(() => ({
     props,
     highlightedIndex,
@@ -6864,12 +6990,13 @@ function isModifierKeySet(event, ignoredModifierKeys) {
   return false;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/composite/root/CompositeRoot.js
 var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
 function CompositeRoot(componentProps) {
   const {
     render: render4,
     className,
+    style,
     refs = EMPTY_ARRAY,
     props = EMPTY_ARRAY,
     state = EMPTY_OBJECT,
@@ -6880,6 +7007,7 @@ function CompositeRoot(componentProps) {
     dense,
     itemSizes,
     loopFocus,
+    onLoop,
     cols,
     enableHomeAndEndKeys,
     onMapChange: onMapChangeProp,
@@ -6903,6 +7031,7 @@ function CompositeRoot(componentProps) {
     itemSizes,
     cols,
     loopFocus,
+    onLoop,
     dense,
     orientation,
     highlightedIndex: highlightedIndexProp,
@@ -6939,7 +7068,22 @@ function CompositeRoot(componentProps) {
   });
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/index.parts.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/utils/useIsHydrating.js
+var import_shim = __toESM(require_shim(), 1);
+function subscribe() {
+  return NOOP;
+}
+function getSnapshot() {
+  return false;
+}
+function getServerSnapshot() {
+  return true;
+}
+function useIsHydrating() {
+  return (0, import_shim.useSyncExternalStore)(subscribe, getSnapshot, getServerSnapshot);
+}
+
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/index.parts.js
 var index_parts_exports = {};
 __export(index_parts_exports, {
   Indicator: () => TabsIndicator,
@@ -6949,10 +7093,10 @@ __export(index_parts_exports, {
   Tab: () => TabsTab
 });
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRoot.js
 var React26 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRootContext.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRootContext.js
 var React25 = __toESM(require_react(), 1);
 var TabsRootContext = /* @__PURE__ */ React25.createContext(void 0);
 if (true) TabsRootContext.displayName = "TabsRootContext";
@@ -6964,21 +7108,21 @@ function useTabsRootContext() {
   return context;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRootDataAttributes.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRootDataAttributes.js
 var TabsRootDataAttributes = /* @__PURE__ */ (function(TabsRootDataAttributes2) {
   TabsRootDataAttributes2["activationDirection"] = "data-activation-direction";
   TabsRootDataAttributes2["orientation"] = "data-orientation";
   return TabsRootDataAttributes2;
 })({});
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/stateAttributesMapping.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/stateAttributesMapping.js
 var tabsStateAttributesMapping = {
   tabActivationDirection: (dir) => ({
     [TabsRootDataAttributes.activationDirection]: dir
   })
 };
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRoot.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRoot.js
 var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
 var TabsRoot = /* @__PURE__ */ React26.forwardRef(function TabsRoot2(componentProps, forwardedRef) {
   const {
@@ -6988,9 +7132,9 @@ var TabsRoot = /* @__PURE__ */ React26.forwardRef(function TabsRoot2(componentPr
     orientation = "horizontal",
     render: render4,
     value: valueProp,
+    style,
     ...elementProps
   } = componentProps;
-  const direction = useDirection();
   const hasExplicitDefaultValueProp = Object.hasOwn(componentProps, "defaultValue");
   const tabPanelRefs = React26.useRef([]);
   const [mountedTabPanels, setMountedTabPanels] = React26.useState(() => /* @__PURE__ */ new Map());
@@ -7002,14 +7146,50 @@ var TabsRoot = /* @__PURE__ */ React26.forwardRef(function TabsRoot2(componentPr
   });
   const isControlled = valueProp !== void 0;
   const [tabMap, setTabMap] = React26.useState(() => /* @__PURE__ */ new Map());
-  const [tabActivationDirection, setTabActivationDirection] = React26.useState("none");
+  const getTabElementBySelectedValue = React26.useCallback((selectedValue) => {
+    if (selectedValue === void 0) {
+      return null;
+    }
+    for (const [tabElement, tabMetadata] of tabMap.entries()) {
+      if (tabMetadata != null && selectedValue === (tabMetadata.value ?? tabMetadata.index)) {
+        return tabElement;
+      }
+    }
+    return null;
+  }, [tabMap]);
+  const [activationDirectionState, setActivationDirectionState] = React26.useState(() => ({
+    previousValue: value,
+    tabActivationDirection: "none"
+  }));
+  const {
+    previousValue,
+    tabActivationDirection: committedTabActivationDirection
+  } = activationDirectionState;
+  let tabActivationDirection = committedTabActivationDirection;
+  let directionComputationIncomplete = false;
+  if (previousValue !== value) {
+    tabActivationDirection = computeActivationDirection(previousValue, value, orientation, tabMap);
+    directionComputationIncomplete = previousValue != null && value != null && getTabElementBySelectedValue(value) == null;
+  }
+  const nextPreviousValue = directionComputationIncomplete ? previousValue : value;
+  const shouldSyncActivationDirectionState = previousValue !== nextPreviousValue || committedTabActivationDirection !== tabActivationDirection;
+  useIsoLayoutEffect(() => {
+    if (!shouldSyncActivationDirectionState) {
+      return;
+    }
+    setActivationDirectionState({
+      previousValue: nextPreviousValue,
+      tabActivationDirection
+    });
+  }, [nextPreviousValue, shouldSyncActivationDirectionState, tabActivationDirection]);
   const onValueChange = useStableCallback((newValue, eventDetails) => {
+    const activationDirection = computeActivationDirection(value, newValue, orientation, tabMap);
+    eventDetails.activationDirection = activationDirection;
     onValueChangeProp?.(newValue, eventDetails);
     if (eventDetails.isCanceled) {
       return;
     }
     setValue(newValue);
-    setTabActivationDirection(eventDetails.activationDirection);
   });
   const registerMountedTabPanel = useStableCallback((panelValue, panelId) => {
     setMountedTabPanels((prev) => {
@@ -7042,19 +7222,7 @@ var TabsRoot = /* @__PURE__ */ React26.forwardRef(function TabsRoot2(componentPr
     }
     return void 0;
   }, [tabMap]);
-  const getTabElementBySelectedValue = React26.useCallback((selectedValue) => {
-    if (selectedValue === void 0) {
-      return null;
-    }
-    for (const [tabElement, tabMetadata] of tabMap.entries()) {
-      if (tabMetadata != null && selectedValue === (tabMetadata.value ?? tabMetadata.index)) {
-        return tabElement;
-      }
-    }
-    return null;
-  }, [tabMap]);
   const tabsContextValue = React26.useMemo(() => ({
-    direction,
     getTabElementBySelectedValue,
     getTabIdByPanelValue,
     getTabPanelIdByValue,
@@ -7065,7 +7233,7 @@ var TabsRoot = /* @__PURE__ */ React26.forwardRef(function TabsRoot2(componentPr
     unregisterMountedTabPanel,
     tabActivationDirection,
     value
-  }), [direction, getTabElementBySelectedValue, getTabIdByPanelValue, getTabPanelIdByValue, onValueChange, orientation, registerMountedTabPanel, setTabMap, unregisterMountedTabPanel, tabActivationDirection, value]);
+  }), [getTabElementBySelectedValue, getTabIdByPanelValue, getTabPanelIdByValue, onValueChange, orientation, registerMountedTabPanel, setTabMap, unregisterMountedTabPanel, tabActivationDirection, value]);
   const selectedTabMetadata = React26.useMemo(() => {
     for (const tabMetadata of tabMap.values()) {
       if (tabMetadata != null && tabMetadata.value === value) {
@@ -7100,8 +7268,16 @@ var TabsRoot = /* @__PURE__ */ React26.forwardRef(function TabsRoot2(componentPr
       return;
     }
     setValue(fallbackValue);
-    setTabActivationDirection("none");
-  }, [defaultValueProp, firstEnabledTabValue, hasExplicitDefaultValueProp, isControlled, selectedTabMetadata, setTabActivationDirection, setValue, tabMap, value]);
+    setActivationDirectionState((prev) => {
+      if (prev.tabActivationDirection === "none") {
+        return prev;
+      }
+      return {
+        ...prev,
+        tabActivationDirection: "none"
+      };
+    });
+  }, [defaultValueProp, firstEnabledTabValue, hasExplicitDefaultValueProp, isControlled, selectedTabMetadata, setValue, tabMap, value]);
   const state = {
     orientation,
     tabActivationDirection
@@ -7121,11 +7297,60 @@ var TabsRoot = /* @__PURE__ */ React26.forwardRef(function TabsRoot2(componentPr
   });
 });
 if (true) TabsRoot.displayName = "TabsRoot";
+function computeActivationDirection(oldValue, newValue, orientation, tabMap) {
+  if (oldValue == null || newValue == null) {
+    return "none";
+  }
+  let oldTab = null;
+  let newTab = null;
+  for (const [tabElement, tabMetadata] of tabMap.entries()) {
+    if (tabMetadata == null) {
+      continue;
+    }
+    const tabValue = tabMetadata.value ?? tabMetadata.index;
+    if (oldValue === tabValue) {
+      oldTab = tabElement;
+    }
+    if (newValue === tabValue) {
+      newTab = tabElement;
+    }
+    if (oldTab != null && newTab != null) {
+      break;
+    }
+  }
+  if (oldTab == null || newTab == null) {
+    if (oldTab !== newTab && (typeof oldValue === "number" || typeof oldValue === "string") && typeof oldValue === typeof newValue) {
+      if (orientation === "horizontal") {
+        return newValue > oldValue ? "right" : "left";
+      }
+      return newValue > oldValue ? "down" : "up";
+    }
+    return "none";
+  }
+  const oldRect = oldTab.getBoundingClientRect();
+  const newRect = newTab.getBoundingClientRect();
+  if (orientation === "horizontal") {
+    if (newRect.left < oldRect.left) {
+      return "left";
+    }
+    if (newRect.left > oldRect.left) {
+      return "right";
+    }
+  } else {
+    if (newRect.top < oldRect.top) {
+      return "up";
+    }
+    if (newRect.top > oldRect.top) {
+      return "down";
+    }
+  }
+  return "none";
+}
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/tab/TabsTab.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/tab/TabsTab.js
 var React28 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/list/TabsListContext.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/list/TabsListContext.js
 var React27 = __toESM(require_react(), 1);
 var TabsListContext = /* @__PURE__ */ React27.createContext(void 0);
 if (true) TabsListContext.displayName = "TabsListContext";
@@ -7137,7 +7362,7 @@ function useTabsListContext() {
   return context;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/tab/TabsTab.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/tab/TabsTab.js
 var TabsTab = /* @__PURE__ */ React28.forwardRef(function TabsTab2(componentProps, forwardedRef) {
   const {
     className,
@@ -7146,6 +7371,7 @@ var TabsTab = /* @__PURE__ */ React28.forwardRef(function TabsTab2(componentProp
     value,
     id: idProp,
     nativeButton = true,
+    style,
     ...elementProps
   } = componentProps;
   const {
@@ -7284,13 +7510,13 @@ var TabsTab = /* @__PURE__ */ React28.forwardRef(function TabsTab2(componentProp
 });
 if (true) TabsTab.displayName = "TabsTab";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicator.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicator.js
 var React29 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/prehydrationScript.min.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/prehydrationScript.min.js
 var script = '!function(){const t=document.currentScript.previousElementSibling;if(!t)return;const e=t.closest(\'[role="tablist"]\');if(!e)return;const i=e.querySelector("[data-active]");if(!i)return;if(0===i.offsetWidth||0===e.offsetWidth)return;let o=0,n=0,h=0,l=0,r=0,f=0;function s(t){const e=getComputedStyle(t);let i=parseFloat(e.width)||0,o=parseFloat(e.height)||0;return(Math.round(i)!==t.offsetWidth||Math.round(o)!==t.offsetHeight)&&(i=t.offsetWidth,o=t.offsetHeight),{width:i,height:o}}if(null!=i&&null!=e){const{width:t,height:c}=s(i),{width:u,height:d}=s(e),a=i.getBoundingClientRect(),g=e.getBoundingClientRect(),p=u>0?g.width/u:1,b=d>0?g.height/d:1;if(Math.abs(p)>Number.EPSILON&&Math.abs(b)>Number.EPSILON){const t=a.left-g.left,i=a.top-g.top;o=t/p+e.scrollLeft-e.clientLeft,h=i/b+e.scrollTop-e.clientTop}else o=i.offsetLeft,h=i.offsetTop;r=t,f=c,n=e.scrollWidth-o-r,l=e.scrollHeight-h-f}function c(e,i){t.style.setProperty(`--active-tab-${e}`,`${i}px`)}c("left",o),c("right",n),c("top",h),c("bottom",l),c("width",r),c("height",f),r>0&&f>0&&t.removeAttribute("hidden")}();';
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicatorCssVars.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicatorCssVars.js
 var TabsIndicatorCssVars = /* @__PURE__ */ (function(TabsIndicatorCssVars2) {
   TabsIndicatorCssVars2["activeTabLeft"] = "--active-tab-left";
   TabsIndicatorCssVars2["activeTabRight"] = "--active-tab-right";
@@ -7301,7 +7527,7 @@ var TabsIndicatorCssVars = /* @__PURE__ */ (function(TabsIndicatorCssVars2) {
   return TabsIndicatorCssVars2;
 })({});
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicator.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicator.js
 var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
 var stateAttributesMapping = {
   ...tabsStateAttributesMapping,
@@ -7313,6 +7539,7 @@ var TabsIndicator = /* @__PURE__ */ React29.forwardRef(function TabIndicator(com
     className,
     render: render4,
     renderBeforeHydration = false,
+    style: styleProp,
     ...elementProps
   } = componentProps;
   const {
@@ -7328,8 +7555,7 @@ var TabsIndicator = /* @__PURE__ */ React29.forwardRef(function TabIndicator(com
     tabsListElement,
     registerIndicatorUpdateListener
   } = useTabsListContext();
-  const [isMounted, setIsMounted] = React29.useState(false);
-  useOnMount(() => setIsMounted(true));
+  const isHydrating = useIsHydrating();
   const rerender = useForcedRerendering();
   React29.useEffect(() => {
     return registerIndicatorUpdateListener(rerender);
@@ -7420,7 +7646,7 @@ var TabsIndicator = /* @__PURE__ */ React29.forwardRef(function TabIndicator(com
     return null;
   }
   return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(React29.Fragment, {
-    children: [element, !isMounted && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("script", {
+    children: [element, isHydrating && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("script", {
       nonce,
       dangerouslySetInnerHTML: {
         __html: script
@@ -7431,10 +7657,10 @@ var TabsIndicator = /* @__PURE__ */ React29.forwardRef(function TabIndicator(com
 });
 if (true) TabsIndicator.displayName = "TabsIndicator";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanel.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanel.js
 var React30 = __toESM(require_react(), 1);
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanelDataAttributes.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanelDataAttributes.js
 var TabsPanelDataAttributes = (function(TabsPanelDataAttributes2) {
   TabsPanelDataAttributes2["index"] = "data-index";
   TabsPanelDataAttributes2["activationDirection"] = "data-activation-direction";
@@ -7445,7 +7671,7 @@ var TabsPanelDataAttributes = (function(TabsPanelDataAttributes2) {
   return TabsPanelDataAttributes2;
 })({});
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanel.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanel.js
 var stateAttributesMapping2 = {
   ...tabsStateAttributesMapping,
   ...transitionStatusMapping
@@ -7456,6 +7682,7 @@ var TabsPanel = /* @__PURE__ */ React30.forwardRef(function TabPanel(componentPr
     value,
     render: render4,
     keepMounted = false,
+    style,
     ...elementProps
   } = componentProps;
   const {
@@ -7535,7 +7762,7 @@ var TabsPanel = /* @__PURE__ */ React30.forwardRef(function TabPanel(componentPr
 });
 if (true) TabsPanel.displayName = "TabsPanel";
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/list/TabsList.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/list/TabsList.js
 var React31 = __toESM(require_react(), 1);
 var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
 var TabsList = /* @__PURE__ */ React31.forwardRef(function TabsList2(componentProps, forwardedRef) {
@@ -7544,10 +7771,10 @@ var TabsList = /* @__PURE__ */ React31.forwardRef(function TabsList2(componentPr
     className,
     loopFocus = true,
     render: render4,
+    style,
     ...elementProps
   } = componentProps;
   const {
-    getTabElementBySelectedValue,
     onValueChange,
     orientation,
     value,
@@ -7600,17 +7827,8 @@ var TabsList = /* @__PURE__ */ React31.forwardRef(function TabsList2(componentPr
       resizeObserverRef.current?.unobserve(element);
     };
   });
-  const detectActivationDirection = useActivationDirectionDetector(
-    value,
-    // the old value
-    orientation,
-    tabsListElement,
-    getTabElementBySelectedValue
-  );
   const onTabActivation = useStableCallback((newValue, eventDetails) => {
     if (newValue !== value) {
-      const activationDirection = detectActivationDirection(newValue);
-      eventDetails.activationDirection = activationDirection;
       onValueChange(newValue, eventDetails);
     }
   });
@@ -7636,6 +7854,7 @@ var TabsList = /* @__PURE__ */ React31.forwardRef(function TabsList2(componentPr
     children: /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(CompositeRoot, {
       render: render4,
       className,
+      style,
       state,
       refs: [forwardedRef, setTabsListElement],
       props: [defaultProps, elementProps],
@@ -7651,82 +7870,8 @@ var TabsList = /* @__PURE__ */ React31.forwardRef(function TabsList2(componentPr
   });
 });
 if (true) TabsList.displayName = "TabsList";
-function getInset(tab, tabsList) {
-  const {
-    left: tabLeft,
-    top: tabTop
-  } = tab.getBoundingClientRect();
-  const {
-    left: listLeft,
-    top: listTop
-  } = tabsList.getBoundingClientRect();
-  const left = tabLeft - listLeft;
-  const top = tabTop - listTop;
-  return {
-    left,
-    top
-  };
-}
-function useActivationDirectionDetector(activeTabValue, orientation, tabsListElement, getTabElement) {
-  const [previousTabEdge, setPreviousTabEdge] = React31.useState(null);
-  useIsoLayoutEffect(() => {
-    if (activeTabValue == null || tabsListElement == null) {
-      setPreviousTabEdge(null);
-      return;
-    }
-    const activeTab = getTabElement(activeTabValue);
-    if (activeTab == null) {
-      setPreviousTabEdge(null);
-      return;
-    }
-    const {
-      left,
-      top
-    } = getInset(activeTab, tabsListElement);
-    setPreviousTabEdge(orientation === "horizontal" ? left : top);
-  }, [orientation, getTabElement, tabsListElement, activeTabValue]);
-  return React31.useCallback((newValue) => {
-    if (newValue === activeTabValue) {
-      return "none";
-    }
-    if (newValue == null) {
-      setPreviousTabEdge(null);
-      return "none";
-    }
-    if (newValue != null && tabsListElement != null) {
-      const activeTabElement = getTabElement(newValue);
-      if (activeTabElement != null) {
-        const {
-          left,
-          top
-        } = getInset(activeTabElement, tabsListElement);
-        if (previousTabEdge == null) {
-          setPreviousTabEdge(orientation === "horizontal" ? left : top);
-          return "none";
-        }
-        if (orientation === "horizontal") {
-          if (left < previousTabEdge) {
-            setPreviousTabEdge(left);
-            return "left";
-          }
-          if (left > previousTabEdge) {
-            setPreviousTabEdge(left);
-            return "right";
-          }
-        } else if (top < previousTabEdge) {
-          setPreviousTabEdge(top);
-          return "up";
-        } else if (top > previousTabEdge) {
-          setPreviousTabEdge(top);
-          return "down";
-        }
-      }
-    }
-    return "none";
-  }, [getTabElement, orientation, previousTabEdge, tabsListElement, activeTabValue]);
-}
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.3.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-render/useRender.js
+// ../../../node_modules/.pnpm/@base-ui+react@1.4.0_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/use-render/useRender.js
 function useRender(params) {
   return useRenderElement(params.defaultTagName ?? "div", params, params);
 }
@@ -14148,7 +14293,7 @@ function init(store5, ...args) {
   if (!store5) return;
   return getInternal(store5, "init")(...args);
 }
-function subscribe(store5, ...args) {
+function subscribe2(store5, ...args) {
   if (!store5) return;
   return getInternal(store5, "subscribe")(...args);
 }
@@ -14215,18 +14360,18 @@ If there's a particular need for this, please submit a feature request at https:
 
 // ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/YAS7X7HB.js
 var React34 = __toESM(require_react(), 1);
-var import_shim = __toESM(require_shim(), 1);
+var import_shim2 = __toESM(require_shim(), 1);
 var noopSubscribe = () => () => {
 };
 function useStoreState(store5, keyOrSelector = identity) {
   const storeSubscribe = React34.useCallback(
     (callback) => {
       if (!store5) return noopSubscribe();
-      return subscribe(store5, null, callback);
+      return subscribe2(store5, null, callback);
     },
     [store5]
   );
-  const getSnapshot = () => {
+  const getSnapshot2 = () => {
     const key = typeof keyOrSelector === "string" ? keyOrSelector : null;
     const selector2 = typeof keyOrSelector === "function" ? keyOrSelector : null;
     const state = store5 == null ? void 0 : store5.getState();
@@ -14236,7 +14381,7 @@ function useStoreState(store5, keyOrSelector = identity) {
     if (!hasOwnProperty(state, key)) return;
     return state[key];
   };
-  return (0, import_shim.useSyncExternalStore)(storeSubscribe, getSnapshot, getSnapshot);
+  return (0, import_shim2.useSyncExternalStore)(storeSubscribe, getSnapshot2, getSnapshot2);
 }
 function useStoreStateObject(store5, object) {
   const objRef = React34.useRef(
@@ -14245,11 +14390,11 @@ function useStoreStateObject(store5, object) {
   const storeSubscribe = React34.useCallback(
     (callback) => {
       if (!store5) return noopSubscribe();
-      return subscribe(store5, null, callback);
+      return subscribe2(store5, null, callback);
     },
     [store5]
   );
-  const getSnapshot = () => {
+  const getSnapshot2 = () => {
     const state = store5 == null ? void 0 : store5.getState();
     let updated = false;
     const obj = objRef.current;
@@ -14277,7 +14422,7 @@ function useStoreStateObject(store5, object) {
     }
     return objRef.current;
   };
-  return (0, import_shim.useSyncExternalStore)(storeSubscribe, getSnapshot, getSnapshot);
+  return (0, import_shim2.useSyncExternalStore)(storeSubscribe, getSnapshot2, getSnapshot2);
 }
 function useStoreProps(store5, props, key, setKey) {
   const value = hasOwnProperty(props, key) ? props[key] : void 0;
@@ -15134,7 +15279,7 @@ function createDisclosureStore(props = {}) {
   );
   setup(
     disclosure,
-    () => subscribe(disclosure, ["open"], () => {
+    () => subscribe2(disclosure, ["open"], () => {
       if (!disclosure.getState().animated) return;
       disclosure.setState("animating", true);
     })
