@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Componentry: use WordPress admin theme color variable instead of hardcoded color for text input focus state.
 - Tested up to WordPress 7.0.
 
+### Bug fixes
+- Settings: Show an empty state when search returns no matching settings.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Disable the "Correct spelling and grammar" toolbar option by default. It can be re-enabled via the `ai_correct_spelling_enabled` filter.
 - Update dependencies.
