@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.18.1-alpha] - unreleased
+## [7.19.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Form preview now lets you submit the form to test the full submission flow end to end. Responses created from preview are stored as test responses, clearly flagged in the notification email, and excluded from the default CSV export.
 
 ### Changed
 - Update package dependencies.
@@ -2448,7 +2451,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.18.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.18.0...v7.18.1-alpha
+[7.19.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.18.0...v7.19.0-alpha
 [7.18.0]: https://github.com/automattic/jetpack-forms/compare/v7.17.0...v7.18.0
 [7.17.0]: https://github.com/automattic/jetpack-forms/compare/v7.16.0...v7.17.0
 [7.16.0]: https://github.com/automattic/jetpack-forms/compare/v7.15.0...v7.16.0
