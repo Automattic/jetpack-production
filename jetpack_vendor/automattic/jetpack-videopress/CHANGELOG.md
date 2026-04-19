@@ -11,8 +11,12 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Adopt the shared Jetpack admin-page-layout mixin on the VideoPress admin page: pinned header, scrolling middle, pinned footer, no window-level scroll.
+- Swap the site-settings Video Privacy toggle to WordPress CheckboxControl for native rendering and accessibility.
 - Update package dependencies.
 - Video Thumbnail: Remove Jetpack color override on loading spinner.
+
+### Removed
+- Remove unused custom Checkbox component and the hidden per-row selection UI that relied on it.
 
 ### Fixed
 - VideoPress admin: add padding around the Settings section, make the hero full width on medium screens, and remove an empty pagination placeholder below the video library.
