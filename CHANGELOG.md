@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Discussion Settings: Import ToggleControl directly from @wordpress/components.
 - Newsletter Settings: Import RadioControl directly from @wordpress/components.
 - Performance settings: import ToggleControl from @wordpress/components instead of @automattic/jetpack-components.
+- Traffic Settings: Import ToggleControl from @wordpress/components
 - Update dependencies.
 - Update package dependencies.
 - Writing settings: Import ToggleControl directly from @wordpress/components.
