@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Adopt the shared Jetpack admin-page-layout mixin on the Social admin page: pinned header, scrolling middle, pinned footer, no window-level scroll.
 - Make the sidebar X-connection toggle date-aware and block scheduling when the target month's quota is exceeded.
 - Remove Jetpack color overrides on core toggle components.
 - Update package dependencies.

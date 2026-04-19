@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Adopt the shared Jetpack admin-page-layout mixin on the Search admin page. Drops the inline JetpackFooter render and `showFooter={false}` override so AdminPage's built-in footer lives inside the flex column that the mixin pins.
 - Remove custom toggle color overrides to use native WordPress admin theme colors.
 - Update package dependencies.
 

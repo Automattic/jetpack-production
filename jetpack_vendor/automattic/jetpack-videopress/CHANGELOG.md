@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Adopt the shared Jetpack admin-page-layout mixin on the VideoPress admin page: pinned header, scrolling middle, pinned footer, no window-level scroll.
 - Update package dependencies.
 - Video Thumbnail: Remove Jetpack color override on loading spinner.
 

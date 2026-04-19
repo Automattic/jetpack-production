@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Adopt the shared Jetpack admin-page-layout mixin on the Newsletter admin page: pinned header, scrolling middle, pinned footer, no window-level scroll. Adds @automattic/jetpack-base-styles as a workspace dependency.
 - Update package dependencies.
 
 ## [0.8.3] - 2026-04-15
