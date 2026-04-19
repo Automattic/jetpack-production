@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Removed
+- Dashboard: remove dead .jp-forms-filters-bar SCSS left behind after the move to native DataViews filters in #46732
+
 ### Fixed
 - Forms: make response exports respect the Source filter so the downloaded CSV matches the filtered inbox view.
 
