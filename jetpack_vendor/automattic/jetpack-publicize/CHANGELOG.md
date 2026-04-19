@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Remove Jetpack color overrides on core toggle components.
 - Update package dependencies.
 
+### Fixed
+- Social admin page: render the JetpackFooter unconditionally for parity with every other Jetpack admin page (Newsletter, Search, Backup, Protect, VideoPress, Boost, Network Admin).
+
 ## [0.78.0] - 2026-04-15
 ### Changed
 - Social: Move media section buttons below preview to be more apparent. [#47995]
