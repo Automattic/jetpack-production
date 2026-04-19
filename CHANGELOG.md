@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Performance settings: import ToggleControl from @wordpress/components instead of @automattic/jetpack-components.
 - Update dependencies.
 - Update package dependencies.
+- Writing settings: Import ToggleControl directly from @wordpress/components.
 
 ## 15.8-a.3 - 2026-04-15
 ### Enhancements
