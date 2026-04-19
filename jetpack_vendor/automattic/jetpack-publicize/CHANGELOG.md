@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Remove Jetpack color overrides on core toggle components.
 - Update package dependencies.
 
+### Removed
+- Admin page: remove support section.
+
 ### Fixed
 - Social admin page: render the JetpackFooter unconditionally for parity with every other Jetpack admin page (Newsletter, Search, Backup, Protect, VideoPress, Boost, Network Admin).
 
