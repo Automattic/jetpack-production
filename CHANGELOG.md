@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Assistant: Disable the "Correct spelling and grammar" toolbar option by default. It can be re-enabled via the `ai_correct_spelling_enabled` filter.
+- Discussion Settings: Import ToggleControl directly from @wordpress/components.
 - Newsletter Settings: Import RadioControl directly from @wordpress/components.
 - Performance settings: import ToggleControl from @wordpress/components instead of @automattic/jetpack-components.
 - Update dependencies.
