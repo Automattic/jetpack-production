@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Adopt the shared Jetpack admin-page-layout mixin on the Backup admin page: pinned header, scrolling middle, pinned footer, no window-level scroll.
+- Storage meter: migrate ProgressBar to @wordpress/components; preserve color-by-usage-level styling via scoped CSS.
 - Update package dependencies.
 
 ## [4.2.51] - 2026-04-15
