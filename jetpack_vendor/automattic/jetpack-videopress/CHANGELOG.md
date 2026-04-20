@@ -5,22 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.36.5-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.36.5] - 2026-04-20
 ### Changed
-- Admin dashboard: migrate video storage meter and video thumbnail upload progress to @wordpress/components ProgressBar; drop unused progressBarClassName prop.
-- Adopt the shared Jetpack admin-page-layout mixin on the VideoPress admin page: pinned header, scrolling middle, pinned footer, no window-level scroll.
-- Swap the site-settings Video Privacy toggle to WordPress CheckboxControl for native rendering and accessibility.
-- Update package dependencies.
-- Video Thumbnail: Remove Jetpack color override on loading spinner.
+- Admin dashboard: Migrate video storage meter and video thumbnail upload progress to @wordpress/components ProgressBar; drop unused progressBarClassName prop. [#48191]
+- Adopt the shared Jetpack admin-page-layout mixin on the VideoPress admin page: pinned header, scrolling middle, pinned footer, no window-level scroll. [#48109]
+- Swap the site-settings Video Privacy toggle to WordPress CheckboxControl for native rendering and accessibility. [#48175]
+- Update package dependencies. [#48106] [#48126] [#48141]
+- Video Thumbnail: Remove Jetpack color override on loading spinner. [#47317]
 
 ### Removed
-- Remove unused custom Checkbox component and the hidden per-row selection UI that relied on it.
+- Remove unused custom Checkbox component and the hidden per-row selection UI that relied on it. [#48175]
 
 ### Fixed
-- VideoPress admin: add padding around the Settings section, make the hero full width on medium screens, and remove an empty pagination placeholder below the video library.
+- VideoPress Admin: Add padding around the Settings section, make the hero full width on medium screens, and remove an empty pagination placeholder below the video library. [#48131]
 
 ## [0.36.4] - 2026-04-16
 ### Fixed
@@ -1931,7 +1928,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.36.5-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.4...v0.36.5-alpha
+[0.36.5]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.4...v0.36.5
 [0.36.4]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.3...v0.36.4
 [0.36.3]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.2...v0.36.3
 [0.36.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.1...v0.36.2

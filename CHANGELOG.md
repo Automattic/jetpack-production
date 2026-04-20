@@ -2,34 +2,28 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 15.8-a.4 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 15.8-a.5 - 2026-04-20
 ### Enhancements
-- Adopt the shared Jetpack admin-page-layout on the JP Network admin pages (Sites and Settings): pinned header, scrolling middle, pinned footer, no window-level scroll.
-- AI Assistant: Add Jetpack AI sidebar that loads Agents Manager from the widgets.wp.com CDN and registers a Jetpack AI provider for title optimization in the block editor. Gated by the jetpack_ai_sidebar_enabled filter (opt-in, defaults to false). Removes the unused Title_Optimization_Ability stub since the real wpcom/optimize-title ability lives in the wpcom codebase.
-- Image Studio: Add isDevMode property to imageStudioData for dev/test environment detection.
+- Adopt the shared Jetpack `admin-page-layout` on the Jetpack Network Admin pages (Sites and Settings). [#48109]
+- AI Assistant: Add Jetpack AI sidebar that loads Agents Manager from the widgets.wp.com CDN (gated by the `jetpack_ai_sidebar_enabled` filter that defaults to false). [#47730]
+- Remove the unused Title_Optimization_Ability stub. [#47730]
+- Image Studio: Add isDevMode property to imageStudioData for dev/test environment detection. [#48084]
 
 ### Improved compatibility
-- Componentry: use WordPress admin theme color variable instead of hardcoded color for text input focus state.
-- Tested up to WordPress 7.0.
+- Componentry: Use WordPress admin theme color variable instead of hardcoded color for text input focus state. [#47317]
+- Tested up to WordPress 7.0. [#48114]
 
 ### Bug fixes
-- Settings: Show an empty state when search returns no matching settings.
+- Settings: Show an empty state when search returns no matching settings. [#48102]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- AI Assistant: Disable the "Correct spelling and grammar" toolbar option by default. It can be re-enabled via the `ai_correct_spelling_enabled` filter.
-- Discussion Settings: Import ToggleControl directly from @wordpress/components.
-- Newsletter: remove the old Jetpack Settings newsletter UI. The Newsletter settings tab is gone and the /newsletter settings route now redirects to the new Jetpack > Newsletter settings page.
-- Newsletter Settings: Import RadioControl directly from @wordpress/components.
-- Performance settings: import ToggleControl from @wordpress/components instead of @automattic/jetpack-components.
-- Security settings: Import ToggleControl directly from @wordpress/components.
-- Traffic Settings: Import ToggleControl from @wordpress/components
-- Update dependencies.
-- Update package dependencies.
-- VideoPress storage meters: replace custom Jetpack ProgressBar with @wordpress/components ProgressBar.
-- Writing settings: Import ToggleControl directly from @wordpress/components.
+- AI Assistant: Disable the "Correct spelling and grammar" toolbar option by default. It can be re-enabled via the `ai_correct_spelling_enabled` filter. [#47916]
+- Discussion Settings: Import ToggleControl directly from @wordpress/components. [#48190]
+- Newsletter: Remove the old Jetpack Settings newsletter UI and redirect old route to the new Jetpack > Newsletter settings page. [#48092]
+- Settings: Import RadioControl and ToggleControl directly from @wordpress/components. [#48170] [#48177] [#48179] [#48186] [#48189]
+- Update dependencies. [#48138]
+- Update package dependencies. [#48106] [#48141]
+- VideoPress storage meters: Replace custom Jetpack ProgressBar with @wordpress/components ProgressBar. [#48191]
 
 ## 15.8-a.3 - 2026-04-15
 ### Enhancements
