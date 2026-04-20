@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Traffic Settings: Import ToggleControl from @wordpress/components
 - Update dependencies.
 - Update package dependencies.
+- VideoPress storage meters: replace custom Jetpack ProgressBar with @wordpress/components ProgressBar.
 - Writing settings: Import ToggleControl directly from @wordpress/components.
 
 ## 15.8-a.3 - 2026-04-15

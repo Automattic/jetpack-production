@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Admin dashboard: migrate video storage meter and video thumbnail upload progress to @wordpress/components ProgressBar; drop unused progressBarClassName prop.
 - Adopt the shared Jetpack admin-page-layout mixin on the VideoPress admin page: pinned header, scrolling middle, pinned footer, no window-level scroll.
 - Swap the site-settings Video Privacy toggle to WordPress CheckboxControl for native rendering and accessibility.
 - Update package dependencies.
