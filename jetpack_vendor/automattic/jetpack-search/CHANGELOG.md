@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Adopt the shared Jetpack admin-page-layout mixin on the Search admin page. Drops the inline JetpackFooter render and `showFooter={false}` override so AdminPage's built-in footer lives inside the flex column that the mixin pins.
 - Align Search dashboard toggle to its label baseline so wrapped labels on mobile no longer push the toggle into the middle of the row.
+- Drop the local `#screen-meta` / `#screen-meta-links` hide rule now that the shared admin-page-layout mixin handles it.
 - Remove custom toggle color overrides to use native WordPress admin theme colors.
 - Swap the custom FormToggle on the Search admin dashboard for WordPress ToggleControl, restoring native rendering of the Enable Jetpack Search and Enable instant search toggles.
 - Update package dependencies.
