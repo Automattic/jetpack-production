@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Adopt the shared Jetpack admin-page-layout on the JP Network admin pages (Sites and Settings): pinned header, scrolling middle, pinned footer, no window-level scroll.
 - AI Assistant: Add Jetpack AI sidebar that loads Agents Manager from the widgets.wp.com CDN and registers a Jetpack AI provider for title optimization in the block editor. Gated by the jetpack_ai_sidebar_enabled filter (opt-in, defaults to false). Removes the unused Title_Optimization_Ability stub since the real wpcom/optimize-title ability lives in the wpcom codebase.
+- Image Studio: Add isDevMode property to imageStudioData for dev/test environment detection.
 
 ### Improved compatibility
 - Componentry: use WordPress admin theme color variable instead of hardcoded color for text input focus state.
