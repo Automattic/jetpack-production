@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Remove the unused custom FormToggle component; all call sites now use WordPress ToggleControl.
 
+### Fixed
+- Fix mobile overflow on the upsell/pricing page so cards no longer get clipped.
+
 ## [0.56.9] - 2026-04-15
 ### Changed
 - Update package dependencies. [#47907]
