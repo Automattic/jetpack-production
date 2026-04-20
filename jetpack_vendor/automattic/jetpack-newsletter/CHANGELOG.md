@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Adopt the shared Jetpack admin-page-layout mixin on the Newsletter admin page: pinned header, scrolling middle, pinned footer, no window-level scroll. Adds @automattic/jetpack-base-styles as a workspace dependency.
 - Update package dependencies.
 
+### Removed
+- Remove the jetpack_wp_admin_newsletter_settings_enabled filter; the wp-admin newsletter settings page is now always enabled.
+
 ## [0.8.3] - 2026-04-15
 ### Changed
 - Update package dependencies. [#47907]

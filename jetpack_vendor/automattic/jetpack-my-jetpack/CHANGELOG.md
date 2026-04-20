@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Remove Jetpack color overrides on core WordPress components.
 - Update package dependencies.
 
+### Removed
+- Newsletter: remove jetpack_wp_admin_newsletter_settings_enabled filter check; the manage URL always points to the wp-admin newsletter settings page.
+
 ## [5.34.3] - 2026-04-15
 ### Changed
 - Update package dependencies. [#47907]
