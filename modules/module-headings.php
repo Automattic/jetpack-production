@@ -68,7 +68,7 @@ function jetpack_get_module_i18n( $key ) {
 
 			'google-fonts' => array(
 				'name' => _x( 'Google Fonts (Beta)', 'Module Name', 'jetpack' ),
-				'description' => _x( 'Customize your site\'s typography with a selection of Google Fonts.', 'Module Description', 'jetpack' ),
+				'description' => _x( 'This feature is now supported natively in WordPress when using any block theme. To use Google Fonts, refer to the WordPress.org Font Library documentation.', 'Module Description', 'jetpack' ),
 			),
 
 			'gravatar-hovercards' => array(
@@ -563,7 +563,7 @@ function jetpack_get_module_info( $key ) {
 	  'google-fonts' => 
 	  array (
 	    'name' => 'Google Fonts (Beta)',
-	    'description' => 'Customize your site\'s typography with a selection of Google Fonts.',
+	    'description' => 'This feature is now supported natively in WordPress when using any block theme. To use Google Fonts, refer to the WordPress.org Font Library documentation.',
 	    'sort' => '1',
 	    'recommendation_order' => '2',
 	    'introduced' => '10.8.0',
