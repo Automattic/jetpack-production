@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [8.3.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Connectors: Add `jetpack_connection_plugin_logos` filter to allow third-party plugins to register a custom SVG logo on the Connectors card.
+
+### Changed
+- Rebranding connector to Jetpack connection
+
 ## [8.3.1] - 2026-04-20
 ### Changed
 - Update package dependencies. [#48106]
@@ -1793,6 +1803,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[8.3.2-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.3.1...v8.3.2-alpha
 [8.3.1]: https://github.com/Automattic/jetpack-connection/compare/v8.3.0...v8.3.1
 [8.3.0]: https://github.com/Automattic/jetpack-connection/compare/v8.2.2...v8.3.0
 [8.2.2]: https://github.com/Automattic/jetpack-connection/compare/v8.2.1...v8.2.2
