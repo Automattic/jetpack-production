@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.57.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Search 3.0: Interactivity API block foundation — composable search blocks, shared reactive store, and Blog Search Page pattern (Phase 1).
+
 ## [0.56.10] - 2026-04-20
 ### Changed
 - Adopt the shared Jetpack admin-page-layout mixin on the Search admin page. Drops the inline JetpackFooter render and `showFooter={false}` override so AdminPage's built-in footer lives inside the flex column that the mixin pins. [#48109]
@@ -1512,6 +1519,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
+[0.57.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.56.10...v0.57.0-alpha
 [0.56.10]: https://github.com/Automattic/jetpack-search/compare/v0.56.9...v0.56.10
 [0.56.9]: https://github.com/Automattic/jetpack-search/compare/v0.56.8...v0.56.9
 [0.56.8]: https://github.com/Automattic/jetpack-search/compare/v0.56.7...v0.56.8
