@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - My Jetpack: hide the Google Fonts module toggle unless the module is already active.
 
+### Fixed
+- My Jetpack: Restore background on the "Supercharge my site" onboarding button by using the core Button's primary variant.
+
 ## [5.34.4] - 2026-04-20
 ### Changed
 - Remove Jetpack color overrides on core WordPress components. [#47317]
