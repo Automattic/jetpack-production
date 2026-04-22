@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Sites endpoint: expose jetpack_recovery_mode_status option so callers can read recovery-mode state from wpcom.
 - Top Posts block: add filter allowing customization of the posts' titles in the block.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
