@@ -7,7 +7,11 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add MCP settings admin page and REST endpoint for managing external AI agent access to Jetpack AI.
 - Top Posts block: add filter allowing customization of the posts' titles in the block.
+
+### Bug fixes
+- AI settings: Bundle WordPress private-apis and theme packages in the admin script so dependencies enqueue reliably on all hosts.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Google Fonts: update module description to note native WordPress support.
