@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Search 3.0: Interactivity API block foundation — composable search blocks, shared reactive store, and Blog Search Page pattern (Phase 1).
 
+### Fixed
+- Search 3.0: hide the load-more wrapper while a first-page search is in flight, and swap the button for a spinner while paginating.
+
 ## [0.56.10] - 2026-04-20
 ### Changed
 - Adopt the shared Jetpack admin-page-layout mixin on the Search admin page. Drops the inline JetpackFooter render and `showFooter={false}` override so AdminPage's built-in footer lives inside the flex column that the mixin pins. [#48109]
