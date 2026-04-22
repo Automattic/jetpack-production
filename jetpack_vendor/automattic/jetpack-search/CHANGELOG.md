@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Search 3.0: hide the load-more wrapper while a first-page search is in flight, and swap the button for a spinner while paginating.
+- Search 3.0: Keep the search results list in the DOM so screen readers announce updates from the ARIA live region.
 
 ## [0.56.10] - 2026-04-20
 ### Changed
