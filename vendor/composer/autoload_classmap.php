@@ -308,6 +308,7 @@ return array(
     'Automattic\\Jetpack\\Search\\Customizer' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/customizer/class-customizer.php',
     'Automattic\\Jetpack\\Search\\Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/dashboard/class-dashboard.php',
     'Automattic\\Jetpack\\Search\\Excluded_Post_Types_Control' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/customizer/customize-controls/class-excluded-post-types-control.php',
+    'Automattic\\Jetpack\\Search\\Filter_Checkbox' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/blocks/filter-checkbox/class-filter-checkbox.php',
     'Automattic\\Jetpack\\Search\\Helper' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-helper.php',
     'Automattic\\Jetpack\\Search\\Initial_State' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/dashboard/class-initial-state.php',
     'Automattic\\Jetpack\\Search\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/initializers/class-initializer.php',

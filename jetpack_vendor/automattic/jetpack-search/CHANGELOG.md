@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Search 3.0: filter-checkbox + active-filters blocks with instant-search-aligned field conventions, aggregation-driven item lists, and flat URL state (?category[]=news).
 - Search 3.0: Interactivity API block foundation — composable search blocks, shared reactive store, and Blog Search Page pattern (Phase 1).
 
 ### Changed
