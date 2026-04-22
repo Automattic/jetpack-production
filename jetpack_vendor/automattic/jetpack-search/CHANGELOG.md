@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Search 3.0: Interactivity API block foundation — composable search blocks, shared reactive store, and Blog Search Page pattern (Phase 1).
 
+### Changed
+- Remove redundant @wordpress/interactivity imports from display-only block views.
+
 ### Fixed
 - Search 3.0: hide the load-more wrapper while a first-page search is in flight, and swap the button for a spinner while paginating.
 
