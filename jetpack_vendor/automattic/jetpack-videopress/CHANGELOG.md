@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - VideoPress: refine how the embedded post context is resolved when requesting playback tokens.
 
+### Fixed
+- Fix PHP warning when video info lookup returns false on WPCOM.
+
 ## [0.36.5] - 2026-04-20
 ### Changed
 - Admin dashboard: Migrate video storage meter and video thumbnail upload progress to @wordpress/components ProgressBar; drop unused progressBarClassName prop. [#48191]
