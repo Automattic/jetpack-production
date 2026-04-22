@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Search 3.0: add icons for the Jetpack Search blocks and improve Blog Search pattern keywords.
 - Search 3.0: filter-checkbox + active-filters blocks with instant-search-aligned field conventions, aggregation-driven item lists, and flat URL state (?category[]=news).
 - Search 3.0: Interactivity API block foundation — composable search blocks, shared reactive store, and Blog Search Page pattern (Phase 1).
+- Search 3.0: render sample data in the Site Editor preview for each search block so designers see a real DOM shape instead of an empty ServerSideRender shell.
 
 ### Changed
 - Remove redundant @wordpress/interactivity imports from display-only block views.
