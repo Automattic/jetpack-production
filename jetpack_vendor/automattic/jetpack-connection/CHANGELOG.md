@@ -13,7 +13,11 @@ This is an alpha version! The changes listed here are not final.
 - Connectors: Add `jetpack_connection_plugin_logos` filter to allow third-party plugins to register a custom SVG logo on the Connectors card.
 
 ### Changed
+- Document jpTracksContext as intentional minimal Tracks-specific global.
 - Rebranding connector to Jetpack connection
+
+### Fixed
+- Populate blog_id in JetpackScriptData and jpTracksContext so JS Tracks events include blog_id.
 
 ## [8.3.1] - 2026-04-20
 ### Changed

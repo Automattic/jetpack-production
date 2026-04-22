@@ -39328,6 +39328,9 @@ var analytics = {
         debug3('- Event name must be prefixed by "akismet_" or "jetpack_"');
         return;
       }
+      if (!eventProperties.blog_id && typeof window.jpTracksContext === "object" && window.jpTracksContext.blog_id) {
+        eventProperties.blog_id = window.jpTracksContext.blog_id;
+      }
       if (_superProps) {
         debug3("- Super Props: %o", _superProps);
         eventProperties = Object.assign(eventProperties, _superProps);
