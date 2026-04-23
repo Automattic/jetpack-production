@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.19.1-alpha] - unreleased
+## [7.20.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Forms: add jetpack_forms_email_show_actions option to hide action buttons in notification emails
 
 ### Changed
 - Tools: Update rasterization script to strip pHYs chunk from PNGs.
@@ -2458,7 +2461,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.19.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.19.0...v7.19.1-alpha
+[7.20.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.19.0...v7.20.0-alpha
 [7.19.0]: https://github.com/automattic/jetpack-forms/compare/v7.18.0...v7.19.0
 [7.18.0]: https://github.com/automattic/jetpack-forms/compare/v7.17.0...v7.18.0
 [7.17.0]: https://github.com/automattic/jetpack-forms/compare/v7.16.0...v7.17.0
