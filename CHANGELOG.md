@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add MCP settings admin page and REST endpoint for managing external AI agent access to Jetpack AI.
 - Performance: Add early-return guard conditions to Gravatar Hovercards, Likes, Subscribe Floating Button, Subscribe Overlay, WooCommerce Analytics, and WordAds modules to skip loading scripts and styles on pages where they are not needed.
 - Search: add fallback image capability in expanded search
+- Sites endpoint: expose jetpack_recovery_mode_status option so callers can read recovery-mode state from wpcom.
 - Top Posts block: add filter allowing customization of the posts' titles in the block.
 
 ### Bug fixes
