@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Search 3.0: add icons for the Jetpack Search blocks and improve Blog Search pattern keywords.
 - Search 3.0: filter-checkbox + active-filters blocks with instant-search-aligned field conventions, aggregation-driven item lists, and flat URL state (?category[]=news).
 - Search 3.0: Interactivity API block foundation — composable search blocks, shared reactive store, and Blog Search Page pattern (Phase 1).
+- Search 3.0: load-more block now exposes a buttonLabel attribute (editor inspector text input, translated default fallback) and adopts the active theme's button styles via the wp-element-button class.
 - Search 3.0: render sample data in the Site Editor preview for each search block so designers see a real DOM shape instead of an empty ServerSideRender shell.
 - Search: add fallback image capability in expanded search
 - Search: register a plugin-origin block template so the Jetpack Search layout takes over the theme's search results page.
