@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Search 3.0: hide the load-more wrapper while a first-page search is in flight, and swap the button for a spinner while paginating.
 - Search 3.0: Keep the search results list in the DOM so screen readers announce updates from the ARIA live region.
+- Search 3.0: localize Interactivity API view-bundle strings (results count, loading indicator, and active-filter pill aria labels) via wp_interactivity_state.
 - Search 3.0: reuse the results-count block as the loading indicator ("Searching…") so the control row doesn't flicker between queries.
 
 ## [0.56.10] - 2026-04-20
