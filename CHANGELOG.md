@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Google Fonts: update module description to note native WordPress support.
+- Monetize settings: import ToggleControl from @wordpress/components instead of @automattic/jetpack-components.
 
 ## 15.8-a.5 - 2026-04-20
 ### Enhancements
