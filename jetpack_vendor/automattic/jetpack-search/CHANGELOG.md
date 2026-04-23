@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Remove redundant @wordpress/interactivity imports from display-only block views.
+- Search 3.0: rename the block inserter category to "Search" with the Jetpack logo so it matches the Forms, Monetize, and Grow headings.
 - Search 3.0: split editor-side block preview Edit components out of register-blocks.js into per-block edit.js files so changes to one block do not conflict with others.
 
 ### Fixed
