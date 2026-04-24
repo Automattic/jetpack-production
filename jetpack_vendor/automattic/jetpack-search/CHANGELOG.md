@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Search 3.0: rename the block inserter category to "Search" with the Jetpack logo so it matches the Forms, Monetize, and Grow headings.
 - Search 3.0: split editor-side block preview Edit components out of register-blocks.js into per-block edit.js files so changes to one block do not conflict with others.
 - Search 3.0: swap hardcoded colors in block styles for theme-aware tokens so the search blocks adapt to the active theme palette and dark backgrounds.
+- Update package dependencies.
 
 ### Fixed
 - Search 3.0: hide the load-more wrapper while a first-page search is in flight, and swap the button for a spinner while paginating.

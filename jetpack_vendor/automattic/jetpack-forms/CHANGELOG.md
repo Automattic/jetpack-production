@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Tools: Update rasterization script to strip pHYs chunk from PNGs.
+- Update package dependencies.
 
 ## [7.19.0] - 2026-04-20
 ### Added

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Social: Only allow one X connection per post to comply with X Developer Policy.
+- Update package dependencies.
 
 ## [0.78.1] - 2026-04-20
 ### Changed
