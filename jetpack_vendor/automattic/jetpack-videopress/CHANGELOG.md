@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix PHP warning when video info lookup returns false on WPCOM.
+- Fix upsell incorrectly shown to legacy Jetpack Security plan customers who have unlimited (but not 1TB) VideoPress storage.
 
 ## [0.36.5] - 2026-04-20
 ### Changed
