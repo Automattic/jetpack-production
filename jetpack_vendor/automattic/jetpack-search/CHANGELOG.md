@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Search 3.0: render sample data in the Site Editor preview for each search block so designers see a real DOM shape instead of an empty ServerSideRender shell.
 - Search: add fallback image capability in expanded search
 - Search: register a plugin-origin block template so the Jetpack Search layout takes over the theme's search results page.
+- Search Blocks: search-input gains placeholder (declared), showIcon, and submitOnly attributes with matching inspector controls.
 
 ### Changed
 - Remove redundant @wordpress/interactivity imports from display-only block views.
