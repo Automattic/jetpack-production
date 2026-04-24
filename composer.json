@@ -39,7 +39,7 @@
 		"automattic/jetpack-licensing": "^3.1.5",
 		"automattic/jetpack-logo": "^3.0.5",
 		"automattic/jetpack-masterbar": "^0.27.21",
-		"automattic/jetpack-my-jetpack": "^5.34.5-alpha",
+		"automattic/jetpack-my-jetpack": "^5.35.0-alpha",
 		"automattic/jetpack-newsletter": "^0.8.5-alpha",
 		"automattic/jetpack-paypal-payments": "^0.6.17-alpha",
 		"automattic/jetpack-plugins-installer": "^0.5.7",

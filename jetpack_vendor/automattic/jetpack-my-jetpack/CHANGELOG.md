@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.34.5-alpha] - unreleased
+## [5.35.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: hide the Google Fonts module toggle unless the module is already active.
+- Replace Badge from `@automattic/ui` with Badge from `@wordpress/ui`, and CheckmarkIcon with Icon from `@wordpress/icons`.
 
 ### Fixed
 - My Jetpack: Restore background on the "Supercharge my site" onboarding button by using the core Button's primary variant.
@@ -2627,7 +2628,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.34.5-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.34.4...5.34.5-alpha
+[5.35.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.34.4...5.35.0-alpha
 [5.34.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.34.3...5.34.4
 [5.34.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.34.2...5.34.3
 [5.34.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.34.1...5.34.2
