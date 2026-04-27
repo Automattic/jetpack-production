@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Remove previous work that introduced an error
+
 ## [0.6.16] - 2026-04-20
 ### Changed
 - Update package dependencies. [#48106]
