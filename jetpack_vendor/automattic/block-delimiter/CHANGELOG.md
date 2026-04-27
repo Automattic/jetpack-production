@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.6-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
+
 ## [0.3.5] - 2026-02-10
 ### Changed
 - Internal updates.
@@ -41,6 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
+[0.3.6-alpha]: https://github.com/Automattic/block-delimiter/compare/v0.3.5...v0.3.6-alpha
 [0.3.5]: https://github.com/Automattic/block-delimiter/compare/v0.3.4...v0.3.5
 [0.3.4]: https://github.com/Automattic/block-delimiter/compare/v0.3.3...v0.3.4
 [0.3.3]: https://github.com/Automattic/block-delimiter/compare/v0.3.2...v0.3.3

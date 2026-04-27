@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Connector: forward `from` and `plugins` parameters to the register and authorize_url REST endpoints, and expose connectedPlugins to the connectors card before registration.
 
+### Changed
+- Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
+
 ## [8.3.2] - 2026-04-27
 ### Added
 - Connectors: Add `jetpack_connection_plugin_logos` filter to allow third-party plugins to register a custom SVG logo on the Connectors card. [#48146]

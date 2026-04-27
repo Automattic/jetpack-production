@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.28.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
+
 ## [0.28.2] - 2026-03-23
 ### Security
 - WAF: Fix issue that potentially allowed bypassing WAF rules. [#47692]
@@ -529,6 +536,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
+[0.28.3-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.28.2...v0.28.3-alpha
 [0.28.2]: https://github.com/Automattic/jetpack-waf/compare/v0.28.1...v0.28.2
 [0.28.1]: https://github.com/Automattic/jetpack-waf/compare/v0.28.0...v0.28.1
 [0.28.0]: https://github.com/Automattic/jetpack-waf/compare/v0.27.11...v0.28.0

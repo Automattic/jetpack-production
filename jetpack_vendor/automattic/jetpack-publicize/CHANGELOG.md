@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.78.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
+
 ## [0.78.2] - 2026-04-27
 ### Changed
 - Social: Only allow one X connection per post to comply with X Developer Policy. [#48203]
@@ -1404,6 +1411,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.78.3-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.78.2...v0.78.3-alpha
 [0.78.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.78.1...v0.78.2
 [0.78.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.78.0...v0.78.1
 [0.78.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.77.0...v0.78.0

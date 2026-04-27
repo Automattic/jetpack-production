@@ -12,7 +12,7 @@
 	},
 	"browserslist": "extends @wordpress/browserslist-config",
 	"dependencies": {
-		"@automattic/jetpack-script-data": "^0.6.2",
+		"@automattic/jetpack-script-data": "^0.6.3-alpha",
 		"@wordpress/i18n": "6.17.0",
 		"react": "18.3.1"
 	},
