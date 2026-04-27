@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Google Fonts: update module description to note native WordPress support.
 - ModuleToggle: import ToggleControl from @wordpress/components instead of @automattic/jetpack-components.
 - Monetize settings: import ToggleControl from @wordpress/components instead of @automattic/jetpack-components.
+- SAL: Add has_password field to post API response.
 - Update package dependencies.
 
 ## 15.8-a.5 - 2026-04-20
