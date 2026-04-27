@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Comment: Improve author Gravatar URLs by converting email-based or no login URLs to hashed versions.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Componentry: Replace Chip and custom Recommendations "New" pill with Badge from @wordpress/ui.
 - Google Fonts: update module description to note native WordPress support.
 - ModuleToggle: import ToggleControl from @wordpress/components instead of @automattic/jetpack-components.
 - Monetize settings: import ToggleControl from @wordpress/components instead of @automattic/jetpack-components.

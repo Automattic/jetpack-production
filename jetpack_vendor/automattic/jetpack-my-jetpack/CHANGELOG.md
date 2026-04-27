@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: hide the Google Fonts module toggle unless the module is already active.
 - Replace Badge from `@automattic/ui` with Badge from `@wordpress/ui`, and CheckmarkIcon with Icon from `@wordpress/icons`.
 
+### Removed
+- Remove orphaned new-badge styles from Jetpack AI product interstitial.
+
 ### Fixed
 - My Jetpack: Restore background on the "Supercharge my site" onboarding button by using the core Button's primary variant.
 
