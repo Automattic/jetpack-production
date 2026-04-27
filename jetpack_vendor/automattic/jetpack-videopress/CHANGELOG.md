@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
 
+### Fixed
+- VideoPress: Fix corrupt resumable uploads triggering a fatal error.
+
 ## [0.36.6] - 2026-04-27
 ### Changed
 - Update package dependencies. [#48302]
