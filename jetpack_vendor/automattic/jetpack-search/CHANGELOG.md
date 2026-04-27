@@ -5,33 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.57.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.57.0] - 2026-04-27
 ### Added
-- Search 3.0: add icons for the Jetpack Search blocks and improve Blog Search pattern keywords.
-- Search 3.0: filter-checkbox + active-filters blocks with instant-search-aligned field conventions, aggregation-driven item lists, and flat URL state (?category[]=news).
-- Search 3.0: Interactivity API block foundation — composable search blocks, shared reactive store, and Blog Search Page pattern (Phase 1).
-- Search 3.0: load-more block now exposes a buttonLabel attribute (editor inspector text input, translated default fallback) and adopts the active theme's button styles via the wp-element-button class.
-- Search 3.0: render sample data in the Site Editor preview for each search block so designers see a real DOM shape instead of an empty ServerSideRender shell.
-- Search: add fallback image capability in expanded search
-- Search: register a plugin-origin block template so the Jetpack Search layout takes over the theme's search results page.
-- Search Blocks: add inspector controls for label, showCount, and maxItems, plus a bucketSortOrder attribute (count | alpha, default count) to filter-checkbox.
-- Search Blocks: search-input gains placeholder (declared), showIcon, and submitOnly attributes with matching inspector controls.
+- Search 3.0: Add icons for the Jetpack Search blocks and improve Blog Search pattern keywords. [#48232]
+- Search 3.0: Add `filter-checkbox` and `active-filters` blocks with instant-search-aligned field conventions, aggregation-driven item lists, and flat URL state (?category[]=news). [#48227]
+- Search 3.0: Use Interactivity API block foundation — composable search blocks, shared reactive store, and Blog Search Page pattern (Phase 1). [#48198]
+- Search 3.0: Expose buttonLabel attribute on `load-more` block (editor inspector text input, translated default fallback) and adopt the active theme's button styles via the wp-element-button class. [#48253]
+- Search 3.0: Render sample data in the Site Editor preview for each search block so designers see a real DOM shape instead of an empty ServerSideRender shell. [#48233]
+- Search: Add fallback image capability in expanded search. [#44657]
+- Search: Register a plugin-origin block template so the Jetpack Search layout takes over the theme's search results page. [#48252]
+- Search Blocks: Add inspector controls for label, showCount, and maxItems, plus a bucketSortOrder attribute (count | alpha, default count) to filter-checkbox. [#48281]
+- Search Blocks: Add authoring controls to `search-input`, including placeholder (declared), showIcon, and submitOnly attributes, with matching inspector controls. [#48280]
 
 ### Changed
-- Remove redundant @wordpress/interactivity imports from display-only block views.
-- Search 3.0: rename the block inserter category to "Search" with the Jetpack logo so it matches the Forms, Monetize, and Grow headings.
-- Search 3.0: split editor-side block preview Edit components out of register-blocks.js into per-block edit.js files so changes to one block do not conflict with others.
-- Search 3.0: swap hardcoded colors in block styles for theme-aware tokens so the search blocks adapt to the active theme palette and dark backgrounds.
-- Update package dependencies.
+- Remove redundant @wordpress/interactivity imports from display-only block views. [#48229]
+- Search 3.0: Rename the block inserter category to "Search" with the Jetpack logo so it matches the Forms, Monetize, and Grow headings. [#48256]
+- Search 3.0: Split editor-side block preview Edit components out of register-blocks.js into per-block edit.js files so changes to one block do not conflict with others. [#48255]
+- Search 3.0: Swap hardcoded colors in block styles for theme-aware tokens so the search blocks adapt to the active theme palette and dark backgrounds. [#48259]
+- Update package dependencies. [#48302]
 
 ### Fixed
-- Search 3.0: hide the load-more wrapper while a first-page search is in flight, and swap the button for a spinner while paginating.
-- Search 3.0: Keep the search results list in the DOM so screen readers announce updates from the ARIA live region.
-- Search 3.0: localize Interactivity API view-bundle strings (results count, loading indicator, and active-filter pill aria labels) via wp_interactivity_state.
-- Search 3.0: reuse the results-count block as the loading indicator ("Searching…") so the control row doesn't flicker between queries.
+- Search 3.0: Hide the `load-more` wrapper while a first-page search is in flight, and swap the button for a spinner while paginating. [#48231]
+- Search 3.0: Keep the search results list in the DOM so screen readers announce updates from the ARIA live region. [#48230]
+- Search 3.0: Localize Interactivity API view-bundle strings (results count, loading indicator, and active-filter pill aria labels) via wp_interactivity_state. [#48257]
+- Search 3.0: Reuse the results-count block as the loading indicator ("Searching…") so the control row doesn't flicker between queries. [#48234]
 
 ## [0.56.10] - 2026-04-20
 ### Changed
@@ -1540,7 +1537,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.57.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.56.10...v0.57.0-alpha
+[0.57.0]: https://github.com/Automattic/jetpack-search/compare/v0.56.10...v0.57.0
 [0.56.10]: https://github.com/Automattic/jetpack-search/compare/v0.56.9...v0.56.10
 [0.56.9]: https://github.com/Automattic/jetpack-search/compare/v0.56.8...v0.56.9
 [0.56.8]: https://github.com/Automattic/jetpack-search/compare/v0.56.7...v0.56.8

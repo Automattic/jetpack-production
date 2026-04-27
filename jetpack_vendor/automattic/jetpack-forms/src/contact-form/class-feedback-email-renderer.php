@@ -173,7 +173,7 @@ class Feedback_Email_Renderer {
 		 *
 		 * @module contact-form
 		 *
-		 * @since 7.20.0-alpha
+		 * @since 7.20.0
 		 *
 		 * @param bool $show Whether to show the action buttons. Default true.
 		 */

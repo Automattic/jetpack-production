@@ -28,11 +28,11 @@
 		"extends @wordpress/browserslist-config"
 	],
 	"dependencies": {
-		"@automattic/jetpack-analytics": "^1.0.10-alpha",
+		"@automattic/jetpack-analytics": "^1.0.10",
 		"@automattic/jetpack-api": "^1.0.23",
-		"@automattic/jetpack-components": "^1.9.0-alpha",
-		"@automattic/jetpack-connection": "^1.4.46",
-		"@automattic/jetpack-shared-extension-utils": "^1.5.10",
+		"@automattic/jetpack-components": "^1.9.0",
+		"@automattic/jetpack-connection": "^1.4.47",
+		"@automattic/jetpack-shared-extension-utils": "^1.5.11",
 		"@automattic/number-formatters": "^1.1.6",
 		"@tanstack/react-query": "5.90.8",
 		"@wordpress/api-fetch": "7.44.0",
