@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Componentry: Replace Chip and custom Recommendations "New" pill with Badge from @wordpress/ui.
+- Email Preview: Avoid unconditional require_once and file loading in the REST API endpoint to prevent unnecessary file loading and hook registration on every request.
 - Google Fonts: update module description to note native WordPress support.
 - ModuleToggle: import ToggleControl from @wordpress/components instead of @automattic/jetpack-components.
 - Monetize settings: import ToggleControl from @wordpress/components instead of @automattic/jetpack-components.
