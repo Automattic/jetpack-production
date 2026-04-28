@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Omnibar: add wpcom/v2/admin-bar endpoint to fetch site's admin bar nodes
+- REST API: add `/sites/%s/plugins/replace` and `/sites/%s/themes/replace` endpoints for installing or overwriting a plugin/theme via zip upload.
 
 ### Improved compatibility
 - Guidelines CPT: whitelist _guideline_ meta keys for sync via wpcomsh filter.
