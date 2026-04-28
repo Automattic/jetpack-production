@@ -164,6 +164,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
       'ver' => '0.28.3-alpha1777322605',
     ),
+    'jetpack-wp-abilities' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-wp-abilities',
+      'ver' => '0.1.0-alpha1777322605',
+    ),
     'jetpack-wp-build-polyfills' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wp-build-polyfills',
       'ver' => '0.1.6-alpha1777322605',

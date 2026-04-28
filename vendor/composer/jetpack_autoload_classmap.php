@@ -994,6 +994,10 @@ return array(
 		'version' => '0.11.4.0-alpha1777322605',
 		'path'    => $vendorDir . '/automattic/jetpack-plans/src/class-plans.php'
 	),
+	'Automattic\\Jetpack\\Plugin\\Abilities\\Modules_Abilities' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/abilities/class-modules-abilities.php'
+	),
 	'Automattic\\Jetpack\\Plugin\\Deprecate' => array(
 		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/class-deprecate.php'
@@ -1781,6 +1785,10 @@ return array(
 	'Automattic\\Jetpack\\VideoPress\\XMLRPC' => array(
 		'version' => '0.36.7.0-alpha1777322778',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-xmlrpc.php'
+	),
+	'Automattic\\Jetpack\\WP_Abilities\\Registrar' => array(
+		'version' => '0.1.0.0-alpha1777322605',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-wp-abilities/src/class-registrar.php'
 	),
 	'Automattic\\Jetpack\\WP_Build_Polyfills\\WP_Build_Polyfills' => array(
 		'version' => '0.1.6.0-alpha1777322605',
