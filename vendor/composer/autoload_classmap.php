@@ -284,6 +284,7 @@ return array(
     'Automattic\\Jetpack\\Publicize\\REST_API\\Connections_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-connections-controller.php',
     'Automattic\\Jetpack\\Publicize\\REST_API\\Connections_Post_Field' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-connections-post-field.php',
     'Automattic\\Jetpack\\Publicize\\REST_API\\Proxy_Requests' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-proxy-requests.php',
+    'Automattic\\Jetpack\\Publicize\\REST_API\\Render_Message_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-render-message-controller.php',
     'Automattic\\Jetpack\\Publicize\\REST_API\\Scheduled_Actions_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-scheduled-actions-controller.php',
     'Automattic\\Jetpack\\Publicize\\REST_API\\Services_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-services-controller.php',
     'Automattic\\Jetpack\\Publicize\\REST_API\\Share_Post_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/rest-api/class-share-post-controller.php',
