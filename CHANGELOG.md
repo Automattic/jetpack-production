@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Omnibar: add wpcom/v2/admin-bar endpoint to fetch site's admin bar nodes
 
+### Improved compatibility
+- Guidelines CPT: whitelist _guideline_ meta keys for sync via wpcomsh filter.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
 - Omnibar: don't send response buffer from the admin-bar endpoint
