@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
 - Omnibar: don't send response buffer from the admin-bar endpoint
 - Omnibar: preserve original node ordering
+- Unify loading indicators to use the WordPress Core Spinner across all contexts.
 
 ## 15.8-a.7 - 2026-04-27
 ### Enhancements
