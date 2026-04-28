@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
+- Remove Beta and New badges from the Social admin page.
 - Social preview: pass per-network char_limit to the render-message endpoint.
 
 ## [0.78.2] - 2026-04-27

@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
+- Remove New badge style from the Jetpack AI product interstitial.
 - Replace deprecated jetpack-components Spinner with WordPress Core Spinner.
 
 ## [5.35.0] - 2026-04-27
