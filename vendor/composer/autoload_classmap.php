@@ -326,6 +326,7 @@ return array(
     'Automattic\\Jetpack\\Search\\Search_Blocks' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/class-search-blocks.php',
     'Automattic\\Jetpack\\Search\\Search_Widget' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/widgets/class-search-widget.php',
     'Automattic\\Jetpack\\Search\\Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-settings.php',
+    'Automattic\\Jetpack\\Search\\Sort_Control' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/blocks/sort-control/class-sort-control.php',
     'Automattic\\Jetpack\\Search\\Stats' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-stats.php',
     'Automattic\\Jetpack\\Search\\Template_Tags' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-template-tags.php',
     'Automattic\\Jetpack\\Search\\WPES\\Query_Builder' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/wpes/class-query-builder.php',
