@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.57.1-alpha] - unreleased
+## [0.58.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Search 3.0: Add Compact Search block pattern with inline filter and sort popover controls.
 - Search Blocks: Add Inspector panel to the no-results block so block authors can customize the empty-state message.
 - Search Blocks: sort-control gains defaultSort, availableSortOptions, label, and displayAs attributes.
 
@@ -1552,7 +1553,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[0.57.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.57.0...v0.57.1-alpha
+[0.58.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v0.57.0...v0.58.0-alpha
 [0.57.0]: https://github.com/Automattic/jetpack-search/compare/v0.56.10...v0.57.0
 [0.56.10]: https://github.com/Automattic/jetpack-search/compare/v0.56.9...v0.56.10
 [0.56.9]: https://github.com/Automattic/jetpack-search/compare/v0.56.8...v0.56.9
