@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
+- Search: restyle sort-control radio variant as text-only links with a bullet separator.
 
 ## [0.57.0] - 2026-04-27
 ### Added
