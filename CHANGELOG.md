@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 ### Improved compatibility
 - Guidelines CPT: whitelist _guideline_ meta keys for sync via wpcomsh filter.
 
+### Bug fixes
+- Paywall: comp subscribers can now access tier-gated posts regardless of plan price.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
 - Omnibar: don't send response buffer from the admin-bar endpoint
