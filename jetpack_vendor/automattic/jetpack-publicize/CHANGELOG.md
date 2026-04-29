@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Social preview: Render template-based messages in the block-editor preview when the `social-message-templates` feature is enabled.
 
 ### Changed
+- Components: migrate Tier 1 jetpack-components to @wordpress/components and @wordpress/icons (no user-facing change).
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
 - Remove Beta and New badges from the Social admin page.
 - Social preview: pass per-network char_limit to the render-message endpoint.

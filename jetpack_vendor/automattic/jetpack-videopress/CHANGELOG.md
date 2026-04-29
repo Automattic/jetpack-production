@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Components: migrate Tier 1 jetpack-components to @wordpress/components and @wordpress/icons (no user-facing change).
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
 
 ### Fixed

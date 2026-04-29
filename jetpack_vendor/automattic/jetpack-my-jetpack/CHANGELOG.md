@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: add Modules link to the footer for admins on connected sites running the main Jetpack plugin.
 
 ### Changed
+- Components: migrate Tier 1 jetpack-components to @wordpress/components and @wordpress/icons (no user-facing change).
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
 - Remove New badge style from the Jetpack AI product interstitial.
 - Replace deprecated jetpack-components Spinner with WordPress Core Spinner.
