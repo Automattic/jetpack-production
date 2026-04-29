@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
 - Search: restyle sort-control radio variant as text-only links with a bullet separator.
 
+### Fixed
+- Search Blocks: keep `s=` in the URL when the search query is empty so a refresh stays on the search template instead of falling back to the front-page route.
+
 ## [0.57.0] - 2026-04-27
 ### Added
 - Search 3.0: Add icons for the Jetpack Search blocks and improve Blog Search pattern keywords. [#48232]
