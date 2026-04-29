@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Omnibar: don't send response buffer from the admin-bar endpoint
 - Omnibar: preserve original node ordering
 - Remove New badges from the writing settings and recommendations screens.
+- REST API: defer loading of helper classes in Top Posts, Podcast Player, and Instagram Gallery endpoints until callbacks are invoked, reducing overhead on unrelated REST requests.
 - Unify loading indicators to use the WordPress Core Spinner across all contexts.
 
 ## 15.8-a.7 - 2026-04-27
