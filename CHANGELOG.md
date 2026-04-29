@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Omnibar: preserve original node ordering
 - Remove New badges from the writing settings and recommendations screens.
 - REST API: defer loading of helper classes in Top Posts, Podcast Player, and Instagram Gallery endpoints until callbacks are invoked, reducing overhead on unrelated REST requests.
+- REST API: expose `apm_enabled` via the GET site endpoint's `?options=` query param.
 - Unify loading indicators to use the WordPress Core Spinner across all contexts.
 - Updated package dependencies.
 
