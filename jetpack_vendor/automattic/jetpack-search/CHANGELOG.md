@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Search 3.0: Add Compact Search block pattern with inline filter and sort popover controls.
+- Search Blocks: add inspector Filter type control so authors can swap a filter-checkbox between Category, Tag, Post Type, Author, and Custom Taxonomy variations without re-inserting the block.
 - Search Blocks: Add Inspector panel to the no-results block so block authors can customize the empty-state message.
 - Search Blocks: sort-control gains defaultSort, availableSortOptions, label, and displayAs attributes.
 
