@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Search 3.0: Add Compact Search block pattern with inline filter and sort popover controls.
+- Search 3.0: store/api helpers gain product-shaped filter support — `wc_stock_status` (terms agg + term clause on `meta._stock_status.value.raw`), `wc_rating` (histogram agg + range-OR clauses on `meta._wc_average_rating.double`), `priceRange` (range clause on `wc.price`), scalar comma-joined URL parsing, and first-paint URL seeding for `min_price`/`max_price`. Infrastructure only; no new blocks ship in this change.
 - Search Blocks: add inspector Filter type control so authors can swap a filter-checkbox between Category, Tag, Post Type, Author, and Custom Taxonomy variations without re-inserting the block.
 - Search Blocks: Add Inspector panel to the no-results block so block authors can customize the empty-state message.
 - Search Blocks: sort-control gains defaultSort, availableSortOptions, label, and displayAs attributes.
