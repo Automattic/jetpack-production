@@ -337,6 +337,7 @@ return array(
     'Automattic\\Jetpack\\Search\\WPES\\Query_Parser' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/wpes/class-query-parser.php',
     'Automattic\\Jetpack\\Shortcodes' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-shortcodes.php',
     'Automattic\\Jetpack\\SignatureInvalidException' => $baseDir . '/jetpack_vendor/automattic/jetpack-jwt/src/class-jwt.php',
+    'Automattic\\Jetpack\\Stats\\Abilities\\Stats_Abilities' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/abilities/class-stats-abilities.php',
     'Automattic\\Jetpack\\Stats\\Main' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-main.php',
     'Automattic\\Jetpack\\Stats\\Options' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-options.php',
     'Automattic\\Jetpack\\Stats\\Package_Version' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-package-version.php',
