@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
 
+### Fixed
+- SSO: Render the single sign-on login button on the recovery mode landing page.
+
 ## [8.3.2] - 2026-04-27
 ### Added
 - Connectors: Add `jetpack_connection_plugin_logos` filter to allow third-party plugins to register a custom SVG logo on the Connectors card. [#48146]
