@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - Remove New badge style from the Jetpack AI product interstitial.
 - Replace deprecated jetpack-components Spinner with WordPress Core Spinner.
 
+### Removed
+- Drop the legacy Activity Log menu registration; the new activity-log package now owns that menu item.
+
 ## [5.35.0] - 2026-04-27
 ### Changed
 - My Jetpack: Hide the Google Fonts module toggle unless the module is already active. [#48216]

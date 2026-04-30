@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Abilities API: register jetpack/get-modules and jetpack/set-module-status for WP 6.9+.
+- Activity Log: replace the external sidebar redirect with a native wp-admin page — search, activity-type filter, sort, pagination, and a date-range picker.
 - Make phone numbers in the Contact Info widget clickable on all devices, not just mobile.
 - Omnibar: add wpcom/v2/admin-bar endpoint to fetch site's admin bar nodes
 - REST API: add `/sites/%s/plugins/replace` and `/sites/%s/themes/replace` endpoints for installing or overwriting a plugin/theme via zip upload.

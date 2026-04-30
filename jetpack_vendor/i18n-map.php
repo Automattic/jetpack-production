@@ -8,6 +8,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-account-protection',
       'ver' => '0.3.1-alpha1777322605',
     ),
+    'jetpack-activity-log' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-activity-log',
+      'ver' => '0.2.0-alpha1777558224',
+    ),
     'jetpack-admin-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
       'ver' => '0.8.2-alpha1777322605',
@@ -98,7 +102,7 @@ return array(
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '5.36.0-alpha1777487871',
+      'ver' => '5.36.0-alpha1777558224',
     ),
     'jetpack-newsletter' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-newsletter',
