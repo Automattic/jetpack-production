@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: restyle sort-control radio variant as text-only links with a bullet separator.
 
 ### Fixed
+- Search: changed search overlay heading from h1 to h2 to fix heading hierarchy on pages that already have an h1.
 - Search Blocks: keep `s=` in the URL when the search query is empty so a refresh stays on the search template instead of falling back to the front-page route.
 
 ## [0.57.0] - 2026-04-27
