@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - VideoPress: Avoid undefined property warning when video info has no privacy_setting.
 - VideoPress: Fix corrupt resumable uploads triggering a fatal error.
+- VideoPress: Fix runaway render loop on the admin library page when paginating on WordPress 7.0.
 
 ## [0.36.6] - 2026-04-27
 ### Changed
