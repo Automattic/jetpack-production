@@ -5,19 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.3.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [8.3.3] - 2026-05-04
 ### Added
-- Connector: forward `from` and `plugins` parameters to the register and authorize_url REST endpoints, and expose connectedPlugins to the connectors card before registration.
+- Connector: Forward `from` and `plugins` parameters to the register and authorize_url REST endpoints, and expose connectedPlugins to the connectors card before registration. [#48318]
 
 ### Changed
-- Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
+- Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency. [#48225]
 
 ### Fixed
-- Connector card: Fix description padding not reserving space in Chrome, reset connecting state on back-button navigation, use text label instead of busy stripes on link-style disconnect button, and honor redirect parameter after already-authorized webhook.
-- SSO: Render the single sign-on login button on the recovery mode landing page.
+- Connector card: Fix description padding not reserving space in Chrome, reset connecting state on back-button navigation, use text label instead of busy stripes on link-style disconnect button. [#48482]
+- Connector card: Honor redirect parameter after already-authorized webhook. [#48482]
+- SSO: Render the single sign-on login button on the recovery mode landing page. [#48340]
 
 ## [8.3.2] - 2026-04-27
 ### Added
@@ -1818,7 +1816,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[8.3.3-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.3.2...v8.3.3-alpha
+[8.3.3]: https://github.com/Automattic/jetpack-connection/compare/v8.3.2...v8.3.3
 [8.3.2]: https://github.com/Automattic/jetpack-connection/compare/v8.3.1...v8.3.2
 [8.3.1]: https://github.com/Automattic/jetpack-connection/compare/v8.3.0...v8.3.1
 [8.3.0]: https://github.com/Automattic/jetpack-connection/compare/v8.2.2...v8.3.0
