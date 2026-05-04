@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Search 3.0: Add common-filters block — Group-like container for stacking filter blocks (active filters, taxonomy/author/post-type checkboxes, date).
 - Search 3.0: Add Compact Search block pattern with inline filter and sort popover controls.
 - Search 3.0: add filter-date block for filtering search results by year or month.
 - Search 3.0: store/api helpers gain product-shaped filter support — `wc_stock_status` (terms agg + term clause on `meta._stock_status.value.raw`), `wc_rating` (histogram agg + range-OR clauses on `meta._wc_average_rating.double`), `priceRange` (range clause on `wc.price`), scalar comma-joined URL parsing, and first-paint URL seeding for `min_price`/`max_price`. Infrastructure only; no new blocks ship in this change.
