@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Paywall: comp subscribers can now access tier-gated posts regardless of plan price.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Activity Log: default the page to the Table layout, fix the free-tier upsell callout layout, and surface the disabled toolbar + disabled date-range picker on the free tier with upgrade tooltips.
 - Internal: migrate the connection banner Notice to @wordpress/ui.
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
 - Omnibar: don't send response buffer from the admin-bar endpoint
