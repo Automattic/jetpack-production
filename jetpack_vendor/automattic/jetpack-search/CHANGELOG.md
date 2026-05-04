@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: restyle sort-control radio variant as text-only links with a bullet separator.
 
 ### Fixed
+- Search 3.0: Add ARIA menu keyboard navigation to compact sort popover.
 - Search: changed search overlay heading from h1 to h2 to fix heading hierarchy on pages that already have an h1.
 - Search: Disable the "Edit sidebar widgets" button when Instant Search is disabled, preventing a fatal error on block themes that do not register classic sidebars.
 - Search: fix dashboard hero section being crushed under shared admin page layout mixin.
