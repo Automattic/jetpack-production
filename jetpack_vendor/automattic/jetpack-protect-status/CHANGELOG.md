@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.9-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.7.9] - 2026-05-04
 ### Changed
-- Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
+- Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency. [#48225]
 
 ## [0.7.8] - 2026-02-23
 ### Changed
@@ -171,7 +168,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies. [#37894]
 
-[0.7.9-alpha]: https://github.com/Automattic/jetpack-protect-status/compare/v0.7.8...v0.7.9-alpha
+[0.7.9]: https://github.com/Automattic/jetpack-protect-status/compare/v0.7.8...v0.7.9
 [0.7.8]: https://github.com/Automattic/jetpack-protect-status/compare/v0.7.7...v0.7.8
 [0.7.7]: https://github.com/Automattic/jetpack-protect-status/compare/v0.7.6...v0.7.7
 [0.7.6]: https://github.com/Automattic/jetpack-protect-status/compare/v0.7.5...v0.7.6

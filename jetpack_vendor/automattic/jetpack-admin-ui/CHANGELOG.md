@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.8.2] - 2026-05-04
 ### Changed
-- Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
+- Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency. [#48225]
 
 ## [0.8.1] - 2026-04-20
 ### Changed
@@ -250,7 +247,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing menu visibility issues.
 
-[0.8.2-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.8.1...0.8.2-alpha
+[0.8.2]: https://github.com/Automattic/jetpack-admin-ui/compare/0.8.1...0.8.2
 [0.8.1]: https://github.com/Automattic/jetpack-admin-ui/compare/0.8.0...0.8.1
 [0.8.0]: https://github.com/Automattic/jetpack-admin-ui/compare/0.7.1...0.8.0
 [0.7.1]: https://github.com/Automattic/jetpack-admin-ui/compare/0.7.0...0.7.1
