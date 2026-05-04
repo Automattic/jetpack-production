@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Guidelines CPT: whitelist _guideline_ meta keys for sync via wpcomsh filter.
 
 ### Bug fixes
+- AI: Change admin page slug from 'ai' to 'jetpack-ai' to avoid conflicts with the WordPress core AI plugin.
 - Paywall: comp subscribers can now access tier-gated posts regardless of plan price.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
