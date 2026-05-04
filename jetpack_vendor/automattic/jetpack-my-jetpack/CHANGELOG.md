@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Components: migrate Tier 1 jetpack-components to @wordpress/components and @wordpress/icons (no user-facing change).
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
+- My Jetpack: render product-interstitial back-link in the unified header's breadcrumbs slot, and move the "Use license key" CTA into the header actions slot. No new dependency or behavior change.
 - Remove New badge style from the Jetpack AI product interstitial.
 - Replace deprecated jetpack-components Spinner with WordPress Core Spinner.
 
