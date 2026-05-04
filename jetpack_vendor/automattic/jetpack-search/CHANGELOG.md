@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: fix dashboard hero section being crushed under shared admin page layout mixin.
 - Search Blocks: gate URL-seeded activeFilters on the client instead of at PHP seed time, so deep links work for filter blocks placed in templates / template parts (not just post content).
 - Search Blocks: keep `s=` in the URL when the search query is empty so a refresh stays on the search template instead of falling back to the front-page route.
+- Search Blocks: render human-readable labels in active-filter pills and resort `bucketSortOrder=alpha` filter lists by visible label client-side.
 
 ## [0.57.0] - 2026-04-27
 ### Added
