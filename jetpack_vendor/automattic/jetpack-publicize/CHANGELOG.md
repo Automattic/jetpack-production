@@ -21,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Social preview: drop the now-unused PREVIEW_BODY_CHAR_LIMITS map and per-network charLimit forwarded from the connection-preview hook.
 - Social preview: pass per-network char_limit to the render-message endpoint.
 
+### Fixed
+- Social admin page: prevent stacked content sections from collapsing when the page content overflows the scrollable area.
+
 ## [0.78.2] - 2026-04-27
 ### Changed
 - Social: Only allow one X connection per post to comply with X Developer Policy. [#48203]
