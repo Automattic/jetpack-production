@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Custom message field: Surface available placeholders for Message Templates feature.
 - Social preview: Render template-based messages in the block-editor preview when the `social-message-templates` feature is enabled.
 
 ### Changed
