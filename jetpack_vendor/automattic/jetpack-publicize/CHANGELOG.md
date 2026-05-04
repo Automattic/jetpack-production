@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Components: migrate Tier 1 jetpack-components to @wordpress/components and @wordpress/icons (no user-facing change).
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
 - Remove Beta and New badges from the Social admin page.
+- Social preview: drop the now-unused PREVIEW_BODY_CHAR_LIMITS map and per-network charLimit forwarded from the connection-preview hook.
 - Social preview: pass per-network char_limit to the render-message endpoint.
 
 ## [0.78.2] - 2026-04-27
