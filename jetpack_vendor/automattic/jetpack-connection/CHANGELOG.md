@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Internal: No longer require automattic/jetpack-changelogger as a per-project dev dependency.
 
 ### Fixed
+- Connector card: Fix description padding not reserving space in Chrome, reset connecting state on back-button navigation, use text label instead of busy stripes on link-style disconnect button, and honor redirect parameter after already-authorized webhook.
 - SSO: Render the single sign-on login button on the recovery mode landing page.
 
 ## [8.3.2] - 2026-04-27
