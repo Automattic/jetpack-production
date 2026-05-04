@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI page: adopt the shared `jetpack-admin-page-layout` mixin so its layout (sticky header, scrollable middle, pinned JetpackFooter) matches the rest of the Jetpack admin pages that use the AdminPage component.
 
+### Bug fixes
+- Shortcodes: Google Maps shortcode now preserves URL-encoded ampersands (%26) in place names.
+
 ## 15.8-beta - 2026-05-04
 ### Enhancements
 - Activity Log: Replace the external sidebar redirect with a native WP Admin page — search, activity type filter, sort, pagination, and a date-range picker. [#48244]
