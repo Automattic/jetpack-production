@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Search Blocks: allow the Post Type Scope block to be inserted inside the Filters container.
 - Search blocks: convert createElement/h calls to JSX in editor preview components for readability.
+- Search blocks: fold the no-results and search-error blocks into jetpack/search-results so the editor exposes one block with three states instead of three sibling blocks.
 - Search blocks: render skeleton placeholders pre-hydration so deep-linked search pages don't flash blank columns before the JS view bundle loads.
 
 ### Fixed
