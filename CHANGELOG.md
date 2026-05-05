@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Shortcodes: Google Maps shortcode now preserves URL-encoded ampersands (%26) in place names.
+- Shortcodes: Google Maps shortcode now preserves URL-encoded reserved characters (`#`, `%`, `+`) and HTML-entity-encoded ampersands inside place names.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Remove translation wrappers from "Boost" and "CRM" product names in the at-a-glance dashboard.
