@@ -1,4 +1,4 @@
-// routes/dashboard/route.tsx
+// routes/settings/route.tsx
 var route = {};
 export {
   route

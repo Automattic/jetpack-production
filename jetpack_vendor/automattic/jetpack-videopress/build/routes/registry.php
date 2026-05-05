@@ -8,8 +8,22 @@
 
 return array(
 	array(
-		'name'        => 'dashboard',
+		'name'        => 'library',
+		'path'        => '/library',
+		'page'        => 'jetpack-videopress-dashboard',
+		'has_route'   => true,
+		'has_content' => true,
+	),
+	array(
+		'name'        => 'overview',
 		'path'        => '/',
+		'page'        => 'jetpack-videopress-dashboard',
+		'has_route'   => true,
+		'has_content' => true,
+	),
+	array(
+		'name'        => 'settings',
+		'path'        => '/settings',
 		'page'        => 'jetpack-videopress-dashboard',
 		'has_route'   => true,
 		'has_content' => true,
