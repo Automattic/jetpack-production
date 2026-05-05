@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Search blocks: convert createElement/h calls to JSX in editor preview components for readability.
+- Search blocks: render skeleton placeholders pre-hydration so deep-linked search pages don't flash blank columns before the JS view bundle loads.
 
 ## [0.58.0] - 2026-05-04
 ### Added
