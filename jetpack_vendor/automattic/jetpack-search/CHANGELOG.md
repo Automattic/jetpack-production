@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - Search blocks: convert createElement/h calls to JSX in editor preview components for readability.
 - Search blocks: render skeleton placeholders pre-hydration so deep-linked search pages don't flash blank columns before the JS view bundle loads.
 
+### Fixed
+- Search 3.0: prevent 404 when refreshing a singular page that hosts inline search blocks
+
 ## [0.58.0] - 2026-05-04
 ### Added
 - Search 3.0: Add common-filters block — Group-like container for stacking filter blocks (active filters, taxonomy/author/post-type checkboxes, date). [#48478]
