@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Shortcodes: Google Maps shortcode now preserves URL-encoded ampersands (%26) in place names.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Remove translation wrappers from "Boost" and "CRM" product names in the at-a-glance dashboard.
+
 ## 15.8-beta - 2026-05-04
 ### Enhancements
 - Activity Log: Replace the external sidebar redirect with a native WP Admin page — search, activity type filter, sort, pagination, and a date-range picker. [#48244]
