@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- VideoPress: Remove translation wrappers from the "VideoPress" product name.
+
 ## [0.36.7] - 2026-05-04
 ### Changed
 - Components: migrate Tier 1 `jetpack-components` to `@wordpress/components` and `@wordpress/icons` (no user-facing change). [#48378]
