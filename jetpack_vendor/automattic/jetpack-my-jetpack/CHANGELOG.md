@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Migrate interstitial Buttons from `@automattic/jetpack-components` and `@wordpress/components` to `@wordpress/ui`.
 - My Jetpack: adopt the shared `jetpack-admin-page-layout` mixin on the main dashboard page so its layout (sticky header, internally scrollable middle, JetpackFooter pinned at viewport bottom) matches the rest of the Jetpack admin pages. Drop the bespoke Hello Dolly position-absolute override — Dolly now uses the same centralized normalize as every other Jetpack admin page. The full-width tab separator no longer uses `width: 100vw` (which overflowed the new viewport-fitted column by the wp-admin sidebar width); it now spans the page column instead. Interstitial / full-screen mode (`.jetpack-admin-full-screen`) is intentionally excluded from the mixin so it keeps its current take-over-the-viewport behavior.
 
+### Fixed
+- My Jetpack: fix `.jetpack-admin-full-screen` interstitial pages (e.g. the `step=onboarding` "Supercharge my site" screen) being constrained by the shared admin-page-layout mixin. The opt-out selector was looking for `.jetpack-admin-full-screen` as a descendant of `<body>` via `:has()`, but the class is added directly to `<body>`, so the predicate never matched and the mixin applied to onboarding too.
+
 ## [5.36.0] - 2026-05-04
 ### Added
 - My Jetpack: Add Modules link to the footer for admins on connected sites running the main Jetpack plugin. [#48304]
