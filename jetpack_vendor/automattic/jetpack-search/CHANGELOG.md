@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Search blocks: add jetpack/results-panel container block bundling the result-display stack (count, sort, results, error, empty state, load-more).
 
 ### Changed
+- Search Blocks: allow the Post Type Scope block to be inserted inside the Filters container.
 - Search blocks: convert createElement/h calls to JSX in editor preview components for readability.
 - Search blocks: render skeleton placeholders pre-hydration so deep-linked search pages don't flash blank columns before the JS view bundle loads.
 
