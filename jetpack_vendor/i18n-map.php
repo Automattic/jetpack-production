@@ -140,6 +140,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
       'ver' => '0.79.0',
     ),
+    'jetpack-scan-page' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-scan-page',
+      'ver' => '0.1.1-alpha1777996783',
+    ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
       'ver' => '0.59.0-alpha1777956065',
