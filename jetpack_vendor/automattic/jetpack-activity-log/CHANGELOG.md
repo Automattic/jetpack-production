@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Activity Log: refreshed the free-tier upsell illustration to match Jetpack's branding.
+- Activity Log: rename the row action to "Restore backup" so the label matches what clicking it actually does — open the restore flow.
+- Activity Log: the "Manage backup" row action now opens the Jetpack Cloud Backup restore flow for that point in time, instead of being a disabled placeholder.
 - Components: Use Link from `@wordpress/ui` instead of ExternalLink.
 
 ## [0.1.0] - 2026-05-04
