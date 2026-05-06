@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Search blocks: convert createElement/h calls to JSX in editor preview components for readability.
 - Search blocks: fold the no-results and search-error blocks into jetpack/search-results so the editor exposes one block with three states instead of three sibling blocks.
 - Search blocks: render skeleton placeholders pre-hydration so deep-linked search pages don't flash blank columns before the JS view bundle loads.
+- Search Blocks: render WC formatted prices and post titles as plain text by stripping HTML markup and decoding entities so result cards never expose the raw API HTML.
 
 ### Fixed
 - Search 3.0: prevent 404 when refreshing a singular page that hosts inline search blocks
