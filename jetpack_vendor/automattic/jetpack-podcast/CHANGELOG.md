@@ -10,4 +10,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add an empty wp-build dashboard scaffold and the "Jetpack > Podcast" wp-admin entry, gated behind the `jetpack_podcast_untangle` filter. With the filter off (default), nothing changes; with it on, a placeholder Podcast page renders inside the standard wp-admin chrome.
 - Initial scaffolding for the Jetpack Podcast package. Loads on Simple and Atomic only, gated behind the `jetpack_podcast_untangle` filter (default off) so it stays inert while the legacy podcasting code keeps running.
