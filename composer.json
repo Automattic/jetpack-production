@@ -49,7 +49,7 @@
 		"automattic/jetpack-publicize": "^0.79.0",
 		"automattic/jetpack-redirect": "^3.0.10",
 		"automattic/jetpack-roles": "^3.0.9",
-		"automattic/jetpack-scan-page": "^0.1.1-alpha",
+		"automattic/jetpack-scan-page": "^0.2.0-alpha",
 		"automattic/jetpack-search": "^0.59.0-alpha",
 		"automattic/jetpack-stats": "^0.19.0",
 		"automattic/jetpack-stats-admin": "^0.31.2",

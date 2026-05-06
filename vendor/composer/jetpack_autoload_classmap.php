@@ -1222,16 +1222,20 @@ return array(
 		'version' => '3.0.9.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php'
 	),
+	'Automattic\\Jetpack\\Scan_Page\\Initial_State' => array(
+		'version' => '0.2.0.0-alpha1778037254',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-initial-state.php'
+	),
 	'Automattic\\Jetpack\\Scan_Page\\Jetpack_Scan' => array(
-		'version' => '0.1.1.0-alpha1777996783',
+		'version' => '0.2.0.0-alpha1778037254',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-jetpack-scan.php'
 	),
 	'Automattic\\Jetpack\\Scan_Page\\Package_Version' => array(
-		'version' => '0.1.1.0-alpha1777996783',
+		'version' => '0.2.0.0-alpha1778037254',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-package-version.php'
 	),
 	'Automattic\\Jetpack\\Scan_Page\\REST_Controller' => array(
-		'version' => '0.1.1.0-alpha1777996783',
+		'version' => '0.2.0.0-alpha1778037254',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Search\\CLI' => array(

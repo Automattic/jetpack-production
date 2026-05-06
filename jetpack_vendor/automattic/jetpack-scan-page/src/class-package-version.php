@@ -16,7 +16,7 @@ namespace Automattic\Jetpack\Scan_Page;
  */
 class Package_Version {
 
-	const PACKAGE_VERSION = '0.1.1-alpha';
+	const PACKAGE_VERSION = '0.2.0-alpha';
 
 	const PACKAGE_SLUG = 'scan-page';
 

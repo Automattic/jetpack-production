@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI page: adopt the shared `jetpack-admin-page-layout` mixin so its layout (sticky header, scrollable middle, pinned JetpackFooter) matches the rest of the Jetpack admin pages that use the AdminPage component.
+- Scan: register the new Scan wp-admin page package. Phase 0 of the Calypso Dashboard → wp-admin port; surfaces an empty "Scan" submenu and a "Hello Scan" placeholder. No user-visible behaviour change yet.
 
 ### Bug fixes
 - Shortcodes: Google Maps shortcode now preserves URL-encoded ampersands (%26) in place names.

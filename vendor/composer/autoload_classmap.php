@@ -307,6 +307,7 @@ return array(
     'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\Templates' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-templates.php',
     'Automattic\\Jetpack\\Redirect' => $baseDir . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php',
     'Automattic\\Jetpack\\Roles' => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php',
+    'Automattic\\Jetpack\\Scan_Page\\Initial_State' => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-initial-state.php',
     'Automattic\\Jetpack\\Scan_Page\\Jetpack_Scan' => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-jetpack-scan.php',
     'Automattic\\Jetpack\\Scan_Page\\Package_Version' => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-package-version.php',
     'Automattic\\Jetpack\\Scan_Page\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-rest-controller.php',
