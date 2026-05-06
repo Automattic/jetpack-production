@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.37.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Sync: Whitelist the new jetpack_search_experience option so it propagates to WPcom.
+
 ## [4.37.0] - 2026-05-04
 ### Added
 - Sync: Add project_collection taxonomy to taxonomy allowlist. [#48392]
@@ -1731,6 +1738,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[4.37.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.37.0...v4.37.1-alpha
 [4.37.0]: https://github.com/Automattic/jetpack-sync/compare/v4.36.0...v4.37.0
 [4.36.0]: https://github.com/Automattic/jetpack-sync/compare/v4.35.0...v4.36.0
 [4.35.0]: https://github.com/Automattic/jetpack-sync/compare/v4.34.0...v4.35.0
