@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI page: adopt the shared `jetpack-admin-page-layout` mixin so its layout (sticky header, scrollable middle, pinned JetpackFooter) matches the rest of the Jetpack admin pages that use the AdminPage component.
+- Image Studio: expose a video clip generation capability flag (`canGenerateVideoClips`) on the localized data so the client can hide the entry point on WordPress.com sites that cannot upload videos. On WordPress.com the value mirrors `wpcom_site_can_upload_videos()`; on other environments the flag is `true` and the server is the source of truth.
 - Scan: register the new Scan wp-admin page package. Phase 0 of the Calypso Dashboard → wp-admin port; surfaces an empty "Scan" submenu and a "Hello Scan" placeholder. No user-visible behaviour change yet.
 
 ### Bug fixes
