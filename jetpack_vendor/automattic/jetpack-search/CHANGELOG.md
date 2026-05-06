@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Search 3.0: Add "Matches content" / "Matches comments" hint badge to the product layout result card when a non-title field matches but the title does not.
 - Search Blocks: add 'product' layout to the search-results block, alongside an Inspector control to switch between compact / expanded / product.
 - Search Blocks: Add a hidden Post Type Scope block that constrains results to an include/exclude post-type list.
 - Search blocks: add jetpack/results-panel container block bundling the result-display stack (count, sort, results, error, empty state, load-more).
