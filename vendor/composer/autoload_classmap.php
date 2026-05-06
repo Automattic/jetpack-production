@@ -258,6 +258,7 @@ return array(
     'Automattic\\Jetpack\\Plugin\\Jetpack_Script_Data' => $baseDir . '/src/class-jetpack-script-data.php',
     'Automattic\\Jetpack\\Plugin\\Tracking' => $baseDir . '/src/class-tracking.php',
     'Automattic\\Jetpack\\Plugins_Installer' => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-plugins-installer.php',
+    'Automattic\\Jetpack\\Podcast\\Podcast' => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-podcast.php',
     'Automattic\\Jetpack\\Post_List\\Post_List' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-list.php',
     'Automattic\\Jetpack\\Post_List\\Post_Thumbnail' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-thumbnail.php',
     'Automattic\\Jetpack\\Post_Media' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-post-media.php',

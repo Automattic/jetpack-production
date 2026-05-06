@@ -1026,6 +1026,10 @@ return array(
 		'version' => '0.5.8.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-plugins-installer.php'
 	),
+	'Automattic\\Jetpack\\Podcast\\Podcast' => array(
+		'version' => '0.1.0.0-alpha1778064331',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-podcast.php'
+	),
 	'Automattic\\Jetpack\\Post_List\\Post_List' => array(
 		'version' => '0.9.16.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-list.php'
