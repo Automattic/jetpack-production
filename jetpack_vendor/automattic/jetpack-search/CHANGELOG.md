@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Search 3.0: prevent 404 when refreshing a singular page that hosts inline search blocks
 - Search blocks: clear the previous query's results, total count, and aggregation buckets when a search request errors out so the error message no longer renders alongside stale data.
+- Search Blocks: fix block-validation error on results-panel, filter-popover, and common-filters when inserted via patterns
 
 ## [0.58.0] - 2026-05-04
 ### Added
