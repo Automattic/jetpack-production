@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: add a per-connection message template editor in the connections list and the connection-confirmation modal (SOCIAL-451).
 
 ### Changed
+- Components: Use Link from `@wordpress/ui` instead of ExternalLink.
 - Internal: extract PlaceholdersHelp to a shared location and add a MessageTemplateEditor scaffold consumed by the upcoming template editor surfaces.
 
 ## [0.79.0] - 2026-05-04

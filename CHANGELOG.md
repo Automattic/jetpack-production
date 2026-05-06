@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add the new Jetpack Podcast package as a dependency. Loaded on Simple and Atomic only, gated behind the `jetpack_podcast_untangle` filter (default off) so it has no effect until subsequent PRs in the untangle train fill it in.
+- Components: Use Link from `@wordpress/ui` instead of ExternalLink.
 - Remove translation wrappers from "Boost" and "CRM" product names in the at-a-glance dashboard.
 
 ## 15.8 - 2026-05-05

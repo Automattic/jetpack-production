@@ -39567,7 +39567,7 @@ function buildAkismetCard({
           "Add one-click spam protection for your forms with <a>Akismet</a>. Simply install the plugin and you're set.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components48.ExternalLink, { href: marketingUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Link2, { openInNewTab: true, href: marketingUrl, children: null }) }
       ),
       notActivatedMessage: (0, import_i18n48.__)(
         "Akismet is installed. Just activate the plugin to start blocking spam.",
@@ -39582,7 +39582,7 @@ function buildAkismetCard({
           "Akismet is active. There is one step left. Please add your <a>Akismet key</a>.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components48.ExternalLink, { href: settingsUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Link2, { openInNewTab: true, href: settingsUrl, children: null }) }
       ) }),
       /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(
         import_components48.Button,
@@ -39604,7 +39604,7 @@ function buildAkismetCard({
           /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components48.Button, { variant: "link", href: settingsUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n48.__)("View stats and settings", "jetpack-forms") }),
           /* @__PURE__ */ (0, import_jsx_runtime152.jsx)("span", { children: "|" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(import_components48.ExternalLink, { href: getRedirectUrl("akismet-jetpack-forms-docs"), children: (0, import_i18n48.__)("Learn about Akismet", "jetpack-forms") })
+        /* @__PURE__ */ (0, import_jsx_runtime152.jsx)(Link2, { openInNewTab: true, href: getRedirectUrl("akismet-jetpack-forms-docs"), children: (0, import_i18n48.__)("Learn about Akismet", "jetpack-forms") })
       ] })
     ] })
   };
@@ -39916,7 +39916,14 @@ function buildHostingerReachCard({
           "jetpack-forms"
         ),
         {
-          a: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components52.ExternalLink, { href: integration.marketingUrl || "", children: null })
+          a: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(
+            Link2,
+            {
+              openInNewTab: true,
+              href: integration.marketingUrl || "",
+              children: null
+            }
+          )
         }
       ),
       notActivatedMessage: (0, import_i18n53.__)(
@@ -39927,7 +39934,7 @@ function buildHostingerReachCard({
     },
     toggleTooltip: (0, import_i18n53.__)("Grow your audience with Hostinger Reach", "jetpack-forms"),
     body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime158.jsxs)(import_jsx_runtime158.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components52.ExternalLink, { href: settingsUrl, children: (0, import_i18n53.__)(
+      /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(Link2, { openInNewTab: true, href: settingsUrl, children: (0, import_i18n53.__)(
         "Hostinger Reach is active. There is one step left. Please complete Hostinger Reach setup.",
         "jetpack-forms"
       ) }) }),
@@ -39965,7 +39972,7 @@ function buildHostingerReachCard({
         }
       ) }),
       context === "block-editor" && ConsentToggle && /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(ConsentToggle, {}),
-      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(import_components52.ExternalLink, { href: settingsUrl, children: (0, import_i18n53.__)("View Hostinger Reach dashboard", "jetpack-forms") }) })
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime158.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime158.jsx)(Link2, { openInNewTab: true, href: settingsUrl, children: (0, import_i18n53.__)("View Hostinger Reach dashboard", "jetpack-forms") }) })
     ] })
   };
   return base;
@@ -40274,7 +40281,7 @@ function buildJetpackCrmCard({
     }
     return /* @__PURE__ */ (0, import_jsx_runtime160.jsxs)("div", { children: [
       /* @__PURE__ */ (0, import_jsx_runtime160.jsx)("p", { className: "integration-card__description", children: context === "block-editor" ? connectedMsgEditor : connectedMsgDashboard }),
-      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(import_components53.ExternalLink, { href: settingsUrl, children: (0, import_i18n55.__)("Open Jetpack CRM settings", "jetpack-forms") })
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(Link2, { openInNewTab: true, href: settingsUrl, children: (0, import_i18n55.__)("Open Jetpack CRM settings", "jetpack-forms") })
     ] });
   };
   const base = {
@@ -40300,7 +40307,7 @@ function buildJetpackCrmCard({
           "You can save your form contacts in <a>Jetpack CRM</a>. To get started, please install the plugin.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(import_components53.ExternalLink, { href: marketingUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime160.jsx)(Link2, { openInNewTab: true, href: marketingUrl, children: null }) }
       ),
       notActivatedMessage: (0, import_i18n55.__)(
         "Jetpack CRM is installed. To start saving contacts, simply activate the plugin.",
@@ -40398,7 +40405,7 @@ function buildMailPoetCard({
           "Add powerful email marketing to your forms with <a>MailPoet</a>. Simply install the plugin to start sending emails.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components54.ExternalLink, { href: marketingUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(Link2, { openInNewTab: true, href: marketingUrl, children: null }) }
       ),
       notActivatedMessage: (0, import_i18n57.__)(
         "MailPoet is installed. Just activate the plugin to start sending emails.",
@@ -40413,7 +40420,7 @@ function buildMailPoetCard({
           "MailPoet is active. There is one step left. Please complete <a>MailPoet setup</a>.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components54.ExternalLink, { href: settingsUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(Link2, { openInNewTab: true, href: settingsUrl, children: null }) }
       ) }),
       /* @__PURE__ */ (0, import_jsx_runtime162.jsxs)(import_components54.__experimentalHStack, { spacing: "3", justify: "start", children: [
         /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(
@@ -40450,7 +40457,7 @@ function buildMailPoetCard({
         "jetpack-forms"
       ) })),
       context === "block-editor" && ConsentToggle && /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(ConsentToggle, {}),
-      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime162.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(import_components54.ExternalLink, { href: settingsUrl, children: (0, import_i18n57.__)("View dashboard", "jetpack-forms") }) })
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime162.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime162.jsx)(Link2, { openInNewTab: true, href: settingsUrl, children: (0, import_i18n57.__)("View dashboard", "jetpack-forms") }) })
     ] })
   };
   return base;
@@ -40830,7 +40837,7 @@ function buildSalesforceCard({
         "Invalid Organization ID. Should be a 15\u201318 characters long alphanumeric string.",
         "jetpack-forms"
       ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime166.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(import_components56.ExternalLink, { href: "https://help.salesforce.com/s/articleView?id=000325251&type=1", children: (0, import_i18n60.__)("Where to find your Salesforce Organization ID", "jetpack-forms") }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime166.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime166.jsx)(Link2, { openInNewTab: true, href: "https://help.salesforce.com/s/articleView?id=000325251&type=1", children: (0, import_i18n60.__)("Where to find your Salesforce Organization ID", "jetpack-forms") }) }),
       /* @__PURE__ */ (0, import_jsx_runtime166.jsx)("div", { style: { marginTop: "20px", marginBottom: "20px" }, children: (0, import_i18n60.__)(
         "For integration with Salesforce to work, you must add specific fields with specific field IDs that match Salesforce.",
         "jetpack-forms"
@@ -41833,7 +41840,7 @@ var useInstallAkismet = () => {
       "jetpack-forms"
     ),
     {
-      moreInfoLink: /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(import_components64.ExternalLink, { href: "https://akismet.com/", children: null })
+      moreInfoLink: /* @__PURE__ */ (0, import_jsx_runtime175.jsx)(Link2, { openInNewTab: true, href: "https://akismet.com/", children: null })
     }
   );
   const activateButtonText = (0, import_i18n66.__)("Activate Akismet Anti-spam", "jetpack-forms");
@@ -48137,7 +48144,7 @@ function StageInner() {
             const previewLabel = (0, import_i18n92.__)("Form preview", "jetpack-forms");
             if (item.preview_url) {
               return styleUnreadValue(
-                /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components78.ExternalLink, { href: item.preview_url, children: previewLabel }),
+                /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(Link2, { openInNewTab: true, href: item.preview_url, children: previewLabel }),
                 item.is_unread
               );
             }
@@ -48146,7 +48153,7 @@ function StageInner() {
           const source = item.entry_title || getUrlPath(item.entry_permalink) || (0, import_i18n92.__)("(no title)", "jetpack-forms");
           if (item.entry_permalink) {
             return styleUnreadValue(
-              /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(import_components78.ExternalLink, { href: item.entry_permalink, children: source }),
+              /* @__PURE__ */ (0, import_jsx_runtime197.jsx)(Link2, { openInNewTab: true, href: item.entry_permalink, children: source }),
               item.is_unread
             );
           }
@@ -48797,7 +48804,7 @@ var FieldFile = ({ file, onClick }) => {
       /* @__PURE__ */ (0, import_jsx_runtime203.jsx)("div", { className: iconClass, style: iconStyle }),
       /* @__PURE__ */ (0, import_jsx_runtime203.jsxs)("div", { className: "jp-forms__inbox-response-file__name", children: [
         file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(import_components84.Button, { target: "_blank", variant: "link", onClick, children: (0, import_html_entities7.decodeEntities)(file.name) }),
-        !file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(import_components84.ExternalLink, { href: file.url + "&preview=true", children: (0, import_html_entities7.decodeEntities)(file.name) }),
+        !file.is_previewable && /* @__PURE__ */ (0, import_jsx_runtime203.jsx)(Link2, { openInNewTab: true, href: file.url + "&preview=true", children: (0, import_html_entities7.decodeEntities)(file.name) }),
         /* @__PURE__ */ (0, import_jsx_runtime203.jsx)("div", { className: "jp-forms__inbox-response-file__meta-info", children: (0, import_i18n97.sprintf)(
           /* translators: %1$s size of the file and %2$s is the file extension */
           (0, import_i18n97.__)("%1$s, %2$s", "jetpack-forms"),
@@ -49390,7 +49397,7 @@ var FieldPreview = ({ field, onFilePreview }) => {
       return /* @__PURE__ */ (0, import_jsx_runtime223.jsx)(field_phone_default, { phone: stringValue });
     }
     if (fieldType === "url" && /^https?:\/\//.test(stringValue)) {
-      return /* @__PURE__ */ (0, import_jsx_runtime223.jsx)(import_components88.ExternalLink, { href: stringValue, children: stringValue });
+      return /* @__PURE__ */ (0, import_jsx_runtime223.jsx)(Link2, { openInNewTab: true, href: stringValue, children: stringValue });
     }
     if (fieldType === "rating") {
       return /* @__PURE__ */ (0, import_jsx_runtime223.jsx)(field_rating_default, { value: stringValue });
@@ -49484,12 +49491,12 @@ var SourceCell = ({ response }) => {
   if (response.is_test) {
     const label = (0, import_i18n99.__)("Form preview", "jetpack-forms");
     if (response.preview_url) {
-      return /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(import_components89.ExternalLink, { href: response.preview_url, children: label });
+      return /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(Link2, { openInNewTab: true, href: response.preview_url, children: label });
     }
     return /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(import_jsx_runtime225.Fragment, { children: label });
   }
   if (response.entry_permalink) {
-    return /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(import_components89.ExternalLink, { href: response.entry_permalink, children: (0, import_html_entities8.decodeEntities)(response.entry_title) || getPath(response) });
+    return /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(Link2, { openInNewTab: true, href: response.entry_permalink, children: (0, import_html_entities8.decodeEntities)(response.entry_title) || getPath(response) });
   }
   return /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(import_jsx_runtime225.Fragment, { children: (0, import_html_entities8.decodeEntities)(response.entry_title) });
 };
@@ -49576,8 +49583,9 @@ var ResponseMeta = ({ response }) => {
           "\xA0"
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime225.jsx)("td", { children: /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(TextWithFlag, { countryCode: response.country_code, children: /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(import_components89.Tooltip, { text: (0, import_i18n99.__)("Lookup IP address", "jetpack-forms"), children: /* @__PURE__ */ (0, import_jsx_runtime225.jsx)(
-          import_components89.ExternalLink,
+          Link2,
           {
+            openInNewTab: true,
             href: `https://apps.db.ripe.net/db-web-ui/query?searchtext=${encodeURIComponent(
               response.ip
             )}`,

@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Modernization Phase 1: shared chrome with Overview/Library/Settings tabs and a working Restrict access toggle, all behind the existing modernization filter.
 
 ### Changed
+- Components: Use Link from `@wordpress/ui` instead of ExternalLink.
 - VideoPress: Remove translation wrappers from the "VideoPress" product name.
 
 ## [0.36.7] - 2026-05-04

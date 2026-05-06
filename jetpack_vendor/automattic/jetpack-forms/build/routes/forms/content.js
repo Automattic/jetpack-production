@@ -32003,7 +32003,7 @@ function buildAkismetCard({
           "Add one-click spam protection for your forms with <a>Akismet</a>. Simply install the plugin and you're set.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components48.ExternalLink, { href: marketingUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(Link2, { openInNewTab: true, href: marketingUrl, children: null }) }
       ),
       notActivatedMessage: (0, import_i18n48.__)(
         "Akismet is installed. Just activate the plugin to start blocking spam.",
@@ -32018,7 +32018,7 @@ function buildAkismetCard({
           "Akismet is active. There is one step left. Please add your <a>Akismet key</a>.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components48.ExternalLink, { href: settingsUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(Link2, { openInNewTab: true, href: settingsUrl, children: null }) }
       ) }),
       /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(
         import_components48.Button,
@@ -32040,7 +32040,7 @@ function buildAkismetCard({
           /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components48.Button, { variant: "link", href: settingsUrl, target: "_blank", rel: "noopener noreferrer", children: (0, import_i18n48.__)("View stats and settings", "jetpack-forms") }),
           /* @__PURE__ */ (0, import_jsx_runtime145.jsx)("span", { children: "|" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(import_components48.ExternalLink, { href: getRedirectUrl("akismet-jetpack-forms-docs"), children: (0, import_i18n48.__)("Learn about Akismet", "jetpack-forms") })
+        /* @__PURE__ */ (0, import_jsx_runtime145.jsx)(Link2, { openInNewTab: true, href: getRedirectUrl("akismet-jetpack-forms-docs"), children: (0, import_i18n48.__)("Learn about Akismet", "jetpack-forms") })
       ] })
     ] })
   };
@@ -32352,7 +32352,14 @@ function buildHostingerReachCard({
           "jetpack-forms"
         ),
         {
-          a: /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(import_components52.ExternalLink, { href: integration.marketingUrl || "", children: null })
+          a: /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(
+            Link2,
+            {
+              openInNewTab: true,
+              href: integration.marketingUrl || "",
+              children: null
+            }
+          )
         }
       ),
       notActivatedMessage: (0, import_i18n53.__)(
@@ -32363,7 +32370,7 @@ function buildHostingerReachCard({
     },
     toggleTooltip: (0, import_i18n53.__)("Grow your audience with Hostinger Reach", "jetpack-forms"),
     body: !isConnected ? /* @__PURE__ */ (0, import_jsx_runtime151.jsxs)(import_jsx_runtime151.Fragment, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime151.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(import_components52.ExternalLink, { href: settingsUrl, children: (0, import_i18n53.__)(
+      /* @__PURE__ */ (0, import_jsx_runtime151.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(Link2, { openInNewTab: true, href: settingsUrl, children: (0, import_i18n53.__)(
         "Hostinger Reach is active. There is one step left. Please complete Hostinger Reach setup.",
         "jetpack-forms"
       ) }) }),
@@ -32401,7 +32408,7 @@ function buildHostingerReachCard({
         }
       ) }),
       context === "block-editor" && ConsentToggle && /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(ConsentToggle, {}),
-      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime151.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(import_components52.ExternalLink, { href: settingsUrl, children: (0, import_i18n53.__)("View Hostinger Reach dashboard", "jetpack-forms") }) })
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime151.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime151.jsx)(Link2, { openInNewTab: true, href: settingsUrl, children: (0, import_i18n53.__)("View Hostinger Reach dashboard", "jetpack-forms") }) })
     ] })
   };
   return base;
@@ -32710,7 +32717,7 @@ function buildJetpackCrmCard({
     }
     return /* @__PURE__ */ (0, import_jsx_runtime153.jsxs)("div", { children: [
       /* @__PURE__ */ (0, import_jsx_runtime153.jsx)("p", { className: "integration-card__description", children: context === "block-editor" ? connectedMsgEditor : connectedMsgDashboard }),
-      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(import_components53.ExternalLink, { href: settingsUrl, children: (0, import_i18n55.__)("Open Jetpack CRM settings", "jetpack-forms") })
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(Link2, { openInNewTab: true, href: settingsUrl, children: (0, import_i18n55.__)("Open Jetpack CRM settings", "jetpack-forms") })
     ] });
   };
   const base = {
@@ -32736,7 +32743,7 @@ function buildJetpackCrmCard({
           "You can save your form contacts in <a>Jetpack CRM</a>. To get started, please install the plugin.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(import_components53.ExternalLink, { href: marketingUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime153.jsx)(Link2, { openInNewTab: true, href: marketingUrl, children: null }) }
       ),
       notActivatedMessage: (0, import_i18n55.__)(
         "Jetpack CRM is installed. To start saving contacts, simply activate the plugin.",
@@ -32834,7 +32841,7 @@ function buildMailPoetCard({
           "Add powerful email marketing to your forms with <a>MailPoet</a>. Simply install the plugin to start sending emails.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components54.ExternalLink, { href: marketingUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Link2, { openInNewTab: true, href: marketingUrl, children: null }) }
       ),
       notActivatedMessage: (0, import_i18n57.__)(
         "MailPoet is installed. Just activate the plugin to start sending emails.",
@@ -32849,7 +32856,7 @@ function buildMailPoetCard({
           "MailPoet is active. There is one step left. Please complete <a>MailPoet setup</a>.",
           "jetpack-forms"
         ),
-        { a: /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components54.ExternalLink, { href: settingsUrl, children: null }) }
+        { a: /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Link2, { openInNewTab: true, href: settingsUrl, children: null }) }
       ) }),
       /* @__PURE__ */ (0, import_jsx_runtime155.jsxs)(import_components54.__experimentalHStack, { spacing: "3", justify: "start", children: [
         /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(
@@ -32886,7 +32893,7 @@ function buildMailPoetCard({
         "jetpack-forms"
       ) })),
       context === "block-editor" && ConsentToggle && /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(ConsentToggle, {}),
-      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(import_components54.ExternalLink, { href: settingsUrl, children: (0, import_i18n57.__)("View dashboard", "jetpack-forms") }) })
+      settingsUrl && /* @__PURE__ */ (0, import_jsx_runtime155.jsx)("p", { className: "integration-card__description", children: /* @__PURE__ */ (0, import_jsx_runtime155.jsx)(Link2, { openInNewTab: true, href: settingsUrl, children: (0, import_i18n57.__)("View dashboard", "jetpack-forms") }) })
     ] })
   };
   return base;
@@ -33266,7 +33273,7 @@ function buildSalesforceCard({
         "Invalid Organization ID. Should be a 15\u201318 characters long alphanumeric string.",
         "jetpack-forms"
       ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(import_components56.ExternalLink, { href: "https://help.salesforce.com/s/articleView?id=000325251&type=1", children: (0, import_i18n60.__)("Where to find your Salesforce Organization ID", "jetpack-forms") }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("p", { children: /* @__PURE__ */ (0, import_jsx_runtime159.jsx)(Link2, { openInNewTab: true, href: "https://help.salesforce.com/s/articleView?id=000325251&type=1", children: (0, import_i18n60.__)("Where to find your Salesforce Organization ID", "jetpack-forms") }) }),
       /* @__PURE__ */ (0, import_jsx_runtime159.jsx)("div", { style: { marginTop: "20px", marginBottom: "20px" }, children: (0, import_i18n60.__)(
         "For integration with Salesforce to work, you must add specific fields with specific field IDs that match Salesforce.",
         "jetpack-forms"
