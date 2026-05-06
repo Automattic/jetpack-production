@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: add 'product' layout to the search-results block, alongside an Inspector control to switch between compact / expanded / product.
 - Search Blocks: Add a hidden Post Type Scope block that constrains results to an include/exclude post-type list.
 - Search blocks: add jetpack/results-panel container block bundling the result-display stack (count, sort, results, error, empty state, load-more).
+- Search Blocks: Render highlighted content snippet under the result title in the expanded card layout.
 
 ### Changed
 - Search Blocks: allow the Post Type Scope block to be inserted inside the Filters container.
