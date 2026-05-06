@@ -48,7 +48,7 @@
 	},
 	"devDependencies": {
 		"@automattic/babel-plugin-replace-textdomain": "^1.0.57",
-		"@automattic/jetpack-base-styles": "^1.2.0",
+		"@automattic/jetpack-base-styles": "^1.2.1-alpha",
 		"@automattic/jetpack-webpack-config": "workspace:*",
 		"@babel/core": "7.29.0",
 		"@babel/preset-env": "7.29.2",
