@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Components: Use Link from `@wordpress/ui` instead of ExternalLink.
 - Search Blocks: allow the Post Type Scope block to be inserted inside the Filters container.
 - Search blocks: convert createElement/h calls to JSX in editor preview components for readability.
+- Search Blocks: differentiate result path and content text styles in the expanded layout so the breadcrumb and snippet are visually distinct.
 - Search blocks: fold the no-results and search-error blocks into jetpack/search-results so the editor exposes one block with three states instead of three sibling blocks.
 - Search blocks: render skeleton placeholders pre-hydration so deep-linked search pages don't flash blank columns before the JS view bundle loads.
 - Search Blocks: render WC formatted prices and post titles as plain text by stripping HTML markup and decoding entities so result cards never expose the raw API HTML.
