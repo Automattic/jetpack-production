@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add support for global and per-connection message templates via REST API.
 - Social: add a global message template editor to the Social admin page.
+- Social: add a per-connection message template editor in the connections list and the connection-confirmation modal (SOCIAL-451).
 
 ### Changed
 - Internal: extract PlaceholdersHelp to a shared location and add a MessageTemplateEditor scaffold consumed by the upcoming template editor surfaces.
