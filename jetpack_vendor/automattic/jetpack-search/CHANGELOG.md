@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: allow the Post Type Scope block to be inserted inside the Filters container.
 - Search blocks: convert createElement/h calls to JSX in editor preview components for readability.
 - Search Blocks: differentiate result path and content text styles in the expanded layout so the breadcrumb and snippet are visually distinct.
+- Search Blocks: filter-checkbox and filter-date now keep selected buckets visible in the list with their checkbox in the checked state, so visitors can untick them in the same place they ticked them. The active-filters chip row continues to show the same selections as removable pills.
 - Search blocks: fold the no-results and search-error blocks into jetpack/search-results so the editor exposes one block with three states instead of three sibling blocks.
 - Search blocks: render skeleton placeholders pre-hydration so deep-linked search pages don't flash blank columns before the JS view bundle loads.
 - Search Blocks: render WC formatted prices and post titles as plain text by stripping HTML markup and decoding entities so result cards never expose the raw API HTML.
