@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Components: Use Link from `@wordpress/ui` instead of ExternalLink.
 - Search blocks: align all 13 blocks under three predictable patterns (filter-{kind}, filters-{layout}, results-{role}) and move them to a dedicated jetpack-search/* namespace.
 - Search Blocks: allow the Post Type Scope block to be inserted inside the Filters container.
+- Search Blocks: checkbox filters retain previously-seen options across searches and keep selected values visible (and uncheckable) even when the current result set no longer surfaces them. Zero-result options sink to the bottom of the list unless they're checked.
 - Search blocks: convert createElement/h calls to JSX in editor preview components for readability.
 - Search Blocks: differentiate result path and content text styles in the expanded layout so the breadcrumb and snippet are visually distinct.
 - Search Blocks: filter-checkbox and filter-date now keep selected buckets visible in the list with their checkbox in the checked state, so visitors can untick them in the same place they ticked them. The active-filters chip row continues to show the same selections as removable pills.
