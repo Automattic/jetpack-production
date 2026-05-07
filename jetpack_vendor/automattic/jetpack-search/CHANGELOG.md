@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Components: Use Link from `@wordpress/ui` instead of ExternalLink.
+- Search 3.0: only override the theme's search template when the saved experience is `embedded`. Sites on Overlay or Inline now resolve `/?s=…` through their theme's `search.html` again. Block registration and Interactivity API state seeding stay on regardless of experience so Search blocks placed on other pages continue to work.
 - Search blocks: align all 13 blocks under three predictable patterns (filter-{kind}, filters-{layout}, results-{role}) and move them to a dedicated jetpack-search/* namespace.
 - Search Blocks: allow the Post Type Scope block to be inserted inside the Filters container.
 - Search Blocks: checkbox filters retain previously-seen options across searches and keep selected values visible (and uncheckable) even when the current result set no longer surfaces them. Zero-result options sink to the bottom of the list unless they're checked.
