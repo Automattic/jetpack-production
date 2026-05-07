@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Search blocks: fold the no-results and search-error blocks into jetpack/search-results so the editor exposes one block with three states instead of three sibling blocks.
 - Search blocks: render skeleton placeholders pre-hydration so deep-linked search pages don't flash blank columns before the JS view bundle loads.
 - Search Blocks: render WC formatted prices and post titles as plain text by stripping HTML markup and decoding entities so result cards never expose the raw API HTML.
+- Search dashboard: hide the Off row of the new feature-selector on WordPress.com, matching the legacy module control's behaviour.
 
 ### Fixed
 - Search 3.0: prevent 404 when refreshing a singular page that hosts inline search blocks
