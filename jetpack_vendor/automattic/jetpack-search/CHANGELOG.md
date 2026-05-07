@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: add a "Powered by Jetpack" block (`jetpack/powered-by`) to the results-panel default template, patterns, and search template. Free-plan sites always render the attribution; paid plans expose a "Hide on the front end" inspector toggle.
 - Search Blocks: Add a hidden Post Type Scope block that constrains results to an include/exclude post-type list.
 - Search blocks: add jetpack/results-panel container block bundling the result-display stack (count, sort, results, error, empty state, load-more).
+- Search Blocks: foundation data-plane primitives for the upcoming WC product filter blocks. Adds `actions.setPriceRange(min, max)`, extends `actions.clearFilters` to also clear the price range, and folds `priceRange` into `state.hasActiveFilters` so the active-filters wrapper stays visible on a price-only deep link.
 - Search Blocks: Render highlighted content snippet under the result title in the expanded card layout.
 - Search dashboard: new feature-selection UI gated behind the jetpack_search_blocks_enabled filter.
 
