@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Components: Use Link from `@wordpress/ui` instead of ExternalLink.
+- Search blocks: align all 13 blocks under three predictable patterns (filter-{kind}, filters-{layout}, results-{role}) and move them to a dedicated jetpack-search/* namespace.
 - Search Blocks: allow the Post Type Scope block to be inserted inside the Filters container.
 - Search blocks: convert createElement/h calls to JSX in editor preview components for readability.
 - Search Blocks: differentiate result path and content text styles in the expanded layout so the breadcrumb and snippet are visually distinct.
