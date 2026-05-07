@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Components: Use Link from `@wordpress/ui` instead of ExternalLink.
 - Internal: extract PlaceholdersHelp to a shared location and add a MessageTemplateEditor scaffold consumed by the upcoming template editor surfaces.
+- Social: Show a preview skeleton while message templates render.
 - Social: Show per-connection template fallback help and prefill per-network editor messages from connection templates.
 
 ### Fixed
