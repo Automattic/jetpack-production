@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - Internal: extract PlaceholdersHelp to a shared location and add a MessageTemplateEditor scaffold consumed by the upcoming template editor surfaces.
 - Social: Show per-connection template fallback help and prefill per-network editor messages from connection templates.
 
+### Fixed
+- Social: honor per-connection message templates in the per-network preview pipeline and stop overwriting them when toggling per-network mode.
+
 ## [0.79.0] - 2026-05-04
 ### Added
 - Custom message field: Surface available placeholders for Message Templates feature. [#48480]
