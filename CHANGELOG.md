@@ -11,6 +11,9 @@ This is an alpha version! The changes listed here are not final.
 - Image Studio: expose a video clip generation capability flag (`canGenerateVideoClips`) on the localized data so the client can hide the entry point on WordPress.com sites that cannot upload videos. On WordPress.com the value mirrors `wpcom_site_can_upload_videos()`; on other environments the flag is `true` and the server is the source of truth.
 - Scan: register the new Scan wp-admin page package. Phase 0 of the Calypso Dashboard → wp-admin port; surfaces an empty "Scan" submenu and a "Hello Scan" placeholder. No user-visible behaviour change yet.
 
+### Improved compatibility
+- Settings and AI pages: replace the `.admin-ui-page` selector hook (gone in admin-ui 2.0.0) with the stable `.jp-admin-page__page` className passed through by AdminPage, restoring page-specific layout overrides.
+
 ### Bug fixes
 - Shortcodes: Google Maps shortcode now preserves URL-encoded ampersands (%26) in place names.
 - Shortcodes: Google Maps shortcode now preserves URL-encoded reserved characters (`#`, `%`, `+`) and HTML-entity-encoded ampersands inside place names.

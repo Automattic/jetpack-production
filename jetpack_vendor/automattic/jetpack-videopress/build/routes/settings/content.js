@@ -202,7 +202,7 @@ var require_url = __commonJS({
 });
 
 // routes/settings/stage.tsx
-var import_components3 = __toESM(require_components());
+var import_components2 = __toESM(require_components());
 var import_i18n9 = __toESM(require_i18n());
 
 // ../../../node_modules/.pnpm/clsx@2.1.1/node_modules/clsx/dist/clsx.mjs
@@ -4107,7 +4107,7 @@ var Tab = (0, import_element16.forwardRef)(function Tab2({ className, children, 
 });
 
 // routes/settings/stage.tsx
-var import_react12 = __toESM(require_react());
+var import_react14 = __toESM(require_react());
 
 // ../../js-packages/components/build/components/admin-page/index.js
 var import_jsx_runtime23 = __toESM(require_jsx_runtime(), 1);
@@ -4408,10 +4408,78 @@ function catchNetworkErrors() {
   throw new FetchNetworkError();
 }
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.12.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/navigable-region/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+ui@0.12.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/text/text.mjs
 var import_element17 = __toESM(require_element(), 1);
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='4130d64bea']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "4130d64bea");
+  style.appendChild(document.createTextNode('@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._83ed8a8da5dd50ea__text{margin:0}._14437cfb77831647__heading-2xl{--_gcd-heading-font-size:var(--wpds-typography-font-size-2xl,32px);font-size:var(--wpds-typography-font-size-2xl,32px);line-height:var(--wpds-typography-line-height-2xl,40px)}._14437cfb77831647__heading-2xl,._3c78b7fa9b4072dd__heading-xl{font-family:var(--wpds-typography-font-family-heading,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-weight:var(--wpds-typography-font-weight-medium,499)}._3c78b7fa9b4072dd__heading-xl{--_gcd-heading-font-size:var(--wpds-typography-font-size-xl,20px);font-size:var(--wpds-typography-font-size-xl,20px);line-height:var(--wpds-typography-line-height-md,24px)}.aa58f227716bcde2__heading-lg{--_gcd-heading-font-size:var(--wpds-typography-font-size-lg,15px);font-size:var(--wpds-typography-font-size-lg,15px)}.aa58f227716bcde2__heading-lg,.fc4da56d8dfe52c4__heading-md{font-family:var(--wpds-typography-font-family-heading,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-weight:var(--wpds-typography-font-weight-medium,499);line-height:var(--wpds-typography-line-height-sm,20px)}.fc4da56d8dfe52c4__heading-md{--_gcd-heading-font-size:var(--wpds-typography-font-size-md,13px);font-size:var(--wpds-typography-font-size-md,13px)}.a9b78c7c82e8dff7__heading-sm{--_gcd-heading-font-size:var(--wpds-typography-font-size-xs,11px);font-family:var(--wpds-typography-font-family-heading,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-typography-font-size-xs,11px);font-weight:var(--wpds-typography-font-weight-medium,499);line-height:var(--wpds-typography-line-height-xs,16px);text-transform:uppercase}._305ff559e52180d5__body-xl{--_gcd-p-font-size:var(--wpds-typography-font-size-xl,20px);--_gcd-p-line-height:var(--wpds-typography-line-height-xl,32px);font-size:var(--wpds-typography-font-size-xl,20px);line-height:var(--wpds-typography-line-height-xl,32px)}._305ff559e52180d5__body-xl,.ca1aa3fc2029e958__body-lg{font-family:var(--wpds-typography-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-weight:var(--wpds-typography-font-weight-regular,400)}.ca1aa3fc2029e958__body-lg{--_gcd-p-font-size:var(--wpds-typography-font-size-lg,15px);--_gcd-p-line-height:var(--wpds-typography-line-height-md,24px);font-size:var(--wpds-typography-font-size-lg,15px);line-height:var(--wpds-typography-line-height-md,24px)}._131101940be12424__body-md{--_gcd-p-font-size:var(--wpds-typography-font-size-md,13px);--_gcd-p-line-height:var(--wpds-typography-line-height-sm,20px);font-size:var(--wpds-typography-font-size-md,13px);line-height:var(--wpds-typography-line-height-sm,20px)}._0e8d87a42c1f75fa__body-sm,._131101940be12424__body-md{font-family:var(--wpds-typography-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-weight:var(--wpds-typography-font-weight-regular,400)}._0e8d87a42c1f75fa__body-sm{--_gcd-p-font-size:var(--wpds-typography-font-size-sm,12px);--_gcd-p-line-height:var(--wpds-typography-line-height-xs,16px);font-size:var(--wpds-typography-font-size-sm,12px);line-height:var(--wpds-typography-line-height-xs,16px)}}'));
+  document.head.appendChild(style);
+}
+var style_default12 = { "text": "_83ed8a8da5dd50ea__text", "heading-2xl": "_14437cfb77831647__heading-2xl", "heading-xl": "_3c78b7fa9b4072dd__heading-xl", "heading-lg": "aa58f227716bcde2__heading-lg", "heading-md": "fc4da56d8dfe52c4__heading-md", "heading-sm": "a9b78c7c82e8dff7__heading-sm", "body-xl": "_305ff559e52180d5__body-xl", "body-lg": "ca1aa3fc2029e958__body-lg", "body-md": "_131101940be12424__body-md", "body-sm": "_0e8d87a42c1f75fa__body-sm" };
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='1fb29d3a3c']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "1fb29d3a3c");
+  style.appendChild(document.createTextNode("._6defc79820e382c6__button{box-sizing:var(--_gcd-button-box-sizing,border-box);font-family:var(--_gcd-button-font-family,inherit);font-size:var(--_gcd-button-font-size,inherit);font-weight:var(--_gcd-button-font-weight,inherit)}.d2cff2e5dea83bd1__input{box-sizing:var(--_gcd-input-box-sizing,border-box);font-family:var(--_gcd-input-font-family,inherit);font-size:var(--_gcd-input-font-size,inherit);font-weight:var(--_gcd-input-font-weight,inherit);margin:var(--_gcd-input-margin,0);&:is(textarea,[type=text],[type=password],[type=color],[type=date],[type=datetime],[type=datetime-local],[type=email],[type=month],[type=number],[type=search],[type=tel],[type=time],[type=url],[type=week]){background-color:var(--_gcd-input-background-color,#0000);border:var(--_gcd-input-border,none);border-radius:var(--_gcd-input-border-radius,0);box-shadow:var(--_gcd-input-box-shadow,0 0 0 #0000);color:var(--_gcd-input-color,var(--wpds-color-fg-interactive-neutral,#1e1e1e));&:focus{border-color:var(--_gcd-input-border-color-focus,var(--wp-admin-theme-color));box-shadow:var(--_gcd-input-box-shadow-focus,none);outline:var(--_gcd-input-outline-focus,none)}&:disabled{background:var(--_gcd-input-background-disabled,#0000);border-color:var(--_gcd-input-border-color-disabled,#0000);box-shadow:var(--_gcd-input-box-shadow-disabled,none);color:var(--_gcd-input-color-disabled,var(--wpds-color-fg-interactive-neutral-disabled,#8d8d8d))}&::placeholder{color:var(--_gcd-input-placeholder-color,var(--wpds-color-fg-interactive-neutral-disabled,#8d8d8d))}}&:is(textarea,[type=text],[type=password],[type=date],[type=datetime],[type=datetime-local],[type=email],[type=month],[type=number],[type=search],[type=tel],[type=time],[type=url],[type=week]){line-height:var(--_gcd-input-line-height,inherit);min-height:var(--_gcd-input-min-height,auto);padding:var(--_gcd-input-padding,0)}}._547d86373d02e108__textarea{box-sizing:var(--_gcd-textarea-box-sizing,border-box);overflow:var(--_gcd-textarea-overflow,auto);resize:var(--_gcd-textarea-resize,block)}._8c15fd0ed9f28ba4__div{outline:var(--_gcd-div-outline,0 solid #0000)}p._43cec3e1eec1066d__p{font-size:var(--_gcd-p-font-size,13px);line-height:var(--_gcd-p-line-height,1.5);margin:var(--_gcd-p-margin,0)}:is(h1,h2,h3,h4,h5,h6).e97669c6d9a38497__heading{color:var(--_gcd-heading-color,var(--wpds-color-fg-content-neutral,#1e1e1e));font-size:var(--_gcd-heading-font-size,inherit);font-weight:var(--_gcd-heading-font-weight,var(--wpds-typography-font-weight-medium,499));margin:var(--_gcd-heading-margin,0)}._2c0831b0499dbd6e__a,._2c0831b0499dbd6e__a:is(:hover,:focus,:active){border-radius:var(--_gcd-a-border-radius,0);box-shadow:var(--_gcd-a-box-shadow,none);color:var(--_gcd-a-color,inherit);outline:var(--_gcd-a-outline,0 solid #0000);transition:var(--_gcd-a-transition,none)}"));
+  document.head.appendChild(style);
+}
+var global_css_defense_default4 = { "button": "_6defc79820e382c6__button", "input": "d2cff2e5dea83bd1__input", "textarea": "_547d86373d02e108__textarea", "div": "_8c15fd0ed9f28ba4__div", "p": "_43cec3e1eec1066d__p", "heading": "e97669c6d9a38497__heading", "a": "_2c0831b0499dbd6e__a" };
+var Text3 = (0, import_element17.forwardRef)(function Text22({ variant = "body-md", render, className, ...props }, ref) {
+  const element = useRender({
+    render,
+    defaultTagName: "span",
+    ref,
+    props: mergeProps(props, {
+      className: clsx_default(
+        style_default12.text,
+        global_css_defense_default4.heading,
+        global_css_defense_default4.p,
+        style_default12[variant],
+        className
+      )
+    })
+  });
+  return element;
+});
+
+// ../../../node_modules/.pnpm/@wordpress+ui@0.12.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/stack/stack.mjs
+var import_element18 = __toESM(require_element(), 1);
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='b51ff41489']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "b51ff41489");
+  style.appendChild(document.createTextNode("@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._19ce0419607e1896__stack{display:flex}}"));
+  document.head.appendChild(style);
+}
+var style_default13 = { "stack": "_19ce0419607e1896__stack" };
+var gapTokens2 = {
+  xs: "var(--wpds-dimension-gap-xs, 4px)",
+  sm: "var(--wpds-dimension-gap-sm, 8px)",
+  md: "var(--wpds-dimension-gap-md, 12px)",
+  lg: "var(--wpds-dimension-gap-lg, 16px)",
+  xl: "var(--wpds-dimension-gap-xl, 24px)",
+  "2xl": "var(--wpds-dimension-gap-2xl, 32px)",
+  "3xl": "var(--wpds-dimension-gap-3xl, 40px)"
+};
+var Stack3 = (0, import_element18.forwardRef)(function Stack22({ direction, gap, align, justify, wrap, render, ...props }, ref) {
+  const style = {
+    gap: gap && gapTokens2[gap],
+    alignItems: align,
+    justifyContent: justify,
+    flexDirection: direction,
+    flexWrap: wrap
+  };
+  const element = useRender({
+    render,
+    ref,
+    props: mergeProps(props, { style, className: style_default13.stack })
+  });
+  return element;
+});
+
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@2.0.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/navigable-region/index.mjs
+var import_element19 = __toESM(require_element(), 1);
 var import_jsx_runtime17 = __toESM(require_jsx_runtime(), 1);
-var NavigableRegion = (0, import_element17.forwardRef)(
+var NavigableRegion = (0, import_element19.forwardRef)(
   ({ children, className, ariaLabel, as: Tag = "div", ...props }, ref) => {
     return /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
       Tag,
@@ -4430,16 +4498,24 @@ var NavigableRegion = (0, import_element17.forwardRef)(
 NavigableRegion.displayName = "NavigableRegion";
 var navigable_region_default = NavigableRegion;
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.12.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/sidebar-toggle-slot.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@2.0.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/sidebar-toggle-slot.mjs
 var import_components = __toESM(require_components(), 1);
 var { Fill: SidebarToggleFill, Slot: SidebarToggleSlot } = (0, import_components.createSlotFill)("SidebarToggle");
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.12.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@2.0.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
 var import_jsx_runtime18 = __toESM(require_jsx_runtime(), 1);
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='aa9c241ccc']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "aa9c241ccc");
+  style.appendChild(document.createTextNode("._956b6df0898efed0__page{text-wrap:pretty;background-color:var(--wpds-color-bg-surface-neutral,#fcfcfc);color:var(--wpds-color-fg-content-neutral,#1e1e1e);display:flex;flex-flow:column;height:100%;position:relative;z-index:1}._0625b55e82a0d93d__header{background:var(--wpds-color-bg-surface-neutral-strong,#fff);border-block-end:var(--wpds-border-width-xs,1px) solid var(--wpds-color-stroke-surface-neutral-weak,#e4e4e4);inset-block-start:0;padding:var(--wpds-dimension-padding-lg,16px) var(--wpds-dimension-padding-2xl,24px);position:sticky;z-index:1}.a43c44d5ae28b2e8__header-content{min-height:calc(var(--wpds-dimension-base, 4px)*8)}.b7cb5b9daf3a3b25__header-actions{flex-shrink:0}._8113be94e7caf73c__header-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}._9a776c7f70996f61__header-visual{display:grid;flex-shrink:0;grid-template-columns:1fr;grid-template-rows:1fr;height:calc(var(--wpds-dimension-base, 4px)*6);width:calc(var(--wpds-dimension-base, 4px)*6);>*{grid-column:1/-1;grid-row:1/-1;max-height:100%;max-width:100%}}.d5e0920cd15d35bc__sidebar-toggle-slot:empty{display:none}._60fea2f6bf5319cd__header-subtitle{color:var(--wpds-color-fg-content-neutral-weak,#707070);padding-block-end:var(--wpds-dimension-padding-xs,4px)}.be5e57d029ec4036__content{display:flex;flex-direction:column;flex-grow:1;overflow:auto;&._128806d0b26e3a50__has-padding{padding:var(--wpds-dimension-padding-lg,16px) var(--wpds-dimension-padding-2xl,24px)}}"));
+  document.head.appendChild(style);
+}
+var style_default14 = { "page": "_956b6df0898efed0__page", "header": "_0625b55e82a0d93d__header", "header-content": "a43c44d5ae28b2e8__header-content", "header-actions": "b7cb5b9daf3a3b25__header-actions", "header-title": "_8113be94e7caf73c__header-title", "header-visual": "_9a776c7f70996f61__header-visual", "sidebar-toggle-slot": "d5e0920cd15d35bc__sidebar-toggle-slot", "header-subtitle": "_60fea2f6bf5319cd__header-subtitle", "content": "be5e57d029ec4036__content", "has-padding": "_128806d0b26e3a50__has-padding" };
 function Header2({
-  headingLevel = 2,
+  headingLevel = 1,
   breadcrumbs,
   badges,
+  visual,
   title,
   subTitle,
   actions,
@@ -4447,49 +4523,89 @@ function Header2({
 }) {
   const HeadingTag = `h${headingLevel}`;
   return /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(
-    Stack,
+    Stack3,
     {
       direction: "column",
-      className: "admin-ui-page__header",
+      className: style_default14.header,
       render: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("header", {}),
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(Stack, { direction: "row", justify: "space-between", gap: "sm", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(Stack, { direction: "row", gap: "sm", align: "center", justify: "start", children: [
-            showSidebarToggle && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
-              SidebarToggleSlot,
-              {
-                bubblesVirtually: true,
-                className: "admin-ui-page__sidebar-toggle-slot"
-              }
-            ),
-            title && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(HeadingTag, { className: "admin-ui-page__header-title", children: title }),
-            breadcrumbs,
-            badges
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
-            Stack,
-            {
-              direction: "row",
-              gap: "sm",
-              style: { width: "auto", flexShrink: 0 },
-              className: "admin-ui-page__header-actions",
-              align: "center",
-              children: actions
-            }
-          )
-        ] }),
-        subTitle && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("p", { className: "admin-ui-page__header-subtitle", children: subTitle })
+        /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(
+          Stack3,
+          {
+            className: style_default14["header-content"],
+            direction: "row",
+            gap: "sm",
+            justify: "space-between",
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(Stack3, { direction: "row", gap: "sm", align: "center", justify: "start", children: [
+                showSidebarToggle && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+                  SidebarToggleSlot,
+                  {
+                    bubblesVirtually: true,
+                    className: style_default14["sidebar-toggle-slot"]
+                  }
+                ),
+                visual && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+                  "div",
+                  {
+                    className: style_default14["header-visual"],
+                    "aria-hidden": "true",
+                    children: visual
+                  }
+                ),
+                title && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+                  Text3,
+                  {
+                    className: style_default14["header-title"],
+                    render: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(HeadingTag, {}),
+                    variant: "heading-lg",
+                    children: title
+                  }
+                ),
+                breadcrumbs,
+                badges
+              ] }),
+              actions && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+                Stack3,
+                {
+                  align: "center",
+                  className: style_default14["header-actions"],
+                  direction: "row",
+                  gap: "sm",
+                  children: actions
+                }
+              )
+            ]
+          }
+        ),
+        subTitle && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+          Text3,
+          {
+            render: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("p", {}),
+            variant: "body-md",
+            className: style_default14["header-subtitle"],
+            children: subTitle
+          }
+        )
       ]
     }
   );
 }
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.12.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/index.mjs
+// ../../../node_modules/.pnpm/@wordpress+admin-ui@2.0.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/index.mjs
 var import_jsx_runtime19 = __toESM(require_jsx_runtime(), 1);
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='aa9c241ccc']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "aa9c241ccc");
+  style.appendChild(document.createTextNode("._956b6df0898efed0__page{text-wrap:pretty;background-color:var(--wpds-color-bg-surface-neutral,#fcfcfc);color:var(--wpds-color-fg-content-neutral,#1e1e1e);display:flex;flex-flow:column;height:100%;position:relative;z-index:1}._0625b55e82a0d93d__header{background:var(--wpds-color-bg-surface-neutral-strong,#fff);border-block-end:var(--wpds-border-width-xs,1px) solid var(--wpds-color-stroke-surface-neutral-weak,#e4e4e4);inset-block-start:0;padding:var(--wpds-dimension-padding-lg,16px) var(--wpds-dimension-padding-2xl,24px);position:sticky;z-index:1}.a43c44d5ae28b2e8__header-content{min-height:calc(var(--wpds-dimension-base, 4px)*8)}.b7cb5b9daf3a3b25__header-actions{flex-shrink:0}._8113be94e7caf73c__header-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}._9a776c7f70996f61__header-visual{display:grid;flex-shrink:0;grid-template-columns:1fr;grid-template-rows:1fr;height:calc(var(--wpds-dimension-base, 4px)*6);width:calc(var(--wpds-dimension-base, 4px)*6);>*{grid-column:1/-1;grid-row:1/-1;max-height:100%;max-width:100%}}.d5e0920cd15d35bc__sidebar-toggle-slot:empty{display:none}._60fea2f6bf5319cd__header-subtitle{color:var(--wpds-color-fg-content-neutral-weak,#707070);padding-block-end:var(--wpds-dimension-padding-xs,4px)}.be5e57d029ec4036__content{display:flex;flex-direction:column;flex-grow:1;overflow:auto;&._128806d0b26e3a50__has-padding{padding:var(--wpds-dimension-padding-lg,16px) var(--wpds-dimension-padding-2xl,24px)}}"));
+  document.head.appendChild(style);
+}
+var style_default15 = { "page": "_956b6df0898efed0__page", "header": "_0625b55e82a0d93d__header", "header-content": "a43c44d5ae28b2e8__header-content", "header-actions": "b7cb5b9daf3a3b25__header-actions", "header-title": "_8113be94e7caf73c__header-title", "header-visual": "_9a776c7f70996f61__header-visual", "sidebar-toggle-slot": "d5e0920cd15d35bc__sidebar-toggle-slot", "header-subtitle": "_60fea2f6bf5319cd__header-subtitle", "content": "be5e57d029ec4036__content", "has-padding": "_128806d0b26e3a50__has-padding" };
 function Page({
   headingLevel,
   breadcrumbs,
   badges,
+  visual,
   title,
   subTitle,
   children,
@@ -4499,39 +4615,40 @@ function Page({
   hasPadding = false,
   showSidebarToggle = true
 }) {
-  const classes = clsx_default("admin-ui-page", className);
+  const classes = clsx_default(style_default15.page, className);
   const effectiveAriaLabel = ariaLabel ?? (typeof title === "string" ? title : "");
   return /* @__PURE__ */ (0, import_jsx_runtime19.jsxs)(navigable_region_default, { className: classes, ariaLabel: effectiveAriaLabel, children: [
-    (title || breadcrumbs || badges || actions) && /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+    (title || breadcrumbs || badges || actions || visual) && /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
       Header2,
       {
         headingLevel,
         breadcrumbs,
         badges,
+        visual,
         title,
         subTitle,
         actions,
         showSidebarToggle
       }
     ),
-    hasPadding ? /* @__PURE__ */ (0, import_jsx_runtime19.jsx)("div", { className: "admin-ui-page__content has-padding", children }) : children
+    hasPadding ? /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+      "div",
+      {
+        className: clsx_default(
+          style_default15.content,
+          style_default15["has-padding"]
+        ),
+        children
+      }
+    ) : children
   ] });
 }
 Page.SidebarToggleFill = SidebarToggleFill;
 var page_default = Page;
 
-// ../../../node_modules/.pnpm/@wordpress+admin-ui@1.12.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-style/style.css
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='2558b2f5d4']")) {
-  const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "2558b2f5d4");
-  style.appendChild(document.createTextNode('.admin-ui-page{background-color:var(--wpds-color-bg-surface-neutral,#fcfcfc);color:var(--wpds-color-fg-content-neutral,#1e1e1e);display:flex;flex-flow:column;height:100%;position:relative;text-wrap:pretty;z-index:1}.admin-ui-page__header{background:var(--wpds-color-bg-surface-neutral-strong,#fff);border-bottom:var(--wpds-border-width-xs,1px) solid var(--wpds-color-stroke-surface-neutral-weak,#e4e4e4);padding:var(--wpds-dimension-padding-lg,16px) var(--wpds-dimension-padding-2xl,24px);position:sticky;top:0;z-index:1}.admin-ui-page__header-title{font-family:var(--wpds-typography-font-family-heading,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-typography-font-size-lg,15px);font-weight:var(--wpds-typography-font-weight-medium,499);line-height:var(--wpds-typography-line-height-lg,28px);margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.admin-ui-page__sidebar-toggle-slot:empty{display:none}.admin-ui-page__header-subtitle{color:var(--wpds-color-fg-content-neutral-weak,#707070);font-size:var(--wpds-typography-font-size-md,13px);line-height:var(--wpds-typography-line-height-md,24px);margin:0;padding-block-end:var(--wpds-dimension-padding-xs,4px)}.admin-ui-page__content{display:flex;flex-direction:column;flex-grow:1;overflow:auto}.admin-ui-page__content.has-padding{padding:var(--wpds-dimension-padding-lg,16px) var(--wpds-dimension-padding-2xl,24px)}.show-icon-labels .admin-ui-page__header-actions .components-button.has-icon{padding:0 var(--wpds-dimension-padding-xs,4px);width:auto}.show-icon-labels .admin-ui-page__header-actions .components-button.has-icon svg{display:none}.show-icon-labels .admin-ui-page__header-actions .components-button.has-icon:after{content:attr(aria-label);font-size:var(--wpds-typography-font-size-sm,12px)}.admin-ui-breadcrumbs__list{font-family:var(--wpds-typography-font-family-heading,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-typography-font-size-lg,15px);font-weight:var(--wpds-typography-font-weight-medium,499);gap:0;line-height:var(--wpds-typography-line-height-lg,28px);list-style:none;margin:0;min-height:32px;padding:0}.admin-ui-breadcrumbs__list li:not(:last-child):after{content:"/";margin:0 8px}.admin-ui-breadcrumbs__list h1{font-size:inherit;line-height:inherit}'));
-  document.head.appendChild(style);
-}
-
 // ../../js-packages/components/build/components/admin-page/index.js
-var import_components2 = __toESM(require_components(), 1);
 var import_i18n6 = __toESM(require_i18n(), 1);
-var import_react11 = __toESM(require_react(), 1);
+var import_react13 = __toESM(require_react(), 1);
 
 // ../../js-packages/components/build/components/jetpack-footer/index.js
 var import_jsx_runtime22 = __toESM(require_jsx_runtime(), 1);
@@ -4625,7 +4742,7 @@ var AutomatticBylineLogo = ({ title = (0, import_i18n4.__)("An Automattic Airlin
 var automattic_byline_logo_default = AutomatticBylineLogo;
 
 // ../../js-packages/components/build/components/layout/col/index.js
-var import_react9 = __toESM(require_react(), 1);
+var import_react11 = __toESM(require_react(), 1);
 
 // ../../js-packages/components/build/components/layout/col/style.module.scss
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='ca8d4354b2']")) {
@@ -4665,14 +4782,14 @@ var Col = (props) => {
     [style_module_default[`col-lg-${lgStart}-start`]]: lgStart > 0,
     [style_module_default[`col-lg-${lgEnd}-end`]]: lgEnd > 0
   });
-  return (0, import_react9.createElement)(tagName, {
+  return (0, import_react11.createElement)(tagName, {
     className: colClassName
   }, children);
 };
 var col_default = Col;
 
 // ../../js-packages/components/build/components/layout/container/index.js
-var import_react10 = __toESM(require_react(), 1);
+var import_react12 = __toESM(require_react(), 1);
 
 // ../../js-packages/components/build/components/layout/container/style.module.scss
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='58647a5875']")) {
@@ -4685,7 +4802,7 @@ var style_module_default2 = { "sm": "(max-width: 599px)", "md": "(min-width: 600
 
 // ../../js-packages/components/build/components/layout/container/index.js
 var Container = ({ children, fluid = false, tagName = "div", className, horizontalGap = 1, horizontalSpacing = 1 }, ref) => {
-  const containerStyle = (0, import_react10.useMemo)(() => {
+  const containerStyle = (0, import_react12.useMemo)(() => {
     const padding = `calc( var(--horizontal-spacing) * ${horizontalSpacing} )`;
     const rowGap = `calc( var(--horizontal-spacing) * ${horizontalGap} )`;
     return {
@@ -4697,13 +4814,13 @@ var Container = ({ children, fluid = false, tagName = "div", className, horizont
   const containerClassName = clsx_default(className, style_module_default2.container, {
     [style_module_default2.fluid]: fluid
   });
-  return (0, import_react10.createElement)(tagName, {
+  return (0, import_react12.createElement)(tagName, {
     className: containerClassName,
     style: containerStyle,
     ref
   }, children);
 };
-var container_default = (0, import_react10.forwardRef)(Container);
+var container_default = (0, import_react12.forwardRef)(Container);
 
 // ../../js-packages/components/build/components/jetpack-footer/style.scss
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='4f2b158f89']")) {
@@ -4747,17 +4864,17 @@ var JetpackFooter = ({ className, menu, ...otherProps }) => {
 var jetpack_footer_default = JetpackFooter;
 
 // ../../js-packages/components/build/components/admin-page/style.module.scss
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='0a8eb6c129']")) {
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='af1a0361f9']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "0a8eb6c129");
-  style.appendChild(document.createTextNode("._3576fd25ffa54499__admin-page{margin-left:-20px}@media (max-width:782px){._3576fd25ffa54499__admin-page{margin-left:-10px}}._3576fd25ffa54499__admin-page.cdf2fab8060d83ed__background{background-color:var(--jp-white)}._3576fd25ffa54499__admin-page.eb848a1bf79d4668__without-bottom-border .admin-ui-page__header{border-bottom:none}._3576fd25ffa54499__admin-page .admin-ui-page__header{position:relative;z-index:1}._3576fd25ffa54499__admin-page .admin-ui-page{clear:both}._3576fd25ffa54499__admin-page ._075579478b1a25d8__admin-page-header{align-items:center;display:flex;gap:8px}._3576fd25ffa54499__admin-page ._4d34c6d280829167__admin-page-footer{box-sizing:border-box}._3576fd25ffa54499__admin-page ._83a64a19225dc9f1__sandbox-domain-badge{background:#d63638;color:#fff;cursor:pointer;font-size:9px;font-weight:700;letter-spacing:.2em;text-shadow:none;text-transform:uppercase}.jetpack-admin-page #dolly{background-color:#fff}"));
+  style.setAttribute("data-wp-hash", "af1a0361f9");
+  style.appendChild(document.createTextNode("._3576fd25ffa54499__admin-page{margin-left:-20px}@media (max-width:782px){._3576fd25ffa54499__admin-page{margin-left:-10px}}._3576fd25ffa54499__admin-page.cdf2fab8060d83ed__background{background-color:var(--jp-white)}._3576fd25ffa54499__admin-page.eb848a1bf79d4668__without-bottom-border .jp-admin-page__page>header{border-bottom:none}._3576fd25ffa54499__admin-page .jp-admin-page__page>header{position:relative;z-index:1}._3576fd25ffa54499__admin-page .jp-admin-page__page{clear:both}._3576fd25ffa54499__admin-page .jp-admin-page__page>header [aria-hidden=true]{place-items:center}._3576fd25ffa54499__admin-page ._075579478b1a25d8__admin-page-header{align-items:center;display:flex;gap:8px}._3576fd25ffa54499__admin-page ._4d34c6d280829167__admin-page-footer{box-sizing:border-box}._3576fd25ffa54499__admin-page ._83a64a19225dc9f1__sandbox-domain-badge{background:#d63638;color:#fff;cursor:pointer;font-size:9px;font-weight:700;letter-spacing:.2em;text-shadow:none;text-transform:uppercase}.jetpack-admin-page #dolly{background-color:#fff}"));
   document.head.appendChild(style);
 }
 var style_module_default3 = { "admin-page": "_3576fd25ffa54499__admin-page", "background": "cdf2fab8060d83ed__background", "without-bottom-border": "eb848a1bf79d4668__without-bottom-border", "admin-page-header": "_075579478b1a25d8__admin-page-header", "admin-page-footer": "_4d34c6d280829167__admin-page-footer", "sandbox-domain-badge": "_83a64a19225dc9f1__sandbox-domain-badge" };
 
 // ../../js-packages/components/build/components/admin-page/index.js
 var AdminPage = ({ children, className, showHeader = true, showFooter = true, showBackground = true, sandboxedDomain = "", apiRoot = "", apiNonce = "", optionalMenuItems, header, title, subTitle, logo, actions, breadcrumbs, tabs, showBottomBorder = true, unwrapped = false }) => {
-  (0, import_react11.useEffect)(() => {
+  (0, import_react13.useEffect)(() => {
     api_default.setApiRoot(apiRoot);
     api_default.setApiNonce(apiNonce);
   }, [apiRoot, apiNonce]);
@@ -4765,7 +4882,7 @@ var AdminPage = ({ children, className, showHeader = true, showFooter = true, sh
     [style_module_default3.background]: showBackground,
     [style_module_default3["without-bottom-border"]]: tabs || !showBottomBorder
   });
-  const testConnection = (0, import_react11.useCallback)(async () => {
+  const testConnection = (0, import_react13.useCallback)(async () => {
     try {
       const connectionTest = await api_default.fetchSiteConnectionTest();
       window.alert(connectionTest.message);
@@ -4777,12 +4894,8 @@ var AdminPage = ({ children, className, showHeader = true, showFooter = true, sh
       ));
     }
   }, []);
-  const composedTitle = title ? (0, import_jsx_runtime23.jsxs)(import_components2.__experimentalHStack, { spacing: 2, justify: "left", children: [
-    logo || (0, import_jsx_runtime23.jsx)(jetpack_logo_default, { showText: false, height: 20 }),
-    (0, import_jsx_runtime23.jsx)("span", { children: title })
-  ] }) : void 0;
-  if (showHeader && (composedTitle || breadcrumbs)) {
-    return (0, import_jsx_runtime23.jsx)("div", { className: rootClassName, children: (0, import_jsx_runtime23.jsxs)(page_default, { ariaLabel: title, breadcrumbs, title: composedTitle, subTitle, actions, showSidebarToggle: false, children: [tabs, unwrapped ? children : (0, import_jsx_runtime23.jsx)(container_default, { fluid: true, horizontalSpacing: 0, children: (0, import_jsx_runtime23.jsx)(col_default, { children }) }), showFooter && (0, import_jsx_runtime23.jsx)(jetpack_footer_default, { menu: optionalMenuItems })] }) });
+  if (showHeader && (title || breadcrumbs)) {
+    return (0, import_jsx_runtime23.jsx)("div", { className: rootClassName, children: (0, import_jsx_runtime23.jsxs)(page_default, { className: "jp-admin-page__page", visual: logo || (0, import_jsx_runtime23.jsx)(jetpack_logo_default, { showText: false, height: 20 }), breadcrumbs, title, subTitle, actions, showSidebarToggle: false, children: [tabs, unwrapped ? children : (0, import_jsx_runtime23.jsx)(container_default, { fluid: true, horizontalSpacing: 0, children: (0, import_jsx_runtime23.jsx)(col_default, { children }) }), showFooter && (0, import_jsx_runtime23.jsx)(jetpack_footer_default, { menu: optionalMenuItems })] }) });
   }
   return (0, import_jsx_runtime23.jsxs)("div", { className: rootClassName, children: [showHeader && (0, import_jsx_runtime23.jsx)(container_default, { horizontalSpacing: 5, children: (0, import_jsx_runtime23.jsxs)(col_default, { className: clsx_default(style_module_default3["admin-page-header"], "jp-admin-page-header"), children: [header ? header : (0, import_jsx_runtime23.jsx)(jetpack_logo_default, {}), sandboxedDomain && (0, import_jsx_runtime23.jsx)("code", {
     className: style_module_default3["sandbox-domain-badge"],
@@ -4798,7 +4911,7 @@ var AdminPage = ({ children, className, showHeader = true, showFooter = true, sh
 var admin_page_default = AdminPage;
 
 // src/dashboard/components/DashboardLayout/index.tsx
-var import_element18 = __toESM(require_element());
+var import_element20 = __toESM(require_element());
 var import_i18n8 = __toESM(require_i18n());
 import { useNavigate } from "@wordpress/route";
 
@@ -4819,10 +4932,10 @@ function DashboardTabs() {
 }
 
 // src/dashboard/components/DashboardLayout/style.scss
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='f235a5674c']")) {
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='ec0153e7c2']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "f235a5674c");
-  style.appendChild(document.createTextNode("body.jetpack_page_jetpack-videopress #wpcontent{padding-left:0}body.jetpack_page_jetpack-videopress #screen-meta-links,body.jetpack_page_jetpack-videopress #wpfooter{display:none}body.jetpack_page_jetpack-videopress #wpbody-content{bottom:0;box-sizing:border-box;display:flex;flex-direction:column;left:160px;overflow:hidden;padding-bottom:0;position:fixed;right:0;top:var(--wp-admin-bar-height,32px);width:auto}body.jetpack_page_jetpack-videopress.folded #wpbody-content{left:36px}@media (max-width:960px){body.jetpack_page_jetpack-videopress.auto-fold #wpbody-content{left:36px}}@media (min-width:961px){body.jetpack_page_jetpack-videopress.is-nav-unification:not(.folded) #wpbody-content{left:272px}}body.jetpack_page_jetpack-videopress #wpbody-content :has(.jp-admin-page){display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0}body.jetpack_page_jetpack-videopress .jp-admin-page{display:flex;flex:1 1 auto;flex-direction:column;margin-left:0;min-height:0;min-width:0;overflow:visible}body.jetpack_page_jetpack-videopress .admin-ui-page{display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0}body.jetpack_page_jetpack-videopress .admin-ui-page__header{flex-shrink:0}body.jetpack_page_jetpack-videopress .admin-ui-page:has(.jp-admin-page-tabs) .admin-ui-page__header{border-bottom:none;padding-bottom:0}body.jetpack_page_jetpack-videopress .admin-ui-page>:not(.admin-ui-page__header):not(.jetpack-footer){display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0;overflow:auto}body.jetpack_page_jetpack-videopress .admin-ui-page>:not(.admin-ui-page__header):not(.jetpack-footer)>*{display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0}body.jetpack_page_jetpack-videopress .jetpack-footer{flex-shrink:0}body.jetpack_page_jetpack-videopress .jp-admin-page-tabs{background:var(--wpds-color-bg-surface-neutral-strong,#fff);border-bottom:var(--wpds-border-width-xs,1px) solid var(--wpds-color-stroke-surface-neutral-weak,#e4e4e4);position:sticky;top:0;z-index:10}body.jetpack_page_jetpack-videopress .jp-admin-page-tabs [role=tab]{padding-inline:var(--wpds-dimension-padding-2xl,24px)}@media (max-width:782px){body.jetpack_page_jetpack-videopress #wpbody-content,body.jetpack_page_jetpack-videopress.auto-fold #wpbody-content,body.jetpack_page_jetpack-videopress.folded #wpbody-content{left:0;top:var(--wp-admin-bar-height,46px)}body.jetpack_page_jetpack-videopress .jp-admin-page{margin-left:0}}"));
+  style.setAttribute("data-wp-hash", "ec0153e7c2");
+  style.appendChild(document.createTextNode("body.jetpack_page_jetpack-videopress #wpcontent{padding-left:0}body.jetpack_page_jetpack-videopress #screen-meta-links,body.jetpack_page_jetpack-videopress #wpfooter{display:none}body.jetpack_page_jetpack-videopress #wpbody-content{bottom:0;box-sizing:border-box;display:flex;flex-direction:column;left:160px;overflow:hidden;padding-bottom:0;position:fixed;right:0;top:var(--wp-admin-bar-height,32px);width:auto}body.jetpack_page_jetpack-videopress.folded #wpbody-content{left:36px}@media (max-width:960px){body.jetpack_page_jetpack-videopress.auto-fold #wpbody-content{left:36px}}@media (min-width:961px){body.jetpack_page_jetpack-videopress.is-nav-unification:not(.folded) #wpbody-content{left:272px}}body.jetpack_page_jetpack-videopress #wpbody-content :has(.jp-admin-page){display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0}body.jetpack_page_jetpack-videopress .jp-admin-page{display:flex;flex:1 1 auto;flex-direction:column;margin-left:0;min-height:0;min-width:0;overflow:visible}body.jetpack_page_jetpack-videopress .jp-admin-page__page{display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0}body.jetpack_page_jetpack-videopress .jp-admin-page__page>header{flex-shrink:0}body.jetpack_page_jetpack-videopress .jp-admin-page__page:has(.jp-admin-page-tabs)>header{border-bottom:none;padding-bottom:0}body.jetpack_page_jetpack-videopress .jp-admin-page__page>:not(header):not(.jetpack-footer){display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0;overflow:auto}body.jetpack_page_jetpack-videopress .jp-admin-page__page>:not(header):not(.jetpack-footer)>*{display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0}body.jetpack_page_jetpack-videopress .jetpack-footer{flex-shrink:0}body.jetpack_page_jetpack-videopress .jp-admin-page-tabs{background:var(--wpds-color-bg-surface-neutral-strong,#fff);border-bottom:var(--wpds-border-width-xs,1px) solid var(--wpds-color-stroke-surface-neutral-weak,#e4e4e4);position:sticky;top:0;z-index:10}body.jetpack_page_jetpack-videopress .jp-admin-page-tabs [role=tab]{padding-inline:var(--wpds-dimension-padding-2xl,24px)}@media (max-width:782px){body.jetpack_page_jetpack-videopress #wpbody-content,body.jetpack_page_jetpack-videopress.auto-fold #wpbody-content,body.jetpack_page_jetpack-videopress.folded #wpbody-content{left:0;top:var(--wp-admin-bar-height,46px)}body.jetpack_page_jetpack-videopress .jp-admin-page{margin-left:0}}"));
   document.head.appendChild(style);
 }
 
@@ -4831,7 +4944,7 @@ var import_jsx_runtime25 = __toESM(require_jsx_runtime());
 var TAB_VALUES = ["overview", "library", "settings"];
 function DashboardLayout({ activeTab, children, actions }) {
   const navigate = useNavigate();
-  const onValueChange = (0, import_element18.useCallback)(
+  const onValueChange = (0, import_element20.useCallback)(
     (next) => {
       const target = TAB_PATHS[next];
       if (target) {
@@ -4865,8 +4978,8 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 // routes/settings/stage.tsx
 var import_jsx_runtime26 = __toESM(require_jsx_runtime());
 var Stage = () => {
-  const [restrict, setRestrict] = (0, import_react12.useState)(false);
-  const onSave = (0, import_react12.useCallback)(() => {
+  const [restrict, setRestrict] = (0, import_react14.useState)(false);
+  const onSave = (0, import_react14.useCallback)(() => {
   }, []);
   return /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
     DashboardLayout,
@@ -4876,7 +4989,7 @@ var Stage = () => {
       children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)("div", { className: "jp-videopress-settings", children: /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)(card_exports.Root, { children: [
         /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(card_exports.Title, { children: (0, import_i18n9.__)("Restrict video access", "jetpack-videopress-pkg") }) }),
         /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
-          import_components3.ToggleControl,
+          import_components2.ToggleControl,
           {
             __nextHasNoMarginBottom: true,
             label: (0, import_i18n9.__)("Only logged-in users can play your videos", "jetpack-videopress-pkg"),

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Components: Use Link from `@wordpress/ui` instead of ExternalLink.
+- Dashboard: Update to @wordpress/admin-ui 2.0.0 and use the Page component's new `visual` prop for the Jetpack logo.
 - Forms now uses the shared `Gravatar` component from `@automattic/jetpack-components/gravatar`. No user-visible change.
 
 ## [7.21.0] - 2026-05-04
