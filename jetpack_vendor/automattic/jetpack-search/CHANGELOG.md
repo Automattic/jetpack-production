@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Search blocks: clear the previous query's results, total count, and aggregation buckets when a search request errors out so the error message no longer renders alongside stale data.
 - Search Blocks: fix block-validation error on results-panel, filter-popover, and common-filters when inserted via patterns
 - Search Blocks: fix pre-hydration skeleton shape for the product layout — emit a square image placeholder first, then two title rows sized to the live card's typical wrapped title.
+- Search Dashboard: fix the upsell page clipping its pricing rows at the footer line under the shared `jetpack-admin-page-layout` mixin. Wrap `<AdminSectionHero>` in a block-level `<div>` so the section's `overflow: hidden` (its margin-collapse guard) doesn't make it a flex item that shrinks below its content height — letting the mixin's middle `overflow: auto` engage and the rows scroll naturally. Mirrors the `.content { display: block }` precedent in `projects/packages/publicize/_inc/components/admin-page/styles.module.scss`.
 
 ## [0.58.0] - 2026-05-04
 ### Added
