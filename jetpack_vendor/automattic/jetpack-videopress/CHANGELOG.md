@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Library tab as a DataViews grid (with table alternate) and mocked uploads, all behind the existing modernization filter.
 - Modernization Phase 1: shared chrome with Overview/Library/Settings tabs and a working Restrict access toggle, all behind the existing modernization filter.
 
 ### Changed

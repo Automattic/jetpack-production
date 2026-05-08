@@ -85,7 +85,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return x === y && (0 !== x || 1 / x === 1 / y) || x !== x && y !== y;
       }
       function useSyncExternalStore$2(subscribe2, getSnapshot2) {
-        didWarnOld18Alpha || void 0 === React33.startTransition || (didWarnOld18Alpha = true, console.error(
+        didWarnOld18Alpha || void 0 === React32.startTransition || (didWarnOld18Alpha = true, console.error(
           "You are using an outdated, pre-release alpha of React 18 that does not support useSyncExternalStore. The use-sync-external-store shim will not work correctly. Upgrade to a newer pre-release."
         ));
         var value = getSnapshot2();
@@ -107,7 +107,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
           },
           [subscribe2, value, getSnapshot2]
         );
-        useEffect13(
+        useEffect12(
           function() {
             checkIfSnapshotChanged(inst) && forceUpdate({ inst });
             return subscribe2(function() {
@@ -133,8 +133,8 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return getSnapshot2();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React33 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState12 = React33.useState, useEffect13 = React33.useEffect, useLayoutEffect3 = React33.useLayoutEffect, useDebugValue = React33.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
-      exports.useSyncExternalStore = void 0 !== React33.useSyncExternalStore ? React33.useSyncExternalStore : shim;
+      var React32 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState12 = React32.useState, useEffect12 = React32.useEffect, useLayoutEffect3 = React32.useLayoutEffect, useDebugValue = React32.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      exports.useSyncExternalStore = void 0 !== React32.useSyncExternalStore ? React32.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
   }
@@ -203,7 +203,7 @@ var require_url = __commonJS({
 
 // routes/settings/stage.tsx
 var import_components2 = __toESM(require_components());
-var import_i18n9 = __toESM(require_i18n());
+var import_i18n8 = __toESM(require_i18n());
 
 // ../../../node_modules/.pnpm/clsx@2.1.1/node_modules/clsx/dist/clsx.mjs
 function r(e) {
@@ -2232,39 +2232,8 @@ function inertValue(value) {
   return value ? "true" : void 0;
 }
 
-// ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/button/Button.js
-var React21 = __toESM(require_react(), 1);
-var Button = /* @__PURE__ */ React21.forwardRef(function Button2(componentProps, forwardedRef) {
-  const {
-    render,
-    className,
-    disabled: disabled2 = false,
-    focusableWhenDisabled = false,
-    nativeButton = true,
-    style,
-    ...elementProps
-  } = componentProps;
-  const {
-    getButtonProps,
-    buttonRef
-  } = useButton({
-    disabled: disabled2,
-    focusableWhenDisabled,
-    native: nativeButton
-  });
-  const state = {
-    disabled: disabled2
-  };
-  return useRenderElement("button", componentProps, {
-    state,
-    ref: [forwardedRef, buttonRef],
-    props: [elementProps, getButtonProps]
-  });
-});
-if (true) Button.displayName = "Button";
-
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/internals/composite/item/useCompositeItem.js
-var React22 = __toESM(require_react(), 1);
+var React21 = __toESM(require_react(), 1);
 function useCompositeItem(params = {}) {
   const {
     highlightItemOnHover,
@@ -2276,9 +2245,9 @@ function useCompositeItem(params = {}) {
     index
   } = useCompositeListItem(params);
   const isHighlighted = highlightedIndex === index;
-  const itemRef = React22.useRef(null);
+  const itemRef = React21.useRef(null);
   const mergedRef = useMergedRefs(ref, itemRef);
-  const compositeProps = React22.useMemo(() => ({
+  const compositeProps = React21.useMemo(() => ({
     tabIndex: isHighlighted ? 0 : -1,
     onFocus() {
       onHighlightedIndexChange(index);
@@ -2321,21 +2290,21 @@ function getCssDimensions(element) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/csp-provider/CSPContext.js
-var React23 = __toESM(require_react(), 1);
-var CSPContext = /* @__PURE__ */ React23.createContext(void 0);
+var React22 = __toESM(require_react(), 1);
+var CSPContext = /* @__PURE__ */ React22.createContext(void 0);
 if (true) CSPContext.displayName = "CSPContext";
 var DEFAULT_CSP_CONTEXT_VALUE = {
   disableStyleElements: false
 };
 function useCSPContext() {
-  return React23.useContext(CSPContext) ?? DEFAULT_CSP_CONTEXT_VALUE;
+  return React22.useContext(CSPContext) ?? DEFAULT_CSP_CONTEXT_VALUE;
 }
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/internals/composite/root/CompositeRoot.js
-var React25 = __toESM(require_react(), 1);
+var React24 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/internals/composite/root/useCompositeRoot.js
-var React24 = __toESM(require_react(), 1);
+var React23 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/internals/composite/constants.js
 var ACTIVE_COMPOSITE_ITEM = "data-composite-item-active";
@@ -2359,12 +2328,12 @@ function useCompositeRoot(params) {
     disabledIndices,
     modifierKeys = EMPTY_ARRAY2
   } = params;
-  const [internalHighlightedIndex, internalSetHighlightedIndex] = React24.useState(0);
+  const [internalHighlightedIndex, internalSetHighlightedIndex] = React23.useState(0);
   const isGrid = cols > 1;
-  const rootRef = React24.useRef(null);
+  const rootRef = React23.useRef(null);
   const mergedRef = useMergedRefs(rootRef, externalRef);
-  const elementsRef = React24.useRef([]);
-  const hasSetDefaultIndexRef = React24.useRef(false);
+  const elementsRef = React23.useRef([]);
+  const hasSetDefaultIndexRef = React23.useRef(false);
   const highlightedIndex = externalHighlightedIndex ?? internalHighlightedIndex;
   const onHighlightedIndexChange = useStableCallback((index, shouldScrollIntoView = false) => {
     (externalSetHighlightedIndex ?? internalSetHighlightedIndex)(index);
@@ -2392,7 +2361,7 @@ function useCompositeRoot(params) {
     }
     return onLoop?.(event, prevIndex, nextIndex, elementsRef);
   });
-  const props = React24.useMemo(() => ({
+  const props = React23.useMemo(() => ({
     "aria-orientation": orientation === "both" ? void 0 : orientation,
     ref: mergedRef,
     onFocus(event) {
@@ -2536,7 +2505,7 @@ function useCompositeRoot(params) {
       }
     }
   }), [cols, dense, direction, disabledIndices, elementsRef, enableHomeAndEndKeys, highlightedIndex, isGrid, itemSizes, loopFocus, onLoop, wrappedOnLoop, mergedRef, modifierKeys, onHighlightedIndexChange, orientation, stopEventPropagation]);
-  return React24.useMemo(() => ({
+  return React23.useMemo(() => ({
     props,
     highlightedIndex,
     onHighlightedIndexChange,
@@ -2617,7 +2586,7 @@ function CompositeRoot(componentProps) {
     props: [defaultProps, ...props, elementProps],
     stateAttributesMapping: stateAttributesMapping3
   });
-  const contextValue = React25.useMemo(() => ({
+  const contextValue = React24.useMemo(() => ({
     highlightedIndex,
     onHighlightedIndexChange,
     highlightItemOnHover,
@@ -2662,14 +2631,14 @@ __export(index_parts_exports, {
 });
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRoot.js
-var React27 = __toESM(require_react(), 1);
+var React26 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRootContext.js
-var React26 = __toESM(require_react(), 1);
-var TabsRootContext = /* @__PURE__ */ React26.createContext(void 0);
+var React25 = __toESM(require_react(), 1);
+var TabsRootContext = /* @__PURE__ */ React25.createContext(void 0);
 if (true) TabsRootContext.displayName = "TabsRootContext";
 function useTabsRootContext() {
-  const context = React26.useContext(TabsRootContext);
+  const context = React25.useContext(TabsRootContext);
   if (context === void 0) {
     throw new Error(true ? "Base UI: TabsRootContext is missing. Tabs parts must be placed within <Tabs.Root>." : formatErrorMessage_default(64));
   }
@@ -2692,7 +2661,7 @@ var tabsStateAttributesMapping = {
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/root/TabsRoot.js
 var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
-var TabsRoot = /* @__PURE__ */ React27.forwardRef(function TabsRoot2(componentProps, forwardedRef) {
+var TabsRoot = /* @__PURE__ */ React26.forwardRef(function TabsRoot2(componentProps, forwardedRef) {
   const {
     className,
     defaultValue: defaultValueProp = 0,
@@ -2704,8 +2673,8 @@ var TabsRoot = /* @__PURE__ */ React27.forwardRef(function TabsRoot2(componentPr
     ...elementProps
   } = componentProps;
   const hasExplicitDefaultValueProp = Object.hasOwn(componentProps, "defaultValue");
-  const tabPanelRefs = React27.useRef([]);
-  const [mountedTabPanels, setMountedTabPanels] = React27.useState(() => /* @__PURE__ */ new Map());
+  const tabPanelRefs = React26.useRef([]);
+  const [mountedTabPanels, setMountedTabPanels] = React26.useState(() => /* @__PURE__ */ new Map());
   const [value, setValue] = useControlled({
     controlled: valueProp,
     default: defaultValueProp,
@@ -2713,8 +2682,8 @@ var TabsRoot = /* @__PURE__ */ React27.forwardRef(function TabsRoot2(componentPr
     state: "value"
   });
   const isControlled = valueProp !== void 0;
-  const [tabMap, setTabMap] = React27.useState(() => /* @__PURE__ */ new Map());
-  const getTabElementBySelectedValue = React27.useCallback((selectedValue) => {
+  const [tabMap, setTabMap] = React26.useState(() => /* @__PURE__ */ new Map());
+  const getTabElementBySelectedValue = React26.useCallback((selectedValue) => {
     if (selectedValue === void 0) {
       return null;
     }
@@ -2725,7 +2694,7 @@ var TabsRoot = /* @__PURE__ */ React27.forwardRef(function TabsRoot2(componentPr
     }
     return null;
   }, [tabMap]);
-  const [activationDirectionState, setActivationDirectionState] = React27.useState(() => ({
+  const [activationDirectionState, setActivationDirectionState] = React26.useState(() => ({
     previousValue: value,
     tabActivationDirection: "none"
   }));
@@ -2779,10 +2748,10 @@ var TabsRoot = /* @__PURE__ */ React27.forwardRef(function TabsRoot2(componentPr
       return next;
     });
   });
-  const getTabPanelIdByValue = React27.useCallback((tabValue) => {
+  const getTabPanelIdByValue = React26.useCallback((tabValue) => {
     return mountedTabPanels.get(tabValue);
   }, [mountedTabPanels]);
-  const getTabIdByPanelValue = React27.useCallback((tabPanelValue) => {
+  const getTabIdByPanelValue = React26.useCallback((tabPanelValue) => {
     for (const tabMetadata of tabMap.values()) {
       if (tabPanelValue === tabMetadata?.value) {
         return tabMetadata?.id;
@@ -2790,7 +2759,7 @@ var TabsRoot = /* @__PURE__ */ React27.forwardRef(function TabsRoot2(componentPr
     }
     return void 0;
   }, [tabMap]);
-  const tabsContextValue = React27.useMemo(() => ({
+  const tabsContextValue = React26.useMemo(() => ({
     getTabElementBySelectedValue,
     getTabIdByPanelValue,
     getTabPanelIdByValue,
@@ -2802,7 +2771,7 @@ var TabsRoot = /* @__PURE__ */ React27.forwardRef(function TabsRoot2(componentPr
     tabActivationDirection,
     value
   }), [getTabElementBySelectedValue, getTabIdByPanelValue, getTabPanelIdByValue, onValueChange, orientation, registerMountedTabPanel, setTabMap, unregisterMountedTabPanel, tabActivationDirection, value]);
-  const selectedTabMetadata = React27.useMemo(() => {
+  const selectedTabMetadata = React26.useMemo(() => {
     for (const tabMetadata of tabMap.values()) {
       if (tabMetadata != null && tabMetadata.value === value) {
         return tabMetadata;
@@ -2810,7 +2779,7 @@ var TabsRoot = /* @__PURE__ */ React27.forwardRef(function TabsRoot2(componentPr
     }
     return void 0;
   }, [tabMap, value]);
-  const firstEnabledTabValue = React27.useMemo(() => {
+  const firstEnabledTabValue = React26.useMemo(() => {
     for (const tabMetadata of tabMap.values()) {
       if (tabMetadata != null && !tabMetadata.disabled) {
         return tabMetadata.value;
@@ -2916,14 +2885,14 @@ function computeActivationDirection(oldValue, newValue, orientation, tabMap) {
 }
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/tab/TabsTab.js
-var React29 = __toESM(require_react(), 1);
+var React28 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/list/TabsListContext.js
-var React28 = __toESM(require_react(), 1);
-var TabsListContext = /* @__PURE__ */ React28.createContext(void 0);
+var React27 = __toESM(require_react(), 1);
+var TabsListContext = /* @__PURE__ */ React27.createContext(void 0);
 if (true) TabsListContext.displayName = "TabsListContext";
 function useTabsListContext() {
-  const context = React28.useContext(TabsListContext);
+  const context = React27.useContext(TabsListContext);
   if (context === void 0) {
     throw new Error(true ? "Base UI: TabsListContext is missing. TabsList parts must be placed within <Tabs.List>." : formatErrorMessage_default(65));
   }
@@ -2931,7 +2900,7 @@ function useTabsListContext() {
 }
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/tab/TabsTab.js
-var TabsTab = /* @__PURE__ */ React29.forwardRef(function TabsTab2(componentProps, forwardedRef) {
+var TabsTab = /* @__PURE__ */ React28.forwardRef(function TabsTab2(componentProps, forwardedRef) {
   const {
     className,
     disabled: disabled2 = false,
@@ -2956,7 +2925,7 @@ var TabsTab = /* @__PURE__ */ React29.forwardRef(function TabsTab2(componentProp
     tabsListElement
   } = useTabsListContext();
   const id = useBaseUiId(idProp);
-  const tabMetadata = React29.useMemo(() => ({
+  const tabMetadata = React28.useMemo(() => ({
     disabled: disabled2,
     id,
     value
@@ -2971,9 +2940,9 @@ var TabsTab = /* @__PURE__ */ React29.forwardRef(function TabsTab2(componentProp
     metadata: tabMetadata
   });
   const active = value === activeTabValue;
-  const isNavigatingRef = React29.useRef(false);
-  const tabElementRef = React29.useRef(null);
-  React29.useEffect(() => {
+  const isNavigatingRef = React28.useRef(false);
+  const tabElementRef = React28.useRef(null);
+  React28.useEffect(() => {
     const tabElement = tabElementRef.current;
     if (!tabElement) {
       return void 0;
@@ -3008,8 +2977,8 @@ var TabsTab = /* @__PURE__ */ React29.forwardRef(function TabsTab2(componentProp
     focusableWhenDisabled: true
   });
   const tabPanelId = getTabPanelIdByValue(value);
-  const isPressingRef = React29.useRef(false);
-  const isMainButtonRef = React29.useRef(false);
+  const isPressingRef = React28.useRef(false);
+  const isMainButtonRef = React28.useRef(false);
   function onClick(event) {
     if (active || disabled2) {
       return;
@@ -3079,7 +3048,7 @@ var TabsTab = /* @__PURE__ */ React29.forwardRef(function TabsTab2(componentProp
 if (true) TabsTab.displayName = "TabsTab";
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/TabsIndicator.js
-var React30 = __toESM(require_react(), 1);
+var React29 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/indicator/prehydrationScript.min.js
 var script = '!function(){const t=document.currentScript.previousElementSibling;if(!t)return;const e=t.closest(\'[role="tablist"]\');if(!e)return;const i=e.querySelector("[data-active]");if(!i)return;if(0===i.offsetWidth||0===e.offsetWidth)return;let o=0,n=0,h=0,l=0,r=0,f=0;function s(t){const e=getComputedStyle(t);let i=parseFloat(e.width)||0,o=parseFloat(e.height)||0;return(Math.round(i)!==t.offsetWidth||Math.round(o)!==t.offsetHeight)&&(i=t.offsetWidth,o=t.offsetHeight),{width:i,height:o}}if(null!=i&&null!=e){const{width:t,height:c}=s(i),{width:u,height:d}=s(e),a=i.getBoundingClientRect(),g=e.getBoundingClientRect(),p=u>0?g.width/u:1,b=d>0?g.height/d:1;if(Math.abs(p)>Number.EPSILON&&Math.abs(b)>Number.EPSILON){const t=a.left-g.left,i=a.top-g.top;o=t/p+e.scrollLeft-e.clientLeft,h=i/b+e.scrollTop-e.clientTop}else o=i.offsetLeft,h=i.offsetTop;r=t,f=c,n=e.scrollWidth-o-r,l=e.scrollHeight-h-f}function c(e,i){t.style.setProperty(`--active-tab-${e}`,`${i}px`)}c("left",o),c("right",n),c("top",h),c("bottom",l),c("width",r),c("height",f),r>0&&f>0&&t.removeAttribute("hidden")}();';
@@ -3102,7 +3071,7 @@ var stateAttributesMapping = {
   activeTabPosition: () => null,
   activeTabSize: () => null
 };
-var TabsIndicator = /* @__PURE__ */ React30.forwardRef(function TabIndicator(componentProps, forwardedRef) {
+var TabsIndicator = /* @__PURE__ */ React29.forwardRef(function TabIndicator(componentProps, forwardedRef) {
   const {
     className,
     render,
@@ -3125,7 +3094,7 @@ var TabsIndicator = /* @__PURE__ */ React30.forwardRef(function TabIndicator(com
   } = useTabsListContext();
   const isHydrating = useIsHydrating();
   const rerender = useForcedRerendering();
-  React30.useEffect(() => {
+  React29.useEffect(() => {
     return registerIndicatorUpdateListener(rerender);
   }, [registerIndicatorUpdateListener, rerender]);
   let left = 0;
@@ -3167,17 +3136,17 @@ var TabsIndicator = /* @__PURE__ */ React30.forwardRef(function TabIndicator(com
       bottom = tabsListElement.scrollHeight - top - height;
     }
   }
-  const activeTabPosition = React30.useMemo(() => isTabSelected ? {
+  const activeTabPosition = React29.useMemo(() => isTabSelected ? {
     left,
     right,
     top,
     bottom
   } : null, [left, right, top, bottom, isTabSelected]);
-  const activeTabSize = React30.useMemo(() => isTabSelected ? {
+  const activeTabSize = React29.useMemo(() => isTabSelected ? {
     width,
     height
   } : null, [width, height, isTabSelected]);
-  const style = React30.useMemo(() => {
+  const style = React29.useMemo(() => {
     if (!isTabSelected) {
       return void 0;
     }
@@ -3213,7 +3182,7 @@ var TabsIndicator = /* @__PURE__ */ React30.forwardRef(function TabIndicator(com
   if (value == null) {
     return null;
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(React30.Fragment, {
+  return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)(React29.Fragment, {
     children: [element, isHydrating && renderBeforeHydration && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("script", {
       nonce,
       dangerouslySetInnerHTML: {
@@ -3226,7 +3195,7 @@ var TabsIndicator = /* @__PURE__ */ React30.forwardRef(function TabIndicator(com
 if (true) TabsIndicator.displayName = "TabsIndicator";
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanel.js
-var React31 = __toESM(require_react(), 1);
+var React30 = __toESM(require_react(), 1);
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/panel/TabsPanelDataAttributes.js
 var TabsPanelDataAttributes = (function(TabsPanelDataAttributes2) {
@@ -3244,7 +3213,7 @@ var stateAttributesMapping2 = {
   ...tabsStateAttributesMapping,
   ...transitionStatusMapping
 };
-var TabsPanel = /* @__PURE__ */ React31.forwardRef(function TabPanel(componentProps, forwardedRef) {
+var TabsPanel = /* @__PURE__ */ React30.forwardRef(function TabPanel(componentProps, forwardedRef) {
   const {
     className,
     value,
@@ -3262,7 +3231,7 @@ var TabsPanel = /* @__PURE__ */ React31.forwardRef(function TabPanel(componentPr
     unregisterMountedTabPanel
   } = useTabsRootContext();
   const id = useBaseUiId();
-  const metadata = React31.useMemo(() => ({
+  const metadata = React30.useMemo(() => ({
     id,
     value
   }), [id, value]);
@@ -3286,7 +3255,7 @@ var TabsPanel = /* @__PURE__ */ React31.forwardRef(function TabPanel(componentPr
     tabActivationDirection,
     transitionStatus
   };
-  const panelRef = React31.useRef(null);
+  const panelRef = React30.useRef(null);
   const element = useRenderElement("div", componentProps, {
     state,
     ref: [forwardedRef, listItemRef, panelRef],
@@ -3331,9 +3300,9 @@ var TabsPanel = /* @__PURE__ */ React31.forwardRef(function TabPanel(componentPr
 if (true) TabsPanel.displayName = "TabsPanel";
 
 // ../../../node_modules/.pnpm/@base-ui+react@1.4.1_@date-fns+tz@1.4.1_@types+react@18.3.28_date-fns@4.1.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@base-ui/react/esm/tabs/list/TabsList.js
-var React32 = __toESM(require_react(), 1);
+var React31 = __toESM(require_react(), 1);
 var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
-var TabsList = /* @__PURE__ */ React32.forwardRef(function TabsList2(componentProps, forwardedRef) {
+var TabsList = /* @__PURE__ */ React31.forwardRef(function TabsList2(componentProps, forwardedRef) {
   const {
     activateOnFocus = false,
     className,
@@ -3349,17 +3318,17 @@ var TabsList = /* @__PURE__ */ React32.forwardRef(function TabsList2(componentPr
     setTabMap,
     tabActivationDirection
   } = useTabsRootContext();
-  const [highlightedTabIndex, setHighlightedTabIndex] = React32.useState(0);
-  const [tabsListElement, setTabsListElement] = React32.useState(null);
-  const indicatorUpdateListenersRef = React32.useRef(/* @__PURE__ */ new Set());
-  const tabResizeObserverElementsRef = React32.useRef(/* @__PURE__ */ new Set());
-  const resizeObserverRef = React32.useRef(null);
+  const [highlightedTabIndex, setHighlightedTabIndex] = React31.useState(0);
+  const [tabsListElement, setTabsListElement] = React31.useState(null);
+  const indicatorUpdateListenersRef = React31.useRef(/* @__PURE__ */ new Set());
+  const tabResizeObserverElementsRef = React31.useRef(/* @__PURE__ */ new Set());
+  const resizeObserverRef = React31.useRef(null);
   const notifyIndicatorUpdateListeners = useStableCallback(() => {
     indicatorUpdateListenersRef.current.forEach((listener) => {
       listener();
     });
   });
-  React32.useEffect(() => {
+  React31.useEffect(() => {
     if (typeof ResizeObserver === "undefined") {
       return void 0;
     }
@@ -3408,7 +3377,7 @@ var TabsList = /* @__PURE__ */ React32.forwardRef(function TabsList2(componentPr
     "aria-orientation": orientation === "vertical" ? "vertical" : void 0,
     role: "tablist"
   };
-  const tabsListContextValue = React32.useMemo(() => ({
+  const tabsListContextValue = React31.useMemo(() => ({
     activateOnFocus,
     highlightedTabIndex,
     registerIndicatorUpdateListener,
@@ -3478,91 +3447,12 @@ var Text = (0, import_element.forwardRef)(function Text2({ variant = "body-md", 
   return element;
 });
 
-// ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/button/button.mjs
-var import_element2 = __toESM(require_element(), 1);
-var import_i18n = __toESM(require_i18n(), 1);
-var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
-import { speak } from "@wordpress/a11y";
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='26d90ece4e']")) {
-  const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "26d90ece4e");
-  style.appendChild(document.createTextNode('@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._97b0fc33c028be1a__button,.abbb272e2ce49bd6__is-unstyled{appearance:none;padding:0}._97b0fc33c028be1a__button{--wp-ui-button-font-weight:499;--wp-ui-button-background-color:var(--wpds-color-bg-interactive-brand-strong,var(--wp-admin-theme-color,#3858e9));--wp-ui-button-background-color-active:var(--wpds-color-bg-interactive-brand-strong-active,color-mix(in oklch,var(--wp-admin-theme-color,#3858e9) 93%,#000));--wp-ui-button-background-color-disabled:var(--wpds-color-bg-interactive-neutral-strong-disabled,#e6e6e6);--wp-ui-button-foreground-color:var(--wpds-color-fg-interactive-brand-strong,#fff);--wp-ui-button-foreground-color-active:var(--wpds-color-fg-interactive-brand-strong-active,#fff);--wp-ui-button-foreground-color-disabled:var(--wpds-color-fg-interactive-neutral-strong-disabled,#8d8d8d);--wp-ui-button-padding-inline:var(--wpds-dimension-padding-md,12px);--wp-ui-button-height:40px;--wp-ui-button-aspect-ratio:auto;--wp-ui-button-font-size:var(--wpds-typography-font-size-md,13px);--wp-ui-button-min-width:calc(4ch + var(--wp-ui-button-padding-inline)*2);--wp-ui-button-border-color:var(--wp-ui-button-background-color);--wp-ui-button-border-color-active:var(--wp-ui-button-background-color-active);--wp-ui-button-border-color-disabled:var(--wp-ui-button-background-color-disabled);--_gcd-button-font-family:var(--wpds-typography-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);--_gcd-button-font-size:var(--wp-ui-button-font-size);--_gcd-button-font-weight:var(--wp-ui-button-font-weight);align-items:center;aspect-ratio:var(--wp-ui-button-aspect-ratio);background-clip:padding-box;background-color:var(--wp-ui-button-background-color);border-color:var(--wp-ui-button-border-color);border-radius:var(--wpds-border-radius-sm,2px);border-style:solid;border-width:1px;color:var(--wp-ui-button-foreground-color);cursor:var(--wpds-cursor-control,pointer);display:inline-flex;font-family:var(--wpds-typography-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wp-ui-button-font-size);font-weight:var(--wp-ui-button-font-weight);gap:var(--wpds-dimension-gap-sm,8px);height:var(--wp-ui-button-height);justify-content:center;line-height:var(--wpds-typography-line-height-sm,20px);min-width:var(--wp-ui-button-min-width);padding-inline:var(--wp-ui-button-padding-inline);position:relative;text-decoration:none;@media not (prefers-reduced-motion){transition:color .1s ease-out;*{transition:opacity .1s ease-out}}&[href]{cursor:pointer}[href]{color:inherit;text-decoration:inherit}&:not([data-disabled]):is(:hover,:active,:focus){background-color:var(--wp-ui-button-background-color-active);border-color:var(--wp-ui-button-border-color-active);color:var(--wp-ui-button-foreground-color-active)}&[data-disabled]:not(._914b42f315c0e580__is-loading){background-color:var(--wp-ui-button-background-color-disabled);border-color:var(--wp-ui-button-border-color-disabled);color:var(--wp-ui-button-foreground-color-disabled);@media (forced-colors:active){border-bottom-color:GrayText;border-left-color:GrayText;border-right-color:GrayText;border-top-color:GrayText;color:GrayText}}&:before{aspect-ratio:1;border:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid;border-block-end-color:#0000;border-block-start-color:var(--wp-ui-button-foreground-color);border-inline-end-color:var(--wp-ui-button-foreground-color);border-inline-start-color:#0000;border-radius:50%;box-sizing:border-box;content:"";display:block;height:var(--wp-ui-button-font-size);inset-inline-start:50%;opacity:0;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%);@media not (prefers-reduced-motion){transition:opacity .1s ease-out}}}._908205475f9f2a92__is-small{--wp-ui-button-padding-inline:var(--wpds-dimension-padding-sm,8px);--wp-ui-button-height:24px}.dd460c965226cc77__is-brand{&._62d5a778b7b258ee__is-outline,&.ad0619a3217c6a5b__is-minimal{--wp-ui-button-foreground-color:var(--wpds-color-fg-interactive-brand,var(--wp-admin-theme-color,#3858e9));--wp-ui-button-foreground-color-active:var(--wpds-color-fg-interactive-brand-active,var(--wp-admin-theme-color,#3858e9));--wp-ui-button-foreground-color-disabled:var(--wpds-color-fg-interactive-neutral-disabled,#8d8d8d)}&._62d5a778b7b258ee__is-outline{--wp-ui-button-background-color:var(--wpds-color-bg-interactive-brand-weak,#0000);--wp-ui-button-background-color-active:var(--wpds-color-bg-interactive-brand-weak-active,color-mix(in oklch,var(--wp-admin-theme-color,#3858e9) 12%,#fff));--wp-ui-button-background-color-disabled:var(--wpds-color-bg-interactive-neutral-weak-disabled,#0000);--wp-ui-button-border-color:var(--wpds-color-stroke-interactive-brand,var(--wp-admin-theme-color,#3858e9));--wp-ui-button-border-color-active:var(--wpds-color-stroke-interactive-brand-active,color-mix(in oklch,var(--wp-admin-theme-color,#3858e9) 85%,#000));--wp-ui-button-border-color-disabled:var(--wpds-color-stroke-interactive-neutral-disabled,#dbdbdb)}&.ad0619a3217c6a5b__is-minimal{--wp-ui-button-background-color:var(--wpds-color-bg-interactive-brand-weak,#0000);--wp-ui-button-background-color-active:var(--wpds-color-bg-interactive-brand-weak-active,color-mix(in oklch,var(--wp-admin-theme-color,#3858e9) 12%,#fff));--wp-ui-button-background-color-disabled:var(--wpds-color-bg-interactive-neutral-weak-disabled,#0000)}}.e722a8f96726aa99__is-neutral{&.b50b3358c5fb4d0b__is-solid{--wp-ui-button-background-color:var(--wpds-color-bg-interactive-neutral-strong,#2d2d2d);--wp-ui-button-background-color-active:var(--wpds-color-bg-interactive-neutral-strong-active,#1e1e1e);--wp-ui-button-background-color-disabled:var(--wpds-color-bg-interactive-neutral-strong-disabled,#e6e6e6);--wp-ui-button-foreground-color:var(--wpds-color-fg-interactive-neutral-strong,#f0f0f0);--wp-ui-button-foreground-color-active:var(--wpds-color-fg-interactive-neutral-strong-active,#f0f0f0);--wp-ui-button-foreground-color-disabled:var(--wpds-color-fg-interactive-neutral-strong-disabled,#8d8d8d)}&._62d5a778b7b258ee__is-outline,&.ad0619a3217c6a5b__is-minimal{--wp-ui-button-foreground-color:var(--wpds-color-fg-interactive-neutral,#1e1e1e);--wp-ui-button-foreground-color-active:var(--wpds-color-fg-interactive-neutral-active,#1e1e1e);--wp-ui-button-foreground-color-disabled:var(--wpds-color-fg-interactive-neutral-disabled,#8d8d8d)}&._62d5a778b7b258ee__is-outline{--wp-ui-button-background-color:var(--wpds-color-bg-interactive-neutral-weak,#0000);--wp-ui-button-background-color-active:var(--wpds-color-bg-interactive-neutral-weak-active,#ededed);--wp-ui-button-background-color-disabled:var(--wpds-color-bg-interactive-neutral-weak-disabled,#0000);--wp-ui-button-border-color:var(--wpds-color-stroke-interactive-neutral,#8d8d8d);--wp-ui-button-border-color-active:var(--wpds-color-stroke-interactive-neutral-active,#6e6e6e);--wp-ui-button-border-color-disabled:var(--wpds-color-stroke-interactive-neutral-disabled,#dbdbdb)}&.ad0619a3217c6a5b__is-minimal{--wp-ui-button-background-color:var(--wpds-color-bg-interactive-neutral-weak,#0000);--wp-ui-button-background-color-active:var(--wpds-color-bg-interactive-neutral-weak-active,#ededed);--wp-ui-button-background-color-disabled:var(--wpds-color-bg-interactive-neutral-weak-disabled,#0000)}}.abbb272e2ce49bd6__is-unstyled{background:none;border:none;min-width:unset}.cf59cf1b69629838__is-compact{--wp-ui-button-height:32px}._914b42f315c0e580__is-loading{color:#0000;&:not([data-disabled]):is(:hover,:active,:focus){color:#0000}*{opacity:0}&:before{opacity:1;transition-delay:.05s;@media not (prefers-reduced-motion){animation:_5a1d53da6f830c8d__loading-animation 1s linear infinite}}}[aria-pressed=true].ad0619a3217c6a5b__is-minimal.e722a8f96726aa99__is-neutral{--wp-ui-button-background-color:var(--wpds-color-bg-interactive-neutral-strong,#2d2d2d);--wp-ui-button-background-color-active:var(--wpds-color-bg-interactive-neutral-strong,#2d2d2d);--wp-ui-button-foreground-color:var(--wpds-color-fg-interactive-neutral-strong,#f0f0f0);--wp-ui-button-foreground-color-active:var(--wpds-color-fg-interactive-neutral-strong,#f0f0f0)}}@keyframes _5a1d53da6f830c8d__loading-animation{0%{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(1turn)}}'));
-  document.head.appendChild(style);
-}
-var style_default2 = { "button": "_97b0fc33c028be1a__button", "is-unstyled": "abbb272e2ce49bd6__is-unstyled", "is-loading": "_914b42f315c0e580__is-loading", "is-small": "_908205475f9f2a92__is-small", "is-brand": "dd460c965226cc77__is-brand", "is-outline": "_62d5a778b7b258ee__is-outline", "is-minimal": "ad0619a3217c6a5b__is-minimal", "is-neutral": "e722a8f96726aa99__is-neutral", "is-solid": "b50b3358c5fb4d0b__is-solid", "is-compact": "cf59cf1b69629838__is-compact", "loading-animation": "_5a1d53da6f830c8d__loading-animation" };
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='e3ae230cea']")) {
-  const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "e3ae230cea");
-  style.appendChild(document.createTextNode("@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-utilities{._336cd3e4e743482f__box-sizing{box-sizing:border-box;*,:after,:before{box-sizing:inherit}}}"));
-  document.head.appendChild(style);
-}
-var resets_default = { "box-sizing": "_336cd3e4e743482f__box-sizing" };
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='2a5ab8f3a7']")) {
-  const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "2a5ab8f3a7");
-  style.appendChild(document.createTextNode("@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-utilities{._08e8a2e44959f892__outset-ring--focus,._970d04df7376df67__outset-ring--focus-within-except-active,.c5cb3ee4bddaa8e4__outset-ring--focus-within-visible,.cd83dfc2126a0846__outset-ring--focus-within,.d0541bc9dd9dc7b6__outset-ring--focus-visible,.e25b2bdd7aa21721__outset-ring--focus-except-active,.ecadb9e080e2dfa5__outset-ring--focus-parent-visible{@media not (prefers-reduced-motion){--_gcd-a-transition:outline 0.1s ease-out;transition:outline .1s ease-out}outline:0 solid #0000;outline-offset:1px}._08e8a2e44959f892__outset-ring--focus:focus,._970d04df7376df67__outset-ring--focus-within-except-active:focus-within:not(:has(:active)),.c5cb3ee4bddaa8e4__outset-ring--focus-within-visible:focus-within:has(:focus-visible),.cd83dfc2126a0846__outset-ring--focus-within:focus-within,.d0541bc9dd9dc7b6__outset-ring--focus-visible:focus-visible,.e25b2bdd7aa21721__outset-ring--focus-except-active:focus:not(:active),:focus-visible .ecadb9e080e2dfa5__outset-ring--focus-parent-visible{--_gcd-a-outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));--_gcd-div-outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9))}}"));
-  document.head.appendChild(style);
-}
-var focus_default = { "outset-ring--focus": "_08e8a2e44959f892__outset-ring--focus", "outset-ring--focus-except-active": "e25b2bdd7aa21721__outset-ring--focus-except-active", "outset-ring--focus-visible": "d0541bc9dd9dc7b6__outset-ring--focus-visible", "outset-ring--focus-within": "cd83dfc2126a0846__outset-ring--focus-within", "outset-ring--focus-within-except-active": "_970d04df7376df67__outset-ring--focus-within-except-active", "outset-ring--focus-within-visible": "c5cb3ee4bddaa8e4__outset-ring--focus-within-visible", "outset-ring--focus-parent-visible": "ecadb9e080e2dfa5__outset-ring--focus-parent-visible" };
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='1fb29d3a3c']")) {
-  const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "1fb29d3a3c");
-  style.appendChild(document.createTextNode("._6defc79820e382c6__button{box-sizing:var(--_gcd-button-box-sizing,border-box);font-family:var(--_gcd-button-font-family,inherit);font-size:var(--_gcd-button-font-size,inherit);font-weight:var(--_gcd-button-font-weight,inherit)}.d2cff2e5dea83bd1__input{box-sizing:var(--_gcd-input-box-sizing,border-box);font-family:var(--_gcd-input-font-family,inherit);font-size:var(--_gcd-input-font-size,inherit);font-weight:var(--_gcd-input-font-weight,inherit);margin:var(--_gcd-input-margin,0);&:is(textarea,[type=text],[type=password],[type=color],[type=date],[type=datetime],[type=datetime-local],[type=email],[type=month],[type=number],[type=search],[type=tel],[type=time],[type=url],[type=week]){background-color:var(--_gcd-input-background-color,#0000);border:var(--_gcd-input-border,none);border-radius:var(--_gcd-input-border-radius,0);box-shadow:var(--_gcd-input-box-shadow,0 0 0 #0000);color:var(--_gcd-input-color,var(--wpds-color-fg-interactive-neutral,#1e1e1e));&:focus{border-color:var(--_gcd-input-border-color-focus,var(--wp-admin-theme-color));box-shadow:var(--_gcd-input-box-shadow-focus,none);outline:var(--_gcd-input-outline-focus,none)}&:disabled{background:var(--_gcd-input-background-disabled,#0000);border-color:var(--_gcd-input-border-color-disabled,#0000);box-shadow:var(--_gcd-input-box-shadow-disabled,none);color:var(--_gcd-input-color-disabled,var(--wpds-color-fg-interactive-neutral-disabled,#8d8d8d))}&::placeholder{color:var(--_gcd-input-placeholder-color,var(--wpds-color-fg-interactive-neutral-disabled,#8d8d8d))}}&:is(textarea,[type=text],[type=password],[type=date],[type=datetime],[type=datetime-local],[type=email],[type=month],[type=number],[type=search],[type=tel],[type=time],[type=url],[type=week]){line-height:var(--_gcd-input-line-height,inherit);min-height:var(--_gcd-input-min-height,auto);padding:var(--_gcd-input-padding,0)}}._547d86373d02e108__textarea{box-sizing:var(--_gcd-textarea-box-sizing,border-box);overflow:var(--_gcd-textarea-overflow,auto);resize:var(--_gcd-textarea-resize,block)}._8c15fd0ed9f28ba4__div{outline:var(--_gcd-div-outline,0 solid #0000)}p._43cec3e1eec1066d__p{font-size:var(--_gcd-p-font-size,13px);line-height:var(--_gcd-p-line-height,1.5);margin:var(--_gcd-p-margin,0)}:is(h1,h2,h3,h4,h5,h6).e97669c6d9a38497__heading{color:var(--_gcd-heading-color,var(--wpds-color-fg-content-neutral,#1e1e1e));font-size:var(--_gcd-heading-font-size,inherit);font-weight:var(--_gcd-heading-font-weight,var(--wpds-typography-font-weight-medium,499));margin:var(--_gcd-heading-margin,0)}._2c0831b0499dbd6e__a,._2c0831b0499dbd6e__a:is(:hover,:focus,:active){border-radius:var(--_gcd-a-border-radius,0);box-shadow:var(--_gcd-a-box-shadow,none);color:var(--_gcd-a-color,inherit);outline:var(--_gcd-a-outline,0 solid #0000);transition:var(--_gcd-a-transition,none)}"));
-  document.head.appendChild(style);
-}
-var global_css_defense_default2 = { "button": "_6defc79820e382c6__button", "input": "d2cff2e5dea83bd1__input", "textarea": "_547d86373d02e108__textarea", "div": "_8c15fd0ed9f28ba4__div", "p": "_43cec3e1eec1066d__p", "heading": "e97669c6d9a38497__heading", "a": "_2c0831b0499dbd6e__a" };
-var Button3 = (0, import_element2.forwardRef)(
-  function Button22({
-    tone = "brand",
-    variant = "solid",
-    size = "default",
-    className,
-    focusableWhenDisabled = true,
-    disabled: disabled2,
-    loading,
-    loadingAnnouncement = (0, import_i18n.__)("Loading"),
-    children,
-    ...props
-  }, ref) {
-    const mergedClassName = clsx_default(
-      global_css_defense_default2.button,
-      resets_default["box-sizing"],
-      focus_default["outset-ring--focus-except-active"],
-      variant !== "unstyled" && style_default2.button,
-      style_default2[`is-${tone}`],
-      style_default2[`is-${variant}`],
-      style_default2[`is-${size}`],
-      loading && style_default2["is-loading"],
-      className
-    );
-    (0, import_element2.useEffect)(() => {
-      if (loading && loadingAnnouncement) {
-        speak(loadingAnnouncement);
-      }
-    }, [loading, loadingAnnouncement]);
-    return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
-      Button,
-      {
-        ref,
-        className: mergedClassName,
-        focusableWhenDisabled,
-        disabled: disabled2 ?? loading,
-        ...props,
-        children
-      }
-    );
-  }
-);
-
-// ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/button/icon.mjs
-var import_element4 = __toESM(require_element(), 1);
-
 // ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/icon/icon.mjs
-var import_element3 = __toESM(require_element(), 1);
+var import_element2 = __toESM(require_element(), 1);
 var import_primitives = __toESM(require_primitives(), 1);
-var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
-var Icon = (0, import_element3.forwardRef)(function Icon2({ icon, size = 24, ...restProps }, ref) {
-  return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
+var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
+var Icon = (0, import_element2.forwardRef)(function Icon2({ icon, size = 24, ...restProps }, ref) {
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
     import_primitives.SVG,
     {
       ref,
@@ -3573,32 +3463,6 @@ var Icon = (0, import_element3.forwardRef)(function Icon2({ icon, size = 24, ...
       height: size
     }
   );
-});
-
-// ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/button/icon.mjs
-var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
-var ButtonIcon = (0, import_element4.forwardRef)(
-  function ButtonIcon2({ icon, ...props }, ref) {
-    return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
-      Icon,
-      {
-        ref,
-        icon,
-        viewBox: "4 4 16 16",
-        size: 16,
-        ...props
-      }
-    );
-  }
-);
-
-// ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/button/index.mjs
-var Button4 = Object.assign(Button3, {
-  /**
-   * An icon component specifically designed to work well when rendered inside
-   * a `Button` component.
-   */
-  Icon: ButtonIcon
 });
 
 // ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/card/index.mjs
@@ -3612,23 +3476,23 @@ __export(card_exports, {
 });
 
 // ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/card/root.mjs
-var import_element5 = __toESM(require_element(), 1);
+var import_element3 = __toESM(require_element(), 1);
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='e3ae230cea']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "e3ae230cea");
   style.appendChild(document.createTextNode("@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-utilities{._336cd3e4e743482f__box-sizing{box-sizing:border-box;*,:after,:before{box-sizing:inherit}}}"));
   document.head.appendChild(style);
 }
-var resets_default2 = { "box-sizing": "_336cd3e4e743482f__box-sizing" };
+var resets_default = { "box-sizing": "_336cd3e4e743482f__box-sizing" };
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='14f5e9ddeb']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "14f5e9ddeb");
   style.appendChild(document.createTextNode("@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._02872bf298eadc43__root{--wp-ui-card-padding:var(--wpds-dimension-padding-2xl,24px);--wp-ui-card-header-content-gap:var(--wpds-dimension-gap-xl,24px);--wp-ui-card-header-content-margin:calc(var(--wp-ui-card-header-content-gap) - var(--wp-ui-card-padding));background-color:var(--wpds-color-bg-surface-neutral-strong,#fff);border:1px solid var(--wpds-color-stroke-surface-neutral-weak,#e4e4e4);border-radius:var(--wpds-border-radius-lg,8px);color:var(--wpds-color-fg-content-neutral,#1e1e1e);display:flex;flex-direction:column;overflow:clip}._5dffdaf2a6e669ac__content,.bbccc92e6ba5662d__header{padding:var(--wp-ui-card-padding);&:not(:first-child):not(:last-child){padding-block-end:0}}.bbccc92e6ba5662d__header+._5dffdaf2a6e669ac__content{margin-block-start:var(--wp-ui-card-header-content-margin);padding-block-start:0}.c1fa192587e1b4a6__fullbleed{margin-inline:calc(var(--wp-ui-card-padding)*-1);width:calc(100% + var(--wp-ui-card-padding)*2)}}"));
   document.head.appendChild(style);
 }
-var style_default3 = { "root": "_02872bf298eadc43__root", "header": "bbccc92e6ba5662d__header", "content": "_5dffdaf2a6e669ac__content", "fullbleed": "c1fa192587e1b4a6__fullbleed" };
-var Root = (0, import_element5.forwardRef)(function Card({ render, ...restProps }, ref) {
-  const mergedClassName = clsx_default(style_default3.root, resets_default2["box-sizing"]);
+var style_default2 = { "root": "_02872bf298eadc43__root", "header": "bbccc92e6ba5662d__header", "content": "_5dffdaf2a6e669ac__content", "fullbleed": "c1fa192587e1b4a6__fullbleed" };
+var Root = (0, import_element3.forwardRef)(function Card({ render, ...restProps }, ref) {
+  const mergedClassName = clsx_default(style_default2.root, resets_default["box-sizing"]);
   const element = useRender({
     defaultTagName: "div",
     render,
@@ -3639,7 +3503,28 @@ var Root = (0, import_element5.forwardRef)(function Card({ render, ...restProps 
 });
 
 // ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/card/header.mjs
-var import_element6 = __toESM(require_element(), 1);
+var import_element4 = __toESM(require_element(), 1);
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='14f5e9ddeb']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "14f5e9ddeb");
+  style.appendChild(document.createTextNode("@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._02872bf298eadc43__root{--wp-ui-card-padding:var(--wpds-dimension-padding-2xl,24px);--wp-ui-card-header-content-gap:var(--wpds-dimension-gap-xl,24px);--wp-ui-card-header-content-margin:calc(var(--wp-ui-card-header-content-gap) - var(--wp-ui-card-padding));background-color:var(--wpds-color-bg-surface-neutral-strong,#fff);border:1px solid var(--wpds-color-stroke-surface-neutral-weak,#e4e4e4);border-radius:var(--wpds-border-radius-lg,8px);color:var(--wpds-color-fg-content-neutral,#1e1e1e);display:flex;flex-direction:column;overflow:clip}._5dffdaf2a6e669ac__content,.bbccc92e6ba5662d__header{padding:var(--wp-ui-card-padding);&:not(:first-child):not(:last-child){padding-block-end:0}}.bbccc92e6ba5662d__header+._5dffdaf2a6e669ac__content{margin-block-start:var(--wp-ui-card-header-content-margin);padding-block-start:0}.c1fa192587e1b4a6__fullbleed{margin-inline:calc(var(--wp-ui-card-padding)*-1);width:calc(100% + var(--wp-ui-card-padding)*2)}}"));
+  document.head.appendChild(style);
+}
+var style_default3 = { "root": "_02872bf298eadc43__root", "header": "bbccc92e6ba5662d__header", "content": "_5dffdaf2a6e669ac__content", "fullbleed": "c1fa192587e1b4a6__fullbleed" };
+var Header = (0, import_element4.forwardRef)(
+  function CardHeader({ render, ...props }, ref) {
+    const element = useRender({
+      defaultTagName: "div",
+      render,
+      ref,
+      props: mergeProps({ className: style_default3.header }, props)
+    });
+    return element;
+  }
+);
+
+// ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/card/content.mjs
+var import_element5 = __toESM(require_element(), 1);
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='14f5e9ddeb']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "14f5e9ddeb");
@@ -3647,20 +3532,20 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
   document.head.appendChild(style);
 }
 var style_default4 = { "root": "_02872bf298eadc43__root", "header": "bbccc92e6ba5662d__header", "content": "_5dffdaf2a6e669ac__content", "fullbleed": "c1fa192587e1b4a6__fullbleed" };
-var Header = (0, import_element6.forwardRef)(
-  function CardHeader({ render, ...props }, ref) {
+var Content = (0, import_element5.forwardRef)(
+  function CardContent({ render, ...props }, ref) {
     const element = useRender({
       defaultTagName: "div",
       render,
       ref,
-      props: mergeProps({ className: style_default4.header }, props)
+      props: mergeProps({ className: style_default4.content }, props)
     });
     return element;
   }
 );
 
-// ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/card/content.mjs
-var import_element7 = __toESM(require_element(), 1);
+// ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/card/full-bleed.mjs
+var import_element6 = __toESM(require_element(), 1);
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='14f5e9ddeb']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "14f5e9ddeb");
@@ -3668,35 +3553,14 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
   document.head.appendChild(style);
 }
 var style_default5 = { "root": "_02872bf298eadc43__root", "header": "bbccc92e6ba5662d__header", "content": "_5dffdaf2a6e669ac__content", "fullbleed": "c1fa192587e1b4a6__fullbleed" };
-var Content = (0, import_element7.forwardRef)(
-  function CardContent({ render, ...props }, ref) {
-    const element = useRender({
-      defaultTagName: "div",
-      render,
-      ref,
-      props: mergeProps({ className: style_default5.content }, props)
-    });
-    return element;
-  }
-);
-
-// ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/card/full-bleed.mjs
-var import_element8 = __toESM(require_element(), 1);
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='14f5e9ddeb']")) {
-  const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "14f5e9ddeb");
-  style.appendChild(document.createTextNode("@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._02872bf298eadc43__root{--wp-ui-card-padding:var(--wpds-dimension-padding-2xl,24px);--wp-ui-card-header-content-gap:var(--wpds-dimension-gap-xl,24px);--wp-ui-card-header-content-margin:calc(var(--wp-ui-card-header-content-gap) - var(--wp-ui-card-padding));background-color:var(--wpds-color-bg-surface-neutral-strong,#fff);border:1px solid var(--wpds-color-stroke-surface-neutral-weak,#e4e4e4);border-radius:var(--wpds-border-radius-lg,8px);color:var(--wpds-color-fg-content-neutral,#1e1e1e);display:flex;flex-direction:column;overflow:clip}._5dffdaf2a6e669ac__content,.bbccc92e6ba5662d__header{padding:var(--wp-ui-card-padding);&:not(:first-child):not(:last-child){padding-block-end:0}}.bbccc92e6ba5662d__header+._5dffdaf2a6e669ac__content{margin-block-start:var(--wp-ui-card-header-content-margin);padding-block-start:0}.c1fa192587e1b4a6__fullbleed{margin-inline:calc(var(--wp-ui-card-padding)*-1);width:calc(100% + var(--wp-ui-card-padding)*2)}}"));
-  document.head.appendChild(style);
-}
-var style_default6 = { "root": "_02872bf298eadc43__root", "header": "bbccc92e6ba5662d__header", "content": "_5dffdaf2a6e669ac__content", "fullbleed": "c1fa192587e1b4a6__fullbleed" };
-var FullBleed = (0, import_element8.forwardRef)(
+var FullBleed = (0, import_element6.forwardRef)(
   function CardFullBleed({ render, ...props }, ref) {
     const element = useRender({
       defaultTagName: "div",
       render,
       ref,
       props: mergeProps(
-        { className: style_default6.fullbleed },
+        { className: style_default5.fullbleed },
         props
       )
     });
@@ -3705,12 +3569,12 @@ var FullBleed = (0, import_element8.forwardRef)(
 );
 
 // ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/card/title.mjs
-var import_element9 = __toESM(require_element(), 1);
-var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
-var DEFAULT_TAG = /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("div", {});
-var Title = (0, import_element9.forwardRef)(
+var import_element7 = __toESM(require_element(), 1);
+var import_jsx_runtime7 = __toESM(require_jsx_runtime(), 1);
+var DEFAULT_TAG = /* @__PURE__ */ (0, import_jsx_runtime7.jsx)("div", {});
+var Title = (0, import_element7.forwardRef)(
   function CardTitle({ render = DEFAULT_TAG, children, ...props }, ref) {
-    return /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
       Text,
       {
         ref,
@@ -3725,18 +3589,18 @@ var Title = (0, import_element9.forwardRef)(
 
 // ../../../node_modules/.pnpm/@wordpress+icons@12.2.0_react@18.3.1/node_modules/@wordpress/icons/build-module/library/chevron-right.mjs
 var import_primitives2 = __toESM(require_primitives(), 1);
-var import_jsx_runtime10 = __toESM(require_jsx_runtime(), 1);
-var chevron_right_default = /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_primitives2.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(import_primitives2.Path, { d: "M10.6 6L9.4 7l4.6 5-4.6 5 1.2 1 5.4-6z" }) });
+var import_jsx_runtime8 = __toESM(require_jsx_runtime(), 1);
+var chevron_right_default = /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(import_primitives2.SVG, { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(import_primitives2.Path, { d: "M10.6 6L9.4 7l4.6 5-4.6 5 1.2 1 5.4-6z" }) });
 
 // ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/stack/stack.mjs
-var import_element10 = __toESM(require_element(), 1);
+var import_element8 = __toESM(require_element(), 1);
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='b51ff41489']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "b51ff41489");
   style.appendChild(document.createTextNode("@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._19ce0419607e1896__stack{display:flex}}"));
   document.head.appendChild(style);
 }
-var style_default7 = { "stack": "_19ce0419607e1896__stack" };
+var style_default6 = { "stack": "_19ce0419607e1896__stack" };
 var gapTokens = {
   xs: "var(--wpds-dimension-gap-xs, 4px)",
   sm: "var(--wpds-dimension-gap-sm, 8px)",
@@ -3746,7 +3610,7 @@ var gapTokens = {
   "2xl": "var(--wpds-dimension-gap-2xl, 32px)",
   "3xl": "var(--wpds-dimension-gap-3xl, 40px)"
 };
-var Stack = (0, import_element10.forwardRef)(function Stack2({ direction, gap, align, justify, wrap, render, ...props }, ref) {
+var Stack = (0, import_element8.forwardRef)(function Stack2({ direction, gap, align, justify, wrap, render, ...props }, ref) {
   const style = {
     gap: gap && gapTokens[gap],
     alignItems: align,
@@ -3757,44 +3621,44 @@ var Stack = (0, import_element10.forwardRef)(function Stack2({ direction, gap, a
   const element = useRender({
     render,
     ref,
-    props: mergeProps(props, { style, className: style_default7.stack })
+    props: mergeProps(props, { style, className: style_default6.stack })
   });
   return element;
 });
 
 // ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/link/link.mjs
-var import_element11 = __toESM(require_element(), 1);
-var import_i18n2 = __toESM(require_i18n(), 1);
-var import_jsx_runtime11 = __toESM(require_jsx_runtime(), 1);
+var import_element9 = __toESM(require_element(), 1);
+var import_i18n = __toESM(require_i18n(), 1);
+var import_jsx_runtime9 = __toESM(require_jsx_runtime(), 1);
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='e3ae230cea']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "e3ae230cea");
   style.appendChild(document.createTextNode("@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-utilities{._336cd3e4e743482f__box-sizing{box-sizing:border-box;*,:after,:before{box-sizing:inherit}}}"));
   document.head.appendChild(style);
 }
-var resets_default3 = { "box-sizing": "_336cd3e4e743482f__box-sizing" };
+var resets_default2 = { "box-sizing": "_336cd3e4e743482f__box-sizing" };
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='2a5ab8f3a7']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "2a5ab8f3a7");
   style.appendChild(document.createTextNode("@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-utilities{._08e8a2e44959f892__outset-ring--focus,._970d04df7376df67__outset-ring--focus-within-except-active,.c5cb3ee4bddaa8e4__outset-ring--focus-within-visible,.cd83dfc2126a0846__outset-ring--focus-within,.d0541bc9dd9dc7b6__outset-ring--focus-visible,.e25b2bdd7aa21721__outset-ring--focus-except-active,.ecadb9e080e2dfa5__outset-ring--focus-parent-visible{@media not (prefers-reduced-motion){--_gcd-a-transition:outline 0.1s ease-out;transition:outline .1s ease-out}outline:0 solid #0000;outline-offset:1px}._08e8a2e44959f892__outset-ring--focus:focus,._970d04df7376df67__outset-ring--focus-within-except-active:focus-within:not(:has(:active)),.c5cb3ee4bddaa8e4__outset-ring--focus-within-visible:focus-within:has(:focus-visible),.cd83dfc2126a0846__outset-ring--focus-within:focus-within,.d0541bc9dd9dc7b6__outset-ring--focus-visible:focus-visible,.e25b2bdd7aa21721__outset-ring--focus-except-active:focus:not(:active),:focus-visible .ecadb9e080e2dfa5__outset-ring--focus-parent-visible{--_gcd-a-outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));--_gcd-div-outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9))}}"));
   document.head.appendChild(style);
 }
-var focus_default2 = { "outset-ring--focus": "_08e8a2e44959f892__outset-ring--focus", "outset-ring--focus-except-active": "e25b2bdd7aa21721__outset-ring--focus-except-active", "outset-ring--focus-visible": "d0541bc9dd9dc7b6__outset-ring--focus-visible", "outset-ring--focus-within": "cd83dfc2126a0846__outset-ring--focus-within", "outset-ring--focus-within-except-active": "_970d04df7376df67__outset-ring--focus-within-except-active", "outset-ring--focus-within-visible": "c5cb3ee4bddaa8e4__outset-ring--focus-within-visible", "outset-ring--focus-parent-visible": "ecadb9e080e2dfa5__outset-ring--focus-parent-visible" };
+var focus_default = { "outset-ring--focus": "_08e8a2e44959f892__outset-ring--focus", "outset-ring--focus-except-active": "e25b2bdd7aa21721__outset-ring--focus-except-active", "outset-ring--focus-visible": "d0541bc9dd9dc7b6__outset-ring--focus-visible", "outset-ring--focus-within": "cd83dfc2126a0846__outset-ring--focus-within", "outset-ring--focus-within-except-active": "_970d04df7376df67__outset-ring--focus-within-except-active", "outset-ring--focus-within-visible": "c5cb3ee4bddaa8e4__outset-ring--focus-within-visible", "outset-ring--focus-parent-visible": "ecadb9e080e2dfa5__outset-ring--focus-parent-visible" };
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='221f9717dc']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "221f9717dc");
   style.appendChild(document.createTextNode('@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{.d4250949359b05ce__link{text-decoration-thickness:.5px;text-underline-offset:.2em}.c6055659b8e2cd2c__is-brand,.c6055659b8e2cd2c__is-brand:visited{--_gcd-a-color:var(--wpds-color-fg-interactive-brand,var(--wp-admin-theme-color,#3858e9));color:var(--wpds-color-fg-interactive-brand,var(--wp-admin-theme-color,#3858e9))}.c6055659b8e2cd2c__is-brand:active,.c6055659b8e2cd2c__is-brand:hover{--_gcd-a-color:var(--wpds-color-fg-interactive-brand-active,var(--wp-admin-theme-color,#3858e9));color:var(--wpds-color-fg-interactive-brand-active,var(--wp-admin-theme-color,#3858e9))}._92e0dfcaeee15b88__is-neutral,._92e0dfcaeee15b88__is-neutral:visited{--_gcd-a-color:var(--wpds-color-fg-interactive-neutral,#1e1e1e);color:var(--wpds-color-fg-interactive-neutral,#1e1e1e);text-decoration-color:var(--wpds-color-stroke-interactive-neutral,#8d8d8d)}._92e0dfcaeee15b88__is-neutral:active,._92e0dfcaeee15b88__is-neutral:hover{--_gcd-a-color:var(--wpds-color-fg-interactive-neutral-active,#1e1e1e);color:var(--wpds-color-fg-interactive-neutral-active,#1e1e1e)}.cf122a9bf1035d42__is-unstyled{--_gcd-a-color:inherit;color:inherit;text-decoration:none}.e6ad7c380ee337fe__has-link-icon{text-decoration:none}._8dc7567f9ff415bf__link-contents{text-decoration:underline;text-decoration-color:inherit;text-decoration-thickness:.5px}._0cb411afac4c86c7__link-icon{font-weight:var(--wpds-typography-font-weight-regular,400);margin-inline-start:var(--wpds-dimension-padding-xs,4px)}._0cb411afac4c86c7__link-icon:after{content:"\\2197"}._0cb411afac4c86c7__link-icon:dir(rtl):after{content:"\\2196"}}'));
   document.head.appendChild(style);
 }
-var style_default8 = { "link": "d4250949359b05ce__link", "is-brand": "c6055659b8e2cd2c__is-brand", "is-neutral": "_92e0dfcaeee15b88__is-neutral", "is-unstyled": "cf122a9bf1035d42__is-unstyled", "has-link-icon": "e6ad7c380ee337fe__has-link-icon", "link-contents": "_8dc7567f9ff415bf__link-contents", "link-icon": "_0cb411afac4c86c7__link-icon" };
+var style_default7 = { "link": "d4250949359b05ce__link", "is-brand": "c6055659b8e2cd2c__is-brand", "is-neutral": "_92e0dfcaeee15b88__is-neutral", "is-unstyled": "cf122a9bf1035d42__is-unstyled", "has-link-icon": "e6ad7c380ee337fe__has-link-icon", "link-contents": "_8dc7567f9ff415bf__link-contents", "link-icon": "_0cb411afac4c86c7__link-icon" };
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='1fb29d3a3c']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "1fb29d3a3c");
   style.appendChild(document.createTextNode("._6defc79820e382c6__button{box-sizing:var(--_gcd-button-box-sizing,border-box);font-family:var(--_gcd-button-font-family,inherit);font-size:var(--_gcd-button-font-size,inherit);font-weight:var(--_gcd-button-font-weight,inherit)}.d2cff2e5dea83bd1__input{box-sizing:var(--_gcd-input-box-sizing,border-box);font-family:var(--_gcd-input-font-family,inherit);font-size:var(--_gcd-input-font-size,inherit);font-weight:var(--_gcd-input-font-weight,inherit);margin:var(--_gcd-input-margin,0);&:is(textarea,[type=text],[type=password],[type=color],[type=date],[type=datetime],[type=datetime-local],[type=email],[type=month],[type=number],[type=search],[type=tel],[type=time],[type=url],[type=week]){background-color:var(--_gcd-input-background-color,#0000);border:var(--_gcd-input-border,none);border-radius:var(--_gcd-input-border-radius,0);box-shadow:var(--_gcd-input-box-shadow,0 0 0 #0000);color:var(--_gcd-input-color,var(--wpds-color-fg-interactive-neutral,#1e1e1e));&:focus{border-color:var(--_gcd-input-border-color-focus,var(--wp-admin-theme-color));box-shadow:var(--_gcd-input-box-shadow-focus,none);outline:var(--_gcd-input-outline-focus,none)}&:disabled{background:var(--_gcd-input-background-disabled,#0000);border-color:var(--_gcd-input-border-color-disabled,#0000);box-shadow:var(--_gcd-input-box-shadow-disabled,none);color:var(--_gcd-input-color-disabled,var(--wpds-color-fg-interactive-neutral-disabled,#8d8d8d))}&::placeholder{color:var(--_gcd-input-placeholder-color,var(--wpds-color-fg-interactive-neutral-disabled,#8d8d8d))}}&:is(textarea,[type=text],[type=password],[type=date],[type=datetime],[type=datetime-local],[type=email],[type=month],[type=number],[type=search],[type=tel],[type=time],[type=url],[type=week]){line-height:var(--_gcd-input-line-height,inherit);min-height:var(--_gcd-input-min-height,auto);padding:var(--_gcd-input-padding,0)}}._547d86373d02e108__textarea{box-sizing:var(--_gcd-textarea-box-sizing,border-box);overflow:var(--_gcd-textarea-overflow,auto);resize:var(--_gcd-textarea-resize,block)}._8c15fd0ed9f28ba4__div{outline:var(--_gcd-div-outline,0 solid #0000)}p._43cec3e1eec1066d__p{font-size:var(--_gcd-p-font-size,13px);line-height:var(--_gcd-p-line-height,1.5);margin:var(--_gcd-p-margin,0)}:is(h1,h2,h3,h4,h5,h6).e97669c6d9a38497__heading{color:var(--_gcd-heading-color,var(--wpds-color-fg-content-neutral,#1e1e1e));font-size:var(--_gcd-heading-font-size,inherit);font-weight:var(--_gcd-heading-font-weight,var(--wpds-typography-font-weight-medium,499));margin:var(--_gcd-heading-margin,0)}._2c0831b0499dbd6e__a,._2c0831b0499dbd6e__a:is(:hover,:focus,:active){border-radius:var(--_gcd-a-border-radius,0);box-shadow:var(--_gcd-a-box-shadow,none);color:var(--_gcd-a-color,inherit);outline:var(--_gcd-a-outline,0 solid #0000);transition:var(--_gcd-a-transition,none)}"));
   document.head.appendChild(style);
 }
-var global_css_defense_default3 = { "button": "_6defc79820e382c6__button", "input": "d2cff2e5dea83bd1__input", "textarea": "_547d86373d02e108__textarea", "div": "_8c15fd0ed9f28ba4__div", "p": "_43cec3e1eec1066d__p", "heading": "e97669c6d9a38497__heading", "a": "_2c0831b0499dbd6e__a" };
-var Link = (0, import_element11.forwardRef)(function Link2({
+var global_css_defense_default2 = { "button": "_6defc79820e382c6__button", "input": "d2cff2e5dea83bd1__input", "textarea": "_547d86373d02e108__textarea", "div": "_8c15fd0ed9f28ba4__div", "p": "_43cec3e1eec1066d__p", "heading": "e97669c6d9a38497__heading", "a": "_2c0831b0499dbd6e__a" };
+var Link = (0, import_element9.forwardRef)(function Link2({
   children,
   variant = "default",
   tone = "brand",
@@ -3817,27 +3681,27 @@ var Link = (0, import_element11.forwardRef)(function Link2({
     ref,
     props: mergeProps(props, {
       className: clsx_default(
-        global_css_defense_default3.a,
-        resets_default3["box-sizing"],
-        focus_default2["outset-ring--focus"],
-        variant !== "unstyled" && style_default8.link,
-        variant !== "unstyled" && style_default8[`is-${tone}`],
-        variant === "unstyled" && style_default8["is-unstyled"],
-        openInNewTab && style_default8["has-link-icon"],
+        global_css_defense_default2.a,
+        resets_default2["box-sizing"],
+        focus_default["outset-ring--focus"],
+        variant !== "unstyled" && style_default7.link,
+        variant !== "unstyled" && style_default7[`is-${tone}`],
+        variant === "unstyled" && style_default7["is-unstyled"],
+        openInNewTab && style_default7["has-link-icon"],
         className
       ),
       onClick: handleClick,
       target: openInNewTab ? "_blank" : void 0,
-      children: openInNewTab ? /* @__PURE__ */ (0, import_jsx_runtime11.jsxs)(import_jsx_runtime11.Fragment, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)("span", { className: style_default8["link-contents"], children }),
-        /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(
+      children: openInNewTab ? /* @__PURE__ */ (0, import_jsx_runtime9.jsxs)(import_jsx_runtime9.Fragment, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)("span", { className: style_default7["link-contents"], children }),
+        /* @__PURE__ */ (0, import_jsx_runtime9.jsx)(
           "span",
           {
-            className: style_default8["link-icon"],
+            className: style_default7["link-icon"],
             role: "img",
             "aria-label": (
               /* translators: accessibility text appended to link text */
-              (0, import_i18n2.__)("(opens in a new tab)")
+              (0, import_i18n.__)("(opens in a new tab)")
             )
           }
         )
@@ -3857,18 +3721,18 @@ __export(tabs_exports, {
 });
 
 // ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/tabs/list.mjs
-var import_element12 = __toESM(require_element(), 1);
+var import_element10 = __toESM(require_element(), 1);
 var import_compose = __toESM(require_compose(), 1);
-var import_jsx_runtime12 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime10 = __toESM(require_jsx_runtime(), 1);
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='8c9d1dfa2f']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "8c9d1dfa2f");
   style.appendChild(document.createTextNode('@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._7313adbc8a112e90__tablist{--direction-factor:1;--direction-start:left;--direction-end:right;align-items:stretch;display:flex;overflow-inline:auto;overscroll-behavior-inline:none;position:relative;&:dir(rtl){--direction-factor:-1;--direction-start:right;--direction-end:left}&[data-orientation=horizontal]{--fade-width:4rem;--fade-gradient-base:#0000 0%,#000 var(--fade-width);--fade-gradient-composed:var(--fade-gradient-base),#000 60%,#0000 50%;width:fit-content;&._9f2ac729c68a735a__is-overflowing-first{mask-image:linear-gradient(to var(--direction-end),var(--fade-gradient-base))}&._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to var(--direction-start),var(--fade-gradient-base))}&._9f2ac729c68a735a__is-overflowing-first._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to right,var(--fade-gradient-composed)),linear-gradient(to left,var(--fade-gradient-composed))}&._59228b5227f38a99__is-minimal-variant{gap:1rem}}&[data-orientation=vertical]{flex-direction:column}}._1c37dcfaa1ad8cda__indicator{@media not (prefers-reduced-motion){transition-duration:.2s;transition-property:translate,width,height,border-radius,border-block;transition-timing-function:ease-out}outline:2px solid #0000;outline-offset:-1px;pointer-events:none;position:absolute;&[data-orientation=horizontal]{background-color:var(--wpds-color-stroke-interactive-neutral-strong,#6e6e6e);bottom:0;height:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px));left:0;translate:var(--active-tab-left) 0;width:var(--active-tab-width);z-index:1}&[data-orientation=vertical]{background-color:var(--wpds-color-bg-interactive-neutral-weak-active,#ededed);border-radius:var(--wpds-border-radius-sm,2px);height:var(--active-tab-height);left:50%;top:0;translate:-50% var(--active-tab-top);width:100%;z-index:0}._7313adbc8a112e90__tablist[data-select-on-move=true]:has(:focus-visible)\n		&[data-orientation=vertical]{border:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));box-sizing:border-box}}.a5fd8814f195aa5e__tab{align-items:center;background:#0000;border:none;border-radius:0;box-shadow:none;color:var(--wpds-color-fg-interactive-neutral,#1e1e1e);cursor:var(--wpds-cursor-control,pointer);display:flex;flex:1 0 auto;font-family:var(--wpds-typography-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-typography-font-size-md,13px);font-weight:400;line-height:1.2;outline:none;padding:0;position:relative;white-space:nowrap;z-index:1;&[data-disabled]{color:var(--wpds-color-fg-interactive-neutral-disabled,#8d8d8d);cursor:default;@media (forced-colors:active){color:GrayText}}&:not([data-disabled]):is(:hover,:focus-visible){color:var(--wpds-color-fg-interactive-neutral-active,#1e1e1e)}&:after{border-radius:var(--wpds-border-radius-sm,2px);opacity:0;outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));pointer-events:none;position:absolute;z-index:-1;@media not (prefers-reduced-motion){transition:opacity .1s linear}}&:focus-visible:after{opacity:1}[data-orientation=horizontal] &{height:48px;padding-inline:var(--wpds-dimension-padding-lg,16px);scroll-margin:24px;&:after{content:"";inset:var(--wpds-dimension-padding-md,12px)}}._59228b5227f38a99__is-minimal-variant[data-orientation=horizontal] &{padding-inline:0;&:after{inset-inline:round(up,var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)),1px)}}[data-orientation=vertical] &{min-height:40px;padding:var(--wpds-dimension-padding-sm,8px) var(--wpds-dimension-padding-md,12px)}[data-orientation=vertical][data-select-on-move=false] &:after{content:"";inset:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px))}}._5dfc77e6edd345d4__tab-children{align-items:center;display:flex;flex-grow:1;[data-orientation=horizontal] &{justify-content:center}[data-orientation=vertical] &{justify-content:start}}._4a20e969d15e5ac1__tab-chevron{flex-shrink:0;margin-inline-end:calc(var(--wpds-dimension-gap-xs, 4px)*-1);opacity:0;[data-orientation=horizontal] &{display:none}[role=tab]:is([aria-selected=true],:focus-visible,:hover) &{opacity:1}@media not (prefers-reduced-motion){[data-select-on-move=true]\n			[role=tab]:is([aria-selected=true])\n			&{transition:opacity .15s linear .15s}}&:dir(rtl){rotate:180deg}}._49f4bf715948892a__tabpanel{&:focus{box-shadow:none;outline:none}&:focus-visible{box-shadow:0 0 0 var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));outline:2px solid #0000;outline-offset:0}}}'));
   document.head.appendChild(style);
 }
-var style_default9 = { "tablist": "_7313adbc8a112e90__tablist", "is-overflowing-first": "_9f2ac729c68a735a__is-overflowing-first", "is-overflowing-last": "_81c799c1f3cdd261__is-overflowing-last", "is-minimal-variant": "_59228b5227f38a99__is-minimal-variant", "indicator": "_1c37dcfaa1ad8cda__indicator", "tab": "a5fd8814f195aa5e__tab", "tab-children": "_5dfc77e6edd345d4__tab-children", "tab-chevron": "_4a20e969d15e5ac1__tab-chevron", "tabpanel": "_49f4bf715948892a__tabpanel" };
+var style_default8 = { "tablist": "_7313adbc8a112e90__tablist", "is-overflowing-first": "_9f2ac729c68a735a__is-overflowing-first", "is-overflowing-last": "_81c799c1f3cdd261__is-overflowing-last", "is-minimal-variant": "_59228b5227f38a99__is-minimal-variant", "indicator": "_1c37dcfaa1ad8cda__indicator", "tab": "a5fd8814f195aa5e__tab", "tab-children": "_5dfc77e6edd345d4__tab-children", "tab-chevron": "_4a20e969d15e5ac1__tab-chevron", "tabpanel": "_49f4bf715948892a__tabpanel" };
 var SCROLL_EPSILON = 1;
-var List = (0, import_element12.forwardRef)(
+var List = (0, import_element10.forwardRef)(
   function TabList({
     children,
     variant = "default",
@@ -3876,13 +3740,13 @@ var List = (0, import_element12.forwardRef)(
     activateOnFocus,
     ...otherProps
   }, forwardedRef) {
-    const [listEl, setListEl] = (0, import_element12.useState)(null);
-    const [overflow, setOverflow] = (0, import_element12.useState)({
+    const [listEl, setListEl] = (0, import_element10.useState)(null);
+    const [overflow, setOverflow] = (0, import_element10.useState)({
       first: false,
       last: false,
       isScrolling: false
     });
-    (0, import_element12.useEffect)(() => {
+    (0, import_element10.useEffect)(() => {
       if (!listEl) {
         return;
       }
@@ -3932,24 +3796,24 @@ var List = (0, import_element12.forwardRef)(
       forwardedRef,
       (el) => setListEl(el)
     ]);
-    return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)(
+    return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(
       index_parts_exports.List,
       {
         ref: mergedListRef,
         activateOnFocus,
         "data-select-on-move": activateOnFocus ? "true" : "false",
         className: clsx_default(
-          style_default9.tablist,
-          overflow.first && style_default9["is-overflowing-first"],
-          overflow.last && style_default9["is-overflowing-last"],
-          style_default9[`is-${variant}-variant`],
+          style_default8.tablist,
+          overflow.first && style_default8["is-overflowing-first"],
+          overflow.last && style_default8["is-overflowing-last"],
+          style_default8[`is-${variant}-variant`],
           className
         ),
         ...otherProps,
         tabIndex: otherProps.tabIndex ?? (overflow.isScrolling ? -1 : void 0),
         children: [
           children,
-          /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(index_parts_exports.Indicator, { className: style_default9.indicator })
+          /* @__PURE__ */ (0, import_jsx_runtime10.jsx)(index_parts_exports.Indicator, { className: style_default8.indicator })
         ]
       }
     );
@@ -3957,16 +3821,16 @@ var List = (0, import_element12.forwardRef)(
 );
 
 // ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/tabs/panel.mjs
-var import_element14 = __toESM(require_element(), 1);
+var import_element12 = __toESM(require_element(), 1);
 
 // ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/tabs/context.mjs
-var import_element13 = __toESM(require_element(), 1);
-var import_jsx_runtime13 = __toESM(require_jsx_runtime(), 1);
+var import_element11 = __toESM(require_element(), 1);
+var import_jsx_runtime11 = __toESM(require_jsx_runtime(), 1);
 var VALIDATION_ENABLED = true;
-var TabsValidationContext = VALIDATION_ENABLED ? (0, import_element13.createContext)(null) : null;
+var TabsValidationContext = VALIDATION_ENABLED ? (0, import_element11.createContext)(null) : null;
 function useRegisterTabDev() {
-  const context = (0, import_element13.useContext)(TabsValidationContext);
-  (0, import_element13.useEffect)(() => {
+  const context = (0, import_element11.useContext)(TabsValidationContext);
+  (0, import_element11.useEffect)(() => {
     if (context) {
       return context.registerTab();
     }
@@ -3977,8 +3841,8 @@ function useRegisterTabProd() {
 }
 var useRegisterTab = VALIDATION_ENABLED ? useRegisterTabDev : useRegisterTabProd;
 function useRegisterPanelDev() {
-  const context = (0, import_element13.useContext)(TabsValidationContext);
-  (0, import_element13.useEffect)(() => {
+  const context = (0, import_element11.useContext)(TabsValidationContext);
+  (0, import_element11.useEffect)(() => {
     if (context) {
       return context.registerPanel();
     }
@@ -3991,10 +3855,10 @@ var useRegisterPanel = VALIDATION_ENABLED ? useRegisterPanelDev : useRegisterPan
 function TabsValidationProviderDev({
   children
 }) {
-  const tabCountRef = (0, import_element13.useRef)(0);
-  const panelCountRef = (0, import_element13.useRef)(0);
-  const validationScheduledRef = (0, import_element13.useRef)(null);
-  const scheduleValidation = (0, import_element13.useCallback)(() => {
+  const tabCountRef = (0, import_element11.useRef)(0);
+  const panelCountRef = (0, import_element11.useRef)(0);
+  const validationScheduledRef = (0, import_element11.useRef)(null);
+  const scheduleValidation = (0, import_element11.useCallback)(() => {
     if (validationScheduledRef.current) {
       clearTimeout(validationScheduledRef.current);
     }
@@ -4009,7 +3873,7 @@ function TabsValidationProviderDev({
       validationScheduledRef.current = null;
     }, 0);
   }, []);
-  const registerTab = (0, import_element13.useCallback)(() => {
+  const registerTab = (0, import_element11.useCallback)(() => {
     tabCountRef.current += 1;
     scheduleValidation();
     return () => {
@@ -4017,7 +3881,7 @@ function TabsValidationProviderDev({
       scheduleValidation();
     };
   }, [scheduleValidation]);
-  const registerPanel = (0, import_element13.useCallback)(() => {
+  const registerPanel = (0, import_element11.useCallback)(() => {
     panelCountRef.current += 1;
     scheduleValidation();
     return () => {
@@ -4025,30 +3889,63 @@ function TabsValidationProviderDev({
       scheduleValidation();
     };
   }, [scheduleValidation]);
-  (0, import_element13.useEffect)(() => {
+  (0, import_element11.useEffect)(() => {
     return () => {
       if (validationScheduledRef.current) {
         clearTimeout(validationScheduledRef.current);
       }
     };
   }, []);
-  const contextValue = (0, import_element13.useMemo)(
+  const contextValue = (0, import_element11.useMemo)(
     () => ({
       registerTab,
       registerPanel
     }),
     [registerTab, registerPanel]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(TabsValidationContext.Provider, { value: contextValue, children });
+  return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(TabsValidationContext.Provider, { value: contextValue, children });
 }
 function TabsValidationProviderProd({
   children
 }) {
-  return /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(import_jsx_runtime13.Fragment, { children });
+  return /* @__PURE__ */ (0, import_jsx_runtime11.jsx)(import_jsx_runtime11.Fragment, { children });
 }
 var TabsValidationProvider = VALIDATION_ENABLED ? TabsValidationProviderDev : TabsValidationProviderProd;
 
 // ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/tabs/panel.mjs
+var import_jsx_runtime12 = __toESM(require_jsx_runtime(), 1);
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='8c9d1dfa2f']")) {
+  const style = document.createElement("style");
+  style.setAttribute("data-wp-hash", "8c9d1dfa2f");
+  style.appendChild(document.createTextNode('@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._7313adbc8a112e90__tablist{--direction-factor:1;--direction-start:left;--direction-end:right;align-items:stretch;display:flex;overflow-inline:auto;overscroll-behavior-inline:none;position:relative;&:dir(rtl){--direction-factor:-1;--direction-start:right;--direction-end:left}&[data-orientation=horizontal]{--fade-width:4rem;--fade-gradient-base:#0000 0%,#000 var(--fade-width);--fade-gradient-composed:var(--fade-gradient-base),#000 60%,#0000 50%;width:fit-content;&._9f2ac729c68a735a__is-overflowing-first{mask-image:linear-gradient(to var(--direction-end),var(--fade-gradient-base))}&._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to var(--direction-start),var(--fade-gradient-base))}&._9f2ac729c68a735a__is-overflowing-first._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to right,var(--fade-gradient-composed)),linear-gradient(to left,var(--fade-gradient-composed))}&._59228b5227f38a99__is-minimal-variant{gap:1rem}}&[data-orientation=vertical]{flex-direction:column}}._1c37dcfaa1ad8cda__indicator{@media not (prefers-reduced-motion){transition-duration:.2s;transition-property:translate,width,height,border-radius,border-block;transition-timing-function:ease-out}outline:2px solid #0000;outline-offset:-1px;pointer-events:none;position:absolute;&[data-orientation=horizontal]{background-color:var(--wpds-color-stroke-interactive-neutral-strong,#6e6e6e);bottom:0;height:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px));left:0;translate:var(--active-tab-left) 0;width:var(--active-tab-width);z-index:1}&[data-orientation=vertical]{background-color:var(--wpds-color-bg-interactive-neutral-weak-active,#ededed);border-radius:var(--wpds-border-radius-sm,2px);height:var(--active-tab-height);left:50%;top:0;translate:-50% var(--active-tab-top);width:100%;z-index:0}._7313adbc8a112e90__tablist[data-select-on-move=true]:has(:focus-visible)\n		&[data-orientation=vertical]{border:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));box-sizing:border-box}}.a5fd8814f195aa5e__tab{align-items:center;background:#0000;border:none;border-radius:0;box-shadow:none;color:var(--wpds-color-fg-interactive-neutral,#1e1e1e);cursor:var(--wpds-cursor-control,pointer);display:flex;flex:1 0 auto;font-family:var(--wpds-typography-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-typography-font-size-md,13px);font-weight:400;line-height:1.2;outline:none;padding:0;position:relative;white-space:nowrap;z-index:1;&[data-disabled]{color:var(--wpds-color-fg-interactive-neutral-disabled,#8d8d8d);cursor:default;@media (forced-colors:active){color:GrayText}}&:not([data-disabled]):is(:hover,:focus-visible){color:var(--wpds-color-fg-interactive-neutral-active,#1e1e1e)}&:after{border-radius:var(--wpds-border-radius-sm,2px);opacity:0;outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));pointer-events:none;position:absolute;z-index:-1;@media not (prefers-reduced-motion){transition:opacity .1s linear}}&:focus-visible:after{opacity:1}[data-orientation=horizontal] &{height:48px;padding-inline:var(--wpds-dimension-padding-lg,16px);scroll-margin:24px;&:after{content:"";inset:var(--wpds-dimension-padding-md,12px)}}._59228b5227f38a99__is-minimal-variant[data-orientation=horizontal] &{padding-inline:0;&:after{inset-inline:round(up,var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)),1px)}}[data-orientation=vertical] &{min-height:40px;padding:var(--wpds-dimension-padding-sm,8px) var(--wpds-dimension-padding-md,12px)}[data-orientation=vertical][data-select-on-move=false] &:after{content:"";inset:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px))}}._5dfc77e6edd345d4__tab-children{align-items:center;display:flex;flex-grow:1;[data-orientation=horizontal] &{justify-content:center}[data-orientation=vertical] &{justify-content:start}}._4a20e969d15e5ac1__tab-chevron{flex-shrink:0;margin-inline-end:calc(var(--wpds-dimension-gap-xs, 4px)*-1);opacity:0;[data-orientation=horizontal] &{display:none}[role=tab]:is([aria-selected=true],:focus-visible,:hover) &{opacity:1}@media not (prefers-reduced-motion){[data-select-on-move=true]\n			[role=tab]:is([aria-selected=true])\n			&{transition:opacity .15s linear .15s}}&:dir(rtl){rotate:180deg}}._49f4bf715948892a__tabpanel{&:focus{box-shadow:none;outline:none}&:focus-visible{box-shadow:0 0 0 var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));outline:2px solid #0000;outline-offset:0}}}'));
+  document.head.appendChild(style);
+}
+var style_default9 = { "tablist": "_7313adbc8a112e90__tablist", "is-overflowing-first": "_9f2ac729c68a735a__is-overflowing-first", "is-overflowing-last": "_81c799c1f3cdd261__is-overflowing-last", "is-minimal-variant": "_59228b5227f38a99__is-minimal-variant", "indicator": "_1c37dcfaa1ad8cda__indicator", "tab": "a5fd8814f195aa5e__tab", "tab-children": "_5dfc77e6edd345d4__tab-children", "tab-chevron": "_4a20e969d15e5ac1__tab-chevron", "tabpanel": "_49f4bf715948892a__tabpanel" };
+var Panel = (0, import_element12.forwardRef)(
+  function TabPanel2({ className, ...otherProps }, forwardedRef) {
+    useRegisterPanel();
+    return /* @__PURE__ */ (0, import_jsx_runtime12.jsx)(
+      index_parts_exports.Panel,
+      {
+        ref: forwardedRef,
+        className: clsx_default(style_default9.tabpanel, className),
+        ...otherProps
+      }
+    );
+  }
+);
+
+// ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/tabs/root.mjs
+var import_element13 = __toESM(require_element(), 1);
+var import_jsx_runtime13 = __toESM(require_jsx_runtime(), 1);
+var Root2 = (0, import_element13.forwardRef)(
+  function TabsRoot3({ ...otherProps }, forwardedRef) {
+    return /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(TabsValidationProvider, { children: /* @__PURE__ */ (0, import_jsx_runtime13.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps }) });
+  }
+);
+
+// ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/tabs/tab.mjs
+var import_element14 = __toESM(require_element(), 1);
 var import_jsx_runtime14 = __toESM(require_jsx_runtime(), 1);
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='8c9d1dfa2f']")) {
   const style = document.createElement("style");
@@ -4057,50 +3954,17 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
   document.head.appendChild(style);
 }
 var style_default10 = { "tablist": "_7313adbc8a112e90__tablist", "is-overflowing-first": "_9f2ac729c68a735a__is-overflowing-first", "is-overflowing-last": "_81c799c1f3cdd261__is-overflowing-last", "is-minimal-variant": "_59228b5227f38a99__is-minimal-variant", "indicator": "_1c37dcfaa1ad8cda__indicator", "tab": "a5fd8814f195aa5e__tab", "tab-children": "_5dfc77e6edd345d4__tab-children", "tab-chevron": "_4a20e969d15e5ac1__tab-chevron", "tabpanel": "_49f4bf715948892a__tabpanel" };
-var Panel = (0, import_element14.forwardRef)(
-  function TabPanel2({ className, ...otherProps }, forwardedRef) {
-    useRegisterPanel();
-    return /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(
-      index_parts_exports.Panel,
-      {
-        ref: forwardedRef,
-        className: clsx_default(style_default10.tabpanel, className),
-        ...otherProps
-      }
-    );
-  }
-);
-
-// ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/tabs/root.mjs
-var import_element15 = __toESM(require_element(), 1);
-var import_jsx_runtime15 = __toESM(require_jsx_runtime(), 1);
-var Root2 = (0, import_element15.forwardRef)(
-  function TabsRoot3({ ...otherProps }, forwardedRef) {
-    return /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(TabsValidationProvider, { children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(index_parts_exports.Root, { ref: forwardedRef, ...otherProps }) });
-  }
-);
-
-// ../../../node_modules/.pnpm/@wordpress+ui@0.11.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/tabs/tab.mjs
-var import_element16 = __toESM(require_element(), 1);
-var import_jsx_runtime16 = __toESM(require_jsx_runtime(), 1);
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='8c9d1dfa2f']")) {
-  const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "8c9d1dfa2f");
-  style.appendChild(document.createTextNode('@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._7313adbc8a112e90__tablist{--direction-factor:1;--direction-start:left;--direction-end:right;align-items:stretch;display:flex;overflow-inline:auto;overscroll-behavior-inline:none;position:relative;&:dir(rtl){--direction-factor:-1;--direction-start:right;--direction-end:left}&[data-orientation=horizontal]{--fade-width:4rem;--fade-gradient-base:#0000 0%,#000 var(--fade-width);--fade-gradient-composed:var(--fade-gradient-base),#000 60%,#0000 50%;width:fit-content;&._9f2ac729c68a735a__is-overflowing-first{mask-image:linear-gradient(to var(--direction-end),var(--fade-gradient-base))}&._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to var(--direction-start),var(--fade-gradient-base))}&._9f2ac729c68a735a__is-overflowing-first._81c799c1f3cdd261__is-overflowing-last{mask-image:linear-gradient(to right,var(--fade-gradient-composed)),linear-gradient(to left,var(--fade-gradient-composed))}&._59228b5227f38a99__is-minimal-variant{gap:1rem}}&[data-orientation=vertical]{flex-direction:column}}._1c37dcfaa1ad8cda__indicator{@media not (prefers-reduced-motion){transition-duration:.2s;transition-property:translate,width,height,border-radius,border-block;transition-timing-function:ease-out}outline:2px solid #0000;outline-offset:-1px;pointer-events:none;position:absolute;&[data-orientation=horizontal]{background-color:var(--wpds-color-stroke-interactive-neutral-strong,#6e6e6e);bottom:0;height:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px));left:0;translate:var(--active-tab-left) 0;width:var(--active-tab-width);z-index:1}&[data-orientation=vertical]{background-color:var(--wpds-color-bg-interactive-neutral-weak-active,#ededed);border-radius:var(--wpds-border-radius-sm,2px);height:var(--active-tab-height);left:50%;top:0;translate:-50% var(--active-tab-top);width:100%;z-index:0}._7313adbc8a112e90__tablist[data-select-on-move=true]:has(:focus-visible)\n		&[data-orientation=vertical]{border:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));box-sizing:border-box}}.a5fd8814f195aa5e__tab{align-items:center;background:#0000;border:none;border-radius:0;box-shadow:none;color:var(--wpds-color-fg-interactive-neutral,#1e1e1e);cursor:var(--wpds-cursor-control,pointer);display:flex;flex:1 0 auto;font-family:var(--wpds-typography-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-typography-font-size-md,13px);font-weight:400;line-height:1.2;outline:none;padding:0;position:relative;white-space:nowrap;z-index:1;&[data-disabled]{color:var(--wpds-color-fg-interactive-neutral-disabled,#8d8d8d);cursor:default;@media (forced-colors:active){color:GrayText}}&:not([data-disabled]):is(:hover,:focus-visible){color:var(--wpds-color-fg-interactive-neutral-active,#1e1e1e)}&:after{border-radius:var(--wpds-border-radius-sm,2px);opacity:0;outline:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) solid var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));pointer-events:none;position:absolute;z-index:-1;@media not (prefers-reduced-motion){transition:opacity .1s linear}}&:focus-visible:after{opacity:1}[data-orientation=horizontal] &{height:48px;padding-inline:var(--wpds-dimension-padding-lg,16px);scroll-margin:24px;&:after{content:"";inset:var(--wpds-dimension-padding-md,12px)}}._59228b5227f38a99__is-minimal-variant[data-orientation=horizontal] &{padding-inline:0;&:after{inset-inline:round(up,var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)),1px)}}[data-orientation=vertical] &{min-height:40px;padding:var(--wpds-dimension-padding-sm,8px) var(--wpds-dimension-padding-md,12px)}[data-orientation=vertical][data-select-on-move=false] &:after{content:"";inset:var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px))}}._5dfc77e6edd345d4__tab-children{align-items:center;display:flex;flex-grow:1;[data-orientation=horizontal] &{justify-content:center}[data-orientation=vertical] &{justify-content:start}}._4a20e969d15e5ac1__tab-chevron{flex-shrink:0;margin-inline-end:calc(var(--wpds-dimension-gap-xs, 4px)*-1);opacity:0;[data-orientation=horizontal] &{display:none}[role=tab]:is([aria-selected=true],:focus-visible,:hover) &{opacity:1}@media not (prefers-reduced-motion){[data-select-on-move=true]\n			[role=tab]:is([aria-selected=true])\n			&{transition:opacity .15s linear .15s}}&:dir(rtl){rotate:180deg}}._49f4bf715948892a__tabpanel{&:focus{box-shadow:none;outline:none}&:focus-visible{box-shadow:0 0 0 var(--wpds-border-width-focus,var(--wp-admin-border-width-focus,2px)) var(--wpds-color-stroke-focus-brand,var(--wp-admin-theme-color,#3858e9));outline:2px solid #0000;outline-offset:0}}}'));
-  document.head.appendChild(style);
-}
-var style_default11 = { "tablist": "_7313adbc8a112e90__tablist", "is-overflowing-first": "_9f2ac729c68a735a__is-overflowing-first", "is-overflowing-last": "_81c799c1f3cdd261__is-overflowing-last", "is-minimal-variant": "_59228b5227f38a99__is-minimal-variant", "indicator": "_1c37dcfaa1ad8cda__indicator", "tab": "a5fd8814f195aa5e__tab", "tab-children": "_5dfc77e6edd345d4__tab-children", "tab-chevron": "_4a20e969d15e5ac1__tab-chevron", "tabpanel": "_49f4bf715948892a__tabpanel" };
-var Tab = (0, import_element16.forwardRef)(function Tab2({ className, children, ...otherProps }, forwardedRef) {
+var Tab = (0, import_element14.forwardRef)(function Tab2({ className, children, ...otherProps }, forwardedRef) {
   useRegisterTab();
-  return /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime14.jsxs)(
     index_parts_exports.Tab,
     {
       ref: forwardedRef,
-      className: clsx_default(style_default11.tab, className),
+      className: clsx_default(style_default10.tab, className),
       ...otherProps,
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("span", { className: style_default11["tab-children"], children }),
-        /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(Icon, { icon: chevron_right_default, className: style_default11["tab-chevron"] })
+        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)("span", { className: style_default10["tab-children"], children }),
+        /* @__PURE__ */ (0, import_jsx_runtime14.jsx)(Icon, { icon: chevron_right_default, className: style_default10["tab-chevron"] })
       ]
     }
   );
@@ -4110,7 +3974,7 @@ var Tab = (0, import_element16.forwardRef)(function Tab2({ className, children, 
 var import_react14 = __toESM(require_react());
 
 // ../../js-packages/components/build/components/admin-page/index.js
-var import_jsx_runtime23 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime21 = __toESM(require_jsx_runtime(), 1);
 
 // ../../js-packages/api/index.jsx
 var import_jetpack_config = __toESM(require_src(), 1);
@@ -4409,32 +4273,32 @@ function catchNetworkErrors() {
 }
 
 // ../../../node_modules/.pnpm/@wordpress+ui@0.12.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/text/text.mjs
-var import_element17 = __toESM(require_element(), 1);
+var import_element15 = __toESM(require_element(), 1);
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='4130d64bea']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "4130d64bea");
   style.appendChild(document.createTextNode('@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._83ed8a8da5dd50ea__text{margin:0}._14437cfb77831647__heading-2xl{--_gcd-heading-font-size:var(--wpds-typography-font-size-2xl,32px);font-size:var(--wpds-typography-font-size-2xl,32px);line-height:var(--wpds-typography-line-height-2xl,40px)}._14437cfb77831647__heading-2xl,._3c78b7fa9b4072dd__heading-xl{font-family:var(--wpds-typography-font-family-heading,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-weight:var(--wpds-typography-font-weight-medium,499)}._3c78b7fa9b4072dd__heading-xl{--_gcd-heading-font-size:var(--wpds-typography-font-size-xl,20px);font-size:var(--wpds-typography-font-size-xl,20px);line-height:var(--wpds-typography-line-height-md,24px)}.aa58f227716bcde2__heading-lg{--_gcd-heading-font-size:var(--wpds-typography-font-size-lg,15px);font-size:var(--wpds-typography-font-size-lg,15px)}.aa58f227716bcde2__heading-lg,.fc4da56d8dfe52c4__heading-md{font-family:var(--wpds-typography-font-family-heading,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-weight:var(--wpds-typography-font-weight-medium,499);line-height:var(--wpds-typography-line-height-sm,20px)}.fc4da56d8dfe52c4__heading-md{--_gcd-heading-font-size:var(--wpds-typography-font-size-md,13px);font-size:var(--wpds-typography-font-size-md,13px)}.a9b78c7c82e8dff7__heading-sm{--_gcd-heading-font-size:var(--wpds-typography-font-size-xs,11px);font-family:var(--wpds-typography-font-family-heading,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-size:var(--wpds-typography-font-size-xs,11px);font-weight:var(--wpds-typography-font-weight-medium,499);line-height:var(--wpds-typography-line-height-xs,16px);text-transform:uppercase}._305ff559e52180d5__body-xl{--_gcd-p-font-size:var(--wpds-typography-font-size-xl,20px);--_gcd-p-line-height:var(--wpds-typography-line-height-xl,32px);font-size:var(--wpds-typography-font-size-xl,20px);line-height:var(--wpds-typography-line-height-xl,32px)}._305ff559e52180d5__body-xl,.ca1aa3fc2029e958__body-lg{font-family:var(--wpds-typography-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-weight:var(--wpds-typography-font-weight-regular,400)}.ca1aa3fc2029e958__body-lg{--_gcd-p-font-size:var(--wpds-typography-font-size-lg,15px);--_gcd-p-line-height:var(--wpds-typography-line-height-md,24px);font-size:var(--wpds-typography-font-size-lg,15px);line-height:var(--wpds-typography-line-height-md,24px)}._131101940be12424__body-md{--_gcd-p-font-size:var(--wpds-typography-font-size-md,13px);--_gcd-p-line-height:var(--wpds-typography-line-height-sm,20px);font-size:var(--wpds-typography-font-size-md,13px);line-height:var(--wpds-typography-line-height-sm,20px)}._0e8d87a42c1f75fa__body-sm,._131101940be12424__body-md{font-family:var(--wpds-typography-font-family-body,-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif);font-weight:var(--wpds-typography-font-weight-regular,400)}._0e8d87a42c1f75fa__body-sm{--_gcd-p-font-size:var(--wpds-typography-font-size-sm,12px);--_gcd-p-line-height:var(--wpds-typography-line-height-xs,16px);font-size:var(--wpds-typography-font-size-sm,12px);line-height:var(--wpds-typography-line-height-xs,16px)}}'));
   document.head.appendChild(style);
 }
-var style_default12 = { "text": "_83ed8a8da5dd50ea__text", "heading-2xl": "_14437cfb77831647__heading-2xl", "heading-xl": "_3c78b7fa9b4072dd__heading-xl", "heading-lg": "aa58f227716bcde2__heading-lg", "heading-md": "fc4da56d8dfe52c4__heading-md", "heading-sm": "a9b78c7c82e8dff7__heading-sm", "body-xl": "_305ff559e52180d5__body-xl", "body-lg": "ca1aa3fc2029e958__body-lg", "body-md": "_131101940be12424__body-md", "body-sm": "_0e8d87a42c1f75fa__body-sm" };
+var style_default11 = { "text": "_83ed8a8da5dd50ea__text", "heading-2xl": "_14437cfb77831647__heading-2xl", "heading-xl": "_3c78b7fa9b4072dd__heading-xl", "heading-lg": "aa58f227716bcde2__heading-lg", "heading-md": "fc4da56d8dfe52c4__heading-md", "heading-sm": "a9b78c7c82e8dff7__heading-sm", "body-xl": "_305ff559e52180d5__body-xl", "body-lg": "ca1aa3fc2029e958__body-lg", "body-md": "_131101940be12424__body-md", "body-sm": "_0e8d87a42c1f75fa__body-sm" };
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='1fb29d3a3c']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "1fb29d3a3c");
   style.appendChild(document.createTextNode("._6defc79820e382c6__button{box-sizing:var(--_gcd-button-box-sizing,border-box);font-family:var(--_gcd-button-font-family,inherit);font-size:var(--_gcd-button-font-size,inherit);font-weight:var(--_gcd-button-font-weight,inherit)}.d2cff2e5dea83bd1__input{box-sizing:var(--_gcd-input-box-sizing,border-box);font-family:var(--_gcd-input-font-family,inherit);font-size:var(--_gcd-input-font-size,inherit);font-weight:var(--_gcd-input-font-weight,inherit);margin:var(--_gcd-input-margin,0);&:is(textarea,[type=text],[type=password],[type=color],[type=date],[type=datetime],[type=datetime-local],[type=email],[type=month],[type=number],[type=search],[type=tel],[type=time],[type=url],[type=week]){background-color:var(--_gcd-input-background-color,#0000);border:var(--_gcd-input-border,none);border-radius:var(--_gcd-input-border-radius,0);box-shadow:var(--_gcd-input-box-shadow,0 0 0 #0000);color:var(--_gcd-input-color,var(--wpds-color-fg-interactive-neutral,#1e1e1e));&:focus{border-color:var(--_gcd-input-border-color-focus,var(--wp-admin-theme-color));box-shadow:var(--_gcd-input-box-shadow-focus,none);outline:var(--_gcd-input-outline-focus,none)}&:disabled{background:var(--_gcd-input-background-disabled,#0000);border-color:var(--_gcd-input-border-color-disabled,#0000);box-shadow:var(--_gcd-input-box-shadow-disabled,none);color:var(--_gcd-input-color-disabled,var(--wpds-color-fg-interactive-neutral-disabled,#8d8d8d))}&::placeholder{color:var(--_gcd-input-placeholder-color,var(--wpds-color-fg-interactive-neutral-disabled,#8d8d8d))}}&:is(textarea,[type=text],[type=password],[type=date],[type=datetime],[type=datetime-local],[type=email],[type=month],[type=number],[type=search],[type=tel],[type=time],[type=url],[type=week]){line-height:var(--_gcd-input-line-height,inherit);min-height:var(--_gcd-input-min-height,auto);padding:var(--_gcd-input-padding,0)}}._547d86373d02e108__textarea{box-sizing:var(--_gcd-textarea-box-sizing,border-box);overflow:var(--_gcd-textarea-overflow,auto);resize:var(--_gcd-textarea-resize,block)}._8c15fd0ed9f28ba4__div{outline:var(--_gcd-div-outline,0 solid #0000)}p._43cec3e1eec1066d__p{font-size:var(--_gcd-p-font-size,13px);line-height:var(--_gcd-p-line-height,1.5);margin:var(--_gcd-p-margin,0)}:is(h1,h2,h3,h4,h5,h6).e97669c6d9a38497__heading{color:var(--_gcd-heading-color,var(--wpds-color-fg-content-neutral,#1e1e1e));font-size:var(--_gcd-heading-font-size,inherit);font-weight:var(--_gcd-heading-font-weight,var(--wpds-typography-font-weight-medium,499));margin:var(--_gcd-heading-margin,0)}._2c0831b0499dbd6e__a,._2c0831b0499dbd6e__a:is(:hover,:focus,:active){border-radius:var(--_gcd-a-border-radius,0);box-shadow:var(--_gcd-a-box-shadow,none);color:var(--_gcd-a-color,inherit);outline:var(--_gcd-a-outline,0 solid #0000);transition:var(--_gcd-a-transition,none)}"));
   document.head.appendChild(style);
 }
-var global_css_defense_default4 = { "button": "_6defc79820e382c6__button", "input": "d2cff2e5dea83bd1__input", "textarea": "_547d86373d02e108__textarea", "div": "_8c15fd0ed9f28ba4__div", "p": "_43cec3e1eec1066d__p", "heading": "e97669c6d9a38497__heading", "a": "_2c0831b0499dbd6e__a" };
-var Text3 = (0, import_element17.forwardRef)(function Text22({ variant = "body-md", render, className, ...props }, ref) {
+var global_css_defense_default3 = { "button": "_6defc79820e382c6__button", "input": "d2cff2e5dea83bd1__input", "textarea": "_547d86373d02e108__textarea", "div": "_8c15fd0ed9f28ba4__div", "p": "_43cec3e1eec1066d__p", "heading": "e97669c6d9a38497__heading", "a": "_2c0831b0499dbd6e__a" };
+var Text3 = (0, import_element15.forwardRef)(function Text22({ variant = "body-md", render, className, ...props }, ref) {
   const element = useRender({
     render,
     defaultTagName: "span",
     ref,
     props: mergeProps(props, {
       className: clsx_default(
-        style_default12.text,
-        global_css_defense_default4.heading,
-        global_css_defense_default4.p,
-        style_default12[variant],
+        style_default11.text,
+        global_css_defense_default3.heading,
+        global_css_defense_default3.p,
+        style_default11[variant],
         className
       )
     })
@@ -4443,14 +4307,14 @@ var Text3 = (0, import_element17.forwardRef)(function Text22({ variant = "body-m
 });
 
 // ../../../node_modules/.pnpm/@wordpress+ui@0.12.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/ui/build-module/stack/stack.mjs
-var import_element18 = __toESM(require_element(), 1);
+var import_element16 = __toESM(require_element(), 1);
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='b51ff41489']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "b51ff41489");
   style.appendChild(document.createTextNode("@layer wp-ui-utilities, wp-ui-components, wp-ui-compositions, wp-ui-overrides;@layer wp-ui-components{._19ce0419607e1896__stack{display:flex}}"));
   document.head.appendChild(style);
 }
-var style_default13 = { "stack": "_19ce0419607e1896__stack" };
+var style_default12 = { "stack": "_19ce0419607e1896__stack" };
 var gapTokens2 = {
   xs: "var(--wpds-dimension-gap-xs, 4px)",
   sm: "var(--wpds-dimension-gap-sm, 8px)",
@@ -4460,7 +4324,7 @@ var gapTokens2 = {
   "2xl": "var(--wpds-dimension-gap-2xl, 32px)",
   "3xl": "var(--wpds-dimension-gap-3xl, 40px)"
 };
-var Stack3 = (0, import_element18.forwardRef)(function Stack22({ direction, gap, align, justify, wrap, render, ...props }, ref) {
+var Stack3 = (0, import_element16.forwardRef)(function Stack22({ direction, gap, align, justify, wrap, render, ...props }, ref) {
   const style = {
     gap: gap && gapTokens2[gap],
     alignItems: align,
@@ -4471,17 +4335,17 @@ var Stack3 = (0, import_element18.forwardRef)(function Stack22({ direction, gap,
   const element = useRender({
     render,
     ref,
-    props: mergeProps(props, { style, className: style_default13.stack })
+    props: mergeProps(props, { style, className: style_default12.stack })
   });
   return element;
 });
 
 // ../../../node_modules/.pnpm/@wordpress+admin-ui@2.0.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/navigable-region/index.mjs
-var import_element19 = __toESM(require_element(), 1);
-var import_jsx_runtime17 = __toESM(require_jsx_runtime(), 1);
-var NavigableRegion = (0, import_element19.forwardRef)(
+var import_element17 = __toESM(require_element(), 1);
+var import_jsx_runtime15 = __toESM(require_jsx_runtime(), 1);
+var NavigableRegion = (0, import_element17.forwardRef)(
   ({ children, className, ariaLabel, as: Tag = "div", ...props }, ref) => {
-    return /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
+    return /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
       Tag,
       {
         ref,
@@ -4503,14 +4367,14 @@ var import_components = __toESM(require_components(), 1);
 var { Fill: SidebarToggleFill, Slot: SidebarToggleSlot } = (0, import_components.createSlotFill)("SidebarToggle");
 
 // ../../../node_modules/.pnpm/@wordpress+admin-ui@2.0.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/header.mjs
-var import_jsx_runtime18 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime16 = __toESM(require_jsx_runtime(), 1);
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='aa9c241ccc']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "aa9c241ccc");
   style.appendChild(document.createTextNode("._956b6df0898efed0__page{text-wrap:pretty;background-color:var(--wpds-color-bg-surface-neutral,#fcfcfc);color:var(--wpds-color-fg-content-neutral,#1e1e1e);display:flex;flex-flow:column;height:100%;position:relative;z-index:1}._0625b55e82a0d93d__header{background:var(--wpds-color-bg-surface-neutral-strong,#fff);border-block-end:var(--wpds-border-width-xs,1px) solid var(--wpds-color-stroke-surface-neutral-weak,#e4e4e4);inset-block-start:0;padding:var(--wpds-dimension-padding-lg,16px) var(--wpds-dimension-padding-2xl,24px);position:sticky;z-index:1}.a43c44d5ae28b2e8__header-content{min-height:calc(var(--wpds-dimension-base, 4px)*8)}.b7cb5b9daf3a3b25__header-actions{flex-shrink:0}._8113be94e7caf73c__header-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}._9a776c7f70996f61__header-visual{display:grid;flex-shrink:0;grid-template-columns:1fr;grid-template-rows:1fr;height:calc(var(--wpds-dimension-base, 4px)*6);width:calc(var(--wpds-dimension-base, 4px)*6);>*{grid-column:1/-1;grid-row:1/-1;max-height:100%;max-width:100%}}.d5e0920cd15d35bc__sidebar-toggle-slot:empty{display:none}._60fea2f6bf5319cd__header-subtitle{color:var(--wpds-color-fg-content-neutral-weak,#707070);padding-block-end:var(--wpds-dimension-padding-xs,4px)}.be5e57d029ec4036__content{display:flex;flex-direction:column;flex-grow:1;overflow:auto;&._128806d0b26e3a50__has-padding{padding:var(--wpds-dimension-padding-lg,16px) var(--wpds-dimension-padding-2xl,24px)}}"));
   document.head.appendChild(style);
 }
-var style_default14 = { "page": "_956b6df0898efed0__page", "header": "_0625b55e82a0d93d__header", "header-content": "a43c44d5ae28b2e8__header-content", "header-actions": "b7cb5b9daf3a3b25__header-actions", "header-title": "_8113be94e7caf73c__header-title", "header-visual": "_9a776c7f70996f61__header-visual", "sidebar-toggle-slot": "d5e0920cd15d35bc__sidebar-toggle-slot", "header-subtitle": "_60fea2f6bf5319cd__header-subtitle", "content": "be5e57d029ec4036__content", "has-padding": "_128806d0b26e3a50__has-padding" };
+var style_default13 = { "page": "_956b6df0898efed0__page", "header": "_0625b55e82a0d93d__header", "header-content": "a43c44d5ae28b2e8__header-content", "header-actions": "b7cb5b9daf3a3b25__header-actions", "header-title": "_8113be94e7caf73c__header-title", "header-visual": "_9a776c7f70996f61__header-visual", "sidebar-toggle-slot": "d5e0920cd15d35bc__sidebar-toggle-slot", "header-subtitle": "_60fea2f6bf5319cd__header-subtitle", "content": "be5e57d029ec4036__content", "has-padding": "_128806d0b26e3a50__has-padding" };
 function Header2({
   headingLevel = 1,
   breadcrumbs,
@@ -4522,42 +4386,42 @@ function Header2({
   showSidebarToggle = true
 }) {
   const HeadingTag = `h${headingLevel}`;
-  return /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(
     Stack3,
     {
       direction: "column",
-      className: style_default14.header,
-      render: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("header", {}),
+      className: style_default13.header,
+      render: /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("header", {}),
       children: [
-        /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(
+        /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(
           Stack3,
           {
-            className: style_default14["header-content"],
+            className: style_default13["header-content"],
             direction: "row",
             gap: "sm",
             justify: "space-between",
             children: [
-              /* @__PURE__ */ (0, import_jsx_runtime18.jsxs)(Stack3, { direction: "row", gap: "sm", align: "center", justify: "start", children: [
-                showSidebarToggle && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+              /* @__PURE__ */ (0, import_jsx_runtime16.jsxs)(Stack3, { direction: "row", gap: "sm", align: "center", justify: "start", children: [
+                showSidebarToggle && /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
                   SidebarToggleSlot,
                   {
                     bubblesVirtually: true,
-                    className: style_default14["sidebar-toggle-slot"]
+                    className: style_default13["sidebar-toggle-slot"]
                   }
                 ),
-                visual && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+                visual && /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
                   "div",
                   {
-                    className: style_default14["header-visual"],
+                    className: style_default13["header-visual"],
                     "aria-hidden": "true",
                     children: visual
                   }
                 ),
-                title && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+                title && /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
                   Text3,
                   {
-                    className: style_default14["header-title"],
-                    render: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(HeadingTag, {}),
+                    className: style_default13["header-title"],
+                    render: /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(HeadingTag, {}),
                     variant: "heading-lg",
                     children: title
                   }
@@ -4565,11 +4429,11 @@ function Header2({
                 breadcrumbs,
                 badges
               ] }),
-              actions && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+              actions && /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
                 Stack3,
                 {
                   align: "center",
-                  className: style_default14["header-actions"],
+                  className: style_default13["header-actions"],
                   direction: "row",
                   gap: "sm",
                   children: actions
@@ -4578,12 +4442,12 @@ function Header2({
             ]
           }
         ),
-        subTitle && /* @__PURE__ */ (0, import_jsx_runtime18.jsx)(
+        subTitle && /* @__PURE__ */ (0, import_jsx_runtime16.jsx)(
           Text3,
           {
-            render: /* @__PURE__ */ (0, import_jsx_runtime18.jsx)("p", {}),
+            render: /* @__PURE__ */ (0, import_jsx_runtime16.jsx)("p", {}),
             variant: "body-md",
-            className: style_default14["header-subtitle"],
+            className: style_default13["header-subtitle"],
             children: subTitle
           }
         )
@@ -4593,14 +4457,14 @@ function Header2({
 }
 
 // ../../../node_modules/.pnpm/@wordpress+admin-ui@2.0.0_@types+react@18.3.28_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@wordpress/admin-ui/build-module/page/index.mjs
-var import_jsx_runtime19 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime17 = __toESM(require_jsx_runtime(), 1);
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='aa9c241ccc']")) {
   const style = document.createElement("style");
   style.setAttribute("data-wp-hash", "aa9c241ccc");
   style.appendChild(document.createTextNode("._956b6df0898efed0__page{text-wrap:pretty;background-color:var(--wpds-color-bg-surface-neutral,#fcfcfc);color:var(--wpds-color-fg-content-neutral,#1e1e1e);display:flex;flex-flow:column;height:100%;position:relative;z-index:1}._0625b55e82a0d93d__header{background:var(--wpds-color-bg-surface-neutral-strong,#fff);border-block-end:var(--wpds-border-width-xs,1px) solid var(--wpds-color-stroke-surface-neutral-weak,#e4e4e4);inset-block-start:0;padding:var(--wpds-dimension-padding-lg,16px) var(--wpds-dimension-padding-2xl,24px);position:sticky;z-index:1}.a43c44d5ae28b2e8__header-content{min-height:calc(var(--wpds-dimension-base, 4px)*8)}.b7cb5b9daf3a3b25__header-actions{flex-shrink:0}._8113be94e7caf73c__header-title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}._9a776c7f70996f61__header-visual{display:grid;flex-shrink:0;grid-template-columns:1fr;grid-template-rows:1fr;height:calc(var(--wpds-dimension-base, 4px)*6);width:calc(var(--wpds-dimension-base, 4px)*6);>*{grid-column:1/-1;grid-row:1/-1;max-height:100%;max-width:100%}}.d5e0920cd15d35bc__sidebar-toggle-slot:empty{display:none}._60fea2f6bf5319cd__header-subtitle{color:var(--wpds-color-fg-content-neutral-weak,#707070);padding-block-end:var(--wpds-dimension-padding-xs,4px)}.be5e57d029ec4036__content{display:flex;flex-direction:column;flex-grow:1;overflow:auto;&._128806d0b26e3a50__has-padding{padding:var(--wpds-dimension-padding-lg,16px) var(--wpds-dimension-padding-2xl,24px)}}"));
   document.head.appendChild(style);
 }
-var style_default15 = { "page": "_956b6df0898efed0__page", "header": "_0625b55e82a0d93d__header", "header-content": "a43c44d5ae28b2e8__header-content", "header-actions": "b7cb5b9daf3a3b25__header-actions", "header-title": "_8113be94e7caf73c__header-title", "header-visual": "_9a776c7f70996f61__header-visual", "sidebar-toggle-slot": "d5e0920cd15d35bc__sidebar-toggle-slot", "header-subtitle": "_60fea2f6bf5319cd__header-subtitle", "content": "be5e57d029ec4036__content", "has-padding": "_128806d0b26e3a50__has-padding" };
+var style_default14 = { "page": "_956b6df0898efed0__page", "header": "_0625b55e82a0d93d__header", "header-content": "a43c44d5ae28b2e8__header-content", "header-actions": "b7cb5b9daf3a3b25__header-actions", "header-title": "_8113be94e7caf73c__header-title", "header-visual": "_9a776c7f70996f61__header-visual", "sidebar-toggle-slot": "d5e0920cd15d35bc__sidebar-toggle-slot", "header-subtitle": "_60fea2f6bf5319cd__header-subtitle", "content": "be5e57d029ec4036__content", "has-padding": "_128806d0b26e3a50__has-padding" };
 function Page({
   headingLevel,
   breadcrumbs,
@@ -4615,10 +4479,10 @@ function Page({
   hasPadding = false,
   showSidebarToggle = true
 }) {
-  const classes = clsx_default(style_default15.page, className);
+  const classes = clsx_default(style_default14.page, className);
   const effectiveAriaLabel = ariaLabel ?? (typeof title === "string" ? title : "");
-  return /* @__PURE__ */ (0, import_jsx_runtime19.jsxs)(navigable_region_default, { className: classes, ariaLabel: effectiveAriaLabel, children: [
-    (title || breadcrumbs || badges || actions || visual) && /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(navigable_region_default, { className: classes, ariaLabel: effectiveAriaLabel, children: [
+    (title || breadcrumbs || badges || actions || visual) && /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
       Header2,
       {
         headingLevel,
@@ -4631,12 +4495,12 @@ function Page({
         showSidebarToggle
       }
     ),
-    hasPadding ? /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
+    hasPadding ? /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(
       "div",
       {
         className: clsx_default(
-          style_default15.content,
-          style_default15["has-padding"]
+          style_default14.content,
+          style_default14["has-padding"]
         ),
         children
       }
@@ -4647,11 +4511,11 @@ Page.SidebarToggleFill = SidebarToggleFill;
 var page_default = Page;
 
 // ../../js-packages/components/build/components/admin-page/index.js
-var import_i18n6 = __toESM(require_i18n(), 1);
+var import_i18n5 = __toESM(require_i18n(), 1);
 var import_react13 = __toESM(require_react(), 1);
 
 // ../../js-packages/components/build/components/jetpack-footer/index.js
-var import_jsx_runtime22 = __toESM(require_jsx_runtime(), 1);
+var import_jsx_runtime20 = __toESM(require_jsx_runtime(), 1);
 
 // ../../js-packages/script-data/src/utils.ts
 function getScriptData() {
@@ -4665,15 +4529,15 @@ function isWpcomPlatformSite() {
 }
 
 // ../../js-packages/components/build/components/jetpack-footer/index.js
-var import_i18n5 = __toESM(require_i18n(), 1);
+var import_i18n4 = __toESM(require_i18n(), 1);
 
 // ../../js-packages/components/build/components/jetpack-logo/index.js
-var import_jsx_runtime20 = __toESM(require_jsx_runtime(), 1);
-var import_i18n3 = __toESM(require_i18n(), 1);
+var import_jsx_runtime18 = __toESM(require_jsx_runtime(), 1);
+var import_i18n2 = __toESM(require_i18n(), 1);
 var JetpackLogo = ({ logoColor = "#069e08", showText = true, className, height = 32, title, ...otherProps }) => {
   const viewBox = showText ? "0 0 118 32" : "0 0 32 32";
-  const logoTitle = title ?? (0, import_i18n3.__)("Jetpack Logo", "jetpack-components");
-  return (0, import_jsx_runtime20.jsxs)("svg", {
+  const logoTitle = title ?? (0, import_i18n2.__)("Jetpack Logo", "jetpack-components");
+  return (0, import_jsx_runtime18.jsxs)("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     x: "0px",
     y: "0px",
@@ -4685,16 +4549,16 @@ var JetpackLogo = ({ logoColor = "#069e08", showText = true, className, height =
     // role="img" is required to prevent VoiceOver on Safari reading the content of the SVG
     role: "img",
     children: [
-      (0, import_jsx_runtime20.jsx)("title", { id: "jetpack-logo-title", children: logoTitle }),
-      (0, import_jsx_runtime20.jsx)("path", { fill: logoColor, d: "M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M15,19H7l8-16V19z M17,29V13h8L17,29z" }),
-      showText && (0, import_jsx_runtime20.jsxs)(import_jsx_runtime20.Fragment, { children: [
-        (0, import_jsx_runtime20.jsx)("path", { d: "M41.3,26.6c-0.5-0.7-0.9-1.4-1.3-2.1c2.3-1.4,3-2.5,3-4.6V8h-3V6h6v13.4C46,22.8,45,24.8,41.3,26.6z" }),
-        (0, import_jsx_runtime20.jsx)("path", { d: "M65,18.4c0,1.1,0.8,1.3,1.4,1.3c0.5,0,2-0.2,2.6-0.4v2.1c-0.9,0.3-2.5,0.5-3.7,0.5c-1.5,0-3.2-0.5-3.2-3.1V12H60v-2h2.1V7.1 H65V10h4v2h-4V18.4z" }),
-        (0, import_jsx_runtime20.jsx)("path", { d: "M71,10h3v1.3c1.1-0.8,1.9-1.3,3.3-1.3c2.5,0,4.5,1.8,4.5,5.6s-2.2,6.3-5.8,6.3c-0.9,0-1.3-0.1-2-0.3V28h-3V10z M76.5,12.3 c-0.8,0-1.6,0.4-2.5,1.2v5.9c0.6,0.1,0.9,0.2,1.8,0.2c2,0,3.2-1.3,3.2-3.9C79,13.4,78.1,12.3,76.5,12.3z" }),
-        (0, import_jsx_runtime20.jsx)("path", { d: "M93,22h-3v-1.5c-0.9,0.7-1.9,1.5-3.5,1.5c-1.5,0-3.1-1.1-3.1-3.2c0-2.9,2.5-3.4,4.2-3.7l2.4-0.3v-0.3c0-1.5-0.5-2.3-2-2.3 c-0.7,0-2.3,0.5-3.7,1.1L84,11c1.2-0.4,3-1,4.4-1c2.7,0,4.6,1.4,4.6,4.7L93,22z M90,16.4l-2.2,0.4c-0.7,0.1-1.4,0.5-1.4,1.6 c0,0.9,0.5,1.4,1.3,1.4s1.5-0.5,2.3-1V16.4z" }),
-        (0, import_jsx_runtime20.jsx)("path", { d: "M104.5,21.3c-1.1,0.4-2.2,0.6-3.5,0.6c-4.2,0-5.9-2.4-5.9-5.9c0-3.7,2.3-6,6.1-6c1.4,0,2.3,0.2,3.2,0.5V13 c-0.8-0.3-2-0.6-3.2-0.6c-1.7,0-3.2,0.9-3.2,3.6c0,2.9,1.5,3.8,3.3,3.8c0.9,0,1.9-0.2,3.2-0.7V21.3z" }),
-        (0, import_jsx_runtime20.jsx)("path", { d: "M110,15.2c0.2-0.3,0.2-0.8,3.8-5.2h3.7l-4.6,5.7l5,6.3h-3.7l-4.2-5.8V22h-3V6h3V15.2z" }),
-        (0, import_jsx_runtime20.jsx)("path", { d: "M58.5,21.3c-1.5,0.5-2.7,0.6-4.2,0.6c-3.6,0-5.8-1.8-5.8-6c0-3.1,1.9-5.9,5.5-5.9s4.9,2.5,4.9,4.9c0,0.8,0,1.5-0.1,2h-7.3 c0.1,2.5,1.5,2.8,3.6,2.8c1.1,0,2.2-0.3,3.4-0.7C58.5,19,58.5,21.3,58.5,21.3z M56,15c0-1.4-0.5-2.9-2-2.9c-1.4,0-2.3,1.3-2.4,2.9 C51.6,15,56,15,56,15z" })
+      (0, import_jsx_runtime18.jsx)("title", { id: "jetpack-logo-title", children: logoTitle }),
+      (0, import_jsx_runtime18.jsx)("path", { fill: logoColor, d: "M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M15,19H7l8-16V19z M17,29V13h8L17,29z" }),
+      showText && (0, import_jsx_runtime18.jsxs)(import_jsx_runtime18.Fragment, { children: [
+        (0, import_jsx_runtime18.jsx)("path", { d: "M41.3,26.6c-0.5-0.7-0.9-1.4-1.3-2.1c2.3-1.4,3-2.5,3-4.6V8h-3V6h6v13.4C46,22.8,45,24.8,41.3,26.6z" }),
+        (0, import_jsx_runtime18.jsx)("path", { d: "M65,18.4c0,1.1,0.8,1.3,1.4,1.3c0.5,0,2-0.2,2.6-0.4v2.1c-0.9,0.3-2.5,0.5-3.7,0.5c-1.5,0-3.2-0.5-3.2-3.1V12H60v-2h2.1V7.1 H65V10h4v2h-4V18.4z" }),
+        (0, import_jsx_runtime18.jsx)("path", { d: "M71,10h3v1.3c1.1-0.8,1.9-1.3,3.3-1.3c2.5,0,4.5,1.8,4.5,5.6s-2.2,6.3-5.8,6.3c-0.9,0-1.3-0.1-2-0.3V28h-3V10z M76.5,12.3 c-0.8,0-1.6,0.4-2.5,1.2v5.9c0.6,0.1,0.9,0.2,1.8,0.2c2,0,3.2-1.3,3.2-3.9C79,13.4,78.1,12.3,76.5,12.3z" }),
+        (0, import_jsx_runtime18.jsx)("path", { d: "M93,22h-3v-1.5c-0.9,0.7-1.9,1.5-3.5,1.5c-1.5,0-3.1-1.1-3.1-3.2c0-2.9,2.5-3.4,4.2-3.7l2.4-0.3v-0.3c0-1.5-0.5-2.3-2-2.3 c-0.7,0-2.3,0.5-3.7,1.1L84,11c1.2-0.4,3-1,4.4-1c2.7,0,4.6,1.4,4.6,4.7L93,22z M90,16.4l-2.2,0.4c-0.7,0.1-1.4,0.5-1.4,1.6 c0,0.9,0.5,1.4,1.3,1.4s1.5-0.5,2.3-1V16.4z" }),
+        (0, import_jsx_runtime18.jsx)("path", { d: "M104.5,21.3c-1.1,0.4-2.2,0.6-3.5,0.6c-4.2,0-5.9-2.4-5.9-5.9c0-3.7,2.3-6,6.1-6c1.4,0,2.3,0.2,3.2,0.5V13 c-0.8-0.3-2-0.6-3.2-0.6c-1.7,0-3.2,0.9-3.2,3.6c0,2.9,1.5,3.8,3.3,3.8c0.9,0,1.9-0.2,3.2-0.7V21.3z" }),
+        (0, import_jsx_runtime18.jsx)("path", { d: "M110,15.2c0.2-0.3,0.2-0.8,3.8-5.2h3.7l-4.6,5.7l5,6.3h-3.7l-4.2-5.8V22h-3V6h3V15.2z" }),
+        (0, import_jsx_runtime18.jsx)("path", { d: "M58.5,21.3c-1.5,0.5-2.7,0.6-4.2,0.6c-3.6,0-5.8-1.8-5.8-6c0-3.1,1.9-5.9,5.5-5.9s4.9,2.5,4.9,4.9c0,0.8,0,1.5-0.1,2h-7.3 c0.1,2.5,1.5,2.8,3.6,2.8c1.1,0,2.2-0.3,3.4-0.7C58.5,19,58.5,21.3,58.5,21.3z M56,15c0-1.4-0.5-2.9-2-2.9c-1.4,0-2.3,1.3-2.4,2.9 C51.6,15,56,15,56,15z" })
       ] })
     ]
   });
@@ -4729,14 +4593,14 @@ function getRedirectUrl(source, args = {}) {
 }
 
 // ../../js-packages/components/build/components/automattic-byline-logo/index.js
-var import_jsx_runtime21 = __toESM(require_jsx_runtime(), 1);
-var import_i18n4 = __toESM(require_i18n(), 1);
-var AutomatticBylineLogo = ({ title = (0, import_i18n4.__)("An Automattic Airline", "jetpack-components"), height = 7, className, ...otherProps }) => {
-  return (0, import_jsx_runtime21.jsxs)("svg", { role: "img", x: "0", y: "0", viewBox: "0 0 935 38.2", enableBackground: "new 0 0 935 38.2", "aria-labelledby": "jp-automattic-byline-logo-title", height, className: clsx_default("jp-automattic-byline-logo", className), ...otherProps, children: [
-    (0, import_jsx_runtime21.jsx)("desc", { id: "jp-automattic-byline-logo-title", children: title }),
-    (0, import_jsx_runtime21.jsx)("path", { d: "M317.1 38.2c-12.6 0-20.7-9.1-20.7-18.5v-1.2c0-9.6 8.2-18.5 20.7-18.5 12.6 0 20.8 8.9 20.8 18.5v1.2C337.9 29.1 329.7 38.2 317.1 38.2zM331.2 18.6c0-6.9-5-13-14.1-13s-14 6.1-14 13v0.9c0 6.9 5 13.1 14 13.1s14.1-6.2 14.1-13.1V18.6zM175 36.8l-4.7-8.8h-20.9l-4.5 8.8h-7L157 1.3h5.5L182 36.8H175zM159.7 8.2L152 23.1h15.7L159.7 8.2zM212.4 38.2c-12.7 0-18.7-6.9-18.7-16.2V1.3h6.6v20.9c0 6.6 4.3 10.5 12.5 10.5 8.4 0 11.9-3.9 11.9-10.5V1.3h6.7V22C231.4 30.8 225.8 38.2 212.4 38.2zM268.6 6.8v30h-6.7v-30h-15.5V1.3h37.7v5.5H268.6zM397.3 36.8V8.7l-1.8 3.1 -14.9 25h-3.3l-14.7-25 -1.8-3.1v28.1h-6.5V1.3h9.2l14 24.4 1.7 3 1.7-3 13.9-24.4h9.1v35.5H397.3zM454.4 36.8l-4.7-8.8h-20.9l-4.5 8.8h-7l19.2-35.5h5.5l19.5 35.5H454.4zM439.1 8.2l-7.7 14.9h15.7L439.1 8.2zM488.4 6.8v30h-6.7v-30h-15.5V1.3h37.7v5.5H488.4zM537.3 6.8v30h-6.7v-30h-15.5V1.3h37.7v5.5H537.3zM569.3 36.8V4.6c2.7 0 3.7-1.4 3.7-3.4h2.8v35.5L569.3 36.8 569.3 36.8zM628 11.3c-3.2-2.9-7.9-5.7-14.2-5.7 -9.5 0-14.8 6.5-14.8 13.3v0.7c0 6.7 5.4 13 15.3 13 5.9 0 10.8-2.8 13.9-5.7l4 4.2c-3.9 3.8-10.5 7.1-18.3 7.1 -13.4 0-21.6-8.7-21.6-18.3v-1.2c0-9.6 8.9-18.7 21.9-18.7 7.5 0 14.3 3.1 18 7.1L628 11.3zM321.5 12.4c1.2 0.8 1.5 2.4 0.8 3.6l-6.1 9.4c-0.8 1.2-2.4 1.6-3.6 0.8l0 0c-1.2-0.8-1.5-2.4-0.8-3.6l6.1-9.4C318.7 11.9 320.3 11.6 321.5 12.4L321.5 12.4z" }),
-    (0, import_jsx_runtime21.jsx)("path", { d: "M37.5 36.7l-4.7-8.9H11.7l-4.6 8.9H0L19.4 0.8H25l19.7 35.9H37.5zM22 7.8l-7.8 15.1h15.9L22 7.8zM82.8 36.7l-23.3-24 -2.3-2.5v26.6h-6.7v-36H57l22.6 24 2.3 2.6V0.8h6.7v35.9H82.8z" }),
-    (0, import_jsx_runtime21.jsx)("path", { d: "M719.9 37l-4.8-8.9H694l-4.6 8.9h-7.1l19.5-36h5.6l19.8 36H719.9zM704.4 8l-7.8 15.1h15.9L704.4 8zM733 37V1h6.8v36H733zM781 37c-1.8 0-2.6-2.5-2.9-5.8l-0.2-3.7c-0.2-3.6-1.7-5.1-8.4-5.1h-12.8V37H750V1h19.6c10.8 0 15.7 4.3 15.7 9.9 0 3.9-2 7.7-9 9 7 0.5 8.5 3.7 8.6 7.9l0.1 3c0.1 2.5 0.5 4.3 2.2 6.1V37H781zM778.5 11.8c0-2.6-2.1-5.1-7.9-5.1h-13.8v10.8h14.4c5 0 7.3-2.4 7.3-5.2V11.8zM794.8 37V1h6.8v30.4h28.2V37H794.8zM836.7 37V1h6.8v36H836.7zM886.2 37l-23.4-24.1 -2.3-2.5V37h-6.8V1h6.5l22.7 24.1 2.3 2.6V1h6.8v36H886.2zM902.3 37V1H935v5.6h-26v9.2h20v5.5h-20v10.1h26V37H902.3z" })
+var import_jsx_runtime19 = __toESM(require_jsx_runtime(), 1);
+var import_i18n3 = __toESM(require_i18n(), 1);
+var AutomatticBylineLogo = ({ title = (0, import_i18n3.__)("An Automattic Airline", "jetpack-components"), height = 7, className, ...otherProps }) => {
+  return (0, import_jsx_runtime19.jsxs)("svg", { role: "img", x: "0", y: "0", viewBox: "0 0 935 38.2", enableBackground: "new 0 0 935 38.2", "aria-labelledby": "jp-automattic-byline-logo-title", height, className: clsx_default("jp-automattic-byline-logo", className), ...otherProps, children: [
+    (0, import_jsx_runtime19.jsx)("desc", { id: "jp-automattic-byline-logo-title", children: title }),
+    (0, import_jsx_runtime19.jsx)("path", { d: "M317.1 38.2c-12.6 0-20.7-9.1-20.7-18.5v-1.2c0-9.6 8.2-18.5 20.7-18.5 12.6 0 20.8 8.9 20.8 18.5v1.2C337.9 29.1 329.7 38.2 317.1 38.2zM331.2 18.6c0-6.9-5-13-14.1-13s-14 6.1-14 13v0.9c0 6.9 5 13.1 14 13.1s14.1-6.2 14.1-13.1V18.6zM175 36.8l-4.7-8.8h-20.9l-4.5 8.8h-7L157 1.3h5.5L182 36.8H175zM159.7 8.2L152 23.1h15.7L159.7 8.2zM212.4 38.2c-12.7 0-18.7-6.9-18.7-16.2V1.3h6.6v20.9c0 6.6 4.3 10.5 12.5 10.5 8.4 0 11.9-3.9 11.9-10.5V1.3h6.7V22C231.4 30.8 225.8 38.2 212.4 38.2zM268.6 6.8v30h-6.7v-30h-15.5V1.3h37.7v5.5H268.6zM397.3 36.8V8.7l-1.8 3.1 -14.9 25h-3.3l-14.7-25 -1.8-3.1v28.1h-6.5V1.3h9.2l14 24.4 1.7 3 1.7-3 13.9-24.4h9.1v35.5H397.3zM454.4 36.8l-4.7-8.8h-20.9l-4.5 8.8h-7l19.2-35.5h5.5l19.5 35.5H454.4zM439.1 8.2l-7.7 14.9h15.7L439.1 8.2zM488.4 6.8v30h-6.7v-30h-15.5V1.3h37.7v5.5H488.4zM537.3 6.8v30h-6.7v-30h-15.5V1.3h37.7v5.5H537.3zM569.3 36.8V4.6c2.7 0 3.7-1.4 3.7-3.4h2.8v35.5L569.3 36.8 569.3 36.8zM628 11.3c-3.2-2.9-7.9-5.7-14.2-5.7 -9.5 0-14.8 6.5-14.8 13.3v0.7c0 6.7 5.4 13 15.3 13 5.9 0 10.8-2.8 13.9-5.7l4 4.2c-3.9 3.8-10.5 7.1-18.3 7.1 -13.4 0-21.6-8.7-21.6-18.3v-1.2c0-9.6 8.9-18.7 21.9-18.7 7.5 0 14.3 3.1 18 7.1L628 11.3zM321.5 12.4c1.2 0.8 1.5 2.4 0.8 3.6l-6.1 9.4c-0.8 1.2-2.4 1.6-3.6 0.8l0 0c-1.2-0.8-1.5-2.4-0.8-3.6l6.1-9.4C318.7 11.9 320.3 11.6 321.5 12.4L321.5 12.4z" }),
+    (0, import_jsx_runtime19.jsx)("path", { d: "M37.5 36.7l-4.7-8.9H11.7l-4.6 8.9H0L19.4 0.8H25l19.7 35.9H37.5zM22 7.8l-7.8 15.1h15.9L22 7.8zM82.8 36.7l-23.3-24 -2.3-2.5v26.6h-6.7v-36H57l22.6 24 2.3 2.6V0.8h6.7v35.9H82.8z" }),
+    (0, import_jsx_runtime19.jsx)("path", { d: "M719.9 37l-4.8-8.9H694l-4.6 8.9h-7.1l19.5-36h5.6l19.8 36H719.9zM704.4 8l-7.8 15.1h15.9L704.4 8zM733 37V1h6.8v36H733zM781 37c-1.8 0-2.6-2.5-2.9-5.8l-0.2-3.7c-0.2-3.6-1.7-5.1-8.4-5.1h-12.8V37H750V1h19.6c10.8 0 15.7 4.3 15.7 9.9 0 3.9-2 7.7-9 9 7 0.5 8.5 3.7 8.6 7.9l0.1 3c0.1 2.5 0.5 4.3 2.2 6.1V37H781zM778.5 11.8c0-2.6-2.1-5.1-7.9-5.1h-13.8v10.8h14.4c5 0 7.3-2.4 7.3-5.2V11.8zM794.8 37V1h6.8v30.4h28.2V37H794.8zM836.7 37V1h6.8v36H836.7zM886.2 37l-23.4-24.1 -2.3-2.5V37h-6.8V1h6.5l22.7 24.1 2.3 2.6V1h6.8v36H886.2zM902.3 37V1H935v5.6h-26v9.2h20v5.5h-20v10.1h26V37H902.3z" })
   ] });
 };
 var automattic_byline_logo_default = AutomatticBylineLogo;
@@ -4836,11 +4700,11 @@ var JetpackFooter = ({ className, menu, ...otherProps }) => {
   if (!isWpcomPlatformSite() && !window?.JetpackNetworkAdminData) {
     items = [
       {
-        label: (0, import_i18n5.__)("Products", "jetpack-components"),
+        label: (0, import_i18n4.__)("Products", "jetpack-components"),
         href: getAdminUrl("admin.php?page=my-jetpack#/products")
       },
       {
-        label: (0, import_i18n5.__)("Help", "jetpack-components"),
+        label: (0, import_i18n4.__)("Help", "jetpack-components"),
         href: getAdminUrl("admin.php?page=my-jetpack#/help")
       },
       ...items
@@ -4849,16 +4713,16 @@ var JetpackFooter = ({ className, menu, ...otherProps }) => {
   if (menu) {
     items = [...items, ...menu];
   }
-  return (0, import_jsx_runtime22.jsxs)(Stack, { render: (0, import_jsx_runtime22.jsx)("footer", {}), className: clsx_default("jetpack-footer", className), "aria-label": (0, import_i18n5.__)("Jetpack", "jetpack-components"), role: "contentinfo", direction: "row", justify: "flex-start", align: "center", wrap: "wrap", gap: "xl", ...otherProps, children: [
-    (0, import_jsx_runtime22.jsxs)(Stack, { className: "jetpack-footer__logo", direction: "row", gap: "sm", align: "center", children: [
-      (0, import_jsx_runtime22.jsx)(jetpack_logo_default, { showText: false, height: 16, "aria-hidden": "true" }),
-      (0, import_jsx_runtime22.jsx)(Text, { variant: "body-md", children: "Jetpack" })
+  return (0, import_jsx_runtime20.jsxs)(Stack, { render: (0, import_jsx_runtime20.jsx)("footer", {}), className: clsx_default("jetpack-footer", className), "aria-label": (0, import_i18n4.__)("Jetpack", "jetpack-components"), role: "contentinfo", direction: "row", justify: "flex-start", align: "center", wrap: "wrap", gap: "xl", ...otherProps, children: [
+    (0, import_jsx_runtime20.jsxs)(Stack, { className: "jetpack-footer__logo", direction: "row", gap: "sm", align: "center", children: [
+      (0, import_jsx_runtime20.jsx)(jetpack_logo_default, { showText: false, height: 16, "aria-hidden": "true" }),
+      (0, import_jsx_runtime20.jsx)(Text, { variant: "body-md", children: "Jetpack" })
     ] }),
-    (0, import_jsx_runtime22.jsx)(Stack, { render: (0, import_jsx_runtime22.jsx)("ul", {}), direction: "row", gap: "lg", wrap: "wrap", children: items.map((item) => {
+    (0, import_jsx_runtime20.jsx)(Stack, { render: (0, import_jsx_runtime20.jsx)("ul", {}), direction: "row", gap: "lg", wrap: "wrap", children: items.map((item) => {
       const isButton = item.role === "button";
-      return (0, import_jsx_runtime22.jsx)("li", { children: (0, import_jsx_runtime22.jsx)(Text, { variant: "body-md", className: "jetpack-footer__menu-item", render: isButton ? (0, import_jsx_runtime22.jsx)(Link, { render: (0, import_jsx_runtime22.jsx)("span", {}), tone: "neutral", variant: "default", role: item.role, tabIndex: 0, onClick: item.onClick || void 0, onKeyDown: item.onKeyDown || void 0 }) : (0, import_jsx_runtime22.jsx)(Link, { tone: "neutral", variant: "default", href: item.href || "", title: item.title || "", role: item.role, onClick: item.onClick || void 0, onKeyDown: item.onKeyDown || void 0 }), children: item.label }) }, item.label);
+      return (0, import_jsx_runtime20.jsx)("li", { children: (0, import_jsx_runtime20.jsx)(Text, { variant: "body-md", className: "jetpack-footer__menu-item", render: isButton ? (0, import_jsx_runtime20.jsx)(Link, { render: (0, import_jsx_runtime20.jsx)("span", {}), tone: "neutral", variant: "default", role: item.role, tabIndex: 0, onClick: item.onClick || void 0, onKeyDown: item.onKeyDown || void 0 }) : (0, import_jsx_runtime20.jsx)(Link, { tone: "neutral", variant: "default", href: item.href || "", title: item.title || "", role: item.role, onClick: item.onClick || void 0, onKeyDown: item.onKeyDown || void 0 }), children: item.label }) }, item.label);
     }) }),
-    (0, import_jsx_runtime22.jsx)("a", { className: "jetpack-footer__a8c", href: getRedirectUrl("a8c-about"), rel: "noopener noreferrer", target: "_blank", children: (0, import_jsx_runtime22.jsx)(automattic_byline_logo_default, { height: 8 }) })
+    (0, import_jsx_runtime20.jsx)("a", { className: "jetpack-footer__a8c", href: getRedirectUrl("a8c-about"), rel: "noopener noreferrer", target: "_blank", children: (0, import_jsx_runtime20.jsx)(automattic_byline_logo_default, { height: 8 }) })
   ] });
 };
 var jetpack_footer_default = JetpackFooter;
@@ -4887,17 +4751,17 @@ var AdminPage = ({ children, className, showHeader = true, showFooter = true, sh
       const connectionTest = await api_default.fetchSiteConnectionTest();
       window.alert(connectionTest.message);
     } catch (error2) {
-      window.alert((0, import_i18n6.sprintf)(
+      window.alert((0, import_i18n5.sprintf)(
         /* translators: %s: an error message. */
-        (0, import_i18n6.__)("There was an error testing Jetpack. Error: %s", "jetpack-components"),
+        (0, import_i18n5.__)("There was an error testing Jetpack. Error: %s", "jetpack-components"),
         error2.message
       ));
     }
   }, []);
   if (showHeader && (title || breadcrumbs)) {
-    return (0, import_jsx_runtime23.jsx)("div", { className: rootClassName, children: (0, import_jsx_runtime23.jsxs)(page_default, { className: "jp-admin-page__page", visual: logo || (0, import_jsx_runtime23.jsx)(jetpack_logo_default, { showText: false, height: 20 }), breadcrumbs, title, subTitle, actions, showSidebarToggle: false, children: [tabs, unwrapped ? children : (0, import_jsx_runtime23.jsx)(container_default, { fluid: true, horizontalSpacing: 0, children: (0, import_jsx_runtime23.jsx)(col_default, { children }) }), showFooter && (0, import_jsx_runtime23.jsx)(jetpack_footer_default, { menu: optionalMenuItems })] }) });
+    return (0, import_jsx_runtime21.jsx)("div", { className: rootClassName, children: (0, import_jsx_runtime21.jsxs)(page_default, { className: "jp-admin-page__page", visual: logo || (0, import_jsx_runtime21.jsx)(jetpack_logo_default, { showText: false, height: 20 }), breadcrumbs, title, subTitle, actions, showSidebarToggle: false, children: [tabs, unwrapped ? children : (0, import_jsx_runtime21.jsx)(container_default, { fluid: true, horizontalSpacing: 0, children: (0, import_jsx_runtime21.jsx)(col_default, { children }) }), showFooter && (0, import_jsx_runtime21.jsx)(jetpack_footer_default, { menu: optionalMenuItems })] }) });
   }
-  return (0, import_jsx_runtime23.jsxs)("div", { className: rootClassName, children: [showHeader && (0, import_jsx_runtime23.jsx)(container_default, { horizontalSpacing: 5, children: (0, import_jsx_runtime23.jsxs)(col_default, { className: clsx_default(style_module_default3["admin-page-header"], "jp-admin-page-header"), children: [header ? header : (0, import_jsx_runtime23.jsx)(jetpack_logo_default, {}), sandboxedDomain && (0, import_jsx_runtime23.jsx)("code", {
+  return (0, import_jsx_runtime21.jsxs)("div", { className: rootClassName, children: [showHeader && (0, import_jsx_runtime21.jsx)(container_default, { horizontalSpacing: 5, children: (0, import_jsx_runtime21.jsxs)(col_default, { className: clsx_default(style_module_default3["admin-page-header"], "jp-admin-page-header"), children: [header ? header : (0, import_jsx_runtime21.jsx)(jetpack_logo_default, {}), sandboxedDomain && (0, import_jsx_runtime21.jsx)("code", {
     className: style_module_default3["sandbox-domain-badge"],
     onClick: testConnection,
     onKeyDown: testConnection,
@@ -4906,45 +4770,45 @@ var AdminPage = ({ children, className, showHeader = true, showFooter = true, sh
     tabIndex: 0,
     title: `Sandboxing via ${sandboxedDomain}. Click to test connection.`,
     children: "API Sandboxed"
-  })] }) }), (0, import_jsx_runtime23.jsx)(container_default, { fluid: true, horizontalSpacing: 0, children: (0, import_jsx_runtime23.jsx)(col_default, { children }) }), showFooter && (0, import_jsx_runtime23.jsx)(jetpack_footer_default, { menu: optionalMenuItems })] });
+  })] }) }), (0, import_jsx_runtime21.jsx)(container_default, { fluid: true, horizontalSpacing: 0, children: (0, import_jsx_runtime21.jsx)(col_default, { children }) }), showFooter && (0, import_jsx_runtime21.jsx)(jetpack_footer_default, { menu: optionalMenuItems })] });
 };
 var admin_page_default = AdminPage;
 
 // src/dashboard/components/DashboardLayout/index.tsx
-var import_element20 = __toESM(require_element());
-var import_i18n8 = __toESM(require_i18n());
+var import_element18 = __toESM(require_element());
+var import_i18n7 = __toESM(require_i18n());
 import { useNavigate } from "@wordpress/route";
 
 // src/dashboard/components/DashboardTabs/index.tsx
-var import_i18n7 = __toESM(require_i18n());
-var import_jsx_runtime24 = __toESM(require_jsx_runtime());
+var import_i18n6 = __toESM(require_i18n());
+var import_jsx_runtime22 = __toESM(require_jsx_runtime());
 var TAB_PATHS = {
   overview: "/",
   library: "/library",
   settings: "/settings"
 };
 function DashboardTabs() {
-  return /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: "jp-admin-page-tabs", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(tabs_exports.List, { variant: "minimal", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(tabs_exports.Tab, { value: "overview", children: (0, import_i18n7.__)("Overview", "jetpack-videopress-pkg") }),
-    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(tabs_exports.Tab, { value: "library", children: (0, import_i18n7.__)("Library", "jetpack-videopress-pkg") }),
-    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(tabs_exports.Tab, { value: "settings", children: (0, import_i18n7.__)("Settings", "jetpack-videopress-pkg") })
+  return /* @__PURE__ */ (0, import_jsx_runtime22.jsx)("div", { className: "jp-admin-page-tabs", children: /* @__PURE__ */ (0, import_jsx_runtime22.jsxs)(tabs_exports.List, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(tabs_exports.Tab, { value: "overview", children: (0, import_i18n6.__)("Overview", "jetpack-videopress-pkg") }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(tabs_exports.Tab, { value: "library", children: (0, import_i18n6.__)("Library", "jetpack-videopress-pkg") }),
+    /* @__PURE__ */ (0, import_jsx_runtime22.jsx)(tabs_exports.Tab, { value: "settings", children: (0, import_i18n6.__)("Settings", "jetpack-videopress-pkg") })
   ] }) });
 }
 
 // src/dashboard/components/DashboardLayout/style.scss
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='ec0153e7c2']")) {
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='e41fc09c45']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "ec0153e7c2");
-  style.appendChild(document.createTextNode("body.jetpack_page_jetpack-videopress #wpcontent{padding-left:0}body.jetpack_page_jetpack-videopress #screen-meta-links,body.jetpack_page_jetpack-videopress #wpfooter{display:none}body.jetpack_page_jetpack-videopress #wpbody-content{bottom:0;box-sizing:border-box;display:flex;flex-direction:column;left:160px;overflow:hidden;padding-bottom:0;position:fixed;right:0;top:var(--wp-admin-bar-height,32px);width:auto}body.jetpack_page_jetpack-videopress.folded #wpbody-content{left:36px}@media (max-width:960px){body.jetpack_page_jetpack-videopress.auto-fold #wpbody-content{left:36px}}@media (min-width:961px){body.jetpack_page_jetpack-videopress.is-nav-unification:not(.folded) #wpbody-content{left:272px}}body.jetpack_page_jetpack-videopress #wpbody-content :has(.jp-admin-page){display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0}body.jetpack_page_jetpack-videopress .jp-admin-page{display:flex;flex:1 1 auto;flex-direction:column;margin-left:0;min-height:0;min-width:0;overflow:visible}body.jetpack_page_jetpack-videopress .jp-admin-page__page{display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0}body.jetpack_page_jetpack-videopress .jp-admin-page__page>header{flex-shrink:0}body.jetpack_page_jetpack-videopress .jp-admin-page__page:has(.jp-admin-page-tabs)>header{border-bottom:none;padding-bottom:0}body.jetpack_page_jetpack-videopress .jp-admin-page__page>:not(header):not(.jetpack-footer){display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0;overflow:auto}body.jetpack_page_jetpack-videopress .jp-admin-page__page>:not(header):not(.jetpack-footer)>*{display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0}body.jetpack_page_jetpack-videopress .jetpack-footer{flex-shrink:0}body.jetpack_page_jetpack-videopress .jp-admin-page-tabs{background:var(--wpds-color-bg-surface-neutral-strong,#fff);border-bottom:var(--wpds-border-width-xs,1px) solid var(--wpds-color-stroke-surface-neutral-weak,#e4e4e4);position:sticky;top:0;z-index:10}body.jetpack_page_jetpack-videopress .jp-admin-page-tabs [role=tab]{padding-inline:var(--wpds-dimension-padding-2xl,24px)}@media (max-width:782px){body.jetpack_page_jetpack-videopress #wpbody-content,body.jetpack_page_jetpack-videopress.auto-fold #wpbody-content,body.jetpack_page_jetpack-videopress.folded #wpbody-content{left:0;top:var(--wp-admin-bar-height,46px)}body.jetpack_page_jetpack-videopress .jp-admin-page{margin-left:0}}"));
+  style.setAttribute("data-wp-hash", "e41fc09c45");
+  style.appendChild(document.createTextNode("body.jetpack_page_jetpack-videopress #wpcontent{padding-left:0}body.jetpack_page_jetpack-videopress #screen-meta-links,body.jetpack_page_jetpack-videopress #wpfooter{display:none}body.jetpack_page_jetpack-videopress #wpbody-content{bottom:0;box-sizing:border-box;display:flex;flex-direction:column;left:160px;overflow:hidden;padding-bottom:0;position:fixed;right:0;top:var(--wp-admin-bar-height,32px);width:auto}body.jetpack_page_jetpack-videopress.folded #wpbody-content{left:36px}@media (max-width:960px){body.jetpack_page_jetpack-videopress.auto-fold #wpbody-content{left:36px}}@media (min-width:961px){body.jetpack_page_jetpack-videopress.is-nav-unification:not(.folded) #wpbody-content{left:272px}}body.jetpack_page_jetpack-videopress #wpbody-content :has(.jp-admin-page){display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0}body.jetpack_page_jetpack-videopress .jp-admin-page{display:flex;flex:1 1 auto;flex-direction:column;margin-left:0;min-height:0;min-width:0;overflow:visible}body.jetpack_page_jetpack-videopress .jp-admin-page__page{display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0}body.jetpack_page_jetpack-videopress .jp-admin-page__page>header{flex-shrink:0}body.jetpack_page_jetpack-videopress .jp-admin-page__page:has(.jp-admin-page-tabs)>header{border-bottom:none;padding-bottom:0}body.jetpack_page_jetpack-videopress .jp-admin-page__page>:not(header):not(.jetpack-footer){display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0;overflow:auto}body.jetpack_page_jetpack-videopress .jp-admin-page__page>:not(header):not(.jetpack-footer)>*{display:flex;flex:1 1 auto;flex-direction:column;min-height:0;min-width:0}body.jetpack_page_jetpack-videopress .jetpack-footer{flex-shrink:0}body.jetpack_page_jetpack-videopress .jp-admin-page-tabs{background:var(--wpds-color-bg-surface-neutral-strong,#fff);border-bottom:var(--wpds-border-width-xs,1px) solid var(--wpds-color-stroke-surface-neutral-weak,#e4e4e4);position:sticky;top:0;z-index:10}body.jetpack_page_jetpack-videopress .jp-admin-page-tabs [role=tab]{padding-inline:var(--wpds-dimension-padding-2xl,24px)}@media (max-width:782px){body.jetpack_page_jetpack-videopress #wpbody-content,body.jetpack_page_jetpack-videopress.auto-fold #wpbody-content,body.jetpack_page_jetpack-videopress.folded #wpbody-content{left:0;top:var(--wp-admin-bar-height,46px)}body.jetpack_page_jetpack-videopress .jp-admin-page{margin-left:0}}body.jetpack_page_jetpack-videopress :has(>[role=tabpanel]){display:flex;flex:1 1 0;flex-direction:column;min-height:0}body.jetpack_page_jetpack-videopress [role=tabpanel]{display:flex;flex:1 1 0;flex-direction:column;min-height:0}body.jetpack_page_jetpack-videopress .jp-admin-page-tabs [role=tablist]{padding-inline-start:8px}body.jetpack_page_jetpack-videopress .jp-admin-page-tabs [role=tab]{padding-inline:var(--wpds-dimension-padding-lg,16px)}"));
   document.head.appendChild(style);
 }
 
 // src/dashboard/components/DashboardLayout/index.tsx
-var import_jsx_runtime25 = __toESM(require_jsx_runtime());
+var import_jsx_runtime23 = __toESM(require_jsx_runtime());
 var TAB_VALUES = ["overview", "library", "settings"];
-function DashboardLayout({ activeTab, children, actions }) {
+function DashboardLayout({ activeTab, children, actions, hideFooter }) {
   const navigate = useNavigate();
-  const onValueChange = (0, import_element20.useCallback)(
+  const onValueChange = (0, import_element18.useCallback)(
     (next) => {
       const target = TAB_PATHS[next];
       if (target) {
@@ -4953,15 +4817,16 @@ function DashboardLayout({ activeTab, children, actions }) {
     },
     [navigate]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(
     admin_page_default,
     {
       title: "VideoPress",
-      subTitle: (0, import_i18n8.__)("Professional quality, ad-free video hosting.", "jetpack-videopress-pkg"),
+      subTitle: (0, import_i18n7.__)("Professional quality, ad-free video hosting.", "jetpack-videopress-pkg"),
       actions,
-      children: /* @__PURE__ */ (0, import_jsx_runtime25.jsxs)(tabs_exports.Root, { value: activeTab, onValueChange, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(DashboardTabs, {}),
-        TAB_VALUES.map((tab) => /* @__PURE__ */ (0, import_jsx_runtime25.jsx)(tabs_exports.Panel, { value: tab, children: activeTab === tab ? children : null }, tab))
+      showFooter: !hideFooter,
+      children: /* @__PURE__ */ (0, import_jsx_runtime23.jsxs)(tabs_exports.Root, { value: activeTab, onValueChange, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(DashboardTabs, {}),
+        TAB_VALUES.map((tab) => /* @__PURE__ */ (0, import_jsx_runtime23.jsx)(tabs_exports.Panel, { value: tab, children: activeTab === tab ? children : null }, tab))
       ] })
     }
   );
@@ -4976,30 +4841,21 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 }
 
 // routes/settings/stage.tsx
-var import_jsx_runtime26 = __toESM(require_jsx_runtime());
+var import_jsx_runtime24 = __toESM(require_jsx_runtime());
 var Stage = () => {
   const [restrict, setRestrict] = (0, import_react14.useState)(false);
-  const onSave = (0, import_react14.useCallback)(() => {
-  }, []);
-  return /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
-    DashboardLayout,
-    {
-      activeTab: "settings",
-      actions: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(Button4, { size: "compact", onClick: onSave, children: (0, import_i18n9.__)("Save", "jetpack-videopress-pkg") }),
-      children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)("div", { className: "jp-videopress-settings", children: /* @__PURE__ */ (0, import_jsx_runtime26.jsxs)(card_exports.Root, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(card_exports.Title, { children: (0, import_i18n9.__)("Restrict video access", "jetpack-videopress-pkg") }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime26.jsx)(
-          import_components2.ToggleControl,
-          {
-            __nextHasNoMarginBottom: true,
-            label: (0, import_i18n9.__)("Only logged-in users can play your videos", "jetpack-videopress-pkg"),
-            checked: restrict,
-            onChange: setRestrict
-          }
-        ) })
-      ] }) })
-    }
-  );
+  return /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(DashboardLayout, { activeTab: "settings", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)("div", { className: "jp-videopress-settings", children: /* @__PURE__ */ (0, import_jsx_runtime24.jsxs)(card_exports.Root, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(card_exports.Title, { children: (0, import_i18n8.__)("Restrict video access", "jetpack-videopress-pkg") }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime24.jsx)(
+      import_components2.ToggleControl,
+      {
+        __nextHasNoMarginBottom: true,
+        label: (0, import_i18n8.__)("Only logged-in users can play your videos", "jetpack-videopress-pkg"),
+        checked: restrict,
+        onChange: setRestrict
+      }
+    ) })
+  ] }) }) });
 };
 export {
   Stage as stage
