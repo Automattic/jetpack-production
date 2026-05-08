@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Components: Use Link from `@wordpress/ui` instead of ExternalLink.
+- Replace Gridicon with Icon and named icon exports from `@wordpress/icons`.
 - Search 3.0: extract the rating filter's cumulative bucket projection into its own module + add unit tests pinning the threshold semantics. Also tightens type symmetry (string keys throughout the count map) and mirrors the `!filterKey` defensive guard across the block's three context consumers. Internal-only; no behavior change.
 - Search 3.0: only override the theme's search template when the saved experience is `embedded`. Sites on Overlay or Inline now resolve `/?s=…` through their theme's `search.html` again. Block registration and Interactivity API state seeding stay on regardless of experience so Search blocks placed on other pages continue to work.
 - Search 3.0: redesign `jetpack-search/filter-wc-rating` as the industry-standard "X stars & up" threshold filter — single-select rows where picking 4★ matches every product rated 4 stars or higher, click the active row to clear. Filter clauses collapse to a single `gte: N - 0.5` range per row (no upper bound) and the count badges project the histogram cumulatively, so `count(3)` ≥ `count(4)` ≥ `count(5)`. Tracked under [RSM-2663].
