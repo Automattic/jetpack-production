@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Sync: Whitelist the jetpack_social_message_template option so it propagates to WPCOM.
 - Sync: Whitelist the new jetpack_search_experience option so it propagates to WPcom.
 
 ## [4.37.0] - 2026-05-04
