@@ -323,6 +323,7 @@ return array(
     'Automattic\\Jetpack\\Search\\Filter_Checkbox' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/blocks/filter-checkbox/class-filter-checkbox.php',
     'Automattic\\Jetpack\\Search\\Filter_Date' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/blocks/filter-date/class-filter-date.php',
     'Automattic\\Jetpack\\Search\\Filter_Post_Type' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/blocks/filter-post-type/class-filter-post-type.php',
+    'Automattic\\Jetpack\\Search\\Filter_Wc_Rating' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/blocks/filter-wc-rating/class-filter-wc-rating.php',
     'Automattic\\Jetpack\\Search\\Helper' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-helper.php',
     'Automattic\\Jetpack\\Search\\Initial_State' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/dashboard/class-initial-state.php',
     'Automattic\\Jetpack\\Search\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/initializers/class-initializer.php',
