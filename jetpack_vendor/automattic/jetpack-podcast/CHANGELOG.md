@@ -16,3 +16,4 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Replace the wp-build placeholder with page chrome (title, tagline) plus tab navigation (Welcome, Settings, Episodes, Distribution). Each tab panel is still empty — PR 4 in the untangle train fills them in.
+- Slim down wp-build wiring to the Backup pattern: drop bridge_wp_build_enqueue and fix_boot_import_map_ordering, alias $screen->id via current_screen instead.
