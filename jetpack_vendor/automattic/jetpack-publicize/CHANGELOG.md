@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Show per-connection template fallback help and prefill per-network editor messages from connection templates.
 
 ### Fixed
+- Fall back to the site-wide social message template when no per-post share message is set, so the editor preview and customization field reflect the template configured on the Social admin page.
 - Social: honor per-connection message templates in the per-network preview pipeline and stop overwriting them when toggling per-network mode.
 
 ## [0.79.0] - 2026-05-04
