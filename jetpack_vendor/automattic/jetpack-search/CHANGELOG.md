@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Components: Use Link from `@wordpress/ui` instead of ExternalLink.
 - Search 3.0: only override the theme's search template when the saved experience is `embedded`. Sites on Overlay or Inline now resolve `/?s=…` through their theme's `search.html` again. Block registration and Interactivity API state seeding stay on regardless of experience so Search blocks placed on other pages continue to work.
+- Search 3.0: redesign `jetpack-search/filter-wc-rating` as the industry-standard "X stars & up" threshold filter — single-select rows where picking 4★ matches every product rated 4 stars or higher, click the active row to clear. Filter clauses collapse to a single `gte: N - 0.5` range per row (no upper bound) and the count badges project the histogram cumulatively, so `count(3)` ≥ `count(4)` ≥ `count(5)`. Tracked under [RSM-2663].
 - Search blocks: align all 13 blocks under three predictable patterns (filter-{kind}, filters-{layout}, results-{role}) and move them to a dedicated jetpack-search/* namespace.
 - Search Blocks: allow the Post Type Scope block to be inserted inside the Filters container.
 - Search Blocks: checkbox filters retain previously-seen options across searches and keep selected values visible (and uncheckable) even when the current result set no longer surfaces them. Zero-result options sink to the bottom of the list unless they're checked.
