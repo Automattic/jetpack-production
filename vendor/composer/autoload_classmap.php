@@ -259,8 +259,6 @@ return array(
     'Automattic\\Jetpack\\Plugin\\Tracking' => $baseDir . '/src/class-tracking.php',
     'Automattic\\Jetpack\\Plugins_Installer' => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-plugins-installer.php',
     'Automattic\\Jetpack\\Podcast\\Admin_Page' => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-admin-page.php',
-    'Automattic\\Jetpack\\Podcast\\Feed\\Customize_Feed' => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/feed/class-customize-feed.php',
-    'Automattic\\Jetpack\\Podcast\\Feed\\Feed_Detection' => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/feed/class-feed-detection.php',
     'Automattic\\Jetpack\\Podcast\\Podcast' => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-podcast.php',
     'Automattic\\Jetpack\\Podcast\\Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-settings.php',
     'Automattic\\Jetpack\\Post_List\\Post_List' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-list.php',
