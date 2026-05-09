@@ -287,6 +287,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_9_a_0
         'Automattic\\Jetpack\\Podcast\\Feed\\Feed_Detection' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-podcast/src/feed/class-feed-detection.php',
         'Automattic\\Jetpack\\Podcast\\Podcast' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-podcast/src/class-podcast.php',
         'Automattic\\Jetpack\\Podcast\\Settings' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-podcast/src/class-settings.php',
+        'Automattic\\Jetpack\\Podcast\\Tracks' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-podcast/src/class-tracks.php',
         'Automattic\\Jetpack\\Post_List\\Post_List' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-list.php',
         'Automattic\\Jetpack\\Post_List\\Post_Thumbnail' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-thumbnail.php',
         'Automattic\\Jetpack\\Post_Media' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-post-media/src/class-post-media.php',
