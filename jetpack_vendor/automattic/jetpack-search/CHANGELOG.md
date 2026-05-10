@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Add Reader Chat opt-in card to the dashboard so site owners can enable or disable Reader Chat without writing PHP.
 - Search Blocks: add 'product' layout to the search-results block, alongside an Inspector control to switch between compact / expanded / product.
 - Search Blocks: add a "Powered by Jetpack" block (`jetpack/powered-by`) to the results-panel default template, patterns, and search template. Free-plan sites always render the attribution; paid plans expose a "Hide on the front end" inspector toggle.
+- Search blocks: Add a chips display style option to the Checkbox Filter block.
 - Search Blocks: Add a hidden Post Type Scope block that constrains results to an include/exclude post-type list.
 - Search blocks: add jetpack/results-panel container block bundling the result-display stack (count, sort, results, error, empty state, load-more).
 - Search Blocks: foundation data-plane primitives for the upcoming WC product filter blocks. Adds `actions.setPriceRange(min, max)`, extends `actions.clearFilters` to also clear the price range, and folds `priceRange` into `state.hasActiveFilters` so the active-filters wrapper stays visible on a price-only deep link.
