@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add Storybook stories for feature-selector components (ExperienceOption and FeatureSelector).
 - Search 3.0: Add "Matches content" / "Matches comments" hint badge to the product layout result card when a non-title field matches but the title does not.
 - Search 3.0: adds the `jetpack-search/filter-wc-attribute` block — a checkbox-list filter targeting a single WooCommerce product attribute (pa_color, pa_size, …). The editor inspector ships a SelectControl seeded from `/wp/v2/taxonomies` via `core-data` and constrained to the `pa_` prefix, so site builders only see actual WC product attributes. Rides the existing `filterType: 'taxonomy'` data plane (`taxonomy.<slug>.slug_slash_name` ES field) and the shared `state.filterItems` getter promoted in the foundation PR — no new branches in `resolveFilterFields`. Tracked under epic [RSM-1929].
 - Search 3.0: adds the `jetpack-search/filter-wc-price` block — two number inputs (min, max) bound to the shared store's `priceRange` slice. Drives `actions.setPriceRange` on `change` / Enter. URL contract uses `min_price` / `max_price` reserved query params. The block seeds `priceCurrencySymbol` and `priceLabel` into the shared store so the active-filters chip block can render budget-filtered URLs correctly. Tracked under epic [RSM-1929].
