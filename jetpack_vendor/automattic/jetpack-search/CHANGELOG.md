@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Search blocks: Extend the chips display style option to the Date and Product Attribute filter blocks.
 - Search Blocks: foundation data-plane primitives for the upcoming WC product filter blocks. Adds `actions.setPriceRange(min, max)`, extends `actions.clearFilters` to also clear the price range, and folds `priceRange` into `state.hasActiveFilters` so the active-filters wrapper stays visible on a price-only deep link.
 - Search Blocks: Render highlighted content snippet under the result title in the expanded card layout.
+- Search Blocks: whitelist supported taxonomies in the Custom Taxonomy filter; the jetpack_search_custom_taxonomy_map filter now also mirrors mapped taxonomies onto reserved jetpack-search-tagN slot taxonomies at write time so Jetpack Search can index them, and routes both the aggregation key and field through the slot at query time.
 - Search dashboard: new feature-selection UI gated behind the jetpack_search_blocks_enabled filter.
 
 ### Changed

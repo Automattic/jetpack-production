@@ -319,6 +319,7 @@ return array(
     'Automattic\\Jetpack\\Scan_Page\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-rest-controller.php',
     'Automattic\\Jetpack\\Search\\CLI' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-cli.php',
     'Automattic\\Jetpack\\Search\\Classic_Search' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/classic-search/class-classic-search.php',
+    'Automattic\\Jetpack\\Search\\Custom_Taxonomy_Slot_Mapping' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/class-custom-taxonomy-slot-mapping.php',
     'Automattic\\Jetpack\\Search\\Customberg' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/customberg/class-customberg.php',
     'Automattic\\Jetpack\\Search\\Customizer' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/customizer/class-customizer.php',
     'Automattic\\Jetpack\\Search\\Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/dashboard/class-dashboard.php',
