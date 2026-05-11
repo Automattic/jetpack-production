@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Search 3.0: only override the theme's search template when the saved experience is `embedded`. Sites on Overlay or Inline now resolve `/?s=…` through their theme's `search.html` again. Block registration and Interactivity API state seeding stay on regardless of experience so Search blocks placed on other pages continue to work.
 - Search 3.0: redesign `jetpack-search/filter-wc-rating` as the industry-standard "X stars & up" threshold filter — single-select rows where picking 4★ matches every product rated 4 stars or higher, click the active row to clear. Filter clauses collapse to a single `gte: N - 0.5` range per row (no upper bound) and the count badges project the histogram cumulatively, so `count(3)` ≥ `count(4)` ≥ `count(5)`. Tracked under [RSM-2663].
 - Search 3.0: rename the default filter composition block from `jetpack-search/filters-stack` to `jetpack-search/filters`. The block, its CSS class (`.jetpack-search-filters`), and its inserter title ("Filters") all drop the `-stack` suffix to give the most-used composition the simplest name. `filters-popover` keeps its layout-suffixed slug because it's a variant. Tracked under [RSM-2804].
+- Search: migrate dashboard notices to the @wordpress/ui Notice component. Removes the local SimpleNotice and NoticeAction wrappers along with their stylesheets.
 - Search blocks: align all 13 blocks under three predictable patterns (filter-{kind}, filters-{layout}, results-{role}) and move them to a dedicated jetpack-search/* namespace.
 - Search Blocks: allow the Post Type Scope block to be inserted inside the Filters container.
 - Search Blocks: checkbox filters retain previously-seen options across searches and keep selected values visible (and uncheckable) even when the current result set no longer surfaces them. Zero-result options sink to the bottom of the list unless they're checked.
@@ -59,6 +60,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Search 3.0: prevent 404 when refreshing a singular page that hosts inline search blocks
 - Search 3.0: stop showing the "Matches content" badge on result cards when the visitor has only applied filters (category, tag, price, etc.) without typing a search query.
+- Search: bundle @wordpress/theme and @wordpress/private-apis inline in the dashboard build so it does not silently fail to load when those packages are not registered as WP script handles. Same workaround as #48173.
 - Search Blocks: add pre-hydration skeleton to the WooCommerce attribute filter block so a deep-linked URL (`?pa_color[]=red`) shows shimmer rows instead of a blank space while the initial fetch runs.
 - Search Blocks: Category, Tag, Post Type, Author, and Custom Taxonomy filter presets now appear in the block inserter.
 - Search blocks: clear the previous query's results, total count, and aggregation buckets when a search request errors out so the error message no longer renders alongside stale data.

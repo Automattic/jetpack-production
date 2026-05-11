@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI page: update the layout-mixin selector to match the renamed `jetpack-ai` body class so the page layout (sticky header, scrollable middle, pinned footer) applies again.
+- Search: bundle @wordpress/theme and @wordpress/private-apis inline in the dashboard build so it does not silently fail to load when those packages are not registered as WP script handles. Same workaround as #48173.
 - Shortcodes: Google Maps shortcode now preserves URL-encoded ampersands (%26) in place names.
 - Shortcodes: Google Maps shortcode now preserves URL-encoded reserved characters (`#`, `%`, `+`) and HTML-entity-encoded ampersands inside place names.
 - Social: fall back to the site-wide social message template when no per-post share message is set.
