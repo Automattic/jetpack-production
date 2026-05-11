@@ -9207,7 +9207,7 @@ var import_components22 = __toESM(require_components(), 1);
 var import_i18n26 = __toESM(require_i18n(), 1);
 var import_element39 = __toESM(require_element(), 1);
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/UWJK2WK2.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.20/node_modules/@ariakit/core/esm/__chunks/UWJK2WK2.js
 function noop2(..._) {
 }
 function applyState(argument, currentValue) {
@@ -9294,7 +9294,7 @@ function defaultValue(...values) {
   return void 0;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/YXGXYGQX.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/AZVQSWGA.js
 var import_react6 = __toESM(require_react(), 1);
 function setRef(ref, value) {
   if (typeof ref === "function") {
@@ -9321,7 +9321,13 @@ function mergeProps2(base, overrides) {
     if (!hasOwnProperty(overrides, key)) continue;
     if (key === "className") {
       const prop = "className";
-      props[prop] = base[prop] ? `${base[prop]} ${overrides[prop]}` : overrides[prop];
+      const baseClass = base[prop];
+      const overrideClass = overrides[prop];
+      if (baseClass && overrideClass) {
+        props[prop] = `${baseClass} ${overrideClass}`;
+      } else {
+        props[prop] = overrideClass || baseClass;
+      }
       continue;
     }
     if (key === "style") {
@@ -9330,7 +9336,10 @@ function mergeProps2(base, overrides) {
       continue;
     }
     const overrideValue = overrides[key];
-    if (typeof overrideValue === "function" && key.startsWith("on")) {
+    if (key.startsWith("on")) {
+      if (typeof overrideValue !== "function") {
+        continue;
+      }
       const baseValue = base[key];
       if (typeof baseValue === "function") {
         props[key] = (...args) => {
@@ -9345,7 +9354,7 @@ function mergeProps2(base, overrides) {
   return props;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/G7XPWBXK.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.20/node_modules/@ariakit/core/esm/__chunks/G7XPWBXK.js
 var canUseDOM = checkIsBrowser();
 function checkIsBrowser() {
   var _a;
@@ -9510,7 +9519,7 @@ function isElementPreceding(a2, b2) {
   );
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/GMGLSF2B.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.20/node_modules/@ariakit/core/esm/__chunks/GMGLSF2B.js
 function isTouchDevice() {
   return canUseDOM && !!navigator.maxTouchPoints;
 }
@@ -9525,7 +9534,7 @@ function isFirefox() {
   return canUseDOM && /firefox\//i.test(navigator.userAgent);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/utils/events.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.20/node_modules/@ariakit/core/esm/utils/events.js
 function isPortalEvent(event) {
   return Boolean(
     event.currentTarget && !contains2(event.currentTarget, event.target)
@@ -9617,7 +9626,7 @@ function addGlobalEventListener(type, listener, options, scope = window) {
   return removeEventListener;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/CEM7J6TT.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/W2TDKEPX.js
 var React33 = __toESM(require_react(), 1);
 var import_react7 = __toESM(require_react(), 1);
 var _React = { ...React33 };
@@ -9816,7 +9825,7 @@ function resetMouseMoving() {
   mouseMoving = false;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/TVXRYIJB.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/L4OUMOCQ.js
 var React34 = __toESM(require_react(), 1);
 var import_jsx_runtime64 = __toESM(require_jsx_runtime(), 1);
 function forwardRef22(render4) {
@@ -9897,7 +9906,7 @@ function createStoreContext(providers = [], scopedProviders = []) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/FQHJBBMI.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/CTVD4XJH.js
 var ctx = createStoreContext();
 var useCollectionContext = ctx.useContext;
 var useCollectionScopedContext = ctx.useScopedContext;
@@ -9905,7 +9914,7 @@ var useCollectionProviderContext = ctx.useProviderContext;
 var CollectionContextProvider = ctx.ContextProvider;
 var CollectionScopedContextProvider = ctx.ScopedContextProvider;
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/55FNNNML.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/NO3UEYQ2.js
 var import_react8 = __toESM(require_react(), 1);
 var ctx2 = createStoreContext(
   [CollectionContextProvider],
@@ -9923,7 +9932,7 @@ var CompositeRowContext = (0, import_react8.createContext)(
   void 0
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/7NJRHOSP.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/7NJRHOSP.js
 function findFirstEnabledItem(items, excludeId) {
   return items.find((item) => {
     if (excludeId) {
@@ -9984,7 +9993,7 @@ function isItem(store, element, exclude) {
   return true;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/IKWLDXMV.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/4WQSNMEM.js
 var import_react9 = __toESM(require_react(), 1);
 var TagName = "div";
 var useCollectionItem = createHook(
@@ -10020,11 +10029,11 @@ var CollectionItem = forwardRef22(function CollectionItem2(props) {
   return createElement3(TagName, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SWN3JYXT.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SWN3JYXT.js
 var import_react10 = __toESM(require_react(), 1);
 var FocusableContext = (0, import_react10.createContext)(true);
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/utils/focus.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.20/node_modules/@ariakit/core/esm/utils/focus.js
 var selector = "input:not([type='hidden']):not([disabled]), select:not([disabled]), textarea:not([disabled]), a[href], button:not([disabled]), [tabindex], summary, iframe, object, embed, area[href], audio[controls], video[controls], [contenteditable]:not([contenteditable='false'])";
 function isFocusable(element) {
   if (!element.matches(selector)) return false;
@@ -10059,7 +10068,7 @@ function focusIntoView(element, options) {
   }
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/GR523XJ6.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/3F6D4KUU.js
 var import_react11 = __toESM(require_react(), 1);
 var TagName2 = "div";
 var accessibleWhenDisabledSymbol = /* @__PURE__ */ Symbol("accessibleWhenDisabled");
@@ -10189,7 +10198,7 @@ var useFocusable = createHook(
       hasInstalledGlobalEventListeners2 = true;
     }, [focusable]);
     const disabled2 = focusable && disabledFromProps(props);
-    const trulyDisabled = !!disabled2 && !accessibleWhenDisabled;
+    const trulyDisabled = disabled2 && !accessibleWhenDisabled;
     const [focusVisible, setFocusVisible] = (0, import_react11.useState)(false);
     (0, import_react11.useEffect)(() => {
       if (!focusable) return;
@@ -10339,7 +10348,7 @@ var Focusable = forwardRef22(function Focusable2(props) {
   return createElement3(TagName2, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/GHQLK2M5.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/EZ4UPVW6.js
 var import_react12 = __toESM(require_react(), 1);
 var TagName3 = "button";
 function isNativeClick(event) {
@@ -10443,7 +10452,7 @@ var Command = forwardRef22(function Command2(props) {
   return createElement3(TagName3, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/XTZ53NXG.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.20/node_modules/@ariakit/core/esm/__chunks/XTZ53NXG.js
 function getInternal(store, key) {
   const internals = store.__unstableInternals;
   invariant(internals, "Invalid store");
@@ -10650,7 +10659,7 @@ If there's a particular need for this, please submit a feature request at https:
   );
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/YAS7X7HB.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SOQQIDO4.js
 var React35 = __toESM(require_react(), 1);
 var import_shim2 = __toESM(require_shim(), 1);
 var noopSubscribe = () => () => {
@@ -10755,7 +10764,7 @@ function useStore(createStore2, props) {
   return [memoizedStore, updateStore];
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/ZCYMVQGT.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/JT5CKSP7.js
 var import_react13 = __toESM(require_react(), 1);
 var import_jsx_runtime65 = __toESM(require_jsx_runtime(), 1);
 var TagName4 = "button";
@@ -10889,7 +10898,7 @@ var useCompositeItem2 = createHook(
           ...item,
           id: id || item.id,
           rowId,
-          disabled: !!trulyDisabled,
+          disabled: trulyDisabled,
           children: (_a = item.element) == null ? void 0 : _a.textContent
         };
         if (getItemProp) {
@@ -11050,7 +11059,7 @@ var CompositeItem = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/7PRQYBBV.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.20/node_modules/@ariakit/core/esm/__chunks/7PRQYBBV.js
 function toArray(arg) {
   if (Array.isArray(arg)) {
     return arg;
@@ -11068,7 +11077,7 @@ function reverseArray(array) {
   return array.slice().reverse();
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/6PX47O7P.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/NLF4OZJK.js
 var import_react14 = __toESM(require_react(), 1);
 var import_jsx_runtime66 = __toESM(require_jsx_runtime(), 1);
 var TagName5 = "div";
@@ -11358,7 +11367,7 @@ var Composite5 = forwardRef22(function Composite22(props) {
   return createElement3(TagName5, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SF4KD2LD.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/FYYAZUDI.js
 var ctx3 = createStoreContext();
 var useDisclosureContext = ctx3.useContext;
 var useDisclosureScopedContext = ctx3.useScopedContext;
@@ -11366,7 +11375,7 @@ var useDisclosureProviderContext = ctx3.useProviderContext;
 var DisclosureContextProvider = ctx3.ContextProvider;
 var DisclosureScopedContextProvider = ctx3.ScopedContextProvider;
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/W43ISTP6.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/2LVHRIRC.js
 var import_react15 = __toESM(require_react(), 1);
 var ctx4 = createStoreContext(
   [DisclosureContextProvider],
@@ -11380,7 +11389,7 @@ var DialogScopedContextProvider = ctx4.ScopedContextProvider;
 var DialogHeadingContext = (0, import_react15.createContext)(void 0);
 var DialogDescriptionContext = (0, import_react15.createContext)(void 0);
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/WLLNEL2X.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/HIPI64MW.js
 var import_react16 = __toESM(require_react(), 1);
 var import_react_dom = __toESM(require_react_dom(), 1);
 var import_jsx_runtime67 = __toESM(require_jsx_runtime(), 1);
@@ -11421,6 +11430,7 @@ var useDisclosureContent = createHook(function useDisclosureContent2({ store, al
   const animated = useStoreState(store, "animated");
   const contentElement = useStoreState(store, "contentElement");
   const otherElement = useStoreState(store.disclosure, "contentElement");
+  const hasClosedRef = (0, import_react16.useRef)(false);
   useSafeLayoutEffect(() => {
     if (!ref.current) return;
     store == null ? void 0 : store.setContentElement(ref.current);
@@ -11437,7 +11447,16 @@ var useDisclosureContent = createHook(function useDisclosureContent2({ store, al
     };
   }, [store]);
   useSafeLayoutEffect(() => {
-    if (!animated) return;
+    if (!animated) {
+      if (!open) {
+        hasClosedRef.current = true;
+        setTransition(null);
+      } else if (hasClosedRef.current) {
+        hasClosedRef.current = false;
+        setTransition("enter");
+      }
+      return;
+    }
     if (!(contentElement == null ? void 0 : contentElement.isConnected)) {
       setTransition(null);
       return;
@@ -11538,7 +11557,7 @@ var DisclosureContent = forwardRef22(function DisclosureContent2({
   return /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(DisclosureContentImpl, { ...props });
 });
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/IHNLLH3I.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.20/node_modules/@ariakit/core/esm/__chunks/IHNLLH3I.js
 function createDisclosureStore(props = {}) {
   const store = mergeStore(
     props.store,
@@ -11595,7 +11614,7 @@ function createDisclosureStore(props = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/FL7NPBCY.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/H5Z3PUKM.js
 function useDisclosureStoreProps(store, update2, props) {
   useUpdateEffect(update2, [props.store, props.disclosure]);
   useStoreProps(store, props, "open", "setOpen");
@@ -11604,7 +11623,7 @@ function useDisclosureStoreProps(store, update2, props) {
   return Object.assign(store, { disclosure: props.disclosure });
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/E4DZA6YM.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/467XRHWL.js
 var ctx5 = createStoreContext(
   [DialogContextProvider],
   [DialogScopedContextProvider]
@@ -11615,7 +11634,7 @@ var usePopoverProviderContext = ctx5.useProviderContext;
 var PopoverContextProvider = ctx5.ContextProvider;
 var PopoverScopedContextProvider = ctx5.ScopedContextProvider;
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/KZX46JDB.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.20/node_modules/@ariakit/core/esm/__chunks/KZX46JDB.js
 function getCommonParent(items) {
   var _a, _b;
   const firstItem = items.find((item) => !!item.element);
@@ -11765,14 +11784,14 @@ function createCollectionStore(props = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/6S37ITHJ.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/55ENK5IP.js
 function useCollectionStoreProps(store, update2, props) {
   useUpdateEffect(update2, [props.store]);
   useStoreProps(store, props, "items", "setItems");
   return store;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/UNDE2QJS.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.20/node_modules/@ariakit/core/esm/__chunks/LJ7CXLHP.js
 var NULL_ITEM = { id: null };
 function findFirstEnabledItem2(items, excludeId) {
   return items.find((item) => {
@@ -11879,11 +11898,7 @@ function createCompositeStore(props = {}) {
   );
   const initialState = {
     ...collection.getState(),
-    id: defaultValue(
-      props.id,
-      syncState == null ? void 0 : syncState.id,
-      `id-${Math.random().toString(36).slice(2, 8)}`
-    ),
+    id: defaultValue(props.id, syncState == null ? void 0 : syncState.id) ?? `id-${Math.random().toString(36).slice(2, 8)}`,
     activeId,
     baseElement: defaultValue(syncState == null ? void 0 : syncState.baseElement, null),
     includesBaseElement: defaultValue(
@@ -12031,7 +12046,7 @@ function createCompositeStore(props = {}) {
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/ZJG6VNPS.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/W6MTWV42.js
 function useCompositeStoreOptions(props) {
   const id = useId4(props.id);
   return { id, ...props };
@@ -12049,7 +12064,7 @@ function useCompositeStoreProps(store, update2, props) {
   return store;
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/H55QERR5.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/6C2ASARV.js
 var import_react17 = __toESM(require_react(), 1);
 var ComboboxListRoleContext = (0, import_react17.createContext)(
   void 0
@@ -12068,17 +12083,17 @@ var ComboboxItemValueContext = (0, import_react17.createContext)(
 );
 var ComboboxItemCheckedContext = (0, import_react17.createContext)(false);
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/7KNZCZ55.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.20/node_modules/@ariakit/core/esm/__chunks/7KNZCZ55.js
 function createDialogStore(props = {}) {
   return createDisclosureStore(props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/EX4LS7ZU.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/NGV5ZW5X.js
 function useDialogStoreProps(store, update2, props) {
   return useDisclosureStoreProps(store, update2, props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/__chunks/MJ4ZJEIM.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.20/node_modules/@ariakit/core/esm/__chunks/MJ4ZJEIM.js
 function createPopoverStore({
   popover: otherPopover,
   ...props
@@ -12121,14 +12136,14 @@ function createPopoverStore({
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/RPKQBJCW.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/SZTI5KAP.js
 function usePopoverStoreProps(store, update2, props) {
   useUpdateEffect(update2, [props.popover]);
   useStoreProps(store, props, "placement");
   return useDialogStoreProps(store, update2, props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/BLCLYOQG.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/CTFM4U6G.js
 var TagName7 = "div";
 var usePopoverAnchor = createHook(
   function usePopoverAnchor2({ store, ...props }) {
@@ -12146,7 +12161,7 @@ var PopoverAnchor = forwardRef22(function PopoverAnchor2(props) {
   return createElement3(TagName7, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/CI3WD73H.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/HBZ7G2WX.js
 var import_react18 = __toESM(require_react(), 1);
 var TagName8 = "div";
 function getMouseDestination(event) {
@@ -12234,7 +12249,7 @@ var CompositeHover = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox.js
 var import_react19 = __toESM(require_react(), 1);
 var TagName9 = "input";
 function isFirstItemAutoSelected(items, activeValue, autoSelect) {
@@ -12550,7 +12565,7 @@ var useCombobox = createHook(
     });
     const onMouseDownProp = props.onMouseDown;
     const blurActiveItemOnClickProp = useBooleanEvent(
-      blurActiveItemOnClick != null ? blurActiveItemOnClick : (() => !!(store == null ? void 0 : store.getState().includesBaseElement))
+      blurActiveItemOnClick != null ? blurActiveItemOnClick : (() => store.getState().includesBaseElement)
     );
     const setValueOnClickProp = useBooleanEvent(setValueOnClick);
     const showOnClickProp = useBooleanEvent(showOnClick != null ? showOnClick : canShow);
@@ -12578,12 +12593,16 @@ var useCombobox = createHook(
         canAutoSelectRef.current = false;
       }
       if (event.defaultPrevented) return;
+      if (!store) return;
+      const { open: open2 } = store.getState();
+      if (open2 && event.key === "Enter") {
+        event.preventDefault();
+        return;
+      }
       if (event.ctrlKey) return;
       if (event.altKey) return;
       if (event.shiftKey) return;
       if (event.metaKey) return;
-      if (!store) return;
-      const { open: open2 } = store.getState();
       if (open2) return;
       if (event.key === "ArrowUp" || event.key === "ArrowDown") {
         if (showOnKeyPressProp(event)) {
@@ -12642,7 +12661,7 @@ var Combobox = forwardRef22(function Combobox2(props) {
   return createElement3(TagName9, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/CRB22UI4.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/T2NLLS6H.js
 var import_react20 = __toESM(require_react(), 1);
 var import_jsx_runtime68 = __toESM(require_jsx_runtime(), 1);
 var TagName10 = "div";
@@ -12799,7 +12818,7 @@ var ComboboxItem = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-item-value.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-item-value.js
 var import_react21 = __toESM(require_react(), 1);
 var import_jsx_runtime69 = __toESM(require_jsx_runtime(), 1);
 var TagName11 = "span";
@@ -12895,7 +12914,7 @@ var ComboboxItemValue = forwardRef22(function ComboboxItemValue2(props) {
   return createElement3(TagName11, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-label.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-label.js
 var TagName12 = "label";
 var useComboboxLabel = createHook(
   function useComboboxLabel2({ store, ...props }) {
@@ -12923,7 +12942,7 @@ var ComboboxLabel = memo22(
   })
 );
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/ZJYMN66B.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/K56O3DEP.js
 var import_react22 = __toESM(require_react(), 1);
 var import_jsx_runtime70 = __toESM(require_jsx_runtime(), 1);
 var TagName13 = "div";
@@ -12996,7 +13015,7 @@ var ComboboxList = forwardRef22(function ComboboxList2(props) {
   return createElement3(TagName13, htmlProps);
 });
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/KR5NJL64.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/CLHN7VYT.js
 var import_react23 = __toESM(require_react(), 1);
 var TagValueContext = (0, import_react23.createContext)(null);
 var TagRemoveIdContext = (0, import_react23.createContext)(
@@ -13012,7 +13031,7 @@ var useTagProviderContext = ctx7.useProviderContext;
 var TagContextProvider = ctx7.ContextProvider;
 var TagScopedContextProvider = ctx7.ScopedContextProvider;
 
-// ../../../node_modules/.pnpm/@ariakit+core@0.4.19/node_modules/@ariakit/core/esm/combobox/combobox-store.js
+// ../../../node_modules/.pnpm/@ariakit+core@0.4.20/node_modules/@ariakit/core/esm/combobox/combobox-store.js
 var isTouchSafari = isSafari() && isTouchDevice();
 function createComboboxStore({
   tag,
@@ -13153,7 +13172,7 @@ function createComboboxStore({
   };
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/KQS2CH22.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/__chunks/JLHQNPGM.js
 function useComboboxStoreOptions(props) {
   const tag = useTagContext();
   props = {
@@ -13183,7 +13202,7 @@ function useComboboxStore(props = {}) {
   return useComboboxStoreProps(store, update2, props);
 }
 
-// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.25_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-provider.js
+// ../../../node_modules/.pnpm/@ariakit+react-core@0.4.26_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@ariakit/react-core/esm/combobox/combobox-provider.js
 var import_jsx_runtime71 = __toESM(require_jsx_runtime(), 1);
 function ComboboxProvider(props = {}) {
   const store = useComboboxStore(props);
@@ -21328,10 +21347,10 @@ var Container = ({ children, fluid = false, tagName = "div", className, horizont
 var container_default = (0, import_react27.forwardRef)(Container);
 
 // ../../js-packages/components/build/components/jetpack-footer/style.scss
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='4f2b158f89']")) {
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='3564841de6']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "4f2b158f89");
-  style.appendChild(document.createTextNode(':root{--wpds-border-radius-lg:8px;--wpds-border-radius-md:4px;--wpds-border-radius-sm:2px;--wpds-border-radius-xs:1px;--wpds-border-width-focus:2px;--wpds-border-width-lg:8px;--wpds-border-width-md:4px;--wpds-border-width-sm:2px;--wpds-border-width-xs:1px;--wpds-color-bg-interactive-brand-strong:#3858e9;--wpds-color-bg-interactive-brand-strong-active:#2e49d9;--wpds-color-bg-interactive-brand-weak:#0000;--wpds-color-bg-interactive-brand-weak-active:#e6eaf4;--wpds-color-bg-interactive-error:#0000;--wpds-color-bg-interactive-error-active:#fff6f5;--wpds-color-bg-interactive-error-strong:#cc1818;--wpds-color-bg-interactive-error-strong-active:#b90000;--wpds-color-bg-interactive-error-weak:#0000;--wpds-color-bg-interactive-error-weak-active:#f6e6e3;--wpds-color-bg-interactive-neutral-strong:#2d2d2d;--wpds-color-bg-interactive-neutral-strong-active:#1e1e1e;--wpds-color-bg-interactive-neutral-strong-disabled:#e6e6e6;--wpds-color-bg-interactive-neutral-weak:#0000;--wpds-color-bg-interactive-neutral-weak-active:#ededed;--wpds-color-bg-interactive-neutral-weak-disabled:#0000;--wpds-color-bg-surface-brand:#ecf0fa;--wpds-color-bg-surface-caution:#fee995;--wpds-color-bg-surface-caution-weak:#fff9ca;--wpds-color-bg-surface-error:#f6e6e3;--wpds-color-bg-surface-error-weak:#fff6f5;--wpds-color-bg-surface-info:#deebfa;--wpds-color-bg-surface-info-weak:#f3f9ff;--wpds-color-bg-surface-neutral:#fcfcfc;--wpds-color-bg-surface-neutral-strong:#fff;--wpds-color-bg-surface-neutral-weak:#f4f4f4;--wpds-color-bg-surface-success:#c6f7cd;--wpds-color-bg-surface-success-weak:#ebffed;--wpds-color-bg-surface-warning:#fde6be;--wpds-color-bg-surface-warning-weak:#fff7e1;--wpds-color-bg-thumb-brand:#3858e9;--wpds-color-bg-thumb-brand-active:#3858e9;--wpds-color-bg-thumb-neutral-disabled:#dbdbdb;--wpds-color-bg-thumb-neutral-weak:#8d8d8d;--wpds-color-bg-thumb-neutral-weak-active:#6e6e6e;--wpds-color-bg-track-neutral:#dbdbdb;--wpds-color-bg-track-neutral-weak:#e4e4e4;--wpds-color-fg-content-caution:#281d00;--wpds-color-fg-content-caution-weak:#826a00;--wpds-color-fg-content-error:#470000;--wpds-color-fg-content-error-weak:#cc1818;--wpds-color-fg-content-info:#001b4f;--wpds-color-fg-content-info-weak:#006bd7;--wpds-color-fg-content-neutral:#1e1e1e;--wpds-color-fg-content-neutral-weak:#707070;--wpds-color-fg-content-success:#002900;--wpds-color-fg-content-success-weak:#008030;--wpds-color-fg-content-warning:#2e1900;--wpds-color-fg-content-warning-weak:#926300;--wpds-color-fg-interactive-brand:#3858e9;--wpds-color-fg-interactive-brand-active:#3858e9;--wpds-color-fg-interactive-brand-strong:#eff0f2;--wpds-color-fg-interactive-brand-strong-active:#eff0f2;--wpds-color-fg-interactive-error:#cc1818;--wpds-color-fg-interactive-error-active:#cc1818;--wpds-color-fg-interactive-error-strong:#f2efef;--wpds-color-fg-interactive-error-strong-active:#f2efef;--wpds-color-fg-interactive-neutral:#1e1e1e;--wpds-color-fg-interactive-neutral-active:#1e1e1e;--wpds-color-fg-interactive-neutral-disabled:#8d8d8d;--wpds-color-fg-interactive-neutral-strong:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-active:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-disabled:#8d8d8d;--wpds-color-fg-interactive-neutral-weak:#707070;--wpds-color-fg-interactive-neutral-weak-disabled:#8d8d8d;--wpds-color-stroke-focus-brand:#3858e9;--wpds-color-stroke-interactive-brand:#3858e9;--wpds-color-stroke-interactive-brand-active:#2337c8;--wpds-color-stroke-interactive-error:#cc1818;--wpds-color-stroke-interactive-error-active:#9d0000;--wpds-color-stroke-interactive-error-strong:#cc1818;--wpds-color-stroke-interactive-neutral:#8d8d8d;--wpds-color-stroke-interactive-neutral-active:#6e6e6e;--wpds-color-stroke-interactive-neutral-disabled:#dbdbdb;--wpds-color-stroke-interactive-neutral-strong:#6e6e6e;--wpds-color-stroke-surface-brand:#a3b1d4;--wpds-color-stroke-surface-brand-strong:#3858e9;--wpds-color-stroke-surface-error:#daa39b;--wpds-color-stroke-surface-error-strong:#cc1818;--wpds-color-stroke-surface-info:#9fbcdc;--wpds-color-stroke-surface-info-strong:#006bd7;--wpds-color-stroke-surface-neutral:#dbdbdb;--wpds-color-stroke-surface-neutral-strong:#8d8d8d;--wpds-color-stroke-surface-neutral-weak:#e4e4e4;--wpds-color-stroke-surface-success:#8ac894;--wpds-color-stroke-surface-success-strong:#008030;--wpds-color-stroke-surface-warning:#d0b481;--wpds-color-stroke-surface-warning-strong:#926300;--wpds-cursor-control:pointer;--wpds-dimension-base:4px;--wpds-dimension-gap-2xl:32px;--wpds-dimension-gap-3xl:40px;--wpds-dimension-gap-lg:16px;--wpds-dimension-gap-md:12px;--wpds-dimension-gap-sm:8px;--wpds-dimension-gap-xl:24px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-2xl:24px;--wpds-dimension-padding-3xl:32px;--wpds-dimension-padding-lg:16px;--wpds-dimension-padding-md:12px;--wpds-dimension-padding-sm:8px;--wpds-dimension-padding-xl:20px;--wpds-dimension-padding-xs:4px;--wpds-dimension-surface-width-2xl:960px;--wpds-dimension-surface-width-lg:560px;--wpds-dimension-surface-width-md:400px;--wpds-dimension-surface-width-sm:320px;--wpds-dimension-surface-width-xl:720px;--wpds-dimension-surface-width-xs:240px;--wpds-elevation-lg:0 5px 15px 0 #00000014,0 15px 27px 0 #00000012,0 30px 36px 0 #0000000a,0 50px 43px 0 #00000005;--wpds-elevation-md:0 2px 3px 0 #0000000d,0 4px 5px 0 #0000000a,0 12px 12px 0 #00000008,0 16px 16px 0 #00000005;--wpds-elevation-sm:0 1px 2px 0 #0000000d,0 2px 3px 0 #0000000a,0 6px 6px 0 #00000008,0 8px 8px 0 #00000005;--wpds-elevation-xs:0 1px 1px 0 #00000008,0 1px 2px 0 #00000005,0 3px 3px 0 #00000005,0 4px 4px 0 #00000003;--wpds-typography-font-family-body:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-typography-font-family-heading:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-typography-font-family-mono:"Menlo","Consolas",monaco,monospace;--wpds-typography-font-size-2xl:32px;--wpds-typography-font-size-lg:15px;--wpds-typography-font-size-md:13px;--wpds-typography-font-size-sm:12px;--wpds-typography-font-size-xl:20px;--wpds-typography-font-size-xs:11px;--wpds-typography-font-weight-medium:499;--wpds-typography-font-weight-regular:400;--wpds-typography-line-height-2xl:40px;--wpds-typography-line-height-lg:28px;--wpds-typography-line-height-md:24px;--wpds-typography-line-height-sm:20px;--wpds-typography-line-height-xl:32px;--wpds-typography-line-height-xs:16px}[data-wpds-theme-provider-id][data-wpds-density=compact]{--wpds-dimension-gap-2xl:24px;--wpds-dimension-gap-3xl:32px;--wpds-dimension-gap-lg:12px;--wpds-dimension-gap-md:8px;--wpds-dimension-gap-sm:4px;--wpds-dimension-gap-xl:20px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-2xl:20px;--wpds-dimension-padding-3xl:24px;--wpds-dimension-padding-lg:12px;--wpds-dimension-padding-md:8px;--wpds-dimension-padding-sm:4px;--wpds-dimension-padding-xl:16px;--wpds-dimension-padding-xs:4px}[data-wpds-theme-provider-id][data-wpds-density=comfortable]{--wpds-dimension-gap-2xl:40px;--wpds-dimension-gap-3xl:48px;--wpds-dimension-gap-lg:20px;--wpds-dimension-gap-md:16px;--wpds-dimension-gap-sm:12px;--wpds-dimension-gap-xl:32px;--wpds-dimension-gap-xs:8px;--wpds-dimension-padding-2xl:32px;--wpds-dimension-padding-3xl:40px;--wpds-dimension-padding-lg:20px;--wpds-dimension-padding-md:16px;--wpds-dimension-padding-sm:12px;--wpds-dimension-padding-xl:24px;--wpds-dimension-padding-xs:8px}[data-wpds-theme-provider-id][data-wpds-density=default]{--wpds-dimension-base:4px;--wpds-dimension-gap-2xl:32px;--wpds-dimension-gap-3xl:40px;--wpds-dimension-gap-lg:16px;--wpds-dimension-gap-md:12px;--wpds-dimension-gap-sm:8px;--wpds-dimension-gap-xl:24px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-2xl:24px;--wpds-dimension-padding-3xl:32px;--wpds-dimension-padding-lg:16px;--wpds-dimension-padding-md:12px;--wpds-dimension-padding-sm:8px;--wpds-dimension-padding-xl:20px;--wpds-dimension-padding-xs:4px;--wpds-dimension-surface-width-2xl:960px;--wpds-dimension-surface-width-lg:560px;--wpds-dimension-surface-width-md:400px;--wpds-dimension-surface-width-sm:320px;--wpds-dimension-surface-width-xl:720px;--wpds-dimension-surface-width-xs:240px}@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){:root{--wpds-border-width-focus:1.5px}}.jetpack-footer{border-top:var(--wpds-border-width-xs,1px) solid var(--wpds-color-stroke-surface-neutral-weak,#e0e0e0);box-sizing:border-box;font-size:var(--wpds-typography-font-size-md,13px);padding:var(--wpds-dimension-padding-xl,20px) var(--wpds-dimension-padding-2xl,24px);width:100%}.jetpack-footer .jetpack-footer__menu-item:any-link,.jetpack-footer .jetpack-footer__menu-item[role=button]{color:var(--wpds-color-fg-interactive-neutral-weak,#707070);cursor:pointer;text-decoration:none}.jetpack-footer .jetpack-footer__menu-item:hover{text-decoration:underline}.jetpack-footer>ul{list-style:none;margin:0;padding:0}.jetpack-footer>ul>li{margin:0}.jetpack-footer__logo{flex-shrink:0}@media (min-width:480px){a.jetpack-footer__a8c{margin-inline-start:auto}}a.jetpack-footer__a8c svg{fill:var(--wpds-color-fg-interactive-neutral-weak,#707070)}'));
+  style.setAttribute("data-wp-hash", "3564841de6");
+  style.appendChild(document.createTextNode(':root{--wpds-border-radius-lg:8px;--wpds-border-radius-md:4px;--wpds-border-radius-sm:2px;--wpds-border-radius-xs:1px;--wpds-border-width-focus:2px;--wpds-border-width-lg:8px;--wpds-border-width-md:4px;--wpds-border-width-sm:2px;--wpds-border-width-xs:1px;--wpds-color-bg-interactive-brand-strong:#3858e9;--wpds-color-bg-interactive-brand-strong-active:#2e49d9;--wpds-color-bg-interactive-brand-weak:#0000;--wpds-color-bg-interactive-brand-weak-active:#e6eaf4;--wpds-color-bg-interactive-error:#0000;--wpds-color-bg-interactive-error-active:#fff6f5;--wpds-color-bg-interactive-error-strong:#cc1818;--wpds-color-bg-interactive-error-strong-active:#b90000;--wpds-color-bg-interactive-error-weak:#0000;--wpds-color-bg-interactive-error-weak-active:#f6e6e3;--wpds-color-bg-interactive-neutral-strong:#2d2d2d;--wpds-color-bg-interactive-neutral-strong-active:#1e1e1e;--wpds-color-bg-interactive-neutral-strong-disabled:#e6e6e6;--wpds-color-bg-interactive-neutral-weak:#0000;--wpds-color-bg-interactive-neutral-weak-active:#ededed;--wpds-color-bg-interactive-neutral-weak-disabled:#0000;--wpds-color-bg-surface-brand:#ecf0fa;--wpds-color-bg-surface-caution:#fee995;--wpds-color-bg-surface-caution-weak:#fff9ca;--wpds-color-bg-surface-error:#f6e6e3;--wpds-color-bg-surface-error-weak:#fff6f5;--wpds-color-bg-surface-info:#deebfa;--wpds-color-bg-surface-info-weak:#f3f9ff;--wpds-color-bg-surface-neutral:#fcfcfc;--wpds-color-bg-surface-neutral-strong:#fff;--wpds-color-bg-surface-neutral-weak:#f4f4f4;--wpds-color-bg-surface-success:#c6f7cd;--wpds-color-bg-surface-success-weak:#ebffed;--wpds-color-bg-surface-warning:#fde6be;--wpds-color-bg-surface-warning-weak:#fff7e1;--wpds-color-bg-thumb-brand:#3858e9;--wpds-color-bg-thumb-brand-active:#3858e9;--wpds-color-bg-thumb-neutral-disabled:#dbdbdb;--wpds-color-bg-thumb-neutral-weak:#8d8d8d;--wpds-color-bg-thumb-neutral-weak-active:#6e6e6e;--wpds-color-bg-track-neutral:#dbdbdb;--wpds-color-bg-track-neutral-weak:#e4e4e4;--wpds-color-fg-content-caution:#281d00;--wpds-color-fg-content-caution-weak:#826a00;--wpds-color-fg-content-error:#470000;--wpds-color-fg-content-error-weak:#cc1818;--wpds-color-fg-content-info:#001b4f;--wpds-color-fg-content-info-weak:#006bd7;--wpds-color-fg-content-neutral:#1e1e1e;--wpds-color-fg-content-neutral-weak:#707070;--wpds-color-fg-content-success:#002900;--wpds-color-fg-content-success-weak:#008030;--wpds-color-fg-content-warning:#2e1900;--wpds-color-fg-content-warning-weak:#926300;--wpds-color-fg-interactive-brand:#3858e9;--wpds-color-fg-interactive-brand-active:#3858e9;--wpds-color-fg-interactive-brand-strong:#eff0f2;--wpds-color-fg-interactive-brand-strong-active:#eff0f2;--wpds-color-fg-interactive-error:#cc1818;--wpds-color-fg-interactive-error-active:#cc1818;--wpds-color-fg-interactive-error-strong:#f2efef;--wpds-color-fg-interactive-error-strong-active:#f2efef;--wpds-color-fg-interactive-neutral:#1e1e1e;--wpds-color-fg-interactive-neutral-active:#1e1e1e;--wpds-color-fg-interactive-neutral-disabled:#8d8d8d;--wpds-color-fg-interactive-neutral-strong:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-active:#f0f0f0;--wpds-color-fg-interactive-neutral-strong-disabled:#8d8d8d;--wpds-color-fg-interactive-neutral-weak:#707070;--wpds-color-fg-interactive-neutral-weak-disabled:#8d8d8d;--wpds-color-stroke-focus-brand:#3858e9;--wpds-color-stroke-interactive-brand:#3858e9;--wpds-color-stroke-interactive-brand-active:#2337c8;--wpds-color-stroke-interactive-error:#cc1818;--wpds-color-stroke-interactive-error-active:#9d0000;--wpds-color-stroke-interactive-error-strong:#cc1818;--wpds-color-stroke-interactive-neutral:#8d8d8d;--wpds-color-stroke-interactive-neutral-active:#6e6e6e;--wpds-color-stroke-interactive-neutral-disabled:#dbdbdb;--wpds-color-stroke-interactive-neutral-strong:#6e6e6e;--wpds-color-stroke-surface-brand:#a3b1d4;--wpds-color-stroke-surface-brand-strong:#3858e9;--wpds-color-stroke-surface-error:#daa39b;--wpds-color-stroke-surface-error-strong:#cc1818;--wpds-color-stroke-surface-info:#9fbcdc;--wpds-color-stroke-surface-info-strong:#006bd7;--wpds-color-stroke-surface-neutral:#dbdbdb;--wpds-color-stroke-surface-neutral-strong:#8d8d8d;--wpds-color-stroke-surface-neutral-weak:#e4e4e4;--wpds-color-stroke-surface-success:#8ac894;--wpds-color-stroke-surface-success-strong:#008030;--wpds-color-stroke-surface-warning:#d0b481;--wpds-color-stroke-surface-warning-strong:#926300;--wpds-cursor-control:pointer;--wpds-dimension-base:4px;--wpds-dimension-gap-2xl:32px;--wpds-dimension-gap-3xl:40px;--wpds-dimension-gap-lg:16px;--wpds-dimension-gap-md:12px;--wpds-dimension-gap-sm:8px;--wpds-dimension-gap-xl:24px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-2xl:24px;--wpds-dimension-padding-3xl:32px;--wpds-dimension-padding-lg:16px;--wpds-dimension-padding-md:12px;--wpds-dimension-padding-sm:8px;--wpds-dimension-padding-xl:20px;--wpds-dimension-padding-xs:4px;--wpds-dimension-surface-width-2xl:960px;--wpds-dimension-surface-width-lg:560px;--wpds-dimension-surface-width-md:400px;--wpds-dimension-surface-width-sm:320px;--wpds-dimension-surface-width-xl:720px;--wpds-dimension-surface-width-xs:240px;--wpds-elevation-lg:0 5px 15px 0 #00000014,0 15px 27px 0 #00000012,0 30px 36px 0 #0000000a,0 50px 43px 0 #00000005;--wpds-elevation-md:0 2px 3px 0 #0000000d,0 4px 5px 0 #0000000a,0 12px 12px 0 #00000008,0 16px 16px 0 #00000005;--wpds-elevation-sm:0 1px 2px 0 #0000000d,0 2px 3px 0 #0000000a,0 6px 6px 0 #00000008,0 8px 8px 0 #00000005;--wpds-elevation-xs:0 1px 1px 0 #00000008,0 1px 2px 0 #00000005,0 3px 3px 0 #00000005,0 4px 4px 0 #00000003;--wpds-typography-font-family-body:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-typography-font-family-heading:-apple-system,system-ui,"Segoe UI","Roboto","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;--wpds-typography-font-family-mono:"Menlo","Consolas",monaco,monospace;--wpds-typography-font-size-2xl:32px;--wpds-typography-font-size-lg:15px;--wpds-typography-font-size-md:13px;--wpds-typography-font-size-sm:12px;--wpds-typography-font-size-xl:20px;--wpds-typography-font-size-xs:11px;--wpds-typography-font-weight-medium:499;--wpds-typography-font-weight-regular:400;--wpds-typography-line-height-2xl:40px;--wpds-typography-line-height-lg:28px;--wpds-typography-line-height-md:24px;--wpds-typography-line-height-sm:20px;--wpds-typography-line-height-xl:32px;--wpds-typography-line-height-xs:16px}[data-wpds-theme-provider-id][data-wpds-density=compact]{--wpds-dimension-gap-2xl:24px;--wpds-dimension-gap-3xl:32px;--wpds-dimension-gap-lg:12px;--wpds-dimension-gap-md:8px;--wpds-dimension-gap-sm:4px;--wpds-dimension-gap-xl:20px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-2xl:20px;--wpds-dimension-padding-3xl:24px;--wpds-dimension-padding-lg:12px;--wpds-dimension-padding-md:8px;--wpds-dimension-padding-sm:4px;--wpds-dimension-padding-xl:16px;--wpds-dimension-padding-xs:4px}[data-wpds-theme-provider-id][data-wpds-density=comfortable]{--wpds-dimension-gap-2xl:40px;--wpds-dimension-gap-3xl:48px;--wpds-dimension-gap-lg:20px;--wpds-dimension-gap-md:16px;--wpds-dimension-gap-sm:12px;--wpds-dimension-gap-xl:32px;--wpds-dimension-gap-xs:8px;--wpds-dimension-padding-2xl:32px;--wpds-dimension-padding-3xl:40px;--wpds-dimension-padding-lg:20px;--wpds-dimension-padding-md:16px;--wpds-dimension-padding-sm:12px;--wpds-dimension-padding-xl:24px;--wpds-dimension-padding-xs:8px}[data-wpds-theme-provider-id][data-wpds-density=default]{--wpds-dimension-base:4px;--wpds-dimension-gap-2xl:32px;--wpds-dimension-gap-3xl:40px;--wpds-dimension-gap-lg:16px;--wpds-dimension-gap-md:12px;--wpds-dimension-gap-sm:8px;--wpds-dimension-gap-xl:24px;--wpds-dimension-gap-xs:4px;--wpds-dimension-padding-2xl:24px;--wpds-dimension-padding-3xl:32px;--wpds-dimension-padding-lg:16px;--wpds-dimension-padding-md:12px;--wpds-dimension-padding-sm:8px;--wpds-dimension-padding-xl:20px;--wpds-dimension-padding-xs:4px;--wpds-dimension-surface-width-2xl:960px;--wpds-dimension-surface-width-lg:560px;--wpds-dimension-surface-width-md:400px;--wpds-dimension-surface-width-sm:320px;--wpds-dimension-surface-width-xl:720px;--wpds-dimension-surface-width-xs:240px}@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){:root{--wpds-border-width-focus:1.5px}}.jetpack-footer{border-top:var(--wpds-border-width-xs,1px) solid var(--wpds-color-stroke-surface-neutral-weak,#e0e0e0);box-sizing:border-box;font-size:var(--wpds-typography-font-size-md,13px);padding:var(--wpds-dimension-padding-xl,20px) var(--wpds-dimension-padding-2xl,24px);width:100%}.jetpack-footer :is(.jetpack-footer__menu-item:any-link,.jetpack-footer__menu-item[role=button]){color:var(--wpds-color-fg-interactive-neutral-weak,#707070);cursor:pointer;text-decoration:none}.jetpack-footer .jetpack-footer__menu-item:hover{text-decoration:underline}.jetpack-footer>ul{list-style:none;margin:0;padding:0}.jetpack-footer>ul>li{margin:0}.jetpack-footer__logo{flex-shrink:0}@media (min-width:480px){a.jetpack-footer__a8c{margin-inline-start:auto}}a.jetpack-footer__a8c svg{fill:var(--wpds-color-fg-interactive-neutral-weak,#707070)}'));
   document.head.appendChild(style);
 }
 
