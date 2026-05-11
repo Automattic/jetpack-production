@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add an empty wp-build dashboard scaffold and the "Jetpack > Podcast" wp-admin entry, gated behind the `jetpack_podcast_untangle` filter. With the filter off (default), nothing changes; with it on, a placeholder Podcast page renders inside the standard wp-admin chrome.
 - Dashboard: fill in the four tab panels (Welcome onboarding, Settings form, Episodes list, Distribution submission flow) behind the `jetpack_podcast_untangle` filter.
+- Default the untangle gate to enabled for A8C-proxied requests so Automatticians dogfood the new package on Simple and Atomic.
 - Feed: register `<itunes:*>` / `<googleplay:*>` channel + item tags, podcatcher detection, and stats-tracked enclosure URLs for the configured podcast category.
 - Initial scaffolding for the Jetpack Podcast package. Loads on Simple and Atomic only, gated behind the `jetpack_podcast_untangle` filter (default off) so it stays inert while the legacy podcasting code keeps running.
 - Settings: register the `podcasting_*` option schema with REST exposure and Jetpack Sync opt-in, gated behind the `jetpack_podcast_untangle` filter.
