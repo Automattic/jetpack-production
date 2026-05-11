@@ -150,7 +150,7 @@ return array(
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
-      'ver' => '0.59.0-alpha1778513518',
+      'ver' => '0.59.0-alpha1778526028',
     ),
     'jetpack-stats' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-stats',
