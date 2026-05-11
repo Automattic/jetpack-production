@@ -350,6 +350,7 @@ return array(
     'Automattic\\Jetpack\\Search\\Template_Tags' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-template-tags.php',
     'Automattic\\Jetpack\\Search\\WPES\\Query_Builder' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/wpes/class-query-builder.php',
     'Automattic\\Jetpack\\Search\\WPES\\Query_Parser' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/wpes/class-query-parser.php',
+    'Automattic\\Jetpack\\Search\\Wc_Block_Helpers' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/class-wc-block-helpers.php',
     'Automattic\\Jetpack\\Shortcodes' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-shortcodes.php',
     'Automattic\\Jetpack\\SignatureInvalidException' => $baseDir . '/jetpack_vendor/automattic/jetpack-jwt/src/class-jwt.php',
     'Automattic\\Jetpack\\Stats\\Abilities\\Stats_Abilities' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/abilities/class-stats-abilities.php',
