@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Update to @wordpress/admin-ui 2.0.0 and use the Page component's new `visual` prop for the Jetpack logo.
 - Forms now uses the shared `Gravatar` component from `@automattic/jetpack-components/gravatar`. No user-visible change.
 
+### Fixed
+- Fix phantom unread counter badge appearing when there are no unread form submissions.
+
 ## [7.21.0] - 2026-05-04
 ### Added
 - Add admin abilities for form CRUD (list-forms, get-form, create-form, delete-form) and bulk-update-responses. [#47102]
