@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings and AI pages: replace the `.admin-ui-page` selector hook (gone in admin-ui 2.0.0) with the stable `.jp-admin-page__page` className passed through by AdminPage, restoring page-specific layout overrides.
 
 ### Bug fixes
+- AI page: update the layout-mixin selector to match the renamed `jetpack-ai` body class so the page layout (sticky header, scrollable middle, pinned footer) applies again.
 - Shortcodes: Google Maps shortcode now preserves URL-encoded ampersands (%26) in place names.
 - Shortcodes: Google Maps shortcode now preserves URL-encoded reserved characters (`#`, `%`, `+`) and HTML-entity-encoded ampersands inside place names.
 - Social: fall back to the site-wide social message template when no per-post share message is set.
