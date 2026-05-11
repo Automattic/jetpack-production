@@ -56,6 +56,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Search 3.0: prevent 404 when refreshing a singular page that hosts inline search blocks
+- Search 3.0: stop showing the "Matches content" badge on result cards when the visitor has only applied filters (category, tag, price, etc.) without typing a search query.
 - Search Blocks: add pre-hydration skeleton to the WooCommerce attribute filter block so a deep-linked URL (`?pa_color[]=red`) shows shimmer rows instead of a blank space while the initial fetch runs.
 - Search Blocks: Category, Tag, Post Type, Author, and Custom Taxonomy filter presets now appear in the block inserter.
 - Search blocks: clear the previous query's results, total count, and aggregation buckets when a search request errors out so the error message no longer renders alongside stale data.
