@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.19-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.6.19] - 2026-05-11
 ### Changed
-- Components: Use Link from `@wordpress/ui` instead of ExternalLink.
+- Components: Use Link from `@wordpress/ui` instead of ExternalLink. [#48529]
 
 ## [0.6.18] - 2026-05-04
 ### Changed
@@ -227,7 +224,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Simple Payments: Move Simple Payments block to PayPal Payments package. [#43413]
 
-[0.6.19-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.6.18...v0.6.19-alpha
+[0.6.19]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.6.18...v0.6.19
 [0.6.18]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.6.17...v0.6.18
 [0.6.17]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.6.16...v0.6.17
 [0.6.16]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.6.15...v0.6.16

@@ -5,71 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.1.0] - 2026-05-11
 ### Added
-- Initial release of the Scan package: hosts the in-wp-admin Scan UI shell, data-layer skeleton, and REST namespace placeholder.
-- Persist the DataViews view state across reloads on both panels. Active threats and Scan history each pass their own `persistKey` to `ThreatsDataViews` (`jetpack-scan:active-threats:view`, `jetpack-scan:scan-history:view`), so filters, sort direction, search query, page, and layout (table vs list) round-trip across page reloads, tab switches, and drill-ins. Closes the last unfinished bullet in Phase 1 of #48456.
-- Phase 1: wire WPCOM bridges for `/scan`, `/scan/history`, `/scan/counts`, and replace the Phase 0 placeholder with a tabbed Active threats / History overview backed by `ThreatsDataViews` from `@automattic/jetpack-scan`.
-- Phase 3: port the per-threat fix / ignore / unignore confirmation modals from Calypso. The row-action variants of these flows now open a `RenderModal` inside the DataViews shell (mirrors `client/dashboard/sites/scan/components/{fix,ignore,unignore}-threat-modal.tsx`), giving the user a chance to review the threat + see a destructive-action warning before committing. The fix modal also polls `useFixThreatsStatusQuery` and waits for a terminal state before closing, surfacing fixed / not_fixed in a snackbar. The inline auto-fix button keeps its existing fire-and-forget snackbar behaviour, since DataViews offers no programmatic way to trigger a row action's modal from a custom field renderer.
-- Phase 3: wire single-threat fix / ignore / unignore actions on the Active threats and Scan history tabs. New REST bridges (`/threat/{id}/ignore`, `/threat/{id}/unignore`, `/threats/fix`, `/threats/fix-status`) proxy to WPCOM's `/sites/:siteId/alerts/*` surface; `useFixThreatsMutation` / `useIgnoreThreatMutation` / `useUnignoreThreatMutation` hand stable callbacks to `ThreatsDataViews`'s row-action props with `core/notices` snackbar feedback on success and failure. The 2 s fix-status polling hook is wired but not yet rendered — Phase 4's bulk-fix modal consumes it.
-- Phase 4: port the read-only view-details modal from Calypso. New `view-details-modal.tsx` renders the threat title + severity + signature + description, plus the file path / context block / extension version / first-detected / fixed-on metadata when present, and a fix-description summary tailored to the threat's `fixable.fixer` (`update`, `replace`, `delete`, or non-fixable). Wired into both panels via `RenderViewModal` on the upstream `ThreatsDataViews` (always-eligible row action), and fires `jetpack_scan_view_details_modal_open` on mount.
-- Phase 4: surface an "Auto-fix N threats" header CTA on the Active threats tab and add a bulk-fix modal that confirms the list, kicks `useFixThreatsMutation`, polls `useFixThreatsStatusQuery` every 2 s until every threat reaches a terminal state, and emits a summary snackbar when the fixer settles.
-- Phase 5: add a "Scan now" header button (always available on the Active tab, disabled while a scan is running) backed by a new `POST /jetpack/v4/site/scan/enqueue` REST bridge, and surface a `ScanStatus` panel with a spinner + progress percentage in place of the threats table while the scanner is `enqueued` or `running`.
-- Phase 7: wire `jetpack_scan_*` Tracks events for the Scan-now CTA, the Auto-fix N header CTA, and the bulk-fix modal lifecycle (`_open` / `_click` / `_success` / `_failed` with `threat_count` / `fixed_count` / `failed_count` properties). Switches `data/use-track-event.ts` from a hand-rolled `_tkq` shim to `@automattic/jetpack-analytics`, the canonical Jetpack tracking client used by Forms / Backup / Activity Log.
-- Phase 8: scaffold the test surface. PHPUnit bridge tests cover the admin-only permission callback + route registration for every `/jetpack/v4/site/scan/*` endpoint; Jest unit tests cover the `isFixComplete` polling-terminator from `useFixThreatsStatusQuery`. Broader bridge coverage and an e2e Playwright pass land in a follow-up PR.
-- Wire DataViews-canonical Tracks events on both panels. Forwards the upstream `ThreatsDataViews` `onTrackEvent` callback to `useTrackEvent()` with a `jetpack_scan_` prefix, so Tracks now records `jetpack_scan_search` (`{ has_query }`), `jetpack_scan_layout_changed` (`{ layout }`), `jetpack_scan_page_change` (`{ page }`), `jetpack_scan_filter_change`, and `jetpack_scan_view_change` whenever the user manipulates the in-table view.
+- Scan: Add the initial wp-admin Scan package with page shell, REST namespace placeholder, and Active threats / History views. [#48458]
+- Scan API: Add WPCOM bridge endpoints for scan reads, scan counts, scan enqueue, threat actions, and fix-status polling. [#48458]
+- Scan DataViews: Persist search, filters, sort, pagination, and layout across reloads for Active threats and Scan history. [#48458]
+- Scan Threats: Add per-threat fix, ignore, unignore, and view-details modal flows. [#48458]
+- Scan Threats: Add bulk auto-fix and Scan now flows with progress handling. [#48458]
+- Scan Analytics: Add Tracks events for DataViews interactions, Scan now, auto-fix, modal opens, successes, and failures. [#48458]
+- Scan Tests: Add PHPUnit route-registration coverage and Jest coverage for fix-status polling helpers. [#48458]
 
 ### Changed
-- Address P3 review feedback on #48458:
-  
-  - Scan page chrome now wraps the shared `<AdminPage>` from `@automattic/jetpack-components/admin-page` (matching the wp-build VideoPress dashboard) instead of `Page` from `@wordpress/admin-ui` directly. Drops the bespoke `ResizeObserver` that measured the header height — the `jetpack-admin-page-layout` mixin's `:has(.jp-admin-page-tabs)` rule now handles the sticky tab strip.
-  - `empty-state` switches to `EmptyState.Root` / `Title` / `Description` from `@wordpress/ui` (semantic `<h2>`/`<p>` instead of styled spans).
-  - `active-threats` swaps the loading `__experimentalVStack` and the auto-fix CTA `Button` for `Stack` and `Button` from `@wordpress/ui`.
-  - `bulk-fix-modal` swaps the remaining `Notice` for `Notice.Root` + `Notice.Description` from `@wordpress/ui`.
-- Adopt the `jetpack-admin-page-layout` mixin from `@automattic/jetpack-base-styles` so the Scan page fills the full wp-admin viewport, the JetpackFooter pins to the bottom, and the tabs strip uses the canonical `.jp-admin-page-tabs` wrapper. Same convention Activity Log uses — replaces the hand-rolled tab/content scaffolding from earlier phases.
-- Anchor `.admin-ui-page` to `calc(100vh - var(--wp-admin-bar-height, 32px))` so the page chain has a viewport-tall floor (was `min-block-size: 100%`, which collapses against `#wpbody-content`'s content-driven height). Together with the `flex-grow: 1` chain through `[role="tabpanel"]` → `ThreatsDataViews`, this pins the JetpackFooter to the bottom of the viewport and lets the DataViews empty body fill the area above it. Mobile (≤ 782px) bumps the admin-bar reservation to 46px to match wp-admin's mobile bar height.
-- Bump `@wordpress/admin-ui` from 1.12.0 to 2.0.0 to match the rest of the monorepo. admin-ui 2.x ships its CSS via runtime DOM injection from the JS module, so the explicit `meta.load-css("@wordpress/admin-ui/build-style/style.css")` in `routes/index/route.scss` is dropped — that path no longer exists in the package's exports.
-- Defer empty-state rendering on the Active threats / Scan history panels to `ThreatsDataViews` itself — passing `data={ [] }` shows DataViews' built-in "no items" body inside the table chrome, so reviewers always see the column headers + filter controls instead of a bare paragraph.
-- Fix the DataViews table collapsing to content height (leaving an empty gray strip below the page footer) by passing `unwrapped` to `AdminPage` to skip its default `<Container><Col>` wrappers, and forcing the flex chain from `.admin-ui-page` down through `Tabs.Root` and the active `[role="tabpanel"]` so DataViews' built-in `flex-grow: 1` no-results body centers in the available vertical space.
-- Make the Active threats / History tab panels fill the full page height and align the DataViews search row with the tab nav above it. The empty state now centers in the remaining vertical space (DataViews' built-in `flex-grow: 1` no-results body), and dropping the inner content padding lets the search row sit at the same 24 px inset as the tab labels rather than 48 px in.
-- Migrate the four modal surfaces (`bulk-fix-modal`, `fix-threat-modal`, `ignore-threat-modal`, `unignore-threat-modal`) from `@wordpress/components` to `@wordpress/ui` per the CIAB component-priority guide (`@wordpress/ui` > `@automattic/design-system` > `@wordpress/components`). Specifically:
-  
-  - `bulk-fix-modal` swaps `Modal` for `Dialog` (namespace: `Dialog.Root` / `Dialog.Popup` / `Dialog.Header` / `Dialog.Title` / `Dialog.CloseIcon` / `Dialog.Footer`). The other three are DataViews-managed (`RenderModalProps< Threat >`) so DataViews supplies the outer Modal — only the inner content swaps.
-  - `Button` → `Button` from `@wordpress/ui` (`variant="primary"` → `variant="solid"`, `variant="secondary"` → `variant="outline"`, `isBusy` → `loading`, `__next40pxDefaultSize` removed since the new size system handles defaults).
-  - `__experimentalText as Text` → `Text`.
-  - `__experimentalVStack as VStack` → `Stack` with `direction="column" gap="lg|xs|sm"`.
-  - Inline `display: flex` divs replaced with `Stack direction="row" justify="flex-end"`.
-  - Ignore / unignore destructive notices: `Notice` → `Notice.Root` + `Notice.Description` (the new namespace-based API).
-  
-  `Spinner` and the `info`-variant `Notice` in `bulk-fix-modal`'s confirm step stay on `@wordpress/components` for now (no `@wordpress/ui` equivalent ships in the version bundled with Jetpack).
-- Migrate the Scan package's build pipeline from webpack + `@automattic/jetpack-webpack-config` to `@wordpress/build` (mirrors Newsletter / Forms). The page now ships as a wp-build route at `routes/index/` (route.tsx + stage.tsx + route.scss + package.json), with the page chrome moved to `_inc/components/scan-page.{tsx,scss}`. URL routing switches from `react-router`'s `useSearchParams` to `@wordpress/route`'s `useSearch` / `useNavigate`; the active tab is read from `?tab=` and tab-changes call `navigate({ search })`. PHP-side, `Jetpack_Scan` now loads `build/build.php`, registers polyfills via `WP_Build_Polyfills`, bridges the user-facing `?page=jetpack-scan` slug onto wp-build's auto-generated `jetpack-scan-wp-admin` enqueue, and applies the import-map ordering fix Newsletter uses. Drops `react-router`, `@automattic/jetpack-webpack-config`, and the standalone `shell.tsx` / `admin.tsx` / `providers.tsx` / `routes.ts` / `index.js`.
-- Pass `showStatusFilter={ false }` to `ThreatsDataViews` on both panels. The page-level "Active threats / History" tabs already filter the dataset by threat status, so the in-table "Active threats (N) / History (N)" toggle was duplicate UI for the same dimension.
-- Phase 6: silence the standard wp-admin notice channels (`admin_notices` and `all_admin_notices`) on the Scan page so JITMs and plugin-update messages don't reflow the focused layout mid-scan or while a fix modal is open. Mirrors the same Forms-style pattern Jetpack Forms uses on its dashboard.
-- Switch the page-level layout from the `jetpack-admin-page-layout` mixin (Activity Log's pattern) to a Newsletter-style stylesheet (#48420 phase 3) — sticky page header + tab row sticky-stacked beneath it via a `ResizeObserver`-tracked height variable, off-white page surface so the white DataViews chrome stands out, single hairline owned by the tab row instead of the page header. Cleans up the divider line that appeared between the empty state and the page footer when the mixin's `> :not(.admin-ui-page__header):not(.jetpack-footer) { overflow: auto }` rule kicked in.
-- Switch the Scan overview's Active threats / History tab nav from `@wordpress/components` `TabPanel` to the new `@wordpress/ui` `Tabs.Root` / `Tabs.List` / `Tabs.Panel` pattern (matches Newsletter's unified page in #48420 phase 3 — minimal underline variant + sliding active-tab indicator).
-- Wire a Forms-style centered empty state (heading + muted body, mirroring `EmptyWrapper` from `projects/packages/forms/src/dashboard/components/empty-responses/`) into the Active threats and Scan history panels via the new `empty` prop on `ThreatsDataViews`.
+- Scan Admin: Migrate the page from the webpack pipeline to a wp-build route. [#48458]
+- Scan Admin: Adopt shared Jetpack AdminPage chrome, tab layout, footer handling, and full-height wp-admin page structure. [#48458]
+- Scan UI: Move tabs, empty states, stacks, buttons, dialog content, and notices toward `@wordpress/ui`. [#48458]
+- Scan DataViews: Use DataViews-managed empty states and remove duplicate in-table status filtering from the Scan panels. [#48458]
+- Scan Admin: Silence standard wp-admin notices on the Scan page to avoid layout shifts during scans and fix flows. [#48458]
+- Scan Admin: Update `@wordpress/admin-ui` to 2.0.0. [#48410]
 
 ### Fixed
-- Address P1 review feedback on the wp-build migration:
-  
-  - `composer.json`'s `build-production` hook called `pnpm run build-production-concurrently`, which was deleted alongside the webpack pipeline. Switch to `pnpm run build-production` (matches Newsletter / Forms) so `composer run-script build-production` no longer fails with `ERR_PNPM_NO_SCRIPT`.
-  - `pnpm run build` now pre-builds `@automattic/jetpack-components` and `@automattic/jetpack-scan` via `pnpm --filter ... run build` before invoking `wp-build`. Without this, a clean checkout fails because esbuild resolves workspace packages through their `default` export (`./build/index.js`) rather than the `jetpack:src` source condition, so the route bundle errors on missing dependency outputs.
-  - Drop the `useConnection`/`@automattic/jetpack-connection` store read from `gates.tsx`. The store is no longer registered in the wp-build chassis (the package's runtime registration was removed when we replaced the component-package imports), so `Object.keys( undefined ).length` was throwing during render and stranding the page on a blank screen. Connection gating happens server-side in `Jetpack_Scan::is_available()` already — by the time the page mounts the user is, by definition, connected. Removes `src/js/hooks/use-connection.ts`.
-- Address P2 review feedback on #48458:
-  
-  - REST controller: site-level reads (`/scan`, `/scan/history`, `/scan/counts`) and the `/scan/enqueue` mutation now sign with `wpcom_json_api_request_as_blog()` instead of `as_user()`, matching Protect plugin's `Threats::*` contract for those endpoints. Alert / fix-status routes keep user auth so per-user permissions on threat mutations carry through. `proxy_get` / `proxy_post` gain an `$as_blog` flag (default false) so backwards compatibility with existing callers is preserved.
-  
-  - `FixThreatModal`: handle `useFixThreatsStatusQuery`'s `isError` state — previously a poll error left `isFixing` stuck true and stranded the modal at "Fixing threat…". Now an error closes the modal, fires `jetpack_scan_fix_threat_failed`, and surfaces a snackbar.
-  
-  - `BulkFixModal`: on initial fix-mutation rejection, close the modal instead of advancing to the `done` step — the previous behaviour rendered "Auto-fix complete" with "0 of 0 threats fixed" alongside the error snackbar. Same `statusQuery.isError` guard added for poll failures during bulk progress.
-- Make the wp-build pipeline build cleanly from a fresh checkout. The previous `build:deps` step only built the two direct workspace deps (`@automattic/jetpack-components`, `@automattic/jetpack-scan`), but `jetpack-components` itself depends on workspace packages whose outputs are also missing on a fresh checkout (`@automattic/jetpack-boost-score-api`, `social-logos`, `@automattic/number-formatters`, etc.). Switch the filter to `pnpm --filter '@automattic/jetpack-scan-page...' --filter '!@automattic/jetpack-scan-page' run build`, which walks the full transitive workspace dependency graph in topological order and excludes the package itself (the outer `pnpm run build` already covers it). Also adds `"name": "@automattic/jetpack-scan-page"` to the package's `package.json` so the filter selector resolves.
-- Use double quotes in the `[role="tabpanel"]` selector to satisfy `@stylistic/string-quotes`.
+- Scan Build: Fix the wp-build production script and dependency build order so Scan builds from a fresh checkout. [#48458]
+- Scan Admin: Fix full-height table and empty-state layout issues. [#48458]
+- Scan Availability: Fix a connection-store crash by relying on server-side Scan availability checks. [#48458]
+- Scan API: Use blog-scoped WPCOM authentication for site-level scan reads and scan enqueue requests. [#48458]
+- Scan Threats: Handle fix-status polling errors so fix modals no longer remain stuck in progress states. [#48458]
+- Scan Styles: Use double quotes in the `[role="tabpanel"]` selector to satisfy style checks. [#48458]
 
 ## 0.1.0-alpha - unreleased
 
 Initial release.
 
-[0.2.0-alpha]: https://github.com/Automattic/jetpack-scan-page/compare/v0.1.0-alpha...v0.2.0-alpha
+[0.1.0]: https://github.com/Automattic/jetpack-scan-page/compare/v0.1.0-alpha...v0.1.0

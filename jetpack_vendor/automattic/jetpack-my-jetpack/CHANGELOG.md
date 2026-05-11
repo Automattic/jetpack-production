@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.37.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.37.0] - 2026-05-11
 ### Changed
-- Components: Use Link from `@wordpress/ui` instead of ExternalLink.
-- Migrate interstitial Buttons from `@automattic/jetpack-components` and `@wordpress/components` to `@wordpress/ui`.
-- My Jetpack: adopt the shared `jetpack-admin-page-layout` mixin on the main dashboard page so its layout (sticky header, internally scrollable middle, JetpackFooter pinned at viewport bottom) matches the rest of the Jetpack admin pages. Drop the bespoke Hello Dolly position-absolute override — Dolly now uses the same centralized normalize as every other Jetpack admin page. The full-width tab separator no longer uses `width: 100vw` (which overflowed the new viewport-fitted column by the wp-admin sidebar width); it now spans the page column instead. Interstitial / full-screen mode (`.jetpack-admin-full-screen`) is intentionally excluded from the mixin so it keeps its current take-over-the-viewport behavior.
-- Replace Gridicon with Icon and named icon exports from `@wordpress/icons`.
+- Components: Use Link from `@wordpress/ui` instead of ExternalLink. [#48529]
+- My Jetpack: Migrate interstitial Buttons from `@automattic/jetpack-components` and `@wordpress/components` to `@wordpress/ui`. [#48489]
+- My Jetpack: Adopt the shared `jetpack-admin-page-layout` mixin on the main dashboard page so its layout matches the rest of the Jetpack admin pages. [#48503]
+- Components: Replace Gridicon with Icon and named icon exports from `@wordpress/icons`. [#48537]
 
 ### Fixed
-- My Jetpack: drop `overflow-x: hidden` on the `<AdminPage>` root. The rule was a vestigial guard against the old `100vw` breakouts (since restructured) and silently turned `.jp-admin-page` into a scroll container — when the inner middle reached its end, wheel events propagated up and shifted the entire page (header + middle + footer) under the fixed `#wpbody-content`, exposing blank space below the footer.
-- My Jetpack: fix `.jetpack-admin-full-screen` interstitial pages (e.g. the `step=onboarding` "Supercharge my site" screen) being constrained by the shared admin-page-layout mixin. The opt-out selector was looking for `.jetpack-admin-full-screen` as a descendant of `<body>` via `:has()`, but the class is added directly to `<body>`, so the predicate never matched and the mixin applied to onboarding too.
+- My Jetpack: Drop `overflow-x: hidden` on the `<AdminPage>` root so the page no longer becomes its own scroll container. [#48578]
+- My Jetpack: Fix `.jetpack-admin-full-screen` interstitial pages being constrained by the shared admin-page-layout mixin. [#48536]
 
 ## [5.36.0] - 2026-05-04
 ### Added
@@ -2656,7 +2653,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.37.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.36.0...5.37.0-alpha
+[5.37.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.36.0...5.37.0
 [5.36.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.35.0...5.36.0
 [5.35.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.34.4...5.35.0
 [5.34.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.34.3...5.34.4

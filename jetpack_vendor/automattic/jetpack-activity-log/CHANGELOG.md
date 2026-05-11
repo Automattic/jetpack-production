@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.1.1] - 2026-05-11
 ### Changed
-- Activity Log: refreshed the free-tier upsell illustration to match Jetpack's branding.
-- Activity Log: rename the row action to "Restore backup" so the label matches what clicking it actually does — open the restore flow.
-- Activity Log: the "Manage backup" row action now opens the Jetpack Cloud Backup restore flow for that point in time, instead of being a disabled placeholder.
-- Components: Use Link from `@wordpress/ui` instead of ExternalLink.
+- Activity Log: Refreshed the free-tier upsell illustration to match Jetpack's branding. [#48531]
+- Activity Log: Rename the row action to "Restore backup" so the label matches what clicking it actually does. [#48531]
+- Activity Log: Open the Jetpack Cloud Backup restore flow from the "Manage backup" row action instead of showing a disabled placeholder. [#48531]
+- Components: Use Link from `@wordpress/ui` instead of ExternalLink. [#48529]
 
 ## [0.1.0] - 2026-05-04
 ### Added
@@ -29,5 +26,5 @@ This is an alpha version! The changes listed here are not final.
 
 Initial release.
 
-[0.1.1-alpha]: https://github.com/Automattic/jetpack-activity-log/compare/v0.1.0...v0.1.1-alpha
+[0.1.1]: https://github.com/Automattic/jetpack-activity-log/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/Automattic/jetpack-activity-log/compare/v0.1.0-alpha...v0.1.0
