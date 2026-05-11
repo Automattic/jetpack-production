@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Components: Use Link from `@wordpress/ui` instead of ExternalLink.
 - VideoPress: Remove translation wrappers from the "VideoPress" product name.
 
+### Fixed
+- Fix the Add new video button disappearing on the admin dashboard after the first video is uploaded.
+
 ## [0.36.7] - 2026-05-04
 ### Changed
 - Components: migrate Tier 1 `jetpack-components` to `@wordpress/components` and `@wordpress/icons` (no user-facing change). [#48378]

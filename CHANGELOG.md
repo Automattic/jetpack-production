@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Shortcodes: Google Maps shortcode now preserves URL-encoded ampersands (%26) in place names.
 - Shortcodes: Google Maps shortcode now preserves URL-encoded reserved characters (`#`, `%`, `+`) and HTML-entity-encoded ampersands inside place names.
 - Social: fall back to the site-wide social message template when no per-post share message is set.
+- VideoPress: fix the Add new video button disappearing on the admin dashboard after the first video is uploaded.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add the new Jetpack Podcast package as a dependency. Loaded on Simple and Atomic only, gated behind the `jetpack_podcast_untangle` filter (default off) so it has no effect until subsequent PRs in the untangle train fill it in.
