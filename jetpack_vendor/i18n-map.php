@@ -184,9 +184,5 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-wp-build-polyfills',
       'ver' => '0.1.7-alpha1778170037',
     ),
-    'woocommerce-analytics' => array(
-      'path' => 'jetpack_vendor/automattic/woocommerce-analytics',
-      'ver' => '0.16.3',
-    ),
   ),
 );
