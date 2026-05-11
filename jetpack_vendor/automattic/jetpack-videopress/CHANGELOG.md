@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Components: Use Link from `@wordpress/ui` instead of ExternalLink.
+- Update package dependencies.
 - VideoPress: Remove translation wrappers from the "VideoPress" product name.
 
 ### Fixed

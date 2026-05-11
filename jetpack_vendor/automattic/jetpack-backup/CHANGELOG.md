@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Components: Use Link from `@wordpress/ui` instead of ExternalLink.
+- Update package dependencies.
 
 ## [4.2.54] - 2026-05-04
 ### Changed

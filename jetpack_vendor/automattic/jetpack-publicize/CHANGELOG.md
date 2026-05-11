@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Per-network customization: replace forced attachment toggle with a Default media option that lets the post-level link preview decide.
 - Social: Show a preview skeleton while message templates render.
 - Social: Show per-connection template fallback help and prefill per-network editor messages from connection templates.
+- Update package dependencies.
 
 ### Fixed
 - Default the share-message post meta and per-connection message to the saved template on the server side.
