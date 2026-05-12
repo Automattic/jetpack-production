@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: add a "Powered by Jetpack" block (`jetpack/powered-by`) to the results-panel default template, patterns, and search template. Free-plan sites always render the attribution; paid plans expose a "Hide on the front end" inspector toggle.
 - Search blocks: Add a chips display style option to the Checkbox Filter block.
 - Search Blocks: Add a hidden Post Type Scope block that constrains results to an include/exclude post-type list.
+- Search Blocks: Add a `rebuild` mode to Custom_Taxonomy_Slot_Mapping::backfill() that wipes the slot taxonomy before re-mirroring so orphan slot rows from posts that lost their user-side terms get cleaned up. The default `mirror` mode keeps the existing per-post replacement behavior.
 - Search blocks: add jetpack/results-panel container block bundling the result-display stack (count, sort, results, error, empty state, load-more).
 - Search blocks: Extend the chips display style option to the Date and Product Attribute filter blocks.
 - Search Blocks: foundation data-plane primitives for the upcoming WC product filter blocks. Adds `actions.setPriceRange(min, max)`, extends `actions.clearFilters` to also clear the price range, and folds `priceRange` into `state.hasActiveFilters` so the active-filters wrapper stays visible on a price-only deep link.
