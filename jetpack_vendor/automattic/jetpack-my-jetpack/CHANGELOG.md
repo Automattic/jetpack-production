@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Fix PHP deprecated notice: cast $tier to int before using as array offset in get_long_description_by_usage_tier() to handle null from get_next_usage_tier()
 - My Jetpack: drop `overflow-x: hidden` on the `<AdminPage>` root. The rule was a vestigial guard against the old `100vw` breakouts (since restructured) and silently turned `.jp-admin-page` into a scroll container — when the inner middle reached its end, wheel events propagated up and shifted the entire page (header + middle + footer) under the fixed `#wpbody-content`, exposing blank space below the footer.
 - My Jetpack: fix `.jetpack-admin-full-screen` interstitial pages (e.g. the `step=onboarding` "Supercharge my site" screen) being constrained by the shared admin-page-layout mixin. The opt-out selector was looking for `.jetpack-admin-full-screen` as a descendant of `<body>` via `:has()`, but the class is added directly to `<body>`, so the predicate never matched and the mixin applied to onboarding too.
 
