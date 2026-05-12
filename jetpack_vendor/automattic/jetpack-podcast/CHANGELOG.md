@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Feed: register `<itunes:*>` / `<googleplay:*>` channel + item tags, podcatcher detection, and stats-tracked enclosure URLs for the configured podcast category.
 - Initial scaffolding for the Jetpack Podcast package. Loads on Simple and Atomic only, gated behind the `jetpack_podcast_untangle` filter (default off) so it stays inert while the legacy podcasting code keeps running.
 - Settings: register the `podcasting_*` option schema with REST exposure and Jetpack Sync opt-in, gated behind the `jetpack_podcast_untangle` filter.
+- Stats tab: render show- and episode-level podcast download stats.
 - Tracks: record podcast publishing, media uploads, status changes, podcatcher show-URL submissions, and settings saves.
 
 ### Changed
