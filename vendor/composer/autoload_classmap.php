@@ -317,6 +317,7 @@ return array(
     'Automattic\\Jetpack\\Scan_Page\\Jetpack_Scan' => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-jetpack-scan.php',
     'Automattic\\Jetpack\\Scan_Page\\Package_Version' => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-package-version.php',
     'Automattic\\Jetpack\\Scan_Page\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-rest-controller.php',
+    'Automattic\\Jetpack\\Search\\AI_Answers' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-ai-answers.php',
     'Automattic\\Jetpack\\Search\\CLI' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-cli.php',
     'Automattic\\Jetpack\\Search\\Classic_Search' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/classic-search/class-classic-search.php',
     'Automattic\\Jetpack\\Search\\Custom_Taxonomy_Slot_Mapping' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/class-custom-taxonomy-slot-mapping.php',

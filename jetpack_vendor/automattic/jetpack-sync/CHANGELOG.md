@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add Activity Log custom event support with a non-public custom post type, guarded REST route, and class API for creating entries.
+- Sync: sync wp_guideline CPT when Jetpack Search AI Answers is enabled.
 - Sync: Whitelist the jetpack_social_message_template option so it propagates to WPCOM.
 - Sync: Whitelist the new jetpack_search_experience option so it propagates to WPcom.
 

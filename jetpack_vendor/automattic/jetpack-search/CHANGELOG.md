@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Search 3.0: restore the product-format sort keys (Rating, Price: low to high, Price: high to low) on the results-sort block when WooCommerce is active. Non-WooCommerce sites are unchanged.
 - Search: Add backend support for the `experience` field in the search settings REST endpoint. `POST /jetpack/v4/search/settings` accepts `experience` (`embedded`, `overlay`, `inline`, or `off`) and updates the package state in lockstep. `GET /jetpack/v4/search/settings` returns the active `experience`, derived from the legacy settings for sites that have not yet saved via the new UI.
 - Search: Add Reader Chat opt-in card to the dashboard so site owners can enable or disable Reader Chat without writing PHP.
+- Search: AI Answers — add streaming ai answers panel in the instant-search overlay. The AI can be customized from a new AI Answers dashboard. The feature is availabe for all paid plans.
 - Search Blocks: add 'product' layout to the search-results block, alongside an Inspector control to switch between compact / expanded / product.
 - Search Blocks: add a "Powered by Jetpack" block (`jetpack/powered-by`) to the results-panel default template, patterns, and search template. Free-plan sites always render the attribution; paid plans expose a "Hide on the front end" inspector toggle.
 - Search blocks: Add a chips display style option to the Checkbox Filter block.
