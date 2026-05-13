@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Build: Run webpack and wp-build scripts concurrently.
 
+### Fixed
+- Fix saving settings on the Newsletter admin page on Atomic and self-hosted sites.
+
 ## [0.8.7] - 2026-05-11
 ### Changed
 - Components: Use Link from `@wordpress/ui` instead of ExternalLink. [#48529]
