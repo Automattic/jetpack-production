@@ -929,6 +929,37 @@ To start using the **Jetpack AI Assistant**, type `/AI` in the block editor.',
     'supports' => 
     array (
       'html' => false,
+      'color' => 
+      array (
+        'background' => true,
+        'text' => true,
+        'button' => true,
+        'link' => true,
+        'gradients' => false,
+      ),
+      'typography' => 
+      array (
+        'fontSize' => true,
+        'fontFamily' => true,
+        'fontStyle' => true,
+        'fontWeight' => true,
+        'lineHeight' => true,
+        'letterSpacing' => true,
+      ),
+      '__experimentalBorder' => 
+      array (
+        'color' => true,
+        'radius' => true,
+        'style' => true,
+        'width' => true,
+        '__experimentalDefaultControls' => 
+        array (
+          'color' => true,
+          'radius' => true,
+          'style' => true,
+          'width' => true,
+        ),
+      ),
     ),
     'attributes' => 
     array (
@@ -998,6 +1029,113 @@ To start using the **Jetpack AI Assistant**, type `/AI` in the block editor.',
       'fallbackLinkUrl' => 
       array (
         'type' => 'string',
+      ),
+      'activeTabBackgroundColor' => 
+      array (
+        'type' => 'string',
+      ),
+      'activeTabTextColor' => 
+      array (
+        'type' => 'string',
+      ),
+      'inactiveTabBackgroundColor' => 
+      array (
+        'type' => 'string',
+      ),
+      'inactiveTabTextColor' => 
+      array (
+        'type' => 'string',
+      ),
+      'selectedAmountBackgroundColor' => 
+      array (
+        'type' => 'string',
+      ),
+      'selectedAmountTextColor' => 
+      array (
+        'type' => 'string',
+      ),
+      'selectedAmountOutlineColor' => 
+      array (
+        'type' => 'string',
+      ),
+      'tabsAppearance' => 
+      array (
+        'type' => 'string',
+        'enum' => 
+        array (
+          0 => 'tabs',
+          1 => 'buttons',
+        ),
+        'default' => 'tabs',
+      ),
+      'tabBorderColor' => 
+      array (
+        'type' => 'string',
+      ),
+      'tabFontSize' => 
+      array (
+        'type' => 'string',
+      ),
+      'tabPadding' => 
+      array (
+        'type' => 'object',
+      ),
+      'buttonFontSize' => 
+      array (
+        'type' => 'string',
+      ),
+      'buttonPadding' => 
+      array (
+        'type' => 'object',
+      ),
+      'buttonAlignment' => 
+      array (
+        'type' => 'string',
+        'enum' => 
+        array (
+          0 => '',
+          1 => 'left',
+          2 => 'center',
+          3 => 'right',
+          4 => 'full',
+        ),
+        'default' => '',
+      ),
+      'amountFontSize' => 
+      array (
+        'type' => 'string',
+      ),
+      'amountBorder' => 
+      array (
+        'type' => 'object',
+      ),
+      'amountBorderRadius' => 
+      array (
+        'type' => 
+        array (
+          0 => 'string',
+          1 => 'object',
+        ),
+      ),
+      'buttonBorderRadius' => 
+      array (
+        'type' => 
+        array (
+          0 => 'string',
+          1 => 'object',
+        ),
+      ),
+      'contentAlignment' => 
+      array (
+        'type' => 'string',
+        'enum' => 
+        array (
+          0 => '',
+          1 => 'left',
+          2 => 'center',
+          3 => 'right',
+        ),
+        'default' => '',
       ),
     ),
     'example' => 

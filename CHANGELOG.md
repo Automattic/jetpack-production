@@ -7,6 +7,8 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Donations Block: Add Gutenberg style settings (border, color, typography, spacing) and custom controls for active tab and selected amount colors.
+- Donations Block: Inherit colors and typography from the active theme, and let the Donate button pick up theme button styles.
 - Image Studio: Only allow video clip generation on sites where Image Studio is enabled and the plan supports video uploads.
 
 ### Bug fixes
