@@ -206,6 +206,12 @@
                 "right"
             ],
             "default": ""
+        },
+        "minimumAmount": {
+            "type": "number"
+        },
+        "maximumAmount": {
+            "type": "number"
         }
     },
     "example": {},

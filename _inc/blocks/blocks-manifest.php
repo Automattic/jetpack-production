@@ -1145,6 +1145,14 @@ To start using the **Jetpack AI Assistant**, type `/AI` in the block editor.',
         ),
         'default' => '',
       ),
+      'minimumAmount' => 
+      array (
+        'type' => 'number',
+      ),
+      'maximumAmount' => 
+      array (
+        'type' => 'number',
+      ),
     ),
     'example' => 
     array (
