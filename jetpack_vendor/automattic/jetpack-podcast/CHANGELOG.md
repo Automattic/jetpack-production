@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Default the untangle gate to enabled for A8C-proxied requests so Automatticians dogfood the new package on Simple and Atomic.
 - Stats tab: render show- and episode-level podcast download stats.
 
+### Changed
+- Stats tab: Align Top episodes, By app, and Locations cards with the WordPress.com Stats card module look (real border, larger header, and 24px padding).
+
 ### Fixed
 - Podcast: enqueue WP media library so the cover image selector loads.
 
