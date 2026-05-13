@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: whitelist supported taxonomies in the Custom Taxonomy filter; the jetpack_search_custom_taxonomy_map filter now also mirrors mapped taxonomies onto reserved jetpack-search-tagN slot taxonomies at write time so Jetpack Search can index them, and routes both the aggregation key and field through the slot at query time.
 
 ### Changed
+- Search 3.0: result cards now honor the site's date_format option (F j, Y, Y-m-d, etc.) instead of a fixed Intl shape.
 - Search 3.0: show the post author in the expanded results-list layout's meta row, before the date.
 - Search Blocks: rename the WooCommerce gate consistently across the PHP and JS layers so the filter, accessor, cache, IA store key, and editor-config key all describe what they control (whether WC-only Search blocks are exposed) rather than the gate's default (the WC plugin probe). New names: `jetpack_search_woocommerce_blocks_enabled` filter, `Search_Blocks::woocommerce_blocks_enabled()` accessor, `$woocommerce_blocks_enabled_cache` property, `state.isWooCommerceBlocksEnabled` (IA store) / `JetpackSearchBlocksConfig.isWooCommerceBlocksEnabled` (editor) on the JS side. Disable WC-only blocks by default in Phase 1 — sites can opt back in by hooking the same filter.
 - Update package dependencies.
