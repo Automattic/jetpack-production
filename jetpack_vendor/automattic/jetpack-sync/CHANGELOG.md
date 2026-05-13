@@ -5,18 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.38.0-alpha] - unreleased
+## [4.38.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Add Activity Log custom event support with a non-public custom post type, guarded REST route, and class API for creating entries.
 - Sync: sync wp_guideline CPT when Jetpack Search AI Answers is enabled.
-- Sync: Whitelist the jetpack_social_message_template option so it propagates to WPCOM.
-- Sync: Whitelist the new jetpack_search_experience option so it propagates to WPcom.
 
 ### Fixed
 - Sync: Always register the Search sync module when the Search package is present, so updates to instant_search_enabled and jetpack_search_experience are queued regardless of the current option value.
+
+## [4.38.0] - 2026-05-11
+### Added
+- Activity Log: Add custom event support with a non-public custom post type, guarded REST route, and class API for creating entries. [#48567]
+- Sync: Whitelist the `jetpack_social_message_template` and `jetpack_search_experience` options so they propagate to WordPress.com. [#48638] [#48540]
 
 ## [4.37.0] - 2026-05-04
 ### Added
@@ -1744,7 +1746,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.38.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.37.0...v4.38.0-alpha
+[4.38.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.38.0...v4.38.1-alpha
+[4.38.0]: https://github.com/Automattic/jetpack-sync/compare/v4.37.0...v4.38.0
 [4.37.0]: https://github.com/Automattic/jetpack-sync/compare/v4.36.0...v4.37.0
 [4.36.0]: https://github.com/Automattic/jetpack-sync/compare/v4.35.0...v4.36.0
 [4.35.0]: https://github.com/Automattic/jetpack-sync/compare/v4.34.0...v4.35.0

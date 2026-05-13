@@ -5,29 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.80.0-alpha] - unreleased
+## [0.80.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Added
-- Add support for global and per-connection message templates via REST API.
-- Social: add a global message template editor to the Social admin page.
-- Social: add a per-connection message template editor in the connections list and the connection-confirmation modal (SOCIAL-451).
-
 ### Changed
-- Components: Use Link from `@wordpress/ui` instead of ExternalLink.
-- Internal: extract PlaceholdersHelp to a shared location and add a MessageTemplateEditor scaffold consumed by the upcoming template editor surfaces.
-- Per-network customization: replace forced attachment toggle with a Default media option that lets the post-level link preview decide.
-- Social: Show a preview skeleton while message templates render.
-- Social: Show per-connection template fallback help and prefill per-network editor messages from connection templates.
 - Update package dependencies.
 
 ### Fixed
-- Default the share-message post meta and per-connection message to the saved template on the server side.
-- Fall back to the site-wide social message template when no per-post share message is set, so the editor preview and customization field reflect the template configured on the Social admin page.
 - Social: avoid disabling connection rows while saving per-connection message templates.
-- Social: honor per-connection message templates in the per-network preview pipeline and stop overwriting them when toggling per-network mode.
 - Social Previews: Update template placeholders when editing the post title or content.
+
+## [0.80.0] - 2026-05-11
+### Added
+- Social: Add a global message template editor to the Social admin page. [#48560]
+- Social: Add a per-connection message template editor in the connections list and the connection-confirmation modal. [#48564]
+- Social: Add support for global and per-connection message templates via REST API. [#48522]
+
+### Changed
+- Components: Use Link from `@wordpress/ui` instead of ExternalLink. [#48529]
+- Internal: Extract PlaceholdersHelp to a shared location and add a MessageTemplateEditor scaffold consumed by the upcoming template editor surfaces. [#48560]
+- Per-Network Customization: Replace forced attachment toggle with a Default media option that lets the post-level link preview decide. [#48573]
+- Social: Show a preview skeleton while message templates render. [#48576]
+- Social: Show per-connection template fallback help and prefill per-network editor messages from connection templates. [#48568]
+
+### Fixed
+- Social: Default the share-message post meta and per-connection message to the saved template on the server side. [#48634]
+- Social: Fall back to the site-wide social message template when no per-post share message is set, so the editor preview and customization field reflect the template configured on the Social admin page. [#48606]
+- Social: Honor per-connection message templates in the per-network preview pipeline and stop overwriting them when toggling per-network mode. [#48603]
 
 ## [0.79.0] - 2026-05-04
 ### Added
@@ -1444,7 +1449,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.80.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.79.0...v0.80.0-alpha
+[0.80.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.80.0...v0.80.1-alpha
+[0.80.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.79.0...v0.80.0
 [0.79.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.78.2...v0.79.0
 [0.78.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.78.1...v0.78.2
 [0.78.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.78.0...v0.78.1
