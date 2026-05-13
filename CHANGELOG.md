@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Donations Block: Add Security inspector panel with configurable minimum and maximum donation amounts to help prevent fraudulent transactions.
 - Donations Block: Inherit colors and typography from the active theme, and let the Donate button pick up theme button styles.
 - Image Studio: Only allow video clip generation on sites where Image Studio is enabled and the plan supports video uploads.
+- Performance settings: simplify the Search section to a short intro and a link to the Search dashboard, so the experience picker (embedded, overlay, theme search) lives in one place instead of being partially duplicated under Performance.
 
 ### Bug fixes
 - Improved the MCP settings UI by fixing browser Back button navigation, changing setup instructions to unordered lists, correcting the 'All enabled' label vertical alignment, and tightening toggle help-text spacing.
