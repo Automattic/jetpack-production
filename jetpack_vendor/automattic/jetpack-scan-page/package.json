@@ -33,14 +33,14 @@
 		"extends @wordpress/browserslist-config"
 	],
 	"dependencies": {
-		"@automattic/babel-plugin-replace-textdomain": "^1.1.0-alpha",
+		"@automattic/babel-plugin-replace-textdomain": "^1.1.0",
 		"@automattic/jetpack-analytics": "^1.0.11",
 		"@automattic/jetpack-base-styles": "^1.2.2-alpha",
 		"@automattic/jetpack-components": "^1.11.1-alpha",
 		"@automattic/jetpack-connection": "^1.4.50-alpha",
 		"@automattic/jetpack-scan": "^1.4.1-alpha",
 		"@automattic/jetpack-script-data": "^0.6.3",
-		"@automattic/jetpack-wp-build-polyfills": "^0.1.7",
+		"@automattic/jetpack-wp-build-polyfills": "^0.1.8-alpha",
 		"@tanstack/react-query": "5.90.8",
 		"@wordpress/admin-ui": "2.0.0",
 		"@wordpress/api-fetch": "7.44.0",
