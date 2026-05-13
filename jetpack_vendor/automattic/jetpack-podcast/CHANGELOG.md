@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats tab: render show- and episode-level podcast download stats.
 
 ### Changed
+- Build: Run webpack and wp-build scripts concurrently.
 - Stats tab: Align Top episodes, By app, and Locations cards with the WordPress.com Stats card module look (real border, larger header, and 24px padding).
 
 ### Fixed

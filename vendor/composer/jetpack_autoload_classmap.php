@@ -131,11 +131,11 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-automatic-install-skin.php'
 	),
 	'Automattic\\Jetpack\\Backup\\Package_Version' => array(
-		'version' => '4.2.56.0-alpha1778691701',
+		'version' => '4.2.56.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-package-version.php'
 	),
 	'Automattic\\Jetpack\\Backup\\V0001\\Package_Version' => array(
-		'version' => '4.2.56.0-alpha1778691701',
+		'version' => '4.2.56.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-package-version-compat.php'
 	),
 	'Automattic\\Jetpack\\Backup\\V0005\\Helper_Script_Manager' => array(
@@ -147,19 +147,19 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup-helper-script-manager/src/class-helper-script-manager-impl.php'
 	),
 	'Automattic\\Jetpack\\Backup\\V0005\\Initial_State' => array(
-		'version' => '4.2.56.0-alpha1778691701',
+		'version' => '4.2.56.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-initial-state.php'
 	),
 	'Automattic\\Jetpack\\Backup\\V0005\\Jetpack_Backup' => array(
-		'version' => '4.2.56.0-alpha1778691701',
+		'version' => '4.2.56.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-jetpack-backup.php'
 	),
 	'Automattic\\Jetpack\\Backup\\V0005\\Jetpack_Backup_Upgrades' => array(
-		'version' => '4.2.56.0-alpha1778691701',
+		'version' => '4.2.56.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-jetpack-backup-upgrades.php'
 	),
 	'Automattic\\Jetpack\\Backup\\V0005\\REST_Controller' => array(
-		'version' => '4.2.56.0-alpha1778691701',
+		'version' => '4.2.56.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Backup\\V0005\\Throw_On_Errors' => array(
@@ -955,15 +955,15 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-wpcom-products.php'
 	),
 	'Automattic\\Jetpack\\Newsletter\\Reader_Link' => array(
-		'version' => '0.8.8.0-alpha1778691701',
+		'version' => '0.8.8.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-reader-link.php'
 	),
 	'Automattic\\Jetpack\\Newsletter\\Settings' => array(
-		'version' => '0.8.8.0-alpha1778691701',
+		'version' => '0.8.8.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-settings.php'
 	),
 	'Automattic\\Jetpack\\Newsletter\\Urls' => array(
-		'version' => '0.8.8.0-alpha1778691701',
+		'version' => '0.8.8.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-urls.php'
 	),
 	'Automattic\\Jetpack\\Partner' => array(
@@ -1027,31 +1027,31 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-plugins-installer.php'
 	),
 	'Automattic\\Jetpack\\Podcast\\Admin_Page' => array(
-		'version' => '0.2.0.0-alpha1778691701',
+		'version' => '0.2.0.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-admin-page.php'
 	),
 	'Automattic\\Jetpack\\Podcast\\Feed\\Customize_Feed' => array(
-		'version' => '0.2.0.0-alpha1778691701',
+		'version' => '0.2.0.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/feed/class-customize-feed.php'
 	),
 	'Automattic\\Jetpack\\Podcast\\Feed\\Feed_Detection' => array(
-		'version' => '0.2.0.0-alpha1778691701',
+		'version' => '0.2.0.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/feed/class-feed-detection.php'
 	),
 	'Automattic\\Jetpack\\Podcast\\Podcast' => array(
-		'version' => '0.2.0.0-alpha1778691701',
+		'version' => '0.2.0.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-podcast.php'
 	),
 	'Automattic\\Jetpack\\Podcast\\Podcast_Episode_Block' => array(
-		'version' => '0.2.0.0-alpha1778691701',
+		'version' => '0.2.0.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/blocks/podcast-episode/class-podcast-episode-block.php'
 	),
 	'Automattic\\Jetpack\\Podcast\\Settings' => array(
-		'version' => '0.2.0.0-alpha1778691701',
+		'version' => '0.2.0.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-settings.php'
 	),
 	'Automattic\\Jetpack\\Podcast\\Tracks' => array(
-		'version' => '0.2.0.0-alpha1778691701',
+		'version' => '0.2.0.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-tracks.php'
 	),
 	'Automattic\\Jetpack\\Post_List\\Post_List' => array(
@@ -1259,19 +1259,19 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php'
 	),
 	'Automattic\\Jetpack\\Scan_Page\\Initial_State' => array(
-		'version' => '0.1.1.0-alpha1778691701',
+		'version' => '0.1.1.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-initial-state.php'
 	),
 	'Automattic\\Jetpack\\Scan_Page\\Jetpack_Scan' => array(
-		'version' => '0.1.1.0-alpha1778691701',
+		'version' => '0.1.1.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-jetpack-scan.php'
 	),
 	'Automattic\\Jetpack\\Scan_Page\\Package_Version' => array(
-		'version' => '0.1.1.0-alpha1778691701',
+		'version' => '0.1.1.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-package-version.php'
 	),
 	'Automattic\\Jetpack\\Scan_Page\\REST_Controller' => array(
-		'version' => '0.1.1.0-alpha1778691701',
+		'version' => '0.1.1.0-alpha1778699413',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Search\\AI_Answers' => array(
