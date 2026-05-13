@@ -109,6 +109,12 @@
             "type": "boolean",
             "default": true
         },
+        "defaultInterval": {
+            "type": "string"
+        },
+        "customAmountPlaceholder": {
+            "type": "number"
+        },
         "chooseAmountText": {
             "type": "string"
         },

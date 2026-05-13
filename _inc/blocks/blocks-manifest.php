@@ -1018,6 +1018,14 @@ To start using the **Jetpack AI Assistant**, type `/AI` in the block editor.',
         'type' => 'boolean',
         'default' => true,
       ),
+      'defaultInterval' => 
+      array (
+        'type' => 'string',
+      ),
+      'customAmountPlaceholder' => 
+      array (
+        'type' => 'number',
+      ),
       'chooseAmountText' => 
       array (
         'type' => 'string',
