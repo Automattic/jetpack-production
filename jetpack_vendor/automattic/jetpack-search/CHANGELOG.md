@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- AI answers feature disable toggle was not working. Fixed.
 - is_instant_search_enabled() now reads jetpack_search_experience first (only 'overlay' is on; 'inline'/'embedded' are explicitly off) and falls back to the legacy instant_search_enabled boolean only when the experience option has never been written. Also returns false when the module is inactive, so the preserve-on-OFF state doesn't read true. Module_Control::update_experience() restores disable_instant_search() on inline/embedded for write-side lockstep — belt-and-suspenders.
 - Module_Control::update_experience(): write the empty string to jetpack_search_experience for the inline branch instead of deleting the option, so the change always fires an option-write action that Sync can replicate (delete_option no-ops on a missing option, leaving the WPcom cache stuck with a stale 'overlay'/'embedded' after a fresh site toggles to inline).
 - Search Blocks: trigger the initial search when the URL carries an explicit-but-empty `?s=` so a blank search submission shows the full result set instead of an empty results region.
