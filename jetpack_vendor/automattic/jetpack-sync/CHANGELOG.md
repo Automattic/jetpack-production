@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Sync: Whitelist the jetpack_social_message_template option so it propagates to WPCOM.
 - Sync: Whitelist the new jetpack_search_experience option so it propagates to WPcom.
 
+### Fixed
+- Sync: Always register the Search sync module when the Search package is present, so updates to instant_search_enabled and jetpack_search_experience are queued regardless of the current option value.
+
 ## [4.37.0] - 2026-05-04
 ### Added
 - Sync: Add project_collection taxonomy to taxonomy allowlist. [#48392]

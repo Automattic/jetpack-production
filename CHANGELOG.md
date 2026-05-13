@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Pull in the wp-build dashboard scaffold from the jetpack-podcast package. Has no runtime effect unless the `jetpack_podcast_untangle` filter is enabled.
 - Remove translation wrappers from "Boost" and "CRM" product names in the at-a-glance dashboard.
 - Sync: Whitelist the jetpack_social_message_template option so it propagates to WPCOM.
+- Tests: cover the Search options that ship with the Search sync module's default-option whitelist.
 - Updated package dependencies.
 - Update package dependencies.
 
