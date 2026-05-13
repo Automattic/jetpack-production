@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: AI Answers — add streaming ai answers panel in the instant-search overlay. The AI can be customized from a new AI Answers dashboard. The feature is availabe for all paid plans.
 - Search Blocks: Add a `rebuild` mode to Custom_Taxonomy_Slot_Mapping::backfill() that wipes the slot taxonomy before re-mirroring so orphan slot rows from posts that lost their user-side terms get cleaned up. The default `mirror` mode keeps the existing per-post replacement behavior.
 - Search Blocks: whitelist supported taxonomies in the Custom Taxonomy filter; the jetpack_search_custom_taxonomy_map filter now also mirrors mapped taxonomies onto reserved jetpack-search-tagN slot taxonomies at write time so Jetpack Search can index them, and routes both the aggregation key and field through the slot at query time.
+- Search dashboard: Replace the experience radio list with a 2×2 card grid (Embedded / Overlay / Theme / Off), each carrying its own preview, copy, and customization actions ("Search template" + "Insert pattern" for Embedded; "Customize" + "Edit widgets" for the active Overlay). Move the selector into a new Settings tab.
 
 ### Changed
 - Search 3.0: result cards now honor the site's date_format option (F j, Y, Y-m-d, etc.) instead of a fixed Intl shape.
