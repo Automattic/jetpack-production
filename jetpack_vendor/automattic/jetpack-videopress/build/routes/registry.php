@@ -27,5 +27,12 @@ return array(
 		'page'        => 'jetpack-videopress-dashboard',
 		'has_route'   => true,
 		'has_content' => true,
+	),
+	array(
+		'name'        => 'video',
+		'path'        => '/video/$id',
+		'page'        => 'jetpack-videopress-dashboard',
+		'has_route'   => true,
+		'has_content' => true,
 	)
 );
