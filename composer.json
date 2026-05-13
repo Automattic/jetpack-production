@@ -47,7 +47,7 @@
 		"automattic/jetpack-podcast": "^0.2.0-alpha",
 		"automattic/jetpack-post-list": "^0.9.17",
 		"automattic/jetpack-post-media": "^0.1.2",
-		"automattic/jetpack-publicize": "^0.80.1-alpha",
+		"automattic/jetpack-publicize": "^0.81.0-alpha",
 		"automattic/jetpack-redirect": "^3.0.10",
 		"automattic/jetpack-roles": "^3.0.9",
 		"automattic/jetpack-scan-page": "^0.1.0",
