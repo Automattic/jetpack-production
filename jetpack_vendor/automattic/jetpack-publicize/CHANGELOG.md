@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Expose the canonical message-template placeholder catalogue via a REST endpoint.
 
 ### Changed
+- Social: Simplify preview render API by using the connction id as the source of truth.
 - Update package dependencies.
 
 ### Fixed

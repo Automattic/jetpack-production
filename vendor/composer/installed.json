@@ -7,7 +7,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/block-delimiter",
-                "reference": "d1cd732011a6c8ba4baf152a353219caa27f02ed"
+                "reference": "34cffd0dcc29831a9ae0687f57a222117c81137d"
             },
             "require": {
                 "php": ">=7.2"
@@ -73,7 +73,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-a8c-mc-stats",
-                "reference": "2d3ae86454f66dbfea12bac1b12169546bf60a80"
+                "reference": "4e431fc0f1ee5f01f83f39a557b70dc5fc45a7b3"
             },
             "require": {
                 "php": ">=7.2"
@@ -129,7 +129,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-account-protection",
-                "reference": "41444043c3078606a6f6a59e51051b27afba980e"
+                "reference": "a40d7b1b4aeacc15d6b763f291203538a3d9ee77"
             },
             "require": {
                 "automattic/jetpack-connection": "^8.3.5-alpha",
@@ -200,7 +200,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-activity-log",
-                "reference": "11421ce93114d41f239afabfc61378c0029ae621"
+                "reference": "d3ba0d124c3f53cf4f6495274cc75ca2c5f17f87"
             },
             "require": {
                 "automattic/jetpack-admin-ui": "^0.8.4-alpha",
@@ -269,7 +269,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-admin-ui",
-                "reference": "108325b840b1b6558217587e965d8a33928c53f6"
+                "reference": "51bbed5efd1eaa34d1a8e334fed198673293d7bb"
             },
             "require": {
                 "automattic/jetpack-redirect": "^3.0.10",
@@ -348,7 +348,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-assets",
-                "reference": "c455088e64f9c1084c6d3f93655659f9806046d2"
+                "reference": "e99e3d46d8cb25b23b222b353eb34af646631aab"
             },
             "require": {
                 "automattic/jetpack-constants": "^3.0.9",
@@ -421,7 +421,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-autoloader",
-                "reference": "1e3a6305d86ef5f37aa8a774e9a5243bb3c5c199"
+                "reference": "17259042c126bb63facc0631419b1481ccf0d5a2"
             },
             "require": {
                 "composer-plugin-api": "^2.2",
@@ -492,7 +492,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-backup",
-                "reference": "0613b73ddf84e86404f263c738438577be17e6fc"
+                "reference": "f7e90bad6f7275f259609339a597df87b145dc90"
             },
             "require": {
                 "automattic/jetpack-admin-ui": "^0.8.4-alpha",
@@ -580,7 +580,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-backup-helper-script-manager",
-                "reference": "5e3d2e04083e5904d74832e2323ae9af00663178"
+                "reference": "8261fe3384c01ce2ef4ce68a2a453dc90f2c6232"
             },
             "require": {
                 "php": ">=7.2"
@@ -637,7 +637,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-blaze",
-                "reference": "c9b05c30d5760b6f41341a3433457de598e701b9"
+                "reference": "e5f30258dbded45f89146cfb0f3c30aad700d3ba"
             },
             "require": {
                 "automattic/jetpack-assets": "^4.3.36",
@@ -715,7 +715,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-blocks",
-                "reference": "94ab106e03168746bf7b6090ec1564ec52445ffe"
+                "reference": "d1241424d28a3048a7945fa38922ad2239cda427"
             },
             "require": {
                 "automattic/jetpack-constants": "^3.0.9",
@@ -774,7 +774,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-boost-core",
-                "reference": "0c706ed9c8b5e5eb486f8e6c350966ffa1a5fd4c"
+                "reference": "6c55a133483ed0e4b8ef7b4138e9106333791bcc"
             },
             "require": {
                 "automattic/jetpack-connection": "^8.3.5-alpha",
@@ -832,7 +832,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-boost-speed-score",
-                "reference": "90c2a79569540ac831a35ded532012a443093876"
+                "reference": "c90438cc97b0e23f8244c818003f2454afb087b3"
             },
             "require": {
                 "automattic/jetpack-boost-core": "^0.4.4",
@@ -899,7 +899,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-classic-theme-helper",
-                "reference": "8a3bfd3d256563ad2be200831137197693c8e683"
+                "reference": "58d31a2d4b34eb2e571b3b48f8fd864e59902540"
             },
             "require": {
                 "automattic/jetpack-assets": "^4.3.36",
@@ -968,7 +968,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-compat",
-                "reference": "e5cb96553e52eda136f3163876f677a2e91436b8"
+                "reference": "9e157c7a42fed2218c4e993e9dbc56c81d5e6f23"
             },
             "require": {
                 "php": ">=7.2"
@@ -1005,7 +1005,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-composer-plugin",
-                "reference": "4c91f8e6d469ee40329b83556d62c9528497befe"
+                "reference": "adb9d0718b3d729af5444ab3612ce214d48ffc99"
             },
             "require": {
                 "composer-plugin-api": "^2.2",
@@ -1068,7 +1068,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-config",
-                "reference": "0301bcfb38900909c940e6f87b1fbeb4eb5beb6b"
+                "reference": "5e4c990331402bb9a2a7db23fe74e23c52d3cd3c"
             },
             "require": {
                 "php": ">=7.2"
@@ -1127,7 +1127,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-connection",
-                "reference": "3ad2884cf5fe5133219856cd7aeeb937b722d270"
+                "reference": "06bffd14b64fa68cef7687d60ede93cdcdc1314b"
             },
             "require": {
                 "automattic/jetpack-a8c-mc-stats": "^3.0.6",
@@ -1214,7 +1214,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-constants",
-                "reference": "6a1657c1e38747098d37f9016e3d1d6d9bec898f"
+                "reference": "d0c3c1287e10c3c6f9398d2eab9bc41b91c84cd7"
             },
             "require": {
                 "php": ">=7.2"
@@ -1271,7 +1271,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-device-detection",
-                "reference": "e4249cf61865c48bf3f3ecb66ba81071cdd51834"
+                "reference": "bb8246e4763d9ed5b63a3c2b61f072ce237f1547"
             },
             "require": {
                 "php": ">=7.2"
@@ -1327,7 +1327,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-error",
-                "reference": "a3cec362f8034caff3b1a8d2a68c72f9e616418d"
+                "reference": "95cea0e85a8b001d1b5ce83cd2689479535b332d"
             },
             "require": {
                 "php": ">=7.2"
@@ -1383,7 +1383,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-explat",
-                "reference": "94fe39a1568b9a45e62307827c9593885014683e"
+                "reference": "a3d65140a865aab03b30fc15525f4dc0c8a92b25"
             },
             "require": {
                 "automattic/jetpack-connection": "^8.3.5-alpha",
@@ -1461,7 +1461,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-external-connections",
-                "reference": "98bc76440f901aa966f1c7ed423282fb96bc56ef"
+                "reference": "c24c0ec5c513e5294d7023e68c1364ed26a226fa"
             },
             "require": {
                 "automattic/jetpack-assets": "^4.3.36",
@@ -1531,7 +1531,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-external-media",
-                "reference": "ec236d76c8644754e384ceb0fcdf5a2b75516e6e"
+                "reference": "1497cc9651741378d6a0f23d9bb0d32b9fe02432"
             },
             "require": {
                 "automattic/jetpack-assets": "^4.3.36",
@@ -1602,7 +1602,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-forms",
-                "reference": "ba3260415255a96cf525d77422c0ffaea341eb6b"
+                "reference": "37321c03ab459646d34feed9ce7e5a106339e724"
             },
             "require": {
                 "automattic/jetpack-admin-ui": "^0.8.4-alpha",
@@ -1691,7 +1691,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-image-cdn",
-                "reference": "835f7b230f3b6ad8fa96537e96c60d4bb9d0e88a"
+                "reference": "321cbf37267e87e67053c3b30b3e5132f1a282ef"
             },
             "require": {
                 "automattic/jetpack-assets": "^4.3.36",
@@ -1754,7 +1754,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-import",
-                "reference": "7050af5308716097833c8513f297cb759b3a2bd4"
+                "reference": "8537e8e60e7f89c4cd2999eb930fc43a1975a35c"
             },
             "require": {
                 "automattic/jetpack-connection": "^8.3.5-alpha",
@@ -1816,7 +1816,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-ip",
-                "reference": "a0b191004e3324559732ac6c03c279f9efd9cc11"
+                "reference": "930028e537a9e74a8be648902ba1c345357b0a79"
             },
             "require": {
                 "php": ">=7.2"
@@ -1877,7 +1877,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-jitm",
-                "reference": "a1832a906a42bbc9383eb3eb66ff172ef4caf9b2"
+                "reference": "ec4a9876e6c5b0468a6bc08c03f8e555f953d5e6"
             },
             "require": {
                 "automattic/jetpack-a8c-mc-stats": "^3.0.6",
@@ -1955,7 +1955,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-jwt",
-                "reference": "ee47544c11d88003f75478f095d170f79b93fa6a"
+                "reference": "0f9e4e2b6add9add02ccca5cbb9ae066f2095526"
             },
             "require": {
                 "php": ">=7.2"
@@ -2021,7 +2021,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-licensing",
-                "reference": "3d75fd738e8ce1942c4287ff0dcfe59b7ec24fd4"
+                "reference": "ad587131a69354abbadb5855794b1b46f31c02a9"
             },
             "require": {
                 "automattic/jetpack-connection": "^8.3.5-alpha",
@@ -2080,7 +2080,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-logo",
-                "reference": "5bfe8289c923783809f7c5d8be01320d0fac18b2"
+                "reference": "964bcf5a4a3be88ba09feffa6b8d568fb4047cb8"
             },
             "require": {
                 "php": ">=7.2"
@@ -2136,7 +2136,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-masterbar",
-                "reference": "636e56a8662c076206ea76b634e8e332cedd745e"
+                "reference": "f2f0bab932fcae35600ec9b38a7ba888b25fd4c7"
             },
             "require": {
                 "automattic/jetpack-assets": "^4.3.36",
@@ -2221,7 +2221,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-my-jetpack",
-                "reference": "9180abd289688b09c284e87ae7218a62ce00abc3"
+                "reference": "4bf77c96e0ddd658dc3d1877e0e3ab6a24400f57"
             },
             "require": {
                 "automattic/jetpack-admin-ui": "^0.8.4-alpha",
@@ -2324,7 +2324,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-newsletter",
-                "reference": "8e772403011bc53dfe81c821acb795dc295b6aa9"
+                "reference": "7a3b1ff92e1e82e4c20cef740fa44ed34a263b27"
             },
             "require": {
                 "automattic/jetpack-admin-ui": "^0.8.4-alpha",
@@ -2406,7 +2406,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-password-checker",
-                "reference": "e5b9660507836bb687f9590f5558098dfc816f25"
+                "reference": "a79e65d9c4052405e7cd7d1217adab626835af5e"
             },
             "require": {
                 "php": ">=7.2"
@@ -2464,7 +2464,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-paypal-payments",
-                "reference": "3f4c30eb92e966993ec34f912637708ad563a9de"
+                "reference": "36464f6fe32622c20e4e570f0d0f96612f859c48"
             },
             "require": {
                 "automattic/jetpack-assets": "^4.3.36",
@@ -2543,7 +2543,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-plans",
-                "reference": "f73bdfb8b86d13cea4ad5a2a39fef794c41c528a"
+                "reference": "34f01276e18bb4a5ad154cd82650b6bd205ee55a"
             },
             "require": {
                 "automattic/jetpack-connection": "^8.3.5-alpha",
@@ -2608,7 +2608,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-plugins-installer",
-                "reference": "33153eb6d228ebf190d22eec855eef967991659a"
+                "reference": "3d5b5fdcb04306dd0fb99da6a66f721663bbe9c0"
             },
             "require": {
                 "automattic/jetpack-a8c-mc-stats": "^3.0.6",
@@ -2667,7 +2667,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-podcast",
-                "reference": "10af52c727404a07056d789819667d676a9f4036"
+                "reference": "119f4783ee825414f1f371bf0c8ce97d5e00edb9"
             },
             "require": {
                 "automattic/jetpack-assets": "^4.3.36",
@@ -2740,7 +2740,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-post-list",
-                "reference": "27e4b1d4ca91359f37c6b82f90d37d59e8f3eb89"
+                "reference": "71fff95b3d8f91c7bc658a831191703caa8ac36b"
             },
             "require": {
                 "automattic/jetpack-assets": "^4.3.36",
@@ -2808,7 +2808,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-post-media",
-                "reference": "9b82c7e2285aa46b60fc6ce9093088868e514c03"
+                "reference": "f38b69d07b15af116a4d0435a7cd549d75096c87"
             },
             "require": {
                 "automattic/block-delimiter": "^0.3.6",
@@ -2878,7 +2878,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-protect-models",
-                "reference": "da29ff61ddbf20d74a68432998b62799a309fc7c"
+                "reference": "50028f2412b1a8ac77a287c6ec140c153a08e0b8"
             },
             "require": {
                 "automattic/jetpack-redirect": "^3.0.10",
@@ -2946,7 +2946,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-protect-status",
-                "reference": "e0d032c8fe86236b41b7b9a7e4c435babc1d1ace"
+                "reference": "432f5bb8605873e47fbcfe9ea05b47ba369f66a3"
             },
             "require": {
                 "automattic/jetpack-connection": "^8.3.5-alpha",
@@ -3013,12 +3013,12 @@
         },
         {
             "name": "automattic/jetpack-publicize",
-            "version": "0.81.0-alpha.1778744485",
-            "version_normalized": "0.81.0.0-alpha1778744485",
+            "version": "0.81.0-alpha.1778770516",
+            "version_normalized": "0.81.0.0-alpha1778770516",
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-publicize",
-                "reference": "d63fe5a04263ef9de333a858cab48759566c8353"
+                "reference": "37d053e358c419d7ea3ff2975e39faf9e017e9e1"
             },
             "require": {
                 "automattic/jetpack-admin-ui": "^0.8.4-alpha",
@@ -3107,7 +3107,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-redirect",
-                "reference": "9a4a4f6dd2f04e6d1e0deaf292dd5991e798bd6c"
+                "reference": "906fa180b5f9917d094fcad7eed2580975e2e159"
             },
             "require": {
                 "automattic/jetpack-status": "^6.1.3",
@@ -3165,7 +3165,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-roles",
-                "reference": "576588d4dc6742b46350accf47a2a3c7208ad966"
+                "reference": "b4ef0c1331edf13a0cb63806ba19a33bc70f26e5"
             },
             "require": {
                 "php": ">=7.2"
@@ -3222,7 +3222,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-scan-page",
-                "reference": "d70a1beb9e478a7b99e4e9ba955f09f99c2289f4"
+                "reference": "e178c973de254b8854fb7a32bfcebffc1fe6655f"
             },
             "require": {
                 "automattic/jetpack-admin-ui": "^0.8.4-alpha",
@@ -3298,7 +3298,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-search",
-                "reference": "34f340da780f497db05b326d0e5ff0e0f0efc667"
+                "reference": "0a823d08a9182119657e9a757c2f20cedfa43b74"
             },
             "require": {
                 "automattic/jetpack-assets": "^4.3.36",
@@ -3383,7 +3383,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-stats",
-                "reference": "98eacab1084f833c3a1e2deed8afc13251169362"
+                "reference": "9d8f47ee353bd6d402ff97bae23d77a68702091a"
             },
             "require": {
                 "automattic/jetpack-connection": "^8.3.5-alpha",
@@ -3453,7 +3453,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-stats-admin",
-                "reference": "3e548e032bd7e11fafeaf4e4521a9e053771f8b5"
+                "reference": "6469ce38dc5f98cafc91dd96e55620488a0ea5f4"
             },
             "require": {
                 "automattic/jetpack-blaze": "^0.27.18-alpha",
@@ -3524,7 +3524,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-status",
-                "reference": "b6c6d05aa5c4198bf8ff4119f9afda693d70bb1c"
+                "reference": "c8d31fdac838b7e1aa4a7f7df9a7be03c6c9cefa"
             },
             "require": {
                 "automattic/jetpack-constants": "^3.0.9",
@@ -3589,7 +3589,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-subscribers-dashboard",
-                "reference": "c742b48458476c66089a6ba4166e3a65abca376d"
+                "reference": "7f84dbc84e031c87493480eabb63ba6743a9cd61"
             },
             "require": {
                 "automattic/jetpack-connection": "^8.3.5-alpha",
@@ -3670,7 +3670,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-sync",
-                "reference": "38e5073f25dcdc8f6705eec31154995413eaabd9"
+                "reference": "c45696793935d2352e1d6e1e38688816ce12abdc"
             },
             "require": {
                 "automattic/jetpack-connection": "^8.3.5-alpha",
@@ -3743,7 +3743,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-videopress",
-                "reference": "0b461b80e04a9a6d16c2172bf2106b086f24771d"
+                "reference": "d697f49e85ce5861da5b0edce9d4f730d526fcc5"
             },
             "require": {
                 "automattic/jetpack-admin-ui": "^0.8.4-alpha",
@@ -3825,7 +3825,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-waf",
-                "reference": "3942d291ead19e75c14890d766c6872a49b7140a"
+                "reference": "3bf7964f426af703c127a35d230a97af0aecccee"
             },
             "require": {
                 "automattic/jetpack-connection": "^8.3.5-alpha",
@@ -3903,7 +3903,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-wp-abilities",
-                "reference": "5b05e3a62768f693cf6e78e3effa47b6f3b0b373"
+                "reference": "0a8b770f80f5f687ce79392625123358cb7e5531"
             },
             "require": {
                 "php": ">=7.2"
@@ -3964,7 +3964,7 @@
             "dist": {
                 "type": "path",
                 "url": "/tmp/jetpack-build/Automattic/jetpack-wp-build-polyfills",
-                "reference": "cea39db3965064b1cff9c67333edc3d4e539b675"
+                "reference": "3f4f7ef3735b081f2248f6c825cb0a221e352d4d"
             },
             "require": {
                 "php": ">=7.2"
