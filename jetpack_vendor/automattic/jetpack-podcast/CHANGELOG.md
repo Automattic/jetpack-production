@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats tab: Align Top episodes, By app, and Locations cards with the WordPress.com Stats card module look (real border, larger header, and 24px padding).
 
 ### Fixed
+- Always show the Disable podcasting card on the settings tab, and return the user to the welcome screen after disabling, so the back-out flow works before a category has been chosen.
 - Podcast: enqueue WP media library so the cover image selector loads.
 
 ## 0.1.0 - 2026-05-11
