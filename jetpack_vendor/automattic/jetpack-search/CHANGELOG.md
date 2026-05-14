@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Search 3.0: result cards now honor the site's date_format option (F j, Y, Y-m-d, etc.) instead of a fixed Intl shape.
 - Search 3.0: show the post author in the expanded results-list layout's meta row, before the date.
 - Search Blocks: rename the WooCommerce gate consistently across the PHP and JS layers so the filter, accessor, cache, IA store key, and editor-config key all describe what they control (whether WC-only Search blocks are exposed) rather than the gate's default (the WC plugin probe). New names: `jetpack_search_woocommerce_blocks_enabled` filter, `Search_Blocks::woocommerce_blocks_enabled()` accessor, `$woocommerce_blocks_enabled_cache` property, `state.isWooCommerceBlocksEnabled` (IA store) / `JetpackSearchBlocksConfig.isWooCommerceBlocksEnabled` (editor) on the JS side. Disable WC-only blocks by default in Phase 1 — sites can opt back in by hooking the same filter.
+- Search Blocks: Search 3.0 block registration now also requires the site to be connected and on a plan that supports Search (paid plans or the free `jetpack_search_free` product), reusing the same upstream gate that already gates Instant Search and Classic Search inside `Initializer::init()`. The `jetpack_search_blocks_enabled` feature flag is the remaining Phase 1 opt-in. Sites without a Search plan no longer see the blocks in the editor inserter, matching what the runtime can actually deliver.
 - Update package dependencies.
 
 ### Fixed
