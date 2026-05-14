@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.36.10-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [0.36.9] - 2026-05-14
 ### Added
 - Comment: Add a user-signed REST proxy for VideoPress stats and seeds the modernized dashboard's React initial state behind the existing modernization filter. [#48817]
@@ -1968,6 +1972,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created empty package [#24952]
 
+[0.36.10-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.9...v0.36.10-alpha
 [0.36.9]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.8...v0.36.9
 [0.36.8]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.7...v0.36.8
 [0.36.7]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.6...v0.36.7
