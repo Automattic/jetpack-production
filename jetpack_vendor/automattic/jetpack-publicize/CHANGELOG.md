@@ -17,7 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Social: avoid disabling connection rows while saving per-connection message templates.
-- Social: Default per-network customization to enabled only when a custom connection template exists.
+- Social: Enable per-network customization by default when a custom connection template exists.
 - Social Previews: Update template placeholders when editing the post title or content.
 
 ## [0.80.0] - 2026-05-11
