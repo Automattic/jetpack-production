@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.37.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.37.1] - 2026-05-14
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#48696]
 
 ### Fixed
-- Fix PHP deprecated notice: cast $tier to int before using as array offset in get_long_description_by_usage_tier() to handle null from get_next_usage_tier()
+- Prevent PHP deprecated notice when retrieving tier-based descriptions. [#48524]
 
 ## [5.37.0] - 2026-05-11
 ### Changed
@@ -2663,7 +2660,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.37.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.37.0...5.37.1-alpha
+[5.37.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.37.0...5.37.1
 [5.37.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.36.0...5.37.0
 [5.36.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.35.0...5.36.0
 [5.35.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.34.4...5.35.0

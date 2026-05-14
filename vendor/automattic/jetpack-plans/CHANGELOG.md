@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.11.5-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.11.5] - 2026-05-14
 ### Changed
-- Add Choose plan slugs to PLAN_DATA
+- Add "Choose" plan slugs to `PLAN_DATA`. [#48806]
 
 ## [0.11.4] - 2026-05-04
 ### Changed
@@ -249,7 +246,7 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Moved the options class into Connection. [#24095]
 
-[0.11.5-alpha]: https://github.com/Automattic/jetpack-plans/compare/v0.11.4...v0.11.5-alpha
+[0.11.5]: https://github.com/Automattic/jetpack-plans/compare/v0.11.4...v0.11.5
 [0.11.4]: https://github.com/Automattic/jetpack-plans/compare/v0.11.3...v0.11.4
 [0.11.3]: https://github.com/Automattic/jetpack-plans/compare/v0.11.2...v0.11.3
 [0.11.2]: https://github.com/Automattic/jetpack-plans/compare/v0.11.1...v0.11.2
