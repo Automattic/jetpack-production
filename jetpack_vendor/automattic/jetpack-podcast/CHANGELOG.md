@@ -22,6 +22,8 @@ This is an alpha version! The changes listed here are not final.
 - Podcast Episodes: fall back to the show cover image when an episode has no featured image.
 - Podcast Episodes: open the episode stats drilldown from a play-count click in the Episodes tab.
 - Podcast Settings: create new categories inline without leaving the podcast dashboard.
+- Podcast stats: rebuild summary tiles and bar list rows on @wordpress/components primitives.
+- Podcast stats dashboard: replace period dropdown with Calypso Stats date range picker (presets, calendar, custom from/to).
 - Stats tab: Align Top episodes, By app, and Locations cards with the WordPress.com Stats card module look (real border, larger header, and 24px padding).
 
 ### Fixed
