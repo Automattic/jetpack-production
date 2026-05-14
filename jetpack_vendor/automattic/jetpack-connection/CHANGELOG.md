@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Connection: Include the comma-separated list of connection-using plugin slugs on every authorize URL, not only those built by the connectors card flow.
 - Update dependencies.
 
 ## [8.3.4] - 2026-05-11
