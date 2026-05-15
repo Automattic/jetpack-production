@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Dashboard: Record Reader Chat toggle events immediately after settings save and move the Reader Chat setting after the Instant Search setting.
 - Search Dashboard: Render Reader Chat toggle in the experience-selector view so it stays reachable when the search blocks flag is on.
 - Search Dashboard: restore the visible space between "AI Answers" and "(Preview)" in the dashboard tab label — the new flex-based `Tabs.Tab` layout was collapsing the previous JSX whitespace, so move a non-breaking space inside the preview span.
+- Search dashboard: the "Edit search template" and "Insert pattern" links on the Embedded experience card now use the modern Site Editor URL format, so they open the Jetpack Search template view and pre-filtered patterns library instead of an empty editor.
 
 ## [0.59.0] - 2026-05-11
 ### Added
