@@ -7,12 +7,14 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Abilities API: register Shortlinks_Abilities for the WP.me Shortlinks module on WP 6.9+ behind the jetpack_wp_abilities_enabled gate.
 - Donations Block: Add admin controls for hiding the One-Time interval, choosing the default frequency, setting a per-frequency default donation amount, and configuring the suggested custom amount. At least one frequency must remain enabled.
 - Donations Block: Add Gutenberg style settings (border, color, typography, spacing) and custom controls for active tab and selected amount colors.
 - Donations Block: Add Security inspector panel with configurable minimum and maximum donation amounts to help prevent fraudulent transactions.
 - Donations Block: Inherit colors and typography from the active theme, and let the Donate button pick up theme button styles.
 - Image Studio: Only allow video clip generation on sites where Image Studio is enabled and the plan supports video uploads.
 - Performance settings: simplify the Search section to a short intro and a link to the Search dashboard, so the experience picker (embedded, overlay, theme search) lives in one place instead of being partially duplicated under Performance.
+- Shortlinks abilities: tighten permission_callback to edit_posts (was is_user_logged_in)
 
 ### Bug fixes
 - Improved the MCP settings UI by fixing browser Back button navigation, changing setup instructions to unordered lists, correcting the 'All enabled' label vertical alignment, and tightening toggle help-text spacing.
