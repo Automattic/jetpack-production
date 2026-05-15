@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Dashboard: guard `<PlanInfo>` and `<PlanUsageSection>` against missing wpcom plan fields so the dashboard React tree no longer throws "Cannot read properties of undefined" when `state.sitePlan.plan_usage` or `plan_current` is partially populated. Three landmines: `getLatestMonthRequests` selector's unguarded `[ 0 ]` after the `?.`; `displayPeriodFromAPIData` accessing `latestMonthRequests.start_date` without nullish guard; and the missing `?.` on `currentPlan.monthly_search_request_limit` in `usageInfoFromAPIData`. The dashboard now renders cleanly even when the wpcom plan response hasn't fully resolved.
 - Search Dashboard: Record Reader Chat toggle events immediately after settings save and move the Reader Chat setting after the Instant Search setting.
 - Search Dashboard: Render Reader Chat toggle in the experience-selector view so it stays reachable when the search blocks flag is on.
+- Search Dashboard: restore the visible space between "AI Answers" and "(Preview)" in the dashboard tab label — the new flex-based `Tabs.Tab` layout was collapsing the previous JSX whitespace, so move a non-breaking space inside the preview span.
 
 ## [0.59.0] - 2026-05-11
 ### Added
