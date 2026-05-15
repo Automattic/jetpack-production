@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- REST: `POST /jetpack/v4/search/plan/activate` accepts a new `search_experience` parameter (`overlay` | `inline` | `embedded`). When present it routes the activation through `Module_Control::update_experience()` — writing the canonical `jetpack_search_experience` option — so WPCOM can change the default experience without a Jetpack code change. The legacy `enable_search` / `enable_instant_search` parameters keep working as a fallback for older callers.
 - Search: Add `wp jetpack-search backfill_taxonomy_slot_mapping [--mode=mirror|rebuild]` so operators can backfill the custom-taxonomy → reserved-slot projection without reaching for `wp eval`.
 - Search: AI Answers — add streaming ai answers panel in the instant-search overlay. The AI can be customized from a new AI Answers dashboard. The feature is availabe for all paid plans.
 - Search Blocks: Add a `rebuild` mode to Custom_Taxonomy_Slot_Mapping::backfill() that wipes the slot taxonomy before re-mirroring so orphan slot rows from posts that lost their user-side terms get cleaned up. The default `mirror` mode keeps the existing per-post replacement behavior.
