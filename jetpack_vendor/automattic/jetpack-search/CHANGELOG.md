@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Search: Add `wp jetpack-search backfill_taxonomy_slot_mapping [--mode=mirror|rebuild]` so operators can backfill the custom-taxonomy → reserved-slot projection without reaching for `wp eval`.
 - Search: AI Answers — add streaming ai answers panel in the instant-search overlay. The AI can be customized from a new AI Answers dashboard. The feature is availabe for all paid plans.
 - Search Blocks: Add a `rebuild` mode to Custom_Taxonomy_Slot_Mapping::backfill() that wipes the slot taxonomy before re-mirroring so orphan slot rows from posts that lost their user-side terms get cleaned up. The default `mirror` mode keeps the existing per-post replacement behavior.
 - Search Blocks: whitelist supported taxonomies in the Custom Taxonomy filter; the jetpack_search_custom_taxonomy_map filter now also mirrors mapped taxonomies onto reserved jetpack-search-tagN slot taxonomies at write time so Jetpack Search can index them, and routes both the aggregation key and field through the slot at query time.
