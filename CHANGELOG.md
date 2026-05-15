@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Internal: regenerate composer.lock to pick up the podcast package's new automattic/jetpack-connection dependency.
 - Tests: cover the Search options that ship with the Search sync module's default-option whitelist.
 - Update package dependencies.
+- Verification Tools: remove trailing slash from meta void elements to conform with the HTML spec.
 
 ## 15.9-a.1 - 2026-05-11
 ### Enhancements
