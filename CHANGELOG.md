@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Donations Block: Inherit colors and typography from the active theme, and let the Donate button pick up theme button styles.
 - Image Studio: Only allow video clip generation on sites where Image Studio is enabled and the plan supports video uploads.
 - Performance settings: simplify the Search section to a short intro and a link to the Search dashboard, so the experience picker (embedded, overlay, theme search) lives in one place instead of being partially duplicated under Performance.
+- Related Posts: register a get-related-posts ability with the WordPress Abilities API on WP 6.9+ so agents can fetch related posts for a single post through the standard wp-abilities/v1 REST surface.
+- Related Posts abilities: drop test-only setExpectedIncorrectUsage assertions that fail on CI
+- Related Posts abilities: expose result cap as configurable per_page input (max 20)
 - Shortlinks abilities: tighten permission_callback to edit_posts (was is_user_logged_in)
 
 ### Bug fixes
