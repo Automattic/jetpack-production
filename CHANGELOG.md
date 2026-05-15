@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Shortlinks abilities: tighten permission_callback to edit_posts (was is_user_logged_in)
 
 ### Bug fixes
+- Copy Post: fix backslash characters being stripped from post content, title, and excerpt when duplicating a post.
 - Improved the MCP settings UI by fixing browser Back button navigation, changing setup instructions to unordered lists, correcting the 'All enabled' label vertical alignment, and tightening toggle help-text spacing.
 - Jetpack AI: route the MCP "Upgrade plan" CTA through the standard checkout workflow so non-WordPress.com hosts (Pressable, self-hosted) reach a valid destination instead of a "you don't have access to that site" page, and remove WordPress.com-specific copy from the upsell.
 
