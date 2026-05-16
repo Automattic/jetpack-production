@@ -13,5 +13,19 @@ return array(
 		'page'        => 'jetpack-backup-dashboard',
 		'has_route'   => true,
 		'has_content' => true,
+	),
+	array(
+		'name'        => 'download',
+		'path'        => '/download/$rewindId',
+		'page'        => 'jetpack-backup-dashboard',
+		'has_route'   => true,
+		'has_content' => true,
+	),
+	array(
+		'name'        => 'restore',
+		'path'        => '/restore/$rewindId',
+		'page'        => 'jetpack-backup-dashboard',
+		'has_route'   => true,
+		'has_content' => true,
 	)
 );
