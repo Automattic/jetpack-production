@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Always show the Disable podcasting card on the settings tab, and return the user to the welcome screen after disabling, so the back-out flow works before a category has been chosen.
 - Podcast: enqueue WP media library so the cover image selector loads.
+- Podcast: skip rewriting the RSS enclosure URL through the stats endpoint when the URL does not resolve to a local attachment, so externally hosted enclosures stay playable.
 
 ## 0.1.0 - 2026-05-11
 ### Added
