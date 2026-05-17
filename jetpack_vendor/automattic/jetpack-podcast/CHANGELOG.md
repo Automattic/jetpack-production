@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast stats: rebuild summary tiles and bar list rows on @wordpress/components primitives.
 - Podcast stats dashboard: replace period dropdown with Calypso Stats date range picker (presets, calendar, custom from/to).
 - Stats tab: Align Top episodes, By app, and Locations cards with the WordPress.com Stats card module look (real border, larger header, and 24px padding).
+- Update welcome screen copy to lead with the blog and newsletter story, and refresh the feature boxes and how-it-works steps.
 
 ### Fixed
 - Always show the Disable podcasting card on the settings tab, and return the user to the welcome screen after disabling, so the back-out flow works before a category has been chosen.
