@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Build: Run webpack and wp-build scripts concurrently.
+- Episodes stats: detect 402 responses from the episode stats endpoint as a Premium-required state.
 - Podcast: visual polish on the Stats tab — keep horizontal padding at narrow widths, lighter card headers, and integer-only axis ticks on the Downloads chart.
 - Podcast dashboard: reorder tabs so Stats appears first, followed by Episodes, Distribution, and Settings.
 - Podcast Episode: enrich front-end schema.org markup and make chapter / soundbite list items click-to-seek in the audio player.
