@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the Podcast Episode block. Embeds a single podcast episode from an audio or video file with Podcasting 2.0 metadata. Registration is gated behind the `jetpack_podcast_untangle` filter (default off).
 - Default the untangle gate to enabled for A8C-proxied requests so Automatticians dogfood the new package on Simple and Atomic.
 - Pocket Casts: replace the 3-step submit modal with a one-click Relay API flow that reflects pending/submitted state on the button and surfaces rejection reasons inline.
+- Podcast: add product-access gate (Podcast_Gate::has_product_access) and grandfather sticker constant.
 - Podcast Welcome: require a category when enabling podcasting.
 - Posts to Podcast: new Media > Create AI Podcast wp-admin page for generating podcast episode drafts from posts via the wpcom-side pipeline. Pick posts to include or use a recent-posts window, steer the output with a free-form prompt, watch a remaining-credits indicator backed by the quota-snapshot endpoint, and resume polling across page reloads. The page is plain PHP plus a vanilla-JS island — no React or wp-build chassis for this surface. Feature is wpcom-only; self-hosted Jetpack sites don't see the menu.
 - Stats tab: render show- and episode-level podcast download stats.

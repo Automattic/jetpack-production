@@ -264,6 +264,7 @@ return array(
     'Automattic\\Jetpack\\Podcast\\Feed\\Feed_Detection' => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/feed/class-feed-detection.php',
     'Automattic\\Jetpack\\Podcast\\Podcast' => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-podcast.php',
     'Automattic\\Jetpack\\Podcast\\Podcast_Episode_Block' => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/blocks/podcast-episode/class-podcast-episode-block.php',
+    'Automattic\\Jetpack\\Podcast\\Podcast_Gate' => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-podcast-gate.php',
     'Automattic\\Jetpack\\Podcast\\Posts_To_Podcast_Endpoint' => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-posts-to-podcast-endpoint.php',
     'Automattic\\Jetpack\\Podcast\\Posts_To_Podcast_Helper' => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-posts-to-podcast-helper.php',
     'Automattic\\Jetpack\\Podcast\\Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-settings.php',
