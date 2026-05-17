@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Security
+- Podcast: escape title overrides, descriptions, and iTunes category attribute values for the RSS feed to prevent malformed XML.
+
 ### Added
 - Add the Podcast Episode block. Embeds a single podcast episode from an audio or video file with Podcasting 2.0 metadata. Registration is gated behind the `jetpack_podcast_untangle` filter (default off).
 - Default the untangle gate to enabled for A8C-proxied requests so Automatticians dogfood the new package on Simple and Atomic.
