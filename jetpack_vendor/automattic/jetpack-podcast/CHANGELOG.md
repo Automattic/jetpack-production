@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Build: Run webpack and wp-build scripts concurrently.
 - Podcast: visual polish on the Stats tab — keep horizontal padding at narrow widths, lighter card headers, and integer-only axis ticks on the Downloads chart.
 - Podcast dashboard: reorder tabs so Stats appears first, followed by Episodes, Distribution, and Settings.
+- Podcast Episode: enrich front-end schema.org markup and make chapter / soundbite list items click-to-seek in the audio player.
 - Podcast Episodes: fall back to the show cover image when an episode has no featured image.
 - Podcast Episodes: open the episode stats drilldown from a play-count click in the Episodes tab.
 - Podcast Settings: create new categories inline without leaving the podcast dashboard.

@@ -235,15 +235,42 @@
   gap: 4px;
   font-size: 0.9em;
 }
-.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__chapter {
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__chapter,
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__soundbite {
   display: flex;
   gap: 12px;
   align-items: baseline;
 }
-.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__chapter-time {
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__chapter-time,
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__soundbite-time {
   flex: 0 0 auto;
   font-variant-numeric: tabular-nums;
   color: #757575;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__chapter-button,
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__soundbite-button {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__chapter-button:hover .jetpack-podcast-episode__chapter-title, .wp-block-jetpack-podcast-episode .jetpack-podcast-episode__chapter-button:hover .jetpack-podcast-episode__soundbite-title,
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__soundbite-button:hover .jetpack-podcast-episode__chapter-title,
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__soundbite-button:hover .jetpack-podcast-episode__soundbite-title {
+  text-decoration: underline;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__chapter-button:focus-visible,
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__soundbite-button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
 .wp-block-jetpack-podcast-episode .jetpack-podcast-episode__links {
   list-style: none;
