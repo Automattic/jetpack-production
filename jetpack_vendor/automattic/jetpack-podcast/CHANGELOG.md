@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Build: Run webpack and wp-build scripts concurrently.
 - Create AI Podcast: visual polish, floating toast notices, dismissible notices, generated episodes list, server-side bootstrap, and credits panel with reset messaging.
+- Distribution: refresh Apple Podcasts, Spotify, YouTube Music, Amazon Music, and Podcast Index logos with current brand marks. Rename the YouTube directory to YouTube Music. Map matching slugs in the Stats "By app" and "Top app" labels.
 - Episodes stats: detect 402 responses from the episode stats endpoint as a Premium-required state.
 - Episode stats: dispatch the premium-required state on the `podcast_premium_required` error code instead of HTTP 402.
 - Podcast: grandfather Premium access by site registration date; drop the sticker-based grandfathering path.
