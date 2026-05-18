@@ -120,10 +120,6 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
       'ver' => '0.5.9-alpha1778782620',
     ),
-    'jetpack-podcast' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-podcast',
-      'ver' => '0.2.0-alpha1779138639',
-    ),
     'jetpack-post-list' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-post-list',
       'ver' => '0.9.18-alpha1778782620',
