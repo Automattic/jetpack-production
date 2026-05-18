@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add the Podcast Episode block. Embeds a single podcast episode from an audio or video file with Podcasting 2.0 metadata. Registration is gated behind the `jetpack_podcast_untangle` filter (default off).
+- Dashboard: gate the Episodes tab on Premium product access, with a blurred locked-preview overlay for free users.
 - Default the untangle gate to enabled for A8C-proxied requests so Automatticians dogfood the new package on Simple and Atomic.
 - Pocket Casts: replace the 3-step submit modal with a one-click Relay API flow that reflects pending/submitted state on the button and surfaces rejection reasons inline.
 - Podcast: add product-access gate (Podcast_Gate::has_product_access) and grandfather sticker constant.
@@ -24,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Build: Run webpack and wp-build scripts concurrently.
 - Episodes stats: detect 402 responses from the episode stats endpoint as a Premium-required state.
+- Episode stats: dispatch the premium-required state on the `podcast_premium_required` error code instead of HTTP 402.
 - Podcast: grandfather Premium access by site registration date; drop the sticker-based grandfathering path.
 - Podcast: visual polish on the Stats tab — keep horizontal padding at narrow widths, lighter card headers, and integer-only axis ticks on the Downloads chart.
 - Podcast dashboard: reorder tabs so Stats appears first, followed by Episodes, Distribution, and Settings.
