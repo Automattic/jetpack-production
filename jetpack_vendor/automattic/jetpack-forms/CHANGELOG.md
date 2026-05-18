@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Replace link-style `Button` components and bare `<a>` tags with `Link` from `@wordpress/ui` in integrations, the responses modal, and response inspector mailto/tel links. Open Akismet-related URLs in a new tab only in the block editor so the dashboard keeps navigation in the same tab.
 - Update package dependencies.
 
+### Fixed
+- Forms: restore full-width submit button on small screens for horizontal inline forms. The existing mobile media query set `flex-basis: 100%` on the button but had no effect when the parent form used the `is-layout-flex` class (horizontal orientation) because that layout lacks `flex-wrap: wrap`. Adding it at the 480px breakpoint allows the field and button to each stack to a full row on mobile.
+
 ## [7.21.1] - 2026-05-11
 ### Changed
 - Components: Use Link from `@wordpress/ui` instead of ExternalLink. [#48529]
