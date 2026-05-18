@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add the Podcast Episode block. Embeds a single podcast episode from an audio or video file with Podcasting 2.0 metadata. Registration is gated behind the `jetpack_podcast_untangle` filter (default off).
+- Create AI Podcast: emit client-side tracks events for page view, generation request, episode plays, draft opens, pagination, and the quota banner / upgrade CTAs.
 - Dashboard: gate the Episodes tab on Premium product access, with a blurred locked-preview overlay for free users.
 - Default the untangle gate to enabled for A8C-proxied requests so Automatticians dogfood the new package on Simple and Atomic.
 - Pocket Casts: replace the 3-step submit modal with a one-click Relay API flow that reflects pending/submitted state on the button and surfaces rejection reasons inline.
@@ -24,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Build: Run webpack and wp-build scripts concurrently.
+- Create AI Podcast: visual polish, floating toast notices, dismissible notices, generated episodes list, server-side bootstrap, and credits panel with reset messaging.
 - Episodes stats: detect 402 responses from the episode stats endpoint as a Premium-required state.
 - Episode stats: dispatch the premium-required state on the `podcast_premium_required` error code instead of HTTP 402.
 - Podcast: grandfather Premium access by site registration date; drop the sticker-based grandfathering path.
@@ -41,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Always show the Disable podcasting card on the settings tab, and return the user to the welcome screen after disabling, so the back-out flow works before a category has been chosen.
+- Create AI Podcast: serve the generated-episodes list directly from the site database so it works on Atomic installs.
 - Podcast: enqueue WP media library so the cover image selector loads.
 - Podcast: skip rewriting the RSS enclosure URL through the stats endpoint when the URL does not resolve to a local attachment, so externally hosted enclosures stay playable.
 
