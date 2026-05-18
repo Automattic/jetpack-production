@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Search dashboard: Replace the experience radio list with a 2×2 card grid (Embedded / Overlay / Theme / Off), each carrying its own preview, copy, and customization actions ("Search template" + "Insert pattern" for Embedded; "Customize" + "Edit widgets" for the active Overlay). Move the selector into a new Settings tab.
 
 ### Changed
+- Dashboard: Add "Autocomplete" to the pricing comparison grid, shown as included on both the free and paid plans.
 - Dashboard: Add "Jetpack Search blocks" and "Embedded search page" to the pricing comparison grid, shown as included on both the free and paid plans.
 - Dashboard: Add an "AI Answers (Preview)" row to the pricing comparison grid, included on the paid plan only.
 - Dashboard: Gate the "Jetpack Search blocks" and "Embedded search page" pricing rows behind the `jetpack_search_blocks_enabled` flag, matching the front-end gating of the Search blocks.
