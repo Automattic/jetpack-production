@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Always show the Disable podcasting card on the settings tab, and return the user to the welcome screen after disabling, so the back-out flow works before a category has been chosen.
 - Create AI Podcast: serve the generated-episodes list directly from the site database so it works on Atomic installs.
+- Distribution: revert Podcast Index logo to previous version.
 - Podcast: enqueue WP media library so the cover image selector loads.
 - Podcast: skip rewriting the RSS enclosure URL through the stats endpoint when the URL does not resolve to a local attachment, so externally hosted enclosures stay playable.
 
