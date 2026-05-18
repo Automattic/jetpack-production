@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Episodes stats: detect 402 responses from the episode stats endpoint as a Premium-required state.
 - Episode stats: dispatch the premium-required state on the `podcast_premium_required` error code instead of HTTP 402.
 - Podcast: grandfather Premium access by site registration date; drop the sticker-based grandfathering path.
+- Podcast: narrow grandfather rule to sites registered before the cutoff that are also on a paid plan.
 - Podcast: visual polish on the Stats tab — keep horizontal padding at narrow widths, lighter card headers, and integer-only axis ticks on the Downloads chart.
 - Podcast dashboard: reorder tabs so Stats appears first, followed by Episodes, Distribution, and Settings.
 - Podcast Episode: enrich front-end schema.org markup and make chapter / soundbite list items click-to-seek in the audio player.
