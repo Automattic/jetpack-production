@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Exclude development files from production builds.
+- Replace link-style `Button` components and bare `<a>` tags with `Link` from `@wordpress/ui` in integrations, the responses modal, and response inspector mailto/tel links. Open Akismet-related URLs in a new tab only in the block editor so the dashboard keeps navigation in the same tab.
 - Update package dependencies.
 
 ## [7.21.1] - 2026-05-11
