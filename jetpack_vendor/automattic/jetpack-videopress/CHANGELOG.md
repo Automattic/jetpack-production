@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Exclude development files from production builds.
 
+### Fixed
+- Utility: use stored processing-completion timestamp for finish_date_gmt instead of the current time.
+
 ## [0.36.9] - 2026-05-14
 ### Added
 - Comment: Add a user-signed REST proxy for VideoPress stats and seeds the modernized dashboard's React initial state behind the existing modernization filter. [#48817]
