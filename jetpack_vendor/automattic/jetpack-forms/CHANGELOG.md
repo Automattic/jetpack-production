@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Contact Form: remove `opacity: 0.6` from the "Required" label so it inherits the full theme text colour. The opacity caused the rendered colour to fall below the WCAG 2.2 SC 1.4.3 minimum contrast ratio of 4.5:1 across multiple widely-used themes (Storefront, Hello Elementor, Astra, OceanWP).
 - Forms: restore full-width submit button on small screens for horizontal inline forms. The existing mobile media query set `flex-basis: 100%` on the button but had no effect when the parent form used the `is-layout-flex` class (horizontal orientation) because that layout lacks `flex-wrap: wrap`. Adding it at the 480px breakpoint allows the field and button to each stack to a full row on mobile.
 
 ## [7.21.1] - 2026-05-11
