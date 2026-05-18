@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Related Posts: register a get-related-posts ability with the WordPress Abilities API on WP 6.9+ so agents can fetch related posts for a single post through the standard wp-abilities/v1 REST surface.
 - Related Posts abilities: drop test-only setExpectedIncorrectUsage assertions that fail on CI
 - Related Posts abilities: expose result cap as configurable per_page input (max 20)
+- Search: Adding auto-complete feature to suggest search queries
 - Shortlinks abilities: tighten permission_callback to edit_posts (was is_user_logged_in)
 
 ### Bug fixes
