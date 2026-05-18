@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Comment: Free-tier UX (Notice, disabled Upload, storage meter) for the modernized dashboard. Gated behind rsm_jetpack_ui_modernization_videopress.
+
 ### Changed
 - Exclude development files from production builds.
 
