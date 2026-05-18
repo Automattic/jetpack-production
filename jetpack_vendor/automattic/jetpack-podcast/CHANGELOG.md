@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast: grandfather Premium access by site registration date; drop the sticker-based grandfathering path.
 - Podcast: narrow grandfather rule to sites registered before the cutoff that are also on a paid plan.
 - Podcast: visual polish on the Stats tab — keep horizontal padding at narrow widths, lighter card headers, and integer-only axis ticks on the Downloads chart.
+- Podcast dashboard: opt into the shared `jp-admin-page-tabs--minimal` modifier so the tab strip aligns with the page header and labels use the design-system font size.
 - Podcast dashboard: reorder tabs so Stats appears first, followed by Episodes, Distribution, and Settings.
 - Podcast Episode: enrich front-end schema.org markup and make chapter / soundbite list items click-to-seek in the audio player.
 - Podcast Episodes: fall back to the show cover image when an episode has no featured image.
