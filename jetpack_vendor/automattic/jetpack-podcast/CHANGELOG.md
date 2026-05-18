@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Distribution: refresh Apple Podcasts, Spotify, YouTube Music, Amazon Music, and Podcast Index logos with current brand marks. Rename the YouTube directory to YouTube Music. Map matching slugs in the Stats "By app" and "Top app" labels.
 - Episodes stats: detect 402 responses from the episode stats endpoint as a Premium-required state.
 - Episode stats: dispatch the premium-required state on the `podcast_premium_required` error code instead of HTTP 402.
+- Exclude development files from production builds.
 - Podcast: grandfather Premium access by site registration date; drop the sticker-based grandfathering path.
 - Podcast: narrow grandfather rule to sites registered before the cutoff that are also on a paid plan.
 - Podcast: visual polish on the Stats tab — keep horizontal padding at narrow widths, lighter card headers, and integer-only axis ticks on the Downloads chart.

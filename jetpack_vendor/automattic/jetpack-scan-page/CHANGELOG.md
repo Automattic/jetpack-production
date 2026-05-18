@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Build: Remove redundant dependency build script.
+- Exclude development files from production builds.
 - Update dependencies.
 
 ## [0.1.0] - 2026-05-11

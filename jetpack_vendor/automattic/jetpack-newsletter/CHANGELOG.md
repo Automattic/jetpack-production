@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Build: Run webpack and wp-build scripts concurrently.
+- Exclude development files from production builds.
 
 ### Fixed
 - Fix saving settings on the Newsletter admin page on Atomic and self-hosted sites.

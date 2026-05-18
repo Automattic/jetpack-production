@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Build: Run webpack and wp-build scripts concurrently.
+- Exclude development files from production builds.
 - Update package dependencies.
 
 ## [4.2.55] - 2026-05-11
