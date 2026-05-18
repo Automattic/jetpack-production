@@ -21,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Search: Adding auto-complete feature to suggest search queries
 - Shortlinks abilities: tighten permission_callback to edit_posts (was is_user_logged_in)
 
+### Improved compatibility
+- Jetpack: migrate Status indicator to @wordpress/ui Text.
+
 ### Bug fixes
 - Copy Post: fix backslash characters being stripped from post content, title, and excerpt when duplicating a post.
 - Improved the MCP settings UI by fixing browser Back button navigation, changing setup instructions to unordered lists, correcting the 'All enabled' label vertical alignment, and tightening toggle help-text spacing.
