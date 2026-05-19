@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: whitelist supported taxonomies in the Custom Taxonomy filter; the jetpack_search_custom_taxonomy_map filter now also mirrors mapped taxonomies onto reserved jetpack-search-tagN slot taxonomies at write time so Jetpack Search can index them, and routes both the aggregation key and field through the slot at query time.
 - Search dashboard: add a "WooCommerce Product Search" control that, when enabled, serves product searches from a dedicated Site-Editor-editable Jetpack Search template instead of WooCommerce's default product search template.
 - Search Dashboard: Add AI Agent Access opt-in toggle.
+- Search Dashboard: add an "Additional settings" heading above the feature toggles in the search-blocks settings view. The heading only renders when at least one of those settings is available, so it never appears orphaned.
 - Search dashboard: Replace the experience radio list with a 2×2 card grid (Embedded / Overlay / Theme / Off), each carrying its own preview, copy, and customization actions ("Search template" + "Insert pattern" for Embedded; "Customize" + "Edit widgets" for the active Overlay). Move the selector into a new Settings tab.
 
 ### Changed
