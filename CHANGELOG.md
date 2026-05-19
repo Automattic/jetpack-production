@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Copy Post: fix backslash characters being stripped from post content, title, and excerpt when duplicating a post.
 - Improved the MCP settings UI by fixing browser Back button navigation, changing setup instructions to unordered lists, correcting the 'All enabled' label vertical alignment, and tightening toggle help-text spacing.
 - Jetpack AI: route the MCP "Upgrade plan" CTA through the standard checkout workflow so non-WordPress.com hosts (Pressable, self-hosted) reach a valid destination instead of a "you don't have access to that site" page, and remove WordPress.com-specific copy from the upsell.
+- Newsletter Categories: stop returning 400 when saving the same category selection that's already stored.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Composer: drop the automattic/jetpack-podcast dependency. The package is only consumed via jetpack-mu-wpcom and was never initialized from the Jetpack plugin.
