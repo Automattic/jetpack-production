@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Dashboard: add an "Additional settings" heading above the feature toggles in the search-blocks settings view. The heading only renders when at least one of those settings is available, so it never appears orphaned.
 
 ### Changed
+- Build: collapse the per-directory `production-exclude` rules for `src/**/*.js` into a single broad exclude with an explicit carve-out for `src/widgets/**/*.js` (which has no build step and must ship).
 - Replace internal ContextualUpgradeTrigger upgrade prompts with @wordpress/ui Notice composition. Internal refactor with a Notice-style visual refresh.
 - Search: Normalize page tabs onto shared minimal variant + jp-admin-page-tabs--minimal wrapper modifier. Bump @wordpress/ui to 0.13.0.
 
