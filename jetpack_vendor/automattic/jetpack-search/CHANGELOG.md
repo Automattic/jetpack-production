@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
+- Search: reject experience requests combined with ai_answers_enabled or search_suggestions_enabled instead of silently dropping them, and gate the WooCommerce product-search template override on the active experience so a stale option can't keep rerouting after a switch away from a server-rendered experience.
 - Search Dashboard: Hide the AI Agent Access toggle for private sites and improve related settings spacing.
 - Search dashboard: let the toggle description text span the full settings card width instead of wrapping in a narrow 7-column band.
 
