@@ -250,6 +250,7 @@ return array(
     'Automattic\\Jetpack\\PayPal_Payments' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/class-paypal-payments.php',
     'Automattic\\Jetpack\\PaypalPayments\\PayPal_Payment_Buttons' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/paypal-payment-buttons/class-paypal-payment-buttons.php',
     'Automattic\\Jetpack\\PaypalPayments\\SimplePayments\\Block' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/block/class-block.php',
+    'Automattic\\Jetpack\\Paypal_Payments\\Order_REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/legacy/class-order-rest-controller.php',
     'Automattic\\Jetpack\\Paypal_Payments\\Simple_Payments' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/legacy/class-simple-payments.php',
     'Automattic\\Jetpack\\Paypal_Payments\\Widgets\\Simple_Payments_Widget' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/widget/class-simple-payments-widget.php',
     'Automattic\\Jetpack\\Plans' => $vendorDir . '/automattic/jetpack-plans/src/class-plans.php',

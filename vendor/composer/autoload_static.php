@@ -274,6 +274,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_9_a_2
         'Automattic\\Jetpack\\PayPal_Payments' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/class-paypal-payments.php',
         'Automattic\\Jetpack\\PaypalPayments\\PayPal_Payment_Buttons' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/paypal-payment-buttons/class-paypal-payment-buttons.php',
         'Automattic\\Jetpack\\PaypalPayments\\SimplePayments\\Block' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/block/class-block.php',
+        'Automattic\\Jetpack\\Paypal_Payments\\Order_REST_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/legacy/class-order-rest-controller.php',
         'Automattic\\Jetpack\\Paypal_Payments\\Simple_Payments' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/legacy/class-simple-payments.php',
         'Automattic\\Jetpack\\Paypal_Payments\\Widgets\\Simple_Payments_Widget' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/widget/class-simple-payments-widget.php',
         'Automattic\\Jetpack\\Plans' => __DIR__ . '/..' . '/automattic/jetpack-plans/src/class-plans.php',
