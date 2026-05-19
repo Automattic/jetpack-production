@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.3.6-alpha] - unreleased
+## [8.3.7-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -18,6 +18,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
+
+## [8.3.6] - 2026-05-19
+### Changed
+- Internal updates.
 
 ## [8.3.5] - 2026-05-14
 ### Changed
@@ -1839,7 +1843,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[8.3.6-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.3.5...v8.3.6-alpha
+[8.3.7-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.3.6...v8.3.7-alpha
+[8.3.6]: https://github.com/Automattic/jetpack-connection/compare/v8.3.5...v8.3.6
 [8.3.5]: https://github.com/Automattic/jetpack-connection/compare/v8.3.4...v8.3.5
 [8.3.4]: https://github.com/Automattic/jetpack-connection/compare/v8.3.3...v8.3.4
 [8.3.3]: https://github.com/Automattic/jetpack-connection/compare/v8.3.2...v8.3.3

@@ -5,23 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.21.2-alpha] - unreleased
+## [7.21.3-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
-
-### Changed
-- Exclude development files from production builds.
-- Replace link-style `Button` components and bare `<a>` tags with `Link` from `@wordpress/ui` in integrations, the responses modal, and response inspector mailto/tel links. Open Akismet-related URLs in a new tab only in the block editor so the dashboard keeps navigation in the same tab.
-- Update package dependencies.
 
 ### Removed
 - Remove dead legacy grunion assets: grunion-admin.js, grunion-frontend.js, grunion-admin.css, and 13 unused images.
 
 ### Fixed
-- Contact Form: remove `opacity: 0.6` from the "Required" label so it inherits the full theme text colour. The opacity caused the rendered colour to fall below the WCAG 2.2 SC 1.4.3 minimum contrast ratio of 4.5:1 across multiple widely-used themes (Storefront, Hello Elementor, Astra, OceanWP).
 - Forms: Fix unread submissions counter badge colors in the admin sidebar.
-- Forms: restore full-width submit button on small screens for horizontal inline forms. The existing mobile media query set `flex-basis: 100%` on the button but had no effect when the parent form used the `is-layout-flex` class (horizontal orientation) because that layout lacks `flex-wrap: wrap`. Adding it at the 480px breakpoint allows the field and button to each stack to a full row on mobile.
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
+
+## [7.21.2] - 2026-05-19
+### Changed
+- Exclude development files from production builds. [#47365]
+- Update package dependencies. [#48695]
+- Use `@wordpress/ui` links in integrations, response modals, and mail/phone links, keeping dashboard navigation in the same tab where appropriate. [#48407]
+
+### Fixed
+- Contact Form: Restore full theme text color for the "Required" label so it meets WCAG contrast requirements across common themes. [#48925]
+- Contact Form: Restore full-width submit buttons on small screens for horizontal inline forms. [#48928]
 
 ## [7.21.1] - 2026-05-11
 ### Changed
@@ -2497,7 +2500,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.21.2-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.21.1...v7.21.2-alpha
+[7.21.3-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.21.2...v7.21.3-alpha
+[7.21.2]: https://github.com/automattic/jetpack-forms/compare/v7.21.1...v7.21.2
 [7.21.1]: https://github.com/automattic/jetpack-forms/compare/v7.21.0...v7.21.1
 [7.21.0]: https://github.com/automattic/jetpack-forms/compare/v7.20.0...v7.21.0
 [7.20.0]: https://github.com/automattic/jetpack-forms/compare/v7.19.0...v7.20.0

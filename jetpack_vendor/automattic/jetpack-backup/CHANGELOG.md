@@ -5,14 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.2.56-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.2.56] - 2026-05-19
 ### Changed
-- Build: Run webpack and wp-build scripts concurrently.
-- Exclude development files from production builds.
-- Update package dependencies.
+- Build: Run webpack and wp-build scripts concurrently. [#48794]
+- Exclude development files from production builds. [#47365]
+- Update package dependencies. [#48696]
 
 ## [4.2.55] - 2026-05-11
 ### Changed
@@ -1117,7 +1114,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[4.2.56-alpha]: https://github.com/Automattic/jetpack-backup/compare/v4.2.55...v4.2.56-alpha
+[4.2.56]: https://github.com/Automattic/jetpack-backup/compare/v4.2.55...v4.2.56
 [4.2.55]: https://github.com/Automattic/jetpack-backup/compare/v4.2.54...v4.2.55
 [4.2.54]: https://github.com/Automattic/jetpack-backup/compare/v4.2.53...v4.2.54
 [4.2.53]: https://github.com/Automattic/jetpack-backup/compare/v4.2.52...v4.2.53

@@ -12,9 +12,10 @@ This is an alpha version! The changes listed here are not final.
 ### Security
 - Restrict REST API write access to jp_pay_order by using a read-only REST controller
 
+## [0.6.20] - 2026-05-19
 ### Changed
-- Exclude development files from production builds.
-- Update package dependencies.
+- Exclude development files from production builds. [#47365]
+- Update package dependencies. [#48695]
 
 ## [0.6.19] - 2026-05-11
 ### Changed
@@ -235,7 +236,8 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Simple Payments: Move Simple Payments block to PayPal Payments package. [#43413]
 
-[0.7.0-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.6.19...v0.7.0-alpha
+[0.7.0-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.6.20...v0.7.0-alpha
+[0.6.20]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.6.19...v0.6.20
 [0.6.19]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.6.18...v0.6.19
 [0.6.18]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.6.17...v0.6.18
 [0.6.17]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.6.16...v0.6.17

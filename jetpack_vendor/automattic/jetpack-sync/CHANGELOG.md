@@ -5,12 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.38.2-alpha] - unreleased
+## [4.38.3-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
+
+## [4.38.2] - 2026-05-19
+### Changed
+- Internal updates.
 
 ## [4.38.1] - 2026-05-14
 ### Added
@@ -1750,7 +1754,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.38.2-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.38.1...v4.38.2-alpha
+[4.38.3-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.38.2...v4.38.3-alpha
+[4.38.2]: https://github.com/Automattic/jetpack-sync/compare/v4.38.1...v4.38.2
 [4.38.1]: https://github.com/Automattic/jetpack-sync/compare/v4.38.0...v4.38.1
 [4.38.0]: https://github.com/Automattic/jetpack-sync/compare/v4.37.0...v4.38.0
 [4.37.0]: https://github.com/Automattic/jetpack-sync/compare/v4.36.0...v4.37.0
