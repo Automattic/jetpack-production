@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.8-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.8.8] - 2026-05-19
 ### Changed
-- Build: Run webpack and wp-build scripts concurrently.
-- Exclude development files from production builds.
+- Build: Run webpack and wp-build scripts concurrently. [#48794]
+- Exclude development files from production builds. [#47365]
 
 ### Fixed
-- Fix saving settings on the Newsletter admin page on Atomic and self-hosted sites.
+- Fix saving settings on the Newsletter admin page on Atomic and self-hosted sites. [#48813]
 
 ## [0.8.7] - 2026-05-11
 ### Changed
@@ -190,7 +187,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.8.8-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.7...v0.8.8-alpha
+[0.8.8]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.7...v0.8.8
 [0.8.7]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.6...v0.8.7
 [0.8.6]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.5...v0.8.6
 [0.8.5]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.4...v0.8.5

@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.36.10-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.36.10] - 2026-05-19
 ### Added
-- Comment: Free-tier UX (Notice, disabled Upload, storage meter) for the modernized dashboard. Gated behind rsm_jetpack_ui_modernization_videopress.
+- Add free-tier notice, disabled upload controls, and a storage meter to the modernized dashboard. [#48843]
 
 ### Changed
-- Exclude development files from production builds.
+- Exclude development files from production builds. [#47365]
 
 ### Fixed
-- Utility: use stored processing-completion timestamp for finish_date_gmt instead of the current time.
+- Use the stored processing-completion timestamp for `finish_date_gmt` instead of the current time. [#48886]
 
 ## [0.36.9] - 2026-05-14
 ### Added
@@ -1981,7 +1978,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.36.10-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.9...v0.36.10-alpha
+[0.36.10]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.9...v0.36.10
 [0.36.9]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.8...v0.36.9
 [0.36.8]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.7...v0.36.8
 [0.36.7]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.6...v0.36.7

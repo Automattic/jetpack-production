@@ -326,22 +326,28 @@ Jetpack Backup can do a full website migration to a new host, migrate theme file
 
 
 == Changelog ==
-### 15.9-a.1 - 2026-05-11
+### 15.9-a.3 - 2026-05-19
 #### Enhancements
-- AI Page: Ensure the layout matches the rest of the Jetpack admin pages that use the AdminPage component.
-- Components: Replace Gridicon with Icon and named icon exports from `@wordpress/icons`.
-- Image Studio: Expose a video clip generation capability flag (`canGenerateVideoClips`) on the localized data so the client can hide the entry point on WordPress.com sites that cannot upload videos.
-- Image Studio: Register a `_jetpack_feature_clip_id` post meta that links a generated video clip to its post. Stored as the attachment ID, exposed over REST so the post editor can read/write it.
+- Abilities API: Register Shortlinks support for the WP.me Shortlinks module on WordPress 6.9+.
+- AI Assistant: Add an AI Agent Access toggle in the Jetpack Search dashboard, allowing site owners to opt in to letting AI assistants answer reader questions using the blog's content.
+- Donations Block: Add admin controls for hiding the One-Time interval, choosing the default frequency, setting a per-frequency default donation amount, and configuring the suggested custom amount. At least one frequency must remain enabled.
+- Donations Block: Add Gutenberg style settings (border, color, typography, spacing) and custom controls for active tab and selected amount colors.
+- Donations Block: Add Security inspector panel with configurable minimum and maximum donation amounts to help prevent fraudulent transactions.
+- Donations Block: Inherit colors and typography from the active theme, and let the Donate button pick up theme button styles.
+- Image Studio: Only allow video clip generation on sites where Image Studio is enabled and the plan supports video uploads.
+- Performance settings: Simplify the Search section and link to the Search dashboard so experience selection happens in one place.
+- Related Posts: Add configurable result limits for related-post agent requests.
+- Related Posts: Register WordPress Abilities API support for fetching related posts.
+- Search: Add an auto-complete feature that suggests search queries as users type.
+- Shortlinks: Require edit-posts access for Shortlinks ability requests.
 
 #### Improved compatibility
-- Settings And AI Pages: Replace the `.admin-ui-page` selector hook with the stable `.jp-admin-page__page` className passed through by AdminPage, restoring page-specific layout overrides.
+- Migrate Status indicator to @wordpress/ui Text.
 
 #### Bug fixes
-- AI Page: Update the layout-mixin selector to match the renamed `jetpack-ai` body class so the page layout applies again.
-- Search: Bundle @wordpress/theme and @wordpress/private-apis inline in the dashboard build so it does not silently fail to load when those packages are not registered as WP script handles.
-- Shortcodes: Google Maps shortcode now preserves URL-encoded and HTML-encoded characters inside place names.
-- Social: Fall back to the site-wide social message template when no per-post share message is set.
-- VideoPress: Fix the "Add new video" button disappearing on the admin dashboard after the first video is uploaded.
+- Copy Post: Fix backslash characters being stripped from post content, title, and excerpt when duplicating a post.
+- Jetpack AI: Improve MCP settings UI navigation, setup-list formatting, label alignment, and toggle spacing.
+- Jetpack AI: Send non-WordPress.com hosts through the standard checkout workflow for the MCP "Upgrade plan" CTA, and remove WordPress.com-specific upsell copy.
 
 --------
 
