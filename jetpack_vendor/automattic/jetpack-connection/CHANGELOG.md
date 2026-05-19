@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Connection: Signal to Calypso that the site already has a connection owner so the authorize page can show appropriate content for secondary user connections.
+
+### Changed
+- Connectors: Show shorter, role-appropriate connect prompt for secondary user connections when the site already has a connection owner.
+
 ### Fixed
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
 
