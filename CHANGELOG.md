@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Composer: drop the automattic/jetpack-podcast dependency. The package is only consumed via jetpack-mu-wpcom and was never initialized from the Jetpack plugin.
 - General: update composer.lock files.
+- Infinite Scroll: Address PHP warnings.
 - Internal: regenerate composer.lock to pick up the podcast package's new automattic/jetpack-connection dependency.
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
 - Tests: cover the Search options that ship with the Search sync module's default-option whitelist.
