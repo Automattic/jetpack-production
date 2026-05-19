@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array('@wordpress/interactivity'), 'version' => 'a53ffbb869825cb7ecd7', 'type' => 'module');
+<?php return array('dependencies' => array('jetpack-search/store'), 'version' => '2b219d47cec455e6aa29', 'type' => 'module');
