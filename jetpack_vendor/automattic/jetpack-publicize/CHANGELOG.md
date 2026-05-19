@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
+- SIG: Prevent PHP warning when setting key doesn't exist.
 - Social: avoid disabling connection rows while saving per-connection message templates.
 - Social: Enable per-network customization by default when a custom connection template exists.
 - Social Previews: Update template placeholders when editing the post title or content.
