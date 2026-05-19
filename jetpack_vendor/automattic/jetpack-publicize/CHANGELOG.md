@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Expose the canonical message-template placeholder catalogue via a REST endpoint.
 
 ### Changed
+- Replace internal ContextualUpgradeTrigger upgrade prompts with @wordpress/ui Notice composition. Internal refactor with a Notice-style visual refresh.
 - Social: Simplify preview render API by using the connction id as the source of truth.
 - Update package dependencies.
 

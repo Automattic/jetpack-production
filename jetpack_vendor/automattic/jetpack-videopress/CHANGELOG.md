@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Exclude development files from production builds.
+- Replace internal ContextualUpgradeTrigger upgrade prompts with @wordpress/ui Notice composition. Internal refactor with a Notice-style visual refresh.
 
 ### Fixed
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
