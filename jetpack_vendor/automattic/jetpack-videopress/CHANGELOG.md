@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Comment: Modernized VideoPress dashboard (gated behind rsm_jetpack_ui_modernization_videopress) now wires Overview, Library, Video Details, and Settings to real REST endpoints. Also corrects the stats proxy's watch-time unit conversion.
 - Replace internal ContextualUpgradeTrigger upgrade prompts with @wordpress/ui Notice composition. Internal refactor with a Notice-style visual refresh.
 - VideoPress: Migrate dashboard tabs from default to minimal variant; align via shared jp-admin-page-tabs--minimal wrapper modifier. Bump @wordpress/ui to 0.13.0.
 
