@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Exclude development files from production builds.
 
 ### Fixed
+- Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
 - Utility: use stored processing-completion timestamp for finish_date_gmt instead of the current time.
 
 ## [0.36.9] - 2026-05-14

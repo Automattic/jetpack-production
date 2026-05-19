@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
+
 ## [5.37.1] - 2026-05-14
 ### Changed
 - Update package dependencies. [#48696]

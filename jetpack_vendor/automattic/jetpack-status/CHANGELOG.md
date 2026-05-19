@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
+
 ## [6.1.3] - 2026-05-04
 ### Added
 - Tests: Load polyfills for `str_contains`, `str_starts_with`, and `str_ends_with` in the test bootstrap on PHP < 8.0. [#48225]

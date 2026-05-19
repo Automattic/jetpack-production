@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Composer: drop the automattic/jetpack-podcast dependency. The package is only consumed via jetpack-mu-wpcom and was never initialized from the Jetpack plugin.
 - General: update composer.lock files.
 - Internal: regenerate composer.lock to pick up the podcast package's new automattic/jetpack-connection dependency.
+- Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
 - Tests: cover the Search options that ship with the Search sync module's default-option whitelist.
 - Update package dependencies.
 - Verification Tools: remove trailing slash from meta void elements to conform with the HTML spec.

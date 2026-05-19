@@ -10,7 +10,7 @@
  *
  * @param string $key Module file name without `.php`.
  *
- * @return array
+ * @return array|null
  */
 function jetpack_get_module_i18n( $key ) {
 	static $modules;
@@ -242,7 +242,7 @@ function jetpack_get_module_i18n( $key ) {
 			),
 		);
 	}
-	return isset( $modules[ $key ] ) ? $modules[ $key ] : null;
+	return $modules[ $key ] ?? null;
 }
 
 /**
@@ -376,7 +376,7 @@ function jetpack_get_module_i18n_tag( $key ) {
  *
  * @param string $key Module file name without `.php`.
  *
- * return array|string An array containing the module info or an empty string if the given module isn't known.
+ * return array|string|null An array containing the module info or an empty string if the given module isn't known.
  */
 function jetpack_get_module_info( $key ) {
 	static $module_info = array (
@@ -1191,7 +1191,7 @@ function jetpack_get_module_info( $key ) {
 	    'plan_classes' => '',
 	  ),
 	);
-	return isset( $module_info[ $key ] ) ? $module_info[ $key ] : null;
+	return $module_info[ $key ] ?? null;
 }
 
 /**

@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
 - Social: avoid disabling connection rows while saving per-connection message templates.
 - Social: Enable per-network customization by default when a custom connection template exists.
 - Social Previews: Update template placeholders when editing the post title or content.
