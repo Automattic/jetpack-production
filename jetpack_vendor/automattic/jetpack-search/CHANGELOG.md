@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Replace internal ContextualUpgradeTrigger upgrade prompts with @wordpress/ui Notice composition. Internal refactor with a Notice-style visual refresh.
+- Search: Normalize page tabs onto shared minimal variant + jp-admin-page-tabs--minimal wrapper modifier. Bump @wordpress/ui to 0.13.0.
 
 ### Fixed
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
