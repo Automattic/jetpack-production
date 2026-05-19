@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Replace internal ContextualUpgradeTrigger upgrade prompts with @wordpress/ui Notice composition. Internal refactor with a Notice-style visual refresh.
 
 ### Fixed
+- Fix duplicate Jetpack logo rendering in the Edit Video page header.
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
 - Utility: use stored processing-completion timestamp for finish_date_gmt instead of the current time.
 
