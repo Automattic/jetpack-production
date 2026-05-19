@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Signal to Calypso that the site already has a connection owner so the authorize page can show appropriate content for secondary user connections.
 
 ### Changed
+- Connection: Show the Jetpack icon beside the Connected label in the WordPress.com account column on the Users screen.
 - Connectors: Show shorter, role-appropriate connect prompt for secondary user connections when the site already has a connection owner.
 
 ### Fixed
