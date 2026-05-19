@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Sync: Whitelist the new Jetpack Search ai_answers_enabled, search_suggestions_enabled, override_woocommerce_search_template, and reader_chat options so they propagate to WPcom.
+
 ### Fixed
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
 
