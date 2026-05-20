@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Instant Search: Prevent the search modal from triggering on third-party form submissions. Forms embedding an input named "s" (e.g. ActiveCampaign sign-up widgets) would incorrectly open the search overlay and block the submission. The fix checks that the form's action URL shares the same origin as the site before intercepting.
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
 - Search: reject experience requests combined with ai_answers_enabled or search_suggestions_enabled instead of silently dropping them, and gate the WooCommerce product-search template override on the active experience so a stale option can't keep rerouting after a switch away from a server-rendered experience.
+- Search Blocks: cap the filter-checkbox list at its configured "Maximum items" even after the session has retained options across multiple searches.
 - Search Dashboard: Hide the AI Agent Access toggle for private sites and improve related settings spacing.
 - Search dashboard: let the toggle description text span the full settings card width instead of wrapping in a narrow 7-column band.
 
