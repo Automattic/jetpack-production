@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Build: collapse the per-directory `production-exclude` rules for `src/**/*.js` into a single broad exclude with an explicit carve-out for `src/widgets/**/*.js` (which has no build step and must ship).
 - Replace internal ContextualUpgradeTrigger upgrade prompts with @wordpress/ui Notice composition. Internal refactor with a Notice-style visual refresh.
 - Search: Normalize page tabs onto shared minimal variant + jp-admin-page-tabs--minimal wrapper modifier. Bump @wordpress/ui to 0.13.0.
+- Search: the AI Answer block (`jetpack-search/ai-answer`) no longer gates on the site-wide `jetpack_search_ai_answers_enabled` option — block presence in post content is the only switch. The option still governs the instant-search overlay.
 - Search Blocks: let authors pick which suggestion sections appear in the Search Input dropdown (query completions, categories & tags, post titles) via a new per-block suggestionTypes attribute. Existing blocks default to all three.
 - Update package dependencies.
 
