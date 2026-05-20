@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- Forms: Fix a JavaScript error in the editor.
 - Newsletter Categories: stop returning 400 when saving the same category selection that's already stored.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
