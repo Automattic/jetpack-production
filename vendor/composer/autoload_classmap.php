@@ -36,6 +36,7 @@ return array(
     'Automattic\\Jetpack\\Automatic_Install_Skin' => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-automatic-install-skin.php',
     'Automattic\\Jetpack\\Backup\\Package_Version' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-package-version.php',
     'Automattic\\Jetpack\\Backup\\V0001\\Package_Version' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-package-version-compat.php',
+    'Automattic\\Jetpack\\Backup\\V0005\\Abilities\\Backup_Abilities' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/abilities/class-backup-abilities.php',
     'Automattic\\Jetpack\\Backup\\V0005\\Helper_Script_Manager' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup-helper-script-manager/src/class-helper-script-manager.php',
     'Automattic\\Jetpack\\Backup\\V0005\\Helper_Script_Manager_Impl' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup-helper-script-manager/src/class-helper-script-manager-impl.php',
     'Automattic\\Jetpack\\Backup\\V0005\\Initial_State' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-initial-state.php',
