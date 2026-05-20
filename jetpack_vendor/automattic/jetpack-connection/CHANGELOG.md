@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Connection: Show the Jetpack icon beside the Connected label in the WordPress.com account column on the Users screen.
 - Connectors: Show shorter, role-appropriate connect prompt for secondary user connections when the site already has a connection owner.
+- Update package dependencies.
 
 ### Fixed
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
