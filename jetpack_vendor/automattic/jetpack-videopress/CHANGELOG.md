@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Comment: Modernized VideoPress dashboard (gated behind rsm_jetpack_ui_modernization_videopress) now wires Overview, Library, Video Details, and Settings to real REST endpoints. Also corrects the stats proxy's watch-time unit conversion.
+- Comment: Modernized VideoPress dashboard: add a thumbnail editor to the Video details screen.
 - Comment: Pre-release polish for the modernized VideoPress dashboard (gated behind rsm_jetpack_ui_modernization_videopress): empty states on the Most viewed / Top videos by watch time cards, neutral-toned date range button, breadcrumb on the Video details page now routes back to the tab the user came from, 660px ribbon on Settings + Video details, page-canvas color fix, monotone chart curve to stop apparent-negative dips, hidden grid filename on Library, and a clearer "Reset to site default" label on the row actions. Also fixes a free-tier counting bug where local (non-VideoPress) video attachments were gating a free user's first VideoPress upload, removes the now-unused mock hooks and fixtures, and renames CamelCase component folders/files to kebab-case.
 - Replace internal ContextualUpgradeTrigger upgrade prompts with @wordpress/ui Notice composition. Internal refactor with a Notice-style visual refresh.
 - Update package dependencies.
