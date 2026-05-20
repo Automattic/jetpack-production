@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Improved compatibility
+- ActivityPub: Allow Jetpack-signed admin requests to reach the inbox, proxy, and outbox client-to-server endpoints used by the connected site's wp.com Reader, without an OAuth bearer.
+
 ### Bug fixes
 - Forms: Fix a JavaScript error in the editor.
 - Newsletter Categories: stop returning 400 when saving the same category selection that's already stored.
