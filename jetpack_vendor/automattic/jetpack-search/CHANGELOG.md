@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Search: Add a "Compact" block style to the Clear Filters block and stop it inheriting the core Button block styling that rendered oversized on some themes — the default now uses the theme's lighter button baseline.
 - Search: Make the Load More block match the theme's regular core/button look and add a "Compact" block style so authors can right-size it without custom CSS.
+- Search: surface the "Enable search suggestions" and "Enable AI Answers" toggles in the search customizer's Additional settings panel, alongside their existing home on the search dashboard.
 - Search Blocks: add optional autocomplete suggestions dropdown to the Search Input block — query, taxonomy, and post suggestions powered by the WPCOM search-suggestions endpoint. Authors opt in per block via the new "Show search suggestions" inspector toggle. Taxonomy picks apply as an inline filter when a matching filter block is on the page, otherwise navigate to the archive URL.
 - Search dashboard: add a "WooCommerce Product Search" control that, when enabled, serves product searches from a dedicated Site-Editor-editable Jetpack Search template instead of WooCommerce's default product search template.
 - Search Dashboard: add an "Additional settings" heading above the feature toggles in the search-blocks settings view. The heading only renders when at least one of those settings is available, so it never appears orphaned.
