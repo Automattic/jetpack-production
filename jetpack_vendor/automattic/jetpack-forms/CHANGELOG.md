@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Update package dependencies.
+
 ### Removed
 - Remove dead legacy grunion assets: grunion-admin.js, grunion-frontend.js, grunion-admin.css, and 13 unused images.
 

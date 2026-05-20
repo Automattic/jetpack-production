@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Scan: Normalize page tabs onto shared minimal variant + jp-admin-page-tabs--minimal wrapper modifier. Bump @wordpress/ui to 0.13.0.
+- Update package dependencies.
 
 ## [0.1.1] - 2026-05-19
 ### Changed

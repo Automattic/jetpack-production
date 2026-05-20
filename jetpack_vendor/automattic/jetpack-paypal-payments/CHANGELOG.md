@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Security
 - Restrict REST API write access to jp_pay_order by using a read-only REST controller
 
+### Changed
+- Update package dependencies.
+
 ## [0.6.20] - 2026-05-19
 ### Changed
 - Exclude development files from production builds. [#47365]

@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Infinite Scroll: Address PHP warnings.
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
 - Sync: Add test coverage for the newly synced Jetpack Search options.
+- Update package dependencies.
 
 ## 15.9-a.3 - 2026-05-19
 ### Enhancements

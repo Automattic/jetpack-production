@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Newsletter: Normalize page tabs onto shared minimal variant + jp-admin-page-tabs--minimal wrapper modifier; drop bespoke jetpack-newsletter-page__tabs-row class. Bump @wordpress/ui to 0.13.0.
+- Update package dependencies.
 
 ## [0.8.8] - 2026-05-19
 ### Changed
