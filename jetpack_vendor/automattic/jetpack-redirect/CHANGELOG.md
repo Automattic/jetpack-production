@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.0.12-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [3.0.12] - 2026-05-21
 ### Fixed
-- Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
+- Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations. [#48887]
 
 ## [3.0.11] - 2026-05-19
 ### Changed
@@ -268,7 +265,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Create Jetpack Redirect package
 
-[3.0.12-alpha]: https://github.com/Automattic/jetpack-redirect/compare/v3.0.11...v3.0.12-alpha
+[3.0.12]: https://github.com/Automattic/jetpack-redirect/compare/v3.0.11...v3.0.12
 [3.0.11]: https://github.com/Automattic/jetpack-redirect/compare/v3.0.10...v3.0.11
 [3.0.10]: https://github.com/Automattic/jetpack-redirect/compare/v3.0.9...v3.0.10
 [3.0.9]: https://github.com/Automattic/jetpack-redirect/compare/v3.0.8...v3.0.9
