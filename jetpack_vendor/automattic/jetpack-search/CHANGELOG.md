@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Search Blocks: add `Search_Blocks::set_supports_paid_search_for_testing( ?bool )` and a "no filter by design" note on `supports_paid_search()` to align with the canonical gate pattern in `src/search-blocks/AGENTS.md`. No runtime behavior change.
 - Search Blocks: gate the AI Answer block behind a paid Search plan — free / no-plan sites render nothing on the front end and see an upgrade prompt in the editor.
+- Search dashboard: rename the "Plan & Usage" tab to "Overview". The URL slug is now `overview`; the legacy `plan-usage` slug continues to resolve to the renamed tab so existing bookmarks keep working.
 
 ### Fixed
 - Search blocks: render the active theme's header/footer template parts on the search page instead of the hardcoded 'header'/'footer' slugs (fixes blank chrome on themes like Career Development that ship variant-only part files).
