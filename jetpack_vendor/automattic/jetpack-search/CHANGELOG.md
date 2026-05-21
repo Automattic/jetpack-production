@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.0.1-alpha] - unreleased
+## [7.1.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Experience Selector: Add a new "Overlay search" card backed by the experimental blocks-powered overlay introduced in #48987; the legacy preact Overlay is renamed to "Overlay search (legacy)" when the new card is visible. Both cards stay opt-in via the `jetpack_search_overlay_block_template_enabled` filter and remain switchable from the dashboard.
 
 ### Fixed
 - Search blocks: render the active theme's header/footer template parts on the search page instead of the hardcoded 'header'/'footer' slugs (fixes blank chrome on themes like Career Development that ship variant-only part files).
@@ -1701,7 +1704,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[7.0.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v7.0.0...v7.0.1-alpha
+[7.1.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v7.0.0...v7.1.0-alpha
 [7.0.0]: https://github.com/Automattic/jetpack-search/compare/v0.60.0...v7.0.0
 [0.60.0]: https://github.com/Automattic/jetpack-search/compare/v0.59.0...v0.60.0
 [0.59.0]: https://github.com/Automattic/jetpack-search/compare/v0.58.0...v0.59.0
