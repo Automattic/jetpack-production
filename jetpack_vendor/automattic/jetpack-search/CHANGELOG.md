@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Search dashboard: rename the "Plan & Usage" tab to "Overview". The URL slug is now `overview`; the legacy `plan-usage` slug continues to resolve to the renamed tab so existing bookmarks keep working.
 
 ### Fixed
+- Search Blocks: hide the Load More button while the "Loading…" indicator is showing, so visitors don't see both stacked together during a load-more fetch.
 - Search blocks: render the active theme's header/footer template parts on the search page instead of the hardcoded 'header'/'footer' slugs (fixes blank chrome on themes like Career Development that ship variant-only part files).
 
 ## [7.0.0] - 2026-05-21
