@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Abilities API: register the jetpack/get-connection-status read ability from the Jetpack plugin.
 - Admin Menu: add sidebar redesign fields, group metadata, and saved layout data to the `/wpcom/v2/admin-menu` endpoint when the public `wp-admin-sidebar` plugin is loaded. Non-WPCOM Jetpack installs see no shape change.
 
 ### Improved compatibility
@@ -18,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Infinite Scroll: Address PHP warnings.
+- Modules abilities: align the `jetpack` ability-category description and textdomain with the Connection package so the shared category definition does not drift between registrars.
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
 - Sync: Add test coverage for the newly synced Jetpack Search options.
 - Update package dependencies.
