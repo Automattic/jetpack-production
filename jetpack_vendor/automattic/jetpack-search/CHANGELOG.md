@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.0.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Search blocks: render the active theme's header/footer template parts on the search page instead of the hardcoded 'header'/'footer' slugs (fixes blank chrome on themes like Career Development that ship variant-only part files).
+
 ## [7.0.0] - 2026-05-21
 ### Added
 - Search: Add a "Compact" block style to the Clear Filters block and stop it inheriting the core Button block styling that rendered oversized on some themes — the default now uses the theme's lighter button baseline. [#48946]
@@ -1694,6 +1701,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
+[7.0.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v7.0.0...v7.0.1-alpha
 [7.0.0]: https://github.com/Automattic/jetpack-search/compare/v0.60.0...v7.0.0
 [0.60.0]: https://github.com/Automattic/jetpack-search/compare/v0.59.0...v0.60.0
 [0.59.0]: https://github.com/Automattic/jetpack-search/compare/v0.58.0...v0.59.0

@@ -348,6 +348,7 @@ return array(
     'Automattic\\Jetpack\\Search\\Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-settings.php',
     'Automattic\\Jetpack\\Search\\Stats' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-stats.php',
     'Automattic\\Jetpack\\Search\\Template_Tags' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-template-tags.php',
+    'Automattic\\Jetpack\\Search\\Theme_Chrome_Slug_Resolver' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/class-theme-chrome-slug-resolver.php',
     'Automattic\\Jetpack\\Search\\WPES\\Query_Builder' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/wpes/class-query-builder.php',
     'Automattic\\Jetpack\\Search\\WPES\\Query_Parser' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/wpes/class-query-parser.php',
     'Automattic\\Jetpack\\Search\\Wc_Block_Helpers' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/class-wc-block-helpers.php',

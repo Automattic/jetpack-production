@@ -50,7 +50,7 @@
 		"automattic/jetpack-redirect": "^3.0.12",
 		"automattic/jetpack-roles": "^3.0.10",
 		"automattic/jetpack-scan-page": "^0.1.2-alpha",
-		"automattic/jetpack-search": "^7.0.0",
+		"automattic/jetpack-search": "^7.0.1-alpha",
 		"automattic/jetpack-stats": "^0.19.2-alpha",
 		"automattic/jetpack-stats-admin": "^0.31.4-alpha",
 		"automattic/jetpack-status": "^6.1.5",
