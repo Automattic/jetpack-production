@@ -377,7 +377,6 @@ return array(
     'Automattic\\Jetpack\\Status\\Host' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-host.php',
     'Automattic\\Jetpack\\Status\\Request' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-request.php',
     'Automattic\\Jetpack\\Status\\Visitor' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-visitor.php',
-    'Automattic\\Jetpack\\Subscribers_Dashboard\\Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-subscribers-dashboard/src/class-dashboard.php',
     'Automattic\\Jetpack\\Sync\\Actions' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-actions.php',
     'Automattic\\Jetpack\\Sync\\Activity_Log_Event' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/class-activity-log-event.php',
     'Automattic\\Jetpack\\Sync\\Codec_Interface' => $baseDir . '/jetpack_vendor/automattic/jetpack-sync/src/interface-codec.php',
