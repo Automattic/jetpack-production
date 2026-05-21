@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Experience Selector: Add a new "Overlay search" card backed by the experimental blocks-powered overlay introduced in #48987; the legacy preact Overlay is renamed to "Overlay search (legacy)" when the new card is visible. Both cards stay opt-in via the `jetpack_search_overlay_block_template_enabled` filter and remain switchable from the dashboard.
 
 ### Changed
+- Search Blocks: add `Search_Blocks::set_supports_paid_search_for_testing( ?bool )` and a "no filter by design" note on `supports_paid_search()` to align with the canonical gate pattern in `src/search-blocks/AGENTS.md`. No runtime behavior change.
 - Search Blocks: gate the AI Answer block behind a paid Search plan — free / no-plan sites render nothing on the front end and see an upgrade prompt in the editor.
 
 ### Fixed
