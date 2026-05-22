@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: gate the AI Answer block behind a paid Search plan — free / no-plan sites render nothing on the front end and see an upgrade prompt in the editor.
 - Search blocks: stop running a server-side search in the Embedded and blocks Overlay experiences, where results are fetched client-side via the Interactivity API. Classic Search is no longer initialized for these experiences (avoiding a wasted Elasticsearch query plus a WP_Query per request), and the core database search is short-circuited the same way Instant Search already does.
 - Search dashboard: rename the "Plan & Usage" tab to "Overview". The URL slug is now `overview`; the legacy `plan-usage` slug continues to resolve to the renamed tab so existing bookmarks keep working.
+- Search dashboard: route tabs via the URL hash (`#/<slug>`) instead of the `?tab=<slug>` query parameter, matching the my-jetpack admin's HashRouter convention. Existing `?tab=<slug>` URLs (including the legacy `plan-usage` slug) are normalized to the equivalent hash on mount so existing bookmarks keep working.
 
 ### Fixed
 - Search Blocks: hide the Load More button while the "Loading…" indicator is showing, so visitors don't see both stacked together during a load-more fetch.
