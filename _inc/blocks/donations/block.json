@@ -228,6 +228,10 @@
                 "string",
                 "object"
             ]
+        },
+        "variationName": {
+            "type": "string",
+            "default": ""
         }
     },
     "example": {},

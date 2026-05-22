@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Abilities API: register sitemaps reads + rebuild dispatch
 - Abilities API: register the jetpack/get-connection-status read ability from the Jetpack plugin.
 - Admin Menu: add sidebar redesign fields, group metadata, and saved layout data to the `/wpcom/v2/admin-menu` endpoint when the public `wp-admin-sidebar` plugin is loaded. Non-WPCOM Jetpack installs see no shape change.
+- Donations Block: Add a "Tips" variation with coffee-themed defaults for creatives — sticky pop-up mode, "Buy me a coffee" trigger, $3/$5/$8 amounts, and a "Buy coffee" donate button.
 - Donations block: add modal display mode with trigger button, configurable icon, and animated overlay.
 - Donations Block: Record Tracks events covering admin-side block adoption — when the block is loaded in the editor, when a post containing it is published, and when an admin changes a sidebar setting.
 - Jetpack AI Sidebar: Allow AI Editorial Review through the sidebar preview.
