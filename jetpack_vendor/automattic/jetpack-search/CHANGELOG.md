@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Experience Selector: Add a new "Overlay search" card backed by the experimental blocks-powered overlay introduced in #48987; the legacy preact Overlay is renamed to "Overlay search (legacy)" when the new card is visible. Both cards stay opt-in via the `jetpack_search_overlay_block_template_enabled` filter and remain switchable from the dashboard.
+- Search: internal — new `Filter_Static` helper class, plus a `staticFilterSelections` seed slot on the shared Interactivity state. Foundation for the upcoming `jetpack-search/filter-static` block; no user-visible change on its own.
 - Search Blocks: add an opt-in "Load on scroll" mode to the Load More block — when enabled, the next page of results fetches automatically as the visitor scrolls toward the end of the list, matching the legacy instant-search overlay's infinite-scroll behaviour.
 - Search Blocks overlay: Add a "Edit the Search overlay" entry point in the Jetpack Search dashboard that opens the experimental overlay template in the standard block editor (a hidden singleton CPT). Works on both block themes and classic themes. A "Restore default" link reverts to the bundled template.
 
