@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks overlay: Add a "Edit the Search overlay" entry point in the Jetpack Search dashboard that opens the experimental overlay template in the standard block editor (a hidden singleton CPT). Works on both block themes and classic themes. A "Restore default" link reverts to the bundled template.
 
 ### Changed
+- Search: internal — store now recognizes a `kind: 'static'` flag on `filterConfigs` entries to round-trip single-select selections through scalar `?filter_id=value` URL params (sibling of the `priceRange` state slice). Foundation for the upcoming `jetpack-search/filter-static` block; no user-visible change on its own.
 - Search Blocks: add `Search_Blocks::set_supports_paid_search_for_testing( ?bool )` and a "no filter by design" note on `supports_paid_search()` to align with the canonical gate pattern in `src/search-blocks/AGENTS.md`. No runtime behavior change.
 - Search Blocks: enable by default — flip the `jetpack_search_blocks_enabled` filter default to true so every connected, Search-supported site gets the new Interactivity-API blocks. The filter is retained as a kill-switch (return false to opt out).
 - Search Blocks: gate the AI Answer block behind a paid Search plan — free / no-plan sites render nothing on the front end and see an upgrade prompt in the editor.
