@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fix upgrade prompt incorrectly shown to sites entitled to the full activity log.
+
 ## [0.1.2] - 2026-05-19
 ### Added
 - Add a "Performed by" filter for narrowing the log by actor, including MCP agents. Filtering is applied server-side so totals and pagination stay correct. [#48594]

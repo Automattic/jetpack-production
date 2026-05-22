@@ -10,7 +10,7 @@ return array(
     ),
     'jetpack-activity-log' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-activity-log',
-      'ver' => '0.1.3-alpha1779302993',
+      'ver' => '0.1.3-alpha1779420546',
     ),
     'jetpack-admin-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
