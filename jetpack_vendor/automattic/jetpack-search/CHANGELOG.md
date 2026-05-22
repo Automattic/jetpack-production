@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Search dashboard: route tabs via the URL hash (`#/<slug>`) instead of the `?tab=<slug>` query parameter, matching the my-jetpack admin's HashRouter convention. Existing `?tab=<slug>` URLs (including the legacy `plan-usage` slug) are normalized to the equivalent hash on mount so existing bookmarks keep working.
 
 ### Fixed
+- Instant Search: scope the search suggestions dropdown to the overlay box input, stopping it from leaking onto the WP admin-bar search and other native search inputs.
 - Search Blocks: hide the Load More button while the "Loading…" indicator is showing, so visitors don't see both stacked together during a load-more fetch.
 - Search blocks: render the active theme's header/footer template parts on the search page instead of the hardcoded 'header'/'footer' slugs (fixes blank chrome on themes like Career Development that ship variant-only part files).
 - Search Blocks overlay: auto-open on initial page load when the URL contains `?s=` or `?q=`, matching the legacy instant-search overlay's deep-link behavior.
