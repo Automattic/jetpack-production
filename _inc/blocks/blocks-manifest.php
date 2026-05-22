@@ -946,20 +946,6 @@ To start using the **Jetpack AI Assistant**, type `/AI` in the block editor.',
         'lineHeight' => true,
         'letterSpacing' => true,
       ),
-      '__experimentalBorder' => 
-      array (
-        'color' => true,
-        'radius' => true,
-        'style' => true,
-        'width' => true,
-        '__experimentalDefaultControls' => 
-        array (
-          'color' => true,
-          'radius' => true,
-          'style' => true,
-          'width' => true,
-        ),
-      ),
     ),
     'attributes' => 
     array (
@@ -1152,6 +1138,42 @@ To start using the **Jetpack AI Assistant**, type `/AI` in the block editor.',
       'maximumAmount' => 
       array (
         'type' => 'number',
+      ),
+      'displayMode' => 
+      array (
+        'type' => 'string',
+        'enum' => 
+        array (
+          0 => 'inline',
+          1 => 'modal',
+        ),
+        'default' => 'inline',
+      ),
+      'triggerButtonText' => 
+      array (
+        'type' => 'string',
+      ),
+      'triggerIcon' => 
+      array (
+        'type' => 'string',
+        'default' => 'heart',
+      ),
+      'triggerSticky' => 
+      array (
+        'type' => 'boolean',
+        'default' => false,
+      ),
+      'blockBorder' => 
+      array (
+        'type' => 'object',
+      ),
+      'blockBorderRadius' => 
+      array (
+        'type' => 
+        array (
+          0 => 'string',
+          1 => 'object',
+        ),
       ),
     ),
     'example' => 
