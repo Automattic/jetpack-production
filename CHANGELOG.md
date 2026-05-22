@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Abilities API: register the jetpack/get-connection-status read ability from the Jetpack plugin.
 - Admin Menu: add sidebar redesign fields, group metadata, and saved layout data to the `/wpcom/v2/admin-menu` endpoint when the public `wp-admin-sidebar` plugin is loaded. Non-WPCOM Jetpack installs see no shape change.
 - Jetpack AI Sidebar: Allow AI Editorial Review through the sidebar preview.
+- Newsletter: enable the subscriptions module by default for all sites
 - Reader Chat: Use Jetpack Search plan eligibility for the public opt-in loader.
 
 ### Improved compatibility

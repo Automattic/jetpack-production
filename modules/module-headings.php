@@ -1004,7 +1004,7 @@ function jetpack_get_module_info( $key ) {
 	    'free' => '',
 	    'requires_connection' => 'Yes',
 	    'requires_user_connection' => 'Yes',
-	    'auto_activate' => 'No',
+	    'auto_activate' => 'Yes',
 	    'module_tags' => 'Social',
 	    'feature' => 'Engagement',
 	    'additional_search_queries' => 'subscriptions, subscription, email, follow, followers, subscribers, signup, newsletter, creator',
