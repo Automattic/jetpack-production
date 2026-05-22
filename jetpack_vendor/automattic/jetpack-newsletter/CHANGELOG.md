@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Drop dead @wordpress/admin-ui build-style import that no longer exists in 2.x; bump the package's admin-ui pin to 2.1.0.
+- Fixed Settings tab toggles that controlled the wrong setting due to duplicate element IDs.
 
 ## [0.8.8] - 2026-05-19
 ### Changed
