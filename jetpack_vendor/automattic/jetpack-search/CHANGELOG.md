@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: hide the Load More button while the "Loading…" indicator is showing, so visitors don't see both stacked together during a load-more fetch.
 - Search blocks: render the active theme's header/footer template parts on the search page instead of the hardcoded 'header'/'footer' slugs (fixes blank chrome on themes like Career Development that ship variant-only part files).
 - Search Blocks overlay: auto-open on initial page load when the URL contains `?s=` or `?q=`, matching the legacy instant-search overlay's deep-link behavior.
+- Search Dashboard: Gate Reader Chat controls by Search plan support and usage status, and show a Preview badge beside the Reader Chat toggle.
 
 ## [7.0.0] - 2026-05-21
 ### Added

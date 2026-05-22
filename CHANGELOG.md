@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Abilities API: register the jetpack/get-connection-status read ability from the Jetpack plugin.
 - Admin Menu: add sidebar redesign fields, group metadata, and saved layout data to the `/wpcom/v2/admin-menu` endpoint when the public `wp-admin-sidebar` plugin is loaded. Non-WPCOM Jetpack installs see no shape change.
 - Jetpack AI Sidebar: Allow AI Editorial Review through the sidebar preview.
+- Reader Chat: Use Jetpack Search plan eligibility for the public opt-in loader.
 
 ### Improved compatibility
 - ActivityPub: Allow Jetpack-signed admin requests to reach the inbox, proxy, and outbox client-to-server endpoints used by the connected site's wp.com Reader, without an OAuth bearer.
@@ -19,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix a JavaScript error in the editor.
 - Jetpack AI Sidebar: Fix block editing when another agent provider is present.
 - Newsletter Categories: stop returning 400 when saving the same category selection that's already stored.
+- Reader Chat: prevent the frontend widget from loading on Coming Soon or unlaunched sites.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Infinite Scroll: Address PHP warnings.
