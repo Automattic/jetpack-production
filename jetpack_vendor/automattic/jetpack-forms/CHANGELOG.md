@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Abilities: opt all 8 Jetpack Forms abilities into the MCP tool surface (meta.mcp public tool).
+
 ### Changed
 - Update package dependencies.
 
