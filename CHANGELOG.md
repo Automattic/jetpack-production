@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Abilities: opt the Shortlinks, Sitemaps, and Newsletter abilities into the MCP tool surface (meta.mcp public tool).
+- e2e tests: update encryption key.
 - Infinite Scroll: Address PHP warnings.
 - Modules abilities: align the `jetpack` ability-category description and textdomain with the Connection package so the shared category definition does not drift between registrars.
 - Phan: Address PhanPluginDuplicateConditionalNullCoalescing violations.
