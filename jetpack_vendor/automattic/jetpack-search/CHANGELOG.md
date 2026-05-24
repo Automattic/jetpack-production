@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks overlay: auto-open on initial page load when the URL contains `?s=` or `?q=`, matching the legacy instant-search overlay's deep-link behavior.
 - Search Dashboard: Gate Reader Chat controls by Search plan support and usage status, and show a Preview badge beside the Reader Chat toggle.
 - Search dashboard: mirror the `jetpack_search_blocks_enabled` server default in the React initial state so the Experience Selector renders on stock sites after the SEARCH-222 GA flip.
+- Search Dashboard: Route sites without instant search support (including Atomic) to the pricing upsell page instead of showing the Overview tab's mocked-only state.
 
 ## [7.0.0] - 2026-05-21
 ### Added
