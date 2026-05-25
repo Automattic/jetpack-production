@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Instant Search: scope the search suggestions dropdown to the overlay box input, stopping it from leaking onto the WP admin-bar search and other native search inputs.
 - Search Blocks: hide the Load More button while the "Loading…" indicator is showing, so visitors don't see both stacked together during a load-more fetch.
+- Search Blocks: Overlay shell honors theme color tokens — card surface, ink, and hairlines track `--wp--preset--color--base`/`--contrast` instead of hardcoded #fff/#e0e0e0, so the modal stays readable on dark block themes.
 - Search blocks: render the active theme's header/footer template parts on the search page instead of the hardcoded 'header'/'footer' slugs (fixes blank chrome on themes like Career Development that ship variant-only part files).
 - Search Blocks: the Search Input suggestions panel inside the blocks-powered Overlay now renders cleanly on top of the results + filters area instead of mixing with them — opaque surface, full-width coverage, and a higher stacking order than the Sort By / Filters popovers.
 - Search Blocks overlay: auto-open on initial page load when the URL contains `?s=` or `?q=`, matching the legacy instant-search overlay's deep-link behavior.
