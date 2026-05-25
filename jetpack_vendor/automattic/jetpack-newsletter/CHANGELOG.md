@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.9-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.8.9] - 2026-05-25
 ### Changed
-- Newsletter: Normalize page tabs onto shared minimal variant + jp-admin-page-tabs--minimal wrapper modifier; drop bespoke jetpack-newsletter-page__tabs-row class. Bump @wordpress/ui to 0.13.0.
-- Update package dependencies.
+- Normalize page tabs onto the shared minimal variant and `jp-admin-page-tabs--minimal` wrapper modifier. [#48964]
+- Update package dependencies. [#48405] [#49012]
 
 ### Fixed
-- Drop dead @wordpress/admin-ui build-style import that no longer exists in 2.x; bump the package's admin-ui pin to 2.1.0.
-- Fixed Settings tab toggles that controlled the wrong setting due to duplicate element IDs.
+- Drop dead `@wordpress/admin-ui` build-style import that no longer exists in 2.x. [#49007]
+- Fix Settings tab toggles that controlled the wrong setting due to duplicate element IDs. [#49102]
 
 ## [0.8.8] - 2026-05-19
 ### Changed
@@ -199,7 +196,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.8.9-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.8...v0.8.9-alpha
+[0.8.9]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.8...v0.8.9
 [0.8.8]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.7...v0.8.8
 [0.8.7]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.6...v0.8.7
 [0.8.6]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.5...v0.8.6
