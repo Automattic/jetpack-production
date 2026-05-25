@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Search Blocks: clicking a search suggestion no longer dismisses the blocks-powered Overlay.
+
 ## [7.1.0] - 2026-05-25
 ### Added
 - Experience Selector: Add a new "Overlay search" card backed by the experimental blocks-powered overlay; the legacy preact Overlay is renamed to "Overlay search (legacy)" when the new card is visible. [#48994]
