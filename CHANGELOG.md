@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.9-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 15.9-a.5 - 2026-05-25
 ### Enhancements
 - Admin Menu: Add sidebar redesign fields, group metadata, and saved layout data to the `/wpcom/v2/admin-menu` endpoint when the public `wp-admin-sidebar` plugin is loaded. [#48715]
