@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- My Jetpack: migrate link-variant Buttons in Plans section and product interstitial modal to @wordpress/ui Link.
+
 ## [5.37.3] - 2026-05-21
 ### Changed
 - Update package dependencies. [#48405]
