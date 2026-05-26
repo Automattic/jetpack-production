@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.1.1-alpha] - unreleased
+## [7.2.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- AI Agent Access: Show the opt-in toggle on public sites.
 - Search Blocks: drop the stale embedded→inline fallback for non-block themes. Embedded now stays Embedded regardless of theme; the dormant `jetpack_search_theme_supports_embedded_experience` filter is removed alongside it.
 - Search Blocks: trim verbose inline comments and promote shared patterns to AGENTS.md.
 - Update package dependencies.
@@ -1752,7 +1753,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[7.1.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v7.1.0...v7.1.1-alpha
+[7.2.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v7.1.0...v7.2.0-alpha
 [7.1.0]: https://github.com/Automattic/jetpack-search/compare/v7.0.0...v7.1.0
 [7.0.0]: https://github.com/Automattic/jetpack-search/compare/v0.60.0...v7.0.0
 [0.60.0]: https://github.com/Automattic/jetpack-search/compare/v0.59.0...v0.60.0

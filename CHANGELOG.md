@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- AI Agent Access: Register the opt-in setting for regular site owners.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Update package dependencies.
 
