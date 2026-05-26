@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: closing the blocks-powered Overlay now strips the search/filter params from the URL and reloads, matching the legacy Instant Search overlay.
 - Search Blocks: keep view-module URLs same-origin so blocks load on Multisite mapped domains, www-vs-non-www mismatches, and CDN setups without CORS headers.
 - Search Blocks: register singleton template CPTs synchronously when init() is invoked from inside an init action, so downstream consumers hooking Search_Blocks::init() onto init don't drop the registration.
+- Search Blocks: route the Restore Default action through jetpack/v4 so it works on WordPress.com Simple sites.
 - Search Blocks: surface the "No filters available" empty state in the embedded and overlay templates by wrapping their sidebar filters in the jetpack-search/filters block.
 
 ## [7.1.0] - 2026-05-25
