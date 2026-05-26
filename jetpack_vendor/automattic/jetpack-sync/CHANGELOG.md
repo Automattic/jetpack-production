@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.39.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add options from the Products WooCommerce settings pages to sync whitelist, as part of activity log improvements.
+
 ## [4.38.4] - 2026-05-25
 ### Fixed
 - Options: Include late sync whitelist entries in cached option modules. [#49076]
@@ -1758,6 +1765,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[4.39.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.38.4...v4.39.0-alpha
 [4.38.4]: https://github.com/Automattic/jetpack-sync/compare/v4.38.3...v4.38.4
 [4.38.3]: https://github.com/Automattic/jetpack-sync/compare/v4.38.2...v4.38.3
 [4.38.2]: https://github.com/Automattic/jetpack-sync/compare/v4.38.1...v4.38.2
