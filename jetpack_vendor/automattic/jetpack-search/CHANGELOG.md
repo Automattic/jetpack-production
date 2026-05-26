@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: blocks-powered Overlay card now widens on viewports ≥992px, matching the legacy Instant Search overlay's wide-screen behavior.
 - Search Blocks: blocks-powered Overlay shell now also honors the legacy --background / --foreground theme color tokens, restoring legibility on themes (e.g. Kaze) that don't define --base / --contrast.
 - Search Blocks: clicking a search suggestion no longer dismisses the blocks-powered Overlay.
+- Search Blocks: closing the blocks-powered Overlay now strips the search/filter params from the URL and reloads, matching the legacy Instant Search overlay.
 - Search Blocks: keep view-module URLs same-origin so blocks load on Multisite mapped domains, www-vs-non-www mismatches, and CDN setups without CORS headers.
 - Search Blocks: register singleton template CPTs synchronously when init() is invoked from inside an init action, so downstream consumers hooking Search_Blocks::init() onto init don't drop the registration.
 
