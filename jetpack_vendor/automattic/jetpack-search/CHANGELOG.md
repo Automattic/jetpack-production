@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: blocks-powered Overlay shell now also honors the legacy --background / --foreground theme color tokens, restoring legibility on themes (e.g. Kaze) that don't define --base / --contrast.
 - Search Blocks: clicking a search suggestion no longer dismisses the blocks-powered Overlay.
 - Search Blocks: keep view-module URLs same-origin so blocks load on Multisite mapped domains, www-vs-non-www mismatches, and CDN setups without CORS headers.
+- Search Blocks: register singleton template CPTs synchronously when init() is invoked from inside an init action, so downstream consumers hooking Search_Blocks::init() onto init don't drop the registration.
 
 ## [7.1.0] - 2026-05-25
 ### Added
