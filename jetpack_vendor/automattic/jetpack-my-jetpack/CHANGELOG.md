@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: migrate link-variant Buttons in Plans section and product interstitial modal to @wordpress/ui Link.
 - Update package dependencies.
 
+### Fixed
+- Connection: Allow admins to access the disconnect dialog without connecting their account first.
+
 ## [5.37.4] - 2026-05-25
 ### Changed
 - Internal updates.
