@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [8.4.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Users list: use dynamic connector logo and tooltip based on connected plugin families.
+
 ## [8.4.0] - 2026-05-25
 ### Added
 - Abilities: Opt `jetpack/get-connection-status` into the MCP tool surface (meta.mcp public tool). [#49113]
@@ -1852,6 +1859,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[8.4.1-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.4.0...v8.4.1-alpha
 [8.4.0]: https://github.com/Automattic/jetpack-connection/compare/v8.3.7...v8.4.0
 [8.3.7]: https://github.com/Automattic/jetpack-connection/compare/v8.3.6...v8.3.7
 [8.3.6]: https://github.com/Automattic/jetpack-connection/compare/v8.3.5...v8.3.6
