@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Search Blocks: drop the stale embedded→inline fallback for non-block themes. Embedded now stays Embedded regardless of theme; the dormant `jetpack_search_theme_supports_embedded_experience` filter is removed alongside it.
 - Search Blocks: trim verbose inline comments and promote shared patterns to AGENTS.md.
 - Update package dependencies.
 
