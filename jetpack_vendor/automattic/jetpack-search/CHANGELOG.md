@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: filters-popover panel and results-sort menu now render a solid background on themes that don't define `--wp--preset--color--base`, instead of going transparent and letting result-card content bleed through.
 - Search Blocks: keep view-module URLs same-origin so blocks load on Multisite mapped domains, www-vs-non-www mismatches, and CDN setups without CORS headers.
 - Search Blocks: register singleton template CPTs synchronously when init() is invoked from inside an init action, so downstream consumers hooking Search_Blocks::init() onto init don't drop the registration.
+- Search Blocks: render the product-results body (filters-product, results-list layout=product, WC-only filters) on classic themes when "Use Jetpack Search for product search results" is enabled.
 - Search Blocks: route the Restore Default action through jetpack/v4 so it works on WordPress.com Simple sites.
 - Search Blocks: surface the "No filters available" empty state in the embedded and overlay templates by wrapping their sidebar filters in the jetpack-search/filters block.
 

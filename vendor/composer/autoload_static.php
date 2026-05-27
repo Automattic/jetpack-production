@@ -367,6 +367,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_9_a_6
         'Automattic\\Jetpack\\Search\\Overlay_Template' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/class-overlay-template.php',
         'Automattic\\Jetpack\\Search\\Package' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-search/src/class-package.php',
         'Automattic\\Jetpack\\Search\\Plan' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-search/src/class-plan.php',
+        'Automattic\\Jetpack\\Search\\Product_Search_Template' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/class-product-search-template.php',
         'Automattic\\Jetpack\\Search\\REST_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-search/src/class-rest-controller.php',
         'Automattic\\Jetpack\\Search\\Results_Sort' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/blocks/results-sort/class-results-sort.php',
         'Automattic\\Jetpack\\Search\\Search_Blocks' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/class-search-blocks.php',
