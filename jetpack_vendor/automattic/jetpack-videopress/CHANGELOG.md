@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fix the post-connection redirect so the modernized dashboard returns users to the VideoPress page instead of a 404
+
 ## [0.36.11] - 2026-05-25
 ### Changed
 - Modernized dashboard (gated behind `rsm_jetpack_ui_modernization_videopress`): Gate the dashboard behind a WordPress.com connection so the uploader is no longer exposed pre-connection. [#49063]
