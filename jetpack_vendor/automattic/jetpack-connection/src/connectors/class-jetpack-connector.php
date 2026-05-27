@@ -413,7 +413,7 @@ class Jetpack_Connector {
 	/**
 	 * Detect which plugin families are using the connection.
 	 *
-	 * @since 8.4.1-alpha
+	 * @since 8.5.0-alpha
 	 *
 	 * @return array{has_woo: bool, has_a4a: bool}
 	 */
@@ -477,7 +477,7 @@ class Jetpack_Connector {
 	 * All circles are arranged horizontally in a single row, unlike the card
 	 * logos which stack circles vertically for 3+ plugins.
 	 *
-	 * @since 8.4.1-alpha
+	 * @since 8.5.0-alpha
 	 *
 	 * @return string Logo URL.
 	 */

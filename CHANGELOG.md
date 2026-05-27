@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: fix the post-connection redirect so the modernized dashboard returns users to the VideoPress page instead of a 404
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Jetpack Connection Health tests: Migrate from Jetpack plugin to Connection package
 - Update package dependencies.
 
 ## 15.9-a.5 - 2026-05-25
