@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Agent Access: Show the opt-in toggle on public sites.
 - Search Blocks: collapse the filter sidebar at narrow widths on the `jetpack-search` and `jetpack-search-product-results` page templates, docking a `filters-popover` trigger next to Sort By. Matches the overlay's responsive behavior from SEARCH-262.
 - Search Blocks: drop the stale embedded→inline fallback for non-block themes. Embedded now stays Embedded regardless of theme; the dormant `jetpack_search_theme_supports_embedded_experience` filter is removed alongside it.
+- Search Blocks: drop the `jetpack-search/clear-filters` block from the default content of the `filters`, `filters-popover`, and `filters-product` containers, the two bundled patterns (`blog-search`, `compact-search`), and the three page templates (`jetpack-search.html`, `jetpack-search-overlay.html`, `jetpack-search-product-results.html`). The block remains registered and stays in each container's `allowedBlocks` so authors can add it manually.
 - Search Blocks: the Collapsible Filters block's trigger button now toggles the panel in the editor too, so authors can close the popover and edit surrounding template parts without it crowding the canvas.
 - Search Blocks: trim verbose inline comments and promote shared patterns to AGENTS.md.
 - Search Blocks Overlay: collapse the filter sidebar below 992px and dock a `filters-popover` trigger next to Sort By, matching the legacy Instant Search overlay UX.
