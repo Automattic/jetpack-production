@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: clicking a search suggestion no longer dismisses the blocks-powered Overlay.
 - Search Blocks: closing the blocks-powered Overlay now strips the search/filter params from the URL and reloads, matching the legacy Instant Search overlay.
 - Search Blocks: deep-linking to `/?s=` (empty value) on the blocks-powered Overlay now runs the initial search instead of latching the "Searching…" skeleton on forever.
+- Search Blocks: drop nested same-namespace `data-wp-interactive` on active-filters and filter-checkbox when rendered inside the collapsible filters popover, fixing duplicate Active Filters pills and missing checkbox labels/counts on some hosts.
 - Search Blocks: filters-popover panel and results-sort menu now render a solid background on themes that don't define `--wp--preset--color--base`, instead of going transparent and letting result-card content bleed through.
 - Search Blocks: fix the visible seam in the blocks-powered Overlay's header underline at the close-button boundary, and bind the close button's hover surface to the resolved theme tokens so the X stays visible across themes.
 - Search Blocks: keep view-module URLs same-origin so blocks load on Multisite mapped domains, www-vs-non-www mismatches, and CDN setups without CORS headers.
