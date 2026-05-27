@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: sidebar left divider and search-input underline now both render as a 15%-currentColor hairline (matching the overlay header hairline) instead of a hardcoded grey or a full-strength currentColor rule, so the three "hair" surfaces read as one family across the embedded, WC product-results, and blocks-overlay experiences.
 - Search Blocks: the Collapsible Filters block's trigger button now toggles the panel in the editor too, so authors can close the popover and edit surrounding template parts without it crowding the canvas.
 - Search Blocks: trim verbose inline comments and promote shared patterns to AGENTS.md.
+- Search Blocks: unify rating-star color contract and align suggestions / price-slider surfaces with the 3-tier theme-token fallback chain.
 - Search Blocks: unify the three search-results templates' responsive layout under a shared `.jetpack-search-layout__*` class namespace, collapsing the duplicate sidebar-collapse rules from `block_template_overlay_inline_css()` and `search_page_inline_css()` into a single `search_layout_inline_css()` helper. Pure refactor — no behavior change.
 - Search Blocks Overlay: collapse the filter sidebar below 992px and dock a `filters-popover` trigger next to Sort By, matching the legacy Instant Search overlay UX.
 - Update package dependencies.
