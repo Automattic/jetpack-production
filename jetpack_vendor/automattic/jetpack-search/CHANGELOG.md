@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: closing the blocks-powered Overlay now strips the search/filter params from the URL and reloads, matching the legacy Instant Search overlay.
 - Search Blocks: deep-linking to `/?s=` (empty value) on the blocks-powered Overlay now runs the initial search instead of latching the "Searching…" skeleton on forever.
 - Search Blocks: filters-popover panel and results-sort menu now render a solid background on themes that don't define `--wp--preset--color--base`, instead of going transparent and letting result-card content bleed through.
+- Search Blocks: fix the visible seam in the blocks-powered Overlay's header underline at the close-button boundary, and bind the close button's hover surface to the resolved theme tokens so the X stays visible across themes.
 - Search Blocks: keep view-module URLs same-origin so blocks load on Multisite mapped domains, www-vs-non-www mismatches, and CDN setups without CORS headers.
 - Search Blocks: register singleton template CPTs synchronously when init() is invoked from inside an init action, so downstream consumers hooking Search_Blocks::init() onto init don't drop the registration.
 - Search Blocks: render the product-results body (filters-product, results-list layout=product, WC-only filters) on classic themes when "Use Jetpack Search for product search results" is enabled.
