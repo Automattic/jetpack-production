@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Email preview: remove the Akismet-based spam check; spam classification is now handled outside Jetpack via the jetpack_before_send_email_preview action.
+- Instagram Gallery Block: Prevent PHP warnings when cached object is malformed.
 - Jetpack Connection Health tests: Migrate from Jetpack plugin to Connection package
 - JSON API: add a REST-vs-XML-RPC body parity test helper plus an auto-discovering coverage test for REST-enabled GET endpoints, and a context=edit (jetpack#42377) lock for /posts.
 - Remove unneeded development and documentation files from the published plugin.
