@@ -32,6 +32,9 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks Overlay: separate the modal card from the dim scrim on dark themes by tinting the resolved surface and painting a token-aware hairline border, so the card visibly layers above the page behind it.
 - Update package dependencies.
 
+### Removed
+- Search Blocks: removed the standalone "Post Type Scope" (filter-post-type) block. Use the Search Input block's per-instance Post-types inspector setting, or scope via the URL with `?post_type=&lt;slug&gt;` (matches WP/WC's URL convention).
+
 ### Fixed
 - Search Blocks: blocks-powered Overlay card now widens on viewports ≥992px, matching the legacy Instant Search overlay's wide-screen behavior.
 - Search Blocks: blocks-powered Overlay shell now also honors the legacy --background / --foreground theme color tokens, restoring legibility on themes (e.g. Kaze) that don't define --base / --contrast.
