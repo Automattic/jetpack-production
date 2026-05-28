@@ -6,5 +6,11 @@
  * @package jetpack_social
  */
 
-require_once __DIR__ . '/pages/jetpack-social-dashboard/page.php';
-require_once __DIR__ . '/pages/jetpack-social-dashboard/page-wp-admin.php';
+foreach ( [
+	__DIR__ . '/pages/jetpack-social-dashboard/page.php',
+	__DIR__ . '/pages/jetpack-social-dashboard/page-wp-admin.php',
+] as $file ) {
+	if ( file_exists( $file ) ) {
+		require_once $file;
+	}
+}

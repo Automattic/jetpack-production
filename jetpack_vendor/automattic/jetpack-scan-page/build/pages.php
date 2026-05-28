@@ -6,5 +6,11 @@
  * @package jetpack_scan
  */
 
-require_once __DIR__ . '/pages/jetpack-scan/page.php';
-require_once __DIR__ . '/pages/jetpack-scan/page-wp-admin.php';
+foreach ( [
+	__DIR__ . '/pages/jetpack-scan/page.php',
+	__DIR__ . '/pages/jetpack-scan/page-wp-admin.php',
+] as $file ) {
+	if ( file_exists( $file ) ) {
+		require_once $file;
+	}
+}

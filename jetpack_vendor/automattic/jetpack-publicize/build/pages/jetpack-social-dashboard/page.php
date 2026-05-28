@@ -209,6 +209,21 @@ function jetpack_social_jetpack_social_dashboard_render_page() {
 			}
 		}
 
+		/**
+		 * Filters the boot script-module dependencies for the
+		 * jetpack-social-dashboard page.
+		 *
+		 * Surfaces extending this page can append entries to the boot
+		 * dependency list. Each entry is an array with 'import' (string
+		 * 'static' or 'dynamic') and 'id' (script-module handle) keys.
+		 *
+		 * @param array $boot_dependencies Boot dependencies for the page.
+		 */
+		$boot_dependencies = apply_filters(
+			'jetpack-social-dashboard_boot_dependencies',
+			$boot_dependencies
+		);
+
 		// Dummy script module to ensure dependencies are loaded
 		wp_register_script_module(
 			'jetpack-social-dashboard',

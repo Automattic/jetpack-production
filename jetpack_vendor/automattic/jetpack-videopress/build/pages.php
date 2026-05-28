@@ -6,5 +6,11 @@
  * @package jetpack_videopress
  */
 
-require_once __DIR__ . '/pages/jetpack-videopress-dashboard/page.php';
-require_once __DIR__ . '/pages/jetpack-videopress-dashboard/page-wp-admin.php';
+foreach ( [
+	__DIR__ . '/pages/jetpack-videopress-dashboard/page.php',
+	__DIR__ . '/pages/jetpack-videopress-dashboard/page-wp-admin.php',
+] as $file ) {
+	if ( file_exists( $file ) ) {
+		require_once $file;
+	}
+}

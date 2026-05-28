@@ -196,6 +196,21 @@ function jetpack_videopress_jetpack_videopress_dashboard_wp_admin_enqueue_script
 			}
 		}
 
+		/**
+		 * Filters the boot script-module dependencies for the
+		 * jetpack-videopress-dashboard-wp-admin page.
+		 *
+		 * Surfaces extending this page can append entries to the boot
+		 * dependency list. Each entry is an array with 'import' (string
+		 * 'static' or 'dynamic') and 'id' (script-module handle) keys.
+		 *
+		 * @param array $boot_dependencies Boot dependencies for the page.
+		 */
+		$boot_dependencies = apply_filters(
+			'jetpack-videopress-dashboard-wp-admin_boot_dependencies',
+			$boot_dependencies
+		);
+
 		// Dummy script module to ensure dependencies are loaded
 		wp_register_script_module(
 			'jetpack-videopress-dashboard-wp-admin',
