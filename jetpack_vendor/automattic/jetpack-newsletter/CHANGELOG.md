@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Newsletter dashboard now records a `jetpack_newsletter_tab_view` Tracks event on initial page load (matching its tab-switch behavior).
+
 ## [0.8.9] - 2026-05-25
 ### Changed
 - Normalize page tabs onto the shared minimal variant and `jp-admin-page-tabs--minimal` wrapper modifier. [#48964]
