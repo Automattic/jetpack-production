@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: fix the visible seam in the blocks-powered Overlay's header underline at the close-button boundary, and bind the close button's hover surface to the resolved theme tokens so the X stays visible across themes.
 - Search Blocks: keep view-module URLs same-origin so blocks load on Multisite mapped domains, www-vs-non-www mismatches, and CDN setups without CORS headers.
 - Search Blocks: register singleton template CPTs synchronously when init() is invoked from inside an init action, so downstream consumers hooking Search_Blocks::init() onto init don't drop the registration.
+- Search Blocks: render active-filter pills as theme-tracking outline chips (matching the filter chips) instead of solid buttons, and give the Load More button the overlay's ghost styling inside the blocks Overlay, so both read correctly on classic themes and against the light overlay card.
 - Search Blocks: render the product-results body (filters-product, results-list layout=product, WC-only filters) on classic themes when "Use Jetpack Search for product search results" is enabled.
 - Search Blocks: route the Restore Default action through jetpack/v4 so it works on WordPress.com Simple sites.
 - Search Blocks: surface the "No filters available" empty state in the embedded and overlay templates by wrapping their sidebar filters in the jetpack-search/filters block.
