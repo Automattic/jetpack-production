@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.3.37-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Exclude additional unneeded files from the Composer package.
+
 ## [4.3.36] - 2026-05-21
 ### Changed
 - Update package dependencies. [#48405]
@@ -1110,6 +1117,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update Jetpack to use new JITM package
 
+[4.3.37-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v4.3.36...v4.3.37-alpha
 [4.3.36]: https://github.com/Automattic/jetpack-jitm/compare/v4.3.35...v4.3.36
 [4.3.35]: https://github.com/Automattic/jetpack-jitm/compare/v4.3.34...v4.3.35
 [4.3.34]: https://github.com/Automattic/jetpack-jitm/compare/v4.3.33...v4.3.34
