@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- General: Update minimum WordPress version to 6.9.
+
 ### Enhancements
 - AI Agent Access: Register the opt-in setting for regular site owners.
 
