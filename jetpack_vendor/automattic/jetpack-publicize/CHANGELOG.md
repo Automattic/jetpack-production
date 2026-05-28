@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Settings tab on the modernized chassis with WPDS cards for the default share message, Social Notes, image generation, and link UTM parameters; gated behind the modernization flag.
+- Track Overview/Settings tab switches on the Social dashboard via a `jetpack_social_tab_view` Tracks event.
 
 ### Changed
 - Update package dependencies.
