@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: sidebar left border now joins the search-input hairline cleanly across the embedded, blocks Overlay, and product-results templates, closing the 1.5rem gap that left the corner disconnected.
 - Search Blocks: sidebar left divider and search-input underline now both render as a 15%-currentColor hairline (matching the overlay header hairline) instead of a hardcoded grey or a full-strength currentColor rule, so the three "hair" surfaces read as one family across the embedded, WC product-results, and blocks-overlay experiences.
 - Search Blocks: stretch the filters sidebar to the full row height so its hairline divider reaches the bottom of the column instead of stopping at the end of the filter list.
+- Search Blocks: style the Sort By block's select control with the theme's surface and text colors instead of a stock system widget, so it matches the other search toolbar surfaces on dark and custom-palette themes.
 - Search Blocks: the Collapsible Filters block's trigger button now toggles the panel in the editor too, so authors can close the popover and edit surrounding template parts without it crowding the canvas.
 - Search Blocks: trim verbose inline comments and promote shared patterns to AGENTS.md.
 - Search Blocks: unify rating-star color contract and align suggestions / price-slider surfaces with the 3-tier theme-token fallback chain.
