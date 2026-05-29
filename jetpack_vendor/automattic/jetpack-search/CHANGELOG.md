@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: use the price slider variation of filter-wc-price in the product-results template so visitors get a draggable range with paired inputs instead of two flat number inputs.
 - Search Blocks: when the overlay opens or a search page renders with an existing query, focus the search input and place the caret at the end of that query so visitors can keep typing to refine without re-positioning the cursor.
 - Search Blocks Overlay: collapse the filter sidebar below 992px and dock a `filters-popover` trigger next to Sort By, matching the legacy Instant Search overlay UX.
+- Search Blocks Overlay: derive the card elevation shadow from the theme ink so it lifts off the scrim on dark themes instead of melting into the page.
 - Search Blocks Overlay: separate the modal card from the dim scrim on dark themes by tinting the resolved surface and painting a token-aware hairline border, so the card visibly layers above the page behind it.
 - Update package dependencies.
 
