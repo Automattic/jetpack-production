@@ -59,6 +59,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: render active-filter pills as theme-tracking outline chips (matching the filter chips) instead of solid buttons, and give the Load More button the overlay's ghost styling inside the blocks Overlay, so both read correctly on classic themes and against the light overlay card.
 - Search Blocks: render the product-results body (filters-product, results-list layout=product, WC-only filters) on classic themes when "Use Jetpack Search for product search results" is enabled.
 - Search Blocks: route the Restore Default action through jetpack/v4 so it works on WordPress.com Simple sites.
+- Search Blocks: show the loading skeleton during the initial client-side search, not just the pre-hydration window, so the results and filters no longer flash empty while the first query loads.
 - Search Blocks: surface the "No filters available" empty state in the embedded and overlay templates by wrapping their sidebar filters in the jetpack-search/filters block.
 - Search Blocks Overlay: restore header hairline + button-hover affordances on themes without --wp--preset--color--base / --contrast tokens (fieldguide and other legacy themes).
 
