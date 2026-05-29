@@ -284,6 +284,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_9_a_6
         'Automattic\\Jetpack\\Paypal_Payments\\Widgets\\Simple_Payments_Widget' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/widget/class-simple-payments-widget.php',
         'Automattic\\Jetpack\\Plans' => __DIR__ . '/..' . '/automattic/jetpack-plans/src/class-plans.php',
         'Automattic\\Jetpack\\Plugin\\Abilities\\Modules_Abilities' => __DIR__ . '/../..' . '/src/abilities/class-modules-abilities.php',
+        'Automattic\\Jetpack\\Plugin\\Abilities\\Monitor_Abilities' => __DIR__ . '/../..' . '/src/abilities/class-monitor-abilities.php',
         'Automattic\\Jetpack\\Plugin\\Deprecate' => __DIR__ . '/../..' . '/src/class-deprecate.php',
         'Automattic\\Jetpack\\Plugin\\Jetpack_Script_Data' => __DIR__ . '/../..' . '/src/class-jetpack-script-data.php',
         'Automattic\\Jetpack\\Plugin\\Tracking' => __DIR__ . '/../..' . '/src/class-tracking.php',

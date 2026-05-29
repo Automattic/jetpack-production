@@ -260,6 +260,7 @@ return array(
     'Automattic\\Jetpack\\Paypal_Payments\\Widgets\\Simple_Payments_Widget' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/widget/class-simple-payments-widget.php',
     'Automattic\\Jetpack\\Plans' => $vendorDir . '/automattic/jetpack-plans/src/class-plans.php',
     'Automattic\\Jetpack\\Plugin\\Abilities\\Modules_Abilities' => $baseDir . '/src/abilities/class-modules-abilities.php',
+    'Automattic\\Jetpack\\Plugin\\Abilities\\Monitor_Abilities' => $baseDir . '/src/abilities/class-monitor-abilities.php',
     'Automattic\\Jetpack\\Plugin\\Deprecate' => $baseDir . '/src/class-deprecate.php',
     'Automattic\\Jetpack\\Plugin\\Jetpack_Script_Data' => $baseDir . '/src/class-jetpack-script-data.php',
     'Automattic\\Jetpack\\Plugin\\Tracking' => $baseDir . '/src/class-tracking.php',

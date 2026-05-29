@@ -1034,6 +1034,10 @@ return array(
 		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/abilities/class-modules-abilities.php'
 	),
+	'Automattic\\Jetpack\\Plugin\\Abilities\\Monitor_Abilities' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/abilities/class-monitor-abilities.php'
+	),
 	'Automattic\\Jetpack\\Plugin\\Deprecate' => array(
 		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/class-deprecate.php'

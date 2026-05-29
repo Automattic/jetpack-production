@@ -10,7 +10,10 @@ This is an alpha version! The changes listed here are not final.
 - General: Update minimum WordPress version to 6.9.
 
 ### Enhancements
+- Abilities API: register jetpack-monitor/get-monitor-status and jetpack-monitor/set-notifications for WP 6.9+.
 - AI Agent Access: Register the opt-in setting for regular site owners.
+- Monitor abilities: register under the WordPress core site ability category instead of a plugin-scoped jetpack-monitor category
+- Monitor abilities: return WP_Error with steering message when not connected or service unreachable
 
 ### Bug fixes
 - VideoPress: fix the post-connection redirect so the modernized dashboard returns users to the VideoPress page instead of a 404
