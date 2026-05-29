@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Track Overview/Settings tab switches on the Social dashboard via a `jetpack_social_tab_view` Tracks event.
 
 ### Changed
+- Social: render connection and pricing gating inside the modernized dashboard (behind the rsm_jetpack_ui_modernization_social flag), so it no longer falls back to the legacy UI.
 - Update package dependencies.
 
 ## [0.81.1] - 2026-05-25
