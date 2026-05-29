@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Instagram Gallery Block: Prevent PHP warnings when cached object is malformed.
 - Jetpack Connection Health tests: Migrate from Jetpack plugin to Connection package
 - JSON API: add a REST-vs-XML-RPC body parity test helper plus an auto-discovering coverage test for REST-enabled GET endpoints, and a context=edit (jetpack#42377) lock for /posts.
+- JSON API: add unit tests for the REST-live /sites/%s/users endpoint, covering callback() shape, filtering/pagination, authorization, and REST-vs-XML-RPC param parity.
 - Remove unneeded development and documentation files from the published plugin.
 - Update package dependencies.
 
