@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Social: render connection and pricing gating inside the modernized dashboard (behind the rsm_jetpack_ui_modernization_social flag), so it no longer falls back to the legacy UI.
 - Update package dependencies.
 
+### Fixed
+- Social: surface an error notice when saving dashboard settings fails, and show the "first year" caveat on the upgrade screen's intro-offer price.
+
 ## [0.81.1] - 2026-05-25
 ### Changed
 - Replace internal `ContextualUpgradeTrigger` upgrade prompts with `@wordpress/ui` `Notice` composition. [#48909]
