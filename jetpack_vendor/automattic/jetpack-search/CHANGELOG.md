@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Search Blocks: add a Search Layout wrapper block with a Width control and theme-independent spacing/border/dimension controls for the embedded Search template.
 - Search Blocks: add a Width control (px / %) to the Search Input block inspector, matching `core/search`.
 
 ### Changed
