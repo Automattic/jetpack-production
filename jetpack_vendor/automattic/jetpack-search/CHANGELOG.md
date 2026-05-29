@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Removed
 - Search Blocks: removed the standalone "Post Type Scope" (filter-post-type) block. Use the Search Input block's per-instance Post-types inspector setting, or scope via the URL with `?post_type=&lt;slug&gt;` (matches WP/WC's URL convention).
+- Search Blocks: remove the automatic switch to the Product layout for product-scoped searches, along with the per-block "Auto-switch to Product view" toggle. The Results List now always renders the author-selected format; the Product layout stays available as a manual choice.
 
 ### Fixed
 - Search Blocks: blocks-powered Overlay card now widens on viewports ≥992px, matching the legacy Instant Search overlay's wide-screen behavior.
