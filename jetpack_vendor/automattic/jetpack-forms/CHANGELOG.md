@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Dashboard: Align the header logo with the page title, pin the footer to the bottom of the viewport, and keep the tabs and search controls on a single row on desktop.
+
 ## [7.21.3] - 2026-05-25
 ### Added
 - Abilities: Opt all 8 Forms abilities into the MCP tool surface (meta.mcp public tool). [#49113]
