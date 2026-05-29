@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Connection: Allow admins to access the disconnect dialog without connecting their account first.
 - My Jetpack: render the Overview and Help footers full-width and remove the gray gap below them.
+- My Jetpack: use @wordpress/ui Link and Text components in the Help tab footer for consistent typography.
 
 ## [5.37.4] - 2026-05-25
 ### Changed
