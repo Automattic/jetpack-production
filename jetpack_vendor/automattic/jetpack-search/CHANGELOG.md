@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - AI Agent Access: Show the opt-in toggle on public sites.
+- General: exclude the search-blocks AGENTS.md and CLAUDE.md contributor docs from the production build so they don't ship with the mirrored package.
 - Search Blocks: collapse the filter sidebar at narrow widths on the `jetpack-search` and `jetpack-search-product-results` page templates, docking a `filters-popover` trigger next to Sort By. Matches the overlay's responsive behavior from SEARCH-262.
 - Search Blocks: default the checkbox-filter Custom Taxonomy label to the taxonomy's display name instead of leaving it empty.
 - Search Blocks: drive the sidebar/popover responsive flip from a container query against the columns row; the existing @media (min-width: 992px) rules are kept as a fallback for browsers without container-query support.
