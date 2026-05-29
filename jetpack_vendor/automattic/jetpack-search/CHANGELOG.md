@@ -50,6 +50,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: drop nested same-namespace `data-wp-interactive` on active-filters and filter-checkbox when rendered inside the collapsible filters popover, fixing duplicate Active Filters pills and missing checkbox labels/counts on some hosts.
 - Search Blocks: filters-popover panel and results-sort menu now render a solid background on themes that don't define `--wp--preset--color--base`, instead of going transparent and letting result-card content bleed through.
 - Search Blocks: fix the visible seam in the blocks-powered Overlay's header underline at the close-button boundary, and bind the close button's hover surface to the resolved theme tokens so the X stays visible across themes.
+- Search Blocks: give active-filter pills a theme-tracking keyboard focus ring, matching the checkbox filter chips.
 - Search Blocks: keep view-module URLs same-origin so blocks load on Multisite mapped domains, www-vs-non-www mismatches, and CDN setups without CORS headers.
 - Search Blocks: register singleton template CPTs synchronously when init() is invoked from inside an init action, so downstream consumers hooking Search_Blocks::init() onto init don't drop the registration.
 - Search Blocks: render active-filter pills as theme-tracking outline chips (matching the filter chips) instead of solid buttons, and give the Load More button the overlay's ghost styling inside the blocks Overlay, so both read correctly on classic themes and against the light overlay card.
