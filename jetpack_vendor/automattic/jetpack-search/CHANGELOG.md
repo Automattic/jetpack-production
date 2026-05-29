@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Search Blocks: add a Width control (px / %) to the Search Input block inspector, matching `core/search`.
 - Search Blocks: fire the TrainTracks render/interact analytics events from the blocks search path (embedded and overlay), matching Instant Search, so result impressions and clicks feed the search-relevance pipeline.
+- Search Blocks Overlay: render product results and product filters from a dedicated product overlay template on WooCommerce product searches.
 
 ### Changed
 - AI Agent Access: Show the opt-in toggle on public sites.
