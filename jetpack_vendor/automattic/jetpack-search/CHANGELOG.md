@@ -10,7 +10,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Search Blocks: add a Search Layout wrapper block with a Width control and theme-independent spacing/border/dimension controls for the embedded Search template.
 - Search Blocks: add a Width control (px / %) to the Search Input block inspector, matching `core/search`.
 - Search Blocks: fire the TrainTracks render/interact analytics events from the blocks search path (embedded and overlay), matching Instant Search, so result impressions and clicks feed the search-relevance pipeline.
 
@@ -19,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: collapse the filter sidebar at narrow widths on the `jetpack-search` and `jetpack-search-product-results` page templates, docking a `filters-popover` trigger next to Sort By. Matches the overlay's responsive behavior from SEARCH-262.
 - Search Blocks: default the checkbox-filter Custom Taxonomy label to the taxonomy's display name instead of leaving it empty.
 - Search Blocks: drive the sidebar/popover responsive flip from a container query against the columns row; the existing @media (min-width: 992px) rules are kept as a fallback for browsers without container-query support.
+- Search Blocks: drop the dedicated Search Layout wrapper block; the embedded Search templates use a stock core/group again, whose constrained-layout Width control covers the region-width need.
 - Search Blocks: drop the filters-popover responsive display mode; the block is always a popover.
 - Search Blocks: drop the stale embedded→inline fallback for non-block themes. Embedded now stays Embedded regardless of theme; the dormant `jetpack_search_theme_supports_embedded_experience` filter is removed alongside it.
 - Search Blocks: drop the `jetpack-search/clear-filters` block from the default content of the `filters`, `filters-popover`, and `filters-product` containers, the two bundled patterns (`blog-search`, `compact-search`), and the three page templates (`jetpack-search.html`, `jetpack-search-overlay.html`, `jetpack-search-product-results.html`). The block remains registered and stays in each container's `allowedBlocks` so authors can add it manually.
