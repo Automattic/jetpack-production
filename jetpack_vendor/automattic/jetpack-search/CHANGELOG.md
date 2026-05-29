@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Search Blocks: stretch the filters sidebar to the full row height so its hairline divider reaches the bottom of the column instead of stopping at the end of the filter list.
 - Search Blocks: style the Sort By block's select control with the theme's surface and text colors instead of a stock system widget, so it matches the other search toolbar surfaces on dark and custom-palette themes.
 - Search Blocks: the Collapsible Filters block's trigger button now toggles the panel in the editor too, so authors can close the popover and edit surrounding template parts without it crowding the canvas.
+- Search Blocks: the product-search edit link now follows the active experience — "Edit the product Search overlay" for Overlay (blocks), "Edit the product search template" otherwise — and pairs with a Restore default that acts on the matching template. The product-search toggle and the Embedded experience are now marked Beta.
 - Search Blocks: trim verbose inline comments and promote shared patterns to AGENTS.md.
 - Search Blocks: unify rating-star color contract and align suggestions / price-slider surfaces with the 3-tier theme-token fallback chain.
 - Search Blocks: unify the three search-results templates' responsive layout under a shared `.jetpack-search-layout__*` class namespace, collapsing the duplicate sidebar-collapse rules from `block_template_overlay_inline_css()` and `search_page_inline_css()` into a single `search_layout_inline_css()` helper. Pure refactor — no behavior change.
