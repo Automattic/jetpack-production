@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Search Blocks: add a Search Layout wrapper block with a Width control and theme-independent spacing/border/dimension controls for the embedded Search template.
 - Search Blocks: add a Width control (px / %) to the Search Input block inspector, matching `core/search`.
+- Search Blocks: fire the TrainTracks render/interact analytics events from the blocks search path (embedded and overlay), matching Instant Search, so result impressions and clicks feed the search-relevance pipeline.
 
 ### Changed
 - AI Agent Access: Show the opt-in toggle on public sites.
