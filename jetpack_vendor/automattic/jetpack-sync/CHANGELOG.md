@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add options from the Products WooCommerce settings pages to sync whitelist, as part of activity log improvements.
 
+### Fixed
+- Sync: Fix PHP warnings from undefined array keys, null property access, and deprecated null arguments across multiple sync modules.
+
 ## [4.38.4] - 2026-05-25
 ### Fixed
 - Options: Include late sync whitelist entries in cached option modules. [#49076]
