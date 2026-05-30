@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.28.6-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- BFP: Prevent PHP warning when username is invalid.
+
 ## [0.28.5] - 2026-05-25
 ### Fixed
 - Phan: Address `PhanPluginDuplicateConditionalNullCoalescing` violations. [#48887]
@@ -541,6 +548,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
+[0.28.6-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.28.5...v0.28.6-alpha
 [0.28.5]: https://github.com/Automattic/jetpack-waf/compare/v0.28.4...v0.28.5
 [0.28.4]: https://github.com/Automattic/jetpack-waf/compare/v0.28.3...v0.28.4
 [0.28.3]: https://github.com/Automattic/jetpack-waf/compare/v0.28.2...v0.28.3
