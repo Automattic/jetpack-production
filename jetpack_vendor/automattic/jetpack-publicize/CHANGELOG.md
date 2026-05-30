@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Publicize: Avoid flagging a non-post for publicize
 - Social: surface an error notice when saving dashboard settings fails, and show the "first year" caveat on the upgrade screen's intro-offer price.
 
 ## [0.81.1] - 2026-05-25
