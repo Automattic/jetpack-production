@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove unneeded development and documentation files from the published plugin.
 - Story block: Prevent PHP warning when handling an invalid media type.
 - Update package dependencies.
+- Widgets: Prevent a PHP error when Display Posts data is malformed.
 
 ## 15.9-a.5 - 2026-05-25
 ### Enhancements
