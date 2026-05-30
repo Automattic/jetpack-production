@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Pinterest block: Prevent PHP warning when block attributes are malformed.
 - Reader Chat: skip asset-cache unit tests when SCRIPT_DEBUG is enabled
 - Remove unneeded development and documentation files from the published plugin.
+- Story block: Prevent PHP warning when handling an invalid media type.
 - Update package dependencies.
 
 ## 15.9-a.5 - 2026-05-25
