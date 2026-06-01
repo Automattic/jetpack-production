@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 15.9-a.8 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 15.9-a.7 - 2026-06-01
 ### Major Enhancements
 - General: Update minimum WordPress version to 6.9. [#49021]
