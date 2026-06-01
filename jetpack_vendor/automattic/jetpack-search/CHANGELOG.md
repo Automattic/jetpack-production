@@ -5,70 +5,60 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.2.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [7.2.0] - 2026-06-01
 ### Added
-- Search Blocks: add a Width control (px / %) to the Search Input block inspector, matching `core/search`.
-- Search Blocks: add a WooCommerce Product Search Page pattern — a full-page product search layout with sidebar product filters and a product result grid.
-- Search Blocks: fire the TrainTracks render/interact analytics events from the blocks search path (embedded and overlay), matching Instant Search, so result impressions and clicks feed the search-relevance pipeline.
-- Search Blocks Overlay: render product results and product filters from a dedicated product overlay template on WooCommerce product searches.
+- Search Blocks: Add a Width control (px / %) to the Search Input Block inspector. [#49210]
+- Search Blocks: Add a WooCommerce Product Search Page pattern. [#49270]
+- Search Blocks: Fire the TrainTracks render/interact analytics events from the blocks search path (embedded and overlay). [#49253]
+- Search Blocks: Render product results and filters from a dedicated product overlay template on WooCommerce product searches. [#49262]
 
 ### Changed
-- AI Agent Access: Show the opt-in toggle on public sites.
-- General: exclude the search-blocks AGENTS.md and CLAUDE.md contributor docs from the production build so they don't ship with the mirrored package.
-- Search Blocks: collapse the filter sidebar at narrow widths on the `jetpack-search` and `jetpack-search-product-results` page templates, docking a `filters-popover` trigger next to Sort By. Matches the overlay's responsive behavior from SEARCH-262.
-- Search Blocks: default the checkbox-filter Custom Taxonomy label to the taxonomy's display name instead of leaving it empty.
-- Search Blocks: derive the Blog Search Page pattern from the shared search layout template so the inserter pattern stays in sync with the template it mirrors.
-- Search Blocks: drive the sidebar/popover responsive flip from a container query against the columns row; the existing @media (min-width: 992px) rules are kept as a fallback for browsers without container-query support.
-- Search Blocks: drop the dedicated Search Layout wrapper block; the embedded Search templates use a stock core/group again, whose constrained-layout Width control covers the region-width need.
-- Search Blocks: drop the filters-popover responsive display mode; the block is always a popover.
-- Search Blocks: drop the stale embedded→inline fallback for non-block themes. Embedded now stays Embedded regardless of theme; the dormant `jetpack_search_theme_supports_embedded_experience` filter is removed alongside it.
-- Search Blocks: drop the `jetpack-search/clear-filters` block from the default content of the `filters`, `filters-popover`, and `filters-product` containers, the two bundled patterns (`blog-search`, `compact-search`), and the three page templates (`jetpack-search.html`, `jetpack-search-overlay.html`, `jetpack-search-product-results.html`). The block remains registered and stays in each container's `allowedBlocks` so authors can add it manually.
-- Search Blocks: in the expanded Results List layout, hide the image column for results that have no image so the text expands to fill the row.
-- Search Blocks: polish the no-results, error, and filters-empty messages with a consistent muted-scale typography across the overlay; the no-results copy now adapts when filters are active.
-- Search Blocks: sample the active theme's body color and background at page load and feed them to the overlay card, filters popover, sort menu, and search-input suggestions surfaces — so themes that expose only positional palette slugs (wp.com Global Styles' --theme-N) still render Search surfaces in theme-accurate colors.
-- Search Blocks: sidebar left border now joins the search-input hairline cleanly across the embedded, blocks Overlay, and product-results templates, closing the 1.5rem gap that left the corner disconnected.
-- Search Blocks: sidebar left divider and search-input underline now both render as a 15%-currentColor hairline (matching the overlay header hairline) instead of a hardcoded grey or a full-strength currentColor rule, so the three "hair" surfaces read as one family across the embedded, WC product-results, and blocks-overlay experiences.
-- Search Blocks: stretch the filters sidebar to the full row height so its hairline divider reaches the bottom of the column instead of stopping at the end of the filter list.
-- Search Blocks: style the Sort By block's select control with the theme's surface and text colors instead of a stock system widget, so it matches the other search toolbar surfaces on dark and custom-palette themes.
-- Search Blocks: the Collapsible Filters block's trigger button now toggles the panel in the editor too, so authors can close the popover and edit surrounding template parts without it crowding the canvas.
-- Search Blocks: the product-search edit link now follows the active experience — "Edit the product Search overlay" for Overlay (blocks), "Edit the product search template" otherwise — and pairs with a Restore default that acts on the matching template. The product-search toggle and the Embedded experience are now marked Beta.
-- Search Blocks: trim verbose inline comments and promote shared patterns to AGENTS.md.
-- Search Blocks: unify rating-star color contract and align suggestions / price-slider surfaces with the 3-tier theme-token fallback chain.
-- Search Blocks: unify the three search-results templates' responsive layout under a shared `.jetpack-search-layout__*` class namespace, collapsing the duplicate sidebar-collapse rules from `block_template_overlay_inline_css()` and `search_page_inline_css()` into a single `search_layout_inline_css()` helper. Pure refactor — no behavior change.
-- Search Blocks: use the price slider variation of filter-wc-price in the product-results template so visitors get a draggable range with paired inputs instead of two flat number inputs.
-- Search Blocks: when the overlay opens or a search page renders with an existing query, focus the search input and place the caret at the end of that query so visitors can keep typing to refine without re-positioning the cursor.
-- Search Blocks Overlay: collapse the filter sidebar below 992px and dock a `filters-popover` trigger next to Sort By, matching the legacy Instant Search overlay UX.
-- Search Blocks Overlay: derive the card elevation shadow from the theme ink so it lifts off the scrim on dark themes instead of melting into the page.
-- Search Blocks Overlay: separate the modal card from the dim scrim on dark themes by tinting the resolved surface and painting a token-aware hairline border, so the card visibly layers above the page behind it.
-- Update package dependencies.
+- AI Agent Access: Show the opt-in toggle on public sites. [#49103]
+- General: Exclude the search-blocks AGENTS.md and CLAUDE.md contributor docs from the production build. [#49269]
+- Search Blocks: Collapse the filter sidebar at narrow widths on the `jetpack-search` and `jetpack-search-product-results` page templates. [#49181]
+- Search Blocks: Default the checkbox-filter Custom Taxonomy label to the taxonomy's display name. [#49187]
+- Search Blocks: Derive the Blog Search Page pattern from the shared search layout template. [#49270]
+- Search Blocks: Drive the sidebar/popover responsive flip from a container query against the columns row. [#49227]
+- Search Blocks: Drop the dedicated Search Layout wrapper block. [#49261]
+- Search Blocks: Drop the filters-popover responsive display mode. [#49252]
+- Search Blocks: Drop the stale embedded→inline fallback for non-block themes. [#49142]
+- Search Blocks: Drop the `jetpack-search/clear-filters` block from the default content of the `filters`, `filters-popover`, and `filters-product` containers, the two bundled patterns (`blog-search`, `compact-search`), and the three page templates (`jetpack-search.html`, `jetpack-search-overlay.html`, `jetpack-search-product-results.html`). [#49182]
+- Search Blocks: Hide the image column in the expanded Results List layout for results that have no image. [#49225]
+- Search Blocks: Polish the no-results, error, and filters-empty messages with a consistent muted-scale typography across the overlay. [#49213]
+- Search Blocks: Sample the active theme's body color and background at page load and feed them to the overlay card, filters popover, sort menu, and search-input suggestions surfaces. [#49212]
+- Search Blocks: Stretch the filters sidebar to the full row height. [#49254]
+- Search Blocks: Unify rating-star color contract and align suggestions / price-slider surfaces with the 3-tier theme-token fallback chain. [#49208]
+- Search Blocks: Use the price slider variation of filter-wc-price in the product-results template. [#49217]
+- Search Blocks: Focus the search input and place the caret at the end on search page render with existing query. [#49215]
+- Search Blocks: Collapse the Overlay filter sidebar below 992px and dock a filters-popover trigger next to Sort By. [#49177]
+- Search Blocks: Derive the Overlay card elevation shadow from the theme ink so it lifts off the scrim on dark themes. [#49265]
+- Search Blocks: Separate the Overlay modal card from the dim scrim on dark themes. [#49207]
+- Update package dependencies. [#48404]
 
 ### Removed
-- Search Blocks: removed the standalone "Post Type Scope" (filter-post-type) block. Use the Search Input block's per-instance Post-types inspector setting, or scope via the URL with `?post_type=&lt;slug&gt;` (matches WP/WC's URL convention).
-- Search Blocks: remove the automatic switch to the Product layout for product-scoped searches, along with the per-block "Auto-switch to Product view" toggle. The Results List now always renders the author-selected format; the Product layout stays available as a manual choice.
+- Search Blocks: Remove the standalone "Post Type Scope" (filter-post-type) block. [#49209]
+- Search Blocks: Remove the automatic switch to the Product layout for product-scoped searches, along with the per-block "Auto-switch to Product view" toggle. [#49257]
 
 ### Fixed
-- Search Blocks: blocks-powered Overlay card now widens on viewports ≥992px, matching the legacy Instant Search overlay's wide-screen behavior.
-- Search Blocks: blocks-powered Overlay shell now also honors the legacy --background / --foreground theme color tokens, restoring legibility on themes (e.g. Kaze) that don't define --base / --contrast.
-- Search Blocks: clicking a search suggestion no longer dismisses the blocks-powered Overlay.
-- Search Blocks: closing the blocks-powered Overlay now strips the search/filter params from the URL and reloads, matching the legacy Instant Search overlay.
-- Search Blocks: deep-linking to `/?s=` (empty value) on the blocks-powered Overlay now runs the initial search instead of latching the "Searching…" skeleton on forever.
-- Search Blocks: drop nested same-namespace `data-wp-interactive` on active-filters and filter-checkbox when rendered inside the collapsible filters popover, fixing duplicate Active Filters pills and missing checkbox labels/counts on some hosts.
-- Search Blocks: filters-popover panel and results-sort menu now render a solid background on themes that don't define `--wp--preset--color--base`, instead of going transparent and letting result-card content bleed through.
-- Search Blocks: fix results-header text collapsing into vertical columns when the filters popover is open.
-- Search Blocks: fix the visible seam in the blocks-powered Overlay's header underline at the close-button boundary, and bind the close button's hover surface to the resolved theme tokens so the X stays visible across themes.
-- Search Blocks: give active-filter pills a theme-tracking keyboard focus ring, matching the checkbox filter chips.
-- Search Blocks: keep view-module URLs same-origin so blocks load on Multisite mapped domains, www-vs-non-www mismatches, and CDN setups without CORS headers.
-- Search Blocks: register singleton template CPTs synchronously when init() is invoked from inside an init action, so downstream consumers hooking Search_Blocks::init() onto init don't drop the registration.
-- Search Blocks: render active-filter pills as theme-tracking outline chips (matching the filter chips) instead of solid buttons, and give the Load More button the overlay's ghost styling inside the blocks Overlay, so both read correctly on classic themes and against the light overlay card.
-- Search Blocks: render the product-results body (filters-product, results-list layout=product, WC-only filters) on classic themes when "Use Jetpack Search for product search results" is enabled.
-- Search Blocks: route the Restore Default action through jetpack/v4 so it works on WordPress.com Simple sites.
-- Search Blocks: show the loading skeleton during the initial client-side search, not just the pre-hydration window, so the results and filters no longer flash empty while the first query loads.
-- Search Blocks: strip the scalar `post_type` alias when closing the blocks Overlay so a product-scoped search resets the URL cleanly instead of leaving `?post_type=…` behind.
-- Search Blocks: surface the "No filters available" empty state in the embedded and overlay templates by wrapping their sidebar filters in the jetpack-search/filters block.
-- Search Blocks Overlay: restore header hairline + button-hover affordances on themes without --wp--preset--color--base / --contrast tokens (fieldguide and other legacy themes).
+- Search Blocks: Make blocks-powered Overlay card wide on viewports ≥992px. [#49143]
+- Search Blocks: Honor the legacy --background / --foreground theme color tokens in blocks-powered Overlay shell. [#49138]
+- Search Blocks: Do not dismiss the blocks-powered Overlay on clicking a search suggestion. [#49137]
+- Search Blocks: Strip the search/filter params from the URL and reload when closing the blocks-powered Overlay. [#49145]
+- Search Blocks: Run the initial search when deep-linking to `/?s=` (empty value) on the blocks-powered Overlay instead of latching the "Searching…" skeleton on forever. [#49151]
+- Search Blocks: Drop nested same-namespace `data-wp-interactive` on active-filters and filter-checkbox when rendered inside the collapsible filters popover. [#49185]
+- Search Blocks: Render a solid background in filters-popover panel and results-sort menu on themes that don't define `--wp--preset--color--base`. [#49180]
+- Search Blocks: Fix results-header text collapsing into vertical columns when the filters popover is open. [#49287]
+- Search Blocks: Fix the visible seam in the blocks-powered Overlay's header underline at the close-button boundary, and bind the close button's hover surface to the resolved theme tokens. [#49179]
+- Search Blocks: Give active-filter pills a theme-tracking keyboard focus ring. [#49259]
+- Search Blocks: Keep view-module URLs same-origin so blocks load on Multisite mapped domains, www-vs-non-www mismatches, and CDN setups without CORS headers. [#49141]
+- Search Blocks: Register singleton template CPTs synchronously when init() is invoked from inside an init action. [#49144]
+- Search Blocks: Render active-filter pills as theme-tracking outline chips (matching the filter chips) instead of solid buttons. [#49255]
+- Search Blocks: Render the product-results body (filters-product, results-list layout=product, WC-only filters) on classic themes when "Use Jetpack Search for product search results" is enabled. [#49176]
+- Search Blocks: Route the Restore Default action through jetpack/v4. [#49150]
+- Search Blocks: Show the loading skeleton during the initial client-side search. [#49264]
+- Search Blocks: Strip the scalar `post_type` alias when closing the blocks Overlay. [#49275]
+- Search Blocks: Surface the "No filters available" empty state in the embedded and overlay templates. [#49146]
+- Search Blocks: Restore header hairline + button-hover affordances on themes without --wp--preset--color--base / --contrast tokens in Overlay. [#49184]
 
 ## [7.1.0] - 2026-05-25
 ### Added
@@ -1795,7 +1785,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[7.2.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v7.1.0...v7.2.0-alpha
+[7.2.0]: https://github.com/Automattic/jetpack-search/compare/v7.1.0...v7.2.0
 [7.1.0]: https://github.com/Automattic/jetpack-search/compare/v7.0.0...v7.1.0
 [7.0.0]: https://github.com/Automattic/jetpack-search/compare/v0.60.0...v7.0.0
 [0.60.0]: https://github.com/Automattic/jetpack-search/compare/v0.59.0...v0.60.0
