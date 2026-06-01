@@ -1095,7 +1095,7 @@ class REST_Connector {
 	/**
 	 * Permission check for the connection/test endpoint.
 	 *
-	 * @since 8.5.0-alpha
+	 * @since 8.5.0
 	 *
 	 * @return true|WP_Error
 	 */
@@ -1114,7 +1114,7 @@ class REST_Connector {
 	/**
 	 * Run all connection health tests and return the result.
 	 *
-	 * @since 8.5.0-alpha
+	 * @since 8.5.0
 	 *
 	 * @return WP_REST_Response|WP_Error
 	 */
@@ -1140,7 +1140,7 @@ class REST_Connector {
 	 *
 	 * Results are encrypted so only WP.com can read them.
 	 *
-	 * @since 8.5.0-alpha
+	 * @since 8.5.0
 	 *
 	 * @return WP_REST_Response
 	 */

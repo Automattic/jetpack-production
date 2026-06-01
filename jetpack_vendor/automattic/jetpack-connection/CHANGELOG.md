@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.5.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [8.5.0] - 2026-06-01
 ### Added
-- Connection: Add connection/test and connection/test-wpcom REST endpoints (migrated from Jetpack plugin).
+- Connection: Add connection/test and connection/test-wpcom REST endpoints (migrated from Jetpack plugin). [#49198]
 
 ### Changed
-- Exclude additional unneeded files from the Composer package.
-- Jetpack Connection Health tests: Migrate from Jetpack plugin to Connection package
-- Users list: use dynamic connector logo and tooltip based on connected plugin families.
+- Exclude additional unneeded files from the Composer package. [#49014]
+- Jetpack Connection Health tests: Migrate from Jetpack plugin to Connection package. [#47837]
+- Users list: use dynamic connector logo and tooltip based on connected plugin families. [#49093]
 
 ## [8.4.0] - 2026-05-25
 ### Added
@@ -1864,7 +1861,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[8.5.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.4.0...v8.5.0-alpha
+[8.5.0]: https://github.com/Automattic/jetpack-connection/compare/v8.4.0...v8.5.0
 [8.4.0]: https://github.com/Automattic/jetpack-connection/compare/v8.3.7...v8.4.0
 [8.3.7]: https://github.com/Automattic/jetpack-connection/compare/v8.3.6...v8.3.7
 [8.3.6]: https://github.com/Automattic/jetpack-connection/compare/v8.3.5...v8.3.6
