@@ -27,7 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove dead legacy grunion assets: `grunion-admin.js`, `grunion-frontend.js`, `grunion-admin.css`, and 13 unused images. [#47609]
 
 ### Fixed
-- Fix a JavaScript error in the editor. [#48979]
+- Address `Uncaught TypeError` message in the editor. [#48979]
 - Fix unread submissions counter badge colors in the admin sidebar. [#48921]
 - Phan: Address `PhanPluginDuplicateConditionalNullCoalescing` violations. [#48887]
 
