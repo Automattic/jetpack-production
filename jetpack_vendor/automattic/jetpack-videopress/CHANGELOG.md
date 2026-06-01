@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.36.12-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.36.12] - 2026-06-01
 ### Changed
-- Exclude additional unneeded files from the Composer package.
-- Internal: Prepare types for React 19.
-- Update package dependencies.
+- Exclude additional unneeded files from the Composer package. [#49014]
+- Internal: Prepare types for React 19. [#49204]
+- Update package dependencies. [#48404] [#49152]
 
 ### Fixed
-- Fix the post-connection redirect so the modernized dashboard returns users to the VideoPress page instead of a 404
+- Fix the post-connection redirect so the modernized dashboard returns users to the VideoPress page instead of a 404. [#49168]
 
 ## [0.36.11] - 2026-05-25
 ### Changed
@@ -2000,7 +1997,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.36.12-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.11...v0.36.12-alpha
+[0.36.12]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.11...v0.36.12
 [0.36.11]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.10...v0.36.11
 [0.36.10]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.9...v0.36.10
 [0.36.9]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.8...v0.36.9
