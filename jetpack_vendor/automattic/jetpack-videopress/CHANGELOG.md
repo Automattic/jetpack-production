@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.36.13-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update dependencies.
+
 ## [0.36.12] - 2026-06-01
 ### Changed
 - Exclude additional unneeded files from the Composer package. [#49014]
@@ -1997,6 +2004,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created empty package [#24952]
 
+[0.36.13-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.12...v0.36.13-alpha
 [0.36.12]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.11...v0.36.12
 [0.36.11]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.10...v0.36.11
 [0.36.10]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.9...v0.36.10
