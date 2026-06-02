@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - JSON API: guard media metadata access to avoid PHP warnings when attachment metadata is missing or incomplete.
+- JSON API: stop emitting "Unknown user" PHP warnings from get_author() for the expected case of an unresolvable author.
 - Shortcode embeds: ensure the SoundCloud player iFrame is always correctly escaped.
 - XML-RPC: guard JSON API request parsing to avoid PHP warnings on non-scalar post bodies and failed signature verification.
 
