@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
+- JSON API: guard media metadata access to avoid PHP warnings when attachment metadata is missing or incomplete.
 - Shortcode embeds: ensure the SoundCloud player iFrame is always correctly escaped.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
