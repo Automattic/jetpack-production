@@ -339,6 +339,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ15_9_a_8
         'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\Templates' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-templates.php',
         'Automattic\\Jetpack\\Redirect' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php',
         'Automattic\\Jetpack\\Roles' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php',
+        'Automattic\\Jetpack\\SEO\\Initializer' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-initializer.php',
         'Automattic\\Jetpack\\Scan_Page\\Initial_State' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-initial-state.php',
         'Automattic\\Jetpack\\Scan_Page\\Jetpack_Scan' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-jetpack-scan.php',
         'Automattic\\Jetpack\\Scan_Page\\Package_Version' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-package-version.php',

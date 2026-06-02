@@ -51,6 +51,7 @@
 		"automattic/jetpack-roles": "^3.0.11-alpha",
 		"automattic/jetpack-scan-page": "^0.1.4-alpha",
 		"automattic/jetpack-search": "^7.2.1-alpha",
+		"automattic/jetpack-seo": "^0.1.0-alpha",
 		"automattic/jetpack-stats": "^0.19.4-alpha",
 		"automattic/jetpack-stats-admin": "^0.31.5-alpha",
 		"automattic/jetpack-status": "^6.1.6-alpha",

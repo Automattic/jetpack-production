@@ -1254,6 +1254,10 @@ return array(
 		'version' => '3.0.11.0-alpha1780429966',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php'
 	),
+	'Automattic\\Jetpack\\SEO\\Initializer' => array(
+		'version' => '0.1.0.0-alpha1780431733',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-initializer.php'
+	),
 	'Automattic\\Jetpack\\Scan_Page\\Initial_State' => array(
 		'version' => '0.1.4.0-alpha1780428861',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-initial-state.php'

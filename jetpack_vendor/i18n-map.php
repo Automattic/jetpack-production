@@ -148,6 +148,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
       'ver' => '7.2.1-alpha1780429966',
     ),
+    'jetpack-seo' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-seo',
+      'ver' => '0.1.0-alpha1780431733',
+    ),
     'jetpack-stats' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-stats',
       'ver' => '0.19.4-alpha1780429966',
