@@ -524,9 +524,9 @@
             'dev_requirement' => false,
         ),
         'automattic/woocommerce-analytics' => array(
-            'pretty_version' => '0.16.4',
-            'version' => '0.16.4.0',
-            'reference' => '3108d3cabe127d4a30d213d610968067fbeb5c3f',
+            'pretty_version' => '0.16.5',
+            'version' => '0.16.5.0',
+            'reference' => '9dd2e37ae64bbccb03d52447b3ee050dd5265a4f',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/woocommerce-analytics',
             'aliases' => array(),

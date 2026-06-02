@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Shortcode embeds: ensure the SoundCloud player iFrame is always correctly escaped.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Updated WooCommerce Analytics package to version 0.16.5.
+
 ## 15.9-a.7 - 2026-06-01
 ### Major Enhancements
 - General: Update minimum WordPress version to 6.9. [#49021]
