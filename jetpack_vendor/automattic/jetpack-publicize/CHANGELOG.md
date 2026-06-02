@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Removed
+- Revert the Jetpack-side changes that re-enabled X (Twitter) sharing in Jetpack Social.
+
 ### Fixed
 - Social: refine connection card spacing and accessibility, add breathing room to the connection confirmation modal, and rename the Social Notes settings card.
 
