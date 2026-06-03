@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Fix admin page crash on video upload/delete when the free-plan upgrade nudge is shown
+
 ## [0.36.12] - 2026-06-01
 ### Changed
 - Exclude additional unneeded files from the Composer package. [#49014]

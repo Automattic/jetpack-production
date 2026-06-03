@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - JSON API: stop emitting "Unknown user" PHP warnings from get_author() for the expected case of an unresolvable author.
 - Shortcode embeds: ensure the SoundCloud player iFrame is always correctly escaped.
 - Shortcodes: fix [archiveorg] so query parameters such as playlist, autoplay, and poster produce valid Archive.org embed URLs.
+- VideoPress: fix admin page crash on video upload/delete when the free-plan upgrade nudge is shown
 - XML-RPC: guard JSON API request parsing to avoid PHP warnings on non-scalar post bodies and failed signature verification.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
