@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Add subscribers and Comp modals: restore body padding by wrapping content in Dialog.Content
+- Include the routes directory in the TypeScript config so dashboard route files type-check correctly.
 - Newsletter: don't show the WordPress.com connection prompt on Simple sites, which are already connected
 
 ## [0.8.10] - 2026-06-01

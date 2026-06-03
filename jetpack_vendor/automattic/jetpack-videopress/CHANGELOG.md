@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix admin page crash on video upload/delete when the free-plan upgrade nudge is shown
+- Fix a TypeScript error in the library route's DataViews default layouts.
 
 ## [0.36.12] - 2026-06-01
 ### Changed

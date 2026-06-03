@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Revert the Jetpack-side changes that re-enabled X (Twitter) sharing in Jetpack Social.
 
 ### Fixed
+- Include the routes directory in the TypeScript config so dashboard route files type-check correctly.
 - Social: refine connection card spacing and accessibility, add breathing room to the connection confirmation modal, and rename the Social Notes settings card.
 
 ## [0.81.2] - 2026-06-01

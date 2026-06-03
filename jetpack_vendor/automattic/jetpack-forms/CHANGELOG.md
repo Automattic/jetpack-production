@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Include the routes directory in the TypeScript config and fix type errors in the dashboard route files.
+
 ## [7.22.0] - 2026-06-01
 ### Changed
 - Update empty state to use component from @wordpress/ui. [#47908]

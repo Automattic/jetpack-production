@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Include the routes directory in the TypeScript config so dashboard route files type-check correctly.
+
 ## [4.3.1] - 2026-06-01
 ### Changed
 - Update package dependencies. [#48404] [#49152]
