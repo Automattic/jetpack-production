@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: scaffold the new jetpack-seo package and mount its admin page at admin.php?page=jetpack-seo, reachable on every site type. Initial release ships the Overview screen with a Site visibility card.
 
 ### Bug fixes
+- Image Studio: Add site context to tracking data.
 - Jetpack Network Admin: pin the Sites and Settings footers to the bottom on real multisite, and remove core admin notices on those modernized pages.
 - JSON API: guard media metadata access to avoid PHP warnings when attachment metadata is missing or incomplete.
 - JSON API: stop emitting "Unknown user" PHP warnings from get_author() for the expected case of an unresolvable author.
