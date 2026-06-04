@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Enqueue the shared WPDS design-tokens stylesheet on Jetpack admin pages so design tokens resolve at runtime on the Dashboard, Settings, and Debugger.
 - SEO: scaffold the new jetpack-seo package and mount its admin page at admin.php?page=jetpack-seo, reachable on every site type. Initial release ships the Overview screen with a Site visibility card.
 
+### Improved compatibility
+- Jetpack: resolve WPDS design tokens in the legacy settings dashboard CSS so token-based colors (e.g. Hello Dolly) use the design-system value instead of a hardcoded hex fallback.
+
 ### Bug fixes
 - Image Studio: Add site context to tracking data.
 - Jetpack Network Admin: pin the Sites and Settings footers to the bottom on real multisite, and remove core admin notices on those modernized pages.
