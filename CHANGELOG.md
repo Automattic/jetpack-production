@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - E2E tests: Improve Sync cleanup and isolation.
 - Shortcodes: Prevent PHP warning when Mailchimp embed is malformed.
 - Updated WooCommerce Analytics package to version 0.16.5.
+- Update package dependencies.
 
 ## 15.9-a.7 - 2026-06-01
 ### Major Enhancements
