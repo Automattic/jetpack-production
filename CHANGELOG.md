@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Image Studio: Add site context to tracking data.
 - Jetpack Network Admin: pin the Sites and Settings footers to the bottom on real multisite, and remove core admin notices on those modernized pages.
 - JSON API: guard media metadata access to avoid PHP warnings when attachment metadata is missing or incomplete.
+- JSON API: Honor the `fields` parameter on REST-dispatched responses so they return the same keys as the XML-RPC transport.
 - JSON API: stop emitting "Unknown user" PHP warnings from get_author() for the expected case of an unresolvable author.
 - Newsletter: Prevent a fatal error when loading wp-admin with the modernization filter unavailable.
 - Shortcode embeds: ensure the SoundCloud player iFrame is always correctly escaped.
