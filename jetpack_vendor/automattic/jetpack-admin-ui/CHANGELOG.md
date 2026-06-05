@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.9.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.9.0] - 2026-06-05
 ### Added
-- Add a shared, token-only WPDS design-tokens stylesheet and enqueue it on Jetpack admin pages so `var(--wpds-*)` values resolve at runtime.
+- Add a shared, token-only WPDS design-tokens stylesheet and enqueue it on Jetpack admin pages so `var(--wpds-*)` values resolve at runtime. [#49345]
 
 ## [0.8.9] - 2026-06-03
 ### Changed
@@ -282,7 +279,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing menu visibility issues.
 
-[0.9.0-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.8.9...0.9.0-alpha
+[0.9.0]: https://github.com/Automattic/jetpack-admin-ui/compare/0.8.9...0.9.0
 [0.8.9]: https://github.com/Automattic/jetpack-admin-ui/compare/0.8.8...0.8.9
 [0.8.8]: https://github.com/Automattic/jetpack-admin-ui/compare/0.8.7...0.8.8
 [0.8.7]: https://github.com/Automattic/jetpack-admin-ui/compare/0.8.6...0.8.7
