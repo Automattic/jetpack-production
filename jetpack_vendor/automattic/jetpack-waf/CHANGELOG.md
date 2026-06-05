@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Brute force protection: Avoid a fatal error when rendering the login recovery form while an output buffer handler is active.
+
 ## [0.28.6] - 2026-06-01
 ### Fixed
 - Brute Force Protection: Prevent PHP warning when username is invalid. [#49292]
