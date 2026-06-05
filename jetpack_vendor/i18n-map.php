@@ -16,6 +16,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
       'ver' => '0.9.0-alpha1780580341',
     ),
+    'jetpack-agents-manager' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-agents-manager',
+      'ver' => '0.3.0-alpha1780663802',
+    ),
     'jetpack-assets' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-assets',
       'ver' => '4.3.40',
@@ -102,7 +106,7 @@ return array(
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '5.37.7-alpha1780596221',
+      'ver' => '5.38.0-alpha1780663802',
     ),
     'jetpack-newsletter' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-newsletter',
