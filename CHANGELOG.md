@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Hello Dolly: retire the legacy per-page `#dolly` color rules so the normalized `.jetpack-admin-page #dolly` treatment (WPDS design token) governs consistently across admin pages.
 - Shortcodes: Prevent PHP warning when Mailchimp embed is malformed.
 - Update composer.lock files.
+- Updated package dependencies.
 - Updated WooCommerce Analytics package to version 0.16.5.
 - Update package dependencies.
 

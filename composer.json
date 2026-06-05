@@ -41,7 +41,7 @@
 		"automattic/jetpack-logo": "^3.0.9-alpha",
 		"automattic/jetpack-masterbar": "^0.27.27-alpha",
 		"automattic/jetpack-my-jetpack": "^5.38.1-alpha",
-		"automattic/jetpack-newsletter": "^0.8.11-alpha",
+		"automattic/jetpack-newsletter": "^0.9.0-alpha",
 		"automattic/jetpack-paypal-payments": "^0.7.2-alpha",
 		"automattic/jetpack-plugins-installer": "^0.5.11-alpha",
 		"automattic/jetpack-post-list": "^0.9.20-alpha",
