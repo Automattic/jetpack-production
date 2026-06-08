@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.38.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- My Jetpack: only show the Help section's Useful links (All Jetpack modules, Debug information) when the Jetpack plugin is active and the user can manage options, to avoid dead-end links for editors or inside other standalone plugins.
+
 ## [5.38.1] - 2026-06-08
 ### Changed
 - Internal updates.
@@ -2701,6 +2708,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[5.38.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.38.1...5.38.2-alpha
 [5.38.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.38.0...5.38.1
 [5.38.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.37.6...5.38.0
 [5.37.6]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.37.5...5.37.6
