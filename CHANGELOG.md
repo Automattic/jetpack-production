@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack: resolve WPDS design tokens in the legacy settings dashboard CSS so token-based colors (e.g. Hello Dolly) use the design-system value instead of a hardcoded hex fallback.
 
 ### Bug fixes
+- AI: Fix broken external links (Claude settings and agent documentation) in the MCP quick setup.
 - Carousel: stop adding EXIF image metadata to the page markup when the option to display it is disabled.
 - Image Studio: Add site context to tracking data.
 - Jetpack Network Admin: pin the Sites and Settings footers to the bottom on real multisite, and remove core admin notices on those modernized pages.
