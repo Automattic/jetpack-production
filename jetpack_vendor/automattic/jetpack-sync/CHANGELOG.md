@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.39.2-alpha] - unreleased
+## [4.40.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add options from Payments WooCommerce settings pages to sync whitelist, as part of activity log improvements.
 
 ## [4.39.1] - 2026-06-05
 ### Changed
@@ -1773,7 +1776,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.39.2-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.39.1...v4.39.2-alpha
+[4.40.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.39.1...v4.40.0-alpha
 [4.39.1]: https://github.com/Automattic/jetpack-sync/compare/v4.39.0...v4.39.1
 [4.39.0]: https://github.com/Automattic/jetpack-sync/compare/v4.38.4...v4.39.0
 [4.38.4]: https://github.com/Automattic/jetpack-sync/compare/v4.38.3...v4.38.4
