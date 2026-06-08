@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Add subscribers and Comp modals: restore body padding by wrapping content in Dialog.Content
 - Include the routes directory in the TypeScript config so dashboard route files type-check correctly.
 - Newsletter: don't show the WordPress.com connection prompt on Simple sites, which are already connected
+- Newsletter: keep the Subscribers/Settings tab bar pinned while scrolling the modernized Settings tab
 - Subscribers dashboard: fix several Comp modal issues — show the plan billing interval in the picker, correct plan selection, disable and explain (via tooltip) plans the reader already has, surface the specific already-comped error message, and fix a clipped focus ring
 - Subscribers dashboard: show the empty state when the site owner is the only subscriber, and point the empty-state copy at the subscription form documentation
 
