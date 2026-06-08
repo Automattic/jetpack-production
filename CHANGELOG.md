@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - JSON API: Honor the `fields` parameter on REST-dispatched responses so they return the same keys as the XML-RPC transport.
 - JSON API: stop emitting "Unknown user" PHP warnings from get_author() for the expected case of an unresolvable author.
 - Newsletter: Prevent a fatal error when loading wp-admin with the modernization filter unavailable.
+- Settings REST API: load the Monitor and Post by Email module classes on demand when updating their options, preventing a fatal on bulk settings updates while the module is inactive.
 - Sharing: fix the Pinterest sharing button leading to a blank Pinterest page by using Pinterest's direct link sharing endpoint.
 - Shortcode embeds: ensure the SoundCloud player iFrame is always correctly escaped.
 - Shortcodes: fix [archiveorg] so query parameters such as playlist, autoplay, and poster produce valid Archive.org embed URLs.
