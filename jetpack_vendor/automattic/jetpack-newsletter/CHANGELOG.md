@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Remove the per-page Hello Dolly rule; its content is now covered by the centralized normalize rule shipped with `@automattic/jetpack-components`'s AdminPage component.
+- Update package dependencies.
 
 ### Fixed
 - Add subscribers and Comp modals: restore body padding by wrapping content in Dialog.Content

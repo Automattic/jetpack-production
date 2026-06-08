@@ -12,3 +12,6 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a Settings tab to the SEO admin page: site visibility (search-engine indexing + XML sitemap), post title structure, front-page description, and site verification. Saves through the existing /jetpack/v4/settings and core /wp/v2/settings REST endpoints — no new package endpoint.
 - Initialize SEO package under feature flag
+
+### Changed
+- Update package dependencies.

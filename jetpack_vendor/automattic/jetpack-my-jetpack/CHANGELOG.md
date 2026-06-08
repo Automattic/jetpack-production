@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: only show the Help section's Useful links (All Jetpack modules, Debug information) when the Jetpack plugin is active and the user can manage options, to avoid dead-end links for editors or inside other standalone plugins.
+- Update package dependencies.
 
 ## [5.38.1] - 2026-06-08
 ### Changed
