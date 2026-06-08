@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.14.30-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.14.30] - 2026-06-08
 ### Changed
-- Update dependencies.
+- Update dependencies. [#49354]
 
 ## [0.14.29] - 2026-06-01
 ### Fixed
@@ -528,7 +525,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Add wordpress folder on gitignore. [#37177]
 
-[0.14.30-alpha]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.14.29...v0.14.30-alpha
+[0.14.30]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.14.29...v0.14.30
 [0.14.29]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.14.28...v0.14.29
 [0.14.28]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.14.27...v0.14.28
 [0.14.27]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.14.26...v0.14.27

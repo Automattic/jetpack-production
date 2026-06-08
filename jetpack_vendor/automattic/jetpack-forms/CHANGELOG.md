@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.22.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [7.22.1] - 2026-06-08
 ### Changed
-- Update dependencies.
-- Update package dependencies.
+- Update dependencies. [#49354]
+- Update package dependencies. [#49379]
 
 ### Fixed
-- Include the routes directory in the TypeScript config and fix type errors in the dashboard route files.
+- Include the routes directory in the TypeScript config and fix type errors in the dashboard route files. [#49368]
 
 ## [7.22.0] - 2026-06-01
 ### Changed
@@ -2523,7 +2520,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.22.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.22.0...v7.22.1-alpha
+[7.22.1]: https://github.com/automattic/jetpack-forms/compare/v7.22.0...v7.22.1
 [7.22.0]: https://github.com/automattic/jetpack-forms/compare/v7.21.3...v7.22.0
 [7.21.3]: https://github.com/automattic/jetpack-forms/compare/v7.21.2...v7.21.3
 [7.21.2]: https://github.com/automattic/jetpack-forms/compare/v7.21.1...v7.21.2
