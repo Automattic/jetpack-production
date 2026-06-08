@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add Jetpack branding to the Daily Writing Prompt dashboard widget.
 - Add the Daily Writing Prompt dashboard widget, moved here from the jetpack-mu-wpcom package.
 
 ### Changed
