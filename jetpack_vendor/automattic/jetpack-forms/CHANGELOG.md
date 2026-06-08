@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Fix preg_match TypeError when a URL field value is an array instead of a string.
 - Include the routes directory in the TypeScript config and fix type errors in the dashboard route files.
 
 ## [7.22.0] - 2026-06-01
