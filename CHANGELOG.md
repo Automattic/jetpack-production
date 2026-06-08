@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Enqueue the shared WPDS design-tokens stylesheet on Jetpack admin pages so design tokens resolve at runtime on the Dashboard, Settings, and Debugger.
 - SEO: scaffold the new jetpack-seo package and mount its admin page at admin.php?page=jetpack-seo, reachable on every site type. Initial release ships the Overview screen with a Site visibility card.
+- Subscriptions Block: customize the subscribe modal heading site-wide via a new Newsletter setting; applies to the Button only style.
 
 ### Improved compatibility
 - Jetpack: resolve WPDS design tokens in the legacy settings dashboard CSS so token-based colors (e.g. Hello Dolly) use the design-system value instead of a hardcoded hex fallback.
