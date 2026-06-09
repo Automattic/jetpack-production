@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a setting for the Subscribe modal heading shown by Subscribe blocks using the Button only style.
 
 ### Changed
+- Newsletter: label the subscription placement options with a "Homepage and posts" section header.
 - Update package dependencies.
 
 ### Fixed
