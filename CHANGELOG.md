@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 16.0-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 15.9 - 2026-06-09
 ### Enhancements
 - Abilities API: Register Shortlinks support for the WP.me Shortlinks module on WordPress 6.9+. [#48334]
