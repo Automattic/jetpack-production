@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add options from Advanced WooCommerce settings pages to sync whitelist, as part of activity log improvements.
 - Add options from Shipping WooCommerce settings pages to sync whitelist, as part of activity log improvements.
 
+### Fixed
+- Sync: Mirror cross-object post meta delete-all events.
+
 ## [4.40.0] - 2026-06-08
 ### Added
 - Add options from Payments WooCommerce settings pages to sync whitelist, as part of activity log improvements. [#49200]
