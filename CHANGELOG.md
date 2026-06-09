@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - E2E tests: Improve Sync cleanup and isolation.
 - Hello Dolly: retire the legacy per-page `#dolly` color rules so the normalized `.jetpack-admin-page #dolly` treatment (WPDS design token) governs consistently across admin pages.
+- Media Summary: allow callers to opt out of URL stripping via a new preserve_urls argument.
 - Shortcodes: Prevent PHP warning when Mailchimp embed is malformed.
 - Update composer.lock files.
 - Updated package dependencies.
