@@ -5,33 +5,40 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.9.0-alpha] - unreleased
+## [0.9.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a setting for the Subscribe modal heading shown by Subscribe blocks using the Button only style.
-- Add Jetpack branding to the Daily Writing Prompt dashboard widget.
-- Add the Daily Writing Prompt dashboard widget, moved here from the jetpack-mu-wpcom package.
 
 ### Changed
-- Remove the per-page Hello Dolly rule; its content is now covered by the centralized normalize rule shipped with `@automattic/jetpack-components`'s AdminPage component.
 - Update package dependencies.
 
 ### Fixed
-- Add subscribers and Comp modals: restore body padding by wrapping content in Dialog.Content
-- Include the routes directory in the TypeScript config so dashboard route files type-check correctly.
-- Newsletter: don't show the WordPress.com connection prompt on Simple sites, which are already connected
 - Newsletter: keep the Subscribers/Settings tab bar pinned while scrolling the modernized Settings tab
-- Subscribers dashboard: fix several Comp modal issues — show the plan billing interval in the picker, correct plan selection, disable and explain (via tooltip) plans the reader already has, surface the specific already-comped error message, and fix a clipped focus ring
-- Subscribers dashboard: show the empty state when the site owner is the only subscriber, and point the empty-state copy at the subscription form documentation
+
+## [0.9.0] - 2026-06-08
+### Added
+- Add Jetpack branding to the Daily Writing Prompt dashboard widget. [#49438]
+- Add the Daily Writing Prompt dashboard widget, moved here from the jetpack-mu-wpcom package. [#49425]
+
+### Changed
+- Remove the per-page Hello Dolly rule, as it is now handled by `@automattic/jetpack-components`'s AdminPage component. [#48472]
+
+### Fixed
+- Include the routes directory in the TypeScript config so dashboard route files type-check correctly. [#49368]
+- Hide the WordPress.com connection prompt on Simple sites, which are already connected. [#49365]
+- Restore body padding by wrapping content in Dialog.Content in Add subscribers and Comp modals. [#49327]
+- Subscribers Dashboard: Fix several Comp modal issues. [#49441]
+- Subscribers Dashboard: Show the empty state when the site owner is the only subscriber, and point the empty-state copy at the subscription form documentation. [#49410]
 
 ## [0.8.10] - 2026-06-01
 ### Changed
 - Update package dependencies. [#48404] [#49152]
 
 ### Fixed
-- Newsletter dashboard now records a `jetpack_newsletter_tab_view` Tracks event on initial page load (matching its tab-switch behavior). [#49243]
+- Record a `jetpack_newsletter_tab_view` Tracks event on initial page load in Newsletter dashboard (matching its tab-switch behavior). [#49243]
 
 ## [0.8.9] - 2026-05-25
 ### Changed
@@ -224,7 +231,8 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.9.0-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.10...v0.9.0-alpha
+[0.9.1-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.9.0...v0.9.1-alpha
+[0.9.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.10...v0.9.0
 [0.8.10]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.9...v0.8.10
 [0.8.9]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.8...v0.8.9
 [0.8.8]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.7...v0.8.8

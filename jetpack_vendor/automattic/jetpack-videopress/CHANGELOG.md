@@ -13,13 +13,17 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add drag-and-drop video upload to the new Library, with upload progress and a notice when the single-video plan limit is reached.
 
 ### Changed
-- Update dependencies.
 - Update package dependencies.
 
+## [0.36.13] - 2026-06-08
+### Changed
+- Update dependencies. [#49354]
+- Update package dependencies. [#49379]
+
 ### Fixed
-- Fix admin page crash on video upload/delete when the free-plan upgrade nudge is shown
-- Fix a TypeScript error in the library route's DataViews default layouts.
-- Restructure the free-plan upgrade notice into a balanced Notice.Title heads-up line, a Notice.Description upsell pitch, and a concise "Upgrade" Notice.ActionButton, replacing the out-of-place dark button.
+- Fix admin page crash on video upload/delete when the free-plan upgrade nudge is shown. [#49340]
+- Fix a TypeScript error in the library route's DataViews default layouts. [#49368]
+- Restructure the free-plan upgrade notice into a balanced heads-up line, an upsell pitch, and a concise "Upgrade" button. [#49400]
 
 ## [0.36.12] - 2026-06-01
 ### Changed
@@ -2013,7 +2017,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.37.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.12...v0.37.0-alpha
+[0.37.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.13...v0.37.0-alpha
+[0.36.13]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.12...v0.36.13
 [0.36.12]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.11...v0.36.12
 [0.36.11]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.10...v0.36.11
 [0.36.10]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.9...v0.36.10

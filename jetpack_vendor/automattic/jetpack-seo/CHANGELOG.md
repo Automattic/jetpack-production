@@ -5,13 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.1.0-alpha - unreleased
+## [0.1.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Added
-- Add a Settings tab to the SEO admin page: site visibility (search-engine indexing + XML sitemap), post title structure, front-page description, and site verification. Saves through the existing /jetpack/v4/settings and core /wp/v2/settings REST endpoints — no new package endpoint.
-- Initialize SEO package under feature flag
-
 ### Changed
 - Update package dependencies.
+
+## 0.1.0 - 2026-06-08
+### Added
+- Create an Overview screen with a Site visibility card. [#49203]
+- Create a Settings screen with site visibility, post title structure, front-page description, and site verification. [#49256]
+- Scaffold the new `jetpack-seo` package and mount its admin page. [#49203]
+
+[0.1.1-alpha]: https://github.com/Automattic/jetpack-seo/compare/0.1.0...0.1.1-alpha

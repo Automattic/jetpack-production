@@ -15,6 +15,10 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+## [8.5.6] - 2026-06-08
+### Changed
+- Update dependencies. [#48834]
+
 ## [8.5.5] - 2026-06-08
 ### Changed
 - Internal updates.
@@ -1891,7 +1895,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[8.6.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.5.5...v8.6.0-alpha
+[8.6.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.5.6...v8.6.0-alpha
+[8.5.6]: https://github.com/Automattic/jetpack-connection/compare/v8.5.5...v8.5.6
 [8.5.5]: https://github.com/Automattic/jetpack-connection/compare/v8.5.4...v8.5.5
 [8.5.4]: https://github.com/Automattic/jetpack-connection/compare/v8.5.3...v8.5.4
 [8.5.3]: https://github.com/Automattic/jetpack-connection/compare/v8.5.2...v8.5.3
