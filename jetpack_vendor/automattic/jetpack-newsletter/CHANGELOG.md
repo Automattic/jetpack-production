@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a setting for the Subscribe modal heading shown by Subscribe blocks using the Button only style.
 
 ### Changed
+- Daily Writing Prompt widget: link to the WordPress.com Reader and move the responses button next to the Post Answer button.
 - Newsletter: label the subscription placement options with a "Homepage and posts" section header.
 - Update package dependencies.
 
