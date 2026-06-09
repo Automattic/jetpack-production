@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.41.1-alpha] - unreleased
+## [4.42.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add options from WooCommerce Subscriptions and Emails settings pages to sync whitelist, as part of activity log improvements.
 
 ### Fixed
 - Sync: Mirror cross-object post meta delete-all events.
@@ -1784,7 +1787,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.41.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.41.0...v4.41.1-alpha
+[4.42.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.41.0...v4.42.0-alpha
 [4.41.0]: https://github.com/Automattic/jetpack-sync/compare/v4.40.0...v4.41.0
 [4.40.0]: https://github.com/Automattic/jetpack-sync/compare/v4.39.1...v4.40.0
 [4.39.1]: https://github.com/Automattic/jetpack-sync/compare/v4.39.0...v4.39.1
