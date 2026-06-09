@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.5.6-alpha] - unreleased
+## [8.6.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- SSO: Validate user tokens during SSO login to detect and replace stale tokens after database migration.
 
 ### Changed
 - Update package dependencies.
@@ -1888,7 +1891,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[8.5.6-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.5.5...v8.5.6-alpha
+[8.6.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.5.5...v8.6.0-alpha
 [8.5.5]: https://github.com/Automattic/jetpack-connection/compare/v8.5.4...v8.5.5
 [8.5.4]: https://github.com/Automattic/jetpack-connection/compare/v8.5.3...v8.5.4
 [8.5.3]: https://github.com/Automattic/jetpack-connection/compare/v8.5.2...v8.5.3
