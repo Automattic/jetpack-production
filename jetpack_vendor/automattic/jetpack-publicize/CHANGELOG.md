@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Render editor hyperlinks as clickable links in Bluesky and Tumblr social previews
+
 ## [0.81.3] - 2026-06-08
 ### Removed
 - Revert the Jetpack-side changes that re-enabled X (Twitter) sharing in Jetpack Social. [#49309]
