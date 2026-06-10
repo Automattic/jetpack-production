@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Removed
+- Remove the unused getFailedConnections selector in favor of its duplicate getBrokenConnections
+
 ### Fixed
 - Render editor hyperlinks as clickable links in Bluesky and Tumblr social previews
 
