@@ -5,16 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.22.2-alpha] - unreleased
+## [7.22.3-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
-- Forms: hide the Jetpack footer across the wp-build Forms dashboard (both the Forms list and Responses views) so it doesn't compete with the DataViews pagination and full-height layout.
 - Update package dependencies.
 
+## [7.22.2] - 2026-06-09
+### Changed
+- Hide the Jetpack footer across on the Forms list and Responses views wp-build Forms dashboard. [#49432]
+- Update package dependencies. [#49273]
+
 ### Fixed
-- Fix preg_match TypeError when a URL field value is an array instead of a string.
+- Fix preg_match TypeError when a URL field value is an array instead of a string. [#49323]
+- Ensure the feedback REST collection endpoint never returns posts of unrelated types when the invalid_ids filter is in use.
+- Harden the legacy Salesforce post-to-URL path and route the request through the WordPress safe HTTP API.
+- Improve sanitization of class and style attribute values, and submitted values across the package.
+- Restrict webhook and integration configuration to users with the manage_options capability.
+- Tighten the permission check on the bulk-delete-by-status feedback endpoint.
 
 ## [7.22.1] - 2026-06-08
 ### Changed
@@ -2531,7 +2540,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.22.2-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.22.1...v7.22.2-alpha
+[7.22.3-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.22.2...v7.22.3-alpha
+[7.22.2]: https://github.com/automattic/jetpack-forms/compare/v7.22.1...v7.22.2
 [7.22.1]: https://github.com/automattic/jetpack-forms/compare/v7.22.0...v7.22.1
 [7.22.0]: https://github.com/automattic/jetpack-forms/compare/v7.21.3...v7.22.0
 [7.21.3]: https://github.com/automattic/jetpack-forms/compare/v7.21.2...v7.21.3

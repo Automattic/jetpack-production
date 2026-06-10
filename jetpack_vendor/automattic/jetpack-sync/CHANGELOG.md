@@ -12,8 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add options from WooCommerce Subscriptions and Emails settings pages to sync whitelist, as part of activity log improvements.
 
+## [4.41.1] - 2026-06-09
 ### Fixed
-- Sync: Mirror cross-object post meta delete-all events.
+- Sync: Mirror cross-object post meta delete-all events. [#49430]
 
 ## [4.41.0] - 2026-06-08
 ### Added
@@ -1787,7 +1788,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.42.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.41.0...v4.42.0-alpha
+[4.42.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.41.1...v4.42.0-alpha
+[4.41.1]: https://github.com/Automattic/jetpack-sync/compare/v4.41.0...v4.41.1
 [4.41.0]: https://github.com/Automattic/jetpack-sync/compare/v4.40.0...v4.41.0
 [4.40.0]: https://github.com/Automattic/jetpack-sync/compare/v4.39.1...v4.40.0
 [4.39.1]: https://github.com/Automattic/jetpack-sync/compare/v4.39.0...v4.39.1
