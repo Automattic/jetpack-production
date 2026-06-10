@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions Block: customize the subscribe modal heading site-wide via a new Newsletter setting; applies to the Button only style.
 
 ### Bug fixes
+- Daily Writing Prompt: defer the connection-readiness check to dashboard setup, avoiding a fatal error on Atomic sites when the check ran before Core's pluggable functions were loaded.
 - Paid Content block: refresh the subscription token on-demand when it contains a stale end_date, preventing lockout after a subscription renewal.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

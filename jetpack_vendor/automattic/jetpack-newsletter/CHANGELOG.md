@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Daily Writing Prompt: defer the connection-readiness check to dashboard setup, avoiding a fatal error on Atomic sites when the check ran before Core's pluggable functions were loaded.
 - Newsletter: keep the Subscribers/Settings tab bar pinned while scrolling the modernized Settings tab
 
 ## [0.9.0] - 2026-06-08
