@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Daily Writing Prompt: load the dashboard widget on connected self-hosted Jetpack sites.
 - Subscriptions Block: customize the subscribe modal heading site-wide via a new Newsletter setting; applies to the Button only style.
 
+### Bug fixes
+- Paid Content block: refresh the subscription token on-demand when it contains a stale end_date, preventing lockout after a subscription renewal.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Media Summary: allow callers to opt out of URL stripping via a new preserve_urls argument.
 - Update package dependencies.
