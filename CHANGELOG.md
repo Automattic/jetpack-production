@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Daily Writing Prompt: load the dashboard widget on connected self-hosted Jetpack sites.
 - Subscriptions Block: customize the subscribe modal heading site-wide via a new Newsletter setting; applies to the Button only style.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
