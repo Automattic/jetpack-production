@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Daily Writing Prompt: load the dashboard widget on connected self-hosted Jetpack sites.
+- Notifications: support a notifications=v3 query parameter to opt into the v3 notifications panel.
 - Subscriptions Block: customize the subscribe modal heading site-wide via a new Newsletter setting; applies to the Button only style.
 
 ### Bug fixes
