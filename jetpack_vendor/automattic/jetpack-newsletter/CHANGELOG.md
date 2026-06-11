@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Daily Writing Prompt: defer the connection-readiness check to dashboard setup, avoiding a fatal error on Atomic sites when the check ran before Core's pluggable functions were loaded.
+- Newsletter: fix the "Add plans" link for WordPress installs in a subdirectory by deriving the site slug from home_url instead of site_url.
 - Newsletter: keep the Subscribers/Settings tab bar pinned while scrolling the modernized Settings tab
 
 ## [0.9.0] - 2026-06-08
