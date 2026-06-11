@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add `jetpack_account_protection_validation_min_length` and `jetpack_account_protection_validation_max_length` filters.
+
 ## [0.3.3] - 2026-06-08
 ### Changed
 - Internal updates.
