@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Media Summary: allow callers to opt out of URL stripping via a new preserve_urls argument.
+- Newsletter: Register the description field for the memberships endpoint to support paid tier descriptions.
 - Update package dependencies.
 
 ## 15.9 - 2026-06-09
