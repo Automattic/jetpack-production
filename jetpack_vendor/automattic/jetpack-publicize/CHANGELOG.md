@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Removed
 - Remove the unused getFailedConnections selector in favor of its duplicate getBrokenConnections
+- Remove unused scheduled posts components left behind after the old social post modal was replaced by the unified modal
 
 ### Fixed
 - Render editor hyperlinks as clickable links in Bluesky and Tumblr social previews
