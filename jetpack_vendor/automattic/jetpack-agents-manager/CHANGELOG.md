@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a standalone AI chat button to the admin bar.
+- Persist the Agents Manager minimized and last-activity state via the open-state endpoint.
 
 ## [0.3.2] - 2026-06-10
 ### Changed
