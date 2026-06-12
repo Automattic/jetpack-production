@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Post to URL: Prevent a fatal TypeError when a form's legacy hiddenFields attribute is stored as a name => value map or JSON string instead of an array of objects.
+
 ## [7.22.2] - 2026-06-09
 ### Changed
 - Hide the Jetpack footer across on the Forms list and Responses views wp-build Forms dashboard. [#49432]
