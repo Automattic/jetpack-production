@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Guard against malformed allowlist data.
+- WAF: Skip rule evaluation when there is no HTTP request (e.g. server-side cron executed via a PHP CLI wrapper), preventing false-positive 403 blocks from rule 911100.
 
 ## [0.28.7] - 2026-06-08
 ### Fixed
