@@ -15567,27 +15567,6 @@ function useSettingsForm() {
   return { local, isSaving, setField, setVerification, commit };
 }
 
-// _inc/notices-list.tsx
-var import_components2 = __toESM(require_components());
-var import_data2 = __toESM(require_data());
-var import_notices2 = __toESM(require_notices());
-var import_jsx_runtime63 = __toESM(require_jsx_runtime());
-var MAX_VISIBLE_NOTICES = 3;
-var NoticesList = () => {
-  const notices = (0, import_data2.useSelect)((select) => select(import_notices2.store).getNotices(), []);
-  const { removeNotice } = (0, import_data2.useDispatch)(import_notices2.store);
-  const snackbarNotices = notices.filter(({ type }) => type === "snackbar").slice(-MAX_VISIBLE_NOTICES);
-  return /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
-    import_components2.SnackbarList,
-    {
-      notices: snackbarNotices,
-      className: "jetpack-seo__notices",
-      onRemove: removeNotice
-    }
-  );
-};
-var notices_list_default = NoticesList;
-
 // _inc/screens/overview/index.tsx
 var import_element51 = __toESM(require_element());
 var import_i18n11 = __toESM(require_i18n());
@@ -15600,7 +15579,7 @@ function getOverview() {
 }
 
 // _inc/screens/overview/site-verification-card.tsx
-var import_components3 = __toESM(require_components());
+var import_components2 = __toESM(require_components());
 var import_i18n9 = __toESM(require_i18n());
 
 // _inc/screens/overview/status-dot.scss
@@ -15612,9 +15591,9 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 }
 
 // _inc/screens/overview/status-dot.tsx
-var import_jsx_runtime64 = __toESM(require_jsx_runtime());
-var StatusDot = ({ status, label }) => /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)("span", { children: [
-  /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
+var import_jsx_runtime63 = __toESM(require_jsx_runtime());
+var StatusDot = ({ status, label }) => /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)("span", { children: [
+  /* @__PURE__ */ (0, import_jsx_runtime63.jsx)(
     "span",
     {
       className: clsx_default("jetpack-seo-status-dot", {
@@ -15630,50 +15609,50 @@ var StatusDot = ({ status, label }) => /* @__PURE__ */ (0, import_jsx_runtime64.
 var status_dot_default = StatusDot;
 
 // _inc/screens/overview/site-verification-card.tsx
-var import_jsx_runtime65 = __toESM(require_jsx_runtime());
+var import_jsx_runtime64 = __toESM(require_jsx_runtime());
 var verifiedLabel = (0, import_i18n9.__)("Verified", "jetpack-seo");
 var notSetLabel = (0, import_i18n9.__)("Not set", "jetpack-seo");
-var SiteVerificationCard = ({ data, onManage }) => /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(card_exports.Root, { children: [
-  /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(card_exports.Title, { children: (0, import_i18n9.__)("Site verification", "jetpack-seo") }) }),
-  /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(card_exports.Content, { children: [
-    VERIFICATION_SERVICES.map(({ key, label }) => /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)("div", { className: "jetpack-seo-overview__stat-row", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(status_dot_default, { status: data[key] ? "ok" : "warn", label }),
-      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("span", { children: data[key] ? verifiedLabel : notSetLabel })
+var SiteVerificationCard = ({ data, onManage }) => /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(card_exports.Root, { children: [
+  /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(card_exports.Title, { children: (0, import_i18n9.__)("Site verification", "jetpack-seo") }) }),
+  /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)(card_exports.Content, { children: [
+    VERIFICATION_SERVICES.map(({ key, label }) => /* @__PURE__ */ (0, import_jsx_runtime64.jsxs)("div", { className: "jetpack-seo-overview__stat-row", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(status_dot_default, { status: data[key] ? "ok" : "warn", label }),
+      /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("span", { children: data[key] ? verifiedLabel : notSetLabel })
     ] }, key)),
-    /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "jetpack-seo-overview__card-footer", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(import_components3.Button, { variant: "secondary", onClick: onManage, children: (0, import_i18n9.__)("Manage verification", "jetpack-seo") }) })
+    /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("div", { className: "jetpack-seo-overview__card-footer", children: /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(import_components2.Button, { variant: "secondary", onClick: onManage, children: (0, import_i18n9.__)("Manage verification", "jetpack-seo") }) })
   ] })
 ] });
 var site_verification_card_default = SiteVerificationCard;
 
 // _inc/screens/overview/site-visibility-card.tsx
-var import_components4 = __toESM(require_components());
+var import_components3 = __toESM(require_components());
 var import_i18n10 = __toESM(require_i18n());
-var import_jsx_runtime66 = __toESM(require_jsx_runtime());
+var import_jsx_runtime65 = __toESM(require_jsx_runtime());
 var searchAllowedLabel = (0, import_i18n10.__)("Search engines allowed", "jetpack-seo");
 var searchBlockedLabel = (0, import_i18n10.__)("Search engines blocked", "jetpack-seo");
 var sitemapActiveLabel = (0, import_i18n10.__)("Sitemap active", "jetpack-seo");
 var sitemapDisabledLabel = (0, import_i18n10.__)("Sitemap disabled", "jetpack-seo");
 var seoToolsActiveLabel = (0, import_i18n10.__)("SEO tools active", "jetpack-seo");
 var seoToolsInactiveLabel = (0, import_i18n10.__)("SEO tools inactive", "jetpack-seo");
-var SiteVisibilityCard = ({ data, onManage }) => /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)(card_exports.Root, { children: [
-  /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(card_exports.Title, { children: (0, import_i18n10.__)("Site visibility", "jetpack-seo") }) }),
-  /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)(card_exports.Content, { children: [
-    /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)(Stack, { direction: "column", gap: "xs", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+var SiteVisibilityCard = ({ data, onManage }) => /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(card_exports.Root, { children: [
+  /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(card_exports.Title, { children: (0, import_i18n10.__)("Site visibility", "jetpack-seo") }) }),
+  /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(card_exports.Content, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime65.jsxs)(Stack, { direction: "column", gap: "xs", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
         status_dot_default,
         {
           status: data.search_engines_visible ? "ok" : "err",
           label: data.search_engines_visible ? searchAllowedLabel : searchBlockedLabel
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
         status_dot_default,
         {
           status: data.sitemap_active ? "ok" : "warn",
           label: data.sitemap_active ? sitemapActiveLabel : sitemapDisabledLabel
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(
         status_dot_default,
         {
           status: data.seo_tools_active ? "ok" : "warn",
@@ -15681,7 +15660,7 @@ var SiteVisibilityCard = ({ data, onManage }) => /* @__PURE__ */ (0, import_jsx_
         }
       )
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime66.jsx)("div", { className: "jetpack-seo-overview__card-footer", children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(import_components4.Button, { variant: "secondary", onClick: onManage, children: (0, import_i18n10.__)("Manage visibility", "jetpack-seo") }) })
+    /* @__PURE__ */ (0, import_jsx_runtime65.jsx)("div", { className: "jetpack-seo-overview__card-footer", children: /* @__PURE__ */ (0, import_jsx_runtime65.jsx)(import_components3.Button, { variant: "secondary", onClick: onManage, children: (0, import_i18n10.__)("Manage visibility", "jetpack-seo") }) })
   ] })
 ] });
 var site_visibility_card_default = SiteVisibilityCard;
@@ -15695,7 +15674,7 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 }
 
 // _inc/screens/overview/index.tsx
-var import_jsx_runtime67 = __toESM(require_jsx_runtime());
+var import_jsx_runtime66 = __toESM(require_jsx_runtime());
 var OverviewScreen = () => {
   const data = getOverview();
   const navigate = useNavigate();
@@ -15710,22 +15689,22 @@ var OverviewScreen = () => {
     [navigate]
   );
   if (!data) {
-    return /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(notice_exports.Root, { intent: "error", children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(notice_exports.Description, { children: (0, import_i18n11.__)("Unable to load overview.", "jetpack-seo") }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(notice_exports.Root, { intent: "error", children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(notice_exports.Description, { children: (0, import_i18n11.__)("Unable to load overview.", "jetpack-seo") }) });
   }
-  return /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)("div", { className: "jetpack-seo-overview", children: [
-    !data.plan.seo_enabled_for_site && /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(notice_exports.Root, { intent: "warning", children: /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(notice_exports.Description, { children: (0, import_i18n11.__)(
+  return /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "jetpack-seo-overview", children: [
+    !data.plan.seo_enabled_for_site && /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(notice_exports.Root, { intent: "warning", children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(notice_exports.Description, { children: (0, import_i18n11.__)(
       "SEO tools are not enabled on this site. Some cards reflect the underlying WordPress options only.",
       "jetpack-seo"
     ) }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)("div", { className: "jetpack-seo-overview__grid", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "jetpack-seo-overview__grid", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
         site_visibility_card_default,
         {
           data: data.site_visibility,
           onManage: () => goToSection("visibility")
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
         site_verification_card_default,
         {
           data: data.site_verification,
@@ -15738,13 +15717,13 @@ var OverviewScreen = () => {
 var overview_default = OverviewScreen;
 
 // _inc/screens/settings/index.tsx
-var import_components7 = __toESM(require_components());
+var import_components6 = __toESM(require_components());
 var import_element53 = __toESM(require_element());
 var import_i18n15 = __toESM(require_i18n());
 import { useSearch } from "@wordpress/route";
 
 // _inc/screens/settings/title-structure-field.tsx
-var import_components5 = __toESM(require_components());
+var import_components4 = __toESM(require_components());
 var import_element52 = __toESM(require_element());
 var import_i18n13 = __toESM(require_i18n());
 
@@ -15778,7 +15757,7 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 }
 
 // _inc/screens/settings/title-structure-field.tsx
-var import_jsx_runtime68 = __toESM(require_jsx_runtime());
+var import_jsx_runtime67 = __toESM(require_jsx_runtime());
 var customizedLabel = (0, import_i18n13.__)("Customized", "jetpack-seo");
 var defaultLabel = (0, import_i18n13.__)("Default", "jetpack-seo");
 var TitleStructureField = ({ tokens, onChange, disabled: disabled2 }) => {
@@ -15806,14 +15785,14 @@ var TitleStructureField = ({ tokens, onChange, disabled: disabled2 }) => {
     [tokens]
   );
   const hasCustomStructure = tokens.length > 0;
-  return /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(collapsible_card_exports.Root, { defaultOpen: false, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(card_exports.Title, { children: (0, import_i18n13.__)("Post title structure", "jetpack-seo") }),
-      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(Badge, { intent: hasCustomStructure ? "stable" : "draft", children: hasCustomStructure ? customizedLabel : defaultLabel })
+  return /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)(collapsible_card_exports.Root, { defaultOpen: false, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(card_exports.Title, { children: (0, import_i18n13.__)("Post title structure", "jetpack-seo") }),
+      /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(Badge, { intent: hasCustomStructure ? "stable" : "draft", children: hasCustomStructure ? customizedLabel : defaultLabel })
     ] }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(collapsible_card_exports.Content, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
-        import_components5.FormTokenField,
+    /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)(collapsible_card_exports.Content, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime67.jsx)(
+        import_components4.FormTokenField,
         {
           label: (0, import_i18n13.__)("Tokens", "jetpack-seo"),
           value: displayValues,
@@ -15825,8 +15804,8 @@ var TitleStructureField = ({ tokens, onChange, disabled: disabled2 }) => {
           __nextHasNoMarginBottom: true
         }
       ),
-      /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)("div", { className: "jetpack-seo-settings__preview", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)("strong", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)("div", { className: "jetpack-seo-settings__preview", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime67.jsxs)("strong", { children: [
           (0, import_i18n13.__)("Preview", "jetpack-seo"),
           ":"
         ] }),
@@ -15839,9 +15818,9 @@ var TitleStructureField = ({ tokens, onChange, disabled: disabled2 }) => {
 var title_structure_field_default = TitleStructureField;
 
 // _inc/screens/settings/verification-card.tsx
-var import_components6 = __toESM(require_components());
+var import_components5 = __toESM(require_components());
 var import_i18n14 = __toESM(require_i18n());
-var import_jsx_runtime69 = __toESM(require_jsx_runtime());
+var import_jsx_runtime68 = __toESM(require_jsx_runtime());
 var HINTS = {
   google: (0, import_i18n14.__)(
     'Paste the "content" attribute from the Google Search Console meta tag.',
@@ -15863,17 +15842,17 @@ var VerificationCard = ({
 }) => {
   const verifiedCount = VERIFICATION_SERVICES.filter(({ key }) => !!value[key]).length;
   const collapsibleProps = open === void 0 ? { defaultOpen: false } : { open, onOpenChange };
-  return /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(collapsible_card_exports.Root, { ...collapsibleProps, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(card_exports.Title, { children: (0, import_i18n14.__)("Site verification", "jetpack-seo") }),
-      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(Badge, { intent: verifiedCount > 0 ? "stable" : "draft", children: verifiedCount > 0 ? (0, import_i18n14.sprintf)(
+  return /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(collapsible_card_exports.Root, { ...collapsibleProps, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime68.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(card_exports.Title, { children: (0, import_i18n14.__)("Site verification", "jetpack-seo") }),
+      /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(Badge, { intent: verifiedCount > 0 ? "stable" : "draft", children: verifiedCount > 0 ? (0, import_i18n14.sprintf)(
         /* translators: %d: number of verification services configured */
         (0, import_i18n14._n)("%d verified", "%d verified", verifiedCount, "jetpack-seo"),
         verifiedCount
       ) : notSetLabel2 })
     ] }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { className: "jetpack-seo-settings__verification-grid", children: VERIFICATION_SERVICES.map(({ key, label }) => /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
-      import_components6.TextControl,
+    /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime68.jsx)("div", { className: "jetpack-seo-settings__verification-grid", children: VERIFICATION_SERVICES.map(({ key, label }) => /* @__PURE__ */ (0, import_jsx_runtime68.jsx)(
+      import_components5.TextControl,
       {
         label,
         value: value[key],
@@ -15891,7 +15870,7 @@ var VerificationCard = ({
 var verification_card_default = VerificationCard;
 
 // _inc/screens/settings/index.tsx
-var import_jsx_runtime70 = __toESM(require_jsx_runtime());
+var import_jsx_runtime69 = __toESM(require_jsx_runtime());
 var setLabel = (0, import_i18n15.__)("Set", "jetpack-seo");
 var notSetLabel3 = (0, import_i18n15.__)("Not set", "jetpack-seo");
 var SettingsScreen = ({ form }) => {
@@ -15914,24 +15893,24 @@ var SettingsScreen = ({ form }) => {
     }
   }, [focus]);
   if (!local) {
-    return /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(notice_exports.Root, { intent: "error", children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(notice_exports.Description, { children: (0, import_i18n15.__)("Unable to load settings.", "jetpack-seo") }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(notice_exports.Root, { intent: "error", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(notice_exports.Description, { children: (0, import_i18n15.__)("Unable to load settings.", "jetpack-seo") }) });
   }
   const postsTokens = local.title_formats.posts ?? [];
   const visibilityEnabledCount = (local.search_engines_visible ? 1 : 0) + (local.sitemap_active ? 1 : 0);
-  return /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)("div", { className: "jetpack-seo-settings", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("div", { id: "visibility", className: "jetpack-seo-settings__section", children: /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(collapsible_card_exports.Root, { defaultOpen: true, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(card_exports.Title, { children: (0, import_i18n15.__)("Site visibility", "jetpack-seo") }),
-        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(Badge, { intent: visibilityEnabledCount === 2 ? "stable" : "draft", children: (0, import_i18n15.sprintf)(
+  return /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "jetpack-seo-settings", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { id: "visibility", className: "jetpack-seo-settings__section", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(collapsible_card_exports.Root, { defaultOpen: true, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(card_exports.Title, { children: (0, import_i18n15.__)("Site visibility", "jetpack-seo") }),
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(Badge, { intent: visibilityEnabledCount === 2 ? "stable" : "draft", children: (0, import_i18n15.sprintf)(
           /* translators: %1$d: number of enabled visibility settings, %2$d: total. */
           (0, import_i18n15.__)("%1$d of %2$d enabled", "jetpack-seo"),
           visibilityEnabledCount,
           2
         ) })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(Stack, { direction: "column", gap: "lg", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
-          import_components7.ToggleControl,
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(Stack, { direction: "column", gap: "lg", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
+          import_components6.ToggleControl,
           {
             label: (0, import_i18n15.__)("Allow search engines to index this site", "jetpack-seo"),
             help: (0, import_i18n15.__)(
@@ -15944,8 +15923,8 @@ var SettingsScreen = ({ form }) => {
             __nextHasNoMarginBottom: true
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
-          import_components7.ToggleControl,
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
+          import_components6.ToggleControl,
           {
             label: (0, import_i18n15.__)("Generate an XML sitemap", "jetpack-seo"),
             help: (0, import_i18n15.__)(
@@ -15960,7 +15939,7 @@ var SettingsScreen = ({ form }) => {
         )
       ] }) })
     ] }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
       title_structure_field_default,
       {
         tokens: postsTokens,
@@ -15968,13 +15947,13 @@ var SettingsScreen = ({ form }) => {
         disabled: isSaving
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(collapsible_card_exports.Root, { defaultOpen: false, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(card_exports.Title, { children: (0, import_i18n15.__)("Front-page description", "jetpack-seo") }),
-        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(Badge, { intent: local.front_page_description ? "stable" : "draft", children: local.front_page_description ? setLabel : notSetLabel3 })
+    /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(collapsible_card_exports.Root, { defaultOpen: false, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(card_exports.Title, { children: (0, import_i18n15.__)("Front-page description", "jetpack-seo") }),
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(Badge, { intent: local.front_page_description ? "stable" : "draft", children: local.front_page_description ? setLabel : notSetLabel3 })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
-        import_components7.TextareaControl,
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
+        import_components6.TextareaControl,
         {
           label: (0, import_i18n15.__)("Meta description shown on the home page", "jetpack-seo"),
           value: local.front_page_description,
@@ -15986,7 +15965,7 @@ var SettingsScreen = ({ form }) => {
         }
       ) })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("div", { id: "verification", className: "jetpack-seo-settings__section", children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { id: "verification", className: "jetpack-seo-settings__section", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
       verification_card_default,
       {
         value: local.verification,
@@ -16010,7 +15989,7 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 }
 
 // _inc/app.tsx
-var import_jsx_runtime71 = __toESM(require_jsx_runtime());
+var import_jsx_runtime70 = __toESM(require_jsx_runtime());
 var App = () => {
   const search = useSearch2({ from: "/", strict: false });
   const activeTab = search.tab === "settings" ? "settings" : "overview";
@@ -16031,7 +16010,7 @@ var App = () => {
     },
     [navigate]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(theme_provider_default, { children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(
+  return /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(theme_provider_default, { children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
     admin_page_default,
     {
       title: "SEO",
@@ -16040,17 +16019,14 @@ var App = () => {
         "jetpack-seo"
       ),
       showFooter: true,
-      children: [
-        /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(tabs_exports.Root, { value: activeTab, onValueChange: onTabChange, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { className: "jp-admin-page-tabs jp-admin-page-tabs--minimal", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(tabs_exports.List, { variant: "minimal", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(tabs_exports.Tab, { value: "overview", children: (0, import_i18n16.__)("Overview", "jetpack-seo") }),
-            /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(tabs_exports.Tab, { value: "settings", children: (0, import_i18n16.__)("Settings", "jetpack-seo") })
-          ] }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(tabs_exports.Panel, { value: "overview", focusable: false, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { className: "jetpack-seo-page-content", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(overview_default, {}) }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(tabs_exports.Panel, { value: "settings", focusable: false, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { className: "jetpack-seo-page-content", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(settings_default, { form: settingsForm }) }) })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(notices_list_default, {})
-      ]
+      children: /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(tabs_exports.Root, { value: activeTab, onValueChange: onTabChange, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("div", { className: "jp-admin-page-tabs jp-admin-page-tabs--minimal", children: /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(tabs_exports.List, { variant: "minimal", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(tabs_exports.Tab, { value: "overview", children: (0, import_i18n16.__)("Overview", "jetpack-seo") }),
+          /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(tabs_exports.Tab, { value: "settings", children: (0, import_i18n16.__)("Settings", "jetpack-seo") })
+        ] }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(tabs_exports.Panel, { value: "overview", focusable: false, children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("div", { className: "jetpack-seo-page-content", children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(overview_default, {}) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(tabs_exports.Panel, { value: "settings", focusable: false, children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("div", { className: "jetpack-seo-page-content", children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(settings_default, { form: settingsForm }) }) })
+      ] })
     }
   ) });
 };

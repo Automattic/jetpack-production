@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Remove the package's duplicate snackbar list so save/verify toasts no longer appear twice; the wp-build boot layer already renders a single snackbar for the page.
+
 ## 0.1.0 - 2026-06-08
 ### Added
 - Create an Overview screen with a Site visibility card. [#49203]
