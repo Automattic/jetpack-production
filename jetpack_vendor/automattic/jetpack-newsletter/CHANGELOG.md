@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a setting for the Subscribe modal heading shown by Subscribe blocks using the Button only style.
+- Daily Writing Prompt widget: record Tracks events when interacting with the widget's actions.
 
 ### Changed
 - Daily Writing Prompt widget: link to the WordPress.com Reader and move the responses button next to the Post Answer button.
