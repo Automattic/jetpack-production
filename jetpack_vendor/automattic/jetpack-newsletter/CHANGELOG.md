@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: fix the "Add plans" link for WordPress installs in a subdirectory by deriving the site slug from home_url instead of site_url.
 - Newsletter: keep the Subscribers/Settings tab bar pinned while scrolling the modernized Settings tab
 - Newsletter: Only show the subscription placement "Preview and edit" link once the placement is enabled and saved.
+- Newsletter: render the same initials avatar in the subscriber row and detail panel when a subscriber has no Gravatar
 - Newsletter: stop the modernized Settings tab from flashing a full-page loading spinner on every visit by caching resolved settings across mounts.
 - Subscribers: Hide the "Comp a subscription" action when the site has no paid newsletter plans.
 
