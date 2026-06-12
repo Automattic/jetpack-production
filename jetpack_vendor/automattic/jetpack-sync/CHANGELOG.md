@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.42.1-alpha] - unreleased
+## [4.43.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add options from assorted WooCommerce settings pages to sync whitelist, as part of activity log improvements.
 
 ## [4.42.0] - 2026-06-10
 ### Added
@@ -1789,7 +1792,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.42.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.42.0...v4.42.1-alpha
+[4.43.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.42.0...v4.43.0-alpha
 [4.42.0]: https://github.com/Automattic/jetpack-sync/compare/v4.41.1...v4.42.0
 [4.41.1]: https://github.com/Automattic/jetpack-sync/compare/v4.41.0...v4.41.1
 [4.41.0]: https://github.com/Automattic/jetpack-sync/compare/v4.40.0...v4.41.0
