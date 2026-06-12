@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: keep the Subscribers/Settings tab bar pinned while scrolling the modernized Settings tab
 - Newsletter: Only show the subscription placement "Preview and edit" link once the placement is enabled and saved.
 - Newsletter: stop the modernized Settings tab from flashing a full-page loading spinner on every visit by caching resolved settings across mounts.
+- Subscribers: Hide the "Comp a subscription" action when the site has no paid newsletter plans.
 
 ## [0.9.0] - 2026-06-08
 ### Added
