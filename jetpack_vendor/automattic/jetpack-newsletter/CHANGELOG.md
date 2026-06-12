@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Daily Writing Prompt: defer the connection-readiness check to dashboard setup, avoiding a fatal error on Atomic sites when the check ran before Core's pluggable functions were loaded.
 - Newsletter: fix the "Add plans" link for WordPress installs in a subdirectory by deriving the site slug from home_url instead of site_url.
 - Newsletter: keep the Subscribers/Settings tab bar pinned while scrolling the modernized Settings tab
+- Newsletter: Only show the subscription placement "Preview and edit" link once the placement is enabled and saved.
 - Newsletter: stop the modernized Settings tab from flashing a full-page loading spinner on every visit by caching resolved settings across mounts.
 
 ## [0.9.0] - 2026-06-08
