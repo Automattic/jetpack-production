@@ -881,7 +881,7 @@ function jetpack_get_module_info( $key ) {
 	    'auto_activate' => 'No',
 	    'module_tags' => 'Social, Appearance',
 	    'feature' => 'Traffic',
-	    'additional_search_queries' => 'search engine optimization, social preview, meta description, custom title format',
+	    'additional_search_queries' => 'search engine optimization, social preview, meta description, custom title format, seo, sitemap, open graph, search engine, title tag',
 	    'plan_classes' => '',
 	  ),
 	  'sharedaddy' => 

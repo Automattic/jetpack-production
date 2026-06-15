@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- SEO: Surface SEO Tools as a Plugin Search Hint when users search the plugin directory for SEO-related terms.
+
 ### Bug fixes
 - Blaze: warn users with active campaigns before disabling the Blaze module.
 
