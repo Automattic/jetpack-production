@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Agents Manager: Bootstrap hooks exactly once even if multiple versions of the class are shipped.
+- Agents Manager: drive the sidebar pre-render from the persisted open state (cached in a transient) instead of a path-scoped cookie, and only pre-render where the app is actually loaded, so closing the assistant on another domain no longer leaves a stale sidebar shell behind.
 
 ## [0.4.0] - 2026-06-15
 ### Added
