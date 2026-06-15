@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress dashboard: show a Deleting progress state on library rows and the video details page while media is being deleted, and run bulk deletions in parallel.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Prevent PHP warnings when building the VideoPress dashboard state and resolving video metadata for videos with incomplete data.
 - VideoPress dashboard: truncate long video titles and filenames with an ellipsis in the library grid and table, and clamp long titles in the video details breadcrumb.

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Subscribers: link the Substack importer button to the WordPress.com site-setup importer flow.
+- Update package dependencies.
 
 ### Fixed
 - Newsletter: close the subscriber detail panel when its subscriber is removed instead of leaving it open with stale data

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Blaze: add active campaign status checks.
+- Update package dependencies.
 
 ## [0.27.22] - 2026-06-15
 ### Changed

@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Connectors: Surface Jetpack Safe Mode (Identity Crisis) state and resolution options in the connector card.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Connectors: Add cache-busting version to the connector card script module so updated assets are served after changes.
 - Identity Crisis: Fix confirming Safe Mode again after clearing it from the admin bar, which could silently fail when the safe_mode_confirmed option was stale in a persistent object cache.

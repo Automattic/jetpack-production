@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Blaze: warn users with active campaigns before disabling the Blaze module.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
+
 ## 16.0-a.1 - 2026-06-15
 ### Enhancements
 - Daily Writing Prompt: Load the Dashboard widget on connected self-hosted Jetpack sites. [#49491]
