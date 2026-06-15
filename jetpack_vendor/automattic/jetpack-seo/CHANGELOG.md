@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a Canonical URLs toggle to the Settings tab (ports the legacy Traffic-page feature), controlling the canonical-urls module that adds rel="canonical" tags to archive pages.
+- Add an AI tab to the SEO dashboard and move the AI SEO Enhancer toggle (auto-generate SEO title, description, and image alt text for new posts) onto it.
 
 ## [0.1.1] - 2026-06-15
 ### Changed
