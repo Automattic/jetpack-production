@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.1.8-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [6.1.8] - 2026-06-15
+### Changed
+- Internal updates.
 
 ## [6.1.7] - 2026-06-08
 ### Changed
@@ -548,7 +548,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Introduce a status package
 
-[6.1.8-alpha]: https://github.com/Automattic/jetpack-status/compare/v6.1.7...v6.1.8-alpha
+[6.1.8]: https://github.com/Automattic/jetpack-status/compare/v6.1.7...v6.1.8
 [6.1.7]: https://github.com/Automattic/jetpack-status/compare/v6.1.6...v6.1.7
 [6.1.6]: https://github.com/Automattic/jetpack-status/compare/v6.1.5...v6.1.6
 [6.1.5]: https://github.com/Automattic/jetpack-status/compare/v6.1.4...v6.1.5

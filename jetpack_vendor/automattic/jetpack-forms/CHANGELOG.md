@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.22.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [7.22.3] - 2026-06-15
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#49492]
 
 ### Fixed
-- Post to URL: Prevent a fatal TypeError when a form's legacy hiddenFields attribute is stored as a name => value map or JSON string instead of an array of objects.
+- Post to URL: Prevent a fatal TypeError when a form's legacy `hiddenFields` attribute is stored as a name => value map or JSON string. [#49539]
 
 ## [7.22.2] - 2026-06-09
 ### Changed
@@ -2543,7 +2540,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.22.3-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.22.2...v7.22.3-alpha
+[7.22.3]: https://github.com/automattic/jetpack-forms/compare/v7.22.2...v7.22.3
 [7.22.2]: https://github.com/automattic/jetpack-forms/compare/v7.22.1...v7.22.2
 [7.22.1]: https://github.com/automattic/jetpack-forms/compare/v7.22.0...v7.22.1
 [7.22.0]: https://github.com/automattic/jetpack-forms/compare/v7.21.3...v7.22.0

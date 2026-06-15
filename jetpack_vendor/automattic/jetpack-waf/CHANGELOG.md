@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.28.8-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.28.8] - 2026-06-15
 ### Fixed
-- Guard against malformed allowlist data.
-- WAF: Skip rule evaluation when there is no HTTP request (e.g. server-side cron executed via a PHP CLI wrapper), preventing false-positive 403 blocks from rule 911100.
+- Guard against malformed allowlist data. [#49481]
+- WAF: Skip rule evaluation when there is no HTTP request (e.g. server-side cron executed via a PHP CLI wrapper), preventing false-positive 403 blocks. [#49465]
 
 ## [0.28.7] - 2026-06-08
 ### Fixed
@@ -557,7 +554,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
-[0.28.8-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.28.7...v0.28.8-alpha
+[0.28.8]: https://github.com/Automattic/jetpack-waf/compare/v0.28.7...v0.28.8
 [0.28.7]: https://github.com/Automattic/jetpack-waf/compare/v0.28.6...v0.28.7
 [0.28.6]: https://github.com/Automattic/jetpack-waf/compare/v0.28.5...v0.28.6
 [0.28.5]: https://github.com/Automattic/jetpack-waf/compare/v0.28.4...v0.28.5

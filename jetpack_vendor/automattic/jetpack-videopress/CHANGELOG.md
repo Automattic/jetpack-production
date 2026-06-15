@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.37.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.37.0] - 2026-06-15
 ### Added
-- VideoPress: Add drag-and-drop video upload to the new Library, with upload progress and a notice when the single-video plan limit is reached.
-- VideoPress: Open a video's details from the Library grid by clicking the thumbnail or title, with a hover "Edit details" affordance and full keyboard support.
+- VideoPress: Add drag-and-drop video upload to the new Library, with upload progress and a notice when the single-video plan limit is reached. [#49358]
+- VideoPress: Open a video's details from the Library grid by clicking the thumbnail or title, with a hover "Edit details" affordance and full keyboard support. [#49472]
 
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#49273] [#49492]
 
 ## [0.36.13] - 2026-06-08
 ### Changed
@@ -2018,7 +2015,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.37.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.13...v0.37.0-alpha
+[0.37.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.13...v0.37.0
 [0.36.13]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.12...v0.36.13
 [0.36.12]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.11...v0.36.12
 [0.36.11]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.10...v0.36.11
