@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- VideoPress dashboard: truncate long video titles and filenames with an ellipsis in the library grid and table, and clamp long titles in the video details breadcrumb.
+
 ## [0.36.13] - 2026-06-08
 ### Changed
 - Update dependencies. [#49354]
