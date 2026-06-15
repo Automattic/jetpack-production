@@ -8,8 +8,22 @@
 
 return array(
 	array(
-		'name'        => 'index',
+		'name'        => 'ai',
+		'path'        => '/ai',
+		'page'        => 'jetpack-seo-dashboard',
+		'has_route'   => true,
+		'has_content' => true,
+	),
+	array(
+		'name'        => 'overview',
 		'path'        => '/',
+		'page'        => 'jetpack-seo-dashboard',
+		'has_route'   => true,
+		'has_content' => true,
+	),
+	array(
+		'name'        => 'settings',
+		'path'        => '/settings',
 		'page'        => 'jetpack-seo-dashboard',
 		'has_route'   => true,
 		'has_content' => true,
