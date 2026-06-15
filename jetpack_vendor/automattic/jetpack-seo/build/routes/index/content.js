@@ -95,7 +95,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
             "The result of getSnapshot should be cached to avoid an infinite loop"
           ), didWarnUncachedGetSnapshot = true);
         }
-        cachedValue = useState26({
+        cachedValue = useState28({
           inst: { value, getSnapshot: getSnapshot2 }
         });
         var inst = cachedValue[0].inst, forceUpdate = cachedValue[1];
@@ -107,7 +107,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
           },
           [subscribe2, value, getSnapshot2]
         );
-        useEffect26(
+        useEffect27(
           function() {
             checkIfSnapshotChanged(inst) && forceUpdate({ inst });
             return subscribe2(function() {
@@ -133,7 +133,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         return getSnapshot2();
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React73 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState26 = React73.useState, useEffect26 = React73.useEffect, useLayoutEffect4 = React73.useLayoutEffect, useDebugValue2 = React73.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+      var React73 = require_react(), objectIs = "function" === typeof Object.is ? Object.is : is, useState28 = React73.useState, useEffect27 = React73.useEffect, useLayoutEffect4 = React73.useLayoutEffect, useDebugValue2 = React73.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
       exports.useSyncExternalStore = void 0 !== React73.useSyncExternalStore ? React73.useSyncExternalStore : shim;
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
     })();
@@ -161,14 +161,14 @@ var require_with_selector_development = __commonJS({
         return x === y && (0 !== x || 1 / x === 1 / y) || x !== x && y !== y;
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React73 = require_react(), shim = require_shim(), objectIs = "function" === typeof Object.is ? Object.is : is, useSyncExternalStore3 = shim.useSyncExternalStore, useRef34 = React73.useRef, useEffect26 = React73.useEffect, useMemo33 = React73.useMemo, useDebugValue2 = React73.useDebugValue;
+      var React73 = require_react(), shim = require_shim(), objectIs = "function" === typeof Object.is ? Object.is : is, useSyncExternalStore3 = shim.useSyncExternalStore, useRef34 = React73.useRef, useEffect27 = React73.useEffect, useMemo34 = React73.useMemo, useDebugValue2 = React73.useDebugValue;
       exports.useSyncExternalStoreWithSelector = function(subscribe2, getSnapshot2, getServerSnapshot2, selector, isEqual) {
         var instRef = useRef34(null);
         if (null === instRef.current) {
           var inst = { hasValue: false, value: null };
           instRef.current = inst;
         } else inst = instRef.current;
-        instRef = useMemo33(
+        instRef = useMemo34(
           function() {
             function memoizedSelector(nextSnapshot) {
               if (!hasMemo) {
@@ -204,7 +204,7 @@ var require_with_selector_development = __commonJS({
           [getSnapshot2, getServerSnapshot2, selector, isEqual]
         );
         var value = useSyncExternalStore3(subscribe2, instRef[0], instRef[1]);
-        useEffect26(
+        useEffect27(
           function() {
             inst.hasValue = true;
             inst.value = value;
@@ -312,6 +312,375 @@ var require_notices = __commonJS({
 var require_api_fetch = __commonJS({
   "package-external:@wordpress/api-fetch"(exports, module) {
     module.exports = window.wp.apiFetch;
+  }
+});
+
+// ../../../node_modules/.pnpm/events@3.3.0/node_modules/events/events.js
+var require_events = __commonJS({
+  "../../../node_modules/.pnpm/events@3.3.0/node_modules/events/events.js"(exports, module) {
+    "use strict";
+    var R = typeof Reflect === "object" ? Reflect : null;
+    var ReflectApply = R && typeof R.apply === "function" ? R.apply : function ReflectApply2(target, receiver, args) {
+      return Function.prototype.apply.call(target, receiver, args);
+    };
+    var ReflectOwnKeys;
+    if (R && typeof R.ownKeys === "function") {
+      ReflectOwnKeys = R.ownKeys;
+    } else if (Object.getOwnPropertySymbols) {
+      ReflectOwnKeys = function ReflectOwnKeys2(target) {
+        return Object.getOwnPropertyNames(target).concat(Object.getOwnPropertySymbols(target));
+      };
+    } else {
+      ReflectOwnKeys = function ReflectOwnKeys2(target) {
+        return Object.getOwnPropertyNames(target);
+      };
+    }
+    function ProcessEmitWarning(warning) {
+      if (console && console.warn) console.warn(warning);
+    }
+    var NumberIsNaN = Number.isNaN || function NumberIsNaN2(value) {
+      return value !== value;
+    };
+    function EventEmitter2() {
+      EventEmitter2.init.call(this);
+    }
+    module.exports = EventEmitter2;
+    module.exports.once = once;
+    EventEmitter2.EventEmitter = EventEmitter2;
+    EventEmitter2.prototype._events = void 0;
+    EventEmitter2.prototype._eventsCount = 0;
+    EventEmitter2.prototype._maxListeners = void 0;
+    var defaultMaxListeners = 10;
+    function checkListener(listener) {
+      if (typeof listener !== "function") {
+        throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
+      }
+    }
+    Object.defineProperty(EventEmitter2, "defaultMaxListeners", {
+      enumerable: true,
+      get: function() {
+        return defaultMaxListeners;
+      },
+      set: function(arg) {
+        if (typeof arg !== "number" || arg < 0 || NumberIsNaN(arg)) {
+          throw new RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + arg + ".");
+        }
+        defaultMaxListeners = arg;
+      }
+    });
+    EventEmitter2.init = function() {
+      if (this._events === void 0 || this._events === Object.getPrototypeOf(this)._events) {
+        this._events = /* @__PURE__ */ Object.create(null);
+        this._eventsCount = 0;
+      }
+      this._maxListeners = this._maxListeners || void 0;
+    };
+    EventEmitter2.prototype.setMaxListeners = function setMaxListeners(n) {
+      if (typeof n !== "number" || n < 0 || NumberIsNaN(n)) {
+        throw new RangeError('The value of "n" is out of range. It must be a non-negative number. Received ' + n + ".");
+      }
+      this._maxListeners = n;
+      return this;
+    };
+    function _getMaxListeners(that) {
+      if (that._maxListeners === void 0)
+        return EventEmitter2.defaultMaxListeners;
+      return that._maxListeners;
+    }
+    EventEmitter2.prototype.getMaxListeners = function getMaxListeners() {
+      return _getMaxListeners(this);
+    };
+    EventEmitter2.prototype.emit = function emit(type) {
+      var args = [];
+      for (var i = 1; i < arguments.length; i++) args.push(arguments[i]);
+      var doError = type === "error";
+      var events = this._events;
+      if (events !== void 0)
+        doError = doError && events.error === void 0;
+      else if (!doError)
+        return false;
+      if (doError) {
+        var er;
+        if (args.length > 0)
+          er = args[0];
+        if (er instanceof Error) {
+          throw er;
+        }
+        var err = new Error("Unhandled error." + (er ? " (" + er.message + ")" : ""));
+        err.context = er;
+        throw err;
+      }
+      var handler = events[type];
+      if (handler === void 0)
+        return false;
+      if (typeof handler === "function") {
+        ReflectApply(handler, this, args);
+      } else {
+        var len = handler.length;
+        var listeners = arrayClone(handler, len);
+        for (var i = 0; i < len; ++i)
+          ReflectApply(listeners[i], this, args);
+      }
+      return true;
+    };
+    function _addListener(target, type, listener, prepend) {
+      var m;
+      var events;
+      var existing;
+      checkListener(listener);
+      events = target._events;
+      if (events === void 0) {
+        events = target._events = /* @__PURE__ */ Object.create(null);
+        target._eventsCount = 0;
+      } else {
+        if (events.newListener !== void 0) {
+          target.emit(
+            "newListener",
+            type,
+            listener.listener ? listener.listener : listener
+          );
+          events = target._events;
+        }
+        existing = events[type];
+      }
+      if (existing === void 0) {
+        existing = events[type] = listener;
+        ++target._eventsCount;
+      } else {
+        if (typeof existing === "function") {
+          existing = events[type] = prepend ? [listener, existing] : [existing, listener];
+        } else if (prepend) {
+          existing.unshift(listener);
+        } else {
+          existing.push(listener);
+        }
+        m = _getMaxListeners(target);
+        if (m > 0 && existing.length > m && !existing.warned) {
+          existing.warned = true;
+          var w = new Error("Possible EventEmitter memory leak detected. " + existing.length + " " + String(type) + " listeners added. Use emitter.setMaxListeners() to increase limit");
+          w.name = "MaxListenersExceededWarning";
+          w.emitter = target;
+          w.type = type;
+          w.count = existing.length;
+          ProcessEmitWarning(w);
+        }
+      }
+      return target;
+    }
+    EventEmitter2.prototype.addListener = function addListener(type, listener) {
+      return _addListener(this, type, listener, false);
+    };
+    EventEmitter2.prototype.on = EventEmitter2.prototype.addListener;
+    EventEmitter2.prototype.prependListener = function prependListener(type, listener) {
+      return _addListener(this, type, listener, true);
+    };
+    function onceWrapper() {
+      if (!this.fired) {
+        this.target.removeListener(this.type, this.wrapFn);
+        this.fired = true;
+        if (arguments.length === 0)
+          return this.listener.call(this.target);
+        return this.listener.apply(this.target, arguments);
+      }
+    }
+    function _onceWrap(target, type, listener) {
+      var state = { fired: false, wrapFn: void 0, target, type, listener };
+      var wrapped = onceWrapper.bind(state);
+      wrapped.listener = listener;
+      state.wrapFn = wrapped;
+      return wrapped;
+    }
+    EventEmitter2.prototype.once = function once2(type, listener) {
+      checkListener(listener);
+      this.on(type, _onceWrap(this, type, listener));
+      return this;
+    };
+    EventEmitter2.prototype.prependOnceListener = function prependOnceListener(type, listener) {
+      checkListener(listener);
+      this.prependListener(type, _onceWrap(this, type, listener));
+      return this;
+    };
+    EventEmitter2.prototype.removeListener = function removeListener(type, listener) {
+      var list, events, position, i, originalListener;
+      checkListener(listener);
+      events = this._events;
+      if (events === void 0)
+        return this;
+      list = events[type];
+      if (list === void 0)
+        return this;
+      if (list === listener || list.listener === listener) {
+        if (--this._eventsCount === 0)
+          this._events = /* @__PURE__ */ Object.create(null);
+        else {
+          delete events[type];
+          if (events.removeListener)
+            this.emit("removeListener", type, list.listener || listener);
+        }
+      } else if (typeof list !== "function") {
+        position = -1;
+        for (i = list.length - 1; i >= 0; i--) {
+          if (list[i] === listener || list[i].listener === listener) {
+            originalListener = list[i].listener;
+            position = i;
+            break;
+          }
+        }
+        if (position < 0)
+          return this;
+        if (position === 0)
+          list.shift();
+        else {
+          spliceOne(list, position);
+        }
+        if (list.length === 1)
+          events[type] = list[0];
+        if (events.removeListener !== void 0)
+          this.emit("removeListener", type, originalListener || listener);
+      }
+      return this;
+    };
+    EventEmitter2.prototype.off = EventEmitter2.prototype.removeListener;
+    EventEmitter2.prototype.removeAllListeners = function removeAllListeners(type) {
+      var listeners, events, i;
+      events = this._events;
+      if (events === void 0)
+        return this;
+      if (events.removeListener === void 0) {
+        if (arguments.length === 0) {
+          this._events = /* @__PURE__ */ Object.create(null);
+          this._eventsCount = 0;
+        } else if (events[type] !== void 0) {
+          if (--this._eventsCount === 0)
+            this._events = /* @__PURE__ */ Object.create(null);
+          else
+            delete events[type];
+        }
+        return this;
+      }
+      if (arguments.length === 0) {
+        var keys = Object.keys(events);
+        var key;
+        for (i = 0; i < keys.length; ++i) {
+          key = keys[i];
+          if (key === "removeListener") continue;
+          this.removeAllListeners(key);
+        }
+        this.removeAllListeners("removeListener");
+        this._events = /* @__PURE__ */ Object.create(null);
+        this._eventsCount = 0;
+        return this;
+      }
+      listeners = events[type];
+      if (typeof listeners === "function") {
+        this.removeListener(type, listeners);
+      } else if (listeners !== void 0) {
+        for (i = listeners.length - 1; i >= 0; i--) {
+          this.removeListener(type, listeners[i]);
+        }
+      }
+      return this;
+    };
+    function _listeners(target, type, unwrap) {
+      var events = target._events;
+      if (events === void 0)
+        return [];
+      var evlistener = events[type];
+      if (evlistener === void 0)
+        return [];
+      if (typeof evlistener === "function")
+        return unwrap ? [evlistener.listener || evlistener] : [evlistener];
+      return unwrap ? unwrapListeners(evlistener) : arrayClone(evlistener, evlistener.length);
+    }
+    EventEmitter2.prototype.listeners = function listeners(type) {
+      return _listeners(this, type, true);
+    };
+    EventEmitter2.prototype.rawListeners = function rawListeners(type) {
+      return _listeners(this, type, false);
+    };
+    EventEmitter2.listenerCount = function(emitter, type) {
+      if (typeof emitter.listenerCount === "function") {
+        return emitter.listenerCount(type);
+      } else {
+        return listenerCount.call(emitter, type);
+      }
+    };
+    EventEmitter2.prototype.listenerCount = listenerCount;
+    function listenerCount(type) {
+      var events = this._events;
+      if (events !== void 0) {
+        var evlistener = events[type];
+        if (typeof evlistener === "function") {
+          return 1;
+        } else if (evlistener !== void 0) {
+          return evlistener.length;
+        }
+      }
+      return 0;
+    }
+    EventEmitter2.prototype.eventNames = function eventNames() {
+      return this._eventsCount > 0 ? ReflectOwnKeys(this._events) : [];
+    };
+    function arrayClone(arr, n) {
+      var copy = new Array(n);
+      for (var i = 0; i < n; ++i)
+        copy[i] = arr[i];
+      return copy;
+    }
+    function spliceOne(list, index2) {
+      for (; index2 + 1 < list.length; index2++)
+        list[index2] = list[index2 + 1];
+      list.pop();
+    }
+    function unwrapListeners(arr) {
+      var ret = new Array(arr.length);
+      for (var i = 0; i < ret.length; ++i) {
+        ret[i] = arr[i].listener || arr[i];
+      }
+      return ret;
+    }
+    function once(emitter, name) {
+      return new Promise(function(resolve, reject) {
+        function errorListener(err) {
+          emitter.removeListener(name, resolver);
+          reject(err);
+        }
+        function resolver() {
+          if (typeof emitter.removeListener === "function") {
+            emitter.removeListener("error", errorListener);
+          }
+          resolve([].slice.call(arguments));
+        }
+        ;
+        eventTargetAgnosticAddListener(emitter, name, resolver, { once: true });
+        if (name !== "error") {
+          addErrorHandlerIfEventEmitter(emitter, errorListener, { once: true });
+        }
+      });
+    }
+    function addErrorHandlerIfEventEmitter(emitter, handler, flags) {
+      if (typeof emitter.on === "function") {
+        eventTargetAgnosticAddListener(emitter, "error", handler, flags);
+      }
+    }
+    function eventTargetAgnosticAddListener(emitter, name, listener, flags) {
+      if (typeof emitter.on === "function") {
+        if (flags.once) {
+          emitter.once(name, listener);
+        } else {
+          emitter.on(name, listener);
+        }
+      } else if (typeof emitter.addEventListener === "function") {
+        emitter.addEventListener(name, function wrapListener(arg) {
+          if (flags.once) {
+            emitter.removeEventListener(name, wrapListener);
+          }
+          listener(arg);
+        });
+      } else {
+        throw new TypeError('The "emitter" argument must be of type EventEmitter. Received type ' + typeof emitter);
+      }
+    }
   }
 });
 
@@ -15432,8 +15801,8 @@ var ThemeProvider2 = ({ children = null, targetDom, id, withGlobalStyles = true 
 var theme_provider_default = ThemeProvider2;
 
 // _inc/app.tsx
-var import_element55 = __toESM(require_element());
-var import_i18n18 = __toESM(require_i18n());
+var import_element57 = __toESM(require_element());
+var import_i18n20 = __toESM(require_i18n());
 import { useNavigate as useNavigate2, useSearch as useSearch2 } from "@wordpress/route";
 
 // _inc/data/use-ai.ts
@@ -15800,9 +16169,9 @@ var OverviewScreen = () => {
 var overview_default = OverviewScreen;
 
 // _inc/screens/settings/index.tsx
-var import_components7 = __toESM(require_components());
-var import_element54 = __toESM(require_element());
-var import_i18n17 = __toESM(require_i18n());
+var import_components8 = __toESM(require_components());
+var import_element56 = __toESM(require_element());
+var import_i18n19 = __toESM(require_i18n());
 import { useSearch } from "@wordpress/route";
 
 // _inc/screens/settings/title-structure-field.tsx
@@ -15901,20 +16270,313 @@ var TitleStructureField = ({ tokens, onChange, disabled: disabled2 }) => {
 var title_structure_field_default = TitleStructureField;
 
 // _inc/screens/settings/verification-card.tsx
+var import_components7 = __toESM(require_components());
+var import_i18n18 = __toESM(require_i18n());
+
+// _inc/screens/settings/google-verification-field.tsx
 var import_components6 = __toESM(require_components());
+var import_element55 = __toESM(require_element());
+var import_i18n17 = __toESM(require_i18n());
+
+// ../../../node_modules/.pnpm/@automattic+popup-monitor@1.0.2/node_modules/@automattic/popup-monitor/dist/esm/index.js
+var import_events = __toESM(require_events());
+function Emitter(prototype) {
+  Object.assign(prototype, import_events.EventEmitter.prototype);
+  prototype.emitChange = function() {
+    this.emit("change");
+  };
+  prototype.off = prototype.removeListener;
+}
+function PopupMonitor() {
+  this.intervals = {};
+  this.monitorInterval = null;
+  this.windowInstance = null;
+  this.onMessage = (messageEvent) => {
+    if (messageEvent.source === this.windowInstance) {
+      this.emit("message", messageEvent.data);
+    }
+  };
+}
+Emitter(PopupMonitor.prototype);
+PopupMonitor.prototype.open = function(url, name, specs) {
+  name = name || Date.now();
+  this.windowInstance = window.open(url, name, specs);
+  this.startMonitoring(name, this.windowInstance);
+  window.addEventListener("message", this.onMessage, false);
+  return this;
+};
+PopupMonitor.prototype.getScreenCenterSpecs = function(width, height) {
+  const screenTop = typeof window.screenTop !== "undefined" ? window.screenTop : window.screenY;
+  const screenLeft = typeof window.screenLeft !== "undefined" ? window.screenLeft : window.screenX;
+  return ["width=" + width, "height=" + height, "top=" + (screenTop + window.innerHeight / 2 - height / 2), "left=" + (screenLeft + window.innerWidth / 2 - width / 2)].join();
+};
+PopupMonitor.prototype.isOpen = function(name) {
+  let isClosed = false;
+  try {
+    isClosed = this.intervals[name] && this.intervals[name].closed;
+  } catch (e) {
+  }
+  return !isClosed;
+};
+PopupMonitor.prototype.checkStatus = function() {
+  for (const name in this.intervals) {
+    if (this.intervals.hasOwnProperty(name) && !this.isOpen(name)) {
+      this.emit("close", name);
+      delete this.intervals[name];
+    }
+  }
+  if (0 === Object.keys(this.intervals).length) {
+    clearInterval(this.monitorInterval);
+    delete this.monitorInterval;
+    window.removeEventListener("message", this.onMessage);
+  }
+};
+PopupMonitor.prototype.startMonitoring = function(name, windowInstance) {
+  if (!this.monitorInterval) {
+    this.monitorInterval = setInterval(this.checkStatus.bind(this), 100);
+  }
+  this.intervals[name] = windowInstance;
+};
+var esm_default = PopupMonitor;
+
+// ../../../node_modules/.pnpm/@automattic+request-external-access@1.0.1/node_modules/@automattic/request-external-access/dist/esm/index.js
+var requestExternalAccess = (url, cb) => {
+  const popupMonitor = new esm_default();
+  let lastMessage;
+  popupMonitor.open(url, null, "toolbar=0,location=0,status=0,menubar=0," + popupMonitor.getScreenCenterSpecs(780, 700));
+  popupMonitor.once("close", () => {
+    const result = {};
+    if (lastMessage && lastMessage.keyring_id) {
+      result.keyring_id = Number(lastMessage.keyring_id);
+      result.id_token = lastMessage.id_token;
+      result.user = lastMessage.user;
+    }
+    cb(result);
+  });
+  popupMonitor.on("message", (message) => lastMessage = message);
+};
+var esm_default2 = requestExternalAccess;
+
+// _inc/data/use-google-verify.ts
+var import_api_fetch3 = __toESM(require_api_fetch());
+var import_data3 = __toESM(require_data());
+var import_element54 = __toESM(require_element());
 var import_i18n16 = __toESM(require_i18n());
+var import_notices3 = __toESM(require_notices());
+var ENDPOINT = "/jetpack/v4/verify-site/google";
+var NOTICE_ID = "jetpack-seo-google-verify";
+var ALREADY_VERIFIED = {};
+function getGoogleVerifyBootstrap() {
+  const scriptData = getScriptData();
+  return scriptData?.seo?.google_verify ?? null;
+}
+function useGoogleVerify({
+  onCodeSaved
+} = {}) {
+  const bootstrap = (0, import_element54.useMemo)(() => getGoogleVerifyBootstrap(), []);
+  const isConnected = bootstrap?.is_connected ?? false;
+  const connectUrl = bootstrap?.connect_url ?? "";
+  const [state, setState] = (0, import_element54.useState)(
+    isConnected ? "loading" : "unavailable"
+  );
+  const [isOwner, setIsOwner] = (0, import_element54.useState)(false);
+  const [searchConsoleUrl, setSearchConsoleUrl] = (0, import_element54.useState)("");
+  const [isVerifying, setIsVerifying] = (0, import_element54.useState)(false);
+  const { createInfoNotice, createSuccessNotice, createErrorNotice } = (0, import_data3.useDispatch)(import_notices3.store);
+  const applyStatus = (0, import_element54.useCallback)((status) => {
+    setState(status.verified ? "verified" : "unverified");
+    setIsOwner(!!status.is_owner);
+    setSearchConsoleUrl(status.google_search_console_url ?? "");
+  }, []);
+  (0, import_element54.useEffect)(() => {
+    if (!isConnected) {
+      return void 0;
+    }
+    let cancelled = false;
+    (0, import_api_fetch3.default)({ path: ENDPOINT }).then((status) => {
+      if (!cancelled) {
+        applyStatus(status);
+      }
+    }).catch((error2) => {
+      if (cancelled) {
+        return;
+      }
+      const code = error2?.code;
+      setState(code === "forbidden" ? "unavailable" : "unverified");
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [isConnected, applyStatus]);
+  const autoVerify = (0, import_element54.useCallback)(() => {
+    if (!connectUrl || isVerifying) {
+      return;
+    }
+    setIsVerifying(true);
+    esm_default2(connectUrl, (result) => {
+      const keyringId = result?.keyring_id;
+      if (!keyringId) {
+        setIsVerifying(false);
+        return;
+      }
+      createInfoNotice((0, import_i18n16.__)("Verifying with Google\u2026", "jetpack-seo"), {
+        id: NOTICE_ID,
+        type: "snackbar",
+        isDismissible: false
+      });
+      let savedToken = "";
+      (0, import_api_fetch3.default)({ path: `${ENDPOINT}/${keyringId}` }).then((status) => {
+        if (status.verified) {
+          applyStatus(status);
+          createSuccessNotice((0, import_i18n16.__)("Your site is verified with Google.", "jetpack-seo"), {
+            id: NOTICE_ID,
+            type: "snackbar"
+          });
+          throw ALREADY_VERIFIED;
+        }
+        if (!status.token) {
+          throw new Error(
+            (0, import_i18n16.__)(
+              "Google did not return a verification token for this account. Try another account, or enter a code manually.",
+              "jetpack-seo"
+            )
+          );
+        }
+        savedToken = status.token;
+        return (0, import_api_fetch3.default)({
+          path: "/jetpack/v4/settings",
+          method: "POST",
+          data: { google: status.token }
+        });
+      }).then(() => {
+        onCodeSaved?.(savedToken);
+        return (0, import_api_fetch3.default)({
+          path: ENDPOINT,
+          method: "POST",
+          data: { keyring_id: keyringId }
+        });
+      }).then(() => (0, import_api_fetch3.default)({ path: `${ENDPOINT}/${keyringId}` })).then((status) => {
+        applyStatus(status);
+        if (status.verified) {
+          createSuccessNotice((0, import_i18n16.__)("Your site is verified with Google.", "jetpack-seo"), {
+            id: NOTICE_ID,
+            type: "snackbar"
+          });
+        } else {
+          createErrorNotice(
+            (0, import_i18n16.__)(
+              "Google couldn't verify this site. Make sure the Google account you used has access to it in Search Console.",
+              "jetpack-seo"
+            ),
+            { id: NOTICE_ID, type: "snackbar" }
+          );
+        }
+      }).catch((error2) => {
+        if (error2 === ALREADY_VERIFIED) {
+          return;
+        }
+        setState("unverified");
+        createErrorNotice(
+          error2?.message ?? (0, import_i18n16.__)("Could not verify the site. Please try again.", "jetpack-seo"),
+          { id: NOTICE_ID, type: "snackbar" }
+        );
+      }).finally(() => setIsVerifying(false));
+    });
+  }, [
+    connectUrl,
+    isVerifying,
+    applyStatus,
+    onCodeSaved,
+    createInfoNotice,
+    createSuccessNotice,
+    createErrorNotice
+  ]);
+  return { state, isConnected, isOwner, searchConsoleUrl, isVerifying, autoVerify };
+}
+
+// _inc/screens/settings/google-verification-field.tsx
 var import_jsx_runtime69 = __toESM(require_jsx_runtime());
+var manualHelp = (0, import_i18n17.__)(
+  'Paste the "content" attribute from the Google Search Console meta tag.',
+  "jetpack-seo"
+);
+var GoogleVerificationField = ({ value, onChange, onCommit, disabled: disabled2 }) => {
+  const { state, isConnected, isOwner, searchConsoleUrl, isVerifying, autoVerify } = useGoogleVerify({ onCodeSaved: onChange });
+  const [manualOpen, setManualOpen] = (0, import_element55.useState)(false);
+  const manualField = /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
+    import_components6.TextControl,
+    {
+      label: (0, import_i18n17.__)("Google verification code", "jetpack-seo"),
+      value,
+      onChange,
+      onBlur: onCommit,
+      help: manualHelp,
+      disabled: disabled2,
+      __next40pxDefaultSize: true,
+      __nextHasNoMarginBottom: true
+    }
+  );
+  if (!isConnected || state === "unavailable") {
+    return /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { className: "jetpack-seo-settings__google-verification", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
+      import_components6.TextControl,
+      {
+        label: (0, import_i18n17.__)("Google", "jetpack-seo"),
+        value,
+        onChange,
+        onBlur: onCommit,
+        help: manualHelp,
+        disabled: disabled2,
+        __next40pxDefaultSize: true,
+        __nextHasNoMarginBottom: true
+      }
+    ) });
+  }
+  return /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(Stack, { direction: "column", gap: "sm", className: "jetpack-seo-settings__google-verification", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("strong", { children: (0, import_i18n17.__)("Google", "jetpack-seo") }),
+      state === "verified" && /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(Badge, { intent: "stable", children: (0, import_i18n17.__)("Verified", "jetpack-seo") }),
+      state === "unverified" && /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(Badge, { intent: "draft", children: (0, import_i18n17.__)("Not verified", "jetpack-seo") })
+    ] }),
+    state === "verified" && isOwner && !!searchConsoleUrl && /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(Link, { href: searchConsoleUrl, openInNewTab: true, rel: "noopener noreferrer", children: (0, import_i18n17.__)("View in Google Search Console", "jetpack-seo") }),
+    state !== "verified" && /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(Stack, { direction: "row", gap: "sm", align: "center", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
+        import_components6.Button,
+        {
+          variant: "primary",
+          onClick: autoVerify,
+          isBusy: isVerifying,
+          disabled: disabled2 || isVerifying || state === "loading",
+          children: (0, import_i18n17.__)("Verify with Google", "jetpack-seo")
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
+        import_components6.Button,
+        {
+          variant: "tertiary",
+          onClick: () => setManualOpen((current) => !current),
+          disabled: disabled2,
+          children: (0, import_i18n17.__)("Enter a code manually", "jetpack-seo")
+        }
+      )
+    ] }),
+    state !== "verified" && (manualOpen || !!value) && manualField
+  ] });
+};
+var google_verification_field_default = GoogleVerificationField;
+
+// _inc/screens/settings/verification-card.tsx
+var import_jsx_runtime70 = __toESM(require_jsx_runtime());
 var HINTS = {
-  google: (0, import_i18n16.__)(
+  google: (0, import_i18n18.__)(
     'Paste the "content" attribute from the Google Search Console meta tag.',
     "jetpack-seo"
   ),
-  bing: (0, import_i18n16.__)("Bing Webmaster Tools meta tag.", "jetpack-seo"),
-  pinterest: (0, import_i18n16.__)("Pinterest meta tag.", "jetpack-seo"),
-  yandex: (0, import_i18n16.__)("Yandex Webmaster meta tag.", "jetpack-seo"),
-  facebook: (0, import_i18n16.__)("Facebook domain verification meta tag.", "jetpack-seo")
+  bing: (0, import_i18n18.__)("Bing Webmaster Tools meta tag.", "jetpack-seo"),
+  pinterest: (0, import_i18n18.__)("Pinterest meta tag.", "jetpack-seo"),
+  yandex: (0, import_i18n18.__)("Yandex Webmaster meta tag.", "jetpack-seo"),
+  facebook: (0, import_i18n18.__)("Facebook domain verification meta tag.", "jetpack-seo")
 };
-var notSetLabel2 = (0, import_i18n16.__)("Not set", "jetpack-seo");
+var notSetLabel2 = (0, import_i18n18.__)("Not set", "jetpack-seo");
 var VerificationCard = ({
   value,
   onChange,
@@ -15925,44 +16587,57 @@ var VerificationCard = ({
 }) => {
   const verifiedCount = VERIFICATION_SERVICES.filter(({ key }) => !!value[key]).length;
   const collapsibleProps = open === void 0 ? { defaultOpen: false } : { open, onOpenChange };
-  return /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(collapsible_card_exports.Root, { ...collapsibleProps, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(card_exports.Title, { children: (0, import_i18n16.__)("Site verification", "jetpack-seo") }),
-      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(Badge, { intent: verifiedCount > 0 ? "stable" : "draft", children: verifiedCount > 0 ? (0, import_i18n16.sprintf)(
+  return /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(collapsible_card_exports.Root, { ...collapsibleProps, children: [
+    /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(card_exports.Title, { children: (0, import_i18n18.__)("Site verification", "jetpack-seo") }),
+      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(Badge, { intent: verifiedCount > 0 ? "stable" : "draft", children: verifiedCount > 0 ? (0, import_i18n18.sprintf)(
         /* translators: %d: number of verification services configured */
-        (0, import_i18n16._n)("%d verified", "%d verified", verifiedCount, "jetpack-seo"),
+        (0, import_i18n18._n)("%d verified", "%d verified", verifiedCount, "jetpack-seo"),
         verifiedCount
       ) : notSetLabel2 })
     ] }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { className: "jetpack-seo-settings__verification-grid", children: VERIFICATION_SERVICES.map(({ key, label }) => /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
-      import_components6.TextControl,
-      {
-        label,
-        value: value[key],
-        onChange: (next) => onChange(key, next),
-        onBlur: onCommit,
-        help: HINTS[key],
-        disabled: disabled2,
-        __next40pxDefaultSize: true,
-        __nextHasNoMarginBottom: true
-      },
-      key
-    )) }) })
+    /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(Stack, { direction: "column", gap: "lg", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
+        google_verification_field_default,
+        {
+          value: value.google,
+          onChange: (next) => onChange("google", next),
+          onCommit,
+          disabled: disabled2
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("div", { className: "jetpack-seo-settings__verification-grid", children: VERIFICATION_SERVICES.filter(({ key }) => key !== "google").map(
+        ({ key, label }) => /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
+          import_components7.TextControl,
+          {
+            label,
+            value: value[key],
+            onChange: (next) => onChange(key, next),
+            onBlur: onCommit,
+            help: HINTS[key],
+            disabled: disabled2,
+            __next40pxDefaultSize: true,
+            __nextHasNoMarginBottom: true
+          },
+          key
+        )
+      ) })
+    ] }) })
   ] });
 };
 var verification_card_default = VerificationCard;
 
 // _inc/screens/settings/index.tsx
-var import_jsx_runtime70 = __toESM(require_jsx_runtime());
-var setLabel = (0, import_i18n17.__)("Set", "jetpack-seo");
-var notSetLabel3 = (0, import_i18n17.__)("Not set", "jetpack-seo");
-var enabledLabel = (0, import_i18n17.__)("Enabled", "jetpack-seo");
-var disabledLabel = (0, import_i18n17.__)("Disabled", "jetpack-seo");
+var import_jsx_runtime71 = __toESM(require_jsx_runtime());
+var setLabel = (0, import_i18n19.__)("Set", "jetpack-seo");
+var notSetLabel3 = (0, import_i18n19.__)("Not set", "jetpack-seo");
+var enabledLabel = (0, import_i18n19.__)("Enabled", "jetpack-seo");
+var disabledLabel = (0, import_i18n19.__)("Disabled", "jetpack-seo");
 var SettingsScreen = ({ form }) => {
   const { local, isSaving, setField, setVerification, commit } = form;
   const search = useSearch({ from: "/", strict: false });
   const focus = search.focus;
-  (0, import_element54.useEffect)(() => {
+  (0, import_element56.useEffect)(() => {
     if (focus !== "visibility" && focus !== "verification") {
       return;
     }
@@ -15971,34 +16646,34 @@ var SettingsScreen = ({ form }) => {
     });
     return () => cancelAnimationFrame(frame);
   }, [focus]);
-  const [verificationOpen, setVerificationOpen] = (0, import_element54.useState)(focus === "verification");
-  (0, import_element54.useEffect)(() => {
+  const [verificationOpen, setVerificationOpen] = (0, import_element56.useState)(focus === "verification");
+  (0, import_element56.useEffect)(() => {
     if (focus === "verification") {
       setVerificationOpen(true);
     }
   }, [focus]);
   if (!local) {
-    return /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(notice_exports.Root, { intent: "error", children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(notice_exports.Description, { children: (0, import_i18n17.__)("Unable to load settings.", "jetpack-seo") }) });
+    return /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(notice_exports.Root, { intent: "error", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(notice_exports.Description, { children: (0, import_i18n19.__)("Unable to load settings.", "jetpack-seo") }) });
   }
   const postsTokens = local.title_formats.posts ?? [];
   const visibilityEnabledCount = (local.search_engines_visible ? 1 : 0) + (local.sitemap_active ? 1 : 0);
-  return /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)("div", { className: "jetpack-seo-settings", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("div", { id: "visibility", className: "jetpack-seo-settings__section", children: /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(collapsible_card_exports.Root, { defaultOpen: true, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(card_exports.Title, { children: (0, import_i18n17.__)("Site visibility", "jetpack-seo") }),
-        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(Badge, { intent: visibilityEnabledCount === 2 ? "stable" : "draft", children: (0, import_i18n17.sprintf)(
+  return /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)("div", { className: "jetpack-seo-settings", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { id: "visibility", className: "jetpack-seo-settings__section", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(collapsible_card_exports.Root, { defaultOpen: true, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(card_exports.Title, { children: (0, import_i18n19.__)("Site visibility", "jetpack-seo") }),
+        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(Badge, { intent: visibilityEnabledCount === 2 ? "stable" : "draft", children: (0, import_i18n19.sprintf)(
           /* translators: %1$d: number of enabled visibility settings, %2$d: total. */
-          (0, import_i18n17.__)("%1$d of %2$d enabled", "jetpack-seo"),
+          (0, import_i18n19.__)("%1$d of %2$d enabled", "jetpack-seo"),
           visibilityEnabledCount,
           2
         ) })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(Stack, { direction: "column", gap: "lg", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
-          import_components7.ToggleControl,
+      /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(Stack, { direction: "column", gap: "lg", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
+          import_components8.ToggleControl,
           {
-            label: (0, import_i18n17.__)("Allow search engines to index this site", "jetpack-seo"),
-            help: (0, import_i18n17.__)(
+            label: (0, import_i18n19.__)("Allow search engines to index this site", "jetpack-seo"),
+            help: (0, import_i18n19.__)(
               'Mirrors Settings \u2192 Reading \u2192 "Discourage search engines from indexing this site". Turning this off asks search engines to stop indexing your site; honored by Google and Bing, ignored by others. Use only for staging or pre-launch sites.',
               "jetpack-seo"
             ),
@@ -16008,11 +16683,11 @@ var SettingsScreen = ({ form }) => {
             __nextHasNoMarginBottom: true
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
-          import_components7.ToggleControl,
+        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
+          import_components8.ToggleControl,
           {
-            label: (0, import_i18n17.__)("Generate an XML sitemap", "jetpack-seo"),
-            help: (0, import_i18n17.__)(
+            label: (0, import_i18n19.__)("Generate an XML sitemap", "jetpack-seo"),
+            help: (0, import_i18n19.__)(
               "Publishes an XML sitemap that search engines crawl to discover your content, generated automatically from your site's published posts, pages, and custom post types.",
               "jetpack-seo"
             ),
@@ -16024,16 +16699,16 @@ var SettingsScreen = ({ form }) => {
         )
       ] }) })
     ] }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(collapsible_card_exports.Root, { defaultOpen: false, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(card_exports.Title, { children: (0, import_i18n17.__)("Canonical URLs", "jetpack-seo") }),
-        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(Badge, { intent: local.canonical_active ? "stable" : "draft", children: local.canonical_active ? enabledLabel : disabledLabel })
+    /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(collapsible_card_exports.Root, { defaultOpen: false, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(card_exports.Title, { children: (0, import_i18n19.__)("Canonical URLs", "jetpack-seo") }),
+        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(Badge, { intent: local.canonical_active ? "stable" : "draft", children: local.canonical_active ? enabledLabel : disabledLabel })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
-        import_components7.ToggleControl,
+      /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
+        import_components8.ToggleControl,
         {
-          label: (0, import_i18n17.__)("Add canonical URLs to archive pages", "jetpack-seo"),
-          help: (0, import_i18n17.__)(
+          label: (0, import_i18n19.__)("Add canonical URLs to archive pages", "jetpack-seo"),
+          help: (0, import_i18n19.__)(
             'Adds a rel="canonical" link to archive pages, helping search engines identify the preferred URL and avoid indexing duplicate content.',
             "jetpack-seo"
           ),
@@ -16044,7 +16719,7 @@ var SettingsScreen = ({ form }) => {
         }
       ) })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
       title_structure_field_default,
       {
         tokens: postsTokens,
@@ -16052,15 +16727,15 @@ var SettingsScreen = ({ form }) => {
         disabled: isSaving
       }
     ),
-    /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(collapsible_card_exports.Root, { defaultOpen: false, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime70.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(card_exports.Title, { children: (0, import_i18n17.__)("Front-page description", "jetpack-seo") }),
-        /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(Badge, { intent: local.front_page_description ? "stable" : "draft", children: local.front_page_description ? setLabel : notSetLabel3 })
+    /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(collapsible_card_exports.Root, { defaultOpen: false, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(card_exports.Title, { children: (0, import_i18n19.__)("Front-page description", "jetpack-seo") }),
+        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(Badge, { intent: local.front_page_description ? "stable" : "draft", children: local.front_page_description ? setLabel : notSetLabel3 })
       ] }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
-        import_components7.TextareaControl,
+      /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
+        import_components8.TextareaControl,
         {
-          label: (0, import_i18n17.__)("Meta description shown on the home page", "jetpack-seo"),
+          label: (0, import_i18n19.__)("Meta description shown on the home page", "jetpack-seo"),
           value: local.front_page_description,
           onChange: (next) => setField({ front_page_description: next }),
           onBlur: () => commit(),
@@ -16070,7 +16745,7 @@ var SettingsScreen = ({ form }) => {
         }
       ) })
     ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime70.jsx)("div", { id: "verification", className: "jetpack-seo-settings__section", children: /* @__PURE__ */ (0, import_jsx_runtime70.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { id: "verification", className: "jetpack-seo-settings__section", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
       verification_card_default,
       {
         value: local.verification,
@@ -16094,14 +16769,14 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 }
 
 // _inc/app.tsx
-var import_jsx_runtime71 = __toESM(require_jsx_runtime());
+var import_jsx_runtime72 = __toESM(require_jsx_runtime());
 var App = () => {
   const search = useSearch2({ from: "/", strict: false });
   const activeTab = search.tab === "settings" || search.tab === "ai" ? search.tab : "overview";
   const navigate = useNavigate2();
   const settingsForm = useSettingsForm();
   const aiForm = useAiForm();
-  const onTabChange = (0, import_element55.useCallback)(
+  const onTabChange = (0, import_element57.useCallback)(
     (next) => {
       if (next !== "overview" && next !== "settings" && next !== "ai") {
         return;
@@ -16116,24 +16791,24 @@ var App = () => {
     },
     [navigate]
   );
-  return /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(theme_provider_default, { children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(
+  return /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(theme_provider_default, { children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(
     admin_page_default,
     {
       title: "SEO",
-      subTitle: (0, import_i18n18.__)(
+      subTitle: (0, import_i18n20.__)(
         "Visibility tools for your site \u2014 sitemaps, search-engine settings, and more, in one place.",
         "jetpack-seo"
       ),
       showFooter: true,
-      children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(tabs_exports.Root, { value: activeTab, onValueChange: onTabChange, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { className: "jp-admin-page-tabs jp-admin-page-tabs--minimal", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsxs)(tabs_exports.List, { variant: "minimal", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(tabs_exports.Tab, { value: "overview", children: (0, import_i18n18.__)("Overview", "jetpack-seo") }),
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(tabs_exports.Tab, { value: "settings", children: (0, import_i18n18.__)("Settings", "jetpack-seo") }),
-          /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(tabs_exports.Tab, { value: "ai", children: (0, import_i18n18.__)("AI", "jetpack-seo") })
+      children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)(tabs_exports.Root, { value: activeTab, onValueChange: onTabChange, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "jp-admin-page-tabs jp-admin-page-tabs--minimal", children: /* @__PURE__ */ (0, import_jsx_runtime72.jsxs)(tabs_exports.List, { variant: "minimal", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(tabs_exports.Tab, { value: "overview", children: (0, import_i18n20.__)("Overview", "jetpack-seo") }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(tabs_exports.Tab, { value: "settings", children: (0, import_i18n20.__)("Settings", "jetpack-seo") }),
+          /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(tabs_exports.Tab, { value: "ai", children: (0, import_i18n20.__)("AI", "jetpack-seo") })
         ] }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(tabs_exports.Panel, { value: "overview", focusable: false, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { className: "jetpack-seo-page-content", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(overview_default, {}) }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(tabs_exports.Panel, { value: "settings", focusable: false, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { className: "jetpack-seo-page-content", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(settings_default, { form: settingsForm }) }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(tabs_exports.Panel, { value: "ai", focusable: false, children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)("div", { className: "jetpack-seo-page-content", children: /* @__PURE__ */ (0, import_jsx_runtime71.jsx)(ai_default, { form: aiForm }) }) })
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(tabs_exports.Panel, { value: "overview", focusable: false, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "jetpack-seo-page-content", children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(overview_default, {}) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(tabs_exports.Panel, { value: "settings", focusable: false, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "jetpack-seo-page-content", children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(settings_default, { form: settingsForm }) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(tabs_exports.Panel, { value: "ai", focusable: false, children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)("div", { className: "jetpack-seo-page-content", children: /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(ai_default, { form: aiForm }) }) })
       ] })
     }
   ) });
