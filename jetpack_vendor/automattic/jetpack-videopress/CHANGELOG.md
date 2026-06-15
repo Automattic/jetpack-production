@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: Add drag-and-drop video upload to the new Library, with upload progress and a notice when the single-video plan limit is reached.
 - VideoPress: Open a video's details from the Library grid by clicking the thumbnail or title, with a hover "Edit details" affordance and full keyboard support.
+- VideoPress dashboard: show a Deleting progress state on library rows and the video details page while media is being deleted, and run bulk deletions in parallel.
 
 ### Changed
 - Update package dependencies.
