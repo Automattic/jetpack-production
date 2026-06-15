@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add options from assorted WooCommerce settings pages to sync whitelist, as part of activity log improvements.
+- Sync: Send WooCommerce customer account detail updates.
 
 ## [4.42.0] - 2026-06-10
 ### Added
