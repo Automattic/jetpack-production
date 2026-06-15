@@ -15461,6 +15461,9 @@ function buildJetpackPayload(baseline, local) {
   if (local.sitemap_active !== baseline.sitemap_active) {
     payload.sitemaps = local.sitemap_active;
   }
+  if (local.canonical_active !== baseline.canonical_active) {
+    payload["canonical-urls"] = local.canonical_active;
+  }
   if (JSON.stringify(local.title_formats) !== JSON.stringify(baseline.title_formats)) {
     payload.advanced_seo_title_formats = local.title_formats;
   }
@@ -15873,6 +15876,8 @@ var verification_card_default = VerificationCard;
 var import_jsx_runtime69 = __toESM(require_jsx_runtime());
 var setLabel = (0, import_i18n15.__)("Set", "jetpack-seo");
 var notSetLabel3 = (0, import_i18n15.__)("Not set", "jetpack-seo");
+var enabledLabel = (0, import_i18n15.__)("Enabled", "jetpack-seo");
+var disabledLabel = (0, import_i18n15.__)("Disabled", "jetpack-seo");
 var SettingsScreen = ({ form }) => {
   const { local, isSaving, setField, setVerification, commit } = form;
   const search = useSearch({ from: "/", strict: false });
@@ -15939,6 +15944,26 @@ var SettingsScreen = ({ form }) => {
         )
       ] }) })
     ] }) }),
+    /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(collapsible_card_exports.Root, { defaultOpen: false, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(card_exports.Title, { children: (0, import_i18n15.__)("Canonical URLs", "jetpack-seo") }),
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(Badge, { intent: local.canonical_active ? "stable" : "draft", children: local.canonical_active ? enabledLabel : disabledLabel })
+      ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
+        import_components6.ToggleControl,
+        {
+          label: (0, import_i18n15.__)("Add canonical URLs to archive pages", "jetpack-seo"),
+          help: (0, import_i18n15.__)(
+            'Adds a rel="canonical" link to archive pages, helping search engines identify the preferred URL and avoid indexing duplicate content.',
+            "jetpack-seo"
+          ),
+          checked: local.canonical_active,
+          onChange: (next) => commit({ canonical_active: next }),
+          disabled: isSaving,
+          __nextHasNoMarginBottom: true
+        }
+      ) })
+    ] }),
     /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
       title_structure_field_default,
       {
