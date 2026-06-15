@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add an AI tab to the SEO dashboard and move the AI SEO Enhancer toggle (auto-generate SEO title, description, and image alt text for new posts) onto it.
 - Add Google site auto-verification to the Settings tab: connected sites can verify with Google through a WordPress.com keyring popup (with manual meta-tag entry as a fallback), replacing the legacy Traffic-page UI.
 - SEO: add a search & social previews card to the Settings tab, showing how the home page appears in Google results and when shared on Facebook and X.
+- SEO: edit the title structure for all page types (front page, posts, pages, tags, archives) from the Settings tab, not just posts. Tokens are inserted from buttons into a text field, so literal text and separators (e.g. " | ") between tokens are preserved.
 
 ### Changed
 - Split the SEO dashboard into per-route wp-build stages (Overview, Settings, AI) with route-based navigation, replacing the single-route tab app. No user-facing change.

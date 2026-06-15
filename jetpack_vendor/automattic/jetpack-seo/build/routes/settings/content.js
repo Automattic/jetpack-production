@@ -161,9 +161,9 @@ var require_with_selector_development = __commonJS({
         return x === y && (0 !== x || 1 / x === 1 / y) || x !== x && y !== y;
       }
       "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-      var React73 = require_react(), shim = require_shim(), objectIs = "function" === typeof Object.is ? Object.is : is, useSyncExternalStore3 = shim.useSyncExternalStore, useRef34 = React73.useRef, useEffect27 = React73.useEffect, useMemo33 = React73.useMemo, useDebugValue2 = React73.useDebugValue;
+      var React73 = require_react(), shim = require_shim(), objectIs = "function" === typeof Object.is ? Object.is : is, useSyncExternalStore3 = shim.useSyncExternalStore, useRef35 = React73.useRef, useEffect27 = React73.useEffect, useMemo33 = React73.useMemo, useDebugValue2 = React73.useDebugValue;
       exports.useSyncExternalStoreWithSelector = function(subscribe2, getSnapshot2, getServerSnapshot2, selector, isEqual) {
-        var instRef = useRef34(null);
+        var instRef = useRef35(null);
         if (null === instRef.current) {
           var inst = { hasValue: false, value: null };
           instRef.current = inst;
@@ -16135,21 +16135,64 @@ var import_i18n12 = __toESM(require_i18n());
 var TOKEN_LABELS = {
   site_name: (0, import_i18n12.__)("Site name", "jetpack-seo"),
   tagline: (0, import_i18n12.__)("Tagline", "jetpack-seo"),
-  post_title: (0, import_i18n12.__)("Post title", "jetpack-seo")
+  post_title: (0, import_i18n12.__)("Post title", "jetpack-seo"),
+  page_title: (0, import_i18n12.__)("Page title", "jetpack-seo"),
+  group_title: (0, import_i18n12.__)("Tag or category name", "jetpack-seo"),
+  date: (0, import_i18n12.__)("Date", "jetpack-seo"),
+  archive_title: (0, import_i18n12.__)("Archive title", "jetpack-seo")
 };
 var TOKEN_IDS = Object.keys(TOKEN_LABELS);
+var PAGE_TYPES = [
+  { id: "front_page", label: (0, import_i18n12.__)("Front page", "jetpack-seo") },
+  { id: "posts", label: (0, import_i18n12.__)("Posts", "jetpack-seo") },
+  { id: "pages", label: (0, import_i18n12.__)("Pages", "jetpack-seo") },
+  { id: "groups", label: (0, import_i18n12.__)("Tags", "jetpack-seo") },
+  { id: "archives", label: (0, import_i18n12.__)("Archives", "jetpack-seo") }
+];
+var PAGE_TYPE_TOKENS = {
+  front_page: ["site_name", "tagline"],
+  posts: ["site_name", "tagline", "post_title"],
+  pages: ["site_name", "tagline", "page_title"],
+  groups: ["site_name", "tagline", "group_title"],
+  archives: ["site_name", "tagline", "date", "archive_title"]
+};
+var PAGE_TYPE_SUGGESTIONS = {
+  ...PAGE_TYPE_TOKENS,
+  archives: ["site_name", "tagline", "archive_title"]
+};
+var TOKEN_PREVIEW_SAMPLES = {
+  site_name: (0, import_i18n12.__)("Your site", "jetpack-seo"),
+  tagline: (0, import_i18n12.__)("Your tagline", "jetpack-seo"),
+  post_title: (0, import_i18n12.__)("Hello World", "jetpack-seo"),
+  page_title: (0, import_i18n12.__)("Sample Page", "jetpack-seo"),
+  group_title: (0, import_i18n12.__)("News", "jetpack-seo"),
+  date: (0, import_i18n12.__)("January 2025", "jetpack-seo"),
+  archive_title: (0, import_i18n12.__)("Sample Archive", "jetpack-seo")
+};
 var LABEL_TO_TOKEN_ID = Object.fromEntries(
   TOKEN_IDS.map((id) => [TOKEN_LABELS[id], id])
 );
+var escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+var LABEL_PATTERN = new RegExp(
+  `(\\[(?:${Object.values(TOKEN_LABELS).map(escapeRegExp).join("|")})\\])`
+);
 var toDisplay = (token) => token.type === "token" && TOKEN_LABELS[token.value] ? `[${TOKEN_LABELS[token.value]}]` : token.value;
-var fromDisplay = (display) => {
+var fromDisplay = (display, allowedTokenIds) => {
   const match = display.match(/^\[(.+)\]$/);
   const inner = match?.[1];
-  if (inner && LABEL_TO_TOKEN_ID[inner]) {
-    return { type: "token", value: LABEL_TO_TOKEN_ID[inner] };
+  if (inner) {
+    const id = LABEL_TO_TOKEN_ID[inner];
+    if (id && (!allowedTokenIds || allowedTokenIds.includes(id))) {
+      return { type: "token", value: id };
+    }
   }
   return { type: "string", value: display };
 };
+var buildPreview = (tokens) => tokens.map(
+  (token) => token.type === "string" ? token.value : TOKEN_PREVIEW_SAMPLES[token.value] ?? token.value
+).join("");
+var tokensToString = (tokens) => tokens.map(toDisplay).join("");
+var stringToTokens = (input, allowedTokenIds) => input.split(LABEL_PATTERN).filter((segment) => segment !== "").map((segment) => fromDisplay(segment, allowedTokenIds));
 
 // _inc/screens/settings/style.scss
 if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='df324484d8']")) {
@@ -16161,61 +16204,90 @@ if (typeof document !== "undefined" && true && !document.head.querySelector("sty
 
 // _inc/screens/settings/title-structure-field.tsx
 var import_jsx_runtime66 = __toESM(require_jsx_runtime());
-var customizedLabel = (0, import_i18n13.__)("Customized", "jetpack-seo");
 var defaultLabel = (0, import_i18n13.__)("Default", "jetpack-seo");
-var TitleStructureField = ({ tokens, onChange, disabled: disabled2 }) => {
-  const displayValues = (0, import_element52.useMemo)(() => tokens.map(toDisplay), [tokens]);
-  const displaySuggestions = (0, import_element52.useMemo)(
-    () => TOKEN_IDS.map((id) => `[${TOKEN_LABELS[id]}]`),
-    []
+var previewLabel = (0, import_i18n13.__)("Preview", "jetpack-seo");
+var TitleStructureRow = ({ pageTypeId, label, tokens, onChange, disabled: disabled2 }) => {
+  const inputRef = (0, import_element52.useRef)(null);
+  const value = (0, import_element52.useMemo)(() => tokensToString(tokens), [tokens]);
+  const allowed = PAGE_TYPE_TOKENS[pageTypeId];
+  const preview = (0, import_element52.useMemo)(() => buildPreview(tokens), [tokens]);
+  const setFromString = (0, import_element52.useCallback)(
+    (next) => onChange(stringToTokens(next, allowed)),
+    [onChange, allowed]
   );
-  const preview = (0, import_element52.useMemo)(
-    () => tokens.map((token) => {
-      if (token.type === "string") {
-        return token.value;
-      }
-      switch (token.value) {
-        case "site_name":
-          return (0, import_i18n13.__)("Your site", "jetpack-seo");
-        case "tagline":
-          return (0, import_i18n13.__)("Your tagline", "jetpack-seo");
-        case "post_title":
-          return (0, import_i18n13.__)("Hello World", "jetpack-seo");
-        default:
-          return token.value;
-      }
-    }).join(""),
-    [tokens]
+  const insertToken = (0, import_element52.useCallback)(
+    (tokenId) => {
+      const input = inputRef.current;
+      const insert = `[${TOKEN_LABELS[tokenId]}]`;
+      const caret = input ? input.selectionStart ?? value.length : value.length;
+      setFromString(value.slice(0, caret) + insert + value.slice(caret));
+      const nextCaret = caret + insert.length;
+      requestAnimationFrame(() => {
+        if (input) {
+          input.focus();
+          input.setSelectionRange(nextCaret, nextCaret);
+        }
+      });
+    },
+    [value, setFromString]
   );
-  const hasCustomStructure = tokens.length > 0;
+  return /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "jetpack-seo-settings__title-row", children: [
+    /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(Stack, { direction: "row", gap: "xs", wrap: true, children: PAGE_TYPE_SUGGESTIONS[pageTypeId].map((tokenId) => /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+      import_components2.Button,
+      {
+        variant: "secondary",
+        size: "small",
+        disabled: disabled2,
+        onClick: () => insertToken(tokenId),
+        children: TOKEN_LABELS[tokenId]
+      },
+      tokenId
+    )) }),
+    /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+      import_components2.TextControl,
+      {
+        ref: inputRef,
+        label,
+        value,
+        onChange: setFromString,
+        disabled: disabled2,
+        __next40pxDefaultSize: true,
+        __nextHasNoMarginBottom: true
+      }
+    ),
+    tokens.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "jetpack-seo-settings__preview", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("strong", { children: [
+        previewLabel,
+        ":"
+      ] }),
+      " ",
+      preview
+    ] })
+  ] });
+};
+var TitleStructureField = ({ formats, onChange, disabled: disabled2 }) => {
+  const customizedCount = PAGE_TYPES.filter((pt) => (formats[pt.id]?.length ?? 0) > 0).length;
   return /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)(collapsible_card_exports.Root, { defaultOpen: false, children: [
     /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(card_exports.Title, { children: (0, import_i18n13.__)("Post title structure", "jetpack-seo") }),
-      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(Badge, { intent: hasCustomStructure ? "stable" : "draft", children: hasCustomStructure ? customizedLabel : defaultLabel })
+      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(card_exports.Title, { children: (0, import_i18n13.__)("Title structure", "jetpack-seo") }),
+      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(Badge, { intent: customizedCount > 0 ? "stable" : "draft", children: customizedCount > 0 ? (0, import_i18n13.sprintf)(
+        /* translators: %1$d: number of customized page types, %2$d: total page types. */
+        (0, import_i18n13.__)("%1$d of %2$d customized", "jetpack-seo"),
+        customizedCount,
+        PAGE_TYPES.length
+      ) : defaultLabel })
     ] }) }),
-    /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)(collapsible_card_exports.Content, { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
-        import_components2.FormTokenField,
-        {
-          label: (0, import_i18n13.__)("Tokens", "jetpack-seo"),
-          value: displayValues,
-          suggestions: displaySuggestions,
-          onChange: (next) => onChange(next.map(fromDisplay)),
-          disabled: disabled2,
-          __experimentalExpandOnFocus: true,
-          __next40pxDefaultSize: true,
-          __nextHasNoMarginBottom: true
-        }
-      ),
-      /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "jetpack-seo-settings__preview", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("strong", { children: [
-          (0, import_i18n13.__)("Preview", "jetpack-seo"),
-          ":"
-        ] }),
-        " ",
-        preview
-      ] })
-    ] })
+    /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(collapsible_card_exports.Content, { children: /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(Stack, { direction: "column", gap: "lg", children: PAGE_TYPES.map((pt) => /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+      TitleStructureRow,
+      {
+        pageTypeId: pt.id,
+        label: pt.label,
+        tokens: formats[pt.id] ?? [],
+        onChange: (next) => onChange(pt.id, next),
+        disabled: disabled2
+      },
+      pt.id
+    )) }) })
   ] });
 };
 var title_structure_field_default = TitleStructureField;
@@ -16609,7 +16681,6 @@ var SettingsScreen = ({ form }) => {
   if (!local) {
     return /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(notice_exports.Root, { intent: "error", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(notice_exports.Description, { children: (0, import_i18n17.__)("Unable to load settings.", "jetpack-seo") }) });
   }
-  const postsTokens = local.title_formats.posts ?? [];
   const visibilityEnabledCount = (local.search_engines_visible ? 1 : 0) + (local.sitemap_active ? 1 : 0);
   return /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "jetpack-seo-settings", children: [
     /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { id: "visibility", className: "jetpack-seo-settings__section", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(collapsible_card_exports.Root, { defaultOpen: true, children: [
@@ -16687,8 +16758,8 @@ var SettingsScreen = ({ form }) => {
     /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
       title_structure_field_default,
       {
-        tokens: postsTokens,
-        onChange: (next) => commit({ title_formats: { ...local.title_formats, posts: next } }),
+        formats: local.title_formats,
+        onChange: (pageType, next) => commit({ title_formats: { ...local.title_formats, [pageType]: next } }),
         disabled: isSaving
       }
     ),
