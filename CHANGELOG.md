@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Render the unified Jetpack admin header and footer on Akismet's admin pages.
 - SEO: Surface SEO Tools as a Plugin Search Hint when users search the plugin directory for SEO-related terms.
+- Subscriptions: replace the Subscribers menu link with a transitional announcement page when the Newsletter modernization filter is enabled.
 
 ### Bug fixes
 - Akismet: hide the empty #screen-meta-links container so it no longer reserves a blank slot above the Jetpack header (notably on WordPress.com Simple sites).
