@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.5.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.5.0] - 2026-06-15
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#49631]
 
 ### Fixed
-- Agents Manager: Bootstrap hooks exactly once even if multiple versions of the class are shipped.
-- Agents Manager: drive the sidebar pre-render from the persisted open state (cached in a transient) instead of a path-scoped cookie, and only pre-render where the app is actually loaded, so closing the assistant on another domain no longer leaves a stale sidebar shell behind.
+- Agents Manager: Bootstrap hooks exactly once even if multiple versions of the class are shipped. [#49636]
+- Agents Manager: drive the sidebar pre-render from the persisted open state (cached in a transient) instead of a path-scoped cookie, and only pre-render where the app is actually loaded, so closing the assistant on another domain no longer leaves a stale sidebar shell behind. [#49439]
 
 ## [0.4.0] - 2026-06-15
 ### Added
@@ -46,7 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Agents Manager: Allow overriding variant and sectionName through filters [#49283]
 - Initial version, extracted from Jetpack MU WPCOM to its own package for external consumption. [#49202]
 
-[0.5.0-alpha]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.4.0...v0.5.0-alpha
+[0.5.0]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.3.2...v0.4.0
 [0.3.2]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.3.0...v0.3.1
