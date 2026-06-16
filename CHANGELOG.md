@@ -11,9 +11,11 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Surface SEO Tools as a Plugin Search Hint when users search the plugin directory for SEO-related terms.
 
 ### Bug fixes
+- Akismet: hide the empty #screen-meta-links container so it no longer reserves a blank slot above the Jetpack header (notably on WordPress.com Simple sites).
 - Blaze: warn users with active campaigns before disabling the Blaze module.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Akismet: make the admin header/footer chrome registration idempotent so it can't render twice if wired from more than one entry point.
 - Update package dependencies.
 
 ## 16.0-a.1 - 2026-06-15
