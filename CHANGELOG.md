@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add AI-powered "Generate/Improve with Jetpack" buttons to the Content Guidelines admin page for guideline suggestions.
 - Render the unified Jetpack admin header and footer on Akismet's admin pages.
 - SEO: Surface SEO Tools as a Plugin Search Hint when users search the plugin directory for SEO-related terms.
 - Subscriptions: replace the Subscribers menu link with a transitional announcement page when the Newsletter modernization filter is enabled.
@@ -14,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Akismet: hide the empty #screen-meta-links container so it no longer reserves a blank slot above the Jetpack header (notably on WordPress.com Simple sites).
 - Blaze: warn users with active campaigns before disabling the Blaze module.
+- Content Guidelines AI: update DOM selectors and the data store name (core/guidelines) to match the latest Gutenberg Guidelines markup and store so the AI UI injects correctly.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Akismet: make the admin header/footer chrome registration idempotent so it can't render twice if wired from more than one entry point.
