@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Update package dependencies.
+
 ## [8.7.0] - 2026-06-15
 ### Added
 - Connectors: Surface Jetpack Safe Mode (Identity Crisis) state and resolution options in the connector card. [#49486]
