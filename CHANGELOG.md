@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Akismet: hide the empty #screen-meta-links container so it no longer reserves a blank slot above the Jetpack header (notably on WordPress.com Simple sites).
 - Blaze: warn users with active campaigns before disabling the Blaze module.
 - Content Guidelines AI: update DOM selectors and the data store name (core/guidelines) to match the latest Gutenberg Guidelines markup and store so the AI UI injects correctly.
+- Newsletter: when prompting the user to set up paid subscriptions, only ask for the steps that are actually missing (Stripe connection and/or a newsletter tier).
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Akismet: make the admin header/footer chrome registration idempotent so it can't render twice if wired from more than one entry point.
