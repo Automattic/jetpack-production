@@ -1287,8 +1287,12 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php'
 	),
 	'Automattic\\Jetpack\\SEO\\Initializer' => array(
-		'version' => '0.2.0.0-alpha1781557711',
+		'version' => '0.2.0.0-alpha1781708566',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-initializer.php'
+	),
+	'Automattic\\Jetpack\\SEO\\Schema_Builder' => array(
+		'version' => '0.2.0.0-alpha1781708566',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-builder.php'
 	),
 	'Automattic\\Jetpack\\Scan_Page\\Initial_State' => array(
 		'version' => '0.1.6.0-alpha1781554849',

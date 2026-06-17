@@ -15,6 +15,13 @@ return array(
 		'has_content' => true,
 	),
 	array(
+		'name'        => 'content',
+		'path'        => '/content',
+		'page'        => 'jetpack-seo-dashboard',
+		'has_route'   => true,
+		'has_content' => true,
+	),
+	array(
 		'name'        => 'overview',
 		'path'        => '/',
 		'page'        => 'jetpack-seo-dashboard',

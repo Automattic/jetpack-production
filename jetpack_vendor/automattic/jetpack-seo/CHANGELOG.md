@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a Canonical URLs toggle to the Settings tab (ports the legacy Traffic-page feature), controlling the canonical-urls module that adds rel="canonical" tags to archive pages.
+- Add a Content tab (a DataViews list of posts/pages backed by core REST, with per-post SEO editing and a SERP preview), a Content SEO coverage card on the Overview, and front-end JSON-LD schema (Article / FAQ).
 - Add an AI tab to the SEO dashboard and move the AI SEO Enhancer toggle (auto-generate SEO title, description, and image alt text for new posts) onto it.
 - Add Google site auto-verification to the Settings tab: connected sites can verify with Google through a WordPress.com keyring popup (with manual meta-tag entry as a fallback), replacing the legacy Traffic-page UI.
 - SEO: add a search & social previews card to the Settings tab, showing how the home page appears in Google results and when shared on Facebook and X.
@@ -19,6 +20,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Split the SEO dashboard into per-route wp-build stages (Overview, Settings, AI) with route-based navigation, replacing the single-route tab app. No user-facing change.
 - Update package dependencies.
+
+### Fixed
+- SEO: persist Settings and AI tab values across tab navigation. A saved change now shows when you return to the tab without needing a page reload.
 
 ## [0.1.1] - 2026-06-15
 ### Changed
