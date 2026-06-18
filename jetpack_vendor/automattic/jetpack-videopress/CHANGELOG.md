@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update package dependencies.
+- VideoPress: Persist Library view settings (layout, columns, sort, per-page) per-user across reloads.
 
 ### Fixed
 - Fix a wp-admin fatal error when using the VideoPress Divi extension with Divi Builder on PHP 8+.
