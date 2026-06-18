@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a transitional Subscribers announcement page (wp-build) shown in place of the legacy Subscribers menu link when the Newsletter modernization filter is enabled.
+- Add Subscribers_Announcement::add_wp_admin_submenu() to register the transitional Subscribers announcement page directly under the Jetpack menu (used on WordPress.com sites).
 
 ### Changed
 - Subscribers: link the Substack importer button to the WordPress.com site-setup importer flow.
