@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fix connecting Meta accounts (Facebook, Instagram, Threads) by returning the connection result through a same-origin BroadcastChannel instead of window.opener, which Meta severs via COOP
 - Social: Detect when the browser blocks the connection popup and notify the user.
+- Social previews: Remove the misleading URL from captions when it is not a part of it.
 
 ## [0.81.4] - 2026-06-15
 ### Changed
