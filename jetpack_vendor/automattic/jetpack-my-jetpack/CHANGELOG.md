@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Import the Jetpack modules data store from the new jetpack-shared-stores package.
 - Update package dependencies.
 
+### Fixed
+- Modules list: fix rounded corners so row dividers no longer poke past the border
+
 ## [5.38.4] - 2026-06-15
 ### Changed
 - Update dependencies. [#46951]
