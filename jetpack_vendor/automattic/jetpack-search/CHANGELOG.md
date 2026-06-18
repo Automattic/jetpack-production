@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Search blocks: Use the default editor color for block icons.
+
 ## [7.2.3] - 2026-06-15
 ### Changed
 - Internal updates.
