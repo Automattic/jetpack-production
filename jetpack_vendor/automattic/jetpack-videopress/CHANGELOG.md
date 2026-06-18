@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a native Divi 5 VideoPress module alongside the existing Divi 4 module, with configurable player settings and a conversion outline to support migrating layouts built with the legacy module.
 - VideoPress: Allow changing privacy (public, private, site default) on multiple videos at once from the new Library, skipping items that can't accept the change and reporting any partial failures.
 - VideoPress dashboard: show a Deleting progress state on library rows and the video details page while media is being deleted, and run bulk deletions in parallel.
 
