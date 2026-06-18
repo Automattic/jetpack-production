@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Import the Jetpack modules data store from the new jetpack-shared-stores package.
 - Update package dependencies.
 
 ## [5.38.4] - 2026-06-15
