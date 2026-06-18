@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fix a wp-admin fatal error when using the VideoPress Divi extension with Divi Builder on PHP 8+.
 - Prevent PHP warnings when building the VideoPress dashboard state and resolving video metadata for videos with incomplete data.
+- VideoPress dashboard: add padding to the "Processing" badge in the video details view so its label is no longer flush against the badge background.
 - VideoPress dashboard: truncate long video titles and filenames with an ellipsis in the library grid and table, and clamp long titles in the video details breadcrumb.
 
 ## [0.37.0] - 2026-06-15
