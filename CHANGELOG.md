@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Donations Form: don't render the first-time modal, lock post saving, or fetch Stripe status when the block is shown as an inserter preview, which caused the editor to flicker on hover.
 - Newsletter: when prompting the user to set up paid subscriptions, only ask for the steps that are actually missing (Stripe connection and/or a newsletter tier).
 - Subscriptions: register the transitional Subscribers announcement page on self-hosted Jetpack only; on WordPress.com it is owned by jetpack-mu-wpcom, avoiding a duplicate menu entry on Atomic.
+- Top Posts & Pages: Use the live post permalink so links reflect the current site URL instead of a stale stored URL.
 - VideoPress: Enqueue the player scripts instead of printing them inline so they load only once when a page contains multiple videos, and enqueue the VideoJS player stylesheet on the non-iframe path so the player is sized correctly instead of overflowing the page.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
