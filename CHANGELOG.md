@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Allow setting a custom description for the free tier and hiding it from the subscriber plan selector.
 - Render the unified Jetpack admin header and footer on Akismet's admin pages.
 - SEO: add a per-post schema type (jetpack_seo_schema_type meta + a block-editor Schema type control) and factual SEO columns (schema, meta description, search visibility) on post-list tables.
+- SEO: seed a durable `jetpack_seo_surface_visible` cohort flag on install/upgrade so the new SEO surface is auto-discoverable on fresh installs but opt-in on existing ones, and add an opt-in banner to the legacy Traffic > SEO settings page.
 - SEO: Surface SEO Tools as a Plugin Search Hint when users search the plugin directory for SEO-related terms.
 - Subscriptions: replace the Subscribers menu link with a transitional announcement page when the Newsletter modernization filter is enabled.
 

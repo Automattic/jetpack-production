@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a Content tab (a DataViews list of posts/pages backed by core REST, with per-post SEO editing and a SERP preview), a Content SEO coverage card on the Overview, and front-end JSON-LD schema (Article / FAQ).
 - Add an AI tab to the SEO dashboard and move the AI SEO Enhancer toggle (auto-generate SEO title, description, and image alt text for new posts) onto it.
 - Add Google site auto-verification to the Settings tab: connected sites can verify with Google through a WordPress.com keyring popup (with manual meta-tag entry as a fallback), replacing the legacy Traffic-page UI.
+- Gate the Jetpack SEO admin menu on a discoverability cohort: WordPress.com and fresh self-hosted installs see it automatically, existing installs opt in. Keeps the menu discoverable when the seo-tools module is off (with an in-app enable/disable affordance) and adds the `POST /jetpack/v4/seo/opt-in` endpoint, the `jetpack_seo_surface_visible` option, and `Initializer::is_seo_surface_visible()`.
 - SEO: add a search & social previews card to the Settings tab, showing how the home page appears in Google results and when shared on Facebook and X.
 - SEO: edit the title structure for all page types (front page, posts, pages, tags, archives) from the Settings tab, not just posts. Tokens are inserted from buttons into a text field, so literal text and separators (e.g. " | ") between tokens are preserved.
 

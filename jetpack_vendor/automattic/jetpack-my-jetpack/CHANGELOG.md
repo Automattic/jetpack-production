@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Give Jetpack Forms its own product card in the Growth category instead of a plain module list item.
+- My Jetpack: add a card inviting existing self-hosted installs to try the new Jetpack SEO dashboard.
 
 ### Changed
 - Import the Jetpack modules data store from the new jetpack-shared-stores package.
