@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Only dequeue Help Center in the block editor when the full unified experience is active, so Help Center stays available in block-editor-only mode (e.g. ?flags=unified-big-sky)
+
 ## [0.5.0] - 2026-06-15
 ### Changed
 - Update package dependencies. [#49631]
