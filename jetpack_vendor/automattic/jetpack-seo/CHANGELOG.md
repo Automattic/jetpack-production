@@ -18,6 +18,8 @@ This is an alpha version! The changes listed here are not final.
 - SEO: edit the title structure for all page types (front page, posts, pages, tags, archives) from the Settings tab, not just posts. Tokens are inserted from buttons into a text field, so literal text and separators (e.g. " | ") between tokens are preserved.
 
 ### Changed
+- Read the canonical-URLs enabled-state from the durable `jetpack_seo_canonical_urls_enabled` option (falling back to the live module state when unset) so it survives the standalone Canonical URLs module's eventual removal.
+- Read the sitemap enabled-state from the durable `jetpack_seo_sitemap_enabled` option (falling back to the live module state when unset) so it survives the standalone Sitemaps module's eventual removal.
 - Split the SEO dashboard into per-route wp-build stages (Overview, Settings, AI) with route-based navigation, replacing the single-route tab app. No user-facing change.
 - Update package dependencies.
 
