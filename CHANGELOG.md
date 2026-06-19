@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add AI-powered "Generate/Improve with Jetpack" buttons to the Content Guidelines admin page for guideline suggestions.
+- AI Sidebar: Enable Optimize Title suggestions.
 - Newsletter: Allow setting a custom description for the free tier and hiding it from the subscriber plan selector.
 - Render the unified Jetpack admin header and footer on Akismet's admin pages.
 - SEO: add a per-post schema type (jetpack_seo_schema_type meta + a block-editor Schema type control) and factual SEO columns (schema, meta description, search visibility) on post-list tables.
