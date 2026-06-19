@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Apply the stored image focal point to the social link previews.
 
 ### Changed
+- Social: Reconnect accounts in place instead of disconnecting and recreating them, retaining connection settings.
 - Update package dependencies.
 
 ### Fixed
