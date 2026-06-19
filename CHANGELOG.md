@@ -8,7 +8,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add AI-powered "Generate/Improve with Jetpack" buttons to the Content Guidelines admin page for guideline suggestions.
-- Notifications: use the v3 notifications panel by default.
 - Render the unified Jetpack admin header and footer on Akismet's admin pages.
 - SEO: add a per-post schema type (jetpack_seo_schema_type meta + a block-editor Schema type control) and factual SEO columns (schema, meta description, search visibility) on post-list tables.
 - SEO: Surface SEO Tools as a Plugin Search Hint when users search the plugin directory for SEO-related terms.
