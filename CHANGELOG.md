@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Akismet: hide the empty #screen-meta-links container so it no longer reserves a blank slot above the Jetpack header (notably on WordPress.com Simple sites).
 - Blaze: warn users with active campaigns before disabling the Blaze module.
 - Content Guidelines AI: update DOM selectors and the data store name (core/guidelines) to match the latest Gutenberg Guidelines markup and store so the AI UI injects correctly.
+- Donations Form: don't render the first-time modal, lock post saving, or fetch Stripe status when the block is shown as an inserter preview, which caused the editor to flicker on hover.
 - Newsletter: when prompting the user to set up paid subscriptions, only ask for the steps that are actually missing (Stripe connection and/or a newsletter tier).
 - Subscriptions: register the transitional Subscribers announcement page on self-hosted Jetpack only; on WordPress.com it is owned by jetpack-mu-wpcom, avoiding a duplicate menu entry on Atomic.
 - VideoPress: Enqueue the player scripts instead of printing them inline so they load only once when a page contains multiple videos, and enqueue the VideoJS player stylesheet on the non-iframe path so the player is sized correctly instead of overflowing the page.
