@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Akismet: make the admin header/footer chrome registration idempotent so it can't render twice if wired from more than one entry point.
 - Editor: Load the shared data stores through the externalized jetpack-shared-stores bundle to avoid duplicate store registration warnings.
+- Podcast: add a Jetpack module that loads the Podcast package, gated behind the default-off `jetpack_podcast_for_the_world` filter.
 - SEO: seed and keep in sync a durable `jetpack_seo_canonical_urls_enabled` option from the Canonical URLs module's active state, so the setting is preserved when the standalone module is later absorbed into Jetpack SEO. Non-destructive: no settings are changed or removed.
 - SEO: seed and keep in sync a durable `jetpack_seo_sitemap_enabled` option from the Sitemaps module's active state, so the setting is preserved when the standalone module is later absorbed into Jetpack SEO. Non-destructive: no sitemap data is regenerated or removed.
 - Updated WooCommerce Analytics package to version 0.16.6.

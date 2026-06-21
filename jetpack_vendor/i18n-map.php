@@ -106,7 +106,7 @@ return array(
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '5.39.0-alpha1781905489',
+      'ver' => '5.39.0-alpha1782079968',
     ),
     'jetpack-newsletter' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-newsletter',
@@ -123,6 +123,10 @@ return array(
     'jetpack-plugins-installer' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
       'ver' => '0.5.11',
+    ),
+    'jetpack-podcast' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-podcast',
+      'ver' => '1.1.1-alpha1782079683',
     ),
     'jetpack-post-list' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-post-list',

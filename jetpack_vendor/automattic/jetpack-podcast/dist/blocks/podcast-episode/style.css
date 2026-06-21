@@ -1,0 +1,271 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../../node_modules/.pnpm/css-loader@6.11.0_webpack@5.105.2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../node_modules/.pnpm/sass-loader@16.0.5_sass-embedded@1.97.3_webpack@5.105.2/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/blocks/podcast-episode/style.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * Podcast Episode block shared styles (editor + front-end).
+ */
+/**
+ * Colors
+ */
+/**
+ * SCSS Variables.
+ *
+ * Please use variables from this sheet to ensure consistency across the UI.
+ * Don't add to this sheet unless you're pretty sure the value will be reused in many places.
+ * For example, don't add rules to this sheet that affect block visuals. It's purely for UI.
+ */
+/**
+ * Fonts & basic variables.
+ */
+/**
+ * Typography
+ */
+/**
+ * Grid System.
+ * https://make.wordpress.org/design/2019/10/31/proposal-a-consistent-spacing-system-for-wordpress/
+ */
+/**
+ * Radius scale.
+ */
+/**
+ * Elevation scale.
+ */
+/**
+ * Dimensions.
+ */
+/**
+ * Mobile specific styles
+ */
+/**
+ * Editor styles.
+ */
+/**
+ * Block & Editor UI.
+ */
+/**
+ * Block paddings.
+ */
+/**
+ * React Native specific.
+ * These variables do not appear to be used anywhere else.
+ */
+/**
+ * Breakpoints & Media Queries
+ */
+/**
+ * Typography
+ */
+/**
+*  Converts a hex value into the rgb equivalent.
+*
+* @param {string} hex - the hexadecimal value to convert
+* @return {string} comma separated rgb values
+*/
+/**
+ * Long content fade mixin
+ *
+ * Creates a fading overlay to signify that the content is longer
+ * than the space allows.
+ */
+/**
+ * Breakpoint mixins
+ */
+/**
+ * Focus styles.
+ */
+/**
+ * Applies editor left position to the selector passed as argument
+ */
+/**
+ * Styles that are reused verbatim in a few places
+ */
+/**
+ * Allows users to opt-out of animations via OS-level preferences.
+ */
+/**
+ * Reset default styles for JavaScript UI based pages.
+ * This is a WP-admin agnostic reset
+ */
+/**
+ * Reset the WP Admin page styles for Gutenberg-like pages.
+ */
+/**
+ * Creates a checkerboard pattern background to indicate transparency.
+ * @param {String} $size - The size of the squares in the checkerboard pattern. Default is 12px.
+ */
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: #fff;
+}
+@media (max-width: 600px) {
+  .wp-block-jetpack-podcast-episode .jetpack-podcast-episode {
+    flex-direction: column;
+  }
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__poster {
+  flex: 0 0 auto;
+  margin: 0;
+  inline-size: 160px;
+  max-inline-size: 40%;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__poster img {
+  inline-size: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: calc(6px - 2px);
+  display: block;
+}
+@media (max-width: 600px) {
+  .wp-block-jetpack-podcast-episode .jetpack-podcast-episode__poster {
+    inline-size: 100%;
+    max-inline-size: 100%;
+  }
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__body {
+  flex: 1 1 auto;
+  min-inline-size: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  font-size: 0.85em;
+  color: #757575;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__badge {
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 8px;
+  padding-block: 2px;
+  font-size: 0.75em;
+  font-weight: 600;
+  line-height: 1.4;
+  border-radius: 999px;
+  background-color: #f0f0f0;
+  color: #1e1e1e;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__badge--trailer {
+  background-color: #e7f5ff;
+  color: #0073aa;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__badge--bonus {
+  background-color: #fff4e6;
+  color: #b35900;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__badge--explicit {
+  background-color: #1e1e1e;
+  color: #fff;
+  font-family: monospace;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__title {
+  margin: 0;
+  font-size: 1.4em;
+  line-height: 1.3;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__byline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  font-size: 0.9em;
+  color: #757575;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__player {
+  margin-block: 4px;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__player audio,
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__player video {
+  inline-size: 100%;
+  max-inline-size: 100%;
+  display: block;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__player video {
+  border-radius: calc(6px - 2px);
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__summary {
+  margin: 0;
+  font-weight: 500;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__description {
+  margin: 0;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__description p:last-child {
+  margin-block-end: 0;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__people {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__person {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__person img {
+  inline-size: 28px;
+  block-size: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__person-role {
+  color: #757575;
+  font-size: 0.85em;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__soundbite {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__soundbite-time {
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+  color: #757575;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__soundbite-button {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__soundbite-button:hover .jetpack-podcast-episode__soundbite-title {
+  text-decoration: underline;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__soundbite-button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+.wp-block-jetpack-podcast-episode .jetpack-podcast-episode__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.9em;
+}
+
+/*# sourceMappingURL=style.css.map*/
