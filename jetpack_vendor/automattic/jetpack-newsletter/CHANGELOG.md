@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Align the settings DataForm field `Edit` controls, the import-subscribers notice `ActionLink`, and the dashboard tab panels with the `@wordpress/dataviews` 16 and `@wordpress/ui` 0.15 type APIs.
 - Newsletter: close the subscriber detail panel when its subscriber is removed instead of leaving it open with stale data
 
 ## [0.9.1] - 2026-06-15
