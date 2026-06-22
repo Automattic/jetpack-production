@@ -16282,7 +16282,7 @@ var TitleStructureRow = ({ pageTypeId, label, tokens, onChange, disabled: disabl
     [value, setFromString]
   );
   return /* @__PURE__ */ (0, import_jsx_runtime66.jsxs)("div", { className: "jetpack-seo-settings__title-row", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(Stack, { direction: "row", gap: "xs", wrap: true, children: PAGE_TYPE_SUGGESTIONS[pageTypeId].map((tokenId) => /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
+    /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(Stack, { direction: "row", gap: "xs", wrap: "wrap", children: PAGE_TYPE_SUGGESTIONS[pageTypeId].map((tokenId) => /* @__PURE__ */ (0, import_jsx_runtime66.jsx)(
       import_components2.Button,
       {
         variant: "secondary",

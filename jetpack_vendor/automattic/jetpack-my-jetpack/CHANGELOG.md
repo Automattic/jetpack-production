@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Fix `@wordpress/ui` 0.15 type error: accept anchor click events on the secondary action button's `onClick` handler so it works when rendered as a Link.
 - Modules list: fix rounded corners so row dividers no longer poke past the border
 
 ## [5.38.4] - 2026-06-15

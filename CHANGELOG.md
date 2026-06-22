@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Blaze: warn users with active campaigns before disabling the Blaze module.
 - Content Guidelines AI: update DOM selectors and the data store name (core/guidelines) to match the latest Gutenberg Guidelines markup and store so the AI UI injects correctly.
 - Donations Form: don't render the first-time modal, lock post saving, or fetch Stripe status when the block is shown as an inserter preview, which caused the editor to flicker on hover.
+- Fix `@wordpress/ui` 0.15 type errors: drop the unsupported `target` prop on Link (it is set via `openInNewTab`) in the mobile-app recommendation, and type the AI Assistant message icon as a `ReactElement`.
 - Newsletter: fix "Sorry, you are not allowed to do this" error for Contributors on the first Submit for Review when the Subscriptions module is active.
 - Newsletter: when prompting the user to set up paid subscriptions, only ask for the steps that are actually missing (Stripe connection and/or a newsletter tier).
 - Paid Content: ensure paid subscribers on Atomic-hosted sites retain access to gated content by translating local user IDs to WordPress.com user IDs before querying subscriptions.

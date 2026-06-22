@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Fix `@wordpress/ui` 0.15 type error: pass a valid Stack `wrap` value in the SEO title-structure field.
 - SEO: persist Settings and AI tab values across tab navigation. A saved change now shows when you return to the tab without needing a page reload.
 
 ## [0.1.1] - 2026-06-15

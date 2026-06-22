@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fix `@wordpress/ui` 0.15 type error: use a valid Stack `gap` token (`xs`) in the responses dashboard.
+
 ## [7.22.3] - 2026-06-15
 ### Changed
 - Update package dependencies. [#49492]
