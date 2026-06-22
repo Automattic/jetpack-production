@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Connection management: mark the `inert` attribute on the wrapper for the upcoming React 19 migration.
+- Update package dependencies.
 
 ### Fixed
 - Align share-button, service-row and dashboard tab-panel props with the `@wordpress/ui` 0.15 API: render the share `Button` as an anchor (it is a link), match the `Collapsible.Trigger` ref type, and drop the unsupported `focusable` prop on `Tabs.Panel`.

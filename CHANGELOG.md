@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - JSON API: Require Jetpack 15.9 or later to dispatch the posts, users, site, and plugins endpoints over REST.
 - Sync: Append an order's total (total, currency) to the synced woocommerce_new_order and woocommerce_order_status_changed actions when the order reaches a paid status, so WPcom can aggregate revenue.
 - Updated package dependencies.
+- Update package dependencies.
 
 ## 16.0-a.3 - 2026-06-22
 ### Enhancements

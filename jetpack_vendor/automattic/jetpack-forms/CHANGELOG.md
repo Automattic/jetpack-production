@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Fix `@wordpress/ui` 0.15 type error: use a valid Stack `gap` token (`xs`) in the responses dashboard.
 

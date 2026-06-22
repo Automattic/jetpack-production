@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Align the settings DataForm field `Edit` controls, the import-subscribers notice `ActionLink`, and the dashboard tab panels with the `@wordpress/dataviews` 16 and `@wordpress/ui` 0.15 type APIs.
 

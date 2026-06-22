@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - My Jetpack: Rank product search results by relevance so direct title matches appear first.
+- Update package dependencies.
 
 ### Fixed
 - Fix `@wordpress/ui` 0.15 type error: accept anchor click events on the secondary action button's `onClick` handler so it works when rendered as a Link.
