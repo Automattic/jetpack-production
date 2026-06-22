@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add focal point data model and picker in the media section
 - Apply the stored image focal point to the social link previews.
+- Social: Crop Open Graph images around the selected image focal point.
 
 ### Changed
 - Social: Reconnect accounts in place instead of disconnecting and recreating them, retaining connection settings.

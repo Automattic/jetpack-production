@@ -307,6 +307,7 @@ return array(
     'Automattic\\Jetpack\\Protect_Status\\Scan_Status' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-scan-status.php',
     'Automattic\\Jetpack\\Protect_Status\\Status' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-status.php',
     'Automattic\\Jetpack\\Publicize\\Connections' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-connections.php',
+    'Automattic\\Jetpack\\Publicize\\Focal_Point' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-focal-point.php',
     'Automattic\\Jetpack\\Publicize\\Jetpack_Social_Settings\\Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/jetpack-social-settings/class-settings.php',
     'Automattic\\Jetpack\\Publicize\\Keyring_Helper' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-keyring-helper.php',
     'Automattic\\Jetpack\\Publicize\\Keyring_Result_Handler' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-keyring-result-handler.php',
