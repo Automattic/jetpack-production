@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Align share-button, service-row and dashboard tab-panel props with the `@wordpress/ui` 0.15 API: render the share `Button` as an anchor (it is a link), match the `Collapsible.Trigger` ref type, and drop the unsupported `focusable` prop on `Tabs.Panel`.
 - Fix connecting Meta accounts (Facebook, Instagram, Threads) by returning the connection result through a same-origin BroadcastChannel instead of window.opener, which Meta severs via COOP
 - Fix Jetpack Social admin page rendering blank on WordPress 6.9.x.
 - Honor a disabled connection when publishing a brand new post via the REST API, not only when updating an existing post.
