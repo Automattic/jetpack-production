@@ -5,24 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.38.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.38.0] - 2026-06-22
 ### Added
-- Add a native Divi 5 VideoPress module alongside the existing Divi 4 module, with configurable player settings and a conversion outline to support migrating layouts built with the legacy module.
-- VideoPress: Allow changing privacy (public, private, site default) on multiple videos at once from the new Library, skipping items that can't accept the change and reporting any partial failures.
-- VideoPress dashboard: show a Deleting progress state on library rows and the video details page while media is being deleted, and run bulk deletions in parallel.
+- Add a native Divi 5 module alongside the existing Divi 4 module, with configurable player settings and support for migrating legacy layouts. [#49669]
+- Allow changing privacy (public, private, site default) for multiple videos at once from the new Library. [#49474]
+- Show a "Deleting" progress state on library rows and the video details page during deletion. [#49558]
 
 ### Changed
-- Update package dependencies.
-- VideoPress: Persist Library view settings (layout, columns, sort, per-page) per-user across reloads.
+- Update package dependencies. [#49631] [#49638] [#49691] [#49757]
+- Persist Library view settings (layout, columns, sort, per-page) per-user across reloads. [#49475]
 
 ### Fixed
-- Fix a wp-admin fatal error when using the VideoPress Divi extension with Divi Builder on PHP 8+.
-- Prevent PHP warnings when building the VideoPress dashboard state and resolving video metadata for videos with incomplete data.
-- VideoPress dashboard: add padding to the "Processing" badge in the video details view so its label is no longer flush against the badge background.
-- VideoPress dashboard: truncate long video titles and filenames with an ellipsis in the library grid and table, and clamp long titles in the video details breadcrumb.
+- Fix a WP Admin fatal error when using the VideoPress Divi extension with Divi Builder on PHP 8+. [#49668]
+- Prevent PHP warnings for videos with incomplete metadata. [#49621]
+- Add padding to the "Processing" badge in the video details view. [#49693]
+- Truncate long video titles and filenames in the library grid and table, and clamp them in the video details breadcrumb. [#49561]
 
 ## [0.37.0] - 2026-06-15
 ### Added
@@ -2034,7 +2031,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.38.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.37.0...v0.38.0-alpha
+[0.38.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.37.0...v0.38.0
 [0.37.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.13...v0.37.0
 [0.36.13]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.12...v0.36.13
 [0.36.12]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.11...v0.36.12

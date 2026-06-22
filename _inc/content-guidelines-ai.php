@@ -41,7 +41,7 @@ function jetpack_content_guidelines_ai_is_automattician() {
 /**
  * Enqueue content-guidelines-ai script on the Content Guidelines admin page.
  *
- * @since 16.0-a.2
+ * @since 16.0
  *
  * @param string $hook_suffix The current admin page hook suffix.
  */
