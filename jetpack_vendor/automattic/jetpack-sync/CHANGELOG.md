@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Sync: Add the Jetpack Social image focal point to the post meta sync whitelist.
 - Sync: Add WooCommerce countries, shipping, and tax calculation options to the sync whitelist.
 
 ## [4.43.0] - 2026-06-15
