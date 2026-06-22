@@ -5,27 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.82.0-alpha] - unreleased
+## [0.83.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Add focal point data model and picker in the media section
-- Apply the stored image focal point to the social link previews.
 - Social: Crop Open Graph images around the selected image focal point.
 
 ### Changed
 - Connection management: mark the `inert` attribute on the wrapper for the upcoming React 19 migration.
-- Social: Reconnect accounts in place instead of disconnecting and recreating them, retaining connection settings.
-- Update package dependencies.
 
 ### Fixed
 - Align share-button, service-row and dashboard tab-panel props with the `@wordpress/ui` 0.15 API: render the share `Button` as an anchor (it is a link), match the `Collapsible.Trigger` ref type, and drop the unsupported `focusable` prop on `Tabs.Panel`.
-- Fix connecting Meta accounts (Facebook, Instagram, Threads) by returning the connection result through a same-origin BroadcastChannel instead of window.opener, which Meta severs via COOP
 - Fix Jetpack Social admin page rendering blank on WordPress 6.9.x.
-- Honor a disabled connection when publishing a brand new post via the REST API, not only when updating an existing post.
-- Social: Detect when the browser blocks the connection popup and notify the user.
-- Social previews: Remove the misleading URL from captions when it is not a part of it.
+
+## [0.82.0] - 2026-06-22
+### Added
+- Add focal point data model and picker in the media section. [#49580]
+- Apply the stored image focal point to the social link previews. [#49687]
+
+### Changed
+- Social: Reconnect accounts in place instead of disconnecting and recreating them, retaining connection settings. [#49695]
+- Update package dependencies. [#49631] [#49691] [#49732] [#49757]
+
+### Fixed
+- Fix connecting Meta accounts (Facebook, Instagram, Threads) by returning the connection result through a same-origin BroadcastChannel instead of window.opener, which Meta severs via COOP. [#49615]
+- Honor a disabled connection when publishing a brand new post via the REST API, not only when updating an existing post. [#49784]
+- Social: Detect when the browser blocks the connection popup and notify the user. [#49688]
+- Social Previews: Remove the misleading URL from captions when it is not a part of it. [#49745]
 
 ## [0.81.4] - 2026-06-15
 ### Changed
@@ -1516,7 +1523,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.82.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.81.4...v0.82.0-alpha
+[0.83.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.82.0...v0.83.0-alpha
+[0.82.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.81.4...v0.82.0
 [0.81.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.81.3...v0.81.4
 [0.81.3]: https://github.com/Automattic/jetpack-publicize/compare/v0.81.2...v0.81.3
 [0.81.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.81.1...v0.81.2

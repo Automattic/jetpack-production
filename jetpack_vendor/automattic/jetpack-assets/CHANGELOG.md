@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.4.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.4.0] - 2026-06-22
 ### Added
-- Register the jetpack-shared-stores asset bundle so dependent scripts can declare it as a dependency.
+- Register the `jetpack-shared-stores` asset bundle so dependent scripts can declare it as a dependency. [#49494]
 
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#49691]
 
 ## [4.3.44] - 2026-06-15
 ### Changed
@@ -875,7 +872,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Statically access asset tools
 
-[4.4.0-alpha]: https://github.com/Automattic/jetpack-assets/compare/v4.3.44...v4.4.0-alpha
+[4.4.0]: https://github.com/Automattic/jetpack-assets/compare/v4.3.44...v4.4.0
 [4.3.44]: https://github.com/Automattic/jetpack-assets/compare/v4.3.43...v4.3.44
 [4.3.43]: https://github.com/Automattic/jetpack-assets/compare/v4.3.42...v4.3.43
 [4.3.42]: https://github.com/Automattic/jetpack-assets/compare/v4.3.41...v4.3.42

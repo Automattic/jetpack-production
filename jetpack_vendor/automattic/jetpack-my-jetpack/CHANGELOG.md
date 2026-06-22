@@ -5,23 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.39.0-alpha] - unreleased
+## [5.40.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Added
-- Give Jetpack Forms its own product card in the Growth category instead of a plain module list item.
-- My Jetpack: add a card inviting existing self-hosted installs to try the new Jetpack SEO dashboard.
-- Podcast: list the Podcast module under the Growth section in My Jetpack, gated behind the default-off `jetpack_podcast_for_the_world` filter.
-
 ### Changed
-- Import the Jetpack modules data store from the new jetpack-shared-stores package.
 - My Jetpack: Rank product search results by relevance so direct title matches appear first.
-- Update package dependencies.
 
 ### Fixed
 - Fix `@wordpress/ui` 0.15 type error: accept anchor click events on the secondary action button's `onClick` handler so it works when rendered as a Link.
-- Modules list: fix rounded corners so row dividers no longer poke past the border
+
+## [5.39.0] - 2026-06-22
+### Added
+- List Jetpack Forms as a product card in the Growth section instead of a plain module list item. [#49665]
+- Add a card inviting existing self-hosted installs to try the new Jetpack SEO dashboard. [#49672]
+- Podcast: List the Podcast module under the Growth section. [#49790]
+
+### Changed
+- Import the Jetpack modules data store from the new `jetpack-shared-stores` package. [#49494]
+- Update package dependencies. [#49631] [#49638] [#49691] [#49732] [#49757]
+
+### Fixed
+- Modules list: Fix rounded corners so row dividers no longer poke past the border. [#49763]
 
 ## [5.38.4] - 2026-06-15
 ### Changed
@@ -2732,7 +2737,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.39.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.38.4...5.39.0-alpha
+[5.40.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.39.0...5.40.0-alpha
+[5.39.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.38.4...5.39.0
 [5.38.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.38.3...5.38.4
 [5.38.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.38.2...5.38.3
 [5.38.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.38.1...5.38.2

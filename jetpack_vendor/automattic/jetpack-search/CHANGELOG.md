@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.2.4-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [7.2.4] - 2026-06-22
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#49631] [#49691] [#49757]
 
 ### Fixed
-- Search blocks: Use the default editor color for block icons.
+- Search blocks: Use the default editor color for block icons. [#49756]
 
 ## [7.2.3] - 2026-06-15
 ### Changed
@@ -1807,7 +1804,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[7.2.4-alpha]: https://github.com/Automattic/jetpack-search/compare/v7.2.3...v7.2.4-alpha
+[7.2.4]: https://github.com/Automattic/jetpack-search/compare/v7.2.3...v7.2.4
 [7.2.3]: https://github.com/Automattic/jetpack-search/compare/v7.2.2...v7.2.3
 [7.2.2]: https://github.com/Automattic/jetpack-search/compare/v7.2.1...v7.2.2
 [7.2.1]: https://github.com/Automattic/jetpack-search/compare/v7.2.0...v7.2.1
