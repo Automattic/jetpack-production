@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix connecting Meta accounts (Facebook, Instagram, Threads) by returning the connection result through a same-origin BroadcastChannel instead of window.opener, which Meta severs via COOP
+- Fix Jetpack Social admin page rendering blank on WordPress 6.9.x.
 - Honor a disabled connection when publishing a brand new post via the REST API, not only when updating an existing post.
 - Social: Detect when the browser blocks the connection popup and notify the user.
 - Social previews: Remove the misleading URL from captions when it is not a part of it.
