@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Import the Jetpack modules data store from the new jetpack-shared-stores package.
+- My Jetpack: Rank product search results by relevance so direct title matches appear first.
 - Update package dependencies.
 
 ### Fixed
