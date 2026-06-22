@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.1-alpha] - unreleased
+## [0.3.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix `@wordpress/ui` 0.15 type error: pass a valid Stack `wrap` value in the SEO title-structure field.
+- SEO Settings: add a "View sitemap" link once the sitemap is generated, and disable the sitemap toggle while search engines are blocked.
 
 ## [0.2.0] - 2026-06-22
 ### Added
@@ -44,6 +45,6 @@ This is an alpha version! The changes listed here are not final.
 - Create a Settings screen with site visibility, post title structure, front-page description, and site verification. [#49256]
 - Scaffold the new `jetpack-seo` package and mount its admin page. [#49203]
 
-[0.2.1-alpha]: https://github.com/Automattic/jetpack-seo/compare/0.2.0...0.2.1-alpha
+[0.3.0-alpha]: https://github.com/Automattic/jetpack-seo/compare/0.2.0...0.3.0-alpha
 [0.2.0]: https://github.com/Automattic/jetpack-seo/compare/0.1.1...0.2.0
 [0.1.1]: https://github.com/Automattic/jetpack-seo/compare/0.1.0...0.1.1

@@ -16245,10 +16245,10 @@ var tokensToString = (tokens) => tokens.map(toDisplay).join("");
 var stringToTokens = (input, allowedTokenIds) => input.split(LABEL_PATTERN).filter((segment) => segment !== "").map((segment) => fromDisplay(segment, allowedTokenIds));
 
 // _inc/screens/settings/style.scss
-if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='df324484d8']")) {
+if (typeof document !== "undefined" && true && !document.head.querySelector("style[data-wp-hash='76c852f920']")) {
   const style = document.createElement("style");
-  style.setAttribute("data-wp-hash", "df324484d8");
-  style.appendChild(document.createTextNode(".jetpack-seo-settings{display:flex;flex-direction:column;gap:var(--wpds-dimension-gap-lg,16px);margin-inline:auto;max-inline-size:660px}.jetpack-seo-settings__section{scroll-margin-top:64px}.jetpack-seo-settings__preview{background:var(--wpds-color-bg-surface-neutral,#f6f7f7);border-radius:var(--wpds-border-radius-md,4px);font-size:13px;margin-top:var(--wpds-dimension-gap-md,12px);padding:var(--wpds-dimension-padding-md,12px)}.jetpack-seo-settings__verification-grid{display:grid;gap:var(--wpds-dimension-gap-md,12px);grid-template-columns:1fr}.jetpack-seo-settings__preview-intro{margin:0 0 var(--wpds-dimension-gap-xl,24px)}.jetpack-seo-settings__preview-group{border:1px solid var(--wpds-color-stroke-surface-neutral-weak,#dadde1);border-radius:var(--wpds-border-radius-md,4px);padding:16px}.jetpack-seo-settings__preview-group+.jetpack-seo-settings__preview-group{margin-block-start:var(--wpds-dimension-gap-2xl,32px)}.jetpack-seo-settings__preview-label{align-items:center;display:flex;font-size:15px;font-weight:600;gap:8px;margin:0 0 var(--wpds-dimension-gap-md,12px)}.jetpack-seo-preview__platform-icon{block-size:18px;flex-shrink:0;inline-size:18px}.jetpack-seo-preview{font-size:14px;line-height:1.4;max-inline-size:500px}.jetpack-seo-preview__desc{color:var(--wpds-color-fg-content-neutral-weak,#757575)}.jetpack-seo-preview--google .jetpack-seo-preview__google-site{align-items:center;display:flex;gap:8px}.jetpack-seo-preview--google .jetpack-seo-preview__favicon{block-size:26px;border:1px solid var(--wpds-color-stroke-surface-neutral-weak,#e0e0e0);border-radius:50%;inline-size:26px;object-fit:cover}.jetpack-seo-preview--google .jetpack-seo-preview__google-url{color:#4d5156;font-size:12px}.jetpack-seo-preview--google .jetpack-seo-preview__google-title{color:#1a0dab;font-size:20px;margin-block-start:4px}.jetpack-seo-preview--google .jetpack-seo-preview__desc{margin-block-start:4px}.jetpack-seo-preview--card{border:1px solid var(--wpds-color-stroke-surface-neutral-weak,#dadde1);border-radius:var(--wpds-border-radius-md,4px);overflow:hidden}.jetpack-seo-preview--card .jetpack-seo-preview__image{background-color:var(--wpds-color-bg-surface-neutral,#f0f2f5);background-position:50%;background-size:cover;block-size:240px}.jetpack-seo-preview--card .jetpack-seo-preview__card-body{background:var(--wpds-color-bg-surface-neutral,#f2f3f5);padding:var(--wpds-dimension-padding-md,12px)}.jetpack-seo-preview--card .jetpack-seo-preview__card-domain{color:var(--wpds-color-fg-content-neutral-weak,#757575);font-size:12px;text-transform:uppercase}.jetpack-seo-preview--card .jetpack-seo-preview__card-title{font-weight:600;margin-block-start:2px}.jetpack-seo-preview--card .jetpack-seo-preview__desc{margin-block-start:2px}"));
+  style.setAttribute("data-wp-hash", "76c852f920");
+  style.appendChild(document.createTextNode(".jetpack-seo-settings{display:flex;flex-direction:column;gap:var(--wpds-dimension-gap-lg,16px);margin-inline:auto;max-inline-size:660px}.jetpack-seo-settings__section{scroll-margin-top:64px}.jetpack-seo-settings__sitemap-field{display:flex;flex-direction:column;gap:var(--wpds-dimension-gap-xs,4px)}.jetpack-seo-settings__sitemap-hint,.jetpack-seo-settings__sitemap-link{margin-inline-start:40px}.jetpack-seo-settings__sitemap-hint{color:var(--wpds-color-fg-content-neutral-weak,#787c82);font-size:12px}.jetpack-seo-settings__preview{background:var(--wpds-color-bg-surface-neutral,#f6f7f7);border-radius:var(--wpds-border-radius-md,4px);font-size:13px;margin-top:var(--wpds-dimension-gap-md,12px);padding:var(--wpds-dimension-padding-md,12px)}.jetpack-seo-settings__verification-grid{display:grid;gap:var(--wpds-dimension-gap-md,12px);grid-template-columns:1fr}.jetpack-seo-settings__preview-intro{margin:0 0 var(--wpds-dimension-gap-xl,24px)}.jetpack-seo-settings__preview-group{border:1px solid var(--wpds-color-stroke-surface-neutral-weak,#dadde1);border-radius:var(--wpds-border-radius-md,4px);padding:16px}.jetpack-seo-settings__preview-group+.jetpack-seo-settings__preview-group{margin-block-start:var(--wpds-dimension-gap-2xl,32px)}.jetpack-seo-settings__preview-label{align-items:center;display:flex;font-size:15px;font-weight:600;gap:8px;margin:0 0 var(--wpds-dimension-gap-md,12px)}.jetpack-seo-preview__platform-icon{block-size:18px;flex-shrink:0;inline-size:18px}.jetpack-seo-preview{font-size:14px;line-height:1.4;max-inline-size:500px}.jetpack-seo-preview__desc{color:var(--wpds-color-fg-content-neutral-weak,#757575)}.jetpack-seo-preview--google .jetpack-seo-preview__google-site{align-items:center;display:flex;gap:8px}.jetpack-seo-preview--google .jetpack-seo-preview__favicon{block-size:26px;border:1px solid var(--wpds-color-stroke-surface-neutral-weak,#e0e0e0);border-radius:50%;inline-size:26px;object-fit:cover}.jetpack-seo-preview--google .jetpack-seo-preview__google-url{color:#4d5156;font-size:12px}.jetpack-seo-preview--google .jetpack-seo-preview__google-title{color:#1a0dab;font-size:20px;margin-block-start:4px}.jetpack-seo-preview--google .jetpack-seo-preview__desc{margin-block-start:4px}.jetpack-seo-preview--card{border:1px solid var(--wpds-color-stroke-surface-neutral-weak,#dadde1);border-radius:var(--wpds-border-radius-md,4px);overflow:hidden}.jetpack-seo-preview--card .jetpack-seo-preview__image{background-color:var(--wpds-color-bg-surface-neutral,#f0f2f5);background-position:50%;background-size:cover;block-size:240px}.jetpack-seo-preview--card .jetpack-seo-preview__card-body{background:var(--wpds-color-bg-surface-neutral,#f2f3f5);padding:var(--wpds-dimension-padding-md,12px)}.jetpack-seo-preview--card .jetpack-seo-preview__card-domain{color:var(--wpds-color-fg-content-neutral-weak,#757575);font-size:12px;text-transform:uppercase}.jetpack-seo-preview--card .jetpack-seo-preview__card-title{font-weight:600;margin-block-start:2px}.jetpack-seo-preview--card .jetpack-seo-preview__desc{margin-block-start:2px}"));
   document.head.appendChild(style);
 }
 
@@ -16706,6 +16706,16 @@ var setLabel = (0, import_i18n17.__)("Set", "jetpack-seo");
 var notSetLabel2 = (0, import_i18n17.__)("Not set", "jetpack-seo");
 var enabledLabel = (0, import_i18n17.__)("Enabled", "jetpack-seo");
 var disabledLabel = (0, import_i18n17.__)("Disabled", "jetpack-seo");
+var sitemapHelp = (0, import_i18n17.__)(
+  "Publishes an XML sitemap that search engines crawl to discover your content, generated automatically from your site's published posts, pages, and custom post types.",
+  "jetpack-seo"
+);
+var sitemapBlockedHelp = (0, import_i18n17.__)(
+  "Allow search engines to index this site to generate a sitemap.",
+  "jetpack-seo"
+);
+var sitemapViewLabel = (0, import_i18n17.__)("View sitemap", "jetpack-seo");
+var sitemapGeneratingLabel = (0, import_i18n17.__)("Generating\u2026", "jetpack-seo");
 var SettingsScreen = ({ form }) => {
   const { local, isSaving, setField, setVerification, commit } = form;
   const search = useSearch({
@@ -16731,7 +16741,8 @@ var SettingsScreen = ({ form }) => {
   if (!local) {
     return /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(notice_exports.Root, { intent: "error", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(notice_exports.Description, { children: (0, import_i18n17.__)("Unable to load settings.", "jetpack-seo") }) });
   }
-  const visibilityEnabledCount = (local.search_engines_visible ? 1 : 0) + (local.sitemap_active ? 1 : 0);
+  const sitemapEffectivelyOn = local.search_engines_visible && local.sitemap_active;
+  const visibilityEnabledCount = (local.search_engines_visible ? 1 : 0) + (sitemapEffectivelyOn ? 1 : 0);
   return /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "jetpack-seo-settings", children: [
     /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { id: "visibility", className: "jetpack-seo-settings__section", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(collapsible_card_exports.Root, { defaultOpen: true, children: [
       /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(collapsible_card_exports.Header, { children: /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)(Stack, { direction: "row", justify: "space-between", align: "center", gap: "sm", children: [
@@ -16758,20 +16769,29 @@ var SettingsScreen = ({ form }) => {
             __nextHasNoMarginBottom: true
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
-          import_components5.ToggleControl,
-          {
-            label: (0, import_i18n17.__)("Generate an XML sitemap", "jetpack-seo"),
-            help: (0, import_i18n17.__)(
-              "Publishes an XML sitemap that search engines crawl to discover your content, generated automatically from your site's published posts, pages, and custom post types.",
-              "jetpack-seo"
-            ),
-            checked: local.sitemap_active,
-            onChange: (next) => commit({ sitemap_active: next }),
-            disabled: isSaving,
-            __nextHasNoMarginBottom: true
-          }
-        )
+        /* @__PURE__ */ (0, import_jsx_runtime69.jsxs)("div", { className: "jetpack-seo-settings__sitemap-field", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
+            import_components5.ToggleControl,
+            {
+              label: (0, import_i18n17.__)("Generate an XML sitemap", "jetpack-seo"),
+              help: local.search_engines_visible ? sitemapHelp : sitemapBlockedHelp,
+              checked: sitemapEffectivelyOn,
+              onChange: (next) => commit({ sitemap_active: next }),
+              disabled: isSaving || !local.search_engines_visible,
+              __nextHasNoMarginBottom: true
+            }
+          ),
+          sitemapEffectivelyOn && (local.sitemap_url ? /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
+            Link,
+            {
+              className: "jetpack-seo-settings__sitemap-link",
+              href: local.sitemap_url,
+              openInNewTab: true,
+              rel: "noopener noreferrer",
+              children: sitemapViewLabel
+            }
+          ) : /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("span", { className: "jetpack-seo-settings__sitemap-hint", children: sitemapGeneratingLabel }))
+        ] })
       ] }) })
     ] }) }),
     /* @__PURE__ */ (0, import_jsx_runtime69.jsx)("div", { id: "verification", className: "jetpack-seo-settings__section", children: /* @__PURE__ */ (0, import_jsx_runtime69.jsx)(
