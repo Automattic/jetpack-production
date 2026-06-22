@@ -12,6 +12,10 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Private APIs: Keep the private APIs polyfill active through WordPress 7.0 and older Gutenberg versions.
+- Private APIs: Track the @next private-apis release so the bundled allowlist covers newer dashboard packages such as @wordpress/widget-dashboard.
+
 ## [0.1.14] - 2026-06-15
 ### Changed
 - Internal updates.
