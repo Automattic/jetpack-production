@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast: add a Jetpack module that loads the Podcast package, gated behind the default-off `jetpack_podcast_for_the_world` filter.
 - SEO: seed and keep in sync a durable `jetpack_seo_canonical_urls_enabled` option from the Canonical URLs module's active state, so the setting is preserved when the standalone module is later absorbed into Jetpack SEO. Non-destructive: no settings are changed or removed.
 - SEO: seed and keep in sync a durable `jetpack_seo_sitemap_enabled` option from the Sitemaps module's active state, so the setting is preserved when the standalone module is later absorbed into Jetpack SEO. Non-destructive: no sitemap data is regenerated or removed.
+- Sync: Append an order's total (total, currency) to the synced woocommerce_new_order and woocommerce_order_status_changed actions when the order reaches a paid status, so WPcom can aggregate revenue.
 - Updated WooCommerce Analytics package to version 0.16.6.
 - Update package dependencies.
 
