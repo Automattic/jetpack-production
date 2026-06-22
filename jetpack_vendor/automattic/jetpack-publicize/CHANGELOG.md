@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Crop Open Graph images around the selected image focal point.
 
 ### Changed
+- Connection management: mark the `inert` attribute on the wrapper for the upcoming React 19 migration.
 - Social: Reconnect accounts in place instead of disconnecting and recreating them, retaining connection settings.
 - Update package dependencies.
 
