@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fix `@wordpress/ui` 0.15 type error: pass a valid Stack `wrap` value in the SEO title-structure field.
 - SEO Settings: add a "View sitemap" link once the sitemap is generated, and disable the sitemap toggle while search engines are blocked.
+- Stop shipping megabytes of unminified JS as part of the package.
 
 ## [0.2.0] - 2026-06-22
 ### Added
