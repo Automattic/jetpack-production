@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.44.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.44.0] - 2026-06-23
 ### Added
-- Sync: Add the Jetpack Social image focal point to the post meta sync whitelist.
-- Sync: Append an order's total (total, currency) to the synced woocommerce_new_order and woocommerce_order_status_changed actions when the order reaches a paid status, so WPcom can aggregate revenue.
+- Add the Jetpack Social image focal point to the post meta sync whitelist. [#49818]
+- Add WooCommerce order total (total, currency) to the synced woocommerce_new_order and woocommerce_order_status_changed actions when the order reaches a paid status, so WPcom can aggregate revenue. [#49689]
 
 ## [4.43.1] - 2026-06-22
 ### Added
@@ -1802,7 +1799,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[4.44.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.43.1...v4.44.0-alpha
+[4.44.0]: https://github.com/Automattic/jetpack-sync/compare/v4.43.1...v4.44.0
 [4.43.1]: https://github.com/Automattic/jetpack-sync/compare/v4.43.0...v4.43.1
 [4.43.0]: https://github.com/Automattic/jetpack-sync/compare/v4.42.0...v4.43.0
 [4.42.0]: https://github.com/Automattic/jetpack-sync/compare/v4.41.1...v4.42.0

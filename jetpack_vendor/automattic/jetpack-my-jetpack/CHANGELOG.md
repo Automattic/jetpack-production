@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.40.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.40.0] - 2026-06-23
 ### Changed
-- My Jetpack: Rank product search results by relevance so direct title matches appear first.
-- Update package dependencies.
+- Rank product search results by relevance so direct title matches appear first. [#49804]
+- Update package dependencies. [#49831]
 
 ### Fixed
-- Fix `@wordpress/ui` 0.15 type error: accept anchor click events on the secondary action button's `onClick` handler so it works when rendered as a Link.
+- Fix `@wordpress/ui` 0.15 type error: accept anchor click events on the secondary action button's `onClick` handler so it works when rendered as a Link. [#49800]
 
 ## [5.39.0] - 2026-06-22
 ### Added
@@ -2738,7 +2735,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.40.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.39.0...5.40.0-alpha
+[5.40.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.39.0...5.40.0
 [5.39.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.38.4...5.39.0
 [5.38.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.38.3...5.38.4
 [5.38.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.38.2...5.38.3
