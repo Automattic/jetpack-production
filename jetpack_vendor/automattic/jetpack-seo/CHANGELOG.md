@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Gate the Settings, Content, and AI tabs behind the enable-SEO-tools card when the SEO Tools module is off, matching the Overview, instead of rendering controls that can't save.
+- Simplify the search/social preview cards on the SEO Settings tab: drop the group border that boxed each platform heading together with its preview. Each preview keeps its own border (the Google result gains one; Facebook/X keep their card border) with the platform heading above it, removing the box-in-box look.
 - Use explicit Save buttons for the SEO Settings text-heavy sections instead of auto-saving on blur: the front-page description saves per section, and the title-structure editor saves per page-type row. Toggle sections still save on change. Tidy the title-structure rows — separated by a divider, with each row's live preview and Save on one line.
 
 ### Fixed
