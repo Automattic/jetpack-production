@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Defer Blaze REST controller instantiation so the controller classes only load on REST API requests.
 - Update package dependencies.
 
 ## [0.27.23] - 2026-06-22

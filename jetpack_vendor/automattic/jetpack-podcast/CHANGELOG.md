@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Defer podcast REST endpoint instantiation so the endpoint classes only load on REST API requests.
 - Update package dependencies.
 
 ## [1.1.1] - 2026-06-22

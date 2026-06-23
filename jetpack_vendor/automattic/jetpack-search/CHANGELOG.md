@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Defer Search REST controller instantiation so it is only built when its REST routes are requested.
 - Update package dependencies.
 
 ## [7.2.4] - 2026-06-22
