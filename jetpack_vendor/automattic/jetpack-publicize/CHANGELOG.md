@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Align share-button, service-row and dashboard tab-panel props with the `@wordpress/ui` 0.15 API: render the share `Button` as an anchor (it is a link), match the `Collapsible.Trigger` ref type, and drop the unsupported `focusable` prop on `Tabs.Panel`.
 - Fix Jetpack Social admin page rendering blank on WordPress 6.9.x.
+- Social: contain errors in the post-publish sharing status panel so they no longer crash the editor.
 
 ## [0.82.0] - 2026-06-22
 ### Added
