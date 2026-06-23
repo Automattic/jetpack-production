@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Gate the Settings, Content, and AI tabs behind the enable-SEO-tools card when the SEO Tools module is off, matching the Overview, instead of rendering controls that can't save.
+- Use explicit Save buttons for the SEO Settings text-heavy sections instead of auto-saving on blur: the front-page description saves per section, and the title-structure editor saves per page-type row. Toggle sections still save on change. Tidy the title-structure rows — separated by a divider, with each row's live preview and Save on one line.
 
 ### Fixed
 - Fix `@wordpress/ui` 0.15 type error: pass a valid Stack `wrap` value in the SEO title-structure field.
