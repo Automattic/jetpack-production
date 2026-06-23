@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Newsletter: Begin a staged rollout of the modernized Newsletter dashboard and wp-admin subscriber management, off by default during the initial rollout. Hosts can opt in or out with the rsm_jetpack_ui_modernization_newsletter and jetpack_wp_admin_subscriber_management_enabled filters.
 - SEO: hide the legacy Traffic-page SEO and Sitemaps sections once a site is on the new SEO dashboard (fresh install, opted-in, or WordPress.com), pointing to the new page; existing self-hosted installs that haven't opted in keep the legacy sections.
 
 ### Bug fixes
