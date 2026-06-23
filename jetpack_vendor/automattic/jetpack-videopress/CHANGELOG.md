@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Performance: defer loading the VideoPress REST API endpoint classes until a REST request is served, reducing the per-request PHP/opcache footprint.
 - Update package dependencies.
+- VideoPress: Improve performance when receiving resumable video uploads.
 
 ## [0.38.0] - 2026-06-22
 ### Added
