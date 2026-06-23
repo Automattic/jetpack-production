@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix `@wordpress/ui` 0.15 type error: pass a valid Stack `wrap` value in the SEO title-structure field.
+- Lay out the Content SEO coverage rings in a responsive grid so they wrap and stack as the screen narrows, instead of staying in a single row.
 - SEO Settings: add a "View sitemap" link once the sitemap is generated, and disable the sitemap toggle while search engines are blocked.
 - Stop shipping megabytes of unminified JS as part of the package.
 
