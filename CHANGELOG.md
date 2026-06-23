@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix `@wordpress/ui` 0.15 type errors: drop the unsupported `target` prop on Link (it is set via `openInNewTab`) in the mobile-app recommendation, and type the AI Assistant message icon as a `ReactElement`.
 - Newsletter: fix "Sorry, you are not allowed to do this" error for Contributors on the first Submit for Review when the Subscriptions module is active.
 - Paid Content: ensure paid subscribers on Atomic-hosted sites retain access to gated content by translating local user IDs to WordPress.com user IDs before querying subscriptions.
+- SEO: default the Schema, Meta description, and Search post-list columns to hidden in Screen Options so they no longer crowd out the title column.
 - Social: contain errors in the post-publish sharing status panel so they no longer crash the editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
