@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: contain errors in the post-publish sharing status panel so they no longer crash the editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Sidebar: load the Agents Manager through the jetpack-agents-manager Composer package instead of a self-contained CDN loader.
 - Defer loading Boost Speed Score classes until a REST request or Boost lifecycle action fires, reducing the per-request PHP/opcache footprint.
 - JSON API: Require Jetpack 15.9 or later to dispatch the posts, users, site, and plugins endpoints over REST.
 - Performance: load block render code only when a block is present, and skip editor-only extensions on front-end requests, to reduce per-request PHP/opcache footprint.
