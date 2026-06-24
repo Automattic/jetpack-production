@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Defer REST controller instantiation so the controller classes only load on REST API requests.
 
+### Fixed
+- Fix the Social admin page rendering blank, and restore the editor sharing panel, on WordPress 6.9.
+
 ## [0.83.0] - 2026-06-23
 ### Added
 - Crop Open Graph images around the selected image focal point. [#49746]
