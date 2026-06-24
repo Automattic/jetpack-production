@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: hide the legacy Traffic-page SEO and Sitemaps sections once a site is on the new SEO dashboard (fresh install, opted-in, or WordPress.com), pointing to the new page; existing self-hosted installs that haven't opted in keep the legacy sections.
 
 ### Bug fixes
+- AI Chat block: Stop prompting to enable Jetpack Search when the Search module is active in a non-Instant Search experience (Theme, Inline, or Embedded).
 - Fix `@wordpress/ui` 0.15 type errors: drop the unsupported `target` prop on Link (it is set via `openInNewTab`) in the mobile-app recommendation, and type the AI Assistant message icon as a `ReactElement`.
 - Newsletter: fix "Sorry, you are not allowed to do this" error for Contributors on the first Submit for Review when the Subscriptions module is active.
 - Paid Content: ensure paid subscribers on Atomic-hosted sites retain access to gated content by translating local user IDs to WordPress.com user IDs before querying subscriptions.
