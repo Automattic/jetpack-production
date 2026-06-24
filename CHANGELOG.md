@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Defer loading Boost Speed Score classes until a REST request or Boost lifecycle action fires, reducing the per-request PHP/opcache footprint.
 - JSON API: Require Jetpack 15.9 or later to dispatch the posts, users, site, and plugins endpoints over REST.
 - Performance: load block render code only when a block is present, and skip editor-only extensions on front-end requests, to reduce per-request PHP/opcache footprint.
+- Sync: add test coverage for refreshing the plugin list callable when a plugin is deleted.
 - Sync: Append an order's total (total, currency) to the synced woocommerce_new_order and woocommerce_order_status_changed actions when the order reaches a paid status, so WPcom can aggregate revenue.
 - Updated package dependencies.
 - Update package dependencies.

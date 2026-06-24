@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.44.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Refresh the synced get_plugins callable when a plugin is deleted, so removed plugins no longer linger in cached plugin lists.
+
 ## [4.44.0] - 2026-06-23
 ### Added
 - Add the Jetpack Social image focal point to the post meta sync whitelist. [#49818]
@@ -1799,6 +1806,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[4.44.1-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.44.0...v4.44.1-alpha
 [4.44.0]: https://github.com/Automattic/jetpack-sync/compare/v4.43.1...v4.44.0
 [4.43.1]: https://github.com/Automattic/jetpack-sync/compare/v4.43.0...v4.43.1
 [4.43.0]: https://github.com/Automattic/jetpack-sync/compare/v4.42.0...v4.43.0
