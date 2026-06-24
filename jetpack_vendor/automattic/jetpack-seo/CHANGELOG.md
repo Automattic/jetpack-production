@@ -14,12 +14,14 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Gate the Settings, Content, and AI tabs behind the enable-SEO-tools card when the SEO Tools module is off, matching the Overview, instead of rendering controls that can't save.
+- Improve contrast on the SEO admin pages: add an off-white page canvas so the white content cards stand out, and give the social link-preview body a recessed gray so it reads apart from the card and the page.
 - Show completion rings for all four Content SEO settings — schema, SEO title, meta description, and search engine visibility — in the order they appear on the Content page, instead of only schema and meta description.
 - Simplify the search/social preview cards on the SEO Settings tab: drop the group border that boxed each platform heading together with its preview. Each preview keeps its own border (the Google result gains one; Facebook/X keep their card border) with the platform heading above it, removing the box-in-box look.
 - Use explicit Save buttons for the SEO Settings text-heavy sections instead of auto-saving on blur: the front-page description saves per section, and the title-structure editor saves per page-type row. Toggle sections still save on change. Tidy the title-structure rows — separated by a divider, with each row's live preview and Save on one line.
 
 ### Fixed
 - Fix `@wordpress/ui` 0.15 type error: pass a valid Stack `wrap` value in the SEO title-structure field.
+- Keep the SEO dashboard tab strip pinned while scrolling instead of letting it scroll away with the page content.
 - Lay out the Content SEO coverage rings in a responsive grid so they wrap and stack as the screen narrows, instead of staying in a single row.
 - SEO Settings: add a "View sitemap" link once the sitemap is generated, and disable the sitemap toggle while search engines are blocked.
 - Stop shipping megabytes of unminified JS as part of the package.
