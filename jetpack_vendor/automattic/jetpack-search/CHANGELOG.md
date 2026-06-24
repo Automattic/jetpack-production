@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Defer Search REST controller instantiation so it is only built when its REST routes are requested.
 - Update package dependencies.
 
+### Fixed
+- Search Blocks: Fix result and filter lists rendering after results load.
+
 ## [7.2.4] - 2026-06-22
 ### Changed
 - Update package dependencies. [#49631] [#49691] [#49757]
