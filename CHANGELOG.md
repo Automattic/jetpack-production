@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Sidebar: load the Agents Manager through the jetpack-agents-manager Composer package instead of a self-contained CDN loader.
+- Akismet: show the Akismet logo (instead of the Jetpack logo) in the unified admin header.
 - Content Guidelines: align the empty-state banner orbs on the same axis and reduce their size.
 - Defer loading Boost Speed Score classes until a REST request or Boost lifecycle action fires, reducing the per-request PHP/opcache footprint.
 - JSON API: Require Jetpack 15.9 or later to dispatch the posts, users, site, and plugins endpoints over REST.
