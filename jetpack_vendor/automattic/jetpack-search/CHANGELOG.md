@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Search Blocks: Fix deep-link searches (?s=) rendering no results or filter buckets by hydrating the overlay once, after the Interactivity runtime's initial walk.
 - Search Blocks: Fix result and filter lists rendering after results load.
 
 ## [7.2.4] - 2026-06-22
