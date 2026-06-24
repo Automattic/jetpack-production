@@ -150,7 +150,7 @@ return array(
     ),
     'jetpack-scan-page' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-scan-page',
-      'ver' => '0.1.7-alpha1782215992',
+      'ver' => '0.1.7-alpha1782319882',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
