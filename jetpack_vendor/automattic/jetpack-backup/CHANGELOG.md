@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Backup dashboard: align Text, Stack and Button props with the `@wordpress/ui` 0.15 API (valid typographic variants, gap tokens and button variants).
+
 ## [4.3.4] - 2026-06-22
 ### Changed
 - Update package dependencies. [#49631] [#49691] [#49757]
