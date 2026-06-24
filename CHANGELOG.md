@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Akismet: show the Akismet logo (instead of the Jetpack logo) in the unified admin header.
 - Content Guidelines: align the empty-state banner orbs on the same axis and reduce their size.
 - Defer loading Boost Speed Score classes until a REST request or Boost lifecycle action fires, reducing the per-request PHP/opcache footprint.
+- Heartbeat: Connection owner and XML-RPC error stats are now provided by the Connection package.
 - JSON API: Require Jetpack 15.9 or later to dispatch the posts, users, site, and plugins endpoints over REST.
 - Performance: load block render code only when a block is present, and skip editor-only extensions on front-end requests, to reduce per-request PHP/opcache footprint.
 - Sync: add test coverage for refreshing the plugin list callable when a plugin is deleted.
