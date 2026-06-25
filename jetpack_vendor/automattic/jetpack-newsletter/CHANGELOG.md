@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.11.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.11.0] - 2026-06-25
 ### Changed
-- Stage the modernized Newsletter dashboard rollout: default the rsm_jetpack_ui_modernization_newsletter and jetpack_wp_admin_subscriber_management_enabled filters on for Automatticians and for a percentage cohort of all sites (currently 0%), bucketed by the stable wpcom blog ID so the cohort persists across a Simple→Atomic transfer. The Simple-site rollout is driven separately from the WordPress.com backend.
-- Update package dependencies.
+- Introduce the modernized dashboard and WP Admin subscriber management behind the `rsm_jetpack_ui_modernization_newsletter` and `jetpack_wp_admin_subscriber_management_enabled` filters, off by default. [#49036]
+- Update package dependencies. [#49831]
 
 ### Fixed
-- Align the settings DataForm field `Edit` controls, the import-subscribers notice `ActionLink`, and the dashboard tab panels with the `@wordpress/dataviews` 16 and `@wordpress/ui` 0.15 type APIs.
+- Align the settings DataForm field `Edit` controls, the import-subscribers notice `ActionLink`, and the dashboard tab panels with the `@wordpress/dataviews` 16 and `@wordpress/ui` 0.15 type APIs. [#49801]
 
 ## [0.10.0] - 2026-06-22
 ### Added
@@ -260,7 +257,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.11.0-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.10.0...v0.11.0-alpha
+[0.11.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.9.1...v0.10.0
 [0.9.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.9.0...v0.9.1
 [0.9.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.8.10...v0.9.0
