@@ -4443,8 +4443,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _wordpress_notices__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/notices */ "@wordpress/notices");
 /* harmony import */ var _wordpress_notices__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_notices__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _podcatchers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../podcatchers */ "./src/dashboard/podcatchers.ts");
 /* wp:polyfill */
 /* wp:polyfill es.array.includes */
+/* wp:polyfill es.set.difference.v2 */
+/* wp:polyfill es.set.intersection.v2 */
+/* wp:polyfill es.set.is-disjoint-from.v2 */
+/* wp:polyfill es.set.is-subset-of.v2 */
+/* wp:polyfill es.set.is-superset-of.v2 */
+/* wp:polyfill es.set.symmetric-difference.v2 */
+/* wp:polyfill es.set.union.v2 */
 /* wp:polyfill esnext.iterator.constructor */
 /* wp:polyfill esnext.iterator.some */
 
@@ -4453,6 +4461,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const __ = _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__;
+
 
 const ENTITY_KIND = 'wpcom/v2';
 const ENTITY_NAME = 'podcast/settings';
@@ -4468,12 +4477,13 @@ if (!(0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.select)(_wordpress_core_dat
 }
 const PODCAST_KEYS = ['podcasting_category_id', 'podcasting_title', 'podcasting_talent_name', 'podcasting_summary', 'podcasting_copyright', 'podcasting_explicit', 'podcasting_image', 'podcasting_image_id', 'podcasting_category_1', 'podcasting_category_2', 'podcasting_category_3', 'podcasting_email', 'podcasting_show_urls', 'podcasting_show_states'];
 
-// Keep in sync with `SHOW_URL_HOSTS` in src/class-settings.php.
-const PODCATCHER_IDS = ['pocketcasts', 'apple', 'spotify', 'youtube', 'amazon', 'podcastindex'];
+// Ids from the injected map, plus the record's own keys, so a missing map never
+// drops stored values.
+const podcatcherIds = source => [...new Set([...(0,_podcatchers__WEBPACK_IMPORTED_MODULE_6__.getPodcatcherIds)(), ...Object.keys(source)])];
 const normalizeShowUrls = raw => {
   const source = raw && typeof raw === 'object' ? raw : {};
   const out = {};
-  for (const id of PODCATCHER_IDS) {
+  for (const id of podcatcherIds(source)) {
     const value = source[id];
     out[id] = typeof value === 'string' ? value : '';
   }
@@ -4483,7 +4493,7 @@ const SHOW_STATES = ['', 'pending', 'active'];
 const normalizeShowStates = raw => {
   const source = raw && typeof raw === 'object' ? raw : {};
   const out = {};
-  for (const id of PODCATCHER_IDS) {
+  for (const id of podcatcherIds(source)) {
     const value = source[id];
     out[id] = typeof value === 'string' && SHOW_STATES.includes(value) ? value : '';
   }
@@ -4597,6 +4607,56 @@ function useUpdatePodcastSettings() {
     isPending
   };
 }
+
+/***/ },
+
+/***/ "./src/dashboard/podcatchers.ts"
+/*!**************************************!*\
+  !*** ./src/dashboard/podcatchers.ts ***!
+  \**************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getPodcatcherIds: () => (/* binding */ getPodcatcherIds),
+/* harmony export */   getShowHostsFor: () => (/* binding */ getShowHostsFor),
+/* harmony export */   getShowUrlHosts: () => (/* binding */ getShowUrlHosts),
+/* harmony export */   getShowUrlMaxLength: () => (/* binding */ getShowUrlMaxLength)
+/* harmony export */ });
+/* harmony import */ var _automattic_jetpack_script_data__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @automattic/jetpack-script-data */ "@automattic/jetpack-script-data");
+/* harmony import */ var _automattic_jetpack_script_data__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_automattic_jetpack_script_data__WEBPACK_IMPORTED_MODULE_0__);
+
+const DEFAULT_MAX_LENGTH = 2048;
+
+/**
+ * The directory→allowed-hosts map PHP sent us.
+ *
+ * @return The map, or `{}` if missing.
+ */
+const getShowUrlHosts = () => (0,_automattic_jetpack_script_data__WEBPACK_IMPORTED_MODULE_0__.getScriptData)()?.podcast?.show_url_hosts ?? {};
+
+/**
+ * Hosts allowed for one directory.
+ *
+ * @param id - Which directory.
+ * @return Its hosts, or `[]` if missing.
+ */
+const getShowHostsFor = id => getShowUrlHosts()[id] ?? [];
+
+/**
+ * The directories PHP knows about.
+ *
+ * @return Their ids.
+ */
+const getPodcatcherIds = () => Object.keys(getShowUrlHosts());
+
+/**
+ * Longest show URL we accept.
+ *
+ * @return The limit.
+ */
+const getShowUrlMaxLength = () => (0,_automattic_jetpack_script_data__WEBPACK_IMPORTED_MODULE_0__.getScriptData)()?.podcast?.show_url_max_length ?? DEFAULT_MAX_LENGTH;
 
 /***/ },
 
