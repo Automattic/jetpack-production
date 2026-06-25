@@ -5,14 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.38.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.38.1] - 2026-06-25
 ### Changed
-- Performance: defer loading the VideoPress REST API endpoint classes until a REST request is served, reducing the per-request PHP/opcache footprint.
-- Update package dependencies.
-- VideoPress: Improve performance when receiving resumable video uploads.
+- Defer loading the VideoPress REST API endpoint classes until a REST request is served, reducing the per-request PHP/opcache footprint. [#49806]
+- Improve performance when receiving resumable video uploads. [#49666]
+- Update package dependencies. [#49831]
 
 ## [0.38.0] - 2026-06-22
 ### Added
@@ -2040,7 +2037,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.38.1-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.38.0...v0.38.1-alpha
+[0.38.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.38.0...v0.38.1
 [0.38.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.37.0...v0.38.0
 [0.37.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.13...v0.37.0
 [0.36.13]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.12...v0.36.13
