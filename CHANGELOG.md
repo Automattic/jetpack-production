@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Donations Block: add an email renderer that builds the block from its attributes with email-friendly CTA buttons, preserving per-interval customization.
+
 ### Bug fixes
 - Memberships: delegate the Payment Request API to the checkout iframe so Apple Pay, Google Pay, and Stripe Link can load and complete payments.
 
