@@ -13,7 +13,6 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Assistant: Hide legacy block toolbar controls when Jetpack AI Sidebar content editing is enabled.
 - AI Chat block: Stop prompting to enable Jetpack Search when the Search module is active in a non-Instant Search experience (Theme, Inline, or Embedded).
-- Fix the Social admin page rendering blank, and restore the editor sharing panel, on WordPress 6.9.
 - Fix `@wordpress/ui` 0.15 type errors: drop the unsupported `target` prop on Link (it is set via `openInNewTab`) in the mobile-app recommendation, and type the AI Assistant message icon as a `ReactElement`.
 - Newsletter: fix "Sorry, you are not allowed to do this" error for Contributors on the first Submit for Review when the Subscriptions module is active.
 - Paid Content: ensure paid subscribers on Atomic-hosted sites retain access to gated content by translating local user IDs to WordPress.com user IDs before querying subscriptions.
@@ -80,6 +79,10 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Register the `description` field for the memberships endpoint to support paid tier descriptions. [#49413]
 - Notifications: Let users opt into the v3 notifications panel via the `notifications=v3` query parameter. [#49514]
 - Update package dependencies. [#49273] [#49448] [#49492]
+
+## 15.9.1 - 2026-06-24
+### Bug fixes
+- Fix the Social admin page rendering blank, and restore the editor sharing panel, on WordPress 6.9. [#49859]
 
 ## 15.9 - 2026-06-09
 ### Enhancements
