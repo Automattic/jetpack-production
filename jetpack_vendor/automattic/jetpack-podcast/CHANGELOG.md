@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Centralize podcatcher host allowlist in PHP script data and preload mount-time REST responses to drop first-render round-trips
 - Resolve the podcast premium gate over the Jetpack connection so self-hosted Growth sites unlock the paid surfaces while free sites keep the feed plus settings, and point the upsell at the Growth plan on self-hosted.
+- Update package dependencies.
 
 ## [1.2.0] - 2026-06-25
 ### Added

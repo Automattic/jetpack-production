@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Security
 - Status counts: Restrict counts to a user's own forms when they cannot edit others' forms.
 
+### Changed
+- Update package dependencies.
+
 ## [7.22.5] - 2026-06-25
 ### Changed
 - Update package dependencies. [#49831]

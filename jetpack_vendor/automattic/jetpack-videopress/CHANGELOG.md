@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Security
 - VideoPress: Fix an issue where the media library Heartbeat handler exposed processing status for attachments the current user is not allowed to edit.
 
+### Changed
+- Update package dependencies.
+
 ## [0.38.1] - 2026-06-25
 ### Changed
 - Defer loading the VideoPress REST API endpoint classes until a REST request is served, reducing the per-request PHP/opcache footprint. [#49806]
