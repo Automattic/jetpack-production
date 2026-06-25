@@ -33,7 +33,7 @@
 		"automattic/jetpack-error": "^3.0.10",
 		"automattic/jetpack-external-connections": "^0.1.33",
 		"automattic/jetpack-external-media": "^0.8.23",
-		"automattic/jetpack-forms": "^7.22.5",
+		"automattic/jetpack-forms": "^7.22.6-alpha",
 		"automattic/jetpack-image-cdn": "^0.7.29",
 		"automattic/jetpack-import": "^0.9.19",
 		"automattic/jetpack-ip": "^0.4.14",

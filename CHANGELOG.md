@@ -10,7 +10,11 @@ This is an alpha version! The changes listed here are not final.
 - Donations Block: add an email renderer that builds the block from its attributes with email-friendly CTA buttons, preserving per-interval customization.
 
 ### Bug fixes
+- Archives shortcode: Cap the unbounded postbypost type with a sane, filterable default limit to prevent memory exhaustion on large sites.
 - Memberships: delegate the Payment Request API to the checkout iframe so Apple Pay, Google Pay, and Stripe Link can load and complete payments.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Performance: Defer the wpcom/v2 Search and AI REST endpoint wrappers from loading their controller and helper classes until rest_api_init, so those classes are not loaded on front-end, cron, and login requests.
 
 ## 16.0-a.5 - 2026-06-25
 ### Enhancements
