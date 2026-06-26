@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Donations Block: add an email renderer that builds the block from its attributes with email-friendly CTA buttons, preserving per-interval customization.
 
 ### Bug fixes
+- AI Agent Access: Correct module references in Shortlinks and Related Posts ability descriptions.
 - Archives shortcode: Cap the unbounded postbypost type with a sane, filterable default limit to prevent memory exhaustion on large sites.
 - Fix fatal error on My Jetpack when the current stable Jetpack plugin is active along with other Jetpack standalone plugins.
 - Forms: sign file download links with an expiring token instead of a per-user nonce, so they work for any logged-in editor.
