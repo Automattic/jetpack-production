@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - My Jetpack: migrate ProductDetailCard typography from the in-house @automattic/jetpack-components Text to @wordpress/ui Text, adopting the closest design-system variants.
 
+### Fixed
+- Fix fatal error when an older bundled SEO package is loaded: guard the SEO opt-in card with method_exists instead of class_exists.
+
 ## [5.40.2] - 2026-06-25
 ### Changed
 - Internal updates.
