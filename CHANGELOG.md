@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - WhatsApp Button block: Fix icon and text overlapping in RTL languages.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Content Guidelines AI: persist the empty-state dismissal (banner and upgrade notice) per-user (cross-device) instead of in browser localStorage. Dismiss the upgrade notice from its close icon as well.
 - Performance: Defer the wpcom/v2 Search and AI REST endpoint wrappers from loading their controller and helper classes until rest_api_init, so those classes are not loaded on front-end, cron, and login requests.
 
 ## 16.0-a.5 - 2026-06-25
