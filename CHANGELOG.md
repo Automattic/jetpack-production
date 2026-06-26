@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix fatal error on My Jetpack when the current stable Jetpack plugin is active along with other Jetpack standalone plugins.
 - Forms: sign file download links with an expiring token instead of a per-user nonce, so they work for any logged-in editor.
 - Memberships: delegate the Payment Request API to the checkout iframe so Apple Pay, Google Pay, and Stripe Link can load and complete payments.
+- Podcast: load the package outside Jetpack's connection-gated module loader so the podcast feed and dashboard keep working when the site is disconnected.
 - WhatsApp Button block: Fix icon and text overlapping in RTL languages.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
