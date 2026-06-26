@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Archives shortcode: Cap the unbounded postbypost type with a sane, filterable default limit to prevent memory exhaustion on large sites.
+- Fix fatal error on My Jetpack when the current stable Jetpack plugin is active along with other Jetpack standalone plugins.
 - Forms: sign file download links with an expiring token instead of a per-user nonce, so they work for any logged-in editor.
 - Memberships: delegate the Payment Request API to the checkout iframe so Apple Pay, Google Pay, and Stripe Link can load and complete payments.
 - WhatsApp Button block: Fix icon and text overlapping in RTL languages.
