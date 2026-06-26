@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Forms: restore webhook, Post to URL and Salesforce delivery for forms placed in block templates, template parts and widgets, which stopped firing in 15.9.
+
 ## [7.22.5] - 2026-06-25
 ### Changed
 - Update package dependencies. [#49831]
