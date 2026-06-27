@@ -16,6 +16,8 @@ This is an alpha version! The changes listed here are not final.
 - Forms: sign file download links with an expiring token instead of a per-user nonce, so they work for any logged-in editor.
 - Memberships: delegate the Payment Request API to the checkout iframe so Apple Pay, Google Pay, and Stripe Link can load and complete payments.
 - Podcast: load the package outside Jetpack's connection-gated module loader so the podcast feed and dashboard keep working when the site is disconnected.
+- Tiled Gallery: fix an infinite resize loop when the block is placed inside a Row or Stack block.
+- Tiled Gallery: keep the mosaic layout stable across browsers and reloads when the block is inside a Row or Stack, and split the row evenly between multiple galleries instead of letting them overflow.
 - WhatsApp Button block: Fix icon and text overlapping in RTL languages.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
