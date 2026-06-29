@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.9.25-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.9.25] - 2026-06-29
 ### Changed
-- Update dependencies.
+- Update dependencies. [#50004]
 
 ## [0.9.24] - 2026-06-26
 ### Changed
@@ -394,7 +391,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated the default columns displayed on the post and page list screens
 - Refactored thumbnail preview to function server side. All javascript removed.
 
-[0.9.25-alpha]: https://github.com/automattic/jetpack-post-list/compare/v0.9.24...v0.9.25-alpha
+[0.9.25]: https://github.com/automattic/jetpack-post-list/compare/v0.9.24...v0.9.25
 [0.9.24]: https://github.com/automattic/jetpack-post-list/compare/v0.9.23...v0.9.24
 [0.9.23]: https://github.com/automattic/jetpack-post-list/compare/v0.9.22...v0.9.23
 [0.9.22]: https://github.com/automattic/jetpack-post-list/compare/v0.9.21...v0.9.22

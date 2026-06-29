@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.38.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.38.2] - 2026-06-29
 ### Security
-- VideoPress: Fix an issue where the media library Heartbeat handler exposed processing status for attachments the current user is not allowed to edit.
+- Fix an issue where the media library Heartbeat handler exposed processing status for attachments the current user is not allowed to edit. [#49931]
 
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#49271]
 
 ## [0.38.1] - 2026-06-25
 ### Changed
@@ -2047,7 +2044,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.38.2-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.38.1...v0.38.2-alpha
+[0.38.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.38.1...v0.38.2
 [0.38.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.38.0...v0.38.1
 [0.38.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.37.0...v0.38.0
 [0.37.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.36.13...v0.37.0
