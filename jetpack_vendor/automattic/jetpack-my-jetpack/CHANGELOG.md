@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.40.5-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- My Jetpack: de-duplicate search results so a product no longer appears twice (e.g. Forms, VideoPress)
+
 ## [5.40.4] - 2026-06-29
 ### Changed
 - Update dependencies. [#46951]
@@ -2754,6 +2761,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[5.40.5-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.4...5.40.5-alpha
 [5.40.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.3...5.40.4
 [5.40.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.2...5.40.3
 [5.40.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.1...5.40.2
