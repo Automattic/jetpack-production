@@ -68,7 +68,7 @@ function archives_shortcode( $atts ) {
 		 *
 		 * @module shortcodes
 		 *
-		 * @since 16.0-a.6
+		 * @since 16.0
 		 *
 		 * @param int $limit Default maximum number of posts to list. Default 100.
 		 */
