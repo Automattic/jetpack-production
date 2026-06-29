@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.22.7-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Multistep forms: Fix navigation buttons floating and the button gap collapsing on the frontend when a button width is set.
+
 ## [7.22.6] - 2026-06-29
 ### Security
 - Restrict status counts to a user's own forms when they cannot edit others' forms. [#49929]
@@ -2561,6 +2568,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
+[7.22.7-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.22.6...v7.22.7-alpha
 [7.22.6]: https://github.com/automattic/jetpack-forms/compare/v7.22.5...v7.22.6
 [7.22.5]: https://github.com/automattic/jetpack-forms/compare/v7.22.4...v7.22.5
 [7.22.4]: https://github.com/automattic/jetpack-forms/compare/v7.22.3...v7.22.4
