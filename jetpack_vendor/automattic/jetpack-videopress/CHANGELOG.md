@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - VideoPress: add a site-level setting to turn off auto-generated subtitles.
 
+### Changed
+- Dashboard: Release modernized VideoPress dashboard
+
 ## [0.38.2] - 2026-06-29
 ### Security
 - Fix an issue where the media library Heartbeat handler exposed processing status for attachments the current user is not allowed to edit. [#49931]
