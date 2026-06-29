@@ -57,8 +57,8 @@
 		"automattic/jetpack-stats": "^0.19.7",
 		"automattic/jetpack-stats-admin": "^0.31.7",
 		"automattic/jetpack-status": "^6.1.8",
-		"automattic/jetpack-sync": "^4.44.1",
-		"automattic/jetpack-videopress": "^0.38.2",
+		"automattic/jetpack-sync": "^4.45.0-alpha",
+		"automattic/jetpack-videopress": "^0.39.0-alpha",
 		"automattic/jetpack-waf": "^0.28.10",
 		"automattic/jetpack-wp-abilities": "^0.1.5",
 		"automattic/woocommerce-analytics": "^0.16"
@@ -106,7 +106,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_0_a_7",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_0_a_8",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.45.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Sync the videopress_auto_subtitles_disabled option to WordPress.com.
+
 ## [4.44.1] - 2026-06-25
 ### Fixed
 - Refresh the synced `get_plugins` callable when a plugin is deleted, so removed plugins no longer linger in cached plugin lists. [#49913]
@@ -1803,6 +1810,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[4.45.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.44.1...v4.45.0-alpha
 [4.44.1]: https://github.com/Automattic/jetpack-sync/compare/v4.44.0...v4.44.1
 [4.44.0]: https://github.com/Automattic/jetpack-sync/compare/v4.43.1...v4.44.0
 [4.43.1]: https://github.com/Automattic/jetpack-sync/compare/v4.43.0...v4.43.1

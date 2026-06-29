@@ -2,6 +2,10 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 16.0-a.8 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## 16.0-a.7 - 2026-06-29
 ### Enhancements
 - Donations Block: Render the block in emails with email-friendly CTA buttons. [#49963]
