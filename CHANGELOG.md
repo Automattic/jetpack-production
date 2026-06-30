@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: link to the site visibility settings from the Coming Soon notice in the pre-publish panel.
 - VideoPress: make the VideoPress admin dashboard available in the Jetpack plugin (previously only in the standalone Jetpack VideoPress plugin).
 
+### Bug fixes
+- Content Guidelines AI: place the suggestion badge to the left of the section chevron so chevrons stay aligned across sections with and without a badge
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - VideoPress dashboard update, not included in Jetpack plugin
 
