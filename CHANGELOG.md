@@ -9,9 +9,6 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - VideoPress: make the VideoPress admin dashboard available in the Jetpack plugin (previously only in the standalone Jetpack VideoPress plugin).
 
-### Bug fixes
-- JSON API: harden serializable_error() so a proxied error always renders a real HTTP error status (>= 400), never 1, a 2xx, or a code status_header() can't render.
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - VideoPress dashboard update, not included in Jetpack plugin
 
