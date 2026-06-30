@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Content Guidelines AI: place the suggestion badge to the left of the section chevron so chevrons stay aligned across sections with and without a badge
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Performance: register pure display blocks lazily on first render instead of on every front-end request, to reduce per-request PHP/opcache footprint.
 - VideoPress dashboard update, not included in Jetpack plugin
 
 ## 16.0-a.7 - 2026-06-29
