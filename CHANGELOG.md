@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Newsletter: link to the site visibility settings from the Coming Soon notice in the pre-publish panel.
 - VideoPress: make the VideoPress admin dashboard available in the Jetpack plugin (previously only in the standalone Jetpack VideoPress plugin).
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
