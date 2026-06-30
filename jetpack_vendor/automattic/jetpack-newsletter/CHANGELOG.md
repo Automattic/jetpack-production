@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Newsletter settings: space the Email content private-site notice from the form with a Stack gap instead of a custom CSS margin rule.
+
 ### Fixed
 - Newsletter settings: add bottom margin to the Email content private-site notice so it no longer collides with the featured image toggle.
 
