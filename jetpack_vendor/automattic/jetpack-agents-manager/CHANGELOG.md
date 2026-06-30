@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Show the editor Ask AI button whenever Agents Manager is enabled, instead of only in dev contexts.
+
 ## [0.6.0] - 2026-06-29
 ### Added
 - Add Ask AI and Help entry points to the block editor omnibar. [#49967]
@@ -62,6 +69,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Agents Manager: Allow overriding variant and sectionName through filters [#49283]
 - Initial version, extracted from Jetpack MU WPCOM to its own package for external consumption. [#49202]
 
+[0.6.1-alpha]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.6.0...v0.6.1-alpha
 [0.6.0]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.5.3...v0.6.0
 [0.5.3]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.5.2...v0.5.3
 [0.5.2]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.5.1...v0.5.2
