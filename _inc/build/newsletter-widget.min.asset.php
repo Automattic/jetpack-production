@@ -1,1 +1,0 @@
-<?php return array('dependencies' => array('jetpack-script-data', 'jetpack-shared-stores', 'react', 'react-dom', 'react-jsx-runtime', 'wp-components', 'wp-compose', 'wp-data', 'wp-date', 'wp-dom-ready', 'wp-element', 'wp-hooks', 'wp-i18n', 'wp-plugins', 'wp-polyfill', 'wp-primitives', 'wp-url'), 'version' => '1526e4d56b3ed8e9076f');
