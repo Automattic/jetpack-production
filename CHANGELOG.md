@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Performance: register pure display blocks lazily on first render instead of on every front-end request, to reduce per-request PHP/opcache footprint.
+- Performance: skip loading the Stats and Stats Admin packages on plain front-end GET page views when the Stats module is off, where they have no work to do, instead of loading them on every request. They still load on wp-admin, REST, cron, POST, and WP-CLI requests (and whenever the module is active), so behavior is unchanged. Reduces the per-request PHP footprint.
 - VideoPress dashboard update, not included in Jetpack plugin
 
 ## 16.0-a.7 - 2026-06-29
