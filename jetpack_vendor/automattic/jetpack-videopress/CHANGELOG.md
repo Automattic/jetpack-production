@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Dashboard: Release modernized VideoPress dashboard
+- Internal: Enable real typechecking on the package.
 
 ## [0.38.2] - 2026-06-29
 ### Security
