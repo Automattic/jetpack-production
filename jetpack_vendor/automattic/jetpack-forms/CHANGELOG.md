@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - File upload: Fix the file upload field collapsing to its content width on the front end instead of filling the form like it does in the editor.
 - Multistep forms: Fix navigation buttons floating and the button gap collapsing on the frontend when a button width is set.

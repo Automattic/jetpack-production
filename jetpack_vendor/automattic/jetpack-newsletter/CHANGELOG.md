@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Newsletter settings: space the Email content private-site notice from the form with a Stack gap instead of a custom CSS margin rule.
+- Update package dependencies.
 
 ### Fixed
 - Daily Writing Prompt widget: show a branded fallback with a Reader link when no prompt is available or the request fails, instead of rendering a blank widget.

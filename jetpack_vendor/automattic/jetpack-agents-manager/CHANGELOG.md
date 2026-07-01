@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Show the editor Ask AI button whenever Agents Manager is enabled, instead of only in dev contexts.
+- Update package dependencies.
 
 ## [0.6.0] - 2026-06-29
 ### Added

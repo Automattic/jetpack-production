@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add a collapsible Schema settings section to SEO > Settings, below Site verification, as the container for upcoming site-level schema controls.
 - Add a site-level Organization node and output schema as a multi-node @graph.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Load the SEO dashboard's Overview, Settings, and AI tabs resiliently: their data is preloaded into the page for an instant first paint, and when that snapshot is missing or stale the tab now fetches it (showing a loading state and retrying) instead of dead-ending on an "Unable to load" error.
 

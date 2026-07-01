@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Dashboard: Improve spacing, CTA sizing, and menu placement.
 - Welcome screen: Confirm podcasting is included instead of showing an upgrade prompt when the site's plan already covers it.

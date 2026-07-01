@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Admin Menu: Move "Activity Log" above "Settings".
+- Update package dependencies.
 
 ## [0.1.9] - 2026-06-29
 ### Changed
