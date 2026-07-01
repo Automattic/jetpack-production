@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Remove the connection refresh on tab focus, which was legacy Calypso behavior no longer needed now that connection management lives in the editor.
+
 ### Fixed
 - Fix Base UI nativeButton console warning on the settings tab Create a note button.
 - Load Publicize connections via a store resolver so the modern admin page fetches them even when there are no connections, and avoid a duplicate request.
