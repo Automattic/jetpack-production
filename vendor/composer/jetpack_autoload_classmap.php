@@ -1367,12 +1367,28 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php'
 	),
 	'Automattic\\Jetpack\\SEO\\Initializer' => array(
-		'version' => '0.4.0.0-alpha1782845887',
+		'version' => '0.4.0.0-alpha1782898935',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-initializer.php'
 	),
+	'Automattic\\Jetpack\\SEO\\Organization_Schema_Node' => array(
+		'version' => '0.4.0.0-alpha1782898935',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-organization-schema-node.php'
+	),
+	'Automattic\\Jetpack\\SEO\\Post_Schema_Node' => array(
+		'version' => '0.4.0.0-alpha1782898935',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-post-schema-node.php'
+	),
 	'Automattic\\Jetpack\\SEO\\Schema_Builder' => array(
-		'version' => '0.4.0.0-alpha1782845887',
+		'version' => '0.4.0.0-alpha1782898935',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-builder.php'
+	),
+	'Automattic\\Jetpack\\SEO\\Schema_Graph' => array(
+		'version' => '0.4.0.0-alpha1782898935',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-graph.php'
+	),
+	'Automattic\\Jetpack\\SEO\\Schema_Node_Ids' => array(
+		'version' => '0.4.0.0-alpha1782898935',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-node-ids.php'
 	),
 	'Automattic\\Jetpack\\Scan_Page\\Initial_State' => array(
 		'version' => '0.1.8.0',
