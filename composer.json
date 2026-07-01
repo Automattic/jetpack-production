@@ -14,7 +14,7 @@
 		"automattic/block-delimiter": "^0.3.8",
 		"automattic/jetpack-a8c-mc-stats": "^3.0.10",
 		"automattic/jetpack-account-protection": "^0.3.5",
-		"automattic/jetpack-activity-log": "^0.1.9",
+		"automattic/jetpack-activity-log": "^0.1.10-alpha",
 		"automattic/jetpack-admin-ui": "^0.9.6",
 		"automattic/jetpack-agents-manager": "^0.6.1-alpha",
 		"automattic/jetpack-assets": "^4.4.2",
