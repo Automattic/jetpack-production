@@ -2929,7 +2929,7 @@ const useModuleStatus = name => {
     isChangingStatus,
     isLoadingModules
   } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useSelect)(selectData => {
-    const data = selectData(_automattic_jetpack_shared_stores__WEBPACK_IMPORTED_MODULE_0__.JETPACK_MODULES_STORE_ID);
+    const data = selectData(_automattic_jetpack_shared_stores__WEBPACK_IMPORTED_MODULE_0__.store);
     return {
       isModuleActive: data.isModuleActive(name),
       isChangingStatus: data.isModuleUpdating(name),
@@ -2938,7 +2938,7 @@ const useModuleStatus = name => {
   }, [name]);
   const {
     updateJetpackModuleStatus
-  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(_automattic_jetpack_shared_stores__WEBPACK_IMPORTED_MODULE_0__.JETPACK_MODULES_STORE_ID);
+  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_1__.useDispatch)(_automattic_jetpack_shared_stores__WEBPACK_IMPORTED_MODULE_0__.store);
   const changeStatus = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.useCallback)(value => updateJetpackModuleStatus({
     name,
     active: value
