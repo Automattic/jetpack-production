@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Content Guidelines AI: place the suggestion badge to the left of the section chevron so chevrons stay aligned across sections with and without a badge
+- Content Guidelines AI: Wrap the per-section Save/Clear/Generate button row so the buttons no longer overlap on narrow screens.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Newsletter widget: stop building the bundle twice. It was emitted by both the legacy module config (as newsletter-widget.min.js) and its own config (as newsletter-widget.js); only the latter is loaded, so the duplicate min build is removed.
