@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix Base UI nativeButton console warning on the settings tab Create a note button.
+- Load Publicize connections via a store resolver so the modern admin page fetches them even when there are no connections, and avoid a duplicate request.
 
 ## [0.83.4] - 2026-06-29
 ### Changed
