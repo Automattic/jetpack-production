@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Social Image Generator: add new filter to allow disabling the text overlay in the feature.
+
 ### Changed
 - Remove the connection refresh on tab focus, which was legacy Calypso behavior no longer needed now that connection management lives in the editor.
 
