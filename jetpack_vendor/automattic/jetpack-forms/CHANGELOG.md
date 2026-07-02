@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Disable the block visibility control on form field, input, and choice/option blocks, where the per-viewport "Hide on…" option was not honored on the frontend. Fields still honor a saved "Hide everywhere" (removing the field entirely, which keeps required fields safe) regardless of WordPress version. Labels keep their visibility support and now honor the per-viewport "Hide on…" option too, and fields whose label is hidden keep an accessible name.
 - File upload: Fix the file upload field collapsing to its content width on the front end instead of filling the form like it does in the editor.
 - Multistep forms: Fix navigation buttons floating and the button gap collapsing on the frontend when a button width is set.
 
