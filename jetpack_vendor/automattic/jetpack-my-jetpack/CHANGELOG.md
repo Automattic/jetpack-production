@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Connection error notice: consume the resolved actions from the Connection package instead of duplicating the action-resolution logic.
 - Update package dependencies.
 
 ### Fixed
