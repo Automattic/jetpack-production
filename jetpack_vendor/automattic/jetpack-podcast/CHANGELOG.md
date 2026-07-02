@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: Improve spacing, CTA sizing, and menu placement.
+- Minify JS in production build.
 - Welcome screen: Confirm podcasting is included instead of showing an upgrade prompt when the site's plan already covers it.
 
 ## [1.3.0] - 2026-06-29
