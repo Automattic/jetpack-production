@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: warn admins and editors when a form isn't collecting responses (email and saving both off, no integration).
 - Jetpack AI: Surface SEO Enhancer suggestions (SEO title and meta description) in the AI sidebar.
 - Newsletter: link to the site visibility settings from the Coming Soon notice in the pre-publish panel.
+- VideoPress: Add presentation to the player iframe allow list to enable casting from embeds.
 - VideoPress: make the VideoPress admin dashboard available in the Jetpack plugin (previously only in the standalone Jetpack VideoPress plugin).
 
 ### Bug fixes
