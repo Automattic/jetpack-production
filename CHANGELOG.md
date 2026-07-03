@@ -18,6 +18,8 @@ This is an alpha version! The changes listed here are not final.
 - JSON API: Ensure error responses always serialize an HTTP error status (>= 400), never a non-integer or a 2xx that clients could interpret as success.
 - JSON API: Only default a missing or invalid error status to 400, and stop overwriting valid HTTP status codes below 400 that callers return via WP_Error.
 - Newsletter: default the post access level to "everybody" when the stored meta is not a string, and sanitize non-string writes, so corrupt values can no longer cause a fatal error when rendering a post.
+- Prevent Slideshow block crash when converting from Gallery
+- Tiled Gallery: prevent editor crash when transforming a core gallery block.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Donations block: update location of earnings link.
