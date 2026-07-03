@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Forms: warn admins and editors when a form isn't collecting responses (email and saving both off, no integration) in the editor, on the live form, and in the dashboard.
 - Responses: add a standalone full-page view for a single form response.
 
 ### Changed
