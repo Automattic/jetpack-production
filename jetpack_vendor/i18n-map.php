@@ -26,7 +26,7 @@ return array(
     ),
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
-      'ver' => '4.3.7-alpha1783102150',
+      'ver' => '4.3.7-alpha1783112111',
     ),
     'jetpack-blaze' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-blaze',
@@ -106,7 +106,7 @@ return array(
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '5.40.5-alpha1783102740',
+      'ver' => '5.40.5-alpha1783112111',
     ),
     'jetpack-newsletter' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-newsletter',
@@ -146,7 +146,7 @@ return array(
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
-      'ver' => '0.83.5-alpha1783022246',
+      'ver' => '0.83.5-alpha1783112111',
     ),
     'jetpack-scan-page' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-scan-page',
@@ -154,7 +154,7 @@ return array(
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
-      'ver' => '7.2.7-alpha1783102150',
+      'ver' => '7.2.7-alpha1783112111',
     ),
     'jetpack-seo' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-seo',
@@ -174,7 +174,7 @@ return array(
     ),
     'jetpack-videopress-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-videopress',
-      'ver' => '0.39.0-alpha1783109058',
+      'ver' => '0.39.0-alpha1783112111',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
