@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - My Jetpack: de-duplicate search results so a product no longer appears twice (e.g. Forms, VideoPress)
+- Products: Keep product search result order stable while typing a category name.
 
 ## [5.40.4] - 2026-06-29
 ### Changed
