@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Admin: restructure MCP settings Read/Write pages to group tools by display group with collapsible per-group tool lists and a page-level Enable all toggle.
+- Jetpack AI: Surface SEO Enhancer suggestions (SEO title and meta description) in the AI sidebar.
 - Newsletter: link to the site visibility settings from the Coming Soon notice in the pre-publish panel.
 - VideoPress: make the VideoPress admin dashboard available in the Jetpack plugin (previously only in the standalone Jetpack VideoPress plugin).
 
