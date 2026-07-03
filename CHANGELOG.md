@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Donations block: update location of earnings link.
+- Image Studio: share the translation script handle with the Agents Manager package to avoid enqueuing the same file twice.
 - Newsletter widget: stop building the bundle twice. It was emitted by both the legacy module config (as newsletter-widget.min.js) and its own config (as newsletter-widget.js); only the latter is loaded, so the duplicate min build is removed.
 - Performance: Reduce front-end PHP loaded for My Jetpack and Import on page views where they are not used.
 - Performance: register pure display blocks lazily on first render instead of on every front-end request, to reduce per-request PHP/opcache footprint.
