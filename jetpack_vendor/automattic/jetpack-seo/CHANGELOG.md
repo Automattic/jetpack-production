@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a collapsible Schema settings section to SEO > Settings, below Site verification, as the container for upcoming site-level schema controls.
 - Add a site-level Organization node and output schema as a multi-node @graph.
+- Add a site-level WebSite schema node with a SearchAction.
 
 ### Changed
 - Update package dependencies.

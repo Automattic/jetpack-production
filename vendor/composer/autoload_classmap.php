@@ -349,6 +349,7 @@ return array(
     'Automattic\\Jetpack\\SEO\\Schema_Builder' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-builder.php',
     'Automattic\\Jetpack\\SEO\\Schema_Graph' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-graph.php',
     'Automattic\\Jetpack\\SEO\\Schema_Node_Ids' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-node-ids.php',
+    'Automattic\\Jetpack\\SEO\\Website_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-website-schema-node.php',
     'Automattic\\Jetpack\\Scan_Page\\Initial_State' => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-initial-state.php',
     'Automattic\\Jetpack\\Scan_Page\\Jetpack_Scan' => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-jetpack-scan.php',
     'Automattic\\Jetpack\\Scan_Page\\Package_Version' => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-package-version.php',
