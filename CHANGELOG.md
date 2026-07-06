@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 16.1-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Sidebar: Add an internal Proofreader (spelling and grammar) feature flag, gated to internal testing environments.
+
 ## 16.0-beta - 2026-07-06
 ### Enhancements
 - AI Admin: Restructure MCP settings Read/Write pages to group tools by display group with collapsible per-group tool lists and a page-level Enable all toggle. [#50045]
