@@ -74,7 +74,7 @@ return array(
     ),
     'jetpack-forms' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-forms',
-      'ver' => '7.23.1-alpha1783354041',
+      'ver' => '7.23.1-alpha1783372613',
     ),
     'jetpack-image-cdn' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-image-cdn',
@@ -104,9 +104,13 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-masterbar',
       'ver' => '0.27.32',
     ),
+    'jetpack-menu-badges' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-menu-badges',
+      'ver' => '0.1.0-alpha1783372613',
+    ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '5.40.5',
+      'ver' => '5.40.6-alpha1783372613',
     ),
     'jetpack-newsletter' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-newsletter',

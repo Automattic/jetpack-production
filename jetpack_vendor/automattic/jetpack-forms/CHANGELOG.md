@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Forms now reports its unread count to the central menu-badges registry instead of writing admin-menu markup directly.
 - Update package dependencies.
 
 ## [7.23.0] - 2026-07-06

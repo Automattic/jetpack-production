@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Admin-menu REST endpoint now surfaces notification counts from the central menu-badges registry, so Calypso/Simple sidebars get authoritative Jetpack menu counts.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Sidebar: Add an internal Proofreader (spelling and grammar) feature flag, gated to internal testing environments.
 
