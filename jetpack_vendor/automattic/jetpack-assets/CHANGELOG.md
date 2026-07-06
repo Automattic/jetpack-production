@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.4.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [4.4.3] - 2026-07-06
 ### Added
-- Expose the current user's edit_others_posts capability in the localized script data.
+- Expose the current user's `edit_others_posts` capability in the localized script data. [#50162]
 
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#50097] [#50183]
 
 ## [4.4.2] - 2026-06-26
 ### Changed
@@ -890,7 +887,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Statically access asset tools
 
-[4.4.3-alpha]: https://github.com/Automattic/jetpack-assets/compare/v4.4.2...v4.4.3-alpha
+[4.4.3]: https://github.com/Automattic/jetpack-assets/compare/v4.4.2...v4.4.3
 [4.4.2]: https://github.com/Automattic/jetpack-assets/compare/v4.4.1...v4.4.2
 [4.4.1]: https://github.com/Automattic/jetpack-assets/compare/v4.4.0...v4.4.1
 [4.4.0]: https://github.com/Automattic/jetpack-assets/compare/v4.3.44...v4.4.0

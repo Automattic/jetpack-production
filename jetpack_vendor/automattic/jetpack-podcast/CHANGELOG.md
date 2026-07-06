@@ -5,20 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.3.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [1.3.1] - 2026-07-06
 ### Added
-- Podcast Episode block: render the full interactive player in the WPCOM Reader.
+- Podcast Episode block: Render the full interactive player in the WordPress.com Reader. [#50057]
 
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#50097] [#50183]
 
 ### Fixed
-- Dashboard: Improve spacing, CTA sizing, and menu placement.
-- Minify JS in production build.
-- Welcome screen: Confirm podcasting is included instead of showing an upgrade prompt when the site's plan already covers it.
+- Dashboard: Improve spacing, CTA sizing, and menu placement. [#50059]
+- Minify JS in production build. [#50130]
+- Welcome screen: Confirm podcasting is included instead of showing an upgrade prompt when the site's plan already covers it. [#50062]
 
 ## [1.3.0] - 2026-06-29
 ### Changed
@@ -161,7 +158,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Replace the wp-build placeholder with page chrome and tab navigation. [#48559]
 - Dashboard: Slim down wp-build wiring to the Backup pattern. [#48600]
 
-[1.3.1-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v1.3.0...v1.3.1-alpha
+[1.3.1]: https://github.com/Automattic/jetpack-podcast/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/Automattic/jetpack-podcast/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/Automattic/jetpack-podcast/compare/v1.1.1...v1.2.0
 [1.1.1]: https://github.com/Automattic/jetpack-podcast/compare/v1.1.0...v1.1.1
