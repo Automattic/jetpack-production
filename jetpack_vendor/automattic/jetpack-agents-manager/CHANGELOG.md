@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Show the editor Ask AI button whenever Agents Manager is enabled, instead of only in dev contexts.
 - Update package dependencies.
 
+### Fixed
+- Site Editor: Skip the docked-sidebar pre-render on the navigation view, where the chat can't dock — only the editing canvas (`?canvas=edit`) docks the chat.
+
 ## [0.6.0] - 2026-06-29
 ### Added
 - Add Ask AI and Help entry points to the block editor omnibar. [#49967]
