@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Expose the current user's edit_others_posts capability in the localized script data.
+
 ### Changed
 - Update package dependencies.
 
