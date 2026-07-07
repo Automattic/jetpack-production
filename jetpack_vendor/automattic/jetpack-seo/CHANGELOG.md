@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 - Update WPDS design tokens to the @wordpress/theme 0.16/0.17 names (see https://github.com/WordPress/gutenberg/blob/trunk/packages/theme/CHANGELOG.md#0160-2026-06-24 ).
 
+### Fixed
+- Clarify Google site verification actions and configured-code labels.
+
 ## [0.4.0] - 2026-07-06
 ### Added
 - Add a collapsible Schema settings section to SEO > Settings, below Site verification, as the container for upcoming site-level schema controls. [#50071]
