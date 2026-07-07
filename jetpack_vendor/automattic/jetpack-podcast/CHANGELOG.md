@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Podcast: load the package whenever the module system initializes it. Host and `jetpack_podcast_for_the_world` load-gating now lives solely in the module availability layer, so self-hosted sites with the module active load the package correctly.
 - Podcast distribution: mirror the Pocket Casts submission verdict onto the local site options so the dashboard reflects show state on Jetpack/Atomic sites.
 
 ## [1.3.1] - 2026-07-06

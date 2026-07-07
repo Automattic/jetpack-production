@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Sidebar: Add an internal Proofreader (spelling and grammar) feature flag, gated to internal testing environments.
+- Podcast: make the module active-state the single load gate. The module no longer requires a Jetpack connection (its core feed/settings/block are local), and it loads from late_initialization whenever active, so the podcast feed keeps serving even while disconnected.
 
 ## 16.0-beta - 2026-07-06
 ### Enhancements
