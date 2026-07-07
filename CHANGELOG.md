@@ -14,6 +14,8 @@ This is an alpha version! The changes listed here are not final.
 - AI Sidebar: Add an internal Proofreader (spelling and grammar) feature flag, gated to internal testing environments.
 - Podcast: make the module active-state the single load gate. The module no longer requires a Jetpack connection (its core feed/settings/block are local), and it loads from late_initialization whenever active, so the podcast feed keeps serving even while disconnected.
 - Updated package dependencies.
+- Update package dependencies.
+- Update WPDS design tokens to the @wordpress/theme 0.16/0.17 names (see https://github.com/WordPress/gutenberg/blob/trunk/packages/theme/CHANGELOG.md#0160-2026-06-24 ).
 
 ## 16.0-beta - 2026-07-06
 ### Enhancements

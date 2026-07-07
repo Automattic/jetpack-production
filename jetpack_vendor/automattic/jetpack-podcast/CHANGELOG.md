@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Podcast: update README and MD files
+- Update package dependencies.
 
 ### Fixed
 - Podcast: load the package whenever the module system initializes it. Host and `jetpack_podcast_for_the_world` load-gating now lives solely in the module availability layer, so self-hosted sites with the module active load the package correctly.

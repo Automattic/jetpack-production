@@ -12,6 +12,10 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Forms now reports its unread count to the central menu-badges registry instead of writing admin-menu markup directly.
 - Update package dependencies.
+- Update WPDS design tokens to the @wordpress/theme 0.16/0.17 names (see https://github.com/WordPress/gutenberg/blob/trunk/packages/theme/CHANGELOG.md#0160-2026-06-24 ).
+
+### Fixed
+- Fix an invalid Stack "gap" value ("s" -> "sm") in the single-response actions bar, surfaced as a type error by the @wordpress/ui update.
 
 ## [7.23.0] - 2026-07-06
 ### Added
