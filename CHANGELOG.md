@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Admin-menu REST endpoint now surfaces notification counts from the central menu-badges registry, so Calypso/Simple sidebars get authoritative Jetpack menu counts.
 - Newsletter: enable the modernized wp-admin dashboard and subscriber management for all sites by default.
+- Stats: Add a link to the site-name admin bar menu.
 
 ### Bug fixes
 - Paid content: preserve non-ASCII characters (emoji, Chinese, etc.) in the post URL when a subscriber logs in via "Already a paid subscriber?", so they are redirected back to the correct post instead of a 404.
