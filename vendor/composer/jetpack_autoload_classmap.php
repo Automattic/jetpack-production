@@ -855,15 +855,15 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/admin-menu/class-wpcom-admin-menu.php'
 	),
 	'Automattic\\Jetpack\\Menu_Badges\\Menu_Badges' => array(
-		'version' => '0.1.0.0-alpha1783372613',
+		'version' => '0.1.0.0-alpha1783553805',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-menu-badges/src/class-menu-badges.php'
 	),
 	'Automattic\\Jetpack\\Menu_Badges\\Menu_Renderer' => array(
-		'version' => '0.1.0.0-alpha1783372613',
+		'version' => '0.1.0.0-alpha1783553805',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-menu-badges/src/class-menu-renderer.php'
 	),
 	'Automattic\\Jetpack\\Menu_Badges\\Notification_Counts' => array(
-		'version' => '0.1.0.0-alpha1783372613',
+		'version' => '0.1.0.0-alpha1783553805',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-menu-badges/src/class-notification-counts.php'
 	),
 	'Automattic\\Jetpack\\Modules' => array(

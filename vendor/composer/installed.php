@@ -326,9 +326,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-menu-badges' => array(
-            'pretty_version' => '0.1.0-alpha.1783372613',
-            'version' => '0.1.0.0-alpha1783372613',
-            'reference' => '8f978d3b1057f170bbfe7f9b0e847301e3568151',
+            'pretty_version' => '0.1.0-alpha.1783553805',
+            'version' => '0.1.0.0-alpha1783553805',
+            'reference' => '905db5bba32c36de376a447dbccd7bcef3146b29',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-menu-badges',
             'aliases' => array(),

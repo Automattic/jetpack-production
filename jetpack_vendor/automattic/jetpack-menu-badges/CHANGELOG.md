@@ -11,3 +11,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Initial release: central registry and renderer for Jetpack admin-menu notification-count badges.
+
+### Changed
+- Add the core `awaiting-mod` and `update-plugins` classes to the top-level Jetpack menu total badge so it uses WordPress's standard admin-menu bubble styling.

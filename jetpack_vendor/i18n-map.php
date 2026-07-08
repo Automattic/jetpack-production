@@ -106,7 +106,7 @@ return array(
     ),
     'jetpack-menu-badges' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-menu-badges',
-      'ver' => '0.1.0-alpha1783372613',
+      'ver' => '0.1.0-alpha1783553805',
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
