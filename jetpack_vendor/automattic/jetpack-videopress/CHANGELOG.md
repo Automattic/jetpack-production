@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Guard the block banner icon render with isValidElement so a non-element icon prop no longer trips the @wordpress/icons type check.
+- VideoPress: Fix the media library "Edit video details" link so it opens the modernized dashboard. Old links now redirect to the new location.
 
 ## [0.39.0] - 2026-07-06
 ### Added
