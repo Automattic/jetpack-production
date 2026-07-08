@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Carousel: fix inconsistent behavior between keyboard and mouse for images linked to an attachment page.
+- Forms: prevent duplicate field Name/IDs (from duplicating or copy/pasting a field) from collapsing into one another, which dropped fields from stored responses and email notifications.
 - Paid content: preserve non-ASCII characters (emoji, Chinese, etc.) in the post URL when a subscriber logs in via "Already a paid subscriber?", so they are redirected back to the correct post instead of a 404.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

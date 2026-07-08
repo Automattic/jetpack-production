@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack now reports its red-bubble alerts to the central menu-badges registry instead of writing admin-menu markup directly; the Protect alert is skipped there since Protect reports its own count.
 - Update package dependencies.
 
+### Fixed
+- Fix the My Jetpack app failing to load on WordPress 6.9 installs without the Gutenberg plugin active, where the wp-theme script handle it depends on is otherwise unregistered.
+
 ## [5.40.5] - 2026-07-06
 ### Changed
 - Consume the resolved actions from the Connection package instead of duplicating the action-resolution logic. [#50081]
