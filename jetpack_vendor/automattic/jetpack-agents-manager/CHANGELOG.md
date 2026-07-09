@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.8.0] - 2026-07-09
 ### Changed
-- Site Editor: Restore the AI chat on the navigation view.
+- Site Editor: Restore the AI chat on the navigation view. [#50273]
 
 ## [0.7.0] - 2026-07-06
 ### Added
@@ -80,7 +77,7 @@ This is an alpha version! The changes listed here are not final.
 - Agents Manager: Allow overriding variant and sectionName through filters [#49283]
 - Initial version, extracted from Jetpack MU WPCOM to its own package for external consumption. [#49202]
 
-[0.8.0-alpha]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.7.0...v0.8.0-alpha
+[0.8.0]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.5.3...v0.6.0
 [0.5.3]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.5.2...v0.5.3
