@@ -346,6 +346,7 @@ return array(
     'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\Templates' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-templates.php',
     'Automattic\\Jetpack\\Redirect' => $baseDir . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php',
     'Automattic\\Jetpack\\Roles' => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php',
+    'Automattic\\Jetpack\\SEO\\Author_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-author-schema-node.php',
     'Automattic\\Jetpack\\SEO\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-initializer.php',
     'Automattic\\Jetpack\\SEO\\Organization_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-organization-schema-node.php',
     'Automattic\\Jetpack\\SEO\\Post_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-post-schema-node.php',

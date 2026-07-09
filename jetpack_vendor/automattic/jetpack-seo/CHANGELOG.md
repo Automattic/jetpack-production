@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.1-alpha] - unreleased
+## [0.5.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add Person and ProfilePage structured data for authors, with an author profile form in the Schema settings.
 
 ### Changed
 - Update package dependencies.
@@ -16,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Clarify Google site verification actions and configured-code labels.
 - Content tab: Rename the row action column from "Actions" to "Edit SEO".
+- Validate schema profile URLs without DNS lookups, so front-end rendering never blocks on name resolution and well-formed URLs on unresolvable hosts are kept.
 
 ## [0.4.0] - 2026-07-06
 ### Added
@@ -85,7 +89,7 @@ This is an alpha version! The changes listed here are not final.
 - Create a Settings screen with site visibility, post title structure, front-page description, and site verification. [#49256]
 - Scaffold the new `jetpack-seo` package and mount its admin page. [#49203]
 
-[0.4.1-alpha]: https://github.com/Automattic/jetpack-seo/compare/0.4.0...0.4.1-alpha
+[0.5.0-alpha]: https://github.com/Automattic/jetpack-seo/compare/0.4.0...0.5.0-alpha
 [0.4.0]: https://github.com/Automattic/jetpack-seo/compare/0.3.1...0.4.0
 [0.3.1]: https://github.com/Automattic/jetpack-seo/compare/0.3.0...0.3.1
 [0.3.0]: https://github.com/Automattic/jetpack-seo/compare/0.2.0...0.3.0
