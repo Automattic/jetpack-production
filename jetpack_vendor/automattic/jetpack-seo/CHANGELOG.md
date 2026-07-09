@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Clarify Google site verification actions and configured-code labels.
+- Content tab: Rename the row action column from "Actions" to "Edit SEO".
 
 ## [0.4.0] - 2026-07-06
 ### Added
