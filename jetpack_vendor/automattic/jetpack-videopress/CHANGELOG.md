@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Captions: Add a shared manager for uploading, drafting, editing, publishing, and deleting caption tracks.
 
+### Fixed
+- Captions: Fix the caption manager failing to load on WordPress.com Simple sites by setting Webpack's public path explicitly.
+
 ## [0.40.0] - 2026-07-09
 ### Added
 - Resumable video uploads are now verified as they arrive, instead of re-reading the whole file once the upload completes. [#50054]
