@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Clarify Google site verification actions and configured-code labels.
 - Content tab: Rename the row action column from "Actions" to "Edit SEO".
+- Fix SEO inspector save issues: report failed saves, block saving over unloaded meta, and keep edits scoped to their post.
 - Validate schema profile URLs without DNS lookups, so front-end rendering never blocks on name resolution and well-formed URLs on unresolvable hosts are kept.
 
 ## [0.4.0] - 2026-07-06
