@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Captions: Add a shared manager for uploading, drafting, editing, publishing, and deleting caption tracks.
 
+### Changed
+- Media Library: reuse the attachment title, description and caption for the VideoPress video when promoting a video with the "Upload to VideoPress" action, instead of only the file name.
+
 ### Fixed
 - Captions: Fix the caption manager failing to load on WordPress.com Simple sites by setting Webpack's public path explicitly.
 
