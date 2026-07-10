@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Sidebar notice: Fix the dismiss icon being invisible against the dark admin menu background.
+
 ## [0.27.32] - 2026-07-06
 ### Changed
 - Update package dependencies. [#50097] [#50183]
