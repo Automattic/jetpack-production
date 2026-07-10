@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin-menu REST endpoint now surfaces notification counts from the central menu-badges registry, so Calypso/Simple sidebars get authoritative Jetpack menu counts.
 - Newsletter: enable the modernized wp-admin dashboard and subscriber management for all sites by default.
 - Site endpoint: return hosting_provider_guess and environment_type from the single-site endpoint when explicitly requested via the fields parameter, matching /me/sites.
+- Social: Enable or disable the Social module directly from the Social dashboard, so it can be turned back on where Jetpack Settings is unreachable (e.g. WordPress.com Atomic sites).
 - Stats: Add a link to the site-name admin bar menu.
 
 ### Bug fixes

@@ -434,9 +434,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-publicize' => array(
-            'pretty_version' => '0.84.0-alpha.1783684536',
-            'version' => '0.84.0.0-alpha1783684536',
-            'reference' => '4fd271b95f64278cfa74558e06aec578f8018137',
+            'pretty_version' => '0.84.0-alpha.1783706557',
+            'version' => '0.84.0.0-alpha1783706557',
+            'reference' => 'dad73c33b1de2a232d81692f3c2bfa734abfaba9',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-publicize',
             'aliases' => array(),
