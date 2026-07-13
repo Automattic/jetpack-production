@@ -13,8 +13,10 @@ This is an alpha version! The changes listed here are not final.
 - Site endpoint: return hosting_provider_guess and environment_type from the single-site endpoint when explicitly requested via the fields parameter, matching /me/sites.
 - Social: Enable or disable the Social module directly from the Social dashboard, so it can be turned back on where Jetpack Settings is unreachable (e.g. WordPress.com Atomic sites).
 - Stats: Add a link to the site-name admin bar menu.
+- Update the license activation screen to use @wordpress/ui components.
 
 ### Bug fixes
+- Bundle @wordpress/theme and @wordpress/private-apis into the admin build so the Jetpack dashboard script still loads on WordPress versions that do not register those script handles.
 - Carousel: fix images not rendering in portrait orientation on mobile when a gallery image has no data-large-file attribute
 - Carousel: fix inconsistent behavior between keyboard and mouse for images linked to an attachment page.
 - Forms: prevent duplicate field Name/IDs (from duplicating or copy/pasting a field) from collapsing into one another, which dropped fields from stored responses and email notifications.
