@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Sidebar: Add an internal Proofreader (spelling and grammar) feature flag, gated to internal testing environments.
+- Comment: Prefix --color-* variables into --jetpack-social-logo-color-* CSS variables to avoid name collisions.
 - Don't load the editor's AI image and media tools for users who have not connected their WordPress.com account, so they are no longer offered tools that would only error out.
 - Podcast: make the module active-state the single load gate. The module no longer requires a Jetpack connection (its core feed/settings/block are local), and it loads from late_initialization whenever active, so the podcast feed keeps serving even while disconnected.
 - Updated package dependencies.
