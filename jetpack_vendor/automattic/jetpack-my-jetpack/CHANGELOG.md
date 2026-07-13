@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- My Jetpack: fix route changes in Chrome when scroll APIs return promises.
 - Show a Site Editor action for sharing buttons on block themes.
 
 ## [5.40.6] - 2026-07-09
