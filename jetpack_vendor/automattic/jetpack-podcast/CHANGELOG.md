@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Podcast: stop exposing the `podcasting_*` options through core `/wp/v2/settings`. The dashboard reads and writes them via the dedicated `wpcom/v2/podcast/settings` endpoint; the registered `sanitize_callback`s are kept so writes stay validated.
 - Podcast: update README and MD files
 - Update package dependencies.
 
