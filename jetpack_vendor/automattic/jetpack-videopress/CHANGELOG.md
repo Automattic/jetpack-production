@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Captions: Fix the caption manager failing to load on WordPress.com Simple sites by setting Webpack's public path explicitly.
+- VideoPress: Decode HTML entities in video titles so they no longer display as raw entities (e.g. `&#8217;`) in the dashboard library and video details header.
 
 ## [0.40.0] - 2026-07-09
 ### Added
