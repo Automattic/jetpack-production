@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove unused react-redux, redux, and redux-thunk dependencies
 
 ### Fixed
+- Contact Form: restore the listView block support so form fields can be managed from the editor List View (regressed when block attributes were ported to block.json metadata).
 - Feedback: parse versionless JSON post_content as JSON instead of falling through to the legacy plain-text parser.
 - Fix an invalid Stack "gap" value ("s" -> "sm") in the single-response actions bar, surfaced as a type error by the @wordpress/ui update.
 - Forms: stop loading the unused legacy dashboard SPA bundle on the new (wp-build) Forms dashboard, removing a large amount of unnecessary JavaScript from the page.
