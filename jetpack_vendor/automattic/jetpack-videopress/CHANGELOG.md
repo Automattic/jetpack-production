@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Captions: Add a shared manager for uploading, drafting, editing, publishing, and deleting caption tracks.
 
 ### Changed
+- Captions: Surface outcome and async error messages as snackbars, keeping only form-validation errors as an inline notice.
 - Media Library: reuse the attachment title, description and caption for the VideoPress video when promoting a video with the "Upload to VideoPress" action, instead of only the file name.
 
 ### Fixed
