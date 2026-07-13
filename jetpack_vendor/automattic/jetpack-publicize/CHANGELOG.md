@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Comment: Prefix --color-* variables into --jetpack-social-logo-color-* CSS variables to avoid name collisions.
+- Comment: Remove Calypso color schemes dependency.
 - Social: Enable or disable the Social module directly from the Social dashboard, so it can be turned back on where Jetpack Settings is unreachable (e.g. WordPress.com Atomic sites).
 - Social: enable the modernized wp-admin dashboard for all sites by default.
 - Update package dependencies.
