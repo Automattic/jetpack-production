@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Comment: Forms: migrate FormsHelpModal from @wordpress/components to @wordpress/ui Dialog, Button, Stack, and Text.
+- Comment: Remove manual WPDS token fallbacks from wp-build route styles so build-time PostCSS injects canonical design-token fallbacks.
 - Comment: Replace Calypso `--color-*` tokens with WPDS tokens in block editor styles and remove custom upsell nudge Calypso overrides.
 - Forms now reports its unread count to the central menu-badges registry instead of writing admin-menu markup directly.
 - Update package dependencies.
