@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add LocalBusiness details to the site Organization schema, with settings and a local-business toggle.
 - Add Person and ProfilePage structured data for authors, with an author profile form in the Schema settings.
 
 ### Changed

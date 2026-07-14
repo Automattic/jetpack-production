@@ -372,6 +372,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_1_a_0
         'Automattic\\Jetpack\\Roles' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php',
         'Automattic\\Jetpack\\SEO\\Author_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-author-schema-node.php',
         'Automattic\\Jetpack\\SEO\\Initializer' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-initializer.php',
+        'Automattic\\Jetpack\\SEO\\Local_Business_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-local-business-schema-node.php',
         'Automattic\\Jetpack\\SEO\\Organization_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-organization-schema-node.php',
         'Automattic\\Jetpack\\SEO\\Post_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-post-schema-node.php',
         'Automattic\\Jetpack\\SEO\\Schema_Builder' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-builder.php',

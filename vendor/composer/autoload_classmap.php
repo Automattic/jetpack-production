@@ -348,6 +348,7 @@ return array(
     'Automattic\\Jetpack\\Roles' => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php',
     'Automattic\\Jetpack\\SEO\\Author_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-author-schema-node.php',
     'Automattic\\Jetpack\\SEO\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-initializer.php',
+    'Automattic\\Jetpack\\SEO\\Local_Business_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-local-business-schema-node.php',
     'Automattic\\Jetpack\\SEO\\Organization_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-organization-schema-node.php',
     'Automattic\\Jetpack\\SEO\\Post_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-post-schema-node.php',
     'Automattic\\Jetpack\\SEO\\Schema_Builder' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-builder.php',
