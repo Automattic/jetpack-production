@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.3.2-alpha] - unreleased
+## [1.4.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast: remove the unused `Episode_Block_Tags::render()` seam; production and tests compose `get_block_attrs()` + `render_from_attrs()` directly. No behavior change.
 - Podcast: stop exposing the `podcasting_*` options through core `/wp/v2/settings`. The dashboard reads and writes them via the dedicated `wpcom/v2/podcast/settings` endpoint; the registered `sanitize_callback`s are kept so writes stay validated.
 - Podcast: update README and MD files
+- Podcast Episode: the rich player is now a paid feature, gated in the editor for sites without a qualifying plan (an upgrade prompt on WordPress.com, hidden on self-hosted Jetpack like other paid blocks).
 - Update package dependencies.
 
 ### Fixed
@@ -175,7 +176,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Replace the wp-build placeholder with page chrome and tab navigation. [#48559]
 - Dashboard: Slim down wp-build wiring to the Backup pattern. [#48600]
 
-[1.3.2-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v1.3.1...v1.3.2-alpha
+[1.4.0-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v1.3.1...v1.4.0-alpha
 [1.3.1]: https://github.com/Automattic/jetpack-podcast/compare/v1.3.0...v1.3.1
 [1.3.0]: https://github.com/Automattic/jetpack-podcast/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/Automattic/jetpack-podcast/compare/v1.1.1...v1.2.0
