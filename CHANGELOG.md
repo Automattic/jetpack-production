@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: fix images not rendering in portrait orientation on mobile when a gallery image has no data-large-file attribute
 - Carousel: fix inconsistent behavior between keyboard and mouse for images linked to an attachment page.
 - Forms: prevent duplicate field Name/IDs (from duplicating or copy/pasting a field) from collapsing into one another, which dropped fields from stored responses and email notifications.
+- Paid Content: expire subscription access at the end of the end_date day (UTC) rather than the exact purchase timestamp, so a same-day auto-renewal completes before access is cut and enforcement matches the platform's end-of-day expiration convention.
 - Paid content: preserve non-ASCII characters (emoji, Chinese, etc.) in the post URL when a subscriber logs in via "Already a paid subscriber?", so they are redirected back to the correct post instead of a 404.
 - Related Posts: enqueue the block stylesheet whenever the block renders, so it is styled on pages and classic themes where the module's front-end asset gate does not run.
 - Sharing: Guide block-theme users from legacy sharing buttons to the Sharing Buttons block.
