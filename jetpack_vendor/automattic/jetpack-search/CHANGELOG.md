@@ -13,6 +13,10 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 - Update WPDS design tokens to the @wordpress/theme 0.16/0.17 names (see https://github.com/WordPress/gutenberg/blob/trunk/packages/theme/CHANGELOG.md#0160-2026-06-24 ).
 
+### Fixed
+- Fix checkout for unregistered sites getting stuck or redirected to the site selector instead of completing the purchase.
+- Fix the Search upsell page's product-availability check not returning its promise, which caused checkout to always run even when the site already had the Search product.
+
 ## [7.2.7] - 2026-07-06
 ### Changed
 - Update package dependencies. [#50097] [#50183] [#50212]
