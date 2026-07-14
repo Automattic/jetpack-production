@@ -19,6 +19,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Clarify Google site verification actions and configured-code labels.
+- Content tab: make the search box match titles, SEO titles and meta descriptions instead of returning no results
+- Content tab: page through posts and pages instead of silently capping the list at 100 of each
 - Content tab: Rename the row action column from "Actions" to "Edit SEO".
 - Fix SEO inspector save issues: report failed saves, block saving over unloaded meta, and keep edits scoped to their post.
 - Validate schema profile URLs without DNS lookups, so front-end rendering never blocks on name resolution and well-formed URLs on unresolvable hosts are kept.
