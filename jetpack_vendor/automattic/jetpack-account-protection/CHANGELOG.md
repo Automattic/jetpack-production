@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Account Protection: Add additional context to Verify your identity page to reduce user confusion.
 
+### Fixed
+- Account Protection: Default the login form password detection callback's password argument to null so other plugins hooking into the authenticate filter without a password do not trigger a fatal error.
+
 ## [0.3.5] - 2026-06-25
 ### Changed
 - Defer loading the password feature classes until the Account Protection module is active, reducing the per-request PHP/opcache footprint. [#49806]
