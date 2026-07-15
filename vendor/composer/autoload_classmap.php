@@ -347,6 +347,7 @@ return array(
     'Automattic\\Jetpack\\Redirect' => $baseDir . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php',
     'Automattic\\Jetpack\\Roles' => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php',
     'Automattic\\Jetpack\\SEO\\Author_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-author-schema-node.php',
+    'Automattic\\Jetpack\\SEO\\Breadcrumb_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-breadcrumb-schema-node.php',
     'Automattic\\Jetpack\\SEO\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-initializer.php',
     'Automattic\\Jetpack\\SEO\\Local_Business_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-local-business-schema-node.php',
     'Automattic\\Jetpack\\SEO\\Organization_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-organization-schema-node.php',
