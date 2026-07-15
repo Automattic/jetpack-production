@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast Episode: the rich player is now a paid feature, gated in the editor for sites without a qualifying plan (an upgrade prompt on WordPress.com, hidden on self-hosted Jetpack like other paid blocks).
 
 ### Fixed
+- Podcast: derive the distribution feed URL from WordPress's canonical category-feed API so it stays valid on plain-permalink and no-trailing-slash sites instead of producing a malformed URL.
 - Podcast: fix hardcoded upsell fallback URL to use the injected upgrade product.
 - Podcast: show a clear message when episode play counts can't load, instead of quietly showing zero plays.
 - Podcast feed: fixed missing episode details when the Podcast Episode block sits inside another block.
