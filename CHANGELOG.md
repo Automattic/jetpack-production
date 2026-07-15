@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Sidebar: Add an internal Proofreader (spelling and grammar) feature flag, gated to internal testing environments.
 - Blaze: point the settings card link to the new Blaze Ads menu location under admin.php.
 - Comment: Prefix --color-* variables into --jetpack-social-logo-color-* CSS variables to avoid name collisions.
+- Connection: Ensure Jetpack dashboard connection components styles do not conflict with Connection package styles.
 - Don't load the editor's AI image and media tools for users who have not connected their WordPress.com account, so they are no longer offered tools that would only error out.
 - Podcast: make the module active-state the single load gate. The module no longer requires a Jetpack connection (its core feed/settings/block are local), and it loads from late_initialization whenever active, so the podcast feed keeps serving even while disconnected.
 - Updated package dependencies.

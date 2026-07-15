@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Connection: Ensure My Jetpack Connection status card is compatible with TSX in Jetpack Connection package.
 - My Jetpack: fix route changes in Chrome when scroll APIs return promises.
 - My Jetpack: hide the large Stats graph when the Stats module is disabled, and show the compact Stats card with an activation CTA instead.
 - Reload the page after toggling a menu-registering module (Podcast, Newsletter, Reader) in My Jetpack so the wp-admin sidebar reflects the change, matching the Forms toggle behavior.
