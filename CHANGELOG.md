@@ -2,12 +2,11 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 16.1-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 16.0.1 - 2026-07-15
 ### Bug fixes
-- Forms and VideoPress: fix the admin dashboards rendering a blank "Something went wrong!" error on WordPress 6.9.
+- Fix the Forms and VideoPress admin dashboards rendering a blank "Something went wrong!" error on WordPress 6.9. [#50515]
+- My Jetpack: Fix route changes in Chrome when scroll APIs return promises. [#50465]
+- Poll shortcode: Require HTTPS and an exact script path when loading the poll script.
 
 ## 16.0 - 2026-07-07
 ### Enhancements
