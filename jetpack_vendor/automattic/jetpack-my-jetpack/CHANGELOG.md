@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - My Jetpack: fix route changes in Chrome when scroll APIs return promises.
+- My Jetpack: hide the large Stats graph when the Stats module is disabled, and show the compact Stats card with an activation CTA instead.
 - Show a Site Editor action for sharing buttons on block themes.
 
 ## [5.40.6] - 2026-07-09
