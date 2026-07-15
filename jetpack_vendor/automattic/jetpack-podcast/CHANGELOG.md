@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Podcast Episode: add editor controls for soundbites and alternate audio/video files, so the front-end seek buttons and Podcasting 2.0 feed tags that already render can now be authored.
+
 ### Changed
 - Podcast: remove the unused `Episode_Block_Tags::render()` seam; production and tests compose `get_block_attrs()` + `render_from_attrs()` directly. No behavior change.
 - Podcast: stop exposing the `podcasting_*` options through core `/wp/v2/settings`. The dashboard reads and writes them via the dedicated `wpcom/v2/podcast/settings` endpoint; the registered `sanitize_callback`s are kept so writes stay validated.
