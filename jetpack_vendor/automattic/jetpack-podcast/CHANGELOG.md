@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Podcast: fix hardcoded upsell fallback URL to use the injected upgrade product.
 - Podcast: include full episode show notes in the feed so podcast apps stop showing blank episodes.
 - Podcast: load the package whenever the module system initializes it. Host and `jetpack_podcast_for_the_world` load-gating now lives solely in the module availability layer, so self-hosted sites with the module active load the package correctly.
 - Podcast distribution: mirror the Pocket Casts submission verdict onto the local site options so the dashboard reflects show state on Jetpack/Atomic sites.
