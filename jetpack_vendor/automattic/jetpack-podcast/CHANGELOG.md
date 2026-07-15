@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Podcast: remove the unused `Episode_Block_Tags::render()` seam; production and tests compose `get_block_attrs()` + `render_from_attrs()` directly. No behavior change.
 - Podcast Episode: the rich player is now a paid feature, gated in the editor for sites without a qualifying plan (an upgrade prompt on WordPress.com, hidden on self-hosted Jetpack like other paid blocks).
 
+### Removed
+- Podcast: drop the settings-saved analytics event.
+
 ### Fixed
 - Podcast: count episodes published with the Podcast Episode block in publish telemetry.
 - Podcast: derive the distribution feed URL from WordPress's canonical category-feed API so it stays valid on plain-permalink and no-trailing-slash sites instead of producing a malformed URL.
