@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Captions: Surface outcome and async error messages as snackbars, keeping only form-validation errors as an inline notice.
 - Comment: Remove manual WPDS token fallbacks from wp-build route styles so build-time PostCSS injects canonical design-token fallbacks.
 - Media Library: reuse the attachment title, description and caption for the VideoPress video when promoting a video with the "Upload to VideoPress" action, instead of only the file name.
+- Update package dependencies.
 
 ### Fixed
 - Captions: Fix the caption manager failing to load on WordPress.com Simple sites by setting Webpack's public path explicitly.
