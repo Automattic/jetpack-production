@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 16.1-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Forms and VideoPress: fix the admin dashboards rendering a blank "Something went wrong!" error on WordPress 6.9.
+
 ## 16.0 - 2026-07-07
 ### Enhancements
 - Add AI-powered "Generate/Improve with Jetpack" buttons to the Content Guidelines admin page. [#47959]
