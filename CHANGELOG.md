@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Account Protection: Add additional context to Verify your identity page to reduce user confusion.
 - Admin-menu REST endpoint now surfaces notification counts from the central menu-badges registry, so Calypso/Simple sidebars get authoritative Jetpack menu counts.
 - AI Sidebar: Add Jetpack AI abilities in the page and site editors.
+- Content Guidelines AI: Resolve the AI plan state in PHP and preload it into the page, hydrating the plans store at boot so buttons render in the correct locked/unlocked state on first paint with no client-side plan fetch. When the server-side lookup fails, the AI UI is omitted for that load instead of guessing.
 - Content Guidelines AI: Show the Generate/Improve buttons in a locked state for sites without an AI plan, and open the upgrade notice when clicked (even after dismissal). Prevent the AI buttons from briefly appearing unlocked while the feature check resolves.
 - Expose the AI Launchpad state options (enabled, dismissed, completed) in the /sites endpoint options, so Calypso clients can gate My Home and launchpad surfaces on them.
 - Newsletter: enable the modernized wp-admin dashboard and subscriber management for all sites by default.
