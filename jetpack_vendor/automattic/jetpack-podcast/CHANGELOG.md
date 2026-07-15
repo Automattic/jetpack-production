@@ -18,6 +18,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Podcast: fix hardcoded upsell fallback URL to use the injected upgrade product.
+- Podcast: show a clear message when episode play counts can't load, instead of quietly showing zero plays.
+- Podcast feed: stop podcast feed pages from showing up short or empty.
 
 ## [1.3.2] - 2026-07-13
 ### Changed
