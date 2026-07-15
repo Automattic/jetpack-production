@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.40.7-alpha] - unreleased
+## [5.40.8-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -14,10 +14,16 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Connection: Ensure My Jetpack Connection status card is compatible with TSX in Jetpack Connection package.
-- My Jetpack: fix route changes in Chrome when scroll APIs return promises.
 - My Jetpack: hide the large Stats graph when the Stats module is disabled, and show the compact Stats card with an activation CTA instead.
 - Reload the page after toggling a menu-registering module (Podcast, Newsletter, Reader) in My Jetpack so the wp-admin sidebar reflects the change, matching the Forms toggle behavior.
-- Show a Site Editor action for sharing buttons on block themes.
+
+## [5.40.7] - 2026-07-13
+### Changed
+- Update package dependencies. [#50407]
+
+### Fixed
+- Fix route changes in Chrome when scroll APIs return promises. [#50465]
+- Show a Site Editor action for sharing buttons on block themes. [#50355]
 
 ## [5.40.6] - 2026-07-09
 ### Changed
@@ -2785,7 +2791,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.40.7-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.6...5.40.7-alpha
+[5.40.8-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.7...5.40.8-alpha
+[5.40.7]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.6...5.40.7
 [5.40.6]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.5...5.40.6
 [5.40.5]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.4...5.40.5
 [5.40.4]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.3...5.40.4

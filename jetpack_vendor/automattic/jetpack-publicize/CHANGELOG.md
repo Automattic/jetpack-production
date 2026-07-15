@@ -5,21 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.84.0-alpha] - unreleased
+## [0.84.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
-- Comment: Prefix --color-* variables into --jetpack-social-logo-color-* CSS variables to avoid name collisions.
-- Comment: Remove Calypso color schemes dependency.
-- Social: Enable or disable the Social module directly from the Social dashboard, so it can be turned back on where Jetpack Settings is unreachable (e.g. WordPress.com Atomic sites).
-- Social: enable the modernized wp-admin dashboard for all sites by default.
 - Update package dependencies.
-- Update WPDS design tokens to the @wordpress/theme 0.16/0.17 names (see https://github.com/WordPress/gutenberg/blob/trunk/packages/theme/CHANGELOG.md#0160-2026-06-24 ).
+
+## [0.84.0] - 2026-07-13
+### Changed
+- Social: Enable or disable the Social module directly from the Social dashboard, so it can be turned back on where Jetpack Settings is unreachable (e.g. WordPress.com Atomic sites). [#50376]
+- Social: Enable the modernized wp-admin dashboard for all sites by default. [#50092]
+- Update package dependencies. [#49272]
+- Update WPDS design tokens to the @wordpress/theme 0.16/0.17 names (see https://github.com/WordPress/gutenberg/blob/trunk/packages/theme/CHANGELOG.md#0160-2026-06-24 ). [#49272]
 
 ### Fixed
-- Post-publish sharing panel: add missing space between sentence and link.
-- Social: render message-template placeholders in the manual sharing buttons instead of leaking raw {title}/{excerpt}/{url}/{author} tokens.
+- Post-publish sharing panel: Add missing space between sentence and link. [#50399]
+- Social: Render message-template placeholders in the manual sharing buttons instead of leaking raw {title}/{excerpt}/{url}/{author} tokens. [#50290]
 
 ## [0.83.5] - 2026-07-06
 ### Added
@@ -1574,7 +1576,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.84.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.83.5...v0.84.0-alpha
+[0.84.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.84.0...v0.84.1-alpha
+[0.84.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.83.5...v0.84.0
 [0.83.5]: https://github.com/Automattic/jetpack-publicize/compare/v0.83.4...v0.83.5
 [0.83.4]: https://github.com/Automattic/jetpack-publicize/compare/v0.83.3...v0.83.4
 [0.83.3]: https://github.com/Automattic/jetpack-publicize/compare/v0.83.2...v0.83.3

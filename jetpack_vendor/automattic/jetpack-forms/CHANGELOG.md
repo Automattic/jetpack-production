@@ -5,28 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.23.1-alpha] - unreleased
+## [7.23.2-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
-- Comment: Forms: migrate FormsHelpModal from @wordpress/components to @wordpress/ui Dialog, Button, Stack, and Text.
 - Comment: Remove manual WPDS token fallbacks from wp-build route styles so build-time PostCSS injects canonical design-token fallbacks.
 - Comment: Replace Calypso `--color-*` tokens with WPDS tokens in block editor styles and remove custom upsell nudge Calypso overrides.
-- Forms now reports its unread count to the central menu-badges registry instead of writing admin-menu markup directly.
 - Update package dependencies.
-- Update WPDS design tokens to the @wordpress/theme 0.16/0.17 names (see https://github.com/WordPress/gutenberg/blob/trunk/packages/theme/CHANGELOG.md#0160-2026-06-24 ).
+
+## [7.23.1] - 2026-07-13
+### Changed
+- Forms now reports its unread count to the central menu-badges registry instead of writing admin-menu markup directly. [#50190]
+- Update package dependencies. [#49272] [#50234] [#50407]
+- Update WPDS design tokens to the @wordpress/theme 0.16/0.17 names (see https://github.com/WordPress/gutenberg/blob/trunk/packages/theme/CHANGELOG.md#0160-2026-06-24 ). [#49272]
 
 ### Removed
-- Remove unused react-redux, redux, and redux-thunk dependencies
+- Remove unused react-redux, redux, and redux-thunk dependencies. [#50282]
 
 ### Fixed
-- Block editor: surface the most common fields (Name, Email, Text…) first in the form's block inserter instead of burying them past the quick-inserter cutoff.
-- Contact Form: restore the listView block support so form fields can be managed from the editor List View (regressed when block attributes were ported to block.json metadata).
-- Feedback: parse versionless JSON post_content as JSON instead of falling through to the legacy plain-text parser.
-- Fix an invalid Stack "gap" value ("s" -> "sm") in the single-response actions bar, surfaced as a type error by the @wordpress/ui update.
-- Fix the Form Responses quick link disappearing from the admin bar on mobile viewports, and align its icon with the native items.
-- Forms: stop loading the unused legacy dashboard SPA bundle on the new (wp-build) Forms dashboard, removing a large amount of unnecessary JavaScript from the page.
+- Block editor: Surface the most common fields (Name, Email, Text…) first in the form's block inserter instead of burying them past the quick-inserter cutoff. [#50425]
+- Contact Form: Restore the listView block support so form fields can be managed from the editor List View (regressed when block attributes were ported to block.json metadata). [#50463]
+- Feedback: Parse versionless JSON `post_content` as JSON instead of falling through to the legacy plain-text parser. [#50380]
+- Fix an invalid Stack "gap" value ("s" -> "sm") in the single-response actions bar, surfaced as a type error by the @wordpress/ui update. [#49272]
+- Fix the Form Responses quick link disappearing from the admin bar on mobile viewports, and align its icon with the native items. [#50421]
+- Stop loading the unused legacy dashboard SPA bundle on the new (wp-build) Forms dashboard. [#50219]
 
 ## [7.23.0] - 2026-07-06
 ### Added
@@ -2599,7 +2602,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.23.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.23.0...v7.23.1-alpha
+[7.23.2-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.23.1...v7.23.2-alpha
+[7.23.1]: https://github.com/automattic/jetpack-forms/compare/v7.23.0...v7.23.1
 [7.23.0]: https://github.com/automattic/jetpack-forms/compare/v7.22.6...v7.23.0
 [7.22.6]: https://github.com/automattic/jetpack-forms/compare/v7.22.5...v7.22.6
 [7.22.5]: https://github.com/automattic/jetpack-forms/compare/v7.22.4...v7.22.5
