@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Food Menus: register the Nova custom post type after the theme loads during REST API requests, so the menu link appears in the Calypso sidebar on Simple sites.
+
 ## [0.14.35] - 2026-07-06
 ### Changed
 - Update package dependencies. [#50097] [#50183]
