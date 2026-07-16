@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Register wp-build polyfills so the admin bundle loads on WordPress versions that don't provide the wp-theme script handle
+
 ## [0.1.11] - 2026-07-13
 ### Added
 - Surface an actionable connection-error notice when the activity log fails to load due to a broken connection. [#50169]

@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Daily Writing Prompt widget: refresh the layout and fix its styling on self-hosted Jetpack.
 - Update package dependencies.
 
+### Fixed
+- Fix an intermittent flash of unstyled content on the Newsletter dashboard in Firefox.
+
 ## [0.12.0] - 2026-07-13
 ### Changed
 - Enable the modernized dashboard for all sites by default. [#50091]
