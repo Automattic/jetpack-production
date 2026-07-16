@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Sidebar: Add Jetpack AI abilities in the page and site editors.
 - Content Guidelines AI: Resolve the AI plan state in PHP and preload it into the page, hydrating the plans store at boot so buttons render in the correct locked/unlocked state on first paint with no client-side plan fetch. When the server-side lookup fails, the AI UI is omitted for that load instead of guessing.
 - Content Guidelines AI: Show the Generate/Improve buttons in a locked state for sites without an AI plan, and open the upgrade notice when clicked (even after dismissal). Prevent the AI buttons from briefly appearing unlocked while the feature check resolves.
+- Podcast: Release Podcast to self-hosted sites, enabled by default on new installations and available but disabled on existing installations.
 
 ### Bug fixes
 - Likes: Restore the per-post Likes toggle in the block editor, which failed to register when withSelect returned a memo object.
