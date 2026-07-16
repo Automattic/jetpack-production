@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Comment: Remove manual WPDS token fallbacks from webpack admin styles so build-time PostCSS injects canonical design-token fallbacks.
 - Update package dependencies.
 
+### Fixed
+- Prevent previews from showing raw message-template placeholders while rendering is pending
+
 ## [0.84.0] - 2026-07-13
 ### Changed
 - Social: Enable or disable the Social module directly from the Social dashboard, so it can be turned back on where Jetpack Settings is unreachable (e.g. WordPress.com Atomic sites). [#50376]
