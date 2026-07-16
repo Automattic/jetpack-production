@@ -47,9 +47,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-activity-log' => array(
-            'pretty_version' => '0.1.12-alpha.1784214611',
-            'version' => '0.1.12.0-alpha1784214611',
-            'reference' => '194d326fdd634a2c06b5e5b1a5bd37cd5ac5ea79',
+            'pretty_version' => '0.1.12-alpha.1784233190',
+            'version' => '0.1.12.0-alpha1784233190',
+            'reference' => 'b34cbae796502a9d2f4269fa49d0804481122aa8',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-activity-log',
             'aliases' => array(),
