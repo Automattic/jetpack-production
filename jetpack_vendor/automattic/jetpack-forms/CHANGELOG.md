@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
-- Comment: Remove manual WPDS token fallbacks from wp-build route styles so build-time PostCSS injects canonical design-token fallbacks.
+- Comment: Remove manual WPDS token fallbacks from wp-build route and webpack dashboard styles so build-time PostCSS injects canonical design-token fallbacks.
 - Comment: Replace Calypso `--color-*` tokens with WPDS tokens in block editor styles and remove custom upsell nudge Calypso overrides.
 - Update package dependencies.
 

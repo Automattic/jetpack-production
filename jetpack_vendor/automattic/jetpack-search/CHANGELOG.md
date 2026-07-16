@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Comment: Remove manual WPDS token fallbacks from dashboard styles so build-time PostCSS injects canonical design-token fallbacks.
+
 ### Fixed
 - Fix checkout for unregistered sites getting stuck or redirected to the site selector instead of completing the purchase.
 - Fix the Search upsell page's product-availability check not returning its promise, which caused checkout to always run even when the site already had the Search product.

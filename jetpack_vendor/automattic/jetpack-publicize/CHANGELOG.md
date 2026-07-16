@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Comment: Remove manual WPDS token fallbacks from webpack admin styles so build-time PostCSS injects canonical design-token fallbacks.
 - Update package dependencies.
 
 ## [0.84.0] - 2026-07-13
