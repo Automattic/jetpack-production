@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update dependencies.
+- Update package dependencies.
 
 ### Fixed
 - Match the PayPal Payment Buttons block icon to the Payment Buttons block for a consistent inserter.

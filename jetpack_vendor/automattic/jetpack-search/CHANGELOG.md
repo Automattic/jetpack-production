@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Comment: Remove manual WPDS token fallbacks from dashboard styles so build-time PostCSS injects canonical design-token fallbacks.
+- Update package dependencies.
 
 ### Fixed
 - Fix checkout for unregistered sites getting stuck or redirected to the site selector instead of completing the purchase.

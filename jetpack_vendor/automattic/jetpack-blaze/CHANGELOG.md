@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Rename the Advertising menu to Blaze Ads, move it under the Jetpack (or WooCommerce Marketing) menu, and leave a temporary migration notice at the old Tools location.
+- Update package dependencies.
 
 ### Fixed
 - Blaze: avoid a duplicate Blaze Ads menu when the standalone Blaze Ads plugin is active, and point campaign/promote links (and the legacy advertising URL) at the standalone's page so they resolve and preserve their deep-link route.
