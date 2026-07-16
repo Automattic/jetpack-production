@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Content tab: make the search box match titles, SEO titles and meta descriptions instead of returning no results
 - Content tab: page through posts and pages instead of silently capping the list at 100 of each
+- Overview: cache the content-coverage counts and compute them in a single query.
 
 ## [0.5.0] - 2026-07-13
 ### Added
