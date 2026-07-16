@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast: count episodes published with the Podcast Episode block in publish telemetry.
 - Podcast: derive the distribution feed URL from WordPress's canonical category-feed API so it stays valid on plain-permalink and no-trailing-slash sites instead of producing a malformed URL.
 - Podcast: fix hardcoded upsell fallback URL to use the injected upgrade product.
+- Podcast: preload the selected category so the settings picker shows it immediately instead of rendering blank while the category list loads.
 - Podcast: show a clear message when episode play counts can't load, instead of quietly showing zero plays.
 - Podcast feed: fixed missing episode details when the Podcast Episode block sits inside another block.
 - Podcast feed: stop podcast feed pages from showing up short or empty.
