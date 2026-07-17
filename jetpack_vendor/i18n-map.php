@@ -46,7 +46,7 @@ return array(
     ),
     'jetpack-classic-theme-helper' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-classic-theme-helper',
-      'ver' => '0.14.37-alpha1784214611',
+      'ver' => '0.14.37-alpha1784323031',
     ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
@@ -102,7 +102,7 @@ return array(
     ),
     'jetpack-masterbar' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-masterbar',
-      'ver' => '0.27.34-alpha1784221700',
+      'ver' => '0.27.34-alpha1784323031',
     ),
     'jetpack-menu-badges' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-menu-badges',
@@ -110,7 +110,7 @@ return array(
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '5.40.8-alpha1784313425',
+      'ver' => '5.40.8-alpha1784323031',
     ),
     'jetpack-newsletter' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-newsletter',
@@ -122,7 +122,7 @@ return array(
     ),
     'jetpack-paypal-payments' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-paypal-payments',
-      'ver' => '0.7.9-alpha1784234742',
+      'ver' => '0.7.9-alpha1784323031',
     ),
     'jetpack-plugins-installer' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
@@ -178,7 +178,7 @@ return array(
     ),
     'jetpack-videopress-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-videopress',
-      'ver' => '0.42.0-alpha1784321715',
+      'ver' => '0.42.0-alpha1784323031',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
