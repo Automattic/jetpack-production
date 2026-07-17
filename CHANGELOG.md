@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blaze: point the settings card link to the new Blaze Ads menu location under admin.php.
 - Connection: Ensure Jetpack dashboard connection components styles do not conflict with Connection package styles.
+- Heartbeat: Site environment stats are now provided by the Connection package.
 - JSON API: support path-parameter endpoints over the REST transport, so single-item and action routes can migrate off XML-RPC.
 - Update package dependencies.
 
