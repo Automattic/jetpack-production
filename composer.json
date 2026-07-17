@@ -46,7 +46,7 @@
 		"automattic/jetpack-newsletter": "^0.12.1-alpha",
 		"automattic/jetpack-paypal-payments": "^0.7.9-alpha",
 		"automattic/jetpack-plugins-installer": "^0.5.11",
-		"automattic/jetpack-podcast": "^1.4.0-alpha",
+		"automattic/jetpack-podcast": "^1.4.0",
 		"automattic/jetpack-post-list": "^0.9.28-alpha",
 		"automattic/jetpack-post-media": "^0.1.6",
 		"automattic/jetpack-publicize": "^0.84.1-alpha",
