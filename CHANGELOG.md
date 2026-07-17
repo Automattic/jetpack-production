@@ -8,11 +8,13 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Sidebar: Add Jetpack AI abilities in the page and site editors.
+- Content Guidelines: Add a Read more support link to the page description.
 - Content Guidelines AI: Resolve the AI plan state in PHP and preload it into the page, hydrating the plans store at boot so buttons render in the correct locked/unlocked state on first paint with no client-side plan fetch. When the server-side lookup fails, the AI UI is omitted for that load instead of guessing.
 - Content Guidelines AI: Show the Generate/Improve buttons in a locked state for sites without an AI plan, and open the upgrade notice when clicked (even after dismissal). Prevent the AI buttons from briefly appearing unlocked while the feature check resolves.
 - Podcast: Release Podcast to self-hosted sites, enabled by default on new installations and available but disabled on existing installations.
 
 ### Bug fixes
+- Content Guidelines AI: Read the banner-dismissed flag from user meta directly when preloading, so the empty-state banner and upgrade notice are no longer permanently suppressed on WordPress.com Simple sites, where the REST endpoint class is not loaded during admin page loads.
 - Likes: Restore the per-post Likes toggle in the block editor, which failed to register when withSelect returned a memo object.
 - Normalize the size, weight, centering, and alignment of block inserter icons across Jetpack monetize blocks (Donations, Tips, Payment Button, Paid Content, Tock, WhatsApp Button, and others) so they render consistently.
 - Paid Content: expire subscription access at the end of the end_date day (UTC) rather than the exact purchase timestamp, so a same-day auto-renewal completes before access is cut and enforcement matches the platform's end-of-day expiration convention.
