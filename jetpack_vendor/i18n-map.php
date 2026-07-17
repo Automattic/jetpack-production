@@ -150,7 +150,7 @@ return array(
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
-      'ver' => '0.84.1-alpha1784232581',
+      'ver' => '0.84.1-alpha1784321715',
     ),
     'jetpack-scan-page' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-scan-page',
@@ -158,7 +158,7 @@ return array(
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
-      'ver' => '7.2.9-alpha1784214611',
+      'ver' => '7.2.9-alpha1784321715',
     ),
     'jetpack-seo' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-seo',
@@ -178,7 +178,7 @@ return array(
     ),
     'jetpack-videopress-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-videopress',
-      'ver' => '0.42.0-alpha1784232581',
+      'ver' => '0.42.0-alpha1784321715',
     ),
     'jetpack-waf' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-waf',
