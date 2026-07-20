@@ -13,7 +13,6 @@ This is an alpha version! The changes listed here are not final.
 - Add a results-per-page setting to the Search Results block, falling back to the site's Reading setting when unset.
 
 ### Changed
-- Comment: Remove manual WPDS token fallbacks from dashboard styles so build-time PostCSS injects canonical design-token fallbacks.
 - Update package dependencies.
 
 ### Fixed

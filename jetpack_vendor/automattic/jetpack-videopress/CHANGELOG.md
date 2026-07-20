@@ -15,7 +15,6 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: play videos directly on the library's video details page via an embedded VideoPress player, replacing the static thumbnail
 
 ### Changed
-- Comment: Remove manual WPDS token fallbacks from wp-build route styles so build-time PostCSS injects canonical design-token fallbacks.
 - Update package dependencies.
 - VideoPress dashboard on WordPress.com Simple: drop a redundant access-check branch and de-duplicate the wp-build dashboard load and menu-callback selection. Internal refactor, no functional change.
 - VideoPress dashboard on WordPress.com Simple: filter the library by privacy and by VideoPress/local type on the server (via the wpcom videos table) instead of over-fetching and filtering in the browser. This removes the silent truncation of filtered results past ~300 videos, keeps the pagination totals exact, fixes the free-tier upload count over-counting local videos, and surfaces a retryable error notice when the library fails to load instead of an empty grid.

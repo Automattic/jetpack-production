@@ -10,7 +10,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
-- Comment: Drop hardcoded WPDS token fallbacks from shared _inc styles (injected by wp-build).
 - Update package dependencies.
 
 ## [0.1.10] - 2026-07-13

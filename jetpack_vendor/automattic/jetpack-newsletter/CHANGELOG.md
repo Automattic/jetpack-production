@@ -10,8 +10,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
-- Comment: Drop hardcoded WPDS token fallbacks from shared _inc styles (injected by wp-build).
-- Comment: Remove manual WPDS token fallbacks from wp-build route styles so build-time PostCSS injects canonical design-token fallbacks.
 - Daily Writing Prompt widget: refresh the layout and fix its styling on self-hosted Jetpack.
 - Update package dependencies.
 

@@ -14,7 +14,6 @@ This is an alpha version! The changes listed here are not final.
 - Add LocalBusiness details to the site Organization schema, with settings and a local-business toggle.
 
 ### Changed
-- Comment: Drop hardcoded WPDS token fallbacks from _inc screen styles (injected by wp-build).
 - Improve the organization and local business schema settings layout.
 - Update package dependencies.
 
