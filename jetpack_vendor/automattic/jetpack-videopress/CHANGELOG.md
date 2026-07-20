@@ -10,8 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Library: Show live transcoding progress on processing videos after upload.
+- Library: Show live upload progress when uploading a video from the media library to VideoPress.
 - Make the modernized VideoPress dashboard fully functional on WordPress.com Simple: server-side library filtering (video-only, privacy, type), stats and settings rerouted to WPCOM-reachable endpoints, and storage/features queries gated off unmappable routes.
 - Surface the modernized VideoPress dashboard on WordPress.com Simple sites (menu + boot), with a Simple-aware media-library mapping.
+- Video details: Show the video player while a video is processing, reporting live transcoding progress, instead of a static placeholder.
 - VideoPress: play videos directly on the library's video details page via an embedded VideoPress player, replacing the static thumbnail
 
 ### Changed
