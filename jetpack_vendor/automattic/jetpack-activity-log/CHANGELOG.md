@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.12-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.1.12] - 2026-07-20
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#50510] [#50529]
 
 ### Fixed
-- Register wp-build polyfills so the admin bundle loads on WordPress versions that don't provide the wp-theme script handle
+- Register wp-build polyfills so the admin bundle loads on WordPress versions that don't provide the wp-theme script handle. [#50557]
 
 ## [0.1.11] - 2026-07-13
 ### Added
@@ -90,7 +87,7 @@ This is an alpha version! The changes listed here are not final.
 
 Initial release.
 
-[0.1.12-alpha]: https://github.com/Automattic/jetpack-activity-log/compare/v0.1.11...v0.1.12-alpha
+[0.1.12]: https://github.com/Automattic/jetpack-activity-log/compare/v0.1.11...v0.1.12
 [0.1.11]: https://github.com/Automattic/jetpack-activity-log/compare/v0.1.10...v0.1.11
 [0.1.10]: https://github.com/Automattic/jetpack-activity-log/compare/v0.1.9...v0.1.10
 [0.1.9]: https://github.com/Automattic/jetpack-activity-log/compare/v0.1.8...v0.1.9

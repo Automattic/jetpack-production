@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.3.7-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.3.7] - 2026-07-20
 ### Fixed
-- Account Protection: Default the login form password detection callback's password argument to null so other plugins hooking into the authenticate filter without a password do not trigger a fatal error.
+- Default the login form password detection callback's password argument to null so other plugins hooking into the authenticate filter without a password do not trigger a fatal error. [#50539]
 
 ## [0.3.6] - 2026-07-13
 ### Added
@@ -104,7 +101,7 @@ This is an alpha version! The changes listed here are not final.
 - Use jetpack-config package for Account Protection initialization. [#40925]
 - Use jetpack-logo package for Account Protection logos. [#40925]
 
-[0.3.7-alpha]: https://github.com/Automattic/jetpack-account-protection/compare/v0.3.6...v0.3.7-alpha
+[0.3.7]: https://github.com/Automattic/jetpack-account-protection/compare/v0.3.6...v0.3.7
 [0.3.6]: https://github.com/Automattic/jetpack-account-protection/compare/v0.3.5...v0.3.6
 [0.3.5]: https://github.com/Automattic/jetpack-account-protection/compare/v0.3.4...v0.3.5
 [0.3.4]: https://github.com/Automattic/jetpack-account-protection/compare/v0.3.3...v0.3.4

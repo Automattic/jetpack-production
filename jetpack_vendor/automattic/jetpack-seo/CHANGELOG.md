@@ -5,23 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.6.0] - 2026-07-20
 ### Added
-- Add configurable BreadcrumbList schema across supported site pages.
-- Add LocalBusiness details to the site Organization schema, with settings and a local-business toggle.
+- Add configurable BreadcrumbList schema across supported site pages. [#50499]
+- Add LocalBusiness details to the site Organization schema, with settings and a local-business toggle. [#50363]
 
 ### Changed
-- Improve the organization and local business schema settings layout.
-- Update package dependencies.
+- Improve the organization and local business schema settings layout. [#50541]
+- Update package dependencies. [#50510] [#50529]
 
 ### Fixed
-- Content tab: make the search box match titles, SEO titles and meta descriptions instead of returning no results
-- Content tab: page through posts and pages instead of silently capping the list at 100 of each
-- Fix the FAQ schema so FAQPage JSON-LD emits from editor-saved Details blocks.
-- Overview: cache the content-coverage counts and compute them in a single query.
+- Content tab: Make the search box match titles, SEO titles and meta descriptions instead of returning no results. [#50411]
+- Content tab: Page through posts and pages instead of silently capping the list at 100 of each. [#50411]
+- Fix the FAQ schema so FAQPage JSON-LD emits from editor-saved Details blocks. [#50565]
+- Overview: Cache the content-coverage counts and compute them in a single query. [#50508]
 
 ## [0.5.0] - 2026-07-13
 ### Added
@@ -105,7 +102,7 @@ This is an alpha version! The changes listed here are not final.
 - Create a Settings screen with site visibility, post title structure, front-page description, and site verification. [#49256]
 - Scaffold the new `jetpack-seo` package and mount its admin page. [#49203]
 
-[0.6.0-alpha]: https://github.com/Automattic/jetpack-seo/compare/0.5.0...0.6.0-alpha
+[0.6.0]: https://github.com/Automattic/jetpack-seo/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/Automattic/jetpack-seo/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-seo/compare/0.3.1...0.4.0
 [0.3.1]: https://github.com/Automattic/jetpack-seo/compare/0.3.0...0.3.1
