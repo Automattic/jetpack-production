@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.2.9-alpha] - unreleased
+## [7.3.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add a results-per-page setting to the Search Results block, falling back to the site's Reading setting when unset.
 
 ### Changed
 - Comment: Remove manual WPDS token fallbacks from dashboard styles so build-time PostCSS injects canonical design-token fallbacks.
@@ -1838,7 +1841,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[7.2.9-alpha]: https://github.com/Automattic/jetpack-search/compare/v7.2.8...v7.2.9-alpha
+[7.3.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v7.2.8...v7.3.0-alpha
 [7.2.8]: https://github.com/Automattic/jetpack-search/compare/v7.2.7...v7.2.8
 [7.2.7]: https://github.com/Automattic/jetpack-search/compare/v7.2.6...v7.2.7
 [7.2.6]: https://github.com/Automattic/jetpack-search/compare/v7.2.5...v7.2.6
