@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix checkout for unregistered sites getting stuck or redirected to the site selector instead of completing the purchase.
 - Fix the Search upsell page's product-availability check not returning its promise, which caused checkout to always run even when the site already had the Search product.
 - Search overlay/embedded templates: keep the Collapsible Filters panel in sync with the sidebar Filters block, so editing filter labels or adding/removing filters in the sidebar always shows up in the panel too. When both blocks coexist, the panel is locked read-only in the editor since it now mirrors the sidebar; it stays fully editable when used standalone.
+- Search overlay/embedded templates: make it obvious in the editor when adding a new filter to the Filters (or Product Filters) block — a bounded insertion target and a labeled boundary outline mark where it belongs.
 
 ## [7.2.8] - 2026-07-13
 ### Changed
