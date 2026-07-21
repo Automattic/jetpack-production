@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add aria-label to hidden Carousel download link for better accessibility.
 - AI Sidebar: Add Jetpack AI abilities in the page and site editors.
 - Content Guidelines: Add a Read more support link to the page description.
 - Content Guidelines AI: Resolve the AI plan state in PHP and preload it into the page, hydrating the plans store at boot so buttons render in the correct locked/unlocked state on first paint with no client-side plan fetch. When the server-side lookup fails, the AI UI is omitted for that load instead of guessing.
