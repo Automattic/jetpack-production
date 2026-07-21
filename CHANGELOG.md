@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Normalize the size, weight, centering, and alignment of block inserter icons across Jetpack monetize blocks (Donations, Tips, Payment Button, Paid Content, Tock, WhatsApp Button, and others) so they render consistently.
 - Paid Content: expire subscription access at the end of the end_date day (UTC) rather than the exact purchase timestamp, so a same-day auto-renewal completes before access is cut and enforcement matches the platform's end-of-day expiration convention.
 - Related Posts: enqueue the block stylesheet whenever the block renders, so it is styled on pages and classic themes where the module's front-end asset gate does not run.
+- Tiled Gallery: fix images collapsing to ~105px in the editor when the canvas is not iframed
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blaze: point the settings card link to the new Blaze Ads menu location under admin.php.

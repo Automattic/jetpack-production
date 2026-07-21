@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix an intermittent flash of unstyled content on the Newsletter dashboard in Firefox.
+- Register wp-build polyfills on the legacy settings page so the admin bundle loads when the wp-theme script handle isn't registered.
 
 ## [0.12.0] - 2026-07-13
 ### Changed
