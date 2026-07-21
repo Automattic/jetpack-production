@@ -9,14 +9,14 @@
 return array(
 	array(
 		'name'        => 'library',
-		'path'        => '/library',
+		'path'        => '/',
 		'page'        => 'jetpack-videopress-dashboard',
 		'has_route'   => true,
 		'has_content' => true,
 	),
 	array(
 		'name'        => 'overview',
-		'path'        => '/',
+		'path'        => '/stats',
 		'page'        => 'jetpack-videopress-dashboard',
 		'has_route'   => true,
 		'has_content' => true,
