@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Make the modernized VideoPress dashboard fully functional on WordPress.com Simple: server-side library filtering (video-only, privacy, type), stats and settings rerouted to WPCOM-reachable endpoints, and storage/features queries gated off unmappable routes.
 - Surface the modernized VideoPress dashboard on WordPress.com Simple sites (menu + boot), with a Simple-aware media-library mapping.
 - Video details: Show the video player while a video is processing, reporting live transcoding progress, instead of a static placeholder.
+- VideoPress: allow promoting existing local videos to VideoPress on WordPress.com Simple via an in-process wpcom/v2 endpoint
 - VideoPress: play videos directly on the library's video details page via an embedded VideoPress player, replacing the static thumbnail
 
 ### Changed
