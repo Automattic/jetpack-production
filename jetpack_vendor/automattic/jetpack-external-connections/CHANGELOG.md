@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.38-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update dependencies.
+
 ## [0.1.37] - 2026-07-20
 ### Changed
 - Update dependencies. [#50551]
@@ -159,6 +166,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial version. [#44858]
 
+[0.1.38-alpha]: https://github.com/Automattic/jetpack-external-connections/compare/v0.1.37...v0.1.38-alpha
 [0.1.37]: https://github.com/Automattic/jetpack-external-connections/compare/v0.1.36...v0.1.37
 [0.1.36]: https://github.com/Automattic/jetpack-external-connections/compare/v0.1.35...v0.1.36
 [0.1.35]: https://github.com/Automattic/jetpack-external-connections/compare/v0.1.34...v0.1.35

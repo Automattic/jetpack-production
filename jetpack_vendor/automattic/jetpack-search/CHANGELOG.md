@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.3.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [7.3.1] - 2026-07-22
+### Changed
+- Internal updates.
 
 ## [7.3.0] - 2026-07-20
 ### Added
@@ -1843,7 +1843,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[7.3.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v7.3.0...v7.3.1-alpha
+[7.3.1]: https://github.com/Automattic/jetpack-search/compare/v7.3.0...v7.3.1
 [7.3.0]: https://github.com/Automattic/jetpack-search/compare/v7.2.8...v7.3.0
 [7.2.8]: https://github.com/Automattic/jetpack-search/compare/v7.2.7...v7.2.8
 [7.2.7]: https://github.com/Automattic/jetpack-search/compare/v7.2.6...v7.2.7
