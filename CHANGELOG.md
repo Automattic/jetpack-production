@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Tiled Gallery: fix images collapsing to ~105px in the editor when the canvas is not iframed
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
+
 ## 16.1-a.3 - 2026-07-20
 ### Enhancements
 - AI Sidebar: Add Jetpack AI abilities in the page and site editors. [#49979]

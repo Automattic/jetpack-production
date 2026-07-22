@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: allow promoting existing local videos to VideoPress on WordPress.com Simple via an in-process wpcom/v2 endpoint
 
 ### Changed
+- Update package dependencies.
 - VideoPress: make Library the default dashboard screen and move stats to a Stats tab
 
 ## [0.42.0] - 2026-07-20
