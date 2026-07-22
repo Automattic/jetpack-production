@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- SEO: rename the AI dashboard tab to GEO (Generative Engine Optimization).
+
 ## [0.6.0] - 2026-07-20
 ### Added
 - Add configurable BreadcrumbList schema across supported site pages. [#50499]
