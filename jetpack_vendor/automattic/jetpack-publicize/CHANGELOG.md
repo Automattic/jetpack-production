@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Security
+- REST API: Require the `edit_others_posts` capability to create a shared connection, matching the update check.
+
 ### Added
 - Add the admin UI v2 feature flag.
 
