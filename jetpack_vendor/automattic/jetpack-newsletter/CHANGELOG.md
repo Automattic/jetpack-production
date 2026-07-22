@@ -5,17 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.12.1-alpha] - unreleased
+## [0.12.2-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Register wp-build polyfills on the legacy settings page so the admin bundle loads when the wp-theme script handle isn't registered.
+
+## [0.12.1] - 2026-07-20
 ### Changed
-- Daily Writing Prompt widget: refresh the layout and fix its styling on self-hosted Jetpack.
-- Update package dependencies.
+- Refresh the Daily Writing Prompt widget layout and fix its styling on self-hosted Jetpack. [#50500]
+- Update package dependencies. [#50510] [#50529] [#50582]
 
 ### Fixed
-- Fix an intermittent flash of unstyled content on the Newsletter dashboard in Firefox.
-- Register wp-build polyfills on the legacy settings page so the admin bundle loads when the wp-theme script handle isn't registered.
+- Fix an intermittent flash of unstyled content on the Newsletter dashboard in Firefox. [#50558]
 
 ## [0.12.0] - 2026-07-13
 ### Changed
@@ -293,7 +296,8 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.12.1-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.0...v0.12.1-alpha
+[0.12.2-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.1...v0.12.2-alpha
+[0.12.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.0...v0.12.1
 [0.12.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.11.2...v0.12.0
 [0.11.2]: https://github.com/Automattic/jetpack-newsletter/compare/v0.11.1...v0.11.2
 [0.11.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.11.0...v0.11.1

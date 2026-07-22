@@ -5,31 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.42.0-alpha] - unreleased
+## [0.43.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Library: Show live transcoding progress on processing videos after upload.
-- Library: Show live upload progress when uploading a video from the media library to VideoPress.
-- Make the modernized VideoPress dashboard fully functional on WordPress.com Simple: server-side library filtering (video-only, privacy, type), stats and settings rerouted to WPCOM-reachable endpoints, and storage/features queries gated off unmappable routes.
-- Surface the modernized VideoPress dashboard on WordPress.com Simple sites (menu + boot), with a Simple-aware media-library mapping.
-- Video details: Show the video player while a video is processing, reporting live transcoding progress, instead of a static placeholder.
 - VideoPress: allow promoting existing local videos to VideoPress on WordPress.com Simple via an in-process wpcom/v2 endpoint
-- VideoPress: play videos directly on the library's video details page via an embedded VideoPress player, replacing the static thumbnail
 
 ### Changed
-- Update package dependencies.
 - VideoPress: make Library the default dashboard screen and move stats to a Stats tab
-- VideoPress dashboard on WordPress.com Simple: drop a redundant access-check branch and de-duplicate the wp-build dashboard load and menu-callback selection. Internal refactor, no functional change.
-- VideoPress dashboard on WordPress.com Simple: filter the library by privacy and by VideoPress/local type on the server (via the wpcom videos table) instead of over-fetching and filtering in the browser. This removes the silent truncation of filtered results past ~300 videos, keeps the pagination totals exact, fixes the free-tier upload count over-counting local videos, and surfaces a retryable error notice when the library fails to load instead of an empty grid.
+
+## [0.42.0] - 2026-07-20
+### Added
+- Library: Show live transcoding progress on processing videos after upload. [#50550]
+- Library: Show live upload progress when uploading a video from the media library to VideoPress. [#50550]
+- Make the modernized VideoPress dashboard fully functional on WordPress.com Simple: server-side library filtering (video-only, privacy, type), stats and settings rerouted to WPCOM-reachable endpoints, and storage/features queries gated off unmappable routes. [#50410]
+- Play videos directly on the library's video details page via an embedded VideoPress player, replacing the static thumbnail. [#50511]
+- Surface the modernized VideoPress dashboard on WordPress.com Simple sites (menu + boot), with a Simple-aware media-library mapping. [#50410]
+- Video details: Show the video player while a video is processing, reporting live transcoding progress, instead of a static placeholder. [#50550]
+
+### Changed
+- Dashboard on WordPress.com Simple: Drop a redundant access-check branch and de-duplicate the wp-build dashboard load and menu-callback selection. [#50410]
+- Dashboard on WordPress.com Simple: Filter the library on the server by privacy and VideoPress/local type, fixing truncated filtered results, inexact pagination totals, and the free-tier upload count. [#50410]
+- Update package dependencies. [#50510] [#50529] [#50582]
 
 ### Fixed
-- Fix "Could not obtain a VideoPress upload token" when setting a video thumbnail from a frame on WordPress.com Simple sites.
-- Fix "You do not have permission to upload files" when publishing or deleting a subtitle track from the VideoPress dashboard on WordPress.com Simple sites.
-- Fix VideoPress dashboard dialogs (thumbnail picker, chapters help) rendering behind the admin sidebar on WordPress.com. They now dim the full viewport and center over it, matching the subtitle manager.
-- VideoPress dashboard: show a retryable error notice when video stats fail to load instead of rendering all-zeros (indistinguishable from a zero-activity site), and stop the "still processing" library poll after 15 minutes so an orphaned/stuck record can't poll indefinitely.
-- VideoPress dashboard: show the "make all videos private" toggle read-only on WordPress.com Simple and private Atomic sites, where the value is resolved server-side and writes are ignored (previously private Atomic rendered a live toggle whose write was silently dropped). The Simple settings endpoint now reports such ignored parameters instead of claiming they were saved.
+- Dashboard: Show a retryable error notice when video stats fail to load, and stop the "still processing" library poll after 15 minutes. [#50410]
+- Dashboard: Show the "make all videos private" toggle read-only on WordPress.com Simple and private Atomic sites, where the value is resolved server-side. [#50410]
+- Fix "Could not obtain a VideoPress upload token" when setting a video thumbnail from a frame on WordPress.com Simple sites. [#50410]
+- Fix "You do not have permission to upload files" when publishing or deleting a subtitle track from the VideoPress dashboard on WordPress.com Simple sites. [#50410]
+- Fix VideoPress dashboard dialogs (thumbnail picker, chapters help) rendering behind the admin sidebar on WordPress.com. [#50410]
 
 ## [0.41.0] - 2026-07-13
 ### Added
@@ -2105,7 +2110,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.42.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.41.0...v0.42.0-alpha
+[0.43.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.42.0...v0.43.0-alpha
+[0.42.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.41.0...v0.42.0
 [0.41.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.40.0...v0.41.0
 [0.40.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.39.0...v0.40.0
 [0.39.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.38.2...v0.39.0
