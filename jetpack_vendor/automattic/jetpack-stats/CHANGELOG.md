@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.20.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add a per-site setting to make the Stats tracking pixel honor the WP Consent API statistics category.
+
 ## [0.19.7] - 2026-06-25
 ### Changed
 - Defer loading the Stats REST API provider until a REST request is served, reducing the per-request PHP/opcache footprint. [#49806]
@@ -347,6 +354,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
+[0.20.0-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.19.7...v0.20.0-alpha
 [0.19.7]: https://github.com/Automattic/jetpack-stats/compare/v0.19.6...v0.19.7
 [0.19.6]: https://github.com/Automattic/jetpack-stats/compare/v0.19.5...v0.19.6
 [0.19.5]: https://github.com/Automattic/jetpack-stats/compare/v0.19.4...v0.19.5
