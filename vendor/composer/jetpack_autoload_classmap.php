@@ -71,19 +71,19 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-account-protection/src/class-validation-service.php'
 	),
 	'Automattic\\Jetpack\\Activity_Log\\Initial_State' => array(
-		'version' => '0.1.13.0-alpha1784740091',
+		'version' => '0.2.0.0-alpha1784750845',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-activity-log/src/class-initial-state.php'
 	),
 	'Automattic\\Jetpack\\Activity_Log\\Jetpack_Activity_Log' => array(
-		'version' => '0.1.13.0-alpha1784740091',
+		'version' => '0.2.0.0-alpha1784750845',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-activity-log/src/class-jetpack-activity-log.php'
 	),
 	'Automattic\\Jetpack\\Activity_Log\\Package_Version' => array(
-		'version' => '0.1.13.0-alpha1784740091',
+		'version' => '0.2.0.0-alpha1784750845',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-activity-log/src/class-package-version.php'
 	),
 	'Automattic\\Jetpack\\Activity_Log\\REST_Controller' => array(
-		'version' => '0.1.13.0-alpha1784740091',
+		'version' => '0.2.0.0-alpha1784750845',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-activity-log/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Admin_UI\\Admin_Menu' => array(
