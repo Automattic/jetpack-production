@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Add aria-label to hidden Carousel download link for better accessibility.
 - Change empty h2 and h3 tags in Carousel to div tags to fix SEO and accessibility warnings.
+- Social: the block editor sidebar now uses the same connection management UI as the Social admin page.
 - VideoPress: upload videos added via the classic media-new.php uploader directly to VideoPress, matching the Media Library behavior.
 
 ### Improved compatibility

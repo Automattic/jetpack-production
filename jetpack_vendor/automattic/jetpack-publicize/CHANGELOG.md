@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the admin UI v2 feature flag.
 
 ### Changed
+- Collapse the duplicated legacy/dashboard connection components onto the WordPress design system. The block editor sidebar now renders the same connection UI as the Social admin page.
 - Update package dependencies.
 
 ## [0.84.1] - 2026-07-20
