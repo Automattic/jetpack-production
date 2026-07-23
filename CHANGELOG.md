@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: upload videos added via the classic media-new.php uploader directly to VideoPress, matching the Media Library behavior.
 
 ### Improved compatibility
+- Content Guidelines AI: Restore compatibility with the Gutenberg 23.6 Guidelines page by reading section drafts from the page DOM instead of the removed core/guidelines store.
 - Notifications: show the notification bell in the admin bar on the Post editor and Site editor,
   now that Gutenberg 23.6+ renders the admin bar there.
 
