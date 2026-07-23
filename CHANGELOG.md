@@ -11,6 +11,10 @@ This is an alpha version! The changes listed here are not final.
 - Change empty h2 and h3 tags in Carousel to div tags to fix SEO and accessibility warnings.
 - VideoPress: upload videos added via the classic media-new.php uploader directly to VideoPress, matching the Media Library behavior.
 
+### Improved compatibility
+- Notifications: show the notification bell in the admin bar on the Post editor and Site editor,
+  now that Gutenberg 23.6+ renders the admin bar there.
+
 ### Bug fixes
 - Tiled Gallery: fix images collapsing to ~105px in the editor when the canvas is not iframed
 
