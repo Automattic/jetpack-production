@@ -58,7 +58,7 @@ return array(
     ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
-      'ver' => '8.7.11-alpha1784734664',
+      'ver' => '8.8.0-alpha1784801579',
     ),
     'jetpack-explat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-explat',
