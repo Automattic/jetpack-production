@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - SEO: rename the AI dashboard tab to GEO (Generative Engine Optimization).
+- SEO: use the site's real name and tagline in the title-structure preview instead of placeholder samples.
 
 ### Fixed
 - SEO: hide the "Disable SEO tools" option on WordPress.com Simple sites, where SEO tools are always active and cannot be disabled.
