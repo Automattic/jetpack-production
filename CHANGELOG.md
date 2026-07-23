@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
   now that Gutenberg 23.6+ renders the admin bar there.
 
 ### Bug fixes
+- Likes: Do not show the Like button on password-protected posts, even for viewers who can read the post (owners, admins, or after unlocking).
 - Newsletter: when a WordPress.com user connection is required for the email preview and test email features, show an actionable prompt to connect and disable the test email "Send" button until connected, instead of only surfacing the error after a failed attempt.
 - Tiled Gallery: fix images collapsing to ~105px in the editor when the canvas is not iframed
 
