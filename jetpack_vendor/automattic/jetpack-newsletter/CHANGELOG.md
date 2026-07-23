@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Register wp-build polyfills on the legacy settings page so the admin bundle loads when the wp-theme script handle isn't registered.
+- Subscribers dashboard: refresh the subscriber list automatically once an import finishes, and replace the "Importing…" notice with a success or failure message reporting the outcome, instead of requiring a manual page reload.
 
 ## [0.12.1] - 2026-07-20
 ### Changed
