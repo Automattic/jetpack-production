@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - SEO: rename the AI dashboard tab to GEO (Generative Engine Optimization).
 
+### Fixed
+- SEO: hide the "Disable SEO tools" option on WordPress.com Simple sites, where SEO tools are always active and cannot be disabled.
+
 ## [0.6.0] - 2026-07-20
 ### Added
 - Add configurable BreadcrumbList schema across supported site pages. [#50499]
