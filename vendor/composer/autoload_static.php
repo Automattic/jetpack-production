@@ -370,6 +370,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_1_a_4
         'Automattic\\Jetpack\\Redirect' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php',
         'Automattic\\Jetpack\\Roles' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php',
         'Automattic\\Jetpack\\SEO\\Admin_Page' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-admin-page.php',
+        'Automattic\\Jetpack\\SEO\\Ai_Crawlers' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-ai-crawlers.php',
         'Automattic\\Jetpack\\SEO\\Author_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-author-schema-node.php',
         'Automattic\\Jetpack\\SEO\\Breadcrumb_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-breadcrumb-schema-node.php',
         'Automattic\\Jetpack\\SEO\\Content_Coverage' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-content-coverage.php',
