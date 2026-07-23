@@ -5,13 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.40.10-alpha] - unreleased
+## [5.41.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Show only the Products section, without the tab bar, on WordPress.com Simple sites.
 - Skip the connection onboarding flow on WordPress.com Simple sites, which are connected by definition.
 - Update package dependencies.
+
+### Fixed
+- Record the tab-click analytics event only on a real tab change, and rewrite a stale or invalid section hash to the section shown.
 
 ## [5.40.9] - 2026-07-22
 ### Changed
@@ -2805,7 +2809,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.40.10-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.9...5.40.10-alpha
+[5.41.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.9...5.41.0-alpha
 [5.40.9]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.8...5.40.9
 [5.40.8]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.7...5.40.8
 [5.40.7]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.6...5.40.7
