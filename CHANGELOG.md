@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
   now that Gutenberg 23.6+ renders the admin bar there.
 
 ### Bug fixes
+- Newsletter: when a WordPress.com user connection is required for the email preview and test email features, show an actionable prompt to connect and disable the test email "Send" button until connected, instead of only surfacing the error after a failed attempt.
 - Tiled Gallery: fix images collapsing to ~105px in the editor when the canvas is not iframed
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
