@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a connection-flow state machine to the social store.
 - Add the admin UI v2 feature flag.
+- Add the connection-flow modal and open it from the Social dashboard behind the admin UI v2 flag.
 
 ### Changed
 - Collapse the duplicated legacy/dashboard connection components onto the WordPress design system. The block editor sidebar now renders the same connection UI as the Social admin page.
