@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add AI crawler management — free per-bot allow/block toggles (answer and mixed-use crawlers allowed, training crawlers blocked by default) that write robots.txt directives.
 - Add custom post type support and llms.txt generation.
+- SEO: gate the dashboard to a free subset (Overview + Settings visibility/verification) with an upsell banner on below-Premium WordPress.com sites, and stop serving llms.txt and AI-crawler robots.txt directives there; self-hosted is never gated. Pre-launch, behind the rsm_jetpack_seo feature flag.
 
 ### Changed
 - SEO: rename the AI dashboard tab to GEO (Generative Engine Optimization).
