@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Force a full page reload after activating or deactivating VideoPress from the products list or the add-videopress interstitial, so the wp-admin sidebar menu item is re-rendered with the link matching the new activation state.
 - Show only the Products section, without the tab bar, on WordPress.com Simple sites.
 - Skip the connection onboarding flow on WordPress.com Simple sites, which are connected by definition.
 - Update package dependencies.

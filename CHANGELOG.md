@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Add AI crawler management — free per-bot allow/block toggles (answer and mixed-use crawlers allowed, training crawlers blocked by default) that write robots.txt directives.
 - SEO: Add custom post type support and llms.txt generation.
 - Social: the block editor sidebar now uses the same connection management UI as the Social admin page.
+- VideoPress: keep the VideoPress item under the Jetpack menu when the module is not active, linking to the My Jetpack page to activate it.
 - VideoPress: upload videos added via the classic media-new.php uploader directly to VideoPress, matching the Media Library behavior.
 
 ### Improved compatibility
