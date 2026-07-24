@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Add aria-label to hidden Carousel download link for better accessibility.
 - Change empty h2 and h3 tags in Carousel to div tags to fix SEO and accessibility warnings.
 - Content Guidelines AI: make AI guideline suggestions available on WordPress.com Simple and Atomic sites, with a paid Jetpack AI or Complete plan required to generate guidelines.
+- Memberships supports of MYR
 - REST API: Defer loading of WPCOM REST endpoint files to REST requests, saving execution time on every non-REST page load.
 - SEO: Add AI crawler management — free per-bot allow/block toggles (answer and mixed-use crawlers allowed, training crawlers blocked by default) that write robots.txt directives.
 - SEO: Add custom post type support and llms.txt generation.
