@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Tiled Gallery: fix images collapsing to ~105px in the editor when the canvas is not iframed
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI Launchpad: enable on all sites of a user in the ai_launchpad experiment variation, matching wp-admin.
 - Connection: Render informational-only connection error notices (no reconnect button) in the dashboard when an error's action is "none".
 - Updated package dependencies.
 - Update package dependencies.
