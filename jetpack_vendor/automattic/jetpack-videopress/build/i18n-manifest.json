@@ -1,0 +1,8 @@
+{
+	"bundles": [
+		"build/routes/library/content.js",
+		"build/routes/overview/content.js",
+		"build/routes/settings/content.js",
+		"build/routes/video/content.js"
+	]
+}

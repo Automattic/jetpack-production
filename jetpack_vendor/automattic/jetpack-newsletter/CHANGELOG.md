@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.
 - Register wp-build polyfills on the legacy settings page so the admin bundle loads when the wp-theme script handle isn't registered.
 - Subscribers dashboard: refresh the subscriber list automatically once an import finishes, and replace the "Importing…" notice with a success or failure message reporting the outcome, instead of requiring a manual page reload.
 

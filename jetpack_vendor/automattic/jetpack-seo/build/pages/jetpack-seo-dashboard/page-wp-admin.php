@@ -171,7 +171,26 @@ function jetpack_seo_jetpack_seo_dashboard_wp_admin_enqueue_scripts( $hook_suffi
 		( mountId, routes, initModules ) => {
 			const run = async () => {
 				const mod = await import( "@wordpress/boot" );
-				mod.initSinglePage( { mountId, routes, initModules } );
+				/*
+				 * Run the init modules here instead of delegating to
+				 * initSinglePage(): WordPress cores that bundle an older
+				 * @wordpress/boot (initModules support postdates WP 7.0's copy,
+				 * and the import map resolves @wordpress/boot to core's bundle
+				 * when core provides one) silently ignore the option, so init
+				 * modules would never execute. Running them before
+				 * initSinglePage() gives identical behavior on every core.
+				 */
+				for ( const id of initModules ?? [] ) {
+					try {
+						const initModule = await import( id );
+						if ( typeof initModule.init === "function" ) {
+							await initModule.init();
+						}
+					} catch ( error ) {
+						console.warn( "Failed to run boot init module:", id, error );
+					}
+				}
+				mod.initSinglePage( { mountId, routes } );
 			};
 			if ( document.readyState === "loading" ) {
 				document.addEventListener( "DOMContentLoaded", run );

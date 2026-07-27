@@ -22,6 +22,9 @@ This is an alpha version! The changes listed here are not final.
 - Collapse the duplicated legacy/dashboard connection components onto the WordPress design system. The block editor sidebar now renders the same connection UI as the Social admin page.
 - Update package dependencies.
 
+### Fixed
+- Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundle.
+
 ## [0.84.1] - 2026-07-20
 ### Changed
 - Update package dependencies. [#50510] [#50529] [#50582]

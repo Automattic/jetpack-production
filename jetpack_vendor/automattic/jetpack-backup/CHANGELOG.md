@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 - Update package dependencies.
 
+### Fixed
+- Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.
+
 ## [4.3.9] - 2026-07-20
 ### Changed
 - Update package dependencies. [#50510] [#50529] [#50582]

@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundle.
 - Send analytics events for Activity Log dashboard interactions by loading the Tracks library.
 
 ## [0.1.12] - 2026-07-20

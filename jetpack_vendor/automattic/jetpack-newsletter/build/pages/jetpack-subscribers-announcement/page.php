@@ -162,7 +162,7 @@ function jetpack_newsletter_jetpack_subscribers_announcement_render_page() {
 		wp_register_script( 'jetpack-subscribers-announcement-prerequisites', '', $asset['dependencies'], $asset['version'], true );
 
 		// Add inline script to initialize the app
-		$init_modules = [];
+		$init_modules = ["@jetpack-newsletter/init"];
 		wp_add_inline_script(
 			'jetpack-subscribers-announcement-prerequisites',
 			sprintf(
@@ -193,7 +193,7 @@ function jetpack_newsletter_jetpack_subscribers_announcement_render_page() {
 		);
 
 		// Add init modules as static dependencies
-			// No init modules configured
+			$boot_dependencies[] = array( 'import' => 'static', 'id' => '@jetpack-newsletter/init' );
 
 		// Add all registered routes as dependencies
 		foreach ( $routes as $route ) {

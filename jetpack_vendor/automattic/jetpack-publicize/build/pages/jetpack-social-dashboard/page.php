@@ -162,7 +162,7 @@ function jetpack_social_jetpack_social_dashboard_render_page() {
 		wp_register_script( 'jetpack-social-dashboard-prerequisites', '', $asset['dependencies'], $asset['version'], true );
 
 		// Add inline script to initialize the app
-		$init_modules = [];
+		$init_modules = ["@jetpack-social/init"];
 		wp_add_inline_script(
 			'jetpack-social-dashboard-prerequisites',
 			sprintf(
@@ -193,7 +193,7 @@ function jetpack_social_jetpack_social_dashboard_render_page() {
 		);
 
 		// Add init modules as static dependencies
-			// No init modules configured
+			$boot_dependencies[] = array( 'import' => 'static', 'id' => '@jetpack-social/init' );
 
 		// Add all registered routes as dependencies
 		foreach ( $routes as $route ) {

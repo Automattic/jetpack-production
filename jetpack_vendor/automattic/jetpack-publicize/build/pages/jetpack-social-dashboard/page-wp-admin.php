@@ -155,7 +155,7 @@ function jetpack_social_jetpack_social_dashboard_wp_admin_enqueue_scripts( $hook
 		// 2. It initializes the boot module as an inline script.
 		wp_register_script( 'jetpack-social-dashboard-wp-admin-prerequisites', '', $asset['dependencies'], $asset['version'], true );
 
-		$init_modules = [];
+		$init_modules = ["@jetpack-social/init"];
 
 		/*
 		 * Add inline script to initialize the app using initSinglePage (no menuItems).
@@ -171,7 +171,26 @@ function jetpack_social_jetpack_social_dashboard_wp_admin_enqueue_scripts( $hook
 		( mountId, routes, initModules ) => {
 			const run = async () => {
 				const mod = await import( "@wordpress/boot" );
-				mod.initSinglePage( { mountId, routes, initModules } );
+				/*
+				 * Run the init modules here instead of delegating to
+				 * initSinglePage(): WordPress cores that bundle an older
+				 * @wordpress/boot (initModules support postdates WP 7.0's copy,
+				 * and the import map resolves @wordpress/boot to core's bundle
+				 * when core provides one) silently ignore the option, so init
+				 * modules would never execute. Running them before
+				 * initSinglePage() gives identical behavior on every core.
+				 */
+				for ( const id of initModules ?? [] ) {
+					try {
+						const initModule = await import( id );
+						if ( typeof initModule.init === "function" ) {
+							await initModule.init();
+						}
+					} catch ( error ) {
+						console.warn( "Failed to run boot init module:", id, error );
+					}
+				}
+				mod.initSinglePage( { mountId, routes } );
 			};
 			if ( document.readyState === "loading" ) {
 				document.addEventListener( "DOMContentLoaded", run );
@@ -209,7 +228,7 @@ function jetpack_social_jetpack_social_dashboard_wp_admin_enqueue_scripts( $hook
 		);
 
 		// Add init modules as static dependencies
-			// No init modules configured
+			$boot_dependencies[] = array( 'import' => 'static', 'id' => '@jetpack-social/init' );
 
 		// Add all registered routes as dependencies
 		foreach ( $routes as $route ) {

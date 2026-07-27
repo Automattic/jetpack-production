@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 - VideoPress: make Library the default dashboard screen and move stats to a Stats tab
 
+### Fixed
+- Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.
+
 ## [0.42.0] - 2026-07-20
 ### Added
 - Library: Show live transcoding progress on processing videos after upload. [#50550]
