@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add a build-time export-contract check that fails the build when a polyfilled package imports a symbol the shipped version of another polyfilled package does not export — the Jetpack 16.0 blank-dashboard failure mode.
+
 ### Changed
 - Update package dependencies.
 
