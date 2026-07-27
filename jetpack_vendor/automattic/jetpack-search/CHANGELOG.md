@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Search: fix uncaught error when a malformed query string parameter (invalid percent-encoding) crashed Instant Search initialization
+
 ## [7.3.1] - 2026-07-22
 ### Changed
 - Internal updates.
