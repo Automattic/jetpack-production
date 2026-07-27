@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: when a WordPress.com user connection is required for the email preview and test email features, show an actionable prompt to connect and disable the test email "Send" button until connected, instead of only surfacing the error after a failed attempt.
 - SEO: Preserve Sitemaps and Canonical URLs settings when runtime filters temporarily suppress their modules.
 - Tiled Gallery: fix images collapsing to ~105px in the editor when the canvas is not iframed
+- VideoPress: Fix legacy video block previews in the editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Launchpad: enable on all sites of a user in the ai_launchpad experiment variation, matching wp-admin.
