@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Connection: Render informational-only connection error notices (no reconnect button) in the dashboard when an error's action is "none".
+- Updated package dependencies.
 - Update package dependencies.
 
 ## 16.1-a.3 - 2026-07-20
