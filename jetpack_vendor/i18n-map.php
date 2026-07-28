@@ -140,6 +140,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-post-media',
       'ver' => '0.1.6',
     ),
+    'jetpack-premium-analytics-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-premium-analytics',
+      'ver' => '0.1.0-alpha1785208160',
+    ),
     'jetpack-protect-models' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-protect-models',
       'ver' => '0.6.5',
