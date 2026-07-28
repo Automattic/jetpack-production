@@ -235,6 +235,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_1_a_6
         'Automattic\\Jetpack\\Masterbar\\Inline_Help' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-masterbar/src/inline-help/class-inline-help.php',
         'Automattic\\Jetpack\\Masterbar\\Main' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-masterbar/src/class-main.php',
         'Automattic\\Jetpack\\Masterbar\\Posts_List_Page_Notification' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-masterbar/src/wp-posts-list/class-posts-list-page-notification.php',
+        'Automattic\\Jetpack\\Masterbar\\Store_Plan' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-masterbar/src/class-store-plan.php',
         'Automattic\\Jetpack\\Masterbar\\WPCOM_Additional_CSS_Manager' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-masterbar/src/nudges/additional-css/class-wpcom-additional-css-manager.php',
         'Automattic\\Jetpack\\Masterbar\\WPCOM_Email_Subscription_Checker' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-masterbar/src/admin-menu/class-wpcom-email-subscription-checker.php',
         'Automattic\\Jetpack\\Masterbar\\WPCOM_User_Profile_Fields_Revert' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-masterbar/src/profile-edit/class-wpcom-user-profile-fields-revert.php',

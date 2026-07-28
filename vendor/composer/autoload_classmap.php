@@ -211,6 +211,7 @@ return array(
     'Automattic\\Jetpack\\Masterbar\\Inline_Help' => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/inline-help/class-inline-help.php',
     'Automattic\\Jetpack\\Masterbar\\Main' => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/class-main.php',
     'Automattic\\Jetpack\\Masterbar\\Posts_List_Page_Notification' => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/wp-posts-list/class-posts-list-page-notification.php',
+    'Automattic\\Jetpack\\Masterbar\\Store_Plan' => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/class-store-plan.php',
     'Automattic\\Jetpack\\Masterbar\\WPCOM_Additional_CSS_Manager' => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/nudges/additional-css/class-wpcom-additional-css-manager.php',
     'Automattic\\Jetpack\\Masterbar\\WPCOM_Email_Subscription_Checker' => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/admin-menu/class-wpcom-email-subscription-checker.php',
     'Automattic\\Jetpack\\Masterbar\\WPCOM_User_Profile_Fields_Revert' => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/profile-edit/class-wpcom-user-profile-fields-revert.php',

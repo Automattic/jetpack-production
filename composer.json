@@ -40,7 +40,7 @@
 		"automattic/jetpack-jitm": "^4.3.50",
 		"automattic/jetpack-licensing": "^3.1.9",
 		"automattic/jetpack-logo": "^3.0.9",
-		"automattic/jetpack-masterbar": "^0.27.35",
+		"automattic/jetpack-masterbar": "^0.27.36-alpha",
 		"automattic/jetpack-menu-badges": "^0.1.0",
 		"automattic/jetpack-my-jetpack": "^5.41.0",
 		"automattic/jetpack-newsletter": "^0.12.3-alpha",
