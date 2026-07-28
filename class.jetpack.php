@@ -86,7 +86,7 @@ class Jetpack {
 	 *
 	 * {@see self::reconcile_seo_module_state_options()}
 	 *
-	 * @since 16.1-a.4
+	 * @since 16.1
 	 *
 	 * @var string
 	 */
@@ -442,7 +442,7 @@ class Jetpack {
 	/**
 	 * Resolved answer for `is_premium_analytics_enabled()`, or null before the first call.
 	 *
-	 * @since 16.1-a.4
+	 * @since 16.1-a.6
 	 * @var bool|null
 	 */
 	private static $premium_analytics_enabled = null;
@@ -857,7 +857,7 @@ class Jetpack {
 	 * and the Stats module and dashboard widget ask much later. Without the
 	 * cache a filter registered in between would be seen by only some of them.
 	 *
-	 * @since 16.1-a.4
+	 * @since 16.1-a.6
 	 *
 	 * @return bool
 	 */
@@ -873,7 +873,7 @@ class Jetpack {
 		 * this from a mu-plugin or a plugin's main file — a callback added on
 		 * `plugins_loaded` or later runs too late to be seen.
 		 *
-		 * @since 16.1-a.4
+		 * @since 16.1-a.6
 		 *
 		 * @param bool $enabled Defaults to the `jetpack_premium_analytics_enabled` option (false).
 		 */
@@ -3029,7 +3029,7 @@ p {
 	 * WordPress.com Simple keeps module state outside this site's options table, so its
 	 * normal filtered read remains authoritative.
 	 *
-	 * @since 16.1-a.4
+	 * @since 16.1
 	 *
 	 * @param string $module Module slug.
 	 * @return bool Whether the module should be recorded as active.
@@ -3167,7 +3167,7 @@ p {
 	 * Idempotent: the marker is written with `add_option()`, so reruns on later version bumps
 	 * are no-ops. Like the migrations it seeds from, it touches no sitemap data or cron state.
 	 *
-	 * @since 16.1-a.4
+	 * @since 16.1
 	 */
 	public static function reconcile_seo_module_state_options() {
 		if ( get_option( self::SEO_MODULE_STATE_RECONCILED_OPTION ) ) {

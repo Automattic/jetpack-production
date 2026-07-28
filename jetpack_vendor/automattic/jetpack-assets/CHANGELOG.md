@@ -14,7 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ## [4.4.8] - 2026-07-27
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#50751]
 
 ## [4.4.7] - 2026-07-22
 ### Changed

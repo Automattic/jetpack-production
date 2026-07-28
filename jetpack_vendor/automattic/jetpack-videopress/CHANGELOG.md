@@ -5,22 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.43.0-alpha] - unreleased
+## [0.44.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Admin menu: keep the VideoPress item under the Jetpack menu when VideoPress is not active, linking to the My Jetpack page to activate it. The item is only shown to users with their own Jetpack user connection.
 - Library: allow selecting multiple video files from the Upload video button for bulk uploading
-- Library: show an orientation indicator icon on each video in the dashboard library.
-- VideoPress: allow promoting existing local videos to VideoPress on WordPress.com Simple via an in-process wpcom/v2 endpoint
-
-### Changed
-- Update package dependencies.
-- VideoPress: make Library the default dashboard screen and move stats to a Stats tab
 
 ### Fixed
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.
+
+## [0.43.0] - 2026-07-27
+### Added
+- Admin menu: Keep the VideoPress item under the Jetpack menu when VideoPress is not active, linking to the My Jetpack page to activate it. [#50740]
+- Library: Show an orientation indicator icon on each video in the dashboard library. [#50793]
+- Allow promoting existing local videos to VideoPress on WordPress.com Simple via an in-process wpcom/v2 endpoint. [#50611]
+
+### Changed
+- Update package dependencies. [#50751] [#50753] [#50792]
+- Make Library the default dashboard screen and move stats to a Stats tab. [#50698]
 
 ## [0.42.0] - 2026-07-20
 ### Added
@@ -2117,7 +2120,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.43.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.42.0...v0.43.0-alpha
+[0.44.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.43.0...v0.44.0-alpha
+[0.43.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.42.0...v0.43.0
 [0.42.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.41.0...v0.42.0
 [0.41.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.40.0...v0.41.0
 [0.40.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.39.0...v0.40.0

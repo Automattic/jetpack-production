@@ -5,18 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.0-alpha] - unreleased
+## [0.2.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Changed
-- Build the Activity Log dashboard with wp-build (boot script modules) instead of webpack.
-- Update dependencies.
-- Update package dependencies.
-
 ### Fixed
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundle.
-- Send analytics events for Activity Log dashboard interactions by loading the Tracks library.
+
+## [0.2.0] - 2026-07-27
+### Changed
+- Build the Activity Log dashboard with wp-build (boot script modules) instead of webpack. [#50714]
+- Update dependencies. [#50719]
+- Update package dependencies. [#50751] [#50753]
+
+### Fixed
+- Send analytics events for Activity Log dashboard interactions by loading the Tracks library. [#50714]
 
 ## [0.1.12] - 2026-07-20
 ### Changed
@@ -100,7 +103,8 @@ This is an alpha version! The changes listed here are not final.
 
 Initial release.
 
-[0.2.0-alpha]: https://github.com/Automattic/jetpack-activity-log/compare/v0.1.12...v0.2.0-alpha
+[0.2.1-alpha]: https://github.com/Automattic/jetpack-activity-log/compare/v0.2.0...v0.2.1-alpha
+[0.2.0]: https://github.com/Automattic/jetpack-activity-log/compare/v0.1.12...v0.2.0
 [0.1.12]: https://github.com/Automattic/jetpack-activity-log/compare/v0.1.11...v0.1.12
 [0.1.11]: https://github.com/Automattic/jetpack-activity-log/compare/v0.1.10...v0.1.11
 [0.1.10]: https://github.com/Automattic/jetpack-activity-log/compare/v0.1.9...v0.1.10
