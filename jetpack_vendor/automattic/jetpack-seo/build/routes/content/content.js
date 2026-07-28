@@ -228,6 +228,7 @@ __( "Schema", "jetpack-seo" );
 __( "Schema type", "jetpack-seo" );
 __( "Default", "jetpack-seo" );
 __( "SEO title", "jetpack-seo" );
+__( "SEO title set", "jetpack-seo" );
 __( "Meta description", "jetpack-seo" );
 __( "Meta description set", "jetpack-seo" );
 __( "Search", "jetpack-seo" );

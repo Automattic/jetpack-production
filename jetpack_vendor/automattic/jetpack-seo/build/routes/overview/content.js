@@ -47,16 +47,22 @@ __( "Answer engines: %1$d of %2$d allowed", "jetpack-seo" );
 __( "Training crawlers: %1$d of %2$d blocked", "jetpack-seo" );
 __( "Manage AI crawlers", "jetpack-seo" );
 /* translators: %1$d: posts with the field set, %2$d: total published posts. */
-__( "%1$d of %2$d", "jetpack-seo" );
-/* translators: %1$d: posts with the field set, %2$d: total published posts. */
 __( "%1$d / %2$d", "jetpack-seo" );
+/* translators: %d: percentage of posts with the field set. */
+__( "%d%%", "jetpack-seo" );
+/* translators: %1$s: the action (e.g. "Set SEO titles"); %2$d: posts with the field set; %3$d: total posts. */
+__( "%1$s. %2$d of %3$d.", "jetpack-seo" );
+__( "Add schema to content", "jetpack-seo" );
+__( "Set SEO titles", "jetpack-seo" );
+__( "Add meta descriptions", "jetpack-seo" );
+__( "Configure search visibility", "jetpack-seo" );
 __( "Content SEO", "jetpack-seo" );
 __( "No published posts or pages yet.", "jetpack-seo" );
 __( "Schema applied", "jetpack-seo" );
 __( "SEO title set", "jetpack-seo" );
 __( "Meta description added", "jetpack-seo" );
 __( "Visible to search engines", "jetpack-seo" );
-__( "Manage content", "jetpack-seo" );
+__( "Manage content SEO", "jetpack-seo" );
 __( "Using a different SEO solution?", "jetpack-seo" );
 __( "Disable Jetpack SEO tools", "jetpack-seo" );
 __( "Set", "jetpack-seo" );

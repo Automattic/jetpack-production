@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- SEO: polish the Overview tab — card-title icons, primary action buttons, and interactive coverage rings that deep-link to the Content tab filtered to the posts still missing that field.
+
 ## [0.7.0] - 2026-07-27
 ### Added
 - Add AI crawler management — free per-bot allow/block toggles (answer and mixed-use crawlers allowed, training crawlers blocked by default) that write robots.txt directives. [#50186]
@@ -117,6 +124,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Create a Settings screen with site visibility, post title structure, front-page description, and site verification. [#49256]
 - Scaffold the new `jetpack-seo` package and mount its admin page. [#49203]
 
+[0.8.0-alpha]: https://github.com/Automattic/jetpack-seo/compare/0.7.0...0.8.0-alpha
 [0.7.0]: https://github.com/Automattic/jetpack-seo/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/Automattic/jetpack-seo/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/Automattic/jetpack-seo/compare/0.4.0...0.5.0
