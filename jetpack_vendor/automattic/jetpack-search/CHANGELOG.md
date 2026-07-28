@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.3.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Check supports_instant_search, not the Atomic-unreliable supports_search, when deciding whether a site already has the Search product -- fixes Start for free/Get Search silently skipping checkout on Atomic sites that have a bundled classic-search entitlement.
+
 ## [7.3.2] - 2026-07-27
 ### Added
 - Add highlightPhraseOnly and highlightFilterStopwords Instant Search options for highlight API params. [#50738]
@@ -1854,6 +1861,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
+[7.3.3-alpha]: https://github.com/Automattic/jetpack-search/compare/v7.3.2...v7.3.3-alpha
 [7.3.2]: https://github.com/Automattic/jetpack-search/compare/v7.3.1...v7.3.2
 [7.3.1]: https://github.com/Automattic/jetpack-search/compare/v7.3.0...v7.3.1
 [7.3.0]: https://github.com/Automattic/jetpack-search/compare/v7.2.8...v7.3.0
