@@ -163,6 +163,7 @@ __( "Want to share to other networks? Use our Manual Sharing feature from the ed
 __( "Toggle details for %1$s on %2$s", "jetpack-publicize-pkg" );
 __( "Connected accounts", "jetpack-publicize-pkg" );
 __( "Connect an account", "jetpack-publicize-pkg" );
+__( "Notifications", "jetpack-publicize-pkg" );
 __( "Reset zoom", "jetpack-publicize-pkg" );
 __( "View details", "jetpack-publicize-pkg" );
 __( "Line chart", "jetpack-publicize-pkg" );
