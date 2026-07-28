@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Social: Surface a visible error when fetching the keyring result fails during a connection, instead of failing silently.
+
 ### Bug fixes
 - VideoPress: Fix legacy video block previews in the editor.
 

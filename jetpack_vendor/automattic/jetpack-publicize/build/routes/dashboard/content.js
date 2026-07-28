@@ -28,6 +28,7 @@ __( "Help", "jetpack-publicize-pkg" );
 __( "Jetpack", "jetpack-publicize-pkg" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-publicize-pkg" );
+__( "Error verifying the connection.", "jetpack-publicize-pkg" );
 __( "Account disconnected successfully.", "jetpack-publicize-pkg" );
 __( "Error disconnecting account.", "jetpack-publicize-pkg" );
 /* translators: %s is the name of the social media platform e.g. "Facebook" */

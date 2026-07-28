@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Surface a visible error when fetching the keyring result fails during a connection, instead of failing silently.
+
 ### Fixed
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundle.
 
