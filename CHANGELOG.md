@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Launchpad: enable on all sites of a user in the ai_launchpad experiment variation, matching wp-admin.
+- Carousel: Run the overlay fade as a CSS transition instead of a main-thread animation loop, and honour prefers-reduced-motion.
 - Connection: Render informational-only connection error notices (no reconnect button) in the dashboard when an error's action is "none".
 - Updated package dependencies.
 - Update package dependencies.
