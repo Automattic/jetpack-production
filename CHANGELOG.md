@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Surface a visible error when fetching the keyring result fails during a connection, instead of failing silently.
 
 ### Bug fixes
+- SEO: Fix custom per-page SEO title being ignored when the page is set as the site's homepage and the Front Page title format in Jetpack Settings is blank.
 - VideoPress: Fix legacy video block previews in the editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
