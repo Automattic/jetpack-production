@@ -7,6 +7,8 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI Sidebar: Align Editorial Review enablement with the other writing-assistance features.
+- AI Sidebar: Enable writing and SEO suggestions, the block toolbar button, and page and site editor support for all eligible users.
 - Social: Surface a visible error when fetching the keyring result fails during a connection, instead of failing silently.
 
 ### Bug fixes
