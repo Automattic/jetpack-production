@@ -68,6 +68,9 @@ __( "Flag of %s", "jetpack-premium-analytics-pkg" );
 __( "See report", "jetpack-premium-analytics-pkg" );
 /* translators: %d is the number of additional subscribers not shown. */
 _n( "%d more", "%d more", 1, "jetpack-premium-analytics-pkg" );
+__( "Could not download report.", "jetpack-premium-analytics-pkg" );
+__( "Download CSV", "jetpack-premium-analytics-pkg" );
+__( "Download", "jetpack-premium-analytics-pkg" );
 __( "By days", "jetpack-premium-analytics-pkg" );
 __( "By weeks", "jetpack-premium-analytics-pkg" );
 __( "By months", "jetpack-premium-analytics-pkg" );
@@ -264,8 +267,6 @@ __( "Value must be true, false, or undefined", "jetpack-premium-analytics-pkg" )
 __( "Value must be an array.", "jetpack-premium-analytics-pkg" );
 __( "Every value must be a string.", "jetpack-premium-analytics-pkg" );
 __( "Value must be a valid color.", "jetpack-premium-analytics-pkg" );
-__( "Could not download report.", "jetpack-premium-analytics-pkg" );
-__( "Download CSV", "jetpack-premium-analytics-pkg" );
 __( "Payment is on hold until the end of the current month.", "jetpack-premium-analytics-pkg" );
 __( "Payment has been processed through PayPal.", "jetpack-premium-analytics-pkg" );
 __( "a8c-only", "jetpack-premium-analytics-pkg" );
