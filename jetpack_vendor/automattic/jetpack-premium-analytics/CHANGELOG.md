@@ -334,6 +334,7 @@ This is an alpha version! The changes listed here are not final.
 - Register Premium Analytics as a connected plugin and sync its version constant so WPCom provisions the WooCommerce Analytics custom tables for PA-only stores.
 - Remove unnecessary TypeScript sources from the published package.
 - Report pages, dashboard, and post detail: Keep tab bars scrolling within the page on narrow viewports.
+- Report params: Keep a URL interval when it remains valid for the date range, otherwise coerce it to the range default.
 - Reports: Show comparison chart series for Posts, Videos, and Downloads without requiring matching rows between periods.
 - Report table: fix a 404 request for the DataViews stylesheet by inlining it through :global instead of a passthrough @import.
 - Report table: Scope the inlined DataViews stylesheet to keep Storybook builds working.
