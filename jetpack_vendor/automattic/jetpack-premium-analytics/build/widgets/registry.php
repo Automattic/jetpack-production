@@ -23,7 +23,7 @@ return array(
 	array(
 		'name'         => 'jpa/annual-highlights',
 		'dir_name'     => 'annual-highlights',
-		'title'        => 'Annual highlights',
+		'title'        => 'Highlights',
 		'description'  => 'Your totals for the year at a glance — posts, words, likes, and comments.',
 		'help'         => array( 'content' => 'Your totals for the year at a glance — posts, words, likes, and comments.' ),
 		'has_render'   => true,
@@ -36,7 +36,7 @@ return array(
 	array(
 		'name'         => 'jpa/authors',
 		'dir_name'     => 'authors',
-		'title'        => 'Authors',
+		'title'        => 'Popular authors',
 		'description'  => 'Top authors by views, with their most viewed posts.',
 		'help'         => array( 'content' => 'The authors whose content received the most views.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'has_render'   => true,
@@ -127,7 +127,7 @@ return array(
 	array(
 		'name'         => 'jpa/clicks',
 		'dir_name'     => 'clicks',
-		'title'        => 'Clicks',
+		'title'        => 'Top links clicked',
 		'description'  => 'Most clicked external links on your site.',
 		'help'         => array( 'content' => 'The external links your visitors clicked most often, sorted by clicks.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'has_render'   => true,
@@ -231,7 +231,7 @@ return array(
 	array(
 		'name'         => 'jpa/stats-emails',
 		'dir_name'     => 'emails',
-		'title'        => 'Emails',
+		'title'        => 'Latest emails sent',
 		'description'  => 'Open and click rates for your latest emails.',
 		'help'         => array( 'content' => 'Your most recently sent emails, including their open and click rates.' ),
 		'has_render'   => true,
@@ -244,7 +244,7 @@ return array(
 	array(
 		'name'         => 'jpa/file-downloads',
 		'dir_name'     => 'file-downloads',
-		'title'        => 'File downloads',
+		'title'        => 'Top downloaded',
 		'description'  => 'Most downloaded files on your site.',
 		'help'         => array( 'content' => 'The files your visitors downloaded most often, sorted by number of downloads.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'has_render'   => true,
@@ -296,7 +296,7 @@ return array(
 	array(
 		'name'         => 'jpa/locations',
 		'dir_name'     => 'locations',
-		'title'        => 'Locations',
+		'title'        => 'Top locations',
 		'description'  => 'Where your visitors are viewing from — by country, region, or city.',
 		'help'         => array( 'content' => 'The countries, regions, and cities where your visitors came from, sorted by views.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'has_render'   => true,
@@ -504,7 +504,7 @@ return array(
 	array(
 		'name'         => 'jpa/referrers',
 		'dir_name'     => 'referrers',
-		'title'        => 'Referrers',
+		'title'        => 'Top referrers',
 		'description'  => 'Websites and search engines referring visitors to your site.',
 		'help'         => array( 'content' => 'The sources that sent the most visitors to your site, sorted by clicks.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'has_render'   => true,
@@ -608,7 +608,7 @@ return array(
 	array(
 		'name'         => 'jpa/search-terms',
 		'dir_name'     => 'search-terms',
-		'title'        => 'Search Terms',
+		'title'        => 'Top searched terms',
 		'description'  => 'The search terms visitors use to find your site.',
 		'help'         => array( 'content' => 'The most popular search terms visitors used to find your site.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'has_render'   => true,
@@ -634,7 +634,7 @@ return array(
 	array(
 		'name'         => 'jpa/shares',
 		'dir_name'     => 'shares',
-		'title'        => 'Shares',
+		'title'        => 'Top social media shares',
 		'description'  => 'The number of times your content was shared to social networks.',
 		'help'         => array( 'content' => 'The platforms where your content was shared most often, sorted by number of shares.' ),
 		'has_render'   => true,
@@ -699,9 +699,9 @@ return array(
 	array(
 		'name'         => 'jpa/subscribers-chart',
 		'dir_name'     => 'subscribers-chart',
-		'title'        => 'Subscribers',
+		'title'        => 'Subscribers summary',
 		'description'  => 'Track subscriber growth over time, with paid subscribers and the previous period overlaid for comparison.',
-		'help'         => array( 'content' => 'A summary of your subscriber growth over time, with paid subscribers and the previous period overlaid for comparison.' ),
+		'help'         => array( 'content' => 'A summary of the new subscribers you gained over time.' ),
 		'has_render'   => true,
 		'has_widget'   => true,
 		'presentation' => 'framed',
@@ -712,7 +712,7 @@ return array(
 	array(
 		'name'         => 'jpa/subscribers-list',
 		'dir_name'     => 'subscribers-list',
-		'title'        => 'Latest Subscribers',
+		'title'        => 'Latest subscribers',
 		'description'  => 'Your most recent subscribers.',
 		'help'         => array( 'content' => 'Your most recent subscribers.' ),
 		'has_render'   => true,
@@ -725,7 +725,7 @@ return array(
 	array(
 		'name'         => 'jpa/tags',
 		'dir_name'     => 'tags',
-		'title'        => 'Tags & categories',
+		'title'        => 'Top tags & categories',
 		'description'  => 'Your most visited tags and categories, ranked by views.',
 		'help'         => array( 'content' => 'The tags and categories associated with your most-viewed content, sorted by views.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'has_render'   => true,
@@ -764,7 +764,7 @@ return array(
 	array(
 		'name'         => 'jpa/top-platforms',
 		'dir_name'     => 'top-platforms',
-		'title'        => 'Top Platforms',
+		'title'        => 'Top platforms',
 		'description'  => 'Top browsers and operating systems your visitors use.',
 		'help'         => array( 'content' => 'A breakdown of the operating systems and browsers your visitors used, sorted by views.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'has_render'   => true,
@@ -777,7 +777,7 @@ return array(
 	array(
 		'name'         => 'jpa/stats-top-posts',
 		'dir_name'     => 'top-posts',
-		'title'        => 'Most viewed',
+		'title'        => 'Top pages',
 		'description'  => 'Your most viewed posts, pages, and archives.',
 		'help'         => array( 'content' => 'Your most popular posts and pages, sorted by views.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'has_render'   => true,
@@ -816,9 +816,9 @@ return array(
 	array(
 		'name'         => 'jpa/traffic-chart',
 		'dir_name'     => 'traffic-chart',
-		'title'        => 'Traffic',
+		'title'        => 'Summary',
 		'description'  => 'Compare views, visitors, likes, and comments over the selected period, with the previous period overlaid for comparison.',
-		'help'         => array( 'content' => 'A summary of your site\'s views, visitors, likes, and comments, with the previous period overlaid for comparison.' ),
+		'help'         => array( 'content' => 'A summary of your site\'s views, visitors, likes, and comments.' ),
 		'has_render'   => true,
 		'has_widget'   => true,
 		'presentation' => 'framed',
@@ -829,7 +829,7 @@ return array(
 	array(
 		'name'         => 'jpa/utm-insights',
 		'dir_name'     => 'utm-insights',
-		'title'        => 'UTM Insights',
+		'title'        => 'Top UTM',
 		'description'  => 'Traffic breakdown by UTM parameters — source, medium, campaign, and combinations.',
 		'help'         => array( 'content' => 'Your top UTM campaigns, sorted by views.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'has_render'   => true,
@@ -868,7 +868,7 @@ return array(
 	array(
 		'name'         => 'jpa/videopress',
 		'dir_name'     => 'videopress',
-		'title'        => 'VideoPress',
+		'title'        => 'Top videos',
 		'description'  => 'Your most played VideoPress videos, sourced from Jetpack Stats.',
 		'help'         => array( 'content' => 'The published videos your visitors watched most often, sorted by views.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'has_render'   => true,

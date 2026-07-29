@@ -565,10 +565,11 @@ __( "DD/MM/YYYY", "jetpack-forms" );
 /* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 2023-12-31). */
 __( "YYYY-MM-DD", "jetpack-forms" );
 __( "Edit form", "jetpack-forms" );
+__( "Could not empty spam.", "jetpack-forms" );
+__( "Could not empty trash.", "jetpack-forms" );
 __( "Response deleted permanently.", "jetpack-forms" );
 /* translators: %s: The number of responses. */
 _n( "%s response deleted permanently.", "%s responses deleted permanently.", 1, "jetpack-forms" );
-__( "Could not empty spam.", "jetpack-forms" );
 __( "Delete", "jetpack-forms" );
 __( "Delete forever", "jetpack-forms" );
 /* translators: %s: the number of responses in spam */
@@ -576,7 +577,6 @@ _n( "%s response in spam will be deleted forever. This action cannot be undone."
 __( "All responses in spam will be deleted forever. This action cannot be undone.", "jetpack-forms" );
 __( "Spam is already empty.", "jetpack-forms" );
 __( "Delete spam", "jetpack-forms" );
-__( "Could not empty trash.", "jetpack-forms" );
 /* translators: %s: the number of responses in the trash. */
 _n( "%s response in trash will be deleted forever. This action cannot be undone.", "All %s responses in trash will be deleted forever. This action cannot be undone.", 1, "jetpack-forms" );
 __( "All responses in trash will be deleted forever. This action cannot be undone.", "jetpack-forms" );
