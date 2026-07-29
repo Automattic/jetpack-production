@@ -286,6 +286,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Removed
 - Remove the superseded Videos widget in favor of the VideoPress widget.
+- Remove the unused Publicize stats data layer and localize the Shares widget's generic service labels.
 
 ### Fixed
 - Authors: Respect a maximum value of zero when requesting all rows.

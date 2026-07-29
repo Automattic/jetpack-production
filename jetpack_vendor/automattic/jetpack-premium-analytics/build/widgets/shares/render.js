@@ -6,6 +6,9 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+__( "Print", "jetpack-premium-analytics-pkg" );
+__( "Email", "jetpack-premium-analytics-pkg" );
+__( "Press This", "jetpack-premium-analytics-pkg" );
 __( "Custom share buttons", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load shares. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
