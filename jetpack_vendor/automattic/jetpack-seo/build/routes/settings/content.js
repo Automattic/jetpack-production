@@ -178,7 +178,6 @@ __( "Set", "jetpack-seo" );
 __( "Publishes an XML sitemap that search engines crawl to discover your content, generated automatically from your site's published posts, pages, and custom post types.", "jetpack-seo" );
 __( "Allow search engines to index this site to generate a sitemap.", "jetpack-seo" );
 __( "View sitemap", "jetpack-seo" );
-__( "Generating…", "jetpack-seo" );
 __( "Unable to load settings.", "jetpack-seo" );
 __( "Front-page description", "jetpack-seo" );
 __( "Meta description shown on the home page", "jetpack-seo" );

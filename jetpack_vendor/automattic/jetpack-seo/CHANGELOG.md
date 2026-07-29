@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - SEO: polish the Overview tab — card-title icons, primary action buttons, and interactive coverage rings that deep-link to the Content tab filtered to the posts still missing that field.
 
+### Fixed
+- SEO: Fix the sitemap control in Settings — show the View sitemap link as soon as the sitemap is enabled instead of getting stuck on "Generating…", and make turning it off remove the site's sitemap entirely (a proper 404) rather than falling back to WordPress core's.
+
 ## [0.7.0] - 2026-07-27
 ### Added
 - Add AI crawler management — free per-bot allow/block toggles (answer and mixed-use crawlers allowed, training crawlers blocked by default) that write robots.txt directives. [#50186]
