@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Settings: align setup checklist wording with the controls it points to.
+
 ## [1.4.2] - 2026-07-27
 ### Changed
 - Update dependencies. [#50719]
@@ -202,6 +209,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dashboard: Replace the wp-build placeholder with page chrome and tab navigation. [#48559]
 - Dashboard: Slim down wp-build wiring to the Backup pattern. [#48600]
 
+[1.4.3-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v1.4.2...v1.4.3-alpha
 [1.4.2]: https://github.com/Automattic/jetpack-podcast/compare/v1.4.1...v1.4.2
 [1.4.1]: https://github.com/Automattic/jetpack-podcast/compare/v1.4.0...v1.4.1
 [1.4.0]: https://github.com/Automattic/jetpack-podcast/compare/v1.3.2...v1.4.0
