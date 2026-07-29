@@ -458,6 +458,8 @@ __( "Open rate", "jetpack-newsletter" );
 __( "%d%%", "jetpack-newsletter" );
 __( "Click rate", "jetpack-newsletter" );
 __( "Newsletter subscription details", "jetpack-newsletter" );
+__( "Receives emails for", "jetpack-newsletter" );
+__( "Not subscribed to any newsletter categories", "jetpack-newsletter" );
 __( "Subscriber information", "jetpack-newsletter" );
 __( "Joined", "jetpack-newsletter" );
 __( "Country", "jetpack-newsletter" );

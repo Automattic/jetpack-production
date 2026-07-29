@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Surface a visible error when fetching the keyring result fails during a connection, instead of failing silently.
 
 ### Bug fixes
+- Newsletter: add the REST proxy the subscriber details panel needs to show which newsletter categories a subscriber receives emails for.
 - SEO: Fix custom per-page SEO title being ignored when the page is set as the site's homepage and the Front Page title format in Jetpack Settings is blank.
 - VideoPress: Fix legacy video block previews in the editor.
 
