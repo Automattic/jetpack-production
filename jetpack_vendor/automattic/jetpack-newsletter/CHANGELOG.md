@@ -11,6 +11,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.
+- Only show the Subscribers announcement page on sites that predate the Subscribers move.
+- Remove the Subscribers announcement page entirely on sites that postdate the Subscribers move, instead of leaving an unstyled fallback page behind.
 - Subscribers: show the newsletter categories a subscriber receives emails for, and restore the missing subscription date, in the subscriber details panel.
 
 ## [0.12.2] - 2026-07-27
