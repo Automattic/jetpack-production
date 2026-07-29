@@ -216,6 +216,7 @@ This is an alpha version! The changes listed here are not final.
 - Fields: Match ArrayCheckboxField compact trigger font sizing to SelectControl on narrow viewports.
 - Fields: Match ArrayCheckboxField menu item hover styling to SelectControl.
 - Fields: SelectField preserves the original option value type when writing a selection, avoiding string coercion of numeric-valued enums.
+- File downloads report: Remove the performance chart and show comparison changes in the records table.
 - Hide the File downloads widget and report outside WordPress.com Simple sites, matching the Calypso Stats gating.
 - Hide WooCommerce widget categories (store, orders, coupons, bookings) when WooCommerce is inactive, and bookings widgets when the WooCommerce Bookings extension is inactive.
 - Hoist the shared SalesByUtmWidget component into widgets-toolkit so the UTM channel and campaign widgets render from a single source (upstream pattern).
