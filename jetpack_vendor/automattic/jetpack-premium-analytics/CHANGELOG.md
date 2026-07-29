@@ -276,6 +276,7 @@ This is an alpha version! The changes listed here are not final.
 - UTM report: Group posts by UTM value, link them to post details, and show view comparison deltas. Searching a drilldown report now keeps a matched parent's rows with it.
 - VideoPress widget: Consume merged comparison rows from the Stats data layer instead of matching periods in the widget.
 - VideoPress widget: remove the legend from the video plays leaderboard.
+- Videos report: Remove the performance chart and show comparison changes in the records table.
 - Widgets: add shared WidgetFooter and ReportLink primitives and migrate top-posts.
 - Widgets: align the woocommerce-analytics-ported widgets with the shared widget render-props contract.
 - Widgets: Hoist buildSalesByUtmData into the widgets-toolkit so the UTM channel and campaign widgets share one copy.
