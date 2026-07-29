@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Add icon chips and completion statuses to each Settings module, clarify the help text, and preview the title every page type produces.
 - SEO: polish the Overview tab — card-title icons, primary action buttons, and interactive coverage rings that deep-link to the Content tab filtered to the posts still missing that field.
 
 ### Fixed
