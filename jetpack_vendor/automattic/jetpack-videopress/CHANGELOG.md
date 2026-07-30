@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Library: allow multi-selecting local videos; Upload to VideoPress works as a bulk action and Delete covers local rows
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.
+- Video block: Keep preview-on-hover poster and title customization in sync with the player API.
 - VideoPress block: fix selecting an existing local video from the media library on WordPress.com Simple (promote in place instead of the unreachable videopress/v1 upload), and stop the error screen's Retry from crashing when there is no file to restart
 
 ## [0.43.0] - 2026-07-27
