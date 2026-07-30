@@ -65,6 +65,7 @@ This is an alpha version! The changes listed here are not final.
 - Comments: add the Comments widget ranking comment authors and most-commented posts and pages by comment count.
 - Compose the video highlights and embeds widgets on the video detail page, with a post-detail-style summary header.
 - CSV exports: Enable downloads across all report pages and existing export-enabled widgets.
+- Dashboard: add a per-section header with the section title and date controls.
 - Dashboard: add a React Query Devtools widget (non-production only), and expose two server-side widget-type filters (at registration and on read) so consumers can scope which widget types reach the dashboard.
 - Dashboard: Add dashboard section layout persistence endpoints.
 - Dashboard: Add dashboard section registry and REST endpoints.
