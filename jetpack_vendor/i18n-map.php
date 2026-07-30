@@ -194,7 +194,7 @@ return array(
     ),
     'jetpack-wp-build-polyfills' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wp-build-polyfills',
-      'ver' => '0.2.6-alpha1785446750',
+      'ver' => '0.3.0-alpha1785451320',
     ),
   ),
   'paths' => array(
