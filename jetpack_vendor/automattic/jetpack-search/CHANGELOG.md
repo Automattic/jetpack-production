@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Search: Rename the Reader Chat setting to Site Chat, and describe it as answering visitor questions about the site.
+
 ### Fixed
 - Check supports_instant_search, not the Atomic-unreliable supports_search, when deciding whether a site already has the Search product -- fixes Start for free/Get Search silently skipping checkout on Atomic sites that have a bundled classic-search entitlement.
 - Search: Stop printing the theme-token-sampler script once the Search module is disabled.
