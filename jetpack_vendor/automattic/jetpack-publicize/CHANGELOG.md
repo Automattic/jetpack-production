@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundle.
+- Social Image Generator: share the current generated image after changing the template.
 
 ## [0.84.2] - 2026-07-27
 ### Security
