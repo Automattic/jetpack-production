@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Add icon chips and completion statuses to each Settings module, clarify the help text, and preview the title every page type produces.
+- Refresh the GEO tab: an icon chip on every module title, headings you can navigate to, an explanation of what GEO means, and clearer state tags.
 - SEO: polish the Overview tab — card-title icons, primary action buttons, and interactive coverage rings that deep-link to the Content tab filtered to the posts still missing that field.
 
 ### Fixed
