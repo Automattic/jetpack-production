@@ -329,6 +329,7 @@ This is an alpha version! The changes listed here are not final.
 - Locations widget: Show Locations header before drill-down.
 - Metric tabs chart: hide the tab-list selection underline so it doesn't render alongside the selected metric card's fill. A @wordpress/ui update moved the minimal Tabs indicator from a per-tab element to a tab-list-level one, leaving a stray underline under the selected tab in the Subscribers and Traffic chart widgets.
 - Metric tabs chart: on a narrow tile the metric cards squeezed into one cramped row. Stack the header and lay the cards out in an even two-column grid below a 420px container width, so the four-metric Traffic chart reflows to a balanced 2 x 2 instead of a crammed single row.
+- Most viewed: navigate to post details in the app instead of reloading the page.
 - Pin @wordpress/widget-dashboard and @wordpress/widget-primitives to an exact version instead of the floating next tag
 - Post detail: align post view comparisons and draw the email timeline comparison overlay.
 - Post detail: keep the tab bar in place while the page scrolls, matching the dashboard
