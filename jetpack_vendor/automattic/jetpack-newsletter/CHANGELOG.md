@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Newsletter categories: deep-link the subscribe block help text to the "Subscribe to specific categories" section.
+
 ### Fixed
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.
 - Newsletter categories: add categories inline instead of linking out to wp-admin, so a new category appears and is selected without a page refresh.
