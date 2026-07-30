@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: polish the Overview tab — card-title icons, primary action buttons, and interactive coverage rings that deep-link to the Content tab filtered to the posts still missing that field.
 
 ### Fixed
+- Keep the Schema module's completion status accurate when a name or description field contains only spaces.
 - Return the Breadcrumbs toggle in Schema settings to its previous position when the save fails, instead of leaving it showing a change that was not saved.
 - SEO: Fix the sitemap control in Settings — show the View sitemap link as soon as the sitemap is enabled instead of getting stuck on "Generating…", and make turning it off remove the site's sitemap entirely (a proper 404) rather than falling back to WordPress core's.
 
