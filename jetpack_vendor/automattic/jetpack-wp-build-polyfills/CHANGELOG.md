@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add a build-time export-contract check that fails the build when a polyfilled package imports a symbol the shipped version of another polyfilled package does not export — the Jetpack 16.0 blank-dashboard failure mode.
 - Add a stamp-textdomains post-build tool and a shared loadI18nCatalogs helper for translating wp-build dashboard JavaScript. strip-unminified-prod now replaces string-bearing unminified bundles with i18n reference stubs instead of deleting them, so string extraction keeps working on production builds.
 
+### Fixed
+- Throttle translation catalog downloads and stop requesting widget catalogs at boot — they now load on demand via loadBundleI18nCatalog().
+
 ## [0.2.5] - 2026-07-27
 ### Changed
 - Update package dependencies. [#50751]

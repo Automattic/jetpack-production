@@ -307,6 +307,7 @@ This is an alpha version! The changes listed here are not final.
 - CSV exports: Surface external API error details.
 - Dashboard: Fix global error handling for widgets.
 - Dashboard: fix widget grid flicker when resizing a widget vertically by letting the section panel fill the viewport height and scroll internally, so it no longer oscillates with the grid.
+- Dashboard: load each widget's translation catalogs when the widget loads, instead of requesting all of them at once at boot.
 - Dashboard: Load WordPress build polyfills so the dashboard can run without the Gutenberg plugin.
 - Dashboard: make Reset to default follow the section's current default layout instead of pinning a snapshot of it.
 - Dashboard: Prevent widget focus outlines from being clipped in dashboard and post detail views.
