@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Connection: Expose the connection-error audience (site/owner/user) to the Jetpack dashboard so error notices can be tailored to the viewer.
 
+### Changed
+- Connection: Fetch connected user data from WordPress.com over REST instead of XML-RPC.
+
 ### Fixed
 - Connection: cache wpcom.getUser XML-RPC failures briefly in get_connected_user_data().
 
