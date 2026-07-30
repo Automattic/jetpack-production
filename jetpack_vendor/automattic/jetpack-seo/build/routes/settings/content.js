@@ -29,7 +29,7 @@ __( "Overview", "jetpack-seo" );
 __( "Settings", "jetpack-seo" );
 __( "Content", "jetpack-seo" );
 _x( "GEO", "Generative Engine Optimization; the SEO dashboard tab label", "jetpack-seo" );
-__( "Visibility tools for your site — sitemaps, search-engine settings, and more, in one place.", "jetpack-seo" );
+__( "Make your site discoverable in search and social, and control AI access.", "jetpack-seo" );
 __( "Could not enable SEO tools. Please try again.", "jetpack-seo" );
 __( "Could not disable SEO tools. Please try again.", "jetpack-seo" );
 __( "Enable SEO tools", "jetpack-seo" );
