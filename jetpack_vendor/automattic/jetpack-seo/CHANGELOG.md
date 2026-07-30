@@ -11,11 +11,13 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Add icon chips and completion statuses to each Settings module, clarify the help text, and preview the title every page type produces.
+- Combine the Breadcrumbs, Organization, and Local business settings into one Schema module with a single Save button, and clarify their labels and help text.
 - Refresh the GEO tab: an icon chip on every module title, headings you can navigate to, an explanation of what GEO means, and clearer state tags.
 - Rewrite the SEO page subtitle around what the tools do for you, and sharpen the Overview cards: shorter Site visibility, a globe icon on both Site verification cards, llms.txt reported alongside AI access, and only the verification services most sites use.
 - SEO: polish the Overview tab — card-title icons, primary action buttons, and interactive coverage rings that deep-link to the Content tab filtered to the posts still missing that field.
 
 ### Fixed
+- Return the Breadcrumbs toggle in Schema settings to its previous position when the save fails, instead of leaving it showing a change that was not saved.
 - SEO: Fix the sitemap control in Settings — show the View sitemap link as soon as the sitemap is enabled instead of getting stuck on "Generating…", and make turning it off remove the site's sitemap entirely (a proper 404) rather than falling back to WordPress core's.
 
 ## [0.7.0] - 2026-07-27

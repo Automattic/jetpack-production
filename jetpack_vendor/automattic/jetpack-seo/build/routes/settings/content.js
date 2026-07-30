@@ -7,6 +7,7 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading" );
+__( "More details follow." );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)" );
 __( "Dismiss" );
@@ -67,11 +68,10 @@ __( "Social profiles", "jetpack-seo" );
 __( "Links to your public profiles — Facebook, X, LinkedIn.", "jetpack-seo" );
 __( "Save author profile", "jetpack-seo" );
 __( "Author profile", "jetpack-seo" );
-__( "Saving breadcrumbs…", "jetpack-seo" );
 __( "Schema settings saved.", "jetpack-seo" );
 __( "Could not save schema settings. Please try again.", "jetpack-seo" );
-__( "Saving organization…", "jetpack-seo" );
-__( "Saving local business…", "jetpack-seo" );
+__( "Saving breadcrumbs…", "jetpack-seo" );
+__( "Saving schema settings…", "jetpack-seo" );
 __( "Monday", "jetpack-seo" );
 __( "Tuesday", "jetpack-seo" );
 __( "Wednesday", "jetpack-seo" );
@@ -105,28 +105,24 @@ __( "Leave a day blank if it's closed. A closing time earlier than opening means
 __( "%s opens", "jetpack-seo" );
 /* translators: %s: day of week. */
 __( "%s closes", "jetpack-seo" );
-__( "This site represents a local business", "jetpack-seo" );
-__( "Adds your business details (address, phone, hours) to the site's schema so search engines can show local info.", "jetpack-seo" );
-__( "Save local business", "jetpack-seo" );
-__( "Help search engines understand the organization behind this site.", "jetpack-seo" );
+__( "This is a local business", "jetpack-seo" );
+__( "Turn on if customers visit you in person (a shop, studio, restaurant, clinic). Adds your address, phone, and hours so search engines can show your local details.", "jetpack-seo" );
+__( "About the organization behind this site. Your Site Logo or Site Icon is used as the logo.", "jetpack-seo" );
 __( "Organization name", "jetpack-seo" );
-__( "The name used for your site’s Organization schema. Leave blank to use your Site Title.", "jetpack-seo" );
+__( "The organization’s name, as you want it to appear in search results. Leave blank to use your Site Title.", "jetpack-seo" );
 __( "Description", "jetpack-seo" );
-__( "A short description of your organization. Leave blank to use your site Tagline.", "jetpack-seo" );
-__( "Links to official profiles for this organization (for example Facebook, X, LinkedIn).", "jetpack-seo" );
+__( "A sentence or two about what the organization does. Leave blank to use your site Tagline.", "jetpack-seo" );
+__( "Social & profile links", "jetpack-seo" );
+__( "Links to the organization’s official profiles — Facebook, X, LinkedIn, a Wikipedia page. These help search engines confirm it’s the same organization across the web.", "jetpack-seo" );
 __( "Contact email", "jetpack-seo" );
-__( "A public contact email for this organization.", "jetpack-seo" );
-__( "Save organization", "jetpack-seo" );
-__( "Not set", "jetpack-seo" );
-__( "Enabled", "jetpack-seo" );
-__( "Disabled", "jetpack-seo" );
+__( "A public contact email for the organization.", "jetpack-seo" );
+__( "Schema", "jetpack-seo" );
+__( "Structured data that tells search engines and AI assistants what your site is and who runs it. Add the details below and Jetpack adds the right markup automatically.", "jetpack-seo" );
 __( "Breadcrumbs", "jetpack-seo" );
-__( "Enable breadcrumb schema", "jetpack-seo" );
-__( "Adds breadcrumb structured data to help search engines understand your site hierarchy.", "jetpack-seo" );
-__( "Organization", "jetpack-seo" );
-/* translators: %1$d: number of configured Organization fields. %2$d: total number of fields. */
-_x( "%1$d of %2$d set", "Organization fields are configured", "jetpack-seo" );
-__( "Local business", "jetpack-seo" );
+__( "Add breadcrumb markup so search results can show where a page sits in your site (for example Home › Blog › Post).", "jetpack-seo" );
+__( "Organization details", "jetpack-seo" );
+__( "Fix the highlighted fields to save.", "jetpack-seo" );
+__( "Save schema settings", "jetpack-seo" );
 __( "Search & social previews", "jetpack-seo" );
 __( "How your home page looks in search results and social shares. Updates as you edit the front-page description above.", "jetpack-seo" );
 __( "Google search result", "jetpack-seo" );
