@@ -411,13 +411,17 @@ __( "Automatically add subscription forms to your site and turn visitors into su
 __( "Homepage and posts", "jetpack-newsletter" );
 __( "Navigation", "jetpack-newsletter" );
 __( "Comments", "jetpack-newsletter" );
+__( "This category already exists.", "jetpack-newsletter" );
+__( "Could not create the category. Please try again.", "jetpack-newsletter" );
+/* translators: %s: the category name the user typed. */
+__( "Create “%s”", "jetpack-newsletter" );
+__( "Search or create a category", "jetpack-newsletter" );
 __( "Failed to load categories", "jetpack-newsletter" );
 __( "Enable newsletter categories", "jetpack-newsletter" );
 __( "Newsletter categories", "jetpack-newsletter" );
-__( "Which categories will you use for newsletter subscribers? Select all that apply.", "jetpack-newsletter" );
+__( "Search to add existing categories, or create a new one.", "jetpack-newsletter" );
 __( "Please select at least one category when newsletter categories are enabled.", "jetpack-newsletter" );
 __( "Newsletter categories let you select the content that's emailed to subscribers. When enabled, only posts in the selected categories will be sent as newsletters. By default, subscribers can choose from your selected categories, or you can pre-select categories using the <link>subscribe block</link>. When you add a new category, your existing subscribers will be automatically subscribed to it.", "jetpack-newsletter" );
-__( "Add new category", "jetpack-newsletter" );
 __( "Let visitors subscribe to this site and receive emails when you publish a post", "jetpack-newsletter" );
 __( "Newsletter", "jetpack-newsletter" );
 __( "Privacy information", "jetpack-newsletter" );
