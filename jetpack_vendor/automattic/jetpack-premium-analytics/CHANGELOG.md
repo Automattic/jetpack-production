@@ -322,6 +322,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix a missing script data asset in packaged Premium Analytics builds.
 - Fix dashboard widgets rendering "Widget is no longer available" by loading the widget manifest on REST requests, not just admin page loads.
 - Fix TypeScript error in five zero-attribute widget stories (Record<never, never> instead of Record<string, never>).
+- Format dates using the site's language and date format instead of US English.
 - Keep the widget-dashboard Storybook story's settings drawer on-screen when the dashboard is wider than the preview canvas.
 - Keep the widget settings drawer above widget chrome in dashboard Storybook stories.
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.

@@ -204,6 +204,8 @@ __( "Previous period", "jetpack-premium-analytics-pkg" );
 __( "Previous week", "jetpack-premium-analytics-pkg" );
 __( "Previous month", "jetpack-premium-analytics-pkg" );
 __( "Previous year", "jetpack-premium-analytics-pkg" );
+/* translators: 1: Start date. 2: End date. */
+__( "%1$s – %2$s", "jetpack-premium-analytics-pkg" );
 /* translators: %s is the comparison range label */
 __( "Compare to: %s", "jetpack-premium-analytics-pkg" );
 __( "No comparison", "jetpack-premium-analytics-pkg" );

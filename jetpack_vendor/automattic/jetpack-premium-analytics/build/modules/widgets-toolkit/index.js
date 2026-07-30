@@ -6,6 +6,8 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+/* translators: 1: Start date. 2: End date. */
+__( "%1$s – %2$s", "jetpack-premium-analytics-pkg" );
 __( "Loading", "jetpack-premium-analytics-pkg" );
 __( "More details follow the field.", "jetpack-premium-analytics-pkg" );
 __( "Select", "jetpack-premium-analytics-pkg" );
