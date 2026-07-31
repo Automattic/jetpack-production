@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Keep responses readable when a field label, submitted value, or page title contains a "<" character.
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.
 
 ## [7.23.3] - 2026-07-27
