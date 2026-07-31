@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Add Reprint full-site export support for Pressable and WordPress.com (Atomic) sites. An authenticated export client can pull a complete copy of the site through an HMAC-secured, time-limited export window opened by Jetpack-signed control requests. On Atomic it runs alongside the existing wpcomsh export via a separate ?reprint-api-jetpack endpoint and jetpack/v4 REST routes, so clients can migrate at their own pace. Availability can be overridden with the jetpack_reprint_export_available filter.
 - AI Sidebar: Align Editorial Review enablement with the other writing-assistance features.
 - AI Sidebar: Enable writing and SEO suggestions, the block toolbar button, and page and site editor support for all eligible users.
 - Site Chat: Rename the public feature text from Reader Chat to Site Chat.
@@ -24,7 +25,9 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI Launchpad: enable on all sites of a user in the ai_launchpad experiment variation, matching wp-admin.
 - Carousel: Run the overlay fade as a CSS transition instead of a main-thread animation loop, and honour prefers-reduced-motion.
+- Keep the Reprint exporter's bundled psr/log out of the global class map so it does not conflict with other psr/log copies (e.g. on WordPress.com).
 - Premium Analytics: bundle the package behind the jetpack_premium_analytics_enabled flag; when enabled it replaces the Stats wp-admin UI
+- Reprint exporter: exclude the unused URL-parsing dependencies (rowbot, brick/math, psr/log) from the production build, trimming ~1.2 MB the export path never loads.
 
 ## 16.1-a.5 - 2026-07-27
 ### Enhancements

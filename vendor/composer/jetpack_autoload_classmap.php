@@ -14,16 +14,20 @@ return array(
 		'version' => '1.0.1.0',
 		'path'    => $vendorDir . '/wikimedia/aho-corasick/src/MultiStringReplacer.php'
 	),
+	'Attribute' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/vendor-patched/symfony/polyfill-php80/Resources/stubs/Attribute.php'
+	),
 	'Autoloader' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-autoloader.php'
 	),
 	'Autoloader_Handler' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-autoloader-handler.php'
 	),
 	'Autoloader_Locator' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-autoloader-locator.php'
 	),
 	'Automattic\\Block_Delimiter' => array(
@@ -131,23 +135,23 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-assets/src/class-shared-stores-assets.php'
 	),
 	'Automattic\\Jetpack\\Autoloader\\AutoloadFileWriter' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/AutoloadFileWriter.php'
 	),
 	'Automattic\\Jetpack\\Autoloader\\AutoloadGenerator' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/AutoloadGenerator.php'
 	),
 	'Automattic\\Jetpack\\Autoloader\\AutoloadProcessor' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/AutoloadProcessor.php'
 	),
 	'Automattic\\Jetpack\\Autoloader\\CustomAutoloaderPlugin' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/CustomAutoloaderPlugin.php'
 	),
 	'Automattic\\Jetpack\\Autoloader\\ManifestGenerator' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/ManifestGenerator.php'
 	),
 	'Automattic\\Jetpack\\Automatic_Install_Skin' => array(
@@ -479,7 +483,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-constants/src/class-constants.php'
 	),
 	'Automattic\\Jetpack\\CookieState' => array(
-		'version' => '6.1.9.0',
+		'version' => '6.2.0.0-alpha1785503957',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-cookiestate.php'
 	),
 	'Automattic\\Jetpack\\Current_Plan' => array(
@@ -499,7 +503,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-error/src/class-error.php'
 	),
 	'Automattic\\Jetpack\\Errors' => array(
-		'version' => '6.1.9.0',
+		'version' => '6.2.0.0-alpha1785503957',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-errors.php'
 	),
 	'Automattic\\Jetpack\\ExPlat' => array(
@@ -527,7 +531,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-external-media/src/class-external-media.php'
 	),
 	'Automattic\\Jetpack\\Files' => array(
-		'version' => '6.1.9.0',
+		'version' => '6.2.0.0-alpha1785503957',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-files.php'
 	),
 	'Automattic\\Jetpack\\Forms\\Abilities\\Forms_Abilities' => array(
@@ -871,7 +875,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-menu-badges/src/class-notification-counts.php'
 	),
 	'Automattic\\Jetpack\\Modules' => array(
-		'version' => '6.1.9.0',
+		'version' => '6.2.0.0-alpha1785503957',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-modules.php'
 	),
 	'Automattic\\Jetpack\\My_Jetpack\\Historically_Active_Modules' => array(
@@ -1047,7 +1051,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-password-checker/src/class-password-checker.php'
 	),
 	'Automattic\\Jetpack\\Paths' => array(
-		'version' => '6.1.9.0',
+		'version' => '6.2.0.0-alpha1785503957',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-paths.php'
 	),
 	'Automattic\\Jetpack\\PayPal_Payments' => array(
@@ -1606,6 +1610,14 @@ return array(
 		'version' => '3.0.15.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php'
 	),
+	'Automattic\\Jetpack\\Reprint_Export\\REST_Controller' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/reprint-export/class-rest-controller.php'
+	),
+	'Automattic\\Jetpack\\Reprint_Export\\Reprint_Exporter' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/reprint-export/class-reprint-exporter.php'
+	),
 	'Automattic\\Jetpack\\Roles' => array(
 		'version' => '3.0.12.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php'
@@ -1955,23 +1967,23 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-stats-admin/src/class-wp-dashboard-odyssey-widget.php'
 	),
 	'Automattic\\Jetpack\\Status' => array(
-		'version' => '6.1.9.0',
+		'version' => '6.2.0.0-alpha1785503957',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-status.php'
 	),
 	'Automattic\\Jetpack\\Status\\Cache' => array(
-		'version' => '6.1.9.0',
+		'version' => '6.2.0.0-alpha1785503957',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-cache.php'
 	),
 	'Automattic\\Jetpack\\Status\\Host' => array(
-		'version' => '6.1.9.0',
+		'version' => '6.2.0.0-alpha1785503957',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-host.php'
 	),
 	'Automattic\\Jetpack\\Status\\Request' => array(
-		'version' => '6.1.9.0',
+		'version' => '6.2.0.0-alpha1785503957',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-request.php'
 	),
 	'Automattic\\Jetpack\\Status\\Visitor' => array(
-		'version' => '6.1.9.0',
+		'version' => '6.2.0.0-alpha1785503957',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-visitor.php'
 	),
 	'Automattic\\Jetpack\\Sync\\Actions' => array(
@@ -2527,11 +2539,19 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woo-analytics-trait.php'
 	),
 	'Container' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-container.php'
 	),
+	'FileTreeProducer' => array(
+		'version' => '0.9.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/class-file-tree-producer.php'
+	),
+	'GzipOutputStream' => array(
+		'version' => '0.9.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/export.php'
+	),
 	'Hook_Manager' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-hook-manager.php'
 	),
 	'Jetpack_Customize_Control_Title' => array(
@@ -2571,47 +2591,131 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/legacy/class-jetpack-xmlrpc-server.php'
 	),
 	'Latest_Autoloader_Guard' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-latest-autoloader-guard.php'
 	),
 	'Manifest_Reader' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-manifest-reader.php'
 	),
+	'Normalizer' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/vendor-patched/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php'
+	),
 	'PHP_Autoloader' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-php-autoloader.php'
 	),
 	'Path_Processor' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-path-processor.php'
 	),
 	'PayPal_Payments_Currencies' => array(
 		'version' => '0.7.10.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/legacy/class-paypal-payments-currencies.php'
 	),
+	'PhpToken' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/vendor-patched/symfony/polyfill-php80/Resources/stubs/PhpToken.php'
+	),
 	'Plugin_Locator' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-plugin-locator.php'
 	),
 	'Plugins_Handler' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-plugins-handler.php'
 	),
+	'Psr\\EventDispatcher\\EventDispatcherInterface' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/vendor-patched/psr/event-dispatcher/src/EventDispatcherInterface.php'
+	),
+	'Psr\\EventDispatcher\\ListenerProviderInterface' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/vendor-patched/psr/event-dispatcher/src/ListenerProviderInterface.php'
+	),
+	'Psr\\EventDispatcher\\StoppableEventInterface' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/vendor-patched/psr/event-dispatcher/src/StoppableEventInterface.php'
+	),
+	'ResourceBudget' => array(
+		'version' => '0.9.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/export.php'
+	),
 	'Shutdown_Handler' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-shutdown-handler.php'
+	),
+	'Site_Export_HMAC_Client' => array(
+		'version' => '0.9.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/class-hmac-client.php'
+	),
+	'Site_Export_HMAC_Server' => array(
+		'version' => '0.9.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/class-hmac-server.php'
+	),
+	'Site_Export_HTTP_Server' => array(
+		'version' => '0.9.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/class-http-server.php'
+	),
+	'Site_Export_Staged_Artifacts' => array(
+		'version' => '0.9.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/class-staged-artifacts.php'
+	),
+	'Site_Export_Staged_Endpoints' => array(
+		'version' => '0.9.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/class-staged-endpoints.php'
+	),
+	'Site_Export_Staged_Push_Stream_Protocol' => array(
+		'version' => '0.9.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/class-staged-push-stream-protocol.php'
+	),
+	'SqliteDriverPDO' => array(
+		'version' => '0.9.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/class-sqlite-driver-pdo.php'
+	),
+	'SqliteDriverPDOStatement' => array(
+		'version' => '0.9.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/class-sqlite-driver-pdo.php'
+	),
+	'Stringable' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/vendor-patched/symfony/polyfill-php80/Resources/stubs/Stringable.php'
+	),
+	'Symfony\\Polyfill\\Ctype\\Ctype' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/vendor-patched/symfony/polyfill-ctype/Ctype.php'
+	),
+	'Symfony\\Polyfill\\Intl\\Normalizer\\Normalizer' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/vendor-patched/symfony/polyfill-intl-normalizer/Normalizer.php'
+	),
+	'Symfony\\Polyfill\\Php80\\Php80' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/vendor-patched/symfony/polyfill-php80/Php80.php'
+	),
+	'Symfony\\Polyfill\\Php80\\PhpToken' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/vendor-patched/symfony/polyfill-php80/PhpToken.php'
+	),
+	'UnhandledMatchError' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/vendor-patched/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php'
 	),
 	'VIDEOPRESS_PRIVACY' => array(
 		'version' => '0.44.0.0-alpha1785402693',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/utility-functions.php'
 	),
+	'ValueError' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/vendor-patched/symfony/polyfill-php80/Resources/stubs/ValueError.php'
+	),
 	'Version_Loader' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-version-loader.php'
 	),
 	'Version_Selector' => array(
-		'version' => '5.0.21',
+		'version' => '5.0.22-alpha',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-version-selector.php'
 	),
 	'VideoPressUploader\\File_Exception' => array(
@@ -2650,8 +2754,548 @@ return array(
 		'version' => '0.44.0.0-alpha1785402693',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/videopress-divi/class-videopress-divi-module.php'
 	),
+	'WP_HTML_Active_Formatting_Elements' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-active-formatting-elements.php'
+	),
+	'WP_HTML_Attribute_Token' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-attribute-token.php'
+	),
+	'WP_HTML_Decoder' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-decoder.php'
+	),
+	'WP_HTML_Doctype_Info' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-doctype-info.php'
+	),
+	'WP_HTML_Native_Processor_Wrapper' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-native-processor-wrapper.php'
+	),
+	'WP_HTML_Native_Tag_Processor_Wrapper' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-native-tag-processor-wrapper.php'
+	),
+	'WP_HTML_Open_Elements' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-open-elements.php'
+	),
+	'WP_HTML_PHP_Processor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/PHP/class-wp-html-php-processor.php'
+	),
+	'WP_HTML_PHP_Tag_Processor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/PHP/class-wp-html-php-tag-processor.php'
+	),
+	'WP_HTML_Processor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-processor.php'
+	),
+	'WP_HTML_Processor_State' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-processor-state.php'
+	),
+	'WP_HTML_Span' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-span.php'
+	),
+	'WP_HTML_Stack_Event' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-stack-event.php'
+	),
+	'WP_HTML_Tag_Processor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-tag-processor.php'
+	),
+	'WP_HTML_Text_Replacement' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-text-replacement.php'
+	),
+	'WP_HTML_Token' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-token.php'
+	),
+	'WP_HTML_Unsupported_Exception' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-html-unsupported-exception.php'
+	),
+	'WP_Token_Map' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/html/class-wp-token-map.php'
+	),
 	'WooCommerceAnalyticsProxySpeed' => array(
 		'version' => '0.16.7.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/mu-plugin/woocommerce-analytics-proxy-speed-module-template.php'
+	),
+	'WordPress\\ByteStream\\BytePipe' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/class-bytepipe.php'
+	),
+	'WordPress\\ByteStream\\ByteStreamException' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/class-bytestreamexception.php'
+	),
+	'WordPress\\ByteStream\\ByteTransformer\\ByteTransformer' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/ByteTransformer/class-bytetransformer.php'
+	),
+	'WordPress\\ByteStream\\ByteTransformer\\ChecksumTransformer' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/ByteTransformer/class-checksumtransformer.php'
+	),
+	'WordPress\\ByteStream\\ByteTransformer\\DeflateTransformer' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/ByteTransformer/class-deflatetransformer.php'
+	),
+	'WordPress\\ByteStream\\ByteTransformer\\InflateTransformer' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/ByteTransformer/class-inflatetransformer.php'
+	),
+	'WordPress\\ByteStream\\FileReadWriteStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/class-filereadwritestream.php'
+	),
+	'WordPress\\ByteStream\\MemoryPipe' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/class-memorypipe.php'
+	),
+	'WordPress\\ByteStream\\NotEnoughDataException' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/class-notenoughdataexception.php'
+	),
+	'WordPress\\ByteStream\\ReadStream\\BaseByteReadStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/ReadStream/class-basebytereadstream.php'
+	),
+	'WordPress\\ByteStream\\ReadStream\\ByteReadStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/ReadStream/interface-bytereadstream.php'
+	),
+	'WordPress\\ByteStream\\ReadStream\\DeflateReadStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/ReadStream/class-deflatereadstream.php'
+	),
+	'WordPress\\ByteStream\\ReadStream\\FileReadStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/ReadStream/class-filereadstream.php'
+	),
+	'WordPress\\ByteStream\\ReadStream\\InflateReadStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/ReadStream/class-inflatereadstream.php'
+	),
+	'WordPress\\ByteStream\\ReadStream\\LimitedByteReadStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/ReadStream/class-limitedbytereadstream.php'
+	),
+	'WordPress\\ByteStream\\ReadStream\\TransformedReadStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/ReadStream/class-transformedreadstream.php'
+	),
+	'WordPress\\ByteStream\\WriteStream\\ByteWriteStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/WriteStream/class-bytewritestream.php'
+	),
+	'WordPress\\ByteStream\\WriteStream\\FileWriteStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/WriteStream/class-filewritestream.php'
+	),
+	'WordPress\\ByteStream\\WriteStream\\TransformedWriteStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/bytestream/WriteStream/class-transformedwritestream.php'
+	),
+	'WordPress\\DataLiberation\\BlockMarkup\\BlockMarkupProcessor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/BlockMarkup/class-blockmarkupprocessor.php'
+	),
+	'WordPress\\DataLiberation\\BlockMarkup\\BlockMarkupUrlProcessor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/BlockMarkup/class-blockmarkupurlprocessor.php'
+	),
+	'WordPress\\DataLiberation\\BlockMarkup\\BlockObject' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/BlockMarkup/class-blockobject.php'
+	),
+	'WordPress\\DataLiberation\\CSS\\CSSProcessor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/CSS/class-cssprocessor.php'
+	),
+	'WordPress\\DataLiberation\\DataFormatConsumer\\AnnotatedBlockMarkupConsumer' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/DataFormatConsumer/class-annotatedblockmarkupconsumer.php'
+	),
+	'WordPress\\DataLiberation\\DataFormatConsumer\\BlocksWithMetadata' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/DataFormatConsumer/class-blockswithmetadata.php'
+	),
+	'WordPress\\DataLiberation\\DataFormatConsumer\\DataFormatConsumer' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/DataFormatConsumer/interface-data-format-consumer.php'
+	),
+	'WordPress\\DataLiberation\\DataFormatConsumer\\MarkupProcessorConsumer' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/DataFormatConsumer/class-markupprocessorconsumer.php'
+	),
+	'WordPress\\DataLiberation\\DataFormatProducer\\AnnotatedBlockMarkupProducer' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/DataFormatProducer/class-annotatedblockmarkupproducer.php'
+	),
+	'WordPress\\DataLiberation\\DataFormatProducer\\DataFormatProducer' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/DataFormatProducer/interface-data-format-producer.php'
+	),
+	'WordPress\\DataLiberation\\DataLiberationException' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/class-dataliberationexception.php'
+	),
+	'WordPress\\DataLiberation\\DataLiberationHTMLProcessor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/class-dataliberationhtmlprocessor.php'
+	),
+	'WordPress\\DataLiberation\\EntityReader\\BlocksWithMetadataEntityReader' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/EntityReader/class-blockswithmetadataentityreader.php'
+	),
+	'WordPress\\DataLiberation\\EntityReader\\DatabaseContentEntityReader' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/EntityReader/class-databasecontententityreader.php'
+	),
+	'WordPress\\DataLiberation\\EntityReader\\DatabaseRowsEntityReader' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/EntityReader/class-databaserowsentityreader.php'
+	),
+	'WordPress\\DataLiberation\\EntityReader\\EPubEntityReader' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/EntityReader/class-epubentityreader.php'
+	),
+	'WordPress\\DataLiberation\\EntityReader\\EntityReader' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/EntityReader/interface-entity-reader.php'
+	),
+	'WordPress\\DataLiberation\\EntityReader\\EntityReaderIterator' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/EntityReader/class-entityreaderiterator.php'
+	),
+	'WordPress\\DataLiberation\\EntityReader\\FilesystemEntityReader' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/EntityReader/class-filesystementityreader.php'
+	),
+	'WordPress\\DataLiberation\\EntityReader\\HTMLEntityReader' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/EntityReader/class-htmlentityreader.php'
+	),
+	'WordPress\\DataLiberation\\EntityReader\\WXREntityReader' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/EntityReader/class-wxrentityreader.php'
+	),
+	'WordPress\\DataLiberation\\EntityWriter\\EntityWriter' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/EntityWriter/interface-entity-writer.php'
+	),
+	'WordPress\\DataLiberation\\EntityWriter\\MySQLDumpWriter' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/EntityWriter/class-mysqldumpwriter.php'
+	),
+	'WordPress\\DataLiberation\\EntityWriter\\StaticPostFilesWriter' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/EntityWriter/class-staticpostfileswriter.php'
+	),
+	'WordPress\\DataLiberation\\EntityWriter\\WXRWriter' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/EntityWriter/class-wxrwriter.php'
+	),
+	'WordPress\\DataLiberation\\ImportEntity' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/class-importentity.php'
+	),
+	'WordPress\\DataLiberation\\Importer\\AttachmentDownloader' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/Importer/class-attachmentdownloader.php'
+	),
+	'WordPress\\DataLiberation\\Importer\\AttachmentDownloaderEvent' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/Importer/class-attachmentdownloaderevent.php'
+	),
+	'WordPress\\DataLiberation\\Importer\\EntityImporter' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/Importer/class-entityimporter.php'
+	),
+	'WordPress\\DataLiberation\\Importer\\EntityIteratorChain' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/Importer/class-entityiteratorchain.php'
+	),
+	'WordPress\\DataLiberation\\Importer\\FileVisitorEvent' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/Importer/class-filevisitorevent.php'
+	),
+	'WordPress\\DataLiberation\\Importer\\ImportSession' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/Importer/class-importsession.php'
+	),
+	'WordPress\\DataLiberation\\Importer\\ImportUtils' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/Importer/class-importutils.php'
+	),
+	'WordPress\\DataLiberation\\Importer\\Logger' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/Importer/class-entityimporter.php'
+	),
+	'WordPress\\DataLiberation\\Importer\\RetryFrontloadingIterator' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/Importer/class-retryfrontloadingiterator.php'
+	),
+	'WordPress\\DataLiberation\\Importer\\StreamImporter' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/Importer/class-streamimporter.php'
+	),
+	'WordPress\\DataLiberation\\MySQLDumpProducer' => array(
+		'version' => '0.9.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/class-mysql-dump-producer.php'
+	),
+	'WordPress\\DataLiberation\\URL\\CSSURLProcessor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/URL/class-cssurlprocessor.php'
+	),
+	'WordPress\\DataLiberation\\URL\\ConvertedUrl' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/URL/class-convertedurl.php'
+	),
+	'WordPress\\DataLiberation\\URL\\NativeURLInTextProcessorWrapper' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/URL/class-nativeurlintextprocessorwrapper.php'
+	),
+	'WordPress\\DataLiberation\\URL\\PHPURLInTextProcessor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/URL/PHP/class-phpurlintextprocessor.php'
+	),
+	'WordPress\\DataLiberation\\URL\\URLInTextProcessor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/URL/class-urlintextprocessor.php'
+	),
+	'WordPress\\DataLiberation\\URL\\URLRewriteCache' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/URL/class-urlrewritecache.php'
+	),
+	'WordPress\\DataLiberation\\URL\\WPURL' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/URL/class-wpurl.php'
+	),
+	'WordPress\\DataLiberation\\URL\\WPWhatwgUrl' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/URL/class-wpwhatwgurl.php'
+	),
+	'WordPress\\DataLiberation\\URL\\WPWhatwgUrlSearchParams' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/URL/class-wpwhatwgurlsearchparams.php'
+	),
+	'WordPress\\Filesystem\\ByteStream\\FilesystemWriteStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/ByteStream/class-filesystemwritestream.php'
+	),
+	'WordPress\\Filesystem\\Filesystem' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/interface-filesystem.php'
+	),
+	'WordPress\\Filesystem\\FilesystemException' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/class-filesystemexception.php'
+	),
+	'WordPress\\Filesystem\\InMemoryFilesystem' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/class-inmemoryfilesystem.php'
+	),
+	'WordPress\\Filesystem\\Layer\\ChrootLayer' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Layer/class-chrootlayer.php'
+	),
+	'WordPress\\Filesystem\\Layer\\Layer' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Layer/class-layer.php'
+	),
+	'WordPress\\Filesystem\\LocalFilesystem' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/class-localfilesystem.php'
+	),
+	'WordPress\\Filesystem\\Mixin\\BufferedWriteStreamViaPutContents' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Mixin/trait-bufferedwritestreamviaputcontents.php'
+	),
+	'WordPress\\Filesystem\\Mixin\\CopyDirectoryRecursive' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Mixin/trait-copydirectoryrecursive.php'
+	),
+	'WordPress\\Filesystem\\Mixin\\CopyFileViaStreaming' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Mixin/trait-copyfileviastreaming.php'
+	),
+	'WordPress\\Filesystem\\Mixin\\CopyRecursiveViaStreaming' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Mixin/trait-copyrecursiveviastreaming.php'
+	),
+	'WordPress\\Filesystem\\Mixin\\GetContentsViaReadStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Mixin/trait-getcontentsviareadstream.php'
+	),
+	'WordPress\\Filesystem\\Mixin\\Interfaces\\InternalizedWriteStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Mixin/Interfaces/interface-internalizedwritestream.php'
+	),
+	'WordPress\\Filesystem\\Mixin\\InternalizeWriteStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Mixin/trait-internalizewritestream.php'
+	),
+	'WordPress\\Filesystem\\Mixin\\MkdirRecursive' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Mixin/trait-mkdirrecursive.php'
+	),
+	'WordPress\\Filesystem\\Mixin\\PutContentsViaWriteStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Mixin/trait-putcontentsviawritestream.php'
+	),
+	'WordPress\\Filesystem\\Mixin\\ReadOnlyFilesystem' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Mixin/trait-readonlyfilesystem.php'
+	),
+	'WordPress\\Filesystem\\Mixin\\RenameFileViaCopyAndRm' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Mixin/trait-renamefileviacopyandrm.php'
+	),
+	'WordPress\\Filesystem\\Mixin\\RmdirRecursive' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Mixin/trait-rmdirrecursive.php'
+	),
+	'WordPress\\Filesystem\\Path\\WindowsPath' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Path/class-windowspath.php'
+	),
+	'WordPress\\Filesystem\\SQLiteFilesystem' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/class-sqlitefilesystem.php'
+	),
+	'WordPress\\Filesystem\\UploadedFilesystem' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/class-uploadedfilesystem.php'
+	),
+	'WordPress\\Filesystem\\Visitor\\FileVisitorEvent' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Visitor/class-filevisitorevent.php'
+	),
+	'WordPress\\Filesystem\\Visitor\\FilesystemVisitor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/Visitor/class-filesystemvisitor.php'
+	),
+	'WordPress\\HttpClient\\ByteStream\\ChunkedDecoderReadStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/ByteStream/class-chunkeddecoderreadstream.php'
+	),
+	'WordPress\\HttpClient\\ByteStream\\ChunkedEncoderByteTransformer' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/ByteStream/class-chunkedencoderbytetransformer.php'
+	),
+	'WordPress\\HttpClient\\ByteStream\\RequestReadStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/ByteStream/class-requestreadstream.php'
+	),
+	'WordPress\\HttpClient\\ByteStream\\SeekableRequestReadStream' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/ByteStream/class-seekablerequestreadstream.php'
+	),
+	'WordPress\\HttpClient\\Client' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/class-client.php'
+	),
+	'WordPress\\HttpClient\\ClientState' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/class-clientstate.php'
+	),
+	'WordPress\\HttpClient\\Connection' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/class-connection.php'
+	),
+	'WordPress\\HttpClient\\Crawler' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/class-crawler.php'
+	),
+	'WordPress\\HttpClient\\HttpClientException' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/class-httpclientexception.php'
+	),
+	'WordPress\\HttpClient\\HttpError' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/class-httperror.php'
+	),
+	'WordPress\\HttpClient\\Middleware\\CacheMiddleware' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/Middleware/class-cachemiddleware.php'
+	),
+	'WordPress\\HttpClient\\Middleware\\HttpMiddleware' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/Middleware/class-httpmiddleware.php'
+	),
+	'WordPress\\HttpClient\\Middleware\\MiddlewareInterface' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/Middleware/middleware-interface.php'
+	),
+	'WordPress\\HttpClient\\Middleware\\RedirectionMiddleware' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/Middleware/class-redirectionmiddleware.php'
+	),
+	'WordPress\\HttpClient\\Request' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/class-request.php'
+	),
+	'WordPress\\HttpClient\\Response' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/class-response.php'
+	),
+	'WordPress\\HttpClient\\Transport\\CurlTransport' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/Transport/class-curltransport.php'
+	),
+	'WordPress\\HttpClient\\Transport\\SocketTransport' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/Transport/class-sockettransport.php'
+	),
+	'WordPress\\HttpClient\\Transport\\TransportInterface' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/http-client/Transport/interface-transportinterface.php'
+	),
+	'WordPress\\XML\\PHPXMLProcessor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/xml/PHP/class-phpxmlprocessor.php'
+	),
+	'WordPress\\XML\\XMLAttributeToken' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/xml/class-xmlattributetoken.php'
+	),
+	'WordPress\\XML\\XMLDecoder' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/xml/class-xmldecoder.php'
+	),
+	'WordPress\\XML\\XMLElement' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/xml/class-xmlelement.php'
+	),
+	'WordPress\\XML\\XMLNativeCursorProcessor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/xml/class-xmlnativecursorprocessor.php'
+	),
+	'WordPress\\XML\\XMLProcessor' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/xml/class-xmlprocessor.php'
+	),
+	'WordPress\\XML\\XMLUnsupportedException' => array(
+		'version' => '0.8.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/xml/class-xmlunsupportedexception.php'
+	),
+	'WpdbDriverPDO' => array(
+		'version' => '0.9.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/class-wpdb-driver-pdo.php'
+	),
+	'WpdbDriverPDOStatement' => array(
+		'version' => '0.9.1.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/class-wpdb-driver-pdo.php'
 	),
 );
