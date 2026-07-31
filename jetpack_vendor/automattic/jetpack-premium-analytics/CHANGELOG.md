@@ -309,6 +309,7 @@ This is an alpha version! The changes listed here are not final.
 - Clicks widget: fix favicons rendering oversized in the Add widget picker grid preview by rendering row labels through the shared LeaderboardLabel component.
 - Comparison widgets: Show an unavailable percentage change when the previous value is zero.
 - CSV exports: Preserve the external API error contract when proxy responses cannot be normalized.
+- CSV exports: Preserve UTM parent and child grouping.
 - CSV exports: Surface external API error details.
 - Dashboard: Fix global error handling for widgets.
 - Dashboard: fix widget grid flicker when resizing a widget vertically by letting the section panel fill the viewport height and scroll internally, so it no longer oscillates with the grid.
