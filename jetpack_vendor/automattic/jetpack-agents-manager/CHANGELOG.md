@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix missing AI entry points in the editor admin bar on sites running Gutenberg 23.5 or later.
+- Prevent Agents Manager from loading a second time inside plugin information modals.
 
 ## [0.8.4] - 2026-07-27
 ### Changed
