@@ -308,6 +308,7 @@ This is an alpha version! The changes listed here are not final.
 - Bundle widgets-toolkit once as a shared script module instead of into every widget, fixing CI memory exhaustion during the widgets build phase. Stopped rebuilding the assets package from the build scripts.
 - Clicks widget: fix favicons rendering oversized in the Add widget picker grid preview by rendering row labels through the shared LeaderboardLabel component.
 - Comparison widgets: Show an unavailable percentage change when the previous value is zero.
+- CSV exports: Preserve complete VideoPress metrics.
 - CSV exports: Preserve the external API error contract when proxy responses cannot be normalized.
 - CSV exports: Preserve UTM parent and child grouping.
 - CSV exports: Surface external API error details.
