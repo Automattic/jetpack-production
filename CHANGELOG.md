@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Sidebar: Enable writing and SEO suggestions, the block toolbar button, and page and site editor support for all eligible users.
 - Site Chat: Rename the public feature text from Reader Chat to Site Chat.
 - Social: Surface a visible error when fetching the keyring result fails during a connection, instead of failing silently.
+- Stats v2: add it as a separate menu instead of replacing the existing Stats menu, on any site.
 
 ### Bug fixes
 - Newsletter: add the REST proxy the subscriber details panel needs to show which newsletter categories a subscriber receives emails for.
