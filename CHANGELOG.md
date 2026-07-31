@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Modules: In Offline Mode, surface the Modules page as the first Jetpack menu item so it loads by default, add an Offline Mode breadcrumb and explanatory notice, and add an "Available in offline mode" filter.
 - Modules: Refresh the modules page with a modern, core-UI look.
 - Modules: Update the tag filter counts on the modules page to reflect the currently-applied filters, and grey out tags with no matching modules.
+- Random Redirect: Restore module previously removed in Jetpack 13.6.
 - Site Chat: Rename the public feature text from Reader Chat to Site Chat.
 - Social: Surface a visible error when fetching the keyring result fails during a connection, instead of failing silently.
 - Stats v2: add it as a separate menu instead of replacing the existing Stats menu, on any site.
