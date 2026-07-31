@@ -254,6 +254,7 @@ This is an alpha version! The changes listed here are not final.
 - Reports: Reuse consistent CSV export behavior across full report pages.
 - Reuse shared data and percentage helpers across Premium Analytics widgets.
 - Search terms report: Remove the performance chart and show comparison deltas in the table.
+- Shorten date ranges by eliding a month or year shared by both ends, where the site's language has a rule for it.
 - Show widget descriptions in the native header info popover.
 - Standardize leaderboard row spacing, text and media sizing, and link and drill-down behavior.
 - Stats: Email time series hooks now return comparison-aware report results and resolve hourly buckets into distinct per-hour intervals.
