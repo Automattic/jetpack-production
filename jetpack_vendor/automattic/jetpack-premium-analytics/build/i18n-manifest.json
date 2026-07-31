@@ -1,6 +1,7 @@
 {
 	"bundles": [
 		"build/modules/data/index.js",
+		"build/modules/externals/index.js",
 		"build/modules/fields/index.js",
 		"build/modules/site-sync/index.js",
 		"build/modules/ui/index.js",

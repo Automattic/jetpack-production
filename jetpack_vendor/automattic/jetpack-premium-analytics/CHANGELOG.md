@@ -199,6 +199,7 @@ This is an alpha version! The changes listed here are not final.
 - Clicks report: Show clicked URLs nested under their click group instead of in a separate Group column, and announce the group to screen readers on nested rows.
 - Comments/tests: update residual proxy/reports path references in Storybook mock docs and a REST test literal to the versioned agnostic proxy route. No functional change.
 - Comments: link authors to the comments-admin search (guest commenters), keep the label and new-tab arrow on one line, and align both views on the 36px leaderboard row.
+- Compile shared third-party libraries into a dedicated externals script module so they are no longer duplicated across widget bundles.
 - Cover the Top Platforms browser/OS toolbar dimension in Storybook.
 - Dashboard: Add tab-specific default widget layouts.
 - Dashboard: Add tabbed sections around the customizable widget grid.
