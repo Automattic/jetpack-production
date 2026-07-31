@@ -10,6 +10,11 @@ This is an alpha version! The changes listed here are not final.
 - Add Reprint full-site export support for Pressable and WordPress.com (Atomic) sites. An authenticated export client can pull a complete copy of the site through an HMAC-secured, time-limited export window opened by Jetpack-signed control requests. On Atomic it runs alongside the existing wpcomsh export via a separate ?reprint-api-jetpack endpoint and jetpack/v4 REST routes, so clients can migrate at their own pace. Availability can be overridden with the jetpack_reprint_export_available filter.
 - AI Sidebar: Align Editorial Review enablement with the other writing-assistance features.
 - AI Sidebar: Enable writing and SEO suggestions, the block toolbar button, and page and site editor support for all eligible users.
+- Modules: Debounce the modules page search so results update smoothly while typing.
+- Modules: Hide the legacy VaultPress module row from the modules page, as it is permanently unavailable and superseded by the VaultPress Backup product.
+- Modules: In Offline Mode, surface the Modules page as the first Jetpack menu item so it loads by default, add an Offline Mode breadcrumb and explanatory notice, and add an "Available in offline mode" filter.
+- Modules: Refresh the modules page with a modern, core-UI look.
+- Modules: Update the tag filter counts on the modules page to reflect the currently-applied filters, and grey out tags with no matching modules.
 - Site Chat: Rename the public feature text from Reader Chat to Site Chat.
 - Social: Surface a visible error when fetching the keyring result fails during a connection, instead of failing silently.
 - Stats v2: add it as a separate menu instead of replacing the existing Stats menu, on any site.
