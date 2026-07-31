@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix legacy video block previews in the editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Add testing instructions for the Jetpack 16.1 release.
 - AI Launchpad: enable on all sites of a user in the ai_launchpad experiment variation, matching wp-admin.
 - Carousel: Run the overlay fade as a CSS transition instead of a main-thread animation loop, and honour prefers-reduced-motion.
 - Keep the Reprint exporter's bundled psr/log out of the global class map so it does not conflict with other psr/log copies (e.g. on WordPress.com).
