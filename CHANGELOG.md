@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats v2: add it as a separate menu instead of replacing the existing Stats menu, on any site.
 
 ### Bug fixes
+- Jetpack AI: Fix content guidelines generation failing on private sites.
 - Newsletter: add the REST proxy the subscriber details panel needs to show which newsletter categories a subscriber receives emails for.
 - SEO: Fix custom per-page SEO title being ignored when the page is set as the site's homepage and the Front Page title format in Jetpack Settings is blank.
 - SEO Tools: Stop the newest post's custom SEO title from replacing the homepage title on sites that show latest posts.
