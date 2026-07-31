@@ -6,7 +6,6 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "The response is not a valid JSON response.", "jetpack-premium-analytics-pkg" );
 __( "Today", "jetpack-premium-analytics-pkg" );
 __( "Yesterday", "jetpack-premium-analytics-pkg" );
 __( "Last 24 hours", "jetpack-premium-analytics-pkg" );
@@ -17,6 +16,7 @@ __( "Last 365 days", "jetpack-premium-analytics-pkg" );
 __( "Last month", "jetpack-premium-analytics-pkg" );
 __( "Last 12 months", "jetpack-premium-analytics-pkg" );
 __( "Last year", "jetpack-premium-analytics-pkg" );
+__( "The response is not a valid JSON response.", "jetpack-premium-analytics-pkg" );
 /* translators: %d: HTTP status code. */
 __( "Report download failed with status %d.", "jetpack-premium-analytics-pkg" );
 __( "Sessions", "jetpack-premium-analytics-pkg" );
