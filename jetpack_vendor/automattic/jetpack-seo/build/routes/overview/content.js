@@ -68,8 +68,6 @@ __( "SEO title set", "jetpack-seo" );
 __( "Meta description added", "jetpack-seo" );
 __( "Visible to search engines", "jetpack-seo" );
 __( "Manage content SEO", "jetpack-seo" );
-__( "Using a different SEO solution?", "jetpack-seo" );
-__( "Disable Jetpack SEO tools", "jetpack-seo" );
 __( "Set", "jetpack-seo" );
 __( "Not set", "jetpack-seo" );
 __( "Site verification", "jetpack-seo" );
