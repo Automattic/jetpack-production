@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Library: allow selecting multiple video files from the Upload video button for bulk uploading
 
 ### Fixed
+- Dashboard: fix cramped spacing in the Chapters help modal and let long dialog content scroll.
 - Library: allow multi-selecting local videos; Upload to VideoPress works as a bulk action and Delete covers local rows
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.
 - Video block: Keep preview-on-hover poster and title customization in sync with the player API.
