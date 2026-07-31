@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.8.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [8.8.1] - 2026-07-31
 ### Added
 - Connection: Expose the connection-error audience (site/owner/user) to the Jetpack dashboard so error notices can be tailored to the viewer.
 
@@ -1973,7 +1970,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[8.8.1-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.8.0...v8.8.1-alpha
+[8.8.1]: https://github.com/Automattic/jetpack-connection/compare/v8.8.0...v8.8.1
 [8.8.0]: https://github.com/Automattic/jetpack-connection/compare/v8.7.10...v8.8.0
 [8.7.10]: https://github.com/Automattic/jetpack-connection/compare/v8.7.9...v8.7.10
 [8.7.9]: https://github.com/Automattic/jetpack-connection/compare/v8.7.8...v8.7.9
