@@ -61,6 +61,7 @@ This is an alpha version! The changes listed here are not final.
 - Add UTM Insights widget: traffic breakdown by UTM parameter (source/medium, campaign, source, medium, campaign) as a ranked leaderboard with a per-instance dimension selector.
 - Add VideoPress video plays leaderboard widget.
 - Add watch mode for local development.
+- Allow users with the view_stats capability to open the Analytics dashboard, and shop managers to read the store reports.
 - Authors widget: label rows with the author name and avatar, and let a row click drill down into that author's posts with comparison deltas and a back link to all authors.
 - Comments: add the Comments widget ranking comment authors and most-commented posts and pages by comment count.
 - Compose the video highlights and embeds widgets on the video detail page, with a post-detail-style summary header.

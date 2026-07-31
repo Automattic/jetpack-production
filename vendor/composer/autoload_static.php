@@ -324,6 +324,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_1_a_6
         'Automattic\\Jetpack\\Post_Media\\Images' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-post-media/src/class-images.php',
         'Automattic\\Jetpack\\Post_Media\\Twitter_Cards' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-post-media/src/class-twitter-cards.php',
         'Automattic\\Jetpack\\PremiumAnalytics\\Analytics' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-analytics.php',
+        'Automattic\\Jetpack\\PremiumAnalytics\\Capabilities' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-capabilities.php',
         'Automattic\\Jetpack\\PremiumAnalytics\\Connection_Configuration' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-connection-configuration.php',
         'Automattic\\Jetpack\\PremiumAnalytics\\Dashboard_Section' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-dashboard-section.php',
         'Automattic\\Jetpack\\PremiumAnalytics\\Dashboard_Section_Registry' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-dashboard-section-registry.php',

@@ -300,6 +300,7 @@ return array(
     'Automattic\\Jetpack\\Post_Media\\Images' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-images.php',
     'Automattic\\Jetpack\\Post_Media\\Twitter_Cards' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-twitter-cards.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Analytics' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-analytics.php',
+    'Automattic\\Jetpack\\PremiumAnalytics\\Capabilities' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-capabilities.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Connection_Configuration' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-connection-configuration.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Dashboard_Section' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-dashboard-section.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Dashboard_Section_Registry' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-dashboard-section-registry.php',
