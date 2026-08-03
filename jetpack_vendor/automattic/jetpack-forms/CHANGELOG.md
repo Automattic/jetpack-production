@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Removed
+- Dashboard: Remove redundant workaround for a dashboard loading edge case now fixed in bundled dependencies. No functional change.
+
 ### Fixed
 - Keep responses readable when a field label, submitted value, or page title contains a "<" character.
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.
