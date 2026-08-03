@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Clarify that the dashboard sets up podcasting rather than enabling it a second time.
+- Fix the plan upgrade buttons linking to a checkout page the site owner cannot access.
 - Settings: align setup checklist wording with the controls it points to.
 
 ## [1.4.2] - 2026-07-27
