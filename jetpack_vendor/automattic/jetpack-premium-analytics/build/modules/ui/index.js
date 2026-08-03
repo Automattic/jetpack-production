@@ -224,3 +224,15 @@ __( "Period", "jetpack-premium-analytics-pkg" );
 __( "Select period", "jetpack-premium-analytics-pkg" );
 __( "Date range", "jetpack-premium-analytics-pkg" );
 __( "Time period", "jetpack-premium-analytics-pkg" );
+/* translators: %d is a number of hours. */
+_n( "%d hour", "%d hours", 1, "jetpack-premium-analytics-pkg" );
+/* translators: %d is a number of months. */
+_n( "%d month", "%d months", 1, "jetpack-premium-analytics-pkg" );
+/* translators: %d is a number of years. */
+_n( "%d year", "%d years", 1, "jetpack-premium-analytics-pkg" );
+/* translators: %d is a number of days. */
+_n( "%d day", "%d days", 1, "jetpack-premium-analytics-pkg" );
+/* translators: %1$s is a date range, %2$s is how long it is, e.g. "7 days". */
+__( "%1$s (%2$s)", "jetpack-premium-analytics-pkg" );
+/* translators: %1$s is a date range with its length, %2$s is the compared period, e.g. "Previous period". */
+__( "%1$s vs. %2$s", "jetpack-premium-analytics-pkg" );

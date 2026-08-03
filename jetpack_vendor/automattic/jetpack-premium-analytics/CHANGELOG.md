@@ -71,6 +71,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Add dashboard section layout persistence endpoints.
 - Dashboard: Add dashboard section registry and REST endpoints.
 - Dashboard: Add the date range picker with comparison support, syncing the selected range to URL search params so all widgets pick it up.
+- Dashboard: describe the applied date range, its length, and any active comparison in the section header subtitle.
 - Dashboard sections: Add a WooCommerce section with default store widgets.
 - Data: Add Jetpack Stats proxy fetch utilities.
 - Data: Add Jetpack Stats traffic report normalizers.
