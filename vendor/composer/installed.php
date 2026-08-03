@@ -119,9 +119,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-blocks' => array(
-            'pretty_version' => '3.3.5',
-            'version' => '3.3.5.0',
-            'reference' => 'd343505029cbdcf7930ae369bdcc9c46715f58a2',
+            'pretty_version' => '3.3.6-alpha.1785760816',
+            'version' => '3.3.6.0-alpha1785760816',
+            'reference' => '2313e714ae2d6e7c5555a1c661c9f425c9623697',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-blocks',
             'aliases' => array(),
@@ -148,7 +148,7 @@
         'automattic/jetpack-classic-theme-helper' => array(
             'pretty_version' => '0.14.38',
             'version' => '0.14.38.0',
-            'reference' => '2eaf0e4f50559b09163a2ca37a825df10c3a56e2',
+            'reference' => 'c94152cf7569c84311b09f9e18ce9ad16fa21a9f',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-classic-theme-helper',
             'aliases' => array(),
@@ -247,7 +247,7 @@
         'automattic/jetpack-forms' => array(
             'pretty_version' => '7.23.4-alpha.1785517821',
             'version' => '7.23.4.0-alpha1785517821',
-            'reference' => 'f02da849b4649ae9129919c16349f7b03c04278f',
+            'reference' => '4b1d96fb09ce5431f4f190215a9fdeefcc22031d',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-forms',
             'aliases' => array(),
@@ -364,7 +364,7 @@
         'automattic/jetpack-paypal-payments' => array(
             'pretty_version' => '0.7.10',
             'version' => '0.7.10.0',
-            'reference' => '3c6ac6b4d08b28073173dd14bbf1e406f20f5010',
+            'reference' => 'e985e37a119e1f3619d9c0952690df58af4b2d6f',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-paypal-payments',
             'aliases' => array(),
@@ -391,7 +391,7 @@
         'automattic/jetpack-podcast' => array(
             'pretty_version' => '1.4.3-alpha.1785328911',
             'version' => '1.4.3.0-alpha1785328911',
-            'reference' => '747bd5e9613fd2fbc018fb1855f566abae590161',
+            'reference' => 'e698b27eac2d26a5ceb3a928bbd3bf7339ce1886',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-podcast',
             'aliases' => array(),

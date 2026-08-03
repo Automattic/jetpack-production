@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats v2: add it as a separate menu instead of replacing the existing Stats menu, on any site.
 
 ### Bug fixes
+- Calendly: fix Button style rendering as inline calendar on Premium+ plans.
 - Jetpack AI: Fix content guidelines generation failing on private sites.
 - Jetpack AI: Skip the AI sidebar bundle, provider registration, and toolbar button for users without a connected WordPress.com account.
 - Newsletter: add the REST proxy the subscriber details panel needs to show which newsletter categories a subscriber receives emails for.
