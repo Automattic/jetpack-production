@@ -376,3 +376,4 @@ This is an alpha version! The changes listed here are not final.
 - Videos report: fix the report showing no data; the table now lists each video's views, impressions, watch time, and retention for the selected date range.
 - Widget error, empty, and loading states no longer overlap the widget footer on short (height 1) tiles; overflowing state content scrolls instead.
 - Widgets: fix the Most viewed and Referrers widgets changing size when a dropdown opens elsewhere on the dashboard.
+- Widgets: link post and email titles to their detail pages in the dashboard.
