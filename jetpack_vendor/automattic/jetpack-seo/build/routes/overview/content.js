@@ -70,6 +70,7 @@ __( "Visible to search engines", "jetpack-seo" );
 __( "Manage content SEO", "jetpack-seo" );
 __( "Set", "jetpack-seo" );
 __( "Not set", "jetpack-seo" );
+__( "Disabled", "jetpack-seo" );
 __( "Site verification", "jetpack-seo" );
 __( "Manage verification", "jetpack-seo" );
 __( "Open to search engines", "jetpack-seo" );

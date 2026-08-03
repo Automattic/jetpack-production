@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Fix content guidelines generation failing on private sites.
 - Newsletter: add the REST proxy the subscriber details panel needs to show which newsletter categories a subscriber receives emails for.
 - SEO: Fix custom per-page SEO title being ignored when the page is set as the site's homepage and the Front Page title format in Jetpack Settings is blank.
+- SEO: Preserve legacy homepage description storage and length limits when saving dashboard settings.
 - SEO Tools: Stop the newest post's custom SEO title from replacing the homepage title on sites that show latest posts.
 - Subscriptions: Stop the site settings endpoint from saving unchanged subscription message defaults; translate the default subscription options using the user locale.
 - VideoPress: Fix legacy video block previews in the editor.

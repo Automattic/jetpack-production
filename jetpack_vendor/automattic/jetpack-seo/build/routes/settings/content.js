@@ -164,6 +164,7 @@ __( "Insert a title part", "jetpack-seo" );
 __( "How your titles appear in search results and browser tabs. Each page type keeps the default until you set a format; parts your site has no value for show as empty.", "jetpack-seo" );
 __( "Using the default title", "jetpack-seo" );
 __( "Title structure", "jetpack-seo" );
+__( "Another SEO plugin is controlling title output. Your saved title structures are shown here but cannot be edited while it is active.", "jetpack-seo" );
 __( "Verifying with Google…", "jetpack-seo" );
 __( "Your site is verified with Google.", "jetpack-seo" );
 __( "Google did not return a verification token for this account. Try another account, or enter a code manually.", "jetpack-seo" );
@@ -183,6 +184,8 @@ __( "Paste the verification tag from Pinterest, or just the code inside it.", "j
 __( "Paste the verification tag from Yandex Webmaster, or just the code inside it.", "jetpack-seo" );
 __( "Paste the domain verification tag from Meta Business, or just the code inside it.", "jetpack-seo" );
 __( "Site verification", "jetpack-seo" );
+__( "Enable site verification", "jetpack-seo" );
+__( "Adds your saved verification codes to the site so supported services can confirm ownership.", "jetpack-seo" );
 __( "Publishes a map of your posts and pages so search engines can find your content.", "jetpack-seo" );
 __( "Allow search engines to index this site to generate a sitemap.", "jetpack-seo" );
 __( "View sitemap", "jetpack-seo" );
