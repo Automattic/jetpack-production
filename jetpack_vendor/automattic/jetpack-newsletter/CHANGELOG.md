@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter categories: add categories inline instead of linking out to wp-admin, so a new category appears and is selected without a page refresh.
 - Only show the Subscribers announcement page on sites that predate the Subscribers move.
 - Remove the Subscribers announcement page entirely on sites that postdate the Subscribers move, instead of leaving an unstyled fallback page behind.
+- Subscribe modal heading: remove the duplicated "Button only" note from the card description.
 - Subscribers: show the newsletter categories a subscriber receives emails for, and restore the missing subscription date, in the subscriber details panel.
 
 ## [0.12.2] - 2026-07-27

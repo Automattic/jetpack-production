@@ -433,7 +433,7 @@ __( "Earn money through your Newsletter. Reward your most loyal subscribers with
 __( "Subscribe modal heading", "jetpack-newsletter" );
 __( "Subscribe now to stay ahead and never miss a beat!", "jetpack-newsletter" );
 __( "Only affects Subscribe blocks using <link>the \"Button only\" style</link>. Leave blank to use the default heading.", "jetpack-newsletter" );
-__( "Shown at the top of the subscribe popup that appears when a visitor clicks a Subscribe block. Only applies to blocks using the \"Button only\" style.", "jetpack-newsletter" );
+__( "Shown at the top of the subscribe popup that appears when a visitor clicks a Subscribe block.", "jetpack-newsletter" );
 __( "Subscription pop-up in post", "jetpack-newsletter" );
 __( "Subscribe block at the end of each post", "jetpack-newsletter" );
 __( "Floating button on bottom corner", "jetpack-newsletter" );
