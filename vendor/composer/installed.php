@@ -488,9 +488,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-seo' => array(
-            'pretty_version' => '0.8.0-alpha.1785745978',
-            'version' => '0.8.0.0-alpha1785745978',
-            'reference' => '75252a6bcfd6bb97e2fcb6302b52a7e8c950ae53',
+            'pretty_version' => '0.8.0-alpha.1785774928',
+            'version' => '0.8.0.0-alpha1785774928',
+            'reference' => '97c4032b5811dca9b4c6c47421e84c108f7b7095',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-seo',
             'aliases' => array(),
