@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Modules: Refresh the modules page with a modern, core-UI look.
 - Modules: Update the tag filter counts on the modules page to reflect the currently-applied filters, and grey out tags with no matching modules.
 - Random Redirect: Restore module previously removed in Jetpack 13.6.
+- SEO: Honor the per-site WordPress.com feature flag in plugin search suggestions.
 - Site Chat: Rename the public feature text from Reader Chat to Site Chat.
 - Social: Surface a visible error when fetching the keyring result fails during a connection, instead of failing silently.
 - Stats v2: add it as a separate menu instead of replacing the existing Stats menu, on any site.

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Add icon chips and completion statuses to each Settings module, clarify the help text, and preview the title every page type produces.
+- Allow Jetpack SEO to be enabled per site through a WordPress.com feature flag.
 - Combine the Breadcrumbs, Organization, and Local business settings into one Schema module with a single Save button, and clarify their labels and help text.
 - Move the option to turn off SEO tools into an Advanced section at the bottom of Settings, with an explanation of what stops when you do.
 - Refresh the GEO tab: an icon chip on every module title, headings you can navigate to, an explanation of what GEO means, and clearer state tags.
