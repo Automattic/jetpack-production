@@ -8,6 +8,9 @@
 
 __( "Authors", "jetpack-premium-analytics-pkg" );
 __( "Posts & Pages", "jetpack-premium-analytics-pkg" );
+__( "Countries", "jetpack-premium-analytics-pkg" );
+__( "Regions", "jetpack-premium-analytics-pkg" );
+__( "Cities", "jetpack-premium-analytics-pkg" );
 __( "Archives", "jetpack-premium-analytics-pkg" );
 __( "Source / Medium", "jetpack-premium-analytics-pkg" );
 __( "Campaign / Source / Medium", "jetpack-premium-analytics-pkg" );
@@ -73,6 +76,13 @@ __( "Emails", "jetpack-premium-analytics-pkg" );
 __( "Open and click performance of your latest emails.", "jetpack-premium-analytics-pkg" );
 __( "Unable to load emails", "jetpack-premium-analytics-pkg" );
 __( "Search emails", "jetpack-premium-analytics-pkg" );
+__( "Country", "jetpack-premium-analytics-pkg" );
+__( "Location", "jetpack-premium-analytics-pkg" );
+/* translators: %s is the country name. */
+__( "Flag of %s", "jetpack-premium-analytics-pkg" );
+__( "Locations", "jetpack-premium-analytics-pkg" );
+__( "Unable to load locations", "jetpack-premium-analytics-pkg" );
+__( "Search locations", "jetpack-premium-analytics-pkg" );
 __( "Title", "jetpack-premium-analytics-pkg" );
 __( "Categories", "jetpack-premium-analytics-pkg" );
 __( "Error", "jetpack-premium-analytics-pkg" );
@@ -115,3 +125,4 @@ __( "Referrer", "jetpack-premium-analytics-pkg" );
 __( "Referrers", "jetpack-premium-analytics-pkg" );
 __( "Unable to load referrers", "jetpack-premium-analytics-pkg" );
 __( "Search referrers", "jetpack-premium-analytics-pkg" );
+__( "See where your visitors are viewing from.", "jetpack-premium-analytics-pkg" );

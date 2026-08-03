@@ -79,6 +79,7 @@ This is an alpha version! The changes listed here are not final.
 - Fields: Add SelectField, a DataForm edit control for text fields with elements that renders a SelectControl instead of the native select.
 - Initial version.
 - Interim port of the woocommerce_analytics Jetpack Sync module.
+- Locations: Add the `/reports/locations` report page with country, region, and city views.
 - Locations widget: Add inline country/city switching and map fallbacks.
 - Orders over time: Add an opt-in CSV download for the selected report period.
 - Port data package (React Query report hooks, fetchers, and processing) as an internal package from next-woocommerce-analytics.
