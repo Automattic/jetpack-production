@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Calendly: fix Button style rendering as inline calendar on Premium+ plans.
+- Carousel: stop adding a duplicate set of image data attributes to galleries.
 - Jetpack AI: Fix content guidelines generation failing on private sites.
 - Jetpack AI: Skip the AI sidebar bundle, provider registration, and toolbar button for users without a connected WordPress.com account.
 - Newsletter: add the REST proxy the subscriber details panel needs to show which newsletter categories a subscriber receives emails for.
@@ -30,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Preserve legacy homepage description storage and length limits when saving dashboard settings.
 - SEO Tools: Stop the newest post's custom SEO title from replacing the homepage title on sites that show latest posts.
 - Subscriptions: Stop the site settings endpoint from saving unchanged subscription message defaults; translate the default subscription options using the user locale.
+- Tiled Gallery: fix rows rendering at partial width after an alignment change, and correct the srcset on published galleries.
 - VideoPress: Fix legacy video block previews in the editor.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
