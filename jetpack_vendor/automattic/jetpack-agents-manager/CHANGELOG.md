@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
-- Sidebar docking: remove the viewport-height gate. The simplified wp-admin layout keeps the admin menu in normal flow, so a tall menu no longer prevents docking.
+- Dock the AI sidebar on shorter screens instead of floating it over the page content.
 
 ### Fixed
 - Fix missing AI entry points in the editor admin bar on sites running Gutenberg 23.5 or later.
