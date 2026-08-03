@@ -7,6 +7,3 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Number of results", "jetpack-premium-analytics-pkg" );
-__( "View by", "jetpack-premium-analytics-pkg" );
-__( "Authors", "jetpack-premium-analytics-pkg" );
-__( "Posts & pages", "jetpack-premium-analytics-pkg" );

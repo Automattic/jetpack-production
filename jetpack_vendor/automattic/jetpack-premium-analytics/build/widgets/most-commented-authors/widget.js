@@ -6,6 +6,4 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "We couldn't load comments. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "Retry", "jetpack-premium-analytics-pkg" );
-__( "Learn about the comments your site receives by authors, posts, and pages.", "jetpack-premium-analytics-pkg" );
+__( "Number of results", "jetpack-premium-analytics-pkg" );

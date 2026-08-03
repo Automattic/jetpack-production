@@ -78,6 +78,7 @@ This is an alpha version! The changes listed here are not final.
 - Expose the analytics initial-full-sync milestone (initial_full_sync_finished) on Jetpack's sync status REST response so the dashboard can read it live on every poll, not just at page load.
 - Fields: Add SelectField, a DataForm edit control for text fields with elements that renders a SelectControl instead of the native select.
 - Initial version.
+- Insights: add the Most commented authors and Most commented posts widgets.
 - Interim port of the woocommerce_analytics Jetpack Sync module.
 - Locations: Add the `/reports/locations` report page with country, region, and city views.
 - Locations widget: Add inline country/city switching and map fallbacks.
@@ -299,6 +300,7 @@ This is an alpha version! The changes listed here are not final.
 - Widgets: Use SelectField for text attributes with elements across Stats and email widgets.
 
 ### Removed
+- Remove the combined Comments widget in favor of the Most commented authors and Most commented posts widgets.
 - Remove the superseded Videos widget in favor of the VideoPress widget.
 - Remove the unused Publicize stats data layer and localize the Shares widget's generic service labels.
 
