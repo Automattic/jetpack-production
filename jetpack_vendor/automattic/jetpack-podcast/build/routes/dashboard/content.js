@@ -20,6 +20,7 @@ __( "Help", "jetpack-components" );
 __( "Jetpack", "jetpack-components" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-components" );
+__( "Saving…", "jetpack-podcast" );
 __( "Settings saved.", "jetpack-podcast" );
 __( "Could not save your podcast settings. Please try again.", "jetpack-podcast" );
 __( "Podcast settings", "jetpack-podcast" );
