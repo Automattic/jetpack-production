@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Modules: In Offline Mode, surface the Modules page as the first Jetpack menu item so it loads by default, add an Offline Mode breadcrumb and explanatory notice, and add an "Available in offline mode" filter.
 - Modules: Refresh the modules page with a modern, core-UI look.
 - Modules: Update the tag filter counts on the modules page to reflect the currently-applied filters, and grey out tags with no matching modules.
+- Newsletter: Allow sending the test email to a chosen address, gated by the same abuse checks used when adding a subscriber.
 - Random Redirect: Restore module previously removed in Jetpack 13.6.
 - SEO: Honor the per-site WordPress.com feature flag in plugin search suggestions.
 - Site Chat: Rename the public feature text from Reader Chat to Site Chat.
