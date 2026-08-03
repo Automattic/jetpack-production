@@ -27,7 +27,7 @@ use Automattic\Jetpack\PremiumAnalytics\Reports\Export\Support\Logger_Trait;
  * Empty value handling: Uses controller defaults (e.g., 0 for numeric fields) for missing
  * comparison data, which signals "no sales/activity" rather than "no data".
  *
- * @since 0.1.0-alpha
+ * @since 0.1.0
  */
 class Id_Based_Merge_Strategy extends Abstract_Merge_Strategy {
 

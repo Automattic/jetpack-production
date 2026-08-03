@@ -44,7 +44,7 @@ class Connections {
 		/**
 		 * Filters the list of Publicize connections for the site.
 		 *
-		 * @since 0.84.3-alpha
+		 * @since 0.84.3
 		 *
 		 * @param array $connections List of connections.
 		 */

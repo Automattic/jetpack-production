@@ -5,20 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.12.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.12.3] - 2026-08-03
 ### Changed
-- Newsletter categories: deep-link the subscribe block help text to the "Subscribe to specific categories" section.
+- Categories: Deep-link the subscribe block help text to the "Subscribe to specific categories" section. [#50937]
 
 ### Fixed
-- Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.
-- Newsletter categories: add categories inline instead of linking out to wp-admin, so a new category appears and is selected without a page refresh.
-- Only show the Subscribers announcement page on sites that predate the Subscribers move.
-- Remove the Subscribers announcement page entirely on sites that postdate the Subscribers move, instead of leaving an unstyled fallback page behind.
-- Subscribe modal heading: remove the duplicated "Button only" note from the card description.
-- Subscribers: show the newsletter categories a subscriber receives emails for, and restore the missing subscription date, in the subscriber details panel.
+- Categories: Add categories inline instead of linking out to wp-admin, so a new category appears and is selected without a page refresh. [#50878]
+- Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles. [#50762]
+- Only show the Subscribers announcement page on sites that predate the Subscribers move. [#50874]
+- Remove the Subscribers announcement page entirely on sites that postdate the Subscribers move, instead of leaving an unstyled fallback page behind. [#50874]
+- Subscribe modal heading: Remove the duplicated "Button only" note from the card description. [#50974]
+- Subscribers: Show the newsletter categories a subscriber receives emails for, and restore the missing subscription date, in the subscriber details panel. [#50877]
 
 ## [0.12.2] - 2026-07-27
 ### Changed
@@ -312,7 +309,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.12.3-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.2...v0.12.3-alpha
+[0.12.3]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.2...v0.12.3
 [0.12.2]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.1...v0.12.2
 [0.12.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.0...v0.12.1
 [0.12.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.11.2...v0.12.0
