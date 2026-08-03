@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a wp-rich-text polyfill: replace core's rich-text on WordPress 7.0 and older, where it lacks the private APIs newer dashboard dependencies unlock at load time. Replaced core scripts now keep their footer placement and translations.
 
 ### Fixed
+- Free a stalled translation-catalog download's concurrency slot so queued downloads still run.
 - Throttle translation catalog downloads and stop requesting widget catalogs at boot — they now load on demand via loadBundleI18nCatalog().
 
 ## [0.2.5] - 2026-07-27

@@ -341,6 +341,7 @@ This is an alpha version! The changes listed here are not final.
 - Guard the dashboard component includes so a second copy of the package on disk cannot fatal on redeclared functions.
 - Keep the widget-dashboard Storybook story's settings drawer on-screen when the dashboard is wider than the preview canvas.
 - Keep the widget settings drawer above widget chrome in dashboard Storybook stories.
+- Keep widget translation catalog downloads off the dashboard's initial render, loading the widgets on screen first and the rest of the registry once the page is idle.
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.
 - Locations report: correct the view counts to match the other reports, show period-over-period changes, and use the shared number format.
 - Locations widget: Show Locations header before drill-down.
