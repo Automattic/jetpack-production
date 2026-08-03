@@ -52,7 +52,7 @@ __( "Podcast stats, the episode dashboard, and the episode block are all unlocke
 __( "Podcast is included with your plan", "jetpack-podcast" );
 __( "Your podcast belongs with your blog", "jetpack-podcast" );
 __( "Publish your show on the same site as your blog and newsletter. Reach fans on Apple, Spotify, Pocket Casts, and every major podcast app.", "jetpack-podcast" );
-__( "Enable podcasting", "jetpack-podcast" );
+__( "Set up podcasting", "jetpack-podcast" );
 __( "Free", "jetpack-podcast" );
 __( "Publish your podcast alongside your blog and newsletter.", "jetpack-podcast" );
 __( "Start your podcast", "jetpack-podcast" );
@@ -218,11 +218,11 @@ __( "These topics have subtopics. Picking one helps Apple Podcasts and other dir
 __( "Explicit content", "jetpack-podcast" );
 __( "Owner email address", "jetpack-podcast" );
 __( "Included in your feed so podcast directories can verify ownership. Most require it for submission.", "jetpack-podcast" );
-__( "Disable podcasting", "jetpack-podcast" );
+__( "Stop publishing your podcast", "jetpack-podcast" );
 __( "Stops publishing your podcast feed. Your show details stay saved, so you can set it up again later.", "jetpack-podcast" );
-__( "Disable", "jetpack-podcast" );
-__( "Disable podcasting?", "jetpack-podcast" );
-__( "Your podcast feed will stop being generated. Existing episodes stay in the assigned category and you can turn podcasting back on at any time.", "jetpack-podcast" );
+__( "Stop publishing", "jetpack-podcast" );
+__( "Stop publishing your podcast?", "jetpack-podcast" );
+__( "Your podcast feed will stop being generated. Existing episodes stay in the assigned category and you can start publishing again at any time.", "jetpack-podcast" );
 __( "Sort ascending" );
 __( "Sort descending" );
 __( "(no title)" );
