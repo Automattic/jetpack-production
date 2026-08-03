@@ -82,6 +82,7 @@ This is an alpha version! The changes listed here are not final.
 - Insights: add the Most commented authors and Most commented posts widgets.
 - Interim port of the woocommerce_analytics Jetpack Sync module.
 - Locations: Add the `/reports/locations` report page with country, region, and city views.
+- Locations report: add CSV export.
 - Locations widget: Add inline country/city switching and map fallbacks.
 - Orders over time: Add an opt-in CSV download for the selected report period.
 - Port data package (React Query report hooks, fetchers, and processing) as an internal package from next-woocommerce-analytics.
@@ -341,6 +342,7 @@ This is an alpha version! The changes listed here are not final.
 - Keep the widget-dashboard Storybook story's settings drawer on-screen when the dashboard is wider than the preview canvas.
 - Keep the widget settings drawer above widget chrome in dashboard Storybook stories.
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.
+- Locations report: correct the view counts to match the other reports, show period-over-period changes, and use the shared number format.
 - Locations widget: Show Locations header before drill-down.
 - Metric tabs chart: hide the tab-list selection underline so it doesn't render alongside the selected metric card's fill. A @wordpress/ui update moved the minimal Tabs indicator from a per-tab element to a tab-list-level one, leaving a stray underline under the selected tab in the Subscribers and Traffic chart widgets.
 - Metric tabs chart: on a narrow tile the metric cards squeezed into one cramped row. Stack the header and lay the cards out in an even two-column grid below a 420px container width, so the four-metric Traffic chart reflows to a balanced 2 x 2 instead of a crammed single row.
