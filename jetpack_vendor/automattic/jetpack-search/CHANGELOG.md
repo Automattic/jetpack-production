@@ -14,8 +14,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Check supports_instant_search, not the Atomic-unreliable supports_search, when deciding whether a site already has the Search product -- fixes Start for free/Get Search silently skipping checkout on Atomic sites that have a bundled classic-search entitlement.
+- Inline Search: Insert the corrected-query notice as text so search terms are not parsed as HTML.
 - Search: Stop printing the theme-token-sampler script once the Search module is disabled.
 - Search Blocks: Avoid parsing post content for filter blocks when none are present, preventing out-of-memory errors on large posts.
+- Search Blocks: Fix `is_search()` being called before the main query runs during block render, which caused a `_doing_it_wrong()` notice.
 
 ## [7.3.2] - 2026-07-27
 ### Added
