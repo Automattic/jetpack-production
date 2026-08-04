@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add feature settings controls for Jetpack AI tools.
 
 ### Bug fixes
+- Random Redirect: avoid a fatal error when a theme or plugin already declares the module's redirect function.
 - Reprint export: Avoid a fatal error when another plugin loads an older version of the Status package.
 - Subscribers: Restore the option to assign imported subscribers to specific newsletter categories on CSV upload and manual add.
 
