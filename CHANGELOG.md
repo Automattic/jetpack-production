@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Add Reprint full-site export support for Pressable and WordPress.com (Atomic) sites. An authenticated export client can pull a complete copy of the site through an HMAC-secured, time-limited export window opened by Jetpack-signed control requests. On Atomic it runs alongside the existing wpcomsh export via a separate ?reprint-api-jetpack endpoint and jetpack/v4 REST routes, so clients can migrate at their own pace. Availability can be overridden with the jetpack_reprint_export_available filter.
+- AI Assistant: Add feature settings controls for Jetpack AI tools.
 - AI Sidebar: Align Editorial Review enablement with the other writing-assistance features.
 - AI Sidebar: Enable writing and SEO suggestions, the block toolbar button, and page and site editor support for all eligible users.
 - Modules: Debounce the modules page search so results update smoothly while typing.
