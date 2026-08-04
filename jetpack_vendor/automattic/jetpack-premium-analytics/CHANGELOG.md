@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Date range presets now shorten their labels before collapsing into a select, and the switch is measured from the active language's own labels instead of a fixed width. The panel also measures itself, so callers no longer pass a container element.
+- Route the ui, fields, and icons packages through the externals script module so shared third-party libraries are no longer duplicated across their bundles.
 
 ## 0.1.0 - 2026-08-03
 ### Added

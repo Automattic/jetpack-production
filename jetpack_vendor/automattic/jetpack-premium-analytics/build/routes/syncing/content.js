@@ -6,7 +6,6 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "Loading", "jetpack-premium-analytics-pkg" );
 __( "Sync interrupted", "jetpack-premium-analytics-pkg" );
 __( "We're preparing your data", "jetpack-premium-analytics-pkg" );
 __( "Something went wrong while syncing your store data. Please try again.", "jetpack-premium-analytics-pkg" );

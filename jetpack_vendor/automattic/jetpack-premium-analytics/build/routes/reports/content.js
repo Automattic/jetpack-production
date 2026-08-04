@@ -6,11 +6,6 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "Loading", "jetpack-premium-analytics-pkg" );
-__( "More details follow the field.", "jetpack-premium-analytics-pkg" );
-__( "Select", "jetpack-premium-analytics-pkg" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 __( "Authors", "jetpack-premium-analytics-pkg" );
 __( "Posts & Pages", "jetpack-premium-analytics-pkg" );
 __( "Countries", "jetpack-premium-analytics-pkg" );
@@ -22,6 +17,11 @@ __( "Campaign / Source / Medium", "jetpack-premium-analytics-pkg" );
 __( "Source", "jetpack-premium-analytics-pkg" );
 __( "Medium", "jetpack-premium-analytics-pkg" );
 __( "Campaign", "jetpack-premium-analytics-pkg" );
+__( "Loading", "jetpack-premium-analytics-pkg" );
+__( "More details follow the field.", "jetpack-premium-analytics-pkg" );
+__( "Select", "jetpack-premium-analytics-pkg" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 __( "Breadcrumbs", "jetpack-premium-analytics-pkg" );
 __( "Year", "jetpack-premium-analytics-pkg" );
 __( "Total posts", "jetpack-premium-analytics-pkg" );

@@ -6,8 +6,6 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 /* translators: %s is the grouped tags and categories label */
 __( "View the tags and categories in %s", "jetpack-premium-analytics-pkg" );
 __( "All tags & categories", "jetpack-premium-analytics-pkg" );
