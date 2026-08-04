@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Library: allow selecting multiple video files from the Upload video button for bulk uploading
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Dashboard: fix cramped spacing in the Chapters help modal and let long dialog content scroll.
 - Library: allow multi-selecting local videos; Upload to VideoPress works as a bulk action and Delete covers local rows

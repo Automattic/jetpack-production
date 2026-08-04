@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Newsletter categories: deep-link the subscribe block help text to the "Subscribe to specific categories" section.
+- Update package dependencies.
 
 ### Fixed
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.

@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: bundle the package behind the jetpack_premium_analytics_enabled flag; when enabled it replaces the Stats wp-admin UI
 - Reprint exporter: exclude the unused URL-parsing dependencies (rowbot, brick/math, psr/log) from the production build, trimming ~1.2 MB the export path never loads.
 - Update lock file.
+- Update package dependencies.
 
 ## 16.1-a.5 - 2026-07-27
 ### Enhancements

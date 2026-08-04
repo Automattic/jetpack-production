@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Relabel the WooCommerce admin menu item to "Store setup" on Commerce and Commerce-trial sites.
+- Update package dependencies.
 
 ## [0.27.35] - 2026-07-27
 ### Changed

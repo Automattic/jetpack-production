@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Search: Rename the Reader Chat setting to Site Chat, and describe it as answering visitor questions about the site.
+- Update package dependencies.
 
 ### Fixed
 - Check supports_instant_search, not the Atomic-unreliable supports_search, when deciding whether a site already has the Search product -- fixes Start for free/Get Search silently skipping checkout on Atomic sites that have a bundled classic-search entitlement.

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Surface a visible error when fetching the keyring result fails during a connection, instead of failing silently.
+- Update package dependencies.
 
 ### Fixed
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundle.
