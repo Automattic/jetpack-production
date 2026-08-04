@@ -57,6 +57,9 @@ _n( "%d subscriber imported.", "%d subscribers imported.", 1, "jetpack-newslette
 /* translators: %d: number of email addresses that were already subscribed. */
 _n( "%d email address is already subscribed.", "%d email addresses are already subscribed.", 1, "jetpack-newsletter" );
 __( "Your subscribers have been imported.", "jetpack-newsletter" );
+__( "Every newsletter starts at one", "jetpack-newsletter" );
+__( "Yours is no exception. Add a few people who already know you: <who>friends, family, coworkers</who>.", "jetpack-newsletter" );
+_x( "Got it", "dismiss button", "jetpack-newsletter" );
 __( "Add subscribers", "jetpack-newsletter" );
 __( "More options", "jetpack-newsletter" );
 __( "Download as CSV", "jetpack-newsletter" );

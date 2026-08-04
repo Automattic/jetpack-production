@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Subscribers: Restore the option to assign imported subscribers to specific newsletter categories on CSV upload and manual add.
+- Subscribers: Show your own subscription in the list instead of an empty state when you are the only subscriber, with a prompt pointing at the Add subscribers button.
 
 ## [0.12.3] - 2026-08-03
 ### Changed
