@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add Host::is_pressable() to detect sites hosted on the Pressable platform via the IS_PRESSABLE constant.
 
+### Fixed
+- Offline mode: Avoid a redundant per-request database query on sites without a persistent object cache.
+
 ## [6.1.9] - 2026-07-09
 ### Changed
 - Update dependencies.
