@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Launchpad: enable on all sites of a user in the ai_launchpad experiment variation, matching wp-admin.
 - Carousel: Run the overlay fade as a CSS transition instead of a main-thread animation loop, and honour prefers-reduced-motion.
 - Keep the Reprint exporter's bundled psr/log out of the global class map so it does not conflict with other psr/log copies (e.g. on WordPress.com).
+- Owner disconnect dialog: own its styles under a local class namespace instead of borrowing the connection package's disconnect-dialog CSS.
 - Premium Analytics: bundle the package behind the jetpack_premium_analytics_enabled flag; when enabled it replaces the Stats wp-admin UI
 - Reprint exporter: exclude the unused URL-parsing dependencies (rowbot, brick/math, psr/log) from the production build, trimming ~1.2 MB the export path never loads.
 - Update lock file.
