@@ -5,13 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.27.36-alpha] - unreleased
+## [0.27.37-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
-- Relabel the WooCommerce admin menu item to "Store setup" on Commerce and Commerce-trial sites.
 - Update package dependencies.
+
+## [0.27.36] - 2026-08-03
+### Changed
+- Relabel the WooCommerce admin menu item to "Store setup" on Commerce and Commerce-trial sites. [#50203]
 
 ## [0.27.35] - 2026-07-27
 ### Changed
@@ -631,7 +634,8 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: Change Icon [#37676]
 - Updated package dependencies. [#37669] [#37706]
 
-[0.27.36-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.27.35...v0.27.36-alpha
+[0.27.37-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.27.36...v0.27.37-alpha
+[0.27.36]: https://github.com/Automattic/jetpack-masterbar/compare/v0.27.35...v0.27.36
 [0.27.35]: https://github.com/Automattic/jetpack-masterbar/compare/v0.27.34...v0.27.35
 [0.27.34]: https://github.com/Automattic/jetpack-masterbar/compare/v0.27.33...v0.27.34
 [0.27.33]: https://github.com/Automattic/jetpack-masterbar/compare/v0.27.32...v0.27.33

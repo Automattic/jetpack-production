@@ -22,7 +22,7 @@ use Automattic\Jetpack\PremiumAnalytics\Reports\Export\Abstract_Csv_Report_Contr
  * This controller automatically filters for booking product types:
  * 'booking', 'bookable-event', and 'bookable-service'.
  *
- * @since 0.1.0-alpha
+ * @since 0.1.0
  */
 class Bookings_Over_Time_Controller extends Abstract_Csv_Report_Controller {
 

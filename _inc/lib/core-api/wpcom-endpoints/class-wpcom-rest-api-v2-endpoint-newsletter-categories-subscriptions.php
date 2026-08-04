@@ -3,7 +3,7 @@
  * REST API endpoint exposing a single subscriber's newsletter category subscriptions.
  *
  * @package automattic/jetpack
- * @since 16.1-a.6
+ * @since 16.1
  */
 
 use Automattic\Jetpack\Connection\Traits\WPCOM_REST_API_Proxy_Request;

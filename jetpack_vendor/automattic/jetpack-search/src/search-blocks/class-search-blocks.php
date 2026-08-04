@@ -2313,7 +2313,7 @@ HTML;
 	/**
 	 * Read Instant Search query-customization options for the blocks store.
 	 *
-	 * @since 7.3.3-alpha
+	 * @since 7.3.4-alpha
 	 *
 	 * @return array Query options with keys:
 	 *               `highlightPhraseOnly`, `highlightFilterStopwords`, `highlightFields`,

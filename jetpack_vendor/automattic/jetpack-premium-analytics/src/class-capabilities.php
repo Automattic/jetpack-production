@@ -21,7 +21,7 @@ namespace Automattic\Jetpack\PremiumAnalytics;
 /**
  * The dashboard's capability rules.
  *
- * @since 0.1.0-alpha
+ * @since 0.1.0
  */
 class Capabilities {
 

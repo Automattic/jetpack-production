@@ -5,22 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.44.0-alpha] - unreleased
+## [0.44.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
-
-### Added
-- Library: allow selecting multiple video files from the Upload video button for bulk uploading
 
 ### Changed
 - Update package dependencies.
 
+## [0.44.0] - 2026-08-03
+### Added
+- Library: Allow selecting multiple video files from the Upload video button for bulk uploading. [#50794]
+
 ### Fixed
-- Dashboard: fix cramped spacing in the Chapters help modal and let long dialog content scroll.
-- Library: allow multi-selecting local videos; Upload to VideoPress works as a bulk action and Delete covers local rows
-- Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles.
-- Video block: Keep preview-on-hover poster and title customization in sync with the player API.
-- VideoPress block: fix selecting an existing local video from the media library on WordPress.com Simple (promote in place instead of the unreachable videopress/v1 upload), and stop the error screen's Retry from crashing when there is no file to restart
+- Block: Fix selecting an existing local video from the media library on WordPress.com Simple (promote in place instead of the unreachable videopress/v1 upload), and stop the error screen's Retry from crashing when there is no file to restart. [#50844]
+- Dashboard: Fix cramped spacing in the Chapters help modal and let long dialog content scroll. [#50968]
+- Library: Allow multi-selecting local videos; Upload to VideoPress works as a bulk action and Delete covers local rows. [#50840]
+- Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundles. [#50762]
+- Video block: Keep preview-on-hover poster and title customization in sync with the player API. [#50702]
 
 ## [0.43.0] - 2026-07-27
 ### Added
@@ -2127,7 +2128,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.44.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.43.0...v0.44.0-alpha
+[0.44.1-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.44.0...v0.44.1-alpha
+[0.44.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.43.0...v0.44.0
 [0.43.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.42.0...v0.43.0
 [0.42.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.41.0...v0.42.0
 [0.41.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.40.0...v0.41.0

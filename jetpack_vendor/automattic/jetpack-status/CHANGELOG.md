@@ -5,15 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.2.0-alpha] - unreleased
+## [6.2.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Added
-- Add Host::is_pressable() to detect sites hosted on the Pressable platform via the IS_PRESSABLE constant.
-
 ### Fixed
 - Offline mode: Avoid a redundant per-request database query on sites without a persistent object cache.
+
+## [6.2.0] - 2026-08-03
+### Added
+- Add Host::is_pressable() to detect sites hosted on the Pressable platform via the IS_PRESSABLE constant. [#50369]
 
 ## [6.1.9] - 2026-07-09
 ### Changed
@@ -562,7 +563,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Introduce a status package
 
-[6.2.0-alpha]: https://github.com/Automattic/jetpack-status/compare/v6.1.9...v6.2.0-alpha
+[6.2.1-alpha]: https://github.com/Automattic/jetpack-status/compare/v6.2.0...v6.2.1-alpha
+[6.2.0]: https://github.com/Automattic/jetpack-status/compare/v6.1.9...v6.2.0
 [6.1.9]: https://github.com/Automattic/jetpack-status/compare/v6.1.8...v6.1.9
 [6.1.8]: https://github.com/Automattic/jetpack-status/compare/v6.1.7...v6.1.8
 [6.1.7]: https://github.com/Automattic/jetpack-status/compare/v6.1.6...v6.1.7

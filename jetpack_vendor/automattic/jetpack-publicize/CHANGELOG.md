@@ -5,17 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.84.3-alpha] - unreleased
+## [0.84.4-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
-- Surface a visible error when fetching the keyring result fails during a connection, instead of failing silently.
 - Update package dependencies.
 
+## [0.84.3] - 2026-08-03
+### Changed
+- Surface a visible error when fetching the keyring result fails during a connection, instead of failing silently. [#50822]
+
 ### Fixed
-- Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundle.
-- Social Image Generator: share the current generated image after changing the template.
+- Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundle. [#50762]
+- Social Image Generator: Share the current generated image after changing the template. [#50903]
 
 ## [0.84.2] - 2026-07-27
 ### Security
@@ -1602,7 +1605,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.84.3-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.84.2...v0.84.3-alpha
+[0.84.4-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.84.3...v0.84.4-alpha
+[0.84.3]: https://github.com/Automattic/jetpack-publicize/compare/v0.84.2...v0.84.3
 [0.84.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.84.1...v0.84.2
 [0.84.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.84.0...v0.84.1
 [0.84.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.83.5...v0.84.0
