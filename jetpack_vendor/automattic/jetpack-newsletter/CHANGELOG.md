@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Subscribers: Restore the option to assign imported subscribers to specific newsletter categories on CSV upload and manual add.
+
 ## [0.12.3] - 2026-08-03
 ### Changed
 - Categories: Deep-link the subscribe block help text to the "Subscribe to specific categories" section. [#50937]

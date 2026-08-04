@@ -65,6 +65,9 @@ _n( "Importing %d subscriber. This may take a few minutes.", "Importing %d subsc
 __( "Import cancelled.", "jetpack-newsletter" );
 __( "Imports of more than 10,000 subscribers will go through a manual review before being added to your site.", "jetpack-newsletter" );
 __( "By clicking “Add subscribers,” you represent that you’ve obtained the appropriate consent to email each person. Spam complaints or high bounce rate from your subscribers may lead to action against your account.", "jetpack-newsletter" );
+__( "Add these subscribers to specific categories", "jetpack-newsletter" );
+__( "Categories", "jetpack-newsletter" );
+__( "Type to add categories", "jetpack-newsletter" );
 /* translators: %s: comma-separated list of invalid email addresses. */
 __( "These entries don’t look like valid email addresses and will be skipped: %s", "jetpack-newsletter" );
 __( "Your subscribers are being imported. This may take a few minutes. You can close this window and we’ll notify you when the import is complete.", "jetpack-newsletter" );
