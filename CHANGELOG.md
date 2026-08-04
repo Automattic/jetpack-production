@@ -9,11 +9,6 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - AI Assistant: Add feature settings controls for Jetpack AI tools.
 
-### Bug fixes
-- Plugins: Add a reason to activation and deactivation errors when the plugin is already in the requested state.
-- Plugins: Avoid a PHP warning when an active plugin's files are no longer on disk.
-- Plugins: Return a meaningful message when plugin activation fails.
-
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Owner disconnect dialog: own its styles under a local class namespace instead of borrowing the connection package's disconnect-dialog CSS.
 - Update lock file.
