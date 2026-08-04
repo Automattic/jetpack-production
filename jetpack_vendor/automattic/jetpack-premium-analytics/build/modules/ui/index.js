@@ -195,10 +195,18 @@ __( "Value must be an array.", "jetpack-premium-analytics-pkg" );
 __( "Every value must be a string.", "jetpack-premium-analytics-pkg" );
 __( "Value must be a valid color.", "jetpack-premium-analytics-pkg" );
 __( "Last 24 hours", "jetpack-premium-analytics-pkg" );
+/* translators: abbreviation for "Last 24 hours". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
+_x( "Last 24H", "short date range preset", "jetpack-premium-analytics-pkg" );
+/* translators: abbreviation for "Last 7 days". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
+_x( "7D", "short date range preset", "jetpack-premium-analytics-pkg" );
+/* translators: abbreviation for "Last 30 days". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
+_x( "30D", "short date range preset", "jetpack-premium-analytics-pkg" );
 __( "Last 90 days", "jetpack-premium-analytics-pkg" );
 __( "Last 365 days", "jetpack-premium-analytics-pkg" );
 __( "Last month", "jetpack-premium-analytics-pkg" );
 __( "Last 12 months", "jetpack-premium-analytics-pkg" );
+/* translators: abbreviation for "Last 12 months". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
+_x( "12M", "short date range preset", "jetpack-premium-analytics-pkg" );
 __( "All time", "jetpack-premium-analytics-pkg" );
 __( "Previous period", "jetpack-premium-analytics-pkg" );
 __( "Previous week", "jetpack-premium-analytics-pkg" );

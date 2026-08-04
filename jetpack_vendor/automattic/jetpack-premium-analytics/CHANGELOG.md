@@ -58,6 +58,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the VideoPress video detail page shell and links.
 - Add the Videos report at `/reports/videos`.
 - Add the WordAds highlights widget showing all-time earnings, paid, and outstanding totals.
+- Add translated DateFiltersPanel stories (Russian, Dutch, German) that render the date bar at several container widths, so the layout is reviewed against real language packs rather than English only.
 - Add UTM Insights widget: traffic breakdown by UTM parameter (source/medium, campaign, source, medium, campaign) as a ranked leaderboard with a per-instance dimension selector.
 - Add VideoPress video plays leaderboard widget.
 - Add watch mode for local development.
@@ -218,6 +219,7 @@ This is an alpha version! The changes listed here are not final.
 - Data layer: Use endpoint-specific typing for dashboard module settings.
 - Date range: Show quick presets on the surface, add Last 24 hours, keep the custom picker calendar-only, distinguish staged vs applied custom trigger states, remember the last committed custom range in the trigger label and calendar, and replace the comparison menu with a SelectControl that keeps the dynamic comparison range label. Rolling preset ranges stage their exact window (no end-of-day rounding), comparisons mirror sub-day windows exactly, and closing the custom popover without applying discards the draft like Cancel.
 - Date range filter: refine the compact (mobile) layout so the preset select and custom-range trigger read as consistent bordered controls.
+- Date range presets now shorten their labels before collapsing into a select, and the switch is measured from the active language's own labels instead of a fixed width. The panel also measures itself, so callers no longer pass a container element.
 - Default the main dashboard grid to the small (200px) row height to match the design mocks.
 - Extract a shared MetricTile component and use it in the Annual highlights and Subscriber highlights widgets, with a responsive row/tile layout.
 - Fields: Add a chevron to the ArrayCheckboxField compact trigger to match SelectControl.
