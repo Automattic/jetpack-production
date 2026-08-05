@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Content: self-heal the wpcom_user_id link on a local WordPress account from a freshly-verified magic-link token, so subscription access can be recognized on subsequent visits without another login round trip.
 - Random Redirect: avoid a fatal error when a theme or plugin already declares the module's redirect function.
 - Reprint export: Avoid a fatal error when another plugin loads an older version of the Status package.
+- SEO: Hide the post list SEO columns for people who had customized Screen Options before those columns existed.
 - Subscribers: Restore the option to assign imported subscribers to specific newsletter categories on CSV upload and manual add.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
