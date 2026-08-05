@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscribers: Restore the option to assign imported subscribers to specific newsletter categories on CSV upload and manual add.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Admin Bar: Expose the command palette node through the admin bar endpoint.
 - Owner disconnect dialog: own its styles under a local class namespace instead of borrowing the connection package's disconnect-dialog CSS.
 - Update lock file.
 - Update package dependencies.
