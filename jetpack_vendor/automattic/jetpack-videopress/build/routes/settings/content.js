@@ -36,7 +36,7 @@ __( "There was an error testing Jetpack. Error: %s", "jetpack-videopress-pkg" );
 __( "Library", "jetpack-videopress-pkg" );
 __( "Stats", "jetpack-videopress-pkg" );
 __( "Settings", "jetpack-videopress-pkg" );
-__( "Professional quality, ad-free video hosting.", "jetpack-videopress-pkg" );
+__( "Host, manage, customize, and track your videos — all in one place.", "jetpack-videopress-pkg" );
 __( "A connection check failed.", "jetpack-videopress-pkg" );
 __( "Connect to set up VideoPress", "jetpack-videopress-pkg" );
 __( "VideoPress needs a connection to WordPress.com before you can upload and manage your videos.", "jetpack-videopress-pkg" );

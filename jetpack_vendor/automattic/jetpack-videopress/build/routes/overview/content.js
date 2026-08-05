@@ -37,7 +37,7 @@ __( "Dismiss", "jetpack-videopress-pkg" );
 __( "Library", "jetpack-videopress-pkg" );
 __( "Stats", "jetpack-videopress-pkg" );
 __( "Settings", "jetpack-videopress-pkg" );
-__( "Professional quality, ad-free video hosting.", "jetpack-videopress-pkg" );
+__( "Host, manage, customize, and track your videos — all in one place.", "jetpack-videopress-pkg" );
 __( "Retry", "jetpack-videopress-pkg" );
 __( "Last 7 days", "jetpack-videopress-pkg" );
 __( "Last 30 days", "jetpack-videopress-pkg" );
