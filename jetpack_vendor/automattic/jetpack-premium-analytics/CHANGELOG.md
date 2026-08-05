@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscribers: Drop Subscriber highlights from the default widgets so the board opens on the chart.
 - Traffic: Reorder and resize the default widgets so each row fills the grid, rename Summary to Traffic summary, and drop Plan usage from the defaults.
 - Update package dependencies.
+- Video detail page: Align the composition with the design mock by adding range-scoped highlight metrics, a Views performance chart, a poster thumbnail, and the renamed "Used on posts & pages" card.
 
 ### Fixed
 - Dashboard: Fix the dashboard opening as an empty edit-mode canvas when a post or video detail page was loaded first.

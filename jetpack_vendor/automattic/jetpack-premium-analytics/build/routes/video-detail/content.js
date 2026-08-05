@@ -254,7 +254,8 @@ __( "Use available width", "jetpack-premium-analytics-pkg" );
 __( "Make full width", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the video publish date, e.g. "Aug 19, 2025". */
 __( "Video published on %s.", "jetpack-premium-analytics-pkg" );
-__( "Performance over the last 30 days.", "jetpack-premium-analytics-pkg" );
+/* translators: %1$s and %2$s: the report range bounds, e.g. "Jul 9, 2026". */
+__( "Performance from %1$s to %2$s", "jetpack-premium-analytics-pkg" );
 __( "Untitled video", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this video. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
