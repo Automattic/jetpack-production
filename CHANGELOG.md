@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Bar: Expose the command palette node through the admin bar endpoint.
 - Owner disconnect dialog: own its styles under a local class namespace instead of borrowing the connection package's disconnect-dialog CSS.
 - Premium Analytics: point the dashboard stats card, newsletter widget, and block editor email stats link at the Analytics dashboard when it replaces the Stats page.
+- Site options: expose difm_lite_site_options.is_website_content_submitted for sites with an active DIFM Lite build (WordPress.com only).
 - Update lock file.
 - Update package dependencies.
 
