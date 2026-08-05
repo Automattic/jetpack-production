@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Date range presets now shorten their labels before collapsing into a select, and the switch is measured from the active language's own labels instead of a fixed width. The panel also measures itself, so callers no longer pass a container element.
 - Name the dashboard "Stats" in its header and breadcrumbs, and mark the header with the Jetpack logo.
 - Route the ui, fields, and icons packages through the externals script module so shared third-party libraries are no longer duplicated across their bundles.
+- Subscribers: Drop Subscriber highlights from the default widgets so the board opens on the chart.
 - Traffic: Reorder and resize the default widgets so each row fills the grid, rename Summary to Traffic summary, and drop Plan usage from the defaults.
 
 ### Fixed
