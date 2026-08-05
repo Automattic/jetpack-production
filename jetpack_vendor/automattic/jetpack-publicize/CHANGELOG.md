@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix the social sharing sidebar failing to load in the editor on WordPress 6.9.
+- Prevent unrelated editor hyperlinks from appearing in custom social messages.
 
 ## [0.84.3] - 2026-08-03
 ### Changed
