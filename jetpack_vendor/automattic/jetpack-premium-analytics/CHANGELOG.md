@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Date range presets now shorten their labels before collapsing into a select, and the switch is measured from the active language's own labels instead of a fixed width. The panel also measures itself, so callers no longer pass a container element.
 - Route the ui, fields, and icons packages through the externals script module so shared third-party libraries are no longer duplicated across their bundles.
 
+### Fixed
+- Dashboard: Fix the dashboard opening as an empty edit-mode canvas when a post or video detail page was loaded first.
+
 ## 0.1.0 - 2026-08-03
 ### Added
 - Add a post and page detail view with its own traffic, email, and interaction widgets. [#50096] [#50457]

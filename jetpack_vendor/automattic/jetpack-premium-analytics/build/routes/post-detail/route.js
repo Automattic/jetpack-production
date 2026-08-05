@@ -7,3 +7,4 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Widget modules", "jetpack-premium-analytics-pkg" );
+__( "Dashboard sections", "jetpack-premium-analytics-pkg" );
