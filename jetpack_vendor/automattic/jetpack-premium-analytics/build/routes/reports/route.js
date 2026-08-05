@@ -20,6 +20,8 @@ __( "Campaign", "jetpack-premium-analytics-pkg" );
 __( "Loading", "jetpack-premium-analytics-pkg" );
 __( "More details follow the field.", "jetpack-premium-analytics-pkg" );
 __( "Select", "jetpack-premium-analytics-pkg" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 __( "Year", "jetpack-premium-analytics-pkg" );
 __( "Total posts", "jetpack-premium-analytics-pkg" );
 __( "Total comments", "jetpack-premium-analytics-pkg" );

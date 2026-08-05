@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fix the My Jetpack page rendering blank on WordPress 6.9.
+
 ## [5.41.1] - 2026-08-03
 ### Changed
 - Update dependencies. [#46951]

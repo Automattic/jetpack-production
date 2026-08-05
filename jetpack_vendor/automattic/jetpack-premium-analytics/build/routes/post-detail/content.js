@@ -246,6 +246,8 @@ __( "Select", "jetpack-premium-analytics-pkg" );
 __( "%s settings", "jetpack-premium-analytics-pkg" );
 __( "Widget settings", "jetpack-premium-analytics-pkg" );
 __( "Save", "jetpack-premium-analytics-pkg" );
+__( "More", "jetpack-premium-analytics-pkg" );
+__( "Widget controls", "jetpack-premium-analytics-pkg" );
 __( "Widget options", "jetpack-premium-analytics-pkg" );
 __( "Width", "jetpack-premium-analytics-pkg" );
 __( "Use available width", "jetpack-premium-analytics-pkg" );

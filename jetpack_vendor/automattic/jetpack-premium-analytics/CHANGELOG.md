@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add translated DateFiltersPanel stories (Russian, Dutch, German) that render the date bar at several container widths, so the layout is reviewed against real language packs rather than English only.
+- Insights: add an all-time and yearly date selection, configurable per dashboard section.
 
 ### Changed
 - Date range presets now shorten their labels before collapsing into a select, and the switch is measured from the active language's own labels instead of a fixed width. The panel also measures itself, so callers no longer pass a container element.
@@ -19,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Route the ui, fields, and icons packages through the externals script module so shared third-party libraries are no longer duplicated across their bundles.
 - Subscribers: Drop Subscriber highlights from the default widgets so the board opens on the chart.
 - Traffic: Reorder and resize the default widgets so each row fills the grid, rename Summary to Traffic summary, and drop Plan usage from the defaults.
+- Update package dependencies.
 
 ### Fixed
 - Dashboard: Fix the dashboard opening as an empty edit-mode canvas when a post or video detail page was loaded first.

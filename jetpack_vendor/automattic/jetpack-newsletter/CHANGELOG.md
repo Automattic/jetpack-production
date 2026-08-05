@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Fix the settings page rendering blank on WordPress 6.9.
 - Subscribers: Restore the option to assign imported subscribers to specific newsletter categories on CSV upload and manual add.
 - Subscribers: Show your own subscription in the list instead of an empty state when you are the only subscriber, with a prompt pointing at the Add subscribers button.
 

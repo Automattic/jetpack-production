@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fix the social sharing sidebar failing to load in the editor on WordPress 6.9.
+
 ## [0.84.3] - 2026-08-03
 ### Changed
 - Surface a visible error when fetching the keyring result fails during a connection, instead of failing silently. [#50822]
