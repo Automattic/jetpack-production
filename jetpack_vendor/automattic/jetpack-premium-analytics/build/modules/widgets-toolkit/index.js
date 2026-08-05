@@ -43,6 +43,9 @@ __( "Avatar of %s", "jetpack-premium-analytics-pkg" );
 /* translators: %s is a country name. */
 __( "Flag of %s", "jetpack-premium-analytics-pkg" );
 __( "See report", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the post's publish date, e.g. "Jun 5, 2026". */
+__( "Post published on %s", "jetpack-premium-analytics-pkg" );
+__( "Not available", "jetpack-premium-analytics-pkg" );
 /* translators: %d is the number of additional subscribers not shown. */
 _n( "%d more", "%d more", 1, "jetpack-premium-analytics-pkg" );
 __( "Could not download report.", "jetpack-premium-analytics-pkg" );
