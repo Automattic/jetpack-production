@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Date range presets now shorten their labels before collapsing into a select, and the switch is measured from the active language's own labels instead of a fixed width. The panel also measures itself, so callers no longer pass a container element.
+- Load the dashboard assets only on requests that render an admin screen, so front-end page views no longer parse them.
 - Name the dashboard "Stats" in its header and breadcrumbs, and mark the header with the Jetpack logo.
 - Route the ui, fields, and icons packages through the externals script module so shared third-party libraries are no longer duplicated across their bundles.
 - Subscribers: Drop Subscriber highlights from the default widgets so the board opens on the chart.
