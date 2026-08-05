@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.9.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Allow integrations to request the full Agents Manager shell without taking over the Help Center.
+
 ## [0.9.0] - 2026-08-03
 ### Changed
 - Dock the AI sidebar on shorter screens instead of floating it over the page content. [#50999]
@@ -101,6 +108,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Agents Manager: Allow overriding variant and sectionName through filters [#49283]
 - Initial version, extracted from Jetpack MU WPCOM to its own package for external consumption. [#49202]
 
+[0.9.1-alpha]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.9.0...v0.9.1-alpha
 [0.9.0]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.8.4...v0.9.0
 [0.8.4]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.8.3...v0.8.4
 [0.8.3]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.8.2...v0.8.3
