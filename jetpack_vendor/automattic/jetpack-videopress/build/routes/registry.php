@@ -34,5 +34,12 @@ return array(
 		'page'        => 'jetpack-videopress-dashboard',
 		'has_route'   => true,
 		'has_content' => true,
+	),
+	array(
+		'name'        => 'video-editor',
+		'path'        => '/video/$id/editor',
+		'page'        => 'jetpack-videopress-dashboard',
+		'has_route'   => true,
+		'has_content' => true,
 	)
 );
