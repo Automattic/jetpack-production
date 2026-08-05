@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: prevent a fatal error on the VideoPress page when the WordPress.com pricing request fails on a disconnected site.
+- Fix the age gate in the editor: the birth date can now be submitted, and lowering a video's rating removes the gate.
 
 ## [0.44.0] - 2026-08-03
 ### Added
