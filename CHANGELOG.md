@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add feature settings controls for Jetpack AI tools.
 
 ### Bug fixes
+- Newsletter: fix the editor warning about unsaved changes after adjusting newsletter settings.
 - Premium Content: self-heal the wpcom_user_id link on a local WordPress account from a freshly-verified magic-link token, so subscription access can be recognized on subsequent visits without another login round trip.
 - Random Redirect: avoid a fatal error when a theme or plugin already declares the module's redirect function.
 - Reprint export: Avoid a fatal error when another plugin loads an older version of the Status package.
