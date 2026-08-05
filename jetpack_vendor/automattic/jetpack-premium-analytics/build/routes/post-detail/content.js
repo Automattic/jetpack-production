@@ -6,13 +6,12 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
-__( "Breadcrumbs", "jetpack-premium-analytics-pkg" );
 __( "Loading", "jetpack-premium-analytics-pkg" );
 __( "OK", "jetpack-premium-analytics-pkg" );
 __( "Cancel", "jetpack-premium-analytics-pkg" );
 __( "Close", "jetpack-premium-analytics-pkg" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 __( "Dismiss", "jetpack-premium-analytics-pkg" );
 __( "More options", "jetpack-premium-analytics-pkg" );
 __( "Reset to default", "jetpack-premium-analytics-pkg" );
@@ -267,6 +266,5 @@ __( "Platforms", "jetpack-premium-analytics-pkg" );
 __( "Clients", "jetpack-premium-analytics-pkg" );
 __( "Top links", "jetpack-premium-analytics-pkg" );
 __( "UTM", "jetpack-premium-analytics-pkg" );
-__( "Stats", "jetpack-premium-analytics-pkg" );
 __( "View page", "jetpack-premium-analytics-pkg" );
 __( "View post", "jetpack-premium-analytics-pkg" );

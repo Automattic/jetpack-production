@@ -829,7 +829,7 @@ return array(
 	array(
 		'name'         => 'jpa/traffic-chart',
 		'dir_name'     => 'traffic-chart',
-		'title'        => 'Summary',
+		'title'        => 'Traffic summary',
 		'description'  => 'Compare views, visitors, likes, and comments over the selected period, with the previous period overlaid for comparison.',
 		'help'         => array( 'content' => 'A summary of your site\'s views, visitors, likes, and comments.' ),
 		'has_render'   => true,

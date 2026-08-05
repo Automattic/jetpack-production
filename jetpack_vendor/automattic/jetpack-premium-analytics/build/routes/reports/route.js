@@ -20,9 +20,6 @@ __( "Campaign", "jetpack-premium-analytics-pkg" );
 __( "Loading", "jetpack-premium-analytics-pkg" );
 __( "More details follow the field.", "jetpack-premium-analytics-pkg" );
 __( "Select", "jetpack-premium-analytics-pkg" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
-__( "Breadcrumbs", "jetpack-premium-analytics-pkg" );
 __( "Year", "jetpack-premium-analytics-pkg" );
 __( "Total posts", "jetpack-premium-analytics-pkg" );
 __( "Total comments", "jetpack-premium-analytics-pkg" );
@@ -31,7 +28,6 @@ __( "Total likes", "jetpack-premium-analytics-pkg" );
 __( "Avg likes per post", "jetpack-premium-analytics-pkg" );
 __( "Total words", "jetpack-premium-analytics-pkg" );
 __( "Avg words per post", "jetpack-premium-analytics-pkg" );
-__( "Stats", "jetpack-premium-analytics-pkg" );
 __( "Annual insights", "jetpack-premium-analytics-pkg" );
 __( "Year-by-year publishing and engagement totals.", "jetpack-premium-analytics-pkg" );
 __( "Unable to load annual insights", "jetpack-premium-analytics-pkg" );

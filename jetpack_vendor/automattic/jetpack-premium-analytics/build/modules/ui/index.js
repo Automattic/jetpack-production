@@ -57,3 +57,7 @@ _n( "%d day", "%d days", 1, "jetpack-premium-analytics-pkg" );
 __( "%1$s (%2$s)", "jetpack-premium-analytics-pkg" );
 /* translators: %1$s is a date range with its length, %2$s is the compared period, e.g. "Previous period". */
 __( "%1$s vs. %2$s", "jetpack-premium-analytics-pkg" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
+__( "Breadcrumbs", "jetpack-premium-analytics-pkg" );
+__( "Stats", "jetpack-premium-analytics-pkg" );
