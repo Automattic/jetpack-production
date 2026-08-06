@@ -19,7 +19,7 @@ class Agents_Manager {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '0.9.1-alpha';
+	const PACKAGE_VERSION = '0.9.1';
 
 	/**
 	 * Help Center URL for disconnected variants.
@@ -491,7 +491,7 @@ class Agents_Manager {
 		 * Providers should preserve an existing true value so multiple integrations can
 		 * request the shared shell independently.
 		 *
-		 * @since 0.9.1-alpha
+		 * @since 0.9.1
 		 *
 		 * @param bool $should_load Whether another integration already requested the shell.
 		 */
