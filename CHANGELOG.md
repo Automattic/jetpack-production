@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI Assistant: Scroll the Form block's AI prompt into view when it opens, so it no longer sits over the form.
 - Newsletter: fix the editor warning about unsaved changes after adjusting newsletter settings.
+- Newsletter: Make the post-publish email confirmation more visible.
 - Newsletter: Save the post before generating an email preview, so the preview reflects the latest saved content (e.g. a newly-set featured image).
 - Newsletter: send the test email when pressing Enter, and show send errors as a proper error notice.
 - Premium Content: self-heal the wpcom_user_id link on a local WordPress account from a freshly-verified magic-link token, so subscription access can be recognized on subsequent visits without another login round trip.
