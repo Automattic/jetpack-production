@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI Assistant: Add feature settings controls for Jetpack AI tools.
+- REST API: Add atomic_email_block field to the site endpoint response.
 
 ### Bug fixes
 - Newsletter: fix the editor warning about unsaved changes after adjusting newsletter settings.
