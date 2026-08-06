@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix the settings page rendering blank on WordPress 6.9.
+- Subscribers: Remove the misleading "Joined" field from the subscriber profile, which showed the site's creation date rather than a per-subscriber date.
 - Subscribers: Restore the option to assign imported subscribers to specific newsletter categories on CSV upload and manual add.
 - Subscribers: Show your own subscription in the list instead of an empty state when you are the only subscriber, with a prompt pointing at the Add subscribers button.
 
