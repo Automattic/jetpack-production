@@ -87,6 +87,8 @@
 		"build/widgets/top-posts/render.js",
 		"build/widgets/top-posts/widget.js",
 		"build/widgets/total-sales-over-time/render.js",
+		"build/widgets/total-views/render.js",
+		"build/widgets/total-visitors/render.js",
 		"build/widgets/traffic-chart/render.js",
 		"build/widgets/traffic-chart/widget.js",
 		"build/widgets/utm-insights/render.js",

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add Total views and Total visitors dashboard widgets.
 - Add translated DateFiltersPanel stories (Russian, Dutch, German) that render the date bar at several container widths, so the layout is reviewed against real language packs rather than English only.
 - Detail pages: Show the report the visitor came from in the breadcrumb.
 - Insights: add an all-time and yearly date selection, configurable per dashboard section.
