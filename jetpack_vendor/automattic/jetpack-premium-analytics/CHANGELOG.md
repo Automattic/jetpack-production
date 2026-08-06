@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add translated DateFiltersPanel stories (Russian, Dutch, German) that render the date bar at several container widths, so the layout is reviewed against real language packs rather than English only.
+- Detail pages: Show the report the visitor came from in the breadcrumb.
 - Insights: add an all-time and yearly date selection, configurable per dashboard section.
 - Insights: add a Popular post widget, and adapt the single-post highlight card to both the width and the height of its dashboard cell.
 - Publish the dashboard page slug, capability, and site timezone in Jetpack script data, so other Jetpack surfaces can link to the dashboard.
