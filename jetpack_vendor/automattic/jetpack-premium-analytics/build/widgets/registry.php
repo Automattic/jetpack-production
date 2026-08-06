@@ -318,7 +318,7 @@ return array(
 	array(
 		'name'         => 'jpa/most-commented-authors',
 		'dir_name'     => 'most-commented-authors',
-		'title'        => 'Most commented authors',
+		'title'        => 'Top commented authors',
 		'description'  => 'The people who comment the most on your site.',
 		'help'         => array( 'content' => 'Your most active commenters, ranked by the number of comments they have left.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'actions'      => null,
@@ -332,7 +332,7 @@ return array(
 	array(
 		'name'         => 'jpa/most-commented-posts',
 		'dir_name'     => 'most-commented-posts',
-		'title'        => 'Most commented posts',
+		'title'        => 'Top commented posts',
 		'description'  => 'The posts and pages that receive the most comments.',
 		'help'         => array( 'content' => 'Your posts and pages, ranked by the number of comments they have received.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'actions'      => null,
