@@ -16,7 +16,7 @@
 		"automattic/jetpack-account-protection": "^0.3.7",
 		"automattic/jetpack-activity-log": "^0.2.2-alpha",
 		"automattic/jetpack-admin-ui": "^0.9.15",
-		"automattic/jetpack-agents-manager": "^0.9.1",
+		"automattic/jetpack-agents-manager": "^0.9.2-alpha",
 		"automattic/jetpack-assets": "^4.4.10",
 		"automattic/jetpack-autoloader": "^5.0.22",
 		"automattic/jetpack-backup": "^4.3.12-alpha",
