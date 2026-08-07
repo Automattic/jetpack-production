@@ -16,7 +16,6 @@ This is an alpha version! The changes listed here are not final.
 - AI: Attach the site ID to MCP settings Tracks events, and add a source property to the settings view event.
 - AI Assistant: Scroll the Form block's AI prompt into view when it opens, so it no longer sits over the form.
 - Likes: Fix Like buttons sometimes getting stuck on "Loading…" and never appearing.
-- Newsletter: fix the editor warning about unsaved changes after adjusting newsletter settings.
 - Newsletter: Make the post-publish email confirmation more visible.
 - Newsletter: Save the post before generating an email preview, so the preview reflects the latest saved content (e.g. a newly-set featured image).
 - Newsletter: send the test email when pressing Enter, and show send errors as a proper error notice.
