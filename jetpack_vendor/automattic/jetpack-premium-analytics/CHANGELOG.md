@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Insights: add an all-time and yearly date selection, configurable per dashboard section.
 - Insights: add a Popular post widget, and adapt the single-post highlight card to both the width and the height of its dashboard cell.
 - Publish the dashboard page slug, capability, and site timezone in Jetpack script data, so other Jetpack surfaces can link to the dashboard.
+- Video detail: Restore the date filter presets now that the preset measurement rework has landed, and keep comparison params from reaching the page's widgets.
 
 ### Changed
 - Date range presets now shorten their labels before collapsing into a select, and the switch is measured from the active language's own labels instead of a fixed width. The panel also measures itself, so callers no longer pass a container element.
