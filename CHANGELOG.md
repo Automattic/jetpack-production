@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Content: self-heal the wpcom_user_id link on a local WordPress account from a freshly-verified magic-link token, so subscription access can be recognized on subsequent visits without another login round trip.
 - Random Redirect: avoid a fatal error when a theme or plugin already declares the module's redirect function.
 - Reprint export: Avoid a fatal error when another plugin loads an older version of the Status package.
+- Security: Require a Jetpack site (blog) token for JSON API endpoints that declare no capabilities, such as the Backup helper script endpoints, and reject user tokens regardless of privilege.
 - SEO: Hide the post list SEO columns for people who had customized Screen Options before those columns existed.
 - Subscribers: Restore the option to assign imported subscribers to specific newsletter categories on CSV upload and manual add.
 - Tiled Gallery: stop routing images through the external Photon domain on VIP sites when galleries are saved, and add a `jetpack_skip_photon_domain` filter to control it. Galleries published before this change keep their existing image URLs until they are saved again.
