@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Fix the dashboard opening as an empty edit-mode canvas when a post or video detail page was loaded first.
 - Dashboard: Make the first widget section a flex column so stacked chrome content lays out correctly until the upstream Gutenberg fix lands.
 - Restore PHP 7.2 compatibility for the Premium Analytics admin page.
+- Stats breadcrumbs: Fix a long unbroken crumb widening the page into horizontal scrolling instead of truncating.
 
 ## 0.1.0 - 2026-08-03
 ### Added
