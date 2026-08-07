@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Restore PHP 7.2 compatibility for the Activity Log admin page.
+
 ## [0.2.1] - 2026-08-03
 ### Fixed
 - Load JS translation catalogs and stamp the package text domain on the wp-build dashboard bundle. [#50762]

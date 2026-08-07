@@ -199,7 +199,7 @@ function jetpack_newsletter_jetpack_subscribers_announcement_wp_admin_enqueue_sc
 				run();
 			}
 		}
-		JS;
+JS;
 		wp_add_inline_script(
 			'jetpack-subscribers-announcement-wp-admin-prerequisites',
 			sprintf(

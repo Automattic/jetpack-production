@@ -199,7 +199,7 @@ function jetpack_podcast_jetpack_podcast_dashboard_wp_admin_enqueue_scripts( $ho
 				run();
 			}
 		}
-		JS;
+JS;
 		wp_add_inline_script(
 			'jetpack-podcast-dashboard-wp-admin-prerequisites',
 			sprintf(

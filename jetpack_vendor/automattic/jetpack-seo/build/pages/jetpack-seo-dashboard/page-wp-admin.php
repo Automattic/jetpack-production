@@ -199,7 +199,7 @@ function jetpack_seo_jetpack_seo_dashboard_wp_admin_enqueue_scripts( $hook_suffi
 				run();
 			}
 		}
-		JS;
+JS;
 		wp_add_inline_script(
 			'jetpack-seo-dashboard-wp-admin-prerequisites',
 			sprintf(

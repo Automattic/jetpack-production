@@ -199,7 +199,7 @@ function jetpack_videopress_jetpack_videopress_dashboard_wp_admin_enqueue_script
 				run();
 			}
 		}
-		JS;
+JS;
 		wp_add_inline_script(
 			'jetpack-videopress-dashboard-wp-admin-prerequisites',
 			sprintf(
