@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Form block: show the fallback notification recipient as a placeholder so it is clear when no address is saved.
+- Form editor: keep the form block selected so the form settings sidebar stays reachable.
 
 ## [7.23.4] - 2026-08-03
 ### Removed
