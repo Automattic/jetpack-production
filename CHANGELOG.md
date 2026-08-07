@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Hide the post list SEO columns for people who had customized Screen Options before those columns existed.
 - Subscribers: Restore the option to assign imported subscribers to specific newsletter categories on CSV upload and manual add.
 - Tiled Gallery: stop routing images through the external Photon domain on VIP sites when galleries are saved, and add a `jetpack_skip_photon_domain` filter to control it. Galleries published before this change keep their existing image URLs until they are saved again.
+- Top Posts & Pages: Only process as many posts as requested from the Stats API, cutting post and metadata lookups when rendering the block without changing which posts it shows.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin Bar: Expose the command palette node through the admin bar endpoint.
