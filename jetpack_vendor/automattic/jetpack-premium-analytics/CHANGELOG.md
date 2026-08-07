@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Video detail: Restore the date filter presets now that the preset measurement rework has landed, and keep comparison params from reaching the page's widgets.
 
 ### Changed
+- Dashboard: Tighten widget Card padding to fit the screen better.
 - Date range presets now shorten their labels before collapsing into a select, and the switch is measured from the active language's own labels instead of a fixed width. The panel also measures itself, so callers no longer pass a container element.
 - Highlights: Always show the most recent year, and fit the full metrics at the minimum widget height. Tighten metric tile spacing in wide, short widgets. Show every metric when the widget has no saved metric selection, matching what the Metrics control displays.
 - Insights: Reorder and resize the default widgets so each row fills the grid, and add Popular post, Total views, and Total visitors to the defaults.
