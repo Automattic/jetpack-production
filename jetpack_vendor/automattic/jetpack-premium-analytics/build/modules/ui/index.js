@@ -39,6 +39,13 @@ __( "%1$s – %2$s", "jetpack-premium-analytics-pkg" );
 __( "No comparison", "jetpack-premium-analytics-pkg" );
 __( "Compare to", "jetpack-premium-analytics-pkg" );
 __( "Add comparison", "jetpack-premium-analytics-pkg" );
+__( "By hours", "jetpack-premium-analytics-pkg" );
+__( "By days", "jetpack-premium-analytics-pkg" );
+__( "By weeks", "jetpack-premium-analytics-pkg" );
+__( "By months", "jetpack-premium-analytics-pkg" );
+__( "By quarters", "jetpack-premium-analytics-pkg" );
+__( "By years", "jetpack-premium-analytics-pkg" );
+__( "Chart interval", "jetpack-premium-analytics-pkg" );
 __( "From", "jetpack-premium-analytics-pkg" );
 __( "To", "jetpack-premium-analytics-pkg" );
 __( "Cancel", "jetpack-premium-analytics-pkg" );
@@ -55,7 +62,15 @@ _n( "%d month", "%d months", 1, "jetpack-premium-analytics-pkg" );
 _n( "%d year", "%d years", 1, "jetpack-premium-analytics-pkg" );
 /* translators: %d is a number of days. */
 _n( "%d day", "%d days", 1, "jetpack-premium-analytics-pkg" );
-/* translators: %1$s is a date range, %2$s is how long it is, e.g. "7 days". */
+__( "hourly", "jetpack-premium-analytics-pkg" );
+__( "daily", "jetpack-premium-analytics-pkg" );
+__( "weekly", "jetpack-premium-analytics-pkg" );
+__( "monthly", "jetpack-premium-analytics-pkg" );
+__( "quarterly", "jetpack-premium-analytics-pkg" );
+__( "yearly", "jetpack-premium-analytics-pkg" );
+/* translators: %1$s is a date range, %2$s is how long it is, e.g. "7 days", %3$s is the chart interval, e.g. "daily". */
+__( "%1$s (%2$s, %3$s)", "jetpack-premium-analytics-pkg" );
+/* translators: %1$s is a date range, %2$s is either how long it is, e.g. "7 days", or the chart interval, e.g. "daily". */
 __( "%1$s (%2$s)", "jetpack-premium-analytics-pkg" );
 /* translators: %1$s is a date range with its length, %2$s is the compared period, e.g. "Previous period". */
 __( "%1$s vs. %2$s", "jetpack-premium-analytics-pkg" );

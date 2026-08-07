@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add Total views and Total visitors dashboard widgets.
 - Add translated DateFiltersPanel stories (Russian, Dutch, German) that render the date bar at several container widths, so the layout is reviewed against real language packs rather than English only.
+- Date controls: add a chart interval control that sets the bucket size for every chart on the page.
 - Detail pages: Show the report the visitor came from in the breadcrumb.
 - Insights: add an all-time and yearly date selection, configurable per dashboard section.
 - Insights: add a Popular post widget, and adapt the single-post highlight card to both the width and the height of its dashboard cell.
