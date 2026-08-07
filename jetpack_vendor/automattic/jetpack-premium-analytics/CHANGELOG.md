@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Traffic: Reorder and resize the default widgets so each row fills the grid, rename Summary to Traffic summary, and drop Plan usage from the defaults.
 - Update package dependencies.
 - Video detail page: Align the composition with the design mock by adding range-scoped highlight metrics, a Views performance chart, a poster thumbnail, and the renamed "Used on posts & pages" card.
+- Widgets: Update dashboard widget icons to match the design reference.
 
 ### Fixed
 - Dashboard: Fix the dashboard opening as an empty edit-mode canvas when a post or video detail page was loaded first.
