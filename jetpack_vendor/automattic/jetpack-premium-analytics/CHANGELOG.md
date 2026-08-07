@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Date range presets now shorten their labels before collapsing into a select, and the switch is measured from the active language's own labels instead of a fixed width. The panel also measures itself, so callers no longer pass a container element.
+- Highlights: Always show the most recent year, and fit the full metrics at the minimum widget height. Tighten metric tile spacing in wide, short widgets. Show every metric when the widget has no saved metric selection, matching what the Metrics control displays.
 - Load the dashboard assets only on requests that render an admin screen, so front-end page views no longer parse them.
 - Name the dashboard "Stats" in its header and breadcrumbs, and mark the header with the Jetpack logo.
 - Rename the "Most commented posts" and "Most commented authors" widgets to "Top commented posts" and "Top commented authors".
