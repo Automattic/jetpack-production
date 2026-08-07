@@ -20,6 +20,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Dashboard: Tighten widget Card padding to fit the screen better.
+- Date controls: abbreviate the month on the custom-range trigger, e.g. "Aug 2 – 9, 2025", so a long range costs the row less width.
+- Date controls: keep the date presets as a row of pills at every width. A narrow row abbreviates their labels instead of collapsing the whole choice into a dropdown.
+- Date controls: make comparison an additive control. With none active it is a + button rather than a full-width picker reading "No comparison", and picking a period collapses it into a labelled trigger.
+- Date controls: name the active comparison preset on the picker, e.g. "Prev. period", instead of the dates it resolves to. The section header already spells out the compared period.
 - Date range presets now shorten their labels before collapsing into a select, and the switch is measured from the active language's own labels instead of a fixed width. The panel also measures itself, so callers no longer pass a container element.
 - Highlights: Always show the most recent year, and fit the full metrics at the minimum widget height. Tighten metric tile spacing in wide, short widgets. Show every metric when the widget has no saved metric selection, matching what the Metrics control displays.
 - Insights: Reorder and resize the default widgets so each row fills the grid, and add Popular post, Total views, and Total visitors to the defaults.
@@ -28,15 +32,20 @@ This is an alpha version! The changes listed here are not final.
 - Post detail page: apply the video-page parity fixes — inline date filters on the title row with row-width degradation and no comparison, long-title overflow and featured-image sizing fixes, and the post-views day-shift fix.
 - Rename the "Most commented posts" and "Most commented authors" widgets to "Top commented posts" and "Top commented authors".
 - Route the ui, fields, and icons packages through the externals script module so shared third-party libraries are no longer duplicated across their bundles.
+- Section header: wrap the subtitle before shortening the date preset labels, and stack the title and the controls onto separate rows once the header is too narrow to hold them side by side.
 - Subscribers: Drop Subscriber highlights from the default widgets so the board opens on the chart.
 - Traffic: Reorder and resize the default widgets so each row fills the grid, rename Summary to Traffic summary, and drop Plan usage from the defaults.
 - Update package dependencies.
 - Video detail page: Align the composition with the design mock by adding range-scoped highlight metrics, a Views performance chart, a poster thumbnail, and the renamed "Used on posts & pages" card.
 - Widgets: Update dashboard widget icons to match the design reference.
 
+### Removed
+- Date controls: drop the "Previous week" comparison preset, leaving the previous period, month and year.
+
 ### Fixed
 - Dashboard: Fix the dashboard opening as an empty edit-mode canvas when a post or video detail page was loaded first.
 - Dashboard: Make the first widget section a flex column so stacked chrome content lays out correctly until the upstream Gutenberg fix lands.
+- Date controls: shorten the preset labels before the comparison control runs out of room, rather than after it has already overflowed the header, and keep its label on one line.
 - Restore PHP 7.2 compatibility for the Premium Analytics admin page.
 - Stats breadcrumbs: Fix a long unbroken crumb widening the page into horizontal scrolling instead of truncating.
 
