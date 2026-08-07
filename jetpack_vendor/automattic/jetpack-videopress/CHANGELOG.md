@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Dashboard: fix the blank Library page on right-to-left locales caused by a missing RTL stylesheet.
 - Dashboard: prevent a fatal error on the VideoPress page when the WordPress.com pricing request fails on a disconnected site.
 - Fix the age gate in the editor: the birth date can now be submitted, and lowering a video's rating removes the gate.
 
