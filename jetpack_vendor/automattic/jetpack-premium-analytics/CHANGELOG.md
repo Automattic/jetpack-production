@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Insights: Reorder and resize the default widgets so each row fills the grid, and add Popular post, Total views, and Total visitors to the defaults.
 - Load the dashboard assets only on requests that render an admin screen, so front-end page views no longer parse them.
 - Name the dashboard "Stats" in its header and breadcrumbs, and mark the header with the Jetpack logo.
+- Post detail page: apply the video-page parity fixes — inline date filters on the title row with row-width degradation and no comparison, long-title overflow and featured-image sizing fixes, and the post-views day-shift fix.
 - Rename the "Most commented posts" and "Most commented authors" widgets to "Top commented posts" and "Top commented authors".
 - Route the ui, fields, and icons packages through the externals script module so shared third-party libraries are no longer duplicated across their bundles.
 - Subscribers: Drop Subscriber highlights from the default widgets so the board opens on the chart.
