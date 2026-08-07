@@ -13,9 +13,11 @@ This is an alpha version! The changes listed here are not final.
 - Add form fill duration to form entries.
 
 ### Changed
+- Add the site ID and Jetpack version to the response email open tracking event.
 - Update package dependencies.
 
 ### Fixed
+- Ensure the submit button inside a Form renders as a button element so forms saved without an explicit element can still be submitted.
 - Form block: show the fallback notification recipient as a placeholder so it is clear when no address is saved.
 - Form editor: keep the form block selected so the form settings sidebar stays reachable.
 
