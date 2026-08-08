@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Button block: Add a filter for the default HTML element the block falls back to when it does not specify one.
 - Owner disconnect dialog: own its styles under a local class namespace instead of borrowing the connection package's disconnect-dialog CSS.
 - Premium Analytics: point the dashboard stats card, newsletter widget, and block editor email stats link at the Analytics dashboard when it replaces the Stats page.
+- Rename Tracks properties on the Jetpack AI MCP settings events: source is now ref, and tool_id is now ability_name, matching the AI product events standard.
 - Site options: expose difm_lite_site_options.is_website_content_submitted for sites with an active DIFM Lite build (WordPress.com only).
 - Update lock file.
 - Update package dependencies.
