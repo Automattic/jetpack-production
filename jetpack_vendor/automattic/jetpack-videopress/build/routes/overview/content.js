@@ -59,7 +59,6 @@ __( "See all videos", "jetpack-videopress-pkg" );
 __( "%1$s of %2$s of cloud video storage", "jetpack-videopress-pkg" );
 __( "Top videos by watch time", "jetpack-videopress-pkg" );
 __( "No videos watched in the chosen period.", "jetpack-videopress-pkg" );
-__( "Notifications", "jetpack-videopress-pkg" );
 __( "Reset zoom", "jetpack-videopress-pkg" );
 __( "View details", "jetpack-videopress-pkg" );
 __( "Close", "jetpack-videopress-pkg" );

@@ -527,7 +527,6 @@ __( "Last 30 days", "jetpack-podcast" );
 __( "Last 90 days", "jetpack-podcast" );
 __( "Last 12 months", "jetpack-podcast" );
 __( "All time", "jetpack-podcast" );
-__( "Notifications" );
 __( "Reset zoom", "jetpack-charts" );
 __( "Current period", "jetpack-charts" );
 __( "Previous period", "jetpack-charts" );
