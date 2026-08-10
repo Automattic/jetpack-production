@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Security
 - Ensure post IDs are cast to integers before they are used in the post views query on Simple sites.
 
+### Changed
+- Rename the text domain to jetpack-stats-pkg, freeing jetpack-stats for the standalone plugin.
+
 ## [0.20.0] - 2026-07-22
 ### Added
 - Add a per-site setting to make the Stats tracking pixel honor the WP Consent API statistics category. [#50602]

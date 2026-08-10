@@ -168,13 +168,13 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-seo',
       'ver' => '0.8.1-alpha1785952485',
     ),
-    'jetpack-stats' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-stats',
-      'ver' => '0.20.1-alpha1785896836',
-    ),
     'jetpack-stats-admin' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-stats-admin',
       'ver' => '0.32.1-alpha1785896836',
+    ),
+    'jetpack-stats-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-stats',
+      'ver' => '0.20.1-alpha1786339723',
     ),
     'jetpack-sync' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sync',
