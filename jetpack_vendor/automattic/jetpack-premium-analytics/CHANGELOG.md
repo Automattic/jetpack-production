@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Date controls: keep the date presets as a row of pills at every width. A narrow row abbreviates their labels instead of collapsing the whole choice into a dropdown.
 - Date controls: make comparison an additive control. With none active it is a + button rather than a full-width picker reading "No comparison", and picking a period collapses it into a labelled trigger.
 - Date controls: name the active comparison preset on the picker, e.g. "Prev. period", instead of the dates it resolves to. The section header already spells out the compared period.
+- Date filters panel: Allow measuring an external container with a reserved share, so the panel's responsive layout works in shrink-to-fit slots.
 - Date range presets now shorten their labels before collapsing into a select, and the switch is measured from the active language's own labels instead of a fixed width. The panel also measures itself, so callers no longer pass a container element.
 - Highlights: Always show the most recent year, and fit the full metrics at the minimum widget height. Tighten metric tile spacing in wide, short widgets. Show every metric when the widget has no saved metric selection, matching what the Metrics control displays.
 - Insights: Reorder and resize the default widgets so each row fills the grid, and add Popular post, Total views, and Total visitors to the defaults.
