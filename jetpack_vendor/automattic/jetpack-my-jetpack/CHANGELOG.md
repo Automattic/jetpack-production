@@ -5,16 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.41.2-alpha] - unreleased
+## [5.42.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Jetpack AI: Drive the product card from the new AI module with an inline on/off toggle.
+
 ### Changed
+- My Jetpack: limit the AI card's module toggle to internal testing environments ahead of release.
 - Stats: point the product card at the Premium Analytics dashboard when it replaces the Stats page.
 - Update package dependencies.
 
 ### Fixed
 - Fix the My Jetpack page rendering blank on WordPress 6.9.
+- My Jetpack: reload after toggling the AI card, so the toggle and every other surface reflect the new module state.
 
 ## [5.41.1] - 2026-08-03
 ### Changed
@@ -2822,7 +2827,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.41.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.41.1...5.41.2-alpha
+[5.42.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.41.1...5.42.0-alpha
 [5.41.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.41.0...5.41.1
 [5.41.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.9...5.41.0
 [5.40.9]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.8...5.40.9

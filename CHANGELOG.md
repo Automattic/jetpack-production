@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI: Add a Jetpack AI module as the site-wide master switch on self-hosted and Atomic, preserving explicit opt-outs.
 - AI Assistant: Add feature settings controls for Jetpack AI tools.
 - AI Assistant: Add Features view with per-feature AI toggles to the Jetpack AI admin page, limited to internal testing environments ahead of release.
 - Forms: Add form fill duration to feedback entries.
