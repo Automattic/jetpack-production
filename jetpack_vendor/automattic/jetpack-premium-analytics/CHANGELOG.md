@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Post detail page: apply the video-page parity fixes — inline date filters on the title row with row-width degradation and no comparison, long-title overflow and featured-image sizing fixes, and the post-views day-shift fix.
 - Rename the "Most commented posts" and "Most commented authors" widgets to "Top commented posts" and "Top commented authors".
 - Route the ui, fields, and icons packages through the externals script module so shared third-party libraries are no longer duplicated across their bundles.
+- Section header: truncate a long title with an ellipsis instead of wrapping it and compressing the date controls.
 - Section header: wrap the subtitle before shortening the date preset labels, and stack the title and the controls onto separate rows once the header is too narrow to hold them side by side.
 - Subscribers: Drop Subscriber highlights from the default widgets so the board opens on the chart.
 - Traffic: Reorder and resize the default widgets so each row fills the grid, rename Summary to Traffic summary, and drop Plan usage from the defaults.
@@ -49,6 +50,8 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Fix the dashboard opening as an empty edit-mode canvas when a post or video detail page was loaded first.
 - Dashboard: Make the first widget section a flex column so stacked chrome content lays out correctly until the upstream Gutenberg fix lands.
 - Date controls: shorten the preset labels before the comparison control runs out of room, rather than after it has already overflowed the header, and keep its label on one line.
+- Date filters panel: avoid a one-frame flash of mismatched labels while resizing.
+- Date filters panel: recover the full preset labels when space returns in the dashboard section header, instead of staying abbreviated.
 - Detail highlights: Scroll the stacked tiles at narrow widths instead of clipping the bottom tile out of reach.
 - Restore PHP 7.2 compatibility for the Premium Analytics admin page.
 - Stats: keep the "Last 24 hours" range aligned to whole hours so identical widget requests share one cached fetch.
