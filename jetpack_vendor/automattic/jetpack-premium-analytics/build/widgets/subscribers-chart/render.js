@@ -6,6 +6,8 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+__( "Line chart", "jetpack-premium-analytics-pkg" );
+__( "Bar chart", "jetpack-premium-analytics-pkg" );
 __( "Subscribers", "jetpack-premium-analytics-pkg" );
 __( "Paid subscribers", "jetpack-premium-analytics-pkg" );
 __( "Group by", "jetpack-premium-analytics-pkg" );
@@ -14,6 +16,7 @@ __( "By days", "jetpack-premium-analytics-pkg" );
 __( "By weeks", "jetpack-premium-analytics-pkg" );
 __( "By months", "jetpack-premium-analytics-pkg" );
 __( "Metrics", "jetpack-premium-analytics-pkg" );
+__( "Chart type", "jetpack-premium-analytics-pkg" );
 __( "Subscriber metric", "jetpack-premium-analytics-pkg" );
 __( "No metric selected. Please select a metric from the metrics list.", "jetpack-premium-analytics-pkg" );
 __( "No paid subscribers in this date range.", "jetpack-premium-analytics-pkg" );

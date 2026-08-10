@@ -6,8 +6,6 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: %s: the post's publish date, e.g. "Jun 5, 2026". */
-__( "Published %s", "jetpack-premium-analytics-pkg" );
 __( "Views", "jetpack-premium-analytics-pkg" );
 __( "Likes", "jetpack-premium-analytics-pkg" );
 __( "Comments", "jetpack-premium-analytics-pkg" );

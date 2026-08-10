@@ -6,10 +6,9 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "Views", "jetpack-premium-analytics-pkg" );
 __( "Impressions", "jetpack-premium-analytics-pkg" );
 __( "Hours watched", "jetpack-premium-analytics-pkg" );
+__( "Retention rate", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this video's highlights. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "Retry", "jetpack-premium-analytics-pkg" );
 __( "No highlights are available for this video.", "jetpack-premium-analytics-pkg" );
 __( "Open a video report to see its highlights here.", "jetpack-premium-analytics-pkg" );

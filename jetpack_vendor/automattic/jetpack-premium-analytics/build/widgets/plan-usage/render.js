@@ -6,8 +6,6 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 __( "You've surpassed your limit for two consecutive periods already.", "jetpack-premium-analytics-pkg" );
 __( "You've surpassed your limit the past month.", "jetpack-premium-analytics-pkg" );
 __( "Plan usage", "jetpack-premium-analytics-pkg" );

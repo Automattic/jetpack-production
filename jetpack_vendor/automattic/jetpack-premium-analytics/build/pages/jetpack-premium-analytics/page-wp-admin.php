@@ -87,9 +87,10 @@ function jpa_get_jetpack_premium_analytics_wp_admin_menu_items() {
  */
 function jpa_jetpack_premium_analytics_wp_admin_preload_data() {
 	// Define paths to preload - same for all pages
-	// Please also change packages/core-data/src/entities.js when changing this.
+	// This must exactly match the _fields list in packages/core-data/src/entities.js,
+	// same fields in the same order, or the preload is never consumed.
 	$preload_paths = array(
-		'/?_fields=description,gmt_offset,home,image_sizes,image_size_threshold,name,site_icon,site_icon_url,site_logo,timezone_string,url,page_for_posts,page_on_front,show_on_front',
+		'/?_fields=description,gmt_offset,home,image_max_bit_depth,image_sizes,image_size_threshold,image_strip_meta,name,site_icon,site_icon_url,site_logo,timezone_string,url,page_for_posts,page_on_front,show_on_front',
 		array( '/wp/v2/settings', 'OPTIONS' ),
 	);
 
@@ -198,7 +199,7 @@ function jpa_jetpack_premium_analytics_wp_admin_enqueue_scripts( $hook_suffix ) 
 				run();
 			}
 		}
-		JS;
+JS;
 		wp_add_inline_script(
 			'jetpack-premium-analytics-wp-admin-prerequisites',
 			sprintf(

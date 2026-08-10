@@ -6,8 +6,6 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load file downloads. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "No file downloads in this period.", "jetpack-premium-analytics-pkg" );

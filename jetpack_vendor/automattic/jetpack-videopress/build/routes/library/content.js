@@ -338,7 +338,7 @@ __( "There was an error testing Jetpack. Error: %s", "jetpack-videopress-pkg" );
 __( "Library", "jetpack-videopress-pkg" );
 __( "Stats", "jetpack-videopress-pkg" );
 __( "Settings", "jetpack-videopress-pkg" );
-__( "Professional quality, ad-free video hosting.", "jetpack-videopress-pkg" );
+__( "Host, manage, customize, and track your videos — all in one place.", "jetpack-videopress-pkg" );
 __( "Retry", "jetpack-videopress-pkg" );
 __( "Make public", "jetpack-videopress-pkg" );
 __( "Make private", "jetpack-videopress-pkg" );
