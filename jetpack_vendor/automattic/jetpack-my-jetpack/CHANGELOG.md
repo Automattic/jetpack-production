@@ -5,21 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.42.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [5.42.0] - 2026-08-10
+### Security
+- Cache the support chat authentication token per user instead of site-wide.
+- Only expose the full firewall configuration and scan report to users who can manage site options.
 
 ### Added
-- Jetpack AI: Drive the product card from the new AI module with an inline on/off toggle.
+- Jetpack AI: Drive the product card from the new AI module with an inline on/off toggle. [#50718]
 
 ### Changed
-- My Jetpack: limit the AI card's module toggle to internal testing environments ahead of release.
-- Stats: point the product card at the Premium Analytics dashboard when it replaces the Stats page.
-- Update package dependencies.
+- Limit the AI card's module toggle to internal testing environments ahead of release. [#50718]
+- Stats: Point the product card at the Premium Analytics dashboard when it replaces the Stats page. [#50926]
+- Update package dependencies. [#50509] [#51008]
 
 ### Fixed
-- Fix the My Jetpack page rendering blank on WordPress 6.9.
-- My Jetpack: reload after toggling the AI card, so the toggle and every other surface reflect the new module state.
+- Fix the My Jetpack page rendering blank on WordPress 6.9. [#50509]
+- Reload after toggling the AI card, so the toggle and every other surface reflect the new module state. [#50718]
 
 ## [5.41.1] - 2026-08-03
 ### Changed
@@ -2827,7 +2828,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.42.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.41.1...5.42.0-alpha
+[5.42.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.41.1...5.42.0
 [5.41.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.41.0...5.41.1
 [5.41.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.9...5.41.0
 [5.40.9]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.40.8...5.40.9

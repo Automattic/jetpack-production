@@ -5,21 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.24.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [7.24.0] - 2026-08-10
+### Security
+- Contact Form: Improve sanitization of content submitted through the file field.
 
 ### Added
-- Add form fill duration to form entries.
+- Add form fill duration to form entries. [#45786]
 
 ### Changed
-- Add the site ID and Jetpack version to the response email open tracking event.
-- Update package dependencies.
+- Add the site ID and Jetpack version to the response email open tracking event. [#51102]
+- Update package dependencies. [#50509] [#51008]
 
 ### Fixed
-- Ensure the submit button inside a Form renders as a button element so forms saved without an explicit element can still be submitted.
-- Form block: show the fallback notification recipient as a placeholder so it is clear when no address is saved.
-- Form editor: keep the form block selected so the form settings sidebar stays reachable.
+- Ensure the submit button inside a Form renders as a button element so forms saved without an explicit element can still be submitted. [#51046]
+- Form block: Show the fallback notification recipient as a placeholder so it is clear when no address is saved. [#51014]
+- Form editor: Keep the form block selected so the form settings sidebar stays reachable. [#51047]
 
 ## [7.23.4] - 2026-08-03
 ### Removed
@@ -2626,7 +2626,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.24.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.23.4...v7.24.0-alpha
+[7.24.0]: https://github.com/automattic/jetpack-forms/compare/v7.23.4...v7.24.0
 [7.23.4]: https://github.com/automattic/jetpack-forms/compare/v7.23.3...v7.23.4
 [7.23.3]: https://github.com/automattic/jetpack-forms/compare/v7.23.2...v7.23.3
 [7.23.2]: https://github.com/automattic/jetpack-forms/compare/v7.23.1...v7.23.2

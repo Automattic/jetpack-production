@@ -5,21 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.45.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [0.45.0] - 2026-08-10
+### Security
+- Improve escaping of block attributes rendered into inline styles.
+- Restrict the site information endpoint to administrators.
+- Verify per-attachment permissions when uploading or promoting a video.
+- Verify per-video access before issuing a playback token via the REST endpoint.
+- Verify per-video permissions on the poster endpoint.
+- Verify per-video permissions when updating video metadata.
 
 ### Added
-- Chapters: Add an Editor tab with a Chapters tool to the video dashboard and a chapter manager modal in the block editor, behind a feature flag that is off by default.
+- Chapters: Add an Editor tab with a Chapters tool to the video dashboard and a chapter manager modal in the block editor, behind a feature flag that is off by default. [#50986]
 
 ### Changed
-- Dashboard: Update the admin page subtitle copy.
-- Update package dependencies.
+- Dashboard: Update the admin page subtitle copy. [#51062]
+- Update package dependencies. [#50509] [#51008]
 
 ### Fixed
-- Dashboard: fix the blank Library page on right-to-left locales caused by a missing RTL stylesheet.
-- Dashboard: prevent a fatal error on the VideoPress page when the WordPress.com pricing request fails on a disconnected site.
-- Fix the age gate in the editor: the birth date can now be submitted, and lowering a video's rating removes the gate.
+- Dashboard: Fix the blank Library page on right-to-left locales caused by a missing RTL stylesheet. [#51111]
+- Dashboard: Prevent a fatal error on the VideoPress page when the WordPress.com pricing request fails on a disconnected site. [#50986]
+- Editor: Fix the age gate so the birth date can be submitted and lowering a video's rating removes the gate. [#51069]
 
 ## [0.44.0] - 2026-08-03
 ### Added
@@ -2137,7 +2142,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.45.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.44.0...v0.45.0-alpha
+[0.45.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.44.0...v0.45.0
 [0.44.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.43.0...v0.44.0
 [0.43.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.42.0...v0.43.0
 [0.42.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.41.0...v0.42.0

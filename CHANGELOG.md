@@ -19,9 +19,15 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI: Attach the site ID to MCP settings Tracks events, and add a source property to the settings view event.
 - AI Assistant: Scroll the Form block's AI prompt into view when it opens, so it no longer sits over the form.
+- Blocks: Fix an infinite refresh loop in the Goodreads block editor that regenerated the widget ID on every re-render and hammered the REST API.
+- Blocks: Restrict Goodreads scripts to the expected Goodreads widget endpoints.
 - Blocks: treat WordPress.com public API requests as a block-editor context so editor-only extensions load, restoring block plan availability (such as the core/video upgrade nudge) in the mobile editor.
 - Content Guidelines AI: Keep the empty-state banner from painting over the sticky page header while scrolling.
+- Display WordPress Posts widget: Escape remote site data before output.
+- Escape the Premium Content block login button label on output.
+- Harden the subscriber authentication endpoint so it only redirects within the current site.
 - Likes: Fix Like buttons sometimes getting stuck on "Loading…" and never appearing.
+- Memberships: Ensure the configured post access level is evaluated correctly before authorizing access to paywalled content.
 - Newsletter: Make the post-publish email confirmation more visible.
 - Newsletter: Save the post before generating an email preview, so the preview reflects the latest saved content (e.g. a newly-set featured image).
 - Newsletter: send the test email when pressing Enter, and show send errors as a proper error notice.
@@ -29,11 +35,18 @@ This is an alpha version! The changes listed here are not final.
 - Premium Content: stop treating a bare WordPress session as proof of subscription in the Subscriber Login and Premium Content login button blocks, which could hide the only way to recover a subscription token.
 - Random Redirect: avoid a fatal error when a theme or plugin already declares the module's redirect function.
 - Reprint export: Avoid a fatal error when another plugin loads an older version of the Status package.
-- Security: Require a Jetpack site (blog) token for JSON API endpoints that declare no capabilities, such as the Backup helper script endpoints, and reject user tokens regardless of privilege.
+- Require a Jetpack site (blog) token for JSON API endpoints that declare no capabilities, such as the Backup helper script endpoints, and reject user tokens regardless of privilege.
+- Resolve Redirect endpoint: Validate every redirect hop, and return a 400 error when a URL cannot be fetched, is blocked, or exceeds the redirect limit, instead of a 200 response with an empty URL.
+- REST API: Require the admin capability for all settings in a request that also updates Post by Email.
+- Security: Enforce per-item permission checks when editing media through the JSON API.
+- Security: External Media: Ensure imported files are always saved under a safe file name.
+- Security: Verify attachment ownership before removing an uploaded package in the plugin and theme install endpoints.
 - SEO: Hide the post list SEO columns for people who had customized Screen Options before those columns existed.
+- Sharing: Escape Tumblr share title, URL, and button label in official button output.
 - Subscribers: Restore the option to assign imported subscribers to specific newsletter categories on CSV upload and manual add.
 - Tiled Gallery: stop routing images through the external Photon domain on VIP sites when galleries are saved, and add a `jetpack_skip_photon_domain` filter to control it. Galleries published before this change keep their existing image URLs until they are saved again.
 - Top Posts & Pages: Only process as many posts as requested from the Stats API, cutting post and metadata lookups when rendering the block without changing which posts it shows.
+- WAF: Restrict firewall settings to administrators.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin Bar: Expose the command palette node through the admin bar endpoint.
