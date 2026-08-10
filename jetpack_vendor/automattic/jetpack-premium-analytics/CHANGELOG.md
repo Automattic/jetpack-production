@@ -49,6 +49,8 @@ This is an alpha version! The changes listed here are not final.
 - Date controls: shorten the preset labels before the comparison control runs out of room, rather than after it has already overflowed the header, and keep its label on one line.
 - Detail highlights: Scroll the stacked tiles at narrow widths instead of clipping the bottom tile out of reach.
 - Restore PHP 7.2 compatibility for the Premium Analytics admin page.
+- Stats: keep the "Last 24 hours" range aligned to whole hours so identical widget requests share one cached fetch.
+- Stats: send the full site-local date/time to Stats endpoints now that the API resolves it correctly, instead of trimming to a bare calendar day.
 - Stats breadcrumbs: Fix a long unbroken crumb widening the page into horizontal scrolling instead of truncating.
 
 ## 0.1.0 - 2026-08-03
