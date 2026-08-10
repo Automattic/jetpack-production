@@ -11,6 +11,8 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add feature settings controls for Jetpack AI tools.
 - AI Assistant: Add Features view with per-feature AI toggles to the Jetpack AI admin page, limited to internal testing environments ahead of release.
 - Forms: Add form fill duration to feedback entries.
+- Jetpack AI: hide the AI sidebar when the writing assistant and SEO enhancer toggles are both off.
+- Jetpack AI: the AI toolbar button now follows the writing assistant toggle.
 - REST API: Add atomic_email_block field to the site endpoint response.
 
 ### Bug fixes
