@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI: Attach the site ID to MCP settings Tracks events, and add a source property to the settings view event.
 - AI Assistant: Scroll the Form block's AI prompt into view when it opens, so it no longer sits over the form.
+- Blocks: treat WordPress.com public API requests as a block-editor context so editor-only extensions load, restoring block plan availability (such as the core/video upgrade nudge) in the mobile editor.
 - Content Guidelines AI: Keep the empty-state banner from painting over the sticky page header while scrolling.
 - Likes: Fix Like buttons sometimes getting stuck on "Loading…" and never appearing.
 - Newsletter: Make the post-publish email confirmation more visible.
