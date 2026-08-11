@@ -9,6 +9,7 @@
 __( "Loading", "jetpack-videopress-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-videopress-pkg" );
+__( "Dismiss", "jetpack-videopress-pkg" );
 __( "Jetpack Logo", "jetpack-videopress-pkg" );
 __( "An Automattic Airline", "jetpack-videopress-pkg" );
 /* translators: %1$s is button label 1 and %2$s is button label 2 */
@@ -38,6 +39,9 @@ __( "Stats", "jetpack-videopress-pkg" );
 __( "Settings", "jetpack-videopress-pkg" );
 __( "Host, manage, customize, and track your videos — all in one place.", "jetpack-videopress-pkg" );
 __( "A connection check failed.", "jetpack-videopress-pkg" );
+__( "You’re on the free plan, which allows 1 video upload. Upgrade for more storage and unlimited uploads.", "jetpack-videopress-pkg" );
+__( "You’ve reached the free plan’s 1-video limit. Upgrade to upload more.", "jetpack-videopress-pkg" );
+__( "Upgrade", "jetpack-videopress-pkg" );
 __( "Connect to set up VideoPress", "jetpack-videopress-pkg" );
 __( "VideoPress needs a connection to WordPress.com before you can upload and manage your videos.", "jetpack-videopress-pkg" );
 __( "Connecting…", "jetpack-videopress-pkg" );

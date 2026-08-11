@@ -340,6 +340,10 @@ __( "Stats", "jetpack-videopress-pkg" );
 __( "Settings", "jetpack-videopress-pkg" );
 __( "Host, manage, customize, and track your videos — all in one place.", "jetpack-videopress-pkg" );
 __( "Retry", "jetpack-videopress-pkg" );
+__( "A connection check failed.", "jetpack-videopress-pkg" );
+__( "You’re on the free plan, which allows 1 video upload. Upgrade for more storage and unlimited uploads.", "jetpack-videopress-pkg" );
+__( "You’ve reached the free plan’s 1-video limit. Upgrade to upload more.", "jetpack-videopress-pkg" );
+__( "Upgrade", "jetpack-videopress-pkg" );
 __( "Make public", "jetpack-videopress-pkg" );
 __( "Make private", "jetpack-videopress-pkg" );
 __( "Reset to site default", "jetpack-videopress-pkg" );
@@ -370,7 +374,6 @@ __( "Duration", "jetpack-videopress-pkg" );
 __( "Orientation", "jetpack-videopress-pkg" );
 __( "Privacy", "jetpack-videopress-pkg" );
 __( "File size", "jetpack-videopress-pkg" );
-__( "A connection check failed.", "jetpack-videopress-pkg" );
 __( "Connect to set up VideoPress", "jetpack-videopress-pkg" );
 __( "VideoPress needs a connection to WordPress.com before you can upload and manage your videos.", "jetpack-videopress-pkg" );
 __( "Connecting…", "jetpack-videopress-pkg" );
@@ -386,8 +389,6 @@ __( "Video uploaded to VideoPress.", "jetpack-videopress-pkg" );
 __( "Failed to upload video to VideoPress: %s", "jetpack-videopress-pkg" );
 __( "Failed to upload video to VideoPress.", "jetpack-videopress-pkg" );
 __( "Only video files can be uploaded.", "jetpack-videopress-pkg" );
-__( "You’ve reached the free plan’s 1-video limit. Upgrade to upload more.", "jetpack-videopress-pkg" );
-__( "Upgrade", "jetpack-videopress-pkg" );
 /* translators: %d: number of videos that could not be uploaded because the plan limit was reached. */
 _n( "%d video wasn’t uploaded because it exceeds your plan’s limit.", "%d videos weren’t uploaded because they exceed your plan’s limit.", 1, "jetpack-videopress-pkg" );
 /* translators: %d: number of videos being deleted. */
