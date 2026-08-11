@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a site data endpoint so plugins without the Jetpack plugin can read the WordPress.com site record.
+- Connection Health: Surface the blocked-request connection failure (host blocking WordPress.com requests) as a verified connection error with an admin notice, and re-check the connection daily on the heartbeat cron.
 
 ### Fixed
 - Error Handler: Prevent a fatal error when a request runs during a plugin update and an older version of the Error_Handler class is already loaded.
