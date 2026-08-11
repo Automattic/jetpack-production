@@ -265,4 +265,3 @@ __( "Widget options", "jetpack-premium-analytics-pkg" );
 __( "Width", "jetpack-premium-analytics-pkg" );
 __( "Use available width", "jetpack-premium-analytics-pkg" );
 __( "Make full width", "jetpack-premium-analytics-pkg" );
-__( "Track your site performance and visitor insights.", "jetpack-premium-analytics-pkg" );
