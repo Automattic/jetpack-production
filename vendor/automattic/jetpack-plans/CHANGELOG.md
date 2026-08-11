@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.12.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add update_from_site_record() to set the cached plan and products from a decoded site record.
+
 ## [0.11.9] - 2026-06-08
 ### Changed
 - Internal updates.
@@ -262,6 +269,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 - Moved the options class into Connection. [#24095]
 
+[0.12.0-alpha]: https://github.com/Automattic/jetpack-plans/compare/v0.11.9...v0.12.0-alpha
 [0.11.9]: https://github.com/Automattic/jetpack-plans/compare/v0.11.8...v0.11.9
 [0.11.8]: https://github.com/Automattic/jetpack-plans/compare/v0.11.7...v0.11.8
 [0.11.7]: https://github.com/Automattic/jetpack-plans/compare/v0.11.6...v0.11.7
