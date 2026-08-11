@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Slider field: keep the default label when the form uses the Outlined or Animated style, so the label no longer overlaps the slider track.
+
 ## [7.24.0] - 2026-08-10
 ### Security
 - Contact Form: Improve sanitization of content submitted through the file field.
