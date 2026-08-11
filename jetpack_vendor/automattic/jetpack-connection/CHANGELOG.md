@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a site data endpoint so plugins without the Jetpack plugin can read the WordPress.com site record.
 
+### Fixed
+- Error Handler: Prevent a fatal error when a request runs during a plugin update and an older version of the Error_Handler class is already loaded.
+
 ## [8.9.0] - 2026-08-06
 ### Changed
 - Error Handler: Standardize the stored connection error structure with explicit error type and direction fields. [#50992]

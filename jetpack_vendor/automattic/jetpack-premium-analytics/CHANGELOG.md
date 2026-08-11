@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Metric tabs: Spread cards evenly across the chart, wrap them before their contents overlap, match the prototype's card fill, spacing and headline value size, and render a lone metric as a static headline.
 - Section header: truncate a long title with an ellipsis instead of wrapping it and compressing the date controls.
 - Widget copy: Use sentence case for the drill-down back links, and shorten the Popular post description to one sentence.
+- Widgets: restyle the footer actions to match the dashboard design — a "View all" link and an icon-only CSV download.
 
 ### Fixed
 - Dashboard: add spacing below the widget grid so the last row no longer sits flush against the end of the page.
