@@ -13,5 +13,5 @@ __( "Likes", "jetpack-premium-analytics-pkg" );
 __( "Comments", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load annual highlights. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
-__( "No highlights to show yet.", "jetpack-premium-analytics-pkg" );
+__( "No highlights for this period.", "jetpack-premium-analytics-pkg" );
 __( "Select at least one metric to display.", "jetpack-premium-analytics-pkg" );
