@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: add spacing below the widget grid so the last row no longer sits flush against the end of the page.
 - Date filters panel: avoid a one-frame flash of mismatched labels while resizing.
 - Date filters panel: recover the full preset labels when space returns in the dashboard section header, instead of staying abbreviated.
+- Premium Analytics: remove the duplicate padding around the chart-tab widgets.
 - Report a missing widget manifest as a partial build, so a half-deployed dashboard is no longer silent.
 
 ## [0.2.0] - 2026-08-10
