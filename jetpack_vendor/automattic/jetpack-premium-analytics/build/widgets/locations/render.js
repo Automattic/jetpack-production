@@ -11,7 +11,7 @@ __( "Country", "jetpack-premium-analytics-pkg" );
 __( "Views", "jetpack-premium-analytics-pkg" );
 /* translators: %s is the country name */
 __( "View regions in %s", "jetpack-premium-analytics-pkg" );
-__( "All Locations", "jetpack-premium-analytics-pkg" );
+__( "All locations", "jetpack-premium-analytics-pkg" );
 __( "View all locations", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load location data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );

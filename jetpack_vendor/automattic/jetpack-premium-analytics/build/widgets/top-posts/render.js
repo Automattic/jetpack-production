@@ -28,6 +28,6 @@ __( "Dates", "jetpack-premium-analytics-pkg" );
 __( "Aggregated", "jetpack-premium-analytics-pkg" );
 __( "Others", "jetpack-premium-analytics-pkg" );
 __( "Post types", "jetpack-premium-analytics-pkg" );
-__( "All Archives", "jetpack-premium-analytics-pkg" );
+__( "All archives", "jetpack-premium-analytics-pkg" );
 __( "Back to the previous archive list", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load archives. Please try again in a moment.", "jetpack-premium-analytics-pkg" );

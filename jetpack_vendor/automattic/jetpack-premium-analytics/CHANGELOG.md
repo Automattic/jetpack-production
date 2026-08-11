@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Highlights: Follow the section's all-time and yearly date selection instead of always showing the most recent year, and show every metric on a dashboard whose layout carries no metric selection.
 - Metric tabs: Spread cards evenly across the chart, wrap them before their contents overlap, match the prototype's card fill, spacing and headline value size, and render a lone metric as a static headline.
 - Section header: truncate a long title with an ellipsis instead of wrapping it and compressing the date controls.
+- Widget copy: Use sentence case for the drill-down back links, and shorten the Popular post description to one sentence.
 
 ### Fixed
 - Dashboard: add spacing below the widget grid so the last row no longer sits flush against the end of the page.
