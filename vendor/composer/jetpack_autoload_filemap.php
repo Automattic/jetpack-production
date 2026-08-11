@@ -11,28 +11,8 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-assets/actions.php'
 	),
 	'7372b7fb88a9723cf5b76d456eb0b738' => array(
-		'version' => '8.9.0.0',
+		'version' => '8.9.0.1',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/actions.php'
-	),
-	'c8f84af3c24cff85f963d6926f4b2d42' => array(
-		'version' => '0.8.1.0',
-		'path'    => $vendorDir . '/wp-php-toolkit/filesystem/functions.php'
-	),
-	'293c13b83c57dba3ffcaf4c9d7af49fc' => array(
-		'version' => '0.8.1.0',
-		'path'    => $vendorDir . '/wp-php-toolkit/encoding/utf8.php'
-	),
-	'c2c7ec202e84a85f19abab25dd38d82d' => array(
-		'version' => '0.8.1.0',
-		'path'    => $vendorDir . '/wp-php-toolkit/encoding/compat-utf8.php'
-	),
-	'713ad46f1f515216614131421c1ab59c' => array(
-		'version' => '0.8.1.0',
-		'path'    => $vendorDir . '/wp-php-toolkit/encoding/utf8-encoder.php'
-	),
-	'3ece6d8ef10b1c2fd398a0c341044be9' => array(
-		'version' => '0.8.1.0',
-		'path'    => $vendorDir . '/wp-php-toolkit/data-liberation/URL/functions.php'
 	),
 	'd4eb94df91a729802d18373ee8cdc79f' => array(
 		'version' => '4.3.12.0',
@@ -49,13 +29,5 @@ return array(
 	'3d45c7e6a7f0e71849e33afe4b3b3ede' => array(
 		'version' => '0.28.11.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/cli.php'
-	),
-	'ec471f3ca20b4a3001a1f5146b94c5d9' => array(
-		'version' => '0.9.1.0',
-		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/utils.php'
-	),
-	'3ab0c4c07c88697572b9833a27c0ed32' => array(
-		'version' => '0.9.1.0',
-		'path'    => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/class-pdo-polyfill.php'
 	),
 );
