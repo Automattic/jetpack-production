@@ -36,7 +36,6 @@ This is an alpha version! The changes listed here are not final.
 - Premium Content: self-heal the wpcom_user_id link on a local WordPress account from a freshly-verified magic-link token, so subscription access can be recognized on subsequent visits without another login round trip.
 - Premium Content: stop treating a bare WordPress session as proof of subscription in the Subscriber Login and Premium Content login button blocks, which could hide the only way to recover a subscription token.
 - Random Redirect: avoid a fatal error when a theme or plugin already declares the module's redirect function.
-- Reprint export: Avoid a fatal error when another plugin loads an older version of the Status package.
 - Require a Jetpack site (blog) token for JSON API endpoints that declare no capabilities, such as the Backup helper script endpoints, and reject user tokens regardless of privilege.
 - Resolve Redirect endpoint: Validate every redirect hop, and return a 400 error when a URL cannot be fetched, is blocked, or exceeds the redirect limit, instead of a 200 response with an empty URL.
 - REST API: Require the admin capability for all settings in a request that also updates Post by Email.
@@ -56,6 +55,7 @@ This is an alpha version! The changes listed here are not final.
 - Move the site data endpoint into the Connection package. Deprecate Jetpack_Core_Json_Api_Endpoints::site_data() and ::get_site_data(), which now delegate to the package.
 - Owner disconnect dialog: own its styles under a local class namespace instead of borrowing the connection package's disconnect-dialog CSS.
 - Premium Analytics: point the dashboard stats card, newsletter widget, and block editor email stats link at the Analytics dashboard when it replaces the Stats page.
+- Remove Reprint full-site export support. The ?reprint-api-jetpack endpoint, the jetpack/v4 REST routes and the jetpack_reprint_export_available filter are gone. On Atomic sites, export continues to work through wpcomsh.
 - Rename Tracks properties on the Jetpack AI MCP settings events: source is now ref, and tool_id is now ability_name, matching the AI product events standard.
 - Site options: expose difm_lite_site_options.is_website_content_submitted for sites with an active DIFM Lite build (WordPress.com only).
 - Update lock file.

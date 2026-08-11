@@ -8,15 +8,8 @@ $baseDir = dirname($vendorDir);
 return array(
     '3773ef3f09c37da5478d578e32b03a4b' => $baseDir . '/jetpack_vendor/automattic/jetpack-assets/actions.php',
     '7372b7fb88a9723cf5b76d456eb0b738' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/actions.php',
-    'c8f84af3c24cff85f963d6926f4b2d42' => $vendorDir . '/wp-php-toolkit/filesystem/functions.php',
-    '293c13b83c57dba3ffcaf4c9d7af49fc' => $vendorDir . '/wp-php-toolkit/encoding/utf8.php',
-    'c2c7ec202e84a85f19abab25dd38d82d' => $vendorDir . '/wp-php-toolkit/encoding/compat-utf8.php',
-    '713ad46f1f515216614131421c1ab59c' => $vendorDir . '/wp-php-toolkit/encoding/utf8-encoder.php',
-    '3ece6d8ef10b1c2fd398a0c341044be9' => $vendorDir . '/wp-php-toolkit/data-liberation/URL/functions.php',
     'd4eb94df91a729802d18373ee8cdc79f' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/actions.php',
     'd9927a8ddcd8b3a40fb28c24213827ff' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/actions.php',
     'e6f7f640a6586216432b53e5c9d1b472' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/utilities.php',
     '3d45c7e6a7f0e71849e33afe4b3b3ede' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/cli.php',
-    'ec471f3ca20b4a3001a1f5146b94c5d9' => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/utils.php',
-    '3ab0c4c07c88697572b9833a27c0ed32' => $vendorDir . '/wp-php-toolkit/reprint-exporter/src/class-pdo-polyfill.php',
 );
