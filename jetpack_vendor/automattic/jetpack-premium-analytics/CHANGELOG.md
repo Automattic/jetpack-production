@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Metric tabs: Spread cards evenly across the chart, wrap them before their contents overlap, match the prototype's card fill, spacing and headline value size, and render a lone metric as a static headline.
 - Section header: truncate a long title with an ellipsis instead of wrapping it and compressing the date controls.
 
 ### Fixed
