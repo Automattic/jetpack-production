@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - REST API: Add atomic_email_block field to the site endpoint response.
 
 ### Bug fixes
+- AI: Add the is_a11n and is_test audience properties to the MCP settings Tracks events.
 - AI: Attach the site ID to MCP settings Tracks events, and add a source property to the settings view event.
 - AI Assistant: Scroll the Form block's AI prompt into view when it opens, so it no longer sits over the form.
 - Blocks: Fix an infinite refresh loop in the Goodreads block editor that regenerated the widget ID on every re-render and hammered the REST API.
