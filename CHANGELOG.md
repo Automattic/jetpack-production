@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Display WordPress Posts widget: Escape remote site data before output.
 - Editor: refresh the cached plan when returning from a plan purchase so paid blocks (such as the Forms file upload field) stop showing their upgrade nudge once the plan is active.
 - Escape the Premium Content block login button label on output.
+- Fix the premium block upgrade banner rendering collapsed and too narrow on the site frontend.
 - Harden the subscriber authentication endpoint so it only redirects within the current site.
 - Likes: Fix Like buttons sometimes getting stuck on "Loading…" and never appearing.
 - Memberships: Ensure the configured post access level is evaluated correctly before authorizing access to paywalled content.
