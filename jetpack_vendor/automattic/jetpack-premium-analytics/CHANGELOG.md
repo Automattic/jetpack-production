@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Widgets: restyle the footer actions to match the dashboard design — a "View all" link and an icon-only CSV download.
 
 ### Fixed
+- Darken and enlarge chart axis labels, and show a tooltip when hovering a Devices chart segment.
 - Dashboard: add spacing below the widget grid so the last row no longer sits flush against the end of the page.
 - Date filters panel: avoid a one-frame flash of mismatched labels while resizing.
 - Date filters panel: recover the full preset labels when space returns in the dashboard section header, instead of staying abbreviated.
