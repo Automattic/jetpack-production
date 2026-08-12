@@ -14,7 +14,9 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: show an explanation instead of a blank page when the dashboard assets are missing.
+- Grouped field labels: lower the legend padding reset so themes and global styles can override it.
 - Rating field: keep the default left-aligned, borderless rendering under the Outlined and Animated form styles.
+- Send the site ID as `blog_id` on the email open Tracks event so it lands in the blogid column.
 - Slider field: keep the default label when the form uses the Outlined or Animated style, so the label no longer overlaps the slider track.
 
 ## [7.24.0] - 2026-08-10
