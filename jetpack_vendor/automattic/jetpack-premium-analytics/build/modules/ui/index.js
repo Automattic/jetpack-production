@@ -46,6 +46,7 @@ __( "By months", "jetpack-premium-analytics-pkg" );
 __( "By quarters", "jetpack-premium-analytics-pkg" );
 __( "By years", "jetpack-premium-analytics-pkg" );
 __( "Chart interval", "jetpack-premium-analytics-pkg" );
+__( "Next period", "jetpack-premium-analytics-pkg" );
 __( "From", "jetpack-premium-analytics-pkg" );
 __( "To", "jetpack-premium-analytics-pkg" );
 __( "Cancel", "jetpack-premium-analytics-pkg" );

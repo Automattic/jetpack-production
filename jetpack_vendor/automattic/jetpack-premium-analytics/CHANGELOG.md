@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Date controls: offer an hourly view for multi-day ranges under a week, keeping days as the default.
+- Date controls: step the active window backward and forward by its own length. The forward control appears once the window is no longer the latest one.
 - Insights: add a Popular days widget showing the busiest day of the week and how views are distributed across the week.
 - Insights: add a Traffic views activity widget showing daily site views as a calendar heatmap. Center the loading spinner and error message in the calendar heatmap widgets instead of pinning them to the left edge.
 
@@ -29,10 +31,12 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Darken and enlarge chart axis labels, and show a tooltip when hovering a Devices chart segment.
 - Dashboard: add spacing below the widget grid so the last row no longer sits flush against the end of the page.
+- Date controls: bucket a day-long range by hours. Switching to "Last 24 hours" from a range shown by days kept the daily bucket, drawing the whole window as a single bar.
 - Date filters panel: avoid a one-frame flash of mismatched labels while resizing.
 - Date filters panel: recover the full preset labels when space returns in the dashboard section header, instead of staying abbreviated.
 - Premium Analytics: remove the duplicate padding around the chart-tab widgets.
 - Report a missing widget manifest as a partial build, so a half-deployed dashboard is no longer silent.
+- Section header: describe an hour-snapped window by its full length and name a rolling day window by its end day.
 - Stats: align the post activity heatmap with the design: draw the current week only through today, and lead the cell tooltip with the view count.
 - Storybook: keep a widget's forced loading, error, and empty stories from serving each other's cached data.
 
