@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Escape the Premium Content block login button label on output.
 - Fix the premium block upgrade banner rendering collapsed and too narrow on the site frontend.
 - Harden the subscriber authentication endpoint so it only redirects within the current site.
+- Heartbeat: restore identity crisis reporting in the WP-CLI status command.
 - Likes: Fix Like buttons sometimes getting stuck on "Loading…" and never appearing.
 - Memberships: Ensure the configured post access level is evaluated correctly before authorizing access to paywalled content.
 - Newsletter: Make the post-publish email confirmation more visible.
@@ -53,6 +54,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin Bar: Expose the command palette node through the admin bar endpoint.
 - Button block: Add a filter for the default HTML element the block falls back to when it does not specify one.
+- Deprecate Jetpack::get_stat_data() and Jetpack::check_identity_crisis() in favor of their Connection package equivalents.
 - Move the site data endpoint into the Connection package. Deprecate Jetpack_Core_Json_Api_Endpoints::site_data() and ::get_site_data(), which now delegate to the package.
 - Owner disconnect dialog: own its styles under a local class namespace instead of borrowing the connection package's disconnect-dialog CSS.
 - Premium Analytics: point the dashboard stats card, newsletter widget, and block editor email stats link at the Analytics dashboard when it replaces the Stats page.
