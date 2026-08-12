@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Chart widgets: Remove the Metrics selector from Traffic summary, Subscribers summary, WordAds, and Store performance — the metric tabs already choose what the chart plots.
 - Dashboard: Give each section its own heading and description.
+- Detail pages: match the dashboard's tightened widget Card padding.
 - Exclude source map files from the distributed package.
 - Highlights: Follow the section's all-time and yearly date selection instead of always showing the most recent year, and show every metric on a dashboard whose layout carries no metric selection.
 - Metric tabs: Spread cards evenly across the chart, wrap them before their contents overlap, match the prototype's card fill, spacing and headline value size, and render a lone metric as a static headline.
@@ -32,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: remove the duplicate padding around the chart-tab widgets.
 - Report a missing widget manifest as a partial build, so a half-deployed dashboard is no longer silent.
 - Stats: align the post activity heatmap with the design: draw the current week only through today, and lead the cell tooltip with the view count.
+- Storybook: keep a widget's forced loading, error, and empty stories from serving each other's cached data.
 
 ## [0.2.0] - 2026-08-10
 ### Added
