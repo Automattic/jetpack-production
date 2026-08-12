@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: show an explanation instead of a blank page when the dashboard assets are missing.
+- Forms: prevent a fatal error when logging webhook responses with unexpected header types.
 - Grouped field labels: lower the legend padding reset so themes and global styles can override it.
 - Rating field: keep the default left-aligned, borderless rendering under the Outlined and Animated form styles.
 - Send the site ID as `blog_id` on the email open Tracks event so it lands in the blogid column.
