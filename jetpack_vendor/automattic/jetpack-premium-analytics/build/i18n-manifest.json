@@ -91,6 +91,7 @@
 		"build/widgets/total-visitors/render.js",
 		"build/widgets/traffic-chart/render.js",
 		"build/widgets/traffic-chart/widget.js",
+		"build/widgets/traffic-views-activity/render.js",
 		"build/widgets/utm-insights/render.js",
 		"build/widgets/utm-insights/widget.js",
 		"build/widgets/video-detail-embeds/render.js",
