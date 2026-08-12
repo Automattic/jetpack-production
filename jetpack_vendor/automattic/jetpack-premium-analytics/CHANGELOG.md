@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Posting activity: Show more history, larger cells, and a count-first tooltip, and drop the Fewer/More posts legend.
 - Section header: truncate a long title with an ellipsis instead of wrapping it and compressing the date controls.
 - Widget copy: Use sentence case for the drill-down back links, and shorten the Popular post description to one sentence.
+- Widgets: Order the traffic metric tiles Views, Visitors, Comments, Likes, and name the Latest emails sent view selector "By open rate" and "By click rate".
 - Widgets: restyle the footer actions to match the dashboard design — a "View all" link and an icon-only CSV download.
 
 ### Fixed

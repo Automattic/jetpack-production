@@ -8,5 +8,5 @@
 
 __( "Number of results", "jetpack-premium-analytics-pkg" );
 __( "View by", "jetpack-premium-analytics-pkg" );
-__( "Open rate", "jetpack-premium-analytics-pkg" );
-__( "Click rate", "jetpack-premium-analytics-pkg" );
+__( "By open rate", "jetpack-premium-analytics-pkg" );
+__( "By click rate", "jetpack-premium-analytics-pkg" );
