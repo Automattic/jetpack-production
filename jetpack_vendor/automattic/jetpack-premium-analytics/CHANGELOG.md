@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Date filters panel: recover the full preset labels when space returns in the dashboard section header, instead of staying abbreviated.
 - Premium Analytics: remove the duplicate padding around the chart-tab widgets.
 - Report a missing widget manifest as a partial build, so a half-deployed dashboard is no longer silent.
+- Stats: align the post activity heatmap with the design: draw the current week only through today, and lead the cell tooltip with the view count.
 
 ## [0.2.0] - 2026-08-10
 ### Added
