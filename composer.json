@@ -42,7 +42,7 @@
 		"automattic/jetpack-logo": "^3.0.9",
 		"automattic/jetpack-masterbar": "^0.27.37-alpha",
 		"automattic/jetpack-menu-badges": "^0.1.0",
-		"automattic/jetpack-my-jetpack": "^5.42.2",
+		"automattic/jetpack-my-jetpack": "^5.42.3-alpha",
 		"automattic/jetpack-newsletter": "^0.12.5-alpha",
 		"automattic/jetpack-paypal-payments": "^0.7.12-alpha",
 		"automattic/jetpack-plugins-installer": "^0.5.11",
