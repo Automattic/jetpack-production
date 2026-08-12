@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.10.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [8.10.1] - 2026-08-12
 ### Fixed
-- Report connection errors that happen while signing an outgoing request, record the specific reason the token could not be loaded, and store the request body hash with them.
+- Report connection errors that happen while signing an outgoing request, record the specific reason the token could not be loaded, and store the request body hash with them. [#51116]
 
 ## [8.10.0] - 2026-08-11
 ### Added
@@ -1993,7 +1990,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[8.10.1-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.10.0...v8.10.1-alpha
+[8.10.1]: https://github.com/Automattic/jetpack-connection/compare/v8.10.0...v8.10.1
 [8.10.0]: https://github.com/Automattic/jetpack-connection/compare/v8.9.0...v8.10.0
 [8.9.0]: https://github.com/Automattic/jetpack-connection/compare/v8.8.2...v8.9.0
 [8.8.2]: https://github.com/Automattic/jetpack-connection/compare/v8.8.1...v8.8.2
