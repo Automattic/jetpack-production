@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.24.1-alpha] - unreleased
+## [7.25.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Contact Form: Add background image support to the Form and Step blocks.
 
 ### Changed
 - Update package dependencies.
@@ -16,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: show an explanation instead of a blank page when the dashboard assets are missing.
 - Forms: prevent a fatal error when logging webhook responses with unexpected header types.
 - Grouped field labels: lower the legend padding reset so themes and global styles can override it.
+- Multistep forms: Keep a step's padding inside its width. Published forms whose steps have padding will change appearance: the step now matches the width of the form, with its fields inset by the padding, instead of overflowing past the form's right edge.
 - Rating field: keep the default left-aligned, borderless rendering under the Outlined and Animated form styles.
 - Send the site ID as `blog_id` on the email open Tracks event so it lands in the blogid column.
 - Slider field: keep the default label when the form uses the Outlined or Animated style, so the label no longer overlaps the slider track.
@@ -2641,7 +2645,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.24.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.24.0...v7.24.1-alpha
+[7.25.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.24.0...v7.25.0-alpha
 [7.24.0]: https://github.com/automattic/jetpack-forms/compare/v7.23.4...v7.24.0
 [7.23.4]: https://github.com/automattic/jetpack-forms/compare/v7.23.3...v7.23.4
 [7.23.3]: https://github.com/automattic/jetpack-forms/compare/v7.23.2...v7.23.3

@@ -438,7 +438,7 @@ class Dashboard {
 	 * The legacy bundle is no fallback here: load_admin_scripts() skips it on this screen.
 	 * So report the problem instead of rendering a blank page.
 	 *
-	 * @since 7.24.1-alpha
+	 * @since 7.25.0-alpha
 	 */
 	public function render_wp_build_unavailable() {
 		?>
