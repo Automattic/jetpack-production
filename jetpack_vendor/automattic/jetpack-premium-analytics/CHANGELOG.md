@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Date controls: Let each dashboard section declare whether its header offers the period-over-period comparison control.
 - Date controls: offer an hourly view for multi-day ranges under a week, keeping days as the default.
 - Date controls: step the active window backward and forward by its own length. The forward control appears once the window is no longer the latest one.
 - Insights: add a Popular days widget showing the busiest day of the week and how views are distributed across the week.
