@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Feed: speed up podcast feed generation on large catalogues.
+
 ## [1.4.4] - 2026-08-10
 ### Changed
 - Update package dependencies. [#50509]
