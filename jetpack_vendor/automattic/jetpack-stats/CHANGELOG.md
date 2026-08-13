@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.20.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.20.2] - 2026-08-13
 ### Fixed
-- Pass a valid first argument to the WordPress.com Simple daily history lookup.
+- Fix daily history lookups on WordPress.com sites. [#51197]
 
 ## [0.20.1] - 2026-08-10
 ### Security
@@ -365,7 +362,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
-[0.20.2-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.20.1...v0.20.2-alpha
+[0.20.2]: https://github.com/Automattic/jetpack-stats/compare/v0.20.1...v0.20.2
 [0.20.1]: https://github.com/Automattic/jetpack-stats/compare/v0.20.0...v0.20.1
 [0.20.0]: https://github.com/Automattic/jetpack-stats/compare/v0.19.7...v0.20.0
 [0.19.7]: https://github.com/Automattic/jetpack-stats/compare/v0.19.6...v0.19.7
