@@ -5,18 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.10.2-alpha] - unreleased
+## [8.10.3-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## [8.10.2] - 2026-08-13
 ### Security
-- Connection: Leave another user's broken-token error out of the connection error data, so the reconnect CTA is no longer offered against a token it cannot restore.
+- Connection: Leave another user's broken-token error out of the connection error data, so the reconnect CTA is no longer offered against a token it cannot restore. [#51034]
 
 ### Changed
-- Connection: Warn a secondary admin that reconnecting on the connection owner's behalf transfers ownership and disconnects every other user.
+- Connection: Warn a secondary admin that reconnecting on the connection owner's behalf transfers ownership and disconnects every other user. [#51034]
 
 ### Fixed
-- Connection: Stop displaying connection owner errors that refer to a previous owner.
+- Connection: Stop displaying connection owner errors that refer to a previous owner. [#51034]
 
 ## [8.10.1] - 2026-08-12
 ### Fixed
@@ -2003,7 +2004,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[8.10.2-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.10.1...v8.10.2-alpha
+[8.10.3-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.10.2...v8.10.3-alpha
+[8.10.2]: https://github.com/Automattic/jetpack-connection/compare/v8.10.1...v8.10.2
 [8.10.1]: https://github.com/Automattic/jetpack-connection/compare/v8.10.0...v8.10.1
 [8.10.0]: https://github.com/Automattic/jetpack-connection/compare/v8.9.0...v8.10.0
 [8.9.0]: https://github.com/Automattic/jetpack-connection/compare/v8.8.2...v8.9.0
