@@ -434,6 +434,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_2_a_0
         'Automattic\\Jetpack\\Publicize\\Social_Image_Generator\\Templates' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/class-templates.php',
         'Automattic\\Jetpack\\Redirect' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php',
         'Automattic\\Jetpack\\Roles' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php',
+        'Automattic\\Jetpack\\SEO\\AI_SEO_Enhancer' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-ai-seo-enhancer.php',
         'Automattic\\Jetpack\\SEO\\Admin_Page' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-admin-page.php',
         'Automattic\\Jetpack\\SEO\\Ai_Crawlers' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-ai-crawlers.php',
         'Automattic\\Jetpack\\SEO\\Author_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-author-schema-node.php',

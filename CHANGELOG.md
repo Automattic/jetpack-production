@@ -57,6 +57,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Bar: Expose the command palette node through the admin bar endpoint.
 - Button block: Add a filter for the default HTML element the block falls back to when it does not specify one.
 - Deprecate Jetpack::get_stat_data() and Jetpack::check_identity_crisis() in favor of their Connection package equivalents.
+- Jetpack AI: Stop showing the AI sidebar when the SEO Enhancer is the only feature switched on and SEO tools are off.
 - Move the site data endpoint into the Connection package. Deprecate Jetpack_Core_Json_Api_Endpoints::site_data() and ::get_site_data(), which now delegate to the package.
 - Owner disconnect dialog: own its styles under a local class namespace instead of borrowing the connection package's disconnect-dialog CSS.
 - Premium Analytics: point the dashboard stats card, newsletter widget, and block editor email stats link at the Analytics dashboard when it replaces the Stats page.

@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add a shared gate for the AI SEO Enhancer's availability, so the surfaces that offer it can stop each deriving their own answer.
+
 ### Changed
 - Update dependencies.
 
