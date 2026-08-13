@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Features: group the feature toggles into a single Agent capabilities card.
 - AI settings: Make the Try it out links pre-open their target — the AI Assistant sidebar in the editor, and Image Studio's generate mode in the Media Library.
 - Forms: Add form fill duration to feedback entries.
+- Image Studio: Mark identified Automatticians and proxied requests in tracking.
 - Jetpack AI: hide the AI sidebar when the writing assistant and SEO enhancer toggles are both off.
 - Jetpack AI: the AI toolbar button now follows the writing assistant toggle.
 - REST API: Add atomic_email_block field to the site endpoint response.
