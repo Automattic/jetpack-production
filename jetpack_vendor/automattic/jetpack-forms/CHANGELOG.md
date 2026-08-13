@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: show an explanation instead of a blank page when the dashboard assets are missing.
+- Form preview: Label the admin bar edit link "Edit Form" instead of "Edit Page".
 - Forms: prevent a fatal error when logging webhook responses with unexpected header types.
 - Grouped field labels: lower the legend padding reset so themes and global styles can override it.
 - Multistep forms: Keep a step's padding inside its width. Published forms whose steps have padding will change appearance: the step now matches the width of the form, with its fields inset by the padding, instead of overflowing past the form's right edge.
