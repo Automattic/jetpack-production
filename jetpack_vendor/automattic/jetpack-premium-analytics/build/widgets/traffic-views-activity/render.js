@@ -7,8 +7,6 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "No views", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of views, e.g. "2,033". */
-_n( "%s view", "%s views", 1, "jetpack-premium-analytics-pkg" );
 /* translators: 1: first date the request covers, e.g. "Aug 9, 2024". 2: last date it covers. */
 __( "No views between %1$s and %2$s.", "jetpack-premium-analytics-pkg" );
 __( "No views in this period.", "jetpack-premium-analytics-pkg" );

@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Highlights: Follow the section's all-time and yearly date selection instead of always showing the most recent year, and show every metric on a dashboard whose layout carries no metric selection.
 - Metric tabs: Spread cards evenly across the chart, wrap them before their contents overlap, match the prototype's card fill, spacing and headline value size, and render a lone metric as a static headline.
 - Posting activity: Show more history, larger cells, and a count-first tooltip, and drop the Fewer/More posts legend.
+- Post traffic activity: show more weeks per page in the views heatmap.
 - Section header: truncate a long title with an ellipsis instead of wrapping it and compressing the date controls.
 - Widget copy: Use sentence case for the drill-down back links, and shorten the Popular post description to one sentence.
 - Widgets: Order the traffic metric tiles Views, Visitors, Comments, Likes, and name the Latest emails sent view selector "By open rate" and "By click rate".

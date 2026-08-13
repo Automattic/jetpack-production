@@ -35,6 +35,8 @@ __( "Country", "jetpack-premium-analytics-pkg" );
 __( "Untitled video", "jetpack-premium-analytics-pkg" );
 __( "You don't have access to this data.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
+/* translators: %s: number of views, e.g. "2,033". */
+_n( "%s view", "%s views", 1, "jetpack-premium-analytics-pkg" );
 __( "No data in this period.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Select metric", "jetpack-premium-analytics-pkg" );
