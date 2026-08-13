@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: hide the AI sidebar when the writing assistant and SEO enhancer toggles are both off.
 - Jetpack AI: the AI toolbar button now follows the writing assistant toggle.
 - REST API: Add atomic_email_block field to the site endpoint response.
+- Search Blocks: add a No Results block so the search empty state can hold any blocks — links, images, buttons — instead of plain text. The Results List message settings are deprecated and keep rendering.
 
 ### Bug fixes
 - AI: Add the is_a11n and is_test audience properties to the MCP settings Tracks events.

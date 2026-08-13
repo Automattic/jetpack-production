@@ -456,6 +456,7 @@ return array(
     'Automattic\\Jetpack\\Search\\Instant_Search' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/instant-search/class-instant-search.php',
     'Automattic\\Jetpack\\Search\\Label_Control' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/customizer/customize-controls/class-label-control.php',
     'Automattic\\Jetpack\\Search\\Module_Control' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-module-control.php',
+    'Automattic\\Jetpack\\Search\\No_Results' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/class-no-results.php',
     'Automattic\\Jetpack\\Search\\Options' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-options.php',
     'Automattic\\Jetpack\\Search\\Overlay_Template' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/class-overlay-template.php',
     'Automattic\\Jetpack\\Search\\Package' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/class-package.php',
