@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Chart widgets: Remove the Metrics selector from Traffic summary, Subscribers summary, WordAds, and Store performance — the metric tabs already choose what the chart plots.
 - Dashboard: Give each section its own heading and description.
+- Date controls: label the comparison control "Compare" instead of a bare plus, place it before the chart interval, mark the interval with a chart glyph, and shorten a custom range to its shortest unambiguous form.
 - Detail pages: match the dashboard's tightened widget Card padding.
 - Exclude source map files from the distributed package.
 - Highlights: Follow the section's all-time and yearly date selection instead of always showing the most recent year, and show every metric on a dashboard whose layout carries no metric selection.
