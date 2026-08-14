@@ -366,6 +366,8 @@ __( "Use available width", "jetpack-premium-analytics-pkg" );
 __( "Make full width", "jetpack-premium-analytics-pkg" );
 __( "See where your visitors are viewing from.", "jetpack-premium-analytics-pkg" );
 __( "Page", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the date the newsletter was sent, e.g. "Aug 19, 2025". */
+__( "Email sent on %s.", "jetpack-premium-analytics-pkg" );
 /* translators: %1$s: "Post" or "Page". %2$s: the publish date, e.g. "Aug 19, 2025". */
 __( "%1$s published on %2$s.", "jetpack-premium-analytics-pkg" );
 /* translators: %1$s and %2$s: the report range bounds, e.g. "Jul 9, 2026". */

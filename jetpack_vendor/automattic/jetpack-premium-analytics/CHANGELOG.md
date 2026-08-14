@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Detail pages: give the post views, video views and email timeline charts the metric total headline and the chart-type control, sharing one chart-display attribute definition across the chart widgets.
 - Insights: add a Popular days widget showing the busiest day of the week and how views are distributed across the week.
 - Insights: add a Traffic views activity widget showing daily site views as a calendar heatmap. Center the loading spinner and error message in the calendar heatmap widgets instead of pinning them to the left edge.
+- Post detail: give the email tabs an email header identity — envelope tile and the email sent date.
 
 ### Changed
 - Chart widgets: Remove the Metrics selector from Traffic summary, Subscribers summary, WordAds, and Store performance — the metric tabs already choose what the chart plots.
