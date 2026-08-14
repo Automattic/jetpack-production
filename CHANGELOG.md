@@ -53,6 +53,7 @@ This is an alpha version! The changes listed here are not final.
 - Security: Verify attachment ownership before removing an uploaded package in the plugin and theme install endpoints.
 - SEO: Hide the post list SEO columns for people who had customized Screen Options before those columns existed.
 - Sharing: Escape Tumblr share title, URL, and button label in official button output.
+- Sharing: use an unpredictable name for share and Press This popups so another page cannot pre-register the same window name.
 - Subscribers: Restore the option to assign imported subscribers to specific newsletter categories on CSV upload and manual add.
 - Tiled Gallery: stop routing images through the external Photon domain on VIP sites when galleries are saved, and add a `jetpack_skip_photon_domain` filter to control it. Galleries published before this change keep their existing image URLs until they are saved again.
 - Top Posts & Pages: Only process as many posts as requested from the Stats API, cutting post and metadata lookups when rendering the block without changing which posts it shows.
