@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Chart widgets: Remove the Metrics selector from Traffic summary, Subscribers summary, WordAds, and Store performance — the metric tabs already choose what the chart plots.
 - Dashboard: Give each section its own heading and description.
+- Dashboard: Hide the Subscribers tab on sites where the Jetpack subscriptions module is turned off.
 - Date controls: label the comparison control "Compare" instead of a bare plus, place it before the chart interval, mark the interval with a chart glyph, and shorten a custom range to its shortest unambiguous form.
 - Detail pages: match the dashboard's tightened widget Card padding.
 - Email clicks: draw the country map beside the Locations leaderboard again, per the updated design mocks.
