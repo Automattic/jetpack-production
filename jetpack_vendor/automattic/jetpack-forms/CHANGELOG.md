@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Contact Form: Make Group and Columns blocks fill the form width so nested fields render full-width.
 - Dashboard: show an explanation instead of a blank page when the dashboard assets are missing.
 - Form preview: Label the admin bar edit link "Edit Form" instead of "Edit Page".
 - Forms: prevent a fatal error when logging webhook responses with unexpected header types.

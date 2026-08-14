@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Editor: refresh the cached plan when returning from a plan purchase so paid blocks (such as the Forms file upload field) stop showing their upgrade nudge once the plan is active.
 - Escape the Premium Content block login button label on output.
 - Fix the premium block upgrade banner rendering collapsed and too narrow on the site frontend.
+- Forms: Make Group and Columns blocks fill the form width so nested fields render full-width.
 - Harden the subscriber authentication endpoint so it only redirects within the current site.
 - Heartbeat: restore identity crisis reporting in the WP-CLI status command.
 - Likes: Fix Like buttons sometimes getting stuck on "Loading…" and never appearing.
