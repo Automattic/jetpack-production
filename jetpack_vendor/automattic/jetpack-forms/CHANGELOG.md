@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Multistep forms: Keep a step's padding inside its width. Published forms whose steps have padding will change appearance: the step now matches the width of the form, with its fields inset by the padding, instead of overflowing past the form's right edge.
 - Rating field: keep the default left-aligned, borderless rendering under the Outlined and Animated form styles.
 - Send the site ID as `blog_id` on the email open Tracks event so it lands in the blogid column.
+- Show an empty checkbox icon next to checkbox fields the respondent left unchecked, instead of always showing a ticked one.
 - Slider field: keep the default label when the form uses the Outlined or Animated style, so the label no longer overlaps the slider track.
 
 ## [7.24.0] - 2026-08-10

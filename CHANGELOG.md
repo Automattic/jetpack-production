@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Escape the Premium Content block login button label on output.
 - Fix the premium block upgrade banner rendering collapsed and too narrow on the site frontend.
 - Forms: Make Group and Columns blocks fill the form width so nested fields render full-width.
+- Forms: show an empty checkbox icon next to checkbox fields the respondent left unchecked, instead of always showing a ticked one.
 - Harden the subscriber authentication endpoint so it only redirects within the current site.
 - Heartbeat: restore identity crisis reporting in the WP-CLI status command.
 - Likes: Fix Like buttons sometimes getting stuck on "Loading…" and never appearing.
