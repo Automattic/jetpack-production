@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Date controls: bucket a day-long range by hours. Switching to "Last 24 hours" from a range shown by days kept the daily bucket, drawing the whole window as a single bar.
 - Date filters panel: avoid a one-frame flash of mismatched labels while resizing.
 - Date filters panel: recover the full preset labels when space returns in the dashboard section header, instead of staying abbreviated.
+- Fix report dates shifting by a day on sites west of UTC, and stop the date picker briefly using the visitor's timezone on load.
 - Premium Analytics: remove the duplicate padding around the chart-tab widgets.
 - Report a missing widget manifest as a partial build, so a half-deployed dashboard is no longer silent.
 - Section header: describe an hour-snapped window by its full length and name a rolling day window by its end day.
