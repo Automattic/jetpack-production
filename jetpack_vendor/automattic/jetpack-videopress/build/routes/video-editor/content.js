@@ -20,6 +20,18 @@ __( "Chapters cannot start after the video ends.", "jetpack-videopress-pkg" );
 /* translators: %d: 1-based chapter number. */
 __( "Chapter %d", "jetpack-videopress-pkg" );
 __( "Playhead", "jetpack-videopress-pkg" );
+/* translators: %d: 1-based chapter number. */
+__( "Chapter %d title", "jetpack-videopress-pkg" );
+/* translators: %s: chapter start timecode, e.g. "0:01:05.0". */
+__( "Go to %s", "jetpack-videopress-pkg" );
+/* translators: %d: 1-based chapter number. */
+__( "Remove chapter %d", "jetpack-videopress-pkg" );
+__( "Chapters", "jetpack-videopress-pkg" );
+/* translators: %d: number of chapters in the list. */
+_n( "%d chapter", "%d chapters", 1, "jetpack-videopress-pkg" );
+/* translators: %d: number of chapters with an empty title. */
+_n( "%d chapter still needs a title.", "%d chapters still need a title.", 1, "jetpack-videopress-pkg" );
+__( "Chapters for this video are managed by an uploaded VTT file, so they can’t be edited here.", "jetpack-videopress-pkg" );
 __( "Playhead time", "jetpack-videopress-pkg" );
 _x( "Pause", "button: pause timeline preview playback", "jetpack-videopress-pkg" );
 __( "Play", "jetpack-videopress-pkg" );
@@ -29,16 +41,9 @@ __( "Timeline zoom", "jetpack-videopress-pkg" );
 __( "Zoom level %1$d of %2$d", "jetpack-videopress-pkg" );
 /* translators: %s: chapter title. */
 __( "Chapter start: %s", "jetpack-videopress-pkg" );
-/* translators: %d: 1-based chapter number. */
-__( "Chapter %d title", "jetpack-videopress-pkg" );
-/* translators: %s: chapter start timecode, e.g. "0:01:05.0". */
-__( "Go to %s", "jetpack-videopress-pkg" );
-/* translators: %d: 1-based chapter number. */
-__( "Remove chapter %d", "jetpack-videopress-pkg" );
 __( "Add chapter at playhead", "jetpack-videopress-pkg" );
 /* translators: %s: title of the chapter the playhead is currently in. */
 __( "Now: %s", "jetpack-videopress-pkg" );
-__( "Chapters for this video are managed by an uploaded VTT file, so they can’t be edited here.", "jetpack-videopress-pkg" );
 __( "Chapters appear in the player timeline and help viewers jump to a section. The first chapter always starts at 0:00:00.0.", "jetpack-videopress-pkg" );
 __( "The video could not be downloaded.", "jetpack-videopress-pkg" );
 __( "The browser could not decode this video.", "jetpack-videopress-pkg" );
@@ -89,7 +94,6 @@ __( "English (auto-generated)", "jetpack-videopress-pkg" );
 __( "Video chapters could not be updated.", "jetpack-videopress-pkg" );
 __( "Edit", "jetpack-videopress-pkg" );
 __( "Editing tools", "jetpack-videopress-pkg" );
-__( "Chapters", "jetpack-videopress-pkg" );
 __( "Undo", "jetpack-videopress-pkg" );
 __( "Redo", "jetpack-videopress-pkg" );
 __( "Discard changes", "jetpack-videopress-pkg" );
