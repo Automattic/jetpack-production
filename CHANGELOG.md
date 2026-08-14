@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: Fix an infinite refresh loop in the Goodreads block editor that regenerated the widget ID on every re-render and hammered the REST API.
 - Blocks: Restrict Goodreads scripts to the expected Goodreads widget endpoints.
 - Blocks: treat WordPress.com public API requests as a block-editor context so editor-only extensions load, restoring block plan availability (such as the core/video upgrade nudge) in the mobile editor.
+- Connection: Stop showing a duplicate account notice when your WordPress.com email differs from your site email only in letter case.
 - Content Guidelines AI: Keep the empty-state banner from painting over the sticky page header while scrolling.
 - Display WordPress Posts widget: Escape remote site data before output.
 - Editor: refresh the cached plan when returning from a plan purchase so paid blocks (such as the Forms file upload field) stop showing their upgrade nudge once the plan is active.
