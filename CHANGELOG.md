@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Image Studio: Mark identified Automatticians and proxied requests in tracking.
 - Jetpack AI: hide the AI sidebar when the writing assistant and SEO enhancer toggles are both off.
 - Jetpack AI: the AI toolbar button now follows the writing assistant toggle.
+- Newsletter: Rename the Access panel to Audience, describe who can read each post, and link out to set up paid subscribers.
 - REST API: Add atomic_email_block field to the site endpoint response.
 - Search Blocks: add a No Results block so the search empty state can hold any blocks — links, images, buttons — instead of plain text. The Results List message settings are deprecated and keep rendering.
 
