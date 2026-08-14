@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Save the post before generating an email preview, so the preview reflects the latest saved content (e.g. a newly-set featured image).
 - Newsletter: send the test email when pressing Enter, and show send errors as a proper error notice.
 - Omnibar: return admin bar nodes translated in the user's locale.
+- Podcast Player: keep showing the most recent episodes when a podcast feed becomes slow or unreachable, instead of failing to load.
 - Premium Content: self-heal the wpcom_user_id link on a local WordPress account from a freshly-verified magic-link token, so subscription access can be recognized on subsequent visits without another login round trip.
 - Premium Content: stop treating a bare WordPress session as proof of subscription in the Subscriber Login and Premium Content login button blocks, which could hide the only way to recover a subscription token.
 - Random Redirect: avoid a fatal error when a theme or plugin already declares the module's redirect function.
