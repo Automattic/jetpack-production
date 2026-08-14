@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Post traffic activity: show more weeks per page in the views heatmap.
 - Section header: truncate a long title with an ellipsis instead of wrapping it and compressing the date controls.
 - Serve the dashboard only from its registered, capability-gated admin page.
+- Shares: Hide the widget outside WPCOM Simple, where share counts are never recorded.
 - Widget copy: Use sentence case for the drill-down back links, and shorten the Popular post description to one sentence.
 - Widgets: Order the traffic metric tiles Views, Visitors, Comments, Likes, and name the Latest emails sent view selector "By open rate" and "By click rate".
 - Widgets: restyle the footer actions to match the dashboard design — a "View all" link and an icon-only CSV download.
