@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Contact Form: Add background image support to the Form and Step blocks.
+- Feedback author avatars: pick a stable Color Studio background color per email for initials identity avatars via bg_color
 
 ### Changed
 - Update package dependencies.
