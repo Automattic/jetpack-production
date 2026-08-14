@@ -311,6 +311,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_2_a_0
         'Automattic\\Jetpack\\Podcast\\Create_AI_Podcast_Page' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-podcast/src/class-create-ai-podcast-page.php',
         'Automattic\\Jetpack\\Podcast\\Feed\\Customize_Feed' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-podcast/src/feed/class-customize-feed.php',
         'Automattic\\Jetpack\\Podcast\\Feed\\Episode_Block_Tags' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-podcast/src/feed/class-episode-block-tags.php',
+        'Automattic\\Jetpack\\Podcast\\Feed\\Episode_Media_Cache' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-podcast/src/feed/class-episode-media-cache.php',
         'Automattic\\Jetpack\\Podcast\\Feed\\Feed_Detection' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-podcast/src/feed/class-feed-detection.php',
         'Automattic\\Jetpack\\Podcast\\New_Episode_Prefill' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-podcast/src/class-new-episode-prefill.php',
         'Automattic\\Jetpack\\Podcast\\Podcast' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-podcast/src/class-podcast.php',

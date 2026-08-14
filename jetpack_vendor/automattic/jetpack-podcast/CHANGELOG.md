@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 
 ### Fixed
+- Feed: Resolve episode media in one batch so large podcast feeds render faster.
 - Feed: speed up podcast feed generation on large catalogues.
 
 ## [1.4.4] - 2026-08-10
