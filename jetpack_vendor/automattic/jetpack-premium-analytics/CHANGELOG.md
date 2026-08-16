@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Darken and enlarge chart axis labels, and show a tooltip when hovering a Devices chart segment.
 - Dashboard: add spacing below the widget grid so the last row no longer sits flush against the end of the page.
 - Date controls: bucket a day-long range by hours. Switching to "Last 24 hours" from a range shown by days kept the daily bucket, drawing the whole window as a single bar.
+- Date controls: reset the custom range when a preset is selected, so the picker no longer shows two different ranges at once.
 - Date filters panel: avoid a one-frame flash of mismatched labels while resizing.
 - Date filters panel: recover the full preset labels when space returns in the dashboard section header, instead of staying abbreviated.
 - Fix report dates shifting by a day on sites west of UTC, and stop the date picker briefly using the visitor's timezone on load.
