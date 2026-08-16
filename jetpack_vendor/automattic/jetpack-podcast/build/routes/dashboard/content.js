@@ -219,6 +219,8 @@ __( "These topics have subtopics. Picking one helps Apple Podcasts and other dir
 __( "Explicit content", "jetpack-podcast" );
 __( "Owner email address", "jetpack-podcast" );
 __( "Included in your feed so podcast directories can verify ownership. Most require it for submission.", "jetpack-podcast" );
+__( "Episodes in feed", "jetpack-podcast" );
+__( "How many of your most recent episodes the feed includes.", "jetpack-podcast" );
 __( "Stop publishing your podcast", "jetpack-podcast" );
 __( "Stops publishing your podcast feed. Your show details stay saved, so you can set it up again later.", "jetpack-podcast" );
 __( "Stop publishing", "jetpack-podcast" );
@@ -439,19 +441,24 @@ __( "Edit", "jetpack-podcast" );
 __( "View", "jetpack-podcast" );
 __( "Set a post category in your podcasting settings to start showing episodes here.", "jetpack-podcast" );
 __( "Couldn't load play counts and duration. The values below may be missing or out of date.", "jetpack-podcast" );
-__( "We couldn’t reach Pocket Casts right now. Please try again.", "jetpack-podcast" );
-__( "Submitted", "jetpack-podcast" );
 __( "Pending", "jetpack-podcast" );
-__( "Submit to Pocket Casts", "jetpack-podcast" );
-/* translators: %s: podcast directory name. */
-__( "Submit to %s", "jetpack-podcast" );
-__( "We’ll send your podcast feed to Pocket Casts. Most submissions go live within a few minutes.", "jetpack-podcast" );
-__( "Set your post category in the Settings tab to generate your RSS feed before submitting.", "jetpack-podcast" );
-__( "View on Pocket Casts", "jetpack-podcast" );
+__( "Submitted", "jetpack-podcast" );
+__( "Set up", "jetpack-podcast" );
+__( "View show", "jetpack-podcast" );
+__( "Status:", "jetpack-podcast" );
+/* translators: %s: directory name (Pocket Casts, Apple Podcasts, etc.). Must start with the button's visible "View show" label so voice control can match it. */
+__( "View show on %s (opens in a new tab)", "jetpack-podcast" );
+/* translators: 1: directory name (Apple Podcasts, Spotify, etc.). 2: reason the Set up button is disabled. */
+__( "Set up %1$s. %2$s", "jetpack-podcast" );
+__( "We couldn’t reach Pocket Casts right now. Please try again.", "jetpack-podcast" );
+__( "Submit", "jetpack-podcast" );
+__( "Connect this site to WordPress.com first", "jetpack-podcast" );
+__( "Your podcast was sent to Pocket Casts.", "jetpack-podcast" );
+/* translators: 1: directory name (Pocket Casts). 2: reason the Submit button is disabled. */
+__( "Submit to %1$s. %2$s", "jetpack-podcast" );
 __( "Connect this site to WordPress.com to submit your podcast to Pocket Casts.", "jetpack-podcast" );
 __( "Connect Jetpack", "jetpack-podcast" );
 __( "Pocket Casts could not accept this feed.", "jetpack-podcast" );
-__( "Submitting…", "jetpack-podcast" );
 /* translators: %s: podcast directory name (e.g. "Apple Podcasts"). */
 __( "Your %s URL is too long.", "jetpack-podcast" );
 /* translators: %s: podcast directory name (e.g. "Apple Podcasts"). */
@@ -460,6 +467,8 @@ __( "Enter a valid %s URL.", "jetpack-podcast" );
 __( "We couldn’t save your %s URL. Please try again.", "jetpack-podcast" );
 __( "Copied!", "jetpack-podcast" );
 __( "Copy link", "jetpack-podcast" );
+/* translators: %s: podcast directory name (e.g. "Apple Podcasts"). */
+__( "Submit to %s", "jetpack-podcast" );
 __( "Step 1: Copy your RSS feed URL", "jetpack-podcast" );
 /* translators: %s: podcast directory name. */
 __( "Click the button below to copy your RSS feed URL. %s will require this URL to list your podcast.", "jetpack-podcast" );
@@ -484,18 +493,21 @@ __( "Replace", "jetpack-podcast" );
 /* translators: %s: podcast directory name. */
 __( "%s URL", "jetpack-podcast" );
 __( "Save", "jetpack-podcast" );
-__( "Status:", "jetpack-podcast" );
+__( "Checking your podcast setup…", "jetpack-podcast" );
+__( "Set a post category in Settings first", "jetpack-podcast" );
+__( "Add a podcast title in Settings first", "jetpack-podcast" );
 __( "Podcast RSS feed URL", "jetpack-podcast" );
-__( "Almost ready to submit", "jetpack-podcast" );
+/* translators: %d: number of remaining setup steps before podcast directory submission is unlocked. */
+_n( "%d step left before you can submit", "%d steps left before you can submit", 1, "jetpack-podcast" );
+/* translators: %d: number of unfinished podcast setup steps. */
+_n( "%d step left to finish your podcast setup", "%d steps left to finish your podcast setup", 1, "jetpack-podcast" );
 __( "Edit settings", "jetpack-podcast" );
-__( "RSS feed", "jetpack-podcast" );
-__( "Copy this URL, then submit it to each directory below to publish your podcast.", "jetpack-podcast" );
+__( "Submit your podcast to the most popular podcast apps so people can find and follow it.", "jetpack-podcast" );
+__( "Automatic submission", "jetpack-podcast" );
+__( "We submit your feed for you. It usually goes live within a few minutes.", "jetpack-podcast" );
+__( "Manual submission", "jetpack-podcast" );
+__( "Copy this URL, then submit it to each directory below yourself.", "jetpack-podcast" );
 __( "Set your post category to generate the feed URL you can submit to directories.", "jetpack-podcast" );
-__( "Podcast directories", "jetpack-podcast" );
-__( "Submit your podcast to the directories below where you want it to appear. Most take a few days to go live.", "jetpack-podcast" );
-/* translators: %s is the directory name (Apple Podcasts, Spotify, etc.). */
-__( "Submit to %s (finish setting up your podcast first).", "jetpack-podcast" );
-__( "Submit", "jetpack-podcast" );
 __( "Date calendar" );
 __( "Date range calendar" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
