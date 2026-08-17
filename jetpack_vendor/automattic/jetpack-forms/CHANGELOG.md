@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add conditional logic to form fields, so any field can be shown or hidden based on another field's answer. Disabled by default while in testing; enable it with the forms-conditional-logic feature flag.
 - Contact Form: Add background image support to the Form and Step blocks.
 - Feedback author avatars: pick a stable Color Studio background color per email for initials identity avatars via bg_color
 

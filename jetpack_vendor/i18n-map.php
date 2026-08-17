@@ -72,9 +72,13 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-external-media',
       'ver' => '0.8.30-alpha1785922550',
     ),
+    'jetpack-feature-flags' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-feature-flags',
+      'ver' => '0.1.0-alpha1782495361',
+    ),
     'jetpack-forms' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-forms',
-      'ver' => '7.25.0-alpha1786745009',
+      'ver' => '7.25.0-alpha1786989754',
     ),
     'jetpack-image-cdn' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-image-cdn',
