@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Assistant: Add Features view with per-feature AI toggles to the Jetpack AI admin page, limited to internal testing environments ahead of release.
 - AI Features: group the feature toggles into a single Agent capabilities card.
 - AI settings: Make the Try it out links pre-open their target — the AI Assistant sidebar in the editor, and Image Studio's generate mode in the Media Library.
+- Content Guidelines AI: Mark Automattician traffic in Tracks events so internal testing can be filtered out of product reporting.
 - Forms: Add form fill duration to feedback entries.
 - Image Studio: Mark identified Automatticians and proxied requests in tracking.
 - Jetpack AI: hide the AI sidebar when the writing assistant and SEO enhancer toggles are both off.
