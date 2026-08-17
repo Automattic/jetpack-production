@@ -7,6 +7,11 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading", "jetpack-backup-pkg" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-backup-pkg" );
+__( "Something went wrong", "jetpack-backup-pkg" );
+__( "The page ran into an unexpected problem. Your backups are unaffected.", "jetpack-backup-pkg" );
+__( "Reload the page", "jetpack-backup-pkg" );
 __( "Sort ascending", "jetpack-backup-pkg" );
 __( "Sort descending", "jetpack-backup-pkg" );
 __( "(no title)", "jetpack-backup-pkg" );
@@ -192,6 +197,8 @@ __( "Value must be true, false, or undefined", "jetpack-backup-pkg" );
 __( "Value must be an array.", "jetpack-backup-pkg" );
 __( "Every value must be a string.", "jetpack-backup-pkg" );
 __( "Value must be a valid color.", "jetpack-backup-pkg" );
+__( "Try again", "jetpack-backup-pkg" );
+__( "We couldn't load your site's activity.", "jetpack-backup-pkg" );
 __( "Icon", "jetpack-backup-pkg" );
 __( "Title", "jetpack-backup-pkg" );
 __( "When", "jetpack-backup-pkg" );
@@ -200,8 +207,11 @@ __( "Preview could not be loaded for this file. It may no longer be available in
 __( "Close preview", "jetpack-backup-pkg" );
 __( "Modified:", "jetpack-backup-pkg" );
 __( "Type:", "jetpack-backup-pkg" );
+__( "We couldn't load this backup's files.", "jetpack-backup-pkg" );
 /* translators: %d count of selected items (files + opaque folders) */
 _n( "%d item selected", "%d items selected", 1, "jetpack-backup-pkg" );
+/* translators: shown inside an expanded folder in the backup file browser when its contents could not be fetched. */
+__( "Couldn't load this folder.", "jetpack-backup-pkg" );
 /* translators: shown inside an expanded folder in the backup file browser when the folder contains no files. */
 __( "Empty", "jetpack-backup-pkg" );
 __( "Download backup", "jetpack-backup-pkg" );
@@ -214,8 +224,22 @@ __( "Backup and scan complete", "jetpack-backup-pkg" );
 /* translators: %1$s formatted date+time, %2$s actor name */
 __( "%1$s by %2$s", "jetpack-backup-pkg" );
 __( "Files", "jetpack-backup-pkg" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-backup-pkg" );
+__( "Could not start a backup. Please try again.", "jetpack-backup-pkg" );
+__( "Back up now", "jetpack-backup-pkg" );
+__( "Cannot queue backups due to reaching storage limits.", "jetpack-backup-pkg" );
+__( "Backup in progress", "jetpack-backup-pkg" );
+__( "A backup is currently in progress.", "jetpack-backup-pkg" );
+__( "Queueing backup", "jetpack-backup-pkg" );
+__( "Backup enqueued", "jetpack-backup-pkg" );
+__( "A backup has been queued and will start shortly.", "jetpack-backup-pkg" );
+__( "We're having trouble backing up your site", "jetpack-backup-pkg" );
+__( "<a>Get in touch with us</a> to get your site backups going again.", "jetpack-backup-pkg" );
+__( "Your first cloud backup will be ready soon", "jetpack-backup-pkg" );
+/* translators: %d: how much of the running backup is complete, as a percentage. */
+__( "%d%%", "jetpack-backup-pkg" );
+__( "The first backup usually takes a few minutes, so it will become available soon.", "jetpack-backup-pkg" );
+__( "In the meanwhile, you can start getting familiar with your <a>backup management on Jetpack.com</a>.", "jetpack-backup-pkg" );
+__( "Your backup will be ready soon", "jetpack-backup-pkg" );
 __( "Jetpack Logo", "jetpack-backup-pkg" );
 __( "An Automattic Airline", "jetpack-backup-pkg" );
 __( "Products", "jetpack-backup-pkg" );
@@ -223,7 +247,6 @@ __( "Help", "jetpack-backup-pkg" );
 __( "Jetpack", "jetpack-backup-pkg" );
 __( "We couldn't load your backup details", "jetpack-backup-pkg" );
 __( "This is usually temporary. Try again in a moment — your backups are unaffected.", "jetpack-backup-pkg" );
-__( "Try again", "jetpack-backup-pkg" );
 __( "This site doesn't have an active Backup plan", "jetpack-backup-pkg" );
 __( "Add Jetpack Backup to start protecting your site with automatic backups, granular restores, and offsite storage.", "jetpack-backup-pkg" );
 __( "See Backup plans", "jetpack-backup-pkg" );
@@ -234,6 +257,5 @@ __( "Link your account to view backups", "jetpack-backup-pkg" );
 __( "This site's Jetpack connection is already set up, but your account isn't linked to a WordPress.com user yet.", "jetpack-backup-pkg" );
 __( "Link my account", "jetpack-backup-pkg" );
 __( "Save changes and restore quickly with one-click recovery.", "jetpack-backup-pkg" );
-__( "Back up now", "jetpack-backup-pkg" );
 __( "Select an item from the list to see details.", "jetpack-backup-pkg" );
 __( "Item not found.", "jetpack-backup-pkg" );

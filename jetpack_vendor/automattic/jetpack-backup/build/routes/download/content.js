@@ -7,6 +7,9 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading", "jetpack-backup-pkg" );
+__( "Something went wrong", "jetpack-backup-pkg" );
+__( "The page ran into an unexpected problem. Your backups are unaffected.", "jetpack-backup-pkg" );
+__( "Reload the page", "jetpack-backup-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-backup-pkg" );
 __( "Jetpack Logo", "jetpack-backup-pkg" );
@@ -37,6 +40,8 @@ __( "Site database", "jetpack-backup-pkg" );
 __( "Includes pages, and posts.", "jetpack-backup-pkg" );
 __( "Media uploads", "jetpack-backup-pkg" );
 __( "You must also select Site database for restored media uploads to appear.", "jetpack-backup-pkg" );
+/* translators: %s: the reason WordPress.com gave for the failure. */
+__( "Download failed: %s", "jetpack-backup-pkg" );
 __( "Download failed.", "jetpack-backup-pkg" );
 __( "Lost connection while preparing download.", "jetpack-backup-pkg" );
 __( "Back to overview", "jetpack-backup-pkg" );
@@ -47,3 +52,5 @@ __( "Generate download", "jetpack-backup-pkg" );
 __( "Preparing download…", "jetpack-backup-pkg" );
 __( "Your download is ready.", "jetpack-backup-pkg" );
 __( "Download the file", "jetpack-backup-pkg" );
+/* translators: %s: date and time the download link stops working. */
+__( "This link expires %s.", "jetpack-backup-pkg" );
