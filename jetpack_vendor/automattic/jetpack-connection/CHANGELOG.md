@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Report errors from XML-RPC faults, which were invisible to the existing intake. We also remove invalid_signature from the displayable error codes as it is not actionable.
+
 ## [8.10.3] - 2026-08-14
 ### Fixed
 - Account status: Do not report an account mismatch when the WordPress.com email and the site email differ only in letter case. [#51285]
