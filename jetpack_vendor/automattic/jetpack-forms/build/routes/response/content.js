@@ -286,6 +286,7 @@ __( "Logged-in user:", "jetpack-forms" );
 __( "Previous", "jetpack-forms" );
 __( "Next", "jetpack-forms" );
 __( "Close", "jetpack-forms" );
+__( "Are you sure you want to mark this response as spam?", "jetpack-forms" );
 __( "An Automattic Airline", "jetpack-forms" );
 __( "Products", "jetpack-forms" );
 __( "Help", "jetpack-forms" );
@@ -338,6 +339,8 @@ _n( "%s response marked as unread.", "%s responses marked as unread.", 1, "jetpa
 __( "Delete permanently", "jetpack-forms" );
 __( "Mark as spam", "jetpack-forms" );
 __( "Actions", "jetpack-forms" );
+_x( "Spam", "response status", "jetpack-forms" );
+_x( "Trash", "response status", "jetpack-forms" );
 __( "Response", "jetpack-forms" );
 __( "Not found", "jetpack-forms" );
 __( "Response not found", "jetpack-forms" );

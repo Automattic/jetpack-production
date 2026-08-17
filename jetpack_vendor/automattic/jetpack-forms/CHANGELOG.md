@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Feedback author avatars: pick a stable Color Studio background color per email for initials identity avatars via bg_color
 
 ### Changed
+- Responses: Open a response on its own page from the list's View action and from both response notification email buttons, and keep the user on that page when a response is marked as spam or trashed.
 - Update package dependencies.
 
 ### Fixed
