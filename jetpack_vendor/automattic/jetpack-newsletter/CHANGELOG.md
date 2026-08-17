@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 
 ### Fixed
+- Make newsletter settings save feedback consistent and allow sender settings to save with Enter.
 - Normalize spacing in Newsletter settings cards.
 
 ## [0.12.4] - 2026-08-10
