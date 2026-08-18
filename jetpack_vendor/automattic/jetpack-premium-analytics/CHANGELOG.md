@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Hide the Subscribers tab on sites where the Jetpack subscriptions module is turned off.
 - Dashboard: keep the section title and date controls in view while the widgets scroll.
 - Date controls: label the comparison control "Compare" instead of a bare plus, place it before the chart interval, mark the interval with a chart glyph, and shorten a custom range to its shortest unambiguous form.
+- Date filters: Drop the "Last" prefix from the 7-day, 30-day, and 12-month preset labels.
 - Detail pages: match the dashboard's tightened widget Card padding.
 - Email clicks: draw the country map beside the Locations leaderboard again, per the updated design mocks.
 - Exclude source map files from the distributed package.

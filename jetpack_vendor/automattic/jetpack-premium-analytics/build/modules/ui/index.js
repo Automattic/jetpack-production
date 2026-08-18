@@ -11,17 +11,20 @@ __( "Yesterday", "jetpack-premium-analytics-pkg" );
 __( "Last 24 hours", "jetpack-premium-analytics-pkg" );
 /* translators: abbreviation for "Last 24 hours". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
 _x( "24H", "short date range preset", "jetpack-premium-analytics-pkg" );
-__( "Last 7 days", "jetpack-premium-analytics-pkg" );
-/* translators: abbreviation for "Last 7 days". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
+/* translators: Rolling date-range preset pill. The last 7 days; keep it short. */
+__( "7 days", "jetpack-premium-analytics-pkg" );
+/* translators: abbreviation for "7 days". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
 _x( "7D", "short date range preset", "jetpack-premium-analytics-pkg" );
-__( "Last 30 days", "jetpack-premium-analytics-pkg" );
-/* translators: abbreviation for "Last 30 days". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
+/* translators: Rolling date-range preset pill. The last 30 days; keep it short. */
+__( "30 days", "jetpack-premium-analytics-pkg" );
+/* translators: abbreviation for "30 days". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
 _x( "30D", "short date range preset", "jetpack-premium-analytics-pkg" );
 __( "Last 90 days", "jetpack-premium-analytics-pkg" );
 __( "Last 365 days", "jetpack-premium-analytics-pkg" );
 __( "Last month", "jetpack-premium-analytics-pkg" );
-__( "Last 12 months", "jetpack-premium-analytics-pkg" );
-/* translators: abbreviation for "Last 12 months". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
+/* translators: Rolling date-range preset pill. The last 12 months; keep it short. */
+__( "12 months", "jetpack-premium-analytics-pkg" );
+/* translators: abbreviation for "12 months". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
 _x( "12M", "short date range preset", "jetpack-premium-analytics-pkg" );
 __( "Last year", "jetpack-premium-analytics-pkg" );
 __( "All time", "jetpack-premium-analytics-pkg" );
