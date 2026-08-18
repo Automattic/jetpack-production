@@ -6,6 +6,5 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "%s views", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load your popular days. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "No views in this period.", "jetpack-premium-analytics-pkg" );

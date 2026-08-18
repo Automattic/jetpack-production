@@ -8,6 +8,7 @@
 
 /* translators: 1: Start date. 2: End date. */
 __( "%1$s – %2$s", "jetpack-premium-analytics-pkg" );
+__( "%s views", "jetpack-premium-analytics-pkg" );
 __( "No data available", "jetpack-premium-analytics-pkg" );
 __( "Current period", "jetpack-premium-analytics-pkg" );
 __( "Previous period", "jetpack-premium-analytics-pkg" );
