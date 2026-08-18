@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Rename the Access panel to Audience, describe who can read each post, and link out to set up paid subscribers.
 - Podcast: Add a setting for how many episodes the podcast feed includes.
 - Podcast: split the Distribution directories into Automatic and Manual submission, explain why a disabled button is disabled, and link to your Pocket Casts show once it is live.
+- Premium Analytics: label the traffic chart's time axis by the size of the bucket behind the data, and name each bar's period in full in its tooltip.
 - REST API: Add atomic_email_block field to the site endpoint response.
 - Search Blocks: add a No Results block so the search empty state can hold any blocks — links, images, buttons — instead of plain text. The Results List message settings are deprecated and keep rendering.
 

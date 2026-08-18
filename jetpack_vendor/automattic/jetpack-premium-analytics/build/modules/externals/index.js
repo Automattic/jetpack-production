@@ -15,6 +15,7 @@ __( "All series are hidden. Click legend items to show data.", "jetpack-premium-
 __( "No data available", "jetpack-premium-analytics-pkg" );
 __( "Invalid data", "jetpack-premium-analytics-pkg" );
 __( "Area chart", "jetpack-premium-analytics-pkg" );
+__( "Week of %s", "jetpack-premium-analytics-pkg" );
 __( "%1$s: %2$s", "jetpack-premium-analytics-pkg" );
 __( "Bar chart", "jetpack-premium-analytics-pkg" );
 __( "Loading map", "jetpack-premium-analytics-pkg" );

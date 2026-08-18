@@ -68,6 +68,7 @@ __( "All series are hidden. Click legend items to show data.", "jetpack-videopre
 __( "No data available", "jetpack-videopress-pkg" );
 __( "Invalid data", "jetpack-videopress-pkg" );
 __( "Area chart", "jetpack-videopress-pkg" );
+__( "Week of %s", "jetpack-videopress-pkg" );
 __( "%1$s: %2$s", "jetpack-videopress-pkg" );
 __( "Bar chart", "jetpack-videopress-pkg" );
 __( "Loading map", "jetpack-videopress-pkg" );

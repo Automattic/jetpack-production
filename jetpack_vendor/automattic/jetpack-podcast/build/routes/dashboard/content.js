@@ -549,6 +549,7 @@ __( "All series are hidden. Click legend items to show data.", "jetpack-charts" 
 __( "No data available", "jetpack-charts" );
 __( "Invalid data", "jetpack-charts" );
 __( "Area chart", "jetpack-charts" );
+__( "Week of %s", "jetpack-charts" );
 __( "%1$s: %2$s", "jetpack-charts" );
 __( "Bar chart", "jetpack-charts" );
 __( "Loading map", "jetpack-charts" );

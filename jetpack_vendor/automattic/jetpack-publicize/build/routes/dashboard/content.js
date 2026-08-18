@@ -180,6 +180,7 @@ __( "All series are hidden. Click legend items to show data.", "jetpack-publiciz
 __( "No data available", "jetpack-publicize-pkg" );
 __( "Invalid data", "jetpack-publicize-pkg" );
 __( "Area chart", "jetpack-publicize-pkg" );
+__( "Week of %s", "jetpack-publicize-pkg" );
 __( "%1$s: %2$s", "jetpack-publicize-pkg" );
 __( "Bar chart", "jetpack-publicize-pkg" );
 __( "Loading map", "jetpack-publicize-pkg" );
