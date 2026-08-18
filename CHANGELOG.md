@@ -50,6 +50,7 @@ This is an alpha version! The changes listed here are not final.
 - Omnibar: return admin bar nodes translated in the user's locale.
 - Podcast Player: keep showing the most recent episodes when a podcast feed becomes slow or unreachable, instead of failing to load.
 - Podcast Player: stop preloading episode audio before playback to avoid inflating podcast download metrics.
+- Premium Analytics: keep the year and the day on the traffic chart's time axis, which could previously skip the tick that named them and repeat a label instead.
 - Premium Content: self-heal the wpcom_user_id link on a local WordPress account from a freshly-verified magic-link token, so subscription access can be recognized on subsequent visits without another login round trip.
 - Premium Content: stop treating a bare WordPress session as proof of subscription in the Subscriber Login and Premium Content login button blocks, which could hide the only way to recover a subscription token.
 - Random Redirect: avoid a fatal error when a theme or plugin already declares the module's redirect function.
