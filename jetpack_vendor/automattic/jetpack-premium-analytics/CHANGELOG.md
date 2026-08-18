@@ -56,6 +56,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix report dates shifting by a day on sites west of UTC, and stop the date picker briefly using the visitor's timezone on load.
 - Premium Analytics: remove the duplicate padding around the chart-tab widgets.
 - Report a missing widget manifest as a partial build, so a half-deployed dashboard is no longer silent.
+- Reports: stop showing period-over-period deltas, which the report header offers no comparison control to explain. A comparison chosen on the dashboard is still kept and restored on the way back.
 - Section header: describe an hour-snapped window by its full length and name a rolling day window by its end day.
 - Stats: align the post activity heatmap with the design: draw the current week only through today, and lead the cell tooltip with the view count.
 - Storybook: keep a widget's forced loading, error, and empty stories from serving each other's cached data.
