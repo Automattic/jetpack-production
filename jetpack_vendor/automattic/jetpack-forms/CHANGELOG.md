@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a Print action to form responses, which opens the response on its own page and prints just the response.
 - Add conditional logic to form fields, so any field can be shown or hidden based on another field's answer. Disabled by default while in testing; enable it with the forms-conditional-logic feature flag.
 - Contact Form: Add background image support to the Form and Step blocks.
 - Feedback author avatars: pick a stable Color Studio background color per email for initials identity avatars via bg_color
@@ -26,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Grouped field labels: lower the legend padding reset so themes and global styles can override it.
 - Multistep forms: Keep a step's padding inside its width. Published forms whose steps have padding will change appearance: the step now matches the width of the form, with its fields inset by the padding, instead of overflowing past the form's right edge.
 - Rating field: keep the default left-aligned, borderless rendering under the Outlined and Animated form styles.
+- Responses: Preserve line breaks in multi-line answers.
 - Send the site ID as `blog_id` on the email open Tracks event so it lands in the blogid column.
 - Show an empty checkbox icon next to checkbox fields the respondent left unchecked, instead of always showing a ticked one.
 - Slider field: keep the default label when the form uses the Outlined or Animated style, so the label no longer overlaps the slider track.

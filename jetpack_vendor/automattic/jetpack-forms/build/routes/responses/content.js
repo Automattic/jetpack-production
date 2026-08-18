@@ -659,6 +659,7 @@ __( "An error occurred.", "jetpack-forms" );
 /* translators: %s: the number of responses. */
 _n( "An error occurred for %s response.", "An error occurred for %s responses.", 1, "jetpack-forms" );
 __( "View", "jetpack-forms" );
+__( "Print", "jetpack-forms" );
 /* translators: %s: the number of responses. */
 _n( "Moving %s response to spam…", "Moving %s responses to spam…", 1, "jetpack-forms" );
 __( "Response marked as spam.", "jetpack-forms" );

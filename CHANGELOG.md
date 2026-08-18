@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Features: group the feature toggles into a single Agent capabilities card.
 - AI settings: Make the Try it out links pre-open their target — the AI Assistant sidebar in the editor, and Image Studio's generate mode in the Media Library.
 - Content Guidelines AI: Mark Automattician traffic in Tracks events so internal testing can be filtered out of product reporting.
+- Forms: Add a Print action to form responses.
 - Forms: Add form fill duration to feedback entries.
 - Image Studio: Mark identified Automatticians and proxied requests in tracking.
 - Jetpack AI: hide the AI sidebar when the writing assistant and SEO enhancer toggles are both off.
@@ -39,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Escape the Premium Content block login button label on output.
 - Fix the premium block upgrade banner rendering collapsed and too narrow on the site frontend.
 - Forms: Make Group and Columns blocks fill the form width so nested fields render full-width.
+- Forms: Preserve line breaks in multi-line answers in the responses dashboard.
 - Forms: show an empty checkbox icon next to checkbox fields the respondent left unchecked, instead of always showing a ticked one.
 - Harden the subscriber authentication endpoint so it only redirects within the current site.
 - Heartbeat: restore identity crisis reporting in the WP-CLI status command.
