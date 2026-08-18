@@ -42,7 +42,6 @@ __( "Includes pages, and posts.", "jetpack-backup-pkg" );
 __( "Media uploads", "jetpack-backup-pkg" );
 __( "You must also select Site database for restored media uploads to appear.", "jetpack-backup-pkg" );
 __( "Restore failed.", "jetpack-backup-pkg" );
-__( "Lost connection while restoring.", "jetpack-backup-pkg" );
 __( "Back to overview", "jetpack-backup-pkg" );
 __( "Restore backup", "jetpack-backup-pkg" );
 __( "Restore point:", "jetpack-backup-pkg" );
@@ -50,5 +49,8 @@ __( "Restoring will overwrite the matching parts of your live site with the cont
 __( "Choose the items you wish to restore:", "jetpack-backup-pkg" );
 __( "Select at least one item to restore.", "jetpack-backup-pkg" );
 __( "Confirm restore", "jetpack-backup-pkg" );
+__( "Your restore is queued and will begin shortly…", "jetpack-backup-pkg" );
 __( "Restoring…", "jetpack-backup-pkg" );
 __( "Restore complete.", "jetpack-backup-pkg" );
+__( "Restore finished, but some items could not be restored.", "jetpack-backup-pkg" );
+__( "We've lost track of this restore. It may still be running — you'll get an email when it finishes.", "jetpack-backup-pkg" );
