@@ -5,12 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.32.2-alpha - unreleased
+## 0.33.0-alpha - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Show the Stats dashboard before the site is connected to WordPress.com, so a plan can be picked and the site connected from there.
+
 ### Changed
 - Update dependencies.
+
+### Fixed
+- Return a clear error instead of a server error when a stats request is made before the site is connected to WordPress.com.
 
 ## 0.32.1 - 2026-08-10
 ### Security

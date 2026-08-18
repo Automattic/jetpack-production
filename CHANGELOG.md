@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: label the traffic chart's time axis by the size of the bucket behind the data, and name each bar's period in full in its tooltip.
 - REST API: Add atomic_email_block field to the site endpoint response.
 - Search Blocks: add a No Results block so the search empty state can hold any blocks — links, images, buttons — instead of plain text. The Results List message settings are deprecated and keep rendering.
+- Stats: Show the Stats dashboard before the site is connected to WordPress.com, so a plan can be picked and the site connected from there.
 
 ### Bug fixes
 - AI: Add the is_a11n and is_test audience properties to the MCP settings Tracks events.
