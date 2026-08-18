@@ -232,14 +232,17 @@ __( "A backup is currently in progress.", "jetpack-backup-pkg" );
 __( "Queueing backup", "jetpack-backup-pkg" );
 __( "Backup enqueued", "jetpack-backup-pkg" );
 __( "A backup has been queued and will start shortly.", "jetpack-backup-pkg" );
-__( "We're having trouble backing up your site", "jetpack-backup-pkg" );
 __( "<a>Get in touch with us</a> to get your site backups going again.", "jetpack-backup-pkg" );
+__( "We're having trouble backing up your site", "jetpack-backup-pkg" );
 __( "Your first cloud backup will be ready soon", "jetpack-backup-pkg" );
 /* translators: %d: how much of the running backup is complete, as a percentage. */
 __( "%d%%", "jetpack-backup-pkg" );
 __( "The first backup usually takes a few minutes, so it will become available soon.", "jetpack-backup-pkg" );
 __( "In the meanwhile, you can start getting familiar with your <a>backup management on Jetpack.com</a>.", "jetpack-backup-pkg" );
 __( "Your backup will be ready soon", "jetpack-backup-pkg" );
+__( "Your latest backup didn't complete. We'll try again shortly.", "jetpack-backup-pkg" );
+/* translators: sentence form of the takeover panel's heading, which is the same words without the full stop. The two render in mutually exclusive situations — this one is a line of body copy, that one a title — so both spellings are wanted. */
+__( "We're having trouble backing up your site.", "jetpack-backup-pkg" );
 __( "Jetpack Logo", "jetpack-backup-pkg" );
 __( "An Automattic Airline", "jetpack-backup-pkg" );
 __( "Products", "jetpack-backup-pkg" );
@@ -257,5 +260,6 @@ __( "Link your account to view backups", "jetpack-backup-pkg" );
 __( "This site's Jetpack connection is already set up, but your account isn't linked to a WordPress.com user yet.", "jetpack-backup-pkg" );
 __( "Link my account", "jetpack-backup-pkg" );
 __( "Save changes and restore quickly with one-click recovery.", "jetpack-backup-pkg" );
+__( "We couldn't check your site's backup status.", "jetpack-backup-pkg" );
 __( "Select an item from the list to see details.", "jetpack-backup-pkg" );
 __( "Item not found.", "jetpack-backup-pkg" );
