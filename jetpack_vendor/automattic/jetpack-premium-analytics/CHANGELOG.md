@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Top locations: offer Regions in the widget's "View by" control.
 
 ### Changed
+- Chart widgets: pick the chart type from an icon toggle instead of a dropdown.
 - Chart widgets: Remove the Metrics selector from Traffic summary, Subscribers summary, WordAds, and Store performance — the metric tabs already choose what the chart plots.
 - Dashboard: fade the section header subtitle out as the widgets scroll.
 - Dashboard: Give each section its own heading and description.
