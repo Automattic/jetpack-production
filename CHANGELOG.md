@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Media API: restrict the edit endpoints to attachments, so they no longer accept ordinary post IDs.
 - Memberships: Ensure the configured post access level is evaluated correctly before authorizing access to paywalled content.
 - Newsletter: Make the post-publish email confirmation more visible.
+- Newsletter: round the dashboard widget footer so it stops covering the rounded bottom corner of the WP Admin box.
 - Newsletter: Save the post before generating an email preview, so the preview reflects the latest saved content (e.g. a newly-set featured image).
 - Newsletter: send the test email when pressing Enter, and show send errors as a proper error notice.
 - Omnibar: return admin bar nodes translated in the user's locale.
