@@ -61,6 +61,7 @@ This is an alpha version! The changes listed here are not final.
 - Section header: describe an hour-snapped window by its full length and name a rolling day window by its end day.
 - Stats: align the post activity heatmap with the design: draw the current week only through today, and lead the cell tooltip with the view count.
 - Storybook: keep a widget's forced loading, error, and empty stories from serving each other's cached data.
+- Subscribers: fix the chart legend rendering its date range reversed.
 
 ## [0.2.0] - 2026-08-10
 ### Added
