@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Show the Stats dashboard before the site is connected to WordPress.com, so a plan can be picked and the site connected from there.
 
 ### Changed
+- Load the post list Stats column CSS through the stylesheet queue.
 - Update dependencies.
 
 ### Fixed
