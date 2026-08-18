@@ -182,9 +182,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-connection' => array(
-            'pretty_version' => '8.10.4-alpha.1787042844',
-            'version' => '8.10.4.0-alpha1787042844',
-            'reference' => 'ac7cdec2504fd6783f182f881b9e3e159f3927fa',
+            'pretty_version' => '8.10.4-alpha.1787063017',
+            'version' => '8.10.4.0-alpha1787063017',
+            'reference' => '2cb0c608d9c765394242bcf516d518d7687a6a9f',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-connection',
             'aliases' => array(),
