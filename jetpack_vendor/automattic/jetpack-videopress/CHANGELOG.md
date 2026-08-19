@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Chapters editor: move the chapter list into a side panel beside the preview and timeline.
 - Update package dependencies.
 
+### Fixed
+- Fix: Private VideoPress videos in synced patterns intermittently fail authorization by caching GUID lists at render time for fast O(1) lookup during token requests.
+
 ## [0.46.0] - 2026-08-13
 ### Added
 - Show the free-plan upgrade notice on the Library and Settings tabs once the free video upload has been used. [#51186]
