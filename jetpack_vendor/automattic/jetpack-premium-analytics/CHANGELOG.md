@@ -59,6 +59,7 @@ This is an alpha version! The changes listed here are not final.
 - Date filters panel: avoid a one-frame flash of mismatched labels while resizing.
 - Date filters panel: recover the full preset labels when space returns in the dashboard section header, instead of staying abbreviated.
 - Fix report dates shifting by a day on sites west of UTC, and stop the date picker briefly using the visitor's timezone on load.
+- Post traffic activity: fit the heatmap cells to the tile height so the month labels are no longer clipped.
 - Premium Analytics: remove the duplicate padding around the chart-tab widgets.
 - Report a missing widget manifest as a partial build, so a half-deployed dashboard is no longer silent.
 - Reports: stop showing period-over-period deltas, which the report header offers no comparison control to explain. A comparison chosen on the dashboard is still kept and restored on the way back.
