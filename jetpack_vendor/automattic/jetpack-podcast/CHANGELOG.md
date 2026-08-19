@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Record dashboard views, the host platform, and what drove each option write, so podcast usage can be measured per environment.
 - Record when each required podcast setting is first filled in, so setup completion can be measured.
 - Settings: add an episode limit for the podcast feed.
 
