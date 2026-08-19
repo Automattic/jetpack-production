@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Load the post list Stats column CSS through the stylesheet queue.
+- Load the Stats dashboard bootstrap script through the script queue.
 - Update dependencies.
 
 ### Fixed
