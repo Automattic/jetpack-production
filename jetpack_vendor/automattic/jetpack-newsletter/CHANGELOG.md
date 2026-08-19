@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Make newsletter settings save feedback consistent and allow sender settings to save with Enter.
+- Newsletter: Fix a fatal error on the settings page caused by Gutenberg removing a private API that DataViews toggle and radio fields relied on.
 - Normalize spacing in Newsletter settings cards.
 
 ## [0.12.4] - 2026-08-10

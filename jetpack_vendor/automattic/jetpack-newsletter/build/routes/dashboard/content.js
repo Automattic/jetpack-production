@@ -363,6 +363,7 @@ __( "Comp a subscription", "jetpack-newsletter" );
 __( "Remove subscriber", "jetpack-newsletter" );
 __( "Could not load subscribers.", "jetpack-newsletter" );
 __( "Search subscribers…", "jetpack-newsletter" );
+__( "Preview and edit", "jetpack-newsletter" );
 __( "Include the post's featured image in the new post emails", "jetpack-newsletter" );
 __( "For each new post email, include", "jetpack-newsletter" );
 __( "Full text", "jetpack-newsletter" );
@@ -379,7 +380,6 @@ __( "By <Author>%1$s</Author>", "jetpack-newsletter" );
 __( "Preview:", "jetpack-newsletter" );
 /* translators: %s is the display name of the author */
 __( "Avatar for %s", "jetpack-newsletter" );
-__( "Preview and edit", "jetpack-newsletter" );
 __( "Show author avatar on your emails", "jetpack-newsletter" );
 __( "Update your Gravatar", "jetpack-newsletter" );
 __( "We use Gravatar, a service that associates an avatar image with your primary email address.", "jetpack-newsletter" );
