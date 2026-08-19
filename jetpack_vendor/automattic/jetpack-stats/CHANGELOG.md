@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Load the rule that hides the tracking pixel through the stylesheet queue.
+
 ### Fixed
 - Let a Stats page load asking for fresh data bypass the cached copy, so a site that has just connected or bought a plan is not shown what it saw before.
 - Stop caching the failure a request makes when the site has no WordPress.com connection, so a site that has just connected sees its stats straight away.
