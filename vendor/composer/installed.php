@@ -425,9 +425,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-premium-analytics' => array(
-            'pretty_version' => '0.3.0-alpha.1787104936',
-            'version' => '0.3.0.0-alpha1787104936',
-            'reference' => '622de577ff113e614527bcfdacd54d91e2d1bd76',
+            'pretty_version' => '0.3.0-alpha.1787119907',
+            'version' => '0.3.0.0-alpha1787119907',
+            'reference' => '790ddb8761f7ddc9685683251b8d03ac4ec0d82c',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-premium-analytics',
             'aliases' => array(),
