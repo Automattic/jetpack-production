@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Serve the dashboard only from its registered, capability-gated admin page.
 - Shares: Hide the widget outside WPCOM Simple, where share counts are never recorded.
 - Show a skeleton placeholder instead of a spinner while widget content loads.
+- Show content-shaped skeleton placeholders while widget content loads.
 - Widget copy: Use sentence case for the drill-down back links, and shorten the Popular post description to one sentence.
 - Widgets: Order the traffic metric tiles Views, Visitors, Comments, Likes, and name the Latest emails sent view selector "By open rate" and "By click rate".
 - Widgets: restyle the footer actions to match the dashboard design — a "View all" link and an icon-only CSV download.
