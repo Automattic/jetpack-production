@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Contact Form: Make Group and Columns blocks fill the form width so nested fields render full-width.
 - Dashboard: keep response field icons and formatting after marking a response as spam.
 - Dashboard: show an explanation instead of a blank page when the dashboard assets are missing.
+- Fix the first change made to a form after opening a page being discarded when saving.
 - Form preview: Label the admin bar edit link "Edit Form" instead of "Edit Page".
 - Forms: prevent a fatal error when logging webhook responses with unexpected header types.
 - Grouped field labels: lower the legend padding reset so themes and global styles can override it.
