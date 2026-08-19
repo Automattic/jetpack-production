@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Distribution: split the directories into Automatic submission (Pocket Casts, submitted for you) and Manual submission, explain why a disabled button is disabled, and link to your Pocket Casts show once it is live.
 - Update dependencies.
+- Update package dependencies.
 
 ### Fixed
 - Feed: Resolve episode media in one batch so large podcast feeds render faster.

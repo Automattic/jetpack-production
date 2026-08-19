@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update dependencies.
+- Update package dependencies.
 
 ### Fixed
 - Make newsletter settings save feedback consistent and allow sender settings to save with Enter.

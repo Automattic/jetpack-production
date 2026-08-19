@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Chapters editor: move the chapter list into a side panel beside the preview and timeline.
+- Update package dependencies.
 
 ## [0.46.0] - 2026-08-13
 ### Added
