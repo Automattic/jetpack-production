@@ -55,6 +55,7 @@ This is an alpha version! The changes listed here are not final.
 - Omnibar: return admin bar nodes translated in the user's locale.
 - Podcast Player: keep showing the most recent episodes when a podcast feed becomes slow or unreachable, instead of failing to load.
 - Podcast Player: stop preloading episode audio before playback to avoid inflating podcast download metrics.
+- Premium Analytics: fix a stray label stacked at the left edge of a chart's time axis after hiding a series from the legend, or when the chart mixes labelled bars with dated ones or compares two periods, and stop a labelled bar's tooltip reading "Invalid Date".
 - Premium Analytics: keep the full set of ticks on the traffic chart's time axis, which could thin out to two labels on longer date ranges.
 - Premium Analytics: keep the year and the day on the traffic chart's time axis, which could previously skip the tick that named them, and stop the same label falling on two ticks in a row.
 - Premium Content: self-heal the wpcom_user_id link on a local WordPress account from a freshly-verified magic-link token, so subscription access can be recognized on subsequent visits without another login round trip.
