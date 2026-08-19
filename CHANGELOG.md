@@ -83,6 +83,7 @@ This is an alpha version! The changes listed here are not final.
 - Deprecate Jetpack::get_stat_data() and Jetpack::check_identity_crisis() in favor of their Connection package equivalents.
 - Jetpack AI: Stop showing the AI sidebar when the SEO Enhancer is the only feature switched on and SEO tools are off.
 - Move the site data endpoint into the Connection package. Deprecate Jetpack_Core_Json_Api_Endpoints::site_data() and ::get_site_data(), which now delegate to the package.
+- Newsletter: Sandbox the email preview iframe for defense in depth.
 - Owner disconnect dialog: own its styles under a local class namespace instead of borrowing the connection package's disconnect-dialog CSS.
 - Premium Analytics: point the dashboard stats card, newsletter widget, and block editor email stats link at the Analytics dashboard when it replaces the Stats page.
 - Remove Reprint full-site export support. The ?reprint-api-jetpack endpoint, the jetpack/v4 REST routes and the jetpack_reprint_export_available filter are gone. On Atomic sites, export continues to work through wpcomsh.
