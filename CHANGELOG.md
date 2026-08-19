@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Image Studio: Mark identified Automatticians and proxied requests in tracking.
 - Jetpack AI: hide the AI sidebar when the writing assistant and SEO enhancer toggles are both off.
 - Jetpack AI: the AI toolbar button now follows the writing assistant toggle.
+- Newsletter: explain why the Everyone audience is unavailable when a post has a paywall block, instead of linking to the block.
 - Newsletter: Rename the Access panel to Audience, describe who can read each post, and link out to set up paid subscribers.
 - Podcast: Add a setting for how many episodes the podcast feed includes.
 - Podcast: split the Distribution directories into Automatic and Manual submission, explain why a disabled button is disabled, and link to your Pocket Casts show once it is live.
