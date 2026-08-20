@@ -5,34 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.25.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [7.25.0] - 2026-08-20
 ### Added
-- Add a Print action to form responses, which opens the response on its own page and prints just the response.
-- Add conditional logic to form fields, so any field can be shown or hidden based on another field's answer. Disabled by default while in testing; enable it with the forms-conditional-logic feature flag.
-- Contact Form: Add background image support to the Form and Step blocks.
-- Feedback author avatars: pick a stable Color Studio background color per email for initials identity avatars via bg_color
+- Add a Print action to form responses, which opens the response on its own page and prints just the response. [#51368]
+- Contact Form: Add background image support to the Form and Step blocks. [#50975]
+- Feedback author avatars: Pick a stable Color Studio background color per email for initials identity avatars via `bg_color`. [#50578]
 
 ### Changed
-- Responses: Open a response on its own page from the list's View action and from both response notification email buttons, and keep the user on that page when a response is marked as spam or trashed.
-- Update package dependencies.
+- Responses: Open a response on its own page from the list's View action and from both response notification email buttons, and keep the user on that page when a response is marked as spam or trashed. [#51127]
+- Update package dependencies. [#51125] [#51399]
 
 ### Fixed
-- Contact Form: Make Group and Columns blocks fill the form width so nested fields render full-width.
-- Dashboard: keep response field icons and formatting after marking a response as spam.
-- Dashboard: show an explanation instead of a blank page when the dashboard assets are missing.
-- Fix the first change made to a form after opening a page being discarded when saving.
-- Form preview: Label the admin bar edit link "Edit Form" instead of "Edit Page".
-- Forms: prevent a fatal error when logging webhook responses with unexpected header types.
-- Grouped field labels: lower the legend padding reset so themes and global styles can override it.
-- Multistep forms: Keep a step's padding inside its width. Published forms whose steps have padding will change appearance: the step now matches the width of the form, with its fields inset by the padding, instead of overflowing past the form's right edge.
-- Rating field: keep the default left-aligned, borderless rendering under the Outlined and Animated form styles.
-- Responses: Preserve line breaks in multi-line answers.
-- Send the site ID as `blog_id` on the email open Tracks event so it lands in the blogid column.
-- Show an empty checkbox icon next to checkbox fields the respondent left unchecked, instead of always showing a ticked one.
-- Slider field: keep the default label when the form uses the Outlined or Animated style, so the label no longer overlaps the slider track.
+- Contact Form: Make Group and Columns blocks fill the form width so nested fields render full-width. [#51266]
+- Dashboard: Keep response field icons and formatting after marking a response as spam. [#51288]
+- Dashboard: Show an explanation instead of a blank page when the dashboard assets are missing. [#51151]
+- Fix the first change made to a form after opening a page being discarded when saving. [#51393]
+- Form preview: Label the admin bar edit link "Edit Form" instead of "Edit Page". [#51235]
+- Grouped field labels: Lower the legend padding reset so themes and global styles can override it. [#51187]
+- Multistep forms: Keep step padding within the form width. [#50975]
+- Prevent a fatal error when logging webhook responses with unexpected header types. [#51156]
+- Rating field: Keep the default left-aligned, borderless rendering under the Outlined and Animated form styles. [#51126]
+- Responses: Preserve line breaks in multi-line answers. [#51369]
+- Show an empty checkbox icon next to checkbox fields the respondent left unchecked, instead of always showing a ticked one. [#51293]
+- Slider field: Keep the default label when the form uses the Outlined or Animated style, so the label no longer overlaps the slider track. [#51124]
 
 ## [7.24.0] - 2026-08-10
 ### Security
@@ -2655,7 +2650,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.25.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.24.0...v7.25.0-alpha
+[7.25.0]: https://github.com/automattic/jetpack-forms/compare/v7.24.0...v7.25.0
 [7.24.0]: https://github.com/automattic/jetpack-forms/compare/v7.23.4...v7.24.0
 [7.23.4]: https://github.com/automattic/jetpack-forms/compare/v7.23.3...v7.23.4
 [7.23.3]: https://github.com/automattic/jetpack-forms/compare/v7.23.2...v7.23.3

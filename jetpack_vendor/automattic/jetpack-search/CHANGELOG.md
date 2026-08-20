@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.4.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [7.4.1] - 2026-08-20
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#51399]
 
 ### Fixed
-- Classic Search: Don't override a query already restricted by post__in once its search term has been cleared.
-- Search Input block: Fix the editor settings panel not being translated.
+- Classic Search: Don't override a query already restricted by `post__in` once its search term has been cleared. [#51284]
+- Input block: Fix the editor settings panel not being translated. [#51322]
 
 ## [7.4.0] - 2026-08-13
 ### Added
@@ -1887,7 +1884,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[7.4.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v7.4.0...v7.4.1-alpha
+[7.4.1]: https://github.com/Automattic/jetpack-search/compare/v7.4.0...v7.4.1
 [7.4.0]: https://github.com/Automattic/jetpack-search/compare/v7.3.3...v7.4.0
 [7.3.3]: https://github.com/Automattic/jetpack-search/compare/v7.3.2...v7.3.3
 [7.3.2]: https://github.com/Automattic/jetpack-search/compare/v7.3.1...v7.3.2

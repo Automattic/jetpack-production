@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.44.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.44.0] - 2026-08-20
 ### Added
-- Connection Error UI: Ensure the error allowlist is an explicit, documented contract with meaningful user-facing text for displayable errors, and add a Contact Jetpack Support link to broken-connection notices for errors where reconnecting may not fix it.
+- Error UI: Add a support link to broken-connection notices when reconnecting may not resolve the problem. [#51360]
 
 ## [5.43.1] - 2026-08-19
 ### Changed
@@ -2856,7 +2853,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[5.44.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.43.1...5.44.0-alpha
+[5.44.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.43.1...5.44.0
 [5.43.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.43.0...5.43.1
 [5.43.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.42.3...5.43.0
 [5.42.3]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.42.2...5.42.3
