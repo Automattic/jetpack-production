@@ -2,12 +2,9 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 16.2-a.0 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 16.1.2 - 2026-08-20
 ### Bug fixes
-- Newsletter: Fix a fatal error on the settings page caused by Gutenberg removing a private API that DataViews toggle and radio fields relied on.
+- Newsletter: Fix a fatal error on the settings page caused by Gutenberg removing a private API that DataViews toggle and radio fields relied on. [#51363]
 
 ## 16.1.1 - 2026-08-11
 ### Bug fixes

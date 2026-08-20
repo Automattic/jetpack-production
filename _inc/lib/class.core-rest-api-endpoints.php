@@ -3773,7 +3773,7 @@ class Jetpack_Core_Json_Api_Endpoints {
 	 * same data under a different name: `jetpack_protect_global_whitelist` is populated
 	 * from `jetpack_waf_ip_allow_list`, and `jetpack_protect_key` is a shared secret.
 	 *
-	 * @since 16.2-a.0
+	 * @since $$next-version$$
 	 *
 	 * @param array $options Option definitions keyed by option name.
 	 * @return array
