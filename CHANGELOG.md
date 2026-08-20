@@ -62,6 +62,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: fix a stray label stacked at the left edge of a chart's time axis after hiding a series from the legend, or when the chart mixes labelled bars with dated ones or compares two periods, and stop a labelled bar's tooltip reading "Invalid Date".
 - Premium Analytics: keep the full set of ticks on the traffic chart's time axis, which could thin out to two labels on longer date ranges.
 - Premium Analytics: keep the year and the day on the traffic chart's time axis, which could previously skip the tick that named them, and stop the same label falling on two ticks in a row.
+- Premium Analytics: Stop applying hidden date comparisons in dashboard sections that do not offer the control.
 - Premium Content: self-heal the wpcom_user_id link on a local WordPress account from a freshly-verified magic-link token, so subscription access can be recognized on subsequent visits without another login round trip.
 - Premium Content: stop treating a bare WordPress session as proof of subscription in the Subscriber Login and Premium Content login button blocks, which could hide the only way to recover a subscription token.
 - Random Redirect: avoid a fatal error when a theme or plugin already declares the module's redirect function.
