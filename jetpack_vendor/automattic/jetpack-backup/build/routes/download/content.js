@@ -31,6 +31,7 @@ __( "Link your account to view backups", "jetpack-backup-pkg" );
 __( "This site's Jetpack connection is already set up, but your account isn't linked to a WordPress.com user yet.", "jetpack-backup-pkg" );
 __( "Link my account", "jetpack-backup-pkg" );
 __( "Save changes and restore quickly with one-click recovery.", "jetpack-backup-pkg" );
+__( "Back to overview", "jetpack-backup-pkg" );
 __( "WordPress themes", "jetpack-backup-pkg" );
 __( "WordPress plugins", "jetpack-backup-pkg" );
 __( "WordPress root", "jetpack-backup-pkg" );
@@ -45,7 +46,8 @@ __( "You must also select Site database for restored media uploads to appear.", 
 __( "Download failed: %s", "jetpack-backup-pkg" );
 __( "Download failed.", "jetpack-backup-pkg" );
 __( "Lost connection while preparing download.", "jetpack-backup-pkg" );
-__( "Back to overview", "jetpack-backup-pkg" );
+__( "This download link isn't valid.", "jetpack-backup-pkg" );
+__( "The address is missing a valid download point. Go back to the overview and choose a backup to download.", "jetpack-backup-pkg" );
 __( "Download backup", "jetpack-backup-pkg" );
 __( "Download point:", "jetpack-backup-pkg" );
 __( "Choose the items you wish to include in the download:", "jetpack-backup-pkg" );
