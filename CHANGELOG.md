@@ -50,6 +50,9 @@ This is an alpha version! The changes listed here are not final.
 - Harden the subscriber authentication endpoint so it only redirects within the current site.
 - Heartbeat: restore identity crisis reporting in the WP-CLI status command.
 - Likes: Fix Like buttons sometimes getting stuck on "Loading…" and never appearing.
+- Likes: Include public custom post types in default visibility settings so Likes and Comment Likes render on CPTs without requiring manual configuration.
+- Likes: keep Settings > Sharing available when sharing buttons are turned off, so the Likes and Comment Likes settings stay reachable.
+- Likes: rename the settings heading on Settings > Sharing to reflect what it holds when sharing buttons are off.
 - Media API: restrict the edit endpoints to attachments, so they no longer accept ordinary post IDs.
 - Memberships: Ensure the configured post access level is evaluated correctly before authorizing access to paywalled content.
 - Newsletter: Fix a fatal error on the settings page caused by Gutenberg removing a private API that DataViews toggle and radio fields relied on.
