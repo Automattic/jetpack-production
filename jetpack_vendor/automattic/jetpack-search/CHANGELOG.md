@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Search Input block: Fix the editor settings panel not being translated.
+
 ## [7.4.0] - 2026-08-13
 ### Added
 - Search Blocks: Add a No Results block so empty states can contain links, images, buttons, and other blocks instead of plain text. Continue rendering existing Results List messages while deprecating their settings. [#51164]
