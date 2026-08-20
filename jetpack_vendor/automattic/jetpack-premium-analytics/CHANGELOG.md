@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Leaderboard: Set the bar corner radius through `--a8c-charts-border-radius-leaderboard-bar`, replacing the deprecated `--a8c--charts--leaderboard--bar--border-radius` name that `@automattic/charts` no longer reads.
+
 ### Fixed
 - Date comparison: end a sub-day previous period immediately before the reference window instead of one instant inside it.
 
