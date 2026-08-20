@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- General: Update minimum WordPress version to 7.0.
+
 ### Enhancements
 - AI: Add a Jetpack AI module as the site-wide master switch on self-hosted and Atomic, preserving explicit opt-outs.
 - AI Assistant: Add feature settings controls for Jetpack AI tools.
@@ -28,6 +31,9 @@ This is an alpha version! The changes listed here are not final.
 - REST API: Add atomic_email_block field to the site endpoint response.
 - Search Blocks: add a No Results block so the search empty state can hold any blocks — links, images, buttons — instead of plain text. The Results List message settings are deprecated and keep rendering.
 - Stats: Show the Stats dashboard before the site is connected to WordPress.com, so a plan can be picked and the site connected from there.
+
+### Improved compatibility
+- Tested up to WordPress 7.1.
 
 ### Bug fixes
 - AI: Add the is_a11n and is_test audience properties to the MCP settings Tracks events.
@@ -81,6 +87,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Hide the post list SEO columns for people who had customized Screen Options before those columns existed.
 - Sharing: Escape Tumblr share title, URL, and button label in official button output.
 - Sharing: use an unpredictable name for share and Press This popups so another page cannot pre-register the same window name.
+- Sitemaps: avoid a PHP notice when a sitemap query returns no posts.
 - Subscribers: Restore the option to assign imported subscribers to specific newsletter categories on CSV upload and manual add.
 - Subscriptions: Fix subscribe prompts and paywalled content incorrectly showing or blocking for readers who follow the site but have no active email subscription.
 - Tiled Gallery: stop routing images through the external Photon domain on VIP sites when galleries are saved, and add a `jetpack_skip_photon_domain` filter to control it. Galleries published before this change keep their existing image URLs until they are saved again.
