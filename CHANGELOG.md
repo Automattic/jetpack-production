@@ -63,7 +63,6 @@ This is an alpha version! The changes listed here are not final.
 - Map Block: Remove the duplicate alignment toolbar in the editor.
 - Media API: restrict the edit endpoints to attachments, so they no longer accept ordinary post IDs.
 - Memberships: Ensure the configured post access level is evaluated correctly before authorizing access to paywalled content.
-- Newsletter: Fix a fatal error on the settings page caused by Gutenberg removing a private API that DataViews toggle and radio fields relied on.
 - Newsletter: Make the post-publish email confirmation more visible.
 - Newsletter: round the dashboard widget footer so it stops covering the rounded bottom corner of the WP Admin box.
 - Newsletter: Save the post before generating an email preview, so the preview reflects the latest saved content (e.g. a newly-set featured image).
@@ -110,6 +109,10 @@ This is an alpha version! The changes listed here are not final.
 - Site options: expose difm_lite_site_options.is_website_content_submitted for sites with an active DIFM Lite build (WordPress.com only).
 - Update lock file.
 - Update package dependencies.
+
+## 16.1.2 - 2026-08-20
+### Bug fixes
+- Newsletter: Fix a fatal error on the settings page caused by Gutenberg removing a private API that DataViews toggle and radio fields relied on. [#51363]
 
 ## 16.1.1 - 2026-08-11
 ### Bug fixes
