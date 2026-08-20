@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 16.2-a.2 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- My Jetpack: Stop the Stats dashboard from asking which plan you want again after Start for Free was already chosen.
+
 ## 16.2-a.1 - 2026-08-20
 ### Major Enhancements
 - Update minimum WordPress version to 7.0. [#51370]

@@ -42,7 +42,7 @@
 		"automattic/jetpack-logo": "^3.0.9",
 		"automattic/jetpack-masterbar": "^0.27.37",
 		"automattic/jetpack-menu-badges": "^0.1.0",
-		"automattic/jetpack-my-jetpack": "^5.44.0",
+		"automattic/jetpack-my-jetpack": "^5.44.1-alpha",
 		"automattic/jetpack-newsletter": "^0.12.6",
 		"automattic/jetpack-paypal-payments": "^0.7.12",
 		"automattic/jetpack-plugins-installer": "^0.5.11",
@@ -108,7 +108,7 @@
 		"platform": {
 			"ext-intl": "0.0.0"
 		},
-		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_2_a_1",
+		"autoloader-suffix": "f11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_2_a_2",
 		"allow-plugins": {
 			"automattic/jetpack-autoloader": true,
 			"automattic/jetpack-composer-plugin": true
