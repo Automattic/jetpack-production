@@ -224,7 +224,7 @@ class Jetpack_Options {
 	 * but does not apply the `jetpack_options` filter, so a filter override is not mistaken for a
 	 * stored value.
 	 *
-	 * @since 8.10.5-alpha
+	 * @since 8.11.0-alpha
 	 *
 	 * @param string $name Option name. It must come _without_ `jetpack_%` prefix.
 	 *

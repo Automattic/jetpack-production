@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.10.5-alpha] - unreleased
+## [8.11.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Connection Error UI: Ensure the error allowlist is an explicit, documented contract with meaningful user-facing text for displayable errors, and flag errors where reconnecting may not help so consumers can offer a support link.
 
 ### Fixed
 - Terms of Service: Avoid a redundant per-request database query on sites without a persistent object cache.
@@ -2018,7 +2021,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[8.10.5-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.10.4...v8.10.5-alpha
+[8.11.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v8.10.4...v8.11.0-alpha
 [8.10.4]: https://github.com/Automattic/jetpack-connection/compare/v8.10.3...v8.10.4
 [8.10.3]: https://github.com/Automattic/jetpack-connection/compare/v8.10.2...v8.10.3
 [8.10.2]: https://github.com/Automattic/jetpack-connection/compare/v8.10.1...v8.10.2
