@@ -50,6 +50,7 @@ This is an alpha version! The changes listed here are not final.
 - Widget copy: Use sentence case for the drill-down back links, and shorten the Popular post description to one sentence.
 - Widgets: Order the traffic metric tiles Views, Visitors, Comments, Likes, and name the Latest emails sent view selector "By open rate" and "By click rate".
 - Widgets: restyle the footer actions to match the dashboard design — a "View all" link and an icon-only CSV download.
+- Widget settings: Drop the "Number of results" control and request a shared row limit instead; report pages own showing more rows.
 
 ### Fixed
 - Darken and enlarge chart axis labels, and show a tooltip when hovering a Devices chart segment.

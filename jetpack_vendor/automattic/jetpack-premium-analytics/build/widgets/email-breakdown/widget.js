@@ -14,4 +14,3 @@ __( "Links", "jetpack-premium-analytics-pkg" );
 __( "Metric", "jetpack-premium-analytics-pkg" );
 __( "Opens", "jetpack-premium-analytics-pkg" );
 __( "Clicks", "jetpack-premium-analytics-pkg" );
-__( "Number of results", "jetpack-premium-analytics-pkg" );
