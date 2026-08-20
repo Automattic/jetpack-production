@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Classic Search: Don't override a query already restricted by post__in once its search term has been cleared.
 - Search Input block: Fix the editor settings panel not being translated.
 
 ## [7.4.0] - 2026-08-13
