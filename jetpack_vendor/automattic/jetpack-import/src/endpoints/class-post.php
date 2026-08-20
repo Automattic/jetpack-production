@@ -157,7 +157,7 @@ class Post extends \WP_REST_Posts_Controller {
 		if ( is_array( $metas ) ) {
 			foreach ( $metas as $meta_key => $meta_value ) {
 
-				$meta_value = maybe_unserialize( $meta_value );
+				$meta_value = self::unserialize_no_objects( $meta_value );
 				if ( $meta_key === '_edit_last' ) {
 					update_post_meta( $post_id, $meta_key, $meta_value );
 				} else {
@@ -168,6 +168,63 @@ class Post extends \WP_REST_Posts_Controller {
 				do_action( 'import_post_meta', $post_id, $meta_key, $meta_value );
 			}
 		}
+	}
+
+	/**
+	 * Restore an imported meta value as plain data.
+	 *
+	 * Imported meta is plain data (scalars and arrays), so serialized values are decoded without
+	 * class instantiation and any residual objects are dropped. This matches maybe_unserialize()
+	 * for non-serialized and object-free serialized values.
+	 *
+	 * @param mixed $value The raw meta value.
+	 * @return mixed A plain (object-free) value.
+	 */
+	private static function unserialize_no_objects( $value ) {
+		if ( ! is_string( $value ) || ! is_serialized( $value ) ) {
+			return $value;
+		}
+
+		$value = trim( $value );
+
+		// unserialize()'s $options parameter is PHP 7.0+; on 5.6 the 2-arg call warns and returns false.
+		if ( PHP_VERSION_ID < 70000 ) {
+			// Refuse declared objects: a type token can only open the string or follow `;` or `{`.
+			if ( preg_match( '/(?:^|[;{])[OC]:[0-9]+:"/', $value ) ) {
+				return null;
+			}
+
+			// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged, WordPress.PHP.DiscouragedPHPFunctions.serialize_unserialize -- object payloads refused above.
+			return self::strip_objects( @unserialize( $value ) );
+		}
+
+		// maybe_unserialize() decodes with no `allowed_classes`; call unserialize() directly with classes
+		// disallowed so meta is only ever restored as plain data. The is_serialized() guard above and the
+		// @ (warnings on malformed input) mirror maybe_unserialize()'s own behavior.
+		// phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged, WordPress.PHP.DiscouragedPHPFunctions.serialize_unserialize, PHPCompatibility.FunctionUse.NewFunctionParameters.unserialize_optionsFound -- allowed_classes => false makes this decode safe; the gate above keeps this line off PHP 5.6.
+		$decoded = @unserialize( $value, array( 'allowed_classes' => false ) );
+
+		return self::strip_objects( $decoded );
+	}
+
+	/**
+	 * Recursively replace any objects in a decoded value with null.
+	 *
+	 * @param mixed $value Decoded value.
+	 * @return mixed The value with any objects removed.
+	 */
+	private static function strip_objects( $value ) {
+		if ( is_object( $value ) ) {
+			return null;
+		}
+
+		if ( is_array( $value ) ) {
+			foreach ( $value as $key => $item ) {
+				$value[ $key ] = self::strip_objects( $item );
+			}
+		}
+
+		return $value;
 	}
 
 	/**
