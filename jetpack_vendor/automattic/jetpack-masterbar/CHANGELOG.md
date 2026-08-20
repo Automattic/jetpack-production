@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Removed
+- Remove a dead CSS rule for the Jetpack release post modal, which no longer exists.
+
 ## [0.27.36] - 2026-08-03
 ### Changed
 - Relabel the WooCommerce admin menu item to "Store setup" on Commerce and Commerce-trial sites. [#50203]

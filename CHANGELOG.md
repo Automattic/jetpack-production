@@ -89,6 +89,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Add a build-time check that the pre-rendered frontend components only use CSS classes their own stylesheet defines.
 - Admin Bar: Expose the command palette node through the admin bar endpoint.
+- Admin Page: Remove the release post update modal, which has had no content published for it since 2023.
 - Button block: Add a filter for the default HTML element the block falls back to when it does not specify one.
 - Deprecate Jetpack::get_stat_data() and Jetpack::check_identity_crisis() in favor of their Connection package equivalents.
 - Jetpack AI: Stop showing the AI sidebar when the SEO Enhancer is the only feature switched on and SEO tools are off.
