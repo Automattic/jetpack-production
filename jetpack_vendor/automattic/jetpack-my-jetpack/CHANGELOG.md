@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Stats: Replace the commercial-use row on the Add Stats screen with UTM tracking, device stats, and location detail.
+
 ### Fixed
 - Stats: Tell the Stats dashboard when Start for Free was chosen, so it does not ask which plan you want a second time.
 
