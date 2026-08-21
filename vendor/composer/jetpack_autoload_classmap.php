@@ -326,6 +326,22 @@ return array(
 		'version' => '0.14.39.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/class-social-links.php'
 	),
+	'Automattic\\Jetpack\\Comments\\Avatars' => array(
+		'version' => '0.1.0.0-alpha1787351973',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/class-avatars.php'
+	),
+	'Automattic\\Jetpack\\Comments\\Comment_Form' => array(
+		'version' => '0.1.0.0-alpha1787351973',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/form/class-comment-form.php'
+	),
+	'Automattic\\Jetpack\\Comments\\Comments' => array(
+		'version' => '0.1.0.0-alpha1787351973',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/class-comments.php'
+	),
+	'Automattic\\Jetpack\\Comments\\Identity' => array(
+		'version' => '0.1.0.0-alpha1787351973',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/identity/class-identity.php'
+	),
 	'Automattic\\Jetpack\\Composer\\Manager' => array(
 		'version' => '4.0.9.0',
 		'path'    => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-manager.php'

@@ -24,6 +24,7 @@
 		"automattic/jetpack-blocks": "^3.3.6",
 		"automattic/jetpack-boost-speed-score": "^0.4.18",
 		"automattic/jetpack-classic-theme-helper": "^0.14.39",
+		"automattic/jetpack-comments": "^0.1.0-alpha",
 		"automattic/jetpack-compat": "^4.0.4",
 		"automattic/jetpack-composer-plugin": "^4.0.9",
 		"automattic/jetpack-config": "^3.1.3",
