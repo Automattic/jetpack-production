@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Date comparison: end a sub-day previous period immediately before the reference window instead of one instant inside it.
+- Latest subscribers, Latest likes and Latest comments: show only the rows that fit the tile and keep the "N more" footer visible.
 
 ## [0.3.0] - 2026-08-20
 ### Added
