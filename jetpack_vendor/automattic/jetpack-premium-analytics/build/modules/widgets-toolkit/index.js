@@ -57,6 +57,8 @@ __( "Select metric", "jetpack-premium-analytics-pkg" );
 __( "Avatar of %s", "jetpack-premium-analytics-pkg" );
 /* translators: %s is a country name. */
 __( "Flag of %s", "jetpack-premium-analytics-pkg" );
+__( "Older activity", "jetpack-premium-analytics-pkg" );
+__( "Newer activity", "jetpack-premium-analytics-pkg" );
 __( "View all", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the post's publish date, e.g. "Jun 5, 2026". */
 __( "Post published on %s", "jetpack-premium-analytics-pkg" );
