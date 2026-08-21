@@ -326,8 +326,8 @@ Jetpack Backup can do a full website migration to a new host, migrate theme file
 
 
 == Changelog ==
-## 14.2.1 - 2025-01-09
-### Bug fixes
+### 14.2.1 - 2025-01-09
+#### Bug fixes
 - WC Analytics: Temporarily disable setcookie to avoid caching issues.
 
 ### 14.2 - 2025-01-07
