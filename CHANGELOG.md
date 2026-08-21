@@ -21,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the dashboard right away instead of a sync screen, and flag the Store section's numbers as incomplete while store data is still syncing.
 - VideoPress: Fix a timeout error when updating a video poster from the media library.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Tests: drop the temporary Atomic AI module fallback so the module-as-master tests keep exercising the plugin's own behaviour.
+
 ## 16.2-a.1 - 2026-08-20
 ### Major Enhancements
 - Update minimum WordPress version to 7.0. [#51370]
