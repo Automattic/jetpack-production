@@ -542,9 +542,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-videopress' => array(
-            'pretty_version' => '0.47.2-alpha.1787281854',
-            'version' => '0.47.2.0-alpha1787281854',
-            'reference' => '89a585d89214ff473b5e06e3fa4d81c07006f129',
+            'pretty_version' => '0.47.2-alpha.1787324123',
+            'version' => '0.47.2.0-alpha1787324123',
+            'reference' => 'c2a08b982f0d7ac137b351e5b8aba7fa29f862ad',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-videopress',
             'aliases' => array(),

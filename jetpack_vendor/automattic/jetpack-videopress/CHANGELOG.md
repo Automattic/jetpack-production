@@ -9,8 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Video details: move the add-to-content action into the page header, where it can now create a new page as well as a new post.
+
 ### Changed
 - Update dependencies.
+- Video details: group the title, description and chapters into a single card, and show the title in the page heading as you type it.
+- Video details: show the current thumbnail beside the control that replaces it, and give subtitles a section of their own.
+- Video details: widen the screen and show the video's settings beside a preview of the video rather than below it.
 
 ## [0.47.1] - 2026-08-20
 ### Changed
