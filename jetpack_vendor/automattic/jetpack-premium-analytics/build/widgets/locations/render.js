@@ -6,6 +6,8 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+/* translators: %d is the number of locations left out of the tooltip list. */
+_n( "…and %d more location", "…and %d more locations", 1, "jetpack-premium-analytics-pkg" );
 __( "Location", "jetpack-premium-analytics-pkg" );
 __( "Country", "jetpack-premium-analytics-pkg" );
 __( "Views", "jetpack-premium-analytics-pkg" );
