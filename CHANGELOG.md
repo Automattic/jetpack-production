@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: On small screens, the View action now opens a response the same way tapping its title does.
 - My Jetpack: Show what Paid Stats actually adds — UTM tracking, device stats, and region & city locations — instead of commercial use.
 - Premium Analytics: Name the dates a comparison covers in the dashboard header, instead of "Previous period", drop the weekdays from ranges longer than a week, and leave the year off ranges that sit inside the current one.
 - Stats: Add a Popular hours widget showing the busiest hour and its daily average views.
@@ -14,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Redesign the video details page: group details into one card in a wider layout, move the player and settings into a side column, and add thumbnail tiles, collapsible sections, and an Add to content action.
 
 ### Bug fixes
+- Forms: Allow a single response to scroll when it is taller than the screen.
 - My Jetpack: Stop the Stats dashboard from asking which plan you want again after Start for Free was already chosen.
 - Premium Analytics: Show the dashboard right away instead of a sync screen, and flag the Store section's numbers as incomplete while store data is still syncing.
 - VideoPress: Fix a timeout error when updating a video poster from the media library.
