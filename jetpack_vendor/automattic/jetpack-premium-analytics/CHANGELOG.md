@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.3.1-alpha] - unreleased
+## [0.4.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Insights: Add a Popular hours widget and show it instead of Most popular day by default.
 
 ### Changed
 - Leaderboard: Set the bar corner radius through `--a8c-charts-border-radius-leaderboard-bar`, replacing the deprecated `--a8c--charts--leaderboard--bar--border-radius` name that `@automattic/charts` no longer reads.
@@ -147,6 +150,6 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
-[0.3.1-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.3.0...0.3.1-alpha
+[0.4.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.3.0...0.4.0-alpha
 [0.3.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.1.0...0.2.0

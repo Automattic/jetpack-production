@@ -9,7 +9,11 @@
 /* translators: 1: Start date. 2: End date. */
 __( "%1$s – %2$s", "jetpack-premium-analytics-pkg" );
 __( "Loading…", "jetpack-premium-analytics-pkg" );
-__( "%s views", "jetpack-premium-analytics-pkg" );
+/* translators: %s is the average number of views per day, e.g. "1.4". */
+_n( "%s view per day", "%s views per day", 1, "jetpack-premium-analytics-pkg" );
+/* translators: %s is a number of views, e.g. "166.9K". */
+_n( "%s view", "%s views", 1, "jetpack-premium-analytics-pkg" );
+__( "Fewer than %s", "jetpack-premium-analytics-pkg" );
 __( "No data available", "jetpack-premium-analytics-pkg" );
 __( "Current period", "jetpack-premium-analytics-pkg" );
 __( "Previous period", "jetpack-premium-analytics-pkg" );
@@ -35,6 +39,7 @@ __( "Unfulfilled", "jetpack-premium-analytics-pkg" );
 __( "State", "jetpack-premium-analytics-pkg" );
 __( "Country", "jetpack-premium-analytics-pkg" );
 __( "Untitled video", "jetpack-premium-analytics-pkg" );
+__( "This data is unavailable right now.", "jetpack-premium-analytics-pkg" );
 __( "You don't have access to this data.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "Line chart", "jetpack-premium-analytics-pkg" );
@@ -45,8 +50,6 @@ __( "By weeks", "jetpack-premium-analytics-pkg" );
 __( "By months", "jetpack-premium-analytics-pkg" );
 __( "Group by", "jetpack-premium-analytics-pkg" );
 __( "Chart type", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of views, e.g. "2,033". */
-_n( "%s view", "%s views", 1, "jetpack-premium-analytics-pkg" );
 __( "No data in this period.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Select metric", "jetpack-premium-analytics-pkg" );

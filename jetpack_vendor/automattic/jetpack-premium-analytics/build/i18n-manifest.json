@@ -50,6 +50,7 @@
 		"build/widgets/payment-status/render.js",
 		"build/widgets/plan-usage/render.js",
 		"build/widgets/popular-days/render.js",
+		"build/widgets/popular-hours/render.js",
 		"build/widgets/popular-post/render.js",
 		"build/widgets/post-comments/render.js",
 		"build/widgets/post-detail-highlights/render.js",
