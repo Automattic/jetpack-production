@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Name the dates a comparison covers in the dashboard header, instead of "Previous period", drop the weekdays from ranges longer than a week, and leave the year off ranges that sit inside the current one.
 
 ### Fixed
+- Apply the first widget section flex-column workaround to the post and video detail routes too.
 - Date comparison: end a sub-day previous period immediately before the reference window instead of one instant inside it.
 - Latest subscribers, Latest likes and Latest comments: show only the rows that fit the tile and keep the "N more" footer visible.
 - Show the dashboard right away instead of a sync screen, and flag the Store section's numbers as incomplete while store data is still syncing.
