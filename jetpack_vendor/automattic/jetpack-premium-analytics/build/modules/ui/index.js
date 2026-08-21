@@ -76,7 +76,7 @@ __( "yearly", "jetpack-premium-analytics-pkg" );
 __( "%1$s (%2$s, %3$s)", "jetpack-premium-analytics-pkg" );
 /* translators: %1$s is a date range, %2$s is either how long it is, e.g. "7 days", or the chart interval, e.g. "daily". */
 __( "%1$s (%2$s)", "jetpack-premium-analytics-pkg" );
-/* translators: %1$s is a date range with its length, %2$s is the compared period, e.g. "Previous period". */
+/* translators: %1$s is a date range with its length, %2$s is the compared period — either its dates, e.g. "July 14 – 20, 2026", or a preset name, e.g. "Previous period". */
 __( "%1$s vs. %2$s", "jetpack-premium-analytics-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );

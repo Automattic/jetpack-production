@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Leaderboard: Set the bar corner radius through `--a8c-charts-border-radius-leaderboard-bar`, replacing the deprecated `--a8c--charts--leaderboard--bar--border-radius` name that `@automattic/charts` no longer reads.
+- Name the dates a comparison covers in the dashboard header, instead of "Previous period", drop the weekdays from ranges longer than a week, and leave the year off ranges that sit inside the current one.
 
 ### Fixed
 - Date comparison: end a sub-day previous period immediately before the reference window instead of one instant inside it.
