@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a filter for the post list table's views column link.
 
+### Changed
+- Make the Blaze package a development-only dependency.
+
 ## 0.33.0 - 2026-08-20
 ### Added
 - Show the Stats dashboard before the site is connected to WordPress.com, so a plan can be picked and the site connected from there. [#51200]
