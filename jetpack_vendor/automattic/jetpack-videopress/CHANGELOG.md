@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - Video details: show the current thumbnail beside the control that replaces it, and give subtitles a section of their own.
 - Video details: widen the screen and show the video's settings beside a preview of the video rather than below it.
 
+### Fixed
+- Fix a timeout error when updating a video poster from the media library.
+
 ## [0.47.1] - 2026-08-20
 ### Changed
 - Update dependencies. [#49464]
