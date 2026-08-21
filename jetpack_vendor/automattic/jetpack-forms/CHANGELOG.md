@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Responses: Allow a single response to scroll when it is taller than the screen.
+- Responses: Prevent an error that could stop responses from loading when a file upload field was stored without any file data.
 
 ## [7.25.0] - 2026-08-20
 ### Added
