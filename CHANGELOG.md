@@ -23,7 +23,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Comments: load the rebuilt Jetpack Comments form in place of the iframed one when the jetpack_comments_new_hotness filter returns true.
-- Tests: drop the temporary Atomic AI module fallback so the module-as-master tests keep exercising the plugin's own behaviour.
 
 ## 16.2-a.1 - 2026-08-20
 ### Major Enhancements
