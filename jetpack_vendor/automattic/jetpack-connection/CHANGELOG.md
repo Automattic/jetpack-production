@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Enqueue the connection owner notice script through wp_add_inline_script() instead of printing a script element.
+
 ## [8.11.0] - 2026-08-20
 ### Added
 - Error UI: Document displayable connection errors and identify cases where consumers should offer a support link. [#51360]
