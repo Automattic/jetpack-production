@@ -11,8 +11,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Responses: On small screens, the View action now opens the response the same way tapping its title does.
+- Show progress while a new form's editor opens, and report it when creating a form fails.
 
 ### Fixed
+- Apply the name typed when creating a form, and stop a dismissed save from reporting into a reopened dialog.
 - Responses: Allow a single response to scroll when it is taller than the screen.
 - Responses: Prevent an error that could stop responses from loading when a file upload field was stored without any file data.
 

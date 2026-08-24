@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: On small screens, the View action now opens a response the same way tapping its title does.
+- Forms: Show progress while a new form's editor opens, and report it when creating a form fails.
 - My Jetpack: Show what Paid Stats actually adds — UTM tracking, device stats, and region & city locations — instead of commercial use.
 - Premium Analytics: Add an Ads dashboard section showing WordAds earnings and performance.
 - Premium Analytics: Name the dates a comparison covers in the dashboard header, instead of "Previous period", drop the weekdays from ranges longer than a week, and leave the year off ranges that sit inside the current one.
@@ -20,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Forms: Allow a single response to scroll when it is taller than the screen.
+- Forms: Apply the name typed when creating a form, and stop a dismissed save from reporting into a reopened dialog.
 - Forms: Prevent an error that could stop responses from loading when a file upload field was stored without any file data.
 - Jetpack AI: Keep the editor working when another plugin loads an older copy of the Status package.
 - My Jetpack: always label the license activation link 'Activate a license'. It previously read 'Activate a new license' on sites with a plan, even when no licenses had been activated.

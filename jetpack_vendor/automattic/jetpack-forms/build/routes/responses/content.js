@@ -260,6 +260,12 @@ __( "Which email list should contacts be added to?", "jetpack-forms" );
 __( "You do not have any MailPoet lists yet. Click the dashboard button below to create one, or contacts will be added to a \"Jetpack Forms Subscribers\" list.", "jetpack-forms" );
 __( "View dashboard", "jetpack-forms" );
 __( "Unknown error", "jetpack-forms" );
+/* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 12/31/2023). */
+__( "MM/DD/YYYY", "jetpack-forms" );
+/* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 31/12/2023). */
+__( "DD/MM/YYYY", "jetpack-forms" );
+/* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 2023-12-31). */
+__( "YYYY-MM-DD", "jetpack-forms" );
 __( "Create Salesforce lead form", "jetpack-forms" );
 __( "Enter a Salesforce Organization ID to enable.", "jetpack-forms" );
 __( "Configured per form", "jetpack-forms" );
@@ -287,10 +293,12 @@ __( "Manage integrations", "jetpack-forms" );
 __( "Untitled Form", "jetpack-forms" );
 __( "Name", "jetpack-forms" );
 __( "Save", "jetpack-forms" );
-__( "Create a form", "jetpack-forms" );
 __( "Create form", "jetpack-forms" );
 __( "Create", "jetpack-forms" );
 __( "Enter form title", "jetpack-forms" );
+__( "Opening the editor…", "jetpack-forms" );
+__( "Could not create the form. Please try again.", "jetpack-forms" );
+__( "Create a form", "jetpack-forms" );
 __( "Want automatic spam filtering? Akismet Anti-spam protects millions of sites. <moreInfoLink>Learn more.</moreInfoLink>", "jetpack-forms" );
 __( "Activate Akismet Anti-spam", "jetpack-forms" );
 __( "Install Akismet Anti-spam", "jetpack-forms" );
@@ -558,12 +566,6 @@ __( "Products", "jetpack-forms" );
 __( "Help", "jetpack-forms" );
 __( "Jetpack", "jetpack-forms" );
 __( "Breadcrumbs", "jetpack-forms" );
-/* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 12/31/2023). */
-__( "MM/DD/YYYY", "jetpack-forms" );
-/* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 31/12/2023). */
-__( "DD/MM/YYYY", "jetpack-forms" );
-/* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 2023-12-31). */
-__( "YYYY-MM-DD", "jetpack-forms" );
 __( "Edit form", "jetpack-forms" );
 __( "Could not empty spam.", "jetpack-forms" );
 __( "Could not empty trash.", "jetpack-forms" );
