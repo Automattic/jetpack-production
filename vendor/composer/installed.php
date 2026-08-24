@@ -209,9 +209,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-device-detection' => array(
-            'pretty_version' => '3.4.6-alpha.1787549521',
-            'version' => '3.4.6.0-alpha1787549521',
-            'reference' => '4aa7abfbb8ea3dd0e913ae9c0754985adedb2a8e',
+            'pretty_version' => '3.4.6-alpha.1787586399',
+            'version' => '3.4.6.0-alpha1787586399',
+            'reference' => '93081dc7443aef666b68c16caa3eae9faad6cf61',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-device-detection',
             'aliases' => array(),
