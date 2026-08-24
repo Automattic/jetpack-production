@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Chart widgets: follow the page chart interval control instead of a per-widget Group by.
+- Latest emails sent: drop the bar behind each row and show the subject and rate as a plain list.
 - Leaderboard: Set the bar corner radius through `--a8c-charts-border-radius-leaderboard-bar`, replacing the deprecated `--a8c--charts--leaderboard--bar--border-radius` name that `@automattic/charts` no longer reads.
 - Name the dates a comparison covers in the dashboard header, instead of "Previous period", drop the weekdays from ranges longer than a week, and leave the year off ranges that sit inside the current one.
 

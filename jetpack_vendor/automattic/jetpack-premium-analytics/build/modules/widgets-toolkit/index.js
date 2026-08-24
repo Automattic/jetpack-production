@@ -9,6 +9,7 @@
 /* translators: 1: Start date. 2: End date. */
 __( "%1$s – %2$s", "jetpack-premium-analytics-pkg" );
 __( "Loading…", "jetpack-premium-analytics-pkg" );
+__( "No data in this period.", "jetpack-premium-analytics-pkg" );
 /* translators: %s is the average number of views per day, e.g. "1.4". */
 _n( "%s view per day", "%s views per day", 1, "jetpack-premium-analytics-pkg" );
 /* translators: %s is a number of views, e.g. "166.9K". */
@@ -50,7 +51,6 @@ __( "By weeks", "jetpack-premium-analytics-pkg" );
 __( "By months", "jetpack-premium-analytics-pkg" );
 __( "Group by", "jetpack-premium-analytics-pkg" );
 __( "Chart type", "jetpack-premium-analytics-pkg" );
-__( "No data in this period.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Select metric", "jetpack-premium-analytics-pkg" );
 /* translators: %s is a person's name. */
