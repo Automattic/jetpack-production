@@ -7,11 +7,18 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading", "jetpack-premium-analytics-pkg" );
+_x( "%1$s, %2$s", "legend item label and value", "jetpack-premium-analytics-pkg" );
+_x( "%s: visible. Toggle visibility.", "visible interactive legend item", "jetpack-premium-analytics-pkg" );
+_x( "%s: hidden. Toggle visibility.", "hidden interactive legend item", "jetpack-premium-analytics-pkg" );
+_x( "%s: hidden", "hidden non-interactive legend item", "jetpack-premium-analytics-pkg" );
+_x( "All segments are hidden. Click legend items to show data.", "chart empty state: interactive segments", "jetpack-premium-analytics-pkg" );
+_x( "All segments are hidden.", "chart empty state: segments", "jetpack-premium-analytics-pkg" );
+_x( "All series are hidden. Click legend items to show data.", "chart empty state: interactive series", "jetpack-premium-analytics-pkg" );
+_x( "All series are hidden.", "chart empty state: series", "jetpack-premium-analytics-pkg" );
 __( "Reset zoom", "jetpack-premium-analytics-pkg" );
 __( "View details", "jetpack-premium-analytics-pkg" );
 __( "Close", "jetpack-premium-analytics-pkg" );
 __( "Line chart", "jetpack-premium-analytics-pkg" );
-__( "All series are hidden. Click legend items to show data.", "jetpack-premium-analytics-pkg" );
 __( "No data available", "jetpack-premium-analytics-pkg" );
 __( "Invalid data", "jetpack-premium-analytics-pkg" );
 __( "Area chart", "jetpack-premium-analytics-pkg" );
@@ -29,7 +36,6 @@ __( "Loading…", "jetpack-premium-analytics-pkg" );
 __( "Not enough space to display data", "jetpack-premium-analytics-pkg" );
 __( "Percentage change unavailable", "jetpack-premium-analytics-pkg" );
 __( "No comparison data", "jetpack-premium-analytics-pkg" );
-__( "All segments are hidden. Click legend items to show data.", "jetpack-premium-analytics-pkg" );
 __( "Date calendar", "jetpack-premium-analytics-pkg" );
 __( "Date range calendar", "jetpack-premium-analytics-pkg" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
