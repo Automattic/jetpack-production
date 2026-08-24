@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Replace the commercial-use row on the Add Stats screen with UTM tracking, device stats, and location detail.
 
 ### Fixed
+- Fix a PHP 8.5 deprecation notice raised for products that do not ship a standalone plugin.
 - Stats: Tell the Stats dashboard when Start for Free was chosen, so it does not ask which plan you want a second time.
 
 ## [5.44.0] - 2026-08-20
