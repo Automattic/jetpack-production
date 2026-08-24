@@ -31,6 +31,8 @@ This is an alpha version! The changes listed here are not final.
 - Fix charts getting stuck on their loading skeleton after switching a control that turns one of the underlying requests off.
 - Latest subscribers, Latest likes and Latest comments: show only the rows that fit the tile and keep the "N more" footer visible.
 - Show the dashboard right away instead of a sync screen, and flag the Store section's numbers as incomplete while store data is still syncing.
+- Stats: stamp bucket dates as timezone-naive site-local wall times, fixing report dates that could read a day off for sites away from UTC.
+- Subscribers chart, email timeline: label chart points by the bucket they name rather than by the viewer's time zone.
 - Traffic: Start the chart's Group by control from the dashboard's interval, and replace Auto with hourly grouping.
 
 ## [0.3.0] - 2026-08-20

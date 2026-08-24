@@ -32,7 +32,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Stop the Stats dashboard from asking which plan you want again after Start for Free was already chosen.
 - Premium Analytics: Compute date-filter day boundaries in the site's timezone, so visitors west of the site timezone no longer get stretched ranges or wrong chart buckets.
 - Premium Analytics: Fix charts getting stuck on their loading skeleton after switching a control that turns one of the underlying requests off.
+- Premium Analytics: fix report and chart dates that could read a day off for sites away from UTC.
 - Premium Analytics: Label chart points by the bucket they name rather than by the viewer's time zone, and format axis ticks and tooltips at the series' declared bucket size.
+- Premium Analytics: label Subscribers chart and email timeline points by the bucket they name rather than by the viewer's time zone.
 - Premium Analytics: Show the dashboard right away instead of a sync screen, and flag the Store section's numbers as incomplete while store data is still syncing.
 - Premium Analytics: Start the Traffic chart's Group by control from the dashboard's interval, and replace Auto with hourly grouping.
 - VideoPress: Fix a timeout error when updating a video poster from the media library.
