@@ -556,6 +556,11 @@ __( "Wallis and Futuna", "jetpack-forms" );
 __( "Yemen", "jetpack-forms" );
 __( "Zambia", "jetpack-forms" );
 __( "Zimbabwe", "jetpack-forms" );
+/* translators: 1: rating value, 2: maximum rating (e.g. "4" and "5" for "4 out of 5") */
+__( "Rating %1$s out of %2$s", "jetpack-forms" );
+__( "No answer", "jetpack-forms" );
+/* translators: %d: number of files uploaded in a single form field. */
+_n( "%d file", "%d files", 1, "jetpack-forms" );
 __( "Inbox", "jetpack-forms" );
 __( "Spam", "jetpack-forms" );
 _x( "Trash", "noun", "jetpack-forms" );
@@ -728,8 +733,6 @@ __( "Copied!", "jetpack-forms" );
 __( "Copy", "jetpack-forms" );
 /* translators: %1$s size of the file and %2$s is the file extension */
 __( "%1$s, %2$s", "jetpack-forms" );
-/* translators: 1: rating value, 2: maximum rating (e.g. "4" and "5" for "4 out of 5") */
-__( "Rating %1$s out of %2$s", "jetpack-forms" );
 __( "Date:", "jetpack-forms" );
 __( "Source:", "jetpack-forms" );
 __( "IP address:", "jetpack-forms" );

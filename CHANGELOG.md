@@ -7,7 +7,9 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: On small screens, show only the response and its actions instead of a table that scrolls sideways.
 - Forms: On small screens, the View action now opens a response the same way tapping its title does.
+- Forms: Show each form field as a column when viewing a single form's responses.
 - Forms: Show progress while a new form's editor opens, and report it when creating a form fails.
 - My Jetpack: Show what Paid Stats actually adds — UTM tracking, device stats, and region & city locations — instead of commercial use.
 - Premium Analytics: Add an Ads dashboard section showing WordAds earnings and performance.
