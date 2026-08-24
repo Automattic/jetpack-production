@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Show what Paid Stats actually adds — UTM tracking, device stats, and region & city locations — instead of commercial use.
 - Premium Analytics: Add an Ads dashboard section showing WordAds earnings and performance.
 - Premium Analytics: Name the dates a comparison covers in the dashboard header, instead of "Previous period", drop the weekdays from ranges longer than a week, and leave the year off ranges that sit inside the current one.
+- Premium Analytics: Offer only the groupings the selected date range supports in the chart's Group by control.
 - Premium Analytics: show the latest emails sent as a plain list of subjects and rates.
 - Stats: Add a Popular hours widget showing the busiest hour and its daily average views.
 - Stats: link the post list views column to the analytics post detail page when the new dashboard is enabled.
@@ -24,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Fix charts getting stuck on their loading skeleton after switching a control that turns one of the underlying requests off.
 - Premium Analytics: Label chart points by the bucket they name rather than by the viewer's time zone, and format axis ticks and tooltips at the series' declared bucket size.
 - Premium Analytics: Show the dashboard right away instead of a sync screen, and flag the Store section's numbers as incomplete while store data is still syncing.
+- Premium Analytics: Start the Traffic chart's Group by control from the dashboard's interval, and replace Auto with hourly grouping.
 - VideoPress: Fix a timeout error when updating a video poster from the media library.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

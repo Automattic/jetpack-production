@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Latest emails sent: drop the bar behind each row and show the subject and rate as a plain list.
 - Leaderboard: Set the bar corner radius through `--a8c-charts-border-radius-leaderboard-bar`, replacing the deprecated `--a8c--charts--leaderboard--bar--border-radius` name that `@automattic/charts` no longer reads.
 - Name the dates a comparison covers in the dashboard header, instead of "Previous period", drop the weekdays from ranges longer than a week, and leave the year off ranges that sit inside the current one.
+- Traffic: Offer only the groupings the selected date range supports in the chart's Group by control.
 
 ### Fixed
 - Apply the first widget section flex-column workaround to the post and video detail routes too.
@@ -29,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix charts getting stuck on their loading skeleton after switching a control that turns one of the underlying requests off.
 - Latest subscribers, Latest likes and Latest comments: show only the rows that fit the tile and keep the "N more" footer visible.
 - Show the dashboard right away instead of a sync screen, and flag the Store section's numbers as incomplete while store data is still syncing.
+- Traffic: Start the chart's Group by control from the dashboard's interval, and replace Auto with hourly grouping.
 
 ## [0.3.0] - 2026-08-20
 ### Added

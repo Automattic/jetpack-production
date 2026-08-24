@@ -10,6 +10,7 @@ __( "Views", "jetpack-premium-analytics-pkg" );
 __( "Visitors", "jetpack-premium-analytics-pkg" );
 __( "Comments", "jetpack-premium-analytics-pkg" );
 __( "Likes", "jetpack-premium-analytics-pkg" );
+__( "Hourly data isn't available for this metric.", "jetpack-premium-analytics-pkg" );
 __( "Traffic metric", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load traffic data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
