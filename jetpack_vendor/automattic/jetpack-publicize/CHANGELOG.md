@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Only include social connection data in the script data for users who can access Publicize.
 - Update dependencies.
 
 ## [0.85.0] - 2026-08-20
