@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix a PHP 8.5 deprecation notice raised for products that do not ship a standalone plugin.
+- Plans section: always label the license activation link 'Activate a license'. It previously read 'Activate a new license' on any site with a plan, including sites with no licenses activated.
 - Stats: Tell the Stats dashboard when Start for Free was chosen, so it does not ask which plan you want a second time.
 
 ## [5.44.0] - 2026-08-20
