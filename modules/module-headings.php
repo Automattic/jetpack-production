@@ -416,7 +416,7 @@ function jetpack_get_module_info( $key ) {
 	    'description' => 'Turn your ideas into ready-to-publish content and generate images with the power of AI.',
 	    'sort' => '40',
 	    'recommendation_order' => '15',
-	    'introduced' => '16.2',
+	    'introduced' => '16.2-a.3',
 	    'changed' => '',
 	    'deactivate' => '',
 	    'free' => '',
