@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Apply the name typed when creating a form, and stop a dismissed save from reporting into a reopened dialog.
+- Contact Form: remove the classic-theme editor margin between a field's label and its input.
 - Responses: Allow a single response to scroll when it is taller than the screen.
 - Responses: Prevent an error that could stop responses from loading when a file upload field was stored without any file data.
 
