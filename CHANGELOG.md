@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Forms: Allow a single response to scroll when it is taller than the screen.
 - Forms: Prevent an error that could stop responses from loading when a file upload field was stored without any file data.
+- Jetpack AI: Keep the editor working when another plugin loads an older copy of the Status package.
 - My Jetpack: Stop the Stats dashboard from asking which plan you want again after Start for Free was already chosen.
 - Premium Analytics: Fix charts getting stuck on their loading skeleton after switching a control that turns one of the underlying requests off.
 - Premium Analytics: Label chart points by the bucket they name rather than by the viewer's time zone, and format axis ticks and tooltips at the series' declared bucket size.
