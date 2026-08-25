@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Keep the editor working when another plugin loads an older copy of the Status package.
 - My Jetpack: always label the license activation link 'Activate a license'. It previously read 'Activate a new license' on sites with a plan, even when no licenses had been activated.
 - My Jetpack: Stop the Stats dashboard from asking which plan you want again after Start for Free was already chosen.
+- Premium Analytics: Compare a date range against a previous month or year of the same length, so the percentages no longer measure 30 days against 29. Whole calendar months still compare month to month.
 - Premium Analytics: Compute date-filter day boundaries in the site's timezone, so visitors west of the site timezone no longer get stretched ranges or wrong chart buckets.
 - Premium Analytics: Fix charts getting stuck on their loading skeleton after switching a control that turns one of the underlying requests off.
 - Premium Analytics: fix report and chart dates that could read a day off for sites away from UTC.
