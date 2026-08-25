@@ -21,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
 - Tiled Gallery: Remove the forced gray background on images that made transparent areas appear gray.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Newsletter: Add an endpoint serving the email design editor's data.
+
 ## 16.2-a.3 - 2026-08-25
 ### Enhancements
 - Akismet: Link the settings page header logo and title to the Akismet settings page. [#51449]
