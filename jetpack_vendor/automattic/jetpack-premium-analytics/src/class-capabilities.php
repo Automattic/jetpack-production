@@ -109,7 +109,7 @@ class Capabilities {
 	/**
 	 * Whether the current user may view ad reports.
 	 *
-	 * @since 0.4.0-alpha
+	 * @since 0.4.0
 	 *
 	 * @return bool
 	 */

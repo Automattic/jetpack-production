@@ -5,23 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.26.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [7.26.0] - 2026-08-25
 ### Added
-- Responses: Show each form field as a column when viewing a single form's responses.
+- Responses: Show each form field as a column when viewing a single form's responses. [#51448]
 
 ### Changed
-- Responses: On small screens, show only the response and its actions instead of a table that scrolls sideways.
-- Responses: On small screens, the View action now opens the response the same way tapping its title does.
-- Show progress while a new form's editor opens, and report it when creating a form fails.
+- Responses: On small screens, show only the response and its actions instead of a table that scrolls sideways. [#51448]
+- Responses: On small screens, the View action now opens the response the same way tapping its title does. [#51486]
+- Show progress while a new form's editor opens, and report it when creating a form fails. [#51371]
 
 ### Fixed
-- Apply the name typed when creating a form, and stop a dismissed save from reporting into a reopened dialog.
-- Contact Form: remove the classic-theme editor margin between a field's label and its input.
-- Responses: Allow a single response to scroll when it is taller than the screen.
-- Responses: Prevent an error that could stop responses from loading when a file upload field was stored without any file data.
+- Apply the name typed when creating a form, and stop a dismissed save from reporting into a reopened dialog. [#51371]
+- Contact Form: Remove the classic-theme editor margin between a field's label and its input. [#51527]
+- Responses: Allow a single response to scroll when it is taller than the screen. [#51486]
+- Responses: Prevent an error that could stop responses from loading when a file upload field was stored without any file data. [#51485]
 
 ## [7.25.0] - 2026-08-20
 ### Added
@@ -2668,7 +2665,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.26.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.25.0...v7.26.0-alpha
+[7.26.0]: https://github.com/automattic/jetpack-forms/compare/v7.25.0...v7.26.0
 [7.25.0]: https://github.com/automattic/jetpack-forms/compare/v7.24.0...v7.25.0
 [7.24.0]: https://github.com/automattic/jetpack-forms/compare/v7.23.4...v7.24.0
 [7.23.4]: https://github.com/automattic/jetpack-forms/compare/v7.23.3...v7.23.4
