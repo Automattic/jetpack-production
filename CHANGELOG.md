@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 16.2-a.4 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Enhancements
+- VideoPress: Add a first-run welcome modal to the dashboard.
+
 ## 16.2-a.3 - 2026-08-25
 ### Enhancements
 - Akismet: Link the settings page header logo and title to the Akismet settings page. [#51449]

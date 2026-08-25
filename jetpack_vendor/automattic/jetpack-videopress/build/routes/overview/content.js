@@ -33,10 +33,24 @@ __( "Jetpack", "jetpack-videopress-pkg" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-videopress-pkg" );
 __( "Loading", "jetpack-videopress-pkg" );
+__( "Close", "jetpack-videopress-pkg" );
 __( "Dismiss", "jetpack-videopress-pkg" );
 __( "Library", "jetpack-videopress-pkg" );
 __( "Stats", "jetpack-videopress-pkg" );
 __( "Settings", "jetpack-videopress-pkg" );
+__( "What VideoPress does", "jetpack-videopress-pkg" );
+__( "A player you own", "jetpack-videopress-pkg" );
+__( "No ads, no logos, and nothing recommended afterwards.", "jetpack-videopress-pkg" );
+__( "Bring existing videos", "jetpack-videopress-pkg" );
+__( "Move library videos over in one click, no re-uploads.", "jetpack-videopress-pkg" );
+__( "Share it anywhere", "jetpack-videopress-pkg" );
+__( "Every video gets a link and an embed that work off-site.", "jetpack-videopress-pkg" );
+__( "Your Video. Your Player.", "jetpack-videopress-pkg" );
+__( "The same ad-free player every video on your site will use — your visitors stay on your site, and VideoPress handles the hosting and streaming. Upload one to see it live.", "jetpack-videopress-pkg" );
+/* translators: %d: number of local videos in the media library. */
+_n( "Move %d video over", "Move %d videos over", 1, "jetpack-videopress-pkg" );
+__( "Learn more", "jetpack-videopress-pkg" );
+__( "Upload a video", "jetpack-videopress-pkg" );
 __( "Host, manage, customize, and track your videos — all in one place.", "jetpack-videopress-pkg" );
 __( "Retry", "jetpack-videopress-pkg" );
 __( "A connection check failed.", "jetpack-videopress-pkg" );
@@ -70,7 +84,6 @@ _x( "All series are hidden. Click legend items to show data.", "chart empty stat
 _x( "All series are hidden.", "chart empty state: series", "jetpack-videopress-pkg" );
 __( "Reset zoom", "jetpack-videopress-pkg" );
 __( "View details", "jetpack-videopress-pkg" );
-__( "Close", "jetpack-videopress-pkg" );
 __( "Line chart", "jetpack-videopress-pkg" );
 __( "No data available", "jetpack-videopress-pkg" );
 __( "Invalid data", "jetpack-videopress-pkg" );
