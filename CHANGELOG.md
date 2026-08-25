@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Lead the post and video detail date presets with All time and match the selected preset to the design.
 - VideoPress: Add a first-run welcome modal to the dashboard.
 
+### Improved compatibility
+- Updated PHP version requirements to PHP 7.4 or newer.
+
 ### Bug fixes
 - Forms: Name a checkbox by its own label when building conditional logic, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
 - Premium Analytics: Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
@@ -3658,7 +3661,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Enabled the AI Assistant usage panel. [#34122]
 
 ### Improved compatibility
-- Updated PHP version reqirements to PHP 7.0 or newer. [#34126]
+- Updated PHP version requirements to PHP 7.0 or newer. [#34126]
 - Updated WordPress version requirements to WordPress 6.3. [#34127]
 
 ### Bug fixes

@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [7.27.0-alpha] - unreleased
+## [8.0.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Dashboard: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
+
+### Removed
+- Minimum supported PHP version is now 7.4.
 
 ### Fixed
 - Conditional logic: Name a checkbox by its own label in the conditions dropdown, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
@@ -2678,7 +2681,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[7.27.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.26.0...v7.27.0-alpha
+[8.0.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.26.0...v8.0.0-alpha
 [7.26.0]: https://github.com/automattic/jetpack-forms/compare/v7.25.0...v7.26.0
 [7.25.0]: https://github.com/automattic/jetpack-forms/compare/v7.24.0...v7.25.0
 [7.24.0]: https://github.com/automattic/jetpack-forms/compare/v7.23.4...v7.24.0

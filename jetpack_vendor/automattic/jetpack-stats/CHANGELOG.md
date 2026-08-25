@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.21.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Removed
+- Minimum supported PHP version is now 7.4.
+
 ## [0.20.4] - 2026-08-25
 ### Changed
 - Escape the AMP tracking pixel URL at output. [#51472]
@@ -377,6 +384,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
+[0.21.0-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.20.4...v0.21.0-alpha
 [0.20.4]: https://github.com/Automattic/jetpack-stats/compare/v0.20.3...v0.20.4
 [0.20.3]: https://github.com/Automattic/jetpack-stats/compare/v0.20.2...v0.20.3
 [0.20.2]: https://github.com/Automattic/jetpack-stats/compare/v0.20.1...v0.20.2

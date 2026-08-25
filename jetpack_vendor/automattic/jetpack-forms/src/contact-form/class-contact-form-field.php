@@ -147,7 +147,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 	 * Building it once, where the input's aria-describedby is built, is what
 	 * keeps the emitted ids and the referenced ids identical.
 	 *
-	 * @since 7.27.0-alpha
+	 * @since 8.0.0-alpha
 	 *
 	 * @var string|null
 	 */
@@ -1284,7 +1284,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 	/**
 	 * The author-supplied help text for this field, or null when unset.
 	 *
-	 * @since 7.27.0-alpha
+	 * @since 8.0.0-alpha
 	 *
 	 * @return string|null
 	 */
@@ -1318,7 +1318,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 	 * Note this keys off the field's own `type` attribute, not the type passed
 	 * to the render helpers — the date field renders a `text` input.
 	 *
-	 * @since 7.27.0-alpha
+	 * @since 8.0.0-alpha
 	 *
 	 * @return string|null
 	 */
@@ -1339,7 +1339,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 	 * advisory text; its span is empty until there is an error, so it costs
 	 * nothing the rest of the time.
 	 *
-	 * @since 7.27.0-alpha
+	 * @since 8.0.0-alpha
 	 *
 	 * @param string $id   - the field ID.
 	 * @param string $type - the description type (matches the emitted element ids).
@@ -1364,7 +1364,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 	 * and a describedby pointing at an id that was never emitted is exactly
 	 * the failure this class already fixes elsewhere.
 	 *
-	 * @since 7.27.0-alpha
+	 * @since 8.0.0-alpha
 	 *
 	 * @param string $id   - the field ID.
 	 * @param string $type - the description type (matches get_described_by()).
@@ -1406,7 +1406,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 	 * ever built here — with the same $type the input used for its
 	 * aria-describedby.
 	 *
-	 * @since 7.27.0-alpha
+	 * @since 8.0.0-alpha
 	 *
 	 * @param string $id   - the field ID.
 	 * @param string $type - the description type (matches get_described_by()).
@@ -2541,7 +2541,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 	 *
 	 * WARNING: sync data with DATE_FORMATS in src/blocks/shared/util/constants.js
 	 *
-	 * @since 7.27.0-alpha
+	 * @since 8.0.0-alpha
 	 *
 	 * @return array
 	 */
@@ -2562,7 +2562,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 	 * Shared by the visible hint and the `data-format` attribute that drives
 	 * the picker, so the two cannot disagree about which format is in effect.
 	 *
-	 * @since 7.27.0-alpha
+	 * @since 8.0.0-alpha
 	 *
 	 * @return string
 	 */

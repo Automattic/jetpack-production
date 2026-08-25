@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.0.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Removed
+- Minimum supported PHP version is now 7.4.
+
 ## [4.45.4] - 2026-08-19
 ### Changed
 - Internal updates.
@@ -1823,6 +1830,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[5.0.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v4.45.4...v5.0.0-alpha
 [4.45.4]: https://github.com/Automattic/jetpack-sync/compare/v4.45.3...v4.45.4
 [4.45.3]: https://github.com/Automattic/jetpack-sync/compare/v4.45.2...v4.45.3
 [4.45.2]: https://github.com/Automattic/jetpack-sync/compare/v4.45.1...v4.45.2

@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Dashboard: Rebuild the welcome modal around the brand artwork band, replacing the two-tab layout.
 
+### Removed
+- Minimum supported PHP version is now 7.4.
+
 ### Fixed
 - Dashboard: stop greeting people who already have videos as new when they arrive on a video link in a fresh browser.
 - Welcome modal: load the artwork behind the intro film instead of falling back to a flat colour.
