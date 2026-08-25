@@ -9,6 +9,6 @@
  */
 
 return array(
-	'version' => '7.26.0',
+	'version' => '7.27.0-alpha',
 	'build_url' => plugin_dir_url( __FILE__ ),
 );

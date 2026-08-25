@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.27.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add help text to form fields, and show the date field's expected format below the input instead of in its label. Preserve help text across field transformations and form details, and fix field descriptions for inset-label styles.
+
+### Fixed
+- Conditional logic: Name a checkbox by its own label in the conditions dropdown, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
+
 ## [7.26.0] - 2026-08-25
 ### Added
 - Responses: Show each form field as a column when viewing a single form's responses. [#51448]
@@ -2665,6 +2675,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
+[7.27.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v7.26.0...v7.27.0-alpha
 [7.26.0]: https://github.com/automattic/jetpack-forms/compare/v7.25.0...v7.26.0
 [7.25.0]: https://github.com/automattic/jetpack-forms/compare/v7.24.0...v7.25.0
 [7.24.0]: https://github.com/automattic/jetpack-forms/compare/v7.23.4...v7.24.0

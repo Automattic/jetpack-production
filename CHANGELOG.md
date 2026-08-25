@@ -7,7 +7,11 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: Add help text to form fields and show the date field's expected format below its input.
 - VideoPress: Add a first-run welcome modal to the dashboard.
+
+### Bug fixes
+- Forms: Name a checkbox by its own label when building conditional logic, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
 
 ## 16.2-a.3 - 2026-08-25
 ### Enhancements

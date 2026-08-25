@@ -733,6 +733,7 @@ __( "Copied!", "jetpack-forms" );
 __( "Copy", "jetpack-forms" );
 /* translators: %1$s size of the file and %2$s is the file extension */
 __( "%1$s, %2$s", "jetpack-forms" );
+__( "No", "jetpack-forms" );
 __( "Date:", "jetpack-forms" );
 __( "Source:", "jetpack-forms" );
 __( "IP address:", "jetpack-forms" );
