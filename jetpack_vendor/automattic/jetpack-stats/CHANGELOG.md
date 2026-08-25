@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Escape the AMP tracking pixel URL at output.
 
+### Fixed
+- Normalize the excluded IP list so addresses written in another form still match.
+
 ## [0.20.3] - 2026-08-20
 ### Changed
 - Load the rule that hides the tracking pixel through the stylesheet queue. [#51358]

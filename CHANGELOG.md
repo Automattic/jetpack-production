@@ -42,6 +42,9 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: label Subscribers chart and email timeline points by the bucket they name rather than by the viewer's time zone.
 - Premium Analytics: Show the dashboard right away instead of a sync screen, and flag the Store section's numbers as incomplete while store data is still syncing.
 - Premium Analytics: Start the Traffic chart's Group by control from the dashboard's interval, and replace Auto with hourly grouping.
+- Stats: Keep excluding a visitor IP address from tracking when it is written in another form.
+- Stats: Report the same visitor address the rest of Jetpack resolves on sites with a trusted IP header configured.
+- Stats: Stop recording a malformed visitor IP address.
 - VideoPress: Fix a timeout error when updating a video poster from the media library.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
