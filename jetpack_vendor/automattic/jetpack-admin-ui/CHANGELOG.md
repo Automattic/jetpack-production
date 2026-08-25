@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.10.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.10.0] - 2026-08-25
 ### Changed
-- Load the CSS that hides core admin notices on Jetpack pages through the style queue instead of printing a style element.
+- Load the CSS that hides core admin notices on Jetpack pages through the style queue instead of printing a style element. [#51474]
 
 ### Deprecated
-- Deprecate Admin_Menu::print_hide_core_admin_notices_style(); hide_core_admin_notices() enqueues the CSS now.
+- Deprecate `Admin_Menu::print_hide_core_admin_notices_style()`; `hide_core_admin_notices()` enqueues the CSS now. [#51474]
 
 ## [0.9.15] - 2026-08-06
 ### Changed
@@ -349,7 +346,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing menu visibility issues.
 
-[0.10.0-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.9.15...0.10.0-alpha
+[0.10.0]: https://github.com/Automattic/jetpack-admin-ui/compare/0.9.15...0.10.0
 [0.9.15]: https://github.com/Automattic/jetpack-admin-ui/compare/0.9.14...0.9.15
 [0.9.14]: https://github.com/Automattic/jetpack-admin-ui/compare/0.9.13...0.9.14
 [0.9.13]: https://github.com/Automattic/jetpack-admin-ui/compare/0.9.12...0.9.13

@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.5.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.5.0] - 2026-08-25
 ### Changed
-- Visitor: Resolve the visitor address through the site's trusted header alone where one is configured, instead of also reading the forwarded headers.
-- Visitor: Return only a valid IP address, and take the client address from a comma-separated forwarded header.
+- Visitor: Resolve the visitor address through the site's trusted header alone where one is configured, instead of also reading the forwarded headers. [#51349]
+- Visitor: Return only a valid IP address, and take the client address from a comma-separated forwarded header. [#51349]
 
 ## [6.4.0] - 2026-08-19
 ### Added
@@ -583,7 +580,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Introduce a status package
 
-[6.5.0-alpha]: https://github.com/Automattic/jetpack-status/compare/v6.4.0...v6.5.0-alpha
+[6.5.0]: https://github.com/Automattic/jetpack-status/compare/v6.4.0...v6.5.0
 [6.4.0]: https://github.com/Automattic/jetpack-status/compare/v6.3.1...v6.4.0
 [6.3.1]: https://github.com/Automattic/jetpack-status/compare/v6.3.0...v6.3.1
 [6.3.0]: https://github.com/Automattic/jetpack-status/compare/v6.2.1...v6.3.0

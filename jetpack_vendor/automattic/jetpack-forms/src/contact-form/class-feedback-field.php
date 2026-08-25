@@ -912,7 +912,7 @@ class Feedback_Field {
 	 * but a feedback can carry a malformed value — an empty string, for
 	 * instance — so callers must never assume that shape.
 	 *
-	 * @since 7.26.0-alpha
+	 * @since 7.26.0
 	 *
 	 * @return array The list of files, empty when the value holds none.
 	 */

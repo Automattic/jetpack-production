@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [3.4.6-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [3.4.6] - 2026-08-25
 ### Fixed
-- Recognize Pinterest's documented crawler user agents as bots.
-- Stop treating a user agent that starts with the iPad or Galaxy Tab name as a phone.
+- Recognize Pinterest's documented crawler user agents as bots. [#51508]
+- Stop treating a user agent that starts with the iPad or Galaxy Tab name as a phone. [#51350]
 
 ## [3.4.5] - 2026-06-15
 ### Changed
@@ -299,7 +296,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Moving jetpack_is_mobile into a package
 
-[3.4.6-alpha]: https://github.com/Automattic/jetpack-device-detection/compare/v3.4.5...v3.4.6-alpha
+[3.4.6]: https://github.com/Automattic/jetpack-device-detection/compare/v3.4.5...v3.4.6
 [3.4.5]: https://github.com/Automattic/jetpack-device-detection/compare/v3.4.4...v3.4.5
 [3.4.4]: https://github.com/Automattic/jetpack-device-detection/compare/v3.4.3...v3.4.4
 [3.4.3]: https://github.com/Automattic/jetpack-device-detection/compare/v3.4.2...v3.4.3
