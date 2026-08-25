@@ -82,7 +82,6 @@
 		"build/widgets/utm-insights/render.js",
 		"build/widgets/utm-insights/widget.js",
 		"build/widgets/video-detail-embeds/render.js",
-		"build/widgets/video-detail-highlights/render.js",
 		"build/widgets/video-detail-views-performance/render.js",
 		"build/widgets/videopress/render.js",
 		"build/widgets/visitors-over-time/render.js",
