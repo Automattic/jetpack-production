@@ -15,6 +15,8 @@ _n( "%s view per day", "%s views per day", 1, "jetpack-premium-analytics-pkg" );
 /* translators: %s is a number of views, e.g. "166.9K". */
 _n( "%s view", "%s views", 1, "jetpack-premium-analytics-pkg" );
 __( "Fewer than %s", "jetpack-premium-analytics-pkg" );
+/* translators: %s is a metric name, e.g. "Views". */
+__( "%s · previous period", "jetpack-premium-analytics-pkg" );
 __( "No data available", "jetpack-premium-analytics-pkg" );
 __( "Current period", "jetpack-premium-analytics-pkg" );
 __( "Previous period", "jetpack-premium-analytics-pkg" );
@@ -52,6 +54,8 @@ __( "By weeks", "jetpack-premium-analytics-pkg" );
 __( "By months", "jetpack-premium-analytics-pkg" );
 __( "Group by", "jetpack-premium-analytics-pkg" );
 __( "Chart type", "jetpack-premium-analytics-pkg" );
+/* translators: 1: metric name, 2: date. */
+__( "%1$s · %2$s", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Select metric", "jetpack-premium-analytics-pkg" );
 /* translators: %s is a person's name. */

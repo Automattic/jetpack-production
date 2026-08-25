@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add an Ads dashboard section showing WordAds earnings and performance.
+- Charts: Name each legend item by metric, folding a metric's two periods into one item. Traffic summary: add the paired metric to the chart, hidden until revealed from the legend.
 - Insights: Add a Popular hours widget and show it instead of Most popular day by default.
 - Link the post list table's views column to the post detail page.
 - Locations: Name the regions behind each country total in the Regions map tooltip.
