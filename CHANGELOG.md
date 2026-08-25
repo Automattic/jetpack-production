@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: Add help text to form fields and show the date field's expected format below its input.
+- Forms: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
 - Premium Analytics: Fold the video detail highlight metrics into the Video performance chart as selectable tabs.
 - Premium Analytics: Lead the post and video detail date presets with All time and match the selected preset to the design.
 - VideoPress: Add a first-run welcome modal to the dashboard.

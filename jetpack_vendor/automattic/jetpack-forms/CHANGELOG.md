@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add help text to form fields, and show the date field's expected format below the input instead of in its label. Preserve help text across field transformations and form details, and fix field descriptions for inset-label styles.
 
+### Changed
+- Dashboard: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
+
 ### Fixed
 - Conditional logic: Name a checkbox by its own label in the conditions dropdown, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
 
