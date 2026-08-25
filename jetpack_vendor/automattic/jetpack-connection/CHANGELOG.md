@@ -11,9 +11,11 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Enqueue the connection owner notice script through wp_add_inline_script() instead of printing a script element.
+- Enqueue the Users screen connection column CSS through wp_add_inline_style() instead of printing a style element.
 - SSO: enqueue the login and user-admin styles through wp_add_inline_style() instead of printing style elements.
 
 ### Deprecated
+- Deprecate Users_Connection_Admin::add_connection_column_styles(); the Users screen column CSS is enqueued as an inline style now.
 - SSO: deprecate print_inline_admin_css() in favour of enqueue_login_styles().
 
 ## [8.11.0] - 2026-08-20
