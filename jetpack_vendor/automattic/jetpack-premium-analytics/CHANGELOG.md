@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Link the post list table's views column to the post detail page.
 - Locations: Name the regions behind each country total in the Regions map tooltip.
 - Premium Analytics: page the calendar heatmaps through weeks that do not fit the tile with floating hover arrows, replacing the post detail header pager and the Insights heatmaps' silent clipping.
+- Referrers report: Add referrer groups that open folded and expand on demand.
 
 ### Changed
 - Chart widgets: follow the page chart interval control instead of a per-widget Group by.
