@@ -29,6 +29,7 @@ __( "12 months", "jetpack-premium-analytics-pkg" );
 _x( "12M", "short date range preset", "jetpack-premium-analytics-pkg" );
 __( "Last year", "jetpack-premium-analytics-pkg" );
 __( "All time", "jetpack-premium-analytics-pkg" );
+_x( "All", "short date range preset", "jetpack-premium-analytics-pkg" );
 __( "Previous period", "jetpack-premium-analytics-pkg" );
 /* translators: abbreviation for "Previous period". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
 _x( "Prev. period", "short comparison preset", "jetpack-premium-analytics-pkg" );

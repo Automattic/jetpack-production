@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Forms: Add help text to form fields and show the date field's expected format below its input.
+- Premium Analytics: Lead the post and video detail date presets with All time and match the selected preset to the design.
 - VideoPress: Add a first-run welcome modal to the dashboard.
 
 ### Bug fixes

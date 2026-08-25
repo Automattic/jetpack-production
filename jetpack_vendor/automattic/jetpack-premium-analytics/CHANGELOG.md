@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.1-alpha] - unreleased
+## [0.5.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Post and video details: lead the date presets with All time (from the publish date), drop the custom range, period arrows, and interval dropdown per the design, and highlight the selected preset in the brand color.
 
 ### Fixed
 - Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
@@ -174,7 +177,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
-[0.4.1-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.4.0...0.4.1-alpha
+[0.5.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.4.0...0.5.0-alpha
 [0.4.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.2.0...0.3.0
 [0.2.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.1.0...0.2.0
