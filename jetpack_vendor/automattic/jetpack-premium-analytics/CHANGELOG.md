@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Date comparison: end a sub-day previous period immediately before the reference window instead of one instant inside it.
 - Date filters: Compute day boundaries and daylight-saving wall times in the site's timezone instead of the visitor's browser timezone.
 - Fix charts getting stuck on their loading skeleton after switching a control that turns one of the underlying requests off.
+- Insights: scope the calendar heatmaps to the selected period, so the card no longer draws and reports on years outside it.
 - Latest subscribers, Latest likes and Latest comments: show only the rows that fit the tile and keep the "N more" footer visible.
 - Show the dashboard right away instead of a sync screen, and flag the Store section's numbers as incomplete while store data is still syncing.
 - Stats: Compare a date range against a previous month or year of the same length, unless the range is whole calendar months.
