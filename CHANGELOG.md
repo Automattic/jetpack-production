@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI: Auto-activate the AI module on sites running a 16.2 prerelease build.
+- Charts: draw labels at the design system's font weight and size.
 - Contact Form: remove the classic-theme editor margin between a field's label and its input.
 - Forms: Allow a single response to scroll when it is taller than the screen.
 - Forms: Apply the name typed when creating a form, and stop a dismissed save from reporting into a reopened dialog.
