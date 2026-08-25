@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Akismet: link the settings page header logo and title to the Akismet settings page.
 - Forms: On small screens, show only the response and its actions instead of a table that scrolls sideways.
 - Forms: On small screens, the View action now opens a response the same way tapping its title does.
 - Forms: Show each form field as a column when viewing a single form's responses.
