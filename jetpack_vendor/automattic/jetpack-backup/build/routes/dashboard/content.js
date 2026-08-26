@@ -265,6 +265,11 @@ __( "Jetpack", "jetpack-backup-pkg" );
 __( "We couldn't load your backup details", "jetpack-backup-pkg" );
 __( "Your backups are unaffected. Try again, and contact support if this keeps happening.", "jetpack-backup-pkg" );
 __( "Use license key", "jetpack-backup-pkg" );
+__( "14 day money back guarantee.", "jetpack-backup-pkg" );
+__( "Special introductory pricing, all renewals are at full price. 14 day money back guarantee.", "jetpack-backup-pkg" );
+__( "per month, billed yearly", "jetpack-backup-pkg" );
+/* translators: %s is the full monthly price the subscription renews at. */
+__( "Renews at %s per month.", "jetpack-backup-pkg" );
 __( "This site doesn't have an active Backup plan", "jetpack-backup-pkg" );
 __( "Add Jetpack Backup to start protecting your site with automatic backups, granular restores, and offsite storage.", "jetpack-backup-pkg" );
 __( "Get VaultPress Backup", "jetpack-backup-pkg" );
