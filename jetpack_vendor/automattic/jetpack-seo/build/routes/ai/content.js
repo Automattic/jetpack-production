@@ -61,3 +61,4 @@ __( "To enable, allow search engines to index this site under <link>Settings</li
 __( "View your llms.txt", "jetpack-seo" );
 __( "AI SEO Enhancer", "jetpack-seo" );
 __( "Automatically generate SEO title, SEO description, and image alt text for new posts", "jetpack-seo" );
+__( "AI SEO is turned off for this site, so nothing is generated. Your choice is saved and applies again when AI SEO is turned back on.", "jetpack-seo" );

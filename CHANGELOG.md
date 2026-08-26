@@ -10,6 +10,8 @@ This is an alpha version! The changes listed here are not final.
 - AI settings: add the Overview tab with usage, activity log and documentation links, limited to internal testing environments.
 - Forms: Add help text to form fields and show the date field's expected format below its input.
 - Forms: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
+- Jetpack AI: Add an AI SEO control to the AI settings page. The AI sidebar's SEO suggestions follow it, separately from the automatic-generation setting.
+- Jetpack AI: Make the editor and the automatic-generation toggles follow the AI SEO control — switching it off stops metadata generation and disables its controls, with saved choices returning when it is switched back on.
 - Premium Analytics: Fold the video detail highlight metrics into the Video performance chart as selectable tabs.
 - Premium Analytics: Lead the post and video detail date presets with All time and match the selected preset to the design.
 - Stats: Drop the Traffic summary chart's own Group by; the page-level chart interval sets the bucket.
