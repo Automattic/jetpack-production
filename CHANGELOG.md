@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Name a checkbox by its own label when building conditional logic, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
 - Premium Analytics: Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
 - Premium Analytics: Show abbreviated month names on chart x-axes in line and area views.
+- Premium Analytics: Show email subject lines with characters like "&" instead of their HTML codes.
 - Tiled Gallery: Remove the forced gray background on images that made transparent areas appear gray.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

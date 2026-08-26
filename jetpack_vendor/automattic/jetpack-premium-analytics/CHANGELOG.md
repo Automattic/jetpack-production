@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
+- Emails: Decode HTML entities in email subject lines.
 
 ## [0.4.0] - 2026-08-25
 ### Added
