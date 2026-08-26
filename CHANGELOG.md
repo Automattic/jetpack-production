@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix private video playback authorization for videos embedded through synced patterns and Video Playlist blocks, let private videos preview in the block editor canvas, load live metadata for private playlist entries for authorized viewers, and show a lock placeholder on playlist thumbnails of private videos the viewer cannot access.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Deprecate `jetpack_shim_setcookie()` function. PHP 7.4+'s `setcookie()` can be used directly.
 - Newsletter: Add an endpoint serving the email design editor's data.
 
 ## 16.2-a.3 - 2026-08-25
