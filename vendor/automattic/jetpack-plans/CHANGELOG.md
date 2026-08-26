@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.13.0] - 2026-08-26
 ### Removed
-- Minimum supported PHP version is now 7.4.
+- Minimum supported PHP version is now 7.4. [#51515]
 
 ### Fixed
-- Stop deleting and rewriting the plan and product options when the stored value is unchanged.
+- Stop deleting and rewriting the plan and product options when the stored value is unchanged. [#51146]
 
 ## [0.12.0] - 2026-08-11
 ### Added
@@ -276,7 +273,7 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Moved the options class into Connection. [#24095]
 
-[0.13.0-alpha]: https://github.com/Automattic/jetpack-plans/compare/v0.12.0...v0.13.0-alpha
+[0.13.0]: https://github.com/Automattic/jetpack-plans/compare/v0.12.0...v0.13.0
 [0.12.0]: https://github.com/Automattic/jetpack-plans/compare/v0.11.9...v0.12.0
 [0.11.9]: https://github.com/Automattic/jetpack-plans/compare/v0.11.8...v0.11.9
 [0.11.8]: https://github.com/Automattic/jetpack-plans/compare/v0.11.7...v0.11.8

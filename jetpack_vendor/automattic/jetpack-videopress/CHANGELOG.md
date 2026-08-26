@@ -5,25 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.48.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.48.0] - 2026-08-26
 ### Added
-- Dashboard: Add a first-run onboarding modal.
-- Dashboard: Switch between the first-run and returning-user tab order from a single first-run state.
+- Dashboard: Add a first-run onboarding modal. [#51520]
+- Dashboard: Switch between the first-run and returning-user tab order from a single first-run state. [#51520]
 
 ### Changed
-- Dashboard: Align the welcome modal with the design system: derive the media band's control colors from a ThemeProvider seed, use the dialog's own type scale, and the Jetpack brand token for the card icons.
-- Dashboard: Rebuild the welcome modal around the brand artwork band, replacing the two-tab layout.
+- Dashboard: Align the welcome modal with the design system: derive the media band's control colors from a ThemeProvider seed, use the dialog's own type scale, and the Jetpack brand token for the card icons. [#51567]
+- Dashboard: Rebuild the welcome modal around the brand artwork band, replacing the two-tab layout. [#51520]
 
 ### Removed
-- Minimum supported PHP version is now 7.4.
+- Minimum supported PHP version is now 7.4. [#51515]
 
 ### Fixed
-- Dashboard: stop greeting people who already have videos as new when they arrive on a video link in a fresh browser.
-- Fix private video playback authorization for videos embedded through synced patterns and Video Playlist blocks, let private videos preview in the block editor canvas, load live metadata for private playlist entries for authorized viewers, and show a lock placeholder on playlist thumbnails of private videos the viewer cannot access.
-- Welcome modal: load the artwork behind the intro film instead of falling back to a flat colour.
+- Dashboard: stop greeting people who already have videos as new when they arrive on a video link in a fresh browser. [#51520]
+- Fix private video playback authorization for videos embedded through synced patterns and Video Playlist blocks, let private videos preview in the block editor canvas, load live metadata for private playlist entries for authorized viewers, and show a lock placeholder on playlist thumbnails of private videos the viewer cannot access. [#51569]
+- Welcome modal: load the artwork behind the intro film instead of falling back to a flat colour. [#51520]
 
 ## [0.47.2] - 2026-08-25
 ### Added
@@ -2197,7 +2194,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.48.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.47.2...v0.48.0-alpha
+[0.48.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.47.2...v0.48.0
 [0.47.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.47.1...v0.47.2
 [0.47.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.47.0...v0.47.1
 [0.47.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.46.0...v0.47.0
