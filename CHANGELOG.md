@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
 - Jetpack AI: Add an AI SEO control to the AI settings page. The AI sidebar's SEO suggestions follow it, separately from the automatic-generation setting.
 - Jetpack AI: Make the editor and the automatic-generation toggles follow the AI SEO control — switching it off stops metadata generation and disables its controls, with saved choices returning when it is switched back on.
+- Premium Analytics: Add breathing room above and below the Top locations map.
 - Premium Analytics: Fold the video detail highlight metrics into the Video performance chart as selectable tabs.
 - Premium Analytics: Lead the post and video detail date presets with All time and match the selected preset to the design.
 - Premium Analytics: Tighten the spacing between leaderboard rows.
