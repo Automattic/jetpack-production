@@ -24,6 +24,7 @@ __( "Jetpack", "jetpack-components" );
 __( "(opens in a new tab)", "jetpack-components" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-components" );
+__( "Dismiss", "jetpack-components" );
 __( "What is GEO?", "jetpack-seo" );
 __( "GEO stands for generative engine optimization. These settings control how AI sees and uses your site.", "jetpack-seo" );
 __( "Overview", "jetpack-seo" );

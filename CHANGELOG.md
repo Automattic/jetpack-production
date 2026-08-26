@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
 - Jetpack AI: Add an AI SEO control to the AI settings page. The AI sidebar's SEO suggestions follow it, separately from the automatic-generation setting.
 - Jetpack AI: Make the editor and the automatic-generation toggles follow the AI SEO control — switching it off stops metadata generation and disables its controls, with saved choices returning when it is switched back on.
+- My Jetpack: Allow the Automattic for Agencies banner to be dismissed.
 - Premium Analytics: Add breathing room above and below the Top locations map.
 - Premium Analytics: Fold the video detail highlight metrics into the Video performance chart as selectable tabs.
 - Premium Analytics: Lead the post and video detail date presets with All time and match the selected preset to the design.
@@ -36,6 +37,8 @@ This is an alpha version! The changes listed here are not final.
 - Forms: keep one column per form field on a form's responses when a field is moved, and read every answer from the field it belongs to.
 - Forms: Let screen readers announce a date field's own label instead of the date picker instructions.
 - Forms: Name a checkbox by its own label when building conditional logic, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
+- My Jetpack: Keep the Automattic for Agencies banner hidden after dismissing it and switching tabs.
+- My Jetpack: Stop repeating the partner lookup request on every page load.
 - Premium Analytics: Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
 - Premium Analytics: Show abbreviated month names on chart x-axes in line and area views.
 - Premium Analytics: Show email subject lines with characters like "&" instead of their HTML codes.

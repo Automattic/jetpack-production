@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Register the dismissed_a4a_banner option name.
+
 ## [9.0.0] - 2026-08-26
 ### Changed
 - Cache the WordPress.com site record briefly so the site endpoint does not make a request per read. [#51146]
