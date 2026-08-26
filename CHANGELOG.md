@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
 - Premium Analytics: Show abbreviated month names on chart x-axes in line and area views.
 - Premium Analytics: Show email subject lines with characters like "&" instead of their HTML codes.
+- Stats: Fix access for users whose allowed role is not their first assigned role.
 - Tiled Gallery: Remove the forced gray background on images that made transparent areas appear gray.
 - VideoPress: Fix private video playback authorization for videos embedded through synced patterns and Video Playlist blocks, let private videos preview in the block editor canvas, load live metadata for private playlist entries for authorized viewers, and show a lock placeholder on playlist thumbnails of private videos the viewer cannot access.
 

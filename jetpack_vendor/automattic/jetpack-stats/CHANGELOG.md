@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Minimum supported PHP version is now 7.4.
 
+### Fixed
+- Fix view_stats capability check for users with multiple roles by checking all roles instead of only the first.
+
 ## [0.20.4] - 2026-08-25
 ### Changed
 - Escape the AMP tracking pixel URL at output. [#51472]
