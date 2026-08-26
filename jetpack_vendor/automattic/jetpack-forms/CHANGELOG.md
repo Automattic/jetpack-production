@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add help text to form fields, and show the date field's expected format below the input instead of in its label. Preserve help text across field transformations and form details, and fix field descriptions for inset-label styles.
+- Responses: remember which columns are shown, and their order, for each form.
 
 ### Changed
 - CSV export will now handle `\"` sequences per RFC 4180.
@@ -23,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Conditional logic: Name a checkbox by its own label in the conditions dropdown, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
 - Date field: let screen readers announce the field's own label instead of the date picker instructions.
 - Fix checkbox and consent field alignment in the editor on classic themes.
+- Responses: keep one column per form field when a field is moved, and read every answer from the field it belongs to.
 
 ## [7.26.0] - 2026-08-25
 ### Added

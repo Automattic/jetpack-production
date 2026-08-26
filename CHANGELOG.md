@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI settings: add the Overview tab with usage, activity log and documentation links, limited to internal testing environments.
 - Connection: Cache the WordPress.com site record briefly so the Jetpack dashboard does not make a request per view.
 - Forms: Add help text to form fields and show the date field's expected format below its input.
+- Forms: remember which response columns are shown, and their order, for each form.
 - Forms: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
 - Jetpack AI: Add an AI SEO control to the AI settings page. The AI sidebar's SEO suggestions follow it, separately from the automatic-generation setting.
 - Jetpack AI: Make the editor and the automatic-generation toggles follow the AI SEO control — switching it off stops metadata generation and disables its controls, with saved choices returning when it is switched back on.
@@ -32,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Render scheduled task results as Markdown.
 - Carousel: Keep the loading overlay hidden when the module stylesheet is missing.
 - Forms: Fix checkbox and consent field alignment in the editor on classic themes.
+- Forms: keep one column per form field on a form's responses when a field is moved, and read every answer from the field it belongs to.
 - Forms: Let screen readers announce a date field's own label instead of the date picker instructions.
 - Forms: Name a checkbox by its own label when building conditional logic, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
 - Premium Analytics: Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
