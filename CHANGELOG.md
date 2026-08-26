@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI: Add an internal Scheduled tasks view to Jetpack AI Hub.
 - AI settings: add the Overview tab with usage, activity log and documentation links, limited to internal testing environments.
 - Connection: Cache the WordPress.com site record briefly so the Jetpack dashboard does not make a request per view.
 - Forms: Add help text to form fields and show the date field's expected format below its input.
@@ -25,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated PHP version requirements to PHP 7.4 or newer.
 
 ### Bug fixes
+- AI: Render scheduled task results as Markdown.
 - Carousel: Keep the loading overlay hidden when the module stylesheet is missing.
 - Forms: Fix checkbox and consent field alignment in the editor on classic themes.
 - Forms: Name a checkbox by its own label when building conditional logic, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
