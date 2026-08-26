@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Leaderboards: Tighten the spacing between rows.
 - Post and video details: lead the date presets with All time (from the publish date), drop the custom range, period arrows, and interval dropdown per the design, and highlight the selected preset in the brand color.
 - Traffic summary: follow the page chart interval control instead of a widget-level Group by.
 - Video details: fold the highlight metrics into the Video performance chart as selectable tabs, play-weighting the bucketed retention rate.
