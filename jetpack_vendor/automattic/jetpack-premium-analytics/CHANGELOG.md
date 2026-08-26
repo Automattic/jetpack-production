@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Removed
 - Minimum supported PHP version is now 7.4.
+- Remove the unused granularity attribute from the default WordAds chart widget instance.
 
 ### Fixed
 - Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
