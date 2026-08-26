@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: stop greeting people who already have videos as new when they arrive on a video link in a fresh browser.
+- Fix private video playback authorization for videos embedded through synced patterns and Video Playlist blocks, let private videos preview in the block editor canvas, load live metadata for private playlist entries for authorized viewers, and show a lock placeholder on playlist thumbnails of private videos the viewer cannot access.
 - Welcome modal: load the artwork behind the intro film instead of falling back to a flat colour.
 
 ## [0.47.2] - 2026-08-25
