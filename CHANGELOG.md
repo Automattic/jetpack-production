@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Keep the Automattic for Agencies banner hidden after dismissing it and switching tabs.
 - My Jetpack: Stop repeating the partner lookup request on every page load.
 - Premium Analytics: Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
+- Premium Analytics: Fix the email opens/clicks timeline charting hours outside the selected window.
 - Premium Analytics: Show abbreviated month names on chart x-axes in line and area views.
 - Premium Analytics: Show email subject lines with characters like "&" instead of their HTML codes.
 - Stats: Fix access for users whose allowed role is not their first assigned role.
