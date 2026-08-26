@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add breathing room above and below the Top locations map.
 - Premium Analytics: Fold the video detail highlight metrics into the Video performance chart as selectable tabs.
 - Premium Analytics: Lead the post and video detail date presets with All time and match the selected preset to the design.
+- Premium Analytics: Tighten the Latest subscribers rows so more subscribers fit the widget.
 - Premium Analytics: Tighten the spacing between leaderboard rows.
 - Stats: Drop the Traffic summary chart's own Group by; the page-level chart interval sets the bucket.
 - VideoPress: Add a first-run welcome modal to the dashboard.
