@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Conditional logic: Name a checkbox by its own label in the conditions dropdown, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
+- Date field: let screen readers announce the field's own label instead of the date picker instructions.
 - Fix checkbox and consent field alignment in the editor on classic themes.
 
 ## [7.26.0] - 2026-08-25
