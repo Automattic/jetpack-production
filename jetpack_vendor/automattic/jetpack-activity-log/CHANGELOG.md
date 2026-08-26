@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Minimum supported PHP version is now 7.4.
 
+### Fixed
+- Ensure table content wraps neatly onto a new line if long.
+
 ## [0.2.6] - 2026-08-25
 ### Changed
 - Update dependencies. [#50841]

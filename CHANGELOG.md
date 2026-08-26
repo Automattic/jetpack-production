@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated PHP version requirements to PHP 7.4 or newer.
 
 ### Bug fixes
+- Activity Log: Ensure table content wraps neatly onto a new line if long.
 - AI: Render scheduled task results as Markdown.
 - Carousel: Keep the loading overlay hidden when the module stylesheet is missing.
 - Forms: Fix checkbox and consent field alignment in the editor on classic themes.
