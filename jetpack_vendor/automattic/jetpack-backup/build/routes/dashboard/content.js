@@ -275,6 +275,11 @@ __( "Link your account to view backups", "jetpack-backup-pkg" );
 __( "This site's Jetpack connection is already set up, but your account isn't linked to a WordPress.com user yet.", "jetpack-backup-pkg" );
 __( "Link my account", "jetpack-backup-pkg" );
 __( "Save changes and restore quickly with one-click recovery.", "jetpack-backup-pkg" );
+/* translators: %d: percentage of backup storage used. */
+__( "Backup storage used: %d%%", "jetpack-backup-pkg" );
+__( "Cloud storage full", "jetpack-backup-pkg" );
+__( "Cloud storage is almost full", "jetpack-backup-pkg" );
+__( "Cloud storage space", "jetpack-backup-pkg" );
 __( "We couldn't check your site's backup status.", "jetpack-backup-pkg" );
 __( "Select an item from the list to see details.", "jetpack-backup-pkg" );
 __( "Item not found.", "jetpack-backup-pkg" );
