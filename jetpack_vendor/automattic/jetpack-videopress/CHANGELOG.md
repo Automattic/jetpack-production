@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Switch between the first-run and returning-user tab order from a single first-run state.
 
 ### Changed
+- Dashboard: Align the welcome modal with the design system: derive the media band's control colors from a ThemeProvider seed, use the dialog's own type scale, and the Jetpack brand token for the card icons.
 - Dashboard: Rebuild the welcome modal around the brand artwork band, replacing the two-tab layout.
 
 ### Removed
