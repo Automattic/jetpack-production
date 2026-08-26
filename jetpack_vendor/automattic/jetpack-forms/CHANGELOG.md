@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add help text to form fields, and show the date field's expected format below the input instead of in its label. Preserve help text across field transformations and form details, and fix field descriptions for inset-label styles.
 
 ### Changed
+- CSV export will now handle `\"` sequences per RFC 4180.
 - Dashboard: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
 
 ### Removed

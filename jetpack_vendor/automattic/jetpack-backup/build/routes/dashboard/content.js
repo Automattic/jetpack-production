@@ -197,6 +197,7 @@ __( "Value must be true, false, or undefined", "jetpack-backup-pkg" );
 __( "Value must be an array.", "jetpack-backup-pkg" );
 __( "Every value must be a string.", "jetpack-backup-pkg" );
 __( "Value must be a valid color.", "jetpack-backup-pkg" );
+__( "Request failed", "jetpack-backup-pkg" );
 __( "Try again", "jetpack-backup-pkg" );
 __( "We couldn't load your site's activity.", "jetpack-backup-pkg" );
 __( "Icon", "jetpack-backup-pkg" );

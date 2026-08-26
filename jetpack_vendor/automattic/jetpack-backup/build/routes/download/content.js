@@ -18,6 +18,7 @@ __( "Products", "jetpack-backup-pkg" );
 __( "Help", "jetpack-backup-pkg" );
 __( "Jetpack", "jetpack-backup-pkg" );
 __( "Select at least one item to continue.", "jetpack-backup-pkg" );
+__( "Request failed", "jetpack-backup-pkg" );
 __( "We couldn't load your backup details", "jetpack-backup-pkg" );
 __( "Your backups are unaffected. Try again, and contact support if this keeps happening.", "jetpack-backup-pkg" );
 __( "Try again", "jetpack-backup-pkg" );
