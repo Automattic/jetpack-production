@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Minimum supported PHP version is now 7.4.
 
+### Fixed
+- Stop deleting and rewriting the plan and product options when the stored value is unchanged.
+
 ## [0.12.0] - 2026-08-11
 ### Added
 - Add update_from_site_record() to set the cached plan and products from a decoded site record. [#51057]

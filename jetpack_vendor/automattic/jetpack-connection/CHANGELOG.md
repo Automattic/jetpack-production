@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Cache the WordPress.com site record briefly so the site endpoint does not make a request per read.
+
 ### Removed
 - Minimum supported PHP version is now 7.4.
 
