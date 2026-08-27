@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Make the editor and the automatic-generation toggles follow the AI SEO control — switching it off stops metadata generation and disables its controls, with saved choices returning when it is switched back on.
 - My Jetpack: Allow the Automattic for Agencies banner to be dismissed.
 - Premium Analytics: Add breathing room above and below the Top locations map.
+- Premium Analytics: Click a point on the Traffic chart to narrow the dashboard to that period.
 - Premium Analytics: Fold the video detail highlight metrics into the Video performance chart as selectable tabs.
 - Premium Analytics: Give shared leaderboard rows one row height, bar radius, and link hover.
 - Premium Analytics: Lead the post and video detail date presets with All time and match the selected preset to the design.

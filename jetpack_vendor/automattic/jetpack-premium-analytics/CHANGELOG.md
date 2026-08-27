@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Traffic chart: Click a point on the chart to narrow the dashboard to that period.
+
 ### Changed
 - Ads: Move the date range into the WordAds card's own header, and drop the section header's date filter.
 - CSV export will now handle `\"` sequences per RFC 4180.
