@@ -80,6 +80,11 @@ __( "%1$s (%2$s, %3$s)", "jetpack-premium-analytics-pkg" );
 __( "%1$s (%2$s)", "jetpack-premium-analytics-pkg" );
 /* translators: %1$s is a date range with its length, %2$s is the compared period — either its dates, e.g. "July 14 – 20, 2026", or a preset name, e.g. "Previous period". */
 __( "%1$s vs. %2$s", "jetpack-premium-analytics-pkg" );
+__( "Couldn't refresh. Showing data from less than a minute ago.", "jetpack-premium-analytics-pkg" );
+/* translators: %s: how long ago the data on screen was fetched, e.g. "5 minutes ago". */
+__( "Couldn't refresh. Showing data from %s.", "jetpack-premium-analytics-pkg" );
+__( "Couldn't refresh. The numbers on screen may be out of date.", "jetpack-premium-analytics-pkg" );
+__( "Retry", "jetpack-premium-analytics-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 __( "Breadcrumbs", "jetpack-premium-analytics-pkg" );

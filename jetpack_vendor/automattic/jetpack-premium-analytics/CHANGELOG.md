@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
 - Emails: Decode HTML entities in email subject lines.
 - Email timeline: request the smallest hourly window the endpoint can serve and trim the chart and totals to the selected window.
+- Show a notice when a refresh fails, instead of silently leaving the previous numbers on screen.
 
 ## [0.4.0] - 2026-08-25
 ### Added
