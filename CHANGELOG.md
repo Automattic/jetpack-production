@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI: Add an internal Scheduled tasks view to Jetpack AI Hub.
+- AI: Rename the admin page and menu item to Jetpack AI, update the page description, and point the "turned off" notice at Jetpack Products.
 - AI settings: add the Overview tab with usage, activity log and documentation links, limited to internal testing environments.
 - Connection: Cache the WordPress.com site record briefly so the Jetpack dashboard does not make a request per view.
 - Forms: Add help text to form fields and show the date field's expected format below its input.
