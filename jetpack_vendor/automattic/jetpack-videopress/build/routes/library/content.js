@@ -123,6 +123,22 @@ __( "Publish", "jetpack-videopress-pkg" );
 __( "Add track", "jetpack-videopress-pkg" );
 __( "Paste transcript", "jetpack-videopress-pkg" );
 __( "No subtitle tracks have been added to this video yet.", "jetpack-videopress-pkg" );
+__( "Loading", "jetpack-videopress-pkg" );
+__( "Date calendar", "jetpack-videopress-pkg" );
+__( "Date range calendar", "jetpack-videopress-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s", "jetpack-videopress-pkg" );
+__( "Go to the Next Month", "jetpack-videopress-pkg" );
+__( "Go to the Previous Month", "jetpack-videopress-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s, selected", "jetpack-videopress-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "%s, selected", "jetpack-videopress-pkg" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-videopress-pkg" );
+__( "Dismiss", "jetpack-videopress-pkg" );
 __( "Sort ascending", "jetpack-videopress-pkg" );
 __( "Sort descending", "jetpack-videopress-pkg" );
 __( "(no title)", "jetpack-videopress-pkg" );
@@ -267,6 +283,8 @@ __( "Items per page", "jetpack-videopress-pkg" );
 __( "Reset view", "jetpack-videopress-pkg" );
 _x( "View options", "View is used as a noun", "jetpack-videopress-pkg" );
 __( "Appearance", "jetpack-videopress-pkg" );
+__( "Required", "jetpack-videopress-pkg" );
+__( "Optional", "jetpack-videopress-pkg" );
 __( "Days", "jetpack-videopress-pkg" );
 __( "Weeks", "jetpack-videopress-pkg" );
 __( "Months", "jetpack-videopress-pkg" );
@@ -276,8 +294,6 @@ __( "Weeks ago", "jetpack-videopress-pkg" );
 __( "Months ago", "jetpack-videopress-pkg" );
 __( "Years ago", "jetpack-videopress-pkg" );
 __( "Unit", "jetpack-videopress-pkg" );
-__( "Required", "jetpack-videopress-pkg" );
-__( "Optional", "jetpack-videopress-pkg" );
 __( "Date time", "jetpack-videopress-pkg" );
 __( "Today", "jetpack-videopress-pkg" );
 __( "Yesterday", "jetpack-videopress-pkg" );
@@ -295,6 +311,7 @@ __( "To", "jetpack-videopress-pkg" );
 __( "The max. value must be greater than the min. value.", "jetpack-videopress-pkg" );
 __( "Min.", "jetpack-videopress-pkg" );
 __( "Max.", "jetpack-videopress-pkg" );
+__( "The end time must be later than the start time.", "jetpack-videopress-pkg" );
 __( "Open color picker", "jetpack-videopress-pkg" );
 __( "Hide password", "jetpack-videopress-pkg" );
 __( "Show password", "jetpack-videopress-pkg" );
@@ -307,10 +324,6 @@ __( "Value must be true, false, or undefined", "jetpack-videopress-pkg" );
 __( "Value must be an array.", "jetpack-videopress-pkg" );
 __( "Every value must be a string.", "jetpack-videopress-pkg" );
 __( "Value must be a valid color.", "jetpack-videopress-pkg" );
-__( "Loading", "jetpack-videopress-pkg" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-videopress-pkg" );
-__( "Dismiss", "jetpack-videopress-pkg" );
 __( "Jetpack Logo", "jetpack-videopress-pkg" );
 __( "An Automattic Airline", "jetpack-videopress-pkg" );
 /* translators: %1$s is button label 1 and %2$s is button label 2 */

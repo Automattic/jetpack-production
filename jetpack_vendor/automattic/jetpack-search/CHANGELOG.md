@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - AI Answers: Follow the Jetpack AI master switch in the search overlay and the AI Answer block — live on WordPress.com Simple, internal testing environments elsewhere ahead of release.
 - AI Answers: report the saved choice and the site-wide AI state in settings, disable the controls while AI is off, and honor the host AI opt-out in the AI Answer block. Require Instant Search to enable AI Answers. The master-state reporting follows the rollout: live on WordPress.com Simple, internal testing environments elsewhere.
+- Update package dependencies.
 
 ### Removed
 - Minimum supported PHP version is now 7.4.

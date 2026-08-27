@@ -7,6 +7,8 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading", "jetpack-videopress-pkg" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
 __( "Close", "jetpack-videopress-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-videopress-pkg" );

@@ -7,6 +7,16 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading", "jetpack-backup-pkg" );
+__( "Date calendar", "jetpack-backup-pkg" );
+__( "Date range calendar", "jetpack-backup-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s", "jetpack-backup-pkg" );
+__( "Go to the Next Month", "jetpack-backup-pkg" );
+__( "Go to the Previous Month", "jetpack-backup-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s, selected", "jetpack-backup-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "%s, selected", "jetpack-backup-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-backup-pkg" );
 __( "Something went wrong", "jetpack-backup-pkg" );
@@ -157,6 +167,8 @@ __( "Items per page", "jetpack-backup-pkg" );
 __( "Reset view", "jetpack-backup-pkg" );
 _x( "View options", "View is used as a noun", "jetpack-backup-pkg" );
 __( "Appearance", "jetpack-backup-pkg" );
+__( "Required", "jetpack-backup-pkg" );
+__( "Optional", "jetpack-backup-pkg" );
 __( "Days", "jetpack-backup-pkg" );
 __( "Weeks", "jetpack-backup-pkg" );
 __( "Months", "jetpack-backup-pkg" );
@@ -166,8 +178,6 @@ __( "Weeks ago", "jetpack-backup-pkg" );
 __( "Months ago", "jetpack-backup-pkg" );
 __( "Years ago", "jetpack-backup-pkg" );
 __( "Unit", "jetpack-backup-pkg" );
-__( "Required", "jetpack-backup-pkg" );
-__( "Optional", "jetpack-backup-pkg" );
 __( "Date time", "jetpack-backup-pkg" );
 __( "Today", "jetpack-backup-pkg" );
 __( "Yesterday", "jetpack-backup-pkg" );
@@ -185,6 +195,7 @@ __( "To", "jetpack-backup-pkg" );
 __( "The max. value must be greater than the min. value.", "jetpack-backup-pkg" );
 __( "Min.", "jetpack-backup-pkg" );
 __( "Max.", "jetpack-backup-pkg" );
+__( "The end time must be later than the start time.", "jetpack-backup-pkg" );
 __( "Open color picker", "jetpack-backup-pkg" );
 __( "Hide password", "jetpack-backup-pkg" );
 __( "Show password", "jetpack-backup-pkg" );

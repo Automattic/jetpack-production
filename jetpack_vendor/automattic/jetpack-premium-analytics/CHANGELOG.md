@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriber list: Match the row height, avatar size, and footer type to the design.
 - Top locations: Add breathing room above and below the map.
 - Traffic summary: follow the page chart interval control instead of a widget-level Group by.
+- Update package dependencies.
 - Video details: fold the highlight metrics into the Video performance chart as selectable tabs, play-weighting the bucketed retention rate.
 
 ### Removed

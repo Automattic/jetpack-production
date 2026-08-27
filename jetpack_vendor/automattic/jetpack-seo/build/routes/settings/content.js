@@ -7,6 +7,8 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s" );
 __( "More details follow." );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)" );

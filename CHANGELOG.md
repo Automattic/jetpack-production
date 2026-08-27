@@ -62,6 +62,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Deprecate `jetpack_shim_setcookie()` function. PHP 7.4+'s `setcookie()` can be used directly.
 - Newsletter: Add an endpoint serving the email design editor's data.
+- Update package dependencies.
 
 ## 16.2-a.3 - 2026-08-25
 ### Enhancements

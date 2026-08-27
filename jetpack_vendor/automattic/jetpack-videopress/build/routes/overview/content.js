@@ -6,6 +6,9 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+__( "Loading", "jetpack-videopress-pkg" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-videopress-pkg" );
 __( "Jetpack Logo", "jetpack-videopress-pkg" );
@@ -32,7 +35,6 @@ __( "Help", "jetpack-videopress-pkg" );
 __( "Jetpack", "jetpack-videopress-pkg" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-videopress-pkg" );
-__( "Loading", "jetpack-videopress-pkg" );
 __( "Close", "jetpack-videopress-pkg" );
 __( "Dismiss", "jetpack-videopress-pkg" );
 __( "Library", "jetpack-videopress-pkg" );

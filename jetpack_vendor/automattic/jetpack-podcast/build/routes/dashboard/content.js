@@ -7,6 +7,8 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s" );
 __( "More details follow the field." );
 __( "Select" );
 /* translators: accessibility text appended to link text */
@@ -20,6 +22,16 @@ __( "Help", "jetpack-components" );
 __( "Jetpack", "jetpack-components" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-components" );
+__( "Date calendar" );
+__( "Date range calendar" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s" );
+__( "Go to the Next Month" );
+__( "Go to the Previous Month" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s, selected" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "%s, selected" );
 __( "Saving…", "jetpack-podcast" );
 __( "Settings saved.", "jetpack-podcast" );
 __( "Could not save your podcast settings. Please try again.", "jetpack-podcast" );
@@ -371,6 +383,8 @@ __( "Items per page" );
 __( "Reset view" );
 _x( "View options", "View is used as a noun" );
 __( "Appearance" );
+__( "Required" );
+__( "Optional" );
 __( "Unit" );
 __( "Days" );
 __( "Weeks" );
@@ -380,8 +394,6 @@ __( "Days ago" );
 __( "Weeks ago" );
 __( "Months ago" );
 __( "Years ago" );
-__( "Required" );
-__( "Optional" );
 __( "Date time" );
 __( "Custom" );
 __( "Date" );
@@ -399,6 +411,7 @@ __( "Year to date" );
 __( "The max. value must be greater than the min. value." );
 __( "Min." );
 __( "Max." );
+__( "The end time must be later than the start time." );
 __( "Open color picker" );
 __( "Hide password" );
 __( "Show password" );
@@ -508,14 +521,6 @@ __( "We submit your feed for you. It usually goes live within a few minutes.", "
 __( "Manual submission", "jetpack-podcast" );
 __( "Copy this URL, then submit it to each directory below yourself.", "jetpack-podcast" );
 __( "Set your post category to generate the feed URL you can submit to directories.", "jetpack-podcast" );
-__( "Date calendar" );
-__( "Date range calendar" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s" );
-__( "Go to the Next Month" );
-__( "Go to the Previous Month" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "%s, selected" );
 __( "Start date" );
 __( "End date" );
 /* translators: %1$s: start date, %2$s: end date */

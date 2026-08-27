@@ -289,23 +289,23 @@ function jetpack_seo_jetpack_seo_dashboard_wp_admin_render_page() {
 		#wpwrap {
 			overflow-y: auto;
 		}
-		body {
+		body.js {
 			background: #fff;
 		}
 
 		/* Reset wp-admin padding */
-		#wpcontent {
+		body.js #wpcontent {
 			padding-inline-start: 0;
 		}
-		#wpbody-content {
+		body.js #wpbody-content {
 			padding-bottom: 0;
 		}
 
 		/* Hide legacy admin elements */
-		#wpbody-content > div:not(.boot-layout-container):not(#screen-meta) {
+		body.js #wpbody-content > div:not(.boot-layout-container):not(#screen-meta) {
 			display: none;
 		}
-		#wpfooter {
+		body.js #wpfooter {
 			display: none;
 		}
 
@@ -334,6 +334,15 @@ function jetpack_seo_jetpack_seo_dashboard_wp_admin_render_page() {
 			}
 		}
 	</style>
+	<div class="wrap hide-if-js">
+		<h1 class="wp-heading-inline"><?php echo esc_html( get_admin_page_title() ); ?></h1>
+		<?php
+		wp_admin_notice(
+			__( 'This screen requires JavaScript. Enable JavaScript in your browser settings and reload the page.' ),
+			array( 'type' => 'error' )
+		);
+		?>
+	</div>
 	<div id="jetpack-seo-dashboard-wp-admin-app" class="boot-layout-container"></div>
 	<?php
 }

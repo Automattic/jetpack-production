@@ -7,6 +7,8 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading", "jetpack-premium-analytics-pkg" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-premium-analytics-pkg" );
 _x( "%1$s, %2$s", "legend item label and value", "jetpack-premium-analytics-pkg" );
 _x( "%s: visible. Toggle visibility.", "visible interactive legend item", "jetpack-premium-analytics-pkg" );
 _x( "%s: hidden. Toggle visibility.", "hidden interactive legend item", "jetpack-premium-analytics-pkg" );
@@ -44,6 +46,8 @@ __( "Go to the Next Month", "jetpack-premium-analytics-pkg" );
 __( "Go to the Previous Month", "jetpack-premium-analytics-pkg" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected", "jetpack-premium-analytics-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s, selected", "jetpack-premium-analytics-pkg" );
 __( "More details follow the field.", "jetpack-premium-analytics-pkg" );
 __( "More details follow.", "jetpack-premium-analytics-pkg" );
 __( "Select", "jetpack-premium-analytics-pkg" );
@@ -193,6 +197,8 @@ __( "Items per page", "jetpack-premium-analytics-pkg" );
 __( "Reset view", "jetpack-premium-analytics-pkg" );
 _x( "View options", "View is used as a noun", "jetpack-premium-analytics-pkg" );
 __( "Appearance", "jetpack-premium-analytics-pkg" );
+__( "Required", "jetpack-premium-analytics-pkg" );
+__( "Optional", "jetpack-premium-analytics-pkg" );
 __( "Days", "jetpack-premium-analytics-pkg" );
 __( "Weeks", "jetpack-premium-analytics-pkg" );
 __( "Months", "jetpack-premium-analytics-pkg" );
@@ -202,8 +208,6 @@ __( "Weeks ago", "jetpack-premium-analytics-pkg" );
 __( "Months ago", "jetpack-premium-analytics-pkg" );
 __( "Years ago", "jetpack-premium-analytics-pkg" );
 __( "Unit", "jetpack-premium-analytics-pkg" );
-__( "Required", "jetpack-premium-analytics-pkg" );
-__( "Optional", "jetpack-premium-analytics-pkg" );
 __( "Date time", "jetpack-premium-analytics-pkg" );
 __( "Today", "jetpack-premium-analytics-pkg" );
 __( "Yesterday", "jetpack-premium-analytics-pkg" );
@@ -221,6 +225,7 @@ __( "To", "jetpack-premium-analytics-pkg" );
 __( "The max. value must be greater than the min. value.", "jetpack-premium-analytics-pkg" );
 __( "Min.", "jetpack-premium-analytics-pkg" );
 __( "Max.", "jetpack-premium-analytics-pkg" );
+__( "The end time must be later than the start time.", "jetpack-premium-analytics-pkg" );
 __( "Open color picker", "jetpack-premium-analytics-pkg" );
 __( "Hide password", "jetpack-premium-analytics-pkg" );
 __( "Show password", "jetpack-premium-analytics-pkg" );

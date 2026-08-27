@@ -16,6 +16,8 @@ __( "Jetpack", "jetpack-newsletter" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-newsletter" );
 __( "Loading", "jetpack-newsletter" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-newsletter" );
 __( "Dismiss", "jetpack-newsletter" );
 __( "Subscribers", "jetpack-newsletter" );
 __( "Subscribers moved", "jetpack-newsletter" );

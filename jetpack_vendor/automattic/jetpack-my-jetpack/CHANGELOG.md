@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Prefix the transient that flags a historically active modules refresh.
 - Roll back the Automattic for Agencies banner dismissal if the request fails.
+- Update package dependencies.
 
 ### Fixed
 - Cache the Automattic for Agencies partner lookup for sites that have no partner.

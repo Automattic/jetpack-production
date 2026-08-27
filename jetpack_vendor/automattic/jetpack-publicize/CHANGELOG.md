@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Sharing activity: update status badges.
+- Update package dependencies.
 
 ### Removed
 - Minimum supported PHP version is now 7.4.

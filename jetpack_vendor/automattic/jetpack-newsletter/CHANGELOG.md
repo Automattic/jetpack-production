@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Make writing-prompt, paid-plan, and subscribers-announcement actions real links.
+- Update package dependencies.
 
 ### Removed
 - Minimum supported PHP version is now 7.4.

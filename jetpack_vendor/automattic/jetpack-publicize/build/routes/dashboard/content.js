@@ -9,6 +9,8 @@
 __( "Loading", "jetpack-publicize-pkg" );
 __( "OK", "jetpack-publicize-pkg" );
 __( "Cancel", "jetpack-publicize-pkg" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-publicize-pkg" );
 __( "Close", "jetpack-publicize-pkg" );
 __( "More details follow the field.", "jetpack-publicize-pkg" );
 /* translators: accessibility text appended to link text */

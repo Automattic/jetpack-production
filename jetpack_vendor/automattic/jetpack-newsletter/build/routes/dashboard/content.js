@@ -8,8 +8,20 @@
 
 __( "A connection check failed.", "jetpack-newsletter" );
 __( "Loading", "jetpack-newsletter" );
+__( "Date calendar", "jetpack-newsletter" );
+__( "Date range calendar", "jetpack-newsletter" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s", "jetpack-newsletter" );
+__( "Go to the Next Month", "jetpack-newsletter" );
+__( "Go to the Previous Month", "jetpack-newsletter" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s, selected", "jetpack-newsletter" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "%s, selected", "jetpack-newsletter" );
 __( "OK", "jetpack-newsletter" );
 __( "Cancel", "jetpack-newsletter" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-newsletter" );
 __( "Close", "jetpack-newsletter" );
 __( "More details follow.", "jetpack-newsletter" );
 /* translators: accessibility text appended to link text */
@@ -238,6 +250,8 @@ __( "Items per page", "jetpack-newsletter" );
 __( "Reset view", "jetpack-newsletter" );
 _x( "View options", "View is used as a noun", "jetpack-newsletter" );
 __( "Appearance", "jetpack-newsletter" );
+__( "Required", "jetpack-newsletter" );
+__( "Optional", "jetpack-newsletter" );
 __( "Days", "jetpack-newsletter" );
 __( "Weeks", "jetpack-newsletter" );
 __( "Months", "jetpack-newsletter" );
@@ -247,8 +261,6 @@ __( "Weeks ago", "jetpack-newsletter" );
 __( "Months ago", "jetpack-newsletter" );
 __( "Years ago", "jetpack-newsletter" );
 __( "Unit", "jetpack-newsletter" );
-__( "Required", "jetpack-newsletter" );
-__( "Optional", "jetpack-newsletter" );
 __( "Date time", "jetpack-newsletter" );
 __( "Today", "jetpack-newsletter" );
 __( "Yesterday", "jetpack-newsletter" );
@@ -266,6 +278,7 @@ __( "To", "jetpack-newsletter" );
 __( "The max. value must be greater than the min. value.", "jetpack-newsletter" );
 __( "Min.", "jetpack-newsletter" );
 __( "Max.", "jetpack-newsletter" );
+__( "The end time must be later than the start time.", "jetpack-newsletter" );
 __( "Open color picker", "jetpack-newsletter" );
 __( "Hide password", "jetpack-newsletter" );
 __( "Show password", "jetpack-newsletter" );

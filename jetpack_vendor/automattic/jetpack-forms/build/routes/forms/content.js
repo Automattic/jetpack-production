@@ -6,6 +6,23 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+__( "Loading", "jetpack-forms" );
+__( "Date calendar", "jetpack-forms" );
+__( "Date range calendar", "jetpack-forms" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s", "jetpack-forms" );
+__( "Go to the Next Month", "jetpack-forms" );
+__( "Go to the Previous Month", "jetpack-forms" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s, selected", "jetpack-forms" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "%s, selected", "jetpack-forms" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-forms" );
+__( "Close", "jetpack-forms" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-forms" );
+__( "Dismiss", "jetpack-forms" );
 __( "Sort ascending", "jetpack-forms" );
 __( "Sort descending", "jetpack-forms" );
 __( "(no title)", "jetpack-forms" );
@@ -151,6 +168,8 @@ __( "Items per page", "jetpack-forms" );
 __( "Reset view", "jetpack-forms" );
 _x( "View options", "View is used as a noun", "jetpack-forms" );
 __( "Appearance", "jetpack-forms" );
+__( "Required", "jetpack-forms" );
+__( "Optional", "jetpack-forms" );
 __( "Days", "jetpack-forms" );
 __( "Weeks", "jetpack-forms" );
 __( "Months", "jetpack-forms" );
@@ -160,8 +179,6 @@ __( "Weeks ago", "jetpack-forms" );
 __( "Months ago", "jetpack-forms" );
 __( "Years ago", "jetpack-forms" );
 __( "Unit", "jetpack-forms" );
-__( "Required", "jetpack-forms" );
-__( "Optional", "jetpack-forms" );
 __( "Date time", "jetpack-forms" );
 __( "Today", "jetpack-forms" );
 __( "Yesterday", "jetpack-forms" );
@@ -179,6 +196,7 @@ __( "To", "jetpack-forms" );
 __( "The max. value must be greater than the min. value.", "jetpack-forms" );
 __( "Min.", "jetpack-forms" );
 __( "Max.", "jetpack-forms" );
+__( "The end time must be later than the start time.", "jetpack-forms" );
 __( "Open color picker", "jetpack-forms" );
 __( "Hide password", "jetpack-forms" );
 __( "Show password", "jetpack-forms" );
@@ -191,11 +209,6 @@ __( "Value must be true, false, or undefined", "jetpack-forms" );
 __( "Value must be an array.", "jetpack-forms" );
 __( "Every value must be a string.", "jetpack-forms" );
 __( "Value must be a valid color.", "jetpack-forms" );
-__( "Loading", "jetpack-forms" );
-__( "Close", "jetpack-forms" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-forms" );
-__( "Dismiss", "jetpack-forms" );
 __( "Akismet icon", "jetpack-forms" );
 __( "Add one-click spam protection for your forms with <a>Akismet</a>. Simply install the plugin and you're set.", "jetpack-forms" );
 __( "Akismet is installed. Just activate the plugin to start blocking spam.", "jetpack-forms" );

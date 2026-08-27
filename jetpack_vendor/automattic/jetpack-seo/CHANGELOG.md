@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Disable the SEO dashboard's AI SEO Enhancer toggle, and explain why, while AI SEO is turned off.
 - Follow the site's SEO entitlement when reporting whether AI SEO is available.
+- Update package dependencies.
 
 ### Removed
 - Minimum supported PHP version is now 7.4.

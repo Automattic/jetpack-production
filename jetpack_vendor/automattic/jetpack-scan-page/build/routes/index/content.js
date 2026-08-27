@@ -7,6 +7,8 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s" );
 __( "Close" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)" );
@@ -44,6 +46,16 @@ __( "An error occurred auto-fixing this threat.", "jetpack-scan" );
 __( "The auto-fixer is taking longer than expected.", "jetpack-scan" );
 __( "An auto-fixer is in progress.", "jetpack-scan" );
 __( "Error", "jetpack-scan" );
+__( "Date calendar" );
+__( "Date range calendar" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s" );
+__( "Go to the Next Month" );
+__( "Go to the Previous Month" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s, selected" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "%s, selected" );
 _x( "Critical", "Severity label for issues rated 5 or higher.", "jetpack-scan" );
 _x( "High", "Severity label for issues rated between 3 and 5.", "jetpack-scan" );
 _x( "Low", "Severity label for issues rated below 3.", "jetpack-scan" );
@@ -192,6 +204,8 @@ __( "Items per page" );
 __( "Reset view" );
 _x( "View options", "View is used as a noun" );
 __( "Appearance" );
+__( "Required" );
+__( "Optional" );
 __( "Days" );
 __( "Weeks" );
 __( "Months" );
@@ -201,8 +215,6 @@ __( "Weeks ago" );
 __( "Months ago" );
 __( "Years ago" );
 __( "Unit" );
-__( "Required" );
-__( "Optional" );
 __( "Date time" );
 __( "Today" );
 __( "Yesterday" );
@@ -220,6 +232,7 @@ __( "To" );
 __( "The max. value must be greater than the min. value." );
 __( "Min." );
 __( "Max." );
+__( "The end time must be later than the start time." );
 __( "Open color picker" );
 __( "Hide password" );
 __( "Show password" );

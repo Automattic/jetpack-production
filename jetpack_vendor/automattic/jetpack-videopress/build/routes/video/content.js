@@ -150,6 +150,8 @@ __( "Jetpack", "jetpack-videopress-pkg" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-videopress-pkg" );
 __( "Loading", "jetpack-videopress-pkg" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
 __( "More details follow the field.", "jetpack-videopress-pkg" );
 __( "Breadcrumbs", "jetpack-videopress-pkg" );
 __( "A connection check failed.", "jetpack-videopress-pkg" );
