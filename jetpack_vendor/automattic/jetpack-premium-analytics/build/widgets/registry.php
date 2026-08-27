@@ -25,7 +25,7 @@ return array(
 	array(
 		'name'         => 'jpa/annual-highlights',
 		'dir_name'     => 'annual-highlights',
-		'title'        => 'Highlights',
+		'title'        => 'Year in review',
 		'description'  => 'Your totals for the year at a glance — posts, words, likes, and comments.',
 		'help'         => array( 'content' => 'Your totals for the year at a glance — posts, words, likes, and comments.' ),
 		'icon'         => null,
