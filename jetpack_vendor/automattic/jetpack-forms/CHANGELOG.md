@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add help text to form fields, and show the date field's expected format below the input instead of in its label. Preserve help text across field transformations and form details, and fix field descriptions for inset-label styles.
+- Form editor: record when the welcome guide is shown, stepped through, and dismissed.
 - Form editor: Replace the generic block editor welcome modal with a guide to the form editor.
 - Responses: remember which columns are shown, and their order, for each form.
 
