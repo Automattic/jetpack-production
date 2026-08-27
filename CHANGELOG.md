@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Match the Most viewed and Videos leaderboard row labels to the other widgets.
 - Premium Analytics: Match the remaining leaderboard row labels to the other widgets.
 - Premium Analytics: Move the Ads date range into the WordAds card's own header, and drop the section header's date filter.
+- Premium Analytics: Show all-time views, visitors, and posts in the default Insights layout.
 - Premium Analytics: Tighten the Latest subscribers rows so more subscribers fit the widget.
 - Premium Analytics: Tighten the spacing between leaderboard rows.
 - Search: report the saved AI Answers choice while the site-wide AI switch is off, disable the controls, and honor the host AI opt-out in the AI Answer block. Require Instant Search to enable AI Answers. The master-state reporting follows the rollout: live on WordPress.com Simple, internal testing environments elsewhere.
