@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Show a real failure message when your backup status cannot be read, instead of the "your first backup will be ready soon" screen, and let the "Back up now" button recover when a backup could not be queued.
+- Show storage usage and the plan limit the right way round when the interface is translated.
 
 ## [4.3.15] - 2026-08-25
 ### Changed

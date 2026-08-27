@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin dashboards: Continue the wp-admin menu color behind the page frame on WordPress.com and third-party admin color schemes.
 - AI: Render scheduled task results as Markdown.
 - Backup: show a failure message when your backup status cannot be read, rather than the screen that says your first backup is on its way, and let the "Back up now" button recover when a backup could not be queued.
+- Backup: show storage usage and the plan limit the right way round when the interface is translated.
 - Carousel: Keep the loading overlay hidden when the module stylesheet is missing.
 - Forms: Fix checkbox and consent field alignment in the editor on classic themes.
 - Forms: Keep an option's label when switching it to the "Other" option.
