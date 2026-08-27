@@ -46,7 +46,9 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: keep blocks that load outside the post editor available in front-end block editors such as P2, by never deferring their registration. See JETPACK-1747.
 - Carousel: Keep the loading overlay hidden when the module stylesheet is missing.
 - Contact Form: bind the posted form id to the signed form when validating a token-authenticated submission.
+- Forms: Explain when fields share a Name/ID rather than offering them as conditional logic conditions that cannot be told apart.
 - Forms: Fix checkbox and consent field alignment in the editor on classic themes.
+- Forms: Fix the conditional logic rules dialog not opening from the block toolbar while the settings sidebar is closed.
 - Forms: Keep an option's label when switching it to the "Other" option.
 - Forms: keep one column per form field on a form's responses when a field is moved, and read every answer from the field it belongs to.
 - Forms: Let screen readers announce a date field's own label instead of the date picker instructions.

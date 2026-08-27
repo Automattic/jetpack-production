@@ -23,6 +23,8 @@ This is an alpha version! The changes listed here are not final.
 - Minimum supported PHP version is now 7.4.
 
 ### Fixed
+- Conditional logic: Explain when fields share a Name/ID rather than offering them as conditions that cannot be told apart.
+- Conditional logic: Fix the rules dialog not opening from the block toolbar while the settings sidebar is closed.
 - Conditional logic: Name a checkbox by its own label in the conditions dropdown, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
 - Contact Form: bind the posted form id to the signed form when validating a token-authenticated submission.
 - Date field: let screen readers announce the field's own label instead of the date picker instructions.
