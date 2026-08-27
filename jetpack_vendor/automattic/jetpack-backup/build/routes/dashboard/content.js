@@ -301,6 +301,10 @@ __( "Link my account", "jetpack-backup-pkg" );
 __( "Save changes and restore quickly with one-click recovery.", "jetpack-backup-pkg" );
 /* translators: %d: percentage of backup storage used. */
 __( "Backup storage used: %d%%", "jetpack-backup-pkg" );
+__( "Using <strong>%1.1fGB</strong> of %2fGB", "jetpack-backup-pkg" );
+__( "Using <strong>%1$dGB</strong> of %2$dTB", "jetpack-backup-pkg" );
+__( "<a>1 day of backups saved</a>", "jetpack-backup-pkg" );
+__( "<a>%s days of backups saved</a>", "jetpack-backup-pkg" );
 __( "Cloud storage full", "jetpack-backup-pkg" );
 __( "Cloud storage is almost full", "jetpack-backup-pkg" );
 __( "Cloud storage space", "jetpack-backup-pkg" );
