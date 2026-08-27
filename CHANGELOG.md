@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Activity Log: Ensure table content wraps neatly onto a new line if long.
+- Admin dashboards: Continue the wp-admin menu color behind the page frame on WordPress.com and third-party admin color schemes.
 - AI: Render scheduled task results as Markdown.
 - Carousel: Keep the loading overlay hidden when the module stylesheet is missing.
 - Forms: Fix checkbox and consent field alignment in the editor on classic themes.
