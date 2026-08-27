@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Rename the admin page and menu item to Jetpack AI, update the page description, and point the "turned off" notice at Jetpack Products.
 - AI settings: add the Overview tab with usage, activity log and documentation links, limited to internal testing environments.
 - Connection: Cache the WordPress.com site record briefly so the Jetpack dashboard does not make a request per view.
+- Forms: add a guide to the form editor for people new to the block editor.
 - Forms: Add help text to form fields and show the date field's expected format below its input.
 - Forms: remember which response columns are shown, and their order, for each form.
 - Forms: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
