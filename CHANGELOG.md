@@ -44,9 +44,11 @@ This is an alpha version! The changes listed here are not final.
 - Backup: show a failure message when your backup status cannot be read, rather than the screen that says your first backup is on its way, and let the "Back up now" button recover when a backup could not be queued.
 - Carousel: Keep the loading overlay hidden when the module stylesheet is missing.
 - Forms: Fix checkbox and consent field alignment in the editor on classic themes.
+- Forms: Keep an option's label when switching it to the "Other" option.
 - Forms: keep one column per form field on a form's responses when a field is moved, and read every answer from the field it belongs to.
 - Forms: Let screen readers announce a date field's own label instead of the date picker instructions.
 - Forms: Name a checkbox by its own label when building conditional logic, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
+- Forms: Prevent a new choice option from inheriting the previous option's label when pressing Enter.
 - Forms: Restore the Integrations button in the Form block toolbar when the settings sidebar is closed.
 - My Jetpack: Keep the Automattic for Agencies banner hidden after dismissing it and switching tabs.
 - My Jetpack: Stop repeating the partner lookup request on every page load.

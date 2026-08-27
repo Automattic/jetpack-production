@@ -26,6 +26,8 @@ This is an alpha version! The changes listed here are not final.
 - Conditional logic: Name a checkbox by its own label in the conditions dropdown, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
 - Date field: let screen readers announce the field's own label instead of the date picker instructions.
 - Fix checkbox and consent field alignment in the editor on classic themes.
+- Keep an option's label when switching it to the "Other" option.
+- Prevent a new choice option from inheriting the previous option's label when pressing Enter.
 - Responses: keep one column per form field when a field is moved, and read every answer from the field it belongs to.
 - Restore the Integrations button in the Form block toolbar when the settings sidebar is closed.
 
