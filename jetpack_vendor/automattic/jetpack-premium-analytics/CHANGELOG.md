@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Ads: Move the date range into the WordAds card's own header, and drop the section header's date filter.
 - CSV export will now handle `\"` sequences per RFC 4180.
 - Leaderboards: Give shared rows one row height, bar radius, and link hover.
 - Leaderboards: Match the Most viewed and Videos row labels to the other leaderboard widgets.
