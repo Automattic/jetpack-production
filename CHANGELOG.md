@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Give shared leaderboard rows one row height, bar radius, and link hover.
 - Premium Analytics: Lead the post and video detail date presets with All time and match the selected preset to the design.
 - Premium Analytics: Match the Most viewed and Videos leaderboard row labels to the other widgets.
+- Premium Analytics: Match the remaining leaderboard row labels to the other widgets.
 - Premium Analytics: Move the Ads date range into the WordAds card's own header, and drop the section header's date filter.
 - Premium Analytics: Tighten the Latest subscribers rows so more subscribers fit the widget.
 - Premium Analytics: Tighten the spacing between leaderboard rows.
