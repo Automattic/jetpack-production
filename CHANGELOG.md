@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Allow the Automattic for Agencies banner to be dismissed.
 - Premium Analytics: Add breathing room above and below the Top locations map.
 - Premium Analytics: Fold the video detail highlight metrics into the Video performance chart as selectable tabs.
+- Premium Analytics: Give shared leaderboard rows one row height, bar radius, and link hover.
 - Premium Analytics: Lead the post and video detail date presets with All time and match the selected preset to the design.
 - Premium Analytics: Tighten the Latest subscribers rows so more subscribers fit the widget.
 - Premium Analytics: Tighten the spacing between leaderboard rows.

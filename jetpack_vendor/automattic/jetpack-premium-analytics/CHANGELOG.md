@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - CSV export will now handle `\"` sequences per RFC 4180.
+- Leaderboards: Give shared rows one row height, bar radius, and link hover.
 - Leaderboards: Tighten the spacing between rows.
 - Post and video details: lead the date presets with All time (from the publish date), drop the custom range, period arrows, and interval dropdown per the design, and highlight the selected preset in the brand color.
 - Subscriber list: Match the row height, avatar size, and footer type to the design.
