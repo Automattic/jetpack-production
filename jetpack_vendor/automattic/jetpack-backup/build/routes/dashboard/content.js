@@ -223,15 +223,20 @@ _x( "%s GB", "file size in gigabytes", "jetpack-backup-pkg" );
 /* translators: %s: a file size number, e.g. "512". */
 _x( "%s B", "file size in bytes", "jetpack-backup-pkg" );
 __( "Preview unavailable for this file.", "jetpack-backup-pkg" );
+__( "Loading preview…", "jetpack-backup-pkg" );
 __( "Preview could not be loaded for this file.", "jetpack-backup-pkg" );
 __( "Close preview", "jetpack-backup-pkg" );
 __( "Modified:", "jetpack-backup-pkg" );
 __( "Size:", "jetpack-backup-pkg" );
 __( "Type:", "jetpack-backup-pkg" );
 __( "Hash:", "jetpack-backup-pkg" );
+/* translators: %s: file name. */
+__( "Preview of %s", "jetpack-backup-pkg" );
 __( "We couldn't load this backup's files.", "jetpack-backup-pkg" );
 /* translators: %d count of selected items (files + opaque folders) */
 _n( "%d item selected", "%d items selected", 1, "jetpack-backup-pkg" );
+/* translators: %s: file or folder name. */
+__( "Select %s", "jetpack-backup-pkg" );
 /* translators: %s: folder name. */
 __( "Folder: %s", "jetpack-backup-pkg" );
 /* translators: %s: file name. */
