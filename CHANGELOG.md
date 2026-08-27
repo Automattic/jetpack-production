@@ -56,6 +56,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show email subject lines with characters like "&" instead of their HTML codes.
 - Premium Analytics: Show the most recent subscribers in the Latest subscribers widget.
 - Premium Analytics: Show titles and names with characters like "&" instead of their HTML codes.
+- SEO Tools: Fix og:description leaking the first post's custom SEO description on archive and latest-posts homepage views.
 - Stats: Fix access for users whose allowed role is not their first assigned role.
 - Tiled Gallery: Remove the forced gray background on images that made transparent areas appear gray.
 - VideoPress: Fix private video playback authorization for videos embedded through synced patterns and Video Playlist blocks, let private videos preview in the block editor canvas, load live metadata for private playlist entries for authorized viewers, and show a lock placeholder on playlist thumbnails of private videos the viewer cannot access.
