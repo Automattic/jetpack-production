@@ -208,6 +208,9 @@ __( "Value must be true, false, or undefined", "jetpack-backup-pkg" );
 __( "Value must be an array.", "jetpack-backup-pkg" );
 __( "Every value must be a string.", "jetpack-backup-pkg" );
 __( "Value must be a valid color.", "jetpack-backup-pkg" );
+__( "The site doesn't appear to be connected. Backup requires an active Jetpack connection in order to function properly.", "jetpack-backup-pkg" );
+/* translators: 1: what failed, in our own words. 2: the reason WordPress.com gave, usually in English. */
+__( "%1$s WordPress.com said: %2$s", "jetpack-backup-pkg" );
 __( "Request failed", "jetpack-backup-pkg" );
 __( "Try again", "jetpack-backup-pkg" );
 __( "We couldn't load your site's activity.", "jetpack-backup-pkg" );

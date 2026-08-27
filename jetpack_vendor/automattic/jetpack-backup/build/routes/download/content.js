@@ -18,6 +18,9 @@ __( "Products", "jetpack-backup-pkg" );
 __( "Help", "jetpack-backup-pkg" );
 __( "Jetpack", "jetpack-backup-pkg" );
 __( "Select at least one item to continue.", "jetpack-backup-pkg" );
+__( "The site doesn't appear to be connected. Backup requires an active Jetpack connection in order to function properly.", "jetpack-backup-pkg" );
+/* translators: 1: what failed, in our own words. 2: the reason WordPress.com gave, usually in English. */
+__( "%1$s WordPress.com said: %2$s", "jetpack-backup-pkg" );
 __( "Request failed", "jetpack-backup-pkg" );
 __( "We couldn't load your backup details", "jetpack-backup-pkg" );
 __( "Your backups are unaffected. Try again, and contact support if this keeps happening.", "jetpack-backup-pkg" );
