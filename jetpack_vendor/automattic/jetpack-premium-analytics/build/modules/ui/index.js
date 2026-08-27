@@ -48,7 +48,6 @@ __( "By hours", "jetpack-premium-analytics-pkg" );
 __( "By days", "jetpack-premium-analytics-pkg" );
 __( "By weeks", "jetpack-premium-analytics-pkg" );
 __( "By months", "jetpack-premium-analytics-pkg" );
-__( "By quarters", "jetpack-premium-analytics-pkg" );
 __( "By years", "jetpack-premium-analytics-pkg" );
 __( "Chart interval", "jetpack-premium-analytics-pkg" );
 __( "Next period", "jetpack-premium-analytics-pkg" );
@@ -72,7 +71,6 @@ __( "hourly", "jetpack-premium-analytics-pkg" );
 __( "daily", "jetpack-premium-analytics-pkg" );
 __( "weekly", "jetpack-premium-analytics-pkg" );
 __( "monthly", "jetpack-premium-analytics-pkg" );
-__( "quarterly", "jetpack-premium-analytics-pkg" );
 __( "yearly", "jetpack-premium-analytics-pkg" );
 /* translators: %1$s is a date range, %2$s is how long it is, e.g. "7 days", %3$s is the chart interval, e.g. "daily". */
 __( "%1$s (%2$s, %3$s)", "jetpack-premium-analytics-pkg" );

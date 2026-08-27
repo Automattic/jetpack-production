@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
+- Charts: Remove the quarterly interval option, which never changed the chart.
 - Decode HTML entities in post titles, author names, and other Stats labels.
 - Emails: Decode HTML entities in email subject lines.
 - Email timeline: request the smallest hourly window the endpoint can serve and trim the chart and totals to the selected window.
