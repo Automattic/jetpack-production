@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Conditional logic: Name a checkbox by its own label in the conditions dropdown, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
+- Contact Form: bind the posted form id to the signed form when validating a token-authenticated submission.
 - Date field: let screen readers announce the field's own label instead of the date picker instructions.
 - Fix checkbox and consent field alignment in the editor on classic themes.
 - Keep an option's label when switching it to the "Other" option.

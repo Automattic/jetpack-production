@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: show storage usage and the plan limit the right way round when the interface is translated.
 - Blocks: keep blocks that load outside the post editor available in front-end block editors such as P2, by never deferring their registration. See JETPACK-1747.
 - Carousel: Keep the loading overlay hidden when the module stylesheet is missing.
+- Contact Form: bind the posted form id to the signed form when validating a token-authenticated submission.
 - Forms: Fix checkbox and consent field alignment in the editor on classic themes.
 - Forms: Keep an option's label when switching it to the "Other" option.
 - Forms: keep one column per form field on a form's responses when a field is moved, and read every answer from the field it belongs to.
