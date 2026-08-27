@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: keep one column per form field on a form's responses when a field is moved, and read every answer from the field it belongs to.
 - Forms: Let screen readers announce a date field's own label instead of the date picker instructions.
 - Forms: Name a checkbox by its own label when building conditional logic, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
+- Forms: Restore the Integrations button in the Form block toolbar when the settings sidebar is closed.
 - My Jetpack: Keep the Automattic for Agencies banner hidden after dismissing it and switching tabs.
 - My Jetpack: Stop repeating the partner lookup request on every page load.
 - Premium Analytics: Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.

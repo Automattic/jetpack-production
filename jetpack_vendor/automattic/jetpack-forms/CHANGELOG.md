@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Date field: let screen readers announce the field's own label instead of the date picker instructions.
 - Fix checkbox and consent field alignment in the editor on classic themes.
 - Responses: keep one column per form field when a field is moved, and read every answer from the field it belongs to.
+- Restore the Integrations button in the Form block toolbar when the settings sidebar is closed.
 
 ## [7.26.0] - 2026-08-25
 ### Added
