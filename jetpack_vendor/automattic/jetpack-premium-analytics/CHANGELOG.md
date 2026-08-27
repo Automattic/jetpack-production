@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Emails: Decode HTML entities in email subject lines.
 - Email timeline: request the smallest hourly window the endpoint can serve and trim the chart and totals to the selected window.
 - Show a notice when a refresh fails, instead of silently leaving the previous numbers on screen.
+- Subscriber list: Order subscribers by subscription date instead of by subscriber type.
 
 ## [0.4.0] - 2026-08-25
 ### Added
