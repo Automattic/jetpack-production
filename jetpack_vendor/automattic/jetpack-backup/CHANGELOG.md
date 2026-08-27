@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Minimum supported PHP version is now 7.4.
 
+### Fixed
+- Show a real failure message when your backup status cannot be read, instead of the "your first backup will be ready soon" screen, and let the "Back up now" button recover when a backup could not be queued.
+
 ## [4.3.15] - 2026-08-25
 ### Changed
 - Internal updates.
