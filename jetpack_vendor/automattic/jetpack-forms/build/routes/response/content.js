@@ -294,6 +294,8 @@ __( "Help", "jetpack-forms" );
 __( "Jetpack", "jetpack-forms" );
 __( "Breadcrumbs", "jetpack-forms" );
 __( "Forms", "jetpack-forms" );
+_x( "Esc", "keyboard shortcut", "jetpack-forms" );
+__( "Escape", "jetpack-forms" );
 __( "Undoing…", "jetpack-forms" );
 __( "An error occurred.", "jetpack-forms" );
 /* translators: %s: the number of responses. */
@@ -338,9 +340,10 @@ __( "Mark as unread", "jetpack-forms" );
 __( "Response marked as unread.", "jetpack-forms" );
 /* translators: %s: the number of responses. */
 _n( "%s response marked as unread.", "%s responses marked as unread.", 1, "jetpack-forms" );
-__( "Delete permanently", "jetpack-forms" );
-__( "Mark as spam", "jetpack-forms" );
 __( "Actions", "jetpack-forms" );
+__( "Mark as spam", "jetpack-forms" );
+__( "Delete permanently", "jetpack-forms" );
+__( "Back to responses", "jetpack-forms" );
 _x( "Spam", "response status", "jetpack-forms" );
 _x( "Trash", "response status", "jetpack-forms" );
 __( "Response", "jetpack-forms" );

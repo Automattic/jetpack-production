@@ -569,6 +569,13 @@ __( "Wallis and Futuna", "jetpack-forms" );
 __( "Yemen", "jetpack-forms" );
 __( "Zambia", "jetpack-forms" );
 __( "Zimbabwe", "jetpack-forms" );
+__( "All", "jetpack-forms" );
+__( "Published", "jetpack-forms" );
+__( "Draft", "jetpack-forms" );
+__( "Pending review", "jetpack-forms" );
+__( "Scheduled", "jetpack-forms" );
+__( "Private", "jetpack-forms" );
+__( "Trash", "jetpack-forms" );
 /* translators: 1: rating value, 2: maximum rating (e.g. "4" and "5" for "4 out of 5") */
 __( "Rating %1$s out of %2$s", "jetpack-forms" );
 __( "No answer", "jetpack-forms" );
@@ -620,13 +627,6 @@ __( "Export responses", "jetpack-forms" );
 /* translators: %d: number of selected test responses. */
 _n( "Your selection includes %d test response from form preview. It will be included in the export.", "Your selection includes %d test responses from form preview. They will be included in the export.", 1, "jetpack-forms" );
 __( "Nothing to export.", "jetpack-forms" );
-__( "All", "jetpack-forms" );
-__( "Published", "jetpack-forms" );
-__( "Draft", "jetpack-forms" );
-__( "Pending review", "jetpack-forms" );
-__( "Scheduled", "jetpack-forms" );
-__( "Private", "jetpack-forms" );
-__( "Trash", "jetpack-forms" );
 __( "Could not load the form to duplicate. Please try again.", "jetpack-forms" );
 /* translators: %s: original form title */
 __( "%s Copy", "jetpack-forms" );

@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Fix the conditional logic rules dialog not opening from the block toolbar while the settings sidebar is closed.
 - Forms: Keep an option's label when switching it to the "Other" option.
 - Forms: keep one column per form field on a form's responses when a field is moved, and read every answer from the field it belongs to.
+- Forms: keep prev/next working on a single response after marking it as spam or trash, open responses instantly from the list, and add keyboard shortcuts for triaging responses.
 - Forms: Let screen readers announce a date field's own label instead of the date picker instructions.
 - Forms: Name a checkbox by its own label when building conditional logic, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
 - Forms: Prevent a new choice option from inheriting the previous option's label when pressing Enter.
