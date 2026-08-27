@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Allow the Automattic for Agencies banner to be dismissed.
 
 ### Changed
+- Prefix the transient that flags a historically active modules refresh.
 - Roll back the Automattic for Agencies banner dismissal if the request fails.
 
 ### Fixed
