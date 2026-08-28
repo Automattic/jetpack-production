@@ -410,11 +410,20 @@ __( "/month, billed yearly", "jetpack-videopress-pkg" );
 __( "Get VideoPress", "jetpack-videopress-pkg" );
 __( "Start for free", "jetpack-videopress-pkg" );
 __( "Upload one video", "jetpack-videopress-pkg" );
+__( "Only video files can be uploaded.", "jetpack-videopress-pkg" );
+__( "That video format can’t be uploaded. Convert your video to MP4 or MOV, then try again.", "jetpack-videopress-pkg" );
+/* translators: %s: an upper-cased video file extension, e.g. "WEBM". */
+__( "%s files can’t be uploaded. Convert your video to MP4 or MOV, then try again.", "jetpack-videopress-pkg" );
+__( "Select videos to upload", "jetpack-videopress-pkg" );
+__( "Select a video to upload", "jetpack-videopress-pkg" );
+__( "Drag and drop your videos here", "jetpack-videopress-pkg" );
+__( "Drag and drop your video here", "jetpack-videopress-pkg" );
+__( "Add one or several. Each upload gets automatic captions, a player you fully own, and a link to share anywhere. No ads, no algorithm.", "jetpack-videopress-pkg" );
+__( "Add one video. Each upload gets automatic captions, a player you fully own, and a link to share anywhere. No ads, no algorithm.", "jetpack-videopress-pkg" );
 __( "Video uploaded to VideoPress.", "jetpack-videopress-pkg" );
 /* translators: %s: reason returned by the upload endpoint, e.g. "403: Invalid Mime". */
 __( "Failed to upload video to VideoPress: %s", "jetpack-videopress-pkg" );
 __( "Failed to upload video to VideoPress.", "jetpack-videopress-pkg" );
-__( "Only video files can be uploaded.", "jetpack-videopress-pkg" );
 /* translators: %d: number of videos that could not be uploaded because the plan limit was reached. */
 _n( "%d video wasn’t uploaded because it exceeds your plan’s limit.", "%d videos weren’t uploaded because they exceed your plan’s limit.", 1, "jetpack-videopress-pkg" );
 /* translators: %d: number of videos being deleted. */
@@ -429,7 +438,9 @@ _n( "Failed to update privacy.", "Failed to update privacy for the selected vide
 /* translators: 1: number of videos updated. 2: number of videos that could not be updated. */
 __( "Privacy updated for %1$d video; %2$d could not be updated.", "jetpack-videopress-pkg" );
 __( "Failed to update privacy.", "jetpack-videopress-pkg" );
+__( "We couldn’t load your video library.", "jetpack-videopress-pkg" );
+__( "Loading…", "jetpack-videopress-pkg" );
+__( "Upload your first video", "jetpack-videopress-pkg" );
 __( "Upload a new video", "jetpack-videopress-pkg" );
 __( "Upload video", "jetpack-videopress-pkg" );
 __( "Drop videos to upload", "jetpack-videopress-pkg" );
-__( "We couldn’t load your video library.", "jetpack-videopress-pkg" );

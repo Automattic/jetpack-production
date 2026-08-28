@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Sitemaps: speed up sitemap generation and reduce its memory use on sites with many posts and images.
 - Stats: Drop the Traffic summary chart's own Group by; the page-level chart interval sets the bucket.
 - VideoPress: Add a first-run welcome modal to the dashboard.
+- VideoPress: Invite the first upload with a dropzone when the video library is empty.
 
 ### Improved compatibility
 - Forms, Stats: CSV import and export will now process data containing backslashed quotation marks as specified in the relevant standard.
