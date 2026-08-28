@@ -387,7 +387,7 @@ return array(
 		'dir_name'     => 'most-popular-time',
 		'title'        => 'Most popular time',
 		'description'  => 'The day of week and hour of day when your site gets the most views.',
-		'help'         => array( 'content' => 'The day of week and hour of day when your site gets the most views.' ),
+		'help'         => array( 'content' => 'The day of the week and hour of the day when your site typically receives the most views. These figures reflect a longer-term pattern and don\'t change with the period you select.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://wordpress.com/support/stats/learn-insights-about-your-website/' ) ) ),
 		'icon'         => null,
 		'actions'      => null,
 		'has_render'   => true,
