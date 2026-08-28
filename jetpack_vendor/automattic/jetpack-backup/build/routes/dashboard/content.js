@@ -252,8 +252,6 @@ __( "Download backup", "jetpack-backup-pkg" );
 /* translators: %d count of selected items (files + opaque folders) */
 _n( "Download %d selected item", "Download %d selected items", 1, "jetpack-backup-pkg" );
 __( "Restore to this point", "jetpack-backup-pkg" );
-/* translators: %d count of selected items (files + opaque folders) */
-_n( "Restore %d selected item", "Restore %d selected items", 1, "jetpack-backup-pkg" );
 /* translators: %1$s formatted date+time, %2$s actor name */
 __( "%1$s by %2$s", "jetpack-backup-pkg" );
 __( "Files", "jetpack-backup-pkg" );
