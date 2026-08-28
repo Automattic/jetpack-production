@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Activity Log: Ensure table content wraps neatly onto a new line if long.
+- Admin bar: fix a fatal error in the admin bar endpoint global $wp_admin_bar is null.
 - Admin dashboards: Continue the wp-admin menu color behind the page frame on WordPress.com and third-party admin color schemes.
 - Admin dashboards: Keep the page header and content in view when the wp-admin menu is taller than the window.
 - AI: Render scheduled task results as Markdown.
