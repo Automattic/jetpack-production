@@ -48,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 - Show a notice when a refresh fails, instead of silently leaving the previous numbers on screen.
 - Subscriber list: Link a subscriber's name to their subscriber details page.
 - Subscriber list: Order subscribers by subscription date instead of by subscriber type.
+- Subscribers summary: Fix the help text to describe the cumulative subscriber total the chart plots, not new subscribers.
 
 ## [0.4.0] - 2026-08-25
 ### Added

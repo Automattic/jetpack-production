@@ -867,7 +867,7 @@ return array(
 		'dir_name'     => 'subscribers-chart',
 		'title'        => 'Subscribers summary',
 		'description'  => 'Track subscriber growth over time, with paid subscribers and the previous period overlaid for comparison.',
-		'help'         => array( 'content' => 'A summary of the new subscribers you gained over time.' ),
+		'help'         => array( 'content' => 'A summary of your subscriber growth over time.' ),
 		'icon'         => null,
 		'actions'      => null,
 		'has_render'   => true,
