@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Leaderboards: Match the remaining row labels to the other leaderboard widgets.
 - Leaderboards: Tighten the spacing between rows.
 - Post and video details: lead the date presets with All time (from the publish date), drop the custom range, period arrows, and interval dropdown per the design, and highlight the selected preset in the brand color.
+- Post detail: remove the settings drawer from the Email highlights and Email breakdown cards; their metric and view are fixed by the tab layout.
 - Subscriber list: Match the row height, avatar size, and footer type to the design.
 - Top locations: Add breathing room above and below the map.
 - Traffic summary: follow the page chart interval control instead of a widget-level Group by.
