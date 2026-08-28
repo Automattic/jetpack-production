@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Rename the admin page and menu item to Jetpack AI, update the page description, and point the "turned off" notice at Jetpack Products.
 - AI: Show the Learn more link for the Writing Assistant instead of the editor link.
 - AI settings: add the Overview tab with usage, activity log and documentation links, limited to internal testing environments.
+- Boost: Wait up to four minutes for slow speed tests in My Jetpack and At a Glance instead of timing out after two.
 - Charts: follow the WordPress admin color scheme for chart series colors.
 - Connection: Cache the WordPress.com site record briefly so the Jetpack dashboard does not make a request per view.
 - Forms: add a guide to the form editor for people new to the block editor.
