@@ -59,6 +59,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Explain when fields share a Name/ID rather than offering them as conditional logic conditions that cannot be told apart.
 - Forms: Fix checkbox and consent field alignment in the editor on classic themes.
 - Forms: Fix the conditional logic rules dialog not opening from the block toolbar while the settings sidebar is closed.
+- Forms: fix the form editor welcome guide artwork not loading on WordPress.com Simple sites.
 - Forms: Keep an option's label when switching it to the "Other" option.
 - Forms: keep one column per form field on a form's responses when a field is moved, and read every answer from the field it belongs to.
 - Forms: keep prev/next working on a single response after marking it as spam or trash, open responses instantly from the list, and add keyboard shortcuts for triaging responses.
