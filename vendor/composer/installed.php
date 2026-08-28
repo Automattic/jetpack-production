@@ -92,9 +92,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-backup' => array(
-            'pretty_version' => '5.0.0-alpha.1787949433',
-            'version' => '5.0.0.0-alpha1787949433',
-            'reference' => '937ea0453dc0a2be7b3ed4893dacdbc1d3c4092c',
+            'pretty_version' => '5.0.0-alpha.1787949445',
+            'version' => '5.0.0.0-alpha1787949445',
+            'reference' => 'e2699262373b63ad7dd18d734f1fdd012b008e29',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-backup',
             'aliases' => array(),

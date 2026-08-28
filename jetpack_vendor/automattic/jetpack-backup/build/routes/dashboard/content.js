@@ -299,8 +299,21 @@ __( "Link my account", "jetpack-backup-pkg" );
 __( "Save changes and restore quickly with one-click recovery.", "jetpack-backup-pkg" );
 /* translators: %1$s is the formatted date (e.g. "Oct 22"); %2$s is a time range (e.g. "10:00-10:59 AM"). */
 __( "Next full backup: %1$s, %2$s.", "jetpack-backup-pkg" );
+__( "You are close to reaching your storage limit. Once you do, we will delete your oldest backups to make space for new ones.", "jetpack-backup-pkg" );
+__( "You are very close to reaching your storage limit. Once you do, we will delete your oldest backups to make space for new ones.", "jetpack-backup-pkg" );
+__( "You have reached your storage limit. Backups have been stopped. Please upgrade your storage to resume backups.", "jetpack-backup-pkg" );
+/* translators: %s is a number greater than 0 that means a number of days. */
+__( "You have reached your storage limit with %s day(s) of backups saved. Backups have been stopped. Please upgrade your storage to resume backups.", "jetpack-backup-pkg" );
+/* translators: %s is a number greater than 0 that means a number of days. */
+__( "We removed your oldest backup(s) to make space for new ones. We will continue to remove old backups as needed, up to the last %s days.", "jetpack-backup-pkg" );
+__( "Add %1$s additional storage for <Price />/month, billed monthly", "jetpack-backup-pkg" );
 /* translators: %d: percentage of backup storage used. */
 __( "Backup storage used: %d%%", "jetpack-backup-pkg" );
+/* translators: %d: is number of days of the forecast */
+_n( "Based on the current size of your site, Jetpack will save <strong>%d day of full backup</strong>.", "Based on the current size of your site, Jetpack will save <strong>%d days of full backups</strong>.", 1, "jetpack-backup-pkg" );
+__( "If you need more backup days, try <link>reducing the backup size</link> or adding more storage.", "jetpack-backup-pkg" );
+__( "Backup archive size", "jetpack-backup-pkg" );
+__( "Add more storage", "jetpack-backup-pkg" );
 __( "Using <strong>%1$.1fGB</strong> of %2$fGB", "jetpack-backup-pkg" );
 __( "Using <strong>%1$dGB</strong> of %2$dTB", "jetpack-backup-pkg" );
 __( "<a>1 day of backups saved</a>", "jetpack-backup-pkg" );
