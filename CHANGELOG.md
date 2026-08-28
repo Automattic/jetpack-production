@@ -93,6 +93,7 @@ This is an alpha version! The changes listed here are not final.
 - Deprecate `jetpack_shim_setcookie()` function. PHP 7.4+'s `setcookie()` can be used directly.
 - Newsletter: Add an endpoint serving the email design editor's data.
 - Premium Analytics: Remove the settings drawer from the post detail Email highlights and Email breakdown cards; their metric and view are fixed by the tab layout.
+- Sharing: Reduce the inline JavaScript on posts with sharing buttons by opening every share popup from one shared click handler.
 - Update package dependencies.
 
 ## 16.2-a.3 - 2026-08-25
