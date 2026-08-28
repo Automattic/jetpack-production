@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Cache the WordPress.com site record briefly so the Jetpack dashboard does not make a request per view.
 - Forms: add a guide to the form editor for people new to the block editor.
 - Forms: Add help text to form fields and show the date field's expected format below its input.
+- Forms: allow a file upload field to accept more than one file.
 - Forms: Make form navigation actions real links so they can be opened in a new tab.
 - Forms: remember which response columns are shown, and their order, for each form.
 - Forms: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
@@ -59,14 +60,20 @@ This is an alpha version! The changes listed here are not final.
 - Blocks: keep blocks that load outside the post editor available in front-end block editors such as P2, by never deferring their registration. See JETPACK-1747.
 - Carousel: Keep the loading overlay hidden when the module stylesheet is missing.
 - Contact Form: bind the posted form id to the signed form when validating a token-authenticated submission.
+- Forms: cancel in-flight uploads and release previews when a form containing a file upload field is reset.
 - Forms: Fix checkbox and consent field alignment in the editor on classic themes.
+- Forms: fix several problems with adding more than one file at once to the file upload field, and with uploads that stall or fail.
 - Forms: fix the form editor welcome guide artwork not loading on WordPress.com Simple sites.
 - Forms: Keep an option's label when switching it to the "Other" option.
 - Forms: keep one column per form field on a form's responses when a field is moved, and read every answer from the field it belongs to.
 - Forms: keep prev/next working on a single response after marking it as spam or trash, open responses instantly from the list, and add keyboard shortcuts for triaging responses.
+- Forms: keep the remaining files when a folder or dragged text is included in a multi-file drop on the file upload field.
 - Forms: Let screen readers announce a date field's own label instead of the date picker instructions.
 - Forms: Prevent a new choice option from inheriting the previous option's label when pressing Enter.
+- Forms: remove an uploaded file from the form immediately instead of waiting for the server, so a slow connection no longer leaves the file upload field looking stuck.
 - Forms: Restore the Integrations button in the Form block toolbar when the settings sidebar is closed.
+- Forms: stop uploading a file that was removed while its upload was still being prepared.
+- Forms: validate a required phone field with a default country against what the input actually shows, so it can no longer be submitted empty.
 - My Jetpack: Keep the Automattic for Agencies banner hidden after dismissing it and switching tabs.
 - My Jetpack: Stop repeating the partner lookup request on every page load.
 - Premium Analytics: Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add help text to form fields, and show the date field's expected format below the input instead of in its label. Preserve help text across field transformations and form details, and fix field descriptions for inset-label styles.
+- File upload field: Allow a field to accept more than one file.
 - Form editor: record when the welcome guide is shown, stepped through, and dismissed.
 - Form editor: Replace the generic block editor welcome modal with a guide to the form editor.
 - Responses: remember which columns are shown, and their order, for each form.
@@ -18,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - CSV export will now handle `\"` sequences per RFC 4180.
 - Dashboard: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
+- File upload field: Rebuild the field on the same foundation as the other form fields, so it behaves consistently with them. Markup cached from an earlier release keeps working for one release.
 - Make form navigation actions real links so they can be opened in a new tab.
 - Update package dependencies.
 
@@ -30,10 +32,16 @@ This is an alpha version! The changes listed here are not final.
 - Conditional logic: Name a checkbox by its own label in the conditions dropdown, keep a value typed before the field was chosen, and show an unticked checkbox as "No" rather than a blank.
 - Contact Form: bind the posted form id to the signed form when validating a token-authenticated submission.
 - Date field: let screen readers announce the field's own label instead of the date picker instructions.
+- File upload field: Cancel in-flight uploads and release previews when the form is reset.
+- File upload field: Fix several problems with adding more than one file at once, and with uploads that stall or fail.
+- File upload field: Keep the remaining files when a folder or dragged text is included in a multi-file drop.
+- File upload field: Remove a file from the form immediately instead of waiting for the server, so a slow connection no longer leaves the field looking stuck.
+- File upload field: Stop uploading a file that was removed while its upload was still being prepared.
 - Fix checkbox and consent field alignment in the editor on classic themes.
 - Form editor: fix the welcome guide artwork not loading on WordPress.com Simple sites.
 - Keep an option's label when switching it to the "Other" option.
 - Keep prev/next working on a single response after marking it as spam or trash, open responses instantly from the list, and add keyboard shortcuts for triaging responses.
+- Phone field: Validate a required field with a default country against what the input actually shows, so it can no longer be submitted empty.
 - Prevent a new choice option from inheriting the previous option's label when pressing Enter.
 - Responses: keep one column per form field when a field is moved, and read every answer from the field it belongs to.
 - Restore the Integrations button in the Form block toolbar when the settings sidebar is closed.
