@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI: Add an internal Scheduled tasks view to Jetpack AI Hub.
+- AI: Add Quick start links for connecting Claude and ChatGPT to the AI Hub Overview.
 - AI: Rename the admin page and menu item to Jetpack AI, update the page description, and point the "turned off" notice at Jetpack Products.
 - AI: Show the Learn more link for the Writing Assistant instead of the editor link.
 - AI settings: add the Overview tab with usage, activity log and documentation links, limited to internal testing environments.
