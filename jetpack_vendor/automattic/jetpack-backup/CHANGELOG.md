@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Minimum supported PHP version is now 7.4.
 
 ### Fixed
+- Abilities: Fix the backup overview reporting no storage usage, storage limit or backup time.
 - Show a real failure message when your backup status cannot be read, instead of the "your first backup will be ready soon" screen, and let the "Back up now" button recover when a backup could not be queued.
 - Show storage usage and the plan limit the right way round when the interface is translated.
 
