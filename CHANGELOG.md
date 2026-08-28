@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Cache the WordPress.com site record briefly so the Jetpack dashboard does not make a request per view.
 - Forms: add a guide to the form editor for people new to the block editor.
 - Forms: Add help text to form fields and show the date field's expected format below its input.
+- Forms: Make form navigation actions real links so they can be opened in a new tab.
 - Forms: remember which response columns are shown, and their order, for each form.
 - Forms: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
 - Jetpack AI: Add an AI SEO control to the AI settings page. The AI sidebar's SEO suggestions follow it, separately from the automatic-generation setting.

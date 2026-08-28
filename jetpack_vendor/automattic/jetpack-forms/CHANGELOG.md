@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - CSV export will now handle `\"` sequences per RFC 4180.
 - Dashboard: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
+- Make form navigation actions real links so they can be opened in a new tab.
 - Update package dependencies.
 
 ### Removed
