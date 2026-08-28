@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Allow the Automattic for Agencies banner to be dismissed.
 - Premium Analytics: Add a year dropdown to the Year in review (Highlights) widget header, defaulting to the current year, and drop its metric selector so the card always shows posts, words, likes, and comments.
 - Premium Analytics: Add breathing room above and below the Top locations map.
+- Premium Analytics: add the Most popular day widget to the default Insights layout, and say in its help note that its figures are all-time.
 - Premium Analytics: Click a point on the Traffic chart to narrow the dashboard to that period.
 - Premium Analytics: Fold the video detail highlight metrics into the Video performance chart as selectable tabs.
 - Premium Analytics: Give shared leaderboard rows one row height, bar radius, and link hover.
@@ -63,11 +64,13 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Stop repeating the partner lookup request on every page load.
 - Premium Analytics: Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
 - Premium Analytics: Fix the email opens/clicks timeline charting hours outside the selected window.
+- Premium Analytics: Most popular day gives its Day and Views labels the weight the design has them at and the heading structure a screen reader can navigate, states a share of views only when there is an all-time total to take it from, and drops the Retry a reader without stats access cannot use.
 - Premium Analytics: Remove the quarterly chart interval option, which never changed the chart.
 - Premium Analytics: Show abbreviated month names on chart x-axes in line and area views.
 - Premium Analytics: Show a notice when a refresh fails, instead of silently leaving the previous numbers on screen.
 - Premium Analytics: Show email subject lines with characters like "&" instead of their HTML codes.
 - Premium Analytics: Show the most recent subscribers in the Latest subscribers widget.
+- Premium Analytics: show the whole Most popular day card on a short tile instead of clipping it.
 - Premium Analytics: Show titles and names with characters like "&" instead of their HTML codes.
 - SEO Tools: Fix og:description leaking the first post's custom SEO description on archive and latest-posts homepage views.
 - Stats: Fix access for users whose allowed role is not their first assigned role.

@@ -372,7 +372,7 @@ return array(
 		'dir_name'     => 'most-popular-day',
 		'title'        => 'Most popular day',
 		'description'  => 'The day your site received the most views.',
-		'help'         => array( 'content' => 'The day your site received the most views.' ),
+		'help'         => array( 'content' => 'The single day your site received the most views, and that day\'s share of every view your site has recorded. These figures are all-time and don\'t change with the period you select.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://wordpress.com/support/stats/learn-insights-about-your-website/' ) ) ),
 		'icon'         => null,
 		'actions'      => null,
 		'has_render'   => true,

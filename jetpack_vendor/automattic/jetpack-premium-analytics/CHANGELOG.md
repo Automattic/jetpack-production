@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a year dropdown to the Year in review (Highlights) widget header, defaulting to the current year, and drop its metric selector so the card always shows posts, words, likes, and comments.
 - Insights: Add the All-time stats widget to the default layout.
+- Insights: add the Most popular day widget to the default layout, and say in its help note that its figures are all-time.
 - Traffic chart: Click a point on the chart to narrow the dashboard to that period.
 
 ### Changed
@@ -39,6 +40,8 @@ This is an alpha version! The changes listed here are not final.
 - Decode HTML entities in post titles, author names, and other Stats labels.
 - Emails: Decode HTML entities in email subject lines.
 - Email timeline: request the smallest hourly window the endpoint can serve and trim the chart and totals to the selected window.
+- Most popular day: give the Day and Views labels the weight the design has them at and the heading structure a screen reader can navigate, state a share of views only when there is an all-time total to take it from, and drop the Retry a reader without stats access cannot use.
+- Most popular day: show the whole card on a short tile instead of clipping it.
 - Show a notice when a refresh fails, instead of silently leaving the previous numbers on screen.
 - Subscriber list: Order subscribers by subscription date instead of by subscriber type.
 
