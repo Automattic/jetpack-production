@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Activity Log: Ensure table content wraps neatly onto a new line if long.
 - Admin dashboards: Continue the wp-admin menu color behind the page frame on WordPress.com and third-party admin color schemes.
+- Admin dashboards: Keep the page header and content in view when the wp-admin menu is taller than the window.
 - AI: Render scheduled task results as Markdown.
 - Backup: show a failure message when your backup status cannot be read, rather than the screen that says your first backup is on its way, and let the "Back up now" button recover when a backup could not be queued.
 - Backup: show storage usage and the plan limit the right way round when the interface is translated.

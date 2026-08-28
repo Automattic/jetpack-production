@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Continue the wp-admin menu color behind the boot page frame on WordPress.com and third-party admin color schemes.
+- Keep the page header and content in view when the wp-admin menu is taller than the window.
 
 ## [0.5.0] - 2026-08-26
 ### Removed
