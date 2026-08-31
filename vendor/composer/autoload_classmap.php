@@ -109,6 +109,7 @@ return array(
     'Automattic\\Jetpack\\Connection\\Plugin' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-plugin.php',
     'Automattic\\Jetpack\\Connection\\Plugin_Storage' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-plugin-storage.php',
     'Automattic\\Jetpack\\Connection\\REST_Connector' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-rest-connector.php',
+    'Automattic\\Jetpack\\Connection\\REST_Jetpack_AI_JWT' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-rest-jetpack-ai-jwt.php',
     'Automattic\\Jetpack\\Connection\\Rest_Authentication' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/class-rest-authentication.php',
     'Automattic\\Jetpack\\Connection\\SSO' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/sso/class-sso.php',
     'Automattic\\Jetpack\\Connection\\SSO\\Force_2FA' => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/src/sso/class-force-2fa.php',

@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Prefix the transient that flags a historically active modules refresh.
+- Register the `jetpack/v4/jetpack-ai-jwt` route from the Connection package and drop the Agents Manager dependency.
 - Roll back the Automattic for Agencies banner dismissal if the request fails.
 - Update package dependencies.
 

@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [9.0.1-alpha] - unreleased
+## [9.1.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Register the dismissed_a4a_banner option name.
+- REST API: Add the `jetpack/v4/jetpack-ai-jwt` route, moved from the Agents Manager package.
 
 ## [9.0.0] - 2026-08-26
 ### Changed
@@ -2042,7 +2043,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.0.1-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.0.0...v9.0.1-alpha
+[9.1.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.0.0...v9.1.0-alpha
 [9.0.0]: https://github.com/Automattic/jetpack-connection/compare/v8.12.0...v9.0.0
 [8.12.0]: https://github.com/Automattic/jetpack-connection/compare/v8.11.0...v8.12.0
 [8.11.0]: https://github.com/Automattic/jetpack-connection/compare/v8.10.4...v8.11.0
