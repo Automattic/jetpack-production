@@ -15,6 +15,11 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Dashboard: Say when an upload failed because of a Jetpack connection problem, instead of only "Upload failed".
+- Dashboard: Show the Jetpack connection error notice on the modernized dashboard.
+- Video block: Say when an upload failed because of a Jetpack connection problem, instead of only "Failed to upload your video".
+
 ## [0.48.0] - 2026-08-26
 ### Added
 - Dashboard: Add a first-run onboarding modal. [#51520]

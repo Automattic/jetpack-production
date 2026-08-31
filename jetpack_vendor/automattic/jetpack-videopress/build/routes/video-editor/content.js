@@ -89,6 +89,14 @@ __( "/month, billed yearly", "jetpack-videopress-pkg" );
 __( "Get VideoPress", "jetpack-videopress-pkg" );
 __( "Start for free", "jetpack-videopress-pkg" );
 __( "Upload one video", "jetpack-videopress-pkg" );
+__( "Dismiss", "jetpack-videopress-pkg" );
+/* translators: %s: the error. */
+__( "There was an error reconnecting Jetpack. Error: %s", "jetpack-videopress-pkg" );
+__( "Reconnecting Jetpack", "jetpack-videopress-pkg" );
+__( "Loading…", "jetpack-videopress-pkg" );
+__( "Restore Connection", "jetpack-videopress-pkg" );
+__( "Take Action", "jetpack-videopress-pkg" );
+__( "Reconnecting Jetpack…", "jetpack-videopress-pkg" );
 __( "Breadcrumbs", "jetpack-videopress-pkg" );
 __( "Details", "jetpack-videopress-pkg" );
 __( "Editor", "jetpack-videopress-pkg" );

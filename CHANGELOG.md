@@ -102,6 +102,9 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Fix access for users whose allowed role is not their first assigned role.
 - Tiled Gallery: Remove the forced gray background on images that made transparent areas appear gray.
 - VideoPress: Fix private video playback authorization for videos embedded through synced patterns and Video Playlist blocks, let private videos preview in the block editor canvas, load live metadata for private playlist entries for authorized viewers, and show a lock placeholder on playlist thumbnails of private videos the viewer cannot access.
+- VideoPress: Say when a video upload failed because of a Jetpack connection problem, instead of only "Upload failed".
+- VideoPress: Say when a video upload from the Video block failed because of a Jetpack connection problem, instead of only "Failed to upload your video".
+- VideoPress: Show the Jetpack connection error notice on the VideoPress dashboard again.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI: Record Tracks events for Overview tab views and walkthrough video clicks.

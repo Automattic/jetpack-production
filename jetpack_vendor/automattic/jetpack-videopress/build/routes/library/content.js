@@ -124,6 +124,19 @@ __( "Add track", "jetpack-videopress-pkg" );
 __( "Paste transcript", "jetpack-videopress-pkg" );
 __( "No subtitle tracks have been added to this video yet.", "jetpack-videopress-pkg" );
 __( "Loading", "jetpack-videopress-pkg" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-videopress-pkg" );
+__( "Dismiss", "jetpack-videopress-pkg" );
+/* translators: %s: the error. */
+__( "There was an error reconnecting Jetpack. Error: %s", "jetpack-videopress-pkg" );
+__( "Reconnecting Jetpack", "jetpack-videopress-pkg" );
+__( "Loading…", "jetpack-videopress-pkg" );
+__( "Restore Connection", "jetpack-videopress-pkg" );
+__( "A connection check failed.", "jetpack-videopress-pkg" );
+__( "Take Action", "jetpack-videopress-pkg" );
+__( "Reconnecting Jetpack…", "jetpack-videopress-pkg" );
 __( "Date calendar", "jetpack-videopress-pkg" );
 __( "Date range calendar", "jetpack-videopress-pkg" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
@@ -134,11 +147,6 @@ __( "Go to the Previous Month", "jetpack-videopress-pkg" );
 __( "Today, %s, selected", "jetpack-videopress-pkg" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected", "jetpack-videopress-pkg" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-videopress-pkg" );
-__( "Dismiss", "jetpack-videopress-pkg" );
 __( "Sort ascending", "jetpack-videopress-pkg" );
 __( "Sort descending", "jetpack-videopress-pkg" );
 __( "(no title)", "jetpack-videopress-pkg" );
@@ -366,7 +374,6 @@ __( "Learn more", "jetpack-videopress-pkg" );
 __( "Upload a video", "jetpack-videopress-pkg" );
 __( "Host, manage, customize, and track your videos — all in one place.", "jetpack-videopress-pkg" );
 __( "Retry", "jetpack-videopress-pkg" );
-__( "A connection check failed.", "jetpack-videopress-pkg" );
 __( "You’re on the free plan, which allows 1 video upload. Upgrade for more storage and unlimited uploads.", "jetpack-videopress-pkg" );
 __( "You’ve reached the free plan’s 1-video limit. Upgrade to upload more.", "jetpack-videopress-pkg" );
 __( "Upgrade", "jetpack-videopress-pkg" );
@@ -376,13 +383,14 @@ __( "Reset to site default", "jetpack-videopress-pkg" );
 __( "Edit details", "jetpack-videopress-pkg" );
 __( "Manage subtitles", "jetpack-videopress-pkg" );
 __( "Upload to VideoPress", "jetpack-videopress-pkg" );
+__( "Upload failed", "jetpack-videopress-pkg" );
+__( "Jetpack connection issue", "jetpack-videopress-pkg" );
 /* translators: %d: transcoding progress percentage */
 __( "Processing %d%%", "jetpack-videopress-pkg" );
 /* translators: %s: video title. */
 __( "Edit details for %s", "jetpack-videopress-pkg" );
 __( "Local video", "jetpack-videopress-pkg" );
 __( "Deleting…", "jetpack-videopress-pkg" );
-__( "Upload failed", "jetpack-videopress-pkg" );
 __( "Landscape", "jetpack-videopress-pkg" );
 __( "Portrait", "jetpack-videopress-pkg" );
 __( "Public", "jetpack-videopress-pkg" );
@@ -439,7 +447,6 @@ _n( "Failed to update privacy.", "Failed to update privacy for the selected vide
 __( "Privacy updated for %1$d video; %2$d could not be updated.", "jetpack-videopress-pkg" );
 __( "Failed to update privacy.", "jetpack-videopress-pkg" );
 __( "We couldn’t load your video library.", "jetpack-videopress-pkg" );
-__( "Loading…", "jetpack-videopress-pkg" );
 __( "Upload your first video", "jetpack-videopress-pkg" );
 __( "Upload a new video", "jetpack-videopress-pkg" );
 __( "Upload video", "jetpack-videopress-pkg" );

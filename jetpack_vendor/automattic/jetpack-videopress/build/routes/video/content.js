@@ -152,9 +152,17 @@ __( "There was an error testing Jetpack. Error: %s", "jetpack-videopress-pkg" );
 __( "Loading", "jetpack-videopress-pkg" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
+__( "Dismiss", "jetpack-videopress-pkg" );
+/* translators: %s: the error. */
+__( "There was an error reconnecting Jetpack. Error: %s", "jetpack-videopress-pkg" );
+__( "Reconnecting Jetpack", "jetpack-videopress-pkg" );
+__( "Loading…", "jetpack-videopress-pkg" );
+__( "Restore Connection", "jetpack-videopress-pkg" );
+__( "A connection check failed.", "jetpack-videopress-pkg" );
+__( "Take Action", "jetpack-videopress-pkg" );
+__( "Reconnecting Jetpack…", "jetpack-videopress-pkg" );
 __( "More details follow the field.", "jetpack-videopress-pkg" );
 __( "Breadcrumbs", "jetpack-videopress-pkg" );
-__( "A connection check failed.", "jetpack-videopress-pkg" );
 __( "Host, manage, customize, and track your videos — all in one place.", "jetpack-videopress-pkg" );
 __( "Connect to set up VideoPress", "jetpack-videopress-pkg" );
 __( "VideoPress needs a connection to WordPress.com before you can upload and manage your videos.", "jetpack-videopress-pkg" );
@@ -248,7 +256,6 @@ __( "Video chapters could not be updated.", "jetpack-videopress-pkg" );
 __( "Not found", "jetpack-videopress-pkg" );
 __( "We couldn't find that video.", "jetpack-videopress-pkg" );
 __( "Back to Library", "jetpack-videopress-pkg" );
-__( "Loading…", "jetpack-videopress-pkg" );
 __( "You have unsaved changes. Leave this page and discard them?", "jetpack-videopress-pkg" );
 __( "Untitled", "jetpack-videopress-pkg" );
 __( "Video settings", "jetpack-videopress-pkg" );
