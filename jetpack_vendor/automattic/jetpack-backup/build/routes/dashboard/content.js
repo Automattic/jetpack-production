@@ -302,6 +302,10 @@ __( "Link my account", "jetpack-backup-pkg" );
 __( "Save changes and restore quickly with one-click recovery.", "jetpack-backup-pkg" );
 /* translators: %1$s is the formatted date (e.g. "Oct 22"); %2$s is a time range (e.g. "10:00-10:59 AM"). */
 __( "Next full backup: %1$s, %2$s.", "jetpack-backup-pkg" );
+__( "Was it easy to restore your site?", "jetpack-backup-pkg" );
+__( "Do you enjoy the peace of mind of having real-time backups?", "jetpack-backup-pkg" );
+__( "<strong>Please leave a review and help us spread the word!</strong>", "jetpack-backup-pkg" );
+__( "Maybe later", "jetpack-backup-pkg" );
 __( "You are close to reaching your storage limit. Once you do, we will delete your oldest backups to make space for new ones.", "jetpack-backup-pkg" );
 __( "You are very close to reaching your storage limit. Once you do, we will delete your oldest backups to make space for new ones.", "jetpack-backup-pkg" );
 __( "You have reached your storage limit. Backups have been stopped. Please upgrade your storage to resume backups.", "jetpack-backup-pkg" );
