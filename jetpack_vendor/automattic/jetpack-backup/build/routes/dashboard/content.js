@@ -270,7 +270,6 @@ __( "Preparing your first cloud backup", "jetpack-backup-pkg" );
 /* translators: %d: how much of the running backup is complete, as a percentage. */
 __( "%d%%", "jetpack-backup-pkg" );
 __( "The first backup usually takes a few minutes, so it will become available soon.", "jetpack-backup-pkg" );
-__( "In the meanwhile, you can start getting familiar with your <a>backup management on Jetpack.com</a>.", "jetpack-backup-pkg" );
 __( "Your backup will be ready soon", "jetpack-backup-pkg" );
 __( "Backing up your site", "jetpack-backup-pkg" );
 __( "Your latest backup didn't complete. We'll try again shortly.", "jetpack-backup-pkg" );
@@ -302,6 +301,7 @@ __( "Link my account", "jetpack-backup-pkg" );
 __( "Save changes and restore quickly with one-click recovery.", "jetpack-backup-pkg" );
 /* translators: %1$s is the formatted date (e.g. "Oct 22"); %2$s is a time range (e.g. "10:00-10:59 AM"). */
 __( "Next full backup: %1$s, %2$s.", "jetpack-backup-pkg" );
+__( "Modify", "jetpack-backup-pkg" );
 __( "Was it easy to restore your site?", "jetpack-backup-pkg" );
 __( "Do you enjoy the peace of mind of having real-time backups?", "jetpack-backup-pkg" );
 __( "<strong>Please leave a review and help us spread the word!</strong>", "jetpack-backup-pkg" );
