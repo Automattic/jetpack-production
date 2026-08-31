@@ -84,6 +84,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: validate a required phone field with a default country against what the input actually shows, so it can no longer be submitted empty.
 - My Jetpack: Keep the Automattic for Agencies banner hidden after dismissing it and switching tabs.
 - My Jetpack: Stop repeating the partner lookup request on every page load.
+- Newsletter: Prevent unsupported date filtering on the Subscribers page.
 - Premium Analytics: Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
 - Premium Analytics: Drop the Last 24 hours range from the WordAds card, which has no hourly data to chart.
 - Premium Analytics: Fix the email opens/clicks timeline charting hours outside the selected window.

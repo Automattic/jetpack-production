@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Minimum supported PHP version is now 7.4.
 
+### Fixed
+- Prevent unsupported date filtering on the Subscribers page.
+
 ## [0.12.7] - 2026-08-25
 ### Changed
 - Update dependencies. [#51423]
