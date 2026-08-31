@@ -287,14 +287,15 @@ __( "Special introductory pricing, all renewals are at full price. 14 day money 
 __( "per month, billed yearly", "jetpack-backup-pkg" );
 /* translators: %s is the full monthly price the subscription renews at. */
 __( "Renews at %s per month.", "jetpack-backup-pkg" );
+__( "Get VaultPress Backup", "jetpack-backup-pkg" );
 __( "This site doesn't have an active Backup plan", "jetpack-backup-pkg" );
 __( "Add Jetpack Backup to start protecting your site with automatic backups, granular restores, and offsite storage.", "jetpack-backup-pkg" );
-__( "Get VaultPress Backup", "jetpack-backup-pkg" );
 __( "Connect Jetpack to get started", "jetpack-backup-pkg" );
 __( "Backup needs an active Jetpack connection to show your backup history.", "jetpack-backup-pkg" );
 __( "Connect Jetpack", "jetpack-backup-pkg" );
-__( "Link your account to view backups", "jetpack-backup-pkg" );
+__( "Link your WordPress.com account", "jetpack-backup-pkg" );
 __( "This site's Jetpack connection is already set up, but your account isn't linked to a WordPress.com user yet.", "jetpack-backup-pkg" );
+__( "Once your account is linked, you'll see any backups this site has. If it doesn't have an active Backup plan yet, you'll be able to add VaultPress Backup to start protecting it.", "jetpack-backup-pkg" );
 __( "Link my account", "jetpack-backup-pkg" );
 __( "Save changes and restore quickly with one-click recovery.", "jetpack-backup-pkg" );
 /* translators: %1$s is the formatted date (e.g. "Oct 22"); %2$s is a time range (e.g. "10:00-10:59 AM"). */
