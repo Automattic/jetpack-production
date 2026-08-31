@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a year dropdown to the Year in review (Highlights) widget header, defaulting to the current year, and drop its metric selector so the card always shows posts, words, likes, and comments.
+- Annual insights: add total and per-post image counts to the report.
 - Insights: Add the All-time stats widget to the default layout.
 - Insights: add the Most popular day widget to the default layout, and say in its help note that its figures are all-time.
 - Insights: Add the Most popular time card to the default layout.
@@ -48,6 +49,8 @@ This is an alpha version! The changes listed here are not final.
 - Ads: Include the last day of the selected range in the WordAds card.
 - Ads: Stop the chart interval menu offering buckets the WordAds chart cannot draw.
 - Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
+- Annual insights: keep the Year in review report link reachable.
+- Annual insights: print the words-per-post average whole, as the old Stats report does.
 - Charts: Remove the quarterly interval option, which never changed the chart.
 - Decode HTML entities in post titles, author names, and other Stats labels.
 - Emails: Decode HTML entities in email subject lines.

@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add breathing room above and below the Top locations map.
 - Premium Analytics: add the Most popular day widget to the default Insights layout, and say in its help note that its figures are all-time.
 - Premium Analytics: Add the Most popular time card to the default Insights layout.
+- Premium Analytics: add total and per-post image counts to the Annual insights report.
 - Premium Analytics: Click a point on the Traffic chart to narrow the dashboard to that period.
 - Premium Analytics: Fold the video detail highlight metrics into the Video performance chart as selectable tabs.
 - Premium Analytics: Give shared leaderboard rows one row height, bar radius, and link hover.
@@ -90,9 +91,11 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Fix the email opens/clicks timeline charting hours outside the selected window.
 - Premium Analytics: Fix the Subscribers summary help text to describe the cumulative subscriber total the chart plots, not new subscribers.
 - Premium Analytics: Include the last day of the selected range in the WordAds card.
+- Premium Analytics: keep the Year in review report link reachable.
 - Premium Analytics: Link a subscriber's name to their subscriber details page.
 - Premium Analytics: Most popular day gives its Day and Views labels the weight the design has them at and the heading structure a screen reader can navigate, states a share of views only when there is an all-time total to take it from, and drops the Retry a reader without stats access cannot use.
 - Premium Analytics: print Tags & categories view counts in full, and list far more rows in its report.
+- Premium Analytics: print the Annual insights words-per-post average whole, as the old Stats report does.
 - Premium Analytics: Remove the quarterly chart interval option, which never changed the chart.
 - Premium Analytics: Show abbreviated month names on chart x-axes in line and area views.
 - Premium Analytics: Show a notice when a refresh fails, instead of silently leaving the previous numbers on screen.

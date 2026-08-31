@@ -57,6 +57,8 @@ __( "Total likes", "jetpack-premium-analytics-pkg" );
 __( "Avg likes per post", "jetpack-premium-analytics-pkg" );
 __( "Total words", "jetpack-premium-analytics-pkg" );
 __( "Avg words per post", "jetpack-premium-analytics-pkg" );
+__( "Total images", "jetpack-premium-analytics-pkg" );
+__( "Avg images per post", "jetpack-premium-analytics-pkg" );
 __( "Unable to load annual insights", "jetpack-premium-analytics-pkg" );
 __( "Search annual insights", "jetpack-premium-analytics-pkg" );
 __( "Untracked authors", "jetpack-premium-analytics-pkg" );
