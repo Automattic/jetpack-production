@@ -2,6 +2,7 @@
 	"bundles": [
 		"build/modules/data/index.js",
 		"build/modules/externals/index.js",
+		"build/modules/fields/index.js",
 		"build/modules/site-sync/index.js",
 		"build/modules/ui/index.js",
 		"build/modules/widgets-toolkit/index.js",
@@ -85,7 +86,6 @@
 		"build/widgets/visitors-over-time/render.js",
 		"build/widgets/wordads-adjustments-history/render.js",
 		"build/widgets/wordads-chart-tabs/render.js",
-		"build/widgets/wordads-chart-tabs/widget.js",
 		"build/widgets/wordads-earnings-history/render.js",
 		"build/widgets/wordads-highlights/render.js",
 		"build/widgets/wordads-highlights/widget.js",
