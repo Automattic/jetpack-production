@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Add an AI SEO control to the AI settings page. The AI sidebar's SEO suggestions follow it, separately from the automatic-generation setting.
 - Jetpack AI: Make the editor and the automatic-generation toggles follow the AI SEO control — switching it off stops metadata generation and disables its controls, with saved choices returning when it is switched back on.
 - Jetpack AI: return to the Jetpack AI Hub after upgrading from it, and point My Jetpack's AI links at the Hub.
+- Jetpack AI: Support the AI Hub on WordPress.com Simple sites.
 - My Jetpack: Allow the Automattic for Agencies banner to be dismissed.
 - Premium Analytics: Add a year dropdown to the Year in review (Highlights) widget header, defaulting to the current year, and drop its metric selector so the card always shows posts, words, likes, and comments.
 - Premium Analytics: Add breathing room above and below the Top locations map.
