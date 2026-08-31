@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Traffic summary: follow the page chart interval control instead of a widget-level Group by.
 - Update package dependencies.
 - Video details: fold the highlight metrics into the Video performance chart as selectable tabs, play-weighting the bucketed retention rate.
+- Widget skeletons: stop exposing the loading placeholder as a status region.
 
 ### Removed
 - Minimum supported PHP version is now 7.4.
