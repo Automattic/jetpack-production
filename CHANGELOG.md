@@ -36,6 +36,8 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Match the Most viewed and Videos leaderboard row labels to the other widgets.
 - Premium Analytics: Match the remaining leaderboard row labels to the other widgets.
 - Premium Analytics: Move the Ads date range into the WordAds card's own header, and drop the section header's date filter.
+- Premium Analytics: Remove the date configuration subtitle from the section header.
+- Premium Analytics: Remove the page descriptions from the dashboard and report pages.
 - Premium Analytics: rename the Top pages CSV comparison column to "Views (Previous Period)" and move it after the primary columns.
 - Premium Analytics: Retitle the Popular post card to "Most popular post in the last 12 months" and pin it to the last 12 months.
 - Premium Analytics: Show all-time views, visitors, and posts in the default Insights layout.

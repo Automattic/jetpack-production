@@ -38,6 +38,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Removed
 - Minimum supported PHP version is now 7.4.
+- Remove the date configuration subtitle from the section header.
+- Remove the page descriptions from the dashboard and report pages.
 - Remove the unused granularity attribute from the default WordAds chart widget instance.
 
 ### Fixed

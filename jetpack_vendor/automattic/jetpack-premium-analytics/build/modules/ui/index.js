@@ -59,25 +59,6 @@ __( "Custom", "jetpack-premium-analytics-pkg" );
 __( "Date range", "jetpack-premium-analytics-pkg" );
 __( "Time period", "jetpack-premium-analytics-pkg" );
 __( "Select period", "jetpack-premium-analytics-pkg" );
-/* translators: %d is a number of hours. */
-_n( "%d hour", "%d hours", 1, "jetpack-premium-analytics-pkg" );
-/* translators: %d is a number of months. */
-_n( "%d month", "%d months", 1, "jetpack-premium-analytics-pkg" );
-/* translators: %d is a number of years. */
-_n( "%d year", "%d years", 1, "jetpack-premium-analytics-pkg" );
-/* translators: %d is a number of days. */
-_n( "%d day", "%d days", 1, "jetpack-premium-analytics-pkg" );
-__( "hourly", "jetpack-premium-analytics-pkg" );
-__( "daily", "jetpack-premium-analytics-pkg" );
-__( "weekly", "jetpack-premium-analytics-pkg" );
-__( "monthly", "jetpack-premium-analytics-pkg" );
-__( "yearly", "jetpack-premium-analytics-pkg" );
-/* translators: %1$s is a date range, %2$s is how long it is, e.g. "7 days", %3$s is the chart interval, e.g. "daily". */
-__( "%1$s (%2$s, %3$s)", "jetpack-premium-analytics-pkg" );
-/* translators: %1$s is a date range, %2$s is either how long it is, e.g. "7 days", or the chart interval, e.g. "daily". */
-__( "%1$s (%2$s)", "jetpack-premium-analytics-pkg" );
-/* translators: %1$s is a date range with its length, %2$s is the compared period — either its dates, e.g. "July 14 – 20, 2026", or a preset name, e.g. "Previous period". */
-__( "%1$s vs. %2$s", "jetpack-premium-analytics-pkg" );
 __( "Couldn't refresh. Showing data from less than a minute ago.", "jetpack-premium-analytics-pkg" );
 /* translators: %s: how long ago the data on screen was fetched, e.g. "5 minutes ago". */
 __( "Couldn't refresh. Showing data from %s.", "jetpack-premium-analytics-pkg" );
