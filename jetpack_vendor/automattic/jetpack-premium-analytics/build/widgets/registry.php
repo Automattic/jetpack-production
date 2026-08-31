@@ -520,9 +520,9 @@ return array(
 	array(
 		'name'         => 'jpa/popular-post',
 		'dir_name'     => 'popular-post',
-		'title'        => 'Popular post',
-		'description'  => 'Your most-viewed post for the selected date range, with its all-time stats.',
-		'help'         => array( 'content' => 'Your most viewed post in the selected date range, with its all-time views, likes, and comments.' ),
+		'title'        => 'Most popular post in the last 12 months',
+		'description'  => 'Your most-viewed post of the last 12 months, with its all-time stats.',
+		'help'         => array( 'content' => 'Your most viewed post of the last 12 months, with its all-time views, likes, and comments.' ),
 		'icon'         => null,
 		'actions'      => null,
 		'has_render'   => true,

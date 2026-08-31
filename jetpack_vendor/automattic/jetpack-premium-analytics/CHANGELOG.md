@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Ads: Move the date range into the WordAds card's own header, and drop the section header's date filter.
 - Charts: take the series palette from the charts package instead of seeding it locally.
 - CSV export will now handle `\"` sequences per RFC 4180.
+- Insights: Retitle the Popular post card to "Most popular post in the last 12 months" and pin it to the last 12 months.
 - Leaderboards: Give shared rows one row height, bar radius, and link hover.
 - Leaderboards: Match the Most viewed and Videos row labels to the other leaderboard widgets.
 - Leaderboards: Match the remaining row labels to the other leaderboard widgets.
