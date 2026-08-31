@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Match the Most viewed and Videos leaderboard row labels to the other widgets.
 - Premium Analytics: Match the remaining leaderboard row labels to the other widgets.
 - Premium Analytics: Move the Ads date range into the WordAds card's own header, and drop the section header's date filter.
+- Premium Analytics: Post detail: the email tabs' opens and clicks timelines cover the first 30 days after the send instead of the page date filter, which no longer shows there; the other email cards stay all-time.
 - Premium Analytics: Remove the date configuration subtitle from the section header.
 - Premium Analytics: Remove the page descriptions from the dashboard and report pages.
 - Premium Analytics: rename the Top pages CSV comparison column to "Views (Previous Period)" and move it after the primary columns.

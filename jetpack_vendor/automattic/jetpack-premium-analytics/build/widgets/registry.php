@@ -222,7 +222,7 @@ return array(
 		'dir_name'     => 'email-time-series',
 		'title'        => 'Email performance',
 		'description'  => 'A single email\'s opens or clicks over time since it was sent.',
-		'help'         => array( 'content' => 'How a single email performed over time: opens or clicks per day since it was sent, following the dashboard date range. Weekly and monthly grouping aggregate the daily buckets.' ),
+		'help'         => array( 'content' => 'How a single email performed over time: opens or clicks per day over the window the page reports — on the post detail page, the first 30 days after the send.' ),
 		'icon'         => null,
 		'actions'      => null,
 		'has_render'   => true,

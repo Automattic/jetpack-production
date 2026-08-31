@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Leaderboards: Tighten the spacing between rows.
 - Post and video details: lead the date presets with All time (from the publish date), drop the custom range, period arrows, and interval dropdown per the design, and highlight the selected preset in the brand color.
 - Post detail: remove the settings drawer from the Email highlights and Email breakdown cards; their metric and view are fixed by the tab layout.
+- Post detail: the email tabs' opens and clicks timelines cover the first 30 days after the send instead of the page date filter, which no longer shows there; the other email cards stay all-time.
 - Subscriber list: Match the row height, avatar size, and footer type to the design.
 - Top locations: Add breathing room above and below the map.
 - Top pages: rename the CSV comparison column to "Views (Previous Period)" and move it after the primary columns.

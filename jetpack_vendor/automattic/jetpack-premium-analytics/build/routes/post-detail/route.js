@@ -8,3 +8,6 @@
 
 __( "Widget modules", "jetpack-premium-analytics-pkg" );
 __( "Dashboard sections", "jetpack-premium-analytics-pkg" );
+__( "Post traffic", "jetpack-premium-analytics-pkg" );
+__( "Email opens", "jetpack-premium-analytics-pkg" );
+__( "Email clicks", "jetpack-premium-analytics-pkg" );
