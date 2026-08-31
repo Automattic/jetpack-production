@@ -266,11 +266,13 @@ __( "A backup has been queued and will start shortly.", "jetpack-backup-pkg" );
 __( "<a>Get in touch with us</a> to get your site backups going again.", "jetpack-backup-pkg" );
 __( "We're having trouble backing up your site", "jetpack-backup-pkg" );
 __( "Your first cloud backup will be ready soon", "jetpack-backup-pkg" );
+__( "Preparing your first cloud backup", "jetpack-backup-pkg" );
 /* translators: %d: how much of the running backup is complete, as a percentage. */
 __( "%d%%", "jetpack-backup-pkg" );
 __( "The first backup usually takes a few minutes, so it will become available soon.", "jetpack-backup-pkg" );
 __( "In the meanwhile, you can start getting familiar with your <a>backup management on Jetpack.com</a>.", "jetpack-backup-pkg" );
 __( "Your backup will be ready soon", "jetpack-backup-pkg" );
+__( "Backing up your site", "jetpack-backup-pkg" );
 __( "Your latest backup didn't complete. We'll try again shortly.", "jetpack-backup-pkg" );
 /* translators: sentence form of the takeover panel's heading, which is the same words without the full stop. The two render in mutually exclusive situations — this one is a line of body copy, that one a title — so both spellings are wanted. */
 __( "We're having trouble backing up your site.", "jetpack-backup-pkg" );
