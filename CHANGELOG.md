@@ -110,6 +110,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Show the Jetpack connection error notice on the VideoPress dashboard again.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Admin Bar endpoint: Expose the Agents Manager help and Ask AI nodes.
 - AI: Record Tracks events for Overview tab views and walkthrough video clicks.
 - AI Features: Point the AI Search "Open Search Settings" link at the AI tab of the Search dashboard.
 - AI Hub: Show the Overview connection notices without a surrounding card, matching the WordPress Agent tab.

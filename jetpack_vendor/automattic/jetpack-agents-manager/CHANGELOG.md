@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Make the help and Ask AI admin bar nodes available from the admin-bar REST endpoints, with the label, icon and destination a client needs.
+
 ### Deprecated
 - Deprecate `WP_REST_Jetpack_AI_JWT` in favor of `Automattic\Jetpack\Connection\REST_Jetpack_AI_JWT`; the route now lives in the Connection package.
 
