@@ -78,6 +78,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Prevent a new choice option from inheriting the previous option's label when pressing Enter.
 - Forms: remove an uploaded file from the form immediately instead of waiting for the server, so a slow connection no longer leaves the file upload field looking stuck.
 - Forms: Restore the Integrations button in the Form block toolbar when the settings sidebar is closed.
+- Forms: space out the files listed on a response and line their download buttons up on one edge.
 - Forms: stop uploading a file that was removed while its upload was still being prepared.
 - Forms: validate a required phone field with a default country against what the input actually shows, so it can no longer be submitted empty.
 - My Jetpack: Keep the Automattic for Agencies banner hidden after dismissing it and switching tabs.

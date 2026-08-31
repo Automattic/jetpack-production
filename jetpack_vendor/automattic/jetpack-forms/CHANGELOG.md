@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - File upload field: Stop uploading a file that was removed while its upload was still being prepared.
 - Fix checkbox and consent field alignment in the editor on classic themes.
 - Form editor: fix the welcome guide artwork not loading on WordPress.com Simple sites.
+- Inbox: space out the files listed on a response and line their download buttons up on one edge.
 - Keep an option's label when switching it to the "Other" option.
 - Keep prev/next working on a single response after marking it as spam or trash, open responses instantly from the list, and add keyboard shortcuts for triaging responses.
 - Phone field: Validate a required field with a default country against what the input actually shows, so it can no longer be submitted empty.
