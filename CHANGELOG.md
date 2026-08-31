@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
 - Jetpack AI: Add an AI SEO control to the AI settings page. The AI sidebar's SEO suggestions follow it, separately from the automatic-generation setting.
 - Jetpack AI: Make the editor and the automatic-generation toggles follow the AI SEO control — switching it off stops metadata generation and disables its controls, with saved choices returning when it is switched back on.
+- Jetpack AI: return to the Jetpack AI Hub after upgrading from it, and point My Jetpack's AI links at the Hub.
 - My Jetpack: Allow the Automattic for Agencies banner to be dismissed.
 - Premium Analytics: Add a year dropdown to the Year in review (Highlights) widget header, defaulting to the current year, and drop its metric selector so the card always shows posts, words, likes, and comments.
 - Premium Analytics: Add breathing room above and below the Top locations map.

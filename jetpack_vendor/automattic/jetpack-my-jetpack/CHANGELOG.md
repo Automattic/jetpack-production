@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Allow the Automattic for Agencies banner to be dismissed.
 
 ### Changed
+- Jetpack AI: land the card's View link, post-checkout, and post-activation on the Jetpack AI Hub.
 - Prefix the transient that flags a historically active modules refresh.
 - Register the `jetpack/v4/jetpack-ai-jwt` route from the Connection package and drop the Agents Manager dependency.
 - Roll back the Automattic for Agencies banner dismissal if the request fails.
