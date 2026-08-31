@@ -101,6 +101,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: show the whole Most popular day card on a short tile instead of clipping it.
 - Premium Analytics: Show titles and names with characters like "&" instead of their HTML codes.
 - Premium Analytics: Stop the Ads chart interval menu offering buckets the WordAds chart cannot draw.
+- SEO: stop the search-engine indexing toggle from publishing a private or coming-soon site.
 - SEO Tools: Fix og:description leaking the first post's custom SEO description on archive and latest-posts homepage views.
 - Stats: Fix access for users whose allowed role is not their first assigned role.
 - Tiled Gallery: Remove the forced gray background on images that made transparent areas appear gray.
