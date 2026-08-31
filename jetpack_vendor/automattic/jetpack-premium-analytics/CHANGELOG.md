@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Post detail: remove the settings drawer from the Email highlights and Email breakdown cards; their metric and view are fixed by the tab layout.
 - Subscriber list: Match the row height, avatar size, and footer type to the design.
 - Top locations: Add breathing room above and below the map.
+- Top pages: rename the CSV comparison column to "Views (Previous Period)" and move it after the primary columns.
 - Traffic summary: follow the page chart interval control instead of a widget-level Group by.
 - Update package dependencies.
 - Video details: fold the highlight metrics into the Video performance chart as selectable tabs, play-weighting the bucketed retention rate.

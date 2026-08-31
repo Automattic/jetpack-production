@@ -41,6 +41,8 @@ __( "Fulfilled", "jetpack-premium-analytics-pkg" );
 __( "Unfulfilled", "jetpack-premium-analytics-pkg" );
 __( "State", "jetpack-premium-analytics-pkg" );
 __( "Country", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the column label, e.g. "Views". */
+__( "%s (Previous Period)", "jetpack-premium-analytics-pkg" );
 __( "Untitled video", "jetpack-premium-analytics-pkg" );
 __( "This data is unavailable right now.", "jetpack-premium-analytics-pkg" );
 __( "You don't have access to this data.", "jetpack-premium-analytics-pkg" );
