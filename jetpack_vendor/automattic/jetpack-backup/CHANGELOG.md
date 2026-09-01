@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.0.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Cache the promoted Backup subscription price so the screen shown to sites without a plan stops fetching it from WordPress.com on every load.
+
 ## [5.0.0] - 2026-09-01
 ### Changed
 - Update package dependencies. [#51303] [#51802]
@@ -1209,6 +1216,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
+[5.0.1-alpha]: https://github.com/Automattic/jetpack-backup/compare/v5.0.0...v5.0.1-alpha
 [5.0.0]: https://github.com/Automattic/jetpack-backup/compare/v4.3.15...v5.0.0
 [4.3.15]: https://github.com/Automattic/jetpack-backup/compare/v4.3.14...v4.3.15
 [4.3.14]: https://github.com/Automattic/jetpack-backup/compare/v4.3.13...v4.3.14
