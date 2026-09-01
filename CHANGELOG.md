@@ -101,6 +101,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: keep the Year in review report link reachable.
 - Premium Analytics: Link a subscriber's name to their subscriber details page.
 - Premium Analytics: Most popular day gives its Day and Views labels the weight the design has them at and the heading structure a screen reader can navigate, states a share of views only when there is an all-time total to take it from, and drops the Retry a reader without stats access cannot use.
+- Premium Analytics: Post detail: stop the Post traffic layout from flashing when an email tab is opened directly, and show placeholder lines in the header while the title loads.
 - Premium Analytics: print Tags & categories view counts in full, and list far more rows in its report.
 - Premium Analytics: print the Annual insights words-per-post average whole, as the old Stats report does.
 - Premium Analytics: Remove the quarterly chart interval option, which never changed the chart.

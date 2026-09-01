@@ -61,6 +61,7 @@ This is an alpha version! The changes listed here are not final.
 - Insights: Show the Most popular time day and hour in the site's locale.
 - Most popular day: give the Day and Views labels the weight the design has them at and the heading structure a screen reader can navigate, state a share of views only when there is an all-time total to take it from, and drop the Retry a reader without stats access cannot use.
 - Most popular day: show the whole card on a short tile instead of clipping it.
+- Post detail: stop the Post traffic layout from flashing when an email tab is opened directly, and show placeholder lines in the header while the title loads.
 - Referrers: treat a group with an empty results list as an external-link row.
 - Show a notice when a refresh fails, instead of silently leaving the previous numbers on screen.
 - Subscriber list: Link a subscriber's name to their subscriber details page.
