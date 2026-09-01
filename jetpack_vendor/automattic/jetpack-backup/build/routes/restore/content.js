@@ -71,6 +71,8 @@ __( "Your restore is queued and will begin shortly…", "jetpack-backup-pkg" );
 __( "Waiting for your restore to begin", "jetpack-backup-pkg" );
 __( "Restoring…", "jetpack-backup-pkg" );
 __( "Restoring your site", "jetpack-backup-pkg" );
+/* translators: %d is a completion percentage, e.g. "50% complete". */
+__( "%d%% complete", "jetpack-backup-pkg" );
 __( "Restore complete.", "jetpack-backup-pkg" );
 __( "Restore finished, but some items could not be restored.", "jetpack-backup-pkg" );
 __( "We didn't hear back from WordPress.com. Checking whether your restore started…", "jetpack-backup-pkg" );
