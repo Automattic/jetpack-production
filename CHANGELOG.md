@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 16.2-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Comments: Fix a stored cross-site scripting vulnerability in social comment avatars.
+
 ## 16.2-a.5 - 2026-09-01
 ### Enhancements
 - AI: Add Quick start links for connecting Claude and ChatGPT to the AI Hub Overview. [#51691]
