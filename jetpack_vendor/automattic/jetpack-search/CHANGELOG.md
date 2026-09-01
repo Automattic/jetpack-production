@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Minimum supported PHP version is now 7.4.
 
+### Fixed
+- Only load the Jetpack plugin compatibility layer when the Jetpack plugin is actually present.
+
 ## [7.4.1] - 2026-08-20
 ### Changed
 - Update package dependencies. [#51399]
