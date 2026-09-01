@@ -93,6 +93,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Fix the email opens/clicks timeline charting hours outside the selected window.
 - Premium Analytics: Fix the Subscribers summary help text to describe the cumulative subscriber total the chart plots, not new subscribers.
 - Premium Analytics: Include the last day of the selected range in the WordAds card.
+- Premium Analytics: Keep the custom range Apply button disabled when re-selecting "No comparison".
 - Premium Analytics: keep the Year in review report link reachable.
 - Premium Analytics: Link a subscriber's name to their subscriber details page.
 - Premium Analytics: Most popular day gives its Day and Views labels the weight the design has them at and the heading structure a screen reader can navigate, states a share of views only when there is an all-time total to take it from, and drops the Retry a reader without stats access cannot use.

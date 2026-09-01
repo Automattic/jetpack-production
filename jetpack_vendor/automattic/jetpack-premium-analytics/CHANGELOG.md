@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - Annual insights: keep the Year in review report link reachable.
 - Annual insights: print the words-per-post average whole, as the old Stats report does.
 - Charts: Remove the quarterly interval option, which never changed the chart.
+- Date filters: Keep the custom range Apply button disabled when re-selecting "No comparison".
 - Decode HTML entities in post titles, author names, and other Stats labels.
 - Emails: Decode HTML entities in email subject lines.
 - Email timeline: request the smallest hourly window the endpoint can serve and trim the chart and totals to the selected window.
