@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Security
+- Harden post meta handling so imported values are only restored as plain data.
+
 ### Removed
 - Minimum supported PHP version is now 7.4.
 

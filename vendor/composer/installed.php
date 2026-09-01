@@ -281,9 +281,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-import' => array(
-            'pretty_version' => '0.10.0-alpha.1787677819',
-            'version' => '0.10.0.0-alpha1787677819',
-            'reference' => '3664b36abc02392be97c1ce57bcd7321d4069fbd',
+            'pretty_version' => '0.10.0-alpha.1788273819',
+            'version' => '0.10.0.0-alpha1788273819',
+            'reference' => '3550e74d7c2270a0713512e998193c7f3d0459c2',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-import',
             'aliases' => array(),
