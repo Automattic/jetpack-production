@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.13.0] - 2026-09-01
 ### Changed
-- Make writing-prompt, paid-plan, and subscribers-announcement actions real links.
-- Update package dependencies.
+- Make writing-prompt, paid-plan, and subscribers-announcement actions real links. [#51558]
+- Update package dependencies. [#51303] [#51802]
 
 ### Removed
-- Minimum supported PHP version is now 7.4.
+- Minimum supported PHP version is now 7.4. [#51515]
 
 ### Fixed
-- Prevent unsupported date filtering on the Subscribers page.
+- Prevent unsupported date filtering on the Subscribers page. [#51782]
 
 ## [0.12.7] - 2026-08-25
 ### Changed
@@ -350,7 +347,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.13.0-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.7...v0.13.0-alpha
+[0.13.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.7...v0.13.0
 [0.12.7]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.6...v0.12.7
 [0.12.6]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.5...v0.12.6
 [0.12.5]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.4...v0.12.5

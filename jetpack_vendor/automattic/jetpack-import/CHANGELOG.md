@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.10.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.10.0] - 2026-09-01
 ### Security
-- Harden post meta handling so imported values are only restored as plain data.
+- Harden post meta handling so imported values are only restored as plain data. [#51830]
 
 ### Removed
-- Minimum supported PHP version is now 7.4.
+- Minimum supported PHP version is now 7.4. [#51515]
 
 ## [0.9.19] - 2026-06-08
 ### Changed
@@ -212,7 +209,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixed various imported resources hierarchies [#29012]
 
-[0.10.0-alpha]: https://github.com/Automattic/jetpack-import/compare/v0.9.19...v0.10.0-alpha
+[0.10.0]: https://github.com/Automattic/jetpack-import/compare/v0.9.19...v0.10.0
 [0.9.19]: https://github.com/Automattic/jetpack-import/compare/v0.9.18...v0.9.19
 [0.9.18]: https://github.com/Automattic/jetpack-import/compare/v0.9.17...v0.9.18
 [0.9.17]: https://github.com/Automattic/jetpack-import/compare/v0.9.16...v0.9.17
