@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Remove the page descriptions from the dashboard and report pages.
 - Premium Analytics: rename the Top pages CSV comparison column to "Views (Previous Period)" and move it after the primary columns.
 - Premium Analytics: Retitle the Popular post card to "Most popular post in the last 12 months" and pin it to the last 12 months.
+- Premium Analytics: Shorten the Popular post card title so it survives a narrow dashboard cell.
 - Premium Analytics: Show all-time views, visitors, and posts in the default Insights layout.
 - Premium Analytics: Tighten the Latest subscribers rows so more subscribers fit the widget.
 - Premium Analytics: Tighten the spacing between leaderboard rows.

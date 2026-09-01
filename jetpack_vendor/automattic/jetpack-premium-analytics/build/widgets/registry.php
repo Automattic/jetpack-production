@@ -520,7 +520,7 @@ return array(
 	array(
 		'name'         => 'jpa/popular-post',
 		'dir_name'     => 'popular-post',
-		'title'        => 'Most popular post in the last 12 months',
+		'title'        => 'Popular post (12 months)',
 		'description'  => 'Your most-viewed post of the last 12 months, with its all-time stats.',
 		'help'         => array( 'content' => 'Your most viewed post of the last 12 months, with its all-time views, likes, and comments.' ),
 		'icon'         => null,
