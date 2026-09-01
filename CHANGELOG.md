@@ -92,6 +92,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: space out the files listed on a response and line their download buttons up on one edge.
 - Forms: stop uploading a file that was removed while its upload was still being prepared.
 - Forms: validate a required phone field with a default country against what the input actually shows, so it can no longer be submitted empty.
+- Jetpack AI: Prevent General Settings saves from resetting AI feature settings.
 - Jetpack AI: Send usage events from Jetpack AI Hub on self-hosted sites.
 - Jetpack AI: Show connection notices instead of raw connection errors on the MCP settings page when the site or the current user is not connected to WordPress.com.
 - My Jetpack: Keep the Automattic for Agencies banner hidden after dismissing it and switching tabs.
