@@ -92,11 +92,8 @@ This is an alpha version! The changes listed here are not final.
 - Forms: space out the files listed on a response and line their download buttons up on one edge.
 - Forms: stop uploading a file that was removed while its upload was still being prepared.
 - Forms: validate a required phone field with a default country against what the input actually shows, so it can no longer be submitted empty.
-- Import: Harden post meta handling so imported values are only restored as plain data.
 - Jetpack AI: Send usage events from Jetpack AI Hub on self-hosted sites.
 - Jetpack AI: Show connection notices instead of raw connection errors on the MCP settings page when the site or the current user is not connected to WordPress.com.
-- Media API: Check permissions on the target post before attaching a media item to it.
-- Media API: Check permissions on the target post before attaching an upload to it.
 - My Jetpack: Keep the Automattic for Agencies banner hidden after dismissing it and switching tabs.
 - My Jetpack: Stop repeating the partner lookup request on every page load.
 - Newsletter: Hide the "View delivery details" stats link in the publish panels when the Stats module is disabled, so the copy no longer points to an unavailable page.
@@ -124,7 +121,6 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: show the whole Most popular day card on a short tile instead of clipping it.
 - Premium Analytics: Show titles and names with characters like "&" instead of their HTML codes.
 - Premium Analytics: Stop the Ads chart interval menu offering buckets the WordAds chart cannot draw.
-- Reader: Sanitize repost data taken from the URL before it is inserted into the editor.
 - SEO: stop the search-engine indexing toggle from publishing a private or coming-soon site.
 - SEO Tools: Fix og:description leaking the first post's custom SEO description on archive and latest-posts homepage views.
 - Stats: Fix access for users whose allowed role is not their first assigned role.
@@ -285,6 +281,12 @@ This is an alpha version! The changes listed here are not final.
 - Reprint: Remove full-site export support from Jetpack while retaining Atomic exports through `wpcomsh`. [#51179]
 - Update lock file. [#50855]
 - Update package dependencies. [#50509] [#51008] [#51125] [#51331] [#51399]
+
+## 16.1.3 - 2026-09-01
+### Bug fixes
+- Import: Harden post meta handling so imported values are only restored as plain data.
+- Media API: Check permissions on the target post before attaching a media item to it.
+- Reader: Sanitize repost data taken from the URL before it is inserted into the editor.
 
 ## 16.1.2 - 2026-08-20
 ### Bug fixes
