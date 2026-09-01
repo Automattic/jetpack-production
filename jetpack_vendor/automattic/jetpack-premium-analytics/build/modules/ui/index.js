@@ -50,6 +50,8 @@ __( "By weeks", "jetpack-premium-analytics-pkg" );
 __( "By months", "jetpack-premium-analytics-pkg" );
 __( "By years", "jetpack-premium-analytics-pkg" );
 __( "Chart interval", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the active chart interval, e.g. "By days". */
+__( "Chart interval: %s", "jetpack-premium-analytics-pkg" );
 __( "Next period", "jetpack-premium-analytics-pkg" );
 __( "From", "jetpack-premium-analytics-pkg" );
 __( "To", "jetpack-premium-analytics-pkg" );

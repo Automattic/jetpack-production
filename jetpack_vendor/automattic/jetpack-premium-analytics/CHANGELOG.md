@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Ads: Move the date range into the WordAds card's own header, and drop the section header's date filter.
+- Chart interval control: name the active interval in the button's tooltip, and give its menu a heading.
 - Charts: take the series palette from the charts package instead of seeding it locally.
 - CSV export will now handle `\"` sequences per RFC 4180.
 - Date filters: share one staged-value controller between the URL-backed and widget-backed surfaces, and resolve the chart interval against the same range on both.
