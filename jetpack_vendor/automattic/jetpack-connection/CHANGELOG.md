@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Connection error reporting: make the gate direction-aware to avoid suppressing matching codes across directions.
+- Update package dependencies.
 
 ## [9.0.0] - 2026-08-26
 ### Changed
