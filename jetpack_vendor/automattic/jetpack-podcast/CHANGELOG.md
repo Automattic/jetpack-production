@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Posts to Podcast: Scope the generated episodes list to the posts the current user can edit, matching the Posts screen.
 - Update package dependencies.
 
 ### Removed
