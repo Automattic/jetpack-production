@@ -95,6 +95,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Show connection notices instead of raw connection errors on the MCP settings page when the site or the current user is not connected to WordPress.com.
 - My Jetpack: Keep the Automattic for Agencies banner hidden after dismissing it and switching tabs.
 - My Jetpack: Stop repeating the partner lookup request on every page load.
+- Newsletter: Hide the "View delivery details" stats link in the publish panels when the Stats module is disabled, so the copy no longer points to an unavailable page.
 - Newsletter: Prevent unsupported date filtering on the Subscribers page.
 - Podcast: Scope the generated episodes list to the posts the current user can edit, matching the Posts screen.
 - Premium Analytics: Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
