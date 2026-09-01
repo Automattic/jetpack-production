@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Dashboard: Give the empty Library an upload dropzone empty state.
+- Enable the chapters editor on all sites.
 
 ### Changed
 - Update package dependencies.
