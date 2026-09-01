@@ -53,6 +53,7 @@ __( "Site database", "jetpack-backup-pkg" );
 __( "Includes pages, and posts.", "jetpack-backup-pkg" );
 __( "Media uploads", "jetpack-backup-pkg" );
 __( "You must also select Site database for restored media uploads to appear.", "jetpack-backup-pkg" );
+__( "Select at least one file to download.", "jetpack-backup-pkg" );
 /* translators: %s: the reason WordPress.com gave for the failure. */
 __( "Download failed: %s", "jetpack-backup-pkg" );
 __( "Download failed.", "jetpack-backup-pkg" );
