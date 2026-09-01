@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Rewrite the missing forms modal to reassure people that forms already on their pages keep working, and spell out the steps to add them to the list.
 - Jetpack AI: Add an AI SEO control to the AI settings page. The AI sidebar's SEO suggestions follow it, separately from the automatic-generation setting.
 - Jetpack AI: Make the editor and the automatic-generation toggles follow the AI SEO control — switching it off stops metadata generation and disables its controls, with saved choices returning when it is switched back on.
+- Jetpack AI: On sites with the WordPress Agent, replace the "Improve with AI" panel with a dismissible notice pointing to it.
 - Jetpack AI: return to the Jetpack AI Hub after upgrading from it, and point My Jetpack's AI links at the Hub.
 - Jetpack AI: Support the AI Hub on WordPress.com Simple sites.
 - My Jetpack: Allow the Automattic for Agencies banner to be dismissed.
