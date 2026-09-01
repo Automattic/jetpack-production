@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Register the dismissed_a4a_banner option name.
 - REST API: Add the `jetpack/v4/jetpack-ai-jwt` route, moved from the Agents Manager package.
 
+### Changed
+- Connection error reporting: make the gate direction-aware to avoid suppressing matching codes across directions.
+
 ## [9.0.0] - 2026-08-26
 ### Changed
 - Cache the WordPress.com site record briefly so the site endpoint does not make a request per read. [#51146]
