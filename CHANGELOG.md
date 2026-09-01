@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: add total and per-post image counts to the Annual insights report.
 - Premium Analytics: chart interval control: name the active interval in the button's tooltip, and give its menu a heading.
 - Premium Analytics: Click a point on the Traffic chart to narrow the dashboard to that period.
+- Premium Analytics: date range control: name a custom range covering a whole month or year by that period, and spell the dates out in the button's tooltip.
 - Premium Analytics: Divide a widget's metrics with lines instead of boxing each one.
 - Premium Analytics: Fold the video detail highlight metrics into the Video performance chart as selectable tabs.
 - Premium Analytics: Give shared leaderboard rows one row height, bar radius, and link hover.
