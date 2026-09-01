@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Minimum supported PHP version is now 7.4.
 
+### Fixed
+- Admin color schemes: render the checked checkbox and radio marks in white, matching core.
+
 ## [0.27.38] - 2026-08-25
 ### Fixed
 - Admin color schemes: Stop labelling the Fresh scheme "Default", which duplicated the Default (Modern) entry on WordPress 7.0. [#51376]
