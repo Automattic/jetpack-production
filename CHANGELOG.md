@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI settings: add the Overview tab with usage, activity log and documentation links, limited to internal testing environments.
 - Boost: Wait up to four minutes for slow speed tests in My Jetpack and At a Glance instead of timing out after two.
 - Charts: follow the WordPress admin color scheme for chart series colors.
+- Charts: update chart grid, axis and label colors immediately when the theme changes.
 - Connection: Cache the WordPress.com site record briefly so the Jetpack dashboard does not make a request per view.
 - Forms: add a guide to the form editor for people new to the block editor.
 - Forms: Add help text to form fields and show the date field's expected format below its input.
