@@ -13,7 +13,7 @@ use Jetpack_Options;
  * Registers the `jetpack/v4/jetpack-ai-jwt` route, which asks WordPress.com for a JWT that
  * Jetpack AI clients use to call the AI completion service.
  *
- * @since 9.1.0-alpha
+ * @since 9.1.0
  */
 class REST_Jetpack_AI_JWT extends \WP_REST_Controller {
 
