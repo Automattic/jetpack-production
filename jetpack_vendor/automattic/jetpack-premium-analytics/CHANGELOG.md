@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.5.1-alpha] - unreleased
+## [0.6.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Reports: Open the Authors, Clicks and UTM reports folded to their top-level groups, and move the drill-down control to the right of the row title.
 - Update package dependencies.
 
 ## [0.5.0] - 2026-09-01
@@ -240,7 +241,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
-[0.5.1-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.5.0...0.5.1-alpha
+[0.6.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.5.0...0.6.0-alpha
 [0.5.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.2.0...0.3.0

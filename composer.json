@@ -51,7 +51,7 @@
 		"automattic/jetpack-podcast": "^2.0.0",
 		"automattic/jetpack-post-list": "^0.10.0",
 		"automattic/jetpack-post-media": "^0.2.0",
-		"automattic/jetpack-premium-analytics": "^0.5.1-alpha",
+		"automattic/jetpack-premium-analytics": "^0.6.0-alpha",
 		"automattic/jetpack-publicize": "^0.86.0",
 		"automattic/jetpack-redirect": "^4.0.0",
 		"automattic/jetpack-roles": "^4.0.0",

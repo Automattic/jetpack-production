@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Premium Analytics: Open the Authors, Clicks and UTM reports folded to their top-level groups, and move the drill-down control to the right of the row title.
+
 ### Bug fixes
 - Comments: Fix a stored cross-site scripting vulnerability in social comment avatars.
 
