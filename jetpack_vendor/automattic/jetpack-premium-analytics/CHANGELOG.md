@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update package dependencies.
+
 ## [0.5.0] - 2026-09-01
 ### Added
 - Add a year dropdown to the Year in review (Highlights) widget header, defaulting to the current year, and drop its metric selector so the card always shows posts, words, likes, and comments. [#51638]
@@ -233,6 +240,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
+[0.5.1-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.5.0...0.5.1-alpha
 [0.5.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.3.0...0.4.0
 [0.3.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.2.0...0.3.0
