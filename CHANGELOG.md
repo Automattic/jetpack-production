@@ -90,6 +90,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Prevent unsupported date filtering on the Subscribers page.
 - Premium Analytics: Align title link styling across widgets: external video rows gain the standard outbound marker, long titles no longer clip it, and hover underlines cover only the title text.
 - Premium Analytics: Drop the Last 24 hours range from the WordAds card, which has no hourly data to chart.
+- Premium Analytics: fall back to the last page of a table instead of reporting no results when a date range returns fewer rows than the current page.
 - Premium Analytics: Fix the email opens/clicks timeline charting hours outside the selected window.
 - Premium Analytics: Fix the Subscribers summary help text to describe the cumulative subscriber total the chart plots, not new subscribers.
 - Premium Analytics: Include the last day of the selected range in the WordAds card.

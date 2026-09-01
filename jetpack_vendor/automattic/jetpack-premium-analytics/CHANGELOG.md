@@ -64,6 +64,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriber list: Link a subscriber's name to their subscriber details page.
 - Subscriber list: Order subscribers by subscription date instead of by subscriber type.
 - Subscribers summary: Fix the help text to describe the cumulative subscriber total the chart plots, not new subscribers.
+- Tables: fall back to the last page instead of reporting no results when a date range returns fewer rows than the current page.
 - Tags & categories: print view counts in full, and list far more rows in the report.
 
 ## [0.4.0] - 2026-08-25
