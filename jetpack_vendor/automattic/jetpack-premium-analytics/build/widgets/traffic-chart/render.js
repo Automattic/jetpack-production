@@ -6,6 +6,30 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+/* translators: abbreviation for "Previous period". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
+_x( "Prev. period", "short comparison preset", "jetpack-premium-analytics-pkg" );
+/* translators: abbreviation for "Same period from last week". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
+_x( "Prev. week", "short comparison preset", "jetpack-premium-analytics-pkg" );
+/* translators: abbreviation for "Same period in <month>". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
+_x( "Prev. month", "short comparison preset", "jetpack-premium-analytics-pkg" );
+/* translators: abbreviation for "Same period in <year>". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
+_x( "Prev. year", "short comparison preset", "jetpack-premium-analytics-pkg" );
+__( "Previous month", "jetpack-premium-analytics-pkg" );
+/* translators: %d: number of years covered by the selected date range. */
+_n( "Previous %d year", "Previous %d years", 1, "jetpack-premium-analytics-pkg" );
+/* translators: %d: number of months covered by the selected date range. */
+_n( "Previous %d month", "Previous %d months", 1, "jetpack-premium-analytics-pkg" );
+__( "Previous hour", "jetpack-premium-analytics-pkg" );
+/* translators: %d: number of hours covered by the selected date range. */
+_n( "Previous %d hour", "Previous %d hours", 1, "jetpack-premium-analytics-pkg" );
+__( "Previous day", "jetpack-premium-analytics-pkg" );
+/* translators: %d: number of days covered by the selected date range. */
+_n( "Previous %d day", "Previous %d days", 1, "jetpack-premium-analytics-pkg" );
+__( "Same period from last week", "jetpack-premium-analytics-pkg" );
+/* translators: %s: name of the month the comparison period starts in, e.g. "July". */
+_x( "Same period in %s", "previous month comparison", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the year the comparison period starts in, e.g. "2025". */
+_x( "Same period in %s", "previous year comparison", "jetpack-premium-analytics-pkg" );
 __( "Views", "jetpack-premium-analytics-pkg" );
 __( "Visitors", "jetpack-premium-analytics-pkg" );
 __( "Comments", "jetpack-premium-analytics-pkg" );

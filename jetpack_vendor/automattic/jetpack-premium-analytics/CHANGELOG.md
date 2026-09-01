@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Chart interval control: name the active interval in the button's tooltip, and give its menu a heading.
 - Charts: take the series palette from the charts package instead of seeding it locally.
 - CSV export will now handle `\"` sequences per RFC 4180.
+- Date controls: build the comparison menu from the applied range and restore the same-period-last-week option.
 - Date controls: turn the period comparison off by default.
 - Date filters: share one staged-value controller between the URL-backed and widget-backed surfaces, and resolve the chart interval against the same range on both.
 - Date range control: name a custom range covering a whole month or year by that period, and spell the dates out in the button's tooltip.

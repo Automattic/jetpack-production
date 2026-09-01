@@ -30,15 +30,30 @@ _x( "12M", "short date range preset", "jetpack-premium-analytics-pkg" );
 __( "Last year", "jetpack-premium-analytics-pkg" );
 __( "All time", "jetpack-premium-analytics-pkg" );
 _x( "All", "short date range preset", "jetpack-premium-analytics-pkg" );
-__( "Previous period", "jetpack-premium-analytics-pkg" );
 /* translators: abbreviation for "Previous period". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
 _x( "Prev. period", "short comparison preset", "jetpack-premium-analytics-pkg" );
-__( "Previous month", "jetpack-premium-analytics-pkg" );
-/* translators: abbreviation for "Previous month". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
+/* translators: abbreviation for "Same period from last week". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
+_x( "Prev. week", "short comparison preset", "jetpack-premium-analytics-pkg" );
+/* translators: abbreviation for "Same period in <month>". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
 _x( "Prev. month", "short comparison preset", "jetpack-premium-analytics-pkg" );
-__( "Previous year", "jetpack-premium-analytics-pkg" );
-/* translators: abbreviation for "Previous year". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
+/* translators: abbreviation for "Same period in <year>". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
 _x( "Prev. year", "short comparison preset", "jetpack-premium-analytics-pkg" );
+__( "Previous month", "jetpack-premium-analytics-pkg" );
+/* translators: %d: number of years covered by the selected date range. */
+_n( "Previous %d year", "Previous %d years", 1, "jetpack-premium-analytics-pkg" );
+/* translators: %d: number of months covered by the selected date range. */
+_n( "Previous %d month", "Previous %d months", 1, "jetpack-premium-analytics-pkg" );
+__( "Previous hour", "jetpack-premium-analytics-pkg" );
+/* translators: %d: number of hours covered by the selected date range. */
+_n( "Previous %d hour", "Previous %d hours", 1, "jetpack-premium-analytics-pkg" );
+__( "Previous day", "jetpack-premium-analytics-pkg" );
+/* translators: %d: number of days covered by the selected date range. */
+_n( "Previous %d day", "Previous %d days", 1, "jetpack-premium-analytics-pkg" );
+__( "Same period from last week", "jetpack-premium-analytics-pkg" );
+/* translators: %s: name of the month the comparison period starts in, e.g. "July". */
+_x( "Same period in %s", "previous month comparison", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the year the comparison period starts in, e.g. "2025". */
+_x( "Same period in %s", "previous year comparison", "jetpack-premium-analytics-pkg" );
 /* translators: 1: Start date. 2: End date. */
 __( "%1$s – %2$s", "jetpack-premium-analytics-pkg" );
 __( "No comparison", "jetpack-premium-analytics-pkg" );
@@ -52,6 +67,7 @@ __( "By years", "jetpack-premium-analytics-pkg" );
 __( "Chart interval", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the active chart interval, e.g. "By days". */
 __( "Chart interval: %s", "jetpack-premium-analytics-pkg" );
+__( "Previous period", "jetpack-premium-analytics-pkg" );
 __( "Next period", "jetpack-premium-analytics-pkg" );
 __( "From", "jetpack-premium-analytics-pkg" );
 __( "To", "jetpack-premium-analytics-pkg" );
