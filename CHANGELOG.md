@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add the Most popular time card to the default Insights layout.
 - Premium Analytics: add total and per-post image counts to the Annual insights report.
 - Premium Analytics: Click a point on the Traffic chart to narrow the dashboard to that period.
+- Premium Analytics: Divide a widget's metrics with lines instead of boxing each one.
 - Premium Analytics: Fold the video detail highlight metrics into the Video performance chart as selectable tabs.
 - Premium Analytics: Give shared leaderboard rows one row height, bar radius, and link hover.
 - Premium Analytics: Lead the post and video detail date presets with All time and match the selected preset to the design.
