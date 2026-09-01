@@ -228,6 +228,8 @@ _x( "%s B", "file size in bytes", "jetpack-backup-pkg" );
 __( "Preview unavailable for this file.", "jetpack-backup-pkg" );
 __( "Loading preview…", "jetpack-backup-pkg" );
 __( "Preview could not be loaded for this file.", "jetpack-backup-pkg" );
+__( "This file is not text and cannot be previewed.", "jetpack-backup-pkg" );
+__( "Preview truncated: this file is too large to show in full.", "jetpack-backup-pkg" );
 __( "Close preview", "jetpack-backup-pkg" );
 __( "Modified:", "jetpack-backup-pkg" );
 __( "Size:", "jetpack-backup-pkg" );
