@@ -74,6 +74,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: show a failure message when your backup status cannot be read, rather than the screen that says your first backup is on its way, and let the "Back up now" button recover when a backup could not be queued.
 - Backup: show storage usage and the plan limit the right way round when the interface is translated.
 - Blocks: keep blocks that load outside the post editor available in front-end block editors such as P2, by never deferring their registration. See JETPACK-1747.
+- Blogging Prompts: scope the endpoint's query filters to the prompts query so they no longer modify unrelated queries (e.g. Gutenberg global styles lookups) run while prompts are being rendered.
 - Carousel: Keep the loading overlay hidden when the module stylesheet is missing.
 - Contact Form: bind the posted form id to the signed form when validating a token-authenticated submission.
 - Forms: cancel in-flight uploads and release previews when a form containing a file upload field is reset.
