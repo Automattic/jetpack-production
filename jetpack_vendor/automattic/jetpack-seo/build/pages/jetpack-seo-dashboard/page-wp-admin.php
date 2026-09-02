@@ -146,8 +146,12 @@ function jetpack_seo_jetpack_seo_dashboard_wp_admin_enqueue_scripts( $hook_suffi
 	// Get all registered routes
 	$routes = jetpack_seo_get_jetpack_seo_dashboard_wp_admin_routes();
 
-	// Get boot module asset file for dependencies
+	// Get boot module asset file for dependencies. Plugins that build their own
+	// boot module use it; everyone else falls back to the copy bundled with Core.
 	$asset_file = __DIR__ . '/../../modules/boot/index.min.asset.php';
+	if ( ! file_exists( $asset_file ) ) {
+		$asset_file = ABSPATH . WPINC . '/js/dist/script-modules/boot/index.min.asset.php';
+	}
 	if ( file_exists( $asset_file ) ) {
 		$asset = require $asset_file;
 
@@ -302,7 +306,7 @@ function jetpack_seo_jetpack_seo_dashboard_wp_admin_render_page() {
 		}
 
 		/* Hide legacy admin elements */
-		body.js #wpbody-content > div:not(.boot-layout-container):not(#screen-meta) {
+		body.js #wpbody-content > div:not(#jetpack-seo-dashboard-wp-admin-app):not(#screen-meta) {
 			display: none;
 		}
 		body.js #wpfooter {
@@ -343,6 +347,11 @@ function jetpack_seo_jetpack_seo_dashboard_wp_admin_render_page() {
 		);
 		?>
 	</div>
+	<?php
+	// Core's pre-CSS Modules Boot layout uses this class for viewport sizing.
+	// Remove it when the minimum supported WordPress version includes the Boot
+	// changes from Gutenberg #81756.
+	?>
 	<div id="jetpack-seo-dashboard-wp-admin-app" class="boot-layout-container"></div>
 	<?php
 }

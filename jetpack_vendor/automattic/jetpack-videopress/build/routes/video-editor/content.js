@@ -54,6 +54,7 @@ __( "The video failed to load.", "jetpack-videopress-pkg" );
 _x( "Playback could not be started.", "chapters preview player error", "jetpack-videopress-pkg" );
 __( "This video has no playable source.", "jetpack-videopress-pkg" );
 __( "A connection check failed.", "jetpack-videopress-pkg" );
+__( "Sections", "jetpack-videopress-pkg" );
 __( "Jetpack Logo", "jetpack-videopress-pkg" );
 __( "An Automattic Airline", "jetpack-videopress-pkg" );
 /* translators: %1$s is button label 1 and %2$s is button label 2 */

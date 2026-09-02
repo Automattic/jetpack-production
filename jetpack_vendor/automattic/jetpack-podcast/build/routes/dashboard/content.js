@@ -13,6 +13,7 @@ __( "More details follow the field." );
 __( "Select" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)" );
+__( "Sections" );
 __( "Jetpack Logo", "jetpack-components" );
 __( "An Automattic Airline", "jetpack-components" );
 __( "Go back", "jetpack-components" );
@@ -22,16 +23,6 @@ __( "Help", "jetpack-components" );
 __( "Jetpack", "jetpack-components" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-components" );
-__( "Date calendar" );
-__( "Date range calendar" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s" );
-__( "Go to the Next Month" );
-__( "Go to the Previous Month" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s, selected" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "%s, selected" );
 __( "Saving…", "jetpack-podcast" );
 __( "Settings saved.", "jetpack-podcast" );
 __( "Could not save your podcast settings. Please try again.", "jetpack-podcast" );
@@ -238,6 +229,21 @@ __( "Stops publishing your podcast feed. Your show details stay saved, so you ca
 __( "Stop publishing", "jetpack-podcast" );
 __( "Stop publishing your podcast?", "jetpack-podcast" );
 __( "Your podcast feed will stop being generated. Existing episodes stay in the assigned category and you can start publishing again at any time.", "jetpack-podcast" );
+/* translators: 1: Calendar type. 2: Current month and year. */
+__( "%1$s, %2$s" );
+__( "Date calendar" );
+__( "Date range calendar" );
+__( "Navigation bar" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s" );
+__( "Next month" );
+__( "Previous month" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s, selected" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "%s, selected" );
+__( "Required" );
+__( "Optional" );
 __( "Sort ascending" );
 __( "Sort descending" );
 __( "(no title)" );
@@ -276,6 +282,7 @@ __( "Density" );
 _x( "Comfortable", "Density option for DataView layout" );
 _x( "Balanced", "Density option for DataView layout" );
 _x( "Compact", "Density option for DataView layout" );
+__( "Original aspect ratio" );
 __( "Preview size" );
 __( "Table" );
 __( "Grid" );
@@ -383,8 +390,6 @@ __( "Items per page" );
 __( "Reset view" );
 _x( "View options", "View is used as a noun" );
 __( "Appearance" );
-__( "Required" );
-__( "Optional" );
 __( "Unit" );
 __( "Days" );
 __( "Weeks" );
@@ -521,6 +526,8 @@ __( "We submit your feed for you. It usually goes live within a few minutes.", "
 __( "Manual submission", "jetpack-podcast" );
 __( "Copy this URL, then submit it to each directory below yourself.", "jetpack-podcast" );
 __( "Set your post category to generate the feed URL you can submit to directories.", "jetpack-podcast" );
+__( "Go to the Next Month" );
+__( "Go to the Previous Month" );
 __( "Start date" );
 __( "End date" );
 /* translators: %1$s: start date, %2$s: end date */

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.0.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update package dependencies.
+
 ## [5.0.1] - 2026-09-01
 ### Fixed
 - Load messages from the jetpack/v4 route when wpcom/v3 is unavailable, fixing missing messages and a console error on sites without the Jetpack plugin. [#51733]
@@ -1184,6 +1191,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update Jetpack to use new JITM package
 
+[5.0.2-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v5.0.1...v5.0.2-alpha
 [5.0.1]: https://github.com/Automattic/jetpack-jitm/compare/v5.0.0...v5.0.1
 [5.0.0]: https://github.com/Automattic/jetpack-jitm/compare/v4.3.52...v5.0.0
 [4.3.52]: https://github.com/Automattic/jetpack-jitm/compare/v4.3.51...v4.3.52

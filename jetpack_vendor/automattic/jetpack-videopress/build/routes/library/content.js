@@ -137,16 +137,22 @@ __( "Restore Connection", "jetpack-videopress-pkg" );
 __( "A connection check failed.", "jetpack-videopress-pkg" );
 __( "Take Action", "jetpack-videopress-pkg" );
 __( "Reconnecting Jetpack…", "jetpack-videopress-pkg" );
+/* translators: 1: Calendar type. 2: Current month and year. */
+__( "%1$s, %2$s", "jetpack-videopress-pkg" );
 __( "Date calendar", "jetpack-videopress-pkg" );
 __( "Date range calendar", "jetpack-videopress-pkg" );
+__( "Navigation bar", "jetpack-videopress-pkg" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s", "jetpack-videopress-pkg" );
-__( "Go to the Next Month", "jetpack-videopress-pkg" );
-__( "Go to the Previous Month", "jetpack-videopress-pkg" );
+__( "Next month", "jetpack-videopress-pkg" );
+__( "Previous month", "jetpack-videopress-pkg" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s, selected", "jetpack-videopress-pkg" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected", "jetpack-videopress-pkg" );
+__( "Required", "jetpack-videopress-pkg" );
+__( "Optional", "jetpack-videopress-pkg" );
+__( "More details follow the field.", "jetpack-videopress-pkg" );
 __( "Sort ascending", "jetpack-videopress-pkg" );
 __( "Sort descending", "jetpack-videopress-pkg" );
 __( "(no title)", "jetpack-videopress-pkg" );
@@ -184,6 +190,7 @@ __( "Density", "jetpack-videopress-pkg" );
 _x( "Comfortable", "Density option for DataView layout", "jetpack-videopress-pkg" );
 _x( "Balanced", "Density option for DataView layout", "jetpack-videopress-pkg" );
 _x( "Compact", "Density option for DataView layout", "jetpack-videopress-pkg" );
+__( "Original aspect ratio", "jetpack-videopress-pkg" );
 __( "Preview size", "jetpack-videopress-pkg" );
 __( "Table", "jetpack-videopress-pkg" );
 __( "Grid", "jetpack-videopress-pkg" );
@@ -291,8 +298,6 @@ __( "Items per page", "jetpack-videopress-pkg" );
 __( "Reset view", "jetpack-videopress-pkg" );
 _x( "View options", "View is used as a noun", "jetpack-videopress-pkg" );
 __( "Appearance", "jetpack-videopress-pkg" );
-__( "Required", "jetpack-videopress-pkg" );
-__( "Optional", "jetpack-videopress-pkg" );
 __( "Days", "jetpack-videopress-pkg" );
 __( "Weeks", "jetpack-videopress-pkg" );
 __( "Months", "jetpack-videopress-pkg" );
@@ -332,6 +337,7 @@ __( "Value must be true, false, or undefined", "jetpack-videopress-pkg" );
 __( "Value must be an array.", "jetpack-videopress-pkg" );
 __( "Every value must be a string.", "jetpack-videopress-pkg" );
 __( "Value must be a valid color.", "jetpack-videopress-pkg" );
+__( "Sections", "jetpack-videopress-pkg" );
 __( "Jetpack Logo", "jetpack-videopress-pkg" );
 __( "An Automattic Airline", "jetpack-videopress-pkg" );
 /* translators: %1$s is button label 1 and %2$s is button label 2 */

@@ -7,21 +7,29 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading", "jetpack-backup-pkg" );
-__( "Date calendar", "jetpack-backup-pkg" );
-__( "Date range calendar", "jetpack-backup-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s", "jetpack-backup-pkg" );
-__( "Go to the Next Month", "jetpack-backup-pkg" );
-__( "Go to the Previous Month", "jetpack-backup-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s, selected", "jetpack-backup-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "%s, selected", "jetpack-backup-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-backup-pkg" );
 __( "Something went wrong", "jetpack-backup-pkg" );
 __( "The page ran into an unexpected problem. Your backups are unaffected.", "jetpack-backup-pkg" );
 __( "Reload the page", "jetpack-backup-pkg" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-backup-pkg" );
+/* translators: 1: Calendar type. 2: Current month and year. */
+__( "%1$s, %2$s", "jetpack-backup-pkg" );
+__( "Date calendar", "jetpack-backup-pkg" );
+__( "Date range calendar", "jetpack-backup-pkg" );
+__( "Navigation bar", "jetpack-backup-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s", "jetpack-backup-pkg" );
+__( "Next month", "jetpack-backup-pkg" );
+__( "Previous month", "jetpack-backup-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s, selected", "jetpack-backup-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "%s, selected", "jetpack-backup-pkg" );
+__( "Required", "jetpack-backup-pkg" );
+__( "Optional", "jetpack-backup-pkg" );
+__( "More details follow the field.", "jetpack-backup-pkg" );
 __( "Sort ascending", "jetpack-backup-pkg" );
 __( "Sort descending", "jetpack-backup-pkg" );
 __( "(no title)", "jetpack-backup-pkg" );
@@ -60,6 +68,7 @@ __( "Density", "jetpack-backup-pkg" );
 _x( "Comfortable", "Density option for DataView layout", "jetpack-backup-pkg" );
 _x( "Balanced", "Density option for DataView layout", "jetpack-backup-pkg" );
 _x( "Compact", "Density option for DataView layout", "jetpack-backup-pkg" );
+__( "Original aspect ratio", "jetpack-backup-pkg" );
 __( "Preview size", "jetpack-backup-pkg" );
 __( "Table", "jetpack-backup-pkg" );
 __( "Grid", "jetpack-backup-pkg" );
@@ -167,8 +176,6 @@ __( "Items per page", "jetpack-backup-pkg" );
 __( "Reset view", "jetpack-backup-pkg" );
 _x( "View options", "View is used as a noun", "jetpack-backup-pkg" );
 __( "Appearance", "jetpack-backup-pkg" );
-__( "Required", "jetpack-backup-pkg" );
-__( "Optional", "jetpack-backup-pkg" );
 __( "Days", "jetpack-backup-pkg" );
 __( "Weeks", "jetpack-backup-pkg" );
 __( "Months", "jetpack-backup-pkg" );
@@ -282,6 +289,7 @@ __( "An Automattic Airline", "jetpack-backup-pkg" );
 __( "Products", "jetpack-backup-pkg" );
 __( "Help", "jetpack-backup-pkg" );
 __( "Jetpack", "jetpack-backup-pkg" );
+__( "Sections", "jetpack-backup-pkg" );
 __( "We couldn't load your backup details", "jetpack-backup-pkg" );
 __( "Your backups are unaffected. Try again, and contact support if this keeps happening.", "jetpack-backup-pkg" );
 __( "Use license key", "jetpack-backup-pkg" );

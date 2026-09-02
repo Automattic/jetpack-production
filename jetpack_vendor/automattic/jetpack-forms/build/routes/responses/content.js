@@ -24,21 +24,26 @@ __( "Cell phone", "jetpack-forms" );
 __( "Contact form", "jetpack-forms" );
 __( "Calendar", "jetpack-forms" );
 __( "Loading", "jetpack-forms" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-forms" );
+/* translators: 1: Calendar type. 2: Current month and year. */
+__( "%1$s, %2$s", "jetpack-forms" );
 __( "Date calendar", "jetpack-forms" );
 __( "Date range calendar", "jetpack-forms" );
+__( "Navigation bar", "jetpack-forms" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s", "jetpack-forms" );
-__( "Go to the Next Month", "jetpack-forms" );
-__( "Go to the Previous Month", "jetpack-forms" );
+__( "Next month", "jetpack-forms" );
+__( "Previous month", "jetpack-forms" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s, selected", "jetpack-forms" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected", "jetpack-forms" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s", "jetpack-forms" );
+__( "Required", "jetpack-forms" );
+__( "Optional", "jetpack-forms" );
+__( "More details follow the field.", "jetpack-forms" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-forms" );
-__( "Dismiss", "jetpack-forms" );
 __( "Sort ascending", "jetpack-forms" );
 __( "Sort descending", "jetpack-forms" );
 __( "(no title)", "jetpack-forms" );
@@ -77,6 +82,7 @@ __( "Density", "jetpack-forms" );
 _x( "Comfortable", "Density option for DataView layout", "jetpack-forms" );
 _x( "Balanced", "Density option for DataView layout", "jetpack-forms" );
 _x( "Compact", "Density option for DataView layout", "jetpack-forms" );
+__( "Original aspect ratio", "jetpack-forms" );
 __( "Preview size", "jetpack-forms" );
 __( "Table", "jetpack-forms" );
 __( "Grid", "jetpack-forms" );
@@ -184,8 +190,6 @@ __( "Items per page", "jetpack-forms" );
 __( "Reset view", "jetpack-forms" );
 _x( "View options", "View is used as a noun", "jetpack-forms" );
 __( "Appearance", "jetpack-forms" );
-__( "Required", "jetpack-forms" );
-__( "Optional", "jetpack-forms" );
 __( "Days", "jetpack-forms" );
 __( "Weeks", "jetpack-forms" );
 __( "Months", "jetpack-forms" );
@@ -225,6 +229,7 @@ __( "Value must be true, false, or undefined", "jetpack-forms" );
 __( "Value must be an array.", "jetpack-forms" );
 __( "Every value must be a string.", "jetpack-forms" );
 __( "Value must be a valid color.", "jetpack-forms" );
+__( "Dismiss", "jetpack-forms" );
 __( "Akismet icon", "jetpack-forms" );
 __( "Add one-click spam protection for your forms with <a>Akismet</a>. Simply install the plugin and you're set.", "jetpack-forms" );
 __( "Akismet is installed. Just activate the plugin to start blocking spam.", "jetpack-forms" );
@@ -591,6 +596,7 @@ __( "Products", "jetpack-forms" );
 __( "Help", "jetpack-forms" );
 __( "Jetpack", "jetpack-forms" );
 __( "Breadcrumbs", "jetpack-forms" );
+__( "Sections", "jetpack-forms" );
 __( "Edit form", "jetpack-forms" );
 __( "Could not empty spam.", "jetpack-forms" );
 __( "Could not empty trash.", "jetpack-forms" );
@@ -744,8 +750,6 @@ __( "Add note", "jetpack-forms" );
 __( "Loading preview…", "jetpack-forms" );
 __( "Copied!", "jetpack-forms" );
 __( "Copy", "jetpack-forms" );
-/* translators: %1$s size of the file and %2$s is the file extension */
-__( "%1$s, %2$s", "jetpack-forms" );
 __( "No", "jetpack-forms" );
 __( "Date:", "jetpack-forms" );
 __( "Source:", "jetpack-forms" );

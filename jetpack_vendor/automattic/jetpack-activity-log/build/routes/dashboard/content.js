@@ -13,19 +13,10 @@ __( "(opens in a new tab)", "jetpack-activity-log" );
 __( "Products", "jetpack-activity-log" );
 __( "Help", "jetpack-activity-log" );
 __( "Jetpack", "jetpack-activity-log" );
+__( "Sections", "jetpack-activity-log" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-activity-log" );
 __( "Loading", "jetpack-activity-log" );
-__( "Date calendar", "jetpack-activity-log" );
-__( "Date range calendar", "jetpack-activity-log" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s", "jetpack-activity-log" );
-__( "Go to the Next Month", "jetpack-activity-log" );
-__( "Go to the Previous Month", "jetpack-activity-log" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s, selected", "jetpack-activity-log" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "%s, selected", "jetpack-activity-log" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-activity-log" );
 __( "Dismiss", "jetpack-activity-log" );
@@ -37,6 +28,22 @@ __( "Restore Connection", "jetpack-activity-log" );
 __( "A connection check failed.", "jetpack-activity-log" );
 __( "Take Action", "jetpack-activity-log" );
 __( "Reconnecting Jetpack…", "jetpack-activity-log" );
+/* translators: 1: Calendar type. 2: Current month and year. */
+__( "%1$s, %2$s", "jetpack-activity-log" );
+__( "Date calendar", "jetpack-activity-log" );
+__( "Date range calendar", "jetpack-activity-log" );
+__( "Navigation bar", "jetpack-activity-log" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s", "jetpack-activity-log" );
+__( "Next month", "jetpack-activity-log" );
+__( "Previous month", "jetpack-activity-log" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s, selected", "jetpack-activity-log" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "%s, selected", "jetpack-activity-log" );
+__( "Required", "jetpack-activity-log" );
+__( "Optional", "jetpack-activity-log" );
+__( "More details follow the field.", "jetpack-activity-log" );
 __( "Sort ascending", "jetpack-activity-log" );
 __( "Sort descending", "jetpack-activity-log" );
 __( "(no title)", "jetpack-activity-log" );
@@ -75,6 +82,7 @@ __( "Density", "jetpack-activity-log" );
 _x( "Comfortable", "Density option for DataView layout", "jetpack-activity-log" );
 _x( "Balanced", "Density option for DataView layout", "jetpack-activity-log" );
 _x( "Compact", "Density option for DataView layout", "jetpack-activity-log" );
+__( "Original aspect ratio", "jetpack-activity-log" );
 __( "Preview size", "jetpack-activity-log" );
 __( "Table", "jetpack-activity-log" );
 __( "Grid", "jetpack-activity-log" );
@@ -182,8 +190,6 @@ __( "Items per page", "jetpack-activity-log" );
 __( "Reset view", "jetpack-activity-log" );
 _x( "View options", "View is used as a noun", "jetpack-activity-log" );
 __( "Appearance", "jetpack-activity-log" );
-__( "Required", "jetpack-activity-log" );
-__( "Optional", "jetpack-activity-log" );
 __( "Days", "jetpack-activity-log" );
 __( "Weeks", "jetpack-activity-log" );
 __( "Months", "jetpack-activity-log" );
@@ -223,6 +229,8 @@ __( "Value must be true, false, or undefined", "jetpack-activity-log" );
 __( "Value must be an array.", "jetpack-activity-log" );
 __( "Every value must be a string.", "jetpack-activity-log" );
 __( "Value must be a valid color.", "jetpack-activity-log" );
+__( "Go to the Next Month", "jetpack-activity-log" );
+__( "Go to the Previous Month", "jetpack-activity-log" );
 __( "Start date", "jetpack-activity-log" );
 __( "End date", "jetpack-activity-log" );
 __( "Last 12 months", "jetpack-activity-log" );

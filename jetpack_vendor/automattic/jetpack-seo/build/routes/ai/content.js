@@ -21,6 +21,7 @@ __( "An Automattic Airline", "jetpack-components" );
 __( "Products", "jetpack-components" );
 __( "Help", "jetpack-components" );
 __( "Jetpack", "jetpack-components" );
+__( "Sections" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-components" );
 __( "What is GEO?", "jetpack-seo" );

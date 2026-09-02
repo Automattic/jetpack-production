@@ -13,6 +13,7 @@ __( "Close" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)" );
 __( "Dismiss" );
+__( "Sections" );
 __( "Jetpack Logo", "jetpack-components" );
 __( "An Automattic Airline", "jetpack-components" );
 /* translators: accessibility text */
@@ -46,19 +47,25 @@ __( "An error occurred auto-fixing this threat.", "jetpack-scan" );
 __( "The auto-fixer is taking longer than expected.", "jetpack-scan" );
 __( "An auto-fixer is in progress.", "jetpack-scan" );
 __( "Error", "jetpack-scan" );
+_x( "Critical", "Severity label for issues rated 5 or higher.", "jetpack-scan" );
+_x( "High", "Severity label for issues rated between 3 and 5.", "jetpack-scan" );
+_x( "Low", "Severity label for issues rated below 3.", "jetpack-scan" );
+/* translators: 1: Calendar type. 2: Current month and year. */
+__( "%1$s, %2$s" );
 __( "Date calendar" );
 __( "Date range calendar" );
+__( "Navigation bar" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s" );
-__( "Go to the Next Month" );
-__( "Go to the Previous Month" );
+__( "Next month" );
+__( "Previous month" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s, selected" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected" );
-_x( "Critical", "Severity label for issues rated 5 or higher.", "jetpack-scan" );
-_x( "High", "Severity label for issues rated between 3 and 5.", "jetpack-scan" );
-_x( "Low", "Severity label for issues rated below 3.", "jetpack-scan" );
+__( "Required" );
+__( "Optional" );
+__( "More details follow the field." );
 __( "Sort ascending" );
 __( "Sort descending" );
 __( "(no title)" );
@@ -97,6 +104,7 @@ __( "Density" );
 _x( "Comfortable", "Density option for DataView layout" );
 _x( "Balanced", "Density option for DataView layout" );
 _x( "Compact", "Density option for DataView layout" );
+__( "Original aspect ratio" );
 __( "Preview size" );
 __( "Table" );
 __( "Grid" );
@@ -204,8 +212,6 @@ __( "Items per page" );
 __( "Reset view" );
 _x( "View options", "View is used as a noun" );
 __( "Appearance" );
-__( "Required" );
-__( "Optional" );
 __( "Days" );
 __( "Weeks" );
 __( "Months" );

@@ -8,6 +8,7 @@
 
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-newsletter" );
+__( "Sections", "jetpack-newsletter" );
 __( "Jetpack Logo", "jetpack-newsletter" );
 __( "An Automattic Airline", "jetpack-newsletter" );
 __( "Products", "jetpack-newsletter" );

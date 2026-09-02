@@ -292,6 +292,7 @@ __( "An Automattic Airline", "jetpack-forms" );
 __( "Products", "jetpack-forms" );
 __( "Help", "jetpack-forms" );
 __( "Jetpack", "jetpack-forms" );
+__( "Sections", "jetpack-forms" );
 __( "Breadcrumbs", "jetpack-forms" );
 __( "Forms", "jetpack-forms" );
 _x( "Esc", "keyboard shortcut", "jetpack-forms" );
