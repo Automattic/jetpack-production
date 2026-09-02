@@ -407,9 +407,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-podcast' => array(
-            'pretty_version' => '2.0.1-alpha.1788342643',
-            'version' => '2.0.1.0-alpha1788342643',
-            'reference' => '8c5e08a4b3632265104c338793f34d214ba1efce',
+            'pretty_version' => '2.1.0-alpha.1788373142',
+            'version' => '2.1.0.0-alpha1788373142',
+            'reference' => '287d890c91566e668149c09218f0f5929efd6b4a',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-podcast',
             'aliases' => array(),

@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.1-alpha] - unreleased
+## [2.1.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Podcast: Bump Mission Control stats for episode publishes, show launches, directory URL additions, and podcasting status changes on every host.
 
 ### Changed
 - Update package dependencies.
@@ -245,7 +248,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Replace the wp-build placeholder with page chrome and tab navigation. [#48559]
 - Dashboard: Slim down wp-build wiring to the Backup pattern. [#48600]
 
-[2.0.1-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v2.0.0...v2.0.1-alpha
+[2.1.0-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v2.0.0...v2.1.0-alpha
 [2.0.0]: https://github.com/Automattic/jetpack-podcast/compare/v1.5.1...v2.0.0
 [1.5.1]: https://github.com/Automattic/jetpack-podcast/compare/v1.5.0...v1.5.1
 [1.5.0]: https://github.com/Automattic/jetpack-podcast/compare/v1.4.4...v1.5.0
