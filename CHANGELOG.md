@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - At a Glance: stop requesting a new speed score on sites that already have Boost.
+- Boost: Stop At a Glance re-testing the site speed when a recent score is already stored for the site's URL.
 - Comments: Fix a stored cross-site scripting vulnerability in social comment avatars.
 - Premium Analytics: comparison control: stop showing a comparison as active when there is no window behind it.
 
