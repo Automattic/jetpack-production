@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Reports: Open the Authors, Clicks and UTM reports folded to their top-level groups, and move the drill-down control to the right of the row title.
+- Set the dashboard's leaderboard row spacing and bar radius in CSS rather than on the chart theme. No visible change.
 - Update package dependencies.
 
 ## [0.5.0] - 2026-09-01
