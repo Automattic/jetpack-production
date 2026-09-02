@@ -7,10 +7,12 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Premium Analytics: comparison control: mark an active comparison with a "vs" prefix, and name the compared window in the trigger's tooltip.
 - Premium Analytics: Open the Authors, Clicks and UTM reports folded to their top-level groups, and move the drill-down control to the right of the row title.
 
 ### Bug fixes
 - Comments: Fix a stored cross-site scripting vulnerability in social comment avatars.
+- Premium Analytics: comparison control: stop showing a comparison as active when there is no window behind it.
 
 ## 16.2-a.5 - 2026-09-01
 ### Enhancements

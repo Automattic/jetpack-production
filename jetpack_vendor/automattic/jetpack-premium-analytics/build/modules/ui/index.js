@@ -59,6 +59,7 @@ __( "%1$s – %2$s", "jetpack-premium-analytics-pkg" );
 __( "No comparison", "jetpack-premium-analytics-pkg" );
 __( "Compare", "jetpack-premium-analytics-pkg" );
 __( "Compare to", "jetpack-premium-analytics-pkg" );
+_x( "vs", "prefix naming what a report is compared against", "jetpack-premium-analytics-pkg" );
 __( "By hours", "jetpack-premium-analytics-pkg" );
 __( "By days", "jetpack-premium-analytics-pkg" );
 __( "By weeks", "jetpack-premium-analytics-pkg" );
