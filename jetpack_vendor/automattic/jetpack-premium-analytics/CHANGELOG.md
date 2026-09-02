@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - Set the dashboard's leaderboard row spacing and bar radius in CSS rather than on the chart theme. No visible change.
 - Update package dependencies.
 
+### Removed
+- Plan usage: Remove the widget and its upgrade link from the dashboard while the paid plan is revised.
+
 ### Fixed
 - Comparison control: stop showing a comparison as active when there is no window behind it.
 
