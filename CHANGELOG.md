@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI: Send the standard site and audience props on the feature-toggle Tracks event.
+- Reprint export: Serve a site export from Jetpack on Pressable and WordPress.com sites.
 - Update package dependencies.
 
 ## 16.2-a.5 - 2026-09-01

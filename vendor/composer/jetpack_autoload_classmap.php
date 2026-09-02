@@ -1666,6 +1666,14 @@ return array(
 		'version' => '4.0.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-redirect/src/class-redirect.php'
 	),
+	'Automattic\\Jetpack\\Reprint_Export\\REST_Controller' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/reprint-export/class-rest-controller.php'
+	),
+	'Automattic\\Jetpack\\Reprint_Export\\Reprint_Exporter' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/reprint-export/class-reprint-exporter.php'
+	),
 	'Automattic\\Jetpack\\Roles' => array(
 		'version' => '4.0.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-roles/src/class-roles.php'
@@ -2674,6 +2682,38 @@ return array(
 		'version' => '6.0.0',
 		'path'    => $vendorDir . '/automattic/jetpack-autoloader/src/class-shutdown-handler.php'
 	),
+	'Site_Export_HMAC_Client' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-hmac-client.php'
+	),
+	'Site_Export_HMAC_Server' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-hmac-server.php'
+	),
+	'Site_Export_HTTP_Server' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-http-server.php'
+	),
+	'Site_Export_Multipart_Processor' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-multipart-processor.php'
+	),
+	'Site_Export_Push_Configuration_Exception' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-push-configuration-exception.php'
+	),
+	'Site_Export_Push_Endpoints' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-push-endpoints.php'
+	),
+	'Site_Export_Push_Exception' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-push-exception.php'
+	),
+	'Site_Export_Push_Session' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-push-session.php'
+	),
 	'VIDEOPRESS_PRIVACY' => array(
 		'version' => '0.49.1.0-alpha1788342643',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/utility-functions.php'
@@ -2725,5 +2765,49 @@ return array(
 	'WooCommerceAnalyticsProxySpeed' => array(
 		'version' => '0.17.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/mu-plugin/woocommerce-analytics-proxy-speed-module-template.php'
+	),
+	'WordPress\\Reprint\\Server\\DatabaseRowsReader' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-database-rows-reader.php'
+	),
+	'WordPress\\Reprint\\Server\\FileIndexProcessor' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-file-index-processor.php'
+	),
+	'WordPress\\Reprint\\Server\\FileTreeProducer' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-file-tree-producer.php'
+	),
+	'WordPress\\Reprint\\Server\\GzipOutputStream' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-gzip-output-stream.php'
+	),
+	'WordPress\\Reprint\\Server\\MySQLDumpProducer' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-mysql-dump-producer.php'
+	),
+	'WordPress\\Reprint\\Server\\PdoConstants' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-pdo-constants.php'
+	),
+	'WordPress\\Reprint\\Server\\ResourceBudget' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-resource-budget.php'
+	),
+	'WordPress\\Reprint\\Server\\SqliteDriverPDO' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-sqlite-driver-pdo.php'
+	),
+	'WordPress\\Reprint\\Server\\SqliteDriverPDOStatement' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-sqlite-driver-pdo.php'
+	),
+	'WordPress\\Reprint\\Server\\WpdbDriverPDO' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-wpdb-driver-pdo.php'
+	),
+	'WordPress\\Reprint\\Server\\WpdbDriverPDOStatement' => array(
+		'version' => '0.10.6.0',
+		'path'    => $vendorDir . '/wp-php-toolkit/reprint-server/src/class-wpdb-driver-pdo.php'
 	),
 );

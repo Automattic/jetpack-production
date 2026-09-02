@@ -1279,8 +1279,9 @@ function jetpack_has_no_module_info( $slug ) {
 	  0 => 'module-extras',
 	  1 => 'module-info',
 	  2 => 'plugin-search',
-	  3 => 'simple-payments',
-	  4 => 'theme-tools',
+	  3 => 'reprint-export',
+	  4 => 'simple-payments',
+	  5 => 'theme-tools',
 	);
 
 	return in_array( $slug, $no_info_slugs, true );
