@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Comments: Fix a stored cross-site scripting vulnerability in social comment avatars.
 - Premium Analytics: comparison control: stop showing a comparison as active when there is no window behind it.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI: Send the standard site and audience props on the feature-toggle Tracks event.
+
 ## 16.2-a.5 - 2026-09-01
 ### Enhancements
 - AI: Add Quick start links for connecting Claude and ChatGPT to the AI Hub Overview. [#51691]
