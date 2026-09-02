@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - At a Glance: stop requesting a new speed score on sites that already have Boost.
 - Boost: Stop At a Glance re-testing the site speed when a recent score is already stored for the site's URL.
 - Comments: Fix a stored cross-site scripting vulnerability in social comment avatars.
+- Forms: add an empty alt attribute to the image option thumbnails in the form success summary.
 - Premium Analytics: comparison control: stop showing a comparison as active when there is no window behind it.
 - Social: Point WordPress.com Simple sites at the Business plan when upgrading, instead of a checkout they can't complete.
 - Tiled Gallery: fix the gallery growing without bound inside a vertical Group or Stack, and keep its width in step with the space available when a surrounding block is resized or re-aligned.
