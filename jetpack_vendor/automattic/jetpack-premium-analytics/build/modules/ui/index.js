@@ -12,10 +12,12 @@ __( "Yesterday", "jetpack-premium-analytics-pkg" );
 __( "Last 24 hours", "jetpack-premium-analytics-pkg" );
 /* translators: abbreviation for "Last 24 hours". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
 _x( "24H", "short date range preset", "jetpack-premium-analytics-pkg" );
+__( "Last 7 days", "jetpack-premium-analytics-pkg" );
 /* translators: Rolling date-range preset pill. The last 7 days; keep it short. */
 __( "7 days", "jetpack-premium-analytics-pkg" );
 /* translators: abbreviation for "7 days". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
 _x( "7D", "short date range preset", "jetpack-premium-analytics-pkg" );
+__( "Last 30 days", "jetpack-premium-analytics-pkg" );
 /* translators: Rolling date-range preset pill. The last 30 days; keep it short. */
 __( "30 days", "jetpack-premium-analytics-pkg" );
 /* translators: abbreviation for "30 days". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
@@ -23,6 +25,7 @@ _x( "30D", "short date range preset", "jetpack-premium-analytics-pkg" );
 __( "Last 90 days", "jetpack-premium-analytics-pkg" );
 __( "Last 365 days", "jetpack-premium-analytics-pkg" );
 __( "Last month", "jetpack-premium-analytics-pkg" );
+__( "Last 12 months", "jetpack-premium-analytics-pkg" );
 /* translators: Rolling date-range preset pill. The last 12 months; keep it short. */
 __( "12 months", "jetpack-premium-analytics-pkg" );
 /* translators: abbreviation for "12 months". Shown in a segmented control too narrow for the full label, so keep it as short as the language allows. */
@@ -76,6 +79,8 @@ __( "Cancel", "jetpack-premium-analytics-pkg" );
 __( "Apply", "jetpack-premium-analytics-pkg" );
 __( "Custom", "jetpack-premium-analytics-pkg" );
 __( "Date range", "jetpack-premium-analytics-pkg" );
+__( "Period", "jetpack-premium-analytics-pkg" );
+__( "Custom range", "jetpack-premium-analytics-pkg" );
 __( "Time period", "jetpack-premium-analytics-pkg" );
 __( "Select period", "jetpack-premium-analytics-pkg" );
 __( "Couldn't refresh. Showing data from less than a minute ago.", "jetpack-premium-analytics-pkg" );
