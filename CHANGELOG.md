@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: pick the date period from a dropdown instead of a row of buttons, with the calendar beside it on Custom range.
 
 ### Bug fixes
+- At a Glance: stop requesting a new speed score on sites that already have Boost.
 - Comments: Fix a stored cross-site scripting vulnerability in social comment avatars.
 - Premium Analytics: comparison control: stop showing a comparison as active when there is no window behind it.
 
