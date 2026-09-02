@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Forms: hide the Lead Capture pattern on WordPress.com, matching the block variation that is already hidden there.
+
 ## [8.0.0] - 2026-09-01
 ### Added
 - Add help text to form fields, and show the date field's expected format below the input instead of in its label. Preserve help text across field transformations and form details, and fix field descriptions for inset-label styles. [#51122]
