@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Fix the dashboard rendering blank on WordPress 7.0.x, where the welcome modal crashed on the missing public ThemeProvider export.
 - Playlist block: Wrap long unbroken video titles and decode HTML entities in titles on the front end.
 
 ## [0.49.0] - 2026-09-01
