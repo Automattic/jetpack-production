@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Show a connect-account card on the MCP settings page when the current user is not connected to WordPress.com.
 - Premium Analytics: comparison control: mark an active comparison with a "vs" prefix, and name the compared window in the trigger's tooltip.
 - Premium Analytics: Open the Authors, Clicks and UTM reports folded to their top-level groups, and move the drill-down control to the right of the row title.
+- Premium Analytics: pick the date period from a dropdown instead of a row of buttons, with the calendar beside it on Custom range.
 
 ### Bug fixes
 - Comments: Fix a stored cross-site scripting vulnerability in social comment avatars.

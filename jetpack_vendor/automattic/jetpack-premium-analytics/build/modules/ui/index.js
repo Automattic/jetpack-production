@@ -71,16 +71,14 @@ __( "By years", "jetpack-premium-analytics-pkg" );
 __( "Chart interval", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the active chart interval, e.g. "By days". */
 __( "Chart interval: %s", "jetpack-premium-analytics-pkg" );
-__( "Previous period", "jetpack-premium-analytics-pkg" );
-__( "Next period", "jetpack-premium-analytics-pkg" );
 __( "From", "jetpack-premium-analytics-pkg" );
 __( "To", "jetpack-premium-analytics-pkg" );
 __( "Cancel", "jetpack-premium-analytics-pkg" );
 __( "Apply", "jetpack-premium-analytics-pkg" );
-__( "Custom", "jetpack-premium-analytics-pkg" );
-__( "Date range", "jetpack-premium-analytics-pkg" );
 __( "Period", "jetpack-premium-analytics-pkg" );
 __( "Custom range", "jetpack-premium-analytics-pkg" );
+__( "Previous period", "jetpack-premium-analytics-pkg" );
+__( "Next period", "jetpack-premium-analytics-pkg" );
 __( "Time period", "jetpack-premium-analytics-pkg" );
 __( "Select period", "jetpack-premium-analytics-pkg" );
 __( "Couldn't refresh. Showing data from less than a minute ago.", "jetpack-premium-analytics-pkg" );
