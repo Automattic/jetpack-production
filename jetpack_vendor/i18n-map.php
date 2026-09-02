@@ -62,7 +62,7 @@ return array(
     ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
-      'ver' => '9.1.1-alpha1788363074',
+      'ver' => '9.1.1-alpha1788364081',
     ),
     'jetpack-explat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-explat',
@@ -82,7 +82,7 @@ return array(
     ),
     'jetpack-forms' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-forms',
-      'ver' => '8.0.1-alpha1788360790',
+      'ver' => '8.0.1-alpha1788364081',
     ),
     'jetpack-image-cdn' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-image-cdn',
