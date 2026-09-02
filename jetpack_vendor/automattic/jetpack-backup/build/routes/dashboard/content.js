@@ -232,6 +232,8 @@ _x( "%s MB", "file size in megabytes", "jetpack-backup-pkg" );
 _x( "%s GB", "file size in gigabytes", "jetpack-backup-pkg" );
 /* translators: %s: a file size number, e.g. "512". */
 _x( "%s B", "file size in bytes", "jetpack-backup-pkg" );
+__( "This preview is hidden because it contains sensitive information.", "jetpack-backup-pkg" );
+__( "Show preview", "jetpack-backup-pkg" );
 __( "Preview unavailable for this file.", "jetpack-backup-pkg" );
 __( "Loading preview…", "jetpack-backup-pkg" );
 __( "Preview could not be loaded for this file.", "jetpack-backup-pkg" );
