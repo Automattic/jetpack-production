@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Cache the promoted Backup subscription price so the screen shown to sites without a plan stops fetching it from WordPress.com on every load.
+- Stop a slow or failing WordPress.com from reading as a missing Backup plan.
 
 ## [5.0.0] - 2026-09-01
 ### Changed
