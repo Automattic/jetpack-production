@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Playlist block: Wrap long unbroken video titles and decode HTML entities in titles on the front end.
+
 ## [0.49.0] - 2026-09-01
 ### Added
 - Dashboard: Give the empty Library an upload dropzone empty state. [#51717]

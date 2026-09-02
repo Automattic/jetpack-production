@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: comparison control: stop showing a comparison as active when there is no window behind it.
 - Social: Point WordPress.com Simple sites at the Business plan when upgrading, instead of a checkout they can't complete.
 - Tiled Gallery: fix the gallery growing without bound inside a vertical Group or Stack, and keep its width in step with the space available when a surrounding block is resized or re-aligned.
+- VideoPress: Fix playlist block video titles overlapping when long, and apostrophes rendering as HTML entities.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI: Send the standard site and audience props on the feature-toggle Tracks event.
