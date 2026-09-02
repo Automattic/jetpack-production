@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Point WordPress.com Simple sites at the Business plan when upgrading, instead of a checkout they can't complete.
+
 ## [0.86.0] - 2026-09-01
 ### Changed
 - Sharing activity: Update status badges. [#51601]

@@ -143,6 +143,8 @@ __( "Leave empty to use the default share message.", "jetpack-publicize-pkg" );
 __( "Posts shared to this account will use this template instead of the default.", "jetpack-publicize-pkg" );
 __( "Custom message for this connection", "jetpack-publicize-pkg" );
 __( "Showing your default share message. To customize it for this account, <a>upgrade your plan</a>.", "jetpack-publicize-pkg" );
+/* translators: %s: name of the plan that unlocks the feature, e.g. "Business". */
+__( "Showing your default share message. To customize it for this account, <a>upgrade to the %s plan</a>.", "jetpack-publicize-pkg" );
 __( "Mark the connection as shared", "jetpack-publicize-pkg" );
 __( "If enabled, the connection will be available to all administrators, editors, and authors.", "jetpack-publicize-pkg" );
 __( "This connection is added by a site administrator.", "jetpack-publicize-pkg" );
@@ -208,6 +210,9 @@ __( "Last 30 days", "jetpack-publicize-pkg" );
 __( "Last 90 days", "jetpack-publicize-pkg" );
 /* translators: %d: number of days the chart covers. */
 __( "Visits from social media networks over the last %d days.", "jetpack-publicize-pkg" );
+__( "Upgrade to see which social networks are driving visits to your site, day by day.", "jetpack-publicize-pkg" );
+/* translators: %s: name of the plan that unlocks the feature, e.g. "Business". */
+__( "Upgrade to the %s plan to see which social networks are driving visits to your site, day by day.", "jetpack-publicize-pkg" );
 __( "Traffic from social media", "jetpack-publicize-pkg" );
 __( "Date range", "jetpack-publicize-pkg" );
 __( "Available with a paid plan", "jetpack-publicize-pkg" );
@@ -216,7 +221,6 @@ __( "Something went wrong fetching your social traffic. Refresh the page to try 
 __( "No traffic from social media yet", "jetpack-publicize-pkg" );
 __( "Once your shared posts start driving visits, you’ll see the breakdown here.", "jetpack-publicize-pkg" );
 __( "Unlock traffic insights", "jetpack-publicize-pkg" );
-__( "Upgrade to see which social networks are driving visits to your site, day by day.", "jetpack-publicize-pkg" );
 __( "Upgrade now", "jetpack-publicize-pkg" );
 __( "No accounts connected yet", "jetpack-publicize-pkg" );
 __( "Connect a social account to share your posts automatically when you publish.", "jetpack-publicize-pkg" );
