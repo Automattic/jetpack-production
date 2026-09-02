@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Recompute the connection status after the connection tokens are deleted, so a failed reconnection no longer reports the site as still connected.
+
 ## [9.1.0] - 2026-09-01
 ### Added
 - Register the `dismissed_a4a_banner` option name. [#51441]
