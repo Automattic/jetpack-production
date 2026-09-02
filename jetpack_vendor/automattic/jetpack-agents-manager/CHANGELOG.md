@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.11.1-alpha] - unreleased
+## [0.12.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Admin bar nodes: send the icon name in `meta.icon` instead of SVG markup, so REST consumers resolve it against their own icon set.
 - Update package dependencies.
 
 ## [0.11.0] - 2026-09-01
@@ -139,7 +140,7 @@ This is an alpha version! The changes listed here are not final.
 - Agents Manager: Allow overriding variant and sectionName through filters [#49283]
 - Initial version, extracted from Jetpack MU WPCOM to its own package for external consumption. [#49202]
 
-[0.11.1-alpha]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.11.0...v0.11.1-alpha
+[0.12.0-alpha]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.11.0...v0.12.0-alpha
 [0.11.0]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.9.5...v0.10.0
 [0.9.5]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.9.4...v0.9.5
