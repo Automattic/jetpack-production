@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Comparison control: stop showing a comparison as active when there is no window behind it.
 - Posting activity: Count published posts by the site's calendar day rather than the UTC one.
+- Show chart dates in the site's timezone and locale, and name the hour on hourly charts.
 
 ## [0.5.0] - 2026-09-01
 ### Added
