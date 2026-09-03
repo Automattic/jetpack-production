@@ -10,10 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a consumer-configured WooCommerce Analytics sync module with checksum support.
 - Sync the jetpack_premium_analytics_enabled option, so WordPress.com can see whether a site has the Premium Analytics dashboard turned on.
 
 ### Fixed
 - Require a paid Search plan before syncing AI Answers guideline content.
+- WooCommerce Analytics: Guard optional WooCommerce symbols to avoid fatals on older versions and missing parent orders.
 
 ## [5.0.1] - 2026-09-01
 ### Changed
