@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - At a Glance: stop requesting a new speed score on sites that already have Boost.
 - Boost: Stop At a Glance re-testing the site speed when a recent score is already stored for the site's URL.
+- Charts: keep chart tooltips under sticky and fixed page elements.
 - Charts: Place line and area chart date ticks on the site's time zone boundaries, name the hour in tooltips on hourly data, and read hour labels in the site's own locale rather than a forced 12-hour clock.
 - Comments: Fix a stored cross-site scripting vulnerability in social comment avatars.
 - Forms: add an empty alt attribute to the image option thumbnails in the form success summary.
