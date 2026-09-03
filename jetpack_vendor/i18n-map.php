@@ -150,7 +150,7 @@ return array(
     ),
     'jetpack-premium-analytics-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-premium-analytics',
-      'ver' => '0.6.0-alpha1788451594',
+      'ver' => '0.6.0-alpha1788451923',
     ),
     'jetpack-protect-models' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-protect-models',
