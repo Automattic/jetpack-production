@@ -198,7 +198,6 @@ __( "Close", "jetpack-premium-analytics-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 __( "Dismiss", "jetpack-premium-analytics-pkg" );
-__( "Sections", "jetpack-premium-analytics-pkg" );
 __( "More options", "jetpack-premium-analytics-pkg" );
 __( "Reset to default", "jetpack-premium-analytics-pkg" );
 __( "Add widget", "jetpack-premium-analytics-pkg" );
@@ -449,14 +448,16 @@ __( "Widget options", "jetpack-premium-analytics-pkg" );
 __( "Width", "jetpack-premium-analytics-pkg" );
 __( "Use available width", "jetpack-premium-analytics-pkg" );
 __( "Make full width", "jetpack-premium-analytics-pkg" );
+/* translators: %1$s and %2$s: the report range bounds, e.g. "Jul 9, 2026". */
+__( "Performance from %1$s to %2$s", "jetpack-premium-analytics-pkg" );
 __( "Page", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the date the newsletter was sent, e.g. "Aug 19, 2025". */
 __( "Email sent on %s.", "jetpack-premium-analytics-pkg" );
 /* translators: %1$s: "Post" or "Page". %2$s: the publish date, e.g. "Aug 19, 2025". */
 __( "%1$s published on %2$s.", "jetpack-premium-analytics-pkg" );
-/* translators: %1$s and %2$s: the report range bounds, e.g. "Jul 9, 2026". */
-__( "Performance from %1$s to %2$s", "jetpack-premium-analytics-pkg" );
 __( "Loading…", "jetpack-premium-analytics-pkg" );
+__( "Untitled page", "jetpack-premium-analytics-pkg" );
+__( "Untitled post", "jetpack-premium-analytics-pkg" );
 __( "Post traffic", "jetpack-premium-analytics-pkg" );
 __( "Email opens", "jetpack-premium-analytics-pkg" );
 __( "Email clicks", "jetpack-premium-analytics-pkg" );
