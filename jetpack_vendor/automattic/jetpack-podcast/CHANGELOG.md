@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Replace the date range picker with one built on the WordPress design system calendar.
 - Update package dependencies.
 
+### Fixed
+- Stats: Open the date range calendar on the selected range.
+
 ## [2.0.0] - 2026-09-01
 ### Changed
 - Posts to Podcast: Scope the generated episodes list to the posts the current user can edit, matching the Posts screen. [#51816]
