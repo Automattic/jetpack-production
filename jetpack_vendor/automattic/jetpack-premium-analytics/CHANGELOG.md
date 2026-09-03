@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Removed
 - Plan usage: Remove the widget and its upgrade link from the dashboard while the paid plan is revised.
+- Remove the segmented date preset control, replaced by the period dropdown.
 
 ### Fixed
 - Comparison control: stop showing a comparison as active when there is no window behind it.
