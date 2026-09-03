@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- AI SEO: only offer the AI SEO control where a surface it governs can actually run.
 - Update package dependencies.
 
 ## [0.9.0] - 2026-09-01

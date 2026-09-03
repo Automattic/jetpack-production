@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Jetpack AI: Make the Overview and AI Features tabs available on self-hosted sites and apply their controls.
+- Jetpack AI: only show the AI SEO control on sites where the feature it turns on can run.
 - Jetpack AI: Show a connect-account card on the MCP settings page when the current user is not connected to WordPress.com.
 - Premium Analytics: Add an "Any feedback?" action to the dashboard header.
 - Premium Analytics: comparison control: mark an active comparison with a "vs" prefix, and name the compared window in the trigger's tooltip.
