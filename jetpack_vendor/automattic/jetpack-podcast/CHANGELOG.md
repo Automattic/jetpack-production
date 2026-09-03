@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast: Bump Mission Control stats for episode publishes, show launches, directory URL additions, and podcasting status changes on every host.
 
 ### Changed
+- Stats: Replace the date range picker with one built on the WordPress design system calendar.
 - Update package dependencies.
 
 ## [2.0.0] - 2026-09-01

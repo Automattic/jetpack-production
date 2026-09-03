@@ -23,6 +23,19 @@ __( "Help", "jetpack-components" );
 __( "Jetpack", "jetpack-components" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-components" );
+/* translators: 1: Calendar type. 2: Current month and year. */
+__( "%1$s, %2$s" );
+__( "Date calendar" );
+__( "Date range calendar" );
+__( "Navigation bar" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s" );
+__( "Next month" );
+__( "Previous month" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s, selected" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "%s, selected" );
 __( "Saving…", "jetpack-podcast" );
 __( "Settings saved.", "jetpack-podcast" );
 __( "Could not save your podcast settings. Please try again.", "jetpack-podcast" );
@@ -229,19 +242,6 @@ __( "Stops publishing your podcast feed. Your show details stay saved, so you ca
 __( "Stop publishing", "jetpack-podcast" );
 __( "Stop publishing your podcast?", "jetpack-podcast" );
 __( "Your podcast feed will stop being generated. Existing episodes stay in the assigned category and you can start publishing again at any time.", "jetpack-podcast" );
-/* translators: 1: Calendar type. 2: Current month and year. */
-__( "%1$s, %2$s" );
-__( "Date calendar" );
-__( "Date range calendar" );
-__( "Navigation bar" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s" );
-__( "Next month" );
-__( "Previous month" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s, selected" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "%s, selected" );
 __( "Required" );
 __( "Optional" );
 __( "Sort ascending" );
@@ -526,31 +526,19 @@ __( "We submit your feed for you. It usually goes live within a few minutes.", "
 __( "Manual submission", "jetpack-podcast" );
 __( "Copy this URL, then submit it to each directory below yourself.", "jetpack-podcast" );
 __( "Set your post category to generate the feed URL you can submit to directories.", "jetpack-podcast" );
-__( "Go to the Next Month" );
-__( "Go to the Previous Month" );
-__( "Start date" );
-__( "End date" );
-/* translators: %1$s: start date, %2$s: end date */
-__( "%1$s to %2$s" );
-__( "Last 90 days" );
-__( "Last 12 months" );
-__( "Last 3 years" );
-__( "Date range presets" );
-__( "default range" );
-__( "Date Range" );
-__( "Clear" );
-/* translators: %s is the preset label, e.g. 'Last 30 days' */
-__( "Apply %s" );
-/* translators: %s is the preset label, e.g. 'Last 30 days' */
-__( "Apply" );
-__( "Select a date range" );
-/* Translators: %s: date range label */
-__( "Date range: %s. Activate to open calendar." );
 __( "Last 7 days", "jetpack-podcast" );
 __( "Last 30 days", "jetpack-podcast" );
 __( "Last 90 days", "jetpack-podcast" );
 __( "Last 12 months", "jetpack-podcast" );
 __( "All time", "jetpack-podcast" );
+/* translators: %1$s: start date, %2$s: end date */
+__( "%1$s to %2$s", "jetpack-podcast" );
+__( "Today", "jetpack-podcast" );
+__( "Yesterday", "jetpack-podcast" );
+__( "Month to date", "jetpack-podcast" );
+__( "Year to date", "jetpack-podcast" );
+__( "Select a date range", "jetpack-podcast" );
+__( "Date range presets", "jetpack-podcast" );
 __( "Reset zoom", "jetpack-charts" );
 __( "Current period", "jetpack-charts" );
 __( "Previous period", "jetpack-charts" );
