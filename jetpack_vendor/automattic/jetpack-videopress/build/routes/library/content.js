@@ -365,6 +365,15 @@ __( "There was an error testing Jetpack. Error: %s", "jetpack-videopress-pkg" );
 __( "Library", "jetpack-videopress-pkg" );
 __( "Stats", "jetpack-videopress-pkg" );
 __( "Settings", "jetpack-videopress-pkg" );
+__( "You’re on the free plan, which allows 1 video upload. Upgrade for more storage and unlimited uploads.", "jetpack-videopress-pkg" );
+__( "You’ve reached the free plan’s 1-video limit. Upgrade to upload more.", "jetpack-videopress-pkg" );
+__( "Upgrade", "jetpack-videopress-pkg" );
+__( "Only video files can be uploaded.", "jetpack-videopress-pkg" );
+__( "That video format can’t be uploaded. Convert your video to MP4 or MOV, then try again.", "jetpack-videopress-pkg" );
+/* translators: %s: an upper-cased video file extension, e.g. "WEBM". */
+__( "%s files can’t be uploaded. Convert your video to MP4 or MOV, then try again.", "jetpack-videopress-pkg" );
+/* translators: %d: number of videos that could not be uploaded because the plan limit was reached. */
+_n( "%d video wasn’t uploaded because it exceeds your plan’s limit.", "%d videos weren’t uploaded because they exceed your plan’s limit.", 1, "jetpack-videopress-pkg" );
 __( "What VideoPress does", "jetpack-videopress-pkg" );
 __( "A player you own", "jetpack-videopress-pkg" );
 __( "No ads, no logos, and nothing recommended afterwards.", "jetpack-videopress-pkg" );
@@ -380,9 +389,6 @@ __( "Learn more", "jetpack-videopress-pkg" );
 __( "Upload a video", "jetpack-videopress-pkg" );
 __( "Host, manage, customize, and track your videos — all in one place.", "jetpack-videopress-pkg" );
 __( "Retry", "jetpack-videopress-pkg" );
-__( "You’re on the free plan, which allows 1 video upload. Upgrade for more storage and unlimited uploads.", "jetpack-videopress-pkg" );
-__( "You’ve reached the free plan’s 1-video limit. Upgrade to upload more.", "jetpack-videopress-pkg" );
-__( "Upgrade", "jetpack-videopress-pkg" );
 __( "Make public", "jetpack-videopress-pkg" );
 __( "Make private", "jetpack-videopress-pkg" );
 __( "Reset to site default", "jetpack-videopress-pkg" );
@@ -424,10 +430,6 @@ __( "/month, billed yearly", "jetpack-videopress-pkg" );
 __( "Get VideoPress", "jetpack-videopress-pkg" );
 __( "Start for free", "jetpack-videopress-pkg" );
 __( "Upload one video", "jetpack-videopress-pkg" );
-__( "Only video files can be uploaded.", "jetpack-videopress-pkg" );
-__( "That video format can’t be uploaded. Convert your video to MP4 or MOV, then try again.", "jetpack-videopress-pkg" );
-/* translators: %s: an upper-cased video file extension, e.g. "WEBM". */
-__( "%s files can’t be uploaded. Convert your video to MP4 or MOV, then try again.", "jetpack-videopress-pkg" );
 __( "Select videos to upload", "jetpack-videopress-pkg" );
 __( "Select a video to upload", "jetpack-videopress-pkg" );
 __( "Drag and drop your videos here", "jetpack-videopress-pkg" );
@@ -438,8 +440,6 @@ __( "Video uploaded to VideoPress.", "jetpack-videopress-pkg" );
 /* translators: %s: reason returned by the upload endpoint, e.g. "403: Invalid Mime". */
 __( "Failed to upload video to VideoPress: %s", "jetpack-videopress-pkg" );
 __( "Failed to upload video to VideoPress.", "jetpack-videopress-pkg" );
-/* translators: %d: number of videos that could not be uploaded because the plan limit was reached. */
-_n( "%d video wasn’t uploaded because it exceeds your plan’s limit.", "%d videos weren’t uploaded because they exceed your plan’s limit.", 1, "jetpack-videopress-pkg" );
 /* translators: %d: number of videos being deleted. */
 _n( "Deleting %d video…", "Deleting %d videos…", 1, "jetpack-videopress-pkg" );
 /* translators: %d: number of deleted videos. */

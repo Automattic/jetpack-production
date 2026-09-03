@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Match the post and video page headers to the layout used across the rest of Analytics.
 - Premium Analytics: Open the Authors, Clicks and UTM reports folded to their top-level groups, and move the drill-down control to the right of the row title.
 - Premium Analytics: pick the date period from a dropdown instead of a row of buttons, with the calendar beside it on Custom range.
+- VideoPress: Open the file picker directly from the dashboard welcome modal's Upload a video button, then land on the Library to follow the upload's progress.
 
 ### Bug fixes
 - At a Glance: stop requesting a new speed score on sites that already have Boost.
@@ -34,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Tiled Gallery: fix the gallery growing without bound inside a vertical Group or Stack, and keep its width in step with the space available when a surrounding block is resized or re-aligned.
 - VideoPress: Fix playlist block video titles overlapping when long, and apostrophes rendering as HTML entities.
 - VideoPress: Fix the dashboard rendering blank on WordPress 7.0.x, where the welcome modal crashed on the missing public ThemeProvider export.
+- VideoPress: Make the welcome=1 review parameter reopen the dashboard welcome modal after it has been dismissed.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - AI: Send the standard site and audience props on the feature-toggle Tracks event.

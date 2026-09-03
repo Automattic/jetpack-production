@@ -5,14 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.49.1-alpha] - unreleased
+## [0.50.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Dashboard: Open the file picker directly from the welcome modal's Upload a video button, then land on the Library to follow the upload's progress.
 - Update package dependencies.
 
 ### Fixed
+- Dashboard: Make the welcome=1 review parameter reopen the welcome modal after it has been dismissed.
 - Fix the dashboard rendering blank on WordPress 7.0.x, where the welcome modal crashed on the missing public ThemeProvider export.
 - Playlist block: Wrap long unbroken video titles and decode HTML entities in titles on the front end.
 
@@ -2218,7 +2220,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.49.1-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.49.0...v0.49.1-alpha
+[0.50.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.49.0...v0.50.0-alpha
 [0.49.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.48.0...v0.49.0
 [0.48.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.47.2...v0.48.0
 [0.47.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.47.1...v0.47.2
