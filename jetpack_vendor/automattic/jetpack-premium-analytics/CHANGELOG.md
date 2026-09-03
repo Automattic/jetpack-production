@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a date period dropdown: one trigger naming the applied period, a menu of the common periods grouped by scale, and the calendar beside the list on Custom range.
 - Add an "Any feedback?" action to the dashboard header.
 - Expose the dashboard opt-in as a site setting, so administrators can turn the dashboard on and off through the site settings API.
+- Onboarding: add the widget grid animation for the welcome modal.
 
 ### Changed
 - Comparison control: mark an active comparison with a "vs" prefix, and name the compared window in the trigger's tooltip.
