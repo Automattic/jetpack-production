@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Comparison control: stop showing a comparison as active when there is no window behind it.
+- Date controls: Include the current day in the last-N-day ranges, and count the 12-month range in whole calendar months for its dates, its length and the step arrows, to match Jetpack Stats. The previous period covers the same number of days as the range it compares.
 - Posting activity: Count published posts by the site's calendar day rather than the UTC one.
 - Show chart dates in the site's timezone and locale, and name the hour on hourly charts.
 
