@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Drop the Preview label from AI Answers.
 - Update package dependencies.
 
+### Fixed
+- AI Answers: Require a paid Search plan to enable AI Answers, not just the setting's raw value.
+
 ## [8.0.0] - 2026-09-01
 ### Changed
 - AI Answers: Follow the Jetpack AI master switch in the search overlay and the AI Answer block — live on WordPress.com Simple, internal testing environments elsewhere ahead of release. [#50884]

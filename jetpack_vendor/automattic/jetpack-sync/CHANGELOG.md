@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Sync the jetpack_premium_analytics_enabled option, so WordPress.com can see whether a site has the Premium Analytics dashboard turned on.
 
+### Fixed
+- Require a paid Search plan before syncing AI Answers guideline content.
+
 ## [5.0.1] - 2026-09-01
 ### Changed
 - Internal updates.

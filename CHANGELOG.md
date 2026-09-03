@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: comparison control: stop showing a comparison as active when there is no window behind it.
 - Premium Analytics: Count posts in Posting activity by the site's calendar day rather than the UTC one.
 - Premium Analytics: Show chart dates in the site's timezone and locale, and name the hour on hourly charts.
+- Search: Require a paid Search plan to enable AI Answers, not just the setting's raw value.
 - Social: Point WordPress.com Simple sites at the Business plan when upgrading, instead of a checkout they can't complete.
 - Tiled Gallery: fix the gallery growing without bound inside a vertical Group or Stack, and keep its width in step with the space available when a surrounding block is resized or re-aligned.
 - VideoPress: Fix playlist block video titles overlapping when long, and apostrophes rendering as HTML entities.
