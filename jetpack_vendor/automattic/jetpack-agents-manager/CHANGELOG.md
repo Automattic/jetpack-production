@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Expose the deployed build version to the frontend as `agentsManagerData.version`.
+
 ### Changed
 - Admin bar nodes: send the icon name in `meta.icon` instead of SVG markup, so REST consumers resolve it against their own icon set.
 - Update package dependencies.
