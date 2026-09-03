@@ -301,6 +301,17 @@ __( "Widget options", "jetpack-premium-analytics-pkg" );
 __( "Width", "jetpack-premium-analytics-pkg" );
 __( "Use available width", "jetpack-premium-analytics-pkg" );
 __( "Make full width", "jetpack-premium-analytics-pkg" );
+__( "Much worse", "jetpack-premium-analytics-pkg" );
+__( "A bit worse", "jetpack-premium-analytics-pkg" );
+__( "About the same", "jetpack-premium-analytics-pkg" );
+__( "A bit better", "jetpack-premium-analytics-pkg" );
+__( "Much better", "jetpack-premium-analytics-pkg" );
+__( "Compared with the existing Traffic tab in Stats, the new Traffic tab is:", "jetpack-premium-analytics-pkg" );
+__( "What's the one thing we'd need to fix before this replaces the old Stats?", "jetpack-premium-analytics-pkg" );
+__( "Share your feedback", "jetpack-premium-analytics-pkg" );
+__( "Thank you. This helps.", "jetpack-premium-analytics-pkg" );
+__( "Send feedback", "jetpack-premium-analytics-pkg" );
+__( "Any feedback?", "jetpack-premium-analytics-pkg" );
 __( "Your store data is still syncing. The numbers below are incomplete until it finishes.", "jetpack-premium-analytics-pkg" );
 __( "Something went wrong while syncing your store data, so the numbers below are incomplete.", "jetpack-premium-analytics-pkg" );
 /* translators: %d: sync progress percentage. */
