@@ -345,5 +345,5 @@ __( "Backup activity", "jetpack-backup-pkg" );
 __( "Select an item from the list to see details.", "jetpack-backup-pkg" );
 __( "We couldn't load this item.", "jetpack-backup-pkg" );
 __( "Loading item details…", "jetpack-backup-pkg" );
-__( "That item is no longer in the activity log.", "jetpack-backup-pkg" );
+__( "That item isn't on this page of the activity log. It may be on another page, or no longer available.", "jetpack-backup-pkg" );
 __( "Clear selection", "jetpack-backup-pkg" );
