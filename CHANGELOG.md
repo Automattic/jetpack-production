@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: comparison control: stop showing a comparison as active when there is no window behind it.
 - Premium Analytics: Count posts in Posting activity by the site's calendar day rather than the UTC one.
 - Premium Analytics: keep the dashboard off while the Stats module is inactive.
+- Premium Analytics: Keep the date picker on the range a chart drill-down applies.
 - Premium Analytics: Show chart dates in the site's timezone and locale, and name the hour on hourly charts.
 - Search: Require a paid Search plan to enable AI Answers, not just the setting's raw value.
 - Social: Point WordPress.com Simple sites at the Business plan when upgrading, instead of a checkout they can't complete.
