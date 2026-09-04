@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Date controls: pick the period from a dropdown instead of a row of buttons, with the calendar beside it on Custom range.
 - Detail pages: Even out the header spacing on the post page to match the video page.
 - Detail pages: Match the post and video page headers to the layout used across the rest of Analytics.
+- Pin the widget dashboard packages and DataViews to the 202609031004 Gutenberg development release, picking up the widget dashboard policy API.
 - Reports: Open the Authors, Clicks and UTM reports folded to their top-level groups, and move the drill-down control to the right of the row title.
 - Set the dashboard's chart colors, leaderboard row spacing and bar radius in CSS rather than on the chart theme, which no longer carries any of them. No visible change.
 - Update package dependencies.
@@ -34,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Comparison control: stop showing a comparison as active when there is no window behind it.
+- Dashboard: keep the four-column layout regardless of a stored columns preference.
 - Date controls: Include the current day in the last-N-day ranges, and count the 12-month range in whole calendar months for its dates, its length and the step arrows, to match Jetpack Stats. The previous period covers the same number of days as the range it compares.
 - Keep the date picker on the range a chart drill-down applies.
 - Posting activity: Count published posts by the site's calendar day rather than the UTC one.

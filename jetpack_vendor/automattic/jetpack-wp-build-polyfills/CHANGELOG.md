@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Pin @wordpress/widget-primitives and @wordpress/dataviews to the 202609031004 Gutenberg development release, keeping the served module in sync with Premium Analytics.
 - Update package dependencies.
 
 ### Fixed
