@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Admin bar nodes: send the icon name in `meta.icon` instead of SVG markup, so REST consumers resolve it against their own icon set.
+- Name the admin bar's AI chat button “Agent”, render an “Agent” label beside its icon while the chat is hidden, and rename its `meta.icon` key from `ask-ai` to `sparkle`.
 - Update package dependencies.
 
 ## [0.11.0] - 2026-09-01

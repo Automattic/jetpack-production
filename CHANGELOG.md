@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Make the welcome=1 review parameter reopen the dashboard welcome modal after it has been dismissed.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Agents Manager: Show an “Agent” label beside the admin bar's AI chat icon while the chat is hidden.
 - AI: Send the standard site and audience props on the feature-toggle Tracks event.
 - Jetpack AI: Rename the AI Search row to AI Answers, and drop the Preview label from the Search dashboard.
 - Podcast: update composer.lock.
