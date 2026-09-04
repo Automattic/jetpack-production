@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Charts: Place line and area chart date ticks on the site's time zone boundaries, name the hour in tooltips on hourly data, and read hour labels in the site's own locale rather than a forced 12-hour clock.
 - Comments: Fix a stored cross-site scripting vulnerability in social comment avatars.
 - Forms: add an empty alt attribute to the image option thumbnails in the form success summary.
+- Jetpack AI: name the plan and say when it expired on the Overview, instead of leaving the plan empty.
 - Paywall Block: Preserve paid post access after reloading the editor.
 - Premium Analytics: comparison control: stop showing a comparison as active when there is no window behind it.
 - Premium Analytics: Count posts in Posting activity by the site's calendar day rather than the UTC one.
