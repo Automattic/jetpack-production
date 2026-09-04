@@ -220,6 +220,11 @@ __( "The site doesn't appear to be connected. Backup requires an active Jetpack 
 /* translators: 1: what failed, in our own words. 2: the reason WordPress.com gave, usually in English. */
 __( "%1$s WordPress.com said: %2$s", "jetpack-backup-pkg" );
 __( "Request failed", "jetpack-backup-pkg" );
+__( "Restore in progress", "jetpack-backup-pkg" );
+__( "Restore complete", "jetpack-backup-pkg" );
+__( "Restore didn't finish", "jetpack-backup-pkg" );
+/* translators: %s: date and time of the backup that was restored. */
+__( "Restore to %s", "jetpack-backup-pkg" );
 __( "Try again", "jetpack-backup-pkg" );
 __( "We couldn't load your site's activity.", "jetpack-backup-pkg" );
 __( "Icon", "jetpack-backup-pkg" );
@@ -346,5 +351,6 @@ __( "Backup activity", "jetpack-backup-pkg" );
 __( "Select an item from the list to see details.", "jetpack-backup-pkg" );
 __( "We couldn't load this item.", "jetpack-backup-pkg" );
 __( "Loading item details…", "jetpack-backup-pkg" );
+__( "That restore isn't among this site's most recent ones any more.", "jetpack-backup-pkg" );
 __( "That item isn't on this page of the activity log. It may be on another page, or no longer available.", "jetpack-backup-pkg" );
 __( "Clear selection", "jetpack-backup-pkg" );
