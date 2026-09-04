@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Jetpack AI: Add a welcome banner to the Overview tab, keep the tab navigation and a back link on MCP sub-pages, and name the MCP connect row by its action for screen readers.
 - Jetpack AI: Make the Overview and AI Features tabs available on self-hosted sites and apply their controls.
 - Jetpack AI: only show the AI SEO control on sites where the feature it turns on can run.
 - Jetpack AI: Show a connect-account card on the MCP settings page when the current user is not connected to WordPress.com.
@@ -32,7 +33,6 @@ This is an alpha version! The changes listed here are not final.
 - Charts: Place line and area chart date ticks on the site's time zone boundaries, name the hour in tooltips on hourly data, and read hour labels in the site's own locale rather than a forced 12-hour clock.
 - Comments: Fix a stored cross-site scripting vulnerability in social comment avatars.
 - Forms: add an empty alt attribute to the image option thumbnails in the form success summary.
-- Jetpack AI: name the plan and say when it expired on the Overview, instead of leaving the plan empty.
 - Paywall Block: Preserve paid post access after reloading the editor.
 - Premium Analytics: comparison control: stop showing a comparison as active when there is no window behind it.
 - Premium Analytics: Count posts in Posting activity by the site's calendar day rather than the UTC one.
