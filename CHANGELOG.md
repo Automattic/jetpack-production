@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: open a welcome modal the first time a reader reaches the dashboard.
 - Premium Analytics: Open the Authors, Clicks and UTM reports folded to their top-level groups, and move the drill-down control to the right of the row title.
 - Premium Analytics: pick the date period from a dropdown instead of a row of buttons, with the calendar beside it on Custom range.
+- Premium Analytics: Send dashboard feedback on to Jetpack support, so it is not lost when analytics are blocked.
 - Subscriptions: Remove the transitional Subscribers announcement page and redirect its URL to Newsletter.
 - VideoPress: Open the file picker directly from the dashboard welcome modal's Upload a video button, then land on the Library to follow the upload's progress.
 

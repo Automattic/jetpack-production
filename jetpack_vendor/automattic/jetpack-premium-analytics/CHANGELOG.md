@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Onboarding: add the welcome modal shell.
 - Onboarding: add the widget grid animation for the welcome modal.
 - Onboarding: open the welcome modal the first time a reader reaches the dashboard.
+- Send dashboard feedback on to Jetpack support, so it is not lost when analytics are blocked.
 
 ### Changed
 - Comparison control: mark an active comparison with a "vs" prefix, and name the compared window in the trigger's tooltip.
