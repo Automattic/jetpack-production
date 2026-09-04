@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Open the file picker directly from the dashboard welcome modal's Upload a video button, then land on the Library to follow the upload's progress.
 
 ### Bug fixes
+- Admin pages: Fix Jetpack dashboards overlapping the admin menu in right-to-left languages.
 - At a Glance: stop requesting a new speed score on sites that already have Boost.
 - Boost: Stop At a Glance re-testing the site speed when a recent score is already stored for the site's URL.
 - Charts: keep chart tooltips under sticky and fixed page elements.
