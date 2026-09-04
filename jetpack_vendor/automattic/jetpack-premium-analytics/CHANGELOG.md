@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Comparison control: mark an active comparison with a "vs" prefix, and name the compared window in the trigger's tooltip.
+- Dashboard: limit customization to moving and resizing widgets. Adding and removing widgets and resetting the layout sit behind the premium-analytics-dashboard-composition feature flag, off by default.
 - Date controls: pick the period from a dropdown instead of a row of buttons, with the calendar beside it on Custom range.
 - Detail pages: Even out the header spacing on the post page to match the video page.
 - Detail pages: Match the post and video page headers to the layout used across the rest of Analytics.

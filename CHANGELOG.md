@@ -54,6 +54,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Send the standard site and audience props on the feature-toggle Tracks event.
 - Jetpack AI: Rename the AI Search row to AI Answers, and drop the Preview label from the Search dashboard.
 - Podcast: update composer.lock.
+- Premium Analytics: limit dashboard customization to moving and resizing widgets.
 - Premium Analytics: Remove the Plan usage widget and its upgrade link from the dashboard while the paid plan is revised.
 - Reprint export: Serve a site export from Jetpack on Pressable and WordPress.com sites.
 - Sitemaps: Add a jetpack_sitemap_flat_master_index filter that makes sitemap.xml list individual sitemap files instead of nesting sitemap index files, which Google Search Console rejects. Off by default while it is rolled out.
