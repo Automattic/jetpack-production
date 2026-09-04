@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: comparison control: mark an active comparison with a "vs" prefix, and name the compared window in the trigger's tooltip.
 - Premium Analytics: Even out the header spacing on the post detail page to match the video page.
 - Premium Analytics: Expose the dashboard opt-in as a site setting, so administrators can turn the dashboard on and off through the site settings API.
+- Premium Analytics: follow the onboarding welcome modal with a three-step spotlight tour of the customization menu, the date controls and the widgets.
 - Premium Analytics: Include the current day in the last-N-day ranges, and count the 12-month range in whole calendar months, to match Jetpack Stats.
 - Premium Analytics: Match the post and video page headers to the layout used across the rest of Analytics.
 - Premium Analytics: open a welcome modal the first time a reader reaches the dashboard.

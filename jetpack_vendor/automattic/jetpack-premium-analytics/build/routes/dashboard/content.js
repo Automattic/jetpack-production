@@ -312,6 +312,12 @@ __( "Share your feedback", "jetpack-premium-analytics-pkg" );
 __( "Thank you. This helps.", "jetpack-premium-analytics-pkg" );
 __( "Send feedback", "jetpack-premium-analytics-pkg" );
 __( "Any feedback?", "jetpack-premium-analytics-pkg" );
+__( "Customize your experience", "jetpack-premium-analytics-pkg" );
+__( "Access customization from this menu. Move and resize widgets to prioritize what you need.", "jetpack-premium-analytics-pkg" );
+__( "Improved date selection", "jetpack-premium-analytics-pkg" );
+__( "Simplified and more powerful. You can now compare your data with past periods and adjust your chart intervals.", "jetpack-premium-analytics-pkg" );
+__( "Introducing widgets", "jetpack-premium-analytics-pkg" );
+__( "All data is delivered using powerful and versatile widgets for better visualization.", "jetpack-premium-analytics-pkg" );
 __( "Your store data is still syncing. The numbers below are incomplete until it finishes.", "jetpack-premium-analytics-pkg" );
 __( "Something went wrong while syncing your store data, so the numbers below are incomplete.", "jetpack-premium-analytics-pkg" );
 /* translators: %d: sync progress percentage. */

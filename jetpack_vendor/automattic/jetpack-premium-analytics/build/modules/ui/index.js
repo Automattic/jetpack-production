@@ -69,6 +69,10 @@ __( "Select period", "jetpack-premium-analytics-pkg" );
 __( "Introducing an updated experience", "jetpack-premium-analytics-pkg" );
 __( "We are excited to introduce a new experience for your Jetpack Stats. More consistent and more versatile. Now you are able to decide how to display your data.", "jetpack-premium-analytics-pkg" );
 __( "Get started", "jetpack-premium-analytics-pkg" );
+/* translators: 1: the current step number, 2: the number of steps in the tour. */
+__( "%1$d of %2$d", "jetpack-premium-analytics-pkg" );
+__( "Finish", "jetpack-premium-analytics-pkg" );
+__( "Continue", "jetpack-premium-analytics-pkg" );
 __( "Couldn't refresh. Showing data from less than a minute ago.", "jetpack-premium-analytics-pkg" );
 /* translators: %s: how long ago the data on screen was fetched, e.g. "5 minutes ago". */
 __( "Couldn't refresh. Showing data from %s.", "jetpack-premium-analytics-pkg" );

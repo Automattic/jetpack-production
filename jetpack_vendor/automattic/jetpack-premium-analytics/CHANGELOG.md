@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Expose the dashboard opt-in as a site setting, so administrators can turn the dashboard on and off through the site settings API.
 - Onboarding: add the welcome modal shell.
 - Onboarding: add the widget grid animation for the welcome modal.
+- Onboarding: follow the welcome modal with a three-step spotlight tour of the customization menu, the date controls and the widgets.
 - Onboarding: open the welcome modal the first time a reader reaches the dashboard.
 - Send dashboard feedback on to Jetpack support, so it is not lost when analytics are blocked.
 
