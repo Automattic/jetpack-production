@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Paywall Block: Preserve paid post access after reloading the editor.
 - Premium Analytics: comparison control: stop showing a comparison as active when there is no window behind it.
 - Premium Analytics: Count posts in Posting activity by the site's calendar day rather than the UTC one.
+- Premium Analytics: keep keyboard focus inside the onboarding tour card and let screen reader users skip the tour.
 - Premium Analytics: keep the dashboard off while the Stats module is inactive.
 - Premium Analytics: Keep the date picker on the range a chart drill-down applies.
 - Premium Analytics: Show chart dates in the site's timezone and locale, and name the hour on hourly charts.

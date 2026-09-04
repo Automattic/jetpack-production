@@ -71,6 +71,7 @@ __( "We are excited to introduce a new experience for your Jetpack Stats. More c
 __( "Get started", "jetpack-premium-analytics-pkg" );
 /* translators: 1: the current step number, 2: the number of steps in the tour. */
 __( "%1$d of %2$d", "jetpack-premium-analytics-pkg" );
+__( "Skip tour", "jetpack-premium-analytics-pkg" );
 __( "Finish", "jetpack-premium-analytics-pkg" );
 __( "Continue", "jetpack-premium-analytics-pkg" );
 __( "Couldn't refresh. Showing data from less than a minute ago.", "jetpack-premium-analytics-pkg" );

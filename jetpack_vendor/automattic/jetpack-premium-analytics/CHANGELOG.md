@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: keep the four-column layout regardless of a stored columns preference.
 - Date controls: Include the current day in the last-N-day ranges, and count the 12-month range in whole calendar months for its dates, its length and the step arrows, to match Jetpack Stats. The previous period covers the same number of days as the range it compares.
 - Keep the date picker on the range a chart drill-down applies.
+- Onboarding: keep keyboard focus inside the tour card and let screen reader users skip the tour.
 - Posting activity: Count published posts by the site's calendar day rather than the UTC one.
 - Show chart dates in the site's timezone and locale, and name the hour on hourly charts.
 
