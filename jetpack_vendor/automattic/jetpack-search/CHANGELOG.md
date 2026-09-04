@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - AI Answers: Require a paid Search plan to enable AI Answers, not just the setting's raw value.
+- Instant Search: Fix a crash on mount when the localized widget configuration is missing or incomplete, which could leave the whole page blank.
 
 ## [8.0.0] - 2026-09-01
 ### Changed
