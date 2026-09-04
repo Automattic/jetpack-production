@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Jetpack AI: Add a welcome banner to the Overview tab, keep the tab navigation and a back link on MCP sub-pages, and name the MCP connect row by its action for screen readers.
+- Jetpack AI: Hide the Overview and AI Features views on WordPress VIP sites.
 - Jetpack AI: Make the Overview and AI Features tabs available on self-hosted sites and apply their controls.
 - Jetpack AI: only show the AI SEO control on sites where the feature it turns on can run.
 - Jetpack AI: Show a connect-account card on the MCP settings page when the current user is not connected to WordPress.com.
