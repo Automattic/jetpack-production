@@ -71,6 +71,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast: update composer.lock.
 - Premium Analytics: limit dashboard customization to moving and resizing widgets.
 - Premium Analytics: Remove the Plan usage widget and its upgrade link from the dashboard while the paid plan is revised.
+- Related Posts: Harden rendering JavaScript.
 - Reprint export: Serve a site export from Jetpack on Pressable and WordPress.com sites.
 - Sitemaps: Add a jetpack_sitemap_flat_master_index filter that makes sitemap.xml list individual sitemap files instead of nesting sitemap index files, which Google Search Console rejects. Off by default while it is rolled out.
 - Sync tests: cover the newly synced jetpack_premium_analytics_enabled option.
