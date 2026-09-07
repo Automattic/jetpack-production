@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Even out the header spacing on the post detail page to match the video page.
 - Premium Analytics: Expose the dashboard opt-in as a site setting, so administrators can turn the dashboard on and off through the site settings API.
 - Premium Analytics: follow the onboarding welcome modal with a three-step spotlight tour of the customization menu, the date controls and the widgets.
+- Premium Analytics: hide the report pages behind tabs the Stats dashboard does not show.
 - Premium Analytics: Include the current day in the last-N-day ranges, and count the 12-month range in whole calendar months, to match Jetpack Stats.
 - Premium Analytics: Match the post and video page headers to the layout used across the rest of Analytics.
 - Premium Analytics: move the dashboard feedback action into a page options menu.

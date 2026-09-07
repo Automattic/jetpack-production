@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Comparison control: mark an active comparison with a "vs" prefix, and name the compared window in the trigger's tooltip.
+- Dashboard: hide the report pages behind tabs the dashboard does not show.
 - Dashboard: limit customization to moving and resizing widgets. Adding and removing widgets and resetting the layout sit behind the premium-analytics-dashboard-composition feature flag, off by default.
 - Dashboard: move the feedback action into a page options menu.
 - Dashboard: show only the Traffic tab while the site is running the customer preview.

@@ -13,6 +13,7 @@
 		"build/routes/reports/content.js",
 		"build/routes/reports/route.js",
 		"build/routes/video-detail/content.js",
+		"build/routes/video-detail/route.js",
 		"build/scripts/site-sync/index.js",
 		"build/widgets/all-time-stats/render.js",
 		"build/widgets/all-time-stats/widget.js",
