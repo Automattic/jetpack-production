@@ -54,8 +54,8 @@ __( "Site database", "jetpack-backup-pkg" );
 __( "Includes pages and posts.", "jetpack-backup-pkg" );
 __( "Media uploads", "jetpack-backup-pkg" );
 __( "You must also select Site database for restored media uploads to appear.", "jetpack-backup-pkg" );
-__( "Your restore didn't start, so nothing on your site has changed.", "jetpack-backup-pkg" );
 __( "Restore failed.", "jetpack-backup-pkg" );
+__( "Your restore didn't start, so nothing on your site has changed.", "jetpack-backup-pkg" );
 __( "This restore link isn't valid.", "jetpack-backup-pkg" );
 __( "The address is missing a valid restore point. Go back to the overview and choose a backup to restore.", "jetpack-backup-pkg" );
 __( "Restore backup", "jetpack-backup-pkg" );
@@ -68,7 +68,7 @@ __( "Restoring will overwrite the matching parts of your live site with the cont
 __( "Choose the items you wish to restore:", "jetpack-backup-pkg" );
 __( "Select at least one item to restore.", "jetpack-backup-pkg" );
 __( "Confirm restore", "jetpack-backup-pkg" );
-__( "Your restore is queued and will begin shortly…", "jetpack-backup-pkg" );
+__( "Your restore is queued and will begin automatically.", "jetpack-backup-pkg" );
 __( "Waiting for your restore to begin", "jetpack-backup-pkg" );
 __( "Restoring…", "jetpack-backup-pkg" );
 __( "Restoring your site", "jetpack-backup-pkg" );
