@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: keep keyboard focus inside the onboarding tour card and let screen reader users skip the tour.
 - Premium Analytics: keep the dashboard off while the Stats module is inactive.
 - Premium Analytics: Keep the date picker on the range a chart drill-down applies.
+- Premium Analytics: on Insights, collapse the year buttons into a select as soon as they stop fitting, instead of letting them run past the edge on a phone.
 - Premium Analytics: Show chart dates in the site's timezone and locale, and name the hour on hourly charts.
 - Premium Analytics: Show published dates in the site's language and date format.
 - Search: Fix a crash on mount when the localized widget configuration is missing or incomplete, which could leave the whole page blank.
