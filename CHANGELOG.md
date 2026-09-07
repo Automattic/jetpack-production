@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast: Replace the stats date range picker with one built on the WordPress design system calendar.
 - Premium Analytics: Add an "Any feedback?" action to the dashboard header.
 - Premium Analytics: comparison control: mark an active comparison with a "vs" prefix, and name the compared window in the trigger's tooltip.
+- Premium Analytics: disable the dashboard's date controls while customizing its layout.
 - Premium Analytics: Even out the header spacing on the post detail page to match the video page.
 - Premium Analytics: Expose the dashboard opt-in as a site setting, so administrators can turn the dashboard on and off through the site settings API.
 - Premium Analytics: follow the onboarding welcome modal with a three-step spotlight tour of the customization menu, the date controls and the widgets.
