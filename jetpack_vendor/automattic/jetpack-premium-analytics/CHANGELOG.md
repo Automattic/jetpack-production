@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Onboarding: keep keyboard focus inside the tour card and let screen reader users skip the tour.
 - Posting activity: Count published posts by the site's calendar day rather than the UTC one.
 - Show chart dates in the site's timezone and locale, and name the hour on hourly charts.
+- Show published dates in the site's language and date format.
 
 ## [0.5.0] - 2026-09-01
 ### Added
