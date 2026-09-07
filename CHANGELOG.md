@@ -62,6 +62,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix playlist block video titles overlapping when long, and apostrophes rendering as HTML entities.
 - VideoPress: Fix the dashboard rendering blank on WordPress 7.0.x, where the welcome modal crashed on the missing public ThemeProvider export.
 - VideoPress: Make the welcome=1 review parameter reopen the dashboard welcome modal after it has been dismissed.
+- VideoPress: Register the Video Playlist block from the Jetpack plugin when the VideoPress module is active.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Agents Manager: Show an “Agent” label beside the admin bar's AI chat icon while the chat is hidden.
