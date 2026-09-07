@@ -314,6 +314,7 @@ __( "What's the one thing we'd need to fix before this replaces the old Stats?",
 __( "Share your feedback", "jetpack-premium-analytics-pkg" );
 __( "Thank you. This helps.", "jetpack-premium-analytics-pkg" );
 __( "Send feedback", "jetpack-premium-analytics-pkg" );
+__( "Page options", "jetpack-premium-analytics-pkg" );
 __( "Any feedback?", "jetpack-premium-analytics-pkg" );
 __( "Customize your experience", "jetpack-premium-analytics-pkg" );
 __( "Access customization from this menu. Move and resize widgets to prioritize what you need.", "jetpack-premium-analytics-pkg" );
