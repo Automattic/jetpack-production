@@ -65,6 +65,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Send the standard site and audience props on the feature-toggle Tracks event.
 - AI Assistant: Update the WordPress Agent notice to point at the "Agent" button.
 - Jetpack AI: Rename the AI Search row to AI Answers, and drop the Preview label from the Search dashboard.
+- Jetpack AI: Send VIP sites to the Jetpack user connection screen from the MCP connect card.
 - Podcast: update composer.lock.
 - Premium Analytics: limit dashboard customization to moving and resizing widgets.
 - Premium Analytics: Remove the Plan usage widget and its upgrade link from the dashboard while the paid plan is revised.
