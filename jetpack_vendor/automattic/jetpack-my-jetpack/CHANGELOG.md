@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Security
+- Recommendations: Require administrator permissions on the site evaluation endpoints, and validate their input.
+
 ### Changed
 - Jetpack AI: Show the AI card's on/off control, real module state, and AI page destination on self-hosted sites.
 - Update package dependencies.
