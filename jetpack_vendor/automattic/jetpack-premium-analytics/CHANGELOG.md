@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Date controls: pick the period from a dropdown instead of a row of buttons, with the calendar beside it on Custom range.
 - Detail pages: Even out the header spacing on the post page to match the video page.
 - Detail pages: Match the post and video page headers to the layout used across the rest of Analytics.
+- Feedback modal: render with the design system Dialog and TextareaControl.
 - Pin the widget dashboard packages and DataViews to the 202609031004 Gutenberg development release, picking up the widget dashboard policy API.
 - Reports: Open the Authors, Clicks and UTM reports folded to their top-level groups, and move the drill-down control to the right of the row title.
 - Set the dashboard's chart colors, leaderboard row spacing and bar radius in CSS rather than on the chart theme, which no longer carries any of them. No visible change.
