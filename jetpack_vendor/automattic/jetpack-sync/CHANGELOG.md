@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a consumer-configured WooCommerce Analytics sync module with checksum support.
 - Sync the jetpack_premium_analytics_enabled option, so WordPress.com can see whether a site has the Premium Analytics dashboard turned on.
+- Sync the videopress_player_preload_disabled option to WordPress.com.
 
 ### Fixed
 - Require a paid Search plan before syncing AI Answers guideline content.

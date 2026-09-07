@@ -86,3 +86,5 @@ __( "This follows your site’s Privacy setting. To change who can view your vid
 __( "Private videos won't play for signed-out visitors.", "jetpack-videopress-pkg" );
 __( "Automatically generate subtitles for new videos", "jetpack-videopress-pkg" );
 __( "When enabled, subtitles are generated automatically for videos uploaded to this site. Existing subtitles are not affected.", "jetpack-videopress-pkg" );
+__( "Preload video data when pages load", "jetpack-videopress-pkg" );
+__( "When enabled, embedded videos fetch their metadata and seek-bar preview thumbnails as the page loads. Turn it off to reduce page weight on pages with many videos; each video then loads its data when playback starts.", "jetpack-videopress-pkg" );
