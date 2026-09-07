@@ -30,3 +30,5 @@ _x( "Unsubscribe", "Email link type", "jetpack-premium-analytics-pkg" );
 __( "Other", "jetpack-premium-analytics-pkg" );
 _x( "Other", "Email link type", "jetpack-premium-analytics-pkg" );
 __( "Unknown", "jetpack-premium-analytics-pkg" );
+__( "Widget modules", "jetpack-premium-analytics-pkg" );
+__( "Dashboard sections", "jetpack-premium-analytics-pkg" );
