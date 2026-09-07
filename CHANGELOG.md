@@ -61,6 +61,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Agents Manager: Show an “Agent” label beside the admin bar's AI chat icon while the chat is hidden.
 - AI: Send the standard site and audience props on the feature-toggle Tracks event.
+- AI Assistant: Update the WordPress Agent notice to point at the "Agent" button.
 - Jetpack AI: Rename the AI Search row to AI Answers, and drop the Preview label from the Search dashboard.
 - Podcast: update composer.lock.
 - Premium Analytics: limit dashboard customization to moving and resizing widgets.
