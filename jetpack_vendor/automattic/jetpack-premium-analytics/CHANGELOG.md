@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a date period dropdown: one trigger naming the applied period, a menu of the common periods grouped by scale, and the calendar beside the list on Custom range.
 - Add an "Any feedback?" action to the dashboard header.
+- Dashboard: add a page option that switches the new Traffic tab off, asks why on the way out, and returns to classic Stats.
 - Expose the dashboard opt-in as a site setting, so administrators can turn the dashboard on and off through the site settings API.
 - Onboarding: add the welcome modal shell.
 - Onboarding: add the widget grid animation for the welcome modal.
@@ -30,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Detail pages: Even out the header spacing on the post page to match the video page.
 - Detail pages: Match the post and video page headers to the layout used across the rest of Analytics.
 - Feedback modal: render with the design system Dialog and TextareaControl.
+- Onboarding: revise the welcome modal copy and reorder the tour to start from the widgets and end on the page options menu.
 - Pin the widget dashboard packages and DataViews to the 202609031004 Gutenberg development release, picking up the widget dashboard policy API.
 - Reports: Open the Authors, Clicks and UTM reports folded to their top-level groups, and move the drill-down control to the right of the row title.
 - Set the dashboard's chart colors, leaderboard row spacing and bar radius in CSS rather than on the chart theme, which no longer carries any of them. No visible change.

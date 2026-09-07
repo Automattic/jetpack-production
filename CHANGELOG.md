@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Show a connect-account card on the MCP settings page when the current user is not connected to WordPress.com.
 - Podcast: Replace the stats date range picker with one built on the WordPress design system calendar.
 - Premium Analytics: Add an "Any feedback?" action to the dashboard header.
+- Premium Analytics: add a page option that switches the new Traffic tab off, asks why on the way out, and returns to classic Stats.
 - Premium Analytics: comparison control: mark an active comparison with a "vs" prefix, and name the compared window in the trigger's tooltip.
 - Premium Analytics: disable the dashboard's date controls while customizing its layout.
 - Premium Analytics: Even out the header spacing on the post detail page to match the video page.
@@ -26,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: open a welcome modal the first time a reader reaches the dashboard.
 - Premium Analytics: Open the Authors, Clicks and UTM reports folded to their top-level groups, and move the drill-down control to the right of the row title.
 - Premium Analytics: pick the date period from a dropdown instead of a row of buttons, with the calendar beside it on Custom range.
+- Premium Analytics: revise the onboarding welcome modal copy and reorder the tour to start from the widgets and end on the page options menu.
 - Premium Analytics: Send dashboard feedback on to Jetpack support, so it is not lost when analytics are blocked.
 - Premium Analytics: show only the Traffic tab while the site is running the Stats preview.
 - Subscriptions: Remove the transitional Subscribers announcement page and redirect its URL to Newsletter.
