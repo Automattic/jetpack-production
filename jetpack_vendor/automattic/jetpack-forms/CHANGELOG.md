@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Add an empty alt attribute to the image option thumbnails in the form success summary.
 - Forms: hide the Lead Capture pattern on WordPress.com, matching the block variation that is already hidden there.
+- Forms: Keep editor-initialized defaults from marking imported forms as changed.
 
 ## [8.0.0] - 2026-09-01
 ### Added
