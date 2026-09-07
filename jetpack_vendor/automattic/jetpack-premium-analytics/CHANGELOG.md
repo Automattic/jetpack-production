@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Comparison control: stop showing a comparison as active when there is no window behind it.
 - Dashboard: keep the four-column layout regardless of a stored columns preference.
+- Dashboard sections: stop requiring Enablement_Setting by path, which fataled on sites that vendor this package into more than one plugin.
 - Date controls: Include the current day in the last-N-day ranges, and count the 12-month range in whole calendar months for its dates, its length and the step arrows, to match Jetpack Stats. The previous period covers the same number of days as the range it compares.
 - Keep the date picker on the range a chart drill-down applies.
 - Onboarding: keep keyboard focus inside the tour card and let screen reader users skip the tour.
