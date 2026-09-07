@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: revise the onboarding welcome modal copy and reorder the tour to start from the widgets and end on the page options menu.
 - Premium Analytics: Send dashboard feedback on to Jetpack support, so it is not lost when analytics are blocked.
 - Premium Analytics: show only the Traffic tab while the site is running the Stats preview.
+- Premium Analytics: show the onboarding again to a reader who switches the new Traffic tab back on.
 - Subscriptions: Remove the transitional Subscribers announcement page and redirect its URL to Newsletter.
 - VideoPress: Open the file picker directly from the dashboard welcome modal's Upload a video button, then land on the Library to follow the upload's progress.
 
