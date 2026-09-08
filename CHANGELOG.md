@@ -62,6 +62,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Return a validation error when the role settings are submitted in the wrong format.
 - Subscriptions: Recognize subscriber sessions in the Subscriber Login and Premium Content blocks.
 - Tiled Gallery: fix the gallery growing without bound inside a vertical Group or Stack, and keep its width in step with the space available when a surrounding block is resized or re-aligned.
+- VideoPress: Avoid free-plan limits and upgrade prompts when site features cannot be loaded.
 - VideoPress: Fix "Add to a post or page" opening an empty editor instead of inserting the selected video block.
 - VideoPress: Fix playlist block video titles overlapping when long, and apostrophes rendering as HTML entities.
 - VideoPress: Fix the dashboard rendering blank on WordPress 7.0.x, where the welcome modal crashed on the missing public ThemeProvider export.
