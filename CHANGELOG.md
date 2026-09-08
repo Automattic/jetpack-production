@@ -60,6 +60,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Point WordPress.com Simple sites at the Business plan when upgrading, instead of a checkout they can't complete.
 - Stats: Fix traffic charts that could keep loading when a site's connection needs attention.
 - Stats: Return a validation error when the role settings are submitted in the wrong format.
+- Subscriptions: Recognize subscriber sessions in the Subscriber Login and Premium Content blocks.
 - Tiled Gallery: fix the gallery growing without bound inside a vertical Group or Stack, and keep its width in step with the space available when a surrounding block is resized or re-aligned.
 - VideoPress: Fix "Add to a post or page" opening an empty editor instead of inserting the selected video block.
 - VideoPress: Fix playlist block video titles overlapping when long, and apostrophes rendering as HTML entities.
