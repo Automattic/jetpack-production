@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Date controls: pick the period from a dropdown instead of a row of buttons, with the calendar beside it on Custom range.
 - Detail pages: Even out the header spacing on the post page to match the video page.
 - Detail pages: Match the post and video page headers to the layout used across the rest of Analytics.
+- Display the dashboard on a three-column grid and rearrange the default Traffic widgets.
 - Feedback modal: render with the design system Dialog and TextareaControl.
 - Match the Jetpack logo in the Stats header to the 20px size used by the other Jetpack admin pages.
 - Onboarding: revise the welcome modal copy and reorder the tour to start from the widgets and end on the page options menu.
