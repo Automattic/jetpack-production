@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Sidebar: sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom.
 
 ### Bug fixes
+- Admin: Match the Jetpack menu logo's first paint to the active admin color scheme.
 - Forms: Restore multi-page printing of a single response. SEO: Move the dashboard's toast notices back to the top right.
 - Forms: Scroll a single response from the page edge instead of from inside the reading column.
 - Forms: Show a selected response beside the responses list again instead of below it. Also fixes the same sidebar layout on the Newsletter and SEO dashboards.
