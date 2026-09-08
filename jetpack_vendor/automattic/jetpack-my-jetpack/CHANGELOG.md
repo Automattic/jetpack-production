@@ -11,8 +11,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Sidebar: sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom.
+- Test the product cards' primary action across the plan matrix.
 
 ### Fixed
+- Search: Offer to activate Search, rather than to buy a plan, when the site already owns it and the module is switched off.
 - Show the right product status as soon as fresher plan data is available, instead of reusing an earlier lookup.
 
 ## [6.2.0] - 2026-09-08
