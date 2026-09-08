@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Match the Jetpack logo in the Stats header to the 20px size used by the other Jetpack admin pages.
 - Onboarding: revise the welcome modal copy and reorder the tour to start from the widgets and end on the page options menu.
 - Pin the widget dashboard packages and DataViews to the 202609031004 Gutenberg development release, picking up the widget dashboard policy API.
+- Post and video detail pages: lay the widgets out on the three-column grid the dashboard uses.
 - Reports: Open the Authors, Clicks and UTM reports folded to their top-level groups, and move the drill-down control to the right of the row title.
 - Set the dashboard's chart colors, leaderboard row spacing and bar radius in CSS rather than on the chart theme, which no longer carries any of them. No visible change.
 - Update package dependencies.
