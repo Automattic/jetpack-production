@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Make the Overview and AI Features tabs available on self-hosted sites and apply their controls.
 - Jetpack AI: only show the AI SEO control on sites where the feature it turns on can run.
 - Jetpack AI: Show a connect-account card on the MCP settings page when the current user is not connected to WordPress.com.
+- Newsletter: let the email preview render for an editor whose WordPress.com account isn't connected, as long as the site is connected. Sending a test email still requires a user connection.
 - Podcast: Replace the stats date range picker with one built on the WordPress design system calendar.
 - Premium Analytics: Add an "Any feedback?" action to the dashboard header.
 - Premium Analytics: add a page option that switches the new Traffic tab off, asks why on the way out, and returns to classic Stats.
