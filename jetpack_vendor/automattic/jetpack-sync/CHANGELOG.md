@@ -5,18 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.1.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.1.0] - 2026-09-08
 ### Added
-- Add a consumer-configured WooCommerce Analytics sync module with checksum support.
-- Sync the jetpack_premium_analytics_enabled option, so WordPress.com can see whether a site has the Premium Analytics dashboard turned on.
-- Sync the videopress_player_preload_disabled option to WordPress.com.
+- Add a consumer-configured WooCommerce Analytics sync module with checksum support. [#50715]
+- Sync the `jetpack_premium_analytics_enabled` option, so WordPress.com can see whether a site has the Premium Analytics dashboard turned on. [#51865]
+- Sync the `videopress_player_preload_disabled` option to WordPress.com. [#51991]
 
 ### Fixed
-- Require a paid Search plan before syncing AI Answers guideline content.
-- WooCommerce Analytics: Guard optional WooCommerce symbols to avoid fatals on older versions and missing parent orders.
+- WooCommerce Analytics: Guard optional WooCommerce symbols to avoid fatals on older versions and missing parent orders. [#50715]
 
 ## [5.0.1] - 2026-09-01
 ### Changed
@@ -1844,7 +1840,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[5.1.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v5.0.1...v5.1.0-alpha
+[5.1.0]: https://github.com/Automattic/jetpack-sync/compare/v5.0.1...v5.1.0
 [5.0.1]: https://github.com/Automattic/jetpack-sync/compare/v5.0.0...v5.0.1
 [5.0.0]: https://github.com/Automattic/jetpack-sync/compare/v4.45.4...v5.0.0
 [4.45.4]: https://github.com/Automattic/jetpack-sync/compare/v4.45.3...v4.45.4

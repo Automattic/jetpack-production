@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.35.1-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 0.35.1 - 2026-09-08
 ### Fixed
-- Stats: Fix endless spinner when the blog token is invalid.
+- Stats: Fix endless spinner when the blog token is invalid. [#51998]
 
 ## 0.35.0 - 2026-09-01
 ### Removed
