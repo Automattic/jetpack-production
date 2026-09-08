@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add an endpoint for flushing the object cache, which a database restore leaves stale.
+
 ### Changed
 - Review request: Ask about backups instead of real-time backups, which was inaccurate on daily plans.
 - Update package dependencies.
