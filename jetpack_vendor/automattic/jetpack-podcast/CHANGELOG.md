@@ -13,8 +13,12 @@ This is an alpha version! The changes listed here are not final.
 - Podcast: Bump Mission Control stats for episode publishes, show launches, directory URL additions, and podcasting status changes on every host.
 
 ### Changed
+- Sidebar: sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom.
 - Stats: Replace the date range picker with one built on the WordPress design system calendar.
 - Update package dependencies.
+
+### Deprecated
+- Deprecate Admin_Page::MENU_POSITION; the Jetpack submenu now orders its internal pages alphabetically.
 
 ### Fixed
 - Stats: Open the date range calendar on the selected range.

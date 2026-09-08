@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Send dashboard feedback on to Jetpack support, so it is not lost when analytics are blocked.
 - Premium Analytics: show only the Traffic tab while the site is running the Stats preview.
 - Premium Analytics: show the onboarding again to a reader who switches the new Traffic tab back on.
+- Sidebar: sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom.
 - Subscriptions: Remove the transitional Subscribers announcement page and redirect its URL to Newsletter.
 - VideoPress: Add a site-wide setting to turn off player preloading for every embed.
 - VideoPress: Open the file picker directly from the dashboard welcome modal's Upload a video button, then land on the Library to follow the upload's progress.

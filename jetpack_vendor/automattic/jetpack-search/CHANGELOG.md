@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - AI Answers: Apply the site-wide Jetpack AI switch on self-hosted sites.
 - Dashboard: Drop the Preview label from AI Answers.
+- Sidebar: sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom.
 - Update package dependencies.
 - Update react-redux to 9.3.0 and redux to 5.0.1.
 
