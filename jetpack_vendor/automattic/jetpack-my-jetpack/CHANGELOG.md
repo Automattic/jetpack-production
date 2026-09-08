@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.2.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.2.0] - 2026-09-08
 ### Security
-- Recommendations: Require administrator permissions on the site evaluation endpoints, and validate their input.
+- Recommendations: Require administrator permissions on the site evaluation endpoints, and validate their input. [#51987]
 
 ### Changed
-- Jetpack AI: Show the AI card's on/off control, real module state, and AI page destination on self-hosted sites.
-- Update package dependencies.
+- Jetpack AI: Show the AI card's on/off control, real module state, and AI page destination on self-hosted sites. [#51909]
+- Update package dependencies. [#51701]
 
 ## [6.1.0] - 2026-09-01
 ### Added
@@ -2892,7 +2889,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.2.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.1.0...6.2.0-alpha
+[6.2.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.1.0...6.2.0
 [6.1.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.0.0...6.1.0
 [6.0.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.44.1...6.0.0
 [5.44.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/5.44.0...5.44.1

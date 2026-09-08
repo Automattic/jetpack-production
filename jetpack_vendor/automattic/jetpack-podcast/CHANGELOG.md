@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [2.1.0] - 2026-09-08
 ### Added
-- Podcast: Bump Mission Control stats for episode publishes, show launches, directory URL additions, and podcasting status changes on every host.
+- Bump Mission Control stats for episode publishes, show launches, directory URL additions, and podcasting status changes on every host. [#51897]
 
 ### Changed
-- Stats: Replace the date range picker with one built on the WordPress design system calendar.
-- Update package dependencies.
+- Stats: Replace the date range picker with one built on the WordPress design system calendar. [#51902]
+- Update package dependencies. [#51701]
 
 ### Fixed
-- Stats: Open the date range calendar on the selected range.
+- Stats: Open the date range calendar on the selected range. [#51951]
 
 ## [2.0.0] - 2026-09-01
 ### Changed
@@ -252,7 +249,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Replace the wp-build placeholder with page chrome and tab navigation. [#48559]
 - Dashboard: Slim down wp-build wiring to the Backup pattern. [#48600]
 
-[2.1.0-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v2.0.0...v2.1.0-alpha
+[2.1.0]: https://github.com/Automattic/jetpack-podcast/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/Automattic/jetpack-podcast/compare/v1.5.1...v2.0.0
 [1.5.1]: https://github.com/Automattic/jetpack-podcast/compare/v1.5.0...v1.5.1
 [1.5.0]: https://github.com/Automattic/jetpack-podcast/compare/v1.4.4...v1.5.0
