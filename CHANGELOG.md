@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: follow the onboarding welcome modal with a three-step spotlight tour of the customization menu, the date controls and the widgets.
 - Premium Analytics: hide the report pages behind tabs the Stats dashboard does not show.
 - Premium Analytics: Include the current day in the last-N-day ranges, and count the 12-month range in whole calendar months, to match Jetpack Stats.
+- Premium Analytics: Match the Jetpack logo in the Stats header to the 20px size used by the other Jetpack admin pages.
 - Premium Analytics: Match the post and video page headers to the layout used across the rest of Analytics.
 - Premium Analytics: move the dashboard feedback action into a page options menu.
 - Premium Analytics: open a welcome modal the first time a reader reaches the dashboard.

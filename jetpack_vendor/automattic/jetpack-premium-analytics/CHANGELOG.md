@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Detail pages: Even out the header spacing on the post page to match the video page.
 - Detail pages: Match the post and video page headers to the layout used across the rest of Analytics.
 - Feedback modal: render with the design system Dialog and TextareaControl.
+- Match the Jetpack logo in the Stats header to the 20px size used by the other Jetpack admin pages.
 - Onboarding: revise the welcome modal copy and reorder the tour to start from the widgets and end on the page options menu.
 - Pin the widget dashboard packages and DataViews to the 202609031004 Gutenberg development release, picking up the widget dashboard policy API.
 - Reports: Open the Authors, Clicks and UTM reports folded to their top-level groups, and move the drill-down control to the right of the row title.
