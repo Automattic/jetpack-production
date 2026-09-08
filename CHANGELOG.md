@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - Editor: restore active module state for module-dependent features.
 - Forms: add an empty alt attribute to the image option thumbnails in the form success summary.
 - Jetpack Search: Prevent General Settings from disabling Site Chat and WordPress Agent access.
+- My Jetpack: Show the right product status as soon as fresher plan data is available, instead of reusing an earlier lookup.
 - Paywall Block: Preserve paid post access after reloading the editor.
 - Premium Analytics: comparison control: stop showing a comparison as active when there is no window behind it.
 - Premium Analytics: Count posts in Posting activity by the site's calendar day rather than the UTC one.

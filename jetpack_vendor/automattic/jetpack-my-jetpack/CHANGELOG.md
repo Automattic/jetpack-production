@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Show the AI card's on/off control, real module state, and AI page destination on self-hosted sites.
 - Update package dependencies.
 
+### Fixed
+- Show the right product status as soon as fresher plan data is available, instead of reusing an earlier lookup.
+
 ## [6.1.0] - 2026-09-01
 ### Added
 - Allow the Automattic for Agencies banner to be dismissed. [#51441]
