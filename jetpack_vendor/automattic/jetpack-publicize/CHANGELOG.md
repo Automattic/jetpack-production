@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Sidebar: sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom.
 
+### Fixed
+- Link preview: Remove Nextdoor and keep the remaining service icons on one row.
+
 ## [0.86.1] - 2026-09-08
 ### Changed
 - Update package dependencies. [#51701]
