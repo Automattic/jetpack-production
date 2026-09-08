@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Blogging Prompts: mark a post as a prompt answer when it is created through the REST API, so answers written in the Write editor keep their prompt tags and roundup link.
 - Jetpack AI: Add a welcome banner to the Overview tab, keep the tab navigation and a back link on MCP sub-pages, and name the MCP connect row by its action for screen readers.
 - Jetpack AI: Hide the Overview and AI Features views on WordPress VIP sites.
 - Jetpack AI: Make the Overview and AI Features tabs available on self-hosted sites and apply their controls.

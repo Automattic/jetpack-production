@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update package dependencies.
+- Writing Prompt: open the Write editor to answer a prompt on WordPress.com sites.
 
 ### Removed
 - Remove the transitional Subscribers announcement page and redirect its URL to Newsletter.
