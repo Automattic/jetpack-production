@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Sidebar: sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom.
 
+### Fixed
+- Move the dashboard's toast notices back to the top right.
+
 ## [0.9.1] - 2026-09-08
 ### Changed
 - AI SEO: Only offer the AI SEO control where a surface it governs can actually run. [#51918]

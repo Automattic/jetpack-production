@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Sidebar: sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom.
 
 ### Bug fixes
+- Forms: Restore multi-page printing of a single response. SEO: Move the dashboard's toast notices back to the top right.
+- Forms: Scroll a single response from the page edge instead of from inside the reading column.
+- Forms: Show a selected response beside the responses list again instead of below it. Also fixes the same sidebar layout on the Newsletter and SEO dashboards.
 - My Jetpack: Show the right product status as soon as fresher plan data is available, instead of reusing an earlier lookup.
 - Status: Detect a site served on any 127.0.0.0/8 loopback address, or on 0.0.0.0, as a local site.
 
