@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add an "Any feedback?" action to the dashboard header.
 - Dashboard: add a page option that switches the new Traffic tab off, asks why on the way out, and returns to classic Stats.
 - Dashboard: show the onboarding again to a reader who switches the new Traffic tab back on.
+- Detail pages: Add a page options menu with a Customize action to the post, email, and video detail pages; card arrangement persists per page and tab.
 - Expose the dashboard opt-in as a site setting, so administrators can turn the dashboard on and off through the site settings API.
 - Onboarding: add the welcome modal shell.
 - Onboarding: add the widget grid animation for the welcome modal.

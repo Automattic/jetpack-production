@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: let the email preview render for an editor whose WordPress.com account isn't connected, as long as the site is connected. Sending a test email still requires a user connection.
 - Podcast: Replace the stats date range picker with one built on the WordPress design system calendar.
 - Premium Analytics: Add an "Any feedback?" action to the dashboard header.
+- Premium Analytics: Add a page options menu with a Customize action on the post, email, and video detail pages.
 - Premium Analytics: add a page option that switches the new Traffic tab off, asks why on the way out, and returns to classic Stats.
 - Premium Analytics: comparison control: mark an active comparison with a "vs" prefix, and name the compared window in the trigger's tooltip.
 - Premium Analytics: disable the dashboard's date controls while customizing its layout.
