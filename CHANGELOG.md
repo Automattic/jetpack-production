@@ -68,6 +68,7 @@ This is an alpha version! The changes listed here are not final.
 - Status: Detect a site served on any 127.0.0.0/8 loopback address, or on 0.0.0.0, as a local site.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Forms: deprecate the jetpack_forms_alpha filter, which no longer selects anything.
 - Newsletter: add the email design screen behind a feature flag.
 - Update package dependencies.
 
