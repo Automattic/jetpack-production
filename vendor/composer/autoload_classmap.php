@@ -268,6 +268,7 @@ return array(
     'Automattic\\Jetpack\\My_Jetpack\\REST_Zendesk_Chat' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-zendesk-chat.php',
     'Automattic\\Jetpack\\My_Jetpack\\Red_Bubble_Notifications' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-red-bubble-notifications.php',
     'Automattic\\Jetpack\\My_Jetpack\\Wpcom_Products' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-wpcom-products.php',
+    'Automattic\\Jetpack\\Newsletter\\Freshly_Pressed' => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-freshly-pressed.php',
     'Automattic\\Jetpack\\Newsletter\\Reader_Link' => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-reader-link.php',
     'Automattic\\Jetpack\\Newsletter\\Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-settings.php',
     'Automattic\\Jetpack\\Newsletter\\Urls' => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-urls.php',

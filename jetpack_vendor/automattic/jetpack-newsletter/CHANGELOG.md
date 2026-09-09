@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.14.1-alpha] - unreleased
+## [0.15.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Daily Writing Prompt: Add a Freshly Pressed tab listing the posts WordPress.com is currently featuring.
 
 ### Changed
 - Sidebar: sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom.
@@ -362,7 +365,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.14.1-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.14.0...v0.14.1-alpha
+[0.15.0-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.14.0...v0.15.0-alpha
 [0.14.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.13.0...v0.14.0
 [0.13.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.7...v0.13.0
 [0.12.7]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.6...v0.12.7

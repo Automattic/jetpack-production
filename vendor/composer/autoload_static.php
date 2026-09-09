@@ -292,6 +292,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_3_a_0
         'Automattic\\Jetpack\\My_Jetpack\\REST_Zendesk_Chat' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-zendesk-chat.php',
         'Automattic\\Jetpack\\My_Jetpack\\Red_Bubble_Notifications' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-red-bubble-notifications.php',
         'Automattic\\Jetpack\\My_Jetpack\\Wpcom_Products' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-wpcom-products.php',
+        'Automattic\\Jetpack\\Newsletter\\Freshly_Pressed' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-freshly-pressed.php',
         'Automattic\\Jetpack\\Newsletter\\Reader_Link' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-reader-link.php',
         'Automattic\\Jetpack\\Newsletter\\Settings' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-settings.php',
         'Automattic\\Jetpack\\Newsletter\\Urls' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-urls.php',
