@@ -427,6 +427,7 @@ return array(
     'Automattic\\Jetpack\\SEO\\Author_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-author-schema-node.php',
     'Automattic\\Jetpack\\SEO\\Breadcrumb_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-breadcrumb-schema-node.php',
     'Automattic\\Jetpack\\SEO\\Content_Coverage' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-content-coverage.php',
+    'Automattic\\Jetpack\\SEO\\Content_Gate' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-content-gate.php',
     'Automattic\\Jetpack\\SEO\\Dashboard_Data' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-dashboard-data.php',
     'Automattic\\Jetpack\\SEO\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-initializer.php',
     'Automattic\\Jetpack\\SEO\\Llms_Txt' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-llms-txt.php',
