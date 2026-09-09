@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.
 - Post detail: Replace the daily Traffic activity heatmap with an All-time traffic table of monthly views, and picking a month applies it as the page's period.
 - Report date filters: stage a date range through one shared bounds helper in both pickers.
+- Update package dependencies.
 
 ### Removed
 - Remove the arrows that stepped the date range back and forward a period.
