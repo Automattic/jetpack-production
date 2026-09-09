@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Premium Analytics: add the Month to date and Year to date periods to the date picker.
+- Premium Analytics: ask whether the new Traffic tab is ready to replace the old one, instead of how it compares with the old one.
 - Premium Analytics: Build the custom date range calendar on the WordPress design system calendar.
 - Premium Analytics: Remove the arrows that stepped the date range back and forward a period.
 - Premium Analytics: tell readers where their feedback went and that they can send more, instead of a one-line thank you.

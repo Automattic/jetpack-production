@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Build the custom date range calendar on the WordPress design system calendar.
+- Dashboard: ask whether the new Traffic tab is ready to replace the old one, instead of how it compares with the old one.
 - Feedback: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
 - Report date filters: stage a date range through one shared bounds helper in both pickers.
 
