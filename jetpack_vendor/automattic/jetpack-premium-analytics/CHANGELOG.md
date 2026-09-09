@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Date picker: add the Month to date and Year to date periods.
+
 ### Changed
 - Build the custom date range calendar on the WordPress design system calendar.
 - Feedback: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
