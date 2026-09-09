@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Dialogs: keep the comment field's focus ring from being clipped by the dialog footer.
 - Onboarding: keep the welcome modal open on a click outside it, so the tour can still be started.
 - Post, page and video detail pages: offer every period the dashboard's date picker does, plus a custom range.
+- Stop the first and last dates on a chart's horizontal axis from being cut off.
 
 ## [0.6.0] - 2026-09-08
 ### Added
