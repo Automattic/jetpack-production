@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Report date filters: stage a date range through one shared bounds helper in both pickers.
+
 ## [0.6.0] - 2026-09-08
 ### Added
 - Add an "Any feedback?" action to the dashboard header. [#51870]
