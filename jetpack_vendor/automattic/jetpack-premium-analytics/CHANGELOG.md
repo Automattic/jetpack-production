@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Report date filters: stage a date range through one shared bounds helper in both pickers.
 
+### Fixed
+- Onboarding: keep the welcome modal open on a click outside it, so the tour can still be started.
+
 ## [0.6.0] - 2026-09-08
 ### Added
 - Add an "Any feedback?" action to the dashboard header. [#51870]

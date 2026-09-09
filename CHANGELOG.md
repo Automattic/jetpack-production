@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Show a selected response beside the responses list again instead of below it. Also fixes the same sidebar layout on the Newsletter and SEO dashboards.
 - My Jetpack: Offer to activate Search, rather than to buy a plan, when the site already owns it and the module is switched off.
 - My Jetpack: Show the right product status as soon as fresher plan data is available, instead of reusing an earlier lookup.
+- Premium Analytics: keep the onboarding welcome modal open on a click outside it, so the tour can still be started.
 - SEO: Return saved site verification codes from the site settings API.
 - Status: Detect a site served on any 127.0.0.0/8 loopback address, or on 0.0.0.0, as a local site.
 
