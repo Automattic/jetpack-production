@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Onboarding: keep the welcome modal open on a click outside it, so the tour can still be started.
+- Post, page and video detail pages: offer every period the dashboard's date picker does, plus a custom range.
 
 ## [0.6.0] - 2026-09-08
 ### Added
