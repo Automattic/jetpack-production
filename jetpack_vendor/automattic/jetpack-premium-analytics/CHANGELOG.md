@@ -5,13 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.1-alpha] - unreleased
+## [0.7.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Feedback: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
 - Report date filters: stage a date range through one shared bounds helper in both pickers.
+
+### Removed
+- Remove the arrows that stepped the date range back and forward a period.
 
 ### Fixed
 - Onboarding: keep the welcome modal open on a click outside it, so the tour can still be started.
@@ -291,7 +294,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
-[0.6.1-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.6.0...0.6.1-alpha
+[0.7.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.6.0...0.7.0-alpha
 [0.6.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.3.0...0.4.0

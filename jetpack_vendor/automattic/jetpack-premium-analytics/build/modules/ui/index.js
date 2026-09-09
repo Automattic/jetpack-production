@@ -62,8 +62,6 @@ __( "Cancel", "jetpack-premium-analytics-pkg" );
 __( "Apply", "jetpack-premium-analytics-pkg" );
 __( "Period", "jetpack-premium-analytics-pkg" );
 __( "Custom range", "jetpack-premium-analytics-pkg" );
-__( "Previous period", "jetpack-premium-analytics-pkg" );
-__( "Next period", "jetpack-premium-analytics-pkg" );
 __( "Time period", "jetpack-premium-analytics-pkg" );
 __( "Select period", "jetpack-premium-analytics-pkg" );
 __( "Welcome to the new Traffic page", "jetpack-premium-analytics-pkg" );
