@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Build the custom date range calendar on the WordPress design system calendar.
 - Feedback: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
 - Report date filters: stage a date range through one shared bounds helper in both pickers.
 
