@@ -49,6 +49,7 @@
 		"build/widgets/popular-days/render.js",
 		"build/widgets/popular-hours/render.js",
 		"build/widgets/popular-post/render.js",
+		"build/widgets/post-all-time-traffic/render.js",
 		"build/widgets/post-comments/render.js",
 		"build/widgets/post-detail-highlights/render.js",
 		"build/widgets/post-likes/render.js",
