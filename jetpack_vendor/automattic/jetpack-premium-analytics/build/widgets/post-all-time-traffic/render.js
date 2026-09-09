@@ -34,5 +34,7 @@ __( "No views", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this post's traffic. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "No views yet.", "jetpack-premium-analytics-pkg" );
 __( "Open a post or page report to see its all-time traffic here.", "jetpack-premium-analytics-pkg" );
+__( "Fewer views per day", "jetpack-premium-analytics-pkg" );
 __( "Fewer views", "jetpack-premium-analytics-pkg" );
+__( "More views per day", "jetpack-premium-analytics-pkg" );
 __( "More views", "jetpack-premium-analytics-pkg" );

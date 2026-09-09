@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Date picker: add the Month to date and Year to date periods.
+- Post detail: Add a Total views / Daily average switch to the All-time traffic card.
 
 ### Changed
 - Build the custom date range calendar on the WordPress design system calendar.

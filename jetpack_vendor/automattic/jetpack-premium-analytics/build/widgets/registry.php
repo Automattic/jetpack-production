@@ -537,7 +537,7 @@ return array(
 		'dir_name'     => 'post-all-time-traffic',
 		'title'        => 'All-time traffic',
 		'description'  => 'Every month of views for the post or page being viewed, across its whole life.',
-		'help'         => array( 'content' => 'Every month of views for the post or page being viewed, shaded by how it compares to the rest. Always the full history: the period above doesn\'t narrow it. Pick a month to read the rest of the page over it.' ),
+		'help'         => array( 'content' => 'Every month of views for the post or page being viewed, shaded by how it compares to the rest. Always the full history: the period above doesn\'t narrow it. Pick a month to read the rest of the page over it. Daily average leaves the current day out, as the classic Stats table does.' ),
 		'icon'         => null,
 		'actions'      => null,
 		'has_render'   => true,
