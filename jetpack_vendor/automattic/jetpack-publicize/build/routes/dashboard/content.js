@@ -18,12 +18,19 @@ __( "(opens in a new tab)", "jetpack-publicize-pkg" );
 __( "Dismiss", "jetpack-publicize-pkg" );
 /* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack-publicize-pkg" );
-__( "Reconnecting Jetpack", "jetpack-publicize-pkg" );
-__( "Loading…", "jetpack-publicize-pkg" );
-__( "Restore Connection", "jetpack-publicize-pkg" );
-__( "A connection check failed.", "jetpack-publicize-pkg" );
-__( "Take Action", "jetpack-publicize-pkg" );
-__( "Reconnecting Jetpack…", "jetpack-publicize-pkg" );
+__( "Your account (connection owner)", "jetpack-publicize-pkg" );
+/* translators: %s is the display name of the Jetpack connection owner. */
+__( "Connection owner's account (%s)", "jetpack-publicize-pkg" );
+__( "Connection owner's account", "jetpack-publicize-pkg" );
+__( "Your account", "jetpack-publicize-pkg" );
+__( "Another user's account", "jetpack-publicize-pkg" );
+__( "User connection", "jetpack-publicize-pkg" );
+__( "Site connection", "jetpack-publicize-pkg" );
+/* translators: %s is what the error applies to, e.g. "Site connection" or "Your account". */
+__( "Jetpack Connection error: %s", "jetpack-publicize-pkg" );
+/* translators: %d is the number of connection errors found. */
+_n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack-publicize-pkg" );
+__( "Jetpack Connection error", "jetpack-publicize-pkg" );
 __( "Jetpack Logo", "jetpack-publicize-pkg" );
 __( "An Automattic Airline", "jetpack-publicize-pkg" );
 __( "Products", "jetpack-publicize-pkg" );
@@ -32,6 +39,13 @@ __( "Jetpack", "jetpack-publicize-pkg" );
 __( "Sections", "jetpack-publicize-pkg" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-publicize-pkg" );
+__( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-publicize-pkg" );
+__( "Reconnecting Jetpack", "jetpack-publicize-pkg" );
+__( "Loading…", "jetpack-publicize-pkg" );
+__( "Restore Connection", "jetpack-publicize-pkg" );
+__( "A connection check failed.", "jetpack-publicize-pkg" );
+__( "Take Action", "jetpack-publicize-pkg" );
+__( "Reconnecting Jetpack…", "jetpack-publicize-pkg" );
 __( "Error verifying the connection.", "jetpack-publicize-pkg" );
 __( "Account disconnected successfully.", "jetpack-publicize-pkg" );
 __( "Error disconnecting account.", "jetpack-publicize-pkg" );
