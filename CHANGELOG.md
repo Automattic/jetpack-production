@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Connection: Show every connection error in one notice, each with the account it affects, and link to Site Health when a firewall is blocking WordPress.com.
 - Newsletter: Add a Freshly Pressed tab to the Daily Writing Prompt dashboard widget, listing the posts WordPress.com is currently featuring.
+- Notices: Render Jetpack admin notices with the WordPress design system Notice component.
 - PayPal Payment Buttons: add API-managed buttons behind a feature flag that is not yet enabled. Once it is on, you can connect a PayPal account from WordPress, create and manage payment links without leaving the editor, choose a Button, Link, or QR format, and pick a Light, Auto, or Dark style preset.
 - Premium Analytics: add the Month to date and Year to date periods to the date picker.
 - Premium Analytics: ask whether the new Traffic tab is ready to replace the old one, instead of how it compares with the old one.
