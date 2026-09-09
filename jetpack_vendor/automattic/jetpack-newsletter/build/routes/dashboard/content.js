@@ -431,11 +431,13 @@ __( "Add the Subscribe Block to the navigation", "jetpack-newsletter" );
 __( "Add the Subscriber Login Block to the navigation", "jetpack-newsletter" );
 __( "Enable the \"Subscribe to site\" option on your comment form", "jetpack-newsletter" );
 __( "Enable the \"Subscribe to comments\" option on your comment form", "jetpack-newsletter" );
+__( "Show the Action Bar on the front end of the site", "jetpack-newsletter" );
 __( "Subscriptions", "jetpack-newsletter" );
 __( "Automatically add subscription forms to your site and turn visitors into subscribers.", "jetpack-newsletter" );
 __( "Homepage and posts", "jetpack-newsletter" );
 __( "Navigation", "jetpack-newsletter" );
 __( "Comments", "jetpack-newsletter" );
+__( "Action Bar", "jetpack-newsletter" );
 __( "This category already exists.", "jetpack-newsletter" );
 __( "Could not create the category. Please try again.", "jetpack-newsletter" );
 /* translators: %s: the category name the user typed. */

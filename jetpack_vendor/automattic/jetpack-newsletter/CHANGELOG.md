@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Daily Writing Prompt: Add a Freshly Pressed tab listing the posts WordPress.com is currently featuring.
+- Subscriptions: add an Action Bar visibility toggle on WordPress.com Simple sites.
 
 ### Changed
 - Sidebar: sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom.
