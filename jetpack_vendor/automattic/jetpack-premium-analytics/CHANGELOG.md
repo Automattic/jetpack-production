@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the arrows that stepped the date range back and forward a period.
 
 ### Fixed
+- Dialogs: keep the comment field's focus ring from being clipped by the dialog footer.
 - Onboarding: keep the welcome modal open on a click outside it, so the tour can still be started.
 - Post, page and video detail pages: offer every period the dashboard's date picker does, plus a custom range.
 
