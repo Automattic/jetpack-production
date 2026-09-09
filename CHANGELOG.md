@@ -63,6 +63,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: keep the dialog focus ring from being clipped by the dialog footer.
 - Premium Analytics: keep the onboarding welcome modal open on a click outside it, so the tour can still be started.
 - Premium Analytics: on the post, page and video detail pages, offer every period the dashboard's date picker does, plus a custom range.
+- Reader: show the body of a reposted comment instead of an empty quote.
 - SEO: Return saved site verification codes from the site settings API.
 - Status: Detect a site served on any 127.0.0.0/8 loopback address, or on 0.0.0.0, as a local site.
 
