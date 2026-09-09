@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Connection: Show every connection error in one notice, each with the account it affects, and link to Site Health when a firewall is blocking WordPress.com.
 - Newsletter: Add a Freshly Pressed tab to the Daily Writing Prompt dashboard widget, listing the posts WordPress.com is currently featuring.
+- PayPal Payment Buttons: add API-managed buttons behind a feature flag that is not yet enabled. Once it is on, you can connect a PayPal account from WordPress, create and manage payment links without leaving the editor, choose a Button, Link, or QR format, and pick a Light, Auto, or Dark style preset.
 - Premium Analytics: add the Month to date and Year to date periods to the date picker.
 - Premium Analytics: ask whether the new Traffic tab is ready to replace the old one, instead of how it compares with the old one.
 - Premium Analytics: Build the custom date range calendar on the WordPress design system calendar.
@@ -27,6 +28,37 @@ This is an alpha version! The changes listed here are not final.
 - Map block: Ensure the WordPress.com Mapbox key load tracking event is recorded on Simple sites.
 - My Jetpack: Offer to activate Search, rather than to buy a plan, when the site already owns it and the module is switched off.
 - My Jetpack: Show the right product status as soon as fresher plan data is available, instead of reusing an earlier lookup.
+- PayPal Payment Buttons: break the disconnect confirmation into a short summary and a list, so its consequences are readable at a glance.
+- PayPal Payment Buttons: close PayPal's onboarding window with the Escape key or its Close button, instead of reloading the editor and losing unsaved changes.
+- PayPal Payment Buttons: Close the PayPal onboarding popup automatically when it returns, instead of leaving it open on a wp-admin screen.
+- PayPal Payment Buttons: Complete PayPal onboarding using PayPal's own onboarding SDK, so connecting an account finishes instead of stopping at "Merchant integration info not available".
+- PayPal Payment Buttons: connect a PayPal account in a separate window, so finishing onboarding no longer reloads the editor and discards an unsaved post.
+- PayPal Payment Buttons: discard a PayPal connection that fails its final checks, instead of leaving the site looking connected while reporting an error.
+- PayPal Payment Buttons: encode the PayPal payment link in the QR code behind the button's Show Link or QR Code toggle, instead of the page the button sits on.
+- PayPal Payment Buttons: Fix "Connect with PayPal" always failing with "Request is not well-formed, syntactically incorrect, or violates schema." The seller nonce was 43 characters, one below the minimum PayPal enforces.
+- PayPal Payment Buttons: Fix "Connect with PayPal" failing its final checks. The setup request never asked PayPal for Payment Links & Buttons access, which every button needs.
+- PayPal Payment Buttons: fix "Connect with PayPal" failing with a 404, and create the onboarding referral through WordPress.com so PayPal platform credentials never reach the site.
+- PayPal Payment Buttons: fix an error from PayPal when product options have their own prices. The product price is now optional in that case, and every option in the group must be priced.
+- PayPal Payment Buttons: Fix onboarding leaving the site connected but reporting "Merchant integration info not available". The merchant ID PayPal returns on the redirect was never saved.
+- PayPal Payment Buttons: Go straight to the API credentials step on a site with no WordPress.com connection, instead of offering Connect with PayPal.
+- PayPal Payment Buttons: include PayPal's own error and debug ID when Payment Links & Buttons access is refused, instead of guessing at the cause.
+- PayPal Payment Buttons: include the PayPal partner attribution code in every copied and emailed payment link, matching the link the published button uses.
+- PayPal Payment Buttons: Keep the PayPal connection error dismissed, instead of showing it again and asking PayPal for another onboarding link.
+- PayPal Payment Buttons: Load PayPal's onboarding script into the editor canvas so the Connect with PayPal button opens PayPal's window instead of a new browser tab.
+- PayPal Payment Buttons: log a notice when stored PayPal credentials cannot be decrypted and are removed, instead of removing them silently.
+- PayPal Payment Buttons: make the Copy Link button work in the payment button's QR code panel, where clicking it previously did nothing.
+- PayPal Payment Buttons: Offer Connect with PayPal on WordPress.com and Jetpack-connected sites, instead of only after PayPal is already connected.
+- PayPal Payment Buttons: open PayPal's onboarding window when you click Connect with PayPal, instead of covering the editor with a blank overlay.
+- PayPal Payment Buttons: Open PayPal onboarding in a sized window instead of a stray browser tab when PayPal's onboarding script is unavailable.
+- PayPal Payment Buttons: Report a PayPal platform configuration problem directly instead of asking the merchant to try again, which could never help.
+- PayPal Payment Buttons: say how many published posts embed a payment link before it is deleted from the admin.
+- PayPal Payment Buttons: send the "Open PayPal Dashboard" link to the sandbox app list when connecting in sandbox, instead of always opening the live one.
+- PayPal Payment Buttons: show that PayPal is disconnected instead of reporting a connected account, and offer a Reconnect button. Disconnecting now says it applies to the whole site.
+- PayPal Payment Buttons: show the option price on the published page when the product options have their own prices.
+- PayPal Payment Buttons: show the payment a duplicated block actually points at, so two blocks sharing one PayPal payment can no longer display different products or prices.
+- PayPal Payment Buttons: stop accepting prices with decimals for Japanese yen, Hungarian forint and New Taiwan dollar, which PayPal rejects, and remove the Indian rupee, which PayPal does not support.
+- PayPal Payment Buttons: Stop the block retrying the PayPal onboarding link forever when the request fails.
+- PayPal Payment Buttons: take the displayed price from the option group PayPal is actually pricing.
 - Premium Analytics: keep the dialog focus ring from being clipped by the dialog footer.
 - Premium Analytics: keep the onboarding welcome modal open on a click outside it, so the tour can still be started.
 - Premium Analytics: on the post, page and video detail pages, offer every period the dashboard's date picker does, plus a custom range.
