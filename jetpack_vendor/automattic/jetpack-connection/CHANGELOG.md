@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Carry an error's Site Health link on the displayable error, so notices other than the wp-admin one can offer it.
 
+### Fixed
+- Hide connection error notices from viewers who lack the capability to resolve them.
+
 ## [9.1.1] - 2026-09-08
 ### Changed
 - Build the connection owner notice script without HEREDOC syntax. [#51759]
