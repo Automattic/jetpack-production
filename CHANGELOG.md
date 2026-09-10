@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: show the Skip tour button on every step of the onboarding tour.
 - Premium Analytics: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
 - Sidebar: sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom.
+- VideoPress: Add a "Learn more" support link to the admin page.
 
 ### Bug fixes
 - Admin: Match the Jetpack menu logo's first paint to the active admin color scheme.

@@ -79,7 +79,7 @@ __( "Help", "jetpack-videopress-pkg" );
 __( "Jetpack", "jetpack-videopress-pkg" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-videopress-pkg" );
-__( "Host, manage, customize, and track your videos — all in one place.", "jetpack-videopress-pkg" );
+__( "Host, manage, customize, and track your videos — all in one place. <link>Learn more</link>.", "jetpack-videopress-pkg" );
 __( "Connect to set up VideoPress", "jetpack-videopress-pkg" );
 __( "VideoPress needs a connection to WordPress.com before you can upload and manage your videos.", "jetpack-videopress-pkg" );
 __( "Connecting…", "jetpack-videopress-pkg" );

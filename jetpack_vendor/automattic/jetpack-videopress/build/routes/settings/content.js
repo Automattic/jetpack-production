@@ -82,7 +82,7 @@ __( "The same ad-free player every video on your site will use — your visitors
 _n( "Move %d video over", "Move %d videos over", 1, "jetpack-videopress-pkg" );
 __( "Learn more", "jetpack-videopress-pkg" );
 __( "Upload a video", "jetpack-videopress-pkg" );
-__( "Host, manage, customize, and track your videos — all in one place.", "jetpack-videopress-pkg" );
+__( "Host, manage, customize, and track your videos — all in one place. <link>Learn more</link>.", "jetpack-videopress-pkg" );
 __( "Connect to set up VideoPress", "jetpack-videopress-pkg" );
 __( "VideoPress needs a connection to WordPress.com before you can upload and manage your videos.", "jetpack-videopress-pkg" );
 __( "Connecting…", "jetpack-videopress-pkg" );
