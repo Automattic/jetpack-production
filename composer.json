@@ -59,7 +59,7 @@
 		"automattic/jetpack-search": "^8.1.1-alpha",
 		"automattic/jetpack-seo": "^0.9.2-alpha",
 		"automattic/jetpack-stats": "^0.21.1",
-		"automattic/jetpack-stats-admin": "^0.35.1",
+		"automattic/jetpack-stats-admin": "^0.36.0-alpha",
 		"automattic/jetpack-status": "^7.0.1-alpha",
 		"automattic/jetpack-sync": "^5.1.0",
 		"automattic/jetpack-videopress": "^0.50.1-alpha",
