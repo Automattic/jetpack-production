@@ -7,8 +7,6 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s" );
 __( "More details follow the field." );
 __( "Select" );
 /* translators: accessibility text appended to link text */
@@ -23,6 +21,8 @@ __( "Help", "jetpack-components" );
 __( "Jetpack", "jetpack-components" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-components" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s" );
 /* translators: 1: Calendar type. 2: Current month and year. */
 __( "%1$s, %2$s" );
 __( "Date calendar" );
