@@ -13,6 +13,17 @@ This is an alpha version! The changes listed here are not final.
 - Add a feature flag for the API-managed payment buttons; the block keeps the paste-code editor while it is off.
 - Add API-managed payment buttons behind a feature flag that is not yet enabled. Once it is on, you can connect a PayPal account from WordPress, create and manage payment links without leaving the editor, choose a Button, Link, or QR format, and pick a Light, Auto, or Dark style preset.
 
+### Changed
+- Hide the product price field when the product options carry their own prices, and stop a leftover value there from blocking Update.
+- Move the product form fields into the block inspector and fit them to the sidebar column. The primary button is now Create New / Save instead of naming the display format.
+- One checkbox turns on per-variant pricing, and the price belongs to the first option group.
+- Pick a page for the return URL, or paste one, instead of typing the address by hand.
+- Use the design's wording in Product Options: an option group is a variant.
+- Warn on every payment button that changes apply to every button sharing the same payment link, wherever it is used.
+
+### Removed
+- Remove the Tax name field. PayPal labels the tax itself, so the buyer sees Tax whatever the merchant types.
+
 ### Fixed
 - Break the PayPal disconnect confirmation into a short summary and a list, so its consequences are readable at a glance.
 - Close PayPal's onboarding window with the Escape key or its Close button, instead of reloading the editor and losing unsaved changes.
@@ -37,16 +48,23 @@ This is an alpha version! The changes listed here are not final.
 - Offer Connect with PayPal on WordPress.com and Jetpack-connected sites, instead of only after PayPal is already connected.
 - Open PayPal's onboarding window when you click Connect with PayPal, instead of covering the editor with a blank overlay.
 - Open PayPal onboarding in a sized window instead of a stray browser tab when PayPal's onboarding script is unavailable.
+- Open the Product Options panel on a saved button when an option needs fixing, so the error is on screen.
 - Report a PayPal platform configuration problem directly instead of asking the merchant to try again, which could never help.
+- Require a tax rate when tax collection is on, instead of saving an empty rate as 0%.
 - Return up to 100 payment links per request instead of 10.
 - Say how many published posts embed a payment link before it is deleted from the admin.
+- Say why an unsupported currency or an empty variant group blocks saving, instead of disabling the save button with nothing on screen.
+- Say why the product price field is invalid when clearing the option prices brings it back, instead of disabling save with nothing on screen.
 - Send the "Open PayPal Dashboard" link to the sandbox app list when connecting in sandbox, instead of always opening the live one.
 - Show how many payment links the account has, not how many fit on the page you are looking at.
+- Show product option validation errors under the field that caused them, instead of only disabling the save button.
 - Show that PayPal is disconnected instead of reporting a connected account, and offer a Reconnect button. Disconnecting now says it applies to the whole site.
 - Show the option price on the published page when the product options have their own prices.
 - Show the payment a duplicated block actually points at, so two blocks sharing one PayPal payment can no longer display different products or prices.
 - Stop accepting prices with decimals for Japanese yen, Hungarian forint and New Taiwan dollar, which PayPal rejects, and remove the Indian rupee, which PayPal does not support.
+- Stop offering a third custom checkout field, which PayPal rejects.
 - Stop the block retrying the PayPal onboarding link forever when the request fails.
+- Stop the form's error styling applying to every block editor screen.
 - Stop turning a flat tax into a percentage. A payment link carrying a fixed tax amount now saves with that amount intact instead of being rejected or rewritten, a tax with no name is kept rather than dropped, and a tax set to follow the PayPal profile always sends the profile setting instead of a stray rate.
 - Take the displayed price from the option group PayPal is actually pricing.
 
