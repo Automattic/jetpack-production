@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the Tax name field. PayPal labels the tax itself, so the buyer sees Tax whatever the merchant types.
 
 ### Fixed
+- Allow product descriptions up to PayPal's real 2048-character limit, instead of cutting them off at 256.
 - Break the PayPal disconnect confirmation into a short summary and a list, so its consequences are readable at a glance.
 - Close PayPal's onboarding window with the Escape key or its Close button, instead of reloading the editor and losing unsaved changes.
 - Close the PayPal onboarding popup automatically when it returns, instead of leaving it open on a wp-admin screen.
@@ -36,7 +37,10 @@ This is an alpha version! The changes listed here are not final.
 - Fix "Connect with PayPal" failing its final checks. The setup request never asked PayPal for Payment Links & Buttons access, which every button needs.
 - Fix "Connect with PayPal" failing with a 404, and create the onboarding referral through WordPress.com so PayPal platform credentials never reach the site.
 - Fix an error from PayPal when product options have their own prices. The product price is now optional in that case, and every option in the group must be priced.
+- Fix editing a payment button reporting an error after the edit saved. PayPal answers a successful update with 204 No Content and the API client expected 200.
 - Fix onboarding leaving the site connected but reporting "Merchant integration info not available". The merchant ID PayPal returns on the redirect was never saved.
+- Fix tax collection turning itself off. An empty tax name made the block and then the REST route throw the whole tax away.
+- Fix Update deleting payment configuration set outside the block. An update is a full replacement at PayPal, so a SKU, shipping rate, handling fee or discount set anywhere else was silently dropped, and address collection was forced back on.
 - Go straight to the API credentials step on a site with no WordPress.com connection, instead of offering Connect with PayPal.
 - Include PayPal's own error and debug ID when Payment Links & Buttons access is refused, instead of guessing at the cause.
 - Include the PayPal partner attribution code in every copied and emailed payment link, matching the link the published button uses.
