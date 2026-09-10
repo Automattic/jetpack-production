@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Dashboard: deprecate the jetpack_forms_alpha filter, which no longer selects anything.
 
+### Fixed
+- Stop the Forms data stores from logging a duplicate registration error in the browser console.
+
 ## [8.0.3] - 2026-09-09
 ### Changed
 - Sidebar: Sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom. [#52003]
