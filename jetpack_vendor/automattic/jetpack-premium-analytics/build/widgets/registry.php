@@ -1047,7 +1047,7 @@ return array(
 		'dir_name'     => 'traffic-chart',
 		'title'        => 'Traffic summary',
 		'description'  => 'Compare views, visitors, likes, and comments over the selected period, with the previous period overlaid for comparison.',
-		'help'         => array( 'content' => 'A summary of your site\'s views, visitors, likes, and comments.' ),
+		'help'         => array( 'content' => 'A summary of your site\'s views, visitors, likes, and comments. The Visitors total is a per-period sum, not a unique count.' ),
 		'icon'         => null,
 		'actions'      => null,
 		'has_render'   => true,
