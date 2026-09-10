@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Date picker: add the Month to date and Year to date periods.
+- Locations: Add a map of views by location to the report, with an option to hide it.
 - Post detail: Add a Total views / Daily average switch to the All-time traffic card.
 
 ### Changed
