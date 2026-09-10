@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Build the custom date range calendar on the WordPress design system calendar.
+- Dashboard: Ask the same readiness question when switching the new Traffic tab off, and point to the Modules Visibility setting to switch it back on.
 - Dashboard: ask whether the new Traffic tab is ready to replace the old one, instead of how it compares with the old one.
 - Dashboard: hide the date controls while customizing the layout, instead of disabling them.
 - Date picker: offer the common periods the design lists, dropping Last 90 days, Last 365 days and Last year.
