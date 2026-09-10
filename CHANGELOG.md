@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add the Totals column to the post detail All-time traffic card; picking a total reads the page over that year.
 - Premium Analytics: ask whether the new Traffic tab is ready to replace the old one, instead of how it compares with the old one.
 - Premium Analytics: Build the custom date range calendar on the WordPress design system calendar.
+- Premium Analytics: hide the dashboard's date controls while customizing its layout, instead of disabling them.
 - Premium Analytics: Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.
 - Premium Analytics: Note in the Traffic summary help that the Visitors total is a per-period sum.
 - Premium Analytics: offer the common date periods the design lists, dropping Last 90 days, Last 365 days and Last year.
