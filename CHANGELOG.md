@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add a map of views by location to the Locations report, with an option to hide it.
 - Premium Analytics: Add a Total views / Daily average switch to the post detail All-time traffic card.
 - Premium Analytics: add the Month to date and Year to date periods to the date picker.
+- Premium Analytics: Add the Totals column to the post detail All-time traffic card; picking a total reads the page over that year.
 - Premium Analytics: ask whether the new Traffic tab is ready to replace the old one, instead of how it compares with the old one.
 - Premium Analytics: Build the custom date range calendar on the WordPress design system calendar.
 - Premium Analytics: Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.

@@ -30,6 +30,7 @@ __( "Same period from last week", "jetpack-premium-analytics-pkg" );
 _x( "Same period in %s", "previous month comparison", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the year the comparison period starts in, e.g. "2025". */
 _x( "Same period in %s", "previous year comparison", "jetpack-premium-analytics-pkg" );
+__( "Totals", "jetpack-premium-analytics-pkg" );
 __( "No views", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this post's traffic. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "No views yet.", "jetpack-premium-analytics-pkg" );

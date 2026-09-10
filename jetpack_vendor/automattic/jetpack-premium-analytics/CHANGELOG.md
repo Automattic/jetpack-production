@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Date picker: add the Month to date and Year to date periods.
 - Locations: Add a map of views by location to the report, with an option to hide it.
 - Post detail: Add a Total views / Daily average switch to the All-time traffic card.
+- Post detail: Add the Totals column to the All-time traffic card, with centred month labels and labels that stay in view while a long history scrolls; picking a total reads the page over that year.
 - Traffic: Note in the widget help that the Visitors total is a per-period sum.
 
 ### Changed
