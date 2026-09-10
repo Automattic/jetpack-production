@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Feedback: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
 - Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.
 - Onboarding: show the Skip tour button on every step of the spotlight tour.
+- Pin the section header on the report pages, as on the dashboard, from one shared component.
 - Post detail: Replace the daily Traffic activity heatmap with an All-time traffic table of monthly views, and picking a month applies it as the page's period.
 - Report date filters: stage a date range through one shared bounds helper in both pickers.
 - Update package dependencies.
