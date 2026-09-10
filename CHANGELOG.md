@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin: Match the Jetpack menu logo's first paint to the active admin color scheme.
 - Charts: Stop the first and last dates on a chart's horizontal axis from being cut off.
 - Connection: Hide connection error notices from users who cannot fix the connection.
+- Editor: Stop offering to activate the legacy Likes and Sharing buttons modules on block themes, where the corresponding blocks should be added to a template instead.
 - Forms: Restore multi-page printing of a single response. SEO: Move the dashboard's toast notices back to the top right.
 - Forms: Scroll a single response from the page edge instead of from inside the reading column.
 - Forms: Show a selected response beside the responses list again instead of below it. Also fixes the same sidebar layout on the Newsletter and SEO dashboards.
