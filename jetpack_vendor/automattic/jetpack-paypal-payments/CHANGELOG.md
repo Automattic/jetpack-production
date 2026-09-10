@@ -38,13 +38,16 @@ This is an alpha version! The changes listed here are not final.
 - Open PayPal's onboarding window when you click Connect with PayPal, instead of covering the editor with a blank overlay.
 - Open PayPal onboarding in a sized window instead of a stray browser tab when PayPal's onboarding script is unavailable.
 - Report a PayPal platform configuration problem directly instead of asking the merchant to try again, which could never help.
+- Return up to 100 payment links per request instead of 10.
 - Say how many published posts embed a payment link before it is deleted from the admin.
 - Send the "Open PayPal Dashboard" link to the sandbox app list when connecting in sandbox, instead of always opening the live one.
+- Show how many payment links the account has, not how many fit on the page you are looking at.
 - Show that PayPal is disconnected instead of reporting a connected account, and offer a Reconnect button. Disconnecting now says it applies to the whole site.
 - Show the option price on the published page when the product options have their own prices.
 - Show the payment a duplicated block actually points at, so two blocks sharing one PayPal payment can no longer display different products or prices.
 - Stop accepting prices with decimals for Japanese yen, Hungarian forint and New Taiwan dollar, which PayPal rejects, and remove the Indian rupee, which PayPal does not support.
 - Stop the block retrying the PayPal onboarding link forever when the request fails.
+- Stop turning a flat tax into a percentage. A payment link carrying a fixed tax amount now saves with that amount intact instead of being rejected or rewritten, a tax with no name is kept rather than dropped, and a tax set to follow the PayPal profile always sends the profile setting instead of a stray rate.
 - Take the displayed price from the option group PayPal is actually pricing.
 
 ## [0.8.1] - 2026-09-08
