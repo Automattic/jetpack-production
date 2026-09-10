@@ -767,7 +767,7 @@ class Error_Handler {
 	/**
 	 * Whether an error describes the connection owner's own connection.
 	 *
-	 * @since 9.1.2-alpha
+	 * @since 9.2.0-alpha
 	 *
 	 * @param string $error_code The error code.
 	 * @param string $audience   The classified audience.
