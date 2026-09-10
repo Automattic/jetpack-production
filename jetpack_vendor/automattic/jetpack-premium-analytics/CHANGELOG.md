@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Feedback: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
 - Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.
 - Onboarding: show the Skip tour button on every step of the spotlight tour.
+- Pin the post and video detail headers on scroll and condense them as on the dashboard: the tabs scroll away, the subtitle folds and the media shrinks to the title row.
 - Pin the section header on the report pages, as on the dashboard, from one shared component.
 - Post and video detail pages: draw the Post views and Video performance charts as bars by default.
 - Post detail: Replace the daily Traffic activity heatmap with an All-time traffic table of monthly views, and picking a month applies it as the page's period.
