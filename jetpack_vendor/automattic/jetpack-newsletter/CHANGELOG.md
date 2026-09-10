@@ -14,8 +14,11 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: add an Action Bar visibility toggle on WordPress.com Simple sites.
 
 ### Changed
-- Sidebar: sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom.
 - Update package dependencies.
+
+## [0.14.1] - 2026-09-09
+### Changed
+- Sidebar: Sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom. [#52003]
 
 ## [0.14.0] - 2026-09-08
 ### Changed
@@ -367,7 +370,8 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.15.0-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.14.0...v0.15.0-alpha
+[0.15.0-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.14.1...v0.15.0-alpha
+[0.14.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.14.0...v0.14.1
 [0.14.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.13.0...v0.14.0
 [0.13.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.7...v0.13.0
 [0.12.7]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.6...v0.12.7

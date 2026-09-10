@@ -16,6 +16,10 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Hide connection error notices from viewers who lack the capability to resolve them.
 
+## [9.1.2] - 2026-09-09
+### Changed
+- Update dependencies. [#50674]
+
 ## [9.1.1] - 2026-09-08
 ### Changed
 - Build the connection owner notice script without HEREDOC syntax. [#51759]
@@ -2063,7 +2067,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.2.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.1.1...v9.2.0-alpha
+[9.2.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.1.2...v9.2.0-alpha
+[9.1.2]: https://github.com/Automattic/jetpack-connection/compare/v9.1.1...v9.1.2
 [9.1.1]: https://github.com/Automattic/jetpack-connection/compare/v9.1.0...v9.1.1
 [9.1.0]: https://github.com/Automattic/jetpack-connection/compare/v9.0.0...v9.1.0
 [9.0.0]: https://github.com/Automattic/jetpack-connection/compare/v8.12.0...v9.0.0

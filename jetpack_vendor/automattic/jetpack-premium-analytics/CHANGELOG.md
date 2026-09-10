@@ -42,6 +42,10 @@ This is an alpha version! The changes listed here are not final.
 - Post, page and video detail pages: offer every period the dashboard's date picker does, plus a custom range.
 - Stop the first and last dates on a chart's horizontal axis from being cut off.
 
+## [0.6.1] - 2026-09-09
+### Changed
+- Internal updates.
+
 ## [0.6.0] - 2026-09-08
 ### Added
 - Add an "Any feedback?" action to the dashboard header. [#51870]
@@ -317,7 +321,8 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
-[0.7.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.6.0...0.7.0-alpha
+[0.7.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.6.1...0.7.0-alpha
+[0.6.1]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.6.0...0.6.1
 [0.6.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.3.0...0.4.0

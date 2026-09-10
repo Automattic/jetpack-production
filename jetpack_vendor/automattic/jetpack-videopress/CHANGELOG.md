@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.50.1-alpha] - unreleased
+## [0.50.2-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -13,8 +13,11 @@ This is an alpha version! The changes listed here are not final.
 - Add a "Learn more" support link to the admin page.
 
 ### Changed
-- Sidebar: sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom.
 - Update package dependencies.
+
+## [0.50.1] - 2026-09-09
+### Changed
+- Sidebar: Sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom. [#52003]
 
 ## [0.50.0] - 2026-09-08
 ### Added
@@ -2233,7 +2236,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.50.1-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.50.0...v0.50.1-alpha
+[0.50.2-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.50.1...v0.50.2-alpha
+[0.50.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.50.0...v0.50.1
 [0.50.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.49.0...v0.50.0
 [0.49.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.48.0...v0.49.0
 [0.48.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.47.2...v0.48.0
