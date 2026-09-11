@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Note in the Traffic summary help that the Visitors total is a per-period sum.
 - Premium Analytics: offer the common date periods the design lists, dropping Last 90 days, Last 365 days and Last year.
 - Premium Analytics: Remove the arrows that stepped the date range back and forward a period.
+- Premium Analytics: remove the year filter and interval dropdown from the Insights header.
 - Premium Analytics: Show a post's monthly views across its whole life on its detail page, in place of the daily heatmap, and picking a month applies it as the page's period.
 - Premium Analytics: show the Skip tour button on every step of the onboarding tour.
 - Premium Analytics: tell readers where their feedback went and that they can send more, instead of a one-line thank you.

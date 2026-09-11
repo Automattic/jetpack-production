@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Date picker: offer the common periods the design lists, dropping Last 90 days, Last 365 days and Last year.
 - Date range: Type the range bounds as zoned instants, so day boundaries are measured on the site's clock. A range whose end precedes its start now reports no period length instead of a one-hour window.
 - Feedback: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
+- Insights: remove the year filter and interval dropdown from the section header.
 - Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.
 - Onboarding: show the Skip tour button on every step of the spotlight tour.
 - Pin the post and video detail headers on scroll and condense them as on the dashboard: the tabs scroll away, the subtitle folds and the media shrinks to the title row.
