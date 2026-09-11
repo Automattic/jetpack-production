@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Scope the Stats chart tooltip reset to its own tooltip so it no longer restyles other charts.
 - Search: Offer to activate Search, rather than to buy a plan, when the site already owns it and the module is switched off.
 - Show a Site Editor action for Like buttons on block themes.
 
