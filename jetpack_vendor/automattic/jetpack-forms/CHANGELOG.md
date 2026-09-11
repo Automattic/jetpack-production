@@ -9,7 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Form editor: Record which version of the welcome guide each analytics event describes.
+
 ### Changed
+- Form editor: Record every welcome guide slide a reader reaches, including after navigating back.
 - Update package dependencies.
 
 ### Deprecated
