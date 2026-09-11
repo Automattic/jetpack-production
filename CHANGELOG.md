@@ -90,6 +90,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: deprecate the jetpack_forms_alpha filter, which no longer selects anything.
 - Newsletter: add the email design screen behind a feature flag.
 - Newsletter: register the email design editor's WordPress.com blocks on the client.
+- Newsletter: save the email design to WordPress.com, and run the design screen in fullscreen.
 
 ## 16.2 - 2026-09-10
 ### Enhancements
