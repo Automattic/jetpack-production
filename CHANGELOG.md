@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Likes: Hide the "Loading…" placeholder from the widget itself, so it disappears even when the Likes stylesheet fails to load.
 - Likes: Load like buttons that a late page reflow brings into view, instead of waiting for the reader to scroll.
 - Map block: Ensure the WordPress.com Mapbox key load tracking event is recorded on Simple sites.
+- My Jetpack: guide block-theme users from legacy Like buttons to the Like block.
 - My Jetpack: Offer to activate Search, rather than to buy a plan, when the site already owns it and the module is switched off.
 - PayPal Payment Buttons: break the disconnect confirmation into a short summary and a list, so its consequences are readable at a glance.
 - PayPal Payment Buttons: close PayPal's onboarding window with the Escape key or its Close button, instead of reloading the editor and losing unsaved changes.

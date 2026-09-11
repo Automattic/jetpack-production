@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Search: Offer to activate Search, rather than to buy a plan, when the site already owns it and the module is switched off.
+- Show a Site Editor action for Like buttons on block themes.
 
 ## [6.2.1] - 2026-09-09
 ### Changed
