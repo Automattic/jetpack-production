@@ -299,9 +299,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-jitm' => array(
-            'pretty_version' => '5.0.2',
-            'version' => '5.0.2.0',
-            'reference' => '22383755076ca9cc5dc8e64fc3057d6e6dc0eedc',
+            'pretty_version' => '5.0.3-alpha.1789159586',
+            'version' => '5.0.3.0-alpha1789159586',
+            'reference' => '892c1bb6e66e0fe359453bdd8d75ad4070a6732c',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-jitm',
             'aliases' => array(),
@@ -337,7 +337,7 @@
         'automattic/jetpack-masterbar' => array(
             'pretty_version' => '0.28.1',
             'version' => '0.28.1.0',
-            'reference' => '1d9dbcde23498da3212b971a700d8480f426ee48',
+            'reference' => 'e3923ae85c740d2b97d610de4157ce9be29f8fe9',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-masterbar',
             'aliases' => array(),
@@ -355,7 +355,7 @@
         'automattic/jetpack-my-jetpack' => array(
             'pretty_version' => '6.2.2-alpha.1789138843',
             'version' => '6.2.2.0-alpha1789138843',
-            'reference' => '5053bd9756c396b0e390724c090099400426d8b4',
+            'reference' => 'e5f7714383856d364ca65c4f142e6a0219fa1cde',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-my-jetpack',
             'aliases' => array(),
@@ -526,7 +526,7 @@
         'automattic/jetpack-stats-admin' => array(
             'pretty_version' => '0.36.0-alpha.1789011611',
             'version' => '0.36.0.0-alpha1789011611',
-            'reference' => '5dd5cf2b2dbd4ad824da60a40f43012178e989bb',
+            'reference' => 'b0f016c172edee117d4ed5bf95360f4a6f36c7aa',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-stats-admin',
             'aliases' => array(),
