@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Fix selecting thumbnail frames from private videos and prefer browser-compatible video renditions.
 - Follow the admin color scheme for the support link.
 
 ## [0.50.1] - 2026-09-09

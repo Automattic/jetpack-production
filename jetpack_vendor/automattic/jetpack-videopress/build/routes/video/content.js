@@ -231,6 +231,7 @@ __( "Thumbnail updated.", "jetpack-videopress-pkg" );
 __( "Failed to update thumbnail.", "jetpack-videopress-pkg" );
 __( "Select thumbnail", "jetpack-videopress-pkg" );
 __( "Use this image as thumbnail", "jetpack-videopress-pkg" );
+__( "Retry", "jetpack-videopress-pkg" );
 __( "We couldn't load this video.", "jetpack-videopress-pkg" );
 __( "Select thumbnail from video", "jetpack-videopress-pkg" );
 __( "Select this frame", "jetpack-videopress-pkg" );
