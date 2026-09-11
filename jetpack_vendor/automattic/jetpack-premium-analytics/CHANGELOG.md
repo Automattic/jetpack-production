@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - All-time traffic: Read the clock in the site timezone when a cell opens the current month or year.
 - Anchor the activity heatmaps' window fallback on the site's today instead of the viewer's.
+- Date comparison: keep the same calendar dates for a range starting on the 1st, so Year to date in a leap year compares against 1 January of the previous year rather than 31 December.
 - Dialogs: keep the comment field's focus ring from being clipped by the dialog footer.
 - Onboarding: keep the welcome modal open on a click outside it, so the tour can still be started.
 - Post, page and video detail pages: offer every period the dashboard's date picker does, plus a custom range.

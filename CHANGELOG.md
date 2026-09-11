@@ -77,6 +77,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: take the displayed price from the option group PayPal is actually pricing.
 - Premium Analytics: keep the dialog focus ring from being clipped by the dialog footer.
 - Premium Analytics: keep the onboarding welcome modal open on a click outside it, so the tour can still be started.
+- Premium Analytics: keep the same calendar dates when comparing a range starting on the 1st with the previous year, so Year to date in a leap year starts on 1 January rather than 31 December.
 - Premium Analytics: on the post, page and video detail pages, offer every period the dashboard's date picker does, plus a custom range.
 - Reader: show the body of a reposted comment instead of an empty quote.
 - Search: Fix a leaked scroll handler in Instant Search that could trigger stray page loads after several searches.
