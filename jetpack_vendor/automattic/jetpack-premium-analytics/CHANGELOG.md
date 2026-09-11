@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: ask whether the new Traffic tab is ready to replace the old one, instead of how it compares with the old one.
 - Dashboard: hide the date controls while customizing the layout, instead of disabling them.
 - Date picker: offer the common periods the design lists, dropping Last 90 days, Last 365 days and Last year.
+- Date range: Type the range bounds as zoned instants, so day boundaries are measured on the site's clock. A range whose end precedes its start now reports no period length instead of a one-hour window.
 - Feedback: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
 - Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.
 - Onboarding: show the Skip tour button on every step of the spotlight tour.
