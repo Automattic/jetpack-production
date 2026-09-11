@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the arrows that stepped the date range back and forward a period.
 
 ### Fixed
+- All-time traffic: Read the clock in the site timezone when a cell opens the current month or year.
 - Anchor the activity heatmaps' window fallback on the site's today instead of the viewer's.
 - Dialogs: keep the comment field's focus ring from being clipped by the dialog footer.
 - Onboarding: keep the welcome modal open on a click outside it, so the tour can still be started.
