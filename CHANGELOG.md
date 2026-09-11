@@ -75,7 +75,6 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: on the post, page and video detail pages, offer every period the dashboard's date picker does, plus a custom range.
 - Reader: show the body of a reposted comment instead of an empty quote.
 - SEO: Return saved site verification codes from the site settings API.
-- Site Verification: Reject invalid verification codes instead of reporting a successful save.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Forms: deprecate the jetpack_forms_alpha filter, which no longer selects anything.
