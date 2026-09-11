@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: deprecate the jetpack_forms_alpha filter, which no longer selects anything.
 
 ### Fixed
+- Prevent extra forms from being created when the block placeholder is clicked more than once.
 - Stop the Forms data stores from logging a duplicate registration error in the browser console.
 
 ## [8.0.3] - 2026-09-09

@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Charts: Stop the first and last dates on a chart's horizontal axis from being cut off.
 - Connection: Hide connection error notices from users who cannot fix the connection.
 - Editor: Stop offering to activate the legacy Likes and Sharing buttons modules on block themes, where the corresponding blocks should be added to a template instead.
+- Forms: Prevent extra forms from being created when the block placeholder is clicked more than once.
 - Likes: Hide the "Loading…" placeholder from the widget itself, so it disappears even when the Likes stylesheet fails to load.
 - Likes: Load like buttons that a late page reflow brings into view, instead of waiting for the reader to scroll.
 - Map block: Ensure the WordPress.com Mapbox key load tracking event is recorded on Simple sites.
