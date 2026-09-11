@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add API-managed payment buttons behind a feature flag that is not yet enabled. Once it is on, you can connect a PayPal account from WordPress, create and manage payment links without leaving the editor, choose a Button, Link, or QR format, and pick a Light, Auto, or Dark style preset.
 
 ### Changed
+- Create, update and delete the PayPal payment with the post instead of from a Create New button: the payment is written when the post is saved, and removed when the post is saved without its block and no other published post uses it.
 - Hide the product price field when the product options carry their own prices, and stop a leftover value there from blocking Update.
 - Move the product form fields into the block inspector and fit them to the sidebar column. The primary button is now Create New / Save instead of naming the display format.
 - One checkbox turns on per-variant pricing, and the price belongs to the first option group.
@@ -60,6 +61,7 @@ This is an alpha version! The changes listed here are not final.
 - Say why an unsupported currency or an empty variant group blocks saving, instead of disabling the save button with nothing on screen.
 - Say why the product price field is invalid when clearing the option prices brings it back, instead of disabling save with nothing on screen.
 - Send the "Open PayPal Dashboard" link to the sandbox app list when connecting in sandbox, instead of always opening the live one.
+- Send the product image to PayPal so it appears on the hosted checkout.
 - Show how many payment links the account has, not how many fit on the page you are looking at.
 - Show product option validation errors under the field that caused them, instead of only disabling the save button.
 - Show that PayPal is disconnected instead of reporting a connected account, and offer a Reconnect button. Disconnecting now says it applies to the whole site.

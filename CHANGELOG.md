@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Add a Freshly Pressed tab to the Daily Writing Prompt dashboard widget, listing the posts WordPress.com is currently featuring.
 - Notices: Render Jetpack admin notices with the WordPress design system Notice component.
 - PayPal Payment Buttons: add API-managed buttons behind a feature flag that is not yet enabled. Once it is on, you can connect a PayPal account from WordPress, create and manage payment links without leaving the editor, choose a Button, Link, or QR format, and pick a Light, Auto, or Dark style preset.
+- PayPal Payment Buttons: Create and update the payment when the post is saved, and remove it when the post is saved without the block, instead of from a Create New button.
 - Premium Analytics: Add a map of views by location to the Locations report, with an option to hide it.
 - Premium Analytics: Add a Total views / Daily average switch to the post detail All-time traffic card.
 - Premium Analytics: add the Month to date and Year to date periods to the date picker.
@@ -70,6 +71,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: show that PayPal is disconnected instead of reporting a connected account, and offer a Reconnect button. Disconnecting now says it applies to the whole site.
 - PayPal Payment Buttons: show the option price on the published page when the product options have their own prices.
 - PayPal Payment Buttons: show the payment a duplicated block actually points at, so two blocks sharing one PayPal payment can no longer display different products or prices.
+- PayPal Payment Buttons: Show the product image on the PayPal checkout page.
 - PayPal Payment Buttons: stop accepting prices with decimals for Japanese yen, Hungarian forint and New Taiwan dollar, which PayPal rejects, and remove the Indian rupee, which PayPal does not support.
 - PayPal Payment Buttons: Stop the block retrying the PayPal onboarding link forever when the request fails.
 - PayPal Payment Buttons: take the displayed price from the option group PayPal is actually pricing.
