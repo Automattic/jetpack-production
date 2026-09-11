@@ -77,6 +77,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: keep the onboarding welcome modal open on a click outside it, so the tour can still be started.
 - Premium Analytics: on the post, page and video detail pages, offer every period the dashboard's date picker does, plus a custom range.
 - Reader: show the body of a reposted comment instead of an empty quote.
+- Search: Fix a leaked scroll handler in Instant Search that could trigger stray page loads after several searches.
 - SEO: Return saved site verification codes from the site settings API.
 - Sharing: Open the post template instead of the template list when linking to the Site Editor.
 
