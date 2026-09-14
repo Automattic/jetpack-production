@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: show the Skip tour button on every step of the onboarding tour.
 - Premium Analytics: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
 - VideoPress: Add a "Learn more" support link to the admin page.
+- VideoPress: sites that return false from the jetpack_videopress_player_use_iframe filter now get the shared in-page player for the [videopress] shortcode, video blocks and embeds instead of one inline script per video.
 
 ### Bug fixes
 - Admin: Match the Jetpack menu logo's first paint to the active admin color scheme.
