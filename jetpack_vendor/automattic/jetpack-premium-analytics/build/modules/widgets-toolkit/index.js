@@ -12,7 +12,7 @@ __( "Loading…", "jetpack-premium-analytics-pkg" );
 __( "No data in this period.", "jetpack-premium-analytics-pkg" );
 /* translators: %s is the average number of views per day, e.g. "1.4". */
 _n( "%s view per day", "%s views per day", 1, "jetpack-premium-analytics-pkg" );
-/* translators: %s is a number of views, e.g. "166.9K". */
+/* translators: %s is a number of views, e.g. "167K". */
 _n( "%s view", "%s views", 1, "jetpack-premium-analytics-pkg" );
 __( "Fewer than %s", "jetpack-premium-analytics-pkg" );
 /* translators: %s is a metric name, e.g. "Views". */
