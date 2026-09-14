@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Instant Search: Fix a leaked scroll handler that could trigger stray page loads after several searches.
+- Prevent a malformed WordPress.com request on unregistered sites that could record a spurious connection error.
 
 ## [8.1.1] - 2026-09-09
 ### Changed

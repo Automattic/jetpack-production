@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add protected owner predicates and setters to the connection Manager.
 
+### Fixed
+- Error Handler: Stop reporting token errors on unregistered sites and purge object caches when deleting stored errors, so stale connection error notices cannot persist on healthy sites.
+
 ## [9.2.0] - 2026-09-14
 ### Added
 - Add a Manager method to resolve a connected user's WordPress.com user ID. [#52042]
