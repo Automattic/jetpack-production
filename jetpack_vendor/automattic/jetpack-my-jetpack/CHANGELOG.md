@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Name the Jetpack Manage sidebar item so hosts can address it in the menu visibility filter.
+- Update package dependencies.
 
 ## [6.2.2] - 2026-09-14
 ### Changed

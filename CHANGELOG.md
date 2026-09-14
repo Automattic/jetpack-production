@@ -106,6 +106,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: add the email design screen behind a feature flag.
 - Newsletter: register the email design editor's WordPress.com blocks on the client.
 - Newsletter: save the email design to WordPress.com, and run the design screen in fullscreen.
+- Update package dependencies.
 
 ## 16.2 - 2026-09-10
 ### Enhancements

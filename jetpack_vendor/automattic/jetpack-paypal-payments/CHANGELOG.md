@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Move the product form fields into the block inspector and fit them to the sidebar column. The primary button is now Create New / Save instead of naming the display format.
 - One checkbox turns on per-variant pricing, and the price belongs to the first option group.
 - Pick a page for the return URL, or paste one, instead of typing the address by hand.
+- Update package dependencies.
 - Use the design's wording in Product Options: an option group is a variant.
 - Warn on every payment button that changes apply to every button sharing the same payment link, wherever it is used.
 
