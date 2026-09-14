@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.2.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.2.2] - 2026-09-14
 ### Changed
-- Connection: Show every connection error in one notice, each with the account it affects, and link to Site Health when a firewall is blocking WordPress.com.
-- Test the product cards' primary action across the plan matrix.
-- Update package dependencies.
+- Connection: Show every connection error in one notice, each with the account it affects, and link to Site Health when a firewall is blocking WordPress.com. [#51504]
+- Test the product cards' primary action across the plan matrix. [#52005]
+- Update package dependencies. [#52200]
 
 ### Fixed
-- Scope the Stats chart tooltip reset to its own tooltip so it no longer restyles other charts.
-- Search: Offer to activate Search, rather than to buy a plan, when the site already owns it and the module is switched off.
-- Show a Site Editor action for Like buttons on block themes.
+- Scope the Stats chart tooltip reset to its own tooltip so it no longer restyles other charts. [#52184]
+- Search: Offer to activate Search, rather than to buy a plan, when the site already owns it and the module is switched off. [#52008]
+- Show a Site Editor action for Like buttons on block themes. [#52205]
 
 ## [6.2.1] - 2026-09-09
 ### Changed
@@ -2910,7 +2907,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.2.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.2.1...6.2.2-alpha
+[6.2.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.2.1...6.2.2
 [6.2.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.2.0...6.2.1
 [6.2.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.1.0...6.2.0
 [6.1.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.0.0...6.1.0

@@ -5,17 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [9.2.0-alpha] - unreleased
+## [9.3.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Add a Manager method to resolve a connected user's WordPress.com user ID.
 - Add protected owner predicates and setters to the connection Manager.
-- Carry an error's Site Health link on the displayable error, so notices other than the wp-admin one can offer it.
+
+## [9.2.0] - 2026-09-14
+### Added
+- Add a Manager method to resolve a connected user's WordPress.com user ID. [#52042]
+- Carry an error's Site Health link on the displayable error, so notices other than the wp-admin one can offer it. [#51504]
 
 ### Fixed
-- Hide connection error notices from viewers who lack the capability to resolve them.
+- Hide connection error notices from viewers who lack the capability to resolve them. [#52049]
 
 ## [9.1.2] - 2026-09-09
 ### Changed
@@ -2068,7 +2071,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.2.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.1.2...v9.2.0-alpha
+[9.3.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.2.0...v9.3.0-alpha
+[9.2.0]: https://github.com/Automattic/jetpack-connection/compare/v9.1.2...v9.2.0
 [9.1.2]: https://github.com/Automattic/jetpack-connection/compare/v9.1.1...v9.1.2
 [9.1.1]: https://github.com/Automattic/jetpack-connection/compare/v9.1.0...v9.1.1
 [9.1.0]: https://github.com/Automattic/jetpack-connection/compare/v9.0.0...v9.1.0

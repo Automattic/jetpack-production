@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update dependencies.
+
 ## [2.1.1] - 2026-09-09
 ### Changed
 - Sidebar: Sort Jetpack menu items alphabetically, pinning My Jetpack to the top and external links and Settings to the bottom. [#52003]
@@ -256,6 +263,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dashboard: Replace the wp-build placeholder with page chrome and tab navigation. [#48559]
 - Dashboard: Slim down wp-build wiring to the Backup pattern. [#48600]
 
+[2.1.2-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.1...v2.1.2-alpha
 [2.1.1]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/Automattic/jetpack-podcast/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/Automattic/jetpack-podcast/compare/v1.5.1...v2.0.0

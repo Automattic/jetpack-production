@@ -1014,7 +1014,7 @@ class Manager {
 	 * connectedness is checked here rather than inferred from a row existing. Resolving an unbound
 	 * user costs a blocking request to WordPress.com, so this is not safe to call per row.
 	 *
-	 * @since 9.2.0-alpha
+	 * @since 9.2.0
 	 *
 	 * @param int|false $user_id The local user identifier. Default is the current user.
 	 * @return int The WordPress.com user ID, or 0 if it could not be determined.
@@ -1056,7 +1056,7 @@ class Manager {
 	 * in the same meta, so removals are left alone.
 	 *
 	 * @internal Hooked on `pre_update_jetpack_option_user_tokens`, which fires before the write.
-	 * @since 9.2.0-alpha
+	 * @since 9.2.0
 	 *
 	 * @param string $name  The option name.
 	 * @param mixed  $value The tokens about to be written.
@@ -1306,7 +1306,7 @@ class Manager {
 	 * when performing an ownership change.
 	 *
 	 * @since 8.8.0
-	 * @since 9.2.0-alpha A locked protected owner anchor makes ownership non-transferable.
+	 * @since 9.3.0-alpha A locked protected owner anchor makes ownership non-transferable.
 	 *
 	 * @return bool True if ownership can be transferred, false if it is locked.
 	 */
@@ -1336,7 +1336,7 @@ class Manager {
 	 * legitimately answer false while it is installed and active — running in test mode, say —
 	 * and true only at the lifecycle moment that binds something to the owner's identity.
 	 *
-	 * @since 9.2.0-alpha
+	 * @since 9.3.0-alpha
 	 *
 	 * @return bool True if a protected owner is required at this moment. Default false.
 	 */
@@ -1347,7 +1347,7 @@ class Manager {
 		 * Return `true` at the point a feature is about to bind to the connection owner's
 		 * identity. Answering false at other times is expected and supported.
 		 *
-		 * @since 9.2.0-alpha
+		 * @since 9.3.0-alpha
 		 *
 		 * @param bool $required Whether a protected owner is required. Default false.
 		 */
@@ -1364,7 +1364,7 @@ class Manager {
 	 * token on top of that is what keeps a row written by another subsystem from ever satisfying
 	 * this: both halves are load-bearing, and there are tests for each.
 	 *
-	 * @since 9.2.0-alpha
+	 * @since 9.3.0-alpha
 	 *
 	 * @return bool
 	 */
@@ -1391,7 +1391,7 @@ class Manager {
 	 * multisite does. It is false while the package is unconfigured, so a caller that has not
 	 * registered the connection's capabilities is refused rather than trusted.
 	 *
-	 * @since 9.2.0-alpha
+	 * @since 9.3.0-alpha
 	 *
 	 * @param int    $user_id      The local user to anchor.
 	 * @param string $confirmed_by How the confirmation was obtained, e.g. `popup` or `recovery`.
@@ -1465,7 +1465,7 @@ class Manager {
 	 * consequential half. The `@internal` tag is documentation; the capability is enforcement.
 	 *
 	 * @internal Recovery and support flows only. Consumers must not call this.
-	 * @since 9.2.0-alpha
+	 * @since 9.3.0-alpha
 	 *
 	 * @return true|WP_Error True once no anchor is set, WP_Error otherwise.
 	 */
