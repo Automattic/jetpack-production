@@ -14,8 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Add a Freshly Pressed tab to the Daily Writing Prompt dashboard widget, listing the posts WordPress.com is currently featuring.
 - Newsletter: Add an Overview dashboard for getting started and finding guides.
 - Notices: Render Jetpack admin notices with the WordPress design system Notice component.
-- PayPal Payment Buttons: add API-managed buttons behind a feature flag that is not yet enabled. Once it is on, you can connect a PayPal account from WordPress, create and manage payment links without leaving the editor, choose a Button, Link, or QR format, and pick a Light, Auto, or Dark style preset.
+- PayPal Payment Buttons: add API-managed buttons behind a feature flag that is not yet enabled. Once it is on, you can connect a PayPal account from WordPress, create and manage payment links without leaving the editor, choose a Button, Link, or QR format, and style it with your own colors, size and border.
 - PayPal Payment Buttons: Create and update the payment when the post is saved, and remove it when the post is saved without the block, instead of from a Create New button.
+- PayPal Payment Buttons: the editor canvas draws what the published block will look like, and each format gets its own settings in a new Styles tab - colors, Fill or Outline, text size, width and border. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
 - Premium Analytics: Add a map of views by location to the Locations report, with an option to hide it.
 - Premium Analytics: Add a Total views / Daily average switch to the post detail All-time traffic card.
 - Premium Analytics: add the Month to date and Year to date periods to the date picker.
