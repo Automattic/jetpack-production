@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Post detail: Replace the daily Traffic activity heatmap with an All-time traffic table of monthly views, and picking a month applies it as the page's period.
 - Report date filters: stage a date range through one shared bounds helper in both pickers.
 - Show the exact number on hover behind abbreviated figures, and abbreviate with one decimal where it fits (1.2K, 54.3K, 234K).
+- Subscribers: show Subscriber highlights by default and rearrange the widgets for the three-column grid.
 - Update package dependencies.
 
 ### Removed

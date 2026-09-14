@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Remove Total views, Total visitors, Popular days and Popular hours from the default Insights layout and from the widget picker for now.
 - Premium Analytics: Retitle the Popular post card to "Most popular in the last year".
 - Premium Analytics: Show a post's monthly views across its whole life on its detail page, in place of the daily heatmap, and picking a month applies it as the page's period.
+- Premium Analytics: show Subscriber highlights by default on the Subscribers tab and rearrange the widgets for the three-column grid.
 - Premium Analytics: Show the exact number on hover behind abbreviated figures, and abbreviate with one decimal where it fits (1.2K, 54.3K, 234K).
 - Premium Analytics: Show the Most popular time and Most popular day highlights side by side, stacking them only on a narrow tile.
 - Premium Analytics: show the Skip tour button on every step of the onboarding tour.
