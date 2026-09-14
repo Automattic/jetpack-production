@@ -50,6 +50,11 @@ __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "Line chart", "jetpack-premium-analytics-pkg" );
 __( "Bar chart", "jetpack-premium-analytics-pkg" );
 __( "Chart type", "jetpack-premium-analytics-pkg" );
+__( "No views", "jetpack-premium-analytics-pkg" );
+__( "Fewer views per day", "jetpack-premium-analytics-pkg" );
+__( "More views per day", "jetpack-premium-analytics-pkg" );
+__( "Fewer views", "jetpack-premium-analytics-pkg" );
+__( "More views", "jetpack-premium-analytics-pkg" );
 /* translators: 1: metric name, 2: date. */
 __( "%1$s · %2$s", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
@@ -64,6 +69,9 @@ __( "Location", "jetpack-premium-analytics-pkg" );
 __( "Views", "jetpack-premium-analytics-pkg" );
 __( "Older activity", "jetpack-premium-analytics-pkg" );
 __( "Newer activity", "jetpack-premium-analytics-pkg" );
+__( "Totals", "jetpack-premium-analytics-pkg" );
+/* translators: 1: abbreviated month name, e.g. "Aug"; 2: year, e.g. "2026". */
+_x( "%1$s %2$s", "month and year", "jetpack-premium-analytics-pkg" );
 __( "View all", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the post's publish date, e.g. "Jun 5, 2026". */
 __( "Post published on %s", "jetpack-premium-analytics-pkg" );
