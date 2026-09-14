@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.
 - Premium Analytics: Lay out the metric tiles on the highlight widgets by widget size: a list on a one-column widget, a single row or a two-column grid on a wider one.
 - Premium Analytics: Note in the Traffic summary help that the Visitors total is a per-period sum.
+- Premium Analytics: offer feedback, the preview opt-out and Reset to default from the post and video detail pages too.
 - Premium Analytics: offer the common date periods the design lists, dropping Last 90 days, Last 365 days and Last year.
 - Premium Analytics: rearrange the default Ads widgets for the three-column grid, with the chart first, then the balance, then the three history tables side by side.
 - Premium Analytics: Remove the arrows that stepped the date range back and forward a period.

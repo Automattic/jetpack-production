@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Pin the section header on the report pages, as on the dashboard, from one shared component.
 - Popular post: Retitle the card to "Most popular in the last year".
 - Post All-time traffic: Share the monthly heatmap through the widgets toolkit and let translators order the month and year in its tooltip.
+- Post and video detail pages: add feedback and the preview opt-out to the page options menu, and a Reset to default button while customizing.
 - Post and video detail pages: draw the Post views and Video performance charts as bars by default.
 - Post detail: Replace the daily Traffic activity heatmap with an All-time traffic table of monthly views, and picking a month applies it as the page's period.
 - Report date filters: stage a date range through one shared bounds helper in both pickers.

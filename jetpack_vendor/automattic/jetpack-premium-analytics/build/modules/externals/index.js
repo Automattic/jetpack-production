@@ -51,6 +51,8 @@ __( "Previous month", "jetpack-premium-analytics-pkg" );
 __( "Today, %s, selected", "jetpack-premium-analytics-pkg" );
 /* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected", "jetpack-premium-analytics-pkg" );
+__( "OK", "jetpack-premium-analytics-pkg" );
+__( "Cancel", "jetpack-premium-analytics-pkg" );
 __( "More details follow the field.", "jetpack-premium-analytics-pkg" );
 __( "More details follow.", "jetpack-premium-analytics-pkg" );
 __( "Select", "jetpack-premium-analytics-pkg" );
@@ -71,7 +73,6 @@ _n( "%d Item", "%d Items", 1, "jetpack-premium-analytics-pkg" );
 _n( "%1$d of %2$d Item", "%1$d of %2$d Items", 1, "jetpack-premium-analytics-pkg" );
 __( "Deselect all", "jetpack-premium-analytics-pkg" );
 __( "Select all", "jetpack-premium-analytics-pkg" );
-__( "Cancel", "jetpack-premium-analytics-pkg" );
 __( "Add filter", "jetpack-premium-analytics-pkg" );
 __( "Move left", "jetpack-premium-analytics-pkg" );
 __( "Move right", "jetpack-premium-analytics-pkg" );
