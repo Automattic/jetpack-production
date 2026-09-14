@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a Manager method to resolve a connected user's WordPress.com user ID.
+- Add protected owner predicates and setters to the connection Manager.
 - Carry an error's Site Health link on the displayable error, so notices other than the wp-admin one can offer it.
 
 ### Fixed
