@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Insights: Remove Total views, Total visitors, Popular days and Popular hours from the default layout, and hold the four widgets back from every widget picker for now.
 - Insights: Show the Most popular time and Most popular day highlights side by side, stacking them only on a narrow tile.
 - Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.
+- Lay out the metric tiles on the highlight widgets by widget size: a list on a one-column widget, a single row or a two-column grid on a wider one.
 - Onboarding: show the Skip tour button on every step of the spotlight tour.
 - Pin the post and video detail headers on scroll and condense them as on the dashboard: the tabs scroll away, the subtitle folds and the media shrinks to the title row.
 - Pin the section header on the report pages, as on the dashboard, from one shared component.

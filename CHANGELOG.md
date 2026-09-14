@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: draw the Post views and Video performance charts on the detail pages as bars by default.
 - Premium Analytics: hide the dashboard's date controls while customizing its layout, instead of disabling them.
 - Premium Analytics: Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.
+- Premium Analytics: Lay out the metric tiles on the highlight widgets by widget size: a list on a one-column widget, a single row or a two-column grid on a wider one.
 - Premium Analytics: Note in the Traffic summary help that the Visitors total is a per-period sum.
 - Premium Analytics: offer the common date periods the design lists, dropping Last 90 days, Last 365 days and Last year.
 - Premium Analytics: Remove the arrows that stepped the date range back and forward a period.
