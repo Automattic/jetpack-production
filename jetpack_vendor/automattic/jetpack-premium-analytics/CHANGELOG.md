@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Onboarding: show the Skip tour button on every step of the spotlight tour.
 - Pin the post and video detail headers on scroll and condense them as on the dashboard: the tabs scroll away, the subtitle folds and the media shrinks to the title row.
 - Pin the section header on the report pages, as on the dashboard, from one shared component.
+- Popular post: Retitle the card to "Most popular in the last year".
 - Post All-time traffic: Share the monthly heatmap through the widgets toolkit and let translators order the month and year in its tooltip.
 - Post and video detail pages: draw the Post views and Video performance charts as bars by default.
 - Post detail: Replace the daily Traffic activity heatmap with an All-time traffic table of monthly views, and picking a month applies it as the page's period.
