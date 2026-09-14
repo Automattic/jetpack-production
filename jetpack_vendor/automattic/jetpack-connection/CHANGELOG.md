@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add protected owner predicates and setters to the connection Manager.
+- Serve the disconnect dialog illustrations from the package and add their base URL to the admin script data.
 
 ### Fixed
 - Error Handler: Stop reporting token errors on unregistered sites and purge object caches when deleting stored errors, so stale connection error notices cannot persist on healthy sites.
