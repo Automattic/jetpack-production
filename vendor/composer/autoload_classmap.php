@@ -605,6 +605,7 @@ return array(
     'Automattic\\Jetpack\\VideoPress\\Divi5\\VideoPress_Module' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/videopress-divi-5/class-videopress-module.php',
     'Automattic\\Jetpack\\VideoPress\\Initial_State' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-initial-state.php',
     'Automattic\\Jetpack\\VideoPress\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-initializer.php',
+    'Automattic\\Jetpack\\VideoPress\\Inline_Player' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-inline-player.php',
     'Automattic\\Jetpack\\VideoPress\\Jwt_Token_Bridge' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-jwt-token-bridge.php',
     'Automattic\\Jetpack\\VideoPress\\Module_Control' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-module-control.php',
     'Automattic\\Jetpack\\VideoPress\\Options' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-options.php',
