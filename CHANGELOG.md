@@ -97,6 +97,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Fix a leaked scroll handler in Instant Search that could trigger stray page loads after several searches.
 - SEO: Return saved site verification codes from the site settings API.
 - Sharing: Open the post template instead of the template list when linking to the Site Editor.
+- Sharing Buttons block: use an unpredictable name for share popups, matching the classic sharing buttons.
 - VideoPress: Fix selecting thumbnail frames from private videos and prefer browser-compatible video renditions.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
