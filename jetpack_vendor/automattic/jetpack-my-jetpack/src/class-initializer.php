@@ -43,7 +43,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '6.2.2';
+	const PACKAGE_VERSION = '6.3.0-alpha';
 
 	/**
 	 * HTML container ID for the IDC screen on My Jetpack page.
@@ -79,6 +79,9 @@ class Initializer {
 		if ( ! self::should_initialize() || did_action( 'my_jetpack_init' ) ) {
 			return;
 		}
+
+		// Answer "is this product on?" for admin menu registration.
+		Menu_Visibility::init();
 
 		// Extend jetpack plugins action links.
 		Products::extend_plugins_action_links();
@@ -165,7 +168,7 @@ class Initializer {
 			'edit_posts',
 			'my-jetpack',
 			array( __CLASS__, 'admin_page' ),
-			-10
+			Admin_Menu::POSITION_FIRST
 		);
 		add_action( 'load-' . $page_suffix, array( __CLASS__, 'admin_init' ) );
 	}

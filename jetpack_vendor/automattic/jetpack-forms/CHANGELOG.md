@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Form editor: Record every welcome guide slide a reader reaches, including after navigating back.
+- Hide the Forms sidebar item when Forms is not active.
 - Update package dependencies.
 
 ### Deprecated

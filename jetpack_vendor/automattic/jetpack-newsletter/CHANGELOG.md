@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: add an Action Bar visibility toggle on WordPress.com Simple sites.
 
 ### Changed
+- Hide the Newsletter sidebar item when Newsletter is not active.
 - Update package dependencies.
 
 ## [0.14.1] - 2026-09-09

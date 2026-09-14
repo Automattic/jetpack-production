@@ -238,6 +238,7 @@ return array(
     'Automattic\\Jetpack\\My_Jetpack\\Hybrid_Product' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-hybrid-product.php',
     'Automattic\\Jetpack\\My_Jetpack\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-initializer.php',
     'Automattic\\Jetpack\\My_Jetpack\\Jetpack_Manage' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-jetpack-manage.php',
+    'Automattic\\Jetpack\\My_Jetpack\\Menu_Visibility' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-menu-visibility.php',
     'Automattic\\Jetpack\\My_Jetpack\\Module_Product' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-module-product.php',
     'Automattic\\Jetpack\\My_Jetpack\\Product' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-product.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-products.php',

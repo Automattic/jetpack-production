@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Hide the Social sidebar item when Social is not active.
 - Update package dependencies.
 
 ### Fixed

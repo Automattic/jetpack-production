@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Hide the Podcast sidebar item when the Podcast module is not active.
 - Update dependencies.
 
 ## [2.1.1] - 2026-09-09
