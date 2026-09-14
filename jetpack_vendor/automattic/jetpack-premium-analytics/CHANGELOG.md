@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Ask the same readiness question when switching the new Traffic tab off, and point to the Modules Visibility setting to switch it back on.
 - Dashboard: ask whether the new Traffic tab is ready to replace the old one, instead of how it compares with the old one.
 - Dashboard: hide the date controls while customizing the layout, instead of disabling them.
+- Dashboard: move Customize into the page options menu, and offer Reset to default beside Cancel and Done while customizing.
 - Date picker: offer the common periods the design lists, dropping Last 90 days, Last 365 days and Last year.
 - Date range: Type the range bounds as zoned instants, so day boundaries are measured on the site's clock. A range whose end precedes its start now reports no period length instead of a one-hour window.
 - Feedback: tell readers where their feedback went and that they can send more, instead of a one-line thank you.

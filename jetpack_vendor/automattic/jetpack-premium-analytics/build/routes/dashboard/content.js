@@ -309,7 +309,7 @@ __( "Each block of data is a widget you can move and resize to suit how you read
 __( "A better date picker", "jetpack-premium-analytics-pkg" );
 __( "Compare any period with the one before it, and change the chart interval to suit the range you're looking at.", "jetpack-premium-analytics-pkg" );
 __( "Rearrange it your way", "jetpack-premium-analytics-pkg" );
-__( "Select Customize to move and resize widgets. Your layout is saved to your profile.", "jetpack-premium-analytics-pkg" );
+__( "Select Customize in this menu to move and resize widgets. Your layout is saved to your profile.", "jetpack-premium-analytics-pkg" );
 __( "One last thing", "jetpack-premium-analytics-pkg" );
 __( "This menu is where you can share feedback and switch the preview off if you want. It's an early version, so do tell us what's working and what isn't.", "jetpack-premium-analytics-pkg" );
 __( "Your store data is still syncing. The numbers below are incomplete until it finishes.", "jetpack-premium-analytics-pkg" );
