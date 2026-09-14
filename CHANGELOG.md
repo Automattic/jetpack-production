@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Lay out the metric tiles on the highlight widgets by widget size: a list on a one-column widget, a single row or a two-column grid on a wider one.
 - Premium Analytics: Note in the Traffic summary help that the Visitors total is a per-period sum.
 - Premium Analytics: offer the common date periods the design lists, dropping Last 90 days, Last 365 days and Last year.
+- Premium Analytics: rearrange the default Ads widgets for the three-column grid, with the chart first, then the balance, then the three history tables side by side.
 - Premium Analytics: Remove the arrows that stepped the date range back and forward a period.
 - Premium Analytics: remove the year filter and interval dropdown from the Insights header.
 - Premium Analytics: Remove Total views, Total visitors, Popular days and Popular hours from the default Insights layout and from the widget picker for now.
