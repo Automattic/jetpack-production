@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Daily Writing Prompt: Add a Freshly Pressed tab listing the posts WordPress.com is currently featuring.
+- Subscribers: Show a dismissible notice on WordPress.com sites explaining why subscriber counts may have changed.
 - Subscriptions: add an Action Bar visibility toggle on WordPress.com Simple sites.
 
 ### Changed

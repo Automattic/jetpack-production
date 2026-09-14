@@ -99,6 +99,8 @@ __( "Open Substack importer", "jetpack-newsletter" );
 __( "Manual", "jetpack-newsletter" );
 __( "Upload CSV", "jetpack-newsletter" );
 __( "Substack", "jetpack-newsletter" );
+__( "Your subscriber count is now more accurate.", "jetpack-newsletter" );
+__( "We found and combined duplicate subscriber records, so you might see a different subscriber count than before. If you have questions, our <a>Happiness Engineers are here to help</a>.", "jetpack-newsletter" );
 /* translators: 1: Calendar type. 2: Current month and year. */
 __( "%1$s, %2$s", "jetpack-newsletter" );
 __( "Date calendar", "jetpack-newsletter" );
