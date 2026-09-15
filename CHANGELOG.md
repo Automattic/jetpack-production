@@ -62,6 +62,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Admin: Match the Jetpack menu logo's first paint to the active admin color scheme.
+- Charts: Fix unreadable axis labels in forced-colors mode.
 - Charts: Restore keyboard focus after dismissing line chart tooltips.
 - Charts: Stop the first and last dates on a chart's horizontal axis from being cut off.
 - Connection: Fix a stale connection error notice that could persist on healthy sites.
