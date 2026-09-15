@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Admin Menu: hide a Jetpack sidebar item when its feature is turned off.
+- AI: Add ChatGPT/Codex setup instructions to the MCP agent setup page.
 - Connection: Show every connection error in one notice, each with the account it affects, and link to Site Health when a firewall is blocking WordPress.com.
 - Jetpack AI: load the Scheduled tasks tab only when it is opened, cutting the AI page script by two thirds.
 - Likes: Guide block-theme users from legacy Like buttons to the Like block.
