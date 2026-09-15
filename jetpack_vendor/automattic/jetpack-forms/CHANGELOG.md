@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Form editor: Record which version of the welcome guide each analytics event describes.
 
 ### Changed
+- Conditional logic: Add a Done button to the rules dialog, and open the Conditional logic panel by default on a field that has conditions.
 - Form editor: Record every welcome guide slide a reader reaches, including after navigating back.
 - Hide the Forms sidebar item when Forms is not active.
 - Update package dependencies.
