@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Create and update the payment when the post is saved, and remove it when the post is saved without the block, instead of from a Create New button.
 - PayPal Payment Buttons: the editor canvas draws what the published block will look like, and each format gets its own settings in a new Styles tab - colors, Fill or Outline, text size, width and border. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
 - Premium Analytics: Add a map of views by location to the Locations report, with an option to hide it.
+- Premium Analytics: Add an earnings history report, showing every period with its earnings, ads served, and payment status.
 - Premium Analytics: Add a Total views / Daily average switch to the post detail All-time traffic card.
 - Premium Analytics: add the Month to date and Year to date periods to the date picker.
 - Premium Analytics: Add the Totals column to the post detail All-time traffic card; picking a total reads the page over that year.
