@@ -102,3 +102,5 @@ __( "Automatically generate subtitles for new videos", "jetpack-videopress-pkg" 
 __( "When enabled, subtitles are generated automatically for videos uploaded to this site. Existing subtitles are not affected.", "jetpack-videopress-pkg" );
 __( "Preload video data when pages load", "jetpack-videopress-pkg" );
 __( "When enabled, embedded videos fetch their metadata and seek-bar preview thumbnails as the page loads. Turn it off to reduce page weight on pages with many videos; each video then loads its data when playback starts.", "jetpack-videopress-pkg" );
+__( "Load the player once per page instead of once per video", "jetpack-videopress-pkg" );
+__( "Renders every video directly in your page from one shared player script instead of a separate embedded frame per video, so page-speed tools stop counting the player once for each video. Playlists and videos with hover previews keep using frames.", "jetpack-videopress-pkg" );

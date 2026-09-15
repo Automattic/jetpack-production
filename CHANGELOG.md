@@ -62,6 +62,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
 - Stats: Add a dismissible feedback banner above the new Traffic tab's widgets.
 - VideoPress: Add a "Learn more" support link to the admin page.
+- VideoPress: Add a setting to render players in the page from one shared player script instead of one frame per video.
 - VideoPress: Display video library thumbnails in a 16:9 aspect ratio.
 - VideoPress: sites that return false from the jetpack_videopress_player_use_iframe filter now get the shared in-page player for the [videopress] shortcode, video blocks and embeds instead of one inline script per video.
 
