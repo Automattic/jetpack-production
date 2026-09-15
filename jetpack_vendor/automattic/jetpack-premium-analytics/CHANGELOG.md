@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Traffic: Note in the widget help that the Visitors total is a per-period sum.
 
 ### Changed
+- Ads: read ads served, average CPM and revenue out together in the WordAds chart tooltip, whichever tab is selected.
 - Ads: rearrange the default widgets for the three-column grid, with the chart first, then the balance, then the three history tables side by side.
 - Build the custom date range calendar on the WordPress design system calendar.
 - Dashboard: Ask the same readiness question when switching the new Traffic tab off, and point to the Modules Visibility setting to switch it back on.
