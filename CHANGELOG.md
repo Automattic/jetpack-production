@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Notices: Render Jetpack admin notices with the WordPress design system Notice component.
 - PayPal Payment Buttons: add API-managed buttons behind a feature flag that is not yet enabled. Once it is on, you can connect a PayPal account from WordPress, create and manage payment links without leaving the editor, choose a Button, Link, or QR format, and style it with your own colors, size and border.
 - PayPal Payment Buttons: Create and update the payment when the post is saved, and remove it when the post is saved without the block, instead of from a Create New button.
+- PayPal Payment Buttons: offer the account's existing payment links when a new block is added, so a block can reuse one instead of creating another.
 - PayPal Payment Buttons: the editor canvas draws what the published block will look like, and each format gets its own settings in a new Styles tab - colors, Fill or Outline, text size, width and border. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
 - Premium Analytics: Add a map of views by location to the Locations report, with an option to hide it.
 - Premium Analytics: Add an earnings history report, showing every period with its earnings, ads served, and payment status.
