@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add protected owner predicates and setters to the connection Manager.
+- Connection Health: Surface WordPress.com-reported SSL certificate verification failures for the site as a verified connection error with an admin notice.
 - Serve the disconnect dialog illustrations from the package and add their base URL to the admin script data.
 
 ### Fixed

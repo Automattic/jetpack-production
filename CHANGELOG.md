@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin Menu: hide a Jetpack sidebar item when its feature is turned off.
 - AI: Add ChatGPT/Codex setup instructions to the MCP agent setup page.
 - Connection: Show every connection error in one notice, each with the account it affects, and link to Site Health when a firewall is blocking WordPress.com.
+- Connection: Surface SSL certificate verification failures reported by WordPress.com as a connection error with an admin notice and a clearer Site Health diagnosis.
 - Jetpack AI: load the Scheduled tasks tab only when it is opened, cutting the AI page script by two thirds.
 - Likes: Guide block-theme users from legacy Like buttons to the Like block.
 - Newsletter: Add a Freshly Pressed tab to the Daily Writing Prompt dashboard widget, listing the posts WordPress.com is currently featuring.
