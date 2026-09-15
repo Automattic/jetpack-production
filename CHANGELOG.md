@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Surface SSL certificate verification failures reported by WordPress.com as a connection error with an admin notice and a clearer Site Health diagnosis.
 - Jetpack AI: load the Scheduled tasks tab only when it is opened, cutting the AI page script by two thirds.
 - Likes: Guide block-theme users from legacy Like buttons to the Like block.
+- My Jetpack: Restyle dashboard notices to match the WordPress design system.
 - Newsletter: Add a Freshly Pressed tab to the Daily Writing Prompt dashboard widget, listing the posts WordPress.com is currently featuring.
 - Newsletter: Add an Overview dashboard for getting started and finding guides.
 - Notices: Render Jetpack admin notices with the WordPress design system Notice component.
