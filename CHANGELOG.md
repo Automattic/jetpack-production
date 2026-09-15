@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Admin bar endpoint: allow the Help Center node so the dashboard can render the entry point from the payload.
 - Admin Menu: hide a Jetpack sidebar item when its feature is turned off.
 - AI: Add ChatGPT/Codex setup instructions to the MCP agent setup page.
 - Connection: Show every connection error in one notice, each with the account it affects, and link to Site Health when a firewall is blocking WordPress.com.
