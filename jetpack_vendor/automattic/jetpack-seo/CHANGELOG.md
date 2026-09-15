@@ -5,14 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.9.4-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.9.4] - 2026-09-15
 ### Changed
-- Hide the SEO sidebar item when the SEO Tools module is not active.
-- Update dependencies.
-- Update package dependencies.
+- Hide the SEO sidebar item when the SEO Tools module is not active. [#52156]
+- Update dependencies. [#52269]
+- Update package dependencies. [#52297]
 
 ## [0.9.3] - 2026-09-09
 ### Changed
@@ -185,7 +182,7 @@ This is an alpha version! The changes listed here are not final.
 - Create a Settings screen with site visibility, post title structure, front-page description, and site verification. [#49256]
 - Scaffold the new `jetpack-seo` package and mount its admin page. [#49203]
 
-[0.9.4-alpha]: https://github.com/Automattic/jetpack-seo/compare/0.9.3...0.9.4-alpha
+[0.9.4]: https://github.com/Automattic/jetpack-seo/compare/0.9.3...0.9.4
 [0.9.3]: https://github.com/Automattic/jetpack-seo/compare/0.9.2...0.9.3
 [0.9.2]: https://github.com/Automattic/jetpack-seo/compare/0.9.1...0.9.2
 [0.9.1]: https://github.com/Automattic/jetpack-seo/compare/0.9.0...0.9.1

@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.3.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.3.0] - 2026-09-15
 ### Added
-- Add a catalog of the main Jetpack features, with their copy, links and how to get each one.
-- Add a plan-free is_activated() check to the product classes and resolve Jetpack sidebar menu visibility from it, so a menu item follows whether the product is switched on without a request to WordPress.com.
+- Add a catalog of the main Jetpack features, with their copy, links and how to get each one. [#52295]
+- Add a plan-free `is_activated()` check to products, and use it to decide Jetpack sidebar menu visibility without a WordPress.com request. [#52102]
 
 ### Changed
-- Name the Jetpack Manage sidebar item so hosts can address it in the menu visibility filter.
-- Notices: Restyle My Jetpack dashboard notices to match the WordPress design system.
-- Update package dependencies.
+- Name the Jetpack Manage sidebar item so hosts can address it in the menu visibility filter. [#52156]
+- Restyle dashboard notices to match the WordPress design system. [#52290]
+- Update package dependencies. [#52297]
 
 ## [6.2.2] - 2026-09-14
 ### Changed
@@ -2920,7 +2917,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.3.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.2.2...6.3.0-alpha
+[6.3.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.2.2...6.3.0
 [6.2.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.2.1...6.2.2
 [6.2.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.2.0...6.2.1
 [6.2.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.1.0...6.2.0

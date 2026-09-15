@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.15.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.15.0] - 2026-09-15
 ### Added
-- Daily Writing Prompt: Add a Freshly Pressed tab listing the posts WordPress.com is currently featuring.
-- Subscribers: Show a dismissible notice on WordPress.com sites explaining why subscriber counts may have changed.
-- Subscriptions: add an Action Bar visibility toggle on WordPress.com Simple sites.
+- Daily Writing Prompt: Add a "Freshly Pressed" tab listing the posts WordPress.com is currently featuring. [#52077]
+- Subscribers: Show a dismissible notice on WordPress.com sites explaining why subscriber counts may have changed. [#52233]
+- Subscriptions: Add an Action Bar visibility toggle on WordPress.com Simple sites. [#52136]
 
 ### Changed
-- Hide the Newsletter sidebar item when Newsletter is not active.
-- Update package dependencies.
+- Hide the Newsletter sidebar item when Newsletter is not active. [#52156]
+- Update package dependencies. [#52200] [#52297]
 
 ## [0.14.1] - 2026-09-09
 ### Changed
@@ -372,7 +369,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.15.0-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.14.1...v0.15.0-alpha
+[0.15.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.14.1...v0.15.0
 [0.14.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.14.0...v0.14.1
 [0.14.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.13.0...v0.14.0
 [0.13.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.12.7...v0.13.0
