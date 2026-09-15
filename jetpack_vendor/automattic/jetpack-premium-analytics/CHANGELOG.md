@@ -26,6 +26,8 @@ This is an alpha version! The changes listed here are not final.
 - Date picker: offer the common periods the design lists, dropping Last 90 days, Last 365 days and Last year.
 - Date range: Type the range bounds as zoned instants, so day boundaries are measured on the site's clock. A range whose end precedes its start now reports no period length instead of a one-hour window.
 - Feedback: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
+- Insights: Align the widget help text and the Year in review and All-time stats header icons with the design.
+- Insights: Lay out the default widgets on the three-column grid in the design's order.
 - Insights: remove the year filter and interval dropdown from the section header.
 - Insights: Remove Total views, Total visitors, Popular days and Popular hours from the default layout, and hold the four widgets back from every widget picker for now.
 - Insights: Show the Most popular time and Most popular day highlights side by side, stacking them only on a narrow tile.

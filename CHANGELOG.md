@@ -22,12 +22,14 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add a Total views / Daily average switch to the post detail All-time traffic card.
 - Premium Analytics: add the Month to date and Year to date periods to the date picker.
 - Premium Analytics: Add the Totals column to the post detail All-time traffic card; picking a total reads the page over that year.
+- Premium Analytics: Align the Insights widget help text and the Year in review and All-time stats header icons with the design.
 - Premium Analytics: Ask the same readiness question when switching the new Traffic tab off, and point to the Modules Visibility setting to switch it back on.
 - Premium Analytics: ask whether the new Traffic tab is ready to replace the old one, instead of how it compares with the old one.
 - Premium Analytics: Build the custom date range calendar on the WordPress design system calendar.
 - Premium Analytics: draw the Post views and Video performance charts on the detail pages as bars by default.
 - Premium Analytics: hide the dashboard's date controls while customizing its layout, instead of disabling them.
 - Premium Analytics: Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.
+- Premium Analytics: Lay out the default Insights widgets on the three-column grid in the design's order.
 - Premium Analytics: Lay out the metric tiles on the highlight widgets by widget size: a list on a one-column widget, a single row or a two-column grid on a wider one.
 - Premium Analytics: move the dashboard's Customize button into the page options menu, with Reset to default beside Cancel and Done while customizing.
 - Premium Analytics: Note in the Traffic summary help that the Visitors total is a per-period sum.
