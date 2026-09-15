@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a plan-free is_activated() check to the product classes and resolve Jetpack sidebar menu visibility from it, so a menu item follows whether the product is switched on without a request to WordPress.com.
 
 ### Changed
+- Exclude source map files from the distributed package.
 - Name the Jetpack Manage sidebar item so hosts can address it in the menu visibility filter.
 - Notices: Restyle My Jetpack dashboard notices to match the WordPress design system.
 - Update package dependencies.

@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Connections: Add a REST endpoint to receive updated connections from WordPress.com.
 
 ### Changed
+- Exclude source map files from the distributed package.
 - Hide the Social sidebar item when Social is not active.
 - Update package dependencies.
 

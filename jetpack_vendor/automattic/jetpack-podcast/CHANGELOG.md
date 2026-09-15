@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Exclude source map files from the distributed package.
 - Hide the Podcast sidebar item when the Podcast module is not active.
 - Update dependencies.
 

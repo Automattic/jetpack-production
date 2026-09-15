@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: add an Action Bar visibility toggle on WordPress.com Simple sites.
 
 ### Changed
+- Exclude source map files from the distributed package.
 - Hide the Newsletter sidebar item when Newsletter is not active.
 - Update package dependencies.
 

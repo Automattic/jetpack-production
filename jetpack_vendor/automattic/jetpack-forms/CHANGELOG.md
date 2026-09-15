@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Conditional logic: Add a Done button to the rules dialog, and open the Conditional logic panel by default on a field that has conditions.
+- Exclude source map files from the distributed package.
 - Form editor: Record every welcome guide slide a reader reaches, including after navigating back.
 - Hide the Forms sidebar item when Forms is not active.
 - Update package dependencies.
