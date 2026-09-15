@@ -124,6 +124,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Fix AI Search errors showing a generic server error instead of the real cause.
 - Search: Fix a leaked scroll handler in Instant Search that could trigger stray page loads after several searches.
 - Search: Show an upgrade prompt when editing the AI Search block on sites without a paid Search plan.
+- SEO: Fix the Settings tab failing to load after a page title structure was cleared from WordPress.com.
 - SEO: Return saved site verification codes from the site settings API.
 - Sharing: Open the post template instead of the template list when linking to the Site Editor.
 - Sharing Buttons block: use an unpredictable name for share popups, matching the classic sharing buttons.
