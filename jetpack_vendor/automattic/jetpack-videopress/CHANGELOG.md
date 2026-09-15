@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a "Learn more" support link to the admin page.
 
 ### Changed
+- Dashboard: Display video library thumbnails in a 16:9 aspect ratio.
 - Hide the VideoPress sidebar item when VideoPress is not active.
 - Inline player: let the jetpack_videopress_player_use_iframe filter switch video blocks, shortcodes and embeds to the shared in-page player.
 - Update package dependencies.
