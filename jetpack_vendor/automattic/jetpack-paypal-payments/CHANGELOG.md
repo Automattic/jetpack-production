@@ -72,8 +72,10 @@ This is an alpha version! The changes listed here are not final.
 - Show that PayPal is disconnected instead of reporting a connected account, and offer a Reconnect button. Disconnecting now says it applies to the whole site.
 - Show the option price on the published page when the product options have their own prices.
 - Show the payment a duplicated block actually points at, so two blocks sharing one PayPal payment can no longer display different products or prices.
+- Show the PayPal Payment Links admin list and detail pages fresh after a link is created, edited, or deleted, instead of serving a cached copy for up to five minutes.
 - Stop accepting prices with decimals for Japanese yen, Hungarian forint and New Taiwan dollar, which PayPal rejects, and remove the Indian rupee, which PayPal does not support.
 - Stop offering a third custom checkout field, which PayPal rejects.
+- Stop rendering a button for a payment link deleted through this site, warn in the editor that the link is gone before a save recreates it, and list the posts still embedding it after a delete from the admin page.
 - Stop the block retrying the PayPal onboarding link forever when the request fails.
 - Stop the form's error styling applying to every block editor screen.
 - Stop turning a flat tax into a percentage. A payment link carrying a fixed tax amount now saves with that amount intact instead of being rejected or rewritten, a tax with no name is kept rather than dropped, and a tax set to follow the PayPal profile always sends the profile setting instead of a stray rate.
