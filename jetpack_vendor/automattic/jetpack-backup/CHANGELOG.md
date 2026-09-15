@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Exclude source map files from the distributed package.
 - Give the Backup sidebar item a stable key hosts can use in the sidebar visibility filter.
+- Show the modernized dashboard to Automatticians on proxied requests, unless the site has the `use-backup-legacy-dashboard` sticker.
 - Update package dependencies.
 
 ## [5.0.2] - 2026-09-09

@@ -19,7 +19,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-licensing/actions.php'
 	),
 	'd4eb94df91a729802d18373ee8cdc79f' => array(
-		'version' => '5.0.3.0-alpha1789498368',
+		'version' => '5.0.3.0-alpha1789508956',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/actions.php'
 	),
 	'd9927a8ddcd8b3a40fb28c24213827ff' => array(
