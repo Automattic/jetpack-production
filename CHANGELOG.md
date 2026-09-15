@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: draw the Post views and Video performance charts on the detail pages as bars by default.
 - Premium Analytics: hide the dashboard's date controls while customizing its layout, instead of disabling them.
 - Premium Analytics: Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.
+- Premium Analytics: Label the Insights leaderboard widgets with the period they cover.
 - Premium Analytics: Lay out the default Insights widgets on the three-column grid in the design's order.
 - Premium Analytics: Lay out the metric tiles on the highlight widgets by widget size: a list on a one-column widget, a single row or a two-column grid on a wider one.
 - Premium Analytics: Match the Year in review tile icons to the design and add space between the tiles and the footer link.

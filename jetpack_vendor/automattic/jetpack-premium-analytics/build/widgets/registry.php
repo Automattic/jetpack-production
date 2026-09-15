@@ -340,7 +340,7 @@ return array(
 	array(
 		'name'         => 'jpa/most-commented-authors',
 		'dir_name'     => 'most-commented-authors',
-		'title'        => 'Top commented authors',
+		'title'        => 'All-time most commented authors',
 		'description'  => 'The people who comment the most on your site.',
 		'help'         => array( 'content' => 'The people who left the most comments on your site.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'icon'         => null,
@@ -355,7 +355,7 @@ return array(
 	array(
 		'name'         => 'jpa/most-commented-posts',
 		'dir_name'     => 'most-commented-posts',
-		'title'        => 'Top commented posts',
+		'title'        => 'All-time most commented posts',
 		'description'  => 'The posts and pages that receive the most comments.',
 		'help'         => array( 'content' => 'The posts and pages that received the most comments.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'icon'         => null,
@@ -805,7 +805,7 @@ return array(
 	array(
 		'name'         => 'jpa/shares',
 		'dir_name'     => 'shares',
-		'title'        => 'Top social media shares',
+		'title'        => 'All-time top social media shares',
 		'description'  => 'The number of times your content was shared to social networks.',
 		'help'         => array( 'content' => 'The platforms where your content was shared most often, sorted by number of shares.' ),
 		'icon'         => null,
@@ -910,7 +910,7 @@ return array(
 	array(
 		'name'         => 'jpa/tags',
 		'dir_name'     => 'tags',
-		'title'        => 'Top tags & categories',
+		'title'        => 'Top tags & categories in the last 7 days',
 		'description'  => 'Your most visited tags and categories, ranked by views.',
 		'help'         => array( 'content' => 'The tags and categories associated with your most-viewed content, sorted by views.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'icon'         => null,
