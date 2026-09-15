@@ -304,6 +304,8 @@ __( "Widget options", "jetpack-premium-analytics-pkg" );
 __( "Width", "jetpack-premium-analytics-pkg" );
 __( "Use available width", "jetpack-premium-analytics-pkg" );
 __( "Make full width", "jetpack-premium-analytics-pkg" );
+__( "Tell us what's better, what's worse, and what you miss about the new Traffic tab.", "jetpack-premium-analytics-pkg" );
+__( "Leave feedback", "jetpack-premium-analytics-pkg" );
 __( "Everything is a widget", "jetpack-premium-analytics-pkg" );
 __( "Each block of data is a widget you can move and resize to suit how you read your site.", "jetpack-premium-analytics-pkg" );
 __( "A better date picker", "jetpack-premium-analytics-pkg" );

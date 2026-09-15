@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a dismissible feedback banner above the dashboard widgets.
 - Ads: Add an earnings history report page, showing every period with its earnings, ads served, and payment status.
 - Date picker: add the Month to date and Year to date periods.
 - Locations: Add a map of views by location to the report, with an option to hide it.

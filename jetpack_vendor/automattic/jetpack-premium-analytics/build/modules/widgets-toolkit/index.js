@@ -109,7 +109,7 @@ __( "Any other feedback you'd like to share?", "jetpack-premium-analytics-pkg" )
 __( "What's missing?", "jetpack-premium-analytics-pkg" );
 __( "Share your feedback", "jetpack-premium-analytics-pkg" );
 __( "Thanks, your feedback has gone to the team.", "jetpack-premium-analytics-pkg" );
-__( "It'll help us decide what to fix before the new Traffic tab replaces the old one. You can send more any time from the same menu.", "jetpack-premium-analytics-pkg" );
+__( "It'll help us decide what to fix before the new Traffic tab replaces the old one. You can send more any time from the page options menu.", "jetpack-premium-analytics-pkg" );
 __( "Done", "jetpack-premium-analytics-pkg" );
 __( "Cancel", "jetpack-premium-analytics-pkg" );
 __( "Send feedback", "jetpack-premium-analytics-pkg" );
