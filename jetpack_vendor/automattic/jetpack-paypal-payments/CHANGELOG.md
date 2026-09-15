@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Create, update and delete the PayPal payment with the post instead of from a Create New button: the payment is written when the post is saved, and removed when the post is saved without its block and no other published post uses it.
 - Hide the product price field when the product options carry their own prices, and stop a leftover value there from blocking Update.
 - Label the admin menu item "PayPal Payment Links" instead of "Payment Links", so it is recognisable under the Jetpack menu.
+- Move the PayPal connection wizard into the block settings sidebar, with the block itself only saying a PayPal business account is needed.
 - Move the product form fields into the block inspector and fit them to the sidebar column. The primary button is now Create New / Save instead of naming the display format.
 - One checkbox turns on per-variant pricing, and the price belongs to the first option group.
 - Pick a page for the return URL, or paste one, instead of typing the address by hand.
