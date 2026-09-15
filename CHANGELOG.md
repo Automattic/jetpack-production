@@ -64,6 +64,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Admin: Match the Jetpack menu logo's first paint to the active admin color scheme.
+- Admin menu: Guard Logo::get_base64_admin_menu_logo() calls with method_exists() to prevent fatals when another plugin loads an older logo package.
 - Charts: Fix unreadable axis labels in forced-colors mode.
 - Charts: Restore keyboard focus after dismissing line chart tooltips.
 - Charts: Stop the first and last dates on a chart's horizontal axis from being cut off.
