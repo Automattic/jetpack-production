@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Restyle dashboard notices to match the WordPress design system.
 - Newsletter: Add a Freshly Pressed tab to the Daily Writing Prompt dashboard widget, listing the posts WordPress.com is currently featuring.
 - Newsletter: Add an Overview dashboard for getting started and finding guides.
+- Newsletter: Show the email itself in the email design canvas, and limit editing there to the Styles panel.
 - Notices: Render Jetpack admin notices with the WordPress design system Notice component.
 - PayPal Payment Buttons: add API-managed buttons behind a feature flag that is not yet enabled. Once it is on, you can connect a PayPal account from WordPress, create and manage payment links without leaving the editor, choose a Button, Link, or QR format, and style it with your own colors, size and border.
 - PayPal Payment Buttons: Create and update the payment when the post is saved, and remove it when the post is saved without the block, instead of from a Create New button.
