@@ -44,8 +44,10 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: hide the dashboard's date controls while customizing its layout, instead of disabling them.
 - Premium Analytics: Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.
 - Premium Analytics: Label the Insights leaderboard widgets with the period they cover.
+- Premium Analytics: Label WordAds earnings history periods by month and year, such as "August 2026".
 - Premium Analytics: Lay out the default Insights widgets on the three-column grid in the design's order.
 - Premium Analytics: Lay out the metric tiles on the highlight widgets by widget size: a list on a one-column widget, a single row or a two-column grid on a wider one.
+- Premium Analytics: Link the Earnings History widget to its full report.
 - Premium Analytics: Match the Year in review tile icons to the design and add space between the tiles and the footer link.
 - Premium Analytics: move the dashboard's Customize button into the page options menu, with Reset to default beside Cancel and Done while customizing.
 - Premium Analytics: Note in the Traffic summary help that the Visitors total is a per-period sum.
@@ -62,6 +64,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show All-time stats totals as compact figures, with the exact total in a tooltip.
 - Premium Analytics: Show a post's monthly views across its whole life on its detail page, in place of the daily heatmap, and picking a month applies it as the page's period.
 - Premium Analytics: show Subscriber highlights by default on the Subscribers tab and rearrange the widgets for the three-column grid.
+- Premium Analytics: Show the Earnings History widget as a compact list without in-widget pagination.
 - Premium Analytics: Show the exact number on hover behind abbreviated figures, and abbreviate with one decimal where it fits (1.2K, 54.3K, 234K).
 - Premium Analytics: Show the Most popular time and Most popular day highlights side by side, stacking them only on a narrow tile.
 - Premium Analytics: Show the site's monthly views across every year on the Insights tab, in place of the daily heatmap; picking a month opens the Traffic tab over it.

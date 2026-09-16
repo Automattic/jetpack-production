@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a dismissible feedback banner above the dashboard widgets.
 - Ads: Add an earnings history report page, showing every period with its earnings, ads served, and payment status.
+- Ads: Link the Earnings History widget to its full report.
 - Date picker: add the Month to date and Year to date periods.
 - Locations: Add a map of views by location to the report, with an option to hide it.
 - Post detail: Add a Total views / Daily average switch to the All-time traffic card.
@@ -19,8 +20,10 @@ This is an alpha version! The changes listed here are not final.
 - Traffic: Note in the widget help that the Visitors total is a per-period sum.
 
 ### Changed
+- Ads: Label WordAds earnings history periods by month and year, such as "August 2026".
 - Ads: read ads served, average CPM and revenue out together in the WordAds chart tooltip, whichever tab is selected.
 - Ads: rearrange the default widgets for the three-column grid, with the chart first, then the balance, then the three history tables side by side.
+- Ads: Show the Earnings History widget as a compact list without in-widget pagination.
 - Build the custom date range calendar on the WordPress design system calendar.
 - Dashboard: Ask the same readiness question when switching the new Traffic tab off, and point to the Modules Visibility setting to switch it back on.
 - Dashboard: ask whether the new Traffic tab is ready to replace the old one, instead of how it compares with the old one.

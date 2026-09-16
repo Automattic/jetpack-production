@@ -9,3 +9,4 @@
 __( "We couldn't load WordAds earnings. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "No earnings history to show yet.", "jetpack-premium-analytics-pkg" );
+__( "View all earnings history", "jetpack-premium-analytics-pkg" );
