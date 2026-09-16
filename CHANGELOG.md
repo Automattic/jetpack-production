@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: add the Month to date and Year to date periods to the date picker.
 - Premium Analytics: Add the Totals column to the post detail All-time traffic card; picking a total reads the page over that year.
 - Premium Analytics: Align the Insights widget help text and the Year in review and All-time stats header icons with the design.
+- Premium Analytics: Align the Most popular post and Latest post cards with the design: regular-weight stat labels and a grey ground behind the featured image.
 - Premium Analytics: Always show every total on the All-time stats card and drop its Metrics control.
 - Premium Analytics: Ask the same readiness question when switching the new Traffic tab off, and point to the Modules Visibility setting to switch it back on.
 - Premium Analytics: ask whether the new Traffic tab is ready to replace the old one, instead of how it compares with the old one.
