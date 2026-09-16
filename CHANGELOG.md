@@ -10,7 +10,6 @@ This is an alpha version! The changes listed here are not final.
 - Admin bar endpoint: allow the Help Center node so the dashboard can render the entry point from the payload.
 - Admin Menu: hide a Jetpack sidebar item when its feature is turned off.
 - AI: Add ChatGPT/Codex setup instructions to the MCP agent setup page.
-- AI: Serve the Jetpack AI page through the standard Jetpack admin frame.
 - Connection: Show every connection error in one notice, each with the account it affects, and link to Site Health when a firewall is blocking WordPress.com.
 - Connection: Surface SSL certificate verification failures reported by WordPress.com as a connection error with an admin notice and a clearer Site Health diagnosis.
 - Daily Writing Prompt: Stop offering the Write editor after a switch to the Block editor.
