@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: ask whether the new Traffic tab is ready to replace the old one, instead of how it compares with the old one.
 - Premium Analytics: Build the custom date range calendar on the WordPress design system calendar.
 - Premium Analytics: draw the Post views and Video performance charts on the detail pages as bars by default.
+- Premium Analytics: Enlarge leaderboard row labels to 13px; in Top tags & categories and its report, mute the row glyphs and draw category rows with a file icon.
 - Premium Analytics: hide the dashboard's date controls while customizing its layout, instead of disabling them.
 - Premium Analytics: Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.
 - Premium Analytics: Label the Insights leaderboard widgets with the period they cover.
