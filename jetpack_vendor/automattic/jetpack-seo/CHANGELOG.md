@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Fix author schema describing the wrong user on sites that use a third-party author plugin.
 - Fix the Settings tab failing to load on sites where a page title structure had been cleared from WordPress.com.
 
 ## [0.9.3] - 2026-09-09
