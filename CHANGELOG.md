@@ -61,6 +61,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: show Subscriber highlights by default on the Subscribers tab and rearrange the widgets for the three-column grid.
 - Premium Analytics: Show the exact number on hover behind abbreviated figures, and abbreviate with one decimal where it fits (1.2K, 54.3K, 234K).
 - Premium Analytics: Show the Most popular time and Most popular day highlights side by side, stacking them only on a narrow tile.
+- Premium Analytics: Show the site's monthly views across every year on the Insights tab, in place of the daily heatmap; picking a month opens the Traffic tab over it.
 - Premium Analytics: show the Skip tour button on every step of the onboarding tour.
 - Premium Analytics: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
 - Stats: Add a dismissible feedback banner above the new Traffic tab's widgets.
