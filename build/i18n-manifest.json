@@ -1,0 +1,5 @@
+{
+	"bundles": [
+		"build/routes/ai-hub/content.js"
+	]
+}
