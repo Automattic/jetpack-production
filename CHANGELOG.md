@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Add ChatGPT/Codex setup instructions to the MCP agent setup page.
 - Connection: Show every connection error in one notice, each with the account it affects, and link to Site Health when a firewall is blocking WordPress.com.
 - Connection: Surface SSL certificate verification failures reported by WordPress.com as a connection error with an admin notice and a clearer Site Health diagnosis.
+- Donations Form: Remove the "Accept Donations with Stripe" modal shown on insert, and link to Stripe's donation requirements from the block's connect notice and Settings sidebar instead.
 - Forms: Add a Done button to the conditional logic rules dialog, and open the Conditional logic panel by default on a field that has conditions.
 - Jetpack AI: load the Scheduled tasks tab only when it is opened, cutting the AI page script by two thirds.
 - Likes: Guide block-theme users from legacy Like buttons to the Like block.
