@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: move Customize into the page options menu, and offer Reset to default beside Cancel and Done while customizing.
 - Date picker: offer the common periods the design lists, dropping Last 90 days, Last 365 days and Last year.
 - Date range: Type the range bounds as zoned instants, so day boundaries are measured on the site's clock. A range whose end precedes its start now reports no period length instead of a one-hour window.
+- Draw attention to the date control, and read the new period out, when a card or a table cell sets the period rather than the reader.
 - Feedback: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
 - Insights: Align the Most popular post and Latest post cards with the design: regular-weight stat labels and a grey ground behind the featured image.
 - Insights: Align the widget help text and the Year in review and All-time stats header icons with the design.

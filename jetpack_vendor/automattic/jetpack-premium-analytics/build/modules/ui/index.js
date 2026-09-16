@@ -64,6 +64,8 @@ __( "Cancel", "jetpack-premium-analytics-pkg" );
 __( "Apply", "jetpack-premium-analytics-pkg" );
 __( "Period", "jetpack-premium-analytics-pkg" );
 __( "Custom range", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the applied period, e.g. "July 2026" */
+__( "Date range updated to %s.", "jetpack-premium-analytics-pkg" );
 __( "Time period", "jetpack-premium-analytics-pkg" );
 __( "Select period", "jetpack-premium-analytics-pkg" );
 __( "Welcome to the new Traffic page", "jetpack-premium-analytics-pkg" );
