@@ -65,6 +65,7 @@ This is an alpha version! The changes listed here are not final.
 - Require a tax rate when tax collection is on, instead of saving an empty rate as 0%.
 - Return up to 100 payment links per request instead of 10.
 - Say how many published posts embed a payment link before it is deleted from the admin.
+- Say so when opening a post picks up changes made to the payment link elsewhere. The block used to take them silently, so a price or description edited in PayPal's dashboard, or by another block sharing the same link, changed under the merchant with nothing shown. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
 - Say why an unsupported currency or an empty variant group blocks saving, instead of disabling the save button with nothing on screen.
 - Say why the product price field is invalid when clearing the option prices brings it back, instead of disabling save with nothing on screen.
 - Send the "Open PayPal Dashboard" link to the sandbox app list when connecting in sandbox, instead of always opening the live one.
