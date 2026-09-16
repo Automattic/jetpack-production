@@ -16,6 +16,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Refuse a connection ownership change while ownership is locked.
+- Site Health: Clarify the descriptions shown by the connection tests, link to the Jetpack IP allowlist guide when a firewall blocks WordPress.com requests, and explain why a test was skipped.
+- Site Health: Give every connection test a readable heading instead of one derived from its internal name.
 - Update package dependencies.
 
 ### Fixed
