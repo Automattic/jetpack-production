@@ -85,6 +85,7 @@ This is an alpha version! The changes listed here are not final.
 - Charts: Stop the first and last dates on a chart's horizontal axis from being cut off.
 - Connection: Fix a stale connection error notice that could persist on healthy sites.
 - Connection: Hide connection error notices from users who cannot fix the connection.
+- Dashboards: Stop the frame from flashing while loading and when switching admin pages.
 - Editor: Stop offering to activate the legacy Likes and Sharing buttons modules on block themes, where the corresponding blocks should be added to a template instead.
 - Forms: Prevent extra forms from being created when the block placeholder is clicked more than once.
 - Goodreads: Fix the block rendering empty on the front end of WordPress.com Simple sites.

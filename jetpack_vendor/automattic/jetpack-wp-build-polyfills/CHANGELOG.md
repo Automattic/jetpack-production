@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Keep the dashboard frame steady while it loads and when switching admin pages.
+
 ## [0.5.4] - 2026-09-14
 ### Changed
 - Update dependencies. [#50674]
