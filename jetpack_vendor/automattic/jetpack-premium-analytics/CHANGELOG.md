@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Lay out the metric tiles on the highlight widgets by widget size: a list on a one-column widget, a single row or a two-column grid on a wider one.
 - Leaderboard widgets: Enlarge row labels to 13px; in Top tags & categories and its report, mute the row glyphs and draw category rows with a file icon.
 - Onboarding: show the Skip tour button on every step of the spotlight tour.
+- Open the exact-figure tooltip below compact values instead of above them.
 - Pin the post and video detail headers on scroll and condense them as on the dashboard: the tabs scroll away, the subtitle folds and the media shrinks to the title row.
 - Pin the section header on the report pages, as on the dashboard, from one shared component.
 - Popular post: Retitle the card to "Most popular in the last year".
