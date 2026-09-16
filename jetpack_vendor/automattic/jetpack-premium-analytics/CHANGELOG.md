@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Insights: Replace the daily Traffic views activity heatmap with a Views over years table of monthly views, with a Totals column and a Total views / Daily average switch; picking a month opens the Traffic tab over it.
 - Insights: Show All-time stats totals as compact figures, with the exact total in a tooltip.
 - Insights: Show the Most popular time and Most popular day highlights side by side, stacking them only on a narrow tile.
+- Insights: Use the page icon for the Posts metric in the All-time stats widget.
 - Keep the custom range calendar's Cancel and Apply buttons at the bottom of the period menu.
 - Lay out the metric tiles on the highlight widgets by widget size: a list on a one-column widget, a single row or a two-column grid on a wider one.
 - Leaderboard widgets: Enlarge row labels to 13px; in Top tags & categories and its report, mute the row glyphs and draw category rows with a file icon.
