@@ -144,6 +144,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Return saved site verification codes from the site settings API.
 - Sharing: Open the post template instead of the template list when linking to the Site Editor.
 - Sharing Buttons block: use an unpredictable name for share popups, matching the classic sharing buttons.
+- Site Verification: Reject invalid verification codes instead of reporting a successful save.
 - Social: Pre-fill the Bluesky handle field when reconnecting an account.
 - Stats, Podcast and Premium Analytics: Return focus to bar charts after pressing Escape, and select the bar under the pointer for tooltips and pointer callbacks.
 - VideoPress: Fix selecting thumbnail frames from private videos and prefer browser-compatible video renditions.
