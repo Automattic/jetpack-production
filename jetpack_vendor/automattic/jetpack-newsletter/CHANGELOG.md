@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: add an Action Bar visibility toggle on WordPress.com Simple sites.
 
 ### Changed
+- Daily Writing Prompt: Stop offering the Write editor after a switch to the Block editor.
 - Exclude source map files from the distributed package.
 - Hide the Newsletter sidebar item when Newsletter is not active.
 - Update package dependencies.
