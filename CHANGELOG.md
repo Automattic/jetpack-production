@@ -87,6 +87,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Hide connection error notices from users who cannot fix the connection.
 - Dashboards: Stop the frame from flashing while loading and when switching admin pages.
 - Editor: Stop offering to activate the legacy Likes and Sharing buttons modules on block themes, where the corresponding blocks should be added to a template instead.
+- Fix Jetpack admin pages and Jetpack blocks in the editor failing to load on WordPress.com-hosted sites.
 - Forms: Prevent extra forms from being created when the block placeholder is clicked more than once.
 - Goodreads: Fix the block rendering empty on the front end of WordPress.com Simple sites.
 - Heartbeat: Guard Connection Heartbeat method calls with method_exists() to prevent fatals when another plugin loads an older Connection package.

@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Register the shared data stores when an older copy of the package bootstraps first, so dependent admin scripts are no longer dropped.
+
 ## [5.0.3] - 2026-09-14
 ### Changed
 - Update dependencies. [#50674]

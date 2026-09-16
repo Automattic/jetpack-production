@@ -74,9 +74,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-assets' => array(
-            'pretty_version' => '5.0.4-alpha.1789559411',
-            'version' => '5.0.4.0-alpha1789559411',
-            'reference' => '39adca17ebbd02c861837ba91aa6fce7171f52b2',
+            'pretty_version' => '5.0.4-alpha.1789575972',
+            'version' => '5.0.4.0-alpha1789575972',
+            'reference' => '1da0dfcacb8b650fa890fd829edf9b1d67e70481',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-assets',
             'aliases' => array(),
