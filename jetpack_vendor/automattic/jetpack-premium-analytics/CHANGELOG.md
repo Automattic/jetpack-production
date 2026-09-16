@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a dismissible feedback banner above the dashboard widgets.
 - Ads: Add an earnings history report page, showing every period with its earnings, ads served, and payment status.
 - Ads: Link the Earnings History widget to its full report.
+- Dashboard widgets: carry declarative actions and icon references from the widget manifest to the registry and the widget-modules REST record.
 - Date picker: add the Month to date and Year to date periods.
 - Locations: Add a map of views by location to the report, with an option to hide it.
 - Post detail: Add a Total views / Daily average switch to the All-time traffic card.
