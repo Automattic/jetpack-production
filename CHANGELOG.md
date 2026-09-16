@@ -70,6 +70,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the site's monthly views across every year on the Insights tab, in place of the daily heatmap; picking a month opens the Traffic tab over it.
 - Premium Analytics: show the Skip tour button on every step of the onboarding tour.
 - Premium Analytics: tell readers where their feedback went and that they can send more, instead of a one-line thank you.
+- Search: Show each of the No Results block's empty-state messages as it will appear to visitors while editing, and tell the messages apart by name when browsing the page structure.
 - Stats: Add a dismissible feedback banner above the new Traffic tab's widgets.
 - VideoPress: Add a "Learn more" support link to the admin page.
 - VideoPress: Add a setting to render players in the page from one shared player script instead of one frame per video.

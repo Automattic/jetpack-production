@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Hide the Search sidebar item when the Search module is not active.
+- No Results block: Show each empty-state message as it will appear to visitors while editing, and tell the messages apart by name when browsing the page structure.
 - Update package dependencies.
 
 ### Fixed
