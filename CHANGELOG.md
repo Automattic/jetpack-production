@@ -87,6 +87,7 @@ This is an alpha version! The changes listed here are not final.
 - Editor: Stop offering to activate the legacy Likes and Sharing buttons modules on block themes, where the corresponding blocks should be added to a template instead.
 - Forms: Prevent extra forms from being created when the block placeholder is clicked more than once.
 - Goodreads: Fix the block rendering empty on the front end of WordPress.com Simple sites.
+- Heartbeat: Guard Connection Heartbeat method calls with method_exists() to prevent fatals when another plugin loads an older Connection package.
 - Keep admin icons colored after the @wordpress/icons 16 update, which draws them as strokes.
 - Likes: Hide the "Loading…" placeholder from the widget itself, so it disappears even when the Likes stylesheet fails to load.
 - Likes: Load like buttons that a late page reflow brings into view, instead of waiting for the reader to scroll.
