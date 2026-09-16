@@ -65,6 +65,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Retitle the Popular post card to "Most popular in the last year".
 - Premium Analytics: Show All-time stats totals as compact figures, with the exact total in a tooltip.
 - Premium Analytics: Show a post's monthly views across its whole life on its detail page, in place of the daily heatmap, and picking a month applies it as the page's period.
+- Premium Analytics: Show opens and clicks beside their rates in Latest emails sent.
 - Premium Analytics: show Subscriber highlights by default on the Subscribers tab and rearrange the widgets for the three-column grid.
 - Premium Analytics: Show the Earnings History widget as a compact list without in-widget pagination.
 - Premium Analytics: Show the exact number on hover behind abbreviated figures, and abbreviate with one decimal where it fits (1.2K, 54.3K, 234K).
