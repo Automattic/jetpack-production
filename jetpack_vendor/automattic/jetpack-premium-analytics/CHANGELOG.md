@@ -58,6 +58,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Removed
+- Insights: Remove the Traffic views activity heatmap widget, which Views over years replaced.
 - Remove the arrows that stepped the date range back and forward a period.
 
 ### Fixed

@@ -140,6 +140,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: add the email design screen behind a feature flag.
 - Newsletter: register the email design editor's WordPress.com blocks on the client.
 - Newsletter: save the email design to WordPress.com, and run the design screen in fullscreen.
+- Premium Analytics: Remove the Traffic views activity heatmap widget from the Insights tab, which Views over years replaced.
 - Update package dependencies.
 
 ## 16.2 - 2026-09-10
