@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 - Update package dependencies.
 
+### Fixed
+- Show the Facebook or Google profile picture on comments left through the popup sign-in on WordPress.com Simple sites too.
+
 ## [0.1.2] - 2026-09-08
 ### Changed
 - Update package dependencies. [#51701]
