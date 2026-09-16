@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - Notices: Restyle My Jetpack dashboard notices to match the WordPress design system.
 - Update package dependencies.
 
+### Fixed
+- Stats: Restore the link from the stats card heading and chart to the Stats page.
+
 ## [6.2.2] - 2026-09-14
 ### Changed
 - Connection: Show every connection error in one notice, each with the account it affects, and link to Site Health when a firewall is blocking WordPress.com. [#51504]

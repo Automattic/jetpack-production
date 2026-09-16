@@ -88,6 +88,7 @@ This is an alpha version! The changes listed here are not final.
 - Modules: Keep other plugins' admin notices out of the module list.
 - My Jetpack: guide block-theme users from legacy Like buttons to the Like block.
 - My Jetpack: Offer to activate Search, rather than to buy a plan, when the site already owns it and the module is switched off.
+- My Jetpack: Restore the link from the stats card heading and chart to the Stats page.
 - PayPal Payment Buttons: break the disconnect confirmation into a short summary and a list, so its consequences are readable at a glance.
 - PayPal Payment Buttons: close PayPal's onboarding window with the Escape key or its Close button, instead of reloading the editor and losing unsaved changes.
 - PayPal Payment Buttons: Close the PayPal onboarding popup automatically when it returns, instead of leaving it open on a wp-admin screen.

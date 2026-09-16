@@ -524,6 +524,7 @@ __( "Previous period", "jetpack-my-jetpack" );
 __( "Not enough space to display data", "jetpack-my-jetpack" );
 __( "Percentage change unavailable", "jetpack-my-jetpack" );
 __( "No comparison data", "jetpack-my-jetpack" );
+__( "View detailed stats", "jetpack-my-jetpack" );
 __( "No data in this period", "jetpack-my-jetpack" );
 __( "There was no data recorded during this time period.", "jetpack-my-jetpack" );
 __( "Views", "jetpack-my-jetpack" );
@@ -542,7 +543,6 @@ _n( "%s visitor", "%s visitors", 1, "jetpack-my-jetpack" );
 _n( "%s like", "%s likes", 1, "jetpack-my-jetpack" );
 /* translators: %s: number of comments */
 _n( "%s comment", "%s comments", 1, "jetpack-my-jetpack" );
-__( "View detailed stats", "jetpack-my-jetpack" );
 __( "Connect Jetpack to use Stats", "jetpack-my-jetpack" );
 __( "There was a problem enabling the new SEO experience.", "jetpack-my-jetpack" );
 __( "Enabling…", "jetpack-my-jetpack" );
