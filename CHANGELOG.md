@@ -150,6 +150,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix selecting thumbnail frames from private videos and prefer browser-compatible video renditions.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Admin pages: Link the footer to the My Jetpack Features tab when it replaces the Products tab.
 - Forms: deprecate the jetpack_forms_alpha filter, which no longer selects anything.
 - Newsletter: add the email design screen behind a feature flag.
 - Newsletter: register the email design editor's WordPress.com blocks on the client.

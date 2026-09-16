@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a catalog of the main Jetpack features, with their copy, links and how to get each one.
+- Add a my-jetpack-features-tab feature flag that replaces the Products tab with a Features tab in the new dashboard.
 - Add a plan-free is_activated() check to the product classes and resolve Jetpack sidebar menu visibility from it, so a menu item follows whether the product is switched on without a request to WordPress.com.
 
 ### Changed

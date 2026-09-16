@@ -195,6 +195,7 @@ __( "At least one user must be connected for your Jetpack products to work prope
 __( "Disconnect my user account", "jetpack-my-jetpack" );
 __( "Disconnect Jetpack", "jetpack-my-jetpack" );
 __( "Go back", "jetpack-my-jetpack" );
+__( "Overview", "jetpack-my-jetpack" );
 __( "My Jetpack", "jetpack-my-jetpack" );
 __( "Connect your user account", "jetpack-my-jetpack" );
 __( "Connecting your account…", "jetpack-my-jetpack" );
@@ -882,8 +883,8 @@ __( "Action", "jetpack-my-jetpack" );
 __( "Search results", "jetpack-my-jetpack" );
 __( "Search products", "jetpack-my-jetpack" );
 __( "Filter products", "jetpack-my-jetpack" );
+__( "Manage and explore Jetpack features that boost growth, performance, and security.", "jetpack-my-jetpack" );
 __( "Manage and explore Jetpack products that boost growth, performance, and security.", "jetpack-my-jetpack" );
-__( "Overview", "jetpack-my-jetpack" );
 __( "Welcome to Jetpack", "jetpack-my-jetpack" );
 __( "Done", "jetpack-my-jetpack" );
 __( "Simple, yet powerful stats", "jetpack-my-jetpack" );
