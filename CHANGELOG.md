@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Note in the Traffic summary help that the Visitors total is a per-period sum.
 - Premium Analytics: offer feedback, the preview opt-out and Reset to default from the post and video detail pages too.
 - Premium Analytics: offer the common date periods the design lists, dropping Last 90 days, Last 365 days and Last year.
+- Premium Analytics: Post detail: bring the page back to the top when a month in All-time traffic sets the period.
 - Premium Analytics: read ads served, average CPM and revenue out together in the Ads chart tooltip, whichever tab is selected.
 - Premium Analytics: rearrange the default Ads widgets for the three-column grid, with the chart first, then the balance, then the three history tables side by side.
 - Premium Analytics: Remove the arrows that stepped the date range back and forward a period.
