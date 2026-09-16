@@ -48,9 +48,9 @@ __( "/month, paid yearly", "jetpack-my-jetpack" );
 __( "% off", "jetpack-my-jetpack" );
 __( "% off the first year", "jetpack-my-jetpack" );
 __( "Dismiss", "jetpack-my-jetpack" );
-__( "Loading", "jetpack-my-jetpack" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-my-jetpack" );
+__( "Loading", "jetpack-my-jetpack" );
 __( "More details follow the field.", "jetpack-my-jetpack" );
 __( "Select", "jetpack-my-jetpack" );
 __( "Need help? <a>Get in touch</a>.", "jetpack-my-jetpack" );
@@ -757,6 +757,9 @@ __( "Weeks ago", "jetpack-my-jetpack" );
 __( "Months ago", "jetpack-my-jetpack" );
 __( "Years ago", "jetpack-my-jetpack" );
 __( "Unit", "jetpack-my-jetpack" );
+__( "Coordinated Universal Time", "jetpack-my-jetpack" );
+/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
+__( "Timezone: %s", "jetpack-my-jetpack" );
 __( "Date time", "jetpack-my-jetpack" );
 __( "Today", "jetpack-my-jetpack" );
 __( "Yesterday", "jetpack-my-jetpack" );

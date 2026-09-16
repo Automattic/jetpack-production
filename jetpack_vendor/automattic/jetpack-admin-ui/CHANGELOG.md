@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Sidebar: let a menu item declare what gates it and a stable key hosts can name it by, and add the jetpack_admin_menu_visibility filter so hosts can force an item visible or hidden. A hidden item's page stays reachable by URL.
 
+### Changed
+- Update package dependencies.
+
 ## [0.11.4] - 2026-09-14
 ### Fixed
 - Admin menu: Match the Jetpack logo's first paint to the active admin color scheme. [#52086]

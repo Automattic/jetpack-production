@@ -11,6 +11,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Exclude source map files from the distributed package.
+- Update package dependencies.
+
+### Fixed
+- Keep the event and actor icons colored now that @wordpress/icons 16 draws them as strokes.
 
 ## [0.3.4] - 2026-09-14
 ### Changed

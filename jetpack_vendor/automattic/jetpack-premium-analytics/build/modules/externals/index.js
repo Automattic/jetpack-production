@@ -6,9 +6,9 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "Loading", "jetpack-premium-analytics-pkg" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-premium-analytics-pkg" );
+__( "Loading", "jetpack-premium-analytics-pkg" );
 _x( "%1$s, %2$s", "legend item label and value", "jetpack-premium-analytics-pkg" );
 _x( "%s: visible. Toggle visibility.", "visible interactive legend item", "jetpack-premium-analytics-pkg" );
 _x( "%s: hidden. Toggle visibility.", "hidden interactive legend item", "jetpack-premium-analytics-pkg" );
@@ -38,6 +38,8 @@ __( "Loading…", "jetpack-premium-analytics-pkg" );
 __( "Not enough space to display data", "jetpack-premium-analytics-pkg" );
 __( "Percentage change unavailable", "jetpack-premium-analytics-pkg" );
 __( "No comparison data", "jetpack-premium-analytics-pkg" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 /* translators: 1: Calendar type. 2: Current month and year. */
 __( "%1$s, %2$s", "jetpack-premium-analytics-pkg" );
 __( "Date calendar", "jetpack-premium-analytics-pkg" );
@@ -56,8 +58,6 @@ __( "Cancel", "jetpack-premium-analytics-pkg" );
 __( "More details follow the field.", "jetpack-premium-analytics-pkg" );
 __( "More details follow.", "jetpack-premium-analytics-pkg" );
 __( "Select", "jetpack-premium-analytics-pkg" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 __( "Dismiss", "jetpack-premium-analytics-pkg" );
 __( "Required", "jetpack-premium-analytics-pkg" );
 __( "Optional", "jetpack-premium-analytics-pkg" );

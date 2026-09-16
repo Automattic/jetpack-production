@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Admin: Keep the notice, video list and video card icons colored now that @wordpress/icons 16 draws them as strokes.
 - Fix selecting thumbnail frames from private videos and prefer browser-compatible video renditions.
 - Follow the admin color scheme for the support link.
 

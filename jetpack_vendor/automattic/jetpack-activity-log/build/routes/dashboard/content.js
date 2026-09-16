@@ -16,9 +16,9 @@ __( "Jetpack", "jetpack-activity-log" );
 __( "Sections", "jetpack-activity-log" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-activity-log" );
-__( "Loading", "jetpack-activity-log" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-activity-log" );
+__( "Loading", "jetpack-activity-log" );
 __( "Dismiss", "jetpack-activity-log" );
 /* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack-activity-log" );
@@ -213,6 +213,9 @@ __( "Weeks ago", "jetpack-activity-log" );
 __( "Months ago", "jetpack-activity-log" );
 __( "Years ago", "jetpack-activity-log" );
 __( "Unit", "jetpack-activity-log" );
+__( "Coordinated Universal Time", "jetpack-activity-log" );
+/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
+__( "Timezone: %s", "jetpack-activity-log" );
 __( "Date time", "jetpack-activity-log" );
 __( "Today", "jetpack-activity-log" );
 __( "Yesterday", "jetpack-activity-log" );

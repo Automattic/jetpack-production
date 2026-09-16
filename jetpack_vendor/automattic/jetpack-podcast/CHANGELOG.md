@@ -13,6 +13,10 @@ This is an alpha version! The changes listed here are not final.
 - Exclude source map files from the distributed package.
 - Hide the Podcast sidebar item when the Podcast module is not active.
 - Update dependencies.
+- Update package dependencies.
+
+### Fixed
+- Welcome screen: Keep the plan feature check icons colored now that @wordpress/icons 16 draws them as strokes.
 
 ## [2.1.1] - 2026-09-09
 ### Changed

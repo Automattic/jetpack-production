@@ -7,15 +7,15 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "A connection check failed.", "jetpack-newsletter" );
-__( "Loading", "jetpack-newsletter" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-newsletter" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-newsletter" );
+__( "Loading", "jetpack-newsletter" );
 __( "OK", "jetpack-newsletter" );
 __( "Cancel", "jetpack-newsletter" );
 __( "Close", "jetpack-newsletter" );
 __( "More details follow.", "jetpack-newsletter" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-newsletter" );
 __( "Dismiss", "jetpack-newsletter" );
 __( "Sections", "jetpack-newsletter" );
 __( "Jetpack Logo", "jetpack-newsletter" );
@@ -271,6 +271,9 @@ __( "Weeks ago", "jetpack-newsletter" );
 __( "Months ago", "jetpack-newsletter" );
 __( "Years ago", "jetpack-newsletter" );
 __( "Unit", "jetpack-newsletter" );
+__( "Coordinated Universal Time", "jetpack-newsletter" );
+/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
+__( "Timezone: %s", "jetpack-newsletter" );
 __( "Date time", "jetpack-newsletter" );
 __( "Today", "jetpack-newsletter" );
 __( "Yesterday", "jetpack-newsletter" );

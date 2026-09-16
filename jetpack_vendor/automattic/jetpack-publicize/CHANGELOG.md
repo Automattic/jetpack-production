@@ -18,7 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Bluesky: Pre-fill the handle field when reconnecting an account.
 - Link preview: Remove Nextdoor and keep the remaining service icons on one row.
+- Share status: Keep the success icon colored now that @wordpress/icons 16 draws it as strokes.
 
 ## [0.86.2] - 2026-09-09
 ### Changed

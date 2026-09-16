@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Refuse a connection ownership change while ownership is locked.
+- Update package dependencies.
 
 ### Fixed
 - Error Handler: Stop reporting token errors on unregistered sites and purge object caches when deleting stored errors, so stale connection error notices cannot persist on healthy sites.

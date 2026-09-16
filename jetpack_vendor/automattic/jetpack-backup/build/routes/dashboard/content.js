@@ -6,12 +6,12 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "Loading", "jetpack-backup-pkg" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s", "jetpack-backup-pkg" );
-__( "Close", "jetpack-backup-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-backup-pkg" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-backup-pkg" );
+__( "Loading", "jetpack-backup-pkg" );
+__( "Close", "jetpack-backup-pkg" );
 __( "Something went wrong", "jetpack-backup-pkg" );
 __( "The page ran into an unexpected problem. Your backups are unaffected.", "jetpack-backup-pkg" );
 __( "Reload the page", "jetpack-backup-pkg" );
@@ -186,6 +186,9 @@ __( "Weeks ago", "jetpack-backup-pkg" );
 __( "Months ago", "jetpack-backup-pkg" );
 __( "Years ago", "jetpack-backup-pkg" );
 __( "Unit", "jetpack-backup-pkg" );
+__( "Coordinated Universal Time", "jetpack-backup-pkg" );
+/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
+__( "Timezone: %s", "jetpack-backup-pkg" );
 __( "Date time", "jetpack-backup-pkg" );
 __( "Today", "jetpack-backup-pkg" );
 __( "Yesterday", "jetpack-backup-pkg" );

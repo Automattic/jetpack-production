@@ -6,11 +6,11 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)" );
 __( "Loading" );
 __( "More details follow the field." );
 __( "Select" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)" );
 __( "Sections" );
 __( "Jetpack Logo", "jetpack-components" );
 __( "An Automattic Airline", "jetpack-components" );
@@ -399,6 +399,9 @@ __( "Days ago" );
 __( "Weeks ago" );
 __( "Months ago" );
 __( "Years ago" );
+__( "Coordinated Universal Time" );
+/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
+__( "Timezone: %s" );
 __( "Date time" );
 __( "Custom" );
 __( "Date" );

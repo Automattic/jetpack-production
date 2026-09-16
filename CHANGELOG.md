@@ -83,6 +83,7 @@ This is an alpha version! The changes listed here are not final.
 - Editor: Stop offering to activate the legacy Likes and Sharing buttons modules on block themes, where the corresponding blocks should be added to a template instead.
 - Forms: Prevent extra forms from being created when the block placeholder is clicked more than once.
 - Goodreads: Fix the block rendering empty on the front end of WordPress.com Simple sites.
+- Keep admin icons colored after the @wordpress/icons 16 update, which draws them as strokes.
 - Likes: Hide the "Loading…" placeholder from the widget itself, so it disappears even when the Likes stylesheet fails to load.
 - Likes: Load like buttons that a late page reflow brings into view, instead of waiting for the reader to scroll.
 - Map block: Ensure the WordPress.com Mapbox key load tracking event is recorded on Simple sites.
@@ -135,6 +136,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Return saved site verification codes from the site settings API.
 - Sharing: Open the post template instead of the template list when linking to the Site Editor.
 - Sharing Buttons block: use an unpredictable name for share popups, matching the classic sharing buttons.
+- Social: Pre-fill the Bluesky handle field when reconnecting an account.
 - VideoPress: Fix selecting thumbnail frames from private videos and prefer browser-compatible video renditions.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

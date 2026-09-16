@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Keep the product card, interstitial and close icons colored now that @wordpress/icons 16 draws them as strokes.
 - Stats: Restore the link from the stats card heading and chart to the Stats page.
 
 ## [6.2.2] - 2026-09-14

@@ -123,11 +123,11 @@ __( "Publish", "jetpack-videopress-pkg" );
 __( "Add track", "jetpack-videopress-pkg" );
 __( "Paste transcript", "jetpack-videopress-pkg" );
 __( "No subtitle tracks have been added to this video yet.", "jetpack-videopress-pkg" );
-__( "Loading", "jetpack-videopress-pkg" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-videopress-pkg" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
+__( "Loading", "jetpack-videopress-pkg" );
 __( "Dismiss", "jetpack-videopress-pkg" );
 /* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack-videopress-pkg" );
@@ -346,6 +346,9 @@ __( "Weeks ago", "jetpack-videopress-pkg" );
 __( "Months ago", "jetpack-videopress-pkg" );
 __( "Years ago", "jetpack-videopress-pkg" );
 __( "Unit", "jetpack-videopress-pkg" );
+__( "Coordinated Universal Time", "jetpack-videopress-pkg" );
+/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
+__( "Timezone: %s", "jetpack-videopress-pkg" );
 __( "Date time", "jetpack-videopress-pkg" );
 __( "Today", "jetpack-videopress-pkg" );
 __( "Yesterday", "jetpack-videopress-pkg" );

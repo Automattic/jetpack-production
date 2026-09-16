@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Name the Blaze sidebar item so hosts can address it in the menu visibility filter.
 - Update dependencies.
+- Update package dependencies.
 
 ## [0.29.2] - 2026-09-09
 ### Changed

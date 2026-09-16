@@ -6,15 +6,15 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "Loading", "jetpack-publicize-pkg" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-publicize-pkg" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-publicize-pkg" );
+__( "Loading", "jetpack-publicize-pkg" );
 __( "OK", "jetpack-publicize-pkg" );
 __( "Cancel", "jetpack-publicize-pkg" );
 __( "Close", "jetpack-publicize-pkg" );
 __( "More details follow the field.", "jetpack-publicize-pkg" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-publicize-pkg" );
 __( "Dismiss", "jetpack-publicize-pkg" );
 /* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack-publicize-pkg" );
