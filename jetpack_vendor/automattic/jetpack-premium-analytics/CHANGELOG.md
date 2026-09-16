@@ -59,6 +59,7 @@ This is an alpha version! The changes listed here are not final.
 - Post and video detail pages: draw the Post views and Video performance charts as bars by default.
 - Post detail: bring the page back to the top when a month in All-time traffic sets the period.
 - Post detail: Replace the daily Traffic activity heatmap with an All-time traffic table of monthly views, and picking a month applies it as the page's period.
+- Rename the Subscribers summary widget to Subscriber summary.
 - Report date filters: stage a date range through one shared bounds helper in both pickers.
 - Show the exact number on hover behind abbreviated figures, and abbreviate with one decimal where it fits (1.2K, 54.3K, 234K).
 - Subscribers: show Subscriber highlights by default and rearrange the widgets for the three-column grid.
