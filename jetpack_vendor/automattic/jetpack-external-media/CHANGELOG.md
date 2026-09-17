@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 - Update package dependencies.
 
+### Fixed
+- External Media: rename the `mediaSource` Tracks prop to `media_source` so the event is no longer rejected at ingest.
+
 ## [0.9.2] - 2026-09-09
 ### Changed
 - Update dependencies. [#50841]
