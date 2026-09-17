@@ -263,9 +263,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-forms' => array(
-            'pretty_version' => '8.1.0-alpha.1789559411',
-            'version' => '8.1.0.0-alpha1789559411',
-            'reference' => '2a3c1cac4bdd746b3d1a45483bdfe5bcea8e9338',
+            'pretty_version' => '8.1.0-alpha.1789647733',
+            'version' => '8.1.0.0-alpha1789647733',
+            'reference' => '3c9ace7187d59b21b2b9231c9bff1cf5211e7107',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-forms',
             'aliases' => array(),

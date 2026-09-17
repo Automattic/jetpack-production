@@ -169,7 +169,6 @@ return array(
     'Automattic\\Jetpack\\Forms\\ContactForm\\Jetpack_Form_Endpoint' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-jetpack-form-endpoint.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Util' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-util.php',
     'Automattic\\Jetpack\\Forms\\Dashboard\\Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/dashboard/class-dashboard.php',
-    'Automattic\\Jetpack\\Forms\\Dashboard\\Dashboard_View_Switch' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/dashboard/class-dashboard-view-switch.php',
     'Automattic\\Jetpack\\Forms\\Editor\\Form_Editor' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/form-editor/class-form-editor.php',
     'Automattic\\Jetpack\\Forms\\Jetpack_Forms' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-jetpack-forms.php',
     'Automattic\\Jetpack\\Forms\\Service\\Form_Webhooks' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/service/class-form-webhooks.php',
