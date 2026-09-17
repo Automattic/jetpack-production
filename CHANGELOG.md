@@ -145,6 +145,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: keep the dialog focus ring from being clipped by the dialog footer.
 - Premium Analytics: Keep the keyboard-selected cell of the Views over years and a post's All-time traffic heatmaps in view, clear of the month and year labels, when the grid scrolls.
 - Premium Analytics: keep the onboarding welcome modal open on a click outside it, so the tour can still be started.
+- Premium Analytics: Keep the originating report in post detail breadcrumbs when opening a post from a dashboard widget.
 - Premium Analytics: keep the same calendar dates when comparing a range starting on the 1st with the previous year, so Year to date in a leap year starts on 1 January rather than 31 December.
 - Premium Analytics: Keep the year column and month labels of the Views over years and a post's All-time traffic heatmaps fully opaque while the grid scrolls, so scrolled-under cells no longer show through around them.
 - Premium Analytics: on the post, page and video detail pages, offer every period the dashboard's date picker does, plus a custom range.

@@ -82,6 +82,7 @@ This is an alpha version! The changes listed here are not final.
 - Insights and Post detail: Keep the keyboard-selected cell of the Views over years and All-time traffic heatmaps in view, clear of the month and year labels, when the grid scrolls.
 - Insights and Post detail: Keep the year column and month labels of the Views over years and All-time traffic heatmaps fully opaque while the grid scrolls, so scrolled-under cells no longer show through around them.
 - Keep the first partial week or month bucket of a period list report when the date range starts mid-period.
+- Keep the originating report in post detail breadcrumbs when opening a post from a dashboard widget.
 - Most commented authors: link WordPress.com commenters to the comment screen filtered to their comments, as guest commenters already are.
 - Onboarding: keep the welcome modal open on a click outside it, so the tour can still be started.
 - Post, page and video detail pages: offer every period the dashboard's date picker does, plus a custom range.
