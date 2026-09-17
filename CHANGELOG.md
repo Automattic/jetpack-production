@@ -138,6 +138,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Stop the block retrying the PayPal onboarding link forever when the request fails.
 - PayPal Payment Buttons: take the displayed price from the option group PayPal is actually pricing.
 - Premium Analytics: keep the dialog focus ring from being clipped by the dialog footer.
+- Premium Analytics: Keep the keyboard-selected cell of the Views over years and a post's All-time traffic heatmaps in view, clear of the month and year labels, when the grid scrolls.
 - Premium Analytics: keep the onboarding welcome modal open on a click outside it, so the tour can still be started.
 - Premium Analytics: keep the same calendar dates when comparing a range starting on the 1st with the previous year, so Year to date in a leap year starts on 1 January rather than 31 December.
 - Premium Analytics: on the post, page and video detail pages, offer every period the dashboard's date picker does, plus a custom range.
