@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Activity Log: make it a Jetpack module so it can be turned on and off from My Jetpack, hiding the sidebar entry when off.
 - AI: Serve the Jetpack AI page through the standard Jetpack admin frame.
 - Daily Writing Prompt: Stop offering the Write editor after a switch to the Block editor.
 - Donations Form: Remove the "Accept Donations with Stripe" modal shown on insert, and link to Stripe's donation requirements from the block's connect notice and Settings sidebar instead.
@@ -34,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: With the shared player setting on, the block editor previews video blocks with the same shared player instead of one frame per block.
 
 ### Bug fixes
+- Activity Log: turning it off now takes effect on sites that also run Backup, Boost, Protect, Search, or VideoPress.
 - Dashboards: Stop the frame from flashing while loading and when switching admin pages.
 - Fix Jetpack admin pages and Jetpack blocks in the editor failing to load on WordPress.com-hosted sites.
 - Heartbeat: Guard Connection Heartbeat method calls with method_exists() to prevent fatals when another plugin loads an older Connection package.

@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add the activity_log_default_activated option name.
+
 ### Changed
 - Site Health: Clarify the descriptions shown by the connection tests, link to the Jetpack IP allowlist guide when a firewall blocks WordPress.com requests, and explain why a test was skipped.
 - Site Health: Give every connection test a readable heading instead of one derived from its internal name.

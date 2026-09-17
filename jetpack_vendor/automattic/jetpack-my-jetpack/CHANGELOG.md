@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Activity Log: list it under Security on the Products tab so it can be turned on and off there.
 - Add a my-jetpack-features-tab feature flag that replaces the Products tab with a Features tab in the new dashboard.
 
 ### Changed
@@ -18,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Activity Log: read and write the module state through the shared module option, so the toggle reports and changes what a standalone install actually serves.
 - Keep the product card, interstitial and close icons colored now that @wordpress/icons 16 draws them as strokes.
 - Stats: Restore the link from the stats card heading and chart to the Stats page.
 
