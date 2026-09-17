@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Admin menu: restore the default "WooCommerce" label for the WooCommerce menu item on Commerce and Commerce-trial sites, reverting the "Store setup" relabel.
 - Update dependencies.
 - Update package dependencies.
 
