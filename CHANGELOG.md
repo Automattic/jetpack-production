@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Keep admin icons colored after the @wordpress/icons 16 update, which draws them as strokes.
 - My Jetpack: Restore the link from the stats card heading and chart to the Stats page.
 - PayPal Payment Buttons: say so when opening a post picks up changes made to the payment link elsewhere. The block used to take them silently, so a price or description edited in PayPal's dashboard, or by another block sharing the same link, changed under the merchant with nothing shown. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
+- PayPal Payment Buttons: Stop a save overwriting payment link settings before the block has loaded them, and keep a value edited while the link is still loading.
 - Premium Analytics: Keep the keyboard-selected cell of the Views over years and a post's All-time traffic heatmaps in view, clear of the month and year labels, when the grid scrolls.
 - Premium Analytics: Keep the originating report in post detail breadcrumbs when opening a post from a dashboard widget.
 - Premium Analytics: Keep the year column and month labels of the Views over years and a post's All-time traffic heatmaps fully opaque while the grid scrolls, so scrolled-under cells no longer show through around them.
