@@ -84,11 +84,9 @@
 		"build/widgets/videopress/render.js",
 		"build/widgets/views-over-years/render.js",
 		"build/widgets/visitors-over-time/render.js",
-		"build/widgets/wordads-adjustments-history/render.js",
 		"build/widgets/wordads-chart-tabs/render.js",
 		"build/widgets/wordads-earnings-history/render.js",
 		"build/widgets/wordads-highlights/render.js",
-		"build/widgets/wordads-highlights/widget.js",
-		"build/widgets/wordads-sponsored-content-history/render.js"
+		"build/widgets/wordads-highlights/widget.js"
 	]
 }

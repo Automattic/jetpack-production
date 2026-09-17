@@ -69,6 +69,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Removed
+- Ads: Remove the Sponsored Content History and Adjustments History widgets.
 - Insights: Remove the Traffic views activity heatmap widget, which Views over years replaced.
 - Remove the arrows that stepped the date range back and forward a period.
 

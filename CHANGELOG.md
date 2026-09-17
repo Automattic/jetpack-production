@@ -63,6 +63,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: read ads served, average CPM and revenue out together in the Ads chart tooltip, whichever tab is selected.
 - Premium Analytics: rearrange the default Ads widgets for the three-column grid, with the chart first, then the balance, then the three history tables side by side.
 - Premium Analytics: Remove the arrows that stepped the date range back and forward a period.
+- Premium Analytics: Remove the Sponsored Content History and Adjustments History widgets from the Ads tab.
 - Premium Analytics: remove the year filter and interval dropdown from the Insights header.
 - Premium Analytics: Remove Total views, Total visitors, Popular days and Popular hours from the default Insights layout and from the widget picker for now.
 - Premium Analytics: Rename the Insights section title to Site insights.
