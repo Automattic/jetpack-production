@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Open the exact-figure tooltip below compact values instead of above them.
 - Post detail: bring the page back to the top when a month in All-time traffic sets the period.
 - Rename the Subscribers summary widget to Subscriber summary.
+- Subscribers: On the Subscriber highlights card, show the subscriber count 30, 60, and 90 days ago for sites without paid subscribers, show social followers on any site that has them, rename the first tile to All-time subscribers, and remove the Metrics control.
 - Update package dependencies.
 
 ### Removed

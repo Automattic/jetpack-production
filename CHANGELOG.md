@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Filter the Earnings history report by payment status, explain Ads Served there, and show unpaid and negative amounts in red on the Earnings History widget.
 - Premium Analytics: Label WordAds earnings history periods by month and year, such as "August 2026".
 - Premium Analytics: Link the Earnings History widget to its full report.
+- Premium Analytics: On the Subscriber highlights card, show the subscriber count 30, 60, and 90 days ago for sites without paid subscribers, show social followers on any site that has them, rename the first tile to All-time subscribers, and remove the Metrics control.
 - Premium Analytics: Post detail: bring the page back to the top when a month in All-time traffic sets the period.
 - Premium Analytics: Remove the Sponsored Content History and Adjustments History widgets from the Ads tab.
 - Premium Analytics: Rename the Subscribers summary widget to Subscriber summary.
