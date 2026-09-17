@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Comment form: show the site's default avatar, in the form and on the comment, for sign-ins without a profile photo, and fix the WordPress logo and the tray chevron animation.
 - Show the Facebook or Google profile picture on comments left through the popup sign-in on WordPress.com Simple sites too.
 
 ## [0.1.2] - 2026-09-08
