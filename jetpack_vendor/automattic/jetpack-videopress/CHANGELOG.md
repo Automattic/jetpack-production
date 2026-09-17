@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a "Learn more" support link to the admin page.
 - Add an inline player mode that loads the VideoPress player once per page instead of once per embedded frame.
 - Inline player: show each video's poster and load the player only when it is played.
+- Inline player mode: the block editor previews video blocks with the same shared player instead of one frame per block.
 
 ### Changed
 - Dashboard: Display video library thumbnails in a 16:9 aspect ratio.
