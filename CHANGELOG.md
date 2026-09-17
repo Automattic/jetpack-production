@@ -142,6 +142,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Keep the keyboard-selected cell of the Views over years and a post's All-time traffic heatmaps in view, clear of the month and year labels, when the grid scrolls.
 - Premium Analytics: keep the onboarding welcome modal open on a click outside it, so the tour can still be started.
 - Premium Analytics: keep the same calendar dates when comparing a range starting on the 1st with the previous year, so Year to date in a leap year starts on 1 January rather than 31 December.
+- Premium Analytics: Keep the year column and month labels of the Views over years and a post's All-time traffic heatmaps fully opaque while the grid scrolls, so scrolled-under cells no longer show through around them.
 - Premium Analytics: on the post, page and video detail pages, offer every period the dashboard's date picker does, plus a custom range.
 - Premium Analytics: write the calendar heatmap's weekday, month and tooltip labels in the site's language.
 - Reader: show the body of a reposted comment instead of an empty quote.

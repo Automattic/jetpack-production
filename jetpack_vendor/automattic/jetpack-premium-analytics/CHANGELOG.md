@@ -77,6 +77,7 @@ This is an alpha version! The changes listed here are not final.
 - Date comparison: keep the same calendar dates for a range starting on the 1st, so Year to date in a leap year compares against 1 January of the previous year rather than 31 December.
 - Dialogs: keep the comment field's focus ring from being clipped by the dialog footer.
 - Insights and Post detail: Keep the keyboard-selected cell of the Views over years and All-time traffic heatmaps in view, clear of the month and year labels, when the grid scrolls.
+- Insights and Post detail: Keep the year column and month labels of the Views over years and All-time traffic heatmaps fully opaque while the grid scrolls, so scrolled-under cells no longer show through around them.
 - Keep the first partial week or month bucket of a period list report when the date range starts mid-period.
 - Most commented authors: link WordPress.com commenters to the comment screen filtered to their comments, as guest commenters already are.
 - Onboarding: keep the welcome modal open on a click outside it, so the tour can still be started.
