@@ -43,7 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Insights: remove the year filter and interval dropdown from the section header.
 - Insights: Remove Total views, Total visitors, Popular days and Popular hours from the default layout, and hold the four widgets back from every widget picker for now.
 - Insights: Rename the section title to Site insights.
-- Insights: Replace the daily Traffic views activity heatmap with a Views over years table of monthly views, with a Totals column and a Total views / Daily average switch; picking a month opens the Traffic tab over it.
+- Insights: Replace the daily Traffic views activity heatmap with a Views over years table of monthly views, with a Totals column and a Total views / Daily average switch that counts the first month from its first day with views; picking a month opens the Traffic tab over it.
 - Insights: Show All-time stats totals as compact figures, with the exact total in a tooltip.
 - Insights: Show the Most popular time and Most popular day highlights side by side, stacking them only on a narrow tile.
 - Insights: Use the page icon for the Posts metric in the All-time stats widget.

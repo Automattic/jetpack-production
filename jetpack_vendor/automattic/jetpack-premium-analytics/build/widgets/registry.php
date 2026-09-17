@@ -1122,7 +1122,7 @@ return array(
 		'dir_name'     => 'views-over-years',
 		'title'        => 'Views over years',
 		'description'  => 'Every month of views across the whole site, one row per year.',
-		'help'         => array( 'content' => 'Every month of your site\'s views, shaded by how it compares to the rest, with each year\'s total beside it. Always the full history: the year above doesn\'t narrow it. Pick a month to read the Traffic tab over it. Daily average divides a month\'s views by its days, counting the current month up to today.' ),
+		'help'         => array( 'content' => 'Every month of your site\'s views, shaded by how it compares to the rest, with each year\'s total beside it. Always the full history: the year above doesn\'t narrow it. Pick a month to read the Traffic tab over it. Daily average divides a month\'s views by its days: the first month starts on its first day with views, and the current month stops at today.' ),
 		'icon'         => null,
 		'actions'      => null,
 		'has_render'   => true,
