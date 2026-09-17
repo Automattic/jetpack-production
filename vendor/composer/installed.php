@@ -227,9 +227,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-explat' => array(
-            'pretty_version' => '0.6.2-alpha.1789559411',
-            'version' => '0.6.2.0-alpha1789559411',
-            'reference' => '2aff2f71752fc8bcafad0e8e84c496ed81933d9a',
+            'pretty_version' => '0.6.2-alpha.1789667613',
+            'version' => '0.6.2.0-alpha1789667613',
+            'reference' => '4d3353ed53700084f386bc8704d006cb54c69d3d',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-explat',
             'aliases' => array(),
