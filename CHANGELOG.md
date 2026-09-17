@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Donations Form: Remove the "Accept Donations with Stripe" modal shown on insert, and link to Stripe's donation requirements from the block's connect notice and Settings sidebar instead.
 - Forms: Add a Done button to the conditional logic rules dialog, and open the Conditional logic panel by default on a field that has conditions.
 - Jetpack AI: Hide the legacy AI panel once a site is eligible to turn on the WordPress Agent, not only once it is switched on. The notice in its place offers to open the Agent, or to enable it where it is not yet on, and can only be dismissed once it is on.
+- My Jetpack: Show the dashboard in the new rounded admin page frame.
 - My Jetpack: Show the Jetpack menu notification badge when a connection error is detected.
 - Newsletter: Show the email itself in the email design canvas, and limit editing there to the Styles panel.
 - PayPal Payment Buttons: add a Product ID field, shipping fees, a handling fee and a discount, let tax be a flat amount as well as a percentage, check every fee against the decimal places its currency allows, hold a tax rate under 100% and to two decimal places, rework the customer note fields, keep the line breaks inside a product description, and match the Checkout Options controls to the design. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.

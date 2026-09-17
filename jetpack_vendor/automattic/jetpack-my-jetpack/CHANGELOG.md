@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Exclude source map files from the distributed package.
+- Show the dashboard in the new rounded admin page frame on every site.
 - Show the Jetpack menu notification badge when a connection error is detected.
 - Update package dependencies.
 
