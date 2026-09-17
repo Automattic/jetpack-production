@@ -55,6 +55,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin pages: Link the footer to the My Jetpack Features tab when it replaces the Products tab.
+- PayPal Payment Buttons: Show the result of deleting a link, disconnecting, or picking an existing link in a snackbar.
 - Premium Analytics: Remove the Traffic views activity heatmap widget from the Insights tab, which Views over years replaced.
 - Update package dependencies.
 - VideoPress: refine the welcome modal type scale, match the upload dropzone text to the design system's empty state, and drop the duplicate header Upload button while the empty-library dropzone is showing.
