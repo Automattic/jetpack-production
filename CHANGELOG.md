@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Daily Writing Prompt: Stop offering the Write editor after a switch to the Block editor.
 - Donations Form: Remove the "Accept Donations with Stripe" modal shown on insert, and link to Stripe's donation requirements from the block's connect notice and Settings sidebar instead.
 - Forms: Add a Done button to the conditional logic rules dialog, and open the Conditional logic panel by default on a field that has conditions.
+- Jetpack AI: Hide the legacy AI panel once a site is eligible to turn on the WordPress Agent, not only once it is switched on. The notice in its place offers to open the Agent, or to enable it where it is not yet on, and can only be dismissed once it is on.
 - Jetpack AI: load the Scheduled tasks tab only when it is opened, cutting the AI page script by two thirds.
 - Likes: Guide block-theme users from legacy Like buttons to the Like block.
 - My Jetpack: Restyle dashboard notices to match the WordPress design system.
