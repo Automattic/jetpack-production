@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Exclude source map files from the distributed package.
 - Name the Jetpack Manage sidebar item so hosts can address it in the menu visibility filter.
 - Notices: Restyle My Jetpack dashboard notices to match the WordPress design system.
+- Show the Jetpack menu notification badge when a connection error is detected.
 - Update package dependencies.
 
 ### Fixed

@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: load the Scheduled tasks tab only when it is opened, cutting the AI page script by two thirds.
 - Likes: Guide block-theme users from legacy Like buttons to the Like block.
 - My Jetpack: Restyle dashboard notices to match the WordPress design system.
+- My Jetpack: Show the Jetpack menu notification badge when a connection error is detected.
 - Newsletter: Add a Freshly Pressed tab to the Daily Writing Prompt dashboard widget, listing the posts WordPress.com is currently featuring.
 - Newsletter: Add an Overview dashboard for getting started and finding guides.
 - Newsletter: Show the email itself in the email design canvas, and limit editing there to the Styles panel.
