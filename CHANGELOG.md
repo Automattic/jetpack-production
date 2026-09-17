@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Show the email itself in the email design canvas, and limit editing there to the Styles panel.
 - Notices: Render Jetpack admin notices with the WordPress design system Notice component.
 - PayPal Payment Buttons: add API-managed buttons behind a feature flag that is not yet enabled. Once it is on, you can connect a PayPal account from WordPress, create and manage payment links without leaving the editor, choose a Button, Link, or QR format, and style it with your own colors, size and border.
+- PayPal Payment Buttons: add a Product ID field, shipping fees, a handling fee and a discount, let tax be a flat amount as well as a percentage, check every fee against the decimal places its currency allows, hold a tax rate under 100% and to two decimal places, rework the customer note fields, keep the line breaks inside a product description, and match the Checkout Options controls to the design. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
 - PayPal Payment Buttons: Create and update the payment when the post is saved, and remove it when the post is saved without the block, instead of from a Create New button.
 - PayPal Payment Buttons: move the PayPal connection wizard into the block settings sidebar.
 - PayPal Payment Buttons: offer the account's existing payment links when a new block is added, so a block can reuse one instead of creating another.
