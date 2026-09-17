@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add a map of views by location to the Locations report, with an option to hide it.
 - Premium Analytics: Add an earnings history report, showing every period with its earnings, ads served, and payment status.
 - Premium Analytics: Add a Total views / Daily average switch to the post detail All-time traffic card.
+- Premium Analytics: Add post thumbnails to the Posts & Pages report.
 - Premium Analytics: add the Month to date and Year to date periods to the date picker.
 - Premium Analytics: Add the Totals column to the post detail All-time traffic card; picking a total reads the page over that year.
 - Premium Analytics: Align the Insights widget help text and the Year in review and All-time stats header icons with the design.

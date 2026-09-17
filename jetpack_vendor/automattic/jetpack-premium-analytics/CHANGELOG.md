@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a dismissible feedback banner above the dashboard widgets.
+- Add post thumbnails to the Posts & Pages report.
 - Ads: Add an earnings history report page, showing every period with its earnings, ads served, and payment status.
 - Ads: Link the Earnings History widget to its full report.
 - Dashboard widgets: carry declarative actions and icon references from the widget manifest to the registry and the widget-modules REST record.
