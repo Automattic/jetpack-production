@@ -96,6 +96,7 @@ __( "Earnings", "jetpack-premium-analytics-pkg" );
 __( "Ads Served", "jetpack-premium-analytics-pkg" );
 __( "Status", "jetpack-premium-analytics-pkg" );
 __( "Unable to load earnings", "jetpack-premium-analytics-pkg" );
+__( "Ads Served is the number of ads we attempted to display (page impressions × available ad slots). Not every ad served results in a paid impression.", "jetpack-premium-analytics-pkg" );
 __( "Search earnings history", "jetpack-premium-analytics-pkg" );
 __( "Email", "jetpack-premium-analytics-pkg" );
 __( "Sent", "jetpack-premium-analytics-pkg" );

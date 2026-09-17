@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Traffic: Note in the widget help that the Visitors total is a per-period sum.
 
 ### Changed
+- Ads: Filter the Earnings history report by payment status, explain Ads Served there, and show unpaid and negative amounts in red on the Earnings History widget.
 - Ads: Label WordAds earnings history periods by month and year, such as "August 2026".
 - Ads: read ads served, average CPM and revenue out together in the WordAds chart tooltip, whichever tab is selected.
 - Ads: rearrange the default widgets for the three-column grid, with the chart first, then the balance, then the three history tables side by side.
