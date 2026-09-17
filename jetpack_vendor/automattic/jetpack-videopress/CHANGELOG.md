@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Hide the VideoPress sidebar item when VideoPress is not active.
 - Inline player: let the jetpack_videopress_player_use_iframe filter switch video blocks, shortcodes and embeds to the shared in-page player.
 - Update package dependencies.
+- Welcome modal: body copy stepped up to the design system's lg size with the lede in the same colour as the value cards, and the dialog now sits at true center. Library: the upload dropzone text matches the design system's empty state, and the header's Upload button steps aside while that dropzone is the only thing to upload into.
 
 ### Fixed
 - Admin: Keep the notice, video list and video card icons colored now that @wordpress/icons 16 draws them as strokes.

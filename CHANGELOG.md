@@ -172,6 +172,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: save the email design to WordPress.com, and run the design screen in fullscreen.
 - Premium Analytics: Remove the Traffic views activity heatmap widget from the Insights tab, which Views over years replaced.
 - Update package dependencies.
+- VideoPress: refine the welcome modal type scale, match the upload dropzone text to the design system's empty state, and drop the duplicate header Upload button while the empty-library dropzone is showing.
 
 ## 16.2 - 2026-09-10
 ### Enhancements
