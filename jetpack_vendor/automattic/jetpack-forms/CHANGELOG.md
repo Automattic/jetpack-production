@@ -5,30 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.1.0-alpha] - unreleased
+## [8.2.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
-
-### Added
-- Form editor: Record which version of the welcome guide each analytics event describes.
 
 ### Changed
 - Conditional logic: Add a Done button to the rules dialog, and open the Conditional logic panel by default on a field that has conditions.
 - Exclude source map files from the distributed package.
-- Form editor: Record every welcome guide slide a reader reaches, including after navigating back.
-- Hide the Forms sidebar item when Forms is not active.
 - Update package dependencies.
-
-### Deprecated
-- Dashboard: deprecate the jetpack_forms_alpha filter, which no longer selects anything.
 
 ### Removed
 - Dashboard: Remove the legacy dashboard code and the deprecated Dashboard_View_Switch class; deprecate Dashboard::SCRIPT_HANDLE.
 
+## [8.1.0] - 2026-09-15
+### Changed
+- Form editor: Add additional analytics to welcome guide. [#52148]
+- Hide the Forms sidebar item when Forms is not active. [#52156]
+- Update package dependencies. [#52105] [#52297]
+
+### Deprecated
+- Dashboard: Deprecate the `jetpack_forms_alpha` filter, which no longer selects anything. [#51395]
+
 ### Fixed
-- Dashboard: Restore the missing border on the responses comment panel.
-- Prevent extra forms from being created when the block placeholder is clicked more than once.
-- Stop the Forms data stores from logging a duplicate registration error in the browser console.
+- Dashboard: Restore the missing border on the responses comment panel. [#52152]
+- Prevent extra forms from being created when the block placeholder is clicked more than once. [#52099]
+- Stop the Forms data stores from logging a duplicate registration error in the browser console. [#52153]
 
 ## [8.0.3] - 2026-09-09
 ### Changed
@@ -2749,7 +2750,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[8.1.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v8.0.3...v8.1.0-alpha
+[8.2.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v8.1.0...v8.2.0-alpha
+[8.1.0]: https://github.com/automattic/jetpack-forms/compare/v8.0.3...v8.1.0
 [8.0.3]: https://github.com/automattic/jetpack-forms/compare/v8.0.2...v8.0.3
 [8.0.2]: https://github.com/automattic/jetpack-forms/compare/v8.0.1...v8.0.2
 [8.0.1]: https://github.com/automattic/jetpack-forms/compare/v8.0.0...v8.0.1

@@ -10,23 +10,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Add a "Learn more" support link to the admin page.
 - Add an inline player mode that loads the VideoPress player once per page instead of once per embedded frame.
 - Inline player: show each video's poster and load the player only when it is played.
 - Inline player mode: the block editor previews video blocks with the same shared player instead of one frame per block.
 
 ### Changed
-- Dashboard: Display video library thumbnails in a 16:9 aspect ratio.
 - Exclude source map files from the distributed package.
-- Hide the VideoPress sidebar item when VideoPress is not active.
-- Inline player: let the jetpack_videopress_player_use_iframe filter switch video blocks, shortcodes and embeds to the shared in-page player.
 - Update package dependencies.
 - Welcome modal: body copy stepped up to the design system's lg size with the lede in the same colour as the value cards, and the dialog now sits at true center. Library: the upload dropzone text matches the design system's empty state, and the header's Upload button steps aside while that dropzone is the only thing to upload into.
 
 ### Fixed
 - Admin: Keep the notice, video list and video card icons colored now that @wordpress/icons 16 draws them as strokes.
-- Fix selecting thumbnail frames from private videos and prefer browser-compatible video renditions.
-- Follow the admin color scheme for the support link.
+
+## [0.50.2] - 2026-09-15
+### Added
+- Add a "Learn more" support link to the admin page. [#52111]
+
+### Changed
+- Dashboard: Display video library thumbnails in a 16:9 aspect ratio. [#52318]
+- Hide the VideoPress sidebar item when VideoPress is not active. [#52156]
+- Inline player: Let the `jetpack_videopress_player_use_iframe` filter switch video blocks, shortcodes and embeds to the shared in-page player. [#52242]
+- Update package dependencies. [#52200] [#52297]
+
+### Fixed
+- Fix selecting thumbnail frames from private videos and prefer browser-compatible video renditions. [#52158]
+- Follow the admin color scheme for the support link. [#52222]
 
 ## [0.50.1] - 2026-09-09
 ### Changed
@@ -2249,7 +2257,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.51.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.50.1...v0.51.0-alpha
+[0.51.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.50.2...v0.51.0-alpha
+[0.50.2]: https://github.com/Automattic/jetpack-videopress/compare/v0.50.1...v0.50.2
 [0.50.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.50.0...v0.50.1
 [0.50.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.49.0...v0.50.0
 [0.49.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.48.0...v0.49.0

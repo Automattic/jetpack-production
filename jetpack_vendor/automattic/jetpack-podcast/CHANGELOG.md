@@ -5,18 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.2-alpha] - unreleased
+## [2.1.3-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Exclude source map files from the distributed package.
-- Hide the Podcast sidebar item when the Podcast module is not active.
-- Update dependencies.
 - Update package dependencies.
 
 ### Fixed
 - Welcome screen: Keep the plan feature check icons colored now that @wordpress/icons 16 draws them as strokes.
+
+## [2.1.2] - 2026-09-15
+### Changed
+- Hide the Podcast sidebar item when the Podcast module is not active. [#52156]
+- Update dependencies. [#52269]
 
 ## [2.1.1] - 2026-09-09
 ### Changed
@@ -269,7 +272,8 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Replace the wp-build placeholder with page chrome and tab navigation. [#48559]
 - Dashboard: Slim down wp-build wiring to the Backup pattern. [#48600]
 
-[2.1.2-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.1...v2.1.2-alpha
+[2.1.3-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.2...v2.1.3-alpha
+[2.1.2]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.1...v2.1.2
 [2.1.1]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/Automattic/jetpack-podcast/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/Automattic/jetpack-podcast/compare/v1.5.1...v2.0.0

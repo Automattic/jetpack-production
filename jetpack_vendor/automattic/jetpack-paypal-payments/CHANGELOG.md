@@ -5,85 +5,50 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.9.0-alpha] - unreleased
+## [0.10.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Add a "Manage PayPal Payment Links" link to the block's PayPal Connection panel once the block has a saved link, so the admin page is one click away while editing.
-- Add a feature flag for the API-managed payment buttons; the block keeps the paste-code editor while it is off.
-- Add API-managed payment buttons behind a feature flag that is not yet enabled. Once it is on, you can connect a PayPal account from WordPress, create and manage payment links without leaving the editor, choose a Button, Link, or QR format, and style it with your own colors, size and border.
 - Add a Product ID field, shipping fees, a handling fee and a discount, let tax be a flat amount as well as a percentage, check every fee against the decimal places its currency allows, hold a tax rate under 100% and to two decimal places, rework the customer note fields, keep the line breaks inside a product description, and match the Checkout Options controls to the design. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
-- Offer the account's existing payment links when a new block is added, so a block can reuse one instead of creating another.
-- The editor canvas draws what the published block will look like, and each format gets its own settings in a new Styles tab: text and background colors with a contrast warning, a Fill or Outline style, text size, width, border, and a "Powered by PayPal" toggle. Buttons, links and QR codes each get the settings that apply to them. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
 
 ### Changed
-- Create, update and delete the PayPal payment with the post instead of from a Create New button: the payment is written when the post is saved, and removed when the post is saved without its block and no other published post uses it.
-- Hide the product price field when the product options carry their own prices, and stop a leftover value there from blocking Update.
-- Label the admin menu item "PayPal Payment Links" instead of "Payment Links", so it is recognisable under the Jetpack menu.
-- Move the PayPal connection wizard into the block settings sidebar, with the block itself only saying a PayPal business account is needed.
-- Move the product form fields into the block inspector and fit them to the sidebar column. The primary button is now Create New / Save instead of naming the display format.
-- One checkbox turns on per-variant pricing, and the price belongs to the first option group.
-- Pick a page for the return URL, or paste one, instead of typing the address by hand.
-- Require an acknowledgement before a payment link is deleted, from the block and from the admin page, and document that PayPal cannot pause or restore a deleted link.
 - Update package dependencies.
-- Use the design's wording in Product Options: an option group is a variant.
-- Warn on every payment button that changes apply to every button sharing the same payment link, wherever it is used.
-
-### Removed
-- Remove the Tax name field. PayPal labels the tax itself, so the buyer sees Tax whatever the merchant types.
 
 ### Fixed
-- Allow product descriptions up to PayPal's real 2048-character limit, instead of cutting them off at 256.
-- Break the PayPal disconnect confirmation into a short summary and a list, so its consequences are readable at a glance.
-- Close PayPal's onboarding window with the Escape key or its Close button, instead of reloading the editor and losing unsaved changes.
-- Close the PayPal onboarding popup automatically when it returns, instead of leaving it open on a wp-admin screen.
-- Complete PayPal onboarding using PayPal's own onboarding SDK, so connecting an account finishes instead of stopping at "Merchant integration info not available".
-- Connect a PayPal account in a separate window, so finishing onboarding no longer reloads the editor and discards an unsaved post.
-- Discard a PayPal connection that fails its final checks, instead of leaving the site looking connected while reporting an error.
-- Encode the PayPal payment link in the QR code behind the button's Show Link or QR Code toggle, instead of the page the button sits on.
-- Fix "Connect with PayPal" always failing with "Request is not well-formed, syntactically incorrect, or violates schema." The seller nonce was 43 characters, one below the minimum PayPal enforces.
-- Fix "Connect with PayPal" failing its final checks. The setup request never asked PayPal for Payment Links & Buttons access, which every button needs.
-- Fix "Connect with PayPal" failing with a 404, and create the onboarding referral through WordPress.com so PayPal platform credentials never reach the site.
-- Fix an error from PayPal when product options have their own prices. The product price is now optional in that case, and every option in the group must be priced.
-- Fix editing a payment button reporting an error after the edit saved. PayPal answers a successful update with 204 No Content and the API client expected 200.
-- Fix onboarding leaving the site connected but reporting "Merchant integration info not available". The merchant ID PayPal returns on the redirect was never saved.
-- Fix tax collection turning itself off. An empty tax name made the block and then the REST route throw the whole tax away.
-- Fix Update deleting payment configuration set outside the block. An update is a full replacement at PayPal, so a SKU, shipping rate, handling fee or discount set anywhere else was silently dropped, and address collection was forced back on.
-- Go straight to the API credentials step on a site with no WordPress.com connection, instead of offering Connect with PayPal.
-- Include PayPal's own error and debug ID when Payment Links & Buttons access is refused, instead of guessing at the cause.
-- Include the PayPal partner attribution code in every copied and emailed payment link, matching the link the published button uses.
-- Keep the payment buttons block sources out of the published package mirror.
-- Keep the PayPal connection error dismissed, instead of showing it again and asking PayPal for another onboarding link.
-- Load PayPal's onboarding script into the editor canvas so the Connect with PayPal button opens PayPal's window instead of a new browser tab.
-- Log a notice when stored PayPal credentials cannot be decrypted and are removed, instead of removing them silently.
-- Make the Copy Link button work in the payment button's QR code panel, where clicking it previously did nothing.
-- Offer Connect with PayPal on WordPress.com and Jetpack-connected sites, instead of only after PayPal is already connected.
-- Open PayPal's onboarding window when you click Connect with PayPal, instead of covering the editor with a blank overlay.
-- Open PayPal onboarding in a sized window instead of a stray browser tab when PayPal's onboarding script is unavailable.
-- Open the Product Options panel on a saved button when an option needs fixing, so the error is on screen.
-- Report a PayPal platform configuration problem directly instead of asking the merchant to try again, which could never help.
-- Require a tax rate when tax collection is on, instead of saving an empty rate as 0%.
-- Return up to 100 payment links per request instead of 10.
-- Say how many published posts embed a payment link before it is deleted from the admin.
 - Say so when opening a post picks up changes made to the payment link elsewhere. The block used to take them silently, so a price or description edited in PayPal's dashboard, or by another block sharing the same link, changed under the merchant with nothing shown. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
-- Say why an unsupported currency or an empty variant group blocks saving, instead of disabling the save button with nothing on screen.
-- Say why the product price field is invalid when clearing the option prices brings it back, instead of disabling save with nothing on screen.
-- Send the "Open PayPal Dashboard" link to the sandbox app list when connecting in sandbox, instead of always opening the live one.
-- Send the product image to PayPal so it appears on the hosted checkout.
-- Show how many payment links the account has, not how many fit on the page you are looking at.
-- Show product option validation errors under the field that caused them, instead of only disabling the save button.
-- Show that PayPal is disconnected instead of reporting a connected account, and offer a Reconnect button. Disconnecting now says it applies to the whole site.
-- Show the option price on the published page when the product options have their own prices.
-- Show the payment a duplicated block actually points at, so two blocks sharing one PayPal payment can no longer display different products or prices.
-- Show the PayPal Payment Links admin list and detail pages fresh after a link is created, edited, or deleted, instead of serving a cached copy for up to five minutes.
-- Stop accepting prices with decimals for Japanese yen, Hungarian forint and New Taiwan dollar, which PayPal rejects, and remove the Indian rupee, which PayPal does not support.
-- Stop offering a third custom checkout field, which PayPal rejects.
-- Stop rendering a button for a payment link deleted through this site, warn in the editor that the link is gone before a save recreates it, and list the posts still embedding it after a delete from the admin page.
-- Stop the block retrying the PayPal onboarding link forever when the request fails.
-- Stop the form's error styling applying to every block editor screen.
-- Stop turning a flat tax into a percentage. A payment link carrying a fixed tax amount now saves with that amount intact instead of being rejected or rewritten, a tax with no name is kept rather than dropped, and a tax set to follow the PayPal profile always sends the profile setting instead of a stray rate.
-- Take the displayed price from the option group PayPal is actually pricing.
+
+## [0.9.0] - 2026-09-15
+### Added
+- Accept only whole-number prices in currencies that do not use decimals. [#51656]
+- Add a "Manage PayPal Payment Links" link to the block, opening the new admin page. [#52270] [#52273] [#52279]
+- Add a feature flag for the API-managed payment buttons; the block keeps the paste-code editor while it is off. [#51982]
+- Add a live editor preview and a "Styles" tab for each button format. [#52210]
+- Add API-managed payment buttons behind a feature flag that is not yet enabled. [#52210] [#52170] [#52172]
+- Add to every payment button a warning that changes apply to every button sharing the same payment link, wherever it is used. [#52022]
+- Complete PayPal onboarding with PayPal's SDK, discarding connections that fail its final checks. [#51656]
+- Connect a PayPal account from the block settings sidebar without reloading the editor. [#51656] [#52334]
+- Create the onboarding referral through WordPress.com so PayPal platform credentials never reach the site. [#51656]
+- Log a notice when stored PayPal credentials cannot be decrypted and are removed, instead of removing them silently. [#51656]
+- Offer "Connect with PayPal" on WordPress.com and Jetpack-connected sites, with an API credentials step elsewhere. [#51656]
+- Offer the account's existing payment links when a new block is added, so a block can reuse one instead of creating another. [#52329]
+- Report PayPal connection errors with PayPal's own details, and stop retrying onboarding after an error. [#51656]
+- Require confirmation before deleting a payment link, and stop showing buttons for deleted links. [#51656] [#52270] [#52280]
+- Share payment links by link or QR code, with PayPal's partner attribution code. [#51656]
+- Show the payment a duplicated block points at, so two blocks sharing one PayPal payment always show the same product and price. [#51656]
+- Show when PayPal is disconnected, with a "Reconnect" button, and explain in a short summary that disconnecting applies to the whole site. [#51656]
+- Support per-option product prices. [#51656]
+
+### Changed
+- Call option groups variants, with one checkbox to turn on per-variant pricing. [#52022]
+- Create and update the PayPal payment when the post is saved instead of from a "Create New" button, and delete it when the post is saved without its block and no other published post uses it. [#52224]
+- Move the product form fields into the block inspector and fit them to the sidebar column. [#52022]
+- Pick a page for the return URL, or paste one, instead of typing the address by hand. [#52022]
+- Update package dependencies. [#52297]
+
+### Removed
+- Remove Indian rupee (INR), which is not supported by PayPal. [#51656]
+- Remove the "Tax name" field. [#52022]
 
 ## [0.8.2] - 2026-09-09
 ### Changed
@@ -387,7 +352,8 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Simple Payments: Move Simple Payments block to PayPal Payments package. [#43413]
 
-[0.9.0-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.8.2...v0.9.0-alpha
+[0.10.0-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.9.0...v0.10.0-alpha
+[0.9.0]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.8.2...v0.9.0
 [0.8.2]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.8.1...v0.8.2
 [0.8.1]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.8.0...v0.8.1
 [0.8.0]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.7.12...v0.8.0

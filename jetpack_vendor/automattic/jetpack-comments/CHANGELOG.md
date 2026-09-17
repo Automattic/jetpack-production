@@ -13,12 +13,15 @@ This is an alpha version! The changes listed here are not final.
 - Add WordPress.com, Google and Facebook sign-in to the comment form through a popup, with a signed cookie that remembers returning commenters.
 
 ### Changed
-- Update dependencies.
 - Update package dependencies.
 
 ### Fixed
 - Comment form: show the site's default avatar, in the form and on the comment, for sign-ins without a profile photo, and fix the WordPress logo and the tray chevron animation.
 - Show the Facebook or Google profile picture on comments left through the popup sign-in on WordPress.com Simple sites too.
+
+## [0.1.3] - 2026-09-15
+### Changed
+- Update dependencies. [#52269]
 
 ## [0.1.2] - 2026-09-08
 ### Changed
@@ -33,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Add an on-site comment form with a textarea, guest name and email fields, and reply threading when the `jetpack_comments_new_hotness` filter returns true. [#51466]
 - Initial version. [#51210]
 
-[0.2.0-alpha]: https://github.com/Automattic/jetpack-comments/compare/v0.1.2...v0.2.0-alpha
+[0.2.0-alpha]: https://github.com/Automattic/jetpack-comments/compare/v0.1.3...v0.2.0-alpha
+[0.1.3]: https://github.com/Automattic/jetpack-comments/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/Automattic/jetpack-comments/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/Automattic/jetpack-comments/compare/v0.1.0...v0.1.1

@@ -143,7 +143,7 @@ class Inline_Player {
 		/**
 		 * Filter the options passed to an inline VideoPress player.
 		 *
-		 * @since 0.51.0-alpha
+		 * @since 0.50.2
 		 *
 		 * @param array $options    Player options.
 		 * @param array $attributes The block or shortcode attributes they were built from.

@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.0.4-alpha] - unreleased
+## [5.0.5-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -14,6 +14,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Register the shared data stores when an older copy of the package bootstraps first, so dependent admin scripts are no longer dropped.
+
+## [5.0.4] - 2026-09-15
+### Changed
+- Update package dependencies. [#52297]
 
 ## [5.0.3] - 2026-09-14
 ### Changed
@@ -946,7 +950,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Statically access asset tools
 
-[5.0.4-alpha]: https://github.com/Automattic/jetpack-assets/compare/v5.0.3...v5.0.4-alpha
+[5.0.5-alpha]: https://github.com/Automattic/jetpack-assets/compare/v5.0.4...v5.0.5-alpha
+[5.0.4]: https://github.com/Automattic/jetpack-assets/compare/v5.0.3...v5.0.4
 [5.0.3]: https://github.com/Automattic/jetpack-assets/compare/v5.0.2...v5.0.3
 [5.0.2]: https://github.com/Automattic/jetpack-assets/compare/v5.0.1...v5.0.2
 [5.0.1]: https://github.com/Automattic/jetpack-assets/compare/v5.0.0...v5.0.1

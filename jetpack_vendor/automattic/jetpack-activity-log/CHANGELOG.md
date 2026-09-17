@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.3.5-alpha] - unreleased
+## [0.3.6-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -15,6 +15,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Keep the event and actor icons colored now that @wordpress/icons 16 draws them as strokes.
+
+## [0.3.5] - 2026-09-15
+### Changed
+- Update dependencies. [#50841]
 
 ## [0.3.4] - 2026-09-14
 ### Changed
@@ -157,7 +161,8 @@ This is an alpha version! The changes listed here are not final.
 
 Initial release.
 
-[0.3.5-alpha]: https://github.com/Automattic/jetpack-activity-log/compare/v0.3.4...v0.3.5-alpha
+[0.3.6-alpha]: https://github.com/Automattic/jetpack-activity-log/compare/v0.3.5...v0.3.6-alpha
+[0.3.5]: https://github.com/Automattic/jetpack-activity-log/compare/v0.3.4...v0.3.5
 [0.3.4]: https://github.com/Automattic/jetpack-activity-log/compare/v0.3.3...v0.3.4
 [0.3.3]: https://github.com/Automattic/jetpack-activity-log/compare/v0.3.2...v0.3.3
 [0.3.2]: https://github.com/Automattic/jetpack-activity-log/compare/v0.3.1...v0.3.2

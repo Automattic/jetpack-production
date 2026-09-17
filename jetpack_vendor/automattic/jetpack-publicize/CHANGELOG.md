@@ -5,22 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.87.0-alpha] - unreleased
+## [0.87.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Added
-- Connections: Add a REST endpoint to receive updated connections from WordPress.com.
-
 ### Changed
 - Exclude source map files from the distributed package.
-- Hide the Social sidebar item when Social is not active.
 - Update package dependencies.
 
 ### Fixed
 - Bluesky: Pre-fill the handle field when reconnecting an account.
-- Link preview: Remove Nextdoor and keep the remaining service icons on one row.
 - Share status: Keep the success icon colored now that @wordpress/icons 16 draws it as strokes.
+
+## [0.87.0] - 2026-09-15
+### Added
+- Connections: Add a REST endpoint to receive updated connections from WordPress.com. [#52128]
+
+### Changed
+- Hide the Social sidebar item when Social is not active. [#52156]
+- Update package dependencies. [#52200] [#52297]
+
+### Fixed
+- Link preview: Remove Nextdoor and keep the remaining service icons on one row. [#52082]
 
 ## [0.86.2] - 2026-09-09
 ### Changed
@@ -1655,7 +1661,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.87.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.86.2...v0.87.0-alpha
+[0.87.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.87.0...v0.87.1-alpha
+[0.87.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.86.2...v0.87.0
 [0.86.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.86.1...v0.86.2
 [0.86.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.86.0...v0.86.1
 [0.86.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.85.1...v0.86.0

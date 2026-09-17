@@ -55,7 +55,7 @@ class Jetpack_AI_Page {
 	 * Checks the render function too: if the build output is missing, the request would
 	 * otherwise get no bundle at all now that the legacy entry is gone.
 	 *
-	 * @since 16.3-a.0
+	 * @since 16.3-a.2
 	 *
 	 * @return bool
 	 */
@@ -66,7 +66,7 @@ class Jetpack_AI_Page {
 	/**
 	 * Whether the current request targets the AI Hub admin page.
 	 *
-	 * @since 16.3-a.0
+	 * @since 16.3-a.2
 	 *
 	 * @return bool
 	 */
@@ -84,7 +84,7 @@ class Jetpack_AI_Page {
 	 *
 	 * Scoped to this page so WP_Build_Polyfills does not replace core scripts everywhere else.
 	 *
-	 * @since 16.3-a.0
+	 * @since 16.3-a.2
 	 *
 	 * @return void
 	 */
@@ -124,7 +124,7 @@ class Jetpack_AI_Page {
 	/**
 	 * Point the screen ID at the wp-build page while its generated enqueue check runs.
 	 *
-	 * @since 16.3-a.0
+	 * @since 16.3-a.2
 	 *
 	 * @return void
 	 */
@@ -141,7 +141,7 @@ class Jetpack_AI_Page {
 	/**
 	 * Undo alias_screen_id_for_wp_build(), since JITM builds its message path from the screen ID.
 	 *
-	 * @since 16.3-a.0
+	 * @since 16.3-a.2
 	 *
 	 * @return void
 	 */

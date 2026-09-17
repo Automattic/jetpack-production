@@ -5,14 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.29.3-alpha] - unreleased
+## [0.29.4-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
-- Name the Blaze sidebar item so hosts can address it in the menu visibility filter.
-- Update dependencies.
 - Update package dependencies.
+
+## [0.29.3] - 2026-09-15
+### Changed
+- Name the Blaze sidebar item so hosts can address it in the menu visibility filter. [#52156]
+- Update dependencies. [#52269]
 
 ## [0.29.2] - 2026-09-09
 ### Changed
@@ -926,7 +929,8 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies. [#27906]
 
-[0.29.3-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.29.2...v0.29.3-alpha
+[0.29.4-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.29.3...v0.29.4-alpha
+[0.29.3]: https://github.com/automattic/jetpack-blaze/compare/v0.29.2...v0.29.3
 [0.29.2]: https://github.com/automattic/jetpack-blaze/compare/v0.29.1...v0.29.2
 [0.29.1]: https://github.com/automattic/jetpack-blaze/compare/v0.29.0...v0.29.1
 [0.29.0]: https://github.com/automattic/jetpack-blaze/compare/v0.28.5...v0.29.0
