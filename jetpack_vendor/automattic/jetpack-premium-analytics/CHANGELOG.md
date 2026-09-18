@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Insights: Replace the daily Traffic views activity heatmap with a Views over years table of monthly views, with a Totals column and a Total views / Daily average switch that counts the first month from its first day with views; picking a month opens the Traffic tab over it.
 - Insights: Use the page icon for the Posts metric in the All-time stats widget.
 - Leaderboard widgets: Enlarge row labels to 13px; in Top tags & categories and its report, mute the row glyphs and draw category rows with a file icon.
+- Let hosts show or hide the Analytics sidebar entry.
 - Open the exact-figure tooltip below compact values instead of above them.
 - Post detail: bring the page back to the top when a month in All-time traffic sets the period.
 - Posting activity: show the last 12 months as one mini calendar per month.

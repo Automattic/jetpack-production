@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.37.0-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Hide WordPress admin notices on the Stats dashboard, and let hosts show or hide the Stats sidebar entry.
+
 ## 0.36.0 - 2026-09-15
 ### Added
 - Notices: Add an `include_details` parameter that returns a detail record per notice, so a dismissal can escalate, and accept a dismissal that omits `postponed_for`. [#52075]

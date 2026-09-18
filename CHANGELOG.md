@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Enlarge leaderboard row labels to 13px; in Top tags & categories and its report, mute the row glyphs and draw category rows with a file icon.
 - Premium Analytics: Filter the Earnings history report by payment status, explain Ads Served there, and show unpaid and negative amounts in red on the Earnings History widget.
 - Premium Analytics: Label WordAds earnings history periods by month and year, such as "August 2026".
+- Premium Analytics: Let hosts show or hide the Analytics sidebar entry.
 - Premium Analytics: Link the Earnings History widget to its full report.
 - Premium Analytics: On the Subscriber highlights card, show the subscriber count 30, 60, and 90 days ago for sites without paid subscribers, show social followers on any site that has them, rename the first tile to All-time subscribers, and remove the Metrics control.
 - Premium Analytics: Post detail: bring the page back to the top when a month in All-time traffic sets the period.
@@ -35,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the site's monthly views across every year on the Insights tab, in place of the daily heatmap; picking a month opens the Traffic tab over it.
 - Search: Show each of the No Results block's empty-state messages as it will appear to visitors while editing, and tell the messages apart by name when browsing the page structure.
 - Settings: Open the "Learn more" links in the settings info popovers as WordPress.com support docs inside the Help Center on WordPress.com sites, and hide the privacy information link there.
+- Stats: Hide WordPress admin notices on the Stats dashboard, and let hosts show or hide the Stats sidebar entry.
 - VideoPress: Add a setting to render players in the page from one shared player script instead of one frame per video.
 - VideoPress: With the inline player setting on, show each video's poster and load the player only when it is played.
 - VideoPress: With the shared player setting on, the block editor previews video blocks with the same shared player instead of one frame per block.
