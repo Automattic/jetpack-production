@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Sidebar: keep Jetpack menu items in alphabetical order, with My Jetpack first, even when a plugin passes an unsupported position.
+
 ## [0.12.0] - 2026-09-15
 ### Added
 - Sidebar: Let menu items declare their gate and a stable key, and add the `jetpack_admin_menu_visibility` filter so hosts can show or hide an item. [#52102]
