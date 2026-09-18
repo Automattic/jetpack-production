@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Apply polyfills and a higher WordPress version threshold that register() receives after the polyfills are already registered, instead of silently ignoring them.
 - Keep the dashboard frame steady while it loads and when switching admin pages.
 
 ## [0.5.5] - 2026-09-15

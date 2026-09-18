@@ -578,9 +578,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-wp-build-polyfills' => array(
-            'pretty_version' => '0.5.6-alpha.1789671588',
-            'version' => '0.5.6.0-alpha1789671588',
-            'reference' => 'e90f8a774328e3c8d27ca1aebfd12712e94c6bc3',
+            'pretty_version' => '0.5.6-alpha.1789757551',
+            'version' => '0.5.6.0-alpha1789757551',
+            'reference' => '8978b921d298e710a0412ecc2328472124963f9d',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-wp-build-polyfills',
             'aliases' => array(),
