@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the Earnings History widget as a compact list without in-widget pagination.
 - Premium Analytics: Show the site's monthly views across every year on the Insights tab, in place of the daily heatmap; picking a month opens the Traffic tab over it.
 - Search: Show each of the No Results block's empty-state messages as it will appear to visitors while editing, and tell the messages apart by name when browsing the page structure.
+- Settings: Open the "Learn more" links in the settings info popovers as WordPress.com support docs inside the Help Center on WordPress.com sites, and hide the privacy information link there.
 - VideoPress: Add a setting to render players in the page from one shared player script instead of one frame per video.
 - VideoPress: With the inline player setting on, show each video's poster and load the player only when it is played.
 - VideoPress: With the shared player setting on, the block editor previews video blocks with the same shared player instead of one frame per block.
