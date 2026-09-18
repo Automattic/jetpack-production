@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a Product ID field, shipping fees, a handling fee and a discount, let tax be a flat amount as well as a percentage, check every fee against the decimal places its currency allows, hold a tax rate under 100% and to two decimal places, rework the customer note fields, keep the line breaks inside a product description, and match the Checkout Options controls to the design. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
 
 ### Changed
+- Open a saved payment link on its details in the block settings sidebar, with the form behind Edit. The notice saying when changes reach PayPal is gone, and the warning that a link changed at PayPal also shows on the details view.
 - Show the result of deleting a link, disconnecting, or picking an existing link in a snackbar.
 - Update package dependencies.
 
