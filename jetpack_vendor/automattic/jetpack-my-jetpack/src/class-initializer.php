@@ -45,7 +45,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '6.4.0-alpha';
+	const PACKAGE_VERSION = '6.4.1-alpha';
 
 	/**
 	 * Feature flag that swaps the My Jetpack Products tab for a Features tab.
@@ -347,7 +347,7 @@ class Initializer {
 	/**
 	 * Whether the dashboard shows a Features tab in place of the Products tab.
 	 *
-	 * @since 6.4.0-alpha
+	 * @since 6.4.0
 	 *
 	 * @return bool
 	 */
@@ -360,7 +360,7 @@ class Initializer {
 	 *
 	 * Null while the tab is unchanged, so links keep their own translated "Products" label.
 	 *
-	 * @since 6.4.0-alpha
+	 * @since 6.4.0
 	 *
 	 * @return array{slug: string, label: string}|null
 	 */
