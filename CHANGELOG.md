@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Remove the Sponsored Content History and Adjustments History widgets from the Ads tab.
 - Premium Analytics: Rename the Subscribers summary widget to Subscriber summary.
 - Premium Analytics: Show opens and clicks beside their rates in Latest emails sent.
+- Premium Analytics: show Posting activity's last 12 months as one mini calendar per month.
 - Premium Analytics: Show the Earnings History widget as a compact list without in-widget pagination.
 - Premium Analytics: Show the site's monthly views across every year on the Insights tab, in place of the daily heatmap; picking a month opens the Traffic tab over it.
 - Search: Show each of the No Results block's empty-state messages as it will appear to visitors while editing, and tell the messages apart by name when browsing the page structure.

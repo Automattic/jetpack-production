@@ -625,9 +625,9 @@ return array(
 	array(
 		'name'         => 'jpa/posting-activity',
 		'dir_name'     => 'posting-activity',
-		'title'        => 'Posting activity',
+		'title'        => 'Monthly posting activity',
 		'description'  => 'How often you publish — a calendar heatmap of posts per day.',
-		'help'         => array( 'content' => 'One square per day — the darker the square, the more you published that day.' ),
+		'help'         => array( 'content' => 'The last 12 months only, one square per day — the darker the square, the more you published that day. Earlier months are not shown.' ),
 		'icon'         => null,
 		'actions'      => null,
 		'has_render'   => true,
