@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Jetpack Manage: Only show the sidebar link to agency accounts.
 - Products: keep the tab working when a module name is unavailable.
 
 ## [6.4.0] - 2026-09-18

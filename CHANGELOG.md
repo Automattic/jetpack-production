@@ -48,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix Jetpack admin pages and Jetpack blocks in the editor failing to load on WordPress.com-hosted sites.
 - Forms: Open the Forms tab when it is requested directly instead of falling back to Responses.
 - Heartbeat: Guard Connection Heartbeat method calls with method_exists() to prevent fatals when another plugin loads an older Connection package.
+- Jetpack Manage: Only show the sidebar link to agency accounts.
 - Keep admin icons colored after the @wordpress/icons 16 update, which draws them as strokes.
 - My Jetpack: Restore the link from the stats card heading and chart to the Stats page.
 - PayPal Payment Buttons: removing a block no longer deletes its payment link from PayPal.
