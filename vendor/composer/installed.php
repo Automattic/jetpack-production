@@ -146,9 +146,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-classic-theme-helper' => array(
-            'pretty_version' => '0.15.3-alpha.1789670548',
-            'version' => '0.15.3.0-alpha1789670548',
-            'reference' => 'c1f5fb9dfec910af997e34649845c58c892acc5f',
+            'pretty_version' => '0.15.3-alpha.1789721031',
+            'version' => '0.15.3.0-alpha1789721031',
+            'reference' => 'ddcea6b67e4c1bd7020e3db6955367eb6ae4bce7',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-classic-theme-helper',
             'aliases' => array(),
