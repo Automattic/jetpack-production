@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Admin: Keep the notice, video list and video card icons colored now that @wordpress/icons 16 draws them as strokes.
+- Chapters: Explain which formatting requirements prevent chapters in video descriptions from being saved.
 - Dashboard: Keep the video editor footer at the bottom of the page.
 
 ## [0.50.2] - 2026-09-15

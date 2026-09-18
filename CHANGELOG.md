@@ -57,6 +57,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Pre-fill the Bluesky handle field when reconnecting an account.
 - Stats, Podcast and Premium Analytics: Return focus to bar charts after pressing Escape, and select the bar under the pointer for tooltips and pointer callbacks.
 - VideoPress: Keep the video editor footer at the bottom of the page.
+- VideoPress: Show specific validation messages for chapters entered in video descriptions.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin pages: Link the footer to the My Jetpack Features tab when it replaces the Products tab.
