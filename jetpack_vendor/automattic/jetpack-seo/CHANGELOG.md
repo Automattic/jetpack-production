@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Dashboard: Restore the admin screen ID after the wp-build enqueue check.
 - Fix author schema describing the wrong user on sites that use a third-party author plugin.
 - Fix the Settings tab failing to load on sites where a page title structure had been cleared from WordPress.com.
 

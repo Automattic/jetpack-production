@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Show the modernized dashboard to Automatticians on proxied requests, unless the site has the `use-backup-legacy-dashboard` sticker.
 - Update package dependencies.
 
+### Fixed
+- Dashboard: Restore the admin screen ID after the wp-build enqueue check.
+
 ## [5.0.3] - 2026-09-15
 ### Changed
 - Give the Backup sidebar item a stable key hosts can use in the sidebar visibility filter. [#52156]

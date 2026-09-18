@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Exclude source map files from the distributed package.
 - Update package dependencies.
 
+### Fixed
+- Dashboard: Restore the admin screen ID after the wp-build enqueue check.
+
 ## [0.15.0] - 2026-09-15
 ### Added
 - Daily Writing Prompt: Add a "Freshly Pressed" tab listing the posts WordPress.com is currently featuring. [#52077]

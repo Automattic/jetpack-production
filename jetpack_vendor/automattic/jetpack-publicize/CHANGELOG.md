@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Bluesky: Pre-fill the handle field when reconnecting an account.
+- Dashboard: Target contextual messages at the Social screen again, and show them on every tab.
 - Share status: Keep the success icon colored now that @wordpress/icons 16 draws it as strokes.
 
 ## [0.87.0] - 2026-09-15

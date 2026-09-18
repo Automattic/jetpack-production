@@ -57,6 +57,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Fix the Settings tab failing to load after a page title structure was cleared from WordPress.com.
 - Site Verification: Reject invalid verification codes instead of reporting a successful save.
 - Social: Pre-fill the Bluesky handle field when reconnecting an account.
+- Social: Show contextual messages on the dashboard again.
 - Stats, Podcast and Premium Analytics: Return focus to bar charts after pressing Escape, and select the bar under the pointer for tooltips and pointer callbacks.
 - VideoPress: Keep the video editor footer at the bottom of the page.
 - VideoPress: Show specific validation messages for chapters entered in video descriptions.

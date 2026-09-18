@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Dashboard: Restore the admin screen ID after the wp-build enqueue check.
 - Keep the event and actor icons colored now that @wordpress/icons 16 draws them as strokes.
 
 ## [0.3.5] - 2026-09-15
