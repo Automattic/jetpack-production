@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Ads: Remove the Sponsored Content History and Adjustments History widgets.
 - Insights: Remove the Traffic views activity heatmap widget, which Views over years replaced.
+- Remove the unused `dashboards/{name}/default-layout` REST route. Each section carries its default layout in the sections route.
 
 ### Fixed
 - Insights and Post detail: Keep the keyboard-selected cell of the Views over years and All-time traffic heatmaps in view, clear of the month and year labels, when the grid scrolls.
