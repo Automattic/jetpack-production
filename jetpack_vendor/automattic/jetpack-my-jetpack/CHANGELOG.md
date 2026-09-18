@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Activity Log: read and write the module state through the shared module option, so the toggle reports and changes what a standalone install actually serves.
 - Keep the product card, interstitial and close icons colored now that @wordpress/icons 16 draws them as strokes.
+- Products: keep the tab working when a module name is unavailable.
 - Stats: Restore the link from the stats card heading and chart to the Stats page.
 
 ## [6.3.0] - 2026-09-15

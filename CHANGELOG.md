@@ -64,6 +64,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin pages: Link the footer to the My Jetpack Features tab when it replaces the Products tab.
+- Modules: keep a module's name and description when no translation entry exists for it.
 - PayPal Payment Buttons: Show the result of deleting a link, disconnecting, or picking an existing link in a snackbar.
 - Premium Analytics: Remove the Traffic views activity heatmap widget from the Insights tab, which Views over years replaced.
 - Update package dependencies.
