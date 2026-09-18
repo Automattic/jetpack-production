@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Daily Writing Prompt: Stop offering the Write editor after a switch to the Block editor.
 - Donations Form: Remove the "Accept Donations with Stripe" modal shown on insert, and link to Stripe's donation requirements from the block's connect notice and Settings sidebar instead.
 - Forms: Add a Done button to the conditional logic rules dialog, and open the Conditional logic panel by default on a field that has conditions.
+- Forms: Reopen the dashboard on the last tab used instead of always the default.
 - Jetpack AI: Hide the legacy AI panel once a site is eligible to turn on the WordPress Agent, not only once it is switched on. The notice in its place offers to open the Agent, or to enable it where it is not yet on, and can only be dismissed once it is on.
 - My Jetpack: Show the dashboard in the new rounded admin page frame.
 - My Jetpack: Show the Jetpack menu notification badge when a connection error is detected.
@@ -43,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - Charts: Keep keyboard focus on the first or last data point when an arrow key reaches the end of a chart, return focus to the chart when Escape closes a tooltip, stop a focused chart from swallowing keys it does not use such as Page Down, and close the tooltip when the series it describes is hidden.
 - Dashboards: Stop the frame from flashing while loading and when switching admin pages.
 - Fix Jetpack admin pages and Jetpack blocks in the editor failing to load on WordPress.com-hosted sites.
+- Forms: Open the Forms tab when it is requested directly instead of falling back to Responses.
 - Heartbeat: Guard Connection Heartbeat method calls with method_exists() to prevent fatals when another plugin loads an older Connection package.
 - Keep admin icons colored after the @wordpress/icons 16 update, which draws them as strokes.
 - My Jetpack: Restore the link from the stats card heading and chart to the Stats page.

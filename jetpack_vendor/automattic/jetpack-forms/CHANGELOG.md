@@ -11,11 +11,15 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Conditional logic: Add a Done button to the rules dialog, and open the Conditional logic panel by default on a field that has conditions.
+- Dashboard: Reopen on the last tab used instead of always the default.
 - Exclude source map files from the distributed package.
 - Update package dependencies.
 
 ### Removed
 - Dashboard: Remove the legacy dashboard code and the deprecated Dashboard_View_Switch class; deprecate Dashboard::SCRIPT_HANDLE.
+
+### Fixed
+- Dashboard: Open the Forms tab when it is requested directly instead of falling back to Responses.
 
 ## [8.1.0] - 2026-09-15
 ### Changed
