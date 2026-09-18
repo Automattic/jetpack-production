@@ -11,9 +11,6 @@ __( "(opens in a new tab)", "jetpack" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack" );
 __( "Loading", "jetpack" );
-__( "More details follow the field.", "jetpack" );
-__( "Select", "jetpack" );
-__( "Dismiss", "jetpack" );
 /* translators: 1: Calendar type. 2: Current month and year. */
 __( "%1$s, %2$s", "jetpack" );
 __( "Date calendar", "jetpack" );
@@ -29,6 +26,9 @@ __( "Today, %s, selected", "jetpack" );
 __( "%s, selected", "jetpack" );
 __( "Required", "jetpack" );
 __( "Optional", "jetpack" );
+__( "More details follow the field.", "jetpack" );
+__( "Select", "jetpack" );
+__( "Dismiss", "jetpack" );
 __( "Sort ascending", "jetpack" );
 __( "Sort descending", "jetpack" );
 __( "(no title)", "jetpack" );

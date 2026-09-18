@@ -48,9 +48,24 @@ __( "Sections", "jetpack-premium-analytics-pkg" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-premium-analytics-pkg" );
 __( "Loading", "jetpack-premium-analytics-pkg" );
+/* translators: 1: Calendar type. 2: Current month and year. */
+__( "%1$s, %2$s", "jetpack-premium-analytics-pkg" );
+__( "Date calendar", "jetpack-premium-analytics-pkg" );
+__( "Date range calendar", "jetpack-premium-analytics-pkg" );
+__( "Navigation bar", "jetpack-premium-analytics-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s", "jetpack-premium-analytics-pkg" );
+__( "Next month", "jetpack-premium-analytics-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s, selected", "jetpack-premium-analytics-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "%s, selected", "jetpack-premium-analytics-pkg" );
 __( "OK", "jetpack-premium-analytics-pkg" );
 __( "Cancel", "jetpack-premium-analytics-pkg" );
 __( "Close", "jetpack-premium-analytics-pkg" );
+__( "Required", "jetpack-premium-analytics-pkg" );
+__( "Optional", "jetpack-premium-analytics-pkg" );
+__( "More details follow the field.", "jetpack-premium-analytics-pkg" );
 __( "Dismiss", "jetpack-premium-analytics-pkg" );
 __( "More options", "jetpack-premium-analytics-pkg" );
 __( "Reset to default", "jetpack-premium-analytics-pkg" );
@@ -77,21 +92,6 @@ __( "More information", "jetpack-premium-analytics-pkg" );
 __( "This widget encountered an error.", "jetpack-premium-analytics-pkg" );
 __( "Widget is no longer available.", "jetpack-premium-analytics-pkg" );
 __( "Missing widget", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Calendar type. 2: Current month and year. */
-__( "%1$s, %2$s", "jetpack-premium-analytics-pkg" );
-__( "Date calendar", "jetpack-premium-analytics-pkg" );
-__( "Date range calendar", "jetpack-premium-analytics-pkg" );
-__( "Navigation bar", "jetpack-premium-analytics-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s", "jetpack-premium-analytics-pkg" );
-__( "Next month", "jetpack-premium-analytics-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s, selected", "jetpack-premium-analytics-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "%s, selected", "jetpack-premium-analytics-pkg" );
-__( "Required", "jetpack-premium-analytics-pkg" );
-__( "Optional", "jetpack-premium-analytics-pkg" );
-__( "More details follow the field.", "jetpack-premium-analytics-pkg" );
 __( "Sort ascending", "jetpack-premium-analytics-pkg" );
 __( "Sort descending", "jetpack-premium-analytics-pkg" );
 __( "(no title)", "jetpack-premium-analytics-pkg" );
