@@ -12,12 +12,14 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add post thumbnails to the Posts & Pages report.
 - Ads: Link the Earnings History widget to its full report.
+- Ads: Show sponsored content and adjustment earnings on the Earnings history report, each on its own tab.
 - Dashboard widgets: carry declarative actions and icon references from the widget manifest to the registry and the widget-modules REST record.
 
 ### Changed
 - Ads: Filter the Earnings history report by payment status, explain Ads Served there, and show unpaid and negative amounts in red on the Earnings History widget.
 - Ads: Group the WordAds chart by the selected period instead of a separate grouping control, and add a line or bar chart toggle.
 - Ads: Label WordAds earnings history periods by month and year, such as "August 2026".
+- Ads: Show payment status as a badge on the Earnings history report.
 - Ads: Show the Earnings History widget as a compact list without in-widget pagination.
 - Dashboard: Show opens and clicks beside their rates in Latest emails sent.
 - Draw attention to the date control, and read the new period out, when a card or a table cell sets the period rather than the reader.
