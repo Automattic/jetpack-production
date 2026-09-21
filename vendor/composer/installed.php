@@ -371,9 +371,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-password-checker' => array(
-            'pretty_version' => '0.5.1',
-            'version' => '0.5.1.0',
-            'reference' => '7ca2473d3bb6235679d782ff0689a1d2fe241b08',
+            'pretty_version' => '0.5.2-alpha.1789983321',
+            'version' => '0.5.2.0-alpha1789983321',
+            'reference' => 'b80c8713c3d2c60cf5b0747796d0434ed9970d9f',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-password-checker',
             'aliases' => array(),
@@ -544,7 +544,7 @@
         'automattic/jetpack-sync' => array(
             'pretty_version' => '5.1.2',
             'version' => '5.1.2.0',
-            'reference' => '6b0282f55531391e748d6cce308e31fc96cb7649',
+            'reference' => '911ea4b938eb5d7974a1385c7c5120661f297b85',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-sync',
             'aliases' => array(),
