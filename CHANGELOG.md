@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- Dashboard: Remove the legacy At a Glance dashboard and Recommendations assistant; their links now open My Jetpack, or Settings where My Jetpack is unavailable.
+
 ### Enhancements
 - Activity Log: make it a Jetpack module so it can be turned on and off from My Jetpack, hiding the sidebar entry when off.
 - AI: Serve the Jetpack AI page through the standard Jetpack admin frame.

@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Answer module switch clicks immediately, and explain what happened when a change fails.
+- Scan: Send buyers to the Scan dashboard after checkout instead of the retired Jetpack Assistant.
 
 ### Fixed
 - Jetpack Manage: Only show the sidebar link to agency accounts.
