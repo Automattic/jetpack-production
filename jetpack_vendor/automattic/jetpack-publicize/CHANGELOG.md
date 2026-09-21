@@ -5,19 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.87.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.87.1] - 2026-09-21
 ### Changed
-- Connections: On WordPress.com sites, open the Instagram Business help link as the WordPress.com support doc inside the Help Center.
-- Exclude source map files from the distributed package.
-- Update package dependencies.
+- Connections: On WordPress.com sites, open the Instagram Business help link as the WordPress.com support doc inside the Help Center. [#52436]
+- Exclude source map files from the distributed package. [#52304]
+- Update package dependencies. [#52187]
 
 ### Fixed
-- Bluesky: Pre-fill the handle field when reconnecting an account.
-- Dashboard: Target contextual messages at the Social screen again, and show them on every tab.
-- Share status: Keep the success icon colored now that @wordpress/icons 16 draws it as strokes.
+- Bluesky: Pre-fill the handle field when reconnecting an account. [#52187]
+- Dashboard: Target contextual messages at the Social screen again, and show them on every tab. [#52471]
 
 ## [0.87.0] - 2026-09-15
 ### Added
@@ -1663,7 +1659,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.87.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.87.0...v0.87.1-alpha
+[0.87.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.87.0...v0.87.1
 [0.87.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.86.2...v0.87.0
 [0.86.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.86.1...v0.86.2
 [0.86.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.86.0...v0.86.1

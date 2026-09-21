@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.9.5-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.9.5] - 2026-09-21
 ### Changed
-- Exclude source map files from the distributed package.
-- Update package dependencies.
+- Exclude source map files from the distributed package. [#52304]
+- Update package dependencies. [#52187]
 
 ### Fixed
-- Dashboard: Restore the admin screen ID after the wp-build enqueue check.
-- Fix author schema describing the wrong user on sites that use a third-party author plugin.
-- Fix the Settings tab failing to load on sites where a page title structure had been cleared from WordPress.com.
+- Dashboard: Restore the admin screen ID after the wp-build enqueue check. [#52471]
+- Fix author schema describing the wrong user on sites that use a third-party author plugin. [#52379]
+- Fix the Settings tab failing to load on sites where a page title structure had been cleared from WordPress.com. [#52100]
 
 ## [0.9.4] - 2026-09-15
 ### Changed
@@ -195,7 +192,7 @@ This is an alpha version! The changes listed here are not final.
 - Create a Settings screen with site visibility, post title structure, front-page description, and site verification. [#49256]
 - Scaffold the new `jetpack-seo` package and mount its admin page. [#49203]
 
-[0.9.5-alpha]: https://github.com/Automattic/jetpack-seo/compare/0.9.4...0.9.5-alpha
+[0.9.5]: https://github.com/Automattic/jetpack-seo/compare/0.9.4...0.9.5
 [0.9.4]: https://github.com/Automattic/jetpack-seo/compare/0.9.3...0.9.4
 [0.9.3]: https://github.com/Automattic/jetpack-seo/compare/0.9.2...0.9.3
 [0.9.2]: https://github.com/Automattic/jetpack-seo/compare/0.9.1...0.9.2

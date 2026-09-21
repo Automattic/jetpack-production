@@ -2,88 +2,62 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 16.3-a.2 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 16.3-a.3 - 2026-09-21
 ### Enhancements
-- Activity Log: make it a Jetpack module so it can be turned on and off from My Jetpack, hiding the sidebar entry when off.
-- AI: Serve the Jetpack AI page through the standard Jetpack admin frame.
-- Daily Writing Prompt: Stop offering the Write editor after a switch to the Block editor.
-- Donations Form: Remove the "Accept Donations with Stripe" modal shown on insert, and link to Stripe's donation requirements from the block's connect notice and Settings sidebar instead.
-- Forms: Add a Done button to the conditional logic rules dialog, and open the Conditional logic panel by default on a field that has conditions.
-- Forms: Reopen the dashboard on the last tab used instead of always the default.
-- Jetpack AI: Hide the legacy AI panel once a site is eligible to turn on the WordPress Agent, not only once it is switched on. The notice in its place offers to open the Agent, or to enable it where it is not yet on, and can only be dismissed once it is on.
-- Jetpack AI: Show one notice explaining why Jetpack AI is unavailable — a broken WordPress.com connection, offline mode, or custom code holding AI off — worded the same on the Overview and AI Features tabs.
-- My Jetpack: Show the dashboard in the new rounded admin page frame.
-- My Jetpack: Show the Jetpack menu notification badge when a connection error is detected.
-- Newsletter: Show the email itself in the email design canvas, and limit editing there to the Styles panel.
-- PayPal Payment Buttons: Add an account menu to the top of the block settings sidebar, with links to PayPal's checkout settings and transactions, and a Log out showing the connected account. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
-- PayPal Payment Buttons: add a Product ID field, shipping fees, a handling fee and a discount, let tax be a flat amount as well as a percentage, check every fee against the decimal places its currency allows, hold a tax rate under 100% and to two decimal places, rework the customer note fields, keep the line breaks inside a product description, and match the Checkout Options controls to the design. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
-- PayPal Payment Buttons: Open a saved payment link on its details in the block settings sidebar, with the form behind Edit. The notice saying when changes reach PayPal is gone, and the warning that a link changed at PayPal also shows on the details view.
-- Premium Analytics: Add post thumbnails to the Posts & Pages report.
-- Premium Analytics: Align the Most popular post and Latest post cards with the design: regular-weight stat labels and a grey ground behind the featured image.
-- Premium Analytics: Draw attention to the date control, and read the new period out, when a card or a table cell sets the period rather than the reader.
-- Premium Analytics: Enlarge leaderboard row labels to 13px; in Top tags & categories and its report, mute the row glyphs and draw category rows with a file icon.
-- Premium Analytics: Filter the Earnings history report by payment status, explain Ads Served there, and show unpaid and negative amounts in red on the Earnings History widget.
-- Premium Analytics: Group the Ads tab's WordAds chart by the selected period instead of a separate grouping control, and add a line or bar chart toggle.
-- Premium Analytics: Label WordAds earnings history periods by month and year, such as "August 2026".
-- Premium Analytics: Let hosts show or hide the Analytics sidebar entry.
-- Premium Analytics: Link the Earnings History widget to its full report.
-- Premium Analytics: Move the Subscribers date range control off the tab header and onto the Subscriber summary chart, which is the only widget there that reads a range. The tab no longer offers a previous-period comparison.
-- Premium Analytics: On the Subscriber highlights card, show the subscriber count 30, 60, and 90 days ago for sites without paid subscribers, show social followers on any site that has them, rename the first tile to All-time subscribers, and remove the Metrics control.
-- Premium Analytics: Post detail: bring the page back to the top when a month in All-time traffic sets the period.
-- Premium Analytics: Remove the Sponsored Content History and Adjustments History widgets from the Ads tab.
-- Premium Analytics: Rename the Subscribers summary widget to Subscriber summary.
-- Premium Analytics: Rename the WordAds widgets to Ads summary, All-time balance and WordAds earnings, and give each its own icon.
-- Premium Analytics: Show opens and clicks beside their rates in Latest emails sent.
-- Premium Analytics: Show payment status as a badge on the Earnings history report.
-- Premium Analytics: show Posting activity's last 12 months as one mini calendar per month.
-- Premium Analytics: Show sponsored content and adjustment earnings on the Earnings history report, each on its own tab.
-- Premium Analytics: Show the Earnings History widget as a compact list without in-widget pagination.
-- Premium Analytics: Show the heatmap tooltips in the dark style, the daily ones titled with the date; draw the Views over years and post All-time traffic cells as flush bands under a continuous scale, lifting a hovered month with a light ring and a shadow.
-- Premium Analytics: show the Insights tab beside Traffic while the site is running the Stats preview, and name both tabs in the preview's welcome, feedback and switch-off copy.
-- Premium Analytics: Show the site's monthly views across every year on the Insights tab, in place of the daily heatmap; picking a month opens the Traffic tab over it.
-- Search: Show each of the No Results block's empty-state messages as it will appear to visitors while editing, and tell the messages apart by name when browsing the page structure.
-- Settings: Open the "Learn more" links in the settings info popovers as WordPress.com support docs inside the Help Center on WordPress.com sites, and hide the privacy information link there.
-- Sites: expose is_legacy_gating_site, so clients can tell whether a plan change would move the site off the pre-2026 feature gating.
-- Stats: Hide WordPress admin notices on the Stats dashboard, and let hosts show or hide the Stats sidebar entry.
-- VideoPress: Add a setting to render players in the page from one shared player script instead of one frame per video.
-- VideoPress: With the inline player setting on, show each video's poster and load the player only when it is played.
-- VideoPress: With the shared player setting on, the block editor previews video blocks with the same shared player instead of one frame per block.
+- Activity Log: Make it a Jetpack module so it can be turned on and off from My Jetpack, hiding the sidebar entry when off. [#49591]
+- AI: Hide the legacy AI panel once a site is eligible to turn on the WordPress Agent, and offer to open or enable the Agent in its place. [#51819]
+- AI: Serve the Jetpack AI page through the standard Jetpack admin frame. [#52411]
+- AI: Show one notice explaining why Jetpack AI is unavailable, worded the same on the Overview and AI Features tabs. [#52260]
+- Daily Writing Prompt: Stop offering the Write editor after a switch to the Block editor. [#52230]
+- Donations Form: Replace the "Accept Donations with Stripe" modal with a link to Stripe's donation requirements. [#52313]
+- Forms: Add a Done button to the conditional logic rules dialog, and open the Conditional logic panel by default on a field that has conditions. [#52347]
+- Forms: Reopen the dashboard on the last tab used instead of always the default. [#52249]
+- My Jetpack: Show the dashboard in the new rounded admin page frame. [#52446]
+- My Jetpack: Show the Jetpack menu notification badge when a connection error is detected. [#52332]
+- Newsletter: Show the email itself in the email design canvas, and limit editing there to the Styles panel. [#52283]
+- Search: Show each of the No Results block's empty-state messages as it will appear to visitors while editing, and tell the messages apart by name when browsing the page structure. [#51530]
+- Settings: On WordPress.com sites, open the "Learn more" links in the Help Center as WordPress.com support docs. [#52436]
+- Stats: Hide WordPress admin notices on the Stats dashboard, and let hosts show or hide the Stats sidebar entry. [#52351]
+- VideoPress: Add a setting to render players from one shared player script instead of one frame per video. [#52244] [#52011] [#52052]
 
 ### Bug fixes
-- Activity Log: turning it off now takes effect on sites that also run Backup, Boost, Protect, Search, or VideoPress.
-- Charts: Keep keyboard focus on the first or last data point when an arrow key reaches the end of a chart, return focus to the chart when Escape closes a tooltip, stop a focused chart from swallowing keys it does not use such as Page Down, and close the tooltip when the series it describes is hidden.
-- Dashboards: Stop the frame from flashing while loading and when switching admin pages.
-- Fix Jetpack admin pages and Jetpack blocks in the editor failing to load on WordPress.com-hosted sites.
-- Forms: Open the Forms tab when it is requested directly instead of falling back to Responses.
-- Heartbeat: Guard Connection Heartbeat method calls with method_exists() to prevent fatals when another plugin loads an older Connection package.
-- Jetpack Manage: Only show the sidebar link to agency accounts.
-- Keep admin icons colored after the @wordpress/icons 16 update, which draws them as strokes.
-- My Jetpack: Restore the link from the stats card heading and chart to the Stats page.
-- PayPal Payment Buttons: removing a block no longer deletes its payment link from PayPal.
-- PayPal Payment Buttons: say so when opening a post picks up changes made to the payment link elsewhere. The block used to take them silently, so a price or description edited in PayPal's dashboard, or by another block sharing the same link, changed under the merchant with nothing shown. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
-- PayPal Payment Buttons: Stop a save overwriting payment link settings before the block has loaded them, and keep a value edited while the link is still loading.
-- Premium Analytics: Keep the keyboard-selected cell of the Views over years and a post's All-time traffic heatmaps in view, clear of the month and year labels, when the grid scrolls.
-- Premium Analytics: Keep the originating report in post detail breadcrumbs when opening a post from a dashboard widget.
-- Premium Analytics: Keep the year column and month labels of the Views over years and a post's All-time traffic heatmaps fully opaque while the grid scrolls, so scrolled-under cells no longer show through around them.
-- Premium Analytics: Open the Ads tab's WordAds chart on the last 7 days rather than a single day on a site launched today.
-- SEO: Fix the Settings tab failing to load after a page title structure was cleared from WordPress.com.
-- Site Verification: Reject invalid verification codes instead of reporting a successful save.
-- Social: Pre-fill the Bluesky handle field when reconnecting an account.
-- Social: Show contextual messages on the dashboard again.
-- Stats, Podcast and Premium Analytics: Return focus to bar charts after pressing Escape, and select the bar under the pointer for tooltips and pointer callbacks.
-- VideoPress: Keep the video editor footer at the bottom of the page.
-- VideoPress: Show specific validation messages for chapters entered in video descriptions.
+- Charts: Fix keyboard focus and tooltip selection. [#50140] [#52234]
+- Dashboards: Stop the frame from flashing while loading and when switching admin pages. [#52235]
+- Fix Jetpack admin pages and Jetpack blocks in the editor failing to load on WordPress.com-hosted sites. [#52362]
+- Forms: Open the Forms tab when it is requested directly instead of falling back to Responses. [#52249]
+- Heartbeat: Prevent fatal errors when another plugin loads an older Connection package. [#52390]
+- Jetpack Manage: Only show the sidebar link to agency accounts. [#52336]
+- My Jetpack: Restore the link from the stats card heading and chart to the Stats page. [#52121]
+- SEO: Fix the Settings tab failing to load after a page title structure was cleared from WordPress.com. [#52100]
+- Site Verification: Reject invalid verification codes instead of reporting a successful save. [#52238]
+- Social: Pre-fill the Bluesky handle field when reconnecting an account. [#52187]
+- Social: Show contextual messages on the dashboard again. [#52471]
+- VideoPress: Keep the video editor footer at the bottom of the page. [#52489]
+- VideoPress: Show specific validation messages for chapters entered in video descriptions. [#52488]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Admin pages: Link the footer to the My Jetpack Features tab when it replaces the Products tab.
-- Modules: keep a module's name and description when no translation entry exists for it.
-- PayPal Payment Buttons: Show the result of deleting a link, disconnecting, or picking an existing link in a snackbar.
-- Premium Analytics: Remove the Traffic views activity heatmap widget from the Insights tab, which Views over years replaced.
-- Update package dependencies.
-- VideoPress: refine the welcome modal type scale, match the upload dropzone text to the design system's empty state, and drop the duplicate header Upload button while the empty-library dropzone is showing.
+- Admin pages: Link the footer to the My Jetpack Features tab when it replaces the Products tab. [#52346]
+- Modules: Keep a module's name and description when no translation entry exists for it. [#52469]
+- PayPal Payment Buttons: Add a PayPal account menu to the top of the block settings sidebar. [#52509]
+- PayPal Payment Buttons: Add a Product ID field, shipping and handling fees, a discount, and flat-amount tax to payment links. [#52301]
+- PayPal Payment Buttons: Keep a block's payment link at PayPal when the block is removed. [#52463]
+- PayPal Payment Buttons: Open a saved payment link on its details in the block settings sidebar, with the form behind "Edit". [#52372]
+- PayPal Payment Buttons: Show a notice when opening a post picks up changes made to the payment link elsewhere. [#52302]
+- PayPal Payment Buttons: Show the result of deleting a link, disconnecting, or picking an existing link in a snackbar. [#52464]
+- PayPal Payment Buttons: Stop a save overwriting payment link settings before the block has loaded them, and keep a value edited while the link is still loading. [#52418]
+- Premium Analytics: Add post thumbnails to the Posts & Pages report, and show opens and clicks beside their rates in Latest emails sent. [#52384] [#52256]
+- Premium Analytics: Expand the Earnings history report with payment status, sponsored content and adjustment earnings, and link the Earnings History widget to it. [#52327] [#52437] [#52389] [#52420]
+- Premium Analytics: Group the WordAds chart by the selected period, add a line or bar chart toggle, and rename the WordAds widgets. [#52483] [#52511] [#52421]
+- Premium Analytics: Improve post detail navigation, and draw attention to the date control when a card or table cell sets the period. [#52255] [#52320] [#52430]
+- Premium Analytics: Let hosts show or hide the Analytics sidebar entry. [#52351]
+- Premium Analytics: Move the Subscribers date range control onto the Subscriber summary chart, and rework the Subscriber highlights card. [#52421] [#52310] [#52413]
+- Premium Analytics: Refine the Insights post cards and the leaderboard row labels. [#52319] [#52317]
+- Premium Analytics: Replace the daily heatmap on the Insights tab with a Views over years table, and refine heatmap styling and keyboard navigation. [#52217] [#52364] [#52369] [#52259] [#52309]
+- Premium Analytics: Show Posting activity's last 12 months as one mini calendar per month. [#52265]
+- Premium Analytics: Show the Insights tab beside Traffic while the site is running the Stats preview. [#52525]
+- Sites: Expose `is_legacy_gating_site` so clients can tell whether a plan change would move the site off the pre-2026 feature gating. [#52467]
+- Update package dependencies. [#49934] [#52187] [#52401] [#52402]
+- VideoPress: Refine the welcome modal and empty-library dropzone text, and drop the duplicate header Upload button while the dropzone is showing. [#52061]
 
 ## 16.3-a.1 - 2026-09-15
 ### Enhancements

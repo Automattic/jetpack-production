@@ -5,53 +5,51 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.8.0] - 2026-09-21
 ### Added
-- Add an author detail page with the author's views, popular and latest posts, and top viewed posts. It is not linked from the reports yet.
-- Add post thumbnails to the Posts & Pages report.
-- Ads: Link the Earnings History widget to its full report.
-- Ads: Show sponsored content and adjustment earnings on the Earnings history report, each on its own tab.
-- Dashboard widgets: carry declarative actions and icon references from the widget manifest to the registry and the widget-modules REST record.
+- Add an author detail page with the author's views, popular and latest posts, and top viewed posts. It is not linked from the reports yet. [#52312]
+- Add post thumbnails to the Posts & Pages report. [#52384]
+- Ads: Add a line or bar chart toggle to the WordAds chart. [#52483]
+- Ads: Link the Earnings History widget to its full report. [#52327]
+- Ads: Show sponsored content and adjustment earnings on the Earnings history report, each on its own tab. [#52437]
+- Dashboard widgets: Carry declarative actions and icon references from the widget manifest to the registry and the widget-modules REST record. [#51925]
 
 ### Changed
-- Ads: Filter the Earnings history report by payment status, explain Ads Served there, and show unpaid and negative amounts in red on the Earnings History widget.
-- Ads: Group the WordAds chart by the selected period instead of a separate grouping control, and add a line or bar chart toggle.
-- Ads: Label WordAds earnings history periods by month and year, such as "August 2026".
-- Ads: Rename the WordAds widgets to Ads summary, All-time balance and WordAds earnings, and give each its own icon.
-- Ads: Show payment status as a badge on the Earnings history report.
-- Ads: Show the Earnings History widget as a compact list without in-widget pagination.
-- Dashboard: Show opens and clicks beside their rates in Latest emails sent.
-- Dashboard: show the Insights tab beside Traffic while the site is running the customer preview, and name both tabs in the preview's welcome, feedback and switch-off copy.
-- Draw attention to the date control, and read the new period out, when a card or a table cell sets the period rather than the reader.
-- Insights: Align the Most popular post and Latest post cards with the design: regular-weight stat labels and a grey ground behind the featured image.
-- Insights: Replace the daily Traffic views activity heatmap with a Views over years table of monthly views, with a Totals column and a Total views / Daily average switch that counts the first month from its first day with views; picking a month opens the Traffic tab over it.
-- Insights: Use the page icon for the Posts metric in the All-time stats widget.
-- Insights and Post detail: Show the heatmap tooltips in the dark style, the daily ones titled with the date; draw the Views over years and All-time traffic cells as flush bands under a continuous scale, lifting a hovered month with a light ring and a shadow.
-- Leaderboard widgets: Enlarge row labels to 13px; in Top tags & categories and its report, mute the row glyphs and draw category rows with a file icon.
-- Let dashboard sections declare their default widget layout when they register, and pass that layout and the section id to the `jetpack_premium_analytics_dashboard_default_layout` filter.
-- Let hosts show or hide the Analytics sidebar entry.
-- Open the exact-figure tooltip below compact values instead of above them.
-- Post detail: bring the page back to the top when a month in All-time traffic sets the period.
-- Posting activity: show the last 12 months as one mini calendar per month.
-- Rename the Subscribers summary widget to Subscriber summary.
-- Subscribers: Move the date range control off the tab header and onto the Subscriber summary chart, which is the only widget there that reads a range. The tab no longer offers a previous-period comparison.
-- Subscribers: On the Subscriber highlights card, show the subscriber count 30, 60, and 90 days ago for sites without paid subscribers, show social followers on any site that has them, rename the first tile to All-time subscribers, and remove the Metrics control.
-- Update package dependencies.
+- Ads: Filter the Earnings history report by payment status, explain Ads Served there, and show unpaid and negative amounts in red on the Earnings History widget. [#52389]
+- Ads: Group the WordAds chart by the selected period instead of a separate grouping control. [#52483]
+- Ads: Label WordAds earnings history periods by month and year, such as "August 2026". [#52327]
+- Ads: Rename the WordAds widgets to Ads summary, All-time balance and WordAds earnings, and give each its own icon. [#52511]
+- Ads: Show payment status as a badge on the Earnings history report. [#52437]
+- Ads: Show the Earnings History widget as a compact list without in-widget pagination. [#52327]
+- Dashboard: Show opens and clicks beside their rates in Latest emails sent. [#52256]
+- Dashboard: Show the Insights tab beside Traffic while the site is running the customer preview, and name both tabs in the preview's welcome, feedback and switch-off copy. [#52525]
+- Draw attention to the date control, and read the new period out, when a card or a table cell sets the period rather than the reader. [#52255]
+- Insights: Align the Most popular post and Latest post cards with the design: regular-weight stat labels and a grey ground behind the featured image. [#52319]
+- Insights: Replace the daily Traffic views activity heatmap with a "Views over years" table of monthly views. [#52311] [#52364]
+- Insights: Use the page icon for the Posts metric in the All-time stats widget. [#52373]
+- Leaderboard widgets: Enlarge row labels to 13px; in Top tags & categories and its report, mute the row glyphs and draw category rows with a file icon. [#52317]
+- Let dashboard sections declare their default widget layout when they register, and pass that layout and the section id to the `jetpack_premium_analytics_dashboard_default_layout` filter. [#52452]
+- Let hosts show or hide the Analytics sidebar entry. [#52351]
+- Open the exact-figure tooltip below compact values instead of above them. [#52374]
+- Post detail: Bring the page back to the top when a month in All-time traffic sets the period. [#52320]
+- Posting activity: Show the last 12 months as one mini calendar per month. [#52265]
+- Rename the Subscribers summary widget to Subscriber summary. [#52413]
+- Show the heatmap tooltips in the dark style, the daily ones titled with the date, and draw the Views over years and All-time traffic cells as flush bands under a continuous scale. [#52369]
+- Subscribers: Move the date range control off the tab header and onto the Subscriber summary chart; the tab no longer offers a previous-period comparison. [#52421]
+- Subscribers: On the Subscriber highlights card, show subscriber counts from 30, 60, and 90 days ago, show social followers, and rename the first tile to All-time subscribers. [#52310]
+- Update package dependencies. [#52187] [#52401] [#52402]
 
 ### Removed
-- Ads: Remove the Sponsored Content History and Adjustments History widgets.
-- Insights: Remove the Traffic views activity heatmap widget, which Views over years replaced.
-- Remove the unused `dashboards/{name}/default-layout` REST route. Each section carries its default layout in the sections route.
+- Ads: Remove the Sponsored Content History and Adjustments History widgets. [#52420]
+- Remove the unused `dashboards/{name}/default-layout` REST route. [#52451]
+- Subscribers: Remove the Metrics control from the Subscriber highlights card. [#52310]
 
 ### Fixed
-- Ads: Open the WordAds chart on the last 7 days rather than a single day on a site launched today.
-- Insights and Post detail: Keep the keyboard-selected cell of the Views over years and All-time traffic heatmaps in view, clear of the month and year labels, when the grid scrolls.
-- Insights and Post detail: Keep the year column and month labels of the Views over years and All-time traffic heatmaps fully opaque while the grid scrolls, so scrolled-under cells no longer show through around them.
-- Keep the first partial week or month bucket of a period list report when the date range starts mid-period.
-- Keep the originating report in post detail breadcrumbs when opening a post from a dashboard widget.
+- Ads: Open the WordAds chart on the last 7 days rather than a single day on a site launched today. [#52421]
+- Keep the first partial week or month bucket of a period list report when the date range starts mid-period. [#52366]
+- Keep the keyboard-selected cell of the Views over years and All-time traffic heatmaps in view, clear of the month and year labels, when the grid scrolls. [#52259]
+- Keep the originating report in post detail breadcrumbs when opening a post from a dashboard widget. [#52430]
+- Keep the year column and month labels of the Views over years and All-time traffic heatmaps fully opaque while the grid scrolls. [#52309]
 
 ## [0.7.0] - 2026-09-15
 ### Added
@@ -391,7 +389,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
-[0.8.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.7.0...0.8.0-alpha
+[0.8.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.7.0...0.8.0
 [0.7.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.6.1...0.7.0
 [0.6.1]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.6.0...0.6.1
 [0.6.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.5.0...0.6.0
