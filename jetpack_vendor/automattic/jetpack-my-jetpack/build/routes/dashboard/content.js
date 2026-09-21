@@ -558,6 +558,21 @@ __( "Install Jetpack", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "Learn more about %s", "jetpack-my-jetpack" );
 __( "Essential", "jetpack-my-jetpack" );
+/* translators: %d is how many features were switched on. */
+_n( "%d feature activated.", "%d features activated.", 1, "jetpack-my-jetpack" );
+/* translators: %d is how many features were switched off. */
+_n( "%d feature deactivated.", "%d features deactivated.", 1, "jetpack-my-jetpack" );
+/* translators: %1$s is a comma-separated list of feature names, %2$s is why they could not be changed. */
+__( "%1$s: %2$s", "jetpack-my-jetpack" );
+__( "Could not change the selected features. Please try again.", "jetpack-my-jetpack" );
+__( "Change this feature from its own control.", "jetpack-my-jetpack" );
+/* translators: %s is the feature name. */
+__( "Select %s", "jetpack-my-jetpack" );
+/* translators: %d is how many features are selected. */
+_n( "%d selected", "%d selected", 1, "jetpack-my-jetpack" );
+__( "Plugins can only be deactivated together while the Jetpack plugin is active.", "jetpack-my-jetpack" );
+__( "Select all features", "jetpack-my-jetpack" );
+__( "Select features to switch several at once", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "%s in use", "jetpack-my-jetpack" );
 /* translators: 1: a plugin name, 2: a feature name. */
@@ -584,8 +599,11 @@ __( "All", "jetpack-my-jetpack" );
 __( "Security", "jetpack-my-jetpack" );
 __( "Growth", "jetpack-my-jetpack" );
 __( "Complete", "jetpack-my-jetpack" );
+__( "Grid view", "jetpack-my-jetpack" );
+__( "List view", "jetpack-my-jetpack" );
 __( "Filter features", "jetpack-my-jetpack" );
 __( "Search features", "jetpack-my-jetpack" );
+__( "Layout", "jetpack-my-jetpack" );
 __( "All categories", "jetpack-my-jetpack" );
 __( "Recommended", "jetpack-my-jetpack" );
 __( "Included in plan", "jetpack-my-jetpack" );
@@ -634,7 +652,6 @@ __( "No data available", "jetpack-my-jetpack" );
 __( "Invalid data", "jetpack-my-jetpack" );
 __( "Area chart", "jetpack-my-jetpack" );
 __( "Week of %s", "jetpack-my-jetpack" );
-__( "%1$s: %2$s", "jetpack-my-jetpack" );
 __( "Bar chart", "jetpack-my-jetpack" );
 __( "Loading map", "jetpack-my-jetpack" );
 __( "Less", "jetpack-my-jetpack" );
@@ -863,7 +880,6 @@ __( "Remove", "jetpack-my-jetpack" );
 __( "Filter by: %1$s", "jetpack-my-jetpack" );
 _x( "Filter", "verb", "jetpack-my-jetpack" );
 __( "No results", "jetpack-my-jetpack" );
-__( "Layout", "jetpack-my-jetpack" );
 __( "Sort by", "jetpack-my-jetpack" );
 __( "Order", "jetpack-my-jetpack" );
 __( "Items per page", "jetpack-my-jetpack" );
