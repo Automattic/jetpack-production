@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.1.3-alpha] - unreleased
+## [8.2.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - No Results block: Show each empty-state message as it will appear to visitors while editing, and tell the messages apart by name when browsing the page structure.
+- Show the dashboard in the new rounded admin page frame.
 - Update package dependencies.
 
 ### Fixed
@@ -1930,7 +1931,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[8.1.3-alpha]: https://github.com/Automattic/jetpack-search/compare/v8.1.2...v8.1.3-alpha
+[8.2.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v8.1.2...v8.2.0-alpha
 [8.1.2]: https://github.com/Automattic/jetpack-search/compare/v8.1.1...v8.1.2
 [8.1.1]: https://github.com/Automattic/jetpack-search/compare/v8.1.0...v8.1.1
 [8.1.0]: https://github.com/Automattic/jetpack-search/compare/v8.0.0...v8.1.0
