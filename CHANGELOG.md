@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show sponsored content and adjustment earnings on the Earnings history report, each on its own tab.
 - Premium Analytics: Show the Earnings History widget as a compact list without in-widget pagination.
 - Premium Analytics: Show the heatmap tooltips in the dark style, the daily ones titled with the date; draw the Views over years and post All-time traffic cells as flush bands under a continuous scale, lifting a hovered month with a light ring and a shadow.
+- Premium Analytics: show the Insights tab beside Traffic while the site is running the Stats preview, and name both tabs in the preview's welcome, feedback and switch-off copy.
 - Premium Analytics: Show the site's monthly views across every year on the Insights tab, in place of the daily heatmap; picking a month opens the Traffic tab over it.
 - Search: Show each of the No Results block's empty-state messages as it will appear to visitors while editing, and tell the messages apart by name when browsing the page structure.
 - Settings: Open the "Learn more" links in the settings info popovers as WordPress.com support docs inside the Help Center on WordPress.com sites, and hide the privacy information link there.

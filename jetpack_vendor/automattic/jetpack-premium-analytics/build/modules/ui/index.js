@@ -68,8 +68,8 @@ __( "Custom range", "jetpack-premium-analytics-pkg" );
 __( "Date range updated to %s.", "jetpack-premium-analytics-pkg" );
 __( "Time period", "jetpack-premium-analytics-pkg" );
 __( "Select period", "jetpack-premium-analytics-pkg" );
-__( "Welcome to the new Traffic page", "jetpack-premium-analytics-pkg" );
-__( "It's built from widgets you can move and resize, so the page can match how you read your site. This is an early version and we'll keep adding new tabs and features in regular updates.", "jetpack-premium-analytics-pkg" );
+__( "Welcome to the new Traffic and Insights tabs", "jetpack-premium-analytics-pkg" );
+__( "They're built from widgets you can move and resize, so each page can match how you read your site. This is an early version and we'll keep adding new tabs and features in regular updates.", "jetpack-premium-analytics-pkg" );
 __( "Take a quick tour", "jetpack-premium-analytics-pkg" );
 /* translators: 1: the current step number, 2: the number of steps in the tour. */
 __( "%1$d of %2$d", "jetpack-premium-analytics-pkg" );

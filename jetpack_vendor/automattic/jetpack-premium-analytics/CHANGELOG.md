@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Ads: Show payment status as a badge on the Earnings history report.
 - Ads: Show the Earnings History widget as a compact list without in-widget pagination.
 - Dashboard: Show opens and clicks beside their rates in Latest emails sent.
+- Dashboard: show the Insights tab beside Traffic while the site is running the customer preview, and name both tabs in the preview's welcome, feedback and switch-off copy.
 - Draw attention to the date control, and read the new period out, when a card or a table cell sets the period rather than the reader.
 - Insights: Align the Most popular post and Latest post cards with the design: regular-weight stat labels and a grey ground behind the featured image.
 - Insights: Replace the daily Traffic views activity heatmap with a Views over years table of monthly views, with a Totals column and a Total views / Daily average switch that counts the first month from its first day with views; picking a month opens the Traffic tab over it.
