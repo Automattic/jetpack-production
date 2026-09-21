@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add a Done button to the conditional logic rules dialog, and open the Conditional logic panel by default on a field that has conditions.
 - Forms: Reopen the dashboard on the last tab used instead of always the default.
 - Jetpack AI: Hide the legacy AI panel once a site is eligible to turn on the WordPress Agent, not only once it is switched on. The notice in its place offers to open the Agent, or to enable it where it is not yet on, and can only be dismissed once it is on.
+- Jetpack AI: Show one notice explaining why Jetpack AI is unavailable — a broken WordPress.com connection, offline mode, or custom code holding AI off — worded the same on the Overview and AI Features tabs.
 - My Jetpack: Show the dashboard in the new rounded admin page frame.
 - My Jetpack: Show the Jetpack menu notification badge when a connection error is detected.
 - Newsletter: Show the email itself in the email design canvas, and limit editing there to the Styles panel.
