@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Post detail: bring the page back to the top when a month in All-time traffic sets the period.
 - Premium Analytics: Remove the Sponsored Content History and Adjustments History widgets from the Ads tab.
 - Premium Analytics: Rename the Subscribers summary widget to Subscriber summary.
+- Premium Analytics: Rename the WordAds widgets to Ads summary, All-time balance and WordAds earnings, and give each its own icon.
 - Premium Analytics: Show opens and clicks beside their rates in Latest emails sent.
 - Premium Analytics: Show payment status as a badge on the Earnings history report.
 - Premium Analytics: show Posting activity's last 12 months as one mini calendar per month.

@@ -1195,7 +1195,7 @@ return array(
 	array(
 		'name'         => 'jpa/wordads-chart-tabs',
 		'dir_name'     => 'wordads-chart-tabs',
-		'title'        => 'WordAds',
+		'title'        => 'Ads summary',
 		'description'  => 'Track ads served, average CPM, and revenue over the selected period.',
 		'help'         => array( 'content' => 'Track ads served, average CPM, and revenue over the selected period.' ),
 		'icon'         => null,
@@ -1210,7 +1210,7 @@ return array(
 	array(
 		'name'         => 'jpa/wordads-earnings-history',
 		'dir_name'     => 'wordads-earnings-history',
-		'title'        => 'Earnings History',
+		'title'        => 'WordAds earnings',
 		'description'  => 'Your WordAds earnings by period, with amounts and payment status.',
 		'help'         => array( 'content' => 'Each row is one payment period, with what you earned and whether it has been paid. Open the full report for ads served and the rest of the history.' ),
 		'icon'         => null,
@@ -1225,7 +1225,7 @@ return array(
 	array(
 		'name'         => 'jpa/wordads-highlights',
 		'dir_name'     => 'wordads-highlights',
-		'title'        => 'WordAds highlights',
+		'title'        => 'All-time balance',
 		'description'  => 'Your WordAds earnings at a glance — total earnings, amount paid, and outstanding balance.',
 		'help'         => array( 'content' => 'Payment is made once your outstanding balance reaches $100, approximately 45 days after the end of the month in which it was earned.' ),
 		'icon'         => null,

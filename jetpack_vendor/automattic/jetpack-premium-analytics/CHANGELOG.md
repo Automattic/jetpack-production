@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Ads: Filter the Earnings history report by payment status, explain Ads Served there, and show unpaid and negative amounts in red on the Earnings History widget.
 - Ads: Group the WordAds chart by the selected period instead of a separate grouping control, and add a line or bar chart toggle.
 - Ads: Label WordAds earnings history periods by month and year, such as "August 2026".
+- Ads: Rename the WordAds widgets to Ads summary, All-time balance and WordAds earnings, and give each its own icon.
 - Ads: Show payment status as a badge on the Earnings history report.
 - Ads: Show the Earnings History widget as a compact list without in-widget pagination.
 - Dashboard: Show opens and clicks beside their rates in Latest emails sent.
