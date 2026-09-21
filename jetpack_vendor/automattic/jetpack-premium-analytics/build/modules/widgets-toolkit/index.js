@@ -72,6 +72,8 @@ __( "Location", "jetpack-premium-analytics-pkg" );
 __( "Views", "jetpack-premium-analytics-pkg" );
 __( "Older activity", "jetpack-premium-analytics-pkg" );
 __( "Newer activity", "jetpack-premium-analytics-pkg" );
+/* translators: 1: the cell's date, e.g. "Jun 2023"; 2: its count, e.g. "15,532 views". */
+_x( "%1$s · %2$s", "heatmap tooltip: date and count", "jetpack-premium-analytics-pkg" );
 __( "Totals", "jetpack-premium-analytics-pkg" );
 /* translators: 1: abbreviated month name, e.g. "Aug"; 2: year, e.g. "2026". */
 _x( "%1$s %2$s", "month and year", "jetpack-premium-analytics-pkg" );

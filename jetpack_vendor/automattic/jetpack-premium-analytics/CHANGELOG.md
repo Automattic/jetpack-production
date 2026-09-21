@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Insights: Align the Most popular post and Latest post cards with the design: regular-weight stat labels and a grey ground behind the featured image.
 - Insights: Replace the daily Traffic views activity heatmap with a Views over years table of monthly views, with a Totals column and a Total views / Daily average switch that counts the first month from its first day with views; picking a month opens the Traffic tab over it.
 - Insights: Use the page icon for the Posts metric in the All-time stats widget.
+- Insights and Post detail: Show the heatmap tooltips in the dark style, the daily ones titled with the date; draw the Views over years and All-time traffic cells as flush bands under a continuous scale, lifting a hovered month with a light ring and a shadow.
 - Leaderboard widgets: Enlarge row labels to 13px; in Top tags & categories and its report, mute the row glyphs and draw category rows with a file icon.
 - Let hosts show or hide the Analytics sidebar entry.
 - Open the exact-figure tooltip below compact values instead of above them.
