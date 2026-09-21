@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add an author detail page with the author's views, popular and latest posts, and top viewed posts. It is not linked from the reports yet.
 - Add post thumbnails to the Posts & Pages report.
 - Ads: Link the Earnings History widget to its full report.
 - Ads: Show sponsored content and adjustment earnings on the Earnings history report, each on its own tab.
