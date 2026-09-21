@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Conditional logic: Add a Done button to the rules dialog, and open the Conditional logic panel by default on a field that has conditions.
 - Dashboard: Reopen on the last tab used instead of always the default.
+- Dashboard: Replace experimental layout and text components with their @wordpress/ui equivalents, and remove an unused integrations modal.
 - Exclude source map files from the distributed package.
 - Update package dependencies.
 
