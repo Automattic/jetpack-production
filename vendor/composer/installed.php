@@ -371,9 +371,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-password-checker' => array(
-            'pretty_version' => '0.5.2-alpha.1789983321',
-            'version' => '0.5.2.0-alpha1789983321',
-            'reference' => 'b80c8713c3d2c60cf5b0747796d0434ed9970d9f',
+            'pretty_version' => '0.5.2-alpha.1789989041',
+            'version' => '0.5.2.0-alpha1789989041',
+            'reference' => '182ab7e97aad98fe95bd15d4ea9c2f5fe5259976',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-password-checker',
             'aliases' => array(),
