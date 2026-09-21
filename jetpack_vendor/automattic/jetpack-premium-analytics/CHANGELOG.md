@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Insights: Use the page icon for the Posts metric in the All-time stats widget.
 - Insights and Post detail: Show the heatmap tooltips in the dark style, the daily ones titled with the date; draw the Views over years and All-time traffic cells as flush bands under a continuous scale, lifting a hovered month with a light ring and a shadow.
 - Leaderboard widgets: Enlarge row labels to 13px; in Top tags & categories and its report, mute the row glyphs and draw category rows with a file icon.
+- Let dashboard sections declare their default widget layout when they register, and pass that layout and the section id to the `jetpack_premium_analytics_dashboard_default_layout` filter.
 - Let hosts show or hide the Analytics sidebar entry.
 - Open the exact-figure tooltip below compact values instead of above them.
 - Post detail: bring the page back to the top when a month in All-time traffic sets the period.
