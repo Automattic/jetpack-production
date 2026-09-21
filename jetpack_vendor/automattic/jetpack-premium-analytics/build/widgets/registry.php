@@ -911,7 +911,7 @@ return array(
 		'name'         => 'jpa/subscribers-chart',
 		'dir_name'     => 'subscribers-chart',
 		'title'        => 'Subscriber summary',
-		'description'  => 'Track subscriber growth over time, with paid subscribers and the previous period overlaid for comparison.',
+		'description'  => 'Track subscriber growth over the selected period.',
 		'help'         => array( 'content' => 'A summary of your subscriber growth over time.' ),
 		'icon'         => null,
 		'actions'      => null,

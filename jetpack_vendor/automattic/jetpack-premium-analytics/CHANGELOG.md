@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Post detail: bring the page back to the top when a month in All-time traffic sets the period.
 - Posting activity: show the last 12 months as one mini calendar per month.
 - Rename the Subscribers summary widget to Subscriber summary.
+- Subscribers: Move the date range control off the tab header and onto the Subscriber summary chart, which is the only widget there that reads a range. The tab no longer offers a previous-period comparison.
 - Subscribers: On the Subscriber highlights card, show the subscriber count 30, 60, and 90 days ago for sites without paid subscribers, show social followers on any site that has them, rename the first tile to All-time subscribers, and remove the Metrics control.
 - Update package dependencies.
 
@@ -42,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the unused `dashboards/{name}/default-layout` REST route. Each section carries its default layout in the sections route.
 
 ### Fixed
+- Ads: Open the WordAds chart on the last 7 days rather than a single day on a site launched today.
 - Insights and Post detail: Keep the keyboard-selected cell of the Views over years and All-time traffic heatmaps in view, clear of the month and year labels, when the grid scrolls.
 - Insights and Post detail: Keep the year column and month labels of the Views over years and All-time traffic heatmaps fully opaque while the grid scrolls, so scrolled-under cells no longer show through around them.
 - Keep the first partial week or month bucket of a period list report when the date range starts mid-period.
