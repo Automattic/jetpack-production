@@ -5,13 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.4.1-alpha] - unreleased
+## [6.5.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add a filterable grid of the main Jetpack features to the Features tab, with activation toggles and a details modal, behind the my-jetpack-features-tab feature flag.
+
+### Changed
+- Answer module switch clicks immediately, and explain what happened when a change fails.
 
 ### Fixed
 - Jetpack Manage: Only show the sidebar link to agency accounts.
 - Products: keep the tab working when a module name is unavailable.
+- Show each notice once instead of twice.
 
 ## [6.4.0] - 2026-09-18
 ### Added
@@ -2941,7 +2948,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.4.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.4.0...6.4.1-alpha
+[6.5.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.4.0...6.5.0-alpha
 [6.4.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.3.0...6.4.0
 [6.3.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.2.2...6.3.0
 [6.2.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.2.1...6.2.2

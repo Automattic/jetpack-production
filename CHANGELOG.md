@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Reopen the dashboard on the last tab used instead of always the default.
 - Jetpack AI: Hide the legacy AI panel once a site is eligible to turn on the WordPress Agent, not only once it is switched on. The notice in its place offers to open the Agent, or to enable it where it is not yet on, and can only be dismissed once it is on.
 - Jetpack AI: Show one notice explaining why Jetpack AI is unavailable — a broken WordPress.com connection, offline mode, or custom code holding AI off — worded the same on the Overview and AI Features tabs.
+- My Jetpack: answer module switch clicks immediately, and explain what happened when a change fails.
 - My Jetpack: Show the dashboard in the new rounded admin page frame.
 - My Jetpack: Show the Jetpack menu notification badge when a connection error is detected.
 - Newsletter: Show the email itself in the email design canvas, and limit editing there to the Styles panel.
@@ -63,6 +64,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Manage: Only show the sidebar link to agency accounts.
 - Keep admin icons colored after the @wordpress/icons 16 update, which draws them as strokes.
 - My Jetpack: Restore the link from the stats card heading and chart to the Stats page.
+- My Jetpack: Show each notice once instead of twice.
 - PayPal Payment Buttons: removing a block no longer deletes its payment link from PayPal.
 - PayPal Payment Buttons: say so when opening a post picks up changes made to the payment link elsewhere. The block used to take them silently, so a price or description edited in PayPal's dashboard, or by another block sharing the same link, changed under the merchant with nothing shown. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
 - PayPal Payment Buttons: Stop a save overwriting payment link settings before the block has loaded them, and keep a value edited while the link is still loading.
