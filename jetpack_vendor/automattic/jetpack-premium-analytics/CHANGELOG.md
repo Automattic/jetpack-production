@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add an author detail page with the author's views, popular and latest posts, and top viewed posts. It is not linked from the reports yet.
 - Add post thumbnails to the Posts & Pages report.
+- Add the `jetpack_premium_analytics_register_dashboard_sections` action, so a plugin can register a dashboard section.
 - Ads: Link the Earnings History widget to its full report.
 - Ads: Show sponsored content and adjustment earnings on the Earnings history report, each on its own tab.
 - Dashboard widgets: carry declarative actions and icon references from the widget manifest to the registry and the widget-modules REST record.
