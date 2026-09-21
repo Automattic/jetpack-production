@@ -69,6 +69,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Keep the originating report in post detail breadcrumbs when opening a post from a dashboard widget.
 - Premium Analytics: Keep the year column and month labels of the Views over years and a post's All-time traffic heatmaps fully opaque while the grid scrolls, so scrolled-under cells no longer show through around them.
 - Premium Analytics: Open the Ads tab's WordAds chart on the last 7 days rather than a single day on a site launched today.
+- Premium Analytics: Show a dash instead of zero in the Earnings history report when a period has no Ads Served count.
 - SEO: Fix the Settings tab failing to load after a page title structure was cleared from WordPress.com.
 - Site Verification: Reject invalid verification codes instead of reporting a successful save.
 - Social: Pre-fill the Bluesky handle field when reconnecting an account.
