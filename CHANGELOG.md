@@ -60,6 +60,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add a setting to render players in the page from one shared player script instead of one frame per video.
 - VideoPress: With the inline player setting on, show each video's poster and load the player only when it is played.
 - VideoPress: With the shared player setting on, the block editor previews video blocks with the same shared player instead of one frame per block.
+- Zoom Scheduler block: Add a block for embedding Zoom Scheduler booking page URLs on all plans.
 
 ### Bug fixes
 - Activity Log: turning it off now takes effect on sites that also run Backup, Boost, Protect, Search, or VideoPress.
