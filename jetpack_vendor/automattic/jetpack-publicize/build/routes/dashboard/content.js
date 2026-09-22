@@ -196,6 +196,7 @@ _x( "%1$s, %2$s", "legend item label and value", "jetpack-publicize-pkg" );
 _x( "%s: visible. Toggle visibility.", "visible interactive legend item", "jetpack-publicize-pkg" );
 _x( "%s: hidden. Toggle visibility.", "hidden interactive legend item", "jetpack-publicize-pkg" );
 _x( "%s: hidden", "hidden non-interactive legend item", "jetpack-publicize-pkg" );
+__( "Comparison period", "jetpack-publicize-pkg" );
 _x( "All segments are hidden. Click legend items to show data.", "chart empty state: interactive segments", "jetpack-publicize-pkg" );
 _x( "All segments are hidden.", "chart empty state: segments", "jetpack-publicize-pkg" );
 _x( "All series are hidden. Click legend items to show data.", "chart empty state: interactive series", "jetpack-publicize-pkg" );

@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Ads: Open the WordAds chart on the last 7 days rather than a single day on a site launched today.
 - Ads: show a dash instead of zero in the Earnings report when a period has no Ads Served count.
+- Charts: Add a Comparison period legend item to line charts that show a previous period, use square swatches in bar mode, keep the selected metric's legend item locked, and draw the Visitors swatch solid in the Traffic summary.
 - Insights and Post detail: Keep the keyboard-selected cell of the Views over years and All-time traffic heatmaps in view, clear of the month and year labels, when the grid scrolls.
 - Insights and Post detail: Keep the year column and month labels of the Views over years and All-time traffic heatmaps fully opaque while the grid scrolls, so scrolled-under cells no longer show through around them.
 - Keep the first partial week or month bucket of a period list report when the date range starts mid-period.

@@ -641,6 +641,7 @@ _x( "%1$s, %2$s", "legend item label and value", "jetpack-my-jetpack" );
 _x( "%s: visible. Toggle visibility.", "visible interactive legend item", "jetpack-my-jetpack" );
 _x( "%s: hidden. Toggle visibility.", "hidden interactive legend item", "jetpack-my-jetpack" );
 _x( "%s: hidden", "hidden non-interactive legend item", "jetpack-my-jetpack" );
+__( "Comparison period", "jetpack-my-jetpack" );
 _x( "All segments are hidden. Click legend items to show data.", "chart empty state: interactive segments", "jetpack-my-jetpack" );
 _x( "All segments are hidden.", "chart empty state: segments", "jetpack-my-jetpack" );
 _x( "All series are hidden. Click legend items to show data.", "chart empty state: interactive series", "jetpack-my-jetpack" );

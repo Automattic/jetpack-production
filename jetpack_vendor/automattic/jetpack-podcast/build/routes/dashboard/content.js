@@ -542,6 +542,7 @@ __( "Month to date", "jetpack-podcast" );
 __( "Year to date", "jetpack-podcast" );
 __( "Select a date range", "jetpack-podcast" );
 __( "Date range presets", "jetpack-podcast" );
+__( "Comparison period", "jetpack-charts" );
 __( "Reset zoom", "jetpack-charts" );
 __( "Current period", "jetpack-charts" );
 __( "Previous period", "jetpack-charts" );
