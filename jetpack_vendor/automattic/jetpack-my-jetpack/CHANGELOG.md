@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a filterable grid of the main Jetpack features to the Features tab, with activation toggles and a details modal, behind the my-jetpack-features-tab feature flag.
 - Add a list view to the Features tab that switches several features on or off at once, behind the my-jetpack-features-tab feature flag.
+- Show partner coupon redemption in place of the dashboard.
 
 ### Changed
 - Answer module switch clicks immediately, and explain what happened when a change fails.

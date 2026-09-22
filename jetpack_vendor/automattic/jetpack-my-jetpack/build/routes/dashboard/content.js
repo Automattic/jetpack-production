@@ -952,6 +952,20 @@ __( "Your site goes wherever you go", "jetpack-my-jetpack" );
 __( "Install the <mobileLink>Jetpack app</mobileLink> for iOS or Android and stay connected to your site from anywhere!", "jetpack-my-jetpack" );
 _x( "Modules", "Navigation item. Noun. Links to a list of modules for Jetpack.", "jetpack-my-jetpack" );
 __( "Access the full list of Jetpack modules available on your site.", "jetpack-my-jetpack" );
+/* translators: %s: Name of Jetpack partner. */
+__( "Logo of %s who are offering a coupon in partnership with Jetpack", "jetpack-my-jetpack" );
+__( "One free year of Jetpack Backup", "jetpack-my-jetpack" );
+/* translators: %s: Name of a Jetpack product. */
+__( "Redeem your coupon and get started with %s for free the first year! Never worry about losing your data, ever.", "jetpack-my-jetpack" );
+/* translators: %s: Name of a Jetpack product. */
+__( "Redeem %s", "jetpack-my-jetpack" );
+__( "Remind me later", "jetpack-my-jetpack" );
+/* translators: %s: Jetpack partner name. */
+__( "Welcome to Jetpack %s traveler!", "jetpack-my-jetpack" );
+/* translators: %s: Name of a Jetpack product. */
+__( "Set up & redeem %s", "jetpack-my-jetpack" );
+/* translators: %s: Name of a Jetpack product. */
+__( "Redeem your coupon and get started with %s for free the first year!", "jetpack-my-jetpack" );
 __( "Start for Free", "jetpack-my-jetpack" );
 /* translators: "Security" here shouldn't be translated as its the name of the bundle */
 __( "Get Security", "jetpack-my-jetpack" );

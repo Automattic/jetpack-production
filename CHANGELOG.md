@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Show the dashboard in the new rounded admin page frame.
 - My Jetpack: Show the Jetpack menu notification badge when a connection error is detected.
 - Newsletter: Show the email itself in the email design canvas, and limit editing there to the Styles panel.
+- Partner coupons: redeem them from My Jetpack.
 - PayPal Payment Buttons: Add an account menu to the top of the block settings sidebar, with links to PayPal's checkout settings and transactions, and a Log out showing the connected account. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
 - PayPal Payment Buttons: add a Product ID field, shipping fees, a handling fee and a discount, let tax be a flat amount as well as a percentage, check every fee against the decimal places its currency allows, hold a tax rate under 100% and to two decimal places, rework the customer note fields, keep the line breaks inside a product description, and match the Checkout Options controls to the design. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
 - PayPal Payment Buttons: Open a saved payment link on its details in the block settings sidebar, with the form behind Edit. The notice saying when changes reach PayPal is gone, and the warning that a link changed at PayPal also shows on the details view.

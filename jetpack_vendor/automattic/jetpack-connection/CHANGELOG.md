@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Return the connection owner slot to the protected owner when they reconnect.
 
+### Changed
+- Partner coupons: check whether a coupon is still valid on My Jetpack too.
+
 ## [9.4.0] - 2026-09-18
 ### Added
 - Add a protected owner state resolver explaining why the gate is closed. [#52442]
