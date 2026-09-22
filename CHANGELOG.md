@@ -110,6 +110,7 @@ This is an alpha version! The changes listed here are not final.
 - Map block: Clean up unused attributes and provide fallback for invalid color values.
 - Modules: keep a module's name and description when no translation entry exists for it.
 - PayPal Payment Buttons: Show the result of deleting a link, disconnecting, or picking an existing link in a snackbar.
+- Premium Analytics: register the Ads tab from the WordAds module.
 - Premium Analytics: Remove the Traffic views activity heatmap widget from the Insights tab, which Views over years replaced.
 - Stats: Load the admin bar chart and Stats link from the Stats Admin package, and deprecate the matching functions in the Stats module.
 - Update package dependencies.

@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Rename the Subscribers summary widget to Subscriber summary.
 - Subscribers: Move the date range control off the tab header and onto the Subscriber summary chart, which is the only widget there that reads a range. The tab no longer offers a previous-period comparison.
 - Subscribers: On the Subscriber highlights card, show the subscriber count 30, 60, and 90 days ago for sites without paid subscribers, show social followers on any site that has them, rename the first tile to All-time subscribers, and remove the Metrics control.
+- The Ads tab is registered by the WordAds module and by WordPress.com rather than by the package, so it no longer appears on sites without WordAds. A section whose slug another section already uses is refused.
 - Update package dependencies.
 
 ### Removed
