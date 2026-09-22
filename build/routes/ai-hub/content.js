@@ -364,8 +364,10 @@ __( "Or copy the configuration below and add it to your <mcpJson/> or <claudeJso
 __( "In Claude Code, run <code/> to authenticate with your WordPress.com account.", "jetpack" );
 __( "Open the <ChatGptConnector/> page in ChatGPT.", "jetpack" );
 __( "Click \"Install\" and follow the prompts.", "jetpack" );
-__( "For Cursor users, use the one-click install to add the WordPress.com MCP app.", "jetpack" );
-__( "Install in Cursor", "jetpack" );
+__( "Open the <CursorPlugin/> page on the Cursor Marketplace.", "jetpack" );
+__( "WordPress.com plugin", "jetpack" );
+__( "Click \"Add to Cursor\" and follow the prompts.", "jetpack" );
+__( "Or run <code/> in the Cursor chat.", "jetpack" );
 __( "Manual setup", "jetpack" );
 __( "Copy configuration to clipboard", "jetpack" );
 __( "Copy this configuration into your client’s MCP settings.", "jetpack" );
