@@ -14,6 +14,7 @@ _x( "%s: visible. Toggle visibility.", "visible interactive legend item", "jetpa
 _x( "%s: hidden. Toggle visibility.", "hidden interactive legend item", "jetpack-premium-analytics-pkg" );
 _x( "%s: hidden", "hidden non-interactive legend item", "jetpack-premium-analytics-pkg" );
 __( "Comparison period", "jetpack-premium-analytics-pkg" );
+__( "No data", "jetpack-premium-analytics-pkg" );
 _x( "All segments are hidden. Click legend items to show data.", "chart empty state: interactive segments", "jetpack-premium-analytics-pkg" );
 _x( "All segments are hidden.", "chart empty state: segments", "jetpack-premium-analytics-pkg" );
 _x( "All series are hidden. Click legend items to show data.", "chart empty state: interactive series", "jetpack-premium-analytics-pkg" );
@@ -21,13 +22,12 @@ _x( "All series are hidden.", "chart empty state: series", "jetpack-premium-anal
 __( "Reset zoom", "jetpack-premium-analytics-pkg" );
 __( "View details", "jetpack-premium-analytics-pkg" );
 __( "Close", "jetpack-premium-analytics-pkg" );
-__( "Line chart", "jetpack-premium-analytics-pkg" );
 __( "No data available", "jetpack-premium-analytics-pkg" );
 __( "Invalid data", "jetpack-premium-analytics-pkg" );
+__( "Line chart", "jetpack-premium-analytics-pkg" );
 __( "Area chart", "jetpack-premium-analytics-pkg" );
 __( "Week of %s", "jetpack-premium-analytics-pkg" );
 __( "%1$s: %2$s", "jetpack-premium-analytics-pkg" );
-__( "No data", "jetpack-premium-analytics-pkg" );
 __( "Bar chart", "jetpack-premium-analytics-pkg" );
 __( "Loading map", "jetpack-premium-analytics-pkg" );
 __( "Less", "jetpack-premium-analytics-pkg" );
