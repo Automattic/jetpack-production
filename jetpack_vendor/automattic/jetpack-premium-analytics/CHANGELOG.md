@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the `jetpack_premium_analytics_register_dashboard_sections` action, so a plugin can register a dashboard section.
 - Ads: Link the Earnings History widget to its full report.
 - Ads: Show sponsored content and adjustment earnings on the Earnings history report, each on its own tab.
+- Dashboard: Add a feature flag that shows Automatticians every section of a preview-limited dashboard.
 - Dashboard widgets: carry declarative actions and icon references from the widget manifest to the registry and the widget-modules REST record.
 
 ### Changed
