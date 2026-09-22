@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Filter the Earnings history report by payment status, explain Ads Served there, and show unpaid and negative amounts in red on the Earnings History widget.
 - Premium Analytics: Group the Ads tab's WordAds chart by the selected period instead of a separate grouping control, and add a line or bar chart toggle.
 - Premium Analytics: Label WordAds earnings history periods by month and year, such as "August 2026".
+- Premium Analytics: Lead each chart tooltip row with the value, then the metric, then the date.
 - Premium Analytics: Let hosts show or hide the Analytics sidebar entry.
 - Premium Analytics: Link the Earnings History widget to its full report.
 - Premium Analytics: Move the Subscribers date range control off the tab header and onto the Subscriber summary chart, which is the only widget there that reads a range. The tab no longer offers a previous-period comparison.

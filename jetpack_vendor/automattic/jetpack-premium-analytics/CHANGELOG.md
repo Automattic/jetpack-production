@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Ads: Rename the WordAds widgets to Ads summary, All-time balance and WordAds earnings, and give each its own icon.
 - Ads: Show payment status as a badge on the Earnings history report.
 - Ads: Show the Earnings History widget as a compact list without in-widget pagination.
+- Chart tooltips: lead each row with the value, then the metric as its unit, then the date.
 - Dashboard: Show opens and clicks beside their rates in Latest emails sent.
 - Dashboard: show the Insights tab beside Traffic while the site is running the customer preview, and name both tabs in the preview's welcome, feedback and switch-off copy.
 - Draw attention to the date control, and read the new period out, when a card or a table cell sets the period rather than the reader.
