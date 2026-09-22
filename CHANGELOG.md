@@ -96,6 +96,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin pages: Link the footer to the My Jetpack Features tab when it replaces the Products tab.
 - Carousel: Prefetch the Swiper library so the first click on a gallery image does not wait for it.
+- Carousel: Request the zoom-resolution image only when the visitor zooms.
 - Carousel: Shorten the slide transition, and disable it entirely under prefers-reduced-motion.
 - Carousel: Stop fetching comments on every slide change; fetch them when the comments panel is opened.
 - Map block: Clean up unused attributes and provide fallback for invalid color values.
