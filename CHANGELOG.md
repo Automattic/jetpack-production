@@ -96,6 +96,7 @@ This is an alpha version! The changes listed here are not final.
 - Modules: keep a module's name and description when no translation entry exists for it.
 - PayPal Payment Buttons: Show the result of deleting a link, disconnecting, or picking an existing link in a snackbar.
 - Premium Analytics: Remove the Traffic views activity heatmap widget from the Insights tab, which Views over years replaced.
+- Stats: Load the admin bar chart and Stats link from the Stats Admin package, and deprecate the matching functions in the Stats module.
 - Update package dependencies.
 - VideoPress: refine the welcome modal type scale, match the upload dropzone text to the design system's empty state, and drop the duplicate header Upload button while the empty-library dropzone is showing.
 

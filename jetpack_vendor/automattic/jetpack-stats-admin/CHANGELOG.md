@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add the views chart and Stats link to the admin bar, and let any plugin that ships Stats add the Stats widget to the WordPress dashboard.
+
 ### Changed
 - Hide WordPress admin notices on the Stats dashboard, and let hosts show or hide the Stats sidebar entry.
 
