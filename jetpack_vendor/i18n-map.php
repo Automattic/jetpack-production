@@ -110,7 +110,7 @@ return array(
     ),
     'jetpack-masterbar' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-masterbar',
-      'ver' => '0.28.3-alpha1789670548',
+      'ver' => '0.28.3-alpha1790094425',
     ),
     'jetpack-menu-badges' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-menu-badges',
