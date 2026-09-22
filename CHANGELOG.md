@@ -59,6 +59,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Show the dashboard in the new rounded admin page frame.
 - Settings: Open the "Learn more" links in the settings info popovers as WordPress.com support docs inside the Help Center on WordPress.com sites, and hide the privacy information link there.
 - Sites: expose is_legacy_gating_site, so clients can tell whether a plan change would move the site off the pre-2026 feature gating.
+- Sites API: return the "Require two-step authentication" SSO setting as the `jetpack_sso_require_two_step` site option.
 - Stats: Hide WordPress admin notices on the Stats dashboard, and let hosts show or hide the Stats sidebar entry.
 - Stats: Move the Stats settings to a new Settings tab in the Stats dashboard, and link to it from Jetpack Settings.
 - VideoPress: Add a setting to render players in the page from one shared player script instead of one frame per video.
