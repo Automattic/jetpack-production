@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Lead each chart tooltip row with the value, then the metric, then the date.
 - Premium Analytics: Let hosts show or hide the Analytics sidebar entry.
 - Premium Analytics: Link the Earnings History widget to its full report.
+- Premium Analytics: Match the date range control in widget headers to the height of the other header controls, and draw the date triggers with the design system button states.
 - Premium Analytics: Move the Subscribers date range control off the tab header and onto the Subscriber summary chart, which is the only widget there that reads a range. The tab no longer offers a previous-period comparison.
 - Premium Analytics: On the Subscriber highlights card, show the subscriber count 30, 60, and 90 days ago for sites without paid subscribers, show social followers on any site that has them, rename the first tile to All-time subscribers, and remove the Metrics control.
 - Premium Analytics: Post detail: bring the page back to the top when a month in All-time traffic sets the period.
