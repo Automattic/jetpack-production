@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.37.0-alpha - unreleased
+## 0.38.0-alpha - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -13,8 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add a REST route to read and change the Stats settings, for the Settings tab in the Stats dashboard.
 - Add the views chart and Stats link to the admin bar, and let any plugin that ships Stats add the Stats widget to the WordPress dashboard.
 
+## 0.37.0 - 2026-09-21
 ### Changed
-- Hide WordPress admin notices on the Stats dashboard, and let hosts show or hide the Stats sidebar entry.
+- Hide WordPress admin notices on the Stats dashboard, and let hosts show or hide the Stats sidebar entry. [#52351]
 
 ## 0.36.0 - 2026-09-15
 ### Added

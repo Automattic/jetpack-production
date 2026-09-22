@@ -5,18 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.1.3-alpha] - unreleased
+## [2.1.4-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Footer: Hide Products and Help links when My Jetpack is unavailable.
+
+## [2.1.3] - 2026-09-21
 ### Changed
-- Exclude source map files from the distributed package.
-- Update package dependencies.
+- Exclude source map files from the distributed package. [#52304]
+- Update package dependencies. [#52187]
 
 ### Fixed
-- Dashboard: Restore the admin screen ID after the wp-build enqueue check.
-- Footer: Hide Products and Help links when My Jetpack is unavailable.
-- Welcome screen: Keep the plan feature check icons colored now that @wordpress/icons 16 draws them as strokes.
+- Dashboard: Restore the admin screen ID after the wp-build enqueue check. [#52471]
 
 ## [2.1.2] - 2026-09-15
 ### Changed
@@ -274,7 +276,8 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Replace the wp-build placeholder with page chrome and tab navigation. [#48559]
 - Dashboard: Slim down wp-build wiring to the Backup pattern. [#48600]
 
-[2.1.3-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.2...v2.1.3-alpha
+[2.1.4-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.3...v2.1.4-alpha
+[2.1.3]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.2...v2.1.3
 [2.1.2]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.1...v2.1.2
 [2.1.1]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/Automattic/jetpack-podcast/compare/v2.0.0...v2.1.0

@@ -1468,7 +1468,7 @@ class Manager {
 	 * invalidated any stored one.
 	 *
 	 * @internal Hooked on `jetpack_user_authorized`.
-	 * @since 9.5.0-alpha
+	 * @since 9.5.0
 	 */
 	public function promote_protected_owner_on_connect() {
 		$anchor = Protected_Owner::get_locked();
@@ -1508,7 +1508,7 @@ class Manager {
 	 * registered the connection's capabilities is refused rather than trusted.
 	 *
 	 * @since 9.3.0
-	 * @since 9.5.0-alpha No longer takes how the owner was confirmed.
+	 * @since 9.6.0-alpha No longer takes how the owner was confirmed.
 	 *
 	 * @param int $user_id The local user to anchor.
 	 * @return true|WP_Error True on success, WP_Error otherwise.

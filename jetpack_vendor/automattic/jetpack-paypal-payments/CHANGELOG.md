@@ -5,29 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.10.0-alpha] - unreleased
+## [0.11.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Add a PayPal account menu to the top of the block settings sidebar: links to PayPal's checkout settings and transactions, and a Log out showing the connected account. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
-- Add a Product ID field, shipping fees, a handling fee and a discount, let tax be a flat amount as well as a percentage, check every fee against the decimal places its currency allows, hold a tax rate under 100% and to two decimal places, rework the customer note fields, keep the line breaks inside a product description, and match the Checkout Options controls to the design. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
 - Add Change item to a saved payment link's menu in the block settings sidebar, to switch the button to another of the account's payment links.
 - Ask whether to save or discard unsaved changes when leaving a saved payment link's form in the block settings sidebar.
 - Give each link in the existing links list a menu to duplicate it into a new payment link or delete it, and let the new link's form go back to the list.
 
-### Changed
-- Open a saved payment link on its details in the block settings sidebar, with the form behind Edit. The notice saying when changes reach PayPal is gone, and the warning that a link changed at PayPal also shows on the details view.
-- Show the result of deleting a link, disconnecting, or picking an existing link in a snackbar.
-- Update package dependencies.
-
 ### Fixed
 - Mark the post as changed when a payment button is updated to match its link on PayPal, so the change can be saved and shown on the page.
 - Reject a return URL over the 127 characters PayPal accepts, and say so in the block's form.
-- Removing a block no longer deletes its payment link from PayPal. The same link can be used by other posts, an email or a printed QR code, so it stays until it is deleted on purpose.
-- Say so when opening a post picks up changes made to the payment link elsewhere. The block used to take them silently, so a price or description edited in PayPal's dashboard, or by another block sharing the same link, changed under the merchant with nothing shown. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
 - Show a payment link's hosted ID without its PLB- prefix in the block settings sidebar, so it no longer wraps.
-- Stop a save overwriting payment link settings before the block has loaded them, and keep a value edited while the link is still loading.
+
+## [0.10.0] - 2026-09-21
+### Added
+- Add a PayPal account menu to the top of the block settings sidebar, with links to PayPal's checkout settings and transactions, and a "Log out" item showing the connected account. [#52509]
+- Add a Product ID field, shipping and handling fees, a discount, and flat-amount tax, and check fees and tax rates against what the currency allows. [#52301]
+
+### Changed
+- Show a saved payment link's details in the block settings sidebar instead of its edit form. [#52372]
+- Show the result of deleting a link, disconnecting, or picking an existing link in a snackbar. [#52464]
+- Update package dependencies. [#52187]
+
+### Fixed
+- Keep a block's payment link at PayPal when the block is removed. [#52463]
+- Prevent payment link settings from being overwritten on save before the block has loaded them, and keep values that were edited while the link is still loading. [#52418]
+- Show a notice when opening a post picks up changes made to the payment link elsewhere. [#52302]
 
 ## [0.9.0] - 2026-09-15
 ### Added
@@ -363,7 +368,8 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Simple Payments: Move Simple Payments block to PayPal Payments package. [#43413]
 
-[0.10.0-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.9.0...v0.10.0-alpha
+[0.11.0-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.10.0...v0.11.0-alpha
+[0.10.0]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.8.2...v0.9.0
 [0.8.2]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.8.1...v0.8.2
 [0.8.1]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.8.0...v0.8.1

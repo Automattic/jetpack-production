@@ -5,19 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.16.0-alpha] - unreleased
+## [0.16.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Changed
-- Daily Writing Prompt: Stop offering the Write editor after a switch to the Block editor.
-- Exclude source map files from the distributed package.
-- Update package dependencies.
-
 ### Fixed
-- Dashboard: Restore the admin screen ID after the wp-build enqueue check.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Subscribers: Show the earliest subscription date for subscribers with both an email and a WordPress.com subscription.
+
+## [0.16.0] - 2026-09-21
+### Changed
+- Daily Writing Prompt: Stop offering the Write editor after a switch to the Block editor. [#52230]
+- Exclude source map files from the distributed package. [#52304]
+- Update package dependencies. [#52187]
+
+### Fixed
+- Dashboard: Restore the admin screen ID after the wp-build enqueue check. [#52471]
 
 ## [0.15.0] - 2026-09-15
 ### Added
@@ -383,7 +386,8 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.16.0-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.15.0...v0.16.0-alpha
+[0.16.1-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.16.0...v0.16.1-alpha
+[0.16.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.15.0...v0.16.0
 [0.15.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.14.1...v0.15.0
 [0.14.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.14.0...v0.14.1
 [0.14.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.13.0...v0.14.0

@@ -5,18 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.0.4-alpha] - unreleased
+## [5.0.5-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Footer: Hide Products and Help links when My Jetpack is unavailable.
+
+## [5.0.4] - 2026-09-21
+### Added
+- Dashboard: Add an internal preview of the modernized dashboard, which stays off by default behind the `rsm_jetpack_ui_modernization_backup` filter. [#52338]
+
 ### Changed
-- Exclude source map files from the distributed package.
-- Show the modernized dashboard to Automatticians on proxied requests, unless the site has the `use-backup-legacy-dashboard` sticker.
-- Update package dependencies.
+- Exclude source map files from the distributed package. [#52304]
+- Update package dependencies. [#52187]
 
 ### Fixed
-- Dashboard: Restore the admin screen ID after the wp-build enqueue check.
-- Footer: Hide Products and Help links when My Jetpack is unavailable.
+- Dashboard: Restore the admin screen ID after the wp-build enqueue check. [#52471]
 
 ## [5.0.3] - 2026-09-15
 ### Changed
@@ -1244,7 +1249,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[5.0.4-alpha]: https://github.com/Automattic/jetpack-backup/compare/v5.0.3...v5.0.4-alpha
+[5.0.5-alpha]: https://github.com/Automattic/jetpack-backup/compare/v5.0.4...v5.0.5-alpha
+[5.0.4]: https://github.com/Automattic/jetpack-backup/compare/v5.0.3...v5.0.4
 [5.0.3]: https://github.com/Automattic/jetpack-backup/compare/v5.0.2...v5.0.3
 [5.0.2]: https://github.com/Automattic/jetpack-backup/compare/v5.0.1...v5.0.2
 [5.0.1]: https://github.com/Automattic/jetpack-backup/compare/v5.0.0...v5.0.1

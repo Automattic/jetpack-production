@@ -15,7 +15,7 @@ use Automattic\Jetpack\Status\Host;
  * The dashboard package composes the section from its own WordAds widgets; this class decides
  * that a site running the module gets the section, and who may read it.
  *
- * @since 16.3-a.2
+ * @since 16.3-a.4
  */
 class WordAds_Premium_Analytics {
 

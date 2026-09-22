@@ -153,21 +153,21 @@ add_filter( 'is_protected_meta', 'sharing_meta_box_protected', 10, 2 );
 /**
  * Add link to sharing settings in the Plugins screen.
  *
- * @deprecated 16.3-a.2 Sharing has not shipped as a standalone plugin for years.
+ * @deprecated 16.3-a.4 Sharing has not shipped as a standalone plugin for years.
  *
  * @param array $links An array of plugin action links.
  *
  * @return array The unchanged $links.
  */
 function sharing_plugin_settings( $links ) {
-	_deprecated_function( __FUNCTION__, 'jetpack-16.3-a.2' );
+	_deprecated_function( __FUNCTION__, 'jetpack-16.3-a.4' );
 	return $links;
 }
 
 /**
  * Add links to settings and support in the plugin row.
  *
- * @deprecated 16.3-a.2 Sharing has not shipped as a standalone plugin for years.
+ * @deprecated 16.3-a.4 Sharing has not shipped as a standalone plugin for years.
  *
  * @param array  $links An array of the plugin's metadata, including the version, author, author URI, and plugin URI.
  * @param string $file  Path to the plugin file relative to the plugins directory.
@@ -175,7 +175,7 @@ function sharing_plugin_settings( $links ) {
  * @return array The unchanged $links.
  */
 function sharing_add_plugin_settings( $links, $file ) { // phpcs:ignore VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
-	_deprecated_function( __FUNCTION__, 'jetpack-16.3-a.2' );
+	_deprecated_function( __FUNCTION__, 'jetpack-16.3-a.4' );
 	return $links;
 }
 

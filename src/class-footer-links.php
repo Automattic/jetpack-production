@@ -20,7 +20,7 @@ class Footer_Links {
 	/**
 	 * Whether My Jetpack reports that its admin page is available to the current user.
 	 *
-	 * @since 16.3-a.2
+	 * @since 16.3-a.4
 	 *
 	 * @return bool
 	 */
@@ -32,7 +32,7 @@ class Footer_Links {
 	/**
 	 * Get the slug and label of My Jetpack's products tab, for footer links to it.
 	 *
-	 * @since 16.3-a.2
+	 * @since 16.3
 	 *
 	 * @return array{slug: string, label: string}
 	 */

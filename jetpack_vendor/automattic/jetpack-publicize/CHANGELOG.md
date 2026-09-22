@@ -9,11 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
-### Changed
-- Connections: On WordPress.com sites, open the Instagram Business help link as the WordPress.com support doc inside the Help Center.
-- Exclude source map files from the distributed package.
-- Update package dependencies.
-
 ### Deprecated
 - Deprecate Publicize::force_user_connection() and Publicize::admin_page_warning(), which backed the account-linking notice on Settings > Sharing.
 
@@ -21,10 +16,17 @@ This is an alpha version! The changes listed here are not final.
 - Remove the WordPress.com account-linking notice from Settings > Sharing.
 
 ### Fixed
-- Bluesky: Pre-fill the handle field when reconnecting an account.
-- Dashboard: Target contextual messages at the Social screen again, and show them on every tab.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
-- Share status: Keep the success icon colored now that @wordpress/icons 16 draws it as strokes.
+
+## [0.87.1] - 2026-09-21
+### Changed
+- Connections: Open the Instagram Business help link as the WordPress.com support doc inside the Help Center on WordPress.com sites. [#52436]
+- Exclude source map files from the distributed package. [#52304]
+- Update package dependencies. [#52187]
+
+### Fixed
+- Bluesky: Pre-fill the handle field when reconnecting an account. [#52187]
+- Dashboard: Target contextual messages at the Social screen again, and show them on every tab. [#52471]
 
 ## [0.87.0] - 2026-09-15
 ### Added
@@ -1670,7 +1672,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.88.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.87.0...v0.88.0-alpha
+[0.88.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.87.1...v0.88.0-alpha
+[0.87.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.87.0...v0.87.1
 [0.87.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.86.2...v0.87.0
 [0.86.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.86.1...v0.86.2
 [0.86.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.86.0...v0.86.1
