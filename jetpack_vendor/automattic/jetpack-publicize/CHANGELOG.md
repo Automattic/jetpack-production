@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.87.1-alpha] - unreleased
+## [0.88.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -13,6 +13,12 @@ This is an alpha version! The changes listed here are not final.
 - Connections: On WordPress.com sites, open the Instagram Business help link as the WordPress.com support doc inside the Help Center.
 - Exclude source map files from the distributed package.
 - Update package dependencies.
+
+### Deprecated
+- Deprecate Publicize::force_user_connection() and Publicize::admin_page_warning(), which backed the account-linking notice on Settings > Sharing.
+
+### Removed
+- Remove the WordPress.com account-linking notice from Settings > Sharing.
 
 ### Fixed
 - Bluesky: Pre-fill the handle field when reconnecting an account.
@@ -1664,7 +1670,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.87.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.87.0...v0.87.1-alpha
+[0.88.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.87.0...v0.88.0-alpha
 [0.87.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.86.2...v0.87.0
 [0.86.2]: https://github.com/Automattic/jetpack-publicize/compare/v0.86.1...v0.86.2
 [0.86.1]: https://github.com/Automattic/jetpack-publicize/compare/v0.86.0...v0.86.1

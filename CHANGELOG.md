@@ -59,6 +59,8 @@ This is an alpha version! The changes listed here are not final.
 - Search: Show each of the No Results block's empty-state messages as it will appear to visitors while editing, and tell the messages apart by name when browsing the page structure.
 - Search: Show the dashboard in the new rounded admin page frame.
 - Settings: Open the "Learn more" links in the settings info popovers as WordPress.com support docs inside the Help Center on WordPress.com sites, and hide the privacy information link there.
+- Sharing settings: keep the sharing buttons configuration available on block themes, alongside the recommendation to use the Sharing Buttons block.
+- Sharing settings: show the Sharing and Like buttons sections whichever features are active, each with its own save button, and give "Show buttons on" a section of its own.
 - Sites: expose is_legacy_gating_site, so clients can tell whether a plan change would move the site off the pre-2026 feature gating.
 - Sites API: return the "Require two-step authentication" SSO setting as the `jetpack_sso_require_two_step` site option.
 - Stats: Hide WordPress admin notices on the Stats dashboard, and let hosts show or hide the Stats sidebar entry.

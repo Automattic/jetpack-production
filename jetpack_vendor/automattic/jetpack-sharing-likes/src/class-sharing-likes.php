@@ -2,7 +2,7 @@
 /**
  * Package description here
  *
- * @package automattic/jetpack-post-media
+ * @package automattic/jetpack-sharing-likes
  */
 
 namespace Automattic\Jetpack;
@@ -10,7 +10,7 @@ namespace Automattic\Jetpack;
 /**
  * Class description.
  */
-class Post_Media {
+class Sharing_Likes {
 
-	const PACKAGE_VERSION = '0.2.1-alpha';
+	const PACKAGE_VERSION = '0.1.0-alpha';
 }
