@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: Open the Forms tab when it is requested directly instead of falling back to Responses.
+- Rating field: Cap the scale when rendering a form or a response so a malformed value cannot exhaust memory.
 
 ## [8.1.0] - 2026-09-15
 ### Changed

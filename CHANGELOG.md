@@ -74,6 +74,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboards: Stop the frame from flashing while loading and when switching admin pages.
 - Fix Jetpack admin pages and Jetpack blocks in the editor failing to load on WordPress.com-hosted sites.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
+- Forms: Cap the rating scale when rendering a form or a response so a malformed value cannot exhaust memory.
 - Forms: Open the Forms tab when it is requested directly instead of falling back to Responses.
 - Heartbeat: Guard Connection Heartbeat method calls with method_exists() to prevent fatals when another plugin loads an older Connection package.
 - Jetpack Manage: Only show the sidebar link to agency accounts.
