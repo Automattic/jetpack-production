@@ -57,6 +57,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Open the "Learn more" links in the settings info popovers as WordPress.com support docs inside the Help Center on WordPress.com sites, and hide the privacy information link there.
 - Sites: expose is_legacy_gating_site, so clients can tell whether a plan change would move the site off the pre-2026 feature gating.
 - Stats: Hide WordPress admin notices on the Stats dashboard, and let hosts show or hide the Stats sidebar entry.
+- Stats: Move the Stats settings to a new Settings tab in the Stats dashboard, and link to it from Jetpack Settings.
 - VideoPress: Add a setting to render players in the page from one shared player script instead of one frame per video.
 - VideoPress: With the inline player setting on, show each video's poster and load the player only when it is played.
 - VideoPress: With the shared player setting on, the block editor previews video blocks with the same shared player instead of one frame per block.
