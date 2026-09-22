@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a PayPal account menu to the top of the block settings sidebar: links to PayPal's checkout settings and transactions, and a Log out showing the connected account. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
 - Add a Product ID field, shipping fees, a handling fee and a discount, let tax be a flat amount as well as a percentage, check every fee against the decimal places its currency allows, hold a tax rate under 100% and to two decimal places, rework the customer note fields, keep the line breaks inside a product description, and match the Checkout Options controls to the design. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
+- Add Change item to a saved payment link's menu in the block settings sidebar, to switch the button to another of the account's payment links.
+- Ask whether to save or discard unsaved changes when leaving a saved payment link's form in the block settings sidebar.
+- Give each link in the existing links list a menu to duplicate it into a new payment link or delete it, and let the new link's form go back to the list.
 
 ### Changed
 - Open a saved payment link on its details in the block settings sidebar, with the form behind Edit. The notice saying when changes reach PayPal is gone, and the warning that a link changed at PayPal also shows on the details view.
@@ -19,8 +22,11 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Mark the post as changed when a payment button is updated to match its link on PayPal, so the change can be saved and shown on the page.
+- Reject a return URL over the 127 characters PayPal accepts, and say so in the block's form.
 - Removing a block no longer deletes its payment link from PayPal. The same link can be used by other posts, an email or a printed QR code, so it stays until it is deleted on purpose.
 - Say so when opening a post picks up changes made to the payment link elsewhere. The block used to take them silently, so a price or description edited in PayPal's dashboard, or by another block sharing the same link, changed under the merchant with nothing shown. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
+- Show a payment link's hosted ID without its PLB- prefix in the block settings sidebar, so it no longer wraps.
 - Stop a save overwriting payment link settings before the block has loaded them, and keep a value edited while the link is still loading.
 
 ## [0.9.0] - 2026-09-15

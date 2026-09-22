@@ -27,6 +27,9 @@ This is an alpha version! The changes listed here are not final.
 - Partner coupons: redeem them from My Jetpack.
 - PayPal Payment Buttons: Add an account menu to the top of the block settings sidebar, with links to PayPal's checkout settings and transactions, and a Log out showing the connected account. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
 - PayPal Payment Buttons: add a Product ID field, shipping fees, a handling fee and a discount, let tax be a flat amount as well as a percentage, check every fee against the decimal places its currency allows, hold a tax rate under 100% and to two decimal places, rework the customer note fields, keep the line breaks inside a product description, and match the Checkout Options controls to the design. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
+- PayPal Payment Buttons: Add Change item to a saved payment link's menu in the block settings sidebar, to switch the button to another of the account's payment links.
+- PayPal Payment Buttons: Ask whether to save or discard unsaved changes when leaving a saved payment link's form in the block settings sidebar.
+- PayPal Payment Buttons: Give each link in the existing links list a menu to duplicate it into a new payment link or delete it, and let the new link's form go back to the list.
 - PayPal Payment Buttons: Open a saved payment link on its details in the block settings sidebar, with the form behind Edit. The notice saying when changes reach PayPal is gone, and the warning that a link changed at PayPal also shows on the details view.
 - Premium Analytics: Add post thumbnails to the Posts & Pages report.
 - Premium Analytics: Align the Most popular post and Latest post cards with the design: regular-weight stat labels and a grey ground behind the featured image.
@@ -76,8 +79,11 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Restore the link from the stats card heading and chart to the Stats page.
 - My Jetpack: Show each notice once instead of twice.
 - Newsletter: Show the earliest subscription date for subscribers with both an email and a WordPress.com subscription.
+- PayPal Payment Buttons: Mark the post as changed when a payment button is updated to match its link on PayPal, so the change can be saved and shown on the page.
+- PayPal Payment Buttons: Reject a return URL over the 127 characters PayPal accepts, and say so in the block's form.
 - PayPal Payment Buttons: removing a block no longer deletes its payment link from PayPal.
 - PayPal Payment Buttons: say so when opening a post picks up changes made to the payment link elsewhere. The block used to take them silently, so a price or description edited in PayPal's dashboard, or by another block sharing the same link, changed under the merchant with nothing shown. Part of the API-managed payment buttons, behind a feature flag that is not yet enabled.
+- PayPal Payment Buttons: Show a payment link's hosted ID without its PLB- prefix in the block settings sidebar, so it no longer wraps.
 - PayPal Payment Buttons: Stop a save overwriting payment link settings before the block has loaded them, and keep a value edited while the link is still loading.
 - Premium Analytics: Add a Comparison period legend item to line charts that show a previous period, use square swatches in bar mode, keep the selected metric's legend item locked, and draw the Visitors swatch solid in the Traffic summary.
 - Premium Analytics: Draw the bars on a bar chart whose value stays the same across the whole period, instead of leaving the chart empty.
