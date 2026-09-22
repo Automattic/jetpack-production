@@ -58,6 +58,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the site's monthly views across every year on the Insights tab, in place of the daily heatmap; picking a month opens the Traffic tab over it.
 - Search: Show each of the No Results block's empty-state messages as it will appear to visitors while editing, and tell the messages apart by name when browsing the page structure.
 - Search: Show the dashboard in the new rounded admin page frame.
+- Settings: On WordPress.com sites, open the remaining support links (Anti-spam, Related Posts, Stats, Site Verification, Google Analytics, PayPal) as WordPress.com support docs inside the Help Center.
 - Settings: Open the "Learn more" links in the settings info popovers as WordPress.com support docs inside the Help Center on WordPress.com sites, and hide the privacy information link there.
 - Sharing settings: keep the sharing buttons configuration available on block themes, alongside the recommendation to use the Sharing Buttons block.
 - Sharing settings: show the Sharing and Like buttons sections whichever features are active, each with its own save button, and give "Show buttons on" a section of its own.
