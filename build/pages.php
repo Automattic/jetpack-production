@@ -9,6 +9,8 @@
 foreach ( [
 	__DIR__ . '/pages/jetpack-ai-hub/page.php',
 	__DIR__ . '/pages/jetpack-ai-hub/page-wp-admin.php',
+	__DIR__ . '/pages/jetpack-settings-dashboard/page.php',
+	__DIR__ . '/pages/jetpack-settings-dashboard/page-wp-admin.php',
 ] as $file ) {
 	if ( file_exists( $file ) ) {
 		require_once $file;

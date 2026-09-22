@@ -13,5 +13,12 @@ return array(
 		'page'        => 'jetpack-ai-hub',
 		'has_route'   => false,
 		'has_content' => true,
+	),
+	array(
+		'name'        => 'settings',
+		'path'        => '/',
+		'page'        => 'jetpack-settings-dashboard',
+		'has_route'   => false,
+		'has_content' => true,
 	)
 );

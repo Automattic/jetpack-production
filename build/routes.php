@@ -111,3 +111,22 @@ function jetpack_plugin_register_jetpack_ai_hub_wp_admin_page_routes() {
 }
 add_action( 'jetpack-ai-hub-wp-admin_init', 'jetpack_plugin_register_jetpack_ai_hub_wp_admin_page_routes' );
 
+// Page-specific route registration functions for jetpack-settings-dashboard
+/**
+ * Register routes for jetpack-settings-dashboard page (full-page mode).
+ */
+function jetpack_plugin_register_jetpack_settings_dashboard_page_routes() {
+	global $jetpack_plugin_jetpack_settings_dashboard_routes_data;
+	jetpack_plugin_register_page_routes( $jetpack_plugin_jetpack_settings_dashboard_routes_data, 'jetpack_plugin_register_jetpack_settings_dashboard_route' );
+}
+add_action( 'jetpack-settings-dashboard_init', 'jetpack_plugin_register_jetpack_settings_dashboard_page_routes' );
+
+/**
+ * Register routes for jetpack-settings-dashboard page (wp-admin mode).
+ */
+function jetpack_plugin_register_jetpack_settings_dashboard_wp_admin_page_routes() {
+	global $jetpack_plugin_jetpack_settings_dashboard_routes_data;
+	jetpack_plugin_register_page_routes( $jetpack_plugin_jetpack_settings_dashboard_routes_data, 'jetpack_plugin_register_jetpack_settings_dashboard_wp_admin_route' );
+}
+add_action( 'jetpack-settings-dashboard-wp-admin_init', 'jetpack_plugin_register_jetpack_settings_dashboard_wp_admin_page_routes' );
+
