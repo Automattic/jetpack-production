@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: Restore the admin screen ID after the wp-build enqueue check.
+- Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Welcome screen: Keep the plan feature check icons colored now that @wordpress/icons 16 draws them as strokes.
 
 ## [2.1.2] - 2026-09-15

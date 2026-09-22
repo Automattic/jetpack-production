@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Restore the admin screen ID after the wp-build enqueue check.
 - Fix author schema describing the wrong user on sites that use a third-party author plugin.
 - Fix the Settings tab failing to load on sites where a page title structure had been cleared from WordPress.com.
+- Footer: Hide Products and Help links when My Jetpack is unavailable.
 
 ## [0.9.4] - 2026-09-15
 ### Changed

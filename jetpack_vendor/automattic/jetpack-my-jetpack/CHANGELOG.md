@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Scan: Send buyers to the Scan dashboard after checkout instead of the retired Jetpack Assistant.
 
 ### Fixed
+- Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Jetpack Manage: Only show the sidebar link to agency accounts.
 - Products: keep the tab working when a module name is unavailable.
 - Show each notice once instead of twice.

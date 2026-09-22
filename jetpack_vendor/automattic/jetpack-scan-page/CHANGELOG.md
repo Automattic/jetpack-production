@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Exclude source map files from the distributed package.
 - Update package dependencies.
 
+### Fixed
+- Footer: Hide Products and Help links when My Jetpack is unavailable.
+
 ## [0.2.3] - 2026-09-15
 ### Changed
 - Hide the Scan sidebar item when Scan is not active. [#52156]

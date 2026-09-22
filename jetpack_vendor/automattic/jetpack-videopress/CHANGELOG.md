@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Chapters: Explain which formatting requirements prevent chapters in video descriptions from being saved.
 - Dashboard: Restore the admin screen ID after the wp-build enqueue check.
+- Footer: Hide Products and Help links when My Jetpack is unavailable.
 
 ## [0.51.0] - 2026-09-18
 ### Added

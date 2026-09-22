@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: Restore the admin screen ID after the wp-build enqueue check.
+- Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Subscribers: Show the earliest subscription date for subscribers with both an email and a WordPress.com subscription.
 
 ## [0.15.0] - 2026-09-15

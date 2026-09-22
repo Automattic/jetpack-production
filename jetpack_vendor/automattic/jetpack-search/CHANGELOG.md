@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: Keep the experience selector icons colored now that @wordpress/icons 16 draws them as strokes.
+- Footer: Hide Products and Help links when My Jetpack is unavailable.
 
 ## [8.1.2] - 2026-09-15
 ### Changed
