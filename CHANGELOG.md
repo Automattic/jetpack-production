@@ -97,6 +97,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin pages: Link the footer to the My Jetpack Features tab when it replaces the Products tab.
 - Carousel: Prefetch the Swiper library so the first click on a gallery image does not wait for it.
 - Carousel: Shorten the slide transition, and disable it entirely under prefers-reduced-motion.
+- Carousel: Stop fetching comments on every slide change; fetch them when the comments panel is opened.
 - Map block: Clean up unused attributes and provide fallback for invalid color values.
 - Modules: keep a module's name and description when no translation entry exists for it.
 - PayPal Payment Buttons: Show the result of deleting a link, disconnecting, or picking an existing link in a snackbar.
