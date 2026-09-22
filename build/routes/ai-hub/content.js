@@ -327,6 +327,13 @@ __( "Templates", "jetpack" );
 __( "Global styles", "jetpack" );
 __( "Navigation", "jetpack" );
 __( "Blocks", "jetpack" );
+__( "Enable MCP", "jetpack" );
+__( "Give your AI agent access to the site and control what it can read and write.", "jetpack" );
+__( "Connect agent", "jetpack" );
+__( "Connect your agent of choice: Claude, ChatGPT, and others.", "jetpack" );
+__( "Manage via chat", "jetpack" );
+__( "Create content, get reports, and manage your site from the conversation.", "jetpack" );
+__( "How it works", "jetpack" );
 __( "All enabled", "jetpack" );
 __( "Disabled", "jetpack" );
 /* translators: %1$d: enabled count, %2$d: total count */

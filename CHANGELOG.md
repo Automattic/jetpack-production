@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Activity Log: make it a Jetpack module so it can be turned on and off from My Jetpack, hiding the sidebar entry when off.
+- AI: Add a "How it works" guide to the top of the MCP and Connectors tab.
 - AI: Point the Cursor setup instructions on the MCP agent setup page at the WordPress.com plugin on the Cursor Marketplace.
 - AI: Serve the Jetpack AI page through the standard Jetpack admin frame.
 - Daily Writing Prompt: Stop offering the Write editor after a switch to the Block editor.
