@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the WordPress.com account-linking notice from Settings > Sharing.
 
 ### Fixed
+- Exclude `build/assets/index.d.ts` from published package.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 
 ## [0.87.1] - 2026-09-21
