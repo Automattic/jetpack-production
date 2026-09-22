@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Match the date range control in widget headers to the height of the other header controls, and draw the date triggers with the design system button states.
 - Premium Analytics: Note in the Earnings History widget when the site has adjustments, linking to the Adjustments history tab of the Earnings report.
 - Search: Show the dashboard in the new rounded admin page frame.
+- Settings: Move to its own admin page; existing links redirect there.
 - Settings: On WordPress.com sites, open the remaining support links (Anti-spam, Related Posts, Stats, Site Verification, Google Analytics, PayPal) as WordPress.com support docs inside the Help Center.
 - Sharing settings: keep the sharing buttons configuration available on block themes, alongside the recommendation to use the Sharing Buttons block.
 - Sharing settings: show the Sharing and Like buttons sections whichever features are active, each with its own save button, and give "Show buttons on" a section of its own.
