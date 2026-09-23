@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Draw the bars on a bar chart whose value stays the same across the whole period, instead of leaving the chart empty.
 - Premium Analytics: Show a dash instead of zero in the Earnings history report when a period has no Ads Served count.
 - Premium Analytics: Show each number on a chart's value axis once when the counts are small, instead of repeating 0 and 1.
+- Premium Analytics: Start bar chart value axes at zero so a small change no longer looks like a large one.
 - Social: Show each number on the traffic chart's value axis once when visit counts are small.
 - Stats: Draw the My Jetpack stats chart's gridlines only at whole numbers when counts are small.
 
