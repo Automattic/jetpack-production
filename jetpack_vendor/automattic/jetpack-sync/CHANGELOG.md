@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- WooCommerce Analytics: Fix a fatal error when syncing orders while WooCommerce Analytics is disabled.
+
 ## [5.1.2] - 2026-09-18
 ### Added
 - Sync the comment meta Jetpack Comments writes for commenters signed in through WordPress.com. [#52166]
