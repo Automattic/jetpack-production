@@ -63,6 +63,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Show each number on the traffic chart's value axis once when visit counts are small.
 - Stats: Draw the My Jetpack stats chart's gridlines only at whole numbers when counts are small.
 - Stats: Stop the pricing grid from coming back for up to 5 minutes after choosing Start for free.
+- VideoPress: Fix private video playback on sites using WPML.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Carousel: Prefetch the Swiper library so the first click on a gallery image does not wait for it.

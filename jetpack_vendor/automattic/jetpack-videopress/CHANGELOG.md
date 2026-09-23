@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Exclude `wordpress-augmentations.d.ts` from published package.
+- Fix private video playback on sites using WPML.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 
 ## [0.51.1] - 2026-09-21
