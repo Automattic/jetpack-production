@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Zoom Scheduler block: Add a block for embedding Zoom Scheduler booking page URLs on all plans.
 
 ### Bug fixes
+- Admin: Hide masthead links when My Jetpack is unavailable.
 - AI: Disable feature toggles when custom code forces AI off.
 - AI: Show the Learn more link when SEO settings are unavailable.
 - External Media: Fix the width of the Select Media button in narrow block placeholders, such as the Media & Text block.
