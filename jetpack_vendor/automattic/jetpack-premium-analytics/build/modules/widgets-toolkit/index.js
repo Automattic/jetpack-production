@@ -58,8 +58,11 @@ __( "Fewer views per day", "jetpack-premium-analytics-pkg" );
 __( "More views per day", "jetpack-premium-analytics-pkg" );
 __( "Fewer views", "jetpack-premium-analytics-pkg" );
 __( "More views", "jetpack-premium-analytics-pkg" );
+/* translators: 1: metric name, 2: date. */
+__( "No data for %1$s · %2$s", "jetpack-premium-analytics-pkg" );
 /* translators: 1: formatted value, 2: metric name, 3: date. */
 __( "%1$s %2$s · %3$s", "jetpack-premium-analytics-pkg" );
+__( "No data", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Select metric", "jetpack-premium-analytics-pkg" );
 /* translators: %s is a person's name. */

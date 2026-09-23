@@ -66,6 +66,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add a Comparison period legend item to line charts that show a previous period, use square swatches in bar mode, keep the selected metric's legend item locked, and draw the Visitors swatch solid in the Traffic summary.
 - Premium Analytics: Draw the bars on a bar chart whose value stays the same across the whole period, instead of leaving the chart empty.
 - Premium Analytics: Fix store data failing to sync when WooCommerce Analytics is turned off.
+- Premium Analytics: Leave the months before a site launched or turned on subscriptions empty in the Subscriber summary chart, with a "No data" tooltip, instead of showing zero.
 - Premium Analytics: Show a dash instead of zero in the Earnings history report when a period has no Ads Served count.
 - Premium Analytics: Show each number on a chart's value axis once when the counts are small, instead of repeating 0 and 1.
 - Premium Analytics: Start bar chart value axes at zero so a small change no longer looks like a large one.
