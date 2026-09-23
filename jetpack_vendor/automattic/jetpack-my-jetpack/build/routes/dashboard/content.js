@@ -478,6 +478,28 @@ __( "Here are the tools that we think will help you reach your website goals:", 
 __( "Recommendations menu", "jetpack-my-jetpack" );
 __( "Previous", "jetpack-my-jetpack" );
 __( "Next", "jetpack-my-jetpack" );
+__( "All categories", "jetpack-my-jetpack" );
+__( "Recommended", "jetpack-my-jetpack" );
+__( "Included in plan", "jetpack-my-jetpack" );
+__( "Security", "jetpack-my-jetpack" );
+__( "Growth", "jetpack-my-jetpack" );
+__( "Performance", "jetpack-my-jetpack" );
+__( "Other", "jetpack-my-jetpack" );
+__( "Not available on multisite", "jetpack-my-jetpack" );
+__( "Explore all", "jetpack-my-jetpack" );
+__( "We couldn’t load your features.", "jetpack-my-jetpack" );
+__( "Refresh the page, or try again in a moment.", "jetpack-my-jetpack" );
+__( "Reload", "jetpack-my-jetpack" );
+/* translators: %s is the term someone searched the features list for. */
+__( "No features match “%s”.", "jetpack-my-jetpack" );
+__( "It may go by another name here, or the answer may be on jetpack.com.", "jetpack-my-jetpack" );
+/* translators: %s is the term someone searched the features list for. */
+__( "Search jetpack.com for “%s”", "jetpack-my-jetpack" );
+__( "No features are active yet.", "jetpack-my-jetpack" );
+__( "Turn one on and it will appear here.", "jetpack-my-jetpack" );
+__( "Everything is turned on.", "jetpack-my-jetpack" );
+__( "There are no inactive features left on this site.", "jetpack-my-jetpack" );
+__( "No features found.", "jetpack-my-jetpack" );
 __( "Legacy sharing buttons cannot be customized on block themes.", "jetpack-my-jetpack" );
 _x( "Add the Sharing Buttons block to your theme’s template.", "Sharing block migration instruction", "jetpack-my-jetpack" );
 __( "Switch to Sharing Buttons block", "jetpack-my-jetpack" );
@@ -560,7 +582,6 @@ __( "Learn more about %s", "jetpack-my-jetpack" );
 __( "Essential", "jetpack-my-jetpack" );
 __( "Enabled by your host or site administrator", "jetpack-my-jetpack" );
 __( "Disabled by your host or site administrator", "jetpack-my-jetpack" );
-__( "Not available on multisite", "jetpack-my-jetpack" );
 /* translators: %d is how many features were switched on. */
 _n( "%d feature activated.", "%d features activated.", 1, "jetpack-my-jetpack" );
 /* translators: %d is how many features were switched off. */
@@ -599,26 +620,18 @@ __( "With a paid plan", "jetpack-my-jetpack" );
 __( "Available in", "jetpack-my-jetpack" );
 __( "What you get", "jetpack-my-jetpack" );
 __( "All", "jetpack-my-jetpack" );
-__( "Security", "jetpack-my-jetpack" );
-__( "Growth", "jetpack-my-jetpack" );
 __( "Complete", "jetpack-my-jetpack" );
 __( "Grid view", "jetpack-my-jetpack" );
 __( "List view", "jetpack-my-jetpack" );
 __( "Filter features", "jetpack-my-jetpack" );
 __( "Search features", "jetpack-my-jetpack" );
 __( "Layout", "jetpack-my-jetpack" );
-__( "All categories", "jetpack-my-jetpack" );
-__( "Recommended", "jetpack-my-jetpack" );
-__( "Included in plan", "jetpack-my-jetpack" );
-__( "Performance", "jetpack-my-jetpack" );
-__( "Other", "jetpack-my-jetpack" );
 /* translators: %d is how many features were added to the wp-admin menu. */
 _n( "%d feature is now in your menu", "%d features are now in your menu", 1, "jetpack-my-jetpack" );
 /* translators: %s is a feature name, e.g. "Stats". */
 __( "%s is now in your menu", "jetpack-my-jetpack" );
 /* translators: %d is how many features the filter or search matched. */
 _n( "%d feature shown", "%d features shown", 1, "jetpack-my-jetpack" );
-__( "No features found.", "jetpack-my-jetpack" );
 __( "Ask us a question", "jetpack-my-jetpack" );
 __( "Have a question? Our AI Assistant can help, or connect you to our support team.", "jetpack-my-jetpack" );
 __( "Troubleshooting", "jetpack-my-jetpack" );

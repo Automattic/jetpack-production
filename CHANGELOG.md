@@ -56,6 +56,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Fix the page failing to load for users who can edit posts but have no Jetpack menu, such as editors on unconnected sites.
 - My Jetpack: Point users who cannot connect the site at an administrator, instead of an onboarding screen they cannot complete.
 - My Jetpack: Show each notice once instead of twice.
+- My Jetpack: stretch the tab content background to the full height of the page.
 - Newsletter: send the email design screen's test email through the newsletter renderer.
 - Newsletter: Show the earliest subscription date for subscribers with both an email and a WordPress.com subscription.
 - PayPal Payment Buttons: Mark the post as changed when a payment button is updated to match its link on PayPal, so the change can be saved and shown on the page.

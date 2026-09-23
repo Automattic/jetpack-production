@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.6.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Features tab: say why the list is empty and offer a way forward, behind the my-jetpack-features-tab feature flag.
+- My Jetpack: add an icon to the Features tab's empty states.
+
+### Fixed
+- My Jetpack: keep the tab footer flush with the bottom of the content surface.
+- My Jetpack: stretch the tab content background to the full height of the page.
+
 ## [6.6.0] - 2026-09-23
 ### Added
 - Add a filter letting hosts hide products and modules from My Jetpack. [#52505]
@@ -2972,6 +2984,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[6.6.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.6.0...6.6.1-alpha
 [6.6.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.5.0...6.6.0
 [6.5.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.4.1...6.5.0
 [6.4.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.4.0...6.4.1
