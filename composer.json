@@ -18,7 +18,7 @@
 		"automattic/jetpack-admin-ui": "^0.13.0",
 		"automattic/jetpack-agents-manager": "^0.12.3-alpha",
 		"automattic/jetpack-assets": "^5.0.6",
-		"automattic/jetpack-autoloader": "^6.0.0",
+		"automattic/jetpack-autoloader": "^6.0.1-alpha",
 		"automattic/jetpack-backup": "^5.0.5-alpha",
 		"automattic/jetpack-blaze": "^0.29.5",
 		"automattic/jetpack-blocks": "^4.0.0",
