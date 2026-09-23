@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Firewall: Avoid a fatal error when a blocked IP hits a site running the firewall in standalone mode.
+
 ## [0.29.0] - 2026-09-01
 ### Removed
 - Minimum supported PHP version is now 7.4. [#51515]
