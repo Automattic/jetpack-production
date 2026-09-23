@@ -305,6 +305,7 @@ return array(
     'Automattic\\Jetpack\\Plugin\\Deprecate' => $baseDir . '/src/class-deprecate.php',
     'Automattic\\Jetpack\\Plugin\\Footer_Links' => $baseDir . '/src/class-footer-links.php',
     'Automattic\\Jetpack\\Plugin\\Jetpack_Script_Data' => $baseDir . '/src/class-jetpack-script-data.php',
+    'Automattic\\Jetpack\\Plugin\\Theme_Styles_Sync' => $baseDir . '/src/class-theme-styles-sync.php',
     'Automattic\\Jetpack\\Plugin\\Tracking' => $baseDir . '/src/class-tracking.php',
     'Automattic\\Jetpack\\Plugins_Installer' => $baseDir . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-plugins-installer.php',
     'Automattic\\Jetpack\\Podcast\\Admin_Page' => $baseDir . '/jetpack_vendor/automattic/jetpack-podcast/src/class-admin-page.php',

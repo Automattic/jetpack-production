@@ -1214,6 +1214,10 @@ return array(
 		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/class-jetpack-script-data.php'
 	),
+	'Automattic\\Jetpack\\Plugin\\Theme_Styles_Sync' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/class-theme-styles-sync.php'
+	),
 	'Automattic\\Jetpack\\Plugin\\Tracking' => array(
 		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/class-tracking.php'
