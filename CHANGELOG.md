@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Sites API: return the "Require two-step authentication" SSO setting as the `jetpack_sso_require_two_step` site option.
 - Stats: Move the Stats settings to a new Settings tab in the Stats dashboard, and link to it from Jetpack Settings.
 - Stats: Recognize the standalone Jetpack Stats plugin in My Jetpack, and install it when Stats is activated there.
+- VideoPress: With the inline player setting on, draw the play button like the player's and show a loading spinner from the click until the player has loaded.
 - Zoom Scheduler block: Add a block for embedding Zoom Scheduler booking page URLs on all plans.
 
 ### Bug fixes
@@ -70,6 +71,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Stop the pricing grid from coming back for up to 5 minutes after choosing Start for free.
 - Tooltips: Open information tooltips with the keyboard and dismiss them with Escape.
 - VideoPress: Fix private video playback on sites using WPML.
+- VideoPress: With the inline player setting on, show the poster of private videos, and of videos the server could not look up, before they are played instead of a black box.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Carousel: Prefetch the Swiper library so the first click on a gallery image does not wait for it.

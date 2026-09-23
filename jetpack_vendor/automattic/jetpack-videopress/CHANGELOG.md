@@ -9,10 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Inline player: draw the facade's play button like the player's and show the player's loading spinner from the click until the player has mounted.
+
 ### Fixed
 - Exclude `wordpress-augmentations.d.ts` from published package.
 - Fix private video playback on sites using WPML.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
+- Inline player: show the poster of private videos, and of videos the server could not look up, before they are played instead of a black box.
 
 ## [0.51.1] - 2026-09-21
 ### Fixed
