@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Action Bar: Add the WordPress.com front-end Action Bar, ported from wpcom. Loads on WordPress.com Simple only.
 - Add the Subscribers tab URL to the admin script data, or null when the current user cannot open it.
+- Subscribers: Label "Not sending" subscribers as "Bounced" or "Emails paused", with the reason in a tooltip.
 
 ### Changed
 - Action Bar: Reflect the subscribed state wpcom patches in after a cached page loads, and ignore a second run of the script.
