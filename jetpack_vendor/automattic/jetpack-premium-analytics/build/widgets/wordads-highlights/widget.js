@@ -9,4 +9,3 @@
 __( "Earnings", "jetpack-premium-analytics-pkg" );
 __( "Paid", "jetpack-premium-analytics-pkg" );
 __( "Outstanding amount", "jetpack-premium-analytics-pkg" );
-__( "Metrics", "jetpack-premium-analytics-pkg" );

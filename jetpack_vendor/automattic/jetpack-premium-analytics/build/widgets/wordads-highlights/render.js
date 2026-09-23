@@ -9,7 +9,5 @@
 __( "Earnings", "jetpack-premium-analytics-pkg" );
 __( "Paid", "jetpack-premium-analytics-pkg" );
 __( "Outstanding amount", "jetpack-premium-analytics-pkg" );
-__( "Metrics", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load WordAds earnings. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
-__( "Select at least one metric to display.", "jetpack-premium-analytics-pkg" );
