@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add protected owner fields and a default UI filter to the connection initial state.
+
 ### Changed
 - Partner coupons: check whether a coupon is still valid on My Jetpack too.
 - Track clicks on the reconnect CTA and the Site Health and support links in the connection error notice.
