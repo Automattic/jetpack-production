@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Disable feature toggles when custom code forces AI off.
 - AI: Show the Learn more link when SEO settings are unavailable.
 - Connection: Report a broken connection on My Jetpack's connection card instead of claiming everything looks good, and show a break only the connection owner can repair as a warning, not an error, to everyone else.
+- CRM: keep the site owner on My Jetpack after activating Jetpack CRM, instead of sending them to CRM's full-screen setup wizard.
 - External Media: Fix the width of the Select Media button in narrow block placeholders, such as the Media & Text block.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Forms: Cap the rating scale when rendering a form or a response so a malformed value cannot exhaust memory.
