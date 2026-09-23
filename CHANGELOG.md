@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Lead each chart tooltip row with the value, then the metric, then the date.
 - Premium Analytics: Match the date range control in widget headers to the height of the other header controls, and draw the date triggers with the design system button states.
 - Premium Analytics: Note in the Earnings History widget when the site has adjustments, linking to the Adjustments history tab of the Earnings report.
+- Premium Analytics: Show payment status as a badge in the Earnings History widget, and shorten the pending statuses to one word with the reason beside them. Negative amounts in the widget are no longer red; only the badge carries colour.
 - Search: Show the dashboard in the new rounded admin page frame.
 - Settings: Load the Settings page in the new Jetpack admin frame.
 - Settings: Move to its own admin page; existing links redirect there.
