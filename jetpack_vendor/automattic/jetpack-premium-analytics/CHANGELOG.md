@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Add a feature flag that shows Automatticians every section of a preview-limited dashboard.
 
 ### Changed
+- Charts: Start line chart value axes at zero, and pad the Subscribers chart's axis a little below its data instead.
 - Chart tooltips: lead each row with the value, then the metric as its unit, then the date.
 - Date controls: Match the date range control in widget headers to the height of the other header controls, and draw the date triggers with the design system button states.
 - Sync: Use the shared WooCommerce Analytics module from the jetpack-sync package, sync store analytics whether or not WooCommerce order attribution is enabled, and use the shared module in place of the WooCommerce Analytics plugin's own when both are active.
