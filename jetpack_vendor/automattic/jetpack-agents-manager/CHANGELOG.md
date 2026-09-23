@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Remove obsolete CIAB and unified experience integration paths.
+
 ### Fixed
 - Exclude `src/js/` from published package.
 
