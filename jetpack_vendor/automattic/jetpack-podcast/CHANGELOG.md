@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
+- Stats: Draw the daily downloads chart's gridlines at the same days as its labels.
 
 ## [2.1.3] - 2026-09-21
 ### Changed

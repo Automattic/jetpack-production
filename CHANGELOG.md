@@ -41,9 +41,13 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Mark the post as changed when a payment button is updated to match its link on PayPal, so the change can be saved and shown on the page.
 - PayPal Payment Buttons: Reject a return URL over the 127 characters PayPal accepts, and say so in the block's form.
 - PayPal Payment Buttons: Show a payment link's hosted ID without its PLB- prefix in the block settings sidebar, so it no longer wraps.
+- Podcast: Draw the daily downloads chart's gridlines at the same days as its labels.
 - Premium Analytics: Add a Comparison period legend item to line charts that show a previous period, use square swatches in bar mode, keep the selected metric's legend item locked, and draw the Visitors swatch solid in the Traffic summary.
 - Premium Analytics: Draw the bars on a bar chart whose value stays the same across the whole period, instead of leaving the chart empty.
 - Premium Analytics: Show a dash instead of zero in the Earnings history report when a period has no Ads Served count.
+- Premium Analytics: Show each number on a chart's value axis once when the counts are small, instead of repeating 0 and 1.
+- Social: Show each number on the traffic chart's value axis once when visit counts are small.
+- Stats: Draw the My Jetpack stats chart's gridlines only at whole numbers when counts are small.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Carousel: Prefetch the Swiper library so the first click on a gallery image does not wait for it.
