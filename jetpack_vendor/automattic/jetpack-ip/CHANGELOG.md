@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add Utils::url_is_public() to check whether a URL is a safe destination for a server-side request.
+
 ## [0.6.0] - 2026-08-26
 ### Removed
 - Minimum supported PHP version is now 7.4. [#51515]
@@ -130,6 +137,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add jetpack-ip package functionality [#28846]
 - Initialized the package. [#28765]
 
+[0.7.0-alpha]: https://github.com/automattic/jetpack-ip/compare/v0.6.0...v0.7.0-alpha
 [0.6.0]: https://github.com/automattic/jetpack-ip/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/automattic/jetpack-ip/compare/v0.4.14...v0.5.0
 [0.4.14]: https://github.com/automattic/jetpack-ip/compare/v0.4.13...v0.4.14
