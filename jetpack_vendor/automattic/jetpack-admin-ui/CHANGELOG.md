@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.14.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Honor `jetpack_feature_policy` when deciding which Jetpack items appear in the sidebar.
+
 ## [0.13.0] - 2026-09-21
 ### Added
 - Sidebar: Add `Admin_Menu::add_top_level_menu()` so a Jetpack page outside the Jetpack menu can declare a visibility gate and appear in the `jetpack_admin_menu_visibility` filter. [#52351]
@@ -381,6 +388,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixing menu visibility issues.
 
+[0.14.0-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.13.0...0.14.0-alpha
 [0.13.0]: https://github.com/Automattic/jetpack-admin-ui/compare/0.12.1...0.13.0
 [0.12.1]: https://github.com/Automattic/jetpack-admin-ui/compare/0.12.0...0.12.1
 [0.12.0]: https://github.com/Automattic/jetpack-admin-ui/compare/0.11.4...0.12.0

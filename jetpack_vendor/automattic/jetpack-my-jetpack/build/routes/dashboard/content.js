@@ -558,6 +558,9 @@ __( "Install Jetpack", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "Learn more about %s", "jetpack-my-jetpack" );
 __( "Essential", "jetpack-my-jetpack" );
+__( "Enabled by your host or site administrator", "jetpack-my-jetpack" );
+__( "Disabled by your host or site administrator", "jetpack-my-jetpack" );
+__( "Not available on multisite", "jetpack-my-jetpack" );
 /* translators: %d is how many features were switched on. */
 _n( "%d feature activated.", "%d features activated.", 1, "jetpack-my-jetpack" );
 /* translators: %d is how many features were switched off. */
@@ -609,7 +612,6 @@ __( "Recommended", "jetpack-my-jetpack" );
 __( "Included in plan", "jetpack-my-jetpack" );
 __( "Performance", "jetpack-my-jetpack" );
 __( "Other", "jetpack-my-jetpack" );
-__( "Not available on multisite", "jetpack-my-jetpack" );
 /* translators: %d is how many features the filter or search matched. */
 _n( "%d feature shown", "%d features shown", 1, "jetpack-my-jetpack" );
 __( "No features found.", "jetpack-my-jetpack" );

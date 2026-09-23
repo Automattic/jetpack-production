@@ -5,15 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.5.1-alpha] - unreleased
+## [6.6.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add a filter letting hosts hide products and modules from My Jetpack.
+
+### Changed
+- Features: Honor `jetpack_feature_policy` when hiding items from the page.
+- Features: Show a note instead of a switch on a plugin your host or site administrator has enabled or disabled.
+- Show a note instead of a toggle on a module your host or site administrator has enabled or disabled.
 
 ### Fixed
 - Connection status card: Report a broken connection instead of claiming everything looks good, with the same details and actions as the connection error notice. The notice now shows a break only the connection owner can repair as a warning to everyone else.
 - CRM: keep the site owner on My Jetpack after activating Jetpack CRM, instead of sending them to CRM's full-screen setup wizard.
 - Fix My Jetpack failing to load for users who can edit posts but have no Jetpack menu, such as editors on unconnected sites.
 - Point users who cannot connect the site at an administrator, instead of an onboarding screen they cannot complete.
+- Report an error instead of success when switching a module your host or site administrator has enabled or disabled.
 
 ## [6.5.0] - 2026-09-23
 ### Added
@@ -2963,7 +2972,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.5.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.5.0...6.5.1-alpha
+[6.6.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.5.0...6.6.0-alpha
 [6.5.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.4.1...6.5.0
 [6.4.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.4.0...6.4.1
 [6.4.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.3.0...6.4.0

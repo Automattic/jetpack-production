@@ -46,7 +46,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '6.5.1-alpha';
+	const PACKAGE_VERSION = '6.6.0-alpha';
 
 	/**
 	 * Feature flag that swaps the My Jetpack Products tab for a Features tab.
@@ -659,6 +659,7 @@ class Initializer {
 				),
 				'isStatsModuleActive'    => $modules->is_active( 'stats' ),
 				'canUserViewStats'       => current_user_can( 'manage_options' ) || current_user_can( 'view_stats' ),
+				'hiddenFeatures'         => Feature_Visibility::get_hidden(),
 				'sandboxedDomain'        => $sandboxed_domain,
 				'isDevVersion'           => $is_dev_version,
 				'isAtomic'               => ( new Status_Host() )->is_woa_site(),
