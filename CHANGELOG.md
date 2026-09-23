@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Zoom Scheduler block: Add a block for embedding Zoom Scheduler booking page URLs on all plans.
 
 ### Bug fixes
+- AI: Disable feature toggles when custom code forces AI off.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Forms: Cap the rating scale when rendering a form or a response so a malformed value cannot exhaust memory.
 - Google Fonts: Detect fonts followed by fallback families so selected fonts render on the front end.
