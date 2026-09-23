@@ -12,13 +12,16 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Keyring: Stop passing Settings > Sharing as the return page of a connection request.
 - Load admin script data on the new Jetpack Settings page.
+- Services: Stop adding the legacy ID, connect_URL, external_users_only and multiple_external_user_ID_support fields to the services list on Jetpack sites.
 
 ### Deprecated
 - Deprecate Publicize::admin_page_load() and Publicize::display_connection_error(); connection errors are no longer rendered on Settings > Sharing.
 - Deprecate Publicize::force_user_connection() and Publicize::admin_page_warning(), which backed the account-linking notice on Settings > Sharing.
+- Deprecate Publicize_Base::get_available_service_data(), which now always returns an empty array; services and their connect URLs come from the publicize/services REST endpoint.
 
 ### Removed
 - Remove the connection-error notice from Settings > Sharing, which loaded a whole wp-admin screen inside the connection popup.
+- Remove the Publicize_UI methods deprecated in 0.42.3 that backed the old Publicize box on Settings > Sharing: sharing_menu(), wrapper_admin_page(), management_page(), load_assets() and admin_page().
 - Remove the retired Publicize services from Keyring_Helper::SERVICES, leaving Google Site Verification as the only service connected from the site.
 - Remove the unreachable connection-completed branch of the Keyring request handler.
 - Remove the WordPress.com account-linking notice from Settings > Sharing.
