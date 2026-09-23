@@ -10,12 +10,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Keyring: Stop passing Settings > Sharing as the return page of a connection request.
 - Load admin script data on the new Jetpack Settings page.
 
 ### Deprecated
+- Deprecate Publicize::admin_page_load() and Publicize::display_connection_error(); connection errors are no longer rendered on Settings > Sharing.
 - Deprecate Publicize::force_user_connection() and Publicize::admin_page_warning(), which backed the account-linking notice on Settings > Sharing.
 
 ### Removed
+- Remove the connection-error notice from Settings > Sharing, which loaded a whole wp-admin screen inside the connection popup.
+- Remove the retired Publicize services from Keyring_Helper::SERVICES, leaving Google Site Verification as the only service connected from the site.
+- Remove the unreachable connection-completed branch of the Keyring request handler.
 - Remove the WordPress.com account-linking notice from Settings > Sharing.
 
 ### Fixed

@@ -69,6 +69,7 @@ This is an alpha version! The changes listed here are not final.
 - Map block: Clean up unused attributes and provide fallback for invalid color values.
 - Premium Analytics: register the Ads tab from the WordAds module.
 - Premium Analytics: Sync store analytics whether or not WooCommerce order attribution is enabled.
+- Sharing settings: Stop showing Jetpack Social connection errors on the Settings > Sharing screen.
 - Stats: Load the admin bar chart and Stats link from the Stats Admin package, and deprecate the matching functions in the Stats module.
 
 ## 16.3-a.3 - 2026-09-21
