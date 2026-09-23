@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Connection status card: Report a broken connection instead of claiming everything looks good, with the same details and actions as the connection error notice. The notice now shows a break only the connection owner can repair as a warning to everyone else.
 - CRM: keep the site owner on My Jetpack after activating Jetpack CRM, instead of sending them to CRM's full-screen setup wizard.
+- Features tab: Open a feature's details with a subtle rise, and without the text blurring as the dialog appears.
 - Fix My Jetpack failing to load for users who can edit posts but have no Jetpack menu, such as editors on unconnected sites.
 - Point users who cannot connect the site at an administrator, instead of an onboarding screen they cannot complete.
 - Report an error instead of success when switching a module your host or site administrator has enabled or disabled.
