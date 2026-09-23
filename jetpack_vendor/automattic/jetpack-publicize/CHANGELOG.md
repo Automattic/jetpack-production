@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Keyring: Stop passing Settings > Sharing as the return page of a connection request.
 - Load admin script data on the new Jetpack Settings page.
 - Services: Stop adding the legacy ID, connect_URL, external_users_only and multiple_external_user_ID_support fields to the services list on Jetpack sites.
+- Use the shared wp-build-polyfills helper to order the screen-ID alias around wp-build's generated enqueue check.
 
 ### Deprecated
 - Deprecate Publicize::admin_page_load() and Publicize::display_connection_error(); connection errors are no longer rendered on Settings > Sharing.

@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Use the shared wp-build-polyfills helper to order the screen-ID alias around wp-build's generated enqueue check.
+
 ### Fixed
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Stats: Draw the daily downloads chart's gridlines at the same days as its labels.

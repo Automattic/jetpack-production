@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Show the dashboard in the new rounded admin page frame.
+- Use the shared wp-build-polyfills helper to order the screen-ID alias around wp-build's generated enqueue check.
 
 ### Fixed
 - Footer: Hide Products and Help links when My Jetpack is unavailable.

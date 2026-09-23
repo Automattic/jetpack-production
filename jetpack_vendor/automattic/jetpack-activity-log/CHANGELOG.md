@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Use the shared wp-build-polyfills helper to order the screen-ID alias around wp-build's generated enqueue check.
+
 ## [0.4.1] - 2026-09-21
 ### Fixed
 - Dashboard: Restore the admin screen ID after the wp-build enqueue check. [#52471]

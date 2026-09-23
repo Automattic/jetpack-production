@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Inline player: draw the facade's play button like the player's and show the player's loading spinner from the click until the player has mounted.
+- Use the shared wp-build-polyfills helper to order the screen-ID alias around wp-build's generated enqueue check.
 
 ### Fixed
 - Exclude `wordpress-augmentations.d.ts` from published package.

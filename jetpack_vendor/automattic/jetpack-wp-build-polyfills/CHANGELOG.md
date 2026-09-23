@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a WP_Build_Screen_Id helper that hooks a wp-build dashboard's screen-ID alias before the generated enqueue check and the restore after, so the two can't be hooked out of order or one dropped.
 - Add loadI18nManifest() to cache another build's i18n manifest by URL, so its lazy bundles can load catalogs on demand.
 
 ## [0.5.8] - 2026-09-23

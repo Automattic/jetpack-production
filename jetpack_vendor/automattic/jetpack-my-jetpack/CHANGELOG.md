@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Features: Honor `jetpack_feature_policy` when hiding items from the page.
 - Features: Show a note instead of a switch on a plugin your host or site administrator has enabled or disabled.
 - Show a note instead of a toggle on a module your host or site administrator has enabled or disabled.
+- Use the shared wp-build-polyfills helper to order the screen-ID alias around wp-build's generated enqueue check.
 
 ### Fixed
 - Connection status card: Report a broken connection instead of claiming everything looks good, with the same details and actions as the connection error notice. The notice now shows a break only the connection owner can repair as a warning to everyone else.
