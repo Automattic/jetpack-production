@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Partner coupons: check whether a coupon is still valid on My Jetpack too.
+- Track clicks on the reconnect CTA and the Site Health and support links in the connection error notice.
 
 ### Removed
 - Stop recording how a protected owner was confirmed.
