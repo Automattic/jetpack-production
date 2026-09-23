@@ -66,7 +66,7 @@
 		"automattic/jetpack-videopress": "^0.51.2-alpha",
 		"automattic/jetpack-waf": "^0.29.1-alpha",
 		"automattic/jetpack-wp-abilities": "^0.2.0",
-		"automattic/jetpack-wp-build-polyfills": "^0.5.8",
+		"automattic/jetpack-wp-build-polyfills": "^0.6.0-alpha",
 		"automattic/woocommerce-analytics": "^0.17",
 		"wp-php-toolkit/reprint-server": "0.10.6"
 	},

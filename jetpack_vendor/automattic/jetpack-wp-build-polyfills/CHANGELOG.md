@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add loadI18nManifest() to cache another build's i18n manifest by URL, so its lazy bundles can load catalogs on demand.
+
 ## [0.5.8] - 2026-09-23
 ### Fixed
 - Exclude `src/js/` from published package. [#52650]
@@ -185,6 +192,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Add @wordpress/ui to devDependencies so the boot module bundles it instead of externalizing it as an unregistered wp-ui script handle, which caused a blank page at runtime. [#47727]
 
+[0.6.0-alpha]: https://github.com/Automattic/jetpack-wp-build-polyfills/compare/v0.5.8...v0.6.0-alpha
 [0.5.8]: https://github.com/Automattic/jetpack-wp-build-polyfills/compare/v0.5.7...v0.5.8
 [0.5.7]: https://github.com/Automattic/jetpack-wp-build-polyfills/compare/v0.5.6...v0.5.7
 [0.5.6]: https://github.com/Automattic/jetpack-wp-build-polyfills/compare/v0.5.5...v0.5.6
