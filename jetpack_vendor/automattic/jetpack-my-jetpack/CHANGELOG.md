@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a filter letting hosts hide products and modules from My Jetpack.
+- Features: Update the wp-admin sidebar in place when a feature is switched on or off, and point to its new menu item.
 
 ### Changed
 - Features: Honor `jetpack_feature_policy` when hiding items from the page.

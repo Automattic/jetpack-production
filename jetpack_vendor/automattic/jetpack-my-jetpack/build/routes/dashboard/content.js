@@ -612,6 +612,10 @@ __( "Recommended", "jetpack-my-jetpack" );
 __( "Included in plan", "jetpack-my-jetpack" );
 __( "Performance", "jetpack-my-jetpack" );
 __( "Other", "jetpack-my-jetpack" );
+/* translators: %d is how many features were added to the wp-admin menu. */
+_n( "%d feature is now in your menu", "%d features are now in your menu", 1, "jetpack-my-jetpack" );
+/* translators: %s is a feature name, e.g. "Stats". */
+__( "%s is now in your menu", "jetpack-my-jetpack" );
 /* translators: %d is how many features the filter or search matched. */
 _n( "%d feature shown", "%d features shown", 1, "jetpack-my-jetpack" );
 __( "No features found.", "jetpack-my-jetpack" );
