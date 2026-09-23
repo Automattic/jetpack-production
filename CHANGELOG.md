@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI: Disable feature toggles when custom code forces AI off.
+- AI: Show the Learn more link when SEO settings are unavailable.
 - External Media: Fix the width of the Select Media button in narrow block placeholders, such as the Media & Text block.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Forms: Cap the rating scale when rendering a form or a response so a malformed value cannot exhaust memory.
