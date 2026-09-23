@@ -132,8 +132,6 @@ __( "This site has been suspended.", "jetpack-my-jetpack" );
 __( "Unavailable in <a>Offline Mode</a>", "jetpack-my-jetpack" );
 __( "Over 5 million WordPress sites are faster and more secure", "jetpack-my-jetpack" );
 __( "Set up Jetpack", "jetpack-my-jetpack" );
-/* translators: %s: the error. */
-__( "There was an error reconnecting Jetpack. Error: %s", "jetpack-my-jetpack" );
 __( "Your account (connection owner)", "jetpack-my-jetpack" );
 /* translators: %s is the display name of the Jetpack connection owner. */
 __( "Connection owner's account (%s)", "jetpack-my-jetpack" );
@@ -148,6 +146,8 @@ __( "Jetpack Connection error: %s", "jetpack-my-jetpack" );
 _n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack-my-jetpack" );
 __( "Jetpack Connection error", "jetpack-my-jetpack" );
 __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-my-jetpack" );
+/* translators: %s: the error. */
+__( "There was an error reconnecting Jetpack. Error: %s", "jetpack-my-jetpack" );
 __( "Reconnecting Jetpack", "jetpack-my-jetpack" );
 __( "Restore Connection", "jetpack-my-jetpack" );
 __( "Take Action", "jetpack-my-jetpack" );
@@ -712,6 +712,7 @@ __( "Site connected", "jetpack-my-jetpack" );
 __( "A site admin will need to connect their account before you can connect yours.", "jetpack-my-jetpack" );
 __( "Connect your account to unlock all the features.", "jetpack-my-jetpack" );
 __( "Connection", "jetpack-my-jetpack" );
+__( "Manage connection", "jetpack-my-jetpack" );
 __( "Connect my account", "jetpack-my-jetpack" );
 /* translators: %1$s is a product name, %2$s is the date the product was gifted. */
 __( "%1$s was gifted on %2$s. It gives you access to a lifetime subscription of Jetpack VaultPress Backup and Jetpack Scan.", "jetpack-my-jetpack" );

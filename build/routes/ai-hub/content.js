@@ -249,8 +249,6 @@ __( "Sections", "jetpack" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack" );
 __( "A connection check failed.", "jetpack" );
-/* translators: %s: the error. */
-__( "There was an error reconnecting Jetpack. Error: %s", "jetpack" );
 __( "Your account (connection owner)", "jetpack" );
 /* translators: %s is the display name of the Jetpack connection owner. */
 __( "Connection owner's account (%s)", "jetpack" );
@@ -265,6 +263,8 @@ __( "Jetpack Connection error: %s", "jetpack" );
 _n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack" );
 __( "Jetpack Connection error", "jetpack" );
 __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack" );
+/* translators: %s: the error. */
+__( "There was an error reconnecting Jetpack. Error: %s", "jetpack" );
 __( "Reconnecting Jetpack", "jetpack" );
 __( "Loading…", "jetpack" );
 __( "Restore Connection", "jetpack" );

@@ -52,8 +52,6 @@ __( "Already have a subscription? <connectButton/>", "jetpack-search-pkg" );
 __( "Log in to get started", "jetpack-search-pkg" );
 __( "Over 5 million WordPress sites are faster and more secure", "jetpack-search-pkg" );
 __( "Set up Jetpack", "jetpack-search-pkg" );
-/* translators: %s: the error. */
-__( "There was an error reconnecting Jetpack. Error: %s", "jetpack-search-pkg" );
 __( "Your account (connection owner)", "jetpack-search-pkg" );
 /* translators: %s is the display name of the Jetpack connection owner. */
 __( "Connection owner's account (%s)", "jetpack-search-pkg" );
@@ -68,6 +66,8 @@ __( "Jetpack Connection error: %s", "jetpack-search-pkg" );
 _n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack-search-pkg" );
 __( "Jetpack Connection error", "jetpack-search-pkg" );
 __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-search-pkg" );
+/* translators: %s: the error. */
+__( "There was an error reconnecting Jetpack. Error: %s", "jetpack-search-pkg" );
 __( "Reconnecting Jetpack", "jetpack-search-pkg" );
 __( "Loading…", "jetpack-search-pkg" );
 __( "Restore Connection", "jetpack-search-pkg" );

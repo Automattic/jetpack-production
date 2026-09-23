@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add protected owner fields and a default UI filter to the connection initial state.
 
+### Changed
+- Connection error notice: Show a break only the connection owner can repair as a warning to everyone else, and share the error description with other connection surfaces, such as My Jetpack's connection card.
+
 ## [9.6.0] - 2026-09-23
 ### Changed
 - Partner coupons: check whether a coupon is still valid on My Jetpack too. [#52514]
