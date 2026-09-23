@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Add a "How it works" guide to the top of the MCP and Connectors tab.
 - AI: Point the Cursor setup instructions on the MCP agent setup page at the WordPress.com plugin on the Cursor Marketplace.
 - My Jetpack: answer module switch clicks immediately, and explain what happened when a change fails.
+- Newsletter: open the email design screen on its Styles panel, and add a way back to it from the Template tab.
 - Newsletter: Sync the active theme's colors and typography so post emails can match the site's design.
 - Partner coupons: redeem them from My Jetpack.
 - PayPal Payment Buttons: Add Change item to a saved payment link's menu in the block settings sidebar, to switch the button to another of the account's payment links.
