@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [9.7.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [9.7.0] - 2026-09-23
 ### Added
-- Add protected owner fields and a default UI filter to the connection initial state.
+- Add protected owner fields and a default UI filter to the connection initial state. [#52535]
 
 ### Changed
-- Connection error notice: Show a break only the connection owner can repair as a warning to everyone else, and share the error description with other connection surfaces, such as My Jetpack's connection card.
+- Show a break only the connection owner can repair as a warning to everyone else, and share the error description with other connection surfaces, such as My Jetpack's connection card. [#52130]
 
 ## [9.6.0] - 2026-09-23
 ### Changed
@@ -2108,7 +2105,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.7.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.6.0...v9.7.0-alpha
+[9.7.0]: https://github.com/Automattic/jetpack-connection/compare/v9.6.0...v9.7.0
 [9.6.0]: https://github.com/Automattic/jetpack-connection/compare/v9.5.0...v9.6.0
 [9.5.0]: https://github.com/Automattic/jetpack-connection/compare/v9.4.0...v9.5.0
 [9.4.0]: https://github.com/Automattic/jetpack-connection/compare/v9.3.0...v9.4.0
