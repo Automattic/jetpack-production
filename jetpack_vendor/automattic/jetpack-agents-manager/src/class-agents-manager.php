@@ -20,7 +20,7 @@ class Agents_Manager {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '0.12.3-alpha';
+	const PACKAGE_VERSION = '0.12.3';
 
 	/**
 	 * Class instance.
