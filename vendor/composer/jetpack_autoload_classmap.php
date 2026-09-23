@@ -1198,6 +1198,10 @@ return array(
 		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/abilities/class-monitor-abilities.php'
 	),
+	'Automattic\\Jetpack\\Plugin\\Admin_Chrome_Logo' => array(
+		'version' => 'dev-trunk',
+		'path'    => $baseDir . '/src/class-admin-chrome-logo.php'
+	),
 	'Automattic\\Jetpack\\Plugin\\Deprecate' => array(
 		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/class-deprecate.php'

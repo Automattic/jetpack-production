@@ -326,6 +326,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_3_a_4
         'Automattic\\Jetpack\\Plans' => __DIR__ . '/..' . '/automattic/jetpack-plans/src/class-plans.php',
         'Automattic\\Jetpack\\Plugin\\Abilities\\Modules_Abilities' => __DIR__ . '/../..' . '/src/abilities/class-modules-abilities.php',
         'Automattic\\Jetpack\\Plugin\\Abilities\\Monitor_Abilities' => __DIR__ . '/../..' . '/src/abilities/class-monitor-abilities.php',
+        'Automattic\\Jetpack\\Plugin\\Admin_Chrome_Logo' => __DIR__ . '/../..' . '/src/class-admin-chrome-logo.php',
         'Automattic\\Jetpack\\Plugin\\Deprecate' => __DIR__ . '/../..' . '/src/class-deprecate.php',
         'Automattic\\Jetpack\\Plugin\\Footer_Links' => __DIR__ . '/../..' . '/src/class-footer-links.php',
         'Automattic\\Jetpack\\Plugin\\Jetpack_Script_Data' => __DIR__ . '/../..' . '/src/class-jetpack-script-data.php',

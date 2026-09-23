@@ -301,6 +301,7 @@ return array(
     'Automattic\\Jetpack\\Plans' => $vendorDir . '/automattic/jetpack-plans/src/class-plans.php',
     'Automattic\\Jetpack\\Plugin\\Abilities\\Modules_Abilities' => $baseDir . '/src/abilities/class-modules-abilities.php',
     'Automattic\\Jetpack\\Plugin\\Abilities\\Monitor_Abilities' => $baseDir . '/src/abilities/class-monitor-abilities.php',
+    'Automattic\\Jetpack\\Plugin\\Admin_Chrome_Logo' => $baseDir . '/src/class-admin-chrome-logo.php',
     'Automattic\\Jetpack\\Plugin\\Deprecate' => $baseDir . '/src/class-deprecate.php',
     'Automattic\\Jetpack\\Plugin\\Footer_Links' => $baseDir . '/src/class-footer-links.php',
     'Automattic\\Jetpack\\Plugin\\Jetpack_Script_Data' => $baseDir . '/src/class-jetpack-script-data.php',
