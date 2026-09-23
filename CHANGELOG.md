@@ -50,6 +50,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show each number on a chart's value axis once when the counts are small, instead of repeating 0 and 1.
 - Premium Analytics: Start bar chart value axes at zero so a small change no longer looks like a large one.
 - Premium Analytics: Start line chart value axes at zero, and pad the Subscribers chart's axis a little below its data, so a small change no longer looks like a large one.
+- Premium Analytics: Stop listing an author's post that only appears in the comparison period as 0 (-100%).
 - Social: Show each number on the traffic chart's value axis once when visit counts are small.
 - Stats: Draw the My Jetpack stats chart's gridlines only at whole numbers when counts are small.
 
