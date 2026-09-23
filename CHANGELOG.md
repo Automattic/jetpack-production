@@ -44,6 +44,8 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Cap the rating scale when rendering a form or a response so a malformed value cannot exhaust memory.
 - Google Fonts: Detect fonts followed by fallback families so selected fonts render on the front end.
 - Jetpack AI: avoid an unnecessary request when loading the editor.
+- My Jetpack: Fix the page failing to load for users who can edit posts but have no Jetpack menu, such as editors on unconnected sites.
+- My Jetpack: Point users who cannot connect the site at an administrator, instead of an onboarding screen they cannot complete.
 - My Jetpack: Show each notice once instead of twice.
 - Newsletter: Show the earliest subscription date for subscribers with both an email and a WordPress.com subscription.
 - PayPal Payment Buttons: Mark the post as changed when a payment button is updated to match its link on PayPal, so the change can be saved and shown on the page.

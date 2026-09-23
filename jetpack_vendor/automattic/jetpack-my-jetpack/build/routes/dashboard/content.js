@@ -704,6 +704,7 @@ __( "User connected.", "jetpack-my-jetpack" );
 /* translators: %s: the username of the Jetpack connection owner */
 __( "Also connected: %s (Owner).", "jetpack-my-jetpack" );
 __( "Site not connected", "jetpack-my-jetpack" );
+__( "A site admin will need to connect this site to Jetpack.", "jetpack-my-jetpack" );
 __( "Connect your site with one click.", "jetpack-my-jetpack" );
 __( "Site and account connected", "jetpack-my-jetpack" );
 __( "Everything looks good.", "jetpack-my-jetpack" );
