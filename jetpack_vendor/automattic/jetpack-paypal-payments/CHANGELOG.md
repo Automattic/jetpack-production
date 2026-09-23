@@ -15,8 +15,12 @@ This is an alpha version! The changes listed here are not final.
 - Ask whether to save or discard unsaved changes when leaving a saved payment link's form in the block settings sidebar.
 - Give each link in the existing links list a menu to duplicate it into a new payment link or delete it, and let the new link's form go back to the list.
 
+### Changed
+- Hide the Styles tab until the block has a payment link, and keep the existing links list in sync across blocks.
+
 ### Fixed
 - Mark the post as changed when a payment button is updated to match its link on PayPal, so the change can be saved and shown on the page.
+- Match the block's editor preview to the published button, and show "Powered by PayPal" by default.
 - Reject a return URL over the 127 characters PayPal accepts, and say so in the block's form.
 - Show a payment link's hosted ID without its PLB- prefix in the block settings sidebar, so it no longer wraps.
 
