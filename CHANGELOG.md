@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing settings: show the Sharing and Like buttons sections whichever features are active, each with its own save button, and give "Show buttons on" a section of its own.
 - Sites API: return the "Require two-step authentication" SSO setting as the `jetpack_sso_require_two_step` site option.
 - Stats: Move the Stats settings to a new Settings tab in the Stats dashboard, and link to it from Jetpack Settings.
+- Stats: Recognize the standalone Jetpack Stats plugin in My Jetpack, and install it when Stats is activated there.
 - Zoom Scheduler block: Add a block for embedding Zoom Scheduler booking page URLs on all plans.
 
 ### Bug fixes

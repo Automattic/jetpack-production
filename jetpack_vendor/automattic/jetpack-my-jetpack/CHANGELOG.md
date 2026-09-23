@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Answer module switch clicks immediately, and explain what happened when a change fails.
 - Scan: Send buyers to the Scan dashboard after checkout instead of the retired Jetpack Assistant.
+- Stats: Recognize the standalone Jetpack Stats plugin in My Jetpack.
 
 ### Fixed
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
