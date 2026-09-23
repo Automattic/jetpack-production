@@ -61,7 +61,7 @@ class Initial_State {
 			 *
 			 * Return `false` from a consumer that renders its own confirmation flow.
 			 *
-			 * @since 9.6.0-alpha
+			 * @since 9.7.0-alpha
 			 *
 			 * @param bool $use_default_ui Whether to render the default UI. Default true.
 			 */

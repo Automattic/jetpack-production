@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.22.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.22.0] - 2026-09-23
 ### Added
-- Add a Settings class that reads and validates the Stats settings a site owner can change.
+- Add a Settings class that reads and validates the Stats settings a site owner can change. [#52540]
 
 ## [0.21.1] - 2026-09-08
 ### Fixed
@@ -395,7 +392,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
-[0.22.0-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.21.1...v0.22.0-alpha
+[0.22.0]: https://github.com/Automattic/jetpack-stats/compare/v0.21.1...v0.22.0
 [0.21.1]: https://github.com/Automattic/jetpack-stats/compare/v0.21.0...v0.21.1
 [0.21.0]: https://github.com/Automattic/jetpack-stats/compare/v0.20.4...v0.21.0
 [0.20.4]: https://github.com/Automattic/jetpack-stats/compare/v0.20.3...v0.20.4
