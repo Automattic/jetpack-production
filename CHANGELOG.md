@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Remove the legacy At a Glance dashboard and Recommendations assistant; their links now open My Jetpack, or Settings where My Jetpack is unavailable.
 
 ### Enhancements
+- Add stacked buttons as a display format for PayPal payment buttons.
 - AI: Add a "How it works" guide to the top of the MCP and Connectors tab.
 - AI: Point the Cursor setup instructions on the MCP agent setup page at the WordPress.com plugin on the Cursor Marketplace.
 - My Jetpack: answer module switch clicks immediately, and explain what happened when a change fails.

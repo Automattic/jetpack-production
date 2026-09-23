@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add Change item to a saved payment link's menu in the block settings sidebar, to switch the button to another of the account's payment links.
+- Add stacked buttons as a display format for PayPal payment buttons.
 - Ask whether to save or discard unsaved changes when leaving a saved payment link's form in the block settings sidebar.
 - Give each link in the existing links list a menu to duplicate it into a new payment link or delete it, and let the new link's form go back to the list.
 
