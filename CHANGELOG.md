@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Ask whether to save or discard unsaved changes when leaving a saved payment link's form in the block settings sidebar.
 - PayPal Payment Buttons: Give each link in the existing links list a menu to duplicate it into a new payment link or delete it, and let the new link's form go back to the list.
 - PayPal Payment Buttons: Hide the Styles tab until the block has a payment link, and keep the existing links list in sync across blocks.
+- Premium Analytics: Add a Manage subscribers link to the Latest subscribers widget, opening the Newsletter subscribers screen in wp-admin.
 - Premium Analytics: Lead each chart tooltip row with the value, then the metric, then the date.
 - Premium Analytics: Match the date range control in widget headers to the height of the other header controls, and draw the date triggers with the design system button states.
 - Premium Analytics: Note in the Earnings History widget when the site has adjustments, linking to the Adjustments history tab of the Earnings report.
