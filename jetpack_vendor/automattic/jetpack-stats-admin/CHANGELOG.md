@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.38.1-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Notices: Stop a dismissed notice from coming back for up to 5 minutes when the dashboard fetches notices while the dismissal is still being saved.
+
 ## 0.38.0 - 2026-09-23
 ### Added
 - Add a REST route to read and change the Stats settings, for the Settings tab in the Stats dashboard. [#52540]
