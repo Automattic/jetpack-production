@@ -409,8 +409,6 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_3_a_4
         'Automattic\\Jetpack\\PremiumAnalytics\\Reports\\Export\\Support\\Utilities' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Reports/Export/Support/trait-utilities.php',
         'Automattic\\Jetpack\\PremiumAnalytics\\Sync\\Configuration' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Sync/class-configuration.php',
         'Automattic\\Jetpack\\PremiumAnalytics\\Sync\\Sync_Status_Tracker' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Sync/class-sync-status-tracker.php',
-        'Automattic\\Jetpack\\PremiumAnalytics\\Sync\\Utilities' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Sync/trait-utilities.php',
-        'Automattic\\Jetpack\\PremiumAnalytics\\Sync\\WooCommerce_Analytics_Module' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Sync/class-woocommerce-analytics-module.php',
         'Automattic\\Jetpack\\PremiumAnalytics\\Widget_Type' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-widget-type.php',
         'Automattic\\Jetpack\\PremiumAnalytics\\Widget_Type_Registry' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-widget-type-registry.php',
         'Automattic\\Jetpack\\PremiumAnalytics\\WooCommerce_Analytics_Tracker' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-woocommerce-analytics-tracker.php',

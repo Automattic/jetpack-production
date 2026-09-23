@@ -384,8 +384,6 @@ return array(
     'Automattic\\Jetpack\\PremiumAnalytics\\Reports\\Export\\Support\\Utilities' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Reports/Export/Support/trait-utilities.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Sync\\Configuration' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Sync/class-configuration.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Sync\\Sync_Status_Tracker' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Sync/class-sync-status-tracker.php',
-    'Automattic\\Jetpack\\PremiumAnalytics\\Sync\\Utilities' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Sync/trait-utilities.php',
-    'Automattic\\Jetpack\\PremiumAnalytics\\Sync\\WooCommerce_Analytics_Module' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Sync/class-woocommerce-analytics-module.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Widget_Type' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-widget-type.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Widget_Type_Registry' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-widget-type-registry.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\WooCommerce_Analytics_Tracker' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-woocommerce-analytics-tracker.php',
