@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
   Search terms: Stop treating a comparison list capped at 500 terms as complete.
 - Charts: Add a Comparison period legend item to line charts that show a previous period, use square swatches in bar mode, keep the selected metric's legend item locked, and draw the Visitors swatch solid in the Traffic summary.
 - Charts: Show "1 Subscriber" rather than "1 Subscribers" in tooltips, using each language's plural rules.
+- Dashboard: Show the date menus opened from a widget's controls above the controls popover.
 - Email stats: Show a sent but unopened email's open and click rates as 0% instead of a dash, show the email tabs for emails whose sends went unrecorded, and leave unknown rates blank in the Emails export.
 - Email stats: Show readable link names in an email's Top links list, and list the links clicked inside the post instead of dropping them.
 - Subscriber summary: Leave the months before a site launched or turned on subscriptions empty in the chart, with a "No data" tooltip, instead of showing zero.
