@@ -88,9 +88,9 @@ __( "Post published on %s", "jetpack-premium-analytics-pkg" );
 __( "Not available", "jetpack-premium-analytics-pkg" );
 /* translators: %d is the number of additional subscribers not shown. */
 _n( "%d more", "%d more", 1, "jetpack-premium-analytics-pkg" );
-__( "About %s", "jetpack-premium-analytics-pkg" );
 __( "Hide chart", "jetpack-premium-analytics-pkg" );
 __( "Show chart", "jetpack-premium-analytics-pkg" );
+__( "About %s", "jetpack-premium-analytics-pkg" );
 __( "Views by location", "jetpack-premium-analytics-pkg" );
 __( "Views shaded by country. Pick a country on the Regions tab to see its regions instead.", "jetpack-premium-analytics-pkg" );
 __( "Hide map", "jetpack-premium-analytics-pkg" );
