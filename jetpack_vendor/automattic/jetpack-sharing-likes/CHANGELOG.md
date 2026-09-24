@@ -15,4 +15,4 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Settings: render and save the Twitter Site Tag and "Disable CSS and JS" settings from the Sharing screen itself.
-- Settings: stop offering the Twitter Site Tag field on WordPress.com Simple, where Twitter Cards read a different option.
+- Settings: show the Twitter Site Tag field on WordPress.com Simple too.
