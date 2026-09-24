@@ -478,6 +478,11 @@ __( "Here are the tools that we think will help you reach your website goals:", 
 __( "Recommendations menu", "jetpack-my-jetpack" );
 __( "Previous", "jetpack-my-jetpack" );
 __( "Next", "jetpack-my-jetpack" );
+/* translators: %d is how many features are selected. */
+_n( "%d selected", "%d selected", 1, "jetpack-my-jetpack" );
+__( "Plugins can only be deactivated together while the Jetpack plugin is active.", "jetpack-my-jetpack" );
+__( "Select all features", "jetpack-my-jetpack" );
+__( "Select features to switch several at once", "jetpack-my-jetpack" );
 __( "All categories", "jetpack-my-jetpack" );
 __( "Recommended", "jetpack-my-jetpack" );
 __( "Included in plan", "jetpack-my-jetpack" );
@@ -569,6 +574,8 @@ __( "Failed to deactivate %s.", "jetpack-my-jetpack" );
 __( "Open Site Editor", "jetpack-my-jetpack" );
 /* translators: %s is the module name */
 __( "Toggle %s module", "jetpack-my-jetpack" );
+__( "Enabled by your host or site administrator", "jetpack-my-jetpack" );
+__( "Disabled by your host or site administrator", "jetpack-my-jetpack" );
 /* translators: %s is a plugin or feature name. */
 __( "%s deactivated.", "jetpack-my-jetpack" );
 /* translators: %s is a plugin or feature name. */
@@ -580,8 +587,6 @@ __( "Install Jetpack", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "Learn more about %s", "jetpack-my-jetpack" );
 __( "Essential", "jetpack-my-jetpack" );
-__( "Enabled by your host or site administrator", "jetpack-my-jetpack" );
-__( "Disabled by your host or site administrator", "jetpack-my-jetpack" );
 /* translators: %d is how many features were switched on. */
 _n( "%d feature activated.", "%d features activated.", 1, "jetpack-my-jetpack" );
 /* translators: %d is how many features were switched off. */
@@ -592,11 +597,6 @@ __( "Could not change the selected features. Please try again.", "jetpack-my-jet
 __( "Change this feature from its own control.", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "Select %s", "jetpack-my-jetpack" );
-/* translators: %d is how many features are selected. */
-_n( "%d selected", "%d selected", 1, "jetpack-my-jetpack" );
-__( "Plugins can only be deactivated together while the Jetpack plugin is active.", "jetpack-my-jetpack" );
-__( "Select all features", "jetpack-my-jetpack" );
-__( "Select features to switch several at once", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "%s in use", "jetpack-my-jetpack" );
 /* translators: 1: a plugin name, 2: a feature name. */
@@ -619,6 +619,8 @@ __( "Show everything in %s", "jetpack-my-jetpack" );
 __( "With a paid plan", "jetpack-my-jetpack" );
 __( "Available in", "jetpack-my-jetpack" );
 __( "What you get", "jetpack-my-jetpack" );
+__( "Activate the Jetpack plugin to see and switch its other features.", "jetpack-my-jetpack" );
+__( "More Features", "jetpack-my-jetpack" );
 __( "All", "jetpack-my-jetpack" );
 __( "Complete", "jetpack-my-jetpack" );
 __( "Grid view", "jetpack-my-jetpack" );
