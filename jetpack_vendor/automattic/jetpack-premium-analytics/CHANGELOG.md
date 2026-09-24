@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Authors: Stop listing an author's post that only appears in the comparison period as 0 (-100%).
   Search terms: Stop treating a comparison list capped at 500 terms as complete.
 - Charts: Add a Comparison period legend item to line charts that show a previous period, use square swatches in bar mode, keep the selected metric's legend item locked, and draw the Visitors swatch solid in the Traffic summary.
+- Charts: Show "1 Subscriber" rather than "1 Subscribers" in tooltips, using each language's plural rules.
 - Email stats: Show readable link names in an email's Top links list, and list the links clicked inside the post instead of dropping them.
 - Subscriber summary: Leave the months before a site launched or turned on subscriptions empty in the chart, with a "No data" tooltip, instead of showing zero.
 

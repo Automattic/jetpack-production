@@ -7,6 +7,8 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Ads Served", "jetpack-premium-analytics-pkg" );
+/* translators: %s: number of ads served. */
+_n( "%s Ad Served", "%s Ads Served", 1, "jetpack-premium-analytics-pkg" );
 __( "Average CPM", "jetpack-premium-analytics-pkg" );
 __( "Revenue", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load WordAds data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );

@@ -67,6 +67,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Draw the bars on a bar chart whose value stays the same across the whole period, instead of leaving the chart empty.
 - Premium Analytics: Fix store data failing to sync when WooCommerce Analytics is turned off.
 - Premium Analytics: Leave the months before a site launched or turned on subscriptions empty in the Subscriber summary chart, with a "No data" tooltip, instead of showing zero.
+- Premium Analytics: Show "1 Subscriber" rather than "1 Subscribers" in chart tooltips, using each language's plural rules.
 - Premium Analytics: Show a dash instead of zero in the Earnings history report when a period has no Ads Served count.
 - Premium Analytics: Show each number on a chart's value axis once when the counts are small, instead of repeating 0 and 1.
 - Premium Analytics: Show readable link names in an email's Top links list, and list the links clicked inside the post instead of dropping them.

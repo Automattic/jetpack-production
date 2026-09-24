@@ -60,6 +60,8 @@ __( "Fewer views", "jetpack-premium-analytics-pkg" );
 __( "More views", "jetpack-premium-analytics-pkg" );
 /* translators: 1: metric name, 2: date. */
 __( "No data for %1$s · %2$s", "jetpack-premium-analytics-pkg" );
+/* translators: 1: a count with its unit, such as "1 Subscriber", 2: date. */
+_x( "%1$s · %2$s", "chart tooltip: count and date", "jetpack-premium-analytics-pkg" );
 /* translators: 1: formatted value, 2: metric name, 3: date. */
 __( "%1$s %2$s · %3$s", "jetpack-premium-analytics-pkg" );
 __( "No data", "jetpack-premium-analytics-pkg" );
@@ -102,9 +104,17 @@ __( "Sections", "jetpack-premium-analytics-pkg" );
 __( "By days", "jetpack-premium-analytics-pkg" );
 __( "By weeks", "jetpack-premium-analytics-pkg" );
 __( "By months", "jetpack-premium-analytics-pkg" );
+/* translators: %s: number of views. */
+_n( "%s View", "%s Views", 1, "jetpack-premium-analytics-pkg" );
 __( "Visitors", "jetpack-premium-analytics-pkg" );
+/* translators: %s: number of visitors. */
+_n( "%s Visitor", "%s Visitors", 1, "jetpack-premium-analytics-pkg" );
 __( "Comments", "jetpack-premium-analytics-pkg" );
+/* translators: %s: number of comments. */
+_n( "%s Comment", "%s Comments", 1, "jetpack-premium-analytics-pkg" );
 __( "Likes", "jetpack-premium-analytics-pkg" );
+/* translators: %s: number of likes. */
+_n( "%s Like", "%s Likes", 1, "jetpack-premium-analytics-pkg" );
 __( "Performance", "jetpack-premium-analytics-pkg" );
 __( "Chart interval", "jetpack-premium-analytics-pkg" );
 __( "Chart options", "jetpack-premium-analytics-pkg" );
