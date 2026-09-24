@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Recognize the standalone Jetpack Stats plugin in My Jetpack, and install it when Stats is activated there.
 - Tooltips: Keep focus on information icons when their tooltips open, announce the content to screen readers, and show a focus ring after clicking them.
 - VideoPress: Add a Latest Videos Playlist block that plays the site's newest VideoPress videos, with the number of videos set in the block settings.
+- VideoPress: Add title and description settings to the Video Playlist block, recorded in a site-wide playlist index.
 - VideoPress: With the inline player setting on, draw the play button like the player's and show a loading spinner from the click until the player has loaded.
 - Zoom Scheduler block: Add a block for embedding Zoom Scheduler booking page URLs on all plans.
 
