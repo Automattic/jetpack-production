@@ -50,7 +50,7 @@
 		"automattic/jetpack-plugins-installer": "^0.6.0",
 		"automattic/jetpack-podcast": "^2.1.4-alpha",
 		"automattic/jetpack-post-list": "^0.10.3",
-		"automattic/jetpack-post-media": "^0.2.1-alpha",
+		"automattic/jetpack-post-media": "^0.3.0-alpha",
 		"automattic/jetpack-premium-analytics": "^0.9.0-alpha",
 		"automattic/jetpack-publicize": "^0.88.0-alpha",
 		"automattic/jetpack-redirect": "^4.0.0",

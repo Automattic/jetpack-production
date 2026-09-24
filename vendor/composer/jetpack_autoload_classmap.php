@@ -1315,15 +1315,15 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-thumbnail.php'
 	),
 	'Automattic\\Jetpack\\Post_Media' => array(
-		'version' => '0.2.1.0-alpha1790092376',
+		'version' => '0.3.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-post-media.php'
 	),
 	'Automattic\\Jetpack\\Post_Media\\Images' => array(
-		'version' => '0.2.1.0-alpha1790092376',
+		'version' => '0.3.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-images.php'
 	),
 	'Automattic\\Jetpack\\Post_Media\\Twitter_Cards' => array(
-		'version' => '0.2.1.0-alpha1790092376',
+		'version' => '0.3.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-twitter-cards.php'
 	),
 	'Automattic\\Jetpack\\PremiumAnalytics\\Analytics' => array(
@@ -2031,55 +2031,63 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/class-wc-block-helpers.php'
 	),
 	'Automattic\\Jetpack\\Sharing_Likes' => array(
-		'version' => '0.1.0.0-alpha1790157191',
+		'version' => '0.1.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/class-sharing-likes.php'
 	),
 	'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Environment' => array(
-		'version' => '0.1.0.0-alpha1790157191',
+		'version' => '0.1.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-environment.php'
 	),
 	'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Extras_Section' => array(
-		'version' => '0.1.0.0-alpha1790157191',
+		'version' => '0.1.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-extras-section.php'
 	),
 	'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Likes_Options' => array(
-		'version' => '0.1.0.0-alpha1790157191',
+		'version' => '0.1.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-likes-options.php'
 	),
 	'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Likes_Section' => array(
-		'version' => '0.1.0.0-alpha1790157191',
+		'version' => '0.1.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-likes-section.php'
 	),
 	'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Placement_Section' => array(
-		'version' => '0.1.0.0-alpha1790157191',
+		'version' => '0.1.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-placement-section.php'
 	),
 	'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Post_Handler' => array(
-		'version' => '0.1.0.0-alpha1790157191',
+		'version' => '0.1.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-post-handler.php'
 	),
 	'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Section_State' => array(
-		'version' => '0.1.0.0-alpha1790157191',
+		'version' => '0.1.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-section-state.php'
 	),
 	'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Services_Config' => array(
-		'version' => '0.1.0.0-alpha1790157191',
+		'version' => '0.1.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-services-config.php'
 	),
 	'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Settings_Form' => array(
-		'version' => '0.1.0.0-alpha1790157191',
+		'version' => '0.1.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-settings-form.php'
 	),
 	'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Settings_Page' => array(
-		'version' => '0.1.0.0-alpha1790157191',
+		'version' => '0.1.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-settings-page.php'
 	),
+	'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Sharing_Resources' => array(
+		'version' => '0.1.0.0-alpha1790240642',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-sharing-resources.php'
+	),
 	'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Sharing_Section' => array(
-		'version' => '0.1.0.0-alpha1790157191',
+		'version' => '0.1.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-sharing-section.php'
 	),
+	'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Twitter_Site_Tag' => array(
+		'version' => '0.1.0.0-alpha1790240642',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-twitter-site-tag.php'
+	),
 	'Automattic\\Jetpack\\Shortcodes' => array(
-		'version' => '0.2.1.0-alpha1790092376',
+		'version' => '0.3.0.0-alpha1790240642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-shortcodes.php'
 	),
 	'Automattic\\Jetpack\\SignatureInvalidException' => array(
