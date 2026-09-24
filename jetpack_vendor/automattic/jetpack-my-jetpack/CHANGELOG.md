@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Features tab: say why the list is empty and offer a way forward, behind the my-jetpack-features-tab feature flag.
 - My Jetpack: add an icon to the Features tab's empty states.
+- Render the Jetpack in-dashboard message slot from the shared component.
 
 ### Fixed
 - My Jetpack: keep the tab footer flush with the bottom of the content surface.

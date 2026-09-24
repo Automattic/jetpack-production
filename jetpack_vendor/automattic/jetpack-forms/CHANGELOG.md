@@ -14,6 +14,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Rating field: Cap the scale when rendering a form or a response so a malformed value cannot exhaust memory.
+- Remove the duplicate divider between the dashboard header and the tabs.
+- Show Jetpack in-dashboard messages on the Forms dashboard.
 
 ## [8.2.0] - 2026-09-21
 ### Added

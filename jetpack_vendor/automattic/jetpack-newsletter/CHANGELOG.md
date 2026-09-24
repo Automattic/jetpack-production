@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
+- Show Jetpack in-dashboard messages on the dashboard again.
 - Subscribers: Show the earliest subscription date for subscribers with both an email and a WordPress.com subscription.
 
 ## [0.16.0] - 2026-09-21

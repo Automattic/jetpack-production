@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Show Jetpack in-dashboard messages on the dashboard again.
 - Show poster generation errors and allow retrying a failed video frame.
 
 ## [0.52.0] - 2026-09-23
