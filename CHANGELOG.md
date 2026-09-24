@@ -111,6 +111,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Sync store analytics whether or not WooCommerce order attribution is enabled.
 - Sharing settings: Stop showing Jetpack Social connection errors on the Settings > Sharing screen.
 - Stats: Load the admin bar chart and Stats link from the Stats Admin package, and deprecate the matching functions in the Stats module.
+- Tools: Replace `@wordpress/jest-console` with a simple set of mocks.
 
 ## 16.3-a.3 - 2026-09-21
 ### Enhancements
