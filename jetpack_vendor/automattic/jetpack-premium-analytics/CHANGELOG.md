@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - The Ads tab is registered by the WordAds module and by WordPress.com rather than by the package, so it no longer appears on sites without WordAds. A section whose slug another section already uses is refused.
 
 ### Fixed
+- Ads: Leave Average CPM empty instead of showing $0.00 in the Ads chart for periods with no ads served.
 - Ads: show a dash instead of zero in the Earnings report when a period has no Ads Served count.
 - Authors: Stop listing an author's post that only appears in the comparison period as 0 (-100%).
   Search terms: Stop treating a comparison list capped at 500 terms as complete.
