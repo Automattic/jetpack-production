@@ -15,8 +15,8 @@ This is an alpha version! The changes listed here are not final.
 - Add the `jetpack_premium_analytics_register_widget_types` action, `register_widget_types_from_manifest()` and `WIDGET_API_VERSION`, so a plugin can register its dashboard widget types.
 - Add Tracks events for customizing a layout, and record whether the reader has a customized dashboard when sending feedback.
 - Ads: Note in the Earnings History widget when the site has adjustments, linking to the Adjustments history tab of the Earnings report.
-- Ads: Show the Subscribers tab, and the Ads tab on sites that have WordAds, in the customer preview.
 - Dashboard: Add a feature flag that shows Automatticians every section of a preview-limited dashboard.
+- Dashboard: Show the Subscribers tab in the customer preview.
 - Dashboard: widget module records carry the text domain and the i18n manifest of the build that serves them, so widgets another plugin registers load their translations.
 - Date comparison: Add options that line up the same weekdays of the previous period and the previous year.
 - Subscriber highlights: Describe the 30, 60 and 90 days ago and Social followers counts on hover and for screen readers.
