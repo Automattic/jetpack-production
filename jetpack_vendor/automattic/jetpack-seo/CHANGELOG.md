@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
+- Respect excerpt filters in generated llms.txt summaries.
 - Settings: Fix Sitemap and Canonical URLs status to reflect the active modules.
 
 ## [0.9.5] - 2026-09-21

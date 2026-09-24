@@ -88,6 +88,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Start line chart value axes at zero, and pad the Subscribers chart's axis a little below its data, so a small change no longer looks like a large one.
 - Premium Analytics: Stop listing an author's post that only appears in the comparison period as 0 (-100%).
 - SEO: Fix Sitemap and Canonical URLs status to reflect the active modules.
+- SEO: Respect excerpt filters in generated llms.txt summaries.
 - Show Jetpack in-dashboard messages on the modernized product dashboards again.
 - Social: Show each number on the traffic chart's value axis once when visit counts are small.
 - Stats: Draw the My Jetpack stats chart's gridlines only at whole numbers when counts are small.
