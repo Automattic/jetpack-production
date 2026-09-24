@@ -20,6 +20,9 @@ This is an alpha version! The changes listed here are not final.
 - Daily Writing Prompt: Send an answer straight to the Block editor when this browser has opted out of Write, whichever surface the answer came from.
 - Use the shared wp-build-polyfills helper to order the screen-ID alias around wp-build's generated enqueue check.
 
+### Removed
+- Subscribers: Remove the temporary subscriber count notice on WordPress.com sites.
+
 ### Fixed
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Subscribers: Show the earliest subscription date for subscribers with both an email and a WordPress.com subscription.
