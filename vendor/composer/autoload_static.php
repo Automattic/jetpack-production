@@ -305,6 +305,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_3_a_4
         'Automattic\\Jetpack\\Newsletter\\Freshly_Pressed' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-freshly-pressed.php',
         'Automattic\\Jetpack\\Newsletter\\Reader_Link' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-reader-link.php',
         'Automattic\\Jetpack\\Newsletter\\Settings' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-settings.php',
+        'Automattic\\Jetpack\\Newsletter\\Subscriber_Stats_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-subscriber-stats-controller.php',
         'Automattic\\Jetpack\\Newsletter\\Urls' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-urls.php',
         'Automattic\\Jetpack\\Newsletter\\Writing_Prompt_Widget' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-writing-prompt-widget.php',
         'Automattic\\Jetpack\\Partner' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/src/class-partner.php',
