@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Ads: Title the tab Ads performance, reword the three WordAds widget tips to the design with a Learn more link, bold the Period column of the Earnings report, and drop the Ads Served note above its table.
 - Charts: Start line chart value axes at zero, and pad the Subscribers chart's axis a little below its data instead.
 - Chart tooltips: lead each row with the value, then the metric as its unit, then the date.
+- Dashboard: Call the preview the new Stats in its welcome, feedback and switch-off copy, now that every tab is in it.
 - Date controls: Match the date range control in widget headers to the height of the other header controls, and draw the date triggers with the design system button states.
 - Share one InfoTip between the report chart help and the pending payment status badge.
 - Sync: Use the shared WooCommerce Analytics module from the jetpack-sync package, sync store analytics whether or not WooCommerce order attribution is enabled, and use the shared module in place of the WooCommerce Analytics plugin's own when both are active.
