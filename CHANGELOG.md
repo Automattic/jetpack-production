@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Hide the Styles tab until the block has a payment link, and keep the existing links list in sync across blocks.
 - PayPal Payment Buttons: Show a snackbar after a post save that creates or changes a PayPal payment link.
 - Premium Analytics: Add a Manage subscribers link to the Latest subscribers widget, opening the Newsletter subscribers screen in wp-admin.
+- Premium Analytics: Add comparison options that line up the same weekdays of the previous period and the previous year.
 - Premium Analytics: Always show every amount on the All-time balance card and drop its Metrics dropdown.
 - Premium Analytics: Describe the 30, 60 and 90 days ago and Social followers counts on Subscriber highlights on hover and for screen readers.
 - Premium Analytics: Lead each chart tooltip row with the value, then the metric, then the date.
