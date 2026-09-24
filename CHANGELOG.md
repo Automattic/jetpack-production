@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Ask whether to save or discard unsaved changes when leaving a saved payment link's form in the block settings sidebar.
 - PayPal Payment Buttons: Give each link in the existing links list a menu to duplicate it into a new payment link or delete it, and let the new link's form go back to the list.
 - PayPal Payment Buttons: Hide the Styles tab until the block has a payment link, and keep the existing links list in sync across blocks.
+- PayPal Payment Buttons: Show a snackbar after a post save that creates or changes a PayPal payment link.
 - Premium Analytics: Add a Manage subscribers link to the Latest subscribers widget, opening the Newsletter subscribers screen in wp-admin.
 - Premium Analytics: Always show every amount on the All-time balance card and drop its Metrics dropdown.
 - Premium Analytics: Lead each chart tooltip row with the value, then the metric, then the date.
@@ -59,9 +60,11 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: stretch the tab content background to the full height of the page.
 - Newsletter: send the email design screen's test email through the newsletter renderer.
 - Newsletter: Show the earliest subscription date for subscribers with both an email and a WordPress.com subscription.
+- PayPal Payment Buttons: Ask only about changes made since the last post save when leaving a saved payment link's form.
 - PayPal Payment Buttons: Mark the post as changed when a payment button is updated to match its link on PayPal, so the change can be saved and shown on the page.
 - PayPal Payment Buttons: Reject a return URL over the 127 characters PayPal accepts, and say so in the block's form.
 - PayPal Payment Buttons: Show a payment link's hosted ID without its PLB- prefix in the block settings sidebar, so it no longer wraps.
+- PayPal Payment Buttons: The Send via Email card now shows the right price for links priced per option. Before, it showed just "$".
 - Podcast: Draw the daily downloads chart's gridlines at the same days as its labels.
 - Premium Analytics: Add a Comparison period legend item to line charts that show a previous period, use square swatches in bar mode, keep the selected metric's legend item locked, and draw the Visitors swatch solid in the Traffic summary.
 - Premium Analytics: Draw the bars on a bar chart whose value stays the same across the whole period, instead of leaving the chart empty.
