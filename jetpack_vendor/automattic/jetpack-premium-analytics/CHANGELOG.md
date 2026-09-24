@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Ads: Always show every amount on the All-time balance card and drop its Metrics dropdown.
 - Ads: Show payment status as a badge in the Earnings History widget, and shorten the pending statuses to one word with the reason beside them. Negative amounts in the widget are no longer red; only the badge carries colour.
+- Ads: Title the tab Ads performance, reword the three WordAds widget tips to the design with a Learn more link, bold the Period column of the Earnings report, and drop the Ads Served note above its table.
 - Charts: Start line chart value axes at zero, and pad the Subscribers chart's axis a little below its data instead.
 - Chart tooltips: lead each row with the value, then the metric as its unit, then the date.
 - Date controls: Match the date range control in widget headers to the height of the other header controls, and draw the date triggers with the design system button states.
