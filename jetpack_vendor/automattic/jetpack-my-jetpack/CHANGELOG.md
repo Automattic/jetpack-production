@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a More Features section to the Features tab that groups and switches Jetpack's other modules, behind the my-jetpack-features-tab feature flag.
+- Features tab: Add a dismissible banner explaining the tab.
 
 ### Changed
 - Features tab: say why the list is empty and offer a way forward, behind the my-jetpack-features-tab feature flag.
