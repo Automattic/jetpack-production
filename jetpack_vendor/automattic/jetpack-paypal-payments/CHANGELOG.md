@@ -20,11 +20,13 @@ This is an alpha version! The changes listed here are not final.
 - Hide the Styles tab until the block has a payment link, and keep the existing links list in sync across blocks.
 
 ### Fixed
+- Allow http return URLs, and show an error in the block when a return URL is invalid.
 - Ask only about changes made since the last post save when leaving a saved payment link's form.
+- Make a percentage Width the same size in the editor as on the published page, fit the QR code's link field and Copy Link button in narrow columns, and remove the connection status and Sandbox badge from the editor canvas.
 - Make Width size the whole payment button, so the product and "Powered by PayPal" line up with it.
 - Mark the post as changed when a payment button is updated to match its link on PayPal, so the change can be saved and shown on the page.
 - Match the block's editor preview to the published button, and show "Powered by PayPal" by default.
-- Reject a return URL over the 127 characters PayPal accepts, and say so in the block's form.
+- Show an error in the block when a return URL is over PayPal's 1024-character limit.
 - Show a payment link's hosted ID without its PLB- prefix in the block settings sidebar, so it no longer wraps.
 - The Send via Email card now shows the right price for links priced per option. Before, it showed just "$".
 
