@@ -16,3 +16,4 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Settings: render and save the Twitter Site Tag and "Disable CSS and JS" settings from the Sharing screen itself.
 - Settings: show the Twitter Site Tag field on WordPress.com Simple too.
+- Settings: stop filtering the legacy Likes options out of the sharing_global_options hook, since WordPress.com no longer adds them there.
