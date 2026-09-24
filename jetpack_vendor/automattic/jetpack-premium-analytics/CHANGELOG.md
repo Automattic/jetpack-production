@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Ads: Note in the Earnings History widget when the site has adjustments, linking to the Adjustments history tab of the Earnings report.
 - Dashboard: Add a feature flag that shows Automatticians every section of a preview-limited dashboard.
 - Dashboard: widget module records carry the text domain and the i18n manifest of the build that serves them, so widgets another plugin registers load their translations.
+- Subscriber highlights: Describe the 30, 60 and 90 days ago and Social followers counts on hover and for screen readers.
 
 ### Changed
 - Ads: Always show every amount on the All-time balance card and drop its Metrics dropdown.
