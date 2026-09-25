@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: widget module records carry the text domain and the i18n manifest of the build that serves them, so widgets another plugin registers load their translations.
 - Date comparison: Add options that line up the same weekdays of the previous period and the previous year.
 - Subscriber highlights: Describe the 30, 60 and 90 days ago and Social followers counts on hover and for screen readers.
+- Subscriber highlights: Show the change since 30 days ago on the all-time, paid and free subscriber counts for sites with paid subscribers.
 
 ### Changed
 - Ads: Always show every amount on the All-time balance card and drop its Metrics dropdown.
