@@ -604,26 +604,34 @@ __( "Change this feature from its own control.", "jetpack-my-jetpack" );
 __( "Select %s", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "%s in use", "jetpack-my-jetpack" );
-/* translators: 1: a plugin name, 2: a feature name. */
-__( "Install adds the %1$s plugin, then turns %2$s on for your site. It does not buy anything.", "jetpack-my-jetpack" );
-/* translators: 1: a plugin name, 2: a feature name. */
-__( "Activate switches on the %1$s plugin, already installed here, and turns %2$s on for your site.", "jetpack-my-jetpack" );
-/* translators: %s is a feature name, such as "Stats". */
-__( "Activate turns %s on for your site. There is nothing to install, and it does not buy anything.", "jetpack-my-jetpack" );
+/* translators: %s is a plugin name. Keep the <plugin> tags around it. */
+__( "Installing adds the <plugin>%s</plugin> plugin and turns it on. It does not buy anything.", "jetpack-my-jetpack" );
+/* translators: %s is a plugin name. Keep the <plugin> tags around it. */
+__( "The <plugin>%s</plugin> plugin is already installed. Activating turns it on.", "jetpack-my-jetpack" );
+__( "Built into Jetpack. Activating turns it on, with nothing to install or buy.", "jetpack-my-jetpack" );
 /* translators: %s is a feature name, such as "Stats". */
 __( "%s is part of the Jetpack plugin. Installing Jetpack turns it on; it does not buy anything.", "jetpack-my-jetpack" );
-__( "How to get it", "jetpack-my-jetpack" );
-__( "In Jetpack", "jetpack-my-jetpack" );
-/* translators: %s is a plugin name, such as "Jetpack Protect". */
-__( "View %s on WordPress.org", "jetpack-my-jetpack" );
 __( "Feature page", "jetpack-my-jetpack" );
 __( "Documentation", "jetpack-my-jetpack" );
 __( "Open", "jetpack-my-jetpack" );
 /* translators: %s is a plan name, such as "Jetpack Complete". */
 __( "Show everything in %s", "jetpack-my-jetpack" );
+__( "Included in <plan0 />", "jetpack-my-jetpack" );
+__( "Included in <plan0 /> and <plan1 />", "jetpack-my-jetpack" );
+__( "Included in <plan0 />, <plan1 /> and <plan2 />", "jetpack-my-jetpack" );
 __( "With a paid plan", "jetpack-my-jetpack" );
-__( "Available in", "jetpack-my-jetpack" );
-__( "What you get", "jetpack-my-jetpack" );
+/* translators: %s is a product name, such as "Jetpack Akismet Anti-spam". */
+__( "Upgrade to %s", "jetpack-my-jetpack" );
+/* translators: %s is a feature name, such as "Stats". */
+__( "Previous: %s", "jetpack-my-jetpack" );
+/* translators: %s is a feature name, such as "Stats". */
+__( "Next: %s", "jetpack-my-jetpack" );
+__( "Previous feature", "jetpack-my-jetpack" );
+__( "Next feature", "jetpack-my-jetpack" );
+__( "Left arrow", "jetpack-my-jetpack" );
+__( "Right arrow", "jetpack-my-jetpack" );
+/* translators: 1: a feature name, 2: its place in the list, 3: how many are listed. */
+__( "%1$s, %2$d of %3$d", "jetpack-my-jetpack" );
 __( "Every Jetpack feature, in one place.", "jetpack-my-jetpack" );
 __( "Switch a feature on or off right here. Open one first to see what it does, what it needs, and where to find it once it is on.", "jetpack-my-jetpack" );
 __( "Dismiss banner", "jetpack-my-jetpack" );
