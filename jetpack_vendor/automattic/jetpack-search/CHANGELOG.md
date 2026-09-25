@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Show Jetpack in-dashboard messages on every Search tab, not just Overview.
+- Site Chat: Require a paid Search plan to enable chat.
 
 ## [8.1.3] - 2026-09-21
 ### Changed

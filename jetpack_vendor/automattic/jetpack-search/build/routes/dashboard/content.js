@@ -164,6 +164,8 @@ __( "Filter options", "jetpack-search-pkg" );
 __( "Let visitors ask your site questions and get answers from your content.", "jetpack-search-pkg" );
 __( "Enable Site Chat", "jetpack-search-pkg" );
 __( "Preview", "jetpack-search-pkg" );
+__( "Site Chat requires a paid Jetpack Search plan.", "jetpack-search-pkg" );
+__( "Upgrade Jetpack Search", "jetpack-search-pkg" );
 __( "Show autocomplete query suggestions as visitors type, instead of updating search results on every keystroke.", "jetpack-search-pkg" );
 __( "Enable search suggestions", "jetpack-search-pkg" );
 __( "Offer instant search results to your visitors as soon as they start typing.", "jetpack-search-pkg" );
@@ -244,7 +246,6 @@ __( "Restore the bundled product search template? Your customizations will be de
 __( "The product search template has been restored to the bundled default.", "jetpack-search-pkg" );
 __( "Could not restore the product search template.", "jetpack-search-pkg" );
 __( "Help your visitors find exactly what they are looking for.", "jetpack-search-pkg" );
-__( "Upgrade Jetpack Search", "jetpack-search-pkg" );
 __( "Overview", "jetpack-search-pkg" );
 __( "Settings", "jetpack-search-pkg" );
 __( "AI Answers", "jetpack-search-pkg" );
