@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Point the Cursor setup instructions on the MCP agent setup page at the WordPress.com plugin on the Cursor Marketplace.
 - Jetpack AI: Point the disconnected-site notice at documentation instead of a connect link when the site would not let the current user connect it, as on VIP and multisite.
 - My Jetpack: answer module switch clicks immediately, and explain what happened when a change fails.
+- My Jetpack: Show a Features tab in place of the Products tab, and link the footer's modules links to its list view.
 - Newsletter: Format stats metrics and open/click rates with locale-aware number formatters.
 - Newsletter: List the enabled pop-up, overlay, and floating button below the footer when editing a template in the Site Editor.
 - Newsletter: name the email design Styles controls after the parts of the email they change.

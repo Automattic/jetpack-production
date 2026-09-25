@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: add an icon to the Features tab's empty states.
 - Remove the hardcoded text color override on the wp-build dashboard, so text follows the design system color.
 - Render the Jetpack in-dashboard message slot from the shared component.
+- Show the Features tab in place of the Products tab by default, and link the footer's modules links to the Features list view.
 - Use logical CSS properties so layouts mirror in right-to-left languages.
 
 ### Fixed
