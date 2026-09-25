@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
+- Modern dashboard: Show when a backup completed with warnings, and when the Jetpack connection reports an error.
 - Show Jetpack in-dashboard messages on the modernized dashboard.
 
 ## [5.0.4] - 2026-09-21
