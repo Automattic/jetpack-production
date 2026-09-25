@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Features tab: Add a dismissible banner explaining the tab.
 
 ### Changed
+- Features: Say why a plugin can't be installed, show progress while it installs, and keep the reason on the card when an install fails.
 - Features tab: reorganize the feature details modal around what is free and what a paid plan adds, with an upgrade for every feature a paid plan covers and arrow keys to step between features, behind the my-jetpack-features-tab feature flag.
 - Features tab: say why the list is empty and offer a way forward, behind the my-jetpack-features-tab feature flag.
 - Features tab: Show a Configure link beside the switch of an active module, and stop Brute Force Protection from switching the Protect card on.
