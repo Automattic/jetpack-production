@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Point the disconnected-site notice at documentation instead of a connect link when the site would not let the current user connect it, as on VIP and multisite.
 - My Jetpack: answer module switch clicks immediately, and explain what happened when a change fails.
 - Newsletter: Format stats metrics and open/click rates with locale-aware number formatters.
+- Newsletter: List the enabled pop-up, overlay, and floating button below the footer when editing a template in the Site Editor.
 - Newsletter: name the email design Styles controls after the parts of the email they change.
 - Newsletter: open the email design screen on its Styles panel, and add a way back to it from the Template tab.
 - Newsletter: Sync the active theme's colors and typography so post emails can match the site's design.

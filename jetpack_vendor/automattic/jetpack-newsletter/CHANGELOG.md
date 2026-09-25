@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Action Bar: Add a "Turn off this bar" link for site admins that explains how to hide the bar.
 - Action Bar: Add the WordPress.com front-end Action Bar, ported from wpcom. Loads on WordPress.com Simple only.
 - Add the Subscribers tab URL to the admin script data, or null when the current user cannot open it.
 - Subscribers: Label "Not sending" subscribers as "Bounced" or "Emails paused", with the reason in a tooltip.
