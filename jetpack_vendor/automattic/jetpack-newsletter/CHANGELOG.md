@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscribers: Remove the temporary subscriber count notice on WordPress.com sites.
 
 ### Fixed
+- Clarify failed subscriber import guidance when no confirmation email arrives.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Settings: Warn when no site owner is connected to WordPress.com, and disable the form, as the previous screen did.
 - Show Jetpack in-dashboard messages on the dashboard again.

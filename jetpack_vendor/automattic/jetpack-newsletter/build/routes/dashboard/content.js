@@ -54,9 +54,9 @@ __( "Connect to manage your subscribers", "jetpack-newsletter" );
 __( "Subscriber management needs a connection to WordPress.com before you can view and manage everyone subscribed to your site.", "jetpack-newsletter" );
 __( "Connecting…", "jetpack-newsletter" );
 __( "Connect", "jetpack-newsletter" );
-__( "We couldn’t import your subscribers. Check your import confirmation email for details, then try again.", "jetpack-newsletter" );
+__( "We couldn’t import your subscribers. Check your confirmation email if you received one, or contact support for help.", "jetpack-newsletter" );
 /* translators: %1$d: subscribers imported. %2$d: email addresses that couldn't be added. */
-_n( "Imported %1$d subscriber. %2$d couldn’t be added — check your import confirmation email for details.", "Imported %1$d subscribers. %2$d couldn’t be added — check your import confirmation email for details.", 1, "jetpack-newsletter" );
+_n( "Imported %1$d subscriber. %2$d couldn’t be added. Check your confirmation email if you received one, or contact support for help.", "Imported %1$d subscribers. %2$d couldn’t be added. Check your confirmation email if you received one, or contact support for help.", 1, "jetpack-newsletter" );
 /* translators: %1$d: subscribers imported. %2$d: email addresses already subscribed. */
 _n( "%1$d subscriber imported. %2$d already subscribed.", "%1$d subscribers imported. %2$d already subscribed.", 1, "jetpack-newsletter" );
 /* translators: %d: number of subscribers imported. */
