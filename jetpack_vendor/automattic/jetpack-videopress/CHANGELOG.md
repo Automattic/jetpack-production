@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a site-wide playlist index option that records every published Video Playlist, and give the Video Playlist block title and description settings.
 
 ### Fixed
+- Library: Show a loading state until the video library is loaded.
 - Show Jetpack in-dashboard messages on the dashboard again.
 - Show poster generation errors and allow retrying a failed video frame.
 
