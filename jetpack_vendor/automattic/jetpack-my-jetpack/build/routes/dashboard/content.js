@@ -584,9 +584,14 @@ __( "%s is on.", "jetpack-my-jetpack" );
 __( "Could not change %s. Please try again.", "jetpack-my-jetpack" );
 __( "Activate Jetpack", "jetpack-my-jetpack" );
 __( "Install Jetpack", "jetpack-my-jetpack" );
+__( "All", "jetpack-my-jetpack" );
+__( "Essential", "jetpack-my-jetpack" );
+__( "Complete", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "Learn more about %s", "jetpack-my-jetpack" );
-__( "Essential", "jetpack-my-jetpack" );
+/* translators: %s is the feature name. */
+__( "%s settings", "jetpack-my-jetpack" );
+__( "Settings", "jetpack-my-jetpack" );
 /* translators: %d is how many features were switched on. */
 _n( "%d feature activated.", "%d features activated.", 1, "jetpack-my-jetpack" );
 /* translators: %d is how many features were switched off. */
@@ -624,8 +629,6 @@ __( "Switch a feature on or off right here. Open one first to see what it does, 
 __( "Dismiss banner", "jetpack-my-jetpack" );
 __( "Activate the Jetpack plugin to see and switch its other features.", "jetpack-my-jetpack" );
 __( "More Features", "jetpack-my-jetpack" );
-__( "All", "jetpack-my-jetpack" );
-__( "Complete", "jetpack-my-jetpack" );
 __( "Grid view", "jetpack-my-jetpack" );
 __( "List view", "jetpack-my-jetpack" );
 __( "Filter features", "jetpack-my-jetpack" );
