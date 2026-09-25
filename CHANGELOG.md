@@ -124,6 +124,7 @@ This is an alpha version! The changes listed here are not final.
 - Modules: Honor the `jetpack_feature_policy` filter when detecting forced modules and choosing default modules.
 - Premium Analytics: register the Ads tab from the WordAds module.
 - Premium Analytics: Sync store analytics whether or not WooCommerce order attribution is enabled.
+- Settings: Remove the hardcoded text color override on the wp-build page, so text follows the design system color.
 - Sharing settings: Stop showing Jetpack Social connection errors on the Settings > Sharing screen.
 - Stats: Load the admin bar chart and Stats link from the Stats Admin package, and deprecate the matching functions in the Stats module.
 - Tools: Replace `@wordpress/jest-console` with a simple set of mocks.

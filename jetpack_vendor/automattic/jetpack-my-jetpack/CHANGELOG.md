@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Features tab: Show a Configure link beside the switch of an active module, and stop Brute Force Protection from switching the Protect card on.
 - Features tab: Sort the More Features groups and their modules by name, add settings links, and show only the modules that apply to the site.
 - My Jetpack: add an icon to the Features tab's empty states.
+- Remove the hardcoded text color override on the wp-build dashboard, so text follows the design system color.
 - Render the Jetpack in-dashboard message slot from the shared component.
 - Use logical CSS properties so layouts mirror in right-to-left languages.
 
