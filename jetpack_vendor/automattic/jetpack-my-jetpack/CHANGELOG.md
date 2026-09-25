@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin menu: Avoid a fatal error when an older version of the admin UI package is loaded.
 - My Jetpack: keep the tab footer flush with the bottom of the content surface.
 - My Jetpack: stretch the tab content background to the full height of the page.
+- Show a note instead of Activate or purchase buttons on an Overview card whose module your host or site administrator has disabled.
 
 ## [6.6.0] - 2026-09-23
 ### Added

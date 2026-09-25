@@ -342,6 +342,9 @@ __( "Some products need a connection to WordPress.com to be able to work.", "jet
 __( "Connect your site", "jetpack-my-jetpack" );
 __( "Missing site connection", "jetpack-my-jetpack" );
 __( "Connecting…", "jetpack-my-jetpack" );
+__( "Enabled by your host or site administrator", "jetpack-my-jetpack" );
+__( "Disabled by your host or site administrator", "jetpack-my-jetpack" );
+__( "Not available on multisite", "jetpack-my-jetpack" );
 __( "Install Plugin", "jetpack-my-jetpack" );
 __( "Get plan", "jetpack-my-jetpack" );
 __( "Upgrade", "jetpack-my-jetpack" );
@@ -493,7 +496,6 @@ __( "Security", "jetpack-my-jetpack" );
 __( "Growth", "jetpack-my-jetpack" );
 __( "Performance", "jetpack-my-jetpack" );
 __( "Other", "jetpack-my-jetpack" );
-__( "Not available on multisite", "jetpack-my-jetpack" );
 __( "Explore all", "jetpack-my-jetpack" );
 __( "We couldn’t load your features.", "jetpack-my-jetpack" );
 __( "Refresh the page, or try again in a moment.", "jetpack-my-jetpack" );
@@ -577,8 +579,6 @@ __( "Failed to deactivate %s.", "jetpack-my-jetpack" );
 __( "Open Site Editor", "jetpack-my-jetpack" );
 /* translators: %s is the module name */
 __( "Toggle %s module", "jetpack-my-jetpack" );
-__( "Enabled by your host or site administrator", "jetpack-my-jetpack" );
-__( "Disabled by your host or site administrator", "jetpack-my-jetpack" );
 /* translators: %s is a plugin or feature name. */
 __( "%s deactivated.", "jetpack-my-jetpack" );
 /* translators: %s is a plugin or feature name. */
