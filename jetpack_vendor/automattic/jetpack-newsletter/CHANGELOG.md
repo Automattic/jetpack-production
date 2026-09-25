@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Action Bar: Reflect the subscribed state wpcom patches in after a cached page loads, and ignore a second run of the script.
 - Action Bar: Use WordPress icons instead of Gridicons.
 - Daily Writing Prompt: Send an answer straight to the Block editor when this browser has opted out of Write, whichever surface the answer came from.
+- Format newsletter stats metrics and rates with locale-aware number formatters.
 - Use the shared wp-build-polyfills helper to order the screen-ID alias around wp-build's generated enqueue check.
 
 ### Removed

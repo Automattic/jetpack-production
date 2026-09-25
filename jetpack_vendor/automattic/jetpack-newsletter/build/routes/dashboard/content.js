@@ -553,8 +553,6 @@ __( "Loading…", "jetpack-newsletter" );
 __( "Not enough space to display data", "jetpack-newsletter" );
 __( "Percentage change unavailable", "jetpack-newsletter" );
 __( "No comparison data", "jetpack-newsletter" );
-/* translators: %d: Percentage value without the percent sign. */
-__( "%d%%", "jetpack-newsletter" );
 __( "Loading recent posts…", "jetpack-newsletter" );
 __( "Recent posts could not be loaded.", "jetpack-newsletter" );
 __( "Retry", "jetpack-newsletter" );
