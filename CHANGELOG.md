@@ -67,6 +67,7 @@ This is an alpha version! The changes listed here are not final.
 - Google Fonts: Detect fonts followed by fallback families so selected fonts render on the front end.
 - Jetpack AI: avoid an unnecessary request when loading the editor.
 - Modules: Report an error instead of success in WP-CLI and the REST API when switching a module your host or site administrator has enabled or disabled.
+- My Jetpack: Fix the layout of the connection screen for right-to-left languages.
 - My Jetpack: Fix the page failing to load for users who can edit posts but have no Jetpack menu, such as editors on unconnected sites.
 - My Jetpack: Point users who cannot connect the site at an administrator, instead of an onboarding screen they cannot complete.
 - My Jetpack: Show each notice once instead of twice.
