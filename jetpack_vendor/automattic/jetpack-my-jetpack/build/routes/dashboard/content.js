@@ -166,6 +166,7 @@ __( "We’re sorry to see you go. Here at Jetpack, we’re always striving to pr
 __( "Help us improve", "jetpack-my-jetpack" );
 __( "No thank you", "jetpack-my-jetpack" );
 __( "Back to my website", "jetpack-my-jetpack" );
+__( "I couldn't get it to connect.", "jetpack-my-jetpack" );
 __( "Troubleshooting - I'll be reconnecting afterwards.", "jetpack-my-jetpack" );
 __( "I can't get it to work.", "jetpack-my-jetpack" );
 __( "It slowed down my site.", "jetpack-my-jetpack" );
@@ -179,6 +180,8 @@ __( "Submitting…", "jetpack-my-jetpack" );
 __( "Submit Feedback", "jetpack-my-jetpack" );
 __( "Before you go, help us improve Jetpack", "jetpack-my-jetpack" );
 __( "Let us know what didn't work for you", "jetpack-my-jetpack" );
+__( "Submit and deactivate", "jetpack-my-jetpack" );
+__( "Skip and deactivate", "jetpack-my-jetpack" );
 __( "Skip for now", "jetpack-my-jetpack" );
 __( "Thank you!", "jetpack-my-jetpack" );
 __( "Your answer has been submitted. <br/>Thanks for your input on how we can improve Jetpack.", "jetpack-my-jetpack" );

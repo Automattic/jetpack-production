@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Disconnect dialog: On the plugins page, offer the survey before deactivating, including on sites where no user has connected.
+
 ### Changed
 - Ask WordPress.com to record the protected owner before anchoring it on the site.
 - Let users without admin access restore their own broken account connection through the reconnect endpoint, without touching the site connection.

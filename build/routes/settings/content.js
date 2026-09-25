@@ -44,6 +44,7 @@ __( "We’re sorry to see you go. Here at Jetpack, we’re always striving to pr
 __( "Help us improve", "jetpack" );
 __( "No thank you", "jetpack" );
 __( "Back to my website", "jetpack" );
+__( "I couldn't get it to connect.", "jetpack" );
 __( "Troubleshooting - I'll be reconnecting afterwards.", "jetpack" );
 __( "I can't get it to work.", "jetpack" );
 __( "It slowed down my site.", "jetpack" );
@@ -57,6 +58,8 @@ __( "Submitting…", "jetpack" );
 __( "Submit Feedback", "jetpack" );
 __( "Before you go, help us improve Jetpack", "jetpack" );
 __( "Let us know what didn't work for you", "jetpack" );
+__( "Submit and deactivate", "jetpack" );
+__( "Skip and deactivate", "jetpack" );
 __( "Skip for now", "jetpack" );
 __( "Thank you!", "jetpack" );
 __( "Your answer has been submitted. <br/>Thanks for your input on how we can improve Jetpack.", "jetpack" );
