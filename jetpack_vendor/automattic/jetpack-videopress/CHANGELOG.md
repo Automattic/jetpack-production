@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add an All Playlists block that lists every Video Playlist published on the site as a grid or a list.
 - Add a site-wide playlist index option that records every published Video Playlist, and give the Video Playlist block title and description settings.
 
 ### Fixed

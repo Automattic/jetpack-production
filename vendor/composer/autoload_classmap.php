@@ -615,6 +615,7 @@ return array(
     'Automattic\\Jetpack\\VideoPress\\AJAX' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-ajax.php',
     'Automattic\\Jetpack\\VideoPress\\Access_Control' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-access-control.php',
     'Automattic\\Jetpack\\VideoPress\\Admin_UI' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-admin-ui.php',
+    'Automattic\\Jetpack\\VideoPress\\All_Playlists_Block' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-all-playlists-block.php',
     'Automattic\\Jetpack\\VideoPress\\Attachment_Handler' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-attachment-handler.php',
     'Automattic\\Jetpack\\VideoPress\\Block_Editor_Content' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-block-editor-content.php',
     'Automattic\\Jetpack\\VideoPress\\Block_Editor_Extensions' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-block-editor-extensions.php',
