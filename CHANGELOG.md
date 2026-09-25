@@ -108,6 +108,7 @@ This is an alpha version! The changes listed here are not final.
 - Carousel: Shorten the slide transition, and disable it entirely under prefers-reduced-motion.
 - Carousel: Stop fetching comments on every slide change; fetch them when the comments panel is opened.
 - Carousel: Stop serialising empty EXIF values into every gallery image.
+- Jetpack AI: Link the AI Answers row to the Search settings page only where that page is available, and to the docs otherwise, so hosts that remove the page keep the toggle without a dead link.
 - Likes: deprecate the legacy Settings > Sharing methods in Jetpack_Likes_Settings, now that the Sharing screen renders and saves the Likes settings itself.
 - Map block: Clean up unused attributes and provide fallback for invalid color values.
 - Modules: Honor the `jetpack_feature_policy` filter when detecting forced modules and choosing default modules.
