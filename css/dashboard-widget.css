@@ -85,7 +85,9 @@
 }
 #jetpack_summary_widget h2.hndle svg {
   height: 20px;
-  margin: 0.15em 0 0 0.5em;
+  margin-block: 0.15em 0;
+  margin-inline-start: 0.5em;
+  margin-inline-end: 0;
 }
 #jetpack_summary_widget pre.stats-widget-error {
   overflow: scroll;
@@ -108,7 +110,7 @@
   overflow: hidden;
 }
 #jetpack_summary_widget .inside #stats_dashboard_widget_control .button-primary {
-  float: right;
+  float: inline-end;
 }
 #jetpack_summary_widget .inside #dashboard_stats {
   box-sizing: border-box;
@@ -297,7 +299,7 @@
 #jetpack_summary_widget footer p.blocked-count {
   margin-top: 0;
   margin-bottom: 6px;
-  margin-right: 8px;
+  margin-inline-end: 8px;
   font-weight: 500;
   font-size: 2rem;
   display: inline-block;
@@ -315,13 +317,15 @@
   text-align: center;
 }
 #jetpack_summary_widget footer .footer-links {
-  margin: 0 0 1.5em 1.5em;
+  margin-block: 0 1.5em;
+  margin-inline-start: 1.5em;
+  margin-inline-end: 0;
 }
 #jetpack_summary_widget footer .footer-links svg {
   height: 20px;
 }
 #jetpack_summary_widget footer .footer-links span {
-  float: right;
+  float: inline-end;
 }
 #jetpack_summary_widget footer .button {
   background: var(--jp-black);

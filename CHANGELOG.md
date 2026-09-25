@@ -121,6 +121,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing settings: Stop showing Jetpack Social connection errors on the Settings > Sharing screen.
 - Stats: Load the admin bar chart and Stats link from the Stats Admin package, and deprecate the matching functions in the Stats module.
 - Tools: Replace `@wordpress/jest-console` with a simple set of mocks.
+- Use logical CSS properties in Settings, Dashboard, and Jetpack AI styles so layouts mirror in right-to-left languages.
 
 ## 16.3-a.3 - 2026-09-21
 ### Enhancements
