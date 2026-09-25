@@ -590,8 +590,8 @@ __( "Complete", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "Learn more about %s", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
-__( "%s settings", "jetpack-my-jetpack" );
-__( "Settings", "jetpack-my-jetpack" );
+__( "Configure %s", "jetpack-my-jetpack" );
+__( "Configure", "jetpack-my-jetpack" );
 /* translators: %d is how many features were switched on. */
 _n( "%d feature activated.", "%d features activated.", 1, "jetpack-my-jetpack" );
 /* translators: %d is how many features were switched off. */

@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Features tab: reorganize the feature details modal around what is free and what a paid plan adds, with an upgrade for every feature a paid plan covers and arrow keys to step between features, behind the my-jetpack-features-tab feature flag.
 - Features tab: say why the list is empty and offer a way forward, behind the my-jetpack-features-tab feature flag.
+- Features tab: Show a Configure link beside the switch of an active module, and stop Brute Force Protection from switching the Protect card on.
 - Features tab: Sort the More Features groups and their modules by name, add settings links, and show only the modules that apply to the site.
 - My Jetpack: add an icon to the Features tab's empty states.
 - Render the Jetpack in-dashboard message slot from the shared component.
