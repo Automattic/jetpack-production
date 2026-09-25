@@ -68,6 +68,7 @@ This is an alpha version! The changes listed here are not final.
 - Firewall: Avoid a 500 error for visitors on the IP block list when the firewall runs before WordPress.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Forms: Cap the rating scale when rendering a form or a response so a malformed value cannot exhaust memory.
+- Forms: Detect Jetpack CRM installs that use a custom plugin folder or file name.
 - Google Fonts: Detect fonts followed by fallback families so selected fonts render on the front end.
 - Jetpack AI: avoid an unnecessary request when loading the editor.
 - Modules: Report an error instead of success in WP-CLI and the REST API when switching a module your host or site administrator has enabled or disabled.

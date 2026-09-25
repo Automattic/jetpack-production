@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Replace experimental layout and text components with their @wordpress/ui equivalents, and remove an unused integrations modal.
 
 ### Fixed
+- Detect Jetpack CRM installs that use a custom plugin folder or file name.
 - Rating field: Cap the scale when rendering a form or a response so a malformed value cannot exhaust memory.
 - Remove the duplicate divider between the dashboard header and the tabs.
 - Show Jetpack in-dashboard messages on the Forms dashboard.
