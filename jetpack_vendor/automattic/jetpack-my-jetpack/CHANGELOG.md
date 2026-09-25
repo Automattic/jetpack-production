@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Use logical CSS properties so layouts mirror in right-to-left languages.
 
 ### Fixed
+- Admin menu: Avoid a fatal error when an older version of the admin UI package is loaded.
 - My Jetpack: keep the tab footer flush with the bottom of the content surface.
 - My Jetpack: stretch the tab content background to the full height of the page.
 
