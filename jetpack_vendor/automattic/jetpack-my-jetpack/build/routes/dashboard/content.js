@@ -585,6 +585,7 @@ __( "%s deactivated.", "jetpack-my-jetpack" );
 __( "%s is on.", "jetpack-my-jetpack" );
 /* translators: %s is a plugin or feature name. */
 __( "Could not change %s. Please try again.", "jetpack-my-jetpack" );
+__( "Open", "jetpack-my-jetpack" );
 __( "Activate Jetpack", "jetpack-my-jetpack" );
 __( "Install Jetpack", "jetpack-my-jetpack" );
 __( "All", "jetpack-my-jetpack" );
@@ -616,7 +617,6 @@ __( "Built into Jetpack. Activating turns it on, with nothing to install or buy.
 __( "%s is part of the Jetpack plugin. Installing Jetpack turns it on; it does not buy anything.", "jetpack-my-jetpack" );
 __( "Feature page", "jetpack-my-jetpack" );
 __( "Documentation", "jetpack-my-jetpack" );
-__( "Open", "jetpack-my-jetpack" );
 /* translators: %s is a plan name, such as "Jetpack Complete". */
 __( "Show everything in %s", "jetpack-my-jetpack" );
 __( "Included in <plan0 />", "jetpack-my-jetpack" );

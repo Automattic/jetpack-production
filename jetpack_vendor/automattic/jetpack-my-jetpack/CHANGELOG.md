@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Admin menu: Avoid a fatal error when an older version of the admin UI package is loaded.
+- Features tab: Show VaultPress Backup and Protect as active, with an Open link, when a paid plan runs them without their plugin.
 - My Jetpack: keep the tab footer flush with the bottom of the content surface.
 - My Jetpack: stretch the tab content background to the full height of the page.
 - Show a note instead of Activate or purchase buttons on an Overview card whose module your host or site administrator has disabled.
