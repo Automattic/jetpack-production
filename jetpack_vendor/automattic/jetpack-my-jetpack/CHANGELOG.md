@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a More Features section to the Features tab that groups and switches Jetpack's other modules, behind the my-jetpack-features-tab feature flag.
+- Features: Record Tracks events for the Features tab.
 - Features tab: Add a dismissible banner explaining the tab.
 
 ### Changed
