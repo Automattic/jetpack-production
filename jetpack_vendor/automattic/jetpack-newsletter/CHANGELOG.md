@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
+- Settings: Warn when no site owner is connected to WordPress.com, and disable the form, as the previous screen did.
 - Show Jetpack in-dashboard messages on the dashboard again.
 - Subscribers: Show the earliest subscription date for subscribers with both an email and a WordPress.com subscription.
 

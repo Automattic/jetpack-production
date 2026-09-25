@@ -77,6 +77,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: stretch the tab content background to the full height of the page.
 - Newsletter: send the email design screen's test email through the newsletter renderer.
 - Newsletter: Show the earliest subscription date for subscribers with both an email and a WordPress.com subscription.
+- Newsletter: Show the warning when no site owner is connected to WordPress.com.
 - PayPal Payment Buttons: Allow http return URLs, and show an error in the block when a return URL is invalid.
 - PayPal Payment Buttons: Ask only about changes made since the last post save when leaving a saved payment link's form.
 - PayPal Payment Buttons: Mark the post as changed when a payment button is updated to match its link on PayPal, so the change can be saved and shown on the page.
