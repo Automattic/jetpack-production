@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.28.4-alpha] - unreleased
+## [0.29.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- DIFM Express: keep Posts, Media and Pages reachable in wp-admin while a build is still awaiting the customer's content.
 
 ## [0.28.3] - 2026-09-21
 ### Changed
@@ -662,7 +665,7 @@ This is an alpha version! The changes listed here are not final.
 - Notifications: Change Icon [#37676]
 - Updated package dependencies. [#37669] [#37706]
 
-[0.28.4-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.28.3...v0.28.4-alpha
+[0.29.0-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.28.3...v0.29.0-alpha
 [0.28.3]: https://github.com/Automattic/jetpack-masterbar/compare/v0.28.2...v0.28.3
 [0.28.2]: https://github.com/Automattic/jetpack-masterbar/compare/v0.28.1...v0.28.2
 [0.28.1]: https://github.com/Automattic/jetpack-masterbar/compare/v0.28.0...v0.28.1

@@ -223,6 +223,7 @@ return array(
     'Automattic\\Jetpack\\Masterbar\\Base_Admin_Menu' => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/admin-menu/class-base-admin-menu.php',
     'Automattic\\Jetpack\\Masterbar\\CSS_Customizer_Nudge' => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/nudges/additional-css/class-css-customizer-nudge.php',
     'Automattic\\Jetpack\\Masterbar\\CSS_Nudge_Customize_Control' => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/nudges/additional-css/class-css-nudge-customize-control.php',
+    'Automattic\\Jetpack\\Masterbar\\DIFM_Lite_Admin_Menu' => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/admin-menu/class-difm-lite-admin-menu.php',
     'Automattic\\Jetpack\\Masterbar\\Dashboard_Switcher_Tracking' => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/admin-menu/class-dashboard-switcher-tracking.php',
     'Automattic\\Jetpack\\Masterbar\\Domain_Only_Admin_Menu' => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/admin-menu/class-domain-only-admin-menu.php',
     'Automattic\\Jetpack\\Masterbar\\Inline_Help' => $baseDir . '/jetpack_vendor/automattic/jetpack-masterbar/src/inline-help/class-inline-help.php',
