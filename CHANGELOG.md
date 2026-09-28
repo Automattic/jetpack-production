@@ -65,6 +65,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin: Hide masthead links when My Jetpack is unavailable.
 - AI: Disable feature toggles when custom code forces AI off.
 - AI: Show the Learn more link when SEO settings are unavailable.
+- AI: Turn off AI SEO and Search AI Answers when the `jetpack_ai_enabled` filter returns false. Before, both stayed on.
 - Blocks: Align the premium block upgrade banner with its text on narrow screens.
 - Connection: Let users without admin access reconnect their own broken account from the connection error notice.
 - Connection: Report a broken connection on My Jetpack's connection card instead of claiming everything looks good, and show a break only the connection owner can repair as a warning, not an error, to everyone else.
