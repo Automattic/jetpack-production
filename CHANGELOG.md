@@ -92,6 +92,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add a Comparison period legend item to line charts that show a previous period, use square swatches in bar mode, keep the selected metric's legend item locked, and draw the Visitors swatch solid in the Traffic summary.
 - Premium Analytics: Draw the bars on a bar chart whose value stays the same across the whole period, instead of leaving the chart empty.
 - Premium Analytics: Fix store data failing to sync when WooCommerce Analytics is turned off.
+- Premium Analytics: Keep chart series colors distinguishable from each other, including for color-blind viewers.
 - Premium Analytics: Leave Average CPM empty instead of showing $0.00 in the Ads chart for periods with no ads served.
 - Premium Analytics: Leave the months before a site launched or turned on subscriptions empty in the Subscriber summary chart, with a "No data" tooltip, instead of showing zero.
 - Premium Analytics: Show "1 Subscriber" rather than "1 Subscribers" in chart tooltips, using each language's plural rules.
@@ -115,6 +116,7 @@ This is an alpha version! The changes listed here are not final.
 - Tooltips: Open information tooltips with the keyboard and dismiss them with Escape.
 - VideoPress: Fix a just-uploaded video briefly showing up a second time as a local video in the Library.
 - VideoPress: Fix private video playback on sites using WPML.
+- VideoPress: Keep the dashboard views trend chart's comparison lines distinguishable, including for color-blind viewers.
 - VideoPress: Prevent the empty library prompt from appearing while videos are loading.
 - VideoPress: With the inline player setting on, show the poster of private videos, and of videos the server could not look up, before they are played instead of a black box.
 
