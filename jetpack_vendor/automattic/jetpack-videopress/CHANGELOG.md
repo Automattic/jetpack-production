@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Add an optional trim and cut editor with preview, undo, and original video restoration. Keep the editor available during processing, reduce background status checks, refresh delayed timeline thumbnails, and allow retrying failed edits.
 - Add a site-wide playlist index option that records every published Video Playlist, and give the Video Playlist block title and description settings.
 
+### Changed
+- Use core SnackbarNotices instead of Jetpack GlobalNotices.
+
 ### Fixed
 - Dashboard: Fix a just-uploaded video briefly showing up a second time as a local video in the Library.
 - Library: Show a loading state until the video library is loaded.

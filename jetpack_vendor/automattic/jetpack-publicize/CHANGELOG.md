@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Load admin script data on the new Jetpack Settings page.
 - Services: Stop adding the legacy ID, connect_URL, external_users_only and multiple_external_user_ID_support fields to the services list on Jetpack sites.
 - Show the Jetpack in-dashboard message above the tabs, from the shared slot.
+- Use core SnackbarNotices instead of Jetpack GlobalNotices.
 - Use the shared wp-build-polyfills helper to order the screen-ID alias around wp-build's generated enqueue check.
 
 ### Deprecated

@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Action Bar: Use WordPress icons instead of Gridicons.
 - Daily Writing Prompt: Send an answer straight to the Block editor when this browser has opted out of Write, whichever surface the answer came from.
 - Format newsletter stats metrics and rates with locale-aware number formatters.
+- Use core SnackbarNotices instead of Jetpack GlobalNotices.
 - Use the shared wp-build-polyfills helper to order the screen-ID alias around wp-build's generated enqueue check.
 
 ### Removed
