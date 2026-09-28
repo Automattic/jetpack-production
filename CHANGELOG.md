@@ -76,6 +76,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Let users without admin access reconnect their own broken account from the connection error notice.
 - Connection: Report a broken connection on My Jetpack's connection card instead of claiming everything looks good, and show a break only the connection owner can repair as a warning, not an error, to everyone else.
 - Content Guidelines: Fix the AI button alignment and the loading shimmer after recent Gutenberg changes.
+- Copy Post: Fix footnotes containing links being lost when duplicating a post.
 - CRM: keep the site owner on My Jetpack after activating Jetpack CRM, instead of sending them to CRM's full-screen setup wizard.
 - Donations: Fix donate button rendering as a cross shape on themes that apply block-level styles to .wp-block-button__link when the Button block stylesheet is not loaded.
 - External Media: Fix the width of the Select Media button in narrow block placeholders, such as the Media & Text block.
