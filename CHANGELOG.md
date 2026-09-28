@@ -123,6 +123,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Stop listing an author's post that only appears in the comparison period as 0 (-100%).
 - Search: Keep the AI Answers preview hidden when answers are turned off.
 - Search: Require a paid Search plan to enable and display Site Chat.
+- Search: Show the connection error at the top of the dashboard on every tab.
 - Search: Stop offering Search blocks in the Overlay search sidebar's widget inserter, and flag any already there, because they cannot load in that sidebar.
 - SEO: Fix Sitemap and Canonical URLs status to reflect the active modules.
 - SEO: Respect excerpt filters in generated llms.txt summaries.

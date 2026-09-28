@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - AI Answers: Keep the search preview hidden when answers are turned off.
 - AI Answers: Respect the site-wide Jetpack AI filter.
 - Blocks: Stop offering Search blocks in the Overlay search sidebar's widget inserter, and flag any already there, because they cannot load in that sidebar.
+- Dashboard: Show the connection error at the top of the page on every tab.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Show Jetpack in-dashboard messages on every Search tab, not just Overview.
 - Site Chat: Require a paid Search plan to enable chat.
