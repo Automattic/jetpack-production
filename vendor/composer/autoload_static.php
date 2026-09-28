@@ -713,6 +713,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_3_a_4
         'Automattic\\Jetpack\\Waf\\Waf_Standalone_Bootstrap' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-standalone-bootstrap.php',
         'Automattic\\Jetpack\\Waf\\Waf_Stats' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-stats.php',
         'Automattic\\Jetpack\\Waf\\Waf_Transforms' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php',
+        'Automattic\\Jetpack\\WordAds\\Analytics_Dashboard' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-ads/src/class-analytics-dashboard.php',
         'Automattic\\Woocommerce_Analytics' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woocommerce-analytics.php',
         'Automattic\\Woocommerce_Analytics\\Consent_Manager' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-consent-manager.php',
         'Automattic\\Woocommerce_Analytics\\Features' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-features.php',

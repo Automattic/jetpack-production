@@ -16,6 +16,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
       'ver' => '0.14.0',
     ),
+    'jetpack-ads-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-ads',
+      'ver' => '0.1.0-alpha1790586884',
+    ),
     'jetpack-agents-manager' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-agents-manager',
       'ver' => '0.12.3',
@@ -150,7 +154,7 @@ return array(
     ),
     'jetpack-premium-analytics-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-premium-analytics',
-      'ver' => '0.9.0-alpha1790582207',
+      'ver' => '0.9.0-alpha1790586884',
     ),
     'jetpack-protect-models' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-protect-models',

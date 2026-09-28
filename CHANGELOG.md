@@ -144,6 +144,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Load the admin bar chart and Stats link from the Stats Admin package, and deprecate the matching functions in the Stats module.
 - Tools: Replace `@wordpress/jest-console` with a simple set of mocks.
 - Use logical CSS properties in Settings, Dashboard, and Jetpack AI styles so layouts mirror in right-to-left languages.
+- WordAds: Register the Ads widgets of the Premium Analytics dashboard from the Ads package.
 
 ## 16.3-a.3 - 2026-09-21
 ### Enhancements

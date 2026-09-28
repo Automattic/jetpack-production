@@ -6,6 +6,8 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "Earnings", "jetpack-premium-analytics-pkg" );
-__( "Paid", "jetpack-premium-analytics-pkg" );
-__( "Outstanding amount", "jetpack-premium-analytics-pkg" );
+__( "Earnings", "jetpack-ads-pkg" );
+__( "Paid", "jetpack-ads-pkg" );
+__( "Outstanding amount", "jetpack-ads-pkg" );
+__( "We couldn't load WordAds earnings. Please try again in a moment.", "jetpack-ads-pkg" );
+__( "Retry", "jetpack-ads-pkg" );

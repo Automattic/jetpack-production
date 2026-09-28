@@ -6,12 +6,12 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "Ads Served", "jetpack-premium-analytics-pkg" );
+__( "Ads Served", "jetpack-ads-pkg" );
 /* translators: %s: number of ads served. */
-_n( "%s Ad Served", "%s Ads Served", 1, "jetpack-premium-analytics-pkg" );
-__( "Average CPM", "jetpack-premium-analytics-pkg" );
-__( "Revenue", "jetpack-premium-analytics-pkg" );
-__( "No ads were served in this period.", "jetpack-premium-analytics-pkg" );
-__( "We couldn't load WordAds data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "Retry", "jetpack-premium-analytics-pkg" );
-__( "WordAds metric", "jetpack-premium-analytics-pkg" );
+_n( "%s Ad Served", "%s Ads Served", 1, "jetpack-ads-pkg" );
+__( "Average CPM", "jetpack-ads-pkg" );
+__( "Revenue", "jetpack-ads-pkg" );
+__( "No ads were served in this period.", "jetpack-ads-pkg" );
+__( "We couldn't load WordAds data. Please try again in a moment.", "jetpack-ads-pkg" );
+__( "Retry", "jetpack-ads-pkg" );
+__( "WordAds metric", "jetpack-ads-pkg" );

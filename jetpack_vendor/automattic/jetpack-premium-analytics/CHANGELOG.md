@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Add Tracks events for each widget a saved layout adds or removes.
 - Ads: Note in the Earnings History widget when the site has adjustments, linking to the Adjustments history tab of the Earnings report.
 - Dashboard: Add a feature flag that shows Automatticians every section of a preview-limited dashboard.
+- Dashboard: register the SDK as the `@automattic/jetpack-premium-analytics-sdk` script module.
 - Dashboard: Show the Subscribers tab in the customer preview.
 - Dashboard: widget module records carry the text domain and the i18n manifest of the build that serves them, so widgets another plugin registers load their translations.
 - Date comparison: Add options that line up the same weekdays of the previous period and the previous year.
@@ -39,6 +40,9 @@ This is an alpha version! The changes listed here are not final.
 - Share one InfoTip between the report chart help and the pending payment status badge.
 - Sync: Use the shared WooCommerce Analytics module from the jetpack-sync package, sync store analytics whether or not WooCommerce order attribution is enabled, and use the shared module in place of the WooCommerce Analytics plugin's own when both are active.
 - The Ads tab is registered by the WordAds module and by WordPress.com rather than by the package, so it no longer appears on sites without WordAds. A section whose slug another section already uses is refused.
+
+### Removed
+- Dashboard: Move the Ads widgets and their default layout to the Ads package, which registers them with the section.
 
 ### Fixed
 - Ads: Leave Average CPM empty instead of showing $0.00 in the Ads chart for periods with no ads served.
