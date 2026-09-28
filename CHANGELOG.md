@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Add a "How it works" guide to the top of the MCP and Connectors tab.
 - AI: Point the Cursor setup instructions on the MCP agent setup page at the WordPress.com plugin on the Cursor Marketplace.
 - Jetpack AI: Point the disconnected-site notice at documentation instead of a connect link when the site would not let the current user connect it, as on VIP and multisite.
+- Likes: Manage Comment Likes from Settings > Sharing, and suggest the Like block on block themes even when Comment Likes are on.
 - My Jetpack: answer module switch clicks immediately, and explain what happened when a change fails.
 - My Jetpack: Show a Features tab in place of the Products tab, and link the footer's modules links to its list view.
 - Newsletter: Format stats metrics and open/click rates with locale-aware number formatters.

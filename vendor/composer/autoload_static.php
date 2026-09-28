@@ -537,6 +537,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_3_a_4
         'Automattic\\Jetpack\\Search\\WPES\\Query_Parser' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-search/src/wpes/class-query-parser.php',
         'Automattic\\Jetpack\\Search\\Wc_Block_Helpers' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/class-wc-block-helpers.php',
         'Automattic\\Jetpack\\Sharing_Likes' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/class-sharing-likes.php',
+        'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Comment_Likes_Section' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-comment-likes-section.php',
         'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Environment' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-environment.php',
         'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Extras_Section' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-extras-section.php',
         'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Likes_Options' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-likes-options.php',

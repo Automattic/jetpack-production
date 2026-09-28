@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Initial version.
 - Settings: add the wp-admin Settings > Sharing screen, covering sharing buttons, Like buttons, and where they appear.
+- Settings: give Comment Likes their own section on every platform, and offer the Like block to Jetpack and Atomic sites running Comment Likes.
 
 ### Changed
 - Settings: render and save the Twitter Site Tag and "Disable CSS and JS" settings from the Sharing screen itself.
