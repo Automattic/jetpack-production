@@ -122,6 +122,7 @@ _n( "%d more", "%d more", 1, "jetpack-premium-analytics-pkg" );
 __( "Hide chart", "jetpack-premium-analytics-pkg" );
 __( "Show chart", "jetpack-premium-analytics-pkg" );
 __( "About %s", "jetpack-premium-analytics-pkg" );
+__( "No data found", "jetpack-premium-analytics-pkg" );
 __( "Views by location", "jetpack-premium-analytics-pkg" );
 __( "Views shaded by country. Pick a country on the Regions tab to see its regions instead.", "jetpack-premium-analytics-pkg" );
 __( "Hide map", "jetpack-premium-analytics-pkg" );
