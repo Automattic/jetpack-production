@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the `jetpack_premium_analytics_register_dashboard_sections` action, so a plugin can register a dashboard section.
 - Add the `jetpack_premium_analytics_register_widget_types` action, `register_widget_types_from_manifest()` and `WIDGET_API_VERSION`, so a plugin can register its dashboard widget types.
 - Add Tracks events for customizing a layout, and record whether the reader has a customized dashboard when sending feedback.
+- Add Tracks events for each widget a saved layout adds or removes.
 - Ads: Note in the Earnings History widget when the site has adjustments, linking to the Adjustments history tab of the Earnings report.
 - Dashboard: Add a feature flag that shows Automatticians every section of a preview-limited dashboard.
 - Dashboard: Show the Subscribers tab in the customer preview.
