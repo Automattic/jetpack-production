@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Likes: Manage Comment Likes from Settings > Sharing, and suggest the Like block on block themes even when Comment Likes are on.
 - My Jetpack: answer module switch clicks immediately, and explain what happened when a change fails.
 - My Jetpack: Show a Features tab in place of the Products tab, and link the footer's modules links to its list view.
+- Newsletter: add a button that puts the email design back to its defaults.
 - Newsletter: Format stats metrics and open/click rates with locale-aware number formatters.
 - Newsletter: List the enabled pop-up, overlay, and floating button below the footer when editing a template in the Site Editor.
 - Newsletter: name the email design Styles controls after the parts of the email they change.
