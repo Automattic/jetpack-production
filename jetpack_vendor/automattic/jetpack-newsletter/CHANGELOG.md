@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Clarify failed subscriber import guidance when no confirmation email arrives.
+- Dashboard: Stop logging a console error about missing Jetpack configuration.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Settings: Warn when no site owner is connected to WordPress.com, and disable the form, as the previous screen did.
 - Show Jetpack in-dashboard messages on the dashboard again.

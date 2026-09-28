@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: Fix a just-uploaded video briefly showing up a second time as a local video in the Library.
+- Dashboard: Stop logging a console error about missing Jetpack configuration.
 - Library: Show a loading state until the video library is loaded.
 - Show Jetpack in-dashboard messages on the dashboard again.
 - Show poster generation errors and allow retrying a failed video frame.

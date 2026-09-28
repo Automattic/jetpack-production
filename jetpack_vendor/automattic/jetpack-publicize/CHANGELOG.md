@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the WordPress.com account-linking notice from Settings > Sharing.
 
 ### Fixed
+- Dashboard: Stop logging a console error about missing Jetpack configuration.
 - Exclude `build/assets/index.d.ts` from published package.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 
