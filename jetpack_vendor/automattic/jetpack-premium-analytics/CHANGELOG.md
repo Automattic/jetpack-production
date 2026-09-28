@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Show one generic “no results for this time period” state in list widgets that have no data for the selected period.
 - Dashboard: Show the generic “no results for this time period” state in chart widgets that have no data for the selected period.
 - Date controls: Match the date range control in widget headers to the height of the other header controls, and draw the date triggers with the design system button states.
+- Latest subscribers: Open a subscriber on the Newsletter Subscribers page in wp-admin.
 - Share one InfoTip between the report chart help and the pending payment status badge.
 - Sync: Use the shared WooCommerce Analytics module from the jetpack-sync package, sync store analytics whether or not WooCommerce order attribution is enabled, and use the shared module in place of the WooCommerce Analytics plugin's own when both are active.
 - The Ads tab is registered by the WordAds module and by WordPress.com rather than by the package, so it no longer appears on sites without WordAds. A section whose slug another section already uses is refused.
