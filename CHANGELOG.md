@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Replace the records table with a "No data found" state when the selected period has no rows.
 - Premium Analytics: Show one generic “no results for this time period” state in list widgets that have no data for the selected period.
 - Premium Analytics: Show payment status as a badge in the Earnings History widget, and shorten the pending statuses to one word with the reason beside them. Negative amounts in the widget are no longer red; only the badge carries colour.
+- Premium Analytics: Show the Ads tab in the customer preview on sites that use WordAds.
 - Premium Analytics: Show the change since 30 days ago on the all-time, paid and free subscriber counts for sites with paid subscribers.
 - Premium Analytics: Show the empty state in chart widgets for a period the Stats API answers with zero or missing values, keep the Traffic chart's tabs at zero with the no-results message in the chart, and show zeros or placeholders in highlight and Insights widgets instead of an empty message.
 - Premium Analytics: Show the generic “no results for this time period” state in chart widgets that have no data for the selected period.

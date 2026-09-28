@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Ads: Note in the Earnings History widget when the site has adjustments, linking to the Adjustments history tab of the Earnings report.
 - Dashboard: Add a feature flag that shows Automatticians every section of a preview-limited dashboard.
 - Dashboard: register the SDK as the `@automattic/jetpack-premium-analytics-sdk` script module.
+- Dashboard: Show the Ads tab in the customer preview on sites that use WordAds.
 - Dashboard: Show the Subscribers tab in the customer preview.
 - Dashboard: widget module records carry the text domain and the i18n manifest of the build that serves them, so widgets another plugin registers load their translations.
 - Date comparison: Add options that line up the same weekdays of the previous period and the previous year.
