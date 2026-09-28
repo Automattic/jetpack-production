@@ -133,6 +133,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Let the pointer take over from the arrow keys in bar charts, including podcast episode stats, instead of flickering between the hovered and selected bars.
 - Stats: Stop the pricing grid from coming back for up to 5 minutes after choosing Start for free.
 - Tooltips: Open information tooltips with the keyboard and dismiss them with Escape.
+- VideoPress: Ask before deleting videos, and warn before leaving the page while an upload is running.
 - VideoPress: Fix a just-uploaded video briefly showing up a second time as a local video in the Library.
 - VideoPress: Fix private video playback on sites using WPML.
 - VideoPress: Keep the dashboard views trend chart's comparison lines distinguishable, including for color-blind viewers.

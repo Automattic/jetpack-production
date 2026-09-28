@@ -406,6 +406,10 @@ __( "Learn more", "jetpack-videopress-pkg" );
 __( "Upload a video", "jetpack-videopress-pkg" );
 __( "Host, manage, customize, and track your videos — all in one place. <link>Learn more</link>.", "jetpack-videopress-pkg" );
 __( "Retry", "jetpack-videopress-pkg" );
+__( "This action cannot be undone.", "jetpack-videopress-pkg" );
+__( "Delete video", "jetpack-videopress-pkg" );
+/* translators: %d: number of videos being deleted. */
+__( "Delete %d videos", "jetpack-videopress-pkg" );
 __( "Make public", "jetpack-videopress-pkg" );
 __( "Make private", "jetpack-videopress-pkg" );
 __( "Reset to site default", "jetpack-videopress-pkg" );
