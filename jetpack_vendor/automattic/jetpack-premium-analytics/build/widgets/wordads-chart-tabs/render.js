@@ -14,5 +14,4 @@ __( "Revenue", "jetpack-premium-analytics-pkg" );
 __( "No ads were served in this period.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load WordAds data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
-__( "No WordAds data in this period.", "jetpack-premium-analytics-pkg" );
 __( "WordAds metric", "jetpack-premium-analytics-pkg" );

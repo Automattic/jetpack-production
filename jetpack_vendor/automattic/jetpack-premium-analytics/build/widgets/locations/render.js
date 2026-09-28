@@ -12,4 +12,3 @@ __( "All locations", "jetpack-premium-analytics-pkg" );
 __( "View all locations", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load location data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
-__( "No location data in this period.", "jetpack-premium-analytics-pkg" );

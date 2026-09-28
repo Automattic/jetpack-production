@@ -8,4 +8,3 @@
 
 __( "We couldn't load video plays. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
-__( "No VideoPress plays in this period.", "jetpack-premium-analytics-pkg" );
