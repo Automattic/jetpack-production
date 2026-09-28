@@ -108,6 +108,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Start bar chart value axes at zero so a small change no longer looks like a large one.
 - Premium Analytics: Start line chart value axes at zero, and pad the Subscribers chart's axis a little below its data, so a small change no longer looks like a large one.
 - Premium Analytics: Stop listing an author's post that only appears in the comparison period as 0 (-100%).
+- Search: Keep the AI Answers preview hidden when answers are turned off.
 - Search: Require a paid Search plan to enable and display Site Chat.
 - Search: Stop offering Search blocks in the Overlay search sidebar's widget inserter, and flag any already there, because they cannot load in that sidebar.
 - SEO: Fix Sitemap and Canonical URLs status to reflect the active modules.

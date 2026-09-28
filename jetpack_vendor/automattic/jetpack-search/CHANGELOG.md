@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Use the shared wp-build-polyfills helper to order the screen-ID alias around wp-build's generated enqueue check.
 
 ### Fixed
+- AI Answers: Keep the search preview hidden when answers are turned off.
 - AI Answers: Respect the site-wide Jetpack AI filter.
 - Blocks: Stop offering Search blocks in the Overlay search sidebar's widget inserter, and flag any already there, because they cannot load in that sidebar.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
