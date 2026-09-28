@@ -108,6 +108,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Keep chart series colors distinguishable from each other, including for color-blind viewers.
 - Premium Analytics: Leave Average CPM empty instead of showing $0.00 in the Ads chart for periods with no ads served.
 - Premium Analytics: Leave the months before a site launched or turned on subscriptions empty in the Subscriber summary chart, with a "No data" tooltip, instead of showing zero.
+- Premium Analytics: Return the Stats breadcrumb to the dashboard tab a report or detail page was opened from, instead of always to Traffic.
 - Premium Analytics: Show "1 Subscriber" rather than "1 Subscribers" in chart tooltips, using each language's plural rules.
 - Premium Analytics: Show a dash instead of zero in the Earnings history report when a period has no Ads Served count.
 - Premium Analytics: Show a sent but unopened email's open and click rates as 0% instead of a dash, show the email tabs for emails whose sends went unrecorded, and leave unknown rates blank in the Emails export.
