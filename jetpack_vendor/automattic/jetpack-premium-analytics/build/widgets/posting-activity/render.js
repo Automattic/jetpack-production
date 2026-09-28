@@ -9,7 +9,6 @@
 /* translators: %d: number of posts published that day, e.g. "3". */
 _n( "%d post", "%d posts", 1, "jetpack-premium-analytics-pkg" );
 __( "We couldn't load posting activity. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "No posts published in the last 12 months.", "jetpack-premium-analytics-pkg" );
 __( "Monthly posting activity", "jetpack-premium-analytics-pkg" );
 __( "No posts", "jetpack-premium-analytics-pkg" );
 __( "Fewer posts", "jetpack-premium-analytics-pkg" );

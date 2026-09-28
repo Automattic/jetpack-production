@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Chart tooltips: lead each row with the value, then the metric as its unit, then the date.
 - Dashboard: Call the preview the new Stats in its welcome, feedback and switch-off copy, now that every tab is in it.
 - Dashboard: Show one generic “no results for this time period” state in list widgets that have no data for the selected period.
+- Dashboard: Show the empty state in chart widgets for a period the Stats API answers with zero or missing values, keep the Traffic chart's tabs at zero with the no-results message in the chart, and show zeros or placeholders in highlight and Insights widgets instead of an empty message.
 - Dashboard: Show the generic “no results for this time period” state in chart widgets that have no data for the selected period.
 - Date controls: Match the date range control in widget headers to the height of the other header controls, and draw the date triggers with the design system button states.
 - Latest subscribers: Open a subscriber on the Newsletter Subscribers page in wp-admin.

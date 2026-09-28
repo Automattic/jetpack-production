@@ -26,4 +26,3 @@ __( "Total subscribers excluding social media subscribers. The change is since 3
 __( "Total subscribers excluding social media subscribers", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load subscriber highlights. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
-__( "No subscriber counts available yet.", "jetpack-premium-analytics-pkg" );

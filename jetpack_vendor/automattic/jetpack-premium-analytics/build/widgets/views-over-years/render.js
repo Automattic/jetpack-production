@@ -38,4 +38,3 @@ _x( "Same period in %s", "previous month comparison", "jetpack-premium-analytics
 _x( "Same period in %s", "previous year comparison", "jetpack-premium-analytics-pkg" );
 __( "Same period last year (match day of week)", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load your views. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "No views yet.", "jetpack-premium-analytics-pkg" );
