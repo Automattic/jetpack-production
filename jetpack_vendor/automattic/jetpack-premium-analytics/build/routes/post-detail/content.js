@@ -482,3 +482,6 @@ __( "Top links", "jetpack-premium-analytics-pkg" );
 __( "UTM", "jetpack-premium-analytics-pkg" );
 __( "View page", "jetpack-premium-analytics-pkg" );
 __( "View post", "jetpack-premium-analytics-pkg" );
+__( "This post hasn’t been sent as a newsletter", "jetpack-premium-analytics-pkg" );
+__( "Newsletter can help you reach subscribers in their inbox.", "jetpack-premium-analytics-pkg" );
+__( "Learn more", "jetpack-premium-analytics-pkg" );

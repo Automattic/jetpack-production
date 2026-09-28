@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the change since 30 days ago on the all-time, paid and free subscriber counts for sites with paid subscribers.
 - Premium Analytics: Show the empty state in chart widgets for a period the Stats API answers with zero or missing values, keep the Traffic chart's tabs at zero with the no-results message in the chart, and show zeros or placeholders in highlight and Insights widgets instead of an empty message.
 - Premium Analytics: Show the generic “no results for this time period” state in chart widgets that have no data for the selected period.
+- Premium Analytics: Show the post detail Email opens and Email clicks tabs for every post, with a "This post hasn’t been sent as a newsletter" state for a post that was never sent.
 - Premium Analytics: Show the Subscribers tab in the customer preview.
 - Premium Analytics: Title the Ads tab Ads performance, reword the WordAds widget tips, and tidy the Earnings report table.
 - Search: Show the dashboard in the new rounded admin page frame.

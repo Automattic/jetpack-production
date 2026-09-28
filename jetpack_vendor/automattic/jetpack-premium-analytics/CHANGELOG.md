@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Show the Subscribers tab in the customer preview.
 - Dashboard: widget module records carry the text domain and the i18n manifest of the build that serves them, so widgets another plugin registers load their translations.
 - Date comparison: Add options that line up the same weekdays of the previous period and the previous year.
+- Post detail: Show the Email opens and Email clicks tabs for every post, with a "This post hasn’t been sent as a newsletter" state for a post that was never sent.
 - Record a Tracks event when a date range is applied on the dashboard and the post, author and video detail pages.
 - Reports: Replace the records table with a "No data found" state when the selected period has no rows.
 - Subscriber highlights: Describe the 30, 60 and 90 days ago and Social followers counts on hover and for screen readers.
