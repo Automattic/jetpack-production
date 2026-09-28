@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Disconnect dialog: On the plugins page, offer the survey before deactivating, including on sites where no user has connected.
+- Reconcile the protected owner against WordPress.com when a user connects.
 
 ### Changed
 - Ask WordPress.com to record the protected owner before anchoring it on the site.
