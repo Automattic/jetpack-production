@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Always show every amount on the All-time balance card and drop its Metrics dropdown.
 - Premium Analytics: Call the preview the new Stats in its welcome, feedback and switch-off copy.
 - Premium Analytics: Describe the 30, 60 and 90 days ago and Social followers counts on Subscriber highlights on hover and for screen readers.
+- Premium Analytics: Draw disputed borders on the Locations map as the viewer's country shows them.
 - Premium Analytics: Lead each chart tooltip row with the value, then the metric, then the date.
 - Premium Analytics: Match the date range control in widget headers to the height of the other header controls, and draw the date triggers with the design system button states.
 - Premium Analytics: Note in the Earnings History widget when the site has adjustments, linking to the Adjustments history tab of the Earnings report.
