@@ -54,6 +54,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Load the Settings page in the new Jetpack admin frame.
 - Settings: Move to its own admin page; existing links redirect there.
 - Settings: On WordPress.com sites, open the remaining support links (Anti-spam, Related Posts, Stats, Site Verification, Google Analytics, PayPal) as WordPress.com support docs inside the Help Center.
+- Settings: Show the updated Settings page to sites in right-to-left languages.
 - Sharing: group "Disable CSS and JS" with the sharing button settings, and hide it while sharing buttons are off.
 - Sharing settings: keep the sharing buttons configuration available on block themes, alongside the recommendation to use the Sharing Buttons block.
 - Sharing settings: show the Sharing and Like buttons sections whichever features are active, each with its own save button, and give "Show buttons on" a section of its own.
