@@ -76,6 +76,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Report a broken connection on My Jetpack's connection card instead of claiming everything looks good, and show a break only the connection owner can repair as a warning, not an error, to everyone else.
 - Content Guidelines: Fix the AI button alignment and the loading shimmer after recent Gutenberg changes.
 - CRM: keep the site owner on My Jetpack after activating Jetpack CRM, instead of sending them to CRM's full-screen setup wizard.
+- Donations: Fix donate button rendering as a cross shape on themes that apply block-level styles to .wp-block-button__link when the Button block stylesheet is not loaded.
 - External Media: Fix the width of the Select Media button in narrow block placeholders, such as the Media & Text block.
 - Firewall: Avoid a 500 error for visitors on the IP block list when the firewall runs before WordPress.
 - Firewall: Fix blank Jetpack admin pages when the standalone mode bootstrap loads from an older copy of the plugin.
