@@ -5,18 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [9.8.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [9.8.0] - 2026-09-28
 ### Added
-- Disconnect dialog: On the plugins page, offer the survey before deactivating, including on sites where no user has connected.
-- Reconcile the protected owner against WordPress.com when a user connects.
+- Disconnect dialog: On the plugins page, offer the survey before deactivating, including on sites where no user has connected. [#52828]
+- Reconcile the protected owner against WordPress.com when a user connects. [#52712]
 
 ### Changed
-- Ask WordPress.com to record the protected owner before anchoring it on the site.
-- Let users without admin access restore their own broken account connection through the reconnect endpoint, without touching the site connection.
-- REST API: Allow users with `jetpack_connect_user` to call `/connection/reconnect`, which refreshes only their own user token.
+- Ask WordPress.com to record the protected owner before anchoring it on the site. [#52551]
+- Let users without admin access restore their own broken account connection through the reconnect endpoint, without touching the site connection. [#52718]
+- REST API: Allow users with `jetpack_connect_user` to call `/connection/reconnect`, which refreshes only their own user token. [#52718]
 
 ## [9.7.0] - 2026-09-23
 ### Added
@@ -2118,7 +2115,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.8.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.7.0...v9.8.0-alpha
+[9.8.0]: https://github.com/Automattic/jetpack-connection/compare/v9.7.0...v9.8.0
 [9.7.0]: https://github.com/Automattic/jetpack-connection/compare/v9.6.0...v9.7.0
 [9.6.0]: https://github.com/Automattic/jetpack-connection/compare/v9.5.0...v9.6.0
 [9.5.0]: https://github.com/Automattic/jetpack-connection/compare/v9.4.0...v9.5.0
