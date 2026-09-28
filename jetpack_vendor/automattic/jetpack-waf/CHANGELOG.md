@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Firewall: Avoid a fatal error when a blocked IP hits a site running the firewall in standalone mode.
+- Standalone mode: Fix blank Jetpack admin pages when the bootstrap file points at an older copy of the plugin, and skip the firewall run instead of fataling when that copy is gone.
 
 ## [0.29.0] - 2026-09-01
 ### Removed

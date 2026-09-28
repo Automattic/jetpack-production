@@ -73,6 +73,7 @@ This is an alpha version! The changes listed here are not final.
 - CRM: keep the site owner on My Jetpack after activating Jetpack CRM, instead of sending them to CRM's full-screen setup wizard.
 - External Media: Fix the width of the Select Media button in narrow block placeholders, such as the Media & Text block.
 - Firewall: Avoid a 500 error for visitors on the IP block list when the firewall runs before WordPress.
+- Firewall: Fix blank Jetpack admin pages when the standalone mode bootstrap loads from an older copy of the plugin.
 - Footer: Hide Products and Help links when My Jetpack is unavailable.
 - Forms: Cap the rating scale when rendering a form or a response so a malformed value cannot exhaust memory.
 - Forms: Detect Jetpack CRM installs that use a custom plugin folder or file name.
