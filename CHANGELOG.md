@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the generic “no results for this time period” state in chart widgets that have no data for the selected period.
 - Premium Analytics: Show the post detail Email opens and Email clicks tabs for every post, with a "This post hasn’t been sent as a newsletter" state for a post that was never sent.
 - Premium Analytics: Show the Subscribers tab in the customer preview.
+- Premium Analytics: Show Visitors on the Traffic summary chart alongside Views by default.
 - Premium Analytics: Title the Ads tab Ads performance, reword the WordAds widget tips, and tidy the Earnings report table.
 - Search: Show the dashboard in the new rounded admin page frame.
 - Settings: Load the Settings page in the new Jetpack admin frame.
