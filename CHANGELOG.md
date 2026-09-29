@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 16.3-a.8 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
+
 ## 16.3-a.7 - 2026-09-29
 ### Enhancements
 - Backup: Show the VaultPress Backup dashboard in wp-admin, instead of linking out to Jetpack Cloud. [#52495]
