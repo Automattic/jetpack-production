@@ -63,6 +63,7 @@ This is an alpha version! The changes listed here are not final.
 - Email stats: Show readable link names in an email's Top links list, and list the links clicked inside the post instead of dropping them.
 - Return the Stats breadcrumb to the dashboard tab a report or detail page was opened from, instead of always to Traffic.
 - Subscriber summary: Leave the months before a site launched or turned on subscriptions empty in the chart, with a "No data" tooltip, instead of showing zero.
+- Traffic summary: Show the day totals for visitors, likes, and comments when the chart shows hours.
 
 ## [0.8.0] - 2026-09-21
 ### Added
