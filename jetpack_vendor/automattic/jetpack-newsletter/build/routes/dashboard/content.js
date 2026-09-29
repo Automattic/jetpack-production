@@ -568,6 +568,8 @@ __( "Draft", "jetpack-newsletter" );
 __( "Recent Posts", "jetpack-newsletter" );
 __( "View all", "jetpack-newsletter" );
 __( "Paid subscribers", "jetpack-newsletter" );
+__( "Chart interval", "jetpack-newsletter" );
+__( "Next period", "jetpack-newsletter" );
 __( "Subscribers with a paid subscription.", "jetpack-newsletter" );
 __( "Subscriber stats could not be loaded.", "jetpack-newsletter" );
 __( "Loading subscriber stats…", "jetpack-newsletter" );

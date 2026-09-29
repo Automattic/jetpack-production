@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add a Days, Weeks, Months, and Years control to the subscribers chart, with arrows to move through earlier periods. Subscriber and paid subscriber totals stay the current count.
+
 ### Changed
 - Action Bar: Only show the Subscribe button once the site has published at least two posts.
 
