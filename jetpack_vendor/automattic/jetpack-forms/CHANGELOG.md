@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.2.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [8.2.2] - 2026-09-29
 ### Fixed
-- Dashboard: Stop logging a console error about missing Jetpack configuration.
+- Dashboard: Stop logging a console error about missing Jetpack configuration. [#52809]
 
 ## [8.2.1] - 2026-09-28
 ### Changed
@@ -2777,7 +2774,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[8.2.2-alpha]: https://github.com/automattic/jetpack-forms/compare/v8.2.1...v8.2.2-alpha
+[8.2.2]: https://github.com/automattic/jetpack-forms/compare/v8.2.1...v8.2.2
 [8.2.1]: https://github.com/automattic/jetpack-forms/compare/v8.2.0...v8.2.1
 [8.2.0]: https://github.com/automattic/jetpack-forms/compare/v8.1.0...v8.2.0
 [8.1.0]: https://github.com/automattic/jetpack-forms/compare/v8.0.3...v8.1.0
