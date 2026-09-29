@@ -76,6 +76,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Turn off AI SEO and Search AI Answers when the `jetpack_ai_enabled` filter returns false. Before, both stayed on.
 - Blocks: Align the premium block upgrade banner with its text on narrow screens.
 - Blocks: Replace the Calendly and Eventbrite style thumbnails with labelled options that show the selected style, move the Calendly customization link into the Styles panel, and match the height of the Calendly URL field and Embed button.
+- Connection: Fix reconnecting your WordPress.com account so it no longer disconnects other users and clears the broken-connection notice on the first attempt.
 - Connection: Let users without admin access reconnect their own broken account from the connection error notice.
 - Connection: Report a broken connection on My Jetpack's connection card instead of claiming everything looks good, and show a break only the connection owner can repair as a warning, not an error, to everyone else.
 - Content Guidelines: Fix the AI button alignment and the loading shimmer after recent Gutenberg changes.

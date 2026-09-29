@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [9.8.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Reconnect: Refresh only the owner's account instead of disconnecting every user, and clear the broken-connection notice on the first attempt.
+
 ## [9.8.0] - 2026-09-28
 ### Added
 - Disconnect dialog: On the plugins page, offer the survey before deactivating, including on sites where no user has connected. [#52828]
@@ -2115,6 +2122,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[9.8.1-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.8.0...v9.8.1-alpha
 [9.8.0]: https://github.com/Automattic/jetpack-connection/compare/v9.7.0...v9.8.0
 [9.7.0]: https://github.com/Automattic/jetpack-connection/compare/v9.6.0...v9.7.0
 [9.6.0]: https://github.com/Automattic/jetpack-connection/compare/v9.5.0...v9.6.0
