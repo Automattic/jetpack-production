@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Match the date range control in widget headers to the height of the other header controls, and draw the date triggers with the design system button states.
 - Premium Analytics: Note in the Earnings History widget when the site has adjustments, linking to the Adjustments history tab of the Earnings report.
 - Premium Analytics: Open a subscriber from the Latest subscribers widget on the Newsletter Subscribers page in wp-admin.
+- Premium Analytics: Refresh Stats data automatically every 30 minutes while the tab stays open, except for date ranges that ended before today.
 - Premium Analytics: Replace the records table with a "No data found" state when the selected period has no rows.
 - Premium Analytics: Show one generic “no results for this time period” state in list widgets that have no data for the selected period.
 - Premium Analytics: Show payment status as a badge in the Earnings History widget, and shorten the pending statuses to one word with the reason beside them. Negative amounts in the widget are no longer red; only the badge carries colour.
