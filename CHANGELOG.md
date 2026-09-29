@@ -142,6 +142,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix a just-uploaded video briefly showing up a second time as a local video in the Library.
 - VideoPress: Fix private video playback on sites using WPML.
 - VideoPress: Keep the dashboard views trend chart's comparison lines distinguishable, including for color-blind viewers.
+- VideoPress: Keep the Learn more support link up to date through the redirect service.
 - VideoPress: Prevent the empty library prompt from appearing while videos are loading.
 - VideoPress: With the inline player setting on, show the poster of private videos, and of videos the server could not look up, before they are played instead of a black box.
 

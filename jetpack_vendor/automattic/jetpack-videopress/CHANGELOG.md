@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Use core SnackbarNotices instead of Jetpack GlobalNotices.
 
 ### Fixed
+- Admin: Route the Learn more link through the redirect service to keep support links up to date.
 - Dashboard: Ask before deleting videos, and warn before leaving the page while an upload is running.
 - Dashboard: Fix a just-uploaded video briefly showing up a second time as a local video in the Library.
 - Dashboard: Stop logging a console error about missing Jetpack configuration.
