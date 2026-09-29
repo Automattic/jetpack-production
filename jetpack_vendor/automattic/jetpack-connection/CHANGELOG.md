@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Protected owner: ask WordPress.com over the REST API rather than XML-RPC.
+
 ### Fixed
 - Only let a user who can set up the site connection (`jetpack_connect`) become the connection owner when authorizing while the owner slot is vacant; other users link as secondary users.
 - Reconnect: Refresh only the owner's account instead of disconnecting every user, and clear the broken-connection notice on the first attempt.
