@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add stacked buttons as a display format for PayPal payment buttons.
 - AI: Add a "How it works" guide to the top of the MCP and Connectors tab.
 - AI: Point the Cursor setup instructions on the MCP agent setup page at the WordPress.com plugin on the Cursor Marketplace.
+- Backup: Show the VaultPress Backup dashboard in wp-admin, instead of linking out to Jetpack Cloud.
 - Jetpack AI: Point the disconnected-site notice at documentation instead of a connect link when the site would not let the current user connect it, as on VIP and multisite.
 - Likes: Manage Comment Likes from Settings > Sharing, and suggest the Like block on block themes even when Comment Likes are on.
 - My Jetpack: answer module switch clicks immediately, and explain what happened when a change fails.
