@@ -5,16 +5,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.1.0-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 0.1.0 - 2026-09-28
 ### Added
-- Initial version.
-- Settings: add the wp-admin Settings > Sharing screen, covering sharing buttons, Like buttons, and where they appear.
-- Settings: give Comment Likes their own section on every platform, and offer the Like block to Jetpack and Atomic sites running Comment Likes.
-
-### Changed
-- Settings: render and save the Twitter Site Tag and "Disable CSS and JS" settings from the Sharing screen itself.
-- Settings: show the Twitter Site Tag field on WordPress.com Simple too.
-- Settings: stop filtering the legacy Likes options out of the sharing_global_options hook, since WordPress.com no longer adds them there.
+- Initial version. [#52339]
+- Settings: Add the wp-admin Settings > Sharing screen, covering sharing buttons, Like buttons, and where they appear. [#52407] [#52727] [#52756] [#52758]
+- Settings: Give Comment Likes their own section on every platform, and offer the Like block to Jetpack and Atomic sites running Comment Likes. [#52796]

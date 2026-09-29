@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Registers feature flags owned by the Jetpack Settings page.
  *
- * @since 16.3-a.4
+ * @since 16.3
  */
 class Jetpack_Settings_Feature_Flags {
 

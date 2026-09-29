@@ -5,18 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.2.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [8.2.1] - 2026-09-28
 ### Changed
-- Dashboard: Replace experimental layout and text components with their @wordpress/ui equivalents, and remove an unused integrations modal.
+- Dashboard: Replace experimental layout and text components with their `@wordpress/ui` equivalents. [#52492]
 
 ### Fixed
-- Detect Jetpack CRM installs that use a custom plugin folder or file name.
-- Rating field: Cap the scale when rendering a form or a response so a malformed value cannot exhaust memory.
-- Remove the duplicate divider between the dashboard header and the tabs.
-- Show Jetpack in-dashboard messages on the Forms dashboard.
+- Detect Jetpack CRM installs that use a custom plugin folder or file name. [#52725]
+- Remove the duplicate divider between the dashboard header and the tabs. [#52641]
+- Rating field: Cap the scale when rendering a form or a response so a malformed value cannot exhaust memory. [#52007]
+- Show Jetpack in-dashboard messages on the Forms dashboard. [#52641]
+
+### Removed
+- Dashboard: Remove an unused integrations modal. [#52492]
 
 ## [8.2.0] - 2026-09-21
 ### Added
@@ -2770,7 +2770,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[8.2.1-alpha]: https://github.com/automattic/jetpack-forms/compare/v8.2.0...v8.2.1-alpha
+[8.2.1]: https://github.com/automattic/jetpack-forms/compare/v8.2.0...v8.2.1
 [8.2.0]: https://github.com/automattic/jetpack-forms/compare/v8.1.0...v8.2.0
 [8.1.0]: https://github.com/automattic/jetpack-forms/compare/v8.0.3...v8.1.0
 [8.0.3]: https://github.com/automattic/jetpack-forms/compare/v8.0.2...v8.0.3

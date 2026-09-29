@@ -148,7 +148,7 @@ class Widget_Type {
 	/**
 	 * Text domain the widget's metadata strings and built bundles are registered under.
 	 *
-	 * @since 0.9.0-alpha
+	 * @since 0.9.0
 	 *
 	 * @var string|null
 	 */
@@ -159,7 +159,7 @@ class Widget_Type {
 	 * load their translation catalogs from. Empty for a build whose init module runs on the
 	 * dashboard page, which is the package's own.
 	 *
-	 * @since 0.9.0-alpha
+	 * @since 0.9.0
 	 *
 	 * @var string|null
 	 */
