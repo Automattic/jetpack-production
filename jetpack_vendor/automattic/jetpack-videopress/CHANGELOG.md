@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add an All Playlists block that lists every Video Playlist published on the site as a grid or a list.
 - Add an optional trim and cut editor with preview, undo, and original video restoration. Keep the editor available during processing, reduce background status checks, refresh delayed timeline thumbnails, and allow retrying failed edits.
 - Add a site-wide playlist index option that records every published Video Playlist, and give the Video Playlist block title and description settings.
+- Video Playlist and Latest Videos Playlist blocks: Add a setting to hide the player. Clicking a video then opens it on VideoPress in a new tab, or reveals the player and plays it.
 
 ### Changed
 - Use core SnackbarNotices instead of Jetpack GlobalNotices.

@@ -68,6 +68,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add a Latest Videos Playlist block that plays the site's newest VideoPress videos, with the number of videos set in the block settings.
 - VideoPress: Add an All Playlists block that lists every Video Playlist published on the site as a grid or a list.
 - VideoPress: Add an optional trim and cut editor with preview, undo, and original video restoration. Keep the editor available during processing, reduce background status checks, refresh delayed timeline thumbnails, and allow retrying failed edits.
+- VideoPress: Add a setting to the Video Playlist and Latest Videos Playlist blocks to hide the player. Clicking a video then opens it on VideoPress in a new tab, or reveals the player and plays it.
 - VideoPress: Add title and description settings to the Video Playlist block, recorded in a site-wide playlist index.
 - VideoPress: With the inline player setting on, draw the play button like the player's and show a loading spinner from the click until the player has loaded.
 - Zoom Scheduler block: Add a block for embedding Zoom Scheduler booking page URLs on all plans.
