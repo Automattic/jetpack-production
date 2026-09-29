@@ -63,7 +63,7 @@
 		"automattic/jetpack-stats-admin": "^0.38.1",
 		"automattic/jetpack-status": "^7.1.0",
 		"automattic/jetpack-sync": "^5.3.0",
-		"automattic/jetpack-videopress": "^0.54.0",
+		"automattic/jetpack-videopress": "^0.55.0-alpha",
 		"automattic/jetpack-waf": "^0.29.1",
 		"automattic/jetpack-wp-abilities": "^0.2.0",
 		"automattic/jetpack-ads": "^0.1.1",

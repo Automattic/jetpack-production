@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.55.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Video Playlist block: Show the playlist title as an editable heading above the playlist, with a setting to turn it off.
+
 ## [0.54.0] - 2026-09-29
 ### Added
 - Playlist blocks: Add a "Show player" setting; when off, clicking a video opens it on VideoPress. [#52808]
@@ -2298,6 +2305,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created empty package [#24952]
 
+[0.55.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.54.0...v0.55.0-alpha
 [0.54.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.53.0...v0.54.0
 [0.53.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.52.0...v0.53.0
 [0.52.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.51.1...v0.52.0
