@@ -342,7 +342,7 @@ class Action_Bar {
 	/**
 	 * Clear the cached Subscribe answer when a post enters or leaves the published state.
 	 *
-	 * @since 0.17.1-alpha
+	 * @since 0.17.2-alpha
 	 *
 	 * @param string         $new_status New post status.
 	 * @param string         $old_status Old post status.

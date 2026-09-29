@@ -5,20 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.54.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.54.0] - 2026-09-29
 ### Added
-- Video Playlist and Latest Videos Playlist blocks: Add a setting to hide the player. Clicking a video then opens it on VideoPress in a new tab, or reveals the player and plays it.
+- Playlist blocks: Add a "Show player" setting; when off, clicking a video opens it on VideoPress. [#52808]
 
 ### Changed
-- Use core SnackbarNotices instead of Jetpack GlobalNotices.
+- Use core SnackbarNotices instead of Jetpack GlobalNotices. [#52193]
 
 ### Fixed
-- Admin: Route the Learn more link through the redirect service to keep support links up to date.
-- Dashboard: Ask before deleting videos, and warn before leaving the page while an upload is running.
-- Dashboard: Stop logging a console error about missing Jetpack configuration.
+- Admin: Keep the "Learn more" support link up to date through the redirect service. [#52907]
+- Dashboard: Ask before deleting videos, and warn before leaving the page while an upload is running. [#52815]
+- Dashboard: Stop logging a console error about missing Jetpack configuration. [#52809]
 
 ## [0.53.0] - 2026-09-28
 ### Added
@@ -2301,7 +2298,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.54.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.53.0...v0.54.0-alpha
+[0.54.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.53.0...v0.54.0
 [0.53.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.52.0...v0.53.0
 [0.52.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.51.1...v0.52.0
 [0.51.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.51.0...v0.51.1

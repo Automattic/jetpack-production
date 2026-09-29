@@ -2,32 +2,30 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 16.3-a.6 - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 16.3-a.7 - 2026-09-29
 ### Enhancements
-- Backup: Show the VaultPress Backup dashboard in wp-admin, instead of linking out to Jetpack Cloud.
-- Premium Analytics: Refresh Stats data automatically every 30 minutes while the tab stays open, except for date ranges that ended before today.
-- Premium Analytics: Show Visitors on the Traffic summary chart alongside Views by default.
-- Settings: Show the updated Settings page to sites in right-to-left languages.
-- VideoPress: Add a setting to the Video Playlist and Latest Videos Playlist blocks to hide the player. Clicking a video then opens it on VideoPress in a new tab, or reveals the player and plays it.
+- Backup: Show the VaultPress Backup dashboard in wp-admin, instead of linking out to Jetpack Cloud. [#52495]
+- Settings: Show the updated Settings page to sites in right-to-left languages. [#52664]
+- VideoPress: Add a "Show player" setting to the playlist blocks; when off, clicking a video opens it on VideoPress. [#52808]
 
 ### Bug fixes
-- Blocks: Replace the Calendly and Eventbrite style thumbnails with labelled options that show the selected style, move the Calendly customization link into the Styles panel, and match the height of the Calendly URL field and Embed button.
-- Connection: Fix reconnecting your WordPress.com account so it no longer disconnects other users and clears the broken-connection notice on the first attempt.
-- Connection: Stop users who cannot set up the site connection from becoming the connection owner when the owner's connection is missing.
-- Mailchimp: Show progress and explain what is missing when re-checking the connection from the block.
-- Newsletter: Restrict posts to subscribers when a Paywall block is saved outside the block editor.
-- Search: Show the connection error at the top of the dashboard on every tab.
-- Settings: Keep the Copy button on the left and show the start of URLs in copy fields for right-to-left languages.
-- VideoPress: Ask before deleting videos, and warn before leaving the page while an upload is running.
-- VideoPress: Keep the Learn more support link up to date through the redirect service.
+- Blocks: Show the selected style in the Calendly and Eventbrite style pickers. [#52843]
+- Connection: Reconnect only the owner's account instead of disconnecting every user, and clear the broken-connection notice on the first attempt. [#52851]
+- Connection: Stop users who cannot set up the site connection from becoming the connection owner when the owner's connection is missing. [#52880]
+- Mailchimp: Show progress and explain what is missing when re-checking the connection from the block. [#52891]
+- Newsletter: Fix a fatal error when a theme's preset list is a single value instead of a list. [#52933]
+- Newsletter: Restrict posts to subscribers when a Paywall block is saved outside the block editor. [#52734]
+- Search: Show the connection error at the top of the dashboard on every tab. [#52820]
+- Settings: Keep the Copy button on the left and show the start of URLs in copy fields for right-to-left languages. [#52816]
+- VideoPress: Ask before deleting videos, and warn before leaving the page while an upload is running. [#52815]
+- VideoPress: Keep the "Learn more" support link up to date through the redirect service. [#52907]
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Jetpack AI: Show Jetpack's in-dashboard messages on the AI page.
-- Update package dependencies.
-- Use core snackbar notice placement across Jetpack admin screens.
+- AI: Show Jetpack's in-dashboard messages on the AI page. [#52812]
+- Premium Analytics: Refresh Stats data automatically every 30 minutes while the tab stays open, except for date ranges that ended before today. [#52898]
+- Premium Analytics: Show Visitors on the Traffic summary chart alongside Views by default. [#52896]
+- Update package dependencies. [#52757]
+- Use core snackbar notice placement across Jetpack admin screens. [#52193]
 
 ## 16.3-a.5 - 2026-09-28
 ### Major Enhancements

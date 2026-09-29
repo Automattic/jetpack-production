@@ -858,7 +858,7 @@ class Jetpack {
 		 *
 		 * Resolved at the earliest `plugins_loaded` priority, so hook it from a mu-plugin.
 		 *
-		 * @since 16.3-a.6
+		 * @since 16.3
 		 *
 		 * @param bool $enabled Whether to initialize the bundled Backup dashboard. Default true.
 		 */

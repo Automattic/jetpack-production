@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.14.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.14.2] - 2026-09-29
 ### Changed
-- Prefer Core's wp-theme stylesheet for WPDS design tokens when it is registered.
+- Prefer default WordPress `wp-theme` stylesheet for WPDS design tokens when it is registered. [#52183]
 
 ## [0.14.1] - 2026-09-28
 ### Changed
@@ -396,7 +393,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing menu visibility issues.
 
-[0.14.2-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.1...0.14.2-alpha
+[0.14.2]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.1...0.14.2
 [0.14.1]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.0...0.14.1
 [0.14.0]: https://github.com/Automattic/jetpack-admin-ui/compare/0.13.0...0.14.0
 [0.13.0]: https://github.com/Automattic/jetpack-admin-ui/compare/0.12.1...0.13.0
