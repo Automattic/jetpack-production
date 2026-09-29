@@ -136,6 +136,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Stop offering Search blocks in the Overlay search sidebar's widget inserter, and flag any already there, because they cannot load in that sidebar.
 - SEO: Fix Sitemap and Canonical URLs status to reflect the active modules.
 - SEO: Respect excerpt filters in generated llms.txt summaries.
+- Settings: Keep the Copy button on the left and show the start of URLs in copy fields for right-to-left languages.
 - Show Jetpack in-dashboard messages on the modernized product dashboards again.
 - Social: Show each number on the traffic chart's value axis once when visit counts are small.
 - Stats: Draw the My Jetpack stats chart's gridlines only at whole numbers when counts are small.
