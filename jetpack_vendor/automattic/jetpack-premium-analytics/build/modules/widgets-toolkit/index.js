@@ -104,6 +104,8 @@ __( "Avatar of %s", "jetpack-premium-analytics-pkg" );
 __( "Flag of %s", "jetpack-premium-analytics-pkg" );
 /* translators: %d is the number of locations left out of the tooltip list. */
 _n( "…and %d more location", "…and %d more locations", 1, "jetpack-premium-analytics-pkg" );
+__( "Latitude", "jetpack-premium-analytics-pkg" );
+__( "Longitude", "jetpack-premium-analytics-pkg" );
 __( "Location", "jetpack-premium-analytics-pkg" );
 __( "Views", "jetpack-premium-analytics-pkg" );
 __( "Older activity", "jetpack-premium-analytics-pkg" );
@@ -124,7 +126,7 @@ __( "Show chart", "jetpack-premium-analytics-pkg" );
 __( "About %s", "jetpack-premium-analytics-pkg" );
 __( "No data found", "jetpack-premium-analytics-pkg" );
 __( "Views by location", "jetpack-premium-analytics-pkg" );
-__( "Views shaded by country. Pick a country on the Regions tab to see its regions instead.", "jetpack-premium-analytics-pkg" );
+__( "Views shaded by country, with each city as a dot on the Cities tab. Pick a country on the Regions tab to see its regions instead.", "jetpack-premium-analytics-pkg" );
 __( "Hide map", "jetpack-premium-analytics-pkg" );
 __( "Show map", "jetpack-premium-analytics-pkg" );
 __( "Could not download report.", "jetpack-premium-analytics-pkg" );

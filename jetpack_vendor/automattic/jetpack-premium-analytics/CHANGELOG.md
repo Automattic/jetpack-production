@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Date controls: Match the date range control in widget headers to the height of the other header controls, and draw the date triggers with the design system button states.
 - Latest subscribers: Open a subscriber on the Newsletter Subscribers page in wp-admin.
 - Locations: Draw disputed borders on the map as the viewer's country shows them.
+- Locations: Show each city as a marker on the map when Cities is selected.
 - Share one InfoTip between the report chart help and the pending payment status badge.
 - Sync: Use the shared WooCommerce Analytics module from the jetpack-sync package, sync store analytics whether or not WooCommerce order attribution is enabled, and use the shared module in place of the WooCommerce Analytics plugin's own when both are active.
 - The Ads tab is registered by the WordAds module and by WordPress.com rather than by the package, so it no longer appears on sites without WordAds. A section whose slug another section already uses is refused.
