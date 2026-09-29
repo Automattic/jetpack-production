@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Backup: Send Manage and checkout to the in-plugin Backup dashboard when the Jetpack plugin hosts it.
 
+### Fixed
+- Show the missing user connection notice as a warning only when no connection owner is recorded and the current user can set up the connection, leaving a missing connection owner token to the connection error notice.
+
 ## [6.7.0] - 2026-09-28
 ### Added
 - Add a More Features section to the Features tab that groups and switches Jetpack's other modules, behind the my-jetpack-features-tab feature flag. [#52591]
