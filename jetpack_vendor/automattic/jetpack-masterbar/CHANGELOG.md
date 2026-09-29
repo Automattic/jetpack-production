@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - DIFM Express: keep Posts, Media and Pages reachable in wp-admin while a build is still awaiting the customer's content.
 
+### Changed
+- Admin color schemes: Mark the WordPress.com-specific color schemes as deprecated, list them last on the profile page, and ask users who still use one to switch.
+
 ## [0.28.3] - 2026-09-21
 ### Changed
 - Admin menu: Restore the default "WooCommerce" label for the WooCommerce menu item on Commerce and Commerce-trial sites, reverting the "Store setup" relabel. [#52392]
