@@ -103,6 +103,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Point users who cannot connect the site at an administrator, instead of an onboarding screen they cannot complete.
 - My Jetpack: Show each notice once instead of twice.
 - My Jetpack: stretch the tab content background to the full height of the page.
+- Newsletter: Restrict posts to subscribers when a Paywall block is saved outside the block editor.
 - Newsletter: send the email design screen's test email through the newsletter renderer.
 - Newsletter: Show the earliest subscription date for subscribers with both an email and a WordPress.com subscription.
 - Newsletter: Show the warning when no site owner is connected to WordPress.com.
