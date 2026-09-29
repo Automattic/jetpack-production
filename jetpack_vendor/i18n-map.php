@@ -182,7 +182,7 @@ return array(
     ),
     'jetpack-sharing-likes' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sharing-likes',
-      'ver' => '0.1.0-alpha1790589120',
+      'ver' => '0.1.0-alpha1790689223',
     ),
     'jetpack-stats-admin' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-stats-admin',
