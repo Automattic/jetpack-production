@@ -93,6 +93,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Detect Jetpack CRM installs that use a custom plugin folder or file name.
 - Google Fonts: Detect fonts followed by fallback families so selected fonts render on the front end.
 - Jetpack AI: avoid an unnecessary request when loading the editor.
+- Mailchimp: Show progress and explain what is missing when re-checking the connection from the block.
 - Modules: Report an error instead of success in WP-CLI and the REST API when switching a module your host or site administrator has enabled or disabled.
 - My Jetpack: Fix the layout of the connection screen for right-to-left languages.
 - My Jetpack: Fix the page failing to load for users who can edit posts but have no Jetpack menu, such as editors on unconnected sites.
