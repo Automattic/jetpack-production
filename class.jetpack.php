@@ -858,7 +858,7 @@ class Jetpack {
 		 *
 		 * Resolved at the earliest `plugins_loaded` priority, so hook it from a mu-plugin.
 		 *
-		 * @since 16.3-a.4
+		 * @since 16.3-a.6
 		 *
 		 * @param bool $enabled Whether to initialize the bundled Backup dashboard. Default true.
 		 */
@@ -3158,7 +3158,7 @@ p {
 	/**
 	 * Deletes obsolete SEO module-state options without changing module activation.
 	 *
-	 * @since 16.3-a.4
+	 * @since 16.3
 	 */
 	public static function cleanup_seo_module_state_options() {
 		delete_option( 'jetpack_seo_sitemap_enabled' );

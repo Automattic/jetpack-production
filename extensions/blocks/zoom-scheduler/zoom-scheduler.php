@@ -2,7 +2,7 @@
 /**
  * Zoom Scheduler Block.
  *
- * @since 16.3-a.4
+ * @since 16.3
  *
  * @package automattic/jetpack
  */

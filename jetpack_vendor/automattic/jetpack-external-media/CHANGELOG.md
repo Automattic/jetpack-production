@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.9.5-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.9.5] - 2026-09-28
 ### Fixed
-- Load the editor stylesheet in the block editor canvas so the media button in block placeholders keeps its layout.
+- Fix the width of the Select Media button in narrow block placeholders, such as the Media & Text block. [#52631]
 
 ## [0.9.4] - 2026-09-21
 ### Changed
@@ -437,7 +434,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix the button size in the editor for Gutenberg 18 or below. [#41619]
 - Media Library: Fix the Import Media button color in some color schemes. [#41664]
 
-[0.9.5-alpha]: https://github.com/Automattic/jetpack-external-media/compare/v0.9.4...v0.9.5-alpha
+[0.9.5]: https://github.com/Automattic/jetpack-external-media/compare/v0.9.4...v0.9.5
 [0.9.4]: https://github.com/Automattic/jetpack-external-media/compare/v0.9.3...v0.9.4
 [0.9.3]: https://github.com/Automattic/jetpack-external-media/compare/v0.9.2...v0.9.3
 [0.9.2]: https://github.com/Automattic/jetpack-external-media/compare/v0.9.1...v0.9.2

@@ -5,71 +5,82 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.9.0-alpha] - unreleased
+## [0.10.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Added
-- Add a Manage subscribers link to the Latest subscribers widget, opening the Newsletter subscribers screen in wp-admin.
-- Add the `jetpack_premium_analytics_register_dashboard_sections` action, so a plugin can register a dashboard section.
-- Add the `jetpack_premium_analytics_register_widget_types` action, `register_widget_types_from_manifest()` and `WIDGET_API_VERSION`, so a plugin can register its dashboard widget types.
-- Add Tracks events for customizing a layout, and record whether the reader has a customized dashboard when sending feedback.
-- Add Tracks events for each widget a saved layout adds or removes.
-- Ads: Note in the Earnings History widget when the site has adjustments, linking to the Adjustments history tab of the Earnings report.
-- Dashboard: Add a feature flag that shows Automatticians every section of a preview-limited dashboard.
-- Dashboard: register the SDK as the `@automattic/jetpack-premium-analytics-sdk` script module.
-- Dashboard: Show the Ads tab in the customer preview on sites that use WordAds.
-- Dashboard: Show the Subscribers tab in the customer preview.
-- Dashboard: widget module records carry the text domain and the i18n manifest of the build that serves them, so widgets another plugin registers load their translations.
-- Date comparison: Add options that line up the same weekdays of the previous period and the previous year.
-- Post detail: Show the Email opens and Email clicks tabs for every post, with a "This post hasn’t been sent as a newsletter" state for a post that was never sent.
-- Record a Tracks event when a date range is applied on the dashboard and the post, author and video detail pages.
-- Reports: Replace the records table with a "No data found" state when the selected period has no rows.
-- Subscriber highlights: Describe the 30, 60 and 90 days ago and Social followers counts on hover and for screen readers.
-- Subscriber highlights: Show the change since 30 days ago on the all-time, paid and free subscriber counts for sites with paid subscribers.
-
 ### Changed
-- Ads: Always show every amount on the All-time balance card and drop its Metrics dropdown.
-- Ads: Show payment status as a badge in the Earnings History widget, and shorten the pending statuses to one word with the reason beside them. Negative amounts in the widget are no longer red; only the badge carries colour.
-- Ads: Title the tab Ads performance, reword the three WordAds widget tips to the design with a Learn more link, bold the Period column of the Earnings report, and drop the Ads Served note above its table.
-- Charts: Start line chart value axes at zero, and pad the Subscribers chart's axis a little below its data instead.
-- Chart tooltips: lead each row with the value, then the metric as its unit, then the date.
-- Dashboard: Call the preview the new Stats in its welcome, feedback and switch-off copy, now that every tab is in it.
-- Dashboard: Drop the instances of unregistered widget types from a section's default layout.
 - Dashboard: Offer in the widget picker only the widgets the current tab shows by default.
 - Dashboard: Show every section a site qualifies for instead of a fixed preview list, and keep the Store tab behind a feature flag on the site's own opt-in.
-- Dashboard: Show one generic “no results for this time period” state in list widgets that have no data for the selected period.
-- Dashboard: Show the empty state in chart widgets for a period the Stats API answers with zero or missing values, keep the Traffic chart's tabs at zero with the no-results message in the chart, and show zeros or placeholders in highlight and Insights widgets instead of an empty message.
-- Dashboard: Show the generic “no results for this time period” state in chart widgets that have no data for the selected period.
 - Dashboard: Show the no-results message in the Post views, Author performance, Video views and Store performance charts for a period with no data, instead of a flat zero line.
-- Date controls: Match the date range control in widget headers to the height of the other header controls, and draw the date triggers with the design system button states.
-- Latest subscribers: Open a subscriber on the Newsletter Subscribers page in wp-admin.
-- Locations: Draw disputed borders on the map as the viewer's country shows them.
 - Locations: Show each city as a marker on the map when Cities is selected.
 - Refresh Stats data automatically every 30 minutes while the tab stays open, except for date ranges that ended before today.
-- Share one InfoTip between the report chart help and the pending payment status badge.
-- Sync: Use the shared WooCommerce Analytics module from the jetpack-sync package, sync store analytics whether or not WooCommerce order attribution is enabled, and use the shared module in place of the WooCommerce Analytics plugin's own when both are active.
-- The Ads tab is registered by the WordAds module and by WordPress.com rather than by the package, so it no longer appears on sites without WordAds. A section whose slug another section already uses is refused.
 - Traffic summary: Show Visitors on the chart alongside Views by default.
 - Update package dependencies.
 
+### Fixed
+- Reports: Give report cards a raised background so charts no longer sit in a lighter box on the page.
+- Traffic summary: Show the day totals for visitors, likes, and comments when the chart shows hours.
+
+## [0.9.0] - 2026-09-28
+### Added
+- Add a "Manage subscribers" link to the Latest subscribers widget, opening the Newsletter subscribers screen in wp-admin. [#52604]
+- Add additional analytics to dashboard customizing and feedback. [#52627] [#52824]
+- Add additional analytics to the date range controls. [#52693]
+- Add the `jetpack_premium_analytics_register_dashboard_sections` action, so a plugin can register a dashboard section. [#52454]
+- Add the `jetpack_premium_analytics_register_widget_types` action, `register_widget_types_from_manifest()` and `WIDGET_API_VERSION`, so a plugin can register its dashboard widget types. [#52568] [#52634] [#52866]
+- Ads: Note in the Earnings History widget when the site has adjustments, linking to the Adjustments history tab of the Earnings report. [#52526]
+- Charts: Add a "Comparison period" legend item to line charts that show a previous period. [#52423]
+- Dashboard: Add a feature flag that shows every section of a preview-limited dashboard. [#52549]
+- Dashboard: Register the SDK as the `@automattic/jetpack-premium-analytics-sdk` script module. [#52635]
+- Dashboard: Show the Ads tab in the customer preview on sites that use WordAds. [#52864]
+- Dashboard: Show the Subscribers tab in the customer preview. [#52768]
+- Date comparison: Add options that line up the same weekdays of the previous period and the previous year. [#52598]
+- Post detail: Show the Email opens and Email clicks tabs for every post, with a "This post hasn’t been sent as a newsletter" state for a post that was never sent. [#52801]
+- Reports: Replace the records table with a "No data found" state when the selected period has no rows. [#52792]
+- Subscriber highlights: Describe the 30, 60 and 90 days ago and Social followers counts on hover and for screen readers. [#52747]
+- Subscriber highlights: Show the change since 30 days ago on the all-time, paid and free subscriber counts for sites with paid subscribers. [#52741]
+
+### Changed
+- Ads: Adjust the Period column appearance in the Earnings report. [#52714]
+- Ads: Show payment status as a badge in the Earnings History widget, and shorten the pending statuses to "Pending" with the reason beside them. [#52565] [#52687]
+- Ads: Stop showing negative amounts in red in the Earnings History widget. [#52565]
+- Ads: Title the tab "Ads performance" and reword the three WordAds widget tips, adding a "Learn more" link. [#52714]
+- Charts: Start line chart value axes at zero, and pad the Subscribers chart's axis a little below its data instead. [#52600]
+- Charts: Use square legend swatches in bar mode. [#52423]
+- Chart tooltips: Lead each row with the value, then the metric as its unit, then the date. [#52527]
+- Dashboard: Call the preview the new Stats in its welcome, feedback and switch-off copy. [#52722]
+- Dashboard: Keep a chart widget's tabs at zero and show the no-results message inside the chart for a period with no data. [#52795]
+- Dashboard: Leave registering the Ads tab to the WordAds module and WordPress.com, so it no longer appears on sites without WordAds. [#52455]
+- Dashboard: Refuse to register a section whose slug another section already uses. [#52455]
+- Dashboard: Show one generic “no results for this time period” state in list widgets that have no data for the selected period. [#52791]
+- Dashboard: Show the empty state in chart widgets for a period with only zero or missing values. [#52795]
+- Dashboard: Show the generic “no results for this time period” state in chart widgets that have no data for the selected period. [#52794]
+- Dashboard: Show zeros or placeholders in highlight and Insights widgets for a period with no data, instead of an empty message. [#52795]
+- Date controls: Adjust the date triggers' appearance, and match the widget header's date range control to the other header controls. [#52500]
+- Latest subscribers: Open a subscriber on the Newsletter Subscribers page in wp-admin. [#52848]
+- Locations: Draw disputed borders on the map as the viewer's country shows them. [#52805]
+- Sync: Use the shared WooCommerce Analytics module from the jetpack-sync package, and sync store analytics whether or not WooCommerce order attribution is enabled. [#50851]
+
 ### Removed
-- Dashboard: Move the Ads widgets and their default layout to the Ads package, which registers them with the section.
+- Ads: Remove the "Metrics" dropdown from the All-time balance card, so it always shows every amount. [#52700]
+- Ads: Remove the Ads Served note above the Earnings report table. [#52714]
+- Dashboard: Move the Ads widgets and their default layout to the Ads package, which registers them with the section. [#52635]
 
 ### Fixed
-- Ads: Leave Average CPM empty instead of showing $0.00 in the Ads chart for periods with no ads served.
-- Ads: show a dash instead of zero in the Earnings report when a period has no Ads Served count.
-- Authors: Stop listing an author's post that only appears in the comparison period as 0 (-100%).
-  Search terms: Stop treating a comparison list capped at 500 terms as complete.
-- Charts: Add a Comparison period legend item to line charts that show a previous period, use square swatches in bar mode, keep the selected metric's legend item locked, and draw the Visitors swatch solid in the Traffic summary.
-- Charts: Show "1 Subscriber" rather than "1 Subscribers" in tooltips, using each language's plural rules.
-- Dashboard: Show the date menus opened from a widget's controls above the controls popover.
-- Email stats: Show a sent but unopened email's open and click rates as 0% instead of a dash, show the email tabs for emails whose sends went unrecorded, and leave unknown rates blank in the Emails export.
-- Email stats: Show readable link names in an email's Top links list, and list the links clicked inside the post instead of dropping them.
-- Reports: Give report cards a raised background so charts no longer sit in a lighter box on the page.
-- Return the Stats breadcrumb to the dashboard tab a report or detail page was opened from, instead of always to Traffic.
-- Subscriber summary: Leave the months before a site launched or turned on subscriptions empty in the chart, with a "No data" tooltip, instead of showing zero.
-- Traffic summary: Show the day totals for visitors, likes, and comments when the chart shows hours.
+- Ads: Leave Average CPM empty instead of showing $0.00 in the Ads chart for periods with no ads served. [#52690]
+- Ads: Show a dash instead of zero in the Earnings report when a period has no Ads Served count. [#52510]
+- Authors: Stop listing an author's post that only appears in the comparison period as 0 (-100%). [#52678]
+- Charts: Draw the Visitors legend swatch solid in the Traffic summary to match its line, and keep the selected metric's legend item from being hidden. [#52423]
+- Charts: Show "1 Subscriber" rather than "1 Subscribers" in tooltips, using each language's plural rules. [#52683]
+- Dashboard: Show the date menus opened from a widget's controls above the controls popover. [#52751]
+- Email stats: Leave unknown rates blank in the Emails export. [#52684]
+- Email stats: Show a sent but unopened email's open and click rates as 0% instead of a dash. [#52684]
+- Email stats: Show readable link names in an email's Top links list, and list the links clicked inside the post instead of dropping them. [#52685]
+- Email stats: Show the email tabs for emails whose sends went unrecorded. [#52684]
+- Return the Stats breadcrumb to the dashboard tab a report or detail page was opened from, instead of always to Traffic. [#52862]
+- Search terms: Stop treating a comparison list capped at 500 terms as complete. [#52678]
+- Subscriber summary: Leave the months before a site launched or turned on subscriptions empty in the chart, with a "No data" tooltip, instead of showing zero. [#52523]
 
 ## [0.8.0] - 2026-09-21
 ### Added
@@ -458,7 +469,8 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
-[0.9.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.8.0...0.9.0-alpha
+[0.10.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.9.0...0.10.0-alpha
+[0.9.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.8.0...0.9.0
 [0.8.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.7.0...0.8.0
 [0.7.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.6.1...0.7.0
 [0.6.1]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.6.0...0.6.1

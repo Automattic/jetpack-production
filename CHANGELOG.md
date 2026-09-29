@@ -2,176 +2,164 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
-## 16.3-a.4 - unreleased
+## 16.3-a.6 - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
-### Major Enhancements
-- Dashboard: Remove the legacy At a Glance dashboard and Recommendations assistant; their links now open My Jetpack, or Settings where My Jetpack is unavailable.
-
 ### Enhancements
-- Add stacked buttons as a display format for PayPal payment buttons.
-- AI: Add a "How it works" guide to the top of the MCP and Connectors tab.
-- AI: Point the Cursor setup instructions on the MCP agent setup page at the WordPress.com plugin on the Cursor Marketplace.
 - Backup: Show the VaultPress Backup dashboard in wp-admin, instead of linking out to Jetpack Cloud.
-- Jetpack AI: Point the disconnected-site notice at documentation instead of a connect link when the site would not let the current user connect it, as on VIP and multisite.
-- Likes: Manage Comment Likes from Settings > Sharing, and suggest the Like block on block themes even when Comment Likes are on.
-- My Jetpack: answer module switch clicks immediately, and explain what happened when a change fails.
-- My Jetpack: Show a Features tab in place of the Products tab, and link the footer's modules links to its list view.
-- Newsletter: add a button that puts the email design back to its defaults.
-- Newsletter: Format stats metrics and open/click rates with locale-aware number formatters.
-- Newsletter: List the enabled pop-up, overlay, and floating button below the footer when editing a template in the Site Editor.
-- Newsletter: name the email design Styles controls after the parts of the email they change.
-- Newsletter: open the email design screen on its Styles panel, and add a way back to it from the Template tab.
-- Newsletter: Sync the active theme's colors and typography so post emails can match the site's design.
-- Partner coupons: redeem them from My Jetpack.
-- PayPal Payment Buttons: Add Change item to a saved payment link's menu in the block settings sidebar, to switch the button to another of the account's payment links.
-- PayPal Payment Buttons: Ask whether to save or discard unsaved changes when leaving a saved payment link's form in the block settings sidebar.
-- PayPal Payment Buttons: Give each link in the existing links list a menu to duplicate it into a new payment link or delete it, and let the new link's form go back to the list.
-- PayPal Payment Buttons: Hide the Styles tab until the block has a payment link, and keep the existing links list in sync across blocks.
-- PayPal Payment Buttons: Show a snackbar after a post save that creates or changes a PayPal payment link.
-- Plugins page: Ask for optional feedback when deactivating Jetpack.
-- Premium Analytics: Add a Manage subscribers link to the Latest subscribers widget, opening the Newsletter subscribers screen in wp-admin.
-- Premium Analytics: Add comparison options that line up the same weekdays of the previous period and the previous year.
-- Premium Analytics: Always show every amount on the All-time balance card and drop its Metrics dropdown.
-- Premium Analytics: Call the preview the new Stats in its welcome, feedback and switch-off copy.
-- Premium Analytics: Describe the 30, 60 and 90 days ago and Social followers counts on Subscriber highlights on hover and for screen readers.
-- Premium Analytics: Draw disputed borders on the Locations map as the viewer's country shows them.
-- Premium Analytics: Lead each chart tooltip row with the value, then the metric, then the date.
-- Premium Analytics: Match the date range control in widget headers to the height of the other header controls, and draw the date triggers with the design system button states.
-- Premium Analytics: Note in the Earnings History widget when the site has adjustments, linking to the Adjustments history tab of the Earnings report.
-- Premium Analytics: Open a subscriber from the Latest subscribers widget on the Newsletter Subscribers page in wp-admin.
 - Premium Analytics: Refresh Stats data automatically every 30 minutes while the tab stays open, except for date ranges that ended before today.
-- Premium Analytics: Replace the records table with a "No data found" state when the selected period has no rows.
-- Premium Analytics: Show one generic “no results for this time period” state in list widgets that have no data for the selected period.
-- Premium Analytics: Show payment status as a badge in the Earnings History widget, and shorten the pending statuses to one word with the reason beside them. Negative amounts in the widget are no longer red; only the badge carries colour.
-- Premium Analytics: Show the Ads tab in the customer preview on sites that use WordAds.
-- Premium Analytics: Show the change since 30 days ago on the all-time, paid and free subscriber counts for sites with paid subscribers.
-- Premium Analytics: Show the empty state in chart widgets for a period the Stats API answers with zero or missing values, keep the Traffic chart's tabs at zero with the no-results message in the chart, and show zeros or placeholders in highlight and Insights widgets instead of an empty message.
-- Premium Analytics: Show the generic “no results for this time period” state in chart widgets that have no data for the selected period.
-- Premium Analytics: Show the post detail Email opens and Email clicks tabs for every post, with a "This post hasn’t been sent as a newsletter" state for a post that was never sent.
-- Premium Analytics: Show the Subscribers tab in the customer preview.
 - Premium Analytics: Show Visitors on the Traffic summary chart alongside Views by default.
-- Premium Analytics: Title the Ads tab Ads performance, reword the WordAds widget tips, and tidy the Earnings report table.
-- Search: Show the dashboard in the new rounded admin page frame.
-- Settings: Load the Settings page in the new Jetpack admin frame.
-- Settings: Move to its own admin page; existing links redirect there.
-- Settings: On WordPress.com sites, open the remaining support links (Anti-spam, Related Posts, Stats, Site Verification, Google Analytics, PayPal) as WordPress.com support docs inside the Help Center.
 - Settings: Show the updated Settings page to sites in right-to-left languages.
-- Sharing: group "Disable CSS and JS" with the sharing button settings, and hide it while sharing buttons are off.
-- Sharing settings: keep the sharing buttons configuration available on block themes, alongside the recommendation to use the Sharing Buttons block.
-- Sharing settings: show the Sharing and Like buttons sections whichever features are active, each with its own save button, and give "Show buttons on" a section of its own.
-- Sites API: return the "Require two-step authentication" SSO setting as the `jetpack_sso_require_two_step` site option.
-- Stats: Move the Stats settings to a new Settings tab in the Stats dashboard, and link to it from Jetpack Settings.
-- Stats: Recognize the standalone Jetpack Stats plugin in My Jetpack, and install it when Stats is activated there.
-- Tooltips: Keep focus on information icons when their tooltips open, announce the content to screen readers, and show a focus ring after clicking them.
-- VideoPress: Add a Latest Videos Playlist block that plays the site's newest VideoPress videos, with the number of videos set in the block settings.
-- VideoPress: Add an All Playlists block that lists every Video Playlist published on the site as a grid or a list.
-- VideoPress: Add an optional trim and cut editor with preview, undo, and original video restoration. Keep the editor available during processing, reduce background status checks, refresh delayed timeline thumbnails, and allow retrying failed edits.
 - VideoPress: Add a setting to the Video Playlist and Latest Videos Playlist blocks to hide the player. Clicking a video then opens it on VideoPress in a new tab, or reveals the player and plays it.
-- VideoPress: Add title and description settings to the Video Playlist block, recorded in a site-wide playlist index.
-- VideoPress: With the inline player setting on, draw the play button like the player's and show a loading spinner from the click until the player has loaded.
-- Zoom Scheduler block: Add a block for embedding Zoom Scheduler booking page URLs on all plans.
 
 ### Bug fixes
-- Admin: Hide masthead links when My Jetpack is unavailable.
-- AI: Disable feature toggles when custom code forces AI off.
-- AI: Show the Learn more link when SEO settings are unavailable.
-- AI: Turn off AI SEO and Search AI Answers when the `jetpack_ai_enabled` filter returns false. Before, both stayed on.
-- Blocks: Align the premium block upgrade banner with its text on narrow screens.
 - Blocks: Replace the Calendly and Eventbrite style thumbnails with labelled options that show the selected style, move the Calendly customization link into the Styles panel, and match the height of the Calendly URL field and Embed button.
 - Connection: Fix reconnecting your WordPress.com account so it no longer disconnects other users and clears the broken-connection notice on the first attempt.
-- Connection: Let users without admin access reconnect their own broken account from the connection error notice.
-- Connection: Report a broken connection on My Jetpack's connection card instead of claiming everything looks good, and show a break only the connection owner can repair as a warning, not an error, to everyone else.
 - Connection: Stop users who cannot set up the site connection from becoming the connection owner when the owner's connection is missing.
-- Content Guidelines: Fix the AI button alignment and the loading shimmer after recent Gutenberg changes.
-- Copy Post: Fix footnotes containing links being lost when duplicating a post.
-- CRM: keep the site owner on My Jetpack after activating Jetpack CRM, instead of sending them to CRM's full-screen setup wizard.
-- Donations: Fix donate button rendering as a cross shape on themes that apply block-level styles to .wp-block-button__link when the Button block stylesheet is not loaded.
-- External Media: Fix the width of the Select Media button in narrow block placeholders, such as the Media & Text block.
-- Firewall: Avoid a 500 error for visitors on the IP block list when the firewall runs before WordPress.
-- Firewall: Fix blank Jetpack admin pages when the standalone mode bootstrap loads from an older copy of the plugin.
-- Footer: Hide Products and Help links when My Jetpack is unavailable.
-- Forms: Cap the rating scale when rendering a form or a response so a malformed value cannot exhaust memory.
-- Forms: Detect Jetpack CRM installs that use a custom plugin folder or file name.
-- Google Fonts: Detect fonts followed by fallback families so selected fonts render on the front end.
-- Jetpack AI: avoid an unnecessary request when loading the editor.
 - Mailchimp: Show progress and explain what is missing when re-checking the connection from the block.
-- Modules: Report an error instead of success in WP-CLI and the REST API when switching a module your host or site administrator has enabled or disabled.
-- My Jetpack: Fix the layout of the connection screen for right-to-left languages.
-- My Jetpack: Fix the page failing to load for users who can edit posts but have no Jetpack menu, such as editors on unconnected sites.
-- My Jetpack: Point users who cannot connect the site at an administrator, instead of an onboarding screen they cannot complete.
-- My Jetpack: Show each notice once instead of twice.
-- My Jetpack: stretch the tab content background to the full height of the page.
 - Newsletter: Restrict posts to subscribers when a Paywall block is saved outside the block editor.
-- Newsletter: send the email design screen's test email through the newsletter renderer.
-- Newsletter: Show the earliest subscription date for subscribers with both an email and a WordPress.com subscription.
-- Newsletter: Show the warning when no site owner is connected to WordPress.com.
-- PayPal Payment Buttons: Allow http return URLs, and show an error in the block when a return URL is invalid.
-- PayPal Payment Buttons: Ask only about changes made since the last post save when leaving a saved payment link's form.
-- PayPal Payment Buttons: Mark the post as changed when a payment button is updated to match its link on PayPal, so the change can be saved and shown on the page.
-- PayPal Payment Buttons: Show an error in the block when a return URL is over PayPal's 1024-character limit.
-- PayPal Payment Buttons: Show a payment link's hosted ID without its PLB- prefix in the block settings sidebar, so it no longer wraps.
-- PayPal Payment Buttons: The Send via Email card now shows the right price for links priced per option. Before, it showed just "$".
-- Podcast: Draw the daily downloads chart's gridlines at the same days as its labels.
-- Premium Analytics: Add a Comparison period legend item to line charts that show a previous period, use square swatches in bar mode, keep the selected metric's legend item locked, and draw the Visitors swatch solid in the Traffic summary.
-- Premium Analytics: Draw the bars on a bar chart whose value stays the same across the whole period, instead of leaving the chart empty.
-- Premium Analytics: Fix store data failing to sync when WooCommerce Analytics is turned off.
-- Premium Analytics: Keep chart series colors distinguishable from each other, including for color-blind viewers.
-- Premium Analytics: Leave Average CPM empty instead of showing $0.00 in the Ads chart for periods with no ads served.
-- Premium Analytics: Leave the months before a site launched or turned on subscriptions empty in the Subscriber summary chart, with a "No data" tooltip, instead of showing zero.
-- Premium Analytics: Return the Stats breadcrumb to the dashboard tab a report or detail page was opened from, instead of always to Traffic.
-- Premium Analytics: Show "1 Subscriber" rather than "1 Subscribers" in chart tooltips, using each language's plural rules.
-- Premium Analytics: Show a dash instead of zero in the Earnings history report when a period has no Ads Served count.
-- Premium Analytics: Show a sent but unopened email's open and click rates as 0% instead of a dash, show the email tabs for emails whose sends went unrecorded, and leave unknown rates blank in the Emails export.
-- Premium Analytics: Show each number on a chart's value axis once when the counts are small, instead of repeating 0 and 1.
-- Premium Analytics: Show readable link names in an email's Top links list, and list the links clicked inside the post instead of dropping them.
-- Premium Analytics: Show the date menus opened from a widget's controls above the controls popover.
-- Premium Analytics: Start bar chart value axes at zero so a small change no longer looks like a large one.
-- Premium Analytics: Start line chart value axes at zero, and pad the Subscribers chart's axis a little below its data, so a small change no longer looks like a large one.
-- Premium Analytics: Stop listing an author's post that only appears in the comparison period as 0 (-100%).
-- Search: Keep the AI Answers preview hidden when answers are turned off.
-- Search: Require a paid Search plan to enable and display Site Chat.
 - Search: Show the connection error at the top of the dashboard on every tab.
-- Search: Stop offering Search blocks in the Overlay search sidebar's widget inserter, and flag any already there, because they cannot load in that sidebar.
-- SEO: Fix Sitemap and Canonical URLs status to reflect the active modules.
-- SEO: Respect excerpt filters in generated llms.txt summaries.
 - Settings: Keep the Copy button on the left and show the start of URLs in copy fields for right-to-left languages.
-- Show Jetpack in-dashboard messages on the modernized product dashboards again.
-- Social: Show each number on the traffic chart's value axis once when visit counts are small.
-- Stats: Draw the My Jetpack stats chart's gridlines only at whole numbers when counts are small.
-- Stats: Let the pointer take over from the arrow keys in bar charts, including podcast episode stats, instead of flickering between the hovered and selected bars.
-- Stats: Stop the pricing grid from coming back for up to 5 minutes after choosing Start for free.
-- Tooltips: Open information tooltips with the keyboard and dismiss them with Escape.
 - VideoPress: Ask before deleting videos, and warn before leaving the page while an upload is running.
-- VideoPress: Fix a just-uploaded video briefly showing up a second time as a local video in the Library.
-- VideoPress: Fix private video playback on sites using WPML.
-- VideoPress: Keep the dashboard views trend chart's comparison lines distinguishable, including for color-blind viewers.
 - VideoPress: Keep the Learn more support link up to date through the redirect service.
-- VideoPress: Prevent the empty library prompt from appearing while videos are loading.
-- VideoPress: With the inline player setting on, show the poster of private videos, and of videos the server could not look up, before they are played instead of a black box.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
-- Carousel: Prefetch the Swiper library so the first click on a gallery image does not wait for it.
-- Carousel: Request the zoom-resolution image only when the visitor zooms.
-- Carousel: Shorten the slide transition, and disable it entirely under prefers-reduced-motion.
-- Carousel: Stop fetching comments on every slide change; fetch them when the comments panel is opened.
-- Carousel: Stop serialising empty EXIF values into every gallery image.
-- Jetpack AI: Link the AI Answers row to the Search settings page only where that page is available, and to the docs otherwise, so hosts that remove the page keep the toggle without a dead link.
 - Jetpack AI: Show Jetpack's in-dashboard messages on the AI page.
-- Likes: deprecate the legacy Settings > Sharing methods in Jetpack_Likes_Settings, now that the Sharing screen renders and saves the Likes settings itself.
-- Map block: Clean up unused attributes and provide fallback for invalid color values.
-- Modules: Honor the `jetpack_feature_policy` filter when detecting forced modules and choosing default modules.
-- Premium Analytics: register the Ads tab from the WordAds module.
-- Premium Analytics: Sync store analytics whether or not WooCommerce order attribution is enabled.
-- Settings: Remove the hardcoded text color override on the wp-build page, so text follows the design system color.
-- Sharing settings: Stop showing Jetpack Social connection errors on the Settings > Sharing screen.
-- Stats: Load the admin bar chart and Stats link from the Stats Admin package, and deprecate the matching functions in the Stats module.
-- Tools: Replace `@wordpress/jest-console` with a simple set of mocks.
 - Update package dependencies.
 - Use core snackbar notice placement across Jetpack admin screens.
-- Use logical CSS properties in Settings, Dashboard, and Jetpack AI styles so layouts mirror in right-to-left languages.
-- WordAds: Register the Ads widgets of the Premium Analytics dashboard from the Ads package.
+
+## 16.3-a.5 - 2026-09-28
+### Major Enhancements
+- Dashboard: Remove the legacy At a Glance dashboard and Recommendations assistant. [#52513]
+
+### Enhancements
+- AI: Add a "How it works" guide to the top of the MCP and Connectors tab. [#52524]
+- AI: Point the Cursor setup instructions on the MCP agent setup page at the WordPress.com plugin on the Cursor Marketplace. [#52375]
+- AI: Point the disconnected-site notice at documentation instead of a connect link when the current user cannot connect the site, as on VIP and multisite. [#52536]
+- Likes: Give Comment Likes their own section on Settings > Sharing, and suggest the Like block on block themes even when Comment Likes are on. [#52796]
+- My Jetpack: Answer module switch clicks immediately, and explain what happened when a change fails. [#52494]
+- My Jetpack: Show the Features tab in place of the Products tab, and link the footer's modules links to its list view. [#52785]
+- Newsletter: Format stats metrics and open/click rates with locale-aware number formatters. [#52817]
+- Newsletter: List the enabled pop-up, overlay, and floating button below the footer when editing a template in the Site Editor. [#52818]
+- Newsletter: Sync the active theme's colors and typography so post emails can match the site's design. [#52651]
+- Partner Coupons: Move coupon redemption from the legacy dashboard to My Jetpack. [#52514]
+- Plugins page: Ask for optional feedback when deactivating Jetpack. [#52828]
+- Search: Show the dashboard in the new rounded admin page frame. [#52506]
+- Settings: Move the Settings page to its own admin page in the new Jetpack admin frame; existing links redirect there. [#52589] [#52619]
+- Settings: Open the remaining support links as WordPress.com support docs inside the Help Center on WordPress.com sites. [#52560]
+- Sharing: Group "Disable CSS and JS" with the sharing button settings, and hide it while sharing buttons are off. [#52727]
+- Sharing settings: Give "Show buttons on" a section of its own. [#52407]
+- Sharing settings: Keep the sharing buttons configuration available on block themes, alongside the recommendation to use the Sharing Buttons block. [#52407]
+- Sharing settings: Show the Sharing and Like buttons sections whichever features are active, each with its own save button. [#52407]
+- Stats: Move the Stats settings to a new Settings tab in the Stats dashboard, and link to it from Jetpack Settings. [#52540]
+- Stats: Recognize the standalone Jetpack Stats plugin in My Jetpack, and install it when Stats is activated there. [#51083]
+- Tooltips: Keep focus on information icons when their tooltips open, and announce the content to screen readers. [#52736]
+- Tooltips: Show a focus ring on information icons after clicking them. [#52736]
+- VideoPress: Add a Latest Videos Playlist block that plays the site's newest VideoPress videos, with the number of videos set in the block settings. [#52665]
+- VideoPress: Add an All Playlists block that lists every Video Playlist published on the site as a grid or a list. [#52724]
+- VideoPress: Add title and description settings to the Video Playlist block. [#52729]
+- VideoPress: Match the inline player's play button to the player's own, and show a loading spinner from the click until the player loads. [#52574]
+- Zoom Scheduler: Add a block that embeds Zoom Scheduler booking pages, available on all plans. [#50043]
+
+### Bug fixes
+- Admin: Hide masthead links when My Jetpack is unavailable. [#52606]
+- AI: Avoid an unnecessary request when loading the editor. [#52615]
+- AI: Disable feature toggles when custom code forces AI off. [#52595]
+- AI: Show the "Learn more" link when SEO settings are unavailable. [#52593]
+- AI: Turn off AI SEO and Search AI Answers when the `jetpack_ai_enabled` filter returns false. [#52748]
+- Blocks: Align the premium block upgrade banner with its text on narrow screens. [#52823]
+- Connection: Let users without admin access reconnect their own broken account from the connection error notice. [#52718]
+- Connection: Report a broken connection on My Jetpack's connection card instead of claiming everything looks good. [#52130]
+- Connection: Show a connection break only its owner can repair as a warning to other users, not an error. [#52130]
+- Content Guidelines: Fix the AI button alignment and the loading shimmer after recent Gutenberg changes. [#52764]
+- Copy Post: Fix footnotes containing links being lost when duplicating a post. [#52878]
+- CRM: Keep the site owner on My Jetpack after activating Jetpack CRM, instead of sending them to CRM's full-screen setup wizard. [#52654]
+- Dashboards: Show Jetpack in-dashboard messages on the modernized product dashboards again. [#52641]
+- Donations: Fix the donate button rendering as a cross shape on themes that apply block-level styles to `.wp-block-button__link`. [#52623]
+- External Media: Fix the width of the Select Media button in narrow block placeholders, such as the Media & Text block. [#52631]
+- Firewall: Avoid a fatal error for visitors on the IP block list when the firewall runs before WordPress. [#52682]
+- Firewall: Fix blank Jetpack admin pages when the standalone mode bootstrap loads from an older copy of the plugin. [#52539]
+- Footer: Hide the "Products" and "Help" links when My Jetpack is unavailable. [#52557]
+- Forms: Cap the rating scale when rendering a form or a response so a malformed value cannot exhaust memory. [#52007]
+- Forms: Detect Jetpack CRM installs that use a custom plugin folder or file name. [#52725]
+- Google Fonts: Detect fonts followed by fallback families so selected fonts render on the front end. [#52586]
+- Modules: Report an error instead of success when WP-CLI or the REST API switches a module the host or site administrator has forced on or off. [#52505]
+- My Jetpack: Fix the layout of the connection screen for right-to-left languages. [#52749]
+- My Jetpack: Fix the page failing to load for users who can edit posts but have no Jetpack menu, such as editors on unconnected sites. [#52614]
+- My Jetpack: Point users who cannot connect the site at an administrator, instead of an onboarding screen they cannot complete. [#52614]
+- My Jetpack: Show each notice once instead of twice. [#52494]
+- My Jetpack: Stretch the tab content background to the full height of the page. [#52633]
+- Newsletter: Show the earliest subscription date for subscribers with both an email and a WordPress.com subscription. [#52576]
+- Newsletter: Show the warning when no site owner is connected to WordPress.com. [#52810]
+- Podcast: Draw the daily downloads chart's gridlines at the same days as its labels. [#52588]
+- Search: Keep the AI Answers preview hidden when answers are turned off. [#52753]
+- Search: Require a paid Search plan to enable and display Site Chat. [#52386]
+- Search: Stop offering Search blocks in the Overlay search sidebar's widget inserter, and flag any already there. [#52670]
+- SEO: Fix Sitemap and Canonical URLs status to reflect the active modules. [#52516]
+- SEO: Respect excerpt filters in generated `llms.txt` summaries. [#52414]
+- Social: Show each number on the traffic chart's value axis once when visit counts are small. [#52588]
+- Stats: Draw the My Jetpack stats chart's gridlines only at whole numbers when counts are small. [#52588]
+- Stats: Prevent bar charts from flickering between the hovered bar and the keyboard-selected bar. [#52821]
+- Stats: Stop the pricing grid from coming back for up to 5 minutes after choosing "Start for free". [#52599]
+- Tooltips: Make information tooltips open from the keyboard and close on Escape. [#52661]
+- VideoPress: Fix a just-uploaded video briefly showing up a second time as a local video in the Library. [#52822]
+- VideoPress: Fix private video playback on sites using WPML. [#52659]
+- VideoPress: Keep the dashboard views trend chart's comparison lines distinguishable, including for color-blind viewers. [#52680]
+- VideoPress: Prevent the empty library prompt from appearing while videos are loading. [#52819]
+- VideoPress: Show the poster of private videos in the inline player before they are played, instead of a black box. [#52574]
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- AI: Link the AI Answers row to the Search settings page where it is available, and to the docs otherwise. [#52679]
+- Carousel: Prefetch the Swiper library so the first click on a gallery image does not wait for it. [#50829]
+- Carousel: Request the zoom-resolution image only when the visitor zooms. [#50833]
+- Carousel: Shorten the slide transition, and disable it entirely under `prefers-reduced-motion`. [#50828]
+- Carousel: Stop fetching comments on every slide change; fetch them when the comments panel is opened. [#50831]
+- Carousel: Stop serializing empty EXIF values into every gallery image. [#50832]
+- Likes: Deprecate the legacy Settings > Sharing methods in `Jetpack_Likes_Settings`. [#52758]
+- Map block: Clean up unused attributes and provide fallback for invalid color values. [#52577]
+- Modules: Honor the `jetpack_feature_policy` filter when detecting forced modules and choosing default modules. [#52587]
+- Newsletter: Open the email design screen on its Styles panel, name its Styles controls after the parts of the email they change, and add a "Reset to defaults" button. [#52879] [#52771] [#52710]
+- Newsletter: Send the email design screen's test email as subscribers would receive it. [#52732]
+- PayPal Payment Buttons: Accept http return URLs, and show an error in the block when a return URL is invalid. [#52774]
+- PayPal Payment Buttons: Add a menu to duplicate or delete a link from the existing links list. [#52543]
+- PayPal Payment Buttons: Add a menu to switch a saved button to another of the account's payment links. [#52534]
+- PayPal Payment Buttons: Add stacked buttons as a display format. [#52512]
+- PayPal Payment Buttons: Ask whether to save or discard unsaved changes when leaving a saved payment link's form. [#52553] [#52744]
+- PayPal Payment Buttons: Confirm in a snackbar when a post save creates or changes a payment link. [#52740]
+- PayPal Payment Buttons: Keep the existing links list in sync across blocks, and hide the Styles tab until the block has a link. [#52668]
+- PayPal Payment Buttons: Show a payment link's hosted ID without its PLB- prefix in the block settings sidebar. [#52550]
+- PayPal Payment Buttons: Show the right price on the Send via Email card for links priced per option. [#52743]
+- Premium Analytics: Add comparison options for the same weekdays of the previous period and the previous year. [#52598]
+- Premium Analytics: Add the Subscribers tab to the customer preview, and the Ads tab on sites that use WordAds. [#52768] [#52864]
+- Premium Analytics: Call the preview the new Stats in its welcome, feedback and switch-off copy. [#52722]
+- Premium Analytics: Draw disputed borders on the Locations map as the viewer's country shows them. [#52805]
+- Premium Analytics: Leave Average CPM empty in the Ads chart for periods with no ads served. [#52690]
+- Premium Analytics: Leave the months before a site launched empty in the Subscriber summary chart. [#52523]
+- Premium Analytics: Link the Latest subscribers widget and each subscriber in it to the Newsletter subscribers screen. [#52604] [#52848]
+- Premium Analytics: Refine chart tooltips, legends and series colors. [#52527] [#52423] [#52680] [#52683]
+- Premium Analytics: Refine the date range and comparison controls in widget headers. [#52500] [#52751]
+- Premium Analytics: Register the Ads tab from the WordAds module and its widgets from the Ads package. [#52455] [#52635]
+- Premium Analytics: Return the Stats breadcrumb to the tab a report was opened from. [#52862]
+- Premium Analytics: Show 0% rates for unopened emails, and readable link names in an email's Top links list. [#52684] [#52685]
+- Premium Analytics: Show a dash in the Earnings history report for periods with no Ads Served count. [#52510]
+- Premium Analytics: Show every amount on the All-time balance card. [#52700]
+- Premium Analytics: Show one no-results state in widgets and reports with no data for the selected period. [#52791] [#52792] [#52794]
+- Premium Analytics: Show payment status badges and an adjustments note in the Earnings History widget. [#52565] [#52526]
+- Premium Analytics: Show the change since 30 days ago in Subscriber highlights, with descriptions for screen readers. [#52741] [#52747]
+- Premium Analytics: Show the Email opens and Email clicks tabs for every post. [#52801]
+- Premium Analytics: Show zeros or placeholders in highlight and Insights widgets instead of an empty message. [#52795]
+- Premium Analytics: Start value axes at zero, and draw bars for a value that stays constant. [#52522] [#52588] [#52597] [#52600]
+- Premium Analytics: Stop listing an author's post that only appears in the comparison period as 0 (-100%). [#52678]
+- Premium Analytics: Sync store analytics whether or not WooCommerce Analytics or order attribution is enabled. [#52681] [#50851]
+- Premium Analytics: Title the Ads tab "Ads performance" and reword the WordAds widget tips. [#52714]
+- Settings: Follow the design system text color instead of a hardcoded override. [#52713]
+- Sharing settings: Stop showing Jetpack Social connection errors on the Settings > Sharing screen. [#52658]
+- Sites API: Return the "Require two-step authentication" SSO setting as the `jetpack_sso_require_two_step` site option. [#52570]
+- Stats: Load the admin bar chart and Stats link from the Stats Admin package, and deprecate the matching functions in the Stats module. [#52528]
+- Tools: Replace `@wordpress/jest-console` with a simple set of mocks. [#52737]
+- Use logical CSS properties in Settings, Dashboard, and Jetpack AI styles so layouts mirror in right-to-left languages. [#52750]
+- VideoPress: Add a trim and cut editor with preview, undo and original video restoration, behind the `jetpack_videopress_trim_cut` filter. [#52857]
 
 ## 16.3-a.3 - 2026-09-21
 ### Enhancements

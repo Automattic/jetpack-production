@@ -20,7 +20,7 @@ class Footer_Links {
 	/**
 	 * Whether My Jetpack reports that its admin page is available to the current user.
 	 *
-	 * @since 16.3-a.4
+	 * @since 16.3
 	 *
 	 * @return bool
 	 */

@@ -12,13 +12,14 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Let a host plugin initialize the Backup dashboard without re-ensuring the connection.
 
+## [5.0.5] - 2026-09-28
 ### Changed
-- Use the shared wp-build-polyfills helper to order the screen-ID alias around wp-build's generated enqueue check.
+- Use the shared wp-build-polyfills helper to order the screen-ID alias around wp-build's generated enqueue check. [#52583]
 
 ### Fixed
-- Footer: Hide Products and Help links when My Jetpack is unavailable.
-- Modern dashboard: Show when a backup completed with warnings, and when the Jetpack connection reports an error.
-- Show Jetpack in-dashboard messages on the modernized dashboard.
+- Footer: Hide the "Products" and "Help" links when My Jetpack is unavailable. [#52557]
+- Modern dashboard: Show when a backup completed with warnings, and when the Jetpack connection reports an error. [#52811]
+- Show Jetpack in-dashboard messages on the modernized dashboard. [#52641]
 
 ## [5.0.4] - 2026-09-21
 ### Added
@@ -1257,7 +1258,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[5.1.0-alpha]: https://github.com/Automattic/jetpack-backup/compare/v5.0.4...v5.1.0-alpha
+[5.1.0-alpha]: https://github.com/Automattic/jetpack-backup/compare/v5.0.5...v5.1.0-alpha
+[5.0.5]: https://github.com/Automattic/jetpack-backup/compare/v5.0.4...v5.0.5
 [5.0.4]: https://github.com/Automattic/jetpack-backup/compare/v5.0.3...v5.0.4
 [5.0.3]: https://github.com/Automattic/jetpack-backup/compare/v5.0.2...v5.0.3
 [5.0.2]: https://github.com/Automattic/jetpack-backup/compare/v5.0.1...v5.0.2

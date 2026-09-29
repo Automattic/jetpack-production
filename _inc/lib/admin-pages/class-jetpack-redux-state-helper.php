@@ -43,7 +43,7 @@ class Jetpack_Redux_State_Helper {
 	/**
 	 * Generate the state for the plugins page: the minimal state plus what the deactivation survey needs.
 	 *
-	 * @since 16.3-a.4
+	 * @since 16.3
 	 *
 	 * @return array
 	 */
