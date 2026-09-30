@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Removed
+- Remove unused Zendesk chat REST endpoints and related front-end constants left after the widget was turned off.
+
 ## [6.7.1] - 2026-09-29
 ### Changed
 - Backup: Send Manage and checkout to the in-plugin Backup dashboard when the Jetpack plugin hosts it. [#52495]

@@ -274,7 +274,6 @@ return array(
     'Automattic\\Jetpack\\My_Jetpack\\REST_Products' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-products.php',
     'Automattic\\Jetpack\\My_Jetpack\\REST_Purchases' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-purchases.php',
     'Automattic\\Jetpack\\My_Jetpack\\REST_Recommendations_Evaluation' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-recommendations-evaluation.php',
-    'Automattic\\Jetpack\\My_Jetpack\\REST_Zendesk_Chat' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-zendesk-chat.php',
     'Automattic\\Jetpack\\My_Jetpack\\Red_Bubble_Notifications' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-red-bubble-notifications.php',
     'Automattic\\Jetpack\\My_Jetpack\\Wpcom_Products' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-wpcom-products.php',
     'Automattic\\Jetpack\\Newsletter\\Action_Bar' => $baseDir . '/jetpack_vendor/automattic/jetpack-newsletter/src/class-action-bar.php',
