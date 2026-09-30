@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add video thumbnails to the Videos report, drop "report" from report headings, and label the export button "Download CSV".
 - Dashboard: Let a widget type declare its former names, so layouts saved before a rename keep rendering it; the widget contract is 1.1.0.
 - Dashboard: offer adding and removing widgets by default; the premium-analytics-dashboard-composition feature flag stays as the kill switch.
+- Widgets toolkit: Add a Leaderboard component that renders ranked rows with their states, shares and deltas; Top videos, Search terms and Most commented authors use it.
 
 ### Changed
 - Show Posts & Pages and Videos report titles in bold beside a fixed-size thumbnail.

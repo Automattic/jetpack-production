@@ -7,4 +7,3 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "We couldn't load video plays. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "Retry", "jetpack-premium-analytics-pkg" );
