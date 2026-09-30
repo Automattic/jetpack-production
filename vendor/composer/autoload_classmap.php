@@ -298,6 +298,7 @@ return array(
     'Automattic\\Jetpack\\PaypalPayments\\PayPal_Payment_Links_List_Table' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/paypal-payment-buttons/class-paypal-payment-links-list-table.php',
     'Automattic\\Jetpack\\PaypalPayments\\PayPal_Platform_Client' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/paypal-payment-buttons/class-paypal-platform-client.php',
     'Automattic\\Jetpack\\PaypalPayments\\PayPal_REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/paypal-payment-buttons/class-paypal-rest-controller.php',
+    'Automattic\\Jetpack\\PaypalPayments\\PayPal_Tracks' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/paypal-payment-buttons/class-paypal-tracks.php',
     'Automattic\\Jetpack\\PaypalPayments\\SimplePayments\\Block' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/block/class-block.php',
     'Automattic\\Jetpack\\Paypal_Payments\\Order_REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/legacy/class-order-rest-controller.php',
     'Automattic\\Jetpack\\Paypal_Payments\\Simple_Payments' => $baseDir . '/jetpack_vendor/automattic/jetpack-paypal-payments/src/legacy/class-simple-payments.php',
