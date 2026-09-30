@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Traffic chart: Default to the chart type Jetpack Stats v1 saved in this browser, else bars.
 
+### Fixed
+- Date controls: Use the default chart interval when switching to a different preset, instead of keeping the previous preset's.
+
 ## [0.10.0] - 2026-09-29
 ### Changed
 - Dashboard: Offer in the widget picker only the widgets the current tab shows by default. [#52922]
