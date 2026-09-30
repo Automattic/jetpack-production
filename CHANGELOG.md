@@ -10,6 +10,9 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Add a Days, Weeks, Months, and Years control to the subscribers chart, with arrows to move through earlier periods. Subscriber and paid subscriber totals stay the current count.
 - VideoPress: Show the Video Playlist block's title as an editable heading above the playlist, with a setting to turn it off.
 
+### Bug fixes
+- Calendly: Make the block preview interactive in the editor once the block is selected.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Update package dependencies.
 
