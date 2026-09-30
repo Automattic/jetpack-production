@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Fix the post comments count, the most popular time, and unnamed countries showing wrong values when Stats has no data for them.
 - Premium Analytics: Show the traffic chart with the type chosen in the previous Stats, or as bars by default.
 - Premium Analytics: Use the default chart interval when switching to a different date preset, instead of keeping the previous preset's.
+- VideoPress: Fix upgrades on WordPress.com sites by offering the Business plan.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Update package dependencies.

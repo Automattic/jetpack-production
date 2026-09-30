@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Video Playlist block: Show the playlist title as an editable heading above the playlist, with a setting to turn it off.
 
+### Fixed
+- Upgrade: Send WordPress.com sites to the Business plan instead of an incompatible VideoPress product.
+
 ## [0.54.0] - 2026-09-29
 ### Added
 - Playlist blocks: Add a "Show player" setting; when off, clicking a video opens it on VideoPress. [#52808]
