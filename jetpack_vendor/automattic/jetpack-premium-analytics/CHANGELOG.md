@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add video thumbnails to the Videos report, drop "report" from report headings, and label the export button "Download CSV".
 
+### Changed
+- Traffic chart: Default to the chart type Jetpack Stats v1 saved in this browser, else bars.
+
 ## [0.10.0] - 2026-09-29
 ### Changed
 - Dashboard: Offer in the widget picker only the widgets the current tab shows by default. [#52922]
