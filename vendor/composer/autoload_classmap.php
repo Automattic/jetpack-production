@@ -623,6 +623,7 @@ return array(
     'Automattic\\Jetpack\\VideoPress\\Block_Editor_Extensions' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-block-editor-extensions.php',
     'Automattic\\Jetpack\\VideoPress\\Block_Replacement' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-block-replacement.php',
     'Automattic\\Jetpack\\VideoPress\\Caption_Tracks' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-caption-tracks.php',
+    'Automattic\\Jetpack\\VideoPress\\Channel' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-channel.php',
     'Automattic\\Jetpack\\VideoPress\\Data' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-data.php',
     'Automattic\\Jetpack\\VideoPress\\Divi' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-divi.php',
     'Automattic\\Jetpack\\VideoPress\\Divi5\\Divi_5' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/videopress-divi-5/class-divi-5.php',

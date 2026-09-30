@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Channel: Give every VideoPress video its own page at /videopress?v=GUID, rendered by the theme's videopress-video template, for themes that opt in; add a "Show the video being viewed" option to the video block, and point attachment links and player-less playlist entries at those pages.
 - Video Playlist block: Show the playlist title as an editable heading above the playlist, with a setting to turn it off.
 
 ### Fixed
