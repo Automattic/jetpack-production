@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: offer adding and removing widgets by default; the premium-analytics-dashboard-composition feature flag stays as the kill switch.
 
 ### Changed
+- Show Posts & Pages and Videos report titles in bold beside a fixed-size thumbnail.
 - Traffic chart: Default to the chart type Jetpack Stats v1 saved in this browser, else bars.
 
 ### Fixed

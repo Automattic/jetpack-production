@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Add a Days, Weeks, Months, and Years control to the subscribers chart, with arrows to move through earlier periods. Subscriber and paid subscriber totals stay the current count.
 - Premium Analytics: Add video thumbnails to the Videos report, drop "report" from report headings, and label the export button "Download CSV".
 - Premium Analytics: offer adding and removing widgets on the dashboard.
+- Premium Analytics: Show Posts & Pages and Videos report titles in bold beside a fixed-size thumbnail.
 - VideoPress: Show the Video Playlist block's title as an editable heading above the playlist, with a setting to turn it off.
 
 ### Bug fixes
