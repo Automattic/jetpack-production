@@ -131,7 +131,6 @@ __( "Hide map", "jetpack-premium-analytics-pkg" );
 __( "Show map", "jetpack-premium-analytics-pkg" );
 __( "Could not download report.", "jetpack-premium-analytics-pkg" );
 __( "Download CSV", "jetpack-premium-analytics-pkg" );
-__( "Download", "jetpack-premium-analytics-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 __( "Sections", "jetpack-premium-analytics-pkg" );

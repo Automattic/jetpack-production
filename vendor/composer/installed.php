@@ -67,7 +67,7 @@
         'automattic/jetpack-ads' => array(
             'pretty_version' => '0.1.1',
             'version' => '0.1.1.0',
-            'reference' => '9c7b906c2c70f11975c5e02b9a50d48dd7525fcf',
+            'reference' => 'f39057b93df1843808a93dd78f056360a02f8cc0',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-ads',
             'aliases' => array(),
@@ -443,9 +443,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-premium-analytics' => array(
-            'pretty_version' => '0.10.0',
-            'version' => '0.10.0.0',
-            'reference' => 'fcd04c37a50441c3a59a353b1e97eba8b6054527',
+            'pretty_version' => '0.11.0-alpha.1790736608',
+            'version' => '0.11.0.0-alpha1790736608',
+            'reference' => '2d18fccd6bf2aba970475129bf95be0e7a5f11d6',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-premium-analytics',
             'aliases' => array(),

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.11.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add video thumbnails to the Videos report, drop "report" from report headings, and label the export button "Download CSV".
+
 ## [0.10.0] - 2026-09-29
 ### Changed
 - Dashboard: Offer in the widget picker only the widgets the current tab shows by default. [#52922]
@@ -466,6 +473,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
+[0.11.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.10.0...0.11.0-alpha
 [0.10.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.9.0...0.10.0
 [0.9.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.8.0...0.9.0
 [0.8.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.7.0...0.8.0
