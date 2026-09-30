@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add video thumbnails to the Videos report, drop "report" from report headings, and label the export button "Download CSV".
+- Dashboard: Let a widget type declare its former names, so layouts saved before a rename keep rendering it; the widget contract is 1.1.0.
 - Dashboard: offer adding and removing widgets by default; the premium-analytics-dashboard-composition feature flag stays as the kill switch.
 
 ### Changed
