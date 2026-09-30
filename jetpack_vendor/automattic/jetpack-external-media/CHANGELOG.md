@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Make the featured image picker fill the full width of the sidebar.
+
 ## [0.9.6] - 2026-09-29
 ### Changed
 - Update dependencies. [#52349]
