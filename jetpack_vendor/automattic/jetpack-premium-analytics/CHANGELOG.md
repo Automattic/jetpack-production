@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Date controls: Use the default chart interval when switching to a different preset, instead of keeping the previous preset's.
+- Fix the post comments count, the most popular time, and unnamed countries showing wrong values when Stats has no data for them.
 
 ## [0.10.0] - 2026-09-29
 ### Changed

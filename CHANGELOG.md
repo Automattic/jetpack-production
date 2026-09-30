@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Calendly: Make the block preview interactive in the editor once the block is selected.
+- Premium Analytics: Fix the post comments count, the most popular time, and unnamed countries showing wrong values when Stats has no data for them.
 - Premium Analytics: Show the traffic chart with the type chosen in the previous Stats, or as bars by default.
 - Premium Analytics: Use the default chart interval when switching to a different date preset, instead of keeping the previous preset's.
 
