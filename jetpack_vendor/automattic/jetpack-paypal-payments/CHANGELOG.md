@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.12.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- PayPal Payment Buttons: onboard sellers as a third-party integration, so PayPal calls are made through WordPress.com and no credentials are stored on the site.
+
 ## [0.11.1] - 2026-09-29
 ### Changed
 - Update dependencies. [#50841]
@@ -383,6 +390,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Simple Payments: Move Simple Payments block to PayPal Payments package. [#43413]
 
+[0.12.0-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.11.1...v0.12.0-alpha
 [0.11.1]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.11.0...v0.11.1
 [0.11.0]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.9.0...v0.10.0

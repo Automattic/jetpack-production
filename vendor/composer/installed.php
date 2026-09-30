@@ -389,9 +389,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-paypal-payments' => array(
-            'pretty_version' => '0.11.1',
-            'version' => '0.11.1.0',
-            'reference' => '4258712229e70e7e332f35d221c8b8258641ee26',
+            'pretty_version' => '0.12.0-alpha.1790774207',
+            'version' => '0.12.0.0-alpha1790774207',
+            'reference' => '709150405c51220bee8f300bd9b324d1dc9eb895',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-paypal-payments',
             'aliases' => array(),
