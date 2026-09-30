@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [9.8.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Connection: Reduce false connection-failure reports in Site Health: remove the redundant outbound HTTP/HTTPS checks (WordPress core already covers them), and stop prompting a reconnect when WordPress.com reports the connection test as inconclusive (e.g. it cannot reach a dev or sandbox site back).
+
 ## [9.8.1] - 2026-09-29
 ### Changed
 - Protected owner: Ask WordPress.com over the REST API rather than XML-RPC. [#52928]
@@ -2122,6 +2129,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[9.8.2-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.8.1...v9.8.2-alpha
 [9.8.1]: https://github.com/Automattic/jetpack-connection/compare/v9.8.0...v9.8.1
 [9.8.0]: https://github.com/Automattic/jetpack-connection/compare/v9.7.0...v9.8.0
 [9.7.0]: https://github.com/Automattic/jetpack-connection/compare/v9.6.0...v9.7.0
