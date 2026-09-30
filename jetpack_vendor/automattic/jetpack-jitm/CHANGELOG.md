@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.1.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update package dependencies.
+
 ## [5.1.0] - 2026-09-28
 ### Added
 - Add a helper that clears admin notices from a screen while keeping Jetpack in-dashboard messages. [#52641]
@@ -1208,6 +1215,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update Jetpack to use new JITM package
 
+[5.1.1-alpha]: https://github.com/Automattic/jetpack-jitm/compare/v5.1.0...v5.1.1-alpha
 [5.1.0]: https://github.com/Automattic/jetpack-jitm/compare/v5.0.6...v5.1.0
 [5.0.6]: https://github.com/Automattic/jetpack-jitm/compare/v5.0.5...v5.0.6
 [5.0.5]: https://github.com/Automattic/jetpack-jitm/compare/v5.0.4...v5.0.5

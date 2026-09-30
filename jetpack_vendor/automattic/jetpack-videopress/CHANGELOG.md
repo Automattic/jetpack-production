@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Channel: Give every VideoPress video its own page at /videopress?v=GUID, rendered by the theme's videopress-video template, for themes that opt in; add a "Show the video being viewed" option to the video block, and point attachment links and player-less playlist entries at those pages.
 - Video Playlist block: Show the playlist title as an editable heading above the playlist, with a setting to turn it off.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Latest Videos Playlist block: list the site's videos on WordPress.com Simple pages, where the media REST endpoint is not available during a page render.
 - Upgrade: Send WordPress.com sites to the Business plan instead of an incompatible VideoPress product.

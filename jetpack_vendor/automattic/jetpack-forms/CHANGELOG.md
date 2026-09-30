@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Release field conditional logic, available on WordPress.com Business plans and higher and on all Jetpack sites.
 
+### Changed
+- Update package dependencies.
+
 ## [8.2.2] - 2026-09-29
 ### Fixed
 - Dashboard: Stop logging a console error about missing Jetpack configuration. [#52809]

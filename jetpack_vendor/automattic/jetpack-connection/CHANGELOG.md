@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Connection: Reduce false connection-failure reports in Site Health: remove the redundant outbound HTTP/HTTPS checks (WordPress core already covers them), and stop prompting a reconnect when WordPress.com reports the connection test as inconclusive (e.g. it cannot reach a dev or sandbox site back).
 

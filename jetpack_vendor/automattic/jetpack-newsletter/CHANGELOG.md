@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Action Bar: Only show the Subscribe button once the site has published at least two posts.
+- Update package dependencies.
 
 ## [0.17.1] - 2026-09-29
 ### Changed
