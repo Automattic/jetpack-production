@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Newsletter: Add a Days, Weeks, Months, and Years control to the subscribers chart, with arrows to move through earlier periods. Subscriber and paid subscriber totals stay the current count.
+- Newsletter: Redesign the Jetpack Newsletter sidebar with Email, Newsletter categories, and Audience panels.
 - Premium Analytics: Add video thumbnails to the Videos report, drop "report" from report headings, and label the export button "Download CSV".
 - Premium Analytics: offer adding and removing widgets on the dashboard.
 - Premium Analytics: Show Posts & Pages and Videos report titles in bold beside a fixed-size thumbnail.
