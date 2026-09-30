@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add video thumbnails to the Videos report, drop "report" from report headings, and label the export button "Download CSV".
+- Dashboard: offer adding and removing widgets by default; the premium-analytics-dashboard-composition feature flag stays as the kill switch.
 
 ### Changed
 - Traffic chart: Default to the chart type Jetpack Stats v1 saved in this browser, else bars.
