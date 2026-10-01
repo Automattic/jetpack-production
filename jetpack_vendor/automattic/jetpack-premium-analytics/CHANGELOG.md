@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Show Posts & Pages and Videos report titles in bold beside a fixed-size thumbnail.
 - Top pages widget: Download the full report for the selected dates instead of the rows on screen, using the report's Title, Views, and URL columns, and add the download to the Archives view.
 - Traffic chart: Default to the chart type Jetpack Stats v1 saved in this browser, else bars.
+- Widgets toolkit: Keep the hover underline on the ReportLink text when it renders text with a badge beside it.
 
 ### Fixed
 - Date controls: Use the default chart interval when switching to a different preset, instead of keeping the previous preset's.

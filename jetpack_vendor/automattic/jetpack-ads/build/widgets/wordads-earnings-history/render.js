@@ -10,7 +10,4 @@ __( "We couldn't load WordAds earnings. Please try again in a moment.", "jetpack
 __( "Retry", "jetpack-ads-pkg" );
 __( "No earnings history to show yet.", "jetpack-ads-pkg" );
 __( "View all earnings history", "jetpack-ads-pkg" );
-/* translators: %d: number of adjustment rows in the site's earnings history. */
-_n( "%d adjustment, view adjustments history", "%d adjustments, view adjustments history", 1, "jetpack-ads-pkg" );
-/* translators: %d: number of adjustment rows in the site's earnings history. */
-_n( "%d adjustment", "%d adjustments", 1, "jetpack-ads-pkg" );
+__( "Adjustments", "jetpack-ads-pkg" );
