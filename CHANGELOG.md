@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Backup: Add a Backup module, so the Backup dashboard and its menu item can be turned off from My Jetpack.
+- External Media: Update the Pexels logo in the media source menu.
 - Forms: Show or hide a field based on the answer to another field. On WordPress.com, this requires a Business plan or higher.
 - Newsletter: Add a Days, Weeks, Months, and Years control to the subscribers chart, with arrows to move through earlier periods. Subscriber and paid subscriber totals stay the current count.
 - Newsletter: List the Action Bar in the Site Editor's "Added by Newsletter settings" note, and show the note when a page or post is shown inside its template.
