@@ -11,7 +11,9 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Connection: Let a connected administrator confirm they are the protected owner from the Connectors card.
+- Connection owner: Let the confirmed owner hand the site to another administrator, which releases the site's protected ownership.
 - Connectors: Show when the connection owner is protected or still needs confirming.
+- Connectors card: Let the confirmed owner release ownership, so another administrator can confirm it instead.
 
 ### Changed
 - Connectors card: Show the pending connection owner as unconfirmed rather than as a manager.
