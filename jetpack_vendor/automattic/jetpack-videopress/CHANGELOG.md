@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Latest Videos Playlist block: list the site's videos on WordPress.com Simple pages, where the media REST endpoint is not available during a page render.
 - Upgrade: Send WordPress.com sites to the Business plan instead of an incompatible VideoPress product.
+- Video block: Offer an upgrade action when uploads require a paid plan.
 
 ## [0.54.0] - 2026-09-29
 ### Added

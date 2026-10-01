@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Show the AI Answer disabled notice when the host turns off AI, and hide the block from the inserter whenever Jetpack AI is off.
 - Social: Let a Facebook or Instagram connection with no Page or account saved pick one when reconnecting.
 - VideoPress: Fix upgrades on WordPress.com sites by offering the Business plan.
+- VideoPress: Offer an upgrade action in the video block when uploads require a paid plan.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Expose the wpcom_ai_launchpad_no_guidance site option in the /sites endpoint.
