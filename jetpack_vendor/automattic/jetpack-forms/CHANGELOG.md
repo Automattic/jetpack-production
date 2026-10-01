@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Dashboard: Start the Empty trash and Delete spam confirmations on Cancel and show Delete in red, so pressing Enter no longer permanently deletes every response in that folder.
+
 ## [8.2.2] - 2026-09-29
 ### Fixed
 - Dashboard: Stop logging a console error about missing Jetpack configuration. [#52809]

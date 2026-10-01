@@ -232,6 +232,7 @@ __( "Value must be true, false, or undefined", "jetpack-forms" );
 __( "Value must be an array.", "jetpack-forms" );
 __( "Every value must be a string.", "jetpack-forms" );
 __( "Value must be a valid color.", "jetpack-forms" );
+__( "OK", "jetpack-forms" );
 __( "Dismiss", "jetpack-forms" );
 __( "Akismet icon", "jetpack-forms" );
 __( "Add one-click spam protection for your forms with <a>Akismet</a>. Simply install the plugin and you're set.", "jetpack-forms" );
@@ -606,11 +607,11 @@ __( "Could not empty trash.", "jetpack-forms" );
 __( "Response deleted permanently.", "jetpack-forms" );
 /* translators: %s: The number of responses. */
 _n( "%s response deleted permanently.", "%s responses deleted permanently.", 1, "jetpack-forms" );
-__( "Delete", "jetpack-forms" );
-__( "Delete forever", "jetpack-forms" );
 /* translators: %s: the number of responses in spam */
 _n( "%s response in spam will be deleted forever. This action cannot be undone.", "All %s responses in spam will be deleted forever. This action cannot be undone.", 1, "jetpack-forms" );
 __( "All responses in spam will be deleted forever. This action cannot be undone.", "jetpack-forms" );
+__( "Delete forever", "jetpack-forms" );
+__( "Delete", "jetpack-forms" );
 __( "Spam is already empty.", "jetpack-forms" );
 __( "Delete spam", "jetpack-forms" );
 /* translators: %s: the number of responses in the trash. */
