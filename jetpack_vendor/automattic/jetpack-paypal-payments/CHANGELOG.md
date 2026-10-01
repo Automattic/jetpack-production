@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Record Tracks events for the PayPal connection wizard, connections and disconnects, payment link changes and emails, Payment Links admin page views, and logged-in block views on WordPress.com Simple sites. Count block views in an internal stat.
 
 ### Changed
+- Keep the product image on the site instead of sending it to PayPal.
 - PayPal Payment Buttons: onboard sellers as a third-party integration, so PayPal calls are made through WordPress.com and no credentials are stored on the site.
 - Send the partner attribution ID, as resolved for the site's environment, with every Connect with PayPal referral.
 - Show PayPal's debug ID in API error messages and record it, so failed requests can be traced with PayPal support.

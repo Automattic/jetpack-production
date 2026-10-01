@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: pick readable text, link and heading colors to go with the email background you choose.
 - Newsletter: Redesign the Jetpack Newsletter sidebar with Email, Newsletter categories, and Audience panels.
 - PayPal Payment Buttons: Connect with PayPal no longer stores API credentials on the site; PayPal calls for referred sellers are made through WordPress.com.
+- PayPal Payment Buttons: Keep the product image on the site instead of sending it to PayPal.
 - PayPal Payment Buttons: Show PayPal's debug ID in API error messages so failed requests can be traced with PayPal support.
 - Premium Analytics: Add the weekly chart interval to year-long date ranges such as Last 12 months.
 - Premium Analytics: Add video thumbnails to the Videos report, drop "report" from report headings, and label the export button "Download CSV".
