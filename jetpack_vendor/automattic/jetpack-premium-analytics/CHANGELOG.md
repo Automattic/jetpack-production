@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Expose the Leaderboard component, the error mapper and the video plays hook through the SDK; the widget contract is 1.2.0.
 - Dashboard: Let a widget type declare its former names, so layouts saved before a rename keep rendering it; the widget contract is 1.1.0.
 - Dashboard: offer adding and removing widgets by default; the premium-analytics-dashboard-composition feature flag stays as the kill switch.
+- Date controls: Add the weekly chart interval to year-long date ranges such as Last 12 months, next to the monthly default.
 - Locations: Drill down from a region to its cities.
 - Widgets toolkit: Add a Leaderboard component that renders ranked rows with their states, shares and deltas; Top videos, Search terms and Most commented authors use it.
 
