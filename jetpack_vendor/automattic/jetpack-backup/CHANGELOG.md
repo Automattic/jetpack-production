@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Admin menu: Label the sidebar item "Backup" with the modernized dashboard too.
 - Update package dependencies.
 
 ## [5.1.0] - 2026-09-29

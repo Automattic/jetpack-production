@@ -47,7 +47,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '6.7.2-alpha';
+	const PACKAGE_VERSION = '6.8.0-alpha';
 
 	/**
 	 * Feature flag that swaps the My Jetpack Products tab for a Features tab.

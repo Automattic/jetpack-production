@@ -5,15 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.7.2-alpha] - unreleased
+## [6.8.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Backup: Switch the Backup card and feature on and off with the backup module.
 - Update package dependencies.
 
 ### Removed
 - Remove unused Zendesk chat REST endpoints and related front-end constants left after the widget was turned off.
+
+### Fixed
+- Products: Show a switch instead of a purchase link for a product you own whose module is turned off.
 
 ## [6.7.1] - 2026-09-29
 ### Changed
@@ -3014,7 +3018,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.7.2-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.7.1...6.7.2-alpha
+[6.8.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.7.1...6.8.0-alpha
 [6.7.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.7.0...6.7.1
 [6.7.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.6.0...6.7.0
 [6.6.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.5.0...6.6.0

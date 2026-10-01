@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Backup: Add a Backup module, so the Backup dashboard and its menu item can be turned off from My Jetpack.
 - Forms: Show or hide a field based on the answer to another field. On WordPress.com, this requires a Business plan or higher.
 - Newsletter: Add a Days, Weeks, Months, and Years control to the subscribers chart, with arrows to move through earlier periods. Subscriber and paid subscriber totals stay the current count.
 - Newsletter: List the Action Bar in the Site Editor's "Added by Newsletter settings" note, and show the note when a page or post is shown inside its template.
@@ -36,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Start the Empty trash and Delete spam confirmations on Cancel and show Delete in red, so pressing Enter no longer permanently deletes every response in that folder.
 - Google Fonts: Preserve theme and user font sources and process only needed catalogue font faces on the front end.
 - Mailchimp: Save the chosen audience right away, so the block works without also saving the Writing settings.
+- My Jetpack: Show a switch instead of a purchase link for a product you own whose module is turned off.
 - Newsletter: Fix the Send a test email modal stacking its address field above the Send button.
 - Newsletter: Open settings links on the Settings tab.
 - Premium Analytics: Fix the Latest comments widget counting pingbacks and trackbacks in its remaining comments count.
