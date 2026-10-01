@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Date controls: Use the default chart interval when switching to a different preset, instead of keeping the previous preset's.
 - Fix the Latest comments widget counting pingbacks and trackbacks in its remaining comments count.
 - Fix the post comments count, the most popular time, and unnamed countries showing wrong values when Stats has no data for them.
+- Reports: Show the "No data found" state on every report with no rows, and stop the table search and settings from showing while an empty report loads.
 
 ## [0.10.0] - 2026-09-29
 ### Changed

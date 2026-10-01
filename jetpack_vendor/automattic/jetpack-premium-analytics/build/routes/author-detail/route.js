@@ -76,7 +76,6 @@ __( "URL", "jetpack-premium-analytics-pkg" );
 __( "Unable to load subscribers", "jetpack-premium-analytics-pkg" );
 __( "All Posts", "jetpack-premium-analytics-pkg" );
 __( "Search posts", "jetpack-premium-analytics-pkg" );
-__( "No subscribers", "jetpack-premium-analytics-pkg" );
 __( "Clicked URL", "jetpack-premium-analytics-pkg" );
 __( "Clicks", "jetpack-premium-analytics-pkg" );
 __( "Group", "jetpack-premium-analytics-pkg" );
