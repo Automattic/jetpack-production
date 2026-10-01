@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Connectors: Show when the connection owner is protected or still needs confirming.
 
 ### Changed
+- Connectors card: Show the pending connection owner as unconfirmed rather than as a manager.
 - Update package dependencies.
 
 ### Fixed
