@@ -5,9 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [9.8.2-alpha] - unreleased
+## [9.9.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Connection: Let a connected administrator confirm they are the protected owner from the Connectors card.
+- Connectors: Show when the connection owner is protected or still needs confirming.
 
 ### Changed
 - Update package dependencies.
@@ -2132,7 +2136,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.8.2-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.8.1...v9.8.2-alpha
+[9.9.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.8.1...v9.9.0-alpha
 [9.8.1]: https://github.com/Automattic/jetpack-connection/compare/v9.8.0...v9.8.1
 [9.8.0]: https://github.com/Automattic/jetpack-connection/compare/v9.7.0...v9.8.0
 [9.7.0]: https://github.com/Automattic/jetpack-connection/compare/v9.6.0...v9.7.0
