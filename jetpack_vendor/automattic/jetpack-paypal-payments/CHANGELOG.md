@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- PayPal Payment Buttons: Add a filter to override the partner attribution (BN) code while connected to the PayPal sandbox.
 - Record Tracks events for the PayPal connection wizard, connections and disconnects, payment link changes and emails, Payment Links admin page views, and logged-in block views on WordPress.com Simple sites. Count block views in an internal stat.
 
 ### Changed
