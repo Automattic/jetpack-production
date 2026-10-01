@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Start the Empty trash and Delete spam confirmations on Cancel and show Delete in red, so pressing Enter no longer permanently deletes every response in that folder.
 - Google Fonts: Preserve theme and user font sources and process only needed catalogue font faces on the front end.
 - Mailchimp: Save the chosen audience right away, so the block works without also saving the Writing settings.
+- Newsletter: Fix the Send a test email modal stacking its address field above the Send button.
 - Premium Analytics: Fix the Latest comments widget counting pingbacks and trackbacks in its remaining comments count.
 - Premium Analytics: Fix the post comments count, the most popular time, and unnamed countries showing wrong values when Stats has no data for them.
 - Premium Analytics: Keep the numbers inside traffic heatmap cells readable on mid-tone colors.
