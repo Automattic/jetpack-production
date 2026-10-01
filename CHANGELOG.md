@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Redesign the Jetpack Newsletter sidebar with Email, Newsletter categories, and Audience panels.
 - PayPal Payment Buttons: Connect with PayPal no longer stores API credentials on the site; PayPal calls for referred sellers are made through WordPress.com.
 - Premium Analytics: Add video thumbnails to the Videos report, drop "report" from report headings, and label the export button "Download CSV".
+- Premium Analytics: Drill down from a region to its cities in Top locations.
 - Premium Analytics: offer adding and removing widgets on the dashboard.
 - Premium Analytics: Show Posts & Pages and Videos report titles in bold beside a fixed-size thumbnail.
 - VideoPress: Give every video its own page for themes that support it, and add a "Show the video being viewed" option to the video block.
