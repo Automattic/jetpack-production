@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix upgrades on WordPress.com sites by offering the Business plan.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Expose the wpcom_ai_launchpad_no_guidance site option in the /sites endpoint.
 - Update package dependencies.
 
 ## 16.3-a.7 - 2026-09-29
