@@ -84,6 +84,7 @@ return array(
     'Automattic\\Jetpack\\Classic_Theme_Helper\\Nova_Restaurant' => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/custom-post-types/class-nova-restaurant.php',
     'Automattic\\Jetpack\\Classic_Theme_Helper\\Social_Links' => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/class-social-links.php',
     'Automattic\\Jetpack\\Comments\\Avatars' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/class-avatars.php',
+    'Automattic\\Jetpack\\Comments\\Block_Editor' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/editor/class-block-editor.php',
     'Automattic\\Jetpack\\Comments\\Checkpoint' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/identity/checkpoint/class-checkpoint.php',
     'Automattic\\Jetpack\\Comments\\Checkpoint_Endpoint' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/identity/checkpoint/class-checkpoint-endpoint.php',
     'Automattic\\Jetpack\\Comments\\Comment_Form' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/form/class-comment-form.php',

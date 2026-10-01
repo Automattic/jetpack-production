@@ -109,6 +109,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_3_a_8
         'Automattic\\Jetpack\\Classic_Theme_Helper\\Nova_Restaurant' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/custom-post-types/class-nova-restaurant.php',
         'Automattic\\Jetpack\\Classic_Theme_Helper\\Social_Links' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/class-social-links.php',
         'Automattic\\Jetpack\\Comments\\Avatars' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-comments/src/class-avatars.php',
+        'Automattic\\Jetpack\\Comments\\Block_Editor' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-comments/src/editor/class-block-editor.php',
         'Automattic\\Jetpack\\Comments\\Checkpoint' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-comments/src/identity/checkpoint/class-checkpoint.php',
         'Automattic\\Jetpack\\Comments\\Checkpoint_Endpoint' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-comments/src/identity/checkpoint/class-checkpoint-endpoint.php',
         'Automattic\\Jetpack\\Comments\\Comment_Form' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-comments/src/form/class-comment-form.php',
