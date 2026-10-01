@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Show the submit row at all times, and stop theme button and field styles clashing with the form.
+
 ## [0.3.0] - 2026-09-29
 ### Changed
 - Redraw the comment form in the theme's own styles, with a dialog asking new readers for their details when they post. [#52912]
