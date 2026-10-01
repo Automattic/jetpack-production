@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Keep the numbers inside traffic heatmap cells readable on mid-tone colors.
 - Premium Analytics: Show the traffic chart with the type chosen in the previous Stats, or as bars by default.
 - Premium Analytics: Use the default chart interval when switching to a different date preset, instead of keeping the previous preset's.
+- Social: Let a Facebook or Instagram connection with no Page or account saved pick one when reconnecting.
 - VideoPress: Fix upgrades on WordPress.com sites by offering the Business plan.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

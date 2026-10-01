@@ -52,10 +52,10 @@ __( "Error disconnecting account.", "jetpack-publicize-pkg" );
 /* translators: %s is the name of the social media platform e.g. "Facebook" */
 __( "%s account connected successfully.", "jetpack-publicize-pkg" );
 __( "Error connecting account.", "jetpack-publicize-pkg" );
+__( "Error updating account.", "jetpack-publicize-pkg" );
 __( "Account reconnected successfully.", "jetpack-publicize-pkg" );
 __( "The account could not be reconnected. Please try again.", "jetpack-publicize-pkg" );
 __( "Account updated successfully.", "jetpack-publicize-pkg" );
-__( "Error updating account.", "jetpack-publicize-pkg" );
 __( "There was an error scheduling the post.", "jetpack-publicize-pkg" );
 __( "There was an error deleting the item.", "jetpack-publicize-pkg" );
 __( "You must publish your post before you can schedule it.", "jetpack-publicize-pkg" );
@@ -178,7 +178,9 @@ __( "We couldn't check your Instagram account just now. Please try again.", "jet
 __( "Facebook didn't respond. Please try again in a few minutes.", "jetpack-publicize-pkg" );
 __( "No accounts/pages found.", "jetpack-publicize-pkg" );
 __( "Please select an account to connect.", "jetpack-publicize-pkg" );
+__( "No Page or account is available for this connection. Disconnect it, then connect again and choose the Page or account to share to.", "jetpack-publicize-pkg" );
 _x( "No more accounts/pages found.", "Message shown when there are no connections found to connect", "jetpack-publicize-pkg" );
+_x( "This connection has no Page or account to share to. Select one to finish reconnecting.", "Shown when reconnecting a connection that has no Page or account saved", "jetpack-publicize-pkg" );
 __( "Select the account you'd like to connect. All your new blog posts will be automatically shared to this account. You'll be able to change this option in the editor sidebar when you're writing a post.", "jetpack-publicize-pkg" );
 __( "We could not retrieve which company pages you have access to. This is a known issue with the LinkedIn API. If you would like to connect a company page, please retry after 5 minutes.", "jetpack-publicize-pkg" );
 __( "Learn more", "jetpack-publicize-pkg" );

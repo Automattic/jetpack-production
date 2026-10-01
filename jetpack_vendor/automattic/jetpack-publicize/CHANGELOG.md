@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Connections: Let a Facebook or Instagram connection with no Page or account saved pick one when reconnecting.
+
 ## [0.88.1] - 2026-09-29
 ### Changed
 - Use core SnackbarNotices instead of Jetpack GlobalNotices. [#52193]
