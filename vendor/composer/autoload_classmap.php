@@ -514,6 +514,8 @@ return array(
     'Automattic\\Jetpack\\Search\\WPES\\Query_Parser' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/wpes/class-query-parser.php',
     'Automattic\\Jetpack\\Search\\Wc_Block_Helpers' => $baseDir . '/jetpack_vendor/automattic/jetpack-search/src/search-blocks/class-wc-block-helpers.php',
     'Automattic\\Jetpack\\Sharing_Likes' => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/class-sharing-likes.php',
+    'Automattic\\Jetpack\\Sharing_Likes\\Post_Likes_Switch' => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/class-post-likes-switch.php',
+    'Automattic\\Jetpack\\Sharing_Likes\\Post_Sharing_Switch' => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/class-post-sharing-switch.php',
     'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Comment_Likes_Section' => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-comment-likes-section.php',
     'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Environment' => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-environment.php',
     'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Extras_Section' => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-extras-section.php',
