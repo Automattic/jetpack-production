@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- AI Answer: Show the disabled notice when the host turns off AI, and hide the block from the inserter whenever Jetpack AI is off.
+
 ## [8.2.1] - 2026-09-29
 ### Fixed
 - Dashboard: Show the connection error at the top of the page on every tab. [#52820]

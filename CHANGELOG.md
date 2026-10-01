@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI: Hide feature links when code turns AI features off, as when the site owner turns them off.
+- AI blocks: Show a consistent placeholder in the editor when Jetpack AI is turned off.
 - Calendly: Make the block preview interactive in the editor once the block is selected.
 - Comments API: Return the real total in `found` when a post's comments are filtered by type or date, instead of -1.
 - Connection: Stop Site Health from showing spurious connection failures — remove the redundant outbound HTTP/HTTPS checks, and no longer prompt a reconnect when the WordPress.com connection test is inconclusive.
@@ -32,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Keep the numbers inside traffic heatmap cells readable on mid-tone colors.
 - Premium Analytics: Show the traffic chart with the type chosen in the previous Stats, or as bars by default.
 - Premium Analytics: Use the default chart interval when switching to a different date preset, instead of keeping the previous preset's.
+- Search: Show the AI Answer disabled notice when the host turns off AI, and hide the block from the inserter whenever Jetpack AI is off.
 - Social: Let a Facebook or Instagram connection with no Page or account saved pick one when reconnecting.
 - VideoPress: Fix upgrades on WordPress.com sites by offering the Business plan.
 
