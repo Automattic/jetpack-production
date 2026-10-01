@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Show the Video Playlist block's title as an editable heading above the playlist, with a setting to turn it off.
 
 ### Bug fixes
+- Admin: Hide core admin notices and load design tokens on Jetpack pages that non-admin users open before the site is connected or while it is in offline mode.
 - AI: Hide feature links when code turns AI features off, as when the site owner turns them off.
 - AI blocks: Show a consistent placeholder in the editor when Jetpack AI is turned off.
 - Calendly: Make the block preview interactive in the editor once the block is selected.

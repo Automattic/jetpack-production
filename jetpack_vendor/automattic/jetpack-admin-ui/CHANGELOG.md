@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Apply the core-notice hiding and design tokens to pages that WordPress registers under the admin_page_ prefix.
+
 ## [0.14.2] - 2026-09-29
 ### Changed
 - Prefer default WordPress `wp-theme` stylesheet for WPDS design tokens when it is registered. [#52183]
