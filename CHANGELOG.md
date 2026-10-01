@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Show the Video Playlist block's title as an editable heading above the playlist, with a setting to turn it off.
 
 ### Bug fixes
+- AI: Hide feature links when code turns AI features off, as when the site owner turns them off.
 - Calendly: Make the block preview interactive in the editor once the block is selected.
 - Comments API: Return the real total in `found` when a post's comments are filtered by type or date, instead of -1.
 - Connection: Stop Site Health from showing spurious connection failures — remove the redundant outbound HTTP/HTTPS checks, and no longer prompt a reconnect when the WordPress.com connection test is inconclusive.
