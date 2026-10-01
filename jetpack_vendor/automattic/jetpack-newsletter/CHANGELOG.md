@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Action Bar: Only show the Subscribe button once the site has published at least two posts.
 - Update package dependencies.
 
+### Fixed
+- Open the newsletter settings URL on the Settings tab.
+
 ## [0.17.1] - 2026-09-29
 ### Changed
 - Use core SnackbarNotices instead of Jetpack GlobalNotices. [#52193]
