@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Catch various PHP warnings when handling malformed data.
+
 ## [0.15.4] - 2026-09-28
 ### Changed
 - Update dependencies. [#52349]
