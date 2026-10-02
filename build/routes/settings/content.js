@@ -202,6 +202,7 @@ __( "Learn more", "jetpack" );
 __( "Privacy information", "jetpack" );
 __( "Comments", "jetpack" );
 __( "Replaces the standard WordPress comment form with a new comment system that includes social media login options.", "jetpack" );
+__( "Enable blocks in comments.", "jetpack" );
 __( "Comment form introduction", "jetpack" );
 __( "A few catchy words to motivate your visitors to comment.", "jetpack" );
 __( "Color scheme", "jetpack" );
