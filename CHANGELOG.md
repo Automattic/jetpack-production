@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Download the full report from the Top pages widget instead of the rows on screen, using the report's Title, Views, and URL columns, and add the download to its Archives view.
 - Premium Analytics: Drill down from a region to its cities in Top locations.
 - Premium Analytics: offer adding and removing widgets on the dashboard.
+- Premium Analytics: Open post and video details on All time, return to the previous date range from the breadcrumbs, and rearrange the Email clicks tab to match the design.
 - Premium Analytics: Show Posts & Pages and Videos report titles in bold beside a fixed-size thumbnail.
 - Premium Analytics: Show the Earnings History widget's adjustments link as text with a count badge.
 - VideoPress: Give every video its own page for themes that support it, and add a "Show the video being viewed" option to the video block.
