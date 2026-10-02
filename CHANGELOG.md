@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Add a Backup module, so the Backup dashboard and its menu item can be turned off from My Jetpack.
 - Comments: add a setting to turn blocks in comments on or off, on the Discussion settings page and in Jetpack settings.
 - External Media: Update the Pexels logo in the media source menu.
+- Forms: Make the Delete spam button act on selected responses or the current filter, show how many responses will be deleted, and empty large spam or trash folders in chunks with progress.
 - Forms: Show or hide a field based on the answer to another field. On WordPress.com, this requires a Business plan or higher.
 - Newsletter: Add a Days, Weeks, Months, and Years control to the subscribers chart, with arrows to move through earlier periods. Subscriber and paid subscriber totals stay the current count.
 - Newsletter: List the Action Bar in the Site Editor's "Added by Newsletter settings" note, and show the note when a page or post is shown inside its template.

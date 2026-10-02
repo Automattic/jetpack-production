@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Make the Delete spam button act on the selected responses or the current filter, show how many responses it will delete, and delete large queues in chunks with progress.
 - Release field conditional logic, available on WordPress.com Business plans and higher and on all Jetpack sites.
 
 ### Changed
