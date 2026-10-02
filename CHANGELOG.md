@@ -71,6 +71,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Use PayPal's prescribed wording in the disconnect and log out confirmations.
 - Update package dependencies.
 - VideoPress: Register the Top videos widget of the Premium Analytics dashboard from the VideoPress package.
+- WordPress.com /sites endpoint: report the AI Launchpad state from site settings only, and treat a skipped AI Launchpad as no guidance.
 
 ## 16.3-a.7 - 2026-09-29
 ### Enhancements
