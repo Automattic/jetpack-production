@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Open post and video details on All time, return to the previous date range from the breadcrumbs, and rearrange the Email clicks tab to match the design.
 - Premium Analytics: Show Posts & Pages and Videos report titles in bold beside a fixed-size thumbnail.
 - Premium Analytics: Show the Earnings History widget's adjustments link as text with a count badge.
+- VideoPress: Edit video details while uploads are in progress.
 - VideoPress: Give every video its own page for themes that support it, and add a "Show the video being viewed" option to the video block.
 - VideoPress: Show the Video Playlist block's title as an editable heading above the playlist, with a setting to turn it off.
 
