@@ -267,6 +267,7 @@ __( "Engage your visitors with high-resolution, ad-free video. Save time by uplo
 __( "Using <strong>%dGB</strong> of 1TB", "jetpack" );
 __( "Enable VideoPress", "jetpack" );
 __( "Video Privacy: Restrict views to members of this site", "jetpack" );
+__( "Video Sharing: Allow each video to show its share menu", "jetpack" );
 __( "Media", "jetpack" );
 __( "Jetpack Search helps your visitors instantly find the right content. Choose how Search appears on your site — as an embedded results page, an overlay, or in place of your theme’s default search.", "jetpack" );
 __( "Manage Search settings", "jetpack" );

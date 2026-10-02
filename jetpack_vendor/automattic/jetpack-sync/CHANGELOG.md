@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Sync the enable_blocks_comments option.
+- Sync the VideoPress site setting that turns off sharing for every video.
 
 ### Removed
 - Remove the AI Launchpad options from the default synced options; WordPress.com's Atomic sites sync them through the WordPress.com Site Helper.

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a site setting that turns off sharing for every video and stops it from being turned on for individual videos.
 - Channel: Give every VideoPress video its own page at /videopress?v=GUID, rendered by the theme's videopress-video template, for themes that opt in; add a "Show the video being viewed" option to the video block, and point attachment links and player-less playlist entries at those pages.
 - Library: Edit video details while uploads are in progress.
 - Register the Top videos widget of the Premium Analytics dashboard from this package.

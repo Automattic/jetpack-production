@@ -215,6 +215,7 @@ __( "Private", "jetpack-videopress-pkg" );
 __( "Privacy & sharing", "jetpack-videopress-pkg" );
 __( "Privacy", "jetpack-videopress-pkg" );
 __( "Share", "jetpack-videopress-pkg" );
+__( "Sharing is turned off for all videos in VideoPress Settings.", "jetpack-videopress-pkg" );
 __( "Display share menu and allow viewers to copy a link or embed this video", "jetpack-videopress-pkg" );
 __( "Allow downloads", "jetpack-videopress-pkg" );
 __( "Let viewers download this video to their device.", "jetpack-videopress-pkg" );

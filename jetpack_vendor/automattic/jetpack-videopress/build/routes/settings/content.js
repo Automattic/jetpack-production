@@ -106,6 +106,8 @@ __( "Video settings", "jetpack-videopress-pkg" );
 __( "Only logged-in users can play your videos", "jetpack-videopress-pkg" );
 __( "This follows your site’s Privacy setting. To change who can view your videos, update your site’s visibility in Settings → General.", "jetpack-videopress-pkg" );
 __( "Private videos won't play for signed-out visitors.", "jetpack-videopress-pkg" );
+__( "Allow sharing", "jetpack-videopress-pkg" );
+__( "When enabled, each video’s own Share setting decides whether viewers can share the video link. Turn it off to hide the share menu on every video and stop it from being turned on for individual videos.", "jetpack-videopress-pkg" );
 __( "Automatically generate subtitles for new videos", "jetpack-videopress-pkg" );
 __( "When enabled, subtitles are generated automatically for videos uploaded to this site. Existing subtitles are not affected.", "jetpack-videopress-pkg" );
 __( "Preload video data when pages load", "jetpack-videopress-pkg" );
