@@ -1331,15 +1331,15 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-list/src/class-post-thumbnail.php'
 	),
 	'Automattic\\Jetpack\\Post_Media' => array(
-		'version' => '0.3.0.0',
+		'version' => '0.3.1.0-alpha1790943859',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-post-media.php'
 	),
 	'Automattic\\Jetpack\\Post_Media\\Images' => array(
-		'version' => '0.3.0.0',
+		'version' => '0.3.1.0-alpha1790943859',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-images.php'
 	),
 	'Automattic\\Jetpack\\Post_Media\\Twitter_Cards' => array(
-		'version' => '0.3.0.0',
+		'version' => '0.3.1.0-alpha1790943859',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-twitter-cards.php'
 	),
 	'Automattic\\Jetpack\\PremiumAnalytics\\Analytics' => array(
@@ -2115,7 +2115,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-twitter-site-tag.php'
 	),
 	'Automattic\\Jetpack\\Shortcodes' => array(
-		'version' => '0.3.0.0',
+		'version' => '0.3.1.0-alpha1790943859',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-shortcodes.php'
 	),
 	'Automattic\\Jetpack\\SignatureInvalidException' => array(
