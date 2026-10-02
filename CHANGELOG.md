@@ -67,6 +67,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Show the AI Answer disabled notice when the host turns off AI, and hide the block from the inserter whenever Jetpack AI is off.
 - Social: Fix publishing failing with a share message database error, which also prevented newsletters and social shares from being sent.
 - Social: Let a Facebook or Instagram connection with no Page or account saved pick one when reconnecting.
+- Stats: stop showing free-plan paywalls in wp-admin on a site whose plan already includes those stats.
 - VideoPress: Fix upgrades on WordPress.com sites by offering the Business plan.
 - VideoPress: Offer an upgrade action in the video block when uploads require a paid plan.
 
