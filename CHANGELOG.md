@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Activity Log: Show the connection error notice only when a connection error has been recorded.
 - Backup: Add a Backup module, so the Backup dashboard and its menu item can be turned off from My Jetpack.
 - Comments: add a setting to turn blocks in comments on or off, on the Discussion settings page and in Jetpack settings.
 - External Media: Update the Pexels logo in the media source menu.

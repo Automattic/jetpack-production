@@ -43,7 +43,6 @@ __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-publ
 __( "Reconnecting Jetpack", "jetpack-publicize-pkg" );
 __( "Loading…", "jetpack-publicize-pkg" );
 __( "Restore Connection", "jetpack-publicize-pkg" );
-__( "A connection check failed.", "jetpack-publicize-pkg" );
 __( "Take Action", "jetpack-publicize-pkg" );
 __( "Reconnecting Jetpack…", "jetpack-publicize-pkg" );
 __( "Error verifying the connection.", "jetpack-publicize-pkg" );

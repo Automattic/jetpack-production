@@ -624,7 +624,6 @@ __( "Export spam", "jetpack-forms" );
 __( "Export trash", "jetpack-forms" );
 __( "Upgrade your plan to use video covers", "jetpack-forms" );
 __( "Upgrade your plan to upload audio", "jetpack-forms" );
-__( "A connection check failed.", "jetpack-forms" );
 __( "CSV File", "jetpack-forms" );
 __( "Download your form response data as a CSV file.", "jetpack-forms" );
 __( "Download", "jetpack-forms" );

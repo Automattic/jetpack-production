@@ -39,7 +39,6 @@ __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-acti
 __( "Reconnecting Jetpack", "jetpack-activity-log" );
 __( "Loading…", "jetpack-activity-log" );
 __( "Restore Connection", "jetpack-activity-log" );
-__( "A connection check failed.", "jetpack-activity-log" );
 __( "Take Action", "jetpack-activity-log" );
 __( "Reconnecting Jetpack…", "jetpack-activity-log" );
 /* translators: 1: Calendar type. 2: Current month and year. */

@@ -173,7 +173,6 @@ __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-vide
 __( "Reconnecting Jetpack", "jetpack-videopress-pkg" );
 __( "Loading…", "jetpack-videopress-pkg" );
 __( "Restore Connection", "jetpack-videopress-pkg" );
-__( "A connection check failed.", "jetpack-videopress-pkg" );
 __( "Take Action", "jetpack-videopress-pkg" );
 __( "Reconnecting Jetpack…", "jetpack-videopress-pkg" );
 /* translators: 1: Calendar type. 2: Current month and year. */

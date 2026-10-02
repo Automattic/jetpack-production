@@ -6,7 +6,6 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "A connection check failed.", "jetpack-newsletter" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-newsletter" );
 /* translators: %s: keyboard shortcut. */

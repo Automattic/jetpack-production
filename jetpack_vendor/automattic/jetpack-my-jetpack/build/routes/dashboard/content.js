@@ -126,7 +126,6 @@ __( "An unknown error occurred during license activation. Please try again.", "j
 __( "This is not a valid license key. Please try again.", "jetpack-my-jetpack" );
 /* translators: %s is the name of the information being fetched, e.g. "site purchases". */
 __( "There was an error fetching your %s information. Check your site connectivity and try again.", "jetpack-my-jetpack" );
-__( "A connection check failed.", "jetpack-my-jetpack" );
 __( "Your site host is on a private network. Sites can connect to WordPress.com only on public sites.", "jetpack-my-jetpack" );
 __( "This site has been suspended.", "jetpack-my-jetpack" );
 __( "Unavailable in <a>Offline Mode</a>", "jetpack-my-jetpack" );

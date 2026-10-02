@@ -22,7 +22,6 @@ __( "By continuing you agree to our <tosLink>Terms of Service</tosLink> and to <
 __( "Sections", "jetpack" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack" );
-__( "A connection check failed.", "jetpack" );
 __( "Loading", "jetpack" );
 __( "Your site host is on a private network. Sites can connect to WordPress.com only on public sites.", "jetpack" );
 __( "This site has been suspended.", "jetpack" );

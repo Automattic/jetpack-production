@@ -40,7 +40,6 @@ __( "Summary of the records", "jetpack-search-pkg" );
 __( "Record type", "jetpack-search-pkg" );
 __( "Record count", "jetpack-search-pkg" );
 __( "Indeterminate Progress Bar", "jetpack-search-pkg" );
-__( "A connection check failed.", "jetpack-search-pkg" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-search-pkg" );
 __( "Dismiss", "jetpack-search-pkg" );

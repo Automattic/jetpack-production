@@ -321,7 +321,6 @@ __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-back
 __( "Reconnecting Jetpack", "jetpack-backup-pkg" );
 __( "Loading…", "jetpack-backup-pkg" );
 __( "Restore Connection", "jetpack-backup-pkg" );
-__( "A connection check failed.", "jetpack-backup-pkg" );
 __( "Take Action", "jetpack-backup-pkg" );
 __( "Reconnecting Jetpack…", "jetpack-backup-pkg" );
 __( "Sections", "jetpack-backup-pkg" );

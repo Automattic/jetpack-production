@@ -248,7 +248,6 @@ __( "Jetpack", "jetpack" );
 __( "Sections", "jetpack" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack" );
-__( "A connection check failed.", "jetpack" );
 __( "Your account (connection owner)", "jetpack" );
 /* translators: %s is the display name of the Jetpack connection owner. */
 __( "Connection owner's account (%s)", "jetpack" );
