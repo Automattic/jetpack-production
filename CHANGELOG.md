@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - External Media: Make the featured image picker fill the sidebar width.
 - Forms: Start the Empty trash and Delete spam confirmations on Cancel and show Delete in red, so pressing Enter no longer permanently deletes every response in that folder.
 - Google Fonts: Preserve theme and user font sources and process only needed catalogue font faces on the front end.
+- Likes: Let Comment Likes be turned on for a single post in the block editor while Like buttons are off.
 - Mailchimp: Save the chosen audience right away, so the block works without also saving the Writing settings.
 - My Jetpack: Show a switch instead of a purchase link for a product you own whose module is turned off.
 - Newsletter: Fix the Send a test email modal stacking its address field above the Send button.
@@ -59,6 +60,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Expose the wpcom_ai_launchpad_no_guidance site option in the /sites endpoint.
+- Likes, Sharing: Deprecate the jetpack_post_likes_* and jetpack_post_sharing_* REST field functions in favor of the Post_Likes_Switch and Post_Sharing_Switch classes from the Sharing & Likes package.
 - Update package dependencies.
 - VideoPress: Register the Top videos widget of the Premium Analytics dashboard from the VideoPress package.
 
