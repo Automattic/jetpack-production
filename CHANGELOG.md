@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Show a switch instead of a purchase link for a product you own whose module is turned off.
 - Newsletter: Fix the Send a test email modal stacking its address field above the Send button.
 - Newsletter: Open settings links on the Settings tab.
+- Newsletter: Remove the stray "Session expired" message from the email design canvas.
 - PayPal Payment Buttons: Spell "PayPal" with its own capitalization in the connect wizard headings and the wordmark's alt text.
 - PayPal Payment Buttons: Stop collecting a shipping address once shipping is turned off, instead of keeping the hidden checkbox ticked.
 - PayPal Payment Buttons: Tell the merchant when a payment link could not be loaded from PayPal, instead of silently showing stale details.
