@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Connect with PayPal no longer stores API credentials on the site; PayPal calls for referred sellers are made through WordPress.com.
 - PayPal Payment Buttons: Keep the product image on the site instead of sending it to PayPal.
 - PayPal Payment Buttons: Show PayPal's debug ID in API error messages so failed requests can be traced with PayPal support.
+- Premium Analytics: Add a Download CSV action to the Popular authors, Top links clicked, Top downloaded, Top referrers, Top searched terms, and Top videos widgets that saves the full report for the selected dates.
 - Premium Analytics: Add the weekly chart interval to year-long date ranges such as Last 12 months.
 - Premium Analytics: Add video thumbnails to the Videos report, drop "report" from report headings, and label the export button "Download CSV".
 - Premium Analytics: Download the full report from the Top pages widget instead of the rows on screen, using the report's Title, Views, and URL columns, and add the download to its Archives view.
