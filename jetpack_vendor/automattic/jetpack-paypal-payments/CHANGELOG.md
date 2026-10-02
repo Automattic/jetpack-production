@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Payment Buttons: Link sellers to their PayPal transactions and to PayPal's refund instructions from the block's account menu and the Payment Links admin page.
 - PayPal Payment Buttons: Add a filter to override the partner attribution (BN) code while connected to the PayPal sandbox.
 - Record Tracks events for the PayPal connection wizard, connections and disconnects, payment link changes and emails, Payment Links admin page views, and logged-in block views on WordPress.com Simple sites. Count block views in an internal stat.
 
@@ -20,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Send the partner attribution ID, as resolved for the site's environment, with every Connect with PayPal referral.
 - Show PayPal's debug ID in API error messages and record it, so failed requests can be traced with PayPal support.
 - Update package dependencies.
+
+### Fixed
+- Payment Buttons: Spell "PayPal" with its own capitalization in the connect wizard headings and the wordmark's alt text.
 
 ## [0.11.1] - 2026-09-29
 ### Changed

@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Redesign the Jetpack Newsletter sidebar with Email, Newsletter categories, and Audience panels.
 - PayPal Payment Buttons: Connect with PayPal no longer stores API credentials on the site; PayPal calls for referred sellers are made through WordPress.com.
 - PayPal Payment Buttons: Keep the product image on the site instead of sending it to PayPal.
+- PayPal Payment Buttons: Link sellers to their PayPal transactions and to PayPal's refund instructions from the block's account menu and the Payment Links admin page.
 - PayPal Payment Buttons: Show PayPal's debug ID in API error messages so failed requests can be traced with PayPal support.
 - Premium Analytics: Add a Download CSV action to the Popular authors, Top links clicked, Top downloaded, Top referrers, Top searched terms, and Top videos widgets that saves the full report for the selected dates.
 - Premium Analytics: Add the weekly chart interval to year-long date ranges such as Last 12 months.
@@ -47,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Show a switch instead of a purchase link for a product you own whose module is turned off.
 - Newsletter: Fix the Send a test email modal stacking its address field above the Send button.
 - Newsletter: Open settings links on the Settings tab.
+- PayPal Payment Buttons: Spell "PayPal" with its own capitalization in the connect wizard headings and the wordmark's alt text.
 - Premium Analytics: Fix the Latest comments widget counting pingbacks and trackbacks in its remaining comments count.
 - Premium Analytics: Fix the post comments count, the most popular time, and unnamed countries showing wrong values when Stats has no data for them.
 - Premium Analytics: Keep the numbers inside traffic heatmap cells readable on mid-tone colors.
