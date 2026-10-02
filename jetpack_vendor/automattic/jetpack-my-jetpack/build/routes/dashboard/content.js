@@ -403,6 +403,8 @@ __( "Your website’s overall speed score decreased by %d.", "jetpack-my-jetpack
 __( "Your website’s overall speed score:", "jetpack-my-jetpack" );
 __( "Site speed performance:", "jetpack-my-jetpack" );
 __( "Boost your site", "jetpack-my-jetpack" );
+/* translators: %s is the name of the feature or stat the popover explains, e.g. "Auto-Firewall". */
+__( "More about %s", "jetpack-my-jetpack" );
 __( "Brute Force Protection: Active", "jetpack-my-jetpack" );
 __( "Brute Force Protection is actively blocking malicious login attempts. The number of blocked login attempts will display here soon!", "jetpack-my-jetpack" );
 __( "Brute Force Protection: Inactive", "jetpack-my-jetpack" );
@@ -441,6 +443,8 @@ __( "Shield icon - Brute Force Protection Status: Active", "jetpack-my-jetpack" 
 __( "Shield icon - Brute Force Protection Status: Inactive", "jetpack-my-jetpack" );
 __( "Shield icon - Brute Force Protection Status: Off", "jetpack-my-jetpack" );
 __( "Threats", "jetpack-my-jetpack" );
+/* translators: %d is the number of critical threats found by the last scan. */
+_n( "%d critical threat. More about threats", "%d critical threats. More about threats", 1, "jetpack-my-jetpack" );
 __( "Scan", "jetpack-my-jetpack" );
 __( "Shield icon - Scan Status: Secure", "jetpack-my-jetpack" );
 __( "Secure", "jetpack-my-jetpack" );

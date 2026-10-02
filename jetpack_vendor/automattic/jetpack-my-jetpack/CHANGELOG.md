@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Backup: Switch the Backup card and feature on and off with the backup module.
+- Product cards: Remove the drop shadow so cards sit flat on the page.
 - Update package dependencies.
 
 ### Removed
@@ -18,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Products: Show a switch instead of a purchase link for a product you own whose module is turned off.
+- Protect card: Show scan, firewall, and blocked-login stats as aligned rows that no longer overlap on narrow cards, with design-system info popovers.
 
 ## [6.7.1] - 2026-09-29
 ### Changed
