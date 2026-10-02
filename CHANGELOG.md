@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Fix the Send a test email modal stacking its address field above the Send button.
 - Newsletter: Open settings links on the Settings tab.
 - PayPal Payment Buttons: Spell "PayPal" with its own capitalization in the connect wizard headings and the wordmark's alt text.
+- PayPal Payment Buttons: Stop collecting a shipping address once shipping is turned off, instead of keeping the hidden checkbox ticked.
 - Premium Analytics: Fix the Latest comments widget counting pingbacks and trackbacks in its remaining comments count.
 - Premium Analytics: Fix the post comments count, the most popular time, and unnamed countries showing wrong values when Stats has no data for them.
 - Premium Analytics: Keep the numbers inside traffic heatmap cells readable on mid-tone colors.
