@@ -493,7 +493,7 @@ __( "Next", "jetpack-my-jetpack" );
 _n( "%d selected", "%d selected", 1, "jetpack-my-jetpack" );
 __( "Plugins can only be deactivated together while the Jetpack plugin is active.", "jetpack-my-jetpack" );
 __( "Select all features", "jetpack-my-jetpack" );
-__( "Select features to switch several at once", "jetpack-my-jetpack" );
+__( "Select features to activate or deactivate them together", "jetpack-my-jetpack" );
 __( "All categories", "jetpack-my-jetpack" );
 __( "Recommended", "jetpack-my-jetpack" );
 __( "Included in plan", "jetpack-my-jetpack" );
@@ -514,6 +514,8 @@ __( "No features are active yet.", "jetpack-my-jetpack" );
 __( "Turn one on and it will appear here.", "jetpack-my-jetpack" );
 __( "Everything is turned on.", "jetpack-my-jetpack" );
 __( "There are no inactive features left on this site.", "jetpack-my-jetpack" );
+__( "Your plan doesn’t include any of these yet.", "jetpack-my-jetpack" );
+__( "Features a paid plan covers will appear here once you have one.", "jetpack-my-jetpack" );
 __( "No features found.", "jetpack-my-jetpack" );
 __( "Legacy sharing buttons cannot be customized on block themes.", "jetpack-my-jetpack" );
 _x( "Add the Sharing Buttons block to your theme’s template.", "Sharing block migration instruction", "jetpack-my-jetpack" );
@@ -603,7 +605,6 @@ __( "Activate Jetpack", "jetpack-my-jetpack" );
 __( "Install Jetpack", "jetpack-my-jetpack" );
 __( "All", "jetpack-my-jetpack" );
 __( "Essential", "jetpack-my-jetpack" );
-__( "Complete", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "Learn more about %s", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
@@ -622,22 +623,19 @@ __( "Select %s", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "%s in use", "jetpack-my-jetpack" );
 /* translators: %s is a plugin name. Keep the <plugin> tags around it. */
-__( "Installing adds the <plugin>%s</plugin> plugin and turns it on. It does not buy anything.", "jetpack-my-jetpack" );
+__( "Installing adds the free <plugin>%s</plugin> plugin and turns it on. You won’t be charged.", "jetpack-my-jetpack" );
 /* translators: %s is a plugin name. Keep the <plugin> tags around it. */
 __( "The <plugin>%s</plugin> plugin is already installed. Activating turns it on.", "jetpack-my-jetpack" );
-__( "Built into Jetpack. Activating turns it on, with nothing to install or buy.", "jetpack-my-jetpack" );
+__( "Built into Jetpack, so there is nothing to install. Activating turns it on.", "jetpack-my-jetpack" );
 /* translators: %s is a feature name, such as "Stats". */
-__( "%s is part of the Jetpack plugin. Installing Jetpack turns it on; it does not buy anything.", "jetpack-my-jetpack" );
-__( "Feature page", "jetpack-my-jetpack" );
-__( "Documentation", "jetpack-my-jetpack" );
-/* translators: %s is a plan name, such as "Jetpack Complete". */
-__( "Show everything in %s", "jetpack-my-jetpack" );
+__( "%s is part of the Jetpack plugin. Installing Jetpack turns it on. You won’t be charged.", "jetpack-my-jetpack" );
+__( "Support docs", "jetpack-my-jetpack" );
 __( "Included in <plan0 />", "jetpack-my-jetpack" );
 __( "Included in <plan0 /> and <plan1 />", "jetpack-my-jetpack" );
 __( "Included in <plan0 />, <plan1 /> and <plan2 />", "jetpack-my-jetpack" );
-__( "With a paid plan", "jetpack-my-jetpack" );
 /* translators: %s is a product name, such as "Jetpack Akismet Anti-spam". */
 __( "Upgrade to %s", "jetpack-my-jetpack" );
+__( "With a paid plan", "jetpack-my-jetpack" );
 /* translators: %s is a feature name, such as "Stats". */
 __( "Previous: %s", "jetpack-my-jetpack" );
 /* translators: %s is a feature name, such as "Stats". */
@@ -648,14 +646,16 @@ __( "Left arrow", "jetpack-my-jetpack" );
 __( "Right arrow", "jetpack-my-jetpack" );
 /* translators: 1: a feature name, 2: its place in the list, 3: how many are listed. */
 __( "%1$s, %2$d of %3$d", "jetpack-my-jetpack" );
+__( "How you pay", "jetpack-my-jetpack" );
 __( "Every Jetpack feature, in one place.", "jetpack-my-jetpack" );
-__( "Switch a feature on or off right here. Open one first to see what it does, what it needs, and where to find it once it is on.", "jetpack-my-jetpack" );
+__( "Activate or deactivate a feature right here. Open one first to see what it does, what it needs, and where to find it once it is on.", "jetpack-my-jetpack" );
 __( "Dismiss banner", "jetpack-my-jetpack" );
-__( "Activate the Jetpack plugin to see and switch its other features.", "jetpack-my-jetpack" );
+__( "Activate the Jetpack plugin to see and manage its other features.", "jetpack-my-jetpack" );
 __( "More Features", "jetpack-my-jetpack" );
 __( "Grid view", "jetpack-my-jetpack" );
 __( "List view", "jetpack-my-jetpack" );
 __( "Filter features", "jetpack-my-jetpack" );
+__( "Searching all features", "jetpack-my-jetpack" );
 __( "Search features", "jetpack-my-jetpack" );
 __( "Layout", "jetpack-my-jetpack" );
 /* translators: %d is how many features were added to the wp-admin menu. */
