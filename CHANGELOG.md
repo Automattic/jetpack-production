@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the traffic chart with the type chosen in the previous Stats, or as bars by default.
 - Premium Analytics: Use the default chart interval when switching to a different date preset, instead of keeping the previous preset's.
 - Search: Show the AI Answer disabled notice when the host turns off AI, and hide the block from the inserter whenever Jetpack AI is off.
+- Social: Fix publishing failing with a share message database error, which also prevented newsletters and social shares from being sent.
 - Social: Let a Facebook or Instagram connection with no Page or account saved pick one when reconnecting.
 - VideoPress: Fix upgrades on WordPress.com sites by offering the Business plan.
 - VideoPress: Offer an upgrade action in the video block when uploads require a paid plan.

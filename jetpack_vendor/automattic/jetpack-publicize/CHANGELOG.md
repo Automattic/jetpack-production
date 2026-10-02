@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Connections: Let a Facebook or Instagram connection with no Page or account saved pick one when reconnecting.
+- Fix post updates failing when Social post meta has duplicate rows.
 
 ## [0.88.1] - 2026-09-29
 ### Changed
