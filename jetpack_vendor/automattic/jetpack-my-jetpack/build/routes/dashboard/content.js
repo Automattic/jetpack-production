@@ -350,6 +350,7 @@ __( "Upgrade", "jetpack-my-jetpack" );
 __( "View", "jetpack-my-jetpack" );
 __( "Connect", "jetpack-my-jetpack" );
 __( "Troubleshoot", "jetpack-my-jetpack" );
+__( "Jetpack Search could not be activated.", "jetpack-my-jetpack" );
 __( "Install", "jetpack-my-jetpack" );
 __( "Manage", "jetpack-my-jetpack" );
 __( "Purchase", "jetpack-my-jetpack" );

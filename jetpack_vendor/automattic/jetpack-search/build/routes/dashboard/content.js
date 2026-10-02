@@ -169,6 +169,7 @@ __( "Show autocomplete query suggestions as visitors type, instead of updating s
 __( "Enable search suggestions", "jetpack-search-pkg" );
 __( "Offer instant search results to your visitors as soon as they start typing.", "jetpack-search-pkg" );
 __( "Try Jetpack Instant Search for free now", "jetpack-search-pkg" );
+__( "Jetpack Search could not be activated.", "jetpack-search-pkg" );
 __( "Jetpack Search is an incredibly powerful and customizable replacement for the search capability built into WordPress that helps your visitors find the right content.", "jetpack-search-pkg" );
 __( "Instant search uses a dynamic overlay for lightning-fast searching, sorting, and filtering without reloading the page.", "jetpack-search-pkg" );
 __( "Enable instant search experience <span>(recommended)</span>", "jetpack-search-pkg" );

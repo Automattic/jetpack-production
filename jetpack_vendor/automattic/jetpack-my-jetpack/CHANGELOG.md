@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Search: Grant the free Search product directly instead of routing through a $0 checkout.
+
 ### Changed
 - Backup: Switch the Backup card and feature on and off with the backup module.
 - Product cards: Remove the drop shadow so cards sit flat on the page.
