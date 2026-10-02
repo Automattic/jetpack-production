@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Keep the product image on the site instead of sending it to PayPal.
+- Payment Buttons: Use PayPal's prescribed wording in the disconnect and log out confirmations.
 - PayPal Payment Buttons: onboard sellers as a third-party integration, so PayPal calls are made through WordPress.com and no credentials are stored on the site.
 - Send the partner attribution ID, as resolved for the site's environment, with every Connect with PayPal referral.
 - Show PayPal's debug ID in API error messages and record it, so failed requests can be traced with PayPal support.

@@ -62,6 +62,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Expose the wpcom_ai_launchpad_no_guidance site option in the /sites endpoint.
 - Likes, Sharing: Deprecate the jetpack_post_likes_* and jetpack_post_sharing_* REST field functions in favor of the Post_Likes_Switch and Post_Sharing_Switch classes from the Sharing & Likes package.
+- PayPal Payment Buttons: Use PayPal's prescribed wording in the disconnect and log out confirmations.
 - Update package dependencies.
 - VideoPress: Register the Top videos widget of the Premium Analytics dashboard from the VideoPress package.
 
