@@ -13,9 +13,11 @@ This is an alpha version! The changes listed here are not final.
 - Payment Buttons: Link sellers to their PayPal transactions and to PayPal's refund instructions from the block's account menu and the Payment Links admin page.
 - PayPal Payment Buttons: Add a filter to override the partner attribution (BN) code while connected to the PayPal sandbox.
 - Record Tracks events for the PayPal connection wizard, connections and disconnects, payment link changes and emails, Payment Links admin page views, and logged-in block views on WordPress.com Simple sites. Count block views in an internal stat.
+- Warn in the editor when the seller's PayPal email is unconfirmed, the account is restricted from receiving payments, or permissions the block needs are missing, and refuse new connections that lack those permissions.
 
 ### Changed
 - Keep the product image on the site instead of sending it to PayPal.
+- Payment Buttons: Use PayPal's official logos, unmodified, and match the connect wizard to the design.
 - Payment Buttons: Use PayPal's prescribed wording in the disconnect and log out confirmations.
 - PayPal Payment Buttons: onboard sellers as a third-party integration, so PayPal calls are made through WordPress.com and no credentials are stored on the site.
 - Send the partner attribution ID, as resolved for the site's environment, with every Connect with PayPal referral.
