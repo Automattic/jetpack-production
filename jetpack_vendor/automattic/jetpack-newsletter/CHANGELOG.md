@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Action Bar: Keep the Subscribe button when a subscribe attempt is blocked for too many pending subscriptions.
 - Open the newsletter settings URL on the Settings tab.
+- Subscribers: Show an error with a retry button when subscriber details fail to load, instead of a spinner that never ends.
 
 ## [0.17.1] - 2026-09-29
 ### Changed

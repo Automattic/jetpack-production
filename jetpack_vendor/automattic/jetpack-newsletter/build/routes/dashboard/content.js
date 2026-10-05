@@ -577,6 +577,8 @@ __( "Newsletter metrics", "jetpack-newsletter" );
 __( "Total subscribers", "jetpack-newsletter" );
 __( "Open rate (last 30 sends)", "jetpack-newsletter" );
 __( "Click rate (last 30 sends)", "jetpack-newsletter" );
+__( "Could not load subscriber details.", "jetpack-newsletter" );
+__( "Try again", "jetpack-newsletter" );
 __( "Emails sent", "jetpack-newsletter" );
 __( "Open rate", "jetpack-newsletter" );
 __( "Click rate", "jetpack-newsletter" );
