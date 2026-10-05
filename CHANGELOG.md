@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Activity Log: Show the connection error notice only when a connection error has been recorded.
 - Backup: Add a Backup module, so the Backup dashboard and its menu item can be turned off from My Jetpack.
+- Charts: Show Stats, Newsletter, Social, Podcast and VideoPress chart tooltips on the dark WordPress design system tooltip surface.
 - Comments: add a setting to turn blocks in comments on or off, on the Discussion settings page and in Jetpack settings.
 - External Media: Update the Pexels logo in the media source menu.
 - Forms: Make the Delete spam button act on selected responses or the current filter, show how many responses will be deleted, and empty large spam or trash folders in chunks with progress.

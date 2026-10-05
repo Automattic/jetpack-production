@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Switch the Backup card and feature on and off with the backup module.
 - Features tab: Restore the "Included in plan" filter, keep Upgrade in view in the details window, return to the feature after checkout, bundle the feature artwork instead of loading it from jetpack.com, and clarify wording.
 - Product cards: Remove the drop shadow so cards sit flat on the page.
+- Stats: Show the stats chart tooltip on the shared dark chart tooltip surface.
 - Update package dependencies.
 
 ### Removed

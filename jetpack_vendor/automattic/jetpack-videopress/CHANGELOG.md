@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Video Playlist block: Show the playlist title as an editable heading above the playlist, with a setting to turn it off.
 
 ### Changed
+- Overview: Show the views chart tooltip on the shared chart tooltip surface.
 - Update package dependencies.
 
 ### Fixed
