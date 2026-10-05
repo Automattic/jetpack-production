@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add video thumbnails to the Videos report, drop "report" from report headings, and label the export button "Download CSV".
 - Premium Analytics: Download the full report from the Top pages widget instead of the rows on screen, using the report's Title, Views, and URL columns, and add the download to its Archives view.
 - Premium Analytics: Drill down from a region to its cities in Top locations.
+- Premium Analytics: Keep Top locations on screen while drilling into a country or region.
 - Premium Analytics: offer adding and removing widgets on the dashboard.
 - Premium Analytics: Open post and video details on All time, return to the previous date range from the breadcrumbs, and rearrange the Email clicks tab to match the design.
 - Premium Analytics: Show Posts & Pages and Videos report titles in bold beside a fixed-size thumbnail.

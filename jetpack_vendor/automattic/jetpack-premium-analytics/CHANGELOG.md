@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Charts: Give every chart tooltip the same box, with no tooltip padding, shadow or font size of its own.
 - Charts: Show tooltips on the shared dark chart tooltip surface.
+- Locations: Keep the previous list on screen, dimmed, while a drill-down loads, and move the map to the picked country straight away.
 - Post and video details: Open on All time, return to the previous date range from the breadcrumbs, and rearrange the Email clicks tab to match the design.
 - Show Posts & Pages and Videos report titles in bold beside a fixed-size thumbnail.
 - Top pages widget: Download the full report for the selected dates instead of the rows on screen, using the report's Title, Views, and URL columns, and add the download to the Archives view.
