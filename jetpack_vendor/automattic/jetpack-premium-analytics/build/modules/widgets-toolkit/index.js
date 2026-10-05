@@ -132,24 +132,6 @@ __( "Download CSV", "jetpack-premium-analytics-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 __( "Sections", "jetpack-premium-analytics-pkg" );
-__( "By days", "jetpack-premium-analytics-pkg" );
-__( "By weeks", "jetpack-premium-analytics-pkg" );
-__( "By months", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of views. */
-_n( "%s View", "%s Views", 1, "jetpack-premium-analytics-pkg" );
-__( "Visitors", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of visitors. */
-_n( "%s Visitor", "%s Visitors", 1, "jetpack-premium-analytics-pkg" );
-__( "Comments", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of comments. */
-_n( "%s Comment", "%s Comments", 1, "jetpack-premium-analytics-pkg" );
-__( "Likes", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of likes. */
-_n( "%s Like", "%s Likes", 1, "jetpack-premium-analytics-pkg" );
-__( "Performance", "jetpack-premium-analytics-pkg" );
-__( "Chart interval", "jetpack-premium-analytics-pkg" );
-__( "Chart options", "jetpack-premium-analytics-pkg" );
-__( "Metrics", "jetpack-premium-analytics-pkg" );
 __( "No data found", "jetpack-premium-analytics-pkg" );
 __( "We couldn’t find any results.", "jetpack-premium-analytics-pkg" );
 __( "Yes, I'd be happy to switch now", "jetpack-premium-analytics-pkg" );
@@ -233,6 +215,7 @@ __( "Avg words per post", "jetpack-premium-analytics-pkg" );
 __( "Total images", "jetpack-premium-analytics-pkg" );
 __( "Avg images per post", "jetpack-premium-analytics-pkg" );
 __( "Name", "jetpack-premium-analytics-pkg" );
+__( "Comments", "jetpack-premium-analytics-pkg" );
 __( "Email", "jetpack-premium-analytics-pkg" );
 __( "Sent", "jetpack-premium-analytics-pkg" );
 __( "Opens", "jetpack-premium-analytics-pkg" );
