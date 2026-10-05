@@ -8,7 +8,7 @@
  * with a PayPal-Auth-Assertion naming the seller.
  *
  * @package automattic/jetpack-paypal-payments
- * @since 0.12.0-alpha
+ * @since 0.12.0
  */
 
 namespace Automattic\Jetpack\PaypalPayments;

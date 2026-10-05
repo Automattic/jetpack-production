@@ -5,22 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [9.9.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [9.9.0] - 2026-10-05
 ### Added
-- Connection: Let a connected administrator confirm they are the protected owner from the Connectors card.
-- Connection owner: Let the confirmed owner hand the site to another administrator, which releases the site's protected ownership.
-- Connectors: Show when the connection owner is protected or still needs confirming.
-- Connectors card: Let the confirmed owner release ownership, so another administrator can confirm it instead.
+- Connectors: Show when the connection owner is protected or still needs confirming. [#52980] [#53025]
+- Connectors card: Let the confirmed owner release ownership, so another administrator can confirm it instead. [#53028]
+- Let a connected administrator confirm they are the protected owner from the Connectors card. [#52980]
+- Owner: Let the confirmed owner hand the site to another administrator, which releases the site's protected ownership. [#53028]
 
 ### Changed
-- Connectors card: Show the pending connection owner as unconfirmed rather than as a manager.
-- Update package dependencies.
+- Update package dependencies. [#52999]
 
 ### Fixed
-- Connection: Reduce false connection-failure reports in Site Health: remove the redundant outbound HTTP/HTTPS checks (WordPress core already covers them), and stop prompting a reconnect when WordPress.com reports the connection test as inconclusive (e.g. it cannot reach a dev or sandbox site back).
+- Site Health: Stop reporting false connection failures, and stop prompting a reconnect when the WordPress.com connection test is inconclusive. [#52916]
 
 ## [9.8.1] - 2026-09-29
 ### Changed
@@ -2139,7 +2135,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.9.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.8.1...v9.9.0-alpha
+[9.9.0]: https://github.com/Automattic/jetpack-connection/compare/v9.8.1...v9.9.0
 [9.8.1]: https://github.com/Automattic/jetpack-connection/compare/v9.8.0...v9.8.1
 [9.8.0]: https://github.com/Automattic/jetpack-connection/compare/v9.7.0...v9.8.0
 [9.7.0]: https://github.com/Automattic/jetpack-connection/compare/v9.6.0...v9.7.0

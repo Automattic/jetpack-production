@@ -5,32 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.12.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.12.0] - 2026-10-05
 ### Added
-- Payment Buttons: Link sellers to their PayPal transactions and to PayPal's refund instructions from the block's account menu and the Payment Links admin page.
-- PayPal Payment Buttons: Add a filter to override the partner attribution (BN) code while connected to the PayPal sandbox.
-- Record Tracks events for the PayPal connection wizard, connections and disconnects, payment link changes and emails, Payment Links admin page views, and logged-in block views on WordPress.com Simple sites. Count block views in an internal stat.
-- Warn in the editor when the seller's PayPal email is unconfirmed, the account is restricted from receiving payments, or permissions the block needs are missing, and refuse new connections that lack those permissions.
+- Add additional analytics to Payment Buttons. [#52841]
+- Payment Buttons: Link sellers to their PayPal transactions and to PayPal's refund instructions from the block's account menu and the Payment Links admin page. [#53091]
+- PayPal Payment Buttons: Add a filter to override the partner attribution (BN) code while connected to the PayPal sandbox. [#52986]
+- Warn in the editor when the PayPal account cannot receive payments or lacks required permissions, and refuse connections without them. [#53113]
 
 ### Changed
-- Keep the product image on the site instead of sending it to PayPal.
-- Payment Buttons: Use PayPal's official logos, unmodified, and match the connect wizard to the design.
-- Payment Buttons: Use PayPal's prescribed wording in the disconnect and log out confirmations.
-- PayPal Payment Buttons: onboard sellers as a third-party integration, so PayPal calls are made through WordPress.com and no credentials are stored on the site.
-- Send the partner attribution ID, as resolved for the site's environment, with every Connect with PayPal referral.
-- Show PayPal's debug ID in API error messages and record it, so failed requests can be traced with PayPal support.
-- Update package dependencies.
+- Keep the product image on the site instead of sending it to PayPal. [#53054]
+- Payment Buttons: Use PayPal's official logos, unmodified, and match the connect wizard to the design. [#53118]
+- Payment Buttons: Use PayPal's prescribed wording in the disconnect and log out confirmations. [#53089]
+- PayPal Payment Buttons: Onboard sellers as a third-party integration, so PayPal calls are made through WordPress.com and no credentials are stored on the site. [#52873] [#53103]
+- Send the partner attribution ID, as resolved for the site's environment, with every Connect with PayPal referral. [#53021]
+- Show PayPal's debug ID in API error messages and record it, so failed requests can be traced with PayPal support. [#53021]
+- Update package dependencies. [#52999]
 
 ### Fixed
-- Payment Buttons: Keep keyboard focus on the PayPal onboarding overlay while it is open, return it to the Connect button on close, and hide Close once the seller has finished at PayPal.
-- Payment Buttons: Let a seller connect the same PayPal account on more than one site, by keeping the tracking ID each site was referred with and presenting it on every call made through WordPress.com.
-- Payment Buttons: Spell "PayPal" with its own capitalization in the connect wizard headings and the wordmark's alt text.
-- Payment Buttons: Stop collecting a shipping address once shipping is turned off, instead of keeping the hidden checkbox ticked.
-- Payment Buttons: Tell the merchant when a payment link could not be loaded from PayPal, instead of silently showing stale details.
-- Payment Buttons: Tell the merchant when the browser blocks PayPal's onboarding window, instead of failing silently, and let the next Connect click open it.
+- Payment Buttons: Keep keyboard focus on the PayPal onboarding overlay while it is open, return it to the Connect button on close, and hide Close once the seller has finished at PayPal. [#53151]
+- Payment Buttons: Spell "PayPal" with its own capitalization in the connect wizard headings and the wordmark's alt text. [#53090]
+- Payment Buttons: Stop collecting a shipping address once shipping is turned off, instead of keeping the hidden checkbox ticked. [#53092]
+- Payment Buttons: Tell the merchant when a payment link could not be loaded from PayPal, instead of silently showing stale details. [#53093]
+- Payment Buttons: Tell the merchant when the browser blocks PayPal's onboarding window, instead of failing silently, and let the next Connect click open it. [#53152]
 
 ## [0.11.1] - 2026-09-29
 ### Changed
@@ -410,7 +406,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Simple Payments: Move Simple Payments block to PayPal Payments package. [#43413]
 
-[0.12.0-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.11.1...v0.12.0-alpha
+[0.12.0]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.11.1...v0.12.0
 [0.11.1]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.11.0...v0.11.1
 [0.11.0]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.9.0...v0.10.0

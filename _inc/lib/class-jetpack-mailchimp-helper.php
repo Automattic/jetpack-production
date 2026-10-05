@@ -17,7 +17,7 @@ class Jetpack_Mailchimp_Helper {
 	/**
 	 * Saves the Mailchimp audience that block subscribers join, or clears the settings.
 	 *
-	 * @since 16.3-a.8
+	 * @since 16.3
 	 *
 	 * @param string $audience Mailchimp list ID, or 'none' to clear the settings.
 	 * @return true|WP_Error

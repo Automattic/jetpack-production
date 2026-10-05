@@ -5,20 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.4.0] - 2026-10-05
 ### Added
-- Add the block editor to the comment form.
+- Add the block editor to the comment form. [#52971]
 
 ### Changed
-- Show a Log out link to every recognized commenter, and offer subscriptions only with the comment being posted.
-- Stop calling guest details a profile, and say they are saved in this browser.
-- Update package dependencies.
+- Show a Log out link to every recognized commenter, and offer subscriptions only with the comment being posted. [#53155]
+- Stop calling guest details a profile, and say they are saved in this browser. [#53160]
+- Update package dependencies. [#52999]
 
 ### Fixed
-- Show the submit row at all times, and stop theme button and field styles clashing with the form.
+- Show the submit row at all times, and stop theme button and field styles clashing with the form. [#53044]
 
 ## [0.3.0] - 2026-09-29
 ### Changed
@@ -51,7 +48,7 @@ This is an alpha version! The changes listed here are not final.
 - Add an on-site comment form with a textarea, guest name and email fields, and reply threading when the `jetpack_comments_new_hotness` filter returns true. [#51466]
 - Initial version. [#51210]
 
-[0.4.0-alpha]: https://github.com/Automattic/jetpack-comments/compare/v0.3.0...v0.4.0-alpha
+[0.4.0]: https://github.com/Automattic/jetpack-comments/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/Automattic/jetpack-comments/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/Automattic/jetpack-comments/compare/v0.1.3...v0.2.0
 [0.1.3]: https://github.com/Automattic/jetpack-comments/compare/v0.1.2...v0.1.3
