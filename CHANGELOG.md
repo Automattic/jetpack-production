@@ -66,6 +66,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Fix the Latest comments widget counting pingbacks and trackbacks in its remaining comments count.
 - Premium Analytics: Fix the post comments count, the most popular time, and unnamed countries showing wrong values when Stats has no data for them.
 - Premium Analytics: Keep the numbers inside traffic heatmap cells readable on mid-tone colors.
+- Premium Analytics: Open the date menus on the applied option instead of the first one.
 - Premium Analytics: Show the "No data found" state on every report with no rows, and stop the table search and settings from showing while an empty report loads.
 - Premium Analytics: Show the traffic chart with the type chosen in the previous Stats, or as bars by default.
 - Premium Analytics: Use the default chart interval when switching to a different date preset, instead of keeping the previous preset's.

@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Move the Top videos widget to the VideoPress package, which registers it and seeds it into the Traffic section.
 
 ### Fixed
+- Dashboard: Open the date menus on the applied option instead of the first one.
 - Date controls: Use the default chart interval when switching to a different preset, instead of keeping the previous preset's.
 - Fix the Latest comments widget counting pingbacks and trackbacks in its remaining comments count.
 - Fix the post comments count, the most popular time, and unnamed countries showing wrong values when Stats has no data for them.
