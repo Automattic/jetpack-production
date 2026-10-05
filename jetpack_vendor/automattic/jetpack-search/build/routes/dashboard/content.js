@@ -90,6 +90,8 @@ __( "Learn more", "jetpack-search-pkg" );
 __( "Get Jetpack Search", "jetpack-search-pkg" );
 __( "Jetpack Search", "jetpack-search-pkg" );
 __( "The best WordPress search experience", "jetpack-search-pkg" );
+__( "OK", "jetpack-search-pkg" );
+__( "Cancel", "jetpack-search-pkg" );
 __( "Let AI assistants like Claude and ChatGPT answer questions from your blog’s content on behalf of WordPress.com users who have opted in.", "jetpack-search-pkg" );
 __( "Error updating AI Agent Access settings.", "jetpack-search-pkg" );
 __( "Enable AI Agent Access", "jetpack-search-pkg" );

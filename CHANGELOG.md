@@ -81,6 +81,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show views per visitor and the number of posts published in the Traffic chart tooltip.
 - Premium Analytics: Use the default chart interval when switching to a different date preset, instead of keeping the previous preset's.
 - Search: Show the AI Answer disabled notice when the host turns off AI, and hide the block from the inserter whenever Jetpack AI is off.
+- Search: Start the experience switch and Restore default confirmations on Cancel, so pressing Enter no longer switches the search experience or deletes a customized template.
 - Social: Fix publishing failing with a share message database error, which also prevented newsletters and social shares from being sent.
 - Social: Let a Facebook or Instagram connection with no Page or account saved pick one when reconnecting.
 - Stats: stop showing free-plan paywalls in wp-admin on a site whose plan already includes those stats.
