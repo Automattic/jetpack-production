@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Show a Log out link to every recognized commenter, and offer subscriptions only with the comment being posted.
+- Stop calling guest details a profile, and say they are saved in this browser.
 - Update package dependencies.
 
 ### Fixed
