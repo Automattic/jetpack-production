@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Show PayPal's debug ID in API error messages so failed requests can be traced with PayPal support.
 - PayPal Payment Buttons: Use PayPal's official logos, unmodified, and match the connect wizard to the design.
 - PayPal Payment Buttons: Warn in the editor when the seller's PayPal email is unconfirmed, the account is restricted from receiving payments, or permissions the block needs are missing, and refuse new connections that lack those permissions.
+- Premium Analytics: Add a Download CSV action to the Locations widget and the author page's Top viewed posts widget. Each saves every row for the selected dates, scoped to the place or author shown.
 - Premium Analytics: Add a Download CSV action to the Popular authors, Top links clicked, Top downloaded, Top referrers, Top searched terms, and Top videos widgets that saves the full report for the selected dates.
 - Premium Analytics: Add a Download CSV action to the Top UTM widget that saves the full report for the selected dates.
 - Premium Analytics: Add a Download CSV action to the Year in review, All-time most commented authors, All-time most commented posts, Top tags & categories, and Latest emails sent widgets that saves the full report.
