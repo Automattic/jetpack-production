@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Payment Buttons: Keep keyboard focus on the PayPal onboarding overlay while it is open, return it to the Connect button on close, and hide Close once the seller has finished at PayPal.
 - Payment Buttons: Let a seller connect the same PayPal account on more than one site, by keeping the tracking ID each site was referred with and presenting it on every call made through WordPress.com.
 - Payment Buttons: Spell "PayPal" with its own capitalization in the connect wizard headings and the wordmark's alt text.
 - Payment Buttons: Stop collecting a shipping address once shipping is turned off, instead of keeping the hidden checkbox ticked.

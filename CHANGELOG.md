@@ -68,6 +68,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Open settings links on the Settings tab.
 - Newsletter: Remove the stray "Session expired" message from the email design canvas.
 - Newsletter: Show an error with a retry button when subscriber details fail to load.
+- PayPal Payment Buttons: Keep keyboard focus on the PayPal onboarding overlay while it is open, return it to the Connect button on close, and hide Close once the seller has finished at PayPal.
 - PayPal Payment Buttons: Let a seller connect the same PayPal account on more than one site without the earlier site losing access.
 - PayPal Payment Buttons: Spell "PayPal" with its own capitalization in the connect wizard headings and the wordmark's alt text.
 - PayPal Payment Buttons: Stop collecting a shipping address once shipping is turned off, instead of keeping the hidden checkbox ticked.
