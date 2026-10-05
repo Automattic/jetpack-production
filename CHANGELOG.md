@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - External Media: Make the featured image picker fill the sidebar width.
 - Forms: Start the Empty trash and Delete spam confirmations on Cancel and show Delete in red, so pressing Enter no longer permanently deletes every response in that folder.
 - Google Fonts: Preserve theme and user font sources and process only needed catalogue font faces on the front end.
+- Google Photos: Show an error with a retry option when the picker cannot be opened, instead of loading indefinitely.
 - Jetpack AI: Keep the Jetpack AI menu item when AI is switched off, so the MCP and Connectors tab stays reachable.
 - Likes: Let Comment Likes be turned on for a single post in the block editor while Like buttons are off.
 - Mailchimp: Save the chosen audience right away, so the block works without also saving the Writing settings.

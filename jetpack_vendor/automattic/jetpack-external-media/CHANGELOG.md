@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Google Photos: Show an error with a retry option when the picker cannot be opened, instead of loading indefinitely.
 - Make the featured image picker fill the full width of the sidebar.
 
 ## [0.9.6] - 2026-09-29
