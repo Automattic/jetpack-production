@@ -601,6 +601,10 @@ __( "Help", "jetpack-forms" );
 __( "Jetpack", "jetpack-forms" );
 __( "Breadcrumbs", "jetpack-forms" );
 __( "Sections", "jetpack-forms" );
+__( "This will permanently delete this form. This action cannot be undone.", "jetpack-forms" );
+/* translators: %d: number of forms */
+_n( "This will permanently delete %d form. This action cannot be undone.", "This will permanently delete %d forms. This action cannot be undone.", 1, "jetpack-forms" );
+__( "Delete permanently", "jetpack-forms" );
 __( "Edit form", "jetpack-forms" );
 /* translators: 1: Responses deleted once the current batch finishes. 2: Total responses being deleted. */
 __( "Deleting %1$s of %2$s…", "jetpack-forms" );
@@ -676,7 +680,6 @@ __( "Failed to move form to trash.", "jetpack-forms" );
 __( "Form deleted permanently.", "jetpack-forms" );
 __( "Could not delete form.", "jetpack-forms" );
 __( "Restore", "jetpack-forms" );
-__( "Delete permanently", "jetpack-forms" );
 __( "Preview", "jetpack-forms" );
 __( "Copy embed", "jetpack-forms" );
 __( "Copy shortcode", "jetpack-forms" );
@@ -694,7 +697,6 @@ __( "View responses for this form.", "jetpack-forms" );
 __( "View and manage all your form responses in one place.", "jetpack-forms" );
 __( "More actions", "jetpack-forms" );
 __( "Rename form", "jetpack-forms" );
-__( "This will permanently delete this form. This action cannot be undone.", "jetpack-forms" );
 __( "Undoing…", "jetpack-forms" );
 __( "An error occurred.", "jetpack-forms" );
 /* translators: %s: the number of responses. */
@@ -772,7 +774,9 @@ __( "IP address:", "jetpack-forms" );
 __( "Lookup IP address", "jetpack-forms" );
 __( "Browser:", "jetpack-forms" );
 __( "Logged-in user:", "jetpack-forms" );
+__( "Mark as spam", "jetpack-forms" );
 __( "Are you sure you want to mark this response as spam?", "jetpack-forms" );
+__( "Could not mark the response as spam. Please try again.", "jetpack-forms" );
 __( "Previous", "jetpack-forms" );
 __( "Next", "jetpack-forms" );
 __( "Close", "jetpack-forms" );

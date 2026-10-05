@@ -55,6 +55,7 @@ This is an alpha version! The changes listed here are not final.
 - Comments API: Return the real total in `found` when a post's comments are filtered by type or date, instead of -1.
 - Connection: Stop Site Health from showing spurious connection failures — remove the redundant outbound HTTP/HTTPS checks, and no longer prompt a reconnect when the WordPress.com connection test is inconclusive.
 - External Media: Make the featured image picker fill the sidebar width.
+- Forms: Start the Delete permanently and Mark as spam confirmations on Cancel, so pressing Enter no longer permanently deletes a form or marks a response as spam.
 - Forms: Start the Empty trash and Delete spam confirmations on Cancel and show Delete in red, so pressing Enter no longer permanently deletes every response in that folder.
 - Google Fonts: Preserve theme and user font sources and process only needed catalogue font faces on the front end.
 - Google Photos: Show an error with a retry option when the picker cannot be opened, instead of loading indefinitely.
