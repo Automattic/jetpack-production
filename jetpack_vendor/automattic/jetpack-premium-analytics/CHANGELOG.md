@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Top pages widget: Download the full report for the selected dates instead of the rows on screen, using the report's Title, Views, and URL columns, and add the download to the Archives view.
 - Traffic chart: Default to the chart type Jetpack Stats v1 saved in this browser, else bars.
 - Widgets toolkit: Keep the hover underline on the ReportLink text when it renders text with a badge beside it.
+- Widgets toolkit: Share the internal and external link markup between components, and stop setting rel on links that open in a new tab.
 
 ### Removed
 - Dashboard: Move the Top videos widget to the VideoPress package, which registers it and seeds it into the Traffic section.
