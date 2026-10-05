@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Widgets toolkit: Add a Leaderboard component that renders ranked rows with their states, shares and deltas; Top videos, Search terms and Most commented authors use it.
 
 ### Changed
+- Author, post, and video details: Show load errors and missing items in a notice, and stop offering Retry when access is denied.
 - Charts: Give every chart tooltip the same box, with no tooltip padding, shadow or font size of its own.
 - Charts: Show tooltips on the shared dark chart tooltip surface.
 - Locations: Keep the previous list on screen, dimmed, while a drill-down loads, and move the map to the picked country straight away.

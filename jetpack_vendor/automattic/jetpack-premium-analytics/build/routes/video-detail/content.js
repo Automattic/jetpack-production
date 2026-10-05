@@ -422,6 +422,5 @@ __( "Video unavailable", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the video upload date, e.g. "Aug 19, 2025". */
 __( "Video uploaded on %s.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this video. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "Retry", "jetpack-premium-analytics-pkg" );
 __( "We couldn't find this video.", "jetpack-premium-analytics-pkg" );
 __( "Back to Videos", "jetpack-premium-analytics-pkg" );

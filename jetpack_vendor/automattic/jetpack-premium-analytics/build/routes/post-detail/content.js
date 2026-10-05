@@ -439,7 +439,6 @@ __( "Clients", "jetpack-premium-analytics-pkg" );
 __( "Top links", "jetpack-premium-analytics-pkg" );
 __( "UTM", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this post. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "Retry", "jetpack-premium-analytics-pkg" );
 __( "View page", "jetpack-premium-analytics-pkg" );
 __( "View post", "jetpack-premium-analytics-pkg" );
 __( "This post hasn’t been sent as a newsletter", "jetpack-premium-analytics-pkg" );
