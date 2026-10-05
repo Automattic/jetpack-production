@@ -206,7 +206,7 @@ class WPCOM_REST_API_V2_Endpoint_Mailchimp extends WP_REST_Controller {
 	/**
 	 * Save the Mailchimp audience that block subscribers join.
 	 *
-	 * @since 16.3-a.8
+	 * @since 16.3
 	 *
 	 * @param WP_REST_Request $request The request.
 	 * @return array|WP_Error

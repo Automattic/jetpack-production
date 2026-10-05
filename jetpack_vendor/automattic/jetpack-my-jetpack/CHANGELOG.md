@@ -5,27 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.8.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.8.0] - 2026-10-05
 ### Added
-- Search: Grant the free Search product directly instead of routing through a $0 checkout.
+- Search: Grant the free Search product directly instead of routing through a $0 checkout. [#52655]
 
 ### Changed
-- Backup: Switch the Backup card and feature on and off with the backup module.
-- Features tab: Restore the "Included in plan" filter, keep Upgrade in view in the details window, return to the feature after checkout, bundle the feature artwork instead of loading it from jetpack.com, and clarify wording.
-- Product cards: Remove the drop shadow so cards sit flat on the page.
-- Product detail table: Use the WordPress UI Notice component for the plugin install error.
-- Stats: Show the stats chart tooltip on the shared dark chart tooltip surface.
-- Update package dependencies.
+- Backup: Switch the Backup card and feature on and off with the backup module. [#52937]
+- Features tab: Restore the "Included in plan" filter, keep Upgrade in view in the details window, and return to the feature after checkout. [#53052]
+- Product cards: Show cards flat, without a drop shadow. [#52988]
+- Product detail table: Use the WordPress UI Notice component for the plugin install error. [#52932]
+- Stats: Show the stats chart tooltip on the shared dark chart tooltip surface. [#52850]
+- Update package dependencies. [#52999]
 
 ### Removed
-- Remove unused Zendesk chat REST endpoints and related front-end constants left after the widget was turned off.
+- Remove unused Zendesk chat REST endpoints and related front-end constants left after the widget was turned off. [#52074]
 
 ### Fixed
-- Products: Show a switch instead of a purchase link for a product you own whose module is turned off.
-- Protect card: Show scan, firewall, and blocked-login stats as aligned rows that no longer overlap on narrow cards, with design-system info popovers.
+- Products: Show a switch instead of a purchase link for a product you own whose module is turned off. [#52937]
+- Protect card: Show scan, firewall, and blocked-login stats as aligned rows that no longer overlap on narrow cards, with design-system info popovers. [#52988]
 
 ## [6.7.1] - 2026-09-29
 ### Changed
@@ -3026,7 +3023,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.8.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.7.1...6.8.0-alpha
+[6.8.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.7.1...6.8.0
 [6.7.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.7.0...6.7.1
 [6.7.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.6.0...6.7.0
 [6.6.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.5.0...6.6.0

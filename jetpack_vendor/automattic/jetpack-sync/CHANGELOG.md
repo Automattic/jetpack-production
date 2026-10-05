@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.4.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.4.0] - 2026-10-05
 ### Added
-- Sync the enable_blocks_comments option.
-- Sync the VideoPress site setting that turns off sharing for every video.
+- Sync the VideoPress site setting that turns off sharing for every video. [#52991]
+- Sync the `enable_blocks_comments` option. [#53031]
 
 ### Removed
-- Remove the AI Launchpad options from the default synced options; WordPress.com's Atomic sites sync them through the WordPress.com Site Helper.
+- Remove the AI Launchpad options from the default synced options. [#52930]
 
 ## [5.3.0] - 2026-09-28
 ### Added
@@ -1871,7 +1868,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[5.4.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v5.3.0...v5.4.0-alpha
+[5.4.0]: https://github.com/Automattic/jetpack-sync/compare/v5.3.0...v5.4.0
 [5.3.0]: https://github.com/Automattic/jetpack-sync/compare/v5.2.0...v5.3.0
 [5.2.0]: https://github.com/Automattic/jetpack-sync/compare/v5.1.3...v5.2.0
 [5.1.3]: https://github.com/Automattic/jetpack-sync/compare/v5.1.2...v5.1.3

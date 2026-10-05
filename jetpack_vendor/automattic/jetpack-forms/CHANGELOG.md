@@ -5,20 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.3.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [8.3.0] - 2026-10-05
 ### Added
-- Make the Delete spam button act on the selected responses or the current filter, show how many responses it will delete, and delete large queues in chunks with progress.
-- Release field conditional logic, available on WordPress.com Business plans and higher and on all Jetpack sites.
+- Add conditional logic to form fields, available on WordPress.com Business plans and higher and on all Jetpack sites. [#52783]
 
 ### Changed
-- Update package dependencies.
+- Make the Delete spam button act on the selected responses or the current filter, show how many responses it will delete, and delete large queues in chunks with progress. [#48130]
+- Update package dependencies. [#52999]
 
 ### Fixed
-- Dashboard: Start the Delete permanently and Mark as spam confirmations on Cancel, so pressing Enter no longer permanently deletes a form or marks a response as spam.
-- Dashboard: Start the Empty trash and Delete spam confirmations on Cancel and show Delete in red, so pressing Enter no longer permanently deletes every response in that folder.
+- Dashboard: Start the Delete permanently and Mark as spam confirmations on Cancel, so pressing Enter no longer permanently deletes a form or marks a response as spam. [#53027]
+- Dashboard: Start the Empty trash and Delete spam confirmations on Cancel and show Delete in red, so pressing Enter no longer permanently deletes every response in that folder. [#52979]
 
 ## [8.2.2] - 2026-09-29
 ### Fixed
@@ -2789,7 +2786,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[8.3.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v8.2.2...v8.3.0-alpha
+[8.3.0]: https://github.com/automattic/jetpack-forms/compare/v8.2.2...v8.3.0
 [8.2.2]: https://github.com/automattic/jetpack-forms/compare/v8.2.1...v8.2.2
 [8.2.1]: https://github.com/automattic/jetpack-forms/compare/v8.2.0...v8.2.1
 [8.2.0]: https://github.com/automattic/jetpack-forms/compare/v8.1.0...v8.2.0

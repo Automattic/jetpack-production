@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.14.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.14.3] - 2026-10-05
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#52999]
 
 ### Fixed
-- Apply the core-notice hiding and design tokens to pages that WordPress registers under the admin_page_ prefix.
+- Hide default WordPress notices and apply design tokens on pages registered under the `admin_page_` prefix.
 
 ## [0.14.2] - 2026-09-29
 ### Changed
@@ -403,7 +400,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing menu visibility issues.
 
-[0.14.3-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.2...0.14.3-alpha
+[0.14.3]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.2...0.14.3
 [0.14.2]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.1...0.14.2
 [0.14.1]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.0...0.14.1
 [0.14.0]: https://github.com/Automattic/jetpack-admin-ui/compare/0.13.0...0.14.0
