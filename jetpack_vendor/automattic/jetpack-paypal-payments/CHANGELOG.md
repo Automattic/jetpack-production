@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Payment Buttons: Spell "PayPal" with its own capitalization in the connect wizard headings and the wordmark's alt text.
 - Payment Buttons: Stop collecting a shipping address once shipping is turned off, instead of keeping the hidden checkbox ticked.
 - Payment Buttons: Tell the merchant when a payment link could not be loaded from PayPal, instead of silently showing stale details.
+- Payment Buttons: Tell the merchant when the browser blocks PayPal's onboarding window, instead of failing silently, and let the next Connect click open it.
 
 ## [0.11.1] - 2026-09-29
 ### Changed
