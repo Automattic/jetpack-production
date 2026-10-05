@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the block editor to the comment form.
 
 ### Changed
+- Show a Log out link to every recognized commenter, and offer subscriptions only with the comment being posted.
 - Update package dependencies.
 
 ### Fixed
