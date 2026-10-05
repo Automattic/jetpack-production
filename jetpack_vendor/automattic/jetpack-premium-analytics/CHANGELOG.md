@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Widgets toolkit: Add a Leaderboard component that renders ranked rows with their states, shares and deltas; Top videos, Search terms and Most commented authors use it.
 
 ### Changed
+- Charts: Give every chart tooltip the same box, with no tooltip padding, shadow or font size of its own.
 - Charts: Show tooltips on the shared dark chart tooltip surface.
 - Post and video details: Open on All time, return to the previous date range from the breadcrumbs, and rearrange the Email clicks tab to match the design.
 - Show Posts & Pages and Videos report titles in bold beside a fixed-size thumbnail.
