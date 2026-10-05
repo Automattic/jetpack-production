@@ -47,6 +47,7 @@ __( "Add subtitle below", "jetpack-videopress-pkg" );
 __( "Cancel", "jetpack-videopress-pkg" );
 __( "Video preview", "jetpack-videopress-pkg" );
 __( "Video preview unavailable.", "jetpack-videopress-pkg" );
+__( "This private video may not play because its access token could not be loaded. Close and reopen to try again.", "jetpack-videopress-pkg" );
 __( "Pause while typing", "jetpack-videopress-pkg" );
 __( "Subtitle editing workspace", "jetpack-videopress-pkg" );
 __( "Keyboard shortcuts: Space plays or pauses the preview, the Left and Right arrow keys seek, C adds a subtitle at the playhead, N and P jump to the next or previous subtitle, and Control+Z or Command+Z undoes an edit (add Shift to redo).", "jetpack-videopress-pkg" );

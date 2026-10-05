@@ -86,6 +86,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: stop showing free-plan paywalls in wp-admin on a site whose plan already includes those stats.
 - VideoPress: Fix upgrades on WordPress.com sites by offering the Business plan.
 - VideoPress: Offer an upgrade action in the video block when uploads require a paid plan.
+- VideoPress: Warn in the caption manager when a private video's preview may not play.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Expose the wpcom_ai_launchpad_no_guidance site option in the /sites endpoint.

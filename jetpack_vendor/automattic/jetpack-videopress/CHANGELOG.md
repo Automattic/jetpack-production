@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Caption manager: Warn when a private video's preview may not play because its access token failed to load.
 - Latest Videos Playlist block: list the site's videos on WordPress.com Simple pages, where the media REST endpoint is not available during a page render.
 - Upgrade: Send WordPress.com sites to the Business plan instead of an incompatible VideoPress product.
 - Video block: Offer an upgrade action when uploads require a paid plan.
