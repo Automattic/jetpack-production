@@ -74,6 +74,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Open the date menus on the applied option instead of the first one.
 - Premium Analytics: Show the "No data found" state on every report with no rows, and stop the table search and settings from showing while an empty report loads.
 - Premium Analytics: Show the traffic chart with the type chosen in the previous Stats, or as bars by default.
+- Premium Analytics: Show views per visitor and the number of posts published in the Traffic chart tooltip.
 - Premium Analytics: Use the default chart interval when switching to a different date preset, instead of keeping the previous preset's.
 - Search: Show the AI Answer disabled notice when the host turns off AI, and hide the block from the inserter whenever Jetpack AI is off.
 - Social: Fix publishing failing with a share message database error, which also prevented newsletters and social shares from being sent.

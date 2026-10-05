@@ -37,6 +37,10 @@ _x( "Same period in %s", "previous month comparison", "jetpack-premium-analytics
 /* translators: %s: the year the comparison period starts in, e.g. "2025". */
 _x( "Same period in %s", "previous year comparison", "jetpack-premium-analytics-pkg" );
 __( "Same period last year (match day of week)", "jetpack-premium-analytics-pkg" );
+/* translators: %s: number of posts published. */
+_n( "%s Post published", "%s Posts published", 1, "jetpack-premium-analytics-pkg" );
+__( "Views per visitor", "jetpack-premium-analytics-pkg" );
+__( "Posts published", "jetpack-premium-analytics-pkg" );
 __( "Views", "jetpack-premium-analytics-pkg" );
 /* translators: %s: number of views. */
 _n( "%s View", "%s Views", 1, "jetpack-premium-analytics-pkg" );

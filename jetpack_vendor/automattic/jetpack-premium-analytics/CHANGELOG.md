@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix the Latest comments widget counting pingbacks and trackbacks in its remaining comments count.
 - Fix the post comments count, the most popular time, and unnamed countries showing wrong values when Stats has no data for them.
 - Reports: Show the "No data found" state on every report with no rows, and stop the table search and settings from showing while an empty report loads.
+- Traffic chart: Show views per visitor and the number of posts published in the tooltip.
 
 ## [0.10.0] - 2026-09-29
 ### Changed
