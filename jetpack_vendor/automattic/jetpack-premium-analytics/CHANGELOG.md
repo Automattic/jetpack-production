@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a Download CSV action to the Popular authors, Top links clicked, Top downloaded, Top referrers, Top searched terms, and Top videos widgets that saves the full report for the selected dates.
+- Add a Download CSV action to the Year in review, All-time most commented authors, All-time most commented posts, Top tags & categories, and Latest emails sent widgets that saves the full report.
 - Add video thumbnails to the Videos report, drop "report" from report headings, and label the export button "Download CSV".
 - Dashboard: Expose the CSV download action of the linked report through the SDK; the widget contract is 1.3.0.
 - Dashboard: Expose the Leaderboard component, the error mapper and the video plays hook through the SDK; the widget contract is 1.2.0.
