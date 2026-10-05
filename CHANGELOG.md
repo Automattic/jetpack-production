@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Activity Log: Show the connection error notice only when a connection error has been recorded.
+- AI: Use WordPress Design System colors in the AI admin, assistant, and image generator.
 - Backup: Add a Backup module, so the Backup dashboard and its menu item can be turned off from My Jetpack.
 - Charts: Show Stats, Newsletter, Social, Podcast and VideoPress chart tooltips on the dark WordPress design system tooltip surface.
 - Comments: add a setting to turn blocks in comments on or off, on the Discussion settings page and in Jetpack settings.
