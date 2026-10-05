@@ -73,6 +73,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Fix the post comments count, the most popular time, and unnamed countries showing wrong values when Stats has no data for them.
 - Premium Analytics: Keep the numbers inside traffic heatmap cells readable on mid-tone colors.
 - Premium Analytics: Open the date menus on the applied option instead of the first one.
+- Premium Analytics: Show report load errors in a notice across the report, without Retry when access is denied. Show access denied on author, post, and video details as an error.
 - Premium Analytics: Show the "No data found" state on every report with no rows, and stop the table search and settings from showing while an empty report loads.
 - Premium Analytics: Show the traffic chart with the type chosen in the previous Stats, or as bars by default.
 - Premium Analytics: Show views per visitor and the number of posts published in the Traffic chart tooltip.
