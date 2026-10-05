@@ -66,6 +66,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Fix the Send a test email modal stacking its address field above the Send button.
 - Newsletter: Open settings links on the Settings tab.
 - Newsletter: Remove the stray "Session expired" message from the email design canvas.
+- PayPal Payment Buttons: Let a seller connect the same PayPal account on more than one site without the earlier site losing access.
 - PayPal Payment Buttons: Spell "PayPal" with its own capitalization in the connect wizard headings and the wordmark's alt text.
 - PayPal Payment Buttons: Stop collecting a shipping address once shipping is turned off, instead of keeping the hidden checkbox ticked.
 - PayPal Payment Buttons: Tell the merchant when a payment link could not be loaded from PayPal, instead of silently showing stale details.
