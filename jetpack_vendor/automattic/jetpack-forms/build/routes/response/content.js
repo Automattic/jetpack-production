@@ -291,6 +291,12 @@ __( "Previous", "jetpack-forms" );
 __( "Next", "jetpack-forms" );
 __( "Close", "jetpack-forms" );
 __( "Mark as spam", "jetpack-forms" );
+/* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 12/31/2023). */
+__( "MM/DD/YYYY", "jetpack-forms" );
+/* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 31/12/2023). */
+__( "DD/MM/YYYY", "jetpack-forms" );
+/* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 2023-12-31). */
+__( "YYYY-MM-DD", "jetpack-forms" );
 __( "Are you sure you want to mark this response as spam?", "jetpack-forms" );
 __( "Could not mark the response as spam. Please try again.", "jetpack-forms" );
 __( "An Automattic Airline", "jetpack-forms" );

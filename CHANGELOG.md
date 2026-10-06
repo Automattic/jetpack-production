@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show chart tooltips with dark text on a light background.
 
 ### Bug fixes
+- Forms: Fix error notices shown after deleting or trashing a form, even though it succeeded.
 - Premium Analytics: Draw attention to the date control when a click on the Traffic summary chart sets the period.
 - Premium Analytics: Drop the URL column from the comment authors CSV, since its links only worked on the site and could expose guest commenters' email addresses.
 - Premium Analytics: Fix chart tooltips wrapping into a narrow column on WordPress.com, and metric tab text showing through a tooltip.
