@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Open the dashboard from the admin bar Stats links when it is enabled.
 - Premium Analytics: Show chart tooltips with dark text on a light background.
 - Premium Analytics: Show hours watched and retention rate on the Videos report, and name the Videos, Clicks, Authors and Locations columns as in Stats.
+- VideoPress: Add an introductory video to the first-run welcome modal.
 
 ### Bug fixes
 - Forms: Fix error notices shown after deleting or trashing a form, even though it succeeded.
