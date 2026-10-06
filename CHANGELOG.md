@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Newsletter: add the REST proxy the Newsletter checklist needs to read its task list and complete tasks.
+- VideoPress: Remove the legacy VideoPress dashboard. Sites that turned off the modern dashboard no longer get a Jetpack > VideoPress menu.
 
 ## 16.3-beta - 2026-10-05
 ### Enhancements

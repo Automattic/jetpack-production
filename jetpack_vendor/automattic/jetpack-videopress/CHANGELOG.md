@@ -5,12 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.55.1-alpha] - unreleased
+## [0.56.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Onboarding: Add an introductory video to the first-run welcome modal.
+
+### Removed
+- Remove the legacy VideoPress dashboard. The Jetpack > VideoPress menu now shows only when the modernized dashboard is available.
 
 ## [0.55.0] - 2026-10-05
 ### Added
@@ -2323,7 +2326,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.55.1-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.55.0...v0.55.1-alpha
+[0.56.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.55.0...v0.56.0-alpha
 [0.55.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.54.0...v0.55.0
 [0.54.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.53.0...v0.54.0
 [0.53.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.52.0...v0.53.0
