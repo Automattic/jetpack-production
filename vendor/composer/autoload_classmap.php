@@ -695,6 +695,7 @@ return array(
     'Automattic\\Jetpack\\Waf\\Waf_Standalone_Bootstrap' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-standalone-bootstrap.php',
     'Automattic\\Jetpack\\Waf\\Waf_Stats' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-stats.php',
     'Automattic\\Jetpack\\Waf\\Waf_Transforms' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php',
+    'Automattic\\Jetpack\\WooCommerceStats\\Analytics_Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-analytics-dashboard.php',
     'Automattic\\Jetpack\\WordAds\\Analytics_Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-ads/src/class-analytics-dashboard.php',
     'Automattic\\Woocommerce_Analytics' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woocommerce-analytics.php',
     'Automattic\\Woocommerce_Analytics\\Consent_Manager' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-consent-manager.php',

@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast: Add a toggle to hide the author in the Podcast Episode block.
 - Premium Analytics: Cap the cards on report pages at a centered 1440px column on wide screens, so each row's label and numbers stay close enough to read together.
 - Premium Analytics: Open the dashboard from the admin bar Stats links when it is enabled.
+- Premium Analytics: Rename the Store tab to WooCommerce, including its URL.
 - Premium Analytics: Show chart tooltips with dark text on a light background.
 - Premium Analytics: Show hours watched and retention rate on the Videos report, and name the Videos, Clicks, Authors and Locations columns as in Stats.
 - VideoPress: Add an introductory video to the first-run welcome modal.
