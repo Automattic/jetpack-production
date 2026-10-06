@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: List VaultPress Backup among the plans that include Activity Log history, simplify the Search paid-plan wording, and show the ad-free, customizable VideoPress player as included in the free plan.
 
 ### Bug fixes
+- Premium Analytics: Drop the URL column from the comment authors CSV, since its links only worked on the site and could expose guest commenters' email addresses.
 - Premium Analytics: Fix chart tooltips wrapping into a narrow column on WordPress.com, and metric tab text showing through a tooltip.
 - Premium Analytics: Label a partial first or last week on the Traffic, Subscribers, and ads charts with the selected range's own start or end date.
 
