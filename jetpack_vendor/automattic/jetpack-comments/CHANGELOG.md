@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Replace the identity menu with one link beside the commenter's name: Change for guests and Log out for anyone signed in. The avatar and name link to a site user's profile, or to a guest's subscriptions where the Newsletter is on.
+
 ## [0.4.0] - 2026-10-05
 ### Added
 - Add the block editor to the comment form. [#52971]
@@ -48,6 +55,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add an on-site comment form with a textarea, guest name and email fields, and reply threading when the `jetpack_comments_new_hotness` filter returns true. [#51466]
 - Initial version. [#51210]
 
+[0.4.1-alpha]: https://github.com/Automattic/jetpack-comments/compare/v0.4.0...v0.4.1-alpha
 [0.4.0]: https://github.com/Automattic/jetpack-comments/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/Automattic/jetpack-comments/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/Automattic/jetpack-comments/compare/v0.1.3...v0.2.0
