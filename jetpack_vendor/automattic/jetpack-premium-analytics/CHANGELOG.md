@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Show hours watched and retention rate on the Videos report, and name the Videos, Clicks, Authors and Locations columns as in Stats.
+- Widget SDK: Add `useReport` and `toBucketStamp`, so a package that extends the dashboard can run its own report queries and feed the dashboard time series.
 
 ### Changed
 - Cap the cards on report pages at a centered 1440px column on wide screens, so each row's label and numbers stay close enough to read together.
