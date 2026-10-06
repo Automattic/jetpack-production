@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.39.0-alpha - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add the jetpack_stats_url filter to the admin bar views chart, the admin bar Stats menu link and the post list Views column, and deprecate jetpack_stats_post_list_column_url in its favor.
+- Stats app: Pass the site timezone to the app, so links into the new analytics dashboard keep whole days across daylight-saving changes.
+
 ## 0.38.2 - 2026-10-05
 ### Fixed
 - Decide the dashboard's paywalls from the site's current features rather than from a plan it cached before its last upgrade. [#52098]

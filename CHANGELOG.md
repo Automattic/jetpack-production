@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - My Jetpack: List VaultPress Backup among the plans that include Activity Log history, simplify the Search paid-plan wording, and show the ad-free, customizable VideoPress player as included in the free plan.
 - Premium Analytics: Cap the cards on report pages at a centered 1440px column on wide screens, so each row's label and numbers stay close enough to read together.
+- Premium Analytics: Open the dashboard from the admin bar Stats links when it is enabled.
 - Premium Analytics: Show chart tooltips with dark text on a light background.
 
 ### Bug fixes
