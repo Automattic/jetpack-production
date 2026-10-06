@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a proxy route for the WooCommerce analytics reports of WordPress.com.
 - Register the WooCommerce section on the Premium Analytics dashboard.
 
 ## 0.1.0-alpha - unreleased
