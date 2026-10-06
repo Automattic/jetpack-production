@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - My Jetpack: List VaultPress Backup among the plans that include Activity Log history, simplify the Search paid-plan wording, and show the ad-free, customizable VideoPress player as included in the free plan.
 
+### Bug fixes
+- Premium Analytics: Fix chart tooltips wrapping into a narrow column on WordPress.com, and metric tab text showing through a tooltip.
+
 ## 16.3-beta - 2026-10-05
 ### Enhancements
 - Activity Log: Show the connection error notice only when a connection error has been recorded. [#52977]
