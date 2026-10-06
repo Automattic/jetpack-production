@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: Show an error and stop the Get VideoPress button from staying busy when checkout cannot start.
+- Start new cuts at the playhead, or end there when it is at the end of the video, and keep a gap from existing cuts.
 
 ## [0.55.0] - 2026-10-05
 ### Added

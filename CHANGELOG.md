@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Fix value axis labels piling up at the left edge of a summary bar chart resized to one row.
 - Premium Analytics: Label a partial first or last week on the Traffic, Subscribers, and ads charts with the selected range's own start or end date.
 - VideoPress: Show an error and stop the Get VideoPress button from staying busy when checkout cannot start.
+- VideoPress: Start new cuts at the playhead, or end there when it is at the end of the video, and keep a gap from existing cuts.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Newsletter: add the REST proxy the Newsletter checklist needs to read its task list and complete tasks.
