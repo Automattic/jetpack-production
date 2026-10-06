@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Security
+- Improve escaping of form attributes.
+- Improve sanitization of submitted form values.
+
 ### Changed
 - Update package dependencies.
 
