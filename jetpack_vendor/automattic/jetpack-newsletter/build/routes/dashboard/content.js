@@ -36,7 +36,7 @@ __( "Work phone", "jetpack-newsletter" );
 __( "Cell phone", "jetpack-newsletter" );
 __( "Contact form", "jetpack-newsletter" );
 __( "Calendar", "jetpack-newsletter" );
-__( "Products", "jetpack-newsletter" );
+__( "Features", "jetpack-newsletter" );
 __( "Help", "jetpack-newsletter" );
 __( "Jetpack", "jetpack-newsletter" );
 /* translators: %s: an error message. */

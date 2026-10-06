@@ -349,7 +349,7 @@ __( "You only need to do this once per form.", "jetpack-forms" );
 __( "Don't show this again", "jetpack-forms" );
 __( "Got it", "jetpack-forms" );
 __( "An Automattic Airline", "jetpack-forms" );
-__( "Products", "jetpack-forms" );
+__( "Features", "jetpack-forms" );
 __( "Help", "jetpack-forms" );
 __( "Jetpack", "jetpack-forms" );
 __( "Breadcrumbs", "jetpack-forms" );

@@ -11,7 +11,7 @@ __( "An Automattic Airline", "jetpack-search-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-search-pkg" );
 __( "Loading", "jetpack-search-pkg" );
-__( "Products", "jetpack-search-pkg" );
+__( "Features", "jetpack-search-pkg" );
 __( "Help", "jetpack-search-pkg" );
 __( "Jetpack", "jetpack-search-pkg" );
 /* translators: %1$s is button label 1 and %2$s is button label 2 */

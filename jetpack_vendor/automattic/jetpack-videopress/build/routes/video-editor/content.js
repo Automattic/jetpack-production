@@ -77,7 +77,7 @@ __( "Reduced pricing is a limited offer for the first year and renews at regular
 __( "/month, paid yearly", "jetpack-videopress-pkg" );
 __( "% off", "jetpack-videopress-pkg" );
 __( "% off the first year", "jetpack-videopress-pkg" );
-__( "Products", "jetpack-videopress-pkg" );
+__( "Features", "jetpack-videopress-pkg" );
 __( "Help", "jetpack-videopress-pkg" );
 __( "Jetpack", "jetpack-videopress-pkg" );
 /* translators: %s: an error message. */

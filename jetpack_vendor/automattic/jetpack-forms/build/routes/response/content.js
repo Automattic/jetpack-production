@@ -300,7 +300,7 @@ __( "YYYY-MM-DD", "jetpack-forms" );
 __( "Are you sure you want to mark this response as spam?", "jetpack-forms" );
 __( "Could not mark the response as spam. Please try again.", "jetpack-forms" );
 __( "An Automattic Airline", "jetpack-forms" );
-__( "Products", "jetpack-forms" );
+__( "Features", "jetpack-forms" );
 __( "Help", "jetpack-forms" );
 __( "Jetpack", "jetpack-forms" );
 __( "Sections", "jetpack-forms" );

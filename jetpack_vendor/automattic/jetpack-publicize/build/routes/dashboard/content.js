@@ -33,7 +33,7 @@ _n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack-p
 __( "Jetpack Connection error", "jetpack-publicize-pkg" );
 __( "Jetpack Logo", "jetpack-publicize-pkg" );
 __( "An Automattic Airline", "jetpack-publicize-pkg" );
-__( "Products", "jetpack-publicize-pkg" );
+__( "Features", "jetpack-publicize-pkg" );
 __( "Help", "jetpack-publicize-pkg" );
 __( "Jetpack", "jetpack-publicize-pkg" );
 __( "Sections", "jetpack-publicize-pkg" );

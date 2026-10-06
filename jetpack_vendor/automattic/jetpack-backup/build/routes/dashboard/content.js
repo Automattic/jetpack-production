@@ -298,7 +298,7 @@ __( "We're having trouble backing up your site.", "jetpack-backup-pkg" );
 __( "Backup is completed with some files missing. See your <a>backup in the cloud</a> for more details.", "jetpack-backup-pkg" );
 __( "Jetpack Logo", "jetpack-backup-pkg" );
 __( "An Automattic Airline", "jetpack-backup-pkg" );
-__( "Products", "jetpack-backup-pkg" );
+__( "Features", "jetpack-backup-pkg" );
 __( "Help", "jetpack-backup-pkg" );
 __( "Jetpack", "jetpack-backup-pkg" );
 __( "Dismiss", "jetpack-backup-pkg" );

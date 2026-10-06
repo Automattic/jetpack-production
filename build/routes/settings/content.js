@@ -10,7 +10,7 @@ __( "Jetpack Logo", "jetpack" );
 __( "An Automattic Airline", "jetpack" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack" );
-__( "Products", "jetpack" );
+__( "Features", "jetpack" );
 __( "Help", "jetpack" );
 __( "Jetpack", "jetpack" );
 /* translators: %1$s is button label 1 and %2$s is button label 2 */

@@ -596,7 +596,7 @@ _x( "Trash", "noun", "jetpack-forms" );
 __( "Forms", "jetpack-forms" );
 __( "Responses", "jetpack-forms" );
 __( "An Automattic Airline", "jetpack-forms" );
-__( "Products", "jetpack-forms" );
+__( "Features", "jetpack-forms" );
 __( "Help", "jetpack-forms" );
 __( "Jetpack", "jetpack-forms" );
 __( "Breadcrumbs", "jetpack-forms" );

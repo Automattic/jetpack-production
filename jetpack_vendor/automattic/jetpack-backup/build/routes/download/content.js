@@ -14,7 +14,7 @@ __( "The page ran into an unexpected problem. Your backups are unaffected.", "je
 __( "Reload the page", "jetpack-backup-pkg" );
 __( "Jetpack Logo", "jetpack-backup-pkg" );
 __( "An Automattic Airline", "jetpack-backup-pkg" );
-__( "Products", "jetpack-backup-pkg" );
+__( "Features", "jetpack-backup-pkg" );
 __( "Help", "jetpack-backup-pkg" );
 __( "Jetpack", "jetpack-backup-pkg" );
 /* translators: %s: keyboard shortcut. */

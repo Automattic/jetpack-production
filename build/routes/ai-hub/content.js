@@ -242,7 +242,7 @@ __( "Monthly", "jetpack" );
 __( "One time", "jetpack" );
 __( "Jetpack Logo", "jetpack" );
 __( "An Automattic Airline", "jetpack" );
-__( "Products", "jetpack" );
+__( "Features", "jetpack" );
 __( "Help", "jetpack" );
 __( "Jetpack", "jetpack" );
 __( "Sections", "jetpack" );

@@ -103,7 +103,7 @@
         'automattic/jetpack-backup' => array(
             'pretty_version' => '5.1.2-alpha.1791292816',
             'version' => '5.1.2.0-alpha1791292816',
-            'reference' => '3599913b6eb2e9929512be6b12e9704e9b5f9948',
+            'reference' => '3ebb34aea8e769b92706ed28296bb19dd373b429',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-backup',
             'aliases' => array(),
@@ -362,9 +362,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-my-jetpack' => array(
-            'pretty_version' => '6.8.1-alpha.1791302267',
-            'version' => '6.8.1.0-alpha1791302267',
-            'reference' => 'dca121602c660c5c110d4cafe56999496efbb359',
+            'pretty_version' => '6.9.0-alpha.1791304298',
+            'version' => '6.9.0.0-alpha1791304298',
+            'reference' => '0a9db149ad423eb809781a6f714601b02e59bae1',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-my-jetpack',
             'aliases' => array(),
@@ -508,7 +508,7 @@
         'automattic/jetpack-search' => array(
             'pretty_version' => '8.3.0',
             'version' => '8.3.0.0',
-            'reference' => '54f89d10024fff18bdda92cca5f2a623c36b5805',
+            'reference' => 'e568ea5f25c24eb6fa7b2b9304a1a801023ecbc4',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-search',
             'aliases' => array(),
@@ -571,7 +571,7 @@
         'automattic/jetpack-videopress' => array(
             'pretty_version' => '0.56.0-alpha.1791292788',
             'version' => '0.56.0.0-alpha1791292788',
-            'reference' => 'd43d650eae8906fa180a17256dc6c51786d346a0',
+            'reference' => 'ae379244c92e213ba9d361ee29abe90f122589be',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-videopress',
             'aliases' => array(),

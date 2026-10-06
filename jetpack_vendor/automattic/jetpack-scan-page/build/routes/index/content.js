@@ -18,7 +18,7 @@ __( "Jetpack Logo", "jetpack-components" );
 __( "An Automattic Airline", "jetpack-components" );
 /* translators: accessibility text */
 __( "(opens in a new tab)", "jetpack-components" );
-__( "Products", "jetpack-components" );
+__( "Features", "jetpack-components" );
 __( "Help", "jetpack-components" );
 __( "Jetpack", "jetpack-components" );
 /* translators: %s: an error message. */

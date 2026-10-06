@@ -147,7 +147,7 @@ _n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack-v
 __( "Jetpack Connection error", "jetpack-videopress-pkg" );
 __( "Jetpack Logo", "jetpack-videopress-pkg" );
 __( "An Automattic Airline", "jetpack-videopress-pkg" );
-__( "Products", "jetpack-videopress-pkg" );
+__( "Features", "jetpack-videopress-pkg" );
 __( "Help", "jetpack-videopress-pkg" );
 __( "Jetpack", "jetpack-videopress-pkg" );
 /* translators: %1$s is button label 1 and %2$s is button label 2 */

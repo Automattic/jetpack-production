@@ -19,7 +19,7 @@ __( "Try again", "jetpack-seo" );
 __( "Loading…", "jetpack-seo" );
 __( "Jetpack Logo", "jetpack-components" );
 __( "An Automattic Airline", "jetpack-components" );
-__( "Products", "jetpack-components" );
+__( "Features", "jetpack-components" );
 __( "Help", "jetpack-components" );
 __( "Jetpack", "jetpack-components" );
 /* translators: accessibility text */
