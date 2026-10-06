@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Cap the cards on report pages at a centered 1440px column on wide screens, so each row's label and numbers stay close enough to read together.
+
 ### Fixed
 - Charts: Paint the metric tabs chart's tooltip above the metric tabs.
 - Drop the URL column from the comment authors CSV, since its links only worked on the site and could expose guest commenters' email addresses.
