@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Cap the cards on report pages at a centered 1440px column on wide screens, so each row's label and numbers stay close enough to read together.
 
 ### Bug fixes
+- Premium Analytics: Draw attention to the date control when a click on the Traffic summary chart sets the period.
 - Premium Analytics: Drop the URL column from the comment authors CSV, since its links only worked on the site and could expose guest commenters' email addresses.
 - Premium Analytics: Fix chart tooltips wrapping into a narrow column on WordPress.com, and metric tab text showing through a tooltip.
 - Premium Analytics: Label a partial first or last week on the Traffic, Subscribers, and ads charts with the selected range's own start or end date.
