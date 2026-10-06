@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Cap the cards on report pages at a centered 1440px column on wide screens, so each row's label and numbers stay close enough to read together.
+- Charts: Draw chart tooltips with dark text on the light chart surface.
 
 ### Fixed
 - Charts: Paint the metric tabs chart's tooltip above the metric tabs.
