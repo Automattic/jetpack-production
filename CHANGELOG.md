@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add an introductory video to the first-run welcome modal.
 
 ### Bug fixes
+- Backup: Stop the Get VaultPress Backup button from staying busy when setup fails.
 - Forms: Fix error notices shown after deleting or trashing a form, even though it succeeded.
 - Premium Analytics: Draw attention to the date control when a click on the Traffic summary chart sets the period.
 - Premium Analytics: Drop the URL column from the comment authors CSV, since its links only worked on the site and could expose guest commenters' email addresses.
@@ -24,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Fix Returns in the WooCommerce reports for a full refund after a partial refund, and for refunds of orders that were never paid.
 - Premium Analytics: Fix value axis labels piling up at the left edge of a summary bar chart resized to one row.
 - Premium Analytics: Label a partial first or last week on the Traffic, Subscribers, and ads charts with the selected range's own start or end date.
+- VideoPress: Show an error and stop the Get VideoPress button from staying busy when checkout cannot start.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Newsletter: add the REST proxy the Newsletter checklist needs to read its task list and complete tasks.

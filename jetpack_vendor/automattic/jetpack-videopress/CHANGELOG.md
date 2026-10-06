@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Remove the legacy VideoPress dashboard. The Jetpack > VideoPress menu now shows only when the modernized dashboard is available.
 
+### Fixed
+- Dashboard: Show an error and stop the Get VideoPress button from staying busy when checkout cannot start.
+
 ## [0.55.0] - 2026-10-05
 ### Added
 - Add a site setting that turns off sharing for every video and stops it from being turned on for individual videos. [#52991]

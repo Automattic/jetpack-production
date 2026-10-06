@@ -455,6 +455,7 @@ __( "Connect to set up VideoPress", "jetpack-videopress-pkg" );
 __( "VideoPress needs a connection to WordPress.com before you can upload and manage your videos.", "jetpack-videopress-pkg" );
 __( "Connecting…", "jetpack-videopress-pkg" );
 __( "Connect", "jetpack-videopress-pkg" );
+__( "Checkout could not start. Please try again.", "jetpack-videopress-pkg" );
 /* translators: %1$s: the discount amount */
 __( "%1$s%% off", "jetpack-videopress-pkg" );
 __( "/month, billed yearly", "jetpack-videopress-pkg" );
