@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Features tab: List VaultPress Backup among the plans that include Activity Log history, and simplify the Search paid-plan wording. VideoPress plan comparison: Show the ad-free, customizable player as included in the free plan.
+- Features tab: Use the illustrated VideoPress artwork in the feature details window.
 
 ## [6.8.0] - 2026-10-05
 ### Added
