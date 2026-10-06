@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Premium Analytics: Fix chart tooltips wrapping into a narrow column on WordPress.com, and metric tab text showing through a tooltip.
+- Premium Analytics: Label a partial first or last week on the Traffic, Subscribers, and ads charts with the selected range's own start or end date.
 
 ## 16.3-beta - 2026-10-05
 ### Enhancements
