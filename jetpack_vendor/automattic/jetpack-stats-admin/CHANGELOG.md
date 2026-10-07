@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add the jetpack_stats_url filter to the admin bar views chart, the admin bar Stats menu link and the post list Views column, and deprecate jetpack_stats_post_list_column_url in its favor.
 - Stats app: Pass the site timezone to the app, so links into the new analytics dashboard keep whole days across daylight-saving changes.
 
+### Changed
+- Admin bar: Add the Stats chart from admin_bar_menu, so the admin-bar REST endpoint returns it too.
+
 ## 0.38.2 - 2026-10-05
 ### Fixed
 - Decide the dashboard's paywalls from the site's current features rather than from a plan it cached before its last upgrade. [#52098]
