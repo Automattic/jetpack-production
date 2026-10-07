@@ -39,35 +39,35 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-a8c-mc-stats/src/class-a8c-mc-stats.php'
 	),
 	'Automattic\\Jetpack\\Account_Protection\\Account_Protection' => array(
-		'version' => '0.4.1.0-alpha1791312744',
+		'version' => '0.4.1.0-alpha1791403253',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-account-protection/src/class-account-protection.php'
 	),
 	'Automattic\\Jetpack\\Account_Protection\\Config' => array(
-		'version' => '0.4.1.0-alpha1791312744',
+		'version' => '0.4.1.0-alpha1791403253',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-account-protection/src/class-config.php'
 	),
 	'Automattic\\Jetpack\\Account_Protection\\Email_Service' => array(
-		'version' => '0.4.1.0-alpha1791312744',
+		'version' => '0.4.1.0-alpha1791403253',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-account-protection/src/class-email-service.php'
 	),
 	'Automattic\\Jetpack\\Account_Protection\\Password_Detection' => array(
-		'version' => '0.4.1.0-alpha1791312744',
+		'version' => '0.4.1.0-alpha1791403253',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-account-protection/src/class-password-detection.php'
 	),
 	'Automattic\\Jetpack\\Account_Protection\\Password_Manager' => array(
-		'version' => '0.4.1.0-alpha1791312744',
+		'version' => '0.4.1.0-alpha1791403253',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-account-protection/src/class-password-manager.php'
 	),
 	'Automattic\\Jetpack\\Account_Protection\\Password_Strength_Meter' => array(
-		'version' => '0.4.1.0-alpha1791312744',
+		'version' => '0.4.1.0-alpha1791403253',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-account-protection/src/class-password-strength-meter.php'
 	),
 	'Automattic\\Jetpack\\Account_Protection\\Settings' => array(
-		'version' => '0.4.1.0-alpha1791312744',
+		'version' => '0.4.1.0-alpha1791403253',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-account-protection/src/class-settings.php'
 	),
 	'Automattic\\Jetpack\\Account_Protection\\Validation_Service' => array(
-		'version' => '0.4.1.0-alpha1791312744',
+		'version' => '0.4.1.0-alpha1791403253',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-account-protection/src/class-validation-service.php'
 	),
 	'Automattic\\Jetpack\\Activity_Log\\Initial_State' => array(

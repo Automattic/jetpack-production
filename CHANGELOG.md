@@ -54,6 +54,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Start new cuts at the playhead, or end there when it is at the end of the video, and keep a gap from existing cuts.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Account Protection: Update the breached password notice so it no longer says the feature was activated automatically.
 - Newsletter: add the REST proxy the Newsletter checklist needs to read its task list and complete tasks.
 - Newsletter: Show the send icon before the Send button label in the test email modal.
 - Omnibar: Return the Stats chart node from the admin-bar REST endpoint, and the admin bar to every role on the site rather than administrators only.

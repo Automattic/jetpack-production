@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Improve login verification.
+- Update the breached password notice so it no longer says the feature was activated automatically.
 
 ## [0.4.0] - 2026-09-01
 ### Removed
