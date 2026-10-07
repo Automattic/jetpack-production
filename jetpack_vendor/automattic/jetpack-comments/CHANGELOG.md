@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Match core's busy and disabled button states on the submit buttons, and keep theme button styles off the editor toolbar.
 - Replace the identity menu with one link beside the commenter's name: Change for guests and Log out for anyone signed in. The avatar and name link to a site user's profile, or to a guest's subscriptions where the Newsletter is on.
 
 ### Fixed
