@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add Initializer::init() to set up the settings screen and its REST routes in one call.
 - Add REST endpoints to read and save every setting on Settings > Sharing, and to switch each feature to its block or turn it back on.
 
+### Changed
+- Settings: Save no placement along with other sharing options until one is chosen, and return the saved options from Sharing_Options::update().
+
 ### Removed
 - Remove the Sharing_Likes class. Read PACKAGE_VERSION from Initializer instead.
 

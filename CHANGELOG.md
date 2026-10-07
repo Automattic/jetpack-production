@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Stop the Get VaultPress Backup button from staying busy when setup fails.
 - Carousel: Remove the hidden "Loading Comments..." text from pages when the carousel comments area is turned off.
 - Forms: Fix error notices shown after deleting or trashing a form, even though it succeeded.
+- Likes: Keep Like buttons on custom post types on new sites until you choose where buttons appear.
 - My Jetpack: Stop showing an empty account avatar on the Overview connection card when nothing in use needs a user connection.
 - Newsletter: Avoid a fatal error when an older copy of the Newsletter package is loaded during an update.
 - Newsletter: Detect paid newsletter plans by their tier type as well as the mailing list setting.
@@ -42,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Make low values in heatmaps such as Posting activity easier to tell apart from empty cells, and show zero counts as empty.
 - Premium Analytics: Pair each week with its matching week in a year-ago weekly comparison, and show the days each week covers in the Traffic and ads chart tooltips.
 - Premium Analytics: Show a video watched for a few minutes as "< 0.1" hours, not 0.0, on the Videos report and video detail page.
+- Sharing: Keep backslashes in the sharing label when changing sharing settings from WordPress.com or the Jetpack dashboard.
 - Sharing: Stop Settings > Sharing from resetting sharing links to open in the same window.
 - VideoPress: Keep the editing preview on retained footage when playback reaches a trim or trailing cut.
 - VideoPress: Scroll the timeline while dragging cuts beyond the visible area.
