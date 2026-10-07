@@ -327,35 +327,35 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-classic-theme-helper/src/class-social-links.php'
 	),
 	'Automattic\\Jetpack\\Comments\\Avatars' => array(
-		'version' => '0.4.1.0-alpha1791320990',
+		'version' => '0.4.1.0-alpha1791372315',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/class-avatars.php'
 	),
 	'Automattic\\Jetpack\\Comments\\Block_Editor' => array(
-		'version' => '0.4.1.0-alpha1791320990',
+		'version' => '0.4.1.0-alpha1791372315',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/editor/class-block-editor.php'
 	),
 	'Automattic\\Jetpack\\Comments\\Checkpoint' => array(
-		'version' => '0.4.1.0-alpha1791320990',
+		'version' => '0.4.1.0-alpha1791372315',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/identity/checkpoint/class-checkpoint.php'
 	),
 	'Automattic\\Jetpack\\Comments\\Checkpoint_Endpoint' => array(
-		'version' => '0.4.1.0-alpha1791320990',
+		'version' => '0.4.1.0-alpha1791372315',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/identity/checkpoint/class-checkpoint-endpoint.php'
 	),
 	'Automattic\\Jetpack\\Comments\\Comment_Form' => array(
-		'version' => '0.4.1.0-alpha1791320990',
+		'version' => '0.4.1.0-alpha1791372315',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/form/class-comment-form.php'
 	),
 	'Automattic\\Jetpack\\Comments\\Comments' => array(
-		'version' => '0.4.1.0-alpha1791320990',
+		'version' => '0.4.1.0-alpha1791372315',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/class-comments.php'
 	),
 	'Automattic\\Jetpack\\Comments\\Identity' => array(
-		'version' => '0.4.1.0-alpha1791320990',
+		'version' => '0.4.1.0-alpha1791372315',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/identity/class-identity.php'
 	),
 	'Automattic\\Jetpack\\Comments\\Passport' => array(
-		'version' => '0.4.1.0-alpha1791320990',
+		'version' => '0.4.1.0-alpha1791372315',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/identity/checkpoint/class-passport.php'
 	),
 	'Automattic\\Jetpack\\Composer\\Manager' => array(

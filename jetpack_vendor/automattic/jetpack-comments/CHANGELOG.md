@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Replace the identity menu with one link beside the commenter's name: Change for guests and Log out for anyone signed in. The avatar and name link to a site user's profile, or to a guest's subscriptions where the Newsletter is on.
 
+### Fixed
+- Hide the plain textarea once the editor mounts, even in themes that style it by ID.
+
 ## [0.4.0] - 2026-10-05
 ### Added
 - Add the block editor to the comment form. [#52971]
