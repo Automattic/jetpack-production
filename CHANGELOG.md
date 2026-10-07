@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Remove the Products page and open Features from links to it. Point the footer's Modules link and Help's All Jetpack modules link back to the Modules page.
 - Omnibar: Return the Reader, Notifications, and Launch site nodes from the admin-bar endpoint.
 - Podcast: Add a toggle to hide the author in the Podcast Episode block.
+- Premium Analytics: Add video thumbnails to the VideoPress widget, and link the Videos report thumbnails to the video detail page.
 - Premium Analytics: Cap the cards on report pages at a centered 1440px column on wide screens, so each row's label and numbers stay close enough to read together.
 - Premium Analytics: Mark the Comments Subscribers and File downloads report links as opening in a new tab.
 - Premium Analytics: Open the dashboard from the admin bar Stats links when it is enabled.

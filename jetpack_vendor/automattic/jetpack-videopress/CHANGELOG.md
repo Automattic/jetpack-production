@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Onboarding: Add an introductory video to the first-run welcome modal.
+- Show video posters in the Premium Analytics Top videos widget, linked to the video detail page.
 
 ### Removed
 - Remove the legacy VideoPress dashboard. The Jetpack > VideoPress menu now shows only when the modernized dashboard is available.
