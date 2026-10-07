@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Make the "plugins needed" notice for paid plans translatable as full sentences in both singular and plural forms.
+- Stop counting products that are off as needing a user connection.
 
 ## [6.8.0] - 2026-10-05
 ### Added
