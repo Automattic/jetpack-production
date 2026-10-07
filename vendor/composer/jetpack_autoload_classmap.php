@@ -1575,27 +1575,27 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-woocommerce-analytics-tracker.php'
 	),
 	'Automattic\\Jetpack\\Protect_Models' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha1791386646',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-protect-models.php'
 	),
 	'Automattic\\Jetpack\\Protect_Models\\Extension_Model' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha1791386646',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-extension-model.php'
 	),
 	'Automattic\\Jetpack\\Protect_Models\\History_Model' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha1791386646',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-history-model.php'
 	),
 	'Automattic\\Jetpack\\Protect_Models\\Status_Model' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha1791386646',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-status-model.php'
 	),
 	'Automattic\\Jetpack\\Protect_Models\\Threat_Model' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha1791386646',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-threat-model.php'
 	),
 	'Automattic\\Jetpack\\Protect_Models\\Vulnerability_Model' => array(
-		'version' => '0.7.0.0',
+		'version' => '0.7.1.0-alpha1791386646',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-vulnerability-model.php'
 	),
 	'Automattic\\Jetpack\\Protect_Status\\Plan' => array(
