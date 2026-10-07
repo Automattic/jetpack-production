@@ -316,7 +316,7 @@ __( "Leave feedback", "jetpack-premium-analytics-pkg" );
 __( "Everything is a widget", "jetpack-premium-analytics-pkg" );
 __( "Each block of data is a widget you can move and resize to suit how you read your site.", "jetpack-premium-analytics-pkg" );
 __( "A better date picker", "jetpack-premium-analytics-pkg" );
-__( "Compare any period with the one before it, and change the chart interval to suit the range you're looking at.", "jetpack-premium-analytics-pkg" );
+__( "Pick any period and compare it with the one before it.", "jetpack-premium-analytics-pkg" );
 __( "Rearrange it your way", "jetpack-premium-analytics-pkg" );
 __( "Select Customize in this menu to move and resize widgets. Your layout is saved to your profile.", "jetpack-premium-analytics-pkg" );
 __( "One last thing", "jetpack-premium-analytics-pkg" );

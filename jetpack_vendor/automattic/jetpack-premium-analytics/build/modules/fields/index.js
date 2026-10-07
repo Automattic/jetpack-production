@@ -37,4 +37,5 @@ _x( "Same period in %s", "previous month comparison", "jetpack-premium-analytics
 /* translators: %s: the year the comparison period starts in, e.g. "2025". */
 _x( "Same period in %s", "previous year comparison", "jetpack-premium-analytics-pkg" );
 __( "Same period last year (match day of week)", "jetpack-premium-analytics-pkg" );
+__( "Chart interval", "jetpack-premium-analytics-pkg" );
 __( "Date range", "jetpack-premium-analytics-pkg" );

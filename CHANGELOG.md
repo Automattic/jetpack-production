@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add video thumbnails to the VideoPress widget, and link the Videos report thumbnails to the video detail page.
 - Premium Analytics: Cap the cards on report pages at a centered 1440px column on wide screens, so each row's label and numbers stay close enough to read together.
 - Premium Analytics: Mark the Comments Subscribers and File downloads report links as opening in a new tab.
+- Premium Analytics: Move the Traffic summary's grouping control (by days, weeks or months) into the chart itself, which remembers your choice.
 - Premium Analytics: Open the dashboard from the admin bar Stats links when it is enabled.
 - Premium Analytics: Rename the Store tab to WooCommerce, including its URL.
 - Premium Analytics: Rename the Videos, Clicks, Authors and Locations report CSV headers to match the table columns.
