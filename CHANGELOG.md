@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Show the Overview and AI Features views on WordPress VIP sites.
 - My Jetpack: List VaultPress Backup among the plans that include Activity Log history, simplify the Search paid-plan wording, and show the ad-free, customizable VideoPress player as included in the free plan.
 - My Jetpack: Remove the Products page and open Features from links to it. Point the footer's Modules link and Help's All Jetpack modules link back to the Modules page.
+- Newsletter: pick a readable text color to go with the email button background you choose.
 - Omnibar: Return the Reader, Notifications, and Launch site nodes from the admin-bar endpoint.
 - Podcast: Add a toggle to hide the author in the Podcast Episode block.
 - Premium Analytics: Add video thumbnails to the VideoPress widget, and link the Videos report thumbnails to the video detail page.
@@ -53,6 +54,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Newsletter: add the REST proxy the Newsletter checklist needs to read its task list and complete tasks.
+- Newsletter: Show the send icon before the Send button label in the test email modal.
 - Omnibar: Return the Stats chart node from the admin-bar REST endpoint, and the admin bar to every role on the site rather than administrators only.
 - VideoPress: Remove the legacy VideoPress dashboard. Sites that turned off the modern dashboard no longer get a Jetpack > VideoPress menu.
 
