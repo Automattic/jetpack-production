@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show hours watched and retention rate on the Videos report, and name the Videos, Clicks, Authors and Locations columns as in Stats.
 - Premium Analytics: Show the date once in chart tooltips, read each row as value then metric, and list the comparison period in a second column.
 - Premium Analytics: Use a 2px corner radius on chart bars.
+- SSO: When a site requires two-step authentication and your WordPress.com account doesn't have it, the login screen now names your account and links straight to two-step setup.
 - VideoPress: Add an introductory video to the first-run welcome modal.
 - VideoPress: Add trim and cut editing to the video block toolbar and clarify the editor tool icons.
 
