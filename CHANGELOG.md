@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Stop the Get VaultPress Backup button from staying busy when setup fails.
 - Carousel: Remove the hidden "Loading Comments..." text from pages when the carousel comments area is turned off.
 - Forms: Fix error notices shown after deleting or trashing a form, even though it succeeded.
+- Newsletter: Avoid a fatal error when an older copy of the Newsletter package is loaded during an update.
 - Newsletter: Detect paid newsletter plans by their tier type as well as the mailing list setting.
 - Premium Analytics: Draw attention to the date control when a click on the Traffic summary chart sets the period.
 - Premium Analytics: Drop the URL column from the comment authors CSV, since its links only worked on the site and could expose guest commenters' email addresses.
