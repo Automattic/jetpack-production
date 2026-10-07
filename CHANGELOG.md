@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: Keep backslashes in the sharing label when changing sharing settings from WordPress.com or the Jetpack dashboard.
 - Sharing: Stop Settings > Sharing from resetting sharing links to open in the same window.
 - VideoPress: Keep the editing preview on retained footage when playback reaches a trim or trailing cut.
+- VideoPress: Remove legacy Flash player support so videos using the `flashonly` shortcode option display again.
 - VideoPress: Scroll the timeline while dragging cuts beyond the visible area.
 - VideoPress: Show an error and stop the Get VideoPress button from staying busy when checkout cannot start.
 - VideoPress: Start new cuts at the playhead, or end there when it is at the end of the video, and keep a gap from existing cuts.
