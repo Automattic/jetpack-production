@@ -1,0 +1,5 @@
+{
+	"bundles": [
+		"build/widgets/net-sales-over-time/render.js"
+	]
+}

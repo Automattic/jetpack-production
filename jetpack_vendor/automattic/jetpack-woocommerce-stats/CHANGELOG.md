@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a proxy route for the WooCommerce analytics reports of WordPress.com.
 - Add the client that reads the WooCommerce analytics reports, for the widgets of the package.
+- Add the Net sales over time widget, the first one the package builds and registers.
 - Register the WooCommerce section on the Premium Analytics dashboard.
 
 ## 0.1.0-alpha - unreleased
