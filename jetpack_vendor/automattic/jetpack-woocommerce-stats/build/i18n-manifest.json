@@ -1,5 +1,12 @@
 {
 	"bundles": [
-		"build/widgets/net-sales-over-time/render.js"
+		"build/widgets/average-items-per-order/render.js",
+		"build/widgets/average-order-value/render.js",
+		"build/widgets/bookings-over-time/render.js",
+		"build/widgets/gross-sales-over-time/render.js",
+		"build/widgets/net-sales-over-time/render.js",
+		"build/widgets/orders-over-time/render.js",
+		"build/widgets/total-sales-over-time/render.js",
+		"build/widgets/visitors-over-time/render.js"
 	]
 }

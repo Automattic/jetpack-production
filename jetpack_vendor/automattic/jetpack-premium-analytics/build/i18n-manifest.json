@@ -24,10 +24,7 @@
 		"build/widgets/author-performance/render.js",
 		"build/widgets/author-top-posts/render.js",
 		"build/widgets/authors/render.js",
-		"build/widgets/average-items-per-order/render.js",
-		"build/widgets/average-order-value/render.js",
 		"build/widgets/bookings-by-device/render.js",
-		"build/widgets/bookings-over-time/render.js",
 		"build/widgets/clicks/render.js",
 		"build/widgets/devices/render.js",
 		"build/widgets/email-breakdown/render.js",
@@ -36,7 +33,6 @@
 		"build/widgets/emails/render.js",
 		"build/widgets/emails/widget.js",
 		"build/widgets/file-downloads/render.js",
-		"build/widgets/gross-sales-over-time/render.js",
 		"build/widgets/hello-world/render.js",
 		"build/widgets/hello-world/widget.js",
 		"build/widgets/latest-post/render.js",
@@ -46,8 +42,6 @@
 		"build/widgets/most-commented-posts/render.js",
 		"build/widgets/most-popular-day/render.js",
 		"build/widgets/most-popular-time/render.js",
-		"build/widgets/net-sales-over-time/render.js",
-		"build/widgets/orders-over-time/render.js",
 		"build/widgets/payment-status/render.js",
 		"build/widgets/plan-usage/render.js",
 		"build/widgets/popular-days/render.js",
@@ -75,7 +69,6 @@
 		"build/widgets/top-platforms/widget.js",
 		"build/widgets/top-posts/render.js",
 		"build/widgets/top-posts/widget.js",
-		"build/widgets/total-sales-over-time/render.js",
 		"build/widgets/total-views/render.js",
 		"build/widgets/total-visitors/render.js",
 		"build/widgets/traffic-chart/render.js",
@@ -84,7 +77,6 @@
 		"build/widgets/utm-insights/widget.js",
 		"build/widgets/video-detail-embeds/render.js",
 		"build/widgets/video-detail-views-performance/render.js",
-		"build/widgets/views-over-years/render.js",
-		"build/widgets/visitors-over-time/render.js"
+		"build/widgets/views-over-years/render.js"
 	]
 }

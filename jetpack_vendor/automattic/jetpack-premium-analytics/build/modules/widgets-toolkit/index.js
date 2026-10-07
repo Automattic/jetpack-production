@@ -93,12 +93,12 @@ __( "No data", "jetpack-premium-analytics-pkg" );
 _x( "%1$s %2$s", "chart tooltip: value and metric", "jetpack-premium-analytics-pkg" );
 /* translators: %s: metric name. */
 __( "No data for %s", "jetpack-premium-analytics-pkg" );
-__( "We couldn't load this data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Select metric", "jetpack-premium-analytics-pkg" );
 /* translators: %s is a person's name. */
 __( "Avatar of %s", "jetpack-premium-analytics-pkg" );
 /* translators: %s is a country name. */
 __( "Flag of %s", "jetpack-premium-analytics-pkg" );
+__( "We couldn't load this data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 /* translators: %s is the label of the list the back link returns to. */
 __( "Back to %s", "jetpack-premium-analytics-pkg" );
 /* translators: %d is the number of locations left out of the tooltip list. */

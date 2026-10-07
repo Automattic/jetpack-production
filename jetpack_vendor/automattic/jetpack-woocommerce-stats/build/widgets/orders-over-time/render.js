@@ -6,6 +6,10 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "Total sales", "jetpack-premium-analytics-pkg" );
-__( "No sales in this period.", "jetpack-premium-analytics-pkg" );
-__( "We couldn't load total sales. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
+__( "Retry", "jetpack-woocommerce-stats-pkg" );
+__( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg" );
+/* translators: %s: number of orders. */
+_n( "%s Order", "%s Orders", 1, "jetpack-woocommerce-stats-pkg" );
+__( "Orders", "jetpack-woocommerce-stats-pkg" );
+__( "No orders in this period.", "jetpack-woocommerce-stats-pkg" );
+__( "We couldn't load orders. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );

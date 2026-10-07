@@ -26,6 +26,9 @@ This is an alpha version! The changes listed here are not final.
 - Widgets toolkit: Move the remaining report and widget links onto the shared ExternalLink and InternalLink components; the Comments Subscribers and File downloads report links now open in a new tab with the outbound marker.
 - WordAds data: Flag today's day bucket as pending and read its values as null, as WordAds counts nightly; chart tooltips can carry a note for a bucket with no reading.
 
+### Removed
+- Remove the WooCommerce time series widgets, now built by the WooCommerce Stats package.
+
 ### Fixed
 - Charts: Paint the metric tabs chart's tooltip above the metric tabs.
 - Draw attention to the date control when a click on the Traffic summary chart sets the period.
