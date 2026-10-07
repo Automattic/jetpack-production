@@ -39,6 +39,8 @@ _x( "Same period in %s", "previous year comparison", "jetpack-premium-analytics-
 __( "Same period last year (match day of week)", "jetpack-premium-analytics-pkg" );
 /* translators: 1: Start date. 2: End date. */
 __( "%1$s – %2$s", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the smallest value shown at this precision, e.g. "0.1". */
+__( "< %s", "jetpack-premium-analytics-pkg" );
 __( "Loading…", "jetpack-premium-analytics-pkg" );
 __( "We couldn’t find results for this time period.", "jetpack-premium-analytics-pkg" );
 /* translators: %s is the average number of views per day, e.g. "1.4". */

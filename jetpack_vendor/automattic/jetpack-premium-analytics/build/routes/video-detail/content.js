@@ -58,6 +58,8 @@ __( "Countries", "jetpack-premium-analytics-pkg" );
 __( "Regions", "jetpack-premium-analytics-pkg" );
 __( "Cities", "jetpack-premium-analytics-pkg" );
 __( "Archives", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the smallest value shown at this precision, e.g. "0.1". */
+__( "< %s", "jetpack-premium-analytics-pkg" );
 __( "Year", "jetpack-premium-analytics-pkg" );
 __( "Total posts", "jetpack-premium-analytics-pkg" );
 __( "Total comments", "jetpack-premium-analytics-pkg" );

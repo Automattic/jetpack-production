@@ -6,6 +6,8 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+/* translators: %s: the smallest value shown at this precision, e.g. "0.1". */
+__( "< %s", "jetpack-premium-analytics-pkg" );
 __( "You've surpassed your limit for two consecutive periods already.", "jetpack-premium-analytics-pkg" );
 __( "You've surpassed your limit the past month.", "jetpack-premium-analytics-pkg" );
 __( "Plan usage", "jetpack-premium-analytics-pkg" );

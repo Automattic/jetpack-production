@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Drop the URL column from the comment authors CSV, since its links only worked on the site and could expose guest commenters' email addresses.
 - Label a partial first or last week on the Traffic, Subscribers, and ads charts with the selected range's own start or end date.
 - Make low values in heatmaps such as Posting activity easier to tell apart from empty cells, and show zero counts as empty.
+- Show a video watched for a few minutes as "< 0.1" hours, not 0.0, on the Videos report and video detail page.
 
 ## [0.11.0] - 2026-10-05
 ### Added

@@ -6,6 +6,8 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+/* translators: %s: the smallest value shown at this precision, e.g. "0.1". */
+__( "< %s", "jetpack-premium-analytics-pkg" );
 __( "Day", "jetpack-premium-analytics-pkg" );
 __( "Views", "jetpack-premium-analytics-pkg" );
 /* translators: %s is a percentage, e.g. "0.32%". */
