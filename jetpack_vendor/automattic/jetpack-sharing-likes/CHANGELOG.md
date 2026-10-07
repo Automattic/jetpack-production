@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add Initializer::init() to set up the settings screen and its REST routes in one call.
+- Add REST endpoints to read and save every setting on Settings > Sharing, and to switch each feature to its block or turn it back on.
+
+### Removed
+- Remove the Sharing_Likes class. Read PACKAGE_VERSION from Initializer instead.
+
+### Fixed
+- Stop Settings > Sharing from resetting sharing links to open in the same window.
+
 ## [0.2.0] - 2026-10-05
 ### Added
 - Add classes that register the per-post Likes and Sharing switches in the REST API. [#52950]
@@ -19,5 +33,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Settings: Add the wp-admin Settings > Sharing screen, covering sharing buttons, Like buttons, and where they appear. [#52407] [#52727] [#52756] [#52758]
 - Settings: Give Comment Likes their own section on every platform, and offer the Like block to Jetpack and Atomic sites running Comment Likes. [#52796]
 
+[0.3.0-alpha]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.2.0...v0.3.0-alpha
 [0.2.0]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.1.0...v0.1.1
