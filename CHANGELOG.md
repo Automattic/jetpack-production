@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Rename the Videos, Clicks, Authors and Locations report CSV headers to match the table columns.
 - Premium Analytics: Show chart tooltips with dark text on a light background.
 - Premium Analytics: Show hours watched and retention rate on the Videos report, and name the Videos, Clicks, Authors and Locations columns as in Stats.
+- Premium Analytics: Show the date once in chart tooltips, read each row as value then metric, and list the comparison period in a second column.
 - Premium Analytics: Use a 2px corner radius on chart bars.
 - VideoPress: Add an introductory video to the first-run welcome modal.
 

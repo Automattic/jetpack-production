@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Cap the cards on report pages at a centered 1440px column on wide screens, so each row's label and numbers stay close enough to read together.
 - Charts: Draw chart tooltips with dark text on the light chart surface.
 - Charts: Use a 2px corner radius on chart bars.
+- Chart tooltips: Head the rows with the date once, read each as value then metric, and list the comparison period in a second column.
 - Dashboard: Move the WooCommerce tab to the WooCommerce stats package and rename it from Store to WooCommerce, including its URL.
 - Open the dashboard from the admin bar Stats links and the newsletter action bar post stats link when it is enabled.
 - Reports: Rename the Videos, Clicks, Authors and Locations CSV headers to match the report table columns.

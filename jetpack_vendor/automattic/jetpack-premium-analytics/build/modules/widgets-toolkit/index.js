@@ -88,13 +88,11 @@ __( "Fewer views per day", "jetpack-premium-analytics-pkg" );
 __( "More views per day", "jetpack-premium-analytics-pkg" );
 __( "Fewer views", "jetpack-premium-analytics-pkg" );
 __( "More views", "jetpack-premium-analytics-pkg" );
-/* translators: 1: metric name, 2: date. */
-__( "No data for %1$s · %2$s", "jetpack-premium-analytics-pkg" );
-/* translators: 1: a count with its unit, such as "1 Subscriber", 2: date. */
-_x( "%1$s · %2$s", "chart tooltip: count and date", "jetpack-premium-analytics-pkg" );
-/* translators: 1: formatted value, 2: metric name, 3: date. */
-__( "%1$s %2$s · %3$s", "jetpack-premium-analytics-pkg" );
 __( "No data", "jetpack-premium-analytics-pkg" );
+/* translators: 1: formatted value, 2: metric name. */
+_x( "%1$s %2$s", "chart tooltip: value and metric", "jetpack-premium-analytics-pkg" );
+/* translators: %s: metric name. */
+__( "No data for %s", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Select metric", "jetpack-premium-analytics-pkg" );
 /* translators: %s is a person's name. */
