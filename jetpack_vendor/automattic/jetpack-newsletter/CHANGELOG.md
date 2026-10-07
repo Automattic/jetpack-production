@@ -12,9 +12,6 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Action bar: Pass the post stats link through the jetpack_stats_url filter.
 
-### Changed
-- Overview: show the onboarding checklist steps WordPress.com tracks (subscribe form, first subscribers, first newsletter), with their completion, and complete a step when it is skipped.
-
 ### Fixed
 - Reader Link: Register the admin bar node even when the admin bar is hidden, so the admin-bar REST endpoint returns it.
 
