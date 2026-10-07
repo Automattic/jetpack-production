@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Removed
+- Comments: Stop syncing the comment identity provider meta.
+
 ### Fixed
 - WooCommerce Analytics: Match WooCommerce's own order stats for refunds, so a full refund after a partial refund is no longer counted twice and refunds of never-paid orders no longer show as returns.
 

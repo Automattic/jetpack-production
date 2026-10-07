@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Match core's busy and disabled button states on the submit buttons, and keep theme button styles off the editor toolbar.
+- Match the updated WordPress.com sign-in contract, and keep returning commenters signed in for 30 days.
 - Replace the identity menu with one link beside the commenter's name: Change for guests and Log out for anyone signed in. The avatar and name link to a site user's profile, or to a guest's subscriptions where the Newsletter is on.
 
 ### Fixed
