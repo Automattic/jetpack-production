@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Features: Stop requesting the Jetpack module list when the Jetpack plugin is not active.
+- Report a bundle the site has no plan for as needing a plan, rather than as switched off or needing a user connection.
 
 ## [6.9.0] - 2026-10-07
 ### Changed
