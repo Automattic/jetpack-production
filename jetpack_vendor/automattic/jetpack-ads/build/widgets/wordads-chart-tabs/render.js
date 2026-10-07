@@ -11,6 +11,7 @@ __( "Ads Served", "jetpack-ads-pkg" );
 _n( "%s Ad Served", "%s Ads Served", 1, "jetpack-ads-pkg" );
 __( "Average CPM", "jetpack-ads-pkg" );
 __( "Revenue", "jetpack-ads-pkg" );
+__( "Not counted yet. WordAds updates once a day.", "jetpack-ads-pkg" );
 __( "No ads were served in this period.", "jetpack-ads-pkg" );
 __( "We couldn't load WordAds data. Please try again in a moment.", "jetpack-ads-pkg" );
 __( "Retry", "jetpack-ads-pkg" );
