@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Rename the Store tab to WooCommerce, including its URL.
 - Premium Analytics: Show chart tooltips with dark text on a light background.
 - Premium Analytics: Show hours watched and retention rate on the Videos report, and name the Videos, Clicks, Authors and Locations columns as in Stats.
+- Premium Analytics: Use a 2px corner radius on chart bars.
 - VideoPress: Add an introductory video to the first-run welcome modal.
 
 ### Bug fixes
