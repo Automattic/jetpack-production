@@ -590,10 +590,6 @@ __( "Failed to deactivate %s.", "jetpack-my-jetpack" );
 __( "Open Site Editor", "jetpack-my-jetpack" );
 /* translators: %s is the module name */
 __( "Toggle %s module", "jetpack-my-jetpack" );
-/* translators: %s is a plugin name, such as "Jetpack Boost". */
-__( "Plugin installs are turned off on this site. Ask your host or site administrator to install %s.", "jetpack-my-jetpack" );
-/* translators: %s is a plugin name, such as "Jetpack Boost". */
-__( "Your account can’t install plugins. Ask a site administrator to install %s.", "jetpack-my-jetpack" );
 /* translators: %s is a plugin or feature name. */
 __( "%s deactivated.", "jetpack-my-jetpack" );
 /* translators: %s is a plugin or feature name. */
@@ -601,6 +597,10 @@ __( "%s is on.", "jetpack-my-jetpack" );
 /* translators: %s is a plugin or feature name. */
 __( "Could not change %s. Please try again.", "jetpack-my-jetpack" );
 __( "The plugin could not be installed. Please try again.", "jetpack-my-jetpack" );
+/* translators: %s is a plugin name, such as "Jetpack Boost". */
+__( "Plugin installs are turned off on this site. Ask your host or site administrator to install %s.", "jetpack-my-jetpack" );
+/* translators: %s is a plugin name, such as "Jetpack Boost". */
+__( "Your account can’t install plugins. Ask a site administrator to install %s.", "jetpack-my-jetpack" );
 __( "Installing…", "jetpack-my-jetpack" );
 __( "Activating…", "jetpack-my-jetpack" );
 __( "Open", "jetpack-my-jetpack" );

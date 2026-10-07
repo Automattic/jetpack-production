@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the Products page. Links to it, including saved ones, now open the Features tab. Point the footer's Modules link and Help's All Jetpack modules link back to the Modules page.
 
 ### Fixed
+- Features: Stop requesting the Jetpack module list when the Jetpack plugin is not active.
 - Make the "plugins needed" notice for paid plans translatable as full sentences in both singular and plural forms.
 - Stop counting products that are off as needing a user connection.
 
