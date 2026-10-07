@@ -300,25 +300,35 @@ __( "Plugin activation needed", "jetpack-my-jetpack" );
 __( "Some plugins need to be installed and/or activated", "jetpack-my-jetpack" );
 __( "Some plugins need to be installed", "jetpack-my-jetpack" );
 __( "Some plugins need to be activated", "jetpack-my-jetpack" );
-/* translators: %1$s is the name of the Jetpack paid plan, i.e.- "Jetpack Security", and %2$s word "plugin" as singular, or plural ("plugins"). */
-__( "To get the most out of your <link>%1$s paid subscription</link> and have access to all it’s features, we recommend you install and/or activate the following %2$s:", "jetpack-my-jetpack" );
-_n( "plugin", "plugins", 1, "jetpack-my-jetpack" );
-/* translators: %1$s is the name of the Jetpack paid plan, i.e.- "Jetpack Security", and %2$s word "plugin" as singular, or plural ("plugins"). */
-__( "To get the most out of your <link>%1$s paid subscription</link> and have access to all it’s features, we recommend you install and activate the following %2$s:", "jetpack-my-jetpack" );
-/* translators: %1$s is the name of the Jetpack paid plan, i.e.- "Jetpack Security", and %2$s word "plugin" as singular, or plural ("plugins"). */
-__( "To get the most out of your <link>%1$s paid subscription</link> and have access to all it’s features, we recommend you activate the following %2$s:", "jetpack-my-jetpack" );
-/* translators: %1$s is "plugin" or "plugins" (singular/plural) */
-__( "Install and/or activate %1$s in one click", "jetpack-my-jetpack" );
-/* translators: %1$s is "plugin" or "plugins" (singular/plural) */
-__( "Install and activate %1$s in one click", "jetpack-my-jetpack" );
-/* translators: %1$s is "plugin" or "plugins" (singular/plural) */
-__( "Activate %1$s in one click", "jetpack-my-jetpack" );
+/* translators: %s is the name of the Jetpack paid plan, i.e.- "Jetpack Security". */
+__( "To get the most out of your <link>%s paid subscription</link> and have access to all its features, we recommend you install and/or activate the following plugin:", "jetpack-my-jetpack" );
+/* translators: %s is the name of the Jetpack paid plan, i.e.- "Jetpack Security". */
+__( "To get the most out of your <link>%s paid subscription</link> and have access to all its features, we recommend you install and activate the following plugin:", "jetpack-my-jetpack" );
+/* translators: %s is the name of the Jetpack paid plan, i.e.- "Jetpack Security". */
+__( "To get the most out of your <link>%s paid subscription</link> and have access to all its features, we recommend you activate the following plugin:", "jetpack-my-jetpack" );
+/* translators: %1$s is the name of the Jetpack paid plan, i.e.- "Jetpack Security", and %2$d is the number of plugins. */
+_n( "To get the most out of your <link>%1$s paid subscription</link> and have access to all its features, we recommend you install and/or activate the following %2$d plugin:", "To get the most out of your <link>%1$s paid subscription</link> and have access to all its features, we recommend you install and/or activate the following %2$d plugins:", 1, "jetpack-my-jetpack" );
+/* translators: %1$s is the name of the Jetpack paid plan, i.e.- "Jetpack Security", and %2$d is the number of plugins. */
+_n( "To get the most out of your <link>%1$s paid subscription</link> and have access to all its features, we recommend you install and activate the following %2$d plugin:", "To get the most out of your <link>%1$s paid subscription</link> and have access to all its features, we recommend you install and activate the following %2$d plugins:", 1, "jetpack-my-jetpack" );
+/* translators: %1$s is the name of the Jetpack paid plan, i.e.- "Jetpack Security", and %2$d is the number of plugins. */
+_n( "To get the most out of your <link>%1$s paid subscription</link> and have access to all its features, we recommend you activate the following %2$d plugin:", "To get the most out of your <link>%1$s paid subscription</link> and have access to all its features, we recommend you activate the following %2$d plugins:", 1, "jetpack-my-jetpack" );
+__( "Install and/or activate plugin in one click", "jetpack-my-jetpack" );
+__( "Install and activate plugin in one click", "jetpack-my-jetpack" );
+__( "Activate plugin in one click", "jetpack-my-jetpack" );
+/* translators: %d is the number of plugins. */
+_n( "Install and/or activate %d plugin in one click", "Install and/or activate %d plugins in one click", 1, "jetpack-my-jetpack" );
+/* translators: %d is the number of plugins. */
+_n( "Install and activate %d plugin in one click", "Install and activate %d plugins in one click", 1, "jetpack-my-jetpack" );
+/* translators: %d is the number of plugins. */
+_n( "Activate %d plugin in one click", "Activate %d plugins in one click", 1, "jetpack-my-jetpack" );
+__( "Activating plugin…", "jetpack-my-jetpack" );
+__( "Installing and activating plugin…", "jetpack-my-jetpack" );
+/* translators: %d is the number of plugins. */
+_n( "Activating %d plugin…", "Activating %d plugins…", 1, "jetpack-my-jetpack" );
+/* translators: %d is the number of plugins. */
+_n( "Installing and activating %d plugin…", "Installing and activating %d plugins…", 1, "jetpack-my-jetpack" );
 __( "Needs installation and activation", "jetpack-my-jetpack" );
 __( "Needs activation", "jetpack-my-jetpack" );
-/* translators: %s is the singular or plural "plugin" or "plugins". */
-__( "Activating %s…", "jetpack-my-jetpack" );
-/* translators: %s is the singular or plural "plugin" or "plugins". */
-__( "Installing and activating %s…", "jetpack-my-jetpack" );
 /* translators: %s is the product name. Can be either "Scan" or "Protect". */
 __( "%s found threats on your site", "jetpack-my-jetpack" );
 __( "We’ve detected some security threats that need your attention.", "jetpack-my-jetpack" );
