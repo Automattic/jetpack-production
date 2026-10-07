@@ -12,6 +12,9 @@ __( "(opens in a new tab)", "jetpack-backup-pkg" );
 __( "Keyboard shortcut: %s", "jetpack-backup-pkg" );
 __( "Loading", "jetpack-backup-pkg" );
 __( "Close", "jetpack-backup-pkg" );
+__( "More details follow the field.", "jetpack-backup-pkg" );
+__( "Select", "jetpack-backup-pkg" );
+__( "Dismiss", "jetpack-backup-pkg" );
 __( "Something went wrong", "jetpack-backup-pkg" );
 __( "The page ran into an unexpected problem. Your backups are unaffected.", "jetpack-backup-pkg" );
 __( "Reload the page", "jetpack-backup-pkg" );
@@ -30,7 +33,6 @@ __( "Today, %s, selected", "jetpack-backup-pkg" );
 __( "%s, selected", "jetpack-backup-pkg" );
 __( "Required", "jetpack-backup-pkg" );
 __( "Optional", "jetpack-backup-pkg" );
-__( "More details follow the field.", "jetpack-backup-pkg" );
 __( "Sort ascending", "jetpack-backup-pkg" );
 __( "Sort descending", "jetpack-backup-pkg" );
 __( "(no title)", "jetpack-backup-pkg" );
@@ -301,7 +303,6 @@ __( "An Automattic Airline", "jetpack-backup-pkg" );
 __( "Features", "jetpack-backup-pkg" );
 __( "Help", "jetpack-backup-pkg" );
 __( "Jetpack", "jetpack-backup-pkg" );
-__( "Dismiss", "jetpack-backup-pkg" );
 /* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack-backup-pkg" );
 __( "Your account (connection owner)", "jetpack-backup-pkg" );
@@ -343,8 +344,18 @@ __( "This site's Jetpack connection is already set up, but your account isn't li
 __( "Once your account is linked, you'll see any backups this site has. If it doesn't have an active Backup plan yet, you'll be able to add VaultPress Backup to start protecting it.", "jetpack-backup-pkg" );
 __( "Link my account", "jetpack-backup-pkg" );
 __( "Save changes and restore quickly with one-click recovery.", "jetpack-backup-pkg" );
+__( "Daily backup time", "jetpack-backup-pkg" );
+/* translators: %s: the site's timezone, e.g. "America/Sao_Paulo" or "UTC+5:30". */
+__( "Choose when your daily full backup runs. Times are shown in your site's timezone (%s).", "jetpack-backup-pkg" );
+__( "Backup window", "jetpack-backup-pkg" );
+/* translators: %s: display name of the person who chose the backup time. */
+__( "Set by %s.", "jetpack-backup-pkg" );
+__( "This is the default time.", "jetpack-backup-pkg" );
+__( "Save", "jetpack-backup-pkg" );
+__( "Daily backup time changed.", "jetpack-backup-pkg" );
 /* translators: %1$s is the formatted date (e.g. "Oct 22"); %2$s is a time range (e.g. "10:00-10:59 AM"). */
 __( "Next full backup: %1$s, %2$s.", "jetpack-backup-pkg" );
+__( "Modify daily backup time", "jetpack-backup-pkg" );
 __( "Modify", "jetpack-backup-pkg" );
 __( "You are close to reaching your storage limit. Once you do, we will delete your oldest backups to make space for new ones.", "jetpack-backup-pkg" );
 __( "You are very close to reaching your storage limit. Once you do, we will delete your oldest backups to make space for new ones.", "jetpack-backup-pkg" );
