@@ -424,7 +424,7 @@ function jetpack_get_module_info( $key ) {
 	    'free' => '',
 	    'requires_connection' => 'Yes',
 	    'requires_user_connection' => 'No',
-	    'auto_activate' => 'Yes',
+	    'auto_activate' => 'No',
 	    'module_tags' => 'Account Protection',
 	    'feature' => 'Security',
 	    'additional_search_queries' => '',
