@@ -367,6 +367,20 @@ __( "We removed your oldest backup(s) to make space for new ones. We will contin
 __( "Add %1$s additional storage for <Price />/month, billed monthly", "jetpack-backup-pkg" );
 /* translators: %d: percentage of backup storage used. */
 __( "Backup storage used: %d%%", "jetpack-backup-pkg" );
+__( "7 days", "jetpack-backup-pkg" );
+__( "30 days", "jetpack-backup-pkg" );
+__( "120 days", "jetpack-backup-pkg" );
+__( "1 year", "jetpack-backup-pkg" );
+__( "Purchase and update", "jetpack-backup-pkg" );
+__( "Days of backups saved", "jetpack-backup-pkg" );
+/* translators: %d: number of days of backups that will be kept. */
+_n( "You are about to reduce the number of days your backups are saved. Backups older than %d day will be deleted.", "You are about to reduce the number of days your backups are saved. Backups older than %d days will be deleted.", 1, "jetpack-backup-pkg" );
+__( "Choose how many days of backups to keep.", "jetpack-backup-pkg" );
+__( "Keep backups for", "jetpack-backup-pkg" );
+/* translators: %1$s: estimated storage, e.g. "45.2GB". %2$s: the site's storage limit, e.g. "10GB". */
+__( "Needs about %1$s of your %2$s.", "jetpack-backup-pkg" );
+__( "You need additional storage to choose this setting.", "jetpack-backup-pkg" );
+__( "Confirm change", "jetpack-backup-pkg" );
 /* translators: %d: is number of days of the forecast */
 _n( "Based on the current size of your site, Jetpack will save <strong>%d day of full backup</strong>.", "Based on the current size of your site, Jetpack will save <strong>%d days of full backups</strong>.", 1, "jetpack-backup-pkg" );
 __( "If you need more backup days, try <link>reducing the backup size</link> or adding more storage.", "jetpack-backup-pkg" );
@@ -376,6 +390,7 @@ __( "Using <strong>%1$.1fGB</strong> of %2$fGB", "jetpack-backup-pkg" );
 __( "Using <strong>%1$dGB</strong> of %2$dTB", "jetpack-backup-pkg" );
 __( "<a>1 day of backups saved</a>", "jetpack-backup-pkg" );
 __( "<a>%s days of backups saved</a>", "jetpack-backup-pkg" );
+__( "Backup retention changed.", "jetpack-backup-pkg" );
 __( "Cloud storage full", "jetpack-backup-pkg" );
 __( "Cloud storage is almost full", "jetpack-backup-pkg" );
 __( "Cloud storage space", "jetpack-backup-pkg" );

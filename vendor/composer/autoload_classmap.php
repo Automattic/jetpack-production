@@ -54,6 +54,7 @@ return array(
     'Automattic\\Jetpack\\Backup\\V0005\\REST\\File_Browser_Bridge' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/rest/class-file-browser-bridge.php',
     'Automattic\\Jetpack\\Backup\\V0005\\REST\\Rest_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/rest/class-rest-controller.php',
     'Automattic\\Jetpack\\Backup\\V0005\\REST\\Restore_Bridge' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/rest/class-restore-bridge.php',
+    'Automattic\\Jetpack\\Backup\\V0005\\REST\\Retention_Bridge' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/rest/class-retention-bridge.php',
     'Automattic\\Jetpack\\Backup\\V0005\\REST\\Schedule_Bridge' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/rest/class-schedule-bridge.php',
     'Automattic\\Jetpack\\Backup\\V0005\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-rest-controller.php',
     'Automattic\\Jetpack\\Backup\\V0005\\Throw_On_Errors' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup-helper-script-manager/src/class-throw-on-errors.php',
