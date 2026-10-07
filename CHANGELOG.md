@@ -56,6 +56,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: add the REST proxy the Newsletter checklist needs to read its task list and complete tasks.
 - Newsletter: Show the send icon before the Send button label in the test email modal.
 - Omnibar: Return the Stats chart node from the admin-bar REST endpoint, and the admin bar to every role on the site rather than administrators only.
+- Protect: Add a feature-flagged Protect Dashboard module that adds a Protect page to the Jetpack sidebar.
 - VideoPress: Remove the legacy VideoPress dashboard. Sites that turned off the modern dashboard no longer get a Jetpack > VideoPress menu.
 
 ## 16.3 - 2026-10-06

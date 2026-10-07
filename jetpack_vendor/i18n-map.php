@@ -122,7 +122,7 @@ return array(
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '6.9.1-alpha1791392694',
+      'ver' => '6.9.1-alpha1791395297',
     ),
     'jetpack-newsletter' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-newsletter',
@@ -159,6 +159,10 @@ return array(
     'jetpack-protect-models' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-protect-models',
       'ver' => '0.7.1-alpha1791386646',
+    ),
+    'jetpack-protect-pkg' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-protect',
+      'ver' => '0.1.0-alpha1791395297',
     ),
     'jetpack-protect-status' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-protect-status',

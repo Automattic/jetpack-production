@@ -151,6 +151,11 @@ function jetpack_get_module_i18n( $key ) {
 				'description' => _x( 'Display a customizable list of your latest posts anywhere on your site.', 'Module Description', 'jetpack' ),
 			),
 
+			'protect-dashboard' => array(
+				'name' => _x( 'Protect Dashboard', 'Module Name', 'jetpack' ),
+				'description' => _x( 'Security tools that keep your site safe and sound, from posts to plugins.', 'Module Description', 'jetpack' ),
+			),
+
 			'protect' => array(
 				'name' => _x( 'Brute Force Protection', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Block malicious login attempts automatically and keep hackers out.', 'Module Description', 'jetpack' ),
@@ -373,6 +378,10 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// Modules with `Admin` tag:
 			// - modules/post-list.php
 			'Admin' => _x( 'Admin', 'Module Tag', 'jetpack' ),
+
+			// Modules with `Security` tag:
+			// - modules/protect-dashboard.php
+			'Security' => _x( 'Security', 'Module Tag', 'jetpack' ),
 
 			// Modules with `Jetpack Stats` tag:
 			// - modules/stats.php
@@ -887,6 +896,24 @@ function jetpack_get_module_info( $key ) {
 	    'module_tags' => 'Admin',
 	    'feature' => 'Appearance',
 	    'additional_search_queries' => 'post, admin, list',
+	    'plan_classes' => '',
+	  ),
+	  'protect-dashboard' => 
+	  array (
+	    'name' => 'Protect Dashboard',
+	    'description' => 'Security tools that keep your site safe and sound, from posts to plugins.',
+	    'sort' => '4',
+	    'recommendation_order' => '',
+	    'introduced' => '16.4-a.1',
+	    'changed' => '',
+	    'deactivate' => '',
+	    'free' => '',
+	    'requires_connection' => 'Yes',
+	    'requires_user_connection' => '',
+	    'auto_activate' => 'No',
+	    'module_tags' => 'Security',
+	    'feature' => 'Security',
+	    'additional_search_queries' => '',
 	    'plan_classes' => '',
 	  ),
 	  'protect' => 
