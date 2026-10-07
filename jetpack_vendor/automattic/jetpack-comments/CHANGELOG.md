@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Hide the plain textarea once the editor mounts, even in themes that style it by ID.
+- Keep the caret where the reader clicked when the comment editor opens.
 - Keep the submit button inside the comment box in themes that offset it.
 
 ## [0.4.0] - 2026-10-05
