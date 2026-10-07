@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the date once in chart tooltips, read each row as value then metric, and list the comparison period in a second column.
 - Premium Analytics: Use a 2px corner radius on chart bars.
 - VideoPress: Add an introductory video to the first-run welcome modal.
+- VideoPress: Add trim and cut editing to the video block toolbar and clarify the editor tool icons.
 
 ### Bug fixes
 - Backup: Stop the Get VaultPress Backup button from staying busy when setup fails.
