@@ -54,7 +54,7 @@ return array(
     ),
     'jetpack-comments' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-comments',
-      'ver' => '0.4.1-alpha1791397261',
+      'ver' => '0.4.1-alpha1791404576',
     ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
