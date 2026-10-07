@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Mark the Comments Subscribers and File downloads report links as opening in a new tab.
 - Premium Analytics: Open the dashboard from the admin bar Stats links when it is enabled.
 - Premium Analytics: Rename the Store tab to WooCommerce, including its URL.
+- Premium Analytics: Rename the Videos, Clicks, Authors and Locations report CSV headers to match the table columns.
 - Premium Analytics: Show chart tooltips with dark text on a light background.
 - Premium Analytics: Show hours watched and retention rate on the Videos report, and name the Videos, Clicks, Authors and Locations columns as in Stats.
 - Premium Analytics: Use a 2px corner radius on chart bars.

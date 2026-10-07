@@ -97,8 +97,6 @@ __( "Open rate", "jetpack-premium-analytics-pkg" );
 __( "Click rate", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load emails. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Search emails", "jetpack-premium-analytics-pkg" );
-__( "Region", "jetpack-premium-analytics-pkg" );
-__( "City", "jetpack-premium-analytics-pkg" );
 __( "Country", "jetpack-premium-analytics-pkg" );
 /* translators: %s is the country name. */
 __( "Flag of %s", "jetpack-premium-analytics-pkg" );

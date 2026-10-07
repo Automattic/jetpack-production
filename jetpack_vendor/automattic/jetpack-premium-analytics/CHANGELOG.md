@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Charts: Use a 2px corner radius on chart bars.
 - Dashboard: Move the WooCommerce tab to the WooCommerce stats package and rename it from Store to WooCommerce, including its URL.
 - Open the dashboard from the admin bar Stats links and the newsletter action bar post stats link when it is enabled.
+- Reports: Rename the Videos, Clicks, Authors and Locations CSV headers to match the report table columns.
 - Widgets toolkit: Move the remaining report and widget links onto the shared ExternalLink and InternalLink components; the Comments Subscribers and File downloads report links now open in a new tab with the outbound marker.
 
 ### Fixed
