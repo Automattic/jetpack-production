@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Match the updated WordPress.com sign-in contract, and keep returning commenters signed in for 30 days.
 - Never load on jetpack.wordpress.com, which serves the Verbum comment iframe to Atomic and self-hosted sites.
 - Replace the identity menu with one link beside the commenter's name: Change for guests and Log out for anyone signed in. The avatar and name link to a site user's profile, or to a guest's subscriptions where the Newsletter is on.
+- Skip the WordPress.com account check on guest emails outside WordPress.com, where nothing turns those comments away.
 
 ### Fixed
 - Accept a website without "https://" in the guest comment form, and wait for the email check before submitting.
