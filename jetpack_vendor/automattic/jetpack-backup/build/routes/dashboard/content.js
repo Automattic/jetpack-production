@@ -247,14 +247,17 @@ __( "Modified:", "jetpack-backup-pkg" );
 __( "Size:", "jetpack-backup-pkg" );
 __( "Type:", "jetpack-backup-pkg" );
 __( "Hash:", "jetpack-backup-pkg" );
-__( "This preview is hidden because it contains sensitive information.", "jetpack-backup-pkg" );
+__( "The preview is hidden because it contains sensitive information.", "jetpack-backup-pkg" );
 __( "Show preview", "jetpack-backup-pkg" );
+__( "Show download", "jetpack-backup-pkg" );
 __( "Preview unavailable for this file.", "jetpack-backup-pkg" );
 __( "Loading preview…", "jetpack-backup-pkg" );
 __( "Preview could not be loaded for this file.", "jetpack-backup-pkg" );
 __( "This file is not text and cannot be previewed.", "jetpack-backup-pkg" );
 __( "Preview truncated: this file is too large to show in full.", "jetpack-backup-pkg" );
 __( "Close preview", "jetpack-backup-pkg" );
+__( "Download file", "jetpack-backup-pkg" );
+__( "The download could not start. Try again.", "jetpack-backup-pkg" );
 /* translators: %s: file name. */
 __( "Preview of %s", "jetpack-backup-pkg" );
 __( "We couldn't load this backup's files.", "jetpack-backup-pkg" );
