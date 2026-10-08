@@ -18,6 +18,8 @@ __( "Dismiss", "jetpack-backup-pkg" );
 __( "Something went wrong", "jetpack-backup-pkg" );
 __( "The page ran into an unexpected problem. Your backups are unaffected.", "jetpack-backup-pkg" );
 __( "Reload the page", "jetpack-backup-pkg" );
+/* translators: %s: actor name */
+__( "By %s", "jetpack-backup-pkg" );
 /* translators: 1: Calendar type. 2: Current month and year. */
 __( "%1$s, %2$s", "jetpack-backup-pkg" );
 __( "Date calendar", "jetpack-backup-pkg" );
@@ -278,9 +280,6 @@ __( "Download backup", "jetpack-backup-pkg" );
 /* translators: %d count of selected items (files + opaque folders) */
 _n( "Download %d selected item", "Download %d selected items", 1, "jetpack-backup-pkg" );
 __( "Restore to this point", "jetpack-backup-pkg" );
-/* translators: %1$s formatted date+time, %2$s actor name */
-__( "%1$s by %2$s", "jetpack-backup-pkg" );
-__( "Files", "jetpack-backup-pkg" );
 __( "Could not start a backup. Please try again.", "jetpack-backup-pkg" );
 __( "Back up now", "jetpack-backup-pkg" );
 __( "Cannot queue backups due to reaching storage limits.", "jetpack-backup-pkg" );
@@ -404,9 +403,9 @@ __( "Cloud storage is almost full", "jetpack-backup-pkg" );
 __( "Cloud storage space", "jetpack-backup-pkg" );
 __( "We couldn't check your site's backup status.", "jetpack-backup-pkg" );
 __( "Backup activity", "jetpack-backup-pkg" );
+__( "Loading item details…", "jetpack-backup-pkg" );
 __( "Select an item from the list to see details.", "jetpack-backup-pkg" );
 __( "We couldn't load this item.", "jetpack-backup-pkg" );
-__( "Loading item details…", "jetpack-backup-pkg" );
 __( "That restore isn't among this site's most recent ones any more.", "jetpack-backup-pkg" );
 __( "That item isn't on this page of the activity log. It may be on another page, or no longer available.", "jetpack-backup-pkg" );
 __( "Clear selection", "jetpack-backup-pkg" );
