@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the WooCommerce time series widgets, now built by the WooCommerce Stats package.
 
 ### Fixed
+- Charts: Draw a summary chart too short for its axes as a sparkline without axes, so its tooltip can be reached.
 - Charts: Paint the metric tabs chart's tooltip above the metric tabs.
 - Date controls: Compare Last 30 days and custom ranges starting mid-month with the same number of days right before them.
 - Draw attention to the date control when a click on the Traffic summary chart sets the period.
