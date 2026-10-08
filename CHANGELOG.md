@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Charts: Announce line, area and bar charts correctly to screen readers.
 - Forms: Fix error notices shown after deleting or trashing a form, even though it succeeded.
 - Forms: Keep brackets in submitted values escaped, so they cannot run shortcodes, on WordPress versions with the new HTML sanitizer.
+- Forms: Restore scrolling on the standalone single response page so long responses are no longer cut off.
 - Google Photos: Show a reconnect prompt when the Google connection is rejected, explain when the Google account has no Google Photos set up, and start a new picker session when the saved one no longer exists.
 - Likes: Keep Like buttons on custom post types on new sites until you choose where buttons appear.
 - My Jetpack: Stop showing an empty account avatar on the Overview connection card when nothing in use needs a user connection.
