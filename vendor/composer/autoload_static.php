@@ -733,6 +733,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_4_a_0
         'Automattic\\Jetpack\\Waf\\Waf_Transforms' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php',
         'Automattic\\Jetpack\\WooCommerceStats\\Analytics_Dashboard' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-analytics-dashboard.php',
         'Automattic\\Jetpack\\WooCommerceStats\\Api_Proxy_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-api-proxy-controller.php',
+        'Automattic\\Jetpack\\WooCommerceStats\\Store_Currency' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-store-currency.php',
         'Automattic\\Jetpack\\WordAds\\Analytics_Dashboard' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-ads/src/class-analytics-dashboard.php',
         'Automattic\\Woocommerce_Analytics' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woocommerce-analytics.php',
         'Automattic\\Woocommerce_Analytics\\Consent_Manager' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-consent-manager.php',

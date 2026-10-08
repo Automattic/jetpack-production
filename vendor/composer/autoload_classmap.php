@@ -708,6 +708,7 @@ return array(
     'Automattic\\Jetpack\\Waf\\Waf_Transforms' => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php',
     'Automattic\\Jetpack\\WooCommerceStats\\Analytics_Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-analytics-dashboard.php',
     'Automattic\\Jetpack\\WooCommerceStats\\Api_Proxy_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-api-proxy-controller.php',
+    'Automattic\\Jetpack\\WooCommerceStats\\Store_Currency' => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-store-currency.php',
     'Automattic\\Jetpack\\WordAds\\Analytics_Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-ads/src/class-analytics-dashboard.php',
     'Automattic\\Woocommerce_Analytics' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woocommerce-analytics.php',
     'Automattic\\Woocommerce_Analytics\\Consent_Manager' => $baseDir . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-consent-manager.php',
