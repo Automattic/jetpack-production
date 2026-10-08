@@ -91,6 +91,7 @@ return array(
     'Automattic\\Jetpack\\Comments\\Checkpoint_Endpoint' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/identity/checkpoint/class-checkpoint-endpoint.php',
     'Automattic\\Jetpack\\Comments\\Comment_Form' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/form/class-comment-form.php',
     'Automattic\\Jetpack\\Comments\\Comments' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/class-comments.php',
+    'Automattic\\Jetpack\\Comments\\Embeds' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/editor/class-embeds.php',
     'Automattic\\Jetpack\\Comments\\Identity' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/identity/class-identity.php',
     'Automattic\\Jetpack\\Comments\\Passport' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/identity/checkpoint/class-passport.php',
     'Automattic\\Jetpack\\Composer\\Manager' => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-manager.php',

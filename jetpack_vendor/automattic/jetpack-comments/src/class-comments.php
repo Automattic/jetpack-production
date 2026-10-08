@@ -15,7 +15,7 @@ class Comments {
 	/**
 	 * Package version.
 	 */
-	const PACKAGE_VERSION = '0.4.1-alpha';
+	const PACKAGE_VERSION = '0.5.0-alpha';
 
 	/**
 	 * Whether Jetpack Comments should load.
@@ -47,5 +47,6 @@ class Comments {
 		Checkpoint::init();
 		Avatars::init();
 		Block_Editor::init();
+		Embeds::init();
 	}
 }
