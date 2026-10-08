@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Features: Offer the Protect switch through Jetpack when the Protect Dashboard feature flag is on.
+- Overview: Stop asking to connect a WordPress.com account when nothing in use needs one.
 
 ### Fixed
 - Features: Stop requesting the Jetpack module list when the Jetpack plugin is not active.
