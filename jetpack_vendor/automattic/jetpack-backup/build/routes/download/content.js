@@ -8,6 +8,8 @@
 
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-backup-pkg" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-backup-pkg" );
 __( "Loading", "jetpack-backup-pkg" );
 __( "Something went wrong", "jetpack-backup-pkg" );
 __( "The page ran into an unexpected problem. Your backups are unaffected.", "jetpack-backup-pkg" );
@@ -17,8 +19,6 @@ __( "An Automattic Airline", "jetpack-backup-pkg" );
 __( "Features", "jetpack-backup-pkg" );
 __( "Help", "jetpack-backup-pkg" );
 __( "Jetpack", "jetpack-backup-pkg" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s", "jetpack-backup-pkg" );
 __( "Dismiss", "jetpack-backup-pkg" );
 /* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack-backup-pkg" );
@@ -47,6 +47,14 @@ __( "The site doesn't appear to be connected. Backup requires an active Jetpack 
 /* translators: 1: what failed, in our own words. 2: the reason WordPress.com gave, usually in English. */
 __( "%1$s WordPress.com said: %2$s", "jetpack-backup-pkg" );
 __( "Request failed", "jetpack-backup-pkg" );
+__( "Restore ID: %s", "jetpack-backup-pkg" );
+__( "Download ID: %s", "jetpack-backup-pkg" );
+__( "Backup attempt ID: %s", "jetpack-backup-pkg" );
+__( "Backup ID: %s", "jetpack-backup-pkg" );
+__( "Error code: %s", "jetpack-backup-pkg" );
+__( "%1$s · %2$s", "jetpack-backup-pkg" );
+__( "Copied", "jetpack-backup-pkg" );
+__( "Copy error reference", "jetpack-backup-pkg" );
 __( "We couldn't load your backup details", "jetpack-backup-pkg" );
 __( "We couldn't check this site's Backup plan. Your backups are unaffected. Try again, or contact support if this keeps happening.", "jetpack-backup-pkg" );
 __( "Try again", "jetpack-backup-pkg" );

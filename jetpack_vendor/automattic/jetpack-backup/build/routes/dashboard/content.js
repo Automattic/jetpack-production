@@ -232,6 +232,14 @@ __( "Restore complete", "jetpack-backup-pkg" );
 __( "Restore didn't finish", "jetpack-backup-pkg" );
 /* translators: %s: date and time of the backup that was restored. */
 __( "Restore to %s", "jetpack-backup-pkg" );
+__( "Restore ID: %s", "jetpack-backup-pkg" );
+__( "Download ID: %s", "jetpack-backup-pkg" );
+__( "Backup attempt ID: %s", "jetpack-backup-pkg" );
+__( "Backup ID: %s", "jetpack-backup-pkg" );
+__( "Error code: %s", "jetpack-backup-pkg" );
+__( "%1$s · %2$s", "jetpack-backup-pkg" );
+__( "Copied", "jetpack-backup-pkg" );
+__( "Copy error reference", "jetpack-backup-pkg" );
 __( "Retrying", "jetpack-backup-pkg" );
 __( "Try again", "jetpack-backup-pkg" );
 __( "Yesterday, %s", "jetpack-backup-pkg" );

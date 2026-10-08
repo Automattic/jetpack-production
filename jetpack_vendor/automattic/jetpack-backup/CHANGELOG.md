@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Include WordPress.com's error reason in failed backup REST responses.
+
 ## [5.1.1] - 2026-10-05
 ### Changed
 - Admin menu: Label the sidebar item "Backup" with the modernized dashboard too. [#52937]
