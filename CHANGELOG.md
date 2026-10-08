@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Draw today's WordAds bucket as not yet counted for Ads Served and Revenue, as for CPM, and say so in the tooltip.
 - Premium Analytics: Mark the Comments Subscribers and File downloads report links as opening in a new tab.
 - Premium Analytics: Move the Traffic summary's grouping control (by days, weeks or months) into the chart itself, which remembers your choice.
+- Premium Analytics: Open on the last 7 days, or on the range you last picked in Stats, and remember a range you apply.
 - Premium Analytics: Open the dashboard from the admin bar Stats links when it is enabled.
 - Premium Analytics: Rename the Store tab to WooCommerce, including its URL.
 - Premium Analytics: Rename the Videos, Clicks, Authors and Locations report CSV headers to match the table columns.
