@@ -42,7 +42,6 @@
 		"build/widgets/most-commented-posts/render.js",
 		"build/widgets/most-popular-day/render.js",
 		"build/widgets/most-popular-time/render.js",
-		"build/widgets/payment-status/render.js",
 		"build/widgets/plan-usage/render.js",
 		"build/widgets/popular-days/render.js",
 		"build/widgets/popular-hours/render.js",
