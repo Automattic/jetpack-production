@@ -368,14 +368,20 @@ __( "Daily backup time changed.", "jetpack-backup-pkg" );
 __( "Next full backup: %1$s, %2$s.", "jetpack-backup-pkg" );
 __( "Modify daily backup time", "jetpack-backup-pkg" );
 __( "Modify", "jetpack-backup-pkg" );
-__( "You are close to reaching your storage limit. Once you do, we will delete your oldest backups to make space for new ones.", "jetpack-backup-pkg" );
-__( "You are very close to reaching your storage limit. Once you do, we will delete your oldest backups to make space for new ones.", "jetpack-backup-pkg" );
-__( "You have reached your storage limit. Backups have been stopped. Please upgrade your storage to resume backups.", "jetpack-backup-pkg" );
-/* translators: %s is a number greater than 0 that means a number of days. */
-__( "You have reached your storage limit with %s day(s) of backups saved. Backups have been stopped. Please upgrade your storage to resume backups.", "jetpack-backup-pkg" );
+__( "Once you do, we will delete your oldest backups to make space for new ones.", "jetpack-backup-pkg" );
+/* translators: %s is a storage size such as 10GB. */
+__( "Once you do, we will delete your oldest backups to make space for new ones. Upgrade to add additional %s of storage.", "jetpack-backup-pkg" );
+__( "You are close to reaching your storage limit", "jetpack-backup-pkg" );
+__( "Backups have been stopped. Please upgrade your storage to resume backups.", "jetpack-backup-pkg" );
+/* translators: %s is a storage size such as 10GB. */
+__( "Backups have been stopped. Please upgrade to add additional %s of storage and resume backups.", "jetpack-backup-pkg" );
+__( "You have reached your storage limit", "jetpack-backup-pkg" );
+/* translators: %d is a number greater than 0 that means a number of days. */
+_n( "You have reached your storage limit with %d day of backups saved", "You have reached your storage limit with %d days of backups saved", 1, "jetpack-backup-pkg" );
 /* translators: %s is a number greater than 0 that means a number of days. */
 __( "We removed your oldest backup(s) to make space for new ones. We will continue to remove old backups as needed, up to the last %s days.", "jetpack-backup-pkg" );
 __( "Add %1$s additional storage for <Price />/month, billed monthly", "jetpack-backup-pkg" );
+__( "Upgrade now", "jetpack-backup-pkg" );
 /* translators: %d: percentage of backup storage used. */
 __( "Backup storage used: %d%%", "jetpack-backup-pkg" );
 __( "7 days", "jetpack-backup-pkg" );
@@ -397,14 +403,12 @@ _n( "Based on the current size of your site, Jetpack will save <strong>%d day of
 __( "If you need more backup days, try <link>reducing the backup size</link> or adding more storage.", "jetpack-backup-pkg" );
 __( "Backup archive size", "jetpack-backup-pkg" );
 __( "Add more storage", "jetpack-backup-pkg" );
-__( "Using <strong>%1$.1fGB</strong> of %2$fGB", "jetpack-backup-pkg" );
-__( "Using <strong>%1$dGB</strong> of %2$dTB", "jetpack-backup-pkg" );
+__( "Using %1$.1fGB of %2$fGB storage space", "jetpack-backup-pkg" );
+__( "Using %1$dGB of %2$dTB storage space", "jetpack-backup-pkg" );
 __( "<a>1 day of backups saved</a>", "jetpack-backup-pkg" );
 __( "<a>%s days of backups saved</a>", "jetpack-backup-pkg" );
 __( "Backup retention changed.", "jetpack-backup-pkg" );
-__( "Cloud storage full", "jetpack-backup-pkg" );
-__( "Cloud storage is almost full", "jetpack-backup-pkg" );
-__( "Cloud storage space", "jetpack-backup-pkg" );
+__( "Backup storage", "jetpack-backup-pkg" );
 __( "We couldn't check your site's backup status.", "jetpack-backup-pkg" );
 __( "Backup activity", "jetpack-backup-pkg" );
 __( "Loading item details…", "jetpack-backup-pkg" );
