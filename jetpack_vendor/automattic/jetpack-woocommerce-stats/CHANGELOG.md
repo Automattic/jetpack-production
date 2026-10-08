@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Place Net sales over time on the WooCommerce tab by default.
 - Register the WooCommerce section on the Premium Analytics dashboard.
 
+### Changed
+- Rename the Visitors over time widget to Store visitors over time, so it isn't confused with Jetpack Stats visitors.
+
 ## 0.1.0-alpha - unreleased
 
 - Initial version.

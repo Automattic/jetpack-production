@@ -8,8 +8,8 @@
 
 __( "Retry", "jetpack-woocommerce-stats-pkg" );
 __( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg" );
-/* translators: %s: number of visitors. */
-_n( "%s Visitor", "%s Visitors", 1, "jetpack-woocommerce-stats-pkg" );
-__( "Visitors", "jetpack-woocommerce-stats-pkg" );
-__( "No visitors in this period.", "jetpack-woocommerce-stats-pkg" );
-__( "We couldn't load visitors. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );
+/* translators: %s: number of store visitors. */
+_n( "%s Store Visitor", "%s Store Visitors", 1, "jetpack-woocommerce-stats-pkg" );
+__( "Store visitors", "jetpack-woocommerce-stats-pkg" );
+__( "No store visitors in this period.", "jetpack-woocommerce-stats-pkg" );
+__( "We couldn't load store visitors. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );

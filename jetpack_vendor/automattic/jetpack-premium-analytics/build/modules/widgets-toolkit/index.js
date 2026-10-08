@@ -64,6 +64,7 @@ __( "Refunds", "jetpack-premium-analytics-pkg" );
 __( "Total sales", "jetpack-premium-analytics-pkg" );
 __( "State", "jetpack-premium-analytics-pkg" );
 __( "Country", "jetpack-premium-analytics-pkg" );
+__( "Store visitors", "jetpack-premium-analytics-pkg" );
 __( "This data is unavailable right now.", "jetpack-premium-analytics-pkg" );
 __( "This author has too many posts to count their stats here.", "jetpack-premium-analytics-pkg" );
 __( "You don't have access to this data.", "jetpack-premium-analytics-pkg" );

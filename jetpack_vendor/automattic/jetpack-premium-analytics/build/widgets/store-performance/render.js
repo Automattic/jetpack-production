@@ -16,10 +16,10 @@ __( "Bookings", "jetpack-premium-analytics-pkg" );
 __( "See a breakdown of when bookings are placed to identify peak selling periods.", "jetpack-premium-analytics-pkg" );
 /* translators: %s: number of bookings. */
 _n( "%s Booking", "%s Bookings", 1, "jetpack-premium-analytics-pkg" );
-__( "Visitors", "jetpack-premium-analytics-pkg" );
-__( "Track website visitor trends and monitor traffic patterns over time.", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of visitors. */
-_n( "%s Visitor", "%s Visitors", 1, "jetpack-premium-analytics-pkg" );
+__( "Store visitors", "jetpack-premium-analytics-pkg" );
+__( "Store visitors recorded through WooCommerce sessions. Jetpack Stats measures visitors separately, so totals may differ.", "jetpack-premium-analytics-pkg" );
+/* translators: %s: number of store visitors. */
+_n( "%s Store Visitor", "%s Store Visitors", 1, "jetpack-premium-analytics-pkg" );
 __( "Store conversion rate", "jetpack-premium-analytics-pkg" );
 __( "Track your store's conversion funnel from sessions to completed orders.", "jetpack-premium-analytics-pkg" );
 __( "Customers", "jetpack-premium-analytics-pkg" );

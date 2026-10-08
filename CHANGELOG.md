@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Cap the cards on report pages at a centered 1440px column on wide screens, so each row's label and numbers stay close enough to read together.
 - Premium Analytics: Compare the dashboard with the previous period by default.
 - Premium Analytics: Draw today's WordAds bucket as not yet counted for Ads Served and Revenue, as for CPM, and say so in the tooltip.
+- Premium Analytics: Label WooCommerce visitor counts as Store visitors, so they aren't confused with Jetpack Stats visitors.
 - Premium Analytics: Let shop managers open the dashboard to read the store reports.
 - Premium Analytics: Mark the Comments Subscribers and File downloads report links as opening in a new tab.
 - Premium Analytics: Move the Traffic summary's grouping control (by days, weeks or months) into the chart itself, which remembers your choice.

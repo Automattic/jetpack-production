@@ -115,9 +115,9 @@ return array(
 	array(
 		'name'         => 'woocommerce-analytics/visitors-over-time',
 		'dir_name'     => 'visitors-over-time',
-		'title'        => 'Visitors over time',
-		'description'  => 'Track website visitor trends and monitor traffic patterns over time.',
-		'help'         => array( 'content' => 'Track website visitor trends and monitor traffic patterns over time.' ),
+		'title'        => 'Store visitors over time',
+		'description'  => 'Track how many people visit your store over time.',
+		'help'         => array( 'content' => 'Store visitors recorded through WooCommerce sessions. Jetpack Stats measures visitors separately, so totals may differ.' ),
 		'icon'         => null,
 		'actions'      => null,
 		'has_render'   => true,
