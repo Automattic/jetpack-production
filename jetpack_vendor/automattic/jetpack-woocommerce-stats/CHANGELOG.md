@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the time series widgets: total and gross sales, orders, average order value, average items per order, bookings and visitors over time, all placed on the WooCommerce tab by default.
 - Place Net sales over time on the WooCommerce tab by default.
 - Register the WooCommerce section on the Premium Analytics dashboard.
+- Widgets: Add a line or bar chart type control to the report charts.
 
 ### Changed
 - Rename the Visitors over time widget to Store visitors over time, so it isn't confused with Jetpack Stats visitors.

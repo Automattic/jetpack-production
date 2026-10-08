@@ -1,6 +1,7 @@
 {
 	"bundles": [
 		"build/widgets/wordads-chart-tabs/render.js",
+		"build/widgets/wordads-chart-tabs/widget.js",
 		"build/widgets/wordads-earnings-history/render.js",
 		"build/widgets/wordads-highlights/render.js",
 		"build/widgets/wordads-highlights/widget.js"

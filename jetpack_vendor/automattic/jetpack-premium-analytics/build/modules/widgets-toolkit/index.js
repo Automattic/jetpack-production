@@ -71,7 +71,6 @@ __( "You don't have access to this data.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "Line chart", "jetpack-premium-analytics-pkg" );
 __( "Bar chart", "jetpack-premium-analytics-pkg" );
-__( "Chart type", "jetpack-premium-analytics-pkg" );
 __( "Total views", "jetpack-premium-analytics-pkg" );
 __( "Daily average", "jetpack-premium-analytics-pkg" );
 _x( "Metric", "label for the views metric selector", "jetpack-premium-analytics-pkg" );

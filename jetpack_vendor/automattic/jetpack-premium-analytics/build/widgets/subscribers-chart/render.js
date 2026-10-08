@@ -12,6 +12,7 @@ _n( "%s Subscriber", "%s Subscribers", 1, "jetpack-premium-analytics-pkg" );
 __( "Paid subscribers", "jetpack-premium-analytics-pkg" );
 /* translators: %s: number of paid subscribers. */
 _n( "%s Paid subscriber", "%s Paid subscribers", 1, "jetpack-premium-analytics-pkg" );
+__( "Chart type", "jetpack-premium-analytics-pkg" );
 __( "Subscriber metric", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load subscriber data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );

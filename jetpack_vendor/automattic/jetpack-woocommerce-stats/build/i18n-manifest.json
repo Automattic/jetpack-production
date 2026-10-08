@@ -1,17 +1,25 @@
 {
 	"bundles": [
 		"build/widgets/average-items-per-order/render.js",
+		"build/widgets/average-items-per-order/widget.js",
 		"build/widgets/average-order-value/render.js",
+		"build/widgets/average-order-value/widget.js",
 		"build/widgets/bookings-by-status/render.js",
 		"build/widgets/bookings-over-time/render.js",
+		"build/widgets/bookings-over-time/widget.js",
 		"build/widgets/coupon-usage-over-time/render.js",
 		"build/widgets/gross-sales-over-time/render.js",
+		"build/widgets/gross-sales-over-time/widget.js",
 		"build/widgets/net-sales-over-time/render.js",
+		"build/widgets/net-sales-over-time/widget.js",
 		"build/widgets/new-vs-returning-customer/render.js",
 		"build/widgets/orders-fulfillment/render.js",
 		"build/widgets/orders-over-time/render.js",
+		"build/widgets/orders-over-time/widget.js",
 		"build/widgets/payment-status/render.js",
 		"build/widgets/total-sales-over-time/render.js",
-		"build/widgets/visitors-over-time/render.js"
+		"build/widgets/total-sales-over-time/widget.js",
+		"build/widgets/visitors-over-time/render.js",
+		"build/widgets/visitors-over-time/widget.js"
 	]
 }

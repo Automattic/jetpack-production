@@ -22,6 +22,7 @@ _n( "%s Comment", "%s Comments", 1, "jetpack-premium-analytics-pkg" );
 __( "Likes", "jetpack-premium-analytics-pkg" );
 /* translators: %s: number of likes. */
 _n( "%s Like", "%s Likes", 1, "jetpack-premium-analytics-pkg" );
+__( "Chart type", "jetpack-premium-analytics-pkg" );
 __( "Hourly data isn't available for this metric.", "jetpack-premium-analytics-pkg" );
 __( "Traffic metric", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load traffic data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
