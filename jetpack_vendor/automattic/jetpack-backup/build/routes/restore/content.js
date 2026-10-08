@@ -8,7 +8,10 @@
 
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-backup-pkg" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-backup-pkg" );
 __( "Loading", "jetpack-backup-pkg" );
+__( "Dismiss", "jetpack-backup-pkg" );
 __( "Something went wrong", "jetpack-backup-pkg" );
 __( "The page ran into an unexpected problem. Your backups are unaffected.", "jetpack-backup-pkg" );
 __( "Reload the page", "jetpack-backup-pkg" );
@@ -17,9 +20,6 @@ __( "An Automattic Airline", "jetpack-backup-pkg" );
 __( "Features", "jetpack-backup-pkg" );
 __( "Help", "jetpack-backup-pkg" );
 __( "Jetpack", "jetpack-backup-pkg" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s", "jetpack-backup-pkg" );
-__( "Dismiss", "jetpack-backup-pkg" );
 /* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack-backup-pkg" );
 __( "Your account (connection owner)", "jetpack-backup-pkg" );
@@ -71,35 +71,39 @@ __( "Back to overview", "jetpack-backup-pkg" );
 __( "WordPress themes", "jetpack-backup-pkg" );
 __( "WordPress plugins", "jetpack-backup-pkg" );
 __( "WordPress root", "jetpack-backup-pkg" );
-__( "Includes wp-config.php and any non-WordPress files.", "jetpack-backup-pkg" );
+__( "includes wp-config.php and any non-WordPress files", "jetpack-backup-pkg" );
 __( "WP-content directory", "jetpack-backup-pkg" );
-__( "Excludes themes, plugins, and uploads.", "jetpack-backup-pkg" );
+__( "excludes themes, plugins, and uploads", "jetpack-backup-pkg" );
 __( "Site database", "jetpack-backup-pkg" );
-__( "Includes pages and posts.", "jetpack-backup-pkg" );
+__( "includes pages and posts", "jetpack-backup-pkg" );
 __( "Media uploads", "jetpack-backup-pkg" );
-__( "You must also select Site database for restored media uploads to appear.", "jetpack-backup-pkg" );
+__( "you must also select Site database for restored media uploads to appear", "jetpack-backup-pkg" );
+/* translators: 1: item name, e.g. "Media uploads". 2: short note about what it covers, e.g. "includes pages and posts". */
+__( "<strong>%1$s</strong> (%2$s)", "jetpack-backup-pkg" );
 __( "Restore failed.", "jetpack-backup-pkg" );
 __( "Your restore didn't start, so nothing on your site has changed.", "jetpack-backup-pkg" );
 __( "This restore link isn't valid.", "jetpack-backup-pkg" );
 __( "The address is missing a valid restore point. Go back to the overview and choose a backup to restore.", "jetpack-backup-pkg" );
+__( "Checking for a restore in progress…", "jetpack-backup-pkg" );
+__( "Restoring from backup…", "jetpack-backup-pkg" );
+__( "Restore complete.", "jetpack-backup-pkg" );
+__( "Restore finished with errors", "jetpack-backup-pkg" );
 __( "Restore backup", "jetpack-backup-pkg" );
 __( "Restore point:", "jetpack-backup-pkg" );
-__( "Checking for a restore in progress…", "jetpack-backup-pkg" );
-/* translators: %s is a date, e.g. "Aug 12, 2026". */
-__( "A restore of your %s backup is already running. You can't start another from here until it finishes.", "jetpack-backup-pkg" );
-__( "A restore is already running for this site. You can't start another from here until it finishes.", "jetpack-backup-pkg" );
-__( "Restoring will overwrite the matching parts of your live site with the contents of this backup. This cannot be undone.", "jetpack-backup-pkg" );
+__( "Restoring replaces the items you select below with their versions from this backup. Everything else stays as it is. This cannot be undone.", "jetpack-backup-pkg" );
 __( "Choose the items you wish to restore:", "jetpack-backup-pkg" );
 __( "Select at least one item to restore.", "jetpack-backup-pkg" );
 __( "Confirm restore", "jetpack-backup-pkg" );
-__( "Your restore is queued and will begin automatically.", "jetpack-backup-pkg" );
 __( "Waiting for your restore to begin", "jetpack-backup-pkg" );
-__( "Restoring…", "jetpack-backup-pkg" );
+__( "Your restore is queued and will begin automatically.", "jetpack-backup-pkg" );
 __( "Restoring your site", "jetpack-backup-pkg" );
 /* translators: %d is a completion percentage, e.g. "50% complete". */
 __( "%d%% complete", "jetpack-backup-pkg" );
-__( "Restore complete.", "jetpack-backup-pkg" );
-__( "Restore finished, but some items could not be restored.", "jetpack-backup-pkg" );
+/* translators: %s is a date, e.g. "Aug 12, 2026". */
+__( "A restore of your %s backup is already running. You can't start another from here until it finishes.", "jetpack-backup-pkg" );
+__( "A restore is already running for this site. You can't start another from here until it finishes.", "jetpack-backup-pkg" );
+__( "Some items could not be restored.", "jetpack-backup-pkg" );
 __( "We didn't hear back from WordPress.com. Checking whether your restore started…", "jetpack-backup-pkg" );
 __( "Checking whether your restore started", "jetpack-backup-pkg" );
 __( "We've lost track of this restore. It may still be running — you'll get an email when it finishes.", "jetpack-backup-pkg" );
+__( "Restore failed", "jetpack-backup-pkg" );
