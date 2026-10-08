@@ -568,6 +568,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_4_a_0
         'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Sharing_Resources' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-sharing-resources.php',
         'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Sharing_Section' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-sharing-section.php',
         'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Twitter_Site_Tag' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-twitter-site-tag.php',
+        'Automattic\\Jetpack\\Sharing_Likes\\Settings_App\\Settings_App' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings-app/class-settings-app.php',
         'Automattic\\Jetpack\\Shortcodes' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-post-media/src/class-shortcodes.php',
         'Automattic\\Jetpack\\SignatureInvalidException' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-jwt/src/class-jwt.php',
         'Automattic\\Jetpack\\Stats\\Abilities\\Stats_Abilities' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-stats/src/abilities/class-stats-abilities.php',

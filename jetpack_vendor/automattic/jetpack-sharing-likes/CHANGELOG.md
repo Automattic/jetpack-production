@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a React version of the Settings > Sharing screen, available behind the `rsm_jetpack_ui_modernization_sharing_likes` filter.
 - Add Initializer::init() to set up the settings screen and its REST routes in one call.
 - Add REST endpoints to read and save every setting on Settings > Sharing, and to switch each feature to its block or turn it back on.
 
