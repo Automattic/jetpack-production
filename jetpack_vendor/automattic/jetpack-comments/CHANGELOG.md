@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Accept a website without "https://" in the guest comment form, and wait for the email check before submitting.
+- Fit embeds to the comment thread and hide the textarea resize handle.
 - Hide the plain textarea once the editor mounts, even in themes that style it by ID.
 - Identity: refuse a sign-in code posted from another site, take log-out by POST only, verify TLS on the exchange, and count email checks across sites.
 - Keep the caret where the reader clicked when the comment editor opens.
