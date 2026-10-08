@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Overview: Stop asking to connect a WordPress.com account when nothing in use needs one.
 
 ### Fixed
+- Connection card: Ask for a user connection as soon as a plugin that needs one is switched on, without a reload.
 - Features: Stop requesting the Jetpack module list when the Jetpack plugin is not active.
 - Report a bundle the site has no plan for as needing a plan, rather than as switched off or needing a user connection.
 
