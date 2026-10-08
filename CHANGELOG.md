@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Omnibar: Return the Reader, Notifications, and Launch site nodes from the admin-bar endpoint.
 - Podcast: Add a toggle to hide the author in the Podcast Episode block.
 - Premium Analytics: Add a Mark as spam action, with Undo, to the Referrers report.
+- Premium Analytics: Add likes, comments and an all-time traffic table to the author detail page, and count an author's views even when they rank below the top 20 authors.
 - Premium Analytics: Add video thumbnails to the VideoPress widget, and link the Videos report thumbnails to the video detail page.
 - Premium Analytics: Cap the cards on report pages at a centered 1440px column on wide screens, so each row's label and numbers stay close enough to read together.
 - Premium Analytics: Compare the dashboard with the previous period by default.

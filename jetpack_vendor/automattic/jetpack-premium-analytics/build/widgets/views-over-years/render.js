@@ -37,4 +37,5 @@ _x( "Same period in %s", "previous month comparison", "jetpack-premium-analytics
 /* translators: %s: the year the comparison period starts in, e.g. "2025". */
 _x( "Same period in %s", "previous year comparison", "jetpack-premium-analytics-pkg" );
 __( "Same period last year (match day of week)", "jetpack-premium-analytics-pkg" );
+__( "Open an author to see their all-time traffic here.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load your views. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
