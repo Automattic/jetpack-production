@@ -230,6 +230,7 @@ __( "Restore complete", "jetpack-backup-pkg" );
 __( "Restore didn't finish", "jetpack-backup-pkg" );
 /* translators: %s: date and time of the backup that was restored. */
 __( "Restore to %s", "jetpack-backup-pkg" );
+__( "Retrying", "jetpack-backup-pkg" );
 __( "Try again", "jetpack-backup-pkg" );
 __( "We couldn't load your site's activity.", "jetpack-backup-pkg" );
 __( "Icon", "jetpack-backup-pkg" );
