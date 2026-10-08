@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the embed block to the comment editor, for links from the providers WordPress trusts.
 
 ### Changed
+- Embeds: show a provider's content without its script, and the URL rather than a preview on the edit-comment screen.
 - Match core's busy and disabled button states on the submit buttons, and keep theme button styles off the editor toolbar.
 - Match the updated WordPress.com sign-in contract, and keep returning commenters signed in for 30 days.
 - Never load on jetpack.wordpress.com, which serves the Verbum comment iframe to Atomic and self-hosted sites.
