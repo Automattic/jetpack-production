@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Account Protection: Stop turning the feature on automatically for new connections and upgrades from versions before 14.5. Sites where it is already on keep it on.
+- AI: Open the Activity log filtered to actions AI agents took, and link Simple sites to the WordPress.com Activity log.
 - AI: Show the Overview and AI Features views on WordPress VIP sites.
 - Blocks: Use WordPress Design System colors in the editor.
 - Editor: Let writers know when the featured image is also in the post, and hide it on the post where the theme supports that.

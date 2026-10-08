@@ -245,6 +245,7 @@ __( "Value must be true, false, or undefined", "jetpack-activity-log" );
 __( "Value must be an array.", "jetpack-activity-log" );
 __( "Every value must be a string.", "jetpack-activity-log" );
 __( "Value must be a valid color.", "jetpack-activity-log" );
+__( "All AI agents", "jetpack-activity-log" );
 __( "Start date", "jetpack-activity-log" );
 __( "End date", "jetpack-activity-log" );
 __( "Last 12 months", "jetpack-activity-log" );
