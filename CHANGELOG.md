@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Stop showing an empty account avatar on the Overview connection card when nothing in use needs a user connection.
 - Newsletter: Avoid a fatal error when an older copy of the Newsletter package is loaded during an update.
 - Newsletter: Detect paid newsletter plans by their tier type as well as the mailing list setting.
+- Premium Analytics: Compare Last 30 days and custom ranges starting mid-month with the same number of days right before them.
 - Premium Analytics: Draw attention to the date control when a click on the Traffic summary chart sets the period.
 - Premium Analytics: Drop the URL column from the comment authors CSV, since its links only worked on the site and could expose guest commenters' email addresses.
 - Premium Analytics: Fix chart tooltips wrapping into a narrow column on WordPress.com, and metric tab text showing through a tooltip.

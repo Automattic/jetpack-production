@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Charts: Paint the metric tabs chart's tooltip above the metric tabs.
+- Date controls: Compare Last 30 days and custom ranges starting mid-month with the same number of days right before them.
 - Draw attention to the date control when a click on the Traffic summary chart sets the period.
 - Drop the URL column from the comment authors CSV, since its links only worked on the site and could expose guest commenters' email addresses.
 - Label a partial first or last week on the Traffic, Subscribers, and ads charts with the selected range's own start or end date.
