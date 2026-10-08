@@ -49,6 +49,7 @@ return array(
     'Automattic\\Jetpack\\Backup\\V0005\\Jetpack_Backup' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-jetpack-backup.php',
     'Automattic\\Jetpack\\Backup\\V0005\\Jetpack_Backup_Upgrades' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/class-jetpack-backup-upgrades.php',
     'Automattic\\Jetpack\\Backup\\V0005\\REST\\Activity_Log_Bridge' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/rest/class-activity-log-bridge.php',
+    'Automattic\\Jetpack\\Backup\\V0005\\REST\\Backup_Sizes_Bridge' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/rest/class-backup-sizes-bridge.php',
     'Automattic\\Jetpack\\Backup\\V0005\\REST\\Capabilities_Bridge' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/rest/class-capabilities-bridge.php',
     'Automattic\\Jetpack\\Backup\\V0005\\REST\\Download_Bridge' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/rest/class-download-bridge.php',
     'Automattic\\Jetpack\\Backup\\V0005\\REST\\File_Browser_Bridge' => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/src/rest/class-file-browser-bridge.php',

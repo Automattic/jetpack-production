@@ -285,6 +285,12 @@ __( "Empty", "jetpack-backup-pkg" );
 __( "Download backup", "jetpack-backup-pkg" );
 /* translators: %d count of selected items (files + opaque folders) */
 _n( "Download %d selected item", "Download %d selected items", 1, "jetpack-backup-pkg" );
+/* translators: %s: how long a backup ran, e.g. "28 minutes" */
+__( "Took %s", "jetpack-backup-pkg" );
+/* translators: %s: the site's size when it was backed up, e.g. "4.2GB" */
+__( "Site size at backup: %s", "jetpack-backup-pkg" );
+/* translators: %1$s: the site's size when it was backed up, e.g. "4.2GB". %2$s: how long the backup ran, e.g. "28 minutes". */
+__( "Site size at backup: %1$s · Took %2$s", "jetpack-backup-pkg" );
 __( "Restore to this point", "jetpack-backup-pkg" );
 __( "Could not start a backup. Please try again.", "jetpack-backup-pkg" );
 __( "Back up now", "jetpack-backup-pkg" );
