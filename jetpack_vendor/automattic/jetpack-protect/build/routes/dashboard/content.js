@@ -9,3 +9,22 @@
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-protect-pkg" );
 __( "Sections", "jetpack-protect-pkg" );
+__( "Jetpack Logo", "jetpack-protect-pkg" );
+__( "An Automattic Airline", "jetpack-protect-pkg" );
+__( "Features", "jetpack-protect-pkg" );
+__( "Help", "jetpack-protect-pkg" );
+__( "Jetpack", "jetpack-protect-pkg" );
+/* translators: %s: an error message. */
+__( "There was an error testing Jetpack. Error: %s", "jetpack-protect-pkg" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-protect-pkg" );
+__( "Loading", "jetpack-protect-pkg" );
+__( "Dismiss", "jetpack-protect-pkg" );
+__( "There’s nothing to show yet.", "jetpack-protect-pkg" );
+__( "Try again", "jetpack-protect-pkg" );
+__( "There’s nothing to set up yet.", "jetpack-protect-pkg" );
+__( "Your settings couldn’t be loaded.", "jetpack-protect-pkg" );
+__( "Your change couldn’t be saved. Try again.", "jetpack-protect-pkg" );
+__( "Security tools that keep your site safe and sound, from posts to plugins.", "jetpack-protect-pkg" );
+__( "Overview", "jetpack-protect-pkg" );
+__( "Settings", "jetpack-protect-pkg" );

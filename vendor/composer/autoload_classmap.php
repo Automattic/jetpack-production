@@ -399,6 +399,8 @@ return array(
     'Automattic\\Jetpack\\PremiumAnalytics\\Widget_Type_Registry' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-widget-type-registry.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\WooCommerce_Analytics_Tracker' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-woocommerce-analytics-tracker.php',
     'Automattic\\Jetpack\\Protect\\Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/class-dashboard.php',
+    'Automattic\\Jetpack\\Protect\\Dashboard_Section' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/interface-dashboard-section.php',
+    'Automattic\\Jetpack\\Protect\\Dashboard_Threats' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/class-dashboard-threats.php',
     'Automattic\\Jetpack\\Protect_Models' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-protect-models.php',
     'Automattic\\Jetpack\\Protect_Models\\Extension_Model' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-extension-model.php',
     'Automattic\\Jetpack\\Protect_Models\\History_Model' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-history-model.php',

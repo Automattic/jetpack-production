@@ -11,4 +11,5 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add the Protect dashboard page.
+- Add the tabbed layout and section framework to the Protect dashboard.
 - Initial version.

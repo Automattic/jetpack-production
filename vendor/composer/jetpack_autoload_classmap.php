@@ -1587,8 +1587,16 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-woocommerce-analytics-tracker.php'
 	),
 	'Automattic\\Jetpack\\Protect\\Dashboard' => array(
-		'version' => '0.1.0.0-alpha1791395297',
+		'version' => '0.1.0.0-alpha1791473642',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/class-dashboard.php'
+	),
+	'Automattic\\Jetpack\\Protect\\Dashboard_Section' => array(
+		'version' => '0.1.0.0-alpha1791473642',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/interface-dashboard-section.php'
+	),
+	'Automattic\\Jetpack\\Protect\\Dashboard_Threats' => array(
+		'version' => '0.1.0.0-alpha1791473642',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/class-dashboard-threats.php'
 	),
 	'Automattic\\Jetpack\\Protect_Models' => array(
 		'version' => '0.7.1.0-alpha1791386646',
