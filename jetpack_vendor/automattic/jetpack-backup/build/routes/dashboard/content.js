@@ -234,10 +234,16 @@ __( "Restore didn't finish", "jetpack-backup-pkg" );
 __( "Restore to %s", "jetpack-backup-pkg" );
 __( "Retrying", "jetpack-backup-pkg" );
 __( "Try again", "jetpack-backup-pkg" );
+__( "Yesterday, %s", "jetpack-backup-pkg" );
+__( "New", "jetpack-backup-pkg" );
 __( "We couldn't load your site's activity.", "jetpack-backup-pkg" );
 __( "Icon", "jetpack-backup-pkg" );
 __( "Title", "jetpack-backup-pkg" );
 __( "When", "jetpack-backup-pkg" );
+__( "Latest backups", "jetpack-backup-pkg" );
+/* translators: %d: number of restore points shown on each page of the list. */
+_n( "Restore points from your site's activity. %d per page.", "Restore points from your site's activity. %d per page.", 1, "jetpack-backup-pkg" );
+__( "See all activity in the Activity Log", "jetpack-backup-pkg" );
 /* translators: %s: a file size number, e.g. "3.2". */
 _x( "%s KB", "file size in kilobytes", "jetpack-backup-pkg" );
 /* translators: %s: a file size number, e.g. "3.2". */
