@@ -323,6 +323,7 @@ __( "One last thing", "jetpack-premium-analytics-pkg" );
 __( "This menu is where you can share feedback and switch the preview off if you want. It's an early version, so do tell us what's working and what isn't.", "jetpack-premium-analytics-pkg" );
 __( "Your store data is still syncing. The numbers below are incomplete until it finishes.", "jetpack-premium-analytics-pkg" );
 __( "Something went wrong while syncing your store data, so the numbers below are incomplete.", "jetpack-premium-analytics-pkg" );
+__( "Your store data hasn't finished syncing, so the numbers below are incomplete. It finishes once a site administrator opens this page.", "jetpack-premium-analytics-pkg" );
 /* translators: %d: sync progress percentage. */
 __( "Your store data is still syncing (%d%%). The numbers below are incomplete until it finishes.", "jetpack-premium-analytics-pkg" );
 __( "Try again", "jetpack-premium-analytics-pkg" );

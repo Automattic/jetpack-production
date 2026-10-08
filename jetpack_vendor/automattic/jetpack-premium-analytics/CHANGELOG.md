@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Date controls: Compare with the previous period by default.
 - Open the dashboard from the admin bar Stats links and the newsletter action bar post stats link when it is enabled.
 - Open the dashboard on the last 7 days, or on the range the reader last applied here or in Jetpack Stats, and remember a range applied from the header.
+- Open the dashboard to anyone with a section available to them, so shop managers reach the WooCommerce tab, and keep Stats tabs, widgets and feedback to readers who can view Stats.
 - Reports: Rename the Videos, Clicks, Authors and Locations CSV headers to match the report table columns.
 - Show the empty-cell color at the start of heatmap legends such as Posting activity.
 - Traffic: Move the chart interval control from the page header into the Traffic summary widget, which saves its own interval.
