@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Account Protection: Stop turning the feature on automatically for new connections and upgrades from versions before 14.5. Sites where it is already on keep it on.
 - AI: Show the Overview and AI Features views on WordPress VIP sites.
+- Blocks: Use WordPress Design System colors in the editor.
 - My Jetpack: List VaultPress Backup among the plans that include Activity Log history, simplify the Search paid-plan wording, and show the ad-free, customizable VideoPress player as included in the free plan.
 - My Jetpack: Remove the Products page and open Features from links to it. Point the footer's Modules link and Help's All Jetpack modules link back to the Modules page.
 - Newsletter: Add a Newsletter overview panel to the editor that explains who gets the post by email and who can read it on the site.
