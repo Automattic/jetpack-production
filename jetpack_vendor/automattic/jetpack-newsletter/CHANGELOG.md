@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Reader Link: Register the admin bar node even when the admin bar is hidden, so the admin-bar REST endpoint returns it.
+- Subscribers: Allow comping subscribers who don't have a WordPress.com account.
 
 ## [0.17.2] - 2026-10-05
 ### Added
