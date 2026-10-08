@@ -11,5 +11,6 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add the Protect dashboard page.
+- Add the Scan section to the Protect dashboard: review threats in a table with a details sidebar, run on-demand scans, and fix, ignore, or unignore threats.
 - Add the tabbed layout and section framework to the Protect dashboard.
 - Initial version.

@@ -20,8 +20,326 @@ __( "There was an error testing Jetpack. Error: %s", "jetpack-protect-pkg" );
 __( "Keyboard shortcut: %s", "jetpack-protect-pkg" );
 __( "Loading", "jetpack-protect-pkg" );
 __( "Dismiss", "jetpack-protect-pkg" );
-__( "There’s nothing to show yet.", "jetpack-protect-pkg" );
+__( "Delete the directory that the infected file is in.", "jetpack-protect-pkg" );
+__( "Delete the unexpected file in a core WordPress directory.", "jetpack-protect-pkg" );
+__( "Delete the infected file.", "jetpack-protect-pkg" );
+__( "Delete the plugin directory to fix the threat.", "jetpack-protect-pkg" );
+__( "Delete the theme directory to fix the threat.", "jetpack-protect-pkg" );
+/* translators: Translates to Updates to version. %1$s: Name. %2$s: Fixed version */
+__( "Update %1$s to version %2$s", "jetpack-protect-pkg" );
+__( "Upgrade the plugin or theme to a newer version.", "jetpack-protect-pkg" );
+__( "Replace the modified core WordPress file with the original clean version from the WordPress source code.", "jetpack-protect-pkg" );
+__( "Replace the infected file with a previously backed up version that is clean.", "jetpack-protect-pkg" );
+__( "Replace the default salt keys in wp-config.php with unique ones.", "jetpack-protect-pkg" );
+__( "Jetpack will auto-fix the threat.", "jetpack-protect-pkg" );
+_x( "Critical", "Severity label for issues rated 5 or higher.", "jetpack-protect-pkg" );
+_x( "High", "Severity label for issues rated between 3 and 5.", "jetpack-protect-pkg" );
+_x( "Low", "Severity label for issues rated below 3.", "jetpack-protect-pkg" );
+/* translators: 1: Calendar type. 2: Current month and year. */
+__( "%1$s, %2$s", "jetpack-protect-pkg" );
+__( "Date calendar", "jetpack-protect-pkg" );
+__( "Date range calendar", "jetpack-protect-pkg" );
+__( "Navigation bar", "jetpack-protect-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s", "jetpack-protect-pkg" );
+__( "Next month", "jetpack-protect-pkg" );
+__( "Previous month", "jetpack-protect-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "Today, %s, selected", "jetpack-protect-pkg" );
+/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
+__( "%s, selected", "jetpack-protect-pkg" );
+__( "Required", "jetpack-protect-pkg" );
+__( "Optional", "jetpack-protect-pkg" );
+__( "More details follow the field.", "jetpack-protect-pkg" );
+__( "Sort ascending", "jetpack-protect-pkg" );
+__( "Sort descending", "jetpack-protect-pkg" );
+__( "(no title)", "jetpack-protect-pkg" );
+__( "Actions", "jetpack-protect-pkg" );
+/* translators: %d: number of items. */
+_n( "%d Item selected", "%d Items selected", 1, "jetpack-protect-pkg" );
+/* translators: %d: number of items. */
+_n( "%d Item", "%d Items", 1, "jetpack-protect-pkg" );
+/* translators: %1$d: number of items. %2$d: total number of items. */
+_n( "%1$d of %2$d Item", "%1$d of %2$d Items", 1, "jetpack-protect-pkg" );
+__( "Deselect all", "jetpack-protect-pkg" );
+__( "Select all", "jetpack-protect-pkg" );
+__( "Cancel", "jetpack-protect-pkg" );
+__( "Add filter", "jetpack-protect-pkg" );
+__( "Move left", "jetpack-protect-pkg" );
+__( "Move right", "jetpack-protect-pkg" );
+__( "Insert left", "jetpack-protect-pkg" );
+__( "Insert right", "jetpack-protect-pkg" );
+__( "Hide column", "jetpack-protect-pkg" );
+__( "Properties", "jetpack-protect-pkg" );
+/* translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022". */
+__( "%1$s: %2$s", "jetpack-protect-pkg" );
+__( "Navigate to item", "jetpack-protect-pkg" );
+/* translators: %d: The row number in the grid */
+__( "Row %d", "jetpack-protect-pkg" );
+/* translators: %s: The label of the field e.g. "Status". */
+__( "%s: <groupName />", "jetpack-protect-pkg" );
+/* translators: 1: current page number. 2: total number of pages. */
+__( "Page %1$d of %2$d", "jetpack-protect-pkg" );
+/* translators: 1: Current page number, 2: Total number of pages. */
+_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-protect-pkg" );
+__( "Current page", "jetpack-protect-pkg" );
+__( "Previous page", "jetpack-protect-pkg" );
+__( "Next page", "jetpack-protect-pkg" );
+__( "Density", "jetpack-protect-pkg" );
+_x( "Comfortable", "Density option for DataView layout", "jetpack-protect-pkg" );
+_x( "Balanced", "Density option for DataView layout", "jetpack-protect-pkg" );
+_x( "Compact", "Density option for DataView layout", "jetpack-protect-pkg" );
+__( "Original aspect ratio", "jetpack-protect-pkg" );
+__( "Preview size", "jetpack-protect-pkg" );
+__( "Table", "jetpack-protect-pkg" );
+__( "Grid", "jetpack-protect-pkg" );
+__( "List", "jetpack-protect-pkg" );
+__( "Activity", "jetpack-protect-pkg" );
+/* translators: List of items for a filter. 1: Filter name. e.g.: "List of: Author". */
+__( "List of: %1$s", "jetpack-protect-pkg" );
+__( "Search items", "jetpack-protect-pkg" );
+__( "Search", "jetpack-protect-pkg" );
+__( "No results found", "jetpack-protect-pkg" );
+__( "No elements found", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Is none of", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is none of: Admin, Editor". */
+__( "<Name>%1$s is none of: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Includes", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is any: Admin, Editor". */
+__( "<Name>%1$s includes: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Includes all", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author includes all: Admin, Editor". */
+__( "<Name>%1$s includes all: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Between (inc)", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Item count"). 2: Filter value min. 3: Filter value max. e.g.: "Item count between (inc): 10 and 180". */
+__( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "In the past", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is in the past: 7 days". */
+__( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Over", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is over: 7 days". */
+__( "<Name>%1$s is over: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Is", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is: Admin". */
+__( "<Name>%1$s is: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Is not", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is not: Admin". */
+__( "<Name>%1$s is not: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Less than", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than: 10". */
+__( "<Name>%1$s is less than: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Greater than", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than: 10". */
+__( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Less than or equal", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than or equal to: 10". */
+__( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Greater than or equal", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than or equal to: 10". */
+__( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Before", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is before: 2024-01-01". */
+__( "<Name>%1$s is before: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "After", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is after: 2024-01-01". */
+__( "<Name>%1$s is after: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Before (inc)", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or before: 2024-01-01". */
+__( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "After (inc)", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or after: 2024-01-01". */
+__( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Contains", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title contains: Hello". */
+__( "<Name>%1$s contains: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Doesn't contain", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title doesn't contain: Hello". */
+__( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Starts with", "jetpack-protect-pkg" );
+/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title starts with: Hello". */
+__( "<Name>%1$s starts with: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "On", "jetpack-protect-pkg" );
+/* translators: DataViews operator name */
+__( "Not on", "jetpack-protect-pkg" );
+/* translators: 1: Filter name e.g.: "Unknown status for Author". */
+__( "Unknown status for %1$s", "jetpack-protect-pkg" );
+__( "Conditions", "jetpack-protect-pkg" );
+__( "Reset", "jetpack-protect-pkg" );
+__( "Remove", "jetpack-protect-pkg" );
+/* translators: 1: Filter name. */
+__( "Filter by: %1$s", "jetpack-protect-pkg" );
+_x( "Filter", "verb", "jetpack-protect-pkg" );
+__( "No results", "jetpack-protect-pkg" );
+__( "Layout", "jetpack-protect-pkg" );
+__( "Sort by", "jetpack-protect-pkg" );
+__( "Order", "jetpack-protect-pkg" );
+__( "Items per page", "jetpack-protect-pkg" );
+__( "Reset view", "jetpack-protect-pkg" );
+_x( "View options", "View is used as a noun", "jetpack-protect-pkg" );
+__( "Appearance", "jetpack-protect-pkg" );
+__( "Days", "jetpack-protect-pkg" );
+__( "Weeks", "jetpack-protect-pkg" );
+__( "Months", "jetpack-protect-pkg" );
+__( "Years", "jetpack-protect-pkg" );
+__( "Days ago", "jetpack-protect-pkg" );
+__( "Weeks ago", "jetpack-protect-pkg" );
+__( "Months ago", "jetpack-protect-pkg" );
+__( "Years ago", "jetpack-protect-pkg" );
+__( "Unit", "jetpack-protect-pkg" );
+__( "Coordinated Universal Time", "jetpack-protect-pkg" );
+/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
+__( "Timezone: %s", "jetpack-protect-pkg" );
+__( "Date time", "jetpack-protect-pkg" );
+__( "Today", "jetpack-protect-pkg" );
+__( "Yesterday", "jetpack-protect-pkg" );
+__( "Past week", "jetpack-protect-pkg" );
+__( "Past month", "jetpack-protect-pkg" );
+__( "Last 7 days", "jetpack-protect-pkg" );
+__( "Last 30 days", "jetpack-protect-pkg" );
+__( "Month to date", "jetpack-protect-pkg" );
+__( "Last year", "jetpack-protect-pkg" );
+__( "Year to date", "jetpack-protect-pkg" );
+__( "Custom", "jetpack-protect-pkg" );
+__( "Date", "jetpack-protect-pkg" );
+__( "From", "jetpack-protect-pkg" );
+__( "To", "jetpack-protect-pkg" );
+__( "The max. value must be greater than the min. value.", "jetpack-protect-pkg" );
+__( "Min.", "jetpack-protect-pkg" );
+__( "Max.", "jetpack-protect-pkg" );
+__( "The end time must be later than the start time.", "jetpack-protect-pkg" );
+__( "Open color picker", "jetpack-protect-pkg" );
+__( "Hide password", "jetpack-protect-pkg" );
+__( "Show password", "jetpack-protect-pkg" );
+__( "Value must be a valid email address.", "jetpack-protect-pkg" );
+__( "Value must be an integer.", "jetpack-protect-pkg" );
+__( "Value must be a number.", "jetpack-protect-pkg" );
+__( "True", "jetpack-protect-pkg" );
+__( "False", "jetpack-protect-pkg" );
+__( "Value must be true, false, or undefined", "jetpack-protect-pkg" );
+__( "Value must be an array.", "jetpack-protect-pkg" );
+__( "Every value must be a string.", "jetpack-protect-pkg" );
+__( "Value must be a valid color.", "jetpack-protect-pkg" );
+__( "Vulnerable plugin", "jetpack-protect-pkg" );
+__( "Vulnerable theme", "jetpack-protect-pkg" );
+__( "Vulnerable WordPress version", "jetpack-protect-pkg" );
+__( "Update WordPress", "jetpack-protect-pkg" );
+__( "Update theme", "jetpack-protect-pkg" );
+__( "Switch theme", "jetpack-protect-pkg" );
+__( "Update plugin", "jetpack-protect-pkg" );
+__( "Deactivate plugin", "jetpack-protect-pkg" );
+/* translators: %s is a number. */
+_n( "%s plugin", "%s plugins", 1, "jetpack-protect-pkg" );
+/* translators: %s is a number. */
+_n( "%s theme", "%s themes", 1, "jetpack-protect-pkg" );
+__( "Undo", "jetpack-protect-pkg" );
+__( "Ignoring threat…", "jetpack-protect-pkg" );
+__( "Unignoring threat…", "jetpack-protect-pkg" );
+__( "Threat ignored.", "jetpack-protect-pkg" );
+__( "Threat unignored.", "jetpack-protect-pkg" );
+__( "The threat couldn’t be ignored.", "jetpack-protect-pkg" );
+__( "The threat couldn’t be unignored.", "jetpack-protect-pkg" );
+__( "Fixing threat…", "jetpack-protect-pkg" );
+__( "The fix is taking longer than expected. Check back in a few minutes.", "jetpack-protect-pkg" );
+__( "Threat fixed.", "jetpack-protect-pkg" );
+__( "Jetpack couldn’t fix this threat. Contact Jetpack support for help.", "jetpack-protect-pkg" );
+__( "The fix couldn’t be started.", "jetpack-protect-pkg" );
+__( "Low severity", "jetpack-protect-pkg" );
+__( "Critical severity", "jetpack-protect-pkg" );
+__( "High severity", "jetpack-protect-pkg" );
+/* translators: %s describes the fix, such as "Update Contact Form 7 to version 6.2.1". */
+__( "Jetpack Scan can fix this threat for you: %s.", "jetpack-protect-pkg" );
+/* translators: %s is a version number, such as "5.3.2". */
+__( "Update to version %s or later.", "jetpack-protect-pkg" );
+__( "Jetpack can’t fix this automatically. Review the affected code and remove it if you don’t recognize it, or contact Jetpack support for help.", "jetpack-protect-pkg" );
+__( "Jetpack is fixing this threat. You can close this panel; the list updates when it’s done.", "jetpack-protect-pkg" );
+__( "Unignore it", "jetpack-protect-pkg" );
+__( "Ignore it", "jetpack-protect-pkg" );
+__( "Fixing…", "jetpack-protect-pkg" );
+__( "Auto-fix it", "jetpack-protect-pkg" );
+__( "View on WordPress.org", "jetpack-protect-pkg" );
+/* translators: %s is a file name, such as "index.php". */
+__( "File: %s", "jetpack-protect-pkg" );
+__( "Ignored", "jetpack-protect-pkg" );
+__( "You ignored this threat, so Scan no longer reports it. Unignore it to have Scan check it again.", "jetpack-protect-pkg" );
+__( "What did Jetpack find?", "jetpack-protect-pkg" );
+__( "Learn more", "jetpack-protect-pkg" );
+__( "Learn more about this vulnerability", "jetpack-protect-pkg" );
+__( "The technical details", "jetpack-protect-pkg" );
+__( "Threat found in file:", "jetpack-protect-pkg" );
+/* translators: 1: a plugin or theme, such as "Contact Form 7 (5.3.1)". 2: a version number. */
+__( "%1$s is affected. Version %2$s fixes it.", "jetpack-protect-pkg" );
+/* translators: %s is a plugin or theme, such as "Contact Form 7 (5.3.1)". */
+__( "%s is affected.", "jetpack-protect-pkg" );
+__( "How to resolve or handle this detection?", "jetpack-protect-pkg" );
+__( "Threat details", "jetpack-protect-pkg" );
+__( "Close", "jetpack-protect-pkg" );
+__( "Scan no longer reports this threat. It may have been fixed.", "jetpack-protect-pkg" );
+/* translators: %s is a date and time, such as "Oct 6, 10PM". */
+__( "Free vulnerability checks run once a day, so the next one can start on %s. Upgrade to Scan to scan whenever you like.", "jetpack-protect-pkg" );
+__( "Checked once a day", "jetpack-protect-pkg" );
+__( "Your site is safe right now", "jetpack-protect-pkg" );
+/* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */
+__( "No issues were found after scanning %1$s and %2$s.", "jetpack-protect-pkg" );
+/* translators: %s is a date and time, such as "Sep 30, 9AM". */
+__( "Next scan will happen automatically on %s.", "jetpack-protect-pkg" );
+__( "Your site is scanned automatically every day.", "jetpack-protect-pkg" );
+__( "Scan again now", "jetpack-protect-pkg" );
+__( "Scanning…", "jetpack-protect-pkg" );
+__( "Scan progress", "jetpack-protect-pkg" );
+/* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */
+__( "Checking %1$s, %2$s and your site’s files for threats.", "jetpack-protect-pkg" );
+/* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */
+__( "Checking %1$s and %2$s for vulnerabilities.", "jetpack-protect-pkg" );
+__( "You can leave this page — the scan carries on.", "jetpack-protect-pkg" );
+__( "Check again", "jetpack-protect-pkg" );
+__( "More actions", "jetpack-protect-pkg" );
+__( "View details", "jetpack-protect-pkg" );
+__( "Unignore threat", "jetpack-protect-pkg" );
+__( "Ignore threat", "jetpack-protect-pkg" );
+__( "Auto-fix", "jetpack-protect-pkg" );
+__( "Severity", "jetpack-protect-pkg" );
+__( "Threats", "jetpack-protect-pkg" );
+__( "Detected on", "jetpack-protect-pkg" );
+/* translators: %d is a number of threats. */
+__( "Active (%d)", "jetpack-protect-pkg" );
+/* translators: %d is a number of threats. */
+__( "Ignored (%d)", "jetpack-protect-pkg" );
+__( "The scan couldn’t be started.", "jetpack-protect-pkg" );
+__( "Scan", "jetpack-protect-pkg" );
+__( "We couldn’t check your site for vulnerabilities right now.", "jetpack-protect-pkg" );
 __( "Try again", "jetpack-protect-pkg" );
+__( "All vulnerabilities found", "jetpack-protect-pkg" );
+__( "Plugins checked", "jetpack-protect-pkg" );
+__( "Themes checked", "jetpack-protect-pkg" );
+__( "Active", "jetpack-protect-pkg" );
+__( "Vulnerability checks only", "jetpack-protect-pkg" );
+__( "Scan now", "jetpack-protect-pkg" );
+__( "View scan history", "jetpack-protect-pkg" );
+__( "Get Scan for daily malware scanning and one-click fixes", "jetpack-protect-pkg" );
+__( "Scan checks your site for malware every day. Threat alerts and scan settings are managed on Jetpack.com.", "jetpack-protect-pkg" );
+__( "Your site is checked every day for known vulnerabilities in WordPress, plugins and themes. There’s nothing to set up.", "jetpack-protect-pkg" );
+__( "Manage Scan settings", "jetpack-protect-pkg" );
+__( "There’s nothing to show yet.", "jetpack-protect-pkg" );
 __( "There’s nothing to set up yet.", "jetpack-protect-pkg" );
 __( "Your settings couldn’t be loaded.", "jetpack-protect-pkg" );
 __( "Your change couldn’t be saved. Try again.", "jetpack-protect-pkg" );

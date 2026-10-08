@@ -11,7 +11,7 @@ return array(
 		'name'        => 'dashboard',
 		'path'        => '/',
 		'page'        => 'jetpack-protect-dashboard',
-		'has_route'   => false,
+		'has_route'   => true,
 		'has_content' => true,
 	)
 );
