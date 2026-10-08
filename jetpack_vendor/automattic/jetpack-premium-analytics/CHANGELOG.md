@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Charts: Use a 2px corner radius on chart bars.
 - Chart tooltips: Head the rows with the date once, read each as value then metric, and list the comparison period in a second column.
 - Dashboard: Move the WooCommerce tab to the WooCommerce stats package and rename it from Store to WooCommerce, including its URL.
+- Date controls: Compare with the previous period by default.
 - Open the dashboard from the admin bar Stats links and the newsletter action bar post stats link when it is enabled.
 - Reports: Rename the Videos, Clicks, Authors and Locations CSV headers to match the report table columns.
 - Traffic: Move the chart interval control from the page header into the Traffic summary widget, which saves its own interval.
