@@ -283,23 +283,21 @@ __( "Restore to this point", "jetpack-backup-pkg" );
 __( "Could not start a backup. Please try again.", "jetpack-backup-pkg" );
 __( "Back up now", "jetpack-backup-pkg" );
 __( "Cannot queue backups due to reaching storage limits.", "jetpack-backup-pkg" );
-__( "Backup in progress", "jetpack-backup-pkg" );
 __( "A backup is currently in progress.", "jetpack-backup-pkg" );
 __( "Queueing backup", "jetpack-backup-pkg" );
 __( "Backup enqueued", "jetpack-backup-pkg" );
 __( "A backup has been queued and will start shortly.", "jetpack-backup-pkg" );
 __( "<a>Get in touch with us</a> to get your site backups going again.", "jetpack-backup-pkg" );
-__( "We're having trouble backing up your site", "jetpack-backup-pkg" );
-__( "Your first cloud backup will be ready soon", "jetpack-backup-pkg" );
+__( "We are having trouble backing up your site", "jetpack-backup-pkg" );
 __( "Preparing your first cloud backup", "jetpack-backup-pkg" );
-/* translators: %d: how much of the running backup is complete, as a percentage. */
-__( "%d%%", "jetpack-backup-pkg" );
+__( "Generating backup…", "jetpack-backup-pkg" );
 __( "The first backup usually takes a few minutes, so it will become available soon.", "jetpack-backup-pkg" );
 __( "Your backup will be ready soon", "jetpack-backup-pkg" );
-__( "Backing up your site", "jetpack-backup-pkg" );
+/* translators: %d: how much of the running backup is complete, as a percentage. */
+__( "Generating backup… (%d%% progress)", "jetpack-backup-pkg" );
 __( "Your latest backup didn't complete. We'll try again shortly.", "jetpack-backup-pkg" );
-/* translators: sentence form of the takeover panel's heading, which is the same words without the full stop. The two render in mutually exclusive situations — this one is a line of body copy, that one a title — so both spellings are wanted. */
-__( "We're having trouble backing up your site.", "jetpack-backup-pkg" );
+/* translators: sentence form of the takeover panel's heading, which is the same words without the full stop. */
+__( "We are having trouble backing up your site.", "jetpack-backup-pkg" );
 __( "Backup is completed with some files missing. See your <a>backup in the cloud</a> for more details.", "jetpack-backup-pkg" );
 __( "Jetpack Logo", "jetpack-backup-pkg" );
 __( "An Automattic Airline", "jetpack-backup-pkg" );
