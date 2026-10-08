@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Contact Form: Keep brackets in submitted values escaped, so they cannot run shortcodes, on WordPress versions with the new HTML sanitizer.
 - Dashboard: Fix error notices shown after deleting or trashing a form, even though it succeeded.
 
 ## [8.3.0] - 2026-10-05

@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Stop the Get VaultPress Backup button from staying busy when setup fails.
 - Carousel: Remove the hidden "Loading Comments..." text from pages when the carousel comments area is turned off.
 - Forms: Fix error notices shown after deleting or trashing a form, even though it succeeded.
+- Forms: Keep brackets in submitted values escaped, so they cannot run shortcodes, on WordPress versions with the new HTML sanitizer.
 - Google Photos: Show a reconnect prompt when the Google connection is rejected, explain when the Google account has no Google Photos set up, and start a new picker session when the saved one no longer exists.
 - Likes: Keep Like buttons on custom post types on new sites until you choose where buttons appear.
 - My Jetpack: Stop showing an empty account avatar on the Overview connection card when nothing in use needs a user connection.
