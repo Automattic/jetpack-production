@@ -19,7 +19,7 @@ _n( "%s Booking", "%s Bookings", 1, "jetpack-premium-analytics-pkg" );
 __( "Store visitors", "jetpack-premium-analytics-pkg" );
 __( "Store visitors recorded through WooCommerce sessions. Jetpack Stats measures visitors separately, so totals may differ.", "jetpack-premium-analytics-pkg" );
 /* translators: %s: number of store visitors. */
-_n( "%s Store Visitor", "%s Store Visitors", 1, "jetpack-premium-analytics-pkg" );
+_n( "%s Store visitor", "%s Store visitors", 1, "jetpack-premium-analytics-pkg" );
 __( "Store conversion rate", "jetpack-premium-analytics-pkg" );
 __( "Track your store's conversion funnel from sessions to completed orders.", "jetpack-premium-analytics-pkg" );
 __( "Customers", "jetpack-premium-analytics-pkg" );

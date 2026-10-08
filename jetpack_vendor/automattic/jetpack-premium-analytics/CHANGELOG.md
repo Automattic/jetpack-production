@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Make low values in heatmaps such as Posting activity easier to tell apart from empty cells, and show zero counts as empty.
 - Pair each week with its matching week in a year-ago weekly comparison, and show the days each week covers in the Traffic and ads chart tooltips.
 - Show a video watched for a few minutes as "< 0.1" hours, not 0.0, on the Videos report and video detail page.
+- Store performance: Use sentence case in the Store visitors chart tooltip, like the other count labels.
 
 ## [0.11.0] - 2026-10-05
 ### Added

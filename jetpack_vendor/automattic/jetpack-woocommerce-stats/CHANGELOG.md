@@ -20,6 +20,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Rename the Visitors over time widget to Store visitors over time, so it isn't confused with Jetpack Stats visitors.
 
+### Fixed
+- Use sentence case in the Store visitors chart tooltip, like the other count labels.
+
 ## 0.1.0-alpha - unreleased
 
 - Initial version.
