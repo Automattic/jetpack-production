@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Keep the caret where the reader clicked when the comment editor opens.
 - Keep the images, embeds, captions, and headings in comments written with the previous editor, as links and text.
 - Keep the submit button inside the comment box in themes that offset it.
+- Show YouTube and other video players in comments on WordPress.com, and show embeds that need a script, such as TikTok, as links.
 
 ## [0.4.0] - 2026-10-05
 ### Added
