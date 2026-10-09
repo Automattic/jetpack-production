@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Removed
 - Remove the WooCommerce breakdown widgets, now built by the WooCommerce Stats package.
+- Remove the WooCommerce leaderboard widgets, now built by the WooCommerce Stats package.
 - Remove the WooCommerce time series widgets, now built by the WooCommerce Stats package.
 
 ### Fixed

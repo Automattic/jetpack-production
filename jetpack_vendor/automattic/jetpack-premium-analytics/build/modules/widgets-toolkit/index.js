@@ -229,16 +229,10 @@ __( "We couldn't load customer revenue data. Please try again in a moment.", "je
 __( "No customer revenue in this period.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load sales by device data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "No sales data in this period.", "jetpack-premium-analytics-pkg" );
-__( "We couldn't load order attribution data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "No attribution data in this period.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load sessions data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "No session data in this period.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load returns data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "No returns in this period.", "jetpack-premium-analytics-pkg" );
-__( "We couldn't load product data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "No product sales in this period.", "jetpack-premium-analytics-pkg" );
-__( "No booking sales in this period.", "jetpack-premium-analytics-pkg" );
-__( "We couldn't load bookings data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "United States", "jetpack-premium-analytics-pkg" );
 __( "Worldwide", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load location data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
