@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Security
 - Simple Payments: Improve permission checks for orders.
 
+### Added
+- Add a feature flag that hides the PayPal sandbox option in the connection wizard; off, the wizard connects to production only.
+
 ## [0.12.0] - 2026-10-05
 ### Added
 - Add additional analytics to Payment Buttons. [#52841]
