@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Widgets: Add a line or bar chart type control to the report charts.
 
 ### Changed
+- Hold the bookings widgets back from the WooCommerce tab for now.
 - Rename the Visitors over time widget to Store visitors over time, so it isn't confused with Jetpack Stats visitors.
 - Sales by UTM: lay the label above the bar and draw the comparison period as a second bar under the period legend.
 
