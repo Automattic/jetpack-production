@@ -63,6 +63,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Fix chart tooltips wrapping into a narrow column on WordPress.com, and metric tab text showing through a tooltip.
 - Premium Analytics: Fix Returns in the WooCommerce reports for a full refund after a partial refund, and for refunds of orders that were never paid.
 - Premium Analytics: Fix value axis labels piling up at the left edge of a summary bar chart resized to one row.
+- Premium Analytics: Follow the WooCommerce Analytics date type setting in store reports instead of always using the order creation date.
 - Premium Analytics: Label a partial first or last week on the Traffic, Subscribers, and ads charts with the selected range's own start or end date.
 - Premium Analytics: Let one-row summary charts, such as the default Store performance tile, show their tooltip by drawing them as sparklines without axes.
 - Premium Analytics: Make low values in heatmaps such as Posting activity easier to tell apart from empty cells, and show zero counts as empty.

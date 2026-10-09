@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Show a video watched for a few minutes as "< 0.1" hours, not 0.0, on the Videos report and video detail page.
 - Store: Show store revenue and other money values in the store's currency instead of always US dollars.
 - Store performance: Use sentence case in the Store visitors chart tooltip, like the other count labels.
+- Store reports: Follow the WooCommerce Analytics date type setting instead of always using the order creation date.
 - Widgets toolkit: Leaderboard draws a negative value as an empty bar instead of a negative width.
 
 ## [0.11.0] - 2026-10-05
