@@ -368,6 +368,7 @@ __( "Link your WordPress.com account", "jetpack-backup-pkg" );
 __( "This site's Jetpack connection is already set up, but your account isn't linked to a WordPress.com user yet.", "jetpack-backup-pkg" );
 __( "Once your account is linked, you'll see any backups this site has. If it doesn't have an active Backup plan yet, you'll be able to add VaultPress Backup to start protecting it.", "jetpack-backup-pkg" );
 __( "Link my account", "jetpack-backup-pkg" );
+__( "Loading your backup details…", "jetpack-backup-pkg" );
 __( "Save changes and restore quickly with one-click recovery.", "jetpack-backup-pkg" );
 __( "Daily backup time", "jetpack-backup-pkg" );
 /* translators: %s: the site's timezone, e.g. "America/Sao_Paulo" or "UTC+5:30". */
@@ -423,6 +424,7 @@ __( "<a>1 day of backups saved</a>", "jetpack-backup-pkg" );
 __( "<a>%s days of backups saved</a>", "jetpack-backup-pkg" );
 __( "Backup retention changed.", "jetpack-backup-pkg" );
 __( "Backup storage", "jetpack-backup-pkg" );
+__( "Your backup is ready.", "jetpack-backup-pkg" );
 __( "We couldn't check your site's backup status.", "jetpack-backup-pkg" );
 __( "Backup activity", "jetpack-backup-pkg" );
 __( "Loading item details…", "jetpack-backup-pkg" );

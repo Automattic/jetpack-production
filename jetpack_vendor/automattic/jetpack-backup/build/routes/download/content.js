@@ -79,6 +79,7 @@ __( "Link your WordPress.com account", "jetpack-backup-pkg" );
 __( "This site's Jetpack connection is already set up, but your account isn't linked to a WordPress.com user yet.", "jetpack-backup-pkg" );
 __( "Once your account is linked, you'll see any backups this site has. If it doesn't have an active Backup plan yet, you'll be able to add VaultPress Backup to start protecting it.", "jetpack-backup-pkg" );
 __( "Link my account", "jetpack-backup-pkg" );
+__( "Loading your backup details…", "jetpack-backup-pkg" );
 __( "Save changes and restore quickly with one-click recovery.", "jetpack-backup-pkg" );
 __( "Back to overview", "jetpack-backup-pkg" );
 __( "WordPress themes", "jetpack-backup-pkg" );
