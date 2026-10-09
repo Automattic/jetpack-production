@@ -11,6 +11,7 @@ __( "(opens in a new tab)", "jetpack-backup-pkg" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-backup-pkg" );
 __( "Loading", "jetpack-backup-pkg" );
+__( "More details follow.", "jetpack-backup-pkg" );
 __( "Dismiss", "jetpack-backup-pkg" );
 __( "Something went wrong", "jetpack-backup-pkg" );
 __( "The page ran into an unexpected problem. Your backups are unaffected.", "jetpack-backup-pkg" );
@@ -97,6 +98,7 @@ __( "Your restore didn't start, so nothing on your site has changed.", "jetpack-
 __( "This restore link isn't valid.", "jetpack-backup-pkg" );
 __( "The address is missing a valid restore point. Go back to the overview and choose a backup to restore.", "jetpack-backup-pkg" );
 __( "Checking for a restore in progress…", "jetpack-backup-pkg" );
+__( "Your restore is queued and will begin automatically.", "jetpack-backup-pkg" );
 __( "Restoring from backup…", "jetpack-backup-pkg" );
 __( "Restore complete.", "jetpack-backup-pkg" );
 __( "Restore finished with errors", "jetpack-backup-pkg" );
@@ -107,7 +109,6 @@ __( "Choose the items you wish to restore:", "jetpack-backup-pkg" );
 __( "Select at least one item to restore.", "jetpack-backup-pkg" );
 __( "Confirm restore", "jetpack-backup-pkg" );
 __( "Waiting for your restore to begin", "jetpack-backup-pkg" );
-__( "Your restore is queued and will begin automatically.", "jetpack-backup-pkg" );
 __( "Restoring your site", "jetpack-backup-pkg" );
 /* translators: %d is a completion percentage, e.g. "50% complete". */
 __( "%d%% complete", "jetpack-backup-pkg" );

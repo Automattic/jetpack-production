@@ -11,6 +11,7 @@ __( "(opens in a new tab)", "jetpack-backup-pkg" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-backup-pkg" );
 __( "Loading", "jetpack-backup-pkg" );
+__( "More details follow.", "jetpack-backup-pkg" );
 __( "Something went wrong", "jetpack-backup-pkg" );
 __( "The page ran into an unexpected problem. Your backups are unaffected.", "jetpack-backup-pkg" );
 __( "Reload the page", "jetpack-backup-pkg" );
