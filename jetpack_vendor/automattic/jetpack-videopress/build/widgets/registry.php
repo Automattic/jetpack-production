@@ -13,7 +13,7 @@ return array(
 		'title'        => 'Top videos',
 		'description'  => 'Your most played VideoPress videos, sourced from Jetpack Stats.',
 		'help'         => array( 'content' => 'The published videos your visitors watched most often, sorted by views.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
-		'icon'         => null,
+		'icon'         => 'jpa/video',
 		'actions'      => null,
 		'has_render'   => true,
 		'has_widget'   => true,
