@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a Mark as spam action, with Undo, to the Referrers report.
 - Add likes, comments and an all-time traffic table to the author detail page, and count an author's views even when they rank below the top 20 authors.
+- Dashboard: add the bars variant of the Leaderboard widget kind, which draws both periods as bars under a period legend; the widget contract is 1.7.0.
 - Dashboard: Expose the Donut widget kind and the shared WidgetStatus type through the SDK; the widget contract is 1.5.0.
 - Dashboard: Resolve the icon a widget.json names, under the `jpa` collection; the widget contract is 1.6.0.
 - Link the Videos report thumbnails to the video detail page, let video leaderboard rows show a linked poster, and mark the video detail poster with a play icon.
