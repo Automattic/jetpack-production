@@ -427,6 +427,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_4_a_0
         'Automattic\\Jetpack\\Protect\\Dashboard' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-protect/src/class-dashboard.php',
         'Automattic\\Jetpack\\Protect\\Dashboard_Section' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-protect/src/interface-dashboard-section.php',
         'Automattic\\Jetpack\\Protect\\Dashboard_Threats' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-protect/src/class-dashboard-threats.php',
+        'Automattic\\Jetpack\\Protect\\Sections\\History' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-history.php',
         'Automattic\\Jetpack\\Protect\\Sections\\Scan' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-scan.php',
         'Automattic\\Jetpack\\Protect_Models' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-protect-models.php',
         'Automattic\\Jetpack\\Protect_Models\\Extension_Model' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-extension-model.php',

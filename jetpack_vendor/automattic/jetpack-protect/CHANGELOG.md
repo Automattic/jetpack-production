@@ -14,3 +14,4 @@ This is an alpha version! The changes listed here are not final.
 - Add the Scan section to the Protect dashboard: review threats in a table with a details sidebar, run on-demand scans, and fix, ignore, or unignore threats.
 - Add the tabbed layout and section framework to the Protect dashboard.
 - Initial version.
+- Protect dashboard: Add a Scan history tab for sites with Jetpack Scan, show threat actions on row hover, and offer to delete unused plugins and themes that have threats.

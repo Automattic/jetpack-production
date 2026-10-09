@@ -402,6 +402,7 @@ return array(
     'Automattic\\Jetpack\\Protect\\Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/class-dashboard.php',
     'Automattic\\Jetpack\\Protect\\Dashboard_Section' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/interface-dashboard-section.php',
     'Automattic\\Jetpack\\Protect\\Dashboard_Threats' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/class-dashboard-threats.php',
+    'Automattic\\Jetpack\\Protect\\Sections\\History' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-history.php',
     'Automattic\\Jetpack\\Protect\\Sections\\Scan' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-scan.php',
     'Automattic\\Jetpack\\Protect_Models' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-protect-models.php',
     'Automattic\\Jetpack\\Protect_Models\\Extension_Model' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-extension-model.php',

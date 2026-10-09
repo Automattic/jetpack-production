@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array('wp-element'), 'module_dependencies' => array(array('id' => '@wordpress/route', 'import' => 'static')), 'version' => 'ddb0fa3cc9b8247c9429');
+<?php return array('dependencies' => array('wp-api-fetch', 'wp-element', 'wp-i18n'), 'module_dependencies' => array(array('id' => '@wordpress/route', 'import' => 'static')), 'version' => '2b05a89bcaaee49039d8');
