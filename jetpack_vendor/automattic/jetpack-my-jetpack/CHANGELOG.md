@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Connection card: Ask for a user connection as soon as a plugin that needs one is switched on, without a reload.
+- Connection card: Stop asking for a user connection as soon as the plugin that needed one is switched off, without a reload.
 - Features: Stop requesting the Jetpack module list when the Jetpack plugin is not active.
 - Products: Stop reporting an error when switching VideoPress off while the Jetpack plugin is inactive.
 - Report a bundle the site has no plan for as needing a plan, rather than as switched off or needing a user connection.
