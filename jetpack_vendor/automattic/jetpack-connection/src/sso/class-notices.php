@@ -22,7 +22,7 @@ class Notices {
 	 * the user's account on WordPress.com does not have two step enabled.
 	 *
 	 * @since jetpack-2.7
-	 * @since 9.9.2-alpha Added the `$user_data` parameter.
+	 * @since 9.10.0-alpha Added the `$user_data` parameter.
 	 * @param string      $message   Error message.
 	 * @param object|null $user_data WordPress.com user information returned by the SSO attempt.
 	 * @return string

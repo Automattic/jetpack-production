@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Open the Activity log filtered to actions AI agents took, and link Simple sites to the WordPress.com Activity log.
 - AI: Show the Overview and AI Features views on WordPress VIP sites.
 - Blocks: Use WordPress Design System colors in the editor.
+- Connection: Add a Connected view to the Users page listing users with a linked WordPress.com account.
 - Editor: Let writers know when the featured image is also in the post, and hide it on the post where the theme supports that.
 - My Jetpack: List VaultPress Backup among the plans that include Activity Log history, simplify the Search paid-plan wording, and show the ad-free, customizable VideoPress player as included in the free plan.
 - My Jetpack: Remove the Products page and open Features from links to it. Point the footer's Modules link and Help's All Jetpack modules link back to the Modules page.
