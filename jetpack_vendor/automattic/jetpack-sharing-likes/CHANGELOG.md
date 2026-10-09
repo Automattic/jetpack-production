@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a React version of the Settings > Sharing screen, available behind the `rsm_jetpack_ui_modernization_sharing_likes` filter.
+- Add a services manager to the React version of Settings > Sharing: reorder, add and remove sharing buttons, and create, edit and delete custom services.
 - Add Initializer::init() to set up the settings screen and its REST routes in one call.
 - Add REST endpoints to read and save every setting on Settings > Sharing, and to switch each feature to its block or turn it back on.
 

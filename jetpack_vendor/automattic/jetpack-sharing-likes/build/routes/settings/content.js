@@ -11,6 +11,9 @@ __( "(opens in a new tab)", "jetpack-sharing-likes" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-sharing-likes" );
 __( "Loading", "jetpack-sharing-likes" );
+__( "OK", "jetpack-sharing-likes" );
+__( "Cancel", "jetpack-sharing-likes" );
+__( "Close", "jetpack-sharing-likes" );
 __( "Dismiss", "jetpack-sharing-likes" );
 __( "Sections", "jetpack-sharing-likes" );
 __( "Jetpack Logo", "jetpack-sharing-likes" );
@@ -161,7 +164,6 @@ __( "Value must be an array.", "jetpack-sharing-likes" );
 __( "Every value must be a string.", "jetpack-sharing-likes" );
 __( "Value must be a valid color.", "jetpack-sharing-likes" );
 __( "Apply", "jetpack-sharing-likes" );
-__( "Cancel", "jetpack-sharing-likes" );
 /* translators: %s: Field name. */
 _x( "Edit %s (has errors)", "field", "jetpack-sharing-likes" );
 /* translators: %s: Field name. */
@@ -178,7 +180,6 @@ __( "Value is too short.", "jetpack-sharing-likes" );
 __( "Value is too long.", "jetpack-sharing-likes" );
 __( "Unknown error when running custom validation.", "jetpack-sharing-likes" );
 __( "Validating…", "jetpack-sharing-likes" );
-__( "Close", "jetpack-sharing-likes" );
 /* translators: %d: Number of fields that need attention */
 _n( "%d field needs attention", "%d fields need attention", 1, "jetpack-sharing-likes" );
 __( "More details", "jetpack-sharing-likes" );
@@ -232,11 +233,49 @@ __( "Used by Twitter Cards and the Sharing Buttons block.", "jetpack-sharing-lik
 __( "Twitter Site Tag", "jetpack-sharing-likes" );
 __( "The Twitter username of the owner of this site’s domain.", "jetpack-sharing-likes" );
 __( "These choices apply to every feature named in the heading.", "jetpack-sharing-likes" );
+__( "Your sharing buttons could not be saved.", "jetpack-sharing-likes" );
+__( "Undo", "jetpack-sharing-likes" );
+__( "The custom service could not be saved.", "jetpack-sharing-likes" );
+__( "The custom service could not be deleted.", "jetpack-sharing-likes" );
+__( "Service name", "jetpack-sharing-likes" );
+__( "Sharing URL", "jetpack-sharing-likes" );
+__( "You can add the following variables to your service sharing URL:", "jetpack-sharing-likes" );
+__( "Icon URL", "jetpack-sharing-likes" );
+__( "Enter the URL of a 16x16px icon you want to use for this service.", "jetpack-sharing-likes" );
+__( "Back", "jetpack-sharing-likes" );
+__( "Add a custom service", "jetpack-sharing-likes" );
+__( "Custom service", "jetpack-sharing-likes" );
+__( "Done", "jetpack-sharing-likes" );
+__( "Create and add", "jetpack-sharing-likes" );
+/* translators: %s: custom sharing service name. */
+__( "Delete %s?", "jetpack-sharing-likes" );
+__( "Remove your last sharing button?", "jetpack-sharing-likes" );
+__( "With no buttons left, sharing buttons turn off. Since you use a block-based theme, you can add the buttons anywhere on your site via the Site Editor.", "jetpack-sharing-likes" );
+__( "This deletes the custom service from your site. You’ll need to create it again to bring it back.", "jetpack-sharing-likes" );
+__( "Delete", "jetpack-sharing-likes" );
+__( "Remove", "jetpack-sharing-likes" );
+/* translators: %s: custom sharing service name. */
+__( "Edit %s", "jetpack-sharing-likes" );
+/* translators: %s: sharing service name, such as "Facebook". */
+__( "%s options", "jetpack-sharing-likes" );
+__( "Move right", "jetpack-sharing-likes" );
+__( "Move left", "jetpack-sharing-likes" );
+__( "Edit custom service", "jetpack-sharing-likes" );
+__( "Delete custom service", "jetpack-sharing-likes" );
+__( "Add", "jetpack-sharing-likes" );
+/* translators: %s: sharing service name, such as "Facebook". */
+__( "%s removed.", "jetpack-sharing-likes" );
 __( "The list of sharing services could not be loaded.", "jetpack-sharing-likes" );
-__( "No sharing services are turned on.", "jetpack-sharing-likes" );
-__( "Enabled Services", "jetpack-sharing-likes" );
-__( "Behind the More button:", "jetpack-sharing-likes" );
-__( "Behind the Share button:", "jetpack-sharing-likes" );
+__( "Add sharing buttons", "jetpack-sharing-likes" );
+__( "Add to the More button", "jetpack-sharing-likes" );
+__( "Add to the Share button", "jetpack-sharing-likes" );
+__( "Choose a service to add it at the end of your buttons.", "jetpack-sharing-likes" );
+__( "Choose a service to add it behind the More button.", "jetpack-sharing-likes" );
+__( "Choose a service to add it behind the Share button.", "jetpack-sharing-likes" );
+__( "Please note that your services have been restricted because your site is private.", "jetpack-sharing-likes" );
+__( "Shown as buttons", "jetpack-sharing-likes" );
+__( "Behind the More button", "jetpack-sharing-likes" );
+__( "Behind the Share button", "jetpack-sharing-likes" );
 /* translators: %1$s is the name of a deprecated Sharing Service like "Google+" */
 __( "The %1$s sharing service has shut down or discontinued support for sharing buttons. This sharing button is not displayed to your visitors and should be removed.", "jetpack-sharing-likes" );
 __( "Button style", "jetpack-sharing-likes" );

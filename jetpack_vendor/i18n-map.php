@@ -186,7 +186,7 @@ return array(
     ),
     'jetpack-sharing-likes' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sharing-likes',
-      'ver' => '0.3.0-alpha1791476506',
+      'ver' => '0.3.0-alpha1791560303',
     ),
     'jetpack-stats-admin' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-stats-admin',
