@@ -278,6 +278,7 @@ __( "The download could not start. Try again.", "jetpack-backup-pkg" );
 /* translators: %s: file name. */
 __( "Preview of %s", "jetpack-backup-pkg" );
 __( "We couldn't load this backup's files.", "jetpack-backup-pkg" );
+__( "Clear selection", "jetpack-backup-pkg" );
 /* translators: %d count of selected items (files + opaque folders) */
 _n( "%d item selected", "%d items selected", 1, "jetpack-backup-pkg" );
 /* translators: %s: file or folder name. */
@@ -432,4 +433,3 @@ __( "Select an item from the list to see details.", "jetpack-backup-pkg" );
 __( "We couldn't load this item.", "jetpack-backup-pkg" );
 __( "That restore isn't among this site's most recent ones any more.", "jetpack-backup-pkg" );
 __( "That item isn't on this page of the activity log. It may be on another page, or no longer available.", "jetpack-backup-pkg" );
-__( "Clear selection", "jetpack-backup-pkg" );
