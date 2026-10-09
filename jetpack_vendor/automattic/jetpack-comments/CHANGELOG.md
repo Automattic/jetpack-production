@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add the embed block to the comment editor, for links from the providers WordPress trusts.
+- Record usage events for the comment form, sign-in, and block editor.
 
 ### Changed
 - Embeds: show a provider's content without its script, and the URL rather than a preview on the edit-comment screen.
