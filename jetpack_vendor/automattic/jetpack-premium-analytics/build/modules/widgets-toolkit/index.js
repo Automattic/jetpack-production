@@ -48,9 +48,6 @@ _n( "%s view per day", "%s views per day", 1, "jetpack-premium-analytics-pkg" );
 /* translators: %s is a number of views, e.g. "167K". */
 _n( "%s view", "%s views", 1, "jetpack-premium-analytics-pkg" );
 __( "Fewer than %s", "jetpack-premium-analytics-pkg" );
-/* translators: %s is a metric name, e.g. "Views". */
-__( "%s · previous period", "jetpack-premium-analytics-pkg" );
-__( "No data available", "jetpack-premium-analytics-pkg" );
 __( "Current period", "jetpack-premium-analytics-pkg" );
 __( "Previous period", "jetpack-premium-analytics-pkg" );
 __( "Other", "jetpack-premium-analytics-pkg" );
@@ -79,6 +76,8 @@ __( "Fewer views per day", "jetpack-premium-analytics-pkg" );
 __( "More views per day", "jetpack-premium-analytics-pkg" );
 __( "Fewer views", "jetpack-premium-analytics-pkg" );
 __( "More views", "jetpack-premium-analytics-pkg" );
+/* translators: %s is a metric name, e.g. "Views". */
+__( "%s · previous period", "jetpack-premium-analytics-pkg" );
 __( "No data", "jetpack-premium-analytics-pkg" );
 /* translators: 1: formatted value, 2: metric name. */
 _x( "%1$s %2$s", "chart tooltip: value and metric", "jetpack-premium-analytics-pkg" );

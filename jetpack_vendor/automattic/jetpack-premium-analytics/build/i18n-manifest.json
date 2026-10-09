@@ -61,7 +61,6 @@
 		"build/widgets/shares/render.js",
 		"build/widgets/site-overview/render.js",
 		"build/widgets/site-overview/widget.js",
-		"build/widgets/store-performance/render.js",
 		"build/widgets/subscriber-highlights/render.js",
 		"build/widgets/subscribers-chart/render.js",
 		"build/widgets/subscribers-chart/widget.js",

@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the client that reads the WooCommerce analytics reports, for the widgets of the package.
 - Add the leaderboard widgets: top performing products and bookings, and sales by UTM source, channel and campaign, all placed on the WooCommerce tab by default.
 - Add the Net sales over time widget, the first one the package builds and registers.
+- Add the Store performance widget.
 - Add the time series widgets: total and gross sales, orders, average order value, average items per order, bookings and visitors over time, all placed on the WooCommerce tab by default.
 - Place Net sales over time on the WooCommerce tab by default.
 - Register the WooCommerce section on the Premium Analytics dashboard.

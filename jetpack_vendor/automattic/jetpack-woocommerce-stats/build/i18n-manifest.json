@@ -20,6 +20,7 @@
 		"build/widgets/sales-by-utm-campaign/render.js",
 		"build/widgets/sales-by-utm-channel/render.js",
 		"build/widgets/sales-by-utm-source/render.js",
+		"build/widgets/store-performance/render.js",
 		"build/widgets/top-performing-bookings/render.js",
 		"build/widgets/top-performing-products/render.js",
 		"build/widgets/total-sales-over-time/render.js",
