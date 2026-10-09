@@ -83,6 +83,7 @@ This is an alpha version! The changes listed here are not final.
 - Account Protection: Update the breached password notice so it no longer says the feature was activated automatically.
 - Newsletter: add the REST proxy the Newsletter checklist needs to read its task list and complete tasks.
 - Newsletter: Show the send icon before the Send button label in the test email modal.
+- Newsletter: update the email editor package to 2.5.0.
 - Omnibar: Return the Stats chart node from the admin-bar REST endpoint, and the admin bar to every role on the site rather than administrators only.
 - Protect: Add a feature-flagged Protect Dashboard module that adds a Protect page to the Jetpack sidebar.
 - Protect: Add a Scan history tab to the Protect dashboard for sites with Jetpack Scan, show threat actions on row hover, and offer to delete unused plugins and themes that have threats.
