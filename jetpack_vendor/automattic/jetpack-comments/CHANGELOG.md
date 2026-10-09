@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Keep the submit button inside the comment box in themes that offset it.
 - Let a saved guest switch to a WordPress.com sign-in when changing their details.
 - Show YouTube and other video players in comments on WordPress.com, and show embeds that need a script, such as TikTok, as links.
+- Stop turning away logged-out readers' comments when a cached page's form has expired.
 
 ## [0.4.0] - 2026-10-05
 ### Added
