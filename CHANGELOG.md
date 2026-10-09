@@ -72,6 +72,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show store revenue and other money values in the store's currency instead of always US dollars.
 - Sharing: Keep backslashes in the sharing label when changing sharing settings from WordPress.com or the Jetpack dashboard.
 - Sharing: Stop Settings > Sharing from resetting sharing links to open in the same window.
+- Tiled Gallery: Keep every image when uploading several at once with client-side media processing enabled.
 - VideoPress: Keep the editing preview on retained footage when playback reaches a trim or trailing cut.
 - VideoPress: Remove legacy Flash player support so videos using the `flashonly` shortcode option display again.
 - VideoPress: Scroll the timeline while dragging cuts beyond the visible area.
