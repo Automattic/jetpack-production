@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.3.1-alpha] - unreleased
+## [8.3.2-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -14,6 +14,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Avoid requesting the Search plan in offline mode.
+
+## [8.3.1] - 2026-10-12
+### Changed
+- Update dependencies.
 
 ## [8.3.0] - 2026-10-05
 ### Changed
@@ -1960,7 +1964,8 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[8.3.1-alpha]: https://github.com/Automattic/jetpack-search/compare/v8.3.0...v8.3.1-alpha
+[8.3.2-alpha]: https://github.com/Automattic/jetpack-search/compare/v8.3.1...v8.3.2-alpha
+[8.3.1]: https://github.com/Automattic/jetpack-search/compare/v8.3.0...v8.3.1
 [8.3.0]: https://github.com/Automattic/jetpack-search/compare/v8.2.1...v8.3.0
 [8.2.1]: https://github.com/Automattic/jetpack-search/compare/v8.2.0...v8.2.1
 [8.2.0]: https://github.com/Automattic/jetpack-search/compare/v8.1.3...v8.2.0

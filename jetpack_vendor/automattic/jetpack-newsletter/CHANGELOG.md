@@ -18,6 +18,10 @@ This is an alpha version! The changes listed here are not final.
 - Reader Link: Register the admin bar node even when the admin bar is hidden, so the admin-bar REST endpoint returns it.
 - Subscribers: Allow comping subscribers who don't have a WordPress.com account.
 
+## [0.17.3] - 2026-10-12
+### Changed
+- Update dependencies.
+
 ## [0.17.2] - 2026-10-05
 ### Added
 - Add a Days, Weeks, Months, and Years control to the subscribers chart, with arrows to move through earlier periods. [#52925]
@@ -432,7 +436,8 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.18.0-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.17.2...v0.18.0-alpha
+[0.18.0-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.17.3...v0.18.0-alpha
+[0.17.3]: https://github.com/Automattic/jetpack-newsletter/compare/v0.17.2...v0.17.3
 [0.17.2]: https://github.com/Automattic/jetpack-newsletter/compare/v0.17.1...v0.17.2
 [0.17.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.17.0...v0.17.1
 [0.17.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.16.0...v0.17.0

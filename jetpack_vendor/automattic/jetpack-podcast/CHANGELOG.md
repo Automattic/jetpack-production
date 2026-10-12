@@ -12,6 +12,10 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Podcast Episode block: Add a toggle to hide the episode author.
 
+## [2.1.7] - 2026-10-12
+### Changed
+- Update dependencies.
+
 ## [2.1.6] - 2026-10-05
 ### Changed
 - Stats: Show the daily downloads chart tooltip on the shared chart tooltip surface. [#52850]
@@ -293,7 +297,8 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Replace the wp-build placeholder with page chrome and tab navigation. [#48559]
 - Dashboard: Slim down wp-build wiring to the Backup pattern. [#48600]
 
-[2.2.0-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.6...v2.2.0-alpha
+[2.2.0-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.7...v2.2.0-alpha
+[2.1.7]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.6...v2.1.7
 [2.1.6]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.5...v2.1.6
 [2.1.5]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.4...v2.1.5
 [2.1.4]: https://github.com/Automattic/jetpack-podcast/compare/v2.1.3...v2.1.4

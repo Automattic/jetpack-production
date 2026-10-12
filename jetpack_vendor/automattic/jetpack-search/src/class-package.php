@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Search package general information
  */
 class Package {
-	const VERSION = '8.3.1-alpha';
+	const VERSION = '8.3.2-alpha';
 	const SLUG    = 'search';
 
 	/**
