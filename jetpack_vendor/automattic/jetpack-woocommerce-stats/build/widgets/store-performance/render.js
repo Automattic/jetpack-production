@@ -7,10 +7,6 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg" );
-__( "Sessions", "jetpack-woocommerce-stats-pkg" );
-__( "Cart", "jetpack-woocommerce-stats-pkg" );
-__( "Checkout", "jetpack-woocommerce-stats-pkg" );
-__( "Purchase", "jetpack-woocommerce-stats-pkg" );
 __( "Net sales", "jetpack-woocommerce-stats-pkg" );
 __( "Monitor your total revenue — after any discounts, returns, or adjustments — over a set period of time.", "jetpack-woocommerce-stats-pkg" );
 __( "Orders", "jetpack-woocommerce-stats-pkg" );

@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the leaderboard widgets: top performing products and bookings, and sales by UTM source, channel and campaign, all placed on the WooCommerce tab by default.
 - Add the Net sales over time widget, the first one the package builds and registers.
 - Add the Sessions by device widget, placed on the WooCommerce tab by default.
+- Add the Store conversion rate widget and its bookings variant; the first is placed on the WooCommerce tab by default.
 - Add the Store performance widget.
 - Add the time series widgets: total and gross sales, orders, average order value, average items per order, bookings and visitors over time, all placed on the WooCommerce tab by default.
 - Place Net sales over time on the WooCommerce tab by default.
