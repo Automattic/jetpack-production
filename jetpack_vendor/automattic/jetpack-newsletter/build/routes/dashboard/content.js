@@ -525,6 +525,8 @@ __( "Loading…", "jetpack-newsletter" );
 __( "Not enough space to display data", "jetpack-newsletter" );
 __( "Percentage change unavailable", "jetpack-newsletter" );
 __( "No comparison data", "jetpack-newsletter" );
+__( "Pie chart", "jetpack-newsletter" );
+__( "Semi-circle chart", "jetpack-newsletter" );
 __( "Loading recent posts…", "jetpack-newsletter" );
 __( "Recent posts could not be loaded.", "jetpack-newsletter" );
 __( "Retry", "jetpack-newsletter" );

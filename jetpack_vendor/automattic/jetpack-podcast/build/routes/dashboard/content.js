@@ -572,6 +572,8 @@ __( "Loading…", "jetpack-charts" );
 __( "Not enough space to display data", "jetpack-charts" );
 __( "Percentage change unavailable", "jetpack-charts" );
 __( "No comparison data", "jetpack-charts" );
+__( "Pie chart", "jetpack-charts" );
+__( "Semi-circle chart", "jetpack-charts" );
 __( "By app", "jetpack-podcast" );
 __( "No app data in this period.", "jetpack-podcast" );
 /* translators: 1: localized download count, 2: localized percentage. */

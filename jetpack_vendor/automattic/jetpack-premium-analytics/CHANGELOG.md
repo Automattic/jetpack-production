@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Draw attention to the date control when a click on the Traffic summary chart sets the period.
 - Drop the URL column from the comment authors CSV, since its links only worked on the site and could expose guest commenters' email addresses.
 - Label a partial first or last week on the Traffic, Subscribers, and ads charts with the selected range's own start or end date.
+- Make donut and semi-circle chart widgets such as Devices reachable by keyboard, and name them for screen readers.
 - Make low values in heatmaps such as Posting activity easier to tell apart from empty cells, and show zero counts as empty.
 - Pair each week with its matching week in a year-ago weekly comparison, and show the days each week covers in the Traffic and ads chart tooltips.
 - Show a video watched for a few minutes as "< 0.1" hours, not 0.0, on the Videos report and video detail page.

@@ -722,6 +722,8 @@ __( "Previous period", "jetpack-my-jetpack" );
 __( "Not enough space to display data", "jetpack-my-jetpack" );
 __( "Percentage change unavailable", "jetpack-my-jetpack" );
 __( "No comparison data", "jetpack-my-jetpack" );
+__( "Pie chart", "jetpack-my-jetpack" );
+__( "Semi-circle chart", "jetpack-my-jetpack" );
 __( "View detailed stats", "jetpack-my-jetpack" );
 __( "No data in this period", "jetpack-my-jetpack" );
 __( "There was no data recorded during this time period.", "jetpack-my-jetpack" );

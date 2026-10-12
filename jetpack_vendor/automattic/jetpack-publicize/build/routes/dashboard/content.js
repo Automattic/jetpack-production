@@ -221,6 +221,8 @@ __( "Previous period", "jetpack-publicize-pkg" );
 __( "Not enough space to display data", "jetpack-publicize-pkg" );
 __( "Percentage change unavailable", "jetpack-publicize-pkg" );
 __( "No comparison data", "jetpack-publicize-pkg" );
+__( "Pie chart", "jetpack-publicize-pkg" );
+__( "Semi-circle chart", "jetpack-publicize-pkg" );
 __( "Last 7 days", "jetpack-publicize-pkg" );
 __( "Last 30 days", "jetpack-publicize-pkg" );
 __( "Last 90 days", "jetpack-publicize-pkg" );

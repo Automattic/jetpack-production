@@ -39,6 +39,8 @@ __( "Loading…", "jetpack-premium-analytics-pkg" );
 __( "Not enough space to display data", "jetpack-premium-analytics-pkg" );
 __( "Percentage change unavailable", "jetpack-premium-analytics-pkg" );
 __( "No comparison data", "jetpack-premium-analytics-pkg" );
+__( "Pie chart", "jetpack-premium-analytics-pkg" );
+__( "Semi-circle chart", "jetpack-premium-analytics-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 /* translators: 1: Calendar type. 2: Current month and year. */

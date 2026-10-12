@@ -137,6 +137,8 @@ __( "Previous period", "jetpack-videopress-pkg" );
 __( "Not enough space to display data", "jetpack-videopress-pkg" );
 __( "Percentage change unavailable", "jetpack-videopress-pkg" );
 __( "No comparison data", "jetpack-videopress-pkg" );
+__( "Pie chart", "jetpack-videopress-pkg" );
+__( "Semi-circle chart", "jetpack-videopress-pkg" );
 __( "Views trends", "jetpack-videopress-pkg" );
 __( "Views", "jetpack-videopress-pkg" );
 __( "Impressions", "jetpack-videopress-pkg" );
