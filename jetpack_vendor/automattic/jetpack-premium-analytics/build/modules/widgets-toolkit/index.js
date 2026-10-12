@@ -88,6 +88,8 @@ __( "Flag of %s", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 /* translators: %s is the label of the list the back link returns to. */
 __( "Back to %s", "jetpack-premium-analytics-pkg" );
+/* translators: %s is the label of the funnel's first step, e.g. "Sessions". */
+__( "of %s", "jetpack-premium-analytics-pkg" );
 /* translators: %d is the number of locations left out of the tooltip list. */
 _n( "…and %d more location", "…and %d more locations", 1, "jetpack-premium-analytics-pkg" );
 __( "Latitude", "jetpack-premium-analytics-pkg" );
@@ -219,6 +221,10 @@ __( "Medium", "jetpack-premium-analytics-pkg" );
 __( "Campaign", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load coupon sales data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "No coupon sales in this period.", "jetpack-premium-analytics-pkg" );
+__( "Sessions", "jetpack-premium-analytics-pkg" );
+__( "Cart", "jetpack-premium-analytics-pkg" );
+__( "Checkout", "jetpack-premium-analytics-pkg" );
+__( "Purchase", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load conversion data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "No conversion data in this period.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load customer revenue data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );

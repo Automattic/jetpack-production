@@ -21,10 +21,6 @@ __( "Last year", "jetpack-premium-analytics-pkg" );
 __( "The response is not a valid JSON response.", "jetpack-premium-analytics-pkg" );
 /* translators: %d: HTTP status code. */
 __( "Report download failed with status %d.", "jetpack-premium-analytics-pkg" );
-__( "Sessions", "jetpack-premium-analytics-pkg" );
-__( "Cart", "jetpack-premium-analytics-pkg" );
-__( "Checkout", "jetpack-premium-analytics-pkg" );
-__( "Purchase", "jetpack-premium-analytics-pkg" );
 __( "Unknown", "jetpack-premium-analytics-pkg" );
 _x( "Post URL", "Email link type", "jetpack-premium-analytics-pkg" );
 _x( "Like", "Email link type", "jetpack-premium-analytics-pkg" );
