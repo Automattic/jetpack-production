@@ -75,6 +75,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Pair each week with its matching week in a year-ago weekly comparison, and show the days each week covers in the Traffic and ads chart tooltips.
 - Premium Analytics: Show a video watched for a few minutes as "< 0.1" hours, not 0.0, on the Videos report and video detail page.
 - Premium Analytics: Show store revenue and other money values in the store's currency instead of always US dollars.
+- Search: Avoid requesting the Search plan in offline mode.
 - Sharing: Keep backslashes in the sharing label when changing sharing settings from WordPress.com or the Jetpack dashboard.
 - Sharing: Stop Settings > Sharing from resetting sharing links to open in the same window.
 - Tiled Gallery: Keep every image when uploading several at once with client-side media processing enabled.

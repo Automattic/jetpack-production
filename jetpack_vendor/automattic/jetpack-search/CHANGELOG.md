@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Avoid requesting the Search plan in offline mode.
+
 ## [8.3.0] - 2026-10-05
 ### Changed
 - Activate the free Search plan from the dashboard instead of sending you through a $0 checkout. [#52655]
