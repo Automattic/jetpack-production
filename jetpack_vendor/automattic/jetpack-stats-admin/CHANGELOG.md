@@ -17,6 +17,9 @@ This is an alpha version! The changes listed here are not final.
 - Admin bar: Add the Stats chart from admin_bar_menu, so the admin-bar REST endpoint returns it too.
 - Settings: Save the WordPress.com Reader setting through the Stats package, and answer a save the site did not store with a 500 status.
 
+### Fixed
+- Post list column: Show view counts on lists with more than 100 posts, such as Pages, instead of leaving them blank.
+
 ## 0.38.2 - 2026-10-05
 ### Fixed
 - Decide the dashboard's paywalls from the site's current features rather than from a plan it cached before its last upgrade. [#52098]

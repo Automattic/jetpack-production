@@ -80,6 +80,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Avoid requesting the Search plan in offline mode.
 - Sharing: Keep backslashes in the sharing label when changing sharing settings from WordPress.com or the Jetpack dashboard.
 - Sharing: Stop Settings > Sharing from resetting sharing links to open in the same window.
+- Stats: Show view counts in the Pages list, and any list with more than 100 posts, instead of leaving them blank.
 - Tiled Gallery: Keep every image when uploading several at once with client-side media processing enabled.
 - VideoPress: Keep the editing preview on retained footage when playback reaches a trim or trailing cut.
 - VideoPress: Remove legacy Flash player support so videos using the `flashonly` shortcode option display again.
