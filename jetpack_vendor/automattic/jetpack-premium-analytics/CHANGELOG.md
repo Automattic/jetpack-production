@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: add the Funnel widget kind, which the conversion rate widgets draw with.
 - Dashboard: add the half-ring variant of the Donut widget kind, which Devices and Sessions by device draw with; the widget contract is 1.8.0.
 - Dashboard: Expose the Donut widget kind and the shared WidgetStatus type through the SDK; the widget contract is 1.5.0.
+- Dashboard: expose the Funnel widget kind through the SDK; the widget contract is 1.9.0.
 - Dashboard: Resolve the icon a widget.json names, under the `jpa` collection; the widget contract is 1.6.0.
 - Link author names in Popular authors and the Authors report to the author's page.
 - Link the Videos report thumbnails to the video detail page, let video leaderboard rows show a linked poster, and mark the video detail poster with a play icon.
