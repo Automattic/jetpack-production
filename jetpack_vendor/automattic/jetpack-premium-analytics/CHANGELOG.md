@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the Store performance widget, now built by the WooCommerce Stats package.
 - Remove the WooCommerce breakdown widgets, now built by the WooCommerce Stats package.
 - Remove the WooCommerce leaderboard widgets, now built by the WooCommerce Stats package.
+- Remove the WooCommerce Sessions by device widget, now built by the WooCommerce Stats package.
 - Remove the WooCommerce time series widgets, now built by the WooCommerce Stats package.
 
 ### Fixed
