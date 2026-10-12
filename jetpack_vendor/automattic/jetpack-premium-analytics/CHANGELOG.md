@@ -58,6 +58,7 @@ This is an alpha version! The changes listed here are not final.
 - Make donut and semi-circle chart widgets such as Devices reachable by keyboard, and name them for screen readers.
 - Make low values in heatmaps such as Posting activity easier to tell apart from empty cells, and show zero counts as empty.
 - Pair each week with its matching week in a year-ago weekly comparison, and show the days each week covers in the Traffic and ads chart tooltips.
+- Reports: show the Referrers, Clicks, Authors and UTM tables at one weight on every row, so the chevron alone marks a row that expands.
 - Show a video watched for a few minutes as "< 0.1" hours, not 0.0, on the Videos report and video detail page.
 - Store: Show store revenue and other money values in the store's currency instead of always US dollars.
 - Store performance: Use sentence case in the Store visitors chart tooltip, like the other count labels.
