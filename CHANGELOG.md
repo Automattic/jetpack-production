@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Draw today's WordAds bucket as not yet counted for Ads Served and Revenue, as for CPM, and say so in the tooltip.
 - Premium Analytics: Label WooCommerce visitor counts as Store visitors, so they aren't confused with Jetpack Stats visitors.
 - Premium Analytics: Let shop managers open the dashboard to read the store reports.
+- Premium Analytics: Link author names in Popular authors and the Authors report to the author's page.
 - Premium Analytics: Make the days in Monthly posting activity larger, growing with the card and wrapping the months onto two rows in the default layout.
 - Premium Analytics: Mark the Comments Subscribers and File downloads report links as opening in a new tab.
 - Premium Analytics: Move the Traffic summary's grouping control (by days, weeks or months) into the chart itself, which remembers your choice.
