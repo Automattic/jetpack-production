@@ -75,8 +75,6 @@ __( "Fewer views", "jetpack-premium-analytics-pkg" );
 __( "More views", "jetpack-premium-analytics-pkg" );
 /* translators: %s is a metric name, e.g. "Views". */
 __( "%s · previous period", "jetpack-premium-analytics-pkg" );
-__( "You've surpassed your limit for two consecutive periods already.", "jetpack-premium-analytics-pkg" );
-__( "You've surpassed your limit the past month.", "jetpack-premium-analytics-pkg" );
 __( "No data", "jetpack-premium-analytics-pkg" );
 /* translators: 1: formatted value, 2: metric name. */
 _x( "%1$s %2$s", "chart tooltip: value and metric", "jetpack-premium-analytics-pkg" );
