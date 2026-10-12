@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.17.3-alpha] - unreleased
+## [0.18.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Action bar: Pass the post stats link through the jetpack_stats_url filter.
+- Subscribers: Add a "Send confirmation email" action for bounced subscribers.
 
 ### Fixed
 - Reader Link: Register the admin bar node even when the admin bar is hidden, so the admin-bar REST endpoint returns it.
@@ -430,7 +431,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.17.3-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.17.2...v0.17.3-alpha
+[0.18.0-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.17.2...v0.18.0-alpha
 [0.17.2]: https://github.com/Automattic/jetpack-newsletter/compare/v0.17.1...v0.17.2
 [0.17.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.17.0...v0.17.1
 [0.17.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.16.0...v0.17.0

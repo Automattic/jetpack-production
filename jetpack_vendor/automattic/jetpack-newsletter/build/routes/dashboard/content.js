@@ -321,6 +321,8 @@ __( "Validating…", "jetpack-newsletter" );
 /* translators: %d: Number of fields that need attention */
 _n( "%d field needs attention", "%d fields need attention", 1, "jetpack-newsletter" );
 __( "More details", "jetpack-newsletter" );
+__( "Confirmation email sent.", "jetpack-newsletter" );
+__( "Couldn't send the confirmation email. Please try again.", "jetpack-newsletter" );
 /* translators: %s: subscriber display name or email. */
 __( "You have unsubscribed %s.", "jetpack-newsletter" );
 /* translators: %d: number of subscribers removed. */
@@ -388,6 +390,7 @@ __( "Not sending (any reason)", "jetpack-newsletter" );
 __( "Date subscribed", "jetpack-newsletter" );
 __( "View", "jetpack-newsletter" );
 __( "Comp a subscription", "jetpack-newsletter" );
+__( "Send confirmation email", "jetpack-newsletter" );
 __( "Remove subscriber", "jetpack-newsletter" );
 __( "Could not load subscribers.", "jetpack-newsletter" );
 __( "Search subscribers…", "jetpack-newsletter" );
@@ -578,6 +581,10 @@ __( "Complete", "jetpack-newsletter" );
 __( "Loading checklist…", "jetpack-newsletter" );
 __( "Newsletters on WordPress.com", "jetpack-newsletter" );
 __( "A newsletter lets people subscribe with their email address, so every new post is delivered straight to their inbox. It's a simple way to build an audience you own, strengthen relationships with readers, and keep them coming back to your site.", "jetpack-newsletter" );
+__( "We stopped sending emails to this subscriber after their address bounced. If you're sure their address is correct, you can send one confirmation email to ask to restart their subscription.", "jetpack-newsletter" );
+/* translators: 1: date the confirmation email was sent, 2: number of days before another can be sent. */
+__( "A confirmation email was sent on %1$s. If they haven’t confirmed, you can send another one after %2$d days.", "jetpack-newsletter" );
+__( "We stopped sending emails to this subscriber after their address bounced. You can't send a confirmation email right now. Try again later.", "jetpack-newsletter" );
 __( "Could not load subscriber details.", "jetpack-newsletter" );
 __( "Try again", "jetpack-newsletter" );
 __( "Emails sent", "jetpack-newsletter" );
