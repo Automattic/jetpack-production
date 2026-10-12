@@ -655,9 +655,9 @@ return array(
 	array(
 		'name'         => 'jpa/tags',
 		'dir_name'     => 'tags',
-		'title'        => 'Top tags & categories in the last 7 days',
-		'description'  => 'Your most visited tags and categories, ranked by views.',
-		'help'         => array( 'content' => 'The tags and categories associated with your most-viewed content, sorted by views.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
+		'title'        => 'Top tags & categories',
+		'description'  => 'The tags and categories of your most viewed posts in the selected period, ranked by views.',
+		'help'         => array( 'content' => 'The tags and categories of your most viewed posts in the selected period, ranked by views. A post counts toward each of its current tags and categories, so this is a breakdown of popular posts by topic rather than a filter over all traffic.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'icon'         => 'jpa/category',
 		'actions'      => null,
 		'has_render'   => true,
