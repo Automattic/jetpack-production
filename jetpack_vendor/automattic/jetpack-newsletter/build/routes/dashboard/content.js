@@ -402,6 +402,9 @@ __( "Excerpt", "jetpack-newsletter" );
 __( "Sets whether email subscribers can read full posts in emails or just an excerpt and link to the full version of the post.", "jetpack-newsletter" );
 __( "Email content", "jetpack-newsletter" );
 __( "Featured images will not be used in your emails until the site is public, because access to the images is restricted to your site only.", "jetpack-newsletter" );
+__( "Edit email design", "jetpack-newsletter" );
+__( "Email design", "jetpack-newsletter" );
+__( "Set the colors, fonts, and layout your subscribers see in their inbox.", "jetpack-newsletter" );
 /* translators: <Empty /> placeholder is set to "Byline will be empty" */
 __( "<Preview>Preview:</Preview> <Empty>Byline will be empty</Empty>", "jetpack-newsletter" );
 /* translators: %1$s placeholder is the user display name, %2$s is example date */

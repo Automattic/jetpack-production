@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Action bar: Pass the post stats link through the jetpack_stats_url filter.
+- Add a link from Settings to the email design editor.
 - Subscribers: Add a "Send confirmation email" action for bounced subscribers.
 
 ### Fixed
