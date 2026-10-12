@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Admin bar: Add the Stats chart from admin_bar_menu, so the admin-bar REST endpoint returns it too.
+- Settings: Save the WordPress.com Reader setting through the Stats package, and answer a save the site did not store with a 500 status.
 
 ## 0.38.2 - 2026-10-05
 ### Fixed

@@ -58,9 +58,14 @@ __( "Today, %s, selected", "jetpack-premium-analytics-pkg" );
 __( "%s, selected", "jetpack-premium-analytics-pkg" );
 __( "OK", "jetpack-premium-analytics-pkg" );
 __( "Cancel", "jetpack-premium-analytics-pkg" );
+__( "Remove", "jetpack-premium-analytics-pkg" );
+__( "Clear", "jetpack-premium-analytics-pkg" );
 __( "More details follow the field.", "jetpack-premium-analytics-pkg" );
 __( "More details follow.", "jetpack-premium-analytics-pkg" );
 __( "Select", "jetpack-premium-analytics-pkg" );
+__( "No results found.", "jetpack-premium-analytics-pkg" );
+__( "Search", "jetpack-premium-analytics-pkg" );
+__( "Clear all", "jetpack-premium-analytics-pkg" );
 __( "Dismiss", "jetpack-premium-analytics-pkg" );
 __( "Required", "jetpack-premium-analytics-pkg" );
 __( "Optional", "jetpack-premium-analytics-pkg" );
@@ -108,7 +113,6 @@ __( "Activity", "jetpack-premium-analytics-pkg" );
 /* translators: List of items for a filter. 1: Filter name. e.g.: "List of: Author". */
 __( "List of: %1$s", "jetpack-premium-analytics-pkg" );
 __( "Search items", "jetpack-premium-analytics-pkg" );
-__( "Search", "jetpack-premium-analytics-pkg" );
 __( "No results found", "jetpack-premium-analytics-pkg" );
 __( "No elements found", "jetpack-premium-analytics-pkg" );
 /* translators: DataViews operator name */
@@ -195,7 +199,6 @@ __( "Not on", "jetpack-premium-analytics-pkg" );
 __( "Unknown status for %1$s", "jetpack-premium-analytics-pkg" );
 __( "Conditions", "jetpack-premium-analytics-pkg" );
 __( "Reset", "jetpack-premium-analytics-pkg" );
-__( "Remove", "jetpack-premium-analytics-pkg" );
 /* translators: 1: Filter name. */
 __( "Filter by: %1$s", "jetpack-premium-analytics-pkg" );
 _x( "Filter", "verb", "jetpack-premium-analytics-pkg" );
@@ -249,3 +252,23 @@ __( "Value must be true, false, or undefined", "jetpack-premium-analytics-pkg" )
 __( "Value must be an array.", "jetpack-premium-analytics-pkg" );
 __( "Every value must be a string.", "jetpack-premium-analytics-pkg" );
 __( "Value must be a valid color.", "jetpack-premium-analytics-pkg" );
+__( "Apply", "jetpack-premium-analytics-pkg" );
+/* translators: %s: Field name. */
+_x( "Edit %s (has errors)", "field", "jetpack-premium-analytics-pkg" );
+/* translators: %s: Field name. */
+_x( "Edit %s", "field", "jetpack-premium-analytics-pkg" );
+__( "Could not validate elements.", "jetpack-premium-analytics-pkg" );
+__( "Value must be one of the elements.", "jetpack-premium-analytics-pkg" );
+__( "Unknown error when running elements validation asynchronously.", "jetpack-premium-analytics-pkg" );
+__( "Validation could not be processed.", "jetpack-premium-analytics-pkg" );
+__( "Unknown error when running custom validation asynchronously.", "jetpack-premium-analytics-pkg" );
+__( "Value does not match the required pattern.", "jetpack-premium-analytics-pkg" );
+__( "Value is below the minimum.", "jetpack-premium-analytics-pkg" );
+__( "Value is above the maximum.", "jetpack-premium-analytics-pkg" );
+__( "Value is too short.", "jetpack-premium-analytics-pkg" );
+__( "Value is too long.", "jetpack-premium-analytics-pkg" );
+__( "Unknown error when running custom validation.", "jetpack-premium-analytics-pkg" );
+__( "Validating…", "jetpack-premium-analytics-pkg" );
+/* translators: %d: Number of fields that need attention */
+_n( "%d field needs attention", "%d fields need attention", 1, "jetpack-premium-analytics-pkg" );
+__( "More details", "jetpack-premium-analytics-pkg" );

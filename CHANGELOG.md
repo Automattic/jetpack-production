@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast: Add a toggle to hide the author in the Podcast Episode block.
 - Premium Analytics: Add a line or bar chart type control to the WooCommerce report widgets.
 - Premium Analytics: Add a Mark as spam action, with Undo, to the Referrers report.
+- Premium Analytics: Add a Settings tab to the dashboard, where site owners can see their plan usage and change the Stats settings, and open it from the "Manage Stats settings" link in Settings › Traffic when Stats v2 is on.
 - Premium Analytics: Add likes, comments and an all-time traffic table to the author detail page, and count an author's views even when they rank below the top 20 authors.
 - Premium Analytics: Add video thumbnails to the VideoPress widget, and link the Videos report thumbnails to the video detail page.
 - Premium Analytics: Cap the cards on report pages at a centered 1440px column on wide screens, so each row's label and numbers stay close enough to read together.

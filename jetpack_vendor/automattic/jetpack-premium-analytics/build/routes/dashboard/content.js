@@ -311,6 +311,7 @@ __( "Widget options", "jetpack-premium-analytics-pkg" );
 __( "Width", "jetpack-premium-analytics-pkg" );
 __( "Use available width", "jetpack-premium-analytics-pkg" );
 __( "Make full width", "jetpack-premium-analytics-pkg" );
+__( "Settings", "jetpack-premium-analytics-pkg" );
 __( "Tell us what's better, what's worse, and what you miss about the new Stats.", "jetpack-premium-analytics-pkg" );
 __( "Leave feedback", "jetpack-premium-analytics-pkg" );
 __( "Everything is a widget", "jetpack-premium-analytics-pkg" );
@@ -327,3 +328,37 @@ __( "Your store data hasn't finished syncing, so the numbers below are incomplet
 /* translators: %d: sync progress percentage. */
 __( "Your store data is still syncing (%d%%). The numbers below are incomplete until it finishes.", "jetpack-premium-analytics-pkg" );
 __( "Try again", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the smallest value shown at this precision, e.g. "0.1". */
+__( "< %s", "jetpack-premium-analytics-pkg" );
+/* translators: 1: views used in the current cycle, 2: the plan's views limit. */
+__( "%1$s / %2$s views", "jetpack-premium-analytics-pkg" );
+/* translators: %d: number of days until the billing cycle resets. */
+_n( "Restarts in %d day", "Restarts in %d days", 1, "jetpack-premium-analytics-pkg" );
+__( "Loading your plan usage…", "jetpack-premium-analytics-pkg" );
+__( "We couldn't load plan usage. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
+__( "Retry", "jetpack-premium-analytics-pkg" );
+__( "Plan usage isn't available for your current plan.", "jetpack-premium-analytics-pkg" );
+__( "Billable views are the page views counted against your plan each cycle. Excluded logged-in role views are not counted.", "jetpack-premium-analytics-pkg" );
+__( "Learn more", "jetpack-premium-analytics-pkg" );
+__( "Upgrade", "jetpack-premium-analytics-pkg" );
+__( "Your current plan", "jetpack-premium-analytics-pkg" );
+/* translators: 1: user role name, 2: number of users with that role. */
+__( "%1$s (%2$s)", "jetpack-premium-analytics-pkg" );
+__( "Include a small chart in admin bar", "jetpack-premium-analytics-pkg" );
+__( "Displays a 48-hour traffic snapshot and information on your site activity, including visitors and popular posts or pages.", "jetpack-premium-analytics-pkg" );
+__( "Allow Jetpack Stats to be viewed by", "jetpack-premium-analytics-pkg" );
+__( "Administrators can always view stats.", "jetpack-premium-analytics-pkg" );
+__( "Count logged in page views from", "jetpack-premium-analytics-pkg" );
+__( "Views from other logged-in users are not counted.", "jetpack-premium-analytics-pkg" );
+__( "Show post views for this site", "jetpack-premium-analytics-pkg" );
+__( "Admin bar widget", "jetpack-premium-analytics-pkg" );
+__( "Manage permissions", "jetpack-premium-analytics-pkg" );
+__( "WordPress.com Reader", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the reason the site gave. */
+__( "Your Stats settings could not be saved: %s", "jetpack-premium-analytics-pkg" );
+__( "Your Stats settings could not be saved.", "jetpack-premium-analytics-pkg" );
+__( "Settings saved.", "jetpack-premium-analytics-pkg" );
+__( "Your Stats settings could not be loaded. Reload the page to try again.", "jetpack-premium-analytics-pkg" );
+__( "Loading your Stats settings…", "jetpack-premium-analytics-pkg" );
+__( "Activation", "jetpack-premium-analytics-pkg" );
+__( "Stats is a Jetpack feature. Activate or deactivate it from <link>Jetpack features</link>.", "jetpack-premium-analytics-pkg" );
