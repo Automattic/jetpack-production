@@ -3411,8 +3411,7 @@ class Contact_Form_Field extends Contact_Form_Shortcode {
 			$wrap_classes .= ' no-label';
 		}
 
-		// Escape the whole class value, wrapper classes included.
-		$shell_field_class = "class='" . esc_attr( $field_wrapper_classes . 'grunion-field-' . $trimmed_type . '-wrap ' . $wrap_classes ) . "' ";
+		$shell_field_class = "class='" . $field_wrapper_classes . 'grunion-field-' . $trimmed_type . '-wrap ' . esc_attr( $wrap_classes ) . "' ";
 
 		/**
 		 * Filter the Contact Form required field text
