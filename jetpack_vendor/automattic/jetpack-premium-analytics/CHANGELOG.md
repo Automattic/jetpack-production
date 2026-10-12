@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Move the WooCommerce tab to the WooCommerce stats package and rename it from Store to WooCommerce, including its URL.
 - Date controls: Compare with the previous period by default.
 - Label store visitor counts as Store visitors in the Store performance widget, the location map, and CSV exports, so they aren't confused with Jetpack Stats visitors.
+- Make the days in Monthly posting activity larger, growing with the card and wrapping the months onto two rows in the default layout.
 - Open the dashboard from the admin bar Stats links and the newsletter action bar post stats link when it is enabled.
 - Open the dashboard on the last 7 days, or on the range the reader last applied here or in Jetpack Stats, and remember a range applied from the header.
 - Open the dashboard to anyone with a section available to them, so shop managers reach the WooCommerce tab, and keep Stats tabs, widgets and feedback to readers who can view Stats.
