@@ -277,6 +277,7 @@ __( "Download file", "jetpack-backup-pkg" );
 __( "The download could not start. Try again.", "jetpack-backup-pkg" );
 /* translators: %s: file name. */
 __( "Preview of %s", "jetpack-backup-pkg" );
+__( "Files in this backup", "jetpack-backup-pkg" );
 __( "We couldn't load this backup's files.", "jetpack-backup-pkg" );
 __( "Clear selection", "jetpack-backup-pkg" );
 /* translators: %d count of selected items (files + opaque folders) */
