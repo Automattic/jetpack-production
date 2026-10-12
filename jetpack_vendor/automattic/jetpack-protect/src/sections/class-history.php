@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Threats Scan has fixed or ignored, for sites with a Scan plan.
  *
- * @since 0.1.0-alpha
+ * @since 0.1.0
  */
 class History implements Dashboard_Section {
 

@@ -21,7 +21,7 @@ final class Initializer {
 	/**
 	 * Package version.
 	 */
-	const PACKAGE_VERSION = '0.3.0-alpha';
+	const PACKAGE_VERSION = '0.3.0';
 
 	/**
 	 * Whether `init()` already ran in this request.

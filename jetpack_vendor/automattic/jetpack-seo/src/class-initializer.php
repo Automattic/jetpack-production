@@ -28,7 +28,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '0.9.10-alpha';
+	const PACKAGE_VERSION = '0.9.10';
 
 	/**
 	 * WordPress.com site feature that enables the Jetpack SEO surface.

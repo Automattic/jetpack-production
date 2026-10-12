@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Registers the flag that gates the `protect-dashboard` module.
  *
- * @since 16.4-a.0
+ * @since 16.4
  */
 class Jetpack_Protect_Dashboard_Feature_Flags {
 

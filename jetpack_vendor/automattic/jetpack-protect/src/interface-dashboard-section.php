@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * A dashboard section: the state its UI starts from, and the REST routes it reads and writes.
  *
- * @since 0.1.0-alpha
+ * @since 0.1.0
  */
 interface Dashboard_Section {
 

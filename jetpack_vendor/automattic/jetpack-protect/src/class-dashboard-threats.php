@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Converts Protect threat models into the camelCase shape the JS threat list reads.
  *
- * @since 0.1.0-alpha
+ * @since 0.1.0
  */
 class Dashboard_Threats {
 

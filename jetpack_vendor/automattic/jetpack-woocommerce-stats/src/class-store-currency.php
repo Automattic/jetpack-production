@@ -10,7 +10,7 @@ namespace Automattic\Jetpack\WooCommerceStats;
 /**
  * Hands the WooCommerce store currency to the dashboard's money formatter, which otherwise prints USD.
  *
- * @since 0.2.0-alpha
+ * @since 0.1.0
  */
 class Store_Currency {
 
