@@ -314,13 +314,14 @@ __( "We are having trouble backing up your site", "jetpack-backup-pkg" );
 __( "Preparing your first cloud backup", "jetpack-backup-pkg" );
 __( "Generating backup…", "jetpack-backup-pkg" );
 __( "The first backup usually takes a few minutes, so it will become available soon.", "jetpack-backup-pkg" );
+__( "Your backup is ready.", "jetpack-backup-pkg" );
+__( "Backup is completed with some files missing. See your <a>backup in the cloud</a> for more details.", "jetpack-backup-pkg" );
+__( "Your latest backup didn't complete. We'll try again shortly.", "jetpack-backup-pkg" );
+__( "Your latest backup didn't complete. Your earlier backups can still be restored.", "jetpack-backup-pkg" );
+__( "We are having trouble backing up your site.", "jetpack-backup-pkg" );
 __( "Your backup will be ready soon", "jetpack-backup-pkg" );
 /* translators: %d: how much of the running backup is complete, as a percentage. */
 __( "Generating backup… (%d%% progress)", "jetpack-backup-pkg" );
-__( "Your latest backup didn't complete. We'll try again shortly.", "jetpack-backup-pkg" );
-/* translators: sentence form of the takeover panel's heading, which is the same words without the full stop. */
-__( "We are having trouble backing up your site.", "jetpack-backup-pkg" );
-__( "Backup is completed with some files missing. See your <a>backup in the cloud</a> for more details.", "jetpack-backup-pkg" );
 __( "Jetpack Logo", "jetpack-backup-pkg" );
 __( "An Automattic Airline", "jetpack-backup-pkg" );
 __( "Features", "jetpack-backup-pkg" );
@@ -426,7 +427,6 @@ __( "<a>1 day of backups saved</a>", "jetpack-backup-pkg" );
 __( "<a>%s days of backups saved</a>", "jetpack-backup-pkg" );
 __( "Backup retention changed.", "jetpack-backup-pkg" );
 __( "Backup storage", "jetpack-backup-pkg" );
-__( "Your backup is ready.", "jetpack-backup-pkg" );
 __( "We couldn't check your site's backup status.", "jetpack-backup-pkg" );
 __( "Backup activity", "jetpack-backup-pkg" );
 __( "Loading item details…", "jetpack-backup-pkg" );
