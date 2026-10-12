@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add trim and cut editing to the video block toolbar and clarify the editor tool icons.
 
+### Fixed
+- Channel: Only open a channel video page for a video uploaded to this site.
+
 ## [0.56.0] - 2026-10-07
 ### Security
 - Playback: Strengthen authorization for private videos. [#53240]

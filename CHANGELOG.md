@@ -84,6 +84,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Show view counts in the Pages list, and any list with more than 100 posts, instead of leaving them blank.
 - Tiled Gallery: Keep every image when uploading several at once with client-side media processing enabled.
 - VideoPress: Keep the editing preview on retained footage when playback reaches a trim or trailing cut.
+- VideoPress: Only open a channel video page for a video uploaded to this site.
 - VideoPress: Remove legacy Flash player support so videos using the `flashonly` shortcode option display again.
 - VideoPress: Scroll the timeline while dragging cuts beyond the visible area.
 - VideoPress: Show an error and stop the Get VideoPress button from staying busy when checkout cannot start.
