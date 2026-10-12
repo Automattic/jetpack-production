@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Keep the images, embeds, captions, and headings in comments written with the previous editor, as links and text.
 - Keep the submit button inside the comment box in themes that offset it.
 - Let a saved guest switch to a WordPress.com sign-in when changing their details.
+- Load the block editor and sign-in dialog on sites where a plugin combines scripts.
 - Load the block editor in older Chromium browsers, such as Chrome 109 and Samsung Internet.
 - Render blocks as plain text in the comment notification emails WordPress sends, instead of showing their raw markup.
 - Show YouTube and other video players in comments on WordPress.com, and show embeds that need a script, such as TikTok, as links.
