@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Podcast Episode block: Add a toggle to hide the episode author.
 
+### Fixed
+- Load the dashboard's JavaScript translation catalogs so its strings are translated.
+
 ## [2.1.7] - 2026-10-12
 ### Changed
 - Update dependencies.

@@ -70,6 +70,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Allow comping subscribers who don't have a WordPress.com account.
 - Newsletter: Avoid a fatal error when an older copy of the Newsletter package is loaded during an update.
 - Newsletter: Detect paid newsletter plans by their tier type as well as the mailing list setting.
+- Podcast: Translate the dashboard's interface strings.
 - Premium Analytics: Compare Last 30 days and custom ranges starting mid-month with the same number of days right before them.
 - Premium Analytics: Draw attention to the date control when a click on the Traffic summary chart sets the period.
 - Premium Analytics: Drop the URL column from the comment authors CSV, since its links only worked on the site and could expose guest commenters' email addresses.

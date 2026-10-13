@@ -160,7 +160,7 @@ function jetpack_podcast_jetpack_podcast_dashboard_wp_admin_enqueue_scripts( $ho
 		// 2. It initializes the boot module as an inline script.
 		wp_register_script( 'jetpack-podcast-dashboard-wp-admin-prerequisites', '', $asset['dependencies'], $asset['version'], true );
 
-		$init_modules = [];
+		$init_modules = ["@jetpack-podcast/init"];
 
 		/*
 		 * Add inline script to initialize the app using initSinglePage (no menuItems).
@@ -233,7 +233,7 @@ JS;
 		);
 
 		// Add init modules as static dependencies
-			// No init modules configured
+			$boot_dependencies[] = array( 'import' => 'static', 'id' => '@jetpack-podcast/init' );
 
 		// Add all registered routes as dependencies
 		foreach ( $routes as $route ) {
