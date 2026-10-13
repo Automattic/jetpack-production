@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - Show YouTube and other video players in comments on WordPress.com, and show embeds that need a script, such as TikTok, as links.
 - Stop turning away logged-out readers' comments when a cached page's form has expired.
 - Translate the comment box placeholder on non-English sites.
+- Turn away comments from logged-out readers that arrive without the form's nonce, which only the form's script adds, to stop spam bots that post the form straight from the page.
 
 ## [0.4.0] - 2026-10-05
 ### Added
