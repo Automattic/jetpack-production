@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add trim and cut editing to the video block toolbar and clarify the editor tool icons.
 
+### Changed
+- Use apply_shortcodes() terminology instead of do_shortcode().
+
 ### Fixed
 - Channel: Only open a channel video page for a video uploaded to this site.
 

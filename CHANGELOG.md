@@ -124,6 +124,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Remove the legacy Settings page and its jetpack-settings-wp-build feature flag.
 - Shortcodes, widgets: Use apply_shortcodes() instead of do_shortcode().
 - Update package dependencies.
+- Use apply_shortcodes() terminology instead of do_shortcode().
 - VideoPress: Remove the legacy VideoPress dashboard. Sites that turned off the modern dashboard no longer get a Jetpack > VideoPress menu.
 
 ## 16.3.1 - 2026-10-12
