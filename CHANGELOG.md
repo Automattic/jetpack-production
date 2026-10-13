@@ -110,6 +110,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Account Protection: Update the breached password notice so it no longer says the feature was activated automatically.
+- Blogroll Block: Prevent PHP warning when config is incomplete.
 - JSON API: Save the brute force protection allow list sent to the site settings endpoint.
 - Newsletter: add the REST proxy the Newsletter checklist needs to read its task list and complete tasks.
 - Newsletter: Show the send icon before the Send button label in the test email modal.
