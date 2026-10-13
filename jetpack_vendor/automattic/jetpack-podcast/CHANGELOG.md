@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Load the dashboard's JavaScript translation catalogs so its strings are translated.
+- Stats: Give the downloads by location map an accessible name for screen readers.
 
 ## [2.1.7] - 2026-10-12
 ### Changed

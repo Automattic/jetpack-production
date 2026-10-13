@@ -74,6 +74,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Always use the logged-out version of a post when the ActivityPub plugin shares it to the Fediverse.
 - Newsletter: Avoid a fatal error when an older copy of the Newsletter package is loaded during an update.
 - Newsletter: Detect paid newsletter plans by their tier type as well as the mailing list setting.
+- Podcast: Give the downloads by location map an accessible name for screen readers.
 - Podcast: Translate the dashboard's interface strings.
 - Post by Email: Forget a user's saved address when they disconnect from WordPress.com, so reconnecting with a different account no longer shows the old one.
 - Premium Analytics: Compare Last 30 days and custom ranges starting mid-month with the same number of days right before them.
@@ -84,6 +85,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Fix the center total of donut and semi-circle charts showing through the chart tooltip.
 - Premium Analytics: Fix value axis labels piling up at the left edge of a summary bar chart resized to one row.
 - Premium Analytics: Follow the WooCommerce Analytics date type setting in store reports instead of always using the order creation date.
+- Premium Analytics: Give map, leaderboard and conversion funnel charts an accessible name and role for screen readers.
 - Premium Analytics: Label a partial first or last week on the Traffic, Subscribers, and ads charts with the selected range's own start or end date.
 - Premium Analytics: Let one-row summary charts, such as the default Store performance tile, show their tooltip by drawing them as sparklines without axes.
 - Premium Analytics: Load the author page on sites that block the WordPress users endpoint.
