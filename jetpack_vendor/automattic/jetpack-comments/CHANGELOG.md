@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add the embed block to the comment editor, for links from the providers WordPress trusts.
+- Embeds: Show TikTok videos as players, and posts from X, Bluesky, and Reddit as cards, without the provider's script.
 - Record usage events for the comment form, sign-in, and block editor.
 
 ### Changed
@@ -42,7 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Load the block editor and sign-in dialog on sites where a plugin combines scripts.
 - Load the block editor in older Chromium browsers, such as Chrome 109 and Samsung Internet.
 - Render blocks as plain text in the comment notification emails WordPress sends, instead of showing their raw markup.
-- Show YouTube and other video players in comments on WordPress.com, and show embeds that need a script, such as TikTok, as links.
+- Show YouTube and other video players in comments on WordPress.com.
 - Stop turning away logged-out readers' comments when a cached page's form has expired.
 - Translate the comment box placeholder on non-English sites.
 - Turn away comments from logged-out readers that arrive without the form's nonce, which only the form's script adds, to stop spam bots that post the form straight from the page.

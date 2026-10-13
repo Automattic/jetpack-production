@@ -2,5 +2,5 @@
 	'dependencies' => array(
 		'wp-polyfill'
 	),
-	'version' => 'b5a1806505c3a6bc99e3'
+	'version' => '70e217a2e958b8fd7bdf'
 );
