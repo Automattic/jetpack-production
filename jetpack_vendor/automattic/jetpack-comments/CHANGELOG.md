@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Focus the comment editor when a reader clicks the box before it loads, or clicks anywhere in an empty box.
 - Hide the plain textarea once the editor mounts, even in themes that style it by ID.
 - Identity: refuse a sign-in code posted from another site, take log-out by POST only, verify TLS on the exchange, and count email checks across sites.
+- Keep a WordPress.com sign-in when a reader goes back and posts a comment again.
 - Keep the caret where the reader clicked when the comment editor opens.
 - Keep the images, embeds, captions, and headings in comments written with the previous editor, as links and text.
 - Keep the submit button inside the comment box in themes that offset it.
