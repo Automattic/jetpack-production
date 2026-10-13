@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - SSO: When a site requires two-step authentication and the WordPress.com account doesn't have it, name the logged-in account and make setting up two-step authentication the main action on the login screen.
 
+### Deprecated
+- Deprecate the `jetpack_connection_ownership_transferable` filter, which can no longer stop the protected owner from transferring ownership.
+
 ## [9.9.1] - 2026-10-06
 ### Security
 - Limit the data returned by the site data endpoint. [#53240]
