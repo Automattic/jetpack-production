@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: add the Columns widget kind, which the revenue by customer type, sales by device, total returns and sales by coupon widgets draw with.
 - Dashboard: add the Funnel widget kind, which the conversion rate widgets draw with.
 - Dashboard: add the half-ring variant of the Donut widget kind, which Devices and Sessions by device draw with; the widget contract is 1.8.0.
+- Dashboard: add the Locations widget kind, which Visitors by location draws with.
 - Dashboard: expose the Columns widget kind through the SDK; the widget contract is 1.10.0.
 - Dashboard: Expose the Donut widget kind and the shared WidgetStatus type through the SDK; the widget contract is 1.5.0.
 - Dashboard: expose the Funnel widget kind through the SDK; the widget contract is 1.9.0.

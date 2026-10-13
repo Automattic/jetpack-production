@@ -65,9 +65,6 @@ _n( "%s view", "%s views", 1, "jetpack-premium-analytics-pkg" );
 __( "Fewer than %s", "jetpack-premium-analytics-pkg" );
 __( "Current period", "jetpack-premium-analytics-pkg" );
 __( "Previous period", "jetpack-premium-analytics-pkg" );
-__( "State", "jetpack-premium-analytics-pkg" );
-__( "Country", "jetpack-premium-analytics-pkg" );
-__( "Store visitors", "jetpack-premium-analytics-pkg" );
 __( "This data is unavailable right now.", "jetpack-premium-analytics-pkg" );
 __( "This author has too many posts to count their stats here.", "jetpack-premium-analytics-pkg" );
 __( "You don't have access to this data.", "jetpack-premium-analytics-pkg" );
@@ -103,10 +100,11 @@ __( "Back to %s", "jetpack-premium-analytics-pkg" );
 __( "of %s", "jetpack-premium-analytics-pkg" );
 /* translators: %d is the number of locations left out of the tooltip list. */
 _n( "…and %d more location", "…and %d more locations", 1, "jetpack-premium-analytics-pkg" );
+__( "Views", "jetpack-premium-analytics-pkg" );
 __( "Latitude", "jetpack-premium-analytics-pkg" );
 __( "Longitude", "jetpack-premium-analytics-pkg" );
 __( "Location", "jetpack-premium-analytics-pkg" );
-__( "Views", "jetpack-premium-analytics-pkg" );
+__( "Country", "jetpack-premium-analytics-pkg" );
 __( "Older activity", "jetpack-premium-analytics-pkg" );
 __( "Newer activity", "jetpack-premium-analytics-pkg" );
 /* translators: 1: the cell's date, e.g. "Jun 2023"; 2: its count, e.g. "15,532 views". */
@@ -234,3 +232,4 @@ __( "United States", "jetpack-premium-analytics-pkg" );
 __( "Worldwide", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load location data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "No location data in this period.", "jetpack-premium-analytics-pkg" );
+__( "Store visitors", "jetpack-premium-analytics-pkg" );
