@@ -225,6 +225,7 @@ __( "Value must be true, false, or undefined", "jetpack-protect-pkg" );
 __( "Value must be an array.", "jetpack-protect-pkg" );
 __( "Every value must be a string.", "jetpack-protect-pkg" );
 __( "Value must be a valid color.", "jetpack-protect-pkg" );
+__( "Scan history is unavailable right now.", "jetpack-protect-pkg" );
 __( "Vulnerable plugin", "jetpack-protect-pkg" );
 __( "Vulnerable theme", "jetpack-protect-pkg" );
 __( "Vulnerable WordPress version", "jetpack-protect-pkg" );
@@ -239,22 +240,42 @@ __( "Delete plugin", "jetpack-protect-pkg" );
 _n( "%s plugin", "%s plugins", 1, "jetpack-protect-pkg" );
 /* translators: %s is a number. */
 _n( "%s theme", "%s themes", 1, "jetpack-protect-pkg" );
+__( "View", "jetpack-protect-pkg" );
+/* translators: 1: a threat, such as "Contact Form 7 (5.3.1)" or "index.php". 2: why the action failed. */
+__( "Threat in %1$s: %2$s", "jetpack-protect-pkg" );
+/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
+__( "Ignoring the threat in %s…", "jetpack-protect-pkg" );
+/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
+__( "Unignoring the threat in %s…", "jetpack-protect-pkg" );
+/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
+__( "Ignored the threat in %s.", "jetpack-protect-pkg" );
+/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
+__( "Unignored the threat in %s.", "jetpack-protect-pkg" );
+__( "Undo", "jetpack-protect-pkg" );
+/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
+__( "The threat in %s couldn’t be ignored.", "jetpack-protect-pkg" );
+/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
+__( "The threat in %s couldn’t be unignored.", "jetpack-protect-pkg" );
+__( "Fixing the threat in %s…", "jetpack-protect-pkg" );
+/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
+__( "The fix for the threat in %s is taking longer than expected. Check back in a few minutes.", "jetpack-protect-pkg" );
+__( "Fixed the threat in %s.", "jetpack-protect-pkg" );
+/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
+__( "Jetpack couldn’t fix the threat in %s. Contact Jetpack support for help.", "jetpack-protect-pkg" );
+/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
+__( "The fix for the threat in %s couldn’t be started.", "jetpack-protect-pkg" );
+/* translators: %s is a plugin or theme, such as "Contact Form 7". */
+__( "%s can’t be deleted while one of its threats is being fixed or ignored. Try again once that finishes.", "jetpack-protect-pkg" );
+/* translators: %s is a plugin or theme, such as "Contact Form 7". */
+__( "Deleted %s.", "jetpack-protect-pkg" );
+/* translators: %s is a plugin or theme, such as "Contact Form 7". */
+__( "%s couldn’t be deleted.", "jetpack-protect-pkg" );
+__( "Delete theme?", "jetpack-protect-pkg" );
+__( "Delete plugin?", "jetpack-protect-pkg" );
 /* translators: %s is a theme name, such as "Twenty Twenty". */
 __( "%s isn’t your active theme or its parent, so deleting it doesn’t change your site. Its files are removed and can’t be restored.", "jetpack-protect-pkg" );
-__( "Delete theme?", "jetpack-protect-pkg" );
-__( "Undo", "jetpack-protect-pkg" );
-__( "Ignoring threat…", "jetpack-protect-pkg" );
-__( "Unignoring threat…", "jetpack-protect-pkg" );
-__( "Threat ignored.", "jetpack-protect-pkg" );
-__( "Threat unignored.", "jetpack-protect-pkg" );
-__( "The threat couldn’t be ignored.", "jetpack-protect-pkg" );
-__( "The threat couldn’t be unignored.", "jetpack-protect-pkg" );
-__( "Fixing threat…", "jetpack-protect-pkg" );
-__( "The fix is taking longer than expected. Check back in a few minutes.", "jetpack-protect-pkg" );
-__( "Threat fixed.", "jetpack-protect-pkg" );
-__( "Jetpack couldn’t fix this threat. Contact Jetpack support for help.", "jetpack-protect-pkg" );
-__( "The fix couldn’t be started.", "jetpack-protect-pkg" );
-__( "View", "jetpack-protect-pkg" );
+/* translators: %s is a plugin name, such as "Contact Form 7". */
+__( "%s isn’t active. Deleting it removes its files and any data it saved, such as its settings. This can’t be undone.", "jetpack-protect-pkg" );
 __( "Auto-fix", "jetpack-protect-pkg" );
 __( "Unignore", "jetpack-protect-pkg" );
 __( "View on WordPress.org", "jetpack-protect-pkg" );
@@ -277,7 +298,6 @@ _x( "Low", "Severity label for issues rated below 3.", "jetpack-protect-pkg" );
 __( "Severity", "jetpack-protect-pkg" );
 __( "Threats", "jetpack-protect-pkg" );
 __( "Detected on", "jetpack-protect-pkg" );
-__( "Scan history is unavailable right now.", "jetpack-protect-pkg" );
 __( "Fixed threats", "jetpack-protect-pkg" );
 __( "Ignored threats", "jetpack-protect-pkg" );
 __( "Fixed on", "jetpack-protect-pkg" );
@@ -287,10 +307,16 @@ __( "Fixed (%d)", "jetpack-protect-pkg" );
 __( "Ignored (%d)", "jetpack-protect-pkg" );
 __( "Threats Scan fixes will appear here.", "jetpack-protect-pkg" );
 __( "Threats you ignore will appear here.", "jetpack-protect-pkg" );
+__( "Loading scan history…", "jetpack-protect-pkg" );
 __( "Scan history", "jetpack-protect-pkg" );
 __( "Low severity", "jetpack-protect-pkg" );
 __( "Critical severity", "jetpack-protect-pkg" );
 __( "High severity", "jetpack-protect-pkg" );
+__( "Parent of active theme", "jetpack-protect-pkg" );
+__( "Active theme", "jetpack-protect-pkg" );
+__( "Active plugin", "jetpack-protect-pkg" );
+__( "Inactive theme", "jetpack-protect-pkg" );
+__( "Inactive plugin", "jetpack-protect-pkg" );
 /* translators: %s describes the fix, such as "Update Contact Form 7 to version 6.2.1". */
 __( "Jetpack Scan can fix this threat for you: %s.", "jetpack-protect-pkg" );
 /* translators: %s is a version number, such as "5.3.2". */
