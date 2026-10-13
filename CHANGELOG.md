@@ -68,6 +68,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Drop the URL column from the comment authors CSV, since its links only worked on the site and could expose guest commenters' email addresses.
 - Premium Analytics: Fix chart tooltips wrapping into a narrow column on WordPress.com, and metric tab text showing through a tooltip.
 - Premium Analytics: Fix Returns in the WooCommerce reports for a full refund after a partial refund, and for refunds of orders that were never paid.
+- Premium Analytics: Fix the center total of donut and semi-circle charts showing through the chart tooltip.
 - Premium Analytics: Fix value axis labels piling up at the left edge of a summary bar chart resized to one row.
 - Premium Analytics: Follow the WooCommerce Analytics date type setting in store reports instead of always using the order creation date.
 - Premium Analytics: Label a partial first or last week on the Traffic, Subscribers, and ads charts with the selected range's own start or end date.
