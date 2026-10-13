@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Render blocks as plain text in the comment notification emails WordPress sends, instead of showing their raw markup.
 - Show YouTube and other video players in comments on WordPress.com, and show embeds that need a script, such as TikTok, as links.
 - Stop turning away logged-out readers' comments when a cached page's form has expired.
+- Translate the comment box placeholder on non-English sites.
 
 ## [0.4.0] - 2026-10-05
 ### Added
