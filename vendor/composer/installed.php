@@ -164,9 +164,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-comments' => array(
-            'pretty_version' => '0.5.0-alpha.1791875357',
-            'version' => '0.5.0.0-alpha1791875357',
-            'reference' => 'b283fb5d131977827b5545e40add4a4ad30c075c',
+            'pretty_version' => '0.5.0-alpha.1791875468',
+            'version' => '0.5.0.0-alpha1791875468',
+            'reference' => 'ed3f36abb55702d9a795d8f5d91199e3f36e80f3',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-comments',
             'aliases' => array(),
