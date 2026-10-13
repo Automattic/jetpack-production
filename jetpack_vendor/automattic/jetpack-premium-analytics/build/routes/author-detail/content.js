@@ -312,6 +312,7 @@ __( "Use available width", "jetpack-premium-analytics-pkg" );
 __( "Make full width", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the smallest value shown at this precision, e.g. "0.1". */
 __( "< %s", "jetpack-premium-analytics-pkg" );
+__( "Unnamed author", "jetpack-premium-analytics-pkg" );
 /* translators: %s: number of published posts. */
 _n( "%s post", "%s posts", 1, "jetpack-premium-analytics-pkg" );
 /* translators: %s: month and year of the author's first post, e.g. "July 2023". */
@@ -320,7 +321,6 @@ __( "Loading…", "jetpack-premium-analytics-pkg" );
 __( "Author not found", "jetpack-premium-analytics-pkg" );
 __( "Author unavailable", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this author's posts.", "jetpack-premium-analytics-pkg" );
-__( "Unnamed author", "jetpack-premium-analytics-pkg" );
 __( "Popular post", "jetpack-premium-analytics-pkg" );
 __( "This author’s most-viewed post, with its headline views, likes and comments.", "jetpack-premium-analytics-pkg" );
 __( "Latest post", "jetpack-premium-analytics-pkg" );

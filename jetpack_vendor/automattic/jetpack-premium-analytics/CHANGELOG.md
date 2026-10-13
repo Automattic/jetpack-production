@@ -67,6 +67,7 @@ This is an alpha version! The changes listed here are not final.
 - Pair each week with its matching week in a year-ago weekly comparison, and show the days each week covers in the Traffic and ads chart tooltips.
 - Reports: show the Referrers, Clicks, Authors and UTM tables at one weight on every row, so the chevron alone marks a row that expands.
 - Show a video watched for a few minutes as "< 0.1" hours, not 0.0, on the Videos report and video detail page.
+- Show the author's name in the author page breadcrumb.
 - Store: Show store revenue and other money values in the store's currency instead of always US dollars.
 - Store performance: Use sentence case in the Store visitors chart tooltip, like the other count labels.
 - Store reports: Follow the WooCommerce Analytics date type setting instead of always using the order creation date.

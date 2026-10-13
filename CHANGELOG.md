@@ -81,6 +81,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Reports: show the Referrers, Clicks, Authors and UTM tables at one weight on every row, so the chevron alone marks a row that expands.
 - Premium Analytics: Show a video watched for a few minutes as "< 0.1" hours, not 0.0, on the Videos report and video detail page.
 - Premium Analytics: Show store revenue and other money values in the store's currency instead of always US dollars.
+- Premium Analytics: Show the author's name in the author page breadcrumb.
 - Search: Avoid requesting the Search plan in offline mode.
 - SEO: Fix saving settings, clearing front-page descriptions, and switching sitemaps off on private sites. Preserve unsaved title structure edits when saving another row.
 - SEO: Keep disabled GEO settings off after reloading. Detect static robots.txt and llms.txt files on supported managed hosting. Hide the Site visibility progress badge on private sites.
