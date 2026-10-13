@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array('wp-date', 'wp-i18n'), 'module_dependencies' => array(array('id' => '@jetpack-premium-analytics/data', 'import' => 'static')), 'version' => '1ac575859838bf7c8807');
+<?php return array('dependencies' => array('wp-date', 'wp-i18n'), 'module_dependencies' => array(array('id' => '@jetpack-premium-analytics/data', 'import' => 'static')), 'version' => '7f4fd79ee23b724fc75a');

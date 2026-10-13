@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Cap the cards on report pages at a centered 1440px column on wide screens, so each row's label and numbers stay close enough to read together.
+- Chart legends: Name each metric's comparison period, such as "Views (Prev. 30 days)", in both line and bar charts.
 - Charts: Draw chart tooltips with dark text on the light chart surface.
 - Charts: Draw tabbed metric charts in the admin color, with the metric paired in the Traffic summary in a darker shade, instead of a different color per metric.
 - Charts: Use a 2px corner radius on chart bars.
