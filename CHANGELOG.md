@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Mark the Comments Subscribers and File downloads report links as opening in a new tab.
 - Premium Analytics: Move the Top tags & categories widget to the Traffic tab, where it and its report follow the date picker.
 - Premium Analytics: Move the Traffic summary's grouping control (by days, weeks or months) into the chart itself, which remembers your choice.
+- Premium Analytics: Offer a Create post action in empty Traffic and Popular post widgets when the site has no published posts.
 - Premium Analytics: Open on the last 7 days, or on the range you last picked in Stats, and remember a range you apply.
 - Premium Analytics: Open the dashboard from the admin bar Stats links when it is enabled.
 - Premium Analytics: Open the dashboard on the WooCommerce tab when WooCommerce is active.

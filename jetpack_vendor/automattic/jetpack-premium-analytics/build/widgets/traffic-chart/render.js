@@ -27,3 +27,5 @@ __( "Hourly data isn't available for this metric.", "jetpack-premium-analytics-p
 __( "Traffic metric", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load traffic data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
+__( "You haven't published any posts yet. Get started by creating your first one.", "jetpack-premium-analytics-pkg" );
+__( "Create post", "jetpack-premium-analytics-pkg" );
