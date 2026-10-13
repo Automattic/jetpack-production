@@ -54,6 +54,7 @@ This is an alpha version! The changes listed here are not final.
 - SSO: When a site requires two-step authentication and your WordPress.com account doesn't have it, the login screen now names your account and links straight to two-step setup.
 - VideoPress: Add an introductory video to the first-run welcome modal.
 - VideoPress: Add trim and cut editing to the video block toolbar and clarify the editor tool icons.
+- VideoPress: Open this site's video pages from a Video Playlist in the same tab, and mark the video being viewed.
 
 ### Bug fixes
 - Backup: Stop the Get VaultPress Backup button from staying busy when setup fails.

@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Use apply_shortcodes() terminology instead of do_shortcode().
+- Video Playlist: Open this site's video pages in the same tab, and mark the entry of the video being viewed.
 
 ### Fixed
 - Channel: Only open a channel video page for a video uploaded to this site.
