@@ -18,6 +18,8 @@ __( "Dismiss", "jetpack-backup-pkg" );
 __( "Something went wrong", "jetpack-backup-pkg" );
 __( "The page ran into an unexpected problem. Your backups are unaffected.", "jetpack-backup-pkg" );
 __( "Reload the page", "jetpack-backup-pkg" );
+/* translators: Short month and day format, see https://www.php.net/manual/datetime.format.php */
+_x( "M j", "short month and day date format", "jetpack-backup-pkg" );
 /* translators: %s: actor name */
 __( "By %s", "jetpack-backup-pkg" );
 /* translators: 1: Calendar type. 2: Current month and year. */
@@ -223,6 +225,12 @@ __( "Value must be true, false, or undefined", "jetpack-backup-pkg" );
 __( "Value must be an array.", "jetpack-backup-pkg" );
 __( "Every value must be a string.", "jetpack-backup-pkg" );
 __( "Value must be a valid color.", "jetpack-backup-pkg" );
+/* translators: %s: a storage size number, e.g. "512". */
+_x( "%sMB", "storage size in megabytes", "jetpack-backup-pkg" );
+/* translators: %s: a storage size number, e.g. "1.5". */
+_x( "%sTB", "storage size in terabytes", "jetpack-backup-pkg" );
+/* translators: %s: a storage size number, e.g. "12.4". */
+_x( "%sGB", "storage size in gigabytes", "jetpack-backup-pkg" );
 __( "The site doesn't appear to be connected. Backup requires an active Jetpack connection in order to function properly.", "jetpack-backup-pkg" );
 /* translators: 1: what failed, in our own words. 2: the reason WordPress.com gave, usually in English. */
 __( "%1$s WordPress.com said: %2$s", "jetpack-backup-pkg" );

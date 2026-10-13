@@ -104,7 +104,8 @@ __( "Restoring from backup…", "jetpack-backup-pkg" );
 __( "Restore complete.", "jetpack-backup-pkg" );
 __( "Restore finished with errors", "jetpack-backup-pkg" );
 __( "Restore backup", "jetpack-backup-pkg" );
-__( "Restore point:", "jetpack-backup-pkg" );
+/* translators: %s: date and time of the backup. */
+__( "Restore point: %s", "jetpack-backup-pkg" );
 __( "Restoring replaces the items you select below with their versions from this backup. Everything else stays as it is. This cannot be undone.", "jetpack-backup-pkg" );
 __( "Choose the items you wish to restore:", "jetpack-backup-pkg" );
 __( "Select at least one item to restore.", "jetpack-backup-pkg" );

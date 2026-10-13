@@ -104,7 +104,8 @@ __( "The address is missing a valid download point. Go back to the overview and 
 __( "Preparing download…", "jetpack-backup-pkg" );
 __( "Your download is ready", "jetpack-backup-pkg" );
 __( "Download backup", "jetpack-backup-pkg" );
-__( "Download point:", "jetpack-backup-pkg" );
+/* translators: %s: date and time of the backup. */
+__( "Download point: %s", "jetpack-backup-pkg" );
 __( "Choose the items you wish to include in the download:", "jetpack-backup-pkg" );
 __( "Select at least one item to download.", "jetpack-backup-pkg" );
 __( "Generate download", "jetpack-backup-pkg" );
