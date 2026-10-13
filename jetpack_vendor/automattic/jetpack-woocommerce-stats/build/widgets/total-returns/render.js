@@ -6,5 +6,7 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "No booking data in this period.", "jetpack-premium-analytics-pkg" );
-__( "We couldn't load booking data by device. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
+__( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg" );
+__( "Total sales", "jetpack-woocommerce-stats-pkg" );
+__( "Refunds", "jetpack-woocommerce-stats-pkg" );
+__( "We couldn't load returns data. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );

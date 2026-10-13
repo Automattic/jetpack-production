@@ -25,7 +25,6 @@
 		"build/widgets/author-performance/widget.js",
 		"build/widgets/author-top-posts/render.js",
 		"build/widgets/authors/render.js",
-		"build/widgets/bookings-by-device/render.js",
 		"build/widgets/clicks/render.js",
 		"build/widgets/devices/render.js",
 		"build/widgets/email-breakdown/render.js",
