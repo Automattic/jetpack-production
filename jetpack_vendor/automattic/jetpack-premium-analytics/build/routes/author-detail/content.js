@@ -344,7 +344,6 @@ __( "All-time traffic", "jetpack-premium-analytics-pkg" );
 __( "Every month of this author’s views since their first post, page or product, with each year’s total beside it. Always the full history: the period above doesn’t narrow it. Pick a month to read the rest of the page over it.", "jetpack-premium-analytics-pkg" );
 __( "All authors", "jetpack-premium-analytics-pkg" );
 __( "Author", "jetpack-premium-analytics-pkg" );
-__( "This site doesn't share author profiles.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this author. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't find this author.", "jetpack-premium-analytics-pkg" );
 __( "Back to Authors", "jetpack-premium-analytics-pkg" );
