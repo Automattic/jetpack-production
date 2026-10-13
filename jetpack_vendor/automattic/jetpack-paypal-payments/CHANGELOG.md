@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a feature flag that hides the PayPal sandbox option in the connection wizard; off, the wizard connects to production only.
 
+### Removed
+- Remove the product image field from the block editor form until PayPal payment links can carry an image; blocks that already hold one keep showing it.
+
 ## [0.12.0] - 2026-10-05
 ### Added
 - Add additional analytics to Payment Buttons. [#52841]
