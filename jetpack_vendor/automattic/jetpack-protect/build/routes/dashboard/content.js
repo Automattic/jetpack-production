@@ -348,6 +348,36 @@ __( "Threat details", "jetpack-protect-pkg" );
 __( "Close", "jetpack-protect-pkg" );
 __( "Scan history no longer lists this threat.", "jetpack-protect-pkg" );
 __( "History", "jetpack-protect-pkg" );
+__( "%s: 100%% uptime", "jetpack-protect-pkg" );
+/* translators: %1$s is a date. %2$d is a number of minutes. */
+_n( "%1$s: down for %2$d minute", "%1$s: down for %2$d minutes", 1, "jetpack-protect-pkg" );
+__( "%s: no data", "jetpack-protect-pkg" );
+__( "Unavailable", "jetpack-protect-pkg" );
+__( "Off", "jetpack-protect-pkg" );
+__( "Operational", "jetpack-protect-pkg" );
+__( "Down", "jetpack-protect-pkg" );
+__( "Status unknown", "jetpack-protect-pkg" );
+/* translators: %1$s, %2$s and %3$s are counts of days: "38 days up", "1 day down", "1 day with no data". */
+__( "%1$s, %2$s, %3$s", "jetpack-protect-pkg" );
+/* translators: %d is a number of days. */
+_n( "%d day up", "%d days up", 1, "jetpack-protect-pkg" );
+/* translators: %d is a number of days. */
+_n( "%d day down", "%d days down", 1, "jetpack-protect-pkg" );
+/* translators: %d is a number of days. */
+_n( "%d day with no data", "%d days with no data", 1, "jetpack-protect-pkg" );
+__( "Turn on downtime monitoring to get an email the moment your site goes down.", "jetpack-protect-pkg" );
+__( "Downtime monitoring isn’t available on this site.", "jetpack-protect-pkg" );
+__( "Monitor", "jetpack-protect-pkg" );
+/* translators: %d is a number of days. */
+__( "Uptime, last %d days (UTC)", "jetpack-protect-pkg" );
+__( "Uptime history is unavailable right now.", "jetpack-protect-pkg" );
+__( "Configure Downtime Monitoring", "jetpack-protect-pkg" );
+__( "Turn on in Settings", "jetpack-protect-pkg" );
+__( "Monitor your site for downtime", "jetpack-protect-pkg" );
+__( "Jetpack checks your site every five minutes.", "jetpack-protect-pkg" );
+__( "Email me when my site goes down and comes back up", "jetpack-protect-pkg" );
+__( "Emails go to your WordPress.com account’s address.", "jetpack-protect-pkg" );
+__( "Connect your WordPress.com account to manage these emails.", "jetpack-protect-pkg" );
 __( "Scan no longer reports this threat. It may have been fixed.", "jetpack-protect-pkg" );
 /* translators: %s is a date and time, such as "Oct 6, 10PM". */
 __( "Free vulnerability checks run once a day, so the next one can start on %s. Upgrade to Scan to scan whenever you like.", "jetpack-protect-pkg" );
