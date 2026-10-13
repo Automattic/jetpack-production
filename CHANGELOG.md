@@ -113,6 +113,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Add a Scan history tab to the Protect dashboard for sites with Jetpack Scan, show threat actions on row hover, and offer to delete unused plugins and themes that have threats.
 - Protect: Add the Scan section to the Protect dashboard: review threats in a table with a details sidebar, run on-demand scans, and fix, ignore, or unignore threats.
 - Protect: Add the tabbed layout and section framework for the feature-flagged Protect dashboard.
+- Shortcodes, widgets: Use apply_shortcodes() instead of do_shortcode().
 - Update package dependencies.
 - VideoPress: Remove the legacy VideoPress dashboard. Sites that turned off the modern dashboard no longer get a Jetpack > VideoPress menu.
 
