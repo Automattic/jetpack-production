@@ -6,8 +6,33 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+__( "Enter a full URL that starts with https:// or http://.", "jetpack-premium-analytics-pkg" );
+__( "Build URL", "jetpack-premium-analytics-pkg" );
+__( "Generate URLs to share and track UTM parameters.", "jetpack-premium-analytics-pkg" );
+__( "Destination URL", "jetpack-premium-analytics-pkg" );
+__( "UTM campaign", "jetpack-premium-analytics-pkg" );
+__( "e.g. promotion", "jetpack-premium-analytics-pkg" );
+__( "UTM source", "jetpack-premium-analytics-pkg" );
+__( "e.g. newsletter", "jetpack-premium-analytics-pkg" );
+__( "UTM medium", "jetpack-premium-analytics-pkg" );
+__( "e.g. email, social", "jetpack-premium-analytics-pkg" );
+__( "Your URL to share", "jetpack-premium-analytics-pkg" );
+__( "Enter a destination URL to see the URL", "jetpack-premium-analytics-pkg" );
+__( "Fill out campaign parameters to see the URL", "jetpack-premium-analytics-pkg" );
+__( "Why should I use this?", "jetpack-premium-analytics-pkg" );
+__( "UTM codes help track where your traffic comes from. Adding them to your URLs gives you insights into what works and where to optimize.", "jetpack-premium-analytics-pkg" );
+__( "Name your campaign", "jetpack-premium-analytics-pkg" );
+__( "Example: christmas, flash-sale", "jetpack-premium-analytics-pkg" );
+__( "Define where traffic originates", "jetpack-premium-analytics-pkg" );
+__( "Example: newsletter, facebook, google", "jetpack-premium-analytics-pkg" );
+__( "Define the channel type", "jetpack-premium-analytics-pkg" );
+__( "Example: email, social, cpc", "jetpack-premium-analytics-pkg" );
+__( "Use your generated URLs in social posts, emails, or ads. Jetpack Stats will track UTM codes, giving you accurate insights into your traffic.", "jetpack-premium-analytics-pkg" );
+__( "Copied!", "jetpack-premium-analytics-pkg" );
+__( "Copy to clipboard", "jetpack-premium-analytics-pkg" );
 /* translators: %s is the UTM value label. */
 __( "View posts for %s", "jetpack-premium-analytics-pkg" );
 __( "All UTM insights", "jetpack-premium-analytics-pkg" );
 __( "View all UTM insights", "jetpack-premium-analytics-pkg" );
+__( "You don’t have UTM visits for this period. Build a URL to start tracking a campaign.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load UTM data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );

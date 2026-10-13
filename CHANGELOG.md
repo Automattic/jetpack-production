@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Move the Traffic summary's grouping control (by days, weeks or months) into the chart itself, which remembers your choice.
 - Premium Analytics: Name each metric's comparison period in line and bar chart legends, such as "Views (Prev. 30 days)".
 - Premium Analytics: Offer a Create post action in empty Traffic and Popular post widgets when the site has no published posts.
+- Premium Analytics: Offer a URL builder when the selected UTM report has no visits.
 - Premium Analytics: Open on the last 7 days, or on the range you last picked in Stats, and remember a range you apply.
 - Premium Analytics: Open the dashboard from the admin bar Stats links when it is enabled.
 - Premium Analytics: Open the dashboard on the WooCommerce tab when WooCommerce is active.

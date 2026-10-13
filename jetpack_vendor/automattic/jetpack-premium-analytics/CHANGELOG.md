@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Link author names in Popular authors and the Authors report to the author's page.
 - Link the Videos report thumbnails to the video detail page, let video leaderboard rows show a linked poster, and mark the video detail poster with a play icon.
 - Offer a Create post action in empty Traffic and Popular post widgets when the site has no published posts.
+- Offer a URL builder when the selected UTM report has no visits.
 - Show hours watched and retention rate on the Videos report, and name the Videos, Clicks, Authors and Locations columns as in Stats.
 - Widget SDK: Add `useReport` and `toBucketStamp`, so a package that extends the dashboard can run its own report queries and feed the dashboard time series.
 - Widgets toolkit: Add a Donut component that renders a breakdown with its total, legend, deltas and states; the five WooCommerce donut widgets use it.
