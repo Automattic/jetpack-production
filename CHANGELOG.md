@@ -101,6 +101,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Avoid requesting the Search plan in offline mode.
 - SEO: Fix saving settings, clearing front-page descriptions, and switching sitemaps off on private sites. Preserve unsaved title structure edits when saving another row.
 - SEO: Keep disabled GEO settings off after reloading. Detect static robots.txt and llms.txt files on supported managed hosting. Hide the Site visibility progress badge on private sites.
+- SEO Tools: Fix the homepage and archive pages being hidden from search engines when their newest post is.
 - Sharing: Keep backslashes in the sharing label when changing sharing settings from WordPress.com or the Jetpack dashboard.
 - Sharing: Stop Settings > Sharing from resetting sharing links to open in the same window.
 - Shortcodes: Recognize YouTube live links so livestreams embed and show a thumbnail, including private and unlisted streams.
