@@ -118,6 +118,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Add the Scan section to the Protect dashboard: review threats in a table with a details sidebar, run on-demand scans, and fix, ignore, or unignore threats.
 - Protect: Add the tabbed layout and section framework for the feature-flagged Protect dashboard.
 - Protect: Improve the Scan section of the Protect dashboard: delete unused vulnerable plugins and themes in place, step through threats with the arrow keys, see whether the affected plugin or theme is active, and get clearer notices for each threat.
+- Settings: Remove the legacy Settings page and its jetpack-settings-wp-build feature flag.
 - Shortcodes, widgets: Use apply_shortcodes() instead of do_shortcode().
 - Update package dependencies.
 - VideoPress: Remove the legacy VideoPress dashboard. Sites that turned off the modern dashboard no longer get a Jetpack > VideoPress menu.
