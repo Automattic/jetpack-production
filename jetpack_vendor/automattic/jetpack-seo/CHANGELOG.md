@@ -5,9 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.9.10-alpha] - unreleased
+## [0.10.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Fix saving SEO settings, clearing front-page descriptions, and switching sitemaps off on private sites. Preserve unsaved title structure edits when saving another row. Explain when sitemap generation is managed by the hosting platform. Hide unsupported canonical URL controls.
+- Keep disabled GEO settings off after reloading. Detect static robots.txt and llms.txt files on supported managed hosting. Hide the Site visibility progress badge on private sites.
 
 ## [0.9.9] - 2026-10-12
 ### Changed
@@ -217,7 +221,7 @@ This is an alpha version! The changes listed here are not final.
 - Create a Settings screen with site visibility, post title structure, front-page description, and site verification. [#49256]
 - Scaffold the new `jetpack-seo` package and mount its admin page. [#49203]
 
-[0.9.10-alpha]: https://github.com/Automattic/jetpack-seo/compare/0.9.9...0.9.10-alpha
+[0.10.0-alpha]: https://github.com/Automattic/jetpack-seo/compare/0.9.9...0.10.0-alpha
 [0.9.9]: https://github.com/Automattic/jetpack-seo/compare/0.9.8...0.9.9
 [0.9.8]: https://github.com/Automattic/jetpack-seo/compare/0.9.7...0.9.8
 [0.9.7]: https://github.com/Automattic/jetpack-seo/compare/0.9.6...0.9.7

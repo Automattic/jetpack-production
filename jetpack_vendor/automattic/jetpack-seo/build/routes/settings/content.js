@@ -103,6 +103,8 @@ __( "Social profiles", "jetpack-seo" );
 __( "Links to your public profiles — Facebook, X, LinkedIn.", "jetpack-seo" );
 __( "Save author profile", "jetpack-seo" );
 __( "Author profile", "jetpack-seo" );
+__( "WordPress.com manages sitemap generation for this site. Additional hosting features let you turn sitemap generation on or off.", "jetpack-seo" );
+__( "Explore hosting options", "jetpack-seo" );
 __( "Schema settings saved.", "jetpack-seo" );
 __( "Could not save schema settings. Please try again.", "jetpack-seo" );
 __( "Saving breadcrumbs…", "jetpack-seo" );
@@ -195,6 +197,7 @@ __( "Allow search engines to index this site to generate a sitemap.", "jetpack-s
 __( "Turning this off asks search engines to stop indexing your site — Google and Bing honor it, others ignore it. Same setting as Settings → Reading.", "jetpack-seo" );
 __( "Your site is private, so search engines cannot see it at all. Make it public in your site visibility settings to change this.", "jetpack-seo" );
 __( "View sitemap", "jetpack-seo" );
+__( "This setting is managed by your hosting platform and cannot be changed here.", "jetpack-seo" );
 __( "Shown under your site name in search results and social shares. About the first 155 characters display in search, or 120 on mobile.", "jetpack-seo" );
 __( "Unable to load settings.", "jetpack-seo" );
 __( "Front-page description", "jetpack-seo" );

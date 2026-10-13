@@ -474,6 +474,7 @@ return array(
     'Automattic\\Jetpack\\SEO\\Schema_Node_Ids' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-node-ids.php',
     'Automattic\\Jetpack\\SEO\\Schema_Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-settings.php',
     'Automattic\\Jetpack\\SEO\\Schema_Settings_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-settings-controller.php',
+    'Automattic\\Jetpack\\SEO\\Static_Files' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-static-files.php',
     'Automattic\\Jetpack\\SEO\\Surface_Visibility' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-surface-visibility.php',
     'Automattic\\Jetpack\\SEO\\Website_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-website-schema-node.php',
     'Automattic\\Jetpack\\Scan_Page\\Initial_State' => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-initial-state.php',

@@ -499,6 +499,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_4_a_0
         'Automattic\\Jetpack\\SEO\\Schema_Node_Ids' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-node-ids.php',
         'Automattic\\Jetpack\\SEO\\Schema_Settings' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-settings.php',
         'Automattic\\Jetpack\\SEO\\Schema_Settings_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-settings-controller.php',
+        'Automattic\\Jetpack\\SEO\\Static_Files' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-static-files.php',
         'Automattic\\Jetpack\\SEO\\Surface_Visibility' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-surface-visibility.php',
         'Automattic\\Jetpack\\SEO\\Website_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-website-schema-node.php',
         'Automattic\\Jetpack\\Scan_Page\\Initial_State' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-initial-state.php',

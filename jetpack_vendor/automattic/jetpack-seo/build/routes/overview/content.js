@@ -101,6 +101,7 @@ __( "Closed to search engines", "jetpack-seo" );
 __( "Sitemap published", "jetpack-seo" );
 __( "Sitemap not published", "jetpack-seo" );
 __( "Site visibility", "jetpack-seo" );
+__( "Sitemaps managed by WordPress.com", "jetpack-seo" );
 __( "Manage visibility", "jetpack-seo" );
 __( "Unable to load overview.", "jetpack-seo" );
 __( "SEO tools are not enabled on this site. Some cards reflect the underlying WordPress options only.", "jetpack-seo" );
