@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Settings: Show a working Canonical URLs switch on WordPress.com Simple sites that adds canonical tags to archive pages.
+
 ### Fixed
 - Fix saving SEO settings, clearing front-page descriptions, and switching sitemaps off on private sites. Preserve unsaved title structure edits when saving another row. Explain when sitemap generation is managed by the hosting platform. Hide unsupported canonical URL controls.
 - Keep disabled GEO settings off after reloading. Detect static robots.txt and llms.txt files on supported managed hosting. Hide the Site visibility progress badge on private sites.
