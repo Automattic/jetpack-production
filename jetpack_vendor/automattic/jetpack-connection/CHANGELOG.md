@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 ### Deprecated
 - Deprecate the `jetpack_connection_ownership_transferable` filter, which can no longer stop the protected owner from transferring ownership.
 
+### Fixed
+- Connectors: Translate the Connectors card's text on sites that don't use English.
+
 ## [9.9.1] - 2026-10-06
 ### Security
 - Limit the data returned by the site data endpoint. [#53240]
