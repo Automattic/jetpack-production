@@ -187,12 +187,48 @@ __( "Your answer has been submitted. <br/>Thanks for your input on how we can im
 __( "Are you sure you want to disconnect?", "jetpack-my-jetpack" );
 __( "There was a problem disconnecting your account. Please try again.", "jetpack-my-jetpack" );
 __( "Disconnect Owner Account", "jetpack-my-jetpack" );
-__( "Disconnecting the owner account will remove the Jetpack connection for all users on this site. The site will remain connected.", "jetpack-my-jetpack" );
+__( "Disconnecting the owner account without choosing a new owner will remove the Jetpack connection for all users on this site. The site will remain connected.", "jetpack-my-jetpack" );
 __( "Transfer ownership to another admin", "jetpack-my-jetpack" );
-__( "View other connected accounts", "jetpack-my-jetpack" );
+__( "No other connected administrators", "jetpack-my-jetpack" );
+__( "Ownership can only go to an administrator who has connected their WordPress.com account.", "jetpack-my-jetpack" );
+__( "Ask another administrator to connect, then come back here to transfer ownership. <link>How users connect</link>", "jetpack-my-jetpack" );
+__( "Select an administrator", "jetpack-my-jetpack" );
+__( "Loading administrators…", "jetpack-my-jetpack" );
+__( "Choose a connected administrator to take over this site's connection to WordPress.com.", "jetpack-my-jetpack" );
+__( "New connection owner", "jetpack-my-jetpack" );
+__( "Don't see someone? They need to be an administrator and <link>connect their WordPress.com account</link> first.", "jetpack-my-jetpack" );
+/* translators: %1$s: user login. %2$s: user email address. */
+__( "%1$s (%2$s)", "jetpack-my-jetpack" );
+/* translators: <name/> is replaced with the display name of the administrator taking over. */
+__( "<name/> will become the connection owner.", "jetpack-my-jetpack" );
+/* translators: %s: display name of the administrator taking over. */
+__( "%s will own the data WordPress.com stores for this site.", "jetpack-my-jetpack" );
+__( "You'll stay connected as a regular user.", "jetpack-my-jetpack" );
+/* translators: %s: display name of the administrator taking over. */
+__( "%s needs to confirm protected ownership.", "jetpack-my-jetpack" );
+__( "You're the protected owner of this connection", "jetpack-my-jetpack" );
+/* translators: %s: display name of the administrator taking over. */
+__( "After the transfer, features that need a protected owner stop working until %s confirms they are the new protected owner.", "jetpack-my-jetpack" );
+/* translators: <name/> is replaced with the display name of the administrator taking over. */
+__( "<name/> also becomes the main point of contact for support about that data. <link>Learn about the connection owner</link>", "jetpack-my-jetpack" );
+/* translators: %s: display name of the new connection owner. */
+__( "%s is now the connection owner. You're still connected as a regular user.", "jetpack-my-jetpack" );
+__( "Ownership of this connection is locked and cannot be transferred.", "jetpack-my-jetpack" );
+__( "That user is no longer an administrator, so they cannot take over the connection.", "jetpack-my-jetpack" );
+__( "That user is no longer connected to WordPress.com. Ask them to reconnect, or choose someone else.", "jetpack-my-jetpack" );
+__( "That user already owns this connection.", "jetpack-my-jetpack" );
+__( "The connection owner could not be changed. Please try again.", "jetpack-my-jetpack" );
+__( "Could not load the administrators who can take over this connection.", "jetpack-my-jetpack" );
+__( "Transfer ownership", "jetpack-my-jetpack" );
+__( "Transfer anyway", "jetpack-my-jetpack" );
+__( "Back", "jetpack-my-jetpack" );
+__( "Transferring ownership…", "jetpack-my-jetpack" );
+__( "Continue", "jetpack-my-jetpack" );
 __( "Manage your Jetpack connection", "jetpack-my-jetpack" );
 __( "There was some trouble disconnecting your user account, your Jetpack plugin(s) may be outdated. Please visit your plugins page and make sure all Jetpack plugins are updated.", "jetpack-my-jetpack" );
 __( "There was some trouble disconnecting your user account, your Jetpack plugin(s) may be outdated. Please ask a site admin to update Jetpack", "jetpack-my-jetpack" );
+__( "Close", "jetpack-my-jetpack" );
+__( "Transfer connection ownership", "jetpack-my-jetpack" );
 __( "At least one user must be connected for your Jetpack products to work properly.", "jetpack-my-jetpack" );
 __( "Disconnect my user account", "jetpack-my-jetpack" );
 __( "Disconnect Jetpack", "jetpack-my-jetpack" );
@@ -211,7 +247,6 @@ __( "And more!", "jetpack-my-jetpack" );
 __( "See all Jetpack features", "jetpack-my-jetpack" );
 __( "On the next screen, you can connect with an existing account from any of these services or create a new one.", "jetpack-my-jetpack" );
 __( "Go back to previous screen", "jetpack-my-jetpack" );
-__( "Close", "jetpack-my-jetpack" );
 __( "Failed to evaluate site recommendations", "jetpack-my-jetpack" );
 __( "Failed to save evaluation results. Please try again", "jetpack-my-jetpack" );
 __( "Failed to hide evaluation results. Please try again", "jetpack-my-jetpack" );

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a Connected view to the Users page, and a link to it from the Connectors card.
+- Add a REST endpoint listing the connected administrators who could take over the connection.
 
 ### Changed
 - SSO: When a site requires two-step authentication and the WordPress.com account doesn't have it, name the logged-in account and make setting up two-step authentication the main action on the login screen.
