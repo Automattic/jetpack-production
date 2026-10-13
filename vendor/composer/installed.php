@@ -587,9 +587,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-waf' => array(
-            'pretty_version' => '0.29.3-alpha.1791488265',
-            'version' => '0.29.3.0-alpha1791488265',
-            'reference' => 'd14106bb3e7e55abd757cd37bf4ec6b9f2a4176e',
+            'pretty_version' => '0.29.3-alpha.1791917123',
+            'version' => '0.29.3.0-alpha1791917123',
+            'reference' => '6fe87b5e46793ab5e4d9b4291272d773260c2624',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-waf',
             'aliases' => array(),

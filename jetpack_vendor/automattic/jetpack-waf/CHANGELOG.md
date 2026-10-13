@@ -10,7 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Brute Force Protection: Fix correct logins being rejected after the math challenge, and keep the username and login destination when the password must be entered again.
 - Brute Force Protection: Let new users set their password from a blocked IP, and stop sending recovery emails to accounts that have not set one yet.
+- Brute Force Protection: Run login checks once per request instead of once per internal lookup.
 
 ## [0.29.2] - 2026-10-05
 ### Changed

@@ -57,6 +57,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Backup: Stop the Get VaultPress Backup button from staying busy when setup fails.
+- Brute Force Protection: Fix correct logins being rejected after the math challenge, and keep the username and login destination when the password must be entered again.
 - Brute Force Protection: Let new users set their password from a blocked IP, and stop sending recovery emails to accounts that have not set one yet.
 - Carousel: Remove the hidden "Loading Comments..." text from pages when the carousel comments area is turned off.
 - Charts: Announce line, area and bar charts correctly to screen readers.
