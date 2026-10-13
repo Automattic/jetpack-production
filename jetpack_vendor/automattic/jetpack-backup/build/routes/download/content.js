@@ -110,6 +110,7 @@ __( "Choose the items you wish to include in the download:", "jetpack-backup-pkg
 __( "Select at least one item to download.", "jetpack-backup-pkg" );
 __( "Generate download", "jetpack-backup-pkg" );
 __( "Preparing your download", "jetpack-backup-pkg" );
+__( "Reconnecting…", "jetpack-backup-pkg" );
 /* translators: %s: date and time the download link stops working. */
 __( "This expires %s.", "jetpack-backup-pkg" );
 __( "Download file", "jetpack-backup-pkg" );

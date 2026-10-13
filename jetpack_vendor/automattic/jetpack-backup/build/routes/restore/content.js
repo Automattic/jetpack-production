@@ -114,6 +114,7 @@ __( "Waiting for your restore to begin", "jetpack-backup-pkg" );
 __( "Restoring your site", "jetpack-backup-pkg" );
 /* translators: %d is a completion percentage, e.g. "50% complete". */
 __( "%d%% complete", "jetpack-backup-pkg" );
+__( "Reconnecting…", "jetpack-backup-pkg" );
 /* translators: %s is a date, e.g. "Aug 12, 2026". */
 __( "A restore of your %s backup is already running. You can't start another from here until it finishes.", "jetpack-backup-pkg" );
 __( "A restore is already running for this site. You can't start another from here until it finishes.", "jetpack-backup-pkg" );
