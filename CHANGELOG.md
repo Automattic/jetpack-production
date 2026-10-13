@@ -68,6 +68,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Show the highest-priority notice first when several are set at once.
 - My Jetpack: Stop showing an empty account avatar on the Overview connection card when nothing in use needs a user connection.
 - Newsletter: Allow comping subscribers who don't have a WordPress.com account.
+- Newsletter: Always use the logged-out version of a post when the ActivityPub plugin shares it to the Fediverse.
 - Newsletter: Avoid a fatal error when an older copy of the Newsletter package is loaded during an update.
 - Newsletter: Detect paid newsletter plans by their tier type as well as the mailing list setting.
 - Podcast: Translate the dashboard's interface strings.
