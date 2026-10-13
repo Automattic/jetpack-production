@@ -3,5 +3,5 @@
 		'wp-dom-ready',
 		'wp-polyfill'
 	),
-	'version' => 'bfe3fcc3ea68703ba685'
+	'version' => '88e0bb380272d5b11b10'
 );

@@ -67,6 +67,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Keep brackets in submitted values escaped, so they cannot run shortcodes, on WordPress versions with the new HTML sanitizer.
 - Google Photos: Show a reconnect prompt when the Google connection is rejected, explain when the Google account has no Google Photos set up, and start a new picker session when the saved one no longer exists.
 - Likes: Keep Like buttons on custom post types on new sites until you choose where buttons appear.
+- Map block: Preserve saved locations when opening or resizing the editor and prevent stale address lookups from overwriting newer edits. Center maps after marker changes, keep deleted markers removed, and show address lookup failures.
 - Monitor: Show each user their own downtime email setting instead of the one another admin saved last.
 - My Jetpack: Show the highest-priority notice first when several are set at once.
 - My Jetpack: Stop showing an empty account avatar on the Overview connection card when nothing in use needs a user connection.
