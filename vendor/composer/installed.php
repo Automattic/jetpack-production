@@ -157,7 +157,7 @@
         'automattic/jetpack-classic-theme-helper' => array(
             'pretty_version' => '0.15.5',
             'version' => '0.15.5.0',
-            'reference' => 'f4fa78e2bed2d5438ee43f20077b449c297ddf03',
+            'reference' => 'be16cb60f893f73a76826c48704ca3bc9bef3f89',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-classic-theme-helper',
             'aliases' => array(),
@@ -434,9 +434,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-post-media' => array(
-            'pretty_version' => '0.3.1',
-            'version' => '0.3.1.0',
-            'reference' => '369af249f99a6e4b7e7d2117eb866766631ae2d4',
+            'pretty_version' => '0.3.2-alpha.1791925220',
+            'version' => '0.3.2.0-alpha1791925220',
+            'reference' => 'c8ba75054b4855280ca3ff6b29aabff570b22486',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-post-media',
             'aliases' => array(),
@@ -481,7 +481,7 @@
         'automattic/jetpack-publicize' => array(
             'pretty_version' => '0.88.4-alpha.1791823210',
             'version' => '0.88.4.0-alpha1791823210',
-            'reference' => 'fbed4026269560f85b07ff57bbacaa41cb86a3d8',
+            'reference' => '06a75635527439b03c6b2a90f68bc026596fb65a',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-publicize',
             'aliases' => array(),

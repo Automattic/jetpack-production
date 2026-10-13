@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Recognize YouTube live links (youtube.com/live/...) when extracting a video ID.
+
 ## [0.3.1] - 2026-10-05
 ### Fixed
 - Catch PHP warnings when data doesn't match expected shape. [#53057]
@@ -48,6 +55,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial version. [#47164]
 - Twitter Cards: Add `Twitter_Cards` class with methods for generating Twitter Card meta tags. [#47169]
 
+[0.3.2-alpha]: https://github.com/Automattic/jetpack-post-media/compare/v0.3.1...v0.3.2-alpha
 [0.3.1]: https://github.com/Automattic/jetpack-post-media/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/Automattic/jetpack-post-media/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/Automattic/jetpack-post-media/compare/v0.1.6...v0.2.0
