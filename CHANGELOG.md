@@ -120,6 +120,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: Keep backslashes in the sharing label when changing sharing settings from WordPress.com or the Jetpack dashboard.
 - Sharing: Stop Settings > Sharing from resetting sharing links to open in the same window.
 - Shortcodes: Recognize YouTube live links so livestreams embed and show a thumbnail, including private and unlisted streams.
+- Slideshow block: Keep slides exposed as list items to screen readers, fixing an accessibility audit error.
 - Stats: Show view counts in the Pages list, and any list with more than 100 posts, instead of leaving them blank.
 - Tiled Gallery: Keep every image when uploading several at once with client-side media processing enabled.
 - VideoPress: Keep the editing preview on retained footage when playback reaches a trim or trailing cut.
