@@ -468,12 +468,12 @@ abstract class Product {
 	/**
 	 * Get the internationalized comparison of features grouped by each tier
 	 *
-	 * @deprecated 6.10.0-alpha
+	 * @deprecated 6.10.0
 	 *
 	 * @return array
 	 */
 	public static function get_features_by_tier() {
-		_deprecated_function( __METHOD__, 'jetpack-my-jetpack-6.10.0-alpha' );
+		_deprecated_function( __METHOD__, 'jetpack-my-jetpack-6.10.0' );
 
 		return array();
 	}
