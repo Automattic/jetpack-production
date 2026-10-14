@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Channel: Add the data layer the channel blocks read: video lists, play and subscriber counts.
 - Show an upload link in Top videos when the site has no VideoPress videos.
 
 ### Changed
