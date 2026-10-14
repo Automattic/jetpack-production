@@ -58,6 +58,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the date once in chart tooltips, read each row as value then metric, and list the comparison period in a second column.
 - Premium Analytics: Show the empty-cell color at the start of heatmap legends such as Posting activity.
 - Premium Analytics: Show the same search icon in every widget empty state, including the post, email, video and author pages, and reword the empty text of several widgets and the Ads earnings history.
+- Premium Analytics: Show the Top performing products rows before their thumbnails load.
 - Premium Analytics: Use a 2px corner radius on chart bars.
 - Premium Analytics: Use the dashboard's generic empty state in the WooCommerce widgets for a period with no data.
 - SSO: When a site requires two-step authentication and your WordPress.com account doesn't have it, the login screen now names your account and links straight to two-step setup.
