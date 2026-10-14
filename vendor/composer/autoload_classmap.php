@@ -94,6 +94,7 @@ return array(
     'Automattic\\Jetpack\\Comments\\Comments' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/class-comments.php',
     'Automattic\\Jetpack\\Comments\\Embeds' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/editor/class-embeds.php',
     'Automattic\\Jetpack\\Comments\\Identity' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/identity/class-identity.php',
+    'Automattic\\Jetpack\\Comments\\Images' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/editor/class-images.php',
     'Automattic\\Jetpack\\Comments\\Passport' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/identity/checkpoint/class-passport.php',
     'Automattic\\Jetpack\\Comments\\Tracks' => $baseDir . '/jetpack_vendor/automattic/jetpack-comments/src/class-tracks.php',
     'Automattic\\Jetpack\\Composer\\Manager' => $vendorDir . '/automattic/jetpack-composer-plugin/src/class-manager.php',

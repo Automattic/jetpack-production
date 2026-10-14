@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add the embed block to the comment editor, for links from the providers WordPress trusts.
+- Add the image block to the comment editor, and list embeds and images in its add block menu. Approved comments show up to four images.
 - Embeds: Show TikTok videos as players, and posts from X, Bluesky, and Reddit as cards, without the provider's script.
 - Record usage events for the comment form, sign-in, and block editor.
 
