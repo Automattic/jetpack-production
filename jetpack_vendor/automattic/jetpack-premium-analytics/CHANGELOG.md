@@ -62,6 +62,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the WooCommerce conversion rate widgets, now built by the WooCommerce Stats package.
 - Remove the WooCommerce leaderboard widgets, now built by the WooCommerce Stats package.
 - Remove the WooCommerce Sessions by device widget, now built by the WooCommerce Stats package.
+- Remove the WooCommerce Store visitors by location widget, now built by the WooCommerce Stats package.
 - Remove the WooCommerce time series widgets, now built by the WooCommerce Stats package.
 
 ### Fixed

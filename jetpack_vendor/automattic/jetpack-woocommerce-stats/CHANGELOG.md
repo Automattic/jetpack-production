@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the Sessions by device widget, placed on the WooCommerce tab by default.
 - Add the Store conversion rate widget and its bookings variant; the first is placed on the WooCommerce tab by default.
 - Add the Store performance widget.
+- Add the Store visitors by location widget, placed on the WooCommerce tab by default.
 - Add the time series widgets: total and gross sales, orders, average order value, average items per order, bookings and visitors over time, all placed on the WooCommerce tab by default.
 - Place Net sales over time on the WooCommerce tab by default.
 - Register the WooCommerce section on the Premium Analytics dashboard.

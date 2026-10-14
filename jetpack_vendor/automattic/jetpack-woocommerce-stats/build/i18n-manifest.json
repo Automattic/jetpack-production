@@ -34,6 +34,7 @@
 		"build/widgets/total-returns/render.js",
 		"build/widgets/total-sales-over-time/render.js",
 		"build/widgets/total-sales-over-time/widget.js",
+		"build/widgets/visitors-by-location/render.js",
 		"build/widgets/visitors-over-time/render.js",
 		"build/widgets/visitors-over-time/widget.js"
 	]

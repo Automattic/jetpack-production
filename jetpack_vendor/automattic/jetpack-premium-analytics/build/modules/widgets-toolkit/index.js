@@ -228,8 +228,3 @@ __( "Campaign / Source / Medium", "jetpack-premium-analytics-pkg" );
 __( "Source", "jetpack-premium-analytics-pkg" );
 __( "Medium", "jetpack-premium-analytics-pkg" );
 __( "Campaign", "jetpack-premium-analytics-pkg" );
-__( "United States", "jetpack-premium-analytics-pkg" );
-__( "Worldwide", "jetpack-premium-analytics-pkg" );
-__( "We couldn't load location data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "No location data in this period.", "jetpack-premium-analytics-pkg" );
-__( "Store visitors", "jetpack-premium-analytics-pkg" );

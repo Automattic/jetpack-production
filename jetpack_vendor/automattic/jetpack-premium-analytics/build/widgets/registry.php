@@ -711,20 +711,5 @@ return array(
 		'category'     => 'stats',
 		'keywords'     => null,
 		'textdomain'   => null,
-	),
-	array(
-		'name'         => 'jpa/visitors-by-location',
-		'dir_name'     => 'visitors-by-location',
-		'title'        => 'Store visitors by location',
-		'description'  => 'See where your store visitors are located geographically.',
-		'help'         => array( 'content' => 'See where your store visitors are located geographically.' ),
-		'icon'         => 'jpa/map-marker',
-		'actions'      => null,
-		'has_render'   => true,
-		'has_widget'   => true,
-		'presentation' => 'framed',
-		'category'     => 'visitors',
-		'keywords'     => null,
-		'textdomain'   => null,
 	)
 );
