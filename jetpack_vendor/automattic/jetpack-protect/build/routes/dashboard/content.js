@@ -406,7 +406,10 @@ __( "Downtime monitoring isn’t available on this site.", "jetpack-protect-pkg"
 __( "Monitor", "jetpack-protect-pkg" );
 /* translators: %d is a number of days. */
 __( "Uptime, last %d days (UTC)", "jetpack-protect-pkg" );
+__( "Your site is being monitored. Connect your WordPress.com account to see its uptime history.", "jetpack-protect-pkg" );
+__( "Connect your account", "jetpack-protect-pkg" );
 __( "Uptime history is unavailable right now.", "jetpack-protect-pkg" );
+__( "Try again", "jetpack-protect-pkg" );
 __( "Configure Downtime Monitoring", "jetpack-protect-pkg" );
 __( "Turn on in Settings", "jetpack-protect-pkg" );
 __( "Monitor your site for downtime", "jetpack-protect-pkg" );
@@ -436,7 +439,6 @@ __( "Check again", "jetpack-protect-pkg" );
 __( "The scan couldn’t be started.", "jetpack-protect-pkg" );
 __( "Scan", "jetpack-protect-pkg" );
 __( "We couldn’t check your site for vulnerabilities right now.", "jetpack-protect-pkg" );
-__( "Try again", "jetpack-protect-pkg" );
 __( "All vulnerabilities found", "jetpack-protect-pkg" );
 __( "Plugins checked", "jetpack-protect-pkg" );
 __( "Themes checked", "jetpack-protect-pkg" );

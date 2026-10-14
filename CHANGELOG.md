@@ -148,6 +148,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Add the Scan section to the Protect dashboard: review threats in a table with a details sidebar, run on-demand scans, and fix, ignore, or unignore threats.
 - Protect: Add the tabbed layout and section framework for the feature-flagged Protect dashboard.
 - Protect: Improve the Scan section of the Protect dashboard: delete unused vulnerable plugins and themes in place, step through threats with the arrow keys, see whether the affected plugin or theme is active, and get clearer notices for each threat.
+- Protect: Tell the Monitor card's failures apart on the Protect dashboard, with a link to connect a WordPress.com account and a way to retry.
 - Settings: Remove the legacy Settings page and its jetpack-settings-wp-build feature flag.
 - Shortcodes, widgets: Use apply_shortcodes() instead of do_shortcode().
 - Update package dependencies.
