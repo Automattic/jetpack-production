@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add All time to the report date menu, covering everything since the site's stats began.
 - Add a Mark as spam action, with Undo, to the Referrers report.
 - Add a Settings tab to the dashboard, where site owners can see their plan usage and change the Stats settings.
 - Add likes, comments and an all-time traffic table to the author detail page, and count an author's views even when they rank below the top 20 authors.

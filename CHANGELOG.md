@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Gray the preview button in the Create new form until the link is created.
 - Podcast: Add a toggle to hide the author in the Podcast Episode block.
 - Premium Analytics: Add a line or bar chart type control to the WooCommerce report widgets.
+- Premium Analytics: Add All time to the report date menu, covering everything since the site's stats began.
 - Premium Analytics: Add a Mark as spam action, with Undo, to the Referrers report.
 - Premium Analytics: Add a Settings tab to the dashboard, where site owners can see their plan usage and change the Stats settings, and open it from the "Manage Stats settings" link in Settings › Traffic when Stats v2 is on.
 - Premium Analytics: Add likes, comments and an all-time traffic table to the author detail page, and count an author's views even when they rank below the top 20 authors.
