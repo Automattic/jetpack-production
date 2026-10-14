@@ -586,7 +586,8 @@ __( "Write a post", "jetpack-newsletter" );
 __( "Updating checklist…", "jetpack-newsletter" );
 __( "Complete", "jetpack-newsletter" );
 __( "Loading checklist…", "jetpack-newsletter" );
-__( "Newsletters on WordPress.com", "jetpack-newsletter" );
+/* translators: %s: Product name, "Jetpack Newsletter". Do not translate. */
+__( "%s on WordPress.com", "jetpack-newsletter" );
 __( "A newsletter lets people subscribe with their email address, so every new post is delivered straight to their inbox. It's a simple way to build an audience you own, strengthen relationships with readers, and keep them coming back to your site.", "jetpack-newsletter" );
 __( "We stopped sending emails to this subscriber after their address bounced. If you're sure their address is correct, you can send one confirmation email to ask to restart their subscription.", "jetpack-newsletter" );
 /* translators: 1: date the confirmation email was sent, 2: number of days before another can be sent. */

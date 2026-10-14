@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Enable the Overview tab, with its onboarding checklist, by default.
 - Subscribers: Add a "Send confirmation email" action for bounced subscribers.
 
+### Changed
+- Overview: Title the intro card "Jetpack Newsletter", adding "on WordPress.com" only on WordPress.com sites.
+
 ### Fixed
 - Reader Link: Register the admin bar node even when the admin bar is hidden, so the admin-bar REST endpoint returns it.
 - Subscribers: Allow comping subscribers who don't have a WordPress.com account.
