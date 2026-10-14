@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Link author names in Popular authors and the Authors report to the author's page.
 - Premium Analytics: Make the days in Monthly posting activity larger, growing with the card and wrapping the months onto two rows in the default layout.
 - Premium Analytics: Mark the Comments Subscribers and File downloads report links as opening in a new tab.
+- Premium Analytics: Move the region toggle of Store visitors by location into the widget header.
 - Premium Analytics: Move the Top tags & categories widget to the Traffic tab, where it and its report follow the date picker.
 - Premium Analytics: Move the Traffic summary's grouping control (by days, weeks or months) into the chart itself, which remembers your choice.
 - Premium Analytics: Name each metric's comparison period in line and bar chart legends, such as "Views (Prev. 30 days)".
