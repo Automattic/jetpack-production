@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Earnings history widget: Say when the first earnings will show up while there are none yet.
 - WordAds chart: Draw today's bucket as not yet counted for Ads Served and Revenue too, and say so in the tooltip.
 - WordAds chart: Start on the reader's current default range rather than the one in effect when the page loaded.
 

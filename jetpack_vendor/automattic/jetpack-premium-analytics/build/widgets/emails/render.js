@@ -22,4 +22,4 @@ _n( "%s click, click rate unknown", "%s clicks, click rate unknown", 1, "jetpack
 _n( "%1$s click, %2$s click rate", "%1$s clicks, %2$s click rate", 1, "jetpack-premium-analytics-pkg" );
 __( "We couldn't load email stats. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
-__( "Your latest emails will appear here once you send a newsletter.", "jetpack-premium-analytics-pkg" );
+__( "You haven’t sent any emails yet.", "jetpack-premium-analytics-pkg" );

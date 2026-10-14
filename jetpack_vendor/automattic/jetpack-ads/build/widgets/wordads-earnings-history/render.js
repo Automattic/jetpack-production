@@ -8,6 +8,6 @@
 
 __( "We couldn't load WordAds earnings. Please try again in a moment.", "jetpack-ads-pkg" );
 __( "Retry", "jetpack-ads-pkg" );
-__( "No earnings history to show yet.", "jetpack-ads-pkg" );
+__( "No earnings yet. Once your ads have run for a full month, they will show up here.", "jetpack-ads-pkg" );
 __( "View all earnings history", "jetpack-ads-pkg" );
 __( "Adjustments", "jetpack-ads-pkg" );

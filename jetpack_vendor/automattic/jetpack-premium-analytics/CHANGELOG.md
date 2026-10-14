@@ -50,6 +50,7 @@ This is an alpha version! The changes listed here are not final.
 - Reports: Rename the Videos, Clicks, Authors and Locations CSV headers to match the report table columns.
 - Show the empty-cell color at the start of heatmap legends such as Posting activity.
 - Traffic: Move the chart interval control from the page header into the Traffic summary widget, which saves its own interval.
+- Widgets: Show the search icon in every empty state, including the detail pages and the widgets that had none, and reword the empty text of several widgets.
 - Widgets toolkit: Move the remaining report and widget links onto the shared ExternalLink and InternalLink components; the Comments Subscribers and File downloads report links now open in a new tab with the outbound marker.
 - WordAds data: Flag today's day bucket as pending and read its values as null, as WordAds counts nightly; chart tooltips can carry a note for a bucket with no reading.
 

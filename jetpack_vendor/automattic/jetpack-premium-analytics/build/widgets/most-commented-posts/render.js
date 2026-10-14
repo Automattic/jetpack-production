@@ -7,5 +7,5 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "We couldn't load commented posts. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "None of your posts or pages have comments yet.", "jetpack-premium-analytics-pkg" );
+__( "You don’t have comments recorded yet.", "jetpack-premium-analytics-pkg" );
 __( "See the commented posts report", "jetpack-premium-analytics-pkg" );

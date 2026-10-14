@@ -7,5 +7,5 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "We couldn't load comment authors. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "No one has commented on your site yet.", "jetpack-premium-analytics-pkg" );
+__( "You don’t have comments recorded yet.", "jetpack-premium-analytics-pkg" );
 __( "See the comment authors report", "jetpack-premium-analytics-pkg" );
