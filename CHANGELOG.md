@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Open the dashboard on the WooCommerce tab when WooCommerce is active.
 - Premium Analytics: Rename the Store tab to WooCommerce, including its URL.
 - Premium Analytics: Rename the Videos, Clicks, Authors and Locations report CSV headers to match the table columns.
+- Premium Analytics: Show a notice when the site nears or passes its plan's monthly views limit.
 - Premium Analytics: Show chart tooltips with dark text on a light background.
 - Premium Analytics: Show hours watched and retention rate on the Videos report, and name the Videos, Clicks, Authors and Locations columns as in Stats.
 - Premium Analytics: Show the date once in chart tooltips, read each row as value then metric, and list the comparison period in a second column.

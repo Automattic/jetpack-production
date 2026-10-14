@@ -329,6 +329,14 @@ __( "Make full width", "jetpack-premium-analytics-pkg" );
 __( "Settings", "jetpack-premium-analytics-pkg" );
 __( "Tell us what's better, what's worse, and what you miss about the new Stats.", "jetpack-premium-analytics-pkg" );
 __( "Leave feedback", "jetpack-premium-analytics-pkg" );
+__( "You've surpassed your limit for two consecutive periods already.", "jetpack-premium-analytics-pkg" );
+__( "You've surpassed your limit the past month.", "jetpack-premium-analytics-pkg" );
+__( "Couldn’t dismiss the notice. Please try again.", "jetpack-premium-analytics-pkg" );
+__( "You have reached your views limit", "jetpack-premium-analytics-pkg" );
+__( "You are nearing your monthly limit", "jetpack-premium-analytics-pkg" );
+__( "Your access to the traffic dashboard may be disrupted in the future without an upgrade.", "jetpack-premium-analytics-pkg" );
+__( "Your site is receiving more attention and is close to the monthly view limit provided by your current plan. Consider increasing your tier limit to avoid potential service disruptions.", "jetpack-premium-analytics-pkg" );
+__( "Upgrade now", "jetpack-premium-analytics-pkg" );
 __( "Everything is a widget", "jetpack-premium-analytics-pkg" );
 __( "Each block of data is a widget you can move and resize to suit how you read your site.", "jetpack-premium-analytics-pkg" );
 __( "A better date picker", "jetpack-premium-analytics-pkg" );
@@ -345,8 +353,6 @@ __( "Your store data is still syncing (%d%%). The numbers below are incomplete u
 __( "Try again", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the smallest value shown at this precision, e.g. "0.1". */
 __( "< %s", "jetpack-premium-analytics-pkg" );
-__( "You've surpassed your limit for two consecutive periods already.", "jetpack-premium-analytics-pkg" );
-__( "You've surpassed your limit the past month.", "jetpack-premium-analytics-pkg" );
 /* translators: 1: views used in the current cycle, 2: the plan's views limit. */
 __( "%1$s / %2$s views", "jetpack-premium-analytics-pkg" );
 /* translators: %d: number of days until the billing cycle resets. */
