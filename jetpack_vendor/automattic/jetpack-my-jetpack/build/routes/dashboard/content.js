@@ -843,6 +843,8 @@ __( "Your site goes wherever you go", "jetpack-my-jetpack" );
 __( "Install the <mobileLink>Jetpack app</mobileLink> for iOS or Android and stay connected to your site from anywhere!", "jetpack-my-jetpack" );
 _x( "Modules", "Navigation item. Noun. Links to a list of modules for Jetpack.", "jetpack-my-jetpack" );
 __( "Access the full list of Jetpack modules available on your site.", "jetpack-my-jetpack" );
+__( "You're working in Offline Mode", "jetpack-my-jetpack" );
+__( "Features that need a connection to WordPress.com are paused. You can manage local features here.", "jetpack-my-jetpack" );
 /* translators: %s: Name of Jetpack partner. */
 __( "Logo of %s who are offering a coupon in partnership with Jetpack", "jetpack-my-jetpack" );
 __( "One free year of Jetpack Backup", "jetpack-my-jetpack" );

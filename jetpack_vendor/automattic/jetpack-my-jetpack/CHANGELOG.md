@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add an opt-in Features page for managing local features in offline mode.
 - Print where Jetpack AI is managed in the admin script data, so other screens can link to it.
 
 ### Changed
