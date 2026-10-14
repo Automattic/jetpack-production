@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Show the Overview and AI Features views on WordPress VIP sites.
 - Blocks: Use WordPress Design System colors in the editor.
 - Connection: Add a Connected view to the Users page listing users with a linked WordPress.com account.
+- Connection: Skip site registration in offline mode, and stop retrying it on every page load after an error that retrying cannot fix.
 - Connection: Transfer connection ownership to another administrator without leaving your site.
 - Editor: Let writers know when the featured image is also in the post, and hide it on the post where the theme supports that.
 - My Jetpack: List VaultPress Backup among the plans that include Activity Log history, simplify the Search paid-plan wording, and show the ad-free, customizable VideoPress player as included in the free plan.
