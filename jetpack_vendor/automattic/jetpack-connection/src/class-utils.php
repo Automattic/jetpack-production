@@ -219,7 +219,7 @@ class Utils {
 	/**
 	 * Build the user-facing description of a registration error.
 	 *
-	 * @since 9.11.0-alpha
+	 * @since 9.11.0
 	 *
 	 * @param string $error_code The WP_Error code.
 	 * @param string $message    The WP_Error message.

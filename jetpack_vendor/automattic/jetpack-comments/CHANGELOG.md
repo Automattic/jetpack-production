@@ -5,25 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.6.0] - 2026-10-14
 ### Added
-- Add the image block to the comment editor, and list embeds and images in its add block menu. Approved comments show up to four images.
-- Embeds: Show TikTok videos as players, and posts from X, Bluesky, and Reddit as cards, without the provider's script.
+- Add the image block to the comment editor, and list embeds and images in its add block menu. Approved comments show up to four images. [#53527]
+- Embeds: Show TikTok videos as players, and posts from X, Bluesky, and Reddit as cards, without the provider's script. [#53526]
 
 ### Changed
-- Record the plain comment form when a reader reaches for it, not on every page view.
-- Send the details of a block editor failure to WordPress.com error logs.
-- Send the details of a sign-in dialog load failure to WordPress.com error logs.
+- Record the plain comment form when a reader reaches for it, not on every page view. [#53491]
+- Send the details of a block editor failure to WordPress.com error logs. [#53489]
+- Send the details of a sign-in dialog load failure to WordPress.com error logs. [#53530]
 
 ### Fixed
-- Fix a fatal error on themes that build their own comment form, such as Thesis.
-- Keep a WordPress.com sign-in when a reader goes back and posts a comment again.
-- Let a logged-in reader post from a page left open past a day, or after logging in again elsewhere.
-- Translate the comment box placeholder on non-English sites.
-- Turn away comments from logged-out readers that arrive without the form's nonce, which only the form's script adds, to stop spam bots that post the form straight from the page.
+- Fix a fatal error on themes that build their own comment form, such as Thesis. [#53550]
+- Keep a WordPress.com sign-in when a reader goes back and posts a comment again. [#53531]
+- Let a logged-in reader post from a page left open past a day, or after logging in again elsewhere. [#53532]
+- Translate the comment box placeholder on non-English sites. [#53492]
+- Turn away comments from logged-out readers that arrive without the form's nonce, which only the form's script adds, to stop spam bots that post the form straight from the page. [#53547]
 
 ## [0.5.0] - 2026-10-12
 ### Added
@@ -99,7 +96,7 @@ This is an alpha version! The changes listed here are not final.
 - Add an on-site comment form with a textarea, guest name and email fields, and reply threading when the `jetpack_comments_new_hotness` filter returns true. [#51466]
 - Initial version. [#51210]
 
-[0.6.0-alpha]: https://github.com/Automattic/jetpack-comments/compare/v0.5.0...v0.6.0-alpha
+[0.6.0]: https://github.com/Automattic/jetpack-comments/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/Automattic/jetpack-comments/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-comments/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/Automattic/jetpack-comments/compare/v0.2.0...v0.3.0
