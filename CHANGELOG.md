@@ -76,6 +76,7 @@ This is an alpha version! The changes listed here are not final.
 - Charts: Announce line, area and bar charts correctly to screen readers.
 - CLI: Make `wp jetpack protect allow` read the current IP allow list, so adding an IP no longer replaces the existing entries.
 - Connection: Translate the Connectors card's text on sites that don't use English.
+- External Media: Prevent a fatal error when the copy endpoint receives a malformed media parameter.
 - Forms: Fix error notices shown after deleting or trashing a form, even though it succeeded.
 - Forms: Keep brackets in submitted values escaped, so they cannot run shortcodes, on WordPress versions with the new HTML sanitizer.
 - Google Photos: Show a reconnect prompt when the Google connection is rejected, explain when the Google account has no Google Photos set up, and start a new picker session when the saved one no longer exists.
