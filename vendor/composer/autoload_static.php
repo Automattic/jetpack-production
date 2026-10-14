@@ -423,6 +423,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_4_a_0
         'Automattic\\Jetpack\\PremiumAnalytics\\Reports\\Export\\Support\\Utilities' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Reports/Export/Support/trait-utilities.php',
         'Automattic\\Jetpack\\PremiumAnalytics\\Stats_Links' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-stats-links.php',
         'Automattic\\Jetpack\\PremiumAnalytics\\Stats_Settings' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-stats-settings.php',
+        'Automattic\\Jetpack\\PremiumAnalytics\\Stored_Layout_Move' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-stored-layout-move.php',
         'Automattic\\Jetpack\\PremiumAnalytics\\Sync\\Configuration' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Sync/class-configuration.php',
         'Automattic\\Jetpack\\PremiumAnalytics\\Sync\\Sync_Status_Tracker' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Sync/class-sync-status-tracker.php',
         'Automattic\\Jetpack\\PremiumAnalytics\\Widget_Type' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-widget-type.php',

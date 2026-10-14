@@ -398,6 +398,7 @@ return array(
     'Automattic\\Jetpack\\PremiumAnalytics\\Reports\\Export\\Support\\Utilities' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Reports/Export/Support/trait-utilities.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Stats_Links' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-stats-links.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Stats_Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-stats-settings.php',
+    'Automattic\\Jetpack\\PremiumAnalytics\\Stored_Layout_Move' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-stored-layout-move.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Sync\\Configuration' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Sync/class-configuration.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Sync\\Sync_Status_Tracker' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Sync/class-sync-status-tracker.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Widget_Type' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-widget-type.php',
