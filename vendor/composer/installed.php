@@ -103,7 +103,7 @@
         'automattic/jetpack-backup' => array(
             'pretty_version' => '5.1.3-alpha.1791918310',
             'version' => '5.1.3.0-alpha1791918310',
-            'reference' => '0390e54b1f910d6643dc2afa00da23ab3b4f9980',
+            'reference' => '539c06254bb7ec285f2a7f19dc95b86f4df792ca',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-backup',
             'aliases' => array(),
@@ -362,9 +362,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-my-jetpack' => array(
-            'pretty_version' => '6.9.1-alpha.1791889745',
-            'version' => '6.9.1.0-alpha1791889745',
-            'reference' => 'e1cb30a097a41291e8a7a94a4b4b76ef0a0c9f7f',
+            'pretty_version' => '6.10.0-alpha.1791944707',
+            'version' => '6.10.0.0-alpha1791944707',
+            'reference' => 'b628475dedeeac44a5928732f45f8bb06368fd52',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-my-jetpack',
             'aliases' => array(),
@@ -517,7 +517,7 @@
         'automattic/jetpack-search' => array(
             'pretty_version' => '8.3.2-alpha.1791823210',
             'version' => '8.3.2.0-alpha1791823210',
-            'reference' => '4cb680e177f6fb478e34e248f72a99ec136628bf',
+            'reference' => 'a721fd73810817e6ec06a0063221b4ab9300025a',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-search',
             'aliases' => array(),
@@ -580,7 +580,7 @@
         'automattic/jetpack-videopress' => array(
             'pretty_version' => '0.57.0-alpha.1791931883',
             'version' => '0.57.0.0-alpha1791931883',
-            'reference' => '799164878539bd72051bc1eb99aaae0e29b947b5',
+            'reference' => 'bc599d563d01b89385774044cffbc139d9f21187',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-videopress',
             'aliases' => array(),

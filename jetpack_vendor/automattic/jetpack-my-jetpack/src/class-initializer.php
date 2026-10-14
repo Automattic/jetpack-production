@@ -46,7 +46,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '6.9.1-alpha';
+	const PACKAGE_VERSION = '6.10.0-alpha';
 
 	/**
 	 * Handle for the classic script that carries the React initial state.
@@ -695,7 +695,7 @@ class Initializer {
 	}
 
 	/**
-	 * Add My Jetpack availability and image base URL to admin script data.
+	 * Add My Jetpack's availability, image base URL and link targets to admin script data.
 	 *
 	 * Printed on every admin page by Script_Data, so the connection screen can resolve its
 	 * illustrations and Jetpack footers know whether to link to My Jetpack.
@@ -710,12 +710,17 @@ class Initializer {
 		$data['myJetpack']['assetsUrl']       = self::get_assets_url();
 		$data['myJetpack']['productsSection'] = self::get_products_section();
 
+		// Only administrators can open the pages this points at, so spare everyone else the lookup.
+		if ( current_user_can( 'manage_options' ) ) {
+			$data['myJetpack']['aiManageUrl'] = esc_url_raw( Products\Jetpack_Ai::get_manage_url() );
+		}
+
 		if (
 			( new Status() )->is_offline_mode()
 			/**
 			 * Temporarily expose the local Features seed without enabling offline entry.
 			 *
-			 * @since 6.9.1-alpha
+			 * @since 6.10.0-alpha
 			 * @param bool $enabled Whether to expose the seed. Default false.
 			 */
 			&& apply_filters( 'jetpack_my_jetpack_offline_features', false )

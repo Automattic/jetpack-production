@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Account Protection: Stop turning the feature on automatically for new connections and upgrades from versions before 14.5. Sites where it is already on keep it on.
 - AI: Open the Activity log filtered to actions AI agents took, and link Simple sites to the WordPress.com Activity log.
+- AI: Send the editor's and Jetpack Settings' AI links to the Jetpack AI Hub where it is available, and to jetpack.com for users who cannot manage the site.
 - AI: Show the Overview and AI Features views on WordPress VIP sites.
 - Blocks: Use WordPress Design System colors in the editor.
 - Connection: Add a Connected view to the Users page listing users with a linked WordPress.com account.
