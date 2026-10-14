@@ -101,6 +101,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Fix value axis labels piling up at the left edge of a summary bar chart resized to one row.
 - Premium Analytics: Follow the WooCommerce Analytics date type setting in store reports instead of always using the order creation date.
 - Premium Analytics: Give map, leaderboard and conversion funnel charts an accessible name and role for screen readers.
+- Premium Analytics: Keep a deep link's day interval and date label when its ISO offsets were pasted with an unencoded plus, which the querystring reads as a space.
 - Premium Analytics: Keep conversion funnel bars and empty-state messages visible in one-row widgets.
 - Premium Analytics: Label a partial first or last week on the Traffic, Subscribers, and ads charts with the selected range's own start or end date.
 - Premium Analytics: Let one-row summary charts, such as the default Store performance tile, show their tooltip by drawing them as sparklines without axes.

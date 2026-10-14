@@ -76,6 +76,7 @@ This is an alpha version! The changes listed here are not final.
 - Drop the URL column from the comment authors CSV, since its links only worked on the site and could expose guest commenters' email addresses.
 - Fields: Keep text labels of the toggle group on one line.
 - Give map, leaderboard and conversion funnel charts an accessible name and role for screen readers.
+- Keep a deep link's day interval and date label when its ISO offsets were pasted with an unencoded plus, which the querystring reads as a space.
 - Keep conversion funnel bars and empty-state messages visible in one-row widgets.
 - Label a partial first or last week on the Traffic, Subscribers, and ads charts with the selected range's own start or end date.
 - Load the author page on sites that block the WordPress users endpoint.
