@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add an opt-in Features page for managing local features in offline mode.
+- Add a `jetpack_my_jetpack_overview_v1` filter that turns on Overview v1.
 - Add shared data for the header's connection status.
 - Print where Jetpack AI is managed in the admin script data, so other screens can link to it.
 
