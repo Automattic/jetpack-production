@@ -61,6 +61,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Add the Monitor section to the Protect dashboard, with 40 days of uptime and its settings.
 - Protect: Improve the Scan section of the Protect dashboard: delete unused vulnerable plugins and themes in place, step through threats with the arrow keys, see whether the affected plugin or theme is active, and get clearer notices for each threat.
 - Protect: Tell the Monitor card's failures apart on the Protect dashboard, with a link to connect a WordPress.com account and a way to retry.
+- Protect Dashboard: Keep the module unavailable on WordPress.com sites.
 - Settings: Remove the legacy Settings page and its jetpack-settings-wp-build feature flag.
 - Shortcodes, widgets: Use apply_shortcodes() instead of do_shortcode().
 - Use apply_shortcodes() terminology instead of do_shortcode().
