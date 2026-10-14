@@ -16,19 +16,24 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Connection card: Show a connection error while your account is still to be connected, instead of only asking you to connect it.
-- Features: Offer the Protect switch through Jetpack when the Protect Dashboard feature flag is on.
-- Overview: Stop asking to connect a WordPress.com account when nothing in use needs one.
 
 ### Deprecated
 - Deprecate `get_features_by_tier()` on every product except Boost, and remove the unused `features_by_tier` and `is_tiered_pricing` fields from the product data.
 
 ### Fixed
-- Connection card: Ask for a user connection as soon as a plugin that needs one is switched on, without a reload.
-- Connection card: Stop asking for a user connection as soon as the plugin that needed one is switched off, without a reload.
-- Features: Stop requesting the Jetpack module list when the Jetpack plugin is not active.
 - Notices: Show the highest-priority notice first when several are set at once.
-- Products: Stop reporting an error when switching VideoPress off while the Jetpack plugin is inactive.
-- Report a bundle the site has no plan for as needing a plan, rather than as switched off or needing a user connection.
+
+## [6.9.1] - 2026-10-12
+### Changed
+- Features: Offer the Protect switch through Jetpack when the Protect Dashboard feature flag is on. [#53182]
+- Overview: Stop asking to connect a WordPress.com account when nothing in use needs one. [#53242]
+
+### Fixed
+- Connection card: Ask for a user connection as soon as a plugin that needs one is switched on, without a reload. [#53356]
+- Connection card: Stop asking for a user connection as soon as the plugin that needed one is switched off, without a reload. [#53367]
+- Features: Stop requesting the Jetpack module list when the Jetpack plugin is not active. [#53249]
+- Products: Stop reporting an error when switching VideoPress off while the Jetpack plugin is inactive. [#53371]
+- Report a bundle the site has no plan for as needing a plan, rather than as switched off or needing a user connection. [#53287]
 
 ## [6.9.0] - 2026-10-07
 ### Changed
@@ -3062,7 +3067,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.10.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.9.0...6.10.0-alpha
+[6.10.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.9.1...6.10.0-alpha
+[6.9.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.9.0...6.9.1
 [6.9.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.8.0...6.9.0
 [6.8.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.7.1...6.8.0
 [6.7.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.7.0...6.7.1

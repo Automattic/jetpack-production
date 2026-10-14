@@ -125,7 +125,7 @@ class Capabilities {
 	 * "Stats reports" is everything the proxy serves under `view_stats`, mirroring what
 	 * {@see \Automattic\Jetpack\PremiumAnalytics\REST\Api_Proxy_Controller} enforces there (pinned by Capabilities_Test).
 	 *
-	 * @since 0.12.0-alpha
+	 * @since 0.12.0
 	 *
 	 * @return bool
 	 */

@@ -5,14 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.3-alpha] - unreleased
+## [0.1.4-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Earnings history widget: Say when the first earnings will show up while there are none yet.
-- WordAds chart: Draw today's bucket as not yet counted for Ads Served and Revenue too, and say so in the tooltip.
-- WordAds chart: Start on the reader's current default range rather than the one in effect when the page loaded.
+
+## [0.1.3] - 2026-10-12
+### Changed
+- WordAds chart: Draw today's bucket as not yet counted for Ads Served and Revenue too, and say so in the tooltip. [#53229]
+- WordAds chart: Start on the reader's current default range rather than the one in effect when the page loaded. [#53276]
 
 ## [0.1.2] - 2026-10-05
 ### Changed
@@ -26,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Register the Ads section and its widget types on the Premium Analytics dashboard. [#52635]
 
-[0.1.3-alpha]: https://github.com/Automattic/jetpack-ads/compare/v0.1.2...v0.1.3-alpha
+[0.1.4-alpha]: https://github.com/Automattic/jetpack-ads/compare/v0.1.3...v0.1.4-alpha
+[0.1.3]: https://github.com/Automattic/jetpack-ads/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/Automattic/jetpack-ads/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/Automattic/jetpack-ads/compare/v0.1.0...v0.1.1

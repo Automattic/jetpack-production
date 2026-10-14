@@ -5,17 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.3.3-alpha] - unreleased
+## [8.3.4-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
-- Update package dependencies.
 - Use apply_shortcodes() terminology instead of do_shortcode().
 
+## [8.3.3] - 2026-10-12
+### Changed
+- Update package dependencies. [#53223]
+
 ### Fixed
-- Contact Form: Keep brackets in submitted values escaped, so they cannot run shortcodes, on WordPress versions with the new HTML sanitizer.
-- Dashboard: Fix error notices shown after deleting or trashing a form, even though it succeeded.
+- Contact Form: Keep brackets in submitted values escaped, so they cannot run shortcodes, on WordPress versions with the new HTML sanitizer. [#53335]
+- Dashboard: Fix error notices shown after deleting or trashing a form, even though it succeeded. [#53164]
 
 ## [8.3.2] - 2026-10-12
 ### Changed
@@ -2806,7 +2809,8 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[8.3.3-alpha]: https://github.com/automattic/jetpack-forms/compare/v8.3.2...v8.3.3-alpha
+[8.3.4-alpha]: https://github.com/automattic/jetpack-forms/compare/v8.3.3...v8.3.4-alpha
+[8.3.3]: https://github.com/automattic/jetpack-forms/compare/v8.3.2...v8.3.3
 [8.3.2]: https://github.com/automattic/jetpack-forms/compare/v8.3.1...v8.3.2
 [8.3.1]: https://github.com/automattic/jetpack-forms/compare/v8.3.0...v8.3.1
 [8.3.0]: https://github.com/automattic/jetpack-forms/compare/v8.2.2...v8.3.0

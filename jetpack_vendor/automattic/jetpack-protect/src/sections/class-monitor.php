@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * The Monitor module's state and its uptime history.
  *
- * @since 0.1.0-alpha
+ * @since 0.2.0-alpha
  */
 class Monitor implements Dashboard_Section {
 
