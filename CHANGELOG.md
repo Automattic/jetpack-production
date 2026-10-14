@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Add a subscribers proxy route for sending a confirmation email to bounced subscribers.
 - Newsletter: pick a readable text color to go with the email button background you choose.
 - Omnibar: Return the Reader, Notifications, and Launch site nodes from the admin-bar endpoint.
+- PayPal Payment Buttons: Gray the preview button in the Create new form until the link is created.
 - Podcast: Add a toggle to hide the author in the Podcast Episode block.
 - Premium Analytics: Add a line or bar chart type control to the WooCommerce report widgets.
 - Premium Analytics: Add a Mark as spam action, with Undo, to the Referrers report.
@@ -76,6 +77,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Always use the logged-out version of a post when the ActivityPub plugin shares it to the Fediverse.
 - Newsletter: Avoid a fatal error when an older copy of the Newsletter package is loaded during an update.
 - Newsletter: Detect paid newsletter plans by their tier type as well as the mailing list setting.
+- PayPal Payment Buttons: Collect the shipping address without a shipping fee, from a new "Shipping address" toggle. Tax or shipping from PayPal settings now shows an error until the address is on.
 - Podcast: Give the downloads by location map an accessible name for screen readers.
 - Podcast: Translate the dashboard's interface strings.
 - Post by Email: Forget a user's saved address when they disconnect from WordPress.com, so reconnecting with a different account no longer shows the old one.

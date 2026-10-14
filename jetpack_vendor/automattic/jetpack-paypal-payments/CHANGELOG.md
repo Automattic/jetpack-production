@@ -15,8 +15,14 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a feature flag that hides the PayPal sandbox option in the connection wizard; off, the wizard connects to production only.
 
+### Changed
+- Gray the preview button in the Create new form until the link is created.
+
 ### Removed
 - Remove the product image field from the block editor form until PayPal payment links can carry an image; blocks that already hold one keep showing it.
+
+### Fixed
+- Payment Buttons: Collect the shipping address without a shipping fee, from a new "Shipping address" toggle. Tax or shipping from PayPal settings now shows an error until the address is on.
 
 ## [0.12.0] - 2026-10-05
 ### Added
