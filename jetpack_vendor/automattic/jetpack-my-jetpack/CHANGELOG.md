@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Print where Jetpack AI is managed in the admin script data, so other screens can link to it.
 
 ### Changed
+- Connection card: Show a connection error while your account is still to be connected, instead of only asking you to connect it.
 - Features: Offer the Protect switch through Jetpack when the Protect Dashboard feature flag is on.
 - Overview: Stop asking to connect a WordPress.com account when nothing in use needs one.
 

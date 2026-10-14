@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Editor: Let writers know when the featured image is also in the post, and hide it on the post where the theme supports that.
 - My Jetpack: List VaultPress Backup among the plans that include Activity Log history, simplify the Search paid-plan wording, and show the ad-free, customizable VideoPress player as included in the free plan.
 - My Jetpack: Remove the Products page and open Features from links to it. Point the footer's Modules link and Help's All Jetpack modules link back to the Modules page.
+- My Jetpack: Show a connection error on the Overview connection card while your account is still to be connected, instead of only asking you to connect it.
 - Newsletter: Add a Newsletter overview panel to the editor that explains who gets the post by email and who can read it on the site.
 - Newsletter: Add an Overview tab with an onboarding checklist that guides you through setting up your newsletter.
 - Newsletter: Add a subscribers proxy route for sending a confirmation email to bounced subscribers.
