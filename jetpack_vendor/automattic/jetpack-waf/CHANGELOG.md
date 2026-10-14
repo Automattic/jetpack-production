@@ -5,13 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.29.4-alpha] - unreleased
+## [0.30.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add a one-time test request the firewall blocks unless the IP allow list lets it through, and a reader for recently blocked requests.
 
 ### Fixed
 - Brute Force Protection: Fix correct logins being rejected after the math challenge, and keep the username and login destination when the password must be entered again.
 - Brute Force Protection: Run login checks once per request instead of once per internal lookup.
+- Read blocked-request counts from the database, so a persistent object cache no longer shows stale totals.
 
 ## [0.29.3] - 2026-10-12
 ### Fixed
@@ -594,7 +598,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
-[0.29.4-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.29.3...v0.29.4-alpha
+[0.30.0-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.29.3...v0.30.0-alpha
 [0.29.3]: https://github.com/Automattic/jetpack-waf/compare/v0.29.2...v0.29.3
 [0.29.2]: https://github.com/Automattic/jetpack-waf/compare/v0.29.1...v0.29.2
 [0.29.1]: https://github.com/Automattic/jetpack-waf/compare/v0.29.0...v0.29.1

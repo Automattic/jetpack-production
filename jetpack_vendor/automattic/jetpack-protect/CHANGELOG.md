@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add the Firewall section to the Protect dashboard, with blocked-request totals, recently blocked requests, manual IP rules, a firewall test and firewall settings.
 - Add the Login protection section to the Protect dashboard, covering brute force protection, account protection and WordPress.com login.
 - Add the Monitor section to the Protect dashboard, with 40 days of uptime and its settings.
 

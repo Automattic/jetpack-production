@@ -58,6 +58,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blogroll Block: Prevent PHP warning when config is incomplete.
 - JSON API: Save the brute force protection allow list sent to the site settings endpoint.
+- Protect: Add the Firewall section to the Protect dashboard, with blocked-request totals, recently blocked requests, manual IP rules, a firewall test and firewall settings.
 - Protect: Add the Login protection section to the Protect dashboard, covering brute force protection, account protection and WordPress.com login.
 - Protect: Add the Monitor section to the Protect dashboard, with 40 days of uptime and its settings.
 - Protect: Improve the Scan section of the Protect dashboard: delete unused vulnerable plugins and themes in place, step through threats with the arrow keys, see whether the affected plugin or theme is active, and get clearer notices for each threat.
