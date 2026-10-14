@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: Include the post image in the Pinterest button on AMP pages, so Pinterest no longer asks visitors to upload one.
 - Shortcodes: Recognize YouTube live links so livestreams embed and show a thumbnail, including private and unlisted streams.
 - Slideshow block: Keep slides exposed as list items to screen readers, fixing an accessibility audit error.
+- Social: Fix low-contrast placeholder chips in the share message help text and the available placeholders list.
 - VideoPress: Only open a channel video page for a video uploaded to this site.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

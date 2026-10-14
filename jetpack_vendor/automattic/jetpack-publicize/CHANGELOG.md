@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Fix low-contrast placeholder chips in the share message help text and the available placeholders list.
+
 ## [0.88.4] - 2026-10-12
 ### Changed
 - Internal updates.
