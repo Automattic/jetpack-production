@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add trim and cut editing to the video block toolbar and clarify the editor tool icons.
+- Show an upload link in Top videos when the site has no VideoPress videos.
 
 ### Changed
 - Use apply_shortcodes() terminology instead of do_shortcode().
