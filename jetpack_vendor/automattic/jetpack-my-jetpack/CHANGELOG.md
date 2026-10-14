@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Features: Offer the Protect switch through Jetpack when the Protect Dashboard feature flag is on.
 - Overview: Stop asking to connect a WordPress.com account when nothing in use needs one.
 
+### Deprecated
+- Deprecate `get_features_by_tier()` on every product except Boost, and remove the unused `features_by_tier` and `is_tiered_pricing` fields from the product data.
+
 ### Fixed
 - Connection card: Ask for a user connection as soon as a plugin that needs one is switched on, without a reload.
 - Connection card: Stop asking for a user connection as soon as the plugin that needed one is switched off, without a reload.
