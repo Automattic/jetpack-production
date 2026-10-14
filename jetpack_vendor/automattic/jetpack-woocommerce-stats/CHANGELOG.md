@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Pass the store currency to the dashboard, so store money shows in it instead of US dollars.
 - Reports: Follow the WooCommerce Analytics date type setting instead of always using the order creation date.
 - Use sentence case in the Store visitors chart tooltip, like the other count labels.
+- Widgets: Show the empty state in the report charts when the period and its comparison are all zeros, instead of a flat line at zero.
 
 ## 0.1.0-alpha - unreleased
 

@@ -110,6 +110,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show a video watched for a few minutes as "< 0.1" hours, not 0.0, on the Videos report and video detail page.
 - Premium Analytics: Show store revenue and other money values in the store's currency instead of always US dollars.
 - Premium Analytics: Show the author's name in the author page breadcrumb.
+- Premium Analytics: Show the empty state in the WooCommerce report charts when the period and its comparison have no activity, instead of a flat line at zero.
 - Search: Avoid requesting the Search plan in offline mode.
 - SEO: Fix saving settings, clearing front-page descriptions, and switching sitemaps off on private sites. Preserve unsaved title structure edits when saving another row.
 - SEO: Keep disabled GEO settings off after reloading. Detect static robots.txt and llms.txt files on supported managed hosting. Hide the Site visibility progress badge on private sites.
