@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Dashboard: Record Tracks events for screen views, settings changes, the SEO tools switch and the GEO tab's llms.txt and AI crawler controls, on sites that allow tracking.
 - Settings: Show a working Canonical URLs switch on WordPress.com Simple sites that adds canonical tags to archive pages.
 
 ### Fixed
