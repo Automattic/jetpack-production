@@ -408,6 +408,7 @@ return array(
     'Automattic\\Jetpack\\Protect\\Dashboard_Section' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/interface-dashboard-section.php',
     'Automattic\\Jetpack\\Protect\\Dashboard_Threats' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/class-dashboard-threats.php',
     'Automattic\\Jetpack\\Protect\\Sections\\History' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-history.php',
+    'Automattic\\Jetpack\\Protect\\Sections\\Login_Protection' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-login-protection.php',
     'Automattic\\Jetpack\\Protect\\Sections\\Monitor' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-monitor.php',
     'Automattic\\Jetpack\\Protect\\Sections\\Scan' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-scan.php',
     'Automattic\\Jetpack\\Protect_Models' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-models/src/class-protect-models.php',

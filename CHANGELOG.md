@@ -142,6 +142,7 @@ This is an alpha version! The changes listed here are not final.
 - Omnibar: Return the Stats chart node from the admin-bar REST endpoint, and the admin bar to every role on the site rather than administrators only.
 - Protect: Add a feature-flagged Protect Dashboard module that adds a Protect page to the Jetpack sidebar.
 - Protect: Add a Scan history tab to the Protect dashboard for sites with Jetpack Scan, show threat actions on row hover, and offer to delete unused plugins and themes that have threats.
+- Protect: Add the Login protection section to the Protect dashboard, covering brute force protection, account protection and WordPress.com login.
 - Protect: Add the Monitor section to the Protect dashboard, with 40 days of uptime and its settings.
 - Protect: Add the Scan section to the Protect dashboard: review threats in a table with a details sidebar, run on-demand scans, and fix, ignore, or unignore threats.
 - Protect: Add the tabbed layout and section framework for the feature-flagged Protect dashboard.
