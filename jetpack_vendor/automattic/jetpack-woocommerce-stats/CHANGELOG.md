@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Widgets: Add a line or bar chart type control to the report charts.
 
 ### Changed
+- Gate the WooCommerce tab and its widgets in the package: WooCommerce active, the reader's store reports capability, and the Bookings extension for the bookings widgets.
 - Hold the bookings widgets back from the WooCommerce tab for now.
 - Open the dashboard on the WooCommerce tab when WooCommerce is active.
 - Rename the Visitors over time widget to Store visitors over time, so it isn't confused with Jetpack Stats visitors.
