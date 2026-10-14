@@ -10,4 +10,3 @@ __( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg
 __( "Fulfilled", "jetpack-woocommerce-stats-pkg" );
 __( "Unfulfilled", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load orders data. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );
-__( "No orders in this period.", "jetpack-woocommerce-stats-pkg" );

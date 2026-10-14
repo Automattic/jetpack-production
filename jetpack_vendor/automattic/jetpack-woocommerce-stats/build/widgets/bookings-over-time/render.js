@@ -11,5 +11,4 @@ __( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg
 /* translators: %s: number of bookings. */
 _n( "%s Booking", "%s Bookings", 1, "jetpack-woocommerce-stats-pkg" );
 __( "Bookings", "jetpack-woocommerce-stats-pkg" );
-__( "No bookings in this period.", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load bookings. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );

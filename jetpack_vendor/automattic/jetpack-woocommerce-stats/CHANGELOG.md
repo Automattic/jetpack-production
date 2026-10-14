@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Rename the Visitors over time widget to Store visitors over time, so it isn't confused with Jetpack Stats visitors.
 - Sales by UTM: lay the label above the bar and draw the comparison period as a second bar under the period legend.
 - Store visitors by location: Move the region toggle to the widget header.
+- Widgets: Use the dashboard's generic empty state for a period with no data, instead of a copy and icon per widget.
 
 ### Fixed
 - Pass the store currency to the dashboard, so store money shows in it instead of US dollars.

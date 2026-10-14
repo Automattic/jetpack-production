@@ -9,5 +9,4 @@
 __( "Retry", "jetpack-woocommerce-stats-pkg" );
 __( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg" );
 __( "Average items per order", "jetpack-woocommerce-stats-pkg" );
-__( "No orders in this period.", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load average items per order. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );
