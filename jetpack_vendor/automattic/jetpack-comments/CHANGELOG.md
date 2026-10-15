@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fix the comment editor crashing on paragraphs, lists, quotes, and code, and fall back to the plain comment box when a block crashes.
+
 ## [0.6.0] - 2026-10-14
 ### Added
 - Add the image block to the comment editor, and list embeds and images in its add block menu. Approved comments show up to four images. [#53527]
