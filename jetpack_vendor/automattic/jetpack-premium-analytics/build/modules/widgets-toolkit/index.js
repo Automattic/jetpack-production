@@ -159,6 +159,7 @@ __( "Your changes to this layout will be lost.", "jetpack-premium-analytics-pkg"
 __( "Reset", "jetpack-premium-analytics-pkg" );
 __( "Reset to default", "jetpack-premium-analytics-pkg" );
 __( "Customizing", "jetpack-premium-analytics-pkg" );
+__( "Upgrade", "jetpack-premium-analytics-pkg" );
 __( "Title", "jetpack-premium-analytics-pkg" );
 __( "URL", "jetpack-premium-analytics-pkg" );
 __( "Authors", "jetpack-premium-analytics-pkg" );

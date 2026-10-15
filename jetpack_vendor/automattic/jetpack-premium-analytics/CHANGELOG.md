@@ -19,10 +19,12 @@ This is an alpha version! The changes listed here are not final.
 - Detect which paid Stats features the site's plan lacks, and let a widget type declare the plan feature it shows.
 - Offer a Create post action in empty Traffic and Popular post widgets when the site has no published posts.
 - Offer a URL builder when the selected UTM report has no visits.
+- Show paid Stats features as locked, with an upgrade link, on plans that do not include them.
 
 ### Changed
 - Chart legends: Name each metric's comparison period, such as "Views (Prev. 30 days)", in both line and bar charts.
 - Charts: Draw tabbed metric charts in the admin color, with the metric paired in the Traffic summary in a darker shade, instead of a different color per metric.
+- Explain what Tags & categories shows when the plan locks it.
 - Lighten heatmap colors in cards such as Posting activity and Views over years, while keeping low values distinct from empty cells.
 - Move a Top tags & categories tile a reader placed on a customized Insights layout to their Traffic layout, once.
 - Open the dashboard on the comparison the reader last applied from the header, including No comparison.

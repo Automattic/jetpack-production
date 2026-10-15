@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Gray the preview button in the Create new form until the link is created.
 - Premium Analytics: Add All time to the report date menu, covering everything since the site's stats began.
 - Premium Analytics: Draw tabbed metric charts in the admin color, with the metric paired in the Traffic summary in a darker shade, instead of a different color per metric.
+- Premium Analytics: Explain what Tags & categories shows when the plan locks it.
 - Premium Analytics: Lighten heatmap colors in cards such as Posting activity and Views over years, while keeping low values distinct from empty cells.
 - Premium Analytics: Move a Top tags & categories tile a reader placed on a customized Insights layout to their Traffic layout, once.
 - Premium Analytics: Move the region toggle of Store visitors by location into the widget header.
@@ -24,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Say that nothing is recorded yet in eight empty Traffic widgets when the site has no views at all, and in Top tags & categories when no post is published, instead of the text about the selected period.
 - Premium Analytics: Show a notice when the site nears or passes its plan's monthly views limit.
 - Premium Analytics: Show an upload link in Top videos when the site has no VideoPress videos.
+- Premium Analytics: Show paid Stats features as locked, with an upgrade link, on plans that do not include them.
 - Premium Analytics: Show the same search icon in every widget empty state, including the post, email, video and author pages, and reword the empty text of several widgets and the Ads earnings history.
 - Premium Analytics: Show the Top performing products rows before their thumbnails load.
 - Premium Analytics: Use the dashboard's generic empty state in the WooCommerce widgets for a period with no data.
