@@ -382,6 +382,7 @@ __( "Connecting…", "jetpack-my-jetpack" );
 __( "Enabled by your host or site administrator", "jetpack-my-jetpack" );
 __( "Disabled by your host or site administrator", "jetpack-my-jetpack" );
 __( "Not available on multisite", "jetpack-my-jetpack" );
+__( "Unavailable", "jetpack-my-jetpack" );
 __( "Install Plugin", "jetpack-my-jetpack" );
 __( "Get plan", "jetpack-my-jetpack" );
 __( "Upgrade", "jetpack-my-jetpack" );
@@ -632,6 +633,8 @@ __( "%s is on.", "jetpack-my-jetpack" );
 /* translators: %s is a plugin or feature name. */
 __( "Could not change %s. Please try again.", "jetpack-my-jetpack" );
 __( "The plugin could not be installed. Please try again.", "jetpack-my-jetpack" );
+/* translators: %s is why the Jetpack module is unavailable; its standalone plugin remains available. */
+__( "Jetpack module: %s", "jetpack-my-jetpack" );
 /* translators: %s is a plugin name, such as "Jetpack Boost". */
 __( "Plugin installs are turned off on this site. Ask your host or site administrator to install %s.", "jetpack-my-jetpack" );
 /* translators: %s is a plugin name, such as "Jetpack Boost". */
@@ -642,6 +645,7 @@ __( "Open", "jetpack-my-jetpack" );
 __( "Activate Jetpack", "jetpack-my-jetpack" );
 __( "Install Jetpack", "jetpack-my-jetpack" );
 __( "All", "jetpack-my-jetpack" );
+__( "Available", "jetpack-my-jetpack" );
 __( "Included in plan", "jetpack-my-jetpack" );
 __( "Essential", "jetpack-my-jetpack" );
 __( "Security", "jetpack-my-jetpack" );
@@ -699,6 +703,7 @@ __( "List view", "jetpack-my-jetpack" );
 __( "Filter features", "jetpack-my-jetpack" );
 __( "Searching all features", "jetpack-my-jetpack" );
 __( "Search features", "jetpack-my-jetpack" );
+__( "Search", "jetpack-my-jetpack" );
 __( "Layout", "jetpack-my-jetpack" );
 /* translators: %d is how many features were added to the wp-admin menu. */
 _n( "%d feature is now in your menu", "%d features are now in your menu", 1, "jetpack-my-jetpack" );
