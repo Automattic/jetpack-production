@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Name each metric's comparison period in line and bar chart legends, such as "Views (Prev. 30 days)".
 - Premium Analytics: Offer a Create post action in empty Traffic and Popular post widgets when the site has no published posts.
 - Premium Analytics: Offer a URL builder when the selected UTM report has no visits.
+- Premium Analytics: Rearrange the WooCommerce tab's default layout, which no longer includes the sales, orders and visitors over time widgets.
 - Premium Analytics: Remember your Compare choice, including No comparison, the next time you open Stats.
 - Premium Analytics: Remove the region toggle from Store visitors by location, which now lists countries worldwide.
 - Premium Analytics: Say that nothing is recorded yet in eight empty Traffic widgets when the site has no views at all, and in Top tags & categories when no post is published, instead of the text about the selected period.

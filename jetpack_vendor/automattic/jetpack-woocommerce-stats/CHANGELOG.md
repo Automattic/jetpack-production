@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Gate the WooCommerce tab and its widgets in the package: WooCommerce active, the reader's store reports capability, and the Bookings extension for the bookings widgets.
+- Rearrange the WooCommerce tab's default layout, which no longer includes the sales, orders and visitors over time widgets.
 - Store visitors by location: Remove the region toggle and list countries worldwide.
 - Top performing products and bookings: Show the rows as soon as the report answers; the thumbnails fill in behind.
 - Update package dependencies.
