@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Name each metric's comparison period in line and bar chart legends, such as "Views (Prev. 30 days)".
 - Premium Analytics: Offer a Create post action in empty Traffic and Popular post widgets when the site has no published posts.
 - Premium Analytics: Offer a URL builder when the selected UTM report has no visits.
+- Premium Analytics: Remember your Compare choice, including No comparison, the next time you open Stats.
 - Premium Analytics: Show a notice when the site nears or passes its plan's monthly views limit.
 - Premium Analytics: Show an upload link in Top videos when the site has no VideoPress videos.
 - Premium Analytics: Show the same search icon in every widget empty state, including the post, email, video and author pages, and reword the empty text of several widgets and the Ads earnings history.
