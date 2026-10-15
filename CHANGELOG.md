@@ -70,6 +70,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO Tools: Fix the homepage and archive pages being hidden from search engines when their newest post is.
 - Sharing: Include the post image in the Pinterest button on AMP pages, so Pinterest no longer asks visitors to upload one.
 - Shortcodes: Recognize YouTube live links so livestreams embed and show a thumbnail, including private and unlisted streams.
+- Sitemaps: Fix one URL from the other URLs filter being skipped after every 50.
 - Slideshow block: Keep slides exposed as list items to screen readers, fixing an accessibility audit error.
 - Social: Fix low-contrast placeholder chips in the share message help text and the available placeholders list.
 - Traffic settings: Add spacing below the notice pointing to the SEO dashboard.
