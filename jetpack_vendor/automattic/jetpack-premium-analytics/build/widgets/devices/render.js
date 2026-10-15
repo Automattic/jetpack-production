@@ -11,4 +11,5 @@ __( "Mobile", "jetpack-premium-analytics-pkg" );
 __( "Tablet", "jetpack-premium-analytics-pkg" );
 __( "Phone", "jetpack-premium-analytics-pkg" );
 __( "Unknown", "jetpack-premium-analytics-pkg" );
+__( "You don’t have devices recorded yet.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load device data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
