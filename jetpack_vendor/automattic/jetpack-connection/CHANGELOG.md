@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [9.12.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [9.12.0] - 2026-10-15
 ### Added
-- Transfer connection ownership to another connected administrator from the Connectors page.
+- Transfer connection ownership to another connected administrator from the Connectors page. [#53581]
 
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#53004]
 
 ## [9.11.0] - 2026-10-14
 ### Added
@@ -2167,7 +2164,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.12.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.11.0...v9.12.0-alpha
+[9.12.0]: https://github.com/Automattic/jetpack-connection/compare/v9.11.0...v9.12.0
 [9.11.0]: https://github.com/Automattic/jetpack-connection/compare/v9.10.0...v9.11.0
 [9.10.0]: https://github.com/Automattic/jetpack-connection/compare/v9.9.1...v9.10.0
 [9.9.1]: https://github.com/Automattic/jetpack-connection/compare/v9.9.0...v9.9.1
