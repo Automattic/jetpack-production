@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Translate the Connectors card's text on sites that don't use English.
 - External Media: Prevent a fatal error when the copy endpoint receives a malformed media parameter.
 - Forms: Fix a PHP warning and broken form when a contact form shortcode is nested inside another one.
+- Jetpack AI: Show the Jetpack AI box on My Jetpack as turned off, with its switch locked, when the host or custom code has turned AI off.
 - Map block: Preserve saved locations when opening or resizing the editor and prevent stale address lookups from overwriting newer edits. Center maps after marker changes, keep deleted markers removed, and show address lookup failures.
 - Monitor: Show each user their own downtime email setting instead of the one another admin saved last.
 - My Jetpack: Show the highest-priority notice first when several are set at once.
