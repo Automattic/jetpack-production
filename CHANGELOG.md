@@ -19,11 +19,11 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Explain what Tags & categories shows when the plan locks it.
 - Premium Analytics: Lighten heatmap colors in cards such as Posting activity and Views over years, while keeping low values distinct from empty cells.
 - Premium Analytics: Move a Top tags & categories tile a reader placed on a customized Insights layout to their Traffic layout, once.
-- Premium Analytics: Move the region toggle of Store visitors by location into the widget header.
 - Premium Analytics: Name each metric's comparison period in line and bar chart legends, such as "Views (Prev. 30 days)".
 - Premium Analytics: Offer a Create post action in empty Traffic and Popular post widgets when the site has no published posts.
 - Premium Analytics: Offer a URL builder when the selected UTM report has no visits.
 - Premium Analytics: Remember your Compare choice, including No comparison, the next time you open Stats.
+- Premium Analytics: Remove the region toggle from Store visitors by location, which now lists countries worldwide.
 - Premium Analytics: Say that nothing is recorded yet in eight empty Traffic widgets when the site has no views at all, and in Top tags & categories when no post is published, instead of the text about the selected period.
 - Premium Analytics: Show a notice when the site nears or passes its plan's monthly views limit.
 - Premium Analytics: Show an upload link in Top videos when the site has no VideoPress videos.
