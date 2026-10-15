@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Channel: Add the data layer the channel blocks read: video lists, play and subscriber counts.
 - Show an upload link in Top videos when the site has no VideoPress videos.
+- Video Playlist block: Add a source setting to show a playlist published on the site, picked from a list and previewed in the editor. All Playlists block: Add a "Recently updated" order and an option to show each playlist's last update and length.
 
 ### Changed
 - Update package dependencies.

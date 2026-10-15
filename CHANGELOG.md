@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Use the dashboard's generic empty state in the WooCommerce widgets for a period with no data.
 - Related Posts: Expose the "Show related content after posts" on/off toggle in Settings > Reading by default so users can disable the feature, including on Portfolio custom post type pages.
 - Stats: Show location map tooltips in Premium Analytics and Podcast stats on the same dark surface, and at the same distance from the cursor, as the other chart tooltips.
+- VideoPress: Let the Video Playlist block show a playlist published on the site, and let the All Playlists block sort by last update and show each playlist's last update and length.
 - VideoPress: Open this site's video pages from a Video Playlist in the same tab, and mark the video being viewed.
 
 ### Bug fixes
