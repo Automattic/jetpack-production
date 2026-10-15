@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Chart legends: Name each metric's comparison period, such as "Views (Prev. 30 days)", in both line and bar charts.
 - Charts: Draw tabbed metric charts in the admin color, with the metric paired in the Traffic summary in a darker shade, instead of a different color per metric.
+- Lighten heatmap colors in cards such as Posting activity and Views over years, while keeping low values distinct from empty cells.
 - Move a Top tags & categories tile a reader placed on a customized Insights layout to their Traffic layout, once.
 - Widgets: Show the search icon in every empty state, including the detail pages and the widgets that had none, and reword the empty text of several widgets.
 

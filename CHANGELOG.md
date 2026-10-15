@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Gray the preview button in the Create new form until the link is created.
 - Premium Analytics: Add All time to the report date menu, covering everything since the site's stats began.
 - Premium Analytics: Draw tabbed metric charts in the admin color, with the metric paired in the Traffic summary in a darker shade, instead of a different color per metric.
+- Premium Analytics: Lighten heatmap colors in cards such as Posting activity and Views over years, while keeping low values distinct from empty cells.
 - Premium Analytics: Move a Top tags & categories tile a reader placed on a customized Insights layout to their Traffic layout, once.
 - Premium Analytics: Move the region toggle of Store visitors by location into the widget header.
 - Premium Analytics: Name each metric's comparison period in line and bar chart legends, such as "Views (Prev. 30 days)".
