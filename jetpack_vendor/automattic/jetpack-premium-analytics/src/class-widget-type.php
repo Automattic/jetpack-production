@@ -176,6 +176,16 @@ class Widget_Type {
 	public $former_names = null;
 
 	/**
+	 * Plan feature the widget cannot show anything without, such as `videos`. A plan that lacks
+	 * it shows the widget locked. Null when every plan includes the widget.
+	 *
+	 * @since 0.13.0-alpha
+	 *
+	 * @var string|null
+	 */
+	public $plan_feature = null;
+
+	/**
 	 * Constructor.
 	 *
 	 * @param string $name Widget type name including namespace.

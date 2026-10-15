@@ -71,6 +71,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect Dashboard: Keep the module unavailable on WordPress.com sites.
 - Settings: Remove the legacy Settings page and its jetpack-settings-wp-build feature flag.
 - Shortcodes, widgets: Use apply_shortcodes() instead of do_shortcode().
+- Update package dependencies.
 - Use apply_shortcodes() terminology instead of do_shortcode().
 
 ## 16.4-a.1 - 2026-10-12
