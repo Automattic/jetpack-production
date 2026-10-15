@@ -204,7 +204,6 @@ __( "Replaces the standard WordPress comment form with a new comment system that
 __( "Enable blocks in comments.", "jetpack" );
 __( "Comment form introduction", "jetpack" );
 __( "A few catchy words to motivate your visitors to comment.", "jetpack" );
-__( "Color scheme", "jetpack" );
 __( "Show Gravatar hovercards alongside comments.", "jetpack" );
 __( "Enable Markdown use for comments.", "jetpack" );
 __( "Allow readers to use markdown in comments.", "jetpack" );
