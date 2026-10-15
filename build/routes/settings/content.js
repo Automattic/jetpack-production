@@ -516,10 +516,6 @@ __( "Tag", "jetpack" );
 __( "Example Archive Title/Date", "jetpack" );
 /* translators: %s is the preview text for a custom SEO input */
 __( "Preview: %s", "jetpack" );
-_x( "Use the new experience", "Button caption", "jetpack" );
-__( "SEO has a new home", "jetpack" );
-__( "Manage all of your search engine optimization from the redesigned Jetpack SEO dashboard.", "jetpack" );
-__( "Something went wrong while switching to the new experience. Please try again.", "jetpack" );
 _x( "Search engine optimization", "Settings header", "jetpack" );
 /* translators: %s is the name of conflicting SEO plugin */
 __( "Your SEO settings are managed by the following plugin: %s", "jetpack" );
@@ -544,6 +540,10 @@ __( "Expand to preview how the SEO settings will look for your homepage on Googl
 __( "Google search", "jetpack" );
 __( "Facebook", "jetpack" );
 __( "X", "jetpack" );
+_x( "Use the new experience", "Button caption", "jetpack" );
+__( "SEO has a new home", "jetpack" );
+__( "Manage all of your search engine optimization from the redesigned Jetpack SEO dashboard.", "jetpack" );
+__( "Something went wrong while switching to the new experience. Please try again.", "jetpack" );
 _x( "WP.me Shortlinks", "Settings header", "jetpack" );
 __( "Generate shortened URLs for simpler sharing.", "jetpack" );
 __( "Choose who can view your Stats, which views are counted, and more.", "jetpack" );
