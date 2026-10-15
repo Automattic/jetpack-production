@@ -3,5 +3,5 @@
 		'wp-api-fetch',
 		'wp-polyfill'
 	),
-	'version' => '444c9c2ebdcc7a7c0633'
+	'version' => '03bc969dae493a4f3bcb'
 );

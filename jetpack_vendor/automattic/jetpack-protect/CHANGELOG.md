@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the Firewall section to the Protect dashboard, with blocked-request totals, recently blocked requests, manual IP rules, a firewall test and firewall settings.
 - Add the Login protection section to the Protect dashboard, covering brute force protection, account protection and WordPress.com login.
 - Add the Monitor section to the Protect dashboard, with 40 days of uptime and its settings.
+- Dashboard: Show the number of threats next to the Protect menu item without delaying page loads, and a red alert icon on the Scan card when there are threats.
 
 ### Changed
 - Include the upstream status and error in the uptime route's failure response, so a timeout, a 401, and a 500 can be told apart.
