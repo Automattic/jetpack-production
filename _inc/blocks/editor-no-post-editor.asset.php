@@ -32,5 +32,5 @@
 		'wp-url',
 		'wp-viewport'
 	),
-	'version' => '442f77891c6d5ca520bd'
+	'version' => '95b820944244e123d63c'
 );

@@ -352,7 +352,7 @@ __( "An Automattic Airline", "jetpack-forms" );
 __( "Features", "jetpack-forms" );
 __( "Help", "jetpack-forms" );
 __( "Jetpack", "jetpack-forms" );
-__( "Breadcrumbs", "jetpack-forms" );
+_x( "Breadcrumbs", "aria label", "jetpack-forms" );
 __( "Sections", "jetpack-forms" );
 __( "Could not load the form to duplicate. Please try again.", "jetpack-forms" );
 /* translators: %s: original form title */

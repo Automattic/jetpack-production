@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Gate the WooCommerce tab and its widgets in the package: WooCommerce active, the reader's store reports capability, and the Bookings extension for the bookings widgets.
 - Store visitors by location: Move the region toggle to the widget header.
 - Top performing products and bookings: Show the rows as soon as the report answers; the thumbnails fill in behind.
+- Update package dependencies.
 - Widgets: Use the dashboard's generic empty state for a period with no data, instead of a copy and icon per widget.
 
 ### Fixed

@@ -65,10 +65,16 @@ __( "Cancel", "jetpack-premium-analytics-pkg" );
 __( "Required", "jetpack-premium-analytics-pkg" );
 __( "Optional", "jetpack-premium-analytics-pkg" );
 __( "Remove", "jetpack-premium-analytics-pkg" );
+__( "Press Backspace or Delete to remove.", "jetpack-premium-analytics-pkg" );
 __( "Clear", "jetpack-premium-analytics-pkg" );
 __( "More details follow the field.", "jetpack-premium-analytics-pkg" );
 __( "More details follow.", "jetpack-premium-analytics-pkg" );
 __( "Select", "jetpack-premium-analytics-pkg" );
+_n( "Selected item", "Selected items", 1, "jetpack-premium-analytics-pkg" );
+/* translators: 1: number of selected items. 2: arrow key name ("Left Arrow" or "Right Arrow"). */
+_n( "%1$d item selected. From the start of the input, press %2$s to move to the selected item.", "%1$d items selected. From the start of the input, press %2$s to move to the selected items.", 1, "jetpack-premium-analytics-pkg" );
+__( "Right Arrow", "jetpack-premium-analytics-pkg" );
+__( "Left Arrow", "jetpack-premium-analytics-pkg" );
 __( "No results found.", "jetpack-premium-analytics-pkg" );
 __( "Search", "jetpack-premium-analytics-pkg" );
 __( "Clear all", "jetpack-premium-analytics-pkg" );

@@ -11,5 +11,5 @@
 		'wp-polyfill',
 		'wp-private-apis'
 	),
-	'version' => '770ae85744a3f85b5d28'
+	'version' => 'f716a43110de1b121d4f'
 );

@@ -205,7 +205,7 @@ __( "Optional", "jetpack-premium-analytics-pkg" );
 __( "More details follow the field.", "jetpack-premium-analytics-pkg" );
 __( "Dismiss", "jetpack-premium-analytics-pkg" );
 __( "More options", "jetpack-premium-analytics-pkg" );
-__( "Reset to default", "jetpack-premium-analytics-pkg" );
+__( "Reset to default…", "jetpack-premium-analytics-pkg" );
 __( "Add widget", "jetpack-premium-analytics-pkg" );
 __( "Done", "jetpack-premium-analytics-pkg" );
 __( "Customize", "jetpack-premium-analytics-pkg" );
@@ -223,9 +223,9 @@ __( "Add widgets to start customizing your dashboard.", "jetpack-premium-analyti
 __( "Reset dashboard to default?", "jetpack-premium-analytics-pkg" );
 __( "All customizations will be permanently lost.", "jetpack-premium-analytics-pkg" );
 __( "Reset", "jetpack-premium-analytics-pkg" );
+__( "More information", "jetpack-premium-analytics-pkg" );
 /* translators: %s: action label. */
 __( "%s (opens in a new tab)", "jetpack-premium-analytics-pkg" );
-__( "More information", "jetpack-premium-analytics-pkg" );
 __( "This widget encountered an error.", "jetpack-premium-analytics-pkg" );
 __( "Widget is no longer available.", "jetpack-premium-analytics-pkg" );
 __( "Missing widget", "jetpack-premium-analytics-pkg" );
@@ -434,12 +434,12 @@ __( "Select", "jetpack-premium-analytics-pkg" );
 __( "%s settings", "jetpack-premium-analytics-pkg" );
 __( "Widget settings", "jetpack-premium-analytics-pkg" );
 __( "Save", "jetpack-premium-analytics-pkg" );
-__( "More", "jetpack-premium-analytics-pkg" );
-__( "Widget controls", "jetpack-premium-analytics-pkg" );
 __( "Widget options", "jetpack-premium-analytics-pkg" );
 __( "Width", "jetpack-premium-analytics-pkg" );
 __( "Use available width", "jetpack-premium-analytics-pkg" );
 __( "Make full width", "jetpack-premium-analytics-pkg" );
+__( "More", "jetpack-premium-analytics-pkg" );
+__( "Widget controls", "jetpack-premium-analytics-pkg" );
 /* translators: %1$s and %2$s: the report range bounds, e.g. "Jul 9, 2026". */
 __( "Performance from %1$s to %2$s", "jetpack-premium-analytics-pkg" );
 __( "Page", "jetpack-premium-analytics-pkg" );

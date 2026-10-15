@@ -599,7 +599,7 @@ __( "An Automattic Airline", "jetpack-forms" );
 __( "Features", "jetpack-forms" );
 __( "Help", "jetpack-forms" );
 __( "Jetpack", "jetpack-forms" );
-__( "Breadcrumbs", "jetpack-forms" );
+_x( "Breadcrumbs", "aria label", "jetpack-forms" );
 __( "Sections", "jetpack-forms" );
 __( "This will permanently delete this form. This action cannot be undone.", "jetpack-forms" );
 /* translators: %d: number of forms */

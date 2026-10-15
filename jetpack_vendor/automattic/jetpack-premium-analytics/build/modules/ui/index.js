@@ -105,5 +105,5 @@ __( "Couldn't refresh. The numbers on screen may be out of date.", "jetpack-prem
 __( "Retry", "jetpack-premium-analytics-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
-__( "Breadcrumbs", "jetpack-premium-analytics-pkg" );
+_x( "Breadcrumbs", "aria label", "jetpack-premium-analytics-pkg" );
 __( "Stats", "jetpack-premium-analytics-pkg" );

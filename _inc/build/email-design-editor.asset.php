@@ -4,7 +4,6 @@
 		'react',
 		'react-dom',
 		'react-jsx-runtime',
-		'wp-a11y',
 		'wp-api-fetch',
 		'wp-block-editor',
 		'wp-block-library',
@@ -35,5 +34,5 @@
 		'wp-style-engine',
 		'wp-url'
 	),
-	'version' => 'bf5f20268174184039da'
+	'version' => '258a5f7ff7f7d33fd887'
 );

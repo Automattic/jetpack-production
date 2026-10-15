@@ -96,6 +96,7 @@ __( "you must also select Site database for restored media uploads to appear", "
 __( "<strong>%1$s</strong> (%2$s)", "jetpack-backup-pkg" );
 __( "Restore failed.", "jetpack-backup-pkg" );
 __( "Your restore didn't start, so nothing on your site has changed.", "jetpack-backup-pkg" );
+__( "We've lost track of this restore. It may still be running — you'll get an email when it finishes.", "jetpack-backup-pkg" );
 __( "This restore link isn't valid.", "jetpack-backup-pkg" );
 __( "The address is missing a valid restore point. Go back to the overview and choose a backup to restore.", "jetpack-backup-pkg" );
 __( "Checking for a restore in progress…", "jetpack-backup-pkg" );
@@ -121,5 +122,4 @@ __( "A restore is already running for this site. You can't start another from he
 __( "Some items could not be restored.", "jetpack-backup-pkg" );
 __( "We didn't hear back from WordPress.com. Checking whether your restore started…", "jetpack-backup-pkg" );
 __( "Checking whether your restore started", "jetpack-backup-pkg" );
-__( "We've lost track of this restore. It may still be running — you'll get an email when it finishes.", "jetpack-backup-pkg" );
 __( "Restore failed", "jetpack-backup-pkg" );

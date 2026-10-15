@@ -103,7 +103,7 @@ __( "Loading…", "jetpack-videopress-pkg" );
 __( "Restore Connection", "jetpack-videopress-pkg" );
 __( "Take Action", "jetpack-videopress-pkg" );
 __( "Reconnecting Jetpack…", "jetpack-videopress-pkg" );
-__( "Breadcrumbs", "jetpack-videopress-pkg" );
+_x( "Breadcrumbs", "aria label", "jetpack-videopress-pkg" );
 __( "Details", "jetpack-videopress-pkg" );
 __( "Editor", "jetpack-videopress-pkg" );
 __( "Cancel", "jetpack-videopress-pkg" );

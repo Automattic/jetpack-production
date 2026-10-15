@@ -15,6 +15,7 @@ return array(
 		'help'         => array( 'content' => 'The published videos your visitors watched most often, sorted by views.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'icon'         => 'jpa/video',
 		'actions'      => null,
+		'attributes'   => null,
 		'has_render'   => true,
 		'has_widget'   => true,
 		'presentation' => 'framed',

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Earnings history widget: Say when the first earnings will show up while there are none yet.
+- Update package dependencies.
 
 ## [0.1.3] - 2026-10-12
 ### Changed

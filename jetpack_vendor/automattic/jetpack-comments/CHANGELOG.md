@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update package dependencies.
+
 ## [0.6.0] - 2026-10-14
 ### Added
 - Add the image block to the comment editor, and list embeds and images in its add block menu. Approved comments show up to four images. [#53527]
@@ -96,6 +103,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add an on-site comment form with a textarea, guest name and email fields, and reply threading when the `jetpack_comments_new_hotness` filter returns true. [#51466]
 - Initial version. [#51210]
 
+[0.6.1-alpha]: https://github.com/Automattic/jetpack-comments/compare/v0.6.0...v0.6.1-alpha
 [0.6.0]: https://github.com/Automattic/jetpack-comments/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/Automattic/jetpack-comments/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-comments/compare/v0.3.0...v0.4.0

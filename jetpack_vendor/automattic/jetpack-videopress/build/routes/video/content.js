@@ -177,7 +177,7 @@ __( "Restore Connection", "jetpack-videopress-pkg" );
 __( "Take Action", "jetpack-videopress-pkg" );
 __( "Reconnecting Jetpack…", "jetpack-videopress-pkg" );
 __( "More details follow the field.", "jetpack-videopress-pkg" );
-__( "Breadcrumbs", "jetpack-videopress-pkg" );
+_x( "Breadcrumbs", "aria label", "jetpack-videopress-pkg" );
 __( "This action cannot be undone.", "jetpack-videopress-pkg" );
 __( "Delete video", "jetpack-videopress-pkg" );
 /* translators: %d: number of videos being deleted. */

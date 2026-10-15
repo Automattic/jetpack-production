@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Lighten heatmap colors in cards such as Posting activity and Views over years, while keeping low values distinct from empty cells.
 - Move a Top tags & categories tile a reader placed on a customized Insights layout to their Traffic layout, once.
 - Open the dashboard on the comparison the reader last applied from the header, including No comparison.
+- Update package dependencies.
 - Widgets: Say that nothing is recorded yet in eight empty Traffic widgets when the site has no views at all, and in Top tags & categories when no post is published, instead of the text about the selected period.
 - Widgets: Show the search icon in every empty state, including the detail pages and the widgets that had none, and reword the empty text of several widgets.
 

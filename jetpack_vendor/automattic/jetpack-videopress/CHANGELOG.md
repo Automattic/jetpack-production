@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Show an upload link in Top videos when the site has no VideoPress videos.
 
 ### Changed
+- Update package dependencies.
 - Use apply_shortcodes() terminology instead of do_shortcode().
 - Video Playlist: Open this site's video pages in the same tab, and mark the entry of the video being viewed.
 

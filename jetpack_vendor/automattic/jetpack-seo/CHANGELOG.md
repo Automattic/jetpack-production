@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Record Tracks events for screen views, settings changes, the SEO tools switch and the GEO tab's llms.txt and AI crawler controls, on sites that allow tracking.
 - Settings: Show a working Canonical URLs switch on WordPress.com Simple sites that adds canonical tags to archive pages.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Fix saving SEO settings, clearing front-page descriptions, and switching sitemaps off on private sites. Preserve unsaved title structure edits when saving another row. Explain when sitemap generation is managed by the hosting platform. Hide unsupported canonical URL controls.
 - Keep disabled GEO settings off after reloading. Detect static robots.txt and llms.txt files on supported managed hosting. Hide the Site visibility progress badge on private sites.
