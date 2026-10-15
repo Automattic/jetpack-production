@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Keep a deep link's day interval and date label when its ISO offsets were pasted with an unencoded plus, which the querystring reads as a space.
 - Premium Analytics: Keep conversion funnel bars and empty-state messages visible in one-row widgets.
 - Premium Analytics: Load the author page on sites that block the WordPress users endpoint.
+- Premium Analytics: Show a focus ring on conversion funnel steps when you move to them with the keyboard.
 - Premium Analytics: Show the author's name in the author page breadcrumb.
 - Premium Analytics: Show the empty state in the WooCommerce report charts when the period and its comparison have no activity, instead of a flat line at zero.
 - SEO: Fix saving settings, clearing front-page descriptions, and switching sitemaps off on private sites. Preserve unsaved title structure edits when saving another row.
