@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Dashboard: Line up the Enable SEO tools card on the Settings, Content, and GEO tabs with the Overview tab.
 - Fix saving SEO settings, clearing front-page descriptions, and switching sitemaps off on private sites. Preserve unsaved title structure edits when saving another row. Explain when sitemap generation is managed by the hosting platform. Hide unsupported canonical URL controls.
 - Keep disabled GEO settings off after reloading. Detect static robots.txt and llms.txt files on supported managed hosting. Hide the Site visibility progress badge on private sites.
 

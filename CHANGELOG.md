@@ -58,6 +58,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the empty state in the WooCommerce report charts when the period and its comparison have no activity, instead of a flat line at zero.
 - SEO: Fix saving settings, clearing front-page descriptions, and switching sitemaps off on private sites. Preserve unsaved title structure edits when saving another row.
 - SEO: Keep disabled GEO settings off after reloading. Detect static robots.txt and llms.txt files on supported managed hosting. Hide the Site visibility progress badge on private sites.
+- SEO: Line up the Enable SEO tools card on the Settings, Content, and GEO tabs with the Overview tab.
 - SEO Tools: Fix the homepage and archive pages being hidden from search engines when their newest post is.
 - Sharing: Include the post image in the Pinterest button on AMP pages, so Pinterest no longer asks visitors to upload one.
 - Shortcodes: Recognize YouTube live links so livestreams embed and show a thumbnail, including private and unlisted streams.
