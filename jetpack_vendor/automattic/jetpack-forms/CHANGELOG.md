@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 - Use apply_shortcodes() terminology instead of do_shortcode().
 
+### Fixed
+- Fix a PHP warning and broken form when a contact form shortcode is nested inside another one.
+
 ## [8.3.3] - 2026-10-12
 ### Changed
 - Update package dependencies. [#53223]
