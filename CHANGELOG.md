@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Skip site registration in offline mode, and stop retrying it on every page load after an error that retrying cannot fix.
 - Connection: Transfer connection ownership to another administrator without leaving your site.
 - Connection: Transfer connection ownership to another connected administrator from the Connectors page.
+- Knowledge: Add storage and REST APIs without requiring the Gutenberg experiment.
 - My Jetpack: Show a connection error on the Overview connection card while your account is still to be connected, instead of only asking you to connect it.
 - My Jetpack: Show unavailable features with their reasons and add an Available filter.
 - PayPal Payment Buttons: Gray the preview button in the Create new form until the link is created.

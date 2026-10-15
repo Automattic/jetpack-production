@@ -882,6 +882,22 @@ return array(
 		'version' => 'dev-trunk',
 		'path'    => $baseDir . '/src/class-jetpack-crm-data.php'
 	),
+	'Automattic\\Jetpack\\Knowledge' => array(
+		'version' => '0.1.0.0-alpha1792078913',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-knowledge/src/class-knowledge.php'
+	),
+	'Automattic\\Jetpack\\Knowledge\\Knowledge_Post_Type' => array(
+		'version' => '0.1.0.0-alpha1792078913',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-knowledge/src/class-knowledge-post-type.php'
+	),
+	'Automattic\\Jetpack\\Knowledge\\Knowledge_REST_Controller' => array(
+		'version' => '0.1.0.0-alpha1792078913',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-knowledge/src/class-knowledge-rest-controller.php'
+	),
+	'Automattic\\Jetpack\\Knowledge\\Knowledge_Scopes_REST_Controller' => array(
+		'version' => '0.1.0.0-alpha1792078913',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-knowledge/src/class-knowledge-scopes-rest-controller.php'
+	),
 	'Automattic\\Jetpack\\Licensing' => array(
 		'version' => '4.1.0.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-licensing/src/class-licensing.php'

@@ -108,6 +108,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-jwt',
       'ver' => '0.3.0',
     ),
+    'jetpack-knowledge' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-knowledge',
+      'ver' => '0.1.0-alpha1792078913',
+    ),
     'jetpack-licensing' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-licensing',
       'ver' => '4.1.0',

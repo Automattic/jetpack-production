@@ -325,6 +325,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'automattic/jetpack-knowledge' => array(
+            'pretty_version' => '0.1.0-alpha.1792078913',
+            'version' => '0.1.0.0-alpha1792078913',
+            'reference' => '85bb691405d010cd0e7167ea216ba7534bf7f777',
+            'type' => 'jetpack-library',
+            'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-knowledge',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'automattic/jetpack-licensing' => array(
             'pretty_version' => '4.1.0',
             'version' => '4.1.0.0',

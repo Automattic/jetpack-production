@@ -40,6 +40,7 @@
 		"automattic/jetpack-import": "^0.10.0",
 		"automattic/jetpack-ip": "^0.7.0",
 		"automattic/jetpack-jitm": "^5.1.4-alpha",
+		"automattic/jetpack-knowledge": "^0.1.0-alpha",
 		"automattic/jetpack-licensing": "^4.1.0",
 		"automattic/jetpack-logo": "^4.0.1",
 		"automattic/jetpack-masterbar": "^0.29.5-alpha",
