@@ -29,6 +29,7 @@
 		"build/widgets/sessions-by-device/render.js",
 		"build/widgets/store-conversion-rate-bookings/render.js",
 		"build/widgets/store-performance/render.js",
+		"build/widgets/store-performance/widget.js",
 		"build/widgets/top-performing-bookings/render.js",
 		"build/widgets/top-performing-products/render.js",
 		"build/widgets/total-returns/render.js",
