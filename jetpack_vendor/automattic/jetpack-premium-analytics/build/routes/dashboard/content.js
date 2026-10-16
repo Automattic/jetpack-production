@@ -342,6 +342,8 @@ __( "Thank you for using Jetpack Stats!", "jetpack-premium-analytics-pkg" );
 __( "You’ll now get instant access to upcoming features and priority support.", "jetpack-premium-analytics-pkg" );
 __( "You’ll stop seeing the upgrade banners and get Email support if applicable.", "jetpack-premium-analytics-pkg" );
 __( "We appreciate your continued support. If you want to access upcoming features, <link>please consider upgrading</link>.", "jetpack-premium-analytics-pkg" );
+__( "Switch between boards", "jetpack-premium-analytics-pkg" );
+__( "Access your different store and traffic boards from these tabs.", "jetpack-premium-analytics-pkg" );
 __( "Everything is a widget", "jetpack-premium-analytics-pkg" );
 __( "Each block of data is a widget you can move and resize to suit how you read your site.", "jetpack-premium-analytics-pkg" );
 __( "A better date picker", "jetpack-premium-analytics-pkg" );

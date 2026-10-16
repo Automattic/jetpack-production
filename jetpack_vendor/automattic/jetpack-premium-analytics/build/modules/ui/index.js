@@ -92,7 +92,16 @@ __( "Time period", "jetpack-premium-analytics-pkg" );
 __( "Select period", "jetpack-premium-analytics-pkg" );
 __( "Welcome to the new Stats", "jetpack-premium-analytics-pkg" );
 __( "It's built from widgets you can move and resize, so the page can match how you read your site. This is an early version and we'll keep adding new tabs and features in regular updates.", "jetpack-premium-analytics-pkg" );
+__( "Your Woo analytics in one place", "jetpack-premium-analytics-pkg" );
+__( "Learn all about your site traffic and store performance from a single place with Analytics.", "jetpack-premium-analytics-pkg" );
+__( "Your store analytics integrated", "jetpack-premium-analytics-pkg" );
+__( "Learn all about your Woo store performance from a single place with Analytics.", "jetpack-premium-analytics-pkg" );
+/* translators: 1: current slide number, 2: total slides. */
+__( "Slide %1$d of %2$d", "jetpack-premium-analytics-pkg" );
+/* translators: 1: current slide number, 2: total slides, 3: slide title. */
+__( "Slide %1$d of %2$d: %3$s", "jetpack-premium-analytics-pkg" );
 __( "Take a quick tour", "jetpack-premium-analytics-pkg" );
+__( "Next", "jetpack-premium-analytics-pkg" );
 /* translators: 1: the current step number, 2: the number of steps in the tour. */
 __( "%1$d of %2$d", "jetpack-premium-analytics-pkg" );
 __( "Skip tour", "jetpack-premium-analytics-pkg" );

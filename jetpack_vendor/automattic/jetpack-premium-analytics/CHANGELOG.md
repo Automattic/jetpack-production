@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Detect which paid Stats features the site's plan lacks, and let a widget type declare the plan feature it shows.
 - Offer a Create post action in empty Traffic and Popular post widgets when the site has no published posts.
 - Offer a URL builder when the selected UTM report has no visits.
+- Onboarding: Introduce the WooCommerce tab, with a short version for readers who already went through the onboarding.
 - Show paid Stats features as locked, with an upgrade link, on plans that do not include them.
 
 ### Changed
