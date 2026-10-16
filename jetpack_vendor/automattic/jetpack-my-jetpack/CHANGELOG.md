@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Connection: Make the connection screen's Connect button and footer links reachable on shorter screens.
 - Features: Hide the legacy Custom Content Types module.
+- Update the Post List activation message to describe what the feature does.
 
 ## [6.10.0] - 2026-10-14
 ### Added

@@ -148,7 +148,7 @@ function jetpack_get_module_i18n( $key ) {
 
 			'post-list' => array(
 				'name' => _x( 'Post List', 'Module Name', 'jetpack' ),
-				'description' => _x( 'Display a customizable list of your latest posts anywhere on your site.', 'Module Description', 'jetpack' ),
+				'description' => _x( 'Show featured images and a copy link action in your WP Admin post and page lists.', 'Module Description', 'jetpack' ),
 			),
 
 			'protect-dashboard' => array(
@@ -883,7 +883,7 @@ function jetpack_get_module_info( $key ) {
 	  'post-list' => 
 	  array (
 	    'name' => 'Post List',
-	    'description' => 'Display a customizable list of your latest posts anywhere on your site.',
+	    'description' => 'Show featured images and a copy link action in your WP Admin post and page lists.',
 	    'sort' => '31',
 	    'recommendation_order' => '12',
 	    'introduced' => '11.3',

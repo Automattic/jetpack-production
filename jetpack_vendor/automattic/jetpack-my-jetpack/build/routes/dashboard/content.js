@@ -591,7 +591,7 @@ __( "Your site now serves static files from Jetpack's global CDN for faster load
 __( "Your site now loads images faster with automatic resizing from our global CDN.", "jetpack-my-jetpack" );
 __( "You can now publish, manage, and grow your podcast right from your site.", "jetpack-my-jetpack" );
 __( "You can now publish blog posts by sending an email.", "jetpack-my-jetpack" );
-__( "You can now display a customizable list of your latest posts anywhere on your site.", "jetpack-my-jetpack" );
+__( "You can now see featured images and a copy link action in your WP Admin post and page lists.", "jetpack-my-jetpack" );
 __( "Your site now blocks malicious login attempts automatically.", "jetpack-my-jetpack" );
 __( "Your posts now auto-share to social networks and track engagement in one place.", "jetpack-my-jetpack" );
 __( "You can now reach the WordPress.com Reader from your site, and join a community of creators and bloggers.", "jetpack-my-jetpack" );

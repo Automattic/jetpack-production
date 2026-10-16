@@ -71,6 +71,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast: Give the downloads by location map an accessible name for screen readers.
 - Podcast: Translate the dashboard's interface strings.
 - Post by Email: Forget a user's saved address when they disconnect from WordPress.com, so reconnecting with a different account no longer shows the old one.
+- Post List: Update the module description to reflect what the feature does.
 - Premium Analytics: Fix the center total of donut and semi-circle charts showing through the chart tooltip.
 - Premium Analytics: Give map, leaderboard and conversion funnel charts an accessible name and role for screen readers.
 - Premium Analytics: Keep a deep link's day interval and date label when its ISO offsets were pasted with an unencoded plus, which the querystring reads as a space.
