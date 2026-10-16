@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Channel: Add a page per playlist. The Video Playlist block can show the playlist being viewed, its entries keep the playlist context, and All Playlists cards link to playlist pages and can hide the playlist being viewed.
 - Channel: Add the data layer the channel blocks read: video lists, play and subscriber counts.
+- Latest Videos Playlist: Add sorting, search and length filters, numbered pages, an option to leave out the video being viewed, and view counts with upload dates.
 - Show an upload link in Top videos when the site has no VideoPress videos.
 - Video Playlist block: Add a source setting to show a playlist published on the site, picked from a list and previewed in the editor. All Playlists block: Add a "Recently updated" order and an option to show each playlist's last update and length.
 
