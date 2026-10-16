@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a feature flag for the shared header's global controls.
 - Features: Show unavailable modules with their reasons and add an available-only filter.
+- Onboarding: Add a full-screen setup wizard behind a feature flag, off by default. It connects the site, asks what the site is for, and records that setup was finished or skipped.
 
 ### Changed
 - Expiring plan notice: Show WordPress.com's own notice for its plans instead of the generated one.
@@ -21,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Connection: Make the connection screen's Connect button and footer links reachable on shorter screens.
 - Features: Hide the legacy Custom Content Types module.
+- Onboarding: Hide other plugins' notices while the setup screen is open, and stop the full-screen layout breaking when another plugin adds an admin body class first.
 - Update the Post List activation message to describe what the feature does.
 
 ## [6.10.0] - 2026-10-14
