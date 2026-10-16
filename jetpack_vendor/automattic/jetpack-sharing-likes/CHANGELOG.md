@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.3.1-alpha] - unreleased
+## [0.4.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add the Sharing Buttons and Like blocks before or after the post content in block themes' single post and page templates, when the legacy buttons are off and a site option asks for them. The `jetpack_sharing_likes_template_placement_post_types` filter adds other post types.
 
 ### Changed
 - Update dependencies.
@@ -43,7 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Add the wp-admin Settings > Sharing screen, covering sharing buttons, Like buttons, and where they appear. [#52407] [#52727] [#52756] [#52758]
 - Settings: Give Comment Likes their own section on every platform, and offer the Like block to Jetpack and Atomic sites running Comment Likes. [#52796]
 
-[0.3.1-alpha]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.3.0...v0.3.1-alpha
+[0.4.0-alpha]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.3.0...v0.4.0-alpha
 [0.3.0]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.1.0...v0.1.1
