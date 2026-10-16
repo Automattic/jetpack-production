@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Features: Show unavailable modules with their reasons and add an available-only filter.
 
 ### Changed
+- Expiring plan notice: Show WordPress.com's own notice for its plans instead of the generated one.
 - Scan: Open the Protect page in WP Admin instead of Jetpack Cloud when the site has one, and leave the threats alert out of the My Jetpack menu count when the Protect menu item shows the number of threats.
 - Update package dependencies.
 
