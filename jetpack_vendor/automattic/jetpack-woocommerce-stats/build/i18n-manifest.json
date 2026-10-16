@@ -1,5 +1,6 @@
 {
 	"bundles": [
+		"build/modules/store-performance-bookings/index.js",
 		"build/widgets/average-items-per-order/render.js",
 		"build/widgets/average-items-per-order/widget.js",
 		"build/widgets/average-order-value/render.js",

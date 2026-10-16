@@ -7,5 +7,9 @@
  */
 
 return array(
-
+	array(
+		'id' => '@jetpack-woocommerce-stats/store-performance-bookings',
+		'path' => 'store-performance-bookings/index',
+		'asset' => 'store-performance-bookings/index.min.asset.php',
+	),
 );

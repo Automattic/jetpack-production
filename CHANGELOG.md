@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show a notice when the site nears or passes its plan's monthly views limit.
 - Premium Analytics: Show an upload link in Top videos when the site has no VideoPress videos.
 - Premium Analytics: Show paid Stats features as locked, with an upgrade link, on plans that do not include them.
+- Premium Analytics: Show the Bookings metric of Store performance only on stores running WooCommerce Bookings.
 - Premium Analytics: Show the same search icon in every widget empty state, including the post, email, video and author pages, and reword the empty text of several widgets and the Ads earnings history.
 - Premium Analytics: Show the Top performing products rows before their thumbnails load.
 - Premium Analytics: Show what the values count above Top pages and Latest emails sent, and the unit in the tooltip of an abbreviated value.
