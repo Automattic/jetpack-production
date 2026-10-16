@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Explain what Tags & categories shows when the plan locks it.
 - Lighten heatmap colors in cards such as Posting activity and Views over years, while keeping low values distinct from empty cells.
 - Link a locked feature's WordPress.com support page in the user's language, and fix support links that pointed at sections no longer on the page.
+- Metric tabs: Spread the cards evenly over their rows, scale the values with the card width, and show full figures when the cards collapse into a dropdown.
 - Move a Top tags & categories tile a reader placed on a customized Insights layout to their Traffic layout, once.
 - Open the dashboard on the comparison the reader last applied from the header, including No comparison.
 - Update package dependencies.
