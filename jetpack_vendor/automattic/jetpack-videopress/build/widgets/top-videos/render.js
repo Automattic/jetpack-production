@@ -7,6 +7,7 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Untitled video", "jetpack-videopress-pkg" );
+__( "Videos", "jetpack-videopress-pkg" );
 __( "We couldn't load video plays. Please try again in a moment.", "jetpack-videopress-pkg" );
 __( "You don’t have videos uploaded yet.", "jetpack-videopress-pkg" );
 __( "Upload video", "jetpack-videopress-pkg" );

@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Video Playlist block: Add a source setting to show a playlist published on the site, picked from a list and previewed in the editor. All Playlists block: Add a "Recently updated" order and an option to show each playlist's last update and length.
 
 ### Changed
+- Name the videos and their views above the Top videos list.
 - Update package dependencies.
 - Use apply_shortcodes() terminology instead of do_shortcode().
 - Video Playlist: Open this site's video pages in the same tab, and mark the entry of the video being viewed.

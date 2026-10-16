@@ -492,7 +492,7 @@ return array(
 		'dir_name'     => 'referrers',
 		'title'        => 'Top referrers',
 		'description'  => 'Websites and search engines referring visitors to your site.',
-		'help'         => array( 'content' => 'The sources that sent the most visitors to your site, sorted by clicks.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
+		'help'         => array( 'content' => 'The sources that sent the most visitors to your site, sorted by views.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'icon'         => 'jpa/globe',
 		'actions'      => null,
 		'attributes'   => null,

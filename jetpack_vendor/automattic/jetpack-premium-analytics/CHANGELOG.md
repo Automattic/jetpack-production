@@ -33,6 +33,8 @@ This is an alpha version! The changes listed here are not final.
 - Move a Top tags & categories tile a reader placed on a customized Insights layout to their Traffic layout, once.
 - Open the dashboard on the comparison the reader last applied from the header, including No comparison.
 - Update package dependencies.
+- Widgets: Add column headers naming the rows and the metric to the Insights lists, Top tags & categories, Email breakdown and Top viewed posts.
+- Widgets: Name the rows and what the values count above the Traffic tab lists, following the selected view and each drill-down level.
 - Widgets: Say that nothing is recorded yet in eight empty Traffic widgets when the site has no views at all, and in Top tags & categories when no post is published, instead of the text about the selected period.
 - Widgets: Show the search icon in every empty state, including the detail pages and the widgets that had none, and reword the empty text of several widgets.
 - Widgets: Show what the values count above Top pages and Latest emails sent, and the unit in the tooltip of an abbreviated value.

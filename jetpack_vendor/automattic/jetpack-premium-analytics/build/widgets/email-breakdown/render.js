@@ -9,6 +9,10 @@
 __( "Country", "jetpack-premium-analytics-pkg" );
 __( "Clicks", "jetpack-premium-analytics-pkg" );
 __( "Opens", "jetpack-premium-analytics-pkg" );
+__( "Devices", "jetpack-premium-analytics-pkg" );
+__( "Email clients", "jetpack-premium-analytics-pkg" );
+__( "Links", "jetpack-premium-analytics-pkg" );
+__( "Countries", "jetpack-premium-analytics-pkg" );
 __( "No device data for this email yet.", "jetpack-premium-analytics-pkg" );
 __( "No email client data for this email yet.", "jetpack-premium-analytics-pkg" );
 __( "No link clicks for this email yet.", "jetpack-premium-analytics-pkg" );

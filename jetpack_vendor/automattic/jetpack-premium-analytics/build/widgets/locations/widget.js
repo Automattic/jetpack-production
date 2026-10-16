@@ -7,6 +7,3 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "View by", "jetpack-premium-analytics-pkg" );
-__( "Countries", "jetpack-premium-analytics-pkg" );
-__( "Regions", "jetpack-premium-analytics-pkg" );
-__( "Cities", "jetpack-premium-analytics-pkg" );

@@ -69,9 +69,6 @@ __( "Posts & Pages", "jetpack-premium-analytics-pkg" );
 __( "Earnings history", "jetpack-premium-analytics-pkg" );
 __( "Sponsored content history", "jetpack-premium-analytics-pkg" );
 __( "Adjustments history", "jetpack-premium-analytics-pkg" );
-__( "Countries", "jetpack-premium-analytics-pkg" );
-__( "Regions", "jetpack-premium-analytics-pkg" );
-__( "Cities", "jetpack-premium-analytics-pkg" );
 __( "Archives", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the smallest value shown at this precision, e.g. "0.1". */
 __( "< %s", "jetpack-premium-analytics-pkg" );

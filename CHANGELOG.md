@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Show the PayPal logo and a clearer connect message in the block's placeholder before PayPal is connected.
 - PayPal Payment Buttons: Show the style controls under a saved payment link's details instead of in a Styles tab.
 - Premium Analytics: Add All time to the report date menu, covering everything since the site's stats began.
+- Premium Analytics: Add column headers naming the rows and the metric to the Insights lists, Top tags & categories, Email breakdown and Top viewed posts.
 - Premium Analytics: Draw tabbed metric charts in the admin color, with the metric paired in the Traffic summary in a darker shade, instead of a different color per metric.
 - Premium Analytics: Explain what Tags & categories shows when the plan locks it.
 - Premium Analytics: Introduce the WooCommerce tab in the Stats onboarding for store owners.
@@ -28,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Link locked Stats features to WordPress.com support pages in the user's language.
 - Premium Analytics: Move a Top tags & categories tile a reader placed on a customized Insights layout to their Traffic layout, once.
 - Premium Analytics: Name each metric's comparison period in line and bar chart legends, such as "Views (Prev. 30 days)".
+- Premium Analytics: Name the rows and what the values count above the Traffic tab lists, following the selected view and each drill-down level.
 - Premium Analytics: Offer a Create post action in empty Traffic and Popular post widgets when the site has no published posts.
 - Premium Analytics: Offer a URL builder when the selected UTM report has no visits.
 - Premium Analytics: Rearrange the WooCommerce tab's default layout, which no longer includes the sales, orders and visitors over time widgets.

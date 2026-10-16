@@ -12,3 +12,4 @@ __( "All tags & categories", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load tags & categories. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "You don’t have tags or categories recorded yet.", "jetpack-premium-analytics-pkg" );
+__( "Tags & categories", "jetpack-premium-analytics-pkg" );
