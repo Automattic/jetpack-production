@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix a PHP warning and broken form when a contact form shortcode is nested inside another one.
+- Form editor: Add labels and usage hints to the embed code and shortcode fields in the "add it to a page" dialog.
 
 ## [8.3.3] - 2026-10-12
 ### Changed

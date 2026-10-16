@@ -59,6 +59,7 @@ This is an alpha version! The changes listed here are not final.
 - CLI: Make `wp jetpack protect allow` read the current IP allow list, so adding an IP no longer replaces the existing entries.
 - Connection: Translate the Connectors card's text on sites that don't use English.
 - External Media: Prevent a fatal error when the copy endpoint receives a malformed media parameter.
+- Forms: Add labels and usage hints to the embed code and shortcode fields in the "add it to a page" dialog.
 - Forms: Fix a PHP warning and broken form when a contact form shortcode is nested inside another one.
 - Jetpack AI: Show the Jetpack AI box on My Jetpack as turned off, with its switch locked, when the host or custom code has turned AI off.
 - Map block: Preserve saved locations when opening or resizing the editor and prevent stale address lookups from overwriting newer edits. Center maps after marker changes, keep deleted markers removed, and show address lookup failures.
