@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Include the upstream status and error in the uptime route's failure response, so a timeout, a 401, and a 500 can be told apart.
 - Protect dashboard: Delete unused plugins and themes without leaving the page, step through threats with the arrow keys, show a placeholder while Scan history loads, close threat details when switching tabs, name the threat in each notice, show threats on two lines with a narrower Severity column, show whether the affected plugin or theme is active, keep the threat actions at the bottom of the sidebar, and keep Scan progress and error notices until they are dismissed, with a View button that opens the threat while an action runs.
 - Protect dashboard: Tell the Monitor card's failures apart, with a link to connect a WordPress.com account and a way to retry.
+- Show the Downtime monitoring card with an uptime percentage, per-day tooltips, and an on/off toggle like the Firewall card.
 - Update package dependencies.
 
 ## 0.1.0 - 2026-10-12

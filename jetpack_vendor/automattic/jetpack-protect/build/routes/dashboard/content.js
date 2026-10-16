@@ -24,6 +24,8 @@ __( "Cancel", "jetpack-protect-pkg" );
 __( "Close", "jetpack-protect-pkg" );
 __( "More details follow the field.", "jetpack-protect-pkg" );
 __( "Dismiss", "jetpack-protect-pkg" );
+__( "Unavailable", "jetpack-protect-pkg" );
+__( "This feature isn’t available on your site.", "jetpack-protect-pkg" );
 __( "Firewall test", "jetpack-protect-pkg" );
 __( "Blocked IP address", "jetpack-protect-pkg" );
 /* translators: %d is a firewall rule's ID. */
@@ -71,8 +73,6 @@ __( "The firewall test timed out, because your site took too long to respond. Tr
 __( "The firewall test couldn’t run. Try again.", "jetpack-protect-pkg" );
 __( "Learn more", "jetpack-protect-pkg" );
 __( "Firewall", "jetpack-protect-pkg" );
-__( "Unavailable", "jetpack-protect-pkg" );
-__( "This feature isn’t available on your site.", "jetpack-protect-pkg" );
 __( "Blocks malicious requests before they reach your site.", "jetpack-protect-pkg" );
 __( "Test firewall", "jetpack-protect-pkg" );
 __( "All-time blocked requests", "jetpack-protect-pkg" );
@@ -456,34 +456,26 @@ __( "Two-Step Authentication is enforced by your site’s configuration.", "jetp
 __( "Turn off WordPress.com login?", "jetpack-protect-pkg" );
 __( "Users will have to log in with their username and password on this site instead.", "jetpack-protect-pkg" );
 __( "Turn off", "jetpack-protect-pkg" );
-__( "%s: 100%% uptime", "jetpack-protect-pkg" );
-/* translators: %1$s is a date. %2$d is a number of minutes. */
-_n( "%1$s: down for %2$d minute", "%1$s: down for %2$d minutes", 1, "jetpack-protect-pkg" );
-__( "%s: no data", "jetpack-protect-pkg" );
+__( "Enable downtime monitoring", "jetpack-protect-pkg" );
+__( "Jetpack checks your site every five minutes.", "jetpack-protect-pkg" );
+__( "Downtime monitoring isn’t available on this site.", "jetpack-protect-pkg" );
+__( "Operational all day", "jetpack-protect-pkg" );
+/* translators: %d is a number of minutes. */
+_n( "Down for %d minute", "Down for %d minutes", 1, "jetpack-protect-pkg" );
+__( "No data", "jetpack-protect-pkg" );
 __( "Operational", "jetpack-protect-pkg" );
 __( "Down", "jetpack-protect-pkg" );
 __( "Status unknown", "jetpack-protect-pkg" );
-/* translators: %1$s, %2$s and %3$s are counts of days: "38 days up", "1 day down", "1 day with no data". */
-__( "%1$s, %2$s, %3$s", "jetpack-protect-pkg" );
+__( "Downtime monitoring", "jetpack-protect-pkg" );
+__( "Find out your site is down before your visitors do, with an email alert within minutes.", "jetpack-protect-pkg" );
 /* translators: %d is a number of days. */
-_n( "%d day up", "%d days up", 1, "jetpack-protect-pkg" );
-/* translators: %d is a number of days. */
-_n( "%d day down", "%d days down", 1, "jetpack-protect-pkg" );
-/* translators: %d is a number of days. */
-_n( "%d day with no data", "%d days with no data", 1, "jetpack-protect-pkg" );
-__( "Turn on downtime monitoring to get an email the moment your site goes down.", "jetpack-protect-pkg" );
-__( "Downtime monitoring isn’t available on this site.", "jetpack-protect-pkg" );
-__( "Monitor", "jetpack-protect-pkg" );
-/* translators: %d is a number of days. */
-__( "Uptime, last %d days (UTC)", "jetpack-protect-pkg" );
+__( "Last %d days uptime", "jetpack-protect-pkg" );
+__( "Perfect uptime", "jetpack-protect-pkg" );
 __( "Your site is being monitored. Connect your WordPress.com account to see its uptime history.", "jetpack-protect-pkg" );
 __( "Connect your account", "jetpack-protect-pkg" );
 __( "Uptime history is unavailable right now.", "jetpack-protect-pkg" );
 __( "Try again", "jetpack-protect-pkg" );
-__( "Configure Downtime Monitoring", "jetpack-protect-pkg" );
-__( "Turn on in Settings", "jetpack-protect-pkg" );
-__( "Monitor your site for downtime", "jetpack-protect-pkg" );
-__( "Jetpack checks your site every five minutes.", "jetpack-protect-pkg" );
+__( "Configure downtime monitoring", "jetpack-protect-pkg" );
 __( "Email me when my site goes down and comes back up", "jetpack-protect-pkg" );
 __( "Emails go to your WordPress.com account’s address.", "jetpack-protect-pkg" );
 __( "Connect your WordPress.com account to manage these emails.", "jetpack-protect-pkg" );
