@@ -169,4 +169,5 @@ __( "You have unsaved chapter changes. Leave this page and discard them?", "jetp
 __( "Failed to save chapters.", "jetpack-videopress-pkg" );
 __( "Chapters saved.", "jetpack-videopress-pkg" );
 _x( "Chapters saved to the description, but they won’t appear in the player until they meet the requirements.", "chapters save outcome", "jetpack-videopress-pkg" );
+__( "Conversion failed. Delete this video from your library and upload it again.", "jetpack-videopress-pkg" );
 __( "This video is still processing. The editor will be available once it finishes.", "jetpack-videopress-pkg" );

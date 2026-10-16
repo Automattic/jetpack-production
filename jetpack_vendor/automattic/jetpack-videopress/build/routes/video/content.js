@@ -211,6 +211,7 @@ __( "Save", "jetpack-videopress-pkg" );
 __( "More actions", "jetpack-videopress-pkg" );
 __( "Manage subtitles", "jetpack-videopress-pkg" );
 __( "Download file", "jetpack-videopress-pkg" );
+__( "Conversion failed. Delete this video and upload it again.", "jetpack-videopress-pkg" );
 __( "Site default", "jetpack-videopress-pkg" );
 __( "Public", "jetpack-videopress-pkg" );
 __( "Private", "jetpack-videopress-pkg" );

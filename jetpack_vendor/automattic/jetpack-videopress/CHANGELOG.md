@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Channel: Only open a channel video page for a video uploaded to this site.
+- VideoPress: Show failed conversions with delete and re-upload guidance, and retry locked resumable uploads.
 
 ## [0.57.0] - 2026-10-12
 ### Added

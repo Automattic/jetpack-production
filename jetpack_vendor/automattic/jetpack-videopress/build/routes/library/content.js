@@ -428,6 +428,8 @@ __( "Upload to VideoPress", "jetpack-videopress-pkg" );
 __( "Details weren’t saved", "jetpack-videopress-pkg" );
 __( "Upload failed", "jetpack-videopress-pkg" );
 __( "Jetpack connection issue", "jetpack-videopress-pkg" );
+__( "Conversion failed", "jetpack-videopress-pkg" );
+__( "Delete this video and upload it again.", "jetpack-videopress-pkg" );
 /* translators: %d: transcoding progress percentage */
 __( "Processing %d%%", "jetpack-videopress-pkg" );
 /* translators: %s: video title. */
