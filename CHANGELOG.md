@@ -49,6 +49,7 @@ This is an alpha version! The changes listed here are not final.
 - Related Posts: Expose the "Show related content after posts" on/off toggle in Settings > Reading by default so users can disable the feature, including on Portfolio custom post type pages.
 - Scan: Point the admin bar threats notice and My Jetpack at the Protect dashboard instead of Jetpack Cloud, drop the external Scan menu item, show the number of threats next to the Protect menu item, and show a red alert icon on the Protect dashboard Scan card when there are threats, when the Protect dashboard is active. The admin bar and the menu item share one threat count, which loads without delaying admin pages.
 - Stats: Show location map tooltips in Premium Analytics and Podcast stats on the same dark surface, and at the same distance from the cursor, as the other chart tooltips.
+- VideoPress: Add a page per playlist on channel sites, with All Playlists cards linking to it and a Video Playlist block option to show the playlist being viewed.
 - VideoPress: Let the Video Playlist block show a playlist published on the site, and let the All Playlists block sort by last update and show each playlist's last update and length.
 - VideoPress: Open this site's video pages from a Video Playlist in the same tab, and mark the video being viewed.
 
