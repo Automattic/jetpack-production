@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 - Widgets: Say that nothing is recorded yet in eight empty Traffic widgets when the site has no views at all, and in Top tags & categories when no post is published, instead of the text about the selected period.
 - Widgets: Show the search icon in every empty state, including the detail pages and the widgets that had none, and reword the empty text of several widgets.
+- Widgets: Show what the values count above Top pages and Latest emails sent, and the unit in the tooltip of an abbreviated value.
 
 ### Removed
 - Remove the WooCommerce columns widgets, now built by the WooCommerce Stats package.

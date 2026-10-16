@@ -71,6 +71,22 @@ __( "You don't have access to this data.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "Line chart", "jetpack-premium-analytics-pkg" );
 __( "Bar chart", "jetpack-premium-analytics-pkg" );
+__( "Clicks", "jetpack-premium-analytics-pkg" );
+__( "Downloads", "jetpack-premium-analytics-pkg" );
+__( "Shares", "jetpack-premium-analytics-pkg" );
+__( "Comments", "jetpack-premium-analytics-pkg" );
+__( "Opens", "jetpack-premium-analytics-pkg" );
+__( "Views", "jetpack-premium-analytics-pkg" );
+/* translators: %s: number of link clicks, e.g. "190". */
+_n( "%s click", "%s clicks", 1, "jetpack-premium-analytics-pkg" );
+/* translators: %s: number of file downloads, e.g. "1,287". */
+_n( "%s download", "%s downloads", 1, "jetpack-premium-analytics-pkg" );
+/* translators: %s: number of social media shares, e.g. "1,287". */
+_n( "%s share", "%s shares", 1, "jetpack-premium-analytics-pkg" );
+/* translators: %s: number of comments, e.g. "1,287". */
+_n( "%s comment", "%s comments", 1, "jetpack-premium-analytics-pkg" );
+/* translators: %s: number of email opens, e.g. "1,287". */
+_n( "%s open", "%s opens", 1, "jetpack-premium-analytics-pkg" );
 __( "Total views", "jetpack-premium-analytics-pkg" );
 __( "Daily average", "jetpack-premium-analytics-pkg" );
 _x( "Metric", "label for the views metric selector", "jetpack-premium-analytics-pkg" );
@@ -100,7 +116,6 @@ __( "Back to %s", "jetpack-premium-analytics-pkg" );
 __( "of %s", "jetpack-premium-analytics-pkg" );
 /* translators: %d is the number of locations left out of the tooltip list. */
 _n( "…and %d more location", "…and %d more locations", 1, "jetpack-premium-analytics-pkg" );
-__( "Views", "jetpack-premium-analytics-pkg" );
 __( "Latitude", "jetpack-premium-analytics-pkg" );
 __( "Longitude", "jetpack-premium-analytics-pkg" );
 __( "Location", "jetpack-premium-analytics-pkg" );
@@ -178,9 +193,7 @@ __( "Untracked authors", "jetpack-premium-analytics-pkg" );
 __( "Author", "jetpack-premium-analytics-pkg" );
 __( "Link", "jetpack-premium-analytics-pkg" );
 __( "Group", "jetpack-premium-analytics-pkg" );
-__( "Clicks", "jetpack-premium-analytics-pkg" );
 __( "File", "jetpack-premium-analytics-pkg" );
-__( "Downloads", "jetpack-premium-analytics-pkg" );
 __( "Referrer", "jetpack-premium-analytics-pkg" );
 __( "Unknown search terms", "jetpack-premium-analytics-pkg" );
 __( "Search term", "jetpack-premium-analytics-pkg" );
@@ -215,10 +228,8 @@ __( "Avg words per post", "jetpack-premium-analytics-pkg" );
 __( "Total images", "jetpack-premium-analytics-pkg" );
 __( "Avg images per post", "jetpack-premium-analytics-pkg" );
 __( "Name", "jetpack-premium-analytics-pkg" );
-__( "Comments", "jetpack-premium-analytics-pkg" );
 __( "Email", "jetpack-premium-analytics-pkg" );
 __( "Sent", "jetpack-premium-analytics-pkg" );
-__( "Opens", "jetpack-premium-analytics-pkg" );
 __( "Open rate", "jetpack-premium-analytics-pkg" );
 __( "Click rate", "jetpack-premium-analytics-pkg" );
 __( "Tag or category", "jetpack-premium-analytics-pkg" );
