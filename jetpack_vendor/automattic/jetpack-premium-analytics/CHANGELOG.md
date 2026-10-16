@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: expose the Locations widget kind through the SDK; the widget contract is 1.11.0.
 - Dashboard: Show a notice when the site nears or passes its plan's monthly views limit.
 - Dashboard: Thank the reader for their Stats purchase when checkout returns to the dashboard.
+- Dashboard sections: Let a section show a notice above its widgets.
 - Detect which paid Stats features the site's plan lacks, and let a widget type declare the plan feature it shows.
 - Offer a Create post action in empty Traffic and Popular post widgets when the site has no published posts.
 - Offer a URL builder when the selected UTM report has no visits.

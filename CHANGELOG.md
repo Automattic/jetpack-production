@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show paid Stats features as locked, with an upgrade link, on plans that do not include them.
 - Premium Analytics: Show the same search icon in every widget empty state, including the post, email, video and author pages, and reword the empty text of several widgets and the Ads earnings history.
 - Premium Analytics: Show the Top performing products rows before their thumbnails load.
+- Premium Analytics: Tell store owners on the WooCommerce tab when the store has no orders yet.
 - Premium Analytics: Thank the reader for their Stats purchase when checkout returns to the dashboard.
 - Premium Analytics: Use the dashboard's generic empty state in the WooCommerce widgets for a period with no data.
 - Related Posts: Expose the "Show related content after posts" on/off toggle in Settings > Reading by default so users can disable the feature, including on Portfolio custom post type pages.

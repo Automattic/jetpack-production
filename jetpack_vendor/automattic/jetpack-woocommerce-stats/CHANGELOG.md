@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add the columns widgets: revenue by customer type, sales by device, total returns and sales by coupon, with the bookings variants of the first two; the store ones are placed on the WooCommerce tab by default.
 - Add the Store visitors by location widget, placed on the WooCommerce tab by default.
+- Tell the store owner on the WooCommerce tab when the store has no orders yet.
 
 ### Changed
 - Gate the WooCommerce tab and its widgets in the package: WooCommerce active, the reader's store reports capability, and the Bookings extension for the bookings widgets.
