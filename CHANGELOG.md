@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Name the rows and what the values count above the Traffic tab lists, following the selected view and each drill-down level.
 - Premium Analytics: Offer a Create post action in empty Traffic and Popular post widgets when the site has no published posts.
 - Premium Analytics: Offer a URL builder when the selected UTM report has no visits.
+- Premium Analytics: Offer the sales, orders and visitors over time widgets in the WooCommerce tab's inserter.
 - Premium Analytics: Rearrange the WooCommerce tab's default layout, which no longer includes the sales, orders and visitors over time widgets.
 - Premium Analytics: Remember your Compare choice, including No comparison, the next time you open Stats.
 - Premium Analytics: Remove the region toggle from Store visitors by location, which now lists countries worldwide.
