@@ -61,6 +61,8 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Show the Jetpack AI box on My Jetpack as turned off, with its switch locked, when the host or custom code has turned AI off.
 - Map block: Preserve saved locations when opening or resizing the editor and prevent stale address lookups from overwriting newer edits. Center maps after marker changes, keep deleted markers removed, and show address lookup failures.
 - Monitor: Show each user their own downtime email setting instead of the one another admin saved last.
+- My Jetpack: Hide the legacy Custom Content Types module from Features.
+- My Jetpack: Make the connection screen's Connect button and footer links reachable on shorter screens.
 - My Jetpack: Show the highest-priority notice first when several are set at once.
 - Newsletter: Always use the logged-out version of a post when the ActivityPub plugin shares it to the Fediverse.
 - PayPal Payment Buttons: Collect the shipping address without a shipping fee, from a new "Shipping address" toggle. Tax or shipping from PayPal settings now shows an error until the address is on.

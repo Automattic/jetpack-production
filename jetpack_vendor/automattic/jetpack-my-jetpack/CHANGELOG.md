@@ -17,6 +17,10 @@ This is an alpha version! The changes listed here are not final.
 - Scan: Open the Protect page in WP Admin instead of Jetpack Cloud when the site has one, and leave the threats alert out of the My Jetpack menu count when the Protect menu item shows the number of threats.
 - Update package dependencies.
 
+### Fixed
+- Connection: Make the connection screen's Connect button and footer links reachable on shorter screens.
+- Features: Hide the legacy Custom Content Types module.
+
 ## [6.10.0] - 2026-10-14
 ### Added
 - Add an opt-in Features page for managing local features in offline mode. [#53280]
