@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a feature flag for the shared header's global controls.
 - Features: Show unavailable modules with their reasons and add an available-only filter.
 
 ### Changed

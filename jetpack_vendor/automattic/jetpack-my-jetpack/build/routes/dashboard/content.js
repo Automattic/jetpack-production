@@ -530,6 +530,7 @@ __( "Here are the tools that we think will help you reach your website goals:", 
 __( "Recommendations menu", "jetpack-my-jetpack" );
 __( "Previous", "jetpack-my-jetpack" );
 __( "Next", "jetpack-my-jetpack" );
+__( "Connection", "jetpack-my-jetpack" );
 /* translators: %d is how many features are selected. */
 _n( "%d selected", "%d selected", 1, "jetpack-my-jetpack" );
 __( "Plugins can only be deactivated together while the Jetpack plugin is active.", "jetpack-my-jetpack" );
@@ -820,7 +821,6 @@ __( "Connected as %1$s (%2$s)", "jetpack-my-jetpack" );
 __( "User connected.", "jetpack-my-jetpack" );
 /* translators: %s: the username of the Jetpack connection owner */
 __( "Also connected: %s (Owner).", "jetpack-my-jetpack" );
-__( "Connection", "jetpack-my-jetpack" );
 __( "Manage connection", "jetpack-my-jetpack" );
 __( "Connect my account", "jetpack-my-jetpack" );
 /* translators: %1$s is a product name, %2$s is the date the product was gifted. */
