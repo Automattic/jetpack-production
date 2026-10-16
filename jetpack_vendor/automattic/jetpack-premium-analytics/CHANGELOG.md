@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - Keep conversion funnel bars and empty-state messages visible in one-row widgets.
 - Load the author page on sites that block the WordPress users endpoint.
 - Show the author's name in the author page breadcrumb.
+- Show the new plan and fresh Stats data on the first dashboard load after a Stats purchase.
 - WooCommerce tab: Treat a store whose analytics data already finished syncing as synced, instead of reporting a sync error.
 
 ## [0.12.0] - 2026-10-12
