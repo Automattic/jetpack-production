@@ -76,6 +76,7 @@ This is an alpha version! The changes listed here are not final.
 - Post List: Update the module description to reflect what the feature does.
 - Premium Analytics: Fix the center total of donut and semi-circle charts showing through the chart tooltip.
 - Premium Analytics: Give map, leaderboard and conversion funnel charts an accessible name and role for screen readers.
+- Premium Analytics: Hide redundant labels from single-metric widgets whose titles already identify the metric.
 - Premium Analytics: Keep a deep link's day interval and date label when its ISO offsets were pasted with an unencoded plus, which the querystring reads as a space.
 - Premium Analytics: Keep conversion funnel bars and empty-state messages visible in one-row widgets.
 - Premium Analytics: Keep long figures in the metric cards above the charts from being cut off, spread the cards evenly over their rows, and show full figures when the cards collapse into a dropdown.

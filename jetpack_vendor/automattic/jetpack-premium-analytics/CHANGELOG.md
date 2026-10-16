@@ -53,6 +53,7 @@ This is an alpha version! The changes listed here are not final.
 - Keep a deep link's day interval and date label when its ISO offsets were pasted with an unencoded plus, which the querystring reads as a space.
 - Keep conversion funnel bars and empty-state messages visible in one-row widgets.
 - Load the author page on sites that block the WordPress users endpoint.
+- Metric charts: Hide redundant labels from single-metric widgets whose titles already identify the metric.
 - Show the author's name in the author page breadcrumb.
 - Show the new plan and fresh Stats data on the first dashboard load after a Stats purchase.
 - WooCommerce tab: Treat a store whose analytics data already finished syncing as synced, instead of reporting a sync error.
