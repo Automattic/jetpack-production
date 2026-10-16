@@ -69,6 +69,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Make the connection screen's Connect button and footer links reachable on shorter screens.
 - My Jetpack: Show the highest-priority notice first when several are set at once.
 - Newsletter: Always use the logged-out version of a post when the ActivityPub plugin shares it to the Fediverse.
+- Newsletter: Correct the email design Styles panel descriptions to match which parts of the email each control actually changes.
 - Newsletter: Preview the post you came from when opening Email Design from a post's email preview.
 - PayPal Payment Buttons: Collect the shipping address without a shipping fee, from a new "Shipping address" toggle. Tax or shipping from PayPal settings now shows an error until the address is on.
 - Podcast: Give the downloads by location map an accessible name for screen readers.
