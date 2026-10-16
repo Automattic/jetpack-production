@@ -5,11 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.12.3-alpha] - unreleased
+## [0.13.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Move the connection panel's actions into the menus, drop the unused connect Success step, and show Sandbox under Log out for sandbox accounts.
+- Show the PayPal logo and a clearer connect message in the block's placeholder before PayPal is connected.
+- Show the style controls under a saved payment link's details instead of in a Styles tab.
 - Update package dependencies.
 
 ## [0.12.2] - 2026-10-14
@@ -430,7 +433,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Simple Payments: Move Simple Payments block to PayPal Payments package. [#43413]
 
-[0.12.3-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.12.2...v0.12.3-alpha
+[0.13.0-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.12.2...v0.13.0-alpha
 [0.12.2]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.12.1...v0.12.2
 [0.12.1]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.12.0...v0.12.1
 [0.12.0]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.11.1...v0.12.0
