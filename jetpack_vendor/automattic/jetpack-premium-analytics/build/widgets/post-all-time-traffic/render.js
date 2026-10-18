@@ -9,3 +9,4 @@
 __( "We couldn't load this post's traffic. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "No views yet.", "jetpack-premium-analytics-pkg" );
 __( "Open a post or page report to see its all-time traffic here.", "jetpack-premium-analytics-pkg" );
+__( "All-time traffic", "jetpack-premium-analytics-pkg" );

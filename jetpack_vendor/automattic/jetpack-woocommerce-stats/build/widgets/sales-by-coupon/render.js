@@ -9,3 +9,4 @@
 __( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg" );
 __( "Other", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load coupon sales data. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );
+__( "Sales by coupon", "jetpack-woocommerce-stats-pkg" );

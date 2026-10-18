@@ -12,3 +12,4 @@ __( "Cart", "jetpack-woocommerce-stats-pkg" );
 __( "Checkout", "jetpack-woocommerce-stats-pkg" );
 __( "Purchase", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load conversion data. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );
+__( "Store conversion rate", "jetpack-woocommerce-stats-pkg" );

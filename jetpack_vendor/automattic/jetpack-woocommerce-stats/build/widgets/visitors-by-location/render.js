@@ -8,4 +8,5 @@
 
 __( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg" );
 __( "Store visitors", "jetpack-woocommerce-stats-pkg" );
+__( "Store visitors by location", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load location data. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );

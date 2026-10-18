@@ -54,3 +54,4 @@ _x( "Prev. year, weekday", "comparison legend label", "jetpack-premium-analytics
 _x( "%s, weekday", "comparison legend label", "jetpack-premium-analytics-pkg" );
 __( "Open an author to see their all-time traffic here.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load your views. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
+__( "Views over years", "jetpack-premium-analytics-pkg" );

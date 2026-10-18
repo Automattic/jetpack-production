@@ -17,6 +17,7 @@ __( "No device data for this email yet.", "jetpack-premium-analytics-pkg" );
 __( "No email client data for this email yet.", "jetpack-premium-analytics-pkg" );
 __( "No link clicks for this email yet.", "jetpack-premium-analytics-pkg" );
 __( "No country data for this email yet.", "jetpack-premium-analytics-pkg" );
+__( "Email breakdown", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this email's breakdown. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "Select an email to see its breakdown.", "jetpack-premium-analytics-pkg" );

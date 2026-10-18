@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Earnings history widget: Say when the first earnings will show up while there are none yet.
 - Update package dependencies.
 
+### Fixed
+- Name the Ads summary chart after its widget, so screen readers can tell it apart from the other dashboard charts.
+
 ## [0.1.3] - 2026-10-12
 ### Changed
 - WordAds chart: Draw today's bucket as not yet counted for Ads Served and Revenue too, and say so in the tooltip. [#53229]

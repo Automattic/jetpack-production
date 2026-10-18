@@ -27,3 +27,4 @@ __( "Select at least one metric to display.", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load store performance data. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );
 __( "Retry", "jetpack-woocommerce-stats-pkg" );
 __( "Store metric", "jetpack-woocommerce-stats-pkg" );
+__( "Store performance", "jetpack-woocommerce-stats-pkg" );

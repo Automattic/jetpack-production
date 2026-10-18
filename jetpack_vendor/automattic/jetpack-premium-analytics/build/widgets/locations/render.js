@@ -13,5 +13,6 @@ __( "View regions in %s", "jetpack-premium-analytics-pkg" );
 __( "View cities in %s", "jetpack-premium-analytics-pkg" );
 __( "All locations", "jetpack-premium-analytics-pkg" );
 __( "View all locations", "jetpack-premium-analytics-pkg" );
+__( "Top locations", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load location data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );

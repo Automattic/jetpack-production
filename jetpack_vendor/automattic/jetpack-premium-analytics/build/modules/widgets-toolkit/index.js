@@ -95,6 +95,10 @@ __( "Fewer views per day", "jetpack-premium-analytics-pkg" );
 __( "More views per day", "jetpack-premium-analytics-pkg" );
 __( "Fewer views", "jetpack-premium-analytics-pkg" );
 __( "More views", "jetpack-premium-analytics-pkg" );
+/* translators: %s is what a chart shows, e.g. "Sales by device". */
+__( "Chart: %s", "jetpack-premium-analytics-pkg" );
+/* translators: %s is what a map shows, e.g. "Top locations". */
+__( "Map: %s", "jetpack-premium-analytics-pkg" );
 /* translators: %s is a metric name, e.g. "Views". */
 __( "%s · previous period", "jetpack-premium-analytics-pkg" );
 /* translators: 1: metric name, e.g. "Views"; 2: comparison period, e.g. "Prev. 30 days". */

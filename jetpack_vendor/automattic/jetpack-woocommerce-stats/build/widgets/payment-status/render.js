@@ -9,4 +9,5 @@
 __( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg" );
 __( "Paid", "jetpack-woocommerce-stats-pkg" );
 __( "Unpaid", "jetpack-woocommerce-stats-pkg" );
+__( "Payment status", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load payment data. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );

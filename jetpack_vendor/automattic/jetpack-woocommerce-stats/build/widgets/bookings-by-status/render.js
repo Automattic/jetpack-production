@@ -11,4 +11,5 @@ __( "Booked", "jetpack-woocommerce-stats-pkg" );
 __( "Checked In", "jetpack-woocommerce-stats-pkg" );
 __( "No Show", "jetpack-woocommerce-stats-pkg" );
 __( "Cancelled", "jetpack-woocommerce-stats-pkg" );
+__( "Bookings by status", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load bookings data. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );

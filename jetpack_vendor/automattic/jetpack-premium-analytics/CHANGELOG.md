@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add All time to the report date menu, covering everything since the site's stats began.
+- Dashboard: Accept a chart title on the Columns, Donut, Funnel, Leaderboard, Locations and MetricTabsChart widget components through the SDK; the widget contract is 1.13.0.
 - Dashboard: add the Columns widget kind, which the revenue by customer type, sales by device, total returns and sales by coupon widgets draw with.
 - Dashboard: add the Locations widget kind, which Visitors by location draws with.
 - Dashboard: expose the Columns widget kind through the SDK; the widget contract is 1.10.0.
@@ -54,6 +55,7 @@ This is an alpha version! The changes listed here are not final.
 - Keep conversion funnel bars and empty-state messages visible in one-row widgets.
 - Load the author page on sites that block the WordPress users endpoint.
 - Metric charts: Hide redundant labels from single-metric widgets whose titles already identify the metric.
+- Name each widget chart after its widget, so screen readers can tell the charts on a dashboard apart.
 - Show the author's name in the author page breadcrumb.
 - Show the new plan and fresh Stats data on the first dashboard load after a Stats purchase.
 - WooCommerce tab: Treat a store whose analytics data already finished syncing as synced, instead of reporting a sync error.

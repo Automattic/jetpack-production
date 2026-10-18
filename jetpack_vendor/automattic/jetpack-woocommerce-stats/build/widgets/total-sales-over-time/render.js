@@ -8,5 +8,6 @@
 
 __( "Retry", "jetpack-woocommerce-stats-pkg" );
 __( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg" );
+__( "Total sales over time", "jetpack-woocommerce-stats-pkg" );
 __( "Total sales", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load total sales. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );

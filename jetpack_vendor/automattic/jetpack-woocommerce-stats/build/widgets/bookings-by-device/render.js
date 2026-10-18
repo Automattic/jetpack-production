@@ -9,3 +9,4 @@
 __( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg" );
 __( "Unassigned", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load sales by device data. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );
+__( "Bookings by device", "jetpack-woocommerce-stats-pkg" );

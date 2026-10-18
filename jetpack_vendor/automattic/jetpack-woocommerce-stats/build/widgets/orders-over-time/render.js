@@ -10,5 +10,6 @@ __( "Retry", "jetpack-woocommerce-stats-pkg" );
 __( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg" );
 /* translators: %s: number of orders. */
 _n( "%s Order", "%s Orders", 1, "jetpack-woocommerce-stats-pkg" );
+__( "Orders over time", "jetpack-woocommerce-stats-pkg" );
 __( "Orders", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load orders. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );

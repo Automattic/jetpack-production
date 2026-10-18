@@ -10,3 +10,4 @@ __( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg
 __( "Total sales", "jetpack-woocommerce-stats-pkg" );
 __( "Refunds", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load returns data. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );
+__( "Total returns", "jetpack-woocommerce-stats-pkg" );

@@ -16,3 +16,4 @@ __( "No ads were served in this period.", "jetpack-ads-pkg" );
 __( "We couldn't load WordAds data. Please try again in a moment.", "jetpack-ads-pkg" );
 __( "Retry", "jetpack-ads-pkg" );
 __( "WordAds metric", "jetpack-ads-pkg" );
+__( "Ads summary", "jetpack-ads-pkg" );

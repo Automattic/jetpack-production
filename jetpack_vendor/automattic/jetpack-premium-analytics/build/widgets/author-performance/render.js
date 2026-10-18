@@ -19,3 +19,4 @@ __( "Comments", "jetpack-premium-analytics-pkg" );
 _n( "%s Comment", "%s Comments", 1, "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this author's stats. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Open an author to see their stats here.", "jetpack-premium-analytics-pkg" );
+__( "Author performance", "jetpack-premium-analytics-pkg" );
