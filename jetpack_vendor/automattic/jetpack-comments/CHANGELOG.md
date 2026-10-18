@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fix comments from readers signed in with WordPress.com going to spam or not showing after posting, and Backspace or undo wiping a comment being written.
 - Fix the comment editor crashing on paragraphs, lists, quotes, and code, and fall back to the plain comment box when a block crashes.
+- Show the default avatar instead of a broken image on old comments left with an X (Twitter) login.
 
 ## [0.6.0] - 2026-10-14
 ### Added

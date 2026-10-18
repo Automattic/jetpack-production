@@ -59,6 +59,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Brute Force Protection: Fix correct logins being rejected after the math challenge, and keep the username and login destination when the password must be entered again.
 - CLI: Make `wp jetpack protect allow` read the current IP allow list, so adding an IP no longer replaces the existing entries.
+- Comments: Show the default avatar instead of a broken image on old comments left with an X (Twitter) login.
 - Connection: Translate the Connectors card's text on sites that don't use English.
 - External Media: Prevent a fatal error when the copy endpoint receives a malformed media parameter.
 - Forms: Add labels and usage hints to the embed code and shortcode fields in the "add it to a page" dialog.
