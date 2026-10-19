@@ -60,6 +60,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Show location map tooltips in Premium Analytics and Podcast stats on the same dark surface, and at the same distance from the cursor, as the other chart tooltips.
 - VideoPress: Add a Channel Details block to channel sites, with the channel's handle, subscribers, videos, playlists, views and start date.
 - VideoPress: Add a page per playlist on channel sites, with All Playlists cards linking to it and a Video Playlist block option to show the playlist being viewed.
+- VideoPress: Add a Video Details block, and let the VideoPress Video block play the newest upload.
 - VideoPress: Let the Latest Videos Playlist block sort, search, filter by length and paginate, and show view counts.
 - VideoPress: Let the Video Playlist block show a playlist published on the site, and let the All Playlists block sort by last update and show each playlist's last update and length.
 - VideoPress: Open this site's video pages from a Video Playlist in the same tab, and mark the video being viewed.
