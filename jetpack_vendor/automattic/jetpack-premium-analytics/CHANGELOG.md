@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - Metric tabs: Spread the cards evenly over their rows, scale the values with the card width, and show full figures when the cards collapse into a dropdown.
 - Move a Top tags & categories tile a reader placed on a customized Insights layout to their Traffic layout, once.
 - Open the dashboard on the comparison the reader last applied from the header, including No comparison.
+- Reports: fold the Archives tab like the other drilldown reports, with a chevron on each archive type and every row at one weight.
 - Settings: Show plan usage in a taller, brand-colored meter.
 - Update package dependencies.
 - Widgets: Add a Learn more link to the empty All-time top social media shares widget, and to Subscriber summary when the site has no subscribers yet.
