@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Remember your Compare choice, including No comparison, the next time you open Stats.
 - Premium Analytics: Remove the region toggle from Store visitors by location, which now lists countries worldwide.
 - Premium Analytics: Say that nothing is recorded yet in eight empty Traffic widgets when the site has no views at all, and in Top tags & categories when no post is published, instead of the text about the selected period.
+- Premium Analytics: Say when the site has no subscribers yet in the empty Subscriber summary widget, with a Learn more link.
 - Premium Analytics: Show a notice when the site nears or passes its plan's monthly views limit.
 - Premium Analytics: Show an upload link in Top videos when the site has no VideoPress videos.
 - Premium Analytics: Show paid Stats features as locked, with an upgrade link, on plans that do not include them.

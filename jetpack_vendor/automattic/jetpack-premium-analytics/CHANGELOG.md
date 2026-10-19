@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Open the dashboard on the comparison the reader last applied from the header, including No comparison.
 - Settings: Show plan usage in a taller, brand-colored meter.
 - Update package dependencies.
+- Widgets: Add a Learn more link to the empty All-time top social media shares widget, and to Subscriber summary when the site has no subscribers yet.
 - Widgets: Add column headers naming the rows and the metric to the Insights lists, Top tags & categories, Email breakdown and Top viewed posts.
 - Widgets: Name the rows and what the values count above the Traffic tab lists, following the selected view and each drill-down level.
 - Widgets: Say that nothing is recorded yet in eight empty Traffic widgets when the site has no views at all, and in Top tags & categories when no post is published, instead of the text about the selected period.
