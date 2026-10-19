@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Charts: Paint donut and semi-circle chart tooltips above the center total.
+- Charts: Set wrapped legend rows closer together, and space legend items the same way in every chart.
 - Fields: Keep text labels of the toggle group on one line.
 - Give map, leaderboard and conversion funnel charts an accessible name and role for screen readers.
 - Keep a deep link's day interval and date label when its ISO offsets were pasted with an unencoded plus, which the querystring reads as a space.

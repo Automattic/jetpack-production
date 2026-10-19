@@ -50,6 +50,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Use the dashboard's generic empty state in the WooCommerce widgets for a period with no data.
 - Related Posts: Expose the "Show related content after posts" on/off toggle in Settings > Reading by default so users can disable the feature, including on Portfolio custom post type pages.
 - Scan: Point the admin bar threats notice and My Jetpack at the Protect dashboard instead of Jetpack Cloud, drop the external Scan menu item, show the number of threats next to the Protect menu item, and show a red alert icon on the Protect dashboard Scan card when there are threats, when the Protect dashboard is active. The admin bar and the menu item share one threat count, which loads without delaying admin pages.
+- Social: Tighten the spacing between wrapped legend rows in the Overview traffic chart.
 - Stats: Show location map tooltips in Premium Analytics and Podcast stats on the same dark surface, and at the same distance from the cursor, as the other chart tooltips.
 - VideoPress: Add a page per playlist on channel sites, with All Playlists cards linking to it and a Video Playlist block option to show the playlist being viewed.
 - VideoPress: Let the Latest Videos Playlist block sort, search, filter by length and paginate, and show view counts.
@@ -87,6 +88,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Keep long figures in the metric cards above the charts from being cut off, spread the cards evenly over their rows, and show full figures when the cards collapse into a dropdown.
 - Premium Analytics: Load the author page on sites that block the WordPress users endpoint.
 - Premium Analytics: Name each widget chart after its widget, so screen readers can tell the charts on a dashboard apart.
+- Premium Analytics: Set wrapped chart legend rows closer together, and space legend items the same way in every chart.
 - Premium Analytics: Show a focus ring on conversion funnel steps when you move to them with the keyboard.
 - Premium Analytics: Show the author's name in the author page breadcrumb.
 - Premium Analytics: Show the empty state in the WooCommerce report charts when the period and its comparison have no activity, instead of a flat line at zero.
