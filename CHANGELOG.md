@@ -93,6 +93,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Name each widget chart after its widget, so screen readers can tell the charts on a dashboard apart.
 - Premium Analytics: Set wrapped chart legend rows closer together, and space legend items the same way in every chart.
 - Premium Analytics: Show a focus ring on conversion funnel steps when you move to them with the keyboard.
+- Premium Analytics: Show no value, rather than 0 with a -100% change, for store averages and conversion rate over a period with no orders or sessions.
 - Premium Analytics: Show the author's name in the author page breadcrumb.
 - Premium Analytics: Show the empty state in the WooCommerce report charts when the period and its comparison have no activity, instead of a flat line at zero.
 - Premium Analytics: Show the new Stats plan and views limit on the first load after a Jetpack Stats purchase, instead of the old ones for up to five minutes.

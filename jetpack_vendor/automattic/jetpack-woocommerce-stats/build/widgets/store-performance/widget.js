@@ -19,6 +19,7 @@ __( "Store visitors recorded through WooCommerce sessions. Jetpack Stats measure
 _n( "%s Store visitor", "%s Store visitors", 1, "jetpack-woocommerce-stats-pkg" );
 __( "Store conversion rate", "jetpack-woocommerce-stats-pkg" );
 __( "Track your store's conversion funnel from sessions to completed orders.", "jetpack-woocommerce-stats-pkg" );
+__( "No store sessions in this period.", "jetpack-woocommerce-stats-pkg" );
 __( "Customers", "jetpack-woocommerce-stats-pkg" );
 __( "Track the total number of customers (new and returning) who placed orders during the selected time period.", "jetpack-woocommerce-stats-pkg" );
 /* translators: %s: number of customers. */

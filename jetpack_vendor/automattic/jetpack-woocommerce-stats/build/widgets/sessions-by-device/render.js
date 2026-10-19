@@ -10,5 +10,6 @@ __( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg
 __( "Mobile", "jetpack-woocommerce-stats-pkg" );
 __( "Desktop", "jetpack-woocommerce-stats-pkg" );
 __( "Tablet", "jetpack-woocommerce-stats-pkg" );
+__( "Unknown", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load sessions data. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );
 __( "Sessions by device", "jetpack-woocommerce-stats-pkg" );

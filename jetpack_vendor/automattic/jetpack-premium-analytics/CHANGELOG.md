@@ -59,6 +59,7 @@ This is an alpha version! The changes listed here are not final.
 - Give map, leaderboard and conversion funnel charts an accessible name and role for screen readers.
 - Keep a deep link's day interval and date label when its ISO offsets were pasted with an unencoded plus, which the querystring reads as a space.
 - Keep conversion funnel bars and empty-state messages visible in one-row widgets.
+- Leave averages and the store conversion rate empty in CSV exports for a period without orders or sessions, and let a metric show no value when its report has none.
 - Load the author page on sites that block the WordPress users endpoint.
 - Metric charts: Hide redundant labels from single-metric widgets whose titles already identify the metric.
 - Name each widget chart after its widget, so screen readers can tell the charts on a dashboard apart.
