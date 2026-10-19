@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Block editor: Explain why a Jetpack block is unavailable when Jetpack Blocks or a required feature is turned off, or when Jetpack is not connected.
 - Forms: Open the Forms dashboard faster by skipping a redirect.
 - Modules: Link Firewall, Brute force protection, Account protection, Downtime monitoring and WordPress.com login to their card on the Protect page, in place of their switches, while that page owns their settings.
+- Settings: Match the page header, tabs, and cards of the other Jetpack settings screens.
 - VideoPress: Match the card spacing and top margin of the other Jetpack settings screens.
 
 ### Bug fixes
