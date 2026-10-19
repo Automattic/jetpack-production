@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Overview: Title the intro card "Jetpack Newsletter", adding "on WordPress.com" only on WordPress.com sites.
+- Settings: Use the shared CheckboxCard component for subscription placements.
 - Update package dependencies.
 
 ## [0.18.0] - 2026-10-12
