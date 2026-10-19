@@ -362,6 +362,9 @@ __( "Try again", "jetpack-premium-analytics-pkg" );
 __( "< %s", "jetpack-premium-analytics-pkg" );
 /* translators: 1: views used in the current cycle, 2: the plan's views limit. */
 __( "%1$s / %2$s views", "jetpack-premium-analytics-pkg" );
+/* translators: Read by screen readers. 1: views used in the current cycle, 2: the plan's views limit. */
+__( "%1$s of %2$s views used", "jetpack-premium-analytics-pkg" );
+__( "Billable views", "jetpack-premium-analytics-pkg" );
 /* translators: %d: number of days until the billing cycle resets. */
 _n( "Restarts in %d day", "Restarts in %d days", 1, "jetpack-premium-analytics-pkg" );
 __( "Loading your plan usage…", "jetpack-premium-analytics-pkg" );
