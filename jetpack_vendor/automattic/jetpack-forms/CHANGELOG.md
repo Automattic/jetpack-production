@@ -11,6 +11,13 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Block editor: Report that the Forms module is off when the form block is unavailable, so the editor can say why.
+- Dashboard: Open on the remembered tab without a server-side redirect, saving a page load on every visit.
+
+### Deprecated
+- Dashboard: Deprecate Dashboard::get_default_tab(), as the dashboard now picks its opening tab client-side.
+
+### Fixed
+- Dashboard: Send sites without Central Form Management from the Forms list to the inbox even while settings are still loading.
 
 ## [8.3.4] - 2026-10-19
 ### Changed
