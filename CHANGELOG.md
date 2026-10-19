@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Knowledge: Add storage and REST APIs without requiring the Gutenberg experiment.
 - My Jetpack: Show a connection error on the Overview connection card while your account is still to be connected, instead of only asking you to connect it.
 - My Jetpack: Show unavailable features with their reasons and add an Available filter.
+- PayPal Payment Buttons: Call a PayPal payment a payment button everywhere, and payment links and buttons where both are meant. The admin page is now PayPal Payment Buttons.
 - PayPal Payment Buttons: Gray the preview button in the Create new form until the link is created.
 - PayPal Payment Buttons: Move the connection panel's actions into the menus, drop the unused connect Success step, and show Sandbox under Log out for sandbox accounts.
 - PayPal Payment Buttons: Show the PayPal logo and a clearer connect message in the block's placeholder before PayPal is connected.

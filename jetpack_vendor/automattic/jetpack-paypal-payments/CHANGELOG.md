@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Call a PayPal payment a payment button everywhere, and payment links and buttons where both are meant, in the block, the admin page, notices and emails.
 - Move the connection panel's actions into the menus, drop the unused connect Success step, and show Sandbox under Log out for sandbox accounts.
 - Show the PayPal logo and a clearer connect message in the block's placeholder before PayPal is connected.
 - Show the style controls under a saved payment link's details instead of in a Styles tab.
