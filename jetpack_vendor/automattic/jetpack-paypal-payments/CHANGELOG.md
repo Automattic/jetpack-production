@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Show the style controls under a saved payment link's details instead of in a Styles tab.
 - Update package dependencies.
 
+### Fixed
+- Keep the fields of a payment link that the block does not edit when the block is saved.
+
 ## [0.12.2] - 2026-10-14
 ### Changed
 - Gray the preview button in the Create new form until the link is created. [#53572]
