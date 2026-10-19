@@ -251,6 +251,7 @@ __( "Copy error reference", "jetpack-backup-pkg" );
 __( "Retrying", "jetpack-backup-pkg" );
 __( "Try again", "jetpack-backup-pkg" );
 __( "Contact support", "jetpack-backup-pkg" );
+/* translators: %s: time of day, such as 7:00 am. */
 __( "Yesterday, %s", "jetpack-backup-pkg" );
 __( "New", "jetpack-backup-pkg" );
 __( "We couldn't load your site's activity.", "jetpack-backup-pkg" );
