@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.4-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.6.4] - 2026-10-19
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#53004]
 
 ### Fixed
-- Keep the newest bundled copy of a polyfilled script module when several plugins register it, and take widget-primitives from Gutenberg only from 24.1.0.
+- Keep the newest bundled copy of a polyfilled script module when several plugins register it, and take widget-primitives from Gutenberg only from 24.1.0. [#53004]
 
 ## [0.6.3] - 2026-10-14
 ### Changed
@@ -212,7 +209,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Add @wordpress/ui to devDependencies so the boot module bundles it instead of externalizing it as an unregistered wp-ui script handle, which caused a blank page at runtime. [#47727]
 
-[0.6.4-alpha]: https://github.com/Automattic/jetpack-wp-build-polyfills/compare/v0.6.3...v0.6.4-alpha
+[0.6.4]: https://github.com/Automattic/jetpack-wp-build-polyfills/compare/v0.6.3...v0.6.4
 [0.6.3]: https://github.com/Automattic/jetpack-wp-build-polyfills/compare/v0.6.2...v0.6.3
 [0.6.2]: https://github.com/Automattic/jetpack-wp-build-polyfills/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/Automattic/jetpack-wp-build-polyfills/compare/v0.6.0...v0.6.1

@@ -449,7 +449,7 @@ class Protect extends Hybrid_Product {
 	/**
 	 * Whether wp-admin has a Protect page, from the standalone plugin or the Protect package's dashboard.
 	 *
-	 * @since 6.11.0-alpha
+	 * @since 6.11.0
 	 *
 	 * @return bool
 	 */
