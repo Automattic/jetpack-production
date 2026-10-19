@@ -109,6 +109,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blogroll Block: Prevent PHP warning when config is incomplete.
+- Jetpack AI: Give the AI Hub's Claude links on self-hosted sites their own redirects, so their destination can change without a plugin update.
 - JSON API: Save the brute force protection allow list sent to the site settings endpoint.
 - Newsletter: Record each dashboard widget view once.
 - Protect: Add the Firewall section to the Protect dashboard, with blocked-request totals, recently blocked requests, manual IP rules, a firewall test and firewall settings.

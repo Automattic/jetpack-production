@@ -363,6 +363,7 @@ __( "MCP documentation", "jetpack" );
 __( "Choose your AI agent", "jetpack" );
 __( "Quick setup", "jetpack" );
 __( "Open the <ClaudeConnector/> page in Claude.", "jetpack" );
+__( "Claude connector", "jetpack" );
 __( "WordPress.com connector", "jetpack" );
 __( "Click \"Connect\" and follow the prompts.", "jetpack" );
 __( "Claude Code uses a different config format with type: \"http\". Use the CLI or copy the configuration below.", "jetpack" );
