@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the Bookings metric of Store performance only on stores running WooCommerce Bookings.
 - Premium Analytics: Show the same search icon in every widget empty state, including the post, email, video and author pages, and reword the empty text of several widgets and the Ads earnings history.
 - Premium Analytics: Show the Top performing products rows before their thumbnails load.
+- Premium Analytics: Show the WooCommerce tab on sites running WooCommerce.
 - Premium Analytics: Show what the values count above Top pages and Latest emails sent, and the unit in the tooltip of an abbreviated value.
 - Premium Analytics: Tell store owners on the WooCommerce tab when the store has no orders yet.
 - Premium Analytics: Thank the reader for their Stats purchase when checkout returns to the dashboard.

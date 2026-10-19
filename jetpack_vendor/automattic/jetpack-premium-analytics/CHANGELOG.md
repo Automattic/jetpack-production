@@ -48,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Removed
 - Dashboard: Remove the feature flag that gated adding and removing widgets, which is now always offered.
+- Dashboard: Remove the store section feature flag; the WooCommerce tab no longer waits for it on a site that opted in.
 - Remove the WooCommerce columns widgets, now built by the WooCommerce Stats package.
 - Remove the WooCommerce report client and the store gating: the WooCommerce Stats package owns them.
 - Remove the WooCommerce Store visitors by location widget, now built by the WooCommerce Stats package.
