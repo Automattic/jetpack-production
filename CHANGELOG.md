@@ -57,6 +57,7 @@ This is an alpha version! The changes listed here are not final.
 - Scan: Point the admin bar threats notice and My Jetpack at the Protect dashboard instead of Jetpack Cloud, drop the external Scan menu item, show the number of threats next to the Protect menu item, and show a red alert icon on the Protect dashboard Scan card when there are threats, when the Protect dashboard is active. The admin bar and the menu item share one threat count, which loads without delaying admin pages.
 - Social: Tighten the spacing between wrapped legend rows in the Overview traffic chart.
 - Stats: Show location map tooltips in Premium Analytics and Podcast stats on the same dark surface, and at the same distance from the cursor, as the other chart tooltips.
+- VideoPress: Add a Channel Details block to channel sites, with the channel's handle, subscribers, videos, playlists, views and start date.
 - VideoPress: Add a page per playlist on channel sites, with All Playlists cards linking to it and a Video Playlist block option to show the playlist being viewed.
 - VideoPress: Let the Latest Videos Playlist block sort, search, filter by length and paginate, and show view counts.
 - VideoPress: Let the Video Playlist block show a playlist published on the site, and let the All Playlists block sort by last update and show each playlist's last update and length.

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a Channel Details block to channel sites, with the channel's handle, subscribers, videos, playlists, views and start date.
 - Channel: Add a page per playlist. The Video Playlist block can show the playlist being viewed, its entries keep the playlist context, and All Playlists cards link to playlist pages and can hide the playlist being viewed.
 - Channel: Add the data layer the channel blocks read: video lists, play and subscriber counts.
 - Latest Videos Playlist: Add sorting, search and length filters, numbered pages, an option to leave out the video being viewed, and view counts with upload dates.
