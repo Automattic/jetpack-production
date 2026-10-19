@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Onboarding: Introduce the WooCommerce tab, with a short version for readers who already went through the onboarding.
 - Show locked periods and an upgrade footer in the date picker when given date limits.
 - Show paid Stats features as locked, with an upgrade link, on plans that do not include them.
+- Widgets: Carry the attributes a widget.json declares through the registry to the dashboard.
 
 ### Changed
 - Chart legends: Name each metric's comparison period, such as "Views (Prev. 30 days)", in both line and bar charts.
