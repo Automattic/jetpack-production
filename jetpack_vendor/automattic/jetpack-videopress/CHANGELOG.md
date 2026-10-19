@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Channel: Only open a channel video page for a video uploaded to this site.
 - Name the Top videos chart after its widget, so screen readers can tell it apart from the other dashboard charts.
+- Prevent new uploads from reusing attachment IDs retained by VideoPress after a site restore.
 - VideoPress: Show failed conversions with delete and re-upload guidance, and retry locked resumable uploads.
 
 ## [0.57.0] - 2026-10-12

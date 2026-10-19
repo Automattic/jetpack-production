@@ -120,6 +120,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Fix low-contrast placeholder chips in the share message help text and the available placeholders list.
 - Traffic settings: Add spacing below the notice pointing to the SEO dashboard.
 - VideoPress: Only open a channel video page for a video uploaded to this site.
+- VideoPress: Prevent new uploads from reusing video attachment IDs after a site restore.
 - VideoPress: Show failed conversions with delete and re-upload guidance, and retry locked resumable uploads.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
