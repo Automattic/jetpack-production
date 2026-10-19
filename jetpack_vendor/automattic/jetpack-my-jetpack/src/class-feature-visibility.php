@@ -21,7 +21,7 @@ class Feature_Visibility {
 	/**
 	 * Modules offered only to sites already running them.
 	 *
-	 * @since 6.11.0-alpha
+	 * @since 6.11.0
 	 * @return string[] Module slugs.
 	 */
 	public static function get_deprecated_modules() {

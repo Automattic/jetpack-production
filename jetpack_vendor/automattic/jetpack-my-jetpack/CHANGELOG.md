@@ -5,29 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.11.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [6.11.0] - 2026-10-19
 ### Added
-- Add a feature flag for the shared header's global controls.
-- Add the shared header's connection control, behind a feature flag.
-- Features: Show unavailable modules with their reasons and add an available-only filter.
-- Onboarding: Add a full-screen setup wizard behind a feature flag, off by default. It connects the site, asks what the site is for, and records that setup was finished or skipped.
+- Add a feature flag for the shared header's global controls. [#53631]
+- Add the shared header's connection control, behind a feature flag. [#53655]
+- Features: Show unavailable modules with their reasons and add an available-only filter. [#53308]
+- Onboarding: Add a full-screen setup wizard behind a feature flag, off by default. It connects the site, asks what the site is for, and records that setup was finished or skipped. [#52765]
 
 ### Changed
-- Expiring plan notice: Show WordPress.com's own notice for its plans instead of the generated one.
-- Scan: Open the Protect page in WP Admin instead of Jetpack Cloud when the site has one, and leave the threats alert out of the My Jetpack menu count when the Protect menu item shows the number of threats.
-- Update package dependencies.
+- Expiring plan notice: Show WordPress.com's own notice for its plans instead of the generated one. [#53711]
+- Scan: Open the Protect page in WP Admin instead of Jetpack Cloud when the site has one, and leave the threats alert out of the My Jetpack menu count when the Protect menu item shows the number of threats. [#53566]
+- Update package dependencies. [#53004]
+- Update package dependencies. [#53806]
 
 ### Removed
-- Remove the `jetpack_my_jetpack_overview_v1` filter; the `my-jetpack-overview-v1` feature flag now turns on Overview v1, which is still in development.
+- Remove the `jetpack_my_jetpack_overview_v1` filter; the `my-jetpack-overview-v1` feature flag now turns on Overview v1, which is still in development. [#53781]
 
 ### Fixed
-- Connection: Make the connection screen's Connect button and footer links reachable on shorter screens.
-- Features: Hide the legacy Custom Content Types module.
-- Onboarding: Hide other plugins' notices while the setup screen is open, and stop the full-screen layout breaking when another plugin adds an admin body class first.
-- Update the Post List activation message to describe what the feature does.
+- Connection: Make the connection screen's Connect button and footer links reachable on shorter screens. [#53402]
+- Features: Hide the legacy Custom Content Types module. [#53402]
+- Onboarding: Hide other plugins' notices while the setup screen is open, and stop the full-screen layout breaking when another plugin adds an admin body class first. [#52765]
+- Update the Post List activation message to describe what the feature does. [#52921]
 
 ## [6.10.0] - 2026-10-14
 ### Added
@@ -3089,7 +3087,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.11.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.10.0...6.11.0-alpha
+[6.11.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.10.0...6.11.0
 [6.10.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.9.1...6.10.0
 [6.9.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.9.0...6.9.1
 [6.9.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.8.0...6.9.0

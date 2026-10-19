@@ -18,7 +18,7 @@ class Static_Files {
 	/**
 	 * Check whether a static file takes precedence over WordPress-generated output.
 	 *
-	 * @since 0.10.0-alpha
+	 * @since 0.10.0
 	 * @param string $filename Static filename relative to the site's root.
 	 * @return bool Whether the file exists.
 	 */
