@@ -350,6 +350,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_4_a_4
         'Automattic\\Jetpack\\Plugin\\Jetpack_Script_Data' => __DIR__ . '/../..' . '/src/class-jetpack-script-data.php',
         'Automattic\\Jetpack\\Plugin\\Theme_Styles_Sync' => __DIR__ . '/../..' . '/src/class-theme-styles-sync.php',
         'Automattic\\Jetpack\\Plugin\\Tracking' => __DIR__ . '/../..' . '/src/class-tracking.php',
+        'Automattic\\Jetpack\\Plugin\\Unavailable_Blocks' => __DIR__ . '/../..' . '/src/class-unavailable-blocks.php',
         'Automattic\\Jetpack\\Plugins_Installer' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-plugins-installer/src/class-plugins-installer.php',
         'Automattic\\Jetpack\\Podcast\\Admin_Page' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-podcast/src/class-admin-page.php',
         'Automattic\\Jetpack\\Podcast\\Create_AI_Podcast_Page' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-podcast/src/class-create-ai-podcast-page.php',

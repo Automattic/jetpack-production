@@ -19,6 +19,7 @@
 		'wp-core-data',
 		'wp-data',
 		'wp-date',
+		'wp-dom',
 		'wp-dom-ready',
 		'wp-edit-post',
 		'wp-editor',
@@ -41,5 +42,5 @@
 		'wp-viewport',
 		'wp-wordcount'
 	),
-	'version' => 'a762141ea0122683c136'
+	'version' => '99e50765c5c059571fa0'
 );
