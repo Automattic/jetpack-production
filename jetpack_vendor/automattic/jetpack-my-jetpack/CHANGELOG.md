@@ -20,6 +20,9 @@ This is an alpha version! The changes listed here are not final.
 - Scan: Open the Protect page in WP Admin instead of Jetpack Cloud when the site has one, and leave the threats alert out of the My Jetpack menu count when the Protect menu item shows the number of threats.
 - Update package dependencies.
 
+### Removed
+- Remove the `jetpack_my_jetpack_overview_v1` filter; the `my-jetpack-overview-v1` feature flag now turns on Overview v1, which is still in development.
+
 ### Fixed
 - Connection: Make the connection screen's Connect button and footer links reachable on shorter screens.
 - Features: Hide the legacy Custom Content Types module.
