@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - AI: Send the editor's and Jetpack Settings' AI links to the Jetpack AI Hub where it is available, and to jetpack.com for users who cannot manage the site.
+- Backup: Switch to the redesigned dashboard, where you can browse each backup's files, restore or download a backup, and change when backups run and how long they are kept.
 - Comments: Replace the Verbum comment form with Jetpack Comments and remove the Color scheme setting.
 - Connection: Skip site registration in offline mode, and stop retrying it on every page load after an error that retrying cannot fix.
 - Connection: Transfer connection ownership to another administrator without leaving your site.

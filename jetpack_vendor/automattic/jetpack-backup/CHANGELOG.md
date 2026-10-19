@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.1.4-alpha] - unreleased
+## [5.2.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Show the redesigned dashboard by default. Return false from the `rsm_jetpack_ui_modernization_backup` filter to keep the legacy dashboard.
 - Update package dependencies.
 
 ## [5.1.3] - 2026-10-12
@@ -1275,7 +1276,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[5.1.4-alpha]: https://github.com/Automattic/jetpack-backup/compare/v5.1.3...v5.1.4-alpha
+[5.2.0-alpha]: https://github.com/Automattic/jetpack-backup/compare/v5.1.3...v5.2.0-alpha
 [5.1.3]: https://github.com/Automattic/jetpack-backup/compare/v5.1.2...v5.1.3
 [5.1.2]: https://github.com/Automattic/jetpack-backup/compare/v5.1.1...v5.1.2
 [5.1.1]: https://github.com/Automattic/jetpack-backup/compare/v5.1.0...v5.1.1
