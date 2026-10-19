@@ -80,6 +80,7 @@ __( "By years", "jetpack-premium-analytics-pkg" );
 __( "Chart interval", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the active chart interval, e.g. "By days". */
 __( "Chart interval: %s", "jetpack-premium-analytics-pkg" );
+__( "Upgrade", "jetpack-premium-analytics-pkg" );
 __( "From", "jetpack-premium-analytics-pkg" );
 __( "To", "jetpack-premium-analytics-pkg" );
 __( "Cancel", "jetpack-premium-analytics-pkg" );

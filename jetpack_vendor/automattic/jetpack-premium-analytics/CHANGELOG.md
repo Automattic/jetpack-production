@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add All time to the report date menu, covering everything since the site's stats began.
+- Add the date limits each Stats plan sets, for the dashboard to apply.
 - Dashboard: Accept a chart title on the Columns, Donut, Funnel, Leaderboard, Locations and MetricTabsChart widget components through the SDK; the widget contract is 1.13.0.
 - Dashboard: add the Columns widget kind, which the revenue by customer type, sales by device, total returns and sales by coupon widgets draw with.
 - Dashboard: add the Locations widget kind, which Visitors by location draws with.
@@ -24,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Offer a Create post action in empty Traffic and Popular post widgets when the site has no published posts.
 - Offer a URL builder when the selected UTM report has no visits.
 - Onboarding: Introduce the WooCommerce tab, with a short version for readers who already went through the onboarding.
+- Show locked periods and an upgrade footer in the date picker when given date limits.
 - Show paid Stats features as locked, with an upgrade link, on plans that do not include them.
 
 ### Changed
