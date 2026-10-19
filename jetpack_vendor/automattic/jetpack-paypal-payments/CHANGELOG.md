@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Admin: List the posts and pages using a payment button on its detail view, drafts included, with edit and view links.
+
 ### Changed
 - Call a PayPal payment a payment button everywhere, and payment links and buttons where both are meant, in the block, the admin page, notices and emails.
 - Move the connection panel's actions into the menus, drop the unused connect Success step, and show Sandbox under Log out for sandbox accounts.

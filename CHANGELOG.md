@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Show unavailable features with their reasons and add an Available filter.
 - PayPal Payment Buttons: Call a PayPal payment a payment button everywhere, and payment links and buttons where both are meant. The admin page is now PayPal Payment Buttons.
 - PayPal Payment Buttons: Gray the preview button in the Create new form until the link is created.
+- PayPal Payment Buttons: List the posts and pages using a payment button on its admin detail view, drafts included, with edit and view links.
 - PayPal Payment Buttons: Move the connection panel's actions into the menus, drop the unused connect Success step, and show Sandbox under Log out for sandbox accounts.
 - PayPal Payment Buttons: Show the PayPal logo and a clearer connect message in the block's placeholder before PayPal is connected.
 - PayPal Payment Buttons: Show the style controls under a saved payment link's details instead of in a Styles tab.
