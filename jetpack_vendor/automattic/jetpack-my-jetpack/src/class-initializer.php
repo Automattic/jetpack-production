@@ -47,7 +47,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '6.11.1-alpha';
+	const PACKAGE_VERSION = '6.12.0-alpha';
 
 	/**
 	 * Feature flag that swaps the single-screen onboarding takeover for the setup wizard.
@@ -978,6 +978,7 @@ class Initializer {
 				'isJetpackPluginActive'  => class_exists( 'Jetpack' ),
 				'latestBoostSpeedScores' => $latest_score,
 				'seoOptIn'               => self::get_seo_opt_in_state(),
+				'protectPageModuleUrls'  => (object) Products\Protect::get_protect_page_module_urls(),
 				'partnerCoupon'          => self::get_partner_coupon_screen(),
 			)
 		);

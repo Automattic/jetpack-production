@@ -1005,7 +1005,7 @@ abstract class Product {
 	/**
 	 * Get the Jetpack module that switches the product on, if any.
 	 *
-	 * @since 6.11.1-alpha
+	 * @since 6.12.0-alpha
 	 *
 	 * @return ?string
 	 */
@@ -1055,7 +1055,7 @@ abstract class Product {
 	/**
 	 * Whether activating the product installs and activates its standalone plugin, rather than relying on the Jetpack plugin.
 	 *
-	 * @since 6.11.1-alpha
+	 * @since 6.12.0-alpha
 	 *
 	 * @return bool
 	 */

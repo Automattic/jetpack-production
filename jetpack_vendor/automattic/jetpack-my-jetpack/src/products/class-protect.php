@@ -123,7 +123,7 @@ class Protect extends Hybrid_Product {
 	 *
 	 * Not with the standalone plugin active: the page module would take over that plugin's dashboard (see JETPACK-3062).
 	 *
-	 * @since 6.11.1-alpha
+	 * @since 6.12.0-alpha
 	 *
 	 * @return string
 	 */
@@ -137,7 +137,7 @@ class Protect extends Hybrid_Product {
 	/**
 	 * Leave the standalone plugin alone where the Jetpack plugin already delivers the Protect page.
 	 *
-	 * @since 6.11.1-alpha
+	 * @since 6.12.0-alpha
 	 *
 	 * @return bool
 	 */
@@ -150,7 +150,7 @@ class Protect extends Hybrid_Product {
 	 *
 	 * Not Modules::is_module(): it passes any slug.
 	 *
-	 * @since 6.11.1-alpha
+	 * @since 6.12.0-alpha
 	 *
 	 * @return bool
 	 */
@@ -490,8 +490,37 @@ class Protect extends Hybrid_Product {
 	public static function get_post_checkout_urls_by_feature() {
 		return array(
 			self::SCAN_FEATURE_SLUG     => self::get_post_checkout_url(),
-			self::FIREWALL_FEATURE_SLUG => admin_url( 'admin.php?page=jetpack-protect#/firewall' ),
+			self::FIREWALL_FEATURE_SLUG => self::get_firewall_settings_url(),
 		);
+	}
+
+	/**
+	 * Where each Jetpack security module's settings live while the Protect package's dashboard is the Protect page.
+	 *
+	 * Screens that would offer one of these settings link there instead.
+	 *
+	 * @since 6.12.0-alpha
+	 *
+	 * @return array<string, string> Settings URLs keyed by module slug; empty without the dashboard.
+	 */
+	public static function get_protect_page_module_urls() {
+		// method_exists, not class_exists: an older bundled Protect package can ship the class without it.
+		$dashboard = 'Automattic\Jetpack\Protect\Dashboard';
+		// @phan-suppress-next-line PhanUndeclaredClassReference -- optional Protect package, guarded by method_exists.
+		if ( ! did_action( 'jetpack_protect_dashboard_initialized' ) || ! method_exists( $dashboard, 'get_module_settings_urls' ) ) {
+			return array();
+		}
+
+		return (array) $dashboard::get_module_settings_urls();
+	}
+
+	/**
+	 * The firewall's settings: the Protect page's Firewall card, or the standalone plugin's Firewall screen.
+	 *
+	 * @return string
+	 */
+	private static function get_firewall_settings_url() {
+		return self::get_protect_page_module_urls()['waf'] ?? admin_url( 'admin.php?page=jetpack-protect#/firewall' );
 	}
 
 	/**
@@ -548,7 +577,7 @@ class Protect extends Hybrid_Product {
 	public static function get_manage_urls_by_feature() {
 		return array(
 			self::SCAN_FEATURE_SLUG     => self::get_manage_url(),
-			self::FIREWALL_FEATURE_SLUG => admin_url( 'admin.php?page=jetpack-protect#/firewall' ),
+			self::FIREWALL_FEATURE_SLUG => self::get_firewall_settings_url(),
 		);
 	}
 

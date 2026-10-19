@@ -447,10 +447,11 @@ __( "Site speed performance:", "jetpack-my-jetpack" );
 __( "Boost your site", "jetpack-my-jetpack" );
 /* translators: %s is the name of the feature or stat the popover explains, e.g. "Auto-Firewall". */
 __( "More about %s", "jetpack-my-jetpack" );
+__( "Protect settings", "jetpack-my-jetpack" );
 __( "Brute Force Protection: Active", "jetpack-my-jetpack" );
 __( "Brute Force Protection is actively blocking malicious login attempts. The number of blocked login attempts will display here soon!", "jetpack-my-jetpack" );
 __( "Brute Force Protection: Inactive", "jetpack-my-jetpack" );
-/* translators: %s is the location/page where the settings are located. Either "firewall settings" or "Jetpack settings". */
+/* translators: %s is the location/page where the settings are located: "Protect settings", "firewall settings" or "Jetpack settings". */
 __( "Brute Force Protection is disabled and not actively blocking malicious login attempts. Go to <a>%s</a> to activate it.", "jetpack-my-jetpack" );
 __( "Brute Force Protection is disabled and not actively blocking malicious login attempts.", "jetpack-my-jetpack" );
 __( "For Brute Force Protection, activate the Jetpack or Protect plugin and enable it in settings.", "jetpack-my-jetpack" );
@@ -691,6 +692,10 @@ __( "Plugin installs are turned off on this site. Ask your host or site administ
 __( "Your account can’t install plugins. Ask a site administrator to install %s.", "jetpack-my-jetpack" );
 __( "Installing…", "jetpack-my-jetpack" );
 __( "Activating…", "jetpack-my-jetpack" );
+/* translators: %s is the feature name. "Protect" is a product name. */
+__( "Manage %s in Protect", "jetpack-my-jetpack" );
+/* translators: "Protect" is a product name. */
+__( "Manage in Protect", "jetpack-my-jetpack" );
 __( "Open", "jetpack-my-jetpack" );
 __( "Activate Jetpack", "jetpack-my-jetpack" );
 __( "Install Jetpack", "jetpack-my-jetpack" );
