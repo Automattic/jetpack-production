@@ -530,7 +530,56 @@ __( "Here are the tools that we think will help you reach your website goals:", 
 __( "Recommendations menu", "jetpack-my-jetpack" );
 __( "Previous", "jetpack-my-jetpack" );
 __( "Next", "jetpack-my-jetpack" );
+__( "Connection status unavailable", "jetpack-my-jetpack" );
+__( "Offline mode", "jetpack-my-jetpack" );
+__( "Jetpack is in offline mode, so features that need WordPress.com are paused.", "jetpack-my-jetpack" );
+__( "Safe Mode", "jetpack-my-jetpack" );
+__( "This site appears to be a copy of another Jetpack site, so Jetpack is in Safe Mode and some features are paused.", "jetpack-my-jetpack" );
+__( "Site not connected", "jetpack-my-jetpack" );
+__( "A site admin will need to connect this site to Jetpack.", "jetpack-my-jetpack" );
+__( "Connect your site with one click.", "jetpack-my-jetpack" );
+__( "Site and account connected", "jetpack-my-jetpack" );
+__( "Everything looks good.", "jetpack-my-jetpack" );
+__( "Site connected", "jetpack-my-jetpack" );
+__( "A site admin will need to connect their account before you can connect yours.", "jetpack-my-jetpack" );
+__( "Connect your account to unlock all the features.", "jetpack-my-jetpack" );
+__( "We noticed a possible issue with your account connection that might lead to connection issues.", "jetpack-my-jetpack" );
+/* translators: 1 is user name, 2 is email address */
+__( "Connected as owner: %1$s (%2$s)", "jetpack-my-jetpack" );
+__( "User connected (Owner).", "jetpack-my-jetpack" );
+/* translators: 1 is user name, 2 is email address */
+__( "Connected as %1$s (%2$s)", "jetpack-my-jetpack" );
+__( "User connected.", "jetpack-my-jetpack" );
+/* translators: %s: the username of the Jetpack connection owner */
+__( "Also connected: %s (Owner).", "jetpack-my-jetpack" );
+/* translators: %1$s is a product name, %2$s is the date the product was gifted. */
+__( "%1$s was gifted on %2$s. It gives you access to a lifetime subscription of Jetpack VaultPress Backup and Jetpack Scan.", "jetpack-my-jetpack" );
+/* translators: %1$s is the formatted date to display, i.e.- November 24th, 2024 */
+__( "Expiring soon on %1$s", "jetpack-my-jetpack" );
+/* translators: %1$s is the formatted date to display, i.e.- November 24th, 2024 */
+__( "Expired on %1$s", "jetpack-my-jetpack" );
+/* translators: %1$s is the name of the hosting partner. i.e.- Bluehost, InMotion, Pressable, Jurassic Ninja, etc.. */
+__( "Managed by: %1$s", "jetpack-my-jetpack" );
+/* translators: %1$s is the formatted date to display, i.e.- November 24th, 2024 */
+__( "Expires on %1$s", "jetpack-my-jetpack" );
+__( "Renew subscription", "jetpack-my-jetpack" );
+__( "Resume subscription", "jetpack-my-jetpack" );
+__( "Never Expires", "jetpack-my-jetpack" );
+_n( "Plan", "Plans", 1, "jetpack-my-jetpack" );
+_n( "Manage your plan", "Manage your plans", 1, "jetpack-my-jetpack" );
+__( "Purchase a plan", "jetpack-my-jetpack" );
+_x( "Activate a license", "Activate a license button text", "jetpack-my-jetpack" );
+_x( "Activate a license (requires a user connection)", "Activate a license button text", "jetpack-my-jetpack" );
+__( "View included features", "jetpack-my-jetpack" );
+__( "Jetpack Essentials", "jetpack-my-jetpack" );
+_n( "Your plan", "Your plans", 1, "jetpack-my-jetpack" );
+__( "Connect my account", "jetpack-my-jetpack" );
+__( "Connect site", "jetpack-my-jetpack" );
+__( "Connected", "jetpack-my-jetpack" );
+/* translators: %s is the connection state, e.g. "Site and account connected". */
+__( "Connection: %s", "jetpack-my-jetpack" );
 __( "Connection", "jetpack-my-jetpack" );
+__( "Manage connection", "jetpack-my-jetpack" );
 /* translators: %d is how many features are selected. */
 _n( "%d selected", "%d selected", 1, "jetpack-my-jetpack" );
 __( "Plugins can only be deactivated together while the Jetpack plugin is active.", "jetpack-my-jetpack" );
@@ -799,50 +848,6 @@ __( "Are you an agency or freelancer?", "jetpack-my-jetpack" );
 __( "Automattic for Agencies is the ultimate partnership to access agency pricing, referral earnings, partner badges, and powerful tooling for agencies using WordPress.com, Pressable, WooCommerce, Jetpack, and more. Joining is free.", "jetpack-my-jetpack" );
 __( "Sign up now", "jetpack-my-jetpack" );
 __( "Dismiss the Automattic for Agencies banner", "jetpack-my-jetpack" );
-__( "Connection status unavailable", "jetpack-my-jetpack" );
-__( "Offline mode", "jetpack-my-jetpack" );
-__( "Jetpack is in offline mode, so features that need WordPress.com are paused.", "jetpack-my-jetpack" );
-__( "Safe Mode", "jetpack-my-jetpack" );
-__( "This site appears to be a copy of another Jetpack site, so Jetpack is in Safe Mode and some features are paused.", "jetpack-my-jetpack" );
-__( "Site not connected", "jetpack-my-jetpack" );
-__( "A site admin will need to connect this site to Jetpack.", "jetpack-my-jetpack" );
-__( "Connect your site with one click.", "jetpack-my-jetpack" );
-__( "Site and account connected", "jetpack-my-jetpack" );
-__( "Everything looks good.", "jetpack-my-jetpack" );
-__( "Site connected", "jetpack-my-jetpack" );
-__( "A site admin will need to connect their account before you can connect yours.", "jetpack-my-jetpack" );
-__( "Connect your account to unlock all the features.", "jetpack-my-jetpack" );
-__( "We noticed a possible issue with your account connection that might lead to connection issues.", "jetpack-my-jetpack" );
-/* translators: 1 is user name, 2 is email address */
-__( "Connected as owner: %1$s (%2$s)", "jetpack-my-jetpack" );
-__( "User connected (Owner).", "jetpack-my-jetpack" );
-/* translators: 1 is user name, 2 is email address */
-__( "Connected as %1$s (%2$s)", "jetpack-my-jetpack" );
-__( "User connected.", "jetpack-my-jetpack" );
-/* translators: %s: the username of the Jetpack connection owner */
-__( "Also connected: %s (Owner).", "jetpack-my-jetpack" );
-__( "Manage connection", "jetpack-my-jetpack" );
-__( "Connect my account", "jetpack-my-jetpack" );
-/* translators: %1$s is a product name, %2$s is the date the product was gifted. */
-__( "%1$s was gifted on %2$s. It gives you access to a lifetime subscription of Jetpack VaultPress Backup and Jetpack Scan.", "jetpack-my-jetpack" );
-/* translators: %1$s is the formatted date to display, i.e.- November 24th, 2024 */
-__( "Expiring soon on %1$s", "jetpack-my-jetpack" );
-/* translators: %1$s is the formatted date to display, i.e.- November 24th, 2024 */
-__( "Expired on %1$s", "jetpack-my-jetpack" );
-/* translators: %1$s is the name of the hosting partner. i.e.- Bluehost, InMotion, Pressable, Jurassic Ninja, etc.. */
-__( "Managed by: %1$s", "jetpack-my-jetpack" );
-/* translators: %1$s is the formatted date to display, i.e.- November 24th, 2024 */
-__( "Expires on %1$s", "jetpack-my-jetpack" );
-__( "Renew subscription", "jetpack-my-jetpack" );
-__( "Resume subscription", "jetpack-my-jetpack" );
-__( "Never Expires", "jetpack-my-jetpack" );
-_n( "Plan", "Plans", 1, "jetpack-my-jetpack" );
-_n( "Manage your plan", "Manage your plans", 1, "jetpack-my-jetpack" );
-__( "Purchase a plan", "jetpack-my-jetpack" );
-_x( "Activate a license", "Activate a license button text", "jetpack-my-jetpack" );
-_x( "Activate a license (requires a user connection)", "Activate a license button text", "jetpack-my-jetpack" );
-__( "View included features", "jetpack-my-jetpack" );
-__( "Jetpack Essentials", "jetpack-my-jetpack" );
 __( "Welcome to Jetpack", "jetpack-my-jetpack" );
 __( "Done", "jetpack-my-jetpack" );
 __( "Simple, yet powerful stats", "jetpack-my-jetpack" );

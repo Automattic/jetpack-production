@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a feature flag for the shared header's global controls.
+- Add the shared header's connection control, behind a feature flag.
 - Features: Show unavailable modules with their reasons and add an available-only filter.
 - Onboarding: Add a full-screen setup wizard behind a feature flag, off by default. It connects the site, asks what the site is for, and records that setup was finished or skipped.
 
