@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Switch to the redesigned dashboard, where you can browse each backup's files, restore or download a backup, and change when backups run and how long they are kept.
 - Block editor: Explain why a Jetpack block is unavailable when Jetpack Blocks or a required feature is turned off, or when Jetpack is not connected.
 - Modules: Link Firewall, Brute force protection, Account protection, Downtime monitoring and WordPress.com login to their card on the Protect page, in place of their switches, while that page owns their settings.
+- VideoPress: Match the card spacing and top margin of the other Jetpack settings screens.
 
 ### Bug fixes
 - AI: Open the new SEO page from the SEO settings link on every site that has it, instead of the Traffic settings.

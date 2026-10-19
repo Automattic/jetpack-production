@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.58.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Settings: Match the card spacing and top margin of the other Jetpack settings screens.
+
 ## [0.58.0] - 2026-10-19
 ### Added
 - Add a Channel Details block to channel sites, with the channel's handle, subscribers, videos, playlists, views and start date. [#53506]
@@ -2362,6 +2369,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created empty package [#24952]
 
+[0.58.1-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.58.0...v0.58.1-alpha
 [0.58.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.57.0...v0.58.0
 [0.57.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.56.0...v0.57.0
 [0.56.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.55.0...v0.56.0
