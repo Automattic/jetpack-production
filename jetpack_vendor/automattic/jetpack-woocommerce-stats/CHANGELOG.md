@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Name each widget chart after its widget, so screen readers can tell the charts on a dashboard apart.
+- Reports: Clear cached reports when the store's first sync finishes, so a newly connected store doesn't show zeros after its data arrives.
 - Show long store performance figures in short form, such as $277K, so they fit their cards.
 - Time series widgets: Hide metric labels that repeat the widget title.
 - Widgets: Show the empty state in the report charts when the period and its comparison are all zeros, instead of a flat line at zero.

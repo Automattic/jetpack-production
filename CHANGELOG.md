@@ -95,6 +95,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the author's name in the author page breadcrumb.
 - Premium Analytics: Show the empty state in the WooCommerce report charts when the period and its comparison have no activity, instead of a flat line at zero.
 - Premium Analytics: Show the new Stats plan and views limit on the first load after a Jetpack Stats purchase, instead of the old ones for up to five minutes.
+- Premium Analytics: Stop showing zeros in the WooCommerce tab for a few minutes after a store's first sync finishes.
 - Premium Analytics: Stop the WooCommerce tab from reporting a sync error for stores whose data already finished syncing.
 - SEO: Fix saving settings, clearing front-page descriptions, and switching sitemaps off on private sites. Preserve unsaved title structure edits when saving another row.
 - SEO: Keep disabled GEO settings off after reloading. Detect static robots.txt and llms.txt files on supported managed hosting. Hide the Site visibility progress badge on private sites.
