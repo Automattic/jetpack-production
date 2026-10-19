@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add the Sharing Buttons and Like blocks before or after the post content in block themes' single post and page templates, when the legacy buttons are off and a site option asks for them. The `jetpack_sharing_likes_template_placement_post_types` filter adds other post types.
+- REST API: Read and save where the Sharing Buttons and Like blocks go in block theme templates, and link to the page template in the Site Editor.
 
 ### Changed
 - Settings: Hide the sharing button toolbar's title with the VisuallyHidden component rather than the global screen-reader-text class.

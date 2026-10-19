@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a Channel Details block to channel sites, with the channel's handle, subscribers, videos, playlists, views and start date.
+- Add an Episode Navigation block.
 - Add a Playlist Details block.
 - Add a Video Details block, and let the VideoPress Video block play the newest upload.
 - Channel: Add a page per playlist. The Video Playlist block can show the playlist being viewed, its entries keep the playlist context, and All Playlists cards link to playlist pages and can hide the playlist being viewed.
