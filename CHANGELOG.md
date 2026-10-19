@@ -9,6 +9,9 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Backup: Switch to the redesigned dashboard, where you can browse each backup's files, restore or download a backup, and change when backups run and how long they are kept.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Settings: Remove the Security tab when the Protect page is on, and send its links and searches there.
+
 ## 16.4-a.3 - 2026-10-19
 ### Enhancements
 - AI: Send the editor's and Jetpack Settings' AI links to the Jetpack AI Hub where it is available, and to jetpack.com for users who cannot manage the site. [#53519]
