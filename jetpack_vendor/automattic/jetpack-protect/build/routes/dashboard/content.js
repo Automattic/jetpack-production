@@ -490,6 +490,13 @@ __( "No issues were found after scanning %1$s and %2$s.", "jetpack-protect-pkg" 
 __( "Next scan will happen automatically on %s.", "jetpack-protect-pkg" );
 __( "Your site is scanned automatically every day.", "jetpack-protect-pkg" );
 __( "Scan again now", "jetpack-protect-pkg" );
+__( "No known vulnerabilities found", "jetpack-protect-pkg" );
+/* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */
+__( "None of your %1$s or %2$s has a known vulnerability. Your files aren’t checked for malware.", "jetpack-protect-pkg" );
+/* translators: %s is a date and time, such as "Sep 30, 9AM". */
+__( "Next check will happen automatically on %s.", "jetpack-protect-pkg" );
+__( "Vulnerabilities are checked automatically every day.", "jetpack-protect-pkg" );
+__( "Check again now", "jetpack-protect-pkg" );
 __( "Scanning…", "jetpack-protect-pkg" );
 __( "Scan progress", "jetpack-protect-pkg" );
 /* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */

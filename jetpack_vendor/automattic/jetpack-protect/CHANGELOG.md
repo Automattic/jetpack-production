@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Protect dashboard: Stop calling a site without a Scan plan safe when no known vulnerabilities are found.
+
 ## [0.2.0] - 2026-10-19
 ### Added
 - Add the Firewall section to the Protect dashboard, with blocked-request totals, recently blocked requests, manual IP rules, a firewall test and firewall settings. [#53193]
@@ -29,4 +36,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial version. [#53298]
 - Protect dashboard: Add a Scan history tab for sites with Jetpack Scan, show threat actions on row hover, and offer to delete unused plugins and themes that have threats. [#53196]
 
+[0.2.1-alpha]: https://github.com/Automattic/jetpack-protect/compare/v0.2.0...v0.2.1-alpha
 [0.2.0]: https://github.com/Automattic/jetpack-protect/compare/v0.1.0...v0.2.0
