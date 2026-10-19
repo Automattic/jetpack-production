@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Protect dashboard: Stop calling a site without a Scan plan safe when no known vulnerabilities are found.
 
+### Fixed
+- Protect dashboard: Show why Scan now failed when WordPress.com declines to start a scan, instead of showing a scan that never runs.
+
 ## [0.2.0] - 2026-10-19
 ### Added
 - Add the Firewall section to the Protect dashboard, with blocked-request totals, recently blocked requests, manual IP rules, a firewall test and firewall settings. [#53193]
