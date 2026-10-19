@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Widgets: Show what the values count above Top pages and Latest emails sent, and the unit in the tooltip of an abbreviated value.
 
 ### Removed
+- Dashboard: Remove the feature flag that gated adding and removing widgets, which is now always offered.
 - Remove the WooCommerce columns widgets, now built by the WooCommerce Stats package.
 - Remove the WooCommerce report client and the store gating: the WooCommerce Stats package owns them.
 - Remove the WooCommerce Store visitors by location widget, now built by the WooCommerce Stats package.

@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Show the style controls under a saved payment link's details instead of in a Styles tab.
 - Premium Analytics: Add All time to the report date menu, covering everything since the site's stats began.
 - Premium Analytics: Add column headers naming the rows and the metric to the Insights lists, Top tags & categories, Email breakdown and Top viewed posts.
+- Premium Analytics: Always offer adding and removing widgets on the dashboard.
 - Premium Analytics: Draw tabbed metric charts in the admin color, with the metric paired in the Traffic summary in a darker shade, instead of a different color per metric.
 - Premium Analytics: Explain what Tags & categories shows when the plan locks it.
 - Premium Analytics: Introduce the WooCommerce tab in the Stats onboarding for store owners.
