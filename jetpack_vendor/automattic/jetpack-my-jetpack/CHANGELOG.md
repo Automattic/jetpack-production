@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.11.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Protect: Keep the Protect card active when Brute force protection is off on sites with the Protect page.
+
 ## [6.11.0] - 2026-10-19
 ### Added
 - Add a feature flag for the shared header's global controls. [#53631]
@@ -3087,6 +3094,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[6.11.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.11.0...6.11.1-alpha
 [6.11.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.10.0...6.11.0
 [6.10.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.9.1...6.10.0
 [6.9.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.9.0...6.9.1

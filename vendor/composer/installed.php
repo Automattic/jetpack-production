@@ -103,7 +103,7 @@
         'automattic/jetpack-backup' => array(
             'pretty_version' => '5.2.0-alpha.1792442889',
             'version' => '5.2.0.0-alpha1792442889',
-            'reference' => 'f73caf39f72ba5fa07645a14c622fd9e032108cf',
+            'reference' => 'cfe83341fa49dce56ea4c41dee316791bf90bc3c',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-backup',
             'aliases' => array(),
@@ -371,9 +371,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-my-jetpack' => array(
-            'pretty_version' => '6.11.0',
-            'version' => '6.11.0.0',
-            'reference' => '81cef6824e95eaaf5965f955d04343566596a8f1',
+            'pretty_version' => '6.11.1-alpha.1792443129',
+            'version' => '6.11.1.0-alpha1792443129',
+            'reference' => '01aac218322843d7b169d56e7a7095c2b21871f8',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-my-jetpack',
             'aliases' => array(),
@@ -526,7 +526,7 @@
         'automattic/jetpack-search' => array(
             'pretty_version' => '8.3.3',
             'version' => '8.3.3.0',
-            'reference' => '0efc863ffbbcedbe370a3f4f359cbdf178ac99bb',
+            'reference' => 'd2ea48479580f9cfc58f1432f5cb163aab6f5375',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-search',
             'aliases' => array(),
@@ -589,7 +589,7 @@
         'automattic/jetpack-videopress' => array(
             'pretty_version' => '0.58.0',
             'version' => '0.58.0.0',
-            'reference' => 'e866115ede4cfa9be79dc84bc93306dc068b2eff',
+            'reference' => '1deb1133a5b1cc03162563416e26fa2131b28715',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-videopress',
             'aliases' => array(),
