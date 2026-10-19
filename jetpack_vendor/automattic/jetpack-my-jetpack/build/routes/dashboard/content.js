@@ -759,6 +759,10 @@ __( "Layout", "jetpack-my-jetpack" );
 _n( "%d feature is now in your menu", "%d features are now in your menu", 1, "jetpack-my-jetpack" );
 /* translators: %s is a feature name, e.g. "Stats". */
 __( "%s is now in your menu", "jetpack-my-jetpack" );
+/* translators: %s is a module tag name from the classic Modules screen, such as "Writing". */
+__( "Tag: %s", "jetpack-my-jetpack" );
+__( "Clear tag", "jetpack-my-jetpack" );
+__( "Classic Modules list", "jetpack-my-jetpack" );
 /* translators: %d is how many features the filter or search matched. */
 _n( "%d feature shown", "%d features shown", 1, "jetpack-my-jetpack" );
 __( "Ask us a question", "jetpack-my-jetpack" );

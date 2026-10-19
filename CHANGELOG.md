@@ -111,6 +111,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Keep disabled GEO settings off after reloading. Detect static robots.txt and llms.txt files on supported managed hosting. Hide the Site visibility progress badge on private sites.
 - SEO: Line up the Enable SEO tools card on the Settings, Content, and GEO tabs with the Overview tab.
 - SEO Tools: Fix the homepage and archive pages being hidden from search engines when their newest post is.
+- Settings: Show the classic Modules list when the REST API rejects authentication.
 - Sharing: Include the post image in the Pinterest button on AMP pages, so Pinterest no longer asks visitors to upload one.
 - Shortcodes: Recognize YouTube live links so livestreams embed and show a thumbnail, including private and unlisted streams.
 - Sitemaps: Fix one URL from the other URLs filter being skipped after every 50.
