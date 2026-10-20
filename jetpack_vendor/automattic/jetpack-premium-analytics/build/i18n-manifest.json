@@ -18,7 +18,6 @@
 		"build/routes/video-detail/route.js",
 		"build/scripts/site-sync/index.js",
 		"build/widgets/all-time-stats/render.js",
-		"build/widgets/all-time-stats/widget.js",
 		"build/widgets/annual-highlights/render.js",
 		"build/widgets/annual-highlights/widget.js",
 		"build/widgets/author-performance/render.js",
