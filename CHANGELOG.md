@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show one upgrade prompt in place of Insights, and of Traffic below the chart, on free WordPress.com sites.
 - Premium Analytics: Show the chart groupings the site's plan locks in the chart interval menu, with an upgrade link.
 - Settings: Match the page header, tabs, and cards of the other Jetpack settings screens.
+- VideoPress: Let channel blocks show authors a call to action while a channel has no videos or playlists.
 - VideoPress: Match the card spacing and top margin of the other Jetpack settings screens.
 
 ### Bug fixes
