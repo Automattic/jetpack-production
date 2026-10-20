@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Hide Stats CSV exports on plans that do not include them, and lock a post's all-time traffic on free plans.
 
+### Fixed
+- Fix post, video and author stats pages that could crash with "Something went wrong" right after opening.
+
 ## [0.13.0] - 2026-10-19
 ### Added
 - Add All time to the report date menu, covering everything since the site's stats began. [#53275]
