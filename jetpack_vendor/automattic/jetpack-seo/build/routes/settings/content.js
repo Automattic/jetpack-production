@@ -198,6 +198,8 @@ __( "Turning this off asks search engines to stop indexing your site — Google 
 __( "Your site is private, so search engines cannot see it at all. Make it public in your site visibility settings to change this.", "jetpack-seo" );
 __( "View sitemap", "jetpack-seo" );
 __( "This setting is managed by your hosting platform and cannot be changed here.", "jetpack-seo" );
+__( "Points search engines to one preferred URL for archive pages, so duplicates aren't indexed separately.", "jetpack-seo" );
+__( "Another SEO plugin is active, so Jetpack won't add canonical URLs to avoid conflicts. Deactivate that plugin to use this setting.", "jetpack-seo" );
 __( "Shown under your site name in search results and social shares. About the first 155 characters display in search, or 120 on mobile.", "jetpack-seo" );
 __( "Unable to load settings.", "jetpack-seo" );
 /* translators: %d: number of characters currently in the front-page description. */
@@ -211,4 +213,3 @@ __( "Allow search engines to index this site", "jetpack-seo" );
 __( "Generate an XML sitemap", "jetpack-seo" );
 __( "Canonical URLs", "jetpack-seo" );
 __( "Add canonical URLs to archive pages", "jetpack-seo" );
-__( "Points search engines to one preferred URL for archive pages, so duplicates aren't indexed separately.", "jetpack-seo" );
