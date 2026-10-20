@@ -30,7 +30,7 @@ return array(
     ),
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
-      'ver' => '5.2.0-alpha1792502969',
+      'ver' => '5.2.0-alpha1792521079',
     ),
     'jetpack-blaze' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-blaze',
@@ -54,7 +54,7 @@ return array(
     ),
     'jetpack-comments' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-comments',
-      'ver' => '0.8.0-alpha1792505148',
+      'ver' => '0.8.0-alpha1792521079',
     ),
     'jetpack-compat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-compat',
@@ -126,7 +126,7 @@ return array(
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '6.12.0',
+      'ver' => '6.12.1-alpha1792521079',
     ),
     'jetpack-newsletter' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-newsletter',
@@ -138,7 +138,7 @@ return array(
     ),
     'jetpack-paypal-payments' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-paypal-payments',
-      'ver' => '0.13.1-alpha1792502969',
+      'ver' => '0.13.1-alpha1792521079',
     ),
     'jetpack-plugins-installer' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-plugins-installer',
@@ -158,7 +158,7 @@ return array(
     ),
     'jetpack-premium-analytics-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-premium-analytics',
-      'ver' => '0.14.0-alpha1792502969',
+      'ver' => '0.14.0-alpha1792521079',
     ),
     'jetpack-protect-models' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-protect-models',
@@ -166,7 +166,7 @@ return array(
     ),
     'jetpack-protect-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-protect',
-      'ver' => '0.3.0-alpha1792509708',
+      'ver' => '0.3.0-alpha1792521079',
     ),
     'jetpack-protect-status' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-protect-status',
@@ -214,7 +214,7 @@ return array(
     ),
     'jetpack-woocommerce-stats-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-woocommerce-stats',
-      'ver' => '0.2.1-alpha1792502969',
+      'ver' => '0.2.1-alpha1792521079',
     ),
     'jetpack-wp-abilities' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-wp-abilities',
