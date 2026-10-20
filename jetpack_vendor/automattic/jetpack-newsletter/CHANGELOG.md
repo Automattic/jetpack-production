@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.18.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Subscribers: Download as CSV exports the subscribers the table shows, using its current filters, search and sort order.
+
 ## [0.18.1] - 2026-10-19
 ### Changed
 - Overview: Title the intro card "Jetpack Newsletter", adding "on WordPress.com" only on WordPress.com sites. [#53600]
@@ -441,6 +448,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Update package dependencies. [#46143]
 
+[0.18.2-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.1...v0.18.2-alpha
 [0.18.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.0...v0.18.1
 [0.18.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.17.3...v0.18.0
 [0.17.3]: https://github.com/Automattic/jetpack-newsletter/compare/v0.17.2...v0.17.3
