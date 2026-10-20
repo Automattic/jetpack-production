@@ -28,7 +28,6 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Animate the shield on the Protect page, with a particle burst when a scan finishes clean.
 - Protect: Make the new Protect page available to turn on from My Jetpack or Jetpack › Modules.
 - Protect: Show requests blocked today and in the last 30 days, and when the automatic firewall rules were last updated, on the Protect dashboard's Firewall card.
-- SEO: Warn when the front-page description runs longer than search results display, and say when it reaches the maximum length.
 - Settings: Match the page header, tabs, and cards of the other Jetpack settings screens.
 - VideoPress: Let channel blocks show authors a call to action while a channel has no videos or playlists.
 - VideoPress: Match the card spacing and top margin of the other Jetpack settings screens.
@@ -39,7 +38,6 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Let paid posts target a single tier or all paid subscribers, with subscriber counts for each.
 - PayPal Payment Buttons: Stop telling editors and authors that PayPal is disconnected when they simply do not manage the connection, and stop offering them a reconnect flow they cannot complete.
 - Premium Analytics: Fix post, video and author stats pages that could crash with "Something went wrong" right after opening.
-- SEO: Explain on the GEO tab that Jetpack AI is turned off when that is why the AI SEO Enhancer cannot generate anything.
 - Sharing Buttons block: Avoid duplicate ids when the block appears more than once on a page.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
