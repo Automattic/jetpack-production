@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Open the Forms dashboard faster by skipping a redirect.
 - Jetpack AI: Use the same cards and spacing on AI Features and MCP and Connectors as the other Jetpack settings screens.
 - Modules: Link Firewall, Brute force protection, Account protection, Downtime monitoring and WordPress.com login to their card on the Protect page, in place of their switches, while that page owns their settings.
+- Premium Analytics: Show one upgrade prompt in place of Insights, and of Traffic below the chart, on free WordPress.com sites.
 - Settings: Match the page header, tabs, and cards of the other Jetpack settings screens.
 - VideoPress: Match the card spacing and top margin of the other Jetpack settings screens.
 
