@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Dashboard: Report which conflicting SEO plugin owns the site's SEO output, via the new `jetpack_seo_conflicting_plugin` filter.
 - Settings: Warn when the front-page description runs longer than search results display, and say when it reaches the maximum length.
 
 ### Fixed
