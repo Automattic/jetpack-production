@@ -220,7 +220,7 @@ class Jetpack_Activity_Log {
 	 * item (connected user + non-multisite). On WordPress.com Simple sites,
 	 * jetpack-mu-wpcom calls this once it has built the Jetpack menu.
 	 *
-	 * @since 0.6.0-alpha Registers the page on WordPress.com Simple sites.
+	 * @since 0.6.0 Registers the page on WordPress.com Simple sites.
 	 *
 	 * @return string|null The resulting page's hook suffix, if registered.
 	 */
@@ -502,7 +502,7 @@ class Jetpack_Activity_Log {
 	/**
 	 * Whether this is a WordPress.com Simple site.
 	 *
-	 * @since 0.6.0-alpha
+	 * @since 0.6.0
 	 *
 	 * @return bool
 	 */

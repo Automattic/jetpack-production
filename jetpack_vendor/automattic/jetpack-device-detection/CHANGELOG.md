@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [4.0.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [4.0.1] - 2026-10-20
+### Changed
+- Internal updates.
 
 ## [4.0.0] - 2026-08-26
 ### Removed
@@ -304,7 +304,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Moving jetpack_is_mobile into a package
 
-[4.0.1-alpha]: https://github.com/Automattic/jetpack-device-detection/compare/v4.0.0...v4.0.1-alpha
+[4.0.1]: https://github.com/Automattic/jetpack-device-detection/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/Automattic/jetpack-device-detection/compare/v3.4.6...v4.0.0
 [3.4.6]: https://github.com/Automattic/jetpack-device-detection/compare/v3.4.5...v3.4.6
 [3.4.5]: https://github.com/Automattic/jetpack-device-detection/compare/v3.4.4...v3.4.5

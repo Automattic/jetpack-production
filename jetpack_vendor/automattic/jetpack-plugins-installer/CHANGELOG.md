@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
+## [0.6.1] - 2026-10-20
+### Changed
+- Internal updates.
 
 ## [0.6.0] - 2026-08-26
 ### Removed
@@ -158,7 +158,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fix method logic
 
-[0.6.1-alpha]: https://github.com/Automattic/jetpack-plugins-installer/compare/v0.6.0...v0.6.1-alpha
+[0.6.1]: https://github.com/Automattic/jetpack-plugins-installer/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/Automattic/jetpack-plugins-installer/compare/v0.5.11...v0.6.0
 [0.5.11]: https://github.com/Automattic/jetpack-plugins-installer/compare/v0.5.10...v0.5.11
 [0.5.10]: https://github.com/Automattic/jetpack-plugins-installer/compare/v0.5.9...v0.5.10

@@ -12,7 +12,7 @@ namespace Automattic\Jetpack\Feature_Flags;
  */
 class Feature_Flags {
 
-	const PACKAGE_VERSION = '0.2.1-alpha';
+	const PACKAGE_VERSION = '0.2.1';
 
 	/**
 	 * Registered feature flags.
