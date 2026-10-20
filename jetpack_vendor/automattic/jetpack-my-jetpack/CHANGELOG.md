@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Onboarding: Size the terms of service line through its Text variant instead of overriding the shared styles.
+
 ## [6.12.0] - 2026-10-20
 ### Added
 - Add catalog-controlled Pro offers and preserve existing plan management. [#53421]
