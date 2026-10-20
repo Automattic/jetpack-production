@@ -10,7 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Limit the Traffic tab's dates and chart grouping to what the site's plan includes, such as the last 7 days on a free plan.
 - Show one upgrade prompt in place of Insights, and of Traffic below the chart, on free WordPress.com sites.
+
+### Changed
+- Hide Stats CSV exports on plans that do not include them, and lock a post's all-time traffic on free plans.
 
 ## [0.13.0] - 2026-10-19
 ### Added

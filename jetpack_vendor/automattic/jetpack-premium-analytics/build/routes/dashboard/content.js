@@ -326,6 +326,8 @@ __( "Use available width", "jetpack-premium-analytics-pkg" );
 __( "Make full width", "jetpack-premium-analytics-pkg" );
 __( "More", "jetpack-premium-analytics-pkg" );
 __( "Widget controls", "jetpack-premium-analytics-pkg" );
+__( "Your plan doesn’t include that period, so this page shows the last 7 days.", "jetpack-premium-analytics-pkg" );
+__( "Your plan doesn’t include that period, so this page shows the last 30 days.", "jetpack-premium-analytics-pkg" );
 __( "Settings", "jetpack-premium-analytics-pkg" );
 __( "Tell us what's better, what's worse, and what you miss about the new Stats.", "jetpack-premium-analytics-pkg" );
 __( "Leave feedback", "jetpack-premium-analytics-pkg" );
