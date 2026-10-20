@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Settings: Space the settings cards 16px apart, matching the other Jetpack settings screens.
 - Subscribers: Download as CSV exports the subscribers the table shows, using its current filters, search and sort order.
 
 ## [0.18.1] - 2026-10-19

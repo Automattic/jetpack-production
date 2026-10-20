@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Recognize Jetpack Pro subscriptions and licenses.
 - My Jetpack: Refresh Pro availability while preserving existing offers.
 - Newsletter: Download as CSV on the Subscribers screen now exports the subscribers you have filtered or searched for, in the order the table shows them.
+- Newsletter: Space the settings cards 16px apart, matching the other Jetpack settings screens.
 - Podcast: Use the same cards, column width, and spacing as the other Jetpack settings screens.
 - Premium Analytics: Hide Stats CSV exports on plans that do not include them, and lock a post's all-time traffic on free plans.
 - Premium Analytics: Keep the reports and post stats pages opened from the Traffic tab within the plan's dates.
