@@ -12,7 +12,10 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Open the Forms dashboard faster by skipping a redirect.
 - Jetpack AI: Use the same cards and spacing on AI Features and MCP and Connectors as the other Jetpack settings screens.
 - Modules: Link Firewall, Brute force protection, Account protection, Downtime monitoring and WordPress.com login to their card on the Protect page, in place of their switches, while that page owns their settings.
+- My Jetpack: Add catalog-controlled Pro offers and preserve existing plan management.
 - My Jetpack: Line up notices with the cards below them, and drop the grey background behind the Features grid and list buttons.
+- My Jetpack: Recognize Jetpack Pro subscriptions and licenses.
+- My Jetpack: Refresh Pro availability while preserving existing offers.
 - Premium Analytics: Hide Stats CSV exports on plans that do not include them, and lock a post's all-time traffic on free plans.
 - Premium Analytics: Keep the reports and post stats pages opened from the Traffic tab within the plan's dates.
 - Premium Analytics: Limit the Traffic tab's dates and chart grouping to what the site's plan includes, such as the last 7 days on a free plan.

@@ -271,6 +271,7 @@ return array(
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Jetpack_Ai' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-jetpack-ai.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Jetpack_Forms' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-jetpack-forms.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Newsletter' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-newsletter.php',
+    'Automattic\\Jetpack\\My_Jetpack\\Products\\Pro' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-pro.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Protect' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-protect.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Related_Posts' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-related-posts.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Scan' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-scan.php',

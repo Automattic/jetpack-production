@@ -16,5 +16,5 @@
 		'wp-polyfill',
 		'wp-primitives'
 	),
-	'version' => '44eac171404f784d189e'
+	'version' => '99efc928d4ab38b4ab6c'
 );

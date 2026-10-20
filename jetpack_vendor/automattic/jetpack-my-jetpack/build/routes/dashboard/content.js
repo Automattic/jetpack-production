@@ -106,6 +106,7 @@ __( "Jetpack Social Basic is active!", "jetpack-my-jetpack" );
 __( "Enjoy unlimited shares with Jetpack Social Basic. Learn how to make the most out of Jetpack Social <a>here</a>.", "jetpack-my-jetpack" );
 __( "Your product is active!", "jetpack-my-jetpack" );
 __( "You're all set!", "jetpack-my-jetpack" );
+__( "Jetpack Pro is active!", "jetpack-my-jetpack" );
 __( "View latest backup", "jetpack-my-jetpack" );
 __( "Configure search", "jetpack-my-jetpack" );
 /* Translators: %s is the user's display name. */
@@ -883,6 +884,30 @@ __( "Welcome to Jetpack %s traveler!", "jetpack-my-jetpack" );
 __( "Set up & redeem %s", "jetpack-my-jetpack" );
 /* translators: %s: Name of a Jetpack product. */
 __( "Redeem your coupon and get started with %s for free the first year!", "jetpack-my-jetpack" );
+__( "Yearly", "jetpack-my-jetpack" );
+__( "Every two years", "jetpack-my-jetpack" );
+__( "Monthly", "jetpack-my-jetpack" );
+/* translators: %s is the monthly price for a product */
+__( "trial for the first month, then $%s /month, billed yearly", "jetpack-my-jetpack" );
+__( "/month, paid every two years", "jetpack-my-jetpack" );
+__( "/month", "jetpack-my-jetpack" );
+/* translators: %s: product name. */
+__( "Install %s", "jetpack-my-jetpack" );
+/* translators: %s: the product name. */
+__( "Get %s", "jetpack-my-jetpack" );
+__( "Manage plan", "jetpack-my-jetpack" );
+__( "Popular upgrade", "jetpack-my-jetpack" );
+__( "Billing term", "jetpack-my-jetpack" );
+__( "This plan change requires assistance from our support team.", "jetpack-my-jetpack" );
+__( "This plan is currently unavailable for purchase.", "jetpack-my-jetpack" );
+/* translators: %s: the total price charged for the billing term. */
+__( "%s billed per term", "jetpack-my-jetpack" );
+/* translators: %s is the plugin name. */
+__( "Due to your server settings, we can't automatically install the plugin for you. Please manually install the %s plugin.", "jetpack-my-jetpack" );
+__( "Get plugin", "jetpack-my-jetpack" );
+/* translators: %s: the call-to-action label. */
+__( "%s or Start for free", "jetpack-my-jetpack" );
+__( "Active on your site", "jetpack-my-jetpack" );
 __( "Start for Free", "jetpack-my-jetpack" );
 /* translators: "Security" here shouldn't be translated as its the name of the bundle */
 __( "Get Security", "jetpack-my-jetpack" );
@@ -1046,20 +1071,6 @@ __( "Built into WordPress editor", "jetpack-my-jetpack" );
 __( "Ad-free and customizable player", "jetpack-my-jetpack" );
 __( "Unlimited users", "jetpack-my-jetpack" );
 __( "Get VideoPress", "jetpack-my-jetpack" );
-/* translators: %s is the monthly price for a product */
-__( "trial for the first month, then $%s /month, billed yearly", "jetpack-my-jetpack" );
-__( "/month", "jetpack-my-jetpack" );
-/* translators: %s: product name. */
-__( "Install %s", "jetpack-my-jetpack" );
-/* translators: %s: the product name. */
-__( "Get %s", "jetpack-my-jetpack" );
-__( "Popular upgrade", "jetpack-my-jetpack" );
-/* translators: %s is the plugin name. */
-__( "Due to your server settings, we can't automatically install the plugin for you. Please manually install the %s plugin.", "jetpack-my-jetpack" );
-__( "Get plugin", "jetpack-my-jetpack" );
-/* translators: %s: the call-to-action label. */
-__( "%s or Start for free", "jetpack-my-jetpack" );
-__( "Active on your site", "jetpack-my-jetpack" );
 __( "Use license key", "jetpack-my-jetpack" );
 _x( "/month", "Price description representing \"per month\" price", "jetpack-my-jetpack" );
 __( "* Limits apply for high request capacity. <link>Learn more about it here</link>.", "jetpack-my-jetpack" );

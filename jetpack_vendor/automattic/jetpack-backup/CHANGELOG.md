@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Recognize Jetpack Pro licenses.
+
 ### Changed
 - Show the redesigned dashboard by default. Return false from the `rsm_jetpack_ui_modernization_backup` filter to keep the legacy dashboard.
 
