@@ -104,4 +104,6 @@ __( "Site visibility", "jetpack-seo" );
 __( "Sitemaps managed by WordPress.com", "jetpack-seo" );
 __( "Manage visibility", "jetpack-seo" );
 __( "Unable to load overview.", "jetpack-seo" );
+/* translators: %s: name of the SEO plugin that controls the site's SEO output, e.g. Yoast SEO. */
+__( "%s is managing your SEO titles and descriptions, so Jetpack’s are turned off.", "jetpack-seo" );
 __( "SEO tools are not enabled on this site. Some cards reflect the underlying WordPress options only.", "jetpack-seo" );
