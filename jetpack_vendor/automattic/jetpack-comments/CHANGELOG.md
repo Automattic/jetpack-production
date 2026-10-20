@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Identity: Describe WordPress.com sign-ins to Akismet the same way on every host.
+- Keep the comment form readable on the Anemone theme with a dark color palette.
 
 ## [0.7.0] - 2026-10-19
 ### Changed
