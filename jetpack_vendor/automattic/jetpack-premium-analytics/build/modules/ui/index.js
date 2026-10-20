@@ -72,6 +72,7 @@ __( "No comparison", "jetpack-premium-analytics-pkg" );
 __( "Compare", "jetpack-premium-analytics-pkg" );
 __( "Compare to", "jetpack-premium-analytics-pkg" );
 _x( "vs", "prefix naming what a report is compared against", "jetpack-premium-analytics-pkg" );
+__( "Upgrade", "jetpack-premium-analytics-pkg" );
 __( "By hours", "jetpack-premium-analytics-pkg" );
 __( "By days", "jetpack-premium-analytics-pkg" );
 __( "By weeks", "jetpack-premium-analytics-pkg" );
@@ -80,7 +81,6 @@ __( "By years", "jetpack-premium-analytics-pkg" );
 __( "Chart interval", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the active chart interval, e.g. "By days". */
 __( "Chart interval: %s", "jetpack-premium-analytics-pkg" );
-__( "Upgrade", "jetpack-premium-analytics-pkg" );
 __( "From", "jetpack-premium-analytics-pkg" );
 __( "To", "jetpack-premium-analytics-pkg" );
 __( "Cancel", "jetpack-premium-analytics-pkg" );

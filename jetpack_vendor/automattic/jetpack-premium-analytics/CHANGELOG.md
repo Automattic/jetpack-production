@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Keep the reports and post stats pages opened from the Traffic tab within the plan's dates.
 - Limit the Traffic tab's dates and chart grouping to what the site's plan includes, such as the last 7 days on a free plan.
 - Show one upgrade prompt in place of Insights, and of Traffic below the chart, on free WordPress.com sites.
+- Show the chart groupings the site's plan locks in the chart interval menu, with an upgrade link.
 - Widgets: let a chart type option name its icon as a `jpa/<name>` reference, the form a widget.json can carry.
 
 ### Changed
