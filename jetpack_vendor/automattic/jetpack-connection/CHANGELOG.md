@@ -5,9 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [9.12.2-alpha] - unreleased
+## [9.13.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add `isInSafeMode` to the connection status and the local `displayName` and `email` to the current user's connection data.
+
+### Changed
+- Connectors: Read the card's shared connection state from the Jetpack Connection store, and link the connection owner to their profile.
 
 ## [9.12.1] - 2026-10-19
 ### Changed
@@ -2172,7 +2178,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.12.2-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.12.1...v9.12.2-alpha
+[9.13.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.12.1...v9.13.0-alpha
 [9.12.1]: https://github.com/Automattic/jetpack-connection/compare/v9.12.0...v9.12.1
 [9.12.0]: https://github.com/Automattic/jetpack-connection/compare/v9.11.0...v9.12.0
 [9.11.0]: https://github.com/Automattic/jetpack-connection/compare/v9.10.0...v9.11.0
