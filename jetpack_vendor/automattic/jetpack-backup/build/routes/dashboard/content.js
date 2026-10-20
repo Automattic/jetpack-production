@@ -18,6 +18,8 @@ __( "Dismiss", "jetpack-backup-pkg" );
 __( "Something went wrong", "jetpack-backup-pkg" );
 __( "The page ran into an unexpected problem. Your backups are unaffected.", "jetpack-backup-pkg" );
 __( "Reload the page", "jetpack-backup-pkg" );
+/* translators: 1: a date, 2: a time of day. */
+_x( "%1$s %2$s", "date and time", "jetpack-backup-pkg" );
 /* translators: Short month and day format, see https://www.php.net/manual/datetime.format.php */
 _x( "M j", "short month and day date format", "jetpack-backup-pkg" );
 /* translators: %s: actor name */

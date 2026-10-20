@@ -95,6 +95,8 @@ __( "you must also select Site database for restored media uploads to appear", "
 /* translators: 1: item name, e.g. "Media uploads". 2: short note about what it covers, e.g. "includes pages and posts". */
 __( "<strong>%1$s</strong> (%2$s)", "jetpack-backup-pkg" );
 __( "Select at least one file to download.", "jetpack-backup-pkg" );
+/* translators: 1: a date, 2: a time of day. */
+_x( "%1$s %2$s", "date and time", "jetpack-backup-pkg" );
 /* translators: %s: the reason WordPress.com gave for the failure. */
 __( "Download failed: %s", "jetpack-backup-pkg" );
 __( "Download failed.", "jetpack-backup-pkg" );

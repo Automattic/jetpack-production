@@ -94,6 +94,8 @@ __( "Media uploads", "jetpack-backup-pkg" );
 __( "you must also select Site database for restored media uploads to appear", "jetpack-backup-pkg" );
 /* translators: 1: item name, e.g. "Media uploads". 2: short note about what it covers, e.g. "includes pages and posts". */
 __( "<strong>%1$s</strong> (%2$s)", "jetpack-backup-pkg" );
+/* translators: 1: a date, 2: a time of day. */
+_x( "%1$s %2$s", "date and time", "jetpack-backup-pkg" );
 __( "Restore failed.", "jetpack-backup-pkg" );
 __( "Your restore didn't start, so nothing on your site has changed.", "jetpack-backup-pkg" );
 __( "We've lost track of this restore. It may still be running — you'll get an email when it finishes.", "jetpack-backup-pkg" );
