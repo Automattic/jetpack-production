@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Features: Link the five security modules to their card on the Protect page, in place of their switches, while that page owns their settings. Point the Protect card's settings links there too.
+- Line up notices with the cards below them, and drop the grey background behind the Features grid and list buttons.
 
 ### Fixed
 - Protect: Keep the Protect card active when Brute force protection is off on sites with the Protect page.
