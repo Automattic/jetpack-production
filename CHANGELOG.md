@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - AI: Open the new SEO page from the SEO settings link on every site that has it, instead of the Traffic settings.
 - Newsletter: Let paid posts target a single tier or all paid subscribers, with subscriber counts for each.
+- PayPal Payment Buttons: Stop telling editors and authors that PayPal is disconnected when they simply do not manage the connection, and stop offering them a reconnect flow they cannot complete.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Abilities: Report whether a filter or the host forces a module on or off in the modules list.
