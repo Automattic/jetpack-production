@@ -17,7 +17,7 @@ return array(
 		'actions'      => null,
 		'attributes'   => null,
 		'has_render'   => true,
-		'has_widget'   => true,
+		'has_widget'   => false,
 		'presentation' => 'framed',
 		'category'     => 'stats',
 		'keywords'     => null,
