@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Limit the Traffic tab's dates and chart grouping to what the site's plan includes, such as the last 7 days on a free plan.
 - Premium Analytics: Show one upgrade prompt in place of Insights, and of Traffic below the chart, on free WordPress.com sites.
 - Premium Analytics: Show the chart groupings the site's plan locks in the chart interval menu, with an upgrade link.
+- Protect: Show requests blocked today and in the last 30 days, and when the automatic firewall rules were last updated, on the Protect dashboard's Firewall card.
 - Settings: Match the page header, tabs, and cards of the other Jetpack settings screens.
 - VideoPress: Let channel blocks show authors a call to action while a channel has no videos or playlists.
 - VideoPress: Match the card spacing and top margin of the other Jetpack settings screens.

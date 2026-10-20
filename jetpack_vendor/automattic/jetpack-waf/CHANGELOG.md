@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Leave days older than 30 out of the 30-day blocked-request count on sites that haven't blocked a request since.
+
 ## [0.30.0] - 2026-10-19
 ### Added
 - Add a one-time test request the firewall blocks unless the IP allow list lets it through, and a reader for recently blocked requests. [#53193]
