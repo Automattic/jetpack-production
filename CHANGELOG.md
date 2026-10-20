@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Let paid posts target a single tier or all paid subscribers, with subscriber counts for each.
 - PayPal Payment Buttons: Stop telling editors and authors that PayPal is disconnected when they simply do not manage the connection, and stop offering them a reconnect flow they cannot complete.
 - Premium Analytics: Fix post, video and author stats pages that could crash with "Something went wrong" right after opening.
+- Sharing Buttons block: Avoid duplicate ids when the block appears more than once on a page.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Abilities: Report whether a filter or the host forces a module on or off in the modules list.
