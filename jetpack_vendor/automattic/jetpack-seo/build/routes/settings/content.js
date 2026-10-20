@@ -201,9 +201,13 @@ __( "This setting is managed by your hosting platform and cannot be changed here
 __( "Points search engines to one preferred URL for archive pages, so duplicates aren't indexed separately.", "jetpack-seo" );
 __( "Another SEO plugin is active, so Jetpack won't add canonical URLs to avoid conflicts. Deactivate that plugin to use this setting.", "jetpack-seo" );
 __( "Shown under your site name in search results and social shares. About the first 155 characters display in search, or 120 on mobile.", "jetpack-seo" );
+__( "Locked while another SEO plugin manages your SEO. Jetpack uses this again once it’s deactivated.", "jetpack-seo" );
 __( "Unable to load settings.", "jetpack-seo" );
 /* translators: %d: number of characters currently in the front-page description. */
 _n( "%d character", "%d characters", 1, "jetpack-seo" );
+/* translators: %s: name of the SEO plugin that controls the site's SEO output, e.g. Yoast SEO. */
+__( "%s is managing your SEO titles and descriptions, so Jetpack’s settings for them are locked while it’s active.", "jetpack-seo" );
+__( "Another SEO plugin is managing your SEO titles and descriptions, so Jetpack’s settings for them are locked while it’s active.", "jetpack-seo" );
 __( "Front-page description", "jetpack-seo" );
 __( "Home page description", "jetpack-seo" );
 /* translators: %s: the character count, e.g. "300 characters". */
