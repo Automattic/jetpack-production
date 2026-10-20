@@ -97,24 +97,26 @@ __( "<strong>%1$s</strong> (%2$s)", "jetpack-backup-pkg" );
 __( "Select at least one file to download.", "jetpack-backup-pkg" );
 /* translators: 1: a date, 2: a time of day. */
 _x( "%1$s %2$s", "date and time", "jetpack-backup-pkg" );
+__( "This download has expired.", "jetpack-backup-pkg" );
 /* translators: %s: the reason WordPress.com gave for the failure. */
 __( "Download failed: %s", "jetpack-backup-pkg" );
 __( "Download failed.", "jetpack-backup-pkg" );
 __( "Lost connection while preparing download.", "jetpack-backup-pkg" );
 __( "This download link isn't valid.", "jetpack-backup-pkg" );
 __( "The address is missing a valid download point. Go back to the overview and choose a backup to download.", "jetpack-backup-pkg" );
+__( "Checking for a download in progress…", "jetpack-backup-pkg" );
 __( "Preparing download…", "jetpack-backup-pkg" );
 __( "Your download is ready", "jetpack-backup-pkg" );
 __( "Download backup", "jetpack-backup-pkg" );
 /* translators: %s: date and time of the backup. */
 __( "Download point: %s", "jetpack-backup-pkg" );
+/* translators: %s: date and time the download link stops working. */
+__( "This expires %s.", "jetpack-backup-pkg" );
+__( "Download file", "jetpack-backup-pkg" );
 __( "Choose the items you wish to include in the download:", "jetpack-backup-pkg" );
 __( "Select at least one item to download.", "jetpack-backup-pkg" );
 __( "Generate download", "jetpack-backup-pkg" );
 __( "Preparing your download", "jetpack-backup-pkg" );
 __( "Reconnecting…", "jetpack-backup-pkg" );
-/* translators: %s: date and time the download link stops working. */
-__( "This expires %s.", "jetpack-backup-pkg" );
-__( "Download file", "jetpack-backup-pkg" );
 __( "Could not prepare the download", "jetpack-backup-pkg" );
 __( "Contact support", "jetpack-backup-pkg" );
