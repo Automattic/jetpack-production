@@ -76,6 +76,8 @@ __( "Answer engines", "jetpack-seo" );
 __( "These crawlers fetch your pages so AI assistants can cite you in their answers. Keep them allowed to stay visible in tools like ChatGPT, Perplexity, and Claude.", "jetpack-seo" );
 __( "Training crawlers", "jetpack-seo" );
 __( "These crawlers use your content to train AI models. Some — like Google Gemini — also power the AI answers shown above search results, so blocking them protects privacy but can cost you that visibility.", "jetpack-seo" );
+__( "AI SEO is turned off for this site, so nothing is generated. Your choice is saved and applies again when AI SEO is turned back on.", "jetpack-seo" );
+__( "Jetpack AI is turned off for this site, so nothing is generated. Your choice is saved and applies again when Jetpack AI is turned back on.", "jetpack-seo" );
 __( "llms.txt", "jetpack-seo" );
 __( "Jetpack can't publish llms.txt on this site: a file at /llms.txt or your hosting setup is already handling that address, so this setting won't take effect. Remove that file (or check with your host) to let Jetpack manage it.", "jetpack-seo" );
 __( "Generate an llms.txt file", "jetpack-seo" );
@@ -83,4 +85,3 @@ __( "To enable, allow search engines to index this site under <link>Settings</li
 __( "View your llms.txt", "jetpack-seo" );
 __( "AI SEO Enhancer", "jetpack-seo" );
 __( "Automatically generate SEO title, SEO description, and image alt text for new posts", "jetpack-seo" );
-__( "AI SEO is turned off for this site, so nothing is generated. Your choice is saved and applies again when AI SEO is turned back on.", "jetpack-seo" );

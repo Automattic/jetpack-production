@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- GEO: Explain that Jetpack AI is turned off when that is why the AI SEO Enhancer cannot generate anything.
+
 ## [0.10.0] - 2026-10-19
 ### Added
 - Dashboard: Record Tracks events for screen views, settings changes, the SEO tools switch and the GEO tab's llms.txt and AI crawler controls, on sites that allow tracking. [#50586]
