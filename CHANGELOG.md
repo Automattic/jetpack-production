@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Abilities: Report whether a filter or the host forces a module on or off in the modules list.
 - Comments: Stop loading the subscribe modal on Atomic sites that use the new comment form, which never opens it.
 - Settings: Remove the Security tab when the Protect page is on, and send its links and searches there.
+- Stats: Load the admin bar views chart independently of the Stats page.
 
 ## 16.4-a.3 - 2026-10-19
 ### Enhancements

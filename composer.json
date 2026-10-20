@@ -62,7 +62,7 @@
 		"automattic/jetpack-seo": "^0.10.1-alpha",
 		"automattic/jetpack-sharing-likes": "^0.4.0",
 		"automattic/jetpack-stats": "^0.23.0",
-		"automattic/jetpack-stats-admin": "^0.39.0",
+		"automattic/jetpack-stats-admin": "^0.39.1-alpha",
 		"automattic/jetpack-status": "^7.1.0",
 		"automattic/jetpack-sync": "^5.4.2",
 		"automattic/jetpack-videopress": "^0.58.1-alpha",
