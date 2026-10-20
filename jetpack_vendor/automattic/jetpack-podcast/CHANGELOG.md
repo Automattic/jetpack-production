@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Settings: Use the same cards, column width, and spacing as the other Jetpack settings screens.
+
 ## [2.2.2] - 2026-10-19
 ### Changed
 - Update package dependencies. [#53004]
