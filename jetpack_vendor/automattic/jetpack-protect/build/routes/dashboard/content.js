@@ -395,6 +395,7 @@ __( "Threats Scan fixes will appear here.", "jetpack-protect-pkg" );
 __( "Threats you ignore will appear here.", "jetpack-protect-pkg" );
 __( "Loading scan history…", "jetpack-protect-pkg" );
 __( "Scan history", "jetpack-protect-pkg" );
+_x( "Breadcrumbs", "aria label", "jetpack-protect-pkg" );
 __( "Low severity", "jetpack-protect-pkg" );
 __( "Critical severity", "jetpack-protect-pkg" );
 __( "High severity", "jetpack-protect-pkg" );
@@ -539,6 +540,24 @@ __( "The firewall couldn’t finish applying your change.", "jetpack-protect-pkg
 __( "Your settings couldn’t be loaded.", "jetpack-protect-pkg" );
 __( "Settings updated.", "jetpack-protect-pkg" );
 __( "Your change couldn’t be saved. Try again.", "jetpack-protect-pkg" );
+__( "Threats from your alert", "jetpack-protect-pkg" );
+/* translators: %s is a threat's id number. */
+__( "Threat #%s", "jetpack-protect-pkg" );
+__( "Nothing from your alert needs fixing", "jetpack-protect-pkg" );
+__( "None of the threats from your alert need your attention.", "jetpack-protect-pkg" );
+__( "Other threats on your site still need attention.", "jetpack-protect-pkg" );
+__( "See them on the Overview.", "jetpack-protect-pkg" );
+/* translators: %d is a number of threats. */
+_n( "Checking the latest status of %d threat…", "Checking the latest status of %d threats…", 1, "jetpack-protect-pkg" );
+__( "Scan hasn’t finished checking your site yet. Reload the page once it has.", "jetpack-protect-pkg" );
+__( "Needs attention", "jetpack-protect-pkg" );
+__( "Scan still finds these. Fix them, or open one to see how.", "jetpack-protect-pkg" );
+__( "These are taken care of. There’s nothing to do.", "jetpack-protect-pkg" );
+__( "Someone chose to ignore these. Unignore one to have Scan report it again.", "jetpack-protect-pkg" );
+__( "No longer detected", "jetpack-protect-pkg" );
+__( "Scan no longer finds these, for example after the plugin or theme was updated or removed.", "jetpack-protect-pkg" );
+__( "Status unavailable", "jetpack-protect-pkg" );
+__( "These couldn’t be checked right now. Reload the page to try again.", "jetpack-protect-pkg" );
 __( "Security tools that keep your site safe and sound, from posts to plugins.", "jetpack-protect-pkg" );
 __( "Overview", "jetpack-protect-pkg" );
 __( "Settings", "jetpack-protect-pkg" );
