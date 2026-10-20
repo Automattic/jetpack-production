@@ -22,14 +22,12 @@
 		"build/widgets/annual-highlights/render.js",
 		"build/widgets/annual-highlights/widget.js",
 		"build/widgets/author-performance/render.js",
-		"build/widgets/author-performance/widget.js",
 		"build/widgets/author-top-posts/render.js",
 		"build/widgets/authors/render.js",
 		"build/widgets/clicks/render.js",
 		"build/widgets/devices/render.js",
 		"build/widgets/email-breakdown/render.js",
 		"build/widgets/email-time-series/render.js",
-		"build/widgets/email-time-series/widget.js",
 		"build/widgets/email-top-row/render.js",
 		"build/widgets/emails/render.js",
 		"build/widgets/emails/widget.js",
@@ -52,7 +50,6 @@
 		"build/widgets/post-likes/render.js",
 		"build/widgets/post-traffic-activity/render.js",
 		"build/widgets/post-views/render.js",
-		"build/widgets/post-views/widget.js",
 		"build/widgets/posting-activity/render.js",
 		"build/widgets/referrers/render.js",
 		"build/widgets/search-terms/render.js",
@@ -76,7 +73,6 @@
 		"build/widgets/utm-insights/widget.js",
 		"build/widgets/video-detail-embeds/render.js",
 		"build/widgets/video-detail-views-performance/render.js",
-		"build/widgets/video-detail-views-performance/widget.js",
 		"build/widgets/views-over-years/render.js"
 	]
 }

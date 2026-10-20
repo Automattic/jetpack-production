@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array('wp-i18n'), 'module_dependencies' => array(array('id' => '@jetpack-premium-analytics/widgets-toolkit', 'import' => 'static')), 'version' => 'c9e646e9edee0e625169');
+<?php return array('dependencies' => array(), 'version' => 'c965500ad2ed122d4b41');

@@ -69,8 +69,6 @@ __( "This data is unavailable right now.", "jetpack-premium-analytics-pkg" );
 __( "This author has too many posts to count their stats here.", "jetpack-premium-analytics-pkg" );
 __( "You don't have access to this data.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
-__( "Line chart", "jetpack-premium-analytics-pkg" );
-__( "Bar chart", "jetpack-premium-analytics-pkg" );
 __( "Clicks", "jetpack-premium-analytics-pkg" );
 __( "Downloads", "jetpack-premium-analytics-pkg" );
 __( "Shares", "jetpack-premium-analytics-pkg" );

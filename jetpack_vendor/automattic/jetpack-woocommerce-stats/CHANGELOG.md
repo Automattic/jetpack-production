@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [0.2.0] - 2026-10-19
 ### Added
 - Add the columns widgets: revenue by customer type, sales by device, total returns and sales by coupon, with the bookings variants of the first two; the store ones are placed on the WooCommerce tab by default. [#53477]
@@ -62,5 +66,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial version.
 
+[0.2.1-alpha]: https://github.com/Automattic/jetpack-woocommerce-stats/compare/v0.2.0...v0.2.1-alpha
 [0.2.0]: https://github.com/Automattic/jetpack-woocommerce-stats/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/Automattic/jetpack-woocommerce-stats/compare/v0.1.0-alpha...v0.1.0
