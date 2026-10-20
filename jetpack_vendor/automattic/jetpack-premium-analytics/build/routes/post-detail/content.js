@@ -437,6 +437,8 @@ __( "Use available width", "jetpack-premium-analytics-pkg" );
 __( "Make full width", "jetpack-premium-analytics-pkg" );
 __( "More", "jetpack-premium-analytics-pkg" );
 __( "Widget controls", "jetpack-premium-analytics-pkg" );
+__( "Your plan doesn’t include that period, so this page shows the last 7 days.", "jetpack-premium-analytics-pkg" );
+__( "Your plan doesn’t include that period, so this page shows the last 30 days.", "jetpack-premium-analytics-pkg" );
 /* translators: %1$s and %2$s: the report range bounds, e.g. "Jul 9, 2026". */
 __( "Performance from %1$s to %2$s", "jetpack-premium-analytics-pkg" );
 __( "Page", "jetpack-premium-analytics-pkg" );

@@ -6,6 +6,18 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+__( "Today", "jetpack-premium-analytics-pkg" );
+__( "Yesterday", "jetpack-premium-analytics-pkg" );
+__( "Last 24 hours", "jetpack-premium-analytics-pkg" );
+__( "Last 7 days", "jetpack-premium-analytics-pkg" );
+__( "Last 30 days", "jetpack-premium-analytics-pkg" );
+__( "Last 90 days", "jetpack-premium-analytics-pkg" );
+__( "Last 365 days", "jetpack-premium-analytics-pkg" );
+__( "Month to date", "jetpack-premium-analytics-pkg" );
+__( "Last month", "jetpack-premium-analytics-pkg" );
+__( "Year to date", "jetpack-premium-analytics-pkg" );
+__( "Last 12 months", "jetpack-premium-analytics-pkg" );
+__( "Last year", "jetpack-premium-analytics-pkg" );
 /* translators: %s: a comparison option, e.g. "Previous 30 days". The suffix says the comparison starts on the same weekday. */
 _x( "%s (match day of week)", "weekday-aligned comparison", "jetpack-premium-analytics-pkg" );
 __( "Previous hour", "jetpack-premium-analytics-pkg" );
@@ -166,3 +178,5 @@ __( "Tags & categories", "jetpack-premium-analytics-pkg" );
 __( "Videos", "jetpack-premium-analytics-pkg" );
 __( "All UTM values", "jetpack-premium-analytics-pkg" );
 __( "Referrers", "jetpack-premium-analytics-pkg" );
+__( "Your plan doesn’t include that period, so this page shows the last 7 days.", "jetpack-premium-analytics-pkg" );
+__( "Your plan doesn’t include that period, so this page shows the last 30 days.", "jetpack-premium-analytics-pkg" );
