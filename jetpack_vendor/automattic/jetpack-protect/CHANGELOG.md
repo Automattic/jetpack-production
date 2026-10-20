@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Dashboard: Show requests blocked today and in the last 30 days, and when the automatic firewall rules were last updated, on the Firewall card.
+- Dashboard: Show whether the firewall runs in standalone mode and how to set it up on the Firewall settings card, and explain firewall file and rules errors in plain words.
 - Protect dashboard: Open the Settings tab at a section's card from a link, and point the Configure links of Jetpack's security modules at their card.
 
 ### Changed

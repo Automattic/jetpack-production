@@ -461,9 +461,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-protect' => array(
-            'pretty_version' => '0.3.0-alpha.1792509680',
-            'version' => '0.3.0.0-alpha1792509680',
-            'reference' => 'b8a656e98d2d413c18a16a76bc766c0a9368b956',
+            'pretty_version' => '0.3.0-alpha.1792509708',
+            'version' => '0.3.0.0-alpha1792509708',
+            'reference' => 'fbd56d20c4e37f1518a012a36a5e7a7f74e692ef',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-protect',
             'aliases' => array(),

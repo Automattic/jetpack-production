@@ -93,6 +93,9 @@ __( "Separate addresses or ranges with commas, spaces or new lines.", "jetpack-p
 __( "Example: %s", "jetpack-protect-pkg" );
 /* translators: %s is an IP address. */
 __( "Add my IP address (%s)", "jetpack-protect-pkg" );
+__( "The firewall runs before WordPress loads, so it inspects every request. Remove the <code>auto_prepend_file</code> PHP directive if you turn the firewall off or uninstall Jetpack.", "jetpack-protect-pkg" );
+__( "Run the firewall before WordPress loads so it can inspect every request. Set the <code>auto_prepend_file</code> PHP directive to <path/>, usually in an .htaccess file or your PHP configuration; your host can help. Remove it again if you turn the firewall off or uninstall Jetpack.", "jetpack-protect-pkg" );
+__( "Standalone mode", "jetpack-protect-pkg" );
 __( "The free version of the firewall does not receive updates to automatic firewall rules.", "jetpack-protect-pkg" );
 __( "The free version of the firewall only allows for use of manual rules.", "jetpack-protect-pkg" );
 __( "The firewall isn’t available on your site’s hosting.", "jetpack-protect-pkg" );
@@ -530,6 +533,9 @@ __( "Your site is checked every day for known vulnerabilities in WordPress, plug
 __( "Manage Scan settings", "jetpack-protect-pkg" );
 __( "There’s nothing to show yet.", "jetpack-protect-pkg" );
 __( "There’s nothing to set up yet.", "jetpack-protect-pkg" );
+__( "The firewall couldn’t update its files on your server.", "jetpack-protect-pkg" );
+__( "The latest automatic firewall rules couldn’t be retrieved.", "jetpack-protect-pkg" );
+__( "The firewall couldn’t finish applying your change.", "jetpack-protect-pkg" );
 __( "Your settings couldn’t be loaded.", "jetpack-protect-pkg" );
 __( "Settings updated.", "jetpack-protect-pkg" );
 __( "Your change couldn’t be saved. Try again.", "jetpack-protect-pkg" );
