@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect dashboard: Open the Settings tab at a section's card from a link, and point the Configure links of Jetpack's security modules at their card.
 
 ### Changed
+- Dashboard: Animate the safe-state shield, with a particle burst when a scan finishes clean.
 - Dashboard: Redesign the Login protection card with toggles for account protection and Secure Sign On.
 - Protect dashboard: Stop calling a site without a Scan plan safe when no known vulnerabilities are found.
 

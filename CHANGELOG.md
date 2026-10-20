@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Limit the Traffic tab's dates and chart grouping to what the site's plan includes, such as the last 7 days on a free plan.
 - Premium Analytics: Show one upgrade prompt in place of Insights, and of Traffic below the chart, on free WordPress.com sites.
 - Premium Analytics: Show the chart groupings the site's plan locks in the chart interval menu, with an upgrade link.
+- Protect: Animate the shield on the Protect page, with a particle burst when a scan finishes clean.
 - Protect: Make the new Protect page available to turn on from My Jetpack or Jetpack › Modules.
 - Protect: Show requests blocked today and in the last 30 days, and when the automatic firewall rules were last updated, on the Protect dashboard's Firewall card.
 - SEO: Warn when the front-page description runs longer than search results display, and say when it reaches the maximum length.
