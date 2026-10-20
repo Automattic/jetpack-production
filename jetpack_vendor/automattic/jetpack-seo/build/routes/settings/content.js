@@ -200,10 +200,12 @@ __( "View sitemap", "jetpack-seo" );
 __( "This setting is managed by your hosting platform and cannot be changed here.", "jetpack-seo" );
 __( "Shown under your site name in search results and social shares. About the first 155 characters display in search, or 120 on mobile.", "jetpack-seo" );
 __( "Unable to load settings.", "jetpack-seo" );
-__( "Front-page description", "jetpack-seo" );
-__( "Home page description", "jetpack-seo" );
 /* translators: %d: number of characters currently in the front-page description. */
 _n( "%d character", "%d characters", 1, "jetpack-seo" );
+__( "Front-page description", "jetpack-seo" );
+__( "Home page description", "jetpack-seo" );
+/* translators: %s: the character count, e.g. "300 characters". */
+__( "%s — Maximum characters reached.", "jetpack-seo" );
 __( "Site visibility", "jetpack-seo" );
 __( "Allow search engines to index this site", "jetpack-seo" );
 __( "Generate an XML sitemap", "jetpack-seo" );

@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Settings: Warn when the front-page description runs longer than search results display, and say when it reaches the maximum length.
+
 ### Fixed
 - GEO: Explain that Jetpack AI is turned off when that is why the AI SEO Enhancer cannot generate anything.
 
