@@ -7,31 +7,31 @@ $baseDir   = dirname($vendorDir);
 
 return array(
 	'3773ef3f09c37da5478d578e32b03a4b' => array(
-		'version' => '5.0.13.0',
+		'version' => '5.0.14.0-alpha1792502969',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-assets/actions.php'
 	),
 	'7372b7fb88a9723cf5b76d456eb0b738' => array(
-		'version' => '9.12.1.0',
+		'version' => '9.12.2.0-alpha1792502969',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-connection/actions.php'
 	),
 	'483ab369492aebf2550e8341e3d031c8' => array(
-		'version' => '4.1.0.0',
+		'version' => '4.1.1.0-alpha1792502969',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-licensing/actions.php'
 	),
 	'd4eb94df91a729802d18373ee8cdc79f' => array(
-		'version' => '5.2.0.0-alpha1792500640',
+		'version' => '5.2.0.0-alpha1792502969',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/actions.php'
 	),
 	'd9927a8ddcd8b3a40fb28c24213827ff' => array(
-		'version' => '0.88.6.0',
+		'version' => '0.88.7.0-alpha1792502969',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/actions.php'
 	),
 	'e6f7f640a6586216432b53e5c9d1b472' => array(
-		'version' => '0.88.6.0',
+		'version' => '0.88.7.0-alpha1792502969',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/utilities.php'
 	),
 	'3d45c7e6a7f0e71849e33afe4b3b3ede' => array(
-		'version' => '0.30.0.0',
+		'version' => '0.30.1.0-alpha1792502969',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/cli.php'
 	),
 );

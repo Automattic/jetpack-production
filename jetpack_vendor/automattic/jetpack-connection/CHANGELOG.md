@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [9.12.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [9.12.1] - 2026-10-19
 ### Changed
 - Connectors: Load the card's dependencies from its asset file instead of reading them from globals. [#53713]
@@ -2168,6 +2172,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[9.12.2-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.12.1...v9.12.2-alpha
 [9.12.1]: https://github.com/Automattic/jetpack-connection/compare/v9.12.0...v9.12.1
 [9.12.0]: https://github.com/Automattic/jetpack-connection/compare/v9.11.0...v9.12.0
 [9.11.0]: https://github.com/Automattic/jetpack-connection/compare/v9.10.0...v9.11.0
