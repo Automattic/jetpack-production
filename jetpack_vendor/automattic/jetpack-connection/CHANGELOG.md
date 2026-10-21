@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Connectors: Use the shared disconnect dialog for site disconnect on the card, and load the Tracks script so its events are recorded.
 - Registration: Report a missing PHP XML extension with its own error code, so the connect screens can name the cause.
 
 ## [9.13.0] - 2026-10-20
