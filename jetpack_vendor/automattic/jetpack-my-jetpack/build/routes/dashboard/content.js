@@ -380,10 +380,19 @@ __( "Some products need a connection to WordPress.com to be able to work.", "jet
 __( "Connect your site", "jetpack-my-jetpack" );
 __( "Missing site connection", "jetpack-my-jetpack" );
 __( "Connecting…", "jetpack-my-jetpack" );
+__( "Overview", "jetpack-my-jetpack" );
+__( "Active", "jetpack-my-jetpack" );
+__( "Inactive", "jetpack-my-jetpack" );
+/* translators: %s is the feature name. */
+__( "Deactivate %s", "jetpack-my-jetpack" );
+/* translators: %s is the feature name. */
+__( "Activate %s", "jetpack-my-jetpack" );
 __( "Enabled by your host or site administrator", "jetpack-my-jetpack" );
 __( "Disabled by your host or site administrator", "jetpack-my-jetpack" );
 __( "Not available on multisite", "jetpack-my-jetpack" );
 __( "Unavailable", "jetpack-my-jetpack" );
+__( "Requires a connected WordPress.com account", "jetpack-my-jetpack" );
+__( "Needs user account", "jetpack-my-jetpack" );
 __( "Install Plugin", "jetpack-my-jetpack" );
 __( "Get plan", "jetpack-my-jetpack" );
 __( "Upgrade", "jetpack-my-jetpack" );
@@ -397,12 +406,9 @@ __( "Purchase", "jetpack-my-jetpack" );
 __( "Start for free", "jetpack-my-jetpack" );
 __( "Free", "jetpack-my-jetpack" );
 __( "/month, billed yearly", "jetpack-my-jetpack" );
-__( "Active", "jetpack-my-jetpack" );
 __( "Expires soon", "jetpack-my-jetpack" );
 __( "Expired plan", "jetpack-my-jetpack" );
-__( "Inactive", "jetpack-my-jetpack" );
 __( "Needs Plugin", "jetpack-my-jetpack" );
-__( "Needs user account", "jetpack-my-jetpack" );
 __( "Needs connection", "jetpack-my-jetpack" );
 __( "Needs plan", "jetpack-my-jetpack" );
 __( "Needs attention", "jetpack-my-jetpack" );
@@ -611,11 +617,6 @@ __( "Legacy Like buttons cannot be customized on block themes.", "jetpack-my-jet
 _x( "Add the Like block to your theme’s template.", "Like block migration instruction", "jetpack-my-jetpack" );
 __( "Switch to the Like block", "jetpack-my-jetpack" );
 __( "Deactivating legacy Like buttons…", "jetpack-my-jetpack" );
-__( "Overview", "jetpack-my-jetpack" );
-/* translators: %s is the feature name. */
-__( "Deactivate %s", "jetpack-my-jetpack" );
-/* translators: %s is the feature name. */
-__( "Activate %s", "jetpack-my-jetpack" );
 __( "Your login page now has rate-limiting and secure authentication safeguards.", "jetpack-my-jetpack" );
 __( "You can now review every event on your site and roll back when something goes wrong.", "jetpack-my-jetpack" );
 __( "You can now generate and edit content, images, and more with Jetpack AI in the editor.", "jetpack-my-jetpack" );
@@ -698,6 +699,8 @@ __( "Manage %s in Protect", "jetpack-my-jetpack" );
 /* translators: "Protect" is a product name. */
 __( "Manage in Protect", "jetpack-my-jetpack" );
 __( "Open", "jetpack-my-jetpack" );
+/* translators: %s is the feature name. */
+__( "Connect account for %s", "jetpack-my-jetpack" );
 __( "Activate Jetpack", "jetpack-my-jetpack" );
 __( "Install Jetpack", "jetpack-my-jetpack" );
 __( "All", "jetpack-my-jetpack" );
@@ -727,10 +730,17 @@ __( "%s in use", "jetpack-my-jetpack" );
 /* translators: %s is a plugin name. Keep the <plugin> tags around it. */
 __( "Installing adds the free <plugin>%s</plugin> plugin and turns it on. You won’t be charged.", "jetpack-my-jetpack" );
 /* translators: %s is a plugin name. Keep the <plugin> tags around it. */
+__( "Installing adds the free <plugin>%s</plugin> plugin and turns it on, then connects your WordPress.com account. You won’t be charged.", "jetpack-my-jetpack" );
+/* translators: %s is a plugin name. Keep the <plugin> tags around it. */
 __( "The <plugin>%s</plugin> plugin is already installed. Activating turns it on.", "jetpack-my-jetpack" );
+/* translators: %s is a plugin name. Keep the <plugin> tags around it. */
+__( "The <plugin>%s</plugin> plugin is already installed. Connect your WordPress.com account, then turn it on here.", "jetpack-my-jetpack" );
 __( "Built into Jetpack, so there is nothing to install. Activating turns it on.", "jetpack-my-jetpack" );
+__( "Built into Jetpack, so there is nothing to install. Connect your WordPress.com account, then turn it on here if it’s still off.", "jetpack-my-jetpack" );
 /* translators: %s is a feature name, such as "Stats". */
 __( "%s is part of the Jetpack plugin. Installing Jetpack turns it on. You won’t be charged.", "jetpack-my-jetpack" );
+/* translators: %s is a feature name, such as "Activity Log". */
+__( "%s is part of the Jetpack plugin. Once Jetpack is on you’ll connect your WordPress.com account, then you can turn it on here if it’s still off. You won’t be charged.", "jetpack-my-jetpack" );
 __( "Support docs", "jetpack-my-jetpack" );
 __( "Included in <plan0 />", "jetpack-my-jetpack" );
 __( "Included in <plan0 /> and <plan1 />", "jetpack-my-jetpack" );

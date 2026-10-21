@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Features: Add the default-off `my-jetpack-account-connect` flag, which shows Needs user account on features that need a WordPress.com account and starts the account connection from their Install or Connect button.
+
 ### Changed
 - Onboarding: Size the terms of service line through its Text variant instead of overriding the shared styles.
 
