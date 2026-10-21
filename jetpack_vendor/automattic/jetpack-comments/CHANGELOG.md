@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Keep the commenter's avatar beside their name in themes that position comment avatars.
 - Keep the comment form's layout intact in themes whose styles resize, hide or pad parts of it.
 - Keep the comment form readable on the Anemone theme with a dark color palette.
+- mountEditor() returns a function that unmounts the editor, so a host can clean up a comment form that closes.
 
 ## [0.7.0] - 2026-10-19
 ### Changed
