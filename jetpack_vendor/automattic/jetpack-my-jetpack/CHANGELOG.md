@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Onboarding: Size the terms of service line through its Text variant instead of overriding the shared styles.
 
 ### Fixed
+- Boost card: Fetch a new speed score when the saved one is incomplete, instead of showing an empty score.
 - Features: Show a plugin as active when a Beta or -dev copy is active beside an installed stable copy, and turn off the active copy when deactivating it.
 - Help: Keep the help cards inside their column on narrow screens.
 
