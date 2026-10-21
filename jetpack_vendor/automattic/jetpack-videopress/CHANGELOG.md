@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: Show why connecting the site failed on the pricing and connect screens.
+- Top videos widget: the title, description and help note declared in widget.json reach the translation catalog.
 
 ## [0.59.0] - 2026-10-20
 ### Added

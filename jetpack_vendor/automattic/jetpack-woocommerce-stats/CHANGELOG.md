@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Widget titles, descriptions, help notes and chart type labels declared in widget.json reach the translation catalog.
+
 ## [0.2.0] - 2026-10-19
 ### Added
 - Add the columns widgets: revenue by customer type, sales by device, total returns and sales by coupon, with the bookings variants of the first two; the store ones are placed on the WooCommerce tab by default. [#53477]

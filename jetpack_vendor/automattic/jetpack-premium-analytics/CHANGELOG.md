@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix post, video and author stats pages that could crash with "Something went wrong" right after opening.
+- Widget titles, descriptions, help notes and settings labels declared in widget.json reach the translation catalog.
 
 ## [0.13.0] - 2026-10-19
 ### Added

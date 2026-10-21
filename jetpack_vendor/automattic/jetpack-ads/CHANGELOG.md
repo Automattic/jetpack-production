@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Widget titles, descriptions, help notes and chart type labels declared in widget.json reach the translation catalog.
+
 ## [0.1.4] - 2026-10-19
 ### Changed
 - Earnings history widget: Say when the first earnings will show up while there are none yet. [#53520]
