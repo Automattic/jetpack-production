@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Space the settings cards 16px apart, matching the other Jetpack settings screens.
 - Subscribers: Download as CSV exports the subscribers the table shows, using its current filters, search and sort order.
 
+### Fixed
+- Settings: Ask before leaving the page while a section has unsaved changes.
+
 ## [0.18.1] - 2026-10-19
 ### Changed
 - Overview: Title the intro card "Jetpack Newsletter", adding "on WordPress.com" only on WordPress.com sites. [#53600]
