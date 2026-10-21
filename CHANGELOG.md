@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Let paid posts target a single tier or all paid subscribers, with subscriber counts for each.
 - PayPal Payment Buttons: Stop telling editors and authors that PayPal is disconnected when they simply do not manage the connection, and stop offering them a reconnect flow they cannot complete.
 - Premium Analytics: Fix post, video and author stats pages that could crash with "Something went wrong" right after opening.
+- Search: Open the Instant Search filters panel below the results header on small screens, so the Filters toggle stays visible.
 - SEO: Generate alt text for newly inserted images when "Auto-generate metadata" is on, even if "Image alt text" was unticked earlier.
 - Sharing Buttons block: Avoid duplicate ids when the block appears more than once on a page.
 

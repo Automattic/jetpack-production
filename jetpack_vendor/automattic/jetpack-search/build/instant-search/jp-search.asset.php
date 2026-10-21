@@ -5,5 +5,5 @@
 		'wp-polyfill',
 		'wp-url'
 	),
-	'version' => 'd03ec9f0ac110a671db7'
+	'version' => '27571e87d0bcc8dadeff'
 );
