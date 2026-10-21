@@ -6,6 +6,13 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+__( "Settings have been saved", "jetpack-sharing-likes" );
+__( "Your settings could not be saved.", "jetpack-sharing-likes" );
+__( "Your sharing buttons could not be saved.", "jetpack-sharing-likes" );
+__( "Undo", "jetpack-sharing-likes" );
+__( "The custom service could not be saved.", "jetpack-sharing-likes" );
+__( "The custom service could not be deleted.", "jetpack-sharing-likes" );
+__( "This action is not available on this site right now.", "jetpack-sharing-likes" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-sharing-likes" );
 /* translators: %s: keyboard shortcut. */
@@ -183,8 +190,6 @@ __( "Validating…", "jetpack-sharing-likes" );
 /* translators: %d: Number of fields that need attention */
 _n( "%d field needs attention", "%d fields need attention", 1, "jetpack-sharing-likes" );
 __( "More details", "jetpack-sharing-likes" );
-__( "Settings have been saved", "jetpack-sharing-likes" );
-__( "Your settings could not be saved.", "jetpack-sharing-likes" );
 __( "Where sharing buttons, Like buttons, and Comment Likes appear", "jetpack-sharing-likes" );
 __( "Where sharing and Like buttons appear", "jetpack-sharing-likes" );
 __( "Where sharing buttons and Comment Likes appear", "jetpack-sharing-likes" );
@@ -202,7 +207,6 @@ __( "Comment Likes currently appear on comments on: %s.", "jetpack-sharing-likes
 /* translators: %s: comma-separated list of places, for example "Posts, Pages". */
 __( "Sharing buttons currently appear on: %s.", "jetpack-sharing-likes" );
 __( "Change where they appear", "jetpack-sharing-likes" );
-__( "This action is not available on this site right now.", "jetpack-sharing-likes" );
 __( "Add the Sharing Buttons block to your theme’s template.", "jetpack-sharing-likes" );
 __( "Sharing buttons are turned off for this site.", "jetpack-sharing-likes" );
 __( "Turn on sharing buttons", "jetpack-sharing-likes" );
@@ -233,10 +237,6 @@ __( "Used by Twitter Cards and the Sharing Buttons block.", "jetpack-sharing-lik
 __( "Twitter Site Tag", "jetpack-sharing-likes" );
 __( "The Twitter username of the owner of this site’s domain.", "jetpack-sharing-likes" );
 __( "These choices apply to every feature named in the heading.", "jetpack-sharing-likes" );
-__( "Your sharing buttons could not be saved.", "jetpack-sharing-likes" );
-__( "Undo", "jetpack-sharing-likes" );
-__( "The custom service could not be saved.", "jetpack-sharing-likes" );
-__( "The custom service could not be deleted.", "jetpack-sharing-likes" );
 __( "Service name", "jetpack-sharing-likes" );
 __( "Sharing URL", "jetpack-sharing-likes" );
 __( "You can add the following variables to your service sharing URL:", "jetpack-sharing-likes" );
