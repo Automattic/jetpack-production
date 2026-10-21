@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Recognize Pro subscriptions and offer an available plan when Growth is retired.
+- Settings: Keep the newly picked category, explicit setting or cover image on screen while it saves, and go back to the saved one only if the save fails.
 
 ## [2.2.2] - 2026-10-19
 ### Changed
