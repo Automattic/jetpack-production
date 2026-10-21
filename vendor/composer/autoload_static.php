@@ -10,6 +10,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_4_a_4
         '3773ef3f09c37da5478d578e32b03a4b' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-assets/actions.php',
         '7372b7fb88a9723cf5b76d456eb0b738' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-connection/actions.php',
         '483ab369492aebf2550e8341e3d031c8' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-licensing/actions.php',
+        'ca361fc6e355bd746da7c3488077d38a' => __DIR__ . '/..' . '/automattic/tracks-shared-utils/php/src/functions.php',
         'd4eb94df91a729802d18373ee8cdc79f' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-backup/actions.php',
         'd9927a8ddcd8b3a40fb28c24213827ff' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/actions.php',
         'e6f7f640a6586216432b53e5c9d1b472' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/social-image-generator/utilities.php',
@@ -19,11 +20,16 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_4_a_4
     public static $prefixLengthsPsr4 = array (
         'A' =>
         array (
+            'Automattic\\TracksSharedUtils\\' => 29,
             'Automattic\\Jetpack\\Autoloader\\' => 30,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Automattic\\TracksSharedUtils\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/automattic/tracks-shared-utils/php/src',
+        ),
         'Automattic\\Jetpack\\Autoloader\\' =>
         array (
             0 => __DIR__ . '/..' . '/automattic/jetpack-autoloader/src',
@@ -767,6 +773,8 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_4_a_4
         'Automattic\\Jetpack\\WooCommerceStats\\Api_Proxy_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-api-proxy-controller.php',
         'Automattic\\Jetpack\\WooCommerceStats\\Store_Currency' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-store-currency.php',
         'Automattic\\Jetpack\\WordAds\\Analytics_Dashboard' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-ads/src/class-analytics-dashboard.php',
+        'Automattic\\TracksSharedUtils\\Config' => __DIR__ . '/..' . '/automattic/tracks-shared-utils/php/src/Config.php',
+        'Automattic\\TracksSharedUtils\\Sanitizer' => __DIR__ . '/..' . '/automattic/tracks-shared-utils/php/src/Sanitizer.php',
         'Automattic\\Woocommerce_Analytics' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-woocommerce-analytics.php',
         'Automattic\\Woocommerce_Analytics\\Consent_Manager' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-consent-manager.php',
         'Automattic\\Woocommerce_Analytics\\Features' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/woocommerce-analytics/src/class-features.php',
