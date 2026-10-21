@@ -5,14 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.12.1-alpha] - unreleased
+## [6.13.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add the `jetpack_my_jetpack_feature_upgrade` filter, so a host can send a feature's Upgrade button to its own plans.
 - Features: Add the default-off `my-jetpack-account-connect` flag, which shows Needs user account on features that need a WordPress.com account and starts the account connection from their Install or Connect button.
 
 ### Changed
+- Backup: Show Backup's state from the site's plan on its Features card instead of a switch, offering an upgrade, or a renewal for an expired plan.
 - Onboarding: Size the terms of service line through its Text variant instead of overriding the shared styles.
 
 ### Fixed
@@ -3116,7 +3118,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.12.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.12.0...6.12.1-alpha
+[6.13.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.12.0...6.13.0-alpha
 [6.12.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.11.0...6.12.0
 [6.11.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.10.0...6.11.0
 [6.10.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.9.1...6.10.0

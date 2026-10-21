@@ -726,10 +726,22 @@ __( "Could not change %s. Please try again.", "jetpack-my-jetpack" );
 __( "The plugin could not be installed. Please try again.", "jetpack-my-jetpack" );
 /* translators: %s is why the Jetpack module is unavailable; its standalone plugin remains available. */
 __( "Jetpack module: %s", "jetpack-my-jetpack" );
+__( "Included in your plan", "jetpack-my-jetpack" );
+__( "Your plan expired", "jetpack-my-jetpack" );
+__( "Included in your plan, but not running", "jetpack-my-jetpack" );
 /* translators: %s is a plugin name, such as "Jetpack Boost". */
 __( "Plugin installs are turned off on this site. Ask your host or site administrator to install %s.", "jetpack-my-jetpack" );
 /* translators: %s is a plugin name, such as "Jetpack Boost". */
 __( "Your account can’t install plugins. Ask a site administrator to install %s.", "jetpack-my-jetpack" );
+__( "Included in <plan0 />", "jetpack-my-jetpack" );
+__( "Included in <plan0 /> and <plan1 />", "jetpack-my-jetpack" );
+__( "Included in <plan0 />, <plan1 /> and <plan2 />", "jetpack-my-jetpack" );
+/* translators: %s is a feature name, such as "Backup". */
+__( "Renew the plan for %s", "jetpack-my-jetpack" );
+/* translators: %s is a product name, such as "Jetpack Akismet Anti-spam". */
+__( "Upgrade to %s", "jetpack-my-jetpack" );
+__( "Renew", "jetpack-my-jetpack" );
+__( "With a paid plan", "jetpack-my-jetpack" );
 __( "Installing…", "jetpack-my-jetpack" );
 __( "Activating…", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. "Protect" is a product name. */
@@ -780,12 +792,6 @@ __( "%s is part of the Jetpack plugin. Installing Jetpack turns it on. You won�
 /* translators: %s is a feature name, such as "Activity Log". */
 __( "%s is part of the Jetpack plugin. Once Jetpack is on you’ll connect your WordPress.com account, then you can turn it on here if it’s still off. You won’t be charged.", "jetpack-my-jetpack" );
 __( "Support docs", "jetpack-my-jetpack" );
-__( "Included in <plan0 />", "jetpack-my-jetpack" );
-__( "Included in <plan0 /> and <plan1 />", "jetpack-my-jetpack" );
-__( "Included in <plan0 />, <plan1 /> and <plan2 />", "jetpack-my-jetpack" );
-/* translators: %s is a product name, such as "Jetpack Akismet Anti-spam". */
-__( "Upgrade to %s", "jetpack-my-jetpack" );
-__( "With a paid plan", "jetpack-my-jetpack" );
 /* translators: %s is a feature name, such as "Stats". */
 __( "Previous: %s", "jetpack-my-jetpack" );
 /* translators: %s is a feature name, such as "Stats". */
