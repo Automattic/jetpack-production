@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Features: Show a plugin as active when a Beta or -dev copy is active beside an installed stable copy, and turn off the active copy when deactivating it.
+- Help: Keep the help cards inside their column on narrow screens.
 
 ## [6.12.0] - 2026-10-20
 ### Added
