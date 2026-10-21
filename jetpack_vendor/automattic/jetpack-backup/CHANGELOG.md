@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Show the redesigned dashboard by default. Return false from the `rsm_jetpack_ui_modernization_backup` filter to keep the legacy dashboard.
+- Update package dependencies.
 
 ### Fixed
 - Backup: Explain why connecting the site failed instead of showing a generic error.
