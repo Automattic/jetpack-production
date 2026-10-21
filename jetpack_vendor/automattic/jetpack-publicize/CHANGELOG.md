@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Social: Explain why connecting the site failed instead of always showing a generic error.
+
 ## [0.88.6] - 2026-10-19
 ### Changed
 - Update package dependencies. [#53004]

@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Boost card: Fetch a new speed score when the saved one is incomplete, instead of showing an empty score.
 - Features: Show a plugin as active when a Beta or -dev copy is active beside an installed stable copy, and turn off the active copy when deactivating it.
 - Help: Keep the help cards inside their column on narrow screens.
+- Onboarding: Explain why connecting failed, with the underlying cause underneath when it helps.
 
 ## [6.12.0] - 2026-10-20
 ### Added

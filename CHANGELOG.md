@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - AI: Open the new SEO page from the SEO settings link on every site that has it, instead of the Traffic settings.
+- Connection: Explain why connecting the site failed instead of showing a raw or generic error.
 - Features: Show a plugin as active when a Beta or -dev copy is active beside an installed stable copy, and turn off the active copy when deactivating it.
 - Modules: Fix a fatal error on the Modules screen when the tag filter in the address is not plain text.
 - My Jetpack: Fetch a new speed score when the saved one is incomplete, instead of showing an empty score.
