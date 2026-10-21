@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Onboarding: Size the terms of service line through its Text variant instead of overriding the shared styles.
 
+### Fixed
+- Features: Show a plugin as active when a Beta or -dev copy is active beside an installed stable copy, and turn off the active copy when deactivating it.
+
 ## [6.12.0] - 2026-10-20
 ### Added
 - Add catalog-controlled Pro offers and preserve existing plan management. [#53421]
