@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Fetch a new speed score when the saved one is incomplete, instead of showing an empty score.
 - My Jetpack: Keep the Help tab's cards inside their column on narrow screens.
 - My Jetpack: Stop offering retired Security and Growth plans while preserving existing subscriptions.
+- Newsletter: Keep the email preview's device highlight on the selected device when the window is resized.
 - Newsletter: Keep the email preview at a width the device selector still offers when the editor window narrows.
 - Newsletter: Label the top of the subscribers chart in the dashboard widget, so the line never runs past the last label.
 - Newsletter: Let paid posts target a single tier or all paid subscribers, with subscriber counts for each.
