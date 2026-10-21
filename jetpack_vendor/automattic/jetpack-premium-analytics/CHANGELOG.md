@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Hide Stats CSV exports on plans that do not include them, and lock a post's all-time traffic on free plans.
+- Page options: offer switching the dashboard off only while the site still has a classic Stats page to return to.
 
 ### Fixed
 - Fix post, video and author stats pages that could crash with "Something went wrong" right after opening.
