@@ -21,10 +21,13 @@ __( "Loading", "jetpack-sharing-likes" );
 __( "OK", "jetpack-sharing-likes" );
 __( "Cancel", "jetpack-sharing-likes" );
 __( "Close", "jetpack-sharing-likes" );
+__( "More details follow the field.", "jetpack-sharing-likes" );
+__( "More details follow.", "jetpack-sharing-likes" );
 __( "Dismiss", "jetpack-sharing-likes" );
 __( "Sections", "jetpack-sharing-likes" );
 __( "Jetpack Logo", "jetpack-sharing-likes" );
 __( "An Automattic Airline", "jetpack-sharing-likes" );
+__( "Preview and edit", "jetpack-sharing-likes" );
 __( "Features", "jetpack-sharing-likes" );
 __( "Help", "jetpack-sharing-likes" );
 __( "Jetpack", "jetpack-sharing-likes" );
@@ -45,7 +48,6 @@ __( "Today, %s, selected", "jetpack-sharing-likes" );
 __( "%s, selected", "jetpack-sharing-likes" );
 __( "Required", "jetpack-sharing-likes" );
 __( "Optional", "jetpack-sharing-likes" );
-__( "More details follow the field.", "jetpack-sharing-likes" );
 __( "Sort ascending", "jetpack-sharing-likes" );
 __( "Sort descending", "jetpack-sharing-likes" );
 /* translators: DataViews operator name */
@@ -207,6 +209,13 @@ __( "Comment Likes currently appear on comments on: %s.", "jetpack-sharing-likes
 /* translators: %s: comma-separated list of places, for example "Posts, Pages". */
 __( "Sharing buttons currently appear on: %s.", "jetpack-sharing-likes" );
 __( "Change where they appear", "jetpack-sharing-likes" );
+__( "Add the Sharing Buttons block to posts and pages", "jetpack-sharing-likes" );
+__( "Add the Like block to posts and pages", "jetpack-sharing-likes" );
+_x( "Before the content", "Where the block goes", "jetpack-sharing-likes" );
+_x( "After the content", "Where the block goes", "jetpack-sharing-likes" );
+__( "Pick one place: before or after the content.", "jetpack-sharing-likes" );
+__( "Want pages to look different? <link>Edit the page template</link>.", "jetpack-sharing-likes" );
+__( "Once you’ve saved a template in the Site Editor, move or remove its blocks there: picking a place here won’t move a block that template already has, or bring back one you removed.", "jetpack-sharing-likes" );
 __( "Add the Sharing Buttons block to your theme’s template.", "jetpack-sharing-likes" );
 __( "Sharing buttons are turned off for this site.", "jetpack-sharing-likes" );
 __( "Turn on sharing buttons", "jetpack-sharing-likes" );
@@ -237,6 +246,7 @@ __( "Used by Twitter Cards and the Sharing Buttons block.", "jetpack-sharing-lik
 __( "Twitter Site Tag", "jetpack-sharing-likes" );
 __( "The Twitter username of the owner of this site’s domain.", "jetpack-sharing-likes" );
 __( "These choices apply to every feature named in the heading.", "jetpack-sharing-likes" );
+__( "Blocks you add to your templates aren’t affected.", "jetpack-sharing-likes" );
 __( "Service name", "jetpack-sharing-likes" );
 __( "Sharing URL", "jetpack-sharing-likes" );
 __( "You can add the following variables to your service sharing URL:", "jetpack-sharing-likes" );
