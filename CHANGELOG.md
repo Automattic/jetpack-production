@@ -62,6 +62,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Abilities: Report whether a filter or the host forces a module on or off in the modules list.
+- AI: Share the group card and toolbar between the MCP Read and Write views.
 - Comments: Stop loading the subscribe modal on Atomic sites that use the new comment form, which never opens it.
 - Protect: Add a page that shows whether the threats from an alert still need attention, were fixed, or were ignored.
 - Settings: Remove the Security tab when the Protect page is on, and send its links and searches there.
