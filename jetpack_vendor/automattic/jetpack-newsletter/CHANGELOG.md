@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Settings: Ask before leaving the page while a section has unsaved changes.
+- Subscribers: Remember the chosen number of subscribers per page.
 
 ## [0.18.1] - 2026-10-19
 ### Changed

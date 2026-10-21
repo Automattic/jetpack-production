@@ -50,6 +50,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Keep the email preview at a width the device selector still offers when the editor window narrows.
 - Newsletter: Label the top of the subscribers chart in the dashboard widget, so the line never runs past the last label.
 - Newsletter: Let paid posts target a single tier or all paid subscribers, with subscriber counts for each.
+- Newsletter: Remember the chosen number of subscribers per page on the Subscribers screen.
 - PayPal Payment Buttons: Stop telling editors and authors that PayPal is disconnected when they simply do not manage the connection, and stop offering them a reconnect flow they cannot complete.
 - Podcast: Recognize Pro subscriptions and replace retired Growth purchase offers with an available plan.
 - Premium Analytics: Fix post, video and author stats pages that could crash with "Something went wrong" right after opening.
