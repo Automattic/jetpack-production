@@ -438,6 +438,7 @@ __( "Episode stats included with %s", "jetpack-podcast" );
 __( "Upgrade to %s to manage your podcast catalog from a unified dashboard.", "jetpack-podcast" );
 /* translators: %s is the plan name, e.g. "Growth" or "Premium". */
 __( "Upgrade to %s to see downloads by episode, app, and country.", "jetpack-podcast" );
+__( "This feature requires a paid plan.", "jetpack-podcast" );
 /* translators: %s is the plan name, e.g. "Growth" or "Premium". */
 __( "Upgrade to %s", "jetpack-podcast" );
 __( "No podcast episodes yet.", "jetpack-podcast" );

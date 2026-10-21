@@ -265,10 +265,12 @@ __( "Date range: %s.", "jetpack-activity-log" );
 /* translators: %s: date range label */
 __( "Date range: %s. Activate to open calendar.", "jetpack-activity-log" );
 __( "Upgrade plan", "jetpack-activity-log" );
+__( "Upgrade to get complete activity history for the last 30 days, advanced filtering and date range selection. Available on the Jetpack Security and Complete plans.", "jetpack-activity-log" );
+__( "Upgrade to get complete activity history for the last 30 days, advanced filtering and date range selection. Available on WordPress.com paid plans.", "jetpack-activity-log" );
+/* translators: %s is the name of an available Jetpack bundle. */
+__( "Upgrade to %s for at least 30 days of activity history, advanced filtering and date range selection.", "jetpack-activity-log" );
 __( "Track every action with activity logs", "jetpack-activity-log" );
 __( "Debug issues faster with insights from a comprehensive audit log of all your site events.", "jetpack-activity-log" );
-__( "Upgrade to get complete activity history for the last 30 days, advanced filtering and date range selection. Available on WordPress.com paid plans.", "jetpack-activity-log" );
-__( "Upgrade to get complete activity history for the last 30 days, advanced filtering and date range selection. Available on the Jetpack Security and Complete plans.", "jetpack-activity-log" );
 __( "Restore backup", "jetpack-activity-log" );
 /* translators: %s: MCP client name and version */
 __( "via %s (MCP)", "jetpack-activity-log" );

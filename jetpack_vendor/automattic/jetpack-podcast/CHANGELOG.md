@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Settings: Use the same cards, column width, and spacing as the other Jetpack settings screens.
 
+### Fixed
+- Recognize Pro subscriptions and offer an available plan when Growth is retired.
+
 ## [2.2.2] - 2026-10-19
 ### Changed
 - Update package dependencies. [#53004]

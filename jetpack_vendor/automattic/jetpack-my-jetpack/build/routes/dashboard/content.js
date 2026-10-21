@@ -1185,6 +1185,8 @@ __( "Malware scanning (Paid)", "jetpack-my-jetpack" );
 __( "Deep, line-by-line scanning of your site files to detect malware, backdoors, and malicious code. Includes automatic fixes and real-time notifications.", "jetpack-my-jetpack" );
 __( "Learn more about the difference between Protect and Scan", "jetpack-my-jetpack" );
 __( "Want comprehensive protection?", "jetpack-my-jetpack" );
+/* translators: %s is the name of an available Jetpack bundle. */
+__( "%s includes real-time backups, malware scanning, and spam protection.", "jetpack-my-jetpack" );
 __( "Jetpack Security provides easy-to-use, comprehensive WordPress site security, including real-time backups, a web application firewall, malware scanning, and spam protection.", "jetpack-my-jetpack" );
 __( "Secure your site", "jetpack-my-jetpack" );
 __( "Learn more about Jetpack Security", "jetpack-my-jetpack" );

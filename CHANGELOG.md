@@ -44,9 +44,11 @@ This is an alpha version! The changes listed here are not final.
 - Modules: Fix a fatal error on the Modules screen when the tag filter in the address is not plain text.
 - My Jetpack: Fetch a new speed score when the saved one is incomplete, instead of showing an empty score.
 - My Jetpack: Keep the Help tab's cards inside their column on narrow screens.
+- My Jetpack: Stop offering retired Security and Growth plans while preserving existing subscriptions.
 - Newsletter: Keep the email preview at a width the device selector still offers when the editor window narrows.
 - Newsletter: Let paid posts target a single tier or all paid subscribers, with subscriber counts for each.
 - PayPal Payment Buttons: Stop telling editors and authors that PayPal is disconnected when they simply do not manage the connection, and stop offering them a reconnect flow they cannot complete.
+- Podcast: Recognize Pro subscriptions and replace retired Growth purchase offers with an available plan.
 - Premium Analytics: Fix post, video and author stats pages that could crash with "Something went wrong" right after opening.
 - Premium Analytics: Make widget titles, descriptions, help notes and settings labels translatable.
 - Search: Open the Instant Search filters panel below the results header on small screens, so the Filters toggle stays visible.
