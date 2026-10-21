@@ -54,6 +54,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Label the top of the subscribers chart in the dashboard widget, so the line never runs past the last label.
 - Newsletter: Let paid posts target a single tier or all paid subscribers, with subscriber counts for each.
 - Newsletter: Remember the chosen number of subscribers per page on the Subscribers screen.
+- Newsletter: Send test emails even when emails are turned off for a post.
 - PayPal Payment Buttons: Stop telling editors and authors that PayPal is disconnected when they simply do not manage the connection, and stop offering them a reconnect flow they cannot complete.
 - Podcast: Keep a newly picked category, explicit setting or cover image on screen while it saves, instead of showing the old one until the save finishes.
 - Podcast: Recognize Pro subscriptions and replace retired Growth purchase offers with an available plan.
