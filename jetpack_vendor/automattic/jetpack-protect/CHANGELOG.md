@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Show whether the firewall runs in standalone mode and how to set it up on the Firewall settings card, and explain firewall file and rules errors in plain words.
 - Protect dashboard: Add a threat report page that shows the threats a link names, grouped into ones that need attention, fixed, ignored and no longer detected.
 - Protect dashboard: Open the Settings tab at a section's card from a link, and point the Configure links of Jetpack's security modules at their card.
+- Protect dashboard: Show what Scan adds on the Scan and Firewall cards for sites without it, with an Upgrade button.
 
 ### Changed
 - Dashboard: Animate the safe-state shield, with a particle burst when a scan finishes clean.

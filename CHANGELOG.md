@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Animate the shield on the Protect page, with a particle burst when a scan finishes clean.
 - Protect: Make the new Protect page available to turn on from My Jetpack or Jetpack › Modules.
 - Protect: Show requests blocked today and in the last 30 days, and when the automatic firewall rules were last updated, on the Protect dashboard's Firewall card.
+- Protect: Show what Scan adds, such as malware scanning and automatic firewall rules, on the Protect page's Scan and Firewall cards for sites without it.
 - Settings: Match the page header, tabs, and cards of the other Jetpack settings screens.
 - VideoPress: Let channel blocks show authors a call to action while a channel has no videos or playlists.
 - VideoPress: Match the card spacing and top margin of the other Jetpack settings screens.
