@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Keep the Help tab's cards inside their column on narrow screens.
 - My Jetpack: Stop offering retired Security and Growth plans while preserving existing subscriptions.
 - Newsletter: Keep the email preview at a width the device selector still offers when the editor window narrows.
+- Newsletter: Label the top of the subscribers chart in the dashboard widget, so the line never runs past the last label.
 - Newsletter: Let paid posts target a single tier or all paid subscribers, with subscriber counts for each.
 - PayPal Payment Buttons: Stop telling editors and authors that PayPal is disconnected when they simply do not manage the connection, and stop offering them a reconnect flow they cannot complete.
 - Podcast: Recognize Pro subscriptions and replace retired Growth purchase offers with an available plan.
