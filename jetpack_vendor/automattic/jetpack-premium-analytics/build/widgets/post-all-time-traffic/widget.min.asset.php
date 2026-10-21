@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array(), 'module_dependencies' => array(array('id' => '@jetpack-premium-analytics/widgets-toolkit', 'import' => 'static')), 'version' => '7521de8e8c0123b6e909');
+<?php return array('dependencies' => array(), 'version' => '948672fde707cda969d3');

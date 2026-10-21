@@ -85,9 +85,6 @@ _n( "%s share", "%s shares", 1, "jetpack-premium-analytics-pkg" );
 _n( "%s comment", "%s comments", 1, "jetpack-premium-analytics-pkg" );
 /* translators: %s: number of email opens, e.g. "1,287". */
 _n( "%s open", "%s opens", 1, "jetpack-premium-analytics-pkg" );
-__( "Total views", "jetpack-premium-analytics-pkg" );
-__( "Daily average", "jetpack-premium-analytics-pkg" );
-_x( "Metric", "label for the views metric selector", "jetpack-premium-analytics-pkg" );
 __( "No views", "jetpack-premium-analytics-pkg" );
 __( "Fewer views per day", "jetpack-premium-analytics-pkg" );
 __( "More views per day", "jetpack-premium-analytics-pkg" );
