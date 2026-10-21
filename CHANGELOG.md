@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Match the card spacing and top margin of the other Jetpack settings screens.
 
 ### Bug fixes
+- Admin menu: Make the top-level Jetpack menu link open My Jetpack instead of Akismet Anti-spam.
 - AI: Open the new SEO page from the SEO settings link on every site that has it, instead of the Traffic settings.
 - Connection: Explain why connecting the site failed instead of showing a raw or generic error.
 - Features: Show a plugin as active when a Beta or -dev copy is active beside an installed stable copy, and turn off the active copy when deactivating it.

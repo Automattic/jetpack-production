@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Keep the Akismet Anti-spam item in sorted order when the menu is set up after Akismet registers it.
+
 ## [0.14.8] - 2026-10-20
 ### Changed
 - Internal updates.
