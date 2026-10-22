@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Overview: Open a backup from a link even when it is not on the activity page currently shown.
 - Recognize Jetpack Pro licenses.
 - Restore: On sites hosted on WordPress.com, warn about known security threats in a backup and ask for confirmation before restoring it. Backups with known threats are marked in the list, and the backup details show the warning. The Activity Log's "Restore backup" now opens this restore screen when the new dashboard is on.
 
@@ -19,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Backup: Explain why connecting the site failed instead of showing a generic error.
+- Overview: Treat backups that finished with warnings as backups, so they can be opened and restored and their links work.
 
 ## [5.1.4] - 2026-10-19
 ### Changed

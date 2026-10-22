@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Link backups to that backup in the Backup dashboard when the new dashboard is on.
 - Mark backups that are known to contain security threats on sites hosted on WordPress.com, and open the in-admin restore screen from "Restore backup" when the new Backup dashboard is on.
 
 ### Fixed
