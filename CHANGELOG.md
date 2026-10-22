@@ -84,6 +84,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Share the group card and toolbar between the MCP Read and Write views.
 - Comments: Stop loading the subscribe modal on Atomic sites that use the new comment form, which never opens it.
 - Protect: Add a page that shows whether the threats from an alert still need attention, were fixed, or were ignored.
+- Protect: Show a shield with a flame on the Protect dashboard's Firewall card, so it is easy to tell apart from Scan.
 - Reprint export: Accept public-key signed export requests and update Reprint to 0.11.2.
 - Settings: Remove the Security tab when the Protect page is on, and send its links and searches there.
 - Settings: Stop adding the `origin_site_id` parameter to the Reader link.
