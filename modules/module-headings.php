@@ -18,7 +18,7 @@ function jetpack_get_module_i18n( $key ) {
 		$modules = array(
 			'account-protection' => array(
 				'name' => _x( 'Account Protection', 'Module Name', 'jetpack' ),
-				'description' => _x( 'Shield your login page with rate‑limiting and secure authentication safeguards.', 'Module Description', 'jetpack' ),
+				'description' => _x( 'Detect compromised passwords at login and flag weak ones when users set a new password.', 'Module Description', 'jetpack' ),
 			),
 
 			'activity-log' => array(
@@ -415,7 +415,7 @@ function jetpack_get_module_info( $key ) {
 	  'account-protection' => 
 	  array (
 	    'name' => 'Account Protection',
-	    'description' => 'Shield your login page with rate‑limiting and secure authentication safeguards.',
+	    'description' => 'Detect compromised passwords at login and flag weak ones when users set a new password.',
 	    'sort' => '4',
 	    'recommendation_order' => '',
 	    'introduced' => '14.5',

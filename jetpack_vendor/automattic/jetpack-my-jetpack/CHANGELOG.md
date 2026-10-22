@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Help: Keep the help cards inside their column on narrow screens.
 - Onboarding: Explain why connecting failed, with the underlying cause underneath when it helps.
 - Stop offering retired Security and Growth plans while preserving existing subscriptions.
+- Update the Account Protection activation message to describe what the feature does.
 
 ## [6.12.0] - 2026-10-20
 ### Added

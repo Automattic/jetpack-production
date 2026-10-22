@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Match the card spacing and top margin of the other Jetpack settings screens.
 
 ### Bug fixes
+- Account Protection: Update the module description to reflect what the feature does.
 - Admin menu: Make the top-level Jetpack menu link open My Jetpack instead of Akismet Anti-spam.
 - AI: Open the new SEO page from the SEO settings link on every site that has it, instead of the Traffic settings.
 - Blogroll block: Stop asking to save Blogroll Recommendations when nothing in the block changed.

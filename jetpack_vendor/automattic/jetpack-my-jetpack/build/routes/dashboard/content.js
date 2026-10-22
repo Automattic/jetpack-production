@@ -640,7 +640,7 @@ __( "Legacy Like buttons cannot be customized on block themes.", "jetpack-my-jet
 _x( "Add the Like block to your theme’s template.", "Like block migration instruction", "jetpack-my-jetpack" );
 __( "Switch to the Like block", "jetpack-my-jetpack" );
 __( "Deactivating legacy Like buttons…", "jetpack-my-jetpack" );
-__( "Your login page now has rate-limiting and secure authentication safeguards.", "jetpack-my-jetpack" );
+__( "Your site now checks logins for compromised passwords and flags weak new passwords.", "jetpack-my-jetpack" );
 __( "You can now review every event on your site and roll back when something goes wrong.", "jetpack-my-jetpack" );
 __( "You can now generate and edit content, images, and more with Jetpack AI in the editor.", "jetpack-my-jetpack" );
 __( "You can now browse your backups and restore your site from your dashboard.", "jetpack-my-jetpack" );
