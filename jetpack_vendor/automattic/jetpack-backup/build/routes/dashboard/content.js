@@ -364,6 +364,8 @@ __( "We are having trouble backing up your site.", "jetpack-backup-pkg" );
 __( "Your backup will be ready soon", "jetpack-backup-pkg" );
 /* translators: %d: how much of the running backup is complete, as a percentage. */
 __( "Generating backup… (%d%% progress)", "jetpack-backup-pkg" );
+/* translators: %d: how much of the backup is complete, as a percentage. */
+__( "Backup complete (%d%% progress)", "jetpack-backup-pkg" );
 __( "Jetpack Logo", "jetpack-backup-pkg" );
 __( "An Automattic Airline", "jetpack-backup-pkg" );
 __( "Features", "jetpack-backup-pkg" );
