@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Dashboard: Show requests blocked today and in the last 30 days, and when the automatic firewall rules were last updated, on the Firewall card.
 - Dashboard: Show whether the firewall runs in standalone mode and how to set it up on the Firewall settings card, and explain firewall file and rules errors in plain words.
+- Protect Dashboard: Add a Scan now button to the page header and show when the site was last scanned.
 - Protect dashboard: Add a threat report page that shows the threats a link names, grouped into ones that need attention, fixed, ignored and no longer detected.
 - Protect dashboard: Open the Settings tab at a section's card from a link, and point the Configure links of Jetpack's security modules at their card.
 - Protect dashboard: Show what Scan adds on the Scan and Firewall cards for sites without it, with an Upgrade button.

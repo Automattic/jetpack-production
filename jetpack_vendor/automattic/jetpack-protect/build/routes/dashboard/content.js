@@ -322,6 +322,7 @@ __( "Value must be true, false, or undefined", "jetpack-protect-pkg" );
 __( "Value must be an array.", "jetpack-protect-pkg" );
 __( "Every value must be a string.", "jetpack-protect-pkg" );
 __( "Value must be a valid color.", "jetpack-protect-pkg" );
+__( "The scan couldn’t be started.", "jetpack-protect-pkg" );
 __( "Scan history is unavailable right now.", "jetpack-protect-pkg" );
 __( "Vulnerable plugin", "jetpack-protect-pkg" );
 __( "Vulnerable theme", "jetpack-protect-pkg" );
@@ -502,6 +503,8 @@ __( "Email me when my site goes down and comes back up", "jetpack-protect-pkg" )
 __( "Emails go to your WordPress.com account’s address.", "jetpack-protect-pkg" );
 __( "Connect your WordPress.com account to manage these emails.", "jetpack-protect-pkg" );
 __( "Scan no longer reports this threat. It may have been fixed.", "jetpack-protect-pkg" );
+/* translators: %s is how long ago, such as "2 hours ago". */
+__( "Last scanned %s", "jetpack-protect-pkg" );
 /* translators: %s is a date and time, such as "Oct 6, 10PM". */
 __( "Free vulnerability checks run once a day, so the next one can start on %s. Upgrade to Scan to scan whenever you like.", "jetpack-protect-pkg" );
 __( "Checked once a day", "jetpack-protect-pkg" );
@@ -579,7 +582,6 @@ __( "Checking %1$s, %2$s and your site’s files for threats.", "jetpack-protect
 __( "Checking %1$s and %2$s for vulnerabilities.", "jetpack-protect-pkg" );
 __( "You can leave this page — the scan carries on.", "jetpack-protect-pkg" );
 __( "Check again", "jetpack-protect-pkg" );
-__( "The scan couldn’t be started.", "jetpack-protect-pkg" );
 __( "Scan", "jetpack-protect-pkg" );
 __( "We couldn’t check your site for vulnerabilities right now.", "jetpack-protect-pkg" );
 __( "All vulnerabilities found", "jetpack-protect-pkg" );
@@ -587,7 +589,6 @@ __( "Plugins checked", "jetpack-protect-pkg" );
 __( "Themes checked", "jetpack-protect-pkg" );
 __( "Daily malware and vulnerability checks for your files, WordPress, plugins and themes.", "jetpack-protect-pkg" );
 __( "Daily vulnerability checks for WordPress, plugins and themes.", "jetpack-protect-pkg" );
-__( "Scan now", "jetpack-protect-pkg" );
 __( "View scan history", "jetpack-protect-pkg" );
 /* translators: %d is a number of threats. */
 _n( "View %d ignored threat", "View %d ignored threats", 1, "jetpack-protect-pkg" );
@@ -603,6 +604,7 @@ __( "The firewall couldn’t finish applying your change.", "jetpack-protect-pkg
 __( "Your settings couldn’t be loaded.", "jetpack-protect-pkg" );
 __( "Settings updated.", "jetpack-protect-pkg" );
 __( "Your change couldn’t be saved. Try again.", "jetpack-protect-pkg" );
+__( "Scan now", "jetpack-protect-pkg" );
 __( "Threats from your alert", "jetpack-protect-pkg" );
 /* translators: %s is a threat's id number. */
 __( "Threat #%s", "jetpack-protect-pkg" );
