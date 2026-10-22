@@ -75,6 +75,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Add a page that shows whether the threats from an alert still need attention, were fixed, or were ignored.
 - Settings: Remove the Security tab when the Protect page is on, and send its links and searches there.
 - Settings: Stop adding the `origin_site_id` parameter to the Reader link.
+- Stats: Add a feature flag that retires the classic Stats page in favor of Stats v2.
 - Stats: Load the admin bar views chart independently of the Stats page.
 - Update package dependencies.
 

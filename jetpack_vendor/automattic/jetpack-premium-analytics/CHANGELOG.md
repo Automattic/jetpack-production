@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Offer a paid Stats plan to free sites 30 days after their first visit, and show one Stats notice at a time.
 - Show one upgrade prompt in place of Insights, and of Traffic below the chart, on free WordPress.com sites.
 - Show the chart groupings the site's plan locks in the chart interval menu, with an upgrade link.
+- Stats links: Open the dashboard from old Stats page links once no plugin registers the classic Stats page.
 - Widgets: let a chart type option name its icon as a `jpa/<name>` reference, the form a widget.json can carry.
 
 ### Changed
