@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Space the settings cards 16px apart, matching the other Jetpack settings screens.
 - Subscribers: Download as CSV exports the subscribers the table shows, using its current filters, search and sort order.
 
+### Removed
+- Reader: Stop adding the `origin_site_id` parameter to Reader links.
+
 ### Fixed
 - Settings: Ask before leaving the page while a section has unsaved changes.
 - Subscribers: Remember the chosen number of subscribers per page.

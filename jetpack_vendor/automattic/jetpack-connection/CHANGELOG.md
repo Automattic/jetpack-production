@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Connectors: Use the shared disconnect dialog for site disconnect on the card, and load the Tracks script so its events are recorded.
 - Registration: Report a missing PHP XML extension with its own error code, so the connect screens can name the cause.
 
+### Deprecated
+- Deprecate `Urls::maybe_add_origin_site_id()`; it now returns the URL unchanged.
+
 ## [9.13.0] - 2026-10-20
 ### Added
 - Add `isInSafeMode` to the connection status and the local `displayName` and `email` to the current user's connection data. [#53785]
