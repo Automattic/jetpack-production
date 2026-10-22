@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Backup: Show Backup's state from the site's plan on its Features card instead of a switch, offering an upgrade, or a renewal for an expired plan.
 - Onboarding: Size the terms of service line through its Text variant instead of overriding the shared styles.
+- Speed up the dashboard by removing duplicate product and plan requests on page load.
 - Update package dependencies.
 
 ### Fixed

@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Line up notices with the cards below them, and drop the grey background behind the Features grid and list buttons.
 - My Jetpack: Recognize Jetpack Pro subscriptions and licenses.
 - My Jetpack: Refresh Pro availability while preserving existing offers.
+- My Jetpack: Speed up page load by removing duplicate product and plan requests.
 - Newsletter: Download as CSV on the Subscribers screen now exports the subscribers you have filtered or searched for, in the order the table shows them.
 - Newsletter: Say in the email design Styles panel that text with its own size or font in the post has to be changed there instead.
 - Newsletter: Space the settings cards 16px apart, matching the other Jetpack settings screens.
