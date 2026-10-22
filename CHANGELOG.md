@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Say in the email design Styles panel that text with its own size or font in the post has to be changed there instead.
 - Newsletter: Space the settings cards 16px apart, matching the other Jetpack settings screens.
 - Podcast: Use the same cards, column width, and spacing as the other Jetpack settings screens.
+- Premium Analytics: Draw visitors inside the views bar in the Traffic summary's bar chart, as Jetpack Stats v1 does.
 - Premium Analytics: Hide Stats CSV exports on plans that do not include them, and lock a post's all-time traffic on free plans.
 - Premium Analytics: Keep the reports and post stats pages opened from the Traffic tab within the plan's dates.
 - Premium Analytics: Limit the Traffic tab's dates and chart grouping to what the site's plan includes, such as the last 7 days on a free plan.
