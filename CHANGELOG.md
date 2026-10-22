@@ -80,6 +80,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Share the group card and toolbar between the MCP Read and Write views.
 - Comments: Stop loading the subscribe modal on Atomic sites that use the new comment form, which never opens it.
 - Protect: Add a page that shows whether the threats from an alert still need attention, were fixed, or were ignored.
+- Reprint export: Accept public-key signed export requests and update Reprint to 0.11.2.
 - Settings: Remove the Security tab when the Protect page is on, and send its links and searches there.
 - Settings: Stop adding the `origin_site_id` parameter to the Reader link.
 - Stats: Add a feature flag that retires the classic Stats page in favor of Stats v2.

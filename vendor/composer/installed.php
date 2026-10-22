@@ -661,13 +661,13 @@
         'wp-php-toolkit/reprint-exporter' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => 'v0.10.6',
+                0 => 'v0.11.2',
             ),
         ),
         'wp-php-toolkit/reprint-server' => array(
-            'pretty_version' => 'v0.10.6',
-            'version' => '0.10.6.0',
-            'reference' => '9f72c3540425e73c9f6f2d70abbc7ebf0a181f82',
+            'pretty_version' => 'v0.11.2',
+            'version' => '0.11.2.0',
+            'reference' => '07e6a532fd505344ef06f1aa10fa0dddf767fa48',
             'type' => 'library',
             'install_path' => __DIR__ . '/../wp-php-toolkit/reprint-server',
             'aliases' => array(),
