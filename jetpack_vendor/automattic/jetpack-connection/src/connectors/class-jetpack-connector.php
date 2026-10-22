@@ -109,7 +109,7 @@ class Jetpack_Connector {
 	 *
 	 * @since 8.2.0
 	 * @since 9.11.0 Loads the webpack build from dist/, with its dependencies and version from the asset file.
-	 * @since 9.13.1-alpha Loads the Tracks script when tracking is allowed.
+	 * @since 9.14.0-alpha Loads the Tracks script when tracking is allowed.
 	 */
 	public static function enqueue_script_module() {
 		$screen = get_current_screen();
@@ -230,10 +230,6 @@ class Jetpack_Connector {
 
 		if ( $is_connected ) {
 			$data['connectedUsersUrl'] = Users_Connection_Admin::get_connected_view_url();
-
-			if ( $manager->is_connection_owner() ) {
-				$data['hasOtherConnectedUsers'] = count( $manager->get_connected_users( 'any', 2 ) ) > 1;
-			}
 		}
 
 		$data['connectionOwnerEditUrl'] = static::get_connection_owner_edit_url( ( new Status() )->is_offline_mode() );

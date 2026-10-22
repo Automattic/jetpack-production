@@ -28,7 +28,7 @@
 		"automattic/jetpack-compat": "^5.0.1-alpha",
 		"automattic/jetpack-composer-plugin": "^5.0.1",
 		"automattic/jetpack-config": "^4.0.1",
-		"automattic/jetpack-connection": "^9.13.1-alpha",
+		"automattic/jetpack-connection": "^9.14.0-alpha",
 		"automattic/jetpack-constants": "^4.0.1",
 		"automattic/jetpack-device-detection": "^4.0.1",
 		"automattic/jetpack-error": "^4.0.1-alpha",
