@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Offer switching the dashboard off only while the site still has a classic Stats page to return to.
 - Premium Analytics: Show one upgrade prompt in place of Insights, and of Traffic below the chart, on free WordPress.com sites.
 - Premium Analytics: Show the chart groupings the site's plan locks in the chart interval menu, with an upgrade link.
+- Premium Analytics: Stop the tour from offering period comparison on a free plan, which covers only the last 7 days.
 - Protect: Animate the shield on the Protect page, with a particle burst when a scan finishes clean.
 - Protect: Make the new Protect page available to turn on from My Jetpack or Jetpack › Modules.
 - Protect: Show requests blocked today and in the last 30 days, and when the automatic firewall rules were last updated, on the Protect dashboard's Firewall card.

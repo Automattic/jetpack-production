@@ -358,6 +358,7 @@ __( "Rearrange it your way", "jetpack-premium-analytics-pkg" );
 __( "Select Customize in this menu to move and resize widgets. Your layout is saved to your profile.", "jetpack-premium-analytics-pkg" );
 __( "A better date picker", "jetpack-premium-analytics-pkg" );
 __( "Pick any period and compare it with the one before it.", "jetpack-premium-analytics-pkg" );
+__( "See how your site did on any day of the last 7 days.", "jetpack-premium-analytics-pkg" );
 __( "One last thing", "jetpack-premium-analytics-pkg" );
 __( "This menu is where you can share feedback and switch the preview off if you want. It's an early version, so do tell us what's working and what isn't.", "jetpack-premium-analytics-pkg" );
 __( "Your store data is still syncing. The numbers below are incomplete until it finishes.", "jetpack-premium-analytics-pkg" );

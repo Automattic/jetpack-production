@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Hide Stats CSV exports on plans that do not include them, and lock a post's all-time traffic on free plans.
 - Page options: offer switching the dashboard off only while the site still has a classic Stats page to return to.
+- Stop the tour from offering period comparison on a free plan, which covers only the last 7 days.
 - Update package dependencies.
 
 ### Fixed
