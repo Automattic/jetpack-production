@@ -283,6 +283,7 @@ return array(
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Starter' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-starter.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Stats' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-stats.php',
     'Automattic\\Jetpack\\My_Jetpack\\Products\\Videopress' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-videopress.php',
+    'Automattic\\Jetpack\\My_Jetpack\\REST_Blog_Posts' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-blog-posts.php',
     'Automattic\\Jetpack\\My_Jetpack\\REST_Main_Features' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-main-features.php',
     'Automattic\\Jetpack\\My_Jetpack\\REST_Onboarding' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-onboarding.php',
     'Automattic\\Jetpack\\My_Jetpack\\REST_Products' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-rest-products.php',

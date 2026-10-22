@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a "What's new in Jetpack?" section with recent Jetpack.com blog posts to the Overview, shown only while the Overview v1 feature flag is on.
 - Add the Overview v1 sections with Stats, Protect and Boost, shown only while the Overview v1 feature flag is on.
 - Add the `jetpack_my_jetpack_feature_upgrade` filter, so a host can send a feature's Upgrade button to its own plans.
 - Features: Add the default-off `my-jetpack-account-connect` flag, which starts the account connection from the Install or Connect button of features that need a WordPress.com account.
