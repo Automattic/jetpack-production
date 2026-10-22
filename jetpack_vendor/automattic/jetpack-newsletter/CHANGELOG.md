@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Reader: Stop adding the `origin_site_id` parameter to Reader links.
 
 ### Fixed
+- Decode HTML entities in recent post titles on the Overview page.
 - Settings: Ask before leaving the page while a section has unsaved changes.
 - Subscribers: Remember the chosen number of subscribers per page.
 

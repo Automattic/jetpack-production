@@ -48,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 - Blogroll block: Stop asking to save Blogroll Recommendations when nothing in the block changed.
 - Comments API: Hide Fediverse likes, reposts, and quotes from comment lists unless the request asks for a type.
 - Connection: Explain why connecting the site failed instead of showing a raw or generic error.
+- Decode HTML entities in recent post titles on the Overview page.
 - Features: Show a plugin as active when a Beta or -dev copy is active beside an installed stable copy, and turn off the active copy when deactivating it.
 - Modules: Fix a fatal error on the Modules screen when the tag filter in the address is not plain text.
 - My Jetpack: Fetch a new speed score when the saved one is incomplete, instead of showing an empty score.
