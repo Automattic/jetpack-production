@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin menu: Make the top-level Jetpack menu link open My Jetpack instead of Akismet Anti-spam.
 - AI: Open the new SEO page from the SEO settings link on every site that has it, instead of the Traffic settings.
 - Blogroll block: Stop asking to save Blogroll Recommendations when nothing in the block changed.
+- Comments API: Hide Fediverse likes, reposts, and quotes from comment lists unless the request asks for a type.
 - Connection: Explain why connecting the site failed instead of showing a raw or generic error.
 - Features: Show a plugin as active when a Beta or -dev copy is active beside an installed stable copy, and turn off the active copy when deactivating it.
 - Modules: Fix a fatal error on the Modules screen when the tag filter in the address is not plain text.
