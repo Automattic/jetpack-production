@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Decode HTML entities in recent post titles on the Overview page.
 - Settings: Ask before leaving the page while a section has unsaved changes.
+- Show a dash instead of 0% for a post's open and click rates until it has recorded sends.
 - Subscribers: Remember the chosen number of subscribers per page.
 
 ## [0.18.1] - 2026-10-19

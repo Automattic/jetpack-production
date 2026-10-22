@@ -72,6 +72,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Open the Instant Search filters panel below the results header on small screens, so the Filters toggle stays visible.
 - SEO: Generate alt text for newly inserted images when "Auto-generate metadata" is on, even if "Image alt text" was unticked earlier.
 - Sharing Buttons block: Avoid duplicate ids when the block appears more than once on a page.
+- Show a dash instead of 0% for a post's open and click rates until it has recorded sends.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Abilities: Report whether a filter or the host forces a module on or off in the modules list.
