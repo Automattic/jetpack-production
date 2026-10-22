@@ -10,4 +10,3 @@ __( "All-time most commented authors", "jetpack-premium-analytics-pkg" );
 __( "Authors", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load comment authors. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "You don’t have comments recorded yet.", "jetpack-premium-analytics-pkg" );
-__( "See the comment authors report", "jetpack-premium-analytics-pkg" );

@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Page options: offer switching the dashboard off only while the site still has a classic Stats page to return to.
 - Stop the tour from offering period comparison on a free plan, which covers only the last 7 days.
 - Update package dependencies.
+- Widgets: Show the View all link and the CSV download in the card footer.
 
 ### Fixed
 - Fix post, video and author stats pages that could crash with "Something went wrong" right after opening.
