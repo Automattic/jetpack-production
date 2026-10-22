@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Dashboard: Activate free Search in place from "Start for free" instead of falling back to the $0 checkout.
 - Instant Search: Open the filters panel below the results header on small screens, so the Filters toggle stays visible.
 
 ## [8.3.3] - 2026-10-19

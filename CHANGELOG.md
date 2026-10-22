@@ -63,6 +63,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast: Recognize Pro subscriptions and replace retired Growth purchase offers with an available plan.
 - Premium Analytics: Fix post, video and author stats pages that could crash with "Something went wrong" right after opening.
 - Premium Analytics: Make widget titles, descriptions, help notes and settings labels translatable.
+- Search: Activate free Search in place from "Start for free" instead of falling back to the $0 checkout.
 - Search: Open the Instant Search filters panel below the results header on small screens, so the Filters toggle stays visible.
 - SEO: Generate alt text for newly inserted images when "Auto-generate metadata" is on, even if "Image alt text" was unticked earlier.
 - Sharing Buttons block: Avoid duplicate ids when the block appears more than once on a page.
