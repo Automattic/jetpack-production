@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Require widget contract 2.0.0 of the Premium Analytics dashboard.
 - WordAds earnings history widget: Show the View all link and the adjustments count in the card footer.
 
 ### Fixed

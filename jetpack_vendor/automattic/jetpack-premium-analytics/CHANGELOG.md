@@ -25,6 +25,9 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 - Widgets: Show the View all link and the CSV download in the card footer.
 
+### Removed
+- Remove the inline widget footer: WidgetFooter, ReportLink, ExporterCsvDownloadButton and the Leaderboard footer prop. A widget declares its footer with useReportActions; widget contract 2.0.0.
+
 ### Fixed
 - Fix post, video and author stats pages that could crash with "Something went wrong" right after opening.
 - Widget titles, descriptions, help notes and settings labels declared in widget.json reach the translation catalog.
