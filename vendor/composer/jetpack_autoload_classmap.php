@@ -1647,39 +1647,39 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-woocommerce-analytics-tracker.php'
 	),
 	'Automattic\\Jetpack\\Protect\\Dashboard' => array(
-		'version' => '0.3.0.0-alpha1792691337',
+		'version' => '0.3.0.0-alpha1792701076',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/class-dashboard.php'
 	),
 	'Automattic\\Jetpack\\Protect\\Dashboard_Section' => array(
-		'version' => '0.3.0.0-alpha1792691337',
+		'version' => '0.3.0.0-alpha1792701076',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/interface-dashboard-section.php'
 	),
 	'Automattic\\Jetpack\\Protect\\Dashboard_Threats' => array(
-		'version' => '0.3.0.0-alpha1792691337',
+		'version' => '0.3.0.0-alpha1792701076',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/class-dashboard-threats.php'
 	),
 	'Automattic\\Jetpack\\Protect\\Sections\\Firewall' => array(
-		'version' => '0.3.0.0-alpha1792691337',
+		'version' => '0.3.0.0-alpha1792701076',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-firewall.php'
 	),
 	'Automattic\\Jetpack\\Protect\\Sections\\History' => array(
-		'version' => '0.3.0.0-alpha1792691337',
+		'version' => '0.3.0.0-alpha1792701076',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-history.php'
 	),
 	'Automattic\\Jetpack\\Protect\\Sections\\Login_Protection' => array(
-		'version' => '0.3.0.0-alpha1792691337',
+		'version' => '0.3.0.0-alpha1792701076',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-login-protection.php'
 	),
 	'Automattic\\Jetpack\\Protect\\Sections\\Monitor' => array(
-		'version' => '0.3.0.0-alpha1792691337',
+		'version' => '0.3.0.0-alpha1792701076',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-monitor.php'
 	),
 	'Automattic\\Jetpack\\Protect\\Sections\\Scan' => array(
-		'version' => '0.3.0.0-alpha1792691337',
+		'version' => '0.3.0.0-alpha1792701076',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-scan.php'
 	),
 	'Automattic\\Jetpack\\Protect\\Threat_Count' => array(
-		'version' => '0.3.0.0-alpha1792691337',
+		'version' => '0.3.0.0-alpha1792701076',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/class-threat-count.php'
 	),
 	'Automattic\\Jetpack\\Protect_Models' => array(

@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the widgets' View all link and CSV download in the card footer.
 - Premium Analytics: Stop the tour from offering period comparison on a free plan, which covers only the last 7 days.
 - Protect: Animate the shield on the Protect page, with a particle burst when a scan finishes clean.
+- Protect: Explain what the Scan history's Fixed and Ignored lists will show when they are empty.
 - Protect: Make the new Protect page available to turn on from My Jetpack or Jetpack › Modules.
 - Protect: Show requests blocked today and in the last 30 days, and when the automatic firewall rules were last updated, on the Protect dashboard's Firewall card.
 - Protect: Show what Scan adds, such as malware scanning and automatic firewall rules, on the Protect page's Scan and Firewall cards for sites without it.

@@ -403,8 +403,10 @@ __( "Fixed on", "jetpack-protect-pkg" );
 __( "Fixed (%d)", "jetpack-protect-pkg" );
 /* translators: %d is a number of threats. */
 __( "Ignored (%d)", "jetpack-protect-pkg" );
-__( "Threats Scan fixes will appear here.", "jetpack-protect-pkg" );
-__( "Threats you ignore will appear here.", "jetpack-protect-pkg" );
+__( "No fixed threats yet", "jetpack-protect-pkg" );
+__( "When Scan fixes a threat on your site, it will be listed here with the date it was fixed.", "jetpack-protect-pkg" );
+__( "No ignored threats", "jetpack-protect-pkg" );
+__( "Threats you ignore will be listed here, where you can unignore them at any time.", "jetpack-protect-pkg" );
 __( "Loading scan history…", "jetpack-protect-pkg" );
 __( "Scan history", "jetpack-protect-pkg" );
 _x( "Breadcrumbs", "aria label", "jetpack-protect-pkg" );

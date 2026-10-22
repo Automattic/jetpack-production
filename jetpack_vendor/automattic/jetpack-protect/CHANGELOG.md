@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Dashboard: Animate the safe-state shield, with a particle burst when a scan finishes clean.
+- Dashboard: Explain what the History tab's Fixed and Ignored lists will show when they are empty.
 - Dashboard: Redesign the Login protection card with toggles for account protection and Secure Sign On.
 - Give the Firewall card a shield with a flame icon, so it no longer shares the Scan card's shield.
 - Protect dashboard: Stop calling a site without a Scan plan safe when no known vulnerabilities are found.
