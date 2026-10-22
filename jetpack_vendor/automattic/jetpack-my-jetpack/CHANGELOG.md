@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add the Overview v1 sections with Stats, Protect and Boost, shown only while the Overview v1 feature flag is on.
 - Add the `jetpack_my_jetpack_feature_upgrade` filter, so a host can send a feature's Upgrade button to its own plans.
 - Features: Add the default-off `my-jetpack-account-connect` flag, which starts the account connection from the Install or Connect button of features that need a WordPress.com account.
+- Features: Offer Connect on Jetpack AI behind the default-off `my-jetpack-account-connect` flag when a WordPress.com account is all it is missing.
 
 ### Changed
 - Backup: Show Backup's state from the site's plan on its Features card instead of a switch, offering an upgrade, or a renewal for an expired plan.
