@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Recognize Jetpack Pro licenses.
+- Restore: On sites hosted on WordPress.com, warn about known security threats in a backup and ask for confirmation before restoring it. Backups with known threats are marked in the list, and the backup details show the warning. The Activity Log's "Restore backup" now opens this restore screen when the new dashboard is on.
 
 ### Changed
 - Show the redesigned dashboard by default. Return false from the `rsm_jetpack_ui_modernization_backup` filter to keep the legacy dashboard.

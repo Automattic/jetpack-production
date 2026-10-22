@@ -278,6 +278,10 @@ __( "via MCP", "jetpack-activity-log" );
 __( "Unknown", "jetpack-activity-log" );
 __( "Server", "jetpack-activity-log" );
 __( "Happiness Engineer", "jetpack-activity-log" );
+/* translators: %d: number of malware and database threats in the backup. */
+_n( "This backup is known to contain %d security threat. Restoring it may bring malware back to your site.", "This backup is known to contain %d security threats. Restoring it may bring malware back to your site.", 1, "jetpack-activity-log" );
+/* translators: %d: number of known security threats in a backup. */
+__( "Known threats (%d)", "jetpack-activity-log" );
 __( "Date & time (%s)", "jetpack-activity-log" );
 __( "Date & time", "jetpack-activity-log" );
 __( "Date & time (UTC)", "jetpack-activity-log" );

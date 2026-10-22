@@ -11,6 +11,7 @@ __( "(opens in a new tab)", "jetpack-backup-pkg" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-backup-pkg" );
 __( "Loading", "jetpack-backup-pkg" );
+__( "More details follow the field.", "jetpack-backup-pkg" );
 __( "More details follow.", "jetpack-backup-pkg" );
 __( "Dismiss", "jetpack-backup-pkg" );
 __( "Something went wrong", "jetpack-backup-pkg" );
@@ -82,6 +83,32 @@ __( "Link my account", "jetpack-backup-pkg" );
 __( "Loading your backup details…", "jetpack-backup-pkg" );
 __( "Save changes and restore quickly with one-click recovery.", "jetpack-backup-pkg" );
 __( "Back to overview", "jetpack-backup-pkg" );
+/* translators: 1: a date, 2: a time of day. */
+_x( "%1$s %2$s", "date and time", "jetpack-backup-pkg" );
+__( "Database threat", "jetpack-backup-pkg" );
+__( "Malware", "jetpack-backup-pkg" );
+/* translators: %s: the date the threat was fixed. */
+__( "Fixed %s", "jetpack-backup-pkg" );
+__( "Fixed", "jetpack-backup-pkg" );
+__( "Ignored", "jetpack-backup-pkg" );
+__( "Open", "jetpack-backup-pkg" );
+/* translators: 1: the date Scan first detected a threat, 2: its status now, such as "Open" or "Fixed Oct 17, 2026". */
+__( "First detected %1$s · %2$s", "jetpack-backup-pkg" );
+__( "It's the most recent backup with no known security threats.", "jetpack-backup-pkg" );
+/* translators: %d: number of known security threats in the backup. */
+_n( "This backup is known to contain %d security threat. Restoring it may bring malware back to your site.", "This backup is known to contain %d security threats. Restoring it may bring malware back to your site.", 1, "jetpack-backup-pkg" );
+__( "This backup is known to contain security threats. Acknowledge them to restore it.", "jetpack-backup-pkg" );
+__( "Hide threats", "jetpack-backup-pkg" );
+__( "Show threats", "jetpack-backup-pkg" );
+__( "Known threats in this backup", "jetpack-backup-pkg" );
+/* translators: %d: number of threats listed above. */
+_n( "Showing the first %d threat.", "Showing the first %d threats.", 1, "jetpack-backup-pkg" );
+/* translators: %d: number of vulnerable plugin or theme versions in the backup. */
+_n( "Also: %d vulnerable plugin or theme version.", "Also: %d vulnerable plugin or theme versions.", 1, "jetpack-backup-pkg" );
+/* translators: %s: a backup's date and time. */
+__( "Restore %s backup instead", "jetpack-backup-pkg" );
+__( "Restore the latest backup without known threats instead", "jetpack-backup-pkg" );
+__( "I understand this backup contains known threats and want to restore it anyway.", "jetpack-backup-pkg" );
 __( "WordPress themes", "jetpack-backup-pkg" );
 __( "WordPress plugins", "jetpack-backup-pkg" );
 __( "WordPress root", "jetpack-backup-pkg" );
@@ -94,10 +121,13 @@ __( "Media uploads", "jetpack-backup-pkg" );
 __( "you must also select Site database for restored media uploads to appear", "jetpack-backup-pkg" );
 /* translators: 1: item name, e.g. "Media uploads". 2: short note about what it covers, e.g. "includes pages and posts". */
 __( "<strong>%1$s</strong> (%2$s)", "jetpack-backup-pkg" );
-/* translators: 1: a date, 2: a time of day. */
-_x( "%1$s %2$s", "date and time", "jetpack-backup-pkg" );
 __( "Restore failed.", "jetpack-backup-pkg" );
 __( "Your restore didn't start, so nothing on your site has changed.", "jetpack-backup-pkg" );
+__( "No known threats found in this backup.", "jetpack-backup-pkg" );
+__( "You can now restore this backup.", "jetpack-backup-pkg" );
+__( "Select at least one item to restore.", "jetpack-backup-pkg" );
+__( "Checking this backup for known threats…", "jetpack-backup-pkg" );
+__( "To restore this backup, confirm that you understand it contains known threats.", "jetpack-backup-pkg" );
 __( "We've lost track of this restore. It may still be running — you'll get an email when it finishes.", "jetpack-backup-pkg" );
 __( "This restore link isn't valid.", "jetpack-backup-pkg" );
 __( "The address is missing a valid restore point. Go back to the overview and choose a backup to restore.", "jetpack-backup-pkg" );
@@ -111,7 +141,6 @@ __( "Restore backup", "jetpack-backup-pkg" );
 __( "Restore point: %s", "jetpack-backup-pkg" );
 __( "Restoring replaces the items you select below with their versions from this backup. Everything else stays as it is. This cannot be undone.", "jetpack-backup-pkg" );
 __( "Choose the items you wish to restore:", "jetpack-backup-pkg" );
-__( "Select at least one item to restore.", "jetpack-backup-pkg" );
 __( "Confirm restore", "jetpack-backup-pkg" );
 __( "Waiting for your restore to begin", "jetpack-backup-pkg" );
 __( "Restoring your site", "jetpack-backup-pkg" );

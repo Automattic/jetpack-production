@@ -227,21 +227,25 @@ __( "Value must be true, false, or undefined", "jetpack-backup-pkg" );
 __( "Value must be an array.", "jetpack-backup-pkg" );
 __( "Every value must be a string.", "jetpack-backup-pkg" );
 __( "Value must be a valid color.", "jetpack-backup-pkg" );
+__( "The site doesn't appear to be connected. Backup requires an active Jetpack connection in order to function properly.", "jetpack-backup-pkg" );
+/* translators: 1: what failed, in our own words. 2: the reason WordPress.com gave, usually in English. */
+__( "%1$s WordPress.com said: %2$s", "jetpack-backup-pkg" );
+__( "Request failed", "jetpack-backup-pkg" );
 /* translators: %s: a storage size number, e.g. "512". */
 _x( "%sMB", "storage size in megabytes", "jetpack-backup-pkg" );
 /* translators: %s: a storage size number, e.g. "1.5". */
 _x( "%sTB", "storage size in terabytes", "jetpack-backup-pkg" );
 /* translators: %s: a storage size number, e.g. "12.4". */
 _x( "%sGB", "storage size in gigabytes", "jetpack-backup-pkg" );
-__( "The site doesn't appear to be connected. Backup requires an active Jetpack connection in order to function properly.", "jetpack-backup-pkg" );
-/* translators: 1: what failed, in our own words. 2: the reason WordPress.com gave, usually in English. */
-__( "%1$s WordPress.com said: %2$s", "jetpack-backup-pkg" );
-__( "Request failed", "jetpack-backup-pkg" );
 __( "Restore in progress", "jetpack-backup-pkg" );
 __( "Restore complete", "jetpack-backup-pkg" );
 __( "Restore didn't finish", "jetpack-backup-pkg" );
 /* translators: %s: date and time of the backup that was restored. */
 __( "Restore to %s", "jetpack-backup-pkg" );
+/* translators: %d: number of known security threats in a backup. */
+__( "Known threats (%d)", "jetpack-backup-pkg" );
+/* translators: %d: number of known security threats in the backup. */
+_n( "This backup is known to contain %d security threat. Restoring it may bring malware back to your site.", "This backup is known to contain %d security threats. Restoring it may bring malware back to your site.", 1, "jetpack-backup-pkg" );
 __( "Restore ID: %s", "jetpack-backup-pkg" );
 __( "Download ID: %s", "jetpack-backup-pkg" );
 __( "Backup attempt ID: %s", "jetpack-backup-pkg" );
@@ -260,6 +264,7 @@ __( "We couldn't load your site's activity.", "jetpack-backup-pkg" );
 __( "Icon", "jetpack-backup-pkg" );
 __( "Title", "jetpack-backup-pkg" );
 __( "When", "jetpack-backup-pkg" );
+__( "Warning", "jetpack-backup-pkg" );
 __( "Latest backups", "jetpack-backup-pkg" );
 /* translators: %d: number of restore points shown on each page of the list. */
 _n( "Restore points from your site's activity. %d per page.", "Restore points from your site's activity. %d per page.", 1, "jetpack-backup-pkg" );
@@ -304,6 +309,28 @@ __( "File: %s", "jetpack-backup-pkg" );
 __( "Couldn't load this folder.", "jetpack-backup-pkg" );
 /* translators: shown inside an expanded folder in the backup file browser when the folder contains no files. */
 __( "Empty", "jetpack-backup-pkg" );
+__( "Database threat", "jetpack-backup-pkg" );
+__( "Malware", "jetpack-backup-pkg" );
+/* translators: %s: the date the threat was fixed. */
+__( "Fixed %s", "jetpack-backup-pkg" );
+__( "Fixed", "jetpack-backup-pkg" );
+__( "Ignored", "jetpack-backup-pkg" );
+__( "Open", "jetpack-backup-pkg" );
+/* translators: 1: the date Scan first detected a threat, 2: its status now, such as "Open" or "Fixed Oct 17, 2026". */
+__( "First detected %1$s · %2$s", "jetpack-backup-pkg" );
+__( "It's the most recent backup with no known security threats.", "jetpack-backup-pkg" );
+__( "This backup is known to contain security threats. Acknowledge them to restore it.", "jetpack-backup-pkg" );
+__( "Hide threats", "jetpack-backup-pkg" );
+__( "Show threats", "jetpack-backup-pkg" );
+__( "Known threats in this backup", "jetpack-backup-pkg" );
+/* translators: %d: number of threats listed above. */
+_n( "Showing the first %d threat.", "Showing the first %d threats.", 1, "jetpack-backup-pkg" );
+/* translators: %d: number of vulnerable plugin or theme versions in the backup. */
+_n( "Also: %d vulnerable plugin or theme version.", "Also: %d vulnerable plugin or theme versions.", 1, "jetpack-backup-pkg" );
+/* translators: %s: a backup's date and time. */
+__( "Restore %s backup instead", "jetpack-backup-pkg" );
+__( "Restore the latest backup without known threats instead", "jetpack-backup-pkg" );
+__( "I understand this backup contains known threats and want to restore it anyway.", "jetpack-backup-pkg" );
 __( "Download backup", "jetpack-backup-pkg" );
 /* translators: %d count of selected items (files + opaque folders) */
 _n( "Download %d selected item", "Download %d selected items", 1, "jetpack-backup-pkg" );
@@ -313,6 +340,8 @@ __( "Took %s", "jetpack-backup-pkg" );
 __( "Site size at backup: %s", "jetpack-backup-pkg" );
 /* translators: %1$s: the site's size when it was backed up, e.g. "4.2GB". %2$s: how long the backup ran, e.g. "28 minutes". */
 __( "Site size at backup: %1$s · Took %2$s", "jetpack-backup-pkg" );
+__( "To restore this backup, confirm that you understand it contains known threats.", "jetpack-backup-pkg" );
+__( "You can now restore this backup with \"Restore to this point\", at the top of this panel.", "jetpack-backup-pkg" );
 __( "Restore to this point", "jetpack-backup-pkg" );
 __( "Could not start a backup. Please try again.", "jetpack-backup-pkg" );
 __( "Back up now", "jetpack-backup-pkg" );
