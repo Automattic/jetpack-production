@@ -353,9 +353,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-masterbar' => array(
-            'pretty_version' => '0.29.6-alpha.1792502969',
-            'version' => '0.29.6.0-alpha1792502969',
-            'reference' => 'fb08f974a222ed6f73b256ef6ffd8d761e94e2f3',
+            'pretty_version' => '0.30.0-alpha.1792647392',
+            'version' => '0.30.0.0-alpha1792647392',
+            'reference' => '615ed17b02fafbe3746e794f2f45201ba3aa311e',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-masterbar',
             'aliases' => array(),
