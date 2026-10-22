@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.4.4-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Activity Log: Match the Activity Log events REST route case-insensitively.
+
 ## [5.4.3] - 2026-10-20
 ### Changed
 - Internal updates.
@@ -1883,6 +1890,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Move sync to a classmapped package
 
+[5.4.4-alpha]: https://github.com/Automattic/jetpack-sync/compare/v5.4.3...v5.4.4-alpha
 [5.4.3]: https://github.com/Automattic/jetpack-sync/compare/v5.4.2...v5.4.3
 [5.4.2]: https://github.com/Automattic/jetpack-sync/compare/v5.4.1...v5.4.2
 [5.4.1]: https://github.com/Automattic/jetpack-sync/compare/v5.4.0...v5.4.1
