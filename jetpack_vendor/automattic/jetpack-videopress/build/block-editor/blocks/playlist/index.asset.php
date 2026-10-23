@@ -11,7 +11,6 @@
 		'wp-escape-html',
 		'wp-html-entities',
 		'wp-i18n',
-		'wp-polyfill',
 		'wp-primitives',
 		'wp-url'
 	),

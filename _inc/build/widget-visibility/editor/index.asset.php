@@ -13,7 +13,6 @@
 		'wp-hooks',
 		'wp-i18n',
 		'wp-plugins',
-		'wp-polyfill',
 		'wp-url'
 	),
 	'version' => '57fb85f1d0c8c42e7138'

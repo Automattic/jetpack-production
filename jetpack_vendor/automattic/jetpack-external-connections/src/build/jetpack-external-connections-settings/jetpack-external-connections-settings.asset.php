@@ -5,8 +5,7 @@
 		'wp-dom-ready',
 		'wp-element',
 		'wp-hooks',
-		'wp-i18n',
-		'wp-polyfill'
+		'wp-i18n'
 	),
 	'version' => 'aa5031b232bbdad160b0'
 );

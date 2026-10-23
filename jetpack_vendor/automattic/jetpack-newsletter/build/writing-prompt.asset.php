@@ -10,7 +10,6 @@
 		'wp-element',
 		'wp-html-entities',
 		'wp-i18n',
-		'wp-polyfill',
 		'wp-primitives',
 		'wp-private-apis',
 		'wp-theme',

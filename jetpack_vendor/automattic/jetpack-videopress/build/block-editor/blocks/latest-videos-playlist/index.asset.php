@@ -10,7 +10,6 @@
 		'wp-editor',
 		'wp-element',
 		'wp-i18n',
-		'wp-polyfill',
 		'wp-url'
 	),
 	'version' => '82ba779e8abaec15bfe7'

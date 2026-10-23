@@ -5,7 +5,6 @@
 		'wp-commands',
 		'wp-element',
 		'wp-i18n',
-		'wp-polyfill',
 		'wp-primitives'
 	),
 	'version' => 'f84e15586fe8ad83c794'

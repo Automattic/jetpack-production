@@ -9,8 +9,7 @@
 		'wp-data',
 		'wp-element',
 		'wp-hooks',
-		'wp-i18n',
-		'wp-polyfill'
+		'wp-i18n'
 	),
 	'version' => 'e3f1209d5398ca64beb0'
 );

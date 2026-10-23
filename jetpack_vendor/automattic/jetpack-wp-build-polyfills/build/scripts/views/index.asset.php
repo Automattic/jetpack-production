@@ -3,7 +3,6 @@
 		'wp-core-data',
 		'wp-data',
 		'wp-element',
-		'wp-polyfill',
 		'wp-preferences',
 		'wp-private-apis'
 	),

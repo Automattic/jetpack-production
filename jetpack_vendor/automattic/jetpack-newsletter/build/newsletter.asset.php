@@ -14,7 +14,6 @@
 		'wp-element',
 		'wp-i18n',
 		'wp-notices',
-		'wp-polyfill',
 		'wp-primitives',
 		'wp-private-apis',
 		'wp-theme',

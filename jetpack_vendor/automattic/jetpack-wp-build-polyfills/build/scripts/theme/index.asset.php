@@ -4,7 +4,6 @@
 		'wp-compose',
 		'wp-deprecated',
 		'wp-element',
-		'wp-polyfill',
 		'wp-private-apis'
 	),
 	'version' => 'e08321f6f0d9239b81c8'

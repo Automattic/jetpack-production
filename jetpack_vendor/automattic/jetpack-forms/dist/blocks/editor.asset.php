@@ -24,7 +24,6 @@
 		'wp-jp-i18n-loader',
 		'wp-notices',
 		'wp-plugins',
-		'wp-polyfill',
 		'wp-primitives',
 		'wp-private-apis',
 		'wp-theme',

@@ -25,7 +25,6 @@
 		'wp-keycodes',
 		'wp-notices',
 		'wp-plugins',
-		'wp-polyfill',
 		'wp-preferences',
 		'wp-primitives',
 		'wp-priority-queue',

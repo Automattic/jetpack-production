@@ -7,7 +7,6 @@
 		'react-jsx-runtime',
 		'wp-element',
 		'wp-i18n',
-		'wp-polyfill',
 		'wp-url'
 	),
 	'version' => '0cbdc5123617ef1177f3'

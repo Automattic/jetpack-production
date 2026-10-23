@@ -22,7 +22,6 @@
 		'wp-i18n',
 		'wp-keycodes',
 		'wp-plugins',
-		'wp-polyfill',
 		'wp-primitives',
 		'wp-url'
 	),

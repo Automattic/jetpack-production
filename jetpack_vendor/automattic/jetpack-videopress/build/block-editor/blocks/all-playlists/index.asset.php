@@ -7,7 +7,6 @@
 		'wp-components',
 		'wp-element',
 		'wp-i18n',
-		'wp-polyfill',
 		'wp-url'
 	),
 	'version' => '0454db41ddc2c1052c94'

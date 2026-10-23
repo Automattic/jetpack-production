@@ -13,7 +13,6 @@
 		'wp-hooks',
 		'wp-i18n',
 		'wp-plugins',
-		'wp-polyfill',
 		'wp-primitives',
 		'wp-url'
 	),

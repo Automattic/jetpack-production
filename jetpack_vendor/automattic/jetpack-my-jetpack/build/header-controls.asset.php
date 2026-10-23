@@ -13,7 +13,6 @@
 		'wp-date',
 		'wp-element',
 		'wp-i18n',
-		'wp-polyfill',
 		'wp-primitives'
 	),
 	'version' => '438107375a06d648b347'

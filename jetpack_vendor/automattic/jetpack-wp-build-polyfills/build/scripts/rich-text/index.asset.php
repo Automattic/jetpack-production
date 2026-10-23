@@ -8,7 +8,6 @@
 		'wp-escape-html',
 		'wp-i18n',
 		'wp-keycodes',
-		'wp-polyfill',
 		'wp-private-apis'
 	),
 	'version' => 'f716a43110de1b121d4f'

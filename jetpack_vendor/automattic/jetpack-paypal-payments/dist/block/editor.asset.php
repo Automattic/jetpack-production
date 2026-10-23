@@ -15,7 +15,6 @@
 		'wp-hooks',
 		'wp-i18n',
 		'wp-plugins',
-		'wp-polyfill',
 		'wp-url',
 		'wp-widgets'
 	),

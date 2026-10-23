@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add an editor loader script that lets other hosts, such as the WordPress.com Reader, load the comment block editor.
 
+### Changed
+- Stop loading the `wp-polyfill` script with the comment form and on the Edit Comment screen.
+
 ### Fixed
 - Fix fatal errors when another plugin or theme returns an empty value from a comment form or comment content filter.
 - Identity: Describe WordPress.com sign-ins to Akismet the same way on every host.
