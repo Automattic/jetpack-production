@@ -282,3 +282,8 @@ __( "Validating…", "jetpack-premium-analytics-pkg" );
 /* translators: %d: Number of fields that need attention */
 _n( "%d field needs attention", "%d fields need attention", 1, "jetpack-premium-analytics-pkg" );
 __( "More details", "jetpack-premium-analytics-pkg" );
+__( "An Automattic Airline", "jetpack-premium-analytics-pkg" );
+__( "Jetpack Logo", "jetpack-premium-analytics-pkg" );
+__( "Features", "jetpack-premium-analytics-pkg" );
+__( "Help", "jetpack-premium-analytics-pkg" );
+__( "Jetpack", "jetpack-premium-analytics-pkg" );

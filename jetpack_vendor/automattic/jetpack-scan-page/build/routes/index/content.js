@@ -14,10 +14,8 @@ __( "Loading" );
 __( "Close" );
 __( "Dismiss" );
 __( "Sections" );
-__( "Jetpack Logo", "jetpack-components" );
 __( "An Automattic Airline", "jetpack-components" );
-/* translators: accessibility text */
-__( "(opens in a new tab)", "jetpack-components" );
+__( "Jetpack Logo", "jetpack-components" );
 __( "Features", "jetpack-components" );
 __( "Help", "jetpack-components" );
 __( "Jetpack", "jetpack-components" );
@@ -43,6 +41,8 @@ __( "Replace the modified core WordPress file with the original clean version fr
 __( "Replace the infected file with a previously backed up version that is clean.", "jetpack-scan" );
 __( "Replace the default salt keys in wp-config.php with unique ones.", "jetpack-scan" );
 __( "Jetpack will auto-fix the threat.", "jetpack-scan" );
+/* translators: accessibility text */
+__( "(opens in a new tab)", "jetpack-components" );
 __( "An error occurred auto-fixing this threat.", "jetpack-scan" );
 __( "The auto-fixer is taking longer than expected.", "jetpack-scan" );
 __( "An auto-fixer is in progress.", "jetpack-scan" );

@@ -9,8 +9,8 @@
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-protect-pkg" );
 __( "Sections", "jetpack-protect-pkg" );
-__( "Jetpack Logo", "jetpack-protect-pkg" );
 __( "An Automattic Airline", "jetpack-protect-pkg" );
+__( "Jetpack Logo", "jetpack-protect-pkg" );
 __( "Features", "jetpack-protect-pkg" );
 __( "Help", "jetpack-protect-pkg" );
 __( "Jetpack", "jetpack-protect-pkg" );

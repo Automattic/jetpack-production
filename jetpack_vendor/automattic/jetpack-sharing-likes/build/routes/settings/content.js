@@ -25,9 +25,8 @@ __( "More details follow the field.", "jetpack-sharing-likes" );
 __( "More details follow.", "jetpack-sharing-likes" );
 __( "Dismiss", "jetpack-sharing-likes" );
 __( "Sections", "jetpack-sharing-likes" );
-__( "Jetpack Logo", "jetpack-sharing-likes" );
 __( "An Automattic Airline", "jetpack-sharing-likes" );
-__( "Preview and edit", "jetpack-sharing-likes" );
+__( "Jetpack Logo", "jetpack-sharing-likes" );
 __( "Features", "jetpack-sharing-likes" );
 __( "Help", "jetpack-sharing-likes" );
 __( "Jetpack", "jetpack-sharing-likes" );
@@ -209,6 +208,7 @@ __( "Comment Likes currently appear on comments on: %s.", "jetpack-sharing-likes
 /* translators: %s: comma-separated list of places, for example "Posts, Pages". */
 __( "Sharing buttons currently appear on: %s.", "jetpack-sharing-likes" );
 __( "Change where they appear", "jetpack-sharing-likes" );
+__( "Preview and edit", "jetpack-sharing-likes" );
 __( "Add the Sharing Buttons block to posts and pages", "jetpack-sharing-likes" );
 __( "Add the Like block to posts and pages", "jetpack-sharing-likes" );
 _x( "Before the content", "Where the block goes", "jetpack-sharing-likes" );

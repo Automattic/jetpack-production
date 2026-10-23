@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show every row on Stats report pages on one page, instead of splitting them into pages of 10.
 - Premium Analytics: Show one upgrade prompt in place of Insights, and of Traffic below the chart, on free WordPress.com sites.
 - Premium Analytics: Show the chart groupings the site's plan locks in the chart interval menu, with an upgrade link.
+- Premium Analytics: Show the Jetpack footer at the bottom of every Stats page, like other Jetpack screens.
 - Premium Analytics: Show the widgets' View all link and CSV download in the card footer.
 - Premium Analytics: Stop the tour from offering period comparison on a free plan, which covers only the last 7 days.
 - Protect: Animate the shield on the Protect page, with a particle burst when a scan finishes clean.

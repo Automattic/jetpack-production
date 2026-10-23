@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Offer daily intervals on long date ranges in the Traffic summary line chart.
 - Show one upgrade prompt in place of Insights, and of Traffic below the chart, on free WordPress.com sites.
 - Show the chart groupings the site's plan locks in the chart interval menu, with an upgrade link.
+- Show the Jetpack footer at the bottom of every Stats page, like other Jetpack screens.
 - Stats links: Open the dashboard from old Stats page links once no plugin registers the classic Stats page.
 - Widgets: let a chart type option name its icon as a `jpa/<name>` reference, the form a widget.json can carry.
 
