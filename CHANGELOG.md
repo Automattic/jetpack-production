@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI: Add a remote abilities allowlist to the MCP Read and Write views on self-hosted sites.
 - AI: Add search and copyable per-tool links to the MCP Read and Write views.
 - AI: Keep the MCP Read and Write toolbar pinned while the tool groups scroll.
 - Backup: Link backups in the Activity Log to that backup in the Backup dashboard, which now opens any backup from a link, not only those on the activity page it shows. Backups that finished with warnings can now be opened and restored there too.
