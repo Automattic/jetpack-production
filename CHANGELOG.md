@@ -68,6 +68,7 @@ This is an alpha version! The changes listed here are not final.
 - Decode HTML entities in recent post titles on the Overview page.
 - Features: Show a plugin as active when a Beta or -dev copy is active beside an installed stable copy, and turn off the active copy when deactivating it.
 - Modules: Fix a fatal error on the Modules screen when the tag filter in the address is not plain text.
+- Modules: Fix a fatal error when the module information link in the address is not plain text.
 - My Jetpack: Fetch a new speed score when the saved one is incomplete, instead of showing an empty score.
 - My Jetpack: Keep the Help tab's cards inside their column on narrow screens.
 - My Jetpack: Stop offering retired Security and Growth plans while preserving existing subscriptions.
