@@ -82,6 +82,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Stop telling editors and authors that PayPal is disconnected when they simply do not manage the connection, and stop offering them a reconnect flow they cannot complete.
 - Podcast: Keep a newly picked category, explicit setting or cover image on screen while it saves, instead of showing the old one until the save finishes.
 - Podcast: Recognize Pro subscriptions and replace retired Growth purchase offers with an available plan.
+- Premium Analytics: Delay order analytics sync until the store's analytics full sync starts.
 - Premium Analytics: Fix post, video and author stats pages that could crash with "Something went wrong" right after opening.
 - Premium Analytics: Leave hidden series out of a line chart's tooltip when you move through the chart with the arrow keys.
 - Premium Analytics: Make widget titles, descriptions, help notes and settings labels translatable.

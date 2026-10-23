@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Page options: offer switching the dashboard off only while the site still has a classic Stats page to return to.
 - Show every row on Stats report pages on one page, instead of splitting them into pages of 10.
 - Stop the tour from offering period comparison on a free plan, which covers only the last 7 days.
+- Sync: Move the store analytics sync opt-in and the lookup data backfill to the WooCommerce Stats package, and record the first full-sync start separately for each analytics module.
 - Traffic summary: Draw visitors inside the views bar in bar charts, as Jetpack Stats v1 does, with the previous period in gray beside them.
 - Update package dependencies.
 - Widgets: Show the View all link and the CSV download in the card footer.

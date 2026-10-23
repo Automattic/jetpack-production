@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Require widget contract 2.0.0 of the Premium Analytics dashboard.
+- Sync no order changes until the WooCommerce analytics module's first full sync starts.
 
 ### Fixed
 - Widget titles, descriptions, help notes and chart type labels declared in widget.json reach the translation catalog.
