@@ -75,6 +75,7 @@ This is an alpha version! The changes listed here are not final.
 - Modules: Fix a fatal error when the module information link in the address is not plain text.
 - My Jetpack: Fetch a new speed score when the saved one is incomplete, instead of showing an empty score.
 - My Jetpack: Keep the Help tab's cards inside their column on narrow screens.
+- My Jetpack: Retry loading the Features list after a rate-limited or unreadable response, and say the list is incomplete when it cannot be loaded.
 - My Jetpack: Stop offering retired Security and Growth plans while preserving existing subscriptions.
 - Newsletter: Ask before leaving the settings page while a section has unsaved changes.
 - Newsletter: Keep the email preview's device highlight on the selected device when the window is resized.
