@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Header: Leave the plan and connection out of the Overview, since the header shows them, while the header controls feature flag is on.
 - Onboarding: Size the terms of service line through its Text variant instead of overriding the shared styles.
 - Overview: Draw the sections as a compact bordered grid with a divider under each heading, shown only while the Overview v1 feature flag is on.
+- Overview: Show the Stats tabs as plain totals above an area chart, while the Overview v1 feature flag is on.
 - Speed up the dashboard by removing duplicate product and plan requests on page load.
 - Update package dependencies.
 
