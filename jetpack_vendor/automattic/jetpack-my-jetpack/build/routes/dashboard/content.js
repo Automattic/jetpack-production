@@ -952,6 +952,8 @@ __( "Are you an agency or freelancer?", "jetpack-my-jetpack" );
 __( "Automattic for Agencies is the ultimate partnership to access agency pricing, referral earnings, partner badges, and powerful tooling for agencies using WordPress.com, Pressable, WooCommerce, Jetpack, and more. Joining is free.", "jetpack-my-jetpack" );
 __( "Sign up now", "jetpack-my-jetpack" );
 __( "Dismiss the Automattic for Agencies banner", "jetpack-my-jetpack" );
+/* translators: %s: The current user's display name. */
+__( "Welcome to Jetpack, %s!", "jetpack-my-jetpack" );
 __( "Welcome to Jetpack", "jetpack-my-jetpack" );
 __( "Done", "jetpack-my-jetpack" );
 __( "Simple, yet powerful stats", "jetpack-my-jetpack" );
