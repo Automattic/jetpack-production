@@ -16,9 +16,11 @@ This is an alpha version! The changes listed here are not final.
 - Features: Add the default-off `my-jetpack-account-connect` flag, which starts the account connection from the Install or Connect button of features that need a WordPress.com account.
 - Features: Offer Connect on Jetpack AI behind the default-off `my-jetpack-account-connect` flag when a WordPress.com account is all it is missing.
 - Features: Turn a feature on when its account connection, started from its Connect button, returns to Features. This is behind the default-off `my-jetpack-account-connect` flag.
+- Fill the Overview v1 sections with the remaining products and replace the old Overview content, shown only while the Overview v1 feature flag is on.
 
 ### Changed
 - Backup: Show Backup's state from the site's plan on its Features card instead of a switch, offering an upgrade, or a renewal for an expired plan.
+- Header: Leave the plan and connection out of the Overview, since the header shows them, while the header controls feature flag is on.
 - Onboarding: Size the terms of service line through its Text variant instead of overriding the shared styles.
 - Speed up the dashboard by removing duplicate product and plan requests on page load.
 - Update package dependencies.
@@ -26,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Boost card: Fetch a new speed score when the saved one is incomplete, instead of showing an empty score.
 - Features: Show a plugin as active when a Beta or -dev copy is active beside an installed stable copy, and turn off the active copy when deactivating it.
+- Header: Stop offering to purchase a plan or activate a license to sites with Jetpack Complete, shown only while the header controls feature flag is on.
 - Help: Keep the help cards inside their column on narrow screens.
 - Onboarding: Explain why connecting failed, with the underlying cause underneath when it helps.
 - Stop offering retired Security and Growth plans while preserving existing subscriptions.
