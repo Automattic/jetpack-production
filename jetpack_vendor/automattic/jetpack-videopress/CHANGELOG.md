@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: Show why connecting the site failed on the pricing and connect screens.
+- Editor: Prevent timeline handles from jumping after releasing a drag outside the timeline.
 - Keep the playhead in place when adjusting trim handles.
 - Top videos widget: the title, description and help note declared in widget.json reach the translation catalog.
 - Video block: Attach newly uploaded videos to the post or page being edited.

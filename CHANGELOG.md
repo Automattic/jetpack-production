@@ -105,6 +105,7 @@ This is an alpha version! The changes listed here are not final.
 - Show a dash instead of 0% for a post's open and click rates until it has recorded sends.
 - VideoPress: Attach newly uploaded videos to the post or page being edited.
 - VideoPress: Keep the playhead in place when adjusting trim handles.
+- VideoPress: Prevent timeline handles from jumping after releasing a drag outside the timeline.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Abilities: Report whether a filter or the host forces a module on or off in the modules list.
