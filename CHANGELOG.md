@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Hide Stats CSV exports on plans that do not include them, and lock a post's all-time traffic on free plans.
 - Premium Analytics: Keep the reports and post stats pages opened from the Traffic tab within the plan's dates.
 - Premium Analytics: Let free WordPress.com sites resize the Traffic views chart with Customize.
+- Premium Analytics: Let Store performance switch between a line and a bar chart in the widget header.
 - Premium Analytics: Limit the Traffic tab's dates and chart grouping to what the site's plan includes, such as the last 7 days on a free plan.
 - Premium Analytics: Name the selected chart interval in the dashboard header instead of showing a bar chart icon.
 - Premium Analytics: Offer a paid Stats plan to free sites 30 days after their first visit.

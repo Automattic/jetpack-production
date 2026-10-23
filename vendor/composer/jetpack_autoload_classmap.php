@@ -2955,15 +2955,15 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Analytics_Dashboard' => array(
-		'version' => '0.2.1.0-alpha1792667371',
+		'version' => '0.3.0.0-alpha1792735197',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-analytics-dashboard.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Api_Proxy_Controller' => array(
-		'version' => '0.2.1.0-alpha1792667371',
+		'version' => '0.3.0.0-alpha1792735197',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-api-proxy-controller.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Store_Currency' => array(
-		'version' => '0.2.1.0-alpha1792667371',
+		'version' => '0.3.0.0-alpha1792735197',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-store-currency.php'
 	),
 	'Automattic\\Jetpack\\WordAds\\Analytics_Dashboard' => array(

@@ -367,7 +367,7 @@ return array(
 		'help'         => array( 'content' => 'Shows key store performance metrics at a glance.' ),
 		'icon'         => 'jpa/store',
 		'actions'      => null,
-		'attributes'   => null,
+		'attributes'   => array( array( 'id' => 'hiddenMetrics' ), array( 'id' => 'chartType', 'type' => 'jpa/toggle-group', 'label' => 'Chart type', 'relevance' => 'high', 'elements' => array( array( 'value' => 'line', 'label' => 'Line chart', 'icon' => 'jpa/chart-line' ), array( 'value' => 'bar', 'label' => 'Bar chart', 'icon' => 'jpa/chart-bar' ) ) ) ),
 		'has_render'   => true,
 		'has_widget'   => true,
 		'presentation' => 'framed',
