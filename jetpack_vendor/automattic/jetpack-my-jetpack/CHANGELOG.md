@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Boost card: Fetch a new speed score when the saved one is incomplete, instead of showing an empty score.
+- Features: Leave the menu badge count out of the name shown when a feature is added to the menu.
 - Features: Retry loading the feature list after a rate-limited or unreadable response, and say the list is incomplete when it cannot be loaded.
 - Header: Stop offering to purchase a plan or activate a license to sites with Jetpack Complete, shown only while the header controls feature flag is on.
 - Help: Keep the help cards inside their column on narrow screens.
