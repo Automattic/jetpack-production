@@ -845,7 +845,7 @@ __( "Useful links", "jetpack-my-jetpack" );
 __( "All Jetpack modules", "jetpack-my-jetpack" );
 __( "Debug information", "jetpack-my-jetpack" );
 __( "What’s new in Jetpack?", "jetpack-my-jetpack" );
-__( "More from the Jetpack blog", "jetpack-my-jetpack" );
+__( "Read more", "jetpack-my-jetpack" );
 __( "No change since the previous period.", "jetpack-my-jetpack" );
 /* translators: %s: stat difference (e.g. `5 views`) */
 __( "An increase of %s since the previous period.", "jetpack-my-jetpack" );
