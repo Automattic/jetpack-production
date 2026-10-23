@@ -28,10 +28,10 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Boost card: Fetch a new speed score when the saved one is incomplete, instead of showing an empty score.
 - Features: Retry loading the feature list after a rate-limited or unreadable response, and say the list is incomplete when it cannot be loaded.
-- Features: Show a plugin as active when a Beta or -dev copy is active beside an installed stable copy, and turn off the active copy when deactivating it.
 - Header: Stop offering to purchase a plan or activate a license to sites with Jetpack Complete, shown only while the header controls feature flag is on.
 - Help: Keep the help cards inside their column on narrow screens.
 - Onboarding: Explain why connecting failed, with the underlying cause underneath when it helps.
+- Products: Show the correct status and use the active plugin copy when turning products on or off with both stable and Beta or development copies installed.
 - Stop offering retired Security and Growth plans while preserving existing subscriptions.
 - Update the Account Protection activation message to describe what the feature does.
 
