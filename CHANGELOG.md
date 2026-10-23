@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Email design: Follow the Styles panel's text size for image captions in the editor canvas.
 - Forms: Open the Forms dashboard faster by skipping a redirect.
 - Jetpack AI: Use the same cards and spacing on AI Features and MCP and Connectors as the other Jetpack settings screens.
+- Likes: Show how many more people liked a post at the end of the likes popover, which lists up to 90 people.
 - Modules: Link Firewall, Brute force protection, Account protection, Downtime monitoring and WordPress.com login to their card on the Protect page, in place of their switches, while that page owns their settings.
 - My Jetpack: Add catalog-controlled Pro offers and preserve existing plan management.
 - My Jetpack: Line up notices with the cards below them, and drop the grey background behind the Features grid and list buttons.
