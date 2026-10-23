@@ -64,6 +64,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Account Protection: Update the module description to reflect what the feature does.
+- Activity Log: Show an empty date picker on the free plan, instead of a date range it does not apply.
 - Admin Bar: Fix a fatal error in the admin bar endpoint when a plugin adds a menu page outside the admin_menu hook.
 - Admin menu: Make the top-level Jetpack menu link open My Jetpack instead of Akismet Anti-spam.
 - AI: Open the new SEO page from the SEO settings link on every site that has it, instead of the Traffic settings.

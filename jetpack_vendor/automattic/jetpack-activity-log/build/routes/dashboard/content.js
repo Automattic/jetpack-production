@@ -261,8 +261,6 @@ __( "Apply %s", "jetpack-activity-log" );
 __( "Apply", "jetpack-activity-log" );
 __( "Select a date range", "jetpack-activity-log" );
 /* translators: %s: date range label */
-__( "Date range: %s.", "jetpack-activity-log" );
-/* translators: %s: date range label */
 __( "Date range: %s. Activate to open calendar.", "jetpack-activity-log" );
 __( "Upgrade plan", "jetpack-activity-log" );
 __( "Upgrade to get complete activity history for the last 30 days, advanced filtering and date range selection. Available on the Jetpack Security and Complete plans.", "jetpack-activity-log" );
@@ -298,6 +296,7 @@ __( "Couldn’t load the activity log: %s", "jetpack-activity-log" );
 __( "Couldn’t load the activity log. Try refreshing the page.", "jetpack-activity-log" );
 __( "Filter options are temporarily unavailable, but all events are loaded correctly.", "jetpack-activity-log" );
 __( "Upgrade your plan to use this feature.", "jetpack-activity-log" );
+__( "Upgrade your plan to filter by date.", "jetpack-activity-log" );
 __( "Activity Log", "jetpack-activity-log" );
 __( "Every change made to your site, in one searchable timeline.", "jetpack-activity-log" );
 __( "Your activity log couldn’t load because your site isn’t fully connected to WordPress.com.", "jetpack-activity-log" );
