@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Connectors: Show connection errors on the Connectors card, and keep showing the connection owner when their account connection breaks.
+
 ### Changed
 - Ask for confirmation before disconnecting your user account, and offer to transfer ownership first when you own the connection.
 - Connectors: Use the shared disconnect dialog for site disconnect on the card, and load the Tracks script so its events are recorded.
