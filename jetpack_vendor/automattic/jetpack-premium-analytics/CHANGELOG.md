@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Let free WordPress.com sites resize the Traffic views chart with Customize.
 - Limit the Traffic tab's dates and chart grouping to what the site's plan includes, such as the last 7 days on a free plan.
 - Offer a paid Stats plan to free sites 30 days after their first visit, and show one Stats notice at a time.
+- Offer daily intervals on long date ranges in the Traffic summary line chart.
 - Show one upgrade prompt in place of Insights, and of Traffic below the chart, on free WordPress.com sites.
 - Show the chart groupings the site's plan locks in the chart interval menu, with an upgrade link.
 - Stats links: Open the dashboard from old Stats page links once no plugin registers the classic Stats page.

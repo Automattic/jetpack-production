@@ -6,6 +6,7 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+__( "Switch to the line chart to see each day.", "jetpack-premium-analytics-pkg" );
 /* translators: %s: number of posts published. */
 _n( "%s Post published", "%s Posts published", 1, "jetpack-premium-analytics-pkg" );
 __( "Views per visitor", "jetpack-premium-analytics-pkg" );
