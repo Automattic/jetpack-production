@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Speed up page load by removing duplicate product and plan requests.
 - Newsletter: Download as CSV on the Subscribers screen now exports the subscribers you have filtered or searched for, in the order the table shows them.
 - Newsletter: Say in the email design Styles panel that text with its own size or font in the post has to be changed there instead.
+- Newsletter: Show the "Preview email" and "Send test email" actions even when emails are turned off for a post.
 - Newsletter: Space the settings cards 16px apart, matching the other Jetpack settings screens.
 - Podcast: Use the same cards, column width, and spacing as the other Jetpack settings screens.
 - Premium Analytics: Draw visitors inside the views bar in the Traffic summary's bar chart, as Jetpack Stats v1 does.
