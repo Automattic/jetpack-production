@@ -60,6 +60,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Match the page header, tabs, and cards of the other Jetpack settings screens.
 - Stats: Mark the keyboard-selected bar in stats bar charts with a focus ring that shows on any bar color.
 - VideoPress: Let channel blocks show authors a call to action while a channel has no videos or playlists.
+- VideoPress: Make the Trim & cut editor available in the video dashboard and block editor.
 - VideoPress: Match the card spacing and top margin of the other Jetpack settings screens.
 
 ### Bug fixes
