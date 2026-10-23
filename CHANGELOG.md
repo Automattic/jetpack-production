@@ -70,6 +70,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin menu: Make the top-level Jetpack menu link open My Jetpack instead of Akismet Anti-spam.
 - AI: Open the new SEO page from the SEO settings link on every site that has it, instead of the Traffic settings.
 - Backup: Show a finished backup in the list without a page reload, even when WordPress.com is slow to list it, and add a "Backup complete" notice that stays until it is dismissed.
+- Backup: Show that Backup is unavailable in Offline Mode instead of the dashboard, so a local copy of a site can't act on the live site's backups.
 - Blogroll block: Stop asking to save Blogroll Recommendations when nothing in the block changed.
 - Comments API: Hide Fediverse likes, reposts, and quotes from comment lists unless the request asks for a type.
 - Connection: Explain why connecting the site failed instead of showing a raw or generic error.

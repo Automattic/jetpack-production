@@ -30,7 +30,7 @@ return array(
     ),
     'jetpack-backup-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-backup',
-      'ver' => '5.2.0-alpha1792706567',
+      'ver' => '5.2.0-alpha1792792556',
     ),
     'jetpack-blaze' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-blaze',

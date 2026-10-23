@@ -75,6 +75,8 @@ __( "What's included?", "jetpack-backup-pkg" );
 __( "Connect Jetpack to get started", "jetpack-backup-pkg" );
 __( "Backup needs an active Jetpack connection to show your backup history.", "jetpack-backup-pkg" );
 __( "Connect Jetpack", "jetpack-backup-pkg" );
+__( "Backup is unavailable in Offline Mode", "jetpack-backup-pkg" );
+__( "Jetpack is in Offline Mode on this site, so backups can't be viewed or restored here. If this site is a copy of a live site, manage its backups from the live site. <a>Learn about Offline Mode</a>", "jetpack-backup-pkg" );
 __( "Link your WordPress.com account", "jetpack-backup-pkg" );
 __( "This site's Jetpack connection is already set up, but your account isn't linked to a WordPress.com user yet.", "jetpack-backup-pkg" );
 __( "Once your account is linked, you'll see any backups this site has. If it doesn't have an active Backup plan yet, you'll be able to add VaultPress Backup to start protecting it.", "jetpack-backup-pkg" );

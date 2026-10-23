@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Explain why connecting the site failed instead of showing a generic error.
 - Overview: Treat backups that finished with warnings as backups, so they can be opened and restored and their links work.
 - Show a finished backup in the list without a page reload, even when WordPress.com is slow to list it, and add a "Backup complete" notice that stays until it is dismissed.
+- Show that Backup is unavailable in Offline Mode instead of the dashboard, and refuse Backup requests while Jetpack is in Offline Mode.
 
 ## [5.1.4] - 2026-10-19
 ### Changed
