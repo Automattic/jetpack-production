@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Draw visitors inside the views bar in the Traffic summary's bar chart, as Jetpack Stats v1 does.
 - Premium Analytics: Hide Stats CSV exports on plans that do not include them, and lock a post's all-time traffic on free plans.
 - Premium Analytics: Keep the reports and post stats pages opened from the Traffic tab within the plan's dates.
+- Premium Analytics: Let free WordPress.com sites resize the Traffic views chart with Customize.
 - Premium Analytics: Limit the Traffic tab's dates and chart grouping to what the site's plan includes, such as the last 7 days on a free plan.
 - Premium Analytics: Offer a paid Stats plan to free sites 30 days after their first visit.
 - Premium Analytics: Offer switching the dashboard off only while the site still has a classic Stats page to return to.
