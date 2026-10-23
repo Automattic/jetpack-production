@@ -94,6 +94,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Make widget titles, descriptions, help notes and settings labels translatable.
 - Premium Analytics: Match the Jetpack logo position and header height on Stats pages to the other Jetpack pages.
 - Premium Analytics: Resend order history once on stores that synced it through the WooCommerce Analytics plugin, so product, tax and coupon reports include past orders.
+- Scan: Stop toolbar status requests and sidebar Scan and Rewind cache refreshes while the site is in offline mode.
 - Search: Activate free Search in place from "Start for free" instead of falling back to the $0 checkout.
 - Search: Open the Instant Search filters panel below the results header on small screens, so the Filters toggle stays visible.
 - SEO: Generate alt text for newly inserted images when "Auto-generate metadata" is on, even if "Image alt text" was unticked earlier.
