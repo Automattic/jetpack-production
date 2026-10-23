@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Show what Scan adds, such as malware scanning and automatic firewall rules, on the Protect page's Scan and Firewall cards for sites without it.
 - Protect Dashboard: Add a Scan now button to the page header and show when the site was last scanned.
 - Settings: Match the page header, tabs, and cards of the other Jetpack settings screens.
+- Stats: Mark the keyboard-selected bar in stats bar charts with a focus ring that shows on any bar color.
 - VideoPress: Let channel blocks show authors a call to action while a channel has no videos or playlists.
 - VideoPress: Match the card spacing and top margin of the other Jetpack settings screens.
 
