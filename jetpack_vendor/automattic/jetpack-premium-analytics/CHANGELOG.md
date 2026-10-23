@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Hide Stats CSV exports on plans that do not include them, and lock a post's all-time traffic on free plans.
 - Name the selected chart interval in the dashboard header instead of showing a bar chart icon.
 - Page options: offer switching the dashboard off only while the site still has a classic Stats page to return to.
+- Show every row on Stats report pages on one page, instead of splitting them into pages of 10.
 - Stop the tour from offering period comparison on a free plan, which covers only the last 7 days.
 - Traffic summary: Draw visitors inside the views bar in bar charts, as Jetpack Stats v1 does, with the previous period in gray beside them.
 - Update package dependencies.

@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Offer a paid Stats plan to free sites 30 days after their first visit.
 - Premium Analytics: Offer daily intervals on long date ranges in the Traffic summary line chart.
 - Premium Analytics: Offer switching the dashboard off only while the site still has a classic Stats page to return to.
+- Premium Analytics: Show every row on Stats report pages on one page, instead of splitting them into pages of 10.
 - Premium Analytics: Show one upgrade prompt in place of Insights, and of Traffic below the chart, on free WordPress.com sites.
 - Premium Analytics: Show the chart groupings the site's plan locks in the chart interval menu, with an upgrade link.
 - Premium Analytics: Show the widgets' View all link and CSV download in the card footer.
