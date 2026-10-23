@@ -84,6 +84,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Fix post, video and author stats pages that could crash with "Something went wrong" right after opening.
 - Premium Analytics: Leave hidden series out of a line chart's tooltip when you move through the chart with the arrow keys.
 - Premium Analytics: Make widget titles, descriptions, help notes and settings labels translatable.
+- Premium Analytics: Match the Jetpack logo position and header height on Stats pages to the other Jetpack pages.
 - Premium Analytics: Resend order history once on stores that synced it through the WooCommerce Analytics plugin, so product, tax and coupon reports include past orders.
 - Search: Activate free Search in place from "Start for free" instead of falling back to the $0 checkout.
 - Search: Open the Instant Search filters panel below the results header on small screens, so the Filters toggle stays visible.

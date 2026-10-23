@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix post, video and author stats pages that could crash with "Something went wrong" right after opening.
+- Match the Jetpack logo position and header height on Stats pages to the other Jetpack pages.
 - Widget titles, descriptions, help notes and settings labels declared in widget.json reach the translation catalog.
 - WooCommerce tab: Resend order history once on stores that synced it through the WooCommerce Analytics plugin, so product, tax and coupon reports include past orders.
 
