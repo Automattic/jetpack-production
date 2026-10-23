@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Store performance: Switch between a line and a bar chart in the widget header.
+- Top performing products and bookings: Link each row to its product.
 
 ### Changed
 - Require widget contract 2.0.0 of the Premium Analytics dashboard.

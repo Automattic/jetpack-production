@@ -442,15 +442,21 @@ __( "Your plan doesn’t include that period, so this page shows the last 30 day
 /* translators: %1$s and %2$s: the report range bounds, e.g. "Jul 9, 2026". */
 __( "Performance from %1$s to %2$s", "jetpack-premium-analytics-pkg" );
 __( "Page", "jetpack-premium-analytics-pkg" );
+__( "Untitled page", "jetpack-premium-analytics-pkg" );
+__( "Page unavailable", "jetpack-premium-analytics-pkg" );
+__( "View page", "jetpack-premium-analytics-pkg" );
+__( "Product", "jetpack-premium-analytics-pkg" );
+__( "Untitled product", "jetpack-premium-analytics-pkg" );
+__( "Product unavailable", "jetpack-premium-analytics-pkg" );
+__( "View product", "jetpack-premium-analytics-pkg" );
+__( "Untitled post", "jetpack-premium-analytics-pkg" );
+__( "Post unavailable", "jetpack-premium-analytics-pkg" );
+__( "View post", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the date the newsletter was sent, e.g. "Aug 19, 2025". */
 __( "Email sent on %s.", "jetpack-premium-analytics-pkg" );
-/* translators: %1$s: "Post" or "Page". %2$s: the publish date, e.g. "Aug 19, 2025". */
+/* translators: %1$s: "Post", "Page" or "Product". %2$s: the publish date, e.g. "Aug 19, 2025". */
 __( "%1$s published on %2$s.", "jetpack-premium-analytics-pkg" );
 __( "Loading…", "jetpack-premium-analytics-pkg" );
-__( "Page unavailable", "jetpack-premium-analytics-pkg" );
-__( "Post unavailable", "jetpack-premium-analytics-pkg" );
-__( "Untitled page", "jetpack-premium-analytics-pkg" );
-__( "Untitled post", "jetpack-premium-analytics-pkg" );
 __( "Post traffic", "jetpack-premium-analytics-pkg" );
 __( "Email opens", "jetpack-premium-analytics-pkg" );
 __( "Email clicks", "jetpack-premium-analytics-pkg" );
@@ -464,8 +470,6 @@ __( "Clients", "jetpack-premium-analytics-pkg" );
 __( "Top links", "jetpack-premium-analytics-pkg" );
 __( "UTM", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this post. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "View page", "jetpack-premium-analytics-pkg" );
-__( "View post", "jetpack-premium-analytics-pkg" );
 __( "This post hasn’t been sent as a newsletter", "jetpack-premium-analytics-pkg" );
 __( "Newsletter can help you reach subscribers in their inbox.", "jetpack-premium-analytics-pkg" );
 __( "Learn more", "jetpack-premium-analytics-pkg" );

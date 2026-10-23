@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Hide Stats CSV exports on plans that do not include them, and lock a post's all-time traffic on free plans.
+- Link to a post's public page when the reader cannot open its details, and name a product as a product on its detail page.
 - Name the selected chart interval in the dashboard header instead of showing a bar chart icon.
 - Page options: offer switching the dashboard off only while the site still has a classic Stats page to return to.
 - Show every row on Stats report pages on one page, instead of splitting them into pages of 10.

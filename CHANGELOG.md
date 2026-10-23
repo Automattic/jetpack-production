@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Let free WordPress.com sites resize the Traffic views chart with Customize.
 - Premium Analytics: Let Store performance switch between a line and a bar chart in the widget header.
 - Premium Analytics: Limit the Traffic tab's dates and chart grouping to what the site's plan includes, such as the last 7 days on a free plan.
+- Premium Analytics: Link each Top performing products and bookings row to its product.
 - Premium Analytics: Name the selected chart interval in the dashboard header instead of showing a bar chart icon.
 - Premium Analytics: Offer a paid Stats plan to free sites 30 days after their first visit.
 - Premium Analytics: Offer daily intervals on long date ranges in the Traffic summary line chart.
