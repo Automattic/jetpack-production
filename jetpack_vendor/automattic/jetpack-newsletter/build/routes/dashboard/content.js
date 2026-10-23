@@ -548,7 +548,6 @@ _x( "Recipients", "table column heading for emails sent", "jetpack-newsletter" )
 _x( "Opens", "table column heading for email open rate", "jetpack-newsletter" );
 _x( "Clicks", "table column heading for email click rate", "jetpack-newsletter" );
 __( "Published", "jetpack-newsletter" );
-__( "Draft", "jetpack-newsletter" );
 __( "Recent Posts", "jetpack-newsletter" );
 __( "View all", "jetpack-newsletter" );
 __( "Paid subscribers", "jetpack-newsletter" );
