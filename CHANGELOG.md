@@ -61,6 +61,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Account Protection: Update the module description to reflect what the feature does.
+- Admin Bar: Fix a fatal error in the admin bar endpoint when a plugin adds a menu page outside the admin_menu hook.
 - Admin menu: Make the top-level Jetpack menu link open My Jetpack instead of Akismet Anti-spam.
 - AI: Open the new SEO page from the SEO settings link on every site that has it, instead of the Traffic settings.
 - Backup: Show a finished backup in the list without a page reload, even when WordPress.com is slow to list it, and add a "Backup complete" notice that stays until it is dismissed.
