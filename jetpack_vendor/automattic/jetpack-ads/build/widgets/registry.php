@@ -30,7 +30,7 @@ return array(
 		'description'  => 'Your WordAds earnings by period, with amounts and payment status.',
 		'help'         => array( 'content' => 'What each billing month earned from programmatic ads, and whether it has been paid. Whole months only, so the month in progress isn’t listed.' ),
 		'icon'         => 'jpa/receipt',
-		'actions'      => null,
+		'actions'      => array( array( 'id' => 'view-all', 'label' => 'View all', 'href' => 'admin.php?page=jetpack-premium-analytics-wp-admin&p=%2Freports%2Fearnings', 'relevance' => 'high' ) ),
 		'attributes'   => null,
 		'has_render'   => true,
 		'has_widget'   => false,

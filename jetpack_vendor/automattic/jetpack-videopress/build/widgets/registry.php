@@ -14,7 +14,7 @@ return array(
 		'description'  => 'Your most played VideoPress videos, sourced from Jetpack Stats.',
 		'help'         => array( 'content' => 'The published videos your visitors watched most often, sorted by views.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'icon'         => 'jpa/video',
-		'actions'      => null,
+		'actions'      => array( array( 'id' => 'view-all', 'label' => 'View all', 'href' => 'admin.php?page=jetpack-premium-analytics-wp-admin&p=%2Freports%2Fvideos', 'relevance' => 'high' ) ),
 		'attributes'   => null,
 		'has_render'   => true,
 		'has_widget'   => false,

@@ -15,6 +15,7 @@ _x( 'Bar chart', 'widget attribute option label', 'jetpack-ads-pkg' );
 _x( 'WordAds earnings', 'widget title', 'jetpack-ads-pkg' );
 _x( 'Your WordAds earnings by period, with amounts and payment status.', 'widget description', 'jetpack-ads-pkg' );
 _x( 'What each billing month earned from programmatic ads, and whether it has been paid. Whole months only, so the month in progress isn’t listed.', 'widget help content', 'jetpack-ads-pkg' );
+_x( 'View all', 'widget action label', 'jetpack-ads-pkg' );
 _x( 'All-time balance', 'widget title', 'jetpack-ads-pkg' );
 _x( 'Your WordAds earnings at a glance — total earnings, amount paid, and outstanding balance.', 'widget description', 'jetpack-ads-pkg' );
 _x( 'What your ads have earned since you started, what has been paid out, and what is still owed. Lifetime totals — these don’t follow the date selection. Payments go out once the outstanding amount reaches $100.', 'widget help content', 'jetpack-ads-pkg' );

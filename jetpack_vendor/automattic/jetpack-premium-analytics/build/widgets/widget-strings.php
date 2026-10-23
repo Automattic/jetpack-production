@@ -11,6 +11,7 @@ _x( 'Your totals since you started tracking — views, visitors, posts, and comm
 _x( 'Year in review', 'widget title', 'jetpack-premium-analytics-pkg' );
 _x( 'Your totals for the year at a glance — posts, words, likes, and comments.', 'widget description', 'jetpack-premium-analytics-pkg' );
 _x( 'Your totals for the selected year — posts, words, likes, and comments.', 'widget help content', 'jetpack-premium-analytics-pkg' );
+_x( 'View all', 'widget action label', 'jetpack-premium-analytics-pkg' );
 _x( 'Author performance', 'widget title', 'jetpack-premium-analytics-pkg' );
 _x( 'Views, likes and comments for the author being viewed over the selected period.', 'widget description', 'jetpack-premium-analytics-pkg' );
 _x( 'This author’s views over the selected period, with the likes and comments their posts received in it. Views include the author’s pages and other content, as in the Authors report.', 'widget help content', 'jetpack-premium-analytics-pkg' );

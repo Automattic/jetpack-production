@@ -9,3 +9,4 @@ _x( 'Top videos', 'widget title', 'jetpack-videopress-pkg' );
 _x( 'Your most played VideoPress videos, sourced from Jetpack Stats.', 'widget description', 'jetpack-videopress-pkg' );
 _x( 'The published videos your visitors watched most often, sorted by views.', 'widget help content', 'jetpack-videopress-pkg' );
 _x( 'Learn more', 'widget help link label', 'jetpack-videopress-pkg' );
+_x( 'View all', 'widget action label', 'jetpack-videopress-pkg' );
