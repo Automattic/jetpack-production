@@ -107,6 +107,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing Buttons block: Avoid duplicate ids when the block appears more than once on a page.
 - Show a dash instead of 0% for a post's open and click rates until it has recorded sends.
 - VideoPress: Attach newly uploaded videos to the post or page being edited.
+- VideoPress: Fix the All Playlists block showing its empty state on WordPress.com sites that have playlists.
 - VideoPress: Keep the playhead in place when adjusting trim handles.
 - VideoPress: Prevent timeline handles from jumping after releasing a drag outside the timeline.
 
