@@ -5,22 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [9.14.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [9.14.0] - 2026-10-26
 ### Added
-- Connectors: Show connection errors on the Connectors card, and keep showing the connection owner when their account connection breaks.
+- Connectors: Show connection errors on the Connectors card, and keep showing the connection owner when their account connection breaks. [#53596]
 
 ### Changed
-- Ask for confirmation before disconnecting your user account, and offer to transfer ownership first when you own the connection.
-- Connectors: Show the same connection consent notice as the rest of Jetpack before a first connection, and describe the ownership lock and connection failures in the shared wording.
-- Connectors: Use the shared disconnect dialog for site disconnect on the card, and load the Tracks script so its events are recorded.
-- Connectors card: Show a clear message when connecting the site fails, instead of WordPress.com's raw error text.
-- Registration: Report a missing PHP XML extension with its own error code, so the connect screens can name the cause.
+- Ask for confirmation before disconnecting your user account, and offer to transfer ownership first when you own the connection. [#53865]
+- Connectors: Show the same connection consent notice as the rest of Jetpack before a first connection, and describe the ownership lock and connection failures in the shared wording. [#54034]
+- Connectors: Use the shared disconnect dialog for site disconnect on the card, and load the Tracks script so its events are recorded. [#53861]
+- Connectors card: Show a clear message when connecting the site fails, instead of WordPress.com's raw error text. [#54035]
+- Registration: Report a missing PHP XML extension with its own error code, so the connect screens can name the cause. [#53289]
 
 ### Deprecated
-- Deprecate `Urls::maybe_add_origin_site_id()`; it now returns the URL unchanged.
+- Deprecate `Urls::maybe_add_origin_site_id()`; it now returns the URL unchanged. [#53920]
 
 ## [9.13.0] - 2026-10-20
 ### Added
@@ -2192,7 +2189,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.14.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.13.0...v9.14.0-alpha
+[9.14.0]: https://github.com/Automattic/jetpack-connection/compare/v9.13.0...v9.14.0
 [9.13.0]: https://github.com/Automattic/jetpack-connection/compare/v9.12.1...v9.13.0
 [9.12.1]: https://github.com/Automattic/jetpack-connection/compare/v9.12.0...v9.12.1
 [9.12.0]: https://github.com/Automattic/jetpack-connection/compare/v9.11.0...v9.12.0

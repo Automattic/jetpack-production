@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.9.10-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.9.10] - 2026-10-26
 ### Removed
-- Google Photos: Remove the unused filters for the legacy, non-picker view.
+- Google Photos: Remove the unused filters for the legacy, non-picker view. [#54046]
 
 ## [0.9.9] - 2026-10-19
 ### Changed
@@ -465,7 +462,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix the button size in the editor for Gutenberg 18 or below. [#41619]
 - Media Library: Fix the Import Media button color in some color schemes. [#41664]
 
-[0.9.10-alpha]: https://github.com/Automattic/jetpack-external-media/compare/v0.9.9...v0.9.10-alpha
+[0.9.10]: https://github.com/Automattic/jetpack-external-media/compare/v0.9.9...v0.9.10
 [0.9.9]: https://github.com/Automattic/jetpack-external-media/compare/v0.9.8...v0.9.9
 [0.9.8]: https://github.com/Automattic/jetpack-external-media/compare/v0.9.7...v0.9.8
 [0.9.7]: https://github.com/Automattic/jetpack-external-media/compare/v0.9.6...v0.9.7

@@ -486,7 +486,7 @@ class Jetpack_Admin {
 	/**
 	 * Where each security module's settings live while the Protect page owns them, keyed by module slug.
 	 *
-	 * @since 16.4-a.4
+	 * @since 16.4
 	 *
 	 * @return array<string, string> Empty while the Protect page is off.
 	 */
