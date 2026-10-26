@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Newsletter: Remove the block inserter and List View from the email design screen, where neither had anything to show.
+- Newsletter: Use the same status icons as the AI launchpad checklist.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Update package dependencies.
