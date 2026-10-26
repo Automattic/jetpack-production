@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Overview: Show the Welcome heading above notices and banners, behind the Overview v1 feature flag.
 - Say "Your site is in Offline Mode" in the connection status, and name Offline Mode consistently with the Connectors screen.
 - Speed up the dashboard by removing duplicate product and plan requests on page load.
+- Tabs: Build the tab bar with the WordPress UI Tabs component.
 - Update package dependencies.
 
 ### Fixed
