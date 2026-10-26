@@ -3,7 +3,6 @@
 		'jetpack-script-data',
 		'jetpack-shared-stores',
 		'lodash',
-		'moment',
 		'react',
 		'react-jsx-runtime',
 		'wp-api-fetch',
@@ -13,7 +12,6 @@
 		'wp-components',
 		'wp-compose',
 		'wp-data',
-		'wp-date',
 		'wp-dom-ready',
 		'wp-editor',
 		'wp-element',
@@ -24,5 +22,5 @@
 		'wp-primitives',
 		'wp-url'
 	),
-	'version' => '982871a971b0baf8347f'
+	'version' => '7ab22a0f9dd170f4f29e'
 );

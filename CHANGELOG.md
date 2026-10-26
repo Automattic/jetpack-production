@@ -118,6 +118,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin bar: Return the WordPress.com free domain upsell chip from the site admin-bar endpoint so the omnibar renders it.
 - AI: Share the group card and toolbar between the MCP Read and Write views.
 - Comments: Stop loading the subscribe modal on Atomic sites that use the new comment form, which never opens it.
+- Google Photos: Remove dead code.
 - Newsletter: Open the email design screen to proxied Automatticians on Atomic sites, alongside the site sticker.
 - Newsletter: update the email editor package to 2.5.1.
 - Protect: Add a page that shows whether the threats from an alert still need attention, were fixed, or were ignored.
