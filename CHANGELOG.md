@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Newsletter: Describe the post audience, paid tier and email settings in the REST API schema, so AI agents and other API clients know which values to send.
 - Newsletter: Remove the block inserter and List View from the email design screen, where neither had anything to show.
 - Newsletter: Use the same status icons as the AI launchpad checklist.
 
