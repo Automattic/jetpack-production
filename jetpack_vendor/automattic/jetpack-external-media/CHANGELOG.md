@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Google Photos: Use @wordpress/ui components for the connection, picker and album views.
+- Update package dependencies.
 
 ## [0.9.10] - 2026-10-26
 ### Removed

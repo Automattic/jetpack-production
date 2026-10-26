@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.12.9-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update package dependencies.
+
 ## [0.12.8] - 2026-10-26
 ### Changed
 - Internal updates.
@@ -178,6 +185,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Agents Manager: Allow overriding variant and sectionName through filters [#49283]
 - Initial version, extracted from Jetpack MU WPCOM to its own package for external consumption. [#49202]
 
+[0.12.9-alpha]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.12.8...v0.12.9-alpha
 [0.12.8]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.12.7...v0.12.8
 [0.12.7]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.12.6...v0.12.7
 [0.12.6]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.12.5...v0.12.6

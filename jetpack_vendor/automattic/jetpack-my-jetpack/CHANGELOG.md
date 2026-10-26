@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Tabs: Build the tab bar with the WordPress UI Tabs component.
+- Update package dependencies.
 
 ## [6.13.0] - 2026-10-26
 ### Added

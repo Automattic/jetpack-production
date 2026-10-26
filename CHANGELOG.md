@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
+
 ## 16.4-a.5 - 2026-10-26
 ### Enhancements
 - AI: Add a remote abilities allowlist to the MCP Read and Write views on self-hosted sites. [#53991]
