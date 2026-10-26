@@ -275,7 +275,7 @@ __( "Connect Jetpack", "jetpack" );
 __( "Jetpack AI is not available for this site.", "jetpack" );
 __( "Jetpack AI is turned off by custom code on this site.", "jetpack" );
 __( "It can’t be turned on from here.", "jetpack" );
-__( "Jetpack AI is not available in offline mode.", "jetpack" );
+__( "Jetpack AI is not available in Offline Mode.", "jetpack" );
 __( "This site is not connected to WordPress.com.", "jetpack" );
 __( "Your feature settings are saved and will apply again once the site is connected.", "jetpack" );
 __( "Your WordPress.com account isn’t connected.", "jetpack" );

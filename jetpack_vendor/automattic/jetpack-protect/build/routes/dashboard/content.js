@@ -448,7 +448,7 @@ __( "Threat details", "jetpack-protect-pkg" );
 __( "Scan history no longer lists this threat.", "jetpack-protect-pkg" );
 __( "History", "jetpack-protect-pkg" );
 __( "WordPress.com login isn’t available on this site.", "jetpack-protect-pkg" );
-__( "WordPress.com login isn’t available in offline mode.", "jetpack-protect-pkg" );
+__( "WordPress.com login isn’t available in Offline Mode.", "jetpack-protect-pkg" );
 __( "Needs the site owner’s WordPress.com account to be connected.", "jetpack-protect-pkg" );
 __( "Turn off WordPress.com login (SSO)?", "jetpack-protect-pkg" );
 __( "Users will have to log in with their username and password on this site instead.", "jetpack-protect-pkg" );

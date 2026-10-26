@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Ask for confirmation before disconnecting your user account, and offer to transfer ownership first when you own the connection.
+- Connectors: Show the same connection consent notice as the rest of Jetpack before a first connection, and describe the ownership lock and connection failures in the shared wording.
 - Connectors: Use the shared disconnect dialog for site disconnect on the card, and load the Tracks script so its events are recorded.
 - Registration: Report a missing PHP XML extension with its own error code, so the connect screens can name the cause.
 

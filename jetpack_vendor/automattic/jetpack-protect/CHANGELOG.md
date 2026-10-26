@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Explain what the History tab's Fixed and Ignored lists will show when they are empty.
 - Dashboard: Redesign the Login protection card with toggles for account protection and Secure Sign On.
 - Give the Firewall card a shield with a flame icon, so it no longer shares the Scan card's shield.
+- Name Offline Mode as it is named across the rest of Jetpack.
 - Protect dashboard: Stop calling a site without a Scan plan safe when no known vulnerabilities are found.
 
 ### Fixed

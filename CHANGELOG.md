@@ -118,6 +118,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin bar: Return the WordPress.com free domain upsell chip from the site admin-bar endpoint so the omnibar renders it.
 - AI: Share the group card and toolbar between the MCP Read and Write views.
 - Comments: Stop loading the subscribe modal on Atomic sites that use the new comment form, which never opens it.
+- Connection: Use one wording across the Jetpack settings page, My Jetpack and the Connectors screen for the consent notice shown before connecting, for Offline Mode, and for the ownership lock.
 - Google Photos: Remove dead code.
 - Newsletter: Open the email design screen to proxied Automatticians on Atomic sites, alongside the site sticker.
 - Newsletter: update the email editor package to 2.5.1.

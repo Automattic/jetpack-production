@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Overview: Draw the sections as a compact bordered grid with a divider under each heading, shown only while the Overview v1 feature flag is on.
 - Overview: Rename the "What's new in Jetpack?" closing link to "Read more", behind the Overview v1 feature flag.
 - Overview: Show the Stats tabs as plain totals above an area chart, while the Overview v1 feature flag is on.
+- Say "Your site is in Offline Mode" in the connection status, and name Offline Mode consistently with the Connectors screen.
 - Speed up the dashboard by removing duplicate product and plan requests on page load.
 - Update package dependencies.
 

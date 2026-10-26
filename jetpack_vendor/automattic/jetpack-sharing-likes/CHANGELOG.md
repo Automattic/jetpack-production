@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Add cards to the React version of Settings > Sharing that place the Sharing Buttons and Like blocks before or after the content of posts and pages.
 
 ### Changed
+- Name Offline Mode as it is named across the rest of Jetpack.
 - Settings: Keep the React Sharing screen's data in a WordPress data store instead of TanStack Query.
 
 ## [0.4.0] - 2026-10-19
