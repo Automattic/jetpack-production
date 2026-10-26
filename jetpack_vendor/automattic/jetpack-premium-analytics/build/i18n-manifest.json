@@ -14,6 +14,7 @@
 		"build/routes/post-detail/route.js",
 		"build/routes/reports/content.js",
 		"build/routes/reports/route.js",
+		"build/routes/upgrade/content.js",
 		"build/routes/video-detail/content.js",
 		"build/routes/video-detail/route.js",
 		"build/scripts/site-sync/index.js",

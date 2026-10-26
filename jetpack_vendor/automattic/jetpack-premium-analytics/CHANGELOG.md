@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add an upgrade page with a pricing slider to pick a Stats tier, and open it from the upgrade links on Jetpack sites.
 - Keep the reports and post stats pages opened from the Traffic tab within the plan's dates.
 - Let free WordPress.com sites resize the Traffic views chart with Customize.
 - Limit the Traffic tab's dates and chart grouping to what the site's plan includes, such as the last 7 days on a free plan.

@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Show the "Preview email" and "Send test email" actions even when emails are turned off for a post.
 - Newsletter: Space the settings cards 16px apart, matching the other Jetpack settings screens.
 - Podcast: Use the same cards, column width, and spacing as the other Jetpack settings screens.
+- Premium Analytics: Add an upgrade page with a pricing slider to pick a Stats tier.
 - Premium Analytics: Draw visitors inside the views bar in the Traffic summary's bar chart, as Jetpack Stats v1 does.
 - Premium Analytics: Hide Stats CSV exports on plans that do not include them, and lock a post's all-time traffic on free plans.
 - Premium Analytics: Keep the reports and post stats pages opened from the Traffic tab within the plan's dates.

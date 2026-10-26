@@ -117,3 +117,11 @@ __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 _x( "Breadcrumbs", "aria label", "jetpack-premium-analytics-pkg" );
 __( "Stats", "jetpack-premium-analytics-pkg" );
+__( "The minimum views limit is set by your current tier and usage.", "jetpack-premium-analytics-pkg" );
+/* translators: %s: a monthly price, e.g. "$20.84". */
+__( "Beyond 1 million, we’ll charge an extra %s per million views per month.", "jetpack-premium-analytics-pkg" );
+__( "Monthly views limit", "jetpack-premium-analytics-pkg" );
+__( "You’ll pay", "jetpack-premium-analytics-pkg" );
+/* translators: %1$s: a views limit, e.g. "100K"; %2$s: a monthly price, e.g. "$16.67". */
+__( "%1$s views per month, %2$s", "jetpack-premium-analytics-pkg" );
+__( "Price per month, billed yearly*", "jetpack-premium-analytics-pkg" );
