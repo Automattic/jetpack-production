@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Offer an available plan when Security is retired.
 - Show an empty date picker on the free plan, instead of a date range it does not apply. Hide backup events on WordPress.com sites without backups.
+- Stop logging a "jetpackConfig is missing" console error on the Activity Log page.
 
 ## [0.6.0] - 2026-10-20
 ### Added
