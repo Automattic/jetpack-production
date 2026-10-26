@@ -4,7 +4,9 @@
 		'jetpack-shared-stores',
 		'lodash',
 		'react',
+		'react-dom',
 		'react-jsx-runtime',
+		'wp-a11y',
 		'wp-api-fetch',
 		'wp-blob',
 		'wp-block-editor',
@@ -22,5 +24,5 @@
 		'wp-primitives',
 		'wp-url'
 	),
-	'version' => '7ab22a0f9dd170f4f29e'
+	'version' => '892fb09dd8ed82485c68'
 );
