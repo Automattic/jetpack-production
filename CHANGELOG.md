@@ -105,6 +105,7 @@ This is an alpha version! The changes listed here are not final.
 - Scan: Stop toolbar status requests and sidebar Scan and Rewind cache refreshes while the site is in offline mode.
 - Search: Activate free Search in place from "Start for free" instead of falling back to the $0 checkout.
 - Search: Open the Instant Search filters panel below the results header on small screens, so the Filters toggle stays visible.
+- SEO: Fix breadcrumb structured data repeating the current post, or adding an unrelated post, on sites with a static front page and no Posts page.
 - SEO: Generate alt text for newly inserted images when "Auto-generate metadata" is on, even if "Image alt text" was unticked earlier.
 - Sharing Buttons block: Avoid duplicate ids when the block appears more than once on a page.
 - Show a dash instead of 0% for a post's open and click rates until it has recorded sends.

@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Breadcrumb schema: Stop adding the current post, or the first post of an archive, as an ancestor when the site has a static front page and no Posts page.
+
 ## [0.10.0] - 2026-10-19
 ### Added
 - Dashboard: Record Tracks events for screen views, settings changes, the SEO tools switch and the GEO tab's llms.txt and AI crawler controls, on sites that allow tracking. [#50586]
