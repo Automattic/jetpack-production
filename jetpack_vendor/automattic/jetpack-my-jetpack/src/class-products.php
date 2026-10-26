@@ -37,7 +37,7 @@ class Products {
 	/**
 	 * Keep an existing offer until retired, then choose an eligible replacement.
 	 *
-	 * @since 6.13.0-alpha
+	 * @since 6.13.0
 	 * @param string $slug Existing bundle slug.
 	 * @return array|null Purchase destination, or null when no replacement is available.
 	 */

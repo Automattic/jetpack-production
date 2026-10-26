@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.13.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.13.1] - 2026-10-26
 ### Fixed
-- Stop telling editors and authors that PayPal is disconnected when they simply do not manage the connection, and stop offering them a reconnect flow they cannot complete.
+- Stop telling editors and authors that PayPal is disconnected when they simply do not manage the connection, and stop offering them a reconnect flow they cannot complete. [#53793]
 
 ## [0.13.0] - 2026-10-19
 ### Added
@@ -445,7 +442,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Simple Payments: Move Simple Payments block to PayPal Payments package. [#43413]
 
-[0.13.1-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.13.0...v0.13.1-alpha
+[0.13.1]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.13.0...v0.13.1
 [0.13.0]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.12.2...v0.13.0
 [0.12.2]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.12.1...v0.12.2
 [0.12.1]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.12.0...v0.12.1

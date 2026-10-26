@@ -117,7 +117,7 @@ class Scan implements Dashboard_Section {
 		/**
 		 * Filters which free-plan Scan upsell copy the Protect dashboard shows; a filtered one isn't rotated.
 		 *
-		 * @since 0.3.0-alpha
+		 * @since 0.3.0
 		 *
 		 * @param int $variant From 1 to 8.
 		 */
