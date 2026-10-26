@@ -54,12 +54,6 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the widgets' View all link and CSV download in the card footer.
 - Premium Analytics: Stop the tour from offering period comparison on a free plan, which covers only the last 7 days.
 - Premium Analytics: Upload a first video from the Top videos widget and follow it while it processes.
-- Protect: Animate the shield on the Protect page, with a particle burst when a scan finishes clean.
-- Protect: Explain what the Scan history's Fixed and Ignored lists will show when they are empty.
-- Protect: Make the new Protect page available to turn on from My Jetpack or Jetpack › Modules.
-- Protect: Show requests blocked today and in the last 30 days, and when the automatic firewall rules were last updated, on the Protect dashboard's Firewall card.
-- Protect: Show what Scan adds, such as malware scanning and automatic firewall rules, on the Protect page's Scan and Firewall cards for sites without it.
-- Protect Dashboard: Add a Scan now button to the page header and show when the site was last scanned.
 - Settings: Match the page header, tabs, and cards of the other Jetpack settings screens.
 - Stats: Mark the keyboard-selected bar in stats bar charts with a focus ring that shows on any bar color.
 - VideoPress: Let channel blocks show authors a call to action while a channel has no videos or playlists.
@@ -85,6 +79,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Keep the Help tab's cards inside their column on narrow screens.
 - My Jetpack: Retry loading the Features list after a rate-limited or unreadable response, and say the list is incomplete when it cannot be loaded.
 - My Jetpack: Show the correct product status and use the active plugin copy when turning products on or off with both stable and Beta or development copies installed.
+- My Jetpack: Show the firewall as on in the Protect card whenever it is running, matching the Protect page.
 - My Jetpack: Stop offering retired Security and Growth plans while preserving existing subscriptions.
 - Newsletter: Ask before leaving the settings page while a section has unsaved changes.
 - Newsletter: Keep the email preview's device highlight on the selected device when the window is resized.
@@ -124,8 +119,6 @@ This is an alpha version! The changes listed here are not final.
 - Google Photos: Remove dead code.
 - Newsletter: Open the email design screen to proxied Automatticians on Atomic sites, alongside the site sticker.
 - Newsletter: update the email editor package to 2.5.1.
-- Protect: Add a page that shows whether the threats from an alert still need attention, were fixed, or were ignored.
-- Protect: Show a shield with a flame on the Protect dashboard's Firewall card, so it is easy to tell apart from Scan.
 - Reprint export: Accept public-key signed export requests and update Reprint to 0.11.2.
 - Settings: Remove the Security tab when the Protect page is on, and send its links and searches there.
 - Settings: Stop adding the `origin_site_id` parameter to the Reader link.
@@ -257,13 +250,6 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Give the AI Hub's Claude links on self-hosted sites their own redirects, so their destination can change without a plugin update. [#53764]
 - JSON API: Save the brute force protection allow list sent to the site settings endpoint. [#53316]
 - Newsletter: Record each dashboard widget view once. [#53672]
-- Protect: Add the Firewall section to the Protect dashboard, with blocked-request totals, recently blocked requests, manual IP rules, a firewall test and firewall settings. [#53193]
-- Protect: Add the Login protection section to the Protect dashboard, covering brute force protection, account protection and WordPress.com login. [#53192]
-- Protect: Add the Monitor section to the Protect dashboard, with 40 days of uptime and its settings. [#53194]
-- Protect: Improve the Scan section of the Protect dashboard: delete unused vulnerable plugins and themes in place, step through threats with the arrow keys, see whether the affected plugin or theme is active, and get clearer notices for each threat. [#53439]
-- Protect: Show uptime as a percentage on the Protect dashboard's Downtime monitoring card, with per-day details on hover and a toggle to turn it on. [#53740]
-- Protect: Tell the Monitor card's failures apart on the Protect dashboard, with a link to connect a WordPress.com account and a way to retry. [#53382]
-- Protect Dashboard: Keep the module unavailable on WordPress.com sites. [#53619]
 - Settings: Remove the legacy Settings page and its jetpack-settings-wp-build feature flag. [#52667]
 - Shortcodes, widgets: Use apply_shortcodes() instead of do_shortcode(). [#53543]
 - Update package dependencies. [#53004]
@@ -314,6 +300,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the date once in chart tooltips, read each row as value then metric, and list the comparison period in a second column. [#53147]
 - Premium Analytics: Show the empty-cell color at the start of heatmap legends such as Posting activity. [#53338]
 - Premium Analytics: Use a 2px corner radius on chart bars. [#53132]
+- Protect: Add a Protect page for Scan, Firewall, Login protection and Downtime monitoring, with threat details and fixes, scan history, blocked-request stats and uptime. It's on by default for connected sites, except those that also run the Jetpack Protect plugin. [#53182]
 - SSO: When a site requires two-step authentication and your WordPress.com account doesn't have it, the login screen now names your account and links straight to two-step setup. [#52403]
 - VideoPress: Add an introductory video to the first-run welcome modal. [#53208]
 - VideoPress: Add trim and cut editing to the video block toolbar and clarify the editor tool icons. [#53100]
@@ -363,10 +350,6 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Show the send icon before the Send button label in the test email modal. [#53300]
 - Newsletter: update the email editor package to 2.5.0. [#53433]
 - Omnibar: Return the Stats chart node from the admin-bar REST endpoint, and the admin bar to every role on the site rather than administrators only. [#53082]
-- Protect: Add a feature-flagged Protect Dashboard module that adds a Protect page to the Jetpack sidebar. [#53182]
-- Protect: Add a Scan history tab to the Protect dashboard for sites with Jetpack Scan, show threat actions on row hover, and offer to delete unused plugins and themes that have threats. [#53196]
-- Protect: Add the Scan section to the Protect dashboard: review threats in a table with a details sidebar, run on-demand scans, and fix, ignore, or unignore threats. [#53195]
-- Protect: Add the tabbed layout and section framework for the feature-flagged Protect dashboard. [#53190]
 - Update package dependencies. [#53032]
 - VideoPress: Remove the legacy VideoPress dashboard. Sites that turned off the modern dashboard no longer get a Jetpack > VideoPress menu. [#53068]
 

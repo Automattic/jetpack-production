@@ -491,7 +491,7 @@ __( "Your website’s overall speed score decreased by %d.", "jetpack-my-jetpack
 __( "Your website’s overall speed score:", "jetpack-my-jetpack" );
 __( "Site speed performance:", "jetpack-my-jetpack" );
 __( "Boost your site", "jetpack-my-jetpack" );
-/* translators: %s is the name of the feature or stat the popover explains, e.g. "Auto-Firewall". */
+/* translators: %s is the name of the feature or stat the popover explains, e.g. "Firewall". */
 __( "More about %s", "jetpack-my-jetpack" );
 __( "Protect settings", "jetpack-my-jetpack" );
 __( "Brute Force Protection: Active", "jetpack-my-jetpack" );
@@ -501,6 +501,15 @@ __( "Brute Force Protection: Inactive", "jetpack-my-jetpack" );
 __( "Brute Force Protection is disabled and not actively blocking malicious login attempts. Go to <a>%s</a> to activate it.", "jetpack-my-jetpack" );
 __( "Brute Force Protection is disabled and not actively blocking malicious login attempts.", "jetpack-my-jetpack" );
 __( "For Brute Force Protection, activate the Jetpack or Protect plugin and enable it in settings.", "jetpack-my-jetpack" );
+__( "Firewall: On", "jetpack-my-jetpack" );
+__( "Automatic rules are off, so only the IP addresses you list are blocked. Turn them on in your <a>firewall settings</a>.", "jetpack-my-jetpack" );
+__( "Automatic rules are off, so only the IP addresses you list are blocked.", "jetpack-my-jetpack" );
+__( "The firewall blocks the IP addresses you list. Upgrade for automatic rules that stop known attacks.", "jetpack-my-jetpack" );
+__( "Firewall: Inactive", "jetpack-my-jetpack" );
+__( "Jetpack’s firewall is off because your hosting provider already includes a built-in firewall with similar rules for your site.", "jetpack-my-jetpack" );
+__( "Firewall: Off", "jetpack-my-jetpack" );
+__( "The firewall isn’t blocking any requests. Turn it on in your <a>firewall settings</a>.", "jetpack-my-jetpack" );
+__( "The firewall isn’t blocking any requests.", "jetpack-my-jetpack" );
 __( "Improve site safety: secure plugins & themes", "jetpack-my-jetpack" );
 /* translators: %1$s the singular or plural of number of plugin(s), and %2$s is the singular or plural of the number of theme(s). */
 __( "Your site has %1$s and %2$s lacking security measures. Improve your site’s safety by adding protection at no cost.", "jetpack-my-jetpack" );
@@ -517,16 +526,12 @@ _n( "%d threat", "%d threats", 1, "jetpack-my-jetpack" );
 __( "The last scan identified %1$s. But don’t worry, Protect is usually able to “Auto-fix” threats, in most cases. Visit the <a>%2$s dashboard</a> to view more details.", "jetpack-my-jetpack" );
 __( "Elevate your malware protection", "jetpack-my-jetpack" );
 __( "We’ve checked items against our database, and all appears well. For a more detailed, line-by-line malware scan, consider upgrading your plan.", "jetpack-my-jetpack" );
-__( "Auto-Firewall: Inactive", "jetpack-my-jetpack" );
-__( "You have Auto-Firewall disabled, visit your Protect <a>firewall settings</a> to activate.", "jetpack-my-jetpack" );
-__( "Auto-Firewall is disabled as your hosting provider already includes a built-in firewall with similar rules for your site.", "jetpack-my-jetpack" );
-__( "Upgrade required for activation. Manual rules available.", "jetpack-my-jetpack" );
-__( "Auto-Firewall", "jetpack-my-jetpack" );
-__( "Shield icon - Auto-Firewall Status: On", "jetpack-my-jetpack" );
 __( "On", "jetpack-my-jetpack" );
-__( "Shield icon - Auto-Firewall Status: Inactive", "jetpack-my-jetpack" );
-__( "Shield icon - Auto-Firewall Status: Off", "jetpack-my-jetpack" );
+__( "Shield icon - Firewall Status: On", "jetpack-my-jetpack" );
+__( "Shield icon - Firewall Status: Inactive", "jetpack-my-jetpack" );
 __( "Off", "jetpack-my-jetpack" );
+__( "Shield icon - Firewall Status: Off", "jetpack-my-jetpack" );
+__( "Firewall", "jetpack-my-jetpack" );
 __( "Logins Blocked", "jetpack-my-jetpack" );
 __( "Shield icon - Brute Force Protection Status: Active", "jetpack-my-jetpack" );
 __( "Shield icon - Brute Force Protection Status: Inactive", "jetpack-my-jetpack" );

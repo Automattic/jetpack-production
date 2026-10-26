@@ -19,6 +19,9 @@ __( "There was an error testing Jetpack. Error: %s", "jetpack-protect-pkg" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-protect-pkg" );
 __( "Loading", "jetpack-protect-pkg" );
+/* translators: %d: number of breadcrumb links hidden in the overflow menu. */
+_n( "Show %d hidden breadcrumb item", "Show %d hidden breadcrumb items", 1, "jetpack-protect-pkg" );
+__( "Breadcrumbs", "jetpack-protect-pkg" );
 __( "OK", "jetpack-protect-pkg" );
 __( "Cancel", "jetpack-protect-pkg" );
 __( "Close", "jetpack-protect-pkg" );
@@ -26,6 +29,7 @@ __( "More details follow the field.", "jetpack-protect-pkg" );
 __( "Dismiss", "jetpack-protect-pkg" );
 __( "Unavailable", "jetpack-protect-pkg" );
 __( "This feature isn’t available on your site.", "jetpack-protect-pkg" );
+__( "The scan couldn’t be started.", "jetpack-protect-pkg" );
 __( "Firewall test", "jetpack-protect-pkg" );
 __( "Blocked IP address", "jetpack-protect-pkg" );
 /* translators: %d is a firewall rule's ID. */
@@ -42,6 +46,7 @@ __( "Nothing to set up", "jetpack-protect-pkg" );
 __( "Turn it on once and it works in the background.", "jetpack-protect-pkg" );
 /* translators: %d is how many IP addresses are on a list. */
 _n( "%d address on the list", "%d addresses on the list", 1, "jetpack-protect-pkg" );
+__( "This list is turned off, so it has no effect until you turn it on in Settings.", "jetpack-protect-pkg" );
 __( "IP addresses", "jetpack-protect-pkg" );
 /* translators: 1: an example IP address range. 2: an example CIDR block. */
 __( "One per line. Use a range like %1$s or CIDR like %2$s.", "jetpack-protect-pkg" );
@@ -50,9 +55,7 @@ __( "Your IP address: %s", "jetpack-protect-pkg" );
 __( "Already on this list", "jetpack-protect-pkg" );
 __( "Add it to the list", "jetpack-protect-pkg" );
 __( "Save", "jetpack-protect-pkg" );
-__( "Latest blocked request", "jetpack-protect-pkg" );
-__( "None yet", "jetpack-protect-pkg" );
-__( "View blocked requests", "jetpack-protect-pkg" );
+__( "View log", "jetpack-protect-pkg" );
 __( "Recently blocked requests", "jetpack-protect-pkg" );
 __( "When", "jetpack-protect-pkg" );
 __( "Reason", "jetpack-protect-pkg" );
@@ -81,24 +84,19 @@ __( "The firewall test timed out, because your site took too long to respond. Tr
 __( "The firewall test couldn’t run. Try again.", "jetpack-protect-pkg" );
 __( "Learn more", "jetpack-protect-pkg" );
 __( "Firewall", "jetpack-protect-pkg" );
+__( "Run test", "jetpack-protect-pkg" );
 __( "Blocks malicious requests before they reach your site.", "jetpack-protect-pkg" );
-__( "Test firewall", "jetpack-protect-pkg" );
-__( "Blocked today", "jetpack-protect-pkg" );
 __( "Blocked in the last 30 days", "jetpack-protect-pkg" );
-__( "All-time blocked requests", "jetpack-protect-pkg" );
-__( "Configure Firewall", "jetpack-protect-pkg" );
-__( "Rules last updated", "jetpack-protect-pkg" );
-__( "Block specific IP addresses", "jetpack-protect-pkg" );
-__( "Stop specific visitors from accessing your site by their IP address.", "jetpack-protect-pkg" );
-__( "Edit block list", "jetpack-protect-pkg" );
-__( "Blocked IP addresses", "jetpack-protect-pkg" );
-__( "Always allow specific IP addresses", "jetpack-protect-pkg" );
-__( "IP addresses added to this list are always allowed to access your site.", "jetpack-protect-pkg" );
-__( "Edit allow list", "jetpack-protect-pkg" );
-__( "Always allowed IP addresses", "jetpack-protect-pkg" );
+__( "No requests blocked yet", "jetpack-protect-pkg" );
+__( "Get started by testing your firewall and start blocking requests from suspicious IPs.", "jetpack-protect-pkg" );
 __( "Your automatic firewall rules have stopped updating", "jetpack-protect-pkg" );
 /* translators: %s is a date, such as "Mar 14, 2026". */
 __( "Your rules were last updated on %s. Attacks on WordPress plugins discovered since then can get through. Upgrade to get a new rule as soon as an attack is found.", "jetpack-protect-pkg" );
+__( "Edit block list", "jetpack-protect-pkg" );
+__( "Blocked IP addresses", "jetpack-protect-pkg" );
+__( "Edit allow list", "jetpack-protect-pkg" );
+__( "Always allowed IP addresses", "jetpack-protect-pkg" );
+__( "Configure Firewall", "jetpack-protect-pkg" );
 __( "Separate addresses or ranges with commas, spaces or new lines.", "jetpack-protect-pkg" );
 /* translators: %s is a list of example IP addresses and ranges. */
 __( "Example: %s", "jetpack-protect-pkg" );
@@ -322,7 +320,21 @@ __( "Value must be true, false, or undefined", "jetpack-protect-pkg" );
 __( "Value must be an array.", "jetpack-protect-pkg" );
 __( "Every value must be a string.", "jetpack-protect-pkg" );
 __( "Value must be a valid color.", "jetpack-protect-pkg" );
-__( "The scan couldn’t be started.", "jetpack-protect-pkg" );
+__( "Delete the directory that the infected file is in.", "jetpack-protect-pkg" );
+__( "Delete the unexpected file in a core WordPress directory.", "jetpack-protect-pkg" );
+__( "Delete the infected file.", "jetpack-protect-pkg" );
+__( "Delete the plugin directory to fix the threat.", "jetpack-protect-pkg" );
+__( "Delete the theme directory to fix the threat.", "jetpack-protect-pkg" );
+/* translators: Translates to Updates to version. %1$s: Name. %2$s: Fixed version */
+__( "Update %1$s to version %2$s", "jetpack-protect-pkg" );
+__( "Upgrade the plugin or theme to a newer version.", "jetpack-protect-pkg" );
+__( "Replace the modified core WordPress file with the original clean version from the WordPress source code.", "jetpack-protect-pkg" );
+__( "Replace the infected file with a previously backed up version that is clean.", "jetpack-protect-pkg" );
+__( "Replace the default salt keys in wp-config.php with unique ones.", "jetpack-protect-pkg" );
+__( "Jetpack will auto-fix the threat.", "jetpack-protect-pkg" );
+_x( "Critical", "Severity label for issues rated 5 or higher.", "jetpack-protect-pkg" );
+_x( "High", "Severity label for issues rated between 3 and 5.", "jetpack-protect-pkg" );
+_x( "Low", "Severity label for issues rated below 3.", "jetpack-protect-pkg" );
 __( "Scan history is unavailable right now.", "jetpack-protect-pkg" );
 __( "Vulnerable plugin", "jetpack-protect-pkg" );
 __( "Vulnerable theme", "jetpack-protect-pkg" );
@@ -355,13 +367,38 @@ __( "The threat in %s couldn’t be ignored.", "jetpack-protect-pkg" );
 /* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
 __( "The threat in %s couldn’t be unignored.", "jetpack-protect-pkg" );
 __( "Fixing the threat in %s…", "jetpack-protect-pkg" );
-/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
 __( "The fix for the threat in %s is taking longer than expected. Check back in a few minutes.", "jetpack-protect-pkg" );
 __( "Fixed the threat in %s.", "jetpack-protect-pkg" );
 /* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
 __( "Jetpack couldn’t fix the threat in %s. Contact Jetpack support for help.", "jetpack-protect-pkg" );
 /* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
 __( "The fix for the threat in %s couldn’t be started.", "jetpack-protect-pkg" );
+/* translators: %d is a number of threats, two or more. */
+_n( "Fixing %d threat…", "Fixing %d threats…", 1, "jetpack-protect-pkg" );
+/* translators: %d is a number of threats, two or more. */
+_n( "Fixed %d threat.", "Fixed %d threats.", 1, "jetpack-protect-pkg" );
+/* translators: 1: how many threats were fixed. 2: how many Jetpack tried to fix. */
+_n( "Fixed %1$d of %2$d threat.", "Fixed %1$d of %2$d threats.", 1, "jetpack-protect-pkg" );
+/* translators: %d is a number of fixes. */
+_n( "%d fix is taking longer than expected. Check back in a few minutes.", "%d fixes are taking longer than expected. Check back in a few minutes.", 1, "jetpack-protect-pkg" );
+/* translators: %d is a number of threats. */
+_n( "%d threat couldn’t be fixed. Fix it on its own to see why.", "%d threats couldn’t be fixed. Fix them one at a time to see why.", 1, "jetpack-protect-pkg" );
+/* translators: %d is a number of threats, two or more. */
+_n( "Ignoring %d threat…", "Ignoring %d threats…", 1, "jetpack-protect-pkg" );
+/* translators: %d is a number of threats, two or more. */
+_n( "Unignoring %d threat…", "Unignoring %d threats…", 1, "jetpack-protect-pkg" );
+/* translators: %d is a number of threats, two or more. */
+_n( "Ignored %d threat.", "Ignored %d threats.", 1, "jetpack-protect-pkg" );
+/* translators: %d is a number of threats, two or more. */
+_n( "Unignored %d threat.", "Unignored %d threats.", 1, "jetpack-protect-pkg" );
+/* translators: %d is a number of threats, two or more. */
+_n( "The %d threat couldn’t be ignored.", "The %d threats couldn’t be ignored.", 1, "jetpack-protect-pkg" );
+/* translators: %d is a number of threats, two or more. */
+_n( "The %d threat couldn’t be unignored.", "The %d threats couldn’t be unignored.", 1, "jetpack-protect-pkg" );
+/* translators: 1: how many threats were ignored. 2: how many Jetpack tried to ignore. */
+_n( "Ignored %1$d of %2$d threat. Try the others again.", "Ignored %1$d of %2$d threats. Try the others again.", 1, "jetpack-protect-pkg" );
+/* translators: 1: how many threats were unignored. 2: how many Jetpack tried to unignore. */
+_n( "Unignored %1$d of %2$d threat. Try the others again.", "Unignored %1$d of %2$d threats. Try the others again.", 1, "jetpack-protect-pkg" );
 /* translators: %s is a plugin or theme, such as "Contact Form 7". */
 __( "%s can’t be deleted while one of its threats is being fixed or ignored. Try again once that finishes.", "jetpack-protect-pkg" );
 /* translators: %s is a plugin or theme, such as "Contact Form 7". */
@@ -378,24 +415,24 @@ __( "Auto-fix", "jetpack-protect-pkg" );
 __( "Unignore", "jetpack-protect-pkg" );
 __( "View on WordPress.org", "jetpack-protect-pkg" );
 __( "Ignore", "jetpack-protect-pkg" );
-__( "Delete the directory that the infected file is in.", "jetpack-protect-pkg" );
-__( "Delete the unexpected file in a core WordPress directory.", "jetpack-protect-pkg" );
-__( "Delete the infected file.", "jetpack-protect-pkg" );
-__( "Delete the plugin directory to fix the threat.", "jetpack-protect-pkg" );
-__( "Delete the theme directory to fix the threat.", "jetpack-protect-pkg" );
-/* translators: Translates to Updates to version. %1$s: Name. %2$s: Fixed version */
-__( "Update %1$s to version %2$s", "jetpack-protect-pkg" );
-__( "Upgrade the plugin or theme to a newer version.", "jetpack-protect-pkg" );
-__( "Replace the modified core WordPress file with the original clean version from the WordPress source code.", "jetpack-protect-pkg" );
-__( "Replace the infected file with a previously backed up version that is clean.", "jetpack-protect-pkg" );
-__( "Replace the default salt keys in wp-config.php with unique ones.", "jetpack-protect-pkg" );
-__( "Jetpack will auto-fix the threat.", "jetpack-protect-pkg" );
-_x( "Critical", "Severity label for issues rated 5 or higher.", "jetpack-protect-pkg" );
-_x( "High", "Severity label for issues rated between 3 and 5.", "jetpack-protect-pkg" );
-_x( "Low", "Severity label for issues rated below 3.", "jetpack-protect-pkg" );
+/* translators: %s is a kind of threat, such as "Vulnerable plugin", before what it's in. */
+__( "%s:", "jetpack-protect-pkg" );
+__( "Fixing…", "jetpack-protect-pkg" );
+__( "Ignoring…", "jetpack-protect-pkg" );
+__( "Unignoring…", "jetpack-protect-pkg" );
+__( "Deleting…", "jetpack-protect-pkg" );
 __( "Severity", "jetpack-protect-pkg" );
-__( "Threats", "jetpack-protect-pkg" );
+__( "Critical", "jetpack-protect-pkg" );
+__( "High", "jetpack-protect-pkg" );
+__( "Low", "jetpack-protect-pkg" );
+__( "Plugin", "jetpack-protect-pkg" );
+__( "Theme", "jetpack-protect-pkg" );
+__( "WordPress", "jetpack-protect-pkg" );
+__( "File", "jetpack-protect-pkg" );
+__( "Type", "jetpack-protect-pkg" );
+__( "Vulnerabilities", "jetpack-protect-pkg" );
 __( "Detected on", "jetpack-protect-pkg" );
+__( "Review and fix threats", "jetpack-protect-pkg" );
 __( "Fixed threats", "jetpack-protect-pkg" );
 __( "Ignored threats", "jetpack-protect-pkg" );
 __( "Fixed on", "jetpack-protect-pkg" );
@@ -409,7 +446,6 @@ __( "No ignored threats", "jetpack-protect-pkg" );
 __( "Threats you ignore will be listed here, where you can unignore them at any time.", "jetpack-protect-pkg" );
 __( "Loading scan history…", "jetpack-protect-pkg" );
 __( "Scan history", "jetpack-protect-pkg" );
-_x( "Breadcrumbs", "aria label", "jetpack-protect-pkg" );
 __( "Low severity", "jetpack-protect-pkg" );
 __( "Critical severity", "jetpack-protect-pkg" );
 __( "High severity", "jetpack-protect-pkg" );
@@ -426,7 +462,6 @@ __( "Jetpack can’t fix this automatically. Review the affected code and remove
 __( "Jetpack is fixing this threat. You can close this panel; the list updates when it’s done.", "jetpack-protect-pkg" );
 __( "Unignore it", "jetpack-protect-pkg" );
 __( "Ignore it", "jetpack-protect-pkg" );
-__( "Fixing…", "jetpack-protect-pkg" );
 __( "Auto-fix it", "jetpack-protect-pkg" );
 /* translators: %s is a file name, such as "index.php". */
 __( "File: %s", "jetpack-protect-pkg" );
@@ -454,10 +489,10 @@ __( "Turn off WordPress.com login (SSO)?", "jetpack-protect-pkg" );
 __( "Users will have to log in with their username and password on this site instead.", "jetpack-protect-pkg" );
 __( "Turn off", "jetpack-protect-pkg" );
 __( "All-time blocked login attempts", "jetpack-protect-pkg" );
-__( "Configure brute force protection", "jetpack-protect-pkg" );
-__( "Enable brute force protection", "jetpack-protect-pkg" );
+__( "Configure login protection", "jetpack-protect-pkg" );
+__( "Enable login protection", "jetpack-protect-pkg" );
 __( "Block IP addresses that keep failing to log in.", "jetpack-protect-pkg" );
-__( "Brute force protection isn’t available on this site.", "jetpack-protect-pkg" );
+__( "Login protection isn’t available on this site.", "jetpack-protect-pkg" );
 __( "Login protection", "jetpack-protect-pkg" );
 __( "Blocks password-guessing attacks and protects accounts with weak passwords.", "jetpack-protect-pkg" );
 __( "Enable account protection", "jetpack-protect-pkg" );
@@ -466,10 +501,10 @@ __( "Account protection isn’t available on this site.", "jetpack-protect-pkg" 
 __( "Enable WordPress.com login (SSO)", "jetpack-protect-pkg" );
 __( "Log in with WordPress.com and its two-step authentication.", "jetpack-protect-pkg" );
 __( "Configure WordPress.com login (SSO)", "jetpack-protect-pkg" );
-__( "Brute force protection", "jetpack-protect-pkg" );
 __( "Block repeated failed login attempts", "jetpack-protect-pkg" );
 __( "Stops brute force attacks by blocking IP addresses that keep failing to log in.", "jetpack-protect-pkg" );
-__( "Allowed addresses are never blocked by the firewall or brute force protection.", "jetpack-protect-pkg" );
+__( "Always allow specific IP addresses", "jetpack-protect-pkg" );
+__( "Allowed addresses are never blocked by the firewall or login protection.", "jetpack-protect-pkg" );
 __( "One address or range per line.", "jetpack-protect-pkg" );
 __( "Account protection", "jetpack-protect-pkg" );
 __( "Protect accounts with weak or leaked passwords", "jetpack-protect-pkg" );
@@ -506,24 +541,13 @@ __( "Emails go to your WordPress.com account’s address.", "jetpack-protect-pkg
 __( "Connect your WordPress.com account to manage these emails.", "jetpack-protect-pkg" );
 __( "Scan no longer reports this threat. It may have been fixed.", "jetpack-protect-pkg" );
 /* translators: %s is how long ago, such as "2 hours ago". */
-__( "Last scanned %s", "jetpack-protect-pkg" );
-/* translators: %s is a date and time, such as "Oct 6, 10PM". */
-__( "Free vulnerability checks run once a day, so the next one can start on %s. Upgrade to Scan to scan whenever you like.", "jetpack-protect-pkg" );
-__( "Checked once a day", "jetpack-protect-pkg" );
-__( "Your site is safe right now", "jetpack-protect-pkg" );
+__( "Last scan %s", "jetpack-protect-pkg" );
+__( "No threats found", "jetpack-protect-pkg" );
 /* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */
 __( "No issues were found after scanning %1$s and %2$s.", "jetpack-protect-pkg" );
-/* translators: %s is a date and time, such as "Sep 30, 9AM". */
-__( "Next scan will happen automatically on %s.", "jetpack-protect-pkg" );
-__( "Your site is scanned automatically every day.", "jetpack-protect-pkg" );
-__( "Scan again now", "jetpack-protect-pkg" );
-__( "No known vulnerabilities found", "jetpack-protect-pkg" );
+__( "No vulnerabilities found", "jetpack-protect-pkg" );
 /* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */
-__( "None of your %1$s or %2$s has a known vulnerability.", "jetpack-protect-pkg" );
-/* translators: %s is a date and time, such as "Sep 30, 9AM". */
-__( "Next check will happen automatically on %s.", "jetpack-protect-pkg" );
-__( "Vulnerabilities are checked automatically every day.", "jetpack-protect-pkg" );
-__( "Check again now", "jetpack-protect-pkg" );
+__( "No issues were found after checking %1$s and %2$s for known vulnerabilities.", "jetpack-protect-pkg" );
 __( "Get the rest of your site’s protection", "jetpack-protect-pkg" );
 __( "Find malware", "jetpack-protect-pkg" );
 __( "Every file on your site is checked daily, not just your plugin versions.", "jetpack-protect-pkg" );
@@ -584,16 +608,17 @@ __( "Checking %1$s, %2$s and your site’s files for threats.", "jetpack-protect
 __( "Checking %1$s and %2$s for vulnerabilities.", "jetpack-protect-pkg" );
 __( "You can leave this page — the scan carries on.", "jetpack-protect-pkg" );
 __( "Check again", "jetpack-protect-pkg" );
-__( "Scan", "jetpack-protect-pkg" );
 __( "We couldn’t check your site for vulnerabilities right now.", "jetpack-protect-pkg" );
 __( "All vulnerabilities found", "jetpack-protect-pkg" );
 __( "Plugins checked", "jetpack-protect-pkg" );
 __( "Themes checked", "jetpack-protect-pkg" );
+__( "Scan results", "jetpack-protect-pkg" );
 __( "Daily malware and vulnerability checks for your files, WordPress, plugins and themes.", "jetpack-protect-pkg" );
 __( "Daily vulnerability checks for WordPress, plugins and themes.", "jetpack-protect-pkg" );
 __( "View scan history", "jetpack-protect-pkg" );
 /* translators: %d is a number of threats. */
 _n( "View %d ignored threat", "View %d ignored threats", 1, "jetpack-protect-pkg" );
+__( "Scan", "jetpack-protect-pkg" );
 __( "Scan checks your site for malware every day. Threat alerts and scan settings are managed on Jetpack.com.", "jetpack-protect-pkg" );
 __( "Your site is checked every day for known vulnerabilities in WordPress, plugins and themes. There’s nothing to set up.", "jetpack-protect-pkg" );
 __( "Manage Scan settings", "jetpack-protect-pkg" );
@@ -606,11 +631,15 @@ __( "The firewall couldn’t finish applying your change.", "jetpack-protect-pkg
 __( "Your settings couldn’t be loaded.", "jetpack-protect-pkg" );
 __( "Settings updated.", "jetpack-protect-pkg" );
 __( "Your change couldn’t be saved. Try again.", "jetpack-protect-pkg" );
-__( "Scan now", "jetpack-protect-pkg" );
-__( "Threats from your alert", "jetpack-protect-pkg" );
+/* translators: %s is a date and time, such as "Oct 6, 10PM". */
+__( "Free vulnerability checks run once a day, so the next one can start on %s. Upgrade to Scan to scan whenever you like.", "jetpack-protect-pkg" );
+__( "Checked once a day", "jetpack-protect-pkg" );
+__( "Scan site", "jetpack-protect-pkg" );
 /* translators: %s is a threat's id number. */
 __( "Threat #%s", "jetpack-protect-pkg" );
 __( "Nothing from your alert needs fixing", "jetpack-protect-pkg" );
+__( "Your site is safe right now", "jetpack-protect-pkg" );
+__( "No known vulnerabilities found", "jetpack-protect-pkg" );
 __( "None of the threats from your alert need your attention.", "jetpack-protect-pkg" );
 __( "Other threats on your site still need attention.", "jetpack-protect-pkg" );
 __( "See them on the Overview.", "jetpack-protect-pkg" );
@@ -625,6 +654,6 @@ __( "No longer detected", "jetpack-protect-pkg" );
 __( "Scan no longer finds these, for example after the plugin or theme was updated or removed.", "jetpack-protect-pkg" );
 __( "Status unavailable", "jetpack-protect-pkg" );
 __( "These couldn’t be checked right now. Reload the page to try again.", "jetpack-protect-pkg" );
-__( "Security tools that keep your site safe and sound, from posts to plugins.", "jetpack-protect-pkg" );
+__( "Threats from your alert", "jetpack-protect-pkg" );
 __( "Overview", "jetpack-protect-pkg" );
 __( "Settings", "jetpack-protect-pkg" );

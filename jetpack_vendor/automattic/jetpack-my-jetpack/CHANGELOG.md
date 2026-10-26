@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Onboarding: Explain why connecting failed, with the underlying cause underneath when it helps.
 - Overview: Line up the lock icon with the label on locked upgrade links.
 - Products: Show the correct status and use the active plugin copy when turning products on or off with both stable and Beta or development copies installed.
+- Protect card: Show the firewall as on whenever it is running, matching the Protect page.
 - Stop offering retired Security and Growth plans while preserving existing subscriptions.
 - Update the Account Protection activation message to describe what the feature does.
 

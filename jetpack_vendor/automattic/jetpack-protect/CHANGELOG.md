@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Dashboard: Add search, filters, view options, and bulk Auto-fix and Ignore to the Scan card's threat list, under a heading that collapses it, with each threat on one line beside its severity.
+- Dashboard: Record Tracks events for page views, Scan now, opening and acting on threats, the threat tables, the Get Scan and Monitor connect links, and the security settings.
 - Dashboard: Show requests blocked today and in the last 30 days, and when the automatic firewall rules were last updated, on the Firewall card.
 - Dashboard: Show whether the firewall runs in standalone mode and how to set it up on the Firewall settings card, and explain firewall file and rules errors in plain words.
 - Protect Dashboard: Add a Scan now button to the page header and show when the site was last scanned.
@@ -20,12 +22,20 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Dashboard: Animate the safe-state shield, with a particle burst when a scan finishes clean.
 - Dashboard: Explain what the History tab's Fixed and Ignored lists will show when they are empty.
+- Dashboard: Keep the Scan card the same height while a scan runs, after a clean scan, and when threats are found, with a smaller shield.
 - Dashboard: Redesign the Login protection card with toggles for account protection and Secure Sign On.
+- Dashboard: Rename brute force protection to Login protection on the Overview and Settings tabs.
+- Dashboard: Shorten the Scan card's all-clear after a clean scan to a title and one line, and start scans from the page header instead of the card.
+- Dashboard: Show the View, Auto-fix and Unignore buttons in threat lists without hovering.
 - Give the Firewall card a shield with a flame icon, so it no longer shares the Scan card's shield.
 - Name Offline Mode as it is named across the rest of Jetpack.
+- Protect Dashboard: Show a "Jetpack / Protect" breadcrumb in the page header, and rename its Scan now button to Scan site.
+- Protect dashboard: Simplify the Firewall card to a Run test button, the requests blocked in the last 30 days with a View log button, and one row of links to the IP lists and settings.
 - Protect dashboard: Stop calling a site without a Scan plan safe when no known vulnerabilities are found.
+- Protect dashboard: Title the Scan card "Scan results" and show when the site was last scanned in a badge beside the title.
 
 ### Fixed
+- Protect dashboard: Show that a threat is being fixed in its row of the threats list, and hide the row's other actions until the fix finishes.
 - Protect dashboard: Show why Scan now failed when WordPress.com declines to start a scan, instead of showing a scan that never runs.
 
 ## [0.2.0] - 2026-10-19
