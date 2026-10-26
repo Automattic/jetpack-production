@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Backup: Show Backup's state from the site's plan on its Features card instead of a switch, offering an upgrade, or a renewal for an expired plan.
 - Greet the current user by name in the Overview heading, shown only while the Overview v1 feature flag is on.
+- Header: Float the connection panel inside the page and tighten its spacing.
 - Header: Leave the plan and connection out of the Overview, since the header shows them, while the header controls feature flag is on.
 - Onboarding: Size the terms of service line through its Text variant instead of overriding the shared styles.
 - Overview: Draw the sections as a compact bordered grid with a divider under each heading, shown only while the Overview v1 feature flag is on.
