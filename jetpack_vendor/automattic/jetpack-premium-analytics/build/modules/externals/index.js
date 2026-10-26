@@ -79,6 +79,7 @@ __( "No results found.", "jetpack-premium-analytics-pkg" );
 __( "Search", "jetpack-premium-analytics-pkg" );
 __( "Clear all", "jetpack-premium-analytics-pkg" );
 __( "Dismiss", "jetpack-premium-analytics-pkg" );
+__( "In progress", "jetpack-premium-analytics-pkg" );
 __( "Sort ascending", "jetpack-premium-analytics-pkg" );
 __( "Sort descending", "jetpack-premium-analytics-pkg" );
 __( "(no title)", "jetpack-premium-analytics-pkg" );

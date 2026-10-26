@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the Jetpack footer at the bottom of every Stats page, like other Jetpack screens.
 - Premium Analytics: Show the widgets' View all link and CSV download in the card footer.
 - Premium Analytics: Stop the tour from offering period comparison on a free plan, which covers only the last 7 days.
+- Premium Analytics: Upload a first video from the Top videos widget and follow it while it processes.
 - Protect: Animate the shield on the Protect page, with a particle burst when a scan finishes clean.
 - Protect: Explain what the Scan history's Fixed and Ignored lists will show when they are empty.
 - Protect: Make the new Protect page available to turn on from My Jetpack or Jetpack › Modules.

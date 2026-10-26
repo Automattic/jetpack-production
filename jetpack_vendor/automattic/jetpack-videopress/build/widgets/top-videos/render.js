@@ -7,8 +7,33 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Untitled video", "jetpack-videopress-pkg" );
+__( "You’ve reached the free plan’s 1-video limit. Upgrade to upload more.", "jetpack-videopress-pkg" );
+__( "Only video files can be uploaded.", "jetpack-videopress-pkg" );
+__( "That video format can’t be uploaded. Convert your video to MP4 or MOV, then try again.", "jetpack-videopress-pkg" );
+/* translators: %s: an upper-cased video file extension, e.g. "WEBM". */
+__( "%s files can’t be uploaded. Convert your video to MP4 or MOV, then try again.", "jetpack-videopress-pkg" );
+__( "Upgrade", "jetpack-videopress-pkg" );
+__( "Select videos to upload", "jetpack-videopress-pkg" );
+__( "Select a video to upload", "jetpack-videopress-pkg" );
+__( "Drag and drop your videos here", "jetpack-videopress-pkg" );
+__( "Drag and drop your video here", "jetpack-videopress-pkg" );
+__( "Add one or several. Each upload gets automatic captions, a player you fully own, and a link to share anywhere. No ads, no algorithm.", "jetpack-videopress-pkg" );
+__( "Add one video. Each upload gets automatic captions, a player you fully own, and a link to share anywhere. No ads, no algorithm.", "jetpack-videopress-pkg" );
+__( "The upload failed. Please try again.", "jetpack-videopress-pkg" );
+__( "Uploading…", "jetpack-videopress-pkg" );
+__( "Finishing upload…", "jetpack-videopress-pkg" );
+/* translators: %d: upload progress percentage. */
+__( "Uploading %d%%", "jetpack-videopress-pkg" );
+__( "Retry upload", "jetpack-videopress-pkg" );
+__( "Upload progress", "jetpack-videopress-pkg" );
+__( "Your video was uploaded, but it couldn’t be processed.", "jetpack-videopress-pkg" );
+__( "Your video is uploaded and being processed. Plays will show up here once people watch it.", "jetpack-videopress-pkg" );
+__( "Your video is ready. Plays will show up here once people watch it.", "jetpack-videopress-pkg" );
+__( "View video", "jetpack-videopress-pkg" );
+__( "Upload a video to start tracking its plays here.", "jetpack-videopress-pkg" );
+__( "Uploading the first video. Add the rest from the VideoPress dashboard.", "jetpack-videopress-pkg" );
 __( "Top videos", "jetpack-videopress-pkg" );
 __( "Videos", "jetpack-videopress-pkg" );
 __( "We couldn't load video plays. Please try again in a moment.", "jetpack-videopress-pkg" );
-__( "You don’t have videos uploaded yet.", "jetpack-videopress-pkg" );
-__( "Upload video", "jetpack-videopress-pkg" );
+__( "No video plays in this period yet.", "jetpack-videopress-pkg" );
+__( "Manage videos", "jetpack-videopress-pkg" );

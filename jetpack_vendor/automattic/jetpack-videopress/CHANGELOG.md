@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Make the Trim & cut editor available by default.
+- Top videos widget: Upload the first video from the widget's empty state and follow it while it processes.
 
 ### Changed
 - Require widget contract 2.0.0 of the Premium Analytics dashboard.
