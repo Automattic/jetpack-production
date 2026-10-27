@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Tabs: Build the tab bar with the WordPress UI Tabs component.
 - Update package dependencies.
 
+### Fixed
+- Backup: Keep the dashboard available after a Jetpack Pro plan expires.
+
 ## [6.13.0] - 2026-10-26
 ### Added
 - Add a "What's new in Jetpack?" section with recent Jetpack.com blog posts to the Overview, shown only while the Overview v1 feature flag is on. [#53629]
