@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Describe the post audience, paid tier and email settings in the REST API schema, so AI agents and other API clients know which values to send.
 - Newsletter: Remove the block inserter and List View from the email design screen, where neither had anything to show.
 - Newsletter: Use the same status icons as the AI launchpad checklist.
+- Premium Analytics: Show highlight metric notes in a styled tooltip that also opens on keyboard focus.
 
 ### Bug fixes
 - Premium Analytics: Move between conversion funnel steps with the arrow keys, show each step's tooltip as soon as it takes keyboard focus, have screen readers read that tooltip, and label the tooltip's rate "Conversion rate".
