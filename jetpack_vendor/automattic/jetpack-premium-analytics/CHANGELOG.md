@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Conversion funnel: Label the tooltip's rate "Conversion rate", and make screen readers announce what each step's tooltip shows.
+- CSV export: Name countries in the Store visitors by location export when WooCommerce has no name for them.
 - Fix hourly Traffic chart times that were an hour off on daylight saving days.
 - Traffic summary: Compare each week, month or year with the one covering the same days in the comparison period, instead of the one in the same position.
 

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Compare each week, month or year in Store performance and the over time charts with the one covering the same days in the comparison period, instead of the one in the same position.
+- Store visitors by location: Show country names instead of country codes.
 
 ## [0.3.0] - 2026-10-26
 ### Added
