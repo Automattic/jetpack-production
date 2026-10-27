@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.13.1-alpha] - unreleased
+## [6.14.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Let people pick the Overview v1 Stats period and step through earlier periods, shown only while the Overview v1 feature flag is on.
 - Overview: Type out the welcome heading and fade the sections in on first load, behind the `my-jetpack-overview-v1` flag.
 
 ### Changed
@@ -3156,7 +3157,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.13.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.13.0...6.13.1-alpha
+[6.14.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.13.0...6.14.0-alpha
 [6.13.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.12.0...6.13.0
 [6.12.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.11.0...6.12.0
 [6.11.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.10.0...6.11.0
