@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Premium Analytics: Compare each week, month or year in the Traffic summary and the WooCommerce tab's charts with the one covering the same days in the comparison period, instead of the one in the same position.
 - Premium Analytics: Fix hourly Traffic chart times that were an hour off on daylight saving days.
+- Premium Analytics: Hide Stats v2 from users who cannot connect the site until it is connected, as the Stats menu does, and send them to the Dashboard if they reload the page.
 - Premium Analytics: Move between conversion funnel steps with the arrow keys, show each step's tooltip as soon as it takes keyboard focus, have screen readers read that tooltip, and label the tooltip's rate "Conversion rate".
 - Stats: Show country names instead of country codes in the WooCommerce Store visitors by location widget and its CSV export.
 - Subscriptions: Treat readers who follow a WordPress.com site in the Reader as subscribed in the Subscriptions widget, instead of showing them the subscribe form.
