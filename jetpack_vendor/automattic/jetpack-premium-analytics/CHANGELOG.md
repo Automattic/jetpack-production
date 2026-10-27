@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.14.1-alpha] - unreleased
+## [0.15.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Offer a yearly interval in the Traffic summary on ranges of three years or longer, and label a first or last month or year that the range cuts by its days.
 
 ### Changed
 - Highlights: Show metric notes in a styled tooltip that also opens on keyboard focus.
@@ -16,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Conversion funnel: Label the tooltip's rate "Conversion rate", and make screen readers announce what each step's tooltip shows.
 - Fix hourly Traffic chart times that were an hour off on daylight saving days.
+- Traffic summary: Compare each week, month or year with the one covering the same days in the comparison period, instead of the one in the same position.
 
 ## [0.14.0] - 2026-10-26
 ### Added
@@ -676,7 +680,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
-[0.14.1-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.14.0...0.14.1-alpha
+[0.15.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.14.0...0.15.0-alpha
 [0.14.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.13.0...0.14.0
 [0.13.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.12.0...0.13.0
 [0.12.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.11.0...0.12.0

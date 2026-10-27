@@ -10,9 +10,11 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Describe the post audience, paid tier and email settings in the REST API schema, so AI agents and other API clients know which values to send.
 - Newsletter: Remove the block inserter and List View from the email design screen, where neither had anything to show.
 - Newsletter: Use the same status icons as the AI launchpad checklist.
+- Premium Analytics: Offer a yearly interval in the Traffic summary on ranges of three years or longer, and label a first or last month or year that the range cuts by its days.
 - Premium Analytics: Show highlight metric notes in a styled tooltip that also opens on keyboard focus.
 
 ### Bug fixes
+- Premium Analytics: Compare each week, month or year in the Traffic summary and the WooCommerce tab's charts with the one covering the same days in the comparison period, instead of the one in the same position.
 - Premium Analytics: Fix hourly Traffic chart times that were an hour off on daylight saving days.
 - Premium Analytics: Move between conversion funnel steps with the arrow keys, show each step's tooltip as soon as it takes keyboard focus, have screen readers read that tooltip, and label the tooltip's rate "Conversion rate".
 - Subscriptions: Treat readers who follow a WordPress.com site in the Reader as subscribed in the Subscriptions widget, instead of showing them the subscribe form.
