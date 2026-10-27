@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Header: Keep the tabs and the divider under them in view while scrolling, behind the `my-jetpack-header-controls` flag.
 - Overview: Show skeletons for the Stats totals and chart while they load.
 - Setup wizard: Start the connection with the standard my_jetpack_onboarding entry point, so WordPress.com shows its unified connection screen. This is behind the default-off `my-jetpack-onboarding-wizard` flag.
+- Stats: Reuse visit counts loaded in the last minute instead of fetching them again.
 - Tabs: Build the tab bar with the WordPress UI Tabs component.
 - Update package dependencies.
 

@@ -141,6 +141,9 @@ __( "Select metric", "jetpack-premium-analytics-pkg" );
 __( "Avatar of %s", "jetpack-premium-analytics-pkg" );
 /* translators: %s is a country name. */
 __( "Flag of %s", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the title of a post, page, video or email. */
+__( "View \"%s\" in a new tab", "jetpack-premium-analytics-pkg" );
+__( "View in new tab", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 /* translators: %s is the label of the list the back link returns to. */
 __( "Back to %s", "jetpack-premium-analytics-pkg" );
