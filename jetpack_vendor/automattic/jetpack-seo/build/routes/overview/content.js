@@ -68,8 +68,8 @@ __( "Per-site crawler settings aren't available on this path-based multisite net
 __( "llms.txt published", "jetpack-seo" );
 __( "llms.txt not published", "jetpack-seo" );
 __( "AI access", "jetpack-seo" );
-/* translators: %1$d is the number of allowed answer engines, %2$d the total. */
-__( "Answer engines: %1$d of %2$d allowed", "jetpack-seo" );
+/* translators: %1$d is the number of blocked answer engines, %2$d the total. */
+__( "Answer engines: %1$d of %2$d blocked", "jetpack-seo" );
 /* translators: %1$d is the number of blocked training crawlers, %2$d the total. */
 __( "Training crawlers: %1$d of %2$d blocked", "jetpack-seo" );
 __( "Manage AI access", "jetpack-seo" );

@@ -62,8 +62,11 @@ __( "Allowed", "jetpack-seo" );
 __( "Blocked", "jetpack-seo" );
 __( "Partly blocked", "jetpack-seo" );
 __( "AI crawler access", "jetpack-seo" );
+__( "Set by your privacy settings while third-party sharing is turned off.", "jetpack-seo" );
+/* translators: %s: AI crawler name, e.g. "ChatGPT (GPTBot)". */
+__( "Block %s", "jetpack-seo" );
 __( "View your robots.txt", "jetpack-seo" );
-__( "Allow all", "jetpack-seo" );
+__( "Block all", "jetpack-seo" );
 __( "Unable to load GEO settings.", "jetpack-seo" );
 __( "Per-site AI crawler controls are unavailable on this path-based multisite network because every site shares one robots.txt. Manage crawler access at the network level instead.", "jetpack-seo" );
 __( "This site uses a temporary staging address (a .wpcomstaging.com subdomain), where search engines and AI crawlers are blocked. These settings will take effect once the site is on its own domain.", "jetpack-seo" );
@@ -73,9 +76,9 @@ __( "Jetpack detected a static robots.txt file in the WordPress installation dir
 __( "AI crawler access is set by your privacy settings while third-party sharing is turned off. Turn sharing on to manage individual crawlers here.", "jetpack-seo" );
 __( "Manage sharing settings", "jetpack-seo" );
 __( "Answer engines", "jetpack-seo" );
-__( "These crawlers fetch your pages so AI assistants can cite you in their answers. Keep them allowed to stay visible in tools like ChatGPT, Perplexity, and Claude.", "jetpack-seo" );
+__( "These crawlers fetch your pages so AI assistants like ChatGPT, Perplexity, and Claude can cite you in their answers. Blocking them can keep your site out of those answers.", "jetpack-seo" );
 __( "Training crawlers", "jetpack-seo" );
-__( "These crawlers use your content to train AI models. Some — like Google Gemini — also power the AI answers shown above search results, so blocking them protects privacy but can cost you that visibility.", "jetpack-seo" );
+__( "These crawlers collect your content to train AI models. Block them to keep your content out of that training. Blocking Google-Extended also keeps it out of Gemini app answers.", "jetpack-seo" );
 __( "AI SEO is turned off for this site, so nothing is generated. Your choice is saved and applies again when AI SEO is turned back on.", "jetpack-seo" );
 __( "Jetpack AI is turned off for this site, so nothing is generated. Your choice is saved and applies again when Jetpack AI is turned back on.", "jetpack-seo" );
 __( "llms.txt", "jetpack-seo" );
