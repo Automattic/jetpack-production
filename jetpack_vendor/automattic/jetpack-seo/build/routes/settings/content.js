@@ -200,6 +200,8 @@ __( "Publishes a map of your posts and pages so search engines can find your con
 __( "Allow search engines to index this site to generate a sitemap.", "jetpack-seo" );
 __( "Turning this off asks search engines to stop indexing your site — Google and Bing honor it, others ignore it. Same setting as Settings → Reading.", "jetpack-seo" );
 __( "Your site is private, so search engines cannot see it at all. Make it public in your site visibility settings to change this.", "jetpack-seo" );
+__( "Your site is in Coming Soon mode, so search engines cannot see it yet. Launch it in your site visibility settings to change this.", "jetpack-seo" );
+__( "Managed in your site visibility settings", "jetpack-seo" );
 __( "View sitemap", "jetpack-seo" );
 __( "This setting is managed by your hosting platform and cannot be changed here.", "jetpack-seo" );
 __( "Points search engines to one preferred URL for archive pages, so duplicates aren't indexed separately.", "jetpack-seo" );
@@ -218,6 +220,7 @@ __( "Home page description", "jetpack-seo" );
 __( "%s — Maximum characters reached.", "jetpack-seo" );
 __( "Site visibility", "jetpack-seo" );
 __( "Allow search engines to index this site", "jetpack-seo" );
+__( "Manage site visibility", "jetpack-seo" );
 __( "Generate an XML sitemap", "jetpack-seo" );
 __( "Canonical URLs", "jetpack-seo" );
 __( "Add canonical URLs to archive pages", "jetpack-seo" );
