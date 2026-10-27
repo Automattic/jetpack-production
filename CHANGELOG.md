@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Recognize the Stats views included in Jetpack Pro on the upgrade page.
 - Stats: Show country names instead of country codes in the WooCommerce Store visitors by location widget and its CSV export.
 - Subscriptions: Treat readers who follow a WordPress.com site in the Reader as subscribed in the Subscriptions widget, instead of showing them the subscribe form.
+- VideoPress: Fix local video uploads reporting an error instead of inserting the Video block.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Update bundle recommendations in the plugin description for the Jetpack Pro launch.
