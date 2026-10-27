@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Header: Keep the tabs and the divider under them in view while scrolling, behind the `my-jetpack-header-controls` flag.
 - Setup wizard: Start the connection with the standard my_jetpack_onboarding entry point, so WordPress.com shows its unified connection screen. This is behind the default-off `my-jetpack-onboarding-wizard` flag.
 - Tabs: Build the tab bar with the WordPress UI Tabs component.
 - Update package dependencies.
