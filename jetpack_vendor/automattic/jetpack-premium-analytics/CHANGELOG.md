@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Offer a yearly interval in the Traffic summary on ranges of three years or longer, and label a first or last month or year that the range cuts by its days.
+- Show the Stats plan choice on a site that is not connected yet, and connect the site from it.
 
 ### Changed
 - Highlights: Show metric notes in a styled tooltip that also opens on keyboard focus.

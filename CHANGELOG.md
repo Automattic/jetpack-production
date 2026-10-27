@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Use the same status icons as the AI launchpad checklist.
 - Premium Analytics: Offer a yearly interval in the Traffic summary on ranges of three years or longer, and label a first or last month or year that the range cuts by its days.
 - Premium Analytics: Show highlight metric notes in a styled tooltip that also opens on keyboard focus.
+- Premium Analytics: Show the Stats plan choice on a site that is not connected yet, and connect the site from it.
 
 ### Bug fixes
 - Premium Analytics: Compare each week, month or year in the Traffic summary and the WooCommerce tab's charts with the one covering the same days in the comparison period, instead of the one in the same position.
