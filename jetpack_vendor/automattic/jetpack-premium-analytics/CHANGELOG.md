@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Highlights: Show metric notes in a styled tooltip that also opens on keyboard focus.
+- Name the chart interval on the year date filter too, and collapse its year pills when the interval's name grows past the room left.
 
 ### Fixed
 - Conversion funnel: Label the tooltip's rate "Conversion rate", and make screen readers announce what each step's tooltip shows.
