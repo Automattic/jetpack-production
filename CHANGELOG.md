@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Keep the dashboard available after a Jetpack Pro plan expires.
 - Hide the WordPress Agent and its notice on WordPress.com sites that no longer have a plan granting Big Sky.
 - Newsletter: Show every active comped plan in the Subscribers list, including comps held alongside a paid plan, and leave out expired plans.
+- Newsletter: Stop showing two "Please connect your user account" errors in the post editor to users who haven't connected their own WordPress.com account.
 - Paywall block: Show Paid subscribers as unavailable in the toolbar, with a link to set up payments, matching the Content access panel.
 - Premium Analytics: Compare each week, month or year in the Traffic summary and the WooCommerce tab's charts with the one covering the same days in the comparison period, instead of the one in the same position.
 - Premium Analytics: Fix hourly Traffic chart times that were an hour off on daylight saving days.
