@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add an init option that replaces the pre-connection Stats page with this dashboard, and apply options from a later init call.
 - Offer a yearly interval in the Traffic summary on ranges of three years or longer, and label a first or last month or year that the range cuts by its days.
 - Show the Stats plan choice on a site that is not connected yet, and connect the site from it.
 
