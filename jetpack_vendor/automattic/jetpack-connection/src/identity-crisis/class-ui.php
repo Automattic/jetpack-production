@@ -186,9 +186,11 @@ class UI {
 	/**
 	 * Get the site platform.
 	 *
+	 * @since 9.15.0-alpha Public, so the Connectors card can send the same value to Tracks.
+	 *
 	 * @return string
 	 */
-	private static function get_platform() {
+	public static function get_platform() {
 		$host = new Host();
 
 		if ( $host->is_woa_site() ) {
