@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Subscriptions: Treat readers who follow a WordPress.com site in the Reader as subscribed in the Subscriptions widget, instead of showing them the subscribe form.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update bundle recommendations in the plugin description for the Jetpack Pro launch.
 - Update package dependencies.
 
 ## 16.4-a.5 - 2026-10-26
