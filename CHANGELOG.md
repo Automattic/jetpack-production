@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Offer a yearly interval in the Traffic summary on ranges of three years or longer, and label a first or last month or year that the range cuts by its days.
 - Premium Analytics: Show highlight metric notes in a styled tooltip that also opens on keyboard focus.
 - Premium Analytics: Show the Stats plan choice on a site that is not connected yet, and connect the site from it.
+- Protect: Refuse to save a firewall block list that includes your own IP address.
 - Subscriptions: Add a filter to customize the format of the subscriber count.
 
 ### Bug fixes
