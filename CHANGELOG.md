@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the Stats plan choice on a site that is not connected yet, and connect the site from it.
 
 ### Bug fixes
+- Admin pages: Keep administrators signed in on the Settings and Modules pages when another plugin's REST authentication filter returns an empty value such as null or false.
 - Backup: Keep the dashboard available after a Jetpack Pro plan expires.
 - Premium Analytics: Compare each week, month or year in the Traffic summary and the WooCommerce tab's charts with the one covering the same days in the comparison period, instead of the one in the same position.
 - Premium Analytics: Fix hourly Traffic chart times that were an hour off on daylight saving days.
