@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Protect dashboard: Point the Settings tab's Scan card at the server credentials Auto-fix needs, instead of a Jetpack Cloud page with no Scan settings.
 
+### Fixed
+- Dashboard: Fix the History tab's Fixed/Ignored switch for screen readers.
+
 ## [0.3.0] - 2026-10-26
 ### Added
 - Dashboard: Add search, filters, view options, and bulk Auto-fix and Ignore to the Scan card's threat list, under a heading that collapses it, with each threat on one line beside its severity. [#54055]
