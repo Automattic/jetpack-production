@@ -96,6 +96,8 @@ __( "Chart: %s", "jetpack-premium-analytics-pkg" );
 __( "Map: %s", "jetpack-premium-analytics-pkg" );
 /* translators: %s is a metric name, e.g. "Views". */
 __( "%s · previous period", "jetpack-premium-analytics-pkg" );
+/* translators: %s: The date and time an hourly bucket starts. */
+__( "%s (repeated hour)", "jetpack-premium-analytics-pkg" );
 /* translators: 1: metric name, e.g. "Views"; 2: comparison period, e.g. "Prev. 30 days". */
 _x( "%1$s (%2$s)", "metric with its comparison period", "jetpack-premium-analytics-pkg" );
 __( "No data", "jetpack-premium-analytics-pkg" );

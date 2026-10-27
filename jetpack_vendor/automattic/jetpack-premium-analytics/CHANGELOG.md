@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Conversion funnel: Label the tooltip's rate "Conversion rate", and make screen readers announce what each step's tooltip shows.
+- Fix hourly Traffic chart times that were an hour off on daylight saving days.
 
 ## [0.14.0] - 2026-10-26
 ### Added
