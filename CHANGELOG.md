@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Hide Stats v2 from users who cannot connect the site until it is connected, as the Stats menu does, and send them to the Dashboard if they reload the page.
 - Premium Analytics: Move between conversion funnel steps with the arrow keys, show each step's tooltip as soon as it takes keyboard focus, have screen readers read that tooltip, and label the tooltip's rate "Conversion rate".
 - Premium Analytics: Recognize the Stats views included in Jetpack Pro on the upgrade page.
+- Protect: Link the Scan card on the Protect page's Settings tab to your server credentials, which Auto-fix needs, instead of a page with no Scan settings.
 - Stats: Show country names instead of country codes in the WooCommerce Store visitors by location widget and its CSV export.
 - Subscriptions: Treat readers who follow a WordPress.com site in the Reader as subscribed in the Subscriptions widget, instead of showing them the subscribe form.
 - VideoPress: Fix local video uploads reporting an error instead of inserting the Video block.

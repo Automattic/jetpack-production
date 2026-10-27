@@ -53,7 +53,7 @@
 		"automattic/jetpack-post-list": "^0.10.9-alpha",
 		"automattic/jetpack-post-media": "^0.3.3",
 		"automattic/jetpack-premium-analytics": "^0.15.0-alpha",
-		"automattic/jetpack-protect": "^0.3.0",
+		"automattic/jetpack-protect": "^0.3.1-alpha",
 		"automattic/jetpack-publicize": "^0.88.8-alpha",
 		"automattic/jetpack-redirect": "^4.0.1",
 		"automattic/jetpack-roles": "^4.0.1",

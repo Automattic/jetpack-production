@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Overview: Type out the welcome heading and fade the sections in on first load, behind the `my-jetpack-overview-v1` flag.
+
 ### Changed
 - Header: Keep the tabs and the divider under them in view while scrolling, behind the `my-jetpack-header-controls` flag.
 - Overview: Show skeletons for the Stats totals and chart while they load.

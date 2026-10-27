@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Protect dashboard: Point the Settings tab's Scan card at the server credentials Auto-fix needs, instead of a Jetpack Cloud page with no Scan settings.
+
 ## [0.3.0] - 2026-10-26
 ### Added
 - Dashboard: Add search, filters, view options, and bulk Auto-fix and Ignore to the Scan card's threat list, under a heading that collapses it, with each threat on one line beside its severity. [#54055]
@@ -59,5 +66,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial version. [#53298]
 - Protect dashboard: Add a Scan history tab for sites with Jetpack Scan, show threat actions on row hover, and offer to delete unused plugins and themes that have threats. [#53196]
 
+[0.3.1-alpha]: https://github.com/Automattic/jetpack-protect/compare/v0.3.0...v0.3.1-alpha
 [0.3.0]: https://github.com/Automattic/jetpack-protect/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/Automattic/jetpack-protect/compare/v0.1.0...v0.2.0

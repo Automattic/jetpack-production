@@ -618,11 +618,14 @@ __( "Daily vulnerability checks for WordPress, plugins and themes.", "jetpack-pr
 __( "View scan history", "jetpack-protect-pkg" );
 /* translators: %d is a number of threats. */
 _n( "View %d ignored threat", "View %d ignored threats", 1, "jetpack-protect-pkg" );
-__( "Scan", "jetpack-protect-pkg" );
-__( "Scan checks your site for malware every day. Threat alerts and scan settings are managed on Jetpack.com.", "jetpack-protect-pkg" );
 __( "Your site is checked every day for known vulnerabilities in WordPress, plugins and themes. There’s nothing to set up.", "jetpack-protect-pkg" );
-__( "Manage Scan settings", "jetpack-protect-pkg" );
 __( "Get Scan for daily malware scanning and one-click fixes", "jetpack-protect-pkg" );
+__( "Scan checks your site for malware every day. Auto-fix needs your server credentials to repair threats.", "jetpack-protect-pkg" );
+__( "Add server credentials", "jetpack-protect-pkg" );
+__( "Scan checks your site for malware every day. Auto-fix uses your server credentials to repair threats.", "jetpack-protect-pkg" );
+__( "Scan checks your site for malware every day. Auto-fix uses server credentials to repair threats.", "jetpack-protect-pkg" );
+__( "Manage server credentials", "jetpack-protect-pkg" );
+__( "Scan", "jetpack-protect-pkg" );
 __( "There’s nothing to show yet.", "jetpack-protect-pkg" );
 __( "There’s nothing to set up yet.", "jetpack-protect-pkg" );
 __( "The firewall couldn’t update its files on your server.", "jetpack-protect-pkg" );
