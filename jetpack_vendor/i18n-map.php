@@ -22,7 +22,7 @@ return array(
     ),
     'jetpack-agents-manager' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-agents-manager',
-      'ver' => '0.12.9-alpha1793036582',
+      'ver' => '0.12.9-alpha1793123750',
     ),
     'jetpack-assets' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-assets',

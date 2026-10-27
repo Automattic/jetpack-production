@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Removed
+- Remove the unused router history and last activity preferences.
+
 ## [0.12.8] - 2026-10-26
 ### Changed
 - Internal updates.
