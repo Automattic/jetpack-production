@@ -30,7 +30,11 @@ __( "Week of %s", "jetpack-premium-analytics-pkg" );
 __( "%1$s: %2$s", "jetpack-premium-analytics-pkg" );
 __( "Bar chart", "jetpack-premium-analytics-pkg" );
 __( "Bar list chart", "jetpack-premium-analytics-pkg" );
+_n( "%s item", "%s items", 1, "jetpack-premium-analytics-pkg" );
+__( "Conversion rate", "jetpack-premium-analytics-pkg" );
 __( "Conversion funnel chart", "jetpack-premium-analytics-pkg" );
+__( "Funnel steps", "jetpack-premium-analytics-pkg" );
+__( "%1$s, %2$s", "jetpack-premium-analytics-pkg" );
 __( "Loading map", "jetpack-premium-analytics-pkg" );
 __( "Geo chart", "jetpack-premium-analytics-pkg" );
 __( "Less", "jetpack-premium-analytics-pkg" );
@@ -47,8 +51,6 @@ __( "Pie chart", "jetpack-premium-analytics-pkg" );
 __( "Semi-circle chart", "jetpack-premium-analytics-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Calendar type. 2: Current month and year. */
-__( "%1$s, %2$s", "jetpack-premium-analytics-pkg" );
 __( "Date calendar", "jetpack-premium-analytics-pkg" );
 __( "Date range calendar", "jetpack-premium-analytics-pkg" );
 __( "Navigation bar", "jetpack-premium-analytics-pkg" );

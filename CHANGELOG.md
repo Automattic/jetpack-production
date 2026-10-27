@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Use the same status icons as the AI launchpad checklist.
 
 ### Bug fixes
+- Premium Analytics: Move between conversion funnel steps with the arrow keys, show each step's tooltip as soon as it takes keyboard focus, have screen readers read that tooltip, and label the tooltip's rate "Conversion rate".
 - Subscriptions: Treat readers who follow a WordPress.com site in the Reader as subscribed in the Subscriptions widget, instead of showing them the subscribe form.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
