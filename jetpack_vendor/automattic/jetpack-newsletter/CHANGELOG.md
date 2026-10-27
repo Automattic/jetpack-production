@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Overview: Use the same status icons as the AI launchpad checklist.
 - Update package dependencies.
 
+### Fixed
+- Subscribers: Show a badge for every active comped plan, including comps held alongside a paid plan, and none for expired plans.
+
 ## [0.18.2] - 2026-10-26
 ### Changed
 - Settings: Space the settings cards 16px apart, matching the other Jetpack settings screens. [#53692]
