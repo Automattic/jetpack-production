@@ -349,6 +349,8 @@ __( "We appreciate your continued support. If you want to access upcoming featur
 __( "Settings", "jetpack-premium-analytics-pkg" );
 __( "Tell us what's better, what's worse, and what you miss about the new Stats.", "jetpack-premium-analytics-pkg" );
 __( "Leave feedback", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the smallest value shown at this precision, e.g. "0.1". */
+__( "< %s", "jetpack-premium-analytics-pkg" );
 __( "Show less", "jetpack-premium-analytics-pkg" );
 __( "Switch between boards", "jetpack-premium-analytics-pkg" );
 __( "Access your different store and traffic boards from these tabs.", "jetpack-premium-analytics-pkg" );
@@ -367,8 +369,6 @@ __( "Your store data hasn't finished syncing, so the numbers below are incomplet
 /* translators: %d: sync progress percentage. */
 __( "Your store data is still syncing (%d%%). The numbers below are incomplete until it finishes.", "jetpack-premium-analytics-pkg" );
 __( "Try again", "jetpack-premium-analytics-pkg" );
-/* translators: %s: the smallest value shown at this precision, e.g. "0.1". */
-__( "< %s", "jetpack-premium-analytics-pkg" );
 /* translators: 1: views used in the current cycle, 2: the plan's views limit. */
 __( "%1$s / %2$s views", "jetpack-premium-analytics-pkg" );
 /* translators: Read by screen readers. 1: views used in the current cycle, 2: the plan's views limit. */
