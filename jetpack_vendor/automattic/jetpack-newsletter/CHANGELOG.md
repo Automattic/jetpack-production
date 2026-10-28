@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.18.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.18.3] - 2026-10-28
 ### Changed
-- Email design: Tell the design screen which link brought the creator there.
-- Overview: Use the same status icons as the AI launchpad checklist.
-- Update package dependencies.
+- Email design: Tell the design screen which link brought the creator there. [#54167]
+- Overview: Use the same status icons as the AI launchpad checklist. [#54084]
+- Update package dependencies. [#54118]
 
 ### Fixed
-- Dashboard: Attribute activity to the correct site on Atomic and Jetpack sites.
-- Settings: Ask before switching dashboard tabs with unsaved changes.
-- Subscribers: Show a badge for every active comped plan, including comps held alongside a paid plan, and none for expired plans.
+- Dashboard: Attribute activity to the correct site on Atomic and Jetpack sites. [#54089]
+- Settings: Ask before switching dashboard tabs with unsaved changes. [#54093]
+- Subscribers: Show a badge for every active comped plan, including comps held alongside a paid plan, and none for expired plans. [#53901]
 
 ## [0.18.2] - 2026-10-26
 ### Changed
@@ -470,7 +467,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.18.3-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.2...v0.18.3-alpha
+[0.18.3]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.2...v0.18.3
 [0.18.2]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.1...v0.18.2
 [0.18.1]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.0...v0.18.1
 [0.18.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.17.3...v0.18.0
