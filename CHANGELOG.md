@@ -50,6 +50,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Fix local video uploads reporting an error instead of inserting the Video block.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Media: Prevent warnings when a large number of shortcodes are registered.
 - Update bundle recommendations in the plugin description for the Jetpack Pro launch.
 - Update package dependencies.
 
