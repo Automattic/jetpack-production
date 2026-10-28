@@ -532,7 +532,6 @@ __( "Downtime monitoring", "jetpack-protect-pkg" );
 __( "Find out your site is down before your visitors do, with an email alert within minutes.", "jetpack-protect-pkg" );
 /* translators: %d is a number of days. */
 __( "Last %d days uptime", "jetpack-protect-pkg" );
-__( "Perfect uptime", "jetpack-protect-pkg" );
 __( "Your site is being monitored. Connect your WordPress.com account to see its uptime history.", "jetpack-protect-pkg" );
 __( "Connect your account", "jetpack-protect-pkg" );
 __( "Uptime history is unavailable right now.", "jetpack-protect-pkg" );
