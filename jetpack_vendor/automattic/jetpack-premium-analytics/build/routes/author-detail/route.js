@@ -135,6 +135,7 @@ __( "Hours watched", "jetpack-premium-analytics-pkg" );
 __( "Retention rate", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load videos. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Search videos", "jetpack-premium-analytics-pkg" );
+__( "Build URL", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load UTM data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Search UTM values", "jetpack-premium-analytics-pkg" );
 __( "Referrer", "jetpack-premium-analytics-pkg" );
