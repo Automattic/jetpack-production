@@ -24,6 +24,8 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Backup: Keep the dashboard available after a Jetpack Pro plan expires.
 - Fix a fatal error when activating a Jetpack plugin beside an older one.
+- Search: Show the fallback starting price per month, billed yearly, instead of $100 a month on the Search upgrade page when prices cannot be loaded.
+- Show no paid plan price instead of $0 and NaN on upgrade pages with one price per plan, such as Stats, Backup, Social and VideoPress, when prices cannot be loaded.
 
 ## [6.13.0] - 2026-10-26
 ### Added

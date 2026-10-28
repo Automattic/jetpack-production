@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Recognize the Stats views included in Jetpack Pro on the upgrade page.
 - Premium Analytics: Show the values for the selected date in chart tooltips when you move through a chart with the arrow keys.
 - Protect: Link the Scan card on the Protect page's Settings tab to your server credentials, which Auto-fix needs, instead of a page with no Scan settings.
+- Search: Show the fallback starting price per month, billed yearly, instead of $100 a month on the Search upgrade page when prices cannot be loaded.
 - Slideshow and Story blocks: Keep every file when uploading several at once with client-side media processing enabled. Slideshow and Tiled Gallery blocks: Hide the upload button from users who cannot upload.
 - Stats: Show country names instead of country codes in the WooCommerce Store visitors by location widget and its CSV export.
 - Subscriptions: Give the subscribe pop-up the site's page background from Global Styles so its text stays readable on dark styles.
