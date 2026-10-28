@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Admin pages: Keep administrators signed in on the Settings and Modules pages when another plugin's REST authentication filter returns an empty value such as null or false.
 - Backup: Keep the dashboard available after a Jetpack Pro plan expires.
+- Email Design: stop the screen offering the site's Styles panel, which changed the site's design rather than the email's.
 - Hide the WordPress Agent and its notice on WordPress.com sites that no longer have a plan granting Big Sky.
 - My Jetpack: Fix a fatal error when activating Jetpack beside an older standalone Jetpack plugin.
 - My Jetpack: Let administrators who can manage modules but not plugins switch modules on and off in bulk from the Features list.
