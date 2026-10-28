@@ -370,6 +370,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'automattic/jetpack-monitor' => array(
+            'pretty_version' => '0.1.0-alpha.1793197170',
+            'version' => '0.1.0.0-alpha1793197170',
+            'reference' => 'a59ea1d0684cbad221d62a8cb21f72844f6ce5c9',
+            'type' => 'jetpack-library',
+            'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-monitor',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'automattic/jetpack-my-jetpack' => array(
             'pretty_version' => '6.14.0-alpha.1793192416',
             'version' => '6.14.0.0-alpha1793192416',

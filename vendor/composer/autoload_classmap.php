@@ -249,6 +249,7 @@ return array(
     'Automattic\\Jetpack\\Menu_Badges\\Menu_Renderer' => $baseDir . '/jetpack_vendor/automattic/jetpack-menu-badges/src/class-menu-renderer.php',
     'Automattic\\Jetpack\\Menu_Badges\\Notification_Counts' => $baseDir . '/jetpack_vendor/automattic/jetpack-menu-badges/src/class-notification-counts.php',
     'Automattic\\Jetpack\\Modules' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-modules.php',
+    'Automattic\\Jetpack\\Monitor\\Monitor' => $baseDir . '/jetpack_vendor/automattic/jetpack-monitor/src/class-monitor.php',
     'Automattic\\Jetpack\\My_Jetpack\\Feature_Visibility' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-feature-visibility.php',
     'Automattic\\Jetpack\\My_Jetpack\\Historically_Active_Modules' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-historically-active-modules.php',
     'Automattic\\Jetpack\\My_Jetpack\\Hybrid_Product' => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-hybrid-product.php',

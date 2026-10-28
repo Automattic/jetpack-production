@@ -990,6 +990,10 @@ return array(
 		'version' => '7.1.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-modules.php'
 	),
+	'Automattic\\Jetpack\\Monitor\\Monitor' => array(
+		'version' => '0.1.0.0-alpha1793197170',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monitor/src/class-monitor.php'
+	),
 	'Automattic\\Jetpack\\My_Jetpack\\Feature_Visibility' => array(
 		'version' => '6.14.0.0-alpha1793192416',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-feature-visibility.php'

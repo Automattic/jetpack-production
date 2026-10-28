@@ -124,6 +124,10 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-menu-badges',
       'ver' => '0.2.3',
     ),
+    'jetpack-monitor' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-monitor',
+      'ver' => '0.1.0-alpha1793197170',
+    ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
       'ver' => '6.14.0-alpha1793192416',
