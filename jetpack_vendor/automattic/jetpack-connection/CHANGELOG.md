@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Connectors: Record Tracks events for the card's views, connect clicks, details, Safe Mode resolutions, ownership transfer and protected owner actions.
 
 ### Changed
+- Connectors: Show the Automattic symbol in black in the connector logos.
 - Update package dependencies.
 
 ## [9.14.0] - 2026-10-26

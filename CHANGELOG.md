@@ -22,6 +22,9 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Refuse to save a firewall block list that includes your own IP address.
 - Subscriptions: Add a filter to customize the format of the subscriber count.
 
+### Improved compatibility
+- Protect: Hide the Ignore threat action on WordPress.com sites, to match the WordPress.com dashboard.
+
 ### Bug fixes
 - Admin pages: Keep administrators signed in on the Settings and Modules pages when another plugin's REST authentication filter returns an empty value such as null or false.
 - Backup: Keep the dashboard available after a Jetpack Pro plan expires.
