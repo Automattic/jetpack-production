@@ -508,6 +508,7 @@ __( "Firewall: On", "jetpack-my-jetpack" );
 __( "Automatic rules are off, so only the IP addresses you list are blocked. Turn them on in your <a>firewall settings</a>.", "jetpack-my-jetpack" );
 __( "Automatic rules are off, so only the IP addresses you list are blocked.", "jetpack-my-jetpack" );
 __( "The firewall blocks the IP addresses you list. Upgrade for automatic rules that stop known attacks.", "jetpack-my-jetpack" );
+__( "Your hosting provider runs a firewall for your site, so you’re all set.", "jetpack-my-jetpack" );
 __( "Firewall: Inactive", "jetpack-my-jetpack" );
 __( "Jetpack’s firewall is off because your hosting provider already includes a built-in firewall with similar rules for your site.", "jetpack-my-jetpack" );
 __( "Firewall: Off", "jetpack-my-jetpack" );

@@ -44,6 +44,9 @@ __( "Always up to date", "jetpack-protect-pkg" );
 __( "New rules arrive as new attacks are found. You don’t update a thing.", "jetpack-protect-pkg" );
 __( "Nothing to set up", "jetpack-protect-pkg" );
 __( "Turn it on once and it works in the background.", "jetpack-protect-pkg" );
+__( "Firewall", "jetpack-protect-pkg" );
+__( "Active", "jetpack-protect-pkg" );
+__( "Your host provides a firewall for your site, so you’re all set.", "jetpack-protect-pkg" );
 /* translators: %d is how many IP addresses are on a list. */
 _n( "%d address on the list", "%d addresses on the list", 1, "jetpack-protect-pkg" );
 __( "This list is turned off, so it has no effect until you turn it on in Settings.", "jetpack-protect-pkg" );
@@ -83,7 +86,6 @@ __( "The firewall can’t be tested from here, because your site and this dashbo
 __( "The firewall test timed out, because your site took too long to respond. Try again.", "jetpack-protect-pkg" );
 __( "The firewall test couldn’t run. Try again.", "jetpack-protect-pkg" );
 __( "Learn more", "jetpack-protect-pkg" );
-__( "Firewall", "jetpack-protect-pkg" );
 __( "Run test", "jetpack-protect-pkg" );
 __( "Blocks malicious requests before they reach your site.", "jetpack-protect-pkg" );
 __( "Blocked in the last 30 days", "jetpack-protect-pkg" );

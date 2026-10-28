@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the Personal plan's monthly price in the upgrade prompt that replaces a free WordPress.com site's Insights and Traffic sections.
 - Premium Analytics: Show the Stats plan choice on a site that is not connected yet, and connect the site from it.
 - Protect: Refuse to save a firewall block list that includes your own IP address.
+- Protect: Show the firewall as on for WordPress.com-hosted sites, where the host provides it.
 - Subscriptions: Add a filter to customize the format of the subscriber count.
 
 ### Improved compatibility
