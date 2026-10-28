@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Backup: Keep the dashboard available after a Jetpack Pro plan expires.
+- Features: Bring the first results into view after changing the filter or search while scrolled down.
 - Features tab: Let administrators who can manage Jetpack modules but not plugins switch modules on and off in bulk.
 - Fix a fatal error when activating a Jetpack plugin beside an older one.
 - Overview: Keep the Stats chart line at or above 0 before a sharp rise, while the Overview v1 feature flag is on.

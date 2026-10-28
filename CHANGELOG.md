@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Keep the dashboard available after a Jetpack Pro plan expires.
 - Email Design: stop the screen offering the site's Styles panel, which changed the site's design rather than the email's.
 - Hide the WordPress Agent and its notice on WordPress.com sites that no longer have a plan granting Big Sky.
+- My Jetpack: Bring the first Features results into view after changing the filter or search while scrolled down.
 - My Jetpack: Fix a fatal error when activating Jetpack beside an older standalone Jetpack plugin.
 - My Jetpack: Let administrators who can manage modules but not plugins switch modules on and off in bulk from the Features list.
 - My Jetpack: On WordPress.com, show Personal and Premium sites the vulnerability report and the Scan upgrade on the Protect card, since their plans don't include Scan.
