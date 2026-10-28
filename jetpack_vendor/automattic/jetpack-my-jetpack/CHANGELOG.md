@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Keep the dashboard available after a Jetpack Pro plan expires.
 - Features tab: Let administrators who can manage Jetpack modules but not plugins switch modules on and off in bulk.
 - Fix a fatal error when activating a Jetpack plugin beside an older one.
+- Return to the tab you came from with the back link on product upgrade screens.
 - Search: Show the fallback starting price per month, billed yearly, instead of $100 a month on the Search upgrade page when prices cannot be loaded.
 - Show no paid plan price instead of $0 and NaN on upgrade pages with one price per plan, such as Stats, Backup, Social and VideoPress, when prices cannot be loaded.
 
