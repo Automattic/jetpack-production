@@ -209,11 +209,11 @@ __( "Comment Likes currently appear on comments on: %s.", "jetpack-sharing-likes
 __( "Sharing buttons currently appear on: %s.", "jetpack-sharing-likes" );
 __( "Change where they appear", "jetpack-sharing-likes" );
 __( "Preview and edit", "jetpack-sharing-likes" );
-__( "Add the Sharing Buttons block to posts and pages", "jetpack-sharing-likes" );
-__( "Add the Like block to posts and pages", "jetpack-sharing-likes" );
+__( "Where should the Sharing Buttons block go on posts and pages?", "jetpack-sharing-likes" );
+__( "Where should the Like block go on posts and pages?", "jetpack-sharing-likes" );
+__( "Don’t add it automatically", "jetpack-sharing-likes" );
 _x( "Before the content", "Where the block goes", "jetpack-sharing-likes" );
 _x( "After the content", "Where the block goes", "jetpack-sharing-likes" );
-__( "Pick one place: before or after the content.", "jetpack-sharing-likes" );
 __( "Want pages to look different? <link>Edit the page template</link>.", "jetpack-sharing-likes" );
 __( "Once you’ve saved a template in the Site Editor, move or remove its blocks there: picking a place here won’t move a block that template already has, or bring back one you removed.", "jetpack-sharing-likes" );
 __( "Add the Sharing Buttons block to your theme’s template.", "jetpack-sharing-likes" );
