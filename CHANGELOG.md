@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Open the email design screen in the same tab from the email preview, with a way back to the post.
 - Newsletter: Remove the block inserter and List View from the email design screen, where neither had anything to show.
 - Newsletter: Use the same status icons as the AI launchpad checklist.
+- Premium Analytics: Offer a referrer's site from a "View in new tab" action beside its name in the Top referrers widget, instead of linking the whole row out.
 - Premium Analytics: Offer a yearly interval in the Traffic summary on ranges of three years or longer, and label a first or last month or year that the range cuts by its days.
 - Premium Analytics: Open the live post, page, video or email in a new tab from its row in a Stats widget, beside the title that opens its stats.
 - Premium Analytics: Show highlight metric notes in a styled tooltip that also opens on keyboard focus.

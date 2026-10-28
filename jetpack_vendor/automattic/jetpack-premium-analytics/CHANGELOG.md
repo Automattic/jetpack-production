@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Show the notice about a failed refresh at the top of the section, instead of inside the sticky header.
 - Highlights: Show metric notes in a styled tooltip that also opens on keyboard focus.
 - Name the chart interval on the year date filter too, and collapse its year pills when the interval's name grows past the room left.
+- Stats: Offer a referrer's site from a "View in new tab" action beside its name in the Top referrers widget, instead of linking the whole row out.
 
 ### Fixed
 - Conversion funnel: Label the tooltip's rate "Conversion rate", and make screen readers announce what each step's tooltip shows.
