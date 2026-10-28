@@ -23,12 +23,10 @@ __( "Jetpack", "jetpack-components" );
 __( "Sections" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-components" );
-__( "What is GEO?", "jetpack-seo" );
-__( "GEO stands for generative engine optimization. These settings control how AI sees and uses your site.", "jetpack-seo" );
 __( "Overview", "jetpack-seo" );
-__( "Settings", "jetpack-seo" );
 __( "Content", "jetpack-seo" );
 _x( "GEO", "Generative Engine Optimization; the SEO dashboard tab label", "jetpack-seo" );
+__( "Settings", "jetpack-seo" );
 __( "Make your site discoverable in search and social, and control AI access.", "jetpack-seo" );
 __( "Could not enable SEO tools. Please try again.", "jetpack-seo" );
 __( "Could not disable SEO tools. Please try again.", "jetpack-seo" );
