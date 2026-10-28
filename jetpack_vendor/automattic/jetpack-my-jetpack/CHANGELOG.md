@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Overview: Name the Stats period dropdown for screen readers.
 - Protect: Fix the URL of the upgrade screen opened from the Protect details page.
 - Protect: Use the Protect page's Scan plan check, so WordPress.com plans without Scan's UI are offered the upgrade.
+- Record the right previous tab in tab click analytics when arrow keys switch tabs in quick succession.
 - Return to the tab you came from with the back link on product upgrade screens.
 - Search: Show the fallback starting price per month, billed yearly, instead of $100 a month on the Search upgrade page when prices cannot be loaded.
 - Show no paid plan price instead of $0 and NaN on upgrade pages with one price per plan, such as Stats, Backup, Social and VideoPress, when prices cannot be loaded.
