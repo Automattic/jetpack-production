@@ -116,6 +116,7 @@ __( "Status", "jetpack-premium-analytics-pkg" );
 __( "%1$s (%2$s)", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load earnings. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Search earnings history", "jetpack-premium-analytics-pkg" );
+__( "View in new tab", "jetpack-premium-analytics-pkg" );
 __( "Email", "jetpack-premium-analytics-pkg" );
 __( "Sent", "jetpack-premium-analytics-pkg" );
 __( "Opens", "jetpack-premium-analytics-pkg" );
