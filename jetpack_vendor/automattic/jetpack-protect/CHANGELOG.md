@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Firewall: Refuse to save a block list that includes your own IP address.
+- Protect Dashboard: Drop the "Jetpack" breadcrumb from the page header, to match other feature pages.
 - Protect dashboard: Point the Settings tab's Scan card at the server credentials Auto-fix needs, instead of a Jetpack Cloud page with no Scan settings.
 - Protect dashboard: Show the uptime percentage next to the Downtime monitoring status, and drop the perfect uptime badge.
 

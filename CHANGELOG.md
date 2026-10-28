@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Refuse to save a firewall block list that includes your own IP address.
 - Protect: Show the firewall as on for WordPress.com-hosted sites, where the host provides it.
 - Protect: Show the table, row and values a database threat was found in on the Protect dashboard, and delete a flagged option in place.
+- Protect: Title the Protect page "Protect" instead of "Jetpack / Protect", to match other feature pages.
 - Subscriptions: Add a filter to customize the format of the subscriber count.
 
 ### Improved compatibility
