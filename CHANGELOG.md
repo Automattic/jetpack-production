@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Compare each week, month or year in the Traffic summary and the WooCommerce tab's charts with the one covering the same days in the comparison period, instead of the one in the same position.
 - Premium Analytics: Fix hourly Traffic chart times that were an hour off on daylight saving days.
 - Premium Analytics: Hide Stats v2 from users who cannot connect the site until it is connected, as the Stats menu does, and send them to the Dashboard if they reload the page.
+- Premium Analytics: Line up the values and the change badges in their own columns in the Stats list widgets when a comparison is on.
 - Premium Analytics: Move between conversion funnel steps with the arrow keys, show each step's tooltip as soon as it takes keyboard focus, have screen readers read that tooltip, and label the tooltip's rate "Conversion rate".
 - Premium Analytics: Recognize the Stats views included in Jetpack Pro on the upgrade page.
 - Premium Analytics: Show the values for the selected date in chart tooltips when you move through a chart with the arrow keys.
