@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Fix hourly Traffic chart times that were an hour off on daylight saving days.
 - Hide Stats v2 from users who cannot connect the site until it is connected, as the Stats menu does, and send them to the Dashboard if they reload the page.
 - Recognize the Stats views included in Jetpack Pro on the upgrade page.
+- Scroll the Jetpack footer with the page on the dashboard, report and detail pages, instead of keeping it pinned to the bottom of the screen.
 - Traffic summary: Compare each week, month or year with the one covering the same days in the comparison period, instead of the one in the same position.
 
 ## [0.14.0] - 2026-10-26

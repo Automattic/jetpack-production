@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Line up the values and the change badges in their own columns in the Stats list widgets when a comparison is on.
 - Premium Analytics: Move between conversion funnel steps with the arrow keys, show each step's tooltip as soon as it takes keyboard focus, have screen readers read that tooltip, and label the tooltip's rate "Conversion rate".
 - Premium Analytics: Recognize the Stats views included in Jetpack Pro on the upgrade page.
+- Premium Analytics: Scroll the Jetpack footer with the page, instead of keeping it pinned to the bottom of the screen.
 - Premium Analytics: Show the values for the selected date in chart tooltips when you move through a chart with the arrow keys.
 - Protect: Link the Scan card on the Protect page's Settings tab to your server credentials, which Auto-fix needs, instead of a page with no Scan settings.
 - Search: Show the fallback starting price per month, billed yearly, instead of $100 a month on the Search upgrade page when prices cannot be loaded.
