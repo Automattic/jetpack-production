@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Features tab: Let administrators who can manage Jetpack modules but not plugins switch modules on and off in bulk.
 - Fix a fatal error when activating a Jetpack plugin beside an older one.
 - Overview: Keep the Stats chart line at or above 0 before a sharp rise, while the Overview v1 feature flag is on.
+- Overview: Name the Stats period dropdown for screen readers.
 - Protect: Fix the URL of the upgrade screen opened from the Protect details page.
 - Protect: Use the Protect page's Scan plan check, so WordPress.com plans without Scan's UI are offered the upgrade.
 - Return to the tab you came from with the back link on product upgrade screens.

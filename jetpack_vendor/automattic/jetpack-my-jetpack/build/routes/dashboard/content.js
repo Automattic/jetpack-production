@@ -52,6 +52,8 @@ __( "% off", "jetpack-my-jetpack" );
 __( "% off the first year", "jetpack-my-jetpack" );
 __( "Dismiss", "jetpack-my-jetpack" );
 __( "Select period", "jetpack-my-jetpack" );
+/* translators: %1$s: What the control picks, such as "Date range". %2$s: The selected period, such as "Last 30 days". */
+__( "%1$s: %2$s", "jetpack-my-jetpack" );
 __( "Previous period", "jetpack-my-jetpack" );
 __( "Next period", "jetpack-my-jetpack" );
 __( "More details follow the field.", "jetpack-my-jetpack" );
@@ -731,8 +733,6 @@ __( "Your account can’t install plugins. Ask a site administrator to install %
 _n( "%d feature activated.", "%d features activated.", 1, "jetpack-my-jetpack" );
 /* translators: %d is how many features were switched off. */
 _n( "%d feature deactivated.", "%d features deactivated.", 1, "jetpack-my-jetpack" );
-/* translators: %1$s is a comma-separated list of feature names, %2$s is why they could not be changed. */
-__( "%1$s: %2$s", "jetpack-my-jetpack" );
 __( "Could not change the selected features. Please try again.", "jetpack-my-jetpack" );
 __( "Explore all", "jetpack-my-jetpack" );
 __( "We couldn’t load your features.", "jetpack-my-jetpack" );
@@ -946,6 +946,7 @@ _n( "Views in the last %d day", "Views in the last %d days", 1, "jetpack-my-jetp
 __( "Failed to load stats", "jetpack-my-jetpack" );
 __( "Last 7 days", "jetpack-my-jetpack" );
 __( "Last 30 days", "jetpack-my-jetpack" );
+__( "Date range", "jetpack-my-jetpack" );
 __( "Upload to VideoPress", "jetpack-my-jetpack" );
 __( "Failed to load videos", "jetpack-my-jetpack" );
 __( "More insights", "jetpack-my-jetpack" );
