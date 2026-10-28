@@ -415,6 +415,7 @@ return array(
     'Automattic\\Jetpack\\Protect\\Dashboard' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/class-dashboard.php',
     'Automattic\\Jetpack\\Protect\\Dashboard_Section' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/interface-dashboard-section.php',
     'Automattic\\Jetpack\\Protect\\Dashboard_Threats' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/class-dashboard-threats.php',
+    'Automattic\\Jetpack\\Protect\\Protected_Options' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/class-protected-options.php',
     'Automattic\\Jetpack\\Protect\\Sections\\Firewall' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-firewall.php',
     'Automattic\\Jetpack\\Protect\\Sections\\History' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-history.php',
     'Automattic\\Jetpack\\Protect\\Sections\\Login_Protection' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect/src/sections/class-login-protection.php',

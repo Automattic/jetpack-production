@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Dashboard: Show the table, row and values a database threat was found in, and delete a flagged option in place.
 - Firewall: Show the firewall as active where the host provides its own.
 - Scan: Add a `jetpack_protect_threat_ignoring_enabled` filter, and hide the Ignore action where a host turns it off.
 - Scan: Let a host change where the Scan upgrade link goes, through the `jetpack_feature_upgrade` filter.

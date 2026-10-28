@@ -407,6 +407,9 @@ __( "%s can’t be deleted while one of its threats is being fixed or ignored. T
 __( "Deleted %s.", "jetpack-protect-pkg" );
 /* translators: %s is a plugin or theme, such as "Contact Form 7". */
 __( "%s couldn’t be deleted.", "jetpack-protect-pkg" );
+__( "This threat is busy. Try again once that finishes.", "jetpack-protect-pkg" );
+__( "Deleted the option and marked the threat as fixed.", "jetpack-protect-pkg" );
+__( "The option couldn’t be deleted.", "jetpack-protect-pkg" );
 __( "Delete theme?", "jetpack-protect-pkg" );
 __( "Delete plugin?", "jetpack-protect-pkg" );
 /* translators: %s is a theme name, such as "Twenty Twenty". */
@@ -456,17 +459,28 @@ __( "Active theme", "jetpack-protect-pkg" );
 __( "Active plugin", "jetpack-protect-pkg" );
 __( "Inactive theme", "jetpack-protect-pkg" );
 __( "Inactive plugin", "jetpack-protect-pkg" );
+__( "File: %s", "jetpack-protect-pkg" );
+__( "Table: %s", "jetpack-protect-pkg" );
 /* translators: %s describes the fix, such as "Update Contact Form 7 to version 6.2.1". */
 __( "Jetpack Scan can fix this threat for you: %s.", "jetpack-protect-pkg" );
+__( "Jetpack Scan can fix this threat for you.", "jetpack-protect-pkg" );
 /* translators: %s is a version number, such as "5.3.2". */
 __( "Update to version %s or later.", "jetpack-protect-pkg" );
+__( "Jetpack Scan can’t fix this itself, but you can delete the option above if you don’t recognize it. Deleting can’t be undone, so check first that no plugin you use needs it, or contact Jetpack support for help.", "jetpack-protect-pkg" );
+/* translators: %s is a database table, such as "wp_options". */
+__( "Jetpack can’t fix this automatically. If you don’t recognize the row above, remove it from the %s table, or contact Jetpack support for help.", "jetpack-protect-pkg" );
 __( "Jetpack can’t fix this automatically. Review the affected code and remove it if you don’t recognize it, or contact Jetpack support for help.", "jetpack-protect-pkg" );
+__( "Delete option", "jetpack-protect-pkg" );
+__( "Delete option?", "jetpack-protect-pkg" );
+/* translators: %s is an option name, such as "_wpc_ak". */
+__( "This permanently deletes the %s option from your database. Jetpack doesn’t keep a copy, so it can’t be undone. If a plugin you use needs this option, that plugin may stop working.", "jetpack-protect-pkg" );
+__( "Deleting can’t be undone.", "jetpack-protect-pkg" );
+/* translators: %s is a database table, such as "wp_options". */
+__( "Threat found in the %s table, in this row:", "jetpack-protect-pkg" );
 __( "Jetpack is fixing this threat. You can close this panel; the list updates when it’s done.", "jetpack-protect-pkg" );
 __( "Unignore it", "jetpack-protect-pkg" );
 __( "Ignore it", "jetpack-protect-pkg" );
 __( "Auto-fix it", "jetpack-protect-pkg" );
-/* translators: %s is a file name, such as "index.php". */
-__( "File: %s", "jetpack-protect-pkg" );
 __( "Ignored", "jetpack-protect-pkg" );
 __( "Fixed", "jetpack-protect-pkg" );
 /* translators: %s is a date, such as "Aug 15, 7:00 AM". */
