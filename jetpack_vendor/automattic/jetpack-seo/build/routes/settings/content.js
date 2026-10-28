@@ -161,7 +161,7 @@ __( "Organization details", "jetpack-seo" );
 __( "Fix the highlighted fields to save.", "jetpack-seo" );
 __( "Save schema settings", "jetpack-seo" );
 __( "Search & social previews", "jetpack-seo" );
-__( "How your home page looks in search results and social shares. Updates as you edit the front-page description above.", "jetpack-seo" );
+__( "How your home page looks in search results and social shares. Updates as you edit the front-page title structure and description above.", "jetpack-seo" );
 __( "Google search result", "jetpack-seo" );
 __( "Facebook", "jetpack-seo" );
 __( "X (Twitter)", "jetpack-seo" );
