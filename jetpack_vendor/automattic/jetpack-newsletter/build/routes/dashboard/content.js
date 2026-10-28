@@ -28,6 +28,7 @@ __( "There was an error testing Jetpack. Error: %s", "jetpack-newsletter" );
 __( "View a summary of your newsletter.", "jetpack-newsletter" );
 __( "Manage everyone subscribed to your site.", "jetpack-newsletter" );
 __( "Configure how your newsletter looks, behaves, and reaches subscribers.", "jetpack-newsletter" );
+__( "You have unsaved changes. Are you sure you want to leave this tab?", "jetpack-newsletter" );
 __( "Overview", "jetpack-newsletter" );
 __( "Subscribers", "jetpack-newsletter" );
 __( "Settings", "jetpack-newsletter" );

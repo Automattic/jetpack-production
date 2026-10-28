@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: Attribute activity to the correct site on Atomic and Jetpack sites.
+- Settings: Ask before switching dashboard tabs with unsaved changes.
 - Subscribers: Show a badge for every active comped plan, including comps held alongside a paid plan, and none for expired plans.
 
 ## [0.18.2] - 2026-10-26
