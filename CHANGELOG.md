@@ -55,6 +55,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Media: Prevent warnings when a large number of shortcodes are registered.
+- Newsletter: Record how creators use the email design screen.
 - Update bundle recommendations in the plugin description for the Jetpack Pro launch.
 - Update package dependencies.
 

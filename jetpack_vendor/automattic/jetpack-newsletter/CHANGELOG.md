@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Email design: Tell the design screen which link brought the creator there.
 - Overview: Use the same status icons as the AI launchpad checklist.
 - Update package dependencies.
 

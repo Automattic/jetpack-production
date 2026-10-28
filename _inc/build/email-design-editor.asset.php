@@ -1,5 +1,6 @@
 <?php return array(
 	'dependencies' => array(
+		'jetpack-script-data',
 		'lodash',
 		'react',
 		'react-dom',
@@ -33,5 +34,5 @@
 		'wp-style-engine',
 		'wp-url'
 	),
-	'version' => '69af8f6003dfcd8fd5e9'
+	'version' => 'f528512e61a229c3c25f'
 );
