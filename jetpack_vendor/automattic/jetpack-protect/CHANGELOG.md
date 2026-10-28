@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Scan: Let a host change where the Scan upgrade link goes, through the `jetpack_feature_upgrade` filter.
+
 ### Changed
 - Firewall: Refuse to save a block list that includes your own IP address.
 - Protect dashboard: Point the Settings tab's Scan card at the server credentials Auto-fix needs, instead of a Jetpack Cloud page with no Scan settings.

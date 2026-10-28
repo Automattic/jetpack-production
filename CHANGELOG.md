@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Hide the WordPress Agent and its notice on WordPress.com sites that no longer have a plan granting Big Sky.
 - My Jetpack: Fix a fatal error when activating Jetpack beside an older standalone Jetpack plugin.
 - My Jetpack: Let administrators who can manage modules but not plugins switch modules on and off in bulk from the Features list.
+- My Jetpack: On WordPress.com, show Personal and Premium sites the vulnerability report and the Scan upgrade on the Protect card, since their plans don't include Scan.
 - My Jetpack: Return to the tab you came from with the back link on product upgrade screens.
 - Newsletter: Show every active comped plan in the Subscribers list, including comps held alongside a paid plan, and leave out expired plans.
 - Newsletter: Stop showing two "Please connect your user account" errors in the post editor to users who haven't connected their own WordPress.com account.
