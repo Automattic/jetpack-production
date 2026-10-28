@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Enhancements
 - Firewall: Explain to a visitor blocked by the IP block list what happened and that site managers can log in for more information.
 - My Jetpack: Open supported Modules links in Features.
+- My Jetpack: Show the avatar and connection status control in the header by default, with access to connection and plan details.
 - Newsletter: Describe the post audience, paid tier and email settings in the REST API schema, so AI agents and other API clients know which values to send.
 - Newsletter: Open the email design screen in the same tab from the email preview, with a way back to the post.
 - Newsletter: Remove the block inserter and List View from the email design screen, where neither had anything to show.

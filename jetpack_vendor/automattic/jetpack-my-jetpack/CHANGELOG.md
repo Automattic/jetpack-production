@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect card: Show the firewall as on where the host provides its own.
 - Rename the `jetpack_my_jetpack_feature_upgrade` filter to `jetpack_feature_upgrade`, which can also change a feature's manage link.
 - Setup wizard: Start the connection with the standard my_jetpack_onboarding entry point, so WordPress.com shows its unified connection screen. This is behind the default-off `my-jetpack-onboarding-wizard` flag.
+- Show shared header controls by default in My Jetpack and the modern Boost dashboard, with an avatar, connection status, and access to connection and plan details.
 - Stats: Reuse visit counts loaded in the last minute instead of fetching them again.
 - Tabs: Build the tab bar with the WordPress UI Tabs component.
 - Update package dependencies.
