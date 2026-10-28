@@ -166,7 +166,7 @@
         'automattic/jetpack-comments' => array(
             'pretty_version' => '0.8.1-alpha.1793036582',
             'version' => '0.8.1.0-alpha1793036582',
-            'reference' => '35a3a2c41b498676d3ddb1d209ca5bd17cbc96f1',
+            'reference' => 'e2a6f3a3c7c22a3a48d83c16343ad6bf9032e8b9',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-comments',
             'aliases' => array(),
@@ -281,9 +281,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-image-cdn' => array(
-            'pretty_version' => '0.8.2',
-            'version' => '0.8.2.0',
-            'reference' => '2b46b1de400aa980e9d9e97c7a8dc3dc3ac37d98',
+            'pretty_version' => '0.8.3-alpha.1793197630',
+            'version' => '0.8.3.0-alpha1793197630',
+            'reference' => 'b6eafbe3d09c4e1138060bdf5d14465ef0e89ee9',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-image-cdn',
             'aliases' => array(),
@@ -454,7 +454,7 @@
         'automattic/jetpack-post-media' => array(
             'pretty_version' => '0.3.3',
             'version' => '0.3.3.0',
-            'reference' => '87a8dffa6bfea11e162f8f2935a54bc8929bcb23',
+            'reference' => 'd8e3dc882a30fa88760f81247bd07439ff485f70',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-post-media',
             'aliases' => array(),
@@ -499,7 +499,7 @@
         'automattic/jetpack-publicize' => array(
             'pretty_version' => '0.88.8-alpha.1793036582',
             'version' => '0.88.8.0-alpha1793036582',
-            'reference' => '57740e41b936e5067a5e53b49ea976b6e2fa2019',
+            'reference' => 'f4ad0aa6a0e7da112bb0b6156429e9f66e5cca11',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-publicize',
             'aliases' => array(),
