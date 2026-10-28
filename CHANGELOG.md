@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin pages: Keep administrators signed in on the Settings and Modules pages when another plugin's REST authentication filter returns an empty value such as null or false.
 - Backup: Keep the dashboard available after a Jetpack Pro plan expires.
 - Hide the WordPress Agent and its notice on WordPress.com sites that no longer have a plan granting Big Sky.
+- My Jetpack: Fix a fatal error when activating Jetpack beside an older standalone Jetpack plugin.
 - Newsletter: Show every active comped plan in the Subscribers list, including comps held alongside a paid plan, and leave out expired plans.
 - Newsletter: Stop showing two "Please connect your user account" errors in the post editor to users who haven't connected their own WordPress.com account.
 - Paywall block: Show Paid subscribers as unavailable in the toolbar, with a link to set up payments, matching the Content access panel.

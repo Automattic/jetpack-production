@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Backup: Keep the dashboard available after a Jetpack Pro plan expires.
+- Fix a fatal error when activating a Jetpack plugin beside an older one.
 
 ## [6.13.0] - 2026-10-26
 ### Added
