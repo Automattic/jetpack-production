@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Abilities: get-visits takes and returns `period` and `num`, matching get-top-content and get-post-views, in place of `unit` and `quantity`.
+- Abilities: Report counts WordPress.com could not supply as null instead of 0, and name the site that was read in every Stats reader's response.
 - Tracking pixel: Honor the WP Consent API on every site, so visitors who have not allowed statistics cookies are not counted, and remove the honor_cookie_consent option. Without the WP Consent API plugin, tracking is unchanged.
 
 ## [0.23.2] - 2026-10-28
