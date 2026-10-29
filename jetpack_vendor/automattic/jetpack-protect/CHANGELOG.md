@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Dashboard: Refresh the Scan card with a last-scan badge, a live countdown to the next automatic scan, and a shorter upgrade tooltip.
 - Hide the threat count from the menu when the host turns off threat notifications.
 - Protect Dashboard: Drop the "Jetpack" breadcrumb from the page header, to match other feature pages.
 
