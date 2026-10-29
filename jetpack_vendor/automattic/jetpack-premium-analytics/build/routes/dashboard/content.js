@@ -369,6 +369,38 @@ __( "Your store data hasn't finished syncing, so the numbers below are incomplet
 /* translators: %d: sync progress percentage. */
 __( "Your store data is still syncing (%d%%). The numbers below are incomplete until it finishes.", "jetpack-premium-analytics-pkg" );
 __( "Try again", "jetpack-premium-analytics-pkg" );
+/* translators: %d: the step's number, 1 or 2. */
+__( "Step %d", "jetpack-premium-analytics-pkg" );
+__( "Active", "jetpack-premium-analytics-pkg" );
+__( "WP Consent API is active.", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the reason WordPress gave. */
+__( "WP Consent API could not be set up: %s", "jetpack-premium-analytics-pkg" );
+__( "WP Consent API could not be set up.", "jetpack-premium-analytics-pkg" );
+__( "Activating WP Consent API…", "jetpack-premium-analytics-pkg" );
+__( "Installing WP Consent API…", "jetpack-premium-analytics-pkg" );
+__( "Activate", "jetpack-premium-analytics-pkg" );
+__( "Install and activate", "jetpack-premium-analytics-pkg" );
+__( "You do not have permission to activate plugins here. Ask whoever manages plugins on this site to activate WP Consent API.", "jetpack-premium-analytics-pkg" );
+__( "Plugins cannot be installed here due to your site configuration. Install WP Consent API using your normal deployment workflow.", "jetpack-premium-analytics-pkg" );
+__( "You do not have permission to install plugins here. Ask whoever manages plugins on this site to install WP Consent API.", "jetpack-premium-analytics-pkg" );
+__( "Tells Stats what each visitor chose.", "jetpack-premium-analytics-pkg" );
+__( "Optional. Your cookie banner already asks visitors before Stats counts them.", "jetpack-premium-analytics-pkg" );
+__( "A free plugin that tells Stats what each visitor chose. Once it’s active, visitors who decline aren’t counted, so your views will likely drop.", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the name of a cookie banner plugin, such as CookieYes. */
+__( "%s is active.", "jetpack-premium-analytics-pkg" );
+__( "A cookie banner plugin is active.", "jetpack-premium-analytics-pkg" );
+/* translators: <plugins /> is a list of cookie banner plugins, such as "Complianz, Cookiebot or CookieYes". */
+__( "Stats didn’t find one. If you use a cookie banner, make sure it supports the WP Consent API. If not, install one, such as <plugins />.", "jetpack-premium-analytics-pkg" );
+__( "Visitor consent", "jetpack-premium-analytics-pkg" );
+__( "Set up", "jetpack-premium-analytics-pkg" );
+__( "Not set up", "jetpack-premium-analytics-pkg" );
+__( "Stats only counts visitors who allow it in your cookie banner.", "jetpack-premium-analytics-pkg" );
+__( "If you show visitors a cookie banner, Stats can only count visitors who allow it. It takes two steps:", "jetpack-premium-analytics-pkg" );
+__( "Not found", "jetpack-premium-analytics-pkg" );
+__( "Cookie banner plugin", "jetpack-premium-analytics-pkg" );
+__( "Inactive", "jetpack-premium-analytics-pkg" );
+__( "Not installed", "jetpack-premium-analytics-pkg" );
+__( "WP Consent API", "jetpack-premium-analytics-pkg" );
 /* translators: 1: views used in the current cycle, 2: the plan's views limit. */
 __( "%1$s / %2$s views", "jetpack-premium-analytics-pkg" );
 /* translators: Read by screen readers. 1: views used in the current cycle, 2: the plan's views limit. */
