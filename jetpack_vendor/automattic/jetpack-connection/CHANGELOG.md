@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [9.15.1-alpha] - unreleased
+## [9.16.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Connectors: Open the Jetpack Connection card with its details expanded when a link to the Connectors screen asks for it.
 
 ### Fixed
 - Safe Mode: Fix the window in My Jetpack opening empty, with no choices.
@@ -2205,7 +2208,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.15.1-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.15.0...v9.15.1-alpha
+[9.16.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.15.0...v9.16.0-alpha
 [9.15.0]: https://github.com/Automattic/jetpack-connection/compare/v9.14.0...v9.15.0
 [9.14.0]: https://github.com/Automattic/jetpack-connection/compare/v9.13.0...v9.14.0
 [9.13.0]: https://github.com/Automattic/jetpack-connection/compare/v9.12.1...v9.13.0
