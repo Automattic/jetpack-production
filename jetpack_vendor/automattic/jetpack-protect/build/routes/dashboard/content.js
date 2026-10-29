@@ -591,13 +591,12 @@ __( "Upgrade to Scan to check anytime", "jetpack-protect-pkg" );
 __( "No threats found", "jetpack-protect-pkg" );
 /* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */
 __( "No issues were found after scanning %1$s and %2$s.", "jetpack-protect-pkg" );
-__( "Next scan in:", "jetpack-protect-pkg" );
 __( "Your site is scanned automatically every day.", "jetpack-protect-pkg" );
 __( "No vulnerabilities found", "jetpack-protect-pkg" );
 /* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */
 __( "No issues were found after checking %1$s and %2$s for known vulnerabilities.", "jetpack-protect-pkg" );
-__( "Next check in:", "jetpack-protect-pkg" );
 __( "Vulnerabilities are checked automatically every day.", "jetpack-protect-pkg" );
+__( "Next check in:", "jetpack-protect-pkg" );
 __( "Get the rest of your site’s protection", "jetpack-protect-pkg" );
 __( "Find malware", "jetpack-protect-pkg" );
 __( "Every file on your site is checked daily, not just your plugin versions.", "jetpack-protect-pkg" );
