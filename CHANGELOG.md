@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Firewall: Explain to a visitor blocked by the IP block list what happened and that site managers can log in for more information.
+- My Jetpack: Connect a WordPress.com account from feature cards that need one. Show feature states through switches or buttons instead of redundant Active or Inactive badges, and show host restrictions below descriptions. Leave features out of Available when their only action is an install you cannot make.
 - My Jetpack: Keep a plugin's switch on the Features tab busy until its card has refreshed after turning the plugin on or off, and show the success message once the card is up to date.
 - My Jetpack: Open supported Modules links in Features.
 - My Jetpack: Show the avatar and connection status control in the header by default, with access to connection and plan details.

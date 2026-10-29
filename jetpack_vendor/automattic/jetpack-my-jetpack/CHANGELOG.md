@@ -10,11 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Features: Connect a WordPress.com account from the Install or Connect button of features that need one.
+- Features: Offer Connect on Jetpack AI when a WordPress.com account is all it is missing.
+- Features: Turn a feature on when its account connection, started from its Connect button, returns to Features.
 - Let people pick the Overview v1 Stats period and step through earlier periods, shown only while the Overview v1 feature flag is on.
 - Overview: Type out the welcome heading and fade the sections in on first load, behind the `my-jetpack-overview-v1` flag.
 
 ### Changed
 - Features: Keep a plugin's switch busy until its card has refreshed after turning the plugin on or off, and show the success message once the card is up to date.
+- Features: Show feature states through switches or buttons instead of redundant Active or Inactive badges, and show host restrictions below descriptions. Leave features out of Available when their only action is an install you cannot make. Restore the previous behavior with the `jetpack_feature_flag_enabled_my-jetpack-account-connect` filter.
 - Header: Keep the tabs and the divider under them in view while scrolling, behind the `my-jetpack-header-controls` flag.
 - Modules: Open supported Modules links in Features.
 - Overview: Show skeletons for the Stats totals and chart while they load.
