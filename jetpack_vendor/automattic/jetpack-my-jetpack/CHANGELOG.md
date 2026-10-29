@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Features: Turn a feature on when its account connection, started from its Connect button, returns to Features.
 
 ### Changed
+- Connection: Report connection events with the `my-jetpack` context and a placement for the header, the connection card and the page notice.
 - Features: Keep a plugin's switch busy until its card has refreshed after turning the plugin on or off, and show the success message once the card is up to date.
 - Features: Show feature states through switches or buttons instead of redundant Active or Inactive badges, and show host restrictions below descriptions. Leave features out of Available when their only action is an install you cannot make. Restore the previous behavior with the `jetpack_feature_flag_enabled_my-jetpack-account-connect` filter.
 - Protect: Skip the threats alert in the menu bubble and on My Jetpack when the host turns off threat notifications.
