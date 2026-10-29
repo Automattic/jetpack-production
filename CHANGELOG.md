@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Show connection owner names containing characters like & correctly.
 - PayPal Payment Buttons: Save a payment button with unpriced variants again.
 - Premium Analytics: Line up the column header above leaderboard rows with the row text.
+- Shortcodes: Add a title to YouTube embed iframes so screen readers can announce them.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Scan: Remove the dashboard's unused scan status code.
