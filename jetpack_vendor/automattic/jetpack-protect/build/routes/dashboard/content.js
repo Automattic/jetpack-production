@@ -572,23 +572,6 @@ __( "Email me when my site goes down and comes back up", "jetpack-protect-pkg" )
 __( "Scan no longer reports this threat. It may have been fixed.", "jetpack-protect-pkg" );
 /* translators: %s is how long ago, such as "2 hours ago". */
 __( "Last scan %s", "jetpack-protect-pkg" );
-/* translators: %s is a number of hours, such as "23". */
-_x( "%sh", "hours, abbreviated", "jetpack-protect-pkg" );
-/* translators: %s is a number of minutes, such as "59". */
-_x( "%sm", "minutes, abbreviated", "jetpack-protect-pkg" );
-/* translators: %s is a number of seconds, such as "21". */
-_x( "%ss", "seconds, abbreviated", "jetpack-protect-pkg" );
-/* translators: %1$s is hours, %2$s minutes and %3$s seconds, such as "23 hours", "59 minutes", "21 seconds". */
-__( "%1$s, %2$s, %3$s", "jetpack-protect-pkg" );
-/* translators: %d is a number of hours. */
-_n( "%d hour", "%d hours", 1, "jetpack-protect-pkg" );
-/* translators: %d is a number of minutes. */
-_n( "%d minute", "%d minutes", 1, "jetpack-protect-pkg" );
-/* translators: %d is a number of seconds. */
-_n( "%d second", "%d seconds", 1, "jetpack-protect-pkg" );
-/* translators: %s is how long until the next free check, such as "in 21 hours". */
-__( "Next free check %s. Upgrade to Scan to check anytime.", "jetpack-protect-pkg" );
-__( "Upgrade to Scan to check anytime", "jetpack-protect-pkg" );
 __( "No threats found", "jetpack-protect-pkg" );
 /* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */
 __( "No issues were found after scanning %1$s and %2$s.", "jetpack-protect-pkg" );
@@ -597,7 +580,7 @@ __( "No vulnerabilities found", "jetpack-protect-pkg" );
 /* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */
 __( "No issues were found after checking %1$s and %2$s for known vulnerabilities.", "jetpack-protect-pkg" );
 __( "Vulnerabilities are checked automatically every day.", "jetpack-protect-pkg" );
-__( "Next check in:", "jetpack-protect-pkg" );
+__( "Vulnerabilities are checked once a day. Upgrade to Scan to check anytime.", "jetpack-protect-pkg" );
 __( "Get the rest of your site’s protection", "jetpack-protect-pkg" );
 __( "Find malware", "jetpack-protect-pkg" );
 __( "Every file on your site is checked daily, not just your plugin versions.", "jetpack-protect-pkg" );

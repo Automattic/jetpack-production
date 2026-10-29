@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Dashboard: Refresh the Scan card with a last-scan badge, a live countdown to the next automatic scan, and a shorter upgrade tooltip.
+- Dashboard: Remove the next-scan countdown from the Scan card and the Scan site button.
 - Hide the threat count from the menu when the host turns off threat notifications.
 - Protect Dashboard: Drop the "Jetpack" breadcrumb from the page header, to match other feature pages.
 
