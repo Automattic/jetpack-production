@@ -416,6 +416,20 @@ __( "Delete plugin?", "jetpack-protect-pkg" );
 __( "%s isn’t your active theme or its parent, so deleting it doesn’t change your site. Its files are removed and can’t be restored.", "jetpack-protect-pkg" );
 /* translators: %s is a plugin name, such as "Contact Form 7". */
 __( "%s isn’t active. Deleting it removes its files and any data it saved, such as its settings. This can’t be undone.", "jetpack-protect-pkg" );
+__( "Delete this theme?", "jetpack-protect-pkg" );
+__( "Delete this plugin?", "jetpack-protect-pkg" );
+__( "This theme seems to be currently active on your site. Deleting it may break your site. Please disable it first and check if your site is still working as expected, then proceed with the fix.", "jetpack-protect-pkg" );
+__( "This plugin seems to be currently active on your site. Deleting it may break your site. Please disable it first and check if your site is still working as expected, then proceed with the fix.", "jetpack-protect-pkg" );
+__( "This theme seems to not currently be active on your site. Please note that deleting it may still have adverse effects and this action cannot be undone.", "jetpack-protect-pkg" );
+__( "This plugin seems to not currently be active on your site. Please note that deleting it may still have adverse effects and this action cannot be undone.", "jetpack-protect-pkg" );
+/* translators: %s is the theme slug itself, e.g. twentytwentyfive. */
+__( "To confirm you have read and understood the consequences, please enter the theme slug <code>%s</code> in the field below.", "jetpack-protect-pkg" );
+/* translators: %s is the plugin slug itself, e.g. jetpack-protect. */
+__( "To confirm you have read and understood the consequences, please enter the plugin slug <code>%s</code> in the field below.", "jetpack-protect-pkg" );
+__( "We did not find this theme on WordPress.org. We encourage you to create a backup of your site before fixing this threat, to keep a copy of it.", "jetpack-protect-pkg" );
+__( "We did not find this plugin on WordPress.org. We encourage you to create a backup of your site before fixing this threat, to keep a copy of it.", "jetpack-protect-pkg" );
+__( "Confirmation", "jetpack-protect-pkg" );
+__( "Confirm deletion", "jetpack-protect-pkg" );
 __( "Auto-fix", "jetpack-protect-pkg" );
 __( "Unignore", "jetpack-protect-pkg" );
 __( "View on WordPress.org", "jetpack-protect-pkg" );
@@ -477,10 +491,10 @@ __( "This permanently deletes the %s option from your database. Jetpack doesn’
 __( "Deleting can’t be undone.", "jetpack-protect-pkg" );
 /* translators: %s is a database table, such as "wp_options". */
 __( "Threat found in the %s table, in this row:", "jetpack-protect-pkg" );
+__( "Auto-fix it", "jetpack-protect-pkg" );
 __( "Jetpack is fixing this threat. You can close this panel; the list updates when it’s done.", "jetpack-protect-pkg" );
 __( "Unignore it", "jetpack-protect-pkg" );
 __( "Ignore it", "jetpack-protect-pkg" );
-__( "Auto-fix it", "jetpack-protect-pkg" );
 __( "Ignored", "jetpack-protect-pkg" );
 __( "Fixed", "jetpack-protect-pkg" );
 /* translators: %s is a date, such as "Aug 15, 7:00 AM". */

@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Hide the threat count from the menu when the host turns off threat notifications.
 - Protect Dashboard: Drop the "Jetpack" breadcrumb from the page header, to match other feature pages.
 
+### Fixed
+- Protect dashboard: Ask for the plugin or theme slug before an auto-fix deletes it, and warn when it is active or not on WordPress.org.
+
 ## [0.4.0] - 2026-10-28
 ### Added
 - Dashboard: Show the table, row and values a database threat was found in, and delete a flagged option in place. [#54073]
