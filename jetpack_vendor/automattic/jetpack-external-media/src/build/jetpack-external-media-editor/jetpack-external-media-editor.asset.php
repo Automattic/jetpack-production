@@ -18,11 +18,12 @@
 		'wp-editor',
 		'wp-element',
 		'wp-hooks',
+		'wp-html-entities',
 		'wp-i18n',
 		'wp-keycodes',
 		'wp-plugins',
 		'wp-primitives',
 		'wp-url'
 	),
-	'version' => 'db5c0d8e09d96d32c13a'
+	'version' => 'e03fded35a57e646556a'
 );

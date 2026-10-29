@@ -23,6 +23,7 @@
 		'wp-element',
 		'wp-escape-html',
 		'wp-hooks',
+		'wp-html-entities',
 		'wp-i18n',
 		'wp-keycodes',
 		'wp-notices',
@@ -33,5 +34,5 @@
 		'wp-url',
 		'wp-viewport'
 	),
-	'version' => '1f0cc1150151b2fcf81f'
+	'version' => 'e1739da6c505b43df604'
 );

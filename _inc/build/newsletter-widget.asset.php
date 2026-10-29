@@ -12,10 +12,11 @@
 		'wp-dom-ready',
 		'wp-element',
 		'wp-hooks',
+		'wp-html-entities',
 		'wp-i18n',
 		'wp-plugins',
 		'wp-primitives',
 		'wp-url'
 	),
-	'version' => '78151e18922110d1b437'
+	'version' => '87349456544ec560676c'
 );

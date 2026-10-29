@@ -11,10 +11,11 @@
 		'wp-editor',
 		'wp-element',
 		'wp-hooks',
+		'wp-html-entities',
 		'wp-i18n',
 		'wp-plugins',
 		'wp-primitives',
 		'wp-url'
 	),
-	'version' => '65f4a946add8bf495ef5'
+	'version' => 'b2c60f8a31a5d79f0dc9'
 );
