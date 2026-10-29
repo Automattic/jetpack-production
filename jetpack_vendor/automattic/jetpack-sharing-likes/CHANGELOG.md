@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Show the React version of Settings > Sharing by default. Return false from the `rsm_jetpack_ui_modernization_sharing_likes` filter to keep the PHP screen.
+
 ## [0.5.1] - 2026-10-28
 ### Changed
 - Turn the block placement cards on the React version of Settings > Sharing into one radio choice, led by an option that doesn't add the block. [#54212]
@@ -58,6 +65,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Settings: Add the wp-admin Settings > Sharing screen, covering sharing buttons, Like buttons, and where they appear. [#52407] [#52727] [#52756] [#52758]
 - Settings: Give Comment Likes their own section on every platform, and offer the Like block to Jetpack and Atomic sites running Comment Likes. [#52796]
 
+[0.6.0-alpha]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.5.1...v0.6.0-alpha
 [0.5.1]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.3.0...v0.4.0
