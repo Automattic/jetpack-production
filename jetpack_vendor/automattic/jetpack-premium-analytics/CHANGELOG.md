@@ -15,7 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Show the Personal plan's monthly price in the upgrade prompt that replaces a free WordPress.com site's Insights and Traffic sections.
 - Show the Stats plan choice on a site that is not connected yet, and connect the site from it.
 - Stats: Add a "View in new tab" row action that opens the live post, page or email from the Posts & pages and Emails reports.
-- Stats: Open the live post, page, video or email in a new tab from its row in a widget, beside the title that opens its stats.
+- Stats: Open the live post, page or email in a new tab from its row in a widget, beside the title that opens its stats.
 - Top UTM: Offer the Build URL dialog in the card footer and on the UTM report page, so sites with UTM visits can open it too.
 
 ### Changed
