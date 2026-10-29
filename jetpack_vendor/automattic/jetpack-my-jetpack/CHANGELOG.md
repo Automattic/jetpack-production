@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Overview: Type out the welcome heading and fade the sections in on first load, behind the `my-jetpack-overview-v1` flag.
 
 ### Changed
+- Features: Keep a plugin's switch busy until its card has refreshed after turning the plugin on or off, and show the success message once the card is up to date.
 - Header: Keep the tabs and the divider under them in view while scrolling, behind the `my-jetpack-header-controls` flag.
 - Modules: Open supported Modules links in Features.
 - Overview: Show skeletons for the Stats totals and chart while they load.
