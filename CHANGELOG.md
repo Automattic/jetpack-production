@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Fix the Safe Mode window in My Jetpack opening empty, with no choices.
 - Connection: Show connection owner names containing characters like & correctly.
 - Email design: Keep the saved design on screen while resetting it to the defaults.
+- Keep hidden Jetpack menu items out of the remote dashboard menu.
 - PayPal Payment Buttons: Save a payment button with unpriced variants again.
 - Premium Analytics: Line up the column header above leaderboard rows with the row text.
 - Protect: Send WordPress.com-hosted sites to WordPress.com to manage Scan, and hide the server credentials link there.
