@@ -127,6 +127,7 @@ __( "There seems to be a problem with your website.", "jetpack" );
 __( "This will reset all Jetpack options, are you sure?", "jetpack" );
 /* Translators: %s: a version number. */
 __( "Version %s", "jetpack" );
+__( "View the Jetpack changelog on WordPress.org.", "jetpack" );
 _x( "Modules", "Navigation item. Noun. Links to a list of modules for Jetpack.", "jetpack" );
 __( "Access the full list of Jetpack modules available on your site.", "jetpack" );
 _x( "Debug", "Navigation item. Noun. Links to a debugger tool for Jetpack.", "jetpack" );
