@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a `jetpack_protect_threat_notifications_enabled` filter so hosts can stop threats from being announced outside the Protect page.
 
+### Fixed
+- Flag a most recent scan that failed instead of treating it like a clean scan.
+
 ## [0.9.2] - 2026-10-28
 ### Fixed
 - Plan: Count every Scan product, including bi-yearly and legacy real-time ones, and on WordPress.com count only plans that include Scan's UI as having Scan. [#54071]

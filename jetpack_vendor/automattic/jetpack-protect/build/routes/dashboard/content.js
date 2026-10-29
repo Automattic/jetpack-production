@@ -659,6 +659,8 @@ __( "Checking %1$s and %2$s for vulnerabilities.", "jetpack-protect-pkg" );
 __( "You can leave this page — the scan carries on.", "jetpack-protect-pkg" );
 __( "Check again", "jetpack-protect-pkg" );
 __( "We couldn’t check your site for vulnerabilities right now.", "jetpack-protect-pkg" );
+__( "Your last scan didn’t complete, so we can’t confirm your site is free of threats.", "jetpack-protect-pkg" );
+__( "Scan site", "jetpack-protect-pkg" );
 __( "All vulnerabilities found", "jetpack-protect-pkg" );
 __( "Plugins checked", "jetpack-protect-pkg" );
 __( "Themes checked", "jetpack-protect-pkg" );
@@ -685,15 +687,16 @@ __( "The firewall couldn’t finish applying your change.", "jetpack-protect-pkg
 __( "Your settings couldn’t be loaded.", "jetpack-protect-pkg" );
 __( "Settings updated.", "jetpack-protect-pkg" );
 __( "Your change couldn’t be saved. Try again.", "jetpack-protect-pkg" );
-__( "Scan site", "jetpack-protect-pkg" );
 /* translators: %s is a threat's id number. */
 __( "Threat #%s", "jetpack-protect-pkg" );
 __( "Nothing from your alert needs fixing", "jetpack-protect-pkg" );
+__( "Other threats on your site still need attention.", "jetpack-protect-pkg" );
+__( "See them on the Overview.", "jetpack-protect-pkg" );
 __( "Your site is safe right now", "jetpack-protect-pkg" );
 __( "No known vulnerabilities found", "jetpack-protect-pkg" );
 __( "None of the threats from your alert need your attention.", "jetpack-protect-pkg" );
-__( "Other threats on your site still need attention.", "jetpack-protect-pkg" );
-__( "See them on the Overview.", "jetpack-protect-pkg" );
+__( "Your last scan didn’t complete, so we can’t confirm the rest of your site is free of threats.", "jetpack-protect-pkg" );
+__( "Scan again from the Overview.", "jetpack-protect-pkg" );
 /* translators: %d is a number of threats. */
 _n( "Checking the latest status of %d threat…", "Checking the latest status of %d threats…", 1, "jetpack-protect-pkg" );
 __( "Scan hasn’t finished checking your site yet. Reload the page once it has.", "jetpack-protect-pkg" );
