@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Skip the threats alert in the menu bubble and on My Jetpack when the host turns off threat notifications.
 
 ### Fixed
+- Features: Keep security modules managed in Protect out of bulk changes.
 - Protect: Send the card's manage and Scan results links wherever a host sends the Features tab's Protect link.
 
 ## [6.14.0] - 2026-10-28
