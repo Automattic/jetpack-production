@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin pages: Keep administrators signed in on the Settings and Modules pages when another plugin's REST authentication filter returns an empty value such as null or false.
 - AI Assistant: Keep the Excerpt field in the post editor when the AI excerpt panel cannot be loaded.
 - Backup: Keep the dashboard available after a Jetpack Pro plan expires.
+- Connection: Fix the Safe Mode window in My Jetpack opening empty, with no choices.
 - Connection: Show connection owner names containing characters like & correctly.
 - Email Design: stop the screen offering the site's Styles panel, which changed the site's design rather than the email's.
 - Hide the WordPress Agent and its notice on WordPress.com sites that no longer have a plan granting Big Sky.
