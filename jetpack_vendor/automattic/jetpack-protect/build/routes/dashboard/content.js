@@ -565,9 +565,11 @@ __( "Connect your account", "jetpack-protect-pkg" );
 __( "Uptime history is unavailable right now.", "jetpack-protect-pkg" );
 __( "Try again", "jetpack-protect-pkg" );
 __( "Configure downtime monitoring", "jetpack-protect-pkg" );
-__( "Email me when my site goes down and comes back up", "jetpack-protect-pkg" );
-__( "Emails go to your WordPress.com account’s address.", "jetpack-protect-pkg" );
 __( "Connect your WordPress.com account to manage these emails.", "jetpack-protect-pkg" );
+__( "Emails go to your WordPress.com account’s address.", "jetpack-protect-pkg" );
+/* translators: %s is an email address. */
+__( "Emails go to %s, your WordPress.com account’s address.", "jetpack-protect-pkg" );
+__( "Email me when my site goes down and comes back up", "jetpack-protect-pkg" );
 __( "Scan no longer reports this threat. It may have been fixed.", "jetpack-protect-pkg" );
 /* translators: %s is how long ago, such as "2 hours ago". */
 __( "Last scan %s", "jetpack-protect-pkg" );
