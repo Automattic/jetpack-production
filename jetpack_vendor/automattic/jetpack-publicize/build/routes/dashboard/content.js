@@ -39,6 +39,11 @@ __( "Jetpack", "jetpack-publicize-pkg" );
 __( "Sections", "jetpack-publicize-pkg" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-publicize-pkg" );
+__( "Select period", "jetpack-publicize-pkg" );
+/* translators: %1$s: What the control picks, such as "Date range". %2$s: The selected period, such as "Last 30 days". */
+__( "%1$s: %2$s", "jetpack-publicize-pkg" );
+__( "Previous period", "jetpack-publicize-pkg" );
+__( "Next period", "jetpack-publicize-pkg" );
 __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-publicize-pkg" );
 __( "Reconnecting Jetpack", "jetpack-publicize-pkg" );
 __( "Loading…", "jetpack-publicize-pkg" );
@@ -210,7 +215,6 @@ __( "Invalid data", "jetpack-publicize-pkg" );
 __( "Line chart", "jetpack-publicize-pkg" );
 __( "Area chart", "jetpack-publicize-pkg" );
 __( "Week of %s", "jetpack-publicize-pkg" );
-__( "%1$s: %2$s", "jetpack-publicize-pkg" );
 __( "Bar chart", "jetpack-publicize-pkg" );
 __( "Bar list chart", "jetpack-publicize-pkg" );
 _n( "%s item", "%s items", 1, "jetpack-publicize-pkg" );
@@ -224,7 +228,6 @@ __( "Less", "jetpack-publicize-pkg" );
 __( "More", "jetpack-publicize-pkg" );
 __( "Heatmap chart", "jetpack-publicize-pkg" );
 __( "Current period", "jetpack-publicize-pkg" );
-__( "Previous period", "jetpack-publicize-pkg" );
 __( "Not enough space to display data", "jetpack-publicize-pkg" );
 __( "Leaderboard chart", "jetpack-publicize-pkg" );
 __( "Percentage change unavailable", "jetpack-publicize-pkg" );
@@ -239,8 +242,8 @@ __( "Visits from social media networks over the last %d days.", "jetpack-publici
 __( "Upgrade to see which social networks are driving visits to your site, day by day.", "jetpack-publicize-pkg" );
 /* translators: %s: name of the plan that unlocks the feature, e.g. "Business". */
 __( "Upgrade to the %s plan to see which social networks are driving visits to your site, day by day.", "jetpack-publicize-pkg" );
-__( "Traffic from social media", "jetpack-publicize-pkg" );
 __( "Date range", "jetpack-publicize-pkg" );
+__( "Traffic from social media", "jetpack-publicize-pkg" );
 __( "Available with a paid plan", "jetpack-publicize-pkg" );
 __( "Couldn’t load traffic data", "jetpack-publicize-pkg" );
 __( "Something went wrong fetching your social traffic. Refresh the page to try again.", "jetpack-publicize-pkg" );
