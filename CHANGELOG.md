@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Title the Protect page "Protect" instead of "Jetpack / Protect", to match other feature pages.
 - Stats: Stop counting visitors who have not allowed statistics cookies on sites that run the WP Consent API, and add a Visitor consent card to the Stats v2 Settings tab that helps set it up.
 - Subscriptions: Add a filter to customize the format of the subscriber count.
+- VideoPress: Make the Overview date range picker keyboard-navigable with arrow keys.
 
 ### Improved compatibility
 - Protect: Hide the Ignore threat action on WordPress.com sites, to match the WordPress.com dashboard.

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Overview: Make the date range picker keyboard-navigable with arrow keys.
 - Update package dependencies.
 
 ## [0.60.0] - 2026-10-26
