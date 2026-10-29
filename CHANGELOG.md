@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Show Video Playlist and Latest Videos Playlist blocks in newsletter emails as the first video plus a grid of thumbnails linking to the post.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- API: Prevent errors when handling malformed data.
 - Carousel: Guard against malformed data.
 - Prevent PHP errors by limiting direct access to files.
 - Protect: Make the Protect page module available on WordPress.com sites with Atomic hosting whose plan includes Scan.
