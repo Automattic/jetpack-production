@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Stop stripping a size suffix such as -600x400 from short image URLs on other domains.
+- Swap a WordPress size for its original image when the URL has a query string.
 
 ## [0.8.2] - 2026-10-26
 ### Changed
