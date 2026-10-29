@@ -5,13 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.3-alpha] - unreleased
+## [0.8.4-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
-- Stop stripping a size suffix such as -600x400 from short image URLs on other domains.
 - Swap a WordPress size for its original image when the URL has a query string.
+
+## [0.8.3] - 2026-10-28
+### Fixed
+- Stop stripping a size suffix such as -600x400 from short image URLs on other domains. [#54204]
 
 ## [0.8.2] - 2026-10-26
 ### Changed
@@ -290,7 +293,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add image CDN package. [#29561]
 
-[0.8.3-alpha]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.8.2...v0.8.3-alpha
+[0.8.4-alpha]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.8.3...v0.8.4-alpha
+[0.8.3]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.8.2...v0.8.3
 [0.8.2]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.8.1...v0.8.2
 [0.8.1]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.8.0...v0.8.1
 [0.8.0]: https://github.com/Automattic/jetpack-image-cdn/compare/v0.7.29...v0.8.0

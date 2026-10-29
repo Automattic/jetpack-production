@@ -5,36 +5,41 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.15.0-alpha] - unreleased
+## [0.16.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Add an init option that replaces the pre-connection Stats page with this dashboard, and apply options from a later init call.
-- Offer a yearly interval in the Traffic summary on ranges of three years or longer, and label a first or last month or year that the range cuts by its days.
 - Settings: Add a Visitor consent card that shows whether a cookie banner plugin and the WP Consent API are active, and installs the WP Consent API in one click.
-- Show the Personal plan's monthly price in the upgrade prompt that replaces a free WordPress.com site's Insights and Traffic sections.
-- Show the Stats plan choice on a site that is not connected yet, and connect the site from it.
-- Stats: Add a "View in new tab" row action that opens the live post, page or email from the Posts & pages and Emails reports.
 - Stats: Offer "Mark as spam" from the Top referrers widget rows, as the Referrers report does.
-- Stats: Open the live post, page or email in a new tab from its row in a widget, beside the title that opens its stats.
 - Top UTM: Offer the Build URL dialog in the card footer and on the UTM report page, so sites with UTM visits can open it too.
 
+### Fixed
+- Widgets: Line up the column header above leaderboard rows with the row text.
+
+## [0.15.0] - 2026-10-28
+### Added
+- Add an init option that replaces the pre-connection Stats page with this dashboard, and apply options from a later init call. [#54138]
+- Offer a yearly interval in the Traffic summary on ranges of three years or longer, and label a first or last month or year that the range cuts by its days. [#53965]
+- Show the Personal plan's monthly price in the upgrade prompt that replaces a free WordPress.com site's Insights and Traffic sections. [#54136]
+- Show the Stats plan choice on a site that is not connected yet, and connect the site from it. [#53941]
+- Stats: Add a "View in new tab" row action that opens the live post, page or email from the Posts & pages and Emails reports. [#54058]
+- Stats: Open the live post, page or email in a new tab from its row in a widget, beside the title that opens its stats. [#53996]
+
 ### Changed
-- Dashboard: Show the notice about a failed refresh at the top of the section, instead of inside the sticky header.
-- Highlights: Show metric notes in a styled tooltip that also opens on keyboard focus.
-- Name the chart interval on the year date filter too, and collapse its year pills when the interval's name grows past the room left.
-- Stats: Offer a referrer's site from a "View in new tab" action beside its name in the Top referrers widget, instead of linking the whole row out.
+- Dashboard: Show the notice about a failed refresh at the top of the section, instead of inside the sticky header. [#54139]
+- Highlights: Show metric notes in a styled tooltip that also opens on keyboard focus. [#54011]
+- Name the chart interval on the year date filter too, and collapse its year pills when the interval's name grows past the room left. [#54019]
+- Stats: Offer a referrer's site from a "View in new tab" action beside its name in the Top referrers widget, instead of linking the whole row out. [#54163]
 
 ### Fixed
-- Conversion funnel: Label the tooltip's rate "Conversion rate", and make screen readers announce what each step's tooltip shows.
-- CSV export: Name countries in the Store visitors by location export when WooCommerce has no name for them.
-- Fix hourly Traffic chart times that were an hour off on daylight saving days.
-- Hide Stats v2 from users who cannot connect the site until it is connected, as the Stats menu does, and send them to the Dashboard if they reload the page.
-- Recognize the Stats views included in Jetpack Pro on the upgrade page.
-- Scroll the Jetpack footer with the page on the dashboard, report and detail pages, instead of keeping it pinned to the bottom of the screen.
-- Traffic summary: Compare each week, month or year with the one covering the same days in the comparison period, instead of the one in the same position.
-- Widgets: Line up the column header above leaderboard rows with the row text.
+- Conversion funnel: Label the tooltip's rate "Conversion rate", and make screen readers announce what each step's tooltip shows. [#53637]
+- CSV export: Name countries in the Store visitors by location export when WooCommerce has no name for them. [#54107]
+- Fix hourly Traffic chart times that were an hour off on daylight saving days. [#54015]
+- Hide Stats v2 from users who cannot connect the site until it is connected, as the Stats menu does, and send them to the Dashboard if they reload the page. [#54103]
+- Recognize the Stats views included in Jetpack Pro on the upgrade page. [#54108]
+- Scroll the Jetpack footer with the page on the dashboard, report and detail pages, instead of keeping it pinned to the bottom of the screen. [#54206]
+- Traffic summary: Compare each week, month or year with the one covering the same days in the comparison period, instead of the one in the same position. [#53965]
 
 ## [0.14.0] - 2026-10-26
 ### Added
@@ -695,7 +700,8 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
-[0.15.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.14.0...0.15.0-alpha
+[0.16.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.15.0...0.16.0-alpha
+[0.15.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.14.0...0.15.0
 [0.14.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.13.0...0.14.0
 [0.13.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.12.0...0.13.0
 [0.12.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.11.0...0.12.0

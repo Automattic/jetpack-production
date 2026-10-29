@@ -5,20 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [9.15.0-alpha] - unreleased
+## [9.15.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
-
-### Added
-- Connectors: Record Tracks events for the card's views, connect clicks, details, Safe Mode resolutions, ownership transfer and protected owner actions.
-
-### Changed
-- Connectors: Show the Automattic symbol in black in the connector logos.
-- Update package dependencies.
 
 ### Fixed
 - Safe Mode: Fix the window in My Jetpack opening empty, with no choices.
 - Tracking: Identify a connected user by their WordPress.com ID when it has not been saved yet, instead of falling back to an anonymous ID.
+
+## [9.15.0] - 2026-10-28
+### Added
+- Connectors: Record Tracks events for the card's views, connect clicks, details, Safe Mode resolutions, ownership transfer and protected owner actions. [#54059]
+
+### Changed
+- Connectors: Show the Automattic symbol in black in the connector logos. [#54208]
+- Update package dependencies. [#54118]
 
 ## [9.14.0] - 2026-10-26
 ### Added
@@ -2204,7 +2205,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.15.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.14.0...v9.15.0-alpha
+[9.15.1-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.15.0...v9.15.1-alpha
+[9.15.0]: https://github.com/Automattic/jetpack-connection/compare/v9.14.0...v9.15.0
 [9.14.0]: https://github.com/Automattic/jetpack-connection/compare/v9.13.0...v9.14.0
 [9.13.0]: https://github.com/Automattic/jetpack-connection/compare/v9.12.1...v9.13.0
 [9.12.1]: https://github.com/Automattic/jetpack-connection/compare/v9.12.0...v9.12.1

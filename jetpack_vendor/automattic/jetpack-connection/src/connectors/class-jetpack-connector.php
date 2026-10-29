@@ -301,7 +301,7 @@ class Jetpack_Connector {
 	/**
 	 * Whether the site allows tracking, the same gate My Jetpack uses for Tracks.
 	 *
-	 * @since 9.15.0-alpha
+	 * @since 9.15.0
 	 *
 	 * @return bool
 	 */

@@ -12,8 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Tracking pixel: Honor the WP Consent API on every site, so visitors who have not allowed statistics cookies are not counted, and remove the honor_cookie_consent option. Without the WP Consent API plugin, tracking is unchanged.
 
+## [0.23.2] - 2026-10-28
 ### Fixed
-- Abilities: Fix the views, visitors, streak, followers, top content and post views the Stats abilities report, reject dates that do not exist, and return get-followers' `publicize` as an object.
+- Abilities: Fix the views, visitors, streak, followers, top content and post views the Stats abilities report, reject dates that do not exist, and return get-followers' `publicize` as an object. [#53385]
 
 ## [0.23.1] - 2026-10-26
 ### Changed
@@ -414,7 +415,8 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
-[0.24.0-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.23.1...v0.24.0-alpha
+[0.24.0-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.23.2...v0.24.0-alpha
+[0.23.2]: https://github.com/Automattic/jetpack-stats/compare/v0.23.1...v0.23.2
 [0.23.1]: https://github.com/Automattic/jetpack-stats/compare/v0.23.0...v0.23.1
 [0.23.0]: https://github.com/Automattic/jetpack-stats/compare/v0.22.1...v0.23.0
 [0.22.1]: https://github.com/Automattic/jetpack-stats/compare/v0.22.0...v0.22.1
