@@ -720,6 +720,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_4_a_8
         'Automattic\\Jetpack\\VideoPress\\Options' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-options.php',
         'Automattic\\Jetpack\\VideoPress\\Package_Version' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-package-version.php',
         'Automattic\\Jetpack\\VideoPress\\Plan' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-plan.php',
+        'Automattic\\Jetpack\\VideoPress\\Playlist_Block_Email_Renderer' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-playlist-block-email-renderer.php',
         'Automattic\\Jetpack\\VideoPress\\Playlist_Index' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-playlist-index.php',
         'Automattic\\Jetpack\\VideoPress\\Rest_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-rest-controller.php',
         'Automattic\\Jetpack\\VideoPress\\Site' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-site.php',

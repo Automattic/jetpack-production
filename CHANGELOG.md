@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Line up the column header above leaderboard rows with the row text.
 - Protect: Update the menu badge and the "Threats found" admin bar notice as soon as threats are fixed, ignored, or deleted.
 - Shortcodes: Add a title to YouTube embed iframes so screen readers can announce them.
+- VideoPress: Show Video Playlist and Latest Videos Playlist blocks in newsletter emails as the first video plus a grid of thumbnails linking to the post.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Scan: Remove the dashboard's unused scan status code.

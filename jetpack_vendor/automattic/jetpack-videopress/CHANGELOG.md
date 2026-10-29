@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Overview: Make the date range picker keyboard-navigable with arrow keys.
 
+### Fixed
+- Video Playlist and Latest Videos Playlist blocks: Show the first video and a grid of thumbnails linking to the post in newsletter emails.
+
 ## [0.60.1] - 2026-10-28
 ### Changed
 - Update package dependencies. [#54118]
