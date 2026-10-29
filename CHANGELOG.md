@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Connection: Fix the Safe Mode window in My Jetpack opening empty, with no choices.
 - Connection: Show connection owner names containing characters like & correctly.
+- PayPal Payment Buttons: Save a payment button with unpriced variants again.
 - Premium Analytics: Line up the column header above leaderboard rows with the row text.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
