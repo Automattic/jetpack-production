@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Carousel: Guard against malformed data.
+- Prevent PHP errors by limiting direct access to files.
 - Protect: Make the Protect page module available on WordPress.com sites with Atomic hosting whose plan includes Scan.
 - Scan: Remove the dashboard's unused scan status code.
 

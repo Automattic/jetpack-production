@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Top UTM: Offer the Build URL dialog in the card footer and on the UTM report page, so sites with UTM visits can open it too.
 
 ### Fixed
+- Prevent PHP errors by limiting direct access to files.
 - Widgets: Line up the column header above leaderboard rows with the row text.
 
 ## [0.15.0] - 2026-10-28

@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Overview: Replace the traffic chart's date range dropdown with a menu button.
 
+### Fixed
+- Prevent PHP errors by limiting direct access to files.
+
 ## [0.88.8] - 2026-10-28
 ### Changed
 - Update package dependencies. [#54118]
