@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Stop logging a missing jetpackConfig error to the console on every load.
 - Dashboard: Update the menu badge and admin bar threat count as soon as threats are fixed, ignored, or deleted.
 - Protect dashboard: Ask for the plugin or theme slug before an auto-fix deletes it, and warn when it is active or not on WordPress.org.
+- Scan: Hide the server credentials link on WoA sites, which don't need them.
 
 ## [0.4.0] - 2026-10-28
 ### Added

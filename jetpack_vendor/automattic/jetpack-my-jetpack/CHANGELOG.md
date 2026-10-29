@@ -21,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Open the Jetpack Connection details on the Connectors screen from the header's Manage connection link.
 - Protect: Skip the threats alert in the menu bubble and on My Jetpack when the host turns off threat notifications.
 
+### Fixed
+- Protect: Send the card's manage and Scan results links wherever a host sends the Features tab's Protect link.
+
 ## [6.14.0] - 2026-10-28
 ### Added
 - Let people pick the Overview v1 Stats period and step through earlier periods, shown only while the Overview v1 feature flag is on. [#54106]

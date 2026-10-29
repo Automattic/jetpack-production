@@ -671,6 +671,7 @@ __( "View scan history", "jetpack-protect-pkg" );
 _n( "View %d ignored threat", "View %d ignored threats", 1, "jetpack-protect-pkg" );
 __( "Your site is checked every day for known vulnerabilities in WordPress, plugins and themes. There’s nothing to set up.", "jetpack-protect-pkg" );
 __( "Get Scan for daily malware scanning and one-click fixes", "jetpack-protect-pkg" );
+__( "Scan checks your site for malware every day.", "jetpack-protect-pkg" );
 __( "Scan checks your site for malware every day. Auto-fix needs your server credentials to repair threats.", "jetpack-protect-pkg" );
 __( "Add server credentials", "jetpack-protect-pkg" );
 __( "Scan checks your site for malware every day. Auto-fix uses your server credentials to repair threats.", "jetpack-protect-pkg" );
