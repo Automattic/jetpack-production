@@ -29,7 +29,7 @@ This is an alpha version! The changes listed here are not final.
 
 ## [0.8.1] - 2026-10-05
 ### Changed
-- Update dependencies. [#44736]
+- Update dependencies.
 
 ## [0.8.0] - 2026-08-26
 ### Removed
@@ -37,7 +37,7 @@ This is an alpha version! The changes listed here are not final.
 
 ## [0.7.14] - 2026-08-11
 ### Changed
-- Update dependencies. [#44736]
+- Update dependencies.
 
 ## [0.7.13] - 2026-06-08
 ### Changed
@@ -61,11 +61,11 @@ This is an alpha version! The changes listed here are not final.
 
 ## [0.7.8] - 2026-02-23
 ### Changed
-- Update dependencies. [#44736]
+- Update dependencies.
 
 ## [0.7.7] - 2026-02-02
 ### Changed
-- Update dependencies. [#44736]
+- Update dependencies.
 
 ## [0.7.6] - 2025-12-08
 ### Fixed
@@ -73,7 +73,7 @@ This is an alpha version! The changes listed here are not final.
 
 ## [0.7.5] - 2025-12-01
 ### Changed
-- Update dependencies. [#44736]
+- Update dependencies.
 
 ## [0.7.4] - 2025-10-20
 ### Changed

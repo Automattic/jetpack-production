@@ -124,7 +124,7 @@ This is an alpha version! The changes listed here are not final.
 
 ## [0.17.8] - 2026-02-02
 ### Changed
-- Update dependencies. [#39260]
+- Update dependencies.
 
 ## [0.17.7] - 2025-12-15
 ### Changed
@@ -208,7 +208,7 @@ This is an alpha version! The changes listed here are not final.
 
 ## [0.15.2] - 2025-02-24
 ### Changed
-- Update dependencies. [#39260]
+- Update dependencies.
 
 ## [0.15.1] - 2025-02-03
 ### Fixed

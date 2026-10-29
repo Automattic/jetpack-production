@@ -219,7 +219,7 @@ This is an alpha version! The changes listed here are not final.
 
 ## [0.3.6] - 2024-04-25
 ### Changed
-- Update dependencies. [#33960]
+- Update dependencies.
 
 ## [0.3.5] - 2024-04-22
 ### Fixed
