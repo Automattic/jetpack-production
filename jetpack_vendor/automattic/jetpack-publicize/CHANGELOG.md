@@ -25,8 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ## [0.88.6] - 2026-10-19
 ### Changed
-- Update package dependencies. [#53004]
-- Update package dependencies. [#53806]
+- Update package dependencies. [#53004] [#53806]
 
 ## [0.88.5] - 2026-10-14
 ### Changed

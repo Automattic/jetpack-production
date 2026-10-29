@@ -1258,8 +1258,7 @@ This is an alpha version! The changes listed here are not final.
 - Add rate limiter to the package versions endpoint calls. [#35379]
 
 ### Changed
-- Adjust 'get_site_id()' method to return null if there's no blog ID. [#35004]
-- Adjust 'get_site_id()' method to return null if there's no blog ID. [#35006]
+- Adjust 'get_site_id()' method to return null if there's no blog ID. [#35004] [#35006]
 - Jetpack Connection: Add jetpack_package_versions to Sync [#35409]
 - Updated package dependencies. [#35384]
 

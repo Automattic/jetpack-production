@@ -32,8 +32,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Settings: Hide the sharing button toolbar's title with the VisuallyHidden component rather than the global screen-reader-text class. [#53775]
 - Update dependencies. [#53618]
-- Update package dependencies. [#53004]
-- Update package dependencies. [#53806]
+- Update package dependencies. [#53004] [#53806]
 
 ## [0.3.0] - 2026-10-12
 ### Added
