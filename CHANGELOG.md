@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Offer "Mark as spam" from the Top referrers widget rows, as the Referrers report does.
 - Premium Analytics: Offer the UTM Build URL dialog in the Top UTM card footer and on the UTM report page, so sites with UTM visits can open it too.
 - Protect: Title the Protect page "Protect" instead of "Jetpack / Protect", to match other feature pages.
+- Scan: Stop showing threat alerts in the admin menu, admin bar, and My Jetpack on WordPress.com-hosted (Atomic) sites.
 - Social: Replace the Overview traffic chart's date range dropdown with a menu button.
 - Stats: Stop counting visitors who have not allowed statistics cookies on sites that run the WP Consent API, and add a Visitor consent card to the Stats v2 Settings tab that helps set it up.
 - VideoPress: Make the Overview date range picker keyboard-navigable with arrow keys.
@@ -20,6 +21,9 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Fix the Safe Mode window in My Jetpack opening empty, with no choices.
 - Connection: Show connection owner names containing characters like & correctly.
 - Premium Analytics: Line up the column header above leaderboard rows with the row text.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Scan: Remove the dashboard's unused scan status code.
 
 ## 16.4-a.7 - 2026-10-28
 ### Enhancements

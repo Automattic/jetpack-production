@@ -207,7 +207,6 @@ __( "Connected", "jetpack" );
 _x( "Threats detected", "A caption for a small button to fix security issues.", "jetpack" );
 _x( "Secure", "Short message informing user that the site is secure.", "jetpack" );
 _x( "Set up", "Caption for a button to set up a feature.", "jetpack" );
-_n( "Threat", "Threats", 1, "jetpack" );
 _x( "Upgrade", "A caption for a button to upgrade an existing paid feature to a higher tier.", "jetpack" );
 _x( "Connect", "A caption for a button to connect a user account to access paid features.", "jetpack" );
 __( "Connect your WordPress.com account to enable high-quality, ad-free video.", "jetpack" );
