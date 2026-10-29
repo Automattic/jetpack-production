@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Connectors: Show the Automattic symbol in black in the connector logos.
 - Update package dependencies.
 
+### Fixed
+- Tracking: Identify a connected user by their WordPress.com ID when it has not been saved yet, instead of falling back to an anonymous ID.
+
 ## [9.14.0] - 2026-10-26
 ### Added
 - Connectors: Show connection errors on the Connectors card, and keep showing the connection owner when their account connection breaks. [#53596]
