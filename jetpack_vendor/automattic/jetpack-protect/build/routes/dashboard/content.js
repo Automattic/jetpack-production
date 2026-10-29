@@ -535,7 +535,6 @@ __( "Block repeated failed login attempts", "jetpack-protect-pkg" );
 __( "Stops brute force attacks by blocking IP addresses that keep failing to log in.", "jetpack-protect-pkg" );
 __( "Always allow specific IP addresses", "jetpack-protect-pkg" );
 __( "Allowed addresses are never blocked by the firewall or login protection.", "jetpack-protect-pkg" );
-__( "One address or range per line.", "jetpack-protect-pkg" );
 __( "Account protection", "jetpack-protect-pkg" );
 __( "Protect accounts with weak or leaked passwords", "jetpack-protect-pkg" );
 __( "Asks users with a compromised password to verify their identity and choose a new one.", "jetpack-protect-pkg" );

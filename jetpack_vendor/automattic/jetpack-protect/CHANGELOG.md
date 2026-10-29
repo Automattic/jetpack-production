@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Dashboard: Balance the line breaks in the upgrade cards so no single word sits alone on a line.
 - Dashboard: Hide the next-scan countdown on paid Scan plans, which have no daily scan limit.
+- Dashboard: Show the same address format hint under both IP allow list fields on the Settings tab.
 - Dashboard: Stop logging a missing jetpackConfig error to the console on every load.
 - Dashboard: Update the menu badge and admin bar threat count as soon as threats are fixed, ignored, or deleted.
 - Protect dashboard: Ask for the plugin or theme slug before an auto-fix deletes it, and warn when it is active or not on WordPress.org.
