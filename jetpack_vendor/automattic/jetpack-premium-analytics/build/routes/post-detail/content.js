@@ -155,16 +155,6 @@ __( "Referrer", "jetpack-premium-analytics-pkg" );
 __( "Are you sure you want to mark \"%s\" as spam?", "jetpack-premium-analytics-pkg" );
 __( "Cancel", "jetpack-premium-analytics-pkg" );
 __( "Mark as spam", "jetpack-premium-analytics-pkg" );
-/* translators: %s: The referrer domain, e.g. example.com. */
-__( "Couldn’t undo marking \"%s\" as spam.", "jetpack-premium-analytics-pkg" );
-/* translators: %s: The referrer domain, e.g. example.com. */
-__( "\"%s\" was already marked as spam.", "jetpack-premium-analytics-pkg" );
-__( "You’ve reached the limit of spam referrers for this site.", "jetpack-premium-analytics-pkg" );
-/* translators: %s: The referrer domain, e.g. example.com. */
-__( "Couldn’t mark \"%s\" as spam.", "jetpack-premium-analytics-pkg" );
-/* translators: %s: The referrer domain, e.g. example.com. */
-__( "\"%s\" marked as spam.", "jetpack-premium-analytics-pkg" );
-__( "Undo", "jetpack-premium-analytics-pkg" );
 __( "Mark as spam…", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load referrers. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Search referrers", "jetpack-premium-analytics-pkg" );

@@ -161,6 +161,21 @@ _x( "%1$s · %2$s", "heatmap tooltip: date and count", "jetpack-premium-analytic
 __( "Totals", "jetpack-premium-analytics-pkg" );
 /* translators: 1: abbreviated month name, e.g. "Aug"; 2: year, e.g. "2026". */
 _x( "%1$s %2$s", "month and year", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the referring site's name, such as "example.com". */
+__( "Mark \"%s\" as spam", "jetpack-premium-analytics-pkg" );
+__( "Mark as spam", "jetpack-premium-analytics-pkg" );
+/* translators: %s: The referrer domain, e.g. example.com. */
+__( "Are you sure you want to mark \"%s\" as spam?", "jetpack-premium-analytics-pkg" );
+/* translators: %s: The referrer domain, e.g. example.com. */
+__( "Couldn’t undo marking \"%s\" as spam.", "jetpack-premium-analytics-pkg" );
+/* translators: %s: The referrer domain, e.g. example.com. */
+__( "\"%s\" was already marked as spam.", "jetpack-premium-analytics-pkg" );
+__( "You’ve reached the limit of spam referrers for this site.", "jetpack-premium-analytics-pkg" );
+/* translators: %s: The referrer domain, e.g. example.com. */
+__( "Couldn’t mark \"%s\" as spam.", "jetpack-premium-analytics-pkg" );
+/* translators: %s: The referrer domain, e.g. example.com. */
+__( "\"%s\" marked as spam.", "jetpack-premium-analytics-pkg" );
+__( "Undo", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the post's publish date, e.g. "Jun 5, 2026". */
 __( "Post published on %s", "jetpack-premium-analytics-pkg" );
 __( "Not available", "jetpack-premium-analytics-pkg" );

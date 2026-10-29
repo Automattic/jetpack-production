@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Remove the block inserter and List View from the email design screen, where neither had anything to show.
 - Newsletter: Use the same status icons as the AI launchpad checklist.
 - Premium Analytics: Add a "View in new tab" row action that opens the live post, page or email from the Posts & pages and Emails reports.
+- Premium Analytics: Offer "Mark as spam" from the Top referrers widget rows, as the Referrers report does.
 - Premium Analytics: Offer a referrer's site from a "View in new tab" action beside its name in the Top referrers widget, instead of linking the whole row out.
 - Premium Analytics: Offer a yearly interval in the Traffic summary on ranges of three years or longer, and label a first or last month or year that the range cuts by its days.
 - Premium Analytics: Offer the UTM Build URL dialog in the Top UTM card footer and on the UTM report page, so sites with UTM visits can open it too.
