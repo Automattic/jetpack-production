@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Recognize the Stats views included in Jetpack Pro on the upgrade page.
 - Scroll the Jetpack footer with the page on the dashboard, report and detail pages, instead of keeping it pinned to the bottom of the screen.
 - Traffic summary: Compare each week, month or year with the one covering the same days in the comparison period, instead of the one in the same position.
+- Widgets: Line up the column header above leaderboard rows with the row text.
 
 ## [0.14.0] - 2026-10-26
 ### Added
