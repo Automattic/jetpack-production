@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - Sharing settings: Reword the notice shown on private sites to say that some sharing services aren't available.
 - Show the React version of Settings > Sharing by default. Return false from the `rsm_jetpack_ui_modernization_sharing_likes` filter to keep the PHP screen.
 
+### Fixed
+- Offer a single X button when adding sharing buttons on the React version of Settings > Sharing. Sites that already use the older X (Twitter) button keep it.
+
 ## [0.5.1] - 2026-10-28
 ### Changed
 - Turn the block placement cards on the React version of Settings > Sharing into one radio choice, led by an option that doesn't add the block. [#54212]

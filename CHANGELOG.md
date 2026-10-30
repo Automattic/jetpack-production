@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Send WordPress.com-hosted sites to WordPress.com to manage Scan, and hide the server credentials link there.
 - Protect: Update the menu badge and the "Threats found" admin bar notice as soon as threats are fixed, ignored, or deleted.
 - Sharing: Improve how the Mastodon button handles the server address readers enter.
+- Sharing: Offer a single X button when adding sharing services. Sites that already use the older X (Twitter) button keep it.
 - Sharing Buttons block: Keep the buttons as close together on the site as in the editor, instead of spacing them with the theme's default block gap.
 - Sharing Buttons block: Show a preview of each service when hovering it in the block inserter.
 - Shortcodes: Add a title to YouTube embed iframes so screen readers can announce them.
