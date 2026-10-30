@@ -214,7 +214,8 @@ __( "Where should the Like block go on posts and pages?", "jetpack-sharing-likes
 __( "Don’t add it automatically", "jetpack-sharing-likes" );
 _x( "Before the content", "Where the block goes", "jetpack-sharing-likes" );
 _x( "After the content", "Where the block goes", "jetpack-sharing-likes" );
-__( "Want pages to look different? <link>Edit the page template</link>.", "jetpack-sharing-likes" );
+__( "Your choice applies to pages too. To place the Sharing Buttons block differently on pages, <link>edit the page template</link>.", "jetpack-sharing-likes" );
+__( "Your choice applies to pages too. To place the Like block differently on pages, <link>edit the page template</link>.", "jetpack-sharing-likes" );
 __( "Once you’ve saved a template in the Site Editor, move or remove its blocks there: picking a place here won’t move a block that template already has, or bring back one you removed.", "jetpack-sharing-likes" );
 __( "Add the Sharing Buttons block to your theme’s template.", "jetpack-sharing-likes" );
 __( "Sharing buttons are turned off for this site.", "jetpack-sharing-likes" );
