@@ -8,9 +8,9 @@
 
 __( "Jetpack Logo", "jetpack-search-pkg" );
 __( "An Automattic Airline", "jetpack-search-pkg" );
+__( "Loading", "jetpack-search-pkg" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-search-pkg" );
-__( "Loading", "jetpack-search-pkg" );
 __( "Features", "jetpack-search-pkg" );
 __( "Help", "jetpack-search-pkg" );
 __( "Jetpack", "jetpack-search-pkg" );

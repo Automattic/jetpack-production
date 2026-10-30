@@ -6,11 +6,11 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-backup-pkg" );
+__( "Loading", "jetpack-backup-pkg" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-backup-pkg" );
-__( "Loading", "jetpack-backup-pkg" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-backup-pkg" );
 __( "Close", "jetpack-backup-pkg" );
 __( "More details follow the field.", "jetpack-backup-pkg" );
 __( "Select", "jetpack-backup-pkg" );
@@ -43,12 +43,12 @@ __( "Sort ascending", "jetpack-backup-pkg" );
 __( "Sort descending", "jetpack-backup-pkg" );
 __( "(no title)", "jetpack-backup-pkg" );
 __( "Actions", "jetpack-backup-pkg" );
-/* translators: %d: number of items. */
-_n( "%d Item selected", "%d Items selected", 1, "jetpack-backup-pkg" );
-/* translators: %d: number of items. */
-_n( "%d Item", "%d Items", 1, "jetpack-backup-pkg" );
-/* translators: %1$d: number of items. %2$d: total number of items. */
-_n( "%1$d of %2$d Item", "%1$d of %2$d Items", 1, "jetpack-backup-pkg" );
+/* translators: %s: formatted number of items. */
+_n( "%s Item selected", "%s Items selected", 1, "jetpack-backup-pkg" );
+/* translators: %s: formatted number of items. */
+_n( "%s Item", "%s Items", 1, "jetpack-backup-pkg" );
+/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
+_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack-backup-pkg" );
 __( "Deselect all", "jetpack-backup-pkg" );
 __( "Select all", "jetpack-backup-pkg" );
 __( "Cancel", "jetpack-backup-pkg" );

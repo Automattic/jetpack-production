@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Keep per-screen messages on My Jetpack working once it keeps its route in the p query argument.
+- Update package dependencies.
 
 ## [5.1.7] - 2026-10-28
 ### Changed

@@ -16,12 +16,12 @@ __( "Help", "jetpack-protect-pkg" );
 __( "Jetpack", "jetpack-protect-pkg" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-protect-pkg" );
+__( "Loading", "jetpack-protect-pkg" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-protect-pkg" );
-__( "Loading", "jetpack-protect-pkg" );
-/* translators: %d: number of breadcrumb links hidden in the overflow menu. */
-_n( "Show %d hidden breadcrumb item", "Show %d hidden breadcrumb items", 1, "jetpack-protect-pkg" );
 __( "Breadcrumbs", "jetpack-protect-pkg" );
+/* translators: %d: number of breadcrumb ancestors hidden in the overflow menu. */
+_n( "Show %d hidden breadcrumb item", "Show %d hidden breadcrumb items", 1, "jetpack-protect-pkg" );
 __( "OK", "jetpack-protect-pkg" );
 __( "Cancel", "jetpack-protect-pkg" );
 __( "Close", "jetpack-protect-pkg" );
@@ -135,16 +135,17 @@ __( "Today, %s, selected", "jetpack-protect-pkg" );
 __( "%s, selected", "jetpack-protect-pkg" );
 __( "Required", "jetpack-protect-pkg" );
 __( "Optional", "jetpack-protect-pkg" );
+__( "Select", "jetpack-protect-pkg" );
 __( "Sort ascending", "jetpack-protect-pkg" );
 __( "Sort descending", "jetpack-protect-pkg" );
 __( "(no title)", "jetpack-protect-pkg" );
 __( "Actions", "jetpack-protect-pkg" );
-/* translators: %d: number of items. */
-_n( "%d Item selected", "%d Items selected", 1, "jetpack-protect-pkg" );
-/* translators: %d: number of items. */
-_n( "%d Item", "%d Items", 1, "jetpack-protect-pkg" );
-/* translators: %1$d: number of items. %2$d: total number of items. */
-_n( "%1$d of %2$d Item", "%1$d of %2$d Items", 1, "jetpack-protect-pkg" );
+/* translators: %s: formatted number of items. */
+_n( "%s Item selected", "%s Items selected", 1, "jetpack-protect-pkg" );
+/* translators: %s: formatted number of items. */
+_n( "%s Item", "%s Items", 1, "jetpack-protect-pkg" );
+/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
+_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack-protect-pkg" );
 __( "Deselect all", "jetpack-protect-pkg" );
 __( "Select all", "jetpack-protect-pkg" );
 __( "Add filter", "jetpack-protect-pkg" );

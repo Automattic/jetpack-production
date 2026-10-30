@@ -13,11 +13,11 @@ __( "Undo", "jetpack-sharing-likes" );
 __( "The custom service could not be saved.", "jetpack-sharing-likes" );
 __( "The custom service could not be deleted.", "jetpack-sharing-likes" );
 __( "This action is not available on this site right now.", "jetpack-sharing-likes" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-sharing-likes" );
+__( "Loading", "jetpack-sharing-likes" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-sharing-likes" );
-__( "Loading", "jetpack-sharing-likes" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-sharing-likes" );
 __( "OK", "jetpack-sharing-likes" );
 __( "Cancel", "jetpack-sharing-likes" );
 __( "Close", "jetpack-sharing-likes" );

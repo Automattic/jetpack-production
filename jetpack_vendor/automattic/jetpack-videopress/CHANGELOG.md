@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Overview: Make the date range picker keyboard-navigable with arrow keys.
 - Show the error when connecting from the pricing table fails in a notice above the table, so it no longer pushes the paid plan's button out of line.
+- Update package dependencies.
 
 ### Fixed
 - Stats: Fix incorrect video statistics on sites configured to use HTML query separators.

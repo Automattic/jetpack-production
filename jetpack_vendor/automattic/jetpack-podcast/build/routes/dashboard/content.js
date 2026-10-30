@@ -6,9 +6,9 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+__( "Loading", "jetpack-podcast" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-podcast" );
-__( "Loading", "jetpack-podcast" );
 __( "More details follow the field.", "jetpack-podcast" );
 __( "Select", "jetpack-podcast" );
 __( "Sections", "jetpack-podcast" );
@@ -248,12 +248,12 @@ __( "Sort ascending", "jetpack-podcast" );
 __( "Sort descending", "jetpack-podcast" );
 __( "(no title)", "jetpack-podcast" );
 __( "Actions", "jetpack-podcast" );
-/* translators: %d: number of items. */
-_n( "%d Item selected", "%d Items selected", 1, "jetpack-podcast" );
-/* translators: %d: number of items. */
-_n( "%d Item", "%d Items", 1, "jetpack-podcast" );
-/* translators: %1$d: number of items. %2$d: total number of items. */
-_n( "%1$d of %2$d Item", "%1$d of %2$d Items", 1, "jetpack-podcast" );
+/* translators: %s: formatted number of items. */
+_n( "%s Item selected", "%s Items selected", 1, "jetpack-podcast" );
+/* translators: %s: formatted number of items. */
+_n( "%s Item", "%s Items", 1, "jetpack-podcast" );
+/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
+_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack-podcast" );
 __( "Deselect all", "jetpack-podcast" );
 __( "Select all", "jetpack-podcast" );
 __( "Add filter", "jetpack-podcast" );

@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Underline the "Get in touch with us", "Learn more" and "Modify" links, so they stand out from the sentence around them without relying on color.
 

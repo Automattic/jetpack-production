@@ -6,11 +6,11 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-videopress-pkg" );
+__( "Loading", "jetpack-videopress-pkg" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
-__( "Loading", "jetpack-videopress-pkg" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-videopress-pkg" );
 __( "Close", "jetpack-videopress-pkg" );
 __( "More details follow the field.", "jetpack-videopress-pkg" );
 __( "Select", "jetpack-videopress-pkg" );
@@ -250,12 +250,12 @@ __( "Sort ascending", "jetpack-videopress-pkg" );
 __( "Sort descending", "jetpack-videopress-pkg" );
 __( "(no title)", "jetpack-videopress-pkg" );
 __( "Actions", "jetpack-videopress-pkg" );
-/* translators: %d: number of items. */
-_n( "%d Item selected", "%d Items selected", 1, "jetpack-videopress-pkg" );
-/* translators: %d: number of items. */
-_n( "%d Item", "%d Items", 1, "jetpack-videopress-pkg" );
-/* translators: %1$d: number of items. %2$d: total number of items. */
-_n( "%1$d of %2$d Item", "%1$d of %2$d Items", 1, "jetpack-videopress-pkg" );
+/* translators: %s: formatted number of items. */
+_n( "%s Item selected", "%s Items selected", 1, "jetpack-videopress-pkg" );
+/* translators: %s: formatted number of items. */
+_n( "%s Item", "%s Items", 1, "jetpack-videopress-pkg" );
+/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
+_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack-videopress-pkg" );
 __( "Deselect all", "jetpack-videopress-pkg" );
 __( "Select all", "jetpack-videopress-pkg" );
 __( "Add filter", "jetpack-videopress-pkg" );

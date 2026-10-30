@@ -54,6 +54,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Make the Protect page module available on WordPress.com sites with Atomic hosting whose plan includes Scan.
 - Scan: Remove the dashboard's unused scan status code.
 - Sharing: Prevent PHP warnings when handling malformed data.
+- Update package dependencies.
 
 ## 16.4-a.7 - 2026-10-28
 ### Enhancements

@@ -7,9 +7,9 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Jetpack Logo", "jetpack-forms" );
+__( "Loading", "jetpack-forms" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-forms" );
-__( "Loading", "jetpack-forms" );
 __( "OK", "jetpack-forms" );
 __( "Cancel", "jetpack-forms" );
 __( "Loading preview…", "jetpack-forms" );

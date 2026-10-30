@@ -19,11 +19,11 @@ __( "Invalid response while requesting metrics", "jetpack-my-jetpack" );
 __( "Timed out while waiting for speed-score.", "jetpack-my-jetpack" );
 __( "Jetpack Logo", "jetpack-my-jetpack" );
 __( "An Automattic Airline", "jetpack-my-jetpack" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-my-jetpack" );
+__( "Loading", "jetpack-my-jetpack" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-my-jetpack" );
-__( "Loading", "jetpack-my-jetpack" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-my-jetpack" );
 __( "Features", "jetpack-my-jetpack" );
 __( "Help", "jetpack-my-jetpack" );
 __( "Jetpack", "jetpack-my-jetpack" );

@@ -6,11 +6,11 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-newsletter" );
+__( "Loading", "jetpack-newsletter" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-newsletter" );
-__( "Loading", "jetpack-newsletter" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-newsletter" );
 __( "OK", "jetpack-newsletter" );
 __( "Cancel", "jetpack-newsletter" );
 __( "Close", "jetpack-newsletter" );
@@ -98,16 +98,17 @@ __( "Today, %s, selected", "jetpack-newsletter" );
 __( "%s, selected", "jetpack-newsletter" );
 __( "Required", "jetpack-newsletter" );
 __( "Optional", "jetpack-newsletter" );
+__( "Select", "jetpack-newsletter" );
 __( "Sort ascending", "jetpack-newsletter" );
 __( "Sort descending", "jetpack-newsletter" );
 __( "(no title)", "jetpack-newsletter" );
 __( "Actions", "jetpack-newsletter" );
-/* translators: %d: number of items. */
-_n( "%d Item selected", "%d Items selected", 1, "jetpack-newsletter" );
-/* translators: %d: number of items. */
-_n( "%d Item", "%d Items", 1, "jetpack-newsletter" );
-/* translators: %1$d: number of items. %2$d: total number of items. */
-_n( "%1$d of %2$d Item", "%1$d of %2$d Items", 1, "jetpack-newsletter" );
+/* translators: %s: formatted number of items. */
+_n( "%s Item selected", "%s Items selected", 1, "jetpack-newsletter" );
+/* translators: %s: formatted number of items. */
+_n( "%s Item", "%s Items", 1, "jetpack-newsletter" );
+/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
+_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack-newsletter" );
 __( "Deselect all", "jetpack-newsletter" );
 __( "Select all", "jetpack-newsletter" );
 __( "Add filter", "jetpack-newsletter" );

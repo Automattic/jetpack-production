@@ -6,11 +6,11 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack" );
+__( "Loading", "jetpack" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack" );
-__( "Loading", "jetpack" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack" );
 /* translators: 1: Calendar type. 2: Current month and year. */
 __( "%1$s, %2$s", "jetpack" );
 __( "Date calendar", "jetpack" );
@@ -33,12 +33,12 @@ __( "Sort ascending", "jetpack" );
 __( "Sort descending", "jetpack" );
 __( "(no title)", "jetpack" );
 __( "Actions", "jetpack" );
-/* translators: %d: number of items. */
-_n( "%d Item selected", "%d Items selected", 1, "jetpack" );
-/* translators: %d: number of items. */
-_n( "%d Item", "%d Items", 1, "jetpack" );
-/* translators: %1$d: number of items. %2$d: total number of items. */
-_n( "%1$d of %2$d Item", "%1$d of %2$d Items", 1, "jetpack" );
+/* translators: %s: formatted number of items. */
+_n( "%s Item selected", "%s Items selected", 1, "jetpack" );
+/* translators: %s: formatted number of items. */
+_n( "%s Item", "%s Items", 1, "jetpack" );
+/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
+_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack" );
 __( "Deselect all", "jetpack" );
 __( "Select all", "jetpack" );
 __( "Cancel", "jetpack" );

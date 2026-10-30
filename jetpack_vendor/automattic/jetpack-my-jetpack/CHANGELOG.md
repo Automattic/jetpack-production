@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Move the dashboard to the wp-build router. Links in the older #/ form still open the same screen.
 - Open the Jetpack Connection details on the Connectors screen from the header's Manage connection link.
 - Protect: Skip the threats alert in the menu bubble and on My Jetpack when the host turns off threat notifications.
+- Update package dependencies.
 
 ### Fixed
 - Features: Keep security modules managed in Protect out of bulk changes.

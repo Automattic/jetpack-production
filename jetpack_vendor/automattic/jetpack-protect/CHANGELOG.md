@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Remove the next-scan countdown from the Scan card and the Scan site button.
 - Hide the threat count from the menu when the host turns off threat notifications.
 - Protect Dashboard: Drop the "Jetpack" breadcrumb from the page header, to match other feature pages.
+- Update package dependencies.
 
 ### Fixed
 - Dashboard: Balance the line breaks in the upgrade cards so no single word sits alone on a line.

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Update package dependencies.
+
 ## [0.8.1] - 2026-10-28
 ### Changed
 - Update package dependencies. [#54118]
@@ -126,6 +133,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add an on-site comment form with a textarea, guest name and email fields, and reply threading when the `jetpack_comments_new_hotness` filter returns true. [#51466]
 - Initial version. [#51210]
 
+[0.8.2-alpha]: https://github.com/Automattic/jetpack-comments/compare/v0.8.1...v0.8.2-alpha
 [0.8.1]: https://github.com/Automattic/jetpack-comments/compare/v0.8.0...v0.8.1
 [0.8.0]: https://github.com/Automattic/jetpack-comments/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/Automattic/jetpack-comments/compare/v0.6.0...v0.7.0

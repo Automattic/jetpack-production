@@ -16,9 +16,9 @@ __( "Jetpack", "jetpack-activity-log" );
 __( "Sections", "jetpack-activity-log" );
 /* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-activity-log" );
+__( "Loading", "jetpack-activity-log" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-activity-log" );
-__( "Loading", "jetpack-activity-log" );
 __( "Dismiss", "jetpack-activity-log" );
 /* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack-activity-log" );
@@ -57,16 +57,17 @@ __( "%s, selected", "jetpack-activity-log" );
 __( "Required", "jetpack-activity-log" );
 __( "Optional", "jetpack-activity-log" );
 __( "More details follow the field.", "jetpack-activity-log" );
+__( "Select", "jetpack-activity-log" );
 __( "Sort ascending", "jetpack-activity-log" );
 __( "Sort descending", "jetpack-activity-log" );
 __( "(no title)", "jetpack-activity-log" );
 __( "Actions", "jetpack-activity-log" );
-/* translators: %d: number of items. */
-_n( "%d Item selected", "%d Items selected", 1, "jetpack-activity-log" );
-/* translators: %d: number of items. */
-_n( "%d Item", "%d Items", 1, "jetpack-activity-log" );
-/* translators: %1$d: number of items. %2$d: total number of items. */
-_n( "%1$d of %2$d Item", "%1$d of %2$d Items", 1, "jetpack-activity-log" );
+/* translators: %s: formatted number of items. */
+_n( "%s Item selected", "%s Items selected", 1, "jetpack-activity-log" );
+/* translators: %s: formatted number of items. */
+_n( "%s Item", "%s Items", 1, "jetpack-activity-log" );
+/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
+_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack-activity-log" );
 __( "Deselect all", "jetpack-activity-log" );
 __( "Select all", "jetpack-activity-log" );
 __( "Cancel", "jetpack-activity-log" );

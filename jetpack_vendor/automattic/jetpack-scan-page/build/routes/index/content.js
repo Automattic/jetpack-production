@@ -6,11 +6,11 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)" );
+__( "Loading" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s" );
-__( "Loading" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)" );
 __( "Close" );
 __( "Dismiss" );
 __( "Sections" );
@@ -66,16 +66,17 @@ __( "%s, selected" );
 __( "Required" );
 __( "Optional" );
 __( "More details follow the field." );
+__( "Select" );
 __( "Sort ascending" );
 __( "Sort descending" );
 __( "(no title)" );
 __( "Actions" );
-/* translators: %d: number of items. */
-_n( "%d Item selected", "%d Items selected", 1 );
-/* translators: %d: number of items. */
-_n( "%d Item", "%d Items", 1 );
-/* translators: %1$d: number of items. %2$d: total number of items. */
-_n( "%1$d of %2$d Item", "%1$d of %2$d Items", 1 );
+/* translators: %s: formatted number of items. */
+_n( "%s Item selected", "%s Items selected", 1 );
+/* translators: %s: formatted number of items. */
+_n( "%s Item", "%s Items", 1 );
+/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
+_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1 );
 __( "Deselect all" );
 __( "Select all" );
 __( "Cancel" );

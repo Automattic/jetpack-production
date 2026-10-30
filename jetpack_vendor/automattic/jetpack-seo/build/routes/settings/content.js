@@ -6,11 +6,11 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)" );
+__( "Loading" );
 /* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s" );
-__( "Loading" );
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)" );
 __( "More details follow." );
 __( "Dismiss" );
 __( "We couldn’t load this page", "jetpack-seo" );
