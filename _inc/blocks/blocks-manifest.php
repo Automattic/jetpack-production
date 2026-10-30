@@ -2995,6 +2995,7 @@ Markdown is a text formatting syntax that is converted into HTML. You can _empha
       ),
       'anchor' => true,
       '__experimentalExposeControlsToChildren' => true,
+      'listView' => true,
       'layout' => 
       array (
         'allowSwitching' => false,
