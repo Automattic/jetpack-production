@@ -23,7 +23,7 @@ return array(
 		'path'    => $vendorDir . '/automattic/tracks-shared-utils/php/src/functions.php'
 	),
 	'd4eb94df91a729802d18373ee8cdc79f' => array(
-		'version' => '5.2.2.0-alpha1793353973',
+		'version' => '5.2.2.0-alpha1793379150',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/actions.php'
 	),
 	'd9927a8ddcd8b3a40fb28c24213827ff' => array(

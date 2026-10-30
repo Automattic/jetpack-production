@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Make the Overview date range picker keyboard-navigable with arrow keys.
 
 ### Bug fixes
+- Backup: Underline the "Get in touch with us", "Learn more" and "Modify" links, so they stand out from the sentence around them without relying on color.
 - Connection: Fix the Safe Mode window in My Jetpack opening empty, with no choices.
 - Connection: Show connection owner names containing characters like & correctly.
 - Email design: Keep the saved design on screen while resetting it to the defaults.
