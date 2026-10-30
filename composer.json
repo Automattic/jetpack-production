@@ -39,7 +39,7 @@
 		"automattic/jetpack-image-cdn": "^0.8.4-alpha",
 		"automattic/jetpack-import": "^0.10.1",
 		"automattic/jetpack-ip": "^0.7.1",
-		"automattic/jetpack-jitm": "^5.1.7",
+		"automattic/jetpack-jitm": "^5.1.8-alpha",
 		"automattic/jetpack-knowledge": "^0.1.1",
 		"automattic/jetpack-licensing": "^4.1.1",
 		"automattic/jetpack-logo": "^4.0.2",

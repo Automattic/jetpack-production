@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Fix the Safe Mode window in My Jetpack opening empty, with no choices.
 - Connection: Show connection owner names containing characters like & correctly.
 - Email design: Keep the saved design on screen while resetting it to the defaults.
+- Forms, Newsletter, SEO: Show the details sidebar at full width on medium-sized screens.
 - Gist: Preserve formatting when embedding a GitHub Gist URL on its own line in post content.
 - Keep hidden Jetpack menu items out of the remote dashboard menu.
 - PayPal Payment Buttons: Save a payment button with unpriced variants again.

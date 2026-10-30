@@ -4,5 +4,5 @@
 		'wp-dom-ready',
 		'wp-url'
 	),
-	'version' => '479f6ae2b5d8c1b5af76'
+	'version' => '117f1f59814c35b37bd8'
 );

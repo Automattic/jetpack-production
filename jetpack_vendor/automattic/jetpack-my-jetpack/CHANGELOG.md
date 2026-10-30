@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Features: Show feature states through switches or buttons instead of redundant Active or Inactive badges, and show host restrictions below descriptions. Leave features out of Available when their only action is an install you cannot make. Restore the previous behavior with the `jetpack_feature_flag_enabled_my-jetpack-account-connect` filter.
 - Features: Show the Features page on sites in Offline Mode, without connecting to WordPress.com.
 - Features: Turn a module on once Install Jetpack or Activate Jetpack on its card finishes setup.
+- Move the dashboard to the wp-build router. Links in the older #/ form still open the same screen.
 - Open the Jetpack Connection details on the Connectors screen from the header's Manage connection link.
 - Protect: Skip the threats alert in the menu bubble and on My Jetpack when the host turns off threat notifications.
 
