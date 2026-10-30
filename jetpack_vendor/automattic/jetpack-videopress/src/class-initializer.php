@@ -719,7 +719,7 @@ class Initializer {
 	/**
 	 * The sort order, page size and pagination a Latest Videos Playlist block asks for, clamped to what it allows.
 	 *
-	 * @since 0.60.2-alpha
+	 * @since 0.61.0-alpha
 	 *
 	 * @param array $block_attributes Block attributes.
 	 *

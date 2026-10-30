@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing Buttons block: List the buttons in the block sidebar, with a button to add more, as core does for the Buttons and Social Icons blocks.
 - Social: Replace the Overview traffic chart's date range dropdown with a menu button.
 - Stats: Stop counting visitors who have not allowed statistics cookies on sites that run the WP Consent API, and add a Visitor consent card to the Stats v2 Settings tab that helps set it up.
+- VideoPress: Add camera recording with selectable filters, animated controls, mirrored preview, and trim-and-cut editing before uploading from the dashboard and VideoPress block.
 - VideoPress: Make the Overview date range picker keyboard-navigable with arrow keys.
 
 ### Bug fixes

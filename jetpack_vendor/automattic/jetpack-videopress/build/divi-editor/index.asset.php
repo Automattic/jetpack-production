@@ -4,5 +4,5 @@
 		'react',
 		'react-jsx-runtime'
 	),
-	'version' => '6bf821c6a90b9ddc9905'
+	'version' => '57902e29878080bcc7c0'
 );

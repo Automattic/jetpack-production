@@ -6,6 +6,15 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+/* translators: accessibility text appended to link text */
+__( "(opens in a new tab)", "jetpack-videopress-pkg" );
+/* translators: %s: keyboard shortcut. */
+__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
+__( "Loading", "jetpack-videopress-pkg" );
+__( "Close", "jetpack-videopress-pkg" );
+__( "More details follow the field.", "jetpack-videopress-pkg" );
+__( "Select", "jetpack-videopress-pkg" );
+__( "Dismiss", "jetpack-videopress-pkg" );
 __( "Auto-generated", "jetpack-videopress-pkg" );
 __( "Manual", "jetpack-videopress-pkg" );
 /* translators: %s: caption processing failure reason. */
@@ -113,7 +122,6 @@ __( "VideoPress video", "jetpack-videopress-pkg" );
 __( "Manage subtitles for %1$s: %2$s", "jetpack-videopress-pkg" );
 /* translators: %s: video title. */
 __( "Manage subtitles for %s", "jetpack-videopress-pkg" );
-__( "Close", "jetpack-videopress-pkg" );
 __( "Drop a subtitle file to upload", "jetpack-videopress-pkg" );
 __( "Subtitle tracks", "jetpack-videopress-pkg" );
 __( "Loading subtitle content…", "jetpack-videopress-pkg" );
@@ -124,12 +132,59 @@ __( "Publish", "jetpack-videopress-pkg" );
 __( "Add track", "jetpack-videopress-pkg" );
 __( "Paste transcript", "jetpack-videopress-pkg" );
 __( "No subtitle tracks have been added to this video yet.", "jetpack-videopress-pkg" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-videopress-pkg" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
-__( "Loading", "jetpack-videopress-pkg" );
-__( "Dismiss", "jetpack-videopress-pkg" );
+__( "Original", "jetpack-videopress-pkg" );
+__( "Vivid", "jetpack-videopress-pkg" );
+__( "Warm", "jetpack-videopress-pkg" );
+__( "Cool", "jetpack-videopress-pkg" );
+__( "Mono", "jetpack-videopress-pkg" );
+__( "Vintage", "jetpack-videopress-pkg" );
+__( "Filters", "jetpack-videopress-pkg" );
+__( "Video effects", "jetpack-videopress-pkg" );
+/* translators: %s: video effect name. */
+__( "%s effect", "jetpack-videopress-pkg" );
+__( "The video could not be downloaded.", "jetpack-videopress-pkg" );
+__( "The browser could not decode this video.", "jetpack-videopress-pkg" );
+__( "This video format is not supported by the browser.", "jetpack-videopress-pkg" );
+__( "The video failed to load.", "jetpack-videopress-pkg" );
+_x( "Playback could not be started.", "video preview player error", "jetpack-videopress-pkg" );
+__( "Playhead", "jetpack-videopress-pkg" );
+__( "Cut start", "jetpack-videopress-pkg" );
+__( "Cut end", "jetpack-videopress-pkg" );
+__( "Cut", "jetpack-videopress-pkg" );
+__( "Remove cut", "jetpack-videopress-pkg" );
+__( "Trim start", "jetpack-videopress-pkg" );
+__( "Trim end", "jetpack-videopress-pkg" );
+__( "Playhead time", "jetpack-videopress-pkg" );
+_x( "Pause", "button: pause timeline preview playback", "jetpack-videopress-pkg" );
+__( "Play", "jetpack-videopress-pkg" );
+__( "Fit", "jetpack-videopress-pkg" );
+__( "Timeline zoom", "jetpack-videopress-pkg" );
+/* translators: 1: current zoom level (1 = fully zoomed out), 2: number of zoom levels. */
+__( "Zoom level %1$d of %2$d", "jetpack-videopress-pkg" );
+/* translators: %s: removed duration in seconds, e.g. "3.4". */
+__( "%ss removed", "jetpack-videopress-pkg" );
+__( "New cut", "jetpack-videopress-pkg" );
+__( "The recording could not be prepared. Keep this tab visible and try again.", "jetpack-videopress-pkg" );
+__( "Recording preview", "jetpack-videopress-pkg" );
+_x( "Pause preview", "button: pause recording preview", "jetpack-videopress-pkg" );
+_x( "Play preview", "button: play recording preview", "jetpack-videopress-pkg" );
+/* translators: %d: video preparation progress percentage. */
+__( "Preparing video… %d%%. Keep this tab visible.", "jetpack-videopress-pkg" );
+__( "Record again", "jetpack-videopress-pkg" );
+__( "Upload recording", "jetpack-videopress-pkg" );
+__( "Video recording is unavailable in this browser. Try a browser that supports MP4 recording and allow camera access on a secure connection.", "jetpack-videopress-pkg" );
+__( "The camera or microphone could not be accessed. Check your browser permissions and try again.", "jetpack-videopress-pkg" );
+__( "Recording failed. Please try again.", "jetpack-videopress-pkg" );
+__( "Record a video", "jetpack-videopress-pkg" );
+__( "Camera preview", "jetpack-videopress-pkg" );
+__( "Recording", "jetpack-videopress-pkg" );
+__( "Mirror preview", "jetpack-videopress-pkg" );
+__( "Waiting for camera and microphone access…", "jetpack-videopress-pkg" );
+__( "Try again", "jetpack-videopress-pkg" );
+_x( "Stop recording", "button: stop camera recording", "jetpack-videopress-pkg" );
+_x( "Start recording", "button: start camera recording", "jetpack-videopress-pkg" );
+__( "Discard this recording?", "jetpack-videopress-pkg" );
+__( "Discard recording", "jetpack-videopress-pkg" );
 /* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack-videopress-pkg" );
 __( "Your account (connection owner)", "jetpack-videopress-pkg" );
@@ -191,7 +246,6 @@ __( "Today, %s, selected", "jetpack-videopress-pkg" );
 __( "%s, selected", "jetpack-videopress-pkg" );
 __( "Required", "jetpack-videopress-pkg" );
 __( "Optional", "jetpack-videopress-pkg" );
-__( "More details follow the field.", "jetpack-videopress-pkg" );
 __( "Sort ascending", "jetpack-videopress-pkg" );
 __( "Sort descending", "jetpack-videopress-pkg" );
 __( "(no title)", "jetpack-videopress-pkg" );

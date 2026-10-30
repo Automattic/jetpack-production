@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.60.2-alpha] - unreleased
+## [0.61.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add camera recording with selectable filters, animated controls, mirrored preview, and trim-and-cut editing before uploading from the dashboard and VideoPress block.
 
 ### Changed
 - Overview: Make the date range picker keyboard-navigable with arrow keys.
@@ -2401,7 +2404,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.60.2-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.60.1...v0.60.2-alpha
+[0.61.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.60.1...v0.61.0-alpha
 [0.60.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.60.0...v0.60.1
 [0.60.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.59.0...v0.60.0
 [0.59.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.58.0...v0.59.0
