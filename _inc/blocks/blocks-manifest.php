@@ -3042,6 +3042,13 @@ Markdown is a text formatting syntax that is converted into HTML. You can _empha
           'padding' => false,
         ),
       ),
+      '__experimentalStyle' => 
+      array (
+        'spacing' => 
+        array (
+          'blockGap' => '0',
+        ),
+      ),
     ),
     'example' => 
     array (

@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Send WordPress.com-hosted sites to WordPress.com to manage Scan, and hide the server credentials link there.
 - Protect: Update the menu badge and the "Threats found" admin bar notice as soon as threats are fixed, ignored, or deleted.
 - Sharing: Improve how the Mastodon button handles the server address readers enter.
+- Sharing Buttons block: Keep the buttons as close together on the site as in the editor, instead of spacing them with the theme's default block gap.
 - Shortcodes: Add a title to YouTube embed iframes so screen readers can announce them.
 - Social: Respect the connections chosen for sharing when a post is published through the API.
 - Stats: Fix the Stats v2 Settings link for switching Stats off on WordPress.com Personal and Premium sites, which led back to Stats.
