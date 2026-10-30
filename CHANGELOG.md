@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Offer "Mark as spam" from the Top referrers widget rows, as the Referrers report does.
 - Premium Analytics: Offer the UTM Build URL dialog in the Top UTM card footer and on the UTM report page, so sites with UTM visits can open it too.
 - Scan: Stop showing threat alerts in the admin menu, admin bar, and My Jetpack on WordPress.com-hosted (Atomic) sites.
+- Sharing: Add a link to configure Like buttons in Jetpack > Settings > Sharing, and on block themes, point the Sharing and Like buttons settings in Jetpack and My Jetpack to Settings > Sharing instead of the Site Editor.
 - Sharing: Replace the Settings > Sharing screen with a redesigned version.
 - Social: Replace the Overview traffic chart's date range dropdown with a menu button.
 - Stats: Stop counting visitors who have not allowed statistics cookies on sites that run the WP Consent API, and add a Visitor consent card to the Stats v2 Settings tab that helps set it up.

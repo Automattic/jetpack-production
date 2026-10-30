@@ -644,11 +644,11 @@ __( "Plugins can only be deactivated together while the Jetpack plugin is active
 __( "Select all features", "jetpack-my-jetpack" );
 __( "Select features to activate or deactivate them together", "jetpack-my-jetpack" );
 __( "Legacy sharing buttons cannot be customized on block themes.", "jetpack-my-jetpack" );
-_x( "Add the Sharing Buttons block to your theme’s template.", "Sharing block migration instruction", "jetpack-my-jetpack" );
+_x( "Choose where the Sharing Buttons block goes on your posts and pages.", "Sharing block migration instruction", "jetpack-my-jetpack" );
 __( "Switch to Sharing Buttons block", "jetpack-my-jetpack" );
 __( "Deactivating legacy sharing…", "jetpack-my-jetpack" );
 __( "Legacy Like buttons cannot be customized on block themes.", "jetpack-my-jetpack" );
-_x( "Add the Like block to your theme’s template.", "Like block migration instruction", "jetpack-my-jetpack" );
+_x( "Choose where the Like block goes on your posts and pages.", "Like block migration instruction", "jetpack-my-jetpack" );
 __( "Switch to the Like block", "jetpack-my-jetpack" );
 __( "Deactivating legacy Like buttons…", "jetpack-my-jetpack" );
 __( "Your site now checks logins for compromised passwords and flags weak new passwords.", "jetpack-my-jetpack" );
@@ -710,7 +710,7 @@ __( "%s has been deactivated.", "jetpack-my-jetpack" );
 __( "Failed to activate %s.", "jetpack-my-jetpack" );
 /* translators: %s is the module name */
 __( "Failed to deactivate %s.", "jetpack-my-jetpack" );
-__( "Open Site Editor", "jetpack-my-jetpack" );
+__( "Configure", "jetpack-my-jetpack" );
 /* translators: %s is the module name */
 __( "Toggle %s module", "jetpack-my-jetpack" );
 /* translators: %s is a plugin or feature name. */
@@ -781,7 +781,6 @@ __( "Other", "jetpack-my-jetpack" );
 __( "Learn more about %s", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "Configure %s", "jetpack-my-jetpack" );
-__( "Configure", "jetpack-my-jetpack" );
 __( "Change this feature from its own control.", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "Select %s", "jetpack-my-jetpack" );

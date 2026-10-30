@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Connection: Report connection events with the `my-jetpack` context and a placement for the header, the connection card and the page notice.
 - Features: Keep a plugin's switch busy until its card has refreshed after turning the plugin on or off, and show the success message once the card is up to date.
+- Features: On block themes, link the Sharing and Likes cards to Settings > Sharing, where the blocks can be placed in a click, instead of the Site Editor.
 - Features: Show feature states through switches or buttons instead of redundant Active or Inactive badges, and show host restrictions below descriptions. Leave features out of Available when their only action is an install you cannot make. Restore the previous behavior with the `jetpack_feature_flag_enabled_my-jetpack-account-connect` filter.
 - Features: Show the Features page on sites in Offline Mode, without connecting to WordPress.com.
 - Features: Turn a module on once Install Jetpack or Activate Jetpack on its card finishes setup.

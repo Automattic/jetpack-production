@@ -130,7 +130,7 @@ return array(
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '6.15.0-alpha1793354148',
+      'ver' => '6.15.0-alpha1793355261',
     ),
     'jetpack-newsletter' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-newsletter',
@@ -194,7 +194,7 @@ return array(
     ),
     'jetpack-sharing-likes' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sharing-likes',
-      'ver' => '0.6.0-alpha1793297523',
+      'ver' => '0.6.0-alpha1793355261',
     ),
     'jetpack-stats-admin' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-stats-admin',
