@@ -27,9 +27,11 @@ This is an alpha version! The changes listed here are not final.
 - Keep hidden Jetpack menu items out of the remote dashboard menu.
 - PayPal Payment Buttons: Save a payment button with unpriced variants again.
 - Premium Analytics: Line up the column header above leaderboard rows with the row text.
+- Premium Analytics: Show store money with the store's number of decimals setting, as WooCommerce Analytics does.
 - Protect: Send WordPress.com-hosted sites to WordPress.com to manage Scan, and hide the server credentials link there.
 - Protect: Update the menu badge and the "Threats found" admin bar notice as soon as threats are fixed, ignored, or deleted.
 - Shortcodes: Add a title to YouTube embed iframes so screen readers can announce them.
+- Stats: Fix the Stats v2 Settings link for switching Stats off on WordPress.com Personal and Premium sites, which led back to Stats.
 - VideoPress: Show Video Playlist and Latest Videos Playlist blocks in newsletter emails as the first video plus a grid of thumbnails linking to the post.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

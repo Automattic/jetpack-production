@@ -19,6 +19,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Prevent PHP errors by limiting direct access to files.
+- Settings: Link the Activation card to the Modules screen on sites where My Jetpack redirects to Stats, so Stats can be switched off there.
+- Store: Show store money with the store's number of decimals setting, as WooCommerce Analytics does.
 - Widgets: Line up the column header above leaderboard rows with the row text.
 
 ## [0.15.0] - 2026-10-28
