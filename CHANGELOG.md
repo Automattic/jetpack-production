@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - API: Prevent errors when handling malformed data.
 - Carousel: Guard against malformed data.
+- Jetpack Search: Remove the AI Agent Access setting and stop registering and syncing the `jetpack_ai_agents_enabled` option.
 - Prevent PHP errors by limiting direct access to files.
 - Protect: Make the Protect page module available on WordPress.com sites with Atomic hosting whose plan includes Scan.
 - Scan: Remove the dashboard's unused scan status code.

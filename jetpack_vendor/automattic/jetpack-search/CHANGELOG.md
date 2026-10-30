@@ -5,12 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.3.6-alpha] - unreleased
+## [8.4.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update package dependencies.
+
+### Removed
+- Search Dashboard: Remove the AI Agent Access toggle.
 
 ## [8.3.5] - 2026-10-28
 ### Changed
@@ -1983,7 +1986,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[8.3.6-alpha]: https://github.com/Automattic/jetpack-search/compare/v8.3.5...v8.3.6-alpha
+[8.4.0-alpha]: https://github.com/Automattic/jetpack-search/compare/v8.3.5...v8.4.0-alpha
 [8.3.5]: https://github.com/Automattic/jetpack-search/compare/v8.3.4...v8.3.5
 [8.3.4]: https://github.com/Automattic/jetpack-search/compare/v8.3.3...v8.3.4
 [8.3.3]: https://github.com/Automattic/jetpack-search/compare/v8.3.2...v8.3.3
