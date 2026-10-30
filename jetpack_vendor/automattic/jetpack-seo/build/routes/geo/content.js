@@ -77,6 +77,9 @@ __( "Answer engines", "jetpack-seo" );
 __( "These crawlers fetch your pages so AI assistants like ChatGPT, Perplexity, and Claude can cite you in their answers. Blocking them can keep your site out of those answers.", "jetpack-seo" );
 __( "Training crawlers", "jetpack-seo" );
 __( "These crawlers collect your content to train AI models. Block them to keep your content out of that training. Blocking Google-Extended also keeps it out of Gemini app answers.", "jetpack-seo" );
+/* translators: %1$s: name of the active SEO plugin. */
+__( "Jetpack is not generating llms.txt while %1$s is active. Your saved setting is retained. Deactivate %1$s to let Jetpack generate the file.", "jetpack-seo" );
+__( "Jetpack is not generating llms.txt because SEO tools are disabled on this site. Your saved setting is retained.", "jetpack-seo" );
 __( "AI SEO is turned off for this site, so nothing is generated. Your choice is saved and applies again when AI SEO is turned back on.", "jetpack-seo" );
 __( "Jetpack AI is turned off for this site, so nothing is generated. Your choice is saved and applies again when Jetpack AI is turned back on.", "jetpack-seo" );
 __( "GEO stands for generative engine optimization. These settings control how AI sees and uses your site.", "jetpack-seo" );

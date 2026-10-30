@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.10.3-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [0.10.2] - 2026-10-28
 ### Changed
 - Internal updates.
@@ -238,6 +242,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Create a Settings screen with site visibility, post title structure, front-page description, and site verification. [#49256]
 - Scaffold the new `jetpack-seo` package and mount its admin page. [#49203]
 
+[0.10.3-alpha]: https://github.com/Automattic/jetpack-seo/compare/0.10.2...0.10.3-alpha
 [0.10.2]: https://github.com/Automattic/jetpack-seo/compare/0.10.1...0.10.2
 [0.10.1]: https://github.com/Automattic/jetpack-seo/compare/0.10.0...0.10.1
 [0.10.0]: https://github.com/Automattic/jetpack-seo/compare/0.9.10...0.10.0

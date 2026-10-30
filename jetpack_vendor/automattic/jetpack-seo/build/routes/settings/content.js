@@ -105,6 +105,7 @@ __( "Social profiles", "jetpack-seo" );
 __( "Links to your public profiles — Facebook, X, LinkedIn.", "jetpack-seo" );
 __( "Save author profile", "jetpack-seo" );
 __( "Author profile", "jetpack-seo" );
+__( "Author profile settings", "jetpack-seo" );
 __( "Schema settings saved.", "jetpack-seo" );
 __( "Could not save schema settings. Please try again.", "jetpack-seo" );
 __( "Saving breadcrumbs…", "jetpack-seo" );
@@ -154,6 +155,7 @@ __( "Links to the organization’s official profiles — Facebook, X, LinkedIn, 
 __( "Contact email", "jetpack-seo" );
 __( "A public contact email for the organization.", "jetpack-seo" );
 __( "Schema", "jetpack-seo" );
+__( "Schema settings", "jetpack-seo" );
 __( "Structured data that tells search engines and AI assistants what your site is and who runs it. Add the details below and Jetpack adds the right markup automatically.", "jetpack-seo" );
 __( "Breadcrumbs", "jetpack-seo" );
 __( "Add breadcrumb markup so search results can show where a page sits in your site (for example Home › Blog › Post).", "jetpack-seo" );
@@ -204,13 +206,16 @@ __( "WordPress.com manages sitemap generation for this site. Additional hosting 
 __( "Points search engines to one preferred URL for archive pages, so duplicates aren't indexed separately.", "jetpack-seo" );
 __( "Another SEO plugin is active, so Jetpack won't add canonical URLs to avoid conflicts. Deactivate that plugin to use this setting.", "jetpack-seo" );
 __( "Shown under your site name in search results and social shares. About the first 155 characters display in search, or 120 on mobile.", "jetpack-seo" );
-__( "Locked while another SEO plugin manages your SEO. Jetpack uses this again once it’s deactivated.", "jetpack-seo" );
+__( "Locked while Jetpack SEO is disabled. Your saved description is retained.", "jetpack-seo" );
 __( "Unable to load settings.", "jetpack-seo" );
 /* translators: %d: number of characters currently in the front-page description. */
 _n( "%d character", "%d characters", 1, "jetpack-seo" );
 /* translators: %s: name of the SEO plugin that controls the site's SEO output, e.g. Yoast SEO. */
-__( "%s is managing your SEO titles and descriptions, so Jetpack’s settings for them are locked while it’s active.", "jetpack-seo" );
-__( "Another SEO plugin is managing your SEO titles and descriptions, so Jetpack’s settings for them are locked while it’s active.", "jetpack-seo" );
+__( "%s is managing your SEO output, so Jetpack’s title, description, schema and author profile settings are locked while it’s active.", "jetpack-seo" );
+__( "Jetpack SEO is disabled on this site, so its title, description, schema and author profile settings are locked.", "jetpack-seo" );
+/* translators: %1$s: name of the active SEO plugin. */
+__( "%1$s is managing your structured data. Your saved Jetpack settings are shown here but are not being used. Deactivate %1$s to edit these settings in Jetpack.", "jetpack-seo" );
+__( "Jetpack SEO is disabled on this site. Your saved settings are shown here but are not being used. Editing is unavailable while SEO tools are disabled.", "jetpack-seo" );
 __( "Front-page description", "jetpack-seo" );
 __( "Home page description", "jetpack-seo" );
 /* translators: %s: the character count, e.g. "300 characters". */

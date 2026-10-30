@@ -65,6 +65,9 @@ __( "Individual crawler settings are overridden by this site's data sharing opt-
 __( "Per-site crawler settings aren't available on this path-based multisite network.", "jetpack-seo" );
 __( "llms.txt published", "jetpack-seo" );
 __( "llms.txt not published", "jetpack-seo" );
+/* translators: %s: name of the active SEO plugin. */
+__( "Jetpack llms.txt paused while %s is active", "jetpack-seo" );
+__( "Jetpack llms.txt paused while SEO tools are disabled", "jetpack-seo" );
 __( "AI access", "jetpack-seo" );
 /* translators: %1$d is the number of blocked answer engines, %2$d the total. */
 __( "Answer engines: %1$d of %2$d blocked", "jetpack-seo" );
