@@ -576,6 +576,7 @@ return array(
     'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Sharing_Section' => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-sharing-section.php',
     'Automattic\\Jetpack\\Sharing_Likes\\Settings\\Twitter_Site_Tag' => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings/class-twitter-site-tag.php',
     'Automattic\\Jetpack\\Sharing_Likes\\Settings_App\\Settings_App' => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/settings-app/class-settings-app.php',
+    'Automattic\\Jetpack\\Sharing_Likes\\Share_Destination' => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/class-share-destination.php',
     'Automattic\\Jetpack\\Shortcodes' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-shortcodes.php',
     'Automattic\\Jetpack\\SignatureInvalidException' => $baseDir . '/jetpack_vendor/automattic/jetpack-jwt/src/class-jwt.php',
     'Automattic\\Jetpack\\Stats\\Abilities\\Stats_Abilities' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/abilities/class-stats-abilities.php',
