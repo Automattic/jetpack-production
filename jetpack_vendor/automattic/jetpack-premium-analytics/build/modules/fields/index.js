@@ -52,5 +52,5 @@ _x( "Prev. week", "comparison legend label", "jetpack-premium-analytics-pkg" );
 _x( "Prev. year, weekday", "comparison legend label", "jetpack-premium-analytics-pkg" );
 /* translators: %s: an abbreviated previous period, e.g. "Prev. 8 days". The suffix says it starts on the same weekday. */
 _x( "%s, weekday", "comparison legend label", "jetpack-premium-analytics-pkg" );
-__( "Chart interval", "jetpack-premium-analytics-pkg" );
 __( "Date range", "jetpack-premium-analytics-pkg" );
+__( "Chart interval", "jetpack-premium-analytics-pkg" );
