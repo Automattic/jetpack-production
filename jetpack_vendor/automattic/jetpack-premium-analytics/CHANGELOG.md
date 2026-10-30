@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Let other plugins ask whether Stats v2 should be on and whether it booted, and share the flag that retires the classic Stats page, which now also replaces the pre-connection Stats page.
 - Settings: Add a Visitor consent card that shows whether a cookie banner plugin and the WP Consent API are active, and installs the WP Consent API in one click.
+- Single-report pages: add a registry other plugins can register pages on, published to the client in script data and over REST.
 - Stats: Offer "Mark as spam" from the Top referrers widget rows, as the Referrers report does.
 - Top UTM: Offer the Build URL dialog in the card footer and on the UTM report page, so sites with UTM visits can open it too.
 

@@ -407,6 +407,8 @@ return array(
     'Automattic\\Jetpack\\PremiumAnalytics\\Reports\\Export\\Report_Registry' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Reports/Export/class-report-registry.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Reports\\Export\\Support\\Logger_Trait' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Reports/Export/Support/trait-logger-trait.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Reports\\Export\\Support\\Utilities' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Reports/Export/Support/trait-utilities.php',
+    'Automattic\\Jetpack\\PremiumAnalytics\\Single_Report_Page' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-single-report-page.php',
+    'Automattic\\Jetpack\\PremiumAnalytics\\Single_Report_Page_Registry' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-single-report-page-registry.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Stats_Links' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-stats-links.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Stats_Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-stats-settings.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Stored_Layout_Move' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-stored-layout-move.php',
