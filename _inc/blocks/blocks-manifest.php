@@ -2891,6 +2891,13 @@ Markdown is a text formatting syntax that is converted into HTML. You can _empha
       'reusable' => false,
       'html' => false,
     ),
+    'example' => 
+    array (
+      'attributes' => 
+      array (
+        'service' => 'facebook',
+      ),
+    ),
     'viewScript' => 'file:./view.js',
     'editorScript' => 'jetpack-blocks-editor',
   ),
