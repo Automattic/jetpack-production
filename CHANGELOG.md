@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Shortcodes: Add a title to YouTube embed iframes so screen readers can announce them.
 - Social: Respect the connections chosen for sharing when a post is published through the API.
 - Stats: Fix the Stats v2 Settings link for switching Stats off on WordPress.com Personal and Premium sites, which led back to Stats.
+- VideoPress: Fix incorrect video statistics on sites configured to use HTML query separators.
 - VideoPress: Show Video Playlist and Latest Videos Playlist blocks in newsletter emails as the first video plus a grid of thumbnails linking to the post.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
