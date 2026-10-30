@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Offer "Mark as spam" from the Top referrers widget rows, as the Referrers report does.
 - Top UTM: Offer the Build URL dialog in the card footer and on the UTM report page, so sites with UTM visits can open it too.
 
+### Changed
+- Widgets: Let leaderboard charts size their bars and compute percentage changes from the values, so negative values draw below zero in the bars layout and as empty bars in the list layout, a negative previous value gives the right direction of change, and list bars scale to the current period when comparing.
+
 ### Fixed
 - Prevent PHP errors by limiting direct access to files.
 - Widgets: Line up the column header above leaderboard rows with the row text.
