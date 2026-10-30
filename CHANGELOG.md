@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Debugging Center: Add links to troubleshooting guides and clarify the troubleshooting steps.
 - My Jetpack: Connect a WordPress.com account from feature cards that need one. Show feature states through switches or buttons instead of redundant Active or Inactive badges, and show host restrictions below descriptions. Leave features out of Available when their only action is an install you cannot make.
 - My Jetpack: Keep a plugin's switch on the Features tab busy until its card has refreshed after turning the plugin on or off, and show the success message once the card is up to date.
+- My Jetpack: Open My Jetpack instead of Settings for administrators on sites in Offline Mode, without connecting to WordPress.com.
 - My Jetpack: Open the Jetpack Connection details on the Connectors screen from the header's Manage connection link.
 - Premium Analytics: Draw negative values below zero in ranked bar charts, show the right direction of change when the previous value was negative, and size list bars to the current period when comparing.
 - Premium Analytics: Offer "Mark as spam" from the Top referrers widget rows, as the Referrers report does.
