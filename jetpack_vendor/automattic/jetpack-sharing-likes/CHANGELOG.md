@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings > Sharing: in Comment Likes, note when new posts have comments turned off, with a link to Discussion settings.
 
 ### Changed
+- Sharing settings: Reword the notice shown on private sites to say that some sharing services aren't available.
 - Show the React version of Settings > Sharing by default. Return false from the `rsm_jetpack_ui_modernization_sharing_likes` filter to keep the PHP screen.
 
 ## [0.5.1] - 2026-10-28

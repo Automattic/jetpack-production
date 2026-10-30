@@ -283,7 +283,7 @@ __( "Add to the Share button", "jetpack-sharing-likes" );
 __( "Choose a service to add it at the end of your buttons.", "jetpack-sharing-likes" );
 __( "Choose a service to add it behind the More button.", "jetpack-sharing-likes" );
 __( "Choose a service to add it behind the Share button.", "jetpack-sharing-likes" );
-__( "Please note that your services have been restricted because your site is private.", "jetpack-sharing-likes" );
+__( "Some sharing services aren’t available while your site is private.", "jetpack-sharing-likes" );
 __( "Shown as buttons", "jetpack-sharing-likes" );
 __( "Behind the More button", "jetpack-sharing-likes" );
 __( "Behind the Share button", "jetpack-sharing-likes" );
