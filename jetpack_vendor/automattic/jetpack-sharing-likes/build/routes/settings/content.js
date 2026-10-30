@@ -237,6 +237,7 @@ _x( "Like buttons", "Settings header", "jetpack-sharing-likes" );
 __( "Let readers like your posts with their WordPress.com account.", "jetpack-sharing-likes" );
 __( "Like buttons need a connection to WordPress.com, which is unavailable while your site is in Offline Mode.", "jetpack-sharing-likes" );
 __( "Allow readers to like individual comments", "jetpack-sharing-likes" );
+__( "Comments are turned off for new posts. <link>Change this in Discussion settings</link>.", "jetpack-sharing-likes" );
 __( "Comment Likes are", "jetpack-sharing-likes" );
 _x( "Comment Likes", "Settings header", "jetpack-sharing-likes" );
 __( "Comment Likes need a connection to WordPress.com, which is unavailable while your site is in Offline Mode.", "jetpack-sharing-likes" );
