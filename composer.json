@@ -19,7 +19,7 @@
 		"automattic/jetpack-agents-manager": "^0.12.9",
 		"automattic/jetpack-assets": "^5.0.16",
 		"automattic/jetpack-autoloader": "^6.0.2",
-		"automattic/jetpack-backup": "^5.2.1",
+		"automattic/jetpack-backup": "^5.2.2-alpha",
 		"automattic/jetpack-blaze": "^0.29.13",
 		"automattic/jetpack-blocks": "^4.0.1",
 		"automattic/jetpack-boost-speed-score": "^0.6.2-alpha",
