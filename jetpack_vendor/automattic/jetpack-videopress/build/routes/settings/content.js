@@ -137,12 +137,12 @@ __( "VideoPress needs a connection to WordPress.com before you can upload and ma
 __( "Connecting…", "jetpack-videopress-pkg" );
 __( "Connect", "jetpack-videopress-pkg" );
 __( "Checkout could not start. Please try again.", "jetpack-videopress-pkg" );
+__( "An error occurred. Please try again.", "jetpack-videopress-pkg" );
 /* translators: %1$s: the discount amount */
 __( "%1$s%% off", "jetpack-videopress-pkg" );
 __( "/month, billed yearly", "jetpack-videopress-pkg" );
 __( "Get VideoPress", "jetpack-videopress-pkg" );
 __( "Start for free", "jetpack-videopress-pkg" );
-__( "An error occurred. Please try again.", "jetpack-videopress-pkg" );
 __( "Upload one video", "jetpack-videopress-pkg" );
 __( "Your setting couldn’t be saved. Please try again.", "jetpack-videopress-pkg" );
 __( "Video settings", "jetpack-videopress-pkg" );
