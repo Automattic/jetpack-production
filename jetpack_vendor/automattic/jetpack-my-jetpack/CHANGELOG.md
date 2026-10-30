@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Features: Keep security modules managed in Protect out of bulk changes.
 - Protect: Send the card's manage and Scan results links wherever a host sends the Features tab's Protect link.
+- Stats: Link the Stats card to Stats v2 when the Jetpack Stats plugin has it enabled.
 
 ## [6.14.0] - 2026-10-28
 ### Added
