@@ -411,7 +411,6 @@ _n( "Restarts in %d day", "Restarts in %d days", 1, "jetpack-premium-analytics-p
 __( "Loading your plan usage…", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load plan usage. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
-__( "Plan usage isn't available for your current plan.", "jetpack-premium-analytics-pkg" );
 __( "Billable views are the page views counted against your plan each cycle. Excluded logged-in role views are not counted.", "jetpack-premium-analytics-pkg" );
 __( "Your current plan", "jetpack-premium-analytics-pkg" );
 /* translators: 1: user role name, 2: number of users with that role. */
@@ -430,8 +429,8 @@ __( "WordPress.com Reader", "jetpack-premium-analytics-pkg" );
 __( "Your Stats settings could not be saved: %s", "jetpack-premium-analytics-pkg" );
 __( "Your Stats settings could not be saved.", "jetpack-premium-analytics-pkg" );
 __( "Settings saved.", "jetpack-premium-analytics-pkg" );
-__( "Your Stats settings could not be loaded. Reload the page to try again.", "jetpack-premium-analytics-pkg" );
 __( "Loading your Stats settings…", "jetpack-premium-analytics-pkg" );
+__( "Your Stats settings could not be loaded. Reload the page to try again.", "jetpack-premium-analytics-pkg" );
 __( "Activation", "jetpack-premium-analytics-pkg" );
 __( "Stats is a Jetpack feature. Activate or deactivate it from <link>Jetpack modules</link>.", "jetpack-premium-analytics-pkg" );
 __( "Stats is a Jetpack feature. Activate or deactivate it from <link>Jetpack features</link>.", "jetpack-premium-analytics-pkg" );

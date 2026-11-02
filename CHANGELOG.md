@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Gist: Preserve formatting when embedding a GitHub Gist URL on its own line in post content.
 - Keep hidden Jetpack menu items out of the remote dashboard menu.
 - PayPal Payment Buttons: Save a payment button with unpriced variants again.
+- Premium Analytics: Leave the plan usage card out of the Settings tab when the plan has no view limit, as on WordPress.com, instead of saying usage isn't available.
 - Premium Analytics: Line up the column header above leaderboard rows with the row text.
 - Premium Analytics: Show store money with the store's number of decimals setting, as WooCommerce Analytics does.
 - Protect: Send WordPress.com-hosted sites to WordPress.com to manage Scan, and hide the server credentials link there.
