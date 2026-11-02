@@ -254,9 +254,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-external-media' => array(
-            'pretty_version' => '0.9.12-alpha.1793388439',
-            'version' => '0.9.12.0-alpha1793388439',
-            'reference' => '550f760466ff398f99849046fdac80f17e759ee1',
+            'pretty_version' => '0.9.12-alpha.1793611952',
+            'version' => '0.9.12.0-alpha1793611952',
+            'reference' => 'bb02e2727eebd362c30269e988a53ea02b7b55ab',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-external-media',
             'aliases' => array(),
