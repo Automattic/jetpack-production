@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Dashboard: Fix "Something went wrong!" on WordPress 7.1 when the site data request fails.
+
 ## [0.18.3] - 2026-10-28
 ### Changed
 - Email design: Tell the design screen which link brought the creator there. [#54167]
