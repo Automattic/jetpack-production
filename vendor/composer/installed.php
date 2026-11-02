@@ -551,9 +551,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-sharing-likes' => array(
-            'pretty_version' => '0.6.0-alpha.1793607972',
-            'version' => '0.6.0.0-alpha1793607972',
-            'reference' => 'a185729c85b98a2d3efb131aa6a60817ec11fb90',
+            'pretty_version' => '0.6.0-alpha.1793607998',
+            'version' => '0.6.0.0-alpha1793607998',
+            'reference' => '425e28f0b1d74a3f1c01c8005e53ea19250e1738',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-sharing-likes',
             'aliases' => array(),
