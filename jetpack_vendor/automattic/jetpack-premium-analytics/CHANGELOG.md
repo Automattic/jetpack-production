@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Add a filter that lets the host choose which settings, and whether the visitor consent card, the Settings tab offers, and leave the plan usage card out when the plan has no view limit.
 - Stats: Offer "Mark as spam" from the Top referrers widget rows, as the Referrers report does.
 - Top UTM: Offer the Build URL dialog in the card footer and on the UTM report page, so sites with UTM visits can open it too.
+- Videos: Play the video on its stats report.
 
 ### Changed
 - Section tabs: Show the selected tab in the design system colors instead of the admin theme color.

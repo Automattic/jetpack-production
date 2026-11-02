@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add camera recording with selectable filters, animated controls, mirrored preview, and trim-and-cut editing before uploading from the dashboard and VideoPress block.
+- Analytics: Play the video on its stats report.
 
 ### Changed
 - Overview: Make the date range picker keyboard-navigable with arrow keys.

@@ -22,5 +22,21 @@ return array(
 		'category'     => 'stats',
 		'keywords'     => null,
 		'textdomain'   => 'jetpack-videopress-pkg',
+	),
+	array(
+		'name'         => 'videopress/video-player',
+		'dir_name'     => 'video-player',
+		'title'        => 'Video',
+		'description'  => 'Play a VideoPress video.',
+		'help'         => array( 'content' => 'Plays the video this report is about.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/videopress/' ) ) ),
+		'icon'         => 'jpa/video',
+		'actions'      => null,
+		'attributes'   => null,
+		'has_render'   => true,
+		'has_widget'   => false,
+		'presentation' => 'full-bleed',
+		'category'     => 'stats',
+		'keywords'     => null,
+		'textdomain'   => 'jetpack-videopress-pkg',
 	)
 );

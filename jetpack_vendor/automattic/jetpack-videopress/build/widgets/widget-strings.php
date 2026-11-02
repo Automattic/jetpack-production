@@ -10,3 +10,6 @@ _x( 'Your most played VideoPress videos, sourced from Jetpack Stats.', 'widget d
 _x( 'The published videos your visitors watched most often, sorted by views.', 'widget help content', 'jetpack-videopress-pkg' );
 _x( 'Learn more', 'widget help link label', 'jetpack-videopress-pkg' );
 _x( 'View all', 'widget action label', 'jetpack-videopress-pkg' );
+_x( 'Video', 'widget title', 'jetpack-videopress-pkg' );
+_x( 'Play a VideoPress video.', 'widget description', 'jetpack-videopress-pkg' );
+_x( 'Plays the video this report is about.', 'widget help content', 'jetpack-videopress-pkg' );
