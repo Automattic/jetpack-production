@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a feature flag for consolidating settings in My Jetpack, off by default.
+- Add the settings consolidation flag to the admin script data, off by default.
 - Features: Connect a WordPress.com account from the Install or Connect button of features that need one.
 - Features: Offer Connect on Jetpack AI when a WordPress.com account is all it is missing.
 - Features: Turn a feature on when its account connection, started from its Connect button, returns to Features.
