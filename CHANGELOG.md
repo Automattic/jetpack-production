@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Show connection owner names containing characters like & correctly.
 - Email design: Keep the saved design on screen while resetting it to the defaults.
 - Forms, Newsletter, SEO: Show the details sidebar at full width on medium-sized screens.
+- Forms: Fix the class attribute on field wrappers that use the inset label layout.
 - Gist: Preserve formatting when embedding a GitHub Gist URL on its own line in post content.
 - Keep hidden Jetpack menu items out of the remote dashboard menu.
 - Likes: In the likes popover, link a liker who has no Gravatar profile to their site instead of a Gravatar page that does not exist.

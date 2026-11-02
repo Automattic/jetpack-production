@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fix the class attribute on field wrappers that use the inset label layout.
+
 ## [8.3.6] - 2026-10-28
 ### Changed
 - Update package dependencies. [#54118]
