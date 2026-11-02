@@ -57,6 +57,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Focus Cancel first in the Delete confirmation for a scheduled share, so pressing Enter no longer deletes it.
 - Social: Respect the connections chosen for sharing when a post is published through the API.
 - Stats: Fix the Stats v2 Settings link for switching Stats off on WordPress.com Personal and Premium sites, which led back to Stats.
+- Stop showing upgrade suggestions to Jetpack Pro sites on the classic Stats page.
 - VideoPress: Fix incorrect video statistics on sites configured to use HTML query separators.
 - VideoPress: Show Video Playlist and Latest Videos Playlist blocks in newsletter emails as the first video plus a grid of thumbnails linking to the post.
 
