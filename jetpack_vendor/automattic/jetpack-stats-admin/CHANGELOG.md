@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.39.3-alpha - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## 0.39.3 - 2026-11-02
 ### Changed
-- Stats widget: render a loading skeleton instead of a spinner while the script loads.
+- Stats widget: render a loading skeleton instead of a spinner while the script loads. [#54257]
 
 ## 0.39.2 - 2026-10-28
 ### Added

@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.6.2] - 2026-11-02
 ### Fixed
-- Keep one score record per page, so a test started from any screen updates the score shown on the others.
-- Prevent PHP errors by limiting direct access to files.
+- Keep one score record per page, so a test started from any screen updates the score shown on the others. [#54347]
+- Prevent PHP errors by limiting direct access to files. [#54244]
 
 ## [0.6.1] - 2026-10-20
 ### Changed
@@ -193,7 +190,7 @@ This is an alpha version! The changes listed here are not final.
 - Add a new package for Boost Speed Score [#30914]
 - Add a new argument to `Speed_Score` to identify where the request was made from (e.g. 'boost-plugin', 'jetpack-dashboard', etc). [#31012]
 
-[0.6.2-alpha]: https://github.com/Automattic/jetpack-boost-speed-score/compare/v0.6.1...v0.6.2-alpha
+[0.6.2]: https://github.com/Automattic/jetpack-boost-speed-score/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/Automattic/jetpack-boost-speed-score/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/Automattic/jetpack-boost-speed-score/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/Automattic/jetpack-boost-speed-score/compare/v0.4.18...v0.5.0

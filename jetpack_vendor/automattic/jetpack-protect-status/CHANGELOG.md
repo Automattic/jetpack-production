@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.10.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.10.0] - 2026-11-02
 ### Added
-- Add a `jetpack_protect_threat_notifications_enabled` filter so hosts can stop threats from being announced outside the Protect page.
+- Add a `jetpack_protect_threat_notifications_enabled` filter so hosts can stop threats from being announced outside the Protect page. [#53983]
 
 ### Fixed
-- Flag a most recent scan that failed instead of treating it like a clean scan.
+- Flag a most recent scan that failed instead of treating it like a clean scan. [#54295]
 
 ## [0.9.2] - 2026-10-28
 ### Fixed
@@ -218,7 +215,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies. [#37894]
 
-[0.10.0-alpha]: https://github.com/Automattic/jetpack-protect-status/compare/v0.9.2...v0.10.0-alpha
+[0.10.0]: https://github.com/Automattic/jetpack-protect-status/compare/v0.9.2...v0.10.0
 [0.9.2]: https://github.com/Automattic/jetpack-protect-status/compare/v0.9.1...v0.9.2
 [0.9.1]: https://github.com/Automattic/jetpack-protect-status/compare/v0.9.0...v0.9.1
 [0.9.0]: https://github.com/Automattic/jetpack-protect-status/compare/v0.8.1...v0.9.0
