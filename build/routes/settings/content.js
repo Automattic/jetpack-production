@@ -294,6 +294,9 @@ __( "Jetpack Newsletter Settings", "jetpack" );
 __( "Newsletter", "jetpack" );
 __( "Newsletter Settings have moved to a new location. Access it via Jetpack → Newsletter.", "jetpack" );
 __( "Go to Newsletter Settings", "jetpack" );
+__( "Open Features", "jetpack" );
+/* translators: %s: a product name, such as VideoPress. */
+__( "Turn %s on or off in My Jetpack › Features, which links to its settings.", "jetpack" );
 __( "1 free video available. Upgrade now to unlock more videos and 1TB of storage.", "jetpack" );
 __( "You have used your free video. Upgrade now to unlock more videos and 1TB of storage.", "jetpack" );
 __( "VideoPress", "jetpack" );
