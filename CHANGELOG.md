@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Draw the previous period in the Traffic summary only when it is switched on from the chart legend.
 - Premium Analytics: Offer "Mark as spam" from the Top referrers widget rows, as the Referrers report does.
 - Premium Analytics: Offer the UTM Build URL dialog in the Top UTM card footer and on the UTM report page, so sites with UTM visits can open it too.
+- Premium Analytics: Show exact figures in single-figure Stats widgets, shortening them only where they would be clipped.
 - Premium Analytics: Show the selected section tab in the design system colors instead of the admin theme color.
 - Scan: Stop showing threat alerts in the admin menu, admin bar, and My Jetpack on WordPress.com-hosted (Atomic) sites.
 - Sharing: Add a link to configure Like buttons in Jetpack > Settings > Sharing, and on block themes, point the Sharing and Like buttons settings in Jetpack and My Jetpack to Settings > Sharing instead of the Site Editor.

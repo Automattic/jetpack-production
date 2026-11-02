@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Section tabs: Show the selected tab in the design system colors instead of the admin theme color.
+- Show exact figures in single-figure widgets, shortening them only where they would be clipped.
 - Traffic summary: Draw the previous period only when it is switched on from the chart legend.
 - Update package dependencies.
 - Widgets: Let leaderboard charts size their bars and compute percentage changes from the values, so negative values draw below zero in the bars layout and as empty bars in the list layout, a negative previous value gives the right direction of change, and list bars scale to the current period when comparing.
