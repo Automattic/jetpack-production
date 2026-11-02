@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms, Newsletter, SEO: Show the details sidebar at full width on medium-sized screens.
 - Gist: Preserve formatting when embedding a GitHub Gist URL on its own line in post content.
 - Keep hidden Jetpack menu items out of the remote dashboard menu.
+- My Jetpack: Measure the home page's speed score when WordPress lives in a subdirectory.
 - Newsletter: Focus “Not now” first in the paid subscription setup dialog, so pressing Enter no longer leaves the editor.
 - PayPal Payment Buttons: Save a payment button with unpriced variants again.
 - Premium Analytics: Leave the plan usage card out of the Settings tab when the plan has no view limit, as on WordPress.com, instead of saying usage isn't available.

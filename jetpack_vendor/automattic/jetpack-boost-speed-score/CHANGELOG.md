@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Keep one score record per page, so a test started from any screen updates the score shown on the others.
 - Prevent PHP errors by limiting direct access to files.
 
 ## [0.6.1] - 2026-10-20

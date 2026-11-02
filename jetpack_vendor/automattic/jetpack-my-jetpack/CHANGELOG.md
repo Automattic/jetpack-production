@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Boost card: Share speed scores with the Boost dashboard, and measure the home page when WordPress lives in a subdirectory.
 - Features: Keep security modules managed in Protect out of bulk changes.
 - Header: Stop showing a focus ring on the account panel's first link when it is opened with the mouse.
 - Protect: Send the card's manage and Scan results links wherever a host sends the Features tab's Protect link.
