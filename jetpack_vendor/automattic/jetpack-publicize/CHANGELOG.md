@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Prevent PHP errors by limiting direct access to files.
+- Sharing activity: Focus Cancel first in the Delete confirmation for a scheduled share, so pressing Enter no longer deletes it.
 
 ## [0.88.8] - 2026-10-28
 ### Changed

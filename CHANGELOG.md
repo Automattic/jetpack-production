@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing Buttons block: Keep the buttons as close together on the site as in the editor, instead of spacing them with the theme's default block gap.
 - Sharing Buttons block: Show a preview of each service when hovering it in the block inserter.
 - Shortcodes: Add a title to YouTube embed iframes so screen readers can announce them.
+- Social: Focus Cancel first in the Delete confirmation for a scheduled share, so pressing Enter no longer deletes it.
 - Social: Respect the connections chosen for sharing when a post is published through the API.
 - Stats: Fix the Stats v2 Settings link for switching Stats off on WordPress.com Personal and Premium sites, which led back to Stats.
 - VideoPress: Fix incorrect video statistics on sites configured to use HTML query separators.
