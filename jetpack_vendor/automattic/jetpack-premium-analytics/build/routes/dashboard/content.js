@@ -346,6 +346,11 @@ __( "Thank you for using Jetpack Stats!", "jetpack-premium-analytics-pkg" );
 __( "You’ll now get instant access to upcoming features and priority support.", "jetpack-premium-analytics-pkg" );
 __( "You’ll stop seeing the upgrade banners and get Email support if applicable.", "jetpack-premium-analytics-pkg" );
 __( "We appreciate your continued support. If you want to access upcoming features, <link>please consider upgrading</link>.", "jetpack-premium-analytics-pkg" );
+__( "Connect your cookie banner to Stats", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the name of a cookie banner plugin, such as CookieYes. */
+__( "Stats uses the free WP Consent API plugin to follow what visitors choose in %s. Until it’s active, Stats may count visitors who decline.", "jetpack-premium-analytics-pkg" );
+__( "Stats uses the free WP Consent API plugin to follow what visitors choose in your cookie banner. Until it’s active, Stats may count visitors who decline.", "jetpack-premium-analytics-pkg" );
+__( "Set up", "jetpack-premium-analytics-pkg" );
 __( "Settings", "jetpack-premium-analytics-pkg" );
 __( "Tell us what's better, what's worse, and what you miss about the new Stats.", "jetpack-premium-analytics-pkg" );
 __( "Leave feedback", "jetpack-premium-analytics-pkg" );
@@ -372,6 +377,9 @@ __( "Try again", "jetpack-premium-analytics-pkg" );
 /* translators: %d: the step's number, 1 or 2. */
 __( "Step %d", "jetpack-premium-analytics-pkg" );
 __( "Active", "jetpack-premium-analytics-pkg" );
+__( "You do not have permission to activate plugins here. Ask whoever manages plugins on this site to activate WP Consent API.", "jetpack-premium-analytics-pkg" );
+__( "Plugins cannot be installed here due to your site configuration. Install WP Consent API using your normal deployment workflow.", "jetpack-premium-analytics-pkg" );
+__( "You do not have permission to install plugins here. Ask whoever manages plugins on this site to install WP Consent API.", "jetpack-premium-analytics-pkg" );
 __( "WP Consent API is active.", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the reason WordPress gave. */
 __( "WP Consent API could not be set up: %s", "jetpack-premium-analytics-pkg" );
@@ -380,9 +388,6 @@ __( "Activating WP Consent API…", "jetpack-premium-analytics-pkg" );
 __( "Installing WP Consent API…", "jetpack-premium-analytics-pkg" );
 __( "Activate", "jetpack-premium-analytics-pkg" );
 __( "Install and activate", "jetpack-premium-analytics-pkg" );
-__( "You do not have permission to activate plugins here. Ask whoever manages plugins on this site to activate WP Consent API.", "jetpack-premium-analytics-pkg" );
-__( "Plugins cannot be installed here due to your site configuration. Install WP Consent API using your normal deployment workflow.", "jetpack-premium-analytics-pkg" );
-__( "You do not have permission to install plugins here. Ask whoever manages plugins on this site to install WP Consent API.", "jetpack-premium-analytics-pkg" );
 __( "Tells Stats what each visitor chose.", "jetpack-premium-analytics-pkg" );
 __( "Optional. Your cookie banner already asks visitors before Stats counts them.", "jetpack-premium-analytics-pkg" );
 __( "A free plugin that tells Stats what each visitor chose. Once it’s active, visitors who decline aren’t counted, so your views will likely drop.", "jetpack-premium-analytics-pkg" );
@@ -392,7 +397,6 @@ __( "A cookie banner plugin is active.", "jetpack-premium-analytics-pkg" );
 /* translators: <plugins /> is a list of cookie banner plugins, such as "Complianz, Cookiebot or CookieYes". */
 __( "Stats didn’t find one. If you use a cookie banner, make sure it supports the WP Consent API. If not, install one, such as <plugins />.", "jetpack-premium-analytics-pkg" );
 __( "Visitor consent", "jetpack-premium-analytics-pkg" );
-__( "Set up", "jetpack-premium-analytics-pkg" );
 __( "Not set up", "jetpack-premium-analytics-pkg" );
 __( "Stats only counts visitors who allow it in your cookie banner.", "jetpack-premium-analytics-pkg" );
 __( "If you show visitors a cookie banner, Stats can only count visitors who allow it. It takes two steps:", "jetpack-premium-analytics-pkg" );
