@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Keep the path and query parameters of requests proxied to WordPress.com unchanged when they are signed.
 - Safe Mode: Fix the window in My Jetpack opening empty, with no choices.
 - Tracking: Identify a connected user by their WordPress.com ID when it has not been saved yet, instead of falling back to an anonymous ID.
 
