@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Features: Turn a feature on when its account connection, started from its Connect button, returns to Features.
 
 ### Changed
+- Boost: Say "Checking site speed…" instead of "Calculating…" while the speed score loads.
 - Connection: Report connection events with the `my-jetpack` context and a placement for the header, the connection card and the page notice.
 - Features: Keep a plugin's switch busy until its card has refreshed after turning the plugin on or off, and show the success message once the card is up to date.
 - Features: On block themes, link the Sharing and Likes cards to Settings > Sharing, where the blocks can be placed in a click, instead of the Site Editor.
