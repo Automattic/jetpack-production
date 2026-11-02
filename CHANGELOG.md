@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 16.5-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Update package dependencies.
+
 ## 16.4-beta - 2026-11-02
 ### Enhancements
 - Debugging Center: Add links to troubleshooting guides and clarify the troubleshooting steps. [#53544]
