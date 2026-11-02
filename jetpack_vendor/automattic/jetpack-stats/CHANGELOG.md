@@ -5,14 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.24.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.24.0] - 2026-11-02
 ### Changed
-- Abilities: get-visits takes and returns `period` and `num`, matching get-top-content and get-post-views, in place of `unit` and `quantity`.
-- Abilities: Report counts WordPress.com could not supply as null instead of 0, and name the site that was read in every Stats reader's response.
-- Tracking pixel: Honor the WP Consent API on every site, so visitors who have not allowed statistics cookies are not counted, and remove the honor_cookie_consent option. Without the WP Consent API plugin, tracking is unchanged.
+- Abilities: get-visits takes and returns `period` and `num`, matching get-top-content and get-post-views, in place of `unit` and `quantity`. [#54227]
+- Abilities: Report counts WordPress.com could not supply as null instead of 0, and name the site that was read in every Stats reader's response. [#54231]
+- Tracking pixel: Honor the WP Consent API on every site, so visitors who have not allowed statistics cookies are not counted, and remove the honor_cookie_consent option. Without the WP Consent API plugin, tracking is unchanged. [#54187]
 
 ## [0.23.2] - 2026-10-28
 ### Fixed
@@ -417,7 +414,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
-[0.24.0-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.23.2...v0.24.0-alpha
+[0.24.0]: https://github.com/Automattic/jetpack-stats/compare/v0.23.2...v0.24.0
 [0.23.2]: https://github.com/Automattic/jetpack-stats/compare/v0.23.1...v0.23.2
 [0.23.1]: https://github.com/Automattic/jetpack-stats/compare/v0.23.0...v0.23.1
 [0.23.0]: https://github.com/Automattic/jetpack-stats/compare/v0.22.1...v0.23.0
