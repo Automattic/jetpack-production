@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Explain on the React version of Settings > Sharing that the block placement applies to pages too, and what editing the page template is for.
 - Sharing settings: Reword the notice shown on private sites to say that some sharing services aren't available.
 - Show the React version of Settings > Sharing by default. Return false from the `rsm_jetpack_ui_modernization_sharing_likes` filter to keep the PHP screen.
+- Template placements: Start the Sharing Buttons block on X, Facebook and Mastodon, or on WordPress, X and Facebook on WordPress.com, and carry a legacy Press This button over as the WordPress button.
 - Update package dependencies.
 
 ### Fixed
