@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Open My Jetpack instead of Settings for administrators on sites in Offline Mode, without connecting to WordPress.com.
 - My Jetpack: Open the Jetpack Connection details on the Connectors screen from the header's Manage connection link.
 - Premium Analytics: Draw negative values below zero in ranked bar charts, show the right direction of change when the previous value was negative, and size list bars to the current period when comparing.
+- Premium Analytics: Draw the previous period in the Traffic summary only when it is switched on from the chart legend.
 - Premium Analytics: Offer "Mark as spam" from the Top referrers widget rows, as the Referrers report does.
 - Premium Analytics: Offer the UTM Build URL dialog in the Top UTM card footer and on the UTM report page, so sites with UTM visits can open it too.
 - Scan: Stop showing threat alerts in the admin menu, admin bar, and My Jetpack on WordPress.com-hosted (Atomic) sites.
