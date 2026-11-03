@@ -245,6 +245,8 @@ __( "Example: email, social, cpc", "jetpack-premium-analytics-pkg" );
 __( "Use your generated URLs in social posts, emails, or ads. Jetpack Stats will track UTM codes, giving you accurate insights into your traffic.", "jetpack-premium-analytics-pkg" );
 __( "Copied!", "jetpack-premium-analytics-pkg" );
 __( "Copy to clipboard", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the title of a post or page. */
+__( "Build URL for \"%s\"", "jetpack-premium-analytics-pkg" );
 __( "Unpaid", "jetpack-premium-analytics-pkg" );
 __( "Payment is on hold until the end of the current month.", "jetpack-premium-analytics-pkg" );
 __( "Paid", "jetpack-premium-analytics-pkg" );

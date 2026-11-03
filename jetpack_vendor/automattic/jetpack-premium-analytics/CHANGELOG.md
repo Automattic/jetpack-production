@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Single-report pages: Serve the video page from /report/video/<id>, rendered from its registered record; the old /video/<id> address redirects.
+- Top UTM: Open the Build URL dialog from a post row in the Top UTM card and on the UTM report page, with the post URL and the row's UTM values already filled in.
 
 ### Changed
 - Settings: Explain in the Visitor consent card that views may drop once Stats follows visitor consent.
