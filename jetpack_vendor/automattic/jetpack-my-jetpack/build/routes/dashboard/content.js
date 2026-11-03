@@ -704,6 +704,11 @@ __( "Your site can now earn revenue by displaying high-quality ads.", "jetpack-m
 _x( "%1$s activated! %2$s", "Message shown when a module is activated. 1: Module name, 2: The benefit of the module", "jetpack-my-jetpack" );
 /* translators: %s: Jetpack module name */
 _x( "%s has been activated.", "%s: Jetpack module name", "jetpack-my-jetpack" );
+__( "Active Blaze campaigns are still running", "jetpack-my-jetpack" );
+__( "Disabling this setting only hides the Blaze interface. Your campaigns will continue to serve ads, and you will continue to be charged. To stop your campaigns, open campaign management.", "jetpack-my-jetpack" );
+__( "Disable anyway", "jetpack-my-jetpack" );
+__( "Manage campaigns", "jetpack-my-jetpack" );
+__( "Keep Blaze enabled", "jetpack-my-jetpack" );
 /* translators: %s is the module name */
 __( "%s has been deactivated.", "jetpack-my-jetpack" );
 /* translators: %s is the module name */
