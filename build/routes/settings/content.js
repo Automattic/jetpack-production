@@ -535,6 +535,9 @@ _x( "In \"Mobile\"", "It refers to the category where a post was found. Used in 
 __( "The WordPress for Android App Gets a Big Facelift", "jetpack" );
 __( "Upgrade Focus: VideoPress For Weddings", "jetpack" );
 _x( "In \"Upgrade\"", "It refers to the category where a post was found. Used in an example preview.", "jetpack" );
+__( "Related posts", "jetpack" );
+__( "Open the Related posts settings", "jetpack" );
+__( "The Related posts settings are now in Features, in My Jetpack.", "jetpack" );
 __( "Account Name", "jetpack" );
 __( "See less", "jetpack" );
 __( "See more", "jetpack" );

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a settings panel that Configure on a More Features row opens, behind a feature flag that is off by default.
+- Settings panel: Add the Related Posts options, behind the settings flag.
 
 ### Fixed
 - Connection: Stop sending a broken return URL when connecting the site from a product card or notice.

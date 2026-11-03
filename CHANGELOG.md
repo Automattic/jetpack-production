@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: List Stats v2 in the WordPress.com sidebar, and once the classic Stats page is retired, open Stats v2 from old Stats links and stop offering to switch back to classic Stats.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Settings: Replace the Related Posts card with a pointer to its new panel, behind the settings flag.
 - Update package dependencies.
 
 ## 16.4 - 2026-11-03
