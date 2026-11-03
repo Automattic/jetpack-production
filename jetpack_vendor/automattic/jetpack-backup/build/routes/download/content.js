@@ -121,4 +121,4 @@ __( "Generate download", "jetpack-backup-pkg" );
 __( "Preparing your download", "jetpack-backup-pkg" );
 __( "Reconnecting…", "jetpack-backup-pkg" );
 __( "Could not prepare the download", "jetpack-backup-pkg" );
-__( "Contact support", "jetpack-backup-pkg" );
+__( "How to fix a failed download", "jetpack-backup-pkg" );

@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Backup: Link the failed download screen to a guide on how to fix it.
 - Premium Analytics: Explain in the Visitor consent settings that views may drop once Stats follows visitor consent.
 - Premium Analytics: Serve the video page from /report/video/<id>; the old /video/<id> address redirects.
 - Premium Analytics: When a date range allows only one chart interval, open its menu anyway and say how a longer range adds more.
