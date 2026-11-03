@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.15.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Connection: Stop sending a broken return URL when connecting the site from a product card or notice.
+
 ## [6.15.0] - 2026-11-02
 ### Added
 - Add a feature flag for consolidating settings in My Jetpack, off by default. [#54376]
@@ -3196,6 +3203,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[6.15.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.15.0...6.15.1-alpha
 [6.15.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.14.0...6.15.0
 [6.14.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.13.0...6.14.0
 [6.13.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.12.0...6.13.0

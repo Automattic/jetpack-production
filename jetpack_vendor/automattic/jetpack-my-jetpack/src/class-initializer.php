@@ -47,7 +47,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '6.15.0';
+	const PACKAGE_VERSION = '6.15.1-alpha';
 
 	/**
 	 * Feature flag that swaps the single-screen onboarding takeover for the setup wizard.
