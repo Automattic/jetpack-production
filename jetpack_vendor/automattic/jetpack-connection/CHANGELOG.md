@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Check the user's capability before requesting a user token, so a user without it can retry the connection instead of being left half-connected on WordPress.com.
+
 ## [9.16.0] - 2026-11-02
 ### Added
 - Connectors: Open the Jetpack Connection card with its details expanded when a link to the Connectors screen asks for it. [#54276]
