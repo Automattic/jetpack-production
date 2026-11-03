@@ -1248,6 +1248,8 @@ __( "Jetpack Security provides easy-to-use, comprehensive WordPress site securit
 __( "Secure your site", "jetpack-my-jetpack" );
 __( "Learn more about Jetpack Security", "jetpack-my-jetpack" );
 __( "Checking gold status…", "jetpack-my-jetpack" );
+__( "Activate this feature", "jetpack-my-jetpack" );
+__( "Manage in Settings", "jetpack-my-jetpack" );
 __( "Big iPhone/iPad Update Now Available", "jetpack-my-jetpack" );
 _x( "In \"Mobile\"", "It refers to the category where a post was found. Used in an example preview.", "jetpack-my-jetpack" );
 __( "The WordPress for Android App Gets a Big Facelift", "jetpack-my-jetpack" );
@@ -1262,7 +1264,5 @@ __( "Keep your visitors engaged with related content at the bottom of each post.
 __( "Show related content after posts", "jetpack-my-jetpack" );
 __( "Highlight related content with a heading", "jetpack-my-jetpack" );
 __( "Show a thumbnail image where available", "jetpack-my-jetpack" );
-__( "Activate this feature", "jetpack-my-jetpack" );
-__( "Manage in Settings", "jetpack-my-jetpack" );
 __( "Failed to get feature settings", "jetpack-my-jetpack" );
 __( "Feature settings", "jetpack-my-jetpack" );
