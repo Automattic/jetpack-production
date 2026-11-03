@@ -778,9 +778,9 @@ __( "Security", "jetpack-my-jetpack" );
 __( "Growth", "jetpack-my-jetpack" );
 __( "Other", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
-__( "Learn more about %s", "jetpack-my-jetpack" );
-/* translators: %s is the feature name. */
 __( "Configure %s", "jetpack-my-jetpack" );
+/* translators: %s is the feature name. */
+__( "Learn more about %s", "jetpack-my-jetpack" );
 __( "Change this feature from its own control.", "jetpack-my-jetpack" );
 /* translators: %s is the feature name. */
 __( "Select %s", "jetpack-my-jetpack" );
@@ -1248,3 +1248,7 @@ __( "Jetpack Security provides easy-to-use, comprehensive WordPress site securit
 __( "Secure your site", "jetpack-my-jetpack" );
 __( "Learn more about Jetpack Security", "jetpack-my-jetpack" );
 __( "Checking gold status…", "jetpack-my-jetpack" );
+__( "Activate this feature", "jetpack-my-jetpack" );
+__( "Manage in Settings", "jetpack-my-jetpack" );
+__( "Failed to get feature settings", "jetpack-my-jetpack" );
+__( "Feature settings", "jetpack-my-jetpack" );
