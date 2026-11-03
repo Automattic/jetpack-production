@@ -1257,6 +1257,7 @@ __( "Upgrade Focus: VideoPress For Weddings", "jetpack-my-jetpack" );
 _x( "In \"Upgrade\"", "It refers to the category where a post was found. Used in an example preview.", "jetpack-my-jetpack" );
 _x( "Preview", "A header for a preview area in the configuration screen.", "jetpack-my-jetpack" );
 __( "Related", "jetpack-my-jetpack" );
+__( "Updated settings.", "jetpack-my-jetpack" );
 __( "Failed to save the setting.", "jetpack-my-jetpack" );
 __( "Add a Related Posts Block to your site’s template in the site editor", "jetpack-my-jetpack" );
 __( "Configure related posts in the Customizer", "jetpack-my-jetpack" );
