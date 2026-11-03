@@ -3968,7 +3968,6 @@ Markdown is a text formatting syntax that is converted into HTML. You can _empha
     'supports' => 
     array (
       'align' => true,
-      'alignWide' => false,
       'html' => false,
     ),
     'attributes' => 
