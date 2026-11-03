@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Send the PayPal partner attribution header on every PayPal API call, whether made from the site or through WordPress.com.
+- Update dependencies.
 
 ## [0.13.3] - 2026-11-02
 ### Changed
