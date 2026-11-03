@@ -8,12 +8,14 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Premium Analytics: Explain in the Visitor consent settings that views may drop once Stats follows visitor consent.
+- Premium Analytics: Serve the video page from /report/video/<id>; the old /video/<id> address redirects.
 - Premium Analytics: When a date range allows only one chart interval, open its menu anyway and say how a longer range adds more.
 - SEO: Add an SEO page under Jetpack that brings search visibility, titles and descriptions, sitemaps, site verification, structured data, and AI crawler settings together in one place.
 - SEO: Add more AI crawlers to the GEO tab, block every robots.txt name each one uses, and show those names under each toggle.
 
 ### Bug fixes
 - Premium Analytics: Remove the grey box that appears inside a metric card on hover when a newer version of the WordPress UI library is loaded.
+- Premium Analytics: Reopen a date control on the calendar when the applied range is custom.
 - Premium Analytics: Stop store money charts repeating y-axis labels, such as $1, $1, $2, when the store shows fewer decimals than its amounts carry.
 - Stats: List Stats v2 in the WordPress.com sidebar, and once the classic Stats page is retired, open Stats v2 from old Stats links and stop offering to switch back to classic Stats.
 

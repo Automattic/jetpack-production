@@ -23,7 +23,7 @@ use Automattic\Jetpack\WP_Build_Polyfills\WP_Build_Polyfills;
  */
 class Analytics {
 
-	const PACKAGE_VERSION = '0.16.1-alpha';
+	const PACKAGE_VERSION = '0.17.0-alpha';
 
 	/**
 	 * Whether the class has been initialized.
@@ -361,8 +361,9 @@ class Analytics {
 		require_once __DIR__ . '/default-dashboard-sections.php';
 		configure_dashboard_sections_script_data();
 
-		// Single-report page API; other plugins and, later, the package register pages through it.
+		// Single-report page API, then the package's own pages registered through it.
 		require_once __DIR__ . '/single-report-pages.php';
+		require_once __DIR__ . '/default-single-report-pages.php';
 		configure_single_report_pages_script_data();
 
 		// Default-on CSV export settings and server-side disable filter.
@@ -572,7 +573,7 @@ class Analytics {
 	 *
 	 * Loads the section registry but not the build: the menu capability depends on the sections.
 	 *
-	 * @since 0.16.1-alpha
+	 * @since 0.17.0-alpha
 	 *
 	 * @return void
 	 */

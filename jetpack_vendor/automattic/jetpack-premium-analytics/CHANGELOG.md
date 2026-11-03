@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.16.1-alpha] - unreleased
+## [0.17.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Single-report pages: Serve the video page from /report/video/<id>, rendered from its registered record; the old /video/<id> address redirects.
 
 ### Changed
 - Settings: Explain in the Visitor consent card that views may drop once Stats follows visitor consent.
@@ -19,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Metric cards: Remove the grey box that appears inside a metric card on hover when a newer version of the WordPress UI library is loaded.
+- Report params field: Reopen the period menu on the calendar when the applied range is custom.
 - Settings: Reset the Reader views setting to its default on a null write, instead of turning it off.
 - Stats: List Stats v2 in the WordPress.com sidebar, and once the classic Stats page is retired, open Stats v2 from old Stats links and stop offering to switch back to classic Stats.
 - Store: Stop money charts repeating y-axis labels, such as $1, $1, $2, when the store shows fewer decimals than its amounts carry.
@@ -731,7 +735,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
-[0.16.1-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.16.0...0.16.1-alpha
+[0.17.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.16.0...0.17.0-alpha
 [0.16.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.15.0...0.16.0
 [0.15.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.14.0...0.15.0
 [0.14.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.13.0...0.14.0

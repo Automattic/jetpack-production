@@ -43,6 +43,13 @@ return array(
 		'has_content' => true,
 	),
 	array(
+		'name'        => 'single-report',
+		'path'        => '/report/$kind/$id',
+		'page'        => 'jetpack-premium-analytics',
+		'has_route'   => true,
+		'has_content' => true,
+	),
+	array(
 		'name'        => 'upgrade',
 		'path'        => '/upgrade',
 		'page'        => 'jetpack-premium-analytics',
@@ -54,6 +61,6 @@ return array(
 		'path'        => '/video/$videoId',
 		'page'        => 'jetpack-premium-analytics',
 		'has_route'   => true,
-		'has_content' => true,
+		'has_content' => false,
 	)
 );

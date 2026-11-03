@@ -194,6 +194,7 @@ __( "Optional", "jetpack-premium-analytics-pkg" );
 __( "More details follow the field.", "jetpack-premium-analytics-pkg" );
 __( "Select", "jetpack-premium-analytics-pkg" );
 __( "Dismiss", "jetpack-premium-analytics-pkg" );
+__( "Sections", "jetpack-premium-analytics-pkg" );
 __( "More options", "jetpack-premium-analytics-pkg" );
 __( "Reset to default…", "jetpack-premium-analytics-pkg" );
 __( "Add widget", "jetpack-premium-analytics-pkg" );
@@ -429,6 +430,7 @@ __( "Use available width", "jetpack-premium-analytics-pkg" );
 __( "Make full width", "jetpack-premium-analytics-pkg" );
 __( "More", "jetpack-premium-analytics-pkg" );
 __( "Widget controls", "jetpack-premium-analytics-pkg" );
+__( "Date range", "jetpack-premium-analytics-pkg" );
 /* translators: %1$s and %2$s: the report range bounds, e.g. "Jul 9, 2026". */
 __( "Performance from %1$s to %2$s", "jetpack-premium-analytics-pkg" );
 __( "Loading…", "jetpack-premium-analytics-pkg" );
@@ -436,6 +438,9 @@ __( "Video not found", "jetpack-premium-analytics-pkg" );
 __( "Video unavailable", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the video upload date, e.g. "Aug 19, 2025". */
 __( "Video uploaded on %s.", "jetpack-premium-analytics-pkg" );
-__( "We couldn't load this video. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't find this video.", "jetpack-premium-analytics-pkg" );
-__( "Back to Videos", "jetpack-premium-analytics-pkg" );
+__( "We couldn't load this page. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
+__( "We couldn't find what you were looking for.", "jetpack-premium-analytics-pkg" );
+/* translators: %s: the reports page's name, e.g. "Videos". */
+__( "Back to %s", "jetpack-premium-analytics-pkg" );
+__( "Customizing", "jetpack-premium-analytics-pkg" );
