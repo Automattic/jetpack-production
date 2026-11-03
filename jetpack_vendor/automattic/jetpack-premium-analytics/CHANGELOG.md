@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Remove the include guards and stubs kept for a second copy of the package loading in the same request; the autoloader now serves one copy per request.
 
+### Fixed
+- Store: Stop money charts repeating y-axis labels, such as $1, $1, $2, when the store shows fewer decimals than its amounts carry.
+
 ## [0.16.0] - 2026-11-02
 ### Added
 - Dashboard: Invite sites whose cookie banner Stats cannot read yet to finish the Visitor consent setup in Settings. [#54195]

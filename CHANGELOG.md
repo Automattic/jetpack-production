@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Add an SEO page under Jetpack that brings search visibility, titles and descriptions, sitemaps, site verification, structured data, and AI crawler settings together in one place.
 - SEO: Add more AI crawlers to the GEO tab, block every robots.txt name each one uses, and show those names under each toggle.
 
+### Bug fixes
+- Premium Analytics: Stop store money charts repeating y-axis labels, such as $1, $1, $2, when the store shows fewer decimals than its amounts carry.
+
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Update package dependencies.
 
