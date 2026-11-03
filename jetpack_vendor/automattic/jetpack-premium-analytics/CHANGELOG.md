@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Explain in the Visitor consent card that views may drop once Stats follows visitor consent.
 - When a date range allows only one chart interval, open its menu anyway and say how a longer range adds more.
 
+### Removed
+- Remove the include guards and stubs kept for a second copy of the package loading in the same request; the autoloader now serves one copy per request.
+
 ## [0.16.0] - 2026-11-02
 ### Added
 - Dashboard: Invite sites whose cookie banner Stats cannot read yet to finish the Visitor consent setup in Settings. [#54195]
