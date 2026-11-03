@@ -966,7 +966,7 @@ __( "There was a problem enabling the new SEO experience.", "jetpack-my-jetpack"
 __( "Enabling…", "jetpack-my-jetpack" );
 __( "Try the new SEO experience", "jetpack-my-jetpack" );
 __( "A fresh way to manage your SEO", "jetpack-my-jetpack" );
-__( "Jetpack SEO now has a dedicated dashboard to manage sitemaps, search-engine visibility, social previews, and site verification — all in one place. Switch over whenever you like; your existing settings come with you.", "jetpack-my-jetpack" );
+__( "Jetpack SEO now has a dedicated dashboard to manage sitemaps, search-engine visibility, social previews, and site verification — all in one place. Switching also enables Jetpack SEO tools if they are off. Your existing settings are kept.", "jetpack-my-jetpack" );
 __( "There was a problem dismissing the Automattic for Agencies banner.", "jetpack-my-jetpack" );
 __( "Are you an agency or freelancer?", "jetpack-my-jetpack" );
 __( "Automattic for Agencies is the ultimate partnership to access agency pricing, referral earnings, partner badges, and powerful tooling for agencies using WordPress.com, Pressable, WooCommerce, Jetpack, and more. Joining is free.", "jetpack-my-jetpack" );

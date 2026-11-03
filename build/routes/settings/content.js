@@ -591,7 +591,7 @@ __( "Facebook", "jetpack" );
 __( "X", "jetpack" );
 _x( "Use the new experience", "Button caption", "jetpack" );
 __( "SEO has a new home", "jetpack" );
-__( "Manage all of your search engine optimization from the redesigned Jetpack SEO dashboard.", "jetpack" );
+__( "Manage all of your search engine optimization from the redesigned Jetpack SEO dashboard. Switching also enables Jetpack SEO tools if they are off. Your existing settings are kept.", "jetpack" );
 __( "Something went wrong while switching to the new experience. Please try again.", "jetpack" );
 _x( "WP.me Shortlinks", "Settings header", "jetpack" );
 __( "Generate shortened URLs for simpler sharing.", "jetpack" );
