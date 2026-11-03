@@ -11,6 +11,7 @@ __( "Loading" );
 __( "Keyboard shortcut: %s" );
 /* translators: accessibility text appended to link text */
 __( "(opens in a new tab)" );
+__( "More details follow the field." );
 __( "Dismiss" );
 __( "We couldn’t load this page", "jetpack-seo" );
 __( "This is usually temporary. Give it another try.", "jetpack-seo" );
@@ -62,7 +63,7 @@ __( "Blocked", "jetpack-seo" );
 __( "Partly blocked", "jetpack-seo" );
 __( "AI crawler access", "jetpack-seo" );
 __( "Set by your privacy settings while third-party sharing is turned off.", "jetpack-seo" );
-/* translators: %s: AI crawler name, e.g. "ChatGPT (GPTBot)". */
+/* translators: %s: AI crawler name, e.g. "ChatGPT". */
 __( "Block %s", "jetpack-seo" );
 __( "View your robots.txt", "jetpack-seo" );
 __( "Block all", "jetpack-seo" );
