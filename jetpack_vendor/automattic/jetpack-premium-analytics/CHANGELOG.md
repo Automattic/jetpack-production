@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Metric cards: Remove the grey box that appears inside a metric card on hover when a newer version of the WordPress UI library is loaded.
+- Settings: Reset the Reader views setting to its default on a null write, instead of turning it off.
 - Store: Stop money charts repeating y-axis labels, such as $1, $1, $2, when the store shows fewer decimals than its amounts carry.
 
 ## [0.16.0] - 2026-11-02
