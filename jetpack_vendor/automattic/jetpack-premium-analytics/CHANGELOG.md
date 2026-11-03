@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Settings: Explain in the Visitor consent card that views may drop once Stats follows visitor consent.
+- When a date range allows only one chart interval, open its menu anyway and say how a longer range adds more.
 
 ## [0.16.0] - 2026-11-02
 ### Added

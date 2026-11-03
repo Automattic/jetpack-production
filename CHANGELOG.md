@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Premium Analytics: Explain in the Visitor consent settings that views may drop once Stats follows visitor consent.
+- Premium Analytics: When a date range allows only one chart interval, open its menu anyway and say how a longer range adds more.
 - SEO: Add an SEO page under Jetpack that brings search visibility, titles and descriptions, sitemaps, site verification, structured data, and AI crawler settings together in one place.
 - SEO: Add more AI crawlers to the GEO tab, block every robots.txt name each one uses, and show those names under each toggle.
 
