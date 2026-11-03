@@ -158,6 +158,5 @@ __( "Tags & categories", "jetpack-premium-analytics-pkg" );
 __( "Videos", "jetpack-premium-analytics-pkg" );
 __( "All UTM values", "jetpack-premium-analytics-pkg" );
 __( "Referrers", "jetpack-premium-analytics-pkg" );
-__( "Post traffic", "jetpack-premium-analytics-pkg" );
 __( "Email opens", "jetpack-premium-analytics-pkg" );
 __( "Email clicks", "jetpack-premium-analytics-pkg" );

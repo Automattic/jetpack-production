@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Top UTM: Open the Build URL dialog from a post row in the Top UTM card and on the UTM report page, with the post URL and the row's UTM values already filled in.
 
 ### Changed
+- Post detail: Name the traffic tab and the highlights and views cards for the content type, such as Product traffic.
 - Settings: Explain in the Visitor consent card that views may drop once Stats follows visitor consent.
 - Stats links: Open the dashboard on the section and the days a link names, so the admin bar's "View all stats" shows the 7 days its chart does.
 - When a date range allows only one chart interval, open its menu anyway and say how a longer range adds more.

@@ -105,6 +105,7 @@ __( "Slide %1$d of %2$d", "jetpack-premium-analytics-pkg" );
 __( "Slide %1$d of %2$d: %3$s", "jetpack-premium-analytics-pkg" );
 __( "Take a quick tour", "jetpack-premium-analytics-pkg" );
 __( "Next", "jetpack-premium-analytics-pkg" );
+__( "Loading…", "jetpack-premium-analytics-pkg" );
 /* translators: 1: the current step number, 2: the number of steps in the tour. */
 __( "%1$d of %2$d", "jetpack-premium-analytics-pkg" );
 __( "Skip tour", "jetpack-premium-analytics-pkg" );
