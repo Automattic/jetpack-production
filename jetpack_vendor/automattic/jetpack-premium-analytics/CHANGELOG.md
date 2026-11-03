@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.16.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Settings: Explain in the Visitor consent card that views may drop once Stats follows visitor consent.
+
 ## [0.16.0] - 2026-11-02
 ### Added
 - Dashboard: Invite sites whose cookie banner Stats cannot read yet to finish the Visitor consent setup in Settings. [#54195]
@@ -713,6 +720,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
+[0.16.1-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.16.0...0.16.1-alpha
 [0.16.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.15.0...0.16.0
 [0.15.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.14.0...0.15.0
 [0.14.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.13.0...0.14.0

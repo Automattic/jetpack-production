@@ -390,16 +390,16 @@ __( "Activate", "jetpack-premium-analytics-pkg" );
 __( "Install and activate", "jetpack-premium-analytics-pkg" );
 __( "Tells Stats what each visitor chose.", "jetpack-premium-analytics-pkg" );
 __( "Optional. Your cookie banner already asks visitors before Stats counts them.", "jetpack-premium-analytics-pkg" );
-__( "A free plugin that tells Stats what each visitor chose. Once it’s active, visitors who decline aren’t counted, so your views will likely drop.", "jetpack-premium-analytics-pkg" );
+__( "A free plugin that tells Stats what each visitor chose. Once it’s active, visitors who decline or haven’t chosen yet aren’t counted, so your views will likely drop.", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the name of a cookie banner plugin, such as CookieYes. */
 __( "%s is active.", "jetpack-premium-analytics-pkg" );
 __( "A cookie banner plugin is active.", "jetpack-premium-analytics-pkg" );
 /* translators: <plugins /> is a list of cookie banner plugins, such as "Complianz, Cookiebot or CookieYes". */
-__( "Stats didn’t find one. If you use a cookie banner, make sure it supports the WP Consent API. If not, install one, such as <plugins />.", "jetpack-premium-analytics-pkg" );
+__( "Stats didn’t find one. If you use a cookie banner, make sure it supports the WP Consent API. If you don’t have one, install one that does, such as <plugins />.", "jetpack-premium-analytics-pkg" );
 __( "Visitor consent", "jetpack-premium-analytics-pkg" );
 __( "Not set up", "jetpack-premium-analytics-pkg" );
-__( "Stats only counts visitors who allow it in your cookie banner.", "jetpack-premium-analytics-pkg" );
-__( "If you show visitors a cookie banner, Stats can only count visitors who allow it. It takes two steps:", "jetpack-premium-analytics-pkg" );
+__( "Stats only counts visitors who allow it in your cookie banner, so your views may be lower than before.", "jetpack-premium-analytics-pkg" );
+__( "If you show visitors a cookie banner, Stats can follow what they choose and only count those who allow it. It takes two steps:", "jetpack-premium-analytics-pkg" );
 __( "Not found", "jetpack-premium-analytics-pkg" );
 __( "Cookie banner plugin", "jetpack-premium-analytics-pkg" );
 __( "Inactive", "jetpack-premium-analytics-pkg" );
