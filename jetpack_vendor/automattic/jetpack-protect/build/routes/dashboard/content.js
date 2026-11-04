@@ -642,8 +642,13 @@ __( "Checking %1$s, %2$s and your site’s files for threats.", "jetpack-protect
 __( "Checking %1$s and %2$s for vulnerabilities.", "jetpack-protect-pkg" );
 __( "You can leave this page — the scan carries on.", "jetpack-protect-pkg" );
 __( "Check again", "jetpack-protect-pkg" );
+__( "Your last scan didn’t complete", "jetpack-protect-pkg" );
+__( "We can’t confirm your site is free of threats until a scan finishes.", "jetpack-protect-pkg" );
+__( "Your site hasn’t been checked yet", "jetpack-protect-pkg" );
+__( "Check your plugins and themes for known vulnerabilities.", "jetpack-protect-pkg" );
+__( "Your site hasn’t been scanned yet", "jetpack-protect-pkg" );
+__( "Run a scan to check your site for malware and vulnerabilities.", "jetpack-protect-pkg" );
 __( "We couldn’t check your site for vulnerabilities right now.", "jetpack-protect-pkg" );
-__( "Your last scan didn’t complete, so we can’t confirm your site is free of threats.", "jetpack-protect-pkg" );
 __( "Scan site", "jetpack-protect-pkg" );
 __( "All vulnerabilities found", "jetpack-protect-pkg" );
 __( "Plugins checked", "jetpack-protect-pkg" );

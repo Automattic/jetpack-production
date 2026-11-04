@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 
 ### Fixed
+- Scan: Offer a first scan instead of showing "Scanning…" forever when WordPress.com has no scan on record.
 - Scan: Report a slow but successful ignore or unignore as done, and refresh the ignored threats list right after either.
 
 ## [0.5.0] - 2026-11-02
