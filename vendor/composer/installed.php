@@ -380,9 +380,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-my-jetpack' => array(
-            'pretty_version' => '6.16.0-alpha.1793800436',
-            'version' => '6.16.0.0-alpha1793800436',
-            'reference' => 'b384b93280f91d148c74a518716cabfbe7d75276',
+            'pretty_version' => '6.16.0-alpha.1793804641',
+            'version' => '6.16.0.0-alpha1793804641',
+            'reference' => 'a21f285b0a96205f1792ad23199264ccb30512fb',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-my-jetpack',
             'aliases' => array(),

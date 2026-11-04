@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a settings panel that Configure on a More Features row opens, behind a feature flag that is off by default.
+- Settings panel: Add the Carousel settings, behind the settings consolidation flag.
 - Settings panel: Add the Related Posts options, behind the settings flag.
 - Settings panel: Add the SEO opt-in invitation, behind the settings flag.
 - Settings panel: Lock the settings of a feature the site cannot use, and say why, behind the settings flag.
