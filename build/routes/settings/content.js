@@ -627,6 +627,9 @@ __( "Post by email is a quick way to publish new posts without visiting your sit
 __( "Send your new posts to this email address:", "jetpack" );
 __( "Regenerate address", "jetpack" );
 __( "Create address", "jetpack" );
+__( "Post by Email", "jetpack" );
+__( "Open the Post by Email settings", "jetpack" );
+__( "The Post by Email settings are now in Features, in My Jetpack.", "jetpack" );
 __( "Theme enhancements", "jetpack" );
 __( "Loads the next posts automatically when the reader approaches the bottom of the page.", "jetpack" );
 __( "Create a smooth, uninterrupted reading experience by loading more content as visitors scroll to the bottom of your archive pages.", "jetpack" );

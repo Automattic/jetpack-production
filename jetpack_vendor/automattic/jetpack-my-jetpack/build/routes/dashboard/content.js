@@ -1091,6 +1091,14 @@ __( "Show photo Exif metadata in carousel (when available)", "jetpack-my-jetpack
 __( "Exif data shows viewers additional technical details of a photo, like its focal length, aperture, and ISO.", "jetpack-my-jetpack" );
 __( "Show comments area in carousel", "jetpack-my-jetpack" );
 __( "Carousel color scheme", "jetpack-my-jetpack" );
+__( "Post by email is a quick way to publish new posts without visiting your site. We’ll generate a unique email address for you to send your content to, which will then appear on your site just like any other post.", "jetpack-my-jetpack" );
+__( "Learn more about Post by Email", "jetpack-my-jetpack" );
+__( "Connect your WordPress.com account to get your own Post by Email address.", "jetpack-my-jetpack" );
+__( "Send your new posts to this email address:", "jetpack-my-jetpack" );
+__( "Copied!", "jetpack-my-jetpack" );
+_x( "Copy", "verb", "jetpack-my-jetpack" );
+__( "Regenerate address", "jetpack-my-jetpack" );
+__( "Create address", "jetpack-my-jetpack" );
 __( "Big iPhone/iPad Update Now Available", "jetpack-my-jetpack" );
 _x( "In \"Mobile\"", "It refers to the category where a post was found. Used in an example preview.", "jetpack-my-jetpack" );
 __( "The WordPress for Android App Gets a Big Facelift", "jetpack-my-jetpack" );

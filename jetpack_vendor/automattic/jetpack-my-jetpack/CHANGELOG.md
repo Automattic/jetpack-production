@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.17.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Settings panel: Add the Post by Email settings, behind the settings consolidation flag.
+
 ## [6.16.0] - 2026-11-04
 ### Added
 - Add a settings panel that Configure on a More Features row opens, behind a feature flag that is off by default. [#54431]
@@ -3215,6 +3222,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Created package
 
+[6.17.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.16.0...6.17.0-alpha
 [6.16.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.15.0...6.16.0
 [6.15.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.14.0...6.15.0
 [6.14.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.13.0...6.14.0
