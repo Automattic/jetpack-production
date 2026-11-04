@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Scan: Report a slow but successful ignore or unignore as done, and refresh the ignored threats list right after either.
+
 ## [0.5.0] - 2026-11-02
 ### Added
 - Dashboard: Show the email address downtime monitoring alerts go to on the Settings tab. [#54300]
