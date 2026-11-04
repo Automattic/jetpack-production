@@ -29,5 +29,5 @@
 		'wp-theme',
 		'wp-url'
 	),
-	'version' => '3bc11691000bd4ef921b'
+	'version' => 'fc296a6447c59a5e0b1d'
 );
