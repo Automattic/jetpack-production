@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Settings panel: Add the Post by Email settings, behind the settings consolidation flag.
+- Settings panel: Record Tracks events when a module or option is switched, behind the settings consolidation flag.
 
 ## [6.16.0] - 2026-11-04
 ### Added
