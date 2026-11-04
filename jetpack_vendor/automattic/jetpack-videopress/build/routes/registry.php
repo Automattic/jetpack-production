@@ -22,6 +22,20 @@ return array(
 		'has_content' => true,
 	),
 	array(
+		'name'        => 'playlist',
+		'path'        => '/playlists/$key',
+		'page'        => 'jetpack-videopress-dashboard',
+		'has_route'   => true,
+		'has_content' => true,
+	),
+	array(
+		'name'        => 'playlists',
+		'path'        => '/playlists',
+		'page'        => 'jetpack-videopress-dashboard',
+		'has_route'   => true,
+		'has_content' => true,
+	),
+	array(
 		'name'        => 'settings',
 		'path'        => '/settings',
 		'page'        => 'jetpack-videopress-dashboard',

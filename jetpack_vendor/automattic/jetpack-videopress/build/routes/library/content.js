@@ -443,6 +443,7 @@ __( "Chapters cannot start after the video ends.", "jetpack-videopress-pkg" );
 __( "English (auto-generated)", "jetpack-videopress-pkg" );
 __( "Video chapters could not be updated.", "jetpack-videopress-pkg" );
 __( "Library", "jetpack-videopress-pkg" );
+__( "Playlists", "jetpack-videopress-pkg" );
 __( "Stats", "jetpack-videopress-pkg" );
 __( "Settings", "jetpack-videopress-pkg" );
 __( "You’ve reached the free plan’s 1-video limit. Upgrade to upload more.", "jetpack-videopress-pkg" );

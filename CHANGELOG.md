@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Serve the video page from /report/video/<id>; the old /video/<id> address redirects.
 - Premium Analytics: When a date range allows only one chart interval, open its menu anyway and say how a longer range adds more.
 - SEO: Add more AI crawlers to the GEO tab, block every robots.txt name each one uses, and show those names under each toggle.
+- VideoPress: Add a Playlists tab to the dashboard to create, edit, publish and delete your video playlists.
 - Zoom Scheduler block: Update the sign-up and help links, and add wide and full alignment options.
 
 ### Bug fixes
