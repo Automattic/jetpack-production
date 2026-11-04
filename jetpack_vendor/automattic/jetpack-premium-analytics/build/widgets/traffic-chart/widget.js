@@ -8,14 +8,10 @@
 
 __( "Switch to the line chart to see each day.", "jetpack-premium-analytics-pkg" );
 __( "Views", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of views. */
 _n( "%s View", "%s Views", 1, "jetpack-premium-analytics-pkg" );
 __( "Visitors", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of visitors. */
 _n( "%s Visitor", "%s Visitors", 1, "jetpack-premium-analytics-pkg" );
 __( "Comments", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of comments. */
 _n( "%s Comment", "%s Comments", 1, "jetpack-premium-analytics-pkg" );
 __( "Likes", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of likes. */
 _n( "%s Like", "%s Likes", 1, "jetpack-premium-analytics-pkg" );

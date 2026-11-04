@@ -6,21 +6,16 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 __( "Sections", "jetpack-premium-analytics-pkg" );
-/* translators: %1$s is button label 1 and %2$s is button label 2 */
 __( "By clicking <strong>%1$s</strong> or <strong>%2$s</strong>, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-premium-analytics-pkg" );
 __( "By clicking the buttons above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-premium-analytics-pkg" );
-/* translators: %s is a button label */
 __( "By clicking <strong>%s</strong>, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-premium-analytics-pkg" );
 __( "By continuing you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site’s data</shareDetailsLink> with us. We’ll check if that email is linked to an existing WordPress.com account or create a new one instantly.", "jetpack-premium-analytics-pkg" );
 __( "Included", "jetpack-premium-analytics-pkg" );
 __( "Not included", "jetpack-premium-analytics-pkg" );
 __( "Coming soon", "jetpack-premium-analytics-pkg" );
-/* translators: %s: Name of the current feature */
 __( "%s coming soon", "jetpack-premium-analytics-pkg" );
-/* translators: %s: Name of the current feature */
 __( "%s not included", "jetpack-premium-analytics-pkg" );
 __( "Reduced pricing is a limited offer for the first year and renews at regular price.", "jetpack-premium-analytics-pkg" );
 __( "/month, paid yearly", "jetpack-premium-analytics-pkg" );

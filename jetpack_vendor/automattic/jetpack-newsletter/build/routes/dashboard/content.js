@@ -7,23 +7,17 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading", "jetpack-newsletter" );
-/* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-newsletter" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-newsletter" );
 __( "OK", "jetpack-newsletter" );
 __( "Cancel", "jetpack-newsletter" );
 __( "Close", "jetpack-newsletter" );
-__( "More details follow.", "jetpack-newsletter" );
-__( "Dismiss", "jetpack-newsletter" );
-__( "More details follow the field.", "jetpack-newsletter" );
 __( "Sections", "jetpack-newsletter" );
 __( "An Automattic Airline", "jetpack-newsletter" );
 __( "Jetpack Logo", "jetpack-newsletter" );
 __( "Features", "jetpack-newsletter" );
 __( "Help", "jetpack-newsletter" );
 __( "Jetpack", "jetpack-newsletter" );
-/* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-newsletter" );
 __( "View a summary of your newsletter.", "jetpack-newsletter" );
 __( "Manage everyone subscribed to your site.", "jetpack-newsletter" );
@@ -37,13 +31,9 @@ __( "Subscriber management needs a connection to WordPress.com before you can vi
 __( "Connecting…", "jetpack-newsletter" );
 __( "Connect", "jetpack-newsletter" );
 __( "We couldn’t import your subscribers. Check your confirmation email if you received one, or contact support for help.", "jetpack-newsletter" );
-/* translators: %1$d: subscribers imported. %2$d: email addresses that couldn't be added. */
 _n( "Imported %1$d subscriber. %2$d couldn’t be added. Check your confirmation email if you received one, or contact support for help.", "Imported %1$d subscribers. %2$d couldn’t be added. Check your confirmation email if you received one, or contact support for help.", 1, "jetpack-newsletter" );
-/* translators: %1$d: subscribers imported. %2$d: email addresses already subscribed. */
 _n( "%1$d subscriber imported. %2$d already subscribed.", "%1$d subscribers imported. %2$d already subscribed.", 1, "jetpack-newsletter" );
-/* translators: %d: number of subscribers imported. */
 _n( "%d subscriber imported.", "%d subscribers imported.", 1, "jetpack-newsletter" );
-/* translators: %d: number of email addresses that were already subscribed. */
 _n( "%d email address is already subscribed.", "%d email addresses are already subscribed.", 1, "jetpack-newsletter" );
 __( "Your subscribers have been imported.", "jetpack-newsletter" );
 __( "Every newsletter starts at one", "jetpack-newsletter" );
@@ -52,7 +42,6 @@ _x( "Got it", "dismiss button", "jetpack-newsletter" );
 __( "Add subscribers", "jetpack-newsletter" );
 __( "More options", "jetpack-newsletter" );
 __( "Download as CSV", "jetpack-newsletter" );
-/* translators: %d: number of email addresses being imported. */
 _n( "Importing %d subscriber. This may take a few minutes.", "Importing %d subscribers. This may take a few minutes.", 1, "jetpack-newsletter" );
 __( "Import cancelled.", "jetpack-newsletter" );
 __( "Imports of more than 10,000 subscribers will go through a manual review before being added to your site.", "jetpack-newsletter" );
@@ -60,14 +49,12 @@ __( "By clicking “Add subscribers,” you represent that you’ve obtained the
 __( "Add these subscribers to specific categories", "jetpack-newsletter" );
 __( "Categories", "jetpack-newsletter" );
 __( "Type to add categories", "jetpack-newsletter" );
-/* translators: %s: comma-separated list of invalid email addresses. */
 __( "These entries don’t look like valid email addresses and will be skipped: %s", "jetpack-newsletter" );
 __( "Your subscribers are being imported. This may take a few minutes. You can close this window and we’ll notify you when the import is complete.", "jetpack-newsletter" );
 __( "Your recent import is taking longer than expected to complete. If this issue persists, please contact our support team for assistance.", "jetpack-newsletter" );
 __( "Learn more", "jetpack-newsletter" );
 __( "Your recent import is taking longer than expected to complete. Please cancel your import and try again.", "jetpack-newsletter" );
 __( "Cancel import", "jetpack-newsletter" );
-/* translators: %d: number of subscribers to add. */
 _n( "Add %d subscriber", "Add %d subscribers", 1, "jetpack-newsletter" );
 __( "Email addresses", "jetpack-newsletter" );
 __( "Enter one email per line. We’ll automatically clean duplicate, incomplete, outdated, or spammy emails.", "jetpack-newsletter" );
@@ -76,39 +63,33 @@ __( "Drop your CSV file to upload", "jetpack-newsletter" );
 __( "That file type isn’t supported. Please upload a CSV file (.csv, .txt, or .tsv).", "jetpack-newsletter" );
 __( "Could not read the file. Try again.", "jetpack-newsletter" );
 __( "Upload a CSV file with your existing subscribers list from platforms like <beehiiv>Beehiiv</beehiiv>, <ghost>Ghost</ghost>, <kit>Kit</kit>, <mailchimp>Mailchimp</mailchimp>, <medium>Medium</medium>, <patreon>Patreon</patreon>, and many others.", "jetpack-newsletter" );
-/* translators: %1$s: file name. %2$d: number of email addresses found. */
 _n( "Found %2$d email address in %1$s.", "Found %2$d email addresses in %1$s.", 1, "jetpack-newsletter" );
 __( "Bring your Substack publication over: posts, paid plans (when applicable) and subscribers. The Substack importer runs as a guided wizard on WordPress.com.", "jetpack-newsletter" );
 __( "Open Substack importer", "jetpack-newsletter" );
 __( "Manual", "jetpack-newsletter" );
 __( "Upload CSV", "jetpack-newsletter" );
 __( "Substack", "jetpack-newsletter" );
-/* translators: 1: Calendar type. 2: Current month and year. */
 __( "%1$s, %2$s", "jetpack-newsletter" );
 __( "Date calendar", "jetpack-newsletter" );
 __( "Date range calendar", "jetpack-newsletter" );
 __( "Navigation bar", "jetpack-newsletter" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s", "jetpack-newsletter" );
 __( "Next month", "jetpack-newsletter" );
 __( "Previous month", "jetpack-newsletter" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s, selected", "jetpack-newsletter" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected", "jetpack-newsletter" );
 __( "Required", "jetpack-newsletter" );
 __( "Optional", "jetpack-newsletter" );
+__( "More details follow the field.", "jetpack-newsletter" );
 __( "Select", "jetpack-newsletter" );
 __( "Sort ascending", "jetpack-newsletter" );
 __( "Sort descending", "jetpack-newsletter" );
 __( "(no title)", "jetpack-newsletter" );
+_x( "%s…", "menu item requiring further input", "jetpack-newsletter" );
 __( "Actions", "jetpack-newsletter" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item selected", "%s Items selected", 1, "jetpack-newsletter" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item", "%s Items", 1, "jetpack-newsletter" );
-/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
-_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack-newsletter" );
+_n( "%s item selected", "%s items selected", 1, "jetpack-newsletter" );
+_n( "%s item", "%s items", 1, "jetpack-newsletter" );
+_n( "%1$s of %2$s item", "%1$s of %2$s items", 1, "jetpack-newsletter" );
 __( "Deselect all", "jetpack-newsletter" );
 __( "Select all", "jetpack-newsletter" );
 __( "Add filter", "jetpack-newsletter" );
@@ -118,18 +99,13 @@ __( "Insert left", "jetpack-newsletter" );
 __( "Insert right", "jetpack-newsletter" );
 __( "Hide column", "jetpack-newsletter" );
 __( "Properties", "jetpack-newsletter" );
-/* translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022". */
 __( "%1$s: %2$s", "jetpack-newsletter" );
 __( "Navigate to item", "jetpack-newsletter" );
-/* translators: %d: The row number in the grid */
 __( "Row %d", "jetpack-newsletter" );
-/* translators: %s: The label of the field e.g. "Status". */
 __( "%s: <groupName />", "jetpack-newsletter" );
-/* translators: 1: current page number. 2: total number of pages. */
-__( "Page %1$d of %2$d", "jetpack-newsletter" );
-/* translators: 1: Current page number, 2: Total number of pages. */
-_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-newsletter" );
 __( "Current page", "jetpack-newsletter" );
+__( "Page %1$d of %2$d", "jetpack-newsletter" );
+_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-newsletter" );
 __( "Previous page", "jetpack-newsletter" );
 __( "Next page", "jetpack-newsletter" );
 __( "Density", "jetpack-newsletter" );
@@ -142,98 +118,55 @@ __( "Table", "jetpack-newsletter" );
 __( "Grid", "jetpack-newsletter" );
 __( "List", "jetpack-newsletter" );
 __( "Activity", "jetpack-newsletter" );
-/* translators: List of items for a filter. 1: Filter name. e.g.: "List of: Author". */
 __( "List of: %1$s", "jetpack-newsletter" );
 __( "Search items", "jetpack-newsletter" );
 __( "Search", "jetpack-newsletter" );
 __( "No results found", "jetpack-newsletter" );
 __( "No elements found", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Is none of", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is none of: Admin, Editor". */
 __( "<Name>%1$s is none of: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Includes", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is any: Admin, Editor". */
 __( "<Name>%1$s includes: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Includes all", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author includes all: Admin, Editor". */
 __( "<Name>%1$s includes all: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Between (inc)", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Item count"). 2: Filter value min. 3: Filter value max. e.g.: "Item count between (inc): 10 and 180". */
 __( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "In the past", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is in the past: 7 days". */
 __( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Over", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is over: 7 days". */
 __( "<Name>%1$s is over: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Is", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is: Admin". */
 __( "<Name>%1$s is: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Is not", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is not: Admin". */
 __( "<Name>%1$s is not: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Less than", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than: 10". */
 __( "<Name>%1$s is less than: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Greater than", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than: 10". */
 __( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Less than or equal", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than or equal to: 10". */
 __( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Greater than or equal", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than or equal to: 10". */
 __( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Before", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is before: 2024-01-01". */
 __( "<Name>%1$s is before: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "After", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is after: 2024-01-01". */
 __( "<Name>%1$s is after: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Before (inc)", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or before: 2024-01-01". */
 __( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "After (inc)", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or after: 2024-01-01". */
 __( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Contains", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title contains: Hello". */
 __( "<Name>%1$s contains: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Doesn't contain", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title doesn't contain: Hello". */
 __( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Starts with", "jetpack-newsletter" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title starts with: Hello". */
 __( "<Name>%1$s starts with: </Name><Value>%2$s</Value>", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "On", "jetpack-newsletter" );
-/* translators: DataViews operator name */
 __( "Not on", "jetpack-newsletter" );
-/* translators: 1: Filter name e.g.: "Unknown status for Author". */
 __( "Unknown status for %1$s", "jetpack-newsletter" );
 __( "Conditions", "jetpack-newsletter" );
 __( "Reset", "jetpack-newsletter" );
 __( "Remove", "jetpack-newsletter" );
-/* translators: 1: Filter name. */
 __( "Filter by: %1$s", "jetpack-newsletter" );
 _x( "Filter", "verb", "jetpack-newsletter" );
 __( "No results", "jetpack-newsletter" );
@@ -254,7 +187,6 @@ __( "Months ago", "jetpack-newsletter" );
 __( "Years ago", "jetpack-newsletter" );
 __( "Unit", "jetpack-newsletter" );
 __( "Coordinated Universal Time", "jetpack-newsletter" );
-/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
 __( "Timezone: %s", "jetpack-newsletter" );
 __( "Date time", "jetpack-newsletter" );
 __( "Today", "jetpack-newsletter" );
@@ -287,9 +219,7 @@ __( "Value must be an array.", "jetpack-newsletter" );
 __( "Every value must be a string.", "jetpack-newsletter" );
 __( "Value must be a valid color.", "jetpack-newsletter" );
 __( "Apply", "jetpack-newsletter" );
-/* translators: %s: Field name. */
 _x( "Edit %s (has errors)", "field", "jetpack-newsletter" );
-/* translators: %s: Field name. */
 _x( "Edit %s", "field", "jetpack-newsletter" );
 __( "Could not validate elements.", "jetpack-newsletter" );
 __( "Value must be one of the elements.", "jetpack-newsletter" );
@@ -303,18 +233,13 @@ __( "Value is too short.", "jetpack-newsletter" );
 __( "Value is too long.", "jetpack-newsletter" );
 __( "Unknown error when running custom validation.", "jetpack-newsletter" );
 __( "Validating…", "jetpack-newsletter" );
-/* translators: %d: Number of fields that need attention */
 _n( "%d field needs attention", "%d fields need attention", 1, "jetpack-newsletter" );
 __( "More details", "jetpack-newsletter" );
 __( "Confirmation email sent.", "jetpack-newsletter" );
 __( "Couldn't send the confirmation email. Please try again.", "jetpack-newsletter" );
-/* translators: %s: subscriber display name or email. */
 __( "You have unsubscribed %s.", "jetpack-newsletter" );
-/* translators: %d: number of subscribers removed. */
 _n( "You have unsubscribed %d subscriber.", "You have unsubscribed %d subscribers.", 1, "jetpack-newsletter" );
-/* translators: %d: number of subscribers that could not be removed. */
 _n( "%d subscriber could not be removed.", "%d subscribers could not be removed.", 1, "jetpack-newsletter" );
-/* translators: %s: title of the paid plan being comped, e.g. "Comp: Gold". */
 __( "Comp: %s", "jetpack-newsletter" );
 __( "Comp", "jetpack-newsletter" );
 __( "Free", "jetpack-newsletter" );
@@ -347,11 +272,9 @@ __( "No matching subscribers", "jetpack-newsletter" );
 __( "Try adjusting your filters or search to see more subscribers.", "jetpack-newsletter" );
 __( "No subscribers yet", "jetpack-newsletter" );
 __( "<link>Turn your site visitors into subscribers</link> or bring readers in by adding their emails. They’ll start receiving your posts right away.", "jetpack-newsletter" );
-/* translators: %1$s: subscriber name. %2$s: plan title. */
 __( "Comped %1$s on %2$s.", "jetpack-newsletter" );
 __( "Comp added.", "jetpack-newsletter" );
 __( "Could not comp the subscription.", "jetpack-newsletter" );
-/* translators: %1$s: subscriber name. %2$s: plan title. */
 __( "Removed %1$s from %2$s.", "jetpack-newsletter" );
 __( "Comp removed.", "jetpack-newsletter" );
 __( "Could not remove the comp.", "jetpack-newsletter" );
@@ -359,13 +282,10 @@ __( "day", "jetpack-newsletter" );
 __( "week", "jetpack-newsletter" );
 __( "month", "jetpack-newsletter" );
 __( "year", "jetpack-newsletter" );
-/* translators: %1$s: plan title. %2$s: currency code. %3$s: price. */
 __( "%1$s (%2$s %3$s)", "jetpack-newsletter" );
-/* translators: %1$s: plan title. %2$s: currency code. %3$s: price. %4$s: billing cadence, e.g. "year". */
 __( "%1$s (%2$s %3$s / %4$s)", "jetpack-newsletter" );
 __( "This reader already has this plan.", "jetpack-newsletter" );
 __( "Select a plan…", "jetpack-newsletter" );
-/* translators: %s: subscriber display name or email. */
 __( "Comp %s", "jetpack-newsletter" );
 __( "Pick a paid plan and we’ll add a complimentary subscription for this reader.", "jetpack-newsletter" );
 __( "Could not load your paid plans.", "jetpack-newsletter" );
@@ -373,15 +293,11 @@ __( "This subscriber already has a comp on every available plan.", "jetpack-news
 __( "Plan", "jetpack-newsletter" );
 __( "Doesn’t expire", "jetpack-newsletter" );
 __( "Add comp", "jetpack-newsletter" );
-/* translators: %1$s: subscriber name. %2$s: plan title. */
 __( "Remove %1$s from %2$s?", "jetpack-newsletter" );
-/* translators: %s: subscriber name. */
 __( "Remove the complimentary subscription for %s?", "jetpack-newsletter" );
 __( "They’ll lose access to the paid content this comp grants. They’ll keep their free subscription.", "jetpack-newsletter" );
 __( "Remove comp", "jetpack-newsletter" );
-/* translators: %s: subscriber display name or email. */
 __( "Remove %s?", "jetpack-newsletter" );
-/* translators: %d: number of subscribers. */
 _n( "Remove %d subscriber?", "Remove %d subscribers?", 1, "jetpack-newsletter" );
 __( "They'll be unsubscribed from your site, and any paid subscriptions will be cancelled. This can't be undone.", "jetpack-newsletter" );
 __( "Name", "jetpack-newsletter" );
@@ -407,14 +323,10 @@ __( "Featured images will not be used in your emails until the site is public, b
 __( "Edit email design", "jetpack-newsletter" );
 __( "Email design", "jetpack-newsletter" );
 __( "Set the colors, fonts, and layout your subscribers see in their inbox.", "jetpack-newsletter" );
-/* translators: <Empty /> placeholder is set to "Byline will be empty" */
 __( "<Preview>Preview:</Preview> <Empty>Byline will be empty</Empty>", "jetpack-newsletter" );
-/* translators: %1$s placeholder is the user display name, %2$s is example date */
 __( "By <Author>%1$s</Author> on <Date>%2$s</Date>", "jetpack-newsletter" );
-/* translators: %1$s placeholder is the user display name */
 __( "By <Author>%1$s</Author>", "jetpack-newsletter" );
 __( "Preview:", "jetpack-newsletter" );
-/* translators: %s is the display name of the author */
 __( "Avatar for %s", "jetpack-newsletter" );
 __( "Show author avatar on your emails", "jetpack-newsletter" );
 __( "Update your Gravatar", "jetpack-newsletter" );
@@ -432,7 +344,6 @@ __( "Save", "jetpack-newsletter" );
 __( "Sender name", "jetpack-newsletter" );
 __( "This is the name that appears in subscribers' inboxes. It's usually the name of your newsletter or the author.", "jetpack-newsletter" );
 __( "Sender settings", "jetpack-newsletter" );
-/* translators: %1$s is the sender name that will appear in subscriber inboxes */
 __( "Preview: <strong>%1$s</strong> <author-name@example.com>", "jetpack-newsletter" );
 __( "Your Name", "jetpack-newsletter" );
 __( "Reply-to settings", "jetpack-newsletter" );
@@ -457,7 +368,6 @@ __( "Comments", "jetpack-newsletter" );
 __( "Action Bar", "jetpack-newsletter" );
 __( "This category already exists.", "jetpack-newsletter" );
 __( "Could not create the category. Please try again.", "jetpack-newsletter" );
-/* translators: %s: the category name the user typed. */
 __( "Create “%s”", "jetpack-newsletter" );
 __( "Search or create a category", "jetpack-newsletter" );
 __( "Failed to load categories", "jetpack-newsletter" );
@@ -525,7 +435,6 @@ __( "Week of %s", "jetpack-newsletter" );
 __( "Total", "jetpack-newsletter" );
 __( "Bar chart", "jetpack-newsletter" );
 __( "Bar list chart", "jetpack-newsletter" );
-_n( "%s item", "%s items", 1, "jetpack-newsletter" );
 __( "Conversion rate", "jetpack-newsletter" );
 __( "Conversion funnel chart", "jetpack-newsletter" );
 __( "Funnel steps", "jetpack-newsletter" );
@@ -557,7 +466,6 @@ __( "Published", "jetpack-newsletter" );
 __( "Recent Posts", "jetpack-newsletter" );
 __( "View all", "jetpack-newsletter" );
 __( "Paid subscribers", "jetpack-newsletter" );
-/* translators: %s: Current user's display name. */
 __( "Welcome, %s", "jetpack-newsletter" );
 __( "Welcome", "jetpack-newsletter" );
 __( "Chart interval", "jetpack-newsletter" );
@@ -591,11 +499,9 @@ __( "Write a post", "jetpack-newsletter" );
 __( "Updating checklist…", "jetpack-newsletter" );
 __( "Complete", "jetpack-newsletter" );
 __( "Loading checklist…", "jetpack-newsletter" );
-/* translators: %s: Product name, "Jetpack Newsletter". Do not translate. */
 __( "%s on WordPress.com", "jetpack-newsletter" );
 __( "A newsletter lets people subscribe with their email address, so every new post is delivered straight to their inbox. It's a simple way to build an audience you own, strengthen relationships with readers, and keep them coming back to your site.", "jetpack-newsletter" );
 __( "We stopped sending emails to this subscriber after their address bounced. If you're sure their address is correct, you can send one confirmation email to ask to restart their subscription.", "jetpack-newsletter" );
-/* translators: 1: date the confirmation email was sent, 2: number of days before another can be sent. */
 __( "A confirmation email was sent on %1$s. If they haven’t confirmed, you can send another one after %2$d days.", "jetpack-newsletter" );
 __( "We stopped sending emails to this subscriber after their address bounced. You can't send a confirmation email right now. Try again later.", "jetpack-newsletter" );
 __( "Could not load subscriber details.", "jetpack-newsletter" );

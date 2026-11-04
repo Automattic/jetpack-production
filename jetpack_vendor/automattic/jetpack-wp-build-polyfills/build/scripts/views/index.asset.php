@@ -6,5 +6,5 @@
 		'wp-preferences',
 		'wp-private-apis'
 	),
-	'version' => 'e72111a9af988ccfc08d'
+	'version' => 'd697f3fe20cf1448d905'
 );

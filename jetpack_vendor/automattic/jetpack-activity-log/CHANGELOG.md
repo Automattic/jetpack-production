@@ -11,6 +11,8 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update dependencies.
+- Update package dependencies.
+- Use the design system tooltip in the date range picker.
 
 ## [0.7.2] - 2026-11-02
 ### Changed

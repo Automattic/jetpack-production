@@ -8,37 +8,26 @@
 
 __( "Jetpack Logo", "jetpack" );
 __( "An Automattic Airline", "jetpack" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack" );
 __( "Features", "jetpack" );
 __( "Help", "jetpack" );
 __( "Jetpack", "jetpack" );
-/* translators: %1$s is button label 1 and %2$s is button label 2 */
 __( "By clicking <strong>%1$s</strong> or <strong>%2$s</strong>, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack" );
 __( "By clicking the buttons above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack" );
-/* translators: %s is a button label */
 __( "By clicking <strong>%s</strong>, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack" );
 __( "By continuing you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site’s data</shareDetailsLink> with us. We’ll check if that email is linked to an existing WordPress.com account or create a new one instantly.", "jetpack" );
 __( "Sections", "jetpack" );
-/* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack" );
 __( "Unavailable in <a>Offline Mode</a>", "jetpack" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com couldn’t make a secure (HTTPS) connection to your site at %s. Its SSL certificate or HTTPS setup may be invalid. Ask your hosting provider to check it.", "jetpack" );
 __( "WordPress.com couldn’t make a secure (HTTPS) connection to your site. Its SSL certificate or HTTPS setup may be invalid. Ask your hosting provider to check it.", "jetpack" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com couldn’t reach your site at %s to verify it. Make sure your site is publicly reachable and its domain and SSL certificate are set up correctly. If they are, ask your hosting provider whether they block connections from WordPress.com.", "jetpack" );
 __( "WordPress.com couldn’t reach your site to verify it. Make sure your site is publicly reachable and its domain and SSL certificate are set up correctly. If they are, ask your hosting provider whether they block connections from WordPress.com.", "jetpack" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com reached your site at %s, but the connection endpoint was not found. A security plugin or server rule may be blocking xmlrpc.php or the REST API.", "jetpack" );
 __( "WordPress.com reached your site, but the connection endpoint was not found. A security plugin or server rule may be blocking xmlrpc.php or the REST API.", "jetpack" );
-/* translators: %1$d is an HTTP status code, e.g. 500; %2$s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com got an error (HTTP %1$d) when it tried to verify your site at %2$s. Your site’s error log may show the cause.", "jetpack" );
-/* translators: %d is an HTTP status code, e.g. 500. */
 __( "WordPress.com got an error (HTTP %d) when it tried to verify your site. Your site’s error log may show the cause.", "jetpack" );
-/* translators: %1$s is the site URL WordPress.com tried, e.g. https://example.com; %2$d is an HTTP status code, e.g. 403. */
 __( "Something blocked WordPress.com from verifying your site at %1$s (HTTP %2$d). Try again in a minute. If it keeps happening, a firewall or security rule is usually the cause: ask your hosting provider to allow connections from WordPress.com.", "jetpack" );
-/* translators: %d is an HTTP status code, e.g. 403. */
 __( "Something blocked WordPress.com from verifying your site (HTTP %d). Try again in a minute. If it keeps happening, a firewall or security rule is usually the cause: ask your hosting provider to allow connections from WordPress.com.", "jetpack" );
 __( "Your site is on a private network, so WordPress.com can’t reach it. Jetpack can only connect sites that are publicly accessible.", "jetpack" );
 __( "Your site’s address is on WordPress.com. Jetpack connects WordPress sites hosted elsewhere, so it can’t connect this one.", "jetpack" );
@@ -116,7 +105,6 @@ __( "See all Jetpack features", "jetpack" );
 __( "Testing Jetpack Connection", "jetpack" );
 __( "Unlinking from WordPress.com", "jetpack" );
 __( "Unlinked from WordPress.com.", "jetpack" );
-/* translators: %s: the error. */
 __( "Error unlinking from WordPress.com. Error: %s", "jetpack" );
 __( "Resetting Jetpack options…", "jetpack" );
 __( "Options reset.", "jetpack" );
@@ -125,7 +113,6 @@ __( "There seems to be a problem with your connection to WordPress.com. If the p
 __( "Jetpack encountered an error and was unable to display the Dashboard. Please try refreshing the page.", "jetpack" );
 __( "There seems to be a problem with your website.", "jetpack" );
 __( "This will reset all Jetpack options, are you sure?", "jetpack" );
-/* Translators: %s: a version number. */
 __( "Version %s", "jetpack" );
 __( "View the Jetpack changelog on WordPress.org.", "jetpack" );
 _x( "Modules", "Navigation item. Noun. Links to a list of modules for Jetpack.", "jetpack" );
@@ -134,35 +121,29 @@ _x( "Debug", "Navigation item. Noun. Links to a debugger tool for Jetpack.", "je
 __( "Test your site’s compatibility with Jetpack.", "jetpack" );
 _x( "Reset Options (dev only)", "Navigation item.", "jetpack" );
 _x( "Dev Tools", "Navigation item.", "jetpack" );
-/* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack" );
 __( "Dismiss", "jetpack" );
+__( "In progress", "jetpack" );
 __( "Connect your WordPress.com account", "jetpack" );
 __( "Reconnecting Jetpack", "jetpack" );
-/* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack" );
 __( "Connection Error, please reconnect.", "jetpack" );
 __( "Restore Connection", "jetpack" );
 __( "Contact support", "jetpack" );
 __( "daily backups", "jetpack" );
 __( "real-time backups", "jetpack" );
-/* translators: %1$s: feature, such as "daily backups". %2$s: Plan name, such as "Jetpack Premium". %3$s: Product name, such as "Jetpack Backups". */
 __( "Your %2$s Plan includes %1$s. Looks like you also purchased the %3$s product. Consider removing %3$s.", "jetpack" );
-/* translators: %s: an error code. */
 __( "<s>Your Jetpack has a glitch.</s> We’re sorry for the inconvenience. Please try again later, if the issue continues please contact support with this message: %s", "jetpack" );
 __( "Cheatin' uh?", "jetpack" );
 __( "<p>Would you mind telling us why you did not complete the Jetpack connection in this <a>2 question survey</a>?</p><p>A Jetpack connection is required for our free security and traffic features to work.</p>", "jetpack" );
 __( "You need to stay logged in to your WordPress blog while you authorize Jetpack.", "jetpack" );
 __( "We had an issue connecting Jetpack; deactivate then reactivate the Jetpack plugin, then connect again.", "jetpack" );
 __( "There was an issue connecting your Jetpack. Please click \"Connect to WordPress.com\" again.", "jetpack" );
-/* translators: %s: an error code and message. */
 __( "Your website needs to be publicly accessible to use Jetpack: %s", "jetpack" );
 __( "This site can't be connected to WordPress.com because it violates our <a>Terms of Service</a>.", "jetpack" );
 __( "<s>Your Jetpack has a glitch.</s> Connecting this site with WordPress.com is not possible. This usually means your site is not publicly accessible (localhost).", "jetpack" );
 __( "WordPress.com is currently having problems and is unable to fuel up your Jetpack. Please try again later.", "jetpack" );
-/* translators: %s: an error code and message. */
 __( "Jetpack could not contact WordPress.com: %s. This usually means something is incorrectly configured on your web host.", "jetpack" );
-/* translators: %s: a version number, like 8.8. */
 __( "Welcome to <s>Jetpack %s</s>!", "jetpack" );
 __( "Your Jetpack is already connected.", "jetpack" );
 __( "You're fueled up and ready to go, Jetpack is now active.", "jetpack" );
@@ -173,11 +154,9 @@ __( "Jetpack successfully reconnected! You can check your Jetpack Connection hea
 __( "You are currently running a development version of Jetpack.", "jetpack" );
 __( "Submit Beta feedback", "jetpack" );
 __( "The jetpack_offline_mode filter is active", "jetpack" );
-/* translators: %s: a PHP constant, such as WP_LOCAL_DEV. */
 __( "The %s constant is defined", "jetpack" );
 __( "Your site URL is a known local development environment URL", "jetpack" );
 __( "The jetpack_offline_mode option is active", "jetpack" );
-/* translators: reasons is an unordered list of reasons why a site may be in Offline mode. */
 __( "Currently in <a>Offline Mode</a> (some features are disabled) because: <reasons/>", "jetpack" );
 __( "Jetpack is powering your site, but to access all of its features you’ll need to connect your account to WordPress.com.", "jetpack" );
 __( "Create account", "jetpack" );
@@ -185,19 +164,16 @@ __( "This site is not connected to WordPress.com. Please ask the site administra
 __( "Settings", "jetpack" );
 __( "Updating settings…", "jetpack" );
 __( "Updated settings.", "jetpack" );
-/* translators: %s: an error code or an error message. */
 __( "Error updating settings. %s", "jetpack" );
 __( "Updated settings. Refreshing page…", "jetpack" );
 __( "Updating Post by Email address…", "jetpack" );
 __( "Regenerated Post by Email address.", "jetpack" );
-/* translators: %s: an error message. */
 __( "Error regenerating Post by Email address. %s", "jetpack" );
 __( "This feature has been enabled by a site administrator. <link>Learn more</link>.", "jetpack" );
 __( "This feature has been disabled by a site administrator. <link>Learn more</link>.", "jetpack" );
 __( "This feature is being managed by a site administrator. <link>Learn more</link>.", "jetpack" );
 __( "Upgrade your plan to use video covers", "jetpack" );
 __( "Upgrade your plan to upload audio", "jetpack" );
-/* translators: %s: a feature name. */
 __( "%s has been disabled by a site administrator. <link>Learn more</link>.", "jetpack" );
 __( "Active", "jetpack" );
 __( "Error", "jetpack" );
@@ -294,16 +270,14 @@ __( "Jetpack Newsletter Settings", "jetpack" );
 __( "Newsletter", "jetpack" );
 __( "Newsletter Settings have moved to a new location. Access it via Jetpack → Newsletter.", "jetpack" );
 __( "Go to Newsletter Settings", "jetpack" );
-/* translators: %s: a product name, such as VideoPress. */
 __( "Turn %s on or off in My Jetpack › Features, which links to its settings.", "jetpack" );
-/* translators: %s: a feature name, such as Notifications. */
 __( "Turn %s on or off in My Jetpack › Features.", "jetpack" );
 __( "Open Features", "jetpack" );
 __( "1 free video available. Upgrade now to unlock more videos and 1TB of storage.", "jetpack" );
 __( "You have used your free video. Upgrade now to unlock more videos and 1TB of storage.", "jetpack" );
 __( "VideoPress", "jetpack" );
 __( "Engage your visitors with high-resolution, ad-free video. Save time by uploading videos directly through the WordPress editor. With Jetpack VideoPress, you can customize your video player to deliver your message without the distraction.", "jetpack" );
-/* translators: %d is a number (disk space used) */
+__( "VideoPress storage", "jetpack" );
 __( "Using <strong>%dGB</strong> of 1TB", "jetpack" );
 __( "Enable VideoPress", "jetpack" );
 __( "Video Privacy: Restrict views to members of this site", "jetpack" );
@@ -315,11 +289,9 @@ __( "Search supports many customizations.", "jetpack" );
 __( "Unavailable in Offline Mode", "jetpack" );
 __( "Disabling site accelerator…", "jetpack" );
 __( "Site accelerator is no longer speeding up your site!", "jetpack" );
-/* translators: %s: an error code. */
 __( "Error disabling site accelerator. %s", "jetpack" );
 __( "Enabling Site accelerator…", "jetpack" );
 __( "Site accelerator is now speeding up your site!", "jetpack" );
-/* translators: %s: an error code. */
 __( "Error enabling Site accelerator. %s", "jetpack" );
 __( "Performance & speed", "jetpack" );
 __( "Load pages faster by allowing Jetpack to optimize your images and serve your images and static files (like CSS and JavaScript) from our global network of servers.", "jetpack" );
@@ -330,7 +302,6 @@ __( "Jetpack Performance Settings", "jetpack" );
 __( "Performance", "jetpack" );
 __( "Updating privacy settings…", "jetpack" );
 __( "Updated privacy settings.", "jetpack" );
-/* translators: %s: an error message. */
 __( "Error updating privacy settings. %s", "jetpack" );
 _x( "privacy", "Search term.", "jetpack" );
 _x( "tracks", "Search term.", "jetpack" );
@@ -373,7 +344,6 @@ __( "Connect", "jetpack" );
 __( "Your site is connected to WordPress.com.", "jetpack" );
 __( "Manage", "jetpack" );
 __( "By clicking the button below, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site's data</shareDetailsLink> with us.", "jetpack" );
-/* translators: %s: text adding extra instructions on what to do next. */
 __( "This feature is provided by the WordPress.com cloud. %s", "jetpack" );
 __( "Activate", "jetpack" );
 __( "Connect to configure.", "jetpack" );
@@ -386,7 +356,6 @@ __( "Updated Settings.", "jetpack" );
 _x( "Always allowed IP addresses", "Settings header", "jetpack" );
 __( "Prevent Jetpack's security features from blocking specific IP addresses.", "jetpack" );
 __( "Example:", "jetpack" );
-/* translators: %s: an IP address. */
 __( "Your current IP: %s", "jetpack" );
 __( "Add to Allow List", "jetpack" );
 __( "Save allow list", "jetpack" );
@@ -414,7 +383,6 @@ __( "Enter your SSH, SFTP, or FTP credentials to enable one-click site restores 
 __( "Your site is connected to Jetpack Backup and Scan.", "jetpack" );
 __( "Oops!", "jetpack" );
 __( "The Jetpack Backup and Scan status could not be retrieved at this time.", "jetpack" );
-/* Translators: %s: the number of threats. */
 _n( "Uh oh, %s threat found.", "Uh oh, %s threats found.", 1, "jetpack" );
 __( "<a>View details</a>", "jetpack" );
 __( "<a>Contact Support</a>", "jetpack" );
@@ -464,7 +432,6 @@ __( "Allow Jetpack to collect basic data from blocked requests to improve firewa
 __( "Share detailed data with Jetpack", "jetpack" );
 __( "Allow Jetpack to collect detailed data from blocked requests to enhance firewall protection and accuracy. <Link>Learn more</Link> <hr /> <Link>Privacy Information</Link>", "jetpack" );
 __( "<b>Enhance protection</b> - Learn how to configure the firewall to inspect all requests and run before WordPress initializes", "jetpack" );
-/* translators: %s: the file path to the Firewall's bootstrap file. */
 __( "To ensure the firewall can best protect your site, please update: <code>auto_prepend_file</code> PHP directive to point to <code>%s</code> Typically this is set either in an .htaccess file or in the global PHP configuration; contact your host for further assistance.", "jetpack" );
 __( "Don't forget to undo this action when Firewall is turned off, or when you uninstall Jetpack.", "jetpack" );
 __( "Upgrade to enable automatic rules", "jetpack" );
@@ -472,7 +439,6 @@ __( "Upgrade to keep your site secure with up-to-date firewall rules", "jetpack"
 __( "The free version of the firewall only allows for use of manual rules.", "jetpack" );
 __( "The free version of the firewall does not receive updates to automatic firewall rules.", "jetpack" );
 __( "Manual rules - Block specific IP addresses from accessing your site", "jetpack" );
-/* translators: %s: a list of example IP addresses. */
 __( "Example: %s", "jetpack" );
 __( "Save block list", "jetpack" );
 __( "Firewall settings have been moved to the Jetpack Protect plugin.", "jetpack" );
@@ -563,10 +529,8 @@ __( "Archive Title", "jetpack" );
 __( "Example Title", "jetpack" );
 __( "Tag", "jetpack" );
 __( "Example Archive Title/Date", "jetpack" );
-/* translators: %s is the preview text for a custom SEO input */
 __( "Preview: %s", "jetpack" );
 _x( "Search engine optimization", "Settings header", "jetpack" );
-/* translators: %s is the name of conflicting SEO plugin */
 __( "Your SEO settings are managed by the following plugin: %s", "jetpack" );
 __( "Allows you to optimize your site and its content for better results in search engines.", "jetpack" );
 __( "Take control of the way search engines represent your site. With Jetpack’s SEO tools you can preview how your content will look on popular search engines and change items like your site name and tagline in seconds.", "jetpack" );
@@ -582,7 +546,6 @@ __( "You can set the structure of page titles for different sections of your sit
 __( "Expand to edit your front page meta description.", "jetpack" );
 __( "Craft a description of your Website: up to 160 characters that will be used in search engine results for your front page, and when your website is shared on social media sites.", "jetpack" );
 __( "Front Page Meta Description", "jetpack" );
-/* translators: %d: the number of characters */
 _n( "%d character", "%d characters", 1, "jetpack" );
 __( "Maximum characters reached.", "jetpack" );
 __( "Expand to preview how the SEO settings will look for your homepage on Google, Facebook, and Twitter.", "jetpack" );
@@ -617,22 +580,18 @@ __( "Good news: Jetpack is sending your sitemap automatically to all major searc
 __( "Search engines can’t access your site at the moment. If you’d like to make your site accessible, check your <a>Reading settings</a> and switch \"Search Engine Visibility\" on.", "jetpack" );
 __( "Site is verified", "jetpack" );
 __( "Verifying…", "jetpack" );
-/* translators: %s: an error message. */
 __( "Site failed to verify: %s", "jetpack" );
 __( "Google", "jetpack" );
 __( "Save", "jetpack" );
 __( "Your site is verified with Google", "jetpack" );
 __( "Edit", "jetpack" );
 __( "Monitor your site's traffic and performance from the <a>Google Search Console</a>.", "jetpack" );
-/* translators: placeholders are links to Google support documents. */
 __( "Google will email about certain events that occur with your site, including indications that your website has been <a1>hacked</a1>, or problems <a2>crawling or indexing</a2> your site.", "jetpack" );
 __( "Google:", "jetpack" );
 __( "<button1>Auto verify with Google</button1><span>or</span><button2>Manually verify with Google</button2>", "jetpack" );
-/* translators: %s: the feature name. */
 __( "%s has been disabled by a site administrator.", "jetpack" );
 __( "Provides the necessary hidden tags needed to verify your WordPress site with various services.", "jetpack" );
 __( "Verify site ownership with third party services", "jetpack" );
-/* translators: placeholders are links to external sites. */
 __( "Note that <b>verifying your site with these services is not necessary</b> in order for your site to be indexed by search engines. To use these advanced search engine tools and verify your site with a service, paste the HTML Tag code below. Read the <support>full instructions</support> if you are having trouble. Supported verification services: <google>Google Search Console</google>, <bing>Bing Webmaster Center</bing>, <pinterest>Pinterest Site Verification</pinterest>, <yandex>Yandex.Webmaster</yandex>, and <facebook>Facebook Domain Verification</facebook>.", "jetpack" );
 __( "Bing:", "jetpack" );
 __( "Pinterest:", "jetpack" );
@@ -690,7 +649,6 @@ __( "Jetpack Writing Settings", "jetpack" );
 __( "Writing", "jetpack" );
 __( "Writing tools available to you will be shown here when an administrator enables them.", "jetpack" );
 __( "No matching settings", "jetpack" );
-/* translators: %s: a search term entered in search form. */
 __( "No search results found for %s", "jetpack" );
 __( "Your site is protected by Jetpack. You’ll be notified if anything needs attention.", "jetpack" );
 __( "Load pages faster, optimize images, and speed up your visitors’ experience.", "jetpack" );
@@ -713,7 +671,6 @@ _x( "Monetize", "Navigation item.", "jetpack" );
 __( "Jetpack settings sections", "jetpack" );
 __( "Search for a Jetpack feature.", "jetpack" );
 __( "There are unsaved settings in this tab that will be lost if you leave it. Proceed?", "jetpack" );
-/* translators: %s: a feature label (e.g. SEO, Notifications) */
 __( "Unlock %s and more amazing features", "jetpack" );
 __( "Secure and speed up your site for free with Jetpack's powerful WordPress tools.", "jetpack" );
 __( "Speed up your site with optimized images", "jetpack" );

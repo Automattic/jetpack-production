@@ -20,7 +20,6 @@ __( "Free subscribers", "jetpack-premium-analytics-pkg" );
 __( "Email subscribers and free WordPress.com subscribers. The change is since 30 days ago.", "jetpack-premium-analytics-pkg" );
 __( "Email subscribers and free WordPress.com subscribers", "jetpack-premium-analytics-pkg" );
 __( "Social followers", "jetpack-premium-analytics-pkg" );
-/* translators: %s is the label of the All-time subscribers tile. */
 __( "Social media subscribers, not included in %s", "jetpack-premium-analytics-pkg" );
 __( "Total subscribers excluding social media subscribers. The change is since 30 days ago.", "jetpack-premium-analytics-pkg" );
 __( "Total subscribers excluding social media subscribers", "jetpack-premium-analytics-pkg" );

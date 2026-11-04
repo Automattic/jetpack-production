@@ -11,6 +11,10 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update dependencies.
+- Update package dependencies.
+
+### Fixed
+- Serve the bundled widget-primitives module below Gutenberg 24.2.0, the first release whose copy exports useWidgetActions.
 
 ## [0.7.2] - 2026-11-02
 ### Changed

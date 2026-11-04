@@ -12,6 +12,11 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Dashboard: Add a Playlists tab to create, edit, publish and delete video playlists, with every Video Playlist block setting.
 
+### Changed
+- Update package dependencies.
+- Use the design system progress bar for the upload, processing and storage meters.
+- Use the design system tooltip for the upload buttons.
+
 ### Fixed
 - Recording: Explain camera and microphone errors with steps to fix them, and retry once access is allowed.
 

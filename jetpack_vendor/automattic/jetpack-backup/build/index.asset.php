@@ -4,6 +4,7 @@
 		'jetpack-script-data',
 		'moment',
 		'react',
+		'react-dom',
 		'react-jsx-runtime',
 		'wp-a11y',
 		'wp-api-fetch',
@@ -13,7 +14,9 @@
 		'wp-element',
 		'wp-i18n',
 		'wp-primitives',
+		'wp-private-apis',
+		'wp-theme',
 		'wp-url'
 	),
-	'version' => 'daaa525445852693fca6'
+	'version' => 'f8476a1dc7b82ca28f6d'
 );

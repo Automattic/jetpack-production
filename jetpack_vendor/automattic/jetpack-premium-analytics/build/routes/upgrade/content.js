@@ -6,53 +6,34 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: abbreviation for "Previous period". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
 _x( "Prev. period", "short comparison preset", "jetpack-premium-analytics-pkg" );
-/* translators: abbreviation for "Previous period (match day of week)". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
 _x( "Prev. period (weekday)", "short comparison preset", "jetpack-premium-analytics-pkg" );
-/* translators: abbreviation for "Same period from last week". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
 _x( "Prev. week", "short comparison preset", "jetpack-premium-analytics-pkg" );
-/* translators: abbreviation for "Same period in <month>". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
 _x( "Prev. month", "short comparison preset", "jetpack-premium-analytics-pkg" );
-/* translators: abbreviation for "Same period in <year>". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
 _x( "Prev. year", "short comparison preset", "jetpack-premium-analytics-pkg" );
-/* translators: abbreviation for "Same period last year (match day of week)". Shown in a control too narrow for the full label, so keep it as short as the language allows. */
 _x( "Prev. year (weekday)", "short comparison preset", "jetpack-premium-analytics-pkg" );
-/* translators: %s: a comparison option, e.g. "Previous 30 days". The suffix says the comparison starts on the same weekday. */
 _x( "%s (match day of week)", "weekday-aligned comparison", "jetpack-premium-analytics-pkg" );
 __( "Previous hour", "jetpack-premium-analytics-pkg" );
-/* translators: %d: number of hours covered by the selected date range. */
 _n( "Previous %d hour", "Previous %d hours", 1, "jetpack-premium-analytics-pkg" );
 __( "Previous month", "jetpack-premium-analytics-pkg" );
-/* translators: %d: number of months covered by the selected date range. */
 _n( "Previous %d month", "Previous %d months", 1, "jetpack-premium-analytics-pkg" );
-/* translators: %d: number of years covered by the selected date range. */
 _n( "Previous %d year", "Previous %d years", 1, "jetpack-premium-analytics-pkg" );
 __( "Previous day", "jetpack-premium-analytics-pkg" );
-/* translators: %d: number of days covered by the selected date range. */
 _n( "Previous %d day", "Previous %d days", 1, "jetpack-premium-analytics-pkg" );
 _x( "Prev. hour", "comparison legend label", "jetpack-premium-analytics-pkg" );
-/* translators: %d: number of hours. Repeated after each metric in a chart legend, so keep it as short as the language allows. */
 _nx( "Prev. %d hour", "Prev. %d hours", 1, "comparison legend label", "jetpack-premium-analytics-pkg" );
 _x( "Prev. month", "comparison legend label", "jetpack-premium-analytics-pkg" );
-/* translators: %d: number of months. Repeated after each metric in a chart legend, so keep it as short as the language allows. */
 _nx( "Prev. %d month", "Prev. %d months", 1, "comparison legend label", "jetpack-premium-analytics-pkg" );
-/* translators: %d: number of years. Repeated after each metric in a chart legend, so keep it as short as the language allows. */
 _nx( "Prev. %d year", "Prev. %d years", 1, "comparison legend label", "jetpack-premium-analytics-pkg" );
 _x( "Prev. day", "comparison legend label", "jetpack-premium-analytics-pkg" );
-/* translators: %d: number of days. Repeated after each metric in a chart legend, so keep it as short as the language allows. */
 _nx( "Prev. %d day", "Prev. %d days", 1, "comparison legend label", "jetpack-premium-analytics-pkg" );
 __( "Same period from last week", "jetpack-premium-analytics-pkg" );
-/* translators: %s: name of the month the comparison period starts in, e.g. "July". */
 _x( "Same period in %s", "previous month comparison", "jetpack-premium-analytics-pkg" );
-/* translators: %s: the year the comparison period starts in, e.g. "2025". */
 _x( "Same period in %s", "previous year comparison", "jetpack-premium-analytics-pkg" );
 __( "Same period last year (match day of week)", "jetpack-premium-analytics-pkg" );
 _x( "Prev. week", "comparison legend label", "jetpack-premium-analytics-pkg" );
 _x( "Prev. year, weekday", "comparison legend label", "jetpack-premium-analytics-pkg" );
-/* translators: %s: an abbreviated previous period, e.g. "Prev. 8 days". The suffix says it starts on the same weekday. */
 _x( "%s, weekday", "comparison legend label", "jetpack-premium-analytics-pkg" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
 __( "Sections", "jetpack-premium-analytics-pkg" );
 __( "Real-time data on visitors", "jetpack-premium-analytics-pkg" );
@@ -82,9 +63,7 @@ __( "Unable to start connecting your account. Please try again.", "jetpack-premi
 __( "Upgrade now and continue", "jetpack-premium-analytics-pkg" );
 __( "Upgrade", "jetpack-premium-analytics-pkg" );
 __( "Upgrade Jetpack Stats to unlock premium features", "jetpack-premium-analytics-pkg" );
-/* translators: %1$s: a plan name, e.g. "Jetpack Complete"; %2$s: a views count, e.g. "100K". */
 __( "Your %1$s plan already includes %2$s views per month for Stats. Views from this purchase will stack on top, so you keep what you already have.", "jetpack-premium-analytics-pkg" );
-/* translators: %s: a plan name, e.g. "Jetpack Complete". */
 __( "Your %s plan already includes views for Stats. Views from this purchase will stack on top, so you keep what you already have.", "jetpack-premium-analytics-pkg" );
 __( "The remainder of your current plan will be credited towards the upgrade, ensuring you only pay the price difference. Starting from the next billing cycle, standard charges will apply.", "jetpack-premium-analytics-pkg" );
 __( "Unlock UTM stats, device stats, and region and city stats with a paid plan.", "jetpack-premium-analytics-pkg" );

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update dependencies.
+- Update package dependencies.
 
 ### Fixed
 - Custom Content Types: Show the Testimonials and Portfolio toggles on the new Jetpack Settings page.

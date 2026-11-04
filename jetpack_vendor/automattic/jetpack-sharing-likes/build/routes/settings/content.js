@@ -14,120 +14,72 @@ __( "The custom service could not be saved.", "jetpack-sharing-likes" );
 __( "The custom service could not be deleted.", "jetpack-sharing-likes" );
 __( "This action is not available on this site right now.", "jetpack-sharing-likes" );
 __( "Loading", "jetpack-sharing-likes" );
-/* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-sharing-likes" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-sharing-likes" );
 __( "OK", "jetpack-sharing-likes" );
 __( "Cancel", "jetpack-sharing-likes" );
 __( "Close", "jetpack-sharing-likes" );
-__( "More details follow the field.", "jetpack-sharing-likes" );
-__( "More details follow.", "jetpack-sharing-likes" );
-__( "Dismiss", "jetpack-sharing-likes" );
 __( "Sections", "jetpack-sharing-likes" );
 __( "An Automattic Airline", "jetpack-sharing-likes" );
 __( "Jetpack Logo", "jetpack-sharing-likes" );
 __( "Features", "jetpack-sharing-likes" );
 __( "Help", "jetpack-sharing-likes" );
 __( "Jetpack", "jetpack-sharing-likes" );
-/* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-sharing-likes" );
-/* translators: 1: Calendar type. 2: Current month and year. */
 __( "%1$s, %2$s", "jetpack-sharing-likes" );
 __( "Date calendar", "jetpack-sharing-likes" );
 __( "Date range calendar", "jetpack-sharing-likes" );
 __( "Navigation bar", "jetpack-sharing-likes" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s", "jetpack-sharing-likes" );
 __( "Next month", "jetpack-sharing-likes" );
 __( "Previous month", "jetpack-sharing-likes" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s, selected", "jetpack-sharing-likes" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected", "jetpack-sharing-likes" );
 __( "Required", "jetpack-sharing-likes" );
 __( "Optional", "jetpack-sharing-likes" );
+__( "More details follow the field.", "jetpack-sharing-likes" );
+__( "Select", "jetpack-sharing-likes" );
 __( "Sort ascending", "jetpack-sharing-likes" );
 __( "Sort descending", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Is none of", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is none of: Admin, Editor". */
 __( "<Name>%1$s is none of: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Includes", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is any: Admin, Editor". */
 __( "<Name>%1$s includes: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Includes all", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author includes all: Admin, Editor". */
 __( "<Name>%1$s includes all: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Between (inc)", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Item count"). 2: Filter value min. 3: Filter value max. e.g.: "Item count between (inc): 10 and 180". */
 __( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "In the past", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is in the past: 7 days". */
 __( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Over", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is over: 7 days". */
 __( "<Name>%1$s is over: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Is", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is: Admin". */
 __( "<Name>%1$s is: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Is not", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is not: Admin". */
 __( "<Name>%1$s is not: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Less than", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than: 10". */
 __( "<Name>%1$s is less than: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Greater than", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than: 10". */
 __( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Less than or equal", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than or equal to: 10". */
 __( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Greater than or equal", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than or equal to: 10". */
 __( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Before", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is before: 2024-01-01". */
 __( "<Name>%1$s is before: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "After", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is after: 2024-01-01". */
 __( "<Name>%1$s is after: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Before (inc)", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or before: 2024-01-01". */
 __( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "After (inc)", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or after: 2024-01-01". */
 __( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Contains", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title contains: Hello". */
 __( "<Name>%1$s contains: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Doesn't contain", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title doesn't contain: Hello". */
 __( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Starts with", "jetpack-sharing-likes" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title starts with: Hello". */
 __( "<Name>%1$s starts with: </Name><Value>%2$s</Value>", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "On", "jetpack-sharing-likes" );
-/* translators: DataViews operator name */
 __( "Not on", "jetpack-sharing-likes" );
 __( "Days", "jetpack-sharing-likes" );
 __( "Weeks", "jetpack-sharing-likes" );
@@ -139,7 +91,6 @@ __( "Months ago", "jetpack-sharing-likes" );
 __( "Years ago", "jetpack-sharing-likes" );
 __( "Unit", "jetpack-sharing-likes" );
 __( "Coordinated Universal Time", "jetpack-sharing-likes" );
-/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
 __( "Timezone: %s", "jetpack-sharing-likes" );
 __( "Date time", "jetpack-sharing-likes" );
 __( "Today", "jetpack-sharing-likes" );
@@ -172,9 +123,7 @@ __( "Value must be an array.", "jetpack-sharing-likes" );
 __( "Every value must be a string.", "jetpack-sharing-likes" );
 __( "Value must be a valid color.", "jetpack-sharing-likes" );
 __( "Apply", "jetpack-sharing-likes" );
-/* translators: %s: Field name. */
 _x( "Edit %s (has errors)", "field", "jetpack-sharing-likes" );
-/* translators: %s: Field name. */
 _x( "Edit %s", "field", "jetpack-sharing-likes" );
 __( "Could not validate elements.", "jetpack-sharing-likes" );
 __( "Value must be one of the elements.", "jetpack-sharing-likes" );
@@ -188,7 +137,6 @@ __( "Value is too short.", "jetpack-sharing-likes" );
 __( "Value is too long.", "jetpack-sharing-likes" );
 __( "Unknown error when running custom validation.", "jetpack-sharing-likes" );
 __( "Validating…", "jetpack-sharing-likes" );
-/* translators: %d: Number of fields that need attention */
 _n( "%d field needs attention", "%d fields need attention", 1, "jetpack-sharing-likes" );
 __( "More details", "jetpack-sharing-likes" );
 __( "Where sharing buttons, Like buttons, and Comment Likes appear", "jetpack-sharing-likes" );
@@ -201,11 +149,8 @@ __( "Where sharing buttons appear", "jetpack-sharing-likes" );
 __( "Like buttons are currently not shown anywhere.", "jetpack-sharing-likes" );
 __( "Comment Likes are currently not shown anywhere.", "jetpack-sharing-likes" );
 __( "Sharing buttons are currently not shown anywhere.", "jetpack-sharing-likes" );
-/* translators: %s: comma-separated list of places, for example "Posts, Pages". */
 __( "Like buttons currently appear on: %s.", "jetpack-sharing-likes" );
-/* translators: %s: comma-separated list of places, for example "Posts, Pages". */
 __( "Comment Likes currently appear on comments on: %s.", "jetpack-sharing-likes" );
-/* translators: %s: comma-separated list of places, for example "Posts, Pages". */
 __( "Sharing buttons currently appear on: %s.", "jetpack-sharing-likes" );
 __( "Change where they appear", "jetpack-sharing-likes" );
 __( "Preview and edit", "jetpack-sharing-likes" );
@@ -266,23 +211,19 @@ __( "Add a custom service", "jetpack-sharing-likes" );
 __( "Custom service", "jetpack-sharing-likes" );
 __( "Done", "jetpack-sharing-likes" );
 __( "Create and add", "jetpack-sharing-likes" );
-/* translators: %s: custom sharing service name. */
 __( "Delete %s?", "jetpack-sharing-likes" );
 __( "Remove your last sharing button?", "jetpack-sharing-likes" );
 __( "With no buttons left, sharing buttons turn off. Since you use a block-based theme, you can add the buttons anywhere on your site via the Site Editor.", "jetpack-sharing-likes" );
 __( "This deletes the custom service from your site. You’ll need to create it again to bring it back.", "jetpack-sharing-likes" );
 __( "Delete", "jetpack-sharing-likes" );
 __( "Remove", "jetpack-sharing-likes" );
-/* translators: %s: custom sharing service name. */
 __( "Edit %s", "jetpack-sharing-likes" );
-/* translators: %s: sharing service name, such as "Facebook". */
 __( "%s options", "jetpack-sharing-likes" );
 __( "Move right", "jetpack-sharing-likes" );
 __( "Move left", "jetpack-sharing-likes" );
 __( "Edit custom service", "jetpack-sharing-likes" );
 __( "Delete custom service", "jetpack-sharing-likes" );
 __( "Add", "jetpack-sharing-likes" );
-/* translators: %s: sharing service name, such as "Facebook". */
 __( "%s removed.", "jetpack-sharing-likes" );
 __( "The list of sharing services could not be loaded.", "jetpack-sharing-likes" );
 __( "Add sharing buttons", "jetpack-sharing-likes" );
@@ -295,7 +236,6 @@ __( "Some sharing services aren’t available while your site is private.", "jet
 __( "Shown as buttons", "jetpack-sharing-likes" );
 __( "Behind the More button", "jetpack-sharing-likes" );
 __( "Behind the Share button", "jetpack-sharing-likes" );
-/* translators: %1$s is the name of a deprecated Sharing Service like "Google+" */
 __( "The %1$s sharing service has shut down or discontinued support for sharing buttons. This sharing button is not displayed to your visitors and should be removed.", "jetpack-sharing-likes" );
 __( "Button style", "jetpack-sharing-likes" );
 __( "Icon + text", "jetpack-sharing-likes" );

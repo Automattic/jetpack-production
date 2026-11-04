@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update dependencies.
+- Update package dependencies.
 
 ### Fixed
 - Dashboard: Don't label vulnerabilities from the free check as Low severity when their severity is unknown.

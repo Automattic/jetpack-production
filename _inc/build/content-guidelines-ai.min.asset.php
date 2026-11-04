@@ -3,6 +3,7 @@
 		'jetpack-script-data',
 		'jetpack-shared-stores',
 		'react',
+		'react-dom',
 		'react-jsx-runtime',
 		'wp-api-fetch',
 		'wp-blob',
@@ -19,7 +20,9 @@
 		'wp-notices',
 		'wp-plugins',
 		'wp-primitives',
+		'wp-private-apis',
+		'wp-theme',
 		'wp-url'
 	),
-	'version' => '5f35792091d10e8154c0'
+	'version' => '04ed8a6605f0cb3f8303'
 );

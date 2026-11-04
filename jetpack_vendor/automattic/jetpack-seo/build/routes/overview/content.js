@@ -7,11 +7,7 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)" );
-__( "Dismiss" );
 __( "We couldn’t load this page", "jetpack-seo" );
 __( "This is usually temporary. Give it another try.", "jetpack-seo" );
 __( "Try again", "jetpack-seo" );
@@ -21,10 +17,8 @@ __( "An Automattic Airline", "jetpack-components" );
 __( "Features", "jetpack-components" );
 __( "Help", "jetpack-components" );
 __( "Jetpack", "jetpack-components" );
-/* translators: accessibility text */
 __( "(opens in a new tab)", "jetpack-components" );
 __( "Sections" );
-/* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-components" );
 __( "Dismiss", "jetpack-components" );
 __( "Overview", "jetpack-seo" );
@@ -65,20 +59,14 @@ __( "Individual crawler settings are overridden by this site's data sharing opt-
 __( "Per-site crawler settings aren't available on this path-based multisite network.", "jetpack-seo" );
 __( "llms.txt published", "jetpack-seo" );
 __( "llms.txt not published", "jetpack-seo" );
-/* translators: %s: name of the active SEO plugin. */
 __( "Jetpack llms.txt paused while %s is active", "jetpack-seo" );
 __( "Jetpack llms.txt paused while SEO tools are disabled", "jetpack-seo" );
 __( "AI access", "jetpack-seo" );
-/* translators: %1$d is the number of blocked answer engines, %2$d the total. */
 __( "Answer engines: %1$d of %2$d blocked", "jetpack-seo" );
-/* translators: %1$d is the number of blocked training crawlers, %2$d the total. */
 __( "Training crawlers: %1$d of %2$d blocked", "jetpack-seo" );
 __( "Manage AI access", "jetpack-seo" );
-/* translators: %1$d: posts with the field set, %2$d: total published posts. */
 __( "%1$d / %2$d", "jetpack-seo" );
-/* translators: %d: percentage of posts with the field set. */
 __( "%d%%", "jetpack-seo" );
-/* translators: %1$s: the action (e.g. "Set SEO titles"); %2$d: posts with the field set; %3$d: total posts. */
 __( "%1$s. %2$d of %3$d.", "jetpack-seo" );
 __( "Add schema to content", "jetpack-seo" );
 __( "Set SEO titles", "jetpack-seo" );
@@ -105,6 +93,5 @@ __( "Site visibility", "jetpack-seo" );
 __( "Sitemaps managed by WordPress.com", "jetpack-seo" );
 __( "Manage visibility", "jetpack-seo" );
 __( "Unable to load overview.", "jetpack-seo" );
-/* translators: %s: name of the SEO plugin that controls the site's SEO output, e.g. Yoast SEO. */
 __( "%s is managing your SEO titles and descriptions, so Jetpack’s are turned off.", "jetpack-seo" );
 __( "SEO tools are not enabled on this site. Some cards reflect the underlying WordPress options only.", "jetpack-seo" );

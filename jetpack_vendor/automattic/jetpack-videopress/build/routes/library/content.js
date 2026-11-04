@@ -7,53 +7,226 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading", "jetpack-videopress-pkg" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-videopress-pkg" );
+__( "There was an error reconnecting Jetpack. Error: %s", "jetpack-videopress-pkg" );
+__( "Your account (connection owner)", "jetpack-videopress-pkg" );
+__( "Connection owner's account (%s)", "jetpack-videopress-pkg" );
+__( "Connection owner's account", "jetpack-videopress-pkg" );
+__( "Your account", "jetpack-videopress-pkg" );
+__( "Another user's account", "jetpack-videopress-pkg" );
+__( "User connection", "jetpack-videopress-pkg" );
+__( "Site connection", "jetpack-videopress-pkg" );
+__( "Jetpack Connection error: %s", "jetpack-videopress-pkg" );
+_n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack-videopress-pkg" );
+__( "Jetpack Connection error", "jetpack-videopress-pkg" );
+__( "Jetpack Logo", "jetpack-videopress-pkg" );
+__( "An Automattic Airline", "jetpack-videopress-pkg" );
+__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
 __( "Close", "jetpack-videopress-pkg" );
+__( "In progress", "jetpack-videopress-pkg" );
+__( "Features", "jetpack-videopress-pkg" );
+__( "Help", "jetpack-videopress-pkg" );
+__( "Jetpack", "jetpack-videopress-pkg" );
+__( "By clicking <strong>%1$s</strong> or <strong>%2$s</strong>, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-videopress-pkg" );
+__( "By clicking the buttons above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-videopress-pkg" );
+__( "By clicking <strong>%s</strong>, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-videopress-pkg" );
+__( "By continuing you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site’s data</shareDetailsLink> with us. We’ll check if that email is linked to an existing WordPress.com account or create a new one instantly.", "jetpack-videopress-pkg" );
+__( "Sections", "jetpack-videopress-pkg" );
+__( "There was an error testing Jetpack. Error: %s", "jetpack-videopress-pkg" );
+__( "Included", "jetpack-videopress-pkg" );
+__( "Not included", "jetpack-videopress-pkg" );
+__( "Coming soon", "jetpack-videopress-pkg" );
+__( "%s coming soon", "jetpack-videopress-pkg" );
+__( "%s not included", "jetpack-videopress-pkg" );
+__( "Reduced pricing is a limited offer for the first year and renews at regular price.", "jetpack-videopress-pkg" );
+__( "/month, paid yearly", "jetpack-videopress-pkg" );
+__( "% off", "jetpack-videopress-pkg" );
+__( "% off the first year", "jetpack-videopress-pkg" );
+__( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-videopress-pkg" );
+__( "Reconnecting Jetpack", "jetpack-videopress-pkg" );
+__( "Loading…", "jetpack-videopress-pkg" );
+__( "Restore Connection", "jetpack-videopress-pkg" );
+__( "Take Action", "jetpack-videopress-pkg" );
+__( "Reconnecting Jetpack…", "jetpack-videopress-pkg" );
+__( "%1$s, %2$s", "jetpack-videopress-pkg" );
+__( "Date calendar", "jetpack-videopress-pkg" );
+__( "Date range calendar", "jetpack-videopress-pkg" );
+__( "Navigation bar", "jetpack-videopress-pkg" );
+__( "Today, %s", "jetpack-videopress-pkg" );
+__( "Next month", "jetpack-videopress-pkg" );
+__( "Previous month", "jetpack-videopress-pkg" );
+__( "Today, %s, selected", "jetpack-videopress-pkg" );
+__( "%s, selected", "jetpack-videopress-pkg" );
+__( "Required", "jetpack-videopress-pkg" );
+__( "Optional", "jetpack-videopress-pkg" );
 __( "More details follow the field.", "jetpack-videopress-pkg" );
 __( "Select", "jetpack-videopress-pkg" );
-__( "Dismiss", "jetpack-videopress-pkg" );
+__( "Sort ascending", "jetpack-videopress-pkg" );
+__( "Sort descending", "jetpack-videopress-pkg" );
+__( "(no title)", "jetpack-videopress-pkg" );
+_x( "%s…", "menu item requiring further input", "jetpack-videopress-pkg" );
+__( "Actions", "jetpack-videopress-pkg" );
+_n( "%s item selected", "%s items selected", 1, "jetpack-videopress-pkg" );
+_n( "%s item", "%s items", 1, "jetpack-videopress-pkg" );
+_n( "%1$s of %2$s item", "%1$s of %2$s items", 1, "jetpack-videopress-pkg" );
+__( "Deselect all", "jetpack-videopress-pkg" );
+__( "Select all", "jetpack-videopress-pkg" );
+__( "Cancel", "jetpack-videopress-pkg" );
+__( "Add filter", "jetpack-videopress-pkg" );
+__( "Move left", "jetpack-videopress-pkg" );
+__( "Move right", "jetpack-videopress-pkg" );
+__( "Insert left", "jetpack-videopress-pkg" );
+__( "Insert right", "jetpack-videopress-pkg" );
+__( "Hide column", "jetpack-videopress-pkg" );
+__( "Properties", "jetpack-videopress-pkg" );
+__( "%1$s: %2$s", "jetpack-videopress-pkg" );
+__( "Navigate to item", "jetpack-videopress-pkg" );
+__( "Row %d", "jetpack-videopress-pkg" );
+__( "%s: <groupName />", "jetpack-videopress-pkg" );
+__( "Current page", "jetpack-videopress-pkg" );
+__( "Page %1$d of %2$d", "jetpack-videopress-pkg" );
+_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-videopress-pkg" );
+__( "Previous page", "jetpack-videopress-pkg" );
+__( "Next page", "jetpack-videopress-pkg" );
+__( "Density", "jetpack-videopress-pkg" );
+_x( "Comfortable", "Density option for DataView layout", "jetpack-videopress-pkg" );
+_x( "Balanced", "Density option for DataView layout", "jetpack-videopress-pkg" );
+_x( "Compact", "Density option for DataView layout", "jetpack-videopress-pkg" );
+__( "Original aspect ratio", "jetpack-videopress-pkg" );
+__( "Preview size", "jetpack-videopress-pkg" );
+__( "Table", "jetpack-videopress-pkg" );
+__( "Grid", "jetpack-videopress-pkg" );
+__( "List", "jetpack-videopress-pkg" );
+__( "Activity", "jetpack-videopress-pkg" );
+__( "List of: %1$s", "jetpack-videopress-pkg" );
+__( "Search items", "jetpack-videopress-pkg" );
+__( "Search", "jetpack-videopress-pkg" );
+__( "No results found", "jetpack-videopress-pkg" );
+__( "No elements found", "jetpack-videopress-pkg" );
+__( "Is none of", "jetpack-videopress-pkg" );
+__( "<Name>%1$s is none of: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Includes", "jetpack-videopress-pkg" );
+__( "<Name>%1$s includes: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Includes all", "jetpack-videopress-pkg" );
+__( "<Name>%1$s includes all: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Between (inc)", "jetpack-videopress-pkg" );
+__( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>", "jetpack-videopress-pkg" );
+__( "In the past", "jetpack-videopress-pkg" );
+__( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Over", "jetpack-videopress-pkg" );
+__( "<Name>%1$s is over: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Is", "jetpack-videopress-pkg" );
+__( "<Name>%1$s is: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Is not", "jetpack-videopress-pkg" );
+__( "<Name>%1$s is not: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Less than", "jetpack-videopress-pkg" );
+__( "<Name>%1$s is less than: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Greater than", "jetpack-videopress-pkg" );
+__( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Less than or equal", "jetpack-videopress-pkg" );
+__( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Greater than or equal", "jetpack-videopress-pkg" );
+__( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Before", "jetpack-videopress-pkg" );
+__( "<Name>%1$s is before: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "After", "jetpack-videopress-pkg" );
+__( "<Name>%1$s is after: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Before (inc)", "jetpack-videopress-pkg" );
+__( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "After (inc)", "jetpack-videopress-pkg" );
+__( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Contains", "jetpack-videopress-pkg" );
+__( "<Name>%1$s contains: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Doesn't contain", "jetpack-videopress-pkg" );
+__( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "Starts with", "jetpack-videopress-pkg" );
+__( "<Name>%1$s starts with: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
+__( "On", "jetpack-videopress-pkg" );
+__( "Not on", "jetpack-videopress-pkg" );
+__( "Unknown status for %1$s", "jetpack-videopress-pkg" );
+__( "Conditions", "jetpack-videopress-pkg" );
+__( "Reset", "jetpack-videopress-pkg" );
+__( "Remove", "jetpack-videopress-pkg" );
+__( "Filter by: %1$s", "jetpack-videopress-pkg" );
+_x( "Filter", "verb", "jetpack-videopress-pkg" );
+__( "No results", "jetpack-videopress-pkg" );
+__( "Layout", "jetpack-videopress-pkg" );
+__( "Sort by", "jetpack-videopress-pkg" );
+__( "Order", "jetpack-videopress-pkg" );
+__( "Items per page", "jetpack-videopress-pkg" );
+__( "Reset view", "jetpack-videopress-pkg" );
+_x( "View options", "View is used as a noun", "jetpack-videopress-pkg" );
+__( "Appearance", "jetpack-videopress-pkg" );
+__( "Days", "jetpack-videopress-pkg" );
+__( "Weeks", "jetpack-videopress-pkg" );
+__( "Months", "jetpack-videopress-pkg" );
+__( "Years", "jetpack-videopress-pkg" );
+__( "Days ago", "jetpack-videopress-pkg" );
+__( "Weeks ago", "jetpack-videopress-pkg" );
+__( "Months ago", "jetpack-videopress-pkg" );
+__( "Years ago", "jetpack-videopress-pkg" );
+__( "Unit", "jetpack-videopress-pkg" );
+__( "Coordinated Universal Time", "jetpack-videopress-pkg" );
+__( "Timezone: %s", "jetpack-videopress-pkg" );
+__( "Date time", "jetpack-videopress-pkg" );
+__( "Today", "jetpack-videopress-pkg" );
+__( "Yesterday", "jetpack-videopress-pkg" );
+__( "Past week", "jetpack-videopress-pkg" );
+__( "Past month", "jetpack-videopress-pkg" );
+__( "Last 7 days", "jetpack-videopress-pkg" );
+__( "Last 30 days", "jetpack-videopress-pkg" );
+__( "Month to date", "jetpack-videopress-pkg" );
+__( "Last year", "jetpack-videopress-pkg" );
+__( "Year to date", "jetpack-videopress-pkg" );
+__( "Custom", "jetpack-videopress-pkg" );
+__( "Date", "jetpack-videopress-pkg" );
+__( "From", "jetpack-videopress-pkg" );
+__( "To", "jetpack-videopress-pkg" );
+__( "The max. value must be greater than the min. value.", "jetpack-videopress-pkg" );
+__( "Min.", "jetpack-videopress-pkg" );
+__( "Max.", "jetpack-videopress-pkg" );
+__( "The end time must be later than the start time.", "jetpack-videopress-pkg" );
+__( "Open color picker", "jetpack-videopress-pkg" );
+__( "Hide password", "jetpack-videopress-pkg" );
+__( "Show password", "jetpack-videopress-pkg" );
+__( "Value must be a valid email address.", "jetpack-videopress-pkg" );
+__( "Value must be an integer.", "jetpack-videopress-pkg" );
+__( "Value must be a number.", "jetpack-videopress-pkg" );
+__( "True", "jetpack-videopress-pkg" );
+__( "False", "jetpack-videopress-pkg" );
+__( "Value must be true, false, or undefined", "jetpack-videopress-pkg" );
+__( "Value must be an array.", "jetpack-videopress-pkg" );
+__( "Every value must be a string.", "jetpack-videopress-pkg" );
+__( "Value must be a valid color.", "jetpack-videopress-pkg" );
 __( "Auto-generated", "jetpack-videopress-pkg" );
 __( "Manual", "jetpack-videopress-pkg" );
-/* translators: %s: caption processing failure reason. */
 __( "Failed: %s", "jetpack-videopress-pkg" );
 __( "Failed", "jetpack-videopress-pkg" );
 __( "Processing", "jetpack-videopress-pkg" );
 __( "Ready", "jetpack-videopress-pkg" );
-/* translators: %d: subtitle cue number. */
 __( "Subtitle %d needs text before publishing.", "jetpack-videopress-pkg" );
-/* translators: %d: subtitle cue number. */
 __( "Subtitle %d needs start and end times before publishing.", "jetpack-videopress-pkg" );
-/* translators: %d: subtitle cue number. */
 __( "Subtitle %d has an invalid timestamp.", "jetpack-videopress-pkg" );
-/* translators: %d: subtitle cue number. */
 __( "Subtitle %d must end after it starts.", "jetpack-videopress-pkg" );
-/* translators: 1: subtitle cue number, 2: overlapping subtitle cue number. */
 __( "Subtitle %1$d overlaps subtitle %2$d.", "jetpack-videopress-pkg" );
 __( "Fix subtitle timing before publishing.", "jetpack-videopress-pkg" );
 __( "Select a subtitle file before saving.", "jetpack-videopress-pkg" );
-/* translators: %s: comma-separated list of supported subtitle file extensions. */
 __( "Supported subtitle formats: %s.", "jetpack-videopress-pkg" );
 __( "Choose a subtitle language.", "jetpack-videopress-pkg" );
 __( "A subtitle track already exists for that language. Use Replace file on the existing track to upload a new file.", "jetpack-videopress-pkg" );
 __( "Draft", "jetpack-videopress-pkg" );
-/* translators: %s: subtitle track language tag. */
 __( "Subtitle track %s", "jetpack-videopress-pkg" );
 __( "Subtitle cue", "jetpack-videopress-pkg" );
 __( "A single VideoPress subtitle cue.", "jetpack-videopress-pkg" );
 __( "Subtitle", "jetpack-videopress-pkg" );
 __( "Start", "jetpack-videopress-pkg" );
 __( "End", "jetpack-videopress-pkg" );
-/* translators: %d: subtitle cue number. */
 __( "Subtitle %d", "jetpack-videopress-pkg" );
 __( "Move up", "jetpack-videopress-pkg" );
 __( "Move down", "jetpack-videopress-pkg" );
 __( "Duplicate", "jetpack-videopress-pkg" );
 __( "Delete subtitle", "jetpack-videopress-pkg" );
 __( "Add subtitle below", "jetpack-videopress-pkg" );
-__( "Cancel", "jetpack-videopress-pkg" );
 __( "Video preview", "jetpack-videopress-pkg" );
 __( "Video preview unavailable.", "jetpack-videopress-pkg" );
 __( "This private video may not play because its access token could not be loaded. Close and reopen to try again.", "jetpack-videopress-pkg" );
@@ -74,17 +247,14 @@ __( "Edit", "jetpack-videopress-pkg" );
 __( "Delete", "jetpack-videopress-pkg" );
 __( "Replace file", "jetpack-videopress-pkg" );
 __( "Download", "jetpack-videopress-pkg" );
-/* translators: %s: subtitle track language being replaced. */
 __( "Replacing %s", "jetpack-videopress-pkg" );
 __( "Select subtitle file", "jetpack-videopress-pkg" );
-/* translators: %s: accepted subtitle file extensions. */
 __( "Accepted formats: %s", "jetpack-videopress-pkg" );
 __( "Cancel replace", "jetpack-videopress-pkg" );
 __( "Upload subtitle track", "jetpack-videopress-pkg" );
 __( "Replace subtitle track", "jetpack-videopress-pkg" );
 __( "Upload track", "jetpack-videopress-pkg" );
 __( "Replace track", "jetpack-videopress-pkg" );
-/* translators: %s: VideoPress API error. */
 __( "Track error: %s", "jetpack-videopress-pkg" );
 __( "Subtitle track published.", "jetpack-videopress-pkg" );
 __( "Subtitle track draft saved.", "jetpack-videopress-pkg" );
@@ -100,7 +270,6 @@ __( "Couldn’t load saved subtitle drafts. Any existing drafts may not appear."
 __( "Discard unsaved subtitle changes?", "jetpack-videopress-pkg" );
 __( "Discard", "jetpack-videopress-pkg" );
 __( "Unable to load subtitle content. You can try again from the track list or start from an empty subtitle track.", "jetpack-videopress-pkg" );
-/* translators: %s: comma-separated list of accepted subtitle file extensions. */
 __( "Accepted formats: %s.", "jetpack-videopress-pkg" );
 __( "Subtitle track uploaded.", "jetpack-videopress-pkg" );
 __( "Subtitle track uploaded, but the previous language’s track couldn’t be removed and may still appear.", "jetpack-videopress-pkg" );
@@ -109,18 +278,14 @@ __( "Subtitles published.", "jetpack-videopress-pkg" );
 __( "Subtitles published, but the previous language’s track couldn’t be removed and may still appear.", "jetpack-videopress-pkg" );
 __( "Paste subtitle text before importing.", "jetpack-videopress-pkg" );
 __( "Subtitle text imported.", "jetpack-videopress-pkg" );
-/* translators: %s: subtitle track language or label. */
 __( "Delete the %s subtitle track? This cannot be undone.", "jetpack-videopress-pkg" );
-/* translators: %s: subtitle track language or label. */
 __( "Delete the %s subtitle draft? This cannot be undone.", "jetpack-videopress-pkg" );
 __( "Replace subtitle file", "jetpack-videopress-pkg" );
 __( "Upload subtitle file", "jetpack-videopress-pkg" );
 __( "Edit subtitle track", "jetpack-videopress-pkg" );
 __( "New subtitle track", "jetpack-videopress-pkg" );
 __( "VideoPress video", "jetpack-videopress-pkg" );
-/* translators: 1: video title. 2: current subtitle language name. */
 __( "Manage subtitles for %1$s: %2$s", "jetpack-videopress-pkg" );
-/* translators: %s: video title. */
 __( "Manage subtitles for %s", "jetpack-videopress-pkg" );
 __( "Drop a subtitle file to upload", "jetpack-videopress-pkg" );
 __( "Subtitle tracks", "jetpack-videopress-pkg" );
@@ -175,7 +340,6 @@ __( "Try again", "jetpack-videopress-pkg" );
 __( "Select Try again.", "jetpack-videopress-pkg" );
 __( "Filters", "jetpack-videopress-pkg" );
 __( "Video effects", "jetpack-videopress-pkg" );
-/* translators: %s: video effect name. */
 __( "%s effect", "jetpack-videopress-pkg" );
 __( "The video could not be downloaded.", "jetpack-videopress-pkg" );
 __( "The browser could not decode this video.", "jetpack-videopress-pkg" );
@@ -194,16 +358,13 @@ _x( "Pause", "button: pause timeline preview playback", "jetpack-videopress-pkg"
 __( "Play", "jetpack-videopress-pkg" );
 __( "Fit", "jetpack-videopress-pkg" );
 __( "Timeline zoom", "jetpack-videopress-pkg" );
-/* translators: 1: current zoom level (1 = fully zoomed out), 2: number of zoom levels. */
 __( "Zoom level %1$d of %2$d", "jetpack-videopress-pkg" );
-/* translators: %s: removed duration in seconds, e.g. "3.4". */
 __( "%ss removed", "jetpack-videopress-pkg" );
 __( "New cut", "jetpack-videopress-pkg" );
 __( "The recording could not be prepared. Keep this tab visible and try again.", "jetpack-videopress-pkg" );
 __( "Recording preview", "jetpack-videopress-pkg" );
 _x( "Pause preview", "button: pause recording preview", "jetpack-videopress-pkg" );
 _x( "Play preview", "button: play recording preview", "jetpack-videopress-pkg" );
-/* translators: %d: video preparation progress percentage. */
 __( "Preparing video… %d%%. Keep this tab visible.", "jetpack-videopress-pkg" );
 __( "Record again", "jetpack-videopress-pkg" );
 __( "Upload recording", "jetpack-videopress-pkg" );
@@ -216,254 +377,6 @@ _x( "Stop recording", "button: stop camera recording", "jetpack-videopress-pkg" 
 _x( "Start recording", "button: start camera recording", "jetpack-videopress-pkg" );
 __( "Discard this recording?", "jetpack-videopress-pkg" );
 __( "Discard recording", "jetpack-videopress-pkg" );
-/* translators: %s: the error. */
-__( "There was an error reconnecting Jetpack. Error: %s", "jetpack-videopress-pkg" );
-__( "Your account (connection owner)", "jetpack-videopress-pkg" );
-/* translators: %s is the display name of the Jetpack connection owner. */
-__( "Connection owner's account (%s)", "jetpack-videopress-pkg" );
-__( "Connection owner's account", "jetpack-videopress-pkg" );
-__( "Your account", "jetpack-videopress-pkg" );
-__( "Another user's account", "jetpack-videopress-pkg" );
-__( "User connection", "jetpack-videopress-pkg" );
-__( "Site connection", "jetpack-videopress-pkg" );
-/* translators: %s is what the error applies to, e.g. "Site connection" or "Your account". */
-__( "Jetpack Connection error: %s", "jetpack-videopress-pkg" );
-/* translators: %d is the number of connection errors found. */
-_n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack-videopress-pkg" );
-__( "Jetpack Connection error", "jetpack-videopress-pkg" );
-__( "Jetpack Logo", "jetpack-videopress-pkg" );
-__( "An Automattic Airline", "jetpack-videopress-pkg" );
-__( "Features", "jetpack-videopress-pkg" );
-__( "Help", "jetpack-videopress-pkg" );
-__( "Jetpack", "jetpack-videopress-pkg" );
-/* translators: %1$s is button label 1 and %2$s is button label 2 */
-__( "By clicking <strong>%1$s</strong> or <strong>%2$s</strong>, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-videopress-pkg" );
-__( "By clicking the buttons above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-videopress-pkg" );
-/* translators: %s is a button label */
-__( "By clicking <strong>%s</strong>, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-videopress-pkg" );
-__( "By continuing you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site’s data</shareDetailsLink> with us. We’ll check if that email is linked to an existing WordPress.com account or create a new one instantly.", "jetpack-videopress-pkg" );
-__( "Sections", "jetpack-videopress-pkg" );
-/* translators: %s: an error message. */
-__( "There was an error testing Jetpack. Error: %s", "jetpack-videopress-pkg" );
-__( "Included", "jetpack-videopress-pkg" );
-__( "Not included", "jetpack-videopress-pkg" );
-__( "Coming soon", "jetpack-videopress-pkg" );
-/* translators: %s: Name of the current feature */
-__( "%s coming soon", "jetpack-videopress-pkg" );
-/* translators: %s: Name of the current feature */
-__( "%s not included", "jetpack-videopress-pkg" );
-__( "Reduced pricing is a limited offer for the first year and renews at regular price.", "jetpack-videopress-pkg" );
-__( "/month, paid yearly", "jetpack-videopress-pkg" );
-__( "% off", "jetpack-videopress-pkg" );
-__( "% off the first year", "jetpack-videopress-pkg" );
-__( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-videopress-pkg" );
-__( "Reconnecting Jetpack", "jetpack-videopress-pkg" );
-__( "Loading…", "jetpack-videopress-pkg" );
-__( "Restore Connection", "jetpack-videopress-pkg" );
-__( "Take Action", "jetpack-videopress-pkg" );
-__( "Reconnecting Jetpack…", "jetpack-videopress-pkg" );
-/* translators: 1: Calendar type. 2: Current month and year. */
-__( "%1$s, %2$s", "jetpack-videopress-pkg" );
-__( "Date calendar", "jetpack-videopress-pkg" );
-__( "Date range calendar", "jetpack-videopress-pkg" );
-__( "Navigation bar", "jetpack-videopress-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s", "jetpack-videopress-pkg" );
-__( "Next month", "jetpack-videopress-pkg" );
-__( "Previous month", "jetpack-videopress-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s, selected", "jetpack-videopress-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "%s, selected", "jetpack-videopress-pkg" );
-__( "Required", "jetpack-videopress-pkg" );
-__( "Optional", "jetpack-videopress-pkg" );
-__( "Sort ascending", "jetpack-videopress-pkg" );
-__( "Sort descending", "jetpack-videopress-pkg" );
-__( "(no title)", "jetpack-videopress-pkg" );
-__( "Actions", "jetpack-videopress-pkg" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item selected", "%s Items selected", 1, "jetpack-videopress-pkg" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item", "%s Items", 1, "jetpack-videopress-pkg" );
-/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
-_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack-videopress-pkg" );
-__( "Deselect all", "jetpack-videopress-pkg" );
-__( "Select all", "jetpack-videopress-pkg" );
-__( "Add filter", "jetpack-videopress-pkg" );
-__( "Move left", "jetpack-videopress-pkg" );
-__( "Move right", "jetpack-videopress-pkg" );
-__( "Insert left", "jetpack-videopress-pkg" );
-__( "Insert right", "jetpack-videopress-pkg" );
-__( "Hide column", "jetpack-videopress-pkg" );
-__( "Properties", "jetpack-videopress-pkg" );
-/* translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022". */
-__( "%1$s: %2$s", "jetpack-videopress-pkg" );
-__( "Navigate to item", "jetpack-videopress-pkg" );
-/* translators: %d: The row number in the grid */
-__( "Row %d", "jetpack-videopress-pkg" );
-/* translators: %s: The label of the field e.g. "Status". */
-__( "%s: <groupName />", "jetpack-videopress-pkg" );
-/* translators: 1: current page number. 2: total number of pages. */
-__( "Page %1$d of %2$d", "jetpack-videopress-pkg" );
-/* translators: 1: Current page number, 2: Total number of pages. */
-_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-videopress-pkg" );
-__( "Current page", "jetpack-videopress-pkg" );
-__( "Previous page", "jetpack-videopress-pkg" );
-__( "Next page", "jetpack-videopress-pkg" );
-__( "Density", "jetpack-videopress-pkg" );
-_x( "Comfortable", "Density option for DataView layout", "jetpack-videopress-pkg" );
-_x( "Balanced", "Density option for DataView layout", "jetpack-videopress-pkg" );
-_x( "Compact", "Density option for DataView layout", "jetpack-videopress-pkg" );
-__( "Original aspect ratio", "jetpack-videopress-pkg" );
-__( "Preview size", "jetpack-videopress-pkg" );
-__( "Table", "jetpack-videopress-pkg" );
-__( "Grid", "jetpack-videopress-pkg" );
-__( "List", "jetpack-videopress-pkg" );
-__( "Activity", "jetpack-videopress-pkg" );
-/* translators: List of items for a filter. 1: Filter name. e.g.: "List of: Author". */
-__( "List of: %1$s", "jetpack-videopress-pkg" );
-__( "Search items", "jetpack-videopress-pkg" );
-__( "Search", "jetpack-videopress-pkg" );
-__( "No results found", "jetpack-videopress-pkg" );
-__( "No elements found", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Is none of", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is none of: Admin, Editor". */
-__( "<Name>%1$s is none of: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Includes", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is any: Admin, Editor". */
-__( "<Name>%1$s includes: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Includes all", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author includes all: Admin, Editor". */
-__( "<Name>%1$s includes all: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Between (inc)", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Item count"). 2: Filter value min. 3: Filter value max. e.g.: "Item count between (inc): 10 and 180". */
-__( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "In the past", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is in the past: 7 days". */
-__( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Over", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is over: 7 days". */
-__( "<Name>%1$s is over: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Is", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is: Admin". */
-__( "<Name>%1$s is: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Is not", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is not: Admin". */
-__( "<Name>%1$s is not: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Less than", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than: 10". */
-__( "<Name>%1$s is less than: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Greater than", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than: 10". */
-__( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Less than or equal", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than or equal to: 10". */
-__( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Greater than or equal", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than or equal to: 10". */
-__( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Before", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is before: 2024-01-01". */
-__( "<Name>%1$s is before: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "After", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is after: 2024-01-01". */
-__( "<Name>%1$s is after: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Before (inc)", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or before: 2024-01-01". */
-__( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "After (inc)", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or after: 2024-01-01". */
-__( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Contains", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title contains: Hello". */
-__( "<Name>%1$s contains: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Doesn't contain", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title doesn't contain: Hello". */
-__( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Starts with", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title starts with: Hello". */
-__( "<Name>%1$s starts with: </Name><Value>%2$s</Value>", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "On", "jetpack-videopress-pkg" );
-/* translators: DataViews operator name */
-__( "Not on", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name e.g.: "Unknown status for Author". */
-__( "Unknown status for %1$s", "jetpack-videopress-pkg" );
-__( "Conditions", "jetpack-videopress-pkg" );
-__( "Reset", "jetpack-videopress-pkg" );
-__( "Remove", "jetpack-videopress-pkg" );
-/* translators: 1: Filter name. */
-__( "Filter by: %1$s", "jetpack-videopress-pkg" );
-_x( "Filter", "verb", "jetpack-videopress-pkg" );
-__( "No results", "jetpack-videopress-pkg" );
-__( "Layout", "jetpack-videopress-pkg" );
-__( "Sort by", "jetpack-videopress-pkg" );
-__( "Order", "jetpack-videopress-pkg" );
-__( "Items per page", "jetpack-videopress-pkg" );
-__( "Reset view", "jetpack-videopress-pkg" );
-_x( "View options", "View is used as a noun", "jetpack-videopress-pkg" );
-__( "Appearance", "jetpack-videopress-pkg" );
-__( "Days", "jetpack-videopress-pkg" );
-__( "Weeks", "jetpack-videopress-pkg" );
-__( "Months", "jetpack-videopress-pkg" );
-__( "Years", "jetpack-videopress-pkg" );
-__( "Days ago", "jetpack-videopress-pkg" );
-__( "Weeks ago", "jetpack-videopress-pkg" );
-__( "Months ago", "jetpack-videopress-pkg" );
-__( "Years ago", "jetpack-videopress-pkg" );
-__( "Unit", "jetpack-videopress-pkg" );
-__( "Coordinated Universal Time", "jetpack-videopress-pkg" );
-/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
-__( "Timezone: %s", "jetpack-videopress-pkg" );
-__( "Date time", "jetpack-videopress-pkg" );
-__( "Today", "jetpack-videopress-pkg" );
-__( "Yesterday", "jetpack-videopress-pkg" );
-__( "Past week", "jetpack-videopress-pkg" );
-__( "Past month", "jetpack-videopress-pkg" );
-__( "Last 7 days", "jetpack-videopress-pkg" );
-__( "Last 30 days", "jetpack-videopress-pkg" );
-__( "Month to date", "jetpack-videopress-pkg" );
-__( "Last year", "jetpack-videopress-pkg" );
-__( "Year to date", "jetpack-videopress-pkg" );
-__( "Custom", "jetpack-videopress-pkg" );
-__( "Date", "jetpack-videopress-pkg" );
-__( "From", "jetpack-videopress-pkg" );
-__( "To", "jetpack-videopress-pkg" );
-__( "The max. value must be greater than the min. value.", "jetpack-videopress-pkg" );
-__( "Min.", "jetpack-videopress-pkg" );
-__( "Max.", "jetpack-videopress-pkg" );
-__( "The end time must be later than the start time.", "jetpack-videopress-pkg" );
-__( "Open color picker", "jetpack-videopress-pkg" );
-__( "Hide password", "jetpack-videopress-pkg" );
-__( "Show password", "jetpack-videopress-pkg" );
-__( "Value must be a valid email address.", "jetpack-videopress-pkg" );
-__( "Value must be an integer.", "jetpack-videopress-pkg" );
-__( "Value must be a number.", "jetpack-videopress-pkg" );
-__( "True", "jetpack-videopress-pkg" );
-__( "False", "jetpack-videopress-pkg" );
-__( "Value must be true, false, or undefined", "jetpack-videopress-pkg" );
-__( "Value must be an array.", "jetpack-videopress-pkg" );
-__( "Every value must be a string.", "jetpack-videopress-pkg" );
-__( "Value must be a valid color.", "jetpack-videopress-pkg" );
 __( "Add at least three chapters.", "jetpack-videopress-pkg" );
 __( "The first chapter must start at 0:00.", "jetpack-videopress-pkg" );
 __( "At least three chapters are required.", "jetpack-videopress-pkg" );
@@ -480,10 +393,8 @@ __( "Settings", "jetpack-videopress-pkg" );
 __( "You’ve reached the free plan’s 1-video limit. Upgrade to upload more.", "jetpack-videopress-pkg" );
 __( "Only video files can be uploaded.", "jetpack-videopress-pkg" );
 __( "That video format can’t be uploaded. Convert your video to MP4 or MOV, then try again.", "jetpack-videopress-pkg" );
-/* translators: %s: an upper-cased video file extension, e.g. "WEBM". */
 __( "%s files can’t be uploaded. Convert your video to MP4 or MOV, then try again.", "jetpack-videopress-pkg" );
 __( "Upgrade", "jetpack-videopress-pkg" );
-/* translators: %d: number of videos that could not be uploaded because the plan limit was reached. */
 _n( "%d video wasn’t uploaded because it exceeds your plan’s limit.", "%d videos weren’t uploaded because they exceed your plan’s limit.", 1, "jetpack-videopress-pkg" );
 __( "What VideoPress does", "jetpack-videopress-pkg" );
 __( "A player you own", "jetpack-videopress-pkg" );
@@ -494,7 +405,6 @@ __( "Share it anywhere", "jetpack-videopress-pkg" );
 __( "Every video gets a link and an embed that work off-site.", "jetpack-videopress-pkg" );
 __( "Your Video. Your Player.", "jetpack-videopress-pkg" );
 __( "The same ad-free player every video on your site will use — your visitors stay on your site, and VideoPress handles the hosting and streaming. Upload one to see it live.", "jetpack-videopress-pkg" );
-/* translators: %d: number of local videos in the media library. */
 _n( "Move %d video over", "Move %d videos over", 1, "jetpack-videopress-pkg" );
 __( "Learn more", "jetpack-videopress-pkg" );
 __( "Upload a video", "jetpack-videopress-pkg" );
@@ -503,7 +413,6 @@ __( "Retry", "jetpack-videopress-pkg" );
 __( "You’re on the free plan, which allows 1 video upload. Upgrade for more storage and unlimited uploads.", "jetpack-videopress-pkg" );
 __( "This action cannot be undone.", "jetpack-videopress-pkg" );
 __( "Delete video", "jetpack-videopress-pkg" );
-/* translators: %d: number of videos being deleted. */
 __( "Delete %d videos", "jetpack-videopress-pkg" );
 __( "Make public", "jetpack-videopress-pkg" );
 __( "Make private", "jetpack-videopress-pkg" );
@@ -516,18 +425,16 @@ __( "Upload failed", "jetpack-videopress-pkg" );
 __( "Jetpack connection issue", "jetpack-videopress-pkg" );
 __( "Conversion failed", "jetpack-videopress-pkg" );
 __( "Delete this video and upload it again.", "jetpack-videopress-pkg" );
-/* translators: %d: transcoding progress percentage */
 __( "Processing %d%%", "jetpack-videopress-pkg" );
-/* translators: %s: video title. */
 __( "Edit details for %s", "jetpack-videopress-pkg" );
 __( "Local video", "jetpack-videopress-pkg" );
+__( "Uploading…", "jetpack-videopress-pkg" );
 __( "Deleting…", "jetpack-videopress-pkg" );
 __( "Landscape", "jetpack-videopress-pkg" );
 __( "Portrait", "jetpack-videopress-pkg" );
 __( "Public", "jetpack-videopress-pkg" );
 __( "Private", "jetpack-videopress-pkg" );
 __( "Site default", "jetpack-videopress-pkg" );
-/* translators: %d: upload progress percentage */
 __( "Uploading %d%%", "jetpack-videopress-pkg" );
 __( "Local", "jetpack-videopress-pkg" );
 __( "Thumbnail", "jetpack-videopress-pkg" );
@@ -540,22 +447,15 @@ __( "Orientation", "jetpack-videopress-pkg" );
 __( "Privacy", "jetpack-videopress-pkg" );
 __( "File size", "jetpack-videopress-pkg" );
 __( "Unavailable in <a>Offline Mode</a>", "jetpack-videopress-pkg" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com couldn’t make a secure (HTTPS) connection to your site at %s. Its SSL certificate or HTTPS setup may be invalid. Ask your hosting provider to check it.", "jetpack-videopress-pkg" );
 __( "WordPress.com couldn’t make a secure (HTTPS) connection to your site. Its SSL certificate or HTTPS setup may be invalid. Ask your hosting provider to check it.", "jetpack-videopress-pkg" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com couldn’t reach your site at %s to verify it. Make sure your site is publicly reachable and its domain and SSL certificate are set up correctly. If they are, ask your hosting provider whether they block connections from WordPress.com.", "jetpack-videopress-pkg" );
 __( "WordPress.com couldn’t reach your site to verify it. Make sure your site is publicly reachable and its domain and SSL certificate are set up correctly. If they are, ask your hosting provider whether they block connections from WordPress.com.", "jetpack-videopress-pkg" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com reached your site at %s, but the connection endpoint was not found. A security plugin or server rule may be blocking xmlrpc.php or the REST API.", "jetpack-videopress-pkg" );
 __( "WordPress.com reached your site, but the connection endpoint was not found. A security plugin or server rule may be blocking xmlrpc.php or the REST API.", "jetpack-videopress-pkg" );
-/* translators: %1$d is an HTTP status code, e.g. 500; %2$s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com got an error (HTTP %1$d) when it tried to verify your site at %2$s. Your site’s error log may show the cause.", "jetpack-videopress-pkg" );
-/* translators: %d is an HTTP status code, e.g. 500. */
 __( "WordPress.com got an error (HTTP %d) when it tried to verify your site. Your site’s error log may show the cause.", "jetpack-videopress-pkg" );
-/* translators: %1$s is the site URL WordPress.com tried, e.g. https://example.com; %2$d is an HTTP status code, e.g. 403. */
 __( "Something blocked WordPress.com from verifying your site at %1$s (HTTP %2$d). Try again in a minute. If it keeps happening, a firewall or security rule is usually the cause: ask your hosting provider to allow connections from WordPress.com.", "jetpack-videopress-pkg" );
-/* translators: %d is an HTTP status code, e.g. 403. */
 __( "Something blocked WordPress.com from verifying your site (HTTP %d). Try again in a minute. If it keeps happening, a firewall or security rule is usually the cause: ask your hosting provider to allow connections from WordPress.com.", "jetpack-videopress-pkg" );
 __( "Your site is on a private network, so WordPress.com can’t reach it. Jetpack can only connect sites that are publicly accessible.", "jetpack-videopress-pkg" );
 __( "Your site’s address is on WordPress.com. Jetpack connects WordPress sites hosted elsewhere, so it can’t connect this one.", "jetpack-videopress-pkg" );
@@ -586,37 +486,30 @@ __( "Connecting…", "jetpack-videopress-pkg" );
 __( "Connect", "jetpack-videopress-pkg" );
 __( "Checkout could not start. Please try again.", "jetpack-videopress-pkg" );
 __( "An error occurred. Please try again.", "jetpack-videopress-pkg" );
-/* translators: %1$s: the discount amount */
 __( "%1$s%% off", "jetpack-videopress-pkg" );
 __( "/month, billed yearly", "jetpack-videopress-pkg" );
 __( "Get VideoPress", "jetpack-videopress-pkg" );
 __( "Start for free", "jetpack-videopress-pkg" );
 __( "Upload one video", "jetpack-videopress-pkg" );
-__( "Select videos to upload", "jetpack-videopress-pkg" );
-__( "Select a video to upload", "jetpack-videopress-pkg" );
 __( "Drag and drop your videos here", "jetpack-videopress-pkg" );
 __( "Drag and drop your video here", "jetpack-videopress-pkg" );
 __( "Add one or several. Each upload gets automatic captions, a player you fully own, and a link to share anywhere. No ads, no algorithm.", "jetpack-videopress-pkg" );
 __( "Add one video. Each upload gets automatic captions, a player you fully own, and a link to share anywhere. No ads, no algorithm.", "jetpack-videopress-pkg" );
+__( "Select videos to upload", "jetpack-videopress-pkg" );
+__( "Select a video to upload", "jetpack-videopress-pkg" );
 __( "Video uploaded to VideoPress.", "jetpack-videopress-pkg" );
-/* translators: %s: reason returned by the upload endpoint, e.g. "403: Invalid Mime". */
 __( "Failed to upload video to VideoPress: %s", "jetpack-videopress-pkg" );
 __( "Failed to upload video to VideoPress.", "jetpack-videopress-pkg" );
-/* translators: %d: number of videos being deleted. */
 _n( "Deleting %d video…", "Deleting %d videos…", 1, "jetpack-videopress-pkg" );
-/* translators: %d: number of deleted videos. */
 _n( "%d video deleted.", "%d videos deleted.", 1, "jetpack-videopress-pkg" );
-/* translators: %d: number of videos that could not be deleted. */
 _n( "Failed to delete %d video.", "Failed to delete %d videos.", 1, "jetpack-videopress-pkg" );
-/* translators: 1: number of videos updated. 2: new privacy label, e.g. "Public". */
 _n( "%1$d video set to %2$s.", "%1$d videos set to %2$s.", 1, "jetpack-videopress-pkg" );
 _n( "Failed to update privacy.", "Failed to update privacy for the selected videos.", 1, "jetpack-videopress-pkg" );
-/* translators: 1: number of videos updated. 2: number of videos that could not be updated. */
 __( "Privacy updated for %1$d video; %2$d could not be updated.", "jetpack-videopress-pkg" );
 __( "Failed to update privacy.", "jetpack-videopress-pkg" );
 __( "We couldn’t load your video library.", "jetpack-videopress-pkg" );
 __( "Upload your first video", "jetpack-videopress-pkg" );
 __( "Choose videos", "jetpack-videopress-pkg" );
-__( "Upload a new video", "jetpack-videopress-pkg" );
 __( "Upload video", "jetpack-videopress-pkg" );
+__( "Upload a new video", "jetpack-videopress-pkg" );
 __( "Drop videos to upload", "jetpack-videopress-pkg" );

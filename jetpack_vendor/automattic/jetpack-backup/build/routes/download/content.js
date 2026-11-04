@@ -7,11 +7,9 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading", "jetpack-backup-pkg" );
-/* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-backup-pkg" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-backup-pkg" );
-__( "More details follow.", "jetpack-backup-pkg" );
+__( "In progress", "jetpack-backup-pkg" );
 __( "Something went wrong", "jetpack-backup-pkg" );
 __( "The page ran into an unexpected problem. Your backups are unaffected.", "jetpack-backup-pkg" );
 __( "Reload the page", "jetpack-backup-pkg" );
@@ -20,20 +18,15 @@ __( "Jetpack Logo", "jetpack-backup-pkg" );
 __( "Features", "jetpack-backup-pkg" );
 __( "Help", "jetpack-backup-pkg" );
 __( "Jetpack", "jetpack-backup-pkg" );
-__( "Dismiss", "jetpack-backup-pkg" );
-/* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack-backup-pkg" );
 __( "Your account (connection owner)", "jetpack-backup-pkg" );
-/* translators: %s is the display name of the Jetpack connection owner. */
 __( "Connection owner's account (%s)", "jetpack-backup-pkg" );
 __( "Connection owner's account", "jetpack-backup-pkg" );
 __( "Your account", "jetpack-backup-pkg" );
 __( "Another user's account", "jetpack-backup-pkg" );
 __( "User connection", "jetpack-backup-pkg" );
 __( "Site connection", "jetpack-backup-pkg" );
-/* translators: %s is what the error applies to, e.g. "Site connection" or "Your account". */
 __( "Jetpack Connection error: %s", "jetpack-backup-pkg" );
-/* translators: %d is the number of connection errors found. */
 _n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack-backup-pkg" );
 __( "Jetpack Connection error", "jetpack-backup-pkg" );
 __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-backup-pkg" );
@@ -45,7 +38,6 @@ __( "Reconnecting Jetpack…", "jetpack-backup-pkg" );
 __( "Sections", "jetpack-backup-pkg" );
 __( "Select at least one item to continue.", "jetpack-backup-pkg" );
 __( "The site doesn't appear to be connected. Backup requires an active Jetpack connection in order to function properly.", "jetpack-backup-pkg" );
-/* translators: 1: what failed, in our own words. 2: the reason WordPress.com gave, usually in English. */
 __( "%1$s WordPress.com said: %2$s", "jetpack-backup-pkg" );
 __( "Request failed", "jetpack-backup-pkg" );
 __( "Restore ID: %s", "jetpack-backup-pkg" );
@@ -62,7 +54,6 @@ __( "Try again", "jetpack-backup-pkg" );
 __( "Use license key", "jetpack-backup-pkg" );
 __( "per month for the first year, billed yearly", "jetpack-backup-pkg" );
 __( "per month, billed yearly", "jetpack-backup-pkg" );
-/* translators: %s is the full monthly price the subscription renews at. */
 __( "Renews at %s per month.", "jetpack-backup-pkg" );
 __( "Get VaultPress Backup", "jetpack-backup-pkg" );
 __( "Real-time cloud backups", "jetpack-backup-pkg" );
@@ -94,13 +85,10 @@ __( "Site database", "jetpack-backup-pkg" );
 __( "includes pages and posts", "jetpack-backup-pkg" );
 __( "Media uploads", "jetpack-backup-pkg" );
 __( "you must also select Site database for restored media uploads to appear", "jetpack-backup-pkg" );
-/* translators: 1: item name, e.g. "Media uploads". 2: short note about what it covers, e.g. "includes pages and posts". */
 __( "<strong>%1$s</strong> (%2$s)", "jetpack-backup-pkg" );
 __( "Select at least one file to download.", "jetpack-backup-pkg" );
-/* translators: 1: a date, 2: a time of day. */
 _x( "%1$s %2$s", "date and time", "jetpack-backup-pkg" );
 __( "This download has expired.", "jetpack-backup-pkg" );
-/* translators: %s: the reason WordPress.com gave for the failure. */
 __( "Download failed: %s", "jetpack-backup-pkg" );
 __( "Download failed.", "jetpack-backup-pkg" );
 __( "Lost connection while preparing download.", "jetpack-backup-pkg" );
@@ -110,9 +98,7 @@ __( "Checking for a download in progress…", "jetpack-backup-pkg" );
 __( "Preparing download…", "jetpack-backup-pkg" );
 __( "Your download is ready", "jetpack-backup-pkg" );
 __( "Download backup", "jetpack-backup-pkg" );
-/* translators: %s: date and time of the backup. */
 __( "Download point: %s", "jetpack-backup-pkg" );
-/* translators: %s: date and time the download link stops working. */
 __( "This expires %s.", "jetpack-backup-pkg" );
 __( "Download file", "jetpack-backup-pkg" );
 __( "Choose the items you wish to include in the download:", "jetpack-backup-pkg" );

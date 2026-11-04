@@ -87,7 +87,7 @@ function jetpack_backup_get_jetpack_backup_dashboard_wp_admin_menu_items() {
  */
 function jetpack_backup_jetpack_backup_dashboard_wp_admin_preload_data() {
 	// Define paths to preload - same for all pages
-	// This must exactly match the _fields list in packages/core-data/src/entities.js,
+	// This must exactly match the _fields list in packages/core-data/src/entities.ts,
 	// same fields in the same order, or the preload is never consumed.
 	$preload_paths = array(
 		'/?_fields=description,generate_animated_image_subsizes,gmt_offset,home,image_max_bit_depth,image_sizes,image_size_threshold,image_strip_meta,name,site_icon,site_icon_url,site_logo,timezone_string,url,page_for_posts,page_on_front,show_on_front',
@@ -172,7 +172,7 @@ function jetpack_backup_jetpack_backup_dashboard_wp_admin_enqueue_scripts( $hook
 		// This script serves two purposes:
 		// 1. It ensures all the globals that are made available to the modules are loaded.
 		// 2. It initializes the boot module as an inline script.
-		wp_register_script( 'jetpack-backup-dashboard-wp-admin-prerequisites', '', $asset['dependencies'], $asset['version'], true );
+		wp_register_script( 'jetpack-backup-dashboard-wp-admin-prerequisites', false, $asset['dependencies'], $asset['version'], true );
 
 		$init_modules = ["@jetpack-backup/init"];
 

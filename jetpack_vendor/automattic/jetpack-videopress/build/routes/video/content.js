@@ -6,38 +6,73 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+__( "Loading", "jetpack-videopress-pkg" );
+__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
+__( "(opens in a new tab)", "jetpack-videopress-pkg" );
+__( "Close", "jetpack-videopress-pkg" );
+__( "In progress", "jetpack-videopress-pkg" );
+__( "More details follow the field.", "jetpack-videopress-pkg" );
+_x( "Breadcrumbs", "aria label", "jetpack-videopress-pkg" );
+__( "Sections", "jetpack-videopress-pkg" );
+__( "An Automattic Airline", "jetpack-videopress-pkg" );
+__( "Jetpack Logo", "jetpack-videopress-pkg" );
+__( "Features", "jetpack-videopress-pkg" );
+__( "Help", "jetpack-videopress-pkg" );
+__( "Jetpack", "jetpack-videopress-pkg" );
+__( "There was an error testing Jetpack. Error: %s", "jetpack-videopress-pkg" );
+__( "There was an error reconnecting Jetpack. Error: %s", "jetpack-videopress-pkg" );
+__( "Your account (connection owner)", "jetpack-videopress-pkg" );
+__( "Connection owner's account (%s)", "jetpack-videopress-pkg" );
+__( "Connection owner's account", "jetpack-videopress-pkg" );
+__( "Your account", "jetpack-videopress-pkg" );
+__( "Another user's account", "jetpack-videopress-pkg" );
+__( "User connection", "jetpack-videopress-pkg" );
+__( "Site connection", "jetpack-videopress-pkg" );
+__( "Jetpack Connection error: %s", "jetpack-videopress-pkg" );
+_n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack-videopress-pkg" );
+__( "Jetpack Connection error", "jetpack-videopress-pkg" );
+__( "By clicking <strong>%1$s</strong> or <strong>%2$s</strong>, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-videopress-pkg" );
+__( "By clicking the buttons above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-videopress-pkg" );
+__( "By clicking <strong>%s</strong>, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-videopress-pkg" );
+__( "By continuing you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site’s data</shareDetailsLink> with us. We’ll check if that email is linked to an existing WordPress.com account or create a new one instantly.", "jetpack-videopress-pkg" );
+__( "Included", "jetpack-videopress-pkg" );
+__( "Not included", "jetpack-videopress-pkg" );
+__( "Coming soon", "jetpack-videopress-pkg" );
+__( "%s coming soon", "jetpack-videopress-pkg" );
+__( "%s not included", "jetpack-videopress-pkg" );
+__( "Reduced pricing is a limited offer for the first year and renews at regular price.", "jetpack-videopress-pkg" );
+__( "/month, paid yearly", "jetpack-videopress-pkg" );
+__( "% off", "jetpack-videopress-pkg" );
+__( "% off the first year", "jetpack-videopress-pkg" );
+__( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-videopress-pkg" );
+__( "Reconnecting Jetpack", "jetpack-videopress-pkg" );
+__( "Loading…", "jetpack-videopress-pkg" );
+__( "Restore Connection", "jetpack-videopress-pkg" );
+__( "Take Action", "jetpack-videopress-pkg" );
+__( "Reconnecting Jetpack…", "jetpack-videopress-pkg" );
 __( "Auto-generated", "jetpack-videopress-pkg" );
 __( "Manual", "jetpack-videopress-pkg" );
-/* translators: %s: caption processing failure reason. */
 __( "Failed: %s", "jetpack-videopress-pkg" );
 __( "Failed", "jetpack-videopress-pkg" );
 __( "Processing", "jetpack-videopress-pkg" );
 __( "Ready", "jetpack-videopress-pkg" );
-/* translators: %d: subtitle cue number. */
 __( "Subtitle %d needs text before publishing.", "jetpack-videopress-pkg" );
-/* translators: %d: subtitle cue number. */
 __( "Subtitle %d needs start and end times before publishing.", "jetpack-videopress-pkg" );
-/* translators: %d: subtitle cue number. */
 __( "Subtitle %d has an invalid timestamp.", "jetpack-videopress-pkg" );
-/* translators: %d: subtitle cue number. */
 __( "Subtitle %d must end after it starts.", "jetpack-videopress-pkg" );
-/* translators: 1: subtitle cue number, 2: overlapping subtitle cue number. */
 __( "Subtitle %1$d overlaps subtitle %2$d.", "jetpack-videopress-pkg" );
 __( "Fix subtitle timing before publishing.", "jetpack-videopress-pkg" );
 __( "Select a subtitle file before saving.", "jetpack-videopress-pkg" );
-/* translators: %s: comma-separated list of supported subtitle file extensions. */
 __( "Supported subtitle formats: %s.", "jetpack-videopress-pkg" );
 __( "Choose a subtitle language.", "jetpack-videopress-pkg" );
 __( "A subtitle track already exists for that language. Use Replace file on the existing track to upload a new file.", "jetpack-videopress-pkg" );
 __( "Draft", "jetpack-videopress-pkg" );
-/* translators: %s: subtitle track language tag. */
 __( "Subtitle track %s", "jetpack-videopress-pkg" );
 __( "Subtitle cue", "jetpack-videopress-pkg" );
 __( "A single VideoPress subtitle cue.", "jetpack-videopress-pkg" );
 __( "Subtitle", "jetpack-videopress-pkg" );
 __( "Start", "jetpack-videopress-pkg" );
 __( "End", "jetpack-videopress-pkg" );
-/* translators: %d: subtitle cue number. */
 __( "Subtitle %d", "jetpack-videopress-pkg" );
 __( "Move up", "jetpack-videopress-pkg" );
 __( "Move down", "jetpack-videopress-pkg" );
@@ -65,17 +100,14 @@ __( "Edit", "jetpack-videopress-pkg" );
 __( "Delete", "jetpack-videopress-pkg" );
 __( "Replace file", "jetpack-videopress-pkg" );
 __( "Download", "jetpack-videopress-pkg" );
-/* translators: %s: subtitle track language being replaced. */
 __( "Replacing %s", "jetpack-videopress-pkg" );
 __( "Select subtitle file", "jetpack-videopress-pkg" );
-/* translators: %s: accepted subtitle file extensions. */
 __( "Accepted formats: %s", "jetpack-videopress-pkg" );
 __( "Cancel replace", "jetpack-videopress-pkg" );
 __( "Upload subtitle track", "jetpack-videopress-pkg" );
 __( "Replace subtitle track", "jetpack-videopress-pkg" );
 __( "Upload track", "jetpack-videopress-pkg" );
 __( "Replace track", "jetpack-videopress-pkg" );
-/* translators: %s: VideoPress API error. */
 __( "Track error: %s", "jetpack-videopress-pkg" );
 __( "Subtitle track published.", "jetpack-videopress-pkg" );
 __( "Subtitle track draft saved.", "jetpack-videopress-pkg" );
@@ -91,7 +123,6 @@ __( "Couldn’t load saved subtitle drafts. Any existing drafts may not appear."
 __( "Discard unsaved subtitle changes?", "jetpack-videopress-pkg" );
 __( "Discard", "jetpack-videopress-pkg" );
 __( "Unable to load subtitle content. You can try again from the track list or start from an empty subtitle track.", "jetpack-videopress-pkg" );
-/* translators: %s: comma-separated list of accepted subtitle file extensions. */
 __( "Accepted formats: %s.", "jetpack-videopress-pkg" );
 __( "Subtitle track uploaded.", "jetpack-videopress-pkg" );
 __( "Subtitle track uploaded, but the previous language’s track couldn’t be removed and may still appear.", "jetpack-videopress-pkg" );
@@ -100,20 +131,15 @@ __( "Subtitles published.", "jetpack-videopress-pkg" );
 __( "Subtitles published, but the previous language’s track couldn’t be removed and may still appear.", "jetpack-videopress-pkg" );
 __( "Paste subtitle text before importing.", "jetpack-videopress-pkg" );
 __( "Subtitle text imported.", "jetpack-videopress-pkg" );
-/* translators: %s: subtitle track language or label. */
 __( "Delete the %s subtitle track? This cannot be undone.", "jetpack-videopress-pkg" );
-/* translators: %s: subtitle track language or label. */
 __( "Delete the %s subtitle draft? This cannot be undone.", "jetpack-videopress-pkg" );
 __( "Replace subtitle file", "jetpack-videopress-pkg" );
 __( "Upload subtitle file", "jetpack-videopress-pkg" );
 __( "Edit subtitle track", "jetpack-videopress-pkg" );
 __( "New subtitle track", "jetpack-videopress-pkg" );
 __( "VideoPress video", "jetpack-videopress-pkg" );
-/* translators: 1: video title. 2: current subtitle language name. */
 __( "Manage subtitles for %1$s: %2$s", "jetpack-videopress-pkg" );
-/* translators: %s: video title. */
 __( "Manage subtitles for %s", "jetpack-videopress-pkg" );
-__( "Close", "jetpack-videopress-pkg" );
 __( "Drop a subtitle file to upload", "jetpack-videopress-pkg" );
 __( "Subtitle tracks", "jetpack-videopress-pkg" );
 __( "Loading subtitle content…", "jetpack-videopress-pkg" );
@@ -124,81 +150,19 @@ __( "Publish", "jetpack-videopress-pkg" );
 __( "Add track", "jetpack-videopress-pkg" );
 __( "Paste transcript", "jetpack-videopress-pkg" );
 __( "No subtitle tracks have been added to this video yet.", "jetpack-videopress-pkg" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-videopress-pkg" );
-__( "Sections", "jetpack-videopress-pkg" );
-__( "An Automattic Airline", "jetpack-videopress-pkg" );
-__( "Jetpack Logo", "jetpack-videopress-pkg" );
-__( "Features", "jetpack-videopress-pkg" );
-__( "Help", "jetpack-videopress-pkg" );
-__( "Jetpack", "jetpack-videopress-pkg" );
-/* translators: %s: an error message. */
-__( "There was an error testing Jetpack. Error: %s", "jetpack-videopress-pkg" );
-__( "Loading", "jetpack-videopress-pkg" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
-__( "Dismiss", "jetpack-videopress-pkg" );
-/* translators: %s: the error. */
-__( "There was an error reconnecting Jetpack. Error: %s", "jetpack-videopress-pkg" );
-__( "Your account (connection owner)", "jetpack-videopress-pkg" );
-/* translators: %s is the display name of the Jetpack connection owner. */
-__( "Connection owner's account (%s)", "jetpack-videopress-pkg" );
-__( "Connection owner's account", "jetpack-videopress-pkg" );
-__( "Your account", "jetpack-videopress-pkg" );
-__( "Another user's account", "jetpack-videopress-pkg" );
-__( "User connection", "jetpack-videopress-pkg" );
-__( "Site connection", "jetpack-videopress-pkg" );
-/* translators: %s is what the error applies to, e.g. "Site connection" or "Your account". */
-__( "Jetpack Connection error: %s", "jetpack-videopress-pkg" );
-/* translators: %d is the number of connection errors found. */
-_n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack-videopress-pkg" );
-__( "Jetpack Connection error", "jetpack-videopress-pkg" );
-/* translators: %1$s is button label 1 and %2$s is button label 2 */
-__( "By clicking <strong>%1$s</strong> or <strong>%2$s</strong>, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-videopress-pkg" );
-__( "By clicking the buttons above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-videopress-pkg" );
-/* translators: %s is a button label */
-__( "By clicking <strong>%s</strong>, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-videopress-pkg" );
-__( "By continuing you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site’s data</shareDetailsLink> with us. We’ll check if that email is linked to an existing WordPress.com account or create a new one instantly.", "jetpack-videopress-pkg" );
-__( "Included", "jetpack-videopress-pkg" );
-__( "Not included", "jetpack-videopress-pkg" );
-__( "Coming soon", "jetpack-videopress-pkg" );
-/* translators: %s: Name of the current feature */
-__( "%s coming soon", "jetpack-videopress-pkg" );
-/* translators: %s: Name of the current feature */
-__( "%s not included", "jetpack-videopress-pkg" );
-__( "Reduced pricing is a limited offer for the first year and renews at regular price.", "jetpack-videopress-pkg" );
-__( "/month, paid yearly", "jetpack-videopress-pkg" );
-__( "% off", "jetpack-videopress-pkg" );
-__( "% off the first year", "jetpack-videopress-pkg" );
-__( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-videopress-pkg" );
-__( "Reconnecting Jetpack", "jetpack-videopress-pkg" );
-__( "Loading…", "jetpack-videopress-pkg" );
-__( "Restore Connection", "jetpack-videopress-pkg" );
-__( "Take Action", "jetpack-videopress-pkg" );
-__( "Reconnecting Jetpack…", "jetpack-videopress-pkg" );
-__( "More details follow the field.", "jetpack-videopress-pkg" );
-_x( "Breadcrumbs", "aria label", "jetpack-videopress-pkg" );
 __( "This action cannot be undone.", "jetpack-videopress-pkg" );
 __( "Delete video", "jetpack-videopress-pkg" );
-/* translators: %d: number of videos being deleted. */
 __( "Delete %d videos", "jetpack-videopress-pkg" );
 __( "Unavailable in <a>Offline Mode</a>", "jetpack-videopress-pkg" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com couldn’t make a secure (HTTPS) connection to your site at %s. Its SSL certificate or HTTPS setup may be invalid. Ask your hosting provider to check it.", "jetpack-videopress-pkg" );
 __( "WordPress.com couldn’t make a secure (HTTPS) connection to your site. Its SSL certificate or HTTPS setup may be invalid. Ask your hosting provider to check it.", "jetpack-videopress-pkg" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com couldn’t reach your site at %s to verify it. Make sure your site is publicly reachable and its domain and SSL certificate are set up correctly. If they are, ask your hosting provider whether they block connections from WordPress.com.", "jetpack-videopress-pkg" );
 __( "WordPress.com couldn’t reach your site to verify it. Make sure your site is publicly reachable and its domain and SSL certificate are set up correctly. If they are, ask your hosting provider whether they block connections from WordPress.com.", "jetpack-videopress-pkg" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com reached your site at %s, but the connection endpoint was not found. A security plugin or server rule may be blocking xmlrpc.php or the REST API.", "jetpack-videopress-pkg" );
 __( "WordPress.com reached your site, but the connection endpoint was not found. A security plugin or server rule may be blocking xmlrpc.php or the REST API.", "jetpack-videopress-pkg" );
-/* translators: %1$d is an HTTP status code, e.g. 500; %2$s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com got an error (HTTP %1$d) when it tried to verify your site at %2$s. Your site’s error log may show the cause.", "jetpack-videopress-pkg" );
-/* translators: %d is an HTTP status code, e.g. 500. */
 __( "WordPress.com got an error (HTTP %d) when it tried to verify your site. Your site’s error log may show the cause.", "jetpack-videopress-pkg" );
-/* translators: %1$s is the site URL WordPress.com tried, e.g. https://example.com; %2$d is an HTTP status code, e.g. 403. */
 __( "Something blocked WordPress.com from verifying your site at %1$s (HTTP %2$d). Try again in a minute. If it keeps happening, a firewall or security rule is usually the cause: ask your hosting provider to allow connections from WordPress.com.", "jetpack-videopress-pkg" );
-/* translators: %d is an HTTP status code, e.g. 403. */
 __( "Something blocked WordPress.com from verifying your site (HTTP %d). Try again in a minute. If it keeps happening, a firewall or security rule is usually the cause: ask your hosting provider to allow connections from WordPress.com.", "jetpack-videopress-pkg" );
 __( "Your site is on a private network, so WordPress.com can’t reach it. Jetpack can only connect sites that are publicly accessible.", "jetpack-videopress-pkg" );
 __( "Your site’s address is on WordPress.com. Jetpack connects WordPress sites hosted elsewhere, so it can’t connect this one.", "jetpack-videopress-pkg" );
@@ -230,7 +194,6 @@ __( "Connecting…", "jetpack-videopress-pkg" );
 __( "Connect", "jetpack-videopress-pkg" );
 __( "Checkout could not start. Please try again.", "jetpack-videopress-pkg" );
 __( "An error occurred. Please try again.", "jetpack-videopress-pkg" );
-/* translators: %1$s: the discount amount */
 __( "%1$s%% off", "jetpack-videopress-pkg" );
 __( "/month, billed yearly", "jetpack-videopress-pkg" );
 __( "Get VideoPress", "jetpack-videopress-pkg" );
@@ -272,7 +235,6 @@ __( "May include mild language or mature themes.", "jetpack-videopress-pkg" );
 __( "R", "jetpack-videopress-pkg" );
 __( "May include strong language, violence, or adult content.", "jetpack-videopress-pkg" );
 __( "No subtitles yet.", "jetpack-videopress-pkg" );
-/* translators: 1: list of subtitle language names. 2: how many further languages exist. */
 _n( "%1$s, and %2$d more", "%1$s, and %2$d more", 1, "jetpack-videopress-pkg" );
 __( "Subtitles", "jetpack-videopress-pkg" );
 __( "Thumbnail updated.", "jetpack-videopress-pkg" );
@@ -302,7 +264,6 @@ __( "Your video uploaded, but its details couldn’t be loaded.", "jetpack-video
 __( "Retry upload", "jetpack-videopress-pkg" );
 __( "Retry saving details", "jetpack-videopress-pkg" );
 __( "Retry loading details", "jetpack-videopress-pkg" );
-/* translators: %d: upload progress percentage. */
 __( "Uploading %d%%", "jetpack-videopress-pkg" );
 __( "Upload progress", "jetpack-videopress-pkg" );
 __( "Add at least three chapters.", "jetpack-videopress-pkg" );
@@ -315,13 +276,11 @@ __( "Chapters cannot start after the video ends.", "jetpack-videopress-pkg" );
 __( "Details", "jetpack-videopress-pkg" );
 __( "Editor", "jetpack-videopress-pkg" );
 __( "Edit chapters in the editor", "jetpack-videopress-pkg" );
-/* translators: %d: number of chapters in the description. */
 __( "Chapters (%d)", "jetpack-videopress-pkg" );
 __( "Learn how chapters work", "jetpack-videopress-pkg" );
 __( "Video details", "jetpack-videopress-pkg" );
 __( "Title", "jetpack-videopress-pkg" );
 __( "Description", "jetpack-videopress-pkg" );
-/* translators: %s: name of the copied field, e.g. "Link to video". */
 __( "%s copied to clipboard.", "jetpack-videopress-pkg" );
 __( "Copy", "jetpack-videopress-pkg" );
 __( "Video info", "jetpack-videopress-pkg" );

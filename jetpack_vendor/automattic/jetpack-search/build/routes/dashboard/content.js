@@ -9,29 +9,22 @@
 __( "Jetpack Logo", "jetpack-search-pkg" );
 __( "An Automattic Airline", "jetpack-search-pkg" );
 __( "Loading", "jetpack-search-pkg" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-search-pkg" );
 __( "Features", "jetpack-search-pkg" );
 __( "Help", "jetpack-search-pkg" );
 __( "Jetpack", "jetpack-search-pkg" );
-/* translators: %1$s is button label 1 and %2$s is button label 2 */
 __( "By clicking <strong>%1$s</strong> or <strong>%2$s</strong>, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-search-pkg" );
 __( "By clicking the buttons above, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-search-pkg" );
-/* translators: %s is a button label */
 __( "By clicking <strong>%s</strong>, you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site‘s data</shareDetailsLink> with us.", "jetpack-search-pkg" );
 __( "By continuing you agree to our <tosLink>Terms of Service</tosLink> and to <shareDetailsLink>sync your site’s data</shareDetailsLink> with us. We’ll check if that email is linked to an existing WordPress.com account or create a new one instantly.", "jetpack-search-pkg" );
 __( "/month, paid yearly", "jetpack-search-pkg" );
-/* translators: %s: the product name */
 __( "Icon for the product %s", "jetpack-search-pkg" );
 __( "Sections", "jetpack-search-pkg" );
-/* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-search-pkg" );
 __( "Included", "jetpack-search-pkg" );
 __( "Not included", "jetpack-search-pkg" );
 __( "Coming soon", "jetpack-search-pkg" );
-/* translators: %s: Name of the current feature */
 __( "%s coming soon", "jetpack-search-pkg" );
-/* translators: %s: Name of the current feature */
 __( "%s not included", "jetpack-search-pkg" );
 __( "Reduced pricing is a limited offer for the first year and renews at regular price.", "jetpack-search-pkg" );
 __( "% off", "jetpack-search-pkg" );
@@ -41,22 +34,15 @@ __( "Record type", "jetpack-search-pkg" );
 __( "Record count", "jetpack-search-pkg" );
 __( "Indeterminate Progress Bar", "jetpack-search-pkg" );
 __( "Unavailable in <a>Offline Mode</a>", "jetpack-search-pkg" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com couldn’t make a secure (HTTPS) connection to your site at %s. Its SSL certificate or HTTPS setup may be invalid. Ask your hosting provider to check it.", "jetpack-search-pkg" );
 __( "WordPress.com couldn’t make a secure (HTTPS) connection to your site. Its SSL certificate or HTTPS setup may be invalid. Ask your hosting provider to check it.", "jetpack-search-pkg" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com couldn’t reach your site at %s to verify it. Make sure your site is publicly reachable and its domain and SSL certificate are set up correctly. If they are, ask your hosting provider whether they block connections from WordPress.com.", "jetpack-search-pkg" );
 __( "WordPress.com couldn’t reach your site to verify it. Make sure your site is publicly reachable and its domain and SSL certificate are set up correctly. If they are, ask your hosting provider whether they block connections from WordPress.com.", "jetpack-search-pkg" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com reached your site at %s, but the connection endpoint was not found. A security plugin or server rule may be blocking xmlrpc.php or the REST API.", "jetpack-search-pkg" );
 __( "WordPress.com reached your site, but the connection endpoint was not found. A security plugin or server rule may be blocking xmlrpc.php or the REST API.", "jetpack-search-pkg" );
-/* translators: %1$d is an HTTP status code, e.g. 500; %2$s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com got an error (HTTP %1$d) when it tried to verify your site at %2$s. Your site’s error log may show the cause.", "jetpack-search-pkg" );
-/* translators: %d is an HTTP status code, e.g. 500. */
 __( "WordPress.com got an error (HTTP %d) when it tried to verify your site. Your site’s error log may show the cause.", "jetpack-search-pkg" );
-/* translators: %1$s is the site URL WordPress.com tried, e.g. https://example.com; %2$d is an HTTP status code, e.g. 403. */
 __( "Something blocked WordPress.com from verifying your site at %1$s (HTTP %2$d). Try again in a minute. If it keeps happening, a firewall or security rule is usually the cause: ask your hosting provider to allow connections from WordPress.com.", "jetpack-search-pkg" );
-/* translators: %d is an HTTP status code, e.g. 403. */
 __( "Something blocked WordPress.com from verifying your site (HTTP %d). Try again in a minute. If it keeps happening, a firewall or security rule is usually the cause: ask your hosting provider to allow connections from WordPress.com.", "jetpack-search-pkg" );
 __( "Your site is on a private network, so WordPress.com can’t reach it. Jetpack can only connect sites that are publicly accessible.", "jetpack-search-pkg" );
 __( "Your site’s address is on WordPress.com. Jetpack connects WordPress sites hosted elsewhere, so it can’t connect this one.", "jetpack-search-pkg" );
@@ -81,8 +67,9 @@ __( "Your site couldn’t reach WordPress.com. Ask your hosting provider to allo
 __( "WordPress.com is temporarily unavailable. Please try again in a minute.", "jetpack-search-pkg" );
 __( "Your site got an unexpected response from WordPress.com. If your hosting provider filters outgoing connections, ask them to allow jetpack.wordpress.com.", "jetpack-search-pkg" );
 __( "WordPress.com returned an unexpected response when registering your site. Please try again in a minute.", "jetpack-search-pkg" );
-/* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-search-pkg" );
+__( "OK", "jetpack-search-pkg" );
+__( "Cancel", "jetpack-search-pkg" );
 __( "Dismiss", "jetpack-search-pkg" );
 __( "An error occurred. Please try again.", "jetpack-search-pkg" );
 __( "Already have a subscription? <connectButton/>", "jetpack-search-pkg" );
@@ -90,20 +77,16 @@ __( "Log in to get started", "jetpack-search-pkg" );
 __( "Over 5 million WordPress sites are faster and more secure", "jetpack-search-pkg" );
 __( "Set up Jetpack", "jetpack-search-pkg" );
 __( "Your account (connection owner)", "jetpack-search-pkg" );
-/* translators: %s is the display name of the Jetpack connection owner. */
 __( "Connection owner's account (%s)", "jetpack-search-pkg" );
 __( "Connection owner's account", "jetpack-search-pkg" );
 __( "Your account", "jetpack-search-pkg" );
 __( "Another user's account", "jetpack-search-pkg" );
 __( "User connection", "jetpack-search-pkg" );
 __( "Site connection", "jetpack-search-pkg" );
-/* translators: %s is what the error applies to, e.g. "Site connection" or "Your account". */
 __( "Jetpack Connection error: %s", "jetpack-search-pkg" );
-/* translators: %d is the number of connection errors found. */
 _n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack-search-pkg" );
 __( "Jetpack Connection error", "jetpack-search-pkg" );
 __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-search-pkg" );
-/* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack-search-pkg" );
 __( "Reconnecting Jetpack", "jetpack-search-pkg" );
 __( "Loading…", "jetpack-search-pkg" );
@@ -128,8 +111,6 @@ __( "Learn more", "jetpack-search-pkg" );
 __( "Get Jetpack Search", "jetpack-search-pkg" );
 __( "Jetpack Search", "jetpack-search-pkg" );
 __( "The best WordPress search experience", "jetpack-search-pkg" );
-__( "OK", "jetpack-search-pkg" );
-__( "Cancel", "jetpack-search-pkg" );
 __( "Upgrade your plan to use video covers", "jetpack-search-pkg" );
 __( "Upgrade your plan to upload audio", "jetpack-search-pkg" );
 __( "You are a search results summarizer for Jetpack Search. Your job is to summarize the best available successful search results in a succinct manner.", "jetpack-search-pkg" );
@@ -163,7 +144,6 @@ _x( "Use Theme search", "Button label that activates the theme's built-in search
 _x( "Turn off Jetpack Search", "Button label that disables Jetpack Search entirely", "jetpack-search-pkg" );
 __( "Use", "jetpack-search-pkg" );
 _x( "Click to turn off Jetpack Search", "Hover hint on the OFF card explaining what clicking the card does", "jetpack-search-pkg" );
-/* translators: %s — the human-readable experience name (e.g. "Embedded search"). */
 _x( "Click to switch to %s", "Hover hint on a non-active experience card explaining what clicking the card does", "jetpack-search-pkg" );
 __( "Upgrade your plan to unlock this option.", "jetpack-search-pkg" );
 __( "Active", "jetpack-search-pkg" );
@@ -179,7 +159,6 @@ __( "The Search overlay template has been restored to the bundled default.", "je
 __( "Could not restore the Search overlay template.", "jetpack-search-pkg" );
 __( "Customize", "jetpack-search-pkg" );
 __( "Edit widgets", "jetpack-search-pkg" );
-/* translators: %s — the human-readable experience name (e.g. "Embedded search"). */
 __( "Switch the visitor-facing search experience to %s?", "jetpack-search-pkg" );
 __( "A search-as-you-type customizable search page built with blocks. Filters, sorting, pagination — all themable in the Site Editor.", "jetpack-search-pkg" );
 __( "In beta — a search-as-you-type overlay rendered from your Search blocks. Same filters, sorting, and store as Embedded, but opens over your existing pages just like former Instant Search overlay.", "jetpack-search-pkg" );
@@ -190,7 +169,6 @@ __( "<strong>Fast and smart results</strong> — slower database-powered search,
 __( "<strong>Offloaded search</strong> — every query now hits your database", "jetpack-search-pkg" );
 __( "Visitors use WordPress default search, and you lose:", "jetpack-search-pkg" );
 __( "Select a search experience for your visitors", "jetpack-search-pkg" );
-/* translators: %s is replaced with the number of search results */
 __( "Found %s results", "jetpack-search-pkg" );
 __( "Relevance", "jetpack-search-pkg" );
 __( "Newest", "jetpack-search-pkg" );
@@ -219,23 +197,16 @@ __( "Jetpack's servers ran into a problem when trying to communicate with your s
 __( "We're gathering your usage data", "jetpack-search-pkg" );
 __( "If you have recently set up Jetpack Search, please allow a little time for indexing to complete.", "jetpack-search-pkg" );
 __( "You're close to the maximum records for this billing tier", "jetpack-search-pkg" );
-/* translators: %s: site's current plan record limit */
 __( "Once you hit %s indexed records, you'll be upgraded to the next tier. You won't be charged for the new tier until your next billing date.", "jetpack-search-pkg" );
-/* translators: %1$s: site's current record count, %2$s: record limit of the current plan */
 __( "<s>%1$s</s> records indexed out of the <s>%2$s</s> allotted for your current plan", "jetpack-search-pkg" );
-/* translators: %1$s: site's current record count, %2$s: record limit of the current plan */
 __( "<s>%1$s</s> records indexed", "jetpack-search-pkg" );
 __( "More info", "jetpack-search-pkg" );
-/* translators: 'Your search index' is a breakdown of the site's indexed post type content,
-          such as the number of indexed posts, pages etc. */
 __( "Your search index", "jetpack-search-pkg" );
 __( "Render product searches through Jetpack Search's filtered results page instead of WooCommerce's default product search template.", "jetpack-search-pkg" );
 __( "Use Jetpack Search for product search results", "jetpack-search-pkg" );
 __( "Upgraded", "jetpack-search-pkg" );
 __( "Free plan", "jetpack-search-pkg" );
-/* translators: Header for section showing search records and requests usage. */
 __( "Your usage", "jetpack-search-pkg" );
-/* translators: %1$s: site name (not translated) */
 __( "Indexing %1$s", "jetpack-search-pkg" );
 __( "We're gathering your usage data.", "jetpack-search-pkg" );
 __( "If you have recently set up Search, please allow a little time for indexing to complete.", "jetpack-search-pkg" );
@@ -262,12 +233,10 @@ __( "You’re close to exceeding the number of site records and search requests 
 __( "You’ve exceeded the number of site records and search requests available for the free plan.", "jetpack-search-pkg" );
 __( "Upgrade now to increase your limits and avoid interruption!", "jetpack-search-pkg" );
 __( "Site records increased", "jetpack-search-pkg" );
-/* translators: %1$s: records limit */
 __( "Thank you for upgrading! Now your visitors can search up to %1$s records.", "jetpack-search-pkg" );
 __( "1 of 2", "jetpack-search-pkg" );
 __( "Next", "jetpack-search-pkg" );
 __( "More search requests", "jetpack-search-pkg" );
-/* translators: %1$s: requests limit */
 __( "Your search plugin now supports up to %1$s search requests per month.", "jetpack-search-pkg" );
 __( "2 of 2", "jetpack-search-pkg" );
 __( "Finish", "jetpack-search-pkg" );
@@ -292,24 +261,17 @@ __( "Help your visitors find exactly what they're looking for, fast", "jetpack-s
 __( "Use license key", "jetpack-search-pkg" );
 __( "14 day money back guarantee.", "jetpack-search-pkg" );
 __( "Priority support", "jetpack-search-pkg" );
-/* translators: %s: the discount percentage (e.g. 50%). */
 __( "%s off", "jetpack-search-pkg" );
 __( "Starting price per month, billed yearly", "jetpack-search-pkg" );
-/* translators: %1$s: site domain */
 __( "Starting price based on the number of records for <b>%1$s</b>.", "jetpack-search-pkg" );
-/* translators: %1$s: Records or requests count, <Price>: Additional charge. */
 __( "For every additional %1$s records or requests, an additional <Price></Price> per month will be charged.", "jetpack-search-pkg" );
 __( "Get Search", "jetpack-search-pkg" );
-/* translators: %1$s: Number of records allowed before being charged extra. */
 __( "%1$s records", "jetpack-search-pkg" );
-/* translators: %1$s: Number of requests allowed before being charged extra. */
 __( "%1$s requests", "jetpack-search-pkg" );
 __( "Branding removed", "jetpack-search-pkg" );
 __( "Start for free", "jetpack-search-pkg" );
-/* translators: %1$s: Number of records in compact form, e.g., "5k" */
 __( "In the free plan, you can continue using the plugin even if you have more than %1$s records for three months.", "jetpack-search-pkg" );
 __( "More about indexing and query limits", "jetpack-search-pkg" );
-/* translators: %1$s: Number of requests in compact form, e.g., "500" */
 __( "In the free plan, you can continue using the plugin even if you have more than %1$s requests for three consecutive months.", "jetpack-search-pkg" );
 __( "Shows Jetpack logo", "jetpack-search-pkg" );
 __( "Number of records", "jetpack-search-pkg" );

@@ -6,269 +6,47 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "Loading", "jetpack" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s", "jetpack" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack" );
-/* translators: 1: Calendar type. 2: Current month and year. */
-__( "%1$s, %2$s", "jetpack" );
-__( "Date calendar", "jetpack" );
-__( "Date range calendar", "jetpack" );
-__( "Navigation bar", "jetpack" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s", "jetpack" );
-__( "Next month", "jetpack" );
-__( "Previous month", "jetpack" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "Today, %s, selected", "jetpack" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
-__( "%s, selected", "jetpack" );
-__( "Required", "jetpack" );
-__( "Optional", "jetpack" );
-__( "More details follow the field.", "jetpack" );
-__( "Select", "jetpack" );
-__( "Dismiss", "jetpack" );
-__( "Sort ascending", "jetpack" );
-__( "Sort descending", "jetpack" );
-__( "(no title)", "jetpack" );
-__( "Actions", "jetpack" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item selected", "%s Items selected", 1, "jetpack" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item", "%s Items", 1, "jetpack" );
-/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
-_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack" );
-__( "Deselect all", "jetpack" );
-__( "Select all", "jetpack" );
-__( "Cancel", "jetpack" );
-__( "Add filter", "jetpack" );
-__( "Move left", "jetpack" );
-__( "Move right", "jetpack" );
-__( "Insert left", "jetpack" );
-__( "Insert right", "jetpack" );
-__( "Hide column", "jetpack" );
-__( "Properties", "jetpack" );
-/* translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022". */
-__( "%1$s: %2$s", "jetpack" );
-/* translators: %d: The row number in the grid */
-__( "Row %d", "jetpack" );
-__( "Navigate to item", "jetpack" );
-/* translators: %s: The label of the field e.g. "Status". */
-__( "%s: <groupName />", "jetpack" );
-/* translators: 1: current page number. 2: total number of pages. */
-__( "Page %1$d of %2$d", "jetpack" );
-/* translators: 1: Current page number, 2: Total number of pages. */
-_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack" );
-__( "Current page", "jetpack" );
-__( "Previous page", "jetpack" );
-__( "Next page", "jetpack" );
-__( "Density", "jetpack" );
-_x( "Comfortable", "Density option for DataView layout", "jetpack" );
-_x( "Balanced", "Density option for DataView layout", "jetpack" );
-_x( "Compact", "Density option for DataView layout", "jetpack" );
-__( "Original aspect ratio", "jetpack" );
-__( "Preview size", "jetpack" );
-__( "Table", "jetpack" );
-__( "Grid", "jetpack" );
-__( "List", "jetpack" );
-__( "Activity", "jetpack" );
-/* translators: List of items for a filter. 1: Filter name. e.g.: "List of: Author". */
-__( "List of: %1$s", "jetpack" );
-__( "Search items", "jetpack" );
-__( "Search", "jetpack" );
-__( "No results found", "jetpack" );
-__( "No elements found", "jetpack" );
-/* translators: DataViews operator name */
-__( "Is none of", "jetpack" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is none of: Admin, Editor". */
-__( "<Name>%1$s is none of: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Includes", "jetpack" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is any: Admin, Editor". */
-__( "<Name>%1$s includes: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Includes all", "jetpack" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author includes all: Admin, Editor". */
-__( "<Name>%1$s includes all: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Between (inc)", "jetpack" );
-/* translators: 1: Filter name (e.g. "Item count"). 2: Filter value min. 3: Filter value max. e.g.: "Item count between (inc): 10 and 180". */
-__( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "In the past", "jetpack" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is in the past: 7 days". */
-__( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Over", "jetpack" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is over: 7 days". */
-__( "<Name>%1$s is over: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Is", "jetpack" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is: Admin". */
-__( "<Name>%1$s is: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Is not", "jetpack" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is not: Admin". */
-__( "<Name>%1$s is not: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Less than", "jetpack" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than: 10". */
-__( "<Name>%1$s is less than: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Greater than", "jetpack" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than: 10". */
-__( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Less than or equal", "jetpack" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than or equal to: 10". */
-__( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Greater than or equal", "jetpack" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than or equal to: 10". */
-__( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Before", "jetpack" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is before: 2024-01-01". */
-__( "<Name>%1$s is before: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "After", "jetpack" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is after: 2024-01-01". */
-__( "<Name>%1$s is after: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Before (inc)", "jetpack" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or before: 2024-01-01". */
-__( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "After (inc)", "jetpack" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or after: 2024-01-01". */
-__( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Contains", "jetpack" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title contains: Hello". */
-__( "<Name>%1$s contains: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Doesn't contain", "jetpack" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title doesn't contain: Hello". */
-__( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "Starts with", "jetpack" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title starts with: Hello". */
-__( "<Name>%1$s starts with: </Name><Value>%2$s</Value>", "jetpack" );
-/* translators: DataViews operator name */
-__( "On", "jetpack" );
-/* translators: DataViews operator name */
-__( "Not on", "jetpack" );
-__( "Conditions", "jetpack" );
-__( "Reset", "jetpack" );
-__( "Remove", "jetpack" );
-/* translators: 1: Filter name. */
-__( "Filter by: %1$s", "jetpack" );
-/* translators: 1: Filter name e.g.: "Unknown status for Author". */
-__( "Unknown status for %1$s", "jetpack" );
-_x( "Filter", "verb", "jetpack" );
-__( "No results", "jetpack" );
-__( "Layout", "jetpack" );
-__( "Sort by", "jetpack" );
-__( "Order", "jetpack" );
-__( "Items per page", "jetpack" );
-__( "Reset view", "jetpack" );
-_x( "View options", "View is used as a noun", "jetpack" );
-__( "Appearance", "jetpack" );
-__( "Unit", "jetpack" );
-__( "Days", "jetpack" );
-__( "Weeks", "jetpack" );
-__( "Months", "jetpack" );
-__( "Years", "jetpack" );
-__( "Days ago", "jetpack" );
-__( "Weeks ago", "jetpack" );
-__( "Months ago", "jetpack" );
-__( "Years ago", "jetpack" );
-__( "Coordinated Universal Time", "jetpack" );
-/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
-__( "Timezone: %s", "jetpack" );
-__( "Date time", "jetpack" );
-__( "Custom", "jetpack" );
-__( "Date", "jetpack" );
-__( "From", "jetpack" );
-__( "To", "jetpack" );
-__( "Today", "jetpack" );
-__( "Yesterday", "jetpack" );
-__( "Past week", "jetpack" );
-__( "Past month", "jetpack" );
-__( "Last 7 days", "jetpack" );
-__( "Last 30 days", "jetpack" );
-__( "Month to date", "jetpack" );
-__( "Last year", "jetpack" );
-__( "Year to date", "jetpack" );
-__( "The max. value must be greater than the min. value.", "jetpack" );
-__( "Min.", "jetpack" );
-__( "Max.", "jetpack" );
-__( "The end time must be later than the start time.", "jetpack" );
-__( "Open color picker", "jetpack" );
-__( "Hide password", "jetpack" );
-__( "Show password", "jetpack" );
-__( "Value must be a valid email address.", "jetpack" );
-__( "Value must be an integer.", "jetpack" );
-__( "Value must be a number.", "jetpack" );
-__( "True", "jetpack" );
-__( "False", "jetpack" );
-__( "Value must be true, false, or undefined", "jetpack" );
-__( "Value must be an array.", "jetpack" );
-__( "Every value must be a string.", "jetpack" );
-__( "Value must be a valid color.", "jetpack" );
-__( "The task was deleted.", "jetpack" );
-__( "Task", "jetpack" );
-__( "Scheduled", "jetpack" );
-__( "Latest run", "jetpack" );
-__( "View", "jetpack" );
-__( "Run now", "jetpack" );
-__( "The task is running now.", "jetpack" );
-__( "Pause or resume", "jetpack" );
-__( "Delete", "jetpack" );
-__( "Try again", "jetpack" );
-__( "Schedule tasks for repeated work", "jetpack" );
-__( "Have your WordPress Agent run tasks on a regular basis. Draft content, get weekly reports, moderate comments, and more. Set one up right in the chat.", "jetpack" );
-__( "Create a task", "jetpack" );
-__( "Scheduled tasks", "jetpack" );
-__( "Automate repeated work with WordPress Agent.", "jetpack" );
-__( "Delete task?", "jetpack" );
-__( "This permanently deletes the scheduled task:", "jetpack" );
-__( "The task was resumed.", "jetpack" );
-__( "The task was paused.", "jetpack" );
-__( "Daily", "jetpack" );
-__( "Weekly", "jetpack" );
-__( "Monthly", "jetpack" );
-__( "One time", "jetpack" );
 __( "Jetpack Logo", "jetpack" );
 __( "An Automattic Airline", "jetpack" );
+__( "(opens in a new tab)", "jetpack" );
 __( "Features", "jetpack" );
 __( "Help", "jetpack" );
 __( "Jetpack", "jetpack" );
 __( "Sections", "jetpack" );
-/* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack" );
+__( "Loading", "jetpack" );
 __( "Your account (connection owner)", "jetpack" );
-/* translators: %s is the display name of the Jetpack connection owner. */
 __( "Connection owner's account (%s)", "jetpack" );
 __( "Connection owner's account", "jetpack" );
 __( "Your account", "jetpack" );
 __( "Another user's account", "jetpack" );
 __( "User connection", "jetpack" );
 __( "Site connection", "jetpack" );
-/* translators: %s is what the error applies to, e.g. "Site connection" or "Your account". */
 __( "Jetpack Connection error: %s", "jetpack" );
-/* translators: %d is the number of connection errors found. */
 _n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack" );
 __( "Jetpack Connection error", "jetpack" );
 __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack" );
-/* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack" );
 __( "Reconnecting Jetpack", "jetpack" );
 __( "Loading…", "jetpack" );
 __( "Restore Connection", "jetpack" );
 __( "Take Action", "jetpack" );
 __( "Reconnecting Jetpack…", "jetpack" );
+__( "Keyboard shortcut: %s", "jetpack" );
+__( "In progress", "jetpack" );
+__( "%1$s, %2$s", "jetpack" );
+__( "Date calendar", "jetpack" );
+__( "Date range calendar", "jetpack" );
+__( "Navigation bar", "jetpack" );
+__( "Today, %s", "jetpack" );
+__( "Next month", "jetpack" );
+__( "Previous month", "jetpack" );
+__( "Today, %s, selected", "jetpack" );
+__( "%s, selected", "jetpack" );
+__( "Required", "jetpack" );
+__( "Optional", "jetpack" );
+__( "More details follow the field.", "jetpack" );
+__( "Select", "jetpack" );
 __( "This tab could not be loaded. Reload the page to try again.", "jetpack" );
 __( "Learn more", "jetpack" );
 __( "Connect Jetpack", "jetpack" );
@@ -295,6 +73,7 @@ __( "SEO", "jetpack" );
 __( "AI SEO", "jetpack" );
 __( "AI recommendations to optimize titles, meta descriptions, and content for search engines.", "jetpack" );
 __( "Open SEO Settings", "jetpack" );
+__( "Search", "jetpack" );
 __( "AI Answers", "jetpack" );
 __( "Help visitors and AI agents find answers in your content, via Jetpack Search.", "jetpack" );
 __( "Open Search Settings", "jetpack" );
@@ -337,7 +116,6 @@ __( "Create content, get reports, and manage your site from the conversation.", 
 __( "How it works", "jetpack" );
 __( "All enabled", "jetpack" );
 __( "Disabled", "jetpack" );
-/* translators: %1$d: enabled count, %2$d: total count */
 __( "%1$d of %2$d enabled", "jetpack" );
 __( "External AI agent access", "jetpack" );
 __( "Allow external AI agents to access this site via MCP.", "jetpack" );
@@ -395,6 +173,7 @@ __( "No write tools are available for this site.", "jetpack" );
 __( "Dismiss banner", "jetpack" );
 __( "Do more on your site with AI.", "jetpack" );
 __( "Write, edit, and make changes across your whole site. Start in the editor, or connect ChatGPT or Claude and work from there.", "jetpack" );
+__( "Dismiss", "jetpack" );
 __( "Upgrade your plan to use video covers", "jetpack" );
 __( "Upgrade your plan to upload audio", "jetpack" );
 __( "Failed to load AI usage data.", "jetpack" );
@@ -410,7 +189,6 @@ __( "MCP integration guide", "jetpack" );
 __( "AI features overview", "jetpack" );
 __( "Billing & plans", "jetpack" );
 __( "Available capabilities", "jetpack" );
-/* translators: %1$d: requests still available. %2$d: total requests in the plan. */
 __( "%1$d of %2$d requests available", "jetpack" );
 __( "Available requests", "jetpack" );
 __( "Loading your AI usage…", "jetpack" );
@@ -422,6 +200,165 @@ __( "Upgrade", "jetpack" );
 __( "Quick start", "jetpack" );
 __( "Walkthrough videos", "jetpack" );
 __( "Documentation", "jetpack" );
+__( "Sort ascending", "jetpack" );
+__( "Sort descending", "jetpack" );
+__( "(no title)", "jetpack" );
+_x( "%s…", "menu item requiring further input", "jetpack" );
+__( "Actions", "jetpack" );
+_n( "%s item selected", "%s items selected", 1, "jetpack" );
+_n( "%s item", "%s items", 1, "jetpack" );
+_n( "%1$s of %2$s item", "%1$s of %2$s items", 1, "jetpack" );
+__( "Deselect all", "jetpack" );
+__( "Select all", "jetpack" );
+__( "Cancel", "jetpack" );
+__( "Add filter", "jetpack" );
+__( "Move left", "jetpack" );
+__( "Move right", "jetpack" );
+__( "Insert left", "jetpack" );
+__( "Insert right", "jetpack" );
+__( "Hide column", "jetpack" );
+__( "Properties", "jetpack" );
+__( "%1$s: %2$s", "jetpack" );
+__( "Row %d", "jetpack" );
+__( "Navigate to item", "jetpack" );
+__( "%s: <groupName />", "jetpack" );
+__( "Current page", "jetpack" );
+__( "Page %1$d of %2$d", "jetpack" );
+_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack" );
+__( "Previous page", "jetpack" );
+__( "Next page", "jetpack" );
+__( "Density", "jetpack" );
+_x( "Comfortable", "Density option for DataView layout", "jetpack" );
+_x( "Balanced", "Density option for DataView layout", "jetpack" );
+_x( "Compact", "Density option for DataView layout", "jetpack" );
+__( "Original aspect ratio", "jetpack" );
+__( "Preview size", "jetpack" );
+__( "Table", "jetpack" );
+__( "Grid", "jetpack" );
+__( "List", "jetpack" );
+__( "Activity", "jetpack" );
+__( "List of: %1$s", "jetpack" );
+__( "Search items", "jetpack" );
+__( "No results found", "jetpack" );
+__( "No elements found", "jetpack" );
+__( "Is none of", "jetpack" );
+__( "<Name>%1$s is none of: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Includes", "jetpack" );
+__( "<Name>%1$s includes: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Includes all", "jetpack" );
+__( "<Name>%1$s includes all: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Between (inc)", "jetpack" );
+__( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>", "jetpack" );
+__( "In the past", "jetpack" );
+__( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Over", "jetpack" );
+__( "<Name>%1$s is over: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Is", "jetpack" );
+__( "<Name>%1$s is: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Is not", "jetpack" );
+__( "<Name>%1$s is not: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Less than", "jetpack" );
+__( "<Name>%1$s is less than: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Greater than", "jetpack" );
+__( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Less than or equal", "jetpack" );
+__( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Greater than or equal", "jetpack" );
+__( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Before", "jetpack" );
+__( "<Name>%1$s is before: </Name><Value>%2$s</Value>", "jetpack" );
+__( "After", "jetpack" );
+__( "<Name>%1$s is after: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Before (inc)", "jetpack" );
+__( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>", "jetpack" );
+__( "After (inc)", "jetpack" );
+__( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Contains", "jetpack" );
+__( "<Name>%1$s contains: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Doesn't contain", "jetpack" );
+__( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>", "jetpack" );
+__( "Starts with", "jetpack" );
+__( "<Name>%1$s starts with: </Name><Value>%2$s</Value>", "jetpack" );
+__( "On", "jetpack" );
+__( "Not on", "jetpack" );
+__( "Conditions", "jetpack" );
+__( "Reset", "jetpack" );
+__( "Remove", "jetpack" );
+__( "Filter by: %1$s", "jetpack" );
+__( "Unknown status for %1$s", "jetpack" );
+_x( "Filter", "verb", "jetpack" );
+__( "No results", "jetpack" );
+__( "Layout", "jetpack" );
+__( "Sort by", "jetpack" );
+__( "Order", "jetpack" );
+__( "Items per page", "jetpack" );
+__( "Reset view", "jetpack" );
+_x( "View options", "View is used as a noun", "jetpack" );
+__( "Appearance", "jetpack" );
+__( "Unit", "jetpack" );
+__( "Days", "jetpack" );
+__( "Weeks", "jetpack" );
+__( "Months", "jetpack" );
+__( "Years", "jetpack" );
+__( "Days ago", "jetpack" );
+__( "Weeks ago", "jetpack" );
+__( "Months ago", "jetpack" );
+__( "Years ago", "jetpack" );
+__( "Coordinated Universal Time", "jetpack" );
+__( "Timezone: %s", "jetpack" );
+__( "Date time", "jetpack" );
+__( "Custom", "jetpack" );
+__( "Date", "jetpack" );
+__( "From", "jetpack" );
+__( "To", "jetpack" );
+__( "Today", "jetpack" );
+__( "Yesterday", "jetpack" );
+__( "Past week", "jetpack" );
+__( "Past month", "jetpack" );
+__( "Last 7 days", "jetpack" );
+__( "Last 30 days", "jetpack" );
+__( "Month to date", "jetpack" );
+__( "Last year", "jetpack" );
+__( "Year to date", "jetpack" );
+__( "The max. value must be greater than the min. value.", "jetpack" );
+__( "Min.", "jetpack" );
+__( "Max.", "jetpack" );
+__( "The end time must be later than the start time.", "jetpack" );
+__( "Open color picker", "jetpack" );
+__( "Hide password", "jetpack" );
+__( "Show password", "jetpack" );
+__( "Value must be a valid email address.", "jetpack" );
+__( "Value must be an integer.", "jetpack" );
+__( "Value must be a number.", "jetpack" );
+__( "True", "jetpack" );
+__( "False", "jetpack" );
+__( "Value must be true, false, or undefined", "jetpack" );
+__( "Value must be an array.", "jetpack" );
+__( "Every value must be a string.", "jetpack" );
+__( "Value must be a valid color.", "jetpack" );
+__( "The task was deleted.", "jetpack" );
+__( "Task", "jetpack" );
+__( "Scheduled", "jetpack" );
+__( "Latest run", "jetpack" );
+__( "View", "jetpack" );
+__( "Run now", "jetpack" );
+__( "The task is running now.", "jetpack" );
+__( "Pause or resume", "jetpack" );
+__( "Delete", "jetpack" );
+__( "Try again", "jetpack" );
+__( "Schedule tasks for repeated work", "jetpack" );
+__( "Have your WordPress Agent run tasks on a regular basis. Draft content, get weekly reports, moderate comments, and more. Set one up right in the chat.", "jetpack" );
+__( "Create a task", "jetpack" );
+__( "Scheduled tasks", "jetpack" );
+__( "Automate repeated work with WordPress Agent.", "jetpack" );
+__( "Delete task?", "jetpack" );
+__( "This permanently deletes the scheduled task:", "jetpack" );
+__( "The task was resumed.", "jetpack" );
+__( "The task was paused.", "jetpack" );
+__( "Daily", "jetpack" );
+__( "Weekly", "jetpack" );
+__( "Monthly", "jetpack" );
+__( "One time", "jetpack" );
 __( "Overview", "jetpack" );
 __( "AI Features", "jetpack" );
 __( "MCP and Connectors", "jetpack" );
@@ -429,7 +366,6 @@ __( "View your site’s content.", "jetpack" );
 __( "Create, update, and manage content on your site.", "jetpack" );
 __( "Get instructions for connecting your external AI assistant.", "jetpack" );
 __( "Breadcrumbs", "jetpack" );
-/* translators: %s: the name of the parent screen, e.g. "MCP and Connectors". */
 __( "Back to %s", "jetpack" );
 __( "Failed to save MCP settings. Please try again.", "jetpack" );
 __( "Your AI settings have been saved.", "jetpack" );

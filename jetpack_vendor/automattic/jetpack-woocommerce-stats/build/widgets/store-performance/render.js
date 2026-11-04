@@ -11,18 +11,15 @@ __( "Net sales", "jetpack-woocommerce-stats-pkg" );
 __( "Monitor your total revenue — after any discounts, returns, or adjustments — over a set period of time.", "jetpack-woocommerce-stats-pkg" );
 __( "Orders", "jetpack-woocommerce-stats-pkg" );
 __( "See a breakdown of when orders are placed to identify peak selling periods.", "jetpack-woocommerce-stats-pkg" );
-/* translators: %s: number of orders. */
 _n( "%s Order", "%s Orders", 1, "jetpack-woocommerce-stats-pkg" );
 __( "Store visitors", "jetpack-woocommerce-stats-pkg" );
 __( "Store visitors recorded through WooCommerce sessions. Jetpack Stats measures visitors separately, so totals may differ.", "jetpack-woocommerce-stats-pkg" );
-/* translators: %s: number of store visitors. */
 _n( "%s Store visitor", "%s Store visitors", 1, "jetpack-woocommerce-stats-pkg" );
 __( "Store conversion rate", "jetpack-woocommerce-stats-pkg" );
 __( "Track your store's conversion funnel from sessions to completed orders.", "jetpack-woocommerce-stats-pkg" );
 __( "No store sessions in this period.", "jetpack-woocommerce-stats-pkg" );
 __( "Customers", "jetpack-woocommerce-stats-pkg" );
 __( "Track the total number of customers (new and returning) who placed orders during the selected time period.", "jetpack-woocommerce-stats-pkg" );
-/* translators: %s: number of customers. */
 _n( "%s Customer", "%s Customers", 1, "jetpack-woocommerce-stats-pkg" );
 __( "Select at least one metric to display.", "jetpack-woocommerce-stats-pkg" );
 __( "We couldn't load store performance data. Please try again in a moment.", "jetpack-woocommerce-stats-pkg" );

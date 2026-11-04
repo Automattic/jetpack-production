@@ -9,13 +9,10 @@
 __( "Only the total for the period is available for this metric.", "jetpack-premium-analytics-pkg" );
 __( "This metric isn't available.", "jetpack-premium-analytics-pkg" );
 __( "Views", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of views. */
 _n( "%s View", "%s Views", 1, "jetpack-premium-analytics-pkg" );
 __( "Likes", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of likes. */
 _n( "%s Like", "%s Likes", 1, "jetpack-premium-analytics-pkg" );
 __( "Comments", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of comments. */
 _n( "%s Comment", "%s Comments", 1, "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this author's stats. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Open an author to see their stats here.", "jetpack-premium-analytics-pkg" );

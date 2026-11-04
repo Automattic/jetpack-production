@@ -7,7 +7,6 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Ads Served", "jetpack-ads-pkg" );
-/* translators: %s: number of ads served. */
 _n( "%s Ad Served", "%s Ads Served", 1, "jetpack-ads-pkg" );
 __( "Average CPM", "jetpack-ads-pkg" );
 __( "Revenue", "jetpack-ads-pkg" );

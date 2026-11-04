@@ -10,8 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Back up now: Use the design system tooltip.
+- Keep the Offline Mode screen icon, which @wordpress/icons removed in WordPress/gutenberg#85445, by shipping a copy of it.
 - Link the failed download screen to a guide on how to fix it.
 - Update package dependencies.
+- Use the design system progress bar for the backup, restore, download and storage meters.
 
 ## [5.2.2] - 2026-11-02
 ### Changed

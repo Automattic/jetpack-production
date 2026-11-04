@@ -7,9 +7,7 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading" );
-/* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)" );
 __( "We couldn’t load this page", "jetpack-seo" );
 __( "This is usually temporary. Give it another try.", "jetpack-seo" );
@@ -21,7 +19,6 @@ __( "Features", "jetpack-components" );
 __( "Help", "jetpack-components" );
 __( "Jetpack", "jetpack-components" );
 __( "Sections" );
-/* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-components" );
 __( "Overview", "jetpack-seo" );
 __( "Content", "jetpack-seo" );
@@ -32,18 +29,14 @@ __( "Could not enable SEO tools. Please try again.", "jetpack-seo" );
 __( "Could not disable SEO tools. Please try again.", "jetpack-seo" );
 __( "Enable SEO tools", "jetpack-seo" );
 __( "SEO tools help your content get found: customize titles and meta descriptions, generate a sitemap, verify your site with search engines, and control how pages look when shared. Turn it on to manage all of it from here.", "jetpack-seo" );
-/* translators: 1: Calendar type. 2: Current month and year. */
 __( "%1$s, %2$s" );
 __( "Date calendar" );
 __( "Date range calendar" );
 __( "Navigation bar" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s" );
 __( "Next month" );
 __( "Previous month" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s, selected" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected" );
 __( "Required" );
 __( "Optional" );
@@ -52,13 +45,11 @@ __( "Select" );
 __( "Sort ascending" );
 __( "Sort descending" );
 __( "(no title)" );
+_x( "%s…", "menu item requiring further input" );
 __( "Actions" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item selected", "%s Items selected", 1 );
-/* translators: %s: formatted number of items. */
-_n( "%s Item", "%s Items", 1 );
-/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
-_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1 );
+_n( "%s item selected", "%s items selected", 1 );
+_n( "%s item", "%s items", 1 );
+_n( "%1$s of %2$s item", "%1$s of %2$s items", 1 );
 __( "Deselect all" );
 __( "Select all" );
 __( "Cancel" );
@@ -69,18 +60,13 @@ __( "Insert left" );
 __( "Insert right" );
 __( "Hide column" );
 __( "Properties" );
-/* translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022". */
 __( "%1$s: %2$s" );
 __( "Navigate to item" );
-/* translators: %d: The row number in the grid */
 __( "Row %d" );
-/* translators: %s: The label of the field e.g. "Status". */
 __( "%s: <groupName />" );
-/* translators: 1: current page number. 2: total number of pages. */
-__( "Page %1$d of %2$d" );
-/* translators: 1: Current page number, 2: Total number of pages. */
-_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging" );
 __( "Current page" );
+__( "Page %1$d of %2$d" );
+_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging" );
 __( "Previous page" );
 __( "Next page" );
 __( "Density" );
@@ -93,98 +79,55 @@ __( "Table" );
 __( "Grid" );
 __( "List" );
 __( "Activity" );
-/* translators: List of items for a filter. 1: Filter name. e.g.: "List of: Author". */
 __( "List of: %1$s" );
 __( "Search items" );
 __( "Search" );
 __( "No results found" );
 __( "No elements found" );
-/* translators: DataViews operator name */
 __( "Is none of" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is none of: Admin, Editor". */
 __( "<Name>%1$s is none of: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Includes" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is any: Admin, Editor". */
 __( "<Name>%1$s includes: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Includes all" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author includes all: Admin, Editor". */
 __( "<Name>%1$s includes all: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Between (inc)" );
-/* translators: 1: Filter name (e.g. "Item count"). 2: Filter value min. 3: Filter value max. e.g.: "Item count between (inc): 10 and 180". */
 __( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>" );
-/* translators: DataViews operator name */
 __( "In the past" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is in the past: 7 days". */
 __( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Over" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is over: 7 days". */
 __( "<Name>%1$s is over: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Is" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is: Admin". */
 __( "<Name>%1$s is: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Is not" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is not: Admin". */
 __( "<Name>%1$s is not: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Less than" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than: 10". */
 __( "<Name>%1$s is less than: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Greater than" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than: 10". */
 __( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Less than or equal" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than or equal to: 10". */
 __( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Greater than or equal" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than or equal to: 10". */
 __( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Before" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is before: 2024-01-01". */
 __( "<Name>%1$s is before: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "After" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is after: 2024-01-01". */
 __( "<Name>%1$s is after: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Before (inc)" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or before: 2024-01-01". */
 __( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "After (inc)" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or after: 2024-01-01". */
 __( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Contains" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title contains: Hello". */
 __( "<Name>%1$s contains: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Doesn't contain" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title doesn't contain: Hello". */
 __( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "Starts with" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title starts with: Hello". */
 __( "<Name>%1$s starts with: </Name><Value>%2$s</Value>" );
-/* translators: DataViews operator name */
 __( "On" );
-/* translators: DataViews operator name */
 __( "Not on" );
-/* translators: 1: Filter name e.g.: "Unknown status for Author". */
 __( "Unknown status for %1$s" );
 __( "Conditions" );
 __( "Reset" );
 __( "Remove" );
-/* translators: 1: Filter name. */
 __( "Filter by: %1$s" );
 _x( "Filter", "verb" );
 __( "No results" );
@@ -205,7 +148,6 @@ __( "Months ago" );
 __( "Years ago" );
 __( "Unit" );
 __( "Coordinated Universal Time" );
-/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
 __( "Timezone: %s" );
 __( "Date time" );
 __( "Today" );

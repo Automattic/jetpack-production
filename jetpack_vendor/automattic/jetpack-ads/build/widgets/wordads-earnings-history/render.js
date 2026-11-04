@@ -6,7 +6,6 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: %d: number of earnings adjustments. */
 __( "Adjustments (%d)", "jetpack-ads-pkg" );
 __( "We couldn't load WordAds earnings. Please try again in a moment.", "jetpack-ads-pkg" );
 __( "Retry", "jetpack-ads-pkg" );

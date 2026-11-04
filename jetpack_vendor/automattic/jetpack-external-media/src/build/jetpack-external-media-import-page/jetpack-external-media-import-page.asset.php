@@ -23,7 +23,9 @@
 		'wp-keycodes',
 		'wp-plugins',
 		'wp-primitives',
+		'wp-private-apis',
+		'wp-theme',
 		'wp-url'
 	),
-	'version' => '17bb33c1527bceb2d5d7'
+	'version' => '3dcae16791cab013c31d'
 );

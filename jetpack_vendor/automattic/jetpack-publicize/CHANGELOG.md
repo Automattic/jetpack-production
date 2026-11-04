@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Connections list: Use the design system switch for the connection toggles.
+- Sharing activity: Use the design system tooltip for share times.
 - Update package dependencies.
 
 ## [0.88.9] - 2026-11-02

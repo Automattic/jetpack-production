@@ -7,7 +7,6 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading", "jetpack-premium-analytics-pkg" );
-/* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-premium-analytics-pkg" );
 _x( "%1$s, %2$s", "legend item label and value", "jetpack-premium-analytics-pkg" );
 _x( "%s: visible. Toggle visibility.", "visible interactive legend item", "jetpack-premium-analytics-pkg" );
@@ -50,21 +49,19 @@ __( "Percentage change unavailable", "jetpack-premium-analytics-pkg" );
 __( "No comparison data", "jetpack-premium-analytics-pkg" );
 __( "Pie chart", "jetpack-premium-analytics-pkg" );
 __( "Semi-circle chart", "jetpack-premium-analytics-pkg" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
+__( "OK", "jetpack-premium-analytics-pkg" );
+__( "Cancel", "jetpack-premium-analytics-pkg" );
+__( "Dismiss", "jetpack-premium-analytics-pkg" );
+__( "In progress", "jetpack-premium-analytics-pkg" );
 __( "Date calendar", "jetpack-premium-analytics-pkg" );
 __( "Date range calendar", "jetpack-premium-analytics-pkg" );
 __( "Navigation bar", "jetpack-premium-analytics-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s", "jetpack-premium-analytics-pkg" );
 __( "Next month", "jetpack-premium-analytics-pkg" );
 __( "Previous month", "jetpack-premium-analytics-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s, selected", "jetpack-premium-analytics-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected", "jetpack-premium-analytics-pkg" );
-__( "OK", "jetpack-premium-analytics-pkg" );
-__( "Cancel", "jetpack-premium-analytics-pkg" );
 __( "Required", "jetpack-premium-analytics-pkg" );
 __( "Optional", "jetpack-premium-analytics-pkg" );
 __( "Remove", "jetpack-premium-analytics-pkg" );
@@ -74,25 +71,19 @@ __( "More details follow the field.", "jetpack-premium-analytics-pkg" );
 __( "More details follow.", "jetpack-premium-analytics-pkg" );
 __( "Select", "jetpack-premium-analytics-pkg" );
 _n( "Selected item", "Selected items", 1, "jetpack-premium-analytics-pkg" );
-/* translators: 1: number of selected items. 2: arrow key name ("Left Arrow" or "Right Arrow"). */
 _n( "%1$d item selected. From the start of the input, press %2$s to move to the selected item.", "%1$d items selected. From the start of the input, press %2$s to move to the selected items.", 1, "jetpack-premium-analytics-pkg" );
 __( "Right Arrow", "jetpack-premium-analytics-pkg" );
 __( "Left Arrow", "jetpack-premium-analytics-pkg" );
 __( "No results found.", "jetpack-premium-analytics-pkg" );
 __( "Search", "jetpack-premium-analytics-pkg" );
 __( "Clear all", "jetpack-premium-analytics-pkg" );
-__( "Dismiss", "jetpack-premium-analytics-pkg" );
-__( "In progress", "jetpack-premium-analytics-pkg" );
 __( "Sort ascending", "jetpack-premium-analytics-pkg" );
 __( "Sort descending", "jetpack-premium-analytics-pkg" );
 __( "(no title)", "jetpack-premium-analytics-pkg" );
+_x( "%s…", "menu item requiring further input", "jetpack-premium-analytics-pkg" );
 __( "Actions", "jetpack-premium-analytics-pkg" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item selected", "%s Items selected", 1, "jetpack-premium-analytics-pkg" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item", "%s Items", 1, "jetpack-premium-analytics-pkg" );
-/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
-_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack-premium-analytics-pkg" );
+_n( "%s item selected", "%s items selected", 1, "jetpack-premium-analytics-pkg" );
+_n( "%1$s of %2$s item", "%1$s of %2$s items", 1, "jetpack-premium-analytics-pkg" );
 __( "Deselect all", "jetpack-premium-analytics-pkg" );
 __( "Select all", "jetpack-premium-analytics-pkg" );
 __( "Add filter", "jetpack-premium-analytics-pkg" );
@@ -103,15 +94,11 @@ __( "Insert right", "jetpack-premium-analytics-pkg" );
 __( "Hide column", "jetpack-premium-analytics-pkg" );
 __( "Properties", "jetpack-premium-analytics-pkg" );
 __( "Navigate to item", "jetpack-premium-analytics-pkg" );
-/* translators: %d: The row number in the grid */
 __( "Row %d", "jetpack-premium-analytics-pkg" );
-/* translators: %s: The label of the field e.g. "Status". */
 __( "%s: <groupName />", "jetpack-premium-analytics-pkg" );
-/* translators: 1: current page number. 2: total number of pages. */
-__( "Page %1$d of %2$d", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Current page number, 2: Total number of pages. */
-_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-premium-analytics-pkg" );
 __( "Current page", "jetpack-premium-analytics-pkg" );
+__( "Page %1$d of %2$d", "jetpack-premium-analytics-pkg" );
+_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-premium-analytics-pkg" );
 __( "Previous page", "jetpack-premium-analytics-pkg" );
 __( "Next page", "jetpack-premium-analytics-pkg" );
 __( "Density", "jetpack-premium-analytics-pkg" );
@@ -124,96 +111,53 @@ __( "Table", "jetpack-premium-analytics-pkg" );
 __( "Grid", "jetpack-premium-analytics-pkg" );
 __( "List", "jetpack-premium-analytics-pkg" );
 __( "Activity", "jetpack-premium-analytics-pkg" );
-/* translators: List of items for a filter. 1: Filter name. e.g.: "List of: Author". */
 __( "List of: %1$s", "jetpack-premium-analytics-pkg" );
 __( "Search items", "jetpack-premium-analytics-pkg" );
 __( "No results found", "jetpack-premium-analytics-pkg" );
 __( "No elements found", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Is none of", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is none of: Admin, Editor". */
 __( "<Name>%1$s is none of: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Includes", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is any: Admin, Editor". */
 __( "<Name>%1$s includes: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Includes all", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author includes all: Admin, Editor". */
 __( "<Name>%1$s includes all: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Between (inc)", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Item count"). 2: Filter value min. 3: Filter value max. e.g.: "Item count between (inc): 10 and 180". */
 __( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "In the past", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is in the past: 7 days". */
 __( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Over", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is over: 7 days". */
 __( "<Name>%1$s is over: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Is", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is: Admin". */
 __( "<Name>%1$s is: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Is not", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is not: Admin". */
 __( "<Name>%1$s is not: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Less than", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than: 10". */
 __( "<Name>%1$s is less than: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Greater than", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than: 10". */
 __( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Less than or equal", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than or equal to: 10". */
 __( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Greater than or equal", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than or equal to: 10". */
 __( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Before", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is before: 2024-01-01". */
 __( "<Name>%1$s is before: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "After", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is after: 2024-01-01". */
 __( "<Name>%1$s is after: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Before (inc)", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or before: 2024-01-01". */
 __( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "After (inc)", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or after: 2024-01-01". */
 __( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Contains", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title contains: Hello". */
 __( "<Name>%1$s contains: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Doesn't contain", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title doesn't contain: Hello". */
 __( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Starts with", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title starts with: Hello". */
 __( "<Name>%1$s starts with: </Name><Value>%2$s</Value>", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "On", "jetpack-premium-analytics-pkg" );
-/* translators: DataViews operator name */
 __( "Not on", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name e.g.: "Unknown status for Author". */
 __( "Unknown status for %1$s", "jetpack-premium-analytics-pkg" );
 __( "Conditions", "jetpack-premium-analytics-pkg" );
 __( "Reset", "jetpack-premium-analytics-pkg" );
-/* translators: 1: Filter name. */
 __( "Filter by: %1$s", "jetpack-premium-analytics-pkg" );
 _x( "Filter", "verb", "jetpack-premium-analytics-pkg" );
 __( "No results", "jetpack-premium-analytics-pkg" );
@@ -234,7 +178,6 @@ __( "Months ago", "jetpack-premium-analytics-pkg" );
 __( "Years ago", "jetpack-premium-analytics-pkg" );
 __( "Unit", "jetpack-premium-analytics-pkg" );
 __( "Coordinated Universal Time", "jetpack-premium-analytics-pkg" );
-/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
 __( "Timezone: %s", "jetpack-premium-analytics-pkg" );
 __( "Date time", "jetpack-premium-analytics-pkg" );
 __( "Today", "jetpack-premium-analytics-pkg" );
@@ -267,9 +210,7 @@ __( "Value must be an array.", "jetpack-premium-analytics-pkg" );
 __( "Every value must be a string.", "jetpack-premium-analytics-pkg" );
 __( "Value must be a valid color.", "jetpack-premium-analytics-pkg" );
 __( "Apply", "jetpack-premium-analytics-pkg" );
-/* translators: %s: Field name. */
 _x( "Edit %s (has errors)", "field", "jetpack-premium-analytics-pkg" );
-/* translators: %s: Field name. */
 _x( "Edit %s", "field", "jetpack-premium-analytics-pkg" );
 __( "Could not validate elements.", "jetpack-premium-analytics-pkg" );
 __( "Value must be one of the elements.", "jetpack-premium-analytics-pkg" );
@@ -283,7 +224,6 @@ __( "Value is too short.", "jetpack-premium-analytics-pkg" );
 __( "Value is too long.", "jetpack-premium-analytics-pkg" );
 __( "Unknown error when running custom validation.", "jetpack-premium-analytics-pkg" );
 __( "Validating…", "jetpack-premium-analytics-pkg" );
-/* translators: %d: Number of fields that need attention */
 _n( "%d field needs attention", "%d fields need attention", 1, "jetpack-premium-analytics-pkg" );
 __( "More details", "jetpack-premium-analytics-pkg" );
 __( "An Automattic Airline", "jetpack-premium-analytics-pkg" );

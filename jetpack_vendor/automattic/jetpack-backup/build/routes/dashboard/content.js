@@ -7,48 +7,38 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading", "jetpack-backup-pkg" );
-/* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-backup-pkg" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-backup-pkg" );
 __( "Close", "jetpack-backup-pkg" );
+__( "Dismiss", "jetpack-backup-pkg" );
+__( "In progress", "jetpack-backup-pkg" );
 __( "More details follow the field.", "jetpack-backup-pkg" );
 __( "Select", "jetpack-backup-pkg" );
-__( "Dismiss", "jetpack-backup-pkg" );
 __( "Something went wrong", "jetpack-backup-pkg" );
 __( "The page ran into an unexpected problem. Your backups are unaffected.", "jetpack-backup-pkg" );
 __( "Reload the page", "jetpack-backup-pkg" );
-/* translators: 1: a date, 2: a time of day. */
 _x( "%1$s %2$s", "date and time", "jetpack-backup-pkg" );
-/* translators: Short month and day format, see https://www.php.net/manual/datetime.format.php */
 _x( "M j", "short month and day date format", "jetpack-backup-pkg" );
-/* translators: %s: actor name */
 __( "By %s", "jetpack-backup-pkg" );
-/* translators: 1: Calendar type. 2: Current month and year. */
 __( "%1$s, %2$s", "jetpack-backup-pkg" );
 __( "Date calendar", "jetpack-backup-pkg" );
 __( "Date range calendar", "jetpack-backup-pkg" );
 __( "Navigation bar", "jetpack-backup-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s", "jetpack-backup-pkg" );
 __( "Next month", "jetpack-backup-pkg" );
 __( "Previous month", "jetpack-backup-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s, selected", "jetpack-backup-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected", "jetpack-backup-pkg" );
 __( "Required", "jetpack-backup-pkg" );
 __( "Optional", "jetpack-backup-pkg" );
 __( "Sort ascending", "jetpack-backup-pkg" );
 __( "Sort descending", "jetpack-backup-pkg" );
 __( "(no title)", "jetpack-backup-pkg" );
+_x( "%s…", "menu item requiring further input", "jetpack-backup-pkg" );
 __( "Actions", "jetpack-backup-pkg" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item selected", "%s Items selected", 1, "jetpack-backup-pkg" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item", "%s Items", 1, "jetpack-backup-pkg" );
-/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
-_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack-backup-pkg" );
+_n( "%s item selected", "%s items selected", 1, "jetpack-backup-pkg" );
+_n( "%s item", "%s items", 1, "jetpack-backup-pkg" );
+_n( "%1$s of %2$s item", "%1$s of %2$s items", 1, "jetpack-backup-pkg" );
 __( "Deselect all", "jetpack-backup-pkg" );
 __( "Select all", "jetpack-backup-pkg" );
 __( "Cancel", "jetpack-backup-pkg" );
@@ -59,18 +49,13 @@ __( "Insert left", "jetpack-backup-pkg" );
 __( "Insert right", "jetpack-backup-pkg" );
 __( "Hide column", "jetpack-backup-pkg" );
 __( "Properties", "jetpack-backup-pkg" );
-/* translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022". */
 __( "%1$s: %2$s", "jetpack-backup-pkg" );
 __( "Navigate to item", "jetpack-backup-pkg" );
-/* translators: %d: The row number in the grid */
 __( "Row %d", "jetpack-backup-pkg" );
-/* translators: %s: The label of the field e.g. "Status". */
 __( "%s: <groupName />", "jetpack-backup-pkg" );
-/* translators: 1: current page number. 2: total number of pages. */
-__( "Page %1$d of %2$d", "jetpack-backup-pkg" );
-/* translators: 1: Current page number, 2: Total number of pages. */
-_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-backup-pkg" );
 __( "Current page", "jetpack-backup-pkg" );
+__( "Page %1$d of %2$d", "jetpack-backup-pkg" );
+_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-backup-pkg" );
 __( "Previous page", "jetpack-backup-pkg" );
 __( "Next page", "jetpack-backup-pkg" );
 __( "Density", "jetpack-backup-pkg" );
@@ -83,98 +68,55 @@ __( "Table", "jetpack-backup-pkg" );
 __( "Grid", "jetpack-backup-pkg" );
 __( "List", "jetpack-backup-pkg" );
 __( "Activity", "jetpack-backup-pkg" );
-/* translators: List of items for a filter. 1: Filter name. e.g.: "List of: Author". */
 __( "List of: %1$s", "jetpack-backup-pkg" );
 __( "Search items", "jetpack-backup-pkg" );
 __( "Search", "jetpack-backup-pkg" );
 __( "No results found", "jetpack-backup-pkg" );
 __( "No elements found", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Is none of", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is none of: Admin, Editor". */
 __( "<Name>%1$s is none of: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Includes", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is any: Admin, Editor". */
 __( "<Name>%1$s includes: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Includes all", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author includes all: Admin, Editor". */
 __( "<Name>%1$s includes all: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Between (inc)", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Item count"). 2: Filter value min. 3: Filter value max. e.g.: "Item count between (inc): 10 and 180". */
 __( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "In the past", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is in the past: 7 days". */
 __( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Over", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is over: 7 days". */
 __( "<Name>%1$s is over: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Is", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is: Admin". */
 __( "<Name>%1$s is: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Is not", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is not: Admin". */
 __( "<Name>%1$s is not: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Less than", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than: 10". */
 __( "<Name>%1$s is less than: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Greater than", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than: 10". */
 __( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Less than or equal", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than or equal to: 10". */
 __( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Greater than or equal", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than or equal to: 10". */
 __( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Before", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is before: 2024-01-01". */
 __( "<Name>%1$s is before: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "After", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is after: 2024-01-01". */
 __( "<Name>%1$s is after: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Before (inc)", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or before: 2024-01-01". */
 __( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "After (inc)", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or after: 2024-01-01". */
 __( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Contains", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title contains: Hello". */
 __( "<Name>%1$s contains: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Doesn't contain", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title doesn't contain: Hello". */
 __( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Starts with", "jetpack-backup-pkg" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title starts with: Hello". */
 __( "<Name>%1$s starts with: </Name><Value>%2$s</Value>", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "On", "jetpack-backup-pkg" );
-/* translators: DataViews operator name */
 __( "Not on", "jetpack-backup-pkg" );
-/* translators: 1: Filter name e.g.: "Unknown status for Author". */
 __( "Unknown status for %1$s", "jetpack-backup-pkg" );
 __( "Conditions", "jetpack-backup-pkg" );
 __( "Reset", "jetpack-backup-pkg" );
 __( "Remove", "jetpack-backup-pkg" );
-/* translators: 1: Filter name. */
 __( "Filter by: %1$s", "jetpack-backup-pkg" );
 _x( "Filter", "verb", "jetpack-backup-pkg" );
 __( "No results", "jetpack-backup-pkg" );
@@ -195,7 +137,6 @@ __( "Months ago", "jetpack-backup-pkg" );
 __( "Years ago", "jetpack-backup-pkg" );
 __( "Unit", "jetpack-backup-pkg" );
 __( "Coordinated Universal Time", "jetpack-backup-pkg" );
-/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
 __( "Timezone: %s", "jetpack-backup-pkg" );
 __( "Date time", "jetpack-backup-pkg" );
 __( "Today", "jetpack-backup-pkg" );
@@ -228,23 +169,16 @@ __( "Value must be an array.", "jetpack-backup-pkg" );
 __( "Every value must be a string.", "jetpack-backup-pkg" );
 __( "Value must be a valid color.", "jetpack-backup-pkg" );
 __( "The site doesn't appear to be connected. Backup requires an active Jetpack connection in order to function properly.", "jetpack-backup-pkg" );
-/* translators: 1: what failed, in our own words. 2: the reason WordPress.com gave, usually in English. */
 __( "%1$s WordPress.com said: %2$s", "jetpack-backup-pkg" );
 __( "Request failed", "jetpack-backup-pkg" );
-/* translators: %s: a storage size number, e.g. "512". */
 _x( "%sMB", "storage size in megabytes", "jetpack-backup-pkg" );
-/* translators: %s: a storage size number, e.g. "1.5". */
 _x( "%sTB", "storage size in terabytes", "jetpack-backup-pkg" );
-/* translators: %s: a storage size number, e.g. "12.4". */
 _x( "%sGB", "storage size in gigabytes", "jetpack-backup-pkg" );
 __( "Restore in progress", "jetpack-backup-pkg" );
 __( "Restore complete", "jetpack-backup-pkg" );
 __( "Restore didn't finish", "jetpack-backup-pkg" );
-/* translators: %s: date and time of the backup that was restored. */
 __( "Restore to %s", "jetpack-backup-pkg" );
-/* translators: %d: number of known security threats in a backup. */
 __( "Known threats (%d)", "jetpack-backup-pkg" );
-/* translators: %d: number of known security threats in the backup. */
 _n( "This backup is known to contain %d security threat. Restoring it may bring malware back to your site.", "This backup is known to contain %d security threats. Restoring it may bring malware back to your site.", 1, "jetpack-backup-pkg" );
 __( "Restore ID: %s", "jetpack-backup-pkg" );
 __( "Download ID: %s", "jetpack-backup-pkg" );
@@ -257,7 +191,6 @@ __( "Copy error reference", "jetpack-backup-pkg" );
 __( "Retrying", "jetpack-backup-pkg" );
 __( "Try again", "jetpack-backup-pkg" );
 __( "Contact support", "jetpack-backup-pkg" );
-/* translators: %s: time of day, such as 7:00 am. */
 __( "Yesterday, %s", "jetpack-backup-pkg" );
 __( "New", "jetpack-backup-pkg" );
 __( "We couldn't load your site's activity.", "jetpack-backup-pkg" );
@@ -266,16 +199,11 @@ __( "Title", "jetpack-backup-pkg" );
 __( "When", "jetpack-backup-pkg" );
 __( "Warning", "jetpack-backup-pkg" );
 __( "Latest backups", "jetpack-backup-pkg" );
-/* translators: %d: number of restore points shown on each page of the list. */
 _n( "Restore points from your site's activity. %d per page.", "Restore points from your site's activity. %d per page.", 1, "jetpack-backup-pkg" );
 __( "See all activity in the Activity Log", "jetpack-backup-pkg" );
-/* translators: %s: a file size number, e.g. "3.2". */
 _x( "%s KB", "file size in kilobytes", "jetpack-backup-pkg" );
-/* translators: %s: a file size number, e.g. "3.2". */
 _x( "%s MB", "file size in megabytes", "jetpack-backup-pkg" );
-/* translators: %s: a file size number, e.g. "3.2". */
 _x( "%s GB", "file size in gigabytes", "jetpack-backup-pkg" );
-/* translators: %s: a file size number, e.g. "512". */
 _x( "%s B", "file size in bytes", "jetpack-backup-pkg" );
 __( "Modified:", "jetpack-backup-pkg" );
 __( "Size:", "jetpack-backup-pkg" );
@@ -292,53 +220,37 @@ __( "Preview truncated: this file is too large to show in full.", "jetpack-backu
 __( "Close preview", "jetpack-backup-pkg" );
 __( "Download file", "jetpack-backup-pkg" );
 __( "The download could not start. Try again.", "jetpack-backup-pkg" );
-/* translators: %s: file name. */
 __( "Preview of %s", "jetpack-backup-pkg" );
 __( "Files in this backup", "jetpack-backup-pkg" );
 __( "We couldn't load this backup's files.", "jetpack-backup-pkg" );
 __( "Clear selection", "jetpack-backup-pkg" );
-/* translators: %d count of selected items (files + opaque folders) */
 _n( "%d item selected", "%d items selected", 1, "jetpack-backup-pkg" );
-/* translators: %s: file or folder name. */
 __( "Select %s", "jetpack-backup-pkg" );
-/* translators: %s: folder name. */
 __( "Folder: %s", "jetpack-backup-pkg" );
-/* translators: %s: file name. */
 __( "File: %s", "jetpack-backup-pkg" );
-/* translators: shown inside an expanded folder in the backup file browser when its contents could not be fetched. */
 __( "Couldn't load this folder.", "jetpack-backup-pkg" );
-/* translators: shown inside an expanded folder in the backup file browser when the folder contains no files. */
 __( "Empty", "jetpack-backup-pkg" );
 __( "Database threat", "jetpack-backup-pkg" );
 __( "Malware", "jetpack-backup-pkg" );
-/* translators: %s: the date the threat was fixed. */
 __( "Fixed %s", "jetpack-backup-pkg" );
 __( "Fixed", "jetpack-backup-pkg" );
 __( "Ignored", "jetpack-backup-pkg" );
 __( "Open", "jetpack-backup-pkg" );
-/* translators: 1: the date Scan first detected a threat, 2: its status now, such as "Open" or "Fixed Oct 17, 2026". */
 __( "First detected %1$s · %2$s", "jetpack-backup-pkg" );
 __( "It's the most recent backup with no known security threats.", "jetpack-backup-pkg" );
 __( "This backup is known to contain security threats. Acknowledge them to restore it.", "jetpack-backup-pkg" );
 __( "Hide threats", "jetpack-backup-pkg" );
 __( "Show threats", "jetpack-backup-pkg" );
 __( "Known threats in this backup", "jetpack-backup-pkg" );
-/* translators: %d: number of threats listed above. */
 _n( "Showing the first %d threat.", "Showing the first %d threats.", 1, "jetpack-backup-pkg" );
-/* translators: %d: number of vulnerable plugin or theme versions in the backup. */
 _n( "Also: %d vulnerable plugin or theme version.", "Also: %d vulnerable plugin or theme versions.", 1, "jetpack-backup-pkg" );
-/* translators: %s: a backup's date and time. */
 __( "Restore %s backup instead", "jetpack-backup-pkg" );
 __( "Restore the latest backup without known threats instead", "jetpack-backup-pkg" );
 __( "I understand this backup contains known threats and want to restore it anyway.", "jetpack-backup-pkg" );
 __( "Download backup", "jetpack-backup-pkg" );
-/* translators: %d count of selected items (files + opaque folders) */
 _n( "Download %d selected item", "Download %d selected items", 1, "jetpack-backup-pkg" );
-/* translators: %s: how long a backup ran, e.g. "28 minutes" */
 __( "Took %s", "jetpack-backup-pkg" );
-/* translators: %s: the site's size when it was backed up, e.g. "4.2GB" */
 __( "Site size at backup: %s", "jetpack-backup-pkg" );
-/* translators: %1$s: the site's size when it was backed up, e.g. "4.2GB". %2$s: how long the backup ran, e.g. "28 minutes". */
 __( "Site size at backup: %1$s · Took %2$s", "jetpack-backup-pkg" );
 __( "To restore this backup, confirm that you understand it contains known threats.", "jetpack-backup-pkg" );
 __( "You can now restore this backup with \"Restore to this point\", at the top of this panel.", "jetpack-backup-pkg" );
@@ -362,28 +274,22 @@ __( "Your latest backup didn't complete. We'll try again shortly.", "jetpack-bac
 __( "Your latest backup didn't complete. Your earlier backups can still be restored.", "jetpack-backup-pkg" );
 __( "We are having trouble backing up your site.", "jetpack-backup-pkg" );
 __( "Your backup will be ready soon", "jetpack-backup-pkg" );
-/* translators: %d: how much of the running backup is complete, as a percentage. */
 __( "Generating backup… (%d%% progress)", "jetpack-backup-pkg" );
-/* translators: %d: how much of the backup is complete, as a percentage. */
 __( "Backup complete (%d%% progress)", "jetpack-backup-pkg" );
 __( "An Automattic Airline", "jetpack-backup-pkg" );
 __( "Jetpack Logo", "jetpack-backup-pkg" );
 __( "Features", "jetpack-backup-pkg" );
 __( "Help", "jetpack-backup-pkg" );
 __( "Jetpack", "jetpack-backup-pkg" );
-/* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack-backup-pkg" );
 __( "Your account (connection owner)", "jetpack-backup-pkg" );
-/* translators: %s is the display name of the Jetpack connection owner. */
 __( "Connection owner's account (%s)", "jetpack-backup-pkg" );
 __( "Connection owner's account", "jetpack-backup-pkg" );
 __( "Your account", "jetpack-backup-pkg" );
 __( "Another user's account", "jetpack-backup-pkg" );
 __( "User connection", "jetpack-backup-pkg" );
 __( "Site connection", "jetpack-backup-pkg" );
-/* translators: %s is what the error applies to, e.g. "Site connection" or "Your account". */
 __( "Jetpack Connection error: %s", "jetpack-backup-pkg" );
-/* translators: %d is the number of connection errors found. */
 _n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack-backup-pkg" );
 __( "Jetpack Connection error", "jetpack-backup-pkg" );
 __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-backup-pkg" );
@@ -398,7 +304,6 @@ __( "We couldn't check this site's Backup plan. Your backups are unaffected. Rel
 __( "Use license key", "jetpack-backup-pkg" );
 __( "per month for the first year, billed yearly", "jetpack-backup-pkg" );
 __( "per month, billed yearly", "jetpack-backup-pkg" );
-/* translators: %s is the full monthly price the subscription renews at. */
 __( "Renews at %s per month.", "jetpack-backup-pkg" );
 __( "Get VaultPress Backup", "jetpack-backup-pkg" );
 __( "Real-time cloud backups", "jetpack-backup-pkg" );
@@ -420,33 +325,25 @@ __( "Link my account", "jetpack-backup-pkg" );
 __( "Loading your backup details…", "jetpack-backup-pkg" );
 __( "Save changes and restore quickly with one-click recovery.", "jetpack-backup-pkg" );
 __( "Daily backup time", "jetpack-backup-pkg" );
-/* translators: %s: the site's timezone, e.g. "America/Sao_Paulo" or "UTC+5:30". */
 __( "Choose when your daily full backup runs. Times are shown in your site's timezone (%s).", "jetpack-backup-pkg" );
 __( "Backup window", "jetpack-backup-pkg" );
-/* translators: %s: display name of the person who chose the backup time. */
 __( "Set by %s.", "jetpack-backup-pkg" );
 __( "This is the default time.", "jetpack-backup-pkg" );
 __( "Save", "jetpack-backup-pkg" );
 __( "Daily backup time changed.", "jetpack-backup-pkg" );
-/* translators: %1$s is the formatted date (e.g. "Oct 22"); %2$s is a time range (e.g. "10:00-10:59 AM"). */
 __( "Next full backup: %1$s, %2$s.", "jetpack-backup-pkg" );
 __( "Modify daily backup time", "jetpack-backup-pkg" );
 __( "Modify", "jetpack-backup-pkg" );
 __( "Once you do, we will delete your oldest backups to make space for new ones.", "jetpack-backup-pkg" );
-/* translators: %s is a storage size such as 10GB. */
 __( "Once you do, we will delete your oldest backups to make space for new ones. Upgrade to add additional %s of storage.", "jetpack-backup-pkg" );
 __( "You are close to reaching your storage limit", "jetpack-backup-pkg" );
 __( "Backups have been stopped. Please upgrade your storage to resume backups.", "jetpack-backup-pkg" );
-/* translators: %s is a storage size such as 10GB. */
 __( "Backups have been stopped. Please upgrade to add additional %s of storage and resume backups.", "jetpack-backup-pkg" );
 __( "You have reached your storage limit", "jetpack-backup-pkg" );
-/* translators: %d is a number greater than 0 that means a number of days. */
 _n( "You have reached your storage limit with %d day of backups saved", "You have reached your storage limit with %d days of backups saved", 1, "jetpack-backup-pkg" );
-/* translators: %s is a number greater than 0 that means a number of days. */
 __( "We removed your oldest backup(s) to make space for new ones. We will continue to remove old backups as needed, up to the last %s days.", "jetpack-backup-pkg" );
 __( "Add %1$s additional storage for <Price />/month, billed monthly", "jetpack-backup-pkg" );
 __( "Upgrade now", "jetpack-backup-pkg" );
-/* translators: %d: percentage of backup storage used. */
 __( "Backup storage used: %d%%", "jetpack-backup-pkg" );
 __( "7 days", "jetpack-backup-pkg" );
 __( "30 days", "jetpack-backup-pkg" );
@@ -454,15 +351,12 @@ __( "120 days", "jetpack-backup-pkg" );
 __( "1 year", "jetpack-backup-pkg" );
 __( "Purchase and update", "jetpack-backup-pkg" );
 __( "Days of backups saved", "jetpack-backup-pkg" );
-/* translators: %d: number of days of backups that will be kept. */
 _n( "You are about to reduce the number of days your backups are saved. Backups older than %d day will be deleted.", "You are about to reduce the number of days your backups are saved. Backups older than %d days will be deleted.", 1, "jetpack-backup-pkg" );
 __( "Choose how many days of backups to keep.", "jetpack-backup-pkg" );
 __( "Keep backups for", "jetpack-backup-pkg" );
-/* translators: %1$s: estimated storage, e.g. "45.2GB". %2$s: the site's storage limit, e.g. "10GB". */
 __( "Needs about %1$s of your %2$s.", "jetpack-backup-pkg" );
 __( "You need additional storage to choose this setting.", "jetpack-backup-pkg" );
 __( "Confirm change", "jetpack-backup-pkg" );
-/* translators: %d: is number of days of the forecast */
 _n( "Based on the current size of your site, Jetpack will save <strong>%d day of full backup</strong>.", "Based on the current size of your site, Jetpack will save <strong>%d days of full backups</strong>.", 1, "jetpack-backup-pkg" );
 __( "If you need more backup days, try <link>reducing the backup size</link> or adding more storage.", "jetpack-backup-pkg" );
 __( "Backup archive size", "jetpack-backup-pkg" );

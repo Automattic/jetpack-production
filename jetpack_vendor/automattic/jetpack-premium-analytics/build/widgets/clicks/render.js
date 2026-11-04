@@ -6,7 +6,6 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: %s is the clicked link or domain label. */
 __( "View clicked links for %s", "jetpack-premium-analytics-pkg" );
 __( "Top links clicked", "jetpack-premium-analytics-pkg" );
 __( "Links", "jetpack-premium-analytics-pkg" );

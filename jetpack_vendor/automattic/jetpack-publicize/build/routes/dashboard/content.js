@@ -7,28 +7,21 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading", "jetpack-publicize-pkg" );
-/* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-publicize-pkg" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-publicize-pkg" );
 __( "OK", "jetpack-publicize-pkg" );
 __( "Cancel", "jetpack-publicize-pkg" );
 __( "Close", "jetpack-publicize-pkg" );
 __( "More details follow the field.", "jetpack-publicize-pkg" );
-__( "Dismiss", "jetpack-publicize-pkg" );
-/* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack-publicize-pkg" );
 __( "Your account (connection owner)", "jetpack-publicize-pkg" );
-/* translators: %s is the display name of the Jetpack connection owner. */
 __( "Connection owner's account (%s)", "jetpack-publicize-pkg" );
 __( "Connection owner's account", "jetpack-publicize-pkg" );
 __( "Your account", "jetpack-publicize-pkg" );
 __( "Another user's account", "jetpack-publicize-pkg" );
 __( "User connection", "jetpack-publicize-pkg" );
 __( "Site connection", "jetpack-publicize-pkg" );
-/* translators: %s is what the error applies to, e.g. "Site connection" or "Your account". */
 __( "Jetpack Connection error: %s", "jetpack-publicize-pkg" );
-/* translators: %d is the number of connection errors found. */
 _n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack-publicize-pkg" );
 __( "Jetpack Connection error", "jetpack-publicize-pkg" );
 __( "Jetpack Logo", "jetpack-publicize-pkg" );
@@ -37,10 +30,8 @@ __( "Features", "jetpack-publicize-pkg" );
 __( "Help", "jetpack-publicize-pkg" );
 __( "Jetpack", "jetpack-publicize-pkg" );
 __( "Sections", "jetpack-publicize-pkg" );
-/* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-publicize-pkg" );
 __( "Select period", "jetpack-publicize-pkg" );
-/* translators: %1$s: What the control picks, such as "Date range". %2$s: The selected period, such as "Last 30 days". */
 __( "%1$s: %2$s", "jetpack-publicize-pkg" );
 __( "Previous period", "jetpack-publicize-pkg" );
 __( "Next period", "jetpack-publicize-pkg" );
@@ -53,7 +44,6 @@ __( "Reconnecting Jetpack…", "jetpack-publicize-pkg" );
 __( "Error verifying the connection.", "jetpack-publicize-pkg" );
 __( "Account disconnected successfully.", "jetpack-publicize-pkg" );
 __( "Error disconnecting account.", "jetpack-publicize-pkg" );
-/* translators: %s is the name of the social media platform e.g. "Facebook" */
 __( "%s account connected successfully.", "jetpack-publicize-pkg" );
 __( "Error connecting account.", "jetpack-publicize-pkg" );
 __( "Error updating account.", "jetpack-publicize-pkg" );
@@ -80,12 +70,10 @@ __( "To share to Bluesky please enter your Bluesky handle and app password below
 __( "To share to Mastodon please enter your Mastodon username below, then click Submit.", "jetpack-publicize-pkg" );
 _x( "Handle", "The handle of a social media account.", "jetpack-publicize-pkg" );
 __( "You can find the handle in your Bluesky profile.", "jetpack-publicize-pkg" );
-/* translators: %s is the bluesky handle suffix like .bsky.social */
 __( "This can either be %s or just the domain name if you are using a custom domain.", "jetpack-publicize-pkg" );
 __( "App password", "jetpack-publicize-pkg" );
 __( "App password is needed to safely connect your account. App password is different from your account password. You can <link>generate it in Bluesky</link>.", "jetpack-publicize-pkg" );
 __( "You can find the handle in your Mastodon profile.", "jetpack-publicize-pkg" );
-/* translators: %s is the handle suffix like .bsky.social */
 __( "Bluesky usernames cannot contain dots. If you are using a custom domain, enter it without \"%s\"", "jetpack-publicize-pkg" );
 __( "Invalid Mastodon username", "jetpack-publicize-pkg" );
 __( "This Mastodon account is already connected", "jetpack-publicize-pkg" );
@@ -126,7 +114,6 @@ __( "<strong>Connect</strong> to automatically share posts to your Tumblr blog."
 __( "Add Tumblr connection", "jetpack-publicize-pkg" );
 __( "Submit", "jetpack-publicize-pkg" );
 __( "Select your account platform", "jetpack-publicize-pkg" );
-/* translators: %s is the platform name, e.g. "Mastodon". */
 __( "Connect %s account", "jetpack-publicize-pkg" );
 __( "Add an account", "jetpack-publicize-pkg" );
 __( "Back", "jetpack-publicize-pkg" );
@@ -140,7 +127,6 @@ __( "Updating account", "jetpack-publicize-pkg" );
 __( "Disconnecting…", "jetpack-publicize-pkg" );
 _x( "Disconnect", "Disconnect a social media account", "jetpack-publicize-pkg" );
 __( "Yes", "jetpack-publicize-pkg" );
-/* translators: %s: The name of the connection the user is disconnecting. */
 __( "Are you sure you want to disconnect <strong>%s</strong>?", "jetpack-publicize-pkg" );
 __( "The reconnection could not be completed. Please try again.", "jetpack-publicize-pkg" );
 __( "Reconnecting…", "jetpack-publicize-pkg" );
@@ -153,7 +139,6 @@ __( "Upgrade your plan to use video covers", "jetpack-publicize-pkg" );
 __( "Upgrade your plan to upload audio", "jetpack-publicize-pkg" );
 __( "Available placeholders", "jetpack-publicize-pkg" );
 __( "Use placeholders to automatically insert post details.", "jetpack-publicize-pkg" );
-/* translators: %1$s and %2$s are placeholder tokens, e.g. {title} and {url}. */
 __( "Write a default share message. Use placeholders like %1$s or %2$s — they’re filled in when posts are shared.", "jetpack-publicize-pkg" );
 __( "Supports placeholders like <title/> and <url/>. See the list below for all the options.", "jetpack-publicize-pkg" );
 __( "Message template", "jetpack-publicize-pkg" );
@@ -161,7 +146,6 @@ __( "Leave empty to use the default share message.", "jetpack-publicize-pkg" );
 __( "Posts shared to this account will use this template instead of the default.", "jetpack-publicize-pkg" );
 __( "Custom message for this connection", "jetpack-publicize-pkg" );
 __( "Showing your default share message. To customize it for this account, <a>upgrade your plan</a>.", "jetpack-publicize-pkg" );
-/* translators: %s: name of the plan that unlocks the feature, e.g. "Business". */
 __( "Showing your default share message. To customize it for this account, <a>upgrade to the %s plan</a>.", "jetpack-publicize-pkg" );
 __( "Mark the connection as shared", "jetpack-publicize-pkg" );
 __( "If enabled, the connection will be available to all administrators, editors, and authors.", "jetpack-publicize-pkg" );
@@ -170,7 +154,6 @@ __( "Please fix the broken connections or disconnect them to create more connect
 _n( "Broken connection", "Broken connections", 1, "jetpack-publicize-pkg" );
 __( "Reconnect to continue sharing.", "jetpack-publicize-pkg" );
 _n( "Expiring connection", "Expiring connections", 1, "jetpack-publicize-pkg" );
-/* translators: %d: Number of connections */
 __( "%d connections", "jetpack-publicize-pkg" );
 __( "Connected", "jetpack-publicize-pkg" );
 _x( "Fix connections", "Fix the social media connections", "jetpack-publicize-pkg" );
@@ -194,7 +177,6 @@ __( "Confirm", "jetpack-publicize-pkg" );
 __( "Connection confirmation", "jetpack-publicize-pkg" );
 __( "Manage Jetpack Social connections", "jetpack-publicize-pkg" );
 __( "Want to share to other networks? Use our Manual Sharing feature from the editor.", "jetpack-publicize-pkg" );
-/* translators: %1$s: name of the connected social media account. %2$s: name of the social network, e.g. Facebook. */
 __( "Toggle details for %1$s on %2$s", "jetpack-publicize-pkg" );
 __( "Connected accounts", "jetpack-publicize-pkg" );
 __( "Connect an account", "jetpack-publicize-pkg" );
@@ -238,10 +220,8 @@ __( "Semi-circle chart", "jetpack-publicize-pkg" );
 __( "Last 7 days", "jetpack-publicize-pkg" );
 __( "Last 30 days", "jetpack-publicize-pkg" );
 __( "Last 90 days", "jetpack-publicize-pkg" );
-/* translators: %d: number of days the chart covers. */
 __( "Visits from social media networks over the last %d days.", "jetpack-publicize-pkg" );
 __( "Upgrade to see which social networks are driving visits to your site, day by day.", "jetpack-publicize-pkg" );
-/* translators: %s: name of the plan that unlocks the feature, e.g. "Business". */
 __( "Upgrade to the %s plan to see which social networks are driving visits to your site, day by day.", "jetpack-publicize-pkg" );
 __( "Date range", "jetpack-publicize-pkg" );
 __( "Traffic from social media", "jetpack-publicize-pkg" );
@@ -271,7 +251,6 @@ __( "Append UTM parameters to shared URLs", "jetpack-publicize-pkg" );
 __( "UTM parameters are tags added to links to help track where website visitors come from, improving our understanding of how content is shared. Don't worry, it doesn't change the experience or the link destination!", "jetpack-publicize-pkg" );
 __( "Default", "jetpack-publicize-pkg" );
 __( "Remove media", "jetpack-publicize-pkg" );
-/* translators: %s is the name of the template */
 __( "Pick the %s template", "jetpack-publicize-pkg" );
 __( "Choose Image", "jetpack-publicize-pkg" );
 __( "Set default Template and Image", "jetpack-publicize-pkg" );
@@ -295,22 +274,15 @@ __( "Auto-share to social media", "jetpack-publicize-pkg" );
 __( "Automatically share your posts to your connected social accounts", "jetpack-publicize-pkg" );
 __( "When off, the Social tools stay available here but your posts won’t be shared automatically.", "jetpack-publicize-pkg" );
 __( "Unavailable in <a>Offline Mode</a>", "jetpack-publicize-pkg" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com couldn’t make a secure (HTTPS) connection to your site at %s. Its SSL certificate or HTTPS setup may be invalid. Ask your hosting provider to check it.", "jetpack-publicize-pkg" );
 __( "WordPress.com couldn’t make a secure (HTTPS) connection to your site. Its SSL certificate or HTTPS setup may be invalid. Ask your hosting provider to check it.", "jetpack-publicize-pkg" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com couldn’t reach your site at %s to verify it. Make sure your site is publicly reachable and its domain and SSL certificate are set up correctly. If they are, ask your hosting provider whether they block connections from WordPress.com.", "jetpack-publicize-pkg" );
 __( "WordPress.com couldn’t reach your site to verify it. Make sure your site is publicly reachable and its domain and SSL certificate are set up correctly. If they are, ask your hosting provider whether they block connections from WordPress.com.", "jetpack-publicize-pkg" );
-/* translators: %s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com reached your site at %s, but the connection endpoint was not found. A security plugin or server rule may be blocking xmlrpc.php or the REST API.", "jetpack-publicize-pkg" );
 __( "WordPress.com reached your site, but the connection endpoint was not found. A security plugin or server rule may be blocking xmlrpc.php or the REST API.", "jetpack-publicize-pkg" );
-/* translators: %1$d is an HTTP status code, e.g. 500; %2$s is the site URL WordPress.com tried, e.g. https://example.com. */
 __( "WordPress.com got an error (HTTP %1$d) when it tried to verify your site at %2$s. Your site’s error log may show the cause.", "jetpack-publicize-pkg" );
-/* translators: %d is an HTTP status code, e.g. 500. */
 __( "WordPress.com got an error (HTTP %d) when it tried to verify your site. Your site’s error log may show the cause.", "jetpack-publicize-pkg" );
-/* translators: %1$s is the site URL WordPress.com tried, e.g. https://example.com; %2$d is an HTTP status code, e.g. 403. */
 __( "Something blocked WordPress.com from verifying your site at %1$s (HTTP %2$d). Try again in a minute. If it keeps happening, a firewall or security rule is usually the cause: ask your hosting provider to allow connections from WordPress.com.", "jetpack-publicize-pkg" );
-/* translators: %d is an HTTP status code, e.g. 403. */
 __( "Something blocked WordPress.com from verifying your site (HTTP %d). Try again in a minute. If it keeps happening, a firewall or security rule is usually the cause: ask your hosting provider to allow connections from WordPress.com.", "jetpack-publicize-pkg" );
 __( "Your site is on a private network, so WordPress.com can’t reach it. Jetpack can only connect sites that are publicly accessible.", "jetpack-publicize-pkg" );
 __( "Your site’s address is on WordPress.com. Jetpack connects WordPress sites hosted elsewhere, so it can’t connect this one.", "jetpack-publicize-pkg" );

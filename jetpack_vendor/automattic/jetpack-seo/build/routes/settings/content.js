@@ -7,12 +7,7 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)" );
-__( "More details follow." );
-__( "Dismiss" );
 __( "We couldn’t load this page", "jetpack-seo" );
 __( "This is usually temporary. Give it another try.", "jetpack-seo" );
 __( "Try again", "jetpack-seo" );
@@ -22,10 +17,8 @@ __( "An Automattic Airline", "jetpack-components" );
 __( "Features", "jetpack-components" );
 __( "Help", "jetpack-components" );
 __( "Jetpack", "jetpack-components" );
-/* translators: accessibility text */
 __( "(opens in a new tab)", "jetpack-components" );
 __( "Sections" );
-/* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-components" );
 __( "Dismiss", "jetpack-components" );
 __( "Overview", "jetpack-seo" );
@@ -139,9 +132,7 @@ __( "Price range", "jetpack-seo" );
 __( "A range like $10–$20, or a level like $$.", "jetpack-seo" );
 __( "Opening hours", "jetpack-seo" );
 __( "Leave a day blank if it's closed. A closing time earlier than opening means the business closes the following day.", "jetpack-seo" );
-/* translators: %s: day of week. */
 __( "%s opens", "jetpack-seo" );
-/* translators: %s: day of week. */
 __( "%s closes", "jetpack-seo" );
 __( "This is a local business", "jetpack-seo" );
 __( "Turn on if customers visit you in person (a shop, studio, restaurant, clinic). Adds your address, phone, and hours so search engines can show your local details.", "jetpack-seo" );
@@ -208,17 +199,13 @@ __( "Another SEO plugin is active, so Jetpack won't add canonical URLs to avoid 
 __( "Shown under your site name in search results and social shares. About the first 155 characters display in search, or 120 on mobile.", "jetpack-seo" );
 __( "Locked while Jetpack SEO is disabled. Your saved description is retained.", "jetpack-seo" );
 __( "Unable to load settings.", "jetpack-seo" );
-/* translators: %d: number of characters currently in the front-page description. */
 _n( "%d character", "%d characters", 1, "jetpack-seo" );
-/* translators: %s: name of the SEO plugin that controls the site's SEO output, e.g. Yoast SEO. */
 __( "%s is managing your SEO output, so Jetpack’s title, description, schema and author profile settings are locked while it’s active.", "jetpack-seo" );
 __( "Jetpack SEO is disabled on this site, so its title, description, schema and author profile settings are locked.", "jetpack-seo" );
-/* translators: %1$s: name of the active SEO plugin. */
 __( "%1$s is managing your structured data. Your saved Jetpack settings are shown here but are not being used. Deactivate %1$s to edit these settings in Jetpack.", "jetpack-seo" );
 __( "Jetpack SEO is disabled on this site. Your saved settings are shown here but are not being used. Editing is unavailable while SEO tools are disabled.", "jetpack-seo" );
 __( "Front-page description", "jetpack-seo" );
 __( "Home page description", "jetpack-seo" );
-/* translators: %s: the character count, e.g. "300 characters". */
 __( "%s — Maximum characters reached.", "jetpack-seo" );
 __( "Site visibility", "jetpack-seo" );
 __( "Allow search engines to index this site", "jetpack-seo" );

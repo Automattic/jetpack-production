@@ -7,12 +7,8 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)" );
 __( "More details follow the field." );
-__( "Dismiss" );
 __( "We couldn’t load this page", "jetpack-seo" );
 __( "This is usually temporary. Give it another try.", "jetpack-seo" );
 __( "Try again", "jetpack-seo" );
@@ -23,7 +19,6 @@ __( "Features", "jetpack-components" );
 __( "Help", "jetpack-components" );
 __( "Jetpack", "jetpack-components" );
 __( "Sections" );
-/* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-components" );
 __( "Overview", "jetpack-seo" );
 __( "Content", "jetpack-seo" );
@@ -63,7 +58,6 @@ __( "Blocked", "jetpack-seo" );
 __( "Partly blocked", "jetpack-seo" );
 __( "AI crawler access", "jetpack-seo" );
 __( "Set by your privacy settings while third-party sharing is turned off.", "jetpack-seo" );
-/* translators: %s: AI crawler name, e.g. "ChatGPT". */
 __( "Block %s", "jetpack-seo" );
 __( "View your robots.txt", "jetpack-seo" );
 __( "Block all", "jetpack-seo" );
@@ -78,7 +72,6 @@ __( "Answer engines", "jetpack-seo" );
 __( "These crawlers fetch your pages so AI assistants like ChatGPT, Perplexity, and Claude can cite you in their answers. Blocking them can keep your site out of those answers.", "jetpack-seo" );
 __( "Training crawlers", "jetpack-seo" );
 __( "These crawlers collect your content to train AI models. Block them to keep your content out of that training. Blocking Google-Extended also keeps it out of Gemini app answers.", "jetpack-seo" );
-/* translators: %1$s: name of the active SEO plugin. */
 __( "Jetpack is not generating llms.txt while %1$s is active. Your saved setting is retained. Deactivate %1$s to let Jetpack generate the file.", "jetpack-seo" );
 __( "Jetpack is not generating llms.txt because SEO tools are disabled on this site. Your saved setting is retained.", "jetpack-seo" );
 __( "AI SEO is turned off for this site, so nothing is generated. Your choice is saved and applies again when AI SEO is turned back on.", "jetpack-seo" );

@@ -6,34 +6,26 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "Loading", "jetpack-podcast" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-podcast" );
-__( "More details follow the field.", "jetpack-podcast" );
-__( "Select", "jetpack-podcast" );
 __( "Sections", "jetpack-podcast" );
 __( "An Automattic Airline", "jetpack-podcast" );
 __( "Jetpack Logo", "jetpack-podcast" );
 __( "Features", "jetpack-podcast" );
 __( "Help", "jetpack-podcast" );
 __( "Jetpack", "jetpack-podcast" );
-/* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-podcast" );
-/* translators: %s: keyboard shortcut. */
+__( "Loading", "jetpack-podcast" );
 __( "Keyboard shortcut: %s", "jetpack-podcast" );
-/* translators: 1: Calendar type. 2: Current month and year. */
 __( "%1$s, %2$s", "jetpack-podcast" );
 __( "Date calendar", "jetpack-podcast" );
 __( "Date range calendar", "jetpack-podcast" );
 __( "Navigation bar", "jetpack-podcast" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s", "jetpack-podcast" );
 __( "Next month", "jetpack-podcast" );
 __( "Previous month", "jetpack-podcast" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s, selected", "jetpack-podcast" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected", "jetpack-podcast" );
+__( "Something went wrong loading the Podcast dashboard.", "jetpack-podcast" );
 __( "Saving…", "jetpack-podcast" );
 __( "Settings saved.", "jetpack-podcast" );
 __( "Could not save your podcast settings. Please try again.", "jetpack-podcast" );
@@ -48,8 +40,6 @@ __( "Upload a cover image at least 1400×1400 pixels.", "jetpack-podcast" );
 __( "Publish at least one episode.", "jetpack-podcast" );
 __( "Cover image must be a PNG or JPG.", "jetpack-podcast" );
 __( "Cover image must be at least 1400×1400 pixels on its smaller side.", "jetpack-podcast" );
-__( "Go back", "jetpack-podcast" );
-__( "Close", "jetpack-podcast" );
 __( "Reach listeners in every app", "jetpack-podcast" );
 __( "One feed distributes to Apple Podcasts, Spotify, Overcast, Pocket Casts, and every directory that accepts RSS.", "jetpack-podcast" );
 __( "One home for writing, email, and audio", "jetpack-podcast" );
@@ -84,7 +74,6 @@ __( "Free", "jetpack-podcast" );
 __( "Publish your podcast alongside your blog and newsletter.", "jetpack-podcast" );
 __( "Start your podcast", "jetpack-podcast" );
 __( "Popular", "jetpack-podcast" );
-/* translators: %s is the plan name, e.g. "Growth" or "Premium". */
 __( "Start your %s podcast", "jetpack-podcast" );
 __( "How it works", "jetpack-podcast" );
 __( "Could not create the category. Please try again.", "jetpack-podcast" );
@@ -244,16 +233,16 @@ __( "Stop publishing your podcast?", "jetpack-podcast" );
 __( "Your podcast feed will stop being generated. Existing episodes stay in the assigned category and you can start publishing again at any time.", "jetpack-podcast" );
 __( "Required", "jetpack-podcast" );
 __( "Optional", "jetpack-podcast" );
+__( "More details follow the field.", "jetpack-podcast" );
+__( "Select", "jetpack-podcast" );
 __( "Sort ascending", "jetpack-podcast" );
 __( "Sort descending", "jetpack-podcast" );
 __( "(no title)", "jetpack-podcast" );
+_x( "%s…", "menu item requiring further input", "jetpack-podcast" );
 __( "Actions", "jetpack-podcast" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item selected", "%s Items selected", 1, "jetpack-podcast" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item", "%s Items", 1, "jetpack-podcast" );
-/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
-_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack-podcast" );
+_n( "%s item selected", "%s items selected", 1, "jetpack-podcast" );
+_n( "%s item", "%s items", 1, "jetpack-podcast" );
+_n( "%1$s of %2$s item", "%1$s of %2$s items", 1, "jetpack-podcast" );
 __( "Deselect all", "jetpack-podcast" );
 __( "Select all", "jetpack-podcast" );
 __( "Add filter", "jetpack-podcast" );
@@ -263,18 +252,13 @@ __( "Insert left", "jetpack-podcast" );
 __( "Insert right", "jetpack-podcast" );
 __( "Hide column", "jetpack-podcast" );
 __( "Properties", "jetpack-podcast" );
-/* translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022". */
 __( "%1$s: %2$s", "jetpack-podcast" );
-/* translators: %d: The row number in the grid */
 __( "Row %d", "jetpack-podcast" );
 __( "Navigate to item", "jetpack-podcast" );
-/* translators: %s: The label of the field e.g. "Status". */
 __( "%s: <groupName />", "jetpack-podcast" );
-/* translators: 1: current page number. 2: total number of pages. */
-__( "Page %1$d of %2$d", "jetpack-podcast" );
-/* translators: 1: Current page number, 2: Total number of pages. */
-_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-podcast" );
 __( "Current page", "jetpack-podcast" );
+__( "Page %1$d of %2$d", "jetpack-podcast" );
+_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-podcast" );
 __( "Previous page", "jetpack-podcast" );
 __( "Next page", "jetpack-podcast" );
 __( "Density", "jetpack-podcast" );
@@ -287,97 +271,54 @@ __( "Table", "jetpack-podcast" );
 __( "Grid", "jetpack-podcast" );
 __( "List", "jetpack-podcast" );
 __( "Activity", "jetpack-podcast" );
-/* translators: List of items for a filter. 1: Filter name. e.g.: "List of: Author". */
 __( "List of: %1$s", "jetpack-podcast" );
 __( "Search items", "jetpack-podcast" );
 __( "Search", "jetpack-podcast" );
 __( "No results found", "jetpack-podcast" );
 __( "No elements found", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Is none of", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is none of: Admin, Editor". */
 __( "<Name>%1$s is none of: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Includes", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is any: Admin, Editor". */
 __( "<Name>%1$s includes: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Includes all", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author includes all: Admin, Editor". */
 __( "<Name>%1$s includes all: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Between (inc)", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Item count"). 2: Filter value min. 3: Filter value max. e.g.: "Item count between (inc): 10 and 180". */
 __( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "In the past", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is in the past: 7 days". */
 __( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Over", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is over: 7 days". */
 __( "<Name>%1$s is over: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Is", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is: Admin". */
 __( "<Name>%1$s is: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Is not", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is not: Admin". */
 __( "<Name>%1$s is not: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Less than", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than: 10". */
 __( "<Name>%1$s is less than: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Greater than", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than: 10". */
 __( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Less than or equal", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than or equal to: 10". */
 __( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Greater than or equal", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than or equal to: 10". */
 __( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Before", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is before: 2024-01-01". */
 __( "<Name>%1$s is before: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "After", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is after: 2024-01-01". */
 __( "<Name>%1$s is after: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Before (inc)", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or before: 2024-01-01". */
 __( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "After (inc)", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or after: 2024-01-01". */
 __( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Contains", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title contains: Hello". */
 __( "<Name>%1$s contains: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Doesn't contain", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title doesn't contain: Hello". */
 __( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Starts with", "jetpack-podcast" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title starts with: Hello". */
 __( "<Name>%1$s starts with: </Name><Value>%2$s</Value>", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "On", "jetpack-podcast" );
-/* translators: DataViews operator name */
 __( "Not on", "jetpack-podcast" );
 __( "Conditions", "jetpack-podcast" );
 __( "Reset", "jetpack-podcast" );
-/* translators: 1: Filter name. */
 __( "Filter by: %1$s", "jetpack-podcast" );
-/* translators: 1: Filter name e.g.: "Unknown status for Author". */
 __( "Unknown status for %1$s", "jetpack-podcast" );
 _x( "Filter", "verb", "jetpack-podcast" );
 __( "No results", "jetpack-podcast" );
@@ -398,7 +339,6 @@ __( "Weeks ago", "jetpack-podcast" );
 __( "Months ago", "jetpack-podcast" );
 __( "Years ago", "jetpack-podcast" );
 __( "Coordinated Universal Time", "jetpack-podcast" );
-/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
 __( "Timezone: %s", "jetpack-podcast" );
 __( "Date time", "jetpack-podcast" );
 __( "Custom", "jetpack-podcast" );
@@ -430,21 +370,15 @@ __( "Value must be true, false, or undefined", "jetpack-podcast" );
 __( "Value must be an array.", "jetpack-podcast" );
 __( "Every value must be a string.", "jetpack-podcast" );
 __( "Value must be a valid color.", "jetpack-podcast" );
-/* translators: %s is the plan name, e.g. "Growth" or "Premium". */
 __( "Episode dashboard included with %s", "jetpack-podcast" );
-/* translators: %s is the plan name, e.g. "Growth" or "Premium". */
 __( "Episode stats included with %s", "jetpack-podcast" );
-/* translators: %s is the plan name, e.g. "Growth" or "Premium". */
 __( "Upgrade to %s to manage your podcast catalog from a unified dashboard.", "jetpack-podcast" );
-/* translators: %s is the plan name, e.g. "Growth" or "Premium". */
 __( "Upgrade to %s to see downloads by episode, app, and country.", "jetpack-podcast" );
 __( "This feature requires a paid plan.", "jetpack-podcast" );
-/* translators: %s is the plan name, e.g. "Growth" or "Premium". */
 __( "Upgrade to %s", "jetpack-podcast" );
 __( "No podcast episodes yet.", "jetpack-podcast" );
 __( "Publish a podcast post in your chosen category to see it here.", "jetpack-podcast" );
 __( "Create episode", "jetpack-podcast" );
-/* translators: %s: episode title */
 __( "View stats for %s", "jetpack-podcast" );
 __( "(Untitled)", "jetpack-podcast" );
 __( "Published", "jetpack-podcast" );
@@ -465,60 +399,42 @@ __( "Submitted", "jetpack-podcast" );
 __( "Set up", "jetpack-podcast" );
 __( "View show", "jetpack-podcast" );
 __( "Status:", "jetpack-podcast" );
-/* translators: %s: directory name (Pocket Casts, Apple Podcasts, etc.). Must start with the button's visible "View show" label so voice control can match it. */
 __( "View show on %s (opens in a new tab)", "jetpack-podcast" );
-/* translators: 1: directory name (Apple Podcasts, Spotify, etc.). 2: reason the Set up button is disabled. */
 __( "Set up %1$s. %2$s", "jetpack-podcast" );
 __( "We couldn’t reach Pocket Casts right now. Please try again.", "jetpack-podcast" );
 __( "Submit", "jetpack-podcast" );
 __( "Connect this site to WordPress.com first", "jetpack-podcast" );
 __( "Your podcast was sent to Pocket Casts.", "jetpack-podcast" );
-/* translators: 1: directory name (Pocket Casts). 2: reason the Submit button is disabled. */
 __( "Submit to %1$s. %2$s", "jetpack-podcast" );
 __( "Connect this site to WordPress.com to submit your podcast to Pocket Casts.", "jetpack-podcast" );
 __( "Connect Jetpack", "jetpack-podcast" );
 __( "Pocket Casts could not accept this feed.", "jetpack-podcast" );
-/* translators: %s: podcast directory name (e.g. "Apple Podcasts"). */
 __( "Your %s URL is too long.", "jetpack-podcast" );
-/* translators: %s: podcast directory name (e.g. "Apple Podcasts"). */
 __( "Enter a valid %s URL.", "jetpack-podcast" );
-/* translators: %s: podcast directory name. */
 __( "We couldn’t save your %s URL. Please try again.", "jetpack-podcast" );
 __( "Copied!", "jetpack-podcast" );
 __( "Copy link", "jetpack-podcast" );
-/* translators: %s: podcast directory name (e.g. "Apple Podcasts"). */
 __( "Submit to %s", "jetpack-podcast" );
 __( "Step 1: Copy your RSS feed URL", "jetpack-podcast" );
-/* translators: %s: podcast directory name. */
 __( "Click the button below to copy your RSS feed URL. %s will require this URL to list your podcast.", "jetpack-podcast" );
 __( "Set your post category in the Settings tab to generate your RSS feed URL.", "jetpack-podcast" );
-/* translators: %s: podcast directory name. */
 __( "Step 2: Submit your podcast to %s", "jetpack-podcast" );
-/* translators: %s: podcast directory name. */
 __( "Click the button below to visit %s and complete their sign up flow.", "jetpack-podcast" );
 __( "Learn more", "jetpack-podcast" );
-/* translators: %s: podcast directory name. */
 __( "Visit %s (opens in a new tab)", "jetpack-podcast" );
-/* translators: %s: podcast directory name. */
 __( "Visit %s", "jetpack-podcast" );
-/* translators: %s: podcast directory name. */
 __( "Step 3: Enter your %s URL", "jetpack-podcast" );
-/* translators: %s: podcast directory name. */
 __( "Paste your new %s URL into the field below and we’ll use it for your sharing buttons.", "jetpack-podcast" );
 __( "Saved:", "jetpack-podcast" );
-/* translators: %s: podcast directory name. */
 __( "Replace %s URL", "jetpack-podcast" );
 __( "Replace", "jetpack-podcast" );
-/* translators: %s: podcast directory name. */
 __( "%s URL", "jetpack-podcast" );
 __( "Save", "jetpack-podcast" );
 __( "Checking your podcast setup…", "jetpack-podcast" );
 __( "Set a post category in Settings first", "jetpack-podcast" );
 __( "Add a podcast title in Settings first", "jetpack-podcast" );
 __( "Podcast RSS feed URL", "jetpack-podcast" );
-/* translators: %d: number of remaining setup steps before podcast directory submission is unlocked. */
 _n( "%d step left before you can submit", "%d steps left before you can submit", 1, "jetpack-podcast" );
-/* translators: %d: number of unfinished podcast setup steps. */
 _n( "%d step left to finish your podcast setup", "%d steps left to finish your podcast setup", 1, "jetpack-podcast" );
 __( "Edit settings", "jetpack-podcast" );
 __( "Submit your podcast to the most popular podcast apps so people can find and follow it.", "jetpack-podcast" );
@@ -530,7 +446,6 @@ __( "Set your post category to generate the feed URL you can submit to directori
 __( "Last 90 days", "jetpack-podcast" );
 __( "Last 12 months", "jetpack-podcast" );
 __( "All time", "jetpack-podcast" );
-/* translators: %1$s: start date, %2$s: end date */
 __( "%1$s to %2$s", "jetpack-podcast" );
 __( "Select a date range", "jetpack-podcast" );
 __( "Date range presets", "jetpack-podcast" );
@@ -548,6 +463,7 @@ _x( "All segments are hidden.", "chart empty state: segments", "jetpack-podcast"
 _x( "All series are hidden. Click legend items to show data.", "chart empty state: interactive series", "jetpack-podcast" );
 _x( "All series are hidden.", "chart empty state: series", "jetpack-podcast" );
 __( "View details", "jetpack-podcast" );
+__( "Close", "jetpack-podcast" );
 __( "No data available", "jetpack-podcast" );
 __( "Invalid data", "jetpack-podcast" );
 __( "Line chart", "jetpack-podcast" );
@@ -556,7 +472,6 @@ __( "Week of %s", "jetpack-podcast" );
 __( "Total", "jetpack-podcast" );
 __( "Bar chart", "jetpack-podcast" );
 __( "Bar list chart", "jetpack-podcast" );
-_n( "%s item", "%s items", 1, "jetpack-podcast" );
 __( "Conversion rate", "jetpack-podcast" );
 __( "Conversion funnel chart", "jetpack-podcast" );
 __( "Funnel steps", "jetpack-podcast" );
@@ -574,12 +489,9 @@ __( "Pie chart", "jetpack-podcast" );
 __( "Semi-circle chart", "jetpack-podcast" );
 __( "By app", "jetpack-podcast" );
 __( "No app data in this period.", "jetpack-podcast" );
-/* translators: 1: localized download count, 2: localized percentage. */
 __( "%1$s · %2$s", "jetpack-podcast" );
 __( "Downloads", "jetpack-podcast" );
-/* translators: %d is the number of days. */
 _n( "Daily downloads, last %d day", "Daily downloads, last %d days", 1, "jetpack-podcast" );
-/* translators: 1: number of days, 2: total downloads in the period. */
 _n( "Daily downloads bar chart, %1$d day, %2$s total downloads.", "Daily downloads bar chart, %1$d days, %2$s total downloads.", 1, "jetpack-podcast" );
 __( "No daily download data in this period.", "jetpack-podcast" );
 __( "By location", "jetpack-podcast" );
@@ -592,7 +504,6 @@ __( "Total downloads", "jetpack-podcast" );
 __( "Top app", "jetpack-podcast" );
 __( "Top country", "jetpack-podcast" );
 __( "Top day", "jetpack-podcast" );
-/* translators: %s is the localized download count. */
 _n( "%s download", "%s downloads", 1, "jetpack-podcast" );
 __( "Back to stats", "jetpack-podcast" );
 __( "There was a problem loading episode stats. Please try again.", "jetpack-podcast" );
@@ -608,7 +519,6 @@ __( "Connect Jetpack to see your podcast stats", "jetpack-podcast" );
 __( "Your podcast feed already works. Connect this site to WordPress.com to track downloads by episode, app, and country.", "jetpack-podcast" );
 __( "Connect Jetpack to manage your episodes", "jetpack-podcast" );
 __( "Your podcast feed already works. Connect this site to WordPress.com to manage your catalog and plays from one dashboard.", "jetpack-podcast" );
-__( "Something went wrong loading the Podcast dashboard.", "jetpack-podcast" );
 __( "Publish a podcast and reach your fans, anywhere they listen.", "jetpack-podcast" );
 __( "Stats", "jetpack-podcast" );
 __( "Episodes", "jetpack-podcast" );

@@ -6,14 +6,7 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "Loading", "jetpack-videopress-pkg" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-videopress-pkg" );
-__( "More details follow the field.", "jetpack-videopress-pkg" );
-__( "Select", "jetpack-videopress-pkg" );
-__( "Dismiss", "jetpack-videopress-pkg" );
+__( "Untitled video", "jetpack-videopress-pkg" );
 __( "Original", "jetpack-videopress-pkg" );
 __( "Vivid", "jetpack-videopress-pkg" );
 __( "Warm", "jetpack-videopress-pkg" );
@@ -59,7 +52,6 @@ __( "Close", "jetpack-videopress-pkg" );
 __( "Select Try again.", "jetpack-videopress-pkg" );
 __( "Filters", "jetpack-videopress-pkg" );
 __( "Video effects", "jetpack-videopress-pkg" );
-/* translators: %s: video effect name. */
 __( "%s effect", "jetpack-videopress-pkg" );
 __( "The video could not be downloaded.", "jetpack-videopress-pkg" );
 __( "The browser could not decode this video.", "jetpack-videopress-pkg" );
@@ -78,16 +70,13 @@ _x( "Pause", "button: pause timeline preview playback", "jetpack-videopress-pkg"
 __( "Play", "jetpack-videopress-pkg" );
 __( "Fit", "jetpack-videopress-pkg" );
 __( "Timeline zoom", "jetpack-videopress-pkg" );
-/* translators: 1: current zoom level (1 = fully zoomed out), 2: number of zoom levels. */
 __( "Zoom level %1$d of %2$d", "jetpack-videopress-pkg" );
-/* translators: %s: removed duration in seconds, e.g. "3.4". */
 __( "%ss removed", "jetpack-videopress-pkg" );
 __( "New cut", "jetpack-videopress-pkg" );
 __( "The recording could not be prepared. Keep this tab visible and try again.", "jetpack-videopress-pkg" );
 __( "Recording preview", "jetpack-videopress-pkg" );
 _x( "Pause preview", "button: pause recording preview", "jetpack-videopress-pkg" );
 _x( "Play preview", "button: play recording preview", "jetpack-videopress-pkg" );
-/* translators: %d: video preparation progress percentage. */
 __( "Preparing video… %d%%. Keep this tab visible.", "jetpack-videopress-pkg" );
 __( "Record again", "jetpack-videopress-pkg" );
 __( "Upload recording", "jetpack-videopress-pkg" );
@@ -100,23 +89,20 @@ _x( "Stop recording", "button: stop camera recording", "jetpack-videopress-pkg" 
 _x( "Start recording", "button: start camera recording", "jetpack-videopress-pkg" );
 __( "Discard this recording?", "jetpack-videopress-pkg" );
 __( "Discard recording", "jetpack-videopress-pkg" );
-__( "Untitled video", "jetpack-videopress-pkg" );
 __( "You’ve reached the free plan’s 1-video limit. Upgrade to upload more.", "jetpack-videopress-pkg" );
 __( "Only video files can be uploaded.", "jetpack-videopress-pkg" );
 __( "That video format can’t be uploaded. Convert your video to MP4 or MOV, then try again.", "jetpack-videopress-pkg" );
-/* translators: %s: an upper-cased video file extension, e.g. "WEBM". */
 __( "%s files can’t be uploaded. Convert your video to MP4 or MOV, then try again.", "jetpack-videopress-pkg" );
 __( "Upgrade", "jetpack-videopress-pkg" );
-__( "Select videos to upload", "jetpack-videopress-pkg" );
-__( "Select a video to upload", "jetpack-videopress-pkg" );
 __( "Drag and drop your videos here", "jetpack-videopress-pkg" );
 __( "Drag and drop your video here", "jetpack-videopress-pkg" );
 __( "Add one or several. Each upload gets automatic captions, a player you fully own, and a link to share anywhere. No ads, no algorithm.", "jetpack-videopress-pkg" );
 __( "Add one video. Each upload gets automatic captions, a player you fully own, and a link to share anywhere. No ads, no algorithm.", "jetpack-videopress-pkg" );
+__( "Select videos to upload", "jetpack-videopress-pkg" );
+__( "Select a video to upload", "jetpack-videopress-pkg" );
 __( "The upload failed. Please try again.", "jetpack-videopress-pkg" );
 __( "Uploading…", "jetpack-videopress-pkg" );
 __( "Finishing upload…", "jetpack-videopress-pkg" );
-/* translators: %d: upload progress percentage. */
 __( "Uploading %d%%", "jetpack-videopress-pkg" );
 __( "Retry upload", "jetpack-videopress-pkg" );
 __( "Upload progress", "jetpack-videopress-pkg" );

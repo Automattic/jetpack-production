@@ -7,7 +7,11 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- AI, VideoPress: Use the design system progress bar for the usage and storage meters.
 - Backup: Link the failed download screen to a guide on how to fix it.
+- Backup: Use the design system progress bar for the backup, restore, download and storage meters.
+- Content Guidelines AI: Describe the locked buttons to screen readers.
+- Forms, Content Guidelines AI: Use the design system tooltip.
 - My Jetpack: On WordPress.com sites without the Protect page, open Scan threats in the WordPress.com dashboard instead of Jetpack Cloud.
 - Premium Analytics: Explain in the Visitor consent settings that views may drop once Stats follows visitor consent.
 - Premium Analytics: Name the post detail traffic tab and the highlights and views cards for the content type, such as Product traffic.
@@ -23,8 +27,10 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - Custom Content Types: Show the Testimonials and Portfolio toggles on the Settings page again.
 - My Jetpack: Stop showing $0 and NaN for paid plans on the Boost, Protect and Jetpack AI upgrade pages, and $0.00 on recommendation cards, when prices cannot be loaded.
+- Newsletter: Restore the subscriber wording in the Subscribers list footer.
 - Premium Analytics: Remove the grey box that appears inside a metric card on hover when a newer version of the WordPress UI library is loaded.
 - Premium Analytics: Reopen a date control on the calendar when the applied range is custom.
+- Premium Analytics: Stop screen readers from announcing widget content as dimmed outside edit mode.
 - Premium Analytics: Stop store money charts repeating y-axis labels, such as $1, $1, $2, when the store shows fewer decimals than its amounts carry.
 - Protect: Don't label vulnerabilities from the free check as Low severity when their severity is unknown.
 - Protect: Offer a first scan instead of showing "Scanning…" forever when no scan has run yet.

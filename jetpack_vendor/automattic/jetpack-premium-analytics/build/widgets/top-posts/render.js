@@ -6,7 +6,6 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: %s is an archive category label, e.g. "Searches". */
 __( "View %s archive pages", "jetpack-premium-analytics-pkg" );
 __( "Top pages", "jetpack-premium-analytics-pkg" );
 __( "Untitled", "jetpack-premium-analytics-pkg" );

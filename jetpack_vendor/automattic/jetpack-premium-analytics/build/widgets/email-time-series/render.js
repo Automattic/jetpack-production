@@ -8,9 +8,7 @@
 
 __( "Clicks", "jetpack-premium-analytics-pkg" );
 __( "Opens", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of clicks. */
 _n( "%s Click", "%s Clicks", 1, "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of opens. */
 _n( "%s Open", "%s Opens", 1, "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this email's timeline. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );

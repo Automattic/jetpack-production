@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Subscribers: Restore the subscriber wording in the list footer.
+
 ## [0.18.4] - 2026-11-02
 ### Changed
 - Update package dependencies. [#53869]

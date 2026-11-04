@@ -7,21 +7,16 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Switch to the line chart to see each day.", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of posts published. */
 _n( "%s Post published", "%s Posts published", 1, "jetpack-premium-analytics-pkg" );
 __( "Views per visitor", "jetpack-premium-analytics-pkg" );
 __( "Posts published", "jetpack-premium-analytics-pkg" );
 __( "Views", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of views. */
 _n( "%s View", "%s Views", 1, "jetpack-premium-analytics-pkg" );
 __( "Visitors", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of visitors. */
 _n( "%s Visitor", "%s Visitors", 1, "jetpack-premium-analytics-pkg" );
 __( "Comments", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of comments. */
 _n( "%s Comment", "%s Comments", 1, "jetpack-premium-analytics-pkg" );
 __( "Likes", "jetpack-premium-analytics-pkg" );
-/* translators: %s: number of likes. */
 _n( "%s Like", "%s Likes", 1, "jetpack-premium-analytics-pkg" );
 __( "Hourly data isn't available for this metric.", "jetpack-premium-analytics-pkg" );
 __( "Traffic metric", "jetpack-premium-analytics-pkg" );

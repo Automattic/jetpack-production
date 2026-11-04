@@ -10,5 +10,5 @@
 		'wp-keycodes',
 		'wp-private-apis'
 	),
-	'version' => '3cc06b595702a627467f'
+	'version' => '9380e62b468606494991'
 );

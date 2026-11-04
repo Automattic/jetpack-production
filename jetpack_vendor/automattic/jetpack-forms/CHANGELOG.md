@@ -10,7 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Describe the plugin install button and the IP lookup link to screen readers.
 - Update package dependencies.
+- Use the design system tooltip in the form editor and the responses dashboard.
 
 ## [8.3.7] - 2026-11-02
 ### Changed

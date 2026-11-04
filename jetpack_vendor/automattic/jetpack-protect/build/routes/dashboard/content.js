@@ -6,7 +6,6 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-protect-pkg" );
 __( "Sections", "jetpack-protect-pkg" );
 __( "An Automattic Airline", "jetpack-protect-pkg" );
@@ -14,25 +13,21 @@ __( "Jetpack Logo", "jetpack-protect-pkg" );
 __( "Features", "jetpack-protect-pkg" );
 __( "Help", "jetpack-protect-pkg" );
 __( "Jetpack", "jetpack-protect-pkg" );
-/* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-protect-pkg" );
 __( "Loading", "jetpack-protect-pkg" );
-/* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-protect-pkg" );
 __( "Breadcrumbs", "jetpack-protect-pkg" );
-/* translators: %d: number of breadcrumb ancestors hidden in the overflow menu. */
 _n( "Show %d hidden breadcrumb item", "Show %d hidden breadcrumb items", 1, "jetpack-protect-pkg" );
 __( "OK", "jetpack-protect-pkg" );
 __( "Cancel", "jetpack-protect-pkg" );
 __( "Close", "jetpack-protect-pkg" );
-__( "More details follow the field.", "jetpack-protect-pkg" );
 __( "Dismiss", "jetpack-protect-pkg" );
+__( "More details follow the field.", "jetpack-protect-pkg" );
 __( "Unavailable", "jetpack-protect-pkg" );
 __( "This feature isn’t available on your site.", "jetpack-protect-pkg" );
 __( "The scan couldn’t be started.", "jetpack-protect-pkg" );
 __( "Firewall test", "jetpack-protect-pkg" );
 __( "Blocked IP address", "jetpack-protect-pkg" );
-/* translators: %d is a firewall rule's ID. */
 __( "Rule %d", "jetpack-protect-pkg" );
 __( "Enable firewall", "jetpack-protect-pkg" );
 __( "Inspects every request against Jetpack’s firewall rules.", "jetpack-protect-pkg" );
@@ -47,13 +42,10 @@ __( "Turn it on once and it works in the background.", "jetpack-protect-pkg" );
 __( "Firewall", "jetpack-protect-pkg" );
 __( "Active", "jetpack-protect-pkg" );
 __( "Your host provides a firewall for your site, so you’re all set.", "jetpack-protect-pkg" );
-/* translators: %d is how many IP addresses are on a list. */
 _n( "%d address on the list", "%d addresses on the list", 1, "jetpack-protect-pkg" );
 __( "This list is turned off, so it has no effect until you turn it on in Settings.", "jetpack-protect-pkg" );
 __( "IP addresses", "jetpack-protect-pkg" );
-/* translators: 1: an example IP address range. 2: an example CIDR block. */
 __( "One per line. Use a range like %1$s or CIDR like %2$s.", "jetpack-protect-pkg" );
-/* translators: %s is an IP address. */
 __( "Your IP address: %s", "jetpack-protect-pkg" );
 __( "Already on this list", "jetpack-protect-pkg" );
 __( "Add it to the list", "jetpack-protect-pkg" );
@@ -66,7 +58,6 @@ __( "Request", "jetpack-protect-pkg" );
 __( "Client", "jetpack-protect-pkg" );
 __( "Your IP address is on the always-allowed list, so the firewall let the request through. Requests from other addresses are still checked.", "jetpack-protect-pkg" );
 __( "No firewall header, so the firewall didn’t act on the request. A page cache in front of your site can also answer before the firewall sees it.", "jetpack-protect-pkg" );
-/* translators: %d is a firewall rule's ID. */
 __( "It’s in Recently blocked requests as rule %d.", "jetpack-protect-pkg" );
 __( "Created a one-time test token", "jetpack-protect-pkg" );
 __( "Saved on your server for 60 seconds. The firewall checks for it before any of its rules, so the test works even with automatic rules off.", "jetpack-protect-pkg" );
@@ -92,7 +83,6 @@ __( "Blocked in the last 30 days", "jetpack-protect-pkg" );
 __( "No requests blocked yet", "jetpack-protect-pkg" );
 __( "Get started by testing your firewall and start blocking requests from suspicious IPs.", "jetpack-protect-pkg" );
 __( "Your automatic firewall rules have stopped updating", "jetpack-protect-pkg" );
-/* translators: %s is a date, such as "Mar 14, 2026". */
 __( "Your rules were last updated on %s. Attacks on WordPress plugins discovered since then can get through. Upgrade to get a new rule as soon as an attack is found.", "jetpack-protect-pkg" );
 __( "Edit block list", "jetpack-protect-pkg" );
 __( "Blocked IP addresses", "jetpack-protect-pkg" );
@@ -100,9 +90,7 @@ __( "Edit allow list", "jetpack-protect-pkg" );
 __( "Always allowed IP addresses", "jetpack-protect-pkg" );
 __( "Configure Firewall", "jetpack-protect-pkg" );
 __( "Separate addresses or ranges with commas, spaces or new lines.", "jetpack-protect-pkg" );
-/* translators: %s is a list of example IP addresses and ranges. */
 __( "Example: %s", "jetpack-protect-pkg" );
-/* translators: %s is an IP address. */
 __( "Add my IP address (%s)", "jetpack-protect-pkg" );
 __( "The firewall runs before WordPress loads, so it inspects every request. Remove the <code>auto_prepend_file</code> PHP directive if you turn the firewall off or uninstall Jetpack.", "jetpack-protect-pkg" );
 __( "Run the firewall before WordPress loads so it can inspect every request. Set the <code>auto_prepend_file</code> PHP directive to <path/>, usually in an .htaccess file or your PHP configuration; your host can help. Remove it again if you turn the firewall off or uninstall Jetpack.", "jetpack-protect-pkg" );
@@ -120,18 +108,14 @@ __( "Share basic data with Jetpack", "jetpack-protect-pkg" );
 __( "Allow Jetpack to collect basic data from blocked requests to improve firewall protection and accuracy.", "jetpack-protect-pkg" );
 __( "Share detailed data with Jetpack", "jetpack-protect-pkg" );
 __( "Allow Jetpack to collect detailed data from blocked requests to enhance firewall protection and accuracy.", "jetpack-protect-pkg" );
-/* translators: 1: Calendar type. 2: Current month and year. */
 __( "%1$s, %2$s", "jetpack-protect-pkg" );
 __( "Date calendar", "jetpack-protect-pkg" );
 __( "Date range calendar", "jetpack-protect-pkg" );
 __( "Navigation bar", "jetpack-protect-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s", "jetpack-protect-pkg" );
 __( "Next month", "jetpack-protect-pkg" );
 __( "Previous month", "jetpack-protect-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s, selected", "jetpack-protect-pkg" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected", "jetpack-protect-pkg" );
 __( "Required", "jetpack-protect-pkg" );
 __( "Optional", "jetpack-protect-pkg" );
@@ -139,13 +123,11 @@ __( "Select", "jetpack-protect-pkg" );
 __( "Sort ascending", "jetpack-protect-pkg" );
 __( "Sort descending", "jetpack-protect-pkg" );
 __( "(no title)", "jetpack-protect-pkg" );
+_x( "%s…", "menu item requiring further input", "jetpack-protect-pkg" );
 __( "Actions", "jetpack-protect-pkg" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item selected", "%s Items selected", 1, "jetpack-protect-pkg" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item", "%s Items", 1, "jetpack-protect-pkg" );
-/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
-_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack-protect-pkg" );
+_n( "%s item selected", "%s items selected", 1, "jetpack-protect-pkg" );
+_n( "%s item", "%s items", 1, "jetpack-protect-pkg" );
+_n( "%1$s of %2$s item", "%1$s of %2$s items", 1, "jetpack-protect-pkg" );
 __( "Deselect all", "jetpack-protect-pkg" );
 __( "Select all", "jetpack-protect-pkg" );
 __( "Add filter", "jetpack-protect-pkg" );
@@ -155,18 +137,13 @@ __( "Insert left", "jetpack-protect-pkg" );
 __( "Insert right", "jetpack-protect-pkg" );
 __( "Hide column", "jetpack-protect-pkg" );
 __( "Properties", "jetpack-protect-pkg" );
-/* translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022". */
 __( "%1$s: %2$s", "jetpack-protect-pkg" );
 __( "Navigate to item", "jetpack-protect-pkg" );
-/* translators: %d: The row number in the grid */
 __( "Row %d", "jetpack-protect-pkg" );
-/* translators: %s: The label of the field e.g. "Status". */
 __( "%s: <groupName />", "jetpack-protect-pkg" );
-/* translators: 1: current page number. 2: total number of pages. */
-__( "Page %1$d of %2$d", "jetpack-protect-pkg" );
-/* translators: 1: Current page number, 2: Total number of pages. */
-_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-protect-pkg" );
 __( "Current page", "jetpack-protect-pkg" );
+__( "Page %1$d of %2$d", "jetpack-protect-pkg" );
+_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-protect-pkg" );
 __( "Previous page", "jetpack-protect-pkg" );
 __( "Next page", "jetpack-protect-pkg" );
 __( "Density", "jetpack-protect-pkg" );
@@ -179,98 +156,55 @@ __( "Table", "jetpack-protect-pkg" );
 __( "Grid", "jetpack-protect-pkg" );
 __( "List", "jetpack-protect-pkg" );
 __( "Activity", "jetpack-protect-pkg" );
-/* translators: List of items for a filter. 1: Filter name. e.g.: "List of: Author". */
 __( "List of: %1$s", "jetpack-protect-pkg" );
 __( "Search items", "jetpack-protect-pkg" );
 __( "Search", "jetpack-protect-pkg" );
 __( "No results found", "jetpack-protect-pkg" );
 __( "No elements found", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Is none of", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is none of: Admin, Editor". */
 __( "<Name>%1$s is none of: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Includes", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is any: Admin, Editor". */
 __( "<Name>%1$s includes: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Includes all", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author includes all: Admin, Editor". */
 __( "<Name>%1$s includes all: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Between (inc)", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Item count"). 2: Filter value min. 3: Filter value max. e.g.: "Item count between (inc): 10 and 180". */
 __( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "In the past", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is in the past: 7 days". */
 __( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Over", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is over: 7 days". */
 __( "<Name>%1$s is over: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Is", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is: Admin". */
 __( "<Name>%1$s is: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Is not", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is not: Admin". */
 __( "<Name>%1$s is not: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Less than", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than: 10". */
 __( "<Name>%1$s is less than: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Greater than", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than: 10". */
 __( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Less than or equal", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than or equal to: 10". */
 __( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Greater than or equal", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than or equal to: 10". */
 __( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Before", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is before: 2024-01-01". */
 __( "<Name>%1$s is before: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "After", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is after: 2024-01-01". */
 __( "<Name>%1$s is after: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Before (inc)", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or before: 2024-01-01". */
 __( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "After (inc)", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or after: 2024-01-01". */
 __( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Contains", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title contains: Hello". */
 __( "<Name>%1$s contains: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Doesn't contain", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title doesn't contain: Hello". */
 __( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Starts with", "jetpack-protect-pkg" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title starts with: Hello". */
 __( "<Name>%1$s starts with: </Name><Value>%2$s</Value>", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "On", "jetpack-protect-pkg" );
-/* translators: DataViews operator name */
 __( "Not on", "jetpack-protect-pkg" );
-/* translators: 1: Filter name e.g.: "Unknown status for Author". */
 __( "Unknown status for %1$s", "jetpack-protect-pkg" );
 __( "Conditions", "jetpack-protect-pkg" );
 __( "Reset", "jetpack-protect-pkg" );
 __( "Remove", "jetpack-protect-pkg" );
-/* translators: 1: Filter name. */
 __( "Filter by: %1$s", "jetpack-protect-pkg" );
 _x( "Filter", "verb", "jetpack-protect-pkg" );
 __( "No results", "jetpack-protect-pkg" );
@@ -291,7 +225,6 @@ __( "Months ago", "jetpack-protect-pkg" );
 __( "Years ago", "jetpack-protect-pkg" );
 __( "Unit", "jetpack-protect-pkg" );
 __( "Coordinated Universal Time", "jetpack-protect-pkg" );
-/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
 __( "Timezone: %s", "jetpack-protect-pkg" );
 __( "Date time", "jetpack-protect-pkg" );
 __( "Today", "jetpack-protect-pkg" );
@@ -328,7 +261,6 @@ __( "Delete the unexpected file in a core WordPress directory.", "jetpack-protec
 __( "Delete the infected file.", "jetpack-protect-pkg" );
 __( "Delete the plugin directory to fix the threat.", "jetpack-protect-pkg" );
 __( "Delete the theme directory to fix the threat.", "jetpack-protect-pkg" );
-/* translators: Translates to Updates to version. %1$s: Name. %2$s: Fixed version */
 __( "Update %1$s to version %2$s", "jetpack-protect-pkg" );
 __( "Upgrade the plugin or theme to a newer version.", "jetpack-protect-pkg" );
 __( "Replace the modified core WordPress file with the original clean version from the WordPress source code.", "jetpack-protect-pkg" );
@@ -349,73 +281,44 @@ __( "Delete theme", "jetpack-protect-pkg" );
 __( "Update plugin", "jetpack-protect-pkg" );
 __( "Deactivate plugin", "jetpack-protect-pkg" );
 __( "Delete plugin", "jetpack-protect-pkg" );
-/* translators: %s is a number. */
 _n( "%s plugin", "%s plugins", 1, "jetpack-protect-pkg" );
-/* translators: %s is a number. */
 _n( "%s theme", "%s themes", 1, "jetpack-protect-pkg" );
 __( "View", "jetpack-protect-pkg" );
-/* translators: 1: a threat, such as "Contact Form 7 (5.3.1)" or "index.php". 2: why the action failed. */
 __( "Threat in %1$s: %2$s", "jetpack-protect-pkg" );
-/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
 __( "Ignoring the threat in %s…", "jetpack-protect-pkg" );
-/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
 __( "Unignoring the threat in %s…", "jetpack-protect-pkg" );
-/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
 __( "Ignored the threat in %s.", "jetpack-protect-pkg" );
-/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
 __( "Unignored the threat in %s.", "jetpack-protect-pkg" );
 __( "Undo", "jetpack-protect-pkg" );
-/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
 __( "The threat in %s couldn’t be ignored.", "jetpack-protect-pkg" );
-/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
 __( "The threat in %s couldn’t be unignored.", "jetpack-protect-pkg" );
 __( "Fixing the threat in %s…", "jetpack-protect-pkg" );
 __( "The fix for the threat in %s is taking longer than expected. Check back in a few minutes.", "jetpack-protect-pkg" );
 __( "Fixed the threat in %s.", "jetpack-protect-pkg" );
-/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
 __( "Jetpack couldn’t fix the threat in %s. Contact Jetpack support for help.", "jetpack-protect-pkg" );
-/* translators: %s is a threat, such as "Contact Form 7 (5.3.1)" or "index.php". */
 __( "The fix for the threat in %s couldn’t be started.", "jetpack-protect-pkg" );
-/* translators: %d is a number of threats, two or more. */
 _n( "Fixing %d threat…", "Fixing %d threats…", 1, "jetpack-protect-pkg" );
-/* translators: %d is a number of threats, two or more. */
 _n( "Fixed %d threat.", "Fixed %d threats.", 1, "jetpack-protect-pkg" );
-/* translators: 1: how many threats were fixed. 2: how many Jetpack tried to fix. */
 _n( "Fixed %1$d of %2$d threat.", "Fixed %1$d of %2$d threats.", 1, "jetpack-protect-pkg" );
-/* translators: %d is a number of fixes. */
 _n( "%d fix is taking longer than expected. Check back in a few minutes.", "%d fixes are taking longer than expected. Check back in a few minutes.", 1, "jetpack-protect-pkg" );
-/* translators: %d is a number of threats. */
 _n( "%d threat couldn’t be fixed. Fix it on its own to see why.", "%d threats couldn’t be fixed. Fix them one at a time to see why.", 1, "jetpack-protect-pkg" );
-/* translators: %d is a number of threats, two or more. */
 _n( "Ignoring %d threat…", "Ignoring %d threats…", 1, "jetpack-protect-pkg" );
-/* translators: %d is a number of threats, two or more. */
 _n( "Unignoring %d threat…", "Unignoring %d threats…", 1, "jetpack-protect-pkg" );
-/* translators: %d is a number of threats, two or more. */
 _n( "Ignored %d threat.", "Ignored %d threats.", 1, "jetpack-protect-pkg" );
-/* translators: %d is a number of threats, two or more. */
 _n( "Unignored %d threat.", "Unignored %d threats.", 1, "jetpack-protect-pkg" );
-/* translators: %d is a number of threats, two or more. */
 _n( "The %d threat couldn’t be ignored.", "The %d threats couldn’t be ignored.", 1, "jetpack-protect-pkg" );
-/* translators: %d is a number of threats, two or more. */
 _n( "The %d threat couldn’t be unignored.", "The %d threats couldn’t be unignored.", 1, "jetpack-protect-pkg" );
-/* translators: 1: how many threats were ignored. 2: how many Jetpack tried to ignore. */
 _n( "Ignored %1$d of %2$d threat. Try the others again.", "Ignored %1$d of %2$d threats. Try the others again.", 1, "jetpack-protect-pkg" );
-/* translators: 1: how many threats were unignored. 2: how many Jetpack tried to unignore. */
 _n( "Unignored %1$d of %2$d threat. Try the others again.", "Unignored %1$d of %2$d threats. Try the others again.", 1, "jetpack-protect-pkg" );
-/* translators: %s is a plugin or theme, such as "Contact Form 7". */
 __( "%s can’t be deleted while one of its threats is being fixed or ignored. Try again once that finishes.", "jetpack-protect-pkg" );
-/* translators: %s is a plugin or theme, such as "Contact Form 7". */
 __( "Deleted %s.", "jetpack-protect-pkg" );
-/* translators: %s is a plugin or theme, such as "Contact Form 7". */
 __( "%s couldn’t be deleted.", "jetpack-protect-pkg" );
 __( "This threat is busy. Try again once that finishes.", "jetpack-protect-pkg" );
 __( "Deleted the option and marked the threat as fixed.", "jetpack-protect-pkg" );
 __( "The option couldn’t be deleted.", "jetpack-protect-pkg" );
 __( "Delete theme?", "jetpack-protect-pkg" );
 __( "Delete plugin?", "jetpack-protect-pkg" );
-/* translators: %s is a theme name, such as "Twenty Twenty". */
 __( "%s isn’t your active theme or its parent, so deleting it doesn’t change your site. Its files are removed and can’t be restored.", "jetpack-protect-pkg" );
-/* translators: %s is a plugin name, such as "Contact Form 7". */
 __( "%s isn’t active. Deleting it removes its files and any data it saved, such as its settings. This can’t be undone.", "jetpack-protect-pkg" );
 __( "Delete this theme?", "jetpack-protect-pkg" );
 __( "Delete this plugin?", "jetpack-protect-pkg" );
@@ -423,9 +326,7 @@ __( "This theme seems to be currently active on your site. Deleting it may break
 __( "This plugin seems to be currently active on your site. Deleting it may break your site. Please disable it first and check if your site is still working as expected, then proceed with the fix.", "jetpack-protect-pkg" );
 __( "This theme seems to not currently be active on your site. Please note that deleting it may still have adverse effects and this action cannot be undone.", "jetpack-protect-pkg" );
 __( "This plugin seems to not currently be active on your site. Please note that deleting it may still have adverse effects and this action cannot be undone.", "jetpack-protect-pkg" );
-/* translators: %s is the theme slug itself, e.g. twentytwentyfive. */
 __( "To confirm you have read and understood the consequences, please enter the theme slug <code>%s</code> in the field below.", "jetpack-protect-pkg" );
-/* translators: %s is the plugin slug itself, e.g. jetpack-protect. */
 __( "To confirm you have read and understood the consequences, please enter the plugin slug <code>%s</code> in the field below.", "jetpack-protect-pkg" );
 __( "We did not find this theme on WordPress.org. We encourage you to create a backup of your site before fixing this threat, to keep a copy of it.", "jetpack-protect-pkg" );
 __( "We did not find this plugin on WordPress.org. We encourage you to create a backup of your site before fixing this threat, to keep a copy of it.", "jetpack-protect-pkg" );
@@ -435,7 +336,6 @@ __( "Auto-fix", "jetpack-protect-pkg" );
 __( "Unignore", "jetpack-protect-pkg" );
 __( "View on WordPress.org", "jetpack-protect-pkg" );
 __( "Ignore", "jetpack-protect-pkg" );
-/* translators: %s is a kind of threat, such as "Vulnerable plugin", before what it's in. */
 __( "%s:", "jetpack-protect-pkg" );
 __( "Fixing…", "jetpack-protect-pkg" );
 __( "Ignoring…", "jetpack-protect-pkg" );
@@ -461,9 +361,7 @@ __( "No fixed threats yet", "jetpack-protect-pkg" );
 __( "When Scan fixes a threat on your site, it will be listed here with the date it was fixed.", "jetpack-protect-pkg" );
 __( "No ignored threats", "jetpack-protect-pkg" );
 __( "Threats you ignore will be listed here, where you can unignore them at any time.", "jetpack-protect-pkg" );
-/* translators: %d is a number of threats. */
 __( "Fixed (%d)", "jetpack-protect-pkg" );
-/* translators: %d is a number of threats. */
 __( "Ignored (%d)", "jetpack-protect-pkg" );
 __( "Loading scan history…", "jetpack-protect-pkg" );
 __( "Scan history", "jetpack-protect-pkg" );
@@ -477,21 +375,16 @@ __( "Inactive theme", "jetpack-protect-pkg" );
 __( "Inactive plugin", "jetpack-protect-pkg" );
 __( "File: %s", "jetpack-protect-pkg" );
 __( "Table: %s", "jetpack-protect-pkg" );
-/* translators: %s describes the fix, such as "Update Contact Form 7 to version 6.2.1". */
 __( "Jetpack Scan can fix this threat for you: %s.", "jetpack-protect-pkg" );
 __( "Jetpack Scan can fix this threat for you.", "jetpack-protect-pkg" );
-/* translators: %s is a version number, such as "5.3.2". */
 __( "Update to version %s or later.", "jetpack-protect-pkg" );
 __( "Jetpack Scan can’t fix this itself, but you can delete the option above if you don’t recognize it. Deleting can’t be undone, so check first that no plugin you use needs it, or contact Jetpack support for help.", "jetpack-protect-pkg" );
-/* translators: %s is a database table, such as "wp_options". */
 __( "Jetpack can’t fix this automatically. If you don’t recognize the row above, remove it from the %s table, or contact Jetpack support for help.", "jetpack-protect-pkg" );
 __( "Jetpack can’t fix this automatically. Review the affected code and remove it if you don’t recognize it, or contact Jetpack support for help.", "jetpack-protect-pkg" );
 __( "Delete option", "jetpack-protect-pkg" );
 __( "Delete option?", "jetpack-protect-pkg" );
-/* translators: %s is an option name, such as "_wpc_ak". */
 __( "This permanently deletes the %s option from your database. Jetpack doesn’t keep a copy, so it can’t be undone. If a plugin you use needs this option, that plugin may stop working.", "jetpack-protect-pkg" );
 __( "Deleting can’t be undone.", "jetpack-protect-pkg" );
-/* translators: %s is a database table, such as "wp_options". */
 __( "Threat found in the %s table, in this row:", "jetpack-protect-pkg" );
 __( "Auto-fix it", "jetpack-protect-pkg" );
 __( "Jetpack is fixing this threat. You can close this panel; the list updates when it’s done.", "jetpack-protect-pkg" );
@@ -499,16 +392,13 @@ __( "Unignore it", "jetpack-protect-pkg" );
 __( "Ignore it", "jetpack-protect-pkg" );
 __( "Ignored", "jetpack-protect-pkg" );
 __( "Fixed", "jetpack-protect-pkg" );
-/* translators: %s is a date, such as "Aug 15, 7:00 AM". */
 __( "Jetpack fixed this threat on %s.", "jetpack-protect-pkg" );
 __( "You ignored this threat, so Scan no longer reports it. Unignore it to have Scan check it again.", "jetpack-protect-pkg" );
 __( "What did Jetpack find?", "jetpack-protect-pkg" );
 __( "Learn more about this vulnerability", "jetpack-protect-pkg" );
 __( "The technical details", "jetpack-protect-pkg" );
 __( "Threat found in file:", "jetpack-protect-pkg" );
-/* translators: 1: a plugin or theme, such as "Contact Form 7 (5.3.1)". 2: a version number. */
 __( "%1$s is affected. Version %2$s fixes it.", "jetpack-protect-pkg" );
-/* translators: %s is a plugin or theme, such as "Contact Form 7 (5.3.1)". */
 __( "%s is affected.", "jetpack-protect-pkg" );
 __( "How to resolve or handle this detection?", "jetpack-protect-pkg" );
 __( "Threat details", "jetpack-protect-pkg" );
@@ -552,7 +442,6 @@ __( "Downtime monitoring isn’t available on this site.", "jetpack-protect-pkg"
 __( "Connect your WordPress.com account to turn on downtime monitoring.", "jetpack-protect-pkg" );
 __( "Enable downtime monitoring", "jetpack-protect-pkg" );
 __( "Operational all day", "jetpack-protect-pkg" );
-/* translators: %d is a number of minutes. */
 _n( "Down for %d minute", "Down for %d minutes", 1, "jetpack-protect-pkg" );
 __( "No data", "jetpack-protect-pkg" );
 __( "Operational", "jetpack-protect-pkg" );
@@ -561,7 +450,6 @@ __( "Status unknown", "jetpack-protect-pkg" );
 __( "Downtime monitoring", "jetpack-protect-pkg" );
 __( "Connect your account", "jetpack-protect-pkg" );
 __( "Find out your site is down before your visitors do, with an email alert within minutes.", "jetpack-protect-pkg" );
-/* translators: %d is a number of days. */
 __( "Last %d days uptime", "jetpack-protect-pkg" );
 __( "Downtime monitoring is on. Connect your WordPress.com account to get alerts and see uptime history.", "jetpack-protect-pkg" );
 __( "Uptime history is unavailable right now.", "jetpack-protect-pkg" );
@@ -569,18 +457,14 @@ __( "Try again", "jetpack-protect-pkg" );
 __( "Configure downtime monitoring", "jetpack-protect-pkg" );
 __( "Connect your WordPress.com account to manage these emails.", "jetpack-protect-pkg" );
 __( "Emails go to your WordPress.com account’s address.", "jetpack-protect-pkg" );
-/* translators: %s is an email address. */
 __( "Emails go to %s, your WordPress.com account’s address.", "jetpack-protect-pkg" );
 __( "Email me when my site goes down and comes back up", "jetpack-protect-pkg" );
 __( "Scan no longer reports this threat. It may have been fixed.", "jetpack-protect-pkg" );
-/* translators: %s is how long ago, such as "2 hours ago". */
 __( "Last scan %s", "jetpack-protect-pkg" );
 __( "No threats found", "jetpack-protect-pkg" );
-/* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */
 __( "No issues were found after scanning %1$s and %2$s.", "jetpack-protect-pkg" );
 __( "Your site is scanned automatically every day.", "jetpack-protect-pkg" );
 __( "No vulnerabilities found", "jetpack-protect-pkg" );
-/* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */
 __( "No issues were found after checking %1$s and %2$s for known vulnerabilities.", "jetpack-protect-pkg" );
 __( "Vulnerabilities are checked automatically every day.", "jetpack-protect-pkg" );
 __( "Vulnerabilities are checked once a day. Upgrade to Scan to check anytime.", "jetpack-protect-pkg" );
@@ -638,9 +522,7 @@ __( "Proof it’s handled", "jetpack-protect-pkg" );
 __( "Your history shows each threat was dealt with.", "jetpack-protect-pkg" );
 __( "Scanning…", "jetpack-protect-pkg" );
 __( "Scan progress", "jetpack-protect-pkg" );
-/* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */
 __( "Checking %1$s, %2$s and your site’s files for threats.", "jetpack-protect-pkg" );
-/* translators: %1$s is a number of plugins, such as "23 plugins". %2$s is a number of themes, such as "5 themes". */
 __( "Checking %1$s and %2$s for vulnerabilities.", "jetpack-protect-pkg" );
 __( "You can leave this page — the scan carries on.", "jetpack-protect-pkg" );
 __( "Check again", "jetpack-protect-pkg" );
@@ -659,7 +541,6 @@ __( "Scan results", "jetpack-protect-pkg" );
 __( "Daily malware and vulnerability checks for your files, WordPress, plugins and themes.", "jetpack-protect-pkg" );
 __( "Daily vulnerability checks for WordPress, plugins and themes.", "jetpack-protect-pkg" );
 __( "View scan history", "jetpack-protect-pkg" );
-/* translators: %d is a number of threats. */
 _n( "View %d ignored threat", "View %d ignored threats", 1, "jetpack-protect-pkg" );
 __( "Your site is checked every day for known vulnerabilities in WordPress, plugins and themes. There’s nothing to set up.", "jetpack-protect-pkg" );
 __( "Get Scan for daily malware scanning and one-click fixes", "jetpack-protect-pkg" );
@@ -678,7 +559,6 @@ __( "The firewall couldn’t finish applying your change.", "jetpack-protect-pkg
 __( "Your settings couldn’t be loaded.", "jetpack-protect-pkg" );
 __( "Settings updated.", "jetpack-protect-pkg" );
 __( "Your change couldn’t be saved. Try again.", "jetpack-protect-pkg" );
-/* translators: %s is a threat's id number. */
 __( "Threat #%s", "jetpack-protect-pkg" );
 __( "Nothing from your alert needs fixing", "jetpack-protect-pkg" );
 __( "Other threats on your site still need attention.", "jetpack-protect-pkg" );
@@ -688,7 +568,6 @@ __( "No known vulnerabilities found", "jetpack-protect-pkg" );
 __( "None of the threats from your alert need your attention.", "jetpack-protect-pkg" );
 __( "Your last scan didn’t complete, so we can’t confirm the rest of your site is free of threats.", "jetpack-protect-pkg" );
 __( "Scan again from the Overview.", "jetpack-protect-pkg" );
-/* translators: %d is a number of threats. */
 _n( "Checking the latest status of %d threat…", "Checking the latest status of %d threats…", 1, "jetpack-protect-pkg" );
 __( "Scan hasn’t finished checking your site yet. Reload the page once it has.", "jetpack-protect-pkg" );
 __( "Needs attention", "jetpack-protect-pkg" );

@@ -7,7 +7,6 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Untracked authors", "jetpack-premium-analytics-pkg" );
-/* translators: %s is the author name */
 __( "View posts by %s", "jetpack-premium-analytics-pkg" );
 __( "All authors", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load authors. Please try again in a moment.", "jetpack-premium-analytics-pkg" );

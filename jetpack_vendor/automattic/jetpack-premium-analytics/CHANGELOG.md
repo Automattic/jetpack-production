@@ -16,15 +16,19 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Post detail: Name the traffic tab and the highlights and views cards for the content type, such as Product traffic.
+- Reports: Load a report's page only when it opens, so the route guards no longer bundle every report page.
 - Settings: Explain in the Visitor consent card that views may drop once Stats follows visitor consent.
 - Stats links: Open the dashboard on the section and the days a link names, so the admin bar's "View all stats" shows the 7 days its chart does.
 - Traffic summary: Save the chart type its switch picks where Stats v1 saved it, so the Stats widget on the wp-admin dashboard draws bars or lines as this chart does.
+- Update package dependencies.
+- Use the design system tooltip for abbreviated values and earnings statuses.
 - When a date range allows only one chart interval, open its menu anyway and say how a longer range adds more.
 
 ### Removed
 - Remove the include guards and stubs kept for a second copy of the package loading in the same request; the autoloader now serves one copy per request.
 
 ### Fixed
+- Dashboard: Stop screen readers from announcing widget content as dimmed outside edit mode.
 - Metric cards: Remove the grey box that appears inside a metric card on hover when a newer version of the WordPress UI library is loaded.
 - Report params field: Reopen the period menu on the calendar when the applied range is custom.
 - Settings: Reset the Reader views setting to its default on a null write, instead of turning it off.

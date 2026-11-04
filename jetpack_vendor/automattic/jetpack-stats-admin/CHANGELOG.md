@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Admin bar: Add a 7-day views chart with views and visitors on hover, off by default behind a feature flag.
 
+### Changed
+- Update package dependencies.
+
 ## 0.39.3 - 2026-11-02
 ### Changed
 - Stats widget: render a loading skeleton instead of a spinner while the script loads. [#54257]

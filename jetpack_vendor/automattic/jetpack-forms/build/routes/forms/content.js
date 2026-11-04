@@ -7,22 +7,15 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "Loading", "jetpack-forms" );
-/* translators: %s: keyboard shortcut. */
 __( "Keyboard shortcut: %s", "jetpack-forms" );
-/* translators: accessibility text appended to link text */
-__( "(opens in a new tab)", "jetpack-forms" );
-/* translators: 1: Calendar type. 2: Current month and year. */
 __( "%1$s, %2$s", "jetpack-forms" );
 __( "Date calendar", "jetpack-forms" );
 __( "Date range calendar", "jetpack-forms" );
 __( "Navigation bar", "jetpack-forms" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s", "jetpack-forms" );
 __( "Next month", "jetpack-forms" );
 __( "Previous month", "jetpack-forms" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s, selected", "jetpack-forms" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected", "jetpack-forms" );
 __( "Required", "jetpack-forms" );
 __( "Optional", "jetpack-forms" );
@@ -31,13 +24,11 @@ __( "Select", "jetpack-forms" );
 __( "Sort ascending", "jetpack-forms" );
 __( "Sort descending", "jetpack-forms" );
 __( "(no title)", "jetpack-forms" );
+_x( "%s…", "menu item requiring further input", "jetpack-forms" );
 __( "Actions", "jetpack-forms" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item selected", "%s Items selected", 1, "jetpack-forms" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item", "%s Items", 1, "jetpack-forms" );
-/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
-_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack-forms" );
+_n( "%s item selected", "%s items selected", 1, "jetpack-forms" );
+_n( "%s item", "%s items", 1, "jetpack-forms" );
+_n( "%1$s of %2$s item", "%1$s of %2$s items", 1, "jetpack-forms" );
 __( "Deselect all", "jetpack-forms" );
 __( "Select all", "jetpack-forms" );
 __( "Cancel", "jetpack-forms" );
@@ -48,18 +39,13 @@ __( "Insert left", "jetpack-forms" );
 __( "Insert right", "jetpack-forms" );
 __( "Hide column", "jetpack-forms" );
 __( "Properties", "jetpack-forms" );
-/* translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022". */
 __( "%1$s: %2$s", "jetpack-forms" );
 __( "Navigate to item", "jetpack-forms" );
-/* translators: %d: The row number in the grid */
 __( "Row %d", "jetpack-forms" );
-/* translators: %s: The label of the field e.g. "Status". */
 __( "%s: <groupName />", "jetpack-forms" );
-/* translators: 1: current page number. 2: total number of pages. */
-__( "Page %1$d of %2$d", "jetpack-forms" );
-/* translators: 1: Current page number, 2: Total number of pages. */
-_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-forms" );
 __( "Current page", "jetpack-forms" );
+__( "Page %1$d of %2$d", "jetpack-forms" );
+_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-forms" );
 __( "Previous page", "jetpack-forms" );
 __( "Next page", "jetpack-forms" );
 __( "Density", "jetpack-forms" );
@@ -72,98 +58,55 @@ __( "Table", "jetpack-forms" );
 __( "Grid", "jetpack-forms" );
 __( "List", "jetpack-forms" );
 __( "Activity", "jetpack-forms" );
-/* translators: List of items for a filter. 1: Filter name. e.g.: "List of: Author". */
 __( "List of: %1$s", "jetpack-forms" );
 __( "Search items", "jetpack-forms" );
 __( "Search", "jetpack-forms" );
 __( "No results found", "jetpack-forms" );
 __( "No elements found", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Is none of", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is none of: Admin, Editor". */
 __( "<Name>%1$s is none of: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Includes", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is any: Admin, Editor". */
 __( "<Name>%1$s includes: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Includes all", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author includes all: Admin, Editor". */
 __( "<Name>%1$s includes all: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Between (inc)", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Item count"). 2: Filter value min. 3: Filter value max. e.g.: "Item count between (inc): 10 and 180". */
 __( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "In the past", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is in the past: 7 days". */
 __( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Over", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is over: 7 days". */
 __( "<Name>%1$s is over: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Is", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is: Admin". */
 __( "<Name>%1$s is: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Is not", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is not: Admin". */
 __( "<Name>%1$s is not: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Less than", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than: 10". */
 __( "<Name>%1$s is less than: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Greater than", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than: 10". */
 __( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Less than or equal", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than or equal to: 10". */
 __( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Greater than or equal", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than or equal to: 10". */
 __( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Before", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is before: 2024-01-01". */
 __( "<Name>%1$s is before: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "After", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is after: 2024-01-01". */
 __( "<Name>%1$s is after: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Before (inc)", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or before: 2024-01-01". */
 __( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "After (inc)", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or after: 2024-01-01". */
 __( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Contains", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title contains: Hello". */
 __( "<Name>%1$s contains: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Doesn't contain", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title doesn't contain: Hello". */
 __( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Starts with", "jetpack-forms" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title starts with: Hello". */
 __( "<Name>%1$s starts with: </Name><Value>%2$s</Value>", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "On", "jetpack-forms" );
-/* translators: DataViews operator name */
 __( "Not on", "jetpack-forms" );
-/* translators: 1: Filter name e.g.: "Unknown status for Author". */
 __( "Unknown status for %1$s", "jetpack-forms" );
 __( "Conditions", "jetpack-forms" );
 __( "Reset", "jetpack-forms" );
 __( "Remove", "jetpack-forms" );
-/* translators: 1: Filter name. */
 __( "Filter by: %1$s", "jetpack-forms" );
 _x( "Filter", "verb", "jetpack-forms" );
 __( "No results", "jetpack-forms" );
@@ -184,7 +127,6 @@ __( "Months ago", "jetpack-forms" );
 __( "Years ago", "jetpack-forms" );
 __( "Unit", "jetpack-forms" );
 __( "Coordinated Universal Time", "jetpack-forms" );
-/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
 __( "Timezone: %s", "jetpack-forms" );
 __( "Date time", "jetpack-forms" );
 __( "Today", "jetpack-forms" );
@@ -216,9 +158,9 @@ __( "Value must be true, false, or undefined", "jetpack-forms" );
 __( "Value must be an array.", "jetpack-forms" );
 __( "Every value must be a string.", "jetpack-forms" );
 __( "Value must be a valid color.", "jetpack-forms" );
+__( "(opens in a new tab)", "jetpack-forms" );
 __( "OK", "jetpack-forms" );
 __( "Close", "jetpack-forms" );
-__( "Dismiss", "jetpack-forms" );
 __( "Akismet icon", "jetpack-forms" );
 __( "Add one-click spam protection for your forms with <a>Akismet</a>. Simply install the plugin and you're set.", "jetpack-forms" );
 __( "Akismet is installed. Just activate the plugin to start blocking spam.", "jetpack-forms" );
@@ -267,11 +209,8 @@ __( "Which email list should contacts be added to?", "jetpack-forms" );
 __( "You do not have any MailPoet lists yet. Click the dashboard button below to create one, or contacts will be added to a \"Jetpack Forms Subscribers\" list.", "jetpack-forms" );
 __( "View dashboard", "jetpack-forms" );
 __( "Unknown error", "jetpack-forms" );
-/* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 12/31/2023). */
 __( "MM/DD/YYYY", "jetpack-forms" );
-/* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 31/12/2023). */
 __( "DD/MM/YYYY", "jetpack-forms" );
-/* translators: date format. DD is the day of the month, MM the month, and YYYY the year (e.g., 2023-12-31). */
 __( "YYYY-MM-DD", "jetpack-forms" );
 __( "Create Salesforce lead form", "jetpack-forms" );
 __( "Enter a Salesforce Organization ID to enable.", "jetpack-forms" );
@@ -307,7 +246,6 @@ __( "Opening the editor…", "jetpack-forms" );
 __( "Could not create the form. Please try again.", "jetpack-forms" );
 __( "Create a form", "jetpack-forms" );
 __( "This will permanently delete this form. This action cannot be undone.", "jetpack-forms" );
-/* translators: %d: number of forms */
 _n( "This will permanently delete %d form. This action cannot be undone.", "This will permanently delete %d forms. This action cannot be undone.", 1, "jetpack-forms" );
 __( "Delete permanently", "jetpack-forms" );
 __( "Try adjusting your search or filters to find what you're looking for.", "jetpack-forms" );
@@ -319,20 +257,14 @@ __( "Scheduled", "jetpack-forms" );
 __( "Private", "jetpack-forms" );
 __( "Trash", "jetpack-forms" );
 __( "Form restored as draft.", "jetpack-forms" );
-/* translators: %d: number of forms. */
 _n( "%d form restored as draft.", "%d forms restored as draft.", 1, "jetpack-forms" );
-/* translators: %d: number of forms. */
 _n( "Could not restore %d form.", "Could not restore %d forms.", 1, "jetpack-forms" );
 __( "Form moved to trash.", "jetpack-forms" );
-/* translators: %d: number of forms. */
 _n( "%d form moved to trash.", "%d forms moved to trash.", 1, "jetpack-forms" );
 __( "Undo", "jetpack-forms" );
-/* translators: %d: number of forms. */
 _n( "Could not move %d form to trash.", "Could not move %d forms to trash.", 1, "jetpack-forms" );
 __( "Form deleted permanently.", "jetpack-forms" );
-/* translators: %d: number of forms. */
 _n( "%d form deleted permanently.", "%d forms deleted permanently.", 1, "jetpack-forms" );
-/* translators: %d: number of forms. */
 _n( "Could not permanently delete %d form.", "Could not permanently delete %d forms.", 1, "jetpack-forms" );
 __( "Could not delete forms permanently.", "jetpack-forms" );
 __( "Inbox", "jetpack-forms" );
@@ -356,7 +288,6 @@ __( "Jetpack", "jetpack-forms" );
 _x( "Breadcrumbs", "aria label", "jetpack-forms" );
 __( "Sections", "jetpack-forms" );
 __( "Could not load the form to duplicate. Please try again.", "jetpack-forms" );
-/* translators: %s: original form title */
 __( "%s Copy", "jetpack-forms" );
 __( "Could not duplicate form. Please try again.", "jetpack-forms" );
 __( "Form duplicated.", "jetpack-forms" );
@@ -365,39 +296,26 @@ __( "Embed code copied to clipboard.", "jetpack-forms" );
 __( "Failed to copy embed code. Please try again.", "jetpack-forms" );
 __( "Shortcode copied to clipboard.", "jetpack-forms" );
 __( "Failed to copy shortcode. Please try again.", "jetpack-forms" );
-/* translators: %d: number of forms */
 _n( "%d form published.", "%d forms published.", 1, "jetpack-forms" );
-/* translators: %d: number of forms */
 _n( "%d form set to draft.", "%d forms set to draft.", 1, "jetpack-forms" );
-/* translators: %d: number of forms */
 _n( "Could not publish %d form.", "Could not publish %d forms.", 1, "jetpack-forms" );
-/* translators: %d: number of forms */
 _n( "Could not set %d form to draft.", "Could not set %d forms to draft.", 1, "jetpack-forms" );
 __( "Edit form", "jetpack-forms" );
-/* translators: 1: Responses deleted once the current batch finishes. 2: Total responses being deleted. */
 __( "Deleting %1$s of %2$s…", "jetpack-forms" );
 __( "Could not empty spam.", "jetpack-forms" );
 __( "Could not empty trash.", "jetpack-forms" );
-/* translators: 1: Responses deleted once the current batch finishes. 2: Total responses being deleted. */
 __( "Deleting %1$s of %2$s responses… Keep this page open.", "jetpack-forms" );
 __( "Response deleted permanently.", "jetpack-forms" );
-/* translators: %s: The number of responses. */
 _n( "%s response deleted permanently.", "%s responses deleted permanently.", 1, "jetpack-forms" );
-/* translators: %s: The number of responses deleted before the error. */
 _n( "%s response was deleted, then an error stopped the rest.", "%s responses were deleted, then an error stopped the rest.", 1, "jetpack-forms" );
-/* translators: %s: The number of selected spam responses. */
 _n( "Delete %s selected spam response?", "Delete %s selected spam responses?", 1, "jetpack-forms" );
-/* translators: %s: The number of spam responses matching the current filter. */
 _n( "Delete %s matching spam response?", "Delete %s matching spam responses?", 1, "jetpack-forms" );
-/* translators: %s: The total number of spam responses. */
 _n( "Delete %s spam response?", "Delete %s spam responses?", 1, "jetpack-forms" );
 __( "This action cannot be undone.", "jetpack-forms" );
 __( "Delete forever", "jetpack-forms" );
 __( "Delete spam", "jetpack-forms" );
-/* translators: %s: The number of spam responses that will be deleted. */
 __( "Delete spam (%s)", "jetpack-forms" );
 __( "Spam is already empty.", "jetpack-forms" );
-/* translators: %s: the number of responses in the trash. */
 _n( "%s response in trash will be deleted forever. This action cannot be undone.", "All %s responses in trash will be deleted forever. This action cannot be undone.", 1, "jetpack-forms" );
 __( "All responses in trash will be deleted forever. This action cannot be undone.", "jetpack-forms" );
 __( "Delete", "jetpack-forms" );
@@ -417,7 +335,6 @@ __( "You need to connect to Google Drive.", "jetpack-forms" );
 __( "Connect Jetpack user account", "jetpack-forms" );
 _x( "Connect to Google Drive", "", "jetpack-forms" );
 __( "Export responses", "jetpack-forms" );
-/* translators: %d: number of selected test responses. */
 _n( "Your selection includes %d test response from form preview. It will be included in the export.", "Your selection includes %d test responses from form preview. They will be included in the export.", 1, "jetpack-forms" );
 __( "Nothing to export.", "jetpack-forms" );
 __( "Form renamed.", "jetpack-forms" );
@@ -438,7 +355,6 @@ __( "Form responses", "jetpack-forms" );
 __( "View and manage all your forms.", "jetpack-forms" );
 __( "View and manage all your forms in one place.", "jetpack-forms" );
 __( "Not seeing all your forms?", "jetpack-forms" );
-/* translators: %s: form name */
 __( "View responses for %s.", "jetpack-forms" );
 __( "View responses for this form.", "jetpack-forms" );
 __( "View and manage all your form responses in one place.", "jetpack-forms" );
@@ -451,7 +367,6 @@ __( "Turn on email notifications or response storage in form settings.", "jetpac
 __( "Has responses", "jetpack-forms" );
 __( "No responses", "jetpack-forms" );
 __( "Status", "jetpack-forms" );
-/* translators: 1: status name, 2: form count */
 __( "%1$s (%2$s)", "jetpack-forms" );
 __( "Last updated", "jetpack-forms" );
 __( "You're set up. No forms yet.", "jetpack-forms" );

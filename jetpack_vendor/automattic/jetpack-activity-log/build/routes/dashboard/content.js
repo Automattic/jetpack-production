@@ -8,31 +8,22 @@
 
 __( "Jetpack Logo", "jetpack-activity-log" );
 __( "An Automattic Airline", "jetpack-activity-log" );
-/* translators: accessibility text appended to link text */
 __( "(opens in a new tab)", "jetpack-activity-log" );
 __( "Features", "jetpack-activity-log" );
 __( "Help", "jetpack-activity-log" );
 __( "Jetpack", "jetpack-activity-log" );
 __( "Sections", "jetpack-activity-log" );
-/* translators: %s: an error message. */
 __( "There was an error testing Jetpack. Error: %s", "jetpack-activity-log" );
 __( "Loading", "jetpack-activity-log" );
-/* translators: %s: keyboard shortcut. */
-__( "Keyboard shortcut: %s", "jetpack-activity-log" );
-__( "Dismiss", "jetpack-activity-log" );
-/* translators: %s: the error. */
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack-activity-log" );
 __( "Your account (connection owner)", "jetpack-activity-log" );
-/* translators: %s is the display name of the Jetpack connection owner. */
 __( "Connection owner's account (%s)", "jetpack-activity-log" );
 __( "Connection owner's account", "jetpack-activity-log" );
 __( "Your account", "jetpack-activity-log" );
 __( "Another user's account", "jetpack-activity-log" );
 __( "User connection", "jetpack-activity-log" );
 __( "Site connection", "jetpack-activity-log" );
-/* translators: %s is what the error applies to, e.g. "Site connection" or "Your account". */
 __( "Jetpack Connection error: %s", "jetpack-activity-log" );
-/* translators: %d is the number of connection errors found. */
 _n( "%d Jetpack Connection error", "%d Jetpack Connection errors", 1, "jetpack-activity-log" );
 __( "Jetpack Connection error", "jetpack-activity-log" );
 __( "Still having trouble? <link>Contact Jetpack Support</link>.", "jetpack-activity-log" );
@@ -41,18 +32,15 @@ __( "Loading…", "jetpack-activity-log" );
 __( "Restore Connection", "jetpack-activity-log" );
 __( "Take Action", "jetpack-activity-log" );
 __( "Reconnecting Jetpack…", "jetpack-activity-log" );
-/* translators: 1: Calendar type. 2: Current month and year. */
+__( "Keyboard shortcut: %s", "jetpack-activity-log" );
 __( "%1$s, %2$s", "jetpack-activity-log" );
 __( "Date calendar", "jetpack-activity-log" );
 __( "Date range calendar", "jetpack-activity-log" );
 __( "Navigation bar", "jetpack-activity-log" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s", "jetpack-activity-log" );
 __( "Next month", "jetpack-activity-log" );
 __( "Previous month", "jetpack-activity-log" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "Today, %s, selected", "jetpack-activity-log" );
-/* translators: %s is the full date (e.g. "Monday, April 29, 2025") */
 __( "%s, selected", "jetpack-activity-log" );
 __( "Required", "jetpack-activity-log" );
 __( "Optional", "jetpack-activity-log" );
@@ -61,13 +49,11 @@ __( "Select", "jetpack-activity-log" );
 __( "Sort ascending", "jetpack-activity-log" );
 __( "Sort descending", "jetpack-activity-log" );
 __( "(no title)", "jetpack-activity-log" );
+_x( "%s…", "menu item requiring further input", "jetpack-activity-log" );
 __( "Actions", "jetpack-activity-log" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item selected", "%s Items selected", 1, "jetpack-activity-log" );
-/* translators: %s: formatted number of items. */
-_n( "%s Item", "%s Items", 1, "jetpack-activity-log" );
-/* translators: %1$s: formatted number of items. %2$s: formatted total number of items. */
-_n( "%1$s of %2$s Item", "%1$s of %2$s Items", 1, "jetpack-activity-log" );
+_n( "%s item selected", "%s items selected", 1, "jetpack-activity-log" );
+_n( "%s item", "%s items", 1, "jetpack-activity-log" );
+_n( "%1$s of %2$s item", "%1$s of %2$s items", 1, "jetpack-activity-log" );
 __( "Deselect all", "jetpack-activity-log" );
 __( "Select all", "jetpack-activity-log" );
 __( "Cancel", "jetpack-activity-log" );
@@ -78,18 +64,13 @@ __( "Insert left", "jetpack-activity-log" );
 __( "Insert right", "jetpack-activity-log" );
 __( "Hide column", "jetpack-activity-log" );
 __( "Properties", "jetpack-activity-log" );
-/* translators: 1: The label of the field e.g. "Date". 2: The value of the field, e.g.: "May 2022". */
 __( "%1$s: %2$s", "jetpack-activity-log" );
 __( "Navigate to item", "jetpack-activity-log" );
-/* translators: %d: The row number in the grid */
 __( "Row %d", "jetpack-activity-log" );
-/* translators: %s: The label of the field e.g. "Status". */
 __( "%s: <groupName />", "jetpack-activity-log" );
-/* translators: 1: current page number. 2: total number of pages. */
-__( "Page %1$d of %2$d", "jetpack-activity-log" );
-/* translators: 1: Current page number, 2: Total number of pages. */
-_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-activity-log" );
 __( "Current page", "jetpack-activity-log" );
+__( "Page %1$d of %2$d", "jetpack-activity-log" );
+_x( "<div>Page</div>%1$s<div>of %2$d</div>", "paging", "jetpack-activity-log" );
 __( "Previous page", "jetpack-activity-log" );
 __( "Next page", "jetpack-activity-log" );
 __( "Density", "jetpack-activity-log" );
@@ -102,98 +83,55 @@ __( "Table", "jetpack-activity-log" );
 __( "Grid", "jetpack-activity-log" );
 __( "List", "jetpack-activity-log" );
 __( "Activity", "jetpack-activity-log" );
-/* translators: List of items for a filter. 1: Filter name. e.g.: "List of: Author". */
 __( "List of: %1$s", "jetpack-activity-log" );
 __( "Search items", "jetpack-activity-log" );
 __( "Search", "jetpack-activity-log" );
 __( "No results found", "jetpack-activity-log" );
 __( "No elements found", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Is none of", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is none of: Admin, Editor". */
 __( "<Name>%1$s is none of: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Includes", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is any: Admin, Editor". */
 __( "<Name>%1$s includes: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Includes all", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author includes all: Admin, Editor". */
 __( "<Name>%1$s includes all: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Between (inc)", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Item count"). 2: Filter value min. 3: Filter value max. e.g.: "Item count between (inc): 10 and 180". */
 __( "<Name>%1$s between (inc): </Name><Value>%2$s and %3$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "In the past", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is in the past: 7 days". */
 __( "<Name>%1$s is in the past: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Over", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "7 days"): "Date is over: 7 days". */
 __( "<Name>%1$s is over: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Is", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is: Admin". */
 __( "<Name>%1$s is: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Is not", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Author"). 2: Filter value (e.g. "Admin"): "Author is not: Admin". */
 __( "<Name>%1$s is not: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Less than", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than: 10". */
 __( "<Name>%1$s is less than: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Greater than", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than: 10". */
 __( "<Name>%1$s is greater than: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Less than or equal", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is less than or equal to: 10". */
 __( "<Name>%1$s is less than or equal to: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Greater than or equal", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Count"). 2: Filter value (e.g. "10"): "Count is greater than or equal to: 10". */
 __( "<Name>%1$s is greater than or equal to: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Before", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is before: 2024-01-01". */
 __( "<Name>%1$s is before: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "After", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is after: 2024-01-01". */
 __( "<Name>%1$s is after: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Before (inc)", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or before: 2024-01-01". */
 __( "<Name>%1$s is on or before: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "After (inc)", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Date"). 2: Filter value (e.g. "2024-01-01"): "Date is on or after: 2024-01-01". */
 __( "<Name>%1$s is on or after: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Contains", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title contains: Hello". */
 __( "<Name>%1$s contains: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Doesn't contain", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title doesn't contain: Hello". */
 __( "<Name>%1$s doesn't contain: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Starts with", "jetpack-activity-log" );
-/* translators: 1: Filter name (e.g. "Title"). 2: Filter value (e.g. "Hello"): "Title starts with: Hello". */
 __( "<Name>%1$s starts with: </Name><Value>%2$s</Value>", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "On", "jetpack-activity-log" );
-/* translators: DataViews operator name */
 __( "Not on", "jetpack-activity-log" );
-/* translators: 1: Filter name e.g.: "Unknown status for Author". */
 __( "Unknown status for %1$s", "jetpack-activity-log" );
 __( "Conditions", "jetpack-activity-log" );
 __( "Reset", "jetpack-activity-log" );
 __( "Remove", "jetpack-activity-log" );
-/* translators: 1: Filter name. */
 __( "Filter by: %1$s", "jetpack-activity-log" );
 _x( "Filter", "verb", "jetpack-activity-log" );
 __( "No results", "jetpack-activity-log" );
@@ -214,7 +152,6 @@ __( "Months ago", "jetpack-activity-log" );
 __( "Years ago", "jetpack-activity-log" );
 __( "Unit", "jetpack-activity-log" );
 __( "Coordinated Universal Time", "jetpack-activity-log" );
-/* translators: %s: timezone detail, e.g. "(CEST) Europe/Madrid" or "UTC+3". */
 __( "Timezone: %s", "jetpack-activity-log" );
 __( "Date time", "jetpack-activity-log" );
 __( "Today", "jetpack-activity-log" );
@@ -251,35 +188,28 @@ __( "Start date", "jetpack-activity-log" );
 __( "End date", "jetpack-activity-log" );
 __( "Last 12 months", "jetpack-activity-log" );
 __( "Last 3 years", "jetpack-activity-log" );
-/* translators: %1$s: start date, %2$s: end date */
 __( "%1$s to %2$s", "jetpack-activity-log" );
 __( "Date range presets", "jetpack-activity-log" );
 __( "default range", "jetpack-activity-log" );
 __( "Date Range", "jetpack-activity-log" );
 __( "Clear", "jetpack-activity-log" );
-/* translators: %s is the preset label, e.g. 'Last 30 days' */
 __( "Apply %s", "jetpack-activity-log" );
 __( "Apply", "jetpack-activity-log" );
-__( "Select a date range", "jetpack-activity-log" );
-/* translators: %s: date range label */
 __( "Date range: %s. Activate to open calendar.", "jetpack-activity-log" );
+__( "Select a date range", "jetpack-activity-log" );
 __( "Upgrade plan", "jetpack-activity-log" );
 __( "Upgrade to get complete activity history for the last 30 days, advanced filtering and date range selection. Available on the Jetpack Security and Complete plans.", "jetpack-activity-log" );
 __( "Upgrade to get complete activity history for the last 30 days, advanced filtering and date range selection. Available on WordPress.com paid plans.", "jetpack-activity-log" );
-/* translators: %s is the name of an available Jetpack bundle. */
 __( "Upgrade to %s for at least 30 days of activity history, advanced filtering and date range selection.", "jetpack-activity-log" );
 __( "Track every action with activity logs", "jetpack-activity-log" );
 __( "Debug issues faster with insights from a comprehensive audit log of all your site events.", "jetpack-activity-log" );
 __( "Restore backup", "jetpack-activity-log" );
-/* translators: %s: MCP client name and version */
 __( "via %s (MCP)", "jetpack-activity-log" );
 __( "via MCP", "jetpack-activity-log" );
 __( "Unknown", "jetpack-activity-log" );
 __( "Server", "jetpack-activity-log" );
 __( "Happiness Engineer", "jetpack-activity-log" );
-/* translators: %d: number of malware and database threats in the backup. */
 _n( "This backup is known to contain %d security threat. Restoring it may bring malware back to your site.", "This backup is known to contain %d security threats. Restoring it may bring malware back to your site.", 1, "jetpack-activity-log" );
-/* translators: %d: number of known security threats in a backup. */
 __( "Known threats (%d)", "jetpack-activity-log" );
 __( "Date & time (%s)", "jetpack-activity-log" );
 __( "Date & time", "jetpack-activity-log" );
@@ -292,7 +222,6 @@ __( "User", "jetpack-activity-log" );
 __( "Activity type", "jetpack-activity-log" );
 __( "Performed by", "jetpack-activity-log" );
 __( "Couldn’t refresh the activity log. The events shown may be out of date.", "jetpack-activity-log" );
-/* translators: %s is the underlying error message returned by the server. */
 __( "Couldn’t load the activity log: %s", "jetpack-activity-log" );
 __( "Couldn’t load the activity log. Try refreshing the page.", "jetpack-activity-log" );
 __( "Filter options are temporarily unavailable, but all events are loaded correctly.", "jetpack-activity-log" );
