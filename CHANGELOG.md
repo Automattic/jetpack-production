@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Stop store money charts repeating y-axis labels, such as $1, $1, $2, when the store shows fewer decimals than its amounts carry.
 - Settings: Disable the Account protection toggle in Offline Mode, where the feature cannot run.
 - Stats: List Stats v2 in the WordPress.com sidebar, and once the classic Stats page is retired, open Stats v2 from old Stats links and stop offering to switch back to classic Stats.
+- VideoPress: Explain camera and microphone errors when recording a video, with steps to fix them.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - MCP: Remove references to the retired Jetpack Search + Voice tool.

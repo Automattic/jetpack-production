@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Dashboard: Add a Playlists tab to create, edit, publish and delete video playlists, with every Video Playlist block setting.
 
+### Fixed
+- Recording: Explain camera and microphone errors with steps to fix them, and retry once access is allowed.
+
 ## [0.61.0] - 2026-11-02
 ### Added
 - Add camera recording with selectable filters, animated controls, mirrored preview, and trim-and-cut editing before uploading from the dashboard and VideoPress block. [#54233]
