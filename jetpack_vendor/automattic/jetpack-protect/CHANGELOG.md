@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Ask for confirmation before Auto-fix updates a plugin or theme, naming the version it updates to.
 - Dashboard: Don't label vulnerabilities from the free check as Low severity when their severity is unknown.
+- Dashboard: Show a dash instead of an empty cell for a threat with no detection date or severity, as from the free vulnerability check.
 - Downtime monitoring: Require a connected WordPress.com account before it can be turned on, and stop saying the site is monitored when no one will get alerts.
 - Scan: Offer a first scan instead of showing "Scanning…" forever when WordPress.com has no scan on record.
 - Scan: Report a slow but successful ignore or unignore as done, and refresh the ignored threats list right after either.
