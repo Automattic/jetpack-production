@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Show a dash instead of an empty "Detected on" cell on sites without Scan.
 - Protect: Stop showing an error after a slow ignore or unignore that went through, and update the ignored threats count straight away.
 - Settings: Disable the Account protection toggle in Offline Mode, where the feature cannot run.
+- Settings: Fix a blank page when non-admins open Settings from the menu.
 - Stats: List Stats v2 in the WordPress.com sidebar, and once the classic Stats page is retired, open Stats v2 from old Stats links and stop offering to switch back to classic Stats.
 - VideoPress: Explain camera and microphone errors when recording a video, with steps to fix them.
 
