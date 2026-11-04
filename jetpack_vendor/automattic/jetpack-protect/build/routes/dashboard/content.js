@@ -546,9 +546,10 @@ __( "Match accounts using email addresses", "jetpack-protect-pkg" );
 __( "This is set by your site’s configuration.", "jetpack-protect-pkg" );
 __( "Require accounts to use WordPress.com Two-Step Authentication", "jetpack-protect-pkg" );
 __( "Two-Step Authentication is enforced by your site’s configuration.", "jetpack-protect-pkg" );
-__( "Enable downtime monitoring", "jetpack-protect-pkg" );
 __( "Jetpack checks your site every five minutes.", "jetpack-protect-pkg" );
 __( "Downtime monitoring isn’t available on this site.", "jetpack-protect-pkg" );
+__( "Connect your WordPress.com account to turn on downtime monitoring.", "jetpack-protect-pkg" );
+__( "Enable downtime monitoring", "jetpack-protect-pkg" );
 __( "Operational all day", "jetpack-protect-pkg" );
 /* translators: %d is a number of minutes. */
 _n( "Down for %d minute", "Down for %d minutes", 1, "jetpack-protect-pkg" );
@@ -557,11 +558,11 @@ __( "Operational", "jetpack-protect-pkg" );
 __( "Down", "jetpack-protect-pkg" );
 __( "Status unknown", "jetpack-protect-pkg" );
 __( "Downtime monitoring", "jetpack-protect-pkg" );
+__( "Connect your account", "jetpack-protect-pkg" );
 __( "Find out your site is down before your visitors do, with an email alert within minutes.", "jetpack-protect-pkg" );
 /* translators: %d is a number of days. */
 __( "Last %d days uptime", "jetpack-protect-pkg" );
-__( "Your site is being monitored. Connect your WordPress.com account to see its uptime history.", "jetpack-protect-pkg" );
-__( "Connect your account", "jetpack-protect-pkg" );
+__( "Downtime monitoring is on. Connect your WordPress.com account to get alerts and see uptime history.", "jetpack-protect-pkg" );
 __( "Uptime history is unavailable right now.", "jetpack-protect-pkg" );
 __( "Try again", "jetpack-protect-pkg" );
 __( "Configure downtime monitoring", "jetpack-protect-pkg" );

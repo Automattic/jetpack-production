@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 
 ### Fixed
+- Downtime monitoring: Require a connected WordPress.com account before it can be turned on, and stop saying the site is monitored when no one will get alerts.
 - Scan: Offer a first scan instead of showing "Scanning…" forever when WordPress.com has no scan on record.
 - Scan: Report a slow but successful ignore or unignore as done, and refresh the ignored threats list right after either.
 

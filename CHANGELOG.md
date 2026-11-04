@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Reopen a date control on the calendar when the applied range is custom.
 - Premium Analytics: Stop store money charts repeating y-axis labels, such as $1, $1, $2, when the store shows fewer decimals than its amounts carry.
 - Protect: Offer a first scan instead of showing "Scanning…" forever when no scan has run yet.
+- Protect: Require a connected WordPress.com account before downtime monitoring can be turned on.
 - Protect: Stop showing an error after a slow ignore or unignore that went through, and update the ignored threats count straight away.
 - Settings: Disable the Account protection toggle in Offline Mode, where the feature cannot run.
 - Stats: List Stats v2 in the WordPress.com sidebar, and once the classic Stats page is retired, open Stats v2 from old Stats links and stop offering to switch back to classic Stats.
