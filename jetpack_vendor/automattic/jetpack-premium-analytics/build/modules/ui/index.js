@@ -77,6 +77,7 @@ __( "By hours", "jetpack-premium-analytics-pkg" );
 __( "By days", "jetpack-premium-analytics-pkg" );
 __( "By weeks", "jetpack-premium-analytics-pkg" );
 __( "By months", "jetpack-premium-analytics-pkg" );
+__( "By quarters", "jetpack-premium-analytics-pkg" );
 __( "By years", "jetpack-premium-analytics-pkg" );
 __( "Chart interval", "jetpack-premium-analytics-pkg" );
 /* translators: %s: the active chart interval, e.g. "By days". */
