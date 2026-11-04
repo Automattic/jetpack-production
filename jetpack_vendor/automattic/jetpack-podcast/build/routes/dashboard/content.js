@@ -553,6 +553,7 @@ __( "Invalid data", "jetpack-podcast" );
 __( "Line chart", "jetpack-podcast" );
 __( "Area chart", "jetpack-podcast" );
 __( "Week of %s", "jetpack-podcast" );
+__( "Total", "jetpack-podcast" );
 __( "Bar chart", "jetpack-podcast" );
 __( "Bar list chart", "jetpack-podcast" );
 _n( "%s item", "%s items", 1, "jetpack-podcast" );

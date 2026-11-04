@@ -127,6 +127,7 @@ __( "Invalid data", "jetpack-videopress-pkg" );
 __( "Line chart", "jetpack-videopress-pkg" );
 __( "Area chart", "jetpack-videopress-pkg" );
 __( "Week of %s", "jetpack-videopress-pkg" );
+__( "Total", "jetpack-videopress-pkg" );
 __( "Bar chart", "jetpack-videopress-pkg" );
 __( "Bar list chart", "jetpack-videopress-pkg" );
 _n( "%s item", "%s items", 1, "jetpack-videopress-pkg" );

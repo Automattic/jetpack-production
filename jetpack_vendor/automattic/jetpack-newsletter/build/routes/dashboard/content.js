@@ -522,6 +522,7 @@ __( "Invalid data", "jetpack-newsletter" );
 __( "Line chart", "jetpack-newsletter" );
 __( "Area chart", "jetpack-newsletter" );
 __( "Week of %s", "jetpack-newsletter" );
+__( "Total", "jetpack-newsletter" );
 __( "Bar chart", "jetpack-newsletter" );
 __( "Bar list chart", "jetpack-newsletter" );
 _n( "%s item", "%s items", 1, "jetpack-newsletter" );

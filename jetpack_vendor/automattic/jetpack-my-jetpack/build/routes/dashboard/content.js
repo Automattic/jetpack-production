@@ -885,6 +885,7 @@ __( "Invalid data", "jetpack-my-jetpack" );
 __( "Line chart", "jetpack-my-jetpack" );
 __( "Area chart", "jetpack-my-jetpack" );
 __( "Week of %s", "jetpack-my-jetpack" );
+__( "Total", "jetpack-my-jetpack" );
 __( "Bar chart", "jetpack-my-jetpack" );
 __( "Bar list chart", "jetpack-my-jetpack" );
 _n( "%s item", "%s items", 1, "jetpack-my-jetpack" );

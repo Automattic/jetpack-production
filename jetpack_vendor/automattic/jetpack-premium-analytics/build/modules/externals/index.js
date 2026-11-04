@@ -28,6 +28,7 @@ __( "Line chart", "jetpack-premium-analytics-pkg" );
 __( "Area chart", "jetpack-premium-analytics-pkg" );
 __( "Week of %s", "jetpack-premium-analytics-pkg" );
 __( "%1$s: %2$s", "jetpack-premium-analytics-pkg" );
+__( "Total", "jetpack-premium-analytics-pkg" );
 __( "Bar chart", "jetpack-premium-analytics-pkg" );
 __( "Bar list chart", "jetpack-premium-analytics-pkg" );
 _n( "%s item", "%s items", 1, "jetpack-premium-analytics-pkg" );

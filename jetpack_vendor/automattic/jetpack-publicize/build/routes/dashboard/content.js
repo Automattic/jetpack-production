@@ -215,6 +215,7 @@ __( "Invalid data", "jetpack-publicize-pkg" );
 __( "Line chart", "jetpack-publicize-pkg" );
 __( "Area chart", "jetpack-publicize-pkg" );
 __( "Week of %s", "jetpack-publicize-pkg" );
+__( "Total", "jetpack-publicize-pkg" );
 __( "Bar chart", "jetpack-publicize-pkg" );
 __( "Bar list chart", "jetpack-publicize-pkg" );
 _n( "%s item", "%s items", 1, "jetpack-publicize-pkg" );
