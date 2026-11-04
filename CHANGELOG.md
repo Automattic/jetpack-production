@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Custom Content Types: Show the Testimonials and Portfolio toggles on the Settings page again.
+- Forms: Label the embed code and shortcode snippets in the form editor sidebar for screen readers and add usage hints.
 - My Jetpack: Stop showing $0 and NaN for paid plans on the Boost, Protect and Jetpack AI upgrade pages, and $0.00 on recommendation cards, when prices cannot be loaded.
 - Newsletter: Restore the subscriber wording in the Subscribers list footer.
 - Premium Analytics: Remove the grey box that appears inside a metric card on hover when a newer version of the WordPress UI library is loaded.

@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 - Use the design system tooltip in the form editor and the responses dashboard.
 
+### Fixed
+- Form editor: Label the embed code and shortcode snippets in the sidebar for screen readers and add usage hints.
+
 ## [8.3.7] - 2026-11-02
 ### Changed
 - Update package dependencies. [#53869] [#54382] [#54390]
