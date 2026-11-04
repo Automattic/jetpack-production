@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Remove the grey box that appears inside a metric card on hover when a newer version of the WordPress UI library is loaded.
 - Premium Analytics: Reopen a date control on the calendar when the applied range is custom.
 - Premium Analytics: Stop store money charts repeating y-axis labels, such as $1, $1, $2, when the store shows fewer decimals than its amounts carry.
+- Protect: Don't label vulnerabilities from the free check as Low severity when their severity is unknown.
 - Protect: Offer a first scan instead of showing "Scanning…" forever when no scan has run yet.
 - Protect: Require a connected WordPress.com account before downtime monitoring can be turned on.
 - Protect: Stop showing an error after a slow ignore or unignore that went through, and update the ignored threats count straight away.

@@ -445,6 +445,7 @@ __( "Severity", "jetpack-protect-pkg" );
 __( "Critical", "jetpack-protect-pkg" );
 __( "High", "jetpack-protect-pkg" );
 __( "Low", "jetpack-protect-pkg" );
+_x( "Unknown", "Severity label for issues with no rating.", "jetpack-protect-pkg" );
 __( "Plugin", "jetpack-protect-pkg" );
 __( "Theme", "jetpack-protect-pkg" );
 __( "WordPress", "jetpack-protect-pkg" );
