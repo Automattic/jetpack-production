@@ -1000,7 +1000,7 @@ function jetpack_get_module_info( $key ) {
 	    'free' => '',
 	    'requires_connection' => 'No',
 	    'requires_user_connection' => 'No',
-	    'auto_activate' => 'No',
+	    'auto_activate' => 'Yes',
 	    'module_tags' => 'Social, Appearance',
 	    'feature' => 'Traffic',
 	    'additional_search_queries' => 'search engine optimization, social preview, meta description, custom title format, seo, sitemap, open graph, search engine, title tag',
