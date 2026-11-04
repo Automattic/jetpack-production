@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Post detail: Name the traffic tab and the highlights and views cards for the content type, such as Product traffic.
 - Settings: Explain in the Visitor consent card that views may drop once Stats follows visitor consent.
 - Stats links: Open the dashboard on the section and the days a link names, so the admin bar's "View all stats" shows the 7 days its chart does.
+- Traffic summary: Save the chart type its switch picks where Stats v1 saved it, so the Stats widget on the wp-admin dashboard draws bars or lines as this chart does.
 - When a date range allows only one chart interval, open its menu anyway and say how a longer range adds more.
 
 ### Removed

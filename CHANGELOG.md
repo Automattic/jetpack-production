@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Explain in the Visitor consent settings that views may drop once Stats follows visitor consent.
 - Premium Analytics: Name the post detail traffic tab and the highlights and views cards for the content type, such as Product traffic.
 - Premium Analytics: Open the UTM Build URL dialog from a post row in the Top UTM card and on the UTM report page, with the post URL and the row's UTM values already filled in.
+- Premium Analytics: Save the chart type the Traffic summary switches to where Stats v1 saved it, so the Stats widget on the wp-admin dashboard draws bars or lines as that chart does.
 - Premium Analytics: Serve the video page from /report/video/<id>; the old /video/<id> address redirects.
 - Premium Analytics: When a date range allows only one chart interval, open its menu anyway and say how a longer range adds more.
 - SEO: Add more AI crawlers to the GEO tab, block every robots.txt name each one uses, and show those names under each toggle.
