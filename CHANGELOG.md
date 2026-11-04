@@ -2,6 +2,15 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 16.5-a.0 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- Protect: Offer a first scan instead of showing "Scanning…" forever when no scan has run yet.
+- Protect: Require a connected WordPress.com account before downtime monitoring can be turned on.
+- Protect: Stop showing an error after a slow ignore or unignore that went through, and update the ignored threats count straight away.
+
 ## 16.4 - 2026-11-03
 ### Enhancements
 - Account Protection: Stop turning the feature on automatically for new connections and upgrades from versions before 14.5. Sites where it is already on keep it on. [#52715]
