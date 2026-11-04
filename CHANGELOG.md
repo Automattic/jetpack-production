@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Don't label vulnerabilities from the free check as Low severity when their severity is unknown.
 - Protect: Offer a first scan instead of showing "Scanning…" forever when no scan has run yet.
 - Protect: Require a connected WordPress.com account before downtime monitoring can be turned on.
+- Protect: Show a dash instead of an empty "Detected on" cell on sites without Scan.
 - Protect: Stop showing an error after a slow ignore or unignore that went through, and update the ignored threats count straight away.
 
 ## 16.4 - 2026-11-03
