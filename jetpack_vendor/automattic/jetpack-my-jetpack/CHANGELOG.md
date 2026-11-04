@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Connection: Stop sending a broken return URL when connecting the site from a product card or notice.
+- Stop showing $0 and NaN for paid plans on the Boost, Protect and Jetpack AI upgrade pages, and $0.00 on recommendation cards, when prices cannot be loaded.
 
 ## [6.15.0] - 2026-11-02
 ### Added

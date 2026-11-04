@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Custom Content Types: Show the Testimonials and Portfolio toggles on the Settings page again.
+- My Jetpack: Stop showing $0 and NaN for paid plans on the Boost, Protect and Jetpack AI upgrade pages, and $0.00 on recommendation cards, when prices cannot be loaded.
 - Premium Analytics: Remove the grey box that appears inside a metric card on hover when a newer version of the WordPress UI library is loaded.
 - Premium Analytics: Reopen a date control on the calendar when the applied range is custom.
 - Premium Analytics: Stop store money charts repeating y-axis labels, such as $1, $1, $2, when the store shows fewer decimals than its amounts carry.
