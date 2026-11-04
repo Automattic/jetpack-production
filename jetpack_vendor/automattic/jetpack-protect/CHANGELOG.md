@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Ask for confirmation before Auto-fix updates a plugin or theme, naming the version it updates to.
 - Dashboard: Don't label vulnerabilities from the free check as Low severity when their severity is unknown.
 - Downtime monitoring: Require a connected WordPress.com account before it can be turned on, and stop saying the site is monitored when no one will get alerts.
 - Scan: Offer a first scan instead of showing "Scanning…" forever when WordPress.com has no scan on record.
