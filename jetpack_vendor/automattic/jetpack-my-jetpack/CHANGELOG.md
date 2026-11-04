@@ -15,6 +15,10 @@ This is an alpha version! The changes listed here are not final.
 - Settings panel: Add the SEO opt-in invitation, behind the settings flag.
 - Settings panel: Lock the settings of a feature the site cannot use, and say why, behind the settings flag.
 
+### Changed
+- Protect: On WordPress.com sites without the Protect page, send Scan's manage links to the WordPress.com dashboard instead of Jetpack Cloud.
+- Protect: Open the Protect page from My Jetpack on WordPress.com sites that have it, rather than WordPress.com's Scan. The `jetpack_feature_upgrade` filter no longer reads `manage_url`.
+
 ### Fixed
 - Connection: Stop sending a broken return URL when connecting the site from a product card or notice.
 - Stop showing $0 and NaN for paid plans on the Boost, Protect and Jetpack AI upgrade pages, and $0.00 on recommendation cards, when prices cannot be loaded.
