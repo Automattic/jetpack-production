@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.2.3-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [5.2.3] - 2026-11-04
 ### Changed
-- Back up now: Use the design system tooltip.
-- Keep the Offline Mode screen icon, which @wordpress/icons removed in WordPress/gutenberg#85445, by shipping a copy of it.
-- Link the failed download screen to a guide on how to fix it.
-- Update package dependencies.
-- Use the design system progress bar for the backup, restore, download and storage meters.
+- Back up now: Use the design system tooltip. [#54512]
+- Keep the Offline Mode screen icon, which @wordpress/icons removed in WordPress/gutenberg#85445, by shipping a copy of it. [#54512]
+- Link the failed download screen to a guide on how to fix it. [#54500]
+- Update package dependencies. [#54391] [#54512]
+- Use the design system progress bar for the backup, restore, download and storage meters. [#54512]
 
 ## [5.2.2] - 2026-11-02
 ### Changed
@@ -1310,7 +1307,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[5.2.3-alpha]: https://github.com/Automattic/jetpack-backup/compare/v5.2.2...v5.2.3-alpha
+[5.2.3]: https://github.com/Automattic/jetpack-backup/compare/v5.2.2...v5.2.3
 [5.2.2]: https://github.com/Automattic/jetpack-backup/compare/v5.2.1...v5.2.2
 [5.2.1]: https://github.com/Automattic/jetpack-backup/compare/v5.2.0...v5.2.1
 [5.2.0]: https://github.com/Automattic/jetpack-backup/compare/v5.1.4...v5.2.0
