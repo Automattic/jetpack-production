@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Let the number of columns follow the width of the page, up to six, and let the full-width rows of the default layouts span every column.
 - Metric cards: Draw the cards on their own tabs primitive, taking the design system’s hover, selected and focus states.
 - Post detail: Name the traffic tab and the highlights and views cards for the content type, such as Product traffic.
+- Register the post and author detail page widget types in PHP, in place of client-side aliases.
 - Reports: Load a report's page only when it opens, so the route guards no longer bundle every report page.
 - Settings: Explain in the Visitor consent card that views may drop once Stats follows visitor consent.
 - Stats links: Open the dashboard on the section and the days a link names, so the admin bar's "View all stats" shows the 7 days its chart does.

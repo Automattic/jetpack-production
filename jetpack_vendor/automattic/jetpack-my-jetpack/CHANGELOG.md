@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Settings panel: Add the Infinite Scroll settings, behind the settings consolidation flag.
 - Settings panel: Add the Post by Email settings, behind the settings consolidation flag.
 - Settings panel: Record Tracks events when a module or option is switched, behind the settings consolidation flag.
 
