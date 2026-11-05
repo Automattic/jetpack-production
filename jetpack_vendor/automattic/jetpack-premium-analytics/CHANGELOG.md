@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Offer a quarterly interval in the Traffic summary and the WooCommerce tab on ranges of a year or longer.
 - Single-report pages: Serve the video page from /report/video/<id>, rendered from its registered record; the old /video/<id> address redirects.
+- Stats: Add previous and next arrows beside the date range picker that step the range by its own length, as classic Stats does.
 - Top UTM: Open the Build URL dialog from a post row in the Top UTM card and on the UTM report page, with the post URL and the row's UTM values already filled in.
 
 ### Changed
