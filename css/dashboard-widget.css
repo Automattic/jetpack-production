@@ -281,67 +281,6 @@
 #jetpack_summary_widget .wpcom-connect .actions small a {
   color: #999;
 }
-#jetpack_summary_widget footer {
-  background: var(--jp-white-off, #f9f9f6);
-  overflow: hidden;
-}
-#jetpack_summary_widget footer .blocked-container {
-  background: var(--jp-white-off, #f9f9f6);
-  padding: 1.5em 1em;
-  display: grid;
-  gap: 0 1em;
-  grid-template-columns: 1fr 1fr;
-}
-#jetpack_summary_widget footer .protect,
-#jetpack_summary_widget footer .akismet {
-  background: var(--jp-white, #fff);
-  border-radius: 5px;
-  box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.04);
-  padding: 1em 1.5em 1em 1.5em;
-}
-#jetpack_summary_widget footer h3 {
-  font-size: 1em;
-  font-weight: 400;
-  margin: 0 0 0.25em 0;
-  padding: 0;
-}
-#jetpack_summary_widget footer p.blocked-count {
-  margin-top: 0;
-  margin-bottom: 6px;
-  margin-inline-end: 8px;
-  font-weight: 500;
-  font-size: 2rem;
-  display: inline-block;
-  padding: 0 4px;
-  min-width: 36px;
-  text-align: center;
-}
-#jetpack_summary_widget footer p {
-  margin: 0;
-  padding: 0;
-}
-#jetpack_summary_widget footer section {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-#jetpack_summary_widget footer .footer-links {
-  margin-block: 0 1.5em;
-  margin-inline-start: 1.5em;
-  margin-inline-end: 0;
-}
-#jetpack_summary_widget footer .footer-links svg {
-  height: 20px;
-}
-#jetpack_summary_widget footer .footer-links span {
-  float: inline-end;
-}
-#jetpack_summary_widget footer .button {
-  background: var(--jp-black, #000);
-  border-color: var(--jp-black, #000);
-  color: var(--jp-white, #fff);
-  margin-top: 8px;
-}
 
 /* Hide the widget title's SVG in the Screen Options tab */
 .metabox-prefs label[for=jetpack_summary_widget-hide] span svg {

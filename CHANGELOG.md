@@ -26,11 +26,15 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Save the chart type the Traffic summary switches to where Stats v1 saved it, so the Stats widget on the wp-admin dashboard draws bars or lines as that chart does.
 - Premium Analytics: Serve the video page from /report/video/<id>; the old /video/<id> address redirects.
 - Premium Analytics: When a date range allows only one chart interval, open its menu anyway and say how a longer range adds more.
+- Protect: Improve the Protect page. View the whole file a Scan threat was found in, then delete a stray file or restore a changed WordPress core file. The redesigned Firewall card shows 30-day and all-time block counts that refresh without a reload. Scan now says when a scan didn't complete or hasn't run yet, here and on the My Jetpack Protect card, drops a vulnerability once its plugin or theme is updated to the fixed version, and gives clearer advice and actions for each threat. The Firewall now honors CIDR ranges on the brute force protection IP allow list, and `wp jetpack-waf teardown` and `wp jetpack-waf setup` turn the Firewall module off and on.
 - SEO: Add more AI crawlers to the GEO tab, block every robots.txt name each one uses, and show those names under each toggle.
 - SEO: Turn SEO tools on for new sites, turn it off from My Jetpack only, and hide the SEO menu while it is off.
 - Site Health: List the plugins using the connection, and their package versions, in the Jetpack Connection section of the Info tab.
 - VideoPress: Add a Playlists tab to the dashboard to create, edit, publish and delete your video playlists.
 - Zoom Scheduler block: Update the sign-up and help links, and add wide and full alignment options.
+
+### Improved compatibility
+- Deprecate the jetpack_protect_global_whitelist settings REST API key in favor of jetpack_waf_ip_allow_list; saving an invalid IP address under it now returns an error. Deprecate the unused Jetpack_Stats_Dashboard_Widget::render_widget(), Jetpack_Stats_Dashboard_Widget::render_footer() and stats_jetpack_dashboard_widget().
 
 ### Bug fixes
 - Custom Content Types: Show the Testimonials and Portfolio toggles on the Settings page again.

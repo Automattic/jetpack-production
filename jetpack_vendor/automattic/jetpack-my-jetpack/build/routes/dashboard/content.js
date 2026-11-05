@@ -464,6 +464,10 @@ _n( "%d critical threat. More about threats", "%d critical threats. More about t
 __( "Scan", "jetpack-my-jetpack" );
 __( "Shield icon - Scan Status: Secure", "jetpack-my-jetpack" );
 __( "Secure", "jetpack-my-jetpack" );
+__( "Shield icon - Scan Status: Incomplete", "jetpack-my-jetpack" );
+__( "Incomplete", "jetpack-my-jetpack" );
+__( "Shield icon - Scan Status: Not scanned yet", "jetpack-my-jetpack" );
+__( "Not scanned yet", "jetpack-my-jetpack" );
 __( "Shield icon - Scan Status: Partial", "jetpack-my-jetpack" );
 __( "Partial", "jetpack-my-jetpack" );
 __( "Shield icon - Scan Status: Off", "jetpack-my-jetpack" );
@@ -473,6 +477,7 @@ _n( "%d day ago", "%d days ago", 1, "jetpack-my-jetpack" );
 _n( "%d hour ago", "%d hours ago", 1, "jetpack-my-jetpack" );
 _n( "%d minute ago", "%d minutes ago", 1, "jetpack-my-jetpack" );
 __( "a few seconds ago", "jetpack-my-jetpack" );
+__( "Last scan didn’t complete", "jetpack-my-jetpack" );
 __( "Last scan: %s", "jetpack-my-jetpack" );
 __( "&", "jetpack-my-jetpack" );
 __( "The finest video for WordPress", "jetpack-my-jetpack" );

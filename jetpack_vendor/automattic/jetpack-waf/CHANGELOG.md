@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.32.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add a method that returns how many requests the firewall blocked on each day.
+
+### Fixed
+- Brute Force Protection: Honor CIDR ranges on the IP allow list, and accept them when saving the list.
+- CLI: Make `wp jetpack-waf teardown` turn the Firewall module off and `wp jetpack-waf setup` turn it on, so the firewall's on/off state matches what the commands did.
+- Record whether the firewall has blocked anything besides its own test, so the Protect dashboard can tell repeated tests from real blocks.
+
 ## [0.31.0] - 2026-10-28
 ### Added
 - Add the `jetpack_protect_firewall_provided_by_host` filter, which lets a host report its own firewall as active where Jetpack's can't run. [#53954]
@@ -606,6 +618,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Core: do not ship .phpcs.dir.xml in production builds.
 
+[0.32.0-alpha]: https://github.com/Automattic/jetpack-waf/compare/v0.31.0...v0.32.0-alpha
 [0.31.0]: https://github.com/Automattic/jetpack-waf/compare/v0.30.1...v0.31.0
 [0.30.1]: https://github.com/Automattic/jetpack-waf/compare/v0.30.0...v0.30.1
 [0.30.0]: https://github.com/Automattic/jetpack-waf/compare/v0.29.3...v0.30.0

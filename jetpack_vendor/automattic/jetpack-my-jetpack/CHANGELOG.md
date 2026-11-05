@@ -14,7 +14,12 @@ This is an alpha version! The changes listed here are not final.
 - Settings panel: Add the Post by Email settings, behind the settings consolidation flag.
 - Settings panel: Record Tracks events when a module or option is switched, behind the settings consolidation flag.
 
+### Changed
+- Scan: Decide whether the site owns Scan with the same check as the Protect card and page.
+
 ### Fixed
+- Protect card: Show that a site with Scan hasn't been scanned yet instead of calling it secure.
+- Protect card: Show when the last scan didn't complete instead of calling the site secure.
 - Settings panel: Record the Tracks event for the Post by Email switch, behind the settings consolidation flag.
 
 ## [6.16.0] - 2026-11-04
