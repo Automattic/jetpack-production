@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - Report params field: Reopen the period menu on the calendar when the applied range is custom.
 - Settings: Reset the Reader views setting to its default on a null write, instead of turning it off.
 - Stats: List Stats v2 in the WordPress.com sidebar, and once the classic Stats page is retired, open Stats v2 from old Stats links and stop offering to switch back to classic Stats.
+- Stop long row names in cards such as Top UTM from running under the views count on hover, and give drill-down rows with an action their full width when not hovered.
 - Store: Stop money charts repeating y-axis labels, such as $1, $1, $2, when the store shows fewer decimals than its amounts carry.
 - WooCommerce reports: Keep widgets loading while WordPress.com creates a new store's analytics tables, instead of showing an error, and say when a report waits for the store's next sync.
 

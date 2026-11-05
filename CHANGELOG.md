@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Keep WooCommerce report widgets loading while a new store's analytics data is prepared, instead of showing an error.
 - Premium Analytics: Remove the grey box that appears inside a metric card on hover when a newer version of the WordPress UI library is loaded.
 - Premium Analytics: Reopen a date control on the calendar when the applied range is custom.
+- Premium Analytics: Stop long row names in cards such as Top UTM from running under the views count on hover.
 - Premium Analytics: Stop screen readers from announcing widget content as dimmed outside edit mode.
 - Premium Analytics: Stop store money charts repeating y-axis labels, such as $1, $1, $2, when the store shows fewer decimals than its amounts carry.
 - Protect: Ask for confirmation before Auto-fix updates a plugin or theme, naming the version it updates to.
