@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the include guards and stubs kept for a second copy of the package loading in the same request; the autoloader now serves one copy per request.
 
 ### Fixed
+- Boot Stats v2 on a site with no connection once classic Stats is retired, so it replaces the pre-connection Stats page.
 - Dashboard: Stop screen readers from announcing widget content as dimmed outside edit mode.
 - Metric cards: Remove the grey box that appears inside a metric card on hover when a newer version of the WordPress UI library is loaded.
 - Report params field: Reopen the period menu on the calendar when the applied range is custom.
