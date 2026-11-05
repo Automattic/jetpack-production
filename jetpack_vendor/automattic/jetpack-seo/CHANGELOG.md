@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - GEO: Add more AI crawlers, block every robots.txt name each one uses, and show those names under each toggle.
 
 ### Changed
+- SEO: Show an "Incomplete" badge instead of "In progress" when the Schema section is only partly filled in.
 - Turn SEO tools off from My Jetpack only, and hide the SEO menu while it is off.
 - Update package dependencies.
 

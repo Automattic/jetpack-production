@@ -52,7 +52,7 @@ __( "Updating settings…", "jetpack-seo" );
 __( "Settings saved.", "jetpack-seo" );
 __( "Could not save settings. Please try again.", "jetpack-seo" );
 __( "Not started", "jetpack-seo" );
-__( "In progress", "jetpack-seo" );
+__( "Incomplete", "jetpack-seo" );
 __( "Complete", "jetpack-seo" );
 __( "Boost your search engine ranking", "jetpack-seo" );
 __( "Get tools to optimize your site for improved search engine results.", "jetpack-seo" );
