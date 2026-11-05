@@ -46,10 +46,8 @@ __( "Same period last year (match day of week)", "jetpack-premium-analytics-pkg"
 _x( "Prev. week", "comparison legend label", "jetpack-premium-analytics-pkg" );
 _x( "Prev. year, weekday", "comparison legend label", "jetpack-premium-analytics-pkg" );
 _x( "%s, weekday", "comparison legend label", "jetpack-premium-analytics-pkg" );
-__( "Widget modules", "jetpack-premium-analytics-pkg" );
-__( "Dashboard sections", "jetpack-premium-analytics-pkg" );
-__( "The response is not a valid JSON response.", "jetpack-premium-analytics-pkg" );
 __( "Report download failed with status %d.", "jetpack-premium-analytics-pkg" );
+__( "The response is not a valid JSON response.", "jetpack-premium-analytics-pkg" );
 __( "Unknown", "jetpack-premium-analytics-pkg" );
 _x( "Post URL", "Email link type", "jetpack-premium-analytics-pkg" );
 _x( "Like", "Email link type", "jetpack-premium-analytics-pkg" );
@@ -57,3 +55,5 @@ _x( "Comment", "Email link type", "jetpack-premium-analytics-pkg" );
 _x( "Unsubscribe", "Email link type", "jetpack-premium-analytics-pkg" );
 __( "Other", "jetpack-premium-analytics-pkg" );
 _x( "Other", "Email link type", "jetpack-premium-analytics-pkg" );
+__( "Widget modules", "jetpack-premium-analytics-pkg" );
+__( "Dashboard sections", "jetpack-premium-analytics-pkg" );

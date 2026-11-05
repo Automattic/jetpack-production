@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 - Use the design system tooltip for abbreviated values and earnings statuses.
 - When a date range allows only one chart interval, open its menu anyway and say how a longer range adds more.
+- Widgets: Load the All-time stats and Most popular day widgets faster by skipping the share counts they never show.
 
 ### Removed
 - Remove the include guards and stubs kept for a second copy of the package loading in the same request; the autoloader now serves one copy per request.
