@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Send the PayPal partner attribution header on every PayPal API call, whether made from the site or through WordPress.com.
+- Show a saved payment link's details below the style controls instead of above them.
 - Update dependencies.
 - Update package dependencies.
 
