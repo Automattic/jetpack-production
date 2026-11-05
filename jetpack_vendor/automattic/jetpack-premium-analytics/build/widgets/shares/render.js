@@ -14,5 +14,4 @@ __( "We couldn't load shares. Please try again in a moment.", "jetpack-premium-a
 __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "You don’t have shares recorded yet. Social can help you reach readers where they already are.", "jetpack-premium-analytics-pkg" );
 __( "Learn more", "jetpack-premium-analytics-pkg" );
-__( "All-time top social media shares", "jetpack-premium-analytics-pkg" );
 __( "Platforms", "jetpack-premium-analytics-pkg" );

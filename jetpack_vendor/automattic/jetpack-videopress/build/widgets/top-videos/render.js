@@ -112,7 +112,6 @@ __( "Your video is ready. Plays will show up here once people watch it.", "jetpa
 __( "View video", "jetpack-videopress-pkg" );
 __( "Upload a video to start tracking its plays here.", "jetpack-videopress-pkg" );
 __( "Uploading the first video. Add the rest from the VideoPress dashboard.", "jetpack-videopress-pkg" );
-__( "Top videos", "jetpack-videopress-pkg" );
 __( "Videos", "jetpack-videopress-pkg" );
 __( "We couldn't load video plays. Please try again in a moment.", "jetpack-videopress-pkg" );
 __( "No video plays in this period yet.", "jetpack-videopress-pkg" );

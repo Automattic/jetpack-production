@@ -7,7 +7,6 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "View clicked links for %s", "jetpack-premium-analytics-pkg" );
-__( "Top links clicked", "jetpack-premium-analytics-pkg" );
 __( "Links", "jetpack-premium-analytics-pkg" );
 __( "You don’t have clicked links recorded yet.", "jetpack-premium-analytics-pkg" );
 __( "All clicks", "jetpack-premium-analytics-pkg" );

@@ -71,7 +71,7 @@
 		"automattic/jetpack-woocommerce-stats": "^0.3.3-alpha",
 		"automattic/jetpack-wp-abilities": "^0.2.1",
 		"automattic/jetpack-ads": "^0.1.8-alpha",
-		"automattic/jetpack-wp-build-polyfills": "^0.7.3",
+		"automattic/jetpack-wp-build-polyfills": "^0.7.4-alpha",
 		"automattic/woocommerce-analytics": "^0.18",
 		"wp-php-toolkit/reprint-server": "0.11.2"
 	},

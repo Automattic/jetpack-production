@@ -8,7 +8,6 @@
 
 _n( "%d post", "%d posts", 1, "jetpack-premium-analytics-pkg" );
 __( "We couldn't load posting activity. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
-__( "Monthly posting activity", "jetpack-premium-analytics-pkg" );
 __( "No posts", "jetpack-premium-analytics-pkg" );
 __( "Fewer posts", "jetpack-premium-analytics-pkg" );
 __( "More posts", "jetpack-premium-analytics-pkg" );

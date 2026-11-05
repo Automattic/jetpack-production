@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Add a Playlists tab to create, edit, publish and delete video playlists, with every Video Playlist block setting.
 
 ### Changed
+- Top videos widget: Take the chart's accessible name from the widget title instead of repeating it.
 - Update package dependencies.
 - Use the design system progress bar for the upload, processing and storage meters.
 - Use the design system tooltip for the upload buttons.

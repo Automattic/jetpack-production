@@ -8,5 +8,4 @@
 
 __( "We couldn't load commented posts. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "You don’t have comments recorded yet.", "jetpack-premium-analytics-pkg" );
-__( "All-time most commented posts", "jetpack-premium-analytics-pkg" );
 __( "Posts", "jetpack-premium-analytics-pkg" );

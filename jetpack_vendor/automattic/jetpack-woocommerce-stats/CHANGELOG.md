@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Update package dependencies.
+- Widgets: Take each chart's accessible name from the widget title instead of repeating it.
 
 ### Fixed
 - Charts and Store performance: Use the shared error copy, so they say when the store's analytics data is still being prepared.
