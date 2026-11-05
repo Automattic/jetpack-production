@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Dashboard: Let the number of columns follow the width of the page, up to six, and let the full-width rows of the default layouts span every column.
+- Metric cards: Draw the cards on their own tabs primitive, taking the design system’s hover, selected and focus states.
 - Post detail: Name the traffic tab and the highlights and views cards for the content type, such as Product traffic.
 - Reports: Load a report's page only when it opens, so the route guards no longer bundle every report page.
 - Settings: Explain in the Visitor consent card that views may drop once Stats follows visitor consent.
