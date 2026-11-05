@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Content Guidelines AI: Describe the locked buttons to screen readers.
 - Forms, Content Guidelines AI: Use the design system tooltip.
 - My Jetpack: On WordPress.com sites without the Protect page, open Scan threats in the WordPress.com dashboard instead of Jetpack Cloud.
+- PayPal Payment Buttons: Add a Create payment button action to the block settings form, so a payment button is created or saved without saving the post.
 - PayPal Payment Buttons: Show a saved payment link's details below the style controls instead of above them.
 - Premium Analytics: Add previous and next arrows beside the date range picker that step the range by its own length, as classic Stats does.
 - Premium Analytics: Explain in the Visitor consent settings that views may drop once Stats follows visitor consent.
