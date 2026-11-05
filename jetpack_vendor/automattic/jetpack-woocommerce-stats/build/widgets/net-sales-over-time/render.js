@@ -6,7 +6,6 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "Retry", "jetpack-woocommerce-stats-pkg" );
 __( "The response is not a valid JSON response.", "jetpack-woocommerce-stats-pkg" );
 __( "Net sales over time", "jetpack-woocommerce-stats-pkg" );
 __( "Net sales", "jetpack-woocommerce-stats-pkg" );

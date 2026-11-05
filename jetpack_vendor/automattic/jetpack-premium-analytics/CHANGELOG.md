@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Reset the Reader views setting to its default on a null write, instead of turning it off.
 - Stats: List Stats v2 in the WordPress.com sidebar, and once the classic Stats page is retired, open Stats v2 from old Stats links and stop offering to switch back to classic Stats.
 - Store: Stop money charts repeating y-axis labels, such as $1, $1, $2, when the store shows fewer decimals than its amounts carry.
+- WooCommerce reports: Keep widgets loading while WordPress.com creates a new store's analytics tables, instead of showing an error, and say when a report waits for the store's next sync.
 
 ## [0.16.0] - 2026-11-02
 ### Added

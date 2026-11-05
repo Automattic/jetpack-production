@@ -46,6 +46,8 @@ __( "Previous period", "jetpack-premium-analytics-pkg" );
 __( "This data is unavailable right now.", "jetpack-premium-analytics-pkg" );
 __( "This author has too many posts to count their stats here.", "jetpack-premium-analytics-pkg" );
 __( "You don't have access to this data.", "jetpack-premium-analytics-pkg" );
+__( "This report will be available after your store's next order or product update.", "jetpack-premium-analytics-pkg" );
+__( "Your store data is still being prepared. Please try again in a minute.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "Page", "jetpack-premium-analytics-pkg" );
 __( "Untitled page", "jetpack-premium-analytics-pkg" );

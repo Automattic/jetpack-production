@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Charts and Store performance: Use the shared error copy, so they say when the store's analytics data is still being prepared.
+
 ## [0.3.2] - 2026-11-02
 ### Changed
 - Update package dependencies. [#53869]
