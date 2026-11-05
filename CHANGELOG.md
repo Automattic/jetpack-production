@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - PayPal Payment Buttons: Show a saved payment link's details below the style controls instead of above them.
 - Premium Analytics: Add previous and next arrows beside the date range picker that step the range by its own length, as classic Stats does.
 - Premium Analytics: Explain in the Visitor consent settings that views may drop once Stats follows visitor consent.
+- Premium Analytics: Let the number of dashboard columns follow the width of the page, up to six.
 - Premium Analytics: Load the All-time stats and Most popular day widgets faster by skipping the share counts they never show.
 - Premium Analytics: Name the post detail traffic tab and the highlights and views cards for the content type, such as Product traffic.
 - Premium Analytics: Offer a quarterly interval in the Traffic summary and the WooCommerce tab on ranges of a year or longer.

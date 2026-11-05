@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Analytics dashboard: Let the chart and highlights rows of the default layout span every column of the grid.
 - Update package dependencies.
 
 ## [0.1.7] - 2026-11-02

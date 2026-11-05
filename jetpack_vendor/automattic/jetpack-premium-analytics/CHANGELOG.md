@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Top UTM: Open the Build URL dialog from a post row in the Top UTM card and on the UTM report page, with the post URL and the row's UTM values already filled in.
 
 ### Changed
+- Dashboard: Let the number of columns follow the width of the page, up to six, and let the full-width rows of the default layouts span every column.
 - Post detail: Name the traffic tab and the highlights and views cards for the content type, such as Product traffic.
 - Reports: Load a report's page only when it opens, so the route guards no longer bundle every report page.
 - Settings: Explain in the Visitor consent card that views may drop once Stats follows visitor consent.
