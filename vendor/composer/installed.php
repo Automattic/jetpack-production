@@ -524,9 +524,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-scan-page' => array(
-            'pretty_version' => '0.2.14-alpha.1793808164',
-            'version' => '0.2.14.0-alpha1793808164',
-            'reference' => '368a6535ac7d93e1019464b3939136ddd8e1fab1',
+            'pretty_version' => '0.3.0-alpha.1793987000',
+            'version' => '0.3.0.0-alpha1793987000',
+            'reference' => 'dd3d45298efcc630ca92926ba8ecd655eaa504ac',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-scan-page',
             'aliases' => array(),

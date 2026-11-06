@@ -1999,19 +1999,19 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-website-schema-node.php'
 	),
 	'Automattic\\Jetpack\\Scan_Page\\Initial_State' => array(
-		'version' => '0.2.14.0-alpha1793808164',
+		'version' => '0.3.0.0-alpha1793987000',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-initial-state.php'
 	),
 	'Automattic\\Jetpack\\Scan_Page\\Jetpack_Scan' => array(
-		'version' => '0.2.14.0-alpha1793808164',
+		'version' => '0.3.0.0-alpha1793987000',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-jetpack-scan.php'
 	),
 	'Automattic\\Jetpack\\Scan_Page\\Package_Version' => array(
-		'version' => '0.2.14.0-alpha1793808164',
+		'version' => '0.3.0.0-alpha1793987000',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-package-version.php'
 	),
 	'Automattic\\Jetpack\\Scan_Page\\REST_Controller' => array(
-		'version' => '0.2.14.0-alpha1793808164',
+		'version' => '0.3.0.0-alpha1793987000',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Search\\AI_Answers' => array(
