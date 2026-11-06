@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Return to My Jetpack after connecting from the connection screen, instead of showing the plans page.
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account from the missing user connection or connection error notice.
 - Protect: Use the Protect page's feature names on the Protect card, its product page and the Features tab.
+- Reduce repeated requests on page load: reuse product ownership data and refresh the historically active modules list at most hourly.
 - Scan: Read the Scan product slug prefix from Protect Status instead of keeping a separate list.
 
 ### Fixed
