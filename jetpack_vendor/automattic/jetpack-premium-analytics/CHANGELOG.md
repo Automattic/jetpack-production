@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Boot Stats v2 on a site with no connection once classic Stats is retired, so it replaces the pre-connection Stats page.
 - Dashboard: Stop screen readers from announcing widget content as dimmed outside edit mode.
+- Fix Jetpack icon alignment and spacing in page headers.
 - Metric cards: Remove the grey box that appears inside a metric card on hover when a newer version of the WordPress UI library is loaded.
 - Report params field: Reopen the period menu on the calendar when the applied range is custom.
 - Settings: Reset the Reader views setting to its default on a null write, instead of turning it off.

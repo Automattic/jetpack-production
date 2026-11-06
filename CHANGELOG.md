@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Label the embed code and shortcode snippets in the form editor sidebar for screen readers and add usage hints.
 - My Jetpack: Stop showing $0 and NaN for paid plans on the Boost, Protect and Jetpack AI upgrade pages, and $0.00 on recommendation cards, when prices cannot be loaded.
 - Newsletter: Restore the subscriber wording in the Subscribers list footer.
+- Premium Analytics: Fix Jetpack icon alignment and spacing in page headers.
 - Premium Analytics: Keep WooCommerce report widgets loading while a new store's analytics data is prepared, instead of showing an error.
 - Premium Analytics: Remove the grey box that appears inside a metric card on hover when a newer version of the WordPress UI library is loaded.
 - Premium Analytics: Reopen a date control on the calendar when the applied range is custom.

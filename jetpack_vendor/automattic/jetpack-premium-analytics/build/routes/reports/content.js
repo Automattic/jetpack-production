@@ -48,6 +48,8 @@ _x( "Prev. week", "short comparison preset", "jetpack-premium-analytics-pkg" );
 _x( "Prev. month", "short comparison preset", "jetpack-premium-analytics-pkg" );
 _x( "Prev. year", "short comparison preset", "jetpack-premium-analytics-pkg" );
 _x( "Prev. year (weekday)", "short comparison preset", "jetpack-premium-analytics-pkg" );
+__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
+__( "Sections", "jetpack-premium-analytics-pkg" );
 __( "Authors", "jetpack-premium-analytics-pkg" );
 __( "Posts & Pages", "jetpack-premium-analytics-pkg" );
 __( "Earnings history", "jetpack-premium-analytics-pkg" );
