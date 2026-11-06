@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account from the missing user connection or connection error notice.
 
+### Fixed
+- Features: Move a wide card button under the text instead of squeezing the text.
+
 ## [6.17.0] - 2026-11-06
 ### Added
 - Settings panel: Add the Infinite Scroll settings, behind the settings consolidation flag.
