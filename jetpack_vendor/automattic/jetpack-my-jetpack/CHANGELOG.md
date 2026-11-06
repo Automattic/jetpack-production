@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings panel: Record Tracks events when a module or option is switched, behind the settings consolidation flag.
 
 ### Changed
+- Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account from the missing user connection or connection error notice.
 - Scan: Decide whether the site owns Scan with the same check as the Protect card and page.
 
 ### Fixed
