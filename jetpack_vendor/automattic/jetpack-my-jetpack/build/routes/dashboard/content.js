@@ -221,6 +221,7 @@ __( "Choose a connected administrator to take over this site's connection to Wor
 __( "New connection owner", "jetpack-my-jetpack" );
 __( "Don't see someone? They need to be an administrator and <link>connect their WordPress.com account</link> first.", "jetpack-my-jetpack" );
 __( "%1$s (%2$s)", "jetpack-my-jetpack" );
+__( "If you need to transfer a plan as well, <link>learn more about how Jetpack plans can be transferred here.</link>", "jetpack-my-jetpack" );
 __( "<name/> will become the connection owner.", "jetpack-my-jetpack" );
 __( "%s will own the data WordPress.com stores for this site.", "jetpack-my-jetpack" );
 __( "You'll stay connected as a regular user.", "jetpack-my-jetpack" );

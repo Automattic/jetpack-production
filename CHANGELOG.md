@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - AI, VideoPress: Use the design system progress bar for the usage and storage meters.
 - Backup: Link the failed download screen to a guide on how to fix it.
 - Backup: Use the design system progress bar for the backup, restore, download and storage meters.
+- Connection: Note that moving a Jetpack plan is an additional step when transferring connection ownership, and link to the support doc on transferring a plan.
 - Content Guidelines AI: Describe the locked buttons to screen readers.
 - Forms, Content Guidelines AI: Use the design system tooltip.
 - My Jetpack: On WordPress.com sites without the Protect page, open Scan threats in the WordPress.com dashboard instead of Jetpack Cloud.

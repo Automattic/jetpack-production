@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Connectors card: Note that moving a Jetpack plan is an additional step when transferring connection ownership, and link to the support doc on transferring a plan.
 - Site Health: Add the Jetpack Connection section to the Info tab for every plugin using the connection.
 
 ## [9.16.2] - 2026-11-04
