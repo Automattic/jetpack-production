@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Note that moving a Jetpack plan is an additional step when transferring connection ownership, and link to the support doc on transferring a plan.
 - Content Guidelines AI: Describe the locked buttons to screen readers.
 - Forms, Content Guidelines AI: Use the design system tooltip.
+- Jetpack AI: Add a card for connecting external AI agents to the MCP and Connectors tab, and fix the Continue config in the manual setup view.
 - My Jetpack: On WordPress.com sites without the Protect page, open Scan threats in the WordPress.com dashboard instead of Jetpack Cloud.
 - PayPal Payment Buttons: Add a Create payment button action to the block settings form, so a payment button is created or saved without saving the post.
 - PayPal Payment Buttons: Show a saved payment link's details below the style controls instead of above them.
