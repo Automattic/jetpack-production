@@ -420,6 +420,7 @@ _x( "WordPress.com login", "Settings header, noun.", "jetpack" );
 __( "Allows registered users to log in to your site with their WordPress.com accounts.", "jetpack" );
 __( "Add an extra layer of security to your website by enabling WordPress.com login and secure authentication. If you have multiple sites with this option enabled, you will be able to log in to every one of them with the same credentials.", "jetpack" );
 __( "Match accounts using email addresses", "jetpack" );
+__( "This setting is controlled by the <code>WPCC_MATCH_BY_EMAIL</code> constant or the <code>jetpack_sso_match_by_email</code> filter on this site.", "jetpack" );
 __( "Require accounts to use WordPress.com Two-Step Authentication", "jetpack" );
 __( "Two-Step Authentication is enforced because the <code>jetpack_sso_require_two_step</code> filter is active. <link>Learn more</link>.", "jetpack" );
 __( "A filesystem error occurred.", "jetpack" );
