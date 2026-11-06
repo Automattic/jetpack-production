@@ -65,6 +65,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: List Stats v2 in the WordPress.com sidebar, and once the classic Stats page is retired, open Stats v2 from old Stats links and stop offering to switch back to classic Stats.
 - Tracking: Avoid premature authentication on connected sites.
 - VideoPress: Explain camera and microphone errors when recording a video, with steps to fix them.
+- VideoPress: Fix a warning and incorrect poster loading when a video has no saved privacy setting.
 - VideoPress: Report upload initialization failures and prevent canceled editor uploads from starting later.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
