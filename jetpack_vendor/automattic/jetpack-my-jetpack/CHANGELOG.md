@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Connection: Return to My Jetpack after connecting from the connection screen, instead of showing the plans page.
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account from the missing user connection or connection error notice.
 
 ### Fixed
