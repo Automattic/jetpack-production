@@ -116,6 +116,11 @@ function jetpack_get_module_i18n( $key ) {
 				'description' => _x( 'Write and format posts using clean, readable Markdown syntax.', 'Module Description', 'jetpack' ),
 			),
 
+			'monetize' => array(
+				'name' => _x( 'Monetize', 'Module Name', 'jetpack' ),
+				'description' => _x( 'Manage payments, paid subscribers, and ads from one Monetize page.', 'Module Description', 'jetpack' ),
+			),
+
 			'monitor' => array(
 				'name' => _x( 'Downtime monitoring', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Get instant alerts if your site goes down and know when it’s back online.', 'Module Description', 'jetpack' ),
@@ -322,6 +327,7 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// Modules with `Traffic` tag:
 			// - modules/blaze.php
 			// - modules/canonical-urls.php
+			// - modules/monetize.php
 			// - modules/sitemaps.php
 			// - modules/wordads.php
 			'Traffic' => _x( 'Traffic', 'Module Tag', 'jetpack' ),
@@ -767,6 +773,24 @@ function jetpack_get_module_info( $key ) {
 	    'module_tags' => 'Writing',
 	    'feature' => 'Writing',
 	    'additional_search_queries' => 'md, markdown',
+	    'plan_classes' => '',
+	  ),
+	  'monetize' => 
+	  array (
+	    'name' => 'Monetize',
+	    'description' => 'Manage payments, paid subscribers, and ads from one Monetize page.',
+	    'sort' => '1',
+	    'recommendation_order' => '',
+	    'introduced' => '16.5-a.1',
+	    'changed' => '',
+	    'deactivate' => '',
+	    'free' => '',
+	    'requires_connection' => 'Yes',
+	    'requires_user_connection' => '',
+	    'auto_activate' => 'Yes',
+	    'module_tags' => 'Traffic',
+	    'feature' => 'Engagement',
+	    'additional_search_queries' => 'earn, monetize, payments, donations, paid subscribers, stripe, ads',
 	    'plan_classes' => '',
 	  ),
 	  'monitor' => 

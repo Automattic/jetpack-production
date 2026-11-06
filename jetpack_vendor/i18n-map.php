@@ -124,13 +124,17 @@ return array(
       'path' => 'jetpack_vendor/automattic/jetpack-menu-badges',
       'ver' => '0.2.3',
     ),
+    'jetpack-monetize' => array(
+      'path' => 'jetpack_vendor/automattic/jetpack-monetize',
+      'ver' => '0.1.0-alpha1794004192',
+    ),
     'jetpack-monitor' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-monitor',
       'ver' => '0.1.0',
     ),
     'jetpack-my-jetpack' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-my-jetpack',
-      'ver' => '6.17.1-alpha1793996387',
+      'ver' => '6.17.1-alpha1794004192',
     ),
     'jetpack-newsletter' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-newsletter',
