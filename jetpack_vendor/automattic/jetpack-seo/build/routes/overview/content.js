@@ -29,6 +29,9 @@ __( "Make your site discoverable in search and social, and control AI access.", 
 __( "Could not enable SEO tools. Please try again.", "jetpack-seo" );
 __( "Enable SEO tools", "jetpack-seo" );
 __( "SEO tools help your content get found: customize titles and meta descriptions, generate a sitemap, verify your site with search engines, and control how pages look when shared. Turn it on to manage all of it from here.", "jetpack-seo" );
+__( "Jetpack’s SEO titles, descriptions, structured data and llms.txt are turned off on this site. Your saved settings are kept.", "jetpack-seo" );
+__( "%1$s is managing your site’s SEO, so Jetpack has paused its SEO titles, descriptions, canonical URLs, structured data and llms.txt. Your saved settings are kept. Deactivate %1$s to use them.", "jetpack-seo" );
+__( "Manage plugins", "jetpack-seo" );
 __( "Boost your search engine ranking", "jetpack-seo" );
 __( "Get tools to optimize your site for improved search engine results.", "jetpack-seo" );
 __( "Upgrade", "jetpack-seo" );
@@ -58,8 +61,7 @@ __( "Individual crawler settings are overridden by this site's data sharing opt-
 __( "Per-site crawler settings aren't available on this path-based multisite network.", "jetpack-seo" );
 __( "llms.txt published", "jetpack-seo" );
 __( "llms.txt not published", "jetpack-seo" );
-__( "Jetpack llms.txt paused while %s is active", "jetpack-seo" );
-__( "Jetpack llms.txt paused while SEO tools are disabled", "jetpack-seo" );
+__( "llms.txt paused", "jetpack-seo" );
 __( "AI access", "jetpack-seo" );
 __( "Answer engines: %1$d of %2$d blocked", "jetpack-seo" );
 __( "Training crawlers: %1$d of %2$d blocked", "jetpack-seo" );
@@ -92,5 +94,3 @@ __( "Site visibility", "jetpack-seo" );
 __( "Sitemaps managed by WordPress.com", "jetpack-seo" );
 __( "Manage visibility", "jetpack-seo" );
 __( "Unable to load overview.", "jetpack-seo" );
-__( "%s is managing your SEO titles and descriptions, so Jetpack’s are turned off.", "jetpack-seo" );
-__( "SEO tools are not enabled on this site. Some cards reflect the underlying WordPress options only.", "jetpack-seo" );
