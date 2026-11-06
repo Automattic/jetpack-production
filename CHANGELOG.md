@@ -76,6 +76,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Explain camera and microphone errors when recording a video, with steps to fix them.
 - VideoPress: Fix a warning and incorrect poster loading when a video has no saved privacy setting.
 - VideoPress: Report upload initialization failures and prevent canceled editor uploads from starting later.
+- VideoPress: Show the upload error message in the media library when the server rejects a file, instead of leaving the upload stuck.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - JSON API: Correct the post endpoint documentation for which metadata keys a request can read or change.
