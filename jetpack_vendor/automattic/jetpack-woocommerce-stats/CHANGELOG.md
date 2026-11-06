@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Route report requests through a report registry and executor, without changing what they return.
 - Update package dependencies.
 - Widgets: Take each chart's accessible name from the widget title instead of repeating it.
 
