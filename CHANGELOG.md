@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Backup: Use the design system progress bar for the backup, restore, download and storage meters.
 - Connection: Note that moving a Jetpack plan is an additional step when transferring connection ownership, and link to the support doc on transferring a plan.
 - Content Guidelines AI: Describe the locked buttons to screen readers.
+- Facebook Page Plugin widget: Add a setting to link the widget title to the Facebook Page, off by default for new widgets.
 - Forms, Content Guidelines AI: Use the design system tooltip.
 - Jetpack AI: Add a card for connecting external AI agents to the MCP and Connectors tab, and fix the Continue config in the manual setup view.
 - My Jetpack: On WordPress.com sites without the Protect page, open Scan threats in the WordPress.com dashboard instead of Jetpack Cloud.
