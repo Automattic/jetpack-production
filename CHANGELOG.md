@@ -66,6 +66,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Disable the Account protection toggle in Offline Mode, where the feature cannot run.
 - Settings: Fix a blank page when non-admins open Settings from the menu.
 - Settings: Fix the Jetpack Stats link in the Google Analytics card.
+- Shortcodes: Remove the side margins around the recipe shortcode so it lines up with the rest of the post content.
 - SSO: Lock the "Match accounts using email addresses" setting and explain why when site code controls it.
 - SSO: Show the login form instead of a fatal error when the login URL carries a malformed `redirect_to` parameter.
 - Stats: Count visitors who allowed statistics when a performance plugin delays the WP Consent API script.
