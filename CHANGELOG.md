@@ -62,6 +62,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Count visitors who allowed statistics when a performance plugin delays the WP Consent API script.
 - Stats: List Stats v2 in the WordPress.com sidebar, and once the classic Stats page is retired, open Stats v2 from old Stats links and stop offering to switch back to classic Stats.
 - VideoPress: Explain camera and microphone errors when recording a video, with steps to fix them.
+- VideoPress: Report upload initialization failures and prevent canceled editor uploads from starting later.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - MCP: Remove references to the retired Jetpack Search + Voice tool.

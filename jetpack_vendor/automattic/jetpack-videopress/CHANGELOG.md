@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Recording: Explain camera and microphone errors with steps to fix them, and retry once access is allowed.
+- Uploads: Report failures when an upload cannot be initialized.
 
 ## [0.61.0] - 2026-11-02
 ### Added
