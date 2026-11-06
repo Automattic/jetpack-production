@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - SSO: Call Secure Sign On "WordPress.com login" in its settings section, the Users screens and the Force 2FA notice.
 
+### Fixed
+- SSO: Ignore a non-string `redirect_to` query parameter instead of failing with a fatal error.
+
 ## [9.17.0] - 2026-11-06
 ### Added
 - Connectors card: Note that moving a Jetpack plan is an additional step when transferring connection ownership, and link to the support doc on transferring a plan.

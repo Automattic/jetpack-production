@@ -65,6 +65,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Stop showing an error after a slow ignore or unignore that went through, and update the ignored threats count straight away.
 - Settings: Disable the Account protection toggle in Offline Mode, where the feature cannot run.
 - Settings: Fix a blank page when non-admins open Settings from the menu.
+- SSO: Show the login form instead of a fatal error when the login URL carries a malformed `redirect_to` parameter.
 - Stats: Count visitors who allowed statistics when a performance plugin delays the WP Consent API script.
 - Stats: List Stats v2 in the WordPress.com sidebar, and once the classic Stats page is retired, open Stats v2 from old Stats links and stop offering to switch back to classic Stats.
 - Tracking: Avoid premature authentication on connected sites.
