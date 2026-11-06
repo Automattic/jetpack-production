@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom Content Types: Show the Testimonials and Portfolio toggles on the Settings page again.
 - Footer: Show the Features link to administrators only.
 - Forms: Label the embed code and shortcode snippets in the form editor sidebar for screen readers and add usage hints.
+- My Jetpack: Fix the Overview showing a product's old status after a feature is switched on or off on the Features tab.
 - My Jetpack: Stop showing $0 and NaN for paid plans on the Boost, Protect and Jetpack AI upgrade pages, and $0.00 on recommendation cards, when prices cannot be loaded.
 - Newsletter: Restore the subscriber wording in the Subscribers list footer.
 - Premium Analytics: Fix Jetpack icon alignment and spacing in page headers.

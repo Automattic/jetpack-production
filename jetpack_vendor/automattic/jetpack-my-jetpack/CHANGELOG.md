@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Features: Move a wide card button under the text instead of squeezing the text.
+- Fix the Overview showing a product's old status after a feature is switched on or off on the Features tab.
 
 ## [6.17.0] - 2026-11-06
 ### Added
