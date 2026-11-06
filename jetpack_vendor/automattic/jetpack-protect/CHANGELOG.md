@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Refresh the Firewall block counts while the page is open and after the firewall is turned on, without a reload.
 - List the selected threats a bulk Auto-fix leaves out, since each needs its own confirmation.
 - Protect Dashboard: Redesign the Firewall card, with what to do next before it blocks anything and its 30-day and all-time block counts once it does.
+- Say "Jetpack can fix this threat" in threat details, and refer to the Protect page rather than the Protect dashboard in loading errors.
 - Update dependencies.
 - Update package dependencies.
 
@@ -28,11 +29,13 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Reload the threat lists after an ignore or unignore fails, so the page shows what WordPress.com applied.
 - Dashboard: Show a dash instead of an empty cell for a threat with no detection date or severity, as from the free vulnerability check.
 - Downtime monitoring: Require a connected WordPress.com account before it can be turned on, and stop saying the site is monitored when no one will get alerts.
+- Report a site that hasn't been scanned yet as not scanned, and a failed scan with no results as scan failed, in page view analytics, rather than as active or in progress.
 - Scan: Advise removing a vulnerable plugin or theme, or updating WordPress, when no fixed version exists yet, instead of reviewing its code.
 - Scan: Keep a threat you fixed hidden after a scan that failed, until a scan completes.
 - Scan: Offer a first scan instead of showing "Scanning…" forever when WordPress.com has no scan on record.
 - Scan: Report a slow but successful ignore or unignore as done, and refresh the ignored threats list right after either.
 - Scan: Say when the last scan didn't complete while listing threats from an earlier scan.
+- Scan: Sort a threat with no severity just above Low instead of below it.
 - Show one action, Auto-fix, for a threat whose fix deletes the plugin or theme, instead of a separate Delete button beside it.
 
 ## [0.5.0] - 2026-11-02

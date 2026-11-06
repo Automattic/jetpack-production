@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a method that returns how many requests the firewall blocked on each day.
 
+### Changed
+- Login protection: Use the "Login protection" name in notices and error messages.
+
 ### Fixed
 - Brute Force Protection: Honor CIDR ranges on the IP allow list, and accept them when saving the list.
 - CLI: Make `wp jetpack-waf teardown` turn the Firewall module off and `wp jetpack-waf setup` turn it on, so the firewall's on/off state matches what the commands did.

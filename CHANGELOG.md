@@ -31,8 +31,10 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Serve the video page from /report/video/<id>; the old /video/<id> address redirects.
 - Premium Analytics: When a date range allows only one chart interval, open its menu anyway and say how a longer range adds more.
 - Protect: Improve the Protect page. View the whole file a Scan threat was found in, then delete a stray file or restore a changed WordPress core file. The redesigned Firewall card shows 30-day and all-time block counts that refresh without a reload. Scan now says when a scan didn't complete or hasn't run yet, here and on the My Jetpack Protect card, drops a vulnerability once its plugin or theme is updated to the fixed version, and gives clearer advice and actions for each threat. The Firewall now honors CIDR ranges on the brute force protection IP allow list, and `wp jetpack-waf teardown` and `wp jetpack-waf setup` turn the Firewall module off and on.
+- Protect: Rename security features to match the Protect page: Login protection, Downtime monitoring, WordPress.com login, Account protection and Firewall.
 - SEO: Add more AI crawlers to the GEO tab, block every robots.txt name each one uses, and show those names under each toggle.
 - SEO: Turn SEO tools on for new sites, turn it off from My Jetpack only, and hide the SEO menu while it is off.
+- Settings: Note in the Security tab that Jetpack's Protect page is off while the Jetpack Protect plugin is active.
 - Site Health: List the plugins using the connection, and their package versions, in the Jetpack Connection section of the Info tab.
 - VideoPress: Add a Playlists tab to the dashboard to create, edit, publish and delete your video playlists.
 - Zoom Scheduler block: Update the sign-up and help links, and add wide and full alignment options.
@@ -55,6 +57,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Stop store money charts repeating y-axis labels, such as $1, $1, $2, when the store shows fewer decimals than its amounts carry.
 - Protect: Ask for confirmation before Auto-fix updates a plugin or theme, naming the version it updates to.
 - Protect: Don't label vulnerabilities from the free check as Low severity when their severity is unknown.
+- Protect: List a vulnerability with no severity rating just above Low threats instead of below them.
 - Protect: Offer a first scan instead of showing "Scanning…" forever when no scan has run yet.
 - Protect: Require a connected WordPress.com account before downtime monitoring can be turned on.
 - Protect: Show a dash instead of an empty "Detected on" cell on sites without Scan.

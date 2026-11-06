@@ -17,7 +17,7 @@ function jetpack_get_module_i18n( $key ) {
 	if ( ! isset( $modules ) ) {
 		$modules = array(
 			'account-protection' => array(
-				'name' => _x( 'Account Protection', 'Module Name', 'jetpack' ),
+				'name' => _x( 'Account protection', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Detect compromised passwords at login and flag weak ones when users set a new password.', 'Module Description', 'jetpack' ),
 			),
 
@@ -117,7 +117,7 @@ function jetpack_get_module_i18n( $key ) {
 			),
 
 			'monitor' => array(
-				'name' => _x( 'Downtime Monitor', 'Module Name', 'jetpack' ),
+				'name' => _x( 'Downtime monitoring', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Get instant alerts if your site goes down and know when it’s back online.', 'Module Description', 'jetpack' ),
 			),
 
@@ -152,12 +152,12 @@ function jetpack_get_module_i18n( $key ) {
 			),
 
 			'protect-dashboard' => array(
-				'name' => _x( 'Protect Dashboard', 'Module Name', 'jetpack' ),
+				'name' => _x( 'Protect', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Security tools that keep your site safe and sound, from posts to plugins.', 'Module Description', 'jetpack' ),
 			),
 
 			'protect' => array(
-				'name' => _x( 'Brute Force Protection', 'Module Name', 'jetpack' ),
+				'name' => _x( 'Login protection', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Block malicious login attempts automatically and keep hackers out.', 'Module Description', 'jetpack' ),
 			),
 
@@ -202,7 +202,7 @@ function jetpack_get_module_i18n( $key ) {
 			),
 
 			'sso' => array(
-				'name' => _x( 'Secure Sign On', 'Module Name', 'jetpack' ),
+				'name' => _x( 'WordPress.com login', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Let users log in with their WordPress.com account for quick, secure access.', 'Module Description', 'jetpack' ),
 			),
 
@@ -287,9 +287,9 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// - modules/woocommerce-analytics.php
 			'Other' => _x( 'Other', 'Module Tag', 'jetpack' ),
 
-			// Modules with `Account Protection` tag:
+			// Modules with `Account protection` tag:
 			// - modules/account-protection.php
-			'Account Protection' => _x( 'Account Protection', 'Module Tag', 'jetpack' ),
+			'Account protection' => _x( 'Account protection', 'Module Tag', 'jetpack' ),
 
 			// Modules with `Recommended` tag:
 			// - modules/activity-log.php
@@ -297,6 +297,7 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// - modules/monitor.php
 			// - modules/photon-cdn.php
 			// - modules/photon.php
+			// - modules/protect-dashboard.php
 			// - modules/protect.php
 			// - modules/publicize.php
 			// - modules/related-posts.php
@@ -379,10 +380,6 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// - modules/post-list.php
 			'Admin' => _x( 'Admin', 'Module Tag', 'jetpack' ),
 
-			// Modules with `Security` tag:
-			// - modules/protect-dashboard.php
-			'Security' => _x( 'Security', 'Module Tag', 'jetpack' ),
-
 			// Modules with `Jetpack Stats` tag:
 			// - modules/stats.php
 			'Jetpack Stats' => _x( 'Jetpack Stats', 'Module Tag', 'jetpack' ),
@@ -414,7 +411,7 @@ function jetpack_get_module_info( $key ) {
 	static $module_info = array (
 	  'account-protection' => 
 	  array (
-	    'name' => 'Account Protection',
+	    'name' => 'Account protection',
 	    'description' => 'Detect compromised passwords at login and flag weak ones when users set a new password.',
 	    'sort' => '4',
 	    'recommendation_order' => '',
@@ -425,7 +422,7 @@ function jetpack_get_module_info( $key ) {
 	    'requires_connection' => 'Yes',
 	    'requires_user_connection' => 'No',
 	    'auto_activate' => 'No',
-	    'module_tags' => 'Account Protection',
+	    'module_tags' => 'Account protection',
 	    'feature' => 'Security',
 	    'additional_search_queries' => '',
 	    'plan_classes' => '',
@@ -774,7 +771,7 @@ function jetpack_get_module_info( $key ) {
 	  ),
 	  'monitor' => 
 	  array (
-	    'name' => 'Downtime Monitor',
+	    'name' => 'Downtime monitoring',
 	    'description' => 'Get instant alerts if your site goes down and know when it’s back online.',
 	    'sort' => '28',
 	    'recommendation_order' => '10',
@@ -787,7 +784,7 @@ function jetpack_get_module_info( $key ) {
 	    'auto_activate' => 'No',
 	    'module_tags' => 'Recommended',
 	    'feature' => 'Security',
-	    'additional_search_queries' => 'monitor, uptime, downtime, monitoring, maintenance, maintenance mode, offline, site is down, site down, down, repair, error',
+	    'additional_search_queries' => 'downtime monitor, monitor, uptime, downtime, monitoring, maintenance, maintenance mode, offline, site is down, site down, down, repair, error',
 	    'plan_classes' => '',
 	  ),
 	  'notes' => 
@@ -900,7 +897,7 @@ function jetpack_get_module_info( $key ) {
 	  ),
 	  'protect-dashboard' => 
 	  array (
-	    'name' => 'Protect Dashboard',
+	    'name' => 'Protect',
 	    'description' => 'Security tools that keep your site safe and sound, from posts to plugins.',
 	    'sort' => '4',
 	    'recommendation_order' => '',
@@ -911,14 +908,14 @@ function jetpack_get_module_info( $key ) {
 	    'requires_connection' => 'Yes',
 	    'requires_user_connection' => '',
 	    'auto_activate' => 'Yes',
-	    'module_tags' => 'Security',
+	    'module_tags' => 'Recommended',
 	    'feature' => 'Security',
-	    'additional_search_queries' => '',
+	    'additional_search_queries' => 'protect dashboard, security, scan, firewall',
 	    'plan_classes' => '',
 	  ),
 	  'protect' => 
 	  array (
-	    'name' => 'Brute Force Protection',
+	    'name' => 'Login protection',
 	    'description' => 'Block malicious login attempts automatically and keep hackers out.',
 	    'sort' => '1',
 	    'recommendation_order' => '4',
@@ -931,7 +928,7 @@ function jetpack_get_module_info( $key ) {
 	    'auto_activate' => 'Yes',
 	    'module_tags' => 'Recommended',
 	    'feature' => 'Security',
-	    'additional_search_queries' => 'security, jetpack protect, secure, protection, botnet, brute force, protect, login, bot, password, passwords, strong passwords, strong password, wp-login.php,  protect admin',
+	    'additional_search_queries' => 'security, jetpack protect, secure, protection, botnet, brute force, brute force protection, protect, login, bot, password, passwords, strong passwords, strong password, wp-login.php,  protect admin',
 	    'plan_classes' => '',
 	  ),
 	  'publicize' => 
@@ -1080,7 +1077,7 @@ function jetpack_get_module_info( $key ) {
 	  ),
 	  'sso' => 
 	  array (
-	    'name' => 'Secure Sign On',
+	    'name' => 'WordPress.com login',
 	    'description' => 'Let users log in with their WordPress.com account for quick, secure access.',
 	    'sort' => '30',
 	    'recommendation_order' => '5',
@@ -1093,7 +1090,7 @@ function jetpack_get_module_info( $key ) {
 	    'auto_activate' => 'No',
 	    'module_tags' => 'Developers',
 	    'feature' => 'Security',
-	    'additional_search_queries' => 'sso, single sign on, login, log in, 2fa, two-factor',
+	    'additional_search_queries' => 'secure sign on, secure sign-on, sso, single sign on, login, log in, 2fa, two-factor',
 	    'plan_classes' => '',
 	  ),
 	  'stats' => 

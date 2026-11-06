@@ -430,10 +430,10 @@ __( "No version of this plugin fixes this vulnerability yet. Delete it until an 
 __( "No version of this theme fixes this vulnerability yet. Switch to another theme and delete this one until an update fixes it.", "jetpack-protect-pkg" );
 __( "No version of this theme fixes this vulnerability yet. Your active theme is built on it, so switch to a theme that isn’t, then delete this one until an update fixes it.", "jetpack-protect-pkg" );
 __( "No version of this theme fixes this vulnerability yet. Delete it until an update fixes it.", "jetpack-protect-pkg" );
-__( "Jetpack Scan can fix this threat for you: %s.", "jetpack-protect-pkg" );
-__( "Jetpack Scan can fix this threat for you.", "jetpack-protect-pkg" );
+__( "Jetpack can fix this threat for you: %s.", "jetpack-protect-pkg" );
+__( "Jetpack can fix this threat for you.", "jetpack-protect-pkg" );
 __( "Update to version %s or later.", "jetpack-protect-pkg" );
-__( "Jetpack Scan can’t fix this itself, but you can delete the option above if you don’t recognize it. Deleting can’t be undone, so check first that no plugin you use needs it, or contact Jetpack support for help.", "jetpack-protect-pkg" );
+__( "Jetpack can’t fix this itself, but you can delete the option above if you don’t recognize it. Deleting can’t be undone, so check first that no plugin you use needs it, or contact Jetpack support for help.", "jetpack-protect-pkg" );
 __( "Jetpack can’t fix this automatically. If you don’t recognize the row above, remove it from the %s table, or contact Jetpack support for help.", "jetpack-protect-pkg" );
 __( "Jetpack can’t fix this automatically. Review the affected code and remove it if you don’t recognize it, or contact Jetpack support for help.", "jetpack-protect-pkg" );
 __( "Delete option", "jetpack-protect-pkg" );
