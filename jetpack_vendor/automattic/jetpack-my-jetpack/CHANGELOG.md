@@ -5,17 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.17.0-alpha] - unreleased
+## [6.17.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account from the missing user connection or connection error notice.
+
+## [6.17.0] - 2026-11-06
 ### Added
 - Settings panel: Add the Infinite Scroll settings, behind the settings consolidation flag.
 - Settings panel: Add the Post by Email settings, behind the settings consolidation flag.
 - Settings panel: Record Tracks events when a module or option is switched, behind the settings consolidation flag.
 
 ### Changed
-- Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account from the missing user connection or connection error notice.
 - Scan: Decide whether the site owns Scan with the same check as the Protect card and page.
 
 ### Fixed
@@ -3233,7 +3236,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.17.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.16.0...6.17.0-alpha
+[6.17.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.17.0...6.17.1-alpha
+[6.17.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.16.0...6.17.0
 [6.16.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.15.0...6.16.0
 [6.15.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.14.0...6.15.0
 [6.14.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.13.0...6.14.0

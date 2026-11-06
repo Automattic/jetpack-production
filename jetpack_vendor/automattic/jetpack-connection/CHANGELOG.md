@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [9.17.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [9.17.0] - 2026-11-06
 ### Added
 - Connectors card: Note that moving a Jetpack plan is an additional step when transferring connection ownership, and link to the support doc on transferring a plan.
 - Site Health: Add the Jetpack Connection section to the Info tab for every plugin using the connection.
@@ -2227,7 +2224,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.17.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.16.2...v9.17.0-alpha
+[9.17.0]: https://github.com/Automattic/jetpack-connection/compare/v9.16.2...v9.17.0
 [9.16.2]: https://github.com/Automattic/jetpack-connection/compare/v9.16.1...v9.16.2
 [9.16.1]: https://github.com/Automattic/jetpack-connection/compare/v9.16.0...v9.16.1
 [9.16.0]: https://github.com/Automattic/jetpack-connection/compare/v9.15.0...v9.16.0

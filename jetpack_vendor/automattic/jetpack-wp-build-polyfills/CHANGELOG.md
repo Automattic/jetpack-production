@@ -5,10 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.7.4-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.7.4] - 2026-11-06
 ### Changed
 - Replace the widget-primitives module of an active Gutenberg older than 24.4.0, the first release that exports useWidgetIdentity.
 
@@ -240,7 +237,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Add @wordpress/ui to devDependencies so the boot module bundles it instead of externalizing it as an unregistered wp-ui script handle, which caused a blank page at runtime. [#47727]
 
-[0.7.4-alpha]: https://github.com/Automattic/jetpack-wp-build-polyfills/compare/v0.7.3...v0.7.4-alpha
+[0.7.4]: https://github.com/Automattic/jetpack-wp-build-polyfills/compare/v0.7.3...v0.7.4
 [0.7.3]: https://github.com/Automattic/jetpack-wp-build-polyfills/compare/v0.7.2...v0.7.3
 [0.7.2]: https://github.com/Automattic/jetpack-wp-build-polyfills/compare/v0.7.1...v0.7.2
 [0.7.1]: https://github.com/Automattic/jetpack-wp-build-polyfills/compare/v0.7.0...v0.7.1
