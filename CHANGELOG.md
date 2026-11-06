@@ -76,6 +76,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Report upload initialization failures and prevent canceled editor uploads from starting later.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- JSON API: Correct the post endpoint documentation for which metadata keys a request can read or change.
 - MCP: Remove references to the retired Jetpack Search + Voice tool.
 - Settings: Point the Carousel card to its settings panel in My Jetpack, behind the settings consolidation flag.
 - Settings: Point the Infinite Scroll card to its settings panel in My Jetpack, behind the settings consolidation flag.
