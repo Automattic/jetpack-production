@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Record the commenter identity with the comment so WordPress.com can attribute it as soon as the comment arrives. Remove the public Checkpoint::record() method.
 - Update package dependencies.
 
 ## [0.8.2] - 2026-11-02
