@@ -66,7 +66,7 @@ return array(
     ),
     'jetpack-connection' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-connection',
-      'ver' => '9.17.1-alpha1793989446',
+      'ver' => '9.17.2-alpha1793996395',
     ),
     'jetpack-explat' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-explat',
@@ -182,7 +182,7 @@ return array(
     ),
     'jetpack-scan-page' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-scan-page',
-      'ver' => '0.3.0-alpha1793987000',
+      'ver' => '0.2.14',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',
