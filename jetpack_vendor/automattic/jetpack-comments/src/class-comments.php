@@ -15,7 +15,7 @@ class Comments {
 	/**
 	 * Package version.
 	 */
-	const PACKAGE_VERSION = '0.8.3-alpha';
+	const PACKAGE_VERSION = '0.9.0-alpha';
 
 	/**
 	 * Whether Jetpack Comments should load.

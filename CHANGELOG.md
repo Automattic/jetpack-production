@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - Deprecate the jetpack_protect_global_whitelist settings REST API key in favor of jetpack_waf_ip_allow_list; saving an invalid IP address under it now returns an error. Deprecate the unused Jetpack_Stats_Dashboard_Widget::render_widget(), Jetpack_Stats_Dashboard_Widget::render_footer() and stats_jetpack_dashboard_widget().
 
 ### Bug fixes
+- Comments: Find the comment editor's Embed block by provider name, such as YouTube, in the block inserter.
 - Custom Content Types: Show the Testimonials and Portfolio toggles on the Settings page again.
 - Footer: Show the Features link to administrators only.
 - Forms: Label the embed code and shortcode snippets in the form editor sidebar for screen readers and add usage hints.
