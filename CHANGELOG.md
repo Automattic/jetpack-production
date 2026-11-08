@@ -53,6 +53,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Restore the subscriber wording in the Subscribers list footer.
 - Premium Analytics: Fix Jetpack icon alignment and spacing in page headers.
 - Premium Analytics: Keep WooCommerce report widgets loading while a new store's analytics data is prepared, instead of showing an error.
+- Premium Analytics: Name each pie chart segment, so a screen reader reads the breakdown instead of an empty chart.
 - Premium Analytics: Remove the grey box that appears inside a metric card on hover when a newer version of the WordPress UI library is loaded.
 - Premium Analytics: Reopen a date control on the calendar when the applied range is custom.
 - Premium Analytics: Stop long row names in cards such as Top UTM from running under the views count on hover.
