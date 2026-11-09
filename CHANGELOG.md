@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Add a card for connecting external AI agents to the MCP and Connectors tab, and fix the Continue config in the manual setup view.
 - My Jetpack: On WordPress.com sites without the Protect page, open Scan threats in the WordPress.com dashboard instead of Jetpack Cloud.
 - My Jetpack: Return to My Jetpack after connecting your account from the connection screen, instead of showing the plans page.
+- My Jetpack: Show the firewall, login protection and other Protect modules under the Security filter on the Features tab.
 - My Jetpack: Show the WordPress.com connection screen made for your site's plugins when you connect your account from a missing connection or connection error notice.
 - PayPal Payment Buttons: Add a Create payment button action to the block settings form, so a payment button is created or saved without saving the post.
 - PayPal Payment Buttons: Show a saved payment link's details below the style controls instead of above them.
