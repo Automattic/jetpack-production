@@ -3,6 +3,6 @@
 		'@wordpress/interactivity',
 		'jetpack-search/store'
 	),
-	'version' => 'f1f8ba5262dcab0c6723',
+	'version' => 'b16d1c11f2c4513dc07f',
 	'type' => 'module'
 );
