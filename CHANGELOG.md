@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: When a date range allows only one chart interval, open its menu anyway and say how a longer range adds more.
 - Protect: Improve the Protect page. View the whole file a Scan threat was found in, then delete a stray file or restore a changed WordPress core file. The redesigned Firewall card shows 30-day and all-time block counts that refresh without a reload. Scan now says when a scan didn't complete or hasn't run yet, here and on the My Jetpack Protect card, drops a vulnerability once its plugin or theme is updated to the fixed version, and gives clearer advice and actions for each threat. The Firewall now honors CIDR ranges on the brute force protection IP allow list, and `wp jetpack-waf teardown` and `wp jetpack-waf setup` turn the Firewall module off and on.
 - Protect: Rename security features to match the Protect page: Login protection, Downtime monitoring, WordPress.com login, Account protection and Firewall.
+- Protect: Show the Scan site button in the page header as a primary button.
 - SEO: Add more AI crawlers to the GEO tab, block every robots.txt name each one uses, and show those names under each toggle.
 - SEO: Turn SEO tools on for new sites, turn it off from My Jetpack only, and hide the SEO menu while it is off.
 - Settings: Note in the Security tab that Jetpack's Protect page is off while the Jetpack Protect plugin is active.

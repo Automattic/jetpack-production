@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Dashboard: Refresh the Firewall block counts while the page is open and after the firewall is turned on, without a reload.
+- Dashboard: Show the Scan site button in the page header as a primary button.
 - List the selected threats a bulk Auto-fix leaves out, since each needs its own confirmation.
 - Protect Dashboard: Redesign the Firewall card, with what to do next before it blocks anything and its 30-day and all-time block counts once it does.
 - Say "Jetpack can fix this threat" in threat details, and refer to the Protect page rather than the Protect dashboard in loading errors.
