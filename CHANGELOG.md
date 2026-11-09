@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Comments: Find the comment editor's Embed block by provider name, such as YouTube, in the block inserter.
 - Custom Content Types: Show the Testimonials and Portfolio toggles on the Settings page again.
 - Footer: Show the Features link to administrators only.
+- Forms: Keep text typed with a Japanese, Chinese, or Korean input method in a choice option when Enter confirms the conversion.
 - Forms: Label the embed code and shortcode snippets in the form editor sidebar for screen readers and add usage hints.
 - Forms: Show "Anonymous" for responses with no author details, and hide the IP address row when no IP was recorded.
 - Infinite Scroll: Load block styles, including layout and spacing, for posts loaded by scrolling.
