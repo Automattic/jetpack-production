@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Route report requests through a report registry and executor, without changing what they return.
+- Stats dashboard: open the top products, locations, UTM and coupon lists tall enough for their ten entries.
 - Update package dependencies.
 - Widgets: Take each chart's accessible name from the widget title instead of repeating it.
 

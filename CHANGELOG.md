@@ -37,6 +37,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Turn SEO tools on for new sites, turn it off from My Jetpack only, and hide the SEO menu while it is off.
 - Settings: Note in the Security tab that Jetpack's Protect page is off while the Jetpack Protect plugin is active.
 - Site Health: List the plugins using the connection, and their package versions, in the Jetpack Connection section of the Info tab.
+- Stats: open the Top posts and the other Traffic lists tall enough to show ten entries by default.
 - VideoPress: Add a Playlists tab to the dashboard to create, edit, publish and delete your video playlists.
 - Zoom Scheduler block: Update the sign-up and help links, and add wide and full alignment options.
 

@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Top UTM: Open the Build URL dialog from a post row in the Top UTM card and on the UTM report page, with the post URL and the row's UTM values already filled in.
 
 ### Changed
+- Dashboard: give each default tile the height its content needs; the Traffic lists open tall enough for their ten entries.
 - Dashboard: Let the number of columns follow the width of the page, up to six, and let the full-width rows of the default layouts span every column.
 - Metric cards: Draw the cards on their own tabs primitive, taking the design system’s hover, selected and focus states.
 - Post detail: Name the traffic tab and the highlights and views cards for the content type, such as Product traffic.
