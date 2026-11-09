@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a setting that turns off the daily vulnerability check on sites without Scan.
+- Add a shared check for whether the request is for the Protect page.
 
 ## [0.10.2] - 2026-11-09
 ### Changed

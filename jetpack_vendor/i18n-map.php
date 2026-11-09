@@ -174,11 +174,11 @@ return array(
     ),
     'jetpack-protect-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-protect',
-      'ver' => '0.7.0-alpha1794260224',
+      'ver' => '0.7.0-alpha1794261433',
     ),
     'jetpack-protect-status' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-protect-status',
-      'ver' => '0.11.0-alpha1794260224',
+      'ver' => '0.11.0-alpha1794261433',
     ),
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
