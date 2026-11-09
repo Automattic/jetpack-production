@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Jetpack Manage: Remove the sidebar link. The agency dashboard is reached through Automattic for Agencies.
 
+### Fixed
+- Show a lapsed Scan purchase as Expired, with a link to resume it and an expired-plan notice, instead of offering an upgrade.
+
 ## [6.17.1] - 2026-11-09
 ### Changed
 - Connection: Return to My Jetpack after connecting from the connection screen, instead of showing the plans page. [#54572]
