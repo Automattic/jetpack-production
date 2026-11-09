@@ -47,7 +47,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '6.17.1-alpha';
+	const PACKAGE_VERSION = '6.18.0-alpha';
 
 	/**
 	 * Feature flag that swaps the single-screen onboarding takeover for the setup wizard.
@@ -247,7 +247,7 @@ class Initializer {
 		// Sets up JITMS.
 		JITM::configure();
 
-		// Add "Jetpack Manage" menu item.
+		// Track whether the user is an agency, for the Automattic for Agencies banner.
 		Jetpack_Manage::init();
 
 		/**
@@ -1562,7 +1562,7 @@ class Initializer {
 		 * Filters whether the host shows My Jetpack, which lets Modules links open Features and settings move to My Jetpack.
 		 *
 		 * @since 6.11.0
-		 * @since 6.17.1-alpha False also keeps settings on the Settings screen.
+		 * @since 6.18.0-alpha False also keeps settings on the Settings screen.
 		 * @param bool $available True to allow the Features tab; false keeps the classic Modules and Settings screens, for a host where My Jetpack is not shown.
 		 */
 		return (bool) apply_filters( 'jetpack_my_jetpack_modules_management_available', true );
@@ -1573,7 +1573,7 @@ class Initializer {
 	 *
 	 * It needs no admin menu, so URL builders that also run in REST use it, while page loads use `is_settings_consolidation_enabled()`.
 	 *
-	 * @since 6.17.1-alpha
+	 * @since 6.18.0-alpha
 	 *
 	 * @return bool
 	 */

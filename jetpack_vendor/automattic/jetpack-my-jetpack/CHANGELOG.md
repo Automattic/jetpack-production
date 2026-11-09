@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.17.1-alpha] - unreleased
+## [6.18.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Reduce repeated requests on page load: reuse product ownership data and refresh the historically active modules list at most hourly.
 - Scan: Read the Scan product slug prefix from Protect Status instead of keeping a separate list.
 - Show the firewall, login protection and other Protect modules under the Security filter on the Features tab.
+
+### Removed
+- Jetpack Manage: Remove the sidebar link. The agency dashboard is reached through Automattic for Agencies.
 
 ### Fixed
 - Features: Move a wide card button under the text instead of squeezing the text.
@@ -3247,7 +3250,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.17.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.17.0...6.17.1-alpha
+[6.18.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.17.0...6.18.0-alpha
 [6.17.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.16.0...6.17.0
 [6.16.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.15.0...6.16.0
 [6.15.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.14.0...6.15.0

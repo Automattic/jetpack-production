@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Facebook Page Plugin widget: Add a setting to link the widget title to the Facebook Page, off by default for new widgets.
 - Forms, Content Guidelines AI: Use the design system tooltip.
 - Jetpack AI: Add a card for connecting external AI agents to the MCP and Connectors tab, and fix the Continue config in the manual setup view.
+- Jetpack Manage: Remove the sidebar link. The agency dashboard is reached through Automattic for Agencies.
 - My Jetpack: On WordPress.com sites without the Protect page, open Scan threats in the WordPress.com dashboard instead of Jetpack Cloud.
 - My Jetpack: Return to My Jetpack after connecting your account from the connection screen, instead of showing the plans page.
 - My Jetpack: Show the firewall, login protection and other Protect modules under the Security filter on the Features tab.
