@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.15.12-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.15.12] - 2026-11-09
 ### Changed
-- Update dependencies.
-- Update package dependencies.
+- Update dependencies. [#54497]
+- Update package dependencies. [#54512]
 
 ### Fixed
-- Custom Content Types: Show the Testimonials and Portfolio toggles on the new Jetpack Settings page.
+- Custom Content Types: Show the Testimonials and Portfolio toggles on the new Jetpack Settings page. [#54494]
 
 ## [0.15.11] - 2026-11-02
 ### Changed
@@ -627,7 +624,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Add wordpress folder on gitignore. [#37177]
 
-[0.15.12-alpha]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.15.11...v0.15.12-alpha
+[0.15.12]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.15.11...v0.15.12
 [0.15.11]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.15.10...v0.15.11
 [0.15.10]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.15.9...v0.15.10
 [0.15.9]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.15.8...v0.15.9

@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.18.5-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.18.5] - 2026-11-09
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#54391] [#54512]
 
 ### Fixed
-- Subscribers: Restore the subscriber wording in the list footer.
+- Subscribers: Restore the subscriber wording in the list footer. [#54512]
 
 ## [0.18.4] - 2026-11-02
 ### Changed
@@ -483,7 +480,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.18.5-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.4...v0.18.5-alpha
+[0.18.5]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.4...v0.18.5
 [0.18.4]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.3...v0.18.4
 [0.18.3]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.2...v0.18.3
 [0.18.2]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.1...v0.18.2

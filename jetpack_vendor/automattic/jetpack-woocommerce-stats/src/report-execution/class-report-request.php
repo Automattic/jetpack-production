@@ -10,7 +10,7 @@ namespace Automattic\Jetpack\WooCommerceStats\Report_Execution;
 /**
  * The report, route and params a handler serves.
  *
- * @since 0.3.3-alpha
+ * @since 0.3.3
  */
 class Report_Request {
 
