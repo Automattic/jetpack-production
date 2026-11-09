@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Registers the flag that gates the `monetize` module.
  *
- * @since 16.5-a.0
+ * @since 16.5
  */
 class Jetpack_Monetize_Feature_Flags {
 

@@ -201,7 +201,7 @@ class Jetpack_Reader_Chat {
 		 * - 'idle': once the page has finished loading, or on first interaction if that comes sooner.
 		 * - 'eager': with the page, as a regular script and stylesheet.
 		 *
-		 * @since 16.5-a.0
+		 * @since 16.5-a.2
 		 *
 		 * @param string $strategy The load strategy.
 		 */

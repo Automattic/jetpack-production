@@ -5,9 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.14.14-alpha] - unreleased
+## [0.14.15-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+## [0.14.14] - 2026-11-09
+### Changed
+- Internal updates.
 
 ## [0.14.13] - 2026-11-04
 ### Changed
@@ -444,7 +448,8 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing menu visibility issues.
 
-[0.14.14-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.13...0.14.14-alpha
+[0.14.15-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.14...0.14.15-alpha
+[0.14.14]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.13...0.14.14
 [0.14.13]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.12...0.14.13
 [0.14.12]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.11...0.14.12
 [0.14.11]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.10...0.14.11

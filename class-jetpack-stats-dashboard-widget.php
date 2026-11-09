@@ -124,19 +124,19 @@ class Jetpack_Stats_Dashboard_Widget {
 	/**
 	 * Renders the Jetpack Stats widget.
 	 *
-	 * @deprecated 16.5-a.0 Use WP_Dashboard_Odyssey_Widget::render() instead.
+	 * @deprecated 16.5 Use WP_Dashboard_Odyssey_Widget::render() instead.
 	 */
 	public static function render_widget() {
-		_deprecated_function( __METHOD__, 'jetpack-16.5-a.0', Dashboard_Stats_Widget::class . '::render' );
+		_deprecated_function( __METHOD__, 'jetpack-16.5', Dashboard_Stats_Widget::class . '::render' );
 		( new Dashboard_Stats_Widget() )->render();
 	}
 
 	/**
 	 * Formerly rendered the brute force protection and Akismet footer. Outputs nothing.
 	 *
-	 * @deprecated 16.5-a.0
+	 * @deprecated 16.5
 	 */
 	public static function render_footer() {
-		_deprecated_function( __METHOD__, 'jetpack-16.5-a.0' );
+		_deprecated_function( __METHOD__, 'jetpack-16.5' );
 	}
 }

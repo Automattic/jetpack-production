@@ -16,7 +16,7 @@ use Automattic\Jetpack\Forms\Dashboard\Dashboard;
  */
 class Jetpack_Forms {
 
-	const PACKAGE_VERSION = '8.3.8-alpha';
+	const PACKAGE_VERSION = '8.3.9-alpha';
 
 	/**
 	 * Plan feature slug gating field conditional logic.

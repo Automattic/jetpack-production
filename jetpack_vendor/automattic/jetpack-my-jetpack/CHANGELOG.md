@@ -9,22 +9,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
-### Changed
-- Connection: Return to My Jetpack after connecting from the connection screen, instead of showing the plans page.
-- Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account from the missing user connection or connection error notice.
-- Protect: Use the Protect page's feature names on the Protect card, its product page and the Features tab.
-- Reduce repeated requests on page load: reuse product ownership data and refresh the historically active modules list at most hourly.
-- Scan: Read the Scan product slug prefix from Protect Status instead of keeping a separate list.
-- Show the firewall, login protection and other Protect modules under the Security filter on the Features tab.
-
 ### Removed
 - Jetpack Manage: Remove the sidebar link. The agency dashboard is reached through Automattic for Agencies.
 
+## [6.17.1] - 2026-11-09
+### Changed
+- Connection: Return to My Jetpack after connecting from the connection screen, instead of showing the plans page. [#54572]
+- Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account from the missing user connection or connection error notice. [#54580]
+- Protect: Use the Protect page's feature names on the Protect card, its product page and the Features tab. [#54592]
+- Reduce repeated requests on page load: reuse product ownership data and refresh the historically active modules list at most hourly. [#54322]
+- Scan: Read the Scan product slug prefix from Protect Status instead of keeping a separate list. [#54590]
+- Show the firewall, login protection and other Protect modules under the Security filter on the Features tab. [#54677]
+
 ### Fixed
-- Features: Move a wide card button under the text instead of squeezing the text.
-- Fix the Overview showing a product's old status after a feature is switched on or off on the Features tab.
-- Fix the Security and Growth filters on the Features tab showing no features.
-- Settings panel: Keep the Post by Email Copy button on one line and announce the copy result, behind the settings consolidation flag.
+- Features: Move a wide card button under the text instead of squeezing the text. [#54586]
+- Fix the Overview showing a product's old status after a feature is switched on or off on the Features tab. [#54311]
+- Fix the Security and Growth filters on the Features tab showing no features. [#54496]
+- Settings panel: Keep the Post by Email Copy button on one line and announce the copy result, behind the settings consolidation flag. [#54617]
 
 ## [6.17.0] - 2026-11-06
 ### Added
@@ -3250,7 +3251,8 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.18.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.17.0...6.18.0-alpha
+[6.18.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.17.1...6.18.0-alpha
+[6.17.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.17.0...6.17.1
 [6.17.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.16.0...6.17.0
 [6.16.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.15.0...6.16.0
 [6.15.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.14.0...6.15.0
