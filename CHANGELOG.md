@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Share posts published through the WordPress.com API with a list of services only to those services.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Blocks: Store the empty list of excluded blocks so sites without a persistent object cache skip a database query on every page load.
 - Remove the unused, hidden Scan admin page package.
 - Update package dependencies.
 
