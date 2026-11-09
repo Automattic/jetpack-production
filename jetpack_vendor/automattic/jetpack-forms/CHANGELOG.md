@@ -5,11 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.3.9-alpha] - unreleased
+## [8.4.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add a `wp jetpack-forms export` command that exports form responses to CSV.
+
+### Changed
+- Show a progress indicator and a notice while exporting responses.
+
 ### Fixed
+- Fix exporting to Google Sheets when a response has a very long value, and say when an export is too large for Google Sheets.
+- Fix running out of memory when exporting a large number of responses to CSV or Google Drive.
 - Inbox: Show "Anonymous" for responses with no author details, and hide the IP address row when no IP was recorded.
 - Keep text typed with a Japanese, Chinese, or Korean input method in a choice option when Enter confirms the conversion.
 
@@ -2850,7 +2858,7 @@ This is an alpha version! The changes listed here are not final.
 - Added a new jetpack/forms package [#28409]
 - Added a public load_contact_form method for initializing the contact form module. [#28416]
 
-[8.3.9-alpha]: https://github.com/automattic/jetpack-forms/compare/v8.3.8...v8.3.9-alpha
+[8.4.0-alpha]: https://github.com/automattic/jetpack-forms/compare/v8.3.8...v8.4.0-alpha
 [8.3.8]: https://github.com/automattic/jetpack-forms/compare/v8.3.7...v8.3.8
 [8.3.7]: https://github.com/automattic/jetpack-forms/compare/v8.3.6...v8.3.7
 [8.3.6]: https://github.com/automattic/jetpack-forms/compare/v8.3.5...v8.3.6

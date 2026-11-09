@@ -161,6 +161,7 @@ return array(
     'Automattic\\Jetpack\\Feature_Policy' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-feature-policy.php',
     'Automattic\\Jetpack\\Files' => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-files.php',
     'Automattic\\Jetpack\\Forms\\Abilities\\Forms_Abilities' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/abilities/class-forms-abilities.php',
+    'Automattic\\Jetpack\\Forms\\CLI' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/class-cli.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Conditional_Logic' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-conditional-logic.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form.php',
     'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Endpoint' => $baseDir . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-endpoint.php',

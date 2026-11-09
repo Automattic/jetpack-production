@@ -192,6 +192,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_5_a_2
         'Automattic\\Jetpack\\Feature_Policy' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-status/src/class-feature-policy.php',
         'Automattic\\Jetpack\\Files' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-status/src/class-files.php',
         'Automattic\\Jetpack\\Forms\\Abilities\\Forms_Abilities' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/abilities/class-forms-abilities.php',
+        'Automattic\\Jetpack\\Forms\\CLI' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/class-cli.php',
         'Automattic\\Jetpack\\Forms\\ContactForm\\Conditional_Logic' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-conditional-logic.php',
         'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form.php',
         'Automattic\\Jetpack\\Forms\\ContactForm\\Contact_Form_Endpoint' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-forms/src/contact-form/class-contact-form-endpoint.php',

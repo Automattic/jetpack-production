@@ -7,12 +7,16 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Forms: Add a `wp jetpack-forms export` command that exports form responses to CSV.
+- Forms: Show a progress indicator and a notice while exporting responses.
 - Jetpack Manage: Remove the sidebar link. The agency dashboard is reached through Automattic for Agencies.
 - Protect: Let sites without Scan turn off the daily vulnerability check from Settings.
 - Protect: Show the Scan site button in the page header as a primary button.
 - Site Chat: Load the chat only once a visitor interacts with the page, so it no longer slows down page loads.
 
 ### Bug fixes
+- Forms: Fix exporting to Google Sheets when a response has a very long value, and say when an export is too large for Google Sheets.
+- Forms: Fix running out of memory when exporting a large number of responses to CSV or Google Drive.
 - Forms: Keep text typed with a Japanese, Chinese, or Korean input method in a choice option when Enter confirms the conversion.
 - Forms: Show "Anonymous" for responses with no author details, and hide the IP address row when no IP was recorded.
 - Infinite Scroll: Load block styles, including layout and spacing, for posts loaded by scrolling.
