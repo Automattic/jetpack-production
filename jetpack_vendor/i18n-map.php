@@ -14,7 +14,7 @@ return array(
     ),
     'jetpack-admin-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
-      'ver' => '0.14.14-alpha1794194283',
+      'ver' => '0.14.14-alpha1794245066',
     ),
     'jetpack-ads-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-ads',
@@ -183,10 +183,6 @@ return array(
     'jetpack-publicize-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-publicize',
       'ver' => '0.88.10-alpha1793808164',
-    ),
-    'jetpack-scan-page' => array(
-      'path' => 'jetpack_vendor/automattic/jetpack-scan-page',
-      'ver' => '0.2.14',
     ),
     'jetpack-search-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-search',

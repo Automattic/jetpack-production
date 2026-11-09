@@ -92,6 +92,7 @@ This is an alpha version! The changes listed here are not final.
 - JSON API: Correct the post endpoint documentation for which metadata keys a request can read or change.
 - MCP: Remove references to the retired Jetpack Search + Voice tool.
 - Monetize: Add a feature-flagged module for the upcoming Monetize dashboard.
+- Remove the unused, hidden Scan admin page package.
 - Settings: Point the Carousel card to its settings panel in My Jetpack, behind the settings consolidation flag.
 - Settings: Point the Infinite Scroll card to its settings panel in My Jetpack, behind the settings consolidation flag.
 - Settings: Point the Post by Email card to its settings panel in My Jetpack, behind the settings consolidation flag.

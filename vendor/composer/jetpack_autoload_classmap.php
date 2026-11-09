@@ -87,7 +87,7 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-activity-log/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Admin_UI\\Admin_Menu' => array(
-		'version' => '0.14.14.0-alpha1794194283',
+		'version' => '0.14.14.0-alpha1794245066',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-admin-ui/src/class-admin-menu.php'
 	),
 	'Automattic\\Jetpack\\Agents_Manager\\Agents_Manager' => array(
@@ -2001,22 +2001,6 @@ return array(
 	'Automattic\\Jetpack\\SEO\\Website_Schema_Node' => array(
 		'version' => '0.11.0.0-alpha1793926587',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-website-schema-node.php'
-	),
-	'Automattic\\Jetpack\\Scan_Page\\Initial_State' => array(
-		'version' => '0.2.14.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-initial-state.php'
-	),
-	'Automattic\\Jetpack\\Scan_Page\\Jetpack_Scan' => array(
-		'version' => '0.2.14.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-jetpack-scan.php'
-	),
-	'Automattic\\Jetpack\\Scan_Page\\Package_Version' => array(
-		'version' => '0.2.14.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-package-version.php'
-	),
-	'Automattic\\Jetpack\\Scan_Page\\REST_Controller' => array(
-		'version' => '0.2.14.0',
-		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-scan-page/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Search\\AI_Answers' => array(
 		'version' => '8.4.2.0-alpha1793989446',
