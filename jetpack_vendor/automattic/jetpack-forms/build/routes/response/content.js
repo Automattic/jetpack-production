@@ -12,6 +12,7 @@ __( "(opens in a new tab)", "jetpack-forms" );
 __( "OK", "jetpack-forms" );
 __( "Cancel", "jetpack-forms" );
 __( "Loading preview…", "jetpack-forms" );
+__( "Anonymous", "jetpack-forms" );
 __( "Copied!", "jetpack-forms" );
 __( "Copy", "jetpack-forms" );
 __( "Unknown error", "jetpack-forms" );

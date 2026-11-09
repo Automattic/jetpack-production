@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Custom Content Types: Show the Testimonials and Portfolio toggles on the Settings page again.
 - Footer: Show the Features link to administrators only.
 - Forms: Label the embed code and shortcode snippets in the form editor sidebar for screen readers and add usage hints.
+- Forms: Show "Anonymous" for responses with no author details, and hide the IP address row when no IP was recorded.
 - Infinite Scroll: Load block styles, including layout and spacing, for posts loaded by scrolling.
 - My Jetpack: Fix the Overview showing a product's old status after a feature is switched on or off on the Features tab.
 - My Jetpack: Fix the Security and Growth filters on the Features tab showing no features.

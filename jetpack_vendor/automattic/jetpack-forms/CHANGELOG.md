@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Form editor: Label the embed code and shortcode snippets in the sidebar for screen readers and add usage hints.
+- Inbox: Show "Anonymous" for responses with no author details, and hide the IP address row when no IP was recorded.
 
 ## [8.3.7] - 2026-11-02
 ### Changed

@@ -278,6 +278,7 @@ __( "Choose where responses go", "jetpack-forms" );
 __( "You're set up. No responses yet.", "jetpack-forms" );
 __( "Share your form to start collecting responses. New items will appear here.", "jetpack-forms" );
 __( "Create a new form", "jetpack-forms" );
+__( "Anonymous", "jetpack-forms" );
 __( "Afghanistan", "jetpack-forms" );
 __( "Albania", "jetpack-forms" );
 __( "Algeria", "jetpack-forms" );
