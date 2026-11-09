@@ -92,6 +92,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Point the Infinite Scroll card to its settings panel in My Jetpack, behind the settings consolidation flag.
 - Settings: Point the Post by Email card to its settings panel in My Jetpack, behind the settings consolidation flag.
 - Settings: Replace the Related Posts card with a pointer to its new panel, behind the settings flag.
+- Stats: Remove the feedback banner and menu option from the new Stats once classic Stats is retired.
 - Update package dependencies.
 
 ## 16.4 - 2026-11-03

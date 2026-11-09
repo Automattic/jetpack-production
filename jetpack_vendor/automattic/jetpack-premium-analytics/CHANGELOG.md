@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Dashboard: give each default tile the height its content needs; the Traffic lists open tall enough for their ten entries.
 - Dashboard: Let the number of columns follow the width of the page, up to six, and let the full-width rows of the default layouts span every column.
+- Dashboard: Stop offering feedback (banner, page options menu item and tour step) once the classic Stats page is retired.
 - Metric cards: Draw the cards on their own tabs primitive, taking the design system’s hover, selected and focus states.
 - Post detail: Name the traffic tab and the highlights and views cards for the content type, such as Product traffic.
 - Register the post and author detail page widget types in PHP, in place of client-side aliases.
