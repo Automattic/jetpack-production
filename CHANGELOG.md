@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Stop showing $0 and NaN for paid plans on the Boost, Protect and Jetpack AI upgrade pages, and $0.00 on recommendation cards, when prices cannot be loaded.
 - Newsletter: Restore the subscriber wording in the Subscribers list footer.
 - Premium Analytics: Fix Jetpack icon alignment and spacing in page headers.
+- Premium Analytics: Keep Stats under My Home in the admin menu on WordPress.com, where it had dropped below Hosting and Upgrades.
 - Premium Analytics: Keep WooCommerce report widgets loading while a new store's analytics data is prepared, instead of showing an error.
 - Premium Analytics: Name each pie chart segment, so a screen reader reads the breakdown instead of an empty chart.
 - Premium Analytics: Remove the grey box that appears inside a metric card on hover when a newer version of the WordPress UI library is loaded.
