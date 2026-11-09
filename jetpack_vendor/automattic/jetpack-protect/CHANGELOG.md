@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.1-alpha] - unreleased
+## [0.7.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Scan: Let sites without Scan turn off the daily vulnerability check from Settings.
 
 ### Changed
 - Dashboard: Show the Scan site button in the page header as a primary button.
@@ -131,7 +134,7 @@ This is an alpha version! The changes listed here are not final.
 - Initial version. [#53298]
 - Protect dashboard: Add a Scan history tab for sites with Jetpack Scan, show threat actions on row hover, and offer to delete unused plugins and themes that have threats. [#53196]
 
-[0.6.1-alpha]: https://github.com/Automattic/jetpack-protect/compare/v0.6.0...v0.6.1-alpha
+[0.7.0-alpha]: https://github.com/Automattic/jetpack-protect/compare/v0.6.0...v0.7.0-alpha
 [0.6.0]: https://github.com/Automattic/jetpack-protect/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/Automattic/jetpack-protect/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-protect/compare/v0.3.0...v0.4.0

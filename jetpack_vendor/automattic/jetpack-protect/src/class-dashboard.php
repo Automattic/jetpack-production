@@ -33,7 +33,7 @@ class Dashboard {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '0.6.1-alpha';
+	const PACKAGE_VERSION = '0.7.0-alpha';
 
 	/**
 	 * Sidebar menu slug, shared with the Jetpack Protect plugin so the page address never changes.

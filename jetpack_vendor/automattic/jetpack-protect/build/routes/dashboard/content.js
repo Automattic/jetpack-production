@@ -578,12 +578,15 @@ __( "Checking %1$s, %2$s and your site’s files for threats.", "jetpack-protect
 __( "Checking %1$s and %2$s for vulnerabilities.", "jetpack-protect-pkg" );
 __( "You can leave this page — the scan carries on.", "jetpack-protect-pkg" );
 __( "Check again", "jetpack-protect-pkg" );
+__( "Daily vulnerability checks are off", "jetpack-protect-pkg" );
+__( "Jetpack isn’t checking WordPress, your plugins or themes for known vulnerabilities.", "jetpack-protect-pkg" );
 __( "Your last scan didn’t complete", "jetpack-protect-pkg" );
 __( "We can’t confirm your site is free of threats until a scan finishes.", "jetpack-protect-pkg" );
 __( "Your site hasn’t been checked yet", "jetpack-protect-pkg" );
 __( "Check your plugins and themes for known vulnerabilities.", "jetpack-protect-pkg" );
 __( "Your site hasn’t been scanned yet", "jetpack-protect-pkg" );
 __( "Run a scan to check your site for malware and vulnerabilities.", "jetpack-protect-pkg" );
+__( "Turn on in Settings", "jetpack-protect-pkg" );
 __( "We couldn’t check your site for vulnerabilities right now.", "jetpack-protect-pkg" );
 __( "Scan site", "jetpack-protect-pkg" );
 __( "Your last scan didn’t complete, so these results are from an earlier scan.", "jetpack-protect-pkg" );
@@ -595,7 +598,7 @@ __( "Daily malware and vulnerability checks for your files, WordPress, plugins a
 __( "Daily vulnerability checks for WordPress, plugins and themes.", "jetpack-protect-pkg" );
 __( "View scan history", "jetpack-protect-pkg" );
 _n( "View %d ignored threat", "View %d ignored threats", 1, "jetpack-protect-pkg" );
-__( "Your site is checked every day for known vulnerabilities in WordPress, plugins and themes. There’s nothing to set up.", "jetpack-protect-pkg" );
+__( "Jetpack checks WordPress, your plugins and themes against a database of known vulnerabilities.", "jetpack-protect-pkg" );
 __( "Get Scan for daily malware scanning and one-click fixes", "jetpack-protect-pkg" );
 __( "Scan checks your site for malware every day.", "jetpack-protect-pkg" );
 __( "Scan checks your site for malware every day. Auto-fix needs your server credentials to repair threats.", "jetpack-protect-pkg" );
@@ -604,6 +607,8 @@ __( "Scan checks your site for malware every day. Auto-fix uses your server cred
 __( "Scan checks your site for malware every day. Auto-fix uses server credentials to repair threats.", "jetpack-protect-pkg" );
 __( "Manage server credentials", "jetpack-protect-pkg" );
 __( "Scan", "jetpack-protect-pkg" );
+__( "Check for vulnerabilities every day", "jetpack-protect-pkg" );
+__( "Turn this off if another security plugin already checks for vulnerabilities. The firewall and login protection keep running.", "jetpack-protect-pkg" );
 __( "There’s nothing to show yet.", "jetpack-protect-pkg" );
 __( "There’s nothing to set up yet.", "jetpack-protect-pkg" );
 __( "The firewall couldn’t update its files on your server.", "jetpack-protect-pkg" );

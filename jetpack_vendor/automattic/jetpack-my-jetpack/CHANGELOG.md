@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Protect: Show Scan as off on the Protect card while the daily vulnerability check is turned off.
+
 ### Removed
 - Jetpack Manage: Remove the sidebar link. The agency dashboard is reached through Automattic for Agencies.
 
