@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Add more AI crawlers to the GEO tab, block every robots.txt name each one uses, and show those names under each toggle.
 - SEO: Turn SEO tools on for new sites, turn it off from My Jetpack only, and hide the SEO menu while it is off.
 - Settings: Note in the Security tab that Jetpack's Protect page is off while the Jetpack Protect plugin is active.
+- Site Chat: Load the chat only once a visitor interacts with the page, so it no longer slows down page loads.
 - Site Health: List the plugins using the connection, and their package versions, in the Jetpack Connection section of the Info tab.
 - Stats: open the Top posts and the other Traffic lists tall enough to show ten entries by default.
 - VideoPress: Add a Playlists tab to the dashboard to create, edit, publish and delete your video playlists.
