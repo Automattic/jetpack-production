@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Infinite Scroll: Load block styles, including layout and spacing, for posts loaded by scrolling.
 - My Jetpack: Show a lapsed Scan purchase as Expired, with a link to resume it and an expired-plan notice, instead of offering an upgrade.
 - Social: Keep posts published through Post by Email or the WordPress.com API with sharing turned off from being shared.
+- Social: Share posts published through the WordPress.com API with a list of services only to those services.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Remove the unused, hidden Scan admin page package.
