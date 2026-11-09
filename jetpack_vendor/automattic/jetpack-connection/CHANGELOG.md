@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Fixed
+- Avoid a PHP 8.6 deprecation warning about `http_build_query()` being passed an object.
+
 ## [9.17.1] - 2026-11-06
 ### Changed
 - SSO: Call Secure Sign On "WordPress.com login" in its settings section, the Users screens and the Force 2FA notice.
