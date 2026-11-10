@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Dashboard: Show the Scan site button in the page header as a primary button.
+- Update package dependencies.
 
 ## [0.6.0] - 2026-11-09
 ### Added

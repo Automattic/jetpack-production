@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Content: Add an "Always include in llms.txt" switch for pages, which lists a page first in llms.txt even when it is not in a menu.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - llms.txt: List pages from the main menu first, so they are not cut on sites with more than 50 pages.
 

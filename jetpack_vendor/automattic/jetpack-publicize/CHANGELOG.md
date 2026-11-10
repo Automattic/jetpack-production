@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Replace the deprecated ResponsiveWrapper component in the media picker.
+- Update package dependencies.
 
 ### Fixed
 - Fix the missing icon on the remove button of the default image picker.

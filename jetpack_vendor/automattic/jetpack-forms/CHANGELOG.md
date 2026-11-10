@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Show a progress indicator and a notice while exporting responses.
+- Update package dependencies.
 
 ### Fixed
 - Fix exporting to Google Sheets when a response has a very long value, and say when an export is too large for Google Sheets.

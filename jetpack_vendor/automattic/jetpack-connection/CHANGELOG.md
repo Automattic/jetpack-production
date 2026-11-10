@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Update package dependencies.
+
 ### Fixed
 - Check permissions before retrying site registration.
 - Identity Crisis: Treat site URLs whose domains differ only in capitalization as the same site.

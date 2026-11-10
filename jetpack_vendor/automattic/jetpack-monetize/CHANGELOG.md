@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add the routes and client the dashboard uses to reach WordPress.com, and a prompt to connect a WordPress.com account.
 
+### Changed
+- Update package dependencies.
+
 ## 0.1.0 - 2026-11-09
 ### Added
 - Initial version. [#54433]
