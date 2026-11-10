@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - llms.txt: List pages from the main menu first, so they are not cut on sites with more than 50 pages.
+- Show the XML sitemap switch turned on for WordPress.com Simple sites that search engines can index.
 
 ## [0.11.0] - 2026-11-09
 ### Added
