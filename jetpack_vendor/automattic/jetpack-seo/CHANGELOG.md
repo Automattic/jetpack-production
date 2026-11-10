@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - llms.txt: List pages from the main menu first, so they are not cut on sites with more than 50 pages.
 - Show site names, titles, and summaries in llms.txt as plain characters instead of HTML entities.
 - Show the XML sitemap switch turned on for WordPress.com Simple sites that search engines can index.
+- Use each post's SEO description for its llms.txt link summary when one is set.
 
 ## [0.11.0] - 2026-11-09
 ### Added
