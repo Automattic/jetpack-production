@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Show a lapsed Scan purchase as Expired, with a link to resume it and an expired-plan notice, instead of offering an upgrade.
 - Premium Analytics: Improve page transitions between reports and detail views.
 - SEO: List pages from the main menu first in llms.txt, so they are not cut on sites with more than 50 pages.
+- Social: Fix the missing icon on the remove button of the default image picker.
 - Social: Keep posts published through Post by Email or the WordPress.com API with sharing turned off from being shared.
 - Social: Share posts published through the WordPress.com API with a list of services only to those services.
 - Stats: Count visitors who have not made a consent choice on opt-out sites when a performance plugin delays the WP Consent API script.

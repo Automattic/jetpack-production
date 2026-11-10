@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.88.11-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Changed
+- Replace the deprecated ResponsiveWrapper component in the media picker.
+
+### Fixed
+- Fix the missing icon on the remove button of the default image picker.
+
 ## [0.88.10] - 2026-11-09
 ### Changed
 - Connections list: Use the design system switch for the connection toggles. [#54512]
@@ -1743,6 +1753,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.88.11-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.10...v0.88.11-alpha
 [0.88.10]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.9...v0.88.10
 [0.88.9]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.8...v0.88.9
 [0.88.8]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.7...v0.88.8
