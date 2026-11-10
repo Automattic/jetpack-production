@@ -87,8 +87,12 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-activity-log/src/class-rest-controller.php'
 	),
 	'Automattic\\Jetpack\\Admin_UI\\Admin_Menu' => array(
-		'version' => '0.14.15.0-alpha1794252447',
+		'version' => '0.14.15.0-alpha1794326518',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-admin-ui/src/class-admin-menu.php'
+	),
+	'Automattic\\Jetpack\\Admin_UI\\Admin_Shell' => array(
+		'version' => '0.14.15.0-alpha1794326518',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-admin-ui/src/class-admin-shell.php'
 	),
 	'Automattic\\Jetpack\\Agents_Manager\\Agents_Manager' => array(
 		'version' => '0.12.12.0-alpha1794326253',

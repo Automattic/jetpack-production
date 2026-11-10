@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Add an off-by-default feature flag and member registration for the admin shell, which will switch between Jetpack dashboards without a page load.
+
 ## [0.14.14] - 2026-11-09
 ### Changed
 - Internal updates.
