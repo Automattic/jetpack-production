@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Sync the setting that turns off the daily Protect vulnerability check.
 
+### Fixed
+- Prevent errors when running alongside old versions of WooCommerce.
+
 ## [5.5.1] - 2026-11-09
 ### Changed
 - Internal updates.
