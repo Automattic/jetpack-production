@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Stats abilities: Mark jetpack-stats/update-settings as destructive, since it overwrites the saved Stats settings.
+
 ### Fixed
 - Tracking pixel: Count visitors who have not made a consent choice on opt-out sites when a performance plugin delays the WP Consent API script.
 - Tracking pixel: On sites running the WP Consent API, count AMP views only after an AMP consent banner is accepted, and stop counting AMP pages without one, AMP pages not rendered by the AMP plugin, and Web Stories.
