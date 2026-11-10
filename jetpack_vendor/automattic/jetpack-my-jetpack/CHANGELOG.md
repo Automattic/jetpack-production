@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Join the admin shell, so switching to and from other Jetpack dashboards skips the page load when the admin shell flag is on.
+
 ### Changed
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account or restoring the connection from the Overview's Connection card.
 - Features: Use the shared HighlightBanner from Jetpack components for the banner above the features grid.

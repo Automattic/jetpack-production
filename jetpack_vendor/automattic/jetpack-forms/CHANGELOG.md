@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a `wp jetpack-forms export` command that exports form responses to CSV.
+- Join the admin shell, so switching to and from other Jetpack dashboards skips the page load when the admin shell flag is on.
 
 ### Changed
 - Show a progress indicator and a notice while exporting responses.
