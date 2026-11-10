@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account or restoring the connection from the Overview's Connection card.
 - Protect: Show Scan as off on the Protect card while the daily vulnerability check is turned off.
 - Return to the license screen after connecting an account from "Activate a license", and show the WordPress.com connection screen made for the site's plugins.
 
