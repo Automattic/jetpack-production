@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Date controls: Add a Last 3 years period to the date menu, charted by years, so traffic can be compared year by year without picking a custom range.
+- Date controls: Offer a yearly chart interval on any date range that covers three calendar years.
 - Single-report pages: Serve the post page from /report/post/<id>, rendered from its registered record with its three sections; the old /post/<id> address redirects.
 
 ### Changed

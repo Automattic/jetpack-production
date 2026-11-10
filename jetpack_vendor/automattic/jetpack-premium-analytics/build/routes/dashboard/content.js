@@ -18,6 +18,7 @@ __( "Last month", "jetpack-premium-analytics-pkg" );
 __( "Year to date", "jetpack-premium-analytics-pkg" );
 __( "Last 12 months", "jetpack-premium-analytics-pkg" );
 __( "Last year", "jetpack-premium-analytics-pkg" );
+__( "Last 3 years", "jetpack-premium-analytics-pkg" );
 _x( "Prev. period", "short comparison preset", "jetpack-premium-analytics-pkg" );
 _x( "Prev. period (weekday)", "short comparison preset", "jetpack-premium-analytics-pkg" );
 _x( "Prev. week", "short comparison preset", "jetpack-premium-analytics-pkg" );
