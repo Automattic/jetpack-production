@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Check permissions before retrying site registration.
+- Identity Crisis: Treat site URLs whose domains differ only in capitalization as the same site.
 
 ## [9.17.2] - 2026-11-09
 ### Fixed
