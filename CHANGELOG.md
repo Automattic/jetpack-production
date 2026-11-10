@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Show the Scan site button in the page header as a primary button.
 - Site Chat: Load the chat only once a visitor interacts with the page, so it no longer slows down page loads.
 - VideoPress: Channel search finds words spoken in videos and opens them at the matching moment.
+- VideoPress: Style the Latest Videos Playlist search, sort and length controls to match the playlist and the theme.
 
 ### Bug fixes
 - Coming Soon: Show the Coming Soon newsletter and SEO notices on sites in the private Coming Soon mode.

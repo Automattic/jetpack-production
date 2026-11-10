@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Channels: Find videos by words spoken in them, show the matching passage with its time, and open the video at that moment.
 - Keep a searchable transcript of each channel video from its edited or VideoPress caption track, rebuilt when tracks change, and add a transcript REST route.
 
+### Changed
+- Latest Videos Playlist: Style the search, sort and length controls and pagination like the playlist, with the theme's font and button styles.
+
 ## [0.62.0] - 2026-11-09
 ### Added
 - Dashboard: Add a Playlists tab to create, edit, publish and delete video playlists, with every Video Playlist block setting. [#54504]
