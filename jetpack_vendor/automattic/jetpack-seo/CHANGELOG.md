@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Content: Add an "Always include in llms.txt" switch for pages, which lists a page first in llms.txt even when it is not in a menu.
 
 ### Changed
+- llms.txt: Serve a stored copy that is rebuilt only after content or settings change, and let caches keep it for up to 15 minutes.
 - Update package dependencies.
 
 ### Fixed

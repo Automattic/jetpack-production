@@ -542,9 +542,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-seo' => array(
-            'pretty_version' => '0.12.0-alpha.1794326253',
-            'version' => '0.12.0.0-alpha1794326253',
-            'reference' => 'ca86ce54ca26ce6e33c8033cbc8c03869eae7f6f',
+            'pretty_version' => '0.12.0-alpha.1794327892',
+            'version' => '0.12.0.0-alpha1794327892',
+            'reference' => '369172966db71606e703b9ff2b9a318802965cd3',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-seo',
             'aliases' => array(),
