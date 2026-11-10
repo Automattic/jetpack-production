@@ -42,5 +42,5 @@
 		'wp-viewport',
 		'wp-wordcount'
 	),
-	'version' => '4eb981d8d43ec81225c8'
+	'version' => '581c3a013eaaaa4a3857'
 );

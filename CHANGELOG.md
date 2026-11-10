@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Site Chat: Load the chat only once a visitor interacts with the page, so it no longer slows down page loads.
 
 ### Bug fixes
+- Connection: Restore the connect button and explain what went wrong when the connection to WordPress.com fails to start.
 - Forms: Fix exporting to Google Sheets when a response has a very long value, and say when an export is too large for Google Sheets.
 - Forms: Fix running out of memory when exporting a large number of responses to CSV or Google Drive.
 - Forms: Keep text typed with a Japanese, Chinese, or Korean input method in a choice option when Enter confirms the conversion.
