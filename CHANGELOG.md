@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Show "Anonymous" for responses with no author details, and hide the IP address row when no IP was recorded.
 - Infinite Scroll: Load block styles, including layout and spacing, for posts loaded by scrolling.
 - My Jetpack: Show a lapsed Scan purchase as Expired, with a link to resume it and an expired-plan notice, instead of offering an upgrade.
+- Premium Analytics: Improve page transitions between reports and detail views.
 - Social: Keep posts published through Post by Email or the WordPress.com API with sharing turned off from being shared.
 - Social: Share posts published through the WordPress.com API with a list of services only to those services.
 - Stats: Count visitors who have not made a consent choice on opt-out sites when a performance plugin delays the WP Consent API script.
