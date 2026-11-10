@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Blocks: Store the empty list of excluded blocks so sites without a persistent object cache skip a database query on every page load.
+- Modules: Improve performance by gating memory-intensive processes.
 - Remove the unused, hidden Scan admin page package.
 - Sites API: Report no setup guidance for WordPress.com sites created after the no-guidance cutoff.
 - Stats: Mark the jetpack-stats/update-settings ability as destructive, since it overwrites the saved Stats settings.
