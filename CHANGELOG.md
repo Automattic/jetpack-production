@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Show a lapsed Scan purchase as Expired, with a link to resume it and an expired-plan notice, instead of offering an upgrade.
 - Premium Analytics: Improve page transitions between reports and detail views.
 - SEO: List pages from the main menu first in llms.txt, so they are not cut on sites with more than 50 pages.
+- SEO: Show site names, titles, and summaries in llms.txt as plain characters instead of HTML entities.
 - SEO: Use the posts page's own SEO description, excerpt, and title in its meta and Open Graph tags.
 - Social: Fix the missing icon on the remove button of the default image picker.
 - Social: Keep posts published through Post by Email or the WordPress.com API with sharing turned off from being shared.
