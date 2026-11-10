@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Report how far along a running speed test is, estimated from how long the site's recent runs took.
 
+### Changed
+- Return the new speed scores as soon as they are ready, using the previous comparison score until the run without Boost finishes.
+
 ## [0.6.2] - 2026-11-02
 ### Fixed
 - Keep one score record per page, so a test started from any screen updates the score shown on the others. [#54347]
