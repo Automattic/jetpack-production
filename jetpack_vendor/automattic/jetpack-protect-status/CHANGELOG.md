@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Add a setting that turns off the daily vulnerability check on sites without Scan.
 - Add a shared check for whether the request is for the Protect page.
 
+### Fixed
+- Recognize Scan licenses from Automattic for Agencies as owning Scan.
+
 ## [0.10.2] - 2026-11-09
 ### Changed
 - Expose the Scan product slug prefix so other packages can share it. [#54590]
