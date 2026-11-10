@@ -22,7 +22,7 @@
 		"automattic/jetpack-backup": "^5.2.5-alpha",
 		"automattic/jetpack-blaze": "^0.29.16-alpha",
 		"automattic/jetpack-blocks": "^4.0.1",
-		"automattic/jetpack-boost-speed-score": "^0.6.2",
+		"automattic/jetpack-boost-speed-score": "^0.7.0-alpha",
 		"automattic/jetpack-classic-theme-helper": "^0.15.13-alpha",
 		"automattic/jetpack-comments": "^0.9.1-alpha",
 		"automattic/jetpack-compat": "^5.0.1",

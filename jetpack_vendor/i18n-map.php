@@ -46,7 +46,7 @@ return array(
     ),
     'jetpack-boost-speed-score' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-boost-speed-score',
-      'ver' => '0.6.2',
+      'ver' => '0.7.0-alpha1794329593',
     ),
     'jetpack-classic-theme-helper' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-classic-theme-helper',

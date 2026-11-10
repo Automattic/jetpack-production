@@ -146,9 +146,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-boost-speed-score' => array(
-            'pretty_version' => '0.6.2',
-            'version' => '0.6.2.0',
-            'reference' => '5c877c3311107da22da18a34a4fa01930ebdbc0b',
+            'pretty_version' => '0.7.0-alpha.1794329593',
+            'version' => '0.7.0.0-alpha1794329593',
+            'reference' => '5386d2f438b82d56f0bb83c2700ae13493cafb62',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-boost-speed-score',
             'aliases' => array(),
@@ -391,7 +391,7 @@
         'automattic/jetpack-my-jetpack' => array(
             'pretty_version' => '6.18.0-alpha.1794326253',
             'version' => '6.18.0.0-alpha1794326253',
-            'reference' => '8619ce864930627923f953689d3e5924827c77fe',
+            'reference' => 'c8109c5b6cd3e1a2ff536cf7966208174beefa21',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-my-jetpack',
             'aliases' => array(),
