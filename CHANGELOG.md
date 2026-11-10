@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Let sites without Scan turn off the daily vulnerability check from Settings.
 - Protect: Show the Scan site button in the page header as a primary button.
 - Site Chat: Load the chat only once a visitor interacts with the page, so it no longer slows down page loads.
+- VideoPress: Channel search finds words spoken in videos and opens them at the matching moment.
 
 ### Bug fixes
 - Connection: Restore the connect button and explain what went wrong when the connection to WordPress.com fails to start.

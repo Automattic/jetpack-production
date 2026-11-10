@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Channels: Find videos by words spoken in them, show the matching passage with its time, and open the video at that moment.
 - Keep a searchable transcript of each channel video from its edited or VideoPress caption track, rebuilt when tracks change, and add a transcript REST route.
 
 ## [0.62.0] - 2026-11-09
