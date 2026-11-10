@@ -738,6 +738,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_5_a_2
         'Automattic\\Jetpack\\VideoPress\\Site' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-site.php',
         'Automattic\\Jetpack\\VideoPress\\Stats' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-stats.php',
         'Automattic\\Jetpack\\VideoPress\\Status' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-status.php',
+        'Automattic\\Jetpack\\VideoPress\\Transcript_Index' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-transcript-index.php',
         'Automattic\\Jetpack\\VideoPress\\Upload_Exception' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-upload-exception.php',
         'Automattic\\Jetpack\\VideoPress\\Uploader' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader.php',
         'Automattic\\Jetpack\\VideoPress\\Uploader_Rest_Endpoints' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader-rest-endpoints.php',

@@ -707,6 +707,7 @@ return array(
     'Automattic\\Jetpack\\VideoPress\\Site' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-site.php',
     'Automattic\\Jetpack\\VideoPress\\Stats' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-stats.php',
     'Automattic\\Jetpack\\VideoPress\\Status' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-status.php',
+    'Automattic\\Jetpack\\VideoPress\\Transcript_Index' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-transcript-index.php',
     'Automattic\\Jetpack\\VideoPress\\Upload_Exception' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-upload-exception.php',
     'Automattic\\Jetpack\\VideoPress\\Uploader' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader.php',
     'Automattic\\Jetpack\\VideoPress\\Uploader_Rest_Endpoints' => $baseDir . '/jetpack_vendor/automattic/jetpack-videopress/src/class-uploader-rest-endpoints.php',
