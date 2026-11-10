@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Channel search finds words spoken in videos and opens them at the matching moment.
 
 ### Bug fixes
+- Coming Soon: Show the Coming Soon newsletter and SEO notices on sites in the private Coming Soon mode.
 - Connection: Restore the connect button and explain what went wrong when the connection to WordPress.com fails to start.
 - Forms: Fix exporting to Google Sheets when a response has a very long value, and say when an export is too large for Google Sheets.
 - Forms: Fix running out of memory when exporting a large number of responses to CSV or Google Drive.

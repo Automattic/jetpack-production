@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.1.2-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Detect sites in WordPress.com's private Coming Soon mode.
+
 ## [7.1.1] - 2026-10-20
 ### Changed
 - Internal updates.
@@ -603,6 +610,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Packages: Introduce a status package
 
+[7.1.2-alpha]: https://github.com/Automattic/jetpack-status/compare/v7.1.1...v7.1.2-alpha
 [7.1.1]: https://github.com/Automattic/jetpack-status/compare/v7.1.0...v7.1.1
 [7.1.0]: https://github.com/Automattic/jetpack-status/compare/v7.0.2...v7.1.0
 [7.0.2]: https://github.com/Automattic/jetpack-status/compare/v7.0.1...v7.0.2
