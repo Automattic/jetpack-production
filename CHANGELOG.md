@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Group the AI crawler toggles so screen readers announce each group and its description.
 - SEO: List pages from the main menu first in llms.txt, so they are not cut on sites with more than 50 pages.
 - SEO: Show site names, titles, and summaries in llms.txt as plain characters instead of HTML entities.
+- SEO: Stop listing theme and page builder layout post types, such as Kadence Elements, in llms.txt, the SEO page and the SEO columns on post lists.
 - SEO: Use each post's SEO description for its llms.txt link summary when one is set.
 - SEO: Use the posts page's own SEO description, excerpt, and title in its meta and Open Graph tags.
 - Social: Fix the missing icon on the remove button of the default image picker.
