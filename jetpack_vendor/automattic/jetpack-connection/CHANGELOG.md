@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [9.17.3-alpha] - unreleased
+## [9.18.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- SSO: Add SSO::init_standalone() so plugins other than Jetpack can offer SSO.
 
 ### Changed
 - Update package dependencies.
@@ -2246,7 +2249,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.17.3-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.17.2...v9.17.3-alpha
+[9.18.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.17.2...v9.18.0-alpha
 [9.17.2]: https://github.com/Automattic/jetpack-connection/compare/v9.17.1...v9.17.2
 [9.17.1]: https://github.com/Automattic/jetpack-connection/compare/v9.17.0...v9.17.1
 [9.17.0]: https://github.com/Automattic/jetpack-connection/compare/v9.16.2...v9.17.0

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a settings route so the dashboard works without the Jetpack plugin.
 - Scan: Let sites without Scan turn off the daily vulnerability check from Settings.
 
 ### Changed

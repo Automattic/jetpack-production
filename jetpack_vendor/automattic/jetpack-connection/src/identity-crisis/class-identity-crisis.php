@@ -760,7 +760,7 @@ class Identity_Crisis {
 	 * @return WP_Error|string
 	 * @since 0.2.0
 	 * @since-jetpack 4.4.0
-	 * @since 9.17.3-alpha Lowercases the host.
+	 * @since 9.18.0-alpha Lowercases the host.
 	 */
 	public static function normalize_url_protocol_agnostic( $url ) {
 		$parsed_url = wp_parse_url( trailingslashit( esc_url_raw( $url ) ) );
