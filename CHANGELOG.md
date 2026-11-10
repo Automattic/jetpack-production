@@ -20,6 +20,9 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Channel search finds words spoken in videos and opens them at the matching moment.
 - VideoPress: Style the Latest Videos Playlist search, sort and length controls to match the playlist and the theme.
 
+### Improved compatibility
+- Random Redirect: Defer to WordPress core's random content redirects on WordPress 7.2 and later.
+
 ### Bug fixes
 - Coming Soon: Show the Coming Soon newsletter and SEO notices on sites in the private Coming Soon mode.
 - Connection: Restore the connect button and explain what went wrong when the connection to WordPress.com fails to start.
