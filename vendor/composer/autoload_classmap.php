@@ -494,6 +494,7 @@ return array(
     'Automattic\\Jetpack\\SEO\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-initializer.php',
     'Automattic\\Jetpack\\SEO\\Llms_Txt' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-llms-txt.php',
     'Automattic\\Jetpack\\SEO\\Local_Business_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-local-business-schema-node.php',
+    'Automattic\\Jetpack\\SEO\\Nav_Menu_Pages' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-nav-menu-pages.php',
     'Automattic\\Jetpack\\SEO\\Organization_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-organization-schema-node.php',
     'Automattic\\Jetpack\\SEO\\Post_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-post-schema-node.php',
     'Automattic\\Jetpack\\SEO\\Post_Types' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-post-types.php',

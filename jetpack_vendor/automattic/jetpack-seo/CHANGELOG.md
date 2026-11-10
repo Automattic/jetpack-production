@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.12.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Content: Add an "Always include in llms.txt" switch for pages, which lists a page first in llms.txt even when it is not in a menu.
+
+### Fixed
+- llms.txt: List pages from the main menu first, so they are not cut on sites with more than 50 pages.
+
 ## [0.11.0] - 2026-11-09
 ### Added
 - GEO: Add more AI crawlers, block every robots.txt name each one uses, and show those names under each toggle. [#54321]
@@ -251,6 +261,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Create a Settings screen with site visibility, post title structure, front-page description, and site verification. [#49256]
 - Scaffold the new `jetpack-seo` package and mount its admin page. [#49203]
 
+[0.12.0-alpha]: https://github.com/Automattic/jetpack-seo/compare/0.11.0...0.12.0-alpha
 [0.11.0]: https://github.com/Automattic/jetpack-seo/compare/0.10.3...0.11.0
 [0.10.3]: https://github.com/Automattic/jetpack-seo/compare/0.10.2...0.10.3
 [0.10.2]: https://github.com/Automattic/jetpack-seo/compare/0.10.1...0.10.2

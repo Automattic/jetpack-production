@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Serve the post page from /report/post/<id>; the old /post/<id> address redirects.
 - Protect: Let sites without Scan turn off the daily vulnerability check from Settings.
 - Protect: Show the Scan site button in the page header as a primary button.
+- SEO: Add an "Always include in llms.txt" switch for pages, which lists a page first in llms.txt even when it is not in a menu.
 - Site Chat: Load the chat only once a visitor interacts with the page, so it no longer slows down page loads.
 - VideoPress: Channel search finds words spoken in videos and opens them at the matching moment.
 - VideoPress: Style the Latest Videos Playlist search, sort and length controls to match the playlist and the theme.
@@ -28,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Infinite Scroll: Load block styles, including layout and spacing, for posts loaded by scrolling.
 - My Jetpack: Show a lapsed Scan purchase as Expired, with a link to resume it and an expired-plan notice, instead of offering an upgrade.
 - Premium Analytics: Improve page transitions between reports and detail views.
+- SEO: List pages from the main menu first in llms.txt, so they are not cut on sites with more than 50 pages.
 - Social: Keep posts published through Post by Email or the WordPress.com API with sharing turned off from being shared.
 - Social: Share posts published through the WordPress.com API with a list of services only to those services.
 - Stats: Count visitors who have not made a consent choice on opt-out sites when a performance plugin delays the WP Consent API script.

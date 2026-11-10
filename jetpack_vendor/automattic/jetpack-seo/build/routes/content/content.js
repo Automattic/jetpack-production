@@ -201,6 +201,8 @@ __( "Meta description set", "jetpack-seo" );
 __( "Search", "jetpack-seo" );
 __( "Search visibility", "jetpack-seo" );
 __( "Search engine preview", "jetpack-seo" );
+__( "While llms.txt is on, lists this page first, even if it isn’t in a menu.", "jetpack-seo" );
+__( "Pages hidden from search engines are left out of llms.txt.", "jetpack-seo" );
 __( "Saving…", "jetpack-seo" );
 __( "SEO updated.", "jetpack-seo" );
 __( "Could not save. Please try again.", "jetpack-seo" );
@@ -209,5 +211,6 @@ __( "Overrides the title search engines show. Leave blank to use the post title.
 __( "The summary search engines may show under the title.", "jetpack-seo" );
 __( "Hide from search engines", "jetpack-seo" );
 __( "Adds a noindex directive and excludes this content from the sitemap.", "jetpack-seo" );
+__( "Always include in llms.txt", "jetpack-seo" );
 __( "Cancel", "jetpack-seo" );
 __( "Save", "jetpack-seo" );

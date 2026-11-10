@@ -525,6 +525,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_5_a_2
         'Automattic\\Jetpack\\SEO\\Initializer' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-initializer.php',
         'Automattic\\Jetpack\\SEO\\Llms_Txt' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-llms-txt.php',
         'Automattic\\Jetpack\\SEO\\Local_Business_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-local-business-schema-node.php',
+        'Automattic\\Jetpack\\SEO\\Nav_Menu_Pages' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-nav-menu-pages.php',
         'Automattic\\Jetpack\\SEO\\Organization_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-organization-schema-node.php',
         'Automattic\\Jetpack\\SEO\\Post_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-post-schema-node.php',
         'Automattic\\Jetpack\\SEO\\Post_Types' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-post-types.php',
