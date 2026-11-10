@@ -613,6 +613,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_5_a_2
         'Automattic\\Jetpack\\Sharing_Likes\\Share_Destination' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/class-share-destination.php',
         'Automattic\\Jetpack\\Shortcodes' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-post-media/src/class-shortcodes.php',
         'Automattic\\Jetpack\\SignatureInvalidException' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-jwt/src/class-jwt.php',
+        'Automattic\\Jetpack\\Stats\\AMP_Consent_Sanitizer' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-stats/src/class-amp-consent-sanitizer.php',
         'Automattic\\Jetpack\\Stats\\Abilities\\Stats_Abilities' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-stats/src/abilities/class-stats-abilities.php',
         'Automattic\\Jetpack\\Stats\\Main' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-stats/src/class-main.php',
         'Automattic\\Jetpack\\Stats\\Options' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-stats/src/class-options.php',

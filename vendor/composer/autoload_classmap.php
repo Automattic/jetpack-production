@@ -582,6 +582,7 @@ return array(
     'Automattic\\Jetpack\\Sharing_Likes\\Share_Destination' => $baseDir . '/jetpack_vendor/automattic/jetpack-sharing-likes/src/class-share-destination.php',
     'Automattic\\Jetpack\\Shortcodes' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-shortcodes.php',
     'Automattic\\Jetpack\\SignatureInvalidException' => $baseDir . '/jetpack_vendor/automattic/jetpack-jwt/src/class-jwt.php',
+    'Automattic\\Jetpack\\Stats\\AMP_Consent_Sanitizer' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-amp-consent-sanitizer.php',
     'Automattic\\Jetpack\\Stats\\Abilities\\Stats_Abilities' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/abilities/class-stats-abilities.php',
     'Automattic\\Jetpack\\Stats\\Main' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-main.php',
     'Automattic\\Jetpack\\Stats\\Options' => $baseDir . '/jetpack_vendor/automattic/jetpack-stats/src/class-options.php',

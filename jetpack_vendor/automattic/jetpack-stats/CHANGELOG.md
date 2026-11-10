@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Tracking pixel: Count visitors who have not made a consent choice on opt-out sites when a performance plugin delays the WP Consent API script.
+- Tracking pixel: On sites running the WP Consent API, count AMP views only after an AMP consent banner is accepted, and stop counting AMP pages without one, AMP pages not rendered by the AMP plugin, and Web Stories.
 
 ## [0.24.1] - 2026-11-09
 ### Fixed
