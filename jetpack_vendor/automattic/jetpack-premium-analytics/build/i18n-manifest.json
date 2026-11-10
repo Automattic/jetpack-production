@@ -10,8 +10,6 @@
 		"build/routes/author-detail/route.js",
 		"build/routes/connect/content.js",
 		"build/routes/dashboard/content.js",
-		"build/routes/post-detail/content.js",
-		"build/routes/post-detail/route.js",
 		"build/routes/reports/content.js",
 		"build/routes/reports/route.js",
 		"build/routes/single-report/content.js",

@@ -33,7 +33,7 @@ return array(
 		'path'        => '/post/$postId',
 		'page'        => 'jetpack-premium-analytics',
 		'has_route'   => true,
-		'has_content' => true,
+		'has_content' => false,
 	),
 	array(
 		'name'        => 'reports',

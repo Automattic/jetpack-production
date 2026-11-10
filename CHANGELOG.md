@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Show a progress indicator and a notice while exporting responses.
 - Jetpack Manage: Remove the sidebar link. The agency dashboard is reached through Automattic for Agencies.
 - My Jetpack: Return to the license screen after you connect your account from "Activate a license", and show the WordPress.com connection screen made for your site's plugins.
+- Premium Analytics: Serve the post page from /report/post/<id>; the old /post/<id> address redirects.
 - Protect: Let sites without Scan turn off the daily vulnerability check from Settings.
 - Protect: Show the Scan site button in the page header as a primary button.
 - Site Chat: Load the chat only once a visitor interacts with the page, so it no longer slows down page loads.
