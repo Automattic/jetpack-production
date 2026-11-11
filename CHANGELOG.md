@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Keep text typed with a Japanese, Chinese, or Korean input method in a choice option when Enter confirms the conversion.
 - Forms: Show "Anonymous" for responses with no author details, and hide the IP address row when no IP was recorded.
 - Infinite Scroll: Load block styles, including layout and spacing, for posts loaded by scrolling.
+- My Jetpack: Fill checked checkboxes in the Features list with the selected filter's color, show their focus ring only for keyboard focus, and show one focus ring per control instead of two.
 - My Jetpack: Show a lapsed Scan purchase as Expired, with a link to resume it and an expired-plan notice, instead of offering an upgrade.
 - Premium Analytics: Improve page transitions between reports and detail views.
 - SEO: Group the AI crawler toggles so screen readers announce each group and its description.
