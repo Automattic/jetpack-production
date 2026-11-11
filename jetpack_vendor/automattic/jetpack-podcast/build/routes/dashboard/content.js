@@ -436,6 +436,8 @@ __( "Add a podcast title in Settings first", "jetpack-podcast" );
 __( "Podcast RSS feed URL", "jetpack-podcast" );
 _n( "%d step left before you can submit", "%d steps left before you can submit", 1, "jetpack-podcast" );
 _n( "%d step left to finish your podcast setup", "%d steps left to finish your podcast setup", 1, "jetpack-podcast" );
+__( "Your site is unlaunched, private, or hidden from search engines. Check your site visibility before submitting your feed to podcast directories.", "jetpack-podcast" );
+__( "Edit site visibility", "jetpack-podcast" );
 __( "Edit settings", "jetpack-podcast" );
 __( "Submit your podcast to the most popular podcast apps so people can find and follow it.", "jetpack-podcast" );
 __( "Automatic submission", "jetpack-podcast" );

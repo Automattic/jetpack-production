@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Distribution: Warn about unlaunched sites and sites hidden from search engines.
+
 ## [2.2.6] - 2026-11-09
 ### Changed
 - Update package dependencies. [#54391] [#54512]
