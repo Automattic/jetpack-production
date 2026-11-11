@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Abilities: Declare the nested Stats result fields in each output schema, and remove the result-shape sentences from the ability descriptions.
 - Stats abilities: Mark jetpack-stats/update-settings as destructive, since it overwrites the saved Stats settings.
 
 ### Fixed
