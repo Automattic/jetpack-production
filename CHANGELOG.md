@@ -48,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Improve page transitions between reports and detail views.
 - SEO: Group the AI crawler toggles so screen readers announce each group and its description.
 - SEO: List pages from the main menu first in llms.txt, so they are not cut on sites with more than 50 pages.
+- SEO: Omit separate first and last profile names from structured data and Open Graph metadata.
 - SEO: Show apostrophes, quotes, and ampersands as characters instead of HTML entities in schema markup.
 - SEO: Show site names, titles, and summaries in llms.txt as plain characters instead of HTML entities.
 - SEO: Stop listing theme and page builder layout post types, such as Kadence Elements, in llms.txt, the SEO page and the SEO columns on post lists.
