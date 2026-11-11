@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Add a `wp jetpack-forms export` command that exports form responses to CSV.
 - Forms: Show a progress indicator and a notice while exporting responses.
 - Jetpack Manage: Remove the sidebar link. The agency dashboard is reached through Automattic for Agencies.
+- My Jetpack: Highlight expiring and expired plans in the account panel under your avatar, list them first with a renew link, and show other plans as active until their renewal date.
 - My Jetpack: Return to the license screen after you connect your account from "Activate a license", and show the WordPress.com connection screen made for your site's plugins.
 - Premium Analytics: Add a Last 3 years period to the date menu, charted by years, so traffic can be compared year by year without picking a custom range.
 - Premium Analytics: Offer a yearly chart interval on any date range that covers three calendar years.
