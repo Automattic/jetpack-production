@@ -12,9 +12,11 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add an off-by-default feature flag and member registration for the admin shell, which will switch between Jetpack dashboards without a page load.
 - Add the admin shell client and its guest endpoint, so Jetpack dashboards can switch without a page load when the admin shell flag is on.
+- Admin shell: Let members ask for the media library, so it works when their page opens inside another dashboard.
 
 ### Fixed
 - Admin shell: Move focus to the page heading, announce the page, and close a hidden page's dialogs on in-shell switches.
+- Admin shell: Stop REST requests from retrying without end after the nonce expires on a page that loaded another dashboard.
 
 ## [0.14.14] - 2026-11-09
 ### Changed

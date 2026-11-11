@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a settings route so the dashboard works without the Jetpack plugin.
+- Join the admin shell, so switching to and from other Jetpack dashboards skips the page load when the admin shell flag is on.
 - Scan: Let sites without Scan turn off the daily vulnerability check from Settings.
 
 ### Changed
