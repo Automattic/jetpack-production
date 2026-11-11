@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Improved compatibility
 - Random Redirect: Defer to WordPress core's random content redirects on WordPress 7.2 and later.
+- Twenty Fourteen: Stop the Ephemera widget from adding a second Related Posts section to single posts.
 
 ### Bug fixes
 - Coming Soon: Show the Coming Soon newsletter and SEO notices on sites in the private Coming Soon mode.
