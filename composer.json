@@ -38,7 +38,7 @@
 		"automattic/jetpack-forms": "^8.4.0-alpha",
 		"automattic/jetpack-image-cdn": "^0.8.5",
 		"automattic/jetpack-import": "^0.10.1",
-		"automattic/jetpack-ip": "^0.7.1",
+		"automattic/jetpack-ip": "^0.8.0-alpha",
 		"automattic/jetpack-jitm": "^5.1.9",
 		"automattic/jetpack-knowledge": "^0.1.1",
 		"automattic/jetpack-licensing": "^4.1.1",

@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Twenty Fourteen: Stop the Ephemera widget from adding a second Related Posts section to single posts.
 
 ### Bug fixes
+- Brute Force Protection: Allow the feature to turn on when the configured trusted IP header is empty or holds no valid address.
 - Coming Soon: Show the Coming Soon newsletter and SEO notices on sites in the private Coming Soon mode.
 - Connection: Keep the progress indicator on screen after clicking Restore Connection until the redirect to WordPress.com.
 - Connection: Restore the connect button and explain what went wrong when the connection to WordPress.com fails to start.

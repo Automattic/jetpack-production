@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Dashboard: Show the Scan site button in the page header as a primary button.
+- Firewall and Login protection: Hide the add-my-IP suggestion when the configured trusted IP header cannot be resolved.
 - Update package dependencies.
 
 ## [0.6.0] - 2026-11-09
