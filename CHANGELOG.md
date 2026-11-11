@@ -43,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - JSON API: Fix a fatal error on PHP 8 when an endpoint documents a field without a type.
 - My Jetpack: Fill checked checkboxes in the Features list with the selected filter's color, show their focus ring only for keyboard focus, and show one focus ring per control instead of two.
 - My Jetpack: Show a lapsed Scan purchase as Expired, with a link to resume it and an expired-plan notice, instead of offering an upgrade.
+- Newsletter: Harden the Subscribers list against a numeric display name in the API response.
 - Open Graph Meta tags: Add video tags for posts that use a VideoPress or Video block, so shared links can play the video.
 - Podcast: Warn about unlaunched sites and sites hidden from search engines.
 - Premium Analytics: Improve page transitions between reports and detail views.

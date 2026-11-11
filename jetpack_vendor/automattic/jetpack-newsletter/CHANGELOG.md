@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Subscribers: Keep the list working when the API returns a display name as a number.
+
 ## [0.18.5] - 2026-11-09
 ### Changed
 - Update package dependencies. [#54391] [#54512]
