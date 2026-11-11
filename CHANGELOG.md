@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add a Last 3 years period to the date menu, charted by years, so traffic can be compared year by year without picking a custom range.
 - Premium Analytics: Offer a yearly chart interval on any date range that covers three calendar years.
 - Premium Analytics: Serve the post page from /report/post/<id>; the old /post/<id> address redirects.
+- Premium Analytics: Show the first Stats v2 widgets sooner.
 - Protect: Let sites without Scan turn off the daily vulnerability check from Settings.
 - Protect: Show the Scan site button in the page header as a primary button.
 - SEO: Add an "Always include in llms.txt" switch for pages, which lists a page first in llms.txt even when it is not in a menu.

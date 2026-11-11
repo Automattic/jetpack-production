@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Single-report pages: Serve the post page from /report/post/<id>, rendered from its registered record with its three sections; the old /post/<id> address redirects.
 
 ### Changed
+- Dashboard: Preload the open screen's code and the first REST responses, so the first widgets appear sooner.
 - Update package dependencies.
 
 ### Fixed
