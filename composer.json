@@ -56,7 +56,7 @@
 		"automattic/jetpack-post-media": "^0.3.3",
 		"automattic/jetpack-premium-analytics": "^0.18.0-alpha",
 		"automattic/jetpack-protect": "^0.7.0-alpha",
-		"automattic/jetpack-publicize": "^0.88.11-alpha",
+		"automattic/jetpack-publicize": "^0.89.0-alpha",
 		"automattic/jetpack-redirect": "^4.0.1",
 		"automattic/jetpack-roles": "^4.0.1",
 		"automattic/jetpack-search": "^8.4.3-alpha",

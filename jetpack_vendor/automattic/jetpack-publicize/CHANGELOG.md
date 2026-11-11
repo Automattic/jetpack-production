@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.88.11-alpha] - unreleased
+## [0.89.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Block editor: Add a "Social preview" item to the Preview dropdown that opens the link preview.
 
 ### Changed
 - Replace the deprecated ResponsiveWrapper component in the media picker.
@@ -1754,7 +1757,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.88.11-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.10...v0.88.11-alpha
+[0.89.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.10...v0.89.0-alpha
 [0.88.10]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.9...v0.88.10
 [0.88.9]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.8...v0.88.9
 [0.88.8]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.7...v0.88.8
