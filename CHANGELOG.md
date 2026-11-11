@@ -59,6 +59,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Mark the jetpack-stats/update-settings ability as destructive, since it overwrites the saved Stats settings.
 - Update package dependencies.
 - VideoPress: Start the transcript index on WordPress.com as well.
+- WPCOM JSON API: Load post meta for a media list page in a single cache request.
 
 ## 16.5-a.1 - 2026-11-09
 ### Enhancements
