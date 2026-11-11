@@ -3027,59 +3027,63 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-waf/src/class-waf-transforms.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Analytics_Dashboard' => array(
-		'version' => '0.3.4.0-alpha1794326253',
+		'version' => '0.3.4.0-alpha1794390985',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-analytics-dashboard.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Api_Proxy_Controller' => array(
-		'version' => '0.3.4.0-alpha1794326253',
+		'version' => '0.3.4.0-alpha1794390985',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-api-proxy-controller.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Lookup_Data_Backfill' => array(
-		'version' => '0.3.4.0-alpha1794326253',
+		'version' => '0.3.4.0-alpha1794390985',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-lookup-data-backfill.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Default_Reports' => array(
-		'version' => '0.3.4.0-alpha1794326253',
+		'version' => '0.3.4.0-alpha1794390985',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/class-default-reports.php'
 	),
+	'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Report_Capability' => array(
+		'version' => '0.3.4.0-alpha1794390985',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/interface-report-capability.php'
+	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Report_Definition' => array(
-		'version' => '0.3.4.0-alpha1794326253',
+		'version' => '0.3.4.0-alpha1794390985',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/class-report-definition.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Report_Executor' => array(
-		'version' => '0.3.4.0-alpha1794326253',
+		'version' => '0.3.4.0-alpha1794390985',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/class-report-executor.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Report_Handler' => array(
-		'version' => '0.3.4.0-alpha1794326253',
+		'version' => '0.3.4.0-alpha1794390985',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/interface-report-handler.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Report_Provider' => array(
-		'version' => '0.3.4.0-alpha1794326253',
+		'version' => '0.3.4.0-alpha1794390985',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/interface-report-provider.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Report_Registry' => array(
-		'version' => '0.3.4.0-alpha1794326253',
+		'version' => '0.3.4.0-alpha1794390985',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/class-report-registry.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Report_Request' => array(
-		'version' => '0.3.4.0-alpha1794326253',
+		'version' => '0.3.4.0-alpha1794390985',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/class-report-request.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Wpcom_Forward_Handler' => array(
-		'version' => '0.3.4.0-alpha1794326253',
+		'version' => '0.3.4.0-alpha1794390985',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/wpcom/class-wpcom-forward-handler.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Wpcom_Report_Provider' => array(
-		'version' => '0.3.4.0-alpha1794326253',
+		'version' => '0.3.4.0-alpha1794390985',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/wpcom/class-wpcom-report-provider.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Store_Currency' => array(
-		'version' => '0.3.4.0-alpha1794326253',
+		'version' => '0.3.4.0-alpha1794390985',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-store-currency.php'
 	),
 	'Automattic\\Jetpack\\WooCommerceStats\\Sync_Configuration' => array(
-		'version' => '0.3.4.0-alpha1794326253',
+		'version' => '0.3.4.0-alpha1794390985',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-sync-configuration.php'
 	),
 	'Automattic\\Jetpack\\WordAds\\Analytics_Dashboard' => array(

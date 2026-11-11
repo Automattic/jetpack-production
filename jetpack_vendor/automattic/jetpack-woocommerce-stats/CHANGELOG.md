@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Reports: Describe the fields of the orders by date and sessions by device reports, let callers name the fields they read, and name the provider and contract in response headers.
+
 ### Changed
 - Update package dependencies.
 

@@ -793,6 +793,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_5_a_2
         'Automattic\\Jetpack\\WooCommerceStats\\Api_Proxy_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-api-proxy-controller.php',
         'Automattic\\Jetpack\\WooCommerceStats\\Lookup_Data_Backfill' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/class-lookup-data-backfill.php',
         'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Default_Reports' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/class-default-reports.php',
+        'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Report_Capability' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/interface-report-capability.php',
         'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Report_Definition' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/class-report-definition.php',
         'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Report_Executor' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/class-report-executor.php',
         'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Report_Handler' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/interface-report-handler.php',
