@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fix the comment editor's leftover placeholder on empty lines, doubled focus ring, missing caret after Reply, and gaps from empty paragraphs, and stop the page jumping as the form loads and the editor opens.
+
 ## [0.9.0] - 2026-11-09
 ### Added
 - Let a host pass the comment editor a fetcher for embed previews, so it can sign the request in. [#54664]
