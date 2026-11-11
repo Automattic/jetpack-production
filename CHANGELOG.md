@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Serve a stored copy of llms.txt that is rebuilt only after content or settings change, and let caches keep it for up to 15 minutes.
 - Site Chat: Load the chat only once a visitor interacts with the page, so it no longer slows down page loads.
 - Social: Add a "Social preview" item to the editor's Preview dropdown.
+- Social: Allow WebP background images in Social Image Generator.
 - VideoPress: Channel search finds words spoken in videos and opens them at the matching moment.
 - VideoPress: Style the Latest Videos Playlist search, sort and length controls to match the playlist and the theme.
 

@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Replace the deprecated ResponsiveWrapper component in the media picker.
+- Social Image Generator: Allow WebP background images.
 - Update package dependencies.
 
 ### Fixed
