@@ -68,6 +68,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack AI: Use the shared HighlightBanner from Jetpack components for the dark green banners.
 - Jetpack Social: Only register the deprecated connection test results REST endpoint when Jetpack Social is available.
 - Modules: Improve performance by gating memory-intensive processes.
+- Monetize: Add the Ads settings to a Settings tab on the Monetize page, behind the Monetize dashboard flag.
 - Remove the unused, hidden Scan admin page package.
 - Sites API: Report no setup guidance for WordPress.com sites created after the no-guidance cutoff.
 - Stats: Mark the jetpack-stats/update-settings ability as destructive, since it overwrites the saved Stats settings.

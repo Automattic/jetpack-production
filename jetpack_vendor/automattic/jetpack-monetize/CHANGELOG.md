@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a Settings tab with the Ads settings, behind the Monetize dashboard flag.
 - Add the routes and client the dashboard uses to reach WordPress.com, and a prompt to connect a WordPress.com account.
 
 ### Changed
