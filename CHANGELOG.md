@@ -72,6 +72,7 @@ This is an alpha version! The changes listed here are not final.
 - Monetize: Add the Ads settings to a Settings tab on the Monetize page, behind the Monetize dashboard flag.
 - Remove the unused, hidden Scan admin page package.
 - Sites API: Report no setup guidance for WordPress.com sites created after the no-guidance cutoff.
+- Site settings API: Let `wpcom_ai_launchpad_enabled` be turned on, so a signup flow can give a new site the AI Launchpad after checkout.
 - Stats: Mark the jetpack-stats/update-settings ability as destructive, since it overwrites the saved Stats settings.
 - Update package dependencies.
 - VideoPress: Start the transcript index on WordPress.com as well.
