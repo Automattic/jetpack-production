@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Distribution: Warn about unlaunched sites and sites hidden from search engines.
+- Post-publish podcast promo: Keep the close button visible against the modal's header.
 
 ## [2.2.6] - 2026-11-09
 ### Changed
