@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the Top locations views as one-click toggles instead of a dropdown.
 - Protect: Let sites without Scan turn off the daily vulnerability check from Settings.
 - Protect: Show the Scan site button in the page header as a primary button.
+- SEO: Add a default share image setting and fix blank or unsupported sharing images.
 - SEO: Add an "Always include in llms.txt" switch for pages, which lists a page first in llms.txt even when it is not in a menu.
 - SEO: Add a `jetpack_seo_llms_txt` filter so themes and plugins can add their own sections to llms.txt.
 - SEO: Add the `jetpack_seo_llms_txt_cleared` action so hosts and cache plugins can purge their cached copies when llms.txt changes.

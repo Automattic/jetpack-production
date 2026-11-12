@@ -53,7 +53,7 @@
 		"automattic/jetpack-plugins-installer": "^0.6.1",
 		"automattic/jetpack-podcast": "^2.2.7-alpha",
 		"automattic/jetpack-post-list": "^0.10.11",
-		"automattic/jetpack-post-media": "^0.3.3",
+		"automattic/jetpack-post-media": "^0.3.4-alpha",
 		"automattic/jetpack-premium-analytics": "^0.18.0-alpha",
 		"automattic/jetpack-protect": "^0.7.0-alpha",
 		"automattic/jetpack-publicize": "^0.89.0-alpha",

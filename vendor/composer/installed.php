@@ -157,7 +157,7 @@
         'automattic/jetpack-classic-theme-helper' => array(
             'pretty_version' => '0.15.13-alpha.1794326253',
             'version' => '0.15.13.0-alpha1794326253',
-            'reference' => 'cba7f0a06981276d71710ef75169e24e73d17b90',
+            'reference' => 'a38fc502e22eed401a552ac22bef221d8fac0eef',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-classic-theme-helper',
             'aliases' => array(),
@@ -461,9 +461,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-post-media' => array(
-            'pretty_version' => '0.3.3',
-            'version' => '0.3.3.0',
-            'reference' => '014debcf589c26b484e9447b221e0fdc5d0db4fc',
+            'pretty_version' => '0.3.4-alpha.1794526248',
+            'version' => '0.3.4.0-alpha1794526248',
+            'reference' => '39943b51cfa95178fce7c6a30db4beecd431f5e7',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-post-media',
             'aliases' => array(),
@@ -508,7 +508,7 @@
         'automattic/jetpack-publicize' => array(
             'pretty_version' => '0.89.0-alpha.1794509550',
             'version' => '0.89.0.0-alpha1794509550',
-            'reference' => '5787fb283aed06a99dc1dac0e5e6225fe49a6b34',
+            'reference' => '3148156148648d8eb8b047e0e7bb6242c972ffd4',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-publicize',
             'aliases' => array(),
@@ -542,9 +542,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-seo' => array(
-            'pretty_version' => '0.12.0-alpha.1794525231',
-            'version' => '0.12.0.0-alpha1794525231',
-            'reference' => '3ab118fbc2d8d2afea78e0da2a5d5d49fcddfe71',
+            'pretty_version' => '0.12.0-alpha.1794526248',
+            'version' => '0.12.0.0-alpha1794526248',
+            'reference' => 'c8e60a3c2e932dae31ab34d07e3419be33459bb6',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-seo',
             'aliases' => array(),

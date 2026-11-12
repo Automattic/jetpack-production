@@ -543,6 +543,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_5_a_2
         'Automattic\\Jetpack\\SEO\\Schema_Settings' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-settings.php',
         'Automattic\\Jetpack\\SEO\\Schema_Settings_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-settings-controller.php',
         'Automattic\\Jetpack\\SEO\\Seo_Tools' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-seo-tools.php',
+        'Automattic\\Jetpack\\SEO\\Share_Image' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-share-image.php',
         'Automattic\\Jetpack\\SEO\\Static_Files' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-static-files.php',
         'Automattic\\Jetpack\\SEO\\Surface_Visibility' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-surface-visibility.php',
         'Automattic\\Jetpack\\SEO\\Website_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-website-schema-node.php',

@@ -512,6 +512,7 @@ return array(
     'Automattic\\Jetpack\\SEO\\Schema_Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-settings.php',
     'Automattic\\Jetpack\\SEO\\Schema_Settings_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-settings-controller.php',
     'Automattic\\Jetpack\\SEO\\Seo_Tools' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-seo-tools.php',
+    'Automattic\\Jetpack\\SEO\\Share_Image' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-share-image.php',
     'Automattic\\Jetpack\\SEO\\Static_Files' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-static-files.php',
     'Automattic\\Jetpack\\SEO\\Surface_Visibility' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-surface-visibility.php',
     'Automattic\\Jetpack\\SEO\\Website_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-website-schema-node.php',
