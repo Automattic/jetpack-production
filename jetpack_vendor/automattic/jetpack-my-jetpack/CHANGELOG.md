@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account, connecting the site or restoring the connection from the header, and return to the page the header is on.
+- Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account from a product card or a recommendation.
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account or restoring the connection from the Overview's Connection card.
 - Features: Use the shared HighlightBanner from Jetpack components for the banner above the features grid.
 - Header: Highlight expiring and expired plans in the account panel, list them first with a renew link, and show other plans as active until their renewal date.
