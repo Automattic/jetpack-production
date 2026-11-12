@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Dashboard: Preload the open screen's code and the first REST responses, so the first widgets appear sooner.
 - Date filters: Measure a comparison with one implementation for reading and writing the URL.
+- Single-report pages: Open on the date range of the page that linked to them, instead of All time.
 - Update package dependencies.
 
 ### Fixed

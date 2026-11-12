@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Return to the license screen after you connect your account from "Activate a license", and show the WordPress.com connection screen made for your site's plugins.
 - Premium Analytics: Add a Last 3 years period to the date menu, charted by years, so traffic can be compared year by year without picking a custom range.
 - Premium Analytics: Offer a yearly chart interval on any date range that covers three calendar years.
+- Premium Analytics: Open post and video reports on the date range of the page that linked to them.
 - Premium Analytics: Serve the post page from /report/post/<id>; the old /post/<id> address redirects.
 - Premium Analytics: Show the first Stats v2 widgets sooner.
 - Protect: Let sites without Scan turn off the daily vulnerability check from Settings.
