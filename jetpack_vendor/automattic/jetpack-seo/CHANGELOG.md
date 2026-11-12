@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Switch to and from the SEO page without a page load when the shell is on.
 - Content: Add an "Always include in llms.txt" switch for pages, which lists a page first in llms.txt even when it is not in a menu.
 - Let personal sites identify a person as their publisher in structured data.
+- llms.txt: Add the `jetpack_seo_llms_txt_cleared` action so hosts and cache plugins can purge their cached copies when llms.txt changes.
 
 ### Changed
 - llms.txt: Serve a stored copy that is rebuilt only after content or settings change, and let caches keep it for up to 15 minutes.
