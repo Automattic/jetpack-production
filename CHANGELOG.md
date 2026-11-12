@@ -87,6 +87,7 @@ This is an alpha version! The changes listed here are not final.
 - Jetpack Social: Only register the deprecated connection test results REST endpoint when Jetpack Social is available.
 - Modules: Improve performance by gating memory-intensive processes.
 - Monetize: Add the Ads settings to a Settings tab on the Monetize page, behind the Monetize dashboard flag.
+- My Jetpack: Add Google Analytics to Features on WordPress.com plans that include it, behind the settings consolidation flag.
 - Remove the unused, hidden Scan admin page package.
 - Sites API: Report no setup guidance for WordPress.com sites created after the no-guidance cutoff.
 - Site settings API: Let `wpcom_ai_launchpad_enabled` be turned on, so a signup flow can give a new site the AI Launchpad after checkout.

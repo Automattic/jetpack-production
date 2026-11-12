@@ -290,6 +290,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_5_a_2
         'Automattic\\Jetpack\\Monetize\\WPCOM_Proxy' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-monetize/src/class-wpcom-proxy.php',
         'Automattic\\Jetpack\\Monitor\\Monitor' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-monitor/src/class-monitor.php',
         'Automattic\\Jetpack\\My_Jetpack\\Feature_Visibility' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-feature-visibility.php',
+        'Automattic\\Jetpack\\My_Jetpack\\Google_Analytics_Settings' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-google-analytics-settings.php',
         'Automattic\\Jetpack\\My_Jetpack\\Historically_Active_Modules' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-historically-active-modules.php',
         'Automattic\\Jetpack\\My_Jetpack\\Hybrid_Product' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/products/class-hybrid-product.php',
         'Automattic\\Jetpack\\My_Jetpack\\Initializer' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-my-jetpack/src/class-initializer.php',
