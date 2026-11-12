@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.5.2-alpha] - unreleased
+## [5.6.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Search: Sync the reader_chat_query_filter option so Site Chat content filters reach WordPress.com.
 - Sync the setting that turns off the daily Protect vulnerability check.
 
 ### Fixed
@@ -1905,7 +1906,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Packages: Move sync to a classmapped package
 
-[5.5.2-alpha]: https://github.com/Automattic/jetpack-sync/compare/v5.5.1...v5.5.2-alpha
+[5.6.0-alpha]: https://github.com/Automattic/jetpack-sync/compare/v5.5.1...v5.6.0-alpha
 [5.5.1]: https://github.com/Automattic/jetpack-sync/compare/v5.5.0...v5.5.1
 [5.5.0]: https://github.com/Automattic/jetpack-sync/compare/v5.4.4...v5.5.0
 [5.4.4]: https://github.com/Automattic/jetpack-sync/compare/v5.4.3...v5.4.4
