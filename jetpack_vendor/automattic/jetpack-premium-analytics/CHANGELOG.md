@@ -23,6 +23,8 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Dates: Keep the month in month labels for Japanese, Chinese and Korean sites, which showed a day marker instead (2021年1日 rather than 2021年1月).
+- Dates: Use the locale's default date format when the site's Date Format setting lacks a day, month or year, so chart labels and the date selector stay unambiguous.
 - Improve page transitions between reports and detail views.
 - Metric tiles: Pick the layout from the size of the tiles' own box, so highlights stay in columns after switching dashboard tabs.
 - Open the dashboard for `admin.php?page=stats` on WordPress 7.2, which reports an unregistered page as not found instead of denied.

@@ -54,9 +54,11 @@ This is an alpha version! The changes listed here are not final.
 - Open Graph Meta tags: Add video tags for posts that use a VideoPress or Video block, so shared links can play the video.
 - Podcast: Warn about unlaunched sites and sites hidden from search engines.
 - Premium Analytics: Improve page transitions between reports and detail views.
+- Premium Analytics: Keep the month in month labels for Japanese, Chinese and Korean sites, which showed a day marker instead (2021年1日 rather than 2021年1月).
 - Premium Analytics: Move an old Year to date or All time link to today's window when its saved interval no longer fits, so the address bar matches the charts.
 - Premium Analytics: Move a preset's dates to the new day when a page is left open past midnight, so the numbers and the date controls include today.
 - Premium Analytics: Open the dashboard for old Stats links on WordPress 7.2 instead of a page-not-found error.
+- Premium Analytics: Use the locale's default date format when the site's Date Format setting lacks a day, month or year, so chart labels and the date selector stay unambiguous.
 - SEO: Group the AI crawler toggles so screen readers announce each group and its description.
 - SEO: List pages from the main menu first in llms.txt, so they are not cut on sites with more than 50 pages.
 - SEO: Omit separate first and last profile names from structured data and Open Graph metadata.
