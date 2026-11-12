@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix the comment editor's leftover placeholder on empty lines, doubled focus ring, missing caret after Reply, and gaps from empty paragraphs, and stop the page jumping as the form loads and the editor opens.
+- Show apostrophes and ampersands in the site name as written in the comment dialog's title and subscribe option.
 
 ## [0.9.0] - 2026-11-09
 ### Added
