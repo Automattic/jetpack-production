@@ -302,6 +302,8 @@ __( "Speed up image load times", "jetpack" );
 __( "Speed up static file load times", "jetpack" );
 __( "Jetpack Performance Settings", "jetpack" );
 __( "Performance", "jetpack" );
+__( "Site Accelerator", "jetpack" );
+__( "Image CDN and Asset CDN", "jetpack" );
 __( "Updating privacy settings…", "jetpack" );
 __( "Updated privacy settings.", "jetpack" );
 __( "Error updating privacy settings. %s", "jetpack" );
