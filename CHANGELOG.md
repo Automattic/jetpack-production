@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Protect: Show the Scan site button in the page header as a primary button.
 - SEO: Add an "Always include in llms.txt" switch for pages, which lists a page first in llms.txt even when it is not in a menu.
 - SEO: Add a `jetpack_seo_llms_txt` filter so themes and plugins can add their own sections to llms.txt.
+- SEO: Let personal sites identify a person as their publisher in structured data.
 - SEO: Serve a stored copy of llms.txt that is rebuilt only after content or settings change, and let caches keep it for up to 15 minutes.
 - Site Chat: Add the jetpack_site_chat_query_filter filter so site owners can limit which content Site Chat uses.
 - Site Chat: Load the chat only once a visitor interacts with the page, so it no longer slows down page loads.
