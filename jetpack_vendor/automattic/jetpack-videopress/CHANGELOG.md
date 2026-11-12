@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - Latest Videos Playlist: Style the search, sort and length controls and pagination like the playlist, with the theme's font and button styles.
 - Update package dependencies.
 
+### Fixed
+- Playlists: Load the Playlists tab on WordPress.com sites, where it showed "We couldn't load your playlists."
+
 ## [0.62.0] - 2026-11-09
 ### Added
 - Dashboard: Add a Playlists tab to create, edit, publish and delete video playlists, with every Video Playlist block setting. [#54504]
