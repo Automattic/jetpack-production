@@ -43,6 +43,13 @@ return array(
 		'has_content' => true,
 	),
 	array(
+		'name'        => 'settings',
+		'path'        => '/settings',
+		'page'        => 'jetpack-premium-analytics',
+		'has_route'   => true,
+		'has_content' => true,
+	),
+	array(
 		'name'        => 'single-report',
 		'path'        => '/report/$kind/$id',
 		'page'        => 'jetpack-premium-analytics',

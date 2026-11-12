@@ -184,6 +184,7 @@ __( "Before you go — is the new Stats ready to replace the old one?", "jetpack
 __( "We couldn't switch it off. Please try again.", "jetpack-premium-analytics-pkg" );
 __( "Switching it off…", "jetpack-premium-analytics-pkg" );
 __( "Switch it off", "jetpack-premium-analytics-pkg" );
+__( "Settings", "jetpack-premium-analytics-pkg" );
 __( "Page options", "jetpack-premium-analytics-pkg" );
 __( "Customize", "jetpack-premium-analytics-pkg" );
 __( "Any feedback?", "jetpack-premium-analytics-pkg" );

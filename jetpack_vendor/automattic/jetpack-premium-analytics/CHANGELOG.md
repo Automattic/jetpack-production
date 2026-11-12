@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Preload the open screen's code and the first REST responses, so the first widgets appear sooner.
 - Dashboard: Start loading stats without waiting for the site settings when the dashboard opens with no dates in its URL.
 - Date filters: Measure a comparison with one implementation for reading and writing the URL.
+- Settings: Move the Stats settings from a dashboard tab to their own page, reached from the page options menu.
 - Single-report pages: Open on the date range of the page that linked to them, instead of All time.
 - Top locations: Show Countries, Regions and Cities as one-click toggles instead of a dropdown.
 - Update package dependencies.

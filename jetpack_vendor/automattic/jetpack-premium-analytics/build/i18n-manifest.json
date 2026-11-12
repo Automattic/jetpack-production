@@ -12,6 +12,7 @@
 		"build/routes/dashboard/content.js",
 		"build/routes/reports/content.js",
 		"build/routes/reports/route.js",
+		"build/routes/settings/content.js",
 		"build/routes/single-report/content.js",
 		"build/routes/upgrade/content.js",
 		"build/scripts/site-sync/index.js",
