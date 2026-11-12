@@ -8,6 +8,8 @@
 
 __( "Your plan doesn’t include that period, so this page shows the last 7 days.", "jetpack-premium-analytics-pkg" );
 __( "Your plan doesn’t include that period, so this page shows the last 30 days.", "jetpack-premium-analytics-pkg" );
+__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
+__( "Sections", "jetpack-premium-analytics-pkg" );
 __( "Today", "jetpack-premium-analytics-pkg" );
 __( "Yesterday", "jetpack-premium-analytics-pkg" );
 __( "Last 24 hours", "jetpack-premium-analytics-pkg" );
@@ -21,8 +23,6 @@ __( "Year to date", "jetpack-premium-analytics-pkg" );
 __( "Last 12 months", "jetpack-premium-analytics-pkg" );
 __( "Last year", "jetpack-premium-analytics-pkg" );
 __( "Last 3 years", "jetpack-premium-analytics-pkg" );
-__( "(opens in a new tab)", "jetpack-premium-analytics-pkg" );
-__( "Sections", "jetpack-premium-analytics-pkg" );
 __( "Authors", "jetpack-premium-analytics-pkg" );
 __( "Posts & Pages", "jetpack-premium-analytics-pkg" );
 __( "Earnings history", "jetpack-premium-analytics-pkg" );

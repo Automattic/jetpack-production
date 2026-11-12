@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - Improve page transitions between reports and detail views.
 - Metric tiles: Pick the layout from the size of the tiles' own box, so highlights stay in columns after switching dashboard tabs.
 - Single-report pages: Show the Jetpack footer on the video page again.
+- Stats: Move a preset's dates to the new day when a page is left open past midnight, so the numbers and the date controls include today.
 
 ## [0.17.0] - 2026-11-09
 ### Added

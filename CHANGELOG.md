@@ -50,6 +50,7 @@ This is an alpha version! The changes listed here are not final.
 - Open Graph Meta tags: Add video tags for posts that use a VideoPress or Video block, so shared links can play the video.
 - Podcast: Warn about unlaunched sites and sites hidden from search engines.
 - Premium Analytics: Improve page transitions between reports and detail views.
+- Premium Analytics: Move a preset's dates to the new day when a page is left open past midnight, so the numbers and the date controls include today.
 - SEO: Group the AI crawler toggles so screen readers announce each group and its description.
 - SEO: List pages from the main menu first in llms.txt, so they are not cut on sites with more than 50 pages.
 - SEO: Omit separate first and last profile names from structured data and Open Graph metadata.
