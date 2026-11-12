@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Abilities: Declare the nested Stats result fields in each output schema, and remove the result-shape sentences from the ability descriptions.
+- Abilities: Describe what the site overview ability is for, and leave its result fields to the output schema.
 - Stats abilities: Mark jetpack-stats/update-settings as destructive, since it overwrites the saved Stats settings.
 
 ### Fixed
