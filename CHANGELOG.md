@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Move the Stats v2 settings from a dashboard tab to their own page, reached from the page options menu.
 - Premium Analytics: Offer a yearly chart interval on any date range that covers three calendar years.
 - Premium Analytics: Open post and video reports on the date range of the page that linked to them.
+- Premium Analytics: Serve the author page from /report/author/<id>; the old /author/<id> address redirects.
 - Premium Analytics: Serve the post page from /report/post/<id>; the old /post/<id> address redirects.
 - Premium Analytics: Show the first Stats v2 widgets sooner.
 - Premium Analytics: Show the Top locations views as one-click toggles instead of a dropdown.

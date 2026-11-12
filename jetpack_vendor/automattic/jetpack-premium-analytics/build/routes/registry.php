@@ -12,7 +12,7 @@ return array(
 		'path'        => '/author/$authorId',
 		'page'        => 'jetpack-premium-analytics',
 		'has_route'   => true,
-		'has_content' => true,
+		'has_content' => false,
 	),
 	array(
 		'name'        => 'connect',

@@ -6,8 +6,6 @@
 		"build/modules/site-sync/index.js",
 		"build/modules/ui/index.js",
 		"build/modules/widgets-toolkit/index.js",
-		"build/routes/author-detail/content.js",
-		"build/routes/author-detail/route.js",
 		"build/routes/connect/content.js",
 		"build/routes/dashboard/content.js",
 		"build/routes/reports/content.js",

@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Add an Arrange tabs option to the page options menu, to reorder the tabs and choose the one that opens first.
 - Date controls: Add a Last 3 years period to the date menu, charted by years, so traffic can be compared year by year without picking a custom range.
 - Date controls: Offer a yearly chart interval on any date range that covers three calendar years.
+- Single-report pages: Serve the author page from /report/author/<id>, rendered from its registered record; the old /author/<id> address redirects.
 - Single-report pages: Serve the post page from /report/post/<id>, rendered from its registered record with its three sections; the old /post/<id> address redirects.
 
 ### Changed
