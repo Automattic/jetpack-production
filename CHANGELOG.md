@@ -53,6 +53,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Keep text typed with a Japanese, Chinese, or Korean input method in a choice option when Enter confirms the conversion.
 - Forms: Show "Anonymous" for responses with no author details, and hide the IP address row when no IP was recorded.
 - Infinite Scroll: Load block styles, including layout and spacing, for posts loaded by scrolling.
+- Infinite Scroll: Respect the "Load more posts with a button" setting saved from Jetpack settings.
 - JSON API: Fix a fatal error on PHP 8 when an endpoint documents a field without a type.
 - My Jetpack: Fill checked checkboxes in the Features list with the selected filter's color, show their focus ring only for keyboard focus, and show one focus ring per control instead of two.
 - My Jetpack: Show a lapsed Scan purchase as Expired, with a link to resume it and an expired-plan notice, instead of offering an upgrade.
