@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Admin shell: Join the admin shell, loading the dashboard's page data from a new REST endpoint when it opens from another Jetpack dashboard, so switching between dashboards skips the page load when the admin shell flag is on.
 - Block editor: Add a "Social preview" item to the Preview dropdown that opens the link preview.
 
 ### Changed
