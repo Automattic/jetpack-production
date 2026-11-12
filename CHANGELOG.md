@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Highlight expiring and expired plans in the account panel under your avatar, list them first with a renew link, and show other plans as active until their renewal date.
 - My Jetpack: Return to the license screen after you connect your account from "Activate a license", and show the WordPress.com connection screen made for your site's plugins.
 - Premium Analytics: Add a Last 3 years period to the date menu, charted by years, so traffic can be compared year by year without picking a custom range.
+- Premium Analytics: Load Stats v2 sooner when it is opened from the admin menu.
 - Premium Analytics: Offer a yearly chart interval on any date range that covers three calendar years.
 - Premium Analytics: Open post and video reports on the date range of the page that linked to them.
 - Premium Analytics: Serve the post page from /report/post/<id>; the old /post/<id> address redirects.
