@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Admin shell: Fix Activity Log identifying itself as the dashboard it was opened from.
+
 ## [0.7.4] - 2026-11-06
 ### Changed
 - Update dependencies.
