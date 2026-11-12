@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Open post and video reports on the date range of the page that linked to them.
 - Premium Analytics: Serve the post page from /report/post/<id>; the old /post/<id> address redirects.
 - Premium Analytics: Show the first Stats v2 widgets sooner.
+- Premium Analytics: Show the Top locations views as one-click toggles instead of a dropdown.
 - Protect: Let sites without Scan turn off the daily vulnerability check from Settings.
 - Protect: Show the Scan site button in the page header as a primary button.
 - SEO: Add an "Always include in llms.txt" switch for pages, which lists a page first in llms.txt even when it is not in a menu.

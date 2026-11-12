@@ -253,7 +253,7 @@ return array(
 		'help'         => array( 'content' => 'The countries, regions, and cities where your visitors came from, sorted by views.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'icon'         => 'jpa/map-marker',
 		'actions'      => null,
-		'attributes'   => array( array( 'id' => 'geoGranularity', 'type' => 'jpa/select', 'label' => 'View by', 'relevance' => 'high', 'elements' => array( array( 'value' => 'country', 'label' => 'Countries' ), array( 'value' => 'region', 'label' => 'Regions' ), array( 'value' => 'city', 'label' => 'Cities' ) ) ) ),
+		'attributes'   => array( array( 'id' => 'geoGranularity', 'type' => 'jpa/toggle-group', 'label' => 'View by', 'relevance' => 'high', 'elements' => array( array( 'value' => 'country', 'label' => 'Countries' ), array( 'value' => 'region', 'label' => 'Regions' ), array( 'value' => 'city', 'label' => 'Cities' ) ) ) ),
 		'example'      => null,
 		'has_render'   => true,
 		'has_widget'   => true,
