@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Improve page transitions between reports and detail views.
 - Metric tiles: Pick the layout from the size of the tiles' own box, so highlights stay in columns after switching dashboard tabs.
+- Open the dashboard for `admin.php?page=stats` on WordPress 7.2, which reports an unregistered page as not found instead of denied.
 - Single-report pages: Show the Jetpack footer on the video page again.
 - Stats: Move an old Year to date or All time link to today's window when its saved interval no longer fits, so the address bar matches the charts.
 - Stats: Move a preset's dates to the new day when a page is left open past midnight, so the numbers and the date controls include today.
