@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a `jetpack_seo_llms_txt` filter so themes and plugins can add their own sections to llms.txt.
 - Content: Add an "Always include in llms.txt" switch for pages, which lists a page first in llms.txt even when it is not in a menu.
 
 ### Changed
