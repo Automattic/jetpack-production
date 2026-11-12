@@ -146,9 +146,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-boost-speed-score' => array(
-            'pretty_version' => '0.7.0-alpha.1794332455',
-            'version' => '0.7.0.0-alpha1794332455',
-            'reference' => 'd916e2935734a5eb54d30532761ab62694c7add4',
+            'pretty_version' => '0.7.0-alpha.1794481926',
+            'version' => '0.7.0.0-alpha1794481926',
+            'reference' => '762df3205d38ba064089982b1799e1386d05a062',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-boost-speed-score',
             'aliases' => array(),

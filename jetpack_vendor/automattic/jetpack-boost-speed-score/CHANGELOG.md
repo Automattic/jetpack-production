@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Report how far along a running speed test is, estimated from how long the site's recent runs took.
+- Report the step a speed test is on, any device score already measured, and the cloud estimate of how long the test takes.
 
 ### Changed
 - Return the new speed scores as soon as they are ready, using the previous comparison score until the run without Boost finishes.
