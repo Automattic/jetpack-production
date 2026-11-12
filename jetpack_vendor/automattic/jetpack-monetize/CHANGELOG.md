@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a Settings tab with the Ads settings, behind the Monetize dashboard flag.
 - Add the routes and client the dashboard uses to reach WordPress.com, and a prompt to connect a WordPress.com account.
+- Settings: Add a Payouts card for the PayPal address that ad earnings are paid to, and keep WordPress.com up to date with the Ads settings.
 
 ### Changed
 - Update package dependencies.

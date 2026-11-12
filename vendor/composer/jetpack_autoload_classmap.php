@@ -1006,20 +1006,28 @@ return array(
 		'version' => '7.1.2.0-alpha1794406146',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-modules.php'
 	),
+	'Automattic\\Jetpack\\Monetize\\Ads_Wpcom_Settings' => array(
+		'version' => '0.2.0.0-alpha1794508787',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/class-ads-wpcom-settings.php'
+	),
 	'Automattic\\Jetpack\\Monetize\\Dashboard' => array(
-		'version' => '0.2.0.0-alpha1794414785',
+		'version' => '0.2.0.0-alpha1794508787',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/class-dashboard.php'
 	),
 	'Automattic\\Jetpack\\Monetize\\Dashboard_Section' => array(
-		'version' => '0.2.0.0-alpha1794414785',
+		'version' => '0.2.0.0-alpha1794508787',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/interface-dashboard-section.php'
 	),
+	'Automattic\\Jetpack\\Monetize\\Sections\\Ads' => array(
+		'version' => '0.2.0.0-alpha1794508787',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/sections/class-ads.php'
+	),
 	'Automattic\\Jetpack\\Monetize\\Sections\\Payments' => array(
-		'version' => '0.2.0.0-alpha1794414785',
+		'version' => '0.2.0.0-alpha1794508787',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/sections/class-payments.php'
 	),
 	'Automattic\\Jetpack\\Monetize\\WPCOM_Proxy' => array(
-		'version' => '0.2.0.0-alpha1794414785',
+		'version' => '0.2.0.0-alpha1794508787',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/class-wpcom-proxy.php'
 	),
 	'Automattic\\Jetpack\\Monitor\\Monitor' => array(
