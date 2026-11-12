@@ -178,6 +178,14 @@ __( "It'll help us decide what to fix before the new Stats replaces the old one.
 __( "Done", "jetpack-premium-analytics-pkg" );
 __( "Cancel", "jetpack-premium-analytics-pkg" );
 __( "Send feedback", "jetpack-premium-analytics-pkg" );
+__( "Opens first", "jetpack-premium-analytics-pkg" );
+__( "Move %s up", "jetpack-premium-analytics-pkg" );
+__( "Move %s down", "jetpack-premium-analytics-pkg" );
+__( "%1$s moved to position %2$d of %3$d.", "jetpack-premium-analytics-pkg" );
+__( "Arrange tabs", "jetpack-premium-analytics-pkg" );
+__( "The first tab is the one that opens by default.", "jetpack-premium-analytics-pkg" );
+__( "Reset order", "jetpack-premium-analytics-pkg" );
+__( "Save", "jetpack-premium-analytics-pkg" );
 __( "Switch off the new Stats?", "jetpack-premium-analytics-pkg" );
 __( "You'll go back to your current Stats. You can switch the new Stats on again from the Modules Visibility setting.", "jetpack-premium-analytics-pkg" );
 __( "Before you go — is the new Stats ready to replace the old one?", "jetpack-premium-analytics-pkg" );

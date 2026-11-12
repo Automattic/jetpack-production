@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Return to the page you were on after you connect your account or restore the connection from the header, and show the WordPress.com connection screen made for your site's plugins.
 - My Jetpack: Show the WordPress.com connection screen made for your site's plugins when you connect your account from a product card or a recommendation.
 - Premium Analytics: Add a Last 3 years period to the date menu, charted by years, so traffic can be compared year by year without picking a custom range.
+- Premium Analytics: Add an Arrange tabs option to the Stats v2 page options menu, to reorder the tabs and choose the one that opens first.
 - Premium Analytics: Load Stats v2 sooner when it is opened from the admin menu.
 - Premium Analytics: Move the Stats v2 settings from a dashboard tab to their own page, reached from the page options menu.
 - Premium Analytics: Offer a yearly chart interval on any date range that covers three calendar years.
