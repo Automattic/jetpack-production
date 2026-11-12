@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Brute Force Protection: Allow the feature to turn on when the configured trusted IP header is empty or holds no valid address.
+- Charts: Wait for a chart's size before drawing it, so charts and their legends no longer jump into place as a page loads.
 - Coming Soon: Show the Coming Soon newsletter and SEO notices on sites in the private Coming Soon mode.
 - Comments: Fix the comment editor's leftover placeholder on empty lines, doubled focus ring, missing caret after Reply, and gaps from empty paragraphs, and stop the page jumping as the form loads and the editor opens.
 - Connection: Keep the progress indicator on screen after clicking Restore Connection until the redirect to WordPress.com.
