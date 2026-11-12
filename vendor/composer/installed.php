@@ -632,9 +632,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-wp-build-polyfills' => array(
-            'pretty_version' => '0.7.5-alpha.1794326253',
-            'version' => '0.7.5.0-alpha1794326253',
-            'reference' => '2f98e5dd4f23606a5510970e94cbf02ab5befdba',
+            'pretty_version' => '0.7.5-alpha.1794522074',
+            'version' => '0.7.5.0-alpha1794522074',
+            'reference' => 'a7b90431db6be9f27ff3569a8207d7a154e78873',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-wp-build-polyfills',
             'aliases' => array(),

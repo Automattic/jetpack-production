@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies.
 
+### Fixed
+- Fix dashboards failing to load on WordPress 7.2, where Core's own, older widget-primitives module took precedence over the bundled one and lacked an export they import.
+
 ## [0.7.4] - 2026-11-06
 ### Changed
 - Replace the widget-primitives module of an active Gutenberg older than 24.4.0, the first release that exports useWidgetIdentity.

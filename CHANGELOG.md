@@ -63,6 +63,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Harden the Subscribers list against a numeric display name in the API response.
 - Open Graph Meta tags: Add video tags for posts that use a VideoPress or Video block, so shared links can play the video.
 - Podcast: Warn about unlaunched sites and sites hidden from search engines.
+- Premium Analytics: Fix the Stats dashboard failing to load on WordPress 7.2.
 - Premium Analytics: Improve page transitions between reports and detail views.
 - Premium Analytics: Keep the month in month labels for Japanese, Chinese and Korean sites, which showed a day marker instead (2021年1日 rather than 2021年1月).
 - Premium Analytics: Move an old Year to date or All time link to today's window when its saved interval no longer fits, so the address bar matches the charts.
