@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Apply Global Styles label settings to form labels, including the group label on multiple-choice fields. The Outlined and Animated styles keep their own label weight.
 - Fix exporting to Google Sheets when a response has a very long value, and say when an export is too large for Google Sheets.
 - Fix running out of memory when exporting a large number of responses to CSV or Google Drive.
 - Inbox: Show "Anonymous" for responses with no author details, and hide the IP address row when no IP was recorded.

@@ -63,6 +63,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Keep the progress indicator on screen after clicking Restore Connection until the redirect to WordPress.com.
 - Connection: Restore the connect button and explain what went wrong when the connection to WordPress.com fails to start.
 - Donations Form: Fix Tips blocks and Pop-up forms opening a checkout with no payment plan, including forms that were already published.
+- Forms: Apply Global Styles label settings to form labels, including the group label on multiple-choice fields. The Outlined and Animated styles keep their own label weight.
 - Forms: Fix exporting to Google Sheets when a response has a very long value, and say when an export is too large for Google Sheets.
 - Forms: Fix running out of memory when exporting a large number of responses to CSV or Google Drive.
 - Forms: Keep text typed with a Japanese, Chinese, or Korean input method in a choice option when Enter confirms the conversion.
