@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Arrange tabs: Keep the place of a tab that is hidden when the order is saved.
+- Charts: Let a percentage axis grow with the data once a value passes 100%, so a video's retention rate above 100% stays inside the chart.
 - Charts: Stop hourly charts from showing a clickable cursor when a click opens nothing.
 - Dates: Keep the month in month labels for Japanese, Chinese and Korean sites, which showed a day marker instead (2021年1日 rather than 2021年1月).
 - Dates: Use the locale's default date format when the site's Date Format setting lacks a day, month or year, so chart labels and the date selector stay unambiguous.

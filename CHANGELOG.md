@@ -82,6 +82,7 @@ This is an alpha version! The changes listed here are not final.
 - Podcast: Warn about unlaunched sites and sites hidden from search engines.
 - Premium Analytics: Fix the Stats dashboard failing to load on WordPress 7.2.
 - Premium Analytics: Improve page transitions between reports and detail views.
+- Premium Analytics: Keep a video's Retention rate chart inside its plot when retention is above 100%.
 - Premium Analytics: Keep the month in month labels for Japanese, Chinese and Korean sites, which showed a day marker instead (2021年1日 rather than 2021年1月).
 - Premium Analytics: Keep the place of a hidden Stats v2 tab when the tab order is saved.
 - Premium Analytics: Keep the widget title from being cut off beside a toggle, so the toggle folds into the widget controls menu at the same width whichever way the widget is resized.
