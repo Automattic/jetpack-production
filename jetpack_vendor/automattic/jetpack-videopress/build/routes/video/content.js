@@ -288,6 +288,7 @@ __( "Link to video", "jetpack-videopress-pkg" );
 __( "Shortcode", "jetpack-videopress-pkg" );
 __( "File name", "jetpack-videopress-pkg" );
 __( "Uploaded on", "jetpack-videopress-pkg" );
+__( "You have unsaved changes in VideoPress. Discard them?", "jetpack-videopress-pkg" );
 __( "English (auto-generated)", "jetpack-videopress-pkg" );
 __( "Video chapters could not be updated.", "jetpack-videopress-pkg" );
 __( "Not found", "jetpack-videopress-pkg" );

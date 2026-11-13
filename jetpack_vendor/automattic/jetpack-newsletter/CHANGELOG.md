@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Clarify that the subscriber sent count includes only newsletters and keep its label readable on narrow screens.
+- Settings: Ask before the Jetpack admin shell opens Newsletter at another tab while settings are unsaved.
 - Subscribers: Keep the list working when the API returns a display name as a number.
 
 ## [0.18.5] - 2026-11-09

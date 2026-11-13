@@ -289,6 +289,7 @@ __( "/month, billed yearly", "jetpack-videopress-pkg" );
 __( "Get VideoPress", "jetpack-videopress-pkg" );
 __( "Start for free", "jetpack-videopress-pkg" );
 __( "Upload one video", "jetpack-videopress-pkg" );
+__( "You have unsaved changes in VideoPress. Discard them?", "jetpack-videopress-pkg" );
 __( "Playlists", "jetpack-videopress-pkg" );
 _n( "%d video is already in this playlist and was skipped.", "%d videos are already in this playlist and were skipped.", 1, "jetpack-videopress-pkg" );
 __( "Paste a VideoPress video URL or GUID.", "jetpack-videopress-pkg" );

@@ -19,6 +19,7 @@ __( "Features", "jetpack-newsletter" );
 __( "Help", "jetpack-newsletter" );
 __( "Jetpack", "jetpack-newsletter" );
 __( "There was an error testing Jetpack. Error: %s", "jetpack-newsletter" );
+__( "You have unsaved changes in Newsletter. Discard them?", "jetpack-newsletter" );
 __( "View a summary of your newsletter.", "jetpack-newsletter" );
 __( "Manage everyone subscribed to your site.", "jetpack-newsletter" );
 __( "Configure how your newsletter looks, behaves, and reaches subscribers.", "jetpack-newsletter" );

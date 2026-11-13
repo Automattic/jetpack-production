@@ -34,5 +34,5 @@
 		'wp-url',
 		'wp-warning'
 	),
-	'version' => '06ba1d66b32b67a0fde4'
+	'version' => 'caa1a8895ad0c1fa9508'
 );

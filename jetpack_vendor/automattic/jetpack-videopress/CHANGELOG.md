@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Dashboard: Ask before the Jetpack admin shell opens VideoPress at another screen while a video, trim, chapter or playlist edit is unsaved, and keep the trim and chapter editors from asking while another dashboard is on screen.
 - Dashboard: Show an error when a video details or privacy change is not saved, instead of reporting success.
 - Playlists: Load the Playlists tab on WordPress.com sites, where it showed "We couldn't load your playlists."
 

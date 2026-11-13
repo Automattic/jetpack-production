@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Show each page's own title and subtitle while it opens, on a first visit too.
 
 ### Fixed
+- Admin shell: Ask a page with unsaved changes before opening it at another route, so a link can no longer silently drop an edit.
 - Admin shell: Give a dashboard opened inside another the same routes it has on its own page, including any added on its page init action.
 - Admin shell: Move focus to the page heading, announce the page, and close a hidden page's dialogs on in-shell switches.
 - Admin shell: Retry a dashboard's setup after it fails, and set up one dashboard at a time so each loads with its own configuration.

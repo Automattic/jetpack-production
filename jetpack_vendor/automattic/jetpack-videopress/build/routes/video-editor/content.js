@@ -46,6 +46,7 @@ __( "This video has no playable source.", "jetpack-videopress-pkg" );
 __( "Trim & cut", "jetpack-videopress-pkg" );
 __( "Edit", "jetpack-videopress-pkg" );
 __( "Editing tools", "jetpack-videopress-pkg" );
+__( "You have unsaved changes in VideoPress. Discard them?", "jetpack-videopress-pkg" );
 _x( "Breadcrumbs", "aria label", "jetpack-videopress-pkg" );
 __( "Sections", "jetpack-videopress-pkg" );
 __( "An Automattic Airline", "jetpack-videopress-pkg" );
