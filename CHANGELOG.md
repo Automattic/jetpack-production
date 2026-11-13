@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add a Last 3 years period to the date menu, charted by years, so traffic can be compared year by year without picking a custom range.
 - Premium Analytics: Add an Arrange tabs option to the Stats v2 page options menu, to reorder the tabs and choose the one that opens first.
 - Premium Analytics: Add Download CSV to the Traffic summary card.
+- Premium Analytics: Let a click on a point or bar in the WooCommerce tab charts set the dashboard to that period, and open the previous period for a click on a previous-period point or bar in any chart.
 - Premium Analytics: Load Stats v2 sooner when it is opened from the admin menu.
 - Premium Analytics: Move the Stats v2 settings from a dashboard tab to their own page, reached from the page options menu.
 - Premium Analytics: Offer a yearly chart interval on any date range that covers three calendar years.

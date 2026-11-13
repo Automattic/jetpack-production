@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Date controls: Offer a yearly chart interval on any date range that covers three calendar years.
 - Single-report pages: Serve the author page from /report/author/<id>, rendered from its registered record; the old /author/<id> address redirects.
 - Single-report pages: Serve the post page from /report/post/<id>, rendered from its registered record with its three sections; the old /post/<id> address redirects.
+- Widget SDK: add `useOpenChartBucket`, which opens a clicked chart bucket, from either period, as the dashboard period (2.4.0).
 
 ### Changed
 - Dashboard: Preload the open screen's code and the first REST responses, so the first widgets appear sooner.
@@ -28,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Charts: Stop hourly charts from showing a clickable cursor when a click opens nothing.
 - Dates: Keep the month in month labels for Japanese, Chinese and Korean sites, which showed a day marker instead (2021年1日 rather than 2021年1月).
 - Dates: Use the locale's default date format when the site's Date Format setting lacks a day, month or year, so chart labels and the date selector stay unambiguous.
 - Improve page transitions between reports and detail views.
