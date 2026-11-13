@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Show the page header and its tabs straight away while a dashboard opens, including one opened for the first time.
 
 ### Fixed
+- Admin shell: Give a dashboard opened inside another the same routes it has on its own page, including any added on its page init action.
 - Admin shell: Move focus to the page heading, announce the page, and close a hidden page's dialogs on in-shell switches.
 - Admin shell: Retry a dashboard's setup after it fails, and set up one dashboard at a time so each loads with its own configuration.
 - Admin shell: Stop REST requests from retrying without end after the nonce expires on a page that loaded another dashboard.
