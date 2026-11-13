@@ -42,6 +42,7 @@ This is an alpha version! The changes listed here are not final.
 - Single-report pages: Show the Jetpack footer on the video page again.
 - Stats: Move an old Year to date or All time link to today's window when its saved interval no longer fits, so the address bar matches the charts.
 - Stats: Move a preset's dates to the new day when a page is left open past midnight, so the numbers and the date controls include today.
+- Stop a long post title from widening the page on desktop, so the header buttons stay in view.
 
 ## [0.17.0] - 2026-11-09
 ### Added
