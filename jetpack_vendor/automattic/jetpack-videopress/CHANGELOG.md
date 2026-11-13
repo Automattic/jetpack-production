@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Channels: Find videos by words spoken in them, show the matching passage with its time, and open the video at that moment.
 - Join the admin shell, so switching to and from other Jetpack dashboards skips the page load when the admin shell flag is on.
 - Keep a searchable transcript of each channel video from its edited or VideoPress caption track, rebuilt when tracks change, and add a transcript REST route.
+- Register the video single-report page on the Premium Analytics dashboard.
 
 ### Changed
 - Latest Videos Playlist: Style the search, sort and length controls and pagination like the playlist, with the theme's font and button styles.
