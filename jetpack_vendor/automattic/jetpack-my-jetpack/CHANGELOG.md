@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account, connecting the site or restoring the connection from the header, and return to the page the header is on.
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account from a product card or a recommendation.
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account or restoring the connection from the Overview's Connection card.
+- Features: Remember whether you last picked the grid or the list layout on the Features tab, and open the tab in that layout next time.
 - Features: Use the shared HighlightBanner from Jetpack components for the banner above the features grid.
 - Header: Highlight expiring and expired plans in the account panel, list them first with a renew link, and show other plans as active until their renewal date.
 - On sites with Jetpack Pro, replace "Purchase a plan" with "Upgrade to Complete", which goes straight to checkout.
