@@ -32,6 +32,9 @@ This is an alpha version! The changes listed here are not final.
 - Top locations: Show Countries, Regions and Cities as one-click toggles instead of a dropdown.
 - Update package dependencies.
 
+### Removed
+- Dashboard: Remove the Site overview, Post traffic activity, Total views, Total visitors, Popular days, Popular hours and Hello World widgets, which no layout or widget picker offered.
+
 ### Fixed
 - Charts: Stop hourly charts from showing a clickable cursor when a click opens nothing.
 - Dates: Keep the month in month labels for Japanese, Chinese and Korean sites, which showed a day marker instead (2021年1日 rather than 2021年1月).
