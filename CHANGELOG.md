@@ -63,6 +63,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Fill checked checkboxes in the Features list with the selected filter's color, show their focus ring only for keyboard focus, and show one focus ring per control instead of two.
 - My Jetpack: Keep the Jetpack Pro upgrade card inside narrow columns and phone screens.
 - My Jetpack: Show a lapsed Scan purchase as Expired, with a link to resume it and an expired-plan notice, instead of offering an upgrade.
+- My Jetpack: Stop upgrade screens from briefly offering Jetpack Security before Jetpack Pro.
 - Newsletter: Harden the Subscribers list against a numeric display name in the API response.
 - Open Graph Meta tags: Add video tags for posts that use a VideoPress or Video block, so shared links can play the video.
 - Podcast: Warn about unlaunched sites and sites hidden from search engines.

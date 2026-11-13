@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Onboarding wizard: Let the user retry, and explain what went wrong, after the hand-off to WordPress.com fails.
 - Show a lapsed Scan purchase as Expired, with a link to resume it and an expired-plan notice, instead of offering an upgrade.
 - Upgrade screens: Keep the Jetpack Pro card inside narrow columns and phone screens.
+- Upgrade screens: Show a placeholder instead of a retired bundle while plan prices load.
 
 ## [6.17.1] - 2026-11-09
 ### Changed
