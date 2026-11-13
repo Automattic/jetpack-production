@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Scan: Let sites without Scan turn off the daily vulnerability check from Settings.
 
 ### Changed
+- Admin shell: Declare the page title and subtitle shown while the dashboard opens, when the admin shell flag is on.
 - Dashboard: Show the Scan site button in the page header as a primary button.
 - Firewall and Login protection: Hide the add-my-IP suggestion when the configured trusted IP header cannot be resolved.
 - Update package dependencies.

@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Join the admin shell, so switching to and from other Jetpack dashboards skips the page load when the admin shell flag is on.
 
 ### Changed
+- Admin shell: Declare the page title and subtitle shown while the dashboard opens, when the admin shell flag is on.
 - Update package dependencies.
 
 ## [5.2.4] - 2026-11-09

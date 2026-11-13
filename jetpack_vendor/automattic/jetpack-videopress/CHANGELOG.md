@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Register the video single-report page on the Premium Analytics dashboard.
 
 ### Changed
+- Admin shell: Declare the page title and subtitle shown while the dashboard opens, when the admin shell flag is on.
 - Latest Videos Playlist: Style the search, sort and length controls and pagination like the playlist, with the theme's font and button styles.
 - Update package dependencies.
 

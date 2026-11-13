@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings panel: Add Google Analytics to Features on WordPress.com plans that include it, when the settings consolidation flag is on.
 
 ### Changed
+- Admin shell: Declare the page title and subtitle shown while the dashboard opens, when the admin shell flag is on.
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account, connecting the site or restoring the connection from the header, and return to the page the header is on.
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account from a product card or a recommendation.
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account or restoring the connection from the Overview's Connection card.

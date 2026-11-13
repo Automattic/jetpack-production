@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Block editor: Add a "Social preview" item to the Preview dropdown that opens the link preview.
 
 ### Changed
+- Admin shell: Declare the page title and subtitle shown while the dashboard opens, when the admin shell flag is on.
 - Replace the deprecated ResponsiveWrapper component in the media picker.
 - Social Image Generator: Allow WebP background images.
 - Update package dependencies.

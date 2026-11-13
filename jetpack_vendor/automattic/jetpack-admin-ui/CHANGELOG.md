@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Let members ask for the media library, so it works when their page opens inside another dashboard.
 - Admin shell: Show the page header and its tabs straight away while a dashboard opens, including one opened for the first time.
 
+### Changed
+- Admin shell: Show each page's own title and subtitle while it opens, on a first visit too.
+
 ### Fixed
 - Admin shell: Give a dashboard opened inside another the same routes it has on its own page, including any added on its page init action.
 - Admin shell: Move focus to the page heading, announce the page, and close a hidden page's dialogs on in-shell switches.

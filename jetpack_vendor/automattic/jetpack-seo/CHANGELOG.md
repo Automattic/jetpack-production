@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - llms.txt: Add the `jetpack_seo_llms_txt_cleared` action so hosts and cache plugins can purge their cached copies when llms.txt changes.
 
 ### Changed
+- Admin shell: Declare the page title and subtitle shown while the dashboard opens, when the admin shell flag is on.
 - llms.txt: Serve a stored copy that is rebuilt only after content or settings change, and let caches keep it for up to 15 minutes.
 - Update package dependencies.
 
