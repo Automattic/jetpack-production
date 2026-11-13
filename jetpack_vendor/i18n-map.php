@@ -138,7 +138,7 @@ return array(
     ),
     'jetpack-newsletter' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-newsletter',
-      'ver' => '0.18.6-alpha1794425870',
+      'ver' => '0.18.6-alpha1794589687',
     ),
     'jetpack-password-checker' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-password-checker',

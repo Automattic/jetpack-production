@@ -506,7 +506,7 @@ __( "A confirmation email was sent on %1$s. If they haven’t confirmed, you can
 __( "We stopped sending emails to this subscriber after their address bounced. You can't send a confirmation email right now. Try again later.", "jetpack-newsletter" );
 __( "Could not load subscriber details.", "jetpack-newsletter" );
 __( "Try again", "jetpack-newsletter" );
-__( "Emails sent", "jetpack-newsletter" );
+__( "Newsletters sent", "jetpack-newsletter" );
 __( "Open rate", "jetpack-newsletter" );
 __( "Click rate", "jetpack-newsletter" );
 __( "Newsletter subscription details", "jetpack-newsletter" );

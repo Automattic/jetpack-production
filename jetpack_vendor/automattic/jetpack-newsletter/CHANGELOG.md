@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Clarify that the subscriber sent count includes only newsletters and keep its label readable on narrow screens.
 - Subscribers: Keep the list working when the API returns a display name as a number.
 
 ## [0.18.5] - 2026-11-09

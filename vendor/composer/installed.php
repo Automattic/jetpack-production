@@ -398,9 +398,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-newsletter' => array(
-            'pretty_version' => '0.18.6-alpha.1794425870',
-            'version' => '0.18.6.0-alpha1794425870',
-            'reference' => 'a6cbe5455aaa9f775ad9a649a83673208aed4f9c',
+            'pretty_version' => '0.18.6-alpha.1794589687',
+            'version' => '0.18.6.0-alpha1794589687',
+            'reference' => 'abfee4f8d46fffedee8ffbdf7ff29004e0ab3dd4',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-newsletter',
             'aliases' => array(),

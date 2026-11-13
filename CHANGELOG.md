@@ -76,6 +76,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Keep the Jetpack Pro upgrade card inside narrow columns and phone screens.
 - My Jetpack: Show a lapsed Scan purchase as Expired, with a link to resume it and an expired-plan notice, instead of offering an upgrade.
 - My Jetpack: Stop upgrade screens from briefly offering Jetpack Security before Jetpack Pro.
+- Newsletter: Clarify that the subscriber sent count includes only newsletters and keep its label readable on narrow screens.
 - Newsletter: Harden the Subscribers list against a numeric display name in the API response.
 - Open Graph Meta tags: Add video tags for posts that use a VideoPress or Video block, so shared links can play the video.
 - Podcast: Warn about unlaunched sites and sites hidden from search engines.
