@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Blogroll: Add a feed URL setting to each blogroll item.
 - Forms: Add a `wp jetpack-forms export` command that exports form responses to CSV.
 - Forms: Show a progress indicator and a notice while exporting responses.
 - Jetpack Manage: Remove the sidebar link. The agency dashboard is reached through Automattic for Agencies.
