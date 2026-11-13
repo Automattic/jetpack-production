@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Join the admin shell, so switching to and from other Jetpack dashboards skips the page load when the admin shell flag is on.
 
 ### Changed
+- Remove the strip dependency in favor of an inline helper.
 - Update package dependencies.
 
 ## [8.4.2] - 2026-11-09
