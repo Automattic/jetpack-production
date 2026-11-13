@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Show a progress indicator and a notice while exporting responses.
 - Jetpack Manage: Remove the sidebar link. The agency dashboard is reached through Automattic for Agencies.
 - My Jetpack: Highlight expiring and expired plans in the account panel under your avatar, list them first with a renew link, and show other plans as active until their renewal date.
+- My Jetpack: On sites with Jetpack Pro, replace "Purchase a plan" with "Upgrade to Complete", which goes straight to checkout.
 - My Jetpack: Return to the license screen after you connect your account from "Activate a license", and show the WordPress.com connection screen made for your site's plugins.
 - My Jetpack: Return to the page you were on after you connect your account or restore the connection from the header, and show the WordPress.com connection screen made for your site's plugins.
 - My Jetpack: Show the WordPress.com connection screen made for your site's plugins when you connect your account from a product card or a recommendation.
