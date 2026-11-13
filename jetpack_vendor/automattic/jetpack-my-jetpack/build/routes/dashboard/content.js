@@ -1114,6 +1114,12 @@ __( "Show photo Exif metadata in carousel (when available)", "jetpack-my-jetpack
 __( "Exif data shows viewers additional technical details of a photo, like its focal length, aperture, and ISO.", "jetpack-my-jetpack" );
 __( "Show comments area in carousel", "jetpack-my-jetpack" );
 __( "Carousel color scheme", "jetpack-my-jetpack" );
+__( "Replace the standard WordPress comment form with one that lets readers comment with their social media accounts.", "jetpack-my-jetpack" );
+__( "Learn more about Comments", "jetpack-my-jetpack" );
+__( "Use the Jetpack comment form", "jetpack-my-jetpack" );
+__( "Enable blocks in comments", "jetpack-my-jetpack" );
+__( "Comment form introduction", "jetpack-my-jetpack" );
+__( "A few catchy words to motivate your visitors to comment.", "jetpack-my-jetpack" );
 __( "Failed to get feature settings", "jetpack-my-jetpack" );
 __( "Google Analytics is a free service that complements Jetpack Stats with different insights into your traffic.", "jetpack-my-jetpack" );
 __( "Learn more about Google Analytics", "jetpack-my-jetpack" );
