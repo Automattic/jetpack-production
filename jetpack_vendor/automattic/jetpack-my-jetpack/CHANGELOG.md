@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Features: Fill checked checkboxes in the Features list with the selected filter's color, show their focus ring only for keyboard focus, and show one focus ring per control instead of two.
 - Onboarding wizard: Let the user retry, and explain what went wrong, after the hand-off to WordPress.com fails.
 - Show a lapsed Scan purchase as Expired, with a link to resume it and an expired-plan notice, instead of offering an upgrade.
+- Upgrade screens: Keep the Jetpack Pro card inside narrow columns and phone screens.
 
 ## [6.17.1] - 2026-11-09
 ### Changed
