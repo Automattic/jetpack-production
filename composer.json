@@ -69,7 +69,7 @@
 		"automattic/jetpack-videopress": "^0.63.0-alpha",
 		"automattic/jetpack-waf": "^0.32.0",
 		"automattic/jetpack-woocommerce-stats": "^0.4.0-alpha",
-		"automattic/jetpack-wp-abilities": "^0.2.1",
+		"automattic/jetpack-wp-abilities": "^0.2.2-alpha",
 		"automattic/jetpack-ads": "^0.1.9-alpha",
 		"automattic/jetpack-wp-build-polyfills": "^0.7.5-alpha",
 		"automattic/woocommerce-analytics": "^0.18",
