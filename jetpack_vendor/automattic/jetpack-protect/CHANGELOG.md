@@ -19,6 +19,9 @@ This is an alpha version! The changes listed here are not final.
 - Firewall and Login protection: Hide the add-my-IP suggestion when the configured trusted IP header cannot be resolved.
 - Update package dependencies.
 
+### Fixed
+- Dashboard: Save nothing when a settings change includes an unavailable feature, show WordPress.com's reason when downtime email settings can't be saved, and ask for a reload once the site's connection goes away.
+
 ## [0.6.0] - 2026-11-09
 ### Added
 - Scan: View the whole file a threat was found in, with the flagged lines highlighted and what the file belongs to, and delete a stray file or restore a changed WordPress core file from there. [#54570]

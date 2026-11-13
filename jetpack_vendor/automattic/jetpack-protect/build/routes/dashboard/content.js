@@ -614,6 +614,7 @@ __( "There’s nothing to set up yet.", "jetpack-protect-pkg" );
 __( "The firewall couldn’t update its files on your server.", "jetpack-protect-pkg" );
 __( "The latest automatic firewall rules couldn’t be retrieved.", "jetpack-protect-pkg" );
 __( "The firewall couldn’t finish applying your change.", "jetpack-protect-pkg" );
+__( "This page is out of date. Reload it to continue.", "jetpack-protect-pkg" );
 __( "Your settings couldn’t be loaded.", "jetpack-protect-pkg" );
 __( "Settings updated.", "jetpack-protect-pkg" );
 __( "Your change couldn’t be saved. Try again.", "jetpack-protect-pkg" );
