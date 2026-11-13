@@ -267,4 +267,3 @@ __( "We couldn't find this video.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this page. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't find what you were looking for.", "jetpack-premium-analytics-pkg" );
 __( "Back to %s", "jetpack-premium-analytics-pkg" );
-__( "Customizing", "jetpack-premium-analytics-pkg" );

@@ -199,6 +199,7 @@ __( "Reset the layout to default?", "jetpack-premium-analytics-pkg" );
 __( "Your changes to this layout will be lost.", "jetpack-premium-analytics-pkg" );
 __( "Reset", "jetpack-premium-analytics-pkg" );
 __( "Reset to default", "jetpack-premium-analytics-pkg" );
+__( "Customizing", "jetpack-premium-analytics-pkg" );
 __( "Upgrade", "jetpack-premium-analytics-pkg" );
 __( "Enter a full URL that starts with https:// or http://.", "jetpack-premium-analytics-pkg" );
 __( "Build URL", "jetpack-premium-analytics-pkg" );
