@@ -104,6 +104,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Use the posts page's own SEO description, excerpt, and title in its meta and Open Graph tags.
 - SEO: Use the posts page's own SEO title, or the Pages title format, in its title and Open Graph title.
 - Settings: Tidy the Post by Email card layout.
+- Site Chat: Skip post context on restricted posts.
 - Sitemaps: Keep a working sitemap available while the first Jetpack index is generated.
 - Social: Fix the missing icon on the remove button of the default image picker.
 - Social: Keep posts published through Post by Email or the WordPress.com API with sharing turned off from being shared.
