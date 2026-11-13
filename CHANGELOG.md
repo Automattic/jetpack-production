@@ -112,6 +112,7 @@ This is an alpha version! The changes listed here are not final.
 - WordPress.com Reader: Stop marking every item of a custom feed template with the same post ID.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Abilities: Require administrator access to change Monitor notifications, matching the Jetpack settings screen.
 - Blocks: Store the empty list of excluded blocks so sites without a persistent object cache skip a database query on every page load.
 - Jetpack AI: Use the shared HighlightBanner from Jetpack components for the dark green banners.
 - Jetpack Social: Only register the deprecated connection test results REST endpoint when Jetpack Social is available.
