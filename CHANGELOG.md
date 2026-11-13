@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Show the first Stats v2 widgets sooner.
 - Premium Analytics: Show the Stats v2 dashboard widgets sooner.
 - Premium Analytics: Show the Top locations views as one-click toggles instead of a dropdown.
+- Premium Analytics: Show the view options of Top pages, Top platforms, Latest emails sent, All-time traffic and Views over years as one-click toggles instead of a dropdown.
 - Protect: Let sites without Scan turn off the daily vulnerability check from Settings.
 - Protect: Show the Scan site button in the page header as a primary button.
 - SEO: Add a default share image setting and fix blank or unsupported sharing images.
@@ -80,6 +81,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Improve page transitions between reports and detail views.
 - Premium Analytics: Keep the month in month labels for Japanese, Chinese and Korean sites, which showed a day marker instead (2021年1日 rather than 2021年1月).
 - Premium Analytics: Keep the place of a hidden Stats v2 tab when the tab order is saved.
+- Premium Analytics: Keep the widget title from being cut off beside a toggle, so the toggle folds into the widget controls menu at the same width whichever way the widget is resized.
 - Premium Analytics: Move an old Year to date or All time link to today's window when its saved interval no longer fits, so the address bar matches the charts.
 - Premium Analytics: Move a preset's dates to the new day when a page is left open past midnight, so the numbers and the date controls include today.
 - Premium Analytics: Open the dashboard for old Stats links on WordPress 7.2 instead of a page-not-found error.

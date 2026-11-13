@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Date filters: Measure a comparison with one implementation for reading and writing the URL.
 - Draw the text inside dashboard widgets larger and at a heavier weight, as classic Stats did, so lists and figures are easier to read.
 - Settings: Move the Stats settings from a dashboard tab to their own page, reached from the page options menu.
+- Show the view options of Top pages, Top platforms, Latest emails sent, All-time traffic and Views over years as one-click toggles instead of a dropdown.
 - Single-report pages: Let the VideoPress package register the video page instead of registering it here.
 - Single-report pages: Open on the date range of the page that linked to them, instead of All time.
 - Stats: Leave a bar chart column empty when its value is zero, instead of drawing a thin bar that looks like a small count.
@@ -42,6 +43,7 @@ This is an alpha version! The changes listed here are not final.
 - Dates: Keep the month in month labels for Japanese, Chinese and Korean sites, which showed a day marker instead (2021年1日 rather than 2021年1月).
 - Dates: Use the locale's default date format when the site's Date Format setting lacks a day, month or year, so chart labels and the date selector stay unambiguous.
 - Improve page transitions between reports and detail views.
+- Keep the widget title from being cut off beside a toggle, so the toggle folds into the widget controls menu at the same width whichever way the widget is resized.
 - Metric tiles: Pick the layout from the size of the tiles' own box, so highlights stay in columns after switching dashboard tabs.
 - Open the dashboard for `admin.php?page=stats` on WordPress 7.2, which reports an unregistered page as not found instead of denied.
 - Shorten the breadcrumb trail and hide the Customizing badge on phones, instead of letting them cover the header buttons.
