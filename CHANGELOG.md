@@ -115,6 +115,7 @@ This is an alpha version! The changes listed here are not final.
 - WordPress.com Reader: Stop marking every item of a custom feed template with the same post ID.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Abilities: Fix the Newsletter end-of-post subscribe setting, which changed the comment form's follow-blog checkbox instead.
 - Abilities: Require administrator access to change Monitor notifications, matching the Jetpack settings screen.
 - Admin shell: Declare the page title and subtitle shown while the dashboard opens, when the admin shell flag is on.
 - Blocks: Store the empty list of excluded blocks so sites without a persistent object cache skip a database query on every page load.
