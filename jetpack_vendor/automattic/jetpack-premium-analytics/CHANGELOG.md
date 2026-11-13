@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add Download CSV to the Traffic summary card.
 - Dashboard: Add an Arrange tabs option to the page options menu, to reorder the tabs and choose the one that opens first.
 - Date controls: Add a Last 3 years period to the date menu, charted by years, so traffic can be compared year by year without picking a custom range.
 - Date controls: Offer a yearly chart interval on any date range that covers three calendar years.

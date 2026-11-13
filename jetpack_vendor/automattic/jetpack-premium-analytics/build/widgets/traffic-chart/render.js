@@ -20,6 +20,7 @@ __( "Likes", "jetpack-premium-analytics-pkg" );
 _n( "%s Like", "%s Likes", 1, "jetpack-premium-analytics-pkg" );
 __( "Hourly data isn't available for this metric.", "jetpack-premium-analytics-pkg" );
 __( "Traffic metric", "jetpack-premium-analytics-pkg" );
+__( "Date", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load traffic data. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "You haven't published any posts yet. Get started by creating your first one.", "jetpack-premium-analytics-pkg" );
