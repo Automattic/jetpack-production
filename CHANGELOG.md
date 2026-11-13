@@ -105,6 +105,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Count visitors who have not made a consent choice on opt-out sites when a performance plugin delays the WP Consent API script.
 - Stats: Keep Year in review and Subscriber highlights in columns after switching dashboard tabs.
 - Stats: On sites running the WP Consent API, count AMP views only after the visitor allows statistics in an AMP consent banner. AMP pages without one, AMP pages not rendered by the AMP plugin, and Web Stories are no longer counted there.
+- VideoPress: Show an error when a video details or privacy change is not saved, instead of reporting success.
 - WordPress.com Reader: Stop marking every item of a custom feed template with the same post ID.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->

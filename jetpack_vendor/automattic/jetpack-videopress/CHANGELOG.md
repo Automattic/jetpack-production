@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Update package dependencies.
 
 ### Fixed
+- Dashboard: Show an error when a video details or privacy change is not saved, instead of reporting success.
 - Playlists: Load the Playlists tab on WordPress.com sites, where it showed "We couldn't load your playlists."
 
 ## [0.62.0] - 2026-11-09
