@@ -75,6 +75,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Fix the Stats dashboard failing to load on WordPress 7.2.
 - Premium Analytics: Improve page transitions between reports and detail views.
 - Premium Analytics: Keep the month in month labels for Japanese, Chinese and Korean sites, which showed a day marker instead (2021年1日 rather than 2021年1月).
+- Premium Analytics: Keep the place of a hidden Stats v2 tab when the tab order is saved.
 - Premium Analytics: Move an old Year to date or All time link to today's window when its saved interval no longer fits, so the address bar matches the charts.
 - Premium Analytics: Move a preset's dates to the new day when a page is left open past midnight, so the numbers and the date controls include today.
 - Premium Analytics: Open the dashboard for old Stats links on WordPress 7.2 instead of a page-not-found error.

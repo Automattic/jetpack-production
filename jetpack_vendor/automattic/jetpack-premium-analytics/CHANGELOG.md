@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Remove the Site overview, Post traffic activity, Total views, Total visitors, Popular days, Popular hours and Hello World widgets, which no layout or widget picker offered.
 
 ### Fixed
+- Arrange tabs: Keep the place of a tab that is hidden when the order is saved.
 - Charts: Stop hourly charts from showing a clickable cursor when a click opens nothing.
 - Dates: Keep the month in month labels for Japanese, Chinese and Korean sites, which showed a day marker instead (2021年1日 rather than 2021年1月).
 - Dates: Use the locale's default date format when the site's Date Format setting lacks a day, month or year, so chart labels and the date selector stay unambiguous.
