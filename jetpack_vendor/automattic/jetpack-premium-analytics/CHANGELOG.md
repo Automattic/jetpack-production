@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Dashboard: Preload the open screen's code and the first REST responses, so the first widgets appear sooner.
+- Dashboard: Request the dashboard sections and widget types while the page is still loading the site details, instead of after.
 - Dashboard: Start loading stats without waiting for the site settings when the dashboard opens with no dates in its URL.
 - Date controls: Simplify how a period a widget sets is signalled to the date control.
 - Date filters: Measure a comparison with one implementation for reading and writing the URL.
