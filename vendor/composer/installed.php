@@ -623,9 +623,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-wp-abilities' => array(
-            'pretty_version' => '0.2.2-alpha.1794601800',
-            'version' => '0.2.2.0-alpha1794601800',
-            'reference' => '5205f097b72ce44a0a8cba2d2fd85fbbf4a6eef4',
+            'pretty_version' => '0.2.2-alpha.1794644920',
+            'version' => '0.2.2.0-alpha1794644920',
+            'reference' => 'b1ccbce0802e17f4775e217b309cb9a363ee4de3',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-wp-abilities',
             'aliases' => array(),
