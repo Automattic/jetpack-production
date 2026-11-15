@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Declare the page title and subtitle shown while the dashboard opens, when the admin shell flag is on.
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account, connecting the site or restoring the connection from the header, and return to the page the header is on.
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account from a product card or a recommendation.
+- Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account from the Features tab.
 - Connection: Show the WordPress.com connection screen made for the site's plugins when connecting an account or restoring the connection from the Overview's Connection card.
 - Features: Remember whether you last picked the grid or the list layout on the Features tab, and open the tab in that layout next time.
 - Features: Use the shared HighlightBanner from Jetpack components for the banner above the features grid.
