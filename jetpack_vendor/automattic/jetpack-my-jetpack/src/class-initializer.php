@@ -48,7 +48,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '6.18.0-alpha';
+	const PACKAGE_VERSION = '6.18.1-alpha';
 
 	/**
 	 * Feature flag that swaps the single-screen onboarding takeover for the setup wizard.
@@ -869,7 +869,7 @@ class Initializer {
 	/**
 	 * Register My Jetpack with the admin shell, which switches between Jetpack dashboards without a page load.
 	 *
-	 * @since 6.18.0-alpha
+	 * @since 6.18.0
 	 *
 	 * @param array $members Shell members keyed by admin page slug.
 	 * @return array
@@ -901,7 +901,7 @@ class Initializer {
 	 *
 	 * Skips the screen ID alias: on another page it would make the generated enqueue boot a second app.
 	 *
-	 * @since 6.18.0-alpha
+	 * @since 6.18.0
 	 *
 	 * @return void
 	 */
@@ -1708,7 +1708,7 @@ class Initializer {
 	/**
 	 * The URL that opens a settings panel in Features.
 	 *
-	 * @since 6.18.0-alpha
+	 * @since 6.18.0
 	 *
 	 * @param string $slug The module or settings entry slug.
 	 * @return string

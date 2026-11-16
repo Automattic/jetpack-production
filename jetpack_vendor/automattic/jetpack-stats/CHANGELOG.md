@@ -5,19 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.24.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.24.2] - 2026-11-16
 ### Changed
-- Abilities: Declare the nested Stats result fields in each output schema, and remove the result-shape sentences from the ability descriptions.
-- Abilities: Describe what the site overview ability is for, and leave its result fields to the output schema.
-- Stats abilities: Mark jetpack-stats/update-settings as destructive, since it overwrites the saved Stats settings.
+- Abilities: Declare the nested Stats result fields in each output schema, and remove the result-shape sentences from the ability descriptions. [#54778]
+- Abilities: Describe what the site overview ability is for, and leave its result fields to the output schema. [#54909]
+- Stats abilities: Mark jetpack-stats/update-settings as destructive, since it overwrites the saved Stats settings. [#54724]
 
 ### Fixed
-- Abilities: Limit get-settings to administrators, matching the Stats settings screen.
-- Tracking pixel: Count visitors who have not made a consent choice on opt-out sites when a performance plugin delays the WP Consent API script.
-- Tracking pixel: On sites running the WP Consent API, count AMP views only after an AMP consent banner is accepted, and stop counting AMP pages without one, AMP pages not rendered by the AMP plugin, and Web Stories.
+- Abilities: Limit get-settings to administrators, matching the Stats settings screen. [#53556]
+- Tracking pixel: Count visitors who have not made a consent choice on opt-out sites when a performance plugin delays the WP Consent API script. [#54675]
+- Tracking pixel: On sites running the WP Consent API, count AMP views only after an AMP consent banner is accepted, and stop counting AMP pages without one, AMP pages not rendered by the AMP plugin, and Web Stories. [#54671]
 
 ## [0.24.1] - 2026-11-09
 ### Fixed
@@ -432,7 +429,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
-[0.24.2-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.24.1...v0.24.2-alpha
+[0.24.2]: https://github.com/Automattic/jetpack-stats/compare/v0.24.1...v0.24.2
 [0.24.1]: https://github.com/Automattic/jetpack-stats/compare/v0.24.0...v0.24.1
 [0.24.0]: https://github.com/Automattic/jetpack-stats/compare/v0.23.2...v0.24.0
 [0.23.2]: https://github.com/Automattic/jetpack-stats/compare/v0.23.1...v0.23.2

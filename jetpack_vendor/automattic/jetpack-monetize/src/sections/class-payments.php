@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Payments state and routes.
  *
- * @since 0.2.0-alpha
+ * @since 0.2.0
  */
 class Payments implements Dashboard_Section {
 

@@ -5,21 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [9.18.0-alpha] - unreleased
+## [9.18.1-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
+## [9.18.0] - 2026-11-16
 ### Added
-- SSO: Add SSO::init_standalone() so plugins other than Jetpack can offer SSO.
+- SSO: Add SSO::init_standalone() so plugins other than Jetpack can offer SSO. [#53685]
 
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#54703]
 
 ### Fixed
-- Check permissions before retrying site registration.
-- Identity Crisis: Treat site URLs whose domains differ only in capitalization as the same site.
-- Make an administrator who connects their own account while the connection owner's connection is broken the new connection owner, and offer them "Connect your account" instead of "Restore Connection".
-- Stop showing a connection error notice for a request signature mismatch, which reconnecting rarely fixes.
+- Check permissions before retrying site registration. [#54673]
+- Identity Crisis: Treat site URLs whose domains differ only in capitalization as the same site. [#54647]
+- Make an administrator who connects their own account while the connection owner's connection is broken the new connection owner, and offer them "Connect your account" instead of "Restore Connection". [#54469]
+- Stop showing a connection error notice for a request signature mismatch, which reconnecting rarely fixes. [#54469]
 
 ## [9.17.2] - 2026-11-09
 ### Fixed
@@ -2251,7 +2252,8 @@ This is an alpha version! The changes listed here are not final.
 
 - Separate the connection library into its own package.
 
-[9.18.0-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.17.2...v9.18.0-alpha
+[9.18.1-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.18.0...v9.18.1-alpha
+[9.18.0]: https://github.com/Automattic/jetpack-connection/compare/v9.17.2...v9.18.0
 [9.17.2]: https://github.com/Automattic/jetpack-connection/compare/v9.17.1...v9.17.2
 [9.17.1]: https://github.com/Automattic/jetpack-connection/compare/v9.17.0...v9.17.1
 [9.17.0]: https://github.com/Automattic/jetpack-connection/compare/v9.16.2...v9.17.0
