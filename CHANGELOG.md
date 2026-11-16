@@ -81,6 +81,7 @@ This is an alpha version! The changes listed here are not final.
 - Infinite Scroll: Load block styles, including layout and spacing, for posts loaded by scrolling.
 - Infinite Scroll: Respect the "Load more posts with a button" setting saved from Jetpack settings.
 - JSON API: Fix a fatal error on PHP 8 when an endpoint documents a field without a type.
+- JSON API: Fix missing footnotes and other blocks that require post context in rendered posts.
 - JSON API: Ignore the `fields` query parameter when it is passed as an array, instead of causing a fatal error.
 - Markdown: Avoid a fatal error on WordPress 7.2 when another plugin runs kses on translated strings.
 - Markdown: Keep Markdown for posts off after a Jetpack update when it was turned off.
