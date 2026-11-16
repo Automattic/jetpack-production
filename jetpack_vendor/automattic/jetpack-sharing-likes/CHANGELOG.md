@@ -5,12 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.6.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.6.2] - 2026-11-16
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#54703]
 
 ## [0.6.1] - 2026-11-09
 ### Changed
@@ -84,7 +81,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Add the wp-admin Settings > Sharing screen, covering sharing buttons, Like buttons, and where they appear. [#52407] [#52727] [#52756] [#52758]
 - Settings: Give Comment Likes their own section on every platform, and offer the Like block to Jetpack and Atomic sites running Comment Likes. [#52796]
 
-[0.6.2-alpha]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.6.1...v0.6.2-alpha
+[0.6.2]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/Automattic/jetpack-sharing-likes/compare/v0.5.0...v0.5.1

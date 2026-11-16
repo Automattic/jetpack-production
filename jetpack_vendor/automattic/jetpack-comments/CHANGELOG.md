@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.9.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.9.1] - 2026-11-16
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#54703]
 
 ### Fixed
-- Fix the comment editor's leftover placeholder on empty lines, doubled focus ring, missing caret after Reply, and gaps from empty paragraphs, and stop the page jumping as the form loads and the editor opens.
-- Keep commenters signed in on custom-domain WordPress.com sites after they log out of WordPress.com.
-- Show apostrophes and ampersands in the site name as written in the comment dialog's title and subscribe option.
+- Fix the comment editor's leftover placeholder on empty lines, doubled focus ring, missing caret after Reply, and gaps from empty paragraphs, and stop the page jumping as the form loads and the editor opens. [#54589]
+- Keep commenters signed in on custom-domain WordPress.com sites after they log out of WordPress.com. [#54833]
+- Show apostrophes and ampersands in the site name as written in the comment dialog's title and subscribe option. [#54859]
 
 ## [0.9.0] - 2026-11-09
 ### Added
@@ -153,7 +150,7 @@ This is an alpha version! The changes listed here are not final.
 - Add an on-site comment form with a textarea, guest name and email fields, and reply threading when the `jetpack_comments_new_hotness` filter returns true. [#51466]
 - Initial version. [#51210]
 
-[0.9.1-alpha]: https://github.com/Automattic/jetpack-comments/compare/v0.9.0...v0.9.1-alpha
+[0.9.1]: https://github.com/Automattic/jetpack-comments/compare/v0.9.0...v0.9.1
 [0.9.0]: https://github.com/Automattic/jetpack-comments/compare/v0.8.2...v0.9.0
 [0.8.2]: https://github.com/Automattic/jetpack-comments/compare/v0.8.1...v0.8.2
 [0.8.1]: https://github.com/Automattic/jetpack-comments/compare/v0.8.0...v0.8.1

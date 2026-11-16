@@ -12,7 +12,7 @@ namespace Automattic\Jetpack\IP;
  */
 class Utils {
 
-	const PACKAGE_VERSION = '0.8.0-alpha';
+	const PACKAGE_VERSION = '0.8.0';
 
 	/**
 	 * Get the current user's IP address.
@@ -33,7 +33,7 @@ class Utils {
 	 * Whether the request carries the configured trusted header but `get_ip()` couldn't take an
 	 * address from it, so it fell back to `REMOTE_ADDR`.
 	 *
-	 * @since 0.8.0-alpha
+	 * @since 0.8.0
 	 *
 	 * @return bool
 	 */

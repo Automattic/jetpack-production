@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.8.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.8.0] - 2026-11-16
 ### Added
-- Add a method that reports whether the configured trusted header was present but could not provide an address.
+- Add a method that reports whether the configured trusted header was present but could not provide an address. [#54649]
 
 ### Fixed
-- Fall back to the connection address when the configured trusted header is empty or holds no valid IP address.
+- Fall back to the connection address when the configured trusted header is empty or holds no valid IP address. [#54649]
 
 ## [0.7.1] - 2026-10-20
 ### Changed
@@ -148,7 +145,7 @@ This is an alpha version! The changes listed here are not final.
 - Add jetpack-ip package functionality [#28846]
 - Initialized the package. [#28765]
 
-[0.8.0-alpha]: https://github.com/automattic/jetpack-ip/compare/v0.7.1...v0.8.0-alpha
+[0.8.0]: https://github.com/automattic/jetpack-ip/compare/v0.7.1...v0.8.0
 [0.7.1]: https://github.com/automattic/jetpack-ip/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/automattic/jetpack-ip/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/automattic/jetpack-ip/compare/v0.5.0...v0.6.0

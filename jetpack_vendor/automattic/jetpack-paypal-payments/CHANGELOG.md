@@ -5,17 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.15.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.15.0] - 2026-11-16
 ### Added
-- Add Edit and Change item to a saved payment button's block toolbar, next to Delete.
-- Add product images to a payment button: up to five on the product and one per option of the first variant, uploaded to PayPal and shown at checkout.
-- Payment Buttons: Show the discount on the button card, with the original price struck through and a discount tag.
+- Add Edit and Change item to a saved payment button's block toolbar, next to Delete. [#54959]
+- Add product images to a payment button: up to five on the product and one per option of the first variant, uploaded to PayPal and shown at checkout. [#54529]
+- Payment Buttons: Show the discount on the button card, with the original price struck through and a discount tag. [#54960]
 
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#54703]
 
 ## [0.14.0] - 2026-11-09
 ### Added
@@ -474,7 +471,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Simple Payments: Move Simple Payments block to PayPal Payments package. [#43413]
 
-[0.15.0-alpha]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.14.0...v0.15.0-alpha
+[0.15.0]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.14.0...v0.15.0
 [0.14.0]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.13.3...v0.14.0
 [0.13.3]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.13.2...v0.13.3
 [0.13.2]: https://github.com/Automattic/jetpack-paypal-payments/compare/v0.13.1...v0.13.2

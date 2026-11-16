@@ -14,7 +14,7 @@ use Automattic\Jetpack\Protect_Models\Status_Model;
  */
 class Status {
 
-	const PACKAGE_VERSION = '0.11.0-alpha';
+	const PACKAGE_VERSION = '0.11.0';
 	/**
 	 * Name of the option where status is stored
 	 *
@@ -206,7 +206,7 @@ class Status {
 	/**
 	 * Whether the request is for the Protect page, served by the Protect plugin or the Protect dashboard.
 	 *
-	 * @since 0.11.0-alpha
+	 * @since 0.11.0
 	 *
 	 * @return bool
 	 */

@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * What the page's JS needs to record Tracks events, as on Jetpack's other admin pages.
  *
- * @since 0.2.0-alpha
+ * @since 0.2.0
  */
 class Tracks {
 

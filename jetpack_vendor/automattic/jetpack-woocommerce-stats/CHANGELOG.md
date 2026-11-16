@@ -5,16 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.4.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.4.0] - 2026-11-16
 ### Added
-- Let a click on a point or bar in the Store performance and over-time charts set the dashboard to that period, or the previous period for a previous-period point or bar.
-- Reports: Describe the fields of the orders by date and sessions by device reports, let callers name the fields they read, and name the provider and contract in response headers.
+- Let a click on a point or bar in the Store performance and over-time charts set the dashboard to that period, or the previous period for a previous-period point or bar. [#54573]
+- Reports: Describe the fields of the orders by date and sessions by device reports, let callers name the fields they read, and name the provider and contract in response headers. [#54624]
 
 ### Changed
-- Update package dependencies.
+- Update package dependencies. [#54703]
 
 ## [0.3.3] - 2026-11-09
 ### Changed
@@ -106,7 +103,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Initial version.
 
-[0.4.0-alpha]: https://github.com/Automattic/jetpack-woocommerce-stats/compare/v0.3.3...v0.4.0-alpha
+[0.4.0]: https://github.com/Automattic/jetpack-woocommerce-stats/compare/v0.3.3...v0.4.0
 [0.3.3]: https://github.com/Automattic/jetpack-woocommerce-stats/compare/v0.3.2...v0.3.3
 [0.3.2]: https://github.com/Automattic/jetpack-woocommerce-stats/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/Automattic/jetpack-woocommerce-stats/compare/v0.3.0...v0.3.1

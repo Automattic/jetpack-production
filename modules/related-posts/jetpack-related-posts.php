@@ -242,7 +242,7 @@ class Jetpack_RelatedPosts {
 			 *
 			 * @module related-posts
 			 *
-			 * @since 16.5-a.2
+			 * @since 16.5
 			 *
 			 * @param bool         $show Whether to append Related Posts to this content. Default true.
 			 * @param WP_Post|null $post The post whose content is being filtered.

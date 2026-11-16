@@ -12,7 +12,7 @@ namespace Automattic\Jetpack\Stats;
  *
  * `data-block-on-consent` does nothing without an `amp-consent`, so the pixel would count visitors who were never asked.
  *
- * @since 0.24.2-alpha
+ * @since 0.24.2
  */
 class AMP_Consent_Sanitizer extends \AMP_Base_Sanitizer {
 
