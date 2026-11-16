@@ -11,7 +11,9 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add Download CSV to the Devices and Top platforms cards.
+- Add Download CSV to the post, video and email detail cards.
 - Add Download CSV to the Traffic summary card.
+- Add Download CSV to the Views over years, Monthly posting activity, Shares and Subscriber summary cards.
 - Dashboard: Add an Arrange tabs option to the page options menu, to reorder the tabs and choose the one that opens first.
 - Date controls: Add a Last 3 years period to the date menu, charted by years, so traffic can be compared year by year without picking a custom range.
 - Date controls: Offer a yearly chart interval on any date range that covers three calendar years.

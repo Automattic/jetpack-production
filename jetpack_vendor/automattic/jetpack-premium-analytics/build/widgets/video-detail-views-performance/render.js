@@ -12,6 +12,8 @@ __( "Impressions", "jetpack-premium-analytics-pkg" );
 _n( "%s Impression", "%s Impressions", 1, "jetpack-premium-analytics-pkg" );
 __( "Hours watched", "jetpack-premium-analytics-pkg" );
 __( "Retention rate", "jetpack-premium-analytics-pkg" );
+__( "Retention rate (%)", "jetpack-premium-analytics-pkg" );
+__( "Date", "jetpack-premium-analytics-pkg" );
 __( "Video metric", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this video's performance. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Open a video report to see its performance here.", "jetpack-premium-analytics-pkg" );

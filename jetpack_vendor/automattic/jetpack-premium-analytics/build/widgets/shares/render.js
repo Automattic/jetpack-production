@@ -10,6 +10,8 @@ __( "Print", "jetpack-premium-analytics-pkg" );
 __( "Email", "jetpack-premium-analytics-pkg" );
 __( "Press This", "jetpack-premium-analytics-pkg" );
 __( "Custom share buttons", "jetpack-premium-analytics-pkg" );
+__( "Platform", "jetpack-premium-analytics-pkg" );
+__( "Shares", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load shares. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "You don’t have shares recorded yet. Social can help you reach readers where they already are.", "jetpack-premium-analytics-pkg" );

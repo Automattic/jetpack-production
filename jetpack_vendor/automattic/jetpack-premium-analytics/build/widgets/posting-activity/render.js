@@ -6,6 +6,8 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+__( "Date", "jetpack-premium-analytics-pkg" );
+__( "Posts", "jetpack-premium-analytics-pkg" );
 _n( "%d post", "%d posts", 1, "jetpack-premium-analytics-pkg" );
 __( "We couldn't load posting activity. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "No posts", "jetpack-premium-analytics-pkg" );

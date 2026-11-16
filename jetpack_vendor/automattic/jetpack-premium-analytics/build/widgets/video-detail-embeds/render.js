@@ -6,6 +6,7 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
+__( "URL", "jetpack-premium-analytics-pkg" );
 __( "Select a video to see where it is embedded across your site.", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load video embeds. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );

@@ -8,6 +8,7 @@
 
 __( "Views", "jetpack-premium-analytics-pkg" );
 _n( "%s View", "%s Views", 1, "jetpack-premium-analytics-pkg" );
+__( "Date", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load this post's views. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "Open a post or page report to see its views here.", "jetpack-premium-analytics-pkg" );

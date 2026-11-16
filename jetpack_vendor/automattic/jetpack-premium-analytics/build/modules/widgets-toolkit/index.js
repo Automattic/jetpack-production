@@ -139,6 +139,7 @@ _x( "%1$s · %2$s", "heatmap tooltip: date and count", "jetpack-premium-analytic
 __( "Totals", "jetpack-premium-analytics-pkg" );
 _x( "%1$s %2$s", "month and year", "jetpack-premium-analytics-pkg" );
 __( "%s (incomplete month)", "jetpack-premium-analytics-pkg" );
+__( "Year", "jetpack-premium-analytics-pkg" );
 __( "Mark \"%s\" as spam", "jetpack-premium-analytics-pkg" );
 __( "Mark as spam", "jetpack-premium-analytics-pkg" );
 __( "Are you sure you want to mark \"%s\" as spam?", "jetpack-premium-analytics-pkg" );
@@ -236,7 +237,6 @@ __( "Period", "jetpack-premium-analytics-pkg" );
 __( "Earnings", "jetpack-premium-analytics-pkg" );
 __( "Ads Served", "jetpack-premium-analytics-pkg" );
 __( "Status", "jetpack-premium-analytics-pkg" );
-__( "Year", "jetpack-premium-analytics-pkg" );
 __( "Total posts", "jetpack-premium-analytics-pkg" );
 __( "Total comments", "jetpack-premium-analytics-pkg" );
 __( "Avg comments per post", "jetpack-premium-analytics-pkg" );
