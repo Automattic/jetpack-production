@@ -9,6 +9,7 @@ This is an alpha version! The changes listed here are not final.
 ### Bug fixes
 - JSON API: Fix missing footnotes and other blocks that require post context in rendered posts.
 - Markdown: Keep Markdown for posts off after a Jetpack update when it was turned off.
+- Markdown block: Fit tables and code blocks to the width of a subscription email, so they no longer make it scroll sideways. Tables now span the full width with equal columns.
 - Newsletter: Show the automatically added Subscribe and Subscriber Login blocks in the Site Editor on WordPress.com sites with plugins.
 
 ## 16.5-a.3 - 2026-11-16
