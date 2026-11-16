@@ -18,6 +18,8 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Check permissions before retrying site registration.
 - Identity Crisis: Treat site URLs whose domains differ only in capitalization as the same site.
+- Make an administrator who connects their own account while the connection owner's connection is broken the new connection owner, and offer them "Connect your account" instead of "Restore Connection".
+- Stop showing a connection error notice for a request signature mismatch, which reconnecting rarely fixes.
 
 ## [9.17.2] - 2026-11-09
 ### Fixed

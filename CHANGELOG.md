@@ -67,7 +67,9 @@ This is an alpha version! The changes listed here are not final.
 - Comments: Fix the comment editor's leftover placeholder on empty lines, doubled focus ring, missing caret after Reply, and gaps from empty paragraphs, and stop the page jumping as the form loads and the editor opens.
 - Comments: Show apostrophes and ampersands in the site name as written in the comment dialog's title and subscribe option.
 - Connection: Keep the progress indicator on screen after clicking Restore Connection until the redirect to WordPress.com.
+- Connection: Let a second administrator fix a broken connection owner by connecting their own account, which makes them the new owner.
 - Connection: Restore the connect button and explain what went wrong when the connection to WordPress.com fails to start.
+- Connection: Stop showing a connection error notice for a request signature mismatch, which reconnecting rarely fixes.
 - Donations Form: Fix Tips blocks and Pop-up forms opening a checkout with no payment plan, including forms that were already published.
 - Forms: Apply Global Styles label settings to form labels, including the group label on multiple-choice fields. The Outlined and Animated styles keep their own label weight.
 - Forms: Fix exporting to Google Sheets when a response has a very long value, and say when an export is too large for Google Sheets.
