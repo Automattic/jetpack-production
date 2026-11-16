@@ -173,5 +173,7 @@ __( "Previously connected to %s.", "jetpack-monetize" );
 __( "Connect Stripe", "jetpack-monetize" );
 __( "Stripe", "jetpack-monetize" );
 __( "Sandbox", "jetpack-monetize" );
+__( "Your Stripe account can’t accept payments right now, so new and renewing subscriptions will fail. Resolve the issue in your Stripe dashboard.", "jetpack-monetize" );
+__( "Open Stripe", "jetpack-monetize" );
 __( "This screen is coming soon.", "jetpack-monetize" );
 __( "Monetize", "jetpack-monetize" );

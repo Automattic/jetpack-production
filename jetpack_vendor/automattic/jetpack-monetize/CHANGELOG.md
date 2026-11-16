@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Payments: Warn when the connected Stripe account can't accept charges.
+
 ## [0.2.0] - 2026-11-16
 ### Added
 - Add a Settings tab with the Ads settings, behind the Monetize dashboard flag. [#54662]
@@ -20,4 +27,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial version. [#54433]
 
+[0.2.1-alpha]: https://github.com/Automattic/jetpack-monetize/compare/v0.2.0...v0.2.1-alpha
 [0.2.0]: https://github.com/Automattic/jetpack-monetize/compare/v0.1.0...v0.2.0
