@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Show the WordPress.com connection screen made for your site's plugins when you connect your account from a product card or a recommendation.
 - My Jetpack: Show the WordPress.com connection screen made for your site's plugins when you connect your account from the Features tab.
 - PayPal Payment Buttons: Add product images to a payment button, shown on the PayPal checkout page.
+- PayPal Payment Buttons: Show the discount on the button card, with the original price struck through and a discount tag.
 - Premium Analytics: Add a Last 3 years period to the date menu, charted by years, so traffic can be compared year by year without picking a custom range.
 - Premium Analytics: Add an Arrange tabs option to the Stats v2 page options menu, to reorder the tabs and choose the one that opens first.
 - Premium Analytics: Add Download CSV to the Devices and Top platforms cards.

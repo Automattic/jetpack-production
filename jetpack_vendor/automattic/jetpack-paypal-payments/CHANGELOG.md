@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add product images to a payment button: up to five on the product and one per option of the first variant, uploaded to PayPal and shown at checkout.
+- Payment Buttons: Show the discount on the button card, with the original price struck through and a discount tag.
 
 ### Changed
 - Update package dependencies.
