@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.19.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Action Bar: Show an Undo notice after unsubscribing, ignore repeat clicks while a request is in flight, and switch the button to Subscribed once a subscribe goes through.
+
 ## [0.19.0] - 2026-11-16
 ### Added
 - Join the admin shell, so switching to and from other Jetpack dashboards skips the page load when the admin shell flag is on. [#54768]
@@ -494,6 +501,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Update package dependencies. [#46143]
 
+[0.19.1-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.19.0...v0.19.1-alpha
 [0.19.0]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.5...v0.19.0
 [0.18.5]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.4...v0.18.5
 [0.18.4]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.3...v0.18.4
