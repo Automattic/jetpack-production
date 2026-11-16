@@ -39,6 +39,7 @@ __( "Loading map", "jetpack-premium-analytics-pkg" );
 __( "Geo chart", "jetpack-premium-analytics-pkg" );
 __( "Less", "jetpack-premium-analytics-pkg" );
 __( "More", "jetpack-premium-analytics-pkg" );
+__( "%s (incomplete)", "jetpack-premium-analytics-pkg" );
 __( "Heatmap chart", "jetpack-premium-analytics-pkg" );
 __( "Current period", "jetpack-premium-analytics-pkg" );
 __( "Previous period", "jetpack-premium-analytics-pkg" );

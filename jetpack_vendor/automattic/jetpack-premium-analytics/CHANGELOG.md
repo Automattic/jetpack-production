@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Date controls: Simplify how a period a widget sets is signalled to the date control.
 - Date filters: Measure a comparison with one implementation for reading and writing the URL.
 - Draw the text inside dashboard widgets larger and at a heavier weight, as classic Stats did, so lists and figures are easier to read.
+- Make view counts easier to compare across the heatmaps, so quiet periods can be told apart instead of sharing one pale shade, and mark months the data does not yet fill.
 - Settings: Move the Stats settings from a dashboard tab to their own page, reached from the page options menu.
 - Show the view options of Top pages, Top platforms, Latest emails sent, All-time traffic and Views over years as one-click toggles instead of a dropdown.
 - Single-report pages: Let the VideoPress package register the video page instead of registering it here.

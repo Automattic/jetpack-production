@@ -481,6 +481,7 @@ __( "Loading map", "jetpack-podcast" );
 __( "Geo chart", "jetpack-podcast" );
 __( "Less", "jetpack-podcast" );
 __( "More", "jetpack-podcast" );
+__( "%s (incomplete)", "jetpack-podcast" );
 __( "Heatmap chart", "jetpack-podcast" );
 __( "Loading…", "jetpack-podcast" );
 __( "Not enough space to display data", "jetpack-podcast" );

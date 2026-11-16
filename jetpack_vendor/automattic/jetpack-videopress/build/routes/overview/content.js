@@ -125,6 +125,7 @@ __( "Loading map", "jetpack-videopress-pkg" );
 __( "Geo chart", "jetpack-videopress-pkg" );
 __( "Less", "jetpack-videopress-pkg" );
 __( "More", "jetpack-videopress-pkg" );
+__( "%s (incomplete)", "jetpack-videopress-pkg" );
 __( "Heatmap chart", "jetpack-videopress-pkg" );
 __( "Current period", "jetpack-videopress-pkg" );
 __( "Not enough space to display data", "jetpack-videopress-pkg" );

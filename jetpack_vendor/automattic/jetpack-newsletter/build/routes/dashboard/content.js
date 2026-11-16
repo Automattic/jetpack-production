@@ -443,6 +443,7 @@ __( "Loading map", "jetpack-newsletter" );
 __( "Geo chart", "jetpack-newsletter" );
 __( "Less", "jetpack-newsletter" );
 __( "More", "jetpack-newsletter" );
+__( "%s (incomplete)", "jetpack-newsletter" );
 __( "Heatmap chart", "jetpack-newsletter" );
 __( "Current period", "jetpack-newsletter" );
 __( "Previous period", "jetpack-newsletter" );

@@ -777,6 +777,7 @@ __( "Loading map", "jetpack-my-jetpack" );
 __( "Geo chart", "jetpack-my-jetpack" );
 __( "Less", "jetpack-my-jetpack" );
 __( "More", "jetpack-my-jetpack" );
+__( "%s (incomplete)", "jetpack-my-jetpack" );
 __( "Heatmap chart", "jetpack-my-jetpack" );
 __( "Current period", "jetpack-my-jetpack" );
 __( "Not enough space to display data", "jetpack-my-jetpack" );

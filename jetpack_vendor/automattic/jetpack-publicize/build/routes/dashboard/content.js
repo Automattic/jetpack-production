@@ -209,6 +209,7 @@ __( "Loading map", "jetpack-publicize-pkg" );
 __( "Geo chart", "jetpack-publicize-pkg" );
 __( "Less", "jetpack-publicize-pkg" );
 __( "More", "jetpack-publicize-pkg" );
+__( "%s (incomplete)", "jetpack-publicize-pkg" );
 __( "Heatmap chart", "jetpack-publicize-pkg" );
 __( "Current period", "jetpack-publicize-pkg" );
 __( "Not enough space to display data", "jetpack-publicize-pkg" );
