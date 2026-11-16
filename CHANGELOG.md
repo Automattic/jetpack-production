@@ -25,7 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add Download CSV to the post, video and email detail cards.
 - Premium Analytics: Add Download CSV to the Traffic summary card.
 - Premium Analytics: Add Download CSV to the Views over years, Monthly posting activity and Subscriber summary cards.
-- Premium Analytics: Draw the text inside dashboard widgets larger and at a heavier weight, as classic Stats did, so lists and figures are easier to read.
+- Premium Analytics: Draw the text inside dashboard widgets at 14px, as classic Stats did, with headline figures in bold, so lists and figures are easier to read.
 - Premium Analytics: Let a click on a point or bar in the WooCommerce tab charts set the dashboard to that period, and open the previous period for a click on a previous-period point or bar in any chart.
 - Premium Analytics: Load Stats v2 sooner when it is opened from the admin menu.
 - Premium Analytics: Make view counts easier to compare across the heatmaps, so quiet periods can be told apart instead of sharing one pale shade, and mark months the data does not yet fill.
