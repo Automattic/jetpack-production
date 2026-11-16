@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add Edit and Change item to a saved payment button's block toolbar, next to Delete.
 - Add product images to a payment button: up to five on the product and one per option of the first variant, uploaded to PayPal and shown at checkout.
 - Payment Buttons: Show the discount on the button card, with the original price struck through and a discount tag.
 

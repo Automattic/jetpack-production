@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Return to the page you were on after you connect your account or restore the connection from the header, and show the WordPress.com connection screen made for your site's plugins.
 - My Jetpack: Show the WordPress.com connection screen made for your site's plugins when you connect your account from a product card or a recommendation.
 - My Jetpack: Show the WordPress.com connection screen made for your site's plugins when you connect your account from the Features tab.
+- PayPal Payment Buttons: Add Edit and Change item to a saved payment button's block toolbar, next to Delete.
 - PayPal Payment Buttons: Add product images to a payment button, shown on the PayPal checkout page.
 - PayPal Payment Buttons: Show the discount on the button card, with the original price struck through and a discount tag.
 - Premium Analytics: Add a Last 3 years period to the date menu, charted by years, so traffic can be compared year by year without picking a custom range.
