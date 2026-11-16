@@ -1122,7 +1122,7 @@ __( "Enable blocks in comments", "jetpack-my-jetpack" );
 __( "Comment form introduction", "jetpack-my-jetpack" );
 __( "A few catchy words to motivate your visitors to comment.", "jetpack-my-jetpack" );
 __( "Failed to get feature settings", "jetpack-my-jetpack" );
-__( "Google Analytics is a free service that complements Jetpack Stats with different insights into your traffic.", "jetpack-my-jetpack" );
+__( "Google Analytics is a free service that complements <a>Jetpack Stats</a> with different insights into your traffic.", "jetpack-my-jetpack" );
 __( "Learn more about Google Analytics", "jetpack-my-jetpack" );
 __( "Enable Google Analytics", "jetpack-my-jetpack" );
 __( "Add a Measurement ID to start tracking.", "jetpack-my-jetpack" );
