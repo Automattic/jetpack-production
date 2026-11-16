@@ -60,7 +60,7 @@
 		"automattic/jetpack-redirect": "^4.0.1",
 		"automattic/jetpack-roles": "^4.0.1",
 		"automattic/jetpack-search": "^8.4.3",
-		"automattic/jetpack-seo": "^0.12.0",
+		"automattic/jetpack-seo": "^0.12.1-alpha",
 		"automattic/jetpack-sharing-likes": "^0.6.2",
 		"automattic/jetpack-stats": "^0.24.3-alpha",
 		"automattic/jetpack-stats-admin": "^0.40.1",

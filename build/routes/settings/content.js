@@ -671,6 +671,8 @@ __( "Carousel color scheme", "jetpack" );
 __( "Jetpack Writing Settings", "jetpack" );
 __( "Writing", "jetpack" );
 __( "Writing tools available to you will be shown here when an administrator enables them.", "jetpack" );
+__( "This site's visibility settings discourage or prevent search engines from indexing it.", "jetpack" );
+__( "Review site visibility settings", "jetpack" );
 __( "No matching settings", "jetpack" );
 __( "No search results found for %s", "jetpack" );
 __( "Your site is protected by Jetpack. You’ll be notified if anything needs attention.", "jetpack" );

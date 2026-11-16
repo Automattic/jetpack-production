@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.12.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Clarify site-wide search indexing restrictions and per-item preferences.
+
 ## [0.12.0] - 2026-11-16
 ### Added
 - Add a default share image setting and update social previews when it changes. [#54729]
@@ -275,6 +282,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Create a Settings screen with site visibility, post title structure, front-page description, and site verification. [#49256]
 - Scaffold the new `jetpack-seo` package and mount its admin page. [#49203]
 
+[0.12.1-alpha]: https://github.com/Automattic/jetpack-seo/compare/0.12.0...0.12.1-alpha
 [0.12.0]: https://github.com/Automattic/jetpack-seo/compare/0.11.0...0.12.0
 [0.11.0]: https://github.com/Automattic/jetpack-seo/compare/0.10.3...0.11.0
 [0.10.3]: https://github.com/Automattic/jetpack-seo/compare/0.10.2...0.10.3
