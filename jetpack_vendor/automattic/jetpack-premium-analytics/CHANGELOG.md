@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - Metric tiles: Pick the layout from the size of the tiles' own box, so highlights stay in columns after switching dashboard tabs.
 - Open the dashboard for `admin.php?page=stats` on WordPress 7.2, which reports an unregistered page as not found instead of denied.
 - Shorten the breadcrumb trail and hide the Customizing badge on phones, instead of letting them cover the header buttons.
+- Show metric cards as a list when the card is too narrow for every metric to fit side by side, instead of cutting off the figures.
 - Single-report pages: Show the Jetpack footer on the video page again.
 - Stats: Move an old Year to date or All time link to today's window when its saved interval no longer fits, so the address bar matches the charts.
 - Stats: Move a preset's dates to the new day when a page is left open past midnight, so the numbers and the date controls include today.

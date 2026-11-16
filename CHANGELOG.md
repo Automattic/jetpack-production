@@ -96,6 +96,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Move a preset's dates to the new day when a page is left open past midnight, so the numbers and the date controls include today.
 - Premium Analytics: Open the dashboard for old Stats links on WordPress 7.2 instead of a page-not-found error.
 - Premium Analytics: Shorten the breadcrumb trail and hide the Customizing badge on phones, instead of letting them cover the header buttons.
+- Premium Analytics: Show metric cards as a list when the card is too narrow for every metric to fit side by side, instead of cutting off the figures.
 - Premium Analytics: Stop a long post title from widening the page on desktop, so the header buttons stay in view.
 - Premium Analytics: Use the locale's default date format when the site's Date Format setting lacks a day, month or year, so chart labels and the date selector stay unambiguous.
 - SEO: Group the AI crawler toggles so screen readers announce each group and its description.
