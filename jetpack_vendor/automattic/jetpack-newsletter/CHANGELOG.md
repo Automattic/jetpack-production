@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.18.6-alpha] - unreleased
+## [0.19.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Join the admin shell, so switching to and from other Jetpack dashboards skips the page load when the admin shell flag is on.
+- Subscribers: Add Remove all and Remove matching, which remove subscribers in the background after saving a backup.
 
 ### Changed
 - Admin shell: Declare the page title and subtitle shown while the dashboard opens, when the admin shell flag is on.
@@ -496,7 +497,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update package dependencies. [#46143]
 
-[0.18.6-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.5...v0.18.6-alpha
+[0.19.0-alpha]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.5...v0.19.0-alpha
 [0.18.5]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.4...v0.18.5
 [0.18.4]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.3...v0.18.4
 [0.18.3]: https://github.com/Automattic/jetpack-newsletter/compare/v0.18.2...v0.18.3
