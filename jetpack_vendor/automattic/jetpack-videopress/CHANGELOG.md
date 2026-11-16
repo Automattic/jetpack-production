@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Admin shell: Declare the page title and subtitle shown while the dashboard opens, when the admin shell flag is on.
+- Dashboard: Switch the Library and Playlists between grid and table in one click.
 - Latest Videos Playlist: Style the search, sort and length controls and pagination like the playlist, with the theme's font and button styles.
 - Update package dependencies.
 

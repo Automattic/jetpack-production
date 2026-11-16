@@ -56,6 +56,7 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Leave a bar chart column empty when its value is zero, instead of drawing a thin bar that looks like a small count.
 - VideoPress: Channel search finds words spoken in videos and opens them at the matching moment.
 - VideoPress: Style the Latest Videos Playlist search, sort and length controls to match the playlist and the theme.
+- VideoPress: Switch the Library and Playlists between grid and table in one click.
 
 ### Improved compatibility
 - Random Redirect: Defer to WordPress core's random content redirects on WordPress 7.2 and later.
