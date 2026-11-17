@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - Protect: Clarify the advice for a vulnerability whose report names no fixed version, and suggest contacting the developer about a suspected false positive.
+- SEO: Add a filter to change how many items llms.txt lists per content type.
 - SEO: Improve access to SEO settings.
 
 ### Bug fixes

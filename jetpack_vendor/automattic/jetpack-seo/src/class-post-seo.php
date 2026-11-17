@@ -13,7 +13,7 @@ use WP_Post;
 /**
  * Reads a post's SEO description and schema type.
  *
- * @since 0.12.1-alpha
+ * @since 0.13.0-alpha
  */
 class Post_Seo {
 

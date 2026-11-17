@@ -16,7 +16,7 @@ class Seo_Tools {
 	/**
 	 * Option holding the front page meta description.
 	 *
-	 * @since 0.12.1-alpha
+	 * @since 0.13.0-alpha
 	 */
 	const FRONT_PAGE_META_OPTION = 'advanced_seo_front_page_description';
 
@@ -24,7 +24,7 @@ class Seo_Tools {
 	 * Legacy option the description is stored in on WordPress.com sites that set
 	 * one while SEO tools were free for every Simple site.
 	 *
-	 * @since 0.12.1-alpha
+	 * @since 0.13.0-alpha
 	 */
 	const LEGACY_FRONT_PAGE_META_OPTION = 'seo_meta_description';
 
@@ -67,7 +67,7 @@ class Seo_Tools {
 	/**
 	 * Whether Jetpack's SEO output is live for this site.
 	 *
-	 * @since 0.12.1-alpha
+	 * @since 0.13.0-alpha
 	 * @return bool
 	 */
 	public static function is_enabled() {
@@ -87,7 +87,7 @@ class Seo_Tools {
 	 *
 	 * True when SEO output is off and a description was saved while SEO tools were free on WordPress.com.
 	 *
-	 * @since 0.12.1-alpha
+	 * @since 0.13.0-alpha
 	 * @return bool
 	 */
 	public static function has_legacy_front_page_meta() {
@@ -97,7 +97,7 @@ class Seo_Tools {
 	/**
 	 * The front page meta description the front end emits.
 	 *
-	 * @since 0.12.1-alpha
+	 * @since 0.13.0-alpha
 	 * @return string
 	 */
 	public static function get_front_page_meta_description() {
