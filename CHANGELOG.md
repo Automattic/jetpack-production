@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Markdown: Keep Markdown for posts off after a Jetpack update when it was turned off.
 - Markdown block: Fit tables and code blocks to the width of a subscription email, so they no longer make it scroll sideways. Tables now span the full width with equal columns.
 - Newsletter: Show the automatically added Subscribe and Subscriber Login blocks in the Site Editor on WordPress.com sites with plugins.
+- Premium Analytics: Open the matching report for old Stats links to a summary page, such as referrers or search terms, and today by the hour for the old hourly Traffic link, instead of the Traffic tab or the dashboard root.
 - SEO: Detect static files when WordPress is installed in a subdirectory.
 - SEO: Fix console errors when switching between dashboard tabs.
 - SEO: Stop including Query Loop block text in meta descriptions when Open Graph tags are off.
