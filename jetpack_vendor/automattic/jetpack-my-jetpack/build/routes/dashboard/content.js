@@ -519,6 +519,7 @@ __( "Everything looks good.", "jetpack-my-jetpack" );
 __( "Site connected", "jetpack-my-jetpack" );
 __( "A site admin will need to connect their account before you can connect yours.", "jetpack-my-jetpack" );
 __( "Connect your account to unlock all the features.", "jetpack-my-jetpack" );
+__( "Possible account issue", "jetpack-my-jetpack" );
 __( "We noticed a possible issue with your account connection that might lead to connection issues.", "jetpack-my-jetpack" );
 __( "Connected as owner: %1$s (%2$s)", "jetpack-my-jetpack" );
 __( "User connected (Owner).", "jetpack-my-jetpack" );

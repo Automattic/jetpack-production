@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Use `@wordpress/notices` directly instead of the deprecated global notices hook.
 
+### Fixed
+- Show the account issue tooltip above the header's connection panel instead of behind it.
+
 ## [6.18.1] - 2026-11-16
 ### Changed
 - Internal updates.
