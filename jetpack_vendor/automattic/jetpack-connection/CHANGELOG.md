@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Safe Mode: Add a feature flag for the shared Safe Mode screen, and include Safe Mode state in the connection initial state.
 
+### Fixed
+- Safe Mode: Stop showing the Safe Mode screen to non-admins once an admin has chosen to stay in Safe Mode.
+
 ## [9.18.2] - 2026-11-17
 ### Changed
 - Connection abilities: Describe the connection status without calling it a zero-argument call, since MCP servers may add a site argument. [#54953]
