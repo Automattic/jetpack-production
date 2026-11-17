@@ -190,7 +190,7 @@ return array(
     ),
     'jetpack-seo' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-seo',
-      'ver' => '0.12.1-alpha1794945125',
+      'ver' => '0.12.1-alpha1794948134',
     ),
     'jetpack-sharing-likes' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sharing-likes',

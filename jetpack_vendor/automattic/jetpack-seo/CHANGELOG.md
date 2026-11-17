@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Clarify site-wide search indexing restrictions and per-item preferences.
+- Content: Allow posts and supported custom post types to be marked for inclusion in llms.txt.
 - Dashboard: Fix console errors when switching between tabs.
 - Detect static SEO files when WordPress is installed in a subdirectory.
 - Schema: Stop including Query Loop block text in the Article description when Open Graph tags are off.
