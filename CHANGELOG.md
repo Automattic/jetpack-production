@@ -10,6 +10,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Improve access to SEO settings.
 
 ### Bug fixes
+- Blogging Prompts: Fix prompts starting a day off when requesting a specific year with a month-and-day start date.
 - Forms: Link required checkbox, radio, rating and image choice groups to their error message for screen readers.
 - Jetpack AI: Keep the "Improve with AI" tools for people who cannot turn on the WordPress Agent, instead of linking them to a page they cannot open.
 - JSON API: Fix missing footnotes and other blocks that require post context in rendered posts.
