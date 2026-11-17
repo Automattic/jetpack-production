@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.89.1-alpha] - unreleased
+## [0.90.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Social: Add abilities to list connections, share a published post and delete a connection.
 
 ### Changed
 - Admin shell: Let Social join the shell on WordPress.com Simple sites too.
@@ -1767,7 +1770,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.89.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.89.0...v0.89.1-alpha
+[0.90.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.89.0...v0.90.0-alpha
 [0.89.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.10...v0.89.0
 [0.88.10]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.9...v0.88.10
 [0.88.9]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.8...v0.88.9

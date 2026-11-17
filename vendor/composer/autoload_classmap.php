@@ -452,6 +452,7 @@ return array(
     'Automattic\\Jetpack\\Protect_Status\\REST_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-rest-controller.php',
     'Automattic\\Jetpack\\Protect_Status\\Scan_Status' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-scan-status.php',
     'Automattic\\Jetpack\\Protect_Status\\Status' => $baseDir . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-status.php',
+    'Automattic\\Jetpack\\Publicize\\Abilities\\Social_Abilities' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/abilities/class-social-abilities.php',
     'Automattic\\Jetpack\\Publicize\\Connections' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-connections.php',
     'Automattic\\Jetpack\\Publicize\\Focal_Point' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/class-focal-point.php',
     'Automattic\\Jetpack\\Publicize\\Jetpack_Social_Settings\\Settings' => $baseDir . '/jetpack_vendor/automattic/jetpack-publicize/src/jetpack-social-settings/class-settings.php',

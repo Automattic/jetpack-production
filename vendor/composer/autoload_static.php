@@ -483,6 +483,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_5_a_4
         'Automattic\\Jetpack\\Protect_Status\\REST_Controller' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-rest-controller.php',
         'Automattic\\Jetpack\\Protect_Status\\Scan_Status' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-scan-status.php',
         'Automattic\\Jetpack\\Protect_Status\\Status' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-protect-status/src/class-status.php',
+        'Automattic\\Jetpack\\Publicize\\Abilities\\Social_Abilities' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/abilities/class-social-abilities.php',
         'Automattic\\Jetpack\\Publicize\\Connections' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/class-connections.php',
         'Automattic\\Jetpack\\Publicize\\Focal_Point' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/class-focal-point.php',
         'Automattic\\Jetpack\\Publicize\\Jetpack_Social_Settings\\Settings' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-publicize/src/jetpack-social-settings/class-settings.php',
