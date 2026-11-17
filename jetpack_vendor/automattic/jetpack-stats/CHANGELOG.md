@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.24.3-alpha] - unreleased
+## [0.25.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Abilities: Label weekly visits rows with the date the week starts, return every top-content item for max=0, and flag top-content results that leave items out.
 - Stats abilities: Describe the site overview without calling it a zero-argument call, since MCP servers may add a site argument.
 
 ### Fixed
@@ -439,7 +440,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
-[0.24.3-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.24.2...v0.24.3-alpha
+[0.25.0-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.24.2...v0.25.0-alpha
 [0.24.2]: https://github.com/Automattic/jetpack-stats/compare/v0.24.1...v0.24.2
 [0.24.1]: https://github.com/Automattic/jetpack-stats/compare/v0.24.0...v0.24.1
 [0.24.0]: https://github.com/Automattic/jetpack-stats/compare/v0.23.2...v0.24.0
