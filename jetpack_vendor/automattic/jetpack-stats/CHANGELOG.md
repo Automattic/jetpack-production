@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Abilities: Add a definitions block to every Stats reader response, saying what each metric counts and which time window it covers.
+- Abilities: Add a `compare` preset to the site overview and visits readers, matching the Compare menu in the Stats dashboard.
+- Abilities: Add `expand` to the top-content reader, returning the pages, engines, links and terms each referrer, click and tags item groups. Links WordPress.com routes through its href.li redirector now report where they lead.
+
 ### Changed
 - Abilities: Label weekly visits rows with the date the week starts, return every top-content item for max=0, and flag top-content results that leave items out.
 - Stats abilities: Describe the site overview without calling it a zero-argument call, since MCP servers may add a site argument.
