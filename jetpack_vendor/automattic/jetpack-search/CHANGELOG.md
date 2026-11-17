@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Admin shell: Record the page view again when the shell shows the Search page again.
 - Update dependencies.
 
 ## [8.4.3] - 2026-11-16
