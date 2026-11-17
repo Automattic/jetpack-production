@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Overview: Count connections started from an Overview item under its own name, instead of the product card's.
 
+### Fixed
+- Fix the Site Accelerator and Newsletter descriptions, which showed Related Posts text.
+
 ## [6.18.2] - 2026-11-17
 ### Changed
 - Use WordPress Design System tokens for the info popover trigger styles. [#55046]
