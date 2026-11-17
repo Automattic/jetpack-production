@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.14.17-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Admin shell: Switch pages without a reload when the Gutenberg plugin provides @wordpress/boot.
+
 ## [0.14.16] - 2026-11-17
 ### Fixed
 - Admin shell: Wait for a closing dialog to finish its exit before announcing the page and moving focus, so the announcement isn't hidden from screen readers. [#54944]
@@ -465,6 +472,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixing menu visibility issues.
 
+[0.14.17-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.16...0.14.17-alpha
 [0.14.16]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.15...0.14.16
 [0.14.15]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.14...0.14.15
 [0.14.14]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.13...0.14.14
