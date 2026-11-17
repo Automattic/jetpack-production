@@ -648,6 +648,8 @@ __( "Create address", "jetpack" );
 __( "Post by Email", "jetpack" );
 __( "Open the Post by Email settings", "jetpack" );
 __( "The Post by Email settings are now in Features, in My Jetpack.", "jetpack" );
+__( "Open your profile", "jetpack" );
+__( "Set up your Post by Email address on your Profile page.", "jetpack" );
 __( "Theme enhancements", "jetpack" );
 __( "Loads the next posts automatically when the reader approaches the bottom of the page.", "jetpack" );
 __( "Create a smooth, uninterrupted reading experience by loading more content as visitors scroll to the bottom of your archive pages.", "jetpack" );
