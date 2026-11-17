@@ -452,8 +452,6 @@ __( "Save block list", "jetpack" );
 __( "Firewall settings have been moved to the Jetpack Protect plugin.", "jetpack" );
 __( "View Firewall Settings", "jetpack" );
 __( "Security settings", "jetpack" );
-__( "Jetpack's Protect page is off while the Jetpack Protect plugin is active. Scans and firewall settings are on that plugin's Protect page; the settings below still apply here.", "jetpack" );
-__( "Open Protect", "jetpack" );
 __( "Deactivating legacy Like buttons…", "jetpack" );
 __( "Like buttons have been deactivated.", "jetpack" );
 __( "The Like button is a way for people on WordPress.com to show their appreciation for your content.", "jetpack" );
