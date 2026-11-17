@@ -507,6 +507,7 @@ return array(
     'Automattic\\Jetpack\\SEO\\Organization_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-organization-schema-node.php',
     'Automattic\\Jetpack\\SEO\\Person_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-person-schema-node.php',
     'Automattic\\Jetpack\\SEO\\Post_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-post-schema-node.php',
+    'Automattic\\Jetpack\\SEO\\Post_Seo' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-post-seo.php',
     'Automattic\\Jetpack\\SEO\\Post_Types' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-post-types.php',
     'Automattic\\Jetpack\\SEO\\Schema_Builder' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-builder.php',
     'Automattic\\Jetpack\\SEO\\Schema_Graph' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-graph.php',

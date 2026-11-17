@@ -538,6 +538,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_5_a_4
         'Automattic\\Jetpack\\SEO\\Organization_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-organization-schema-node.php',
         'Automattic\\Jetpack\\SEO\\Person_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-person-schema-node.php',
         'Automattic\\Jetpack\\SEO\\Post_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-post-schema-node.php',
+        'Automattic\\Jetpack\\SEO\\Post_Seo' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-post-seo.php',
         'Automattic\\Jetpack\\SEO\\Post_Types' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-post-types.php',
         'Automattic\\Jetpack\\SEO\\Schema_Builder' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-builder.php',
         'Automattic\\Jetpack\\SEO\\Schema_Graph' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-schema-graph.php',

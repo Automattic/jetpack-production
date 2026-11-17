@@ -17,6 +17,8 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Show the automatically added Subscribe and Subscriber Login blocks in the Site Editor on WordPress.com sites with plugins.
 - SEO: Detect static files when WordPress is installed in a subdirectory.
 - SEO: Fix console errors when switching between dashboard tabs.
+- SEO: Stop including Query Loop block text in meta descriptions when Open Graph tags are off.
+- SEO: Stop including Query Loop block text in the Article structured data description when Open Graph tags are off.
 - SEO: Warn when site visibility restricts search indexing in Settings and the SEO dashboard.
 
 ## 16.5-a.3 - 2026-11-16
