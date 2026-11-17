@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Admin shell: Let Social join the shell on WordPress.com Simple sites too.
+- Admin shell: Record one tab view, not two, when the shell reopens Social at another tab.
 - Admin shell: Record the tab view again when the shell shows the Social page again.
 - Update dependencies.
 

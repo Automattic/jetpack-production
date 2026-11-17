@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Hide the Security tab when the Jetpack Protect plugin shows the Protect page.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Admin shell: Record one page view, not two, when the shell reopens Settings or Jetpack AI at another route.
 - Admin shell: Record the Settings and AI page views again when the shell shows those pages again.
 
 ## 16.5-a.3 - 2026-11-16
