@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - JSON API: Fix missing footnotes and other blocks that require post context in rendered posts.
 - Markdown: Keep Markdown for posts off after a Jetpack update when it was turned off.
 - Markdown block: Fit tables and code blocks to the width of a subscription email, so they no longer make it scroll sideways. Tables now span the full width with equal columns.
+- Memberships: Avoid an extra database query on capability checks for comments, users and terms.
 - Newsletter: Show the automatically added Subscribe and Subscriber Login blocks in the Site Editor on WordPress.com sites with plugins.
 - Premium Analytics: Fix the date arrows landing on a partial day, week or month after clicking today's chart bar.
 - Premium Analytics: Keep the days, the Locations tab and the video an old Stats link names when it opens the dashboard.
