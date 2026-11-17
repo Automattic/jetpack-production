@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Admin shell: Keep a dashboard that hides its header from lending a blank one to the page that opens next.
 - Admin shell: Switch pages without a reload when the Gutenberg plugin provides @wordpress/boot.
 
 ## [0.14.16] - 2026-11-17
