@@ -26,6 +26,9 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Warn when site visibility restricts search indexing in Settings and the SEO dashboard.
 - Settings: Hide the Security tab when the Jetpack Protect plugin shows the Protect page.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Admin shell: Record the Settings and AI page views again when the shell shows those pages again.
+
 ## 16.5-a.3 - 2026-11-16
 ### Enhancements
 - Blogroll: Add a feed URL setting to each blogroll item. [#54746]

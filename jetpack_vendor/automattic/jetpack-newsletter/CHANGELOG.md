@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Admin shell: Record the tab view again when the shell shows the Newsletter page again.
+
 ### Fixed
 - Action Bar: Show an Undo notice after unsubscribing, ignore repeat clicks while a request is in flight, and switch the button to Subscribed once a subscribe goes through.
 
