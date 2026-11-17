@@ -73,7 +73,7 @@ __( "Unable to load GEO settings.", "jetpack-seo" );
 __( "Per-site AI crawler controls are unavailable on this path-based multisite network because every site shares one robots.txt. Manage crawler access at the network level instead.", "jetpack-seo" );
 __( "This site uses a temporary staging address (a .wpcomstaging.com subdomain), where search engines and AI crawlers are blocked. These settings will take effect once the site is on its own domain.", "jetpack-seo" );
 __( "Search engines and AI crawlers are all blocked because this site isn't set to be indexed. To choose which AI crawlers can access your site, allow search engines to index it first.", "jetpack-seo" );
-__( "Jetpack detected a static robots.txt file in the WordPress installation directory. These settings only change WordPress's virtual robots.txt; edit or remove the static file to manage AI crawler access here.", "jetpack-seo" );
+__( "Jetpack detected a static robots.txt file in your site's public directory. These settings only change WordPress's virtual robots.txt; edit or remove the static file to manage AI crawler access here.", "jetpack-seo" );
 __( "AI crawler access is set by your privacy settings while third-party sharing is turned off. Turn sharing on to manage individual crawlers here.", "jetpack-seo" );
 __( "Manage sharing settings", "jetpack-seo" );
 __( "Answer engines", "jetpack-seo" );

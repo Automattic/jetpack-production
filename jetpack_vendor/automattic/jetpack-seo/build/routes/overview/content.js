@@ -60,7 +60,7 @@ __( "Get tools to optimize your site for improved search engine results.", "jetp
 __( "Upgrade", "jetpack-seo" );
 __( "AI crawlers can't reach this site while it's on a staging address.", "jetpack-seo" );
 __( "AI crawlers can't reach this site while it's closed to search engines.", "jetpack-seo" );
-__( "Crawler settings can't apply while a static robots.txt file exists in the WordPress installation directory.", "jetpack-seo" );
+__( "Crawler settings can't apply while a static robots.txt file exists in your site's public directory.", "jetpack-seo" );
 __( "Individual crawler settings are overridden by this site's data sharing opt-out.", "jetpack-seo" );
 __( "Per-site crawler settings aren't available on this path-based multisite network.", "jetpack-seo" );
 __( "llms.txt published", "jetpack-seo" );

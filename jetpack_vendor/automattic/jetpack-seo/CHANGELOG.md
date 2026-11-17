@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Clarify site-wide search indexing restrictions and per-item preferences.
 - Dashboard: Fix console errors when switching between tabs.
+- Detect static SEO files when WordPress is installed in a subdirectory.
 
 ## [0.12.0] - 2026-11-16
 ### Added
