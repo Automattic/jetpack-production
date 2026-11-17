@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Dashboard: Track how readers use the Arrange tabs dialog.
+
 ### Fixed
 - Charts: Decide a percentage axis from the series the legend leaves visible, so hiding a rate above 100% returns the others to a 0% to 100% axis.
 
