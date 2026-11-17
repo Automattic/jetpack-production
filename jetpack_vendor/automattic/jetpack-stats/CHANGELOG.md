@@ -13,10 +13,12 @@ This is an alpha version! The changes listed here are not final.
 - Abilities: Add a definitions block to every Stats reader response, saying what each metric counts and which time window it covers.
 - Abilities: Add a `compare` preset to the site overview and visits readers, matching the Compare menu in the Stats dashboard.
 - Abilities: Add `expand` to the top-content reader, returning the pages, engines, links and terms each referrer, click and tags item groups. Links WordPress.com routes through its href.li redirector now report where they lead.
+- Stats abilities: add author views, insights, email stats, subscribers and ad stats readers; add regions, cities, devices, UTM and comment reports to top content; chart subscribers and count paid ones in followers.
 
 ### Changed
 - Abilities: Label weekly visits rows with the date the week starts, return every top-content item for max=0, and flag top-content results that leave items out.
 - Stats abilities: Describe the site overview without calling it a zero-argument call, since MCP servers may add a site argument.
+- Stats abilities: drop the posting streak from the site overview; get-insights reports it.
 
 ### Fixed
 - Abilities: Explain that file download stats are not available on Jetpack-connected sites, instead of failing with a generic error.
