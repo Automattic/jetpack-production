@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Record one page view, not two, when the shell reopens My Jetpack at another tab.
 - Admin shell: Record the page view again when the shell shows the My Jetpack page again.
 - Overview: Count connections started from an Overview item under its own name, instead of the product card's.
+- Settings panel: Record Tracks events for option changes, panel open and close, and links.
 
 ### Fixed
 - Fix the Site Accelerator and Newsletter descriptions, which showed Related Posts text.
