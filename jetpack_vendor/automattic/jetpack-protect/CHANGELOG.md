@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Admin shell: Record one page view, not two, when the shell reopens Protect at another tab.
 - Admin shell: Record the page view again when the shell shows the Protect page again.
 - Scan: Clarify the advice for a vulnerability whose report names no fixed version, and suggest contacting the developer about a suspected false positive.
 - Update dependencies.
