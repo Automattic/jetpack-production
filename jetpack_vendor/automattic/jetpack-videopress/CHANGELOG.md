@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Update dependencies.
 
+### Fixed
+- Dashboard: Match the "Record a video" button height to the upload buttons beside it.
+
 ## [0.63.0] - 2026-11-16
 ### Added
 - Channels: Find videos by words spoken in them, show the matching passage with its time, and open the video at that moment. [#54642]
