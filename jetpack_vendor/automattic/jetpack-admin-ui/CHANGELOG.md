@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Admin shell: Name the page about to be shown in the page-hidden event, and document the page events.
+- Admin shell: Say in the page-shown event whether the page opened at a different route than it was left on.
 
 ### Fixed
 - Admin shell: Keep a dashboard that hides its header from lending a blank one to the page that opens next.
