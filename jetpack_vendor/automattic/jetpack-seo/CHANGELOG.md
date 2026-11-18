@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Fix console errors when switching between tabs.
 - Detect static SEO files when WordPress is installed in a subdirectory.
 - Hide AI SEO controls when metadata generation is unavailable.
+- Identify the active SEO plugin before enabling SEO tools.
 - Schema: Stop including Query Loop block text in the Article description when Open Graph tags are off.
 
 ## [0.12.0] - 2026-11-16

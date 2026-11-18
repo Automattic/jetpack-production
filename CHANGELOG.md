@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Allow posts and supported custom post types to be marked for inclusion in llms.txt.
 - SEO: Detect static files when WordPress is installed in a subdirectory.
 - SEO: Fix console errors when switching between dashboard tabs.
+- SEO: Identify the active SEO plugin before enabling SEO tools.
 - SEO: Stop including Query Loop block text in meta descriptions when Open Graph tags are off.
 - SEO: Stop including Query Loop block text in the Article structured data description when Open Graph tags are off.
 - SEO: Warn when site visibility restricts search indexing in Settings and the SEO dashboard.
