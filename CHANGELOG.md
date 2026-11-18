@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Safe Mode: Show the Jetpack Safe Mode admin bar item while the choice is still pending, style it on the front end of the site too, and have it open My Jetpack from Jetpack pages that can't show the Safe Mode screen.
 - Search: Reduce database queries when loading Instant Search on sites without a persistent object cache.
 - SEO: Add a filter to change how many items llms.txt lists per content type.
+- SEO: Add automatic search engine notifications for content changes.
 - SEO: Improve access to SEO settings.
 - SEO: Make manual SEO settings and output available on WordPress.com sites without a paid plan.
 - SEO: Reduce storage used by pending search engine notifications.
