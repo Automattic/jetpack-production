@@ -13,6 +13,11 @@ return array(
 		'asset' => 'data/index.min.asset.php',
 	),
 	array(
+		'id' => '@jetpack-premium-analytics/error-reporting',
+		'path' => 'error-reporting/index',
+		'asset' => 'error-reporting/index.min.asset.php',
+	),
+	array(
 		'id' => '@jetpack-premium-analytics/externals',
 		'path' => 'externals/index',
 		'asset' => 'externals/index.min.asset.php',

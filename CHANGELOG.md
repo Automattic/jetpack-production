@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add an Items sold widget to the WooCommerce analytics dashboard.
 - Premium Analytics: Add a time-since-send control to the opens and clicks charts on the post page's email tabs: the first 24 hours by the hour, the first week or 30 days by the day, or all time by the month.
 - Premium Analytics: Add a zoom-out button beside the date arrows that returns to the period a chart was zoomed in from.
+- Premium Analytics: Reload the analytics dashboard once when part of it fails to load after an update, instead of showing an error. WordPress.com sites only.
 - Premium Analytics: Rename the Stats v2 page options menu to Stats options, and show it on the report, connect and upgrade pages so Settings can be reached from every page.
 - Protect: Clarify the advice for a vulnerability whose report names no fixed version, and suggest contacting the developer about a suspected false positive.
 - Safe Mode: Show the Jetpack Safe Mode admin bar item while the choice is still pending, style it on the front end of the site too, and have it open My Jetpack from Jetpack pages that can't show the Safe Mode screen.
