@@ -10,6 +10,7 @@
 		"build/widgets/conversion-rate/render.js",
 		"build/widgets/coupon-usage-over-time/render.js",
 		"build/widgets/gross-sales-over-time/render.js",
+		"build/widgets/items-sold/render.js",
 		"build/widgets/net-sales-over-time/render.js",
 		"build/widgets/new-vs-returning-customer/render.js",
 		"build/widgets/orders-fulfillment/render.js",

@@ -35,6 +35,9 @@ _x( 'Track how effective your discounts and promotions have been over a set peri
 _x( 'Gross sales over time', 'widget title', 'jetpack-woocommerce-stats-pkg' );
 _x( 'Gross sales over the selected time period.', 'widget description', 'jetpack-woocommerce-stats-pkg' );
 _x( 'Monitor your total revenue — before any discounts, returns, or adjustments — over a set period of time.', 'widget help content', 'jetpack-woocommerce-stats-pkg' );
+_x( 'Items sold', 'widget title', 'jetpack-woocommerce-stats-pkg' );
+_x( 'Track how many items your store sells over time, to see which periods move the most stock.', 'widget description', 'jetpack-woocommerce-stats-pkg' );
+_x( 'Track how many items your store sells over time, to see which periods move the most stock.', 'widget help content', 'jetpack-woocommerce-stats-pkg' );
 _x( 'Net sales over time', 'widget title', 'jetpack-woocommerce-stats-pkg' );
 _x( 'Monitor your total revenue after discounts, returns, or adjustments over a set period of time.', 'widget description', 'jetpack-woocommerce-stats-pkg' );
 _x( 'Monitor your total revenue — after any discounts, returns, or adjustments — over a set period of time.', 'widget help content', 'jetpack-woocommerce-stats-pkg' );
