@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Premium Analytics: Rename the Stats v2 page options menu to Stats options, and show it on the report, connect and upgrade pages so Settings can be reached from every page.
 - Protect: Clarify the advice for a vulnerability whose report names no fixed version, and suggest contacting the developer about a suspected false positive.
 - SEO: Add a filter to change how many items llms.txt lists per content type.
 - SEO: Improve access to SEO settings.

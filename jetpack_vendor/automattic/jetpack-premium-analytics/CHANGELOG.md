@@ -5,12 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.18.1-alpha] - unreleased
+## [0.19.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Dashboard: Track how readers use the Arrange tabs dialog.
+
+### Changed
+- Stats options menu: Rename the page options menu to Stats options, and show it on the report, connect and upgrade pages so Settings can be reached from every page.
 
 ### Fixed
 - Charts: Decide a percentage axis from the series the legend leaves visible, so hiding a rate above 100% returns the others to a 0% to 100% axis.
@@ -819,7 +822,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
-[0.18.1-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.18.0...0.18.1-alpha
+[0.19.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.18.0...0.19.0-alpha
 [0.18.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.17.0...0.18.0
 [0.17.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.16.0...0.17.0
 [0.16.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.15.0...0.16.0
