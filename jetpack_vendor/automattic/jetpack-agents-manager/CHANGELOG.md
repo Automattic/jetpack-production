@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.12.13-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Atomic: Read the WordPress.com blog ID through Jetpack_Options, so that a migrated site gets its own ID.
+
 ## [0.12.12] - 2026-11-16
 ### Changed
 - Update package dependencies. [#54703]
@@ -196,6 +203,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Agents Manager: Allow overriding variant and sectionName through filters [#49283]
 - Initial version, extracted from Jetpack MU WPCOM to its own package for external consumption. [#49202]
 
+[0.12.13-alpha]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.12.12...v0.12.13-alpha
 [0.12.12]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.12.11...v0.12.12
 [0.12.11]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.12.10...v0.12.11
 [0.12.10]: https://github.com/Automattic/jetpack-agents-manager/compare/v0.12.9...v0.12.10
