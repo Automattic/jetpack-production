@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Keep the days, the Locations tab and the video an old Stats link names when it opens the dashboard.
 - Premium Analytics: Open the matching report for old Stats links to a summary page, such as referrers or search terms, and today by the hour for the old hourly Traffic link, instead of the Traffic tab or the dashboard root.
 - Reader: Explain failed repost embeds and add source links when the editor allows replacement.
+- Safe Mode: Show the WordPress.com address correctly instead of reversed after Safe Mode checks the connection again.
 - Safe Mode: Stop showing the Safe Mode screen to non-admins once an admin has chosen to stay in Safe Mode.
 - SEO: Allow posts and supported custom post types to be marked for inclusion in llms.txt.
 - SEO: Detect static files when WordPress is installed in a subdirectory.
