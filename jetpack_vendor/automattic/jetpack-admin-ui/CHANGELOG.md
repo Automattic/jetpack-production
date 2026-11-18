@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Name the page about to be shown in the page-hidden event, and document the page events.
 - Admin shell: Say in page-shown how long a dashboard was hidden, and whether that left it stale.
 - Admin shell: Say in the page-shown event whether the page opened at a different route than it was left on.
+- Admin shell: Support dashboards on a top-level menu page, load the modules a dashboard adds to its own page, let a dashboard ask for the admin menu's pages on the guest endpoint, without what its callbacks print or hook, wait to run the script modules a dashboard's page init enqueues until the shell readies it, and add `Admin_Shell::requested_guest()` so a dashboard can tell the guest endpoint is loading it.
 
 ### Changed
 - Admin shell: Let a page opt out of the stand-in header, or keep a line for a subtitle it picks as it renders, and title a borrowed header with the page's declared title.
