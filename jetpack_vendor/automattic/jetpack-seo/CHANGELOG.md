@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Let SEO join the shell on WordPress.com Simple sites too.
 - Admin shell: Record the page view again when the shell shows the SEO page again.
 - Improve access to SEO settings.
+- Make manual SEO settings and output available on WordPress.com sites without a paid plan.
 - Reduce storage used by pending search engine notifications.
 
 ### Fixed
