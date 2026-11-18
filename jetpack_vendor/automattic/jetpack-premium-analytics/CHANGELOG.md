@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Dashboard: Track how readers use the Arrange tabs dialog.
+- Single-report pages: Add a report for an individual page at /report/page/<id>, with the same sections as a post.
 
 ### Changed
 - Stats options menu: Rename the page options menu to Stats options, and show it on the report, connect and upgrade pages so Settings can be reached from every page.
