@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Abilities: Label weekly visits rows with the date the week starts, return every top-content item for max=0, and flag top-content results that leave items out.
+- Stats abilities: describe the email detail and video readers without naming other readers or listing their output fields.
 - Stats abilities: Describe the site overview without calling it a zero-argument call, since MCP servers may add a site argument.
 - Stats abilities: drop the posting streak from the site overview; get-insights reports it.
 
