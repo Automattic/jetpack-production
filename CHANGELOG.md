@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Search: Reduce database queries when loading Instant Search on sites without a persistent object cache.
 - SEO: Add a filter to change how many items llms.txt lists per content type.
 - SEO: Improve access to SEO settings.
+- SEO: Reduce storage used by pending search engine notifications.
 - Social: Load the media library only when choosing a default image, so the dashboard loads less on each visit.
 - VideoPress: Load the media library only when uploading a video thumbnail, so the dashboard loads less on each visit.
 
