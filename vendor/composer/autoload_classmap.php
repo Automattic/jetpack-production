@@ -503,6 +503,7 @@ return array(
     'Automattic\\Jetpack\\SEO\\Content_Coverage' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-content-coverage.php',
     'Automattic\\Jetpack\\SEO\\Content_Gate' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-content-gate.php',
     'Automattic\\Jetpack\\SEO\\Dashboard_Data' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-dashboard-data.php',
+    'Automattic\\Jetpack\\SEO\\Indexnow_Client' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-indexnow-client.php',
     'Automattic\\Jetpack\\SEO\\Initializer' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-initializer.php',
     'Automattic\\Jetpack\\SEO\\Llms_Txt' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-llms-txt.php',
     'Automattic\\Jetpack\\SEO\\Local_Business_Schema_Node' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-local-business-schema-node.php',

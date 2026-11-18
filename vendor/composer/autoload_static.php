@@ -534,6 +534,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_5_a_4
         'Automattic\\Jetpack\\SEO\\Content_Coverage' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-content-coverage.php',
         'Automattic\\Jetpack\\SEO\\Content_Gate' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-content-gate.php',
         'Automattic\\Jetpack\\SEO\\Dashboard_Data' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-dashboard-data.php',
+        'Automattic\\Jetpack\\SEO\\Indexnow_Client' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-indexnow-client.php',
         'Automattic\\Jetpack\\SEO\\Initializer' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-initializer.php',
         'Automattic\\Jetpack\\SEO\\Llms_Txt' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-llms-txt.php',
         'Automattic\\Jetpack\\SEO\\Local_Business_Schema_Node' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-seo/src/class-local-business-schema-node.php',
