@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Abilities: validate an unexpected input key on a no-argument ability as an error instead of a PHP error.
 - Safe Mode: Keep showing the WordPress.com address correctly after Safe Mode checks the connection again.
+- Safe Mode: Show an error when starting a fresh connection fails to get a connection address, instead of sending the browser to a broken one.
 - Safe Mode: Stop showing the Safe Mode screen to non-admins once an admin has chosen to stay in Safe Mode.
 
 ## [9.18.2] - 2026-11-17
