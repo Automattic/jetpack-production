@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Safe Mode: Add a feature flag for the shared Safe Mode screen, and include Safe Mode state in the connection initial state.
+- Safe Mode: Let a fresh connection from Safe Mode report where it started, for WordPress.com's connection tracking.
 
 ### Fixed
 - Abilities: validate an unexpected input key on a no-argument ability as an error instead of a PHP error.
