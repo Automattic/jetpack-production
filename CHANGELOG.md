@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Blogging Prompts: Fix prompts starting a day off when requesting a specific year with a month-and-day start date.
 - Custom Content Types: Show the description and Learn More link in Settings > Writing.
 - Forms: Link required checkbox, radio, rating and image choice groups to their error message for screen readers.
+- Forms: Match the whole email address when exporting or erasing personal data, so addresses that only share a prefix are no longer included.
 - Forms: Open the Responses tab without a delay when switching from the Forms tab, and the other way around.
 - Jetpack AI: Keep the "Improve with AI" tools for people who cannot turn on the WordPress Agent, instead of linking them to a page they cannot open.
 - JSON API: Fix missing footnotes and other blocks that require post context in rendered posts.
