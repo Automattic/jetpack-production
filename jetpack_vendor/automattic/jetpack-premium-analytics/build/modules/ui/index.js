@@ -73,6 +73,7 @@ __( "Period", "jetpack-premium-analytics-pkg" );
 __( "Custom range", "jetpack-premium-analytics-pkg" );
 __( "Previous period", "jetpack-premium-analytics-pkg" );
 __( "Next period", "jetpack-premium-analytics-pkg" );
+__( "Zoom out to %s", "jetpack-premium-analytics-pkg" );
 __( "Date range updated to %s.", "jetpack-premium-analytics-pkg" );
 __( "Time period", "jetpack-premium-analytics-pkg" );
 __( "Select period", "jetpack-premium-analytics-pkg" );
