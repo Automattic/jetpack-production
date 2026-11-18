@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Support dashboards on a top-level menu page, load the modules a dashboard adds to its own page, let a dashboard ask for the admin menu's pages on the guest endpoint, without what its callbacks print or hook, wait to run the script modules a dashboard's page init enqueues until the shell readies it, and add `Admin_Shell::requested_guest()` so a dashboard can tell the guest endpoint is loading it.
 
 ### Changed
+- Admin shell: Keep up to 10 dashboards live on devices with less than 8 GB of memory, or when the browser does not report it.
 - Admin shell: Let a page opt out of the stand-in header, or keep a line for a subtitle it picks as it renders, and title a borrowed header with the page's declared title.
 - Admin shell: Prewarm a dashboard only once the pointer rests on its menu link, and not at all when the browser reports Save-Data, low memory or a slow connection.
 
