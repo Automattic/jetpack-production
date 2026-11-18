@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Don't ask a second time about unsaved edits when the shell already asked before loading the page.
 - Channel: Only match and quote private videos' transcripts in playlist searches for site members.
 - Dashboard: Match the "Record a video" button height to the upload buttons beside it.
+- Video block: Validate preview-on-hover timing values so incomplete block attributes no longer emit PHP warnings or invalid player data.
 
 ## [0.63.0] - 2026-11-16
 ### Added
