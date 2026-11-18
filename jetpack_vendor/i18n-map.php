@@ -202,7 +202,7 @@ return array(
     ),
     'jetpack-stats-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-stats',
-      'ver' => '0.25.0-alpha1794971124',
+      'ver' => '0.25.0-alpha1795011326',
     ),
     'jetpack-sync' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-sync',
