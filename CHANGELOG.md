@@ -44,6 +44,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Stop including Query Loop block text in the Article structured data description when Open Graph tags are off.
 - SEO: Warn when site visibility restricts search indexing in Settings and the SEO dashboard.
 - Settings: Hide the Security tab when the Jetpack Protect plugin shows the Protect page.
+- VideoPress: Stop legacy VideoPress video blocks from marking templates and posts as changed every time the editor loads.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin shell: Record one page view, not two, when the shell reopens Settings or Jetpack AI at another route.
