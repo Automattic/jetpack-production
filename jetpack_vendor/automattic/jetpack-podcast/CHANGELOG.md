@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Admin shell: Let Podcast join the shell on WordPress.com Simple sites too.
 - Admin shell: Record the dashboard view again when the shell shows the Podcast page again.
+- Dashboard: Load the media library when the cover image picker opens it, instead of on every page load.
 - Update dependencies.
 
 ## [2.2.7] - 2026-11-16

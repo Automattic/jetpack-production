@@ -10,11 +10,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a media library endpoint, so dashboards can load the media library when it is first opened instead of on every page load.
+- Admin shell: Keep at most a few dashboards live, sized from the device's memory, and load the page past that, after asking hidden dashboards with unsaved changes. Add the jetpack_admin_shell_max_live_apps filter to set the limit.
 - Admin shell: Name the page about to be shown in the page-hidden event, and document the page events.
+- Admin shell: Say in page-shown how long a dashboard was hidden, and whether that left it stale.
 - Admin shell: Say in the page-shown event whether the page opened at a different route than it was left on.
 
+### Changed
+- Admin shell: Let a page opt out of the stand-in header, or keep a line for a subtitle it picks as it renders, and title a borrowed header with the page's declared title.
+- Admin shell: Prewarm a dashboard only once the pointer rests on its menu link, and not at all when the browser reports Save-Data, low memory or a slow connection.
+
+### Removed
+- Admin shell: Remove the media member key. Members load the media library with loadMediaLibrary() when it is opened.
+
 ### Fixed
+- Admin shell: Give each dashboard its own Jetpack config when others are prewarmed.
 - Admin shell: Keep a dashboard that hides its header from lending a blank one to the page that opens next.
+- Admin shell: Stop other plugins' footer scripts from running again each time a dashboard opens.
 - Admin shell: Switch pages without a reload when the Gutenberg plugin provides @wordpress/boot.
 
 ## [0.14.16] - 2026-11-17

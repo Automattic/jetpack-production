@@ -252,6 +252,7 @@ __( "Append UTM parameters to shared URLs", "jetpack-publicize-pkg" );
 __( "UTM parameters are tags added to links to help track where website visitors come from, improving our understanding of how content is shared. Don't worry, it doesn't change the experience or the link destination!", "jetpack-publicize-pkg" );
 __( "Default", "jetpack-publicize-pkg" );
 __( "Remove media", "jetpack-publicize-pkg" );
+__( "The media library could not be loaded. Try again.", "jetpack-publicize-pkg" );
 __( "Pick the %s template", "jetpack-publicize-pkg" );
 __( "Choose Image", "jetpack-publicize-pkg" );
 __( "Set default Template and Image", "jetpack-publicize-pkg" );

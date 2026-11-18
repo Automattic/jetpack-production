@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Podcast: Load the media library only when choosing a cover image, so the dashboard loads less on each visit.
 - Premium Analytics: Add a time-since-send control to the opens and clicks charts on the post page's email tabs: the first 24 hours by the hour, the first week or 30 days by the day, or all time by the month.
 - Premium Analytics: Add a zoom-out button beside the date arrows that returns to the period a chart was zoomed in from.
 - Premium Analytics: Rename the Stats v2 page options menu to Stats options, and show it on the report, connect and upgrade pages so Settings can be reached from every page.
@@ -14,6 +15,8 @@ This is an alpha version! The changes listed here are not final.
 - Search: Reduce database queries when loading Instant Search on sites without a persistent object cache.
 - SEO: Add a filter to change how many items llms.txt lists per content type.
 - SEO: Improve access to SEO settings.
+- Social: Load the media library only when choosing a default image, so the dashboard loads less on each visit.
+- VideoPress: Load the media library only when uploading a video thumbnail, so the dashboard loads less on each visit.
 
 ### Bug fixes
 - Blogging Prompts: Fix prompts starting a day off when requesting a specific year with a month-and-day start date.
@@ -44,6 +47,8 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin shell: Record one page view, not two, when the shell reopens Settings or Jetpack AI at another route.
 - Admin shell: Record the Settings and AI page views again when the shell shows those pages again.
+- AI: Stop the AI page from adding REST request settings that also applied to other Jetpack pages loaded alongside it.
+- Settings: Stop saving Sharing, Monitor and Post by Email values when the admin shell readies the page on a menu hover.
 - Update package dependencies.
 
 ## 16.5-a.3 - 2026-11-16

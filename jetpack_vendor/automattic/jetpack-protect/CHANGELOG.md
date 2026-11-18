@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Scan: Clarify the advice for a vulnerability whose report names no fixed version, and suggest contacting the developer about a suspected false positive.
 - Update dependencies.
 
+### Fixed
+- Dashboard: Stop caching the Protect report when the admin shell readies the page on a menu hover.
+
 ## [0.7.0] - 2026-11-16
 ### Added
 - Add a settings route so the dashboard works without the Jetpack plugin. [#53685]

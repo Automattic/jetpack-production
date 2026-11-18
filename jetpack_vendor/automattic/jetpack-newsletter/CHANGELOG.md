@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Action Bar: Show an Undo notice after unsubscribing, ignore repeat clicks while a request is in flight, and switch the button to Subscribed once a subscribe goes through.
+- Admin shell: Don't ask a second time about unsaved settings when the shell already asked before loading the page.
 
 ## [0.19.0] - 2026-11-16
 ### Added

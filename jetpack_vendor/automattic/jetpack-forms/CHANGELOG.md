@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: Open the Responses tab without a delay when switching from the Forms tab, and the other way around.
+- Dashboard: Stop saving the classic forms state when the admin shell readies the page on a menu hover.
 - Link required checkbox, radio, rating and image choice groups to their error message for screen readers.
 
 ## [8.4.0] - 2026-11-16

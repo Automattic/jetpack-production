@@ -11,9 +11,11 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Admin shell: Record the page view again when the shell shows the VideoPress page again.
+- Dashboard: Load the media library when a thumbnail upload opens it, instead of on every page load.
 - Update dependencies.
 
 ### Fixed
+- Admin shell: Don't ask a second time about unsaved edits when the shell already asked before loading the page.
 - Dashboard: Match the "Record a video" button height to the upload buttons beside it.
 
 ## [0.63.0] - 2026-11-16

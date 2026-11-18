@@ -96,6 +96,7 @@ __( "Cover image", "jetpack-podcast" );
 __( "Podcast cover", "jetpack-podcast" );
 __( "Select a podcast cover image", "jetpack-podcast" );
 __( "Remove", "jetpack-podcast" );
+__( "The media library could not be loaded. Try again.", "jetpack-podcast" );
 _x( "Arts", "podcasting category", "jetpack-podcast" );
 _x( "Books", "podcasting category", "jetpack-podcast" );
 _x( "Design", "podcasting category", "jetpack-podcast" );

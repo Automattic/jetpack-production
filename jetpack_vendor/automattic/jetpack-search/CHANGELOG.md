@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Reduce database queries when loading Instant Search on sites without a persistent object cache.
 - Update dependencies.
 
+### Fixed
+- Dashboard: Stop creating the purchase token when the admin shell readies the page on a menu hover.
+
 ## [8.4.3] - 2026-11-16
 ### Added
 - Join the admin shell, so switching to and from other Jetpack dashboards skips the page load when the admin shell flag is on. [#54829]
