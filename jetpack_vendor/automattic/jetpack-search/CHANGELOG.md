@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Admin shell: Record the page view again when the shell shows the Search page again.
+- Reduce database queries when loading Instant Search on sites without a persistent object cache.
 - Update dependencies.
 
 ## [8.4.3] - 2026-11-16
