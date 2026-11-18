@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Admin shell: Don't ask a second time about unsaved edits when the shell already asked before loading the page.
+- Channel: Only match and quote private videos' transcripts in playlist searches for site members.
 - Dashboard: Match the "Record a video" button height to the upload buttons beside it.
 
 ## [0.63.0] - 2026-11-16
