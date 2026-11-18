@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a media library endpoint, so dashboards can load the media library when it is first opened instead of on every page load.
+- Admin shell: Check that a page's feature is still on each time it is opened, and offer to turn it back on when it is not.
 - Admin shell: Keep at most a few dashboards live, sized from the device's memory, and load the page past that, after asking hidden dashboards with unsaved changes. Add the jetpack_admin_shell_max_live_apps filter to set the limit.
 - Admin shell: Name the page about to be shown in the page-hidden event, and document the page events.
 - Admin shell: Say in page-shown how long a dashboard was hidden, and whether that left it stale.

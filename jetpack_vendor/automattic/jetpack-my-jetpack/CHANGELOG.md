@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Admin shell: Show the turned-off feature card in place of a page whose feature is off, including for Jetpack AI, Social and Search.
 - Show a page that turns a switched-off feature back on, instead of an error, when one of its admin pages is opened.
 
 ### Changed
