@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array(), 'version' => '47b0f8f9cfb2fd103b9c');
+<?php return array('dependencies' => array(), 'module_dependencies' => array(array('id' => '@jetpack-premium-analytics/data', 'import' => 'static')), 'version' => '1ddc89dda2f0b01b3015');

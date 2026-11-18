@@ -36,7 +36,12 @@ _x( 'Breaks a sent email down by countries, devices, email clients, or clicked l
 _x( 'Breaks a sent email down by countries, devices, email clients, or clicked links.', 'widget help content', 'jetpack-premium-analytics-pkg' );
 _x( 'Email performance', 'widget title', 'jetpack-premium-analytics-pkg' );
 _x( 'A single email\'s opens or clicks over time since it was sent.', 'widget description', 'jetpack-premium-analytics-pkg' );
-_x( 'How a single email performed over time: opens or clicks per day over the window the page reports — on the post detail page, the first 30 days after the send.', 'widget help content', 'jetpack-premium-analytics-pkg' );
+_x( 'How a single email performed since it was sent: opens or clicks by the hour over the first 24 hours, by the day over the first week or the first 30 days, or by the month over all time.', 'widget help content', 'jetpack-premium-analytics-pkg' );
+_x( 'Time since send', 'widget attribute label', 'jetpack-premium-analytics-pkg' );
+_x( 'First 24 hours', 'widget attribute option label', 'jetpack-premium-analytics-pkg' );
+_x( 'First week', 'widget attribute option label', 'jetpack-premium-analytics-pkg' );
+_x( 'First 30 days', 'widget attribute option label', 'jetpack-premium-analytics-pkg' );
+_x( 'All time', 'widget attribute option label', 'jetpack-premium-analytics-pkg' );
 _x( 'Email highlights', 'widget title', 'jetpack-premium-analytics-pkg' );
 _x( 'Headline open and click totals for a single email, split into Opens and Clicks views.', 'widget description', 'jetpack-premium-analytics-pkg' );
 _x( 'Headline stats for a single email. The Opens view shows total sends, unique opens, total opens, and open rate; the Clicks view shows total opens, total clicks, and click rate. Rates are measured against total sends, and show a dash when those went unrecorded. Figures are all-time and are not affected by the dashboard date range.', 'widget help content', 'jetpack-premium-analytics-pkg' );

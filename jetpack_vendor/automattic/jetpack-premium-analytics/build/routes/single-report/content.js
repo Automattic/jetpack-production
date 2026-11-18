@@ -244,6 +244,8 @@ __( "Referrers", "jetpack-premium-analytics-pkg" );
 __( "Date range", "jetpack-premium-analytics-pkg" );
 __( "< %s", "jetpack-premium-analytics-pkg" );
 __( "Performance from %1$s to %2$s", "jetpack-premium-analytics-pkg" );
+__( "The chart covers %s; the totals are all-time.", "jetpack-premium-analytics-pkg" );
+__( "The chart covers %1$s to %2$s; the totals are all-time.", "jetpack-premium-analytics-pkg" );
 _n( "%s post", "%s posts", 1, "jetpack-premium-analytics-pkg" );
 __( "writing since %s", "jetpack-premium-analytics-pkg" );
 __( "Loading…", "jetpack-premium-analytics-pkg" );
