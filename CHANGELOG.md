@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Markdown block: Fit tables and code blocks to the width of a subscription email, so they no longer make it scroll sideways. Tables now span the full width with equal columns.
 - Memberships: Avoid an extra database query on capability checks for comments, users and terms.
 - Newsletter: Show the automatically added Subscribe and Subscriber Login blocks in the Site Editor on WordPress.com sites with plugins.
+- Premium Analytics: Draw all 24 hours when today's bar is opened from the Traffic chart, as classic Stats did.
 - Premium Analytics: Fix the date arrows landing on a partial day, week or month after clicking today's chart bar.
 - Premium Analytics: Keep the days, the Locations tab and the video an old Stats link names when it opens the dashboard.
 - Premium Analytics: Open the matching report for old Stats links to a summary page, such as referrers or search terms, and today by the hour for the old hourly Traffic link, instead of the Traffic tab or the dashboard root.

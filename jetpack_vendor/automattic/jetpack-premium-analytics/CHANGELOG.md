@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Date control: Step from a chart bar clicked today by the bar's own unit, so the arrows land on the whole of yesterday, last week or last month.
 - Keep the days, the Locations tab and the video an old Stats link names when it opens the dashboard.
 - Open the matching report for old Stats links to a summary page, such as referrers or search terms, and today by the hour for the old hourly Traffic link, instead of the Traffic tab or the dashboard root.
+- Traffic chart: Open today's bar over the whole day, so its hourly chart keeps 24 bars all day.
 
 ## [0.18.0] - 2026-11-16
 ### Added
