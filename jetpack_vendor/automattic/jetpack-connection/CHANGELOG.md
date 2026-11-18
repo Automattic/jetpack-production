@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Safe Mode: Add a feature flag for the shared Safe Mode screen, and include Safe Mode state in the connection initial state.
 
 ### Fixed
+- Abilities: validate an unexpected input key on a no-argument ability as an error instead of a PHP error.
 - Safe Mode: Stop showing the Safe Mode screen to non-admins once an admin has chosen to stay in Safe Mode.
 
 ## [9.18.2] - 2026-11-17
