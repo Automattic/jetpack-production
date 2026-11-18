@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Load the media library when the cover image picker opens it, instead of on every page load.
 - Update dependencies.
 
+### Fixed
+- Admin page: Reuse My Jetpack's lookup of the site's purchases instead of requesting the same list from WordPress.com a second time.
+
 ## [2.2.7] - 2026-11-16
 ### Added
 - Join the admin shell, so switching to and from other Jetpack dashboards skips the page load when the admin shell flag is on. [#54768]

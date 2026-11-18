@@ -51,6 +51,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Stop including Query Loop block text in the Article structured data description when Open Graph tags are off.
 - SEO: Warn when site visibility restricts search indexing in Settings and the SEO dashboard.
 - Settings: Hide the Security tab when the Jetpack Protect plugin shows the Protect page.
+- Settings: Load the privacy and custom content type settings once when the page opens, instead of up to three times.
 - VideoPress: Fix bulk-deleting many videos from the Media Library timing out; deletion now shows progress and lists any item that could not be deleted.
 - VideoPress: Stop legacy VideoPress video blocks from marking templates and posts as changed every time the editor loads.
 
