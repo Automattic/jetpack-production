@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Safe Mode: Add a feature flag for the shared Safe Mode screen, and include Safe Mode state in the connection initial state.
 - Safe Mode: Let a fresh connection from Safe Mode report where it started, for WordPress.com's connection tracking.
 
+### Changed
+- Safe Mode: Show the Jetpack Safe Mode admin bar item while the choice is still pending, style it on the front end of the site too, and have it open My Jetpack from Jetpack pages that can't show the Safe Mode screen.
+
 ### Fixed
 - Abilities: validate an unexpected input key on a no-argument ability as an error instead of a PHP error.
 - Safe Mode: Keep showing the WordPress.com address correctly after Safe Mode checks the connection again.
