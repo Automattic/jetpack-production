@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Keep the block editor working for commenters on older browsers, such as Chrome 109 on Windows 7.
+- Skip block pruning on a site that does not use Jetpack Comments, including after a process switches sites.
 
 ## [0.9.1] - 2026-11-16
 ### Changed
