@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- My Jetpack: Offer to turn a switched-off feature back on when its page is opened, instead of showing an error.
 - Podcast: Load the media library only when choosing a cover image, so the dashboard loads less on each visit.
 - Premium Analytics: Add a time-since-send control to the opens and clicks charts on the post page's email tabs: the first 24 hours by the hour, the first week or 30 days by the day, or all time by the month.
 - Premium Analytics: Add a zoom-out button beside the date arrows that returns to the period a chart was zoomed in from.

@@ -48,7 +48,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '6.18.3-alpha';
+	const PACKAGE_VERSION = '6.19.0-alpha';
 
 	/**
 	 * Feature flag that swaps the single-screen onboarding takeover for the setup wizard.
@@ -202,6 +202,7 @@ class Initializer {
 
 		// Answer "is this product on?" for admin menu registration.
 		Menu_Visibility::init();
+		Turned_Off_Page::init();
 
 		self::register_settings_panel_urls();
 
