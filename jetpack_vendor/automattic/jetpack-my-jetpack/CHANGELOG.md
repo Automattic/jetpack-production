@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Record the page view again when the shell shows the My Jetpack page again.
 - Features: Say which parts of Forms need a WordPress.com connection on an offline site.
 - Help: Link to WordPress.com support and contact pages on WordPress.com sites, and hide the Jetpack for developers card there.
+- Let a host send product purchase buttons to its own plans.
 - Overview: Count connections started from an Overview item under its own name, instead of the product card's.
 - Settings panel: Record Tracks events for option changes, panel open and close, and links.
 
