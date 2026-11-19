@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Admin shell: Record the page view again when the shell shows the VideoPress page again.
 - Dashboard: Load the media library when a thumbnail upload opens it, instead of on every page load.
+- Dashboard: Tell free-plan users on the Overview tab that they have used their one video, not that one upload is allowed.
 - Update dependencies.
 
 ### Fixed
