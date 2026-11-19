@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Dashboard: Load the other top tab's code when you point at or focus its tab, not on every visit.
+
 ### Fixed
 - Dashboard: Open the Responses tab without a delay when switching from the Forms tab, and the other way around.
 - Dashboard: Stop saving the classic forms state when the admin shell readies the page on a menu hover.
