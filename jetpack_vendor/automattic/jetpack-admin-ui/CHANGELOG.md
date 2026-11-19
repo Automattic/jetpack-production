@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Remove the media member key. Members load the media library with loadMediaLibrary() when it is opened.
 
 ### Fixed
+- Admin shell: Close the sidebar on phones when switching to another dashboard, as a page load does.
 - Admin shell: Fix edge cases in the turned-off feature panel, such as a late feature check overruling a newer one, or hover preloading a page that is turned off.
 - Admin shell: Give each dashboard its own Jetpack config when others are prewarmed.
 - Admin shell: Keep a dashboard that hides its header from lending a blank one to the page that opens next.
