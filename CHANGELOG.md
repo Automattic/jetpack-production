@@ -57,6 +57,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Warn when site visibility restricts search indexing in Settings and the SEO dashboard.
 - Settings: Hide the Security tab when the Jetpack Protect plugin shows the Protect page.
 - Settings: Load the privacy and custom content type settings once when the page opens, instead of up to three times.
+- Sharing: Tell screen readers that the More button is a button and whether its panel is open.
 - VideoPress: Fix bulk-deleting many videos from the Media Library timing out; deletion now shows progress and lists any item that could not be deleted.
 - VideoPress: Stop legacy VideoPress video blocks from marking templates and posts as changed every time the editor loads.
 
