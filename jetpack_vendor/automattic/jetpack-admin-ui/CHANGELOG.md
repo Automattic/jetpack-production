@@ -22,6 +22,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Keep up to 10 dashboards live on devices with less than 8 GB of memory, or when the browser does not report it.
 - Admin shell: Let a page opt out of the stand-in header, or keep a line for a subtitle it picks as it renders, and title a borrowed header with the page's declared title.
 - Admin shell: Prewarm a dashboard only once the pointer rests on its menu link, and not at all when the browser reports Save-Data, low memory or a slow connection.
+- Admin shell: Prewarm only the route a menu link opens, and load a dashboard's other routes when it first reaches them.
 
 ### Removed
 - Admin shell: Remove the media member key. Members load the media library with loadMediaLibrary() when it is opened.
