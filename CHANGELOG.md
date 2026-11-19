@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Abilities: Make Jetpack's abilities available to AI agents by default, including Stats, Backup, Newsletter, Monitor, Social, modules and connection status. Return false from the jetpack_wp_abilities_enabled filter to turn them off.
 - Backup: Load the Backup page faster on return visits by caching the storage figures and plan check for five minutes.
 - My Jetpack: Let a host, such as WordPress.com, send the plan purchase and manage links to its own plans, or hide either link.
 - My Jetpack: Link the Help tab to WordPress.com support on WordPress.com sites.

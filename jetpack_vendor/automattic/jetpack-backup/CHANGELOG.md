@@ -5,12 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [5.2.6-alpha] - unreleased
+## [5.3.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Abilities: Mark abilities as public with the `meta.public` flag.
+- Abilities: Register the Backup abilities by default.
 - Admin shell: Refetch the dashboard's data when the shell shows it again after five minutes hidden.
 - Cache the storage figures and plan check for five minutes, so returning to the Backup page asks WordPress.com less.
 - Update dependencies.
@@ -1329,7 +1330,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Add API endpoints and Jetpack Backup package for managing Help…
 
-[5.2.6-alpha]: https://github.com/Automattic/jetpack-backup/compare/v5.2.5...v5.2.6-alpha
+[5.3.0-alpha]: https://github.com/Automattic/jetpack-backup/compare/v5.2.5...v5.3.0-alpha
 [5.2.5]: https://github.com/Automattic/jetpack-backup/compare/v5.2.4...v5.2.5
 [5.2.4]: https://github.com/Automattic/jetpack-backup/compare/v5.2.3...v5.2.4
 [5.2.3]: https://github.com/Automattic/jetpack-backup/compare/v5.2.2...v5.2.3
