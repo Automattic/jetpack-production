@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 - Single-report pages: Add a report for an individual page at /report/page/<id>, with the same sections as a post.
 
 ### Changed
+- Single-report pages: Offer a post type's page only where the type is registered in REST, and give the page report its own section and cards.
 - Stats options menu: Rename the page options menu to Stats options, and show it on the report, connect and upgrade pages so Settings can be reached from every page.
 
 ### Fixed
