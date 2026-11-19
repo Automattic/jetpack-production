@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Load the media library only when uploading a video thumbnail, so the dashboard loads less on each visit.
 
 ### Bug fixes
+- Admin menu: Keep links to the WordPress.com dashboard in the WordPress.com sidebar instead of dropping them.
 - Blogging Prompts: Fix prompts starting a day off when requesting a specific year with a month-and-day start date.
 - Custom Content Types: Show the description and Learn More link in Settings > Writing.
 - Forms: Link required checkbox, radio, rating and image choice groups to their error message for screen readers.
