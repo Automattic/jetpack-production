@@ -260,6 +260,7 @@ return array(
     'Automattic\\Jetpack\\Monetize\\Sections\\Ads' => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/sections/class-ads.php',
     'Automattic\\Jetpack\\Monetize\\Sections\\Overview' => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/sections/class-overview.php',
     'Automattic\\Jetpack\\Monetize\\Sections\\Payments' => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/sections/class-payments.php',
+    'Automattic\\Jetpack\\Monetize\\Sections\\Subscribers' => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/sections/class-subscribers.php',
     'Automattic\\Jetpack\\Monetize\\Tracks' => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/class-tracks.php',
     'Automattic\\Jetpack\\Monetize\\WPCOM_Proxy' => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/class-wpcom-proxy.php',
     'Automattic\\Jetpack\\Monitor\\Monitor' => $baseDir . '/jetpack_vendor/automattic/jetpack-monitor/src/class-monitor.php',

@@ -371,9 +371,9 @@
             'dev_requirement' => false,
         ),
         'automattic/jetpack-monetize' => array(
-            'pretty_version' => '0.3.0-alpha.1795012396',
-            'version' => '0.3.0.0-alpha1795012396',
-            'reference' => 'aefb3f7f1d389634c562130b6f37ad00a13e82bc',
+            'pretty_version' => '0.3.0-alpha.1795098456',
+            'version' => '0.3.0.0-alpha1795098456',
+            'reference' => '7ba48cc97f4e0ec9493da1cab223840c6873cda3',
             'type' => 'jetpack-library',
             'install_path' => __DIR__ . '/../../jetpack_vendor/automattic/jetpack-monetize',
             'aliases' => array(),

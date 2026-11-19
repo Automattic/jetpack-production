@@ -291,6 +291,7 @@ class ComposerStaticInitf11009ded9fc4592b6a05b61ce272b3c_jetpackⓥ16_5_a_4
         'Automattic\\Jetpack\\Monetize\\Sections\\Ads' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-monetize/src/sections/class-ads.php',
         'Automattic\\Jetpack\\Monetize\\Sections\\Overview' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-monetize/src/sections/class-overview.php',
         'Automattic\\Jetpack\\Monetize\\Sections\\Payments' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-monetize/src/sections/class-payments.php',
+        'Automattic\\Jetpack\\Monetize\\Sections\\Subscribers' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-monetize/src/sections/class-subscribers.php',
         'Automattic\\Jetpack\\Monetize\\Tracks' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-monetize/src/class-tracks.php',
         'Automattic\\Jetpack\\Monetize\\WPCOM_Proxy' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-monetize/src/class-wpcom-proxy.php',
         'Automattic\\Jetpack\\Monitor\\Monitor' => __DIR__ . '/../..' . '/jetpack_vendor/automattic/jetpack-monitor/src/class-monitor.php',
