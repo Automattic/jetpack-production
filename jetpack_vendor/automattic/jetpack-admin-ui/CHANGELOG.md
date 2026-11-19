@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Give each dashboard its own Jetpack config when others are prewarmed.
 - Admin shell: Keep a dashboard that hides its header from lending a blank one to the page that opens next.
 - Admin shell: Stop other plugins' footer scripts from running again each time a dashboard opens.
+- Admin shell: Stop scripts other plugins enqueue on the print hooks from loading again when switching dashboards, which broke switching to Social on WordPress.com.
 - Admin shell: Switch pages without a reload when the Gutenberg plugin provides @wordpress/boot.
 
 ## [0.14.16] - 2026-11-17
