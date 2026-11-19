@@ -8,6 +8,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
 - My Jetpack: Let a host, such as WordPress.com, send the plan purchase and manage links to its own plans, or hide either link.
+- My Jetpack: Link the Help tab to WordPress.com support on WordPress.com sites.
 - My Jetpack: Offer to turn a switched-off feature back on when its page is opened, instead of showing an error.
 - My Jetpack: Say which parts of Forms need a WordPress.com connection on an offline site.
 - Podcast: Load the media library only when choosing a cover image, so the dashboard loads less on each visit.
