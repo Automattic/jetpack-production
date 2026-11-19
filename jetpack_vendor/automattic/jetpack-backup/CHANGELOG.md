@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Abilities: Mark abilities as public with the `meta.public` flag.
 - Admin shell: Refetch the dashboard's data when the shell shows it again after five minutes hidden.
 - Cache the storage figures and plan check for five minutes, so returning to the Backup page asks WordPress.com less.
 - Update dependencies.

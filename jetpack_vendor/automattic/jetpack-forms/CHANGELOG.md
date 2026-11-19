@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Abilities: Mark abilities as public with the `meta.public` flag.
 - Dashboard: Load the other top tab's code when you point at or focus its tab, not on every visit.
 
 ### Fixed

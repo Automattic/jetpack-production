@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Social: Add abilities to list connections, share a published post and delete a connection.
 
 ### Changed
+- Abilities: Mark abilities as public with the `meta.public` flag.
 - Admin shell: Let Social join the shell on WordPress.com Simple sites too.
 - Admin shell: Record one tab view, not two, when the shell reopens Social at another tab.
 - Admin shell: Record the tab view again when the shell shows the Social page again.

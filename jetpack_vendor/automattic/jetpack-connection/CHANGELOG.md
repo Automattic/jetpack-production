@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Safe Mode: Let a fresh connection from Safe Mode report where it started, for WordPress.com's connection tracking.
 
 ### Changed
+- Abilities: Mark abilities as public with the `meta.public` flag.
 - Safe Mode: Show the Jetpack Safe Mode admin bar item while the choice is still pending, style it on the front end of the site too, and have it open My Jetpack from Jetpack pages that can't show the Safe Mode screen.
 
 ### Fixed
