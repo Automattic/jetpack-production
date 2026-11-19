@@ -1011,39 +1011,39 @@ return array(
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-status/src/class-modules.php'
 	),
 	'Automattic\\Jetpack\\Monetize\\Ads_Wpcom_Settings' => array(
-		'version' => '0.3.0.0-alpha1795098456',
+		'version' => '0.3.0.0-alpha1795119332',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/class-ads-wpcom-settings.php'
 	),
 	'Automattic\\Jetpack\\Monetize\\Dashboard' => array(
-		'version' => '0.3.0.0-alpha1795098456',
+		'version' => '0.3.0.0-alpha1795119332',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/class-dashboard.php'
 	),
 	'Automattic\\Jetpack\\Monetize\\Dashboard_Section' => array(
-		'version' => '0.3.0.0-alpha1795098456',
+		'version' => '0.3.0.0-alpha1795119332',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/interface-dashboard-section.php'
 	),
 	'Automattic\\Jetpack\\Monetize\\Sections\\Ads' => array(
-		'version' => '0.3.0.0-alpha1795098456',
+		'version' => '0.3.0.0-alpha1795119332',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/sections/class-ads.php'
 	),
 	'Automattic\\Jetpack\\Monetize\\Sections\\Overview' => array(
-		'version' => '0.3.0.0-alpha1795098456',
+		'version' => '0.3.0.0-alpha1795119332',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/sections/class-overview.php'
 	),
 	'Automattic\\Jetpack\\Monetize\\Sections\\Payments' => array(
-		'version' => '0.3.0.0-alpha1795098456',
+		'version' => '0.3.0.0-alpha1795119332',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/sections/class-payments.php'
 	),
 	'Automattic\\Jetpack\\Monetize\\Sections\\Subscribers' => array(
-		'version' => '0.3.0.0-alpha1795098456',
+		'version' => '0.3.0.0-alpha1795119332',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/sections/class-subscribers.php'
 	),
 	'Automattic\\Jetpack\\Monetize\\Tracks' => array(
-		'version' => '0.3.0.0-alpha1795098456',
+		'version' => '0.3.0.0-alpha1795119332',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/class-tracks.php'
 	),
 	'Automattic\\Jetpack\\Monetize\\WPCOM_Proxy' => array(
-		'version' => '0.3.0.0-alpha1795098456',
+		'version' => '0.3.0.0-alpha1795119332',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-monetize/src/class-wpcom-proxy.php'
 	),
 	'Automattic\\Jetpack\\Monitor\\Monitor' => array(

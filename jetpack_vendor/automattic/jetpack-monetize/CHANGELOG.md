@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add and edit coupons in Payments.
+- Add the Ads tab, with ad eligibility, earnings and payouts.
 - List and delete coupons in Payments.
 - Paid subscribers: List paid subscribers, view their details, and cancel their payments.
 - Payments: Add and edit payment plans, including newsletter tiers.
