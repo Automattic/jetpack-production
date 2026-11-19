@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Make manual SEO settings and output available on WordPress.com sites without a paid plan.
 - SEO: Reduce storage used by pending search engine notifications.
 - Social: Load the media library only when choosing a default image, so the dashboard loads less on each visit.
+- Stats: Load the Stats page faster.
 - VideoPress: Load the Library page with fewer requests.
 - VideoPress: Load the media library only when uploading a video thumbnail, so the dashboard loads less on each visit.
 

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Admin bar: Let the browser reuse the views chart image for five minutes instead of fetching it on every page view.
+- Load the Stats page faster by including the WordPress.com site details in the page instead of fetching them first.
 
 ## 0.40.1 - 2026-11-16
 ### Changed
