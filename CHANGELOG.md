@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Offer to turn a switched-off feature back on when its page is opened, instead of showing an error.
 - My Jetpack: Say which parts of Forms need a WordPress.com connection on an offline site.
 - Newsletter: Add an Email Design screen under Appearance for editing how newsletter emails look.
+- Newsletter: Explain why the Email Design screen can't open, rather than asking for a reload, when the site isn't offered it or your WordPress.com account isn't connected.
 - Podcast: Load the media library only when choosing a cover image, so the dashboard loads less on each visit.
 - Premium Analytics: Add an Items sold widget to the WooCommerce analytics dashboard.
 - Premium Analytics: Add a time-since-send control to the opens and clicks charts on the post page's email tabs: the first 24 hours by the hour, the first week or 30 days by the day, or all time by the month.

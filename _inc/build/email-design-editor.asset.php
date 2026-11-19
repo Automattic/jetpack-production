@@ -35,5 +35,5 @@
 		'wp-style-engine',
 		'wp-url'
 	),
-	'version' => 'a04eb2d516d138342d40'
+	'version' => '211e6d18da4bf90249a9'
 );
