@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Admin shell: Record one page view, not two, when the shell reopens My Jetpack at another tab.
 - Admin shell: Record the page view again when the shell shows the My Jetpack page again.
+- Features: Say which parts of Forms need a WordPress.com connection on an offline site.
 - Overview: Count connections started from an Overview item under its own name, instead of the product card's.
 - Settings panel: Record Tracks events for option changes, panel open and close, and links.
 
