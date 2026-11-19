@@ -83,6 +83,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Abilities: Mark abilities as public with the `meta.public` flag.
+- Address various PHP deprecation warnings.
 - Admin shell: Record one page view, not two, when the shell reopens Settings or Jetpack AI at another route.
 - Admin shell: Record the Settings and AI page views again when the shell shows those pages again.
 - AI: Stop the AI page from adding REST request settings that also applied to other Jetpack pages loaded alongside it.

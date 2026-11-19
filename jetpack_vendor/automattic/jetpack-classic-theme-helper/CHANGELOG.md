@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Address various PHP deprecation warnings.
 - Custom Content Types: Show the description and Learn More link in Settings > Writing.
 
 ## [0.15.13] - 2026-11-16
