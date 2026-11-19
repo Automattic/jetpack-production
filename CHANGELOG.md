@@ -58,6 +58,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Detect static files when WordPress is installed in a subdirectory.
 - SEO: Fix console errors when switching between dashboard tabs.
 - SEO: Identify the active SEO plugin before enabling SEO tools.
+- SEO: Keep `llms.txt` from redirecting to posts, including before generation is enabled.
 - SEO: Stop including Query Loop block text in meta descriptions when Open Graph tags are off.
 - SEO: Stop including Query Loop block text in the Article structured data description when Open Graph tags are off.
 - SEO: Support automatic Google verification through the hosting platform when available.

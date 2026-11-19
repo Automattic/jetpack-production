@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 - Detect static SEO files when WordPress is installed in a subdirectory.
 - Hide AI SEO controls when metadata generation is unavailable.
 - Identify the active SEO plugin before enabling SEO tools.
+- Keep `llms.txt` from redirecting to posts, including before generation is enabled.
 - Schema: Stop including Query Loop block text in the Article description when Open Graph tags are off.
 - Support automatic Google verification through the hosting platform when available.
 
