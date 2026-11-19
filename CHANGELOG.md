@@ -27,9 +27,11 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Make manual SEO settings and output available on WordPress.com sites without a paid plan.
 - SEO: Reduce storage used by pending search engine notifications.
 - Social: Load the media library only when choosing a default image, so the dashboard loads less on each visit.
+- VideoPress: Load the Library page with fewer requests.
 - VideoPress: Load the media library only when uploading a video thumbnail, so the dashboard loads less on each visit.
 
 ### Bug fixes
+- About page: Fetch the page's data only when the About page loads, not on other admin pages.
 - Admin menu: Keep links to the WordPress.com dashboard in the WordPress.com sidebar instead of dropping them.
 - Admin pages: Show the footer's Features and Help links on WordPress.com sites that have My Jetpack, and stop linking the header to My Jetpack on sites that hide it.
 - Blogging Prompts: Fix prompts starting a day off when requesting a specific year with a month-and-day start date.
