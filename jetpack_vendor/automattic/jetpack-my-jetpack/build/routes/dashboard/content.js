@@ -830,6 +830,7 @@ __( "Date range", "jetpack-my-jetpack" );
 __( "Upload to VideoPress", "jetpack-my-jetpack" );
 __( "Failed to load videos", "jetpack-my-jetpack" );
 __( "More insights", "jetpack-my-jetpack" );
+__( "Jetpack AI", "jetpack-my-jetpack" );
 __( "More about AI", "jetpack-my-jetpack" );
 __( "Increase usage", "jetpack-my-jetpack" );
 __( "More about Search", "jetpack-my-jetpack" );

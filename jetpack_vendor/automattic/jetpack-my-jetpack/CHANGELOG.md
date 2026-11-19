@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Fix the Site Accelerator and Newsletter descriptions, which showed Related Posts text.
+- Overview: Call the AI row Jetpack AI, as Features and the admin menu do.
 
 ## [6.18.2] - 2026-11-17
 ### Changed
