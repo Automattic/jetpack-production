@@ -60,6 +60,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Identify the active SEO plugin before enabling SEO tools.
 - SEO: Stop including Query Loop block text in meta descriptions when Open Graph tags are off.
 - SEO: Stop including Query Loop block text in the Article structured data description when Open Graph tags are off.
+- SEO: Support automatic Google verification through the hosting platform when available.
 - SEO: Warn when site visibility restricts search indexing in Settings and the SEO dashboard.
 - Settings: Fix the admin menu showing as an empty dark panel when opened on phones.
 - Settings: Hide the Security tab when the Jetpack Protect plugin shows the Protect page.
