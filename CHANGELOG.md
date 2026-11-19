@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Admin menu: Keep links to the WordPress.com dashboard in the WordPress.com sidebar instead of dropping them.
+- Admin pages: Show the footer's Features and Help links on WordPress.com sites that have My Jetpack, and stop linking the header to My Jetpack on sites that hide it.
 - Blogging Prompts: Fix prompts starting a day off when requesting a specific year with a month-and-day start date.
 - Custom Content Types: Show the description and Learn More link in Settings > Writing.
 - Forms: Link required checkbox, radio, rating and image choice groups to their error message for screen readers.

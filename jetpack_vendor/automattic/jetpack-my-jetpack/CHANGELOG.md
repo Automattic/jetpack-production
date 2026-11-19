@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Admin shell: Show the turned-off feature card in place of a page whose feature is off, including for Jetpack AI, Social and Search.
 - Plans: Add the jetpack_my_jetpack_plan_urls filter, so a host can send the "Purchase a plan" and "Manage your plan" links to its own plans, or hide either link.
+- Report whether the host shows My Jetpack, so Jetpack footers can link to it on WordPress.com sites that have it.
 - Show a page that turns a switched-off feature back on, instead of an error, when one of its admin pages is opened.
 
 ### Changed
