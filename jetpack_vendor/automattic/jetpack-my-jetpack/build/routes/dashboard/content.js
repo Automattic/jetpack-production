@@ -537,6 +537,7 @@ __( "Never expires", "jetpack-my-jetpack" );
 _n( "Plan", "Plans", 1, "jetpack-my-jetpack" );
 _n( "Manage your plan", "Manage your plans", 1, "jetpack-my-jetpack" );
 __( "Purchase a plan", "jetpack-my-jetpack" );
+__( "Upgrade your plan", "jetpack-my-jetpack" );
 __( "Upgrade to %s", "jetpack-my-jetpack" );
 _x( "Activate a license", "Activate a license button text", "jetpack-my-jetpack" );
 _x( "Activate a license (requires a user connection)", "Activate a license button text", "jetpack-my-jetpack" );
