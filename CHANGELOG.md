@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Reader: Explain failed repost embeds and add source links when the editor allows replacement.
 - Safe Mode: Show the WordPress.com address correctly instead of reversed after Safe Mode checks the connection again.
 - Safe Mode: Stop showing the Safe Mode screen to non-admins once an admin has chosen to stay in Safe Mode.
+- Search: Load the Search block styles only on pages that show the blocks, on sites that turn off on-demand block assets.
 - SEO: Allow posts and supported custom post types to be marked for inclusion in llms.txt.
 - SEO: Detect static files when WordPress is installed in a subdirectory.
 - SEO: Fix console errors when switching between dashboard tabs.

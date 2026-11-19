@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: Stop creating the purchase token when the admin shell readies the page on a menu hover.
+- Load the Search block styles only on pages that show the blocks, on sites that turn off on-demand block assets.
 
 ## [8.4.3] - 2026-11-16
 ### Added
