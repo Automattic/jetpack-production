@@ -67,6 +67,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Fix IndexNow verification and delivery when a site's address resolves as HTTP or HTTPS.
 - SEO: Identify the active SEO plugin before enabling SEO tools.
 - SEO: Keep `llms.txt` from redirecting to posts, including before generation is enabled.
+- SEO: Manage WordPress.com third-party sharing preferences from SEO settings.
 - SEO: Stop including Query Loop block text in meta descriptions when Open Graph tags are off.
 - SEO: Stop including Query Loop block text in the Article structured data description when Open Graph tags are off.
 - SEO: Support automatic Google verification through the hosting platform when available.

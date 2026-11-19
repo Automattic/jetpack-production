@@ -504,6 +504,7 @@ return array(
     'Automattic\\Jetpack\\SEO\\Content_Coverage' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-content-coverage.php',
     'Automattic\\Jetpack\\SEO\\Content_Gate' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-content-gate.php',
     'Automattic\\Jetpack\\SEO\\Dashboard_Data' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-dashboard-data.php',
+    'Automattic\\Jetpack\\SEO\\Data_Sharing' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-data-sharing.php',
     'Automattic\\Jetpack\\SEO\\Indexnow' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-indexnow.php',
     'Automattic\\Jetpack\\SEO\\Indexnow_Client' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-indexnow-client.php',
     'Automattic\\Jetpack\\SEO\\Indexnow_Events' => $baseDir . '/jetpack_vendor/automattic/jetpack-seo/src/class-indexnow-events.php',
