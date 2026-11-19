@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Content: Allow posts and supported custom post types to be marked for inclusion in llms.txt.
 - Dashboard: Fix console errors when switching between tabs.
 - Detect static SEO files when WordPress is installed in a subdirectory.
+- Fix IndexNow verification and delivery when a site's address resolves as HTTP or HTTPS.
 - Hide AI SEO controls when metadata generation is unavailable.
 - Identify the active SEO plugin before enabling SEO tools.
 - Keep `llms.txt` from redirecting to posts, including before generation is enabled.
