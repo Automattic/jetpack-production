@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Admin shell: Refetch the dashboard's data when the shell shows it again after five minutes hidden.
+- Cache the storage figures and plan check for five minutes, so returning to the Backup page asks WordPress.com less.
 - Update dependencies.
 
 ## [5.2.5] - 2026-11-16

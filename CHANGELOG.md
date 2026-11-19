@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Backup: Load the Backup page faster on return visits by caching the storage figures and plan check for five minutes.
 - My Jetpack: Let a host, such as WordPress.com, send the plan purchase and manage links to its own plans, or hide either link.
 - My Jetpack: Link the Help tab to WordPress.com support on WordPress.com sites.
 - My Jetpack: Offer to turn a switched-off feature back on when its page is opened, instead of showing an error.
