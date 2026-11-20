@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 - Join the Jetpack admin shell, so switching to and from Stats does not reload the page.
 - Reload the analytics dashboard once when part of it fails to load after an update, instead of showing an error.
 - Report uncaught dashboard JavaScript errors to WordPress.com for WordPress.com users on WordPress.com Simple and Atomic sites.
+- Settings: Add a switch that turns the What's new teaser off, behind the feature flag of the teaser.
 - Single-report pages: Add a report for an individual page at /report/page/<id>, with the same sections as a post.
 
 ### Changed

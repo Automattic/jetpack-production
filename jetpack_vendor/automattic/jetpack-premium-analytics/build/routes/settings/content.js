@@ -66,6 +66,9 @@ __( "Your Stats settings could not be saved.", "jetpack-premium-analytics-pkg" )
 __( "Settings saved.", "jetpack-premium-analytics-pkg" );
 __( "Your Stats settings could not be loaded. Reload the page to try again.", "jetpack-premium-analytics-pkg" );
 __( "Loading your Stats settings…", "jetpack-premium-analytics-pkg" );
+__( "What’s new", "jetpack-premium-analytics-pkg" );
+__( "Show a teaser when there is something new", "jetpack-premium-analytics-pkg" );
+__( "Only for you, on every Jetpack dashboard of this site.", "jetpack-premium-analytics-pkg" );
 __( "Activation", "jetpack-premium-analytics-pkg" );
 __( "Stats is a Jetpack feature. Activate or deactivate it from <link>Jetpack modules</link>.", "jetpack-premium-analytics-pkg" );
 __( "Stats is a Jetpack feature. Activate or deactivate it from <link>Jetpack features</link>.", "jetpack-premium-analytics-pkg" );

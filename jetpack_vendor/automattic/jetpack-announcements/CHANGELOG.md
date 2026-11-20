@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a per-user preference that turns the teaser off.
 - Add the What's new script module, which a host mounts with `mountWhatsNew()`.
+- Give hosts the hook that reads and writes the switch that turns the teaser off.
 - Initial version.
 - Serve announcements over REST.
 - Show a teaser of the newest announcement, and the announcement in full in a dialog.

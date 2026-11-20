@@ -26,7 +26,7 @@ return array(
     ),
     'jetpack-announcements' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-announcements',
-      'ver' => '0.1.0-alpha1795170881',
+      'ver' => '0.1.0-alpha1795174028',
     ),
     'jetpack-assets' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-assets',
@@ -170,7 +170,7 @@ return array(
     ),
     'jetpack-premium-analytics-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-premium-analytics',
-      'ver' => '0.19.0-alpha1795167336',
+      'ver' => '0.19.0-alpha1795174028',
     ),
     'jetpack-protect-models' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-protect-models',
