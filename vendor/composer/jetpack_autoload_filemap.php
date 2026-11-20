@@ -22,6 +22,10 @@ return array(
 		'version' => '1.1.0.0',
 		'path'    => $vendorDir . '/automattic/tracks-shared-utils/php/src/functions.php'
 	),
+	'8dadc7d1fad607338155477657d4d3eb' => array(
+		'version' => '0.1.0.0-alpha1795107727',
+		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-announcements/actions.php'
+	),
 	'd4eb94df91a729802d18373ee8cdc79f' => array(
 		'version' => '5.3.0.0-alpha1795137694',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-backup/actions.php'

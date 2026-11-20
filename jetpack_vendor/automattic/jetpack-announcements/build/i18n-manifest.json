@@ -1,0 +1,5 @@
+{
+	"bundles": [
+		"build/modules/whats-new/index.js"
+	]
+}
