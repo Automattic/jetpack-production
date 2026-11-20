@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Plans: Add the jetpack_my_jetpack_plan_urls filter, so a host can send the "Purchase a plan" and "Manage your plan" links to its own plans, or hide either link.
 - Report whether the host shows My Jetpack, so Jetpack footers can link to it on WordPress.com sites that have it.
 - Show a page that turns a switched-off feature back on, instead of an error, when one of its admin pages is opened.
+- Tracks: Record header connection opens and clicks, and Renew and Resume clicks on plans.
 
 ### Changed
 - Admin shell: Record one page view, not two, when the shell reopens My Jetpack at another tab.
