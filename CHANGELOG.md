@@ -80,6 +80,7 @@ This is an alpha version! The changes listed here are not final.
 - Sharing: Tell screen readers that the More button is a button and whether its panel is open.
 - Subscribe overlay: Keep the form reachable on wide and short screens by capping the top margin and letting the overlay scroll.
 - Subscriptions: Avoid adding a duplicate Subscribe block to navigation menus.
+- VideoPress: Apply the post's password check to private video access.
 - VideoPress: Fix bulk-deleting many videos from the Media Library timing out; deletion now shows progress and lists any item that could not be deleted.
 - VideoPress: Stop legacy VideoPress video blocks from marking templates and posts as changed every time the editor loads.
 

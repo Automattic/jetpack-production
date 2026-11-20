@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Channel: Only match and quote private videos' transcripts in playlist searches for site members.
 - Dashboard: Match the "Record a video" button height to the upload buttons beside it.
 - Media Library: Delete selected VideoPress videos a few at a time, with progress and per-item errors, and stop reporting a video as deleted when WordPress.com did not confirm it.
+- Private videos: Apply the post's password check to video access.
 - Video block: Validate preview-on-hover timing values so incomplete block attributes no longer emit PHP warnings or invalid player data.
 
 ## [0.63.0] - 2026-11-16
