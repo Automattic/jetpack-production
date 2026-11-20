@@ -75,6 +75,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Fix the admin menu showing as an empty dark panel when opened on phones.
 - Settings: Hide the Security tab when the Jetpack Protect plugin shows the Protect page.
 - Settings: Load the privacy and custom content type settings once when the page opens, instead of up to three times.
+- Settings: Stop errors in the browser console when the Settings page loads.
 - Sharing: Tell screen readers that the More button is a button and whether its panel is open.
 - Subscribe overlay: Keep the form reachable on wide and short screens by capping the top margin and letting the overlay scroll.
 - Subscriptions: Avoid adding a duplicate Subscribe block to navigation menus.
