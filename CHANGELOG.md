@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - About page: Fetch the page's data only when the About page loads, not on other admin pages.
 - Admin menu: Keep links to the WordPress.com dashboard in the WordPress.com sidebar instead of dropping them.
 - Admin pages: Show the footer's Features and Help links on WordPress.com sites that have My Jetpack, and stop linking the header to My Jetpack on sites that hide it.
+- AI: Make the MCP Read and Write "Enable all" switch also turn site-published abilities on or off.
 - AI: Show a site's own abilities on the MCP Read and Write views on WordPress.com sites with plugins, as WordPress.com does.
 - Blogging Prompts: Fix prompts starting a day off when requesting a specific year with a month-and-day start date.
 - Custom Content Types: Show the description and Learn More link in Settings > Writing.
