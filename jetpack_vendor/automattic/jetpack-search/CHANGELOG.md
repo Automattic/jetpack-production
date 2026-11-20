@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Update dependencies.
 
 ### Fixed
+- Dashboard: Hide the "Use license key" link where My Jetpack's add-license screen is turned off, such as in Offline Mode.
 - Dashboard: Stop creating the purchase token when the admin shell readies the page on a menu hover.
 - Load the Search block styles only on pages that show the blocks, on sites that turn off on-demand block assets.
 
