@@ -784,6 +784,7 @@ return array(
     'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Core_Revenue_Stats_Handler' => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/local/class-core-revenue-stats-handler.php',
     'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Default_Reports' => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/class-default-reports.php',
     'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Local_Report_Provider' => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/local/class-local-report-provider.php',
+    'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Provider_Setting' => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/class-provider-setting.php',
     'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Report_Capability' => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/interface-report-capability.php',
     'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Report_Definition' => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/class-report-definition.php',
     'Automattic\\Jetpack\\WooCommerceStats\\Report_Execution\\Report_Executor' => $baseDir . '/jetpack_vendor/automattic/jetpack-woocommerce-stats/src/report-execution/class-report-executor.php',

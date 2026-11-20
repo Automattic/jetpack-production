@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add an Items sold widget to the WooCommerce analytics dashboard.
+- Reports: Add a site setting and an experimental filter listing the providers that serve reports requested with `provider=auto`.
 - Reports: Serve the orders by date report from the store's own WooCommerce Analytics data when a request asks for the local provider.
 
 ## [0.4.0] - 2026-11-16
