@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Admin shell: Record one page view, not two, when the shell reopens My Jetpack at another tab.
 - Admin shell: Record the page view again when the shell shows the My Jetpack page again.
+- Comment: Drop a connection status card test that asserted copy the card no longer shows, from an un-awaited timer that could fail other tests.
 - Features: Say which parts of Forms need a WordPress.com connection on an offline site.
 - Help: Link to WordPress.com support and contact pages on WordPress.com sites, and hide the Jetpack for developers card there.
 - Let a host send product purchase buttons to its own plans.
