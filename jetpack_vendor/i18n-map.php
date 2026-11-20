@@ -26,7 +26,7 @@ return array(
     ),
     'jetpack-announcements' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-announcements',
-      'ver' => '0.1.0-alpha1795107727',
+      'ver' => '0.1.0-alpha1795170881',
     ),
     'jetpack-assets' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-assets',

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a per-user preference that turns the teaser off.
 - Add the What's new script module, which a host mounts with `mountWhatsNew()`.
 - Initial version.
 - Serve announcements over REST.
