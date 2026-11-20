@@ -94,6 +94,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Record one page view, not two, when the shell reopens Settings or Jetpack AI at another route.
 - Admin shell: Record the Settings and AI page views again when the shell shows those pages again.
 - AI: Stop the AI page from adding REST request settings that also applied to other Jetpack pages loaded alongside it.
+- Monetize: Offer the in-development Monetize module on WordPress.com sites that run the Jetpack plugin.
 - Settings: Stop saving Sharing, Monitor and Post by Email values when the admin shell readies the page on a menu hover.
 - Site settings: Remove the unused in_site_migration_flow setting. WordPress.com stopped using it in 2024.
 - Update package dependencies.

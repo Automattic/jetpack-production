@@ -15,6 +15,10 @@ This is an alpha version! The changes listed here are not final.
 - List and delete coupons in Payments.
 - Paid subscribers: List paid subscribers, view their details, and cancel their payments.
 - Payments: Add and edit payment plans, including newsletter tiers.
+- Show the Ads settings on WordPress.com Simple sites, with their sidebar ad and an option to show ads only to logged-out visitors, and show there whether ads are on.
+
+### Changed
+- Name the right plans on WordPress.com sites, record usage on Simple, and skip a plan check Simple cannot answer.
 
 ### Fixed
 - Payments: Warn when the connected Stripe account can't accept charges.
