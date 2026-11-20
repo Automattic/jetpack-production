@@ -16,6 +16,9 @@ This is an alpha version! The changes listed here are not final.
 - Cache the storage figures and plan check for five minutes, so returning to the Backup page asks WordPress.com less.
 - Update dependencies.
 
+### Fixed
+- Dashboard: Stop logging a missing jetpackConfig error to the console on a full page load.
+
 ## [5.2.5] - 2026-11-16
 ### Added
 - Join the admin shell, so switching to and from other Jetpack dashboards skips the page load when the admin shell flag is on. [#54829]

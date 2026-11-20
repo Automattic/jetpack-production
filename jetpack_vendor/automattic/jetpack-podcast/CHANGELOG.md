@@ -17,6 +17,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Admin page: Reuse My Jetpack's lookup of the site's purchases instead of requesting the same list from WordPress.com a second time.
+- Dashboard: Stop logging a missing jetpackConfig error to the console on a full page load.
 
 ## [2.2.7] - 2026-11-16
 ### Added
