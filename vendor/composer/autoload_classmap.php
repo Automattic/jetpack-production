@@ -379,6 +379,7 @@ return array(
     'Automattic\\Jetpack\\PremiumAnalytics\\Dashboard_Announcements' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-dashboard-announcements.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Dashboard_Section' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-dashboard-section.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Dashboard_Section_Registry' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-dashboard-section-registry.php',
+    'Automattic\\Jetpack\\PremiumAnalytics\\Dashboard_Support' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-dashboard-support.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Dashboard_Support_Routes' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-dashboard-support-routes.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Enablement' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-enablement.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Enablement_Setting' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-enablement-setting.php',
