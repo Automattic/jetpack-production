@@ -8,6 +8,8 @@
 
 __( "Loading", "jetpack-videopress-pkg" );
 __( "Keyboard shortcut: %s", "jetpack-videopress-pkg" );
+__( "(opens in a new tab)", "jetpack-videopress-pkg" );
+__( "Close", "jetpack-videopress-pkg" );
 __( "%1$s, %2$s", "jetpack-videopress-pkg" );
 __( "Date calendar", "jetpack-videopress-pkg" );
 __( "Date range calendar", "jetpack-videopress-pkg" );
@@ -20,6 +22,7 @@ __( "%s, selected", "jetpack-videopress-pkg" );
 __( "Required", "jetpack-videopress-pkg" );
 __( "Optional", "jetpack-videopress-pkg" );
 __( "More details follow the field.", "jetpack-videopress-pkg" );
+__( "More details follow.", "jetpack-videopress-pkg" );
 __( "Select", "jetpack-videopress-pkg" );
 __( "Sort ascending", "jetpack-videopress-pkg" );
 __( "Sort descending", "jetpack-videopress-pkg" );
@@ -158,9 +161,6 @@ __( "Value must be true, false, or undefined", "jetpack-videopress-pkg" );
 __( "Value must be an array.", "jetpack-videopress-pkg" );
 __( "Every value must be a string.", "jetpack-videopress-pkg" );
 __( "Value must be a valid color.", "jetpack-videopress-pkg" );
-__( "(opens in a new tab)", "jetpack-videopress-pkg" );
-__( "Close", "jetpack-videopress-pkg" );
-__( "More details follow.", "jetpack-videopress-pkg" );
 __( "Sections", "jetpack-videopress-pkg" );
 __( "An Automattic Airline", "jetpack-videopress-pkg" );
 __( "Jetpack Logo", "jetpack-videopress-pkg" );

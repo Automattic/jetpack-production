@@ -8,7 +8,11 @@
 
 __( "Jetpack Logo", "jetpack" );
 __( "An Automattic Airline", "jetpack" );
+__( "Loading", "jetpack" );
+__( "Keyboard shortcut: %s", "jetpack" );
 __( "(opens in a new tab)", "jetpack" );
+__( "Dismiss", "jetpack" );
+__( "In progress", "jetpack" );
 __( "Features", "jetpack" );
 __( "Help", "jetpack" );
 __( "Jetpack", "jetpack" );
@@ -52,7 +56,6 @@ __( "Your site couldn’t reach WordPress.com. Ask your hosting provider to allo
 __( "WordPress.com is temporarily unavailable. Please try again in a minute.", "jetpack" );
 __( "Your site got an unexpected response from WordPress.com. If your hosting provider filters outgoing connections, ask them to allow jetpack.wordpress.com.", "jetpack" );
 __( "WordPress.com returned an unexpected response when registering your site. Please try again in a minute.", "jetpack" );
-__( "Loading", "jetpack" );
 __( "An error occurred. Please try again.", "jetpack" );
 __( "Over 5 million WordPress sites are faster and more secure", "jetpack" );
 __( "Set up Jetpack", "jetpack" );
@@ -121,9 +124,6 @@ _x( "Debug", "Navigation item. Noun. Links to a debugger tool for Jetpack.", "je
 __( "Test your site’s compatibility with Jetpack.", "jetpack" );
 _x( "Reset Options (dev only)", "Navigation item.", "jetpack" );
 _x( "Dev Tools", "Navigation item.", "jetpack" );
-__( "Keyboard shortcut: %s", "jetpack" );
-__( "Dismiss", "jetpack" );
-__( "In progress", "jetpack" );
 __( "Connect your WordPress.com account", "jetpack" );
 __( "Reconnecting Jetpack", "jetpack" );
 __( "There was an error reconnecting Jetpack. Error: %s", "jetpack" );

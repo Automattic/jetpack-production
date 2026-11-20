@@ -9,7 +9,11 @@
 __( "Jetpack Logo", "jetpack-search-pkg" );
 __( "An Automattic Airline", "jetpack-search-pkg" );
 __( "Loading", "jetpack-search-pkg" );
+__( "Keyboard shortcut: %s", "jetpack-search-pkg" );
 __( "(opens in a new tab)", "jetpack-search-pkg" );
+__( "OK", "jetpack-search-pkg" );
+__( "Cancel", "jetpack-search-pkg" );
+__( "Dismiss", "jetpack-search-pkg" );
 __( "Features", "jetpack-search-pkg" );
 __( "Help", "jetpack-search-pkg" );
 __( "Jetpack", "jetpack-search-pkg" );
@@ -67,10 +71,6 @@ __( "Your site couldn’t reach WordPress.com. Ask your hosting provider to allo
 __( "WordPress.com is temporarily unavailable. Please try again in a minute.", "jetpack-search-pkg" );
 __( "Your site got an unexpected response from WordPress.com. If your hosting provider filters outgoing connections, ask them to allow jetpack.wordpress.com.", "jetpack-search-pkg" );
 __( "WordPress.com returned an unexpected response when registering your site. Please try again in a minute.", "jetpack-search-pkg" );
-__( "Keyboard shortcut: %s", "jetpack-search-pkg" );
-__( "OK", "jetpack-search-pkg" );
-__( "Cancel", "jetpack-search-pkg" );
-__( "Dismiss", "jetpack-search-pkg" );
 __( "An error occurred. Please try again.", "jetpack-search-pkg" );
 __( "Already have a subscription? <connectButton/>", "jetpack-search-pkg" );
 __( "Log in to get started", "jetpack-search-pkg" );

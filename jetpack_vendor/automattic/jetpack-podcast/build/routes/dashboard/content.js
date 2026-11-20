@@ -6,16 +6,9 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "(opens in a new tab)", "jetpack-podcast" );
-__( "Sections", "jetpack-podcast" );
-__( "An Automattic Airline", "jetpack-podcast" );
-__( "Jetpack Logo", "jetpack-podcast" );
-__( "Features", "jetpack-podcast" );
-__( "Help", "jetpack-podcast" );
-__( "Jetpack", "jetpack-podcast" );
-__( "There was an error testing Jetpack. Error: %s", "jetpack-podcast" );
 __( "Loading", "jetpack-podcast" );
 __( "Keyboard shortcut: %s", "jetpack-podcast" );
+__( "(opens in a new tab)", "jetpack-podcast" );
 __( "%1$s, %2$s", "jetpack-podcast" );
 __( "Date calendar", "jetpack-podcast" );
 __( "Date range calendar", "jetpack-podcast" );
@@ -25,6 +18,17 @@ __( "Next month", "jetpack-podcast" );
 __( "Previous month", "jetpack-podcast" );
 __( "Today, %s, selected", "jetpack-podcast" );
 __( "%s, selected", "jetpack-podcast" );
+__( "Required", "jetpack-podcast" );
+__( "Optional", "jetpack-podcast" );
+__( "More details follow the field.", "jetpack-podcast" );
+__( "Select", "jetpack-podcast" );
+__( "Sections", "jetpack-podcast" );
+__( "An Automattic Airline", "jetpack-podcast" );
+__( "Jetpack Logo", "jetpack-podcast" );
+__( "Features", "jetpack-podcast" );
+__( "Help", "jetpack-podcast" );
+__( "Jetpack", "jetpack-podcast" );
+__( "There was an error testing Jetpack. Error: %s", "jetpack-podcast" );
 __( "Something went wrong loading the Podcast dashboard.", "jetpack-podcast" );
 __( "Saving…", "jetpack-podcast" );
 __( "Settings saved.", "jetpack-podcast" );
@@ -232,10 +236,6 @@ __( "Stops publishing your podcast feed. Your show details stay saved, so you ca
 __( "Stop publishing", "jetpack-podcast" );
 __( "Stop publishing your podcast?", "jetpack-podcast" );
 __( "Your podcast feed will stop being generated. Existing episodes stay in the assigned category and you can start publishing again at any time.", "jetpack-podcast" );
-__( "Required", "jetpack-podcast" );
-__( "Optional", "jetpack-podcast" );
-__( "More details follow the field.", "jetpack-podcast" );
-__( "Select", "jetpack-podcast" );
 __( "Sort ascending", "jetpack-podcast" );
 __( "Sort descending", "jetpack-podcast" );
 __( "(no title)", "jetpack-podcast" );
