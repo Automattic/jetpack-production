@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Dashboard: Stop logging a missing jetpackConfig error to the console on a full page load.
+- Hide the "Use license key" link where My Jetpack's add-license screen is turned off, such as in Offline Mode.
 
 ## [5.2.5] - 2026-11-16
 ### Added
