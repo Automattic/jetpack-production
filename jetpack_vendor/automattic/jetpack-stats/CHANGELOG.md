@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Abilities: Explain that file download stats are not available on Jetpack-connected sites, instead of failing with a generic error.
 - Abilities: validate an unexpected input key on a no-argument ability as an error instead of a PHP error.
+- Stats abilities: get-post-detail treats a post the user cannot open on the site as not found, counts the comments it lists the same way as its total, and keeps comment excerpts plain text.
 
 ## [0.24.2] - 2026-11-16
 ### Changed
