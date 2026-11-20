@@ -18,4 +18,5 @@ This is an alpha version! The changes listed here are not final.
 - Show a teaser of the newest announcement, and the announcement in full in a dialog.
 
 ### Changed
+- Accept a slash in the name of a channel, so a host can name a channel for each of its pages.
 - Strip styles, classes and ids from the body of an announcement, and keep its URLs to http and https.
