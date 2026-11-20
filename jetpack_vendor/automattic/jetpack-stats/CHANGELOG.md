@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Abilities: Add `expand` to the top-content reader, returning the pages, engines, links and terms each referrer, click and tags item groups. Links WordPress.com routes through its href.li redirector now report where they lead.
 - Stats abilities: add an email detail reader that breaks one newsletter email down by mail app, device, country and clicked link, and a video reader for one video's plays over time; give video-plays top content items their video ID; add the posting calendar to insights, and find its streaks among a year of posts instead of only the latest.
 - Stats abilities: add author views, insights, email stats, subscribers and ad stats readers; add regions, cities, devices, UTM and comment reports to top content; chart subscribers and count paid ones in followers.
+- Stats abilities: add get-post-detail, one post or page's views, likes, comments, UTM values and newsletter email stats.
 - Stats abilities: chart visits, post views, followers, author views and ad stats by quarter, and list the posts each UTM value sent views to with `expand`.
 
 ### Changed
