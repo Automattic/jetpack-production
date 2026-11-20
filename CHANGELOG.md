@@ -54,6 +54,7 @@ This is an alpha version! The changes listed here are not final.
 - Markdown block: Fit tables and code blocks to the width of a subscription email, so they no longer make it scroll sideways. Tables now span the full width with equal columns.
 - Memberships: Avoid an extra database query on capability checks for comments, users and terms.
 - My Jetpack: Fix the Learn more, Manage and Connect buttons on recommendation cards, which did nothing.
+- Newsletter: Show subscriber-only posts to readers already logged in to WordPress.com on sites with a custom domain, without a click.
 - Newsletter: Show the automatically added Subscribe and Subscriber Login blocks in the Site Editor on WordPress.com sites with plugins.
 - Premium Analytics: Draw all 24 hours when today's bar is opened from the Traffic chart, as classic Stats did.
 - Premium Analytics: Draw the legend labels and values in breakdown charts such as Devices, and the links in a video's Used on posts & pages card, at the same 14px size as the rest of the widget text.
