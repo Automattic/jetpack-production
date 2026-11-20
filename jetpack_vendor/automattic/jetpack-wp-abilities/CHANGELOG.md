@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Registrar: Each registrar sets the default of the jetpack_wp_abilities_enabled filter through enabled_by_default(), which is false unless it overrides it, so a registrar from an older plugin release stays off.
 - Registrar: Register abilities by default. Return false from the jetpack_wp_abilities_enabled filter to turn them off.
 
 ### Fixed
