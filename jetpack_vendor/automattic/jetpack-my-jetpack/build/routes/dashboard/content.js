@@ -840,7 +840,7 @@ __( "Activate Protect", "jetpack-my-jetpack" );
 __( "Threats found", "jetpack-my-jetpack" );
 __( "Manage Protect", "jetpack-my-jetpack" );
 __( "Failed to load threats", "jetpack-my-jetpack" );
-__( "Scan threats", "jetpack-my-jetpack" );
+__( "Add malware scanning", "jetpack-my-jetpack" );
 __( "Failed to load blocked logins", "jetpack-my-jetpack" );
 __( "Activate Stats", "jetpack-my-jetpack" );
 __( "More stats", "jetpack-my-jetpack" );
