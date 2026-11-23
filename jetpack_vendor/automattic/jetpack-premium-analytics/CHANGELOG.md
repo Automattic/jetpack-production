@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a feature flag for the AI tab.
 - Dashboard: Add a What's new teaser with the announcements of the dashboard, behind a feature flag that is off by default.
 - Dashboard: Track how readers use the Arrange tabs dialog.
 - Date control: Add a zoom-out button beside the arrows that returns to the period a chart was zoomed in from.

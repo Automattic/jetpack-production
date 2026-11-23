@@ -372,6 +372,7 @@ return array(
     'Automattic\\Jetpack\\Post_Media' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-post-media.php',
     'Automattic\\Jetpack\\Post_Media\\Images' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-images.php',
     'Automattic\\Jetpack\\Post_Media\\Twitter_Cards' => $baseDir . '/jetpack_vendor/automattic/jetpack-post-media/src/class-twitter-cards.php',
+    'Automattic\\Jetpack\\PremiumAnalytics\\AI_Traffic' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-ai-traffic.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Analytics' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-analytics.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Capabilities' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-capabilities.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Classic_Stats' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-classic-stats.php',
