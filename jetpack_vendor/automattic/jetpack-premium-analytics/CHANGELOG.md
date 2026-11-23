@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Charts: Decide a percentage axis from the series the legend leaves visible, so hiding a rate above 100% returns the others to a 0% to 100% axis.
+- Charts: Name a whole month by its month and year in tooltips, not by its first day.
 - Date control: Step from a chart bar clicked today by the bar's own unit, so the arrows land on the whole of yesterday, last week or last month.
 - Draw the legend labels and values in breakdown charts such as Devices, and the links in a video's Used on posts & pages card, at the same 14px size as the rest of the widget text.
 - Keep the days, the Locations tab and the video an old Stats link names when it opens the dashboard.
