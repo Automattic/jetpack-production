@@ -39,6 +39,7 @@ This is an alpha version! The changes listed here are not final.
 - VideoPress: Load the Library page with fewer requests.
 - VideoPress: Load the media library only when uploading a video thumbnail, so the dashboard loads less on each visit.
 - VideoPress: Show portrait videos in a tall player on the video details page instead of a small letterboxed one.
+- VideoPress: Turn on the VideoPress module instead of installing the VideoPress plugin when you start for free in My Jetpack.
 
 ### Bug fixes
 - About page: Fetch the page's data only when the About page loads, not on other admin pages.

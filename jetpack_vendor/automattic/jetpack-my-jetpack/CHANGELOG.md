@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Overview: Count connections started from an Overview item under its own name, instead of the product card's.
 - Overview: Show the last 30 days of Stats by default.
 - Settings panel: Record Tracks events for option changes, panel open and close, and links.
+- VideoPress: Turn on the VideoPress module instead of installing the VideoPress plugin when Jetpack is active and you start for free.
 
 ### Fixed
 - Fix the Site Accelerator and Newsletter descriptions, which showed Related Posts text.
