@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.15.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Stop the media library and dashboard switching from running scripts the page already loaded, which unstyled the media library and broke saving on WordPress.com Simple sites.
+
 ## [0.15.0] - 2026-11-23
 ### Added
 - Add a media library endpoint, so dashboards can load the media library when it is first opened instead of on every page load. [#55120]
@@ -493,6 +500,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixing menu visibility issues.
 
+[0.15.1-alpha]: https://github.com/Automattic/jetpack-admin-ui/compare/0.15.0...0.15.1-alpha
 [0.15.0]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.16...0.15.0
 [0.14.16]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.15...0.14.16
 [0.14.15]: https://github.com/Automattic/jetpack-admin-ui/compare/0.14.14...0.14.15

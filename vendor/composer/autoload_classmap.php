@@ -26,6 +26,7 @@ return array(
     'Automattic\\Jetpack\\Admin_UI\\Admin_Menu' => $baseDir . '/jetpack_vendor/automattic/jetpack-admin-ui/src/class-admin-menu.php',
     'Automattic\\Jetpack\\Admin_UI\\Admin_Shell' => $baseDir . '/jetpack_vendor/automattic/jetpack-admin-ui/src/class-admin-shell.php',
     'Automattic\\Jetpack\\Admin_UI\\Media_Library' => $baseDir . '/jetpack_vendor/automattic/jetpack-admin-ui/src/class-media-library.php',
+    'Automattic\\Jetpack\\Admin_UI\\Page_Handles' => $baseDir . '/jetpack_vendor/automattic/jetpack-admin-ui/src/class-page-handles.php',
     'Automattic\\Jetpack\\Agents_Manager\\Agents_Manager' => $baseDir . '/jetpack_vendor/automattic/jetpack-agents-manager/src/class-agents-manager.php',
     'Automattic\\Jetpack\\Agents_Manager\\Open_State_Store' => $baseDir . '/jetpack_vendor/automattic/jetpack-agents-manager/src/class-open-state-store.php',
     'Automattic\\Jetpack\\Agents_Manager\\Sidebar_Open_Preservation' => $baseDir . '/jetpack_vendor/automattic/jetpack-agents-manager/src/class-sidebar-open-preservation.php',
