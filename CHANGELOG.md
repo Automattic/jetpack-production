@@ -63,6 +63,7 @@ This is an alpha version! The changes listed here are not final.
 - Markdown block: Fit tables and code blocks to the width of a subscription email, so they no longer make it scroll sideways. Tables now span the full width with equal columns.
 - Memberships: Avoid an extra database query on capability checks for comments, users and terms.
 - My Jetpack: Fix the Learn more, Manage and Connect buttons on recommendation cards, which did nothing.
+- My Jetpack: Show the same threat count on the Protect card as the Protect page, one per vulnerable plugin or theme.
 - Newsletter: Show subscriber-only posts to readers already logged in to WordPress.com on sites with a custom domain, without a click.
 - Newsletter: Show the automatically added Subscribe and Subscriber Login blocks in the Site Editor on WordPress.com sites with plugins.
 - Premium Analytics: Draw all 24 hours when today's bar is opened from the Traffic chart, as classic Stats did.

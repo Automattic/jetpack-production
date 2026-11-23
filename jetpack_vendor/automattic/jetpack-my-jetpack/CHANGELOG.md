@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Fix the Site Accelerator and Newsletter descriptions, which showed Related Posts text.
 - Overview: Call the AI row Jetpack AI, as Features and the admin menu do.
+- Protect card: Show the same threat count as the Protect page, one per vulnerable plugin or theme.
 - Recommendations: Fix the Learn more, Manage and Connect buttons on recommendation cards, which did nothing.
 - Site Accelerator: Fix the product status and activation, which pointed to a module that does not exist.
 
