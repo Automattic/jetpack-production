@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.9.2-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.9.2] - 2026-11-23
 ### Fixed
-- Keep the block editor working for commenters on older browsers, such as Chrome 109 on Windows 7.
-- Skip block pruning on a site that does not use Jetpack Comments, including after a process switches sites.
+- Keep the block editor working for commenters on older browsers, such as Chrome 109 on Windows 7. [#55004]
+- Skip block pruning on a site that does not use Jetpack Comments, including after a process switches sites. [#55158]
 
 ## [0.9.1] - 2026-11-16
 ### Changed
@@ -158,7 +155,7 @@ This is an alpha version! The changes listed here are not final.
 - Add an on-site comment form with a textarea, guest name and email fields, and reply threading when the `jetpack_comments_new_hotness` filter returns true. [#51466]
 - Initial version. [#51210]
 
-[0.9.2-alpha]: https://github.com/Automattic/jetpack-comments/compare/v0.9.1...v0.9.2-alpha
+[0.9.2]: https://github.com/Automattic/jetpack-comments/compare/v0.9.1...v0.9.2
 [0.9.1]: https://github.com/Automattic/jetpack-comments/compare/v0.9.0...v0.9.1
 [0.9.0]: https://github.com/Automattic/jetpack-comments/compare/v0.8.2...v0.9.0
 [0.8.2]: https://github.com/Automattic/jetpack-comments/compare/v0.8.1...v0.8.2

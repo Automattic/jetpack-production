@@ -464,7 +464,7 @@ class Llms_Txt {
 		 * Filters how many items llms.txt lists for a post type. Items the owner always
 		 * includes are listed even past it.
 		 *
-		 * @since 0.13.0-alpha
+		 * @since 0.13.0
 		 *
 		 * @param int    $limit     Max items to list. Default 50.
 		 * @param string $post_type Post type slug.

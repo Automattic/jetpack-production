@@ -5,13 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.15.14-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.15.14] - 2026-11-23
 ### Fixed
-- Address various PHP deprecation warnings.
-- Custom Content Types: Show the description and Learn More link in Settings > Writing.
+- Address various PHP deprecation warnings. [#55218]
+- Custom Content Types: Show the description and Learn More link in Settings > Writing. [#54831]
 
 ## [0.15.13] - 2026-11-16
 ### Changed
@@ -636,7 +633,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Add wordpress folder on gitignore. [#37177]
 
-[0.15.14-alpha]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.15.13...v0.15.14-alpha
+[0.15.14]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.15.13...v0.15.14
 [0.15.13]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.15.12...v0.15.13
 [0.15.12]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.15.11...v0.15.12
 [0.15.11]: https://github.com/Automattic/jetpack-classic-theme-helper/compare/v0.15.10...v0.15.11

@@ -5,20 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [8.4.4-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [8.4.4] - 2026-11-23
 ### Changed
-- Admin shell: Record the page view again when the shell shows the Search page again.
-- Dashboard: Load settings and stats alongside the plan request for sites with a Search plan, and skip the pricing request they never see.
-- Reduce database queries when loading Instant Search on sites without a persistent object cache.
-- Update dependencies.
+- Admin shell: Record the page view again when the shell shows the Search page again. [#55079]
+- Dashboard: Load settings and stats alongside the plan request for sites with a Search plan, and skip the pricing request they never see. [#55194]
+- Reduce database queries when loading Instant Search on sites without a persistent object cache. [#55053]
+- Update dependencies. [#55058]
 
 ### Fixed
-- Dashboard: Hide the "Use license key" link where My Jetpack's add-license screen is turned off, such as in Offline Mode.
-- Dashboard: Stop creating the purchase token when the admin shell readies the page on a menu hover.
-- Load the Search block styles only on pages that show the blocks, on sites that turn off on-demand block assets.
+- Dashboard: Hide the "Use license key" link where My Jetpack's add-license screen is turned off, such as in Offline Mode. [#55240]
+- Dashboard: Stop creating the purchase token when the admin shell readies the page on a menu hover. [#55128]
+- Load the Search block styles only on pages that show the blocks, on sites that turn off on-demand block assets. [#54912]
 
 ## [8.4.3] - 2026-11-16
 ### Added
@@ -2015,7 +2012,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update PHPUnit configs to include just what needs coverage rather than include everything then try to exclude stuff that doesn't.
 
-[8.4.4-alpha]: https://github.com/Automattic/jetpack-search/compare/v8.4.3...v8.4.4-alpha
+[8.4.4]: https://github.com/Automattic/jetpack-search/compare/v8.4.3...v8.4.4
 [8.4.3]: https://github.com/Automattic/jetpack-search/compare/v8.4.2...v8.4.3
 [8.4.2]: https://github.com/Automattic/jetpack-search/compare/v8.4.1...v8.4.2
 [8.4.1]: https://github.com/Automattic/jetpack-search/compare/v8.4.0...v8.4.1

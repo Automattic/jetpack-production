@@ -12,7 +12,7 @@ namespace Automattic\Jetpack\WooCommerceStats\Report_Execution;
  *
  * @internal
  *
- * @since 0.5.0-alpha
+ * @since 0.5.0
  */
 class Core_Revenue_Stats_Handler extends Core_Report_Handler {
 

@@ -5,21 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.90.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.90.0] - 2026-11-23
 ### Added
-- Social: Add abilities to list connections, share a published post and delete a connection.
+- Social: Add abilities to list connections, share a published post and delete a connection. [#54547]
 
 ### Changed
-- Abilities: Mark abilities as public with the `meta.public` flag.
-- Abilities: Register the Jetpack Social abilities by default when sharing is on, and leave their output shape and the other abilities out of their descriptions.
-- Admin shell: Let Social join the shell on WordPress.com Simple sites too.
-- Admin shell: Record one tab view, not two, when the shell reopens Social at another tab.
-- Admin shell: Record the tab view again when the shell shows the Social page again.
-- Dashboard: Load the media library when the default image picker opens it, instead of on every page load.
-- Update dependencies.
+- Abilities: Mark abilities as public with the `meta.public` flag. [#55104]
+- Abilities: Register the Jetpack Social abilities by default when sharing is on, and leave their output shape and the other abilities out of their descriptions. [#53563]
+- Admin shell: Let Social join the shell on WordPress.com Simple sites too. [#55084]
+- Admin shell: Record one tab view, not two, when the shell reopens Social at another tab. [#55089]
+- Admin shell: Record the tab view again when the shell shows the Social page again. [#55078]
+- Dashboard: Load the media library when the default image picker opens it, instead of on every page load. [#55123]
+- Update dependencies. [#55058]
 
 ## [0.89.0] - 2026-11-16
 ### Added
@@ -1773,7 +1770,7 @@ This is an alpha version! The changes listed here are not final.
 - Updated package dependencies.
 - Update package.json metadata.
 
-[0.90.0-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.89.0...v0.90.0-alpha
+[0.90.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.89.0...v0.90.0
 [0.89.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.10...v0.89.0
 [0.88.10]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.9...v0.88.10
 [0.88.9]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.8...v0.88.9

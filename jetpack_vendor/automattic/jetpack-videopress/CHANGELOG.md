@@ -5,25 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.63.1-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.63.1] - 2026-11-23
 ### Changed
-- Admin shell: Record the page view again when the shell shows the VideoPress page again.
-- Dashboard: Load the media library when a thumbnail upload opens it, instead of on every page load.
-- Dashboard: Show portrait videos in a tall player on the video details page instead of a small letterboxed one.
-- Dashboard: Skip the library count requests the Library page can answer without them.
-- Dashboard: Tell free-plan users on the Overview tab that they have used their one video, not that one upload is allowed.
-- Update dependencies.
+- Admin shell: Record the page view again when the shell shows the VideoPress page again. [#55078]
+- Dashboard: Load the media library when a thumbnail upload opens it, instead of on every page load. [#55121]
+- Dashboard: Show portrait videos in a tall player on the video details page instead of a small letterboxed one. [#55298]
+- Dashboard: Skip the library count requests the Library page can answer without them. [#55210]
+- Dashboard: Tell free-plan users on the Overview tab that they have used their one video, not that one upload is allowed. [#55247]
+- Update dependencies. [#55058]
 
 ### Fixed
-- Admin shell: Don't ask a second time about unsaved edits when the shell already asked before loading the page.
-- Channel: Only match and quote private videos' transcripts in playlist searches for site members.
-- Dashboard: Match the "Record a video" button height to the upload buttons beside it.
-- Media Library: Delete selected VideoPress videos a few at a time, with progress and per-item errors, and stop reporting a video as deleted when WordPress.com did not confirm it.
-- Private videos: Apply the post's password check to video access.
-- Video block: Validate preview-on-hover timing values so incomplete block attributes no longer emit PHP warnings or invalid player data.
+- Admin shell: Don't ask a second time about unsaved edits when the shell already asked before loading the page. [#55111]
+- Channel: Only match and quote private videos' transcripts in playlist searches for site members. [#55157]
+- Dashboard: Match the "Record a video" button height to the upload buttons beside it. [#55081]
+- Media Library: Delete selected VideoPress videos a few at a time, with progress and per-item errors, and stop reporting a video as deleted when WordPress.com did not confirm it. [#55197]
+- Private videos: Apply the post's password check to video access. [#55287]
+- Video block: Validate preview-on-hover timing values so incomplete block attributes no longer emit PHP warnings or invalid player data. [#55198]
 
 ## [0.63.0] - 2026-11-16
 ### Added
@@ -2456,7 +2453,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.63.1-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.63.0...v0.63.1-alpha
+[0.63.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.63.0...v0.63.1
 [0.63.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.62.0...v0.63.0
 [0.62.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.61.0...v0.62.0
 [0.61.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.60.1...v0.61.0
