@@ -765,7 +765,7 @@ __( "Useful links", "jetpack-my-jetpack" );
 __( "All Jetpack modules", "jetpack-my-jetpack" );
 __( "Debug information", "jetpack-my-jetpack" );
 __( "What’s new in Jetpack?", "jetpack-my-jetpack" );
-__( "Read more", "jetpack-my-jetpack" );
+__( "See all Jetpack news", "jetpack-my-jetpack" );
 __( "No change since the previous period.", "jetpack-my-jetpack" );
 __( "An increase of %s since the previous period.", "jetpack-my-jetpack" );
 __( "A decrease of %s since the previous period.", "jetpack-my-jetpack" );

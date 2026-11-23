@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Label the Overview v1 Protect upsell on free plans "Add malware scanning", shown only while the Overview v1 feature flag is on.
+- Overview: Show What's new thumbnails uncropped and hand-written excerpts in full, and make each post row clickable.
 
 ## [6.19.0] - 2026-11-23
 ### Added
