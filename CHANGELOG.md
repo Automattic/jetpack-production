@@ -47,6 +47,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Make the MCP Read and Write "Enable all" switch also turn site-published abilities on or off.
 - AI: Show a site's own abilities on the MCP Read and Write views on WordPress.com sites with plugins, as WordPress.com does.
 - Blogging Prompts: Fix prompts starting a day off when requesting a specific year with a month-and-day start date.
+- Carousel: Hide decorative overlay icons from screen readers so accessibility checkers no longer report them as missing alternative text.
 - Custom Content Types: Show the description and Learn More link in Settings > Writing.
 - Don't install a plugin for a user who can't install plugins, such as when plugin installs are turned off.
 - Forms: Link required checkbox, radio, rating and image choice groups to their error message for screen readers.
