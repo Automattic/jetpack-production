@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - Forms: Link required checkbox, radio, rating and image choice groups to their error message for screen readers.
 - Forms: Match the whole email address when exporting or erasing personal data, so addresses that only share a prefix are no longer included.
 - Forms: Open the Responses tab without a delay when switching from the Forms tab, and the other way around.
+- Forms: Return focus to the phone field's country selector when its dropdown is closed with Escape.
 - Infinite Scroll: Keep duotone filters on images in posts loaded as you scroll.
 - Jetpack AI: Hide SEO suggestions and settings when metadata generation is unavailable.
 - Jetpack AI: Keep the "Improve with AI" tools for people who cannot turn on the WordPress Agent, instead of linking them to a page they cannot open.

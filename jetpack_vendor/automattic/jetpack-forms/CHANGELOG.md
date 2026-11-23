@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Stop saving the classic forms state when the admin shell readies the page on a menu hover.
 - Link required checkbox, radio, rating and image choice groups to their error message for screen readers.
 - Match the whole email address when exporting or erasing personal data, so addresses that only share a prefix are no longer included.
+- Phone field: Return focus to the country selector when its dropdown is closed with Escape.
 
 ## [8.4.0] - 2026-11-16
 ### Added
