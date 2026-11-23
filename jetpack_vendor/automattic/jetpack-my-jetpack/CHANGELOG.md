@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Added
+- Features: List Monetize once its dashboard is available.
+
 ### Changed
 - Features: Open feature settings in a panel from Configure, and show the notices from Jetpack › Settings on Overview.
 - Label the Overview v1 Protect upsell on free plans "Add malware scanning", shown only while the Overview v1 feature flag is on.
