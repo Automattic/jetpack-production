@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Label the Overview v1 Protect upsell on free plans "Add malware scanning", shown only while the Overview v1 feature flag is on.
 - Overview: Show What's new thumbnails uncropped and hand-written excerpts in full, and make each post row clickable.
 
+### Fixed
+- Features: Recognize WordPress.com plans that include Podcast and Forms file uploads.
+
 ## [6.19.0] - 2026-11-23
 ### Added
 - Admin shell: Show the turned-off feature card in place of a page whose feature is off, including for Jetpack AI, Social and Search. [#55003]

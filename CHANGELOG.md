@@ -2,6 +2,13 @@
 
 ### This is a list detailing changes for all Jetpack releases.
 
+## 16.5-a.6 - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Bug fixes
+- My Jetpack: Stop offering an upgrade for Podcast and Forms file uploads on WordPress.com plans that already include them.
+
 ## 16.5-a.5 - 2026-11-23
 ### Major Enhancements
 - Stats: Replace the classic Stats page with the new Stats. The Stats menu and old Stats links now open the new Stats. [#55286]
