@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Safe Mode: Add a feature flag for the shared Safe Mode screen, and include Safe Mode state in the connection initial state.
 - Safe Mode: Let a fresh connection from Safe Mode report where it started, for WordPress.com's connection tracking.
+- Safe Mode: Show the new Safe Mode screen on the Connectors card behind a feature flag.
 
 ### Changed
 - Abilities: Mark abilities as public with the `meta.public` flag.
