@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [6.19.1-alpha] - unreleased
+## [6.20.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Features: Open feature settings in a panel from Configure, and show the notices from Jetpack › Settings on Overview.
 - Label the Overview v1 Protect upsell on free plans "Add malware scanning", shown only while the Overview v1 feature flag is on.
 - Overview: Show What's new thumbnails uncropped and hand-written excerpts in full, and make each post row clickable.
 
@@ -3323,7 +3324,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created package
 
-[6.19.1-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.19.0...6.19.1-alpha
+[6.20.0-alpha]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.19.0...6.20.0-alpha
 [6.19.0]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.18.2...6.19.0
 [6.18.2]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.18.1...6.18.2
 [6.18.1]: https://github.com/Automattic/jetpack-my-jetpack/compare/6.18.0...6.18.1

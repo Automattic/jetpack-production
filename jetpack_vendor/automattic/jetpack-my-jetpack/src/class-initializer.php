@@ -49,7 +49,7 @@ class Initializer {
 	 *
 	 * @var string
 	 */
-	const PACKAGE_VERSION = '6.19.1-alpha';
+	const PACKAGE_VERSION = '6.20.0-alpha';
 
 	/**
 	 * Feature flag that swaps the single-screen onboarding takeover for the setup wizard.
@@ -1585,7 +1585,7 @@ class Initializer {
 		Feature_Flags::register(
 			self::SETTINGS_CONSOLIDATION_FLAG,
 			array(
-				'default'     => false,
+				'default'     => true,
 				'description' => 'Move settings out of the Settings screen to their new homes: open small features\' settings in a panel from Configure in Features, remove or replace their Settings cards with pointers, and show settings in their new places.',
 				'owner'       => 'my-jetpack',
 			)

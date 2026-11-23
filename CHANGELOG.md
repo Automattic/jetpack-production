@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Enhancements
+- Settings: Move settings from Jetpack › Settings to My Jetpack › Features and to each feature's own page, and hide Jetpack › Settings once nothing is left on it.
+
 ### Bug fixes
 - My Jetpack: Stop offering an upgrade for Podcast and Forms file uploads on WordPress.com plans that already include them.
 
