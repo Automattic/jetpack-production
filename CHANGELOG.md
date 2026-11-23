@@ -48,6 +48,7 @@ This is an alpha version! The changes listed here are not final.
 - AI: Show a site's own abilities on the MCP Read and Write views on WordPress.com sites with plugins, as WordPress.com does.
 - Blogging Prompts: Fix prompts starting a day off when requesting a specific year with a month-and-day start date.
 - Custom Content Types: Show the description and Learn More link in Settings > Writing.
+- Don't install a plugin for a user who can't install plugins, such as when plugin installs are turned off.
 - Forms: Link required checkbox, radio, rating and image choice groups to their error message for screen readers.
 - Forms: Match the whole email address when exporting or erasing personal data, so addresses that only share a prefix are no longer included.
 - Forms: Open the Responses tab without a delay when switching from the Forms tab, and the other way around.
