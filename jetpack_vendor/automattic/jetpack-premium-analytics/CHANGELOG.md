@@ -27,6 +27,9 @@ This is an alpha version! The changes listed here are not final.
 - Stats: Retire the classic Stats page by default, so Stats and old Stats links open the new Stats on every site.
 - Stats options menu: Rename the page options menu to Stats options, and show it on the report, connect and upgrade pages so Settings can be reached from every page.
 
+### Removed
+- Settings: Remove the WordPress.com Reader "Show post views for this site" setting, which no longer has any effect.
+
 ### Fixed
 - Charts: Decide a percentage axis from the series the legend leaves visible, so hiding a rate above 100% returns the others to a 0% to 100% axis.
 - Date control: Step from a chart bar clicked today by the bar's own unit, so the arrows land on the whole of yesterday, last week or last month.

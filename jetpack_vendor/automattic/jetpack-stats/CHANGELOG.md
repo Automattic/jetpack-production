@@ -25,6 +25,9 @@ This is an alpha version! The changes listed here are not final.
 - Stats abilities: Describe the site overview without calling it a zero-argument call, since MCP servers may add a site argument.
 - Stats abilities: drop the posting streak from the site overview; get-insights reports it.
 
+### Deprecated
+- Settings: Deprecate `Settings::update_reader_views()`, as the WordPress.com Reader no longer shows post views.
+
 ### Fixed
 - Abilities: Explain that file download stats are not available on Jetpack-connected sites, instead of failing with a generic error.
 - Abilities: validate an unexpected input key on a no-argument ability as an error instead of a PHP error.

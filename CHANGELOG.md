@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Reuse the site's purchases already loaded for other Jetpack pages instead of asking WordPress.com for them again.
 - Social: Load the media library only when choosing a default image, so the dashboard loads less on each visit.
 - Stats: Load the Stats page faster.
+- Stats: Remove the WordPress.com Reader "Show post views for this site" setting, which no longer has any effect.
 - VideoPress: Load the Library page with fewer requests.
 - VideoPress: Load the media library only when uploading a video thumbnail, so the dashboard loads less on each visit.
 - VideoPress: Show portrait videos in a tall player on the video details page instead of a small letterboxed one.

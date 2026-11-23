@@ -577,8 +577,6 @@ __( "Expand to update settings for how visits are counted and manage who can vie
 __( "Include a small chart in your admin bar with a 48-hour traffic snapshot", "jetpack" );
 __( "Count logged in page views from", "jetpack" );
 __( "Allow Jetpack Stats to be viewed by", "jetpack" );
-__( "WordPress.com Reader", "jetpack" );
-__( "Show post views for this site.", "jetpack" );
 _x( "Copy", "verb", "jetpack" );
 __( "Copied!", "jetpack" );
 __( "Highlight and copy the following text to your clipboard:", "jetpack" );
