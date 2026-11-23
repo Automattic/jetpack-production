@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Date control: Step from a chart bar clicked today by the bar's own unit, so the arrows land on the whole of yesterday, last week or last month.
 - Draw the legend labels and values in breakdown charts such as Devices, and the links in a video's Used on posts & pages card, at the same 14px size as the rest of the widget text.
 - Keep the days, the Locations tab and the video an old Stats link names when it opens the dashboard.
+- Number formatting: Keep the decimal in short figures shown in lakh, crore or 万, so 9.5 lakh no longer shows as 9 lakh.
 - Open the matching report for old Stats links to a summary page, such as referrers or search terms, and today by the hour for the old hourly Traffic link, instead of the Traffic tab or the dashboard root.
 - Stop the customize buttons covering the breadcrumb trail on a narrow screen.
 - Top pages: Mark the posts and pages published in the selected period, as classic Stats did.
