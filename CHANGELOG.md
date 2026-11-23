@@ -61,6 +61,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Draw the legend labels and values in breakdown charts such as Devices, and the links in a video's Used on posts & pages card, at the same 14px size as the rest of the widget text.
 - Premium Analytics: Fix the date arrows landing on a partial day, week or month after clicking today's chart bar.
 - Premium Analytics: Keep the days, the Locations tab and the video an old Stats link names when it opens the dashboard.
+- Premium Analytics: Mark the posts and pages published in the selected period in Top pages, as classic Stats did.
 - Premium Analytics: Open the matching report for old Stats links to a summary page, such as referrers or search terms, and today by the hour for the old hourly Traffic link, instead of the Traffic tab or the dashboard root.
 - Premium Analytics: Stop the customize buttons covering the breadcrumb trail on a narrow screen.
 - Reader: Explain failed repost embeds and add source links when the editor allows replacement.

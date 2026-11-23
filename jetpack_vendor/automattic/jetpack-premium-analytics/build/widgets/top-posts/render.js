@@ -7,6 +7,7 @@
 // loaders are pinned to the .min.js sibling.
 
 __( "View %s archive pages", "jetpack-premium-analytics-pkg" );
+__( "Published in this period", "jetpack-premium-analytics-pkg" );
 __( "Untitled", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load posts and pages. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );

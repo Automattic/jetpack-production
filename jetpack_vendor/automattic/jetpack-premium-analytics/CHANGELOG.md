@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Keep the days, the Locations tab and the video an old Stats link names when it opens the dashboard.
 - Open the matching report for old Stats links to a summary page, such as referrers or search terms, and today by the hour for the old hourly Traffic link, instead of the Traffic tab or the dashboard root.
 - Stop the customize buttons covering the breadcrumb trail on a narrow screen.
+- Top pages: Mark the posts and pages published in the selected period, as classic Stats did.
 - Traffic chart: Open today's bar over the whole day, so its hourly chart keeps 24 bars all day.
 
 ## [0.18.0] - 2026-11-16
