@@ -6,6 +6,9 @@
 
 This is an alpha version! The changes listed here are not final.
 
+### Major Enhancements
+- Stats: Replace the classic Stats page with the new Stats. The Stats menu and old Stats links now open the new Stats.
+
 ### Enhancements
 - Abilities: Make Jetpack's abilities available to AI agents by default, including Stats, Backup, Newsletter, Monitor, Social, modules and connection status. Return false from the jetpack_wp_abilities_enabled filter to turn them off.
 - Backup: Load the Backup page faster on return visits by caching the storage figures and plan check for five minutes.

@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Let another plugin load the dashboard API and the shared script modules without booting Stats v2.
 - Dashboard: Show a What's new announcement only on the pages it is published for, with a channel per page.
 - Single-report pages: Offer a post type's page only where the type is registered in REST, and give the page report its own section and cards.
+- Stats: Retire the classic Stats page by default, so Stats and old Stats links open the new Stats on every site.
 - Stats options menu: Rename the page options menu to Stats options, and show it on the report, connect and upgrade pages so Settings can be reached from every page.
 
 ### Fixed
