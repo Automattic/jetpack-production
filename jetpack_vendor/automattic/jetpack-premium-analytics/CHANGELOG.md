@@ -36,6 +36,7 @@ This is an alpha version! The changes listed here are not final.
 - Stop the customize buttons covering the breadcrumb trail on a narrow screen.
 - Top pages: Mark the posts and pages published in the selected period, as classic Stats did.
 - Traffic chart: Open today's bar over the whole day, so its hourly chart keeps 24 bars all day.
+- Upgrade page: Price the Stats tiers for the visitor's location instead of the site's server when the user has not connected a WordPress.com account.
 
 ## [0.18.0] - 2026-11-16
 ### Added
