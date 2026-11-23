@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.26.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Abilities: Chart one email's opens and clicks over time in `get-email-detail`, and add impressions, hours watched and retention to `get-video-stats`.
+
 ## [0.25.0] - 2026-11-23
 ### Added
 - Abilities: Add a definitions block to every Stats reader response, saying what each metric counts and which time window it covers. [#54488]
@@ -454,6 +461,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixing static method which was called without self reference. [#26640]
 
+[0.26.0-alpha]: https://github.com/Automattic/jetpack-stats/compare/v0.25.0...v0.26.0-alpha
 [0.25.0]: https://github.com/Automattic/jetpack-stats/compare/v0.24.2...v0.25.0
 [0.24.2]: https://github.com/Automattic/jetpack-stats/compare/v0.24.1...v0.24.2
 [0.24.1]: https://github.com/Automattic/jetpack-stats/compare/v0.24.0...v0.24.1
