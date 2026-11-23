@@ -5,23 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.3.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.3.0] - 2026-11-23
 ### Added
-- Add and edit coupons in Payments.
-- Add the Ads tab, with ad eligibility, earnings and payouts.
-- List and delete coupons in Payments.
-- Paid subscribers: List paid subscribers, view their details, and cancel their payments.
-- Payments: Add and edit payment plans, including newsletter tiers.
-- Show the Ads settings on WordPress.com Simple sites, with their sidebar ad and an option to show ads only to logged-out visitors, and show there whether ads are on.
+- Add and edit coupons in Payments. [#55102]
+- Add the Ads tab, with ad eligibility, earnings and payouts. [#55105]
+- List and delete coupons in Payments. [#55001]
+- Paid subscribers: List paid subscribers, view their details, and cancel their payments. [#55155]
+- Payments: Add and edit payment plans, including newsletter tiers. [#54996]
+- Show the Ads settings on WordPress.com Simple sites, with their sidebar ad and an option to show ads only to logged-out visitors, and show there whether ads are on. [#55270]
 
 ### Changed
-- Name the right plans on WordPress.com sites, record usage on Simple, and skip a plan check Simple cannot answer.
+- Name the right plans on WordPress.com sites, record usage on Simple, and skip a plan check Simple cannot answer. [#55257]
 
 ### Fixed
-- Payments: Warn when the connected Stripe account can't accept charges.
+- Payments: Warn when the connected Stripe account can't accept charges. [#54998]
 
 ## [0.2.0] - 2026-11-16
 ### Added
@@ -38,5 +35,5 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Initial version. [#54433]
 
-[0.3.0-alpha]: https://github.com/Automattic/jetpack-monetize/compare/v0.2.0...v0.3.0-alpha
+[0.3.0]: https://github.com/Automattic/jetpack-monetize/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/Automattic/jetpack-monetize/compare/v0.1.0...v0.2.0

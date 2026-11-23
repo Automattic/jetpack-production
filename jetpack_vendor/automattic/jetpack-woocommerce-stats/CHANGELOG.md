@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.5.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.5.0] - 2026-11-23
 ### Added
-- Add an Items sold widget to the WooCommerce analytics dashboard.
-- Add Storybook stories for the Items sold, Top performing products and Sessions by device widgets, and guard the widget import boundary with ESLint.
-- Reports: Add a site setting and an experimental filter listing the providers that serve reports requested with `provider=auto`.
-- Reports: Serve the orders by date report from the store's own WooCommerce Analytics data when a request asks for the local provider.
+- Add an Items sold widget to the WooCommerce analytics dashboard. [#55140]
+- Add Storybook stories for the Items sold, Top performing products and Sessions by device widgets, and guard the widget import boundary with ESLint. [#55233]
+- Reports: Add a site setting and an experimental filter listing the providers that serve reports requested with `provider=auto`. [#55080]
+- Reports: Serve the orders by date report from the store's own WooCommerce Analytics data when a request asks for the local provider. [#54792]
 
 ## [0.4.0] - 2026-11-16
 ### Added
@@ -113,7 +110,7 @@ This is an alpha version! The changes listed here are not final.
 
 - Initial version.
 
-[0.5.0-alpha]: https://github.com/Automattic/jetpack-woocommerce-stats/compare/v0.4.0...v0.5.0-alpha
+[0.5.0]: https://github.com/Automattic/jetpack-woocommerce-stats/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/Automattic/jetpack-woocommerce-stats/compare/v0.3.3...v0.4.0
 [0.3.3]: https://github.com/Automattic/jetpack-woocommerce-stats/compare/v0.3.2...v0.3.3
 [0.3.2]: https://github.com/Automattic/jetpack-woocommerce-stats/compare/v0.3.1...v0.3.2

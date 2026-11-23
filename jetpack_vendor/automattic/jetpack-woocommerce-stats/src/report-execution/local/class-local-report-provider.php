@@ -15,7 +15,7 @@ use WP_Error;
  *
  * @internal
  *
- * @since 0.5.0-alpha
+ * @since 0.5.0
  */
 class Local_Report_Provider implements Report_Provider {
 

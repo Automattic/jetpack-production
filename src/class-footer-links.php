@@ -32,7 +32,7 @@ class Footer_Links {
 	/**
 	 * Whether the Jetpack admin header and footers link to My Jetpack: its page is available and the host shows it.
 	 *
-	 * @since 16.5-a.4
+	 * @since 16.5
 	 *
 	 * @return bool
 	 */

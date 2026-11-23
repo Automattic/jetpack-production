@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Paid subscribers routes.
  *
- * @since 0.3.0-alpha
+ * @since 0.3.0
  */
 class Subscribers implements Dashboard_Section {
 

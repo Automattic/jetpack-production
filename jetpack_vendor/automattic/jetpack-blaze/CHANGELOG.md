@@ -5,15 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.30.0-alpha] - unreleased
-
-This is an alpha version! The changes listed here are not final.
-
+## [0.30.0] - 2026-11-23
 ### Changed
-- Update dependencies.
+- Update dependencies. [#55058]
 
 ### Removed
-- Remove the temporary "Blaze Ads has moved" notice at the old Tools > Advertising location and the jetpack_blaze_show_migration_notice filter.
+- Remove the temporary "Blaze Ads has moved" notice at the old Tools > Advertising location and the jetpack_blaze_show_migration_notice filter. [#53784]
 
 ## [0.29.16] - 2026-11-16
 ### Changed
@@ -984,7 +981,7 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Updated package dependencies. [#27906]
 
-[0.30.0-alpha]: https://github.com/automattic/jetpack-blaze/compare/v0.29.16...v0.30.0-alpha
+[0.30.0]: https://github.com/automattic/jetpack-blaze/compare/v0.29.16...v0.30.0
 [0.29.16]: https://github.com/automattic/jetpack-blaze/compare/v0.29.15...v0.29.16
 [0.29.15]: https://github.com/automattic/jetpack-blaze/compare/v0.29.14...v0.29.15
 [0.29.14]: https://github.com/automattic/jetpack-blaze/compare/v0.29.13...v0.29.14
