@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a filter that lets the host turn off WooCommerce Analytics store tracking.
 
+### Changed
+- Drop the "N more" count below the Latest subscribers list.
+
 ## [0.19.0] - 2026-11-23
 ### Added
 - Add a feature flag for the AI tab. [#55284]
