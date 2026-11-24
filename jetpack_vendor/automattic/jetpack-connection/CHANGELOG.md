@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Safe Mode: Show the new Safe Mode screen in the admin notice when the connection-idc-screen feature flag is on.
 
+### Changed
+- Safe Mode: Mark a failed registration during a fresh connection as having left the site disconnected.
+
 ## [9.18.3] - 2026-11-23
 ### Added
 - Safe Mode: Add a feature flag for the shared Safe Mode screen, and include Safe Mode state in the connection initial state. [#55014]
