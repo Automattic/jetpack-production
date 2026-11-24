@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.90.1-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [0.90.0] - 2026-11-23
 ### Added
 - Social: Add abilities to list connections, share a published post and delete a connection. [#54547]
@@ -1770,6 +1774,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated package dependencies.
 - Update package.json metadata.
 
+[0.90.1-alpha]: https://github.com/Automattic/jetpack-publicize/compare/v0.90.0...v0.90.1-alpha
 [0.90.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.89.0...v0.90.0
 [0.89.0]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.10...v0.89.0
 [0.88.10]: https://github.com/Automattic/jetpack-publicize/compare/v0.88.9...v0.88.10

@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.8-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
 ## [0.7.7] - 2026-11-23
 ### Changed
 - Declare the Activity Log module on the sidebar item, so the admin shell can tell when it is switched off. [#55003]
@@ -246,6 +250,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial release.
 
+[0.7.8-alpha]: https://github.com/Automattic/jetpack-activity-log/compare/v0.7.7...v0.7.8-alpha
 [0.7.7]: https://github.com/Automattic/jetpack-activity-log/compare/v0.7.6...v0.7.7
 [0.7.6]: https://github.com/Automattic/jetpack-activity-log/compare/v0.7.5...v0.7.6
 [0.7.5]: https://github.com/Automattic/jetpack-activity-log/compare/v0.7.4...v0.7.5
