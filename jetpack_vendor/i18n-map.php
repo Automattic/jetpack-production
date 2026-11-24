@@ -130,7 +130,7 @@ return array(
     ),
     'jetpack-monetize' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-monetize',
-      'ver' => '0.3.1-alpha1795532881',
+      'ver' => '0.3.1-alpha1795544703',
     ),
     'jetpack-monitor' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-monitor',
