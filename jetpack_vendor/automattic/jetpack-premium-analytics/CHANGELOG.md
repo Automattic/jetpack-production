@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.20.0-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Add a filter that lets the host turn off WooCommerce Analytics store tracking.
+
 ## [0.19.0] - 2026-11-23
 ### Added
 - Add a feature flag for the AI tab. [#55284]
@@ -841,6 +848,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - VideoPress: Add a video detail page with plays leaderboard, video highlights, and embed locations. [#50311] [#50536]
 - WordAds: Add widgets for ads served, average CPM and revenue over time, all-time earnings highlights, and earnings, sponsored content and adjustments history. [#50314] [#50490]
 
+[0.20.0-alpha]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.19.0...0.20.0-alpha
 [0.19.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.18.0...0.19.0
 [0.18.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.17.0...0.18.0
 [0.17.0]: https://github.com/Automattic/jetpack-premium-analytics/compare/0.16.0...0.17.0
