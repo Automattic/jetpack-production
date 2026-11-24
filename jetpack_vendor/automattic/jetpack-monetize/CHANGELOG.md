@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Confirm finished actions with a notice, let Simple sites join WordAds from Settings, and return to the same tab after connecting.
 
+### Fixed
+- Fix the Monetize page for WoA admins without a WordPress.com account, the Overview Ads card after switching ads, the PayPal path for owed earnings without a plan, the Stripe return notice, and a double save in the free tier dialog.
+
 ## [0.3.0] - 2026-11-23
 ### Added
 - Add and edit coupons in Payments. [#55102]
