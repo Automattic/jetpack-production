@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Features: List Monetize once its dashboard is available.
+- Overview: Show the change from the previous period under the Stats values.
 
 ### Changed
 - Features: Open feature settings in a panel from Configure, and show the notices from Jetpack › Settings on Overview.
