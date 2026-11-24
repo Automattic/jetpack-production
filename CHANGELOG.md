@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- My Jetpack: Remove the Features link from the footer, since the header already links to it.
 - Newsletter: Let WordPress.com sites that run a block theme edit their newsletter email design, and keep that access after a switch to a classic theme.
 - Premium Analytics: Add Items sold to the Store performance metrics.
 - Premium Analytics: Drop the "N more" count below the Latest subscribers list.
