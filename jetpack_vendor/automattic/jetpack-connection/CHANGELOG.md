@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [9.18.4-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Added
+- Safe Mode: Show the new Safe Mode screen in the admin notice when the connection-idc-screen feature flag is on.
+
 ## [9.18.3] - 2026-11-23
 ### Added
 - Safe Mode: Add a feature flag for the shared Safe Mode screen, and include Safe Mode state in the connection initial state. [#55014]
@@ -2272,6 +2279,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Separate the connection library into its own package.
 
+[9.18.4-alpha]: https://github.com/Automattic/jetpack-connection/compare/v9.18.3...v9.18.4-alpha
 [9.18.3]: https://github.com/Automattic/jetpack-connection/compare/v9.18.2...v9.18.3
 [9.18.2]: https://github.com/Automattic/jetpack-connection/compare/v9.18.1...v9.18.2
 [9.18.1]: https://github.com/Automattic/jetpack-connection/compare/v9.18.0...v9.18.1
