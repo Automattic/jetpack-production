@@ -68,7 +68,7 @@
 		"automattic/jetpack-sync": "^5.6.0",
 		"automattic/jetpack-videopress": "^0.63.1",
 		"automattic/jetpack-waf": "^0.32.1",
-		"automattic/jetpack-woocommerce-stats": "^0.5.0",
+		"automattic/jetpack-woocommerce-stats": "^0.6.0-alpha",
 		"automattic/jetpack-wp-abilities": "^0.3.0",
 		"automattic/jetpack-ads": "^0.1.10",
 		"automattic/jetpack-wp-build-polyfills": "^0.7.6",

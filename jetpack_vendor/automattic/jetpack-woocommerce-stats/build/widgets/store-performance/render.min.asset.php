@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array('react', 'react-jsx-runtime', 'wp-api-fetch', 'wp-date', 'wp-hooks', 'wp-i18n', 'wp-url'), 'module_dependencies' => array(array('id' => '@automattic/jetpack-premium-analytics-sdk', 'import' => 'static')), 'version' => '368c3b2556769af4eb08');
+<?php return array('dependencies' => array('react', 'react-jsx-runtime', 'wp-api-fetch', 'wp-date', 'wp-hooks', 'wp-i18n', 'wp-url'), 'module_dependencies' => array(array('id' => '@automattic/jetpack-premium-analytics-sdk', 'import' => 'static')), 'version' => 'abe692347bfe98257cbe');

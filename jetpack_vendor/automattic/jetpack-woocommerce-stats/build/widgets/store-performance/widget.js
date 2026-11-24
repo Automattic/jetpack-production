@@ -21,4 +21,7 @@ __( "No store sessions in this period.", "jetpack-woocommerce-stats-pkg" );
 __( "Customers", "jetpack-woocommerce-stats-pkg" );
 __( "Track the total number of customers (new and returning) who placed orders during the selected time period.", "jetpack-woocommerce-stats-pkg" );
 _n( "%s Customer", "%s Customers", 1, "jetpack-woocommerce-stats-pkg" );
+__( "Items sold", "jetpack-woocommerce-stats-pkg" );
+__( "Track how many items your store sells over time, to see which periods move the most stock.", "jetpack-woocommerce-stats-pkg" );
+_n( "%s Item", "%s Items", 1, "jetpack-woocommerce-stats-pkg" );
 __( "Metrics", "jetpack-woocommerce-stats-pkg" );

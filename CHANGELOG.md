@@ -7,6 +7,7 @@
 This is an alpha version! The changes listed here are not final.
 
 ### Enhancements
+- Premium Analytics: Add Items sold to the Store performance metrics.
 - Settings: Move settings from Jetpack › Settings to My Jetpack › Features and to each feature's own page, and hide Jetpack › Settings once nothing is left on it.
 
 ### Bug fixes
