@@ -11,7 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Confirm finished actions with a notice, let Simple sites join WordAds from Settings, and return to the same tab after connecting.
-- Polish the Monetize dashboard: clearer headings and card names, retry buttons for failed loads, rounded annual prices, decoded subscriber names, a payment plan shortcut after connecting Stripe, and turning ads on no longer waits on WordPress.com.
+- Polish the Monetize dashboard: clearer headings and card names, retry buttons for failed loads, rounded annual prices, decoded subscriber names, and turning ads on no longer waits on WordPress.com.
 
 ### Fixed
 - Fix the Monetize page for WoA admins without a WordPress.com account, the Overview Ads card after switching ads, the PayPal path for owed earnings without a plan, the Stripe return notice, and a double save in the free tier dialog.
