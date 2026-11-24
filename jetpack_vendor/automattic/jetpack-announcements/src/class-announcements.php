@@ -12,7 +12,7 @@ namespace Automattic\Jetpack\Announcements;
  */
 class Announcements {
 
-	const PACKAGE_VERSION = '0.1.0';
+	const PACKAGE_VERSION = '0.2.0-alpha';
 
 	/**
 	 * Id of the script module a host imports: the name of the js-package that holds its contract.
