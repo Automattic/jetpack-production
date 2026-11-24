@@ -18,6 +18,9 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Stop offering an upgrade for Podcast and Forms file uploads on WordPress.com plans that already include them.
 - Premium Analytics: Stop WooCommerce Analytics store tracking when the Jetpack WooCommerce Analytics module is turned off.
 
+### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
+- Handle various PHP deprecation notices.
+
 ## 16.5-a.5 - 2026-11-23
 ### Major Enhancements
 - Stats: Replace the classic Stats page with the new Stats. The Stats menu and old Stats links now open the new Stats. [#55286]

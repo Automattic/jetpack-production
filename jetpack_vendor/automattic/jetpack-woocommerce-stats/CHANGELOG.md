@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Store performance: Add Items sold as a metric.
 
+### Fixed
+- Handle various PHP deprecation notices.
+
 ## [0.5.0] - 2026-11-23
 ### Added
 - Add an Items sold widget to the WooCommerce analytics dashboard. [#55140]
