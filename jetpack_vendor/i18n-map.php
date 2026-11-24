@@ -14,7 +14,7 @@ return array(
     ),
     'jetpack-admin-ui' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-admin-ui',
-      'ver' => '0.15.1-alpha1795467404',
+      'ver' => '0.16.0-alpha1795483333',
     ),
     'jetpack-ads-pkg' => array(
       'path' => 'jetpack_vendor/automattic/jetpack-ads',
