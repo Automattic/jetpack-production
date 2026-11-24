@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Drop the "N more" count below the Latest subscribers list.
+- Top pages: Announce the published-in-period mark when its title link gets focus.
 
 ## [0.19.0] - 2026-11-23
 ### Added
