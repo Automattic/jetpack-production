@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.9-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Fixed
+- Feed: Make podcast apps pick up a new episode once its audio file is attached, instead of serving their cached feed.
+
 ## [2.2.8] - 2026-11-23
 ### Changed
 - Admin shell: Let Podcast join the shell on WordPress.com Simple sites too. [#55084]
@@ -347,6 +354,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dashboard: Replace the wp-build placeholder with page chrome and tab navigation. [#48559]
 - Dashboard: Slim down wp-build wiring to the Backup pattern. [#48600]
 
+[2.2.9-alpha]: https://github.com/Automattic/jetpack-podcast/compare/v2.2.8...v2.2.9-alpha
 [2.2.8]: https://github.com/Automattic/jetpack-podcast/compare/v2.2.7...v2.2.8
 [2.2.7]: https://github.com/Automattic/jetpack-podcast/compare/v2.2.6...v2.2.7
 [2.2.6]: https://github.com/Automattic/jetpack-podcast/compare/v2.2.5...v2.2.6
