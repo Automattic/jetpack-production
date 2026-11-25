@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Features: Recognize WordPress.com plans that include Podcast and Forms file uploads.
 - Show Social in the Jetpack menu, and stop offering upgrades on paid plans, on WordPress.com Simple sites.
+- Show the manual-install notice and disable the install buttons on product pricing pages when the site cannot install plugins.
 
 ## [6.19.0] - 2026-11-23
 ### Added
