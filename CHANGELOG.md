@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Stop offering an upgrade for Podcast and Forms file uploads on WordPress.com plans that already include them.
 - Premium Analytics: Stop WooCommerce Analytics store tracking when the Jetpack WooCommerce Analytics module is turned off.
 - Sitemaps: Keep News sitemaps within the publication window as cached articles age.
+- Subscribe block: Stop screen readers announcing the empty email field as invalid before the visitor submits.
 - Video block: Stop showing the premium block upgrade banner over videos that already play on free plans; the nudge now appears only for uploads.
 - VideoPress: Show one upgrade notice on the dashboard, with an option to activate an unused license, instead of two separate banners.
 - VideoPress: Tell an administrator whose own WordPress.com account is not connected that only their account is missing, instead of asking them to set up VideoPress.
