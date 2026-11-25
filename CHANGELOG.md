@@ -35,7 +35,6 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Stop WooCommerce Analytics store tracking when the Jetpack WooCommerce Analytics module is turned off.
 - SEO: Make the dashboard available to existing sites without a separate opt-in.
 - Sitemaps: Keep News sitemaps within the publication window as cached articles age.
-- Sitemaps: Use CSS to keep XML sitemaps readable in browsers removing XSLT support.
 - Subscribe block: Stop screen readers announcing the empty email field as invalid before the visitor submits.
 - Tiled Gallery: Fit every gallery style to the width of newsletter emails, including in Outlook, and stop cropping Mosaic images to one height.
 - Video block: Stop showing the premium block upgrade banner over videos that already play on free plans; the nudge now appears only for uploads.
