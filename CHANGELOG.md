@@ -24,6 +24,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Stop WooCommerce Analytics store tracking when the Jetpack WooCommerce Analytics module is turned off.
 - Sitemaps: Keep News sitemaps within the publication window as cached articles age.
 - Video block: Stop showing the premium block upgrade banner over videos that already play on free plans; the nudge now appears only for uploads.
+- VideoPress: Tell an administrator whose own WordPress.com account is not connected that only their account is missing, instead of asking them to set up VideoPress.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Handle various PHP deprecation notices.

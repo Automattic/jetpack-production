@@ -292,10 +292,13 @@ __( "Your site couldn’t reach WordPress.com. Ask your hosting provider to allo
 __( "WordPress.com is temporarily unavailable. Please try again in a minute.", "jetpack-videopress-pkg" );
 __( "Your site got an unexpected response from WordPress.com. If your hosting provider filters outgoing connections, ask them to allow jetpack.wordpress.com.", "jetpack-videopress-pkg" );
 __( "WordPress.com returned an unexpected response when registering your site. Please try again in a minute.", "jetpack-videopress-pkg" );
-__( "Connect to set up VideoPress", "jetpack-videopress-pkg" );
-__( "VideoPress needs a connection to WordPress.com before you can upload and manage your videos.", "jetpack-videopress-pkg" );
-__( "Connecting…", "jetpack-videopress-pkg" );
 __( "Connect", "jetpack-videopress-pkg" );
+__( "Connecting…", "jetpack-videopress-pkg" );
+__( "Connect your account", "jetpack-videopress-pkg" );
+__( "Connect your WordPress.com account", "jetpack-videopress-pkg" );
+__( "Connect to set up VideoPress", "jetpack-videopress-pkg" );
+__( "This site is already connected to WordPress.com, but your account isn’t. Connect it to upload videos and edit their details.", "jetpack-videopress-pkg" );
+__( "VideoPress needs a connection to WordPress.com before you can upload and manage your videos.", "jetpack-videopress-pkg" );
 __( "Checkout could not start. Please try again.", "jetpack-videopress-pkg" );
 __( "An error occurred. Please try again.", "jetpack-videopress-pkg" );
 __( "%1$s%% off", "jetpack-videopress-pkg" );

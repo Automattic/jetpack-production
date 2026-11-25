@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Dashboard: Show a notice on every tab while only logged-in users can play your videos.
 
+### Fixed
+- Dashboard: Tell an administrator whose own WordPress.com account is not connected that only their account is missing, instead of asking them to set up VideoPress.
+
 ## [0.63.1] - 2026-11-23
 ### Changed
 - Admin shell: Record the page view again when the shell shows the VideoPress page again. [#55078]
