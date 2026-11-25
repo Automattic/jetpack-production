@@ -6,6 +6,7 @@
 		'react-jsx-runtime',
 		'wp-a11y',
 		'wp-components',
+		'wp-compose',
 		'wp-data',
 		'wp-date',
 		'wp-element',
@@ -14,5 +15,5 @@
 		'wp-primitives',
 		'wp-url'
 	),
-	'version' => 'a2400980dcdcec5fab05'
+	'version' => '36168e2bc23386416bad'
 );
