@@ -22,6 +22,9 @@ This is an alpha version! The changes listed here are not final.
 ### Removed
 - Stop starting WooCommerce store tracking, which WooCommerce Stats now starts, and drop the WooCommerce Analytics dependency.
 
+### Fixed
+- Charts: Name a month the date range cuts by its days in the Post views, Video and Author performance tooltips.
+
 ## [0.19.0] - 2026-11-23
 ### Added
 - Add a feature flag for the AI tab. [#55284]

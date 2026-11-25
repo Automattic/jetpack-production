@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Show Social in the Jetpack menu, and stop offering upgrades on paid plans, on WordPress.com Simple sites.
 - My Jetpack: Show the manual-install notice and disable the install buttons on product pricing pages when the site cannot install plugins.
 - My Jetpack: Stop offering an upgrade for Podcast and Forms file uploads on WordPress.com plans that already include them.
+- Premium Analytics: Name a month the date range cuts by its days in the Post views, Video and Author performance chart tooltips.
 - Premium Analytics: Stop WooCommerce Analytics store tracking when the Jetpack WooCommerce Analytics module is turned off.
 - Sitemaps: Keep News sitemaps within the publication window as cached articles age.
 - Subscribe block: Stop screen readers announcing the empty email field as invalid before the visitor submits.
