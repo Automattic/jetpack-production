@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Dashboard: Show a notice on every tab while only logged-in users can play your videos.
 
+### Changed
+- Library: Always show the Upload to VideoPress button on local videos, in both grid and table layouts.
+
 ### Fixed
 - Dashboard: Tell an administrator whose own WordPress.com account is not connected that only their account is missing, instead of asking them to set up VideoPress.
 
