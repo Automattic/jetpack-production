@@ -610,6 +610,7 @@ __( "Open the Carousel settings", "jetpack" );
 __( "The Carousel settings are now in Features, in My Jetpack.", "jetpack" );
 __( "Upgrade your plan to use video covers", "jetpack" );
 __( "Upgrade your plan to upload audio", "jetpack" );
+__( "Upgrade your plan to upload videos", "jetpack" );
 __( "Markdown", "jetpack" );
 __( "Open the Markdown settings", "jetpack" );
 __( "The Markdown settings are now in Features, in My Jetpack.", "jetpack" );

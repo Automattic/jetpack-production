@@ -137,6 +137,7 @@ _x( "There is an issue with this connection.", "This notice is shown when a soci
 _x( "To keep sharing with this connection, please reconnect it.", "This notice is shown when a social media connection needs to be reconnected.", "jetpack-publicize-pkg" );
 __( "Upgrade your plan to use video covers", "jetpack-publicize-pkg" );
 __( "Upgrade your plan to upload audio", "jetpack-publicize-pkg" );
+__( "Upgrade your plan to upload videos", "jetpack-publicize-pkg" );
 __( "Available placeholders", "jetpack-publicize-pkg" );
 __( "Use placeholders to automatically insert post details.", "jetpack-publicize-pkg" );
 __( "Write a default share message. Use placeholders like %1$s or %2$s — they’re filled in when posts are shared.", "jetpack-publicize-pkg" );

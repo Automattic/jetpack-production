@@ -17,5 +17,5 @@
 		'wp-preferences',
 		'wp-url'
 	),
-	'version' => '0423cfb50610b1e4320f'
+	'version' => '764ed45ecf7d76919e72'
 );

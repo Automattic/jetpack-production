@@ -192,6 +192,7 @@ __( "Write, edit, and make changes across your whole site. Start in the editor, 
 __( "Dismiss", "jetpack" );
 __( "Upgrade your plan to use video covers", "jetpack" );
 __( "Upgrade your plan to upload audio", "jetpack" );
+__( "Upgrade your plan to upload videos", "jetpack" );
 __( "Failed to load AI usage data.", "jetpack" );
 __( "Connect ChatGPT", "jetpack" );
 __( "Give ChatGPT access to your site by installing the plugin.", "jetpack" );

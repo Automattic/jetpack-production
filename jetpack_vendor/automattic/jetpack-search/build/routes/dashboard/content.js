@@ -113,6 +113,7 @@ __( "Jetpack Search", "jetpack-search-pkg" );
 __( "The best WordPress search experience", "jetpack-search-pkg" );
 __( "Upgrade your plan to use video covers", "jetpack-search-pkg" );
 __( "Upgrade your plan to upload audio", "jetpack-search-pkg" );
+__( "Upgrade your plan to upload videos", "jetpack-search-pkg" );
 __( "You are a search results summarizer for Jetpack Search. Your job is to summarize the best available successful search results in a succinct manner.", "jetpack-search-pkg" );
 __( "Saving…", "jetpack-search-pkg" );
 __( "Save", "jetpack-search-pkg" );

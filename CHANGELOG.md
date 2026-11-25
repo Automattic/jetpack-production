@@ -23,6 +23,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Stop offering an upgrade for Podcast and Forms file uploads on WordPress.com plans that already include them.
 - Premium Analytics: Stop WooCommerce Analytics store tracking when the Jetpack WooCommerce Analytics module is turned off.
 - Sitemaps: Keep News sitemaps within the publication window as cached articles age.
+- Video block: Stop showing the premium block upgrade banner over videos that already play on free plans; the nudge now appears only for uploads.
 
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Handle various PHP deprecation notices.

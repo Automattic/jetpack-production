@@ -326,6 +326,7 @@ __( "Export spam", "jetpack-forms" );
 __( "Export trash", "jetpack-forms" );
 __( "Upgrade your plan to use video covers", "jetpack-forms" );
 __( "Upgrade your plan to upload audio", "jetpack-forms" );
+__( "Upgrade your plan to upload videos", "jetpack-forms" );
 __( "Download progress", "jetpack-forms" );
 __( "Preparing your export…", "jetpack-forms" );
 __( "%s MB downloaded", "jetpack-forms" );
