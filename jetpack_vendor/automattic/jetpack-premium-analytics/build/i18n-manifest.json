@@ -41,6 +41,7 @@
 		"build/widgets/post-views/render.js",
 		"build/widgets/posting-activity/render.js",
 		"build/widgets/referrers/render.js",
+		"build/widgets/requests-by-source/render.js",
 		"build/widgets/search-terms/render.js",
 		"build/widgets/shares/render.js",
 		"build/widgets/subscriber-highlights/render.js",

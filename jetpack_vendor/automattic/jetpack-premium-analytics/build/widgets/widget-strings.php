@@ -104,6 +104,10 @@ _x( 'Inspect the dashboard\'s React Query cache. Available outside production on
 _x( 'Top referrers', 'widget title', 'jetpack-premium-analytics-pkg' );
 _x( 'Websites and search engines referring visitors to your site.', 'widget description', 'jetpack-premium-analytics-pkg' );
 _x( 'The sources that sent the most visitors to your site, sorted by views.', 'widget help content', 'jetpack-premium-analytics-pkg' );
+_x( 'Requests by source', 'widget title', 'jetpack-premium-analytics-pkg' );
+_x( 'See how many requests came from people, AI bots and other bots, and how many were blocked.', 'widget description', 'jetpack-premium-analytics-pkg' );
+_x( 'Every request your site received, split by who made it. These are requests, not views, so totals include bots and will be higher than the views in your Traffic tab.', 'widget help content', 'jetpack-premium-analytics-pkg' );
+_x( 'Area chart', 'widget attribute option label', 'jetpack-premium-analytics-pkg' );
 _x( 'Top searched terms', 'widget title', 'jetpack-premium-analytics-pkg' );
 _x( 'The search terms visitors use to find your site.', 'widget description', 'jetpack-premium-analytics-pkg' );
 _x( 'The most popular search terms visitors used to find your site.', 'widget help content', 'jetpack-premium-analytics-pkg' );
