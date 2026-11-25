@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Safe Mode: Mark a failed registration during a fresh connection as having left the site disconnected.
 
+### Fixed
+- Safe Mode: Keep a screen left open, for example in another tab, from disconnecting a site that is no longer in Safe Mode.
+
 ## [9.18.3] - 2026-11-23
 ### Added
 - Safe Mode: Add a feature flag for the shared Safe Mode screen, and include Safe Mode state in the connection initial state. [#55014]

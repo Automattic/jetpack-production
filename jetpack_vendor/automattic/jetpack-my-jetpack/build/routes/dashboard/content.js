@@ -220,6 +220,7 @@ __( "This site is registered with WordPress.com at <registered />, but now loads
 __( "Your site sent an unexpected response. Another plugin or a PHP error may be adding extra output; your site’s error log, or temporarily deactivating other plugins, can show which.", "jetpack-my-jetpack" );
 __( "You don’t have permission to do this. Ask a site administrator.", "jetpack-my-jetpack" );
 __( "Your site couldn’t be registered with WordPress.com again, so it is now disconnected. Try again to connect it, or connect it later in Settings › Connectors, under Jetpack Connection.", "jetpack-my-jetpack" );
+__( "This site is no longer in Safe Mode, for example because it was resolved in another tab. Reload the page.", "jetpack-my-jetpack" );
 __( "Your site’s server ran into a problem. Try again in a few minutes.", "jetpack-my-jetpack" );
 __( "<link>Get help with Safe Mode</link>", "jetpack-my-jetpack" );
 __( "What is <z />?", "jetpack-my-jetpack" );
@@ -304,6 +305,9 @@ __( "If <z /> is still running, it will stop syncing and ask this same question.
 __( "Got it, thanks", "jetpack-my-jetpack" );
 _x( "Features that sync with WordPress.com are paused because this store is registered with WordPress.com at a different address. Payments will not be interrupted. An administrator needs to resolve this.", "WooCommerce store", "jetpack-my-jetpack" );
 __( "Features that sync with WordPress.com are paused because this site is registered with WordPress.com at a different address. An administrator needs to resolve this.", "jetpack-my-jetpack" );
+__( "Jetpack Connection is no longer in Safe Mode", "jetpack-my-jetpack" );
+__( "Reload", "jetpack-my-jetpack" );
+__( "Jetpack Connection is disconnected", "jetpack-my-jetpack" );
 __( "No other connected administrators", "jetpack-my-jetpack" );
 __( "Ownership can only go to an administrator who has connected their WordPress.com account.", "jetpack-my-jetpack" );
 __( "Ask another administrator to connect, then come back here to transfer ownership. <link>How users connect</link>", "jetpack-my-jetpack" );
@@ -763,7 +767,6 @@ __( "Could not change the selected features. Please try again.", "jetpack-my-jet
 __( "Explore all", "jetpack-my-jetpack" );
 __( "We couldn’t load your features.", "jetpack-my-jetpack" );
 __( "Refresh the page, or try again in a moment.", "jetpack-my-jetpack" );
-__( "Reload", "jetpack-my-jetpack" );
 __( "No features match “%s”.", "jetpack-my-jetpack" );
 __( "It may go by another name here, or the answer may be on jetpack.com.", "jetpack-my-jetpack" );
 __( "Search jetpack.com for “%s”", "jetpack-my-jetpack" );

@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Move settings from Jetpack › Settings to My Jetpack › Features and to each feature's own page, and hide Jetpack › Settings once nothing is left on it.
 
 ### Bug fixes
+- Connection: Keep a Safe Mode screen left open, for example in another tab, from disconnecting a site that is no longer in Safe Mode.
 - Dashboards: Center notifications at the bottom of the screen over the page content, not under the admin menu edge.
 - My Jetpack: Show Social in the Jetpack menu, and stop offering upgrades on paid plans, on WordPress.com Simple sites.
 - My Jetpack: Stop offering an upgrade for Podcast and Forms file uploads on WordPress.com plans that already include them.
