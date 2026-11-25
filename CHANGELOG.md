@@ -15,6 +15,9 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Drop the "N more" count below the Latest subscribers list.
 - Premium Analytics: Open a page's own report, /report/page/<id>, from the Top posts & pages card and the Posts & pages report.
 - Premium Analytics: Open the WooCommerce tab on a disconnected store set to report from its own data.
+- SEO: Add an SEO switch to My Jetpack that turns the SEO page, SEO Tools, Sitemaps, Canonical URLs, and Site Verification on or off together, keeping each feature's own setting.
+- SEO: Add an SEO tools switch to SEO › Settings, so sitemap, site verification, and canonical URL settings work without SEO tools.
+- SEO: Remove the separate SEO Tools, Sitemaps, Canonical URLs, and Site Verification switches from My Jetpack, now that the SEO card turns SEO on or off. Each one stays in Jetpack › SEO › Settings.
 - Settings: Move settings from Jetpack › Settings to My Jetpack › Features and to each feature's own page, and hide Jetpack › Settings once nothing is left on it.
 - VideoPress: Always show the Upload to VideoPress button on local videos in the Library.
 - VideoPress: Show a notice in the dashboard while only logged-in users can play your videos.
@@ -28,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Stop offering an upgrade for Podcast and Forms file uploads on WordPress.com plans that already include them.
 - Premium Analytics: Name a month the date range cuts by its days in the Post views, Video and Author performance chart tooltips.
 - Premium Analytics: Stop WooCommerce Analytics store tracking when the Jetpack WooCommerce Analytics module is turned off.
+- SEO: Make the dashboard available to existing sites without a separate opt-in.
 - Sitemaps: Keep News sitemaps within the publication window as cached articles age.
 - Subscribe block: Stop screen readers announcing the empty email field as invalid before the visitor submits.
 - Video block: Stop showing the premium block upgrade banner over videos that already play on free plans; the nudge now appears only for uploads.

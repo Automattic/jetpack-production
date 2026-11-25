@@ -50,11 +50,6 @@ __( "Jetpack’s SEO titles, descriptions, structured data and llms.txt are turn
 __( "%1$s is managing your site’s SEO, so Jetpack has paused its SEO titles, descriptions, canonical URLs, structured data and llms.txt. Your saved settings are kept. Deactivate %1$s to use them.", "jetpack-seo" );
 __( "Manage plugins", "jetpack-seo" );
 __( "Make your site discoverable in search and social, and control AI access.", "jetpack-seo" );
-__( "Could not enable SEO tools. Please try again.", "jetpack-seo" );
-__( "%s is active on this site. Enabling Jetpack's SEO tools will not deactivate it, and overlapping SEO output will remain paused.", "jetpack-seo" );
-__( "%s is active on this site. Enabling Jetpack's SEO tools will not deactivate it.", "jetpack-seo" );
-__( "SEO tools help your content get found: customize titles and meta descriptions, generate a sitemap, verify your site with search engines, and control how pages look when shared. Turn it on to manage all of it from here.", "jetpack-seo" );
-__( "Enable SEO tools", "jetpack-seo" );
 __( "AI crawlers can't reach this site while it's on a staging address.", "jetpack-seo" );
 __( "AI crawlers can't reach this site while it's closed to search engines.", "jetpack-seo" );
 __( "Crawler settings can't apply while a static robots.txt file exists in your site's public directory.", "jetpack-seo" );

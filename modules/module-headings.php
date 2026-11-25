@@ -181,6 +181,11 @@ function jetpack_get_module_i18n( $key ) {
 				'description' => _x( 'Instantly deliver the most relevant results to your visitors.', 'Module Description', 'jetpack' ),
 			),
 
+			'seo-dashboard' => array(
+				'name' => _x( 'SEO', 'Module Name', 'jetpack' ),
+				'description' => _x( 'Manage how your site appears in search engines, social previews, and AI tools from one page.', 'Module Description', 'jetpack' ),
+			),
+
 			'seo-tools' => array(
 				'name' => _x( 'SEO Tools', 'Module Name', 'jetpack' ),
 				'description' => _x( 'Optimize titles, meta descriptions, and social previews for better search results.', 'Module Description', 'jetpack' ),
@@ -328,6 +333,7 @@ function jetpack_get_module_i18n_tag( $key ) {
 			// - modules/blaze.php
 			// - modules/canonical-urls.php
 			// - modules/monetize.php
+			// - modules/seo-dashboard.php
 			// - modules/sitemaps.php
 			// - modules/wordads.php
 			'Traffic' => _x( 'Traffic', 'Module Tag', 'jetpack' ),
@@ -1008,6 +1014,24 @@ function jetpack_get_module_info( $key ) {
 	    'feature' => 'Search',
 	    'additional_search_queries' => 'search, elastic, elastic search, elasticsearch, fast search, search results, search performance, google search',
 	    'plan_classes' => 'business, complete',
+	  ),
+	  'seo-dashboard' => 
+	  array (
+	    'name' => 'SEO',
+	    'description' => 'Manage how your site appears in search engines, social previews, and AI tools from one page.',
+	    'sort' => '35',
+	    'recommendation_order' => '',
+	    'introduced' => '16.5-a.6',
+	    'changed' => '',
+	    'deactivate' => '',
+	    'free' => '',
+	    'requires_connection' => 'No',
+	    'requires_user_connection' => 'No',
+	    'auto_activate' => 'Yes',
+	    'module_tags' => 'Traffic',
+	    'feature' => 'Traffic',
+	    'additional_search_queries' => 'seo, search engine optimization, sitemap, site verification, canonical urls, seo dashboard',
+	    'plan_classes' => '',
 	  ),
 	  'seo-tools' => 
 	  array (

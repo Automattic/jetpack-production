@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Features: Add an SEO card that turns the SEO page and its features on or off.
 - Features: Add artwork for the Monetize feature.
 - Features: List Monetize once its dashboard is available.
 - Overview: Show the change from the previous period under the Stats values.
@@ -17,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Features: Open feature settings in a panel from Configure, and show the notices from Jetpack › Settings on Overview.
+- Features: Remove the separate SEO Tools, Sitemaps, Canonical URLs, and Site Verification switches where the SEO card is shown. Each one stays in Jetpack › SEO › Settings.
 - Header: Call the connection panel and its button "Jetpack Connection", without repeating it in the button's name during a connection error.
 - Label the Overview v1 Protect upsell on free plans "Add malware scanning", shown only while the Overview v1 feature flag is on.
 - Overview: Show What's new thumbnails uncropped and hand-written excerpts in full, and make each post row clickable.
