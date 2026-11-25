@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Let WordPress.com sites that run a block theme edit their newsletter email design, and keep that access after a switch to a classic theme.
 - Premium Analytics: Add Items sold to the Store performance metrics.
 - Premium Analytics: Drop the "N more" count below the Latest subscribers list.
+- Premium Analytics: Open a page's own report, /report/page/<id>, from the Top posts & pages card and the Posts & pages report.
 - Settings: Move settings from Jetpack › Settings to My Jetpack › Features and to each feature's own page, and hide Jetpack › Settings once nothing is left on it.
 
 ### Bug fixes

@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Drop the "N more" count below the Latest subscribers list.
+- Single-report pages: Open a page's own report, /report/page/<id>, from the Top posts & pages card and the Posts & pages report.
 - Top pages: Announce the published-in-period mark when its title link gets focus.
 
 ### Removed
