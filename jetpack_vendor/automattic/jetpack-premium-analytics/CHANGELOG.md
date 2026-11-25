@@ -12,6 +12,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Add a filter that lets the host turn off WooCommerce Analytics store tracking.
 - Dashboard: Let a section declare that it runs without a Jetpack connection, and open the dashboard on a disconnected site that has one, with a connect prompt in the other tabs.
+- Widgets toolkit: Add a stacked area chart component.
 
 ### Changed
 - Drop the "N more" count below the Latest subscribers list.
