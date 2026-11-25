@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add a `jetpack_seo_default_schema_type` filter so custom post types can default to Article schema.
 - Settings: Add an SEO tools switch, and keep sitemap, site verification, and canonical URL settings available while SEO tools are off.
 
 ### Changed
