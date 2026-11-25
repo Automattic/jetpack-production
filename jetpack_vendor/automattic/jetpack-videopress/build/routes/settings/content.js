@@ -81,6 +81,8 @@ __( "Change in Settings", "jetpack-videopress-pkg" );
 __( "Your site is private, so only logged-in users can play your videos. Signed-out visitors see a private-video message instead.", "jetpack-videopress-pkg" );
 __( "Only logged-in users can play your videos. Signed-out visitors see a private-video message instead, including where your videos are embedded.", "jetpack-videopress-pkg" );
 __( "You’re on the free plan, which allows 1 video upload. Upgrade for more storage and unlimited uploads.", "jetpack-videopress-pkg" );
+__( "You also have an unused Jetpack license.", "jetpack-videopress-pkg" );
+__( "Activate license", "jetpack-videopress-pkg" );
 __( "Unavailable in <a>Offline Mode</a>", "jetpack-videopress-pkg" );
 __( "WordPress.com couldn’t make a secure (HTTPS) connection to your site at %s. Its SSL certificate or HTTPS setup may be invalid. Ask your hosting provider to check it.", "jetpack-videopress-pkg" );
 __( "WordPress.com couldn’t make a secure (HTTPS) connection to your site. Its SSL certificate or HTTPS setup may be invalid. Ask your hosting provider to check it.", "jetpack-videopress-pkg" );

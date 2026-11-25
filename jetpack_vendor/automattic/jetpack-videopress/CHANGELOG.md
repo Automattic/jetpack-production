@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Library: Always show the Upload to VideoPress button on local videos, in both grid and table layouts.
 
 ### Fixed
+- Dashboard: Offer an unused license in the free-plan notice instead of a second, separate license banner.
 - Dashboard: Tell an administrator whose own WordPress.com account is not connected that only their account is missing, instead of asking them to set up VideoPress.
 
 ## [0.63.1] - 2026-11-23
