@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Add the eligibility check that decides which sites and users see the Upgrade to Parse.ly prompts.
 - AI tab: Add the Requests by source widget, behind the AI tab feature flag.
 - Dashboard: Let a section declare that it runs without a Jetpack connection, and open the dashboard on a disconnected site that has one, with a connect prompt in the other tabs.
 - Widgets toolkit: Add a stacked area chart component.

@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Abilities: Chart one email's opens and clicks over time in `get-email-detail`, and add impressions, hours watched and retention to `get-video-stats`.
+- Let a caller cap how long a Stats plan usage lookup waits on WordPress.com.
 
 ## [0.25.0] - 2026-11-23
 ### Added
