@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.30.6-alpha] - unreleased
+
+This is an alpha version! The changes listed here are not final.
+
+### Removed
+- Admin color schemes: Remove the Fresh admin bar overrides, so Fresh uses core's icon colors on WordPress 7.2.
+
 ## [0.30.5] - 2026-11-23
 ### Changed
 - Internal updates.
@@ -711,6 +718,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Notifications: Change Icon [#37676]
 - Updated package dependencies. [#37669] [#37706]
 
+[0.30.6-alpha]: https://github.com/Automattic/jetpack-masterbar/compare/v0.30.5...v0.30.6-alpha
 [0.30.5]: https://github.com/Automattic/jetpack-masterbar/compare/v0.30.4...v0.30.5
 [0.30.4]: https://github.com/Automattic/jetpack-masterbar/compare/v0.30.3...v0.30.4
 [0.30.3]: https://github.com/Automattic/jetpack-masterbar/compare/v0.30.2...v0.30.3
