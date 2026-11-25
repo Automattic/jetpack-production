@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Add an SEO switch to My Jetpack that turns the SEO page, SEO Tools, Sitemaps, Canonical URLs, and Site Verification on or off together, keeping each feature's own setting.
 - SEO: Add an SEO tools switch to SEO › Settings, so sitemap, site verification, and canonical URL settings work without SEO tools.
 - SEO: Allow custom post types to use Article schema by default.
+- SEO: Allow plugins to credit guest authors and co-authors in Article schema.
 - SEO: Remove the separate SEO Tools, Sitemaps, Canonical URLs, and Site Verification switches from My Jetpack, now that the SEO card turns SEO on or off. Each one stays in Jetpack › SEO › Settings.
 - Settings: Move settings from Jetpack › Settings to My Jetpack › Features and to each feature's own page, and hide Jetpack › Settings once nothing is left on it.
 - VideoPress: Always show the Upload to VideoPress button on local videos in the Library.

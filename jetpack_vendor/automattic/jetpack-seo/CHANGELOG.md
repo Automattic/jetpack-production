@@ -11,6 +11,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Added
 - Add a `jetpack_seo_default_schema_type` filter so custom post types can default to Article schema.
+- Add a `jetpack_seo_schema_article_authors` filter so plugins can credit more than one author, or a guest author, in the Article schema.
 - Settings: Add an SEO tools switch, and keep sitemap, site verification, and canonical URL settings available while SEO tools are off.
 
 ### Changed
