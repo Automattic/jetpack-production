@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Features: Add artwork for the Monetize feature.
 - Features: List Monetize once its dashboard is available.
 - Overview: Show the change from the previous period under the Stats values.
+- Safe Mode: Show the new Safe Mode screen in the Safe Mode window behind a feature flag.
 
 ### Changed
 - Features: Open feature settings in a panel from Configure, and show the notices from Jetpack › Settings on Overview.
