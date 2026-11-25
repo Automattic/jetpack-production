@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Add Items sold to the Store performance metrics.
 - Premium Analytics: Drop the "N more" count below the Latest subscribers list.
 - Premium Analytics: Open a page's own report, /report/page/<id>, from the Top posts & pages card and the Posts & pages report.
+- Premium Analytics: Open the WooCommerce tab on a disconnected store set to report from its own data.
 - Settings: Move settings from Jetpack › Settings to My Jetpack › Features and to each feature's own page, and hide Jetpack › Settings once nothing is left on it.
 - VideoPress: Always show the Upload to VideoPress button on local videos in the Library.
 - VideoPress: Show a notice in the dashboard while only logged-in users can play your videos.

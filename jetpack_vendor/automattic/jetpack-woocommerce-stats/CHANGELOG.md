@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Let the WooCommerce tab work on a disconnected store that reads local data first, and show WooCommerce Analytics' Data status there.
 - Start WooCommerce Analytics store tracking, which Premium Analytics used to start. Add a filter that lets the host turn it off.
 - Store performance: Add Items sold as a metric.
 
