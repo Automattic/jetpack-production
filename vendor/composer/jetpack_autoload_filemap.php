@@ -18,13 +18,13 @@ return array(
 		'version' => '4.1.1.0',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-licensing/actions.php'
 	),
-	'ca361fc6e355bd746da7c3488077d38a' => array(
-		'version' => '1.1.0.0',
-		'path'    => $vendorDir . '/automattic/tracks-shared-utils/php/src/functions.php'
-	),
 	'8dadc7d1fad607338155477657d4d3eb' => array(
 		'version' => '0.2.0.0-alpha1795529466',
 		'path'    => $baseDir . '/jetpack_vendor/automattic/jetpack-announcements/actions.php'
+	),
+	'ca361fc6e355bd746da7c3488077d38a' => array(
+		'version' => '1.1.0.0',
+		'path'    => $vendorDir . '/automattic/tracks-shared-utils/php/src/functions.php'
 	),
 	'd4eb94df91a729802d18373ee8cdc79f' => array(
 		'version' => '5.3.1.0-alpha1795532881',

@@ -1,11 +1,11 @@
 <?php
 /**
- * Wires up the WooCommerce Analytics front-end tracker for Premium Analytics.
+ * Wires up the WooCommerce Analytics front-end tracker for the WooCommerce section.
  *
- * @package automattic/jetpack-premium-analytics
+ * @package automattic/jetpack-woocommerce-stats
  */
 
-namespace Automattic\Jetpack\PremiumAnalytics;
+namespace Automattic\Jetpack\WooCommerceStats;
 
 use Automattic\Woocommerce_Analytics;
 
@@ -21,7 +21,7 @@ class WooCommerce_Analytics_Tracker {
 	 *
 	 * @var string
 	 */
-	const ENABLED_FILTER = 'jetpack_premium_analytics_store_tracking_enabled';
+	const ENABLED_FILTER = 'jetpack_woocommerce_stats_store_tracking_enabled';
 
 	/**
 	 * Register the tracker bootstrap.
@@ -38,9 +38,9 @@ class WooCommerce_Analytics_Tracker {
 	 */
 	public static function bootstrap() {
 		/**
-		 * Filters whether Premium Analytics starts WooCommerce Analytics store tracking.
+		 * Filters whether WooCommerce Stats starts WooCommerce Analytics store tracking.
 		 *
-		 * @since 0.20.0-alpha
+		 * @since 0.6.0-alpha
 		 *
 		 * @param bool $enabled Whether store tracking is on. Default true.
 		 */
@@ -52,7 +52,7 @@ class WooCommerce_Analytics_Tracker {
 		add_filter( 'woocommerce_analytics_experimental_proxy_tracking_enabled', '__return_true' );
 
 		// Guarded because the package ships with the Jetpack plugin or as a
-		// composer dependency, not with premium-analytics' own source.
+		// composer dependency, not with this package's own source.
 		if ( class_exists( Woocommerce_Analytics::class ) ) {
 			Woocommerce_Analytics::init();
 		}

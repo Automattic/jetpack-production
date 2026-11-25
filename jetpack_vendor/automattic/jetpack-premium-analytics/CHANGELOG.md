@@ -10,13 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
-- Add a filter that lets the host turn off WooCommerce Analytics store tracking.
 - Dashboard: Let a section declare that it runs without a Jetpack connection, and open the dashboard on a disconnected site that has one, with a connect prompt in the other tabs.
 - Widgets toolkit: Add a stacked area chart component.
 
 ### Changed
 - Drop the "N more" count below the Latest subscribers list.
 - Top pages: Announce the published-in-period mark when its title link gets focus.
+
+### Removed
+- Stop starting WooCommerce store tracking, which WooCommerce Stats now starts, and drop the WooCommerce Analytics dependency.
 
 ## [0.19.0] - 2026-11-23
 ### Added
