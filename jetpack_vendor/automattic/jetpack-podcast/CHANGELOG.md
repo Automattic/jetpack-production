@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Fixed
+- Episodes: List only posts that have an audio or podcast episode block in the episode dashboard.
 - Feed: Make podcast apps pick up a new episode once its audio file is attached, instead of serving their cached feed.
 
 ## [2.2.8] - 2026-11-23
