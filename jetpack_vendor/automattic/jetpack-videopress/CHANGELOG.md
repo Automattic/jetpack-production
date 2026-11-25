@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.63.2-alpha] - unreleased
+## [0.64.0-alpha] - unreleased
 
 This is an alpha version! The changes listed here are not final.
+
+### Added
+- Dashboard: Show a notice on every tab while only logged-in users can play your videos.
 
 ## [0.63.1] - 2026-11-23
 ### Changed
@@ -2457,7 +2460,7 @@ This is an alpha version! The changes listed here are not final.
 ### Added
 - Created empty package [#24952]
 
-[0.63.2-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.63.1...v0.63.2-alpha
+[0.64.0-alpha]: https://github.com/Automattic/jetpack-videopress/compare/v0.63.1...v0.64.0-alpha
 [0.63.1]: https://github.com/Automattic/jetpack-videopress/compare/v0.63.0...v0.63.1
 [0.63.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.62.0...v0.63.0
 [0.62.0]: https://github.com/Automattic/jetpack-videopress/compare/v0.61.0...v0.62.0
