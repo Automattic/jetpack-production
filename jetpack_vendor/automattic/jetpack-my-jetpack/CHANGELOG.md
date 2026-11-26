@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - Features: Stop naming Jetpack plans in feature details on WordPress.com sites.
 - Header: Announce the same connection status on the account button as in its panel, and read that status first when the panel opens from the keyboard.
 - Overview: Match the Protect threat count, leaving out threats the site has fixed since the last scan (behind the Overview v1 feature flag).
+- Protect card: Leave threats the site has fixed since the last scan out of the threat count, the critical count and the tooltip.
 - Safe Mode: Keep the Safe Mode window the same width while moving through the new screen.
 - Show Social in the Jetpack menu, and stop offering upgrades on paid plans, on WordPress.com Simple sites.
 - Show the manual-install notice and disable the install buttons on product pricing pages when the site cannot install plugins.
