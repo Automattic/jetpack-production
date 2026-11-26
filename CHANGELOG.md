@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - SEO: Make the dashboard available to existing sites without a separate opt-in.
 - Sitemaps: Keep News sitemaps within the publication window as cached articles age.
 - Subscribe block: Stop screen readers announcing the empty email field as invalid before the visitor submits.
+- Subscriptions: Cache subscriber counts for the Dashboard, the Subscribe block, the legacy widget, and the `/subscribers/count` endpoint.
 - Tiled Gallery: Fit every gallery style to the width of newsletter emails, including in Outlook, and stop cropping Mosaic images to one height.
 - Video block: Stop showing the premium block upgrade banner over videos that already play on free plans; the nudge now appears only for uploads.
 - VideoPress: Editing a VideoPress shortcode's settings in the Classic editor now updates that video instead of adding a second one, and keeps the shortcode's other attributes.
