@@ -25,6 +25,7 @@ This is an alpha version! The changes listed here are not final.
 - Onboarding: Tell an administrator whose session expired to reload, instead of saying only administrators can connect.
 - Overview: Show What's new thumbnails uncropped and hand-written excerpts in full, and make each post row clickable.
 - Remove the Features link from the footer, since the header already links to it.
+- Reuse the Search pricing for a day and the Backup undo event for five minutes, so a repeat visit makes fewer WordPress.com requests.
 
 ### Fixed
 - Anti-spam: Count every WordPress.com plan as including Anti-spam, since each gets the full Akismet service.
