@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array('jetpack-connection', 'wp-components', 'wp-data', 'wp-element', 'wp-i18n'), 'module_dependencies' => array(array('id' => '@wordpress/connectors', 'import' => 'static')), 'version' => '482c2336d94f7dc3', 'type' => 'module');
+<?php return array('dependencies' => array('jetpack-connection', 'wp-components', 'wp-data', 'wp-element', 'wp-i18n'), 'module_dependencies' => array(array('id' => '@wordpress/connectors', 'import' => 'static')), 'version' => '2cf9b5d9404bab1e', 'type' => 'module');

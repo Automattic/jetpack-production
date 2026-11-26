@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Safe Mode: Show the new Safe Mode screen in the admin notice when the connection-idc-screen feature flag is on.
 
 ### Changed
+- Safe Mode: Attribute the new Safe Mode screen's Tracks events in the admin notice to the viewer, and record a disconnect from it on the Connectors card.
 - Safe Mode: Mark a failed registration during a fresh connection as having left the site disconnected.
 - Safe Mode: On the new screen, behind a feature flag, show connected plugins' logos, and reload the Connectors page on Close after an address update.
 
