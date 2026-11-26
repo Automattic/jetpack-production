@@ -65,6 +65,8 @@ __( "To use Jetpack on both sites, please <a>buy another license</a>.", "jetpack
 __( "Your site already has an active Jetpack plan of equal or higher value.", "jetpack-my-jetpack" );
 __( "It looks like your website already has a Jetpack plan that’s equal to or better than the one you’re trying to activate.", "jetpack-my-jetpack" );
 __( "You can either use this license on a different site or cancel your current plan for a refund.", "jetpack-my-jetpack" );
+__( "This site has a Jetpack product that includes more than Jetpack Pro, so Pro can’t replace it. You can use this license on another site, or contact us.", "jetpack-my-jetpack" );
+__( "A Jetpack product on this site belongs to another WordPress.com account, so Jetpack Pro can’t be activated here. Contact us and we’ll help you sort it out.", "jetpack-my-jetpack" );
 __( "The subscription is no longer active or has expired. Please purchase a new license.", "jetpack-my-jetpack" );
 __( "Unable to validate this license key.", "jetpack-my-jetpack" );
 __( "Please take a moment to check the license key from your purchase confirmation email—it might have a small typo.", "jetpack-my-jetpack" );

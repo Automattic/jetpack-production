@@ -29,6 +29,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Keep a Safe Mode screen left open, for example in another tab, from disconnecting a site that is no longer in Safe Mode.
 - Cookie Consent: Fix banner previews in Page Editor templates.
 - Dashboards: Center notifications at the bottom of the screen over the page content, not under the admin menu edge.
+- My Jetpack: Explain why a Jetpack Pro license can't be activated on a site.
 - My Jetpack: Show Social in the Jetpack menu, and stop offering upgrades on paid plans, on WordPress.com Simple sites.
 - My Jetpack: Show the manual-install notice and disable the install buttons on product pricing pages when the site cannot install plugins.
 - My Jetpack: Stop offering an upgrade for Podcast and Forms file uploads on WordPress.com plans that already include them.
