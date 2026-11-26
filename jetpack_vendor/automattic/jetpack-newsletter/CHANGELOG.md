@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Admin shell: Decide whether the dashboard joins the shell with the same check that registers its page.
+
 ## [0.19.1] - 2026-11-23
 ### Changed
 - Admin shell: Let Newsletter join the shell on WordPress.com Simple sites too. [#55085]

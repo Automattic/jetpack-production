@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Changed
+- Admin shell: Decide whether the dashboard joins the shell with the same check that registers its page.
 - Admin shell: Pass the dashboard page data through the shell member `data` key.
 
 ## [0.90.0] - 2026-11-23
