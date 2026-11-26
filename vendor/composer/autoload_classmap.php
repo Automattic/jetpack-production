@@ -388,6 +388,8 @@ return array(
     'Automattic\\Jetpack\\PremiumAnalytics\\Jetpack_Stats_Tracker' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-jetpack-stats-tracker.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Notices' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-notices.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Parsely_Prompts' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-parsely-prompts.php',
+    'Automattic\\Jetpack\\PremiumAnalytics\\Promo' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-promo.php',
+    'Automattic\\Jetpack\\PremiumAnalytics\\Promo_Registry' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-promo-registry.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\REST\\Api_Proxy_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/REST/class-api-proxy-controller.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\REST\\Notices_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/REST/class-notices-controller.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Reports\\Export\\Abstract_Csv_Report_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/Reports/Export/class-abstract-csv-report-controller.php',

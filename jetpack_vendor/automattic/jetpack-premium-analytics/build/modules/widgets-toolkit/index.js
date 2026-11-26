@@ -193,11 +193,12 @@ __( "We couldn't switch it off. Please try again.", "jetpack-premium-analytics-p
 __( "Switching it off…", "jetpack-premium-analytics-pkg" );
 __( "Switch it off", "jetpack-premium-analytics-pkg" );
 __( "Settings", "jetpack-premium-analytics-pkg" );
-__( "Stats options", "jetpack-premium-analytics-pkg" );
 __( "Customize", "jetpack-premium-analytics-pkg" );
 __( "Any feedback?", "jetpack-premium-analytics-pkg" );
 __( "Switch off the preview", "jetpack-premium-analytics-pkg" );
+__( "Stats options", "jetpack-premium-analytics-pkg" );
 __( "Customizing", "jetpack-premium-analytics-pkg" );
+__( "Dismiss", "jetpack-premium-analytics-pkg" );
 __( "Upgrade", "jetpack-premium-analytics-pkg" );
 __( "Enter a full URL that starts with https:// or http://.", "jetpack-premium-analytics-pkg" );
 __( "Build URL", "jetpack-premium-analytics-pkg" );
