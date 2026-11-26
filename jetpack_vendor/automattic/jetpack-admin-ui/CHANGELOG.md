@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 This is an alpha version! The changes listed here are not final.
 
 ### Added
+- Admin shell: Add an optional member `data` key for the page data a guest dashboard needs.
 - Admin shell: Show a progress bar in the content area while a dashboard loads.
 
 ### Fixed

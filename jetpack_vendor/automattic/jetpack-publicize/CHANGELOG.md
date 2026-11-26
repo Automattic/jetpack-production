@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Admin shell: Pass the dashboard page data through the shell member `data` key.
+
 ## [0.90.0] - 2026-11-23
 ### Added
 - Social: Add abilities to list connections, share a published post and delete a connection. [#54547]

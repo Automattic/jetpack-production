@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Changed
+- Admin shell: Pass the dashboard page data through the shell member `data` key.
+
 ## [0.7.1] - 2026-11-23
 ### Changed
 - Admin shell: Record one page view, not two, when the shell reopens Protect at another tab. [#55088]

@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Show a notice on every tab while only logged-in users can play your videos.
 
 ### Changed
+- Admin shell: Pass the dashboard page data through the shell member `data` key.
 - Library: Always show the Upload to VideoPress button on local videos, in both grid and table layouts.
 
 ### Fixed
