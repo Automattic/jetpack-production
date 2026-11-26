@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Show the manual-install notice and disable the install buttons on product pricing pages when the site cannot install plugins.
 - My Jetpack: Stop offering an upgrade for Podcast and Forms file uploads on WordPress.com plans that already include them.
 - Premium Analytics: Keep the Download CSV action in place while a widget refreshes its data, so the Traffic summary chart no longer jumps when returning to the tab.
+- Premium Analytics: Load Stats report rows as the table scrolls, so a report with thousands of rows opens without freezing the browser.
 - Premium Analytics: Name a month the date range cuts by its days in the Post views, Video and Author performance chart tooltips.
 - Premium Analytics: Stop WooCommerce Analytics store tracking when the Jetpack WooCommerce Analytics module is turned off.
 - SEO: Make the dashboard available to existing sites without a separate opt-in.
