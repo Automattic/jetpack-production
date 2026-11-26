@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Show Newsletter as included on WordPress.com plans instead of offering Jetpack Pro, and leave out the Jetpack fees there.
 - My Jetpack: Show Social in the Jetpack menu, and stop offering upgrades on paid plans, on WordPress.com Simple sites.
 - My Jetpack: Show the manual-install notice and disable the install buttons on product pricing pages when the site cannot install plugins.
+- My Jetpack: Stop naming Jetpack plans in feature details on WordPress.com sites.
 - My Jetpack: Stop offering an Anti-spam upgrade on WordPress.com plans, which already include Akismet.
 - My Jetpack: Stop offering an upgrade for Podcast and Forms file uploads on WordPress.com plans that already include them.
 - Premium Analytics: Keep the Download CSV action in place while a widget refreshes its data, so the Traffic summary chart no longer jumps when returning to the tab.

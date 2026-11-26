@@ -14,6 +14,8 @@ This is an alpha version! The changes listed here are not final.
 - Add the promo cards the Upgrade to Parse.ly prompts render in the Stats options menu and Settings.
 - AI tab: Add the Requests by source widget, behind the AI tab feature flag.
 - Dashboard: Let a section declare that it runs without a Jetpack connection, and open the dashboard on a disconnected site that has one, with a connect prompt in the other tabs.
+- Offer an Upgrade to Parse.ly card at the foot of the Stats Settings page.
+- Offer an Upgrade to Parse.ly item in the Stats options menu.
 - Widgets toolkit: Add a stacked area chart component.
 
 ### Changed
