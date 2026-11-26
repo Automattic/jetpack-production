@@ -32,6 +32,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboards: Center notifications at the bottom of the screen over the page content, not under the admin menu edge.
 - My Jetpack: Announce the same connection status on the header's account button as in its panel, and read that status first when the panel opens from the keyboard.
 - My Jetpack: Explain why a Jetpack Pro license can't be activated on a site.
+- My Jetpack: Show Newsletter as included on WordPress.com plans instead of offering Jetpack Pro, and leave out the Jetpack fees there.
 - My Jetpack: Show Social in the Jetpack menu, and stop offering upgrades on paid plans, on WordPress.com Simple sites.
 - My Jetpack: Show the manual-install notice and disable the install buttons on product pricing pages when the site cannot install plugins.
 - My Jetpack: Stop offering an Anti-spam upgrade on WordPress.com plans, which already include Akismet.
