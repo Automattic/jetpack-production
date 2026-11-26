@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Features: Add an SEO card that turns the SEO page and its features on or off.
 - Features: Add artwork for the Monetize feature.
 - Features: List Monetize once its dashboard is available.
+- Let a host say it sells nothing on a site, which leaves out the upgrade and purchase buttons and the Jetpack plans.
 - Overview: Show the change from the previous period under the Stats values.
 - Safe Mode: Show the new Safe Mode screen in the Safe Mode window behind a feature flag.
 
