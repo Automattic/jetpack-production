@@ -35,6 +35,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Keep the Download CSV action in place while a widget refreshes its data, so the Traffic summary chart no longer jumps when returning to the tab.
 - Premium Analytics: Load Stats report rows as the table scrolls, so a report with thousands of rows opens without freezing the browser.
 - Premium Analytics: Name a month the date range cuts by its days in the Post views, Video and Author performance chart tooltips.
+- Premium Analytics: Retry loading the site settings after a failed load, so the Homepage link in Posts & Pages and the Settings page can recover without reloading the page.
 - Premium Analytics: Stop WooCommerce Analytics store tracking when the Jetpack WooCommerce Analytics module is turned off.
 - SEO: Make the dashboard available to existing sites without a separate opt-in.
 - Sitemaps: Keep News sitemaps within the publication window as cached articles age.

@@ -30,6 +30,7 @@ This is an alpha version! The changes listed here are not final.
 - Hide the views limit notice and the plan usage card on WordPress.com sites, which have no views limit, and open the upgrade page from old classic Stats purchase links.
 - Keep the Download CSV action in place while a widget refreshes its data, so the Traffic summary chart no longer jumps when returning to the tab.
 - Load Stats report rows as the table scrolls, so a report with thousands of rows opens without freezing the browser.
+- Retry loading the site settings after a failed load, so the Homepage link in Posts & Pages and the Settings page can recover without reloading the page.
 
 ## [0.19.0] - 2026-11-23
 ### Added
