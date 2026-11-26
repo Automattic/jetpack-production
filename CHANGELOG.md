@@ -15,6 +15,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Drop the "N more" count below the Latest subscribers list.
 - Premium Analytics: Open a page's own report, /report/page/<id>, from the Top posts & pages card and the Posts & pages report.
 - Premium Analytics: Open the WooCommerce tab on a disconnected store set to report from its own data.
+- Premium Analytics: Use the Stats script for WooCommerce store tracking on sites not hosted on WordPress.com, so a pageview no longer adds an uncached request to the site.
 - SEO: Add an SEO switch to My Jetpack that turns the SEO page, SEO Tools, Sitemaps, Canonical URLs, and Site Verification on or off together, keeping each feature's own setting.
 - SEO: Add an SEO tools switch to SEO › Settings, so sitemap, site verification, and canonical URL settings work without SEO tools.
 - SEO: Allow custom post types to use Article schema by default.

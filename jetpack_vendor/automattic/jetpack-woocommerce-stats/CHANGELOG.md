@@ -14,6 +14,9 @@ This is an alpha version! The changes listed here are not final.
 - Start WooCommerce Analytics store tracking, which Premium Analytics used to start. Add a filter that lets the host turn it off.
 - Store performance: Add Items sold as a metric.
 
+### Changed
+- Stop turning on proxy tracking for store events. A host opts in with the `woocommerce_analytics_experimental_proxy_tracking_enabled` filter.
+
 ### Fixed
 - Handle various PHP deprecation notices.
 
