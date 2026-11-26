@@ -46,6 +46,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Stop WooCommerce Analytics store tracking when the Jetpack WooCommerce Analytics module is turned off.
 - Premium Analytics: Wrap long titles in the report tables so the other columns stay in view on narrow screens.
 - SEO: Make the dashboard available to existing sites without a separate opt-in.
+- Settings: Send the Ads and Google Analytics upgrades on WordPress.com sites to the WordPress.com plans that include them, and show Google Analytics in a Settings search only when the search names it.
 - Sitemaps: Keep News sitemaps within the publication window as cached articles age.
 - Subscribe block: Stop screen readers announcing the empty email field as invalid before the visitor submits.
 - Subscriptions: Cache subscriber counts for the Dashboard, the Subscribe block, the legacy widget, and the `/subscribers/count` endpoint.
