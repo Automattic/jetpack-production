@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Show a progress bar in the content area while a dashboard loads.
 
 ### Changed
+- Admin shell: Save the CSS and theme styles that dashboard headers share once, and keep saved headers only for the browser tab that saved them.
 - Admin shell: Stop sending each dashboard the shared script data the current page already has.
 
 ### Fixed
