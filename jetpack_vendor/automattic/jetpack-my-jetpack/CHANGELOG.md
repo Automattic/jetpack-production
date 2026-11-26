@@ -26,6 +26,7 @@ This is an alpha version! The changes listed here are not final.
 - Remove the Features link from the footer, since the header already links to it.
 
 ### Fixed
+- Anti-spam: Count every WordPress.com plan as including Anti-spam, since each gets the full Akismet service.
 - Features: Recognize WordPress.com plans that include Podcast and Forms file uploads.
 - Header: Announce the same connection status on the account button as in its panel, and read that status first when the panel opens from the keyboard.
 - Overview: Match the Protect threat count, leaving out threats the site has fixed since the last scan (behind the Overview v1 feature flag).

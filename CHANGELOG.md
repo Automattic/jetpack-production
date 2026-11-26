@@ -34,6 +34,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Explain why a Jetpack Pro license can't be activated on a site.
 - My Jetpack: Show Social in the Jetpack menu, and stop offering upgrades on paid plans, on WordPress.com Simple sites.
 - My Jetpack: Show the manual-install notice and disable the install buttons on product pricing pages when the site cannot install plugins.
+- My Jetpack: Stop offering an Anti-spam upgrade on WordPress.com plans, which already include Akismet.
 - My Jetpack: Stop offering an upgrade for Podcast and Forms file uploads on WordPress.com plans that already include them.
 - Premium Analytics: Keep the Download CSV action in place while a widget refreshes its data, so the Traffic summary chart no longer jumps when returning to the tab.
 - Premium Analytics: Load Stats report rows as the table scrolls, so a report with thousands of rows opens without freezing the browser.
