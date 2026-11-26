@@ -13,6 +13,9 @@ This is an alpha version! The changes listed here are not final.
 - Admin shell: Add an optional member `data` key for the page data a guest dashboard needs.
 - Admin shell: Show a progress bar in the content area while a dashboard loads.
 
+### Changed
+- Admin shell: Stop sending each dashboard the shared script data the current page already has.
+
 ### Fixed
 - Stop the media library and dashboard switching from running scripts the page already loaded, which unstyled the media library and broke saving on WordPress.com Simple sites.
 
