@@ -18,6 +18,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Dashboard: Offer an unused license in the free-plan notice instead of a second, separate license banner.
 - Dashboard: Tell an administrator whose own WordPress.com account is not connected that only their account is missing, instead of asking them to set up VideoPress.
+- Play private videos in block templates on views without a post, such as a 404 page.
 - Video block: Keep the post from being saved or published while a video is still uploading, so the video is not lost.
 
 ## [0.63.1] - 2026-11-23
