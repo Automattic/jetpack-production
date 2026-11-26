@@ -45,6 +45,7 @@ This is an alpha version! The changes listed here are not final.
 - Video block: Stop showing the premium block upgrade banner over videos that already play on free plans; the nudge now appears only for uploads.
 - VideoPress: Editing a VideoPress shortcode's settings in the Classic editor now updates that video instead of adding a second one, and keeps the shortcode's other attributes.
 - VideoPress: Keep the "pixels" and "seconds" units in the Classic editor's shortcode settings dialog from overlapping their fields.
+- VideoPress: Keep the post from being saved or published while a video is still uploading in the VideoPress block, so the video is not lost.
 - VideoPress: Show one upgrade notice on the dashboard, with an option to activate an unused license, instead of two separate banners.
 - VideoPress: Tell an administrator whose own WordPress.com account is not connected that only their account is missing, instead of asking them to set up VideoPress.
 
