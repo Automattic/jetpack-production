@@ -41,6 +41,7 @@ This is an alpha version! The changes listed here are not final.
 - Premium Analytics: Retry loading the site settings after a failed load, so the Homepage link in Posts & Pages and the Settings page can recover without reloading the page.
 - Premium Analytics: Stop the pinned report header from jumping when a trackpad scroll overshoots the end of a report.
 - Premium Analytics: Stop WooCommerce Analytics store tracking when the Jetpack WooCommerce Analytics module is turned off.
+- Premium Analytics: Wrap long titles in the report tables so the other columns stay in view on narrow screens.
 - SEO: Make the dashboard available to existing sites without a separate opt-in.
 - Sitemaps: Keep News sitemaps within the publication window as cached articles age.
 - Subscribe block: Stop screen readers announcing the empty email field as invalid before the visitor submits.
