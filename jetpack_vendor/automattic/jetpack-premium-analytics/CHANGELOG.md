@@ -28,6 +28,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Charts: Name a month the date range cuts by its days in the Post views, Video and Author performance tooltips.
 - Hide the views limit notice and the plan usage card on WordPress.com sites, which have no views limit, and open the upgrade page from old classic Stats purchase links.
+- Keep the Download CSV action in place while a widget refreshes its data, so the Traffic summary chart no longer jumps when returning to the tab.
 
 ## [0.19.0] - 2026-11-23
 ### Added
