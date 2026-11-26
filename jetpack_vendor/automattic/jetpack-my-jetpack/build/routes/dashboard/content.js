@@ -218,8 +218,9 @@ __( "There was some trouble disconnecting your user account, your Jetpack plugin
 __( "There was some trouble disconnecting your user account, your Jetpack plugin(s) may be outdated. Please ask a site admin to update Jetpack", "jetpack-my-jetpack" );
 __( "Disconnect your user account", "jetpack-my-jetpack" );
 __( "Are you sure you want to disconnect your WordPress.com account?", "jetpack-my-jetpack" );
-_x( "This store is registered with WordPress.com at <registered />, but now loads at <current />.", "WooCommerce store", "jetpack-my-jetpack" );
-__( "This site is registered with WordPress.com at <registered />, but now loads at <current />.", "jetpack-my-jetpack" );
+_x( "This store is registered with WordPress.com at", "WooCommerce store", "jetpack-my-jetpack" );
+__( "This site is registered with WordPress.com at", "jetpack-my-jetpack" );
+__( "It now loads at", "jetpack-my-jetpack" );
 __( "Your site couldn’t be registered with WordPress.com again, so it is now disconnected. Try again to connect it, or connect it later in Settings › Connectors, under Jetpack Connection.", "jetpack-my-jetpack" );
 __( "This site is no longer in Safe Mode, for example because it was resolved in another tab. Reload the page.", "jetpack-my-jetpack" );
 __( "<link>Get help with Safe Mode</link>", "jetpack-my-jetpack" );
@@ -298,10 +299,8 @@ __( "You can come back and decide at any time from the admin bar.", "jetpack-my-
 __( "From what you saw:", "jetpack-my-jetpack" );
 __( "Its address is set dynamically in <code>wp-config.php</code>, so it may be reachable at more than one address.", "jetpack-my-jetpack" );
 __( "<x /> is an IP address.", "jetpack-my-jetpack" );
-_x( "WordPress marks this as a staging store.", "WooCommerce store", "jetpack-my-jetpack" );
 __( "WordPress marks this as a staging site.", "jetpack-my-jetpack" );
-_x( "WordPress does not mark this as a staging or development store.", "WooCommerce store", "jetpack-my-jetpack" );
-__( "WordPress does not mark this as a staging or development site.", "jetpack-my-jetpack" );
+_x( "WordPress does not mark this as a staging or development site.", "Environment type", "jetpack-my-jetpack" );
 _x( "Nothing breaks while you decide. Payments will not be interrupted. You can stay in Safe Mode at any step.", "WooCommerce store", "jetpack-my-jetpack" );
 __( "Nothing breaks while you decide. You can stay in Safe Mode at any step.", "jetpack-my-jetpack" );
 __( "Open <z /> in a new tab. What happens?", "jetpack-my-jetpack" );
@@ -350,7 +349,6 @@ _x( "Features that sync with WordPress.com — like Stats and Backups — are pa
 __( "Features that sync with WordPress.com — like Stats and Backups — are paused in Safe Mode until you resolve this.", "jetpack-my-jetpack" );
 _x( "Features that sync with WordPress.com are paused in Safe Mode until you resolve this. Payments will not be interrupted.", "WooCommerce store", "jetpack-my-jetpack" );
 __( "Features that sync with WordPress.com are paused in Safe Mode until you resolve this.", "jetpack-my-jetpack" );
-_x( "WordPress marks this as a staging store, so it is treated as a copy of <z />.", "WooCommerce store", "jetpack-my-jetpack" );
 __( "WordPress marks this as a staging site, so it is treated as a copy of <z />.", "jetpack-my-jetpack" );
 __( "You chose to stay in Safe Mode. Features stay paused until you choose another option below.", "jetpack-my-jetpack" );
 __( "Connected plugins:", "jetpack-my-jetpack" );

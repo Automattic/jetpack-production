@@ -2,7 +2,6 @@
 	'dependencies' => array(
 		'jetpack-script-data',
 		'react',
-		'react-dom',
 		'react-jsx-runtime',
 		'wp-a11y',
 		'wp-components',
@@ -15,5 +14,5 @@
 		'wp-primitives',
 		'wp-url'
 	),
-	'version' => 'f83e5396443a1ab28c94'
+	'version' => '0e147d02f25a50aa3143'
 );

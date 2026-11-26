@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Safe Mode: Mark a failed registration during a fresh connection as having left the site disconnected.
+- Safe Mode: On the new screen, behind a feature flag, show connected plugins' logos, and reload the Connectors page on Close after an address update.
 
 ### Fixed
 - Safe Mode: Keep a screen left open, for example in another tab, from disconnecting a site that is no longer in Safe Mode.
