@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 ### Fixed
 - Features: Recognize WordPress.com plans that include Podcast and Forms file uploads.
 - Header: Announce the same connection status on the account button as in its panel, and read that status first when the panel opens from the keyboard.
+- Overview: Match the Protect threat count, leaving out threats the site has fixed since the last scan (behind the Overview v1 feature flag).
 - Show Social in the Jetpack menu, and stop offering upgrades on paid plans, on WordPress.com Simple sites.
 - Show the manual-install notice and disable the install buttons on product pricing pages when the site cannot install plugins.
 
