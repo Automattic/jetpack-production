@@ -27,6 +27,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Bug fixes
 - Connection: Keep a Safe Mode screen left open, for example in another tab, from disconnecting a site that is no longer in Safe Mode.
+- Connection: Show clearer messages when the connect request to your site fails, for example because its REST API is disabled or a PHP error broke the response.
 - Cookie Consent: Fix banner previews in Page Editor templates.
 - Dashboards: Center notifications at the bottom of the screen over the page content, not under the admin menu edge.
 - My Jetpack: Announce the same connection status on the header's account button as in its panel, and read that status first when the panel opens from the keyboard.

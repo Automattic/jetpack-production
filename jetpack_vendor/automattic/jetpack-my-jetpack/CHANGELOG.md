@@ -21,6 +21,7 @@ This is an alpha version! The changes listed here are not final.
 - Features: Remove the separate SEO Tools, Sitemaps, Canonical URLs, and Site Verification switches where the SEO card is shown. Each one stays in Jetpack › SEO › Settings.
 - Header: Call the connection panel and its button "Jetpack Connection", without repeating it in the button's name during a connection error.
 - Label the Overview v1 Protect upsell on free plans "Add malware scanning", shown only while the Overview v1 feature flag is on.
+- Onboarding: Tell an administrator whose session expired to reload, instead of saying only administrators can connect.
 - Overview: Show What's new thumbnails uncropped and hand-written excerpts in full, and make each post row clickable.
 - Remove the Features link from the footer, since the header already links to it.
 

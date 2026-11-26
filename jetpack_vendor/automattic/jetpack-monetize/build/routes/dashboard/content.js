@@ -229,6 +229,12 @@ __( "Your Ads status could not be loaded. Please try again.", "jetpack-monetize"
 __( "Your plan no longer includes ads, so your site has stopped earning ad revenue. Upgrade to start earning again.", "jetpack-monetize" );
 __( "Your ad earnings are held until you add a PayPal address for payouts.", "jetpack-monetize" );
 __( "Add PayPal", "jetpack-monetize" );
+__( "Your browser couldn’t complete the request to your site. A firewall, CDN or redirect may be interfering. Reload the page and try again.", "jetpack-monetize" );
+__( "Your site’s REST API couldn’t be reached. A security plugin or server rule may be blocking it.", "jetpack-monetize" );
+__( "Your site sent an unexpected response. Another plugin or a PHP error may be adding extra output; your site’s error log, or temporarily deactivating other plugins, can show which.", "jetpack-monetize" );
+__( "Your session expired. Reload the page and try again.", "jetpack-monetize" );
+__( "You don’t have permission to do this. Ask a site administrator.", "jetpack-monetize" );
+__( "Your site’s server ran into a problem. Try again in a few minutes. If it keeps happening, your site’s error log may show the cause.", "jetpack-monetize" );
 __( "Unavailable in <a>Offline Mode</a>", "jetpack-monetize" );
 __( "WordPress.com couldn’t make a secure (HTTPS) connection to your site at %s. Its SSL certificate or HTTPS setup may be invalid. Ask your hosting provider to check it.", "jetpack-monetize" );
 __( "WordPress.com couldn’t make a secure (HTTPS) connection to your site. Its SSL certificate or HTTPS setup may be invalid. Ask your hosting provider to check it.", "jetpack-monetize" );
@@ -253,11 +259,6 @@ __( "PHP’s XML extension isn’t available on your site, and Jetpack needs it 
 __( "WordPress.com couldn’t read your site’s response. Another plugin may be adding extra output to xmlrpc.php. Try deactivating other plugins.", "jetpack-monetize" );
 __( "The connection attempt expired or was interrupted, for example by another connection attempt at the same time. Please try again.", "jetpack-monetize" );
 __( "WordPress.com couldn’t register your site right now. Please try again in a few minutes, and contact support if it keeps happening.", "jetpack-monetize" );
-__( "The connection request got an unexpected response. Another plugin or a PHP error may be adding extra output; your site’s error log, or temporarily deactivating other plugins, can show which.", "jetpack-monetize" );
-__( "Your site’s REST API couldn’t be reached. A security plugin or server rule may be blocking it.", "jetpack-monetize" );
-__( "Your browser couldn’t complete the request to your site. A firewall, CDN or redirect may be interfering. Reload the page and try again.", "jetpack-monetize" );
-__( "Your session expired. Reload the page and try again.", "jetpack-monetize" );
-__( "A critical error stopped the connection. Your site’s error log has the details.", "jetpack-monetize" );
 __( "Only site administrators can connect this site. Ask an administrator to connect it.", "jetpack-monetize" );
 __( "Your site couldn’t reach WordPress.com. Ask your hosting provider to allow outgoing connections from your site to jetpack.wordpress.com.", "jetpack-monetize" );
 __( "WordPress.com is temporarily unavailable. Please try again in a minute.", "jetpack-monetize" );
