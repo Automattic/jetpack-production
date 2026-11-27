@@ -40,6 +40,7 @@ This is an alpha version! The changes listed here are not final.
 - My Jetpack: Stop offering an Anti-spam upgrade on WordPress.com plans, which already include Akismet.
 - My Jetpack: Stop offering an upgrade for Podcast and Forms file uploads on WordPress.com plans that already include them.
 - Premium Analytics: Keep the Download CSV action in place while a widget refreshes its data, so the Traffic summary chart no longer jumps when returning to the tab.
+- Premium Analytics: Keep the Download CSV button on report pages while the report refreshes, so it no longer blinks or drops keyboard focus.
 - Premium Analytics: Load Stats report rows as the table scrolls, so a report with thousands of rows opens without freezing the browser.
 - Premium Analytics: Name a month the date range cuts by its days in the Post views, Video and Author performance chart tooltips.
 - Premium Analytics: Retry loading the site settings after a failed load, so the Homepage link in Posts & Pages and the Settings page can recover without reloading the page.
