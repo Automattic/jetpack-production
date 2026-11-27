@@ -14,6 +14,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Admin shell: Decide whether the dashboard joins the shell with the same check that registers its page.
+- Admin shell: Open VideoPress on WordPress.com Simple sites from the Jetpack menu without a page load.
 - Admin shell: Pass the dashboard page data through the shell member `data` key.
 - Library: Always show the Upload to VideoPress button on local videos, in both grid and table layouts.
 
