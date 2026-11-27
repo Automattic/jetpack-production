@@ -19,6 +19,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Fixed
 - Safe Mode: Keep a screen left open, for example in another tab, from disconnecting a site that is no longer in Safe Mode.
+- Tracks: Clear the saved WordPress.com ID when a user reconnects, so events follow the newly linked account.
 
 ## [9.18.3] - 2026-11-23
 ### Added
