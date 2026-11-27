@@ -12,6 +12,9 @@ This is an alpha version! The changes listed here are not final.
 ### Changed
 - Admin shell: Decide whether the dashboard joins the shell with the same check that registers its page.
 
+### Fixed
+- Subscribers: Show "Remove subscribers" on the bulk removal button until the count loads, say why a click before then does nothing, and stop retrying a removal status check that cannot succeed.
+
 ## [0.19.1] - 2026-11-23
 ### Changed
 - Admin shell: Let Newsletter join the shell on WordPress.com Simple sites too. [#55085]
