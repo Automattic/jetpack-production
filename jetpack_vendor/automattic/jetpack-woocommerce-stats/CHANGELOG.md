@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 
 ### Changed
 - Stop turning on proxy tracking for store events. A host opts in with the `woocommerce_analytics_experimental_proxy_tracking_enabled` filter.
+- Update package dependencies.
 
 ### Fixed
 - Handle various PHP deprecation notices.
