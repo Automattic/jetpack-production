@@ -20,6 +20,7 @@ This is an alpha version! The changes listed here are not final.
 - Widgets toolkit: Add a stacked area chart component.
 
 ### Changed
+- Dashboard: Hide the Subscribers tab on sites without the Jetpack plugin, which is the only plugin that ships Newsletter.
 - Dashboard: Skip the analytics sync check while the site is disconnected.
 - Drop the "N more" count below the Latest subscribers list.
 - Let WordPress.com decide which sites see the Upgrade to Parse.ly prompts, in place of the feature flag.
