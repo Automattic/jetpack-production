@@ -33,6 +33,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboards: Center notifications at the bottom of the screen over the page content, not under the admin menu edge.
 - My Jetpack: Announce the same connection status on the header's account button as in its panel, and read that status first when the panel opens from the keyboard.
 - My Jetpack: Explain why a Jetpack Pro license can't be activated on a site.
+- My Jetpack: Keep the "Scan found threats" notice and the Protect card warning when refreshing the Scan status fails.
 - My Jetpack: Match the Protect card's threat counts to the Protect page after the site fixes a threat, before the next scan.
 - My Jetpack: Show Newsletter as included on WordPress.com plans instead of offering Jetpack Pro, and leave out the Jetpack fees there.
 - My Jetpack: Show Social in the Jetpack menu, and stop offering upgrades on paid plans, on WordPress.com Simple sites.

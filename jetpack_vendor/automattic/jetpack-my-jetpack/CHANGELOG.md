@@ -38,6 +38,7 @@ This is an alpha version! The changes listed here are not final.
 - Safe Mode: Keep the Safe Mode window the same width while moving through the new screen.
 - Show Social in the Jetpack menu, and stop offering upgrades on paid plans, on WordPress.com Simple sites.
 - Show the manual-install notice and disable the install buttons on product pricing pages when the site cannot install plugins.
+- Threats notice: Keep showing the stored threats when refreshing the Scan status fails.
 - Threats notice: Stop counting threats the site has fixed since the last scan, and hide the notice once none are left.
 
 ## [6.19.0] - 2026-11-23
