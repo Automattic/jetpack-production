@@ -69,6 +69,7 @@ This is an alpha version! The changes listed here are not final.
 ### Other changes <!-- Non-user-facing changes go here. This section will not be copied to readme.txt. -->
 - Admin shell: Decide whether the AI and Settings pages join the shell with the same checks that register them.
 - Handle various PHP deprecation notices.
+- Monetize: Load the Ads settings when Monetize opens from another dashboard without a page load.
 - Update package dependencies.
 
 ## 16.5-a.5 - 2026-11-23
