@@ -31,6 +31,7 @@ This is an alpha version! The changes listed here are not final.
 - Connection: Show clearer messages when the connect request to your site fails, for example because its REST API is disabled or a PHP error broke the response.
 - Cookie Consent: Fix banner previews in Page Editor templates.
 - Dashboards: Center notifications at the bottom of the screen over the page content, not under the admin menu edge.
+- MCP: Mark tools that require individual approval and keep their settings when using "Enable all".
 - My Jetpack: Announce the same connection status on the header's account button as in its panel, and read that status first when the panel opens from the keyboard.
 - My Jetpack: Explain why a Jetpack Pro license can't be activated on a site.
 - My Jetpack: Keep the "Scan found threats" notice and the Protect card warning when refreshing the Scan status fails.
