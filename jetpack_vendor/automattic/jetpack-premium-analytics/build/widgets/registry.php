@@ -576,7 +576,7 @@ return array(
 		'help'         => array( 'content' => 'The tags and categories of your most viewed posts in the selected period, ranked by views. A post counts toward each of its current tags and categories, so this is a breakdown of popular posts by topic rather than a filter over all traffic.', 'links' => array( array( 'label' => 'Learn more', 'href' => 'https://jetpack.com/support/jetpack-stats/' ) ) ),
 		'icon'         => 'jpa/category',
 		'actions'      => array( array( 'id' => 'view-all', 'label' => 'View all', 'href' => 'admin.php?page=jetpack-premium-analytics-wp-admin&p=%2Freports%2Ftags', 'relevance' => 'high' ) ),
-		'attributes'   => null,
+		'attributes'   => array( array( 'id' => 'termType', 'type' => 'jpa/toggle-group', 'label' => 'View', 'relevance' => 'high', 'elements' => array( array( 'value' => 'all', 'label' => 'All' ), array( 'value' => 'tag', 'label' => 'Tags' ), array( 'value' => 'category', 'label' => 'Categories' ) ) ) ),
 		'example'      => null,
 		'has_render'   => true,
 		'has_widget'   => false,

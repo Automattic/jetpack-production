@@ -16,6 +16,7 @@ This is an alpha version! The changes listed here are not final.
 - Dashboard: Let a section declare that it runs without a Jetpack connection, and open the dashboard on a disconnected site that has one, with a connect prompt in the other tabs.
 - Offer an Upgrade to Parse.ly card at the foot of the Stats Settings page.
 - Offer an Upgrade to Parse.ly item in the Stats options menu.
+- Top tags & categories: Let the widget show only tags or only categories.
 - Widgets toolkit: Add a stacked area chart component.
 
 ### Changed

@@ -254,6 +254,8 @@ __( "Sent", "jetpack-premium-analytics-pkg" );
 __( "Open rate", "jetpack-premium-analytics-pkg" );
 __( "Click rate", "jetpack-premium-analytics-pkg" );
 __( "Tag or category", "jetpack-premium-analytics-pkg" );
+__( "Tag", "jetpack-premium-analytics-pkg" );
+__( "Category", "jetpack-premium-analytics-pkg" );
 __( "Region", "jetpack-premium-analytics-pkg" );
 __( "City", "jetpack-premium-analytics-pkg" );
 __( "Regions", "jetpack-premium-analytics-pkg" );

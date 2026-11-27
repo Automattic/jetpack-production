@@ -126,6 +126,10 @@ _x( 'Your most recent subscribers.', 'widget help content', 'jetpack-premium-ana
 _x( 'Top tags & categories', 'widget title', 'jetpack-premium-analytics-pkg' );
 _x( 'The tags and categories of your most viewed posts in the selected period, ranked by views.', 'widget description', 'jetpack-premium-analytics-pkg' );
 _x( 'The tags and categories of your most viewed posts in the selected period, ranked by views. A post counts toward each of its current tags and categories, so this is a breakdown of popular posts by topic rather than a filter over all traffic.', 'widget help content', 'jetpack-premium-analytics-pkg' );
+_x( 'View', 'widget attribute label', 'jetpack-premium-analytics-pkg' );
+_x( 'All', 'widget attribute option label', 'jetpack-premium-analytics-pkg' );
+_x( 'Tags', 'widget attribute option label', 'jetpack-premium-analytics-pkg' );
+_x( 'Categories', 'widget attribute option label', 'jetpack-premium-analytics-pkg' );
 _x( 'Top platforms', 'widget title', 'jetpack-premium-analytics-pkg' );
 _x( 'Top browsers and operating systems your visitors use.', 'widget description', 'jetpack-premium-analytics-pkg' );
 _x( 'A breakdown of the operating systems and browsers your visitors used, sorted by views.', 'widget help content', 'jetpack-premium-analytics-pkg' );
@@ -134,7 +138,6 @@ _x( 'OS', 'widget attribute option label', 'jetpack-premium-analytics-pkg' );
 _x( 'Top pages', 'widget title', 'jetpack-premium-analytics-pkg' );
 _x( 'Your most viewed posts, pages, and archives.', 'widget description', 'jetpack-premium-analytics-pkg' );
 _x( 'Your most popular posts and pages, sorted by views.', 'widget help content', 'jetpack-premium-analytics-pkg' );
-_x( 'View', 'widget attribute label', 'jetpack-premium-analytics-pkg' );
 _x( 'Posts & pages', 'widget attribute option label', 'jetpack-premium-analytics-pkg' );
 _x( 'Archives', 'widget attribute option label', 'jetpack-premium-analytics-pkg' );
 _x( 'Traffic summary', 'widget title', 'jetpack-premium-analytics-pkg' );

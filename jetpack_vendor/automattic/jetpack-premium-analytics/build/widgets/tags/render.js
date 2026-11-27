@@ -6,9 +6,15 @@
 // translation files resolve. Never loaded at runtime: the generated PHP
 // loaders are pinned to the .min.js sibling.
 
-__( "View the tags and categories in %s", "jetpack-premium-analytics-pkg" );
+__( "Tags", "jetpack-premium-analytics-pkg" );
+__( "All tags", "jetpack-premium-analytics-pkg" );
+__( "View the tags in %s", "jetpack-premium-analytics-pkg" );
+__( "Categories", "jetpack-premium-analytics-pkg" );
+__( "All categories", "jetpack-premium-analytics-pkg" );
+__( "View the categories in %s", "jetpack-premium-analytics-pkg" );
+__( "Tags & categories", "jetpack-premium-analytics-pkg" );
 __( "All tags & categories", "jetpack-premium-analytics-pkg" );
+__( "View the tags and categories in %s", "jetpack-premium-analytics-pkg" );
 __( "We couldn't load tags & categories. Please try again in a moment.", "jetpack-premium-analytics-pkg" );
 __( "Retry", "jetpack-premium-analytics-pkg" );
 __( "You don’t have tags or categories recorded yet.", "jetpack-premium-analytics-pkg" );
-__( "Tags & categories", "jetpack-premium-analytics-pkg" );

@@ -13,6 +13,7 @@ This is an alpha version! The changes listed here are not final.
 - Newsletter: Let WordPress.com sites that run a block theme edit their newsletter email design, and keep that access after a switch to a classic theme.
 - Premium Analytics: Add Items sold to the Store performance metrics.
 - Premium Analytics: Drop the "N more" count below the Latest subscribers list.
+- Premium Analytics: Let the Top tags & categories widget show only tags or only categories.
 - Premium Analytics: Open a page's own report, /report/page/<id>, from the Top posts & pages card and the Posts & pages report.
 - Premium Analytics: Open the WooCommerce tab on a disconnected store set to report from its own data.
 - Premium Analytics: Use the Stats script for WooCommerce store tracking on sites not hosted on WordPress.com, so a pageview no longer adds an uncached request to the site.
