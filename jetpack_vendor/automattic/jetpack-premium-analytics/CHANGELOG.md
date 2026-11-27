@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 This is an alpha version! The changes listed here are not final.
 
+### Security
+- Data proxy: Limit subscriber data to subscriber counts, so users who can view Stats cannot read the subscriber list.
+
 ### Added
 - Add the eligibility check that decides which sites and users see the Upgrade to Parse.ly prompts.
 - Add the promo cards the Upgrade to Parse.ly prompts render in the Stats options menu and Settings.

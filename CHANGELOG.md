@@ -52,6 +52,7 @@ This is an alpha version! The changes listed here are not final.
 - Settings: Send the Ads and Google Analytics upgrades on WordPress.com sites to the WordPress.com plans that include them, and show Google Analytics in a Settings search only when the search names it.
 - Sitemaps: Keep News sitemaps within the publication window as cached articles age.
 - Stats, My Jetpack: Format numbers in the site's full locale, so Traditional Chinese sites read 萬 instead of 万.
+- Stats: Limit subscriber data to subscriber counts, so users who can view Stats cannot read the subscriber list.
 - Subscribe block: Stop screen readers announcing the empty email field as invalid before the visitor submits.
 - Subscriptions: Cache subscriber counts for the Dashboard, the Subscribe block, the legacy widget, and the `/subscribers/count` endpoint.
 - Tiled Gallery: Fit every gallery style to the width of newsletter emails, including in Outlook, and stop cropping Mosaic images to one height.
