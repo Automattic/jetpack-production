@@ -387,7 +387,6 @@ return array(
     'Automattic\\Jetpack\\PremiumAnalytics\\Enablement_Setting' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-enablement-setting.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Jetpack_Stats_Tracker' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-jetpack-stats-tracker.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Notices' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-notices.php',
-    'Automattic\\Jetpack\\PremiumAnalytics\\Parsely_Prompts' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-parsely-prompts.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Promo' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-promo.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\Promo_Registry' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/class-promo-registry.php',
     'Automattic\\Jetpack\\PremiumAnalytics\\REST\\Api_Proxy_Controller' => $baseDir . '/jetpack_vendor/automattic/jetpack-premium-analytics/src/REST/class-api-proxy-controller.php',
